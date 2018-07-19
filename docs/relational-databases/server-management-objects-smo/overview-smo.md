@@ -1,5 +1,5 @@
 ---
-title: Información general (SMO) | Documentos de Microsoft
+title: Información general (SMO) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 21d71757b4f8520e2ec2b3b7c2d1cb3c1407b420
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708013"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006018"
 ---
 # <a name="overview-smo"></a>Información general (SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34708013"
   
  Dado que SMO es compatible con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, puede administrar fácilmente un entorno multiversión.  
   
- Características de SMO son los siguientes:  
+ Las características de SMO incluyen lo siguiente:  
   
 -   Modelo de objetos de caché y creación de instancias de objetos optimizada. Los objetos solo se cargan cuando se hace referencia a ellos de forma específica. Las propiedades de objeto solo se cargan parcialmente cuando se crea el objeto. Los objetos y propiedades restantes se cargan cuando se hace referencia a ellos directamente.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "34708013"
   
 -   Desencadenadores DDL para agregar funcionalidad cuando se producen eventos DDL. Para más información, consulte [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
   
- El espacio de nombres de SMO es <xref:Microsoft.SqlServer.Management.Smo>. SMO se implementa como un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ensamblado. Esto significa que common language runtime desde la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versión 2.0 debe estar instalada antes de usar los objetos SMO. Los ensamblados SMO se instalan de forma predeterminada en la memoria caché de ensamblados global (GAC) con la opción SDK de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los ensamblados se encuentran en C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\. Para obtener más información, consulte el [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentación.  
+ El espacio de nombres de SMO es <xref:Microsoft.SqlServer.Management.Smo>. SMO se implementa como un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ensamblado. Esto significa que common language runtime desde el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versión 2.0 debe instalarse antes de usar los objetos SMO. Los ensamblados SMO se instalan de forma predeterminada en la memoria caché de ensamblados global (GAC) con la opción SDK de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los ensamblados se encuentran en C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\. Para obtener más información, consulte el [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentación.  
   
 ## <a name="smo-classes"></a>Clases SMO  
  Las clases SMO incluyen dos categorías: clases de instancia y clases de utilidad.  
@@ -96,7 +96,7 @@ ms.locfileid: "34708013"
 ## <a name="smo-features"></a>Características de SMO  
  **Rendimiento optimizado**  
   
- La arquitectura SMO es eficaces en cuanto a memoria porque solo parcialmente se crean instancias de objetos al principio y se solicita información de propiedad mínimo desde el servidor. La creación de instancias completas de los objetos se retrasa hasta que se hace referencia al objeto de forma explícita. Se crea una instancia completa de un objeto cuando se solicita una propiedad que no está en el conjunto de propiedades que se recuperan al principio o cuando se llama a un método que requiere dicha propiedad. La transición entre la creación de instancias parciales e instancias completas de los objetos es transparente para el usuario. Además, algunas propiedades que usan mucha memoria no se recuperan nunca, a menos que se haga referencia a ellas de forma explícita. Un ejemplo de esto último sería la propiedad <xref:Microsoft.SqlServer.Management.Smo.Database.Size%2A> de la propiedad de objeto <xref:Microsoft.SqlServer.Management.Smo.Database>. Sin embargo, la creación de instancias parciales requiere más ciclos de ida y vuelta en la red y no es la mejor opción de rendimiento para la aplicación.  
+ La arquitectura SMO es eficaz en términos de memoria porque solo parcialmente se crean instancias de objetos al principio y se solicita información de la propiedad mínimo desde el servidor. La creación de instancias completas de los objetos se retrasa hasta que se hace referencia al objeto de forma explícita. Se crea una instancia completa de un objeto cuando se solicita una propiedad que no está en el conjunto de propiedades que se recuperan al principio o cuando se llama a un método que requiere dicha propiedad. La transición entre la creación de instancias parciales e instancias completas de los objetos es transparente para el usuario. Además, algunas propiedades que usan mucha memoria no se recuperan nunca, a menos que se haga referencia a ellas de forma explícita. Un ejemplo de esto último sería la propiedad <xref:Microsoft.SqlServer.Management.Smo.Database.Size%2A> de la propiedad de objeto <xref:Microsoft.SqlServer.Management.Smo.Database>. Sin embargo, la creación de instancias parciales requiere más ciclos de ida y vuelta en la red y no es la mejor opción de rendimiento para la aplicación.  
   
  Puede controlar la creación de instancias para que se ajuste al entorno del sistema. La dependencia de la creación de instancias retrasada minimiza la cantidad de memoria que requiere la aplicación, aunque puede desencadenar muchas solicitudes al servidor cuando se hace referencia a las propiedades.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "34708013"
   
  La ejecución de captura permite capturar lotes [!INCLUDE[tsql](../../includes/tsql-md.md)] que, en condiciones normales, se ejecutarían. Esto permite al programador de SMO aplazar el script, almacenarlo para ejecutarlo posteriormente o proporcionar una vista previa al usuario final. Por ejemplo, es posible enviar una instrucción **create database**, **create table**y **create index** en un lote y, a continuación, realizar la ejecución en tres pasos secuenciales. El usuario es quien controla esta funcionalidad utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A>.  
   
- **Proveedor WMI**  
+ **Proveedor de WMI**  
   
  SMO encapsula los objetos de proveedor WMI. Esto proporciona al programador de SMO un modelo de objetos simple muy similar a las clases SMO, sin necesidad de que entienda el modelo de programación representado por el espacio de nombres ni los detalles del proveedor WMI de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El proveedor WMI permite configurar servicios, alias y bibliotecas de red de cliente y de servidor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -120,7 +120,7 @@ ms.locfileid: "34708013"
   
 -   Creación de script simple de 1 fase (crea el script en un solo paso)  
   
--   Avanzadas de scripting de 3 fases (crea el script en tres pasos: detección de dependencias, generación de lista, generación de script)  
+-   Fase 3 de scripting avanzadas (crea el script en tres pasos; detección de dependencias, generación de lista, la generación de scripts)  
   
 -   Detección de dependencias bidireccional (permite detectar dependencias o dependientes)  
   
@@ -141,7 +141,7 @@ ms.locfileid: "34708013"
  El URN de un objeto puede recuperarse haciendo referencia a su propiedad URN. El objeto Scripter también usa los URN como parámetros que pasan referencias de objeto al método del objeto **Scripter** . Además, puede especificarse un URN para el método **GetSmoObject** del objeto **Server** . Se utiliza para crear una instancia del objeto SMO.  
   
 ## <a name="sql-server-features-represented-in-smo"></a>Características de SQL Server representadas en SMO  
- **Tabla de particiones e índices**  
+ **Tabla y particiones de índice**  
   
  Las particiones de tabla e índice permiten administrar la difusión de los datos de tablas e índices a través de grupos de archivos. Esta nueva característica se representa mediante objetos SMO.  
   

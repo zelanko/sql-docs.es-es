@@ -1,5 +1,5 @@
 ---
-title: Agregar columnas a una tabla | Documentos de Microsoft
+title: Agregar columnas a una tabla | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77be2e392add4811d011d85ebc1ee9efbf52191d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043459"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991477"
 ---
 # <a name="add-columns-to-a-table"></a>Agregar columnas a una tabla
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Este artículo describe cómo agregar columnas a una tabla existente.  
+  En este artículo se describe cómo agregar columnas a una tabla existente.  
   
 ## <a name="add-columns-from-the-datasource"></a>Agregar columnas del origen de datos  
  Cuando use el Asistente para la importación de tablas para importar datos de una tabla de origen, se creará una nueva tabla en el modelo que incluirá todas las columnas de la tabla de origen, o, si decide filtrar ciertas columnas mediante la característica Vista previa y filtro, solo incluirá las columnas y los datos filtrados que seleccione. También puede escribir una consulta SQL que especifique solo las columnas que desea importar. No obstante, puede determinar posteriormente si una tabla de origen tiene columnas adicionales que desea agregar a la tabla del modelo, o si debe agregar una columna calculada con valores procedentes de una fórmula DAX.  
@@ -62,7 +62,7 @@ ms.locfileid: "34043459"
 2.  Haga clic en la celda superior, escriba un nombre y, a continuación, presione ENTRAR.  
   
 ## <a name="see-also"></a>Vea también  
- [Editar cuadro de diálogo de propiedades de tabla](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
+ [Editar cuadro de diálogo Propiedades de tabla](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
  [Cambiar las asignaciones de filtros de tabla, columna o fila](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

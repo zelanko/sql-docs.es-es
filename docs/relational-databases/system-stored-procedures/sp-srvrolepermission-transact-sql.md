@@ -1,5 +1,5 @@
 ---
-title: sp_srvrolepermission (Transact-SQL) | Documentos de Microsoft
+title: sp_srvrolepermission (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: db6b3367b1d1a048bb47e4d30b96970557f48939
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261514"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014766"
 ---
 # <a name="spsrvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
  [  **@srvrolename =** ] **'***rol***'**  
  Es el nombre del rol fijo de servidor para el que se devuelven permisos. *rol* es **sysname**, su valor predeterminado es null. Si no se especifica un rol, se devuelven los permisos de todos los roles fijos de servidor. *rol* puede tener uno de los siguientes valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**sysadmin**|Administradores del sistema|  
 |**securityadmin**|Administradores de seguridad|  
@@ -66,17 +66,17 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**ServerRole**|**sysname**|Nombre de un rol fijo de servidor|  
 |**Permiso**|**sysname**|Permiso asociado **ServerRole**|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Los permisos enumerados incluyen las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se pueden ejecutar y otras actividades especiales que pueden realizar los miembros del rol fijo de servidor. Para mostrar una lista de los roles fijos de servidor, ejecute **sp_helpsrvrole**.  
   
  El **sysadmin** rol fijo de servidor tiene los permisos de todos los demás roles fijos de servidor.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="examples"></a>Ejemplos  

@@ -1,5 +1,5 @@
 ---
-title: Sys.security_policies (Transact-SQL) | Documentos de Microsoft
+title: Sys.security_policies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -30,11 +30,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dae89c39aa55f8139ce76942f0bdda660b645241
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33221136"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993807"
 ---
 # <a name="syssecuritypolicies-transact-sql"></a>Sys.security_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33221136"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|Nombre de la directiva de seguridad, único dentro de la base de datos.|  
+|NAME|**sysname**|Nombre de la directiva de seguridad, único dentro de la base de datos.|  
 |object_id|**int**|Identificador de la directiva de seguridad.|  
 |principal_id|**int**|Identificador del propietario de la directiva de seguridad, tal y como se registró en la base de datos. Es NULL si el propietario se determina con el esquema.|  
 |schema_id|**int**|Identificador del esquema en el que reside el objeto.|  
@@ -56,10 +56,10 @@ ms.locfileid: "33221136"
 |is_enabled|**bit**|Estado de la especificación de la directiva de seguridad:<br /><br /> 0 = deshabilitado<br /><br /> 1 = habilitado|  
 |is_not_for_replication|**bit**|La directiva se creó con la opción NOT FOR REPLICATION.|  
 |uses_database_collation|**bit**|Utiliza la misma intercalación que la base de datos.|  
-|is_schemabinding_enabled|**bit**|Estado de SCHEMABINDING para la directiva de seguridad:<br /><br /> 0 o NULL = habilitado<br /><br /> 1 = deshabilitado|  
+|is_schemabinding_enabled|**bit**|SCHEMABINDING el estado de la directiva de seguridad:<br /><br /> 0 o NULL = habilitado<br /><br /> 1 = deshabilitado|  
   
 ## <a name="permissions"></a>Permisos  
- Entidades de seguridad con la **ALTER ANY SECURITY POLICY** permiso tiene acceso a todos los objetos en esta vista de catálogo, así como cualquier persona con **VIEW DEFINITION** en el objeto.  
+ Las entidades de seguridad con el **ALTER ANY SECURITY POLICY** permiso tiene acceso a todos los objetos en esta vista de catálogo, así como cualquier persona con **VIEW DEFINITION** en el objeto.  
   
 ## <a name="see-also"></a>Vea también  
  [Seguridad de nivel de fila](../../relational-databases/security/row-level-security.md)   

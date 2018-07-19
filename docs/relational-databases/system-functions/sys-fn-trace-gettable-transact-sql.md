@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_trace_gettable (Transact-SQL) | Documentos de Microsoft
+title: Sys.fn_trace_gettable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,11 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4e8c573a9995ee8ca0d23cd89ab2e032a88c6f9e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234776"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014933"
 ---
 # <a name="sysfntracegettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,14 +54,14 @@ fn_trace_gettable ( 'filename' , number_files )
  *number_files*  
  Especifica el número de archivos de sustitución que se van a leer. Este número incluye el archivo inicial especificado en *filename*. *number_files* es un **int**.  
   
-## <a name="remarks"></a>Comentarios  
- Si *number_files* se especifica como **predeterminado**, **fn_trace_gettable** lee todos los archivos de sustitución incremental hasta que alcanza el final del seguimiento. **fn_trace_gettable** devuelve una tabla con todas las columnas válidas para el seguimiento especificado. Para obtener más información, consulte [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+## <a name="remarks"></a>Notas  
+ Si *number_files* se especifica como **predeterminada**, **fn_trace_gettable** lee todos los archivos de sustitución incremental hasta que llega al final del seguimiento. **fn_trace_gettable** devuelve una tabla con todas las columnas válidas para el seguimiento especificado. Para obtener más información, consulte [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
- Tenga en cuenta que la función fn_trace_gettable no cargará los archivos de sustitución incremental (cuando se especifica esta opción mediante el uso de la *number_files* argumento) donde el nombre de archivo de seguimiento original termina con un carácter de subrayado y un valor numérico. (Esto no se aplica al carácter de subrayado y al número que se anexan automáticamente cuando un archivo realiza la sustitución incremental). Para solucionar este problema, puede cambiar el nombre de los archivos de seguimiento y quitar los caracteres de subrayado del nombre de archivo original. Por ejemplo, si el archivo original se denomina **Trace_Oct_5.trc** y el archivo de sustitución incremental se denomina **Trace_Oct_5_1.trc**, puede cambiar el nombre de los archivos a **TraceOct5.trc** y  **TraceOct5_1.trc**.  
+ Tenga en cuenta que la función fn_trace_gettable no cargará los archivos de sustitución incremental (cuando se especifica esta opción mediante el uso de la *number_files* argumento) donde el nombre de archivo de seguimiento original termina con un carácter de subrayado y un valor numérico. (Esto no se aplica al carácter de subrayado y al número que se anexan automáticamente cuando un archivo realiza la sustitución incremental). Para solucionar este problema, puede cambiar el nombre de los archivos de seguimiento y quitar los caracteres de subrayado del nombre de archivo original. Por ejemplo, si el archivo original se denomina **Trace_Oct_5.trc** y el archivo de sustitución se denomina **Trace_Oct_5_1.trc**, puede cambiar el nombre de los archivos a **TraceOct5.trc** y  **TraceOct5_1.trc**.  
   
  Esta función puede leer un seguimiento que todavía esté activo en la instancia en la que se ejecuta.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER TRACE en el servidor.  
   
 ## <a name="examples"></a>Ejemplos  

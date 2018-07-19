@@ -1,5 +1,5 @@
 ---
-title: Distribuciones (DMX) | Documentos de Microsoft
+title: Distribuciones (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e4ffd21a2b507e03af6534296715528d83aac0f6
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841248"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992037"
 ---
 # <a name="distributions-dmx"></a>Distribuciones (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34841248"
  **UNIFORME**  
  Los valores de la columna continua forman una curva plana, en la que todos los valores tienen la misma probabilidad.  
   
- Para obtener más información acerca de [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de minería de datos, vea [algoritmos de minería de datos &#40;Analysis Services: minería de datos&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md). Los proveedores de algoritmos de terceros podrían admitir tipos de distribución adicionales. Para determinar qué tipos de distribución un algoritmo admite, use la **SUPPORTED_DISTRIBUTION_FLAGS** de filas de esquema.  
+ Para obtener más información acerca de [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de minería de datos, vea [algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md). Los proveedores de algoritmos de terceros podrían admitir tipos de distribución adicionales. Para determinar qué tipos de distribución un algoritmo admite, use la **SUPPORTED_DISTRIBUTION_FLAGS** de filas de esquema.  
   
  Para obtener más información acerca de los tipos de distribución, consulte [distribuciones de columnas &#40;minería de datos&#41;](../analysis-services/data-mining/column-distributions-data-mining.md).  
   
@@ -40,7 +40,7 @@ ms.locfileid: "34841248"
  [Tipos de contenido &#40;minería de datos&#41;](../analysis-services/data-mining/content-types-data-mining.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia](../dmx/data-mining-extensions-dmx-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Extensiones de minería de datos &#40;DMX&#41; función referencia](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
  [Extensiones de minería de datos &#40;DMX&#41; convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   

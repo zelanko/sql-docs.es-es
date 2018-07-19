@@ -1,5 +1,5 @@
 ---
-title: Elemento Members (XMLA) | Documentos de Microsoft
+title: Elemento Members (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ae4326e00ba98075a86079157484c5963d0147d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34579107"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994717"
 ---
 # <a name="members-element-xmla"></a>Elemento Members (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34579107"
 |Valor predeterminado|None|  
 |Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
   
-## <a name="element-relationships"></a>Relaciones del elemento  
+## <a name="element-relationships"></a>Relaciones de elementos  
   
 |Relación|Elemento|  
 |------------------|-------------|  
@@ -54,10 +54,10 @@ ms.locfileid: "34579107"
 |Hierarchy|Atributo **String** requerido. El nombre de la jerarquía a la que los miembros incluidos en el **miembros** el elemento pertenece.|  
   
 ## <a name="remarks"></a>Notas  
- Cuando una aplicación cliente establece el **AxisFormat** propiedad *ClusterFormat*, los miembros en cada eje se dividen en clústeres en el que cada uno representa un producto cruzado entre los conjuntos ordenados de miembros de cada jerarquía. Cada **eje** elemento consta de uno o varios **CrossProduct** elementos. Cada **CrossProduct** elemento contiene un **miembros** (elemento) para cada jerarquía del eje. El **miembros** elemento, a su vez, contiene un **miembro** elemento por cada miembro de la jerarquía especificada que se incluyen en el producto cruzado.  
+ Cuando una aplicación cliente establece el **AxisFormat** propiedad *ClusterFormat*, los miembros en cada eje se dividen en clústeres en el que cada clúster representa un producto cruzado entre los conjuntos ordenados de miembros de cada jerarquía. Cada **eje** elemento consta de uno o varios **CrossProduct** elementos. Cada **CrossProduct** elemento contiene un **miembros** (elemento) para cada jerarquía del eje. El **miembros** , a su vez, contiene un elemento **miembro** (elemento) para cada miembro de la jerarquía especificada que se incluye en el producto cruzado.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra la estructura de la **miembros** elemento cuando un cliente especifica *ClusterFormat* para el **AxisFormat** propiedad XMLA, dado el siguientes miembros para el eje:  
+ El ejemplo siguiente muestra la estructura de la **miembros** elemento cuando un cliente especifica *ClusterFormat* para el **AxisFormat** propiedad XMLA, dada la siguientes miembros para el eje:  
   
 ||||||  
 |-|-|-|-|-|  

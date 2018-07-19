@@ -1,5 +1,5 @@
 ---
-title: xp_loginconfig (Transact-SQL) | Documentos de Microsoft
+title: xp_loginconfig (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 950a01041db936c83a5a3c799f1055ab3996aa34
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260330"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003177"
 ---
 # <a name="xploginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,35 +48,35 @@ xp_loginconfig ['config_name']
   
 ## <a name="arguments"></a>Argumentos  
  **'** *config_name* **'**  
- Es el valor de configuración que se va a mostrar. Si *config_name* no es se especifica, se notifican todos los valores de configuración. *config_name* es **sysname**, su valor predeterminado es null y puede tener uno de estos valores.  
+ Es el valor de configuración que se va a mostrar. Si *config_name* no es se especifica, se notifican todos los valores de configuración. *config_name* es **sysname**, su valor predeterminado es null, y puede tener uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|**modo de inicio de sesión**|Modo de seguridad de inicio de sesión. Los valores posibles son **Mixed** y **autenticación de Windows**.<br /><br /> Se reemplaza por:<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
-|**inicio de sesión predeterminado**|Nombre del Id. de inicio de sesión predeterminado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para usuarios autorizados de conexiones de confianza (para usuarios sin nombre de inicio de sesión). El inicio de sesión predeterminada es **invitado**. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
+|**modo de inicio de sesión**|Modo de seguridad de inicio de sesión. Los valores posibles son **mixto** y **Windows autenticación**.<br /><br /> Se reemplaza por:<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
+|**inicio de sesión predeterminado**|Nombre del Id. de inicio de sesión predeterminado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para usuarios autorizados de conexiones de confianza (para usuarios sin nombre de inicio de sesión). El inicio de sesión predeterminado es **invitado**. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
 |**Dominio predeterminado**|Nombre del dominio de Windows predeterminado para los usuarios de red de conexiones de confianza. El dominio predeterminado es el dominio del que es miembro el equipo de Windows que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
-|**nivel de auditoría**|Nivel de auditoría. Los valores posibles son **ninguno**, **correcto**, **error**, y **todos los**. Las auditorías se escriben en el registro de errores y en el Visor de eventos de Windows.|  
+|**nivel de auditoría**|Nivel de auditoría. Los valores posibles son **ninguno**, **éxito**, **error**, y **todas**. Las auditorías se escriben en el registro de errores y en el Visor de eventos de Windows.|  
 |**nombre de host de conjunto**|Indica si el nombre del host desde el que se registra el cliente se sustituye por el nombre de usuario de la red de Windows. Los valores posibles son **true** o **false**. Si se establece, el nombre de usuario de red aparece en la salida de **sp_who**.|  
-|**asignar _**|Informa de los caracteres especiales de Windows asignados al carácter de subrayado (_) válido en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores posibles son **separador de dominio** (valor predeterminado), **espacio**, **null**, o cualquier carácter individual. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
-|**asignar $**|Informa de los caracteres especiales de Windows asignados al carácter de dólar ($) válido en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores posibles son **separador de dominio**, **espacio**, **null**, o cualquier carácter individual. El valor predeterminado es **espacio**. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
-|**asignar #**|Informa de los caracteres especiales de Windows asignados al carácter de número (#) válido en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores posibles son **separador de dominio**, **espacio**, **null**, o cualquier carácter individual. El valor predeterminado es el guión. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
+|**asignar _**|Informa de los caracteres especiales de Windows asignados al carácter de subrayado (_) válido en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores posibles son **separador dominio** (valor predeterminado), **espacio**, **null**, o cualquier carácter individual. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
+|**asignar $**|Informa de los caracteres especiales de Windows asignados al carácter de dólar ($) válido en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores posibles son **separador dominio**, **espacio**, **null**, o cualquier carácter individual. El valor predeterminado es **espacio**. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
+|**asignar #**|Informa de los caracteres especiales de Windows asignados al carácter de número (#) válido en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores posibles son **separador dominio**, **espacio**, **null**, o cualquier carácter individual. El valor predeterminado es el guión. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|Valor de configuración|  
 |**valor de configuración**|**sysname**|Ajuste de valor de configuración|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **xp_loginconfig** no se puede usar para establecer los valores de configuración.  
   
  Para establecer el modo de inicio de sesión y el nivel de auditoría, utilice [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL en el **maestro** base de datos.  
   
 ## <a name="examples"></a>Ejemplos  

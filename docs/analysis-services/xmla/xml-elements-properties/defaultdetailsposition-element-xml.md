@@ -1,5 +1,5 @@
 ---
-title: Elemento DefaultDetailsPosition (XML) | Documentos de Microsoft
+title: Elemento DefaultDetailsPosition (XML) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ae920ba37f210e4f9bbdf6305899eb79eac74167
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34573847"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994907"
 ---
 # <a name="defaultdetailsposition-element-xml"></a>Elemento DefaultDetailsPosition (XML)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34573847"
 |Valor predeterminado|-1|  
 |Cardinalidad|0-1: elemento opcional que aparece una y solo una.|  
   
-## <a name="element-relationships"></a>Relaciones del elemento  
+## <a name="element-relationships"></a>Relaciones de elementos  
   
 |Relación|Elemento|  
 |------------------|-------------|  
@@ -47,6 +47,6 @@ ms.locfileid: "34573847"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- Para **RelationshipEndVisualizationProperties** elementos, el **DefaultDetailsPosition** elemento contiene la posición del elemento de detalle predeterminado de una colección de detalles. El valor predeterminado de **false** indica que no hay ningún detalle predeterminado que se usará.  
+ Para **RelationshipEndVisualizationProperties** elementos, el **DefaultDetailsPosition** elemento contiene la posición del elemento de detalle predeterminado en una colección de detalles. El valor predeterminado de **false** indica que no hay ningún detalle predeterminado que se usará.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento Synchronize (XMLA) | Documentos de Microsoft
+title: Elemento Synchronize (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 11804b9b6ca9ac430bdb47c0b9050b8c6995cf7f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34574567"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007186"
 ---
 # <a name="synchronize-element-xmla"></a>Elemento Synchronize (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34574567"
 |Valor predeterminado|None|  
 |Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
   
-## <a name="element-relationships"></a>Relaciones del elemento  
+## <a name="element-relationships"></a>Relaciones de elementos  
   
 |Relación|Elemento|  
 |------------------|-------------|  
@@ -65,7 +65,7 @@ ms.locfileid: "34574567"
  Para obtener más información acerca de cómo sincronizar las bases de datos, vea [realizar copias de seguridad, restaurar y sincronizar bases de datos &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Vea también
- [Elemento de la copia de seguridad &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
+ [Elemento de copia de seguridad &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
  [Elemento de lote &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
  [Elemento en paralelo &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md)   
  [Elemento restore &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   

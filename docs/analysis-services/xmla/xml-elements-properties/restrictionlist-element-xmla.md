@@ -1,5 +1,5 @@
 ---
-title: Elemento RestrictionList (XMLA) | Documentos de Microsoft
+title: Elemento RestrictionList (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c802b20b0e2d6212f68fa4dc43c35426ff377957
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34578147"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994787"
 ---
 # <a name="restrictionlist-element-xmla"></a>Elemento RestrictionList (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34578147"
 |Valor predeterminado|None|  
 |Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
-## <a name="element-relationships"></a>Relaciones del elemento  
+## <a name="element-relationships"></a>Relaciones de elementos  
   
 |Relación|Elemento|  
 |------------------|-------------|  

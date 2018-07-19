@@ -1,5 +1,5 @@
 ---
-title: Sys.masked_columns (Transact-SQL) | Documentos de Microsoft
+title: Sys.masked_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/25/2016
 ms.prod: sql
@@ -24,33 +24,33 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 432ea847081c8f0060954efdd6e7f2beea1a592d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179301"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998047"
 ---
 # <a name="sysmaskedcolumns-transact-sql"></a>Sys.masked_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Use la **sys.masked_columns** vista para consultar columnas de tabla que tiene un aplicada la función de enmascaramiento de datos dinámicos. Esta vista se hereda de la vista **sys.columns** . Devuelve todas las columnas de la vista **sys.columns** , junto con las columnas **is_masked** y **masking_function** . Además, indica si estas están enmascaradas y, en caso afirmativo, qué función de enmascaramiento se ha definido. Esta vista solo muestra las columnas en las que se ha aplicado la función de enmascaramiento.  
+  Use la **sys.masked_columns** vista para consultar columnas de tabla que tiene un aplicada la función de enmascaramiento dinámico de datos. Esta vista se hereda de la vista **sys.columns** . Devuelve todas las columnas de la vista **sys.columns** , junto con las columnas **is_masked** y **masking_function** . Además, indica si estas están enmascaradas y, en caso afirmativo, qué función de enmascaramiento se ha definido. Esta vista solo muestra las columnas en las que se ha aplicado la función de enmascaramiento.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Identificador del objeto al que pertenece esta columna.|  
-|name|**sysname**|Nombre de la columna. Es único en el objeto.|  
+|NAME|**sysname**|Nombre de la columna. Es único en el objeto.|  
 |column_id|**int**|Identificador de la columna. Es único en el objeto.<br /><br /> Los Id. de columna no tienen que ser secuenciales.|  
-|**Sys.masked_columns** devuelve muchas más columnas se hereda de **sys.columns**.|varios|Vea [sys.columns &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) más definiciones de columna.|  
-|is_masked|**bit**|Indica si la columna se enmascara. 1 indica enmascarada.|  
+|**Sys.masked_columns** devuelve muchas más columnas que se hereda de **sys.columns**.|varios|Consulte [sys.columns &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) para obtener más definiciones de columna.|  
+|is_masked|**bit**|Indica si la columna se enmascara. 1 indica enmascarado.|  
 |masking_function|**nvarchar(4000)**|La función de enmascaramiento para la columna.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Esta vista devuelve información acerca de las tablas donde el usuario tiene algún tipo de permiso en la tabla o si el usuario tiene el permiso VIEW ANY DEFINITION.  
   
 ## <a name="example"></a>Ejemplo  
- La siguiente consulta combinaciones **sys.masked_columns** a **sys.tables** devolver información acerca de todos los enmascara columnas.  
+ La siguiente consulta combinaciones **sys.masked_columns** a **sys.tables** devolver información acerca de todos los enmascara las columnas.  
   
 ```  
 SELECT tbl.name as table_name, c.name AS column_name, c.is_masked, c.masking_function  

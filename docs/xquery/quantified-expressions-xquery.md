@@ -1,5 +1,5 @@
 ---
-title: Cuantificado expresiones (XQuery) | Documentos de Microsoft
+title: Cuantificar las expresiones (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -31,11 +31,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9fa6c22aafdd0279c9205f36902bac1ef18c77df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076701"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004637"
 ---
 # <a name="quantified-expressions-xquery"></a>Expresiones cuantificadas (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,13 +72,13 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Puesto que LocationID es un atributo necesario de la \<ubicación > elemento, recibirá el resultado esperado:  
+ Puesto que LocationID es un atributo necesario del \<ubicación > elemento, recibirá el resultado esperado:  
   
 ```  
 <Result>All work centers have Location ID</Result>   
 ```  
   
- En lugar de utilizar el [método query()](../t-sql/xml/query-method-xml-data-type.md), puede usar el [método value()](../t-sql/xml/value-method-xml-data-type.md) para devolver el resultado al mundo relacional, como se muestra en la siguiente consulta. La consulta devolverá True si todas las ubicaciones de centro de trabajo tienen atributos LocationID. De lo contrario, la consulta devolverá False.  
+ En lugar de usar el [método query()](../t-sql/xml/query-method-xml-data-type.md), puede usar el [método value()](../t-sql/xml/value-method-xml-data-type.md) para devolver el resultado al mundo relacional, como se muestra en la siguiente consulta. La consulta devolverá True si todas las ubicaciones de centro de trabajo tienen atributos LocationID. De lo contrario, la consulta devolverá False.  
   
 ```  
 SELECT Instructions.value('  

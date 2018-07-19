@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_check_object_signatures (Transact-SQL) | Documentos de Microsoft
+title: Sys.fn_check_object_signatures (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4d516472fb5ccec63498d7ab13401e2df1f4bf10
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234681"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015157"
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -63,19 +63,19 @@ fn_ check_object_signatures (
  El valor hash SHA-1 del certificado o GUID de la clave asimétrica con el que se cifra la clave. @*huella digital* es **varbinary(20)**.  
   
 ## <a name="tables-returned"></a>Tablas devueltas  
- En la tabla siguiente se muestra las columnas que **fn_check_object_signatures** devuelve.  
+ La tabla siguiente enumeran las columnas que **fn_check_object_signatures** devuelve.  
   
-|Columna|Tipo|Description|  
+|columna|Tipo|Descripción|  
 |------------|----------|-----------------|  
 |Tipo|**nvarchar(120)**|Devuelve la descripción del tipo o ensamblado.|  
 |entity_id|**int**|Devuelve el identificador de objeto del objeto que se está evaluando.|  
 |is_signed|**int**|Devuelve 0 cuando la huella digital proporcionada no firma el objeto. Devuelve 1 cuando la huella digital proporcionada firma el objeto.|  
 |is_signature_valid|**int**|Cuando el valor de is_signed es 1, devuelve 0 si la firma no es válida. Devuelve 1 cuando la firma es válida.<br /><br /> Cuando el valor de is_signed es 0, siempre devuelve 0.|  
   
-## <a name="remarks"></a>Comentarios  
- Use **fn_check_object_signatures** para confirmar que los usuarios malintencionados no han alterado los objetos.  
+## <a name="remarks"></a>Notas  
+ Use **fn_check_object_signatures** para confirmar que los usuarios malintencionados no alterado los objetos.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Se requiere VIEW DEFINITION sobre el certificado o la clave asimétrica.  
   
 ## <a name="examples"></a>Ejemplos  

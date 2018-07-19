@@ -1,5 +1,5 @@
 ---
-title: CREAR ESTRUCTURA DE MINERÍA DE DATOS (DMX) | Documentos de Microsoft
+title: CREAR ESTRUCTURA DE MINERÍA DE DATOS (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ea04b08f98385755f006c1a67125a87dc71e41f1
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842758"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041272"
 ---
 # <a name="create-mining-structure-dmx"></a>CREAR ESTRUCTURA DE MINERÍA DE DATOS (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,10 +41,10 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  *lista de definiciones de columna*  
  Lista delimitada por comas de definiciones de columna.  
   
- *maxpercent de exclusión*  
+ *exclusión maxpercent*  
  Número entero entre 1 y 100 que indica el porcentaje de datos que se reservan para las pruebas.  
   
- *maxcases de exclusión*  
+ *exclusión maxcases*  
  Número entero que indica el número máximo de casos que deben utilizarse para las pruebas.  
   
  Si el valor especificado para el número máximo de casos es mayor que el número de casos de entrada, se utilizarán todos los casos de entrada para las pruebas y se generará un mensaje de advertencia.  
@@ -120,7 +120,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 > [!NOTE]  
 >  El **ALTER MINING STRUCTURE** instrucción no admite la exclusión.  
   
- Puede especificar hasta tres parámetros de exclusión. Si especifica tanto un número máximo de casos de exclusión como un porcentaje de exclusión, se reserva un porcentaje de casos hasta que se alcance el límite máximo de casos. Especifique el porcentaje de exclusión como un número entero seguido de la **por CIENTO** (palabra clave) y especifique el número máximo de casos como un número entero seguido el **casos** palabra clave. Las condiciones pueden combinarse en cualquier orden, como se muestra en los ejemplos siguientes:  
+ Puede especificar hasta tres parámetros de exclusión. Si especifica tanto un número máximo de casos de exclusión como un porcentaje de exclusión, se reserva un porcentaje de casos hasta que se alcance el límite máximo de casos. Especifique el porcentaje de exclusión como un número entero seguido el **por CIENTO** palabra clave y especifique el número máximo de casos como un número entero seguido el **casos** palabra clave. Las condiciones pueden combinarse en cualquier orden, como se muestra en los ejemplos siguientes:  
   
 ```  
 WITH HOLDOUT (20 PERCENT)   
@@ -132,7 +132,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
  El valor de inicialización de la exclusión controla el punto inicial del proceso que asigna de forma aleatoria los casos a los conjuntos de datos de aprendizaje o de pruebas. Si establece un valor de inicialización de la exclusión, puede asegurarse de que se puede repetir la partición. Si no especifica un valor de inicialización de la exclusión, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utiliza el nombre de la estructura de minería de datos para crear un valor de inicialización. Si cambia el nombre de la estructura, cambiará el valor de inicialización. El parámetro del valor de inicialización de la exclusión se puede utilizar con cualquiera de los otros dos parámetros de exclusión o con ambos.  
   
 > [!NOTE]  
->  Dado que la información de partición se almacena en caché con los datos de entrenamiento, para utilizar la exclusión, debe asegurarse de que el **CacheMode** propiedad de la estructura de minería de datos se establece en **KeepTrainingData**. Ésta es la configuración predeterminada en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para las estructuras de minería de datos nuevas. Cambiar el **CacheMode** propiedad **ClearTrainingCases** en una estructura de minería de datos existente que contiene una exclusión partición no afectará a los modelos de minería de datos que se han procesado. Sin embargo, si <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> no está establecido en **KeepTrainingData**, parámetros de exclusión no tendrá ningún efecto. Esto significa que todos los datos de origen se utilizarán para el aprendizaje y no habrá ningún conjunto de pruebas disponible. La definición de la partición se almacena en memoria caché con la estructura; si borra la memoria caché de casos de aprendizaje, también borrará la memoria caché de datos de pruebas y la definición del conjunto de exclusión.  
+>  Dado que la información de partición se almacena en caché con los datos de entrenamiento, para utilizar la exclusión debe asegurarse de que el **CacheMode** propiedad de la estructura de minería de datos está establecida en **KeepTrainingData**. Ésta es la configuración predeterminada en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para las estructuras de minería de datos nuevas. Cambiar el **CacheMode** propiedad **ClearTrainingCases** en una estructura de minería de datos existente que contiene una exclusión partición no afectará a ningún modelo de minería de datos que se han procesado. Sin embargo, si <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> no está establecido en **KeepTrainingData**, parámetros de exclusión no tendrá ningún efecto. Esto significa que todos los datos de origen se utilizarán para el aprendizaje y no habrá ningún conjunto de pruebas disponible. La definición de la partición se almacena en memoria caché con la estructura; si borra la memoria caché de casos de aprendizaje, también borrará la memoria caché de datos de pruebas y la definición del conjunto de exclusión.  
   
 ## <a name="examples"></a>Ejemplos  
  En los ejemplos siguientes se muestra cómo crear una estructura de minería de datos con exclusión mediante DMX.  
@@ -179,7 +179,7 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; las instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   

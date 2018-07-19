@@ -1,5 +1,5 @@
 ---
-title: Referencia de función de extensiones de minería de datos (DMX) | Documentos de Microsoft
+title: Referencia de funciones de extensiones de minería de datos (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9f0851d3ec373161c9277013fc746ebda5b91f89
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842538"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998427"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Referencia de funciones de Extensiones de minería de datos (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34842538"
 |[Predecir &#40;DMX&#41;](../dmx/predict-dmx.md)|Realiza una predicción sobre una columna específica.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)|Devuelve la probabilidad ajustada de la columna de predicción especificada.|  
 |[PredictAssociation &#40;DMX&#41;](../dmx/predictassociation-dmx.md)|Predice los miembros de asociaciones en una columna.|  
-|[PredictCaseLikelihood &#40;DMX&#41;](../dmx/predictcaselikelihood-dmx.md)|Devuelve la probabilidad de que un caso de entrada se ajuste dentro del modelo existente. Esta función sólo puede utilizarse con modelos de clústeres.|  
+|[PredictCaseLikelihood &#40;DMX&#41;](../dmx/predictcaselikelihood-dmx.md)|Devuelve la probabilidad de que se ajuste a un caso de entrada del modelo existente. Esta función sólo puede usarse con los modelos de clústeres.|  
 |[PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md)|Devuelve una tabla que representa el histograma de una columna especificada.|  
 |[PredictNodeId &#40;DMX&#41;](../dmx/predictnodeid-dmx.md)|Devuelve el valor de NodeID de un caso seleccionado.|  
 |[PredictProbability &#40;DMX&#41;](../dmx/predictprobability-dmx.md)|Devuelve la probabilidad de la columna especificada.|  

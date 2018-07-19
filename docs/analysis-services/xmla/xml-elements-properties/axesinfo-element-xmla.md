@@ -1,5 +1,5 @@
 ---
-title: Elemento AxesInfo (XMLA) | Documentos de Microsoft
+title: Elemento AxesInfo (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c766cc155b0e0b04af65c34653fbd5a5dcef4e64
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575827"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007165"
 ---
 # <a name="axesinfo-element-xmla"></a>Elemento AxesInfo (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contiene una colección de [AxisInfo](../../../analysis-services/xmla/xml-elements-properties/axisinfo-element-xmla.md) elementos, que representa los metadatos de eje contenidos por el elemento primario [OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md) elemento.  
+  Contiene una colección de [AxisInfo](../../../analysis-services/xmla/xml-elements-properties/axisinfo-element-xmla.md) elementos que representan los metadatos de eje contenidos por el elemento primario [OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34575827"
 |Valor predeterminado|None|  
 |Cardinalidad|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
-## <a name="element-relationships"></a>Relaciones del elemento  
+## <a name="element-relationships"></a>Relaciones de elementos  
   
 |Relación|Elemento|  
 |------------------|-------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "34575827"
 |Elementos secundarios|[AxisInfo](../../../analysis-services/xmla/xml-elements-properties/axisinfo-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notas  
- El **AxesInfo** elemento contiene una **AxisInfo** (elemento) para cada eje en el conjunto de datos multidimensional devuelto por un **raíz** elemento utilizando el  **MDDataSet** tipo de datos.  
+ El **AxesInfo** contiene un elemento **AxisInfo** (elemento) para cada eje en el conjunto de datos multidimensional devuelto por una **raíz** elemento mediante el  **MDDataSet** tipo de datos.  
   
 ## <a name="see-also"></a>Vea también
  [Propiedades &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

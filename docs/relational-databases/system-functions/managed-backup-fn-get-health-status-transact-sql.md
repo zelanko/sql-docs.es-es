@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_get_health_status (Transact-SQL) | Documentos de Microsoft
+title: managed_backup.fn_get_health_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0fa9a510f2be08329173898b7e0e6794458ea8fe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229510"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041973"
 ---
 # <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -57,22 +57,22 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de la columna|Tipo de datos|Description|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|number_of_storage_connectivity_errors|int|Número de errores de conexión cuando el programa se conecta a la cuenta de Almacenamiento de Windows Azure.|  
-|number_of_sql_errors|int|Número de errores devueltos cuando el programa se conecta al Motor de SQL Server.|  
-|number_of_invalid_credential_errors|int|Número de errores devueltos cuando el programa intenta autenticarse utilizando las credenciales SQL.|  
-|number_of_other_errors|int|Número de errores en otras categorías además de conectividad, SQL o credencial.|  
-|number_of_corrupted_or_deleted_backups|int|Número de archivos de copia de seguridad dañados o eliminados.|  
-|number_of_backup_loops|int|Número de veces que el agente de copia de seguridad examina todas las bases de datos configuradas con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
-|number_of_retention_loops|int|El número de veces que las bases de datos se examinan para evaluar el período de retención establecido.|  
+|number_of_storage_connectivity_errors|INT|Número de errores de conexión cuando el programa se conecta a la cuenta de Almacenamiento de Windows Azure.|  
+|number_of_sql_errors|INT|Número de errores devueltos cuando el programa se conecta al Motor de SQL Server.|  
+|number_of_invalid_credential_errors|INT|Número de errores devueltos cuando el programa intenta autenticarse utilizando las credenciales SQL.|  
+|number_of_other_errors|INT|Número de errores en otras categorías además de conectividad, SQL o credencial.|  
+|number_of_corrupted_or_deleted_backups|INT|Número de archivos de copia de seguridad dañados o eliminados.|  
+|number_of_backup_loops|INT|Número de veces que el agente de copia de seguridad examina todas las bases de datos configuradas con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|number_of_retention_loops|INT|El número de veces que las bases de datos se examinan para evaluar el período de retención establecido.|  
   
 ## <a name="best-practices"></a>Procedimientos recomendados  
- Estos recuentos agregados se pueden utilizar para supervisar el estado del sistema. Por ejemplo, si la columna number_ of_retention_loops es 0 en 30 minutos, es posible que la administración de la retención esté tardando mucho o incluso que no funcione correctamente. Las columnas de errores que no son cero pueden indicar que hay problemas y los registros de Eventos extendidos se deben comprobar para conocerlos. Como alternativa, use el procedimiento almacenado **managed_backup.sp_get_backup_diagnostics** para obtener una lista de eventos extendidos para buscar los detalles del error.  
+ Estos recuentos agregados se pueden utilizar para supervisar el estado del sistema. Por ejemplo, si la columna number_ of_retention_loops es 0 en 30 minutos, es posible que la administración de la retención esté tardando mucho o incluso que no funcione correctamente. Las columnas de errores que no son cero pueden indicar que hay problemas y los registros de Eventos extendidos se deben comprobar para conocerlos. Como alternativa, use el procedimiento almacenado **managed_backup.sp_get_backup_diagnostics** para obtener una lista de eventos extendidos para encontrar los detalles del error.  
   
 ## <a name="security"></a>Seguridad  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Permisos  
  Requiere **seleccione** permisos en la función.  
   
 ## <a name="examples"></a>Ejemplos  

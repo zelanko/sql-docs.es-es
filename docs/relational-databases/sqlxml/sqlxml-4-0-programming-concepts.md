@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 conceptos de programación | Documentos de Microsoft
+title: SQLXML 4.0 conceptos de programación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0071c9f56d118c3d80a92d556c29b813a25cdee1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970510"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003397"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>Conceptos de programación en SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "32970510"
  [Requisitos para ejecutar los ejemplos de SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)  
  Describe los requisitos para crear ejemplos funcionales a partir de los ejemplos de SQLXML proporcionados.  
   
- [Formato de cliente y servidor &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
+ [Formato del lado cliente y servidor &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
  Proporciona información y comparaciones de formato en el cliente y en el servidor, incluido el comando FOR XML para construir los documentos XML.  
   
  [Esquemas XSD anotados en SQLXML 4.0](../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md)  
@@ -58,16 +58,16 @@ ms.locfileid: "32970510"
  [Utilizar consultas XPath en SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  
  Describe cómo usar un subconjunto del lenguaje XPath para consultar las vistas XML creadas por un esquema XSD anotado y proporciona ejemplos.  
   
- [Usar diagramas de actualización para modificar datos en SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
+ [Utilizar los diagramas de actualización para modificar datos en SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  Proporciona información sobre los diagramas de actualización, que modifican los datos de una base de datos trabajando con las vistas XML proporcionadas por los esquemas XSD (o XDR) anotados.  
   
- [Realizar la carga masiva de datos XML & #40; SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Realizar la carga masiva de datos XML &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
  Describe cómo hacer una carga masiva de XML en SQLXML 4.0.  
   
- [SQLXML 4.0 Data Access Components](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
+ [Componentes de acceso a datos de SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
  Documenta el proveedor de SQLXMLOLEDB y proporciona vínculos a otros componentes de acceso a datos de SQLXML 4.0.  
   
- [Compatibilidad SQLXML 4.0 con .NET Framework](http://msdn.microsoft.com/library/c18cf801-f893-4fbc-8e2b-c563f6108acf)  
+ [Compatibilidad de SQLXML 4.0 con .NET Framework](http://msdn.microsoft.com/library/c18cf801-f893-4fbc-8e2b-c563f6108acf)  
  Describe la compatibilidad de SQLXML 4.0 con .NET Framework.  
   
  [Almacenamiento en caché de plantillas, XSL y esquemas &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  

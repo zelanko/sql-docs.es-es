@@ -1,5 +1,5 @@
 ---
-title: Administración basada en directivas procedimientos almacenados (Transact-SQL) | Documentos de Microsoft
+title: Administración basada en directivas procedimientos (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7b941921556665ef27fc20f8af706d45f44dbcd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238086"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991947"
 ---
 # <a name="policy-based-management-stored-procedures-transact-sql"></a>Procedimientos almacenados de la administración basada en directivas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el sistema siguiente procedimientos almacenados que se utilizan para la administración basada en directivas.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los siguientes sistemas procedimientos almacenan que se usan para la administración basada en directivas.  
   
 > [!IMPORTANT]  
 >  Solo se admiten los procedimientos almacenados de administración basada en directivas que se documentan en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los componentes de administración basada en directivas usan los procedimientos almacenados que no se han documentado y no se deberían utilizar para administrar la administración basada en directivas.  

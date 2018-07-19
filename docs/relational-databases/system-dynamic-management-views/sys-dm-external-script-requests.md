@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_external_script_requests | Documentos de Microsoft
+title: Sys.dm_external_script_requests | Microsoft Docs
 ms.custom: ''
 ms.date: 06/24/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc6db4816e4ba890e132600874d5db21aa190c02
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467492"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005687"
 ---
 # <a name="sysdmexternalscriptrequests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,21 +39,21 @@ Devuelve una fila para cada cuenta de trabajo activa que ejecuta un script exter
 >  
 >  Esta DMV solo está disponible si ha instalado y después habilitado la característica que admite la ejecución del script externo. Para más información sobre cómo hacer esto para scripts de R, consulte [Set Up SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md) (Configuración de servicios de R de SQL Server).  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**Identificador único**|Identificador del proceso que envió la solicitud de script externo. Esto se corresponde con el identificador de proceso como recibidos de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**Identificador único**|Identificador del proceso que envió la solicitud de script externo. Esto corresponde al identificador de proceso, tal como lo recibe [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |language|**nvarchar**|Palabra clave que representa un lenguaje de script compatible. Actualmente solo e admite `R` .|  
 |degree_of_parallelism|**int**|Número que indica el número de procesos paralelos que se crearon. Este valor podría ser diferente del número de procesos paralelos que se solicitaron.|  
 |external_user_name|**nvarchar**|La cuenta de trabajo de Windows bajo la que se ejecutó el script.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW SERVER STATE en el servidor.  
   
 > [!NOTE]
 >   
 >  Los usuarios que ejecuten scripts externos deben tener el permiso adicional EXECUTE ANY EXTERNAL SCRIPT, sin embargo, los administradores pueden usar esta DMV sin este permiso. 
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 
 Esta vista se puede filtrar usando el identificador del lenguaje de script.
 
@@ -82,13 +82,13 @@ Resultado
 
 external_script_request_id  |language  |degree_of_parallelism  |external_user_name  
 ---------|---------|---------|---------
-183EE6FC-7399-4318-AA2E-7A6C68E435A8     |     L    |      1   |  MSSQLSERVER01       
+183EE6FC-7399-4318-AA2E-7A6C68E435A8     |     R    |      1   |  MSSQLSERVER01       
 
 
   
 ## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Vistas de administración dinámica y funciones relacionadas con ejecuciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Funciones y vistas de administración dinámica relacionadas con ejecuciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
   

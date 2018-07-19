@@ -1,5 +1,5 @@
 ---
-title: Copia de seguridad de elemento (XMLA) | Documentos de Microsoft
+title: Copia de seguridad de elemento (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4e00a4991226779a91e16806dbe15973d946ec69
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34574217"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007155"
 ---
 # <a name="backup-element-xmla"></a>Elemento Backup (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Realiza una copia de una base de datos de Analysis Services en un archivo de copia de seguridad.  
+  Realiza una copia de seguridad de una base de datos de Analysis Services en un archivo de copia de seguridad.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,19 +42,19 @@ ms.locfileid: "34574217"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipo y longitud de los datos|Ninguno|  
-|Valor predeterminado|Ninguno|  
-|Cardinalidad|0-n: Elemento opcional que puede aparecer más de una vez.|  
+|Tipo y longitud de los datos|None|  
+|Valor predeterminado|None|  
+|Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
   
-## <a name="element-relationships"></a>Relaciones del elemento  
+## <a name="element-relationships"></a>Relaciones de elementos  
   
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
 |Elementos secundarios|[AllowOverwrite](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md), [ApplyCompression](../../../analysis-services/xmla/xml-elements-properties/applycompression-element-xmla.md), [BackupRemotePartitions](../../../analysis-services/xmla/xml-elements-properties/backupremotepartitions-element-xmla.md), [archivo](../../../analysis-services/xmla/xml-elements-properties/file-element-xmla.md), [ubicaciones](../../../analysis-services/xmla/xml-elements-properties/locations-element-xmla.md), [ Objeto](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md), [contraseña](../../../analysis-services/xmla/xml-elements-properties/password-element-xmla.md), [seguridad](../../../analysis-services/xmla/xml-elements-properties/security-element-xmla.md)|  
   
-## <a name="remarks"></a>Comentarios  
- El **copia de seguridad** comando realiza una copia de la [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de datos especificada en el [objeto](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) elemento a un archivo de copia de seguridad y, opcionalmente, copias de seguridad de las particiones remotas en los archivos de copia de seguridad remotos. Si el **objeto** elemento hace referencia a un objeto distinto de un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] la base de datos, se produce un error.  
+## <a name="remarks"></a>Notas  
+ El **copia de seguridad** comando realiza una copia del [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de datos especificada en el [objeto](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) elemento a un archivo de copia de seguridad y, opcionalmente, realiza copias de seguridad de las particiones remotas a los archivos de copia de seguridad remotos. Si el **objeto** elemento hace referencia a un objeto distinto una [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] de base de datos, se produce un error.  
   
  La información de la que hace copia de seguridad el comando **Backup** depende del modo del almacenamiento que utilicen los objetos de la base de datos. La tabla siguiente identifica la información de la que se hace copia de seguridad en función del modo de almacenamiento utilizado.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34574217"
   
  Durante una **copia de seguridad** comando, se coloca un bloqueo compartido en el [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de datos especificada en el **objeto** elemento. El bloqueo compartido se anula después de que se haya completado la ejecución del comando **Backup** .  
   
- Varios **copia de seguridad** comandos se pueden ejecutar en paralelo, si los comandos están incluidos en el [paralelo](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md) colección de un [lote](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) comando. La colección **Parallel** permite hacer copia de seguridad de una base de datos al mismo tiempo en varios archivos de copia de seguridad.  
+ Varios **copia de seguridad** comandos se pueden ejecutar en paralelo, si los comandos están incluidos en el [paralelo](../../../analysis-services/xmla/xml-elements-properties/parallel-element-xmla.md) colección de un [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) comando. La colección **Parallel** permite hacer copia de seguridad de una base de datos al mismo tiempo en varios archivos de copia de seguridad.  
   
  Para obtener más información acerca de la copia de seguridad y restaurar bases de datos, vea [realizar copias de seguridad, restaurar y sincronizar bases de datos &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   

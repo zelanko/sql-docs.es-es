@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_resource_governor_workload_groups (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_resource_governor_workload_groups (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 023dc1559ade2a14be43750acd783fefd000e7b0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468031"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005807"
 ---
 # <a name="sysdmresourcegovernorworkloadgroups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -37,14 +37,14 @@ ms.locfileid: "34468031"
   Devuelve las estadísticas del grupo de cargas de trabajo y la configuración actual en memoria del grupo de cargas de trabajo. Puede unirse esta vista con sys.dm_resource_governor_resource_pools para obtener el nombre del grupo de recursos de servidor.  
   
 > [!NOTE]  
->  Para llamar a esta desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_resource_governor_workload_groups**.  
+>  Al llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_resource_governor_workload_groups**.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|Id. del grupo de cargas de trabajo No admite valores NULL.|  
-|name|**sysname**|Nombre del grupo de cargas de trabajo No admite valores NULL.|  
+|NAME|**sysname**|Nombre del grupo de cargas de trabajo No admite valores NULL.|  
 |pool_id|**int**|Id. del grupo de recursos de servidor. No admite valores NULL.|  
-|external_pool_id|**int**|**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Id. del grupo de recursos externos. No admite valores NULL.|  
+|external_pool_id|**int**|**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Id. de grupo de recursos externos. No admite valores NULL.|  
 |statistics_start_time|**datetime**|Tiempo en que se restableció la colección de estadísticas para el grupo de cargas de trabajo. No admite valores NULL.|  
 |total_request_count|**bigint**|El recuento acumulado de solicitudes completadas en el grupo de cargas de trabajo. No admite valores NULL.|  
 |total_queued_request_count|**bigint**|El recuento acumulado de solicitudes en cola una vez alcanzado el límite de GROUP_MAX_REQUESTS. No admite valores NULL.|  
@@ -61,20 +61,20 @@ ms.locfileid: "34468031"
 |total_reduced_memgrant_count|**bigint**|Recuento acumulado de concesiones de memoria que alcanzaron el límite máximo de tamaño de consulta. No admite valores NULL.|  
 |max_request_grant_memory_kb|**bigint**|El tamaño máximo de la concesión de memoria, en kilobytes, de una única solicitud desde que se restablecieron las estadísticas. No admite valores NULL.|  
 |active_parallel_thread_count|**bigint**|Recuento actual de uso del subproceso paralelo. No admite valores NULL.|  
-|importance|**sysname**|Valor de la configuración actual de la importancia relativa de una solicitud en este grupo de cargas de trabajo. La importancia puede ser uno de los siguientes, siendo Medium es el valor predeterminado: bajo, medio o alto.<br /><br /> No admite valores NULL.|  
+|importance|**sysname**|Valor de la configuración actual de la importancia relativa de una solicitud en este grupo de cargas de trabajo. La importancia puede ser uno de los siguientes, siendo Medium el valor predeterminado: baja, Media o alta.<br /><br /> No admite valores NULL.|  
 |request_max_memory_grant_percent|**int**|Valor actual de la concesión máxima de memoria, en porcentaje, para una única solicitud. No admite valores NULL.|  
 |request_max_cpu_time_sec|**int**|Valor actual máximo de uso de CPU, en segundos, para una única solicitud. No admite valores NULL.|  
 |request_memory_grant_timeout_sec|**int**|Valor actual del tiempo de espera de concesiones de memoria, en segundos, para una única solicitud. No admite valores NULL.|  
 |group_max_requests|**int**|Valor actual del número máximo de solicitudes simultáneas. No admite valores NULL.|  
 |max_dop|**int**|Grado máximo de paralelismo para el grupo de cargas de trabajo. El valor predeterminado, 0, utiliza la configuración global. No admite valores NULL.|  
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo en esta distribución.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta vista de administración dinámica muestra la configuración en memoria. Para ver los metadatos almacenados de la configuración, utilice la vista de catálogo sys.resource_governor_workload_groups.  
   
- Cuando ALTER RESOURCE GOVERNOR RESET STATISTICS se ejecuta correctamente, se restablecen los contadores siguientes: statistics_start_time, total_request_count, total_queued_request_count, total_cpu_limit_violation_count, total_cpu_usage_ms, max_request_ cpu_time_ms, total_lock_wait_count, total_lock_wait_time_ms, total_query_optimization_count, total_suboptimal_plan_generation_count, total_reduced_memgrant_count y max_request_grant_memory_kb. statistics_start_time se establece en la fecha actual del sistema y la hora, los otros contadores se establecen en cero (0).  
+ Cuando ALTER RESOURCE GOVERNOR RESET STATISTICS se ejecuta correctamente, los siguientes contadores se restablecen: statistics_start_time, total_request_count, total_queued_request_count, total_cpu_limit_violation_count, total_cpu_usage_ms, max_request_ cpu_time_ms, total_lock_wait_count, total_lock_wait_time_ms, total_query_optimization_count, total_suboptimal_plan_generation_count, total_reduced_memgrant_count y max_request_grant_memory_kb. statistics_start_time se establece en la fecha actual del sistema y la hora, los otros contadores se establecen en cero (0).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW SERVER STATE.  
   
 ## <a name="see-also"></a>Vea también  

@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_ backup_master_switch (Transact-SQL) | Documentos de Microsoft
+title: managed_backup.sp_ backup_master_switch (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 64d6681203962b54f1f3daae2de26e695cec240c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237375"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995556"
 ---
 # <a name="managedbackupsp-backupmasterswitch-transact-sql"></a>managed_backup.sp_ backup_master_switch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ EXEC managed_backup.sp_backup_master_switch
 ## <a name="security"></a>Seguridad  
  Describe problemas de seguridad relacionados con la instrucción. Permisos de inclusión como subsección (título H3). Considere incluir otras subsecciones para el encadenamiento de la propiedad y auditoría, si procede.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Permisos  
  Requiere la pertenencia a **db_backupoperator** rol, la base de datos con **ALTER ANY CREDENTIAL** permisos, y **EXECUTE** permisos **sp_delete_ backuphistory**procedimiento almacenado.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -1,5 +1,5 @@
 ---
-title: Especificar un esquema de asignación anotados en un diagrama de actualización (SQLXML 4.0) | Documentos de Microsoft
+title: Especificar un esquema de asignación anotados en un diagrama de actualización (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -27,33 +27,33 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ce7e9b90c034643ba31df7f34425ff8203956b9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972730"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003365"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Cómo especificar un esquema de asignación anotado en un diagrama de actualización (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  En este tema se explica el modo de usar el esquema de asignación (XSD o XDR) especificado en un diagrama de actualización para procesar las actualizaciones. En un diagrama de actualización, puede proporcionar el nombre de un esquema de asignación anotados para usarlo para asignar los elementos y atributos en el diagrama de actualización a las tablas y columnas en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Al especificar un esquema de asignación en un diagrama de actualización, los nombres de elementos y atributos especificados en el diagrama de actualización deben asignarse a los elementos y atributos del esquema de asignación.  
+  En este tema se explica el modo de usar el esquema de asignación (XSD o XDR) especificado en un diagrama de actualización para procesar las actualizaciones. En un diagrama de actualización, puede proporcionar el nombre de un esquema de asignación anotados para usar en los elementos y atributos en el diagrama de actualización de asignación a tablas y columnas en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Al especificar un esquema de asignación en un diagrama de actualización, los nombres de elementos y atributos especificados en el diagrama de actualización deben asignarse a los elementos y atributos del esquema de asignación.  
   
- Para especificar un esquema de asignación, utilice la **esquema de asignación** atributo de la  **\<sincronización >** elemento. En los ejemplos siguientes se muestran dos diagramas de actualización: uno que usa un esquema de asignación simple y otro que usa un esquema más complejo.  
+ Para especificar un esquema de asignación, utilice el **esquema de asignación** atributo de la  **\<sincronización >** elemento. En los ejemplos siguientes se muestran dos diagramas de actualización: uno que usa un esquema de asignación simple y otro que usa un esquema más complejo.  
   
 > [!NOTE]  
->  En esta documentación se asume que está familiarizado con la compatibilidad de las plantillas y el esquema de asignación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Introducción a los esquemas XSD anotados & #40; SQLXML 4.0 & #41; ](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Para obtener información sobre las aplicaciones heredadas que usan XDR, vea [esquemas XDR anotados &#40;desusado en SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+>  En esta documentación se asume que está familiarizado con la compatibilidad de las plantillas y el esquema de asignación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [Introducción a los esquemas XSD anotados &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Para obtener información sobre las aplicaciones heredadas que usan XDR, vea [esquemas XDR anotados &#40;desusado en SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="dealing-with-data-types"></a>Trabajar con tipos de datos  
  Si el esquema especifica la **imagen**, **binario**, o **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de datos (mediante el uso de **SQL: DataType**) y no lo hace Especifique un tipo de datos XML, el diagrama de actualización, se da por supuesto que el tipo de datos XML es **binarios en base 64**. Si los datos son **bin.base** tipo, debe especificar explícitamente el tipo (**dt:type=bin.base** o **tipo = "xsd: hexBinary"**).  
   
  Si el esquema especifica la **dateTime**, **fecha**, o **tiempo** tipos de datos XSD, debe especificar también el correspondiente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de datos mediante el uso de  **SQL: DataType = "dateTime"**.  
   
- Al administrar los parámetros de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **dinero** tipo, debe especificar explícitamente **SQL: DataType = "money"** en el nodo correspondiente en el esquema de asignación.  
+ Al administrar parámetros de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **dinero** tipo, debe especificar explícitamente **SQL: DataType = "money"** en el nodo correspondiente en el esquema de asignación.  
   
 ## <a name="examples"></a>Ejemplos  
  Para crear ejemplos funcionales mediante los siguientes ejemplos, debe cumplir los requisitos especificados en [requisitos para ejecutar los ejemplos de SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. Crear un diagrama de actualización con un esquema de asignación simple  
- El siguiente esquema XSD (SampleSchema.xml) es un esquema de asignación que se asigna el  **\<cliente >** elemento a la tabla Sales.Customer:  
+ El esquema XSD siguiente (SampleSchema.xml) es un esquema de asignación que asigna el  **\<cliente >** elemento a la tabla Sales.Customer:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -71,7 +71,7 @@ ms.locfileid: "32972730"
 </xsd:schema>  
 ```  
   
- El diagrama de actualización siguiente inserta un registro en la tabla Sales.Customer y se basa en el esquema de asignación anterior para asignar correctamente estos datos a la tabla. Observe que el diagrama de actualización usa el mismo nombre de elemento,  **\<cliente >**, tal como se define en el esquema. Esto resulta obligatorio porque el diagrama de actualización especifica un esquema determinado.  
+ El diagrama de actualización siguiente inserta un registro en la tabla Sales.Customer y se basa en el esquema de asignación anterior para asignar correctamente estos datos a la tabla. Tenga en cuenta que el diagrama de actualización usa el mismo nombre de elemento,  **\<cliente >**, tal como se define en el esquema. Esto resulta obligatorio porque el diagrama de actualización especifica un esquema determinado.  
   
 ##### <a name="to-test-the-updategram"></a>Para probar el diagrama de actualización  
   
@@ -237,9 +237,9 @@ ms.locfileid: "32972730"
 ```  
   
 ### <a name="c-inserting-a-record-by-using-the-parent-child-relationship-and-inverse-annotation-specified-in-the-xsd-schema"></a>C. Insertar un registro mediante la relación de elementos primarios y secundarios y la anotación inversa especificada en el esquema XSD  
- Este ejemplo muestra cómo la lógica del diagrama de actualización usa la relación de elementos primarios y secundarios especificada en el esquema XSD para procesar las actualizaciones y cómo el **inverso** se utiliza la anotación. Para obtener más información sobre la **inverso** anotación, consulte [especificando el atributo SQL: Inverse en SQL: Relationship &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
+ En este ejemplo se muestra cómo la lógica del diagrama de actualización usa la relación de elementos primarios y secundarios especificada en el esquema XSD para procesar las actualizaciones y cómo el **inverso** se utiliza la anotación. Para obtener más información sobre la **inverso** anotaciones, vea [especificando el atributo SQL: Inverse en SQL: Relationship &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
   
- En este ejemplo se da por supuesto que las tablas siguientes se encuentran en el **tempdb** base de datos:  
+ En este ejemplo se da por supuesto que las siguientes tablas están en el **tempdb** base de datos:  
   
 -   `Cust (CustomerID, CompanyName)`, donde `CustomerID` es la clave principal  
   
@@ -280,11 +280,11 @@ ms.locfileid: "32972730"
 </xsd:schema>  
 ```  
   
- El esquema XSD en este ejemplo tiene  **\<cliente >** y  **\<orden >** elementos y especifica una relación de elementos primarios y secundarios entre los dos elementos. Identifica  **\<orden >** como el elemento primario y  **\<cliente >** como el elemento secundario.  
+ El esquema XSD en este ejemplo tiene  **\<cliente >** y  **\<orden >** elementos y especifica una relación de elementos primarios y secundarios entre los dos elementos. Identifica  **\<orden >** como elemento primario y  **\<cliente >** como elemento secundario.  
   
  La lógica de procesamiento del diagrama de actualización usa la información de la relación de elementos primarios y secundarios para determinar el orden en que los registros se insertan en las tablas. En este ejemplo, la lógica del diagrama de actualización en primer lugar intenta insertar un registro en la tabla Ord (porque  **\<orden >** es el elemento primario) y, a continuación, intenta insertar un registro en la tabla Cust (porque  **\<Cliente >** es el elemento secundario). Sin embargo, debido a la información de clave principal y clave externa incluida en el esquema de tabla de base de datos, esta operación de inserción provoca una infracción de clave externa en la base de datos y se produce un error en la operación de inserción.  
   
- Para indicar a la lógica del diagrama de actualización para invertir la relación de elementos primarios y secundarios durante la operación de actualización, el **inverso** anotación se especifica en el  **\<relación >** elemento. Como resultado, los registros se agregan primero en la tabla Cust y después en la tabla Ord, y la operación se realiza correctamente.  
+ Para indicar a la lógica del diagrama de actualización para revertir la relación de elementos primarios y secundarios durante la operación de actualización, el **inverso** anotación se especifica en el  **\<relación >** elemento. Como resultado, los registros se agregan primero en la tabla Cust y después en la tabla Ord, y la operación se realiza correctamente.  
   
  El diagrama de actualización siguiente inserta un pedido (OrderID=2) en la tabla Ord y un cliente (CustomerID='AAAAA) en la tabla Cust mediante el esquema XSD especificado:  
   

@@ -1,5 +1,5 @@
 ---
-title: Columnas de datos de eventos de sesión | Documentos de Microsoft
+title: Columnas de datos de eventos de sesión | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e3a0287edc3081273f2a3c3075f355e9b2b2493
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044349"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007247"
 ---
 # <a name="session-events-data-columns"></a>Columnas de datos de Eventos de sesión
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "34044349"
 |---------------------|-------------------|---------------------|----------------------------|  
 |CurrentTime|2|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|Duración|5|2|Tiempo (en milisegundos) de duración del evento.|  
+|Duration|5|2|Tiempo (en milisegundos) de duración del evento.|  
 |CPUTime|6|2|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |ConnectionID|25|1|Identificador único de la conexión.|  
 |DatabaseName|28|8|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|  

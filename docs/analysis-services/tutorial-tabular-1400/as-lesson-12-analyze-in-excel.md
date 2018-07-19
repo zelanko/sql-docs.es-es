@@ -1,5 +1,5 @@
 ---
-title: 'Lección tutorial de Analysis Services 12: analizar en Excel | Documentos de Microsoft'
+title: 'Lección del tutorial de Analysis Services 12: analizar en Excel | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,29 +10,29 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d215045f87ed780a4adc97f9ae4fed9ac7e6991a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042789"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38016000"
 ---
 # <a name="analyze-in-excel"></a>Analizar en Excel
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-En esta lección, usa la característica analizar en Excel para abrir Microsoft Excel, crear automáticamente una conexión en el área de trabajo del modelo y agregar automáticamente una tabla dinámica a la hoja de cálculo. La característica Analizar en Excel se ha diseñado para proporcionar una manera rápida y sencilla de probar la eficacia del diseño de su modelo antes de implementarlo. No realice ningún análisis de datos en esta lección. El propósito de esta lección es familiarizar al autor de modelos con las herramientas que puede usar para probar el diseño de sus modelos.   
+En esta lección, usará el analizar en función de Excel para abrir Microsoft Excel, crear automáticamente una conexión al área de trabajo del modelo y agregar automáticamente una tabla dinámica a la hoja de cálculo. La característica Analizar en Excel se ha diseñado para proporcionar una manera rápida y sencilla de probar la eficacia del diseño de su modelo antes de implementarlo. No realice ningún análisis de datos en esta lección. El propósito de esta lección es familiarizar al autor de modelos con las herramientas que puede usar para probar el diseño de sus modelos.   
   
-Para completar esta lección, debe tener instalado Excel en el mismo equipo que Visual Studio.
+Para completar esta lección, Excel debe instalarse en el mismo equipo que Visual Studio.
   
 Tiempo estimado para completar esta lección: **5 minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
 
-Este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 11: crear roles](../tutorial-tabular-1400/as-lesson-11-create-roles.md).  
+En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 11: crear roles](../tutorial-tabular-1400/as-lesson-11-create-roles.md).  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>Examinar utilizando las perspectivas Predeterminada y Venta por Internet  
 
-En estas primeras tareas, examinar el modelo mediante el uso de la perspectiva predeterminada, que incluye todos los objetos del modelo, y también con la perspectiva de ventas por Internet que anteriormente. La perspectiva Venta por Internet excluye el objeto de tabla Cliente.  
+En estas primeras tareas, examinar el modelo utilizando tanto la perspectiva predeterminada, que incluye todos los objetos del modelo, y también mediante el uso de la perspectiva venta por Internet que anteriormente. La perspectiva Venta por Internet excluye el objeto de tabla Cliente.  
   
 #### <a name="to-browse-by-using-the-default-perspective"></a>Para examinar con la perspectiva predeterminada  
   
@@ -42,7 +42,7 @@ En estas primeras tareas, examinar el modelo mediante el uso de la perspectiva p
   
     Excel se abre con un nuevo libro. Se crea una conexión de origen de datos con la cuenta de usuario actual y se utiliza la perspectiva predeterminada para definir los campos visibles. Una tabla dinámica se agrega automáticamente a la hoja de cálculo.  
   
-3.  En Excel, en la **lista de campos de tabla dinámica**, tenga en cuenta el **DimDate** y **FactInternetSales** aparecen los grupos de medida. El **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**, y **FactInternetSales** también aparezcan las tablas con sus respectivas columnas.  
+3.  En Excel, en el **lista de campos de tabla dinámica**, tenga en cuenta la **DimDate** y **FactInternetSales** aparecen los grupos de medida. El **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**, y **FactInternetSales** también aparecen las tablas con sus respectivas columnas.  
   
 4.  Cierre Excel sin guardar el libro.  
   
@@ -62,13 +62,13 @@ En estas primeras tareas, examinar el modelo mediante el uso de la perspectiva p
   
 ## <a name="browse-by-using-roles"></a>Examinar mediante roles  
 
-Las funciones son una parte importante de cualquier modelo tabular. Sin al menos un rol al que se agregan a los usuarios como miembros, los usuarios no se pueden tener acceso a y analizar datos con el modelo. La característica Analizar de Excel proporciona una manera de probar los roles que ha definido.  
+Las funciones son una parte importante de cualquier modelo tabular. Si no hay al menos un rol al que se agregan usuarios como miembros, los usuarios no pueden acceder y analizar los datos del modelo. La característica Analizar de Excel proporciona una manera de probar los roles que ha definido.  
   
-#### <a name="to-browse-by-using-the-sales-manager-user-role"></a>Para examinar mediante el rol de usuario de administrador de ventas  
+#### <a name="to-browse-by-using-the-sales-manager-user-role"></a>Para examinar mediante el rol de usuario director de ventas  
   
 1.  En SSDT, haga clic en el **modelo** menú y, a continuación, haga clic en **analizar en Excel**.  
   
-2.  En **especifica el nombre de usuario o rol que se usará para conectarse al modelo**, seleccione **rol**y, a continuación, en el cuadro de lista desplegable, seleccione **Sales Manager**y, a continuación, haga clic en **Aceptar**.  
+2.  En **especifique el nombre de usuario o rol que se usará para conectarse al modelo**, seleccione **rol**y, a continuación, en el cuadro de lista desplegable, seleccione **jefe de ventas**y, a continuación, haga clic en **Aceptar**.  
   
     Excel se abre con un nuevo libro. Automáticamente se crea una tabla dinámica. La lista de campos de tabla dinámica incluye todos los campos de datos disponibles en el nuevo modelo.  
       

@@ -1,5 +1,5 @@
 ---
-title: Llamar a métodos | Documentos de Microsoft
+title: Llamar a métodos | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,23 +22,23 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a3629f2f5d5905ce17df7a5aa15936edaa876ef4
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707713"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005839"
 ---
 # <a name="calling-methods"></a>Llamar a métodos
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Los métodos realizan tareas específicas relacionadas con el objeto, como la emisión de un **punto de comprobación** en una base de datos o la solicitud de una lista enumerada de inicios de sesión para la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Los métodos realizan tareas específicas relacionadas con el objeto, como emitir un **Checkpoint** en una base de datos o de solicitar una lista enumerada de inicios de sesión para la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Los métodos realizan una operación en un objeto. Los métodos pueden tomar parámetros y a menudo tener un valor devuelto. El valor devuelto puede ser un tipo de datos simple, un objeto complejo o una estructura que contiene muchos miembros.  
   
  Use el control de excepciones para detectar si el método se realizó correctamente. Para obtener más información, consulte [Handling SMO Exceptions](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-exceptions.md).  
   
 ## <a name="examples"></a>Ejemplos  
-Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear a Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
  
   
 ## <a name="using-a-simple-smo-method-in-visual-basic"></a>Usar un método SMO simple en Visual Basic  
@@ -73,7 +73,7 @@ db.Create();
  }  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-basic"></a>Usar un método SMO con un parámetro en Visual Basic  
- El <xref:Microsoft.SqlServer.Management.Smo.Table> objeto tiene un método denominado <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>. Este método requiere un parámetro numérico que especifica **FillFactor**.  
+ El <xref:Microsoft.SqlServer.Management.Smo.Table> objeto tiene un método llamado <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>. Este método requiere un parámetro numérico que especifica **FillFactor**.  
   
 ```VBNET
 Dim srv As Server  
@@ -84,7 +84,7 @@ tb.RebuildIndexes(70)
 ```  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-c"></a>Usar un método SMO con un parámetro en Visual C#  
- El <xref:Microsoft.SqlServer.Management.Smo.Table> objeto tiene un método denominado <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>. Este método requiere un parámetro numérico que especifica `FillFactor`.  
+ El <xref:Microsoft.SqlServer.Management.Smo.Table> objeto tiene un método llamado <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>. Este método requiere un parámetro numérico que especifica `FillFactor`.  
   
 ```csharp  
 {   
@@ -184,7 +184,7 @@ Console.WriteLine(d.Name);
 ```  
   
 ## <a name="copying-an-smo-object-in-visual-basic"></a>Copiar un objeto SMO en Visual Basic  
- Este ejemplo de código se utiliza el <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> método para crear una copia de la <xref:Microsoft.SqlServer.Management.Smo.Server> objeto. El <xref:Microsoft.SqlServer.Management.Smo.Server> objeto representa una conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Este ejemplo de código utiliza el <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> método para crear una copia de la <xref:Microsoft.SqlServer.Management.Smo.Server> objeto. El <xref:Microsoft.SqlServer.Management.Smo.Server> objeto representa una conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```VBNET  
 'Connect to the local, default instance of SQL Server.
@@ -200,7 +200,7 @@ Console.WriteLine(srv2.ConnectionContext.ConnectTimeout.ToString)
 ```
   
 ## <a name="copying-an-smo-object-in-visual-c"></a>Copiar un objeto SMO en Visual C#  
- Este ejemplo de código se utiliza el <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> método para crear una copia de la <xref:Microsoft.SqlServer.Management.Smo.Server> objeto. El <xref:Microsoft.SqlServer.Management.Smo.Server> objeto representa una conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Este ejemplo de código utiliza el <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> método para crear una copia de la <xref:Microsoft.SqlServer.Management.Smo.Server> objeto. El <xref:Microsoft.SqlServer.Management.Smo.Server> objeto representa una conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```csharp  
 {   
@@ -218,7 +218,7 @@ Console.WriteLine(srv2.ConnectionContext.ConnectTimeout.ToString);
 ```  
   
 ## <a name="monitoring-server-processes-in-visual-basic"></a>Supervisar los procesos de servidor en Visual Basic  
- Puede obtener la información de tipo de estado actual de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a través de métodos de enumeración. El ejemplo de código usa el método <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> para detectar información sobre los procesos actuales. También muestra cómo trabajar con las columnas y filas del objeto <xref:System.Data.DataTable> devuelto.  
+ Puede obtener la información de tipo de estado actual sobre la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a través de los métodos de enumeración. El ejemplo de código usa el método <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> para detectar información sobre los procesos actuales. También muestra cómo trabajar con las columnas y filas del objeto <xref:System.Data.DataTable> devuelto.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -240,7 +240,7 @@ Next
 ```
   
 ## <a name="monitoring-server-processes-in-visual-c"></a>Supervisar los procesos de servidor en Visual C#  
- Puede obtener la información de tipo de estado actual de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a través de métodos de enumeración. El ejemplo de código usa el método <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> para detectar información sobre los procesos actuales. También muestra cómo trabajar con las columnas y filas del objeto <xref:System.Data.DataTable> devuelto.  
+ Puede obtener la información de tipo de estado actual sobre la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a través de los métodos de enumeración. El ejemplo de código usa el método <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> para detectar información sobre los procesos actuales. También muestra cómo trabajar con las columnas y filas del objeto <xref:System.Data.DataTable> devuelto.  
   
 ```csharp  
 //Connect to the local, default instance of SQL Server.   

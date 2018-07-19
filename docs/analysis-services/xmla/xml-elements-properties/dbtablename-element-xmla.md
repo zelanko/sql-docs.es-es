@@ -1,5 +1,5 @@
 ---
-title: Elemento DbTableName (XMLA) | Documentos de Microsoft
+title: Elemento DbTableName (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 17e4604293f7ad57b51bfbfdb127e322f9df4eb4
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34574387"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994868"
 ---
 # <a name="dbtablename-element-xmla"></a>Elemento DbTableName (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,17 +36,17 @@ ms.locfileid: "34574387"
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Tipo y longitud de los datos|String|  
-|Valor predeterminado|Ninguno|  
+|Valor predeterminado|None|  
 |Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
-## <a name="element-relationships"></a>Relaciones del elemento  
+## <a name="element-relationships"></a>Relaciones de elementos  
   
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[TableNotification](../../../analysis-services/xmla/xml-elements-properties/tablenotification-element-xmla.md)|  
-|Elementos secundarios|Ninguno|  
+|Elementos secundarios|None|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 ## <a name="see-also"></a>Vea también
  [Elemento DbSchemaName &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/dbschemaname-element-xmla.md)   

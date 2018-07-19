@@ -1,5 +1,5 @@
 ---
-title: Elemento location (XMLA) | Documentos de Microsoft
+title: Elemento location (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4953981e7657706a986e9a2407f6786ff676a854
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575607"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004497"
 ---
 # <a name="location-element-xmla"></a>Elemento Location (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contiene información sobre un servidor remoto para el elemento primario [copia de seguridad](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md), [restaurar](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md), o [sincronizar](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) comando.  
+  Contiene información acerca de un servidor remoto para el elemento primario [copia de seguridad](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md), [restaurar](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md), o [Synchronize](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) comando.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -53,7 +53,7 @@ ms.locfileid: "34575607"
 |Valor predeterminado|None|  
 |Cardinalidad|0-n: elemento opcional que puede aparecer más de una vez.|  
   
-## <a name="element-relationships"></a>Relaciones del elemento  
+## <a name="element-relationships"></a>Relaciones de elementos  
   
 |Relación|Elemento|  
 |------------------|-------------|  
@@ -67,13 +67,13 @@ ms.locfileid: "34575607"
 |[Sincronizar](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)|[ConnectionString](../../../analysis-services/xmla/xml-elements-properties/connectionstring-element-xmla.md), [DataSourceID](../../../analysis-services/xmla/xml-elements-properties/datasourceid-element-xmla.md), [DataSourceType](../../../analysis-services/xmla/xml-elements-properties/datasourcetype-element-xmla.md), [carpetas](../../../analysis-services/xmla/xml-elements-properties/folders-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notas  
- Para **copia de seguridad** comandos, el **ubicación** elemento proporciona información acerca de cómo crear un archivo de copia de seguridad remoto para una instancia remota de Analysis Services.  
+ Para **copia de seguridad** comandos, el **ubicación** elemento proporciona información sobre cómo crear un archivo de copia de seguridad remoto para una instancia remota de Analysis Services.  
   
- Para **restaurar** comandos, el **ubicación** elemento proporciona información sobre cómo identificar y conectarse a un servidor remoto [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia, así como el archivo de copia de seguridad remoto usado para restaurar remoto particiones en esa instancia remota.  
+ Para **restaurar** comandos, el **ubicación** elemento proporciona información sobre cómo identificar y conectarse a un servidor remoto [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia, así como el archivo de copia de seguridad remoto utilizado para restaurar remoto particiones en esa instancia remota.  
   
  Para los comandos **Synchronize** , el elemento **Location** describe un origen de datos que va a utilizar la instancia de destino o una instancia remota definida en la instancia de origen que se debe sincronizar con la instancia de destino, dependiendo del valor del elemento **DataSourceType** para el comando primario **Synchronize** .  
   
- Para obtener más información acerca de la copia de seguridad y restauración de instancias remotas, consulte [realizar copias de seguridad y restauración de objetos (XMLA)](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Para obtener más información acerca de la copia de seguridad y restauraciones de instancias remotas, consulte [copia de seguridad y restauración de objetos (XMLA)](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Vea también
  [Elemento BackupRemotePartitions &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/backupremotepartitions-element-xmla.md)   

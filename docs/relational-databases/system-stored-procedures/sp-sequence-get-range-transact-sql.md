@@ -1,5 +1,5 @@
 ---
-title: sp_sequence_get_range (Transact-SQL) | Documentos de Microsoft
+title: sp_sequence_get_range (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2015
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6b34171cf9300454dfe35e6f0961eaacff182b4a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259705"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015082"
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -63,27 +63,27 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
  Número de valores que se van a capturar de la secuencia. **@range_size** es **bigint**.  
   
  [ **@range_first_value** =] *range_first_value*  
- El parámetro de salida devuelve el primer valor (mínimo o máximo) del objeto de secuencia que se usa para calcular el intervalo solicitado. **@range_first_value** es **sql_variant** con el mismo tipo base que el objeto de secuencia utilizado en la solicitud.  
+ El parámetro de salida devuelve el primer valor (mínimo o máximo) del objeto de secuencia que se usa para calcular el intervalo solicitado. **@range_first_value** es **sql_variant** con el mismo tipo base del objeto de secuencia utilizado en la solicitud.  
   
  [ **@range_last_value** =] *range_last_value*  
- El parámetro de salida opcional devuelve el último valor del intervalo solicitado. **@range_last_value** es **sql_variant** con el mismo tipo base que el objeto de secuencia utilizado en la solicitud.  
+ El parámetro de salida opcional devuelve el último valor del intervalo solicitado. **@range_last_value** es **sql_variant** con el mismo tipo base del objeto de secuencia utilizado en la solicitud.  
   
  [ **@range_cycle_count** =] range_cycle_count  
  El parámetro de salida opcional devuelve el número de veces que se recorre el objeto de secuencia para devolver el intervalo solicitado. **@range_cycle_count** es **int**.  
   
  [ **@sequence_increment** =] *sequence_increment*  
- El parámetro de salida opcional devuelve el incremento del objeto de secuencia utilizado para calcular el intervalo solicitado. **@sequence_increment** es **sql_variant** con el mismo tipo base que el objeto de secuencia utilizado en la solicitud.  
+ El parámetro de salida opcional devuelve el incremento del objeto de secuencia utilizado para calcular el intervalo solicitado. **@sequence_increment** es **sql_variant** con el mismo tipo base del objeto de secuencia utilizado en la solicitud.  
   
  [ **@sequence_min_value** =] *sequence_min_value*  
- El parámetro de salida opcional devuelve el valor mínimo del objeto de secuencia. **@sequence_min_value** es **sql_variant** con el mismo tipo base que el objeto de secuencia utilizado en la solicitud.  
+ El parámetro de salida opcional devuelve el valor mínimo del objeto de secuencia. **@sequence_min_value** es **sql_variant** con el mismo tipo base del objeto de secuencia utilizado en la solicitud.  
   
  [ **@sequence_max_value** =] *sequence_max_value*  
- El parámetro de salida opcional devuelve el valor máximo del objeto de secuencia. **@sequence_max_value** es **sql_variant** con el mismo tipo base que el objeto de secuencia utilizado en la solicitud.  
+ El parámetro de salida opcional devuelve el valor máximo del objeto de secuencia. **@sequence_max_value** es **sql_variant** con el mismo tipo base del objeto de secuencia utilizado en la solicitud.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  sp_sequence_get_rangeis en sys. esquema y se puede hacer referencia como sys.sp_sequence_get_range.  
   
 ### <a name="cycling-sequences"></a>Secuencias con recorrido  
@@ -97,11 +97,11 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
   
  `The requested range for sequence object '%.*ls' exceeds the maximum or minimum limit. Retry with a smaller range.`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Se necesita el permiso UPDATE en el objeto de secuencia o el esquema del objeto de secuencia.  
   
 ## <a name="examples"></a>Ejemplos  
- Los ejemplos siguientes usan un objeto de secuencia denominado Test.RangeSeq. Utilice la siguiente instrucción para crear la secuencia de Test.RangeSeq.  
+ Los ejemplos siguientes usan un objeto de secuencia denominado Test.RangeSeq. Use la siguiente instrucción para crear la secuencia Test.RangeSeq.  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -119,7 +119,7 @@ CREATE SEQUENCE Test.RangeSeq
 ```  
   
 ### <a name="a-retrieving-a-range-of-sequence-values"></a>A. Recuperar un intervalo de valores de secuencia  
- La siguiente instrucción obtiene cuatro números de secuencia del objeto de secuencia Test.RangeSeq y devuelve el primero de los números para el usuario.  
+ La siguiente instrucción obtiene cuatro números de secuencia del objeto de secuencia Test.RangeSeq y devuelve el primero de los números al usuario.  
   
 ```  
 DECLARE @range_first_value sql_variant ,   

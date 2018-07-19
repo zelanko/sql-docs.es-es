@@ -1,5 +1,5 @@
 ---
-title: sp_execute (Transact-SQL) | Documentos de Microsoft
+title: sp_execute (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c96985d6bcc23427f67cdb8c6cb0fea360aba69a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262768"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041173"
 ---
 # <a name="spexecute-transact-sql"></a>sp_execute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -47,14 +47,14 @@ sp_execute handle OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Identificador*  
+ *identificador*  
  Es el *controlar* valor devuelto por sp_prepare. *controlar* es un parámetro necesario que requiere **int** valor de entrada.  
   
  *bound_param*  
- Indica el uso de parámetros adicionales. *bound_param* es un parámetro necesario que requiere valores de entrada de cualquier tipo de datos para parámetros adicionales para el procedimiento.  
+ Indica el uso de parámetros adicionales. *bound_param* es un parámetro necesario que requiere valores de entrada de cualquier tipo de datos para los parámetros adicionales para el procedimiento.  
   
 > [!NOTE]  
->  *bound_param* debe coincidir con las declaraciones realizadas por el sp_prepare*params* valor y puede tener el formato  *@name = valor* o *valor*.  
+>  *bound_param* debe coincidir con las declaraciones realizadas por sp_prepare*params* de valor y puede tener el formato  *@name = valor* o *valor*.  
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

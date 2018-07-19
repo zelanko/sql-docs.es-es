@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_xtp_checkpoint_files (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_db_xtp_checkpoint_files (Transact-SQL) | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -26,62 +26,62 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c4ad13459024604d748c1dac8a6649c09a53f10f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467741"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005747"
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Muestra información sobre los archivos de puntos de comprobación, incluidos el tamaño de archivo, la ubicación física y el identificador de transacción.  
   
-> **Nota:** para el punto de comprobación actual que no ha cerrado, la columna Estado de s`ys.dm_db_xtp_checkpoint_files` será UNDER CONSTRUCTION para los nuevos archivos. Un punto de comprobación se cierra automáticamente cuando no hay suficientes crecimiento del registro de transacciones desde el último punto de comprobación o si emite la `CHECKPOINT` comando ([punto de comprobación &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)).  
+> **Nota:** para el punto de comprobación actual que no ha cerrado, la columna de estado de s`ys.dm_db_xtp_checkpoint_files` será UNDER CONSTRUCTION para los nuevos archivos. Un punto de comprobación se cierra automáticamente cuando no hay suficientes crecimiento del registro de transacciones desde el último punto de comprobación o si emite el `CHECKPOINT` comando ([CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)).  
   
- Un grupo de archivos con optimización para memoria utiliza internamente archivos de solo anexar para almacenar las filas insertadas y eliminadas para tablas en memoria. Hay dos tipos de archivos: Un archivo de datos contiene filas insertadas, mientras que un archivo delta contiene referencias a las filas eliminadas. 
+ Un grupo de archivos optimizados para memoria utiliza internamente archivos de solo anexar para almacenar las filas insertadas y eliminadas para las tablas en memoria. Hay dos tipos de archivos: Un archivo de datos contiene las filas insertadas mientras que un archivo delta contiene referencias a las filas eliminadas. 
   
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] es sustancialmente diferente de las versiones más recientes y se describe más abajo en el tema en [SQL Server 2014](#bkmk_2014).  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] es sustancialmente diferente de las versiones más recientes y se explica inferior en el tema en [SQL Server 2014](#bkmk_2014).  
   
- Para obtener más información, consulte [crear y administrar el almacenamiento para los objetos con optimización para memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
+ Para obtener más información, consulte [crear y administrar el almacenamiento para objetos con optimización para memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
 ##  <a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores  
  En la tabla siguiente se describe las columnas para `sys.dm_db_xtp_checkpoint_files`, empezando por **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**.  
   
-|Nombre de columna|Tipo|Description|  
+|Nombre de columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|Identificador del contenedor (representado como un archivo de tipo FILESTREAM en sys.database_files) del que forma parte el archivo de datos o delta. Combinaciones con file_id en [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|GUID del contenedor, que forma parte del archivo raíz, datos o delta. Combinaciones con file_guid en la tabla sys.database_files.|  
 |checkpoint_file_id|**uniqueidentifier**|GUID del archivo de punto de comprobación.|  
-|relative_file_path|**nvarchar(256)**|Ruta de acceso del archivo con respecto a contenedor a que está asignado.|  
-|file_type|**smallint**|-1 para libre<br /><br /> 0 para el archivo de datos.<br /><br /> 1 para el archivo DELTA.<br /><br /> 2 para el archivo raíz<br /><br /> 3 para el archivo de datos de gran tamaño|  
-|file_type_desc|**nvarchar(60)**|Archivos de libre, todo ello mantenerlos como libres están disponibles para la asignación. Archivos gratuitos pueden variar de tamaño según las necesidades previstas por el sistema. El tamaño máximo es 1GB.<br /><br /> DATOS - archivos de datos contienen filas que se han insertado en tablas optimizadas en memoria.<br /><br /> DELTA - archivos Delta contienen referencias a las filas de los archivos de datos que se han eliminado.<br /><br /> ROOT - archivos raíz contienen metadatos del sistema para los objetos compilados de forma nativa y con optimización para memoria.<br /><br /> DATOS de gran tamaño: grandes archivos de datos contienen valores insertados en (columnas varchar y varbinary (max), así como los segmentos de columna que forman parte de los índices de almacén de columnas en tablas optimizadas en memoria.|  
+|relative_file_path|**nvarchar(256)**|Ruta de acceso del archivo relativa al contenedor se asigna a.|  
+|file_type|**smallint**|-1 para gratuitos<br /><br /> 0 para el archivo de datos.<br /><br /> 1 para el archivo DELTA.<br /><br /> 2 para el archivo raíz<br /><br /> 3 para el archivo de datos de gran tamaño|  
+|file_type_desc|**nvarchar(60)**|Archivos de gratis, todo ello mantenerlos como libre están disponibles para la asignación. Archivos gratuita pueden variar de tamaño según las necesidades previstas por el sistema. El tamaño máximo es 1GB.<br /><br /> DATOS: los archivos de datos contienen las filas que se han insertado en las tablas optimizadas para memoria.<br /><br /> DELTA - archivos Delta contienen referencias a las filas de los archivos de datos que se han eliminado.<br /><br /> ROOT - archivos raíz contienen los metadatos del sistema para los objetos compilados de forma nativa y optimizadas para memoria.<br /><br /> DATOS de gran tamaño: grandes archivos de datos contienen los valores insertados en (columnas varchar y varbinary (max), así como los segmentos de columna que forman parte de los índices de almacén de columnas en tablas optimizadas para memoria.|  
 |internal_storage_slot|**int**|El índice del archivo en la matriz de almacenamiento interno. NULL para la raíz o de estado que no sea 1.|  
 |checkpoint_pair_file_id|**uniqueidentifier**|Archivo de datos correspondientes o DELTA. NULL para la raíz.|  
 |file_size_in_bytes|**bigint**|Tamaño del archivo en el disco.|  
 |file_size_used_in_bytes|**bigint**|Para los pares de archivos de punto de comprobación que todavía se están llenando, esta columna se actualizará después del punto de comprobación siguiente.|  
-|logical_row_count|**bigint**|Para los datos, el número de filas insertadas.<br /><br /> Para Delta, número de filas se elimina después de tener en cuenta las tabla de destino.<br /><br /> Para la raíz, es NULL.|  
-|state|**smallint**|0 – PRECREATED<br /><br /> 1 - EN CONSTRUCCIÓN<br /><br /> 2 - ACTIVE<br /><br /> 3 – MERGE TARGET<br /><br /> 8: ESPERA DE TRUNCAMIENTO DEL REGISTRO|  
-|state_desc|**nvarchar(60)**|PRECREATED: un número de archivos de punto de comprobación se preasignan para minimizar o eliminar cualquier espera para asignar nuevos archivos mientras se ejecutan las transacciones. Estos creados previamente archivos pueden variar de tamaño, según las necesidades estimadas de la carga de trabajo, pero no contienen ningún dato. Se trata de una sobrecarga de almacenamiento de bases de datos con un grupo de archivos.<br /><br /> EN construcción - estos archivos de punto de comprobación están elaborando, lo que significa que se van a rellenar basándose en los registros generados por la base de datos y aún no forman parte de un punto de control.<br /><br /> ACTIVE: contienen las filas insertadas y eliminadas de puntos de comprobación cerrados anteriores. Contienen el contenido de las tablas que lee el área en la memoria antes de aplicar la parte activa del registro de transacciones en el reinicio de la base de datos. Esperamos que el tamaño de estos archivos de punto de comprobación para ser aproximadamente 2 x del tamaño en memoria de tablas optimizadas en memoria, suponiendo que la operación de combinación se mantiene al nivel de la carga de trabajo transaccional.<br /><br /> TARGET MERGE: el destino de las operaciones de combinación - estos archivos de punto de comprobación almacenar las filas de datos consolidada de los archivos de origen que se identificaron mediante la directiva de combinación. Una vez instalada la mezcla, TARGET MERGE cambia al estado ACTIVE.<br /><br /> Esperando el TRUNCAMIENTO del registro: una vez que se ha instalado la mezcla y el CFP de destino de combinación es parte del punto de comprobación durable, la transición de archivos de punto de control de combinación origen en este estado. Archivos en este estado son necesarios para el correcto funcionamiento de la base de datos con la tabla optimizada en memoria.  Por ejemplo, para recuperarse de un punto de comprobación durable para ir a un momento anterior en el tiempo.|  
-|lower_bound_tsn|**bigint**|Límite inferior de la transacción en el archivo; null si no está en estado (1, 3).|  
-|upper_bound_tsn|**bigint**|Límite superior de la transacción en el archivo; null si no está en estado (1, 3).|  
-|begin_checkpoint_id|**bigint**|Identificador del punto de control de inicio.|  
-|end_checkpoint_id|**bigint**|Identificador del punto de comprobación final.|  
-|last_updated_checkpoint_id|**bigint**|Id. del último punto de control que actualiza este archivo.|  
+|logical_row_count|**bigint**|Para los datos, el número de filas insertadas.<br /><br /> Delta, número de filas se elimina después de contabilidad para la tabla de destino.<br /><br /> Para la raíz, es NULL.|  
+|state|**smallint**|0 – PRECREATED<br /><br /> 1: EN CONSTRUCCIÓN<br /><br /> 2 - ACTIVE<br /><br /> 3 – MERGE TARGET<br /><br /> 8: ESPERANDO EL TRUNCAMIENTO DEL REGISTRO|  
+|state_desc|**nvarchar(60)**|PRECREATED: un número de archivos de punto de comprobación se preasignan para minimizar o eliminar cualquier espera para asignar nuevos archivos mientras se ejecutan las transacciones. Los archivos previamente creados pueden variar de tamaño, según las necesidades estimadas de la carga de trabajo, pero no contienen ningún dato. Se trata de una sobrecarga de almacenamiento en bases de datos con un grupo de archivos MEMORY_OPTIMIZED_DATA.<br /><br /> EN construcción - estos archivos de punto de control están en construcción, lo que significa que se están actualizando en función de los registros generados por la base de datos y aún no forman parte de un punto de control.<br /><br /> ACTIVE: contienen las filas insertadas y eliminadas de puntos de control cerrados anteriores. Contienen el contenido de las tablas que se lee de área en la memoria antes de aplicar la parte activa del registro de transacciones en el reinicio de la base de datos. Se espera que el tamaño de estos archivos de punto de comprobación para ser de aproximadamente 2 x el tamaño en memoria de tablas optimizadas para memoria, suponiendo que la operación de combinación es mantenerse al día con la carga de trabajo transaccional.<br /><br /> TARGET MERGE: el destino de las operaciones de combinación: estos archivos de punto de control almacenan las filas de datos consolidados de los archivos de origen que se han identificado por la directiva de combinación. Una vez instalada la mezcla, TARGET MERGE cambia al estado ACTIVE.<br /><br /> Una vez que se ha instalado la combinación y el CFP de combinar destino forma parte de un punto de comprobación durable, la transición de archivos mezcla punto de control de origen a este estado en espera de TRUNCAMIENTO del registro. Archivos en este estado son necesarios para el correcto funcionamiento de la base de datos con la tabla optimizada para memoria.  Por ejemplo, para recuperarse de un punto de comprobación durable para ir a un momento anterior en el tiempo.|  
+|lower_bound_tsn|**bigint**|Límite inferior de la transacción en el archivo. null si no está en estado (1, 3).|  
+|upper_bound_tsn|**bigint**|Límite superior de la transacción en el archivo. null si no está en estado (1, 3).|  
+|begin_checkpoint_id|**bigint**|Id. del punto de comprobación de inicio.|  
+|end_checkpoint_id|**bigint**|Id. del punto de comprobación final.|  
+|last_updated_checkpoint_id|**bigint**|Id. del último punto de comprobación que actualizar este archivo.|  
 |encryption_status|**smallint**|0, 1, 2|  
 |encryption_status_desc|**nvarchar(60)**|0 = &GT; UNENCRTPTED<br /><br /> 1 = &GT; CIFRADA CON LA CLAVE 1<br /><br /> 2 = &GT; CIFRADA CON LA CLAVE 2. Válido únicamente para los archivos activos.|  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  En la tabla siguiente se describe las columnas para `sys.dm_db_xtp_checkpoint_files`, para **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
   
-|Nombre de columna|Tipo|Description|  
+|Nombre de columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|Identificador del contenedor (representado como un archivo de tipo FILESTREAM en sys.database_files) del que forma parte el archivo de datos o delta. Combinaciones con file_id en [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|GUID del contenedor del que forma parte el archivo de datos o delta.|  
 |checkpoint_file_id|**GUID**|Identificador del archivo de datos o delta.|  
 |relative_file_path|**nvarchar(256)**|Ruta de acceso al archivo de datos o delta, con respecto a la ubicación del contenedor.|  
 |file_type|**tinyint**|0 para el archivo de datos.<br /><br /> 1 para el archivo delta.<br /><br /> Es NULL si la columna state está establecida en 7.|  
-|file_type_desc|**nvarchar(60)**|El tipo de archivo: DATA_FILE, DELTA_FILE o NULL si la columna de estado se establece en 7.|  
+|file_type_desc|**nvarchar(60)**|El tipo de archivo: DATA_FILE, DELTA_FILE o NULL si la columna state está establecida en 7.|  
 |internal_storage_slot|**int**|El índice del archivo en la matriz de almacenamiento interno. Es NULL si la columna state está establecida en 2 o 3.|  
 |checkpoint_pair_file_id|**uniqueidentifier**|Archivo de datos o delta correspondiente.|  
 |file_size_in_bytes|**bigint**|Tamaño del archivo que se usa. Es NULL si la columna state está establecida en 5, 6 o 7.|  
@@ -99,7 +99,7 @@ ms.locfileid: "34467741"
 |tombstone_operation_lsn|**nvarchar(23)**|El archivo se eliminará una vez que tombstone_operation_lsn esté detrás del número de secuencia de registro del truncamiento del registro.|  
 |logical_deletion_log_block_id|**bigint**|Solo se aplica al estado 5.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso `VIEW DATABASE STATE` en el servidor.  
   
 ## <a name="use-cases"></a>Casos de uso  
@@ -112,7 +112,7 @@ FROM sys.dm_db_xtp_checkpoint_files
 ```  
   
   
-Para ver un desglose de utilización de recursos por tipo de archivos y el estado que se ejecute la siguiente consulta:
+Para ver un desglose del uso del almacenamiento por estado y tipo de archivo ejecute la siguiente consulta:
   
 ```  
 SELECT state_desc  
@@ -127,6 +127,6 @@ ORDER BY state, file_type
 
   
 ## <a name="see-also"></a>Vea también  
- [Vistas de administración dinámica de tablas optimizadas en memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Vistas de administración dinámica de tabla optimizado para memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

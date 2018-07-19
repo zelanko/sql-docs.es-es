@@ -1,5 +1,5 @@
 ---
-title: Proveedor WMI de clases de administración de configuración | Documentos de Microsoft
+title: Proveedor WMI de clases de administración de configuración | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 967d26b76a75da27a5b4df98ecf5cd53d2cb9950
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011152"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005246"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>Proveedor WMI para las clases de administración de configuración
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "33011152"
   
  [Clase SInstance](../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)  
   
- [Sqlerrorlogevent, clase](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)  
+ [Clase SqlErrorLogEvent](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)  
   
  [Clase SqlErrorLogFile](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)  
   

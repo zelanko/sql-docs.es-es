@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_xtp_gc_stats (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_xtp_gc_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a66e199d232ed96fd194d42e340f3468fee51b6b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467551"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005657"
 ---
 # <a name="sysdmxtpgcstats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34467551"
   
  Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nombre de columna|Tipo|Description|  
+|Nombre de columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |rows_examined|**bigint**|El número de filas que ha examinado el subsistema de recolección de elementos no utilizados desde que se inició el servidor.|  
 |rows_no_sweep_needed|**bigint**|Número de filas quitadas sin un recorrido de esquinas sucias.|  
@@ -54,7 +54,7 @@ ms.locfileid: "34467551"
 |sweep_rows_expired|**bigint**|Filas expiradas leídas por el procesamiento de esquinas sucias.|  
 |sweep_rows_expired_removed|**bigint**|Filas expiradas quitadas por el procesamiento de esquinas sucias.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Necesita el permiso VIEW SERVER STATE en la instancia.  
   
 ## <a name="usage-scenario"></a>Escenario de uso  
@@ -74,6 +74,6 @@ sweep_rows_expiring  sweep_rows_expired   sweep_rows_expired_removed
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Vistas de administración dinámica de tablas optimizadas en memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Vistas de administración dinámica de tabla optimizado para memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

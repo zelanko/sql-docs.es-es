@@ -1,5 +1,5 @@
 ---
-title: True (función de XQuery) | Documentos de Microsoft
+title: True (función de XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 349b2f99f5db35ca9d44e3ac8459030b7f7ba55f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077592"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014035"
 ---
-# <a name="boolean-constructor-functions---true-xquery"></a>Funciones de Constructor booleanas: true (XQuery)
+# <a name="boolean-constructor-functions---true-xquery"></a>Funciones de Constructor booleano: true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve el valor xs:boolean True. Es equivalente a `xs:boolean("1")`.  
@@ -42,10 +42,10 @@ fn:true() as xs:boolean
 ```  
   
 ## <a name="examples"></a>Ejemplos  
- Este tema ofrecen ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos de AdventureWorks.  
+ En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos AdventureWorks.  
   
 ### <a name="a-using-the-true-xquery-boolean-function"></a>A. Utilizar la función booleana true() de XQuery  
- En el ejemplo siguiente se consulta sin tipo **xml** variable. La expresión en el **value()** método devuelve un valor booleano **true()** si "aaa" es el valor del atributo. El **value()** método de la **xml** tipo de datos convierte el valor booleano en bit y lo devuelve.  
+ En el ejemplo siguiente se consulta sin tipo **xml** variable. La expresión en el **value()** método devuelve un valor booleano **true()** si "aaa" es el valor del atributo. El **value()** método de la **xml** tipo de datos se convierte el valor booleano en bit y lo devuelve.  
   
 ```  
 DECLARE @x XML  

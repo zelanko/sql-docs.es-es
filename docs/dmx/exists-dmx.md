@@ -1,5 +1,5 @@
 ---
-title: Existe (DMX) | Documentos de Microsoft
+title: Existe (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 936612dba4f466c5bc78f20f5a3ea07954a20a1c
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34843028"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998587"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ EXISTS(<subquery>)
   
 ## <a name="arguments"></a>Argumentos  
  *subquery*  
- Una instrucción SELECT el formato SELECT * FROM \<nombre de columna > [donde \<lista de predicados >].  
+ Una instrucción SELECT, el formato SELECT * FROM \<nombre de columna > [donde \<lista de predicados >].  
   
 ## <a name="result-type"></a>Tipo de resultado  
  Devuelve **true** si el conjunto de resultados devuelto por la subconsulta contiene al menos una fila; en caso contrario, devuelve **false**.  
@@ -43,7 +43,7 @@ EXISTS(<subquery>)
 ## <a name="examples"></a>Ejemplos  
  Puede utilizar EXISTS y NOT EXISTS para comprobar las condiciones en una tabla anidada. Esto es útil cuando se crea un filtro que controla los datos que se usan para entrenar o probar un modelo de minería de datos. Para obtener más información, vea [Filtros para modelos de minería &#40;Analysis Services - Minería de datos&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
- El ejemplo siguiente se basa en el `[Association]` estructura de minería de datos y el modelo de minería de datos que creó en el [Tutorial básico de minería de datos](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La consulta devuelve solo los casos en los que el cliente compró al menos un Patch kit.  
+ En el siguiente ejemplo se basa en el `[Association]` estructura de minería de datos y el modelo de minería de datos que creó en el [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La consulta devuelve solo los casos en los que el cliente compró al menos un Patch kit.  
   
 ```  
 SELECT * FROM [Association].CASES  
@@ -54,10 +54,10 @@ WHERE [[Model] = 'Patch kit'
 )  
 ```  
   
- Otra manera de ver los mismos datos que devuelven esta consulta es abrir el modelo en el Visor de asociación, haga clic en el conjunto de elementos **Patch kit = Existing**, seleccione la **obtener detalles** opción y, a continuación, seleccione **solo casos del modelo**.  
+ Otra forma de ver los mismos datos que devuelven esta consulta es abrir el modelo en el Visor de asociación, haga clic en el conjunto de elementos **Patch kit = Existing**, seleccione el **Drill Through** opción y, a continuación, Seleccione **solo casos del modelo**.  
   
 ## <a name="see-also"></a>Vea también  
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [La sintaxis de filtros y ejemplos de modelos &#40;Analysis Services: minería de datos&#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
+ [Ejemplos y sintaxis de filtro del modelo &#40;Analysis Services - minería de datos&#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
   
   

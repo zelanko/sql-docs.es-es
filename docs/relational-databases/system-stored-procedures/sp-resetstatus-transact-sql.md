@@ -1,5 +1,5 @@
 ---
-title: sp_resetstatus (Transact-SQL) | Documentos de Microsoft
+title: sp_resetstatus (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 556653574734c81776b5504500bcf2fadb004228
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245028"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005478"
 ---
 # <a name="spresetstatus-transact-sql"></a>sp_resetstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,12 +53,12 @@ sp_resetstatus [ @dbname = ] 'database'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  sp_resetstatus desactiva la marca de sospechoso de una base de datos. Este procedimiento actualiza las columnas de modo y estado de la base de datos con nombre en sys.databases. Se debe consultar el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y resolver todos los problemas antes de ejecutar este procedimiento. Después de ejecutar sp_resetstatus, detenga y reinicie la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Una base de datos puede ser sospechosa por varios motivos. Las posibles causas son que el sistema operativo deniegue el acceso a un recurso de base de datos, o bien que uno o varios de los archivos de la base de datos no esté disponible o esté dañado.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de servidor sysadmin.  
   
 ## <a name="examples"></a>Ejemplos  

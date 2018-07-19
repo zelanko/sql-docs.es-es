@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_xtp_system_memory_consumers (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_xtp_system_memory_consumers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3363fa2208f735c38ebd696b782fced80e5c49ce
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468641"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015195"
 ---
 # <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -41,12 +41,12 @@ select * from sys.dm_xtp_system_memory_consumers
   
  Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nombre de columna|Tipo|Description|  
+|Nombre de columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|Identificador interno del consumidor de memoria.|  
-|memory_consumer_type|**int**|Un entero que representa el tipo del consumidor de memoria con uno de los siguientes valores:<br /><br /> 0: no se debe mostrar. Agrega el uso de memoria de dos o varios consumidores.<br /><br /> 1: lista de direcciones: Realiza un seguimiento de consumo de memoria para una lista de direcciones del sistema.<br /><br /> 2 - VARHEAP: Realiza un seguimiento de consumo de memoria para un montón de longitud variable.<br /><br /> 4 - grupo de páginas de E/S: realiza un seguimiento de consumo de memoria para un grupo de páginas del sistema utilizado para las operaciones de E/S.|  
+|memory_consumer_type|**int**|Un entero que representa el tipo de consumidor de memoria con uno de los siguientes valores:<br /><br /> 0: no se debe mostrar. Agrega el uso de memoria de dos o varios consumidores.<br /><br /> 1: lista de direcciones: Realiza un seguimiento de consumo de memoria para una lista de direcciones del sistema.<br /><br /> 2 - VARHEAP: Realiza un seguimiento de consumo de memoria para un montón de longitud variable.<br /><br /> 4 - bloque paginado de E/S de: realiza un seguimiento del consumo de memoria para un grupo de páginas del sistema utilizado para operaciones de E/S.|  
 |memory_consumer_type_desc|**nvarchar(16)**|Descripción del tipo de consumidor de memoria:<br /><br /> 0: no se debe mostrar.<br /><br /> 1: LOOKASIDE<br /><br /> 2: VARHEAP<br /><br /> 4: PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|Descripción de la instancia del consumidor de memoria:<br /><br /> VARHEAP: <br />Montón del sistema. Uso general. Actualmente solo se usa para asignar elementos de trabajo de la recolección de elementos no utilizados.<br />-OR-<br />Montón de lista de direcciones. Lo usan las listas de direcciones cuando el número de elementos contenidos en la lista alcanza un extremo predeterminado (normalmente alrededor de 5.000 elementos).<br /><br /> PGPOOL: Para el sistema de E/S hay grupos son tres grupo de páginas del sistema de 4 KB de diferentes tamaños, grupo de páginas del sistema de 64 KB y grupo de páginas del sistema de 256 KB.|  
+|memory_consumer_desc|**nvarchar (64)**|Descripción de la instancia del consumidor de memoria:<br /><br /> VARHEAP: <br />Montón del sistema. Uso general. Actualmente solo se usa para asignar elementos de trabajo de la recolección de elementos no utilizados.<br />-O bien-<br />Montón de lista de direcciones. Lo usan las listas de direcciones cuando el número de elementos contenidos en la lista alcanza un extremo predeterminado (normalmente alrededor de 5.000 elementos).<br /><br /> PGPOOL: Para el sistema de E/S hay grupos son tres bloque paginado de 4K de sistema de diferentes tamaños, grupo de páginas del sistema de 64K y bloque paginado de 256K del sistema.|  
 |lookaside_id|**bigint**|El identificador del proveedor de memoria de direcciones local del subproceso.|  
 |pagepool_id|**bigint**|El identificador del subproceso local, proveedor de memoria del grupo de páginas.|  
 |allocated_bytes|**bigint**|Número de bytes reservados para el consumidor.|  
@@ -58,7 +58,7 @@ select * from sys.dm_xtp_system_memory_consumers
 |max_sizeclass|**int**|Exclusivamente para uso interno.|  
 |memory_consumer_address|**varbinary**|Dirección interna del consumidor.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere los permisos VIEW SERVER STATE en el servidor.  
   
 ## <a name="user-scenario"></a>Escenario de usuario  
@@ -109,6 +109,6 @@ total_allocated_MB   total_used_MB
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Vistas de administración dinámica de tablas optimizadas en memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Vistas de administración dinámica de tabla optimizado para memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Cadena de búsqueda en XQuery | Documentos de Microsoft
+title: Cadena de búsqueda en XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cdd490ca34a1fa95a341da7665031659ffd099b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077512"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041563"
 ---
 # <a name="string-search-in-xquery"></a>Buscar cadenas en XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- En la consulta anterior, la `where` en el FLOWR expresión filtra el resultado de la `for` expresión y devuelve solo aquellos elementos que satisfacen la **contains()** condición.  
+ En la consulta anterior, el `where` en el FLOWR expresión filtra el resultado de la `for` expresión y devuelve solo aquellos elementos que satisfacen la **contains()** condición.  
   
  El resultado es el siguiente:  
   

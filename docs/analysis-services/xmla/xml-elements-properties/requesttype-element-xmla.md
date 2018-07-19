@@ -1,5 +1,5 @@
 ---
-title: Elemento RequestType (XMLA) | Documentos de Microsoft
+title: Elemento RequestType (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 63c1a838d74745b5ef51f73b51e34c95e08a81ff
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34577627"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994797"
 ---
 # <a name="requesttype-element-xmla"></a>Elemento RequestType (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34577627"
 |Valor predeterminado|None|  
 |Cardinalidad|1-1: Elemento necesario que se produce una vez y solo una vez.|  
   
-## <a name="element-relationships"></a>Relaciones del elemento  
+## <a name="element-relationships"></a>Relaciones de elementos  
   
 |Relación|Elemento|  
 |------------------|-------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "34577627"
 |Elementos secundarios|None|  
   
 ## <a name="remarks"></a>Notas  
- El **RequestType** elemento determina el conjunto de filas de esquema desde el que el **Discover** método devuelve los datos. Esta enumeración se limita a los nombres de los conjuntos de filas de esquema admitidos por Analysis Services. Para obtener más información sobre conjuntos de filas de esquema, consulte [conjuntos de filas de esquema de Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md).  
+ El **RequestType** elemento determina el conjunto de filas de esquema desde el que el **Discover** método devuelve los datos. Esta enumeración se limita a los nombres de los conjuntos de filas de esquema admitidas por Analysis Services. Para obtener más información acerca de los conjuntos de filas de esquema, vea [conjuntos de filas de esquema de Analysis Services](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md).  
   
 > [!NOTE]  
 >  El **RequestType** elemento enumera solo los nombres de conjunto de filas de esquema. Si se utiliza el GUID de conjunto de filas de esquema, se produce un error.  

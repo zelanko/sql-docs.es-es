@@ -1,5 +1,5 @@
 ---
-title: Elemento ParentObject (XMLA) | Documentos de Microsoft
+title: Elemento ParentObject (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ff9ebc460691d9f97e5cfe64783574b00eab6915
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576007"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007039"
 ---
 # <a name="parentobject-element-xmla"></a>Elemento ParentObject (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -41,12 +41,12 @@ ms.locfileid: "34576007"
 |Valor predeterminado|None|  
 |Cardinalidad|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
-## <a name="element-relationships"></a>Relaciones del elemento  
+## <a name="element-relationships"></a>Relaciones de elementos  
   
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Crear](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|  
-|Elementos secundarios|Elementos requeridos de Analysis Services Scripting Language (ASSL). Especifica enumerando los elementos de Id. del objeto y sus antecesores (excepto la **Server** objeto.) Por ejemplo, la siguiente **ParentObject** elemento identifica una partición:<br /><br /> `<ParentObject>`<br /><br /> `<DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>`<br /><br /> `<CubeID>Adventure Works</CubeID>`<br /><br /> `<MeasureGroupID>Internet Sales</MeasureGroupID>`<br /><br /> `<PartitionID>Inernet_Sales_2001</PartitionID>`<br /><br /> `</ParentObject>`|  
+|Elementos secundarios|Elementos requeridos de Analysis Services Scripting Language (ASSL). Especifica enumerando los elementos del Id. del objeto y sus antecesores (excepto la **Server** objeto.) Por ejemplo, la siguiente **ParentObject** elemento identifica una partición:<br /><br /> `<ParentObject>`<br /><br /> `<DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>`<br /><br /> `<CubeID>Adventure Works</CubeID>`<br /><br /> `<MeasureGroupID>Internet Sales</MeasureGroupID>`<br /><br /> `<PartitionID>Inernet_Sales_2001</PartitionID>`<br /><br /> `</ParentObject>`|  
   
 ## <a name="remarks"></a>Notas  
  El orden en el que los identificadores aparecen no es importante.  

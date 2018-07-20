@@ -1,5 +1,5 @@
 ---
-title: CDC.ddl_history (Transact-SQL) | Documentos de Microsoft
+title: CDC.ddl_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - cdc.ddl_history
 ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c65fd834ac53f7d1835e9c7641dbe6d6fb78d082
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 08d05d0f9064db1a536bd53e7ab2552eecda7080
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258650"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101643"
 ---
 # <a name="cdcddlhistory-transact-sql"></a>cdc.ddl_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33258650"
   
  Se recomienda que no consulte directamente las tablas del sistema. En su lugar, ejecute el [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) procedimiento almacenado.  
    
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**source_object_id**|**int**|Id. de la tabla de origen al que se aplicó el cambio de DDL.|  
 |**object_id**|**int**|Id. de la tabla de cambio asociado con una instancia de captura para la tabla de origen.|  

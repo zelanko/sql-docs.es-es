@@ -21,12 +21,12 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 5dca0aafb208835a270be3192f8d3c6020229154
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 58aea76071a92e1ea9638a745d7a8493f9b778ec
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227175"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083017"
 ---
 # <a name="strong-passwords"></a>Contraseñas seguras
   Las contraseñas pueden constituir el vínculo más débil de una implementación de seguridad de servidor. Debe tener siempre mucho cuidado a la hora de elegir una contraseña. Una contraseña segura presenta las siguientes características:  
@@ -53,9 +53,9 @@ ms.locfileid: "37227175"
   
 -   Contiene o comienza por un carácter de espacio.  
   
--   Comienza por el carácter $ o @.  
+-   Se inicia con el símbolo $ o \@ caracteres.  
   
- Si se usa en una cadena de conexión de OLE DB u ODBC, el inicio de sesión o la contraseña no deben contener ninguno de estos caracteres: [] {}() , ; ? * ! @. Estos caracteres se usan para inicializar una conexión o para separar valores de conexión.  
+ Si se usa en una cadena de conexión de OLE DB u ODBC, el inicio de sesión o la contraseña no deben contener ninguno de estos caracteres: [] {}() , ; ? * ! \@. Estos caracteres se usan para inicializar una conexión o para separar valores de conexión.  
   
 ## <a name="related-content"></a>Contenido relacionado  
  [Directiva de contraseñas](password-policy.md)  

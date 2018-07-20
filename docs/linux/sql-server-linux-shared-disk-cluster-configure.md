@@ -5,19 +5,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/28/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 2550c2d53f50f2c5647ed0ab61d4d73e586495e2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 90235a612617fef28a02f980b349fc15490cba3f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001817"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086157"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurar la instancia de clúster de conmutación por error: SQL Server en Linux (RHEL)
 

@@ -19,12 +19,12 @@ caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f0a511e928fdd4d010bba5d756ef92b569295301
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c96bcc524d3c9fc6a37f252b1221bbfaab36410
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227415"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084067"
 ---
 # <a name="sql-server-deprecated-features-object"></a>Objeto SQL Server, Características en desuso
   El objeto SQLServer:Características desusadas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un contador para supervisar las características designadas como desusadas. En cada caso, el contador proporciona un recuento de la utilización que muestra el número de veces que la característica desusada se encontró desde que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inició por última vez.  
@@ -35,7 +35,7 @@ ms.locfileid: "37227415"
 |------------------------------------------------------|-----------------|  
 |'#' y '##' como el nombre de tablas temporales y procedimientos almacenados|Se encontró un identificador que no contenía ningún carácter a parte de #. Utilice al menos un carácter adicional. Se produce una vez por cada compilación.|  
 |'::' function calling syntax|Se encontró la sintaxis de llamada a función :: para una función con valores de tabla. Reemplazar por `SELECT column_list FROM`  *\< nombre_función >*`()`. Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produce una vez por cada compilación.|  
-|'@' y nombres que comiencen por '@@' como identificadores [!INCLUDE[tsql](../../includes/tsql-md.md)]|Se encontró un identificador que comenzaba por @ o @@. No utilice @ o @@, o nombres que comiencen por @@ como identificadores. Se produce una vez por cada compilación.|  
+|"\@" y nombres que empiezan por "\@\@" como identificadores de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Se encontró un identificador que comenzaba por \@ o \@\@. No use como identificador \@, \@\@ ni ningún nombre que empiece por \@\@. Se produce una vez por cada compilación.|  
 |ADDING TAPE DEVICE|La característica desusada sp_addumpdevice'`tape`' se encontró. Utilice sp_addumpdevice'`disk`' en su lugar. Se produce una vez en cada uso.|  
 |ALL Permission|Número total de veces que se encontró la sintaxis GRANT ALL, DENY ALL o REVOKE ALL. Modifique la sintaxis para denegar permisos concretos. Se produce una vez por cada consulta.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Número total de veces que la opción TORN_PAGE_DETECTION de ALTER DATABASE, una característica obsoleta, se ha usado desde que se inició la instancia del servidor. Utilice la sintaxis PAGE_VERIFY en su lugar. Se produce una vez por cada uso en una instrucción DDL.|  
@@ -174,7 +174,7 @@ ms.locfileid: "37227415"
 |sp_defaultlanguage|Se encontró el procedimiento sp_defaultlanguage. En su lugar, use ALTER LOGIN. Se produce una vez por cada compilación.|  
 |sp_denylogin|Se encontró el procedimiento sp_denylogin. Use ALTER LOGIN DISABLE en su lugar. Se produce una vez por cada consulta.|  
 |sp_depends|Se encontró el procedimiento sp_depends. Use sys.dm_sql_referencing_entities y sys.dm_sql_referenced_entities en su lugar. Se produce una vez por cada consulta.|  
-|sp_detach_db @keepfulltextindexfile|Se encontró el argumento @keepfulltextindexfile en una instrucción sp_detach_db. No utilice este argumento.|  
+|sp_detach_db \@keepfulltextindexfile|Se encontró el argumento \@keepfulltextindexfile en una instrucción sp_detach_db. No utilice este argumento.|  
 |sp_dropalias|Se encontró el procedimiento sp_dropalias. Reemplace los alias por una combinación de cuentas de usuario y roles de la base de datos. Use sp_dropalias para quitar los alias de las bases de datos actualizadas. Se produce una vez por cada compilación.|  
 |sp_dropapprole|Se encontró el procedimiento sp_dropapprole. Utilice DROP APPLICATION ROLE en su lugar. Se produce una vez por cada consulta.|  
 |sp_dropextendedproc|Se encontró el procedimiento sp_dropextendedproc. Utilice CLR en su lugar. Se produce una vez por cada compilación.|  
@@ -187,10 +187,10 @@ ms.locfileid: "37227415"
 |sp_fulltext_catalog|Se encontró el procedimiento sp_fulltext_catalog. Use CREATE/ALTER/DROP FULLTEXT CATALOG en su lugar. Se produce una vez por cada compilación.|  
 |sp_fulltext_column|Se encontró el procedimiento sp_fulltext_column. Utilice ALTER FULLTEXT INDEX en su lugar. Se produce una vez por cada compilación.|  
 |sp_fulltext_database|Se encontró el procedimiento sp_fulltext_database. Use ALTER DATABASE en su lugar. Se produce una vez por cada compilación.|  
-|sp_fulltext_service @action=clean_up|Se encontró la opción clean_up del procedimiento sp_fulltext_service. Se produce una vez por cada consulta.|  
-|sp_fulltext_service @action=connect_timeout|Se encontró la opción connect_timeout del procedimiento sp_fulltext_service. Se produce una vez por cada consulta.|  
-|sp_fulltext_service @action=data_timeout|Se encontró la opción data_timeout del procedimiento sp_fulltext_service. Se produce una vez por cada consulta.|  
-|sp_fulltext_service @action=resource_usage|Se encontró la opción resource_usage del procedimiento sp_fulltext_service. Esta opción no tiene ninguna función. Se produce una vez por cada consulta.|  
+|sp_fulltext_service \@action=clean_up|Se encontró la opción clean_up del procedimiento sp_fulltext_service. Se produce una vez por cada consulta.|  
+|sp_fulltext_service \@action=connect_timeout|Se encontró la opción connect_timeout del procedimiento sp_fulltext_service. Se produce una vez por cada consulta.|  
+|sp_fulltext_service \@action=data_timeout|Se encontró la opción data_timeout del procedimiento sp_fulltext_service. Se produce una vez por cada consulta.|  
+|sp_fulltext_service \@action=resource_usage|Se encontró la opción resource_usage del procedimiento sp_fulltext_service. Esta opción no tiene ninguna función. Se produce una vez por cada consulta.|  
 |sp_fulltext_table|Se encontró el procedimiento sp_fulltext_table. Use CREATE/ALTER/DROP FULLTEXT INDEX en su lugar. Se produce una vez por cada compilación.|  
 |sp_getbindtoken|Se encontró el procedimiento sp_getbindtoken. En su lugar, utilice conjuntos de resultados activos múltiples (MARS) o transacciones distribuidas. Se produce una vez por cada compilación.|  
 |sp_grantdbaccess|Se encontró el procedimiento sp_grantdbaccess. En su lugar, use CREATE USER. Se produce una vez por cada consulta.|  

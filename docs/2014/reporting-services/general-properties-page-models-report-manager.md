@@ -16,12 +16,12 @@ caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0101ea532307b4e3dd06d1dc22879f59a682f867
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 052ea58263c2167035f09d7c81c0e1732c530e03
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280671"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082727"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Página Propiedades generales, Modelos (Administrador de informes)
   Use la página Propiedades generales para los modelos de informes con el fin de cambiar el nombre, eliminar, mover o reemplazar el archivo de definición de modelo (.smdl). En la parte superior de la página, se incluye información detallada de quién creó o modificó el modelo, y cuándo tuvieron lugar los cambios.  
@@ -41,7 +41,7 @@ ms.locfileid: "37280671"
  **Nombre**  
  Especifica el nombre del modelo. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios y algunos símbolos. No utilice los caracteres siguientes al especificar un nombre:  
   
- ; ? : @ & = +, $ / * \< > | " /  
+ ; ? : \@ & = +, $ / * \< > | " /  
   
  **Descripción**  
  Escriba una descripción del modelo. Esta descripción se mostrará en la página Contenido a los usuarios que tengan permiso de acceso al modelo.  

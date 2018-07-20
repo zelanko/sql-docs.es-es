@@ -16,12 +16,12 @@ caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c396a380d0198680391c73bfaa7fd31b8ede5799
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4d23cf7a0b557b4bbc687514b120af7a93cbf375
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218735"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083033"
 ---
 # <a name="new-system-role-management-studio"></a>Nuevo rol del sistema (Management Studio)
   Utilice esta página para crear una definición de roles de nivel del sistema. Una definición de roles del sistema especifica un conjunto de tareas de nivel de sistema que se aplican a un servidor de informes como un conjunto.  
@@ -33,7 +33,7 @@ ms.locfileid: "37218735"
  **Nombre**  
  Escriba el nombre de la definición de roles. Un nombre de definición de roles debe ser único en el espacio de nombres del servidor de informes. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios y algunos símbolos. No utilice los caracteres siguientes al especificar un nombre:  
   
- ; ? : @ & = +, $ / * \< >  
+ ; ? : \@ & = +, $ / * \< >  
   
  " /  
   

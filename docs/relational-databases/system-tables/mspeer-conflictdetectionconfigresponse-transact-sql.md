@@ -1,5 +1,5 @@
 ---
-title: MSpeer_conflictdetectionconfigresponse (Transact-SQL) | Documentos de Microsoft
+title: MSpeer_conflictdetectionconfigresponse (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSpeer_conflictdetectionconfigureresponse
 ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb1251432bed74cd95368dc02e61f1f42b6e1807
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 65d192cbf84ab41c0ffe9ee6dee47f7a9468e45d
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006382"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103553"
 ---
 # <a name="mspeerconflictdetectionconfigresponse-transact-sql"></a>MSpeer_conflictdetectionconfigresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Se utiliza en la replicación punto a punto para almacenar la respuesta de cada nodo a una solicitud de configuración de toda la topología. Esta tabla se almacena en la base de datos de publicación.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |request_id|**int**|Identifica una entrada de solicitud de configuración de conflicto en el [MSpeer_conflictdetectionconfigrequest](../../relational-databases/system-tables/mspeer-conflictdetectionconfigrequest-transact-sql.md) tabla.|  
 |peer_node|**sysname**|Nombre de la instancia del servidor que generó la respuesta.|  
@@ -53,7 +53,7 @@ ms.locfileid: "33006382"
 |modified_date|**datetime**|Fecha y hora en que se completó una fase.|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

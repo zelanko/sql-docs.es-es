@@ -4,19 +4,19 @@ description: En este artículo proporciona respuestas a las preguntas más frecu
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/22/2018
-ms.topic: article
+ms.date: 07/17/2018
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b0df550ee3489ba8c37ded47878096d75909343e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 841c278d42fd3d2494bd1f08704797d5c11c235e
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001797"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102233"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server en Linux preguntas más frecuentes (P+F)
 
@@ -89,6 +89,9 @@ Las secciones siguientes proporcionan preguntas y respuestas frecuentes para SQL
 1. **¿Qué herramientas están disponibles para supervisar el rendimiento de SQL Server en Linux?**
 
    Puede usar [vistas del sistema de administración dinámica (DMV)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) para recopilar distintos tipos de información acerca de SQL Server, incluida la información de proceso de Linux. Puede usar [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) para mejorar el rendimiento de las consultas. Otras herramientas, como el integrado [panel rendimiento](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/), funcionarán de forma remota en SQL Server Management Studio (SSMS) de Windows.
+
+   > [!TIP]
+   > Una manera de mejorar el rendimiento es configurar correctamente el sistema operativo Linux y el insance de SQL Server. Para obtener más información, consulte [procedimientos recomendados e instrucciones de configuración de SQL Server en Linux](sql-server-linux-performance-best-practices.md).
 
 ## <a name="administration"></a>Administración
 

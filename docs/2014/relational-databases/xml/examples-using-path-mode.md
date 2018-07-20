@@ -16,12 +16,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: acc07be98a39a302cb4d20f9d18ed11c0f85869b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e8f46405dab619292d057d854034ea989908846
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274631"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084017"
 ---
 # <a name="examples-using-path-mode"></a>Ejemplos: Usar el modo PATH
   El ejemplo siguiente ilustra el uso del modo PATH en la creación de XML a partir de una consulta SELECT. Muchas de estas consultas se especifican usando los documentos XML de instrucciones de fabricación de bicicletas almacenados en la columna Instructions de la tabla ProductModel.  
@@ -126,7 +126,7 @@ GO
  `<Name>Bike Wash</Name>`  
   
 ## <a name="specifying-xpath-like-column-names"></a>Especificar nombres de columna de tipo XPath  
- En la consulta siguiente, el nombre de columna `ProductModelID` especificado empieza con '@' y no incluye una marca de barra diagonal ('/'). Por tanto, se creará en el XML resultante un atributo del elemento <`row`> que tenga el valor de columna correspondiente.  
+ En la siguiente consulta la `ProductModelID` nombre de columna especificado empieza con '\@' y no tiene una barra diagonal ('/'). Por tanto, se creará en el XML resultante un atributo del elemento <`row`> que tenga el valor de columna correspondiente.  
   
 ```  
 USE AdventureWorks2012;  

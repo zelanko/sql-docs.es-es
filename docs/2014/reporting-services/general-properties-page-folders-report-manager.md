@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4ee15c703cab10ced93359c91f170e7de0768e3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9418474fed667dade02caaa7eb809ee8d2e16042
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255827"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083907"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>Página de propiedades generales, carpetas (Administrador de informes)
   Use la página de propiedades General de carpetas para ver y establecer las propiedades de las carpetas que cree. En la parte superior de la página, aparece información sobre quién creó o modificó la carpeta y cuándo se modificó en la página Propiedades generales.  
@@ -39,7 +39,7 @@ ms.locfileid: "37255827"
   
 ## <a name="options"></a>Opciones  
  **Nombre**  
- Especifique un nombre para la carpeta. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios y algunos símbolos. No use los caracteres ; ? : @ & = +, $ * \< > | "o / al especificar un nombre.  
+ Especifique un nombre para la carpeta. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios y algunos símbolos. No use los caracteres ; ? : \@ & = +, $ * \< > | "o / al especificar un nombre.  
   
  **Descripción**  
  Escriba una descripción del contenido de la carpeta. Esta descripción se mostrará en la página Contenido para los usuarios que tengan permisos de acceso a la carpeta.  

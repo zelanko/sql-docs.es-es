@@ -14,12 +14,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b750ea3f8586b874a78251790bd0d46e18680a2d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: adf1b80d91e44aec066584ed81ebe2df66575ad3
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158976"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083077"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Generar archivos de volcado para la ejecución de paquetes
   En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], puede crear archivos de volcado de depuración que proporcionen información sobre la ejecución de un paquete. La información de estos archivos puede ayudarle a solucionar los problemas de ejecución del paquete.  
@@ -54,7 +54,7 @@ ms.locfileid: "37158976"
 |-------------------------|-----------------|-------------|  
 |Entorno|Versión del sistema operativo, datos de uso de la memoria, identificador de proceso y nombre de imagen de proceso. La información del entorno se encuentra al principio del archivo .tmp.|# SSIS Textual Dump taken at 9/13/2007 1:50:34 PM<br /><br /> #PID 4120<br /><br /> #Image Name [C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Running on 2 amd64 processors under WOW64<br /><br /> # Memory: 58% in use. Physical: 845M/2044M  Paging: 2404M/4095M (avail/total)|  
 |Ruta de acceso y versión de la biblioteca de vínculos dinámicos (DLL)|Ruta de acceso y número de versión de cada DLL que el sistema carga durante el procesamiento de un paquete.|# Loaded Module: c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # Loaded Module: C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # Loaded Module: C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  
-|Mensajes recientes|Mensajes recientes emitidos por el sistema. Incluye la fecha y hora, el tipo, la descripción y el identificador de subproceso de cada mensaje.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( @ 0282F1A8 )<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Descripción: falta el componente, no está registrado, no puede actualizarse o faltan interfaces necesarias. La información de contacto para este componente es "".|  
+|Mensajes recientes|Mensajes recientes emitidos por el sistema. Incluye la fecha y hora, el tipo, la descripción y el identificador de subproceso de cada mensaje.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2] <<\<CRingBufferLogging::RingBufferLoggingRecord >>> ( \@ 0282F1A8)<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Descripción: falta el componente, no está registrado, no puede actualizarse o faltan interfaces necesarias. La información de contacto para este componente es "".|  
   
 ## <a name="related-content"></a>Contenido relacionado  
  [Ejecutar paquete (cuadro de diálogo)](../execute-package-dialog-box.md)  

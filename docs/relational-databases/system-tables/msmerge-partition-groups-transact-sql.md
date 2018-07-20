@@ -1,5 +1,5 @@
 ---
-title: MSmerge_partition_groups (Transact-SQL) | Documentos de Microsoft
+title: MSmerge_partition_groups (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,31 +22,31 @@ helpviewer_keywords:
 - MSmerge_partition_groups system table
 ms.assetid: 5d56d780-ee40-4afc-9c2a-d1723d86e430
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: db3ea31b69a96c72bf9c8442b94e891532393d6a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd086416b3f0fe74e628cccd6e5ac99ff12984bf
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005812"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103762"
 ---
 # <a name="msmergepartitiongroups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  El **MSmerge_partition_groups** tabla incluye una fila para cada partición precalculada de una base de datos. Además de las columnas enumeradas, en esta tabla se incluye una columna para cada función utilizada en un filtro de fila con parámetros. Por ejemplo, una columna denominada **HOST_NAME_FN** se agrega a la tabla si utiliza un filtro de la [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) función. Se almacena una fila para cada conjunto único de valores de función que se han sincronizado con este publicador. Si dos o más suscriptores se sincronizan exactamente con el mismo valor para todas estas funciones, compartirán la misma fila de esta tabla y, por tanto, compartirán el mismo identificador de partición. Esta tabla se almacena en la base de datos de publicación.  
+  El **MSmerge_partition_groups** tabla almacena una fila para cada partición precalculada de una base de datos. Además de las columnas enumeradas, en esta tabla se incluye una columna para cada función utilizada en un filtro de fila con parámetros. Por ejemplo, una columna denominada **HOST_NAME_FN** se agrega a la tabla si usa un filtro el [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) función. Se almacena una fila para cada conjunto único de valores de función que se han sincronizado con este publicador. Si dos o más suscriptores se sincronizan exactamente con el mismo valor para todas estas funciones, compartirán la misma fila de esta tabla y, por tanto, compartirán el mismo identificador de partición. Esta tabla se almacena en la base de datos de publicación.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**int**|Columna de identidad que proporciona un número de Id. único para la partición precalculada.|  
 |**publication_number**|**smallint**|El número de publicación, que se almacena en **sysmergepublications**.|  
 |**maxgen_whenadded**|**bigint**|Generación más alta que se conoce en el publicador en el momento de insertar la fila en esta tabla.|  
-|**using_partition_groups**|**bit**|Indica si la partición pertenece a una publicación que utiliza particiones precalculadas, y puede tener uno de estos valores:<br /><br /> **0** = publicación no utiliza particiones precalculadas.<br /><br /> **1** = la publicación utiliza particiones precalculadas.<br /><br /> Para obtener más información, vea [Optimizar el rendimiento de los filtros con parámetros con particiones calculadas previamente](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
-|**HOST_NAME_FN**|**nvarchar(128)**|Valor que se suministra al utilizar filtros de fila con parámetros para generar particiones. Para obtener más información, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).|  
+|**using_partition_groups**|**bit**|Indica si la partición pertenece a una publicación que utiliza particiones precalculadas, y puede tener uno de estos valores:<br /><br /> **0** = publicación no utiliza particiones precalculadas.<br /><br /> **1** = la publicación utiliza particiones precalculadas<br /><br /> Para obtener más información, vea [Optimización del rendimiento de los filtros con parámetros con particiones calculadas previamente](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
+|**HOST_NAME_FN**|**nvarchar(128)**|Valor que se suministra al utilizar filtros de fila con parámetros para generar particiones. Para más información, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

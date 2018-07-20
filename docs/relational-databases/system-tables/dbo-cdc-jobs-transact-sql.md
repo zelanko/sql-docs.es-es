@@ -1,5 +1,5 @@
 ---
-title: dbo.cdc_jobs (Transact-SQL) | Documentos de Microsoft
+title: dbo.cdc_jobs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - dbo.cdc_jobs
 ms.assetid: 85e2d580-1c54-4b81-b7e6-2e12997199fd
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ea10a7d9959fa29367e69cfc2d5831ae44dd292
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 55bbf5390a79f762c7e247c65c38e58a4bdb35de
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258902"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103493"
 ---
 # <a name="dbocdcjobs-transact-sql"></a>dbo.cdc_jobs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,17 +36,17 @@ ms.locfileid: "33258902"
   
  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Id. de la base de datos en la que se ejecuta el trabajo.|  
 |**job_type**|**nvarchar (20)**|Tipo de trabajo, que puede ser 'capture' o 'cleanup'.|  
 |**job_id**|**uniqueidentifier**|Id. único asociado al trabajo.|  
-|**maxtrans**|**int**|El número máximo de transacciones que se va a procesar en cada ciclo de examen.<br /><br /> **maxtrans** es válida únicamente para los trabajos de captura.|  
-|**maxscans**|**int**|El número máximo de ciclos de recorrido para ejecutar en orden y extraer todas las filas del registro.<br /><br /> **maxscans** es válida únicamente para los trabajos de captura.|  
-|**Continuo**|**bit**|Una marca que indica si el trabajo de captura debe ejecutarse continuamente (1) o solo una vez (0). Para obtener más información, consulte [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).<br /><br /> **continuo** es válida únicamente para los trabajos de captura.|  
-|**pollingInterval**|**bigint**|El número de segundos entre los ciclos del recorrido del registro.<br /><br /> **pollingInterval** es válida únicamente para los trabajos de captura.|  
-|**Retención**|**bigint**|El número de minutos que se conservan las filas de cambios en las tablas de cambios.<br /><br /> **retención** es válida únicamente para los trabajos de limpieza.|  
-|**Umbral**|**bigint**|El número máximo de entradas correspondientes a operaciones de eliminación que se pueden eliminar mediante una única instrucción durante el proceso de limpieza.|  
+|**maxtrans**|**int**|El número máximo de transacciones para procesar en cada ciclo de examen.<br /><br /> **maxtrans** solo es válida para los trabajos de captura.|  
+|**maxscans**|**int**|El número máximo de ciclos de recorrido para ejecutar en orden y extraer todas las filas del registro.<br /><br /> **maxscans** solo es válida para los trabajos de captura.|  
+|**continua**|**bit**|Una marca que indica si el trabajo de captura debe ejecutarse continuamente (1) o solo una vez (0). Para obtener más información, consulte [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).<br /><br /> **continua** solo es válida para los trabajos de captura.|  
+|**pollingInterval**|**bigint**|El número de segundos entre los ciclos del recorrido del registro.<br /><br /> **pollingInterval** solo es válida para los trabajos de captura.|  
+|**retención**|**bigint**|El número de minutos que se conservan las filas de cambios en las tablas de cambios.<br /><br /> **retención** solo es válida para los trabajos de limpieza.|  
+|**umbral**|**bigint**|El número máximo de entradas correspondientes a operaciones de eliminación que se pueden eliminar mediante una única instrucción durante el proceso de limpieza.|  
   
 ## <a name="see-also"></a>Vea también  
  [Sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)   

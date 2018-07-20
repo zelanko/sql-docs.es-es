@@ -14,12 +14,12 @@ caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8bc5efd9e45b875e66b9ffd1a223a5b375740381
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f29cf01e446c30a69bb2c205d26965b9288ef7f3
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272321"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083037"
 ---
 # <a name="upload-file-page-report-manager"></a>Cargar archivo (página del Administrador de informes)
   Use la página Cargar archivo para publicar un archivo del sistema de archivos en la base de datos del servidor de informes. Los archivos cargados se representan como elementos en la jerarquía de carpetas del servidor de informes.  
@@ -54,7 +54,7 @@ ms.locfileid: "37272321"
  Haga clic para elegir un archivo del sistema de archivos.  
   
  **Nombre**  
- Escriba el nombre del archivo tal como desea que aparezca en el espacio de nombres del servidor de informes. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios en blanco y algunos símbolos. No use los caracteres ; ? : @ & = +, $ * \< > | "o / al especificar un nombre de elemento.  
+ Escriba el nombre del archivo tal como desea que aparezca en el espacio de nombres del servidor de informes. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios en blanco y algunos símbolos. No use los caracteres ; ? : \@ & = +, $ * \< > | "o / al especificar un nombre de elemento.  
   
  **Sobrescribir elemento si existe**  
  Active esta casilla si desea reemplazar un elemento por una versión más reciente. Para que se sobrescriba una versión existente, deben coincidir exactamente el nombre del elemento nuevo y el nombre del elemento existente.  

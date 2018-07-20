@@ -1,5 +1,5 @@
 ---
-title: CDC.captured_columns (Transact-SQL) | Documentos de Microsoft
+title: CDC.captured_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - cdc.captured_columns
 ms.assetid: 7bb4d408-d764-4ef6-802c-f271c8d39c2a
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 51cd038691edf6a89382d4bb588646d70792678c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 144bf49651013b55ec1b515da1ecec156dd375c6
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260841"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103283"
 ---
 # <a name="cdccapturedcolumns-transact-sql"></a>cdc.captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33260841"
   
  Se recomienda **no consultar directamente las tablas del sistema**. En su lugar, ejecute el [sys.sp_cdc_get_source_columns](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md) procedimiento almacenado.  
    
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Id. de la tabla de origen a la que pertenece la columna capturada.|  
 |**column_name**|**sysname**|Nombre de la columna capturada.|  

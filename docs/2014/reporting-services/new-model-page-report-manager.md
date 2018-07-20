@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 78ce09a93d36daf74150750f3f13ce6cbdb242a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5bc389fff162d5e04aabb1bd9e4be85590eaab30
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292195"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083257"
 ---
 # <a name="new-model-page-report-manager"></a>Página Nuevo modelo (Administrador de informes)
   Use esta página para generar un modelo de informe predeterminado desde un origen de datos compartido. Solo puede generar modelos de informe desde [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] orígenes de datos multidimensionales, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] orígenes de datos relacionales y orígenes de datos relacionales de Oracle.  
@@ -45,7 +45,7 @@ ms.locfileid: "37292195"
  **Nombre**  
  Especifica el nombre del modelo. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios y algunos símbolos. No utilice los caracteres siguientes al especificar un nombre:  
   
- ; ? : @ & = +, $ / * \< > | " /  
+ ; ? : \@ & = +, $ / * \< > | " /  
   
  **Descripción**  
  Muestra una descripción del modelo. Los usuarios que ven este elemento a través del Administrador de informes ven esta descripción al examinar la jerarquía de carpetas.  

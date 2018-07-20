@@ -5,19 +5,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: 1dab0dcc403a7e0f85cd78e69e9461ef0d566b0c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 7bb600d59e104fcc8e69307dd523f17452d95fef
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38006799"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085197"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server en la especificación de SDK de cliente de Linux VDI
 
@@ -197,7 +197,7 @@ Cuando se debe bloquear esta rutina para esperar un comando, el subproceso se de
 | |**pCmd** |Se trata de la dirección de un comando que se devolvió previamente desde ClientVirtualDevice::GetCommand.
 | |**completionCode** |Se trata de un código de estado que indica el estado de finalización. Este parámetro debe devolverse para todos los comandos. El código devuelto debe ser adecuado para el comando que se va a realizar. ERROR_SUCCESS se utiliza en todos los casos para denotar un comando ejecutado correctamente. Para obtener la lista completa de posibles códigos, vea el archivo, vdierror.h. Aparece una lista de códigos de estado típico para cada comando en "Commands" más adelante en este documento.
 | |**bytesTransferred** |Este es el número de bytes transferidos correctamente. Se devuelve solo la transferencia de datos de comandos de lectura y escritura.
-| |**posición** |Se trata de una respuesta al comando GetPosition solo.
+| |**Posición** |Se trata de una respuesta al comando GetPosition solo.
         
 | Valores devueltos | Argumento | Explicación
 | ----- | ----- | ------ |

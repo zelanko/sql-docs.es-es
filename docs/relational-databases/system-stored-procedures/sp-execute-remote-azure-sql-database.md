@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4e80528b6a8ce0e6f470a0fc5fbc0152ee8f8007
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 319eee940c5f5d90d6cfe9442c66f506670c26a0
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038753"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082577"
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -51,22 +51,22 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @data_source_name =] *datasourcename*  
+ [ \@data_source_name =] *datasourcename*  
  Identifica el origen de datos externo que se ejecuta la instrucción. Consulte [crear origen de datos externo &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md). El origen de datos externo puede ser de tipo "RDBMS" o "SHARD_MAP_MANAGER".  
   
- [ @stmt= ] *statement*  
- Es una cadena Unicode que contiene un [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o lote. @stmt debe ser una constante Unicode o una variable Unicode. No se permite utilizar expresiones Unicode más complejas, como una concatenación de dos cadenas con el operador +. Las constantes de caracteres no están permitidas. Si se especifica una constante Unicode, deben ir precedido por un **N**. Por ejemplo, la constante Unicode **N 'sp_who'** es válido, pero la constante de caracteres **'sp_who'** no es. El tamaño de la cadena solo está limitado por la memoria disponible en el servidor de bases de datos. En los servidores de 64 bits, el tamaño de la cadena se limita a 2 GB, el tamaño máximo de **nvarchar (max)**.  
+ [ \@stmt =] *instrucción*  
+ Es una cadena Unicode que contiene un [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o lote. \@stmt debe ser una constante Unicode o una variable Unicode. No se permite utilizar expresiones Unicode más complejas, como una concatenación de dos cadenas con el operador +. Las constantes de caracteres no están permitidas. Si se especifica una constante Unicode, deben ir precedido por un **N**. Por ejemplo, la constante Unicode **N 'sp_who'** es válido, pero la constante de caracteres **'sp_who'** no es. El tamaño de la cadena solo está limitado por la memoria disponible en el servidor de bases de datos. En los servidores de 64 bits, el tamaño de la cadena se limita a 2 GB, el tamaño máximo de **nvarchar (max)**.  
   
 > [!NOTE]  
->  @stmt puede contener parámetros que tengan el mismo formato que un nombre de variable, por ejemplo: `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  \@stmt puede contener parámetros que tengan el mismo formato que un nombre de variable, por ejemplo: `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
- Cada parámetro incluido en @stmt debe tener una entrada correspondiente tanto en la lista de definición de parámetros @params como en la lista de valores de parámetros.  
+ Cada parámetro incluido en \@stmt debe tener una entrada correspondiente tanto en el \@params lista de definiciones de parámetro y el parámetro de la lista de valores.  
   
- [ @params=] N'@*parameter_name ** data_type* [,... *n* ] '  
- Es una cadena que contiene las definiciones de todos los parámetros que se han incrustado en @stmt. La cadena debe ser una constante Unicode o una variable Unicode. Cada definición de parámetro se compone de un nombre de parámetro y un tipo de datos. *n* es un marcador de posición que indica definiciones de parámetros adicionales. Todos los parámetros especificados en @stmtmust definirse en @params. Si la instrucción o el lote de [!INCLUDE[tsql](../../includes/tsql-md.md)] en @stmt no contiene parámetros, @params no es necesario. El valor predeterminado de este parámetro es NULL.  
+ [ \@params =] N'\@*parameter_name ** data_type* [,... *n* ] '  
+ Es una cadena que contiene las definiciones de todos los parámetros que se han incrustado en \@stmt. La cadena debe ser una constante Unicode o una variable Unicode. Cada definición de parámetro se compone de un nombre de parámetro y un tipo de datos. *n* es un marcador de posición que indica definiciones de parámetros adicionales. Todos los parámetros especificados en \@stmtmust definirse en \@params. Si el [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o lote en \@stmt no contiene parámetros, \@params no es necesario. El valor predeterminado de este parámetro es NULL.  
   
- [ @param1=] '*value1*'  
- Es un valor para el primer parámetro definido en la cadena de parámetros. El valor puede ser una constante Unicode o una variable Unicode. Debe proporcionarse un valor de parámetro para cada parámetro incluido en @stmt. Los valores no son necesarios cuando el lote o la instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] de @stmt no tiene parámetros.  
+ [ \@param1 =] '*value1*'  
+ Es un valor para el primer parámetro definido en la cadena de parámetros. El valor puede ser una constante Unicode o una variable Unicode. Debe haber un valor de parámetro proporcionado para cada parámetro incluido en \@stmt. Los valores no son necesarios cuando el [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o lote en \@stmt no tiene ningún parámetro.  
   
  *n*  
  Es un marcador de posición para los valores de los parámetros adicionales. Los valores solo pueden ser constantes o variables. Los valores no pueden ser expresiones más complejas como funciones ni expresiones generadas mediante operadores.  
@@ -83,7 +83,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="remarks"></a>Notas  
  `sp_execute_remote` los parámetros deben especificarse en el orden específico, como se describe en la sección de sintaxis anterior. Si los parámetros se escriben desordenados, se producirá un mensaje de error.  
   
- `sp_execute_remote` tiene el mismo comportamiento que [EXECUTE &#40;Transact-SQL&#41; ](../../t-sql/language-elements/execute-transact-sql.md) con respecto a los lotes y el ámbito de nombres. La instrucción Transact-SQL o el lote en el sp_execute_remote *@stmt* parámetro no se compila hasta que se ejecuta la instrucción sp_execute_remote.  
+ `sp_execute_remote` tiene el mismo comportamiento que [EXECUTE &#40;Transact-SQL&#41; ](../../t-sql/language-elements/execute-transact-sql.md) con respecto a los lotes y el ámbito de nombres. La instrucción Transact-SQL o el lote en el sp_execute_remote  *\@stmt* parámetro no se compila hasta que se ejecuta la instrucción sp_execute_remote.  
   
  `sp_execute_remote` Agrega una columna adicional para el conjunto de resultados llamado '$ShardName' que contiene el nombre de la base de datos remoto que generó la fila.  
   

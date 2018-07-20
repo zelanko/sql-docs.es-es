@@ -1,7 +1,7 @@
 ---
-title: sp_addpushsubscription_agent (Transact-SQL) | Documentos de Microsoft
+title: sp_addpushsubscription_agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -23,15 +23,15 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: d111bef33c73d2417ddccf88c5bb083be6c2a35f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 65e24090d009a33f221abc0ba4bf2502418fd377
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993552"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083577"
 ---
 # <a name="spaddpushsubscriptionagent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Agrega un nuevo trabajo del agente programado que se utiliza para sincronizar una suscripción de inserción con una publicación transaccional. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -102,21 +102,21 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 >  No utilice una contraseña en blanco. Utilice una contraseña segura. Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
   
  [  **@job_login =** ] **'***job_login***'**  
- Es el inicio de sesión de la cuenta de Windows en la que se ejecuta el agente. *job_login* es **nvarchar (257)**, su valor predeterminado es null. Esta cuenta de Windows se utiliza siempre para las conexiones del agente con el distribuidor y para las conexiones con el suscriptor al utilizar la Autenticación de Windows integrada.  
+ Es el inicio de sesión para la cuenta bajo la que se ejecuta el agente. En la instancia administrada de Azure SQL Database, use una cuenta de SQL Server. *job_login* es **nvarchar (257)**, su valor predeterminado es null. Esta cuenta de Windows se utiliza siempre para las conexiones del agente con el distribuidor y para las conexiones con el suscriptor al utilizar la Autenticación de Windows integrada.  
   
  [  **@job_password =** ] **'***job_password***'**  
- Es la contraseña de la cuenta de Windows en la que se ejecuta el agente. *job_password* es **sysname**, no tiene ningún valor predeterminado.  
+ Es la contraseña de la cuenta bajo la que se ejecuta el agente. *job_password* es **sysname**, no tiene ningún valor predeterminado.  
   
 > [!IMPORTANT]  
 >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
   
  [  **@job_name =** ] **'***job_name***'**  
- Es el nombre de un trabajo del agente existente. *job_name* es **sysname**, su valor predeterminado es null. Este parámetro solamente se especifica cuando la suscripción se va a sincronizar mediante un trabajo existente en lugar de uno recién creado (el valor predeterminado). Si no es un miembro de la **sysadmin** rol fijo de servidor, debe especificar *job_login* y *job_password* cuando se especifica *job_name*.  
+ Es el nombre de un trabajo del agente existente. *job_name* es **sysname**, su valor predeterminado es null. Este parámetro solamente se especifica cuando la suscripción se va a sincronizar mediante un trabajo existente en lugar de uno recién creado (el valor predeterminado). Si no es un miembro de la **sysadmin** rol fijo de servidor, debe especificar *job_login* y *job_password* al especificar *job_name*.  
   
  [  **@frequency_type =** ] *frequency_type*  
  Es la frecuencia con que se programa el agente de distribución. *frequency_type* es **int**, y puede tener uno de los siguientes valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
@@ -128,7 +128,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**128**|Periódica|  
   
 > [!NOTE]  
->  Especifica el valor de **64** hace que el agente de distribución para que se ejecute en modo continuo. Esto equivale a configurar la **-continua** parámetro para el agente. Para más información, consulte [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md).  
+>  Si se especifica un valor de **64** , el agente de distribución se ejecuta en modo continuo. Esto equivale a configurar el **-continua** parámetro para el agente. Para más información, consulte [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
  [  **@frequency_interval =** ] *frequency_interval*  
  Es el valor que se aplican a la frecuencia establecida por *frequency_type*. *frequency_interval* es **int**, su valor predeterminado es 1.  
@@ -136,7 +136,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  Es la fecha del Agente de distribución. Este parámetro se utiliza cuando *frequency_type* está establecido en **32** (relativo mensual). *frequency_relative_interval* es **int**, y puede tener uno de los siguientes valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1** (predeterminado)|Primero|  
 |**2**|Second|  
@@ -145,12 +145,12 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**16**|Último|  
   
  [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
- Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es **int**, con un valor predeterminado es 0.  
+ Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es **int**, su valor predeterminado es 0.  
   
  [  **@frequency_subday =** ] *frequency_subday*  
  Es la frecuencia de repetición de la programación durante el periodo definido. *frequency_subday* es **int**, y puede tener uno de los siguientes valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|Second|  
@@ -161,69 +161,69 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  Es el intervalo de *frequency_subday*. *frequency_subday_interval* es **int**, su valor predeterminado es 5.  
   
  [  **@active_start_time_of_day =** ] *active_start_time_of_day*  
- Es la hora del día en que el agente de distribución se programa por primera vez, con el formato HHMMSS. *active_start_time_of_day* es **int**, con un valor predeterminado es 0.  
+ Es la hora del día en que el agente de distribución se programa por primera vez, con el formato HHMMSS. *active_start_time_of_day* es **int**, su valor predeterminado es 0.  
   
  [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
  Es la hora del día en que el agente de distribución deja de estar programado, con el formato HHMMSS. *active_end_time_of_day* es **int**, su valor predeterminado es 235959.  
   
  [ **@active_start_date =** ] *active_start_date*  
- Es la fecha en que el agente de distribución se programa por primera vez, con el formato AAAAMMDD. *active_start_date* es **int**, con un valor predeterminado es 0.  
+ Es la fecha en que el agente de distribución se programa por primera vez, con el formato AAAAMMDD. *active_start_date* es **int**, su valor predeterminado es 0.  
   
  [ **@active_end_date =** ] *active_end_date*  
- Es la fecha en la que el agente de distribución deja de estar programado, con el formato AAAAMMDD. *active_end_date* es **int**, con un valor predeterminado es 99991231.  
+ Es la fecha en la que el agente de distribución deja de estar programado, con el formato AAAAMMDD. *active_end_date* es **int**, su valor predeterminado es 99991231.  
   
  [  **@dts_package_name =** ] **'***dts_package_name***'**  
- Especifica el nombre del paquete de Servicios de transformación de datos (DTS). *dts_package_name* es un **sysname** con un valor predeterminado es NULL. Por ejemplo, para especificar el nombre de paquete `DTSPub_Package`, el parámetro sería `@dts_package_name = N'DTSPub_Package'`.  
+ Especifica el nombre del paquete de Servicios de transformación de datos (DTS). *dts_package_name* es un **sysname** con el valor predeterminado es NULL. Por ejemplo, para especificar el nombre de paquete `DTSPub_Package`, el parámetro sería `@dts_package_name = N'DTSPub_Package'`.  
   
  [  **@dts_package_password =** ] **'***dts_package_password***'**  
- Especifica la contraseña necesaria para ejecutar el paquete. *dts_package_password* es **sysname** con un valor predeterminado es NULL.  
+ Especifica la contraseña necesaria para ejecutar el paquete. *dts_package_password* es **sysname** con el valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Debe especificar una contraseña si *dts_package_name* se especifica.  
   
  [  **@dts_package_location =** ] **'***dts_package_location***'**  
- Especifica la ubicación del paquete. *dts_package_location* es un **tipo (12)**, su valor predeterminado del distribuidor. La ubicación del paquete puede ser **distribuidor** o **suscriptor**.  
+ Especifica la ubicación del paquete. *dts_package_location* es un **tipo (12)**, con el valor predeterminado es DISTRIBUTOR. La ubicación del paquete puede ser **distribuidor** o **suscriptor**.  
   
  [  **@enabled_for_syncmgr =** ] **'***enabled_for_syncmgr***'**  
- Indica si se puede sincronizar la suscripción a través de [!INCLUDE[msCoName](../../includes/msconame-md.md)] el Administrador de sincronización. *enabled_for_syncmgr* es **nvarchar (5)**, con un valor predeterminado es FALSE. Si **false**, la suscripción no está registrada con el Administrador de sincronización. Si **true**, la suscripción se registra con el Administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Indica si se puede sincronizar la suscripción a través de [!INCLUDE[msCoName](../../includes/msconame-md.md)] el Administrador de sincronización. *enabled_for_syncmgr* es **nvarchar (5)**, su valor predeterminado es False. Si **false**, la suscripción no está registrada con el Administrador de sincronización. Si **true**, la suscripción se registra con el Administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  [  **@distribution_job_name =** ] **'***distribution_job_name***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@publisher =** ] **'***publisher***'**  
- Es el nombre del publicador. *Publisher* es **sysname**, su valor predeterminado es null.  
+ Es el nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null.  
   
  [  **@subscriber_provider=** ] **'***subscriber_provider***'**  
- Es el identificador de programación (PROGID) único mediante el cual se registra el proveedor OLE DB para los orígenes de datos que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *subscriber_provider* es **sysname**, su valor predeterminado es NULL. *subscriber_provider* debe ser único para el proveedor OLE DB instalado en el distribuidor. *subscriber_provider* solo se admite para no[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.  
+ Es el identificador de programación (PROGID) único mediante el cual se registra el proveedor OLE DB para los orígenes de datos que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *subscriber_provider* es **sysname**, su valor predeterminado es NULL. *subscriber_provider* debe ser único para el proveedor OLE DB instalado en el distribuidor. *subscriber_provider* solo se admite para que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.  
   
  [  **@subscriber_datasrc=** ] **'***subscriber_datasrc***'**  
- Es el nombre del origen de datos tal y como lo entiende el proveedor OLE DB. *subscriber_datasrc* es **nvarchar (4000)**, su valor predeterminado es null. *subscriber_datasrc* se pasa como la propiedad DBPROP_INIT_DATASOURCE para inicializar el proveedor OLE DB. *subscriber_datasrc* solo se admite para no[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.  
+ Es el nombre del origen de datos tal y como lo entiende el proveedor OLE DB. *subscriber_datasrc* es **nvarchar (4000)**, su valor predeterminado es null. *subscriber_datasrc* se pasa como la propiedad DBPROP_INIT_DATASOURCE para inicializar el proveedor OLE DB. *subscriber_datasrc* solo se admite para que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.  
   
  [  **@subscriber_location=** ] **'***subscriber_location***'**  
- Es la ubicación de la base de datos tal y como la entiende el proveedor OLE DB. *subscriber_location* es **nvarchar (4000)**, su valor predeterminado es null. *subscriber_location* se pasa como la propiedad DBPROP_INIT_LOCATION para inicializar el proveedor OLE DB. *subscriber_location* solo se admite para no[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.  
+ Es la ubicación de la base de datos tal y como la entiende el proveedor OLE DB. *subscriber_location* es **nvarchar (4000)**, su valor predeterminado es null. *subscriber_location* se pasa como la propiedad DBPROP_INIT_LOCATION para inicializar el proveedor OLE DB. *subscriber_location* solo se admite para que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.  
   
  [  **@subscriber_provider_string=** ] **'***subscriber_provider_string***'**  
- Es la cadena de conexión específica del proveedor OLE DB que identifica el origen de datos. *subscriber_provider_string* es **nvarchar (4000)**, su valor predeterminado es null. *subscriber_provider_string* se pasó a IDataInitialize o se establece como la propiedad DBPROP_INIT_PROVIDERSTRING para inicializar el proveedor OLE DB. *subscriber_provider_string* solo se admite para no[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.  
+ Es la cadena de conexión específica del proveedor OLE DB que identifica el origen de datos. *subscriber_provider_string* es **nvarchar (4000)**, su valor predeterminado es null. *subscriber_provider_string* se pasa a IDataInitialize o se establece como la propiedad DBPROP_INIT_PROVIDERSTRING para inicializar el proveedor OLE DB. *subscriber_provider_string* solo se admite para que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.  
   
  [  **@subscriber_catalog=** ] **'***subscriber_catalog***'**  
- Es el catálogo que debe utilizarse al establecer una conexión con el proveedor OLE DB. *subscriber_catalog* es **sysname**, su valor predeterminado es NULL. *subscriber_catalog* se pasa como la propiedad DBPROP_INIT_CATALOG para inicializar el proveedor OLE DB. *subscriber_catalog* solo se admite para no[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.  
+ Es el catálogo que debe utilizarse al establecer una conexión con el proveedor OLE DB. *subscriber_catalog* es **sysname**, su valor predeterminado es NULL. *subscriber_catalog* se pasa como la propiedad DBPROP_INIT_CATALOG para inicializar el proveedor OLE DB. *subscriber_catalog* solo se admite para que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_addpushsubscription_agent** se utiliza en la replicación de instantáneas y transaccional.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addpushsubscription-a_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_addpushsubscription_agent**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_addpushsubscription_agent**.  
   
 ## <a name="see-also"></a>Vea también  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Crear una suscripción para un suscriptor que no sea de SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
- [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)   

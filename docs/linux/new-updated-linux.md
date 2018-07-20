@@ -1,23 +1,23 @@
 ---
-title: 'Actualizado: SQL Server en documentos de Linux | Documentos de Microsoft'
-description: Mostrar fragmentos de contenido actualizado para recientemente modificadas en documentación, Microsoft SQL Server en Linux.
+title: 'Actualizados: SQL Server en Linux docs | Microsoft Docs'
+description: Muestra fragmentos de contenido actualizado de documentación modificada recientemente para Microsoft SQL Server en Linux.
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
 ms.date: 04/28/2018
-ms.openlocfilehash: 3b7ed71be06ee7e485236fa0e244e47bb77b3b70
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f7f1e437e0b9d4c2940293280ee2c5529da85e6c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334019"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082487"
 ---
-# <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>Las nuevas y recientemente actualizado: SQL Server en documentos de Linux
+# <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>Nuevos y actualizados recientemente: SQL Server en Linux docs
 
 
 
@@ -30,7 +30,7 @@ Actualizaciones recientes se notifican para el siguiente intervalo de fechas y e
 
 
 - *Intervalo de fechas de las actualizaciones:* &nbsp; del **03-02-2018** &nbsp; al &nbsp; **28-04-2018**
-- *Área de asunto:* &nbsp; **Microsoft SQL Server en Linux**.
+- *Área temática:* &nbsp; **Microsoft SQL Server en Linux**.
 
 
 
@@ -44,7 +44,7 @@ Los siguientes vínculos llevan a nuevos artículos que se han agregado reciente
 
 1. [Autenticación de Active Directory para SQL Server en Linux](sql-server-linux-active-directory-auth-overview.md)
 2. [Configurar SQL Server grupo de disponibilidad AlwaysOn en Windows y Linux (multiplataforma)](sql-server-linux-availability-group-cross-platform.md)
-3. [Siempre funcionan en grupos de disponibilidad en Linux](sql-server-linux-availability-group-operate-ha.md)
+3. [Siempre funcionan en los grupos de disponibilidad en Linux](sql-server-linux-availability-group-operate-ha.md)
 
 
 
@@ -102,21 +102,21 @@ En esta lista compacta se proporcionan vínculos a todos los artículos actualiz
    sudo cat /etc/yum.repos.d/mssql-server.repo
 ```
 
-- El **nombre** propiedad es el repositorio configurado. Se puede identificar con la tabla en la sección [repositorios] de este artículo.
+- El **nombre** propiedad es el repositorio configurado. Se identifica con la tabla en la sección [repositorios] de este artículo.
 
-**Quitar el antiguo repositorio (RHEL)**
+**Eliminar repositorio antiguo (RHEL)**
 
-Si es necesario, quite el antiguo repositorio con el siguiente comando.
+Si es necesario, quite el repositorio antiguo con el siguiente comando.
 
 ```
 sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ```
 
-Este comando asume que el archivo identificado en la sección anterior se denominaba **server.repo mssql**.
+Este comando supone que el archivo identificado en la sección anterior se denominaba **mssql server.repo**.
 
-**Configurar nuevo repositorio (RHEL)**
+**Configurar el nuevo repositorio (RHEL)**
 
-Configure el nuevo repositorio que se utilizará para las actualizaciones y las instalaciones de SQL Server. Utilice uno de los siguientes comandos para configurar el repositorio de su elección.
+Configure el repositorio nuevo que se usará para las actualizaciones y las instalaciones de SQL Server. Utilice uno de los comandos siguientes para configurar el repositorio de su elección.
 
 | Repositorio | Comando |
 |---|---|
@@ -127,21 +127,21 @@ Configure el nuevo repositorio que se utilizará para las actualizaciones y las 
 
 Use los pasos siguientes para configurar repositorios en SLES.
 
-**Busque repositorios configurados previamente (SLES)**
+**Buscar repositorios configurados previamente (SLES)**
 
-En primer lugar, compruebe si ya se ha registrado un repositorio de SQL Server.
+En primer lugar, compruebe si ya ha registrado un repositorio de SQL Server.
 
-- Use **zypper información** para obtener información acerca de cualquier repositorio configurado previamente.
+- Use **zypper información** para obtener información sobre cualquier repositorio configurado previamente.
 
 ```
    sudo zypper info mssql-server
 ```
 
-- El **repositorio** propiedad es el repositorio configurado. Se puede identificar con la tabla en la sección [repositorios] de este artículo.
+- El **repositorio** propiedad es el repositorio configurado. Se identifica con la tabla en la sección [repositorios] de este artículo.
 
-**Quitar el antiguo repositorio (SLES)**
+**Eliminar repositorio antiguo (SLES)**
 
-Si es necesario, quite el antiguo repositorio. Utilice uno de los siguientes comandos según el tipo de repositorio configurado previamente.
+Si es necesario, quite el repositorio antiguo. Utilice uno de los siguientes comandos en función del tipo de repositorio configurado previamente.
 
 | Repositorio | Comando para quitar |
 |---|---|
@@ -159,7 +159,7 @@ Si es necesario, quite el antiguo repositorio. Utilice uno de los siguientes com
 
 ### <a name="2-nbsp-configure-sql-server-on-linux-with-the-mssql-conf-toolsql-server-linux-configure-mssql-confmd"></a>2. &nbsp; [Configurar SQL Server en Linux con la herramienta mssql-conf](sql-server-linux-configure-mssql-conf.md)
 
-*Actualizado: 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([anterior](#TitleNum_1) | [siguiente](#TitleNum_3))
+*Actualizado: 04-2018-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([anterior](#TitleNum_1) | [siguiente](#TitleNum_3))
 
 <!-- Source markdown line 151.  ms.author= jroth.  -->
 
@@ -176,22 +176,22 @@ Si es necesario, quite el antiguo repositorio. Utilice uno de los siguientes com
 
 El **filelocation.masterdatafile** y **filelocation.masterlogfile** cambios de configuración de la ubicación donde el motor de SQL Server busca los archivos de base de datos maestra. De forma predeterminada, esta ubicación es /var/opt/mssql/data.
 
-Para cambiar esta configuración, siga estos pasos:
+Para cambiar esta configuración, use los pasos siguientes:
 
-- Crear el directorio de destino para los nuevos archivos de registro de error. En el ejemplo siguiente se crea un nuevo **masterdatabasedir/tmp/** directory:
+- Crear el directorio de destino para los nuevos archivos de registro de error. En el ejemplo siguiente se crea un nuevo **/tmp/masterdatabasedir** directorio:
 
 ```
    sudo mkdir /tmp/masterdatabasedir
 ```
 
-- Cambiar el propietario y el grupo del directorio para la **mssql** usuario:
+- Cambiar el propietario y el grupo del directorio para el **mssql** usuario:
 
 ```
    sudo chown mssql /tmp/masterdatabasedir
    sudo chgrp mssql /tmp/masterdatabasedir
 ```
 
-- Usar mssql-conf para cambiar el directorio de base de datos maestra predeterminado para los archivos de registro y de datos maestros con la **establecer** comando:
+- Usar mssql-conf para cambiar el directorio de la base de datos maestra predeterminada para los archivos de registro y de datos maestra con el **establecer** comando:
 
 ```
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /tmp/masterdatabasedir/master.mdf
@@ -218,7 +218,7 @@ Para cambiar esta configuración, siga estos pasos:
 ```
 
 > [!NOTE]
-> Si SQL Server no puede encontrar los archivos master.mdf y mastlog.ldf en el directorio especificado, se creará automáticamente una copia con plantilla de las bases de datos del sistema en el directorio especificado y se iniciará correctamente SQL Server. Sin embargo, los metadatos, como las bases de datos de usuario, los inicios de sesión de servidor, certificados de servidor, las claves de cifrado, trabajos del Agente SQL o antigua contraseña de inicio de sesión de SA no se actualizará en la nueva base de datos maestra. Tendrá que detener SQL Server y mover el antiguo master.mdf y mastlog.ldf a la nueva ubicación especificada e iniciar SQL Server para continuar usando los metadatos existentes.
+> Si SQL Server no encuentra los archivos master.mdf y mastlog.ldf en el directorio especificado, se crearán automáticamente una copia de las bases de datos del sistema con plantilla en el directorio especificado y se iniciará correctamente SQL Server. Sin embargo, los metadatos, como las bases de datos de usuario, los inicios de sesión de servidor, los certificados de servidor, las claves de cifrado, trabajos del Agente SQL o antigua contraseña de inicio de sesión de SA no se actualizará en la nueva base de datos maestra. Tendrá que detener SQL Server y mover los antiguos master.mdf y mastlog.ldf a la nueva ubicación especificada e inicie SQL Server para continuar usando los metadatos existentes.
 
 
 
@@ -243,23 +243,23 @@ Para cambiar esta configuración, siga estos pasos:
 
 
 
-- [Habilitar el Agente SQL Server]
+- [Habilitación del Agente SQL Server]
 
 **<a id="CU6"></a> CU6 (abril de 2018)**
 
 
-Se trata de la versión de la actualización acumulativa 6 (CU6) de SQL Server 2017. La versión del motor de SQL Server para esta versión es 14.0.3025.34. Para obtener información acerca de las correcciones y mejoras en esta versión, consulte [ https://support.microsoft.com/help/4101464 ](https://support.microsoft.com/help/4101464).
+Esta es la versión de actualización acumulativa 6 (CU6) de SQL Server 2017. La versión del motor de SQL Server para esta versión es 14.0.3025.34. Para obtener información acerca de las correcciones y mejoras en esta versión, consulte [ https://support.microsoft.com/help/4101464 ](https://support.microsoft.com/help/4101464).
 
 **Detalles del paquete**
 
 
 Para las instalaciones de paquete manual o sin conexión, puede descargar los paquetes RPM y Debian con la información en la tabla siguiente:
 
-| Paquete | versión del paquete | Descargas |
+| Paquete | Versión del paquete | Descargas |
 |-----|-----|-----|
-| Paquete de Red Hat RPM | 14.0.3025.34-3 | [Paquete RPM del motor](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[Paquete alta disponibilidad RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[Paquete de RPM de búsqueda de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm)</br>[Paquete SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) |
-| Paquete de SLES RPM | 14.0.3025.34-3 | [paquete de RPM del motor de servidor MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[Paquete alta disponibilidad RPM](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[Paquete de RPM de búsqueda de texto completo](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm) |
-| Paquete de Debian Ubuntu 16.04 | 14.0.3025.34-3 | [Motor de paquete Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3025.34-3_amd64.deb)</br>[Paquete de Debian de alta disponibilidad](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3025.34-3_amd64.deb)</br>[Paquete de Debian de búsqueda de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3025.34-3_amd64.deb)<br/>[Paquete SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+| Paquete de Red Hat RPM | 14.0.3025.34-3 | [Paquete RPM del motor](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[Paquete alta disponibilidad RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[Paquete de RPM de búsqueda de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm)</br>[Paquete de SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) |
+| Paquete RPM SLES | 14.0.3025.34-3 | [paquete de MSSQL-server motor RPM](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[Paquete alta disponibilidad RPM](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[Paquete de RPM de búsqueda de texto completo](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm) |
+| Paquete de Debian Ubuntu 16.04 | 14.0.3025.34-3 | [Paquete de Debian motor](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3025.34-3_amd64.deb)</br>[Paquete de Debian de alta disponibilidad](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3025.34-3_amd64.deb)</br>[Paquete de Debian de búsqueda de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3025.34-3_amd64.deb)<br/>[Paquete de SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: Tutorial de ciencia de datos to-end para R y SQL Server | Documentos de Microsoft
+title: Tutorial de ciencia de datos de extremo a otro para R y SQL Server | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,57 +7,72 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d3cba2c8deeec356b4d169960c76d65f2c6a02df
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3d4f38fd424c881392d48b0a6a24feb7f7e27ee0
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203527"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086507"
 ---
-# <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>Tutorial de ciencia de datos to-end para R y SQL Server
+# <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>Tutorial de ciencia de datos de extremo a otro para R y SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En este tutorial, desarrolle una solución end-to-end para el modelado de predicción basado en Microsoft R con SQL Server 2016 o 2017 de SQL Server.
+En este tutorial, desarrollará una solución de extremo a otro para el modelado de predicción según la compatibilidad de características de R en SQL Server 2016 o SQL Server 2017.
 
-Este tutorial se basa en un conjunto de datos público conocido, el conjunto de datos de los taxis de Nueva York. Usar una combinación de código de R, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos y funciones SQL personalizadas que se va a crear un modelo de clasificación que indique la probabilidad de que el controlador puede obtener una sugerencia durante un viaje taxi determinado. También implementa el modelo de R para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y usar datos de servidor para generar puntuaciones que se basa en el modelo.
+Este tutorial se basa en un conjunto de datos público conocido, el conjunto de datos de los taxis de Nueva York. Usar una combinación de código de R, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos y funciones SQL personalizadas para crear un modelo de clasificación que indique la probabilidad de que el controlador es posible que reciba una propina en una carrera de taxi determinado. También implementa el modelo R [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y usar los datos del servidor para generar puntuaciones según el modelo.
 
-En este ejemplo se puede extender a todos los tipos de problemas de la vida real, como la predicción de respuestas de los clientes para campañas de ventas o predecir gastos o asistencia a eventos. Dado que el modelo se puede invocar desde un procedimiento almacenado, puede insertar fácilmente en una aplicación.
+En este ejemplo se puede extender a todos los tipos de problemas de la vida real, como predecir las respuestas de clientes en las campañas de ventas o predecir los gastos adicionales o asistencia en eventos. Dado que el modelo se puede invocar desde un procedimiento almacenado, puede insertar fácilmente en una aplicación.
 
-Dado que el tutorial está diseñado para presentar a los desarrolladores de R [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], R se usa siempre que sea posible. Sin embargo, esto no significa que R es necesariamente la mejor herramienta para cada tarea. En muchos casos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría proporcionar un mejor rendimiento, especialmente en tareas como la agregación de datos e ingeniería de características.  Esas tareas pueden beneficiarse de las nuevas características de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], como los índices de almacén de columnas con optimización para memoria. Intentamos señalar posibles optimizaciones a lo largo de la forma.
+Dado que el tutorial está diseñado para presentar a los desarrolladores de R [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], se usa R siempre que sea posible. Sin embargo, esto no significa que R sea necesariamente la mejor herramienta para cada tarea. En muchos casos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría proporcionar un mejor rendimiento, especialmente en tareas como la agregación de datos e ingeniería de características.  Esas tareas pueden beneficiarse de las nuevas características de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], como los índices de almacén de columnas con optimización para memoria. Intentamos señalar posibles optimizaciones en el camino.
 
-> [!NOTE]
-> El tutorial se desarrolló y probó originalmente en SQL Server 2016. Sin embargo, capturas de pantalla y los procedimientos se han actualizado para usar la versión más reciente de SQL Server Management Studio, que funciona con SQL Server 2017.
+## <a name="target-audience"></a>Audiencia de destino
 
-## <a name="overview"></a>Información general
-
-Estimado tiempos no incluyen el programa de instalación. Para obtener más información, consulte [requisitos previos para el tutorial](../tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md).
-
-|Lista de temas|Tiempo estimado|
-|-|------------------------------|
-|[Preparar los datos del tutorial de R](../tutorials/walkthrough-prepare-the-data.md) <br /><br />Obtener los datos usados para generar un modelo. Descargar un conjunto de datos público y cargarlo en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|30 minutos|
-|[Explorar los datos con SQL](../tutorials/walkthrough-view-and-explore-the-data.md) <br /><br />Comprender los datos con resúmenes y herramientas de SQL.|10 minutos|
-|[Resumir los datos con R](../tutorials/walkthrough-view-and-summarize-data-using-r.md) <br /><br />Usar R para explorar los datos y generar resúmenes.|10 minutos|
-|[Crear gráficos de uso de R en SQL Server](../tutorials/walkthrough-create-graphs-and-plots-using-r.md) <br /><br />Crear gráficos en contextos de proceso local y remoto mezclando R y SQL.|10 minutos|
-|[Crear características de datos mediante R y T-SQL)](../tutorials/walkthrough-create-data-features.md) <br /><br />Realizar el diseño de las características con las funciones personalizadas en R y [!INCLUDE[tsql](../../includes/tsql-md.md)]. Comparar el rendimiento de R y T-SQL para las tareas de características. |10 minutos|
-|[Generar un modelo de R y guardarlo en SQL Server](../tutorials/walkthrough-build-and-save-the-model.md) <br /><br />Entrenar y ajustar un modelo predictivo. Evaluar el rendimiento del modelo. Este tutorial crea un modelo de clasificación. Trazar la exactitud del modelo mediante R.|15 minutos|
-|[Implementar el modelo de R mediante SQL Server](../tutorials/walkthrough-deploy-and-use-the-model.md) <br /><br />Implementar el modelo en producción, guardándolo en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Llamar al modelo desde un procedimiento almacenado para generar predicciones.|10 minutos|
-
-### <a name="intended-audience"></a>Destinatarios
-
-Este tutorial está pensado para desarrolladores de R o SQL. Proporciona una introducción a cómo se puede integrar R en flujos de trabajo empresariales mediante [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].  Debe estar familiarizado con las operaciones de base de datos, como crear tablas y bases de datos, la importación de datos y ejecutar consultas.
+Este tutorial está pensado para desarrolladores de R o SQL. Proporciona una introducción a cómo se puede integrar R en flujos de trabajo empresariales mediante [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].  Debe estar familiarizado con operaciones de base de datos, como la creación de tablas y bases de datos, importación de datos y ejecutar consultas.
 
 + Se incluyen todos los scripts SQL y R.
-+ Tendrá que modificar las cadenas en las secuencias de comandos, para que se ejecute en su entorno. Puede hacerlo con cualquier editor de código, como [código de Visual Studio](https://code.visualstudio.com/Download).
++ Es posible que deba modificar las cadenas en los scripts se ejecuten en su entorno. Puede hacerlo con cualquier editor de código, como [Visual Studio Code](https://code.visualstudio.com/Download).
 
-### <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
-+ Debe tener acceso a una instancia de SQL Server 2016 o una versión de evaluación de SQL Server 2017.
-+ Al menos una instancia en el equipo de SQL Server debe tener instalado [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
-+ Si desea ejecutar comandos de R desde un equipo remoto, como un equipo portátil o en otro equipo en red, debe instalar las bibliotecas de Microsoft R Open. Puede instalar Microsoft R Client o Microsoft R Server. El equipo remoto debe ser capaz de conectarse a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia.
-+ Si tiene que colocar el cliente y servidor en el mismo equipo, asegúrese de instalar un conjunto independiente de las bibliotecas de R de Microsoft para su uso en el envío del script de R desde un cliente "remoto". No utilice las bibliotecas de R que se instalan para su uso por la instancia de SQL Server para este propósito.
+Se recomienda que realice este tutorial en un equipo portátil o en otro equipo que tenga instaladas las bibliotecas de Microsoft R. Debe ser capaz de conectarse, en la misma red, a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] equipo con SQL Server y el lenguaje R habilitado.
 
-Para obtener más información acerca de cómo configurar estos entornos de cliente y servidor, consulte [requisitos previos de tutorial de ciencia de datos de R y SQL Server](../tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md).
+Puede ejecutar el tutorial en un equipo que tenga tanto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y un entorno de desarrollo de R pero no se recomienda esta configuración para un entorno de producción.
 
-## <a name="next-lesson"></a>Lección siguiente
+Si desea ejecutar comandos de R desde un equipo remoto, como un equipo portátil o en otro equipo en red, debe instalar las bibliotecas de Microsoft R Open. Puede instalar Microsoft R Client o Microsoft R Server. El equipo remoto debe ser capaz de conectarse a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia.
 
-[Preparar los datos del tutorial de R](../tutorials/walkthrough-prepare-the-data.md)
+Si tiene que colocar el cliente y servidor en el mismo equipo, asegúrese de instalar un conjunto independiente de bibliotecas de R de Microsoft para su uso en el envío de script de R desde un cliente "remoto". No utilice las bibliotecas de R que se instalan para su uso por la instancia de SQL Server para este propósito.
+
+## <a name="add-r-to-sql-server"></a>Agregar R a SQL Server
+
+Debe tener acceso a una instancia de SQL Server compatible con R instalado. Este tutorial originalmente se desarrolló para el servidor SQL 2016 y probado en 2017, por lo que podrá utilizar cualquiera de las siguientes versiones de SQL Server. (Hay algunas pequeñas diferencias en las funciones de RevoScaleR entre las versiones).
+
++ [Instalar SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
++ [Instalar SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
+
+## <a name="install-an-r-development-environment"></a>Instalar un entorno de desarrollo de R
+
+En este tutorial, se recomienda que use un entorno de desarrollo de R. Estas son algunas sugerencias:
+
+- **Herramientas de R para Visual Studio** (RTVS) es un complemento gratuito complemento que proporciona Intellisense, depuración y la compatibilidad con Microsoft R. se puede usar con R Server y SQL Server Machine Learning Services. Para descargarlo, consulte la página sobre [Herramientas de R para Visual Studio](https://www.visualstudio.com/vs/rtvs/).
+
+- **Microsoft R Client** es una herramienta de desarrollo ligera que admite el desarrollo en R mediante el paquete RevoScaleR. Para obtenerla, consulte [Get Started with Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)(Introducción a Cliente de Microsoft R).
+
+- **RStudio** es uno de los entornos de desarrollo de R más populares. Para obtener más información, consulte [ https://www.rstudio.com/products/RStudio/ ](https://www.rstudio.com/products/RStudio/).
+
+    No se puede completar este tutorial con una instalación genérica de RStudio u otro entorno; También debe instalar los paquetes de R y las bibliotecas de conectividad de Microsoft R Open. Para obtener más información, consulte [Configurar un cliente de ciencia de datos](../r/set-up-a-data-science-client.md).
+
+- Herramientas básicas de R (R.exe, RTerm.exe, RScripts.exe) también se instalan de forma predeterminada al instalar R en SQL Server o cliente de R. Si no desea instalar un IDE, puede usar estas herramientas.
+
+## <a name="get-permissions-on-the-sql-server-instance-and-database"></a>Obtener permisos en la instancia de SQL Server y base de datos
+
+Para conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar scripts y cargar datos, debe tener un inicio de sesión válido en el servidor de base de datos.  Puede usar un inicio de sesión de SQL o la autenticación integrada de Windows. Pida al administrador de base de datos para configurar los siguientes permisos para la cuenta, en la base de datos donde se utilice R:
+
+- Crear bases de datos, tablas, funciones y procedimientos almacenados
+- Escribir datos en tablas
+- Capacidad de ejecutar el script de R (`GRANT EXECUTE ANY EXTERNAL SCRIPT to <user>`)
+
+En este tutorial, hemos usado el inicio de sesión SQL **RTestUser**. Por lo general, se recomienda que utilice la autenticación integrada de Windows, pero usar el inicio de sesión SQL es más fácil para algunos fines de demostración.
+
+## <a name="next-steps"></a>Pasos siguientes
+
+[Preparar los datos de uso de PowerShell](walkthrough-prepare-the-data.md)

@@ -1,5 +1,5 @@
 ---
-title: MSdistributiondbs (Transact-SQL) | Documentos de Microsoft
+title: MSdistributiondbs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSdistributiondbs system table
 ms.assetid: d7ffa9df-bf1d-41b8-837e-b762c17c2764
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a616111951170d264e61bc40ff0691806ca2ebaf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92666ee39278f5305130579150aa36757a28fb0b
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004162"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103293"
 ---
 # <a name="msdistributiondbs-transact-sql"></a>MSdistributiondbs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  El **MSdistributiondbs** tabla contiene una fila por cada base de datos de distribución definida en el distribuidor local. Esta tabla se almacena en la **msdb** base de datos.  
+  El **MSdistributiondbs** tabla contiene una fila por cada base de datos de distribución definida en el distribuidor local. Esta tabla se almacena en el **msdb** base de datos.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|El nombre de la base de datos de distribución.|  
 |**min_distretention**|**int**|El período mínimo de retención, en horas, antes de que se eliminen las transacciones.|  
@@ -45,7 +45,7 @@ ms.locfileid: "33004162"
 |**history_retention**|**int**|El número de horas que se mantiene el historial.|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: MSmerge_identity_range (Transact-SQL) | Documentos de Microsoft
+title: MSmerge_identity_range (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSmerge_identity_range system table
 ms.assetid: 493a2028-88a0-4e83-ad89-ae5661d9f477
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 026774d2eae738f8641c56f923bcabc981fded1e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bbd06dae4c34b2b5c77b81db64f9d12408539b01
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005132"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101233"
 ---
 # <a name="msmergeidentityrange-transact-sql"></a>MSmerge_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  El **MSmerge_identity_range** tabla sirve para realizar un seguimiento de los intervalos numéricos asignados a las columnas de identidad para la suscripción a publicaciones en que la replicación se administran automáticamente estas asignaciones de intervalos. Esta tabla se almacena en las bases de datos de publicación y de suscripciones.  
+  El **MSmerge_identity_range** tabla se utiliza para realizar un seguimiento de los intervalos numéricos asignados a las columnas de identidad para la suscripción a publicaciones en el que la replicación se administran automáticamente estas asignaciones de intervalos. Esta tabla se almacena en las bases de datos de publicación y de suscripciones.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**subid**|**uniqueidentifier**|Número de identificación único para una suscripción dada.|  
 |**artid**|**uniqueidentifier**|El número de identificación único del artículo indicado.|  
@@ -49,7 +49,7 @@ ms.locfileid: "33005132"
 |**max_used**|**numeric(38)**|Valor de identidad máximo que se puede asignar.|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

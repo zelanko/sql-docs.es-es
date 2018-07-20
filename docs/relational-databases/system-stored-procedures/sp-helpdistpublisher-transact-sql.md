@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistpublisher (Transact-SQL) | Documentos de Microsoft
+title: sp_helpdistpublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +23,12 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: c2944745c938fbeb3c36f37da950a6413c4fbde7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4eed56a7e9356ac7f42c5f1bf2a5d55e85111523
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999592"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082417"
 ---
 # <a name="sphelpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,37 +47,38 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publisher=** ] **'***publisher***'**  
- Es el publicador cuyas propiedades se van a devolver. *Publisher* es **sysname**, su valor predeterminado es **%**.  
+ Es el publicador cuyas propiedades se van a devolver. *publicador* es **sysname**, su valor predeterminado es **%**.  
   
  [  **@check_user=** ] *check_user*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|Nombre del publicador.|  
 |**distribution_db**|**sysname**|Base de datos de distribución del publicador especificado.|  
 |**security_mode**|**int**|Modo de seguridad empleado por los agentes de replicación para conectar al publicador para suscripciones de actualización en cola, o con un publicador que no sea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** = autenticación de Windows|  
-|**Inicio de sesión**|**sysname**|Nombre de inicio de sesión empleado por los agentes de replicación para conectar al publicador para suscripciones de actualización en cola, o con un publicador que no sea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**password**|**nvarchar (524)**|Contraseña devuelta (en forma de cifrado sencillo). Contraseña es distinto de NULL para los usuarios **sysadmin**.|  
+|**inicio de sesión**|**sysname**|Nombre de inicio de sesión empleado por los agentes de replicación para conectar al publicador para suscripciones de actualización en cola, o con un publicador que no sea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**password**|**nvarchar (524)**|Contraseña devuelta (en forma de cifrado sencillo). Contraseña es NULL para los usuarios no sean **sysadmin**.|  
 |**Active**|**bit**|Indica si un publicador remoto utiliza el servidor local como distribuidor:<br /><br /> **0** = No<br /><br /> **1** = Sí|  
 |**working_directory**|**nvarchar(255)**|Nombre del directorio de trabajo.|  
-|**De confianza**|**bit**|Si se necesita la contraseña cuando un publicador se conecta con el distribuidor. Para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, se debe devolver siempre **0**, lo que significa que la contraseña es obligatoria.|  
+|**confianza**|**bit**|Si se necesita la contraseña cuando un publicador se conecta con el distribuidor. Para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, esto debe devolver siempre **0**, lo que significa que la contraseña es obligatoria.|  
 |**thirdparty_flag**|**bit**|Indica si la publicación está habilitada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o por una aplicación de terceros:<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], oracle o el publicador de puerta de enlace de Oracle.<br /><br /> **1** = publisher se ha integrado con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante una aplicación de terceros.|  
 |**publisher_type**|**sysname**|Tipo de publicador; puede ser uno de los siguientes:<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **PUERTA DE ENLACE DE ORACLE**|  
 |**publisher_data_source**|**nvarchar(4000)**|Nombre del origen de datos OLE DB en el publicador.|  
+|**storage_connection_string**|**nvarchar(4000)**|Clave de acceso de almacenamiento para el directorio de trabajo al distribuidor ni publicador en Azure SQL Database.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_helpdistpublisher** se utiliza en todos los tipos de replicación.  
   
- **sp_helpdistpublisher** no mostrará el inicio de sesión del publicador o se especifica para la contraseña en el resultado no es**sysadmin** inicios de sesión.  
+ **sp_helpdistpublisher** no mostrará el inicio de sesión del publicador o con contraseña en el resultado se establece para que no sean de**sysadmin** inicios de sesión.  
   
-## <a name="permissions"></a>Permissions  
- Los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_helpdistpublisher** para los publicadores que utilicen el servidor local como distribuidor. Los miembros de la **db_owner** rol fijo de base de datos o la **replmonitor** en una base de datos de distribución pueden ejecutar **sp_helpdistpublisher** para los publicadores que utilicen que base de datos de distribución. Lista de los usuarios en el acceso a la publicación para una publicación en el índice especificado *publisher* puede ejecutarse **sp_helpdistpublisher**. Si *publisher* no se especifica, se devuelve información para todos los publicadores que el usuario tiene derechos de acceso.  
+## <a name="permissions"></a>Permisos  
+ Los miembros de la **sysadmin** puede ejecutar el rol fijo de servidor **sp_helpdistpublisher** para los publicadores que utilicen el servidor local como distribuidor. Los miembros de la **db_owner** rol fijo de base de datos o el **replmonitor** en una base de datos de distribución pueden ejecutar **sp_helpdistpublisher** para los publicadores que utilicen que base de datos de distribución. Lista de usuarios en el acceso a la publicación para una publicación en el índice especificado *publisher* pueden ejecutar **sp_helpdistpublisher**. Si *publisher* no se especifica, se devolverá información para todos los publicadores que el usuario tiene derechos de acceso.  
   
 ## <a name="see-also"></a>Vea también  
  [Ver y modificar las propiedades del distribuidor y del publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

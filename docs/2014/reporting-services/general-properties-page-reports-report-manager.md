@@ -14,12 +14,12 @@ caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 607d50e68cef49fef5940b2729bea8156d7bf2f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7d4b9885c1dc28d7786296a220d76f56e24a43e1
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189902"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084657"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Página d propiedades generales, informes (Administrador de informes)
   Use la página de propiedades General de informes para cambiar de nombre, eliminar, mover o reemplazar una definición de informe. Esta página se puede utilizar también para crear un informe vinculado. En la parte superior de la página, se incluye información detallada sobre quién creó o modificó el informe, y cuándo tuvieron lugar los cambios.  
@@ -37,7 +37,7 @@ ms.locfileid: "37189902"
   
 ## <a name="options"></a>Opciones  
  **Nombre**  
- Especifique un nombre para el informe. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios en blanco y algunos símbolos. No use los caracteres ; ? : @ & = +, $ * \< >  
+ Especifique un nombre para el informe. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios en blanco y algunos símbolos. No use los caracteres ; ? : \@ & = +, $ * \< >  
   
  " o / al especificar el nombre.  
   

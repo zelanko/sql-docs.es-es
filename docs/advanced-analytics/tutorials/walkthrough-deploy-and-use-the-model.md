@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 290659402622ab04de85e81f05328778b0f0c1eb
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: 74a5d8b7ac8bd36a6ce76b895b2dde4a07f5ea96
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983017"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085357"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>Implementar el modelo de R y su uso en SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -59,9 +59,9 @@ Un procedimiento almacenado para la puntuación de batch se creó cuando ejecut�
     END
     ```
 
-    + Utilice una instrucción SELECT para llamar el modelo almacenado desde una tabla SQL. El modelo se recupera de la tabla como **varbinary (max)** datos se almacenan en la variable SQL, _@lmodel2_y se pasa como parámetro *mod* al sistema almacenado procedimiento [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+    + Utilice una instrucción SELECT para llamar el modelo almacenado desde una tabla SQL. El modelo se recupera de la tabla como **varbinary (max)** datos se almacenan en la variable SQL,  _\@lmodel2_y se pasa como parámetro *mod* al sistema procedimiento almacenado [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Los datos que se usan como entradas para la puntuación se define como una consulta SQL y se almacena como una cadena en la variable SQL _@input_. Cuando se recuperan datos de la base de datos, se almacenan en una trama de datos denominada *InputDataSet*, que es simplemente el nombre predeterminado para los datos de entrada para el [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedimiento; se puede definir otro nombre de variable si es necesario mediante el parámetro *_@input_data_1_name_*.
+    + Los datos que se usan como entradas para la puntuación se define como una consulta SQL y se almacena como una cadena en la variable SQL  _\@entrada_. Cuando se recuperan datos de la base de datos, se almacenan en una trama de datos denominada *InputDataSet*, que es simplemente el nombre predeterminado para los datos de entrada para el [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedimiento; se puede definir otro nombre de variable si es necesario mediante el parámetro   *_\@input_data_1_name_*.
 
     + Para generar las puntuaciones, el procedimiento almacenado llama a la función `rxPredict` de la biblioteca **RevoScaleR** .
 

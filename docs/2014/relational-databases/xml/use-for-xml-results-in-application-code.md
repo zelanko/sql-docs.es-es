@@ -22,12 +22,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8cb0fb56cd1715331c5c3f0e09c4319e0b82335
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d20d074f30f15acaec3065bc45ecd4ac92da8f4d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254117"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083168"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Usar los resultados de FOR XML en el código de aplicación
   Al utilizar cláusulas FOR XML con consultas SQL, se pueden recuperar e incluso convertir los resultados de la consulta como datos XML. Esta funcionalidad permite realizar las siguientes operaciones cuando los resultados de las consultas FOR XML se pueden utilizar en el código de aplicación XML:  
@@ -143,7 +143,7 @@ ms.locfileid: "37254117"
  Los resultados de la página HTML generada que aparecen serán similares a la siguiente salida de ejemplo:  
   
 ##### <a name="server-side-processing"></a>Procesamiento en el servidor  
- Page Generated @ 3/11/2006 3:36:02 PM  
+ Página generadas \@ 3/11/2006 3:36:02 P.M.  
   
  Connect String = Provider=SQLOLEDB;Data Source=MyServer;Initial Catalog=AdventureWorks;Integrated Security=SSPI;  
   

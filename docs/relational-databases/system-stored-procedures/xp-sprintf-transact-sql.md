@@ -1,5 +1,5 @@
 ---
-title: xp_sprintf (Transact-SQL) | Documentos de Microsoft
+title: xp_sprintf (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,17 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - xp_sprintf
 ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
-caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ab83c9e20bd94ce2e93b5c3e1123f07e8e68e141
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 96028feabf6559b5cb51114a12035101b7a66aa9
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253709"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103693"
 ---
 # <a name="xpsprintf-transact-sql"></a>xp_sprintf (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +52,7 @@ xp_sprintf { string OUTPUT , format }
  Cuando se especifica, coloca el valor de la variable en el parámetro de salida.  
   
  *format*  
- Es una cadena de caracteres de formato con marcadores de posición para *argumento* valores, similar a la que admiten el lenguaje c. **sprintf** función. Actualmente, solo se acepta el formato %s.  
+ Es una cadena de caracteres de formato con marcadores de posición para *argumento* valores, similares a la que admite el lenguaje c. **sprintf** función. Actualmente, solo se acepta el formato %s.  
   
  *argument*  
  Es una cadena de caracteres que representa el valor del argumento de formato correspondiente.  
@@ -69,7 +68,7 @@ xp_sprintf { string OUTPUT , format }
   
  `The command(s) completed successfully.`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="see-also"></a>Vea también  

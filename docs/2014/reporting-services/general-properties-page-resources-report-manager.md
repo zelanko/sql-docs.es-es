@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 269cd82820bb8e07ec1ac66ccc8d3e8b8ceeb43a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4e910172bc11137f2691e1e7dda492b78bd78b26
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164190"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082909"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Página de propiedades generales, recursos (Administrador de informes)
   Use la página de propiedades General de los recursos para cambiar de nombre, eliminar, mover o reemplazar un recurso. En la parte superior de la página, se muestra información sobre quién agregó el recurso o modificó las propiedades.  
@@ -39,7 +39,7 @@ ms.locfileid: "37164190"
   
 ## <a name="options"></a>Opciones  
  **Nombre**  
- Especifique un nombre para el recurso. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios y algunos símbolos. No use los caracteres ; ? : @ & = +, $ / * \< > | "o / al especificar un nombre.  
+ Especifique un nombre para el recurso. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios y algunos símbolos. No use los caracteres ; ? : \@ & = +, $ / * \< > | "o / al especificar un nombre.  
   
  **Descripción**  
  Escriba una descripción del recurso. Esta descripción se mostrará en la página Contenido a los usuarios que tengan permisos de acceso al recurso.  

@@ -14,12 +14,12 @@ caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3464ba51b74343fdb7349b7622f08a68b3f25611
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f580f26ac2431c7872f3a311027780900d4dd58f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162296"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083407"
 ---
 # <a name="new-folder-page-report-manager"></a>Página Nueva carpeta (Administrador de informes)
   Use la página Nueva carpeta para crear una carpeta nueva en la jerarquía de carpetas del servidor de informes. La carpeta será una carpeta virtual que se almacenará en una base de datos del servidor de informes. No se crea en el sistema de archivos del equipo.  
@@ -39,7 +39,7 @@ ms.locfileid: "37162296"
   
 ## <a name="options"></a>Opciones  
  **Nombre**  
- Especifique el nombre de la carpeta. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios en blanco y algunos símbolos. No use los caracteres ; ? : @ & = +, $ / * \< > | "o / al especificar un nombre.  
+ Especifique el nombre de la carpeta. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios en blanco y algunos símbolos. No use los caracteres ; ? : \@ & = +, $ / * \< > | "o / al especificar un nombre.  
   
  **Descripción**  
  Escriba una descripción del contenido de la carpeta. La descripción aparece en la página Contenido de aquellos usuarios que tengan permiso de acceso a la carpeta.  

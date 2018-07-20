@@ -1,5 +1,5 @@
 ---
-title: Tablas de replicación (Transact-SQL) | Documentos de Microsoft
+title: Las tablas de replicación (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - replication [SQL Server], system tables
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1746bf67f4858a97d91e5e7f7740449d14126b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 919b11f4d9b5e71fe9ff0fc084ce4d591c807329
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012832"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103443"
 ---
 # <a name="replication-tables-transact-sql"></a>Tablas de replicación (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Las tablas del sistema de replicación son las que permiten el uso de una topología de replicación. Cuando una base de datos de usuario se configura como publicador o suscriptor, la replicación agrega tablas del sistema a la base de datos. Estas tablas se quitan cuando se quita una base de datos de usuario de una topología de replicación. Para las reglas generales relacionados con uso de tablas del sistema, consulte [tablas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md).  
+  Las tablas del sistema de replicación son las que permiten el uso de una topología de replicación. Cuando una base de datos de usuario se configura como publicador o suscriptor, la replicación agrega tablas del sistema a la base de datos. Estas tablas se quitan cuando se quita una base de datos de usuario de una topología de replicación. Normas generales sobre uso de las tablas del sistema, vea [las tablas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md).  
   
 ## <a name="replication-tables"></a>Tablas de replicación  
  A continuación, se ofrece una lista de las tablas del sistema utilizadas en la replicación, agrupadas por base de datos.  

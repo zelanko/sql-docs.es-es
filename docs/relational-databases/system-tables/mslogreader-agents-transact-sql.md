@@ -1,5 +1,5 @@
 ---
-title: MSlogreader_agents (Transact-SQL) | Documentos de Microsoft
+title: MSlogreader_agents (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,28 +22,28 @@ helpviewer_keywords:
 - MSlogreader_agents system table
 ms.assetid: 8baa3c5a-cb40-42d0-b966-00e6d55368e8
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ca82b27fa19c0649cf543c5964b8527f2176982
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1c4f075b71494c311b4ba7572a9615bdbc0a7dfe
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005602"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102153"
 ---
 # <a name="mslogreaderagents-transact-sql"></a>MSlogreader_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  El **MSlogreader_agents** tabla contiene una fila por cada agente de lector de registro ejecuta en el distribuidor local. Esta tabla se almacena en la base de datos de distribución.  
+  El **MSlogreader_agents** tabla contiene una fila por cada agente de lector del registro que se ejecuta en el distribuidor local. Esta tabla se almacena en la base de datos de distribución.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Id. del Agente de registro del LOG.|  
-|**Nombre**|**nvarchar (100)**|Nombre del Agente de registro del LOG.|  
-|**publisher_id**|**smallint**|El identificador del publicador.|  
+|**Nombre**|**Nvarchar (100)**|Nombre del Agente de registro del LOG.|  
+|**publisher_id**|**smallint**|El ID. del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador.|  
-|**Publicación**|**sysname**|Nombre de la publicación.|  
+|**publicación**|**sysname**|Nombre de la publicación.|  
 |**local_job**|**bit**|Indica si hay un trabajo de Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  en el distribuidor local.|  
 |**job_id**|**binary (16)**|El número de identificación del trabajo.|  
 |**profile_id**|**int**|El identificador de configuración de la [MSagent_profiles](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) tabla.|  
@@ -51,9 +51,11 @@ ms.locfileid: "33005602"
 |**publisher_login**|**sysname**|Inicio de sesión utilizado al conectar al publicador.|  
 |**publisher_password**|**nvarchar (524)**|Valor cifrado de la contraseña que se utiliza al conectar al publicador.|  
 |**job_step_uid**|**uniqueidentifier**|El Id. único del paso de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se inicia el agente.|  
+|**job_login**|**sysname**||  
+|**job_password**|**nvarchar (524)**||  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

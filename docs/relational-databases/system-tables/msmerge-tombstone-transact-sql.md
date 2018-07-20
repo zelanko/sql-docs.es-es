@@ -1,5 +1,5 @@
 ---
-title: MSmerge_tombstone (Transact-SQL) | Documentos de Microsoft
+title: MSmerge_tombstone (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSmerge_tombstone system table
 ms.assetid: 8b3fc7bf-729b-40f2-8a26-e7dfbe8ddb38
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 99823a19970cf5732aa4e68b3588c6b5a6934a07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: af64c598ccb092a5c0e408496ceba8d97f609124
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004822"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102073"
 ---
 # <a name="msmergetombstone-transact-sql"></a>MSmerge_tombstone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   El **MSmerge_tombstone** tabla contiene información sobre las filas eliminadas y permite las eliminaciones se propagan a otros suscriptores. Esta tabla se almacena en las bases de datos de publicación y de suscripciones.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**rowguid**|**uniqueidentifier**|Identificador de fila.|  
 |**tablenick**|**int**|Alias de la tabla.|  
@@ -48,7 +48,7 @@ ms.locfileid: "33004822"
 |**logical_record_lineage**|**Varbinary(501)**|El alias del suscriptor, pares de números de versión que se utilizan para mantener un historial de las eliminaciones del registro lógico al que pertenece esta fila.|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

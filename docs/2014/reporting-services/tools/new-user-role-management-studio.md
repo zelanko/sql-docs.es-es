@@ -16,12 +16,12 @@ caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6654b0bef25504737e2f3fb42cdb2b0f8d017506
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 397ad5d6eab8567362199c7a6a33552e6fc621af
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251367"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085007"
 ---
 # <a name="new-user-role-management-studio"></a>Nuevo rol de usuario (Management Studio)
   Utilice esta página para crear una definición de roles de nivel de elemento. Una definición de roles de nivel de elemento es una colección con nombre de las tareas que puede realizar un usuario con las carpetas, los informes, los modelos, los recursos y los orígenes de datos compartidos. Un ejemplo de definición de roles de nivel de elemento sería el rol predefinido Explorador, que identifica los tipos de acciones que podría necesitar el usuario final de un informe para navegar por carpetas y ver informes.  
@@ -35,7 +35,7 @@ ms.locfileid: "37251367"
  **Nombre**  
  Escriba el nombre de la definición de roles. Un nombre de definición de roles debe ser único en el espacio de nombres del servidor de informes. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios y algunos símbolos. No utilice los caracteres siguientes al especificar un nombre:  
   
- ; ? : @ & = +, $ / * \< >  
+ ; ? : \@ & = +, $ / * \< >  
   
  " /  
   

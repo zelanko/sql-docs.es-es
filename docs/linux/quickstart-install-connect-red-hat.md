@@ -4,20 +4,20 @@ description: Este inicio rápido muestra cómo instalar SQL Server 2017 en Red H
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/22/2018
-ms.topic: article
+ms.date: 07/16/2018
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: de149b0a75a550101e761baa109bc07dac062fcd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 4438184f6e14af1097ff05ea6e463f626025bb46
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020422"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103754"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Inicio rápido: Instalar SQL Server y crear una base de datos en Red Hat
 
@@ -113,13 +113,5 @@ Para crear una base de datos, debe conectarse con una herramienta que puede ejec
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
-
-> [!TIP]
-> **Sqlcmd** es simplemente una herramienta para conectarse a SQL Server para ejecutar consultas y realizar tareas de administración y desarrollo. Otras herramientas son:
->
-> * [SQL Server Operations Studio (versión preliminar)](../sql-operations-studio/what-is.md)
-> * [SQL Server Management Studio](sql-server-linux-manage-ssms.md)
-> * [Código de Visual Studio](sql-server-linux-develop-use-vscode.md).
-> * [mssql-cli (versión preliminar)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

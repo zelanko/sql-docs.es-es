@@ -1,5 +1,5 @@
 ---
-title: MSpeer_topologyresponse (Transact-SQL) | Documentos de Microsoft
+title: MSpeer_topologyresponse (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,25 +22,25 @@ helpviewer_keywords:
 - MSpeer_topologyresponse
 ms.assetid: 1bc5c0c6-c432-405c-89fd-e953d173a247
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8deee6f30e06be53994f61d28dce6759ec216aa1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e0a7f1b39d87855a59cd5b7c4c366edc3192b953
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005252"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102083"
 ---
 # <a name="mspeertopologyresponse-transact-sql"></a>MSpeer_topologyresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Se utiliza en la replicación punto a punto para almacenar la respuesta de cada nodo a una solicitud del estado de la topología. Esta tabla se almacena en la base de datos de publicación.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|request_id|**int**|Identifica una entrada de solicitud de estado de topología en la [MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md) tabla.|  
+|request_id|**int**|Identifica una entrada de solicitud de estado de topología en el [MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md) tabla.|  
 |peer|**sysname**|Nombre de la instancia del servidor que generó la respuesta.|  
 |peer_version|**int**|Identifica el número de versión del publicador.|  
 |peer_db|**sysname**|Base de datos de suscripciones del mismo nivel que generó la respuesta.|  
@@ -50,7 +50,7 @@ ms.locfileid: "33005252"
 |connection_info|**xml**|Información sobre el nodo que respondió a la solicitud.|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

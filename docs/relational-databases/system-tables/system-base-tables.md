@@ -1,5 +1,5 @@
 ---
-title: Tablas Base del sistema | Documentos de Microsoft
+title: Tablas Base del sistema | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,26 +18,26 @@ helpviewer_keywords:
 - base tables
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c15a0e42091cffb8010cae36ad43322d361f91fe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6804649b60a1617def415ce35113685ef43902f5
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263038"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102213"
 ---
 # <a name="system-base-tables"></a>Tablas base del sistema
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Las tablas base del sistema son las tablas subyacentes que almacenan los metadatos para una base de datos específica. El **maestro** base de datos es especial en este sentido porque contiene algunas tablas adicionales que no se encuentran en cualquiera de estas bases de datos. Estas tablas contienen metadatos persistentes con un ámbito para todo el servidor.  
+  Las tablas base del sistema son las tablas subyacentes que almacenan los metadatos para una base de datos específica. El **maestro** base de datos es especial en este sentido, porque contiene algunas tablas adicionales que no se encuentran en cualquiera de las otras bases de datos. Estas tablas contienen metadatos persistentes con un ámbito para todo el servidor.  
   
 > [!IMPORTANT]  
 >  Las tablas base del sistema se utilizan solo en [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y no son para el uso general de los clientes. Están sujetos a cambios y su compatibilidad no está garantizada.  
   
 ## <a name="system-base-table-metadata"></a>Metadatos de tablas base del sistema  
- Un receptor que tiene el permiso VIEW DEFINITION, ALTER o CONTROL en una base de datos puede ver metadatos de la tabla de base de sistema en el **sys.objects** vista de catálogo. El receptor también puede resolver los nombres y los identificadores de tablas base del sistema del objeto mediante las funciones integradas como [OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md) y [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md).  
+ Un receptor que tiene el permiso VIEW DEFINITION, ALTER o CONTROL en una base de datos puede ver los metadatos de tabla base del sistema en el **sys.objects** vista de catálogo. El receptor también puede resolver los nombres e identificadores del objeto de tablas base del sistema mediante las funciones integradas, como [OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md) y [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md).  
   
  Para enlazar con una tabla base del sistema, un usuario tiene que conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando la conexión de administrador dedicada (DAC). Si intentar ejecutar una consulta SELECT de una tabla base del sistema sin conectarse a través de la conexión DAC, se producirá un error.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "33263038"
 ## <a name="system-base-tables"></a>Tablas base del sistema  
  En la tabla siguiente se enumeran y describen todas las tablas base del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Tabla base|Description|  
+|Tabla base|Descripción|  
 |----------------|-----------------|  
 |**Sys.sysschobjs**|Existe en todas las bases de datos. Cada fila representa un objeto en la base de datos.|  
 |**Sys.sysbinobjs**|Existe en todas las bases de datos. Contiene una fila para cada entidad de Service Broker en la base de datos. Las entidades de Service Broker contienen los siguientes elementos:<br /><br /> Tipo de mensaje<br /><br /> Contrato de servicio<br /><br /> ssNoVersion<br /><br /> Los nombres y tipos utilizan intercalación binaria fija.|  
@@ -55,17 +55,17 @@ ms.locfileid: "33263038"
 |**Sys.sysnsobjs**|Existe en todas las bases de datos. Contiene una fila para cada entidad centrada en el espacio de nombres. Esta tabla se usa para almacenar entidades de la colección de XML.|  
 |**Sys.syscolpars**|Existe en todas las bases de datos. Contiene una fila para cada columna en una tabla, vista o función con valores de tabla. También contiene las filas para cada parámetro de un procedimiento o función.|  
 |**Sys.systypedsubobjs**|Existe en todas las bases de datos. Contiene una fila para cada subentidad escrita. Solo se incluyen en esta categoría los parámetros de la función de partición.|  
-|**Sys.sysidxstats**|Existe en todas las bases de datos. Contiene una fila para cada índice o estadísticas para tablas y vistas indizadas<br /><br /> Nota: Todos los índices (excepto el montón) está asociado con una estadística que tiene el mismo nombre que el índice.|  
+|**Sys.sysidxstats**|Existe en todas las bases de datos. Contiene una fila para cada índice o estadísticas para tablas y vistas indizadas<br /><br /> Nota: Todos los índices (excepto el montón) se asocia con una estadística que tiene el mismo nombre que el índice.|  
 |**Sys.sysiscols**|Existe en todas las bases de datos. Contiene una fila para cada índice persistente y para columna de estadísticas.|  
 |**Sys.sysscalartypes**|Existe en todas las bases de datos. Contiene una fila por cada tipo de sistema o cada tipo definido por el usuario.|  
 |**Sys.sysdbreg**|Existe en el **maestro** solo la base de datos. Contiene una fila por cada base de datos registrada.|  
 |**Sys.sysxsrvs**|Existe en el **maestro** solo la base de datos. Contiene una fila para cada servidor local, vinculado o remoto.|  
-|**Sys.sysrmtlgns**|Esta tabla del sistema base existe en el **maestro** solo la base de datos. Contiene una fila para cada asignación de inicio de sesión remota. Se utiliza para asignar inicios de sesión entrantes originados en el servidor correspondiente para un inicio de sesión local real.|  
+|**Sys.sysrmtlgns**|Esta tabla de base del sistema existe en el **maestro** solo la base de datos. Contiene una fila para cada asignación de inicio de sesión remota. Se utiliza para asignar inicios de sesión entrantes originados en el servidor correspondiente para un inicio de sesión local real.|  
 |**Sys.syslnklgns**|Existe en el **maestro** solo la base de datos. Contiene una fila para cada asignación de inicio de sesión vinculada. Las llamadas a procedimiento remoto y las consultas distribuidas que proceden de un servidor local fuera de un servidor vinculado correspondiente utilizan las asignaciones de inicio de sesión vinculadas.|  
 |**Sys.sysxlgns**|Existe en el **maestro** solo la base de datos. Contiene una fila para cada entidad de seguridad de servidor.|  
-|**Sys.sysdbfiles**|Existe en todas las bases de datos. Si la columna **dbid** es cero, la fila representa un archivo que pertenece a esta base de datos. En el **maestro** la base de datos, la columna **dbid** puede ser distinto de cero. Cuando eso ocurra, la fila representará un archivo maestro.|  
+|**Sys.sysdbfiles**|Existe en todas las bases de datos. Si la columna **dbid** es cero, la fila representa un archivo que pertenece a esta base de datos. En el **maestro** de base de datos, la columna **dbid** puede ser distinto de cero. Cuando eso ocurra, la fila representará un archivo maestro.|  
 |**Sys.sysusermsg**|Existe en el **maestro** solo la base de datos. Cada fila representa un mensaje de error definido por el usuario.|  
-|**Sys.sysprivs**|Existe en todas las bases de datos. Contiene una fila para cada permiso de base de datos o de servidor.<br /><br /> Nota: Los permisos de nivel de servidor se almacenan en la **maestro** base de datos.|  
+|**Sys.sysprivs**|Existe en todas las bases de datos. Contiene una fila para cada permiso de base de datos o de servidor.<br /><br /> Nota: Los permisos de nivel de servidor se almacenan en el **maestro** base de datos.|  
 |**Sys.sysowners**|Existe en todas las bases de datos. Cada fila representa una entidad de base de datos.|  
 |**Sys.sysobjkeycrypts**|Existe en todas las bases de datos. Contiene una fila para cada clave simétrica, cifrado o propiedad criptográfica asociada a un objeto.|  
 |**Sys.syscerts**|Existe en todas las bases de datos. Contiene una fila para cada certificado en una base de datos.|  

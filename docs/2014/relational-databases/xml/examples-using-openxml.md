@@ -30,12 +30,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 36f090abe358adab3075693e63ab4fe95cbbbadb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 60c004e7bf1deaf2e51a11e9e558884b2ca684f5
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248335"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084027"
 ---
 # <a name="examples-using-openxml"></a>Ejemplos: usar OPENXML
   Los ejemplos de este tema muestran cómo se utiliza OPENXML para crear una vista de conjunto de filas de un documento XML. Para obtener más información sobre la sintaxis de OPENXML, vea [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql). Los ejemplos muestran todos los aspectos de OPENXML, pero no especifican metapropiedades en OPENXML. Para obtener más información sobre cómo especificar metapropiedades en OPENXML, vea [Especificar metapropiedades en OPENXML](specify-metaproperties-in-openxml.md).  
@@ -472,7 +472,7 @@ EXEC sp_xml_removedocument @docHandle
   
  La instrucción OPENXML muestra lo siguiente:  
   
--   *rowpattern* (/ROOT/Customer/Order/OrderDetail/@ProductID) termina con un atributo XML, **ProductID**. En el conjunto de filas resultante, se crea una fila por cada nodo de atributo seleccionado en el documento XML.  
+-   *rowpattern* (/ ROOT/Customer/orden/OrderDetail/\@ProductID) termina con un atributo XML: **ProductID**. En el conjunto de filas resultante, se crea una fila por cada nodo de atributo seleccionado en el documento XML.  
   
 -   En este ejemplo, no se especifica el parámetro *flags* . En su lugar, las asignaciones se especifican con el parámetro *ColPattern* .  
   
@@ -480,9 +480,9 @@ EXEC sp_xml_removedocument @docHandle
   
 -   El patrón XPath (**.**) especificado como *ColPattern* en la columna **ProdID** del conjunto de filas identifica el nodo de contexto (nodo actual). En cuanto al valor *rowpattern* especificado, es el atributo **ProductID** del elemento <`OrderDetail`>.  
   
--   *ColPattern*, **../@Quantity**, especificado para la columna **Qty** del conjunto de filas, identifica el atributo **Quantity** del nodo principal (<`OrderDetail`>) del nodo de contexto (\<ProductID>).  
+-   El *ColPattern*, **... /\@Cantidad**, especificado para el **Qty** columna del conjunto de filas identifica el **cantidad** atributo del elemento primario, <`OrderDetail`>, nodo del contexto nodo, \<ProductID >.  
   
--   Del mismo modo, *ColPattern*, **../../@OrderID**, especificado para la columna **OID** del conjunto de filas, identifica el atributo **OrderID** del elemento primario (<`Order`>) del nodo principal del nodo de contexto. El nodo principal es <`OrderDetail`> y el nodo de contexto es <`ProductID`>.  
+-   De forma similar, el *ColPattern*, **... /.. /\@OrderID**, especificado para el **OID** columna del conjunto de filas identifica el **OrderID** atributo del elemento primario, <`Order`>, del nodo principal de el nodo de contexto. El nodo principal es <`OrderDetail`> y el nodo de contexto es <`ProductID`>.  
   
  A continuación, la instrucción SELECT recupera todas las columnas del conjunto de filas que proporciona OPENXML.  
   
@@ -580,7 +580,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- Específicamente, se está pasando una variable de tipo **xml** (@x) a la función **sp_xml_preparedocument()**.  
+ Específicamente, se está pasando un **xml** variable de tipo (\@x) a la **sp_xml_preparedocument ()** función.  
   
  El resultado es el siguiente:  
   

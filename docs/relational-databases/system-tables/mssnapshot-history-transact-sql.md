@@ -1,5 +1,5 @@
 ---
-title: MSsnapshot_history (Transact-SQL) | Documentos de Microsoft
+title: MSsnapshot_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,25 +22,25 @@ helpviewer_keywords:
 - MSsnapshot_history system table
 ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6fc94c56dd1d0caa7972bda84ddd5f6ef14bcdd4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 632149e8d813c0f247ea069386d963906ce90b97
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005922"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102063"
 ---
 # <a name="mssnapshothistory-transact-sql"></a>MSsnapshot_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   El **MSsnapshot_history** tabla contiene filas de historial para los agentes de instantáneas asociados al distribuidor local. Esta tabla se almacena en la base de datos de distribución.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**agent_id**|**int**|Id. del Agente de instantáneas.|  
-|**runstatus**|**int**|Estado de ejecución:<br /><br /> **1** = inicio.<br /><br /> **2** = sea correcta.<br /><br /> **3** = en curso.<br /><br /> **4** = inactivo.<br /><br /> **5** = reintento.<br /><br /> **6** = error.|  
+|**valor de agent_id**|**int**|Id. del Agente de instantáneas.|  
+|**runstatus**|**int**|Estado de ejecución:<br /><br /> **1** = inicio.<br /><br /> **2** = se realice correctamente.<br /><br /> **3** = en curso.<br /><br /> **4** = inactivo.<br /><br /> **5** = reintento.<br /><br /> **6** = error.|  
 |**start_time**|**datetime**|Hora a la que comienza la ejecución del trabajo.|  
 |**time**|**datetime**|Hora a la que se registra el mensaje.|  
 |**duration**|**int**|Duración, en segundos, de la sesión del mensaje.|  
@@ -52,7 +52,7 @@ ms.locfileid: "33005922"
 |**timestamp**|**timestamp**|La columna de marca de tiempo de esta tabla.|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

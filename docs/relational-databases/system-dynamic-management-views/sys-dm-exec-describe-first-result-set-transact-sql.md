@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 60e1bc6b899861958aba64b0eede3ceb2ab9e94b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 3ed5e8ee42792d4308b3ccecb41bfcbe064dafd9
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38059173"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086397"
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -47,15 +47,15 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *@tsql*  
+ *\@tsql*  
  Una o varias instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *Transact-SQL_batch* puede ser **nvarchar (***n***)** o **nvarchar (max)**.  
   
- *@params*  
- @params Proporciona una cadena de declaración para los parámetros para el [!INCLUDE[tsql](../../includes/tsql-md.md)] por lotes, similar a sp_executesql. Los parámetros pueden ser **nvarchar (n)** o **nvarchar (max)**.  
+ *\@params*  
+ \@params proporciona una cadena de declaración para los parámetros para el [!INCLUDE[tsql](../../includes/tsql-md.md)] por lotes, similar a sp_executesql. Los parámetros pueden ser **nvarchar (n)** o **nvarchar (max)**.  
   
- Es una cadena que contiene las definiciones de todos los parámetros que se han incrustado en el [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. La cadena debe ser una constante Unicode o una variable Unicode. Cada definición de parámetro se compone de un nombre de parámetro y un tipo de datos. *n* es un marcador de posición que indica definiciones de parámetros adicionales. Todos los parámetros especificados en stmt deben definirse en @params. Si el [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o lote en la instrucción no contiene parámetros, @params no es necesario. NULL es el valor predeterminado para este parámetro.  
+ Es una cadena que contiene las definiciones de todos los parámetros que se han incrustado en el [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. La cadena debe ser una constante Unicode o una variable Unicode. Cada definición de parámetro se compone de un nombre de parámetro y un tipo de datos. *n* es un marcador de posición que indica definiciones de parámetros adicionales. Todos los parámetros especificados en stmt deben definirse en \@params. Si el [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o lote en la instrucción no contiene parámetros, \@params no es necesario. NULL es el valor predeterminado para este parámetro.  
   
- *@include_browse_information*  
+ *\@include_browse_information*  
  Si está establecido en 1, cada consulta se analiza como si tuviera una opción FOR BROWSE en la consulta. Se devuelven las columnas de clave adicionales e información de la tabla de origen.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
@@ -70,8 +70,8 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**system_type_id**|**int**|Contiene el system_type_id del tipo de datos de columna como se especifica en sys.types. En el caso de los tipos de CLR, aunque la columna system_type_name devuelva NULL, esta columna devolverá el valor 240.|  
 |**system_type_name**|**nvarchar(256)**|Contiene el nombre y los argumentos (como length, precision y scale) especificados para el tipo de datos de la columna.<br /><br /> Si el tipo de datos es un tipo de alias definido por el usuario, el tipo de sistema subyacente se especifica aquí.<br /><br /> Si es un tipo de datos definido por el usuario de CLR, en esta columna se devuelve NULL.|  
 |**max_length**|**smallint**|Longitud máxima de la columna, en bytes.<br /><br /> -1 = la columna es de tipo de datos **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, o **xml**.<br /><br /> Para **texto** columnas, el **max_length** valor será 16 o el valor establecido por **sp_tableoption 'text in row'**.|  
-|**precisión**|**tinyint**|Precisión de la columna, si está basada en números. De lo contrario, devuelve 0.|  
-|**escala**|**tinyint**|La escala de la columna se basa en valores numéricos. De lo contrario, devuelve 0.|  
+|**Precisión**|**tinyint**|Precisión de la columna, si está basada en números. De lo contrario, devuelve 0.|  
+|**Escala**|**tinyint**|La escala de la columna se basa en valores numéricos. De lo contrario, devuelve 0.|  
 |**collation_name**|**sysname**|Nombre de la intercalación de la columna, si está basada en caracteres. En caso contrario, devuelve NULL.|  
 |**user_type_id**|**int**|Para los tipos de alias y CLR, contiene el user_type_id del tipo de datos de la columna tal y como se especifica en sys.types. De lo contrario, es NULL.|  
 |**user_type_database**|**sysname**|Para los tipos de alias y CLR, contiene el nombre de la base de datos en la que se define el tipo. De lo contrario, es NULL.|  
@@ -123,11 +123,11 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |9|RECURSION|El resultado no se pudo determinar porque el lote contiene una instrucción recursiva.|  
 |10|TEMPORARY_TABLE|No se pudo determinar el resultado porque el lote contiene una tabla temporal y no es compatible con **sp_describe_first_result_set** .|  
 |11|UNSUPPORTED_STATEMENT|No se pudo determinar el resultado porque el lote contiene una instrucción que no es compatible con **sp_describe_first_result_set** (por ejemplo, FETCH, REVERT etcetera.).|  
-|12|OBJECT_TYPE_NOT_SUPPORTED|El @object_id pasado a la función es no compatible (es decir, no un procedimiento almacenado)|  
-|13|OBJECT_DOES_NOT_EXIST|El @object_id pasado a la función no se encontró en el catálogo del sistema.|  
+|12|OBJECT_TYPE_NOT_SUPPORTED|El \@object_id pasada a la función no es compatible (es decir, no un procedimiento almacenado)|  
+|13|OBJECT_DOES_NOT_EXIST|El \@object_id pasada a la función no se encontró en el catálogo del sistema.|  
   
 ## <a name="permissions"></a>Permisos  
- Requiere el permiso para ejecutar el @tsql argumento.  
+ Requiere el permiso para ejecutar el \@argumento tsql.  
   
 ## <a name="examples"></a>Ejemplos  
  Ejemplos adicionales en el tema [sp_describe_first_result_set &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) pueden adaptarse para su uso **sys.dm_exec_describe_first_result_set**.  

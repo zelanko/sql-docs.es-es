@@ -20,12 +20,12 @@ caps.latest.revision: 47
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e48edf78d8b0a73c01871b47ac24fa1f0bf8babb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ace3f33f02be295fbaf22fcd8f0e9d82480db2d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202695"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085087"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>Crear, eliminar o modificar un origen de datos compartido (Administrador de informes)
   Un origen de datos compartido especifica las propiedades de conexión para un origen de datos. Si tiene un origen de datos usado por un gran número de informes, modelos o suscripciones controladas por datos, piense en crear un origen de datos compartido para eliminar la sobrecarga de tener que mantener la misma información de conexión en varios lugares.  
@@ -43,7 +43,7 @@ Icono de origen de datos compartido
   
 3.  Haga clic en **Nuevo origen de datos**. Se abre la página **Nuevo origen de datos** .  
   
-4.  Escriba el nombre del elemento. El nombre debe incluir al menos un carácter y debe empezar con una letra. También puede incluir determinados símbolos, pero no espacios en blanco o los caracteres ; ? : @ & = +, $ / * \< > | " /.  
+4.  Escriba el nombre del elemento. El nombre debe incluir al menos un carácter y debe empezar con una letra. También puede incluir determinados símbolos, pero no espacios en blanco o los caracteres ; ? : \@ & = +, $ / * \< > | " /.  
   
 5.  Si lo desea, escriba una descripción que ofrezca a los usuarios información sobre la conexión. Esta descripción aparecerá en la página **Contenido** del Administrador de informes.  
   

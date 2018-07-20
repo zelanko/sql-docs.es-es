@@ -1,5 +1,5 @@
 ---
-title: MSreplication_options (Transact-SQL) | Documentos de Microsoft
+title: MSreplication_options (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,28 +22,28 @@ helpviewer_keywords:
 - MSreplication_options system table
 ms.assetid: 23cf10d7-8bc1-4368-b5eb-e5576421e776
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d2626cd096000035a8d7a87eaa0be5d31a15c082
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71d3ddefd2cfe9c691f9311be12a1e09caea3c58
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004832"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103523"
 ---
 # <a name="msreplicationoptions-transact-sql"></a>MSreplication_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  El **MSreplication_options** tabla almacena los metadatos que se usan internamente para la replicación. Esta tabla se almacena en la **maestro** base de datos.  
+  El **MSreplication_options** tabla almacena los metadatos que se usan internamente para la replicación. Esta tabla se almacena en el **maestro** base de datos.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**optname**|**sysname**|Exclusivamente para uso interno.|  
-|**value**|**bit**|Exclusivamente para uso interno.|  
+|**Valor**|**bit**|Exclusivamente para uso interno.|  
 |**versión_principal**|**int**|Exclusivamente para uso interno.|  
 |**versión_secundaria**|**int**|Exclusivamente para uso interno.|  
-|**Revisión**|**int**|Exclusivamente para uso interno.|  
+|**revisión**|**int**|Exclusivamente para uso interno.|  
 |**install_failures**|**int**|Exclusivamente para uso interno.|  
   
 ## <a name="see-also"></a>Vea también  

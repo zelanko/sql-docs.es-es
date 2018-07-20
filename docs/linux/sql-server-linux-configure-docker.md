@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 07/02/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
-ms.openlocfilehash: 433da2ba98a47ec5dc4be64cd1d6b1ea52068c04
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 420a7577a526ed07f564b762c48e6528db323f08
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352757"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085877"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurar imágenes de contenedor de SQL Server en Docker
 
@@ -40,7 +40,7 @@ En este artículo de configuración proporciona escenarios de uso adicionales en
 
 La Guía de inicio rápido en la sección anterior ejecuta la edición gratuita de Developer de SQL Server desde Docker Hub. La mayoría de la información sigue siendo aplicable si desea ejecutar imágenes de contenedor, como las ediciones Enterprise, Standard o Web de producción. Sin embargo, hay algunas diferencias que se mencionan aquí.
 
-- Sólo se puede utilizar SQL Server en un entorno de producción si tiene una licencia válida. Puede obtener una licencia de producción de SQL Server Express gratuita [aquí](https://go.microsoft.com/fwlink/?linkid=857693). Las licencias de SQL Server Standard y Enterprise Edition están disponibles a través de [Microsoft Volume Licensing](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx).
+- Sólo se puede utilizar SQL Server en un entorno de producción si tiene una licencia válida. Puede obtener una licencia de producción de SQL Server Express gratuita [aquí](https://go.microsoft.com/fwlink/?linkid=857693). Las licencias de SQL Server Standard y Enterprise Edition están disponibles a través de [Microsoft Volume Licensing](https://www.microsoft.com/en-us/licensing/default.aspx).
 
 - Se deben extraer las imágenes de contenedor de SQL Server de producción [Docker Store](https://store.docker.com). Si aún no tiene uno, cree una cuenta en Docker Store.
 
@@ -213,12 +213,12 @@ Incluso si detener y quitar este contenedor, se conserva el volumen de datos. Pu
 docker volume ls
 ```
 
-Si se monta un directorio de host /var/opt/mssql al crear el contenedor, en su lugar, puede buscar en el registro subdirectorio en la ruta de acceso asignado en el host.
+Si, a continuación, cree otro contenedor con el mismo nombre de volumen, el nuevo contenedor utiliza los mismos datos de SQL Server incluidos en el volumen.
 
-Empezar a trabajar con imágenes de contenedor de SQL Server 2017 en Docker a través de la `docker volume rm`quickstart.
+Para quitar un contenedor de volúmenes de datos, use el `docker volume rm` comando.
 
 > [!WARNING]
-> Consulte también el *repositorio de GitHub mssql-docker* para recursos, comentarios y problemas conocidos.
+> Si elimina el contenedor de volúmenes de datos, los datos de SQL Server en el contenedor están *permanentemente* eliminado.
 
 ### <a name="backup-and-restore"></a>Copias de seguridad y restauración
 

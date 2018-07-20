@@ -1,5 +1,5 @@
 ---
-title: MSpeer_lsns (Transact-SQL) | Documentos de Microsoft
+title: MSpeer_lsns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSpeer_lsns system table
 ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4c68b32d5b6c86fad158962deb360e64fa129d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de37f4de25bef419c67af1ff858251bec4b5e543
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006833"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102003"
 ---
 # <a name="mspeerlsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "33006833"
   
 ## <a name="definition"></a>Definición  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identifica un LSN punto a punto.|  
 |**last_updated**|**datetime**|El **datetime** en que se realizó la última actualización de fila.|  
@@ -53,7 +53,7 @@ ms.locfileid: "33006833"
 |**originator_id**|**smallint**|Identifica cada nodo de la topología para detectar conflictos. Para obtener más información, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

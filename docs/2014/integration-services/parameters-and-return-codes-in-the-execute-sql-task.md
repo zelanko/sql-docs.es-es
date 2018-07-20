@@ -19,12 +19,12 @@ caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12739be23eb0a2104f73d9ad1c1240b3c235259c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 057d80ade08d7d5266208b2d417e08d530a8d8df
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252337"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083897"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>Parámetros y códigos de retorno en la tarea Ejecutar SQL
   Las instrucciones SQL y procedimientos almacenados suelen usan `input` parámetros, `output` parámetros y códigos de retorno. En [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], la tarea Ejecutar SQL admite los tipos de parámetros `Input`, `Output` y `ReturnValue`. Usa el `Input` tipo para parámetros de entrada, `Output` para parámetros de salida y `ReturnValue` para códigos de retorno.  
@@ -49,16 +49,16 @@ ms.locfileid: "37252337"
 -   [Configurar parámetros y códigos de retorno en el Editor de tareas de ejecución SQL](#Configure_parameters_and_return_codes)  
   
 ##  <a name="Parameter_names_and_markers"></a> Usar nombres de parámetros y marcadores  
- En función del tipo de conexión que utiliza la tarea Ejecutar SQL, la sintaxis del comando SQL usa marcadores de parámetros diferentes. Por ejemplo, el tipo de administrador de conexiones [!INCLUDE[vstecado](../includes/vstecado-md.md)] requiere que el comando SQL utilice un marcador de parámetro con el formato **@varParameter**, mientras que el tipo de conexión OLE DB requiere el marcador de parámetro de signo de interrogación (?).  
+ En función del tipo de conexión que utiliza la tarea Ejecutar SQL, la sintaxis del comando SQL usa marcadores de parámetros diferentes. Por ejemplo, el [!INCLUDE[vstecado](../includes/vstecado-md.md)] tipo de conexión de administrador requiere que el comando SQL utilice un marcador de parámetro en el formato  **\@varParameter**, mientras que el tipo de conexión OLE DB requiere que el parámetro de signo de interrogación (?) marcador.  
   
- Los nombres que puede utilizar como nombres de parámetros en las asignaciones entre variables y parámetros también varían según el tipo de Administrador de conexiones. Por ejemplo, el tipo de Administrador de conexiones [!INCLUDE[vstecado](../includes/vstecado-md.md)] utiliza un nombre definido por el usuario con el prefijo @, mientras que el tipo de Administrador de conexiones OLE DB requiere que se utilice el valor numérico de un ordinal basado en 0 como nombre de parámetro.  
+ Los nombres que puede utilizar como nombres de parámetros en las asignaciones entre variables y parámetros también varían según el tipo de Administrador de conexiones. Por ejemplo, el [!INCLUDE[vstecado](../includes/vstecado-md.md)] tipo de administrador de conexión utiliza un nombre definido por el usuario con un \@ de prefijo, mientras que el tipo de administrador de conexiones OLE DB requiere que use el valor numérico de un ordinal basado en 0 como el nombre del parámetro.  
   
  La tabla siguiente resume los requisitos de los comandos SQL para los tipos de Administrador de conexiones que puede utilizar la tarea Ejecutar SQL.  
   
 |Tipo de conexión|Marcador de parámetro|Nombre del parámetro|Comando SQL (ejemplo)|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|@\<nombre de parámetro>|@\<nombre de parámetro>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = @parmContactID|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<nombre de parámetro>|\@\<nombre de parámetro>|Seleccione FirstName, LastName, título de Person.Contact donde ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL y OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -151,7 +151,7 @@ ms.locfileid: "37252337"
   
 -   El tipo de conexión ADO podría utilizar cualquier par de nombres de parámetros, como Param1 y Param2, pero los parámetros deben asignarse por su posición ordinal en la lista de parámetros.  
   
--   El tipo de conexión [!INCLUDE[vstecado](../includes/vstecado-md.md)] utiliza los nombres de parámetro @parmMinProductID y @parmMaxProductID.  
+-   El [!INCLUDE[vstecado](../includes/vstecado-md.md)] tipo de conexión usa los nombres de parámetro \@parmMinProductID y \@parmMaxProductID.  
   
 ##  <a name="Stored_procedures"></a> Usar parámetros con procedimientos almacenados  
  Los comandos SQL que ejecutan procedimientos almacenados también pueden usar la asignación de parámetros. Las reglas sobre el uso de marcadores y nombres de parámetros dependen del tipo de Administrador de conexiones que utiliza la tarea Ejecutar SQL, del mismo modo que sucede con las consultas con parámetros.  

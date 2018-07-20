@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2d857f5c04318c88050f9aa63706f75902c8b445
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69d6d5352c2f537add31fe2481166bb3a7982d56
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200835"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084047"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Crear informes principales y de obtención de detalles (Generador de informes)
   Este tutorial le enseña cómo crear dos tipos de informes: un informe detallado y un informe principal. Los datos de ventas de ejemplo utilizados en estos informes se recuperan de un cubo de Analysis Services. En la siguiente ilustración se muestran los informes que creará.  
@@ -344,10 +344,10 @@ ms.locfileid: "37200835"
   
 1.  En el panel Datos de informe, expanda **Parámetros**.  
   
-2.  Haga clic con el botón derecho en @ProductProductCategoryNamey, después, haga clic en **Propiedades de parámetro**.  
+2.  Haga clic en \@ProductProductCategoryName y, a continuación, haga clic en **propiedades de parámetro**.  
   
     > [!NOTE]  
-    >  El el carácter @ situado al lado del nombre indica que se trata de un parámetro.  
+    >  El \@ carácter situado junto al nombre indica que se trata de un parámetro.  
   
 3.  En la pestaña **General** , haga clic en **Oculto**.  
   

@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: sql-linux
-ms.openlocfilehash: 89b670f6b4dd815744f505d1aa4f60a29d25bcaa
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 26123d12c48c6c8abd51590d3f6d42c7476acd29
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984150"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102423"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Elija la herramienta adecuada para administrar SQL Server en Linux
 
@@ -26,6 +26,7 @@ ms.locfileid: "37984150"
 Hay varias maneras para administrar SQL Server 2017 en Linux. La siguiente sección proporciona una introducción rápida de las técnicas de punteros a más recursos y herramientas de administración diferentes.
 
 ## <a name="mssql-conf"></a>MSSQL-conf 
+
 El **mssql-conf** herramienta configura SQL Server en Linux. Para obtener más información, consulte [configurar SQL Server en Linux con mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
 ## <a name="transact-sql"></a>Transact-SQL

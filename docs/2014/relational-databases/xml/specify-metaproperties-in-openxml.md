@@ -20,12 +20,12 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af67d79616f2223f62998494122787460eaa3a41
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d57525fb8ed9ca6718f072ef20c9e2cefe8e7ba9
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193115"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084037"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Especificar metapropiedades en OPENXML
   Los atributos de las metapropiedades de un documento XML son atributos que describen las propiedades de un elemento XML (como elemento, atributo o cualquier otro nodo DOM). Estos atributos no existen físicamente en el texto del documento XML. Sin embargo, OPENXML proporciona estas metapropiedades para todos los elementos XML. Estas metapropiedades permiten extraer información, como la posición local e información de espacio de nombres, de los nodos XML. Esta información ofrece más detalles de los que aparentemente hay en la representación textual.  
@@ -43,21 +43,21 @@ ms.locfileid: "37193115"
   
 |Atributo de metapropiedad|Descripción|  
 |----------------------------|-----------------|  
-|**@mp:id**|Proporciona un identificador del nodo DOM generado por el sistema para todo el documento. Este Id. hace referencia al mismo nodo XML siempre y cuando no se vuelva a analizar el documento.<br /><br /> Si el Id. XML es **0** , significa que se trata de un elemento raíz. El Id. XML del elemento primario es NULL.|  
-|**@mp:localname**|Almacena la parte local del nombre del nodo. Se utiliza con un prefijo y un URI del espacio de nombres para asignar nombres a los nodos de elemento o atributo.|  
-|**@mp:namespaceuri**|Proporciona el URI del espacio de nombres del elemento actual. Si el valor de este atributo es NULL, no hay ningún espacio de nombres.|  
-|**@mp:prefix**|Almacena el prefijo del espacio de nombres del nombre del elemento actual.<br /><br /> Si no hay ningún prefijo (NULL) y se proporciona un URI, significa que el espacio de nombres especificado es el espacio de nombres predeterminado. Si no se proporciona ningún URI, no se adjunta ningún espacio de nombres.|  
-|**@mp:prev**|Almacena el nodo anterior relacionado con un nodo. Proporciona información sobre el orden de los elementos del documento.<br /><br /> **@mp:prev** contiene el Id. XML del nodo relacionado anterior que tiene el mismo elemento primario. Si un elemento está al principio de la lista de nodos relacionados, **@mp:prev** es NULL.|  
-|**@mp:xmltext**|Se utiliza para el procesamiento. Se trata de la serialización textual del elemento y sus atributos, y de los subelementos, tal como se utiliza en el control de desbordamiento de OPENXML.|  
+|**\@MP:Id**|Proporciona un identificador del nodo DOM generado por el sistema para todo el documento. Este Id. hace referencia al mismo nodo XML siempre y cuando no se vuelva a analizar el documento.<br /><br /> Si el Id. XML es **0** , significa que se trata de un elemento raíz. El Id. XML del elemento primario es NULL.|  
+|**\@MP:localName**|Almacena la parte local del nombre del nodo. Se utiliza con un prefijo y un URI del espacio de nombres para asignar nombres a los nodos de elemento o atributo.|  
+|**\@MP:NamespaceURI**|Proporciona el URI del espacio de nombres del elemento actual. Si el valor de este atributo es NULL, no hay ningún espacio de nombres.|  
+|**\@MP:prefix**|Almacena el prefijo del espacio de nombres del nombre del elemento actual.<br /><br /> Si no hay ningún prefijo (NULL) y se proporciona un URI, significa que el espacio de nombres especificado es el espacio de nombres predeterminado. Si no se proporciona ningún URI, no se adjunta ningún espacio de nombres.|  
+|**\@MP:prev**|Almacena el nodo anterior relacionado con un nodo. Proporciona información sobre el orden de los elementos del documento.<br /><br /> **\@MP:prev** contiene el Id. XML del nodo relacionado anterior que tiene el mismo elemento primario. Si un elemento está al principio de la lista de nodos relacionados,  **\@mp:prev** es NULL.|  
+|**\@MP:XmlText**|Se utiliza para el procesamiento. Se trata de la serialización textual del elemento y sus atributos, y de los subelementos, tal como se utiliza en el control de desbordamiento de OPENXML.|  
   
  Esta tabla muestra las propiedades adicionales que se proporcionan para los elementos primarios, que permiten recuperar información acerca de la jerarquía.  
   
 |Atributo de metapropiedad Parent|Descripción|  
 |-----------------------------------|-----------------|  
-|**@mp:parentid**|Se corresponde con **../@mp:id**|  
-|**@mp:parentlocalname**|Se corresponde con **../@mp:localname**|  
-|**@mp:parentnamespacerui**|Se corresponde con **../@mp:namespaceuri**|  
-|**@mp:parentprefix**|Se corresponde con **../@mp:prefix**|  
+|**\@MP:parentId**|Corresponde a **... /\@mp:id**|  
+|**\@MP:parentlocalname**|Corresponde a **... /\@mp:localname**|  
+|**\@MP:parentnamespacerui**|Corresponde a **... /\@mp:namespaceuri**|  
+|**\@MP:parentprefix**|Corresponde a **... /\@mp:prefix**|  
   
 ## <a name="examples"></a>Ejemplos  
  En los ejemplos siguientes se muestra cómo se utiliza OPENXML para crear distintas vistas de conjuntos de filas.  
@@ -67,11 +67,11 @@ ms.locfileid: "37193115"
   
  La instrucción OPENXML muestra lo siguiente:  
   
--   El parámetro **id** se asigna al atributo de metapropiedad **@mp:id** e indica que la columna contiene el id. XML único del elemento, generado por el sistema.  
+-   El **id** columna se asigna a la  **\@mp:id** atributo de metapropiedad e indica que la columna contiene el identificador generado por el sistema de XML único del elemento.  
   
--   El parámetro **parent** se asigna a **@mp:parentid** e indica que la columna contiene el Id. XML del elemento primario del elemento.  
+-   El **primario** columna se asigna a  **\@mp:parentid** e indica que la columna contiene el Id. XML del elemento primario del elemento.  
   
--   El parámetro **parentLocalName** se asigna a **@mp:parentlocalname** e indica que la columna contiene el nombre local del elemento primario.  
+-   El **parentLocalName** columna se asigna a  **\@mp:parentlocalname** e indica que la columna contiene el nombre local del elemento primario.  
   
  Y, a continuación, la instrucción SELECT devuelve el conjunto de filas proporcionado por OPENXML.  
   
@@ -164,13 +164,13 @@ EXEC sp_xml_removedocument @idoc
 ### <a name="c-specifying-the-xmltext-metaproperty-to-retrieve-the-unconsumed-data-in-a-column"></a>C. Especificar la metapropiedad xmltext para recuperar los datos no usados en una columna  
  Este ejemplo utiliza OPENXML para crear una vista de conjunto de filas del documento XML de ejemplo. Muestra cómo recuperar los datos XML no utilizados mediante la asignación del atributo de metapropiedad **xmltext** a una columna de conjunto de filas en OPENXML.  
   
- El parámetro **comment** se identifica como la columna de desbordamiento al asignarla a la metapropiedad **@mp:xmltext** . El parámetro *flags* se establece en **9** (XML_ATTRIBUTE y XML_NOCOPY). Esto indica que es una asignación **centrada en atributos** y que solo deberían copiarse los datos no usados en la columna de desbordamiento.  
+ El **comentario** columna se identifica como la columna de desbordamiento al asignarla a la  **\@mp:xmltext** metapropiedad. El parámetro *flags* se establece en **9** (XML_ATTRIBUTE y XML_NOCOPY). Esto indica que es una asignación **centrada en atributos** y que solo deberían copiarse los datos no usados en la columna de desbordamiento.  
   
  A continuación, la instrucción SELECT devuelve el conjunto de filas proporcionado por OPENXML.  
   
- En este ejemplo, se establece la metapropiedad **@mp:parentlocalname** para una columna ( **ParentLocalName**) del conjunto de filas generado por OPENXML. Como resultado, esta columna contiene el nombre local del elemento primario.  
+ En este ejemplo, el  **\@mp:parentlocalname** para una columna, se establece la metapropiedad **ParentLocalName**, en el conjunto de filas generado por OPENXML. Como resultado, esta columna contiene el nombre local del elemento primario.  
   
- Se especifican dos columnas adicionales en el conjunto de filas, **parent** y **comment**. El parámetro **parent** se asigna a **@mp:parentid** e indica que la columna contiene el Id. XML del elemento primario del elemento. La columna comment se identifica como la columna de desbordamiento mediante su asignación a la metapropiedad **@mp:xmltext** .  
+ Se especifican dos columnas adicionales en el conjunto de filas, **parent** y **comment**. El **primario** columna se asigna a  **\@mp:parentid** e indica que la columna contiene el Id. XML del elemento primario del elemento. La columna comment se identifica como la columna de desbordamiento al asignarla a la  **\@mp:xmltext** metapropiedad.  
   
 ```  
 DECLARE @idoc int  

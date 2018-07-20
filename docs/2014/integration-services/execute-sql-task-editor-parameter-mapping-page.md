@@ -18,12 +18,12 @@ caps.latest.revision: 42
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4baffae0ada8cddc911561f63ca32f9b4b578283
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9c35360c4cddebecf7f6237071bc430b74f726cb
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152786"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082957"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>Editor de la tarea Ejecutar SQL (página Asignación de parámetros)
   Use la página **Asignación de parámetros** del cuadro de diálogo **Editor de la tarea Ejecutar SQL** para asignar variables a los parámetros de la instrucción SQL.  
@@ -45,7 +45,7 @@ ms.locfileid: "37152786"
  **Nombre de parámetro**  
  Proporcione un nombre de parámetro.  
   
- Dependiendo del tipo de administrador de conexiones que utiliza la tarea, se utilizarán números o nombres de parámetro. Algunos tipos de administradores de conexiones requieren que el primer carácter del nombre del parámetro sea el signo @, nombres específicos como @Param1 o nombres de columnas como nombres de parámetro.  
+ Dependiendo del tipo de administrador de conexiones que utiliza la tarea, se utilizarán números o nombres de parámetro. Algunos tipos de administradores de conexión requieren que el primer carácter del nombre del parámetro es el \@ iniciar sesión, nombres específicos como \@Param1 o columna se denomina como los nombres de parámetro.  
   
  **Temas relacionados:** [Parámetros y códigos de retorno en la tarea Ejecutar SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: MSmerge_sessions (Transact-SQL) | Documentos de Microsoft
+title: MSmerge_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,25 +22,25 @@ helpviewer_keywords:
 - MSmerge_sessions system table
 ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dded9db18b0a3048c3a4eb8a56869946fca8a1ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a1b825cb12e7d95615120b1418061b6106047c46
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010732"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103333"
 ---
 # <a name="msmergesessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   El **MSmerge_sessions** tabla contiene filas de historial con los resultados de las sesiones de trabajo de agente de mezcla anteriores. Cada vez que se ejecuta el Agente de mezcla, se agrega una nueva fila a esta tabla. Esta tabla se almacena en la base de datos de distribución.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|Id. de la sesión de trabajo del Agente de mezcla.|  
-|**agent_id**|**int**|El Id. del Agente de mezcla.|  
+|**valor de agent_id**|**int**|El Id. del Agente de mezcla.|  
 |**start_time**|**datetime**|Hora a la que comenzó la ejecución del trabajo.|  
 |**end_time**|**datetime**|Hora a la que terminó la ejecución del trabajo.|  
 |**duration**|**int**|Duración acumulada, en segundos, de esta sesión de trabajo.|  
@@ -64,14 +64,14 @@ ms.locfileid: "33010732"
 |**download_rows_retried**|**int**|Número de filas que se han reintentado al descargarse en el suscriptor.|  
 |**schema_changes**|**int**|Número de cambios de esquema aplicados en la sesión.|  
 |**metadata_rows_cleanedup**|**int**|Número de filas de metadatos limpiados en la sesión.|  
-|**runstatus**|**int**|Estado de ejecución:<br /><br /> **1** = inicio.<br /><br /> **2** = sea correcta.<br /><br /> **3** = en curso.<br /><br /> **4** = inactivo.<br /><br /> **5** = reintento.<br /><br /> **6** = error.|  
+|**runstatus**|**int**|Estado de ejecución:<br /><br /> **1** = inicio.<br /><br /> **2** = se realice correctamente.<br /><br /> **3** = en curso.<br /><br /> **4** = inactivo.<br /><br /> **5** = reintento.<br /><br /> **6** = error.|  
 |**estimated_upload_changes**|**int**|Número estimado de cambios que es necesario aplicar en el publicador.|  
 |**estimated_download_changes**|**int**|Número estimado de cambios que es necesario aplicar en el suscriptor.|  
 |**CONNECTION_TYPE**|**int**|Conexión utilizada en la carga:<br /><br /> **1** = red de área local (LAN).<br /><br /> **2** = conexión de red de acceso telefónico.<br /><br /> **3** = sincronización web.|  
 |**timestamp**|**timestamp**|La columna de marca de tiempo de esta tabla.|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

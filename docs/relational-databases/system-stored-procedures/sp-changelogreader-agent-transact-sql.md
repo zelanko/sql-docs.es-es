@@ -1,7 +1,7 @@
 ---
-title: sp_changelogreader_agent (Transact-SQL) | Documentos de Microsoft
+title: sp_changelogreader_agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -23,15 +23,15 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: b3a7d5a86ddbfb5af307c38e20948e5ebc7af383
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 24e2c08d56ffa85e2b6825cfbd73057014b8249c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991092"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087577"
 ---
 # <a name="spchangelogreaderagent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Cambia las propiedades de seguridad de un Agente de registro del LOG. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -52,10 +52,10 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
   
 ## <a name="arguments"></a>Argumentos  
  [ **@job_login**=] **'***job_login***'**  
- Es el inicio de sesión de la cuenta de Windows en la que se ejecuta el agente. *job_login* es **nvarchar (257)**, su valor predeterminado es null. *Esto no se puede cambiar por un* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publisher.*  
+ Es el inicio de sesión para la cuenta bajo la que se ejecuta el agente. *job_login* es **nvarchar (257)**, su valor predeterminado es null. En Azure SQL Database Managed Instance, utilice una cuenta de SQL Server. *No se puede cambiar para que no es* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publisher.*  
   
  [ **@job_password**=] **'***job_password***'**  
- Es la contraseña de la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el agente. *job_password* es **sysname**, su valor predeterminado es null.  
+ Es la contraseña de la cuenta bajo la que se ejecuta el agente. *job_password* es **sysname**, su valor predeterminado es null.  
   
 > [!IMPORTANT]  
 >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
@@ -67,7 +67,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  [ **@publisher_login**=] **'***publisher_login***'**  
- Es el inicio de sesión utilizado al conectar al publicador. *publisher_login* es **sysname**, su valor predeterminado es null. *publisher_login* debe especificarse cuando *publisher_security_mode* es **0**. Si *publisher_login* es NULL y *publisher_security_mode* es **1**, la cuenta de Windows especificada en *job_login* se utiliza cuando conectarse al publicador.  
+ Es el inicio de sesión utilizado al conectar al publicador. *publisher_login* es **sysname**, su valor predeterminado es null. *publisher_login* debe especificarse cuando *publisher_security_mode* es **0**. Si *publisher_login* es NULL y *publisher_security_mode* es **1**, la cuenta de Windows especificada en *job_login* se utiliza cuando para conectarse al publicador.  
   
  [ **@publisher_password**=] **'***publisher_password***'**  
  Es la contraseña utilizada para conectarse al publicador. *publisher_password* es **sysname**, su valor predeterminado es null.  
@@ -76,20 +76,20 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 >  No utilice una contraseña en blanco. Utilice una contraseña segura. Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
   
  [ **@publisher**=] **'***publisher***'**  
- Es el nombre del publicador. *Publisher* es **sysname**, su valor predeterminado es null. Este parámetro solo es compatible con aquellos publicadores que no son de SQL Server.  
+ Es el nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null. Este parámetro solo es compatible con aquellos publicadores que no son de SQL Server.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_changelogreader_agent** se utiliza en la replicación transaccional.  
   
- **sp_changelogreader_agent** se utiliza para cambiar la cuenta de Windows bajo la que se ejecuta un agente de registro del Log. Puede cambiar la contraseña de un inicio de sesión de Windows existente o proporcionar una contraseña y un inicio de sesión de Windows nuevos.  
+ **sp_changelogreader_agent** se usa para cambiar la cuenta de Windows que se ejecuta un agente de registro del log. Puede cambiar la contraseña de un inicio de sesión de Windows existente o proporcionar una contraseña y un inicio de sesión de Windows nuevos.  
   
  Después de cambiar un inicio de sesión o una contraseña de agente, debe detener y reiniciar el agente para que el cambio surta efecto.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos puede ejecutar **sp_changelogreader_agent**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos se puede ejecutar **sp_changelogreader_agent**.  
   
 ## <a name="see-also"></a>Vea también  
  [View and Modify Replication Security Settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  (Ver y modificar la configuración de seguridad de la replicación)  

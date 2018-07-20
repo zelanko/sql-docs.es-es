@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 968676f1d56299a720a85cee508fd860d7dc1d6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2cd6a36267065aff8995df20c79a94c0f56f1417
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160922"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084087"
 ---
 # <a name="ssis-catalog"></a>Catálogo de SSIS
   El `SSISDB` catálogo es el punto central para trabajar con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS), proyectos que han implementado en el [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. Por ejemplo, establece los parámetros del proyecto y del paquete, configura entornos para especificar los valores en tiempo de ejecución para los paquetes, ejecuta paquetes y soluciona los problemas de los mismos, y administra las operaciones del servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -64,7 +64,7 @@ ms.locfileid: "37160922"
   
 -   El nombre no puede contener espacios delante ni detrás.  
   
--   @ no se permite como primer carácter, pero los caracteres subsiguientes pueden utilizar @.  
+-   \@ no se permite como primer carácter, pero los caracteres subsiguientes pueden utilizar \@.  
   
 -   La longitud del nombre debe ser mayor que 0 y menor o igual que 128.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "37160922"
   
 -   El nombre no puede contener espacios delante ni detrás.  
   
--   @ no se permite como primer carácter, pero los caracteres subsiguientes pueden utilizar @.  
+-   \@ no se permite como primer carácter, pero los caracteres subsiguientes pueden utilizar \@.  
   
 -   La longitud del nombre debe ser mayor que 0 y menor o igual que 128.  
   

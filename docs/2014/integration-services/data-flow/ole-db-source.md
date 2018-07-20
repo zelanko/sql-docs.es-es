@@ -19,12 +19,12 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b9ff94d28a55da5d199647af200c6179ccadc2d2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26900d1b1ba9500c114d65927121be80760d484e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271321"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083927"
 ---
 # <a name="ole-db-source"></a>Origen de OLE DB
   El origen de OLE DB extrae datos de varias bases de datos relacionales compatibles con OLE DB mediante una tabla de base de datos, una vista o un comando SQL. Por ejemplo, el origen de OLE DB puede extraer datos de tablas de bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -81,7 +81,7 @@ ms.locfileid: "37271321"
   
  `EXEC uspGetWhereUsedProductID ?, ?`  
   
- El procedimiento almacenado espera las variables `@StartProductID` y `@CheckDate`para proporcionar valores de parámetros. El orden en el que los parámetros aparecen en la lista **Asignaciones** es irrelevante. El único requisito es que los nombres de parámetros coincidan con los nombres de variables en el procedimiento almacenado, incluido el signo @.  
+ El procedimiento almacenado espera las variables `@StartProductID` y `@CheckDate`para proporcionar valores de parámetros. El orden en el que los parámetros aparecen en la lista **Asignaciones** es irrelevante. El único requisito es que los nombres de parámetros coinciden con los nombres de variable en el procedimiento almacenado, incluida la \@ inicio de sesión.  
   
 ### <a name="mapping-parameters-to-variables"></a>Asignar parámetros a variables  
  Los parámetros se asignan a variables que proporcionan los valores de parámetros en tiempo de ejecución. Las variables son generalmente variables definidas por el usuario, aunque también puede usar variables del sistema que proporciona [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Si utiliza variables definidas por el usuario, asegúrese de establecer el tipo de datos en un tipo que sea compatible con el tipo de datos de la columna a la que hace referencia el parámetro asignado. Para más información, vea [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md).  

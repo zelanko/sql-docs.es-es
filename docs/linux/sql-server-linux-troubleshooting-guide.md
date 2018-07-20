@@ -5,19 +5,19 @@ author: annashres
 ms.author: anshrest
 manager: craigg
 ms.date: 04/30/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 2877b068569d409e20417ab9b535fd1ba8fd1017
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: 7d8f392177bd83a8fc8764eac080fcc7b76739ed
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981297"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102203"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Solución de problemas de SQL Server en Linux
 
@@ -192,6 +192,14 @@ Como último recurso, puede elegir volver a generar al maestro y realizar una co
    ```bash
    sudo systemctl start mssql-server
    ```
+
+## <a name="improve-performance"></a>Mejorar el rendimiento
+
+Hay muchos factores que afectan al rendimiento, incluidos el diseño de la base de datos, el hardware y las demandas de carga de trabajo. Si desea para mejorar el rendimiento, comience por revisar las prácticas recomendadas en el artículo, [procedimientos recomendados e instrucciones de configuración de SQL Server en Linux](sql-server-linux-performance-best-practices.md). A continuación, explore algunas de las herramientas disponibles para solucionar problemas de rendimiento.
+
+- [Almacén de consultas](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [Vistas del sistema de administración dinámica (DMV)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [Panel de rendimiento en SQL Server Management Studio](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)
 
 ## <a name="common-issues"></a>Problemas comunes
 

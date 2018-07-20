@@ -1,5 +1,5 @@
 ---
-title: conflict_&lt;esquema&gt;_&lt;tabla&gt; (Transact-SQL) | Documentos de Microsoft
+title: conflict_&lt;esquema&gt;_&lt;tabla&gt; (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/15/2016
 ms.prod: sql
@@ -20,24 +20,24 @@ helpviewer_keywords:
 - conflict_<schema>_<table>
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 64d89c82ffa149c55c8834ca46a11607f33459c8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2424c16b56455ca14fafdd8cc1c070aa3058447a
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33002142"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103673"
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;esquema&gt;_&lt;tabla&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  El conflict_\<esquema > _\<tabla > tabla contiene información sobre las filas conflictivas en la replicación punto a punto. En una publicación, cada tabla replicada posee una tabla de conflictos; el nombre de esta tabla de conflictos se anexa al nombre del artículo y esquema. Estas tablas de conflictos específicas del artículo existen en cada base de datos de publicación.  
+  El conflict_\<esquema > _\<tabla > contiene información acerca de las filas conflictivas en la replicación punto a punto. En una publicación, cada tabla replicada posee una tabla de conflictos; el nombre de esta tabla de conflictos se anexa al nombre del artículo y esquema. Estas tablas de conflictos específicas del artículo existen en cada base de datos de publicación.  
   
  En el caso de la replicación punto a punto, el Agente de distribución genera un error de forma predeterminada cuando detecta un conflicto. Se registra un error de conflicto en el registro de errores, pero no se registra ningún dato de conflicto en la tabla de conflictos, por lo que no está disponible para verse. Si el Agente de distribución puede continuar, se registra un conflicto localmente en cada nodo donde se detectó. Para obtener más información, vea "Controlar los conflictos" en [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |__$originator_id|**int**|Identificador del nodo en el que se originó el cambio en conflicto. Para obtener una lista de identificadores, ejecute [sp_help_peerconflictdetection](../../relational-databases/system-stored-procedures/sp-help-peerconflictdetection-transact-sql.md).|  
 |__$origin_datasource|**int**|Nodo en el que se originó el cambio en conflicto.|  
@@ -54,7 +54,7 @@ ms.locfileid: "33002142"
 |\<basar los nombres de columna de tabla >|\<tipos de columna de tabla base >|La tabla de conflictos contiene una columna para cada columna de la tabla base.|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

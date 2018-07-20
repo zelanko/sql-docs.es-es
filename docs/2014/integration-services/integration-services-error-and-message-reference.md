@@ -18,12 +18,12 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 111a6cddaae54f05bb751e569487c4b94542bf07
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b681fb6cf46ae61cf8a706925aa8d853baf38532
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300005"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085727"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referencia de errores y mensajes de Integration Services
   En las tablas siguientes se muestra una lista de los errores [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] predefinidos, advertencias y mensajes informativos, en orden numérico ascendente dentro de cada categoría, junto con sus códigos numéricos y nombres simbólicos. Cada uno de estos errores se define como un campo en la clase <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> en el espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -1046,7 +1046,7 @@ ms.locfileid: "37300005"
 |0xC00470A1|-1073450847|DTS_E_BUFFERORPHANED|Este búfer se convirtió en huérfano. El administrador de búfer se ha cerrado dejando un búfer pendiente que no podrá limpiarse. Puede ocasionar pérdidas de memoria y otros problemas.|  
 |0xC00470A2|-1073450846|DTS_E_EXPREVALINPUTCOLUMNNAMENOTFOUND|Error al intentar buscar la columna de entrada con el nombre "%1". Código de error: 0x%2!8.8X!. No se encontró la columna de entrada especificada en la colección de columnas de entrada.|  
 |0xC00470A3|-1073450845|DTS_E_EXPREVALINPUTCOLUMNIDNOTFOUND|Error al intentar encontrar la columna de entrada con id. de linaje %1!d!. Código de error 0x%2!8.8X!. No se encontró la columna de entrada en la colección de columnas de entrada.|  
-|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|La expresión contiene el token desconocido "%1". Si "%1" es una variable, debería expresarse como "@%1". El token especificado no es válido. Si el token debe ser un nombre de variable, debería tener como prefijo el símbolo @.|  
+|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|La expresión contiene el token desconocido "%1". Si "%1" es una variable, se debería expresar como "\@%1". El token especificado no es válido. Si el token debe ser un nombre de variable, debe agregarse como prefijo la \@ símbolos.|  
 |0xC00470A5|-1073450843|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNID|La expresión contiene el token desconocido "#%1!d!".|  
 |0xC00470A6|-1073450842|DTS_E_EXPREVALVARIABLENOTFOUND|No se encontró la variable "%1" en la colección Variables. Es posible que la variable no exista en el ámbito correcto.|  
 |0xC00470A7|-1073450841|DTS_E_EXPREVALINVALIDTOKENSTATE|Error al intentar analizar la expresión "%1". Es posible que la expresión contenga tokens no válidos o incompletos, o bien elementos no válidos. Puede que no esté bien formada o que le falte parte de un elemento necesario como, por ejemplo, un paréntesis.|  
@@ -1093,7 +1093,7 @@ ms.locfileid: "37300005"
 |0xC00470DA|-1073450790|DTS_E_INDIVIDUALPUTREFTRACKERFAILED|El componente "%1" no pudo almacenar en la caché la colección de rastreadores de referencias de objetos en tiempo de ejecución y devolvió el código de error 0x%2!8.8X!.|  
 |0xC00470DB|-1073450789|DTS_E_EXPREVALAMBIGUOUSINPUTCOLUMNNAME|Hay varias columnas de entrada con el nombre "%1". La columna de entrada deseada debe especificarse de forma única como [Nombre de componente].[%2] o debe hacerse referencia a ella mediante el id. de linaje. Actualmente, la columna de entrada especificada existe en más de un componente.|  
 |0xC00470DC|-1073450788|DTS_E_EXPREVALDOTTEDINPUTCOLUMNNAMENOTFOUND|Error al buscar la columna de entrada con el nombre "[%1].[%2]". Código de error: 0x%3!8.8X!. No se encontró la columna de entrada en la colección de columnas de entrada.|  
-|0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|Hay varias variables con el nombre "%1". El nombre de variable debe de forma única como @[Espacio de nombres::%2]. La variable existe en más de un espacio de nombres.|  
+|0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|Hay varias variables con el nombre "%1". La variable deseada debe especificarse de forma única como \@[Namespace::% 2]. La variable existe en más de un espacio de nombres.|  
 |0xC00470DE|-1073450786|DTS_E_REDUCTIONFAILED|El programador del motor de Flujo de datos no pudo reducir el plan de ejecución de la canalización. Establezca el valor false en la propiedad OptimizedMode.|  
 |0xC00470DF|-1073450785|DTS_E_EXPREVALSQRTINVALIDPARAM|La función SQRT no puede ejecutarse con valores negativos y se ha pasado un valor negativo a la función SQRT.|  
 |0xC00470E0|-1073450784|DTS_E_EXPREVALLNINVALIDPARAM|La función LN no puede ejecutarse con valores negativos o cero, y se ha pasado un cero o un valor negativo a la función LN.|  
@@ -1226,7 +1226,7 @@ ms.locfileid: "37300005"
 |0xC004909D|-1073442659|DTS_E_EXPREVALSTATIC_INVALIDTOKENSINGLEEQUAL|La expresión contiene un signo igual (=) inesperado. Este error suele producirse si se necesita un signo igual doble (==).|  
 |0xC00490AA|-1073442646|DTS_E_EXPREVALSTATIC_AMBIGUOUSINPUTCOLUMNNAME|Se especificó un nombre de columna de entrada ambiguo.  La columna debe calificarse como [Nombre de componente].[Nombre de columna] o debe hacerse referencia a ella mediante el id. de linaje. Este error se produce si la columna de entrada existe en más de un componente y debe diferenciarse agregando el nombre del componente o utilizando el id. de linaje.|  
 |0xC00490AB|-1073442645|DTS_E_EXPREVALSTATIC_PLACEHOLDERINEXPRESSION|Se encontró un operando o parámetro de función de marcador de posición en una expresión. Debe sustituirse por un parámetro u operando real.|  
-|0xC00490AC|-1073442644|DTS_E_EXPREVALSTATIC_AMBIGUOUSVARIABLENNAME|Se especificó un nombre de variable ambiguo. El nombre de variable debe calificarse como @[Espacio de nombres::Variable]. Este error se produce si la variable existe en más de un espacio de nombres.|  
+|0xC00490AC|-1073442644|DTS_E_EXPREVALSTATIC_AMBIGUOUSVARIABLENNAME|Se especificó un nombre de variable ambiguo. El nombre de variable debe calificarse como \@[nombre]. Este error se produce si la variable existe en más de un espacio de nombres.|  
 |0xC00490D3|-1073442605|DTS_E_EXPREVALSTATIC_BINARYOPDTSTRNOTSUPPORTED|En los operandos de las operaciones binarias, el tipo de datos DT_STR solamente se admite para las columnas de entrada y operaciones de conversión. Un operando DT_STR que no sea una columna de entrada o el resultado de una conversión no puede utilizarse con una operación binaria. Para realizar esta operación, debe convertirse explícitamente el operando mediante un operador de conversión.|  
 |0xC00490D4|-1073442604|DTS_E_EXPREVALSTATIC_CONDITIONALOPDTSTRNOTSUPPORTED|En los operandos del operador condicional, el tipo de datos DT_STR solamente se admite para las columnas de entrada y operaciones de conversión. Un operando DT_STR que no sea una columna de entrada o el resultado de una conversión no puede utilizarse con la operación condicional. Para realizar esta operación, debe convertirse explícitamente el operando mediante un operador de conversión.|  
 |0xC00490D5|-1073442603|DTS_E_EXPREVALSTATIC_FNFINDSTRINGINVALIDOCCURRENCECOUNT|El parámetro de recuento de coincidencias no es válido para la función FINDSTRING. Este parámetro debe ser mayor que cero.|  
@@ -2080,8 +2080,8 @@ ms.locfileid: "37300005"
 |0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|La tarea no pudo ejecutar la operación "%1".|  
 |0x80029185|-2147315323|DTS_W_EXECPROCTASK_FILENOTINPATH|El archivo o proceso "%1" no se encuentra en la ruta de acceso.|  
 |0x800291C6|-2147315258|DTS_W_SENDMAILTASK_SUBJECT_MISSING|El asunto está vacío.|  
-|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|La dirección de la línea "Para" es incorrecta. Falta el símbolo "@" o no es válida.|  
-|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|La dirección de la línea "De" es incorrecta. Falta el símbolo "@" o no es válida. |  
+|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|La dirección de la línea "Para" es incorrecta. Falta el símbolo "\@" o no es válida.|  
+|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|La dirección de la línea "De" es incorrecta. Falta el símbolo "\@" o no es válida.|  
 |0x8002927A|-2147315078|DTS_W_XMLTASK_DIFFFAILURE|Los dos documentos XML son diferentes.|  
 |0x8002928C|-2147315060|DTS_W_XMLTASK_DTDVALIDATIONWARNING|La validación DTD utilizará el archivo DTD definido en la línea DOCTYPE del documento XML. No utilizará lo asignado a la propiedad "%1".|  
 |0x8002928D|-2147315059|DTS_W_XMLTASK_VALIDATIONFAILURE|Error al validar la tarea "%1".|  

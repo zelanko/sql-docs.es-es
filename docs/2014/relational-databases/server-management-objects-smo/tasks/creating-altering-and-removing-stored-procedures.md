@@ -17,17 +17,17 @@ caps.latest.revision: 44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d7e4ddf95dc9fa08e52c9a312d3cc83c3c04bd05
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c3dbd0c9ac5bf18d4c0f53d33cba8ab54f276985
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223186"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082867"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>Crear, modificar y eliminar los procedimientos almacenados
   En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), procedimientos almacenados están representados por el <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto.  
   
- Crear un <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto SMO requiere establecer el <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> propiedad a la [!INCLUDE[tsql](../../../includes/tsql-md.md)] script que define el procedimiento almacenado. Los parámetros requieren el prefijo @ y se deben crear individualmente utilizando los objetos <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> y agregando a la colección <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> del objeto <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>.  
+ Crear un <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto SMO requiere establecer el <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> propiedad a la [!INCLUDE[tsql](../../../includes/tsql-md.md)] script que define el procedimiento almacenado. Los parámetros requieren el \@ prefijo y se deben crear individualmente utilizando <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> objetos y agregar a la <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> colección de la <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto.  
   
 ## <a name="example"></a>Ejemplo  
  Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

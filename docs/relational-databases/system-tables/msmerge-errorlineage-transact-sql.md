@@ -1,5 +1,5 @@
 ---
-title: MSmerge_errorlineage (Transact-SQL) | Documentos de Microsoft
+title: MSmerge_errorlineage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,29 +22,29 @@ helpviewer_keywords:
 - MSmerge_errorlineage system table
 ms.assetid: 3bcbd328-c958-4cd4-a573-3c35539fa919
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d147e8e73ee7b153ce14d3ffd6d9082095ac1a68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3bdae242526c6985cc428d332be92e0b810f3a6c
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004732"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101933"
 ---
 # <a name="msmergeerrorlineage-transact-sql"></a>MSmerge_errorlineage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  El **MSmerge_errorlineage** tabla contiene filas que se han eliminado en el suscriptor, pero cuya eliminación no se propaga al publicador. Esta tabla se almacena en las bases de datos de publicación y de suscripciones.  
+  El **MSmerge_errorlineage** tabla contiene las filas que se han eliminado en el suscriptor, pero cuya eliminación no se propaga al publicador. Esta tabla se almacena en las bases de datos de publicación y de suscripciones.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**tablenick**|**int**|Es el valor entero asignado a la tabla publicada para la replicación de mezcla. Se corresponde con el campo de alias en la **sysmergearticles** tabla.|  
+|**tablenick**|**int**|Es el valor entero asignado a la tabla publicada para la replicación de mezcla. Corresponde al campo de alias en el **sysmergearticles** tabla.|  
 |**rowguid**|**uniqueidentifier**|Identificador de fila.|  
 |**linaje**|**Varbinary(501)**|Almacena un historial de los suscriptores y publicadores que han efectuado actualizaciones en alguna fila. Se utiliza para detectar y solucionar situaciones de conflicto.|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

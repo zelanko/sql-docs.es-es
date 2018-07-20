@@ -1,5 +1,5 @@
 ---
-title: MSreplication_objects (Transact-SQL) | Documentos de Microsoft
+title: MSreplication_objects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,26 +22,26 @@ helpviewer_keywords:
 - MSreplication_objects system table
 ms.assetid: 08f9710d-976d-448e-bead-ac9835e87bc5
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a7aefe4e9cfd1ec6b60e6fdf45bcfad1debe8c9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f1ee93a2e3373cce829ac850a70ce549f91fe2e6
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005962"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101283"
 ---
 # <a name="msreplicationobjects-transact-sql"></a>MSreplication_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  El **MSreplication_objects** tabla contiene una fila por cada objeto que está asociado con la replicación de la base de datos de suscriptor. Esta tabla se almacena en la base de datos de suscripción.  
+  El **MSreplication_objects** tabla contiene una fila por cada objeto que está asociado con la replicación en la base de datos del suscriptor. Esta tabla se almacena en la base de datos de suscripción.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**publicador**|**sysname**|El nombre del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador.|  
-|**Publicación**|**sysname**|Nombre de la publicación.|  
+|**publicación**|**sysname**|Nombre de la publicación.|  
 |**object_name**|**sysname**|Nombre del objeto.|  
 |**object_type**|**char(2)**|El tipo de objeto:<br /><br /> **u** = tabla.<br /><br /> **t** = desencadenador.<br /><br /> **p** = procedimiento almacenado.|  
 |**article**|**sysname**|Nombre del artículo con el que está asociado el objeto.|  

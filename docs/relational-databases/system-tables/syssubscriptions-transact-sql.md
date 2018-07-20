@@ -1,5 +1,5 @@
 ---
-title: syssubscriptions (Transact-SQL) | Documentos de Microsoft
+title: syssubscriptions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,28 +22,28 @@ helpviewer_keywords:
 - syssubscriptions system table
 ms.assetid: 106c1707-e0e0-49b4-ba50-25380c40fab2
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 620cc0de62221ad784c4e38dbf51aba39eea5047
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3743d46635e467ee4a752bfefffd72680bf9a156
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33007482"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101213"
 ---
 # <a name="syssubscriptions-transact-sql"></a>syssubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene una fila por cada suscripción de la base de datos. Esta tabla se almacena en la base de datos de publicación.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|Id. único de un artículo.|  
 |**srvid**|**smallint**|Id. de servidor del suscriptor.|  
 |**dest_db**|**sysname**|El nombre de la base de datos de destino.|  
 |**status**|**tinyint**|El estado de la suscripción:<br /><br /> **0** = inactivo.<br /><br /> **1** = suscrito.<br /><br /> **2** = activo.|  
-|**sync_type**|**tinyint**|El tipo de sincronización inicial:<br /><br /> **1** = automático.<br /><br /> **2** = ninguno|  
+|**sync_type**|**tinyint**|El tipo de sincronización inicial:<br /><br /> **1** = automatic.<br /><br /> **2** = ninguno|  
 |**login_name**|**sysname**|El nombre de inicio de sesión utilizado al agregar la suscripción.|  
 |**subscription_type**|**int**|El tipo de suscripción:<br /><br /> 0 = Inserción. El agente de distribución se ejecuta en el distribuidor.<br /><br /> 1 = Extracción. El agente de distribución se ejecuta en el suscriptor.|  
 |**distribution_jobid**|**binary (16)**|Id. de trabajo del Agente de distribución.|  
@@ -55,7 +55,7 @@ ms.locfileid: "33007482"
 |**SRVNAME**|**sysname**|Nombre del suscriptor.|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

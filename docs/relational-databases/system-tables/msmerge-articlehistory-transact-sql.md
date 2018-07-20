@@ -1,5 +1,5 @@
 ---
-title: MSmerge_articlehistory (Transact-SQL) | Documentos de Microsoft
+title: MSmerge_articlehistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,32 +22,32 @@ helpviewer_keywords:
 - MSmerge_articlehistory system table
 ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44f758d3f56b595407b15077031a911a828ff48f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a271583707ee57335a04f02f7a3569752e4f289
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006352"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101973"
 ---
 # <a name="msmergearticlehistory-transact-sql"></a>MSmerge_articlehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  El **MSmerge_articlehistory** controla los cambios realizados en los artículos durante una sesión de sincronización del agente de mezcla, con una fila por cada artículo en el que se realizaron cambios de tabla. Esta tabla se almacena en la base de datos de distribución.  
+  El **MSmerge_articlehistory** tabla realiza un seguimiento de los cambios realizados en los artículos durante una sesión de sincronización del agente de mezcla, con una fila por cada artículo a la que se realizaron cambios. Esta tabla se almacena en la base de datos de distribución.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|El identificador de una sesión de trabajo del agente de mezcla en el [MSmerge_sessions](../../relational-databases/system-tables/msmerge-sessions-transact-sql.md) tabla del sistema.|  
-|**phase_id**|**int**|Fase de la sesión de sincronización, que puede ser una de las siguientes:<br /><br /> **1** = cargar.<br /><br /> **2** = descarga.<br /><br /> **4** = limpiar.<br /><br /> **5** = apagado.<br /><br /> **6** = cambios del esquema.<br /><br /> **7** = BCP.|  
+|**phase_id**|**int**|Fase de la sesión de sincronización, que puede ser una de las siguientes:<br /><br /> **1** = carga.<br /><br /> **2** = descarga.<br /><br /> **4** = limpieza.<br /><br /> **5** = apagado.<br /><br /> **6** = los cambios de esquema.<br /><br /> **7** = BCP.|  
 |**article_name**|**sysname**|Nombre del artículo en el que se realizaron cambios.|  
 |**start_time**|**datetime**|Hora a la que el agente empezó a procesar el artículo.|  
 |**duration**|**int**|Tiempo, en segundos, que el agente tardó en procesar un artículo.|  
-|**Inserta**|**int**|Número de inserciones aplicadas a un artículo específico durante la sincronización. Este valor aumenta durante el proceso de sincronización y el valor final representa el número total.|  
-|**Actualizaciones**|**int**|Número de actualizaciones aplicadas a un artículo específico durante la sincronización. Este valor aumenta durante el proceso de sincronización y el valor final representa el número total.|  
+|**inserciones**|**int**|Número de inserciones aplicadas a un artículo específico durante la sincronización. Este valor aumenta durante el proceso de sincronización y el valor final representa el número total.|  
+|**actualizaciones**|**int**|Número de actualizaciones aplicadas a un artículo específico durante la sincronización. Este valor aumenta durante el proceso de sincronización y el valor final representa el número total.|  
 |**eliminaciones**|**int**|Número de eliminaciones aplicadas a un artículo específico durante la sincronización. Este valor aumenta durante el proceso de sincronización y el valor final representa el número total.|  
-|**Conflictos**|**int**|Número de conflictos que se han producido durante la sincronización. Este valor aumenta durante el proceso de sincronización y el valor final representa el número total.|  
+|**conflictos**|**int**|Número de conflictos que se han producido durante la sincronización. Este valor aumenta durante el proceso de sincronización y el valor final representa el número total.|  
 |**conflicts_resolved**|**int**|Número de conflictos que se han producido durante la sincronización y se han resuelto. Este valor aumenta durante el proceso de sincronización y el valor final representa el número total.|  
 |**rows_retried**|**int**|Número de filas con errores que se han reintentado durante la sincronización. Este valor aumenta durante el proceso de sincronización y el valor final representa el número total.|  
 |**percent_complete**|**decimal**|Porcentaje del tiempo total de sincronización que el Agente de mezcla ha invertido en el artículo durante una sesión. Este valor es NULL hasta que finaliza la sesión.|  

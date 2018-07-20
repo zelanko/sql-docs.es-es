@@ -1,5 +1,5 @@
 ---
-title: MSsubscription_articles (Transact-SQL) | Documentos de Microsoft
+title: MSsubscription_articles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,32 +22,32 @@ helpviewer_keywords:
 - MSsubscription_articles system table
 ms.assetid: dbc1737f-261e-4017-b9cd-703b9fc4ac78
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5f1530091601cb241da7f1e4b1d48e02f699497
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff060482ddd1b9a678cdd37a9f4f2d1f26077272
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005012"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103163"
 ---
 # <a name="mssubscriptionarticles-transact-sql"></a>MSsubscription_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   El **MSsubscription_articles** tabla contiene información relacionada con los artículos de una suscripción en cola. Esta tabla solo se llena con los tipos de replicación de actualización en cola y actualización inmediata con la actualización en cola como una conmutación por error.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**agent_id**|**int**|El Id. del agente que sirve a este artículo.|  
+|**valor de agent_id**|**int**|El Id. del agente que sirve a este artículo.|  
 |**artid**|**int**|El identificador de artículo de la **sysarticles** tabla.|  
 |**article**|**sysname**|El nombre del artículo de la **sysarticles** tabla.|  
-|**dest_table**|**sysname**|El nombre de la tabla de destino de la **sysarticles** tabla.|  
-|**propietario**|**sysname**|El propietario de la suscripción.|  
+|**dest_table**|**sysname**|El nombre de la tabla de destino desde el **sysarticles** tabla.|  
+|**Propietario**|**sysname**|El propietario de la suscripción.|  
 |**cft_table**|**sysname**|El nombre de la tabla de conflictos de este artículo, para el tipo de replicación de actualización en cola.|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

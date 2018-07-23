@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 090752fc93b3e5de531ef69983aa32846b3b05bf
-ms.sourcegitcommit: 4b21840f20195d70f255465666f7b409ba839d18
+ms.openlocfilehash: d5c331fc8b9e95940e0aaca29efbada78083340f
+ms.sourcegitcommit: d80aaa52562d828f9bfb932662ad779432301860
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39146805"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39188961"
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Notas de la versión de SQL Operations Studio (versión preliminar)
 
@@ -61,8 +61,6 @@ El *versión preliminar pública de julio* se centra en la versión inicial de l
  - Corregir [emitir 1817](https://github.com/Microsoft/sqlopsstudio/issues/1817): Error de Ortografia
  - Corregir [emitir 1830](https://github.com/Microsoft/sqlopsstudio/issues/1830): establecer iconPath en ButtonComponent después de llamar a component() no cambia el icono
  - Corregir [emitir 1843](https://github.com/Microsoft/sqlopsstudio/issues/1843): organización de tablas mejor
- - Corregir [emitir 1845](https://github.com/Microsoft/sqlopsstudio/issues/1845): error desplazamiento Cambiar consulta de pestaña
- - Corregir [emitir 1847](https://github.com/Microsoft/sqlopsstudio/issues/1847): inicio de sesión de MFA para las bases de datos SQL de Azure
 
 
 Para obtener más información, consulte el [registro de cambios](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), y [versiones](https://github.com/Microsoft/sqlopsstudio/releases).

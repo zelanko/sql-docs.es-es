@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.DacTableChooser
 - sql.data.tools.DacPublishDialog
@@ -20,12 +20,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cef437039f6853da7d64610a6123be74d8585ac5
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: e77370c1afe61ff63186e7a203b9be4eeaa97849
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094662"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088467"
 ---
 # <a name="extract-publish-and-register-dacpac-files"></a>Extraer, publicar y registrar archivos .dacpac
 En este tema se describen cuatro procedimientos que puede realizar haciendo clic con el botón secundario en una base de datos conectada en el Explorador de objetos de SQL Server:  

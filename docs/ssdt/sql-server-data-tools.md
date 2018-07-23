@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.errortask.generichelp
 ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
@@ -16,12 +16,12 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2efa5ef66c489365099c6d0190ea3b08cffbe671
-ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
+ms.openlocfilehash: 51d357bb7fdb953f279a196723dd72ad713b127f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37137954"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083387"
 ---
 # <a name="sql-server-data-tools"></a>Herramientas de datos de SQL Server
 SQL Server Data Tools (SSDT) transforma el desarrollo de bases de datos al presentar un modelo ubicuo y declarativo que abarca todas las fases del desarrollo en Visual Studio. Las funcionalidades de diseño de Transact\-SQL de SSDT se pueden usar para compilar, depurar, mantener y refactorizar bases de datos. Puede trabajar con un proyecto de base de datos o directamente con una instancia de una base de datos conectada ubicada dentro o fuera de las instalaciones locales.  

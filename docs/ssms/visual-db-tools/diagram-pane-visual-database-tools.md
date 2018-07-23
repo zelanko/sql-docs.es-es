@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a749cafa34c8db9d7cf2bc81c97e90da39e1bed3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055302"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066593"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Panel Diagrama (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ Cada rectángulo muestra las columnas de datos de la tabla o del objeto con valo
   
 La tabla siguiente muestra las casillas y los símbolos utilizados en el rectángulo de cada tabla o de cada objeto con valores de tabla.  
   
-|casilla o símbolo|Description|  
+|casilla o símbolo|Descripción|  
 |-----------------------|---------------|  
 |![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi7.gif "Icono de Visual Database Tools")<br /><br />![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi8.gif "Icono de Visual Database Tools")<br /><br />![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbi9.gif "Icono de Visual Database Tools")<br /><br />![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbia.gif "Icono de Visual Database Tools")|Especifica si una columna de datos aparece en el conjunto de resultados de consulta (consulta Select) o si se utiliza en una consulta Update, Insert From, Make Table o Insert Into. Seleccione la columna para agregarla a los resultados. Si selecciona **(Todas las columnas)** , aparecerán todas las columnas de datos en los resultados.<br /><br />El icono utilizado con la casilla cambia según el tipo de consulta que esté creando. Al crear una consulta Eliminar, no puede seleccionar columnas individuales.|  
 |![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbib.gif "Icono de Visual Database Tools")<br /><br />![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbic.gif "Icono de Visual Database Tools")|Indica que la columna de datos se está utilizando para ordenar los resultados de una consulta (forma parte de una cláusula ORDER BY). El icono aparece como A-Z si el criterio de ordenación es ascendente o como Z-A si el criterio de ordenación es descendente.|  
@@ -85,7 +85,7 @@ Si la consulta requiere una combinación, aparece una línea de combinación ent
   
 La forma del icono situado en el centro de la línea de combinación indica cómo se combinan las tablas u objetos con estructura de tabla. Si la cláusula de combinación utiliza un operador distinto de igual (=), el operador se muestra en el icono de línea de combinación. La tabla siguiente muestra los iconos que pueden aparecer en una línea de combinación.  
   
-|Icono de línea de combinación|Description|  
+|Icono de línea de combinación|Descripción|  
 |------------------|---------------|  
 |![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbih.gif "Icono de Visual Database Tools")|Combinación interna (creada mediante el signo igual).|  
 |![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbii.gif "Icono de Visual Database Tools")|Combinación interna basada en el operador "mayor que". (El operador mostrado en el icono de línea de combinación refleja el operador utilizado en la combinación.)|  
@@ -95,7 +95,7 @@ La forma del icono situado en el centro de la línea de combinación indica cóm
   
 Los iconos situados en los extremos de la línea de combinación indican el tipo de combinación. La tabla siguiente muestra los tipos de combinaciones y los iconos que pueden aparecer en los extremos de la línea de combinación.  
   
-|Icono situado en los extremos de la línea de combinación|Description|  
+|Icono situado en los extremos de la línea de combinación|Descripción|  
 |-----------------------------|---------------|  
 |![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbim.gif "Icono de Visual Database Tools")|Combinación uno a uno|  
 |![Icono de Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbin.gif "Icono de Visual Database Tools")|Combinación uno a varios|  

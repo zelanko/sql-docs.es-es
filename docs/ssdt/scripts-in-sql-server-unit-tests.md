@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
 caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c9d624858cf5dc49e45ec480a2aaac622a26abba
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: f829c583b0591263eeb5db612983efc18e96fa97
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094942"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085887"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>Scripts de pruebas unitarias de SQL Server
 Cada prueba unitaria de SQL Server contiene una única acción anterior a la prueba, una acción de prueba y una acción posterior a la prueba. Cada una de estas acciones contiene, a su vez, lo siguiente:  

@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.testconditions
 ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
@@ -16,12 +16,12 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d7a1ebfc178fb1c13f980a118d40ecb1e28908f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 85a5f5a6eda29264baee432a1b8c8b17dee8f6ae
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094894"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085577"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Usar condiciones de prueba en pruebas unitarias de SQL Server
 En una prueba unitaria de SQL Server, se ejecutan uno o varios scripts de prueba Transact\-SQL. Los resultados se pueden evaluar dentro del script Transact\-SQL y usar THROW o RAISERROR para devolver un error y que no se supere la prueba, o se pueden definir condiciones de prueba en la prueba para evaluar los resultados. La prueba devuelve una instancia de la clase [SqlExecutionResult](https://msdn.microsoft.com/en-us/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx) . La instancia de esta clase contiene uno o más DataSets, el tiempo de ejecución y las filas afectadas por el script. Toda esta información se recopila durante la ejecución del script. Estos resultados se pueden evaluar utilizando las condiciones de prueba. SQL Server Data Tools proporciona un conjunto de condiciones de prueba predefinidas. También puede crear y usar condiciones personalizadas, consulte [Condiciones de prueba personalizadas para pruebas unitarias de SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  

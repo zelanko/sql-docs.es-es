@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
 caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8a5814bf073891006b6f2a1917459f9b711482f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 541310addcd1b9fec25038e962197a1b06eea34a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094718"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088537"
 ---
 # <a name="how-to-edit-an-existing-table-using-queries"></a>Cómo: Editar una tabla existente mediante consultas
 Puede editar la definición de una tabla o sus datos escribiendo una consulta de Transact\-SQL. Para ver o escribir datos en una tabla visualmente, use el Editor de datos como se describe en [Desarrollo de bases de datos conectadas](../ssdt/connected-database-development.md).  

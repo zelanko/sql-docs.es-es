@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datafilterdialog.dialog
 ms.assetid: f81ce28b-eaad-4c47-9efd-8f23f0f25870
@@ -16,12 +16,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a5b2a1e6358302562d0fccc558eedbb4eb304d7
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: e60772ba898624feab9eada69c65e60a58ad6afd
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094678"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083617"
 ---
 # <a name="filter-and-sort-dialog-box"></a>Cuadro de diálogo Filtrar y ordenar
 En el Explorador de objetos de SQL Server, puede hacer clic con el botón derecho en una tabla o vista y seleccionar **Ver datos** (para obtener más información, consulte [Cómo: Ver y editar datos de una tabla](../ssdt/how-to-view-and-edit-data-in-a-table.md)). A partir de la versión de marzo de 2014 de SQL Server Data Tools, el **Editor de datos** tiene un botón de ordenación y filtrado en la barra de herramientas. Puede modificar los datos que se muestran en una tabla o vista.  

@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.DebugProperties
 - sql.data.tools.dacsettings.dialog
@@ -44,12 +44,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cdf95f469cd5a94514d0e91d13ef7b9125c1531f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 006dde8f0c41ffe266c34ec5cbbf112473a49b4b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094910"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087197"
 ---
 # <a name="database-project-settings"></a>Configuración del proyecto de base de datos
 Utilice la configuración del proyecto de base de datos para controlar aspectos de las configuraciones de base de datos, depuración y compilación. Existen varias categorías de configuraciones.  

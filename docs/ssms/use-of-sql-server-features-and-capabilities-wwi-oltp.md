@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 64ce1d99c60eb8863c0e149b8560d99d5d16ffeb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33047852"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980743"
 ---
 # <a name="arguments-for-external-tools"></a>Arguments for External Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ Los argumentos son variables para las que el entorno de Studio proporciona valor
   
 En la tabla siguiente se enumeran los argumentos de las herramientas externas.  
   
-|Nombre|Argumento|Description|  
+|Nombre|Argumento|Descripción|  
 |--------|------------|---------------|  
 |**Ruta de acceso del elemento**|$(ItemPath)|El nombre completo del archivo de origen actual (definido como unidad + ruta de acceso + nombre de archivo); en blanco si hay una ventana de no origen activa.|  
 |**Directorio del elemento**|$(ItemDir)|El directorio del origen actual (definido como unidad + ruta de acceso); en blanco si hay una ventana de no origen activa.|  

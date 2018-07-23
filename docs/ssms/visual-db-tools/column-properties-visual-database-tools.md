@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2e43a42c781ae0133f7d1644d6ea0c82e3197bef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c74d4bd3ccb6770acfdadcbb6cf266890233e91
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054722"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981807"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propiedades de columna (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ Muestra el nombre del origen de datos para la columna seleccionada. (Solo se apl
 Se expande para mostrar las propiedades restantes.  
   
 **Tipo de datos**  
-Muestra el tipo de datos de la columna seleccionada. Para obtener más información, vea [Tipos de datos (Transact-SQL)](http://msdn.microsoft.com/en-us/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Muestra el tipo de datos de la columna seleccionada. Para obtener más información, vea [Tipos de datos (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
 **Incremento de identidad**  
 Muestra el incremento que se agregará a la **Inicialización de identidad** para cada fila posterior de la columna de identidad. (Solo se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
@@ -99,7 +99,7 @@ Muestra el nombre de la columna. Para editar el nombre, escriba en el cuadro de 
 Muestra si el tipo de datos de la columna admite o no los valores NULL.  
   
 **Tipo de datos**  
-Muestra el tipo de datos de la columna seleccionada. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor. Para obtener más información, vea [Tipos de datos (Transact-SQL)](http://msdn.microsoft.com/en-us/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Muestra el tipo de datos de la columna seleccionada. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor. Para obtener más información, vea [Tipos de datos (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
 **Valor o enlace predeterminado**  
 Muestra el valor predeterminado de esta columna cuando no se especifica ningún valor para esta columna. La lista desplegable contiene todos los valores predeterminados globales definidos en el origen de datos. Para enlazar la columna con un valor predeterminado global, realice una selección en la lista desplegable. Otra opción para crear una restricción predeterminada para la columna es escribir directamente el valor predeterminado como texto.  
@@ -147,7 +147,7 @@ Muestra qué columna se utiliza para definir el tipo de documento de una columna
 Indica el idioma empleado para indizar la columna.  
   
 **Semántica estadística**  
-Seleccione si desea habilitar la indización semántica estadística para la columna seleccionada. Para más información, consulte [Marcador de posición de Búsqueda semántica](http://msdn.microsoft.com/en-us/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
+Seleccione si desea habilitar la indización semántica estadística para la columna seleccionada. Para más información, consulte [Marcador de posición de Búsqueda semántica](http://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
   
 Si selecciona **Idioma** antes de seleccionar **Semántica estadística**y el idioma seleccionado no tiene un modelo de idioma semántico asociado, la opción **Semántica estadística** se establece en **No** y no puede modificarse. Si selecciona **Sí** para la opción de **Semántica estadística** antes de seleccionar **Idioma**, los idiomas disponibles en la columna **Idioma** estarán limitados a aquellos para los que exista un modelo de idioma semántico.  
   

@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbrefactoring.previewdialog
 - sql.data.tools.editor.howto.refactoring
@@ -20,12 +20,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 014e6399f63a45c60c73db1cb45007fef5b8aebd
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 4ba39da9c13a1a2051f249942de86b18963eade8
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094885"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083367"
 ---
 # <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>Cómo: Usar Cambiar nombre y Refactorizar para realizar cambios en los objetos de base de datos
 El menú contextual Refactorizar del Editor de Transact\-SQL le permite cambiar el nombre de un objeto o moverlo a un esquema diferente y obtener una vista previa de todas las áreas afectadas antes de confirmar el cambio. También puede usar el menú Refactorizar para calificar todas las referencias a objetos de base de datos o para expandir todos los caracteres comodín de las instrucciones `SELECT` en el proyecto de base de datos.  

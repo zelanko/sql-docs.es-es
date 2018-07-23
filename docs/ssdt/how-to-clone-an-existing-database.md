@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b1f46c4fd8164266394994260244dcbe81cde9c8
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 1037250907c897ce08f85da5af1c739849091338
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094725"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085927"
 ---
 # <a name="how-to-clone-an-existing-database"></a>Cómo: Clonar una base de datos existente
 Esta tarea usa algunos de los pasos que ha aprendido en procedimientos anteriores para crear una nueva base de datos y transportar datos existentes. Además, utiliza los pasos descritos en [Uso de Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) para sincronizar el esquema de una base de datos de origen y de un proyecto.  
@@ -58,5 +58,5 @@ Mediante estos pasos, puede crear fácilmente una base de datos de desarrollo o 
 7.  Use el Editor de datos para comprobar que todas las tablas de la nueva base de datos `TradeDev` se han rellenado.  
   
 ## <a name="see-also"></a>Ver también  
-[Uso de Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Cómo: Usar Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

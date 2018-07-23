@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 53142374585fc97d134a6c08f71fa594072b5382
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 461576daa9ea6a420523e3946b458509a192abcd
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042162"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981087"
 ---
 # <a name="delete-an-alert"></a>Delete an Alert
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -97,5 +97,5 @@ De forma predeterminada, solo los miembros del rol fijo de servidor **sysadmin**
     GO  
     ```  
   
-Para más información, consulte [sp_delete_alert (Transact-SQL)](http://msdn.microsoft.com/en-us/a831315e-793d-41c4-8333-b324bb2bc614).  
+Para más información, consulte [sp_delete_alert (Transact-SQL)](http://msdn.microsoft.com/a831315e-793d-41c4-8333-b324bb2bc614).  
   

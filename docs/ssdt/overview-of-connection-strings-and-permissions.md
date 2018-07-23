@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ecc38b525f07804f74c430b6acea99bf1712507e
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: a17d6a3f39ce45c3669ef9820b8b73d4c77a1b08
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094638"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087087"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>Información general acerca de las cadenas de conexión y los permisos
 Para ejecutar pruebas unitarias de SQL Server, debe conectarse a un servidor de bases de datos mediante una o dos cadenas de conexión específicas. Cada cadena de conexión representa una cuenta que tenga los permisos específicos que necesita para realizar la tarea o el conjunto de tareas en un script determinado como parte de la prueba. Puede especificar estas cadenas en el cuadro de diálogo **Configuración de prueba de SQL Server** o editando manualmente el archivo app.config del proyecto de prueba.  

@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3ba025ae882c1779cc4022b4cb75d323384a2708
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d795f709f37772c22cfcffb2b9f0d98c77a7501e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044502"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980037"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ Para obtener información detallada, vea [Implement SQL Server Agent Security](.
   
 2.  En la barra de herramientas, haga clic en **Nueva consulta**.  
   
-3.  En la ventana de consulta, escriba las instrucciones siguientes que usan el procedimiento almacenado del sistema [sp_manage_jobs_by_login (Transact-SQL)](http://msdn.microsoft.com/en-us/832ec15a-6e92-4eb5-8c4a-af4dba79fbaa) . En el siguiente ejemplo se reasignan todos los trabajos de `danw` a `françoisa`.  
+3.  En la ventana de consulta, escriba las instrucciones siguientes que usan el procedimiento almacenado del sistema [sp_manage_jobs_by_login (Transact-SQL)](http://msdn.microsoft.com/832ec15a-6e92-4eb5-8c4a-af4dba79fbaa) . En el siguiente ejemplo se reasignan todos los trabajos de `danw` a `françoisa`.  
   
     ```  
     USE msdb ;  
@@ -97,7 +97,7 @@ Para obtener información detallada, vea [Implement SQL Server Agent Security](.
 ## <a name="SMOProc2"></a>Usar Objetos de administración de SQL Server  
 **Para asignar a otros usuarios la propiedad de un trabajo**  
   
-1.  Llame a la clase **Job** mediante el lenguaje de programación de su elección, como Visual Basic, Visual C# o PowerShell. Para el código de ejemplo, consulte [Programar tareas administrativas automáticas en el Agente SQL Server](http://msdn.microsoft.com/en-us/900242ad-d6a2-48e9-8a1b-f0eea4413c16).  
+1.  Llame a la clase **Job** mediante el lenguaje de programación de su elección, como Visual Basic, Visual C# o PowerShell. Para el código de ejemplo, consulte [Programar tareas administrativas automáticas en el Agente SQL Server](http://msdn.microsoft.com/900242ad-d6a2-48e9-8a1b-f0eea4413c16).  
   
 ## <a name="see-also"></a>Ver también  
 [Implementar trabajos](../../ssms/agent/implement-jobs.md)  

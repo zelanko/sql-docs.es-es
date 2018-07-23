@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.testconfig
 ms.assetid: febcc87f-eb18-4c12-ba30-82ef0d49aaa3
@@ -16,12 +16,12 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8ae9faa2a1556b7ca1e71c7cc52e00df2222688
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 67f49ab119e43ed59fc6bee5f9f10ede55143618
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094933"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088497"
 ---
 # <a name="running-sql-server-unit-tests"></a>Ejecución de pruebas unitarias de SQL Server
 Para mejorar y mantener la calidad del código, puede crear y ejecutar pruebas unitarias de SQL Server que comprueben el comportamiento de cualquier objeto de base de datos y después proteger esas pruebas en el control de versiones. Cuando usted o cualquier miembro del equipo cambie el esquema de la base de datos, ejecute pruebas unitarias de SQL Server y pruebas unitarias de software para comprobar que los cambios no interrumpen la funcionalidad existente. Puede ejecutar pruebas individuales o puede ejecutar grupos de prueba, que se denominan listas de pruebas. Para más información, consulte [Usar listas de pruebas (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182461(VS.100).aspx).  

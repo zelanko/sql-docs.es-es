@@ -17,18 +17,18 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb7c869dbf087db4c59eb9e5ba30c48f6e33f055
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef9e1bc117338fe66816b32634c188730caf4244
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053792"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981877"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Cuadro de diálogo Índices espaciales (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Use el cuadro de diálogo **Índices espaciales** para crear índices para las columnas del tipo de datos **geometry** o **geography** (*columnas espaciales*) que no pueden indizarse mediante el cuadro de diálogo **Índice y claves** . Cada columna espacial puede tener más de un índice espacial, pero se deben crear de uno en uno.  
   
-Para más información sobre las restricciones de la creación de índices espaciales, consulte [Información general sobre los índices espaciales](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293).  
+Para más información sobre las restricciones de la creación de índices espaciales, consulte [Información general sobre los índices espaciales](http://msdn.microsoft.com/b1ae7b78-182a-459e-ab28-f743e43f8293).  
   
 ## <a name="options"></a>Opciones  
 **Índice espacial seleccionado**  
@@ -122,5 +122,5 @@ Especifica si se deben calcular estadísticas nuevas cuando se crea el índice. 
 Especifica si se permite el bloqueo de filas en este índice. Permitir o denegar el bloqueo de fila afecta al rendimiento de la base de datos.  
   
 ## <a name="see-also"></a>Ver también  
-[Información general sobre los índices espaciales](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293)  
+[Información general sobre los índices espaciales](http://msdn.microsoft.com/b1ae7b78-182a-459e-ab28-f743e43f8293)  
   

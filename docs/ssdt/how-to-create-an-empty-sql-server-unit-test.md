@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.createtest
 ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
@@ -16,12 +16,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1476ab23a36faee220445218470c25713a47ebac
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: dead1b79e36fbda2565eaf64cb26dc63db0a7af7
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094829"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088447"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>Cómo: Crear una prueba unitaria de SQL Server vacía
 Incluya pruebas unitarias en el proyecto de base de datos para comprobar que los cambios realizados en los objetos de base de datos no interrumpen la funcionalidad existente. En los procedimientos siguientes se explica cómo crear pruebas unitarias de SQL Server para cualquier objeto de base de datos. SQL Server Data Tools incluye compatibilidad adicional para funciones, procedimientos y desencadenadores de base de datos almacenados. Para más información, consulte [Cómo: Crear pruebas unitarias de SQL Server para funciones, desencadenadores y procedimientos almacenados](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  

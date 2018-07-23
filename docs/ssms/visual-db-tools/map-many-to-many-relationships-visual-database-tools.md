@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a8ce11021e45d363b9713c2ae7bafc7d2c1b58e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c202d0c9a95a8e98cd9c603b2a2dbd874d4122b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33048292"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979127"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>Asignar relaciones varios a varios (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,9 +44,9 @@ Las relaciones varios a varios entre tablas se implementan en las bases de datos
   
 4.  Copie las columnas de clave principal de cada una de las otras dos tablas en la tabla de unión. Puede agregar otras columnas a esta tabla, así como a cualquier otra tabla.  
   
-5.  En la tabla de unión, establezca la clave principal para incluir todas las columnas de clave principal de las otras dos tablas. Para detalles, consulte [Crear claves principales (Visual Database Tools)](http://msdn.microsoft.com/en-us/85c623ca-4656-4d70-a9db-ee4d897cd214).  
+5.  En la tabla de unión, establezca la clave principal para incluir todas las columnas de clave principal de las otras dos tablas. Para detalles, consulte [Crear claves principales (Visual Database Tools)](http://msdn.microsoft.com/85c623ca-4656-4d70-a9db-ee4d897cd214).  
   
-6.  Defina una relación uno a varios entre las dos tablas principales y la tabla de unión. La tabla de unión debe estar en el lado "varios" de las dos relaciones que cree. Para detalles, consulte [Crear relaciones entre tablas (Visual Database Tools)](http://msdn.microsoft.com/en-us/867a54b8-5be4-46e6-9702-49ae6dabf67c).  
+6.  Defina una relación uno a varios entre las dos tablas principales y la tabla de unión. La tabla de unión debe estar en el lado "varios" de las dos relaciones que cree. Para detalles, consulte [Crear relaciones entre tablas (Visual Database Tools)](http://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c).  
   
     > [!NOTE]  
     > Al crear una tabla de unión en un diagrama de base de datos, no se insertan datos de las tablas relacionadas en la tabla de unión. Para más información sobre cómo insertar datos en una tabla, consulte [Crear consultas de inserción de resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md).  

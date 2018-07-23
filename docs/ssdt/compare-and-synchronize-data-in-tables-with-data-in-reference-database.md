@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
 caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a7f045f406f83f516d5d0218b344e40e15c232f1
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 4febbc5a2a66fada8e83b4fb81ae35d6fdabcd15
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094773"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082919"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>Comparar y sincronizar datos de una o más tablas con datos de una base de datos de referencia
 Puede comparar los datos de una base de datos de *origen* y una base de datos de *destino* y especificar qué tablas se deben comparar. Puede revisarlos y decidir qué cambios sincronizar. A continuación, puede actualizar el destino para sincronizar las bases de datos o exportar el script de actualización al editor de Transact\-SQL o a un archivo.  
@@ -72,5 +72,5 @@ Al hacer clic en cualquier tabla o vista en la ventana **Comparación de datos**
   
 ## <a name="see-also"></a>Ver también  
 [SQL Server Data Tools](../ssdt/sql-server-data-tools.md)  
-[Uso de Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Cómo: Usar Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

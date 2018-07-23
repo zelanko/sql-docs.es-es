@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 003713e2-de6b-4277-a0a8-7d1f2f4ffb39
 caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e9def185eb7e584123b68913ce5be1c576807adf
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 9c0953156c0f3c002ea3f08ab7e18d6544eb667b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094670"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083217"
 ---
 # <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>Comprobar el código de base de datos con pruebas unitarias de SQL Server
 Puede usar las pruebas unitarias de SQL Server para establecer un estado de línea base para la base de datos y después para comprobar los cambios subsiguientes que realice en los objetos de base de datos.  
@@ -45,7 +45,7 @@ El shell de SQL Server Data Tools integrado de Visual Studio 2010 y Visual Studi
 ## <a name="common-tasks"></a>Tareas comunes  
 En la siguiente tabla, puede buscar las descripciones de tareas comunes que admiten este escenario y vínculos a más información acerca de cómo completar correctamente esas tareas.  
   
-|Tareas comunes|Contenido de soporte|  
+|Tareas comunes|Contenido adicional|  
 |----------------|----------------------|  
 |**Obtener experiencia práctica**: puede realizar un tutorial de introducción para familiarizarse con la forma de crear y ejecutar una prueba unitaria simple de SQL Server. En este tutorial se incluye un ejemplo de una prueba unitaria negativa de SQL Server.|[Tutorial: Crear y ejecutar una prueba unitaria de SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)|  
 |**Definir las pruebas unitarias de SQL Server**:debe crear las pruebas unitarias de SQL Server en su propio proyecto. Configure los valores para el proyecto y defina una o varias condiciones de prueba para cada prueba.|[Crear y definir pruebas unitarias de SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)<br /><br />[Usar condiciones de prueba en pruebas unitarias de SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)|  

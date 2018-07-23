@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b08337c4602e7eaad2da376b22caa8f806e5b18
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 741168fafc480c74d34a74c346d307321fa74e43
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094621"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085487"
 ---
 # <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Cómo: Esquematizar y agregar fragmentos de código a script Transact-SQL
 SQL Server Data Tools incluye una biblioteca de código formada por fragmentos de código que están listos para insertarse en la aplicación. Cada fragmento de código realiza una tarea de script completa como la creación de una función, tabla, desencadenador, índice, vista, tipo de datos definido por el usuario, etc. Bastan unos pocos clics del mouse para insertar un fragmento de código en el código fuente. Estos fragmentos de código aumentan la productividad al reducir el tiempo dedicado a escribir.  

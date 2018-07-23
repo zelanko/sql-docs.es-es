@@ -18,12 +18,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee54d948bb5acebaf55a3b0137677bf72013570d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 16ce8b8901e94ea995b1ac0c517d0df7f7304922
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33048442"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979318"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Crear consultas a partir de otro objeto distinto de una tabla (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -147,5 +147,5 @@ FROM
      fn_GetWholeTeam ('VPA30890F')  
 ```  
   
-"VPA30890F" es el emp_id del director cuya organización desea recuperar. Para obtener más información sobre cómo agregar una función definida por el usuario a una consulta, consulte [Agregar tablas a las consultas (Visual Database Tools)](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md). Para obtener una descripción completa de las funciones definidas por el usuario, consulte [Funciones definidas por el usuario](http://msdn.microsoft.com/en-us/d7ddafab-f5a6-44b0-81d5-ba96425aada4).  
+"VPA30890F" es el emp_id del director cuya organización desea recuperar. Para obtener más información sobre cómo agregar una función definida por el usuario a una consulta, consulte [Agregar tablas a las consultas (Visual Database Tools)](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md). Para obtener una descripción completa de las funciones definidas por el usuario, consulte [Funciones definidas por el usuario](http://msdn.microsoft.com/d7ddafab-f5a6-44b0-81d5-ba96425aada4).  
   

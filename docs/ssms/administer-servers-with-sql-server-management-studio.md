@@ -18,12 +18,12 @@ caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 024175506b041ae9c62585dbdcc05da4b84bea02
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f0cabc48571c7b3656086d918b649bb5bb305e23
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33039642"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985377"
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>Administrar servidores con SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "33039642"
 Entre las herramientas que componen [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] se incluyen Servidores registrados, el Explorador de objetos, el Explorador de soluciones, el Explorador de plantillas, la página Detalles del Explorador de objetos y la ventana de documento. Para mostrar una herramienta, haga clic en su nombre en el menú **Ver** . Para mostrar el Editor de consultas, haga clic en el botón **Nueva consulta** de la barra de herramientas.  
   
 > [!IMPORTANT]  
-> El tráfico de red entre [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] y [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] no está cifrado de forma predeterminada. No trabaje con datos confidenciales (incluidas contraseñas) en [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] a menos que haya establecido una conexión cifrada. Para más información, consulte [Habilitar conexiones cifradas en el motor de base de datos (Administrador de configuración de SQL Server)](http://msdn.microsoft.com/en-us/e1e55519-97ec-4404-81ef-881da3b42006).  
+> El tráfico de red entre [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] y [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] no está cifrado de forma predeterminada. No trabaje con datos confidenciales (incluidas contraseñas) en [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] a menos que haya establecido una conexión cifrada. Para más información, consulte [Habilitar conexiones cifradas en el motor de base de datos (Administrador de configuración de SQL Server)](http://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006).  
   
 Use [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] para:  
   
@@ -66,5 +66,5 @@ Para iniciar y detener [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] o 
   
 ## <a name="see-also"></a>Ver también  
 [Usar SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
-[Ver las propiedades de un servidor (SQL Server Management Studio)](http://msdn.microsoft.com/en-us/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
+[Ver las propiedades de un servidor (SQL Server Management Studio)](http://msdn.microsoft.com/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
   

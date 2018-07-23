@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9aa5c92c0579fdcda7ca336e4893b1a5417dfaa0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e972f506f9b805d0cca28e0dfe3340e2ee28cd57
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045082"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979717"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Crear y adjuntar programaciones a trabajos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ Para maximizar los recursos de CPU, puede definir una condición de CPU inactiva
   
 Antes de definir trabajos para que se ejecuten durante el tiempo de inactividad de CPU, determine la carga de la CPU durante el procesamiento normal. Para ello, utilice el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] o el Monitor de rendimiento para supervisar el tráfico del servidor y obtener estadísticas. La información que obtenga puede utilizarla para establecer el porcentaje y la duración del tiempo de inactividad de CPU.  
   
-Defina la condición de CPU inactiva como un porcentaje por debajo del cual el uso de CPU debe permanecer durante un intervalo de tiempo especificado. A continuación, establezca la duración. Cuando el uso de CPU esté por debajo del porcentaje especificado para el tiempo determinado, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] iniciará todos los trabajos que tengan una programación de tiempo de inactividad de CPU. Para más información sobre cómo usar el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] o el Monitor de rendimiento para supervisar el uso de CPU, consulte [Supervisar el uso de CPU](http://msdn.microsoft.com/en-us/2a02a3b6-07b2-4ad0-8a24-670414d19812).  
+Defina la condición de CPU inactiva como un porcentaje por debajo del cual el uso de CPU debe permanecer durante un intervalo de tiempo especificado. A continuación, establezca la duración. Cuando el uso de CPU esté por debajo del porcentaje especificado para el tiempo determinado, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] iniciará todos los trabajos que tengan una programación de tiempo de inactividad de CPU. Para más información sobre cómo usar el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] o el Monitor de rendimiento para supervisar el uso de CPU, consulte [Supervisar el uso de CPU](http://msdn.microsoft.com/2a02a3b6-07b2-4ad0-8a24-670414d19812).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -102,6 +102,6 @@ Defina la condición de CPU inactiva como un porcentaje por debajo del cual el u
 |Explica cómo definir la condición de inactividad de la CPU para el servidor.|[Establecer la duración y el tiempo de inactividad de la CPU &#40;SQL Server Management Studio&#41;](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>Ver también  
-[sp_help_jobschedule](http://msdn.microsoft.com/en-us/2cded902-9272-4667-ac4b-a4f95a9f008e)  
-[sysjobschedules](http://msdn.microsoft.com/en-us/ccdafec7-2a9b-4356-bffb-1caa3a12db59)  
+[sp_help_jobschedule](http://msdn.microsoft.com/2cded902-9272-4667-ac4b-a4f95a9f008e)  
+[sysjobschedules](http://msdn.microsoft.com/ccdafec7-2a9b-4356-bffb-1caa3a12db59)  
   

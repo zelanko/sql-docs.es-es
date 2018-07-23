@@ -19,12 +19,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02bb00f5a9edc2a0dcf00a489a1471fa06ba181e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4da622bd856de2c2eabf22a9f7f2fbef1f64144
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043482"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979877"
 ---
 # <a name="external-tools-dialog-box"></a>Cuadro de diálogo Herramientas externas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ Especifique la ruta de acceso al archivo que se va a iniciar.
 Especifica las variables que pasan a la herramienta cuando ésta se selecciona en el menú. Los argumentos pueden especificar valores que pasan a la herramienta o el comando cuando estos se inician. Por ejemplo, un valor puede especificar un nombre de archivo o un directorio. Utilice el botón de flecha para seleccionar entre una lista de argumentos predefinidos. Es posible agregar más de uno. Para obtener una lista completa de los argumentos predefinidos y sus definiciones, vea [Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md). También puede especificar argumentos personalizados (por ejemplo, modificadores de la línea de comandos) según el comando o la herramienta que utilice.  
   
 **Usar la ventana de resultados**  
-Abra la ventana de resultados de [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] para mostrar el resultado del comando que se está ejecutando. No todas las herramientas presentan el resultado en un formato que puede verse en la ventana de resultados. Para más información, consulte [Ventana Resultados](http://msdn.microsoft.com/en-us/9808e00c-c8f6-45cc-896e-192b8420f747).  
+Abra la ventana de resultados de [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] para mostrar el resultado del comando que se está ejecutando. No todas las herramientas presentan el resultado en un formato que puede verse en la ventana de resultados. Para más información, consulte [Ventana Resultados](http://msdn.microsoft.com/9808e00c-c8f6-45cc-896e-192b8420f747).  
   
 **Tratar resultado como Unicode**  
 Interpreta el resultado como Unicode.  

@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4f817a5f98f1b17f8f2b91bc648bf921e21c9a15
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 296c951dcd5ae00740c4040c717857c915c3dce9
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043392"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983947"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>Administrar trabajos en una empresa
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,15 +43,15 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 Para notificar a los servidores de destino de que se ha modificado un trabajo multiservidor, debe invocar el comando anterior después de utilizar uno de los siguientes procedimientos:  
   
--   [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/en-us/97900032-523d-49d6-9865-2734fba1c755)  
+-   [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)  
   
--   [sp_update_jobstep (Transact-SQL)](http://msdn.microsoft.com/en-us/e158802c-c347-4a5d-bf75-c03e5ae56e6b)  
+-   [sp_update_jobstep (Transact-SQL)](http://msdn.microsoft.com/e158802c-c347-4a5d-bf75-c03e5ae56e6b)  
   
--   [sp_delete_jobstep (Transact-SQL)](http://msdn.microsoft.com/en-us/421ede8e-ad57-474a-9fb9-92f70a3e77e3)  
+-   [sp_delete_jobstep (Transact-SQL)](http://msdn.microsoft.com/421ede8e-ad57-474a-9fb9-92f70a3e77e3)  
   
--   [Administrar eventos](http://msdn.microsoft.com/en-us/80c80eaf-cf23-4ed8-b8dd-65fe59830dd1)  
+-   [Administrar eventos](http://msdn.microsoft.com/80c80eaf-cf23-4ed8-b8dd-65fe59830dd1)  
   
--   [sp_detach_schedule (Transact-SQL)](http://msdn.microsoft.com/en-us/9a1fc335-1bef-4638-a33a-771c54a5dd19)  
+-   [sp_detach_schedule (Transact-SQL)](http://msdn.microsoft.com/9a1fc335-1bef-4638-a33a-771c54a5dd19)  
   
     > [!NOTE]  
     > No es necesario llamar a **sp_post_msx_operation** después de llamar a **sp_update_job** o **sp_delete_job**, ya que estos procedimientos almacenados exponen automáticamente los cambios necesarios en la lista de descarga.  
@@ -60,37 +60,37 @@ A continuación se muestran tareas comunes para la administración de trabajos e
   
 **Para comprobar el estado de un servidor de destino**  
   
--   [Transact-SQL](http://msdn.microsoft.com/en-us/f841d3bd-901a-4980-ad0b-1c6eeba3f717)  
+-   [Transact-SQL](http://msdn.microsoft.com/f841d3bd-901a-4980-ad0b-1c6eeba3f717)  
   
--   [Objetos de administración de SQL Server (SMO)](http://msdn.microsoft.com/en-us/4cde2b85-2a31-4cac-8d16-7a4196066193)  
+-   [Objetos de administración de SQL Server (SMO)](http://msdn.microsoft.com/4cde2b85-2a31-4cac-8d16-7a4196066193)  
   
 **Para modificar los servidores de destino para un trabajo**  
   
 -   [SQL Server Management Studio](../../ssms/agent/modify-the-target-servers-for-a-job.md)  
   
--   [Transact-SQL](http://msdn.microsoft.com/en-us/485252cc-0081-490a-9bd1-cbbd68eea286)  
+-   [Transact-SQL](http://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286)  
   
--   [Objetos de administración de SQL Server (SMO)](http://msdn.microsoft.com/en-us/4cde2b85-2a31-4cac-8d16-7a4196066193)  
+-   [Objetos de administración de SQL Server (SMO)](http://msdn.microsoft.com/4cde2b85-2a31-4cac-8d16-7a4196066193)  
   
 **Para modificar la ubicación de un servidor de destino**  
   
 -   [SQL Server Management Studio](../../ssms/agent/specify-a-target-server-s-location-sql-server-management-studio.md)  
   
--   [Transact-SQL](http://msdn.microsoft.com/en-us/ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f)  
+-   [Transact-SQL](http://msdn.microsoft.com/ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f)  
   
--   [Objetos de administración de SQL Server (SMO)](http://msdn.microsoft.com/en-us/4cde2b85-2a31-4cac-8d16-7a4196066193)  
+-   [Objetos de administración de SQL Server (SMO)](http://msdn.microsoft.com/4cde2b85-2a31-4cac-8d16-7a4196066193)  
   
 **Para sincronizar los relojes de los servidores de destino**  
   
 -   [SQL Server Management Studio](../../ssms/agent/synchronize-target-server-clocks-sql-server-management-studio.md)  
   
--   [Transact-SQL](http://msdn.microsoft.com/en-us/40e44df7-d3e3-44ee-b149-08aba629a21f)  
+-   [Transact-SQL](http://msdn.microsoft.com/40e44df7-d3e3-44ee-b149-08aba629a21f)  
   
 **Para forzar que un servidor de destino sondee el servidor maestro**  
   
 -   [SQL Server Management Studio](../../ssms/agent/force-a-target-server-to-poll-the-master-server.md)  
   
--   [Transact-SQL](http://msdn.microsoft.com/en-us/085deef8-2709-4da9-bb97-9ab32effdacf)  
+-   [Transact-SQL](http://msdn.microsoft.com/085deef8-2709-4da9-bb97-9ab32effdacf)  
   
 ## <a name="see-also"></a>Ver también  
 [Administrar eventos](../../ssms/agent/manage-events.md)  

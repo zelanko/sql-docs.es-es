@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 28711972b866887bf066d5d7df766e56aa525969
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f27c9d8296f0a48f4bf61a41489a0f94bc6bd001
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043552"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985457"
 ---
 # <a name="view-information-about-an-operator"></a>Ver información acerca de un operador
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -108,5 +108,5 @@ Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base d
     GO  
     ```  
   
-Para más información, consulte [sp_help_operator (Transact-SQL)](http://msdn.microsoft.com/en-us/caedc43d-44b8-415a-897e-92923f6de3b8).  
+Para más información, consulte [sp_help_operator (Transact-SQL)](http://msdn.microsoft.com/caedc43d-44b8-415a-897e-92923f6de3b8).  
   

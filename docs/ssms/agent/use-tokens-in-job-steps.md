@@ -23,11 +23,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 01eb7c21ff82d25e49982d5acd700ed9226f53bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046042"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971367"
 ---
 # <a name="use-tokens-in-job-steps"></a>Usar tokens en pasos de trabajo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ En las siguientes tablas se indican y describen los tokens y macros compatibles 
   
 ### <a name="sql-server-agent-tokens"></a>Tokens del Agente SQL Server  
   
-|Token|Description|  
+|Token|Descripción|  
 |---------|---------------|  
 |**(A-DBN)**|Nombre de base de datos. Si el trabajo se ejecuta a causa de una alerta, el valor del nombre de la base de datos sustituye automáticamente a este token en el paso de trabajo.|  
 |**(A-SVR)**|Nombre de servidor. Si el trabajo se ejecuta a causa de una alerta, el valor del nombre del servidor sustituye automáticamente a este token en el paso de trabajo.|  
@@ -97,7 +97,7 @@ En las siguientes tablas se indican y describen los tokens y macros compatibles 
   
 ### <a name="sql-server-agent-escape-macros"></a>Macros de escape del Agente SQL Server  
   
-|Macros de escape|Description|  
+|Macros de escape|Descripción|  
 |-----------------|---------------|  
 |**$(ESCAPE_SQUOTE(***nombre_de_token***))**|Convierte las comillas simples (') en la cadena de reemplazo del token. Sustituye una comilla simple por dos comillas simples.|  
 |**$(ESCAPE_DQUOTE(***nombre_de_token***))**|Convierte las comillas dobles ('') en la cadena de reemplazo del token. Sustituye una comilla doble por dos comillas dobles.|  

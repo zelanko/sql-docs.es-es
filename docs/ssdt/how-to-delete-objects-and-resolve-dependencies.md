@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Microsoft.VisualStudio.Data.Tools.Project.HelpKeywords.SqlProjectDropDatabaseConfirmationDialog
 - sql.data.tools.dropdatabaseconfirmation.dialog
@@ -18,12 +18,12 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d734b9d8e200742e9dae7363e0d1559a99b7532
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: ae1375a871598a1bf4ce4bd217336450c50d3264
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094893"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082697"
 ---
 # <a name="how-to-delete-objects-and-resolve-dependencies"></a>Cómo: Eliminar objetos y resolver dependencias
 Al cambiar el nombre de un objeto o eliminarlo en el **Explorador de objetos de SQL Server**, SQL Server Data Tools detecta automáticamente todos sus objetos de dependencia y preparará un script ALTER para cambiar el nombre de la dependencia o quitarla según sea necesario.  

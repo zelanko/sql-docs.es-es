@@ -23,12 +23,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d59e3448b3e833adacab7b37708725e8ff36864
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb6cb14124589796e0e1a8e31f437b4eb7d6c383
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045838"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984027"
 ---
 # <a name="object-explorer-details-pane"></a>Panel de detalles del Explorador de objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,7 +93,7 @@ Detalles del Explorador de objetos admite la selección de varios objetos. Por e
 ## <a name="sql-server-object-search"></a>Buscar objetos de SQL Server  
 Caracteres comodín  
   
--   Se admiten los caracteres comodín estándar. Por ejemplo, si se busca **dm_os%counters** , se devuelve tanto dm_os_memory_cache_counters como dm_os_performance_counters. Para más información, consulte [Buscar texto con caracteres comodín](http://msdn.microsoft.com/en-us/449600f8-cc87-4b3f-878a-59c158a88a40).  
+-   Se admiten los caracteres comodín estándar. Por ejemplo, si se busca **dm_os%counters** , se devuelve tanto dm_os_memory_cache_counters como dm_os_performance_counters. Para más información, consulte [Buscar texto con caracteres comodín](http://msdn.microsoft.com/449600f8-cc87-4b3f-878a-59c158a88a40).  
   
 Ámbito de búsqueda  
   

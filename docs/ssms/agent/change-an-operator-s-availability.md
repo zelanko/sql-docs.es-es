@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 05da3545f8171d792be1d11903617862669fbafa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a625eac321bbe49e579c362a74986dd26ea6c883
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041552"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984627"
 ---
 # <a name="change-an-operator39s-availability"></a>Cambiar la disponibilidad de un operador
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -99,5 +99,5 @@ Solo los miembros del rol fijo de servidor **sysadmin** pueden editar operadores
     GO  
     ```  
   
-Para más información, consulte [sp_update_operator (Transact-SQL)](http://msdn.microsoft.com/en-us/231750a6-4828-4d03-afe6-b91d38c42ed3).  
+Para más información, consulte [sp_update_operator (Transact-SQL)](http://msdn.microsoft.com/231750a6-4828-4d03-afe6-b91d38c42ed3).  
   

@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
 caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cd78c5bc136a72fde04ccd42a02e26c26d75531a
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 276096d9e5ce082f31439e664614833eb68f6984
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094629"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083718"
 ---
 # <a name="how-to-run-sql-server-unit-tests"></a>Cómo: Ejecutar pruebas unitarias de SQL Server
 Puede ejecutar una prueba unitaria de SQL Server de varias maneras, por ejemplo mediante varias ventanas y la ventana del símbolo del sistema.  
@@ -57,7 +57,7 @@ Las maneras disponibles dependen del software que haya instalado, como se descri
   
 -   En la barra de herramientas **Herramientas de prueba** encontrará botones para iniciar un proyecto con o sin el depurador.  
   
-Este paso ejecuta todas las pruebas de la serie de pruebas actual. En cuanto se inicia una serie de pruebas, aparece la ventana **Resultados de pruebas**, que muestra el progreso de la serie de pruebas. Esta pantalla incluye las pruebas que se están ejecutando y las pruebas que se han completado. Para obtener más información, consulte [Interpretar los resultados de pruebas unitarias de SQL Server](../ssdt/interpreting-sql-server-unit-test-results.md).  
+Este paso ejecuta todas las pruebas de la serie de pruebas actual. En cuanto se inicia una serie de pruebas, aparece la ventana **Resultados de pruebas**, que muestra el progreso de la serie de pruebas. Esta pantalla incluye las pruebas que se están ejecutando y las pruebas que se han completado. Para más información, consulte [Interpretar los resultados de pruebas unitarias de SQL Server](../ssdt/interpreting-sql-server-unit-test-results.md).  
   
 ## <a name="see-also"></a>Ver también  
 [Ejecutar pruebas unitarias de SQL Server](../ssdt/running-sql-server-unit-tests.md)  

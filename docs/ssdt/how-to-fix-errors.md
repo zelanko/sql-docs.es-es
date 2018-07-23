@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
 caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4984e28ae3397b6296f8d1a39a6d32474b27f9c
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 1aa9159335f5eaf3f426a77bd577cdfeb3d0739b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094814"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088547"
 ---
 # <a name="how-to-fix-errors"></a>Cómo: Corregir errores
 El panel Lista de errores muestra todos los errores de implementación o de compilación. Los errores de sintaxis y semánticos producidos por la edición en el Editor de Transact\-SQL o en el Diseñador de tablas también aparecen en la lista al editar entidades de base de datos y sus definiciones. La Lista de errores se actualiza dinámicamente a medida que se editan scripts en distintas pestañas. Después, puede seguir los errores identificados para la solución de problemas.  

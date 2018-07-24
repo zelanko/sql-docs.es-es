@@ -26,12 +26,12 @@ caps.latest.revision: 56
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a3d81598480aab552b0891fb7ae1247d9149ce71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 47ac8b682f2e31fc104c91203b9174ea0a4f0297
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036922"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980847"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Suscripciones y entrega (Reporting Services)
   Una suscripción [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es una configuración que entrega un informe a una hora concreta o a raíz de un evento. Lo hace en el formato de archivo que se especifique. Por ejemplo, todos los miércoles, se guarda el informe VentasMensuales en formato de documento Microsoft Word en un recurso compartido de archivos. Las suscripciones se pueden utilizar para programar y automatizar la entrega de un informe con un conjunto concreto de valores de parámetros de informes.  
@@ -85,7 +85,7 @@ ms.locfileid: "33036922"
   
  En la tabla siguiente se describen los escenarios de suscripción comunes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-|Escenario|Description|  
+|Escenario|Descripción|  
 |--------------|-----------------|  
 |Informes por correo electrónico|Envíe informes por correo electrónico a usuarios individuales y grupos. Cree una suscripción y especifique un alias de grupo o de correo electrónico para recibir el informe que desea distribuir. Puede hacer que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] determine los datos de la suscripción en tiempo de ejecución. Si desea enviar el mismo informe a un grupo que tiene una lista variable de miembros, puede usar una consulta para derivar la lista de suscripción en tiempo de ejecución.|  
 |Ver informes sin conexión|Los usuarios pueden seleccionar uno de los formatos siguientes para la salida de la suscripción:<br /><br /> - Archivo XML con datos de informe<br />- CSV (delimitado por comas)<br />- PDF<br />- MHTML (archivo web)<br />- Microsoft Excel<br />- Archivo TIFF<br />- Microsoft Word<br /><br /> Los informes que desee archivar pueden enviarse directamente a una carpeta compartida de la que se hará copia de seguridad con arreglo a una programación nocturna. Los informes grandes que tardan demasiado tiempo en cargarse en un explorador se pueden enviar a una carpeta compartida en un formato que pueda verse en una aplicación de escritorio.|  
@@ -104,10 +104,10 @@ ms.locfileid: "33036922"
 ##  <a name="bkmk_subscription_requirements"></a> Requisitos de suscripción  
  Para poder crear una suscripción a un informe, se deben cumplir los siguiente requisitos previos:  
   
-|Requisito|Description|  
+|Requisito|Descripción|  
 |-----------------|-----------------|  
 |Permisos|Debe tener acceso al informe. Para poder suscribirse a un informe, debe tener permiso para verlo.<br /><br /> Para los servidores de informes en modo nativo, las asignaciones de roles siguientes afectan a las suscripciones:<br /><br /> - La tarea "Administrar suscripciones individuales" permite a los usuarios crear, modificar y eliminar suscripciones correspondientes a un informe específico. En los roles predefinidos, esta tarea forma parte de los roles Explorador y Generador de informes. Las asignaciones de roles que incluyen esta tarea permiten al usuario administrar únicamente las suscripciones que crea.<br />- La tarea "Administrar todas las suscripciones" permite a los usuarios acceder a todas las suscripciones y modificarlas. Esta tarea es necesaria para crear suscripciones controladas por datos. En los roles predefinidos, solo el rol Administrador de contenido incluye esta tarea.|  
-|Credenciales almacenadas|Para crear una suscripción, el informe debe utilizar credenciales almacenadas o ninguna credencial para recuperar datos en tiempo de ejecución. No puede suscribirse a un informe configurado para usar las credenciales representadas o delegadas del usuario actual para conectarse a un origen de datos externo. Las credenciales almacenadas pueden ser una cuenta de Windows o una cuenta de usuario de base de datos. Para más información, vea [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).<br /><br /> Debe tener el permiso para ver el informe y crear suscripciones individuales. La opción**Eventos programados y entrega de informes** debe estar habilitada en el servidor de informes. Para más información, vea [Crear y administrar suscripciones para servidores de informes en modo nativo](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).|  
+|Credenciales almacenadas|Para crear una suscripción, el informe debe utilizar credenciales almacenadas o ninguna credencial para recuperar datos en tiempo de ejecución. No puede suscribirse a un informe configurado para usar las credenciales representadas o delegadas del usuario actual para conectarse a un origen de datos externo. Las credenciales almacenadas pueden ser una cuenta de Windows o una cuenta de usuario de base de datos. Para más información, vea [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).<br /><br /> Debe tener el permiso para ver el informe y crear suscripciones individuales. La opción**Eventos programados y entrega de informes** debe estar habilitada en el servidor de informes. Para más información, vea [Crear y administrar suscripciones para servidores de informes en modo nativo](http://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).|  
 |Valores dependientes de usuario en un informe|Únicamente en el caso de las suscripciones estándar, es posible crear suscripciones a informes que incluyan información de cuenta de usuario en un filtro o como texto que aparezca en el informe. En el informe, el nombre de la cuenta de usuario se especifica con una expresión **User!UserID** que da como resultado el usuario actual. Cuando se crea una suscripción, se considera que el usuario actual es el que la crea.|  
 |Sin seguridad de elemento de modelo|No es posible suscribirse a un informe del Generador de informes que utilice como origen de datos un modelo si éste contiene una configuración de seguridad de elementos de modelo. Esta restricción solo se aplica a los informes que utilizan seguridad de elementos de modelo.|  
 |Valores de parámetros|Si el informe utiliza parámetros, se debe especificar un valor de parámetro con el propio informe o en la suscripción que defina. Si se han definido valores predeterminados en el informe, puede establecer el valor del parámetro para que utilice la opción predeterminada.|  
@@ -117,7 +117,7 @@ ms.locfileid: "33036922"
   
  Cuando un usuario crea una suscripción, puede elegir una de las extensiones de entrega disponibles para determinar cómo se entrega el informe. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye las siguientes extensiones de entrega.  
   
-|Extensión de entrega|Description|  
+|Extensión de entrega|Descripción|  
 |------------------------|-----------------|  
 |Recurso compartido de archivos de Windows|Entrega un informe como un archivo de aplicación estática a una carpeta compartida accesible en la red.|  
 |Correo electrónico|Entrega una notificación o un informe como datos adjuntos de correo electrónico o como vínculo de dirección URL.|  

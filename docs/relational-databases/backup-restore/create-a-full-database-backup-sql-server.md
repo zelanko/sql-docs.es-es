@@ -19,16 +19,16 @@ caps.latest.revision: 63
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0cdafe9c854ccce0dd554d52afb850b39c97a7d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9a9f8f115dd24f27f1c140677775ba9e29dd7468
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923280"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982897"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Crear una copia de seguridad completa de base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Para SQL Server 2014, vaya a [Crear una copia de seguridad completa de base de datos (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
+ > Para SQL Server 2014, vaya a [Crear una copia de seguridad completa de base de datos (SQL Server)](https://msdn.microsoft.com/library/ms187510(SQL.120).aspx).
 
   En este tema se explica cómo crear una copia de seguridad completa de la base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
   
@@ -263,7 +263,7 @@ Se ha creado una directiva de acceso almacenada con derechos de lectura, escritu
   
      [ WITH *with_options* [ **,**...*o* ] ] ;  
   
-    |Opción|Description|  
+    |Opción|Descripción|  
     |------------|-----------------|  
     |*database*|Es la base de datos cuya copia de seguridad se desea hacer.|  
     |*backup_device* [ **,**...*n* ]|Especifica una lista de 1 a 64 dispositivos de copia de seguridad que se pueden utilizar en la operación de copia de seguridad. Puede especificar un dispositivo físico de copia de seguridad o puede especificar un dispositivo de copia de seguridad lógico correspondiente, si ya se definió. Para especificar un dispositivo de copia de seguridad físico, use la opción DISK o TAPE:<br /><br /> { DISK &#124; TAPE } **=***nombre_de_dispositivo_de_copia_de_seguridad_física*<br /><br /> Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  

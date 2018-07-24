@@ -35,22 +35,22 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f54b14989ac5df37bbb8ee386c783c9721a32206
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075672"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974284"
 ---
 # <a name="bcp-utility"></a>bcp (utilidad)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [bcp (Utilidad)](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx).
 
- > Para obtener la versión más reciente de la utilidad bcp, vea [14.0 de utilidades de línea de comandos de Microsoft para SQL Server ](http://go.microsoft.com/fwlink/?LinkID=825643)
+ > Para obtener la versión más reciente de la utilidad bcp, consulte [14.0 de utilidades de línea de comandos de Microsoft para SQL Server ](http://go.microsoft.com/fwlink/?LinkID=825643)
 
- > Para usar bcp en Linux, consulte [instalar sqlcmd y bcp en Linux](../linux/sql-server-linux-setup-tools.md).
+ > Para el uso de bcp en Linux, consulte [instalar sqlcmd y bcp en Linux](../linux/sql-server-linux-setup-tools.md).
 
- > Para obtener información detallada sobre el uso de bcp con almacenamiento de datos de SQL Azure, consulte [carga los datos con bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
+ > Para obtener información detallada sobre el uso de bcp con Azure SQL Data Warehouse, consulte [carga de datos con bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 
   La utilidad de **p**rograma **d**e **p**copia masiva (**bcp**) hace copias masivas de los datos entre una instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y un archivo de datos en un formato especificado por el usuario. La utilidad **bcp** se puede usar para importar un número elevado de filas nuevas en tablas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o para exportar datos de tablas a archivos de datos. Excepto cuando se usa con la opción **queryout** , la utilidad no requiere ningún conocimiento de [!INCLUDE[tsql](../includes/tsql-md.md)]. Para importar datos en una tabla, debe usar un archivo de formato creado para esa tabla o comprender la estructura de la tabla y los tipos de datos que son válidos para sus columnas.  
   
@@ -150,7 +150,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > [!NOTE]
 > Se recomienda especificar un nombre de intercalación para cada columna en un archivo de formato, excepto cuando quiera que la opción 65001 tenga prioridad sobre la especificación de la página de códigos o la intercalación.
   
-|Valor de página de códigos|Description|  
+|Valor de página de códigos|Descripción|  
 |---------------------|-----------------|  
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252).|  
 |OEM|Página de códigos predeterminada, utilizada por el cliente. Esta es la página de códigos que se usa de forma predeterminada si no se especifica **-C** .|  
@@ -190,21 +190,21 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  *first_row* puede ser un valor entero positivo hasta 2^63-1. **-F** *first_row* is 1-based.  
 
 **-G**<a name="G"></a>  
- El cliente usa este modificador al conectarse a Azure SQL Database o SQL Data Warehouse para especificar que el usuario se autentica mediante la autenticación de Azure Active Directory. Requiere el modificador -G [versión 14.0.3008.27 o posterior](http://go.microsoft.com/fwlink/?LinkID=825643). Para determinar su versión, ejecute bcp -v. Para obtener más información, consulte [Use Azure autenticación de Active Directory para la autenticación con la base de datos SQL o almacenamiento de datos de SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
+ El cliente usa este modificador al conectarse a Azure SQL Database o SQL Data Warehouse para especificar que el usuario se autentica mediante la autenticación de Azure Active Directory. El modificador -G requiere [versión 14.0.3008.27 o posterior](http://go.microsoft.com/fwlink/?LinkID=825643). Para determinar su versión, ejecute bcp -v. Para obtener más información, consulte [Use autenticación Azure Active Directory para la autenticación con SQL Database o SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
 
 > [!TIP]
->  Para comprobar si su versión de bcp incluye compatibilidad para el tipo de autenticación Azure Active Directory (AAD) **bcp--** (bcp\<espacio >\<guión >\<guión >) y compruebe que ve - G en la lista de argumentos disponibles.
+>  Para comprobar si su versión de bcp incluye compatibilidad para el tipo de autenticación Azure Active Directory (AAD) **bcp--** (bcp\<espacio >\<dash >\<dash >) y compruebe que ve - G en la lista de argumentos disponibles.
 
 - **Nombre de usuario y contraseña de Azure Active Directory:** 
 
     Si desea utilizar un nombre de usuario y una contraseña de Azure Active Directory, puede proporcionar la opción **- G** y usar también el nombre de usuario y la contraseña proporcionando las opciones **- U** y **-P** . 
 
-    En el ejemplo siguiente se exporta datos con el nombre de usuario de Azure AD y la contraseña que el usuario y la contraseña es una credencial de AAD. En el ejemplo se exporta la tabla `bcptest` de base de datos `testdb` de servidor de Azure `aadserver.database.windows.net` y almacena los datos en el archivo `c:\last\data1.dat`:
+    El ejemplo siguiente exporta los datos con el nombre de usuario de Azure AD y la contraseña donde el usuario y la contraseña es una credencial de AAD. En el ejemplo se exporta la tabla `bcptest` de base de datos `testdb` desde el servidor de Azure `aadserver.database.windows.net` y almacena los datos en el archivo `c:\last\data1.dat`:
     ``` 
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ``` 
 
-    El ejemplo siguiente importa datos con el nombre de usuario de Azure AD y la contraseña que el usuario y la contraseña es una credencial de AAD. En el ejemplo se importa datos de archivo `c:\last\data1.dat` en tabla `bcptest` de base de datos `testdb` en servidor de Azure `aadserver.database.windows.net` con Azure AD usuario/contraseña:
+    El ejemplo siguiente importa datos con el nombre de usuario de Azure AD y la contraseña donde el usuario y la contraseña es una credencial de AAD. El ejemplo importa los datos de archivo `c:\last\data1.dat` en tabla `bcptest` para base de datos `testdb` en servidor Azure `aadserver.database.windows.net` con Azure AD de usuario y contraseña:
     ```
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
@@ -213,15 +213,15 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - **Autenticación integrada de Azure Active Directory** 
  
-    Para autenticación integrada de Azure Active Directory, proporcione la opción **-G** sin un nombre de usuario o contraseña. Esta configuración da por supuesto que la cuenta de usuario de Windows actual (la cuenta que se está ejecutando el comando bcp) está federada con Azure AD: 
+    Para autenticación integrada de Azure Active Directory, proporcione la opción **-G** sin un nombre de usuario o contraseña. Esta configuración se da por supuesto que la cuenta de usuario de Windows actual (es decir, la cuenta se está ejecutando el comando bcp bajo) está federada con Azure AD: 
 
-    El ejemplo siguiente exporta datos mediante la cuenta integrada de Azure AD. En el ejemplo se exporta la tabla `bcptest` de base de datos `testdb` con Azure AD integrado del servidor Azure `aadserver.database.windows.net` y almacena los datos en el archivo `c:\last\data2.dat`:
+    El ejemplo siguiente exporta datos mediante la cuenta integrada de Azure AD. En el ejemplo se exporta la tabla `bcptest` de base de datos `testdb` con Azure AD integrado desde el servidor de Azure `aadserver.database.windows.net` y almacena los datos en el archivo `c:\last\data2.dat`:
 
     ```
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
-    El ejemplo siguiente importa datos mediante autenticación de Azure AD integrado. En el ejemplo se importa datos de archivo `c:\last\data2.txt` en tabla `bcptest` de base de datos `testdb` en servidor de Azure `aadserver.database.windows.net` mediante la autenticación integrada de Azure AD:
+    El ejemplo siguiente importa datos mediante la autenticación integrada de Azure AD El ejemplo importa los datos de archivo `c:\last\data2.txt` en tabla `bcptest` para base de datos `testdb` en servidor Azure `aadserver.database.windows.net` con la autenticación integrada de Azure AD:
 
     ```
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t

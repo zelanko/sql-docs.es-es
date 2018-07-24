@@ -1,5 +1,5 @@
 ---
-title: tablediff (utilidad) | Documentos de Microsoft
+title: tablediff, utilidad | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: daf978c77bca856ebc380c95bdca7185bcdee836
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077550"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974127"
 ---
 # <a name="tablediff-utility"></a>tablediff, utilidad
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -172,7 +172,7 @@ tablediff
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|Correcto|  
 |**1**|Error grave|  

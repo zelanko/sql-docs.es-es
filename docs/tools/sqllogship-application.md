@@ -1,5 +1,5 @@
 ---
-title: sqllogship (aplicación) | Documentos de Microsoft
+title: Aplicación sqllogship | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ce23bc4217f4bc538de0ddc1dbbaf8284a3c177
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077749"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969091"
 ---
 # <a name="sqllogship-application"></a>sqllogship (aplicación)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   La aplicación **sqllogship** realiza una operación de copia de seguridad, copia o restauración y las tareas de limpieza asociadas en una configuración de trasvase de registros. La operación se realiza en una instancia específica de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para una base de datos determinada.  
   
- ![Icono de vínculo de tema](../database-engine/configure-windows/media/topic-link.gif "icono de vínculo de tema") para las convenciones de sintaxis, vea [referencia de utilidad de línea de comandos &#40;motor de base de datos&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
+ ![Icono de vínculo de tema](../database-engine/configure-windows/media/topic-link.gif "icono de vínculo de tema") para las convenciones de sintaxis, vea [referencia utilidad de símbolo del sistema &#40;motor de base de datos&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -60,7 +60,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **–verboselevel** *level*  
  Especifica el nivel de mensajes agregados al historial de trasvase de registros. *level* es uno de los siguientes enteros:  
   
-|level|Description|  
+|level|Descripción|  
 |-----------|-----------------|  
 |0|No se obtienen mensajes de depuración ni de seguimiento.|  
 |1|Se obtienen mensajes de control de errores.|  

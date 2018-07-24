@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e58e34027de67558e6dde62ada3d023939999aec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33071782"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38034933"
 ---
 # <a name="derive-a-template-from-a-running-trace-sql-server-profiler"></a>Derivar una plantilla a partir de un seguimiento en ejecución (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

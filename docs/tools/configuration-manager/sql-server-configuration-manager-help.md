@@ -17,18 +17,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 064d6fb77dad0dd906c8783ebe82f99c48b14f2f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33072379"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979981"
 ---
 # <a name="sql-server-configuration-manager-help"></a>Ayuda del Administrador de configuración de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Use el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para configurar los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la conectividad de red. Para crear o administrar objetos de base de datos, configurar la seguridad y escribir consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] , use la herramienta [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información acerca de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vea los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
  > [!TIP]
- > Si necesita configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en Linux, use la **mssql-conf** herramienta. Para obtener más información, consulte [configurar SQL Server en Linux con la herramienta mssql-conf](../../linux/sql-server-linux-configure-mssql-conf.md).
+ > Si necesita configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en Linux, use el **mssql-conf** herramienta. Para obtener más información, consulte [configurar SQL Server en Linux con la herramienta mssql-conf](../../linux/sql-server-linux-configure-mssql-conf.md).
 
  En esta sección se incluyen los temas de la Ayuda F1 para los cuadros de diálogo del Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

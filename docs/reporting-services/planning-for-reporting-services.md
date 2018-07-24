@@ -15,12 +15,12 @@ caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: bad05c05805557c218fe372298c8840be3df9bb6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 63f6cce007ec4586a31e9acd7b170c7c826e708f
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018542"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985157"
 ---
 # <a name="planning-for-reporting-services"></a>Planeamiento para Reporting Services
   En estos temas obtendrá más información sobre [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Aprenda a instalar y configurar el entorno de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para adaptarlo a sus necesidades.  
@@ -28,7 +28,7 @@ ms.locfileid: "33018542"
  ![Icono pequeño de carpeta de archivos](../analysis-services/media/filefolder-small.png "Icono pequeño de carpeta de archivos") **Planeamiento y arquitectura de las características generales de Reporting Services**  
  [Compatibilidad del explorador de Reporting Services y Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
   
- [Planeación del diseño y la implementación de informes | Reporting Services](http://msdn.microsoft.com/en-us/1c1e265e-52a2-4de3-96fd-ca4abae01c02)  
+ [Planificación del diseño y la implementación de informes | Reporting Services](http://msdn.microsoft.com/1c1e265e-52a2-4de3-96fd-ca4abae01c02)  
   
  [Ver informes de Reporting Services en dispositivos de Microsoft Surface y de Apple iOS](http://msdn.microsoft.com/library/2124bcf5-d60a-475f-a4ae-de6df44d2860)  
   

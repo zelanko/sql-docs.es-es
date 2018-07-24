@@ -15,12 +15,12 @@ caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: b4ac3f71827d48a42953f5d1fc65ed1ec05c5a31
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: d7c90b45352ff3afe78891c6849b04d69ab58175
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334889"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984697"
 ---
 # <a name="tracing-master-data-services"></a>Seguimiento (Master Data Services)
 
@@ -31,7 +31,7 @@ ms.locfileid: "35334889"
 ```  
 <sources>  
       <!-- Adjust the switch value to control the types of messages that should be logged.   
-           http://msdn.microsoft.com/en-us/library/system.diagnostics.sourcelevels  
+           http://msdn.microsoft.com/library/system.diagnostics.sourcelevels  
            Use the a switchValue of Verbose to generate a full log. Please be aware that   
            the trace file can get quite large very quickly -->  
       <source name="MDS" switchType="System.Diagnostics.SourceSwitch" switchValue="Warning, ActivityTracing">  
@@ -54,7 +54,7 @@ ms.locfileid: "35334889"
   
 -   El seguimiento está habilitado para los mensajes de advertencia y ActivityTracing.  
   
-     Para más información, consulte [SourceLevels (Enumeración)](https://msdn.microsoft.com/en-us/library/system.diagnostics.sourcelevels).  
+     Para más información, consulte [SourceLevels (Enumeración)](https://msdn.microsoft.com/library/system.diagnostics.sourcelevels).  
   
 -   Los registros se guardan en la carpeta Registros en la carpeta WebApplication. La ubicación predeterminada es C:\Archivos de programa\Microsoft SQL Server\130\Master Data Services\WebApplication\Logs.  
   

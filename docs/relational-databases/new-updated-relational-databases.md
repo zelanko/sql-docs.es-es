@@ -4,7 +4,7 @@ description: Muestra fragmentos del contenido actualizado en la documentación d
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
@@ -12,12 +12,12 @@ ms.prod: sql
 ms.prod_service: sql-non-specified
 ms.component: relational-databases
 ms.date: 04/28/2018
-ms.openlocfilehash: a885befe2411a76dc8c68bf2a7b543a838a52877
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 4f962279eb30e15b395f96417cc5e03aa1dbcfad
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32607516"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087777"
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>Nuevos y actualizados recientemente: documentos de bases de datos relacionales
 

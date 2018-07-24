@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 3e81a3b98bbfe6507c768e541ac0fc613d28d52e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032382"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055840"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Solución de problemas de diseño de informes con Reporting Services
 Los problemas de diseño se pueden producir al crear un diseño de un informe en la vista Diseño en una aplicación de creación de informes. Utilice este tema como ayuda para solucionar estos problemas.   

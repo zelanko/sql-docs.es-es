@@ -17,15 +17,16 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 721f9245ff8057c54cef5facdf4a4de423e53961
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e76820fc010a88e7bc276e028bd84bcddc981ba8
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984687"
 ---
 # <a name="lesson-1-create-stored-access-policy-and-shared-access-signature"></a>Lección 1: Creación de una directiva de acceso almacenada y una firma de acceso compartido
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-En esta lección, usará un script de [PowerShell de Azure](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) para crear una firma de acceso compartido en un contenedor de blobs de Azure mediante una directiva de acceso almacenada.  
+En esta lección, usará un script de [PowerShell de Azure](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) para crear una firma de acceso compartido en un contenedor de blobs de Azure mediante una directiva de acceso almacenada.  
   
 > [!NOTE]  
 > Este script se escribió con Azure PowerShell 5.0.10586.  
@@ -138,7 +139,7 @@ Para crear una directiva en el contenedor y generar una clave de firma de acceso
 [Lección 2: Crear una credencial de SQL Server con una firma de acceso compartido](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
 ## <a name="see-also"></a>Ver también  
-[Firmas de acceso compartido, Parte 1: Descripción del modelo SAS](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
+[Firmas de acceso compartido, Parte 1: Descripción del modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [Crear contenedor](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [Establecer lista de control de acceso de contenedor](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
 [Obtener lista de control de acceso de contenedor](https://msdn.microsoft.com/library/azure/dd179469.aspx)  

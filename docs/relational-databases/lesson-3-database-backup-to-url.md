@@ -17,18 +17,19 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c04ca530ed9e01a7a5ec01e5fe7bcd31af78b41c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa6da6086cd5c1a0ebfd56394e5c79b2078ef82e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38978937"
 ---
 # <a name="lesson-3-database-backup-to-url"></a>Lesson 3: Database backup to URL (Lección 3: Copia de seguridad de base de datos en la dirección URL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 En esta lección, realizará una copia de seguridad de la base de datos AdventureWorks2014 en la instancia local de SQL Server 2016 en el contenedor de Azure que ha creado en la [Lección 1: Crear una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
   
 > [!NOTE]  
-> Si quiere realizar una copia de seguridad de una base de datos de SQL Server 2012 SP1 CU2 o posterior o de una base de datos de SQL Server 2014 a este contenedor de Azure, puede usar la sintaxis en desuso que aparece [aquí](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) para realizar una copia de seguridad en la dirección URL mediante la sintaxis WITH CREDENTIAL.  
+> Si quiere realizar una copia de seguridad de una base de datos de SQL Server 2012 SP1 CU2 o posterior o de una base de datos de SQL Server 2014 a este contenedor de Azure, puede usar la sintaxis en desuso que aparece [aquí](https://technet.microsoft.com/library/dn435916(v=sql.120).aspx) para realizar una copia de seguridad en la dirección URL mediante la sintaxis WITH CREDENTIAL.  
   
 Para realizar una copia de seguridad de una base de datos en Blob Storage, siga estos pasos:  
   

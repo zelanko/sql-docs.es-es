@@ -15,12 +15,12 @@ caps.latest.revision: 3
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4fe2db69e67e0d0e7630bd34c1d926be49e7bbe2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a37aefe9a63703ec5426dc3e2d4b73346bd70fbb
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028958"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983127"
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>Características de Reporting Services compatibles con las ediciones de SQL Server 2016
 
@@ -34,7 +34,7 @@ En este tema se indica información detallada de las características admitidas 
     
  > [![Descargar desde el Centro de evaluación](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Descargar SQL Server 2016 desde el Centro de evaluación](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
-> ![Máquina virtual de Azure pequeña](../analysis-services/media/azure-virtual-machine-small.png) **[Poner en marcha una máquina virtual con SQL Server 2016 ya instalado](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
+> ![Máquina virtual de Azure pequeña](../analysis-services/media/azure-virtual-machine-small.png) **[Poner en marcha una máquina virtual con SQL Server 2016 ya instalado](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
 
 Para conocer las características admitidas por las ediciones Evaluation y Developer, consulte SQL Server Enterprise Edition.
 
@@ -46,7 +46,7 @@ Para navegar por la tabla para buscar una tecnología de SQL Server, haga clic e
 
 ##  <a name="SSRS"></a> Reporting Services  
   
-|Nombre de la característica|Enterprise|Standard|Web|Express con Advanced Services|Express con herramientas|Express|Desarrollador|  
+|Nombre de la característica|Enterprise|Estándar|Web|Express con Advanced Services|Express con herramientas|Express|Desarrollador|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Informes móviles y KPI|Sí||||||Sí|  
 |Catálogo compatible con la edición DB [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Estándar o superior|Estándar o superior|Web|Express|||Estándar o superior|  
@@ -86,7 +86,7 @@ Para navegar por la tabla para buscar una tecnología de SQL Server, haga clic e
 |Para esta edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services|Utilice esta edición de la instancia del motor de base de datos para hospedar la base de datos|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
 |Enterprise|Edición Enterprise o Standard (local o remota)|  
-|Standard|Edición Enterprise o Standard (local o remota)|  
+|Estándar|Edición Enterprise o Standard (local o remota)|  
 |Web|Web Edition (solo local)|  
 |Express con Advanced Services|Express con Advanced Services (solo local).|  
 |Evaluation|Evaluation|  
@@ -94,7 +94,7 @@ Para navegar por la tabla para buscar una tecnología de SQL Server, haga clic e
 ##  <a name="BIC"></a> Clientes de Business Intelligence  
  Las siguientes aplicaciones cliente de software están disponibles en el Centro de descarga de Microsoft y le ayudan a crear documentos de Business Intelligence que se ejecutan en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Si hospeda estos documentos en un entorno de servidor, use una edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compatible con ese tipo de documento. En la siguiente tabla se indica qué edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene las características de servidor necesarias para hospedar los documentos creados en estas aplicaciones cliente.  
   
-|Nombre de la herramienta|Enterprise|Standard|Web|Express con Advanced Services|Express con herramientas|Express|Desarrollador|  
+|Nombre de la herramienta|Enterprise|Estándar|Web|Express con Advanced Services|Express con herramientas|Express|Desarrollador|  
 |---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] (.rdl y .rds)|Sí|Sí|||||Sí|  
 |[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] (.rsmobile)|Sí||||||Sí|  

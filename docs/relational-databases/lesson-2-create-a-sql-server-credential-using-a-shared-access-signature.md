@@ -17,12 +17,12 @@ caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a88a95ea4ad99373c5f8a1994599a2dbea961669
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0badf80ef7108ddcbeeafba703873ed97b5c2b14
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942430"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983168"
 ---
 # <a name="lesson-2-create-a-sql-server-credential-using-a-shared-access-signature"></a>Lección 2: Crear una credencial de SQL Server con una firma de acceso compartido
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ En esta lección, creará una credencial para almacenar la información de segur
 Una credencial de SQL Server es un objeto que se usa para almacenar la información de autenticación necesaria para conectarse a un recurso fuera de SQL Server. La credencial almacena la ruta de acceso URI de la firma de acceso compartido y del contenedor de almacenamiento de este contenedor.  
   
 > [!NOTE]  
-> Si quiere realizar una copia de seguridad de una base de datos SQL Server 2012 SP1 CU2 o posterior o de una base de datos de SQL Server 2014 a este contenedor de Azure, puede usar la [sintaxis desusada](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) que aparece aquí para crear una credencial de SQL Server basada en la clave de la cuenta de almacenamiento.  
+> Si quiere realizar una copia de seguridad de una base de datos SQL Server 2012 SP1 CU2 o posterior o de una base de datos de SQL Server 2014 a este contenedor de Azure, puede usar la [sintaxis desusada](https://technet.microsoft.com/library/dn435916(v=sql.120).aspx) que aparece aquí para crear una credencial de SQL Server basada en la clave de la cuenta de almacenamiento.  
   
 ## <a name="create-sql-server-credential"></a>Crear una credencial de SQL Server  
 Para crear una credencial de SQL Server, siga estos pasos:  

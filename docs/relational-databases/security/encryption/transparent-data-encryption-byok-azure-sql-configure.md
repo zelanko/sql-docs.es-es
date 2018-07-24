@@ -17,12 +17,12 @@ ms.topic: conceptual
 ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 5b6a5d6eafc76b80a169332f8c71309440c4ef0f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: d9419443e554c225bd2ee6708c8448787160b6de
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093319"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979179"
 ---
 # <a name="powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell y CLI: Habilitar el Cifrado de datos transparente con su propia clave desde Azure Key Vault
 
@@ -39,8 +39,8 @@ En esta guía de procedimientos aprenderá a usar una clave desde Azure Key Vaul
    - [Instrucciones de PowerShell de Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started)
    - [Instrucciones para usar un módulo de seguridad de hardware (HSM) y Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
  - Key Vault debe tener la siguiente propiedad, que se va a usar para el TDE:
-   - [Eliminación temporal](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-ovw-soft-delete)
-   - [Uso de la eliminación temporal de Key Vault con PowerShell](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) 
+   - [Eliminación temporal](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)
+   - [Uso de la eliminación temporal de Key Vault con PowerShell](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-powershell) 
 - La clave debe tener los siguientes atributos que se usarán para el TDE:
    - Sin fecha de expiración
    - No deshabilitado
@@ -200,13 +200,13 @@ Compruebe lo siguiente si se produce un problema:
 
 - Debe tener una suscripción de Azure y debe ser administrador en esa suscripción.
 - [Recomendado pero opcional] Debería tener un módulo de seguridad de hardware (HSM) o un almacén de claves locales para crear una copia local del material de la clave del protector del TDE.
-- Versión 2.0 o posterior de la interfaz de línea de comandos. Para instalar la versión más reciente y poder conectarse a su suscripción de Azure, vea [Instalación y configuración de la interfaz de línea de comandos multiplataforma de Azure 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest). 
+- Versión 2.0 o posterior de la interfaz de línea de comandos. Para instalar la versión más reciente y poder conectarse a su suscripción de Azure, vea [Instalación y configuración de la interfaz de línea de comandos multiplataforma de Azure 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). 
 - Debe crear un almacén de Azure Key Vault y una clave para usarlos para el TDE.
-   - [Administración de Key Vault mediante CLI 2.0](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-manage-with-cli2)
+   - [Administración de Key Vault mediante CLI 2.0](https://docs.microsoft.com/azure/key-vault/key-vault-manage-with-cli2)
    - [Instrucciones para usar un módulo de seguridad de hardware (HSM) y Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
  - Key Vault debe tener la siguiente propiedad, que se va a usar para el TDE:
-   - [Eliminación temporal](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-ovw-soft-delete)
-   - [Uso de la eliminación temporal de Key Vault con la CLI](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-cli) 
+   - [Eliminación temporal](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)
+   - [Uso de la eliminación temporal de Key Vault con la CLI](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-cli) 
 - La clave debe tener los siguientes atributos que se usarán para el TDE:
    - Sin fecha de expiración
    - No deshabilitado
@@ -264,11 +264,11 @@ Ahora, la base de datos o el almacén de datos tienen habilitado el TDE con una 
 
 ## <a name="sql-cli-references"></a>Referencias de la CLI de SQL
 
-https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql?view=azure-cli-latest 
 
-https://docs.microsoft.com/en-us/cli/azure/sql/server/key?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql/server/key?view=azure-cli-latest 
 
-https://docs.microsoft.com/en-us/cli/azure/sql/server/tde-key?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest 
 
-https://docs.microsoft.com/en-us/cli/azure/sql/db/tde?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql/db/tde?view=azure-cli-latest 
 

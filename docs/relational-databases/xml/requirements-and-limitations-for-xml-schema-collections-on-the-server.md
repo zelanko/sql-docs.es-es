@@ -30,11 +30,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: cfece11f3cec121dcdd56a3918f3bdafc7bbd05e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017212"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049263"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Requisitos y limitaciones de las colecciones de esquemas XML en el servidor
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "33017212"
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|Explica las formas canónicas y las restricciones de patrón.|  
 |[Componentes comodín y validación del contenido](../../relational-databases/xml/wildcard-components-and-content-validation.md)|Describe las limitaciones de utilizar caracteres comodín, validación lax y elementos de tipo anyType con colecciones de esquemas XML.|  

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3295485f0c5b660da4a9eb5efaea65fa67fdf28c
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312674"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038473"
 ---
 # <a name="upgrade-master-data-services"></a>Actualizar Master Data Services
 

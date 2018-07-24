@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 842c02dfb20f6e39e186937bad25f07c40e7b533
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027662"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049153"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Habilitar y deshabilitar el espacio seguro para RDL para Reporting Services en el modo integrado de SharePoint
 
@@ -71,7 +71,7 @@ La característica de espacio aislado para el lenguaje RDL (Report Definition La
 
  La siguiente tabla proporciona información acerca de los parámetros de configuración. Los parámetros se presentan en el orden en que aparecen en el archivo de configuración.  
   
-|Configuración|Description|  
+|Configuración|Descripción|  
 |-------------|-----------------|  
 |**MaxExpressionLength**|Número máximo de caracteres permitido en expresiones RDL.<br /><br /> Valor predeterminado: 1000|  
 |**MaxResourceSize**|Número máximo de KB permitido para un recurso externo.<br /><br /> Valor predeterminado: 100|  

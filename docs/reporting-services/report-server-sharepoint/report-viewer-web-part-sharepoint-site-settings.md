@@ -13,11 +13,11 @@ ms.topic: conceptual
 author: jt000
 ms.author: jasontre
 ms.openlocfilehash: dc85547d213367d3a754e40764fa4335a45c5ce7
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926326"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035153"
 ---
 # <a name="sharepoint-site-settings-for-the-report-viewer-web-part---reporting-services"></a>Configuración del sitio de SharePoint para el elemento web Visor de informes: Reporting Services | Microsoft Docs
 

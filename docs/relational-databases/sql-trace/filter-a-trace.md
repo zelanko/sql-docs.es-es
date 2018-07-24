@@ -23,11 +23,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 32c4039457be6660d837bbc0f3a41da91ab08b4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32974220"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046213"
 ---
 # <a name="filter-a-trace"></a>Filtrar un seguimiento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "32974220"
   
  La disponibilidad de filtros depende de la columna de datos. Algunas columnas de datos no se pueden filtrar. Las demás solo se pueden filtrar mediante determinados operadores relacionales, como se muestra en la siguiente tabla.  
   
-|Operador relacional|Símbolo del operador|Description|  
+|Operador relacional|Símbolo del operador|Descripción|  
 |-------------------------|---------------------|-----------------|  
 |Like|Like|Especifica que los datos del evento de seguimiento deben ser como el texto escrito. Acepta varios valores.|  
 |No es como|No es como|Especifica que los datos del evento de seguimiento no deben ser como el texto escrito. Acepta varios valores.|  

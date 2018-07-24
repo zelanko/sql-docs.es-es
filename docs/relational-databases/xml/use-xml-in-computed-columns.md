@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 9cf53690a4eaae5b73e316b20088f0541e50e4e8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33014522"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38028793"
 ---
 # <a name="use-xml-in-computed-columns"></a>Usar XML en columnas calculadas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ FROM T
   
 ### <a name="in-this-section"></a>En esta sección  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[Promover los valores XML usados con frecuencia con columnas calculadas](../../relational-databases/xml/promote-frequently-used-xml-values-with-computed-columns.md)|Describe cómo usar la promoción de propiedades con columnas calculadas y tablas de propiedades.|  
   

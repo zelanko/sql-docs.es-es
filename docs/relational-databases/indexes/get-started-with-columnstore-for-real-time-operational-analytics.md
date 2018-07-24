@@ -16,11 +16,11 @@ ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b23d666eda366913b6b1a22ed60804f28fb87fc9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940590"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037153"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introducción al almacén de columnas para análisis operativos en tiempo real
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

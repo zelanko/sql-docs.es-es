@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d376ca984ee2666c8f84a46d3a7895c911d0c719
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025782"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053343"
 ---
 # <a name="reporting-services-site-settings-and-site-features-sharepoint-mode"></a>Valores de configuración del sitio de Reporting Services y características del sitio (modo de SharePoint)
 
@@ -31,7 +31,7 @@ El modo de SharePoint de Reporting Services tiene varias características person
 > [!NOTE]
 > La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
 
-|Configuración del sitio|Description|  
+|Configuración del sitio|Descripción|  
 |------------------|-----------------|  
 |Configuración del sitio de Reporting Services|En este tema se describe la configuración de todo el sitio.|  
 |Administrar alertas de datos|Característica de administración de alertas de datos.|  
@@ -45,7 +45,7 @@ El modo de SharePoint de Reporting Services tiene varias características person
   
 ## <a name="options-for-reporting-services-site-settings"></a>Opciones de configuración del sitio de Reporting Services
   
-|Opción|Description|  
+|Opción|Descripción|  
 |------------|-----------------|  
 |**Habilitar la descarga del control ActiveX de RSClientPrint**|El control muestra un cuadro de diálogo de impresión personalizado compatible con características comunes a otros cuadros de diálogo de impresión, incluida la vista previa de impresión, selecciones de páginas para especificar páginas e intervalos de páginas, márgenes y orientación. Para obtener más información acerca del control, vea [Using the RSClientPrint Control in Custom Applications](../../reporting-services/report-server-web-service/net-framework/using-the-rsclientprint-control-in-custom-applications.md)|  
 |**Habilitar los errores remotos en modo local**|Muestre u oculte mensajes de error detallados en equipos remotos cuando la ejecución se realice en modo local. Si ve un mensaje de error similar al siguiente, es posible que habilitar errores remotos pueda ser de utilidad:<br /><br /> `For more information about this error navigate to the report server on the local server machine or enable remote errors`|  

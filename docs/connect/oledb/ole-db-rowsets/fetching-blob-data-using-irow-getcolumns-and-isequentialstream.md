@@ -1,5 +1,5 @@
 ---
-title: 'Capturar datos BLOB mediante IRow:: GetColumns e ISequentialStream | Documentos de Microsoft'
+title: 'Capturar datos BLOB mediante IRow:: GetColumns e ISequentialStream'
 description: 'Capturar datos BLOB mediante IRow:: GetColumns e ISequentialStream'
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4856cd6694aed63dfb11c1adc048c70c571cf3e4
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 76c909ed28744576c24fadb4ec841a2049f2f0da
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689378"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106091"
 ---
 # <a name="fetching-blob-data-using-irowgetcolumns-and-isequentialstream"></a>Capturar datos BLOB mediante IRow::GetColumns e ISequentialStream
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  La función siguiente utiliza **IRow:: GetColumns** y **ISequentialStream** para capturar los datos de gran tamaño:  
+  La función siguiente utiliza IRow::GetColumns **e ISequentialStream** para capturar datos grandes:  
   
 ```  
 void InitializeAndExecuteCommand()  
@@ -92,7 +92,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Capturar datos BLOB mediante IRow](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
   

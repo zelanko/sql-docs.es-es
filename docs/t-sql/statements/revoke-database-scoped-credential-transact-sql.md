@@ -24,11 +24,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 5c5e92f223727d825b5700591cdad942834ace6d
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941661"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035253"
 ---
 # <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE (credencial de ámbito de base de datos de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

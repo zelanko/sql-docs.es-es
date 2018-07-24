@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d2a9368b1617c89dcc85cfddd7fe2ac998a18579
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028592"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052186"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizar el elemento web Visor de informes
 
@@ -69,7 +69,7 @@ Puede usar el elemento web Visor de informes para ver informes que se ejecutan e
   
  A continuación se enumeran las propiedades personalizadas del elemento web Visor de informes.  
   
-|Propiedad|Description|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |Informe|Ruta de acceso completa a un informe que esté en el sitio de SharePoint actual o en un sitio dentro de la misma aplicación o conjunto de servidores web. Para obtener los mejores resultados al establecer propiedades adicionales, haga clic en Aplicar después de especificar la dirección URL del informe.|  
 |Destino de hipervínculo|HTML estándar que especifica el marco de destino para mostrar el contenido vinculado en el documento actual. Para informes que incluyen hipervínculos a sitios web externos, puede especificar si un documento de destino reemplaza el informe existente en la ventana actual o si se abre en una nueva ventana del explorador. Los valores válidos son **_Top**, **_Blank**y **_Self**. **_Top** usa la ventana actual, **_Blank** carga el documento en una nueva ventana del explorador y **_Self** abre el documento en el marco actual. Aunque **_Parent** es un valor válido para el atributo de destino en HTML, no se recomienda usarlo para un elemento web del Visor de informes que se incrusta en una página.|  

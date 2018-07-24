@@ -18,11 +18,11 @@ ms.date: 08/07/2017
 ms.author: rebeccaz
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: d498331b409732ab741b59122567959c1175f249
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699716"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969707"
 ---
 # <a name="remove-a-transparent-data-encryption-tde-protector-using-powershell"></a>Eliminación de un protector de cifrado de datos transparente (TDE) mediante PowerShell
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]

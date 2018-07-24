@@ -19,11 +19,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: b7ec24fe1140af4c8bfecc8214737a3fd9c52e2f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016902"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969297"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>Administrador de alertas de datos para los usuarios de SharePoint
 
@@ -52,7 +52,7 @@ Cuando se habilita un sitio de SharePoint para las alertas de datos, se crean do
   
  ![Abrir el Administrador de alertas desde el menú contextual del informe](../reporting-services/media/rs-openalertmanager.gif "Abrir el Administrador de alertas desde el menú contextual del informe")  
   
- El Administrador de alertas de datos incluye una tabla con el nombre de la alerta, el nombre del informe, el nombre del creador de la definición de la alerta, el número de veces que se envió el mensaje de alerta, la última vez que se ejecutó la alerta, la última vez que se modificó la definición de la alerta y el estado de la última alerta. Si el mensaje de alerta no se puede generar o enviar, la columna de estado contiene información sobre el error que le ayudará a solucionar los problemas relacionados con la alerta. Para más información,vea [Administrar mis alertas de datos en el Administrador de alertas de datos](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
+ El Administrador de alertas de datos incluye una tabla con el nombre de la alerta, el nombre del informe, el nombre del creador de la definición de la alerta, el número de veces que se envió el mensaje de alerta, la última vez que se ejecutó la alerta, la última vez que se modificó la definición de la alerta y el estado de la última alerta. Si el mensaje de alerta no se puede generar o enviar, la columna de estado contiene información sobre el error que le ayudará a solucionar los problemas relacionados con la alerta. Para obtener más información, vea [Administrar mis alertas de datos en el Administrador de alertas de datos](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
  En la tabla siguiente se muestran datos de ejemplo de una tabla del Administrador de alertas de datos. Cuando se produce un error, el mensaje de error y el identificador de la entrada del registro (un GUID) se incluyen en el campo **Estado** de la tabla.  
   
@@ -74,7 +74,7 @@ Cuando se habilita un sitio de SharePoint para las alertas de datos, se crean do
   
   
 ##  <a name="RunAlerts"></a> Ejecutar alertas de datos  
- El Administrador de alertas de datos incluye información sobre la última vez que el servicio de alertas procesó la definición de alerta de datos y el número de veces que se ha enviado el mensaje de alerta de datos. Puede ejecutar y enviar el mensaje de alerta inmediatamente en lugar de esperar a la hora de programación especificada. Cuando se ejecuta una alerta desde el Administrador de alertas de datos, la programación de la alerta se sobrescribe y el procesamiento de la definición de alerta se inicia en un período comprendido entre uno y cinco minutos, en función del tiempo necesario para ejecutar el informe y de cómo de ocupado esté el servidor de informes cuando elija ejecutar la alerta. Sin embargo, si especificó que el mensaje se envíe únicamente si cambian los resultados y los resultados no han cambiado, no se crea ni envía ningún mensaje. Para más información,vea [Administrar mis alertas de datos en el Administrador de alertas de datos](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
+ El Administrador de alertas de datos incluye información sobre la última vez que el servicio de alertas procesó la definición de alerta de datos y el número de veces que se ha enviado el mensaje de alerta de datos. Puede ejecutar y enviar el mensaje de alerta inmediatamente en lugar de esperar a la hora de programación especificada. Cuando se ejecuta una alerta desde el Administrador de alertas de datos, la programación de la alerta se sobrescribe y el procesamiento de la definición de alerta se inicia en un período comprendido entre uno y cinco minutos, en función del tiempo necesario para ejecutar el informe y de cómo de ocupado esté el servidor de informes cuando elija ejecutar la alerta. Sin embargo, si especificó que el mensaje se envíe únicamente si cambian los resultados y los resultados no han cambiado, no se crea ni envía ningún mensaje. Para obtener más información, vea [Administrar mis alertas de datos en el Administrador de alertas de datos](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
 > [!NOTE]  
 >  Después de hacer clic en la opción **Ejecutar**  , el valor de la columna **Estado** tarda algunos segundos en ejecutarse para indicar que la alerta se está procesando. Si hace clic varias veces en la opción **Ejecutar**  , la alerta se procesará varias veces. Esto consume recursos innecesarios en el servidor de informes y puede afectar a su rendimiento. Para ver información actualizada sobre la alerta, haga clic en el botón Actualizar del explorador Web para comprobar las actualizaciones de estado y otra información sobre la alerta.  

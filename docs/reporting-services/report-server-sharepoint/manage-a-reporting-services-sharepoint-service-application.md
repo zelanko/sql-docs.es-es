@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 1414b6cbf166c136dd942d974d6cb1aea866bc8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028072"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971787"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Administrar una aplicación de servicio de SharePoint de Reporting Services
 
@@ -114,7 +114,7 @@ ms.locfileid: "33028072"
 > [!IMPORTANT]  
 >  Cambiar periódicamente la clave de cifrado de Reporting Services es una práctica recomendada de seguridad. El momento recomendado para cambiar la clave es el inmediatamente posterior a una actualización de versión principal de Reporting Services. Si se cambia la clave después de una actualización se minimiza la interrupción del servicio adicional que ocasiona el cambio de la clave de cifrado de Reporting Services fuera del ciclo de actualización.  
   
-|Página|Description|  
+|Página|Descripción|  
 |----------|-----------------|  
 |Copia de seguridad de clave de cifrado|1) Escriba una contraseña en los cuadros **Contraseña** y **Confirmar contraseña** , y haga clic en **Exportar**. Verá una advertencia si la contraseña especificada no satisface los requisitos de complejidad de la directiva de dominio.<br /><br /> 2) Se le pedirá una ubicación para guardar el archivo de claves. Considere la posibilidad de almacenar el archivo de claves en un equipo distinto del que ejecuta [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. El nombre de archivo predeterminado es el mismo que el de la aplicación de servicio.|  
 |Restaurar clave de cifrado|1) Escriba o busque el archivo de claves en el cuadro **Ubicación del archivo** .<br /><br /> 2) En el cuadro **Contraseña** , escriba la contraseña que ha usado para realizar la copia de seguridad del archivo de cifrado.<br /><br /> 3) Haga clic en **Aceptar**.|  

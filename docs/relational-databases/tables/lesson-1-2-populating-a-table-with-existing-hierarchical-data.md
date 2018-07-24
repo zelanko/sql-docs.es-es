@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d69702ab9c87a41a87b1c9ead6dd8c567f197c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33008042"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005046"
 ---
 # <a name="lesson-1-2---populating-a-table-with-existing-hierarchical-data"></a>Lección 1-2: Rellenar una tabla con los datos jerárquicos existentes
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

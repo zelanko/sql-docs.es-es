@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8ee27537dd58803a79291ea75a47e51d1cd53936
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011882"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993517"
 ---
 # <a name="temporal-table-security"></a>Seguridad de la tabla temporal
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "33011882"
 ## <a name="security-principles"></a>Principios de seguridad  
  En la siguiente tabla se describen los principios de seguridad que se aplican a las tablas temporales:  
   
-|Principio|Description|  
+|Principio|Descripción|  
 |---------------|-----------------|  
 |La habilitación o deshabilitación del control de versiones del sistema requiere los privilegios más altos en los objetos afectados.|Para habilitar y deshabilitar SYSTEM_VERSIONING, se requiere el permiso CONTROL en la tabla actual y de historial.|  
 |Los datos del historial no se pueden modificar directamente.|Cuando SYSTEM_VERSIONING tenga el valor ON, los usuarios no podrán modificar los datos del historial, con independencia de los permisos que tengan en la tabla actual o de historial. Se incluyen las modificaciones de datos y esquema.|  

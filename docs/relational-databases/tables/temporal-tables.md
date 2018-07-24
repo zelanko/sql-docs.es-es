@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b7e70190afc73d0dbad741f89e7d1dfc47404c87
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012602"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000677"
 ---
 # <a name="temporal-tables"></a>Tablas temporales
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ SELECT * FROM Employee
   
  En la siguiente tabla, SysStartTime en la columna Filas certificadas representa el valor reflejado en la columna **SysStartTime** de la tabla que se está consultando y **SysEndTime** , el valor reflejado en la columna **SysEndTime** de la tabla que se está consultando. Para obtener la sintaxis completa y ejemplos, vea [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) y [Consulta de los datos de una tabla temporal con control de versiones del sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
   
-|Expresión|Filas certificadas|Description|  
+|Expresión|Filas certificadas|Descripción|  
 |----------------|---------------------|-----------------|  
 |**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|Devuelve una tabla con filas que contienen los valores que fueron reales (actuales) en el momento determinado especificado en el pasado. Internamente, se realiza una unión entre la tabla temporal y su tabla de historial y los resultados se filtran para devolver los valores de la fila que era válida en el momento determinado especificado por el parámetro *<date_time>*. El valor de una fila se considera válido si el valor de *system_start_time_column_name* es menor o igual que el valor del parámetro *<date_time>* y el valor de *system_end_time_column_name* es mayor que el valor del parámetro *<date_time>*.|  
 |**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|Devuelve una tabla con los valores de todas las versiones de fila que estaban activas dentro del rango de tiempo especificado, independientemente de si empezaron a ser activas antes del valor del parámetro *<start_date_time>* en el argumento FROM o si dejaron de serlo después del valor del parámetro *<end_date_time>* en el argumento TO. Internamente, se realiza una unión entre la tabla temporal y su tabla de historial y los resultados se filtran para devolver los valores de todas las versiones de fila que estaban activas en cualquier momento dentro del intervalo de tiempo especificado. No se incluyen las filas que han dejado de ser activas justamente en el límite inferior definido por el punto de conexión FROM ni tampoco aquellas que se han activado exactamente en el límite superior definido por el punto de conexión TO.|  

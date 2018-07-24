@@ -1,5 +1,5 @@
 ---
-title: Elemento TuningTimeInMin (DTA) | Documentos de Microsoft
+title: TuningTimeInMin (DTA, elemento) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a906fea9cc3ff318a523695046c0a8c8fea2ce9d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069152"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048653"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin (DTA, elemento)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "33069152"
       <TuningTimeInMin>...</TuningTimeInMin>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|**unsignedInt**, longitud ilimitada.|  
 |**Valor predeterminado**|480 minutos (8 horas).|  
@@ -58,7 +58,7 @@ ms.locfileid: "33069152"
   
 ## <a name="example"></a>Ejemplo  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descripción  
  En el siguiente ejemplo de código se muestra cómo establecer un tiempo de optimización máximo de 12 horas:  
   
 ## <a name="code"></a>código  

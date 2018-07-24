@@ -1,5 +1,5 @@
 ---
-title: Especificar un tipo de Cursor y selección de filas | Documentos de Microsoft
+title: Especificar un tipo de Cursor y selección de filas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca3edbf7831789209b21a39b20d428cc5afe94d9
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309064"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983337"
 ---
 # <a name="specifying-a-cursor-type-and-selecting-rows"></a>Especificación de un tipo de cursor y selección de filas
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,6 +33,6 @@ Puede crear un conjunto de resultados con filas a las que puede acceder en cualq
   
 -   [Cursor Types &#40;PDO_SQLSRV Driver&#41; (Tipos de cursor &#40;Controlador PDO_SQLSRV&#41;)](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Recuperación de datos](../../connect/php/retrieving-data.md)  
   

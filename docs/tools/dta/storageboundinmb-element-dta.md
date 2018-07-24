@@ -1,5 +1,5 @@
 ---
-title: Elemento StorageBoundInMB (DTA) | Documentos de Microsoft
+title: StorageBoundInMB (DTA, elemento) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff7220d48a161456d899fb150c3749accad10fcf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33070302"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063393"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB (DTA, elemento)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "33070302"
       <StorageBoundInMB>...</ StorageBoundInMB >  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|**unsignedInt**, longitud ilimitada.|  
 |**Valor predeterminado**|Ninguno.|  
@@ -69,7 +69,7 @@ ms.locfileid: "33070302"
   
 ## <a name="example"></a>Ejemplo  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descripción  
  El siguiente ejemplo de código muestra cómo establecer un límite de 1500 megabytes como el máximo espacio en disco que una recomendación de optimización puede utilizar:  
   
 ## <a name="code"></a>código  

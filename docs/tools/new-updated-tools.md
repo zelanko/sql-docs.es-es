@@ -4,22 +4,20 @@ description: Muestra fragmentos de contenido actualizado de documentación modif
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.prod_service: sql-non-specified
-ms.component: tools
 ms.date: 04/28/2018
-ms.openlocfilehash: 0547653c4fc2d8bd04f851b843e74fd9ec78d2ea
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 31df25173ad475c733bc7239366a6c2ce820289e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32739167"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088187"
 ---
-# <a name="new-and-recently-updated-tools-for-sql-server"></a>Nuevos y actualizados recientemente: Tools para SQL Server
+# <a name="new-and-recently-updated-tools-for-sql-server"></a>Nuevos y actualizados recientemente: herramientas para SQL Server
 
 
 
@@ -32,7 +30,7 @@ Se informa de las actualizaciones recientes del siguiente intervalo de fechas y 
 
 
 - *Intervalo de fechas de las actualizaciones:* &nbsp; del **03-02-2018** &nbsp; al &nbsp; **28-04-2018**
-- *Área de asunto:* &nbsp; **Tools para SQL Server**.
+- *Área temática:* &nbsp; **Tools para SQL Server**.
 
 
 
@@ -44,7 +42,7 @@ Se informa de las actualizaciones recientes del siguiente intervalo de fechas y 
 Los siguientes vínculos llevan a nuevos artículos que se han agregado recientemente.
 
 
-- [herramienta de consulta de línea de comandos de cli MSSQL para SQL Server](mssql-cli.md)
+- [herramienta de línea de comandos de consulta MSSQL-cli para SQL Server](mssql-cli.md)
 
 
 
@@ -94,16 +92,16 @@ En esta lista compacta se proporcionan vínculos a todos los artículos actualiz
 
 
 
-**-G**<a name="G"></a> El cliente usa este modificador al conectarse a Azure SQL Database o Azure SQL Data Warehouse para especificar que el usuario se autentica mediante la autenticación de Azure Active Directory. Requiere el modificador -G [versión 14.0.3008.27 o posterior](http://go.microsoft.com/fwlink/?LinkID=825643). Para determinar su versión, ejecute bcp -v. Para obtener más información, consulte [Use Azure autenticación de Active Directory para la autenticación con la base de datos SQL o almacenamiento de datos de SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
+**-G**<a name="G"></a> El cliente usa este modificador al conectarse a Azure SQL Database o Azure SQL Data Warehouse para especificar que el usuario se autentica mediante la autenticación de Azure Active Directory. El modificador -G requiere [versión 14.0.3008.27 o posterior](http://go.microsoft.com/fwlink/?LinkID=825643). Para determinar su versión, ejecute bcp -v. Para obtener más información, consulte [Use autenticación Azure Active Directory para la autenticación con SQL Database o SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
 
 > [!TIP]
->  Para comprobar si su versión de bcp incluye compatibilidad para el tipo de autenticación Azure Active Directory (AAD) **bcp--** (bcp\<espacio >\<guión >\<guión >) y compruebe que ve - G en la lista de argumentos disponibles.
+>  Para comprobar si su versión de bcp incluye compatibilidad para el tipo de autenticación Azure Active Directory (AAD) **bcp--** (bcp\<espacio >\<dash >\<dash >) y compruebe que ve - G en la lista de argumentos disponibles.
 
 - **Nombre de usuario y contraseña de Azure Active Directory:**
 
     Si desea utilizar un nombre de usuario y una contraseña de Azure Active Directory, puede proporcionar la opción **- G** y usar también el nombre de usuario y la contraseña proporcionando las opciones **- U** y **-P** .
 
-    En el ejemplo siguiente se exporta datos con el nombre de usuario de Azure AD y la contraseña que el usuario y la contraseña es una credencial de AAD. En el ejemplo se exporta la tabla `bcptest` de base de datos `testdb` de servidor de Azure `aadserver.database.windows.net` y almacena los datos en el archivo `c:\last\data1.dat`:
+    El ejemplo siguiente exporta los datos con el nombre de usuario de Azure AD y la contraseña donde el usuario y la contraseña es una credencial de AAD. En el ejemplo se exporta la tabla `bcptest` de base de datos `testdb` desde el servidor de Azure `aadserver.database.windows.net` y almacena los datos en el archivo `c:\last\data1.dat`:
 ```
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
 ```
@@ -117,7 +115,7 @@ En esta lista compacta se proporcionan vínculos a todos los artículos actualiz
 
 - **Autenticación integrada de Azure Active Directory**
 
-    Para autenticación integrada de Azure Active Directory, proporcione la opción **-G** sin un nombre de usuario o contraseña. Esta configuración da por supuesto que la cuenta de usuario de Windows actual (la cuenta que se está ejecutando el comando bcp) está federada con Azure AD:
+    Para autenticación integrada de Azure Active Directory, proporcione la opción **-G** sin un nombre de usuario o contraseña. Esta configuración se da por supuesto que la cuenta de usuario de Windows actual (es decir, la cuenta se está ejecutando el comando bcp bajo) está federada con Azure AD:
 
 
 

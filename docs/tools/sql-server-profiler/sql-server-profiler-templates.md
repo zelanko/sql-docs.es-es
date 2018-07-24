@@ -1,5 +1,5 @@
 ---
-title: Plantillas SQL Server Profiler | Documentos de Microsoft
+title: Plantillas de SQL Server Profiler | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc5ca43e247a0cf2114b471f4f5096066fa7b3cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078012"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038053"
 ---
 # <a name="sql-server-profiler-templates"></a>Plantillas de SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "33078012"
 |Nombre de plantilla|Finalidad de la plantilla|Clases de evento|  
 |-------------------|----------------------|-------------------|  
 |SP_Counts|Captura el comportamiento de la ejecución de procedimientos almacenados a lo largo del tiempo.|**SP:Starting**|  
-|Standard|Punto de inicio genérico para crear un seguimiento. Captura todos los procedimientos almacenados y lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecutan. Utilice esta plantilla para supervisar la actividad general del servidor de base de datos.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Completed**<br /><br /> **SQL:BatchCompleted**<br /><br /> **SQL:BatchStarting**|  
+|Estándar|Punto de inicio genérico para crear un seguimiento. Captura todos los procedimientos almacenados y lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecutan. Utilice esta plantilla para supervisar la actividad general del servidor de base de datos.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Completed**<br /><br /> **SQL:BatchCompleted**<br /><br /> **SQL:BatchStarting**|  
 |TSQL|Captura todas las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que los clientes envían a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el momento en que se han emitido. Utilice esta plantilla para depurar las aplicaciones cliente.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SQL:BatchStarting**|  
 |TSQL_Duration|Captura todas las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que los clientes envían a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el tiempo de ejecución (en milisegundos), y las agrupa por duración. Utilice esta plantilla para identificar consultas de ejecución lenta.|**RPC:Completed**<br /><br /> **SQL:BatchCompleted**|  
 |TSQL_Grouped|Captura todas las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] enviadas a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el momento en que se han emitido. Agrupa la información por el usuario o cliente que ha enviado la instrucción. Utilice esta plantilla para investigar consultas de un cliente o usuario determinado.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SQL:BatchStarting**|  

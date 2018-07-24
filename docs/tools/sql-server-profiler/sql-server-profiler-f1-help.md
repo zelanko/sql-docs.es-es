@@ -1,5 +1,5 @@
 ---
-title: Cuadros de diálogo de SQL Server Profiler | Documentos de Microsoft
+title: Cuadros de diálogo de SQL Server Profiler | Microsoft Docs
 ms.custom: ''
 ms.date: 07/07/2017
 ms.prod: sql
@@ -46,19 +46,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5bd72cc0de57f33c69101ba2d5f387ed45bae4c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077562"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999877"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Cuadros de diálogo de SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-El [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] de Microsoft es una herramienta que captura eventos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de un servidor. Los eventos se guardan en un archivo de seguimiento que posteriormente se puede analizar o utilizar para reproducir una serie de pasos específicos cuando se intenta diagnosticar un problema. Los siguientes son los comandos y las opciones de configuración de los cuadros de diálogo de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+El [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] de Microsoft es una herramienta que captura eventos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de un servidor. Los eventos se guardan en un archivo de seguimiento que posteriormente se puede analizar o utilizar para reproducir una serie de pasos específicos cuando se intenta diagnosticar un problema. Los siguientes son los comandos y opciones de configuración de los cuadros de diálogo de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
 ## <a name="trace-properties"></a>Propiedades de seguimiento
 ### <a name="general-tab"></a>Pestaña General
 Utilice la pestaña **General** del cuadro de diálogo **Propiedades de seguimiento** para ver o especificar las propiedades de un seguimiento.  
-|Elemento|Description
+|Elemento|Descripción
 |---|---
 |**Nombre de seguimiento** |Especifica el nombre del seguimiento.  
 |**Nombre del proveedor de seguimiento**|Muestra el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que va a realizarse un seguimiento. Este campo se rellena automáticamente con el nombre del servidor que haya especificado al conectarse. Para cambiar el nombre del proveedor de seguimiento, haga clic en **Cancelar** para cerrar el cuadro de diálogo e iniciar un nuevo seguimiento.  
@@ -77,7 +77,7 @@ Utilice la pestaña **General** del cuadro de diálogo **Propiedades de seguimie
 
 ### <a name="events-selection-tab"></a>Pestaña Selección de eventos
 Utilice la pestaña **Selección de eventos** del cuadro de diálogo **Propiedades de seguimiento** para ver o especificar columnas de datos y eventos de seguimiento.  
-|Elemento|Description
+|Elemento|Descripción
 |---|---
 |Columna**Eventos** |Especifique los eventos de seguimiento seleccionando o desactivando la casilla de la columna de eventos. Los**eventos** se organizan por categoría. Las clases de evento especificadas en la plantilla se seleccionan automáticamente. Para obtener más información, consulte [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
 |Columnas de datos|Especifique las columnas de datos de seguimiento activando la casilla que se corresponda con el evento y la columna de datos necesarios. Todas las columnas de eventos importantes se activan de manera predeterminada en cada evento incluido en el seguimiento.  
@@ -88,9 +88,9 @@ Utilice la pestaña **Selección de eventos** del cuadro de diálogo **Propiedad
 |**Organizar columnas**|Cambia el orden de las columnas del seguimiento y agrupa los resultados en una o más columnas.  
 
 ## <a name="trace-template-properties"></a>Propiedades de la plantilla de seguimiento 
-### <a name="new-general-tab"></a>Nueva (pestaña General)
+### <a name="new-general-tab"></a>Nuevo (pestaña General)
 Utilice la pestaña **General** del cuadro de diálogo **Propiedades de la plantilla de seguimiento** para crear nuevas plantillas de seguimiento mediante las siguientes opciones. Para acceder a este cuadro de diálogo, en el menú [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **Archivo**, coloque el cursor sobre **Plantillas** y haga clic en **Nueva**.
-|Elemento|Description
+|Elemento|Descripción
 |---|---
 |**Seleccionar tipo de servidor**|Especifique el tipo de servidor donde se utilizará esta plantilla.  
 |**Nuevo nombre de plantilla**|Proporcione un nombre descriptivo para la plantilla.  
@@ -99,7 +99,7 @@ Utilice la pestaña **General** del cuadro de diálogo **Propiedades de la plant
 
 ### <a name="edit-general-tab"></a>Editar (pestaña General)
  Utilice la pestaña **General** del cuadro de diálogo **Propiedades de la plantilla de seguimiento** para ver o editar las plantillas de seguimiento existentes utilizando las opciones que se muestran a continuación. Para obtener acceso a este cuadro de diálogo, en el menú [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **de** , seleccione **Plantillas**y, a continuación, haga clic en **Editar plantilla**.  
-|Elemento|Description
+|Elemento|Descripción
 |---|---
 |**Seleccionar tipo de servidor**|Especifique el tipo de servidor donde se utilizará esta plantilla.  
 |**Seleccionar nombre de plantilla**|Seleccione la plantilla que desea editar.  
@@ -107,7 +107,7 @@ Utilice la pestaña **General** del cuadro de diálogo **Propiedades de la plant
 
 ### <a name="events-selection-tab"></a>Pestaña Selección de eventos
 Utilice la pestaña **Selección de eventos** del cuadro de diálogo **Propiedades de la plantilla de seguimiento** para ver, editar o especificar las clases de eventos y las columnas de datos que se van a incluir en una plantilla de seguimiento del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
-|Elemento|Description
+|Elemento|Descripción
 |---|---
 |Columna**Eventos** |Active o desactive la casilla de la columna de eventos para especificar los eventos de los que debe realizarse un seguimiento. Los eventos se organizan por categoría. Si ha seleccionado **Basar plantilla nueva en una existente** en la pestaña **General** , los eventos se seleccionan automáticamente de acuerdo con la plantilla especificada. Para obtener más información sobre las clases de eventos, vea [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
 |Columnas de datos|Especifique las columnas de datos de las que debe realizarse un seguimiento activando el cuadro correspondiente al evento y la columna de datos que necesite. Si se activa la casilla correspondiente al evento, todas las columnas de eventos pertinentes se activan de forma predeterminada para cada evento incluido en el seguimiento. Si ha seleccionado **Basar plantilla nueva en una existente** en la pestaña **General** , las columnas de datos y los filtros se seleccionan automáticamente de acuerdo con la plantilla especificada.  
@@ -120,7 +120,7 @@ Utilice la pestaña **Selección de eventos** del cuadro de diálogo **Propiedad
 ### <a name="general-tab"></a>Pestaña General
 Utilice la pestaña **General** del cuadro de diálogo **Propiedades del archivo de seguimiento** para ver las propiedades de un archivo de seguimiento.  
 Para ver esta ventana, abra un archivo de seguimiento. A continuación, en el menú **Archivo** , haga clic en **Propiedades**.  
-|Elemento|Description
+|Elemento|Descripción
 |---|---
 |**Nombre de archivo**|Muestra la ruta de acceso y el nombre del archivo de seguimiento.  
 |**Nombre del proveedor de seguimiento**|Muestra el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realizó un seguimiento.  
@@ -132,7 +132,7 @@ Para ver esta ventana, abra un archivo de seguimiento. A continuación, en el me
 ### <a name="events-selection-tab"></a>Pestaña Selección de eventos
 Utilice la pestaña **Selección de eventos** del cuadro de diálogo **Propiedades del archivo de seguimiento** para ver las propiedades de columna del seguimiento o quitar columnas de datos del seguimiento.  
 Para ver esta ventana, abra un archivo de seguimiento. Después, en el menú **Archivo** , haga clic en **Propiedades**y, a continuación, haga clic en la pestaña **Selección de eventos** .  
-|Elemento|Description
+|Elemento|Descripción
 |---|---
 |Columna**Eventos** |Muestra los eventos de los que se hace el seguimiento y que están organizados por categoría de eventos. Inicialmente, se seleccionan todos los eventos del seguimiento. Para seleccionar un evento, debe activarse la casilla o la columna de datos de dicho evento. Si la casilla del evento está activada, se seleccionan todas las columnas de datos disponibles para dicho evento. Si la columna de datos de un evento está activada, se activa el evento, y cualquier otra columna requerida también se activa automáticamente. Si se está viendo un archivo o una tabla de seguimiento, al desactivar las casillas de las columnas de datos o eventos, se reduce la cantidad de datos visibles en la ventana de seguimiento para simplificar el análisis. Se pueden cambiar los filtros de las columnas para reducir la cantidad de datos visibles en la ventana de seguimiento. Para obtener más información sobre las clases de eventos, vea [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
 |Columnas de datos|Muestra las columnas de datos de las que se realiza un seguimiento. Todas las columnas de datos relevantes del seguimiento están activadas de forma predeterminada para cada uno de los eventos incluidos en el seguimiento.  
@@ -145,7 +145,7 @@ Para ver esta ventana, abra un archivo de seguimiento. Después, en el menú **A
 ### <a name="events-selection-tab"></a>Pestaña Selección de eventos
 Utilice la pestaña **Selección de eventos** del cuadro de diálogo **Propiedades de la tabla de seguimiento** para ver las propiedades de columna de datos y eventos del seguimiento o para quitar eventos o columnas del seguimiento.  
 Para ver esta ventana, use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para abrir una tabla de seguimiento. Después, en el menú **Archivo** , haga clic en **Propiedades**y, a continuación, haga clic en la pestaña **Selección de eventos** .  
-|Elemento|Description
+|Elemento|Descripción
 |---|---
 |Columna**Eventos** |Muestra los eventos de los que se hace el seguimiento y que están organizados por categoría de eventos. Para seleccionar un evento, debe activarse la casilla o la columna de datos de dicho evento. Si la casilla del evento está activada, se seleccionan todas las columnas de datos disponibles para dicho evento. Si la columna de datos de un evento está activada, se activa el evento, y cualquier otra columna requerida también se activa automáticamente. Si se está viendo un archivo o una tabla de seguimiento, al desactivar las casillas de las columnas de datos o eventos, se reduce la cantidad de datos visibles en la ventana de seguimiento para simplificar el análisis. Se pueden cambiar los filtros de las columnas para reducir la cantidad de datos visibles en la ventana de seguimiento. Para obtener más información sobre las clases de eventos, vea [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
 |Otras columnas de datos|Muestra las columnas de datos de las que se realiza un seguimiento. Todas las columnas de datos relevantes del seguimiento están activadas de forma predeterminada para cada uno de los eventos incluidos en el seguimiento.  
@@ -165,7 +165,7 @@ Si desea seleccionar todos los contadores para un objeto de rendimiento, active 
 ## <a name="toolsoptions-general-options-page"></a>Herramientas/Opciones (página Opciones generales)
 Utilice el cuadro de diálogo **Opciones generales** para ver o especificar las siguientes opciones.  
 ### <a name="display-options"></a>Opciones de presentación  
-|Elemento|Description
+|Elemento|Descripción
 |---|---
 |**Nombre de fuente**|Muestra el nombre de la fuente utilizada en la cuadrícula de resultados de seguimiento durante los seguimientos.  
 |**Tamaño de fuente**|Muestra el tamaño de la fuente utilizada en la cuadrícula de resultados de seguimiento durante los seguimientos.  
@@ -173,18 +173,18 @@ Utilice el cuadro de diálogo **Opciones generales** para ver o especificar las 
 |**Usar la configuración regional para mostrar valores de fecha y hora**|Muestra los valores de fecha y hora en la configuración regional establecida en el equipo. Si no selecciona esta opción, los valores de fecha y hora se muestran en el formato fijo que utiliza Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que incluye milisegundos. Observe que si activa o desactiva esta casilla se cambia el formato de presentación de las columnas de hora como **Hora de inicio** y **Hora de finalización**. Pero no cambia los parámetros del valor **DateTime** dentro de los eventos de lenguaje o las llamadas a procedimientos remotos (RPC).  
 |**Mostrar valores en la columna Duración en microsegundos**|Muestra los valores en microsegundos en la columna de datos **Duración** de los seguimientos. De manera predeterminada, la columna **Duración** muestra los valores en milisegundos.  
 ### <a name="tracing-options"></a>Opciones de seguimiento  
-|Elemento|Description
+|Elemento|Descripción
 |---|---
 |**Iniciar la traza inmediatamente tras realizar la conexión**|Inicia un seguimiento con la plantilla predeterminada en cuanto se establece una conexión.  
 |**Actualizar definición de seguimiento cuando cambie la versión del proveedor**|Aplica la definición de seguimiento más actual a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se actualiza el proveedor. Esta opción no está activada de manera predeterminada. Esto obliga a que el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] consulte al servidor la definición de seguimiento y vuelva a crear, si existe, el archivo en el disco.  
 ### <a name="file-rollover-options"></a>Opciones de sustitución incremental de archivos  
-|Elemento|Description
+|Elemento|Descripción
 |---|---
 |**Cargar todos los archivos de sustitución incremental en secuencia sin preguntar**|Carga automáticamente los archivos de sustitución incremental cuando se abre un archivo de seguimiento. Si se ha creado más de un archivo durante la traza, la selección de esta opción carga automáticamente todos los archivos de sustitución incremental.  
 |**Preguntar antes de cargar archivos de sustitución incremental**|Cuando se abre un archivo de seguimiento, el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pregunta antes de agregar un archivo de sustitución incremental.  
 |**No cargar nunca los archivos siguientes de sustitución incremental**|Cuando se abre un archivo de seguimiento, el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] no carga archivos de sustitución incremental.  
 ### <a name="replay-options"></a>Opciones de reproducción  
-|Elemento|Description
+|Elemento|Descripción
 |---|---
 |**Número predeterminado de subprocesos de reproducción**|Especifique el número de subprocesos de reproducción que se utilizarán simultáneamente. Un número más alto consume más recursos durante la reproducción, pero aumenta la simultaneidad.  
 |**Intervalo de espera del monitor de estado predeterminado (seg.)**|Especifique el intervalo de espera de la reproducción en segundos. El valor predeterminado es 3600 segundos (1 hora). Esta configuración afecta al tiempo que puede ejecutarse un subproceso antes de que lo finalice el monitor de estado.  
@@ -194,7 +194,7 @@ Microsoft SQL Server Profiler y el Asistente para la optimización utilizan este
 - En Profiler, use el cuadro de diálogo **Tabla de origen** a fin de especificar una tabla de origen para una tabla de seguimiento. Esta última es una tabla desde la que se carga un seguimiento y su contenido se ve y usa para reproducir el seguimiento.  
 - En el Asistente para la optimización, use el cuadro de diálogo **Seleccionar tabla de carga de trabajo** para seleccionar una tabla de base de datos que contenga información de seguimiento del generador de perfiles para usarse como carga de trabajo de optimización, o bien para obtener una vista previa del contenido de la tabla antes de iniciar el análisis de optimización.  
 
-|Elemento|Description
+|Elemento|Descripción
 |---|---
 |**SQL Server**|Especifica la instancia de SQL Server conectada actualmente. Este campo se llena automáticamente y no puede actualizarse.  
 |**Base de datos**|Especifica la base de datos en la que se ubica la tabla de seguimiento.  
@@ -202,7 +202,7 @@ Microsoft SQL Server Profiler y el Asistente para la optimización utilizan este
 |**Table**|Especifica el nombre de la tabla de seguimiento desde la que debe leerse el seguimiento.  
 ## <a name="destination-table"></a>Tabla de destino
 Utilice el cuadro de diálogo **Tabla de destino** para especificar una tabla donde almacenar el seguimiento.  
-|Elemento|Description
+|Elemento|Descripción
 |---|---
 |**SQL Server**|Especifica la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conectada actualmente. Este campo se llena automáticamente y no puede actualizarse. Para cambiar el servidor, haga clic en **Cancelar** y conéctese a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde desea almacenar la tabla de seguimiento.  
 |**Base de datos**|Especifique la base de datos donde desea almacenar la tabla de seguimiento.  
@@ -212,7 +212,7 @@ Utilice el cuadro de diálogo **Tabla de destino** para especificar una tabla do
 ### <a name="basic-replay-options"></a>Opciones básicas de reproducción
 En el cuadro de diálogo **Configuración de reproducción** , utilice la página **Opciones básicas de reproducción** para especificar cómo reproducir una tabla o un archivo de seguimiento.  
 Para ver esta ventana, utilice el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para abrir un seguimiento o un archivo de seguimiento que contenga los eventos adecuados para la reproducción. Para más información, consulte [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md). Cuando la tabla o el archivo de seguimiento están abiertos, en el menú **Reproducir** , haga clic en **Iniciar**y, a continuación, establezca la conexión con la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde desea reproducir el seguimiento.  
-|Elemento|Description
+|Elemento|Descripción
 |---|---
 |**Servidor de reproducción**|Muestra la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la que se establece la conexión para la reproducción.  
 |**Cambiar...**|Inicia el cuadro de diálogo **Conectar al servidor** para conectarse a otro servidor.  
@@ -225,7 +225,7 @@ Para ver esta ventana, utilice el [!INCLUDE[ssSqlProfiler](../../includes/sssqlp
 ### <a name="advanced-replay-options"></a>Opciones avanzadas de reproducción
 En el cuadro de diálogo **Configuración de reproducción** , utilice la pestaña **Opciones avanzadas de reproducción** para especificar cómo reproducir un archivo de seguimiento.  
 Para ver esta ventana, utilice el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para abrir un seguimiento o un archivo de seguimiento que contenga los eventos adecuados para la reproducción. Para más información, consulte [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md). Cuando el archivo o tabla de seguimiento esté abierto, en el menú **Reproducir** , haga clic en **Iniciar**, establezca la conexión con la sesión de SQL Server donde desea reproducir el seguimiento y haga clic en la pestaña **Opciones avanzadas de reproducción** .  
-|Elemento|Description
+|Elemento|Descripción
 |---|---
 |**Reproducir los SPID del sistema**|Especifica si el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] reproduce identificadores de proceso del sistema (SPID).  
 |**Reproducir solo un SPID**|Solo reproduce la actividad del archivo de seguimiento de origen relacionada con el SPID seleccionado.  
@@ -240,7 +240,7 @@ Para ver esta ventana, utilice el [!INCLUDE[ssSqlProfiler](../../includes/sssqlp
 ## <a name="find-dialog-box"></a>Buscar, cuadro de diálogo
 Utilice el cuadro de diálogo **Buscar** para buscar un seguimiento para palabras o caracteres específicos. Para cancelar la búsqueda en curso, presione ESC.  
  Para abrir este cuadro de diálogo en el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], en el menú **Editar** , haga clic en **Buscar**.  
-|Elemento|Description
+|Elemento|Descripción
 |---|---
 |**Buscar**|Escriba el texto que desea buscar. La búsqueda mostrará cualquier cadena que contenga la cadena especificada. Por ejemplo, la búsqueda de "Completed" devolverá "SQL:BatchCompleted". No se admiten caracteres comodín (*, ?, etc.).  
 |**Buscar en columna**|Haga clic en la columna de datos en la que quiere realizar la búsqueda o haga clic en **\<Todas las columnas>** para realizar la búsqueda en todas las columnas de datos del seguimiento.  
@@ -259,7 +259,7 @@ Desplaza los nombres de columnas de datos bajo **Grupos** para agrupar o agregar
 - Para agregar eventos, desplace una columna de datos a **Grupos**. De este modo, todos los eventos de un tipo específico se contraen bajo el nombre del tipo de clase de evento en la ventana de seguimiento. A la izquierda del nombre de clase de eventos aparece un signo más (**+**). Haga clic en el signo más para expandir el tipo de clase de evento y ver todos sus eventos. Puede activar y desactivar la agregación y la agrupación si hace clic en **Vista agregada** o **Vista agrupada** en el menú **Ver** .
 - Para agrupar eventos, desplace varias columnas de datos a **Grupos**. De este modo, todos los eventos de un tipo específico se agrupan en la ventana de seguimiento, pero no se contraen bajo el nombre del tipo de clase de evento. Puede cambiar entre una vista agrupada y una vista no agrupada si hace clic en **Vista agrupada** en el menú Ver. Cuando se desplaza más de una columna de datos a **Grupos**, la opción para cambiar a **Vista agregada** deja de estar disponible.
 
-|Elemento|Description
+|Elemento|Descripción
 |---|---
 |**Columnas**|Muestra las columnas de datos que se pueden desplazar a **Grupos**. Haga clic en el signo más (**+**) situado a la izquierda de **Columnas** para expandir la lista.  
 |**Subir**|Después de seleccionar una columna de datos, haga clic en **Subir** para subir las columnas a **Grupos**. También puede hacer clic en **Subir** para volver a organizar la visualización de las columnas en la ventana de seguimiento.  
@@ -271,7 +271,7 @@ Utilice el cuadro de diálogo **Editar filtro** para crear y modificar filtros d
 
 ## <a name="select-template-name"></a>Seleccionar nombre de plantilla
 Utilice el cuadro de diálogo **Seleccionar nombre de plantilla** para seleccionar una plantilla de seguimiento del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] existente para exportarla a un archivo del sistema operativo. También puede utilizar este cuadro de diálogo para seleccionar o escribir un nombre distinto para guardar una plantilla de seguimiento como cuando se edita una plantilla de seguimiento existente. Para tener acceso a este cuadro de diálogo cuando se exporta una plantilla, en el menú [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **del** , seleccione **Plantillas**y, a continuación, haga clic en **Exportar plantilla**. Para tener acceso a este cuadro de diálogo cuando se cambia el nombre de una plantilla, en el menú **Archivo** , seleccione **Plantillas**, **Editar plantilla**y, a continuación, haga clic en **Guardar como**.  
-|Elemento|Description
+|Elemento|Descripción
 |---|---
 |**Tipo de servidor**|Elija el tipo de servidor desde el que desea elegir una plantilla. Esta opción solo se encuentra disponible cuando se exporta una plantilla.  
 |**Nombre de plantilla**|Escriba un nombre de plantilla nuevo o seleccione un nombre de plantilla de la lista. Si exporta una plantilla, solo podrá seleccionar un nombre de plantilla de la lista. 

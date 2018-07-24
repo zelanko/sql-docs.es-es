@@ -1,5 +1,5 @@
 ---
-title: IColumnsRowset | Documentos de Microsoft
+title: IColumnsRowset | Microsoft Docs
 description: IColumnsRowset, interfaz
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,21 +15,21 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 57044ee12be13d0ecc2c62cedb54e37a5a02b893
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: da249467e9eeca92009266eec5190f20b488f9e3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689948"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107847"
 ---
 # <a name="icolumnsrowset"></a>IColumnsRowset
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Controlador de OLE DB para SQL Server agrega la columna DBCOLUMN_BASETABLEINSTANCE a IColumnsRowset:: Getcolumnrowset. Esta columna devuelve DBTYPE_I2 y está reservada para su uso por parte de Microsoft. La información de esta columna está sujeta a cambios en versiones futuras.  
+  Controlador OLE DB para SQL Server agrega la columna DBCOLUMN_BASETABLEINSTANCE a IColumnsRowset:: Getcolumnrowset. Esta columna devuelve DBTYPE_I2 y está reservada para su uso por parte de Microsoft. La información de esta columna está sujeta a cambios en versiones futuras.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Interfaces &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md) 
   
   

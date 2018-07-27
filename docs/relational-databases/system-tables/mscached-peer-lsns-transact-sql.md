@@ -1,5 +1,5 @@
 ---
-title: MScached_peer_lsns (Transact-SQL) | Documentos de Microsoft
+title: MScached_peer_lsns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,37 +20,37 @@ helpviewer_keywords:
 - MScached_peer_lsns system table
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c88be8f7ffd489fbc276b58f253819b2f1d9f7ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ee2580aa933108da5fce53ff74d67f6c4de2ea1
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004222"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103853"
 ---
 # <a name="mscachedpeerlsns-transact-sql"></a>MScached_peer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  El **MScached_peer_lsns** tabla sirve para realizar un seguimiento de los valores LSN en el registro de transacciones que se usan para determinar los comandos para volver a un suscriptor determinado en la replicación punto a punto. Esta tabla se almacena en la base de datos de distribución.  
+  El **MScached_peer_lsns** tabla se utiliza para realizar un seguimiento de los valores de LSN del registro de transacciones que se usan para determinar los comandos para volver a un suscriptor determinado en la replicación punto a punto. Esta tabla se almacena en la base de datos de distribución.  
   
 ## <a name="definition"></a>Definición  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**agent_id**|**int**|Id. del Agente de distribución.|  
+|**valor de agent_id**|**int**|Id. del Agente de distribución.|  
 |**originador**|**sysname**|Nombre del publicador de origen.|  
 |**originator_db**|**sysname**|Nombre de la base de datos de publicación de origen.|  
 |**originator_publication_id**|**int**|Identifica la publicación de origen.|  
 |**originator_db_version**|**int**|Identifica el número de versión de la base de datos de origen.|  
 |**originator_lsn**|**varbinary (16)**|LSN de la transacción de origen.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Los valores de LSN solo se utilizan inmediatamente después de la inserción, y no tienen un significado duradero en el sistema.  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

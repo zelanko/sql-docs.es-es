@@ -21,12 +21,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: cb9c3bdbf0e8661106fe69eacd6f692273d82d32
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2504ca0853d11d496e88b963a4421885b83631b0
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232542"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310202"
 ---
 # Libros en pantalla de SQL Server 2014
   Bienvenido a [!INCLUDE[msCoName](../includes/msconame-md.md)]® libros en pantalla para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Libros en pantalla contiene descripciones de tareas y documentación de referencia que se describe cómo realizar el trabajo de inteligencia empresarial y administración de datos mediante el uso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

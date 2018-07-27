@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_missing_index_groups (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_db_missing_index_groups (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,31 +25,34 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 32368c857dd44a19295e8169af0d1b51a8d23581
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 33909bd64f1ada7d096c97e11c82312c9e7a7bd3
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463581"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310282"
 ---
 # <a name="sysdmdbmissingindexgroups-transact-sql"></a>sys.dm_db_missing_index_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve información acerca de qué índices que faltan están contenidos en un grupo concreto de índices que faltan, excluidos los índices espaciales.  
+  Esta DMV devuelve información acerca de los índices que faltan en un grupo de índices específicos, excepto los índices espaciales. 
   
  En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], las vistas de administración dinámica no pueden exponer información que impactaría a la contención de la base de datos ni acerca de otras bases de datos a las que el usuario tenga acceso. Para evitar exponer esta información, cada fila que contiene datos que no pertenecen al inquilino conectado se filtra.  
    
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**index_group_handle**|**int**|Identifica un grupo de índices que faltan.|  
 |**index_handle**|**int**|Identifica un índice que falta que pertenece al grupo especificado por **index_group_handle**.<br /><br /> Un grupo de índices solo contiene un índice.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Información devuelta por **sys.dm_db_missing_index_groups** se actualiza cuando una consulta está optimizada por el optimizador de consultas y no se conserva. La información sobre índices que faltan solo se conserva hasta que se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los administradores de bases de datos deben realizar copias de seguridad de forma periódica de la información de índices que faltan si desean conservarla después de reciclar el servidor.  
   
  Ninguna columna del conjunto de resultados de salida es una clave, pero juntas forman una clave de índice.  
+
+  >[!NOTE]
+  >El conjunto de resultados de esta DMV se limita a 600 filas. Cada fila contiene un índice que falta. Si tiene más de 600 índices que faltan, tenga en cuenta los índices que faltan existentes para que pueda ver a continuación, los más recientes.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para consultar esta vista de administración dinámica, se debe conceder a los usuarios el permiso VIEW SERVER STATE o cualquier permiso que implique el permiso VIEW SERVER STATE.  
   
 ## <a name="see-also"></a>Vea también  

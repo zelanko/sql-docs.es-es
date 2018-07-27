@@ -1,5 +1,5 @@
 ---
-title: xp_sscanf (Transact-SQL) | Documentos de Microsoft
+title: xp_sscanf (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_sscanf
 ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
-caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b989dfa254330034cab4ab5278e2e4a9cca4da3d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8f4cc1369f4de19b025f5fc5d78285cf10d55fcb
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257639"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103863"
 ---
 # <a name="xpsscanf-transact-sql"></a>xp_sscanf (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
  Es una cadena de caracteres con formato similar a lo que es compatible con el lenguaje C **sscanf** función. Actualmente, solo se acepta el formato %s.  
   
  *argument*  
- Es un **varchar** variable se establece en el valor de los correspondientes *formato* argumento.  
+ Es un **varchar** variable se establece en el valor de la correspondiente *formato* argumento.  
   
  *n*  
  Es un marcador de posición que indica que se pueden especificar hasta 50 argumentos.  
@@ -67,7 +66,7 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
   
  `Command(s) completed successfully.`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="examples"></a>Ejemplos  

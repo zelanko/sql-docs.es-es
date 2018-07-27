@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9e28e848c7a95e8c29558cb6ee77056d47a955e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 80beafc8a281f7f4af71484acfa01ed0016b7de2
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38028843"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107667"
 ---
 # <a name="sysdmresourcegovernorexternalresourcepools-transact-sql"></a>Sys.dm_resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,15 +39,15 @@ Devuelve información sobre el estado actual del grupo de recursos externos, la 
 |----------------|---------------|-----------------| 
 | external_pool_id|**int**|Identificador del grupo de recursos. No admite valores NULL. |
 | NAME|**sysname**|El nombre del grupo de recursos. No admite valores NULL. 
-| pool_version|**int**|número de versión interna.|
+| pool_version|**int**|Número de versión interno.|
 | max_cpu_percent|**int**|La configuración actual del ancho banda de la CPU promedio máximo permitido para todas las solicitudes en el grupo de recursos de servidor cuando hay contención de CPU. No admite valores NULL. |
 | max_processes|**int**|Número máximo de procesos externos simultáneos. El valor predeterminado, 0, especifica que no hay límite. No admite valores NULL.|
 | max_memory_percent|**int**|La configuración actual del porcentaje de memoria total del servidor que pueden utilizar las solicitudes en este grupo de recursos de servidor. No admite valores NULL. |
 | statistics_start_time|**datetime**|La hora en que se restablecieron las estadísticas para este grupo. No admite valores NULL. 
-| peak_memory_kb|**bigint**|cantidad de memoria máxima utilizada, en kilobytes, del grupo de recursos. No admite valores NULL. |
+| peak_memory_kb|**bigint**|La cantidad máxima de memoria utilizada, en kilobytes, del grupo de recursos. No admite valores NULL. |
 | write_io_count|**int**|El total de operaciones de E/S de escritura emitidas desde que se restablecieron las estadísticas del regulador de recursos. No admite valores NULL. |
 | read_io_count|**int**|El total de operaciones de E/S de lectura emitidas desde que se restablecieron las estadísticas del regulador de recursos. No admite valores NULL. |
-| total_cpu_kernel_ms|**bigint**|El tiempo acumulado usuario de la CPU en milisegundos desde que se restablecieron las estadísticas del regulador de recursos. No admite valores NULL. |
+| total_cpu_kernel_ms|**bigint**|El usuario kernel tiempo de CPU acumulado en milisegundos desde que se restablecieron las estadísticas del regulador de recursos. No admite valores NULL. |
 | total_cpu_user_ms|**bigint**|El tiempo acumulado usuario de la CPU en milisegundos desde que se restablecieron las estadísticas del regulador de recursos. No admite valores NULL. |
 | active_processes_count|**int**|El número de procesos externos que se ejecutan en el momento de la solicitud. No admite valores NULL. |
 

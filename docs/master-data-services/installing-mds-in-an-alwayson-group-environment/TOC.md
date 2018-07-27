@@ -1,1 +1,0 @@
-# [Instalar Master Data Services en un entorno AlwaysOn](installing-mds-in-an-alwayson-group-environment.md)

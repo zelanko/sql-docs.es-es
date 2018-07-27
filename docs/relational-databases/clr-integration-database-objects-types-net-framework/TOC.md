@@ -1,5 +1,0 @@
-# [Tipos de datos de SQL Server en .NET Framework](sql-server-data-types-in-the-net-framework.md)
-# [Intercalación y tipos de datos de integración CLR](collation-and-clr-integration-data-types.md)
-# [Administrar parámetros de objetos grandes (LOB) en CLR](handling-large-object-lob-parameters-in-the-clr.md)
-# [Asignar datos de parámetros CLR](mapping-clr-parameter-data.md)
-# [Nulabilidad y comparaciones lógicas de tres valores](nullability-and-three-value-logic-comparisons.md)

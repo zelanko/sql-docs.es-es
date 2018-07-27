@@ -1,6 +1,0 @@
-# [Atributos de protección del host y programación de la integración CLR](host-protection-attributes-and-clr-integration-programming.md)
-# [Miembros y tipos no permitidos en Microsoft.VisualBasic.dll](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)
-# [Miembros y tipos no permitidos en mscorlib.dll](disallowed-types-and-members-in-mscorlib-dll.md)
-# [Tipos y miembros no permitidos en System.Core.dll](disallowed-types-and-members-in-system-core-dll.md)
-# [Tipos y miembros no permitidos en System.Data.dll](disallowed-types-and-members-in-system-data-dll.md)
-# [Tipos y miembros no permitidos en System.dll](disallowed-types-and-members-in-system-dll.md)

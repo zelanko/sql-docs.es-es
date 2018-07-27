@@ -1,5 +1,0 @@
-# [Propiedad AliasName (clase SqlServerAlias)](aliasname-property-sqlserveralias-class.md)
-# [Propiedad ConnectionString (clase SqlServerAlias)](connectionstring-property-sqlserveralias-class.md)
-# [Propiedad ProtocolName (clase SqlServerAlias)](protocolname-property-sqlserveralias-class.md)
-# [Propiedad ServerName (clase SqlServerAlias)](servername-property-sqlserveralias-class.md)
-# [Clase SqlServerAlias](sqlserveralias-class.md)

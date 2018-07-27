@@ -1,8 +1,0 @@
-# [Visor de archivos de registro](log-file-viewer.md)
-## [Abrir el Visor de archivos de registro](open-log-file-viewer.md)
-## [Ver archivos del registro sin conexión](view-offline-log-files.md)
-## [Ayuda F1 del Visor de archivos de registro](log-file-viewer-f1-help.md)
-# [El registro de transacciones (SQL Server)](the-transaction-log-sql-server.md)
-## [Administrar el tamaño del archivo de registro de transacciones](manage-the-size-of-the-transaction-log-file.md)
-## [Solucionar problemas de un registro de transacciones lleno (error 9002 de SQL Server)](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)
-## [Controlar la durabilidad de las transacciones](control-transaction-durability.md)

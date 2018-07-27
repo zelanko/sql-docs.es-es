@@ -1,5 +1,0 @@
-# [Conjunto de filas DBSCHEMA_CATALOGS](dbschema-catalogs-rowset.md)
-# [Conjunto de filas DBSCHEMA_COLUMNS](dbschema-columns-rowset.md)
-# [Conjunto de filas DBSCHEMA_PROVIDER_TYPES](dbschema-provider-types-rowset.md)
-# [Conjunto de filas DBSCHEMA_TABLES](dbschema-tables-rowset.md)
-# [Conjuntos de filas de esquema OLE DB](ole-db-schema-rowsets.md)

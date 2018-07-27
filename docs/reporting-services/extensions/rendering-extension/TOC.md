@@ -1,5 +1,0 @@
-# [Implementación de una extensión de representación](deploying-a-rendering-extension.md)
-# [Ejecución de una extensión de representación](implementing-a-rendering-extension.md)
-# [Ejecución de la interfaz IRenderingExtension](implementing-the-irenderingextension-interface.md)
-# [Eliminación de una extensión de representación](removing-a-rendering-extension.md)
-# [Información general de las extensiones de representación](rendering-extensions-overview.md)

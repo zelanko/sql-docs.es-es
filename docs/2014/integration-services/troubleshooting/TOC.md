@@ -1,7 +1,0 @@
-# [Herramientas para solucionar problemas del desarrollo de paquetes](troubleshooting-tools-for-package-development.md)
-## [Depurar el flujo de control](debugging-control-flow.md)
-## [Depurar script](debugging-script.md)
-## [Depurar el flujo de datos](debugging-data-flow.md)
-## [Depurar un paquete estableciendo puntos de interrupción en una tarea o un contenedor](../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)
-## [Agregar un visor de datos a un flujo de datos](../add-a-data-viewer-to-a-data-flow.md)
-## [Configurar una salida de error en un componente de flujo de datos](../configure-an-error-output-in-a-data-flow-component.md)

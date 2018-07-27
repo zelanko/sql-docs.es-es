@@ -1,5 +1,0 @@
-# [Información general](partitioned-tables-and-indexes.md)  
-# [Crear](create-partitioned-tables-and-indexes.md)  
-# [Modificar una función de partición](modify-a-partition-function.md)  
-# [Modificar un esquema de partición](modify-a-partition-scheme.md)  
-# [Asistente para administrar particiones (Ayuda F1)](manage-partition-wizard-f1-help.md)  

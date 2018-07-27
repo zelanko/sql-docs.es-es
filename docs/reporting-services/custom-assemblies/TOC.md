@@ -1,8 +1,0 @@
-# [Acceso a los ensamblados personalizados a través de expresiones](accessing-custom-assemblies-through-expressions.md)
-# [Aserción de los permisos en ensamblados personalizados](asserting-permissions-in-custom-assemblies.md)
-# [Implementación de un ensamblado personalizado](deploying-a-custom-assembly.md)
-# [Depuración de ensamblados personalizados](how-to-debug-custom-assemblies.md)
-# [Inicialización de objetos de ensamblados personalizados](initializing-custom-assembly-objects.md)
-# [Referencia a ensamblados en un archivo RDL](referencing-assemblies-in-an-rdl-file.md)
-# [Uso de ensamblados personalizados con informes](using-custom-assemblies-with-reports.md)
-# [Uso de ensamblados personalizados con nombre seguro](using-strong-named-custom-assemblies.md)

@@ -22,18 +22,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d5bf6819d26ff105113292162c3302d54460a6e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b3a231d37ef959882a9d16b7b4bccdfab21308cc
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931540"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108107"
 ---
 # <a name="system-databases"></a>Bases de datos del sistema
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye las siguientes bases de datos del sistema.  
   
-|Base de datos del sistema|Description|  
+|Base de datos del sistema|Descripción|  
 |---------------------|-----------------|  
 |[Base de datos maestra](../../relational-databases/databases/master-database.md)|Registra toda la información del sistema para una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Base de datos msdb](../../relational-databases/databases/msdb-database.md)|La utiliza el Agente SQL Server para programar alertas y trabajos.|  
@@ -42,7 +42,7 @@ ms.locfileid: "32931540"
 |[Base de datos tempdb](../../relational-databases/databases/tempdb-database.md)|Área de trabajo que contiene objetos temporales o conjuntos de resultados intermedios.|  
 
 > [!IMPORTANT]
-> En el caso de Azure SQL Database, solo se aplican la base de datos maestra y la base de datos tempdb. Para familiarizarse con el concepto de servidor lógico y base de datos maestra lógica, vea [¿Qué es un servidor lógico de Azure SQL?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server) Para ver información sobre tempdb en el contexto de Azure SQL Database, vea [Base de datos tempdb en SQL Database](tempdb-database.md#tempdb-database-in-sql-database).
+> En el caso del servidor lógico de Azure SQL Database, solo se aplican la base de datos maestra y la base de datos tempdb. Para familiarizarse con el concepto de servidor lógico y base de datos maestra lógica, vea [¿Qué es un servidor lógico de Azure SQL?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server) Para ver información sobre tempdb en el contexto de Azure SQL Database, vea [Base de datos tempdb en SQL Database](tempdb-database.md#tempdb-database-in-sql-database). En el caso de Instancia administrada de Azure SQL Database, se aplican todas las bases de datos del sistema. Para más información sobre Instancias administradas en Azure SQL Database, consulte [¿Qué es Instancia administrada de SQL Database?](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
   
 ## <a name="modifying-system-data"></a>modificar datos del sistema  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no permite a los usuarios actualizar directamente la información de objetos del sistema, como tablas del sistema, procedimientos almacenados del sistema y vistas de catálogo. En vez de eso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un completo conjunto de herramientas administrativas con las que los usuarios pueden administrar totalmente el sistema, los usuarios y los objetos de una base de datos. Entre ellas, figuran:  

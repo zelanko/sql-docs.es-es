@@ -17,29 +17,29 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 46b121595162e60bedecfb4338fa058bb7cb8c01
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c591d7cb9a2eab7bca51c9829fbff82c37bf58c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011592"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084307"
 ---
 # <a name="columns-with-a-name"></a>Columnas con nombre
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   A continuación se exponen las condiciones específicas en las que se asignan al XML resultante las columnas con nombre de los conjuntos de filas, con distinción entre mayúsculas de minúsculas:  
   
--   El nombre de la columna empieza por @.  
+-   El nombre de la columna empieza por \@.  
   
--   El nombre de la columna no empieza por @.  
+-   El nombre de la columna no empieza por \@.  
   
--   El nombre de la columna no empieza por @ y contiene una barra diagonal (/).  
+-   El nombre de la columna no empieza por \@ y contiene una barra diagonal (/).  
   
 -   Varias columnas comparten el mismo prefijo.  
   
 -   Una columna tiene un nombre distinto.  
   
-## <a name="column-name-starts-with-an-at-sign-"></a>El nombre de la columna empieza por @  
- Si el nombre de la columna empieza por @ (arroba) y no contiene una barra diagonal (/), se creará un atributo del elemento `row` con el valor de columna correspondiente. Por ejemplo, la consulta siguiente devuelve un conjunto de filas con dos columnas (@PmId y Name). En el XML resultante, se agrega un atributo **PmId** al elemento `row` correspondiente y se le asigna un valor de ProductModelID.  
+## <a name="column-name-starts-with-an-at-sign-"></a>El nombre de la columna empieza por \@  
+ Si el nombre de la columna empieza por \@ y no contiene una barra diagonal (/), se creará un atributo del elemento `row` con el valor de columna correspondiente. Por ejemplo, la consulta siguiente devuelve un conjunto de filas con dos columnas (\@PmId y Name). En el XML resultante, se agrega un atributo **PmId** al elemento `row` correspondiente y se le asigna un valor de ProductModelID.  
   
 ```  
   
@@ -71,8 +71,8 @@ FOR XML PATH
 go  
 ```  
   
-## <a name="column-name-does-not-start-with-an-at-sign-"></a>El nombre de la columna no empieza por @  
- Si el nombre de la columna no empieza con un signo (@), no es una de las pruebas de nodo XPath y no incluye una marca de barra diagonal (/), se creará un elemento XML que es un subelemento del elemento de fila (`row` de forma predeterminada).  
+## <a name="column-name-does-not-start-with-an-at-sign-"></a>El nombre de la columna no empieza por \@  
+ Si el nombre de la columna no empieza por \@, no es una de las pruebas de nodo XPath y no incluye una marca de barra diagonal (/), se creará un elemento XML que es un subelemento del elemento de fila (`row` de manera predeterminada).  
   
  La consulta siguiente especifica el nombre de la columna, el resultado. Por tanto, se agrega un elemento secundario `result` al elemento `row`.  
   
@@ -118,8 +118,8 @@ go
 </row>  
 ```  
   
-## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>El nombre de la columna no empieza por @ y contiene una barra diagonal (/)  
- Si el nombre de la columna no empieza por @ pero incluye una barra diagonal (/), el nombre de la columna indica una jerarquía XML. Por ejemplo, si el nombre de la columna es "Name1/Name2/Name3.../Name***n*** ", cada Name***i*** representa un nombre de elemento que está anidado en el elemento de fila actual (para i=1) o que se encuentra debajo del elemento con el nombre Name***i-1***. Si Name***n*** empieza por @, se asignará a un atributo del elemento Name***n-1*** .  
+## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>El nombre de la columna no empieza por \@ y contiene una barra diagonal (/)  
+ Si el nombre de la columna no empieza por \@ pero incluye una barra diagonal (/), el nombre de la columna indica una jerarquía XML. Por ejemplo, si el nombre de la columna es "Name1/Name2/Name3.../Name***n*** ", cada Name***i*** representa un nombre de elemento que está anidado en el elemento de fila actual (para i=1) o que se encuentra debajo del elemento con el nombre Name***i-1***. Si Name***n*** empieza por "\@", se asignará a un atributo del elemento Name***n-1***.  
   
  Por ejemplo, la consulta siguiente devuelve un Id. y un nombre de empleado que están representados como un elemento EmpName complejo que incluye nombre, inicial y apellidos.  
   

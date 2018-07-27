@@ -17,12 +17,12 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a2a0eb1662a79095be0d0e3fd727d993b217a0bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: afecc0284d763cd96fd9d90ba54fc6df7d75217b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036742"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085107"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Crear informes principales y de obtención de detalles (Generador de informes)
 En este tutorial se explica cómo crear dos tipos de informes paginados de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : un informe detallado y un informe principal. Los datos de ventas de ejemplo utilizados en estos informes se recuperan de un cubo de Analysis Services. 
@@ -118,7 +118,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
     > Si no quiere compilar la consulta MDX manualmente, haga clic en el icono ![Cambiar a Modo Diseño](../reporting-services/media/rsqdicon-designmode.gif "Cambiar a Modo Diseño"), alterne el diseñador de consultas al modo Consulta, pegue la MDX completada en el diseñador de consultas y, después, vaya al paso 6 de [Crear el conjunto de datos](#DSkip).  
   
     ```  
-    SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
+    SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(\@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
     ```  
   
 3.  En el panel de Grupo de medida, expanda Canal y, después, arrastre la columna Nombre de canal hasta la columna **Jerarquía** del panel de filtro.  
@@ -295,10 +295,10 @@ De forma predeterminada los parámetros están visibles, lo que no es adecuado p
   
 1.  En el panel Datos de informe, expanda **Parámetros**.  
   
-2.  Haga clic con el botón derecho en @ProductProductCategoryNamey, después, haga clic en **Propiedades de parámetro**.  
+2.  Haga clic con el botón derecho en \@ProductProductCategoryName y, después, en **Propiedades de parámetro**.  
   
     > [!NOTE]  
-    > El el carácter @ situado al lado del nombre indica que se trata de un parámetro.  
+    > El carácter \@ situado al lado del nombre indica que se trata de un parámetro.  
   
 3.  En la pestaña **General** , haga clic en **Oculto**.  
   
@@ -409,7 +409,7 @@ Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseña
     > Si no quiere compilar la consulta MDX manualmente, haga clic en el icono ![Cambiar a Modo Diseño](../reporting-services/media/rsqdicon-designmode.gif "Cambiar a Modo Diseño"), alterne el diseñador de consultas al modo Consulta, pegue la MDX completada en el diseñador de consultas y, después, vaya al paso 5 de [Crear el conjunto de datos](#MSkip).  
   
     ```  
-    WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
+    WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(\@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
     ```  
   
 3.  En el panel de Grupo de medida, expanda Canal y, después, arrastre la columna Nombre de canal hasta la columna **Jerarquía** del panel de filtro.  

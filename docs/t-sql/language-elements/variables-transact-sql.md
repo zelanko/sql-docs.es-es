@@ -17,12 +17,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ad62b912dbe788aa6fffb016440a597c0a27cce
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 1d411c73e322e4043645a161e059d5cd6f1a300f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36249707"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088397"
 ---
 # <a name="variables-transact-sql"></a>Variables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,7 +34,7 @@ Una variable local de Transact-SQL es un objeto que contiene un valor individual
 * Para guardar el valor de un dato que se va a devolver en un código de retorno de un procedimiento almacenado o un valor devuelto de una función.
 
 > [!NOTE]
-> Los nombres de algunas funciones del sistema Transact-SQL comienzan por dos *arrobas* (@@). A pesar de que en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se hacía referencia a @@functions como variables globales, no son variables y no tienen el mismo comportamiento que las variables. Las funciones @@functions son funciones del sistema y el uso de su sintaxis sigue las reglas de las funciones.
+> Los nombres de algunas funciones del sistema Transact-SQL comienzan por dos *arrobas* (\@\@). A pesar de que en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se hacía referencia a las funciones que empiezan por \@\@ como variables globales, no son variables y no tienen el mismo comportamiento que las variables. Las funciones que empiezan por \@\@ son funciones del sistema, y el uso de su sintaxis sigue las reglas de las funciones.
 
 Este script crea una pequeña tabla de prueba y la rellena con 26 filas. El script usa una variable para hacer tres cosas: 
 
@@ -85,17 +85,17 @@ GO
 
 ## <a name="declaring-a-transact-sql-variable"></a>Declarar una variable de Transact-SQL
 La instrucción DECLARE inicializa una variable de Transact-SQL al: 
-* Asignar un nombre. El nombre debe tener un único @ como primer carácter.
+* Asignar un nombre. El nombre debe tener un único \@ como primer carácter.
 * Asignar un tipo de datos suministrado por el sistema o definido por el usuario y una longitud. Para las variables numéricas, se asignan también una precisión y una escala. Para las variables del tipo XML, puede asignarse una colección de esquemas opcional.
 * Establecer el valor a NULL.
 
-Por ejemplo, la siguiente instrucción **DECLARE** crea una variable local llamada **@mycounter** con un tipo de datos int.  
+Por ejemplo, la siguiente instrucción **DECLARE** crea una variable local llamada **\@mycounter** con un tipo de datos int.  
 ```sql
 DECLARE @MyCounter int;
 ```
 Para declarar más de una variable local, use una coma después de la primera variable local definida y, a continuación, especifique el nombre y tipo de datos de la siguiente variable local.
 
-Por ejemplo, la siguiente instrucción **DECLARE** crea tres variables locales, denominadas **@LastName**, **@FirstName** y **@StateProvince**, e inicializa cada una en NULL:  
+Por ejemplo, la siguiente instrucción **DECLARE** crea tres variables locales llamadas **\@LastName**, **\@FirstName** y **\@StateProvince**, e inicializa cada una de ellas a NULL:  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
@@ -165,7 +165,7 @@ GO
 > [!WARNING]
 > Si hay varias cláusulas de asignación en una sola instrucción SELECT, SQL Server no garantiza el orden de evaluación de las expresiones. Tenga en cuenta que los efectos solo están visibles si existen referencias entre las asignaciones.
 
-Si una instrucción SELECT devuelve más de una fila y la variable hace referencia a una expresión no escalar, la variable se establece en el valor devuelto para la expresión en la última fila del conjunto de resultados. Por ejemplo, en el siguiente lote, **@EmpIDVariable** se establece en el valor de **BusinessEntityID** de la última fila devuelta, que es 1:  
+Si una instrucción SELECT devuelve más de una fila y la variable hace referencia a una expresión no escalar, la variable se establece en el valor devuelto para la expresión en la última fila del conjunto de resultados. Por ejemplo, en el siguiente lote, **\@EmpIDVariable** se establece en el valor de **BusinessEntityID** de la última fila devuelta, que es 1:  
 
 ```sql
 USE AdventureWorks2014;

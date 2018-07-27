@@ -1,7 +1,7 @@
 ---
 title: table_constraint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/05/2017
+ms.date: 07/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ caps.latest.revision: 59
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7dff7eb34493f69ac3e62e889f8641c9a7ed368a
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 9ff101bbc0288a3a6ccb1671f3f3c125908cf567
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786146"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106731"
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -170,7 +170,8 @@ ms.locfileid: "37786146"
  Especifica la columna asociada a una definición DEFAULT de nivel de tabla.  
   
  WITH VALUES  
- Especifica que el valor dado en DEFAULT *constant_expression* se almacena en una nueva columna que se agrega a las filas existentes. WITH VALUES solo puede especificarse cuando se especifique DEFAULT en una cláusula de columna ADD. Si la columna agregada permite valores NULL y se ha especificado WITH VALUES, el valor predeterminado se almacena en la nueva columna que se agrega a las filas existentes. Si no se especifica WITH VALUES para las columnas que permiten valores NULL, el valor NULL se almacena en la nueva columna en las filas existentes. Si la nueva columna no permite valores NULL, el valor predeterminado se almacena en las nuevas filas, independientemente de que se especifique o no WITH VALUES.  
+ Al agregar una columna Y una restricción DEFAULT, si la columna permite valores NULL con WITH VALUES, para las filas existentes, establecerá el valor de la columna nueva en el valor determinado en la expresión *constant_expression* DEFAULT. Si la columna que se agrega no permite valores NULL, para las filas existentes, el valor de la columna siempre se establecerá en el valor determinado en la *expresión constante* DEFAULT. Desde SQL Server 2012, está puede ser una operación de metadatos [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+Si se usa cuando no se está agregando también la columna relacionada, no tiene ningún impacto. 
   
  CHECK  
  Es una restricción que exige la integridad del dominio al limitar los valores posibles que se pueden escribir en una o varias columnas.  

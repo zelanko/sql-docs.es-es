@@ -32,12 +32,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e56a65ce4dd6ccfb31e8c55dad26b16c7c1415aa
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d8fad120755b75f9d7e07f9e10c184de6f879810
+ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788296"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024271"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -90,7 +90,9 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
   
  Para realizar una copia de seguridad de la clave privada en un archivo es necesario el cifrado. La contraseña utilizada para proteger la copia de seguridad de un certificado no es la misma que la usada para cifrar la clave privada del certificado.  
   
- Para restaurar la copia de seguridad de un certificado utilice la instrucción [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md).  
+ Para restaurar la copia de seguridad de un certificado utilice la instrucción [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md).
+ 
+ Al realizar una copia de seguridad, los archivos se agregan a la lista de control de acceso de la cuenta de servicio de la instancia de SQL Server. Si es necesario restaurar el certificado en un servidor que se ejecuta en otra cuenta, deberá ajustar los permisos en los archivos para que la nueva cuenta pueda leerlos. 
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL en el certificado y conocimiento de la contraseña que se utiliza para cifrar la clave privada. Si solo se hace una copia de seguridad de la parte pública del certificado, se necesita algún permiso en el certificado y que el llamador no haya denegado el permiso VIEW en el certificado.  

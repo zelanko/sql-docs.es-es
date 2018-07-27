@@ -21,12 +21,12 @@ caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8466ac50eedc6511fdd464789b4480c4dcd52608
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b63787bdf1f0f91fb6bf8f190024ba6897c75717
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33035432"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982787"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Referencia de errores y eventos (Reporting Services)
   En este tema se proporciona información acerca de los errores y eventos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Los archivos de registro de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] también contienen información de error. Para más información sobre los tipos de archivos de registro disponibles y cómo ver los registros, vea [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "33035432"
 ## <a name="report-server-events"></a>Eventos del servidor de informes  
  En el registro de aplicación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows se incluyen los siguientes eventos del servidor de informes.  
   
-|Identificador del evento|Tipo|Categoría|Source|Description|  
+|Identificador del evento|Tipo|Categoría|Source|Descripción|  
 |--------------|----------|--------------|------------|-----------------|  
 |106|Error|Programación|Servidor de informes|Para definir una operación programada (por ejemplo, la suscripción y entrega de un informe) es necesario que se esté ejecutando el Agente SQL Server.|  
 |[107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|Error|Inicio y cierre|Servidor de informes<br /><br /> Procesador de entrega y programación|*\<Origen>* no se puede conectar a la base de datos del servidor de informes. Para más información, vea [Servicio Servidor de informes de Windows &#40;MSSQLServer&#41; 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md).|  
@@ -55,7 +55,7 @@ ms.locfileid: "33035432"
 |119|Error|Activación|Servidor de informes<br /><br /> Procesador de entrega y programación|*\<Origen>* no tiene acceso al contenido de la base de datos del servidor de informes.|  
 |120|Error|Activación|Servidor de informes|No se puede descifrar la clave simétrica. Probablemente se haya producido un cambio en la cuenta con la que se ejecuta el servicio. Para más información, vea [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |121|Error|Inicio y cierre|Servidor de informes|No se pudo iniciar el servicio de llamada a procedimiento remoto (RPC).|  
-|122|Advertencia|Entrega|Procesador de entrega y programación|El Procesador de entrega y programación no se puede conectar al servidor SMTP que se utiliza para la entrega por correo electrónico. Para más información sobre las conexiones del servidor SMTP, vea [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).|  
+|122|Advertencia|Entrega|Procesador de entrega y programación|El Procesador de entrega y programación no se puede conectar al servidor SMTP que se utiliza para la entrega por correo electrónico. Para más información sobre las conexiones del servidor SMTP, consulte [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).|  
 |123|Advertencia|Registro|Servidor de informes<br /><br /> Administrador de informes|El servidor de informes no pudo escribir en el registro de seguimiento. Para más información sobre los registros de seguimiento, vea [Registro de seguimiento del servicio del servidor de informes](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |124|Información|Activación|Servidor de informes|Se ha inicializado el servicio Servidor de informes. Para más información, vea [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).|  
 |125|Información|Activación|Servidor de informes|Se extrajo correctamente la clave utilizada para cifrar datos. Para más información sobre las claves, vea [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  

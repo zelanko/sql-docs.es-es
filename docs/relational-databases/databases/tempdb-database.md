@@ -2,7 +2,7 @@
 title: Base de datos tempdb | Microsoft Docs
 description: En este tema se proporcionan detalles relacionados con la configuración y el uso de la base de datos tempdb en SQL Server en Azure SQL Database.
 ms.custom: P360
-ms.date: 12/19/2017
+ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -23,15 +23,15 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 98e93ce7e85d6c027e2b9b347ff54425440d2674
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: d7a260337f00e6e37015855f9141fbd081e34e91
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34582327"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108377"
 ---
 # <a name="tempdb-database"></a>Base de datos tempdb
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   La base de datos del sistema **tempdb** es un recurso global disponible para todos los usuarios conectados a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a SQL Database. Tempdb se usa para contener:  
   
 - **Objetos de usuario** temporales creados explícitamente, como: tablas e índices temporales locales o globales, procedimientos almacenados temporales, variables de tabla, tablas devueltas en funciones con valores de tabla o cursores.  
@@ -44,7 +44,7 @@ ms.locfileid: "34582327"
   > Cada objeto interno usa un mínimo de nueve páginas, una página IAM y una extensión de ocho páginas. Para obtener más información acerca de las páginas y las extensiones, vea [Páginas y extensiones](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents).
 
   > [!IMPORTANT]
-  > Azure SQL Database admite tablas temporales globales y procedimientos almacenados temporales globales que se almacenan en tempdb y que tienen como ámbito el nivel de base de datos. Las tablas temporales globales y los procedimientos almacenados temporales globales se comparten entre todos los usuarios en la misma base de datos de Azure SQL. Las sesiones de usuario de otras bases de datos de Azure SQL no pueden acceder a tablas temporales globales. Para obtener más información, vea [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database) (Tablas temporales globales con ámbito de base de datos [Azure SQL Database]).
+  > El servidor lógico de Azure SQL Database admite tablas temporales globales y procedimientos almacenados temporales globales que se almacenan en tempdb y que tienen como ámbito el nivel de base de datos. Las tablas temporales globales y los procedimientos almacenados temporales globales se comparten entre todos los usuarios en la misma base de datos de Azure SQL. Las sesiones de usuario de otras bases de datos de Azure SQL no pueden acceder a tablas temporales globales. Para obtener más información, vea [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database) (Tablas temporales globales con ámbito de base de datos [Azure SQL Database]). [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) admite los mismos objetos temporales que SQL Server. En el caso del servidor lógico de Azure SQL Database, solo se aplican la base de datos maestra y la base de datos tempdb. Para familiarizarse con el concepto de servidor lógico y base de datos maestra lógica, vea [¿Qué es un servidor lógico de Azure SQL?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server) Para ver información sobre tempdb en el contexto del servidor lógico de Azure SQL Database, consulte [tempdb Database in Azure SQL Database logical server](#tempdb-database-in-sql-database) (Base de datos tempdb en el servidor lógico de Azure SQL Database). En el caso de Instancia administrada de Azure SQL Database, se aplican todas las bases de datos del sistema. 
 
 - **Almacenes de versiones**, que son una colección de páginas de datos que contiene las filas de datos que son necesarias para admitir las características que utilizan versiones de fila. Hay dos almacenes de versiones: un almacén de versiones común y otro de generación de índices en línea. Los almacenes de versión contienen:
   - Versiones de fila generadas por las transacciones de modificación de datos en una base de datos que utiliza transacciones de lectura confirmada que usan transacciones de aislamiento de versiones de fila o de aislamiento de instantáneas.  

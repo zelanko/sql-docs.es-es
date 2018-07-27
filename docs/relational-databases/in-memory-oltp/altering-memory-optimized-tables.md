@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d7f0ca959918e298d40eca5c925ccbf57e6173a2
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: d2d27efa67f446915de94ffd93edc0ed23db58e2
+ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329756"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39038062"
 ---
 # <a name="altering-memory-optimized-tables"></a>Modificar tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,44 +32,11 @@ ms.locfileid: "34329756"
  
 La sintaxis ALTER TABLE se usa para realizar cambios en el esquema de la tabla, así como para agregar, eliminar y volver a generar índices. Los índices se consideran parte de la definición de tabla:  
   
--   La sintaxis ALTER TABLE... ADD/DROP/ALTER INDEX solo se admite para tablas optimizadas para memoria.  
+-   La sintaxis ALTER TABLE ... ADD/DROP/ALTER INDEX solo se admite para tablas optimizadas para memoria.  
   
 -   Si no se usa una instrucción ALTER TABLE, las instrucciones CREATE INDEX, DROP INDEX y ALTER INDEX *no* son compatibles con los índices de las tablas optimizadas para memoria.  
   
- A continuación se muestra la sintaxis de las cláusulas ADD, DROP y ALTER INDEX en la instrucción ALTER TABLE.  
-  
-```
-| ADD   
-     {   
-        <column_definition>  
-      | <table_constraint>  
-      | <table_index>    
-     } [ ,...n ]  
-  
-| DROP   
-     {  
-         [ CONSTRAINT ]   
-         {   
-              constraint_name   
-         } [ ,...n ]  
-         | COLUMN   
-         {  
-              column_name   
-         } [ ,...n ]  
-         | INDEX   
-         {  
-              index_name   
-         } [ ,...n ]  
-     } [ ,...n ]  
-  
-| ALTER INDEX index_name  
-     {   
-         REBUILD WITH ( <rebuild_index_option> )     
-     }  
-}  
-```  
-  
- Se admiten los siguientes tipos de modificaciones.  
+Se admiten los siguientes tipos de modificaciones:  
   
 -   Cambiar el número de cubos  
   

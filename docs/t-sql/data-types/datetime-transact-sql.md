@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d36f230788699207b122cc849c32577e96ecb2fe
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f56a1b254aeb487001915f05bb4e278e1ebd768e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420464"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087927"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ Define una fecha que se combina con una hora del día con fracciones de segundos
 |Propiedad|Valor|  
 |---|---|
 |Sintaxis|**datetime**|  
-|Uso|DECLARE @MyDatetime **datetime**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime** )|  
+|Uso|DECLARE \@MyDatetime **datetime**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime** )|  
 |Formatos de literal de cadena predeterminados<br /><br /> (se usa para el cliente de nivel inferior)|No aplicable|  
 |Intervalo de fechas|Del 01.01.53 hasta el 31.12.99|  
 |Intervalo de horas|De 00:00:00 a 23:59:59,997|  

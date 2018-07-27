@@ -17,12 +17,12 @@ caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf241911ce9befc7b42e8c84fd6fddb7dcd10374
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 2ebaa1c922714413a29967d38aa8b60ebaa6c335
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323756"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086967"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Expresiones de consulta y nombres de recursos uniformes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,22 +77,22 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
   
  Por ejemplo, especifique el valor Server para la clase **ServerCollection** y el valor Database para la clase **DatabaseCollection** .  
   
- @*PropertyName*  
- Especifica el nombre de una de las propiedades de la clase que está asociada con el objeto especificado en *Object*. El nombre de la propiedad debe llevar un prefijo con el carácter @. Por ejemplo, especifique el valor @IsAnsiNull en la propiedad de clase **Database** **IsAnsiNull**.  
+ \@*PropertyName*  
+ Especifica el nombre de una de las propiedades de la clase que está asociada con el objeto especificado en *Object*. El nombre de la propiedad debe llevar un prefijo con el carácter \@. Por ejemplo, especifique el valor \@IsAnsiNull para **IsAnsiNull** de la propiedad de clase **Database**.  
   
- @*BooleanPropertyName*=true()  
+ \@*BooleanPropertyName*=true()  
  Enumera todos los objetos en los que el valor de la propiedad booleana especificada se establece en TRUE.  
   
- @*BooleanPropertyName*=false()  
+ \@*BooleanPropertyName*=false()  
  Enumera todos los objetos en los que el valor de la propiedad booleana especificada se establece en FALSE.  
   
- contains(@*StringPropertyName*, '*PatternString*')  
+ contains(\@*StringPropertyName*, '*PatternString*')  
  Enumera todos los objetos en los que la propiedad de cadena especificada contiene, al menos, una aparición del juego de caracteres especificado en “*PatternString*”.  
   
- @*StringPropertyName*='*PatternString*'  
+ \@*StringPropertyName*='*PatternString*'  
  Enumera todos los objetos en los que el valor de la propiedad de cadena especificada es exactamente igual que el patrón de caracteres especificado en “*PatternString*”.  
   
- @*DatePropertyName*= datetime('*DateString*')  
+ \@*DatePropertyName*= datetime('*DateString*')  
  Enumera todos los objetos en los que el valor de la propiedad de fecha especificada coincide con la fecha especificada en “*DateString*”. *DateString* debe seguir el formato aaaa-mm-dd hh:mi:ss.mmm.  
   
 |||  
@@ -107,11 +107,11 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
   
  Las fechas que se especifican en este formato se pueden evaluar en cualquier formato de fecha que se almacene en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- is_null(@*PropertyName*)  
+ is_null(\@*PropertyName*)  
  Enumera todos los objetos en los que la propiedad especificada tiene un valor de NULL.  
   
  not(\<*PropertyExpression*>)  
- Niega el valor de evaluación de *PropertyExpression*, enumerando todos los objetos que no coinciden con la condición especificada en *PropertyExpression*. Por ejemplo, not(contains(@Name, 'xyz')) enumera todos los objetos que no tienen la cadena xyz en su nombre.  
+ Niega el valor de evaluación de *PropertyExpression*, enumerando todos los objetos que no coinciden con la condición especificada en *PropertyExpression*. Por ejemplo, distinto de (contains(\@Name, 'xyz')) enumera todos los objetos que no tienen la cadena xyz en su nombre.  
   
 ## <a name="remarks"></a>Notas  
  Las expresiones de consulta son cadenas que enumeran los nodos de una jerarquía de modelo SMO. Cada nodo tiene una expresión de filtro que especifica los criterios para determinar los objetos que se enumeran en ese nodo. Las expresiones de consulta se modelan en el lenguaje de expresión XPath. Las expresiones de consulta implementan un pequeño subconjunto admitido por XPath y, además, tienen algunas extensiones que no se encuentran en XPath. Las expresiones XPath son cadenas que especifican un conjunto de criterios usados para enumerar una o mas de las etiquetas de un documento XML. Para obtener más información acerca de XPath, vea [W3C XPath Language](http://www.w3.org/TR/xpath20/).  

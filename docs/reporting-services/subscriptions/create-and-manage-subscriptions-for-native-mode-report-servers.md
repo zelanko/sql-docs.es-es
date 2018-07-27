@@ -18,12 +18,12 @@ caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 312d082d3126bd3f0365b674177b59d32e9b613b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1aae0ce86304b3093e9151ed1741b615f423c1e4
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33035212"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984967"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Crear y administrar suscripciones para servidores de informes en modo nativo
   Una suscripción estándar es la que crean usuarios individuales que desean recibir un informe por correo electrónico o en una carpeta compartida. Este tema proporciona información sobre las suscripciones estándar que los usuarios individuales crean y administran. Las suscripciones controladas por datos tienen diferentes requisitos y pasos, y se tratan en otro tema. Para obtener más información, vea [Cómo crear, modificar y eliminar suscripciones controladas por datos](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "33035212"
   
 -   Para utilizar la entrega por correo electrónico, el servidor de informes debe estar configurado para una conexión de puerta de enlace o servidor SMTP antes de crear la suscripción.  
   
--   Para utilizar la entrega a recursos compartidos de archivos, se debe haber definido la carpeta de destino. Para obtener más información, vea [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
+-   Para utilizar la entrega a recursos compartidos de archivos, se debe haber definido la carpeta de destino. Para más información, consulte [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
  Antes de que pueda suscribirse a un informe, hay que configurar el origen de datos del informe de modo que utilice credenciales almacenadas o ninguna credencial. Para obtener más información, vea [Almacenamiento de las credenciales en un origen de datos de Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md). De lo contrario, el botón **Nueva suscripción** no está disponible.  
   
@@ -112,9 +112,9 @@ ms.locfileid: "33035212"
   
 4.  **Propietario**: el valor predeterminado del campo de propietario es el usuario actual y no se puede editar cuando se crea la suscripción. Sin embargo, puede cambiar las propiedades de la suscripción después de guardarla, incluido el propietario y la descripción.  
   
-5.  **Entregado por**: seleccione **Correo electrónico**. Si **Correo electrónico** no está disponible, su servidor de informes no se ha configurado para las suscripciones de correo electrónico. Vea [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
+5.  **Entregado por**: seleccione **Correo electrónico**. Si **Correo electrónico** no está disponible, su servidor de informes no se ha configurado para las suscripciones de correo electrónico. Consulte [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
   
-6.  **Para**: el nombre del destinatario del campo Para: se rellena automáticamente con su cuenta de usuario de dominio. Compruebe que el formato es [nombre de usuario]@[dominio.com]. La configuración del servidor de informes determina si el campo **Para** se rellena automáticamente con su cuenta de usuario. Para obtener más información sobre cómo cambiar las direcciones de correo electrónico de la configuración, vea [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
+6.  **Para**: el nombre del destinatario del campo Para: se rellena automáticamente con su cuenta de usuario de dominio. Compruebe que el formato es [nombre de usuario]@[dominio.com]. La configuración del servidor de informes determina si el campo **Para** se rellena automáticamente con su cuenta de usuario. Para más información sobre cómo cambiar las direcciones de correo electrónico de la configuración, consulte [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
     > [!NOTE]  
     >  Dependiendo de sus permisos, podrá escribir la dirección de correo electrónico donde desea recibir el informe. Para especificar varias direcciones de correo electrónico, sepárelas con un punto y coma (;). También puede escribir direcciones de correo electrónico adicionales en los cuadros de texto **CC**, **CCO**y **Responder a** . Esto requiere que tenga permiso para administrar todas las suscripciones.  

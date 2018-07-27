@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6fe22eaec4105f8b849bc3a582a131ab59e46446
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e7f44a11de210090ba9afaf734ceeb3353dbbe4d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37357827"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085137"
 ---
 # <a name="replication-to-sql-database"></a>Replicación a SQL Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,8 @@ ms.locfileid: "37357827"
  -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede ser una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecute en local o una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecute en una máquina virtual de Azure en la nube. Para obtener más información, consulte [Información general sobre SQL Server en máquinas virtuales de Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/).  
  - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] debe ser un suscriptor de inserción de un publicador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
  -  No se pueden colocar la base de datos de distribución y los agentes de replicación en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
- - Se admite la replicación transaccional unidireccional y la de instantáneas. No se admite la replicación transaccional punto a punto ni la de mezcla.  
+ - Se admite la replicación transaccional unidireccional y la de instantáneas. No se admite la replicación transaccional punto a punto ni la de mezcla.
+ - Instancia administrada de SQL Database (versión preliminar) admite las bases de datos del publicador y del distribuidor. Para más información, consulte [Replicación con Instancia administrada de SQL Database](replication-with-sql-database-managed-instance.md).
  
  ## <a name="versions"></a>Versiones  
  - El publicador y el distribuidor deben estar al menos en una de las siguientes versiones:  

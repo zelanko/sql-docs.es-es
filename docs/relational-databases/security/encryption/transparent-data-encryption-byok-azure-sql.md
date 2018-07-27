@@ -17,12 +17,12 @@ ms.topic: conceptual
 ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 1b738239cca6b1afa543718ef64831f72b6490e0
-ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
+ms.openlocfilehash: a803f26e65a4bdda5264fc2cea53a5b360f0df89
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107243"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982397"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Cifrado de datos transparente compatible con Bring Your Own Key para Azure SQL Database y SQL Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -73,9 +73,10 @@ Cuando TDE se configura por primera vez para usar un protector del TDE de Key Va
 - Conceda al servidor lógico acceso al almacén de datos usando su identidad de Azure Active Directory (Azure AD).  Si se usa la IU del portal, la identidad de Azure AD se crea automáticamente y los permisos de acceso al almacén de claves se conceden al servidor.  Al utilizar PowerShell para configurar TDE con BYOK, se debe crear la identidad de Azure AD y comprobar su finalización. Vea [Configuración de TDE con BYOK](transparent-data-encryption-byok-azure-sql-configure.md) para recibir instrucciones paso a paso para usar PowerShell.
 
   >[!NOTE]
-  >Si la identidad de Azure AD **se elimina por error, o bien si se revocan los permisos del servidor** mediante la directiva de acceso al almacén de claves, el servidor perderá acceso al almacén de claves.
+  >Si la identidad de Azure AD **se elimina por error, o bien si se revocan los permisos del servidor** mediante la directiva de acceso al almacén de claves, el servidor perderá acceso al almacén de claves y las bases de datos con cifrado TDE se quitan en un plazo de 24 horas.
   >
-  
+
+- Configurar Azure Key Vault sin una red virtual ni un firewall.  Si SQL pierde acceso al almacén de claves, las bases de datos con cifrado TDE se quitan en un plazo de 24 horas.
 - Habilite la auditoría y los informes en todas las claves de cifrado: Key Vault proporciona registros que son fáciles de insertar en otras herramientas de administración de eventos e información de seguridad (SIEM). Operations Management Suite (OMS) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) es un ejemplo de un servicio que ya está integrado.
 - Para garantizar una alta disponibilidad de las bases de datos cifradas, configure cada servidor lógico con dos almacenes de Azure Key Vault que se encuentren en regiones distintas.
 

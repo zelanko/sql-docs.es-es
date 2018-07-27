@@ -23,12 +23,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e10e011081d1e692bba4f1c63b024eb83784ae4
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 18e266b37d0fd7b96f2d54f2eb25a94b5a53e25f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36255517"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086747"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**0**|Establece como valor predeterminado la asignación **centrada en atributos**.|  
 |**1**|Usa la asignación **centrada en atributos**. Se puede combinar con XML_ELEMENTS. En ese caso, primero se aplica la asignación **centrada en atributos** y, después, la asignación **centrada en elementos** en todas las columnas que todavía no se han visto afectadas.|  
 |**2**|Usa la asignación **centrada en elementos**. Se puede combinar con XML_ATTRIBUTES. En ese caso, primero se aplica la asignación **centrada en atributos** y, después, la asignación **centrada en elementos** en todas las columnas que todavía no se han visto afectadas.|  
-|**8**|Puede combinarse (OR lógico) con XML_ATTRIBUTES o XML_ELEMENTS. Si se trata de una recuperación, esta marca informa de que los datos consumidos no se deberían copiar a la propiedad de desbordamiento **@mp:xmltext**.|  
+|**8**|Puede combinarse (OR lógico) con XML_ATTRIBUTES o XML_ELEMENTS. Si se trata de una recuperación, esta marca informa de que los datos consumidos no se deberían copiar a la propiedad de desbordamiento **\@mp:xmltext**.|  
   
  *SchemaDeclaration*  
  Es la definición de esquema de la forma: *ColName**ColType* [*ColPattern* | *MetaProperty*] [**,***ColNameColType* [* ColPattern* | *MetaProperty*]...]  

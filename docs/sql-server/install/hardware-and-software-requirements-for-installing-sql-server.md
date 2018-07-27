@@ -48,12 +48,12 @@ caps.latest.revision: 333
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e057c582aea0646f0f151c1a342f89281d8479e0
-ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
+ms.openlocfilehash: 2e9788b44bb2f95082914875b14a512f05d584b9
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37890956"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982067"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Requisitos de hardware y software para instalar SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,9 +68,9 @@ En este artículo se enumeran los requisitos mínimos de hardware y software par
   
 -   Descargue SQL Server desde el [**Centro de evaluación**.](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
   
--    Ponga en marcha una máquina virtual con [**SQL Server 2016**](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) ya instalado.  
+-   Ponga en marcha una máquina virtual con [**SQL Server 2016**](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) ya instalado.  
   
- **Las siguientes consideraciones son válidas para todas las ediciones:**  
+**Las siguientes consideraciones son válidas para todas las ediciones:**  
   
 -   Se recomienda ejecutar [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] en equipos con los formatos de archivo NTFS o ReFS. [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] se puede instalar en un equipo con el sistema de archivos FAT32, pero no se recomienda porque es menos seguro que el sistema de archivos NTFS o ReFS.  
   
@@ -93,28 +93,30 @@ Los siguientes requisitos se aplican a todas las instalaciones:
   
 |Componente|Requisito|  
 |---------------|-----------------|  
-|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 y las versiones posteriores necesitan [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 para el Motor de base de datos, Master Data Services o la replicación. El programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 instala automáticamente [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] también se puede instalar manualmente desde [Microsoft .NET Framework 4.6 (instalador web) para Windows](http://support.microsoft.com/kb/3045560).<br/><br/> Para ver más información, recomendaciones y directrices sobre [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6, consulte la [Guía de implementación de .NET Framework para desarrolladores](http://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]y [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] necesitan [KB2919355](http://support.microsoft.com/kb/2919355) para instalar [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
-|Software de red|Los sistemas operativos admitidos para [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] tienen software de red integrado. Las instancias con nombre y predeterminadas de una instalación independiente admiten los siguientes protocolos de red: Memoria compartida, Canalizaciones con nombre, TCP/IP y VIA.<br/><br/> Nota: El protocolo VIA no es compatible con los clústeres de conmutación por error. La memoria compartida solo se admite si la conexión se realiza a través de la dirección de la canalización local para la instancia de clúster de conmutación por error.<br/><br/> Además, el protocolo VIA está en desuso. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> <br/><br/> Para obtener más información acerca de los protocolos de red y las bibliotecas de red, vea [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
+|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 y las versiones posteriores necesitan [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 para el Motor de base de datos, Master Data Services o la replicación. El programa de instalación de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] instala automáticamente [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] también se puede instalar manualmente desde [Microsoft .NET Framework 4.6 (instalador web) para Windows](http://support.microsoft.com/kb/3045560).<br/><br/> Para ver más información, recomendaciones y directrices sobre [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6, consulte la [Guía de implementación de .NET Framework para desarrolladores](http://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]y [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] necesitan [KB2919355](http://support.microsoft.com/kb/2919355) para instalar [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
+|Software de red|Los sistemas operativos admitidos para [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] tienen software de red integrado. Las instancias con nombre y predeterminadas de una instalación independiente admiten los siguientes protocolos de red: Memoria compartida, Canalizaciones con nombre, TCP/IP y VIA.<br/><br/> **Nota:** El protocolo VIA no es compatible con los clústeres de conmutación por error. Los clientes o las aplicaciones que se ejecutan en el mismo nodo del clúster de conmutación por error que la instancia de SQL Server pueden usar el protocolo de memoria compartida para conectarse a SQL Server con la dirección de la canalización local. Sin embargo, este tipo de conexión no es compatible con clúster y generará un error después de la conmutación por error de una instancia. Por tanto, no se recomienda y solo se debe usar en escenarios muy específicos.<br/><br/> **Importante:** El protocolo VIA está en desuso. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> Para obtener más información acerca de los protocolos de red y las bibliotecas de red, vea [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
 |Disco duro|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requiere un mínimo de 6 GB de espacio disponible en disco.<br/><br/> Las necesidades de espacio en disco variarán según los componentes de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] que instale. Para obtener más información, vea [Requisitos de espacio en disco duro](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) en este artículo. Para obtener información acerca de los tipos de almacenamiento admitidos para los archivos de datos, vea [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)|  
 |Unidad|Para la instalación desde disco se necesita una unidad de DVD.|  
 |Monitor|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requiere Super VGA (800x600) o un monitor de una resolución mayor.|  
 |Internet|La funcionalidad de Internet necesita acceso a Internet (no necesariamente de carácter gratuito).|  
   
- Nota: la ejecución de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] en una máquina virtual será más lenta que la ejecución nativa, dada la sobrecarga de virtualización.  
+> [!NOTE]
+> La ejecución de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] en una máquina virtual será más lenta que la ejecución nativa debido a la sobrecarga de virtualización.  
   
- Existen otros requisitos de hardware y software para la característica PolyBase. Para obtener más información, vea [Introducción a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
+> [!IMPORTANT]
+> Existen otros requisitos de hardware y software para la característica PolyBase. Para obtener más información, vea [Introducción a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
   
 ##  <a name="pmosr"></a> Requisitos de procesador, memoria y sistema operativo  
  Los siguientes requisitos de memoria y procesador se aplican a todas las ediciones de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]:  
   
 |Componente|Requisito|  
 |---------------|-----------------|  
-|Memoria *|**Mínimo:**<br/><br/> Ediciones Express: 512 MB<br/><br/> Todas las demás ediciones: 1 GB<br/><br/> **Recomendado:**<br/><br/> Ediciones Express: 1 GB<br/><br/> Todas las demás ediciones: al menos 4 GB y debe aumentar a medida que el tamaño de la base de datos aumente para asegurar un rendimiento óptimo.|  
+|Memoria \*|**Mínimo:**<br/><br/> Ediciones Express: 512 MB<br/><br/> Todas las demás ediciones: 1 GB<br/><br/> **Recomendado:**<br/><br/> Ediciones Express: 1 GB<br/><br/> Todas las demás ediciones: al menos 4 GB y debe aumentar a medida que el tamaño de la base de datos aumente para asegurar un rendimiento óptimo.|  
 |Velocidad del procesador|**Mínimo:** Procesador x64: 1,4 GHz<br/><br/> **Recomendado:** 2 GHz o más|  
 |Tipo de procesador|Procesador x64: AMD Opteron, AMD Athlon 64, Intel Xeon compatible con Intel EM64T Intel Pentium IV compatible con EM64T|  
   
 > [!NOTE]  
->  La instalación de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] es posible únicamente en procesadores x64. Ya no es viable en procesadores x86.  
+> La instalación de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] es posible únicamente en procesadores x64. Ya no es viable en procesadores x86.  
   
  \* La memoria mínima necesaria para instalar el componente [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] en [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) es de 2 GB de RAM, que es independiente del requisito de memoria mínima de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]. Para obtener información acerca de cómo instalar DQS, vea [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
   
@@ -131,7 +133,7 @@ Los siguientes requisitos se aplican a todas las instalaciones:
 -   [Ediciones de amplio uso](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#TOP_Breadth)  
   
 > [!NOTE]  
->  Dos excepciones a la compatibilidad de sistema operativo indicada en esta sección son las siguientes características de Business Intelligence para SQL Server 2016 y versiones anteriores, que se pueden instalar en Windows Server 2008 R2 SP1 o posteriores:  
+> Dos excepciones a la compatibilidad de sistema operativo indicada en esta sección son las siguientes características de Business Intelligence para [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones anteriores, que se pueden instalar en Windows Server 2008 R2 SP1 o posteriores:  
 >  
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
 > 
@@ -223,13 +225,13 @@ Los siguientes requisitos se aplican a todas las instalaciones:
 -   Recurso compartido de archivos SMB  
   
     > [!NOTE]  
-    >  El almacenamiento SMB no se admite para los archivos de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en instalaciones independientes o en clúster. En su lugar, use almacenamiento de conexión directa, una red de área de almacenamiento o S2D.  
+    > El almacenamiento SMB no se admite para los archivos de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en instalaciones independientes o en clúster. En su lugar, use almacenamiento de conexión directa, una red de área de almacenamiento o S2D.  
   
     > [!IMPORTANT]  
-    >  El almacenamiento SMB podría estar hospedado en un servidor de archivos Windows o en un dispositivo de almacenamiento SMB de terceros. Si se utiliza un servidor de archivos Windows, la versión de Windows File Server debería ser 2008 o posterior. Para obtener más información sobre la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un recurso compartido de archivos SMB como opción de almacenamiento, vea [Install SQL Server with SMB Fileshare as a Storage Option](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
+    > El almacenamiento SMB podría estar hospedado en un servidor de archivos Windows o en un dispositivo de almacenamiento SMB de terceros. Si se utiliza un servidor de archivos Windows, la versión de Windows File Server debería ser 2008 o posterior. Para obtener más información sobre la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un recurso compartido de archivos SMB como opción de almacenamiento, vea [Install SQL Server with SMB Fileshare as a Storage Option](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
   
     > [!WARNING]  
-    >  La instalación de clústeres de conmutación por error de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el disco local solo para instalar los archivos tempdb. Asegúrese de que la ruta de acceso especificada para los archivos de datos y registro de tempdb es válida en todos los nodos del clúster. Durante la conmutación por error, si los directorios de tempdb no están disponibles en el nodo de destino de la conmutación por error, el recurso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no podrá ponerse en línea.  
+    > La instalación de clústeres de conmutación por error de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el disco local solo para instalar los archivos tempdb. Asegúrese de que la ruta de acceso especificada para los archivos de datos y registro de tempdb es válida en todos los nodos del clúster. Durante la conmutación por error, si los directorios de tempdb no están disponibles en el nodo de destino de la conmutación por error, el recurso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no podrá ponerse en línea.  
   
 ##  <a name="DC_support"></a> Instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un controlador de dominio  
  Por razones de seguridad, se recomienda que no se instale [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] en un controlador de dominio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no bloqueará la instalación en un equipo que sea un controlador de dominio, pero se aplican las limitaciones siguientes:  

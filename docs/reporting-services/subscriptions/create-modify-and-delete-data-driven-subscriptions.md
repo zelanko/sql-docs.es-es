@@ -20,12 +20,12 @@ caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: cb4b22c712593429a1ad3485e643af48626c5734
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2fee5948ab6a2cb9f7846980ec3838107364d581
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032982"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983227"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Cómo crear, modificar y eliminar suscripciones controladas por datos
   Una suscripción controlada por datos es una suscripción basada en consultas que obtiene los valores de los datos que se utilizan para procesar la suscripción en tiempo de ejecución. Cuando se desencadena la suscripción, se procesa una consulta para obtener información actualizada sobre destinatarios, opciones de entrega del informe, formatos de representación y valores de los parámetros. Los resultados de la consulta se combinan con la definición de la suscripción para crear una suscripción dinámica que utiliza datos que se mantienen en una base de datos de empleados, de clientes o de cualquier otro tipo que contenga información que se pueda utilizar como datos de suscriptor.  
@@ -43,7 +43,7 @@ ms.locfileid: "33032982"
 -   [Ejecutar la suscripción](#bkmk_run_subscription)  
   
 ##  <a name="bkmk_manage_and_delete"></a> Administrar y eliminar una suscripción controlada por datos  
- Una suscripción controlada por datos que se está procesando no puede detenerse o eliminarse mediante la página Administrar trabajos del Administrador de informes. Por esta razón, resulta ventajoso usar una programación compartida para desencadenar la suscripción controlada por datos. De esa manera, si desea impedir temporalmente que se procese una suscripción, puede pausar la programación que la desencadena. Para más información, vea [Crear y administrar suscripciones para servidores de informes en modo nativo](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).  
+ Una suscripción controlada por datos que se está procesando no puede detenerse o eliminarse mediante la página Administrar trabajos del Administrador de informes. Por esta razón, resulta ventajoso usar una programación compartida para desencadenar la suscripción controlada por datos. De esa manera, si desea impedir temporalmente que se procese una suscripción, puede pausar la programación que la desencadena. Para más información, vea [Crear y administrar suscripciones para servidores de informes en modo nativo](http://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).  
   
  Para eliminar una suscripción controlada por datos, selecciónela en la página Mis suscripciones o en la página Suscripciones de un informe y, después, haga clic en **Eliminar**.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "33032982"
  [Crear y administrar suscripciones para servidores de informes en modo nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Crear y administrar suscripciones para servidores de informes en modo nativo](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
+ [old_Crear y administrar suscripciones para servidores de informes en modo nativo](http://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
  [Suscripciones &#40;página del Administrador de informes&#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
  [Mis suscripciones &#40;página del Administrador de informes&#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
   

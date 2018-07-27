@@ -21,12 +21,12 @@ caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 401288bfde8caf4550260f7695d9bc13d07e468a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: d7999de8fa0a00d6479483b3b352fe52622a00b1
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322804"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983781"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pueden instalarse de uno de dos modos, Nativo o SharePoint. Los pasos que debería seguir para comprobar la instalación dependen del modo del servidor de informes.  
@@ -39,7 +39,7 @@ ms.locfileid: "35322804"
   
 2.  Compruebe que se instala el **Servicio SQL Server Reporting Services** y que está en el estado **En ejecución** .  
   
-     Si no ve el servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la lista, compruebe que el servicio está instalado. Para obtener más información, vea [Instalación del primer servidor de informes en modo de SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
+     Si no ve el servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la lista, compruebe que el servicio está instalado. Para más información, consulte [Instalación del primer servidor de informes en modo de SharePoint](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
   
 ### <a name="to-verify-the-service-application"></a>Para comprobar la aplicación de servicio  
   
@@ -71,7 +71,7 @@ ms.locfileid: "35322804"
   
 1.  En una biblioteca de documentos de SharePoint, cree un informe básico de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que solo contenga un cuadro de texto, por ejemplo un título. El informe no contiene ningún origen de datos o conjuntos de datos. El objetivo es comprobar que puede abrir el Generador de informes y obtener una vista previa de un informe básico.  
   
-2.  Guarde el informe en la biblioteca de documentos y ejecútelo desde la biblioteca. Para obtener más información sobre cómo crear informes con el Generador de informes, vea [Start Report Builder (Iniciar el Generador de informes)](http://msdn.microsoft.com/en-us/8c8c7d2e-b315-418d-bf65-90e7685e4259).  
+2.  Guarde el informe en la biblioteca de documentos y ejecútelo desde la biblioteca. Para obtener más información sobre cómo crear informes con el Generador de informes, vea [Start Report Builder (Iniciar el Generador de informes)](http://msdn.microsoft.com/8c8c7d2e-b315-418d-bf65-90e7685e4259).  
   
 ### <a name="reporting-services-samples"></a>Ejemplos de Reporting Services  
   
@@ -100,7 +100,7 @@ ms.locfileid: "35322804"
   
 2.  Use el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] para crear una carpeta nueva o cargar un archivo para probar si se pasan definiciones a la base de datos del servidor de informes. Si estas operaciones son correctas, la conexión funciona.  
   
-     Para más información, vea [Web Portal &#40;SSRS Native Mode&#41; (Portal web &#40;modo nativo de SSRS&#41;)](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
+     Para más información, vea [Web Portal &#40;SSRS Native Mode&#41; (Portal web &#40;modo nativo de SSRS&#41;)](http://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
   
 ### <a name="to-verify-that-report-designer-is-installed-and-running"></a>Para comprobar que el Diseñador de informes está instalado y funciona  
   

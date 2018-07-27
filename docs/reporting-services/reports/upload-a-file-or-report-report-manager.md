@@ -21,12 +21,12 @@ caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1f0406d711dfb04e553cb7ba8f8c27ede209a5f2
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 8c2adad2eef1350897bcae24bfdde434ecfeecff
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550106"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084867"
 ---
 # <a name="upload-a-file-or-report-in-the-report-server"></a>Cargar un archivo o un informe en el servidor de informes
 En el portal web del servidor de informes se proporciona una característica de carga para poder agregar informes y otros archivos a un servidor de informes sin tener que publicar esos elementos desde una aplicación cliente. Los archivos que se cargan del sistema de archivos se almacenan como elementos en el servidor de informes. El tipo de archivo que se carga determina la manera de almacenarse:  
@@ -41,7 +41,7 @@ En el portal web del servidor de informes se proporciona una característica de 
   
 4.  Busque el archivo que quiera cargar. Se puede cargar un archivo de definición de informe, una imagen, un documento o cualquier archivo que desee que esté disponible en un servidor de informes.  
   
-5.  Escriba el nombre del nuevo elemento. Un nombre de elemento puede incluir espacios, pero no puede incluir caracteres reservados: : @ & = + , $ / * < > |.  
+5.  Escriba el nombre del nuevo elemento. Un nombre de elemento puede incluir espacios, pero no puede incluir caracteres reservados: : \@ & = + , $ / * < > |.  
   
 6.  Si desea reemplazar un elemento existente por el nuevo elemento, seleccione **Sobrescribir elemento si existe**.  
   

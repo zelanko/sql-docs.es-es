@@ -15,12 +15,12 @@ caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e74001a999a6a401c6c221ce4839e32b344f3bba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0622d84da89af1f2cfda36500e5257168417ba14
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025082"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082457"
 ---
 # <a name="create-delete-or-modify-a-folder-web-portal"></a>Crear, eliminar o modificar una carpeta (portal web)
   Puede crear carpetas para organizar y administrar los elementos que publica en un servidor de informes. La creación de carpetas puede ayudar a los usuarios a buscar informes de su interés. Para administradores de contenido, las carpetas proporcionan un marco para aplicar permisos. Puede crear asignaciones de roles en carpetas concretas para restringir el acceso a los informes que se están desarrollando o que no se deberían distribuir de manera amplia.  
@@ -33,7 +33,7 @@ ms.locfileid: "33025082"
   
      Se abre el cuadro de diálogo **Crear una carpeta nueva** .  
   
-3.  Escriba el nombre de la carpeta. Puede incluir espacios, pero no caracteres reservados que se utilicen para la codificación de direcciones URL: ; ? : @ & = + , $ / * < > |. No se puede escribir una serie de nombres de carpetas para crear varias carpetas al mismo tiempo.  
+3.  Escriba el nombre de la carpeta. Puede incluir espacios, pero no caracteres reservados que se utilicen para la codificación de direcciones URL: ; ? : \@ & = + , $ / * < > |. No se puede escribir una serie de nombres de carpetas para crear varias carpetas al mismo tiempo.  
   
 4.  Seleccione **Crear**.  
   

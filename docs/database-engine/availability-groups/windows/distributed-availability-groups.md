@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c035428e526b64dd4b0245719b139f6567108b6
-ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
+ms.openlocfilehash: cddd67d02c64d8be20bda88f00bc05153c366b45
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270956"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083736"
 ---
 # <a name="distributed-availability-groups"></a>Grupos de disponibilidad distribuidos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ Un grupo de disponibilidad tradicional requiere que todos los servidores formen 
 
 ![Grupo de disponibilidad tradicional de varios sitios][4]
 
-Los grupos de disponibilidad distribuidos ofrecen un escenario de implementación más flexible para los grupos de disponibilidad que abarcan varios centros de datos. Se pueden usar grupos de disponibilidad distribuidos donde antes se usaban características como el [trasvase de registros]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server). Pero, a diferencia de los grupos de disponibilidad tradicionales, en los grupos de disponibilidad distribuidos no se puede retrasar la aplicación de transacciones. Esto significa que estos grupos no son de ayuda en caso de que se cometa un error humano por el cual se actualizan o eliminan datos incorrectamente.
+Los grupos de disponibilidad distribuidos ofrecen un escenario de implementación más flexible para los grupos de disponibilidad que abarcan varios centros de datos. Se pueden usar grupos de disponibilidad distribuidos donde antes se usaban características como el [trasvase de registros]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server) para escenarios como la recuperación ante desastres. Pero, a diferencia del trasvase de registros, los grupos de disponibilidad distribuidos no pueden retrasar la aplicación de transacciones. Esto significa que estos grupos no son de ayuda en caso de que se cometa un error humano por el cual se actualizan o eliminan datos incorrectamente.
 
 El emparejamiento de los grupos de disponibilidad distribuidos no es muy fuerte, lo que se traduce en que no necesitan un único clúster WSFC. Se mantienen en SQL Server. Dado que los clústeres WSFC se mantienen individualmente y la sincronización es básicamente asincrónica entre los dos grupos de disponibilidad, es más fácil configurar la recuperación ante desastres en otro sitio. Las réplicas principales de cada grupo de disponibilidad sincronizan sus propias réplicas secundarias.
 
@@ -222,9 +222,9 @@ Al usar las vistas de administración dinámica, se aplican los mismos conceptos
 SELECT ag.[name] as 'AG Name', 
     ag.Is_Distributed, 
     ar.replica_server_name as 'Replica Name'
-FROM    sys.availability_groups ag, 
-    sys.availability_replicas ar       
-WHERE   ag.group_id = ar.group_id
+FROM    sys.availability_groups ag
+  INNER JOIN sys.availability_replicas ar       
+    ON  ag.group_id = ar.group_id
 ```
 
 En la figura siguiente se muestra un ejemplo de salida desde el segundo clúster WSFC que participa en un grupo de disponibilidad distribuido. SPAG1 se compone de dos réplicas: DENNIS y JY. En cambio, el grupo de disponibilidad distribuido denominado SPDistAG contiene los nombres de los dos grupos de disponibilidad implicados (SPAG1 y SPAG2) en lugar de los nombres de las instancias, al igual que sucede con un grupo de disponibilidad tradicional. 
@@ -235,12 +235,12 @@ En SQL Server Management Studio, cualquier tipo de estado que se muestra en el p
 
 ```sql
 SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status'
-FROM    sys.availability_groups ag, 
-sys.availability_replicas ar,       
-sys.dm_hadr_availability_replica_states ars       
-WHERE   ar.replica_id = ars.replica_id
-and     ag.group_id = ar.group_id 
-and ag.is_distributed = 1
+FROM    sys.availability_groups ag
+  INNER JOIN sys.availability_replicas ar
+    ON ag.group_id = ar.group_id
+  INNER JOIN sys.dm_hadr_availability_replica_states ars       
+    ON ar.replica_id = ars.replica_id
+WHERE ag.is_distributed = 1
 ```
        
        
@@ -251,16 +251,16 @@ Para ampliar aún más la consulta anterior, también puede ver el rendimiento s
 
 ```
 SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate
-FROM    sys.databases dbs,
-    sys.availability_groups ag,
-    sys.availability_replicas ar,
-    sys.dm_hadr_availability_replica_states ars,
-    sys.dm_hadr_database_replica_states drs
-WHERE   drs.group_id = ag.group_id
-and ar.replica_id = ars.replica_id
-and ars.replica_id = drs.replica_id
-and dbs.database_id = drs.database_id
-and ag.is_distributed = 1
+FROM    sys.databases dbs
+  INNER JOIN sys.dm_hadr_database_replica_states drs
+    ON dbs.database_id = drs.database_id
+  INNER JOIN sys.availability_groups ag
+    ON drs.group_id = ag.group_id
+  INNER JOIN sys.dm_hadr_availability_replica_states ars
+    ON ars.replica_id = drs.replica_id
+  INNER JOIN sys.availability_replicas ar
+    ON ar.replica_id = ars.replica_id
+WHERE ag.is_distributed = 1
 ```
 
 ![Información sobre el rendimiento de un grupo de disponibilidad distribuido][13]

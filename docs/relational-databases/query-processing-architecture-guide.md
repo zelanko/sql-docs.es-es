@@ -1,7 +1,7 @@
 ---
 title: Guía de arquitectura de procesamiento de consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 02/16/2018
+ms.date: 06/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
@@ -14,27 +14,51 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
+- row mode execution
+- batch mode execution
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 15fd6269a2e879eba086af8d1d143cc0e0cffc1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dbb28640bd0fe4dd6f4d609cfba14260c712a6b0
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087567"
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 El [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] procesa consultas en varias arquitecturas de almacenamiento de datos como tablas locales, tablas con particiones y tablas distribuidas en varios servidores. En los temas siguientes se trata el modo en que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] procesa las consultas y optimiza la reutilización de consultas a través del almacenamiento en caché de los planes de ejecución.
 
+## <a name="execution-modes"></a>Modos de ejecución
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] puede procesar las instrucciones SQL mediante dos modos de procesamiento distintos:
+- Ejecución del modo de fila
+- Ejecución del modo por lotes
+
+### <a name="row-mode-execution"></a>Ejecución del modo de fila
+La *ejecución del modo de fila* es un método de procesamiento de consultas que se usa con tablas RDMBS tradicionales, donde los datos se almacenan en formato de fila. Cuando una consulta se ejecuta y tiene acceso a los datos de tablas de almacén de filas, los operadores del árbol de ejecución y los operadores secundarios leen todas las filas necesarias, en todas las columnas especificadas en el esquema de tabla. De cada fila que se lee, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] recupera las columnas que son necesarias para el conjunto de resultados, como se hace referencia mediante una instrucción SELECT, un predicado JOIN o un predicado de filtro.
+
+> [!NOTE]
+> La ejecución del modo de fila es muy eficaz para escenarios OLTP, pero puede serlo menos cuando se analizan grandes cantidades de datos, por ejemplo en escenarios de almacenamiento de datos.
+
+### <a name="batch-mode-execution"></a>Ejecución del modo por lotes  
+La *ejecución del modo por lotes* es un método de procesamiento de consultas en el que las consultas procesan varias filas a la vez (de ahí el término "por lotes"). Cada columna dentro de un lote se almacena como un vector en un área de memoria independiente, por lo que el procesamiento del modo por lotes se basa en vectores. En el procesamiento del modo por lotes también se usan algoritmos que se optimizan para las CPU de varios núcleos y el rendimiento de aumento de memoria que se encuentran en el hardware moderno.      
+
+La ejecución del modo por lotes está estrechamente integrada con el formato de almacenamiento de almacén de columnas y optimizada alrededor del mismo. El procesamiento del modo por lotes funciona en los datos comprimidos siempre que sea posible y elimina el [operador de intercambio](../relational-databases/showplan-logical-and-physical-operators-reference.md#exchange) que usa el procesamiento del modo de fila. El resultado es un mayor paralelismo y un rendimiento más rápido.    
+
+Cuando una consulta se ejecuta en el modo por lotes y tiene acceso a los datos de índices de almacén de columnas, los operadores del árbol de ejecución y los operadores secundarios leen varias filas en segmentos de columna. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] solo lee las columnas necesarias para el resultado, tal y como se indica en una instrucción SELECT, un predicado JOIN o un predicado de filtro.    
+Para más información sobre los índices de almacén de columnas, vea [Arquitectura de los índices de almacén de columnas](../relational-databases/sql-server-index-design-guide.md#columnstore_index).  
+
+> [!NOTE]
+> La ejecución del modo por lotes es muy eficaz en escenarios de almacenamiento de datos, donde se leen y se agregan grandes cantidades de datos.
+
 ## <a name="sql-statement-processing"></a>Procesamiento de instrucciones SQL
+La forma más básica de ejecutar instrucciones SQL en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consiste en procesar una única instrucción [!INCLUDE[tsql](../includes/tsql-md.md)]. Los pasos que se usan para procesar una única instrucción `SELECT` que solo hace referencia a tablas base locales (no a vistas ni a tablas remotas) ilustran el proceso básico.
 
-El procesamiento de una única instrucción SQL es el método más básico de ejecución de instrucciones SQL en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Los pasos que se usan para procesar una única instrucción `SELECT` que solo hace referencia a tablas base locales (no a vistas ni a tablas remotas) ilustran el proceso básico.
-
-#### <a name="logical-operator-precedence"></a>Prioridad de los operadores lógicos
+### <a name="logical-operator-precedence"></a>Prioridad de los operadores lógicos
 
 Cuando en una instrucción se usa más de un operador lógico, primero se evalúa `NOT`, luego `AND` y, finalmente, `OR`. Los operadores aritméticos y bit a bit se tratan antes que los operadores lógicos. Para más información, vea [Prioridad de operador](../t-sql/language-elements/operator-precedence-transact-sql.md).
 
@@ -68,7 +92,7 @@ WHERE ProductModelID = 20 OR (ProductModelID = 21
 GO
 ```
 
-#### <a name="optimizing-select-statements"></a>Optimización de las instrucciones SELECT
+### <a name="optimizing-select-statements"></a>Optimización de las instrucciones SELECT
 
 Una instrucción `SELECT` no es de procedimiento, ya que no expone los pasos exactos que el servidor de la base de datos debe usar para recuperar los datos solicitados. Esto significa que el servidor de la base de datos debe analizar la instrucción para determinar la manera más eficaz de extraer los datos solicitados. Este proceso se denomina optimizar la instrucción `SELECT` . El componente que lo lleva a cabo se denomina Optimizador de consultas. La entrada al Optimizador de consultas consta de la consulta, el esquema de la base de datos (definiciones de tabla e índice) y las estadísticas de base de datos. La salida del Optimizador de consultas es un plan de ejecución de consultas, en ocasiones denominado plan de consulta o simplemente plan. El contenido de un plan de consulta se describe con más detalle posteriormente en este tema.
 
@@ -104,7 +128,7 @@ El Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md
 
 El Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es importante porque permite que el servidor de la base de datos se ajuste dinámicamente a las condiciones cambiantes de la base de datos, sin necesitar la entrada de un programador o de un administrador de base de datos. Esto permite a los programadores centrarse en la descripción del resultado final de la consulta. Pueden estar seguros de que el Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] creará un plan de ejecución eficaz para el estado de la base de datos cada vez que se ejecuta la instrucción.
 
-#### <a name="processing-a-select-statement"></a>Procesar una instrucción SELECT
+### <a name="processing-a-select-statement"></a>Procesar una instrucción SELECT
 
 Los pasos básicos que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza para procesar una única instrucción SELECT incluyen lo siguiente: 
 
@@ -114,7 +138,7 @@ Los pasos básicos que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ut
 4. El motor relacional comienza a ejecutar el plan de ejecución. A medida que se procesan los pasos que necesitan datos de las tablas base, el motor relacional solicita al motor de almacenamiento que pase los datos de los conjuntos de filas solicitados desde el motor relacional.
 5. El motor relacional procesa los datos que devuelve el motor de almacenamiento en el formato definido para el conjunto de resultados y devuelve el conjunto de resultados al cliente.
 
-#### <a name="processing-other-statements"></a>Procesar otras instrucciones
+### <a name="processing-other-statements"></a>Procesar otras instrucciones
 
 Los pasos básicos descritos para procesar una instrucción `SELECT` se aplican a otras instrucciones SQL como `INSERT`, `UPDATE`y `DELETE`. Las instrucciones`UPDATE` y `DELETE` deben identificar el conjunto de filas que se van a modificar o eliminar. El proceso de identificación de estas filas es el mismo que se utiliza para identificar las filas de origen que contribuyen al conjunto de resultados de una instrucción `SELECT` . Las instrucciones `UPDATE` e `INSERT` pueden contener instrucciones 'SELECT' incrustadas que proporcionan los valores de los datos que se van a actualizar o insertar.
 
@@ -170,7 +194,7 @@ WHERE OrderDate > '20020531';
 
 La característica del plan de presentación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio muestra que el motor relacional genera el mismo plan de ejecución para estas dos instrucciones `SELECT`.
 
-#### <a name="using-hints-with-views"></a>Utilizar sugerencias con vistas
+### <a name="using-hints-with-views"></a>Utilizar sugerencias con vistas
 
 Las sugerencias que se colocan en las vistas de una consulta pueden entrar en conflicto con otras sugerencias que se descubren al expandir la vista para obtener acceso a sus tablas base. En ese caso, la consulta devuelve un error. Por ejemplo, considere la siguiente vista que contiene una sugerencia de tabla en su definición:
 
@@ -545,7 +569,7 @@ Las siguientes cláusulas de consulta no incluyen parámetros. Tenga en cuenta q
   * La expresión contiene una cláusula `CASE` .  
 * Argumentos para cláusulas de sugerencias de consulta. Estos incluyen el argumento `number_of_rows` de la sugerencia de consulta `FAST` , el argumento `number_of_processors` de la sugerencia de consulta `MAXDOP` y el argumento de número de la sugerencia de consulta `MAXRECURSION` .
 
-La parametrización se produce a nivel de instrucciones Transact-SQL individuales. En otras palabras, las instrucciones individuales de un lote incluyen parámetros. Tras la compilación, una consulta con parámetros se ejecuta en el contexto del lote en el que se envió originalmente. Si un plan de ejecución de una consulta se almacena en caché, puede determinar si la consulta incluía parámetros haciendo referencia a la columna sql de la vista de administración dinámica sys.syscacheobjects. Si una consulta incluye parámetros, los nombres y tipos de datos de los parámetros se anteponen al texto del lote enviado en esta columna, como (@1 tinyint).
+La parametrización se produce a nivel de instrucciones Transact-SQL individuales. En otras palabras, las instrucciones individuales de un lote incluyen parámetros. Tras la compilación, una consulta con parámetros se ejecuta en el contexto del lote en el que se envió originalmente. Si un plan de ejecución de una consulta se almacena en caché, puede determinar si la consulta incluía parámetros haciendo referencia a la columna sql de la vista de administración dinámica sys.syscacheobjects. Si una consulta incluye parámetros, los nombres y tipos de datos de parámetros se anteponen al texto del lote enviado en esta columna, como (\@1 tinyint).
 
 > [!NOTE]
 > Los nombres de parámetros son arbitrarios. Los usuarios o las aplicaciones no deben basarse en un determinado orden de nombres. Además, los elementos siguientes pueden cambiar de una versión a otra de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y de una actualización de Service Pack a otra: los nombres de parámetros, la selección de literales que incluyen parámetros y el espaciado en el texto con parámetros.

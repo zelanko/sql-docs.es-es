@@ -24,12 +24,12 @@ caps.latest.revision: 115
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35cfefdbc23ef269579476c098d31825b319a41e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: ab20db9fedc4585e8d1011fa7cc29a60056fefe5
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404757"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084487"
 ---
 # <a name="execute-sql-task"></a>Tarea Ejecutar SQL
   La tarea Ejecutar SQL ejecuta instrucciones SQL o procedimientos almacenados de un paquete. La tarea puede contener una sola instrucción SQL o múltiples instrucciones SQL que se ejecutarán de forma secuencial. Puede usar la tarea Ejecutar SQL para los siguientes fines:  
@@ -218,7 +218,7 @@ Use la página **Asignación de parámetros** del cuadro de diálogo **Editor de
  **Nombre de parámetro**  
  Proporcione un nombre de parámetro.  
   
- Dependiendo del tipo de administrador de conexiones que utiliza la tarea, se utilizarán números o nombres de parámetro. Algunos tipos de administradores de conexiones requieren que el primer carácter del nombre del parámetro sea el signo @, nombres específicos como @Param1 o nombres de columnas como nombres de parámetro.  
+ Dependiendo del tipo de administrador de conexiones que utiliza la tarea, se utilizarán números o nombres de parámetro. Algunos tipos de administradores de conexión requieren que el primer carácter del nombre del parámetro sea el signo \@, nombres específicos como \@Param1 o nombres de columnas como nombres de parámetro.  
   
  **Tamaño del parámetro**  
  Proporcione el tamaño de los parámetros que tienen longitud variable, como cadenas y campos binarios.  
@@ -273,16 +273,16 @@ Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros d
 -   [Obtener valores de códigos de retorno](#Return_codes)    
   
 ###  <a name="Parameter_names_and_markers"></a> Nombres y marcadores de parámetros  
- En función del tipo de conexión que utiliza la tarea Ejecutar SQL, la sintaxis del comando SQL usa marcadores de parámetros diferentes. Por ejemplo, el tipo de administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] requiere que el comando SQL utilice un marcador de parámetro con el formato **@varParameter**, mientras que el tipo de conexión OLE DB requiere el marcador de parámetro de signo de interrogación (?).  
+ En función del tipo de conexión que utiliza la tarea Ejecutar SQL, la sintaxis del comando SQL usa marcadores de parámetros diferentes. Por ejemplo, el tipo de administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] necesita que el comando SQL use un marcador de parámetro con el formato **\@varParameter**, mientras que el tipo de conexión OLE DB necesita el signo de interrogación (?) como marcador de parámetro.  
   
- Los nombres que puede utilizar como nombres de parámetros en las asignaciones entre variables y parámetros también varían según el tipo de Administrador de conexiones. Por ejemplo, el tipo de Administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] utiliza un nombre definido por el usuario con el prefijo @, mientras que el tipo de Administrador de conexiones OLE DB requiere que se utilice el valor numérico de un ordinal basado en 0 como nombre de parámetro.  
+ Los nombres que puede utilizar como nombres de parámetros en las asignaciones entre variables y parámetros también varían según el tipo de Administrador de conexiones. Por ejemplo, el tipo de Administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] utiliza un nombre definido por el usuario con el prefijo \@, mientras que el tipo de Administrador de conexiones OLE DB requiere que se utilice el valor numérico de un ordinal basado en 0 como nombre de parámetro.  
   
  La tabla siguiente resume los requisitos de los comandos SQL para los tipos de Administrador de conexiones que puede utilizar la tarea Ejecutar SQL.  
   
 |Tipo de conexión|Marcador de parámetro|Nombre del parámetro|Comando SQL (ejemplo)|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|@\<nombre de parámetro>|@\<nombre de parámetro>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = @parmContactID|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<nombre de parámetro>|\@\<nombre de parámetro>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL y OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -375,7 +375,7 @@ Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros d
   
 -   El tipo de conexión ADO podría utilizar cualquier par de nombres de parámetros, como Param1 y Param2, pero los parámetros deben asignarse por su posición ordinal en la lista de parámetros.  
   
--   El tipo de conexión [!INCLUDE[vstecado](../../includes/vstecado-md.md)] utiliza los nombres de parámetro @parmMinProductID y @parmMaxProductID.  
+-   El tipo de conexión de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] utiliza los nombres de parámetros \@parmMinProductID y \@parmMaxProductID.  
   
 ###  <a name="Stored_procedures"></a> Usar parámetros con procedimientos almacenados  
  Los comandos SQL que ejecutan procedimientos almacenados también pueden usar la asignación de parámetros. Las reglas sobre el uso de marcadores y nombres de parámetros dependen del tipo de Administrador de conexiones que utiliza la tarea Ejecutar SQL, del mismo modo que sucede con las consultas con parámetros.  
@@ -421,7 +421,7 @@ En esta sección se describe cómo utilizar una instrucción SQL con parámetros
     |Tipo de conexión|Marcador de parámetro|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET y SQLMOBILE|@\<nombre de parámetro>|  
+    |ADO.NET y SQLMOBILE|\@\<nombre de parámetro>|  
     |ODBC|?|  
     |EXCEL y OLE DB|?|  
   
@@ -444,7 +444,7 @@ En esta sección se describe cómo utilizar una instrucción SQL con parámetros
     |Tipo de conexión|Nombre de parámetro|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, …|  
-    |ADO.NET y SQLMOBILE|@\<nombre de parámetro>|  
+    |ADO.NET y SQLMOBILE|\@\<nombre de parámetro>|  
     |ODBC|1, 2, 3, …|  
     |EXCEL y OLE DB|0, 1, 2, 3, …|  
   

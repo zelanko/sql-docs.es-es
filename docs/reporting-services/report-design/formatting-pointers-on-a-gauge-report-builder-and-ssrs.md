@@ -15,12 +15,12 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6b74271c98941233d712410a43b31959595119eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3056d8b109c120fd853b5cd27390665e0c09eee6
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023592"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981487"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Aplicar formato a los punteros de un medidor (Generador de informes y SSRS)
  En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , el puntero de un medidor indica el valor actual del medidor.   
@@ -50,12 +50,12 @@ ms.locfileid: "33023592"
  Puede especificar un extremo de aguja que se puede dibujar encima o debajo del puntero únicamente en un medidor radial. Todos los estilos de extremos de aguja se dibujan utilizando degradados integrados que no se pueden modificar. La excepción es el estilo **RoundedDark** , donde puede especificar un color y un estilo de degradado.  
   
 ##  <a name="SettingSnappingInterval"></a> Establecer un intervalo de ajuste  
- Un intervalo de ajuste define el múltiplo al que se redondean los valores. De forma predeterminada, el medidor señala el valor exacto del campo que se ha especificado en el panel de datos. Sin embargo, puede ser que le interese redondear el valor exacto al alza o a la baja para que el puntero se ajuste a un intervalo preestablecido. Por ejemplo, si el valor del medidor es de 34,2 y especifica un intervalo de ajuste de 5, el puntero del medidor señalará 3,5. Si el valor del medidor es de 31,2 y especifica un intervalo de ajuste de 5, el puntero del medidor señalará 30. Para obtener más información, vea [Establecer un intervalo de ajuste en un medidor (Generador de informes y SSRS)](http://msdn.microsoft.com/en-us/0ece7297-6e2f-47fb-835d-b9e9cce53fe2).  
+ Un intervalo de ajuste define el múltiplo al que se redondean los valores. De forma predeterminada, el medidor señala el valor exacto del campo que se ha especificado en el panel de datos. Sin embargo, puede ser que le interese redondear el valor exacto al alza o a la baja para que el puntero se ajuste a un intervalo preestablecido. Por ejemplo, si el valor del medidor es de 34,2 y especifica un intervalo de ajuste de 5, el puntero del medidor señalará 3,5. Si el valor del medidor es de 31,2 y especifica un intervalo de ajuste de 5, el puntero del medidor señalará 30. Para obtener más información, vea [Establecer un intervalo de ajuste en un medidor (Generador de informes y SSRS)](http://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2).  
   
 ##  <a name="SpecifyingImage"></a> Especificar una imagen como puntero en un medidor radial  
  Además de la lista integrada de estilos de puntero, puede especificar una imagen como puntero. Esto es muy eficaz cuando se usa una imagen para reemplazar un estilo de puntero de aguja existente. La imagen se superpone en el puntero, pero toda la funcionalidad de éste sigue intacta. Las opciones de color y degradado no son aplicables cuando se usa una imagen para el puntero.  
   
- Si la imagen del puntero tiene forma irregular, debe definir el color como transparente para ocultar las áreas de la imagen que no deben aparecer en el medidor. Al definir un color transparente, el medidor transpone la imagen encima del puntero existente y la recorta para que solo aparezca la forma del puntero. El medidor cambia la escala de la imagen para que se ajuste al tamaño del puntero. Al especificar una imagen para un puntero, cualquier puntero que se agregue posteriormente encima del medidor se dibujará debajo la imagen. Por este motivo, se recomienda no especificar una imagen para el puntero si hay varios punteros en el medidor. Para obtener más información, vea [Especificar una imagen como puntero en un medidor (Generador de informes y SSRS)](http://msdn.microsoft.com/en-us/9d73b3c3-a068-4868-a2be-0cd261b6e92b).  
+ Si la imagen del puntero tiene forma irregular, debe definir el color como transparente para ocultar las áreas de la imagen que no deben aparecer en el medidor. Al definir un color transparente, el medidor transpone la imagen encima del puntero existente y la recorta para que solo aparezca la forma del puntero. El medidor cambia la escala de la imagen para que se ajuste al tamaño del puntero. Al especificar una imagen para un puntero, cualquier puntero que se agregue posteriormente encima del medidor se dibujará debajo la imagen. Por este motivo, se recomienda no especificar una imagen para el puntero si hay varios punteros en el medidor. Para más información, consulte [Especificar una imagen como puntero en un medidor (Generador de informes y SSRS)](http://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b).  
   
 ## <a name="see-also"></a>Ver también  
  [Aplicar formato a las escalas de un medidor &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   

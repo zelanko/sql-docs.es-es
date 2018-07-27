@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: feaca5b69a76fb7e3bffc67d58998de1bbd8b97e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 27c3931a5b735e91796c322d36dd7090b0a7b269
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417494"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087607"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ Define una fecha que se combina con una hora del día basada en un reloj de 24 h
 |Propiedad|Valor|  
 |--------------|-----------|  
 |Sintaxis|**datetime2** [(*precisión de fracciones de segundo*)]|  
-|Uso|DECLARE @MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
+|Uso|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
 |Formato de literal de cadena predeterminado<br /><br /> (se usa para el cliente de nivel inferior)|AAAA-MM-DD hh:mm:ss[.fracciones de segundos]<br /><br /> Para más información, vea la sección "Compatibilidad con versiones anteriores de clientes de niveles inferiores" más adelante.|  
 |Intervalo de fechas|De 0001-01-01 a 31.12.99<br /><br /> Del 1 de enero del año 1 después de Cristo al 31 de diciembre de 9999|  
 |Intervalo de horas|De 00:00:00 a 23:59:59.9999999|  

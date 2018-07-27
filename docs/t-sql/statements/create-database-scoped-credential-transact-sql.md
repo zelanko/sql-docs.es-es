@@ -25,13 +25,13 @@ caps.latest.revision: 21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2b44199260af6886096e2ceabb071692e34b967f
-ms.sourcegitcommit: ad297e041f0b7c65aa0bf7f4be8073d204977d9b
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions || >= aps-pdw-2016
+ms.openlocfilehash: 0a7c0aa186874c068a82441dc8c4a3313e975964
+ms.sourcegitcommit: 87efa581f7d4d84e9e5c05690ee1cb43bd4532dc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37923617"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38999305"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ WITH IDENTITY = 'identity_name'
  Especifica el nombre de la cuenta que se utilizará para conectarse fuera del servidor. Para importar un archivo desde Azure Blob Storage usando una clave compartida, el nombre de identidad debe ser `SHARED ACCESS SIGNATURE`. Para cargar datos en SQL DW, se puede usar cualquier valor válido para la identidad. Para saber más sobre las firmas de acceso compartido, vea [Uso de firmas de acceso compartido (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).  
   
  SECRET **='***secret***'**  
- Especifica el secreto necesario para la autenticación de salida. `SECRET` es necesario para importar un archivo del almacenamiento de blobs de Azure. Para cargar datos del almacenamiento de blobs de Azure a SQL DW, el secreto debe ser la clave de Azure Storage.  
+ Especifica el secreto necesario para la autenticación de salida. `SECRET` es necesario para importar un archivo del almacenamiento de blobs de Azure. Para cargar datos de Azure Blob Storage a SQL DW o Almacenamiento de datos paralelos, el secreto debe ser la clave de Azure Storage.  
 >  [!WARNING]
 >  El valor de clave SAS debe empezar con un signo de interrogación (“?”). Cuando use la clave SAS, debe quitar el símbolo “?” inicial. Si no lo hace, puede que se bloquee su trabajo.  
   

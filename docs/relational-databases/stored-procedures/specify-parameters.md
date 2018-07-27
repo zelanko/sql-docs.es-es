@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fb940877e4fbd1447db01c52bcf686bcbc00221d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9df355ee68ec934c8d6069be11bf17160131d290
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332585"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088237"
 ---
 # <a name="specify-parameters"></a>Especificar parámetros
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "37332585"
  En la siguiente sección se proporciona información acerca de cómo pasar valores en parámetros y cómo se usa cada uno de los atributos de parámetro durante una llamada a procedimiento.  
   
 ## <a name="passing-values-into-parameters"></a>Pasar valores en parámetros  
- Los valores de parámetro suministrados con una llamada a procedimiento deben ser constantes o una variable; no se puede usar un nombre de función como valor de parámetro. Las variables pueden ser definidas por el usuario o ser variables del sistema, como @@spid.  
+ Los valores de parámetro suministrados con una llamada a procedimiento deben ser constantes o una variable; no se puede usar un nombre de función como valor de parámetro. Las variables pueden ser definidas por el usuario o ser variables del sistema, como \@\@spid.  
   
  En los siguientes ejemplos se muestra cómo se pasan valores de parámetros al `uspGetWhereUsedProductID`del procedimiento. Ilustran cómo pasar parámetros como constantes y variables y también cómo usar una variable para pasar el valor de una función.  
   
@@ -62,15 +62,15 @@ GO
 ```  
   
 ## <a name="specifying-parameter-names"></a>Especificar nombres de parámetro  
- Al crear un procedimiento y declarar un nombre de parámetro, dicho nombre debe comenzar con un único carácter @ y debe ser único en el ámbito del procedimiento.  
+ Al crear un procedimiento y declarar un nombre de parámetro, dicho nombre debe comenzar con un único carácter \@ y debe ser único en el ámbito del procedimiento.  
   
- La asignación de nombres de forma explícita a los parámetros y la asignación de los valores adecuados para cada uno en una llamada a procedimiento permite proporcionar los parámetros en cualquier orden. Por ejemplo, si el procedimiento **my_proc** espera tres parámetros llamados **@first**, **@second**y **@third**, los valores pasados al procedimiento pueden asignarse a los nombres de los parámetros; por ejemplo: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
+ La asignación de nombres de forma explícita a los parámetros y la asignación de los valores adecuados para cada uno en una llamada a procedimiento permite proporcionar los parámetros en cualquier orden. Por ejemplo, si el procedimiento **my_proc** espera tres parámetros llamados **\@first**, **\@second** y **\@third**, los valores pasados al procedimiento pueden asignarse a los nombres de los parámetros; por ejemplo: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]  
->  Si un valor de parámetro se proporciona con el formato **@parameter =***valor*, todos los parámetros posteriores se deben proporcionar de esta manera. Si los valores de parámetro no se pasan con el formato **@parameter =***valor*, los valores se deben proporcionar en el orden idéntico (de izquierda a derecha) en el que los parámetros se enumeran en la instrucción CREATE PROCEDURE.  
+>  Si un valor de parámetro se proporciona con el formato **\@parameter =***value*, todos los parámetros posteriores se deben proporcionar de esta manera. Si los valores de parámetro no se pasan con el formato **\@parameter =***value*, los valores se deben proporcionar en el orden idéntico (de izquierda a derecha) en el que los parámetros se enumeran en la instrucción CREATE PROCEDURE.  
   
 > [!WARNING]  
->  Los parámetros pasados con el formato **@parameter =***valor* con el parámetro mal escrito provocarán que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genere un error e impida la ejecución del procedimiento.  
+>  Cualquier parámetro pasado con el formato **\@parameter =***value* con el parámetro mal escrito, provocará que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genere un error e impida la ejecución del procedimiento.  
   
 ## <a name="specifying-parameter-data-types"></a>Especificar los tipos de datos de parámetro  
  Los parámetros se deben definir con un tipo de datos cuando se declaran en una instrucción CREATE PROCEDURE. El tipo de datos de un parámetro determina el tipo y el rango de valores que se aceptan para él cuando se llama al procedimiento. Por ejemplo, si define un parámetro con un tipo de datos **tinyint** , solo se aceptan valores numéricos del intervalo comprendido entre 0 y 255 cuando se pasan en dicho parámetro. Se devuelve un error si, para ejecutar un procedimiento, se usa un valor incompatible con el tipo de datos.  
@@ -130,7 +130,7 @@ EXEC Sales.uspGetSalesYTD N'Blythe';
 GO  
 ```  
   
- Aunque los parámetros para los que se hayan especificado valores predeterminados se pueden omitir, solo se puede truncar la lista de parámetros. Por ejemplo, si un procedimiento tiene cinco parámetros, los parámetros cuarto y quinto se pueden omitir. Sin embargo, el cuarto parámetro no puede omitirse cuando se incluye el quinto parámetro, a menos que los parámetros se proporcionen con el formato **@parameter =***valor*.  
+ Aunque los parámetros para los que se hayan especificado valores predeterminados se pueden omitir, solo se puede truncar la lista de parámetros. Por ejemplo, si un procedimiento tiene cinco parámetros, los parámetros cuarto y quinto se pueden omitir. Pero el cuarto parámetro no puede omitirse cuando se incluye el quinto parámetro, a menos que los parámetros se proporcionen con el formato **\@parameter =***value*.  
   
 ## <a name="specifying-parameter-direction"></a>Especificar la dirección de parámetro  
  La dirección de un parámetro es de entrada, el valor se pasa al cuerpo del procedimiento, o de salida, el procedimiento devuelve un valor al programa de llamada. El valor predeterminado es un parámetro de entrada.  
@@ -168,10 +168,10 @@ GO
   
 ```  
   
- Ejecute `usp_GetList` para obtener una lista de los productos de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (Bicicletas) que cuestan menos de 700 USD. Los parámetros OUTPUT **@cost** y **@compareprices** se usan con el lenguaje de control de flujo para devolver un mensaje en la ventana **Messages** .  
+ Ejecute `usp_GetList` para obtener una lista de los productos de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (Bicicletas) que cuestan menos de 700 USD. Los parámetros OUTPUT **\@cost** y **\@compareprices** se usan con el lenguaje de control de flujo para devolver un mensaje en la ventana **Messages** (Mensajes).  
   
 > [!NOTE]  
->  La variable OUTPUT debe definirse durante la creación del procedimiento y también durante el uso de la variable. El nombre del parámetro y de la variable no tienen por qué coincidir. Pero el tipo de datos y la posición de los parámetros deben coincidir (a menos que se use **@listprice=** *variable*).  
+>  La variable OUTPUT debe definirse durante la creación del procedimiento y también durante el uso de la variable. El nombre del parámetro y de la variable no tienen por qué coincidir. Pero el tipo de datos y la posición de los parámetros deben coincidir (a menos que se use **\@listprice=** *variable*).  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

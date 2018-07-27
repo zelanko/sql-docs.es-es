@@ -2,7 +2,7 @@
 title: Procesamiento de consultas adaptable en bases de datos de Microsoft SQL | Microsoft Docs | Microsoft Docs
 description: Características de procesamiento de consultas adaptable para mejorar el rendimiento de las consultas en SQL Server (2017 y versiones posteriores) y Azure SQL Database.
 ms.custom: ''
-ms.date: 05/08/2018
+ms.date: 07/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 092f623dff8bd240bdc5349a3e6973d5c139b23f
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: c7a38b9765d15e3d62c2ba022b356f627ee9c6ce
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332448"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087507"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Procesamiento de consultas adaptable en bases de datos SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,6 +107,29 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 ```
 
 Una sugerencia de consulta USE HINT tiene prioridad sobre una configuración de ámbito de base de datos o una opción de marca de seguimiento.
+
+## <a name="row-mode-memory-grant-feedback"></a>Comentarios de concesión de memoria del modo de fila
+**Se aplica a:** SQL Database como una característica de versión preliminar pública
+
+Los comentarios de concesión de memoria del modo de fila se expanden en la característica de comentarios de concesión de memoria de modo de proceso por lotes al ajustar los tamaños de concesión de memoria tanto para los operadores del modo de proceso por lotes como del modo de fila.  
+
+Para habilitar la versión preliminar pública de los comentarios de concesión de memoria del modo de fila en Azure SQL Database, habilite el nivel 150 de compatibilidad de la base de datos para la base de datos a la que se conecta cuando ejecuta la consulta.
+
+La actividad de comentarios de concesión de memoria del modo de fila será visible a través del evento extendido **memory_grant_updated_by_feedback**. 
+
+A partir de los comentarios de concesión de memoria del modo de fila, se mostrarán dos atributos de plan de consulta nuevos para planes reales posteriores a la ejecución: **IsMemoryGrantFeedbackAdjusted** y **LastRequestedMemory**, que se agregan al elemento XML del plan de consulta MemoryGrantInfo. 
+
+LastRequestedMemory muestra la memoria concedida en Kilobytes (KB) desde la ejecución de consulta anterior. El atributo IsMemoryGrantFeedbackAdjusted permite comprobar el estado de los comentarios de concesión de memoria para la instrucción dentro de un plan de ejecución de consulta real. Los valores que se exponen en este atributo son los siguientes:
+
+| Valor IsMemoryGrantFeedbackAdjusted | Descripción |
+|--- |--- |
+| No: First Execution | Los comentarios de concesión de memoria no ajustan la memoria para la primera compilación y la ejecución asociada.  |
+| No: Accurate Grant | Si no hay ningún desbordamiento al disco y la instrucción usa al menos 50 % de la memoria concedida, no se desencadenan los comentarios de concesión de memoria. |
+| No: Feedback disabled | Si los comentarios de concesión de memoria se desencadenan de manera continúa y fluctúan entre operaciones de aumento de memoria y operaciones de disminución de memoria, se deshabilitarán los comentarios de concesión de memoria para la instrucción. |
+| Yes: Adjusting | Se aplicaron los comentarios de concesión de memoria y se pueden seguir ajustando para la próxima ejecución. |
+| Yes: Stable | Se aplicaron los comentarios de concesión de memoria y ahora la memoria concedida es estable, lo que significa que lo último que se concedió para la ejecución anterior es lo que se concedió para la ejecución actual. |
+
+Los atributos del plan de comentarios de concesión de memoria actualmente no son visibles en los planes de ejecución de consulta gráfica de SQL Server Management Studio, pero para las pruebas tempranas puede verlos si usa SET STATISTICS XML ON o el evento extendido query_post_execution_showplan.  
 
 ## <a name="batch-mode-adaptive-joins"></a>Combinaciones adaptables del modo por lotes
 La característica de combinaciones adaptables del modo por lotes permite elegir un método [Combinación hash o combinación de bucles anidados](../../relational-databases/performance/joins.md) que se aplace hasta **después** de que se haya examinado la primera entrada. El operador de combinaciones adaptables define un umbral que se usa para decidir cuándo cambiar a un plan de bucles anidados. El plan, por tanto, puede cambiar de forma dinámica para una mejor estrategia de combinación durante la ejecución.

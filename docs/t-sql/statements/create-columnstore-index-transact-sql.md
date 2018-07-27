@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 19d6758a6ce66af368aabb6cb5f81fb8e004c999
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 963c58a19ee5bf13fe956dcbefbf2f73114b1e96
+ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787776"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024251"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -358,13 +358,13 @@ Si la tabla subyacente tiene una columna con un tipo de datos no admitido para l
 
 No puede usar cursores ni desencadenadores en una tabla con un índice clúster de almacén de columnas. Esta restricción no se aplica a los índices no clúster de almacén de columnas; puede usar cursores y desencadenadores en una tabla con un índice no clúster de almacén de columnas.
 
-**Limitaciones específicas de SQL Server 2014**  
-Estas limitaciones solo se aplican a SQL Server 2014. En esta versión se presentaron los índices clúster de almacén de columnas actualizables. Los índices no clúster de almacén de consultas seguían siendo de solo lectura.  
+Limitaciones específicas de **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**  
+Estas limitaciones solo se aplican a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. En esta versión se presentaron los índices clúster de almacén de columnas actualizables. Los índices no clúster de almacén de consultas seguían siendo de solo lectura.  
 
 -   Seguimiento de cambios. No se puede usar el seguimiento de cambios con los índices no clúster de almacén de columnas (NCCI) porque son de solo lectura. Sí funciona con los índices clúster de almacén de columnas (CCI).  
 -   Captura de datos modificados. No se puede usar la captura de datos modificados con los índices no clúster de almacén de columnas (NCCI) porque son de solo lectura. Sí funciona con los índices clúster de almacén de columnas (CCI).  
 -   Secundario legible. No se puede acceder a un índice clúster de almacén de columnas (CCI) desde un secundario legible de un grupo de disponibilidad Always On legible.  Puede acceder a un índice no clúster de almacén de columnas (NCCI) desde un secundario legible.  
--   Conjuntos de resultados activos múltiples (MARS). SQL Server 2014 usa MARS para las conexiones de solo lectura a las tablas con un índice de almacén de columnas.    Pero SQL Server 2014 no es compatible con MARS para operaciones simultáneas de lenguaje de manipulación de datos (DML) en una tabla con un índice de almacén de columnas. Cuando ocurre esto, SQL Server termina las conexiones y anula las transacciones.  
+-   Conjuntos de resultados activos múltiples (MARS). [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] usa MARS para las conexiones de solo lectura a las tablas con un índice de almacén de columnas. Pero [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] no es compatible con MARS para operaciones simultáneas de lenguaje de manipulación de datos (DML) en una tabla con un índice de almacén de columnas. Cuando ocurre esto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] termina las conexiones y anula las transacciones.  
   
  Para obtener más información sobre las ventajas de rendimiento y las limitaciones de los índices de almacén de columnas, vea [Introducción a los índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-overview.md).
   
@@ -383,7 +383,7 @@ Estas limitaciones solo se aplican a SQL Server 2014. En esta versión se presen
 ### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>A. Convertir un montón en un índice clúster de almacén de columnas  
  En este ejemplo se crea una tabla como un montón y después se convierte en un índice clúster de almacén de columnas denominado cci_Simple. Esto cambia el almacenamiento de la tabla de un almacén de filas a un almacén de columnas.  
   
-```  
+```sql  
 CREATE TABLE SimpleTable(  
     ProductKey [int] NOT NULL,   
     OrderDateKey [int] NOT NULL,   
@@ -397,7 +397,7 @@ GO
 ### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>B. Convertir un índice clúster en un índice clúster de almacén de columnas con el mismo nombre.  
  En este ejemplo se crea la tabla con un índice clúster y después se muestra la sintaxis para convertir el índice clúster en un índice clúster de almacén de columnas. Esto cambia el almacenamiento de la tabla de un almacén de filas a un almacén de columnas.  
   
-```  
+```sql  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
     OrderDateKey [int] NOT NULL,   
@@ -418,8 +418,7 @@ GO
   
  En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], no se podía crear un índice no clúster en un índice de almacén de columnas. Este ejemplo muestra cómo en versiones anteriores es necesario quitar los índices no clúster antes de crear el índice de almacén de columnas.  
   
-```  
-  
+```sql  
 --Create the table for use with this example.  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
@@ -442,7 +441,6 @@ DROP INDEX SimpleTable.nc2_simple;
 --Convert the rowstore table to a columnstore index.  
 CREATE CLUSTERED COLUMNSTORE INDEX cci_simple ON SimpleTable;   
 GO  
-  
 ```  
   
 ### <a name="d-convert-a-large-fact-table-from-rowstore-to-columnstore"></a>D. Convertir una tabla de hechos grande de almacén de filas en almacén de columnas  
@@ -452,7 +450,7 @@ GO
   
 1.  En primer lugar, cree una tabla pequeña para usar en este ejemplo.  
   
-    ```  
+    ```sql  
     --Create a rowstore table with a clustered index and a non-clustered index.  
     CREATE TABLE MyFactTable (  
         ProductKey [int] NOT NULL,  
@@ -470,7 +468,7 @@ GO
   
 2.  Quite todos los índices no clúster de la tabla de almacén de filas.  
   
-    ```  
+    ```sql  
     --Drop all non-clustered indexes  
     DROP INDEX my_index ON MyFactTable;  
     ```  
@@ -480,9 +478,9 @@ GO
     -   Haga esto solo si desea especificar un nuevo nombre para el índice cuando se convierta en un índice clúster de almacén de columnas. Si no quita el índice clúster, el nuevo índice clúster de almacén de columnas tiene el mismo nombre.  
   
         > [!NOTE]  
-        >  El nombre del índice será más fácil de recordar si usa su propio nombre. Todos los índices clúster de almacén de filas usan el nombre predeterminado, 'ClusteredIndex_\<GUID>'.  
+        > El nombre del índice será más fácil de recordar si usa su propio nombre. Todos los índices clúster de almacén de filas usan el nombre predeterminado, 'ClusteredIndex_\<GUID>'.  
   
-    ```  
+    ```sql  
     --Process for dropping a clustered index.  
     --First, look up the name of the clustered rowstore index.  
     --Clustered rowstore indexes always use the DEFAULT name ‘ClusteredIndex_<GUID>’.  
@@ -497,7 +495,7 @@ GO
   
 4.  Convierta la tabla de almacén de filas en una tabla de almacén de columnas con un índice clúster de almacén de columnas.  
   
-    ```  
+    ```sql  
     --Option 1: Convert to columnstore and name the new clustered columnstore index MyCCI.  
     CREATE CLUSTERED COLUMNSTORE INDEX MyCCI ON MyFactTable;  
   
@@ -522,7 +520,7 @@ GO
 ### <a name="e-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>E. Convertir una tabla de almacén de columnas en una tabla de almacén de filas con un índice clúster  
  Para convertir una tabla de almacén de columnas en una tabla de almacén de filas con un índice clúster, use la instrucción CREATE INDEX con la opción DROP_EXISTING.  
   
-```  
+```sql  
 CREATE CLUSTERED INDEX ci_MyTable   
 ON MyFactTable  
 WITH ( DROP EXISTING = ON );  
@@ -531,21 +529,21 @@ WITH ( DROP EXISTING = ON );
 ### <a name="f-convert-a-columnstore-table-to-a-rowstore-heap"></a>F. Convertir una tabla de almacén de columnas en un montón de almacenes de filas  
  Para convertir una tabla de almacén de columnas en un montón de almacenes de filas, simplemente quite el índice clúster de almacén de columnas.  
   
-```  
+```sql  
 DROP INDEX MyCCI   
 ON MyFactTable;  
 ```  
   
 
 ### <a name="g-defragment-by-rebuilding-the-entire-clustered-columnstore-index"></a>G. Desfragmentar mediante la recompilación de todo el índice clúster de almacén de columnas  
-   Se aplica a: SQL Server 2014  
+   Se aplica a: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
  Hay dos maneras de volver a generar todo el índice clúster de almacén de columnas. Puede usar CREATE CLUSTERED COLUMNSTORE INDEX o [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) y la opción REBUILD. Con ambos métodos se obtienen los mismos resultados.  
   
 > [!NOTE]  
->  A partir de SQL Server 2016, use ALTER INDEX REORGANIZE en lugar de volver a compilar con los métodos descritos en este ejemplo.  
+> A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], use `ALTER INDEX...REORGANIZE` en lugar de recompilar con los métodos que se describen en este ejemplo.  
   
-```  
+```sql  
 --Determine the Clustered Columnstore Index name of MyDimTable.  
 SELECT i.object_id, i.name, t.object_id, t.name   
 FROM sys.indexes i   
@@ -563,7 +561,6 @@ ALTER INDEX my_CCI
 ON MyFactTable  
 REBUILD PARTITION = ALL  
 WITH ( DROP_EXISTING = ON );  
-  
 ```  
   
 ##  <a name="nonclustered"></a> Ejemplos de índices no clúster de almacén de columnas  
@@ -571,7 +568,7 @@ WITH ( DROP_EXISTING = ON );
 ### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>A. Crear un índice de almacén de columnas en un índice secundario de una tabla de almacén de filas  
  En este ejemplo se crea un índice no clúster de almacén de columnas en una tabla de almacén de filas. En esta situación solo se puede crear un índice de almacén de columnas. El índice de almacén de columnas necesita almacenamiento adicional, ya que contiene una copia de los datos de la tabla de almacén de filas. En el ejemplo se crean una tabla simple y un índice clúster y luego se muestra la sintaxis para crear un índice no clúster de almacén de columnas.  
   
-```  
+```sql  
 CREATE TABLE SimpleTable  
 (ProductKey [int] NOT NULL,   
 OrderDateKey [int] NOT NULL,   
@@ -589,7 +586,7 @@ GO
 ### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>B. Crear un índice no clúster de almacén de columnas simple con todas las opciones  
  En el ejemplo siguiente se muestra la sintaxis para crear un índice no clúster de almacén de columnas usando todas las opciones.  
   
-```  
+```sql  
 CREATE NONCLUSTERED COLUMNSTORE INDEX csindx_simple  
 ON SimpleTable  
 (OrderDateKey, DueDateKey, ShipDateKey)  
@@ -604,7 +601,7 @@ GO
 ### <a name="c-create-a-nonclustered-columnstore-index-with-a-filtered-predicate"></a>C. Crear un índice no clúster de almacén de columnas con un predicado filtrado  
  En el ejemplo siguiente se crea un índice no clúster de almacén de columnas filtrado en la tabla Production.BillOfMaterials de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. El predicado de filtro puede incluir columnas que no son columnas de clave en el índice filtrado. El predicado de este ejemplo selecciona solo las filas en que EndDate no es NULL.  
   
-```  
+```sql  
 IF EXISTS (SELECT name FROM sys.indexes  
     WHERE name = N'FIBillOfMaterialsWithEndDate'   
     AND object_id = OBJECT_ID(N'Production.BillOfMaterials'))  
@@ -614,7 +611,6 @@ GO
 CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"  
     ON Production.BillOfMaterials (ComponentID, StartDate)  
     WHERE EndDate IS NOT NULL;  
-  
 ```  
   
 ###  <a name="ncDML"></a> D. Modificar los datos de un índice no clúster de almacén de columnas  
@@ -624,7 +620,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 -   Deshabilitar o quitar el índice de almacén de columnas. Después puede actualizar los datos de la tabla. Si deshabilita el índice de almacén de columnas, puede regenerar el índice de almacén de columnas cuando termine de actualizar los datos. Por ejemplo,  
   
-    ```  
+    ```sql  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  
     -- update mytable --  
     ALTER INDEX mycolumnstoreindex on mytable REBUILD  
@@ -645,7 +641,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
  En este ejemplo se crea la tabla xDimProduct como una tabla de almacén de filas con un índice clúster y luego se usa CREATE CLUSTERED COLUMNSTORE INDEX para convertir la tabla de almacén de filas en una tabla de almacén de columnas.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 IF EXISTS (SELECT name FROM sys.tables  
@@ -670,7 +666,7 @@ WITH ( DROP_EXISTING = ON );
 ### <a name="b-rebuild-a-clustered-columnstore-index"></a>B. Volver a compilar un índice clúster de almacén de columnas  
  A partir del ejemplo anterior, en este ejemplo se usa CREATE CLUSTERED COLUMNSTORE INDEX para volver a compilar el índice clúster de almacén de columnas existente denominado cci_xDimProduct.  
   
-```  
+```sql  
 --Rebuild the existing clustered columnstore index.  
 CREATE CLUSTERED COLUMNSTORE INDEX cci_xDimProduct   
 ON xdimProduct   
@@ -684,7 +680,7 @@ WITH ( DROP_EXISTING = ON );
   
  Con el índice clúster de almacén de columnas cci_xDimProduct del ejemplo anterior, en este ejemplo se quita el índice clúster de almacén de columnas cci_xDimProduct y luego se vuelve a crear el índice clúster de almacén de columnas con el nombre mycci_xDimProduct.  
   
-```  
+```sql  
 --For illustration purposes, drop the clustered columnstore index.   
 --The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xDimProduct;  
@@ -698,20 +694,19 @@ WITH ( DROP_EXISTING = OFF );
 ### <a name="d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>D. Convertir una tabla de almacén de columnas en una tabla de almacén de filas con un índice clúster  
  Puede haber una situación en la que quiera quitar un índice clúster de almacén de columnas y crear un índice clúster. Así se almacena la tabla en formato de almacén de filas. En este ejemplo se convierte una tabla de almacén de columnas en una tabla de almacén de filas con un índice clúster con el mismo nombre. No se pierde ningún dato. Todos los datos van a la tabla de almacén de filas y las columnas enumeradas se convierten en las columnas de clave del índice clúster.  
   
-```  
+```sql  
 --Drop the clustered columnstore index and create a clustered rowstore index.   
 --All of the columns are stored in the rowstore clustered index.   
 --The columns listed are the included columns in the index.  
 CREATE CLUSTERED INDEX cci_xDimProduct    
 ON xdimProduct (ProductKey, ProductAlternateKey, ProductSubcategoryKey, WeightUnitMeasureCode)  
 WITH ( DROP_EXISTING = ON);  
-  
 ```  
   
 ### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>E. Volver a convertir una tabla de almacén de columnas en un montón de almacén de filas  
  Use [DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/en-us/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) para quitar el índice clúster de almacén de columnas y convertir la tabla en un montón de almacén de filas. En este ejemplo se convierte la tabla cci_xDimProduct en un montón de almacén de filas. La tabla se sigue distribuyendo, pero se almacena como un montón.  
   
-```  
+```sql  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  

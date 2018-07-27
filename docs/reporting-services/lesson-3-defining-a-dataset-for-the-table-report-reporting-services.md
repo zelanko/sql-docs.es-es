@@ -17,12 +17,12 @@ caps.latest.revision: 53
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6bc8a0745cb75ae2d6856bd950a6020513798970
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73455ea6ca6fdde23b61586abd9851712967e7a8
+ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016582"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39038102"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lección 3: Definir un conjunto de datos para el informe de tabla (Reporting Services)
 Después de definir el origen de datos, necesita definir un conjunto de datos. En [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], los datos que usa en los informes proceden de un *conjunto de datos*. Un conjunto de datos incluye un puntero a un origen de datos y la consulta que usará para el informe, así como campos y variables calculados.  
@@ -37,7 +37,7 @@ Use el diseñador de consultas del Diseñador de informes para diseñar el conju
   
 3.  Haga clic en **Usar un conjunto de datos insertado en el informe**.  
   
-4.  Seleccione el origen de datos que ha creado en la lección anterior, [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)].   
+4.  Seleccione el origen de datos que creó en la lección anterior, [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)].   
 5. Seleccione **Texto** en el **Tipo de consulta**.  
   
 6.  Escriba o copie y pegue la siguiente consulta de Transact-SQL en el cuadro **Consulta** .  

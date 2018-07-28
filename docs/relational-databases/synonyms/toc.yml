@@ -1,0 +1,4 @@
+- name: Información general
+  href: synonyms-database-engine.md
+- name: Crear sinónimos
+  href: create-synonyms.md

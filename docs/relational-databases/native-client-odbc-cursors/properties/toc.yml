@@ -1,0 +1,8 @@
+- name: Propiedades de cursor
+  href: cursor-properties.md
+- name: Simultaneidad de cursor (ODBC)
+  href: cursor-concurrency-odbc.md
+- name: Tamaño del conjunto de filas del cursor
+  href: cursor-rowset-size.md
+- name: Nivel de aislamiento de las transacciones de cursores
+  href: cursor-transaction-isolation-level.md

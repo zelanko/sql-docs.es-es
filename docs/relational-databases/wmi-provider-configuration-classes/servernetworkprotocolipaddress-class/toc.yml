@@ -1,0 +1,16 @@
+- name: Propiedad Enabled (clase ServerNetworkProtocolIpAddress)
+  href: enabled-property-servernetworkprotocolipaddress-class.md
+- name: Propiedad InstanceName (clase ServerNetworkProtocolIPAddress)
+  href: instancename-property-servernetworkprotocolipaddress-class.md
+- name: Propiedad IpAddressName (clase ServerNetworkProtocolIPAddress)
+  href: ipaddressname-property-servernetworkprotocolipaddress-class.md
+- name: Propiedad Properties (clase ServerNetworkProtocolIPAddress)
+  href: properties-property-servernetworkprotocolipaddress-class.md
+- name: Propiedad ProtocolName (clase ServerNetworkProtocolIPAddress)
+  href: protocolname-property-servernetworkprotocolipaddress-class.md
+- name: Clase ServerNetworkProtocolIPAddress
+  href: servernetworkprotocolipaddress-class.md
+- name: Método SetDisable (clase ServerNetworkProtocolIPAddress)
+  href: setdisable-method-servernetworkprotocolipaddress-class.md
+- name: Método SetEnable (clase ServerNetworkProtocolIPAddress)
+  href: setenable-method-servernetworkprotocolipaddress-class.md

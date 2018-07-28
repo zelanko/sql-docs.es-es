@@ -1,0 +1,36 @@
+- name: Desencadenadores DDL
+  href: ddl-triggers.md
+  items:
+    - name: Implementar desencadenadores DDL
+      href: implement-ddl-triggers.md
+    - name: Obtener información acerca de los desencadenadores DDL
+      href: get-information-about-ddl-triggers.md
+    - name: Usar la función EVENTDATA
+      href: use-the-eventdata-function.md
+    - name: Eventos DDL
+      href: ddl-events.md
+    - name: grupos de eventos DDL
+      href: ddl-event-groups.md
+- name: Desencadenadores DML
+  href: dml-triggers.md
+  items:
+    - name: Crear desencadenadores DML
+      href: create-dml-triggers.md
+    - name: Crear desencadenadores CLR
+      href: create-clr-triggers.md
+    - name: Crear desencadenadores DML para administrar varias filas de datos
+      href: create-dml-triggers-to-handle-multiple-rows-of-data.md
+    - name: Crear desencadenadores anidados
+      href: create-nested-triggers.md
+    - name: Especificar el primer y el último desencadenador
+      href: specify-first-and-last-triggers.md
+    - name: Usar las tablas insertadas y eliminadas
+      href: use-the-inserted-and-deleted-tables.md
+    - name: Modificar o cambiar el nombre de desencadenadores DML
+      href: modify-or-rename-dml-triggers.md
+    - name: Obtener información acerca de los desencadenadores DML
+      href: get-information-about-dml-triggers.md
+    - name: Eliminar o deshabilitar desencadenadores DML
+      href: delete-or-disable-dml-triggers.md
+    - name: Administrar la seguridad de los desencadenadores
+      href: manage-trigger-security.md

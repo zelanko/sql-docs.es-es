@@ -1,0 +1,11 @@
+- name: Instalar Integration Services
+  href: install-integration-services.md
+- name: Installing Integration Services Versions Side by Side (Instalación de versiones de Integration Services en paralelo)
+  href: installing-integration-services-versions-side-by-side.md
+- name: Actualizar Integration Services
+  href: upgrade-integration-services.md
+  items:
+    - name: Actualizar paquetes de Integration Services
+      href: upgrade-integration-services-packages.md
+    - name: Actualizar paquetes de Integration Services mediante el Asistente para actualizar paquetes SSIS
+      href: upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md

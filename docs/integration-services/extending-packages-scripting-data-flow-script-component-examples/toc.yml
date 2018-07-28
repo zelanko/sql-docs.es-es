@@ -1,0 +1,10 @@
+- name: Ejemplos de componente de script adicionales
+  href: additional-script-component-examples.md
+- name: Crear un destino ODBC con el componente de script
+  href: creating-an-odbc-destination-with-the-script-component.md
+- name: Mejorar una salida de errores con el componente de script
+  href: enhancing-an-error-output-with-the-script-component.md
+- name: Analizar formatos de archivo de texto no estándar con el componente de script
+  href: parsing-non-standard-text-file-formats-with-the-script-component.md
+- name: Simular una salida de error para el componente de script
+  href: simulating-an-error-output-for-the-script-component.md

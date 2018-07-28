@@ -1,0 +1,8 @@
+- name: Clase SoapException de Reporting Services
+  href: reporting-services-soapexception-class.md
+- name: Propiedad Detail
+  href: detail-property.md
+- name: Elemento HelpLink
+  href: helplink-element.md
+- name: Tabla de errores de SoapException
+  href: soapexception-errors-table.md

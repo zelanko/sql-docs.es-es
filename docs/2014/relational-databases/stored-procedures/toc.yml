@@ -1,0 +1,37 @@
+- name: Procedimientos almacenados
+  href: stored-procedures-database-engine.md
+  items:
+    - name: Crear un procedimiento almacenado
+      href: create-a-stored-procedure.md
+    - name: Modificar un procedimiento almacenado
+      href: modify-a-stored-procedure.md
+    - name: Eliminar un procedimiento almacenado
+      href: delete-a-stored-procedure.md
+    - name: Ejecutar un procedimiento almacenado
+      href: execute-a-stored-procedure.md
+      items:
+        - name: Especificar parámetros
+          href: specify-parameters.md
+    - name: Conceder permisos para un procedimiento almacenado
+      href: grant-permissions-on-a-stored-procedure.md
+    - name: Devolver datos de un procedimiento almacenado
+      href: return-data-from-a-stored-procedure.md
+    - name: Volver a compilar un procedimiento almacenado
+      href: recompile-a-stored-procedure.md
+    - name: Cambiar el nombre de un procedimiento almacenado
+      href: rename-a-stored-procedure.md
+    - name: Ver la definición de un procedimiento almacenado
+      href: view-the-definition-of-a-stored-procedure.md
+    - name: Ver las dependencias de un procedimiento almacenado
+      href: view-the-dependencies-of-a-stored-procedure.md
+    - name: Propiedades del procedimiento almacenado (página General)
+      href: stored-procedure-properties-general-page.md
+- name: Objetos de automatización OLE en Transact-SQL
+  href: ole-automation-objects-in-transact-sql.md
+  items:
+    - name: Códigos de retorno e información de error de OLE Automation
+      href: ole-automation-return-codes-and-error-information.md
+    - name: Conjuntos de resultados de automatización OLE
+      href: ole-automation-result-sets.md
+    - name: Ejemplo de script de automatización OLE
+      href: ole-automation-sample-script.md

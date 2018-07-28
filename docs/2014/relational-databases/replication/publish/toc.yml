@@ -1,0 +1,226 @@
+- name: Publicar datos y objetos de base de datos
+  href: publish-data-and-database-objects.md
+  items:
+    - name: Información general del modelo de publicación de replicación
+      href: replication-publishing-model-overview.md
+    - name: Filtrar datos publicados
+      href: filter-published-data.md
+    - name: Replicar columnas de identidad
+      href: replicate-identity-columns.md
+    - name: Realizar cambios de esquema en bases de datos de publicaciones
+      href: make-schema-changes-on-publication-databases.md
+    - name: Replicar tablas e índices con particiones
+      href: replicate-partitioned-tables-and-indexes.md
+      items:
+        - name: Administrar particiones para una publicación de mezcla mediante filtros con parámetros
+          href: manage-partitions-for-a-merge-publication-with-parameterized-filters.md
+    - name: 'Crear, modificar y eliminar publicaciones y artículos'
+      href: create-modify-and-delete-publications-and-articles-replication.md
+      items:
+        - name: Create a Publication
+          href: create-a-publication.md
+        - name: Definir un artículo
+          href: define-an-article.md
+    - name: Especificar tipos de artículo (programación de la replicación con Transact-SQL)
+      href: specify-article-types-replication-transact-sql-programming.md
+      items:
+        - name: Ver y modificar propiedades de publicación
+          href: view-and-modify-publication-properties.md
+        - name: Ver y modificar las propiedades de un artículo
+          href: view-and-modify-article-properties.md
+        - name: Eliminar una publicación
+          href: delete-a-publication.md
+        - name: Eliminar un artículo
+          href: delete-an-article.md
+        - name: Crear una publicación a partir de una base de datos de Oracle
+          href: create-a-publication-from-an-oracle-database.md
+    - name: Especificar asignaciones de tipos de datos para un publicador de Oracle
+      href: specify-data-type-mappings-for-an-oracle-publisher.md
+      items:
+        - name: Establecer el período de expiración para las suscripciones
+          href: set-the-expiration-period-for-subscriptions.md
+        - name: Especificar las opciones del esquema
+          href: specify-schema-options.md
+        - name: Replicar cambios de esquema
+          href: replicate-schema-changes.md
+        - name: Administrar columnas de identidad
+          href: manage-identity-columns.md
+        - name: Establecer el nivel de compatibilidad para publicaciones de mezcla
+          href: set-the-compatibility-level-for-merge-publications.md
+        - name: Especificar el formato de instantánea (SQL Server Management Studio)
+          href: specify-snapshot-format-sql-server-management-studio.md
+        - name: Especificar una ubicación de carpeta de instantáneas alternativa (SQL Server Management Studio)
+          href: specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md
+        - name: Comprimir archivos de instantáneas (SQL Server Management Studio)
+          href: compress-snapshot-files-sql-server-management-studio.md
+        - name: Configurar propiedades de instantáneas (programación de la replicación con Transact-SQL)
+          href: configure-snapshot-properties-replication-transact-sql-programming.md
+        - name: Entregar una instantánea mediante FTP
+          href: deliver-a-snapshot-through-ftp.md
+        - name: Definir y modificar un filtro de columna
+          href: define-and-modify-a-column-filter.md
+        - name: Definir y modificar un filtro de fila estático
+          href: define-and-modify-a-static-row-filter.md
+        - name: Definir y modificar un filtro de fila con parámetros para un artículo de mezcla
+          href: define-and-modify-a-parameterized-row-filter-for-a-merge-article.md
+        - name: Optimizar los filtros de fila con parámetros
+          href: optimize-parameterized-row-filters.md
+        - name: Definir y modificar un filtro de combinación entre artículos de mezcla
+          href: define-and-modify-a-join-filter-between-merge-articles.md
+        - name: Generar automáticamente un conjunto de filtros de combinación entre artículos de mezcla (SQL Server Management Studio)
+          href: automatically-generate-join-filters-between-merge-articles.md
+        - name: Establecer el método de propagación para cambios de datos en artículos transaccionales
+          href: set-the-propagation-method-for-data-changes-to-transactional-articles.md
+        - name: Habilitar suscripciones actualizables para publicaciones transaccionales
+          href: enable-updating-subscriptions-for-transactional-publications.md
+        - name: 'Crear una suscripción actualizable a una publicación transaccional [Management Studio]'
+          href: create-an-updatable-subscription-to-a-transactional-publication.md
+        - name: Crear una suscripción actualizable en una publicación transaccional con Transact-SQL
+          href: ../create-updatable-subscription-transactional-publication-transact-sql.md
+        - name: Establecer opciones de resolución de conflictos de actualización en cola (SQL Server Management Studio)
+          href: set-queued-updating-conflict-resolution-options-sql-server-management-studio.md
+        - name: Publicar la ejecución de un procedimiento almacenado en una publicación transaccional (SQL Server Management Studio)
+          href: publish-execution-of-stored-procedure-in-transactional-publication.md
+        - name: Definir una relación de registros lógicos entre artículos de tabla de mezcla
+          href: define-a-logical-record-relationship-between-merge-table-articles.md
+        - name: Especificar el orden de procesamiento de la mezcla de artículos de tabla (programación de la replicación con Transact-SQL)
+          href: specify-the-processing-order-of-merge-table-articles.md
+        - name: Especificar que un artículo de tabla de mezcla es de solo descarga
+          href: specify-that-a-merge-table-article-is-download-only.md
+        - name: Especificar que no se debe realizar un seguimiento de las eliminaciones para los artículos de mezcla (programación de la replicación con Transact-SQL)
+          href: specify-that-deletes-should-not-be-tracked-for-merge-articles.md
+        - name: Especificar el seguimiento de conflictos y el nivel de resolución para artículos de mezcla
+          href: specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md
+        - name: Especificar un solucionador de artículos de mezcla
+          href: specify-a-merge-article-resolver.md
+        - name: Especificar la resolución interactiva de conflictos para artículos de mezcla
+          href: specify-interactive-conflict-resolution-for-merge-articles.md
+        - name: Agregar y quitar artículos de una publicación (SQL Server Management Studio)
+          href: add-articles-to-and-drop-articles-from-a-publication.md
+    - name: Mantener publicaciones
+      href: maintain-publications.md
+      items:
+        - name: Agregar y quitar artículos de publicaciones existentes
+          href: add-articles-to-and-drop-articles-from-existing-publications.md
+        - name: Cambiar las propiedades de la publicación y de los artículos
+          href: change-publication-and-article-properties.md
+- name: Configurar la distribución
+  href: ../configure-distribution.md
+  items:
+    - name: Configurar la publicación y la distribución
+      href: ../configure-publishing-and-distribution.md
+    - name: Ver y modificar las propiedades del distribuidor y del publicador
+      href: ../view-and-modify-distributor-and-publisher-properties.md
+    - name: Deshabilitar la publicación y la distribución
+      href: ../disable-publishing-and-distribution.md
+    - name: Habilitar una base de datos para replicación (SQL Server Management Studio)
+      href: ../enable-a-database-for-replication-sql-server-management-studio.md
+    - name: Habilitar un publicador remoto en un distribuidor (SQL Server Management Studio)
+      href: ../enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md
+    - name: Especificar la ubicación predeterminada de instantáneas (SQL Server Management Studio)
+      href: ../specify-the-default-snapshot-location-sql-server-management-studio.md
+    - name: Establecer el período de retención de distribución para las publicaciones transaccionales (SQL Server Management Studio)
+      href: ../set-distribution-retention-period-for-transactional-publications.md
+    - name: Establecer el período de retención del historial (SQL Server Management Studio)
+      href: ../set-the-history-retention-period-sql-server-management-studio.md
+- name: Suscribirse a publicaciones
+  href: ../subscribe-to-publications.md
+  items:
+    - name: Crear una suscripción de extracción
+      href: ../create-a-pull-subscription.md
+    - name: Crear una suscripción de inserción
+      href: ../create-a-push-subscription.md
+    - name: Ver y modificar las propiedades de una suscripción de extracción
+      href: ../view-and-modify-pull-subscription-properties.md
+    - name: Ver y modificar las propiedades de una suscripción de inserción
+      href: ../view-and-modify-push-subscription-properties.md
+    - name: Eliminar una suscripción de extracción
+      href: ../delete-a-pull-subscription.md
+    - name: Eliminar una suscripción de inserción
+      href: ../delete-a-push-subscription.md
+    - name: Desactivación y expiración de las suscripciones
+      href: ../subscription-expiration-and-deactivation.md
+    - name: Crear una suscripción para un suscriptor que no sea de SQL Server
+      href: ../create-a-subscription-for-a-non-sql-server-subscriber.md
+    - name: Especificar un tipo de suscripción de mezcla y la prioridad de resolución de conflictos (SQL Server Management Studio)
+      href: ../specify-a-merge-subscription-type-and-conflict-resolution-priority.md
+    - name: Especificar programaciones de sincronización
+      href: ../specify-synchronization-schedules.md
+- name: Inicializar una suscripción
+  href: ../initialize-a-subscription.md
+  items:
+    - name: Inicializar una suscripción con una instantánea
+      href: ../initialize-a-subscription-with-a-snapshot.md
+      items:
+        - name: Crear y aplicar una instantánea
+          href: ../create-and-apply-the-snapshot.md
+        - name: Instantáneas para publicaciones de combinación con filtros con parámetros
+          href: ../snapshots-for-merge-publications-with-parameterized-filters.md
+        - name: Opciones de instantánea
+          href: ../snapshot-options.md
+    - name: Ubicaciones alternativas para las carpetas de instantáneas
+      href: ../alternate-snapshot-folder-locations.md
+    - name: Instantáneas comprimidas
+      href: ../compressed-snapshots.md
+    - name: Ejecutar scripts antes y después de aplicar la instantánea
+      href: ../execute-scripts-before-and-after-the-snapshot-is-applied.md
+    - name: Transferir instantáneas mediante FTP
+      href: ../transfer-snapshots-through-ftp.md
+    - name: Inicializar una suscripción transaccional sin una instantánea
+      href: ../initialize-a-transactional-subscription-without-a-snapshot.md
+    - name: Reinicializar suscripciones
+      href: ../reinitialize-subscriptions.md
+- name: Sincronizar suscripciones (replicación)
+  href: ../synchronize-subscriptions-replication.md
+  items:
+    - name: Crear y aplicar la instantánea inicial
+      href: ../create-and-apply-the-initial-snapshot.md
+      items:
+        - name: Crear una instantánea para una publicación de mezcla con filtros con parámetros
+          href: ../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md
+    - name: Habilitar la inicialización con una copia de seguridad para las publicaciones transaccionales (SQL Server Management Studio)
+      href: ../enable-initialization-with-backup-for-transactional-publications.md
+    - name: Inicializar una suscripción transaccional desde una copia de seguridad (programación de la replicación con Transact-SQL)
+      href: ../initialize-a-transactional-subscription-from-a-backup.md
+    - name: Inicializar una suscripción manualmente
+      href: ../initialize-a-subscription-manually.md
+    - name: Sincronizar una suscripción de extracción
+      href: ../synchronize-a-pull-subscription.md
+    - name: Sincronizar una suscripción de inserción
+      href: ../synchronize-a-push-subscription.md
+    - name: Reinicializar una suscripción
+      href: ../reinitialize-a-subscription.md
+    - name: Ejecutar scripts antes y después de aplicar una instantánea (SQL Server Management Studio)
+      href: ../execute-scripts-before-and-after-a-snapshot-is-applied.md
+    - name: Ejecutar scripts durante la sincronización (programación de la replicación con Transact-SQL)
+      href: ../execute-scripts-during-synchronization-replication-transact-sql-programming.md
+    - name: Ver y resolver conflictos de datos para publicaciones de mezcla (SQL Server Management Studio)
+      href: ../view-and-resolve-data-conflicts-for-merge-publications.md
+    - name: Ver información de conflictos para publicaciones de mezcla (programación de la replicación con Transact-SQL)
+      href: ../view-conflict-information-for-merge-publications.md
+    - name: Ver conflictos de datos para publicaciones transaccionales (SQL Server Management Studio)
+      href: ../view-data-conflicts-for-transactional-publications-sql-server-management-studio.md
+    - name: Sincronizar una suscripción mediante el Administrador de sincronización de Windows (Administrador de sincronización de Windows)
+      href: ../synchronize-a-subscription-using-windows-synchronization-manager.md
+    - name: Controlar el comportamiento de desencadenadores y restricciones durante la sincronización (programación de la replicación con Transact-SQL)
+      href: ../control-behavior-of-triggers-and-constraints-in-synchronization.md
+    - name: Implementar un controlador de lógica de negocios para un artículo de mezcla
+      href: ../implement-a-business-logic-handler-for-a-merge-article.md
+      items:
+        - name: Depurar un controlador de lógica de negocios (programación de la replicación)
+          href: ../debug-a-business-logic-handler-replication-programming.md
+    - name: Implementar un solucionador de conflictos personalizado para un artículo de mezcla
+      href: ../implement-a-custom-conflict-resolver-for-a-merge-article.md
+    - name: Realizar una carga masiva de datos en tablas de una publicación de mezcla (programación de la replicación con Transact-SQL)
+      href: ../bulk-load-data-into-tables-in-a-merge-publication.md
+- name: Sincronizar datos
+  href: ../synchronize-data.md
+- name: Validar datos replicados
+  href: ../validate-replicated-data.md
+  items:
+    - name: Validar la información de particiones para un suscriptor de mezcla
+      href: ../validate-partition-information-for-a-merge-subscriber.md
+    - name: Validar datos en el suscriptor
+      href: ../validate-data-at-the-subscriber.md
+- name: Crear script para la replicación
+  href: ../scripting-replication.md

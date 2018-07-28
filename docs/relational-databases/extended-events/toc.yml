@@ -1,0 +1,42 @@
+- name: Información general
+  href: extended-events.md
+- name: 'Quick Start: Extended Events in SQL Server (Inicio rápido: Eventos extendidos en SQL Server)'
+  href: quick-start-extended-events-in-sql-server.md
+- name: Administrar sesiones de eventos en el Explorador de objetos
+  href: manage-event-sessions-in-the-object-explorer.md
+- name: Advanced Viewing of Target Data from Extended Events in SQL Server (Visualización avanzada de datos de destino de eventos extendidos en SQL Server)
+  href: advanced-viewing-of-target-data-from-extended-events-in-sql-server.md
+- name: Paquetes de Extended Events
+  href: sql-server-extended-events-packages.md
+- name: Destinos para eventos extendidos en SQL Server
+  href: targets-for-extended-events-in-sql-server.md
+  items:
+    - name: seguimiento de eventos para Windows de destino
+      href: event-tracing-for-windows-target.md
+- name: Motor de Extended Events
+  href: sql-server-extended-events-engine.md
+- name: Sesiones de Extended Events
+  href: sql-server-extended-events-sessions.md
+- name: Herramientas de eventos extendidos
+  href: extended-events-tools.md
+  items:
+    - name: Uso de XEvent Profiler de SSMS
+      href: use-the-ssms-xe-profiler.md
+    - name: Usar la sesión system_health
+      href: use-the-system-health-session.md
+    - name: Usar el proveedor de PowerShell para eventos extendidos
+      href: use-the-powershell-provider-for-extended-events.md
+- name: Modificar una sesión de eventos extendidos
+  href: alter-an-extended-events-session.md
+- name: Instrucciones SELECT y JOIN en vistas del sistema para eventos extendidos en SQL Server
+  href: selects-and-joins-from-system-views-for-extended-events-in-sql-server.md
+- name: Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL Server
+  href: view-the-extended-events-equivalents-to-sql-trace-event-classes.md
+- name: Convertir un script de seguimiento de SQL existente en una sesión de eventos extendidos.
+  href: convert-an-existing-sql-trace-script-to-an-extended-events-session.md
+- name: Determinar las consultas que mantienen bloqueos
+  href: determine-which-queries-are-holding-locks.md
+- name: Buscar los objetos que han obtenido más bloqueos
+  href: find-the-objects-that-have-the-most-locks-taken-on-them.md
+- name: Supervisar la actividad del sistema mediante eventos extendidos
+  href: monitor-system-activity-using-extended-events.md

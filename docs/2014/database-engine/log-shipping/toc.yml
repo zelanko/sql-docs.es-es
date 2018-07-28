@@ -1,0 +1,25 @@
+- name: Acerca del trasvase de registros
+  href: about-log-shipping-sql-server.md
+  items:
+    - name: Actualizar el trasvase de registros a SQL Server 2014 (Transact-SQL)
+      href: upgrading-log-shipping-to-sql-server-2016-transact-sql.md
+    - name: Configurar el trasvase de registros
+      href: configure-log-shipping-sql-server.md
+    - name: Agregar una base de datos secundaria a la configuración del trasvase de registros
+      href: add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
+    - name: Quitar una base de datos secundaria desde una configuración del trasvase de registros
+      href: remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md
+    - name: Quitar el trasvase de registros
+      href: remove-log-shipping-sql-server.md
+    - name: Ver el informe de trasvase de registros (SQL Server Management Studio)
+      href: view-the-log-shipping-report-sql-server-management-studio.md
+    - name: Supervisar el trasvase de registros (Transact-SQL)
+      href: monitor-log-shipping-transact-sql.md
+    - name: Conmutar por error a una base de datos secundaria de trasvase de registros
+      href: fail-over-to-a-log-shipping-secondary-sql-server.md
+    - name: Cambiar los roles entre el servidor de trasvase de registros primario y secundario
+      href: change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md
+    - name: Trasvase de registros y replicación
+      href: log-shipping-and-replication-sql-server.md
+    - name: Log Shipping Tables and Stored Procedures
+      href: log-shipping-tables-and-stored-procedures.md

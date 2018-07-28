@@ -1,0 +1,18 @@
+- name: Visor de archivos de registro
+  href: log-file-viewer.md
+  items:
+    - name: Abrir el Visor de archivos de registro
+      href: open-log-file-viewer.md
+    - name: Ver sin conexión archivos de registro
+      href: view-offline-log-files.md
+    - name: Ayuda F1 del Visor de archivos de registro
+      href: log-file-viewer-f1-help.md
+- name: El registro de transacciones (SQL Server)
+  href: the-transaction-log-sql-server.md
+  items:
+    - name: Administrar el tamaño del archivo de registro de transacciones
+      href: manage-the-size-of-the-transaction-log-file.md
+    - name: Solucionar problemas de un registro de transacciones lleno (Error 9002 de SQL Server)
+      href: troubleshoot-a-full-transaction-log-sql-server-error-9002.md
+    - name: Controlar la durabilidad de las transacciones
+      href: control-transaction-durability.md

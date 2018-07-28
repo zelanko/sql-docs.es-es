@@ -1,0 +1,72 @@
+- name: Búsqueda de texto completo
+  href: full-text-search.md
+  items:
+    - name: Introducción a la búsqueda de texto completo
+      href: get-started-with-full-text-search.md
+    - name: Consultar con búsqueda de texto completo
+      href: query-with-full-text-search.md
+    - name: Buscar palabras cerca de otra palabra con NEAR
+      href: search-for-words-close-to-another-word-with-near.md
+    - name: Limitar los resultados de la búsqueda con RANK
+      href: limit-search-results-with-rank.md
+    - name: Mejorar el rendimiento de las consultas de texto completo
+      href: improve-the-performance-of-full-text-queries.md
+    - name: Buscar propiedades de documento con listas de propiedades de búsqueda
+      href: search-document-properties-with-search-property-lists.md
+    - name: Buscar GUID del conjunto de propiedades e identificadores de enteros de propiedad para las propiedades de búsqueda
+      href: find-property-set-guids-and-property-integer-ids-for-search-properties.md
+    - name: Crear y administrar catálogos de texto completo
+      href: create-and-manage-full-text-catalogs.md
+    - name: Crear y administrar índices de texto completo
+      href: create-and-manage-full-text-indexes.md
+    - name: Elegir un idioma al crear un índice de texto completo
+      href: choose-a-language-when-creating-a-full-text-index.md
+    - name: Rellenar índices de texto completo
+      href: populate-full-text-indexes.md
+    - name: Mejorar el rendimiento de los índices de texto completo
+      href: improve-the-performance-of-full-text-indexes.md
+    - name: Solucionar problemas de indización de texto completo
+      href: troubleshoot-full-text-indexing.md
+    - name: Realizar copias de seguridad de los catálogos de texto completo y restaurarlos
+      href: back-up-and-restore-full-text-catalogs-and-indexes.md
+    - name: Configurar y administrar filtros para búsquedas
+      href: configure-and-manage-filters-for-search.md
+    - name: Configurar y administrar separadores de palabras y lematizadores para la búsqueda
+      href: configure-and-manage-word-breakers-and-stemmers-for-search.md
+    - name: Ver o cambiar los filtros y separadores de palabras registrados
+      href: view-or-change-registered-filters-and-word-breakers.md
+    - name: Cambiar el separador de palabras usado para el inglés de Estados Unidos y el del Reino Unido
+      href: change-the-word-breaker-used-for-us-english-and-uk-english.md
+    - name: Revertir los separadores de palabras usados por las búsquedas a la versión anterior
+      href: revert-the-word-breakers-used-by-search-to-the-previous-version.md
+    - name: Personalizar el comportamiento de separadores de palabras con un diccionario personalizado
+      href: customize-the-behavior-of-word-breakers-with-a-custom-dictionary.md
+    - name: Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo
+      href: configure-and-manage-stopwords-and-stoplists-for-full-text-search.md
+    - name: Configurar y administrar archivos de sinónimos para búsquedas de texto completo
+      href: configure-and-manage-thesaurus-files-for-full-text-search.md
+    - name: Administrar y supervisar la búsqueda de texto completo para una instancia de servidor
+      href: manage-and-monitor-full-text-search-for-a-server-instance.md
+    - name: Establecer la cuenta del servicio para el selector del demonio de filtro completo
+      href: set-the-service-account-for-the-full-text-filter-daemon-launcher.md
+    - name: Actualizar la búsqueda de texto completo
+      href: upgrade-full-text-search.md
+    - name: 'DDL de búsqueda de texto completo, funciones, procedimientos almacenados y vistas'
+      href: full-text-search-ddl-functions-stored-procedures-and-views.md
+    - name: Usar el Asistente para indización de texto completo
+      href: use-the-full-text-indexing-wizard.md
+- name: Búsqueda semántica
+  href: semantic-search-sql-server.md
+  items:
+    - name: Instalar y configurar la búsqueda semántica
+      href: install-and-configure-semantic-search.md
+    - name: Habilitar la búsqueda semántica en tablas y columnas
+      href: enable-semantic-search-on-tables-and-columns.md
+    - name: Buscar frases clave en documentos con la búsqueda semántica
+      href: find-key-phrases-in-documents-with-semantic-search.md
+    - name: buscar documentos similares y relacionados con la búsqueda semántica
+      href: find-similar-and-related-documents-with-semantic-search.md
+    - name: Administrar y supervisar la búsqueda semántica
+      href: manage-and-monitor-semantic-search.md
+    - name: 'DDL de búsqueda semántica, funciones, procedimientos almacenados y vistas'
+      href: semantic-search-ddl-functions-stored-procedures-and-views.md

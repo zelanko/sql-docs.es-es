@@ -1,0 +1,29 @@
+- name: Aplicaciones de capa de datos
+  href: data-tier-applications.md
+  items:
+    - name: Compatibilidad de DAC con las versiones y objetos de SQL Server
+      href: dac-support-for-sql-server-objects-and-versions.md
+    - name: Eliminar una aplicación de capa de datos
+      href: delete-a-data-tier-application.md
+    - name: Implementar una aplicación de capa de datos
+      href: deploy-a-data-tier-application.md
+    - name: Exportar una aplicación de capa de datos
+      href: export-a-data-tier-application.md
+    - name: Extraer una DAC de una base de datos
+      href: extract-a-dac-from-a-database.md
+    - name: Importar un archivo de bacpac para crear una nueva base de datos de usuario
+      href: import-a-bacpac-file-to-create-a-new-user-database.md
+    - name: Supervisar aplicaciones de capa de datos
+      href: monitor-data-tier-applications.md
+    - name: Registrar una base de datos como una DAC
+      href: register-a-database-as-a-dac.md
+    - name: Desempaquetar un paquete de DAC
+      href: unpack-a-dac-package.md
+    - name: Upgrade a Data-tier Application
+      href: upgrade-a-data-tier-application.md
+    - name: Validar un paquete de DAC
+      href: validate-a-dac-package.md
+    - name: Reglas de validación para los asistentes de aplicación de capa de datos
+      href: dbengine-validation-rules.md
+    - name: Implementar una base de datos mediante una DAC
+      href: deploy-a-database-by-using-a-dac.md

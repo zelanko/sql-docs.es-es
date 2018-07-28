@@ -1,0 +1,15 @@
+- name: Estadísticas
+  href: statistics.md
+  items:
+    - name: Crear estadísticas
+      href: create-statistics.md
+    - name: Modificar estadísticas
+      href: modify-statistics.md
+    - name: Eliminar estadísticas
+      href: delete-statistics.md
+    - name: Ver propiedades de estadísticas
+      href: view-statistics-properties.md
+    - name: Cambiar el nombre de las estadísticas
+      href: rename-statistics.md
+    - name: Actualizar estadísticas
+      href: update-statistics.md

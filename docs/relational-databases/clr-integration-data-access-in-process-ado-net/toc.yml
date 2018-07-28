@@ -1,0 +1,10 @@
+- name: Extensiones específicas en proceso de SQL Server a ADO.NET
+  href: sql-server-in-process-specific-extensions-to-ado-net.md
+- name: Objeto SqlContext
+  href: sqlcontext-object.md
+- name: 'SqlDataRecord, objeto'
+  href: sqldatarecord-object.md
+- name: 'SqlPipe, objetos'
+  href: sqlpipe-object.md
+- name: Objeto SqlTriggerContext
+  href: sqltriggercontext-object.md

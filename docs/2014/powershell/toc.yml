@@ -1,0 +1,36 @@
+- name: SQL Server PowerShell
+  href: sql-server-powershell.md
+- name: Cargar ensamblados SMO en Windows PowerShell
+  href: load-the-smo-assemblies-in-windows-powershell.md
+- name: Ejecutar Windows PowerShell desde SQL Server Management Studio
+  href: run-windows-powershell-from-sql-server-management-studio.md
+- name: Ejecutar los pasos Windows PowerShell del Agente SQL Server
+  href: run-windows-powershell-steps-in-sql-server-agent.md
+- name: SQL Server PowerShell Provider
+  href: sql-server-powershell-provider.md
+  items:
+    - name: Navegar por las rutas de acceso de SQL Server PowerShell
+      href: navigate-sql-server-powershell-paths.md
+    - name: Trabajar con rutas acceso de SQL Server PowerShell
+      href: work-with-sql-server-powershell-paths.md
+- name: Identificadores de SQL Server en PowerShell
+  href: sql-server-identifiers-in-powershell.md
+  items:
+    - name: Especificar instancias del proveedor de PowerShell de SQL Server
+      href: specify-instances-in-the-sql-server-powershell-provider.md
+    - name: Codificar y descodificar identificadores de SQL Server
+      href: encode-and-decode-sql-server-identifiers.md
+    - name: Identificadores de SQL Server de escape
+      href: escape-sql-server-identifiers.md
+- name: Administrar la autenticación en PowerShell del motor de base de datos
+  href: manage-authentication-in-database-engine-powershell.md
+- name: Administrar la finalización mediante tabulador (SQL Server PowerShell)
+  href: manage-tab-completion-sql-server-powershell.md
+- name: Importar el módulo SQLPS
+  href: ../database-engine/import-the-sqlps-module.md
+- name: Convertir URN en rutas de acceso del proveedor de SQL Server
+  href: ../database-engine/convert-urns-to-sql-server-provider-paths.md
+- name: Utilizar los cmdlets del motor de base de datos
+  href: ../database-engine/use-the-database-engine-cmdlets.md
+- name: Get Help SQL Server PowerShell
+  href: ../database-engine/get-help-sql-server-powershell.md

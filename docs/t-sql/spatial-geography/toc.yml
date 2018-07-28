@@ -1,0 +1,181 @@
+- name: Información general
+  href: spatial-types-geography.md
+- name: Métodos de OGC en instancias de Geography
+  href: ogc-methods-on-geography-instances.md
+  items:
+    - name: STArea (tipo de datos geography)
+      href: starea-geography-data-type.md
+    - name: STAsBinary (tipo de datos geography)
+      href: stasbinary-geography-data-type.md
+    - name: STAsText (tipo de datos geography)
+      href: stastext-geography-data-type.md
+    - name: STBuffer (tipo de datos geography)
+      href: stbuffer-geography-data-type.md
+    - name: STContains (tipo de datos geography)
+      href: stcontains-geography-data-type.md
+    - name: STConvexHull (tipo de datos geography)
+      href: stconvexhull-geography-data-type.md
+    - name: STCurveN (tipo de datos Geography)
+      href: stcurven-geography-data-type.md
+    - name: STCurveToLine (tipo de datos geography)
+      href: stcurvetoline-geography-data-type.md
+    - name: STDifference (tipo de datos geography)
+      href: stdifference-geography-data-type.md
+    - name: STDimension (tipo de datos geography)
+      href: stdimension-geography-data-type.md
+    - name: STDisjoint (tipo de datos geography)
+      href: stdisjoint-geography-data-type.md
+    - name: STDistance (tipo de datos geography)
+      href: stdistance-geography-data-type.md
+    - name: STEndpoint (tipo de datos geography)
+      href: stendpoint-geography-data-type.md
+    - name: STEquals (tipo de datos geography)
+      href: stequals-geography-data-type.md
+    - name: STGeometryN (tipo de datos geography)
+      href: stgeometryn-geography-data-type.md
+    - name: STGeometryType (tipo de datos geography)
+      href: stgeometrytype-geography-data-type.md
+    - name: STIntersection (tipo de datos geography)
+      href: stintersection-geography-data-type.md
+    - name: STIntersects (tipo de datos geography)
+      href: stintersects-geography-data-type.md
+    - name: STIsClosed (tipo de datos geography)
+      href: stisclosed-geography-data-type.md
+    - name: STIsEmpty (tipo de datos geography)
+      href: stisempty-geography-data-type.md
+    - name: STIsValid (tipo de datos geography)
+      href: stisvalid-geography-data-type.md
+    - name: STLength (tipo de datos geography)
+      href: stlength-geography-data-type.md
+    - name: STNumCurves (tipo de datos geography)
+      href: stnumcurves-geography-data-type.md
+    - name: STNumGeometries (tipo de datos geography)
+      href: stnumgeometries-geography-data-type.md
+    - name: STNumPoints (tipo de datos geography)
+      href: stnumpoints-geography-data-type.md
+    - name: STOverlaps (tipo de datos geography)
+      href: stoverlaps-geography-data-type.md
+    - name: STPointN (tipo de datos geography)
+      href: stpointn-geography-data-type.md
+    - name: STSrid (tipo de datos geography)
+      href: stsrid-geography-data-type.md
+    - name: STStartPoint (tipo de datos geography)
+      href: ststartpoint-geography-data-type.md
+    - name: STSymDifference (tipo de datos geography)
+      href: stsymdifference-geography-data-type.md
+    - name: STUnion (tipo de datos geography)
+      href: stunion-geography-data-type.md
+    - name: STWithin (tipo de datos geography)
+      href: stwithin-geography-data-type.md
+- name: Métodos extendidos en instancias de geography
+  href: extended-methods-on-geography-instances.md
+  items:
+    - name: AsBinaryZM (tipo de datos geography)
+      href: asbinaryzm-geography-data-type.md
+    - name: AsGml (tipo de datos geography)
+      href: asgml-geography-data-type.md
+    - name: AsTextZM (tipo de datos geography)
+      href: astextzm-geography-data-type.md
+    - name: BufferWithCurves (tipo de datos de geografía)
+      href: bufferwithcurves-geography-data-type.md
+    - name: BufferWithTolerance (tipo de datos geography)
+      href: bufferwithtolerance-geography-data-type.md
+    - name: CurveToLineWithTolerance (tipo de datos Geography)
+      href: curvetolinewithtolerance-geography-data-type.md
+    - name: EnvelopeAngle (tipo de datos Geography)
+      href: envelopeangle-geography-data-type.md
+    - name: EnvelopeCenter (tipo de datos Geography)
+      href: envelopecenter-geography-data-type.md
+    - name: Filter (tipo de datos Geography)
+      href: filter-geography-data-type.md
+    - name: HasM (tipo de datos geography)
+      href: hasm-geography-data-type.md
+    - name: HasZ (tipo de datos geography)
+      href: hasz-geography-data-type.md
+    - name: InstanceOf (tipo de datos geography)
+      href: instanceof-geography-data-type.md
+    - name: IsNull (tipo de datos geography)
+      href: isnull-geography-data-type.md
+    - name: IsValidDetailed (tipo de datos Geography)
+      href: isvaliddetailed-geography-data-type.md
+    - name: Lat (tipo de datos geography)
+      href: lat-geography-data-type.md
+    - name: Long (tipo de datos geography)
+      href: long-geography-data-type.md
+    - name: M (tipo de datos geography)
+      href: m-geography-data-type.md
+    - name: MakeValid (tipo de datos geography)
+      href: makevalid-geography-data-type.md
+    - name: MinDbCompatibilityLevel (tipo de datos geography)
+      href: mindbcompatibilitylevel-geography-data-type.md
+    - name: NumRings (tipo de datos geography)
+      href: numrings-geography-data-type.md
+    - name: Reduce (tipo de datos Geography)
+      href: reduce-geography-data-type.md
+    - name: ReorientObject (tipo de datos geography)
+      href: reorientobject-geography-data-type.md
+    - name: RingN (tipo de datos geography)
+      href: ringn-geography-data-type.md
+    - name: ShortestLineTo (tipo de datos Geography)
+      href: shortestlineto-geography-data-type.md
+    - name: ToString (tipo de datos geography)
+      href: tostring-geography-data-type.md
+    - name: Z (tipo de datos geography)
+      href: z-geography-data-type.md
+- name: Métodos de geografía estáticos de OGC
+  href: ogc-static-geography-methods.md
+  items:
+    - name: STGeomCollFromText (tipo de datos geography)
+      href: stgeomcollfromtext-geography-data-type.md
+    - name: STGeomCollFromWKB (tipo de datos geography)
+      href: stgeomcollfromwkb-geography-data-type.md
+    - name: STGeomFromText (tipo de datos geography)
+      href: stgeomfromtext-geography-data-type.md
+    - name: STGeomFromWKB (tipo de datos geography)
+      href: stgeomfromwkb-geography-data-type.md
+    - name: STLineFromText (tipo de datos geography)
+      href: stlinefromtext-geography-data-type.md
+    - name: STLineFromWKB (tipo de datos geography)
+      href: stlinefromwkb-geography-data-type.md
+    - name: STMLineFromText (tipo de datos geography)
+      href: stmlinefromtext-geography-data-type.md
+    - name: STMLineFromWKB (tipo de datos geography)
+      href: stmlinefromwkb-geography-data-type.md
+    - name: STMPointFromText (tipo de datos geography)
+      href: stmpointfromtext-geography-data-type.md
+    - name: STMPointFromWKB (tipo de datos geography)
+      href: stmpointfromwkb-geography-data-type.md
+    - name: STMPolyFromText (tipo de datos geography)
+      href: stmpolyfromtext-geography-data-type.md
+    - name: STMPolyFromWKB (tipo de datos geography)
+      href: stmpolyfromwkb-geography-data-type.md
+    - name: STPointFromText (tipo de datos geography)
+      href: stpointfromtext-geography-data-type.md
+    - name: STPointFromWKB (tipo de datos geography)
+      href: stpointfromwkb-geography-data-type.md
+    - name: STPolyFromText (tipo de datos geography)
+      href: stpolyfromtext-geography-data-type.md
+    - name: STPolyFromWKB (tipo de datos geography)
+      href: stpolyfromwkb-geography-data-type.md
+- name: Métodos de geografía estáticos extendidos
+  href: extended-static-geography-methods.md
+  items:
+    - name: GeomFromGML (tipo de datos geography)
+      href: geomfromgml-geography-data-type.md
+    - name: Null (tipo de datos geography)
+      href: null-geography-data-type.md
+    - name: Parse (tipo de datos geography)
+      href: parse-geography-data-type.md
+    - name: Point (tipo de datos geography)
+      href: point-geography-data-type.md
+- name: Métodos de agregado de geografía estáticos
+  href: static-aggregate-geography-methods.md
+  items:
+    - name: CollectionAggregate (tipo de datos geography)
+      href: collectionaggregate-geography-data-type.md
+    - name: ConvexHullAggregate (tipo de datos geography)
+      href: convexhullaggregate-geography-data-type.md
+    - name: EnvelopeAggregate (tipo de datos Geography)
+      href: envelopeaggregate-geography-data-type.md
+    - name: UnionAggregate (tipo de datos geography)
+      href: unionaggregate-geography-data-type.md

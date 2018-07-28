@@ -1,0 +1,26 @@
+- name: Utilizar los diagramas de actualización para modificar datos en SQLXML 4.0
+  href: using-updategrams-to-modify-data-in-sqlxml-4-0.md
+- name: Eliminar datos con diagramas de actualización XML (SQLXML 4.0)
+  href: deleting-data-using-xml-updategrams-sqlxml-4-0.md
+- name: Ejecutar un diagrama de actualización mediante ADO (SQLXML 4.0)
+  href: executing-an-updategram-by-using-ado-sqlxml-4-0.md
+- name: Ejecutar un diagrama de actualización mediante OLE DB (SQLXML 4.0)
+  href: executing-an-updategram-by-using-ole-db-sqlxml-4-0.md
+- name: Instrucciones y limitaciones de los diagramas de actualización XML (SQLXML 4.0)
+  href: guidelines-and-limitations-of-xml-updategrams-sqlxml-4-0.md
+- name: Controlar problemas de simultaneidad de base de datos en diagramas de actualización (SQLXML 4.0)
+  href: handling-database-concurrency-issues-in-updategrams-sqlxml-4-0.md
+- name: Insertar datos con diagramas de actualización XML (SQLXML 4.0)
+  href: inserting-data-using-xml-updategrams-sqlxml-4-0.md
+- name: Introducción a los diagramas de actualización (SQLXML 4.0)
+  href: introduction-to-updategrams-sqlxml-4-0.md
+- name: Controlar valores NULL (SQLXML 4.0)
+  href: null-handling-sqlxml-4-0.md
+- name: Pasar parámetros a diagramas de actualización (SQLXML 4.0)
+  href: passing-parameters-to-updategrams-sqlxml-4-0.md
+- name: Cómo especificar un esquema de asignación anotado en un diagrama de actualización (SQLXML 4.0)
+  href: specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md
+- name: Actualizar datos con diagramas de actualización XML (SQLXML 4.0)
+  href: updating-data-using-xml-updategrams-sqlxml-4-0.md
+- name: Utilizar un diagrama de actualización en una aplicación ASP de ejemplo (SQLXML 4.0)
+  href: using-an-updategram-in-a-sample-asp-application-sqlxml-4-0.md

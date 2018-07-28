@@ -1,0 +1,182 @@
+- name: Tipo de datos Action (ASSL)
+  href: action-data-type-assl.md
+- name: Tipo de datos AggregationAttribute (ASSL)
+  href: aggregationattribute-data-type-assl.md
+- name: Tipo de datos AggregationDesignAttribute (ASSL)
+  href: aggregationdesignattribute-data-type-assl.md
+- name: Tipo de datos AggregationDesignDimension (ASSL)
+  href: aggregationdesigndimension-data-type-assl.md
+- name: Tipo de datos AggregationDimension (ASSL)
+  href: aggregationdimension-data-type-assl.md
+- name: Tipo de datos AggregationInstanceAttribute (ASSL)
+  href: aggregationinstanceattribute-data-type-assl.md
+- name: Tipo de datos AggregationInstanceCubeDimension (ASSL)
+  href: aggregationinstancecubedimension-data-type-assl.md
+- name: Tipo de datos AggregationInstanceMeasure (ASSL)
+  href: aggregationinstancemeasure-data-type-assl.md
+- name: Tipos de datos XML de Analysis Services Scripting Language (ASSL)
+  href: analysis-services-scripting-language-xml-data-types-assl.md
+- name: Tipo de datos Assembly (ASSL)
+  href: assembly-data-type-assl.md
+- name: Tipo de datos AttributeBinding (ASSL)
+  href: attributebinding-data-type-assl.md
+- name: Tipo de datos AttributeTranslation (ASSL)
+  href: attributetranslation-data-type-assl.md
+- name: Tipo de datos Binding (ASSL)
+  href: binding-data-type-assl.md
+- name: Tipo de datos ClrAssembly (ASSL)
+  href: clrassembly-data-type-assl.md
+- name: Tipo de datos ClrAssemblyFile (ASSL)
+  href: clrassemblyfile-data-type-assl.md
+- name: Tipo de datos ColumnBinding (ASSL)
+  href: columnbinding-data-type-assl.md
+- name: Tipo de datos ComAssembly (ASSL)
+  href: comassembly-data-type-assl.md
+- name: Tipo de datos CubeAttribute (ASSL)
+  href: cubeattribute-data-type-assl.md
+- name: Tipo de datos CubeAttributeBinding (ASSL)
+  href: cubeattributebinding-data-type-assl.md
+- name: Tipo de datos CubeBinding (fuera de línea) (ASSL)
+  href: cubebinding-data-type-out-of-line-assl.md
+- name: Tipo de datos CubeDimension (ASSL)
+  href: cubedimension-data-type-assl.md
+- name: Tipo de datos CubeDimensionBinding (ASSL)
+  href: cubedimensionbinding-data-type-assl.md
+- name: Tipo de datos CubeDimensionPermission (ASSL)
+  href: cubedimensionpermission-data-type-assl.md
+- name: Tipo de datos CubeHierarchy (ASSL)
+  href: cubehierarchy-data-type-assl.md
+- name: Tipo de datos DataBlock (ASSL)
+  href: datablock-data-type-assl.md
+- name: Tipo de datos DataItem (ASSL)
+  href: dataitem-data-type-assl.md
+- name: Tipo de datos MiningMeasureGroupDimension (ASSL)
+  href: dataminingmeasuregroupdimension-data-type-assl.md
+- name: Tipo de datos DataSource (ASSL)
+  href: datasource-data-type-assl.md
+- name: Tipo de datos DataSourceViewBinding (ASSL)
+  href: datasourceviewbinding-data-type-assl.md
+- name: Tipo de datos DegenerateMeasureGroupDimension (ASSL)
+  href: degeneratemeasuregroupdimension-data-type-assl.md
+- name: Tipo de datos Dimension (ASSL)
+  href: dimension-data-type-assl.md
+- name: Tipo de datos DimensionAttribute (ASSL)
+  href: dimensionattribute-data-type-assl.md
+- name: Tipo de datos DimensionAttributeBinding (fuera de línea) (ASSL)
+  href: dimensionattributebinding-data-type-out-of-line-assl.md
+- name: Tipo de datos DimensionBinding (ASSL)
+  href: dimensionbinding-data-type-assl.md
+- name: Tipo de datos DimensionPermission (ASSL)
+  href: dimensionpermission-data-type-assl.md
+- name: Tipo de DrillThroughAction (ASSL)
+  href: drillthroughaction-data-type-assl.md
+- name: Tipo de datos DSVTableBinding (ASSL)
+  href: dsvtablebinding-data-type-assl.md
+- name: Tipo de datos EventColumn (ASSL)
+  href: eventcolumn-data-type-assl.md
+- name: Tipo de datos Hierarchy (ASSL)
+  href: hierarchy-data-type-assl.md
+- name: Tipo de datos ImpersonationInfo (ASSL)
+  href: impersonationinfo-data-type-assl.md
+- name: Tipo de datos IncrementalProcessingNotification (ASSL)
+  href: incrementalprocessingnotification-data-type-assl.md
+- name: Tipo de datos InheritedBinding (ASSL)
+  href: inheritedbinding-data-type-assl.md
+- name: Tipo de datos ManyToManyMeasureGroupDimension (ASSL)
+  href: manytomanymeasuregroupdimension-data-type-assl.md
+- name: Tipo de datos MeasureBinding (ASSL)
+  href: measurebinding-data-type-assl.md
+- name: Tipo de datos MeasureGroupAttribute (ASSL)
+  href: measuregroupattribute-data-type-assl.md
+- name: Tipo de datos MeasureGroupAttributeBinding (fuera de línea) (ASSL)
+  href: measuregroupattributebinding-data-type-out-of-line-assl.md
+- name: Tipo de datos MeasureGroupBinding (ASSL)
+  href: measuregroupbinding-data-type-assl.md
+- name: Tipo de datos MeasureGroupBinding (fuera de línea) (ASSL)
+  href: measuregroupbinding-data-type-out-of-line-assl.md
+- name: Tipo de datos MeasureGroupDimension (ASSL)
+  href: measuregroupdimension-data-type-assl.md
+- name: Tipo de datos MeasureGroupDimensionBinding (ASSL)
+  href: measuregroupdimensionbinding-data-type-assl.md
+- name: Tipo de datos MeasureGroupHierarchy (ASSL)
+  href: measuregrouphierarchy-data-type-assl.md
+- name: Tipo de datos MiningModelColumn (ASSL)
+  href: miningmodelcolumn-data-type-assl.md
+- name: Tipo de datos MiningModelingFlag (ASSL)
+  href: miningmodelingflag-data-type-assl.md
+- name: Tipo de datos MiningStructureColumn (ASSL)
+  href: miningstructurecolumn-data-type-assl.md
+- name: Tipo de datos OlapDataSource (ASSL)
+  href: olapdatasource-data-type-assl.md
+- name: Tipo de datos PartitionBinding (ASSL)
+  href: partitionbinding-data-type-assl.md
+- name: Tipo de datos Permission (ASSL)
+  href: permission-data-type-assl.md
+- name: Tipo de datos PerspectiveAction (ASSL)
+  href: perspectiveaction-data-type-assl.md
+- name: Tipo de datos PerspectiveAttribute (ASSL)
+  href: perspectiveattribute-data-type-assl.md
+- name: Tipo de datos PerspectiveCalculation (ASSL)
+  href: perspectivecalculation-data-type-assl.md
+- name: Tipo de datos PerspectiveDimension (ASSL)
+  href: perspectivedimension-data-type-assl.md
+- name: Tipo de datos PerspectiveHierarchy (ASSL)
+  href: perspectivehierarchy-data-type-assl.md
+- name: Tipo de datos PerspectiveKpi (ASSL)
+  href: perspectivekpi-data-type-assl.md
+- name: Tipo de datos PerspectiveMeasure (ASSL)
+  href: perspectivemeasure-data-type-assl.md
+- name: Tipo de datos PerspectiveMeasureGroup (ASSL)
+  href: perspectivemeasuregroup-data-type-assl.md
+- name: Tipo de datos ProactiveCachingBinding (ASSL)
+  href: proactivecachingbinding-data-type-assl.md
+- name: Tipo de datos ProactiveCachingIncrementalProcessingBinding (ASSL)
+  href: proactivecachingincrementalprocessingbinding-data-type-assl.md
+- name: Tipo de datos ProactiveCachingInheritedBinding (ASSL)
+  href: proactivecachinginheritedbinding-data-type-assl.md
+- name: Tipo de datos ProactiveCachingObjectNotificationBinding (ASSL)
+  href: proactivecachingobjectnotificationbinding-data-type-assl.md
+- name: Tipo de datos ProactiveCachingQueryBinding (ASSL)
+  href: proactivecachingquerybinding-data-type-assl.md
+- name: Tipo de datos ProactiveCachingTablesBinding (ASSL)
+  href: proactivecachingtablesbinding-data-type-assl.md
+- name: Tipo de datos PushedDataSource (ASSL)
+  href: pusheddatasource-data-type-assl.md
+- name: Tipo de datos QueryBinding (ASSL)
+  href: querybinding-data-type-assl.md
+- name: Tipo de datos ReferenceMeasureGroupDimension (ASSL)
+  href: referencemeasuregroupdimension-data-type-assl.md
+- name: Tipo de datos RegularMeasureGroupDimension (ASSL)
+  href: regularmeasuregroupdimension-data-type-assl.md
+- name: Tipo de datos RelationalDataSource (ASSL)
+  href: relationaldatasource-data-type-assl.md
+- name: Tipo de datos Relationship (ASSL)
+  href: relationship-data-type-assl.md
+- name: Tipo de datos RelationshipEnd (ASSL)
+  href: relationshipend-data-type-assl.md
+- name: Elemento RelationshipEndTranslation (ASSL)
+  href: relationshipendtranslation-element-assl.md
+- name: Tipo de datos RelationshipEndVisualizationProperties (ASSL)
+  href: relationshipendvisualizationproperties-data-type-assl.md
+- name: Tipo de datos ReportAction (ASSL)
+  href: reportaction-data-type-assl.md
+- name: Tipo de datos RowBinding (ASSL)
+  href: rowbinding-data-type-assl.md
+- name: Tipo de datos ScalarMiningStructureColumn (ASSL)
+  href: scalarminingstructurecolumn-data-type-assl.md
+- name: Tipo de datos StandardAction (ASSL)
+  href: standardaction-data-type-assl.md
+- name: Tipo de datos TableBinding (ASSL)
+  href: tablebinding-data-type-assl.md
+- name: Tipo de datos TableMiningStructureColumn (ASSL)
+  href: tableminingstructurecolumn-data-type-assl.md
+- name: Tipo de datos TabularBinding (ASSL)
+  href: tabularbinding-data-type-assl.md
+- name: Tipo de datos TimeAttributeBinding (ASSL)
+  href: timeattributebinding-data-type-assl.md
+- name: Tipo de datos TimeBinding (ASSL)
+  href: timebinding-data-type-assl.md
+- name: Tipo de datos Translation (ASSL)
+  href: translation-data-type-assl.md
+- name: Tipo de datos UserDefinedGroupBinding (ASSL)
+  href: userdefinedgroupbinding-data-type-assl.md

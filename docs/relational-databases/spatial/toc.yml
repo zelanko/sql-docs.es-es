@@ -1,0 +1,36 @@
+- name: Información general
+  href: spatial-data-sql-server.md
+- name: Tipos de datos
+  href: spatial-data-types-overview.md
+- name: Punto
+  href: point.md
+- name: LineString
+  href: linestring.md
+- name: CircularString
+  href: circularstring.md
+- name: CompoundCurve
+  href: compoundcurve.md
+- name: Polígono
+  href: polygon.md
+- name: CurvePolygon
+  href: curvepolygon.md
+- name: MultiPoint
+  href: multipoint.md
+- name: MultiLineString
+  href: multilinestring.md
+- name: MultiPolígono
+  href: multipolygon.md
+- name: Colección Geometry
+  href: geometrycollection.md
+- name: Identificadores de referencia espacial (SRID)
+  href: spatial-reference-identifiers-srids.md
+- name: 'Crear, construir y consultar instancias de Geometry'
+  href: create-construct-and-query-geometry-instances.md
+- name: 'Crear, construir y consultar instancias de Geography'
+  href: create-construct-and-query-geography-instances.md
+- name: Consultar datos espaciales para el vecino más próximo
+  href: query-spatial-data-for-nearest-neighbor.md
+- name: Información general sobre los índices espaciales
+  href: spatial-indexes-overview.md
+- name: 'Crear, modificar y quitar índices espaciales'
+  href: create-modify-and-drop-spatial-indexes.md

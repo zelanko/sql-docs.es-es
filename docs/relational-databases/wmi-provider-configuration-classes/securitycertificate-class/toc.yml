@@ -1,0 +1,24 @@
+- name: Propiedad Context (clase SecurityCertificate)
+  href: context-property-securitycertificate-class.md
+- name: Propiedad ExpirationDate (clase SecurityCertificate)
+  href: expirationdate-property-securitycertificate-class.md
+- name: Propiedad FriendlyName (clase SecurityCertificate)
+  href: friendlyname-property-securitycertificate-class.md
+- name: Método GetCurrentCertificate (clase SecurityCertificate)
+  href: getcurrentcertificate-method-securitycertificate-class.md
+- name: Propiedad IssuedBy (clase SecurityCertificate)
+  href: issuedby-property-securitycertificate-class.md
+- name: Propiedad IssuedTo (clase SecurityCertificate)
+  href: issuedto-property-securitycertificate-class.md
+- name: Propiedad Name (clase SecurityCertificate)
+  href: name-property-securitycertificate-class.md
+- name: Clase SecurityCertificate
+  href: securitycertificate-class.md
+- name: Método SetCurrentCertificate (clase SecurityCertificate)
+  href: setcurrentcertificate-method-securitycertificate-class.md
+- name: Propiedad SHA (clase SecurityCertificate)
+  href: sha-property-securitycertificate-class.md
+- name: Propiedad StartDate (clase SecurityCertificate)
+  href: startdate-property-securitycertificate-class.md
+- name: Propiedad SystemStore (clase SecurityCertificate)
+  href: systemstore-property-securitycertificate-class.md

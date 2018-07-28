@@ -1,0 +1,64 @@
+- name: Conexiones de Integration Services (SSIS)
+  href: integration-services-ssis-connections.md
+- name: administrador de conexiones de Analysis Services
+  href: analysis-services-connection-manager.md
+  items:
+    - name: Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones con Analysis Services
+      href: add-analysis-services-connection-manager-dialog-box-ui-reference.md
+- name: 'FTP, administrador de conexiones'
+  href: ftp-connection-manager.md
+  items:
+    - name: Editor del administrador de conexiones FTP
+      href: ../ftp-connection-manager-editor.md
+- name: 'HTTP, administrador de conexiones'
+  href: http-connection-manager.md
+  items:
+    - name: Editor del administrador de conexiones HTTP (página Servidor)
+      href: ../http-connection-manager-editor-server-page.md
+    - name: Editor del administrador de conexiones HTTP (página Proxy)
+      href: ../http-connection-manager-editor-proxy-page.md
+- name: 'MSMQ, administrador de conexiones'
+  href: msmq-connection-manager.md
+  items:
+    - name: 'administrador de conexiones MSMQ, editor del'
+      href: ../msmq-connection-manager-editor.md
+- name: Administrador de conexiones SMTP
+  href: smtp-connection-manager.md
+  items:
+    - name: Editor del administrador de conexiones SMTP
+      href: ../smtp-connection-manager-editor.md
+- name: 'SMO, administrador de conexiones'
+  href: smo-connection-manager.md
+  items:
+    - name: 'administrador de conexiones SMO, editor del'
+      href: ../smo-connection-manager-editor.md
+- name: Administrador de conexiones WMI
+  href: wmi-connection-manager.md
+  items:
+    - name: Editor del administrador de conexiones WMI
+      href: ../wmi-connection-manager-editor.md
+- name: Crear administradores de conexiones
+  href: ../create-connection-managers.md
+- name: administrador de conexiones de varios archivos
+  href: multiple-files-connection-manager.md
+- name: Área de administradores de conexión
+  href: ../connection-managers-area.md
+- name: Herramientas para solucionar problemas de conectividad entre paquetes
+  href: ../troubleshooting/troubleshooting-tools-for-package-connectivity.md
+- name: 'Agregar, eliminar o compartir un administrador de conexiones en un paquete'
+  href: ../add-delete-or-share-a-connection-manager-in-a-package.md
+  items:
+    - name: Agregar administrador de conexiones SSIS
+      href: ../add-ssis-connection-manager.md
+- name: Establecer las propiedades de un administrador de conexiones
+  href: ../set-the-properties-of-a-connection-manager.md
+- name: Administrador de conexiones de Azure Data Lake Store
+  href: ../azure-data-lake-store-connection-manager.md
+- name: Administrador de conexiones de Azure HDInsight
+  href: ../azure-hdinsight-connection-manager.md
+- name: Administrador de conexiones de Azure Resource Manager
+  href: ../azure-resource-manager-connection-manager.md
+- name: Administrador de conexiones de Almacenamiento de Azure
+  href: azure-storage-connection-manager.md
+- name: Azure Subscription Connection Manager (Administrador de conexiones de suscripciones de Azure)
+  href: azure-subscription-connection-manager.md

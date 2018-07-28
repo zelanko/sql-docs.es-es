@@ -1,0 +1,241 @@
+- name: Información general
+  href: back-up-and-restore-of-sql-server-databases.md
+- name: Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage.
+  href: sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
+  items:
+    - name: Connect to a Microsoft Azure Subscription (Conectarse a una suscripción de Microsoft Azure)
+      href: connect-to-a-microsoft-azure-subscription.md
+    - name: Copia de seguridad en URL de SQL Server
+      href: sql-server-backup-to-url.md
+      items:
+        - name: Usar PowerShell para crear copias de seguridad de varias bases de datos en el servicio Azure Blob Storage
+          href: back-up-multiple-databases-to-azure-blob-storage-powershell.md
+        - name: Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server
+          href: sql-server-backup-to-url-best-practices-and-troubleshooting.md
+        - name: Eliminar archivos de blob de copia de seguridad con concesiones activas
+          href: deleting-backup-blob-files-with-active-leases.md
+    - name: Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure
+      href: file-snapshot-backups-for-database-files-in-azure.md
+    - name: Copia de seguridad administrada en Microsoft Azure
+      href: sql-server-managed-backup-to-microsoft-azure.md
+      items:
+        - name: Habilitar la copia de seguridad administrada en Microsoft Azure
+          href: enable-sql-server-managed-backup-to-microsoft-azure.md
+        - name: Configurar las opciones avanzadas de copia de seguridad administrada en Microsoft Azure
+          href: configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md
+        - name: Deshabilitar la copia de seguridad administrada en Microsoft Azure
+          href: disable-sql-server-managed-backup-to-microsoft-azure.md
+        - name: Migración de la configuración de copia de seguridad administrada de SQL Server 2014 a SQL Server 2016
+          href: migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md
+    - name: Restaurar a partir de copias de seguridad archivadas en Microsoft Azure
+      href: restoring-from-backups-stored-in-microsoft-azure.md
+- name: modelos de recuperación
+  href: recovery-models-sql-server.md
+  items:
+    - name: Ver o cambiar el modelo de recuperación de una base de datos
+      href: view-or-change-the-recovery-model-of-a-database-sql-server.md
+- name: Información general de copia de seguridad (SQL Server)
+  href: backup-overview-sql-server.md
+- name: Información general sobre restauración y recuperación
+  href: restore-and-recovery-overview-sql-server.md
+  items:
+    - name: Planear y realizar secuencias de restauración (modelo de recuperación completa)
+      href: plan-and-perform-restore-sequences-full-recovery-model.md
+    - name: Reiniciar una operación de restauración interrumpida (Transact-SQL)
+      href: restart-an-interrupted-restore-operation-transact-sql.md
+- name: Compresión de copia de seguridad
+  href: backup-compression-sql-server.md
+  items:
+    - name: Configurar la compresión de copia de seguridad
+      href: configure-backup-compression-sql-server.md
+    - name: Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad (Transact-SQL)
+      href: use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md
+- name: Cifrado de copia de seguridad
+  href: backup-encryption.md
+  items:
+    - name: Crear una copia de seguridad cifrada
+      href: create-an-encrypted-backup.md
+- name: Copias de seguridad completas de bases de datos (SQL Server)
+  href: full-database-backups-sql-server.md
+  items:
+    - name: Crear una copia de seguridad completa de base de datos
+      href: create-a-full-database-backup-sql-server.md
+      items:
+        - name: Copia de seguridad de base de datos (página General)
+          href: back-up-database-general-page.md
+        - name: Copia de seguridad de la base de datos (página Opciones multimedia)
+          href: back-up-database-media-options-page.md
+        - name: Copia de seguridad de la base de datos (página Opciones de copia de seguridad)
+          href: back-up-database-backup-options-page.md
+        - name: Seleccionar destino de la copia de seguridad
+          href: select-backup-destination.md
+        - name: Crear credencial - autenticarse en Azure Storage
+          href: create-credential-authenticate-to-azure-storage.md
+- name: Copias de seguridad parciales (SQL Server)
+  href: partial-backups-sql-server.md
+- name: Copias de seguridad de archivos completas (SQL Server)
+  href: full-file-backups-sql-server.md
+  items:
+    - name: Realizar copias de seguridad de archivos y grupos de archivos
+      href: back-up-files-and-filegroups-sql-server.md
+- name: Copias de seguridad diferenciales
+  href: differential-backups-sql-server.md
+  items:
+    - name: Crear una copia de seguridad diferencial de una base de datos
+      href: create-a-differential-database-backup-sql-server.md
+    - name: Restaurar una copia de seguridad diferencial de la base de datos
+      href: restore-a-differential-database-backup-sql-server.md
+- name: Copias de seguridad de solo copia
+  href: copy-only-backups-sql-server.md
+- name: Copias de seguridad de registros de transacciones
+  href: transaction-log-backups-sql-server.md
+  items:
+    - name: Realizar copia de seguridad de un registro de transacciones (SQL Server)
+      href: back-up-a-transaction-log-sql-server.md
+- name: Copias del final del registro
+  href: tail-log-backups-sql-server.md
+  items:
+    - name: Realizar una copia de seguridad del registro de transacciones cuando la base de datos está dañada (SQL Server)
+      href: back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md
+- name: Dispositivos de copia de seguridad
+  href: backup-devices-sql-server.md
+  items:
+    - name: Definir un dispositivo lógico de copia de seguridad para un archivo de disco
+      href: define-a-logical-backup-device-for-a-disk-file-sql-server.md
+    - name: Definir un dispositivo lógico de copia de seguridad en una unidad de cinta (SQL Server)
+      href: define-a-logical-backup-device-for-a-tape-drive-sql-server.md
+      items:
+        - name: Ver el contenido de una cinta o un archivo de copia de seguridad
+          href: view-the-contents-of-a-backup-tape-or-file-sql-server.md
+    - name: Especificar un disco o una cinta como destino de copia de seguridad (SQL Server)
+      href: specify-a-disk-or-tape-as-a-backup-destination-sql-server.md
+      items:
+        - name: Contenido del dispositivo (SQL Server)
+          href: device-contents-sql-server.md
+        - name: Dispositivo de copia de seguridad (página Contenido de los medios)
+          href: backup-device-media-contents-page.md
+        - name: Dispositivo de copia de seguridad (página General)
+          href: backup-device-general-page.md
+    - name: Restaurar una copia de seguridad desde un dispositivo (SQL Server)
+      href: restore-a-backup-from-a-device-sql-server.md
+    - name: Eliminar un dispositivo de copia de seguridad
+      href: delete-a-backup-device-sql-server.md
+- name: 'Conjuntos de medios, familias de medios y conjuntos de copias de seguridad'
+  href: media-sets-media-families-and-backup-sets-sql-server.md
+  items:
+    - name: Establecer la fecha de expiración de una copia de seguridad (SQL Server)
+      href: set-the-expiration-date-on-a-backup-sql-server.md
+    - name: Ver los archivos de datos y de registro en un conjunto de copia de seguridad (SQL Server)
+      href: view-the-data-and-log-files-in-a-backup-set-sql-server.md
+- name: Conjuntos de medios de copia de seguridad reflejados (SQL Server)
+  href: mirrored-backup-media-sets-sql-server.md
+  items:
+    - name: Realizar una copia de seguridad en un conjunto de medios reflejado (Transact-SQL)
+      href: back-up-to-a-mirrored-media-set-transact-sql.md
+- name: Historial de copias de seguridad e información de encabezados (SQL Server)
+  href: backup-history-and-header-information-sql-server.md
+  items:
+    - name: Ver las propiedades y el contenido de un dispositivo lógico de copia de seguridad (SQL Server)
+      href: view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md
+- name: Errores posibles de medios durante copia de seguridad y restauración
+  href: possible-media-errors-during-backup-and-restore-sql-server.md
+  items:
+    - name: Habilitar o deshabilitar sumas de comprobación de copia de seguridad durante copia de seguridad o restauración (SQL Server)
+      href: enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md
+    - name: Especificar si una operación de copia de seguridad o restauración continúa o se detiene después de encontrar un error (SQL Server)
+      href: specify-if-backup-or-restore-continues-or-stops-after-error.md
+- name: Restauraciones de base de datos completas (modelo de recuperación simple)
+  href: complete-database-restores-simple-recovery-model.md
+  items:
+    - name: Restaurar una copia de seguridad de base de datos en el modelo de recuperación simple (Transact-SQL)
+      href: restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md
+    - name: Restore a Database Backup Using SSMS
+      href: restore-a-database-backup-using-ssms.md
+      items:
+        - name: Escala de tiempo de copia de seguridad
+          href: backup-timeline.md
+        - name: Restaurar la base de datos (página General)
+          href: restore-database-general-page.md
+        - name: Restaurar base de datos (página Opciones)
+          href: restore-database-options-page.md
+        - name: Restaurar base de datos (página Archivos)
+          href: restore-database-files-page.md
+        - name: Seleccionar dispositivo de copia de seguridad
+          href: select-backup-device.md
+        - name: Conectar con Azure Storage (Restauración)
+          href: connect-to-microsoft-azure-storage-restore.md
+    - name: Restaurar una base de datos a una nueva ubicación
+      href: restore-a-database-to-a-new-location-sql-server.md
+- name: Restauraciones de base de datos completas (modelo de recuperación completa)
+  href: complete-database-restores-full-recovery-model.md
+  items:
+    - name: Restaurar una base de datos según el punto de error en el modelo de recuperación completa (Transact-SQL)
+      href: restore-database-to-point-of-failure-full-recovery.md
+- name: Restauraciones de archivos (modelo de recuperación simple)
+  href: file-restores-simple-recovery-model.md
+  items:
+    - name: Restaurar archivos y grupos de archivos en archivos existentes
+      href: restore-files-and-filegroups-over-existing-files-sql-server.md
+    - name: Restaurar archivos en una nueva ubicación
+      href: restore-files-to-a-new-location-sql-server.md
+    - name: Restaurar archivos y grupos de archivos (SQL Server)
+      href: restore-files-and-filegroups-sql-server.md
+- name: Restauraciones de archivos (modelo de recuperación completa)
+  href: file-restores-full-recovery-model.md
+- name: Aplicar copias de seguridad del registro de transacciones
+  href: apply-transaction-log-backups-sql-server.md
+  items:
+    - name: Restaurar una copia de seguridad de registros de transacciones (SQL Server)
+      href: restore-a-transaction-log-backup-sql-server.md
+    - name: Restaurar una base de datos de SQL Server a un momento dado (modelo de recuperación completa)
+      href: restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md
+    - name: Recuperación de bases de datos relacionadas que contienen transacciones marcadas
+      href: recovery-of-related-databases-that-contain-marked-transaction.md
+      items:
+        - name: Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente (modelo de recuperación completa)
+          href: use-marked-transactions-to-recover-related-databases-consistently.md
+        - name: Restaurar una base de datos en una transacción marcada (SQL Server Management Studio)
+          href: restore-a-database-to-a-marked-transaction-sql-server-management-studio.md
+    - name: Recuperar a un número de secuencia de registro (SQL Server)
+      href: recover-to-a-log-sequence-number-sql-server.md
+- name: Restauración en línea
+  href: online-restore-sql-server.md
+  items:
+    - name: Transacciones diferidas (SQL Server)
+      href: deferred-transactions-sql-server.md
+      items:
+        - name: Quitar grupos de archivos inactivos (SQL Server)
+          href: remove-defunct-filegroups-sql-server.md
+    - name: 'Ejemplo: Restauración en línea de un archivo de lectura/escritura (modelo de recuperación completa)'
+      href: example-online-restore-of-a-read-write-file-full-recovery-model.md
+    - name: 'Ejemplo: restauración en línea de un archivo de solo lectura (modelo de recuperación completa)'
+      href: example-online-restore-of-a-read-only-file-full-recovery-model.md
+    - name: 'Ejemplo: restauración en línea de un archivo de solo lectura (modelo de recuperación simple)'
+      href: example-online-restore-of-a-read-only-file-simple-recovery-model.md
+    - name: 'Ejemplo: restauración sin conexión del grupo de archivo principal y de otro grupo de archivos (modelo de recuperación completa)'
+      href: example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md
+- name: Restaurar páginas
+  href: restore-pages-sql-server.md
+  items:
+    - name: Administrar la tabla suspect_pages (SQL Server)
+      href: manage-the-suspect-pages-table-sql-server.md
+- name: Restauraciones por etapas
+  href: piecemeal-restores-sql-server.md
+  items:
+    - name: 'Ejemplo: restauración por etapas de la base de datos (modelo de recuperación completa)'
+      href: example-piecemeal-restore-of-database-full-recovery-model.md
+    - name: 'Ejemplo: restauración por etapas de base de datos (modelo de recuperación simple)'
+      href: example-piecemeal-restore-of-database-simple-recovery-model.md
+    - name: 'Ejemplo: restauración por etapas exclusiva para algunos grupos de archivos (modelo de recuperación completa)'
+      href: example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md
+    - name: 'Ejemplo: restauración por etapas exclusiva para algunos grupos de archivos (modelo de recuperación simple)'
+      href: example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md
+- name: Recuperar una base de datos sin restaurar los datos (Transact-SQL)
+  href: recover-a-database-without-restoring-data-transact-sql.md
+- name: Realizar copias de seguridad y restaurar bases de datos del sistema
+  href: back-up-and-restore-of-system-databases-sql-server.md
+  items:
+    - name: Restaurar la base de datos maestra (Transact-SQL)
+      href: restore-the-master-database-transact-sql.md
+- name: 'Copias de seguridad y restauración: interoperabilidad y coexistencia'
+  href: backup-and-restore-interoperability-and-coexistence-sql-server.md

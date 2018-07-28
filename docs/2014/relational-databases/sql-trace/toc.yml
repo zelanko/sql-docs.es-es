@@ -1,0 +1,31 @@
+- name: Seguimiento de SQL
+  href: sql-trace.md
+  items:
+    - name: Crear y ejecutar seguimientos mediante procedimientos almacenados de Transact-SQL
+      href: create-and-run-traces-using-transact-sql-stored-procedures.md
+    - name: Crear seguimientos manuales mediante procedimientos almacenados
+      href: create-manual-traces-using-stored-procedures.md
+    - name: Guardar los resultados de un seguimiento en un archivo
+      href: save-trace-results-to-a-file.md
+    - name: Mejorar el acceso a los datos de seguimiento
+      href: improve-access-to-trace-data.md
+    - name: Crear un seguimiento (Transact-SQL)
+      href: create-a-trace-transact-sql.md
+    - name: Establecer un filtro de seguimiento (Transact-SQL)
+      href: set-a-trace-filter-transact-sql.md
+    - name: Modificar un seguimiento existente (Transact-SQL)
+      href: modify-an-existing-trace-transact-sql.md
+    - name: Ver un seguimiento guardado (Transact-SQL)
+      href: view-a-saved-trace-transact-sql.md
+    - name: Ver la información del filtro (Transact-SQL)
+      href: view-filter-information-transact-sql.md
+    - name: Eliminar un seguimiento (Transact-SQL)
+      href: delete-a-trace-transact-sql.md
+    - name: Optimizar el seguimiento de SQL
+      href: optimize-sql-trace.md
+    - name: Filtrar un seguimiento
+      href: filter-a-trace.md
+    - name: Limitar el tamaño de la tabla y el archivo de seguimiento
+      href: limit-trace-file-and-table-sizes.md
+    - name: Programar seguimientos
+      href: schedule-traces.md

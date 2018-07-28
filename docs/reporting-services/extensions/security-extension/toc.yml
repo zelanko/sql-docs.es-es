@@ -1,0 +1,10 @@
+- name: Autenticación de Windows en Reporting Services
+  href: authentication-in-reporting-services.md
+- name: La autorización en Reporting Services
+  href: authorization-in-reporting-services.md
+- name: Cómo instalar extensiones de seguridad personalizadas
+  href: how-to-install-custom-security-extensions.md
+- name: Implementar una extensión de seguridad
+  href: implementing-a-security-extension.md
+- name: Información general de extensiones de seguridad
+  href: security-extensions-overview.md

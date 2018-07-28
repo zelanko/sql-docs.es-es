@@ -1,0 +1,18 @@
+- name: Parámetros con valores de tabla (OLE DB)
+  href: table-valued-parameters-ole-db.md
+- name: Ejecutar comandos que contienen parámetros con valores de tabla
+  href: executing-commands-containing-table-valued-parameters.md
+- name: Insertar datos en parámetros con valores de tabla
+  href: inserting-data-into-table-valued-parameters.md
+- name: Compatibilidad con tipos de parámetro con valores de tabla de OLE DB (métodos)
+  href: ole-db-table-valued-parameter-type-support-methods.md
+- name: Compatibilidad con tipos de parámetros con valores de tabla de OLE DB (propiedades)
+  href: ole-db-table-valued-parameter-type-support-properties.md
+- name: Compatibilidad con tipos de parámetros con valores de tablas de OLE DB
+  href: ole-db-table-valued-parameter-type-support.md
+- name: Conjuntos de filas de esquema cambiados para los parámetros con valores de tabla de OLE DB
+  href: schema-rowsets-changed-for-ole-db-table-valued-parameters.md
+- name: Creación de conjuntos de filas de parámetros con valores de tabla
+  href: table-valued-parameter-rowset-creation.md
+- name: Detección de tipos de parámetros con valores de tabla
+  href: table-valued-parameter-type-discovery.md

@@ -1,0 +1,42 @@
+- name: Agregar el elemento web Visor de informes a una página web
+  href: add-reporting-services-content-types-to-a-sharepoint-library.md
+  items:
+    - name: Elemento web Visor de informes en un sitio de SharePoint
+      href: ../report-viewer-web-part-on-a-sharepoint-site.md
+    - name: Conectar un elemento web Filtro o Documentos
+      href: ../connect-filter-or-documents-web-part-reporting-services-sharepoint-integrated-mode.md
+    - name: Personalizar el elemento web Visor de informes
+      href: ../customize-the-report-viewer-web-part.md
+- name: Servidor de informes (modo de SharePoint)
+  href: ../reporting-services-report-server-sharepoint-mode.md
+  items:
+    - name: Aplicaciones de servicio y servicio de SharePoint
+      href: ../reporting-services-sharepoint-service-and-service-applications.md
+      items:
+        - name: Administrar una aplicación de servicio de SharePoint para Reporting Services
+          href: ../manage-a-reporting-services-sharepoint-service-application.md
+        - name: Copias de seguridad y restauración de aplicaciones de servicio de SharePoint para Reporting Services
+          href: ../backup-and-restore-reporting-services-sharepoint-service-applications.md
+- name: Cmdlets de PowerShell para el modo de SharePoint de Reporting Services
+  href: ../powershell-cmdlets-for-reporting-services-sharepoint-mode.md
+- name: Configuración y administración (modo de SharePoint)
+  href: ../configure-administer-report-server-reporting-services-sharepoint-mode.md
+  items:
+    - name: Características de la colección de sitios Reporting Services
+      href: ../reporting-services-site-collection-features.md
+    - name: Activar las características de integración del servidor de informes y Power View en SharePoint
+      href: ../activate-the-report-server-and-power-view-integration-features-in-sharepoint.md
+    - name: Valores de configuración del sitio de Reporting Services y características del sitio (modo de SharePoint)
+      href: ../reporting-services-site-settings-and-site-features-sharepoint-mode.md
+    - name: Activar la característica de sincronización de archivos del servidor de informes
+      href: ../activate-report-server-file-sync-feature-sharepoint-central-administration.md
+    - name: Agregar tipos de contenido del servidor de informes a una biblioteca (Reporting Services en el modo integrado de SharePoint)
+      href: ../add-reporting-services-content-types-to-a-sharepoint-library.md
+    - name: Informes en modo local frente al modo conectado en el Visor de informes
+      href: ../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md
+    - name: Cargar documentos en una biblioteca de SharePoint
+      href: ../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md
+    - name: Establecer opciones de procesamiento
+      href: ../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md
+- name: Integración de SharePoint con servidores de informes 2008 y 2008 R2
+  href: ../sharepoint-integration-with-2008-and-2008-r2-report-servers.md

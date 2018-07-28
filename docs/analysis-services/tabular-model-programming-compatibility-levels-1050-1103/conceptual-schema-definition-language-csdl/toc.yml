@@ -1,0 +1,38 @@
+- name: 'AssociationSet, elemento (CSDLBI)'
+  href: associationset-element-csdlbi.md
+- name: 'BaseProperty, elemento (CSDLBI)'
+  href: baseproperty-element-csdlbi.md
+- name: 'DefaultDetails, elemento (CSDLBI)'
+  href: defaultdetails-element-csdlbi.md
+- name: 'DisplayKey, elemento (CSDLBI)'
+  href: displaykey-element-csdlbi.md
+- name: 'EntityContainer, elemento (CSDLBI)'
+  href: entitycontainer-element-csdlbi.md
+- name: 'EntitySet, elemento (CSDLBI)'
+  href: entityset-element-csdlbi.md
+- name: 'EntityType, elemento (CSDLBI)'
+  href: entitytype-element-csdlbi.md
+- name: 'Hierarchy, elemento (CSDLBI)'
+  href: hierarchy-element-csdlbi.md
+- name: 'KPI, elemento (CSDLBI)'
+  href: kpi-element-csdlbi.md
+- name: 'KpiGoal, elemento (CSDLBI)'
+  href: kpigoal-element-csdlbi.md
+- name: 'KpiStatus, elemento (CSDLBI)'
+  href: kpistatus-element-csdlbi.md
+- name: 'Level, elemento (CSDLBI)'
+  href: level-element-csdlbi.md
+- name: 'Measure, elemento (CSDLBI)'
+  href: measure-element-csdlbi.md
+- name: 'Member, elemento (CSDLBI)'
+  href: member-element-csdlbi.md
+- name: 'MemberRef, elemento (CSDLBI)'
+  href: memberref-element-csdlbi.md
+- name: 'NavigationProperty, elemento (CSDLBI)'
+  href: navigationproperty-element-csdlbi.md
+- name: 'Property, elemento (CSDLBI)'
+  href: property-element-csdlbi.md
+- name: 'PropertyRef, elemento (CSDLBI)'
+  href: propertyref-element-csdlbi.md
+- name: Referencia técnica para las anotaciones de Business Intelligence en CSDL
+  href: technical-reference-for-bi-annotations-to-csdl.md

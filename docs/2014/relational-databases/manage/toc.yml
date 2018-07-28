@@ -1,0 +1,47 @@
+- name: Características y tareas de la utilidad de SQL Server
+  href: sql-server-utility-features-and-tasks.md
+- name: Consideraciones para ejecutar conjuntos de recopilación de la utilidad y que no sean de la utilidad en la misma instancia de SQL Server
+  href: run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
+- name: Crear un punto de control de la utilidad de SQL Server (utilidad de SQL Server)
+  href: create-a-sql-server-utility-control-point-sql-server-utility.md
+- name: Conectarse a una utilidad de SQL Server
+  href: connect-to-a-sql-server-utility.md
+- name: Inscribir una instancia de SQL Server (Utilidad de SQL Server)
+  href: enroll-an-instance-of-sql-server-sql-server-utility.md
+- name: Utilizar el explorador de Utilidad para administrar la utilidad de SQL Server
+  href: use-utility-explorer-to-manage-the-sql-server-utility.md
+- name: Supervisar instancias de SQL Server en la utilidad de SQL Server
+  href: monitor-instances-of-sql-server-in-the-sql-server-utility.md
+- name: Ver los resultados de la directiva de mantenimiento de recursos (Utilidad de SQL Server)
+  href: view-resource-health-policy-results-sql-server-utility.md
+- name: Modificar una definición de la directiva de mantenimiento de recursos (utilidad de SQL Server)
+  href: modify-a-resource-health-policy-definition-sql-server-utility.md
+- name: Configurar el almacenamiento de datos del punto de control de la utilidad (utilidad de SQL Server)
+  href: configure-your-utility-control-point-data-warehouse-sql-server-utility.md
+- name: Configurar las directivas de mantenimiento (utilidad de SQL Server)
+  href: configure-health-policies-sql-server-utility.md
+- name: Reducir el ruido en las directivas de uso de la CPU (utilidad de SQL Server)
+  href: reduce-noise-in-cpu-utilization-policies-sql-server-utility.md
+- name: Quitar una instancia de SQL Server de la utilidad de SQL Server
+  href: remove-an-instance-of-sql-server-from-the-sql-server-utility.md
+- name: Cambiar la cuenta de proxy para el conjunto de recopilación de la utilidad en una instancia administrada de SQL Server (utilidad de SQL Server)
+  href: change-proxy-account-for-utility-collection-on-managed-sql-server.md
+- name: Mover un UCP desde una instancia de SQL Server a otra (utilidad de SQL Server)
+  href: move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md
+- name: Quitar un punto de control de la utilidad de SQL Server (utilidad de SQL Server)
+  href: remove-a-utility-control-point-sql-server-utility.md
+- name: Solucionar problemas de la Utilidad de SQL Server
+  href: ../../database-engine/troubleshoot-the-sql-server-utility.md
+- name: Solucionar problemas de estado de recursos de SQL Server (Utilidad de SQL Server).
+  href: troubleshoot-sql-server-resource-health-sql-server-utility.md
+- name: Explorador de Utilidad (Ayuda F1)
+  href: utility-explorer-f1-help.md
+  items:
+    - name: Panel de la utilidad (utilidad de SQL Server)
+      href: ../../database-engine/utility-dashboard-sql-server-utility.md
+    - name: Detalles de la aplicación de capa de datos implementada (Utilidad de SQL Server)
+      href: ../../database-engine/deployed-data-tier-application-details-sql-server-utility.md
+    - name: Detalles de las instancias administradas (Utilidad de SQL Server)
+      href: ../../database-engine/managed-instance-details-sql-server-utility.md
+    - name: Administración de la utilidad (utilidad de SQL Server)
+      href: ../../database-engine/utility-administration-sql-server-utility.md

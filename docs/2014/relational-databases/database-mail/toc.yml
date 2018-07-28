@@ -1,0 +1,24 @@
+- name: Correo electrónico de base de datos
+  href: database-mail.md
+- name: Objetos de configuración de Correo electrónico de base de datos
+  href: database-mail-configuration-objects.md
+  items:
+    - name: Crear un perfil de correo electrónico de base de datos
+      href: create-a-database-mail-profile.md
+    - name: Crear una nueva cuenta de Correo electrónico de base de datos
+      href: create-a-database-mail-account.md
+    - name: Configuración de Correo electrónico de base de datos
+      href: configure-database-mail.md
+- name: Objetos de mensajería de Correo electrónico de base de datos
+  href: database-mail-messaging-objects.md
+- name: Programa externo Correo electrónico de base de datos
+  href: database-mail-external-program.md
+- name: Registro y auditorías del Correo electrónico de base de datos
+  href: database-mail-log-and-audits.md
+  items:
+    - name: Crear un trabajo del Agente SQL Server para archivar mensajes y registros de eventos del Correo electrónico de base de datos
+      href: create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md
+    - name: Comprobar el estado de los mensajes de correo electrónico enviados con Correo electrónico de base de datos
+      href: check-the-status-of-e-mail-messages-sent-with-database-mail.md
+- name: Configurar el Agente SQL Server para que use el Correo electrónico de base de datos
+  href: configure-sql-server-agent-mail-to-use-database-mail.md

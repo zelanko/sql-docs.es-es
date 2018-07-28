@@ -1,0 +1,28 @@
+- name: Agregar conexiones mediante programación
+  href: adding-connections-programmatically.md
+- name: Generar paquetes mediante programación
+  href: building-packages-programmatically.md
+- name: Crear un paquete mediante programación
+  href: creating-a-package-programmatically.md
+- name: Agregar tareas mediante programación
+  href: adding-tasks-programmatically.md
+- name: Conectar tareas mediante programación
+  href: connecting-tasks-programmatically.md
+- name: Trabajar con variables mediante programación
+  href: working-with-variables-programmatically.md
+- name: Controlar eventos mediante programación
+  href: handling-events-programmatically.md
+- name: Habilitar el registro mediante programación
+  href: enabling-logging-programmatically.md
+- name: Agregar la tarea de flujo de datos mediante programación
+  href: adding-the-data-flow-task-programmatically.md
+- name: Detectar componentes de flujo de datos mediante programación
+  href: discovering-data-flow-components-programmatically.md
+- name: Agregar componentes de flujo de datos mediante programación
+  href: adding-data-flow-components-programmatically.md
+- name: Conectar componentes de flujo de datos mediante programación
+  href: connecting-data-flow-components-programmatically.md
+- name: Seleccionar mediante programación las columnas de entrada
+  href: selecting-input-columns-programmatically.md
+- name: Guardar un paquete mediante programación
+  href: saving-a-package-programmatically.md

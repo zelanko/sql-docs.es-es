@@ -1,0 +1,15 @@
+- name: Herramientas para solucionar problemas con el desarrollo de paquetes
+  href: troubleshooting-tools-for-package-development.md
+  items:
+    - name: Depurar el flujo de control
+      href: debugging-control-flow.md
+    - name: Depurar script
+      href: debugging-script.md
+    - name: Depurar el flujo de datos
+      href: debugging-data-flow.md
+    - name: Depurar un paquete estableciendo puntos de interrupción en una tarea o un contenedor
+      href: ../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md
+    - name: agregar un visor de datos a un flujo de datos
+      href: ../add-a-data-viewer-to-a-data-flow.md
+    - name: Configurar una salida de error en un componente de flujo de datos
+      href: ../configure-an-error-output-in-a-data-flow-component.md

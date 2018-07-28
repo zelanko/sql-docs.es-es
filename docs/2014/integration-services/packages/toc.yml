@@ -1,0 +1,68 @@
+- name: Implementación de proyectos y paquetes
+  href: deploy-integration-services-ssis-projects-and-packages.md
+  items:
+    - name: Implementación de paquetes en el servidor de Integration Services
+      href: ../deploy-projects-to-integration-services-server.md
+    - name: Crear y asignar un entorno de servidor
+      href: ../create-and-map-a-server-environment.md
+    - name: Asistente para conversión de proyectos de Integration Services
+      href: ../integration-services-project-conversion-wizard.md
+    - name: Asistente para implementación de Integration Services
+      href: ../integration-services-deployment-wizard.md
+    - name: 'Convertir a modelo de implementación de paquetes, cuadro de diálogo'
+      href: ../convert-to-package-deployment-model-dialog-box.md
+    - name: Implementación de paquetes (SSIS)
+      href: legacy-package-deployment-ssis.md
+      items:
+        - name: Configuraciones de paquetes
+          href: ../package-configurations.md
+        - name: Crear configuraciones de paquetes
+          href: ../create-package-configurations.md
+    - name: Organizador de configuraciones de paquetes
+      href: ../package-configurations-organizer.md
+    - name: Referencia de la interfaz de usuario del Asistente para la configuración de paquetes
+      href: ../package-configuration-wizard-ui-reference.md
+      items:
+        - name: Create a Deployment Utility
+          href: ../create-a-deployment-utility.md
+        - name: Implementar los paquetes mediante la utilidad de implementación
+          href: ../deploy-packages-by-using-the-deployment-utility.md
+        - name: Volver a implementar paquetes
+          href: ../redeployment-of-packages.md
+        - name: Referencia de la interfaz de usuario del Asistente para la instalación de paquetes
+          href: ../package-installation-wizard-ui-reference.md
+- name: Ejecución de proyectos y paquetes
+  href: run-integration-services-ssis-packages.md
+  items:
+    - name: Execute Package Dialog Box
+      href: ../execute-package-dialog-box.md
+    - name: Ejecutar un paquete en SQL Server Data Tools
+      href: ../run-a-package-in-sql-server-data-tools.md
+    - name: Ejecutar un paquete en el servidor SSIS con SQL Server Management Studio
+      href: ../run-a-package-on-the-ssis-server-using-sql-server-management-studio.md
+    - name: Realizar el equilibrio de carga de paquetes en servidores remotos mediante el Agente SQL Server
+      href: load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md
+      items:
+        - name: Implementación de paquetes secundarios
+          href: ../implementation-of-child-packages.md
+        - name: Implementación del paquete primario
+          href: ../implementation-of-the-parent-package.md
+        - name: Registro para la carga de paquetes equilibrados en servidores remotos
+          href: ../logging-for-load-balanced-packages-on-remote-servers.md
+        - name: Usar los valores de variables y parámetros en un paquete secundario
+          href: ../use-the-values-of-variables-and-parameters-in-a-child-package.md
+    - name: Herramientas para solucionar problemas con la ejecución de paquetes
+      href: ../troubleshooting/troubleshooting-tools-for-package-execution.md
+    - name: Solucionar problemas de informes para la ejecución de paquetes
+      href: ../troubleshooting/troubleshooting-reports-for-package-execution.md
+    - name: Generar archivos de volcado para la ejecución de paquetes
+      href: ../troubleshooting/generating-dump-files-for-package-execution.md
+    - name: Trabajos del Agente SQL Server para paquetes
+      href: sql-server-agent-jobs-for-packages.md
+      items:
+        - name: Programar un paquete mediante el Agente SQL Server
+          href: ../schedule-a-package-by-using-sql-server-agent.md
+        - name: Tarea Ejecutar trabajo del Agente SQL Server
+          href: ../control-flow/execute-sql-server-agent-job-task.md
+- name: Implementar y ejecutar paquetes SSIS mediante procedimientos almacenados
+  href: ../deploy-and-execute-ssis-packages-using-stored-procedures.md

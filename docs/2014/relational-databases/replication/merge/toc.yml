@@ -1,0 +1,39 @@
+- name: Replicación de mezcla
+  href: merge-replication.md
+- name: Opciones de artículos para replicación de mezcla
+  href: article-options-for-merge-replication.md
+- name: Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga
+  href: optimize-merge-replication-performance-with-download-only-articles.md
+- name: Optimizar el rendimiento de la replicación de mezcla con seguimiento condicional de eliminaciones
+  href: optimize-merge-replication-performance-with-conditional-delete-tracking.md
+- name: Especificar el orden de procesamiento de los artículos de mezcla
+  href: specify-the-processing-order-of-merge-articles.md
+- name: Agrupar cambios en filas relacionadas con registros lógicos
+  href: group-changes-to-related-rows-with-logical-records.md
+- name: Detectar y solucionar conflictos de replicación de mezcla
+  href: advanced-merge-replication-resolve-merge-replication-conflicts.md
+- name: Detección y resolución de conflictos de replicación de mezcla avanzada
+  href: advanced-merge-replication-conflict-detection-and-resolution.md
+  items:
+    - name: Elegir un solucionador
+      href: advanced-merge-replication-conflict-choose-a-resolver.md
+    - name: COM-Based Custom Resolvers
+      href: advanced-merge-replication-conflict-com-based-custom-resolvers.md
+    - name: Microsoft COM-Based Resolvers
+      href: advanced-merge-replication-conflict-com-based-resolvers.md
+    - name: Interactive Conflict Resolution
+      href: advanced-merge-replication-conflict-interactive-resolution.md
+    - name: Detectar y solucionar conflictos en registros lógicos
+      href: advanced-merge-replication-conflict-resolving-in-logical-record.md
+- name: Ejecutar lógica de negocios durante la sincronización de mezcla
+  href: execute-business-logic-during-merge-synchronization.md
+- name: Filtrar datos publicados para la replicación de mezcla
+  href: filter-published-data-for-merge-replication.md
+- name: Parameterized Row Filters
+  href: parameterized-filters-parameterized-row-filters.md
+- name: Optimizar el rendimiento de los filtros con parámetros con particiones calculadas previamente
+  href: parameterized-filters-optimize-for-precomputed-partitions.md
+- name: filtros de combinación
+  href: join-filters.md
+- name: Prácticas recomendadas para filtros de fila basados en el tiempo
+  href: best-practices-for-time-based-row-filters.md

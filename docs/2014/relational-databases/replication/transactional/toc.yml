@@ -1,0 +1,23 @@
+- name: replicación transaccional
+  href: transactional-replication.md
+  items:
+    - name: Tipos de publicaciones para la replicación transaccional
+      href: publication-types-for-transactional-replication.md
+    - name: Updatable Subscriptions for Transactional Replication
+      href: updatable-subscriptions-for-transactional-replication.md
+    - name: Queued Updating Conflict Detection and Resolution
+      href: updatable-subscriptions-queued-updating-conflict-resolution.md
+    - name: Peer-to-Peer Transactional Replication
+      href: peer-to-peer-transactional-replication.md
+    - name: Detección de conflictos en la replicación punto a punto
+      href: peer-to-peer-conflict-detection-in-peer-to-peer-replication.md
+    - name: replicación transaccional bidireccional
+      href: bidirectional-transactional-replication.md
+    - name: Opciones de artículos para la replicación transaccional
+      href: article-options-for-transactional-replication.md
+    - name: Especificar cómo se propagan los cambios para los artículos transaccionales
+      href: transactional-articles-specify-how-changes-are-propagated.md
+    - name: Volver a generar procedimientos transaccionales personalizados para reflejar cambios de esquema
+      href: transactional-articles-regenerate-to-reflect-schema-changes.md
+    - name: Publicar la ejecución de procedimientos almacenados en la replicación transaccional
+      href: publishing-stored-procedure-execution-in-transactional-replication.md

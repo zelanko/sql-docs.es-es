@@ -1,0 +1,44 @@
+- name: Ayuda del menú de SQL Server Management Studio
+  href: sql-server-management-studio-menu-help.md
+- name: Ventana Propiedades (Ayuda F1 de Management Studio)
+  href: properties-window-f1-help-management-studio.md
+- name: Opciones (Entorno -página Fuentes y colores)
+  href: options-environment-fonts-and-colors-page.md
+- name: Opciones (Entorno - Ayuda - Página General)
+  href: options-environment-help-general-page.md
+- name: Herramientas externas
+  href: external-tools.md
+- name: Personalizar (página Comandos)
+  href: customize-commands-page.md
+- name: Opciones (Entorno - Página General)
+  href: options-environment-general-page.md
+- name: Opciones (Ayuda F1 de cuadros de diálogos)
+  href: options-dialog-boxes-f1-help.md
+- name: Elegir elementos del cuadro de herramientas (página Tareas de mantenimiento)
+  href: choose-toolbox-items-maintenance-tasks-page.md
+- name: Opciones (Diseñadores - Página Diseñadores de tablas y bases de datos)
+  href: options-designers-table-and-database-designers-page.md
+- name: Acerca de SQL Server Management Studio
+  href: about-sql-server-management-studio.md
+- name: Guardar cambios
+  href: save-changes.md
+- name: Abrir con (Nuevo archivo)
+  href: open-with-new-file.md
+- name: Opciones (Diseñadores - Diseñadores de Analysis Services - General)
+  href: options-designers-analysis-services-designers-general.md
+- name: Cuadro de diálogo Ventanas (Ayuda de Microsoft Document Explorer)
+  href: windows-dialog-box-microsoft-document-explorer-help.md
+- name: Opciones avanzadas para guardar
+  href: advanced-save-options.md
+- name: Guardar como
+  href: save-as.md
+- name: Personalizar (página Barras de herramientas)
+  href: customize-toolbars-page.md
+- name: Opciones (Diseñadores - página Planes de mantenimiento)
+  href: options-designers-maintenance-plans-page.md
+- name: Cuadro de diálogo Elegir carpetas de búsqueda (Visual Studio)
+  href: choose-search-folders-dialog-box-visual-studio.md
+- name: Opciones (Entorno - Ayuda - Página En línea)
+  href: options-environment-help-online-page.md
+- name: Opciones (Entorno - Página Teclado)
+  href: options-environment-keyboard-page.md

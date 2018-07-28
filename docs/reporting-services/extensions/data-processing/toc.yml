@@ -1,0 +1,26 @@
+- name: Crear una biblioteca de extensión de procesamiento de datos
+  href: creating-a-data-processing-extension-library.md
+- name: Introducción a las extensiones de procesamiento de datos
+  href: data-processing-extensions-overview.md
+- name: Depurar el código de extensión de procesamiento de datos
+  href: debugging-data-processing-extension-code.md
+- name: Implementar una extensión de procesamiento de datos en un servidor de informes
+  href: deploying-a-data-processing-extension-to-a-report-server.md
+- name: Implementar una extensión de procesamiento de datos en el Diseñador de informes
+  href: deploying-a-data-processing-extension-to-report-designer.md
+- name: Implementar una extensión de procesamiento de datos
+  href: deploying-a-data-processing-extension.md
+- name: Implementar una clase Command para una extensión de procesamiento de datos
+  href: implementing-a-command-class-for-a-data-processing-extension.md
+- name: Implementar una clase Connection para una extensión de procesamiento de datos
+  href: implementing-a-connection-class-for-a-data-processing-extension.md
+- name: Implementar una extensión de procesamiento de datos
+  href: implementing-a-data-processing-extension.md
+- name: Implementar una clase DataReader para una extensión de procesamiento de datos
+  href: implementing-a-datareader-class-for-a-data-processing-extension.md
+- name: Prepararse para implementar una extensión de procesamiento de datos
+  href: preparing-to-implement-a-data-processing-extension.md
+- name: Quitar una extensión de procesamiento de datos
+  href: removing-a-data-processing-extension.md
+- name: Usar un conjunto de datos externo con Reporting Services
+  href: using-an-external-dataset-with-reporting-services.md

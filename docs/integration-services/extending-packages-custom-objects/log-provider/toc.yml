@@ -1,0 +1,8 @@
+- name: Desarrollar un proveedor de registro personalizado
+  href: developing-a-custom-log-provider.md
+- name: Crear un proveedor de registro personalizado
+  href: creating-a-custom-log-provider.md
+- name: Codificar un proveedor de registro personalizado
+  href: coding-a-custom-log-provider.md
+- name: Desarrollar una interfaz de usuario para un proveedor de registro personalizado
+  href: developing-a-user-interface-for-a-custom-log-provider.md

@@ -1,0 +1,17 @@
+- name: Usar ensamblados personalizados con informes
+  href: using-custom-assemblies-with-reports.md
+  items:
+    - name: Hacer referencia a ensamblados en un archivo RDL
+      href: referencing-assemblies-in-an-rdl-file.md
+    - name: Implementar un ensamblado personalizado
+      href: deploying-a-custom-assembly.md
+    - name: Usar ensamblados personalizados con nombre seguro
+      href: using-strong-named-custom-assemblies.md
+    - name: Validar los permisos en ensamblados personalizados
+      href: asserting-permissions-in-custom-assemblies.md
+    - name: Acceso a los ensamblados personalizados a través de expresiones
+      href: accessing-custom-assemblies-through-expressions.md
+    - name: Inicializar objetos de ensamblados personalizados
+      href: initializing-custom-assembly-objects.md
+    - name: Cómo depurar ensamblados personalizados
+      href: how-to-debug-custom-assemblies.md

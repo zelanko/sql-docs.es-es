@@ -1,0 +1,143 @@
+- name: Extremo de creación de reflejo de la base de datos
+  href: the-database-mirroring-endpoint-sql-server.md
+- name: Áreas de punto de conexión
+  items:
+    - name: Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn
+      href: transport-security-database-mirroring-always-on-availability.md
+    - name: Crear un extremo de reflejo de la base de datos para la autenticación de Windows (Transact-SQL)
+      href: create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md
+    - name: Configurar cuentas de inicio de sesión para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn
+      href: set-up-login-accounts-database-mirroring-always-on-availability.md
+    - name: Permitir el acceso de red a un extremo de creación de reflejo de la base de datos mediante la autenticación de Windows
+      href: database-mirroring-allow-network-access-windows-authentication.md
+    - name: Usar certificados para un extremo de creación de reflejo de la base de datos (Transact-SQL)
+      href: use-certificates-for-a-database-mirroring-endpoint-transact-sql.md
+      items:
+        - name: Permitir que un extremo de creación de reflejo de la base de datos utilice certificados para las conexiones salientes (Transact-SQL)
+          href: database-mirroring-use-certificates-for-outbound-connections.md
+        - name: Permitir que un extremo de creación de reflejo de la base de datos utilice certificados para las conexiones entrantes (Transact-SQL)
+          href: database-mirroring-use-certificates-for-inbound-connections.md
+- name: Creación de reflejo de base de datos
+  href: database-mirroring-sql-server.md
+  items:
+    - name: 'Requisitos previos, restricciones y recomendaciones para la creación de reflejo de la base de datos'
+      href: prerequisites-restrictions-and-recommendations-for-database-mirroring.md
+    - name: Modos de funcionamiento de la creación de reflejo de la base de datos
+      href: database-mirroring-operating-modes.md
+      items:
+        - name: Cambiar la seguridad de las transacciones en una sesión de creación de reflejo de la base de datos (Transact-SQL)
+          href: change-transaction-safety-in-a-database-mirroring-session-transact-sql.md
+    - name: Database Mirroring Witness
+      href: database-mirroring-witness.md
+      items:
+        - name: 'Quórum: cómo un testigo afecta a la disponibilidad de la base de datos'
+          href: quorum-how-a-witness-affects-database-availability-database-mirroring.md
+        - name: Agregar un testigo de creación de reflejo de la base de datos mediante la autenticación de Windows (Transact-SQL)
+          href: add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md
+        - name: Agregar o reemplazar un testigo de creación de reflejo de la base de datos (SQL Server Management Studio)
+          href: add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md
+        - name: Quitar el testigo de una sesión de creación de reflejo de la base de datos (SQL Server)
+          href: remove-the-witness-from-a-database-mirroring-session-sql-server.md
+    - name: Conmutación de roles durante una sesión de creación de reflejo de la base de datos
+      href: role-switching-during-a-database-mirroring-session-sql-server.md
+      items:
+        - name: Realizar una conmutación por error manualmente de una sesión de creación de reflejo de la base de datos (Transact-SQL)
+          href: manually-fail-over-a-database-mirroring-session-transact-sql.md
+        - name: Realizar manualmente la conmutación por error de una sesión de creación de reflejo de la base de datos (SQL Server Management Studio)
+          href: manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md
+        - name: Forzar el servicio en una sesión de creación de reflejo de la base de datos (Transact-SQL)
+          href: force-service-in-a-database-mirroring-session-transact-sql.md
+        - name: Calcular la interrupción del servicio durante la conmutación de roles
+          href: estimate-the-interruption-of-service-during-role-switching-database-mirroring.md
+    - name: Posibles errores durante la creación de reflejo de la base de datos
+      href: possible-failures-during-database-mirroring.md
+    - name: Estados de creacion de reflejo (SQL Server)
+      href: mirroring-states-sql-server.md
+    - name: Configurar la creación de reflejo de la base de datos
+      href: setting-up-database-mirroring-sql-server.md
+      items:
+        - name: Preparar una base de datos reflejada para la creación de reflejo
+          href: prepare-a-mirror-database-for-mirroring-sql-server.md
+          items:
+            - name: Establecer una base de datos reflejada cifrada
+              href: set-up-an-encrypted-mirror-database.md
+            - name: Configurar una base de datos reflejada para usar la propiedad Trustworthy (Transact-SQL)
+              href: set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md
+        - name: Especificar una dirección de red de servidor (creación de reflejo de la base de datos)
+          href: specify-a-server-network-address-database-mirroring.md
+        - name: Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows (SQL Server Management Studio)
+          href: establish-database-mirroring-session-windows-authentication.md
+          items:
+            - name: Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de bases de datos (SQL Server Management Studio)
+              href: start-the-configuring-database-mirroring-security-wizard.md
+              items:
+                - name: Incluir servidor testigo (Asistente para la configuración de seguridad de la creación de reflejo de bases de datos)
+                  href: include-witness-server-configure-database-mirroring-security-wizard.md
+                - name: Elegir los servidores que configurar (Asistente para la configuración de seguridad de la creación de reflejo de bases de datos)
+                  href: choose-servers-to-configure-configure-database-mirroring-security-wizard.md
+                - name: Instancia de servidor principal (Asistente para la configuración de seguridad de la creación de reflejo de bases de datos)
+                  href: principal-server-instance-configure-database-mirroring-security-wizard.md
+                - name: Instancia del servidor reflejado (Asistente para la configuración de seguridad de la creación de reflejo de bases de datos)
+                  href: mirror-server-instance-configure-database-mirroring-security-wizard.md
+                - name: Instancia de servidor testigo (Asistente para la configuración de seguridad de la creación de reflejo de bases de datos)
+                  href: witness-server-instance-configure-database-mirroring-security-wizard.md
+                - name: Cuentas de servicio (Asistente para la configuración de seguridad de la creación de reflejo de bases de datos)
+                  href: service-accounts-configure-database-mirroring-security-wizard.md
+        - name: Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows (Transact-SQL)
+          href: database-mirroring-establish-session-windows-authentication.md
+          items:
+            - name: 'Ejemplo: Configurar la creación de reflejo de la base de datos mediante la autenticación de Windows (Transact-SQL)'
+              href: example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
+        - name: 'Ejemplo: configurar la creación de reflejo de la base de datos mediante certificados (Transact-SQL)'
+          href: example-setting-up-database-mirroring-using-certificates-transact-sql.md
+        - name: Solucionar problemas de configuración de creación de reflejo de la base de datos
+          href: troubleshoot-database-mirroring-configuration-sql-server.md
+    - name: Conectar clientes a una sesión de creación de reflejo de la base de datos
+      href: connect-clients-to-a-database-mirroring-session-sql-server.md
+    - name: Pausar y reanudar la creación de reflejo de la base de datos
+      href: pausing-and-resuming-database-mirroring-sql-server.md
+      items:
+        - name: Pausar o reanudar una sesión de creación de reflejo de la base de datos (SQL Server)
+          href: pause-or-resume-a-database-mirroring-session-sql-server.md
+    - name: Quitar la creación de reflejo de la base de datos
+      href: removing-database-mirroring-sql-server.md
+      items:
+        - name: Quitar la creación de reflejo de la base de datos (SQL Server)
+          href: remove-database-mirroring-sql-server.md
+    - name: Actualización de instancias reflejadas
+      href: upgrading-mirrored-instances.md
+    - name: Supervisar la creación de reflejo de la base de datos
+      href: monitoring-database-mirroring-sql-server.md
+      items:
+        - name: Usar alertas y umbrales de advertencia de las métricas de rendimiento de la creación de reflejo
+          href: use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md
+        - name: Iniciar el Monitor de creación de reflejo de la base de datos (SQL Server Management Studio)
+          href: start-database-mirroring-monitor-sql-server-management-studio.md
+          items:
+            - name: Información general del Monitor de creación de reflejo de la base de datos
+              href: database-mirroring-monitor-overview.md
+            - name: Registrar base de datos reflejada
+              href: register-mirrored-database.md
+            - name: Monitor de creación de reflejo de la base de datos (página Estado)
+              href: database-mirroring-monitor-status-page.md
+            - name: Historial de creación de reflejo de la base de datos
+              href: database-mirroring-history.md
+            - name: Monitor de creación de reflejo de la base de datos (página Advertencias)
+              href: database-mirroring-monitor-warnings-page.md
+            - name: Establecer umbrales de advertencia
+              href: set-warning-thresholds.md
+        - name: Ver el estado de una base de datos reflejada (SQL Server Management Studio)
+          href: view-the-state-of-a-mirrored-database-sql-server-management-studio.md
+    - name: 'Creación de reflejo de la base de datos: interoperabilidad y coexistencia'
+      href: database-mirroring-interoperability-and-coexistence-sql-server.md
+      items:
+        - name: Creación de reflejo de la base de datos e instancias de clúster de conmutación por error
+          href: database-mirroring-and-sql-server-failover-cluster-instances.md
+        - name: Creación de reflejo de la base de datos y trasvase de registros
+          href: database-mirroring-and-log-shipping-sql-server.md
+        - name: Creación de reflejo de la base de datos y catálogos de texto completo
+          href: database-mirroring-and-full-text-catalogs-sql-server.md
+        - name: Reflejo e instantáneas de base de datos
+          href: database-mirroring-and-database-snapshots-sql-server.md
+        - name: Replicación y creación de reflejo de la base de datos
+          href: database-mirroring-and-replication-sql-server.md

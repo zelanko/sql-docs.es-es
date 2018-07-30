@@ -1,0 +1,73 @@
+- name: Seguridad y protección
+  href: reporting-services-security-and-protection.md
+- name: Protección ampliada para la autenticación con Reporting Services
+  href: extended-protection-for-authentication-with-reporting-services.md
+- name: Autenticación con el servidor de informes
+  href: authentication-with-the-report-server.md
+  items:
+    - name: Configurar la autenticación de Windows en el servidor de informes
+      href: configure-windows-authentication-on-the-report-server.md
+    - name: Configurar la autenticación básica en el servidor de informes
+      href: configure-basic-authentication-on-the-report-server.md
+    - name: Configurar la autenticación de formularios o personalizada en el servidor de informes
+      href: configure-custom-or-forms-authentication-on-the-report-server.md
+    - name: Configurar el Administrador de informes para pasar cookies de autenticación personalizada
+      href: configure-the-web-portal-to-pass-custom-authentication-cookies.md
+- name: Roles y permisos
+  href: roles-and-permissions-reporting-services.md
+  items:
+    - name: Conceder a un usuario acceso a un servidor de informes
+      href: grant-user-access-to-a-report-server.md
+    - name: Conceder permisos en un servidor de informes en modo nativo
+      href: granting-permissions-on-a-native-mode-report-server.md
+      items:
+        - name: Elementos protegibles
+          href: securable-items.md
+        - name: Tareas y permisos
+          href: tasks-and-permissions.md
+          items:
+            - name: Tareas de nivel de elemento
+              href: tasks-and-permissions-item-level-tasks.md
+            - name: Tareas de nivel de sistema
+              href: tasks-and-permissions-system-level-tasks.md
+        - name: Crear y administrar asignaciones de roles
+          href: create-and-manage-role-assignments.md
+        - name: Proteger carpetas
+          href: secure-folders.md
+        - name: Proteger informes y recursos
+          href: secure-reports-and-resources.md
+        - name: Proteger elementos de orígenes de datos compartidos
+          href: secure-shared-data-source-items.md
+        - name: Proteger los elementos de un conjunto de datos compartido
+          href: secure-shared-dataset-items.md
+        - name: Proteger Mis informes
+          href: secure-my-reports.md
+        - name: Crear el RSExecRole
+          href: create-the-rsexecrole.md
+        - name: Definiciones de roles
+          href: role-definitions.md
+          items:
+            - name: 'Crear, eliminar o modificar un rol'
+              href: role-definitions-create-delete-or-modify.md
+            - name: Roles predefinidos
+              href: role-definitions-predefined-roles.md
+        - name: Asignaciones de roles
+          href: role-assignments.md
+          items:
+            - name: Modificar o eliminar una asignación de roles
+              href: role-assignments-modify-or-delete.md
+    - name: Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint
+      href: granting-permissions-on-report-server-items-on-a-sharepoint-site.md
+      items:
+        - name: Usar la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes
+          href: use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md
+        - name: Comparar roles y tareas de Reporting Services con grupos y permisos de SharePoint
+          href: ../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md
+        - name: Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes
+          href: sharepoint-site-and-list-permission-reference-for-report-server-items.md
+        - name: Establecer permisos para las operaciones del servidor de informes en una aplicación web de SharePoint
+          href: set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md
+        - name: Establecer permisos para elementos del servidor de informes en un sitio de SharePoint
+          href: set-permissions-for-report-server-items-on-a-sharepoint-site.md
+- name: Configurar conexiones SSL en un servidor de informes en modo nativo
+  href: configure-ssl-connections-on-a-native-mode-report-server.md

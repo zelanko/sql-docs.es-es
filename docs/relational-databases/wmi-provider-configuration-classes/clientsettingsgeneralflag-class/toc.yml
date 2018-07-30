@@ -1,0 +1,12 @@
+- name: Clase ClientSettingsGeneralFlag
+  href: clientsettingsgeneralflag-class.md
+- name: Propiedad FlagIndex (clase ClientSettingsGeneralFlag)
+  href: flagindex-property-clientsettingsgeneralflag-class.md
+- name: Propiedad FlagName (clase ClientSettingsGeneralFlag)
+  href: flagname-property-clientsettingsgeneralflag-class.md
+- name: Propiedad FlagValue (clase ClientSettingsGeneralFlag)
+  href: flagvalue-property-clientsettingsgeneralflag-class.md
+- name: Propiedad InstanceName (clase ClientSettingsGeneralFlag)
+  href: instancename-property-clientsettingsgeneralflag-class.md
+- name: Método SetValue (clase ClientSettingsGeneralFlag)
+  href: setvalue-method-clientsettingsgeneralflag-class.md

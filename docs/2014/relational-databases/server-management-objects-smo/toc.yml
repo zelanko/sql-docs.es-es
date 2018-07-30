@@ -1,0 +1,133 @@
+- name: Guía de programación para objetos de administración de SQL Server (SMO)
+  href: sql-server-management-objects-smo-programming-guide.md
+- name: Información general (SMO)
+  href: overview-smo.md
+- name: Introducción a SMO
+  href: getting-started-in-smo.md
+  items:
+    - name: Convenciones de sintaxis de SMO
+      href: smo-syntax-conventions.md
+    - name: Archivos y números de versión
+      href: files-and-version-numbers.md
+    - name: Vínculo a ejemplos de programación
+      href: link-to-programming-samples.md
+    - name: Instalar SMO
+      href: installing-smo.md
+- name: Modelo de objetos SMO
+  href: smo-object-model.md
+  items:
+    - name: Espacios de nombres SMO
+      href: smo-object-model-namespaces.md
+    - name: Diagrama del modelo de objetos de SMO
+      href: smo-object-model-diagram.md
+- name: Lenguajes de programación
+  href: smo-programming-languages.md
+  items:
+    - name: Introducción a Visual Basic .NET
+      href: ../../database-engine/dev-guide/getting-started-in-visual-basic-net.md
+    - name: 'Introducción a Visual C# .NET'
+      href: smo-programming-getting-started-in-visual-csharp-net.md
+- name: Compatibilidad con versiones anteriores en SMO
+  href: backward-compatibility-in-smo.md
+- name: Crear programas SMO
+  href: create-program/creating-smo-programs.md
+  items:
+    - name: Conectarse a una instancia de SQL Server
+      href: create-program/connecting-to-an-instance-of-sql-server.md
+    - name: Desconectar de una instancia de SQL Server
+      href: create-program/disconnecting-from-an-instance-of-sql-server.md
+    - name: Llamar a métodos
+      href: create-program/calling-methods.md
+    - name: Establecer propiedades
+      href: create-program/setting-properties-smo.md
+    - name: Usar colecciones
+      href: create-program/using-collections.md
+    - name: Trabajar con tipos de datos
+      href: create-program/working-with-data-types.md
+    - name: Usar transacciones
+      href: create-program/using-transactions.md
+    - name: Utilizar el modo de captura
+      href: create-program/using-capture-mode.md
+    - name: Controlar eventos SMO
+      href: create-program/handling-smo-events.md
+    - name: Controlar excepciones SMO
+      href: create-program/handling-smo-exceptions.md
+- name: Tareas específicas de programación
+  href: tasks/programming-specific-tasks.md
+  items:
+    - name: Configurar SQL Server en SMO
+      href: tasks/configuring-sql-server-in-smo.md
+    - name: Utilizar particiones de tabla e índice
+      href: tasks/using-table-and-index-partitioning.md
+    - name: Utilizar grupos de archivos y archivos para almacenar datos
+      href: tasks/using-filegroups-and-files-to-store-data.md
+    - name: Trabajar con objetos de bases de datos
+      href: tasks/creating-altering-and-removing-database-objects.md
+      items:
+        - name: 'Crear, modificar y eliminar bases de datos'
+          href: tasks/creating-altering-and-removing-databases.md
+        - name: 'Crear, modificar y quitar tablas'
+          href: tasks/creating-altering-and-removing-tables.md
+        - name: 'Crear, modificar y eliminar índices'
+          href: tasks/creating-altering-and-removing-indexes.md
+        - name: 'Crear, modificar y eliminar las claves externas'
+          href: tasks/creating-altering-and-removing-foreign-keys.md
+        - name: 'Crear, modificar y eliminar valores predeterminados'
+          href: tasks/creating-altering-and-removing-defaults.md
+        - name: 'Crear, modificar y quitar reglas'
+          href: tasks/creating-altering-and-removing-rules.md
+        - name: 'Crear, modificar y eliminar vistas'
+          href: tasks/creating-altering-and-removing-views.md
+        - name: 'Crear, modificar y eliminar desencadenadores'
+          href: tasks/creating-altering-and-removing-triggers.md
+        - name: 'Crear, modificar y eliminar los procedimientos almacenados'
+          href: tasks/creating-altering-and-removing-stored-procedures.md
+        - name: 'Crear, modificar y eliminar las funciones definidas por el usuario'
+          href: tasks/creating-altering-and-removing-user-defined-functions.md
+        - name: 'Crear, modificar y eliminar esquemas'
+          href: tasks/creating-altering-and-removing-schemas.md
+    - name: 'Administrar usuarios, roles e inicios de sesión'
+      href: tasks/managing-users-roles-and-logins.md
+    - name: 'Conceder, revocar y denegar permisos'
+      href: tasks/granting-revoking-and-denying-permissions.md
+    - name: Utilizar el cifrado
+      href: tasks/using-encryption.md
+    - name: Programar tareas administrativas automáticas en el Agente SQL Server
+      href: tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md
+    - name: Realizar copias de seguridad y restaurar bases de datos y registros de transacciones
+      href: tasks/backing-up-and-restoring-databases-and-transaction-logs.md
+    - name: Scripting
+      href: tasks/scripting.md
+    - name: Transferir datos
+      href: tasks/transferring-data.md
+    - name: Utilizar el correo electrónico de base de datos
+      href: tasks/using-database-mail.md
+    - name: Administrar Service Broker
+      href: tasks/managing-service-broker.md
+    - name: Utilizar esquemas XML
+      href: tasks/using-xml-schemas.md
+    - name: Usar sinónimos
+      href: tasks/using-synonyms.md
+    - name: Usar mensajes
+      href: tasks/using-messages.md
+    - name: Implementar la búsqueda de texto completo
+      href: tasks/implementing-full-text-search.md
+    - name: Implementar extremos
+      href: tasks/implementing-endpoints.md
+    - name: Crear y actualizar estadísticas
+      href: tasks/creating-and-updating-statistics.md
+    - name: Seguimiento y reproducción de eventos
+      href: tasks/tracing-and-replaying-events.md
+    - name: Administrar servicios y configuración de red utilizando el proveedor WMI
+      href: tasks/managing-services-and-network-settings-by-using-wmi-provider.md
+    - name: Utilizar servidores vinculados en SMO
+      href: tasks/using-linked-servers-in-smo.md
+    - name: Utilizar tablas definidas por el usuario
+      href: tasks/using-user-defined-tables.md
+- name: Temas de procedimientos de SMO
+  href: ../../database-engine/dev-guide/smo-how-to-topics.md
+  items:
+    - name: 'Crear un proyecto de Visual C# SMO en Visual Studio .NET'
+      href: how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md
+    - name: Crear un proyecto de Visual Basic SMO en Visual Studio .NET
+      href: ../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md

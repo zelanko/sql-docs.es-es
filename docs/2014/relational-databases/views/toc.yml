@@ -1,0 +1,17 @@
+- name: Vistas
+  href: views.md
+  items:
+    - name: Crear vistas
+      href: create-views.md
+    - name: Crear vistas indizadas
+      href: create-indexed-views.md
+    - name: Modificar vistas
+      href: modify-views.md
+    - name: Modificar datos mediante una vista
+      href: modify-data-through-a-view.md
+    - name: Obtener información acerca de una vista
+      href: get-information-about-a-view.md
+    - name: Cambiar el nombre de las vistas
+      href: rename-views.md
+    - name: Eliminar vistas
+      href: delete-views.md

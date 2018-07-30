@@ -1,0 +1,27 @@
+- name: Agentes de replicación
+  href: replication-agents.md
+  items:
+    - name: Información general sobre los agentes de replicación
+      href: replication-agents-overview.md
+    - name: Agente de distribución de replicación
+      href: replication-distribution-agent.md
+    - name: Agente de registro del LOG de replicación
+      href: replication-log-reader-agent.md
+    - name: Replication Merge Agent
+      href: replication-merge-agent.md
+    - name: Agente de lectura de cola de replicación
+      href: replication-queue-reader-agent.md
+    - name: Agente de instantáneas de replicación
+      href: replication-snapshot-agent.md
+    - name: Administración del Agente de replicación
+      href: replication-agent-administration.md
+    - name: Perfiles del Agente de replicación
+      href: replication-agent-profiles.md
+    - name: Usar alertas para eventos del Agente de replicación
+      href: use-alerts-for-replication-agent-events.md
+    - name: Trabajar con perfiles del Agente de replicación
+      href: work-with-replication-agent-profiles.md
+    - name: Iniciar y detener un agente de replicación (SQL Server Management Studio)
+      href: start-and-stop-a-replication-agent-sql-server-management-studio.md
+    - name: Ver y modificar parámetros del símbolo del sistema de los agentes de replicación (SQL Server Management Studio)
+      href: view-and-modify-replication-agent-command-prompt-parameters.md

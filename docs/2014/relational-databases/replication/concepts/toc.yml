@@ -1,0 +1,10 @@
+- name: Guía del desarrollador (replicación)
+  href: replication-developer-documentation.md
+- name: Conceptos de la programación de replicación
+  href: replication-programming-concepts.md
+- name: Replication System Stored Procedures Concepts
+  href: replication-system-stored-procedures-concepts.md
+- name: Replication Management Objects Concepts
+  href: replication-management-objects-concepts.md
+- name: Conceptos de los ejecutables del Agente de replicación
+  href: replication-agent-executables-concepts.md

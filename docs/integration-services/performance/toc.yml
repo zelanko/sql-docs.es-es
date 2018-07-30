@@ -1,0 +1,8 @@
+- name: Monitor de ejecución de paquetes y otras operaciones
+  href: monitor-running-packages-and-other-operations.md
+- name: Eventos registrados por un paquete de Integration Services
+  href: events-logged-by-an-integration-services-package.md
+- name: Registro de Integration Services (SSIS)
+  href: integration-services-ssis-logging.md
+- name: Performance Counters
+  href: performance-counters.md

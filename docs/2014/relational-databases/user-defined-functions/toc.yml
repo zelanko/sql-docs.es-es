@@ -1,0 +1,21 @@
+- name: Funciones definidas por el usuario
+  href: user-defined-functions.md
+  items:
+    - name: Funciones deterministas y no deterministas
+      href: deterministic-and-nondeterministic-functions.md
+    - name: Crear funciones definidas por el usuario (motor de base de datos)
+      href: create-user-defined-functions-database-engine.md
+    - name: Crear funciones CLR
+      href: create-clr-functions.md
+    - name: Crear funciones de agregado definidas por el usuario
+      href: create-user-defined-aggregates.md
+    - name: Modificar funciones definidas por el usuario
+      href: modify-user-defined-functions.md
+    - name: Eliminar funciones definidas por el usuario
+      href: delete-user-defined-functions.md
+    - name: Ejecutar funciones definidas por el usuario
+      href: execute-user-defined-functions.md
+    - name: Cambiar el nombre de las funciones definidas por el usuario
+      href: rename-user-defined-functions.md
+    - name: Ver funciones definidas por el usuario
+      href: view-user-defined-functions.md

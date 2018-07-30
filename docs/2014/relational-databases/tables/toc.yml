@@ -1,0 +1,84 @@
+- name: Tablas
+  href: tables.md
+  items:
+    - name: Crear tablas (motor de base de datos)
+      href: create-tables-database-engine.md
+    - name: Eliminar tablas (motor de base de datos)
+      href: delete-tables-database-engine.md
+    - name: Tablas duplicadas
+      href: duplicate-tables.md
+    - name: Cambiar el nombre a las tablas (motor de base de datos)
+      href: rename-tables-database-engine.md
+    - name: Vea la definición de tabla
+      href: view-the-table-definition.md
+      items:
+        - name: Propiedades de tabla
+          href: table-properties-ssms.md
+        - name: Propiedades de columna (página General)
+          href: column-properties-general-page.md
+    - name: Ver las dependencias de una tabla
+      href: view-the-dependencies-of-a-table.md
+    - name: Agregar columnas a una tabla (motor de base de datos)
+      href: add-columns-to-a-table-database-engine.md
+    - name: Eliminar columnas de una tabla
+      href: delete-columns-from-a-table.md
+    - name: Cambiar el nombre a las columnas (motor de base de datos)
+      href: rename-columns-database-engine.md
+    - name: Copiar columnas de una tabla a otra (motor de base de datos)
+      href: copy-columns-from-one-table-to-another-database-engine.md
+    - name: Modificar columnas (motor de base de datos)
+      href: modify-columns-database-engine.md
+    - name: Cambiar el orden de las columnas de una tabla
+      href: change-column-order-in-a-table.md
+    - name: Especificar columnas calculadas en una tabla
+      href: specify-computed-columns-in-a-table.md
+    - name: Especificar valores predeterminados para las columnas
+      href: specify-default-values-for-columns.md
+    - name: Usar columnas dispersas
+      href: use-sparse-columns.md
+    - name: Usar conjuntos de columnas
+      href: use-column-sets.md
+    - name: Usar parámetros con valores de tabla (motor de base de datos)
+      href: use-table-valued-parameters-database-engine.md
+- name: Restricciones entre claves principales y claves externas
+  href: primary-and-foreign-key-constraints.md
+  items:
+    - name: Crear claves principales
+      href: create-primary-keys.md
+    - name: Modificar claves principales
+      href: modify-primary-keys.md
+    - name: Eliminar claves principales
+      href: delete-primary-keys.md
+    - name: Crear relaciones de clave externa
+      href: create-foreign-key-relationships.md
+    - name: Modificar relaciones de claves externas.
+      href: modify-foreign-key-relationships.md
+    - name: Eliminar relaciones entre claves externas.
+      href: delete-foreign-key-relationships.md
+    - name: Ver las propiedades de clave externa
+      href: view-foreign-key-properties.md
+    - name: Deshabilitar una restricción FOREIGN KEY para la replicación
+      href: disable-foreign-key-constraints-for-replication.md
+    - name: Deshabilitar restricciones FOREIGN KEY con instrucciones INSERT y UPDATE
+      href: disable-foreign-key-constraints-with-insert-and-update-statements.md
+- name: Restricciones UNIQUE y restricciones CHECK
+  href: unique-constraints-and-check-constraints.md
+  items:
+    - name: Crear restricciones UNIQUE
+      href: create-unique-constraints.md
+    - name: Modificar restricciones UNIQUE
+      href: modify-unique-constraints.md
+    - name: Eliminar restricciones UNIQUE
+      href: delete-unique-constraints.md
+    - name: Crear restricciones CHECK
+      href: create-check-constraints.md
+    - name: Modificar restricciones CHECK
+      href: modify-check-constraints.md
+    - name: Eliminar restricciones CHECK
+      href: delete-check-constraints.md
+    - name: Deshabilitar restricciones CHECK para la replicación
+      href: disable-check-constraints-for-replication.md
+    - name: Deshabilitar restricciones CHECK con instrucciones INSERT y UPDATE
+      href: disable-check-constraints-with-insert-and-update-statements.md
+- name: Propiedades de columnas de tablas (SQL Server Management Studio)
+  href: table-column-properties-sql-server-management-studio.md

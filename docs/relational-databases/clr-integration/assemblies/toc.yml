@@ -1,0 +1,8 @@
+- name: Administrar ensamblados de integración CLR
+  href: managing-clr-integration-assemblies.md
+- name: Modificar un ensamblado
+  href: altering-an-assembly.md
+- name: Crear un ensamblado
+  href: creating-an-assembly.md
+- name: Quitar un ensamblado
+  href: dropping-an-assembly.md

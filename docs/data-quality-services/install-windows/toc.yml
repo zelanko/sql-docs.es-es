@@ -1,0 +1,14 @@
+- name: Información general
+  href: install-data-quality-services.md
+- name: Ejecutar DQSInstaller.exe para completar la instalación del servidor de calidad de datos
+  href: run-dqsinstaller-exe-to-complete-data-quality-server-installation.md
+- name: Conceder roles de DQS a los usuarios
+  href: grant-dqs-roles-to-users.md
+- name: Acceso a datos para las operaciones de DQS
+  href: access-data-for-the-dqs-operations.md
+- name: Exportar e importar bases de conocimiento de DQS mediante DQSInstaller.exe
+  href: export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md
+- name: Actualizar ensamblados de SQLCLR después de actualizar .NET Framework
+  href: upgrade-sqlclr-assemblies-after-net-framework-update.md
+- name: Actualizar el esquema de las bases de datos DQS tras instalar la actualización de SQL Server
+  href: upgrade-dqs-databases-schema-after-installing-sql-server-update.md

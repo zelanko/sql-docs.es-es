@@ -1,0 +1,35 @@
+- name: Seguridad
+  href: security-overview-integration-services.md
+- name: Mitigar amenazas y vulnerabilidades
+  href: ../threat-and-vulnerability-mitigation-integration-services.md
+- name: Roles de Integration Services (servicio SSIS)
+  href: integration-services-roles-ssis-service.md
+  items:
+    - name: Referencia de la interfaz de usuario del cuadro de diálogo Roles del paquete
+      href: ../package-roles-dialog-box-ui-reference.md
+- name: Acceso al servicio Integration Services
+  href: ../access-to-the-integration-services-service.md
+- name: Acceso a los archivos usados por los paquetes
+  href: ../access-to-files-used-by-packages.md
+- name: Control del acceso a la información confidencial en paquetes
+  href: access-control-for-sensitive-data-in-packages.md
+  items:
+    - name: Establecer o cambiar el nivel de protección de los paquetes
+      href: ../set-or-change-the-protection-level-of-packages.md
+    - name: 'Nivel de protección de paquetes y del proyecto, cuadro de diálogo'
+      href: ../package-and-project-protection-level-dialog-box.md
+    - name: Contraseña de paquete y proyecto
+      href: ../package-and-project-password.md
+- name: Identificar el origen de paquetes con firmas digitales
+  href: identify-the-source-of-packages-with-digital-signatures.md
+  items:
+    - name: Implementar una directiva de firma estableciendo un valor del Registro
+      href: ../implement-a-signing-policy-by-setting-a-registry-value.md
+    - name: Firmar un paquete mediante un certificado digital
+      href: ../sign-a-package-by-using-a-digital-certificate.md
+    - name: Referencia de la interfaz de usuario del cuadro de diálogo Firma digital
+      href: ../digital-signing-dialog-box-ui-reference.md
+- name: Crear un rol definido por el usuario
+  href: ../create-a-user-defined-role.md
+- name: Asignar roles de lector y escritor a un paquete
+  href: ../assign-a-reader-and-writer-role-to-a-package.md

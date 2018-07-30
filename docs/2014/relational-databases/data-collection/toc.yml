@@ -1,0 +1,33 @@
+- name: Recopilación de datos
+  href: data-collection.md
+- name: Administrar la recopilación de datos
+  href: manage-data-collection.md
+  items:
+    - name: Configurar el almacén de administración de datos (SQL Server Management Studio)
+      href: configure-the-management-data-warehouse-sql-server-management-studio.md
+    - name: Configurar las propiedades de un recopilador de datos
+      href: configure-properties-of-a-data-collector.md
+    - name: Habilitar o deshabilitar la recopilación de datos
+      href: enable-or-disable-data-collection.md
+    - name: Iniciar o detener un conjunto de recopilación
+      href: start-or-stop-a-collection-set.md
+    - name: Usar SQL Server Profiler para crear un conjunto de recopilación de Seguimiento SQL (SQL Server Management Studio)
+      href: use-sql-server-profiler-to-create-a-sql-trace-collection-set.md
+    - name: Ver los registros del conjunto de recopilación (SQL Server Management Studio)
+      href: view-collection-set-logs-sql-server-management-studio.md
+    - name: Ver o cambiar las programaciones del conjunto de recopilación (SQL Server Management Studio)
+      href: view-or-change-collection-set-schedules-sql-server-management-studio.md
+    - name: Ver un informe de conjunto de recopilación (SQL Server Management Studio)
+      href: view-a-collection-set-report-sql-server-management-studio.md
+    - name: Configurar parámetros para la recopilación de datos (Transact-SQL)
+      href: configure-data-collection-parameters-transact-sql.md
+    - name: Crear un conjunto de recopilación personalizado que utilice el tipo de recopilador de consultas T-SQL genérico (Transact-SQL)
+      href: create-custom-collection-set-generic-t-sql-query-collector-type.md
+    - name: Agregar un elemento de recopilación a un conjunto de recopilación (Transact-SQL)
+      href: add-a-collection-item-to-a-collection-set-transact-sql.md
+- name: Informes de conjuntos de recopilación de datos del sistema
+  href: system-data-collection-set-reports.md
+- name: almacén de administración de datos
+  href: management-data-warehouse.md
+- name: Seguridad del recopilador de datos
+  href: data-collector-security.md

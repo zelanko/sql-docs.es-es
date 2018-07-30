@@ -1,0 +1,78 @@
+- name: Supervisión y optimización del rendimiento
+  href: monitor-and-tune-for-performance.md
+- name: Supervisar los componentes de SQL Server
+  href: monitor-sql-server-components.md
+- name: Herramientas de supervisión y optimización del rendimiento
+  href: performance-monitoring-and-tuning-tools.md
+- name: Estimación de cardinalidad
+  href: cardinality-estimation-sql-server.md
+- name: Establecer una línea base del rendimiento
+  href: establish-a-performance-baseline.md
+- name: Aislar problemas de rendimiento
+  href: isolate-performance-problems.md
+- name: Identificar los cuellos de botella
+  href: identify-bottlenecks.md
+- name: Supervisar el rendimiento mediante el almacén de consultas
+  href: monitoring-performance-by-using-the-query-store.md
+- name: Supervisión de la actividad y rendimiento del servidor
+  href: server-performance-and-activity-monitoring.md
+  items:
+    - name: Iniciar el Monitor de sistema (Windows)
+      href: start-system-monitor-windows.md
+    - name: Configurar una alerta de base de datos (Windows)
+      href: set-up-a-sql-server-database-alert-windows.md
+    - name: Ver el registro de aplicación Windows (Windows)
+      href: view-the-windows-application-log-windows-10.md
+    - name: Ver el registro de errores de SQL Server (SQL Server Management Studio)
+      href: view-the-sql-server-error-log-sql-server-management-studio.md
+    - name: Guardar gráficos de interbloqueo (SQL Server Profiler)
+      href: save-deadlock-graphs-sql-server-profiler.md
+    - name: 'Abrir, ver e imprimir un archivo de interbloqueo (SQL Server Management Studio)'
+      href: open-view-and-print-a-deadlock-file-sql-server-management-studio.md
+    - name: Guardar eventos Showplan XML por separado (SQL Server Profiler)
+      href: save-showplan-xml-events-separately-sql-server-profiler.md
+    - name: Guardar de forma separada eventos Showplan XML Statistics Profile (SQL Server Profiler)
+      href: save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md
+- name: Mostrar y guardar planes de ejecución
+  href: display-and-save-execution-plans.md
+  items:
+    - name: Mostrar el plan de ejecución estimado
+      href: display-the-estimated-execution-plan.md
+    - name: Mostrar un plan de ejecución real
+      href: display-an-actual-execution-plan.md
+    - name: Guardar un plan de ejecución en formato XML
+      href: save-an-execution-plan-in-xml-format.md
+- name: Guías de plan
+  href: plan-guides.md
+  items:
+    - name: Crear una nueva guía de plan
+      href: create-a-new-plan-guide.md
+    - name: Crear una guía de plan para consultas parametrizadas
+      href: create-a-plan-guide-for-parameterized-queries.md
+    - name: Especificar el comportamiento de parametrización de consultas por medio de guías de plan
+      href: specify-query-parameterization-behavior-by-using-plan-guides.md
+    - name: Aplicar un plan de consulta fijo a una guía de plan
+      href: apply-a-fixed-query-plan-to-a-plan-guide.md
+    - name: Asociar sugerencias de consulta a una guía de plan
+      href: attach-query-hints-to-a-plan-guide.md
+    - name: Ver propiedades de la guía de plan
+      href: view-plan-guide-properties.md
+    - name: Usar SQL Server Profiler para crear y probar guías de plan
+      href: use-sql-server-profiler-to-create-and-test-plan-guides.md
+    - name: Validar guías de planes tras una actualización
+      href: validate-plan-guides-after-upgrade.md
+    - name: Eliminar una guía de plan
+      href: delete-a-plan-guide.md
+    - name: Habilitar o deshabilitar una guía de plan
+      href: enable-or-disable-a-plan-guide.md
+- name: Database Engine Tuning Advisor
+  href: database-engine-tuning-advisor.md
+  items:
+    - name: Iniciar y utilizar el Asistente para la optimización de motor de base de datos
+      href: start-and-use-the-database-engine-tuning-advisor.md
+    - name: Reducir la carga de optimización del servidor de producción
+      href: reduce-the-production-server-tuning-load.md
+    - name: Consideraciones acerca del uso de servidores de prueba
+      href: considerations-for-using-test-servers.md
+    - name: Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos
+      href: view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md

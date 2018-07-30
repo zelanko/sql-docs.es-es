@@ -1,0 +1,11 @@
+- name: Partitioned Tables and Indexes
+  href: partitioned-tables-and-indexes.md
+  items:
+    - name: Crear tablas e índices con particiones
+      href: create-partitioned-tables-and-indexes.md
+    - name: Modificar una función de partición
+      href: modify-a-partition-function.md
+    - name: Modificar un esquema de partición
+      href: modify-a-partition-scheme.md
+    - name: Ayuda F1 del Asistente para la administración de particiones
+      href: manage-partition-wizard-f1-help.md

@@ -1,0 +1,26 @@
+- name: Clase ClientNetworkProtocolProperty
+  href: clientnetworkprotocolproperty-class.md
+- name: Propiedad PropertyIdx (clase ClientNetworkProtocolProperty)
+  href: propertyidx-property-clientnetworkprotocolproperty-class.md
+- name: Propiedad PropertyName (clase ClientNetworkProtocolProperty)
+  href: propertyname-property-clientnetworkprotocolproperty-class.md
+- name: Propiedad PropertyNumVal (clase ClientNetworkProtocolProperty)
+  href: propertynumval-property-clientnetworkprotocolproperty-class.md
+- name: Propiedad PropertyStrVal (clase ClientNetworkProtocolProperty)
+  href: propertystrval-property-clientnetworkprotocolproperty-class.md
+- name: Propiedad PropertyType (clase ClientNetworkProtocolProperty)
+  href: propertytype-property-clientnetworkprotocolproperty-class.md
+- name: Propiedad PropertyValType (clase ClientNetworkProtocolProperty)
+  href: propertyvaltype-property-clientnetworkprotocolproperty-class.md
+- name: Propiedad ProtocolName (clase ClientNetworkProtocolProperty)
+  href: protocolname-property-clientnetworkprotocolproperty-class.md
+- name: Método SetFlag (clase ClientNetworkProtocolProperty)
+  href: setflag-method-clientnetworkprotocolproperty-class.md
+- name: Método SetNumericalValue (clase ClientNetworkProtocolProperty)
+  href: setnumericalvalue-method-clientnetworkprotocolproperty-class.md
+- name: Método SetNumValue (clase ClientNetworkProtocolProperty)
+  href: setnumvalue-method-clientnetworkprotocolproperty-class.md
+- name: Método SetStringValue (clase ClientNetworkProtocolProperty)
+  href: setstringvalue-method-clientnetworkprotocolproperty-class.md
+- name: Método SetStrValue (clase ClientNetworkProtocolProperty)
+  href: setstrvalue-method-clientnetworkprotocolproperty-class.md

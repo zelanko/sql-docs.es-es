@@ -1,0 +1,10 @@
+- name: Prácticas recomendadas para la administración de excepciones de Reporting Services
+  href: best-practices-for-reporting-services-exception-handling.md
+- name: Administrar las advertencias y casos que no producen excepciones
+  href: handling-warnings-and-cases-that-do-not-cause-exceptions.md
+- name: Impedir las solicitudes no válidas
+  href: preventing-invalid-requests.md
+- name: Usar la propiedad Detail para administrar errores concretos
+  href: using-the-detail-property-to-handle-specific-errors.md
+- name: Uso de los bloques Try y Catch
+  href: using-try-and-catch-blocks.md

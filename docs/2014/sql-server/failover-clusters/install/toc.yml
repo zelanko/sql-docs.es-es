@@ -1,0 +1,14 @@
+- name: Instalación de clúster de conmutación por error de SQL Server
+  href: sql-server-failover-cluster-installation.md
+- name: Antes de instalar los clústeres de conmutación por error
+  href: before-installing-failover-clustering.md
+- name: Crear un nuevo clúster de conmutación por error de SQL Server (programa de instalación)
+  href: create-a-new-sql-server-failover-cluster-setup.md
+- name: Agregar o quitar nodos en un clúster de conmutación por error de SQL Server (programa de instalación)
+  href: add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md
+- name: Instalar las herramientas de cliente en un clúster de conmutación por error de SQL Server
+  href: install-client-tools-on-a-sql-server-failover-cluster.md
+- name: Quitar una instancia de clúster de conmutación por error de SQL Server (programa de instalación)
+  href: remove-a-sql-server-failover-cluster-instance-setup.md
+- name: Cambiar el nombre de una instancia de clúster de conmutación por error de SQL Server
+  href: rename-a-sql-server-failover-cluster-instance.md

@@ -1,0 +1,207 @@
+- name: Captura de datos modificados
+  href: change-data-capture-ssis.md
+  items:
+    - name: Especificar un intervalo de datos modificados
+      href: specify-an-interval-of-change-data.md
+    - name: Determinar si los datos modificados están preparados
+      href: determine-whether-the-change-data-is-ready.md
+    - name: Preparar para consultar datos modificados
+      href: prepare-to-query-for-the-change-data.md
+    - name: Crear la función para recuperar los datos modificados
+      href: create-the-function-to-retrieve-the-change-data.md
+    - name: Recuperar y describir datos modificados
+      href: retrieve-and-understand-the-change-data.md
+    - name: 'Procesar inserciones, actualizaciones y eliminaciones'
+      href: process-inserts-updates-and-deletes.md
+    - name: Aplicar los cambios al destino
+      href: apply-the-changes-to-the-destination.md
+    - name: Realizar una carga incremental de varias tablas
+      href: perform-an-incremental-load-of-multiple-tables.md
+- name: Referencia técnica
+  href: ../technical-reference-integration-services.md
+  items:
+    - name: Diseñador de captura de datos modificados para Oracle de Attunity
+      href: change-data-capture-designer-for-oracle-by-attunity.md
+    - name: Introducción a la Consola del diseñador CDC
+      href: the-cdc-designer-console-introduction.md
+    - name: Tipos de datos de la instancia CDC de Oracle
+      href: oracle-cdc-instance-data-types.md
+    - name: Tratamiento de errores
+      href: error-handling.md
+    - name: La instancia CDC de Oracle
+      href: the-oracle-cdc-instance.md
+    - name: Las bases de datos CDC de Oracle
+      href: the-oracle-cdc-databases.md
+    - name: Diseñador de captura de datos modificados para Oracle de Attunity (Referencia de la Ayuda de F1)
+      href: change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md
+      items:
+        - name: Obtener acceso a la Consola del diseñador CDC
+          href: access-the-cdc-designer-console.md
+        - name: Administrar un servicio CDC
+          href: manage-a-cdc-service.md
+        - name: Administrar una instancia CDC
+          href: manage-a-cdc-instance.md
+        - name: Usar el Asistente para nueva instancia
+          href: use-the-new-instance-wizard.md
+        - name: Crear la base de datos de cambios de SQL Server
+          href: create-the-sql-server-change-database.md
+        - name: Conectar con una base de datos de origen de Oracle
+          href: connect-to-an-oracle-source-database.md
+        - name: Conectar con Oracle
+          href: connect-to-oracle.md
+        - name: Seleccionar tablas y columnas de Oracle
+          href: select-oracle-tables-and-columns.md
+        - name: Seleccionar tablas de Oracle para capturar cambios
+          href: select-oracle-tables-for-capturing-changes.md
+        - name: Realizar cambios en las tablas seleccionadas para capturar cambios
+          href: make-changes-to-the-tables-selected-for-capturing-changes.md
+        - name: Generar y ejecutar el script de registro complementario
+          href: generate-and-run-the-supplemental-logging-script.md
+        - name: Generar tablas reflejadas e instancias de captura CDC
+          href: generate-mirror-tables-and-cdc-capture-instances.md
+        - name: Finalizar
+          href: finish.md
+        - name: Editar propiedades de la instancia
+          href: edit-instance-properties.md
+        - name: Editar las propiedades de la base de datos de Oracle
+          href: edit-the-oracle-database-properties.md
+        - name: Editar tablas
+          href: edit-tables.md
+        - name: Agregar tablas a una instancia CDC
+          href: add-tables-to-a-cdc-instance.md
+        - name: Editar las propiedades de tabla
+          href: edit-the-table-properties.md
+        - name: Revisar y generar scripts de registro complementario
+          href: review-and-generate-supplemental-logging-scripts.md
+        - name: Editar las propiedades avanzadas
+          href: edit-the-advanced-properties.md
+    - name: Diseñador de captura de datos modificados para Oracle de Attunity (Guía de procedimientos)
+      href: change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md
+      items:
+        - name: Cómo administrar un servicio CDC desde la Consola del diseñador CDC
+          href: how-to-manage-a-cdc-service-from-the-cdc-designer-console.md
+        - name: Cómo crear la instancia de base de datos de cambios de SQL Server
+          href: how-to-create-the-sql-server-change-database-instance.md
+        - name: Cómo administrar una instancia CDC
+          href: how-to-manage-a-cdc-instance.md
+        - name: Cómo editar las propiedades de la instancia CDC
+          href: how-to-edit-the-cdc-instance-properties.md
+        - name: Cómo ver las propiedades de la instancia CDC
+          href: how-to-view-the-cdc-instance-properties.md
+    - name: Conexión de SQL Server para la creación de instancias
+      href: sql-server-connection-for-instance-creation.md
+    - name: Propiedades avanzadas de conexión
+      href: advanced-connection-properties.md
+    - name: Credenciales de Oracle para ejecutar script
+      href: oracle-credentials-for-running-script.md
+    - name: Script de registro complementario de Oracle
+      href: oracle-supplemental-logging-script.md
+    - name: Script de implementación de instancia CDC
+      href: cdc-instance-deployment-script.md
+    - name: Permisos necesarios de conexión con SQL Server para el Diseñador CDC
+      href: sql-server-connection-required-permissions-for-the-cdc-designer.md
+    - name: Servicio de captura de datos modificados para Oracle de Attunity
+      href: change-data-capture-service-for-oracle-by-attunity.md
+    - name: Servicio de captura de datos modificados para Oracle de Attunity (Arquitectura del sistema)
+      href: change-data-capture-service-for-oracle-by-attunity-system-architecture.md
+    - name: El servicio CDC de Oracle
+      href: the-oracle-cdc-service.md
+      items:
+        - name: Compatibilidad con alta disponibilidad
+          href: high-availability-support.md
+        - name: Permisos de conexión con SQL Server necesarios para el servicio CDC
+          href: sql-server-connection-required-permissions-for-the-cdc-service.md
+        - name: Roles de usuario para el Servicio de captura de datos modificados para Oracle de Attunity
+          href: user-roles.md
+        - name: Trabajar con el servicio CDC de Oracle
+          href: working-with-the-oracle-cdc-service.md
+    - name: Servicio de captura de datos modificados para Oracle de Attunity (Ayuda de F1)
+      href: change-data-capture-service-for-oracle-by-attunity-f1-help.md
+      items:
+        - name: Conexión con SQL Server
+          href: connection-to-sql-server.md
+        - name: Conexión con SQL Server para eliminación
+          href: connection-to-sql-server-for-delete.md
+        - name: Crear y editar un servicio CDC de Oracle
+          href: create-and-edit-an-oracle-cdc-service.md
+        - name: Administrar un servicio CDC de Oracle
+          href: manage-an-oracle-cdc-service.md
+        - name: Preparar SQL Server para CDC
+          href: prepare-sql-server-for-cdc.md
+        - name: Preparar SQL Server para CDC de Oracle (Ver script)
+          href: prepare-sql-server-for-oracle-cdc-view-script.md
+        - name: Trabajar con servicios CDC
+          href: work-with-cdc-services.md
+    - name: Servicio de captura de datos modificados para Oracle de Attunity (Guía de procedimientos)
+      href: change-data-capture-service-for-oracle-by-attunity-how-to-guide.md
+      items:
+        - name: Cómo crear y editar un servicio CDC
+          href: how-to-create-and-edit-a-cdc-service.md
+        - name: Cómo administrar un servicio CDC local
+          href: how-to-manage-a-local-cdc-service.md
+        - name: Cómo preparar SQL Server para CDC
+          href: how-to-prepare-sql-server-for-cdc.md
+        - name: Cómo usar la interfaz de línea de comandos del servicio CDC
+          href: how-to-use-the-cdc-service-command-line-interface.md
+        - name: Cómo trabajar con servicios CDC
+          href: how-to-work-with-cdc-services.md
+    - name: Microsoft Connector 1.1 for SAP BW
+      href: ../microsoft-connector-for-sap-bw.md
+    - name: Instalar Microsoft Connector for 1.1 SAP BW
+      href: ../installing-the-microsoft-connector-for-sap-bw.md
+    - name: Componentes de Microsoft Connector 1.1 for SAP BW
+      href: ../microsoft-connector-for-sap-bw-components.md
+      items:
+        - name: Administrador de conexiones de SAP BW
+          href: ../connection-manager/sap-bw-connection-manager.md
+        - name: Origen de SAP BW
+          href: ../data-flow/sap-bw-source.md
+        - name: Destino de SAP BW
+          href: ../data-flow/sap-bw-destination.md
+    - name: Ayuda F1 de Microsoft Connector 1.1 for SAP BW
+      href: ../microsoft-connector-for-sap-bw-f1-help.md
+      items:
+        - name: Editor del administrador de conexiones SAP BW
+          href: ../sap-bw-connection-manager-editor.md
+        - name: Editor de origen de SAP BW (página Administrador de conexiones)
+          href: ../data-flow/sap-bw-source-editor-connection-manager-page.md
+        - name: Editor de origen de SAP BW (página Columnas)
+          href: ../data-flow/sap-bw-source-editor-columns-page.md
+        - name: Editor de origen de SAP BW (página Salida de error)
+          href: ../data-flow/sap-bw-source-editor-error-output-page.md
+        - name: Editor de origen de SAP BW (página Avanzadas)
+          href: ../data-flow/sap-bw-source-editor-advanced-page.md
+        - name: Buscar destino RFC
+          href: ../data-flow/look-up-rfc-destination.md
+        - name: Buscar cadena de procesos
+          href: ../data-flow/look-up-process-chain.md
+        - name: Registro de solicitudes
+          href: ../data-flow/request-log.md
+        - name: Vista previa
+          href: ../data-flow/preview.md
+        - name: Editor de destino de SAP BW (página Administrador de conexiones)
+          href: ../data-flow/sap-bw-destination-editor-connection-manager-page.md
+        - name: Editor de destino de SAP BW (página Asignaciones)
+          href: ../data-flow/sap-bw-destination-editor-mappings-page.md
+        - name: Editor de destino de SAP BW (página Salida de error)
+          href: ../data-flow/sap-bw-destination-editor-error-output-page.md
+        - name: Editor de destino de SAP BW (página Avanzadas)
+          href: ../data-flow/sap-bw-destination-editor-advanced-page.md
+        - name: Buscar InfoPackage
+          href: ../data-flow/look-up-infopackage.md
+        - name: Crear nuevo InfoObject
+          href: ../data-flow/create-new-infoobject.md
+        - name: Crear InfoCube para los datos de transacción
+          href: ../data-flow/create-infocube-for-transaction-data.md
+        - name: Buscar InfoObject
+          href: ../data-flow/look-up-infoobject.md
+        - name: Crear InfoSource
+          href: ../data-flow/create-infosource.md
+        - name: Crear InfoSource para datos de transacción
+          href: ../data-flow/create-infosource-for-transaction-data.md
+        - name: Crear InfoSource para datos maestros
+          href: ../data-flow/create-infosource-for-master-data.md
+        - name: Crear InfoPackage
+          href: ../data-flow/create-infopackage.md
+    - name: Certificación de SAP
+      href: ../certification-by-sap.md

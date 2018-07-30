@@ -1,0 +1,65 @@
+- name: Importar y exportar datos de forma masiva
+  href: bulk-import-and-export-of-data-sql-server.md
+  items:
+    - name: Importar y exportar datos de forma masiva con la utilidad bcp
+      href: import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md
+    - name: Importar de forma masiva datos mediante BULK INSERT u OPENROWSET(BULK...)
+      href: import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md
+    - name: Requisitos previos para el registro mínimo durante la importación masiva
+      href: prerequisites-for-minimal-logging-in-bulk-import.md
+- name: Prepararse para importar datos de forma masiva
+  href: prepare-to-bulk-import-data-sql-server.md
+  items:
+    - name: Preparar los datos para exportar o importar de forma masiva
+      href: prepare-data-for-bulk-export-or-import-sql-server.md
+- name: Tabla de ejemplo HumanResources.myTeam
+  href: humanresources-myteam-sample-table-sql-server.md
+- name: Formatos de datos para importación o exportación masivas
+  href: data-formats-for-bulk-import-or-bulk-export-sql-server.md
+  items:
+    - name: Usar el formato nativo para importar o exportar datos
+      href: use-native-format-to-import-or-export-data-sql-server.md
+    - name: Usar el formato de caracteres para importar o exportar datos
+      href: use-character-format-to-import-or-export-data-sql-server.md
+    - name: Usar el formato nativo Unicode para importar o exportar datos
+      href: use-unicode-native-format-to-import-or-export-data-sql-server.md
+    - name: Usar el formato de caracteres Unicode para importar o exportar datos
+      href: use-unicode-character-format-to-import-or-export-data-sql-server.md
+    - name: Importar datos con formato nativo y de caracteres de versiones anteriores de SQL Server
+      href: import-native-and-character-format-data-from-earlier-versions-of-sql-server.md
+- name: Especificar formatos de datos por razones de compatibilidad mediante bcp
+  href: specify-data-formats-for-compatibility-when-using-bcp-sql-server.md
+  items:
+    - name: Especificar el tipo de almacenamiento en archivo mediante bcp
+      href: specify-file-storage-type-by-using-bcp-sql-server.md
+    - name: Especificar la longitud de prefijo en los archivos de datos mediante bcp
+      href: specify-prefix-length-in-data-files-by-using-bcp-sql-server.md
+    - name: Especificar la longitud de campo mediante bcp
+      href: specify-field-length-by-using-bcp-sql-server.md
+    - name: Especificar terminadores de campo y de fila
+      href: specify-field-and-row-terminators-sql-server.md
+- name: Mantener valores NULL o usar valores predeterminados durante la importación masiva
+  href: keep-nulls-or-use-default-values-during-bulk-import-sql-server.md
+- name: Mantener valores de identidad al importar datos de forma masiva
+  href: keep-identity-values-when-bulk-importing-data-sql-server.md
+- name: Importar de forma masiva datos de objetos de gran tamaño mediante el proveedor de conjuntos de filas BULK OPENROWSET
+  href: bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md
+- name: Archivos de formato para importar o exportar datos
+  href: format-files-for-importing-or-exporting-data-sql-server.md
+  items:
+    - name: Archivos de formato no XML
+      href: non-xml-format-files-sql-server.md
+    - name: 'XML, archivos de formato'
+      href: xml-format-files-sql-server.md
+    - name: Crear un archivo de formato
+      href: create-a-format-file-sql-server.md
+    - name: Usar un archivo de formato para importar datos de forma masiva
+      href: use-a-format-file-to-bulk-import-data-sql-server.md
+    - name: Usar un archivo de formato para omitir una columna de tabla
+      href: use-a-format-file-to-skip-a-table-column-sql-server.md
+    - name: Usar un archivo de formato para omitir un campo de datos
+      href: use-a-format-file-to-skip-a-data-field-sql-server.md
+    - name: Usar un archivo de formato para asignar columnas de tabla a campos de un archivo de datos
+      href: use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md
+- name: Ejemplos de importación y exportación de forma masiva documentos XML
+  href: examples-of-bulk-import-and-export-of-xml-documents-sql-server.md

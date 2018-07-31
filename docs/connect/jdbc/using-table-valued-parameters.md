@@ -1,7 +1,7 @@
 ---
 title: Usar parámetros con valores de tabla | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 356e81dc6faf25e12c4edd51d1927ac53c5b3a38
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 4852b9d6546375246c9236ccdfb8522c00ec548a
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978767"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279216"
 ---
 # <a name="using-table-valued-parameters"></a>Usar parámetros con valores de tabla
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -56,14 +56,14 @@ ms.locfileid: "37978767"
 ## <a name="creating-table-valued-parameter-types"></a>Creación de tipos de parámetro con valores de tabla  
  Parámetros con valores de tabla se basan en estructuras de tabla fuertemente tipadas definidas mediante instrucciones CREATE TYPE de Transact-SQL. Tendrá que crear un tipo de tabla y definir la estructura en SQL Server para poder usar parámetros con valores de tabla en las aplicaciones cliente. Para obtener más información acerca de cómo crear tipos de tabla, vea [tipos de tabla definidos por el usuario](http://go.microsoft.com/fwlink/?LinkID=98364) en libros en pantalla de SQL Server.  
   
-```  
+```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```  
   
  Después de crear un tipo de tabla, puede declarar parámetros con valores de tabla en función de ese tipo. El siguiente fragmento de Transact-SQL muestra cómo declarar un parámetro con valores de tabla en una definición de procedimiento almacenado. Tenga en cuenta que la palabra clave READONLY se requiere para declarar un parámetro con valores de tabla.  
   
-```  
+```sql
 CREATE PROCEDURE usp_UpdateCategories   
     (@tvpNewCategories dbo.CategoryTableType READONLY)  
 ```  
@@ -73,7 +73,7 @@ CREATE PROCEDURE usp_UpdateCategories
   
  La siguiente instrucción UPDATE de Transact-SQL muestra cómo usar un parámetro con valores de tabla mediante su unión con la tabla Categories. Cuando se usa un parámetro con valores de tabla con una combinación en una cláusula FROM, debe también alias, como se muestra aquí, donde el parámetro con valores de tabla es un alias "EC":  
   
-```  
+```sql
 UPDATE dbo.Categories  
     SET Categories.CategoryName = ec.CategoryName  
     FROM dbo.Categories INNER JOIN @tvpEditedCategories AS ec  
@@ -82,7 +82,7 @@ UPDATE dbo.Categories
   
  En este ejemplo de Transact-SQL muestra cómo seleccionar las filas de un parámetro con valores de tabla para realizar una INSERCIÓN en una sola operación basada en conjunto.  
   
-```  
+```sql
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
     SELECT nc.CategoryID, nc.CategoryName FROM @tvpNewCategories AS nc;  
 ```  
@@ -104,7 +104,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
  Los siguientes dos fragmentos de código muestran cómo configurar un parámetro con valores de tabla con SQLServerPreparedStatement y con un SQLServerCallableStatement para insertar datos. Aquí puede ser sourceTVPObject un SQLServerDataTable, o un conjunto de resultados o un objeto ISQLServerDataRecord. Los ejemplos se supone la conexión es un objeto de conexión activo.  
   
-```  
+```java
 // Using table-valued parameter with a SQLServerPreparedStatement.  
 SQLServerPreparedStatement pStmt =   
     (SQLServerPreparedStatement) connection.prepareStatement(“INSERT INTO dbo.Categories SELECT * FROM ?”);  
@@ -112,7 +112,7 @@ pStmt.setStructured(1, "dbo.CategoryTableType", sourceTVPObject);
 pStmt.execute();  
 ```  
   
-```  
+```java
 // Using table-valued parameter with a SQLServerCallableStatement.  
 SQLServerCallableStatement pStmt =   
     (SQLServerCallableStatement) connection.prepareCall("exec usp_InsertCategories ?");       
@@ -126,7 +126,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-a-sqlserverdatatable-object"></a>Pasar un parámetro con valores de tabla como un objeto SQLServerDataTable  
  Desde Microsoft JDBC Driver 6.0 para SQL Server, la clase SQLServerDataTable representa una tabla en memoria de datos relacionales. En este ejemplo se muestra cómo construir un parámetro con valores de tabla de datos en memoria mediante el objeto SQLServerDataTable. En primer lugar, el código crea un objeto SQLServerDataTable, define su esquema y rellena la tabla con datos. El código, a continuación, configura SQLServerPreparedStatement que esta tabla de datos que se pasa como un parámetro con valores de tabla a SQL Server.  
   
-```  
+```java
 // Assumes connection is an active Connection object.  
   
 // Create an in-memory data table.  
@@ -154,7 +154,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-a-resultset-object"></a>Pasar un parámetro con valores de tabla como un objeto de conjunto de resultados  
  En este ejemplo se muestra cómo transmitir filas de datos de un conjunto de resultados a un parámetro con valores de tabla. El código primero recupera datos de una tabla de origen en un crea un objeto SQLServerDataTable, define su esquema y rellena la tabla con datos. El código, a continuación, configura SQLServerPreparedStatement que esta tabla de datos que se pasa como un parámetro con valores de tabla a SQL Server.  
   
-```  
+```java
 // Assumes connection is an active Connection object.  
   
 // Create the source ResultSet object. Here SourceCategories is a table defined with the same schema as Categories table.   
@@ -174,7 +174,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-an-isqlserverdatarecord-object"></a>Pasar un parámetro con valores de tabla como un objeto ISQLServerDataRecord  
  Desde Microsoft JDBC Driver 6.0 para SQL Server, una nueva interfaz ISQLServerDataRecord está disponible para la transmisión de datos (dependiendo de cómo el usuario proporciona la implementación para él) con un parámetro con valores de tabla. En el ejemplo siguiente se muestra cómo implementar la interfaz ISQLServerDataRecord y pasarlo como un parámetro con valores de tabla. Por motivos de simplicidad, el siguiente ejemplo pasa una sola fila con valores codificados de forma rígida para el parámetro con valores de tabla. Idealmente, el usuario debería implementar esta interfaz para transmitir filas de cualquier origen, por ejemplo, de archivos de texto.  
   
-```  
+```java
 class MyRecords implements ISQLServerDataRecord  
 {  
     int currentRow = 0;  

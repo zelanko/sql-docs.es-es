@@ -1,7 +1,7 @@
 ---
-title: Conectarse a SQL Server con el controlador JDBC | Documentos de Microsoft
+title: Conexión a SQL Server con el controlador JDBC
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,41 +14,41 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6af836edb1585a07d54fb0742b73ac10a4852d8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5dd38c3fa9be49e4781a23f82d8ef0a007e9f43a
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833590"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279226"
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>Conectar SQL Server con el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Una de las operaciones más importantes que realizará con el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] consiste en establecer una conexión con un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos. Todas las interacciones con la base de datos se produce a través de la [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) objeto, y debido a que el controlador JDBC posee una arquitectura tan plana, casi todos los comportamientos interesantes afectan el objeto SQLServerConnection.  
+  Una de las operaciones más importantes que realizará con el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] es establecer una conexión con una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Todas las interacciones con la base de datos tienen lugar a través del objeto SQLServerConnection[ y, debido a que el controlador JDBC posee una arquitectura tan plana, casi todos los comportamientos interesantes afectan al objeto ](../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
- Si un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] es solo escucha en un puerto IPv6, establezca la propiedad del sistema java.net.preferIPv6Addresses para asegurarse de que se utiliza IPv6 en lugar de IPv4 para conectarse a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]:  
+ Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] solo está realizando escuchas en un puerto IPv6, establezca la propiedad del sistema java.net.preferIPv6Addresses para asegurarse de que se utiliza IPv6 en lugar de IPv4 para conectar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]:  
   
-```  
+```java
 System.setProperty("java.net.preferIPv6Addresses", "true");  
 ```  
   
- Los temas de esta sección describen cómo establecer y trabajar con una conexión a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos.  
+ En los temas de esta sección se describe cómo establecer y trabajar con una conexión a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
-|[Generar URL de conexión](../../connect/jdbc/building-the-connection-url.md)|Describe cómo formar una URL de conexión para conectarse a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos. También describe cómo conectarse a instancias con nombre de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos.|  
-|[Establecer las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md)|Describe las distintas propiedades de conexión y cómo se puede usar cuando se conecta a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos.|  
+|[Generar URL de conexión](../../connect/jdbc/building-the-connection-url.md)|Describe cómo formar una URL de conexión a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. También describe cómo conectarse a instancias con nombre de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|[Establecer las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md)|Describe las diferentes propiedades de conexión y cómo usarlas cuando se establece una conexión a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |[Establecer las propiedades de los orígenes de datos](../../connect/jdbc/setting-the-data-source-properties.md)|Describe cómo usar los orígenes de datos en un entorno de Java Platform, Enterprise Edition (Java EE).|  
-|[Trabajar con una conexión](../../connect/jdbc/working-with-a-connection.md)|Describe las distintas formas en que se va a crear una instancia de una conexión a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos.|  
+|[Trabajar con una conexión](../../connect/jdbc/working-with-a-connection.md)|Describe las diferentes formas de crear una instancia de conexión a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |[Usar agrupación de conexiones](../../connect/jdbc/using-connection-pooling.md)|Describe la compatibilidad del controlador JDBC con el uso de agrupaciones de conexiones.|  
-|[Mediante la creación de reflejo de base de datos &#40;JDBC&#41;](../../connect/jdbc/using-database-mirroring-jdbc.md)|Describe la compatibilidad del controlador JDBC con el uso de la creación de reflejo de la base de datos.|  
+|[Usar la creación de reflejo de bases de datos](../../connect/jdbc/using-database-mirroring-jdbc.md)|Describe la compatibilidad del controlador JDBC con el uso de la creación de reflejo de la base de datos.|  
 |[Compatibilidad del controlador JDBC con la alta disponibilidad y la recuperación ante desastres](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)|Describe cómo desarrollar una aplicación que se conectará a un grupo de disponibilidad AlwaysOn.|  
-|[Usar la autenticación integrada de Kerberos para conectar con SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|Describe una implementación de Java para las aplicaciones se conecten a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos mediante la autenticación integrada de Kerberos.|  
+|[Usar la autenticación integrada de Kerberos para conectar con SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|Describe una implementación Java para que las aplicaciones se conecten con una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mediante la autenticación integrada de Kerberos.|  
 |[Conectarse a una instancia de Azure SQL Database](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|Explica los problemas de conectividad con bases de datos en SQL Azure.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

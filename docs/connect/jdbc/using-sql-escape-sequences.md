@@ -1,5 +1,5 @@
 ---
-title: Usar secuencias de Escape SQL | Documentos de Microsoft
+title: Usar secuencias de Escape SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60af5198eb78ad23bf8ad55a1dc24690b91130ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852363"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978683"
 ---
 # <a name="using-sql-escape-sequences"></a>Usar secuencias de escape SQL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  El [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] admite el uso de secuencias de escape SQL, tal como se define por la API de JDBC. Las secuencias de escape se usan dentro de una instrucción SQL para indicar al controlador que la parte de la secuencia de escape de la cadena SQL se debería tratar de forma diferente. Cuando el controlador JDBC procesa la parte de la secuencia de escape de una cadena SQL, traduce esa parte de la cadena en código SQL que SQL Server entiende.  
+  El [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] admite el uso de secuencias de escape SQL, según se define en la API de JDBC. Las secuencias de escape se usan dentro de una instrucción SQL para indicar al controlador que la parte de la secuencia de escape de la cadena SQL se debería tratar de forma diferente. Cuando el controlador JDBC procesa la parte de la secuencia de escape de una cadena SQL, traduce esa parte de la cadena en código SQL que SQL Server entiende.  
   
  Hay cinco tipos de secuencias de escape que la API JDBC requiere, y el controlador JDBC las admite todas:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "32852363"
  En las secciones siguientes se describen los cinco tipos de secuencias de escape y cómo las admite el controlador JDBC.  
   
 ## <a name="like-wildcard-literals"></a>Literales comodín LIKE  
- El controlador JDBC admite el `{escape 'escape character'}` sintaxis para usar comodines de cláusulas LIKE como literales. Por ejemplo, el código siguiente devolverá valores para col3, donde el valor de col2 comienza literalmente con un guión (y no con su uso como comodín).  
+ El controlador JDBC admite la sintaxis de `{escape 'escape character'}` para usar comodines de cláusulas LIKE como literales. Por ejemplo, el código siguiente devolverá valores para col3, donde el valor de col2 comienza literalmente con un guión (y no con su uso como comodín).  
   
 ```  
 ResultSet rst = stmt.executeQuery("SELECT col3 FROM test1 WHERE col2   
@@ -67,7 +67,7 @@ LIKE '\\_%' {escape '\\'}");
 {fn functionName}  
 ```  
   
- donde `functionName` es una función compatible con el controlador JDBC. Por ejemplo:  
+ donde `functionName` es una función que admite el controlador JDBC. Por ejemplo:  
   
 ```  
 SELECT {fn UCASE(Name)} FROM Employee  
@@ -82,7 +82,7 @@ SELECT {fn UCASE(Name)} FROM Employee
 > [!NOTE]  
 >  Si intenta utilizar una función que la base de datos no admita, se producirá un error.  
   
-## <a name="date-and-time-literals"></a>Literales de hora y fecha  
+## <a name="date-and-time-literals"></a>Literales de fecha y hora  
  La sintaxis de las secuencias de escape para los literales de fecha, hora y marca de tiempo es la siguiente:  
   
 ```  
@@ -91,9 +91,9 @@ SELECT {fn UCASE(Name)} FROM Employee
   
  donde `literal-type` es uno de los siguientes:  
   
-|Tipo de literal|Description|Formato de valor|  
+|Tipo de literal|Descripción|Formato del valor|  
 |------------------|-----------------|------------------|  
-|d|Date|aaaa-mm-dd|  
+|d|date|aaaa-mm-dd|  
 |t|Time|hh:mm:ss [1]|  
 |ts|TimeStamp|aaaa-mm-dd hh:mm:ss[.f...]|  
   
@@ -105,7 +105,7 @@ WHERE OrderID=1025
 ```  
   
 ## <a name="stored-procedure-calls"></a>Llamadas a procedimientos almacenados  
- El controlador JDBC admite el `{? = call proc_name(?,...)}` y `{call proc_name(?,...)}` sintaxis para llamadas a procedimientos almacenados, según si tiene que procesar un parámetro de valor devuelto de escape.  
+ El controlador JDBC es compatible con la sintaxis de escape `{? = call proc_name(?,...)}` y `{call proc_name(?,...)}` para las llamadas a procedimientos almacenados, según si tiene que procesar un parámetro de devolución.  
   
  Un procedimiento almacenado es un objeto ejecutable almacenado en la base de datos. Normalmente, se trata de una o varias instrucciones SQL compiladas. La sintaxis de las secuencias de escape para llamar a un procedimiento almacenado es la siguiente:  
   
@@ -113,9 +113,9 @@ WHERE OrderID=1025
 {[?=]call procedure-name[([parameter][,[parameter]]...)]}  
 ```  
   
- donde `procedure-name` especifica el nombre de un procedimiento almacenado y `parameter` especifica un parámetro de procedimiento almacenado.  
+ donde `procedure-name` y `parameter` especifican el nombre y un parámetro de un procedimiento almacenado, respectivamente.  
   
- Para obtener más información sobre el uso de la `call` secuencia con los procedimientos almacenados de escape, vea [instrucciones Using con procedimientos almacenados](../../connect/jdbc/using-statements-with-stored-procedures.md).  
+ Para obtener más información sobre el uso de la `call` secuencia con los procedimientos almacenados de escape, vea [utilizando instrucciones con procedimientos almacenados](../../connect/jdbc/using-statements-with-stored-procedures.md).  
   
 ## <a name="outer-joins"></a>Combinaciones externas  
  El controlador JDBC admite la sintaxis de combinación externa completa, derecha e izquierda de SQL92. La secuencia de escape para las combinaciones externas es:  
@@ -131,7 +131,7 @@ table-reference {LEFT | RIGHT | FULL} OUTER JOIN
 {table-reference | outer-join} ON search-condition  
 ```  
   
- donde `table-reference` es un nombre de tabla y `search-condition` es la condición de combinación que desea usar para las tablas.  
+ donde `table-reference` es un nombre de tabla y `search-condition` es la condición de combinación que quiere usar para las tablas.  
   
  Por ejemplo:  
   
@@ -152,10 +152,10 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
   
 -   Combinaciones externas anidadas  
   
-## <a name="limit-escape-syntax"></a>Sintaxis de Escape de limit  
+## <a name="limit-escape-syntax"></a>Sintaxis de escape de LIMIT  
   
 > [!NOTE]  
->  La sintaxis de escape de LIMIT solo se admite con Microsoft JDBC Driver 4.2 (o superior) para SQL Server al usar JDBC 4.1 o posterior.  
+>  La sintaxis de escape de LIMIT solo se admite en Microsoft JDBC Driver 4.2 (o superior) para SQL Server al usar JDBC 4.1 o una versión posterior.  
   
  La sintaxis de escape de LIMIT se describe a continuación:  
   
@@ -163,9 +163,9 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
 LIMIT <rows> [OFFSET <row offset>]  
 ```  
   
- La sintaxis de escape tiene dos partes: \< *filas*> es obligatorio y especifica el número de filas que se va a devolver. DESPLAZAMIENTO y \< *desplazamiento de fila*> son opcionales y especifique el número de filas que se omiten antes de empezar a devolver filas. El controlador JDBC solo admite el elemento obligatorio al transformar la consulta para que use TOP en lugar de LIMIT. SQL Server no admite la cláusula de LIMIT. **El controlador JDBC no admite el argumento opcional \<desplazamiento de fila > y el controlador, producirá una excepción si se utiliza**.  
+ La sintaxis de escape tiene dos partes: \<*rows*> es obligatorio y especifica el número de filas que se devolverán. OFFSET y \<*row offset*> son opcionales y especifican el número de filas que se omiten antes de empezar a devolver filas. El controlador JDBC solo admite el elemento obligatorio al transformar la consulta para que use TOP en lugar de LIMIT. SQL Server no admite la cláusula de LIMIT. **El controlador JDBC no admite el argumento opcional \<row offset> y el controlador producirá una excepción si se usa**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Usar instrucciones con el controlador JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   

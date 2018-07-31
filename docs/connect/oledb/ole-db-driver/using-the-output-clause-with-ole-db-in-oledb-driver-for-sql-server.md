@@ -1,6 +1,6 @@
 ---
-title: Usar la cláusula OUTPUT con OLE DB en el controlador OLE DB para SQL Server | Documentos de Microsoft
-description: Uso de la cláusula OUTPUT con OLE DB en el controlador de OLE DB para SQL Server
+title: Uso de la cláusula OUTPUT con OLE DB en el controlador OLE DB para SQL Server | Microsoft Docs
+description: Uso de la cláusula OUTPUT con OLE DB en el controlador OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,21 +14,21 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8cf2e08b76636ab8509ab07fd1f3d60a102fa76d
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: ad3408d0419e408809b151114d83a09d976505fa
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665335"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109397"
 ---
-# <a name="using-the-output-clause-with-ole-db-in-ole-db-driver-for-sql-server"></a>Usar la cláusula OUTPUT con OLE DB en el controlador OLE DB para SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="using-the-output-clause-with-ole-db-in-ole-db-driver-for-sql-server"></a>Uso de la cláusula OUTPUT con OLE DB en el controlador OLE DB para SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Si utiliza una cláusula OUTPUT en un comando INSERT, UPDATE, DELETE o MERGE, no estará disponible el recuento de filas afectadas. La aplicación debe contar el número de filas del conjunto de filas que devuelve la cláusula OUTPUT.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Creación de un controlador OLE DB para la aplicación de SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md) 
   
   

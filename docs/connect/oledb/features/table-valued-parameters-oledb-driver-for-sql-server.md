@@ -1,5 +1,5 @@
 ---
-title: Parámetros con valores de tabla (controlador OLE DB para SQL Server) | Documentos de Microsoft
+title: Parámetros con valores de tabla (controlador OLE DB para SQL Server) | Microsoft Docs
 description: Parámetros con valores de tabla (controlador OLE DB para SQL Server)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -17,24 +17,24 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8a10c7d2d124886c9249d666060861af98d411c4
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 6a8c7db4c3ae20250a5498fab84f5d86cad62275
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611600"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109757"
 ---
 # <a name="table-valued-parameters-ole-db-driver-for-sql-server"></a>Parámetros con valores de tabla (controlador OLE DB para SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Parámetros con valores de tabla se introdujeron en [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]y proporcionan una manera eficaz de pasar varias filas de datos al servidor. Parámetros con valores de tabla proporcionan una funcionalidad similar a las matrices de parámetros, pero ofrecen más flexibilidad y una integración más estrecha con [!INCLUDE[tsql](../../../includes/tsql-md.md)]y con frecuencia se puede mejorar el rendimiento. Parámetros con valores de tabla también pueden participar en operaciones basadas en conjunto, mientras que las matrices de parámetros no.  
+  Los parámetros con valores de tabla se introdujeron en [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] y proporcionan una manera eficaz de pasar varias filas de datos al servidor. Los parámetros con valores de tabla proporcionan una funcionalidad similar a las matrices de parámetros, pero ofrecen más flexibilidad y una integración más estrecha con [!INCLUDE[tsql](../../../includes/tsql-md.md)], y pueden mejorar con frecuencia el rendimiento. Los parámetros con valores de tabla pueden participar también en operaciones basadas en conjuntos, mientras que las matrices de parámetros no.  
   
   
- Para obtener información sobre los parámetros con valores de tabla y OLE DB, vea [parámetros con valores de tabla &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md).  
+ Para obtener información acerca de los parámetros con valores de tabla y OLE DB, consulte [parámetros con valores de tabla &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Controlador OLE DB para las características de SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md) 
   
   

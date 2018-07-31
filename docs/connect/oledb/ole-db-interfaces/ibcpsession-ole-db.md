@@ -1,5 +1,5 @@
 ---
-title: IBCPSession (OLE DB) | Documentos de Microsoft
+title: IBCPSession (OLE DB) | Microsoft Docs
 description: Interfaz IBCPSession (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,28 +17,28 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9a252ab45aa8f20bac2c8b73606ebdc07b8a332e
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 05cbf4799c1f8ae75fcc8a091a48c5c9cccc80c6
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689488"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106121"
 ---
 # <a name="ibcpsession-ole-db"></a>IBCPSession (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  El **IBCPSession** interfaz expone la compatibilidad para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] operaciones de copia masiva basadas en archivos. El **IBCPSession** interfaz se expone en el controlador OLE DB para SQL Server en el mismo nivel que Sessions. En el controlador OLE DB para SQL Server, objetos de origen de datos son los generadores de objetos de sesión y las operaciones de copia masiva se especifican en la propiedad de conexión SSPROP_ENABLEBULKCOPY. Además, la propiedad SSPROP_ENABLEFASTLOAD debe establecerse en True.  
+  La interfaz **IBCPSession** expone compatibilidad con las operaciones de copia masiva basadas en archivos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El **IBCPSession** interfaz se expone en el controlador OLE DB para SQL Server en el mismo nivel que Sessions. En el controlador OLE DB para SQL Server, los objetos de origen de datos son los generadores de los objetos de sesión y las operaciones de copia masiva se especifican en la propiedad de conexión SSPROP_ENABLEBULKCOPY. Además, la propiedad SSPROP_ENABLEFASTLOAD debe establecerse en True.  
   
  Una llamada al método **IDBCreateSession::CreateSession** dará lugar a la creación de un objeto **BulkCopySession** . Todos los métodos de copia masiva basados en archivos que se expongan a través del objeto **IBCPSession** serán entonces invocables con firmas casi similares en la interfaz **IBCPSession** de este objeto **IBCPSession** .  
   
 > [!NOTE]  
->  El controlador OLE DB para SQL Server admite las operaciones de copia masiva basadas en memoria a través de la [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) interfaz.  
+>  El controlador OLE DB para SQL Server es compatible con las operaciones de copia masiva basadas en memoria a través de la interfaz [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md).  
   
  Para obtener más información sobre cómo usar el controlador OLE DB para SQL Server para operaciones de copia masiva, vea [realizar operaciones de copia masiva](../../oledb/features/performing-bulk-copy-operations.md).  
   
- Para obtener un ejemplo que muestra cómo utilizar el **IBCPSession** de la interfaz, vea [IBCPSession::BCPDone &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpdone-ole-db.md).  
+ Para obtener un ejemplo que muestra cómo usar el **IBCPSession** interfaz, vea [IBCPSession::BCPDone &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpdone-ole-db.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -53,7 +53,7 @@ ms.locfileid: "35689488"
 |[Ibcpsession:: Bcpreadfmt &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md)|Lee la información de formato de cada columna en el archivo de formato.|  
 |[Ibcpsession:: Bcpwritefmt &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md)|Escribe la información de formato de cada columna en el archivo de formato.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Interfaces &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
   

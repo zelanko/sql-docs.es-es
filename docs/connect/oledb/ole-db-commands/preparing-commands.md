@@ -1,6 +1,6 @@
 ---
-title: Preparar comandos | Documentos de Microsoft
-description: Preparación de comandos mediante el controlador OLE DB para SQL Server
+title: Preparar comandos | Microsoft Docs
+description: Preparar comandos mediante el controlador de OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ca162d2fffd23b55d53d34d32ad92a5cdbce7545
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: b5cefe4cea0c0d156c13239f24c4a97f7c90eeb0
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666065"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106021"
 ---
 # <a name="preparing-commands"></a>Preparar comandos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  El controlador OLE DB para SQL Server admite la preparación de comandos optimiza la ejecución múltiple de un único comando; Sin embargo, preparación de comandos genera una sobrecarga y no es necesario que un consumidor prepare un comando para ejecutarlo varias veces. En general, un comando debería prepararse si va a ejecutarse más de tres veces.  
+  El controlador OLE DB para SQL Server admite la preparación de comandos para la ejecución múltiple y optimizada de un único comando; en cambio, la preparación de comandos genera una sobrecarga y no es necesario que un consumidor prepare un comando para ejecutarlo más de una vez. En general, un comando debería prepararse si va a ejecutarse más de tres veces.  
   
  Por razones de rendimiento, la preparación del comando se difiere hasta que se ejecuta el comando. Éste es el comportamiento predeterminado. Cualquier error que se produzca en el comando que se está preparando no se dará a conocer hasta que el comando se ejecute o hasta que se realice una operación de metapropiedad. Establecer la propiedad SSPROP_DEFERPREPARE de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en FALSE puede desactivar este comportamiento predeterminado.  
   
@@ -43,23 +43,23 @@ ms.locfileid: "35666065"
   
  Algunos comandos no deberían prepararse nunca. Por ejemplo, no deberían prepararse nunca los comandos que especifican la ejecución de procedimientos almacenados o los comandos que incluyen texto que no es válido para la creación de procedimientos almacenados de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Si se crea un procedimiento almacenado temporal, el controlador OLE DB para SQL Server ejecuta el procedimiento almacenado temporal, devolviendo resultados como si se ejecutó la instrucción en Sí.  
+ Si se crea un procedimiento almacenado temporal, el controlador OLE DB para SQL Server lo ejecuta y devuelve los resultados como si se hubiera ejecutado la propia instrucción.  
   
- Creación del procedimiento almacenado temporal se controla mediante el controlador OLE DB para SQL Server-propiedades de inicialización específicas SSPROP_INIT_USEPROCFORPREP. Si el valor de propiedad es SSPROPVAL_USEPROCFORPREP_ON o SSPROPVAL_USEPROCFORPREP_ON_DROP, el controlador OLE DB para SQL Server intenta crear un procedimiento almacenado cuando se prepara un comando. La creación del procedimiento almacenado se realiza correctamente si el usuario de la aplicación tiene suficientes permisos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ La propiedad de inicialización SSPROP_INIT_USEPROCFORPREP específica del controlador OLE DB para SQL Server controla la creación del procedimiento almacenado temporal. Si el valor de la propiedad es SSPROPVAL_USEPROCFORPREP_ON o SSPROPVAL_USEPROCFORPREP_ON_DROP, el controlador OLE DB para SQL Server intenta crear un procedimiento almacenado cuando se prepara un comando. La creación del procedimiento almacenado se realiza correctamente si el usuario de la aplicación tiene suficientes permisos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Los consumidores que se desconectan con poca frecuencia, la creación de procedimientos almacenados temporales puede requerir recursos significativos de **tempdb**, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la base de datos del sistema en el que se crean objetos temporales. Cuando el valor de SSPROP_INIT_USEPROCFORPREP es SSPROPVAL_USEPROCFORPREP_ ON, se quitan los procedimientos almacenados temporales creados por el controlador OLE DB para SQL Server solo cuando la sesión que creó el comando pierde su conexión a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si esa conexión es la conexión predeterminada creada durante la inicialización del origen de datos, el procedimiento almacenado temporal solamente se quita cuando se cancela la inicialización del origen de datos.  
+ En el caso de los consumidores que se desconectan con poca frecuencia, la creación de procedimientos almacenados temporales puede requerir recursos significativos de **tempdb**, la base de datos del sistema de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la que se crean los objetos temporales. Si el valor de SSPROP_INIT_USEPROCFORPREP es SSPROPVAL_USEPROCFORPREP_ON, los procedimientos almacenados temporales creados por el controlador OLE DB para SQL Server solo se quitan cuando la sesión que ha creado el comando pierde su conexión con la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si esa conexión es la conexión predeterminada creada durante la inicialización del origen de datos, el procedimiento almacenado temporal solamente se quita cuando se cancela la inicialización del origen de datos.  
   
- Cuando el valor de SSPROP_INIT_USEPROCFORPREP es SSPROPVAL_USEPROCFORPREP_ON_DROP, se quitan los procedimientos del controlador de OLE DB para SQL Server temporales almacenados cuando se produce una de las siguientes acciones:  
+ Si el valor de SSPROP_INIT_USEPROCFORPREP es SSPROPVAL_USEPROCFORPREP_ON_DROP, los procedimientos almacenados temporales del controlador OLE DB para SQL Server se quitan cuando se produce una de estas situaciones:  
   
--   El consumidor usa **ICommandText:: SetCommandText** para indicar un nuevo comando.  
+-   El consumidor usa **ICommandText::SetCommandText** para indicar un nuevo comando.  
   
--   El consumidor usa **ICommandPrepare:: Unprepare** para indicar que ya no se requiere el texto del comando.  
+-   El consumidor usa **ICommandPrepare::Unprepare** para indicar que ya no requiere el texto del comando.  
   
 -   El consumidor libera todas las referencias al objeto de comando utilizando el procedimiento almacenado temporal.  
   
  Un objeto de comando tiene a lo sumo un procedimiento almacenado temporal en **tempdb**. Cualquier procedimiento almacenado temporal existente representa el texto de comando actual de un objeto de comando concreto.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Comandos](../../oledb/ole-db-commands/commands.md)  
   
   

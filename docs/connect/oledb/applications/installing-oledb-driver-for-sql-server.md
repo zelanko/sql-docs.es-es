@@ -1,6 +1,6 @@
 ---
-title: Instalar el controlador OLE DB para SQL Server | Documentos de Microsoft
-description: Instalar y desinstalar el controlador OLE DB para SQL Server
+title: Instalar el controlador OLE DB para SQL Server | Microsoft Docs
+description: Instalar y desinstalar el controlador de OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -25,38 +25,38 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e8d238c288e42b2b5f53f2ce5b9f289c05ab1c11
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 7e435aef0d4499f62ea8b6255ce25440436c3cbc
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611670"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106221"
 ---
-# <a name="installing-ole-db-driver-for-sql-server"></a>Instalar el controlador OLE DB para SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="installing-ole-db-driver-for-sql-server"></a>Instalación del controlador OLE DB para SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 Para instalar al controlador OLE DB para SQL Server necesita a msoledbsql.msi instalador.
-Ejecute el programa de instalación y realice las selecciones preferidas. El controlador OLE DB para SQL Server puede ser instalado en paralelo con versiones anteriores de los proveedores OLE DB de Microsoft.
+Ejecute al instalador y realice las selecciones preferidas. El controlador OLE DB para SQL Server puede ser instalado por en paralelo con versiones anteriores de los proveedores OLE DB de Microsoft.
 
 El controlador OLE DB para los archivos de SQL Server (msoledbsql.dll, msoledbsqlr.rll) se instalan en `%SYSTEMROOT%\system32\` . Además, el x64 msoledbsql.msi instala los archivos binarios de 32 bits en `%SYSTEMROOT%\SysWOW64\`.
 
 > [!NOTE]  
-> Toda la configuración del Registro adecuados para el controlador OLE DB para SQL Server se realiza como parte del proceso de instalación.  
+> Todas las configuraciones del Registro adecuados para el controlador OLE DB para SQL Server se realizan como parte del proceso de instalación.  
 
-El controlador OLE DB para SQL Server encabezado y biblioteca de archivos (msoledbsql.h y msoledbsql.lib) se instalan en `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\180\SDK`. Además, el x64 msoledbsql.msi instala los mismos archivos de `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\180\SDK`.  
+El controlador OLE DB para SQL Server encabezado y biblioteca de archivos (msoledbsql.h y msoledbsql.lib) se instalan en `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`. Además, el x64 msoledbsql.msi instala los mismos archivos de `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`.  
 
-Puede distribuir el controlador OLE DB para SQL Server a través de msoledbsql.msi. Es posible que deba instalar el controlador OLE DB para SQL Server al implementar una aplicación. Una manera de instalar varios paquetes en lo que al usuario le parece ser una instalación única es usar tecnología de encadenador y arranque. Para obtener más información, consulte [crear un paquete de arranque personalizado para Visual Studio 2005](http://go.microsoft.com/fwlink/?LinkId=115667) y [Agregar requisitos previos personalizados](http://go.microsoft.com/fwlink/?LinkId=115668).  
+Puede distribuir el controlador OLE DB para SQL Server a través de msoledbsql.msi. Es posible que deba instalar el controlador de OLE DB para SQL Server al implementar una aplicación. Una manera de instalar varios paquetes en lo que al usuario le parece ser una instalación única es usar tecnología de encadenador y arranque. Para obtener más información, vea [Authoring a Custom Bootstrapper Package for Visual Studio 2005](http://go.microsoft.com/fwlink/?LinkId=115667) (Crear un paquete de arranque personalizado para Visual Studio 2005) y [Adding Custom Prerequisites](http://go.microsoft.com/fwlink/?LinkId=115668) (Agregar requisitos previos personalizados).  
   
-El x64 msoledbsql.msi también instala la versión de 32 bits del controlador de OLE DB para SQL Server. Si la aplicación tiene como destino una plataforma distinta a la que se desarrolló, puede descargar versiones de msoledbsql.msi para x64 y x86.
+El x64 msoledbsql.msi también instala la versión de 32 bits del controlador de OLE DB para SQL Server. Si la aplicación tiene como destino una plataforma distinta a la que se desarrolló, puede descargar las versiones de msoledbsql.msi para x64 y x86.
 
-Cuando se invoca msoledbsql.msi, sólo los componentes de cliente se instalan de forma predeterminada. El cliente son componentes son archivos que permiten ejecutar aplicaciones desarrolladas mediante el controlador OLE DB para SQL Server. Para instalar también los componentes SDK, especifique `ADDLOCAL=All` en la línea de comandos. Por ejemplo:  
+Cuando se invoca a msoledbsql.msi, solo los componentes cliente se instalan de forma predeterminada. Los componentes cliente son archivos que permiten la ejecución de una aplicación que se ha desarrollado mediante el controlador OLE DB para SQL Server. Para instalar también los componentes SDK, especifique `ADDLOCAL=All` en la línea de comandos. Por ejemplo:  
 
 `msiexec /i msoledbsql.msi ADDLOCAL=ALL`  
 
 ## <a name="silent-install"></a>Instalación silenciosa  
- Si usas el/passive/qn, /qb o/QR opción con msiexec, también debe especificar IACCEPTMSOLEDBSQLLICENSETERMS = Sí, para indicar explícitamente que acepta los términos de la licencia de usuario final. Esta opción se debe especificar con todas las letras mayúsculas.  
+ Si usa las opciones /passive, /qn, /qb o /qr con msiexec, también debe especificar IACCEPTMSOLEDBSQLLICENSETERMS=YES para indicar explícitamente que acepta los términos de la licencia de usuario final. Esta opción se debe especificar con todas las letras mayúsculas.  
 
 ## <a name="installing-ole-db-driver-for-sql-server-as-a-dependency"></a>Instalar el controlador OLE DB para SQL Server como una dependencia  
 Es importante no desinstalar el controlador OLE DB para SQL Server hasta que se desinstalen todas las aplicaciones dependientes. Para proporcionar a los usuarios con una advertencia de que la aplicación depende de controlador de OLE DB para SQL Server, use la opción de instalación APPGUID en su MSI, como se indica a continuación:  
@@ -64,7 +64,7 @@ Es importante no desinstalar el controlador OLE DB para SQL Server hasta que se 
  `msiexec /i msoledbsql.msi APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
 
 El valor pasado a APPGUID es su código de producto específico. Se debe crear un código de producto al usar Microsoft Installer para empaquetar su programa de instalación de la aplicación.
-La opción de GUIDDELAAPLICACIÓN requiere ejecutar el programa de instalación desde un símbolo del sistema con privilegios elevados.
+La opción APPGUID requiere ejecutando el programa de instalación desde un símbolo del sistema con privilegios elevados.
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Compilación de aplicaciones con el controlador OLE DB para SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   

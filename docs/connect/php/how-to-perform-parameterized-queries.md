@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: realizar consultas con parámetros | Documentos de Microsoft'
+title: 'Cómo: realizar consultas con parámetros | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6095a83f4bb9982a929e0bb41e7269bc6e41935
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307574"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032994"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>Cómo realizar consultas con parámetros
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,13 +35,13 @@ Los pasos para realizar una consulta con parámetros se pueden resumir en cuatro
   
 2.  Inicialice o actualice las variables PHP de los marcadores de posición en la consulta de Transact-SQL.  
   
-3.  Use las variables PHP del paso 2 para crear o actualizar una matriz de valores de parámetros que corresponden a los marcadores de posición de parámetro en la cadena de Transact-SQL. Los valores de parámetro de la matriz deben ser en el mismo orden que los marcadores de posición diseñado para representarlos.
+3.  Utilice las variables PHP del paso 2 para crear o actualizar una matriz de valores de parámetro que se corresponden, en orden, con los marcadores de posición de la cadena de Transact-SQL. Los valores de parámetro de la matriz deben estar en el mismo orden que los marcadores de posición diseñados para representarlos.
   
 4.  Ejecute la consulta:  
   
     -   Si está utilizando el controlado SQLSRV, use [sqlsrv_query](../../connect/php/sqlsrv-query.md) o [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md).  
   
-    -   Si está utilizando el controlador PDO_SQLSRV, ejecute la consulta con [PDO:: Prepare](../../connect/php/pdo-prepare.md) y [pdostatement:: Execute](../../connect/php/pdostatement-execute.md). En los temas sobre [PDO::prepare](../../connect/php/pdo-prepare.md) y [PDOStatement::execute](../../connect/php/pdostatement-execute.md) se muestran ejemplos de código.  
+    -   Si está usando el controlador PDO_SQLSRV, ejecute la consulta con [PDO::prepare](../../connect/php/pdo-prepare.md) y [PDOStatement::execute](../../connect/php/pdostatement-execute.md). En los temas sobre [PDO::prepare](../../connect/php/pdo-prepare.md) y [PDOStatement::execute](../../connect/php/pdostatement-execute.md) se muestran ejemplos de código.  
   
 En el resto del contenido de este tema se describen las consultas con parámetros que utiliza el controlador SQLSRV.  
   
@@ -53,7 +53,7 @@ En el ejemplo siguiente se actualiza la cantidad en un id. de producto especific
   
 Después, en el ejemplo, se realiza una consulta en la base de datos para comprobar que la cantidad se ha actualizado correctamente. El id. de producto es un parámetro de la consulta SELECT.  
   
-El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -114,12 +114,12 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-En el ejemplo anterior se usa la función **sqlsrv_query** para ejecutar consultas. Esta función es adecuada para ejecutar consultas únicas, puesto que realiza los procesos de preparación y ejecución de la instrucción. La combinación de **sqlsrv_prepare**/**sqlsrv_execute** es mejor para volver a ejecutar una consulta con distintos valores de parámetros. A continuación, encontrará un ejemplo en el que se vuelve a ejecutar una consulta con distintos valores de parámetros.  
+En el ejemplo anterior se usa la función **sqlsrv_query** para ejecutar consultas. Esta función es adecuada para ejecutar consultas únicas, puesto que realiza los procesos de preparación y ejecución de la instrucción. Para volver a ejecutar una consulta con otros valores de parámetro, es mejor hacerlo con la combinación de **sqlsrv_prepare**/**sqlsrv_execute**. A continuación, encontrará un ejemplo en el que se vuelve a ejecutar una consulta con distintos valores de parámetros.  
   
 ## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente se muestra el enlace implícito de variables cuando se usa la función **sqlsrv_prepare** . En el ejemplo se insertan varios pedidos de ventas en la tabla *Sales.SalesOrderDetail* . El *$params* matriz se enlaza a la instrucción (*$stmt*) cuando **sqlsrv_prepare** se llama. Antes de cada ejecución de una consulta que inserta un nuevo pedido de ventas en la tabla, la matriz *$params* se actualiza con los nuevos valores correspondientes a los detalles del pedido de ventas. En la siguiente ejecución de la consulta se utilizan los nuevos valores de parámetro.  
+En el ejemplo siguiente se muestra el enlace implícito de variables cuando se usa la función **sqlsrv_prepare** . En el ejemplo se insertan varios pedidos de ventas en la tabla *Sales.SalesOrderDetail* . La matriz *$params* se enlaza a la instrucción (*$stmt*) cuando se llama a **sqlsrv_prepare**. Antes de cada ejecución de una consulta que inserta un nuevo pedido de ventas en la tabla, la matriz *$params* se actualiza con los nuevos valores correspondientes a los detalles del pedido de ventas. En la siguiente ejecución de la consulta se utilizan los nuevos valores de parámetro.  
   
-El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -191,7 +191,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Conversión de tipos de datos](../../connect/php/converting-data-types.md)
 
 [Consideraciones de seguridad para los controladores de Microsoft para PHP para SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)

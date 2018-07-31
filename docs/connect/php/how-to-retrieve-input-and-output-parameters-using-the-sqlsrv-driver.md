@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: recuperar parámetros de E/S con el controlador SQLSRV | Documentos de Microsoft'
+title: 'Cómo: recuperar parámetros de E/S con el controlador SQLSRV | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/12/2018
 ms.prod: sql
@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 57143ae8694bba2bdeae3ff552b2ebb089ce6536
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34563933"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054083"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-En este tema se muestra cómo usar el controlador SQLSRV para llamar a un procedimiento almacenado en el que se ha definido un parámetro como parámetro de entrada/salida, y cómo recuperar los resultados. Cuando recupera un parámetro de entrada/salida o de salida, todos los resultados devueltos por el procedimiento almacenado deben utilizarse antes de que el valor del parámetro devuelto sea accesible.  
+En este tema se muestra cómo usar el controlador SQLSRV para llamar a un procedimiento almacenado en el que se ha definido un parámetro como parámetro de entrada/salida, y cómo recuperar los resultados. Cuando se recupera un parámetro de salida o uno de entrada/salida, se deben usar todos los resultados que devuelve el procedimiento almacenado antes de que pueda accederse al valor del parámetro devuelto.  
   
 > [!NOTE]  
 > Las variables que se inicializan o actualizan a **Null**, **DateTime**o tipos de secuencia no se pueden usar como parámetros de salida.  
@@ -36,12 +36,12 @@ En el ejemplo siguiente se llama un procedimiento almacenado que resta las horas
 > [!NOTE]  
 > Al inicializar *$vacationHrs* en 4, el valor del tipo PHPTYPE devuelto se establece como un entero. Para garantizar la integridad del tipo de datos, los parámetros de entrada/salida se deben inicializar antes de llamar al procedimiento almacenado, o bien hay que especificar el tipo PHPTYPE deseado. Para obtener información sobre cómo especificar el tipo PHPTYPE, consulte [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
-Dado que el procedimiento almacenado devuelve dos resultados, [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) debe llamarse una vez se haya ejecutado el procedimiento almacenado para que esté disponible el valor del parámetro de salida. Después de llamar a **sqlsrv_next_result**, *$vacationHrs* contiene el valor del parámetro de salida devuelto por el procedimiento almacenado.  
+Dado que el procedimiento almacenado devuelve dos resultados, se debe llamar a [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) una vez que se haya ejecutado el procedimiento almacenado para que esté disponible el valor del parámetro de salida. Después de llamar a **sqlsrv_next_result**, *$vacationHrs* contiene el valor del parámetro de salida devuelto por el procedimiento almacenado.  
   
 > [!NOTE]  
-> Se recomienda llamar a procedimientos almacenados mediante sintaxis canónica. Para obtener más información sobre la sintaxis canónica, consulte [al llamar a un procedimiento almacenado](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
+> Se recomienda llamar a procedimientos almacenados mediante sintaxis canónica. Para obtener más información sobre la sintaxis canónica, vea [Llamar a un procedimiento almacenado](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
-El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -126,7 +126,7 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> Al enlazar un parámetro de entrada/salida para un tipo bigint, si el valor puede acabar fuera del intervalo de un [entero](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), debe especificar su tipo de campo SQL como SQLSRV_SQLTYPE_BIGINT. En caso contrario, se podrían producir una excepción de "valor fuera del intervalo".
+> Al enlazar un parámetro de entrada y salida a un tipo bigint, si el valor puede acabar fuera del intervalo de un [entero](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), deberá especificar su tipo de campo SQL como SQLSRV_SQLTYPE_BIGINT. En caso contrario, se podrían producir una excepción de "valor fuera del intervalo".
 
 ## <a name="example-2"></a>Ejemplo 2
 Este ejemplo de código muestra cómo enlazar un valor bigint grandes como un parámetro de entrada/salida.  
@@ -155,7 +155,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Especificación de la dirección del parámetro con el controlador SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
 [Recuperación de parámetros de salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)

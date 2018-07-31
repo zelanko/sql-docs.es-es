@@ -1,6 +1,6 @@
 ---
-title: Fecha y hora y conjuntos de filas de esquema | Documentos de Microsoft
-description: Fecha y hora y esquema de conjuntos de filas
+title: Fecha y hora y conjuntos de filas de esquema | Microsoft Docs
+description: Fecha y hora y conjuntos de filas de esquema
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c501274d977b924cb0dd478db26f9e39e399f61f
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: e2e1192cb0f69f72075a9e6164b91def61c80871
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666425"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109657"
 ---
-# <a name="metadata---date-and-time-and-schema-rowsets"></a>Metadatos: fecha y hora y conjuntos de filas de esquema
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="metadata---date-and-time-and-schema-rowsets"></a>Metadatos: Fecha y hora y conjuntos de filas de esquema
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -62,7 +62,7 @@ ms.locfileid: "35666425"
   
  Se proporciona una nueva marca en COLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE, para permitir que una aplicación determine el tipo de servidor de columnas, donde DATA_TYPE es DBTYPE_DBTIMESTAMP. DATETIME_PRECISION también se debe utilizar para identificar el tipo de servidor.  
   
- DBCOLUMNFLAGS_SS_ISVARIABLESCALE es únicamente válido cuando se conecta a un [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] servidor o posterior. DBCOLUMNFLAGS_SS_ISFIXEDSCALE no está definido cuando se conecta a servidores de nivel inferior.  
+ DBCOLUMNFLAGS_SS_ISVARIABLESCALE es solo válido cuando se conecta a un servidor [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o posteriores. DBCOLUMNFLAGS_SS_ISFIXEDSCALE no está definido cuando se conecta a servidores de nivel inferior.  
   
 ## <a name="procedureparameters-rowset"></a>Conjunto de filas PROCEDURE_PARAMETERS  
  DATA_TYPE contiene los mismos valores que el conjunto de filas de esquema COLUMNS y TYPE_NAME contiene el tipo de servidor.  
@@ -96,9 +96,9 @@ ms.locfileid: "35666425"
 |BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE a menos que se dé uno de los siguientes casos:<br /><br /> Es un cliente conectado a un servidor de nivel inferior.<br /><br /> La propiedad de conexión de compatibilidad de tipo de datos especifica un nivel de compatibilidad igual a 80.|VARIANT_TRUE a menos que se dé uno de los siguientes casos:<br /><br /> Es un cliente conectado a un servidor de nivel inferior.<br /><br /> La propiedad de conexión de compatibilidad de tipo de datos especifica un nivel de compatibilidad igual a 80.|VARIANT_TRUE|  
 |IS_FIXEDLENGTH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
   
- OLE DB solamente define MINIMUM_SCALE y MAXIMUM_SCALE para tipos numéricos y decimales, por lo que el controlador OLE DB para el uso de SQL Server de estas columnas para time, datetime2 y datetimeoffset no es estándar.  
+ OLE DB solo define MINIMUM_SCALE y MAXIMUM_SCALE para tipos numéricos y decimales, por lo que el uso que hace el controlador OLE DB para SQL Server de estas columnas para time, datetime2 y datetimeoffset no es estándar.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Metadatos &#40;OLE DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
   
   

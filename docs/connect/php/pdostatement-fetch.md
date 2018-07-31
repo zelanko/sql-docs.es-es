@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Fetch | Documentos de Microsoft'
+title: 'Pdostatement:: Fetch | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 499175b3e75c27b82df93ef84f8b17a049265356
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308424"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020003"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,17 +34,17 @@ mixed PDOStatement::fetch ([ $fetch_style[, $cursor_orientation[, $cursor_offset
 ```  
   
 #### <a name="parameters"></a>Parámetros  
-$*fetch_style*: un símbolo opcional (valor entero) que especifica el formato de la fila de datos. Vea la sección Comentarios para obtener la lista de posibles valores de $*fetch_style*. El valor predeterminado es PDO::FETCH_BOTH. $*fetch_style* la operación de captura método reemplazará el $*fetch_style* especificado en el método PDO:: Query.  
+$*fetch_style*: símbolo opcional (entero) que especifica el formato de los datos de la fila. Vea la sección Comentarios para obtener la lista de posibles valores de $*fetch_style*. El valor predeterminado es PDO::FETCH_BOTH.El parámetro  $*fetch_style* del método fetch reemplaza al parámetro $*fetch_style* especificado en el método PDO::query.  
   
-$*cursor_orientation*: un símbolo opcional (valor entero) que indica la fila que se va a recuperar cuando especifica la instrucción preparada `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL`. Vea la sección Comentarios para obtener la lista de posibles valores de $*cursor_orientation*. Consulte [PDO::prepare](../../connect/php/pdo-prepare.md) para obtener un ejemplo donde se utiliza un cursor desplazable.  
+$*cursor_orientation*: símbolo opcional (entero) que indica la fila que se va a recuperar cuando la instrucción prepare especifica `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL`. Vea la sección Comentarios para obtener la lista de posibles valores de $*cursor_orientation*. Consulte [PDO::prepare](../../connect/php/pdo-prepare.md) para obtener un ejemplo donde se utiliza un cursor desplazable.  
   
-$*cursor_offset*: un símbolo opcional (valor entero) sirve para especificar la fila para capturar cuando $*cursor_orientation* es fetch_ori_abs o fetch_ori_rel y PDO:: attr_cursor sea PDO:: cursor_scroll.  
+$*cursor_offset*: símbolo opcional (entero) que especifica la fila que se va a capturar cuando $*cursor_orientation* es PDO::FETCH_ORI_ABS o PDO::FETCH_ORI_REL, y PDO::ATTR_CURSOR es PDO::CURSOR_SCROLL.  
   
 ## <a name="return-value"></a>Valor devuelto  
 Un valor mixto que devuelve una fila o False.  
   
 ## <a name="remarks"></a>Notas  
-Cuando se llama al método de captura, el cursor avanza automáticamente. En la tabla siguiente contiene la lista de posibles $*fetch_style* valores.  
+Cuando se llama al método de captura, el cursor avanza automáticamente. La tabla siguiente contiene la lista de posibles valores de $*fetch_style*.  
   
 |$*fetch_style*|Descripción|  
 |-------------------|---------------|  
@@ -59,7 +59,7 @@ Cuando se llama al método de captura, el cursor avanza automáticamente. En la 
   
 Si el cursor se encuentra al final del conjunto de resultados (se ha recuperado la última fila y el cursor ha avanzado más allá del límite del conjunto de resultados) y si es de solo avance (PDO::ATTR_CURSOR = PDO::CURSOR_FWDONLY), se producirá un error en las llamadas de recuperación posteriores.  
   
-Si el cursor es desplazable (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), el método de captura moverá el cursor dentro del límite del conjunto de resultados. En la tabla siguiente contiene la lista de posibles $*cursor_orientation* valores.  
+Si el cursor es desplazable (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), el método de captura moverá el cursor dentro del límite del conjunto de resultados. La tabla siguiente contiene la lista de posibles valores de $*cursor_orientation*.  
   
 |$*cursor_orientation*|Descripción|  
 |--------------------------|---------------|  
@@ -67,10 +67,10 @@ Si el cursor es desplazable (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), el método 
 |PDO::FETCH_ORI_PRIOR|Recupera la fila anterior.|  
 |PDO::FETCH_ORI_FIRST|Recupera la primera fila.|  
 |PDO::FETCH_ORI_LAST|Recupera la última fila.|  
-|Fetch_ori_abs, *num*|Recupera la fila solicitada en $*cursor_offset* por número de fila.|  
-|Fetch_ori_rel, *num*|Recupera la fila solicitada en $*cursor_offset* por su posición relativa desde la posición actual.|  
+|PDO::FETCH_ORI_ABS, *num*|Recupera la fila solicitada en $*cursor_offset* por número de fila.|  
+|PDO::FETCH_ORI_REL, *num*|Recupera la fila solicitada en $*cursor_offset* por posición relativa desde la posición actual.|  
   
-Si el valor especificado para $*cursor_offset* $*cursor_orientation* los resultados en una posición fuera del límite de conjunto de resultados, fetch se producirá un error.  
+Si el valor especificado para $*cursor_offset* o $*cursor_orientation* se traduce en una posición fuera del límite del conjunto de resultados, se produce un error de captura.  
   
 En la versión 2.0 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], se agregó compatibilidad con PDO.  
   
@@ -144,7 +144,7 @@ En la versión 2.0 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.m
 ?>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Clase PDOStatement](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

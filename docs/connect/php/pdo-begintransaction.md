@@ -1,5 +1,5 @@
 ---
-title: 'PDO:: BeginTransaction | Documentos de Microsoft'
+title: 'PDO:: BeginTransaction | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48b5d1343a941904280c33f5a983be944c751f2f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307974"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020893"
 ---
 # <a name="pdobegintransaction"></a>PDO::beginTransaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,13 +37,13 @@ bool PDO::beginTransaction();
 Se devuelve el valor True si la llamada al método se realizó correctamente; en caso contrario, se devuelve False.  
   
 ## <a name="remarks"></a>Notas  
-Finaliza la transacción iniciada con PDO:: BeginTransaction cuando [PDO:: Commit](../../connect/php/pdo-commit.md) o [PDO:: Rollback](../../connect/php/pdo-rollback.md) se llama.  
+Cuando finalice la transacción iniciada con PDO::beginTransaction, se llamará a [PDO::commit](../../connect/php/pdo-commit.md) o [PDO::rollback](../../connect/php/pdo-rollback.md).  
   
 El valor de PDO::ATTR_AUTOCOMMIT no afecta a PDO::beginTransaction.  
   
 No se permiten llamar a PDO::beginTransaction antes de  finalizar la transacción PDO::beginTransaction anterior con PDO::rollback o PDO::commit.  
   
-La conexión vuelve al modo de confirmación automática si se produce un error en este método.  
+Si se produce un error en este método, la conexión vuelve al modo de confirmación automática.  
   
 En la versión 2.0 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], se agregó compatibilidad con PDO.  
   
@@ -63,7 +63,7 @@ En el ejemplo siguiente se utiliza una base de datos denominada "Test" y una tab
 ?>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Clase PDO](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

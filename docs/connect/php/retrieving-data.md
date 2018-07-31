@@ -1,5 +1,5 @@
 ---
-title: Recuperación de datos | Documentos de Microsoft
+title: Recuperación de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 84acaf953419f9802a5bf900d27ffc9a550a673d
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309194"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983041"
 ---
 # <a name="retrieving-data"></a>Recuperación de datos
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,7 +52,7 @@ El controlador SQLSRV de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_m
   
 Si una consulta recupera más de un conjunto de resultados, puede desplazarse al siguiente conjunto de resultados con [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md).  
   
-A partir de la versión 1.1 de la [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], puede usar [sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md) para comprobar si un conjunto de resultados tiene filas.  
+A partir de la versión 1.1 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], puede utilizar [sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md) para comprobar si un conjunto de resultados tiene filas.  
   
 ## <a name="pdosqlsrv-driver"></a>Controlador PDO_SQLSRV  
 El controlador PDO_SQLSRV de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] proporciona las siguientes opciones para recuperar datos de un conjunto de resultados:  
@@ -83,7 +83,7 @@ Puede ver cuántas filas se encuentran en un conjunto de resultados si especific
 ## <a name="related-sections"></a>Secciones relacionadas  
 [Cómo especificar tipos de datos PHP](../../connect/php/how-to-specify-php-data-types.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Programación de guía para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Recuperación de datos](../../connect/php/retrieving-data.md)  

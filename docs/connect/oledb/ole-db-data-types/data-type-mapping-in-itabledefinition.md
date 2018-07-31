@@ -1,6 +1,6 @@
 ---
-title: Asignación de tipo de datos en ITableDefinition | Documentos de Microsoft
-description: Asignación de tipo de datos en ITableDefinition
+title: Asignación de tipos de datos en ITableDefinition | Microsoft Docs
+description: Asignación de tipos de datos en ITableDefinition
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -22,46 +22,46 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d613fc7be394bbf16c86c5e217e3dfe83a4296a1
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 7dc27dcc7b59cb7b5d1d63d48e29d7411f9e318b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666355"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107287"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>Asignación de tipos de datos en ITableDefinition
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Cuando se crean tablas utilizando la **ITableDefinition:: CreateTable** función, puede especificar el controlador OLE DB para el consumidor de SQL Server [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de datos de la *pwszTypeName* miembro de la Matriz DBCOLUMNDESC que se pasa. Si el consumidor especifica el tipo de datos de una columna por su nombre, los datos de OLE DB escriba asignación, representada por la *wType* miembro de la estructura DBCOLUMNDESC, se omite.  
+  Cuando se crean tablas mediante la función **ITableDefinition::CreateTable**, el consumidor del controlador OLE DB para SQL Server puede especificar tipos de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el miembro *pwszTypeName* de la matriz DBCOLUMNDESC que se pasa. Si el consumidor especifica el tipo de datos de una columna por nombre, se omite la asignación del tipo de datos de OLE DB, representada por el miembro *wType* de la estructura DBCOLUMNDESC.  
   
- Al especificar los nuevos tipos de datos de columna con tipos de datos de OLE DB mediante la estructura DBCOLUMNDESC *wType* miembro, el controlador OLE DB para SQL Server asigna los tipos de datos OLE DB como se indica a continuación.  
+ Cuando se especifican nuevos tipos de datos de columna con tipos de datos de OLE DB mediante el miembro *wType* de la estructura DBCOLUMNDESC, el controlador OLE DB para SQL Server asigna los tipos de datos de OLE DB tal y como se indica a continuación.  
   
 |Tipo de datos de OLE DB|SQL Server<br /><br /> tipo de datos|Información adicional|  
 |----------------------|------------------------------|----------------------------|  
 |DBTYPE_BOOL|**bit**||  
-|DBTYPE_BYTES|**binario**, **varbinary**, **imagen,** o **varbinary (max)**|El controlador OLE DB para SQL Server inspecciona la *ulColumnSize* miembro de la estructura DBCOLUMNDESC. Según el valor y la versión de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia, el controlador OLE DB para SQL Server asigna el tipo a **imagen**.<br /><br /> Si el valor de *ulColumnSize* es menor que la longitud máxima de un **binario** columna, tipo de datos, a continuación, el controlador OLE DB para SQL Server inspecciona el miembro *rgPropertySets*miembro. Si DBPROP_COL_FIXEDLENGTH es VARIANT_TRUE, el controlador OLE DB para SQL Server asigna el tipo a **binario**. Si el valor de la propiedad es VARIANT_FALSE, el controlador OLE DB para SQL Server asigna el tipo a **varbinary**. En cualquier caso, el miembro *ulColumnSize* miembro determina el ancho de la columna de SQL Server creada.|  
+|DBTYPE_BYTES|**binary**, **varbinary**, **image** o **varbinary(max)**|El controlador OLE DB para SQL Server inspecciona el *ulColumnSize* miembro de la estructura DBCOLUMNDESC. Según el valor y la versión de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de instancia, el controlador OLE DB para SQL Server asigna el tipo a **imagen**.<br /><br /> Si el valor de *ulColumnSize* es menor que la longitud máxima de una columna de tipo de datos **binary**, el controlador OLE DB para SQL Server inspecciona el miembro *rgPropertySets* de DBCOLUMNDESC. Si DBPROP_COL_FIXEDLENGTH es VARIANT_TRUE, el controlador OLE DB para SQL Server asigna el tipo a **binario**. Si el valor de la propiedad es VARIANT_FALSE, el controlador OLE DB para SQL Server asigna el tipo a **varbinary**. En cualquier caso, el miembro *ulColumnSize* de DBCOLUMNDESC determina el ancho de la columna SQL Server creada.|  
 |DBTYPE_CY|**money**||  
 |DBTYPE_DBTIMESTAMP|**datetime2**||  
 |DBTYPE_GUID|**uniqueidentifier**||  
 |DBTYPE_I2|**smallint**||  
 |DBTYPE_I4|**int**||  
 |DBTYPE_I8|**bigint**||
-|DBTYPE_NUMERIC|**numeric**|El controlador OLE DB para SQL Server inspecciona los miembros *bPrecision* y *bScale* miembros para determinar la precisión y escala para la **numérico** columna.|  
+|DBTYPE_NUMERIC|**numeric**|El controlador OLE DB para SQL Server inspecciona los miembros *bPrecision* y *bScale* de DBCOLUMDESC para determinar la precisión y la escala de la columna **numeric**.|  
 |DBTYPE_R4|**real**||  
 |DBTYPE_R8|**float**||  
-|DBTYPE_STR|**char**, **varchar**, **texto,** o **varchar (max)**|El controlador OLE DB para SQL Server inspecciona la *ulColumnSize* miembro de la estructura DBCOLUMNDESC. Según el valor y la versión de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia, el controlador OLE DB para SQL Server asigna el tipo a **texto**.<br /><br /> Si el valor de *ulColumnSize* es menor que la longitud máxima de una columna de tipo de datos de caracteres multibyte y, a continuación, el controlador OLE DB para SQL Server inspecciona el miembro *rgPropertySets* miembro. Si DBPROP_COL_FIXEDLENGTH es VARIANT_TRUE, el controlador OLE DB para SQL Server asigna el tipo a **char**. Si el valor de la propiedad es VARIANT_FALSE, el controlador OLE DB para SQL Server asigna el tipo a **varchar**. En cualquier caso, el miembro *ulColumnSize* miembro determina el ancho de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] columna creada.|  
-|DBTYPE_UDT|**UDT**|La siguiente información se usa en **DBCOLUMNDESC** estructuras **ITableDefinition:: CreateTable** cuando se requieren columnas UDT:<br /><br /> *pwSzTypeName* se omite.<br /><br /> *rgPropertySets* debe incluir un **DBPROPSET_SQLSERVERCOLUMN** propiedad establecida tal y como se describe en la sección sobre **DBPROPSET_SQLSERVERCOLUMN**, en [Defined Types ](../../oledb/features/using-user-defined-types.md).|  
+|DBTYPE_STR|**char**, **varchar**, **text** o **varchar(max)**|El controlador OLE DB para SQL Server inspecciona el *ulColumnSize* miembro de la estructura DBCOLUMNDESC. Según el valor y la versión de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de instancia, el controlador OLE DB para SQL Server asigna el tipo a **texto**.<br /><br /> Si el valor de *ulColumnSize* es menor que la longitud máxima de una columna de tipo de datos de caracteres multibyte, el controlador OLE DB para SQL Server inspecciona el miembro *rgPropertySets* de DBCOLUMNDESC. Si DBPROP_COL_FIXEDLENGTH es VARIANT_TRUE, el controlador OLE DB para SQL Server asigna el tipo a **char**. Si el valor de la propiedad es VARIANT_FALSE, el controlador OLE DB para SQL Server asigna el tipo a **varchar**. En cualquier caso, el miembro *ulColumnSize* de DBCOLUMNDESC determina el ancho de la columna [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] creada.|  
+|DBTYPE_UDT|**UDT**|Cuando se requieren columnas UDT, **ITableDefinition::CreateTable** usa la información que se muestra a continuación en estructuras **DBCOLUMNDESC**:<br /><br /> *pwSzTypeName* se omite.<br /><br /> *rgPropertySets* debe incluir un **DBPROPSET_SQLSERVERCOLUMN** propiedad establecida como se describe en la sección en **DBPROPSET_SQLSERVERCOLUMN**, en [Defined Types ](../../oledb/features/using-user-defined-types.md).|  
 |DBTYPE_UI1|**tinyint**||  
 |DBTYPE_VARIANT|**sql_variant**||
-|DBTYPE_WSTR|**nchar**, **nvarchar**, **ntext,** o **nvarchar (max)**|El controlador OLE DB para SQL Server inspecciona la *ulColumnSize* miembro de la estructura DBCOLUMNDESC. En función del valor, el controlador OLE DB para SQL Server asigna el tipo a **ntext**.<br /><br /> Si el valor de *ulColumnSize* es menor que la longitud máxima de una columna de tipo de datos de caracteres Unicode y, a continuación, el controlador OLE DB para SQL Server inspecciona el miembro *rgPropertySets* miembro. Si DBPROP_COL_FIXEDLENGTH es VARIANT_TRUE, el controlador OLE DB para SQL Server asigna el tipo a **nchar**. Si el valor de la propiedad es VARIANT_FALSE, el controlador OLE DB para SQL Server asigna el tipo a **nvarchar**. En cualquier caso, el miembro *ulColumnSize* miembro determina el ancho de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] columna creada.|  
+|DBTYPE_WSTR|**nchar**, **nvarchar**, **ntext** o **nvarchar(max)**|El controlador OLE DB para SQL Server inspecciona el *ulColumnSize* miembro de la estructura DBCOLUMNDESC. En función del valor, el controlador OLE DB para SQL Server asigna el tipo a **ntext**.<br /><br /> Si el valor de *ulColumnSize* es menor que la longitud máxima de una columna de tipo de datos de caracteres Unicode, el controlador OLE DB para SQL Server inspecciona el miembro *rgPropertySets* de DBCOLUMNDESC. Si DBPROP_COL_FIXEDLENGTH es VARIANT_TRUE, el controlador OLE DB para SQL Server asigna el tipo a **nchar**. Si el valor de la propiedad es VARIANT_FALSE, el controlador OLE DB para SQL Server asigna el tipo a **nvarchar**. En cualquier caso, el miembro *ulColumnSize* de DBCOLUMNDESC determina el ancho de la columna [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] creada.|  
 |DBTYPE_XML|**XML**||  
 
 > [!NOTE]  
->  Al crear una nueva tabla, el controlador OLE DB para SQL Server asigna solo los valores OLE DB datos tipo enumeración especificados en la tabla anterior. Al intentar crear una tabla con una columna de cualquier otro tipo de datos de OLE DB, se genera un error.  
+>  Cuando se crea una tabla, el controlador OLE DB para SQL Server solo asigna los valores de enumeración del tipo de datos de OLE DB especificado en la tabla anterior. Al intentar crear una tabla con una columna de cualquier otro tipo de datos de OLE DB, se genera un error.  
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Tipos de datos &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

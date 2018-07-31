@@ -1,5 +1,5 @@
 ---
-title: Las transacciones | Documentos de Microsoft
+title: Las transacciones | Microsoft Docs
 description: Transacciones en el controlador OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,23 +18,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1f1e0b252960468e443b157c7c95213809a4d318
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 04be1dd71842471a05b3d0f46655f13a0113768f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689318"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108687"
 ---
 # <a name="transactions"></a>Transactions
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  El controlador OLE DB para SQL Server implementa la compatibilidad con transacciones locales. El consumidor puede utilizar transacciones distribuidas o coordinadas mediante Microsoft DTC (Coordinador de transacciones distribuidas). Para los consumidores que requieren control de transacciones que abarque varias sesiones, el controlador OLE DB para SQL Server puede combinar las transacciones que inicia y mantiene MS DTC.  
+  El controlador OLE DB para SQL Server implementa la compatibilidad con transacciones locales. El consumidor puede utilizar transacciones distribuidas o coordinadas mediante Microsoft DTC (Coordinador de transacciones distribuidas). Para los consumidores que requieren un control de las transacciones que abarque varias sesiones, el controlador OLE DB para SQL Server puede combinar las transacciones que inicia y mantiene MS DTC.  
   
- De forma predeterminada, el controlador OLE DB para SQL Server utiliza un modo de transacción de confirmación automática, donde cada acción discreta en una sesión del consumidor comprende una transacción completa en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El controlador OLE DB para el modo de confirmación automática de SQL Server es local, y transacciones de confirmación automática nunca abarcan más de una sola sesión.  
+ De forma predeterminada, el controlador OLE DB para SQL Server usa un modo de transacción con confirmación automática, donde cada acción específica en una sesión del consumidor comprende una transacción completa en una sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El modo de confirmación automática del controlador OLE DB para SQL Server es local y las transacciones con confirmación automática nunca abarcan más de una única sesión.  
   
- El controlador OLE DB para SQL Server expone la **ITransactionLocal** interfaz, lo que permite al consumidor de forma explícita e implícitamente iniciar transacciones en una sola conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El controlador OLE DB para SQL Server no admite transacciones locales anidadas.  
+ El controlador OLE DB para SQL Server expone la interfaz **ITransactionLocal**, que permite al consumidor iniciar transacciones de forma explícita e implícita en una conexión única a una sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El controlador OLE DB para SQL Server no admite transacciones locales anidadas.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -44,7 +44,7 @@ ms.locfileid: "35689318"
   
 -   [Niveles de aislamiento &#40;OLE DB&#41;](../../oledb/ole-db-transactions/isolation-levels-ole-db.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Programación del controlador OLE DB para SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

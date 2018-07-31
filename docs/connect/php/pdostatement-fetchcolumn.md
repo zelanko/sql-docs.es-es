@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::fetchColumn | Documentos de Microsoft
+title: PDOStatement::fetchColumn | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20e79158a2b38dac6799e9affe7ac4bd656ff4f3
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308894"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983249"
 ---
 # <a name="pdostatementfetchcolumn"></a>PDOStatement::fetchColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ string PDOStatement::fetchColumn ([ $column_number ] );
 ```  
   
 #### <a name="parameters"></a>Parámetros  
-$*núm_columna*: un entero opcional que indica el número de columna de base cero. El valor predeterminado es 0 (la primera columna de la fila).  
+$*column_number*: un valor entero opcional que indica el número de columna de base cero. El valor predeterminado es 0 (la primera columna de la fila).  
   
 ## <a name="return-value"></a>Valor devuelto  
 Una columna o  el valor False si no hay más filas.  
@@ -57,7 +57,7 @@ En la versión 2.0 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.m
 ?>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Clase PDOStatement](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

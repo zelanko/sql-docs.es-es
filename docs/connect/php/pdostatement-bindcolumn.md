@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Bindcolumn | Documentos de Microsoft'
+title: 'Pdostatement:: Bindcolumn | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b01f19dcb7b55da9c547d07d07784fe1730cdd66
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308454"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006897"
 ---
 # <a name="pdostatementbindcolumn"></a>PDOStatement::bindColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,15 +34,15 @@ bool PDOStatement::bindColumn($column, &$param[, $type[, $maxLen[, $driverdata ]
 ```  
   
 #### <a name="parameters"></a>Parámetros  
-$*columna*: el número (mixto) de la columna (índice basado en 1) o el nombre de la columna del conjunto de resultados.  
+$*column*: el número (mixto) de la columna (índice basado en 1) o el nombre de la columna del conjunto de resultados.  
   
-&$*param*: el nombre (mixto) de la variable PHP a la que se enlazará la columna.  
+&$*param*: el nombre mixto de la variable PHP a la que se enlazará la columna.  
   
-$*tipo de*: el tipo de datos opcional del parámetro, representado por una constante PDO:: param_ *.  
+$*type*: el tipo de datos opcional del parámetro, que se representa mediante una constante PDO::PARAM_*.  
   
 $*maxLen*: un valor entero opcional que no usan los controladores de Microsoft para PHP para SQL Server.  
   
-$*driverdata*: el controlador de parámetros mixtos opcionales. Por ejemplo, podría especificar PDO::SQLSRV_ENCODING_UTF8 para enlazar la columna a una variable como una cadena codificada en UTF-8.  
+$*driverdata*: parámetros mixtos opcionales del controlador. Por ejemplo, podría especificar PDO::SQLSRV_ENCODING_UTF8 para enlazar la columna a una variable como una cadena codificada en UTF-8.  
   
 ## <a name="return-value"></a>Valor devuelto  
 Se devuelve el valor TRUE si la operación se realiza correctamente; de lo contrario, se devuelve FALSE.  
@@ -70,7 +70,7 @@ while ( $row = $stmt->fetch( PDO::FETCH_BOUND ) ){
 ?>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Clase PDOStatement](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

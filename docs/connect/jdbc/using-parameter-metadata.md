@@ -1,5 +1,5 @@
 ---
-title: Uso de los metadatos de parámetro | Documentos de Microsoft
+title: Usar metadatos de parámetros | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -15,29 +15,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c2ff7d2646c0a3838b8a0dc72249b73e64227dd7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852200"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982180"
 ---
 # <a name="using-parameter-metadata"></a>Usar metadatos de parámetros
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Para consultar un [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) o un [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) objeto acerca de los parámetros que contienen, el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] implementa el [ SQLServerParameterMetaData](../../connect/jdbc/reference/sqlserverparametermetadata-class.md) clase. Esta clase contiene numerosos campos y métodos que devuelven información en forma de un solo valor.  
+  Para consultar un objeto [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) o [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) sobre los parámetros que contiene, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] implementa la clase [SQLServerParameterMetaData](../../connect/jdbc/reference/sqlserverparametermetadata-class.md). Esta clase contiene numerosos campos y métodos que devuelven información en forma de un solo valor.  
   
  Para crear un objeto SQLServerParameterMetaData, puede usar el [getParameterMetaData](../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md) métodos de las clases SQLServerPreparedStatement y SQLServerCallableStatement.  
   
- En el ejemplo siguiente, una conexión abierta a la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] base de datos de ejemplo se pasa a la función, se usa el método getParameterMetaData de la clase SQLServerCallableStatement para devolver un objeto SQLServerParameterMetaData y, a continuación, varios métodos del objeto SQLServerParameterMetaData se usan para mostrar información sobre el tipo y el modo de los parámetros que se encuentran dentro del procedimiento almacenado HumanResources.uspUpdateEmployeeHireInfo.  
+ En el ejemplo siguiente, una conexión abierta a la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] base de datos de ejemplo se pasa a la función, se usa el método getParameterMetaData de la clase SQLServerCallableStatement para devolver un objeto SQLServerParameterMetaData y, a continuación, varios métodos del objeto SQLServerParameterMetaData se usan para mostrar información sobre el tipo y el modo de los parámetros que están dentro del procedimiento almacenado HumanResources.uspUpdateEmployeeHireInfo.  
   
  [!code[JDBC#UsingParamMetaData1](../../connect/jdbc/codesnippet/Java/using-parameter-metadata_1.java)]  
     
 > [!NOTE]  
 Existen algunas limitaciones cuando se usa la clase SQLServerParameterMetaData con instrucciones preparadas. 
-**Microsoft JDBC Driver 6.0 (o superior) para SQL Server**: al usar SQL Server 2008 o 2008 R2, el controlador JDBC admite instrucciones SELECT, DELETE, INSERT y UPDATE siempre y cuando estas instrucciones no contengan subconsultas o combinaciones.  
+**Con Microsoft JDBC Driver 6.0 (o superior) para SQL Server**: al usar SQL Server 2008 o 2008 R2, el controlador JDBC admite las instrucciones SELECT, DELETE, INSERT y UPDATE siempre y cuando estas no contengan subconsultas ni combinaciones.  
 
-Las consultas de combinación también no se admiten para la clase SQLServerParameterMetaData al usar SQL Server 2008 o 2008 R2. Para SQL Server 2012 y versiones superiores, se admiten metadatos de parámetros con consultas complejas.  
+Las consultas MERGE tampoco son compatibles con la clase SQLServerParameterMetaData cuando se usan SQL Server 2008 o 2008 R2. Para SQL Server 2012 y versiones superiores, se admiten metadatos de parámetros con consultas complejas.  
 
-No se admite la recuperación de metadatos de parámetros para las columnas cifradas. **Con Microsoft JDBC Driver 4.1 o 4.2 para SQL Server**: el controlador es compatible con las instrucciones SELECT, DELETE, INSERT y UPDATE siempre y cuando estas instrucciones no contengan subconsultas o combinaciones. También, las consultas de combinación no se admiten para la clase SQLServerParameterMetaData.  
+No se admite la recuperación de metadatos de parámetros para las columnas cifradas. **Con Microsoft JDBC Driver 4.1 o 4.2 para SQL Server**: el controlador JDBC admite las instrucciones SELECT, DELETE, INSERT y UPDATE siempre y cuando estas no contengan subconsultas ni combinaciones. También, las consultas de combinación no se admiten para la clase SQLServerParameterMetaData.  
   
   

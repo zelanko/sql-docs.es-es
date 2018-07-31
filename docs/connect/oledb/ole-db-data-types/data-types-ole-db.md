@@ -1,5 +1,5 @@
 ---
-title: Tipos de datos (OLE DB) | Documentos de Microsoft
+title: Tipos de datos (OLE DB) | Microsoft Docs
 description: Tipos de datos (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 717e9da58a28daccb6fdfab18f1c3423d9d310df
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: f04b6729f97efdacdc79b035eda9f43c6458d61d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665165"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109347"
 ---
 # <a name="data-types-ole-db"></a>Tipos de datos (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Para ejecutar [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucciones y proceso de los resultados mediante el controlador OLE DB para SQL Server, debe saber cómo el controlador OLE DB para SQL Server asigna [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de datos a tipos de datos de OLE DB al enlazar parámetros o columnas en un conjunto de filas y cuando lo u SES el **ITableDefinition** interfaz para crear una tabla en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Para ejecutar instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] y procesar los resultados mediante el controlador de OLE DB para SQL Server, debe conocer la forma en que el controlador de OLE DB para SQL Server asigna tipos de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a los tipos de datos de OLE DB cuando se enlazan parámetros o columnas en un conjunto de filas y cuando se utiliza la interfaz **ITableDefinition** para crear una tabla en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -41,7 +41,7 @@ ms.locfileid: "35665165"
   
 -   [Estructura SSVARIANT](../../oledb/ole-db-data-types/ssvariant-structure.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Programación del controlador OLE DB para SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

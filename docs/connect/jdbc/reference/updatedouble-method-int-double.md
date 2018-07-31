@@ -1,5 +1,5 @@
 ---
-title: Método updateDouble (int, double) | Documentos de Microsoft
+title: Método updateDouble (int, double) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d92dabbb9dda1091f3fc1c395da5183653989a01
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849580"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995957"
 ---
 # <a name="updatedouble-method-int-double"></a>Método updateDouble (int, double)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Actualiza la columna designada con un **doble** valor según el índice de columna.  
+  Actualiza la columna designada con un valor de **double** según el índice de la columna.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,19 +42,19 @@ public void updateDouble(int index,
 #### <a name="parameters"></a>Parámetros  
  *index*  
   
- Un **int** que indica el índice de columna.  
+ Valor **int** que indica el índice de la columna.  
   
  *x*  
   
- A **doble** valor.  
+ Un **doble** valor.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método updateDouble especificado por el método updateDouble en la interfaz java.sql.ResultSet.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Método updateDouble &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

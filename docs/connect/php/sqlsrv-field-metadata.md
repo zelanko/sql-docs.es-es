@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14b23030980978a4d72d1b9afb405cb7e8cfd630
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309394"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991277"
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Recupera los metadatos de los campos de una instrucción preparada. Para obtener información acerca de cómo preparar una instrucción, consulte [sqlsrv_query](../../connect/php/sqlsrv-query.md) o [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md). Tenga en cuenta que **sqlsrv_field_metadata** se puede llamar en cualquier instrucción preparada, previa y posteriores a la ejecución.  
+Recupera los metadatos de los campos de una instrucción preparada. Para obtener información acerca de cómo preparar una instrucción, consulte [sqlsrv_query](../../connect/php/sqlsrv-query.md) o [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md). Tenga en cuenta que se puede llamar a **sqlsrv_field_metadata** en cualquier instrucción preparada, ya sea antes o después de la ejecución.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -52,7 +52,7 @@ Una **matriz** de matrices o el valor **False**. La matriz consta de una matriz 
 |Tamaño|Número de caracteres de los campos de tipo de carácter: char(n), varchar(n), nchar(n), nvarchar(n) y XML. Número de bytes de los campos de tipo binario: binary(n), varbinary(n) y UDT. En otros tipos de datos de SQL Server, se devuelve**NULL** .|  
 |Precisión|La precisión de los tipos de precisión de variables: real, numeric, decimal, datetime2, datetimeoffset y time. En otros tipos de datos de SQL Server, se devuelve**NULL** .|  
 |Escala|La escala de los tipos de escala de variables: numeric, decimal, datetime2, datetimeoffset y time. En otros tipos de datos de SQL Server, se devuelve**NULL** .|  
-|Admisión de valores NULL|Un valor enumerado que indica si la columna acepta valores null (**SQLSRV_NULLABLE_YES**), la columna no acepta valores null (**SQLSRV_NULLABLE_NO**), o que no se sabe si la columna admite valores null ( **SQLSRV_NULLABLE_UNKNOWN**).|  
+|Admisión de valores NULL|Un valor enumerado que indica si la columna acepta valores Null (**SQLSRV_NULLABLE_YES**), no los acepta (**SQLSRV_NULLABLE_NO**) o no se sabe si los acepta (**SQLSRV_NULLABLE_UNKNOWN**).|  
   
 En la tabla siguiente se proporciona más información sobre las claves de cada submatriz (consulte la documentación de SQL Server para obtener más información sobre estos tipos):  
   
@@ -94,7 +94,7 @@ En la tabla siguiente se proporciona más información sobre las claves de cada 
 La clave que acepta valores Null puede ser yes o no.  
   
 ## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente se crea un recurso de instrucción y, luego, se recuperan y muestran los metadatos de los campos. El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el ejemplo siguiente se crea un recurso de instrucción y, luego, se recuperan y muestran los metadatos de los campos. En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -132,7 +132,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  

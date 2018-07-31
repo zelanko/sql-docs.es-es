@@ -1,5 +1,5 @@
 ---
-title: Compatibilidad con transacciones distribuidas | Documentos de Microsoft
+title: Compatibilidad con transacciones distribuidas | Microsoft Docs
 description: Transacciones distribuidas en el controlador de OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -22,32 +22,32 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 469f72b416e1e262d2a775b1b49e14723a44b171
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: abd6cda6c01f46dd179c462b2d6038c09137de03
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690308"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105991"
 ---
 # <a name="supporting-distributed-transactions"></a>Compatibilidad con transacciones distribuidas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Puede usar el controlador OLE DB para los consumidores de SQL Server la **ITransactionJoin:: JoinTransaction** método para participar en una transacción distribuida coordinada por el Coordinador de transacciones distribuidas de Microsoft (MS DTC).  
+  Los consumidores del controlador OLE DB para SQL Server pueden usar el método **ITransactionJoin::JoinTransaction** para participar en una transacción distribuida coordinada por MS DTC (Coordinador de transacciones distribuidas).  
   
- MS DTC expone objetos COM que permiten a los clientes iniciar y participar en transacciones coordinadas a través de varias conexiones a una variedad de almacenes de datos. Para iniciar una transacción, el controlador OLE DB para el consumidor de SQL Server utiliza MS DTC **ITransactionDispenser** interfaz. El **BeginTransaction** miembro de **ITransactionDispenser** devuelve una referencia en un objeto de transacción distribuida. Esta referencia se pasa al controlador de OLE DB para SQL Server mediante **JoinTransaction**.  
+ MS DTC expone objetos COM que permiten a los clientes iniciar y participar en transacciones coordinadas a través de varias conexiones a una variedad de almacenes de datos. Para iniciar una transacción, el controlador OLE DB para el consumidor de SQL Server utiliza MS DTC **ITransactionDispenser** interfaz. El miembro **BeginTransaction** de **ITransactionDispenser** devuelve una referencia en un objeto de transacción distribuida. Esta referencia se pasa al controlador de OLE DB para SQL Server mediante **JoinTransaction**.  
   
- MS DTC admite la anulación y confirmación asincrónica en transacciones distribuidas. Para recibir notificaciones de estado de transacción asincrónica, el consumidor implementa la **ITransactionOutcomeEvents** interfaz y se conecta la interfaz a un objeto de transacción de MS DTC.  
+ MS DTC admite la anulación y confirmación asincrónica en transacciones distribuidas. Para la notificación en el estado de transacción asincrónica, el consumidor implementa la interfaz y conecta la interfaz **ITransactionOutcomeEvents** a un objeto de transacción de Microsoft DTC.  
   
- Para las transacciones distribuidas, el controlador OLE DB para SQL Server implementa **ITransactionJoin:: JoinTransaction** parámetros tal y como se indica a continuación.  
+ Para las transacciones distribuidas, el controlador OLE DB para SQL Server implementa los parámetros **ITransactionJoin::JoinTransaction** de la siguiente manera.  
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|Un puntero a un objeto de transacción de MS DTC.|  
 |*IsoLevel*|Omite el controlador OLE DB para SQL Server. El nivel de aislamiento para las transacciones coordinadas por MS DTC está determinado cuando el consumidor adquiere un objeto de transacción de MS DTC.|  
-|*IsoFlags*|Debe ser 0. El controlador OLE DB para SQL Server devuelve XACT_E_NOISORETAIN si se especifica cualquier otro valor por el consumidor.|  
-|*POtherOptions*|Si no es NULL, el controlador OLE DB para SQL Server solicita el objeto de opciones de la interfaz. El controlador OLE DB para SQL Server devuelve XACT_E_NOTIMEOUT si el objeto de opciones *ulTimeout* miembro no es cero. El controlador OLE DB para SQL Server omite el valor de la *szDescription* miembro.|  
+|*IsoFlags*|Debe ser 0. El controlador OLE DB para SQL Server devuelve XACT_E_NOISORETAIN si el consumidor especifica cualquier otro valor.|  
+|*POtherOptions*|Si no es NULL, el controlador OLE DB para SQL Server solicita el objeto de opciones de la interfaz. El controlador OLE DB para SQL Server devuelve XACT_E_NOTIMEOUT si el objeto de opciones *ulTimeout* miembro no es cero. El controlador OLE DB para SQL Server se omite el valor de la *szDescription* miembro.|  
   
  En este ejemplo se coordina la transacción mediante MS DTC.  
   
@@ -146,7 +146,7 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 // Release any references and continue.  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Transacciones](../../oledb/ole-db-transactions/transactions.md)  
   
   

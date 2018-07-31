@@ -1,5 +1,5 @@
 ---
-title: Mediante un procedimiento almacenado con un estado de retorno | Documentos de Microsoft
+title: Usar un procedimiento almacenado con un estado de devolución | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,32 +15,32 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 29bb95c06d86ad4d6e45002da1429f6c7d5a5c9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853160"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040603"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>Usar un procedimiento almacenado con un estado de devolución
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] procedimiento almacenado que se puede llamar es aquella que devuelve un estado o un parámetro de resultado. Se usa normalmente para indicar el funcionamiento correcto o incorrecto del procedimiento almacenado. El [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] proporciona el [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) (clase), que puede usar para llamar a este tipo de procedimiento almacenado y procesar los datos que devuelve.  
+  Un procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] al que puede llamar es el que devuelve un parámetro de estado o resultado. Se usa normalmente para indicar el funcionamiento correcto o incorrecto del procedimiento almacenado. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] proporciona la clase [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), que puede usar para llamar a este tipo de procedimiento almacenado y procesar los datos que devuelve.  
   
- Cuando se llama a este tipo de procedimiento almacenado con el controlador JDBC, tendrá que usar el `call` secuencia de escape SQL junto con la [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) método de la [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) (clase) . La sintaxis de la `call` secuencia de escape con un parámetro de estado devuelto es el siguiente:  
+ Al llamar a este tipo de procedimiento almacenado mediante el controlador JDBC, debe usar la secuencia de escape `call` de SQL junto con el método [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) de la clase [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). La sintaxis de la secuencia de escape `call` con un parámetro de estado de devolución es la siguiente:  
   
  `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`  
   
 > [!NOTE]  
->  Para obtener más información acerca de las secuencias de escape SQL, consulte [usar secuencias de Escape de SQL](../../connect/jdbc/using-sql-escape-sequences.md).  
+>  Para obtener más información acerca de las secuencias de escape SQL, consulte [usando secuencias de Escape SQL](../../connect/jdbc/using-sql-escape-sequences.md).  
   
- ¿Al construir el `call` secuencia de escape, especifique el parámetro de estado devuelto con el? (signo de interrogación). Este carácter actúa como un marcador de posición para el valor del parámetro que devolverá el procedimiento almacenado. Para especificar un valor para un parámetro de estado de retorno, debe especificar el tipo de datos del parámetro mediante el [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) método de la clase SQLServerCallableStatement, antes de ejecutar el procedimiento almacenado.  
+ Al crear la secuencia de escape `call`, especifique el parámetro de estado de devolución mediante el carácter ? (signo de interrogación). Este carácter actúa como un marcador de posición para el valor del parámetro que devolverá el procedimiento almacenado. Para especificar un valor para un parámetro de estado de devolución, debe especificar el tipo de datos del parámetro mediante el método [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) de la clase SQLServerCallableStatement antes de ejecutar el procedimiento almacenado.  
   
 > [!NOTE]  
->  Al usar el controlador JDBC con una base de datos de SQL Server, el valor que especifique para el parámetro de estado de retorno en el método registerOutParameter siempre será un entero, que se puede especificar utilizando el tipo de datos java.sql.Types.INTEGER.  
+>  Al usar el controlador JDBC con una base de datos de SQL Server, el valor especificado para el parámetro de estado de devolución del método registerOutParameter siempre es un entero, que se puede especificar mediante el tipo de datos java.sql.Types.INTEGER.  
   
- Además, cuando se pasa un valor para el método registerOutParameter para un parámetro de estado de retorno, debe especificar no solo los tipos de datos que se utilizará para el parámetro, sino también la posición del parámetro ordinal en la llamada de procedimiento almacenado. En el caso del parámetro de estado de devolución, su posición ordinal siempre es 1 debido a que es siempre el primer parámetro de la llamada al procedimiento almacenado. Aunque la clase SQLServerCallableStatement proporciona compatibilidad para que utilizar el nombre del parámetro para indicar el parámetro concreto, puede usar solo el número de posición ordinal del parámetro para los parámetros de estado de retorno.  
+ Además, al pasar un valor al método registerOutParameter para un parámetro de estado de devolución, debe especificar no solo el tipo de datos usado para el parámetro, sino también la posición ordinal del parámetro en la llamada al procedimiento almacenado. En el caso del parámetro de estado de devolución, su posición ordinal siempre es 1 debido a que es siempre el primer parámetro de la llamada al procedimiento almacenado. Aunque la clase SQLServerCallableStatement proporciona compatibilidad para usar el nombre del parámetro para indicar el parámetro concreto, puede usar el número de la posición ordinal de solo un parámetro para los parámetros de estado de devolución.  
   
- Por ejemplo, cree el siguiente procedimiento almacenado en el [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] base de datos de ejemplo:  
+ Cree, a modo de ejemplo, el siguiente procedimiento almacenado en la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:  
   
 ```  
 CREATE PROCEDURE CheckContactCity  
@@ -58,11 +58,11 @@ END
   
  Este procedimiento almacenado devuelve un valor de estado de 1 ó 0 en función de si la ciudad especificada en el parámetro cityName se encuentra en la tabla Person.Address.  
   
- En el ejemplo siguiente, una conexión abierta a la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] base de datos de ejemplo se pasa a la función y el [ejecutar](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) método se usa para llamar al procedimiento almacenado CheckContactCity:  
+ En el siguiente ejemplo, se pasa una conexión abierta a la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] a la función y se usa el método [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) para llamar al procedimiento almacenado CheckContactCity:  
   
  [!code[JDBC#UsingSprocWithReturnStatus1](../../connect/jdbc/codesnippet/Java/using-a-stored-procedure_1_1.java)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Usar instrucciones con procedimientos almacenados](../../connect/jdbc/using-statements-with-stored-procedures.md)  
   
   

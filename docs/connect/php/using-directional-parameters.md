@@ -1,5 +1,5 @@
 ---
-title: Uso de parámetros direccionales | Documentos de Microsoft
+title: Uso de parámetros direccionales | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c8dc5a423b432d272565f8b8db6afdd2c22cbd16
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310194"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991267"
 ---
 # <a name="using-directional-parameters"></a>Uso de parámetros direccionales
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Cuando se usa el controlador PDO_SQLSRV, puede usar [pdostatement:: Bindparam](../../connect/php/pdostatement-bindparam.md) para especificar los parámetros de entrada y salidos.  
+Al usar el controlador PDO_SQLSRV, puede usar [PDOStatement::bindParam](../../connect/php/pdostatement-bindparam.md) para especificar parámetros de entrada y salida.  
   
 En los temas de esta sección se describe cómo usar parámetros direccionales al llamar a procedimientos almacenados con el controlador SQLSRV.  
   
@@ -36,7 +36,7 @@ En los temas de esta sección se describe cómo usar parámetros direccionales a
 |[Cómo recuperar parámetros de salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)|Muestra cómo llamar a un procedimiento almacenado con un parámetro de salida, además de cómo recuperar su valor.|  
 |[Recuperación de parámetros de entrada y salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)|Muestra cómo llamar a un procedimiento almacenado con un parámetro de entrada/salida, además de cómo recuperar su valor.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Recuperación de datos](../../connect/php/retrieving-data.md)  
 
 [Actualización de datos &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  

@@ -1,6 +1,6 @@
 ---
-title: Controlador OLE DB para SQL Server Support for LocalDB | Documentos de Microsoft
-description: Controlador de OLE DB para la compatibilidad con SQL Server para LocalDB
+title: Compatibilidad del controlador OLE DB para SQL Server con LocalDB | Microsoft Docs
+description: Compatibilidad del controlador OLE DB para SQL Server con LocalDB
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c66855285d9912b8a818b5e270f38880c7828ebc
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 669d221ada6ff693194266618952d53c17bb6d87
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612320"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107687"
 ---
-# <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>Controlador OLE DB para SQL Server Support for LocalDB
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>Compatibilidad del controlador OLE DB para SQL Server con LocalDB
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -31,7 +31,7 @@ ms.locfileid: "35612320"
 ## <a name="remarks"></a>Notas  
  Para obtener más información acerca de LocalDB, incluyendo cómo instalarlo y configurar la instancia de LocalDB, vea:  
   
--   [Referencia SQL Server Express LocalDB](../../../relational-databases/sql-server-express-localdb-reference.md)  
+-   [Referencia de SQL Server Express LocalDB](../../../relational-databases/sql-server-express-localdb-reference.md)  
   
 -   [SQL Server 2016 Express LocalDB](../../../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
   
@@ -49,7 +49,7 @@ SERVER=(localdb)\v11.0
   
  Si fuera necesario, puede crear una instancia de LocalDB con sqllocaldb.exe. También puede utilizar sqlcmd.exe para agregar y modificar las bases de datos de una instancia de LocalDB. Por ejemplo, **sqlcmd -S (localdb)\v11.0**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Controlador OLE DB para las características de SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)  
   
   

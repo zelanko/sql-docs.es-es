@@ -1,6 +1,6 @@
 ---
-title: Compatibilidad con el tipo parámetros con valores de tabla OLE DB (propiedades) | Documentos de Microsoft
-description: Compatibilidad con tipos de parámetro de OLE DB Table-Valued (propiedades)
+title: Compatibilidad con tipos de parámetros con valores de tabla de OLE DB (propiedades) | Microsoft Docs
+description: Compatibilidad con tipos de parámetros con valores de tabla de OLE DB (propiedades)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,22 +16,22 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ea197e5411cb867221814817041f3fd6df7c8005
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 67d27b1b2441b481a696170013ece166bc58d778
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689578"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108767"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Compatibilidad con tipos de parámetros con valores de tabla de OLE DB (propiedades)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   En este tema se proporciona información sobre las propiedades de OLE DB y los conjuntos de propiedades asociados a los objetos de conjunto de filas de parámetro con valores de tabla.  
   
 ## <a name="properties"></a>Propiedades  
- La siguiente es la lista de propiedades expuestas a través del método IRowsetInfo::GetPropeties en objetos de conjunto de filas de parámetros con valores de tabla. Observe que todas las propiedades de conjunto de filas de parámetro con valores de tabla son de solo lectura. Por lo tanto, intenta establecer cualquiera de las propiedades a través de IOpenRowset:: OpenRowset o ITableDefinitionWithConstraints::CreateTableWithConstraints métodos con sus valores predeterminados no se producen un error y no se creará ningún objeto.  
+ A continuación, se muestra la lista de propiedades expuestas mediante el método IRowsetInfo::GetPropeties en los objetos de conjunto de filas de parámetro con valores de tabla. Observe que todas las propiedades de conjunto de filas de parámetro con valores de tabla son de solo lectura. Por lo tanto, intenta establecer cualquiera de las propiedades mediante IOpenRowset:: OpenRowset o ITableDefinitionWithConstraints::CreateTableWithConstraints métodos en sus valores no predeterminados se producirá un error y no se creará ningún objeto.  
   
  No se enumeran aquí las propiedades no implementadas en el objeto de conjunto de filas de parámetro con valores. Para obtener una lista completa de las propiedades, vea la documentación de OLE DB en Data Access Components para Windows.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "35689578"
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|VARIANT_TRUE|  
-|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|L/E: sólo lectura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: no se permiten marcadores en los objetos de conjunto de filas de parámetro con valores de tabla.|  
+|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|L/E: solo lectura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: no se permiten marcadores en los objetos de conjunto de filas de parámetro con valores de tabla.|  
 |DBPROP_BOOKMARKSKIPPED|VARIANT_FALSE|  
 |DBPROP_BOOKMARKTYPE|DBPROPVAL_BMK_NUMERIC|  
 |DBPROP_CANHOLDROWS|VARIANT_FALSE|  
@@ -52,7 +52,7 @@ ms.locfileid: "35689578"
 |DBPROP_DELAYSTORAGEOBJECTS|VARIANT_FALSE|  
 |DBPROP_IAccessor<br /><br /> DBPROP_IColumnsInfo<br /><br /> DBPROP_IConvertType<br /><br /> DBPROP_IRowset<br /><br /> DBPROP_IRowsetInfo<br /><br /> DBPROP_IColumnsRowset|VARIANT_TRUE|  
 |DBPROP_IConnectionPointContainer<br /><br /> DBPROP_IMultipleResults<br /><br /> DBPROP_IRowsetUpdate<br /><br /> DBPROP_IRowsetIdentity<br /><br /> DBPROP_IRowsetLocate<br /><br /> DBPROP_IRowsetScroll<br /><br /> DBPROP_IRowsetResynch|VARIANT_FALSE|  
-|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> Nota: El objeto de conjunto de filas de parámetro con valores de tabla es compatible con las interfaces IRowsetChange.<br /><br /> Los conjuntos de filas creados utilizando DBPROP_IRowsetChange igual a VARIANT_TRUE exhiben los comportamientos de modo de actualización inmediatos.<br /><br /> Sin embargo, si las columnas BLOB se enlazan como objetos de ISequentialStream, se espera que el consumidor mantenerlos durante la vigencia del objeto de conjunto de filas de parámetro con valores de tabla.|  
+|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> Nota: El objeto de conjunto de filas de parámetro con valores de tabla admite las interfaces IRowsetChange.<br /><br /> Los conjuntos de filas creados utilizando DBPROP_IRowsetChange igual a VARIANT_TRUE exhiben los comportamientos de modo de actualización inmediatos.<br /><br /> Pero, si las columnas BLOB se enlazan como objetos ISequentialStream, se espera que el consumidor las mantenga mientras exista el objeto de conjunto de filas de parámetro con valores de tabla.|  
 |DBPROP_ISupportErrorInfo|VARIANT_TRUE|  
 |DBPROP_ISequentialStream|VARIANT_TRUE|  
 |DBPROP_IMMOBILEROWS|VARIANT_TRUE|  
@@ -82,14 +82,14 @@ ms.locfileid: "35689578"
  La propiedad siguiente establece los parámetros con valores de tabla admitidos.  
   
 ### <a name="dbpropsetsqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
- Esta propiedad se usa por el consumidor en el proceso de creación de un objeto de conjunto de filas de parámetro con valores de tabla mediante el uso de ITableDefinitionWithConstraints::CreateTableWithConstraints para cada columna a través de la estructura DBCOLUMNDESC, si es necesario.  
+ Esta propiedad se utiliza por el consumidor en el proceso de creación de un objeto de conjunto de filas de parámetro con valores de tabla mediante el uso de ITableDefinitionWithConstraints::CreateTableWithConstraints para cada columna a través de la estructura DBCOLUMNDESC, si es necesario.  
   
 |Id. de propiedad|Valor de la propiedad|  
 |-----------------|--------------------|  
 |SSPROP_COL_COMPUTED|L/E: de lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Tipo: VT_BOOL<br /><br /> Descripción: cuando se establece en VARIANT_TRUE, indica que la columna es calculada. VARIANT_FALSE indica que no es una columna calculada.|  
   
 ### <a name="dbpropsetsqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- Estas propiedades son leídas por el consumidor mientras se detecta la información de tipo de parámetro con valores de tabla en las llamadas a ISSCommandWithParamters::GetParameterProperties y establecidas por el usuario al establecer las propiedades específicas acerca del parámetro con valores de tabla a través de isscommandwithparameters:: SetParameterProperties.  
+ Estas propiedades son leídas por el consumidor al detectar la información de tipo de parámetro con valores de tabla en las llamadas a ISSCommandWithParamters::GetParameterProperties y establecidas por el usuario al establecer las propiedades concretas sobre el parámetro con valores de tabla a través de isscommandwithparameters:: SetParameterProperties.  
   
  En la tabla siguiente se proporcionan descripciones detalladas de estas propiedades.  
   
@@ -101,8 +101,8 @@ ms.locfileid: "35689578"
 |SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|L/E: de lectura/escritura<br /><br /> Valor predeterminado: VT_EMPTY<br /><br /> Tipo: VT_UI2 &#124; VT_ARRAY<br /><br /> Descripción: los consumidores usan esta propiedad para especificar qué conjunto de columnas del conjunto de filas será tratado como valores predeterminados. No se enviará ningún valor para esas columnas. Al capturar datos del objeto de conjunto de filas del consumidor, el proveedor no requiere un enlace para tales columnas.<br /><br /> Todos los elementos de la matriz deben ser ordinales de columnas del objeto de conjunto de filas. Los ordinales no válidos producirán errores durante la ejecución del comando.|  
 |SSPROP_PARAM_TABLE_COLUMN_ORDER|L/E: de lectura/escritura<br /><br /> Valor predeterminado: VT_EMPTY<br /><br /> Tipo: VT_UI2 &#124; VT_ARRAY<br /><br /> Descripción: el consumidor utiliza esta propiedad para proporcionar una sugerencia al servidor que indica el orden de clasificación de los datos de columna. El proveedor no realiza ninguna validación y asume que el consumidor se ajusta a la especificación que se proporcionó. El servidor usa esta propiedad para realizar las optimizaciones.<br /><br /> La información de orden de las columnas para cada columna se representa mediante un par de elementos de la matriz. El primer elemento del par es el número de la columna. El segundo elemento del par será 1 para el orden ascendente o 2 para el orden descendente.|  
   
-## <a name="see-also"></a>Vea también  
- [Compatibilidad con tipos de parámetro con valores de tabla OLE DB](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
+## <a name="see-also"></a>Ver también  
+ [Compatibilidad con tipos de parámetros con valores de tabla de OLE DB](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
  [Usar parámetros con valores de tabla &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

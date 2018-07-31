@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Bindparam | Documentos de Microsoft'
+title: 'Pdostatement:: Bindparam | Microsoft Docs'
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 683ee4dcfd797f49ccd297f0a88f8fc607ea7aae
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308328"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007144"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,21 +34,21 @@ bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $dr
 ```  
   
 #### <a name="parameters"></a>Parámetros  
-$*parámetro*: un identificador de parámetro (mixto). En una instrucción que usa marcadores de posición, utilice un nombre de parámetro (: nombre). Para una instrucción preparada mediante la sintaxis de signo de interrogación, es el índice basado en 1 del parámetro.  
+$*parameter*: identificador de parámetro (mixto). En una instrucción que use marcadores de posición con nombre, emplee un nombre de parámetro (:name). En una instrucción preparada mediante la sintaxis de signos de interrogación, es el índice basado en 1 del parámetro.  
   
-&$*variable*: el nombre (mixto) de la variable PHP para enlazar con el parámetro de instrucción SQL.  
+&$*variable*: nombre (mixto) de la variable PHP para enlazar con el parámetro de instrucción SQL.  
   
-$*data_type*: una constante PDO:: param_ * opcional (valor entero). Valor predeterminado es PDO:: param_str.  
+$*data_type*: constante PDO::PARAM_* opcional (entero). El valor predeterminado es PDO::PARAM_STR.  
   
-$*longitud*: una longitud opcional (valor entero) del tipo de datos. Puede especificar PDO:: sqlsrv_param_out_default_size para indicar el tamaño predeterminado al usar PDO:: param_int o PDO:: param_bool en $*data_type*.  
+$*length*: longitud opcional (entero) del tipo de datos. Puede especificar PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE para indicar el tamaño predeterminado al usar PDO::PARAM_INT o PDO::PARAM_BOOL en $*data_type*.  
   
-$*driver_options*: las opciones específicas del controlador (mixtas) opcionales. Por ejemplo, podría especificar PDO::SQLSRV_ENCODING_UTF8 para enlazar la columna a una variable como una cadena codificada en UTF-8.  
+$*driver_options*: las opciones de específicas del controlador opcionales (mixtas). Por ejemplo, podría especificar PDO::SQLSRV_ENCODING_UTF8 para enlazar la columna a una variable como una cadena codificada en UTF-8.  
   
 ## <a name="return-value"></a>Valor devuelto  
 Se devuelve True si la operación se realiza correctamente; de lo contrario, False.  
   
 ## <a name="remarks"></a>Notas  
-Cuando se enlazan datos null para las columnas de tipo varbinary, binary o varbinary (max) de servidor debe especificar la codificación binaria (PDO:: sqlsrv_encoding_binary) con $*driver_options*. Para obtener más información acerca de las constantes de codificación, vea [constantes](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+Cuando se enlazan datos null a las columnas de servidor de tipo varbinary, binary o varbinary(max), debe especificar la codificación binaria (PDO::SQLSRV_ENCODING_BINARY) con $*driver_options*. Para obtener más información sobre la codificación de constantes, vea [Constantes](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 En la versión 2.0 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], se agregó compatibilidad con PDO.  
 
@@ -103,7 +103,7 @@ echo $input1;
 ```  
   
 > [!NOTE]
-> Al enlazar un parámetro de salida a un tipo bigint, si el valor puede acabar fuera del intervalo de un [entero](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), usar PDO:: param_int con PDO:: sqlsrv_param_out_default_size puede producir una excepción de "valor fuera del intervalo". Por lo tanto, utilice en su lugar el valor predeterminado de PDO:: param_str y proporcione el tamaño de la cadena resultante, que a lo sumo es 21. Es el número máximo de dígitos, incluido el signo negativo, de cualquier valor de tipo bigint. 
+> Al enlazar un parámetro de salida a un tipo bigint, si el valor puede acabar fuera del intervalo de un [entero](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), usar PDO:: param_int con PDO:: sqlsrv_param_out_default_size puede producir una excepción de "valor fuera del intervalo". Por lo tanto, use el valor predeterminado de PDO:: param_str y proporcione el tamaño de la cadena resultante, que es a lo sumo 21. Es el número máximo de dígitos, incluidos el signo negativo de cualquier valor bigint. 
 
 ## <a name="example"></a>Ejemplo  
 En este ejemplo de código se muestra cómo utilizar un parámetro de entrada/salida.  
@@ -125,7 +125,7 @@ En este ejemplo de código se muestra cómo utilizar un parámetro de entrada/sa
 ```  
 
 > [!NOTE]
-> Se recomienda usar cadenas como entradas al enlazar los valores para un [columna decimal o numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) para garantizar la precisión y la exactitud PHP limitó precisión para [números de punto flotante](http://php.net/manual/en/language.types.float.php). Lo mismo se aplica a columnas bigint, especialmente cuando los valores que están fuera del intervalo de un [entero](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> Se recomienda usar cadenas como entradas al enlazar los valores para un [columna decimal o numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) para garantizar la precisión y la precisión PHP tiene limitada la precisión para [números de punto flotante](http://php.net/manual/en/language.types.float.php). Lo mismo se aplica a las columnas de tipo bigint, especialmente cuando los valores que están fuera del intervalo de un [entero](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## <a name="example"></a>Ejemplo  
 Este ejemplo de código muestra cómo enlazar un valor decimal como un parámetro de entrada.  
@@ -146,7 +146,7 @@ $stmt->execute();
 ```
 
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Clase PDOStatement](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

@@ -1,5 +1,5 @@
 ---
-title: Método updateSQLXML (java.lang.String, java.sql.SQLXML) | Documentos de Microsoft
+title: Método updateSQLXML (java.lang.String, java.sql.SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4678a6611e2f13624cb2cfefda15c37a8195e3aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849690"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039233"
 ---
 # <a name="updatesqlxml-method-javalangstring-javasqlsqlxml"></a>Método updateSQLXML (java.lang.String, java.sql.SQLXML)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public void updateSQLXML(java.lang.String columnLabel,
 #### <a name="parameters"></a>Parámetros  
  *columnLabel*  
   
- A **cadena** que indica la etiqueta de columna.  
+ Valor **string** que indica la etiqueta de columna.  
   
  *xmlObject*  
   
@@ -46,10 +46,10 @@ public void updateSQLXML(java.lang.String columnLabel,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
- Este método updateSQLXML especificado por el método updateSQLXML en la interfaz java.sql.ResultSet.  
+## <a name="remarks"></a>Notas  
+ Este método updateSQLXML especificado por el método updateSQLXML de la interfaz java.sql.ResultSet.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Método updateSQLXML &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: Recuperación de datos como una secuencia utilizando el controlador SQLSRV | Documentos de Microsoft
+title: Recuperación de datos como una secuencia con el controlador SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,26 +15,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be1e84c923dad3ed92c4c2b983a1e5592741eead
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309254"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992897"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>Recuperación de datos como una secuencia con el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Recuperar datos como una secuencia solo está disponible en el controlador SQLSRV de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]y no está disponible en el controlador PDO_SQLSRV.  
+La recuperación de datos como un flujo solo está disponible en el controlador SQLSRV de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], pero no en el controlador PDO_SQLSRV.  
   
 Los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] aprovechan las ventajas de las secuencias para recuperar grandes cantidades de datos. En los temas de esta sección se proporcionan detalles sobre cómo recuperar datos como una secuencia.  
   
 En los pasos siguientes se resume cómo recuperar datos como una secuencia:  
   
-1.  Preparar y ejecutar una consulta de Transact-SQL con [sqlsrv_query](../../connect/php/sqlsrv-query.md) o la combinación de [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md).  
+1.  Prepare y ejecute una consulta de Transact-SQL con [sqlsrv_query](../../connect/php/sqlsrv-query.md), o bien la combinación de [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md).  
   
 2.  Use [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) para desplazarse a la siguiente fila del conjunto de resultados.  
   
-3.  Use [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) para recuperar un campo de la fila. Especifique que los datos se recuperen como una secuencia mediante el uso de **SQLSRV_PHPTYPE_STREAM (<encoding>)** como tercer parámetro en la llamada de función. En esta tabla se muestran las constantes que se utilizan para especificar las codificaciones y sus descripciones:  
+3.  Use [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) para recuperar un campo de la fila. Especifique que los datos se recuperen como una secuencia mediante **SQLSRV_PHPTYPE_STREAM(<encoding>)** como tercer parámetro en la llamada a la función. En esta tabla se muestran las constantes que se utilizan para especificar las codificaciones y sus descripciones:  
   
     |Constante de SQLSRV|Descripción|  
     |-------------------|---------------|  
@@ -52,7 +52,7 @@ En los pasos siguientes se resume cómo recuperar datos como una secuencia:
 |[Cómo recuperar datos de caracteres como una secuencia utilizando el controlador SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|Muestra cómo recuperar datos de caracteres como una secuencia.|  
 |[Cómo recuperar datos binarios como una secuencia mediante el controlador SQLSRV](../../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md)|Muestra cómo recuperar datos binarios como una secuencia.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Recuperación de datos](../../connect/php/retrieving-data.md)
 
 [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  

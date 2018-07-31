@@ -1,5 +1,5 @@
 ---
-title: Ejecutar comandos que contienen parámetros con valores de tabla | Documentos de Microsoft
+title: Ejecutar comandos que contienen parámetros con valores de tabla | Microsoft Docs
 description: Ejecutar comandos que contienen parámetros con valores de tabla
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,33 +16,33 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f1eb60372a79d95f3e88e68e0e0314d1968a971a
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 0406fd40ebb8a1bcc13f883b6ffe1735d5c07012
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689938"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108827"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>Ejecutar comandos que contienen parámetros con valores de tabla
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Ejecutar un comando con parámetros con valores de tabla consta de dos fases:  
+  La ejecución de un comando con parámetros con valores de tabla consta de dos fases:  
   
 1.  Especificar los tipos de parámetros.  
   
 2.  Enlazar los datos de los parámetros.  
   
 ## <a name="table-valued-parameter-specification"></a>Especificación de parámetros con valores de tabla  
- El consumidor puede especificar el tipo del parámetro con valores de tabla. Esta información incluye el nombre del tipo del parámetro con valores de tabla. También incluye el nombre del esquema, si el tipo de tabla definido por el usuario para el parámetro con valores de tabla no está en el esquema predeterminado actual para la conexión. Según la compatibilidad del servidor, el consumidor también puede especificar la información de metadatos opcionales, como el orden de las columnas y puede indicar que todas las filas de ciertas columnas tengan valores predeterminados.  
+ El consumidor puede especificar el tipo del parámetro con valores de tabla. Esta información incluye el nombre del tipo del parámetro con valores de tabla. También incluye el nombre de esquema si el tipo de tabla definido por el usuario para el parámetro con valores de tabla no está en el esquema predeterminado actual de la conexión. En función de la compatibilidad del servidor, el consumidor también puede especificar información opcional sobre los metadatos, como el orden de las columnas, y puede indicar que todas las filas de ciertas columnas tienen valores predeterminados.  
   
- Para especificar un parámetro con valores de tabla, el consumidor llama ISSCommandWithParamter::SetParameterInfo y opcionalmente llama isscommandwithparameters:: SetParameterProperties. Para un parámetro con valores de tabla, el *pwszDataSourceType* los campos de la estructura DBPARAMBINDINFO tiene un valor de DBTYPE_TABLE. El *ulParamSize* campo se establece en ~ 0 para indicar que la longitud es desconocido. Determinadas propiedades para los parámetros con valores de tabla, como nombre de esquema, nombre de tipo, orden de las columnas y las columnas de forma predeterminada, se pueden establecer a través de isscommandwithparameters:: SetParameterProperties.  
+ Para especificar un parámetro con valores de tabla, el consumidor llama a ISSCommandWithParamter::SetParameterInfo y, opcionalmente, llama isscommandwithparameters:: SetParameterProperties. En el caso de un parámetro con valores de tabla, el campo *pwszDataSourceType* de la estructura DBPARAMBINDINFO tiene un valor de DBTYPE_TABLE. El campo *ulParamSize* se establece en ~0 para indicar que no se conoce la longitud. Determinadas propiedades en los parámetros con valores de tabla, como nombre de esquema, nombre de tipo, orden de las columnas y columnas de forma predeterminada, se pueden establecer a través de isscommandwithparameters:: SetParameterProperties.  
   
 ## <a name="table-valued-parameter-binding"></a>Enlace de parámetros con valores de tabla  
  Un parámetro con valores de tabla puede ser cualquier objeto de conjunto de filas. Durante la ejecución, el proveedor lee en este objeto mientras envía los parámetros con valores de tabla al servidor.  
   
- Para enlazar el parámetro con valores de tabla, el consumidor llama a IAccessor:: CreateAccessor. El *wType* campo de la estructura DBBINDING para el parámetro con valores de tabla está establecido en DBTYPE_TABLE. El *pObject* miembro de la estructura DBBINDING es distinto de NULL y la *pObject*del *iid* miembro se establece en IID_IRowset o cualquier otro objeto de conjunto de filas de parámetro con valores de tabla interfaces. Los campos restantes de la estructura DBBINDING deben establecerse la misma manera que está configurados para BLOB transmitidos.  
+ Para enlazar el parámetro con valores de tabla, el consumidor llama a IAccessor:: CreateAccessor. El campo *wType* de la estructura DBBINDING del parámetro con valores de tabla se establece en DBTYPE_TABLE. El miembro *pObject* de la estructura DBBINDING es distinto de NULL y el miembro *iid* de *pObject* se establece en IID_IRowset o cualquier otra interfaz de objeto de conjunto de filas de parámetro con valores de tabla. Los campos restantes de la estructura DBBINDING se deben establecer de la misma manera que los BLOB transmitidos.  
   
  En los enlaces para el parámetro con valores de tabla y el objeto de conjunto de filas asociado a un parámetro con valores de tabla, se aplican las restricciones siguientes:  
   
@@ -54,7 +54,7 @@ ms.locfileid: "35689938"
   
 -   Los datos se enviarán al servidor para las columnas con DBPROP_COL_AUTOINCREMENT o SSPROP_COL_COMPUTED, a menos que también se establezca SSPROP_PARAM_TABLE_DEFAULT.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Parámetros con valores de tabla &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
  [Usar parámetros con valores de tabla &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

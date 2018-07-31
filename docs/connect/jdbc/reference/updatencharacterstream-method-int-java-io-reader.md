@@ -1,5 +1,5 @@
 ---
-title: Método updateNCharacterStream (int, java.io.Reader) | Documentos de Microsoft
+title: Método updateNCharacterStream (int, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 029d14d4da5ee795f09286d540ead8344f920424
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849780"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040633"
 ---
 # <a name="updatencharacterstream-method-int-javaioreader"></a>Método updateNCharacterStream (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,21 +37,21 @@ public void updateNCharacterStream(int columnIndex,
 #### <a name="parameters"></a>Parámetros  
  *columnIndex*  
   
- Un **int** que indica el índice de columna.  
+ Valor **int** que indica el índice de columna.  
   
  *x*  
   
- Un objeto de lector.  
+ Un objeto lector.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método updateNCharacterStream especificado por el método updateNCharacterStream en la interfaz java.sql.ResultSet.  
   
- Este método pasa los caracteres Unicode de un objeto de lector que seleccione **nchar**, **nvarchar (max)**, **ntext** y **xml** columnas. Si se utiliza este método en otras columnas de tipo de datos, se producirá una excepción.  
+ Este método pasa los caracteres Unicode de un objeto de lector al seleccionado **nchar**, **nvarchar (max)**, **ntext** y **xml** columnas. Si se utiliza este método en otras columnas de tipo de datos, se producirá una excepción.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Método updateNCharacterStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

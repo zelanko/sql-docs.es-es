@@ -1,5 +1,5 @@
 ---
-title: Interfaz SQLXML | Documentos de Microsoft
+title: Interfaz SQLXML | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,43 +15,43 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2cb8975c4eda311b93c7a26c1d83eecbbfa581f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853010"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991657"
 ---
 # <a name="sqlxml-interface"></a>Interfaz SQLXML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  El controlador JDBC ofrece compatibilidad con la API de JDBC 4.0, que presenta la interfaz java.sql.SQLXML. La interfaz SQLXML define métodos para interactuar y manipular datos XML. El **SQLXML** tipo de datos se asigna a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml** tipo de datos.  
+  El controlador JDBC ofrece compatibilidad con la API de JDBC 4.0, que presenta la interfaz java.sql.SQLXML. La interfaz SQLXML define métodos para interactuar con datos XML y manipularlos. El **SQLXML** tipo de datos se asigna a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml** tipo de datos.  
   
- La interfaz SQLXML proporciona métodos para tener acceso al valor XML como un **cadena**, **lector** o **escritor**, o como un **flujo**. El valor XML también puede obtenerse a través de un **origen** o se establece como un **resultado**, que se utilizan con las API del analizador de XML, como Document Object Model (DOM), la API Simple para XML (SAX) y Streaming API for XML (StAX), como así como con XSLT transforma y XPath.  
+ La interfaz SQLXML proporciona métodos para acceder al valor XML como un **cadena**, un **lector** o **escritor**, o como un **Stream**. También se puede acceder al valor XML mediante **Source** o establecerlo como **Result**, que se usan con las API del analizador XML, como Document Object Model (DOM), Simple API for XML (SAX) y Streaming API for XML (StAX), así como con las transformaciones XSLT y con XPath.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La tabla siguiente describe los métodos definidos en la interfaz SQLXML:  
   
 |Sintaxis del método|Descripción del método|  
 |-------------------|------------------------|  
-|[free() void](http://go.microsoft.com/fwlink/?LinkId=131685)|Este método libera el objeto SQLXML y los recursos que contiene.|  
+|[void free()](http://go.microsoft.com/fwlink/?LinkId=131685)|Este método libera el objeto SQLXML y los recursos que contiene.|  
 |[InputStream getBinaryStream()](http://go.microsoft.com/fwlink/?LinkId=131754)|Devuelve un flujo de entrada para leer datos desde SQLXML.|  
-|[Lector getCharacterStream()](http://go.microsoft.com/fwlink/?LinkId=131755)|Devuelve el **XML** datos como un objeto java.io.Reader o como una secuencia de caracteres.|  
-|[T extiende getSource T de origen (clase\<T > sourceClass)](http://go.microsoft.com/fwlink/?LinkId=131756)|Devuelve un **origen** para leer el **XML** valor especificado por este **SQLXML** objeto.<br /><br /> **Nota:** el método getSource es compatible con los siguientes orígenes: javax.xml.transform.dom.DOMSource, javax.xml.transform.sax.SAXSource, javax.xml.transform.stax.StAXSource y java.io.InputStream.|  
-|[Cadena getString()](http://go.microsoft.com/fwlink/?LinkId=131757)|Devuelve una representación de cadena de la **XML** valor designado por este objeto SQLXML.|  
-|[OutputStream setBinaryStream()](http://go.microsoft.com/fwlink/?LinkId=131758)|Recupera una secuencia que puede utilizar para escribir el **XML** valor que representa este objeto SQLXML.|  
-|[Sistema de escritura setCharacterStream()](http://go.microsoft.com/fwlink/?LinkId=131759)|Devuelve una secuencia que se va a usarse para escribir la **XML** valor que representa este objeto SQLXML.|  
-|[T extiende resultado T setResult (clase\<T > resultClass)](http://go.microsoft.com/fwlink/?LinkId=131760)|Devuelve un **resultado** para la configuración de la **XML** valor especificado por este **SQLXML** objeto.<br /><br /> **Nota:** el método setResult es compatible con los siguientes orígenes: javax.xml.transform.dom.DOMResult, javax.xml.transform.sax.SAXResult, javax.xml.transform.stax.StaxResult y java.io.OutputStream.|  
-|[void setString(String value)](http://go.microsoft.com/fwlink/?LinkId=131762)|Establece el valor XML designado por este objeto SQLXML en especificado **cadena** representación.|  
+|[Reader getCharacterStream()](http://go.microsoft.com/fwlink/?LinkId=131755)|Devuelve los datos **XML** como un objeto java.io.Reader o como un flujo de caracteres.|  
+|[Extiende el T T origen getSource (clase\<T > sourceClass)](http://go.microsoft.com/fwlink/?LinkId=131756)|Devuelve un **origen** para leer el **XML** valor especificado por este **SQLXML** objeto.<br /><br /> **Nota:** El método getSource es compatible con los siguientes orígenes: javax.xml.transform.dom.DOMSource, javax.xml.transform.sax.SAXSource, javax.xml.transform.stax.StAXSource y java.io.InputStream.|  
+|[String getString()](http://go.microsoft.com/fwlink/?LinkId=131757)|Devuelve una representación de cadena del valor **XML** designado por este objeto SQLXML.|  
+|[OutputStream setBinaryStream()](http://go.microsoft.com/fwlink/?LinkId=131758)|Recupera un flujo que se puede usar para escribir el valor **XML** que representa este objeto SQLXML.|  
+|[Writer setCharacterStream()](http://go.microsoft.com/fwlink/?LinkId=131759)|Devuelve un flujo que se va a usar para escribir el valor **XML** que representa este objeto SQLXML.|  
+|[Extiende el T T resultado setResult (clase\<T > resultClass)](http://go.microsoft.com/fwlink/?LinkId=131760)|Devuelve un **resultado** para la configuración de la **XML** valor especificado por este **SQLXML** objeto.<br /><br /> **Nota:** El método setResult es compatible con los siguientes orígenes: javax.xml.transform.dom.DOMResult, javax.xml.transform.sax.SAXResult, javax.xml.transform.stax.StaxResult y java.io.OutputStream.|  
+|[void setString(String value)](http://go.microsoft.com/fwlink/?LinkId=131762)|Establece el valor XML designado por este objeto SQLXML para la representación **String** especificada.|  
   
  Las aplicaciones pueden leer y escribir valores XML en o desde un objeto SQLXML solamente una vez.  
   
- Cuando se llama al método de free(), un objeto SQLXML deja de ser válido y no es legible ni grabable. Si la aplicación intenta invocar un método en ese objeto SQLXML distinto del método free(), se produce una excepción.  
+ Cuando se llama al método free(), un objeto SQLXML se vuelve no válido y no puede ser leído ni escrito. Si la aplicación intenta invocar a un método que no sea free() en ese objeto SQLXML, se genera una excepción.  
   
- El objeto SQLXML pasa a ser legible ni modificable cuando la aplicación llama a cualquiera de los siguientes métodos de captador: getSource, getCharacterStream, getBinaryStream y getString.  
+ El objeto SQLXML pasa a ser legible ni modificable cuando la aplicación llama a cualquiera de los siguientes métodos captador: getSource, getCharacterStream, getBinaryStream y getString.  
   
- El objeto SQLXML se convierte en grabable ni legibles cuando la aplicación llama a cualquiera de los siguientes métodos establecedores: setResult, setCharacterStream, setBinaryStream y setString.  
+ El objeto SQLXML se convierte en no leído ni escrito cuando la aplicación llama a cualquiera de los siguientes métodos establecedores: setResult, setCharacterStream, setBinaryStream y setString.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Compatibilidad con datos XML](../../connect/jdbc/supporting-xml-data.md)  
   
   

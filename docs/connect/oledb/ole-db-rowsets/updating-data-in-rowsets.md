@@ -1,5 +1,5 @@
 ---
-title: Actualizar datos en conjuntos de filas | Documentos de Microsoft
+title: Actualizar datos en conjuntos de filas | Microsoft Docs
 description: Actualizar datos en conjuntos de filas mediante el controlador OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -21,19 +21,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 009c6023dc1905ac724287790c1b26a4bfcf87d3
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 20484bce71d0e776b4090f743c65e3a78d655a70
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689908"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108817"
 ---
 # <a name="updating-data-in-rowsets"></a>Actualizar datos en conjuntos de filas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  El controlador OLE DB para actualizaciones de SQL Server [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datos cuando un consumidor actualiza un conjunto de filas modificable que contiene los datos. Se crea un conjunto de filas modificable cuando el consumidor solicita compatibilidad para la **IRowsetChange** o **IRowsetUpdate** interfaz.  
+  El controlador OLE DB para SQL Server actualiza los datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuando un consumidor actualiza un conjunto de filas modificable que contiene esos datos. Se crea un conjunto de filas modificable cuando el consumidor solicita compatibilidad para las interfaces **IRowsetUpdate** o **IRowsetChange**.  
   
  Todos los controlador OLE DB para su uso de conjuntos de filas modificable de SQL Server [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursores para admitir el conjunto de filas. La propiedad de conjunto de filas DBPROP_LOCKMODE modifica el comportamiento de control de simultaneidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en cursores y determina el comportamiento de la captura de filas del conjunto de filas y la generación de errores de integridad de datos en los conjuntos de filas actualizables.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "35689908"
   
 -   [Volver a sincronizar filas](../../oledb/ole-db-rowsets/updating-data-in-rowsets-resynchronizing-rows.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Conjuntos de filas](../../oledb/ole-db-rowsets/rowsets.md)  
   
   

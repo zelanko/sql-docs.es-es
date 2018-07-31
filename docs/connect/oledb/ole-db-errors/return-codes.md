@@ -1,5 +1,5 @@
 ---
-title: Códigos de retorno | Documentos de Microsoft
+title: Códigos de retorno | Microsoft Docs
 description: Códigos de retorno
 ms.custom: ''
 ms.date: 06/14/2018
@@ -26,33 +26,33 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 84927b3d26233e9d21f175850a5b11c2c2bea56b
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: ec559040fceb5116ca83cc4eb295580479224b04
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665965"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107051"
 ---
 # <a name="return-codes"></a>Códigos de retorno
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   En el nivel más básico, una función miembro se ejecuta correctamente o genera un error. En un nivel algo más preciso, puede que una función se ejecute correctamente pero que el resultado no sea el que esperaba el programador de la aplicación.  
   
- Para obtener más información sobre los códigos de retorno de OLE DB, vea [códigos de retorno (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631).  
+ Para obtener más información sobre los códigos de retorno OLE DB, vea [Códigos de retorno (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631).  
   
  Cuando un controlador de OLE DB para la función de miembro de SQL Server devuelve S_OK, la función se realizó correctamente.  
   
- Cuando un controlador de OLE DB para la función de miembro de SQL Server no devuelve S_OK, las macros OLE/COM HRESULT-FAILED e is_error, pueden determinar el éxito o fracaso de una función global.  
+ Si una función miembro del controlador OLE DB para SQL Server no devuelve S_OK, las macros que desempaquetan la OLE/COM HRESULT, FAILED e IS_ERROR, pueden determinar si en general una función se ha ejecutado correctamente o no.  
   
- Si FAILED o IS_ERROR devuelven TRUE, el controlador OLE DB para el consumidor de SQL Server se asegura de que la ejecución de una función miembro no se pudo. Si FAILED o IS_ERROR devuelven FALSE y HRESULT no es igual a S_OK, el controlador OLE DB para SQL Server al consumidor es la seguridad de la función se realizó correctamente en algún sentido. El consumidor puede recuperar información detallada sobre esta devolución de "ejecución correcta con información" desde el controlador OLE DB para las interfaces de error de SQL Server. Además, en el caso de que una función no claramente (la macro FAILED devuelve TRUE), información de error extendida está disponible desde el controlador OLE DB para las interfaces de error de SQL Server.  
+ Si FAILED o IS_ERROR devuelven TRUE, el consumidor del controlador OLE DB para SQL Server sabe que se ha producido un error en la ejecución de la función miembro. Si FAILED o IS_ERROR devuelven FALSE y HRESULT no igual a S_OK, el controlador OLE DB para SQL Server de consumidor se asegura de la función se realizó correctamente en algún sentido. El consumidor puede recuperar información detallada sobre este retorno de "ejecución correcta con información" de las interfaces de error del controlador OLE DB para SQL Server. Además, en el caso en el que se produzca claramente un error en una función (la macro FAILED devuelve TRUE), se puede consultar más información sobre el error en las interfaces de error del controlador OLE DB para SQL Server.  
   
- Controlador de OLE DB para los consumidores de SQL Server suelen encontrar el retorno HRESULT DB_S_ERRORSOCCURRED "ejecución correcta con información". Normalmente, las funciones miembro que devuelven DB_S_ERRORSOCCURRED definen uno o más parámetros que proporcionen valores de estado al consumidor. No hay información de error puede estar disponible para el consumidor que se devuelven en parámetros con valores de estado, por lo que los consumidores deban implementar la lógica de la aplicación para recuperar valores de estado cuando estén disponibles.  
+ Controlador OLE DB para los consumidores de SQL Server suelen encontrar el retorno HRESULT DB_S_ERRORSOCCURRED "ejecución correcta con información". Normalmente, las funciones miembro que devuelven DB_S_ERRORSOCCURRED definen uno o más parámetros que proporcionen valores de estado al consumidor. Es posible que no haya más información de error disponible para el consumidor que los parámetros de valor de estado devueltos, de modo que los consumidores deban implementar la lógica de la aplicación para recuperar los valores de estado cuando estén disponibles.  
   
- El controlador OLE DB para las funciones miembro de SQL Server no devuelve el código de correcto S_FALSE. Todos los controlador OLE DB para las funciones miembro de SQL Server devuelven siempre S_OK para indicar una operación correcta.  
+ El controlador OLE DB para las funciones miembro de SQL Server no devolver el código de operación correcta S_FALSE. Todos los controlador OLE DB para las funciones miembro de SQL Server devuelven siempre S_OK para indicar el éxito.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Errores](../../oledb/ole-db-errors/errors.md)  
   
   

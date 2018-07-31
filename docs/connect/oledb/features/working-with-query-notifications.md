@@ -1,6 +1,6 @@
 ---
-title: Trabajar con notificaciones de consulta | Documentos de Microsoft
-description: Trabajar con notificaciones de consulta en el controlador de OLE DB para SQL Server
+title: Trabajar con las notificaciones de consulta | Microsoft Docs
+description: Trabajar con las notificaciones de consulta en el controlador de OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -25,15 +25,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 0c425e8bc1b5d3dc9dfe6a5f68998b87a9e7def1
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 8fb1e0ffcacad7b4b3733b3009df3909ac0aef89
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612350"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109177"
 ---
 # <a name="working-with-query-notifications"></a>Trabajar con notificaciones de consulta
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -53,7 +53,7 @@ ms.locfileid: "35612350"
   
  Las notificaciones se envían una sola vez. Para obtener notificaciones continuas de cambios de datos, debe crearse una nueva suscripción ejecutando de nuevo la consulta después de procesar cada notificación.  
   
- Controlador de OLE DB para las aplicaciones de SQL Server suelen recibir las notificaciones mediante el uso de la [!INCLUDE[tsql](../../../includes/tsql-md.md)] [recepción](../../../t-sql/statements/receive-transact-sql.md) comando para leer las notificaciones de la cola asociada con el servicio especificado en las opciones de notificación.  
+ Las aplicaciones del controlador OLE DB para SQL Server suelen recibir las notificaciones mediante el comando [RECEIVE](../../../t-sql/statements/receive-transact-sql.md) de [!INCLUDE[tsql](../../../includes/tsql-md.md)] para leer las notificaciones de la cola asociada al servicio especificado en las opciones de notificación.  
   
 > [!NOTE]  
 >  Los nombres de tabla deben calificarse en las consultas para las que se requiere notificación como, por ejemplo, `dbo.myTable`. Las tablas deben calificarse con nombres de dos partes. La suscripción no será válida si se usan nombres de tres o cuatro partes.  
@@ -70,22 +70,22 @@ CREATE SERVICE myService ON QUEUE myQueue
 ```  
   
 > [!NOTE]  
->  El servicio debe utilizar el contrato predefinido como se indicó anteriormente.  
+>  El servicio debe usar el contrato predefinido, tal y como se ha indicado anteriormente.  
   
 ## <a name="ole-db-driver-for-sql-server"></a>Controlador OLE DB para SQL Server  
- El controlador OLE DB para SQL Server admite notificaciones al consumidor a la modificación del conjunto de filas. El consumidor recibe notificaciones en cada fase de modificación del conjunto de filas y ante cualquiera intento de modificación.  
+ El controlador OLE DB para SQL Server es compatible con notificaciones al consumidor a la modificación del conjunto de filas. El consumidor recibe notificaciones en cada fase de modificación del conjunto de filas y ante cualquiera intento de modificación.  
   
 > [!NOTE]  
->  Pasar una consulta de notificación en el servidor con **ICommand:: Execute** es la única forma válida para suscribirse a notificaciones de consulta con el controlador OLE DB para SQL Server.  
+>  Pasar una consulta de notificación al servidor con **ICommand::Execute** es la única forma válida de suscribirse a notificaciones de consulta con el controlador OLE DB para SQL Server.  
   
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>Conjunto de propiedades DBPROPSET_SQLSERVERROWSET  
- Para admitir las notificaciones de consulta a través de OLE DB, controlador de OLE DB para SQL Server agrega las siguientes propiedades nuevas al conjunto de propiedades DBPROPSET_SQLSERVERROWSET.  
+ Para admitir notificaciones de consulta a través de OLE DB, el controlador OLE DB para SQL Server agrega las siguientes propiedades nuevas al conjunto de propiedades DBPROPSET_SQLSERVERROWSET.  
   
 |Nombre|Tipo|Descripción|  
 |----------|----------|-----------------|  
-|SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Número de segundos que la notificación de consulta va a permanecer activa.<br /><br /> El valor predeterminado es 432,000 segundos (5 días). El valor mínimo es 1 segundo y el valor máximo es 2^31-1 segundos.|  
-|SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Texto del mensaje de la notificación. Esto es definido por el usuario y no tiene ningún formato predefinido.<br /><br /> De forma predeterminada, la cadena está vacía. Puede especificarse un mensaje usando de 1 a 2000 caracteres.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Opciones de notificación de consulta. Se especifican en una cadena con *nombre*=*valor* sintaxis. El usuario es responsable de la creación del servicio y de la lectura de las notificaciones fuera de la cola.<br /><br /> El valor predeterminado es una cadena vacía.|  
+|SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Número de segundos que la notificación de consulta va a permanecer activa.<br /><br /> El valor predeterminado es 432 000 segundos (5 días). El valor mínimo es 1 segundo y el valor máximo es 2^31-1 segundos.|  
+|SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Texto del mensaje de la notificación. Lo define el usuario y no tiene ningún formato predefinido.<br /><br /> De forma predeterminada, la cadena está vacía. Puede especificarse un mensaje usando de 1 a 2000 caracteres.|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Opciones de notificación de consulta. Se especifican en una cadena con la sintaxis *nombre*=*valor*. El usuario es responsable de la creación del servicio y de la lectura de las notificaciones fuera de la cola.<br /><br /> El valor predeterminado es una cadena vacía.|  
   
  La suscripción de notificación se confirma siempre, independientemente de que la instrucción se haya ejecutado en una transacción de usuario o en una confirmación automática o de que la transacción en la que se haya ejecutado la instrucción se haya confirmado o revertido. La notificación del servidor se activa ante cualquiera de las siguientes condiciones de notificación no válida: cambio de esquema o datos subyacentes o cuando se alcanza el período de tiempo de espera, lo que ocurra antes. Los registros de notificación se eliminan en cuanto se activan. Por lo tanto, al recibir las notificaciones, la aplicación debe suscribirse de nuevo en caso de que deseen obtenerse actualizaciones posteriores.  
   
@@ -95,7 +95,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   
 ```  
   
- Tenga en cuenta que seleccione * no elimina la entrada de la cola, sin embargo recibir \* FROM sí. Esto detiene un subproceso del servidor si la cola está vacía. Si hay entradas en la cola en el momento de la llamada, se devuelven inmediatamente; de lo contrario, la llamada espera a que se realice una entrada en la cola.  
+ Tenga en cuenta que SELECT * no elimina la entrada de la cola; en cambio, RECEIVE \* FROM sí que la elimina. Esto detiene un subproceso del servidor si la cola está vacía. Si hay entradas en la cola en el momento de la llamada, se devuelven inmediatamente; de lo contrario, la llamada espera a que se realice una entrada en la cola.  
   
 ```  
 RECEIVE * FROM MyQueue  
@@ -103,18 +103,18 @@ RECEIVE * FROM MyQueue
   
  Si la cola está vacía, esta instrucción devuelve inmediatamente un conjunto de resultados vacío; de lo contrario, devuelve todas las notificaciones en cola.  
   
- Si los valores SSPROP_QP_NOTIFICATION_MSGTEXT y SSPROP_QP_NOTIFICATION_OPTIONS son distintos de NULL y no están vacíos, el encabezado TDS de notificación de consulta que contiene las tres propiedades definidas anteriormente se envía al servidor cada vez que se ejecuta el comando. Si alguno de estos valores es NULL (o está vacío), el encabezado no se envía y se produce un error DB_E_ERRORSOCCURRED (o DB_S_ERRORSOCCURRED si ambas propiedades están marcadas como opcionales) y el valor de estado se establece en DBPROPSTATUS_BADVALUE. La validación se produce durante la ejecución y preparación. De igual forma, se produce un error DB_S_ERRORSOCCURED cuando se establecen las propiedades de notificación de consulta para las conexiones a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] las versiones anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. En este caso, el valor de estado es DBPROPSTATUS_NOTSUPPORTED.  
+ Si los valores SSPROP_QP_NOTIFICATION_MSGTEXT y SSPROP_QP_NOTIFICATION_OPTIONS son distintos de NULL y no están vacíos, el encabezado TDS de notificación de consulta que contiene las tres propiedades definidas anteriormente se envía al servidor cada vez que se ejecuta el comando. Si alguno de estos valores es NULL (o está vacío), el encabezado no se envía y se produce un error DB_E_ERRORSOCCURRED (o DB_S_ERRORSOCCURRED si ambas propiedades están marcadas como opcionales) y el valor de estado se establece en DBPROPSTATUS_BADVALUE. La validación se produce durante la ejecución y preparación. Del mismo modo, se produce un error DB_S_ERRORSOCCURED cuando las propiedades de notificación de consulta se establecen para conexiones con versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. En este caso, el valor de estado es DBPROPSTATUS_NOTSUPPORTED.  
   
  Iniciar una suscripción no garantiza que los mensajes posteriores se entregarán correctamente. Además, no se realiza ninguna comprobación de validez del nombre de servicio especificado.  
   
 > [!NOTE]  
 >  La preparación de instrucciones no hará nunca que se inicie una suscripción; esta acción solo se consigue mediante la ejecución de instrucciones, y las notificaciones de consulta no se verán afectadas por el uso de los servicios principales de OLE DB.  
   
- Para obtener más información sobre el conjunto de propiedades DBPROPSET_SQLSERVERROWSET, vea [propiedades de conjunto de filas y los comportamientos](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md).  
+ Para obtener más información sobre el conjunto de propiedades DBPROPSET_SQLSERVERROWSET, vea [las propiedades del conjunto de filas y comportamientos](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md).  
   
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Controlador OLE DB para las características de SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)     
   
   

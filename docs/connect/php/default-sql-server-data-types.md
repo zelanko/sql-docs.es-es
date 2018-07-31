@@ -1,5 +1,5 @@
 ---
-title: Valor predeterminado de tipos de datos SQL Server | Documentos de Microsoft
+title: Valor predeterminado de tipos de datos SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1d49ff27e0698f0c475f8150654b01bbaf1d283
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 21dab579da73cc8d5290d0b08d3448d76b5337cf
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307234"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979577"
 ---
 # <a name="default-sql-server-data-types"></a>Tipos de datos de SQL Server predeterminados
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +35,7 @@ Al enviar datos al servidor, los [!INCLUDE[ssDriverPHP](../../includes/ssdriverp
 |Boolean|bit|bit|  
 |Integer|INT|INT|  
 |float|float(24)|No compatible|  
-|String (longitud inferior a 8000 bytes)|varchar (<string length>)|varchar (<string length>)|  
+|String (longitud inferior a 8000 bytes)|varchar(<string length>)|varchar(<string length>)|  
 |String (longitud superior a 8000 bytes)|ntext|ntext|  
 |Recurso|No compatible.|No compatible.|  
 |Stream (codificación: no binaria)|ntext|ntext|  
@@ -44,14 +44,14 @@ Al enviar datos al servidor, los [!INCLUDE[ssDriverPHP](../../includes/ssdriverp
 |Objeto|No compatible.|No compatible.|  
 |DateTime (1)|DATETIME|No compatible.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Conversión de tipos de datos](../../connect/php/converting-data-types.md)
 
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)
 
-[Tipos de PHP](http://php.net/manual/language.types.php)
+[Tipos de datos PHP](http://php.net/manual/language.types.php)
 
-[Tipos de datos (Transact-SQL)](https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql)  
+[Tipos de datos (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/data-types/data-types-transact-sql)  
   

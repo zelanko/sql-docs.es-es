@@ -1,5 +1,5 @@
 ---
-title: Ejecutar un comando | Documentos de Microsoft
+title: Ejecutar un comando | Microsoft Docs
 description: Ejecutar un comando
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,27 +20,27 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 20d2a7314db4a70fbc27221fba34e510441d9236
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 86ce7ef5abcc3a365428c015603b9e9779c22190
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665535"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105972"
 ---
 # <a name="executing-a-command"></a>Ejecutar un comando
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Una vez establecida la conexión a un origen de datos, el consumidor llama a la **IDBCreateSession::** método para crear una sesión. La sesión actúa como un comando, conjunto de filas o fábrica de transacciones.  
+  Una vez establecida la conexión a un origen de datos, el consumidor llama a la **IDBCreateSession** método para crear una sesión. La sesión actúa como un comando, conjunto de filas o fábrica de transacciones.  
   
- Para trabajar directamente con índices o tablas individuales, el consumidor solicita la **IOpenRowset** interfaz. El **IOpenRowset:: OpenRowset** método abre y devuelve un conjunto de filas que incluye todas las filas de una única tabla base o índice.  
+ Para trabajar directamente con índices o tablas individuales, el consumidor solicita la interfaz **IOpenRowset**. El método **IOpenRowset::OpenRowset** se abre y devuelve un conjunto de filas que incluye todas las filas de un índice o tabla base única.  
   
- Para ejecutar un comando (como SELECT \* FROM Authors), el consumidor solicita la **IDBCreateCommand** interfaz. El consumidor puede ejecutar la **IDBCreateCommand:: CreateCommand** método para crear un objeto de comando y solicitar la **ICommandText** interfaz. El **ICommandText:: SetCommandText** método se utiliza para especificar el comando que se va a ejecutar.  
+ Para ejecutar un comando (como SELECT \* FROM Authors), el consumidor solicita la interfaz **IDBCreateCommand**. El consumidor puede ejecutar el **IDBCreateCommand:: CreateCommand** método para crear un objeto de comando y solicitar la **ICommandText** interfaz. El **ICommandText:: SetCommandText** método se utiliza para especificar el comando que se ejecuta.  
   
- El **Execute** comando se usa para ejecutar el comando. El comando puede ser cualquier instrucción SQL o nombre de procedimiento. No todos los comandos generan un objeto de conjunto de resultados (conjunto de filas). Comandos como SELECT * FROM Autores generan un conjunto de resultados.  
+ El comando **Execute** se utiliza para ejecutar el comando. El comando puede ser cualquier instrucción SQL o nombre de procedimiento. No todos los comandos generan un objeto de conjunto de resultados (conjunto de filas). Comandos como SELECT * FROM Autores generan un conjunto de resultados.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Creación de un controlador OLE DB para la aplicación de SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
   

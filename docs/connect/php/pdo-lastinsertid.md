@@ -1,5 +1,5 @@
 ---
-title: PDO::lastInsertId | Documentos de Microsoft
+title: PDO::lastInsertId | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2018
 ms.prod: sql
@@ -14,17 +14,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a04c7db3b146f3b4ee936ff2b98947222f5e471b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 69792c6f6383cb75ae66fa279d343ede6977f99b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308554"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983377"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Devuelve el identificador de la fila que se insertó más recientemente en una tabla de la base de datos. La tabla debe tener una columna IDENTITY NOT NULL. Si no se proporciona un nombre de la secuencia, `lastInsertId` devuelve inserta el último número de secuencia para el nombre de la secuencia proporcionada (para obtener más información acerca de los números de secuencia, vea [aquí](https://docs.microsoft.com/en-us/sql/relational-databases/sequence-numbers/sequence-numbers)).
+Devuelve el identificador de la fila que se insertó más recientemente en una tabla de la base de datos. La tabla debe tener una columna IDENTITY NOT NULL. Si se proporciona un nombre de secuencia, `lastInsertId` devuelve inserta el último número de secuencia para el nombre de la secuencia proporcionada (para obtener más información acerca de los números de secuencia, vea [aquí](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers)).
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,19 +34,19 @@ string PDO::lastInsertId ([ $name = NULL ] );
 ```  
   
 #### <a name="parameters"></a>Parámetros  
-$*nombre*: una cadena opcional que permite especificar un nombre de la secuencia. 
+$*name*: una cadena opcional que le permite especificar un nombre de secuencia. 
   
 ## <a name="return-value"></a>Valor devuelto  
-Si no se proporciona ningún nombre de secuencia, una cadena del identificador de la fila se agregó más recientemente.
-Si no se proporciona un nombre de secuencia, una cadena del identificador de la secuencia de agregado más recientemente.
+Si se proporciona ningún nombre de secuencia, una cadena del identificador de la fila agregado más recientemente.
+Si se proporciona un nombre de secuencia, una cadena del identificador de la secuencia de agregado más recientemente.
 Si se produce un error en la llamada al método, se devuelve una cadena vacía.
   
 ## <a name="remarks"></a>Notas  
 En la versión 2.0 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], se agregó compatibilidad con PDO.  
-Entre las versiones 2.0 y 4.3, el parámetro opcional es un nombre de tabla y el valor devuelto es el identificador de la fila agregado más recientemente a la tabla proporcionada.
-A partir de 5.0, el parámetro opcional se considera como un nombre de la secuencia y el valor devuelto es la secuencia que se haya agregado más recientemente para el nombre de la secuencia proporcionada.
+Entre las versiones 2.0 y 4.3, el parámetro opcional es un nombre de tabla y el valor devuelto es el identificador de la fila agregada recientemente a la tabla proporcionada.
+Empezando con 5.0, el parámetro opcional se considera como un nombre de la secuencia y el valor devuelto es la secuencia de agregado más recientemente para el nombre de la secuencia proporcionada.
 Si se proporciona un nombre de tabla para las versiones después 4.3, `lastInsertId` devuelve una cadena vacía.
-Se admiten las secuencias solo en SQL Server 2012 y versiones posteriores.
+Se admiten secuencias sólo en SQL Server 2012 y versiones posteriores.
   
 ## <a name="example"></a>Ejemplo  
   
@@ -143,7 +143,7 @@ try{
 ?>
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Clase PDO](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

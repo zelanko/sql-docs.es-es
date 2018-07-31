@@ -1,5 +1,5 @@
 ---
-title: Clase SQLServerDataSourceObjectFactory | Documentos de Microsoft
+title: Clase SQLServerDataSourceObjectFactory | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ecec8f58587d6a57468f8078e1f680675bede77
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845820"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046853"
 ---
 # <a name="sqlserverdatasourceobjectfactory-class"></a>Clase SQLServerDataSourceObjectFactory
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "32845820"
 public class SQLServerDataSourceObjectFactory  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- Este método lo heredan todas las clases de orígenes de datos. Como parte de su compatibilidad con la interfaz Referenceable, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] expone esta clase que implementa un ObjectFactory. Servidores de aplicaciones Java llamará getReference en una clase de origen de datos, y esto creará un objeto de referencia que utiliza internamente el nombre de clase como el generador de clases.  
+## <a name="remarks"></a>Notas  
+ Este método lo heredan todas las clases de orígenes de datos. Como parte de su compatibilidad con la interfaz Referenceable, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] expone esta clase que implementa ObjectFactory. Cuando los servidores de aplicaciones Java llaman a getReference en una clase de origen de datos, se crea un objeto Reference que usa internamente el nombre de la clase como su generador de clases.  
   
- Cuando el servidor de aplicaciones Java tenga que eliminar referencias del objeto de referencia, crea una instancia del objeto SQLServerDataSourceObjectFactory y las llamadas del [getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md) método, pasando el objeto de referencia, a recuperar la instancia de origen de datos.  
+ Cuando el servidor de aplicaciones Java tiene que eliminar referencias del objeto de referencia, crea una instancia del objeto SQLServerDataSourceObjectFactory y llama a la [getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md) método, pasando el objeto de referencia a recuperar la instancia de origen de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros de SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-members.md)   
  [Referencia de API del controlador JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

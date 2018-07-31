@@ -1,5 +1,5 @@
 ---
-title: Recuperar datos de caracteres como una secuencia con el controlador SQLSRV | Documentos de Microsoft
+title: Recuperar datos de caracteres como un flujo con el controlador SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,25 +18,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a9099e0854b0030e79645399377d8f47dc90c85a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307954"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054073"
 ---
 # <a name="how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver"></a>Cómo recuperar datos de caracteres como una secuencia utilizando el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Recuperar datos como una secuencia solo está disponible en el controlador SQLSRV de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]y no está disponible en el controlador PDO_SQLSRV.  
+La recuperación de datos como un flujo solo está disponible en el controlador SQLSRV de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], pero no en el controlador PDO_SQLSRV.  
   
 El controlador SQLSRV aprovecha las ventajas de las secuencias de PHP para recuperar grandes cantidades de datos del servidor. En el ejemplo de este tema se muestra cómo recuperar datos de caracteres como una secuencia.  
   
 ## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente se recupera una fila de la tabla *Production.ProductReview* de la base de datos de AdventureWorks. El *comentarios* campo de la fila devuelta se recupera como una secuencia y se muestra mediante el uso de PHP [fpassthru](http://php.net/manual/function.fpassthru.php) función.  
+En el ejemplo siguiente se recupera una fila de la tabla *Production.ProductReview* de la base de datos de AdventureWorks. El campo *Comments* de la fila devuelta se recupera como un flujo y se muestra mediante la función PHP [fpassthru](http://php.net/manual/function.fpassthru.php).  
   
-El proceso de recuperación de los datos como una secuencia se realiza utilizando [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) y [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) con el tipo de valor devuelto como una secuencia de caracteres. El tipo de valor devuelto se especifica mediante la constante **SQLSRV_PHPTYPE_STREAM**. Para obtener información acerca de **sqlsrv** constantes, vea [constantes &#40;Microsoft Drivers for PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+El proceso de recuperación de los datos como una secuencia se realiza utilizando [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) y [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) con el tipo de valor devuelto como una secuencia de caracteres. El tipo de valor devuelto se especifica mediante la constante **SQLSRV_PHPTYPE_STREAM**. Para obtener información sobre las constantes **sqlsrv**, vea [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
-En el ejemplo se da por supuesto que [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el ejemplo se da por hecho que [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -95,7 +95,7 @@ sqlsrv_close( $conn);
   
 Como en los tres primeros campos no se ha especificado el tipo de datos PHP devuelto, los campos se devuelven según el tipo de datos PHP predeterminado. Para obtener información sobre los tipos de datos PHP predeterminados, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md). Para obtener información sobre cómo especificar los tipos de valor devueltos PHP, consulte [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Recuperación de datos](../../connect/php/retrieving-data.md)
 
 [Recuperación de datos como una secuencia con el controlador SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)

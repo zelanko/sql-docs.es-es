@@ -1,6 +1,6 @@
 ---
-title: Enumerar orígenes de datos OLE DB (OLE DB) | Documentos de Microsoft
-description: Enumerar orígenes de datos OLE DB mediante el enumerador MSOLEDBSQL
+title: Enumerar orígenes de datos OLE DB (OLE DB) | Microsoft Docs
+description: Enumerar orígenes de datos de OLE DB mediante el enumerador MSOLEDBSQL
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,21 +16,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9b4911e94ec5cb21e2950a09b0a0e18d5f842bd7
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 2466ebc1b701cc5f2102a895afa475a107c8af4c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665885"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107989"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Enumerar orígenes de datos OLE DB (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   En este ejemplo se indica cómo utilizar el objeto enumerador para mostrar los orígenes de datos disponibles.  
   
- Para obtener una lista de los orígenes de datos visibles para el enumerador MSOLEDBSQL, el consumidor llama a la [ISourcesRowset:: GetSourcesRowset](http://go.microsoft.com/fwlink/?LinkId=120312) método. Este método devuelve un conjunto de filas de información sobre los orígenes de datos actualmente visibles.  
+ Para enumerar los orígenes de datos visibles para el enumerador MSOLEDBSQL, el consumidor llama al método [ISourcesRowset::GetSourcesRowset](http://go.microsoft.com/fwlink/?LinkId=120312). Este método devuelve un conjunto de filas de información sobre los orígenes de datos actualmente visibles.  
   
  Dependiendo de la biblioteca de redes utilizada, se buscan en el dominio adecuado los orígenes de datos. Para las canalizaciones con nombre, es el dominio en el que el cliente ha iniciado sesión. Para AppleTalk, es la zona predeterminada. Para SPX/IPX, es la lista de instalaciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se encuentran en el enlace. Para Banyan VINES, se trata de las instalaciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se encuentran en la red local. No se admite multiprotocolo ni sockets TCP/IP.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "35665885"
 6.  Recupere los datos de la copia de la fila del conjunto de filas llamando a **IRowset::GetData**y procéselos.  
   
 ## <a name="example"></a>Ejemplo  
- Compile con ole32.lib y ejecute la siguiente lista de código C++. Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\\name", donde el nombre es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene msoledbsql.h.  
+ Compile con ole32.lib y ejecute la siguiente lista de código C++. Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\nombre", donde "nombre" es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que en la variable de entorno INCLUDE se incluya el directorio que contiene msoledbsql.h.  
   
 ```  
 // compile with: ole32.lib  

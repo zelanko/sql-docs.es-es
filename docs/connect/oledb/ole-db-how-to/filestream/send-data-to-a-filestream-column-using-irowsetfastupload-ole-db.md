@@ -1,6 +1,6 @@
 ---
-title: Enviar datos a una columna FILESTREAM utilizando IRowsetFastUpload (OLE DB) | Documentos de Microsoft
-description: Enviar datos a una columna FILESTREAM utilizando IRowsetFastUpload (OLE DB)
+title: Enviar datos a una columna FILESTREAM con IRowsetFastUpload (OLE DB) | Microsoft Docs
+description: Enviar datos a una columna FILESTREAM con IRowsetFastUpload (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 070e8022ffc0840f88f7b8e5b0b03abcd2f13dc3
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: a708966a35ef6311cf6912a988bcf4822f53b6f3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666195"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106561"
 ---
-# <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Enviar datos a una columna FILESTREAM utilizando IRowsetFastUpload (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Enviar datos a una columna FILESTREAM con IRowsetFastUpload (OLE DB)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
@@ -33,7 +33,7 @@ ms.locfileid: "35666195"
 ## <a name="example"></a>Ejemplo  
  Antes de compilar y ejecutar este ejemplo, habilitar la compatibilidad con FILESTREAM ([habilitar y configurar FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
- Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene msoledbsql.h.  
+ Asegúrese de que en la variable de entorno INCLUDE se incluya el directorio que contiene msoledbsql.h.  
   
  El servidor debe tener un directorio denominado C:\DBFsa, donde el ejemplo creará la base de datos. Su instancia de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] debe tener acceso de escritura a esta ubicación (por ejemplo, iniciar sesión como una cuenta de sistema local).  
   

@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_next_result | Documentos de Microsoft
+title: sqlsrv_next_result | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0e793dd1a1726d32e44c892ee14326acb30ff48
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309444"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019613"
 ---
 # <a name="sqlsrvnextresult"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "35309444"
 Activa el siguiente resultado (conjunto de resultados, recuento de filas o parámetro de salida) de la instrucción especificada.  
   
 > [!NOTE]  
-> El resultado de la primera (o único) devuelto por una consulta por lotes o procedimiento almacenado está activo sin una llamada a **sqlsrv_next_result**.  
+> El primer resultado (o el único) que devuelve una consulta por lotes o un procedimiento almacenado está activo sin una llamada a **sqlsrv_next_result**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -51,12 +51,12 @@ sqlsrv_next_result( resource $stmt )
 Si el resultado siguiente se activó correctamente, se devuelve el valor booleano **True** . Si se produjo un error en el siguiente resultado activo, se devuelve **False** . Si no hay más resultados disponibles, se devuelve **Null** .  
   
 ## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente se crea y ejecuta un procedimiento almacenado que inserta una reseña de producto en la tabla *Production.ProductReview* y, luego, selecciona todas las reseñas del producto especificado. Tras la ejecución del procedimiento almacenado, el primer resultado (el número de filas afectadas por la consulta de INSERCIÓN en el procedimiento almacenado) se consume sin llamar a **sqlsrv_next_result**. El resultado siguiente (es decir, las filas devueltas por la consulta SELECT en el procedimiento almacenado) estará disponible mediante una llamada a **sqlsrv_next_result** y consume mediante [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
+En el ejemplo siguiente se crea y ejecuta un procedimiento almacenado que inserta una reseña de producto en la tabla *Production.ProductReview* y, luego, selecciona todas las reseñas del producto especificado. Después de ejecutar el procedimiento almacenado, el primer resultado (el número de filas afectadas por la consulta INSERT del procedimiento almacenado) se utiliza sin llamar a **sqlsrv_next_result**. El resultado siguiente (las filas que devuelve la consulta SELECT del procedimiento almacenado) estará disponible mediante una llamada a **sqlsrvnextresult** y se usará mediante [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
 > [!NOTE]  
-> Se recomienda llamar a procedimientos almacenados mediante sintaxis canónica. Para obtener más información sobre la sintaxis canónica, consulte [al llamar a un procedimiento almacenado](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
+> Se recomienda llamar a procedimientos almacenados mediante sintaxis canónica. Para obtener más información sobre la sintaxis canónica, vea [Llamar a un procedimiento almacenado](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
-El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -187,9 +187,9 @@ Al ejecutar un procedimiento almacenado que tenga parámetros de salida, se reco
 En el ejemplo siguiente se ejecuta una consulta por lotes que recupera información de reseñas de producto de un id. de producto determinado, inserta una reseña de producto y, luego, vuelve a recuperar la información de reseñas de producto correspondientes al id. de producto especificado. La reseña de producto recién insertada se incluirá en el conjunto de resultados final de la consulta por lotes. En el ejemplo se usa [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) para desplazarse de un resultado de la consulta por lotes al siguiente.  
   
 > [!NOTE]  
-> El resultado de la primera (o único) devuelto por una consulta por lotes o procedimiento almacenado está activo sin una llamada a **sqlsrv_next_result**.  
+> El primer resultado (o el único) que devuelve una consulta por lotes o un procedimiento almacenado está activo sin una llamada a **sqlsrv_next_result**.  
   
-El ejemplo se utiliza la *Purchasing.ProductReview* tabla de la [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos y se da por supuesto que esta base de datos está instalado en el servidor. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el ejemplo se usa la tabla *Purchasing.ProductReview* de la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) y se da por hecho que esta base de datos está instalada en el servidor. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -268,7 +268,7 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)

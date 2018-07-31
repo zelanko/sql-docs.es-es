@@ -1,5 +1,5 @@
 ---
-title: Actualización de datos (controladores de Microsoft para PHP para SQL Server) | Documentos de Microsoft
+title: Actualización de datos (controladores de Microsoft para PHP para SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 64ade4d758d7ee5c87283750259641f59959731a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310064"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979517"
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>Actualización de datos (controladores de Microsoft para PHP para SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ Los pasos para utilizar los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md
 |[Cómo enviar datos como una secuencia](../../connect/php/how-to-send-data-as-a-stream.md)|Describe cómo transmitir datos al servidor.|  
 |[Realización de transacciones](../../connect/php/how-to-perform-transactions.md)|Describe cómo utilizar las funciones de **sqlsrv** para realizar transacciones.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Aplicación de ejemplo &#40;controlador SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)
 
 [Programación de guía para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)

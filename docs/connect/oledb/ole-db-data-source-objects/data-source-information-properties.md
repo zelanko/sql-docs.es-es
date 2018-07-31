@@ -1,6 +1,6 @@
 ---
-title: Propiedades de información del origen de datos | Documentos de Microsoft
-description: Propiedades de información de origen de datos
+title: Propiedades de información del origen de datos | Microsoft Docs
+description: Propiedades de información de orígenes de datos
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,19 +20,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 80d39fd079654452a4d26484df7b9a12e903c714
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 0fd9afc87acfb4c39e406ea3deb0b5e9bd7e82d0
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665975"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108137"
 ---
 # <a name="data-source-information-properties"></a>Propiedades de información de orígenes de datos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  En el conjunto de propiedades específicas del proveedor DBPROPSET_SQLSERVERDATASOURCEINFO, el controlador OLE DB para SQL Server define las siguientes propiedades de información de origen de datos.  
+  En el conjunto de propiedades específico del proveedor DBPROPSET_SQLSERVERDATASOURCEINFO, el controlador OLE DB para SQL Server define las siguientes propiedades de información del origen de datos.  
   
 |Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
@@ -40,13 +40,13 @@ ms.locfileid: "35665975"
 |SSPROP_UNICODELCID|Tipo: VT_I4 L/E: Lectura<br /><br /> Descripción: Id. de configuración regional de Unicode.<br /><br /> Se trata de la configuración regional utilizada para ordenar datos Unicode.|  
 |SSPROP_UNICODECOMPARISONSTYLE|Tipo: VT_I4 L/E: Lectura<br /><br /> Descripción: Estilo de comparación Unicode.<br /><br /> Las opciones de ordenación utilizadas para ordenar datos Unicode.|  
   
- En el conjunto de propiedades específicas del proveedor dbpropset_sqlserversession, el controlador OLE DB para SQL Server define la siguiente propiedad adicional.  
+ En el conjunto de propiedades específico del proveedor DBPROPSET_SQLSERVERSTREAM, el controlador OLE DB para SQL Server define la propiedad adicional siguiente.  
   
 |Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
-|SSPROP_STREAM_XMLROOT|Tipo: VT_BSTR L/E: Lectura/escritura<br /><br /> Descripción: El resultado de una consulta FOR XML podría no ser un documento bien formado. Cuando se especifica esta propiedad, el resultado de un ' Seleccionar... para XML' consulta se incluye en la etiqueta proporcionada por esta propiedad para devolver un documento XML bien formado. Si la consulta se ejecuta en el explorador, puede hacer que el explorador muestre los errores de análisis al cargar el resultado. Para evitar el error, SQL ISAPI admite la palabra clave ROOT. Esta palabra clave se asigna a la propiedad SSPROP_STREAM_XMLROOT.|  
+|SSPROP_STREAM_XMLROOT|Tipo: VT_BSTR L/E: Lectura/escritura<br /><br /> Descripción: El resultado de una consulta FOR XML podría no ser un documento bien formado. Cuando se especifica esta propiedad, el resultado de un ' Seleccionar... para XML' consulta se ajusta en la etiqueta proporcionada por esta propiedad para devolver un documento XML bien formado. Si la consulta se ejecuta en el explorador, puede hacer que el explorador muestre los errores de análisis al cargar el resultado. Para evitar el error, SQL ISAPI admite la palabra clave ROOT. Esta palabra clave se asigna a la propiedad SSPROP_STREAM_XMLROOT.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Objetos de origen de datos &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

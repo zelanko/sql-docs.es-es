@@ -1,5 +1,5 @@
 ---
-title: Conexión con bcp | Documentos de Microsoft
+title: Conexión con bcp | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,40 +17,40 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 707db709188db15bc3627d65a2dba5a2bc516308
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852600"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041406"
 ---
 # <a name="connecting-with-bcp"></a>Conexión con bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-El [bcp](http://go.microsoft.com/fwlink/?LinkID=190626) utilidad está disponible en la [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] en Linux y macOS. Esta página documenta las diferencias con respecto a la versión de Windows `bcp`.
+La utilidad [bcp](http://go.microsoft.com/fwlink/?LinkID=190626) está disponible en [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] en Linux y MacOS. Esta página documenta las diferencias con respecto a la versión de Windows de `bcp`.
   
 - El terminador de campo es una tabulación ("\t").  
   
 - El terminador de línea es una nueva línea ("\n").  
   
-- Modo de carácter es el formato preferido para `bcp` dar formato a los archivos y archivos de datos que no contienen caracteres extendidos.  
+- El modo de carácter es el formato preferido de los archivos de formato `bcp` y de datos que no contienen caracteres extendidos.  
   
 > [!NOTE]  
-> Una barra diagonal inversa '\\' en un argumento de línea de comandos debe entrecomillarse o caracteres de escape. Por ejemplo, para especificar una nueva línea como terminador de fila personalizado, debe utilizar uno de los siguientes mecanismos:  
+> Las barras diagonales inversas "\\" de los argumentos de línea de comandos deben entrecomillarse o contener caracteres de escape. Por ejemplo, para especificar una nueva línea como terminador de fila personalizado debe utilizar uno de los siguientes mecanismos:  
 >   
 > -   -r\\\n  
 > -   -r"\n"  
 > -   -r'\n'  
   
-La siguiente es una invocación de comando de ejemplo de `bcp` para copiar filas de la tabla en un archivo de texto:  
+A continuación, se muestra una invocación de ejemplo de un comando de `bcp` para copiar filas de la tabla en un archivo de texto:  
   
 ```  
 bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.xxx  
 ```  
   
 ## <a name="available-options"></a>Opciones disponibles
-En la versión actual, la sintaxis y las opciones siguientes están disponibles:  
+En la versión actual, se encuentran disponibles las siguientes opciones y sintaxis:  
 
-[*base de datos ***.**]* esquema ***.*** tabla * **en** *data_file* | **out** *data_file*
+[*database***.**]* schema ***.*** table* **in** *data_file* | **out** *data_file*
 
 - -a *packet_size*  
 Especifica el número de bytes por paquete de red enviados y recibidos por el servidor.  
@@ -65,11 +65,11 @@ Utiliza un tipo de datos de caracteres.
 Especifica la base de datos a la que conectarse.  
   
 - -d  
-Hace que el valor pasado a la `bcp` opción -S se interprete como un nombre de origen de datos (DSN). Para obtener más información, vea "Compatibilidad con DSN en sqlcmd y bcp" en [conectar con sqlcmd](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md).  
+Hace que el valor transmitido a la opción `bcp` -S se interprete como un nombre de origen de datos (DSN). Para obtener más información, vea la sección "Compatibilidad con DSN en sqlcmd y bcp" de [Connecting with sqlcmd](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md).  
   
-- -e *error_file* especifica la ruta de acceso completa de un archivo de error que se usa para almacenarlas filas que la `bcp` utilidad no puede transferir del archivo a la base de datos.  
+- -e *error_file* especifica la ruta completa de un archivo de error que se usa para almacenar las filas que la utilidad `bcp` no puede transferir del archivo a la base de datos.  
   
-- -e  
+- -E  
 Utiliza el valor o los valores de identidad del archivo de datos importado en la columna de identidad.  
   
 - -f *format_file*  
@@ -82,13 +82,13 @@ Especifica el número de la primera fila que se exportará desde una tabla o que
 Especifica que las columnas vacías deben conservar un valor NULL durante la operación, en vez de tener valores predeterminados para las columnas insertadas.  
   
 - -l  
-Especifica un tiempo de espera de inicio de sesión. La opción – l Especifica el número de segundos antes de que un inicio de sesión a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tiempos de espera al intentar conectarse a un servidor. El tiempo de espera de inicio de sesión predeterminado es 15 segundos. El tiempo de espera de inicio de sesión debe ser un número comprendido entre 0 y 65534. Si el valor proporcionado no es numérico o no está dentro de este intervalo, `bcp` genera un mensaje de error. Un valor de 0 especifica un tiempo de espera infinito.
+Especifica un tiempo de espera de inicio de sesión. La opción –l especifica el número de segundos que tienen que transcurrir antes de que un inicio de sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] agote el tiempo de espera cuando se trate de conectar a un servidor. El tiempo de espera de inicio de sesión predeterminado es 15 segundos. El período de tiempo de espera de inicio de sesión debe ser un número comprendido entre 0 y 65534. Si el valor proporcionado no es numérico o no está dentro de este intervalo, `bcp` genera un mensaje de error. Un valor de 0 especifica un tiempo de espera infinito.
   
 - -L *last_row*  
 Especifica el número de la última fila que se exportará desde una tabla o que se importará desde un archivo de datos.  
   
 - -m *max_errors*  
-Especifica el número máximo de errores de sintaxis que se pueden producir antes el `bcp` se cancela la operación.  
+Especifica el número máximo de errores de sintaxis que pueden producirse antes de que se cancele la operación de `bcp`.  
   
 - -n  
 Utiliza los tipos de datos nativos (de la base de datos) de los datos para realizar la operación de copia masiva.  
@@ -112,12 +112,12 @@ Especifica el nombre de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_
 Especifica el terminador del campo.  
   
 - -T  
-Especifica que la `bcp` utilidad conectará a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] con una conexión de confianza (seguridad integrada).  
+Especifica que la utilidad `bcp` se conecte a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] con una conexión de confianza (seguridad integrada).  
   
 - -U *login_id*  
 Especifica el identificador de inicio de sesión para conectar con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
-- -v  
+- -V  
 Facilita información acerca del número de versión y de los derechos de autor de la utilidad `bcp`.  
   
 - -w  
@@ -126,7 +126,7 @@ Utiliza caracteres Unicode para realizar la operación de copia masiva.
 En esta versión, se admiten los caracteres Latin-1 y UTF-16.  
   
 ## <a name="unavailable-options"></a>Opciones no disponibles
-En la versión actual, la sintaxis y las opciones siguientes no están disponibles:  
+En la versión actual, no se encuentran disponibles las siguientes opciones y sintaxis:  
 
 - -c  
 Especifica la página de códigos de los datos incluidos en el archivo de datos.  
@@ -149,6 +149,6 @@ Utiliza los tipos de datos de una versión anterior de [!INCLUDE[ssNoVersion](..
 - -X  
 Si se usa con las opciones format y -f format_file, genera un archivo de formato basado en XML en lugar del archivo de formato predeterminado que no es XML.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Ver también
 
-[Conectar con **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  
+[Conexión con **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  

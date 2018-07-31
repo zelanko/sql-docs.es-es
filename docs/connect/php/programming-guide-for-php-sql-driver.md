@@ -1,5 +1,5 @@
 ---
-title: Guía de programación para los controladores de Microsoft para PHP para SQL Server | Documentos de Microsoft
+title: Guía de programación de los controladores de Microsoft para PHP para SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a02f2b890e25a332a6d0ed228a20d78035a7dedc
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308914"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992797"
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>Programación de guía para los controladores de Microsoft para PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,11 +38,11 @@ Esta sección contiene temas que le ayudarán a desarrollar aplicaciones con los
 |[Conversión de tipos de datos](../../connect/php/converting-data-types.md)|Explica cómo especificar tipos de datos y proporcionar información detallada sobre los tipos de datos predeterminados.|  
 |[Controlar errores y advertencias](../../connect/php/handling-errors-and-warnings.md)|Explica cómo controlar errores y advertencias.|  
 |[Actividad de registro](../../connect/php/logging-activity.md)|Proporciona información sobre el registro de errores y advertencias.|  
-|[Uso de Always Encrypted con los controladores de Microsoft para PHP para SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|Proporciona información acerca de cómo utilizar la característica Always Encrypted con los controladores PHP.|  
+|[Uso de Always Encrypted con los controladores de Microsoft para PHP para SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|Proporciona información sobre cómo usar la característica Always Encrypted con los controladores PHP.|  
 |[Consideraciones de seguridad para los controladores de Microsoft para PHP para SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)|Describe consideraciones de seguridad para desarrollar, implementar y ejecutar aplicaciones.|  
   
-## <a name="see-also"></a>Vea también  
-[Información general sobre controladores de Microsoft para PHP para SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
+## <a name="see-also"></a>Ver también  
+[Información general de los controladores de Microsoft para PHP para SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
 
 [Introducción a los controladores de Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 

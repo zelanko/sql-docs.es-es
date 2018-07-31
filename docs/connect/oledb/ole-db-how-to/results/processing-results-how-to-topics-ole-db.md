@@ -1,5 +1,5 @@
 ---
-title: Temas "Cómo..." de resultados (OLE DB) para procesar | Documentos de Microsoft
+title: Procesamiento de temas de procedimientos de resultados (OLE DB) | Microsoft Docs
 description: Temas de procedimientos de procesamiento de resultados (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,15 +16,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1792785286c07535925c81194972e65d2f55fb9a
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 61c759c37343b8c795e6b2f71449db664e8c3a63
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666075"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108697"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Temas de procedimientos de procesamiento de resultados (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
@@ -32,15 +32,15 @@ ms.locfileid: "35666075"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Ejecutar un procedimiento almacenado &#40;con la sintaxis CALL de ODBC&#41; y procesar códigos de retorno y parámetros de salida &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md)  
+-   [Ejecutar un procedimiento almacenado &#40;mediante la sintaxis ODBC CALL&#41; y procesar códigos de retorno y parámetros de salida &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md)  
   
 -   [Ejecutar un procedimiento almacenado &#40;mediante la sintaxis RPC&#41; y procesar códigos de retorno y parámetros de salida &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)  
   
--   [Ejecutar un código de retorno de función definida por el usuario y proceso &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md)  
+-   [Ejecutar una función definida por el usuario y procesar el código de retorno &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md)  
   
--   [Recuperar filas de un conjunto de resultados &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
+-   [Capturar filas de un conjunto de resultados &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Temas de procedimientos de OLE DB](../../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Controlador OLE DB para la referencia de SQL Server (OLE DB) | Documentos de Microsoft
-description: Controlador de OLE DB para la referencia de SQL Server (OLE DB)
+title: Controlador OLE DB para la referencia de SQL Server (OLE DB) | Microsoft Docs
+description: Referencia del controlador OLE DB para SQL Server (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,29 +20,29 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4877a5a4a3965b65bd9a61f33303dabff34af4e6
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: feb8c904963b0974a736b6524f11f5551aa02005
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690168"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105811"
 ---
-# <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>Controlador OLE DB para Interfaces de SQL Server (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>Interfaces del controlador OLE DB para SQL Server (OLE DB)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  El controlador OLE DB para SQL Server expone interfaces a los consumidores que desean tener acceso a los datos en uno o más equipos que ejecutan [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El controlador OLE DB para SQL Server es un proveedor compatible con 2.0 de versión de OLE DB.  
+  El controlador OLE DB para SQL Server expone interfaces a los consumidores que quieran tener acceso a los datos de uno o varios equipos en los que se ejecuta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El controlador OLE DB para SQL Server es un proveedor compatible con 2.0 versión de OLE DB.  
   
- Este controlador de OLE DB para la referencia de programación de SQL Server no documenta todas las interfaces OLE DB y métodos, solo las interfaces y métodos que mostrará un comportamiento específico del proveedor cuando se usa el controlador OLE DB para SQL Server.  
+ Esta referencia de programación del controlador OLE DB para SQL Server no documenta todas las interfaces y métodos de OLE DB, sino únicamente aquellos que muestran un comportamiento específico del proveedor cuando se usa el controlador OLE DB para SQL Server.  
   
- Para obtener una descripción completa de las interfaces OLE DB principales y los métodos, consulte el [referencia del programador de OLE DB](http://go.microsoft.com/fwlink/?LinkId=45232).  
+ Para obtener una descripción completa de las interfaces y los métodos principales de OLE DB, vea la [Referencia del programador de OLE DB](http://go.microsoft.com/fwlink/?LinkId=45232).  
   
 ## <a name="in-this-section"></a>En esta sección  
   
 -   [Interfaces &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Programación del controlador OLE DB para SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

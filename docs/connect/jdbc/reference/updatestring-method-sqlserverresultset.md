@@ -1,5 +1,5 @@
 ---
-title: updateString (método) (SQLServerResultSet) | Documentos de Microsoft
+title: Método updateString (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,25 +20,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0bbfea2e2daec9b71f54a8c3c1a1a901579d14fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851060"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979227"
 ---
-# <a name="updatestring-method-sqlserverresultset"></a>updateString (método) (SQLServerResultSet)
+# <a name="updatestring-method-sqlserverresultset"></a>Método updateString (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Actualiza la columna designada con un **cadena** valor.  
+  Actualiza la columna designada con un valor **string**.  
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nombre|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[updateString (int, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-int-java-lang-string.md)|Actualiza la columna designada con un **cadena** valor según el índice de columna.|  
-|[updateString (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-java-lang-string-java-lang-string.md)|Actualiza la columna designada con un **cadena** valor según el nombre de columna.|  
+|[updateString (int, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-int-java-lang-string.md)|Actualiza la columna designada con un valor **string** según el índice de columna.|  
+|[updateString (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-java-lang-string-java-lang-string.md)|Actualiza la columna designada con un valor **string** según el nombre de columna.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

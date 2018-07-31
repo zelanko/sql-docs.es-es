@@ -1,6 +1,6 @@
 ---
-title: Asignación de tipo de datos en conjuntos de filas y los parámetros | Documentos de Microsoft
-description: Asignación de tipos de datos en conjuntos de filas y parámetros
+title: Asignación de tipos de datos en parámetros y conjuntos de filas | Microsoft Docs
+description: Asignar tipos de datos en conjuntos de filas y parámetros
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -25,19 +25,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 5814771fe9ea11adc0908d2791af4e1b4f7dd881
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: c9c6d56cdbbbcd9b35b09f405154497a5fa3bc8f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666125"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108797"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Asignar tipos de datos en conjuntos de filas y parámetros
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  En conjuntos de filas y como valores de parámetro, el controlador OLE DB para SQL Server representa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datos mediante el uso de las siguientes DB OLE definen tipos de datos, notificados en las funciones **IColumnsInfo:: GetColumnInfo** y  **ICommandWithParameters:: GetParameterInfo**.  
+  En conjuntos de filas y como valores de parámetro, el controlador OLE DB para SQL Server representa los datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante los siguientes tipos de datos definidos por OLE DB, notificados en las funciones **IColumnsInfo::GetColumnInfo** e **ICommandWithParameters::GetParameterInfo**.  
   
 |Tipo de datos de SQL Server|Tipo de datos de OLE DB|  
 |--------------------------|----------------------|  
@@ -71,22 +71,22 @@ ms.locfileid: "35666125"
 |**varchar**|DBTYPE_STR|  
 |**XML**|DBTYPE_XML|  
   
- El controlador OLE DB para SQL Server admite conversiones de datos solicitadas por el consumidor como se muestra en la ilustración.  
+ El controlador OLE DB para SQL Server admite las conversiones solicitadas por el consumidor de datos tal como se muestra en la ilustración.  
   
- El **sql_variant** objetos pueden contener datos de cualquier [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de tipo de datos excepto texto, ntext, image, varchar (max), nvarchar (max), varbinary (max), xml, timestamp y common language runtime (CLR) de Microsoft .NET Framework tipos definidos por el usuario. Una instancia de datos sql_variant no puede tener sql_variant como tipo de datos base subyacente. Por ejemplo, la columna puede contener **smallint** valores en algunas filas, **float** valores en otras filas y **char**/**nchar**valores en el resto.  
+ Los objetos **sql_variant** pueden contener datos de cualquier tipo de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] excepto text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml, timestamp y los tipos definidos por el usuario de Common Language Runtime (CLR) de Microsoft .NET Framework. Una instancia de datos sql_variant no puede tener sql_variant como tipo de datos base subyacente. Por ejemplo, la columna puede contener valores **smallint** en algunas filas, valores **float** en otras filas y valores **char**/**nchar** en el resto.  
   
 > [!NOTE]  
->  El **sql_variant** tipo de datos es similar al tipo de datos Variant en Microsoft Visual Basic® y DBTYPE_VARIANT, DBTYPE_SQLVARIANT de OLEDB.  
+>  El tipo de datos **sql_variant** es similar al tipo de datos Variant de Microsoft Visual Basic® y DBTYPE_VARIANT, DBTYPE_SQLVARIANT de OLEDB.  
   
- Cuando **sql_variant** datos se capturan como DBTYPE_VARIANT, se coloca en una estructura VARIANT en el búfer. Pero los subtipos de la estructura VARIANT no se pueden asignar a los subtipos definidos en el **sql_variant** tipo de datos. El **sql_variant** datos se deben capturar como DBTYPE_SQLVARIANT en orden para todos los subtipos coincidan.  
+ Cuando los datos **sql_variant** se capturan como DBTYPE_VARIANT, se incluyen en una estructura VARIANT en el búfer. Pero es posible que los subtipos de la estructura VARIANT no se asignen a los subtipos definidos en el tipo de datos **sql_variant**. Los datos **sql_variant** se tienen que capturar en este caso como DBTYPE_SQLVARIANT para que todos los subtipos coincidan.  
   
 ## <a name="dbtypesqlvariant-data-type"></a>Tipo de datos DBTYPE_SQLVARIANT  
- Para admitir la **sql_variant** tipo de datos, el controlador OLE DB para SQL Server expone un tipo de datos específico del proveedor denominado DBTYPE_SQLVARIANT. Cuando **sql_variant** datos se capturan como DBTYPE_SQLVARIANT, se almacena en una estructura SSVARIANT específica del proveedor. La estructura SSVARIANT contiene todos los subtipos que coinciden con los subtipos de los **sql_variant** tipo de datos.  
+ Para admitir el tipo de datos **sql_variant**, el controlador OLE DB para SQL Server expone un tipo de datos específico del proveedor denominado DBTYPE_SQLVARIANT. Cuando los datos **sql_variant** se capturan como DBTYPE_SQLVARIANT, se almacenan en una estructura SSVARIANT específica del proveedor. La estructura SSVARIANT contiene todos los subtipos que coinciden con los subtipos del tipo de datos **sql_variant**.  
   
  La propiedad SSPROP_ALLOWNATIVEVARIANT de la sesión también debe estar establecida en TRUE.  
   
 ## <a name="provider-specific-property-sspropallownativevariant"></a>Propiedad SSPROP_ALLOWNATIVEVARIANT específica del proveedor  
- Al capturar los datos, puede especificar explícitamente qué clase de tipo de datos se debería devolver para una columna o para un parámetro. **IColumnsInfo** también puede utilizarse para obtener la información de columna y usarla para crear el enlace. Cuando **IColumnsInfo** se usa para obtener información de columna para fines de enlace, si la sesión SSPROP_ALLOWNATIVEVARIANT la propiedad es FALSE (valor predeterminado), se devuelve DBTYPE_VARIANT **sql_variant**columnas. Si la propiedad SSPROP_ALLOWNATIVEVARIANT es FALSE, no se admite DBTYPE_SQLVARIANT. Si la propiedad SSPROP_ALLOWNATIVEVARIANT está establecida en TRUE, el tipo de columna se devuelve como DBTYPE_SQLVARIANT, en cuyo caso el búfer contendrá la estructura SSVARIANT. En la captura de **sql_variant** datos como DBTYPE_SQLVARIANT, la propiedad SSPROP_ALLOWNATIVEVARIANT de sesión debe establecerse en TRUE.  
+ Al capturar los datos, puede especificar explícitamente qué clase de tipo de datos se debería devolver para una columna o para un parámetro. También se puede usar **IColumnsInfo** para obtener la información de columna y usarla al crear el enlace. Cuando se usa **IColumnsInfo** para obtener información de columna con fines de enlace, si la propiedad SSPROP_ALLOWNATIVEVARIANT de sesión es FALSE (valor predeterminado), en las columnas **sql_variant** se devuelve DBTYPE_VARIANT. Si la propiedad SSPROP_ALLOWNATIVEVARIANT es FALSE, no se admite DBTYPE_SQLVARIANT. Si la propiedad SSPROP_ALLOWNATIVEVARIANT está establecida en TRUE, el tipo de columna se devuelve como DBTYPE_SQLVARIANT, en cuyo caso el búfer contendrá la estructura SSVARIANT. Al capturar datos **sql_variant** como DBTYPE_SQLVARIANT, la propiedad SSPROP_ALLOWNATIVEVARIANT de sesión tiene que establecerse en TRUE.  
   
  La propiedad SSPROP_ALLOWNATIVEVARIANT forma parte del conjunto de propiedades DBPROPSET_SQLSERVERSESSION específico del proveedor y es una propiedad de sesión.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "35666125"
 |-|-|  
 |SSPROP_ALLOWNATIVEVARIANT|Tipo: VT_BOOL<br /><br /> L/E: de lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: determina si los datos se capturan como DBTYPE_VARIANT o DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: el tipo de columna se devuelve como DBTYPE_SQLVARIANT, en cuyo caso el búfer contendrá la estructura SSVARIANT.<br /><br /> VARIANT_FALSE: el tipo de columna se devuelve como DBTYPE_VARIANT y el búfer contendrá la estructura VARIANT.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Tipos de datos &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

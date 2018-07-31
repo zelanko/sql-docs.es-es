@@ -1,5 +1,5 @@
 ---
-title: 'IRowsetFastLoad:: insertRow (OLE DB) | Documentos de Microsoft'
+title: 'IRowsetFastLoad:: insertRow (OLE DB) | Microsoft Docs'
 description: IRowsetFastLoad::InsertRow (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,19 +20,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 59fde3a16ea1e79587150307da12d917fd7e9a82
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 3239fd370f5a79ad65fa02a044ce88dd22e6c7f9
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689198"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109407"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Agrega una fila al conjunto de filas de copia masiva. Para obtener ejemplos, vea [datos masiva copia masiva con IRowsetFastLoad &#40;OLE DB&#41; ](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) y [enviar datos de BLOB a SQL SERVER con IROWSETFASTLOAD e ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  
+  Agrega una fila al conjunto de filas de copia masiva. Para obtener ejemplos, vea [masiva copia datos masiva con IRowsetFastLoad &#40;OLE DB&#41; ](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) y [enviar datos BLOB a SQL SERVER con IROWSETFASTLOAD e ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -61,10 +61,10 @@ HRESULT InsertRow(
  El argumento *pData* se estableció en un puntero NULL.  
   
  E_OUTOFMEMORY  
- MSOLEDBSQL no pudo asignar memoria suficiente para completar la solicitud.  
+ MSOLEDBSQL no pudo asignar la memoria suficiente para completar la solicitud.  
   
  E_UNEXPECTED  
- Se llamó al método en un conjunto de filas de copia masiva previamente invalidado por la [IRowsetFastLoad:: Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) método.  
+ Se ha llamado al método en un conjunto de filas de copia masiva previamente invalidado por el método [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md).  
   
  DB_E_BADACCESSORHANDLE  
  El argumento *hAccessor* proporcionado por el consumidor no era válido.  
@@ -73,13 +73,13 @@ HRESULT InsertRow(
  El descriptor de acceso especificado no era un descriptor de acceso de fila o no especificaba la memoria propia del consumidor.  
   
 ## <a name="remarks"></a>Notas  
- Error al convertir datos del consumidor a la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de datos para una columna provoca una devolución E_FAIL desde el controlador OLE DB para SQL Server. Se pueden transmitir datos a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en cualquier **InsertRow** método o solo en **confirmar** método. La aplicación de consumidor puede llamar al método **InsertRow** muchas veces con datos erróneos antes de recibir el aviso de que existe un error de conversión de tipo de datos. Dado que el método **Commit** asegura que el consumidor especifica correctamente todos los datos, este último puede utilizar el método **Commit** adecuadamente para validar los datos según sea necesario.  
+ Un error al convertir los datos del consumidor al tipo de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de una columna hace que el controlador OLE DB para SQL Server devuelva E_FAIL. Los datos se pueden transmitir a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en cualquier método **InsertRow** o solo en el método **Commit**. La aplicación de consumidor puede llamar al método **InsertRow** muchas veces con datos erróneos antes de recibir el aviso de que existe un error de conversión de tipo de datos. Dado que el método **Commit** asegura que el consumidor especifica correctamente todos los datos, este último puede utilizar el método **Commit** adecuadamente para validar los datos según sea necesario.  
   
- El controlador OLE DB para conjuntos de filas de copia de forma masiva de SQL Server son de solo escritura. El controlador OLE DB para SQL Server no expone ningún método que permita al consumidor consultar del conjunto de filas. Para finalizar el procesamiento, el consumidor puede liberar su referencia en la [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) interfaz sin llamar a la **confirmar** método. No hay recursos para obtener acceso a una fila insertada por el consumidor en el conjunto de filas y cambiar sus valores o quitarla individualmente del conjunto de filas.  
+ El controlador OLE DB para los conjuntos de filas de copia masiva SQL Server son de solo escritura. El controlador OLE DB para SQL Server no expone ningún método que permita al consumidor consultar del conjunto de filas. Para finalizar el procesamiento, el consumidor puede liberar su referencia en la interfaz [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) sin llamar al método **Commit**. No hay recursos para obtener acceso a una fila insertada por el consumidor en el conjunto de filas y cambiar sus valores o quitarla individualmente del conjunto de filas.  
   
- Se da formato a las filas de copia masiva en el servidor para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Las opciones que se hayan establecido para la conexión o sesión, como ANSI_PADDING, afectan al formato de fila. Esta opción está activada de forma predeterminada para las conexiones realizadas a través del controlador de OLE DB para SQL Server.  
+ Se da formato a las filas de copia masiva en el servidor para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Las opciones que se hayan establecido para la conexión o sesión, como ANSI_PADDING, afectan al formato de fila. Esta opción está activada de forma predeterminada para las conexiones realizadas a través del controlador OLE DB para SQL Server.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Usar una instrucción SQL para modificar datos | Documentos de Microsoft
+title: Usar una instrucción SQL para modificar datos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,31 +15,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0d02d5187e869eb626cfddde9e12bcf55feed51a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851390"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982317"
 ---
 # <a name="using-an-sql-statement-to-modify-data"></a>Usar una instrucción SQL para modificar datos
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Para modificar los datos que se encuentran en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos mediante una instrucción SQL, se puede utilizar el [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) método de la [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) clase. El método executeUpdate pasará la instrucción SQL para la base de datos para su procesamiento y, a continuación, devuelven un valor que indica el número de filas afectadas.  
+  Para modificar los datos incluidos en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mediante una instrucción SQL, puede usar el método [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) de la clase [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). El método executeUpdate pasa la instrucción SQL a la base de datos para su procesamiento y luego devuelve un valor que indica el número de filas afectadas.  
   
- Para ello, primero debe crear un objeto SQLServerStatement mediante el uso de la [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) método de la [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) clase.  
+ Para ello, primero debe crear un objeto SQLServerStatement mediante el método [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) de la clase [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
- En el ejemplo siguiente, una conexión abierta a la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] base de datos de ejemplo se pasa a la función, se genera una instrucción SQL que agrega nuevos datos a la tabla y, a continuación, se ejecuta la instrucción y se muestra el valor devuelto.  
+ En el siguiente ejemplo, se pasa una conexión abierta a la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] a la función, se genera una instrucción SQL que agrega datos nuevos a la tabla y luego la instrucción se ejecuta y se muestra el valor devuelto.  
   
  [!code[JDBC#UsingSQLToModifyData1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-t_1_1.java)]  
   
 > [!NOTE]  
->  Si tiene que utilizar una instrucción SQL que contiene parámetros para modificar los datos en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos, debe usar el [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md) método de la [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) clase.  
+>  Si necesita usar una instrucción SQL que contenga parámetros para modificar los datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], debe usar el método [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md) de la clase [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).  
 >   
 >  Si la columna en que intenta insertar datos contiene caracteres especiales (por ejemplo, espacios), debe proporcionar los valores que se van a insertar incluso si se trata de valores predeterminados. En caso contrario, la operación de inserción no funciona.  
 >   
 >  Si desea que el controlador JDBC devuelva todos los recuentos de actualizaciones, incluidos los recuentos de actualizaciones devueltos por todos los desencadenadores activados, establezca la propiedad de cadena de conexión lastUpdateCount en "false". Para obtener más información acerca de la propiedad lastUpdateCount, consulte [estableciendo las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Usar instrucciones con SQL](../../connect/jdbc/using-statements-with-sql.md)  
   
   

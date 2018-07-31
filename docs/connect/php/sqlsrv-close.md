@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_close | Documentos de Microsoft
+title: sqlsrv_close | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e071fc2ac51931a52ba6672e97936dc60ee12072
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309114"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006847"
 ---
 # <a name="sqlsrvclose"></a>sqlsrv_close
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ sqlsrv_close( resource $conn )
 Se devuelve el valor booleano **True** , salvo que se llame a la función con un parámetro no válido. En este caso, se devolverá **False** .  
   
 > [!NOTE]  
-> **Null** es un parámetro válido para esta función. Esto permite que se llame varias veces a la función en un script. Por ejemplo, si cierra una conexión en una condición de error y se vuelve a cerrar al final de la secuencia de comandos, la segunda llamada a **sqlsrv_close** devolverá **true** porque la primera llamada a **sqlsrv_ cerrar** (en la condición de error) establece el recurso de conexión **null**.  
+> **Null** es un parámetro válido para esta función. Esto permite que se llame varias veces a la función en un script. Por ejemplo, si cierra una conexión en una condición de error y la vuelve a cerrar al final del script, la segunda llamada a **sqlsrv_close** devuelve **true** debido a que la primera llamada a **sqlsrv_close** (en la condición de error) establece el recurso de conexión en **null**.  
   
 ## <a name="example"></a>Ejemplo  
 En el ejemplo siguiente se cierra una conexión. En el ejemplo se da por hecho que SQL Server está instalado en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
@@ -73,7 +73,7 @@ echo "Connection closed.\n";
 ?>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)  

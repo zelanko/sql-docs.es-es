@@ -1,6 +1,6 @@
 ---
-title: 'Capturar datos BLOB mediante IRow:: Open e ISequentialStream | Documentos de Microsoft'
-description: 'Capturar datos BLOB mediante IRow:: Open e ISequentialStream'
+title: Capturar datos BLOB mediante IRow::Open e ISequentialStream | Microsoft Docs
+description: Capturar datos BLOB mediante IRow::Open e ISequentialStream
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 25482d58c4cac6e6d396171c4a76ccbf30e74f74
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 1121e3ae5e0e7ce4926f7908c3aeb9d8f7aa7887
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690088"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109777"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Capturar datos BLOB mediante IRow::Open e ISequentialStream
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  **IRow:: Open** admite solo el tipo y DBGUID_NULL de objetos que se va a abrir.  
+  **IRow::Open** solo permite la apertura de objetos de tipo DBGUID_STREAM y DBGUID_NULL.  
   
- La función siguiente utiliza **IRow:: Open** y **ISequentialStream** para capturar datos grandes.  
+ La función siguiente usa **IRow::Open** e **ISequentialStream** para capturar datos grandes.  
   
 ```  
 void InitializeAndExecuteCommand()  
@@ -84,9 +84,9 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
- Datos de gran tamaño se pueden enlazar o recuperar mediante el uso de la **ISequentialStream** interfaz. En el caso de las columnas enlazadas, la marca de estado indica si los datos se truncan mediante el establecimiento de DBSTATUS_S_TRUNCATED.  
+ Los datos grandes se pueden enlazar o recuperar mediante la interfaz **ISequentialStream**. En el caso de las columnas enlazadas, la marca de estado indica si los datos se truncan mediante el establecimiento de DBSTATUS_S_TRUNCATED.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Capturar datos BLOB mediante IRow](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
   

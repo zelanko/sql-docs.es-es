@@ -1,6 +1,6 @@
 ---
-title: Controlador OLE DB para la programación de SQL Server | Documentos de Microsoft
-description: Controlador OLE DB para la programación de SQL Server
+title: Controlador OLE DB para la programación de SQL Server | Microsoft Docs
+description: Programación del controlador OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -22,23 +22,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 53b88cb2ecd2b74d8ea1a4670a5fbd34abbb1723
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: f009803808366fe784de790b01e412d7f6888194
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612190"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109157"
 ---
-# <a name="ole-db-driver-for-sql-server-programming"></a>Controlador OLE DB para la programación de SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="ole-db-driver-for-sql-server-programming"></a>Programación del controlador OLE DB para SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  El controlador OLE DB para SQL Server es una API de COM de bajo nivel que se usa para tener acceso a datos. El controlador OLE DB para SQL Server se recomienda para desarrollar herramientas, utilidades o componentes de bajo nivel que necesitan un alto rendimiento. El controlador OLE DB para SQL Server es un proveedor nativo, de alto rendimiento que tiene acceso a la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] directamente de protocolo de flujo de datos Tabular (TDS).  
+  El controlador OLE DB para SQL Server es una API de COM de bajo nivel que se usa para tener acceso a datos. El controlador OLE DB para SQL Server es la opción recomendada para desarrollar herramientas, utilidades o componentes de bajo nivel que necesitan un alto rendimiento. El controlador OLE DB para SQL Server es un proveedor nativo de alto rendimiento con acceso directo al protocolo Flujo TDS de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Controlador de OLE DB para SQL Server proporciona compatibilidad con OLE DB para aplicaciones que se conectan a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Controlador OLE DB para SQL Server proporciona compatibilidad con OLE DB para aplicaciones que se conecten a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- El controlador OLE DB para SQL Server es un proveedor compatible con 2.0 de versión de OLE DB.  
+ El controlador OLE DB para SQL Server es un proveedor compatible con 2.0 versión de OLE DB.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -58,13 +58,13 @@ ms.locfileid: "35612190"
   
 -   [Tipos de datos &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
--   [Compatibilidad con el conjunto de filas de esquema &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
+-   [Compatibilidad con conjuntos de filas de esquema &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
 -   [Parámetros con valores de tabla &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
--   [Fecha y hora mejoras &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+-   [Mejoras de fecha y hora &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
--   [Tipos definidos por el usuario CLR grandes &#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)  
+-   [Tipos definidos por el usuario de CLR de gran tamaño &#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)  
   
 -   [Compatibilidad con FILESTREAM](../../oledb/features/filestream-support.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "35612190"
   
 -   [Errores](../../oledb/ole-db-errors/errors.md)  
   
--   [Nombres principales de servicio &#40;SPN&#41; en las conexiones de cliente &#40;OLE DB&#41;](../../oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [Nombres de entidad de seguridad de servicio &#40;SPN&#41; en conexiones de cliente &#40;OLE DB&#41;](../../oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
 -   [Compatibilidad con columnas dispersas &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)  
   
@@ -80,7 +80,7 @@ ms.locfileid: "35612190"
   
 -   [Temas de procedimientos de OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Controlador OLE DB para SQL Server](../../oledb/oledb-driver-for-sql-server.md)  
   
   

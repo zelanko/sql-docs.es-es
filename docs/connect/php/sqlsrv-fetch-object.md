@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_fetch_object | Documentos de Microsoft
+title: sqlsrv_fetch_object | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f603c0357ad356dbf15278fe503e52ccdd8424ab
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309154"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991247"
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,11 +43,11 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
 #### <a name="parameters"></a>Parámetros  
 *$stmt*: un recurso de instrucción correspondiente a una instrucción ejecutada.  
   
-*$className* [opcional]: una cadena que especifica el nombre de la clase para crear una instancia. Si un valor del parámetro *$className* no se especifica, se creará una instancia PHP de **stdClass** .  
+*$className* (opcional): una cadena que especifica el nombre de la clase para crear una instancia. Si un valor del parámetro *$className* no se especifica, se creará una instancia PHP de **stdClass** .  
   
-*$ctorParams* [opcional]: una matriz que contiene valores que se pasa al constructor de la clase especificada con el *$className* parámetro. Si el constructor de la clase especificada acepta los valores de parámetro, el parámetro *$ctorParams* debe usarse al llamar a **sqlsrv_fetch_object**.  
+*$ctorParams* (opcional): una matriz que contiene los valores que se transmiten al constructor de la clase especificada con el parámetro *$className*. Si el constructor de la clase especificada acepta los valores de parámetro, el parámetro *$ctorParams* debe usarse al llamar a **sqlsrv_fetch_object**.  
   
-*fila* [opcional]: uno de los siguientes valores, especificar la fila que se va a obtener acceso a un conjunto de resultados que utilice un cursor desplazable. (Si *fila* se especifica, *$className* y *$ctorParams* debe especificarse explícitamente, incluso si debe especificar null para *$className*y *$ctorParams*.)  
+*row* (opcional): uno de los siguientes valores; sirve para especificar la fila a la que se accederá en un conjunto de resultados que use un cursor desplazable. (Si se indica *row*, se tendrá que especificar explícitamente *$className* y *$ctorParams*, aunque debe proporcionar el valor NULL para *$className* y *$ctorParams*).  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -63,7 +63,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 Para obtener más información sobre estos valores, vea [Especificación de un tipo de cursor y selección de filas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).  
   
-*desplazamiento* [opcional]: se utiliza con SQLSRV_SCROLL_ABSOLUTE y SQLSRV_SCROLL_RELATIVE para especificar la fila que se va a recuperar. El primer registro del conjunto de resultados es 0.  
+*offset* [OPCIONAL]: se usa con SQLSRV_SCROLL_ABSOLUTE y SQLSRV_SCROLL_RELATIVE para especificar la fila que se va a recuperar. El primer registro del conjunto de resultados es 0.  
   
 ## <a name="return-value"></a>Valor devuelto  
 Un objeto PHP con propiedades que se corresponden con los nombres de campo del conjunto de resultados. Los valores de propiedad se rellenan con los valores de campo del conjunto de resultados correspondiente. Si la clase especificada con el parámetro *$className* opcional no existe o si no hay ningún conjunto de resultados activo asociado con la instrucción especificada, se devolverá el valor **False** . Si no hay más filas para recuperar, se devolverá el valor **Null** .  
@@ -93,7 +93,7 @@ Si los resultados que devuelve esta consulta se recuperan con **sqlsrv_fetch_obj
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
 ## <a name="example"></a>Ejemplo  
-En el siguiente ejemplo se recupera cada fila de un conjunto de resultados como un objeto PHP. En el ejemplo se da por supuesto que el servidor SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el siguiente ejemplo se recupera cada fila de un conjunto de resultados como un objeto PHP. En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -132,7 +132,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente se recupera cada fila de un conjunto de resultados como una instancia de la clase *Product* definida en la secuencia de comandos. En el ejemplo se recupera información del producto desde la *Purchasing.PurchaseOrderDetail* y *Production.Product* tablas de la base de datos de AdventureWorks para productos que tienen un determinado (defechadevencimiento *DueDate*) y una cantidad mantenida en existencias (*StockQty*) menor que un valor especificado. En el ejemplo se resaltan algunas de las reglas que se aplican cuando se especifica una clase en una llamada a **sqlsrv_fetch_object**:  
+En el ejemplo siguiente se recupera cada fila de un conjunto de resultados como una instancia de la clase *Product* definida en la secuencia de comandos. En el ejemplo se recupera información del producto de las tablas *Purchasing.PurchaseOrderDetail* y *Production.Product* de la base de datos AdventureWorks para productos que tienen una fecha de vencimiento especificada (*DueDate*) y una cantidad mantenida en existencias (*StockQty*) inferior a un valor determinado. En el ejemplo se resaltan algunas de las reglas que se aplican cuando se especifica una clase en una llamada a **sqlsrv_fetch_object**:  
   
 -   La variable *$product* es una instancia de la clase *Product* , ya que se especificó "Product" con el parámetro *$className* y existe la clase *Product* .  
   
@@ -142,7 +142,7 @@ En el ejemplo siguiente se recupera cada fila de un conjunto de resultados como 
   
 -   La propiedad privada *UnitPrice* se rellena con el valor del campo *UnitPrice* .  
   
-El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -245,7 +245,7 @@ Si los resultados que devuelve esta consulta se recuperan con **sqlsrv_fetch_obj
   
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Recuperación de datos](../../connect/php/retrieving-data.md)  
 
 [Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)  

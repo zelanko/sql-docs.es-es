@@ -1,5 +1,5 @@
 ---
-title: Comandos que generan resultados de varios conjuntos de filas | Documentos de Microsoft
+title: Comandos que generan resultados de varios conjuntos de filas | Microsoft Docs
 description: Comandos que generan resultados de varios conjuntos de filas
 ms.custom: ''
 ms.date: 06/14/2018
@@ -21,15 +21,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8538fa8326dd5ad103d50d4745279c77ed580db4
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 579fae980b0f612aa1317407f797be9d1ff02ed3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665525"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109627"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Comandos que generan resultados de varios conjuntos de filas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -56,7 +56,7 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
   
 -   [Utilizar IMultipleResults para procesar varios conjuntos de resultados](../../oledb/ole-db-commands/using-imultipleresults-to-process-multiple-result-sets.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Comandos](../../oledb/ole-db-commands/commands.md)  
   
   

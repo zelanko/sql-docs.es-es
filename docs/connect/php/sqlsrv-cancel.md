@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_cancel | Documentos de Microsoft
+title: sqlsrv_cancel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c411bf9275f28b13896103565efb2af7dfbb8c66
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308984"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983579"
 ---
 # <a name="sqlsrvcancel"></a>sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Cancela una instrucción. Esto significa que se descarta cualquier resultado pendiente de la instrucción. Después de llama a esta función, se puede volver a ejecutar la instrucción si se ha preparado con [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md). No resulta necesario llamar a esta función si se han consumido todos los resultados asociados con la instrucción.  
+Cancela una instrucción. Esto significa que se descarta cualquier resultado pendiente de la instrucción. Después de llamar a esta función, se puede volver a ejecutar la instrucción si se ha preparado con [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md). No resulta necesario llamar a esta función si se han consumido todos los resultados asociados con la instrucción.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,7 +46,7 @@ sqlsrv_cancel( resource $stmt)
 Se devuelve un valor booleano **True** si la operación se realiza correctamente. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="example"></a>Ejemplo  
-El ejemplo siguiente se dirige el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) para ejecutar una consulta de base de datos, a continuación, consume y recuento de los resultados hasta que la variable *$salesTotal* alcanza una cantidad especificada. Luego se descartan los resultados restantes de la consulta. En el ejemplo se da por hecho que SQL Server y la base de datos de AdventureWorks están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el siguiente ejemplo se ejecuta una consulta en la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) y luego se usan y cuentan los resultados hasta que la variable *$salesTotal* alcanza una cantidad especificada. Luego se descartan los resultados restantes de la consulta. En el ejemplo se da por hecho que SQL Server y la base de datos de AdventureWorks están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -96,9 +96,9 @@ sqlsrv_cancel( $stmt);
 ```  
   
 ## <a name="comments"></a>Comentarios  
-Una instrucción preparada y ejecutada mediante la combinación de [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) y [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) puede volver a ejecutar con **sqlsrv_execute** después de llamar a **sqlsrv_cancel**. Una instrucción que se ejecuta con [sqlsrv_query](../../connect/php/sqlsrv-query.md) no se puede volver a ejecutar después de llamar a **sqlsrv_cancel**.  
+Una instrucción preparada y ejecutada mediante la combinación de [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) y [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) se puede volver a ejecutar con **sqlsrv_execute** después de llamar a **sqlsrv_cancel**. Una instrucción ejecutada con [sqlsrv_query](../../connect/php/sqlsrv-query.md) no se puede volver a ejecutar después de llamar a **sqlsrv_cancel**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Conexión al servidor](../../connect/php/connecting-to-the-server.md)

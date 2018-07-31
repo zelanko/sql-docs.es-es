@@ -1,6 +1,6 @@
 ---
-title: Utilizar IMultipleResults para procesar varios conjuntos de resultados | Documentos de Microsoft
-description: Utilizar IMultipleResults para procesar resultados múltiples conjuntos de
+title: Uso de IMultipleResults para procesar varios conjuntos de resultados | Microsoft Docs
+description: Uso de IMultipleResults para procesar varios conjuntos de resultados
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,23 +19,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 59e39d472be21161d27b0449c1f2e81d31a09c4d
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 2b622e56691a54ad6db4859b8099c29645357b87
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666285"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105926"
 ---
 # <a name="using-imultipleresults-to-process-multiple-result-sets"></a>Utilizar IMultipleResults para procesar varios conjuntos de resultados
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Los consumidores utilizan la **IMultipleResults** interfaz para procesar los resultados devueltos por el controlador OLE DB para la ejecución del comando de SQL Server. Cuando el controlador OLE DB para SQL Server envía un comando de ejecución, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ejecuta las instrucciones y devuelve todos los resultados.  
+  Los consumidores usan la interfaz **IMultipleResults** para procesar los resultados devueltos tras la ejecución de comandos del controlador OLE DB para SQL Server. Cuando el controlador OLE DB para SQL Server envía un comando para su ejecución, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ejecuta las instrucciones y devuelve resultados.  
   
- Un cliente debe procesar todos los resultados de la ejecución de comandos. Debido a que el controlador OLE DB para la ejecución del comando de SQL Server puede generar objetos de varios conjuntos de filas como resultado, use la **IMultipleResults** interfaz para asegurarse de que la recuperación de datos de aplicación completa el recorrido de ida iniciada por el cliente.  
+ Un cliente debe procesar todos los resultados de la ejecución de comandos. Dado que la ejecución de comandos del controlador OLE DB para SQL Server puede generar objetos con varios conjuntos de filas como resultados, se ha de usar la interfaz **IMultipleResults** para asegurarse de que la recuperación de datos de la aplicación completa el recorrido de ida y vuelta iniciado en el cliente.  
   
- El siguiente [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucción genera varios conjuntos de filas, algunos datos de fila que contiene el **OrderDetails** tabla y otros contienen resultados de la cláusula COMPUTE BY:  
+ La siguiente instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)] genera varios conjuntos de filas; unos contienen datos de filas de la tabla **OrderDetails** y otros contienen resultados de la cláusula COMPUTE BY:  
   
 ```  
 SELECT OrderID, FullPrice = (UnitPrice * Quantity), Discount,  
@@ -47,18 +47,18 @@ COMPUTE
     BY OrderID  
 ```  
   
- Si un consumidor ejecuta un comando que contiene este texto y solicita un conjunto de filas como interfaz de resultados devueltos, solo se devuelve el primer conjunto de filas. El consumidor puede procesar todas las filas del conjunto de filas devuelto. Sin embargo, si se establece la propiedad de origen de datos DBPROP_MULTIPLECONNECTIONS en VARIANT_FALSE y MARS no está habilitado en la conexión, no se puede ejecutar ningún otro comando en el objeto de sesión (el controlador OLE DB para SQL Server no creará otra conexión) hasta que el se cancela el comando. Si MARS no está habilitado en la conexión, el controlador OLE DB para SQL Server devuelve un error DB_E_OBJECTOPEN si DBPROP_MULTIPLECONNECTIONS es VARIANT_FALSE y devuelve E_FAIL si hay una transacción activa.  
+ Si un consumidor ejecuta un comando que contiene este texto y solicita un conjunto de filas como interfaz de resultados devueltos, solo se devuelve el primer conjunto de filas. El consumidor puede procesar todas las filas del conjunto de filas devuelto. Pero, si la propiedad de origen de datos DBPROP_MULTIPLECONNECTIONS está establecida en VARIANT_FALSE y MARS no está habilitado en la conexión, no se puede ejecutar ningún otro comando en el objeto de sesión (el controlador OLE DB para SQL Server no creará otra conexión) hasta que se cancele el comando. Si MARS no está habilitado en la conexión, el controlador OLE DB para SQL Server devuelve un error DB_E_OBJECTOPEN si DBPROP_MULTIPLECONNECTIONS es VARIANT_FALSE y devuelve E_FAIL si hay una transacción activa.  
   
- El controlador OLE DB para SQL Server también devolverá DB_E_OBJECTOPEN al utilizar los parámetros de salida transmitidos y la aplicación no ha consumido todos los valores de parámetro de salida devueltos antes de llamar a **IMultipleResults:: GetResults** a obtener el siguiente conjunto de resultados. Si MARS no está habilitado y si la conexión está ocupada ejecutando un comando que no genera un conjunto de filas o que genera un conjunto de filas que no es un cursor de servidor y si la propiedad del origen de datos DBPROP_MULTIPLECONNECTIONS se establece en VARIANT_TRUE, el controlador OLE DB para SQL Server crea conexiones adicionales para admitir objetos de comando simultáneos, a menos que una transacción está activa, en cuyo caso devuelve un error. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] administra las transacciones y el bloqueo para cada conexión. Si se genera una segunda conexión, los comandos de cada una de las conexiones no comparten los bloqueos. Hay que tener cuidado para asegurarse de que un comando no bloquee otro comando manteniendo bloqueos en filas solicitadas por el otro comando. Si MARS está habilitado, puede haber varios comandos activos en las conexiones y si se utilizan transacciones explícitas, todos los comandos comparten una transacción común.  
+ El controlador OLE DB para SQL Server también devolverá DB_E_OBJECTOPEN si se usan parámetros de salida transmitidos y la aplicación no ha consumido todos los valores de parámetros de salida devueltos antes de llamar a **IMultipleResults::GetResults** para obtener el siguiente conjunto de resultados. Si MARS no está habilitado y la conexión está ocupada con la ejecución de un comando que no genera un conjunto de filas o que genera un conjunto de filas que no es un cursor de servidor, y la propiedad de origen de datos DBPROP_MULTIPLECONNECTIONS está establecida en VARIANT_TRUE, el controlador OLE DB para SQL Server crea conexiones adicionales para admitir objetos de comando simultáneos, a menos que haya una transacción activa, en cuyo caso devolverá un error. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] administra las transacciones y el bloqueo para cada conexión. Si se genera una segunda conexión, los comandos de cada una de las conexiones no comparten los bloqueos. Hay que tener cuidado para asegurarse de que un comando no bloquee otro comando manteniendo bloqueos en filas solicitadas por el otro comando. Si MARS está habilitado, puede haber varios comandos activos en las conexiones y si se utilizan transacciones explícitas, todos los comandos comparten una transacción común.  
   
- El consumidor puede cancelar el comando mediante [issabort:: Abort](../../oledb/ole-db-interfaces/issabort-abort-ole-db.md) o liberando todas las referencias que se mantienen en el objeto de comando y el conjunto de filas derivado.  
+ El consumidor puede cancelar el comando mediante [ISSAbort::Abort](../../oledb/ole-db-interfaces/issabort-abort-ole-db.md) o al liberar todas las referencias que se mantienen en el objeto de comando y el conjunto de filas derivado.  
   
- Usar **IMultipleResults** en todas las instancias, el consumidor puede obtener todos los conjuntos de filas generados mediante la ejecución de comandos y permite que los consumidores determinar apropiadamente cuándo se debe cancelar la ejecución de comandos y liberar un objeto de sesión para su uso con otros comandos.  
+ Si se usa **IMultipleResults** en todas las instancias, el consumidor puede obtener todos los conjuntos de filas generados mediante la ejecución de comandos, determinar apropiadamente cuándo se ha de cancelar la ejecución de comandos y liberar un objeto de sesión para que lo puedan usar otros comandos.  
   
 > [!NOTE]  
->  Si se utilizan cursores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la ejecución de comandos crea el cursor. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] indica si la creación del cursor se ha llevado a cabo correctamente o no; por consiguiente, el viaje de ida y vuelta (round trip) a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se completa cuando se obtiene el resultado de la ejecución del comando. Cada **GetNextRows** llamada, a continuación, se convierte en un de ida y vuelta. De esta manera, pueden existir varios objetos de comando activos, y cada uno de ellos procesará un conjunto de filas que es el resultado de una captura del cursor de servidor. Para obtener más información, consulte [conjuntos de filas y cursores de servidor SQL](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).  
+>  Si se utilizan cursores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la ejecución de comandos crea el cursor. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] indica si la creación del cursor se ha llevado a cabo correctamente o no; por consiguiente, el viaje de ida y vuelta (round trip) a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se completa cuando se obtiene el resultado de la ejecución del comando. Así, cada llamada a **GetNextRows** se convierte en un recorrido de ida y vuelta. De esta manera, pueden existir varios objetos de comando activos, y cada uno de ellos procesará un conjunto de filas que es el resultado de una captura del cursor de servidor. Para obtener más información, vea [Conjuntos de filas y cursores de SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Comandos](../../oledb/ole-db-commands/commands.md)  
   
   

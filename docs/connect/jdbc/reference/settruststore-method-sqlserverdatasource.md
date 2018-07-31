@@ -1,5 +1,5 @@
 ---
-title: Método setTrustStore (SQLServerDataSource) | Documentos de Microsoft
+title: Método setTrustStore (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf5d6034fbf2e9ce9d1c1b58909146dbcf56f0c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846740"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042285"
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>Método setTrustStore (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,10 +41,10 @@ public void setTrustStore(java.lang.String trustStore)
 #### <a name="parameters"></a>Parámetros  
  *trustStore*  
   
- A **cadena** que contiene la ruta de acceso (incluido el nombre de archivo) en el archivo trustStore del certificado.  
+ Un objeto **string** que contiene la ruta de acceso (incluido el nombre de archivo) del archivo trustStore del certificado.  
   
-## <a name="remarks"></a>Comentarios  
- Si la propiedad trustStore está especificado o está establecida en null, el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] se basará en reglas para determinar qué almacén de certificados para usar de búsqueda del generador del Administrador de confianza. El generador TrustManagerFactory SunX509 predeterminado intenta buscar material de confianza en las ubicaciones siguientes en este orden:  
+## <a name="remarks"></a>Notas  
+ Si la propiedad trustStore no se especifica o se establece en NULL, el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] se basará en las reglas de búsqueda del generador del administrador de confianza para determinar qué almacén de certificados se usará. El generador TrustManagerFactory SunX509 predeterminado intenta buscar material de confianza en el orden de búsqueda de ubicaciones siguiente:  
   
 -   1. Un archivo especificado por la propiedad del sistema "javax.net.ssl.trustStore" de la máquina virtual Java (JVM).  
   
@@ -56,9 +56,9 @@ public void setTrustStore(java.lang.String trustStore)
   
  Si la propiedad trustStore está establecida en una cadena o en una cadena vacía "", el controlador utilizará ese valor para buscar el archivo trustStore con el fin de validar el certificado SSL del servidor.  
   
- La propiedad trustStorePassword se puede especificar junto con la propiedad trustStore y su valor se utiliza para abrir el archivo trustStore. Para obtener más información, consulte [setTrustStorePassword](../../../connect/jdbc/reference/settruststorepassword-method-sqlserverdatasource.md).  
+ La propiedad trustStorePassword se puede especificar junto con la propiedad trustStore y su valor se utiliza para abrir el archivo trustStore. Para obtener más información, vea [setTrustStorePassword](../../../connect/jdbc/reference/settruststorepassword-method-sqlserverdatasource.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Clase SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

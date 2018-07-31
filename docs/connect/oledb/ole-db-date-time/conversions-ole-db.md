@@ -1,5 +1,5 @@
 ---
-title: Enlaces y conversiones (OLE DB) | Documentos de Microsoft
+title: Enlaces y conversiones (OLE DB) | Microsoft Docs
 description: Enlaces y conversiones (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,38 +18,38 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8c653bc4f79e9f54b96fa86fc5c0b65756b23216
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 233c9e7e2aefbdae34f964e95dbeb7d10d55a63d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666025"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105881"
 ---
 # <a name="conversions-ole-db"></a>Conversiones (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   En esta sección se describe cómo convertir entre **datetime** y **datetimeoffset** valores. OLE DB ya proporciona las conversiones descritas en esta sección o son una extensión coherente de OLE DB.  
   
- El formato de literales y cadenas para las fechas y horas en OLE DB generalmente sigue la ISO y no depende de la configuración regional del cliente. Una excepción es DBTYPE_DATE, donde la norma es OLE Automation. Sin embargo, porque el controlador OLE DB para SQL Server sólo realiza conversiones entre tipos cuando se transmiten datos a o desde el cliente, no hay ninguna manera de una aplicación forzar el controlador OLE DB para SQL Server realizar conversiones entre los formatos de cadena y DBTYPE_DATE. De lo contrario, las cadenas usan los formatos siguientes (el texto entre corchetes indica un elemento opcional):  
+ El formato de literales y cadenas para las fechas y horas en OLE DB generalmente sigue la ISO y no depende de la configuración regional del cliente. Una excepción es DBTYPE_DATE, donde la norma es OLE Automation. Sin embargo, porque el controlador OLE DB para SQL Server solo realiza conversiones entre tipos cuando se transmiten datos a o desde el cliente, no hay ninguna manera para una aplicación forzar el controlador OLE DB para SQL Server convertir entre DBTYPE_DATE y cadena de formatos. De lo contrario, las cadenas usan los formatos siguientes (el texto entre corchetes indica un elemento opcional):  
   
 -   El formato de **datetime** y **datetimeoffset** cadenas es:  
   
-     *aaaa*-*mm*-*dd*[ *hh*:*mm*:*ss*[. *9999999*] [± *hh*:*mm*]]  
+     *aaaa*-*mm*-*dd*[ *hh*:*mm*:*ss*[. *9999999*] [+ *hh*:*mm*]]  
   
--   El formato de **tiempo** cadenas es:  
+-   El formato de las cadenas **time** es:  
   
-     *hh*:*mm*:*ss*[. *9999999*]  
+     *hh*:*mm*:*ss*[.*9999999*]  
   
 -   El formato de **fecha** cadenas es:  
   
      *aaaa*-*mm*-*dd*  
   
 > [!NOTE]  
->  Las versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y de las conversiones OLE implementadas SQLOLEDB, en caso de un error en las conversiones estándar. El controlador OLE DB para SQL Server sigue el mismo comportamiento que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Como resultado, algunas conversiones realizadas por el controlador OLE DB para SQL Server son distintas de la especificación de OLE DB.  
+>  Las versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y de las conversiones OLE implementadas SQLOLEDB, en caso de un error en las conversiones estándar. El controlador OLE DB para SQL Server sigue el mismo comportamiento que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Como resultado, algunas conversiones realizadas por el controlador OLE DB para SQL Server difieren de la especificación de OLE DB.  
   
- Las conversiones de las cadenas permiten flexibilidad en los espacios en blanco y el ancho de campo. Para obtener más información, vea la sección "Formatos de datos: cadenas y literales" de [compatibilidad de tipos de datos para mejoras de hora y fecha de OLE DB](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
+ Las conversiones de las cadenas permiten flexibilidad en los espacios en blanco y el ancho de campo. Para obtener más información, vea la sección "Formatos de datos: cadenas y literales" en [compatibilidad con tipos de datos para OLE DB mejoras de fecha y hora](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
   
  A continuación figuran las reglas de conversión generales:  
   
@@ -76,7 +76,7 @@ ms.locfileid: "35666025"
  [Conversiones realizadas de servidor a cliente](../../oledb/ole-db-date-time/conversions-performed-from-server-to-client.md)  
  Describe las conversiones de fecha y hora realizadas entre [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (o posterior) y una aplicación cliente escrita con el controlador OLE DB para SQL Server.  
   
-## <a name="see-also"></a>Vea también  
- [Fecha y hora mejoras &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a>Ver también  
+ [Mejoras de fecha y hora &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

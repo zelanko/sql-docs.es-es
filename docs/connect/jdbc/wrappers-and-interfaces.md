@@ -1,5 +1,5 @@
 ---
-title: Contenedores e Interfaces | Documentos de Microsoft
+title: Contenedores e Interfaces | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,31 +15,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9a7316e5daa6fa27209a31a07ddf0ace84c191b0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852441"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994817"
 ---
 # <a name="wrappers-and-interfaces"></a>Contenedores e interfaces
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  El [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] admite interfaces que permiten crear un proxy de una clase y contenedores que permiten tener acceso a las extensiones para la API de JDBC que son específicas de la [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] a través de una interfaz de proxy.  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] admite interfaces que permiten crear un proxy de una clase y contenedores que permiten acceder a extensiones para la API de JDBC que son específicas de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] mediante una interfaz de proxy.  
   
 ## <a name="wrappers"></a>Controladores  
- El [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] es compatible con la interfaz java.sql.Wrapper. Esta interfaz proporciona un mecanismo para las extensiones de acceso a la API de JDBC que son específicos de la [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] a través de una interfaz de proxy.  
+ [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] admite la interfaz java.sql.Wrapper. Esta interfaz proporciona un mecanismo para acceder a extensiones para la API de JDBC que son específicas de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] mediante una interfaz de proxy.  
   
- La interfaz java.sql.Wrapper define dos métodos: **isWrapperFor** y **unwrap**. El **isWrapperFor** método comprueba si el objeto de entrada especificado implementa esta interfaz. El **unwrap** método devuelve un objeto que implementa esta interfaz para permitir el acceso a la [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] métodos específicos.  
+ La interfaz java.sql.Wrapper define dos métodos: **isWrapperFor** y **unwrap**. El método **isWrapperFor** comprueba si el objeto de entrada especificado implementa esta interfaz. El método **unwrap** devuelve un objeto que implementa esta interfaz para permitir el acceso a los métodos específicos de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
   
  **isWrapperFor** y **unwrap** métodos se exponen como sigue:  
   
 -   [Método isWrapperFor &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)  
   
--   [Método Unwrap &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)  
+-   [Método unwrap &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)  
   
 -   [Método isWrapperFor &#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverconnectionpooldatasource.md)  
   
--   [Método Unwrap &#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)  
+-   [Método unwrap &#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)  
   
 -   [Método isWrapperFor &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "32852441"
   
 -   [Método isWrapperFor &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)  
   
--   [Método Unwrap &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)  
+-   [Método unwrap &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)  
   
 -   [Método isWrapperFor &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)  
   
@@ -58,9 +58,9 @@ ms.locfileid: "32852441"
 -   [Método Unwrap &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)  
   
 ## <a name="interfaces"></a>Interfaces  
- A partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] controlador JDBC 3.0, interfaces están disponibles para un servidor de aplicaciones tener acceso a un método específico del controlador de la clase asociada. El servidor de aplicaciones puede incluir la clase mediante la creación de un proxy, exponer el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-funcionalidad específica de una interfaz. El [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] admite interfaces que tienen la [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] determinados métodos y constantes para un servidor de aplicaciones pueda crear un proxy de la clase.  
+ A partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0, las interfaces están disponibles para que un servidor de aplicaciones acceda a un método específico del controlador desde la clase asociada. El servidor de aplicaciones puede incluir la clase si crea un proxy, de forma que se exponga la funcionalidad específica de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] desde una interfaz. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] admite interfaces que tienen los métodos y constantes propios de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], de forma que un servidor de aplicaciones pueda crear un proxy de la clase.  
   
- Las interfaces se derivan de interfaces de Java para que pueda usar el mismo objeto una vez se haya desencapsulado para tener acceso a funcionalidad específica del controlador o genérico estándar [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] funcionalidad.  
+ Las interfaces se derivan de interfaces de Java estándar, por lo que se puede usar el mismo objeto una vez que se haya desencapsulado para acceder a funcionalidad específica del controlador o a funcionalidad genérica de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
   
  Se agregaron las siguientes interfaces:  
   
@@ -78,8 +78,8 @@ ms.locfileid: "32852441"
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>Description  
- Este ejemplo muestra cómo obtener acceso a un [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-función específica de un objeto de origen de datos. Esta clase de origen de datos que se ajustaron mediante un servidor de aplicaciones. Para obtener acceso a la función específica del controlador JDBC o constante, puede desencapsular el origen de datos a una interfaz ISQLServerDataSource y utilizar las funciones declaradas en esta interfaz.  
+### <a name="description"></a>Descripción  
+ En este ejemplo se muestra cómo acceder a una función específica de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] desde un objeto DataSource. Es posible que un servidor de aplicaciones haya encapsulado esta clase DataSource. Para acceder a la función o constante específica del controlador JDBC, puede desencapsular el origen de datos en una interfaz ISQLServerDataSource y usar las funciones que se declaran en esta interfaz.  
   
 ### <a name="code"></a>código  
   
@@ -111,7 +111,7 @@ public class UnWrapTest {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Describir los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

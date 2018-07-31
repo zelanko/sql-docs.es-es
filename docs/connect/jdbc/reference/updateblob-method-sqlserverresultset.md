@@ -1,5 +1,5 @@
 ---
-title: Método updateBlob (SQLServerResultSet) | Documentos de Microsoft
+title: Método updateBlob (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7b6178a7da337197d2fe6b979bcd7e64c3d60245
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850920"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019923"
 ---
 # <a name="updateblob-method-sqlserverresultset"></a>Método updateBlob (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "32850920"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nombre|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
 |[updateBlob (int, java.sql.Blob)](../../../connect/jdbc/reference/updateblob-method-int-java-sql-blob.md)|Actualiza la columna designada con un valor java.sql.Blob.|  
 |[updateBlob (int, java.io.InputStream)](../../../connect/jdbc/reference/updateblob-method-int-java-io-inputstream.md)|Actualiza la columna designada mediante el flujo de entrada especificado.|  
@@ -42,7 +42,7 @@ ms.locfileid: "32850920"
 |[updateBlob (java.lang.String, java.io.InputStream)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream.md)|Actualiza la columna designada mediante el flujo de entrada especificado.|  
 |[updateBlob (java.lang.String, java.io.InputStream, long)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream-long.md)|Actualiza la columna designada mediante el flujo de entrada especificado, que tendrá el número especificado de bytes.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

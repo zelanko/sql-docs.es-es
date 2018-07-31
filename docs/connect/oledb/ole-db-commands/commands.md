@@ -1,6 +1,6 @@
 ---
-title: Comandos | Documentos de Microsoft
-description: Comandos de controlador OLE DB para SQL Server
+title: Comandos | Microsoft Docs
+description: Comandos en el controlador OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,19 +17,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a518a4a718007e1c1efb3b7c53732beef7d7c0ab
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 4fcc1b32e3e27fc70b5d96585194152621fc1f7b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665395"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108007"
 ---
 # <a name="commands"></a>Comandos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  El controlador OLE DB para SQL Server expone la **ICommand** interfaz y objetos de comando, que se describen en esta sección:  
+  El controlador OLE DB para SQL Server expone la interfaz **ICommand** y objetos de comando, que se describen en esta sección:  
   
 -   [Sintaxis de comandos](../../oledb/ole-db-commands/command-syntax.md)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "35665395"
   
 -   [Comandos que generan resultados de varios conjuntos de filas](../../oledb/ole-db-commands/commands-generating-multiple-rowset-results.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Programación del controlador OLE DB para SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

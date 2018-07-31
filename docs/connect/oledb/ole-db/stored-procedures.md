@@ -1,5 +1,5 @@
 ---
-title: Procedimientos almacenados | Documentos de Microsoft
+title: Procedimientos almacenados | Microsoft Docs
 description: Procedimientos almacenados
 ms.custom: ''
 ms.date: 06/12/2018
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 248132d4afca731bb3715da83286a85dc6edc8ee
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 0c944c0e64fadf8f51af10f0e297b8d3654decd4
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611550"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109767"
 ---
 # <a name="stored-procedures"></a>Procedimientos almacenados
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Un procedimiento almacenado ([procedimientos almacenados &#40;motor de base de datos&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) es un objeto ejecutable almacenado en una base de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite lo siguiente:  
+  Un procedimiento almacenado ([Stored Procedures &#40;motor de base de datos&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) es un objeto ejecutable almacenado en una base de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite lo siguiente:  
   
 -   Procedimientos almacenados  
   
@@ -47,7 +47,7 @@ ms.locfileid: "35611550"
   
 -   [Llamar a un procedimiento almacenado &#40;OLE DB&#41;](../../oledb/ole-db/stored-procedures-calling.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Programación del controlador OLE DB para SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

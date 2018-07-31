@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de ejecución asincrónica (método de notificación) | Documentos de Microsoft
+title: Ejemplo de ejecución asincrónica (método de notificación) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1c0fb14245c5e3365389bb127ba735c4829f03e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852190"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047498"
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>Ejemplo de ejecución asincrónica (método de notificación)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  Los ejemplos de código de este tema muestran cómo usar el [ejecución asincrónica (método de notificación)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx).  
+  En los ejemplos de código de este tema se muestra cómo usar la [Ejecución asincrónica (método de notificación)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx).  
   
- Esta función utiliza la notificación asincrónica para abrir cinco conexiones y ejecuta una consulta en una instrucción de cada conexión.  
+ Esta función usa la notificación asincrónica para abrir cinco conexiones y ejecuta una consulta en una instrucción de cada conexión.  
   
 ```  
   
@@ -354,7 +354,7 @@ int _tmain(int argc, _TCHAR* argv[])
 }
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Microsoft ODBC Driver for SQL Server en Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ICommandWithParameters | Documentos de Microsoft
+title: ICommandWithParameters | Microsoft Docs
 description: Interfaz ICommandWithParameters
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,23 +15,23 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c41a3885293493299f6234f3dcc0ef5edc4040be
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 24c937f7d9e21f472ca8988ddad8a6cbed3d02f3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689118"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106261"
 ---
 # <a name="icommandwithparameters"></a>ICommandWithParameters
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Mejoras en el principio del motor de base de datos con [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] permitir ICommandWithParameters:: GetParameterInfo obtener descripciones más precisas de los resultados esperados. Estos resultados más precisos pueden diferir de los valores devueltos por CommandWithParameters::GetParameterInfo en versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [de detección de metadatos](../../oledb/features/metadata-discovery.md).  
+  Mejoras en el principio del motor de base de datos con [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] permitir ICommandWithParameters:: GetParameterInfo obtener descripciones más precisas de los resultados esperados. Estos resultados más precisos pueden diferir de los valores devueltos por CommandWithParameters::GetParameterInfo en versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Detección de metadatos](../../oledb/features/metadata-discovery.md).  
   
- También a partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], al llamar a ICommandWithParameters:: SetParameterInfo, el valor pasado a la *pwszName* parámetro debe ser un identificador válido. Para obtener más información, vea [Database Identifiers](../../../relational-databases/databases/database-identifiers.md).  
+ También a partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], al llamar a ICommandWithParameters::SetParameterInfo, el último valor pasado al parámetro *pwszName* debe ser un identificador válido. Para obtener más información, vea [Database Identifiers](../../../relational-databases/databases/database-identifiers.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Interfaces &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md) 
   
   

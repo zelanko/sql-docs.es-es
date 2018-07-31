@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: realizar transacciones | Documentos de Microsoft'
+title: 'Cómo: realizar transacciones | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4a2a2d041ba99ded7a8d611620ce288593b341a6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307664"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015792"
 ---
 # <a name="how-to-perform-transactions"></a>Cómo realizar transacciones
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -53,11 +53,11 @@ Los pasos para ejecutar una transacción se pueden resumir del siguiente modo:
   
 2.  Compruebe si cada consulta que forma parte de la transacción se ha realizado correctamente o no.  
   
-3.  Si procede, confirme la transacción con **sqlsrv_commit**. En caso contrario, reviértala con **sqlsrv_rollback**. Después de llamar a **sqlsrv_commit** o **sqlsrv_rollback**, el controlador se devuelve al modo de confirmación automática.  
+3.  Si procede, confirme la transacción con **sqlsrv_commit**. En caso contrario, reviértala con **sqlsrv_rollback**. Después de llamar a **sqlsrv_commit** o **sqlsrv_rollback**, el controlador pasa al modo de confirmación automática.  
   
-    De forma predeterminada, la [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] está en modo de confirmación automática. Es decir, todas las consultas se confirman de forma automática cuando se realizan correctamente, salvo que se hayan designado como parte de una transacción explícita mediante **sqlsrv_begin_transaction**.  
+    De forma predeterminada, los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] se encuentran en el modo de confirmación automática. Es decir, todas las consultas se confirman de forma automática cuando se realizan correctamente, salvo que se hayan designado como parte de una transacción explícita mediante **sqlsrv_begin_transaction**.  
   
-    Si una transacción explícita no se confirma con **sqlsrv_commit**, ésta se revierte al cierre de la conexión o al término de la secuencia de comandos.  
+    Si una transacción explícita no se confirma con **sqlsrv_commit**, se revierte al cierre de la conexión o al término del script.  
   
     No utilice instrucciones de Transact-SQL incrustadas para realizar transacciones. Por ejemplo, para iniciar una transacción, no ejecute una instrucción con "BEGIN TRANSACTION" como consulta de Transact-SQL. No se puede garantizar que las transacciones se comporten de la forma esperada cuando se utilizan instrucciones de Transact-SQL incrustadas para realizar transacciones.  
   
@@ -74,7 +74,7 @@ En la primera consulta del ejemplo se recuperan los id. de producto y las cantid
   
 Las consultas posteriores (eliminación del pedido de ventas y actualización de las cantidades del inventario de productos) forman parte de la transacción.  
   
-El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ### <a name="code"></a>código  
   
@@ -154,9 +154,9 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>Comentarios  
-Con el fin de resaltar el comportamiento de las transacciones, en el ejemplo anterior no se incluyen algunos controles de errores recomendados. Para una aplicación de producción, le recomendamos que compruebe las llamadas a un **sqlsrv** funcionar para los errores y controlarlos según corresponda.
+Con el fin de resaltar el comportamiento de las transacciones, en el ejemplo anterior no se incluyen algunos controles de errores recomendados. Para una aplicación de producción, recomendamos comprobar cualquier llamada a un **sqlsrv** funcionan para los errores y controlarlos según corresponda.
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Actualización de datos &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 
 [Transacciones (motor de base de datos)](https://msdn.microsoft.com/library/ms190612.aspx)

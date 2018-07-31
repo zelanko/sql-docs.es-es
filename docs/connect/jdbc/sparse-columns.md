@@ -1,5 +1,5 @@
 ---
-title: Las columnas dispersas | Documentos de Microsoft
+title: Columnas dispersas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,24 +15,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e2aa31ce2f41c8308025fd2648f18caf7ad8e04c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851690"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020981"
 ---
 # <a name="sparse-columns"></a>Columnas dispersas
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Las columnas dispersas son columnas normales que disponen de un almacenamiento optimizado para los valores NULL. Este tipo de columnas reducen los requisitos de espacio de los valores NULL a costa de una mayor sobrecarga a la hora de recuperar valores no NULL. Considere la posibilidad de utilizar columnas dispersas si el ahorro de espacio se sitúa entre el 20 y el 40 por ciento.  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] controlador JDBC 3.0 admite columnas dispersas al conectarse a un [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (o posterior) server. Puede usar [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md), o [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) para determinar qué columnas son dispersas y cuál es la columna conjunto de columnas.  
+ El controlador JDBC 3.0 de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] admite columnas dispersas al conectarse a un servidor [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (o versiones posteriores). Puede utilizar [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) o [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) para determinar qué columnas son dispersas y cuál es la columna del conjunto.  
   
  Los conjuntos de columnas son columnas calculadas que devuelven todas las columnas dispersas en forma de XML sin tipo. Considere la posibilidad de usar los conjuntos de columnas cuando una tabla contenga un gran número de columnas o que sea superior a 1024 o bien, cuando sea complicado realizar cualquier operación con columnas dispersas independientes. Un conjunto de columnas puede contener hasta 30.000 columnas.  
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descripción  
  Este ejemplo muestra cómo detectar conjuntos de columnas. También muestra cómo analizar los resultados XML del conjunto de columnas para obtener los datos de las columnas dispersas.  
   
  El primer listado de códigos es el código Transact-SQL que debería ejecutar en el servidor.  
@@ -189,7 +189,7 @@ public class SparseColumns {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Mejorar el rendimiento y la confiabilidad con el controlador JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

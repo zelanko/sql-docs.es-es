@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_num_fields | Documentos de Microsoft
+title: sqlsrv_num_fields | Microsoft Docs
 ms.custom: ''
 ms.date: 03/23/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d533d9293641be5d40db2306f035827bf83b8722
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309184"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006883"
 ---
 # <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Recupera el número de campos de un conjunto de resultados activo. Esta función se puede llamar en cualquier instrucción preparada, antes o después de la ejecución.  
+Recupera el número de campos de un conjunto de resultados activo. Esta función puede llamarse en cualquier instrucción preparada, antes o después de la ejecución.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,9 +46,9 @@ sqlsrv_num_fields( resource $stmt)
 Establece un valor entero que representa el número de campos del conjunto de resultados activo. Si se produce un error, se devuelve el valor booleano **False** .  
   
 ## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente se ejecuta una consulta para recuperar todos los campos de las primeras tres filas en la *HumanResources.Department* tabla de la base de datos de AdventureWorks. La función **sqlsrv_num_fields** determina el número de campos del conjunto de resultados. Gracias a esto, los datos pueden mostrarse repitiéndose a través de los campos de cada fila devuelta.  
+En el ejemplo siguiente se ejecuta una consulta para recuperar todos los campos de las primeras tres filas en la tabla *HumanResources.Department* de la base de datos AdventureWorks. La función **sqlsrv_num_fields** determina el número de campos del conjunto de resultados. Gracias a esto, los datos pueden mostrarse repitiéndose a través de los campos de cada fila devuelta.  
   
-El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -93,7 +93,7 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  

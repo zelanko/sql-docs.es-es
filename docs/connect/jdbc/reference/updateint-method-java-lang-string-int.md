@@ -1,5 +1,5 @@
 ---
-title: Método updateInt (java.lang.String, int) | Documentos de Microsoft
+title: Método updateInt (java.lang.String, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 62560202d4808bda26431044e5bf50720f6823b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850450"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983444"
 ---
 # <a name="updateint-method-javalangstring-int"></a>Método updateInt (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Actualiza la columna designada con un **int** valor según el nombre de columna.  
+  Actualiza la columna designada con un valor **int** según el nombre de la columna.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,7 +42,7 @@ public void updateInt(java.lang.String columnName,
 #### <a name="parameters"></a>Parámetros  
  *columnName*  
   
- A **cadena** que contiene el nombre de columna.  
+ Valor **String** que contiene el nombre de columna.  
   
  *x*  
   
@@ -51,10 +51,10 @@ public void updateInt(java.lang.String columnName,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método updateInt especificado por el método updateInt en la interfaz java.sql.ResultSet.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Método updateInt &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

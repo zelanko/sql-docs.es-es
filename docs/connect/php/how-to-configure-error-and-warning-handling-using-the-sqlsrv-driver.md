@@ -1,5 +1,5 @@
 ---
-title: Configurar el control de errores y advertencia con el controlador SQLSRV | Documentos de Microsoft
+title: Configuración del control de errores y advertencias con el controlador SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50018e401c67bd0c1fe2cefef71659aeb560a132
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307414"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999249"
 ---
 # <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>Cómo configurar el control de errores y advertencias con el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 En este tema se describe cómo configurar el controlador SQLSRV para controlar errores y advertencias.  
   
-De forma predeterminada, el controlador SQLSRV trata las advertencias como errores; una llamada a un **sqlsrv** devuelve la función que genera un error o una advertencia **false**. Para deshabilitar este comportamiento, use la [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) función. Cuando la línea de código siguiente se incluye al principio de una secuencia de comandos, un **sqlsrv** función que únicamente genera advertencias (no errores) no devolverá **false**:  
+De forma predeterminada, el controlador SQLSRV trata las advertencias como errores; una llamada a una función de **sqlsrv** que genera un error o una advertencia devuelve el valor **False**. Para deshabilitar este comportamiento, utilice la función [sqlsrv_configure](../../connect/php/sqlsrv-configure.md). Cuando la siguiente línea de código se incluye al principio de un script, una función de **sqlsrv** que únicamente genera advertencias (no errores) no devolverá el valor **False**:  
   
 `sqlsrv_configure("WarningsReturnAsErrors", 0);`  
   
@@ -39,7 +39,7 @@ La siguiente línea de código restablece el comportamiento predeterminado (las 
 > [!NOTE]  
 > Sin embargo, las advertencias que corresponden a los valores 01000, 01001, 01003 y 01S02 de SQLSTATE nunca se tratan como errores. Con independencia de la configuración, una función de **sqlsrv** que únicamente genera advertencias que corresponden a uno de estos estados no devolverá el valor **False**.  
   
-El valor de **WarningsReturnAsErrors** también puede establecerse en el archivo php.ini. Por ejemplo, esta entrada en el `[sqlsrv]` sección del archivo php.ini desactiva el comportamiento predeterminado.  
+El valor de **WarningsReturnAsErrors** también puede establecerse en el archivo php.ini. Por ejemplo, esta entrada de la sección de `[sqlsrv]` del archivo php.ini desactiva el comportamiento predeterminado.  
   
 `sqlsrv.WarningsReturnAsErrors = 0`  
   
@@ -101,7 +101,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Actividad de registro](../../connect/php/logging-activity.md)
 
 [Programación de guía para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)

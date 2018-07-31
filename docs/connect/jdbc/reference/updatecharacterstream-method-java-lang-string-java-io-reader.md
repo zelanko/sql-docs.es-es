@@ -1,5 +1,5 @@
 ---
-title: Método updateCharacterStream (java.lang.String, java.io.Reader) | Documentos de Microsoft
+title: Método updateCharacterStream (java.lang.String, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f9c755a658b0a63966a2db4be4e55b09b1004a0a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850600"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982517"
 ---
 # <a name="updatecharacterstream-method-javalangstring-javaioreader"></a>Método updateCharacterStream (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,23 +37,23 @@ public void updateCharacterStream(java.lang.String columnLabel,
 #### <a name="parameters"></a>Parámetros  
  *columnLabel*  
   
- A **cadena** que contiene la etiqueta de columna.  
+ Valor **string** que contiene la etiqueta de columna.  
   
- *lector*  
+ *reader*  
   
- Un objeto de lector.  
+ Un objeto lector.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método updateCharacterStream especificado por el método updateCharacterStream en la interfaz java.sql.ResultSet.  
   
- Este método pasa los caracteres Unicode de un objeto de lector al texto seleccionado y las columnas binarias. Esto incluye todas las columnas de texto y **binario**, **varbinary**, **varbinary (max)**, **imagen**, y **xml**columnas, pero no **udt** columnas.  
+ Este método pasa los caracteres Unicode de un objeto Reader al texto seleccionado y las columnas binarias. Esto incluye todas las columnas de texto y las columnas **binary**, **varbinary**, **varbinary(max)**, **image** y **xml**, pero no las **udt**.  
   
- Utiliza este método para el **imagen**, **texto**, y **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipos de datos podrían afectar al rendimiento.  
+ Con este método para el **imagen**, **texto**, y **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipos de datos podrían afectar al rendimiento.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Método updateCharacterStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

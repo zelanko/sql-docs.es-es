@@ -1,5 +1,5 @@
 ---
-title: 'Paso 3: Prueba de concepto que se conecta a SQL con PHP | Documentos de Microsoft'
+title: 'Paso 3: prueba de concepto de la conexión a SQL con PHP | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d6fe5c82561e32924c1a1792eda552caec522881
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309454"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006457"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Step 3: Proof of concept connecting to SQL using PHP (Paso 3: prueba de concepto de la conexión a SQL con PHP)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "35309454"
 ## <a name="step-1--connect"></a>Paso 1: conectar  
   
   
-Esto **OpenConnection** función se denomina cerca de la parte superior de todas las funciones siguientes.  
+Esto **OpenConnection** llama a la función en la parte superior de todas las funciones siguientes.  
   
   
 ```php 
@@ -51,7 +51,7 @@ Esto **OpenConnection** función se denomina cerca de la parte superior de todas
   
 ## <a name="step-2--execute-query"></a>Paso 2: Ejecutar consulta  
   
-El [sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php) función puede utilizarse para recuperar un conjunto de resultados de una consulta en base de datos de SQL. Esta función básicamente acepta cualquier consulta y el objeto de conexión y devuelve un conjunto de resultados que puede ser recorre en iteración mediante el uso de [sqlsrv_fetch_array()](http://php.net/manual/en/function.sqlsrv-fetch-array.php).  
+El [sqlsrv_query ()](http://php.net/manual/en/function.sqlsrv-query.php) función puede utilizarse para recuperar un conjunto de resultados de una consulta en SQL Database. Esta función básicamente acepta cualquier consulta y el objeto de conexión y devuelve un conjunto de resultados que se puede iterar mediante el uso de [sqlsrv_fetch_array ()](http://php.net/manual/en/function.sqlsrv-fetch-array.php).  
   
 ```php  
     function ReadData()  
@@ -83,7 +83,7 @@ El [sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php) función
   
 ## <a name="step-3--insert-a-row"></a>Paso 3: Insertar una fila  
   
-En este ejemplo se muestra cómo ejecutar un [insertar](../../t-sql/statements/insert-transact-sql.md) instrucción de forma segura, pasar parámetros que protección la aplicación de [inyección de código SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) valor.    
+En este ejemplo se muestra cómo ejecutar un [insertar](../../t-sql/statements/insert-transact-sql.md) instrucción de forma segura, pasar parámetros que protejan la aplicación de [inyección de código SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) valor.    
   
   
 ```php 
@@ -116,13 +116,13 @@ En este ejemplo se muestra cómo ejecutar un [insertar](../../t-sql/statements/i
 ## <a name="step-4--rollback-a-transaction"></a>Paso 4: Revertir una transacción  
   
   
-Este ejemplo de código muestra el uso de transacciones en el que es:  
+Este ejemplo de código muestra el uso de transacciones en el que puede:  
   
 -Iniciar una transacción  
   
--Insertar una fila de datos, actualice otra fila de datos  
+-Insertar una fila de datos, actualizar otra fila de datos  
   
--Confirmar la transacción si la inserción y actualización tuvo éxito y revertir la transacción si uno de ellos no  
+-Confirmar la transacción si la inserción y actualización se realizaron correctamente y revertir la transacción si uno de ellos no  
   
   
 ```php 

@@ -1,5 +1,5 @@
 ---
-title: Agrupación de conexiones dependientes del controlador en el controlador ODBC para SQL Server | Documentos de Microsoft
+title: Agrupación de conexiones dependientes del controlador en ODBC Driver for SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,25 +15,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f3cc9428f84db56675dbf58c977078fa4dcca6ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852860"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060013"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Agrupación de conexiones dependientes del controlador ODBC para SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] admite [agrupación de conexiones dependientes del controlador](http://msdn.microsoft.com/library/hh405031(VS.85).aspx). En este tema se describe las mejoras realizadas en el controlador ODBC de Microsoft para la agrupación de conexiones dependientes del controlador [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] en Windows:  
+  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] es compatible con la [agrupación de conexiones dependientes del controlador](http://msdn.microsoft.com/library/hh405031(VS.85).aspx). En este tema se describen las mejoras realizadas en la característica de agrupación de conexiones dependientes del controlador de Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] en Windows:  
   
--   Independientemente de las propiedades de conexión, las conexiones que usan `SQLDriverConnect` vaya a un grupo independiente de las conexiones que utilizan `SQLConnect`.
-- Cuando se usa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] autenticación y la agrupación de conexiones dependientes del controlador, el controlador no utiliza el contexto de seguridad del usuario de Windows para el subproceso actual para separar las conexiones en el grupo. Es decir, si las conexiones contienen parámetros equivalentes en escenarios de suplantación de Windows con autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] y usan las mismas credenciales de autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] para conectarse al back-end, varios usuarios de Windows podrían utilizar el mismo grupo de conexiones. Al usar la autenticación de Windows y la agrupación de conexiones dependientes del controlador, el controlador utiliza el contexto de seguridad del usuario de Windows en el subproceso actual con el fin de separar las conexiones del grupo. Es decir, en escenarios de suplantación de Windows, varios usuarios de Windows no compartirán las conexiones aunque utilicen los mismos parámetros.
-- Cuando se usa Azure Active Directory y la agrupación de conexiones dependientes del controlador, el controlador también utiliza el valor de autenticación para determinar la pertenencia del grupo de conexiones.
+-   Con independencia de las propiedades de conexión, las conexiones que usan `SQLDriverConnect` forman parte de un grupo independiente de las conexiones que usan `SQLConnect`.
+- Al usar la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] y la agrupación de conexiones dependientes del controlador, el controlador no emplea el contexto de seguridad del usuario de Windows para el subproceso actual con el fin de separar las conexiones del grupo. Es decir, si las conexiones contienen parámetros equivalentes en escenarios de suplantación de Windows con autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] y usan las mismas credenciales de autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] para conectarse al back-end, varios usuarios de Windows podrían utilizar el mismo grupo de conexiones. Al usar la autenticación de Windows y la agrupación de conexiones dependientes del controlador, el controlador utiliza el contexto de seguridad del usuario de Windows en el subproceso actual con el fin de separar las conexiones del grupo. Es decir, en escenarios de suplantación de Windows, varios usuarios de Windows no compartirán las conexiones aunque utilicen los mismos parámetros.
+- Cuando se usa Azure Active Directory y la agrupación de conexiones dependientes del controlador, el controlador también usa el valor de autenticación para determinar la pertenencia del grupo de conexiones.
   
 -   La característica de agrupación de conexiones dependientes del controlador impide que se devuelva una conexión incorrecta del grupo.  
   
--   Asimismo, reconoce los atributos de conexión específicos del controlador. Por lo tanto, si utiliza una conexión `SQL_COPT_SS_APPLICATION_INTENT` establecido como de solo lectura, dicha conexión obtendrá su propio grupo de conexiones.
--   Establecer el `SQL_COPT_SS_ACCESS_TOKEN` atributo hace que una conexión se agruparán por separado 
+-   Asimismo, reconoce los atributos de conexión específicos del controlador. Por lo tanto, si usa una conexión `SQL_COPT_SS_APPLICATION_INTENT` establecido como de solo lectura, dicha conexión obtendrá su propio grupo de conexiones.
+-   Establecer el `SQL_COPT_SS_ACCESS_TOKEN` atributo hace que una conexión pueden agruparse por separado 
   
 Si uno de los siguientes id. de atributo de conexión o palabras clave de cadena de conexión difiere entre la cadena de conexión y la cadena de conexión agrupada, el controlador utilizará una conexión agrupada. Sin embargo, se obtendrá un mejor rendimiento si coinciden todos los id. del atributo de conexión o palabras clave de cadena de conexión (para que coincida una conexión en el grupo, el controlador restablece el atributo). El rendimiento será peor, ya que, para restablecer los siguientes parámetros, se requiere una llamada de red adicional.  
   
@@ -46,14 +46,14 @@ Si uno de los siguientes id. de atributo de conexión o palabras clave de cadena
   
 -   Si hay una diferencia en cualquiera de las siguientes palabras clave de conexión entre la cadena de conexión y una cadena de conexión agrupada, no se utilizará una conexión agrupada.  
   
-    |Palabra clave|ODBC Driver 13|Controlador ODBC 11|
+    |Palabra clave|ODBC Driver 13|ODBC Driver 11|
     |-|-|-|
     |`Address`|Sí|Sí|
     |`AnsiNPW`|Sí|Sí|
     |`App`|Sí|Sí|
     |`ApplicationIntent`|Sí|Sí|  
-    |`Authentication`|Sí|No|
-    |`ColumnEncryption`|Sí|No|
+    |`Authentication`|Sí|no|
+    |`ColumnEncryption`|Sí|no|
     |`Database`|Sí|Sí|
     |`Encrypt`|Sí|Sí|  
     |`Failover_Partner`|Sí|Sí|
@@ -71,16 +71,16 @@ Si uno de los siguientes id. de atributo de conexión o palabras clave de cadena
     
 - Si hay una diferencia en cualquiera de los siguientes atributos de conexión entre la cadena de conexión y una cadena de conexión agrupada, no se utilizará una conexión agrupada.  
   
-    |Atributo|ODBC Driver 13|Controlador ODBC 11|  
+    |Attribute|ODBC Driver 13|ODBC Driver 11|  
     |-|-|-|  
     |`SQL_ATTR_CURRENT_CATALOG`|Sí|Sí|
     |`SQL_ATTR_PACKET_SIZE`|Sí|Sí|
     |`SQL_COPT_SS_ANSI_NPW`|Sí|Sí|
-    |`SQL_COPT_SS_ACCESS_TOKEN`|Sí|No|
-    |`SQL_COPT_SS_AUTHENTICATION`|Sí|No|
+    |`SQL_COPT_SS_ACCESS_TOKEN`|Sí|no|
+    |`SQL_COPT_SS_AUTHENTICATION`|Sí|no|
     |`SQL_COPT_SS_ATTACHDBFILENAME`|Sí|Sí|
     |`SQL_COPT_SS_BCP`|Sí|Sí|
-    |`SQL_COPT_SS_COLUMN_ENCRYPTION`|Sí|No|
+    |`SQL_COPT_SS_COLUMN_ENCRYPTION`|Sí|no|
     |`SQL_COPT_SS_CONCAT_NULL`|Sí|Sí|
     |`SQL_COPT_SS_ENCRYPT`|Sí|Sí|
     |`SQL_COPT_SS_FAILOVER_PARTNER`|Sí|Sí|
@@ -95,9 +95,9 @@ Si uno de los siguientes id. de atributo de conexión o palabras clave de cadena
  
 -   El controlador puede restablecer y ajustar los siguientes atributos y palabras clave de conexión sin realizar una llamada de red adicional. El controlador restablece estos parámetros para garantizar que la conexión no contenga información incorrecta.  
   
-     Estas palabras clave de conexión no se tienen en cuenta cuando el Administrador de controladores intenta hacer coincidir la conexión con una conexión del grupo. Aunque cambie uno de estos parámetros, se puede utilizar una conexión existente. El controlador restablecerá las opciones según proceda. Pueden restablecer estos atributos en el lado del cliente sin realizar una llamada de red adicional.  
+     Estas palabras clave de conexión no se tienen en cuenta cuando el Administrador de controladores intenta hacer coincidir la conexión con una conexión del grupo. Aunque cambie uno de estos parámetros, se puede utilizar una conexión existente. El controlador restablecerá las opciones según proceda. Estos atributos se pueden restablecer en el cliente sin realizar ninguna llamada de red adicional.  
   
-    |Palabra clave|ODBC Driver 13|Controlador ODBC 11|  
+    |Palabra clave|ODBC Driver 13|ODBC Driver 11|  
     |-|-|-|  
     |`AutoTranslate`|Sí|Sí|
     |`Description`|Sí|Sí|
@@ -111,7 +111,7 @@ Si uno de los siguientes id. de atributo de conexión o palabras clave de cadena
   
      Si cambia uno de los siguientes atributos de conexión, se puede reutilizar una conexión existente.  El controlador restablecerá el valor según proceda. El controlador puede restablecer estos atributos en el cliente sin realizar una llamada de red adicional.  
   
-    |Atributo|ODBC Driver 13|Controlador ODBC 11|  
+    |Attribute|ODBC Driver 13|ODBC Driver 11|  
     |-|-|-|  
     |Todos los atributos de instrucción|Sí|Sí|
     |`SQL_ATTR_AUTOCOMMIT`|Sí|Sí|
@@ -130,7 +130,7 @@ Si uno de los siguientes id. de atributo de conexión o palabras clave de cadena
     |`SQL_COPT_SS_USER_DATA`|  Sí|Sí|
     |`SQL_COPT_SS_WARN_ON_CP_ERROR`|Sí|Sí|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Microsoft ODBC Driver for SQL Server en Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

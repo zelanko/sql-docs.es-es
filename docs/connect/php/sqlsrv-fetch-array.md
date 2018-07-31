@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_fetch_array | Documentos de Microsoft
+title: sqlsrv_fetch_array | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aab41821d2f4eb1eb3f92ce998fe440593567d0a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308974"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979718"
 ---
 # <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
 #### <a name="parameters"></a>Parámetros  
 *$stmt*: un recurso de instrucción correspondiente a una instrucción ejecutada.  
   
-*$fetchType* [opcional]: una constante predefinida. Este parámetro puede tomar uno de los valores que se muestran en la siguiente tabla:  
+*$fetchType* [OPCIONAL]: constante predefinida. Este parámetro puede tomar uno de los valores que se muestran en la siguiente tabla:  
   
 |Valor|Descripción|  
 |---------|---------------|  
@@ -51,7 +51,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
 |SQLSRV_FETCH_ASSOC|La siguiente fila de datos se devuelve como una matriz asociativa. Las claves de matriz son los nombres de columna del conjunto de resultados.|  
 |SQLSRV_FETCH_BOTH|La siguiente fila de datos se devuelve como una matriz numérica y una matriz asociativa. Este es el valor predeterminado.|  
   
-*fila* [opcional]: agregado en la versión 1.1. Uno de los siguientes valores; sirve para especificar la fila a la que se accederá en un conjunto de resultados que utilice un cursor desplazable (Cuando *fila* se especifica, *fetchtype* debe especificarse explícitamente, incluso si se especifica el valor predeterminado.)  
+*row* [OPCIONAL]: se ha agregado en la versión 1.1. Uno de los siguientes valores; sirve para especificar la fila a la que se accederá en un conjunto de resultados que utilice un cursor desplazable (Si se especifica *row*, se tiene que especificar explícitamente *fetchtype*, aunque se especifique el valor predeterminado).  
   
 -   SQLSRV_SCROLL_NEXT  
 -   SQLSRV_SCROLL_PRIOR  
@@ -62,7 +62,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 Para obtener más información sobre estos valores, vea [Especificación de un tipo de cursor y selección de filas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md). Se ha agregado compatibilidad con los cursores desplazables en la versión 1.1 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-*desplazamiento* [opcional]: se utiliza con SQLSRV_SCROLL_ABSOLUTE y SQLSRV_SCROLL_RELATIVE para especificar la fila que se va a recuperar. El primer registro del conjunto de resultados es 0.  
+*offset* [OPCIONAL]: se usa con SQLSRV_SCROLL_ABSOLUTE y SQLSRV_SCROLL_RELATIVE para especificar la fila que se va a recuperar. El primer registro del conjunto de resultados es 0.  
   
 ## <a name="return-value"></a>Valor devuelto  
 Si se recupera una fila de datos, se devuelve una **matriz** . Si no hay más filas para recuperar, se devolverá el valor **Null** . Si se produce un error, se devuelve el valor **False** .  
@@ -77,7 +77,7 @@ INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);
 SELECT SCOPE_IDENTITY()
 ```
   
-Si el conjunto de resultados devuelto por la `SELECT SCOPE_IDENTITY()` parte de esta instrucción se recupera como una matriz asociativa, la clave del valor devuelto será una cadena vacía ("") porque la columna devuelta no tiene nombre. Para evitar esto, puede recuperar el resultado como una matriz numérica o especificar un nombre para la columna devuelta en la instrucción de Transact-SQL. A continuación, se muestra una forma de especificar un nombre de columna en Transact-SQL:  
+Si el conjunto de resultados que devuelve la parte `SELECT SCOPE_IDENTITY()` de esta instrucción se recupera como una matriz asociativa, la clave del valor devuelto será una cadena vacía ("") debido a que la columna devuelta no tiene nombre. Para evitar esto, puede recuperar el resultado como una matriz numérica o especificar un nombre para la columna devuelta en la instrucción de Transact-SQL. A continuación, se muestra una forma de especificar un nombre de columna en Transact-SQL:  
   
 ```
 SELECT SCOPE_IDENTITY() AS PictureID
@@ -86,7 +86,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
 Si un conjunto de resultados contiene varias columnas sin nombre, se asignará el valor de la última columna sin nombre a clave de la cadena vacía ("").  
   
 ## <a name="example"></a>Ejemplo  
-En el siguiente ejemplo se recupera cada fila de un conjunto de resultados como una **matriz**asociativa. En el ejemplo se da por supuesto que el servidor SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el siguiente ejemplo se recupera cada fila de un conjunto de resultados como una **matriz**asociativa. En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -127,9 +127,9 @@ sqlsrv_close( $conn);
 ## <a name="example"></a>Ejemplo  
 En el siguiente ejemplo se recupera cada fila de un conjunto de resultados como una matriz indizada numéricamente.  
   
-En el ejemplo se recupera información del producto desde la *Purchasing.PurchaseOrderDetail* tabla de la base de datos de AdventureWorks para productos que tienen una fecha especificada y una cantidad mantenida en existencias (*StockQty*) menor que un valor especificado.  
+En el ejemplo se recupera información de producto de la tabla *Purchasing.PurchaseOrderDetail* de la base de datos AdventureWorks de productos que tienen una fecha especificada y una cantidad con existencias (*StockQty*) inferior a un valor determinado.  
   
-El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -184,7 +184,7 @@ La función **sqlsrv_fetch_array** siempre devuelve datos según los [Default PH
   
 Si se recupera un campo sin nombre, la clave asociativa del elemento de matriz asociativa será una cadena vacía (""). Para obtener más información, vea [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Recuperación de datos](../../connect/php/retrieving-data.md)

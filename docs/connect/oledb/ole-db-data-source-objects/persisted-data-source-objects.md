@@ -1,6 +1,6 @@
 ---
-title: Objetos de origen de datos almacenados | Documentos de Microsoft
-description: Objetos de origen de datos almacenados
+title: Objetos de origen de datos persistentes | Microsoft Docs
+description: Objetos de origen de datos persistentes
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,24 +19,24 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 551bae4aac968092b67f83232da5101c10623b31
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 174bd7985cacf33a1cb62988204d8b0cec99b89b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665615"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106951"
 ---
 # <a name="persisted-data-source-objects"></a>Objetos de origen de datos persistentes
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  El controlador OLE DB para SQL Server admite objetos de origen de datos persistente con la **IPersistFile** interfaz.  
+  El controlador OLE DB para SQL Server es compatible con los objetos de origen de datos persistentes con el **IPersistFile** interfaz.  
   
 ## <a name="examples"></a>Ejemplos  
- **A. Conservar la inicialización del origen de datos:**  
+ **A. Guardar la inicialización del origen de datos:**  
   
- En este ejemplo se muestra una función que guarda propiedades de inicialización de origen de datos que definen un servidor, una base de datos y el uso del Modo de autenticación de Windows para la conexión. El nombre del servidor y el nombre de la base de datos se reciben en el *Pdatasource* y *Plocation* parámetros de la función.  
+ En este ejemplo se muestra una función que guarda propiedades de inicialización de origen de datos que definen un servidor, una base de datos y el uso del Modo de autenticación de Windows para la conexión. El nombre del servidor y el nombre de la base de datos se reciben en los parámetros *pLocation* y *pDatasource* de la función.  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -145,7 +145,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. Use la inicialización del origen de datos almacenados:**  
+ **B. Usar la inicialización de origen de datos guardada:**  
   
  En este ejemplo se utiliza un objeto de origen de datos guardado con propiedades de inicialización adicionales que proporcionan un inicio de sesión y una contraseña de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -233,9 +233,9 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- El **IPersistFile:: Save** se puede llamar antes o después de llamar al método **IDBInitialize:: Initialize**. Llamar al método después de una devolución correcta de **IDBInitialize:: Initialize** garantiza que se conserva una especificación de origen de datos válido.  
+ Se puede llamar al método **IPersistFile::Save** antes o después de llamar a **IDBInitialize::Initialize**. Si se llama al método después de un retorno correcto de **IDBInitialize::Initialize**, se asegura de que se guarde una especificación de origen de datos válida.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Objetos de origen de datos &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

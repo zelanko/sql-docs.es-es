@@ -1,5 +1,5 @@
 ---
-title: wasNull (método) (SQLServerResultSet) | Documentos de Microsoft
+title: Método wasNull (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 257cc1e1889e0866bcbf0e26b2315593074545fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848500"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979197"
 ---
-# <a name="wasnull-method-sqlserverresultset"></a>wasNull (método) (SQLServerResultSet)
+# <a name="wasnull-method-sqlserverresultset"></a>Método wasNull (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Comprueba si la última lectura del valor dio como resultado un valor NULL.  
@@ -39,15 +39,15 @@ public boolean wasNull()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **True** si el último valor leído era null. De lo contrario, se devuelve el valor **False**.  
+ Es **true** si el último valor que se ha leído es NULL. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método wasNull especificado por el método wasNull en la interfaz java.sql.ResultSet.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

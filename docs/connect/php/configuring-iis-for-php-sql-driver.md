@@ -1,5 +1,5 @@
 ---
-title: Configuración de IIS para los controladores de Microsoft para PHP para SQL Server | Documentos de Microsoft
+title: Configuración de IIS para los controladores de Microsoft para PHP para SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -16,39 +16,39 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee45bcd1d78042305e06c99035ec165c8741e56d
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 379e7c7f63b4e071627d9ad1b2f056d8c79c1b0a
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307384"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981847"
 ---
 # <a name="configuring-iis-for-the-microsoft-drivers-for-php-for-sql-server"></a>Configuración de IIS para los controladores de Microsoft para PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Este tema proporciona vínculos a recursos sobre la [sitio Web de Internet Information Services (IIS)](https://www.iis.net/) que están relacionados con la configuración de IIS para hospedar aplicaciones PHP. Los recursos que figuran aquí son específicos para utilizar FastCGI con IIS. FastCGI es un protocolo estándar que permite a los archivos ejecutables de la interfaz de puerta de enlace común (CGI) del marco de una aplicación comunicarse con el servidor web. FastCGI difiere entre el protocolo CGI estándar en que FastCGI reutiliza los procesos CGI en varias solicitudes.  
+En este tema se proporcionan vínculos a recursos del [sitio web de Internet Information Services (IIS)](https://www.iis.net/) que son relevantes para la configuración de IIS a fin de hospedar aplicaciones PHP. Los recursos que figuran aquí son específicos para utilizar FastCGI con IIS. FastCGI es un protocolo estándar que permite a los archivos ejecutables de la interfaz de puerta de enlace común (CGI) del marco de una aplicación comunicarse con el servidor web. La diferencia entre el protocolo CGI estándar y FastCGI es que este último vuelve a usar los procesos CGI en varias solicitudes.  
   
 ## <a name="tutorials"></a>Tutoriales  
 En los siguientes vínculos se ofrecen tutoriales sobre cómo configurar FastCGI para PHP y hospedar aplicaciones PHP en IIS 6.0 e IIS 7.0:  
   
--   [FastCGI con PHP](https://docs.microsoft.com/iis/web-hosting/web-server-for-shared-hosting/fastcgi-with-php)  
--   [Using FastCGI to Host PHP Applications on IIS 7.0 uso](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis)  
--   [Using FastCGI to Host PHP Applications on IIS 6.0 uso](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis-60)  
--   [Configuración de extensión de FastCGI para IIS 6.0](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-on-iis/configuring-the-fastcgi-extension-for-iis-60)  
+-   [FastCGI with PHP (FastCGI con PHP)](https://docs.microsoft.com/iis/web-hosting/web-server-for-shared-hosting/fastcgi-with-php)  
+-   [Using FastCGI to Host PHP Applications on IIS 7.0 (Uso de FastCGI para hospedar aplicaciones PHP en IIS 7.0)](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis)  
+-   [Using FastCGI to Host PHP Applications on IIS 6.0 (Uso de FastCGI para hospedar aplicaciones PHP en IIS 6.0)](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis-60)  
+-   [Configuring FastCGI Extension for IIS 6.0 (Configuración de la extensión de FastCGI para IIS 6.0)](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-on-iis/configuring-the-fastcgi-extension-for-iis-60)  
   
 ## <a name="video-presentations"></a>Presentaciones en vídeo  
 En los siguientes vínculos se ofrecen presentaciones en vídeo sobre cómo configurar FastCGI para PHP y utilizar las características de IIS 7.0 para hospedar aplicaciones PHP:  
   
--   [Configuración de FastCGI para PHP](https://docs.microsoft.com/en-us/iis/application-frameworks/running-php-applications-on-iis/set-up-fastcgi-for-php)  
--   [En la fiesta con PHP en Microsoft Internet Information Services 7](https://docs.microsoft.com/en-us/iis/application-frameworks/running-php-applications-on-iis/mix08-partying-with-php-on-microsoft-internet-information-services-7-and-above)  
+-   [Setting up FastCGI for PHP (Configuración de FastCGI para PHP)](https://docs.microsoft.com/iis/application-frameworks/running-php-applications-on-iis/set-up-fastcgi-for-php)  
+-   [Partying with PHP on Microsoft Internet Information Services 7 (Integración de PHP con Microsoft Internet Information Services 7)](https://docs.microsoft.com/iis/application-frameworks/running-php-applications-on-iis/mix08-partying-with-php-on-microsoft-internet-information-services-7-and-above)  
   
 ## <a name="support-resources"></a>Recursos de soporte  
 En los siguientes foros se ofrece soporte técnico de la comunidad para FastCGI en IIS:  
   
--   [Controlador de FastCGI](https://forums.iis.net/1103.aspx)  
--   [7 - módulo FastCGI IIS](https://forums.iis.net/1104.aspx)  
+-   [FastCGI Handler (Controlador de FastCGI)](https://forums.iis.net/1103.aspx)  
+-   [IIS 7 - FastCGI Module (IIS 7: módulo de FastCGI)](https://forums.iis.net/1104.aspx)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Introducción a los controladores de Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [Programación de guía para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)

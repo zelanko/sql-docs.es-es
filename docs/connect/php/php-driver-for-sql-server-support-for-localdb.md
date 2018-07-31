@@ -1,5 +1,5 @@
 ---
-title: Compatibilidad con LocalDB | Documentos de Microsoft
+title: Compatibilidad con LocalDB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 438802c4645ff3acdc1bed42af22e4e32786e1d0
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308754"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992917"
 ---
 # <a name="support-for-localdb"></a>Compatibilidad con LocalDB
 
@@ -28,7 +28,7 @@ LocalDB es una versión ligera de [!INCLUDE[ssNoVersion](../../includes/ssnovers
 
 ## <a name="remarks"></a>Notas
 
-Para obtener más información sobre LocalDB, incluido cómo instalar LocalDB y configurar la instancia de LocalDB, vea el [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tema libros en pantalla en [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express LocalDB.
+Para obtener más información sobre LocalDB, incluido cómo instalar LocalDB y configurar la instancia de LocalDB, vea el [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tema de libros en pantalla en [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express LocalDB.
 
 En resumen, LocalDB permite:
 
@@ -49,7 +49,7 @@ En resumen, LocalDB permite:
         array('AttachDBFileName'=>'c:\\myData.MDF'));
     ```
 
-    A continuación es una cadena de conexión de PDO_SQLSRV de ejemplo:  
+    A continuación es una cadena de conexión de ejemplo PDO_SQLSRV:  
 
     ```php
     $conn = new PDO( 'sqlsrv:server=(localdb)\\v11.0;'
@@ -63,24 +63,24 @@ En resumen, LocalDB permite:
         . 'AttachDBFileName=c:\\myData.MDF', NULL, NULL);  
     ```
 
-Si fuera necesario, puede crear una instancia de LocalDB con sqllocaldb.exe. También puede utilizar sqlcmd.exe para agregar y modificar las bases de datos de una instancia de LocalDB. Por ejemplo, `sqlcmd -S (localdb)\v11.0`. (Cuando se ejecuta en IIS, debe ejecutar en la cuenta correcta para obtener los mismos resultados que al ejecutar la línea de comandos; vea [usar LocalDB con IIS completo, parte 2: propiedad de instancia](http://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) para obtener más información.)
+Si fuera necesario, puede crear una instancia de LocalDB con sqllocaldb.exe. También puede utilizar sqlcmd.exe para agregar y modificar las bases de datos de una instancia de LocalDB. Por ejemplo, `sqlcmd -S (localdb)\v11.0`. (Cuando se ejecuta en IIS, deberá ejecutar bajo la cuenta correcta para obtener los mismos resultados que al ejecutar la línea de comandos; consulte [usar LocalDB con IIS completo, parte 2: la propiedad de instancia](http://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) para obtener más información.)
 
-Éstos son cadenas de conexión de ejemplo con el controlador SQLSRV que se conectan a una base de datos en una instancia denominada myInstance con nombre de LocalDB:
+Estas son cadenas de conexión de ejemplo con el controlador SQLSRV que se conectan a una base de datos en una instancia denominada myInstance con nombre de LocalDB:
 
 ```php
 $conn = sqlsrv_connect( '(localdb)\\myInstance',
     array( 'Database'=>'myData'));
 ```
 
-Las siguientes cadenas de conexión de ejemplo utilizando el controlador PDO_SQLSRV que se conectan a una base de datos en una instancia denominada myInstance con nombre de LocalDB son:  
+Estas son cadenas de conexión de ejemplo mediante el controlador PDO_SQLSRV que se conectan a una base de datos en una instancia denominada myInstance con nombre de LocalDB:  
   
 ```php
 $conn = new PDO( 'sqlsrv:server=(localdb)\\myInstance;'
     . 'database=myData', NULL, NULL);
 ```
 
-Para obtener instrucciones acerca de cómo instalar LocalDB, vea el [LocalDB documentación](../../database-engine/configure-windows/sql-server-2016-express-localdb.md). Si usa sqlcmd.exe para modificar datos en la instancia de LocalDB, necesitará la [utilidad sqlcmd](../../tools/sqlcmd-utility.md).
+Para obtener instrucciones acerca de cómo instalar LocalDB, vea el [LocalDB documentación](../../database-engine/configure-windows/sql-server-2016-express-localdb.md). Si usa sqlcmd.exe para modificar datos en la instancia de LocalDB, necesitará el [utilidad sqlcmd](../../tools/sqlcmd-utility.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Ver también
 
 [Conexión al servidor](../../connect/php/connecting-to-the-server.md)

@@ -1,5 +1,5 @@
 ---
-title: Método updateObject (java.lang.String, java.lang.Object) | Documentos de Microsoft
+title: Método updateObject (java.lang.String, java.lang.Object) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2dcf906b0514f5b52b2367aef0a276cf66982271
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850630"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982367"
 ---
 # <a name="updateobject-method-javalangstring-javalangobject"></a>Método updateObject (java.lang.String, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Actualiza la columna designada con un **objeto** valor según el nombre de columna.  
+  Actualiza la columna designada con un valor **Object** según el nombre de columna.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,19 +42,19 @@ public void updateObject(java.lang.String columnName,
 #### <a name="parameters"></a>Parámetros  
  *columnName*  
   
- A **cadena** que contiene el nombre de columna.  
+ Valor **string** que contiene el nombre de columna.  
   
  *obj*  
   
- Un **objeto** valor.  
+ Valor **Object**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
- Este método updateObject es especificado por el método updateObject en la interfaz java.sql.ResultSet.  
+## <a name="remarks"></a>Notas  
+ Este método updateObject especificado por el método updateObject en la interfaz java.sql.ResultSet.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Método updateObject &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: Método valueOf (DateTimeOffset) | Documentos de Microsoft
+title: Método valueOf (DateTimeOffset) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,25 +15,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fa41731f0d9d3bdde5bf0eb59c69ba1997e519c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850260"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38021276"
 ---
 # <a name="valueof-method-datetimeoffset"></a>Método valueOf (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Crea un **DateTimeOffset** objeto que representa un punto en el tiempo en un determinado desplazamiento respecto a GMT.  
+  Crea un objeto **DateTimeOffset** que representa un punto cronológico dentro de un desplazamiento en concreto de GMT.  
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nombre|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[valueOf (java.sql.Timestamp, int)](../../../connect/jdbc/reference/valueof-method-java-sql-timestamp-int.md)|Crea un **DateTimeOffset** objeto que representa un punto en el tiempo en un desplazamiento en concreto de GMT según un valor java.sql.Timestamp y un valor que indica el desplazamiento en minutos.|  
-|[valueOf (java.sql.Timestamp, java.util.Calendar)](../../../connect/jdbc/reference/valueof-method-java-sql-timestamp-java-util-calendar.md)|Crea un **DateTimeOffset** objeto que representa un punto en el tiempo en un desplazamiento en concreto de GMT según un valor java.sql.Timestamp y un valor java.util.Calendar que indica el desplazamiento.|  
+|[valueOf(java.sql.Timestamp, int)](../../../connect/jdbc/reference/valueof-method-java-sql-timestamp-int.md)|Crea un objeto **DateTimeOffset** que representa un punto en el tiempo en un desfase concreto de GMT según un valor java.sql.Timestamp y un valor que indica el desfase en minutos.|  
+|[valueOf(java.sql.Timestamp, java.util.Calendar)](../../../connect/jdbc/reference/valueof-method-java-sql-timestamp-java-util-calendar.md)|Crea un **DateTimeOffset** objeto que representa un punto cronológico dentro de un determinado desplazamiento de GMT según un valor java.sql.Timestamp y un valor java.util.Calendar que indica el desplazamiento.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)   
  [Miembros DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   

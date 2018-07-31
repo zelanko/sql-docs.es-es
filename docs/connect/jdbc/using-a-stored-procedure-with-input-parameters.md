@@ -1,5 +1,5 @@
 ---
-title: Usar un procedimiento almacenado con parámetros de entrada | Documentos de Microsoft
+title: Usar un procedimiento almacenado con parámetros de entrada | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,29 +15,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f736e2e901d17d4a6b8d114964a315afd389ab9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852180"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978597"
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>Usar un procedimiento almacenado con parámetros de entrada
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] procedimiento almacenado que se puede llamar es aquel que contiene uno o más parámetros IN, que son los parámetros que pueden utilizarse para pasar datos al procedimiento almacenado. El [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] proporciona el [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) (clase), que puede usar para llamar a este tipo de procedimiento almacenado y procesar los datos que devuelve.  
+  Un procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] al que se puede llamar es aquel que contiene uno o más parámetros IN, parámetros que se pueden usar para pasar datos al procedimiento almacenado. El [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] proporciona la clase [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), que puede usar para llamar a este procedimiento almacenado y para procesar los datos que devuelve.  
   
- Al usar el controlador JDBC para llamar a un procedimiento almacenado con parámetros, debe usar el `call` secuencia de escape SQL junto con la [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) método de la [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) clase. La sintaxis de la `call` secuencia de escape con parámetros es como sigue:  
+ Si usa el controlador JDBC para llamar a un procedimiento almacenado con los parámetros IN, debe usar la secuencia de escape `call` de SQL junto con el método [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) de la clase [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). La sintaxis de la secuencia de escape `call` con los parámetros IN es la siguiente:  
   
  `{call procedure-name[([parameter][,[parameter]]...)]}`  
   
 > [!NOTE]  
->  Para obtener más información acerca de las secuencias de escape SQL, consulte [usar secuencias de Escape de SQL](../../connect/jdbc/using-sql-escape-sequences.md).  
+>  Para obtener más información acerca de las secuencias de escape SQL, consulte [usando secuencias de Escape SQL](../../connect/jdbc/using-sql-escape-sequences.md).  
   
- ¿Al construir el `call` secuencia de escape, especifique los parámetros IN mediante el? (signo de interrogación). Este carácter actúa como un marcador de posición para los valores de parámetros pasados al procedimiento almacenado. Para especificar un valor para un parámetro, puede usar uno de los métodos de establecedor de la clase SQLServerPreparedStatement. El método del establecedor que puede usar se determina mediante el tipo del parámetro IN.  
+ Al crear la secuencia de escape `call`, especifique los parámetros IN mediante el carácter ? (signo de interrogación). Este carácter actúa como un marcador de posición para los valores de parámetros pasados al procedimiento almacenado. Para especificar un valor para un parámetro, puede usar uno de los métodos de establecedor de la clase SQLServerPreparedStatement. El método del establecedor que puede usar se determina mediante el tipo del parámetro IN.  
   
  Cuando pasa un valor al método establecedor, debe especificar no solo el valor real que se usará en el parámetro, sino el lugar ordinal que ocupa el parámetro en el procedimiento almacenado. Por ejemplo, si el procedimiento almacenado contiene un solo parámetro IN, su valor ordinal será 1. Si el procedimiento almacenado contiene dos parámetros, el primer valor ordinal es 1 y el segundo 2.  
   
- Como ejemplo de cómo llamar a un procedimiento almacenado que contiene un parámetro IN, use el procedimiento almacenado uspGetEmployeeManagers en la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] base de datos de ejemplo. Este procedimiento almacenado acepta un solo parámetro de entrada llamado EmployeeID (Id. del empleado), que es un valor entero, y devuelve una lista recursiva de empleados y sus jefes según el EmployeeID especificado. El código Java para llamar a este procedimiento almacenado es el siguiente:  
+ Como ejemplo de cómo llamar a un procedimiento que contiene un parámetro IN, use el procedimiento almacenado uspGetEmployeeManagers de la base de datos de ejemplo de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Este procedimiento almacenado acepta un solo parámetro de entrada llamado EmployeeID (Id. del empleado), que es un valor entero, y devuelve una lista recursiva de empleados y sus jefes según el EmployeeID especificado. El código Java para llamar a este procedimiento almacenado es el siguiente:  
   
 ```  
 public static void executeSprocInParams(Connection con) {  
@@ -63,7 +63,7 @@ public static void executeSprocInParams(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Usar instrucciones con procedimientos almacenados](../../connect/jdbc/using-statements-with-stored-procedures.md)  
   
   

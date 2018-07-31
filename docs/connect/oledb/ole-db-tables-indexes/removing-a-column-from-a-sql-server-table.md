@@ -1,6 +1,6 @@
 ---
-title: Quitar una columna de una tabla de SQL Server | Documentos de Microsoft
-description: Quitar una columna de una tabla de SQL Server mediante el controlador OLE DB para SQL Server
+title: Quitar una columna de una tabla de SQL Server | Microsoft Docs
+description: Quitar una columna de una tabla de SQL Server mediante el controlador de OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,23 +19,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 962e36bf135c6f01594652f4549b7e0216cd063f
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 007f4a21096dfc2e933ed7777c5bd407a6d40eb1
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689088"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109747"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>Quitar una columna de una tabla de SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  El controlador OLE DB para SQL Server expone la **ITableDefinition:: Dropcolumn** función. Esto permite que los consumidores puedan quitar una columna de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabla.  
+  El controlador OLE DB para SQL Server expone la **ITableDefinition:: Dropcolumn** función. Esto permite que los consumidores puedan quitar una columna de una tabla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Los consumidores especifican el nombre de tabla como una cadena de caracteres Unicode en el *pwszName*miembro de la *uName* union en la *pTableID* parámetro. El *eKind*miembro de *pTableID* debe ser DBKIND_NAME.  
+ Los consumidores especifican el nombre de la tabla como una cadena de caracteres Unicode en el miembro *pwszName* de la unión *uName* en el parámetro *pTableID*. El miembro *eKind* de *pTableID* debe ser DBKIND_NAME.  
   
- El consumidor indica un nombre de columna en la *pwszName*miembro de la *uName* union en la *pColumnID* parámetro. El nombre de la columna es una cadena de caracteres Unicode. El *eKind* miembro de *pColumnID* debe ser DBKIND_NAME.  
+ El consumidor indica un nombre de columna en la *pwszName*miembro de la *uName* union en la *pColumnID* parámetro. El nombre de la columna es una cadena de caracteres Unicode. El miembro *eKind* de *pColumnID* debe ser DBKIND_NAME.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -55,7 +55,7 @@ ColumnID.uName.pwszName = L"MyColumnName";
 hr = m_pITableDefinition->DropColumn(&TableID, &ColumnID);  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Tablas e índices](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
   

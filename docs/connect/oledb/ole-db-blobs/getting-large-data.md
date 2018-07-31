@@ -1,6 +1,6 @@
 ---
-title: Obtener datos de gran tamaño | Documentos de Microsoft
-description: Obtener datos de gran tamaño mediante el controlador OLE DB para SQL Server
+title: Obtención de datos de gran tamaño | Microsoft Docs
+description: Obtención de datos de gran tamaño mediante el controlador de OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7da19bac472558efadd3671e5dbfe09b5962f30f
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 816d999978ff692e034bb65012cd8da46508ca8e
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666205"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106189"
 ---
 # <a name="getting-large-data"></a>Obtener datos grandes
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  En general, los consumidores deben aislar el código que crea un controlador de OLE DB para el objeto de almacenamiento de SQL Server desde otro código que administra los datos que no se hace referencia a través de un **ISequentialStream** puntero de interfaz.  
+  En general, los consumidores deben aislar el código que cree un objeto de almacenamiento del controlador OLE DB para SQL Server de otro código que administre datos a los que no se hace referencia a través de un puntero de interfaz **ISequentialStream**.  
   
- En este artículo se refiere a la funcionalidad disponible con las siguientes funciones:  
+ En este artículo, se hace referencia a la funcionalidad disponible con las funciones siguientes:  
   
 -   IRowset:GetData  
   
@@ -41,9 +41,9 @@ ms.locfileid: "35666205"
   
 -   ICommand::Execute  
   
- El consumidor debe capturar una única fila de datos en una llamada a la **GetNextRows** método cuando la propiedad DBPROP_ACCESSORDER, en el grupo de propiedades de conjunto de filas, se establece en DBPROPVAL_AO_SEQUENTIAL o DBPROPVAL_AO_ SEQUENTIALSTORAGEOBJECTS. Esto es porque no se almacena en búfer de los datos de BLOB. Si se establece el valor de DBPROP_ACCESSORDER en DBPROPVAL_AO_RANDOM, el consumidor puede capturar varias filas de datos en **GetNextRows**.  
+ El consumidor solo debería capturar una única fila de datos en una llamada al método **GetNextRows** si la propiedad DBPROP_ACCESSORDER (del grupo de propiedades de conjunto de fila) se establece en DBPROPVAL_AO_SEQUENTIAL o DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS. Esto es porque no se almacena en búfer de datos BLOB. Si el valor de DBPROP_ACCESSORDER está establecido en DBPROPVAL_AO_RANDOM, el consumidor puede capturar varias filas de datos en **GetNextRows**.  
   
- El controlador OLE DB para SQL Server no recupera datos de gran tamaño desde [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hasta que lo solicita el consumidor. El consumidor debe enlazar todos los datos cortos en un descriptor de acceso y, a continuación, utilizar uno o más descriptores de acceso temporales para recuperar los valores de datos grandes según se precise.  
+ El controlador OLE DB para SQL Server no recupera datos grandes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hasta que lo solicita el consumidor. El consumidor debe enlazar todos los datos cortos en un descriptor de acceso y, a continuación, utilizar uno o más descriptores de acceso temporales para recuperar los valores de datos grandes según se precise.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se recupera un valor de datos grandes de una única columna:  
@@ -153,7 +153,7 @@ HRESULT GetUnboundData
     }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [BLOB y objetos OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
  [Usar tipos de valor grande](../../oledb/features/using-large-value-types.md)  
   

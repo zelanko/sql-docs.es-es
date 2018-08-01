@@ -1,0 +1,707 @@
+- name: Controladores ODBC proporcionados por Microsoft
+  href: microsoft-supplied-odbc-drivers.md
+- name: Uso de las aplicaciones de 16 bits y 32 bits con controladores de 32 bits
+  href: using-16-bit-and-32-bit-applications-with-32-bit-drivers.md
+  items:
+    - name: Uso de las aplicaciones de 16 bits con controladores de 32 bits
+      href: using-16-bit-applications-with-32-bit-drivers.md
+    - name: Uso de las aplicaciones de 32 bits con controladores de 32 bits
+      href: using-32-bit-applications-with-32-bit-drivers.md
+- name: Controladores de escritorio de la base de datos ODBC de Microsoft
+  href: microsoft-odbc-desktop-database-drivers.md
+  items:
+    - name: Arquitectura de controladores de escritorio de la base de datos
+      href: desktop-database-drivers-architecture.md
+    - name: Historial de los controladores de escritorio de la base de datos
+      href: history-of-the-desktop-database-drivers.md
+    - name: Servicios de soporte técnico
+      href: product-support.md
+    - name: Implementación de controladores de escritorio de la base de datos
+      href: implementing-desktop-database-drivers.md
+      items:
+        - name: Archivos que se utilizan con los controladores de escritorio de la base de datos
+          href: files-to-use-with-the-desktop-database-drivers.md
+        - name: Archivos de componentes ODBC
+          href: odbc-component-files.md
+        - name: Requisitos de hardware y Software (ODBC)
+          href: hardware-and-software-requirements-odbc.md
+        - name: Descriptores de y controladores de escritorio de la base de datos
+          href: descriptors-and-desktop-database-drivers.md
+        - name: Diagnóstico de controladores de escritorio de la base de datos
+          href: diagnostics-for-desktop-database-drivers.md
+        - name: Aceptar parámetros de cadena de funciones
+          href: functions-accepting-string-parameters.md
+        - name: Cumplimiento de normas de SQL-92
+          href: sql-92-compliance.md
+        - name: Dirección base de controladores
+          href: base-address-of-drivers.md
+        - name: Archivo DLL de configuración
+          href: setup-dll.md
+        - name: Archivos DLL de traducción y controladores de escritorio de la base de datos
+          href: translation-dlls-and-desktop-database-drivers.md
+        - name: Compatibilidad con controladores de escritorio de la base de datos
+          href: desktop-database-driver-compatibility.md
+        - name: Problemas de rendimiento del controlador de base de datos de escritorio
+          href: desktop-database-driver-performance-issues.md
+    - name: Consideraciones sobre la programación de controlador de Microsoft Access
+      href: microsoft-access-driver-programming-considerations.md
+      items:
+        - name: Opciones de configuración mediante programación para el controlador de acceso
+          href: setting-options-programmatically-for-the-access-driver.md
+        - name: Tipos de datos de Microsoft Access
+          href: microsoft-access-data-types.md
+        - name: SQLGetInfo devuelve valores para el acceso
+          href: sqlgetinfo-returned-values-for-access.md
+        - name: Otros detalles de programación del controlador de acceso
+          href: other-access-driver-programming-details.md
+          items:
+            - name: SQLColAttributes (controlador de Access)
+              href: sqlcolattributes-access-driver.md
+            - name: SQLColumns (controlador de Access)
+              href: sqlcolumns-access-driver.md
+            - name: SQLConfigDataSource (controlador de Access)
+              href: sqlconfigdatasource-access-driver.md
+            - name: SQLDriverConnect (controlador de Access)
+              href: sqldriverconnect-access-driver.md
+            - name: SQLGetInfo (controlador de Access)
+              href: sqlgetinfo-access-driver.md
+            - name: SQLGetTypeInfo (controlador de Access)
+              href: sqlgettypeinfo-access-driver.md
+            - name: SQLProcedureColumns (controlador de Access)
+              href: sqlprocedurecolumns-access-driver.md
+            - name: SQLSetConnectOption (controlador de Access)
+              href: sqlsetconnectoption-access-driver.md
+            - name: SQLStatistics (controlador de Access)
+              href: sqlstatistics-access-driver.md
+            - name: SQLTables (controlador de Access)
+              href: sqltables-access-driver.md
+            - name: SQLTransact (controlador de Access)
+              href: sqltransact-access-driver.md
+            - name: Cifrado (controlador de Access)
+              href: encryption-access-driver.md
+            - name: Con el atributo de cadena de conexión ExtendedAnsiSQL (controlador de Access)
+              href: using-the-extendedansisql-connection-string-attribute-access-driver.md
+              items:
+                - name: Establecer ExtendedAnsiSQL
+                  href: setting-extendedansisql.md
+                - name: Habilitar a nuevos tipos de datos estableciendo ExtendedAnsiSQL
+                  href: enabling-new-data-types-by-setting-extendedansisql.md
+                - name: Creación y eliminación de vistas y procedimientos con ExtendedAnsiSQL
+                  href: creating-and-dropping-views-and-procedures-using-extendedansisql.md
+                - name: Habilita la detección de truncamiento de datos utilizando ExtendedAnsiSQL
+                  href: data-truncation-detection-enabled-using-extendedansisql.md
+                - name: Lista de palabras reservadas de Jet 4.0 utiliza SQL-92 cuando ExtendedAnsiSQL_Set
+                  href: jet-4-0-uses-sql-92-reserved-words-list-when-extendedansisql-set.md
+    - name: Consideraciones sobre la programación de controlador de Microsoft Excel
+      href: microsoft-excel-driver-programming-considerations.md
+      items:
+        - name: Opciones de configuración mediante programación para el controlador de Excel
+          href: setting-options-programmatically-for-the-excel-driver.md
+        - name: Tipos de datos de Microsoft Excel
+          href: microsoft-excel-data-types.md
+        - name: SQLGetInfo devuelve valores para Excel
+          href: sqlgetinfo-returned-values-for-excel.md
+        - name: Otros detalles de programación del controlador de Excel
+          href: other-excel-driver-programming-details.md
+          items:
+            - name: SQLBindParameter (controlador de Excel)
+              href: sqlbindparameter-excel-driver.md
+            - name: SQLColAttributes (controlador de Excel)
+              href: sqlcolattributes-excel-driver.md
+            - name: SQLColumns (controlador de Excel)
+              href: sqlcolumns-excel-driver.md
+            - name: ODBC Jet SQLConfigDataSource (controlador de Excel)
+              href: odbc-jet-sqlconfigdatasource-excel-driver.md
+            - name: SQLDriverConnect (controlador de Excel)
+              href: sqldriverconnect-excel-driver.md
+            - name: SQLGetInfo (controlador de Excel)
+              href: sqlgetinfo-excel-driver.md
+            - name: SQLGetTypeInfo (controlador de Excel)
+              href: sqlgettypeinfo-excel-driver.md
+            - name: SQLSetConnectOption (controlador de Excel)
+              href: sqlsetconnectoption-excel-driver.md
+            - name: SQLStatistics (controlador de Excel)
+              href: sqlstatistics-excel-driver.md
+            - name: SQLTables (controlador de Excel)
+              href: sqltables-excel-driver.md
+            - name: SQLTransact (controlador de Excel)
+              href: sqltransact-excel-driver.md
+            - name: Estado de solo lectura (controlador de Excel)
+              href: read-only-status-excel-driver.md
+    - name: Consideraciones sobre la programación de controlador de Paradox
+      href: paradox-driver-programming-considerations.md
+      items:
+        - name: Opciones de configuración mediante programación para el controlador de Paradox
+          href: setting-options-programmatically-for-the-paradox-driver.md
+        - name: Tipos de datos de Paradox
+          href: paradox-data-types.md
+        - name: SQLGetInfo devuelve valores para Paradox
+          href: sqlgetinfo-returned-values-for-paradox.md
+        - name: Otros detalles de programación del controlador de Paradox
+          href: other-paradox-driver-programming-details.md
+          items:
+            - name: SQLColAttributes (controlador de Paradox)
+              href: sqlcolattributes-paradox-driver.md
+            - name: SQLColumns (controlador de Paradox)
+              href: sqlcolumns-paradox-driver.md
+            - name: SQLConfigDataSource (controlador de Paradox)
+              href: sqlconfigdatasource-paradox-driver.md
+            - name: SQLDriverConnect (controlador de Paradox)
+              href: sqldriverconnect-paradox-driver.md
+            - name: SQLGetInfo (controlador de Paradox)
+              href: sqlgetinfo-paradox-driver.md
+            - name: SQLGetTypeInfo (controlador de Paradox)
+              href: sqlgettypeinfo-paradox-driver.md
+            - name: SQLSetConnectOption (controlador de Paradox)
+              href: sqlsetconnectoption-paradox-driver.md
+            - name: SQLStatistics (controlador de Paradox)
+              href: sqlstatistics-paradox-driver.md
+            - name: SQLTables (controlador de Paradox)
+              href: sqltables-paradox-driver.md
+            - name: SQLTransact (controlador de Paradox)
+              href: sqltransact-paradox-driver.md
+            - name: CREAR el índice de Paradox
+              href: create-index-for-paradox.md
+            - name: Varios hstmts (controlador de Paradox)
+              href: multiple-hstmts-paradox-driver.md
+    - name: Consideraciones sobre la programación de controlador de dBASE
+      href: dbase-driver-programming-considerations.md
+      items:
+        - name: Establecer opciones mediante programación para el controlador dBASE
+          href: setting-options-programmatically-for-the-dbase-driver.md
+        - name: Tipos de datos de dBASE
+          href: dbase-data-types.md
+        - name: SQLGetInfo devuelve valores para dBASE
+          href: sqlgetinfo-returned-values-for-dbase.md
+        - name: Otros detalles de programación del controlador de dBASE
+          href: other-dbase-driver-programming-details.md
+          items:
+            - name: SQLColAttributes (dBASE controlador)
+              href: sqlcolattributes-dbase-driver.md
+            - name: SQLColumns (dBASE controlador)
+              href: sqlcolumns-dbase-driver.md
+            - name: SQLConfigDataSource (dBASE controlador)
+              href: sqlconfigdatasource-dbase-driver.md
+            - name: SQLDriverConnect (dBASE controlador)
+              href: sqldriverconnect-dbase-driver.md
+            - name: SQLGetInfo (dBASE controlador)
+              href: sqlgetinfo-dbase-driver.md
+            - name: SQLGetTypeInfo (dBASE controlador)
+              href: sqlgettypeinfo-dbase-driver.md
+            - name: SQLSetConnectOption (dBASE controlador)
+              href: sqlsetconnectoption-dbase-driver.md
+            - name: SQLStatistics (dBASE controlador)
+              href: sqlstatistics-dbase-driver.md
+            - name: SQLTables (dBASE controlador)
+              href: sqltables-dbase-driver.md
+            - name: SQLTransact (dBASE controlador)
+              href: sqltransact-dbase-driver.md
+            - name: Índices de dBASE
+              href: dbase-indexes.md
+    - name: Consideraciones sobre la programación de controlador de archivo de texto
+      href: text-file-driver-programming-considerations.md
+      items:
+        - name: Establecer opciones mediante programación para el controlador de archivo de texto
+          href: setting-options-programmatically-for-the-text-file-driver.md
+        - name: Tipos de datos de archivo de texto
+          href: text-file-data-types.md
+        - name: SQLGetInfo devuelve valores para los archivos de texto
+          href: sqlgetinfo-returned-values-for-text-files.md
+        - name: Otros detalles de programación del controlador de archivo de texto
+          href: other-text-file-driver-programming-details.md
+          items:
+            - name: Definir el formato de texto (controlador de archivo de texto)
+              href: defining-text-format-text-file-driver.md
+            - name: Esquema (controlador de archivo de texto)
+              href: schema-text-file-driver.md
+            - name: Archivo Schema.ini (controlador de archivo de texto)
+              href: schema-ini-file-text-file-driver.md
+            - name: Formato de archivo de texto (controlador de archivo de texto)
+              href: text-file-format-text-file-driver.md
+            - name: SQLColAttributes (controlador de archivo de texto)
+              href: sqlcolattributes-text-file-driver.md
+            - name: SQLColumns (controlador de archivo de texto)
+              href: sqlcolumns-text-file-driver.md
+            - name: SQLConfigDataSource (controlador de archivo de texto)
+              href: sqlconfigdatasource-text-file-driver.md
+            - name: SQLDriverConnect (controlador de archivo de texto)
+              href: sqldriverconnect-text-file-driver.md
+            - name: SQLGetInfo (controlador de archivo de texto)
+              href: sqlgetinfo-text-file-driver.md
+            - name: SQLGetTypeInfo (controlador de archivo de texto)
+              href: sqlgettypeinfo-text-file-driver.md
+            - name: SQLSetConnectOption (controlador de archivo de texto)
+              href: sqlsetconnectoption-text-file-driver.md
+            - name: SQLStatistics (controlador de archivo de texto)
+              href: sqlstatistics-text-file-driver.md
+            - name: SQLTables (controlador de archivo de texto)
+              href: sqltables-text-file-driver.md
+            - name: SQLTransact (controlador de archivo de texto)
+              href: sqltransact-text-file-driver.md
+            - name: Crear y abrir tablas (controlador de archivo de texto)
+              href: creating-and-opening-tables-text-file-driver.md
+            - name: Estado de solo lectura (controlador de archivo de texto)
+              href: read-only-status-text-file-driver.md
+    - name: Gramática de SQL de ODBC compatibles adicionales
+      href: additional-supported-odbc-sql-grammar.md
+      items:
+        - name: Instrucción ALTER TABLE
+          href: alter-table-statement.md
+        - name: Nombres de correlación
+          href: correlation-names.md
+        - name: Invocación del procedimiento
+          href: procedure-invocation.md
+        - name: ENTRE el predicado
+          href: between-predicate.md
+        - name: Instrucción CREATE INDEX
+          href: create-index-statement.md
+        - name: Aritmética de fecha
+          href: date-arithmetic.md
+        - name: 'Jet: Fecha, hora y marca de tiempo literales'
+          href: jet-date-time-and-timestamp-literals.md
+        - name: Instrucción DROP INDEX
+          href: drop-index-statement.md
+        - name: Archivo de texto de ancho fijo
+          href: fixed-width-text-file.md
+        - name: GROUP BY-lista de expresiones
+          href: group-by-expression-list.md
+        - name: ORDER BY-lista de expresiones
+          href: order-by-expression-list.md
+        - name: ORDER BY con GROUP BY
+          href: order-by-with-group-by.md
+        - name: 'Jet: Combinaciones externas'
+          href: jet-outer-joins.md
+        - name: Funciones escalares
+          href: scalar-functions.md
+        - name: Nombres de tabla
+          href: table-names.md
+    - name: Limitaciones
+      href: limitations.md
+      items:
+        - name: Limitaciones de la función de agregado
+          href: aggregate-function-limitations.md
+        - name: Limitaciones de nombre de columna
+          href: column-name-limitations.md
+        - name: Limitaciones del tipo de datos
+          href: data-type-limitations.md
+        - name: Limitaciones de aritmética de fecha
+          href: date-arithmetic-limitations.md
+        - name: Limitaciones de identificadores
+          href: identifiers-limitations.md
+        - name: Limitaciones del nombre de índice
+          href: index-name-limitations.md
+        - name: Limitaciones de la consulta con parámetros
+          href: parameterized-query-limitations.md
+        - name: Limitaciones de la palabra reservada
+          href: reserved-word-limitations.md
+        - name: Limitaciones de la función escalar
+          href: scalar-function-limitations.md
+        - name: Limitaciones de las funciones de conjunto
+          href: set-functions-limitations.md
+        - name: Limitaciones de ordenación
+          href: sorting-limitations.md
+        - name: Limitaciones de cadena
+          href: string-limitations.md
+        - name: Limitaciones de nombre de tabla
+          href: table-name-limitations.md
+        - name: Tabla hace referencia a limitaciones
+          href: table-references-limitations.md
+        - name: Limitaciones de vistas
+          href: views-limitations.md
+        - name: Limitaciones de declaración de tabla ALTER
+          href: alter-table-statement-limitations.md
+        - name: Y las limitaciones de predicado
+          href: and-predicate-limitations.md
+        - name: Limitaciones de la instrucción de llamada
+          href: call-statement-limitations.md
+        - name: CONVERTIR las limitaciones de la función
+          href: convert-function-limitations.md
+        - name: CREAR las limitaciones de la instrucción de índice
+          href: create-index-statement-limitations.md
+        - name: Crear tabla instrucción limitaciones
+          href: create-table-statement-limitations.md
+          items:
+            - name: ELIMINAR las limitaciones de instrucción
+              href: delete-statement-limitations.md
+        - name: Limitaciones de la palabra clave DISTINCT
+          href: distinct-keyword-limitations.md
+        - name: QUITAR las limitaciones de la instrucción de índice
+          href: drop-index-statement-limitations.md
+        - name: QUITAR las limitaciones de declaración de tabla
+          href: drop-table-statement-limitations.md
+        - name: DE las limitaciones de la cláusula
+          href: from-clause-limitations.md
+        - name: TIENE limitaciones de cláusula
+          href: having-clause-limitations.md
+        - name: Limitaciones de la instrucción de INSERCIÓN
+          href: insert-statement-limitations.md
+        - name: Al igual que las limitaciones de predicado
+          href: like-predicate-limitations.md
+        - name: Limitaciones no NULL
+          href: not-null-limitations.md
+        - name: ORDEN por cláusula limitaciones
+          href: order-by-clause-limitations.md
+        - name: Seleccione diferentes limitaciones
+          href: select-distinct-limitations.md
+        - name: Limitaciones de la instrucción SELECT
+          href: select-statement-limitations.md
+        - name: Limitaciones de la instrucción de actualización
+          href: update-statement-limitations.md
+        - name: DONDE cláusula limitaciones
+          href: where-clause-limitations.md
+        - name: DONDE actual de las limitaciones de la cláusula
+          href: where-current-of-clause-limitations.md
+    - name: Errores de ODBC
+      href: odbc-errors.md
+      items:
+        - name: Error nativo
+          href: native-error.md
+        - name: SQLSTATE
+          href: sqlstate.md
+        - name: Mensajes de Error de Jet de ODBC
+          href: odbc-jet-error-messages.md
+        - name: Errores aritméticos
+          href: arithmetic-errors.md
+    - name: Funciones de la API de ODBC compatibles
+      href: supported-odbc-api-functions.md
+      items:
+        - name: SQLGetCursorName (controladores de escritorio de la base de datos)
+          href: sqlgetcursorname-desktop-database-drivers.md
+        - name: SQLGetData (controladores de escritorio de la base de datos)
+          href: sqlgetdata-desktop-database-drivers.md
+        - name: SQLGetStmtOption (controladores de escritorio de la base de datos)
+          href: sqlgetstmtoption-desktop-database-drivers.md
+        - name: SQLMoreResults (controladores de escritorio de la base de datos)
+          href: sqlmoreresults-desktop-database-drivers.md
+        - name: SQLPrepare (controladores de escritorio de la base de datos)
+          href: sqlprepare-desktop-database-drivers.md
+        - name: SQLProcedures (controladores de escritorio de la base de datos)
+          href: sqlprocedures-desktop-database-drivers.md
+        - name: SQLSetCursorName (controladores de escritorio de la base de datos)
+          href: sqlsetcursorname-desktop-database-drivers.md
+        - name: SQLSetPos (controladores de escritorio de la base de datos)
+          href: sqlsetpos-desktop-database-drivers.md
+        - name: SQLSetScrollOptions (controladores de escritorio de la base de datos)
+          href: sqlsetscrolloptions-desktop-database-drivers.md
+        - name: SQLSetStmtOption (controladores de escritorio de la base de datos)
+          href: sqlsetstmtoption-desktop-database-drivers.md
+        - name: SQLSpecialColumns (controladores de escritorio de la base de datos)
+          href: sqlspecialcolumns-desktop-database-drivers.md
+- name: Controlador ODBC para Oracle
+  href: odbc-driver-for-oracle.md
+  items:
+    - name: El controlador ODBC para Oracle usuario ' guía
+      href: odbc-driver-for-oracle-user-s-guide.md
+      items:
+        - name: Esquema de la versión de controlador
+          href: driver-version-scheme.md
+        - name: Instalar el Software (ODBC)
+          href: installing-the-software-odbc.md
+        - name: Revisiones de Software de Oracle
+          href: oracle-software-patches.md
+        - name: Agregar y modificar orígenes de datos mediante el programa de instalación
+          href: adding-and-modifying-data-sources-using-setup.md
+        - name: Probar la conexión de ODBC
+          href: testing-the-odbc-connection.md
+        - name: Configurar el controlador ODBC para Oracle
+          href: configuring-the-odbc-driver-for-oracle.md
+        - name: Conectarse a un origen de datos (controlador ODBC para Oracle)
+          href: connecting-to-a-data-source-odbc-driver-for-oracle.md
+        - name: Determinar instalado componentes de Oracle
+          href: determining-installed-oracle-components.md
+        - name: Establecer el formato de fecha en conexión
+          href: setting-the-date-format-on-connection.md
+    - name: El controlador ODBC para Oracle programador ' s referencia
+      href: odbc-driver-for-oracle-programmer-s-reference.md
+      items:
+        - name: Atributos y el formato de cadena de conexión
+          href: connection-string-format-and-attributes.md
+        - name: Opciones de conexión
+          href: connect-options.md
+        - name: Opciones de la instrucción
+          href: statement-options.md
+        - name: Tipo de cursor y combinaciones de simultaneidad
+          href: cursor-type-and-concurrency-combinations.md
+        - name: Uso de servicios de componentes de Microsoft
+          href: using-microsoft-component-services.md
+        - name: Con servicios de Microsoft Internet Information Server
+          href: using-microsoft-internet-information-services.md
+        - name: Mediante la autenticación de sistema operativo
+          href: using-operating-system-authentication.md
+        - name: Utilizando SQLConfigDatasource con el controlador ODBC para Oracle
+          href: using-sqlconfigdatasource-with-the-odbc-driver-for-oracle.md
+        - name: Limitaciones del uso de los cursores controlados por conjunto de claves
+          href: limitations-of-using-keyset-driven-cursors.md
+        - name: Procedimientos almacenados (controlador ODBC para Oracle)
+          href: stored-procedures-odbc-driver-for-oracle.md
+          items:
+            - name: Limitaciones de parámetro de procedimiento almacenado
+              href: stored-procedure-parameter-limitations.md
+            - name: Usar sinónimos con procedimientos almacenados
+              href: using-synonyms-with-stored-procedures.md
+            - name: Revocación y conceder derechos al usar procedimientos almacenados
+              href: revoking-and-granting-rights-when-using-stored-procedures.md
+            - name: Devolver los parámetros de matriz de los procedimientos almacenados
+              href: returning-array-parameters-from-stored-procedures.md
+        - name: Mensajes de error (controlador ODBC para Oracle)
+          href: error-messages-odbc-driver-for-oracle.md
+          items:
+            - name: Mensajes devueltos por el controlador ODBC para Oracle
+              href: messages-returned-by-the-odbc-driver-for-oracle.md
+        - name: Controlador ODBC para Oracle niveles
+          href: odbc-driver-for-oracle-conformance-levels.md
+          items:
+            - name: Nivel de conformidad con la API (controlador ODBC para Oracle)
+              href: api-conformance-level-odbc-driver-for-oracle.md
+            - name: Opciones admitidas (controlador ODBC para Oracle)
+              href: supported-options-odbc-driver-for-oracle.md
+            - name: Niveles de compatibilidad de SQL (controlador ODBC para Oracle)
+              href: sql-conformance-levels-odbc-driver-for-oracle.md
+        - name: Funciones de la API (controlador ODBC para Oracle)
+          href: api-functions-odbc-driver-for-oracle.md
+          items:
+            - name: Notas de seguridad para subprocesos en las funciones de API (controlador ODBC para Oracle)
+              href: thread-safety-notes-on-api-functions-odbc-driver-for-oracle.md
+            - name: Funciones de API de nivel de núcleo (controlador ODBC para Oracle)
+              href: core-level-api-functions-odbc-driver-for-oracle.md
+            - name: Funciones de API de nivel 1 (controlador ODBC para Oracle)
+              href: level-1-api-functions-odbc-driver-for-oracle.md
+            - name: Funciones de API de nivel 2 (controlador ODBC para Oracle)
+              href: level-2-api-functions-odbc-driver-for-oracle.md
+        - name: Tipos de datos admitidos (controlador ODBC para Oracle)
+          href: supported-data-types-odbc-driver-for-oracle.md
+        - name: Asignar tipos de datos (controlador ODBC para Oracle)
+          href: mapping-data-types-odbc-driver-for-oracle.md
+        - name: Tamaño de la columna VARCHAR (controlador ODBC para Oracle)
+          href: varchar-column-size-odbc-driver-for-oracle.md
+- name: Controlador ODBC de Visual FoxPro
+  href: visual-foxpro-odbc-driver.md
+  items:
+    - name: Información general de la arquitectura de controlador
+      href: driver-architecture-overview.md
+    - name: Terminología de Visual FoxPro
+      href: visual-foxpro-terminology.md
+    - name: Instalación y configuración
+      href: installing-and-configuring.md
+      items:
+        - name: Requisitos del sistema (controlador ODBC de Visual FoxPro)
+          href: system-requirements-visual-foxpro-odbc-driver.md
+        - name: Versiones compatibles de FoxPro
+          href: supported-versions-of-foxpro.md
+        - name: Cómo configurar el controlador ODBC de Visual FoxPro
+          href: setting-up-the-visual-foxpro-odbc-driver.md
+        - name: Cuadro de diálogo de configuración de Visual FoxPro ODBC
+          href: odbc-visual-foxpro-setup-dialog-box.md
+    - name: Con el controlador ODBC de Visual FoxPro
+      href: using-the-visual-foxpro-odbc-driver.md
+      items:
+        - name: Agregar un origen de datos de Visual FoxPro
+          href: adding-a-visual-foxpro-data-source.md
+        - name: Modificar un origen de datos de Visual FoxPro
+          href: modifying-a-visual-foxpro-data-source.md
+        - name: Eliminar un origen de datos de Visual FoxPro
+          href: deleting-a-visual-foxpro-data-source.md
+        - name: Conectarse a un origen de datos de Visual FoxPro
+          href: connecting-to-a-visual-foxpro-data-source.md
+        - name: Utilizar cadenas de conexión
+          href: using-connection-strings.md
+        - name: Utiliza el controlador ODBC de Visual FoxPro con la aplicación de Visual Basic
+          href: using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md
+        - name: Usar el controlador ODBC de Visual FoxPro con su aplicación C o Visual C++
+          href: using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md
+        - name: Acceso a datos de Visual FoxPro desde Microsoft Office
+          href: accessing-visual-foxpro-data-from-microsoft-office.md
+          items:
+            - name: Consultar y actualizar datos de Visual FoxPro desde Microsoft Access
+              href: querying-and-updating-visual-foxpro-data-from-microsoft-access.md
+            - name: Importar datos de Visual FoxPro en Microsoft Access
+              href: importing-visual-foxpro-data-into-microsoft-access.md
+            - name: Obtiene acceso a un origen de datos de Visual FoxPro desde Microsoft Excel
+              href: accessing-a-visual-foxpro-data-source-from-microsoft-excel.md
+            - name: Importar datos a Microsoft Excel desde una base de datos de Visual FoxPro
+              href: importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md
+            - name: Crear etiquetas postales en Microsoft Word usando datos de Visual FoxPro
+              href: creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data.md
+    - name: Programador de Visual FoxPro ODBC Driver ' s referencia
+      href: visual-foxpro-odbc-driver-programmer-s-reference.md
+      items:
+        - name: Compatibilidad con marcadores (controlador ODBC de Visual FoxPro)
+          href: bookmark-support-visual-foxpro-odbc-driver.md
+        - name: Modelo de simultaneidad compatibles (el controlador ODBC de Visual FoxPro)
+          href: supported-concurrency-model-visual-foxpro-odbc-driver.md
+        - name: Modelo de Cursor compatibles (el controlador ODBC de Visual FoxPro)
+          href: supported-cursor-model-visual-foxpro-odbc-driver.md
+        - name: Tipos de datos admitidos (controlador ODBC de Visual FoxPro)
+          href: supported-data-types-visual-foxpro-odbc-driver.md
+        - name: Compatibilidad internacional (controlador ODBC de Visual FoxPro)
+          href: international-support-visual-foxpro-odbc-driver.md
+        - name: 'Compatibilidad con las reglas, desencadenadores, valores predeterminados y los procedimientos almacenados (controlador ODBC de Visual FoxPro)'
+          href: support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md
+        - name: Gramática de SQL de ODBC compatibles (el controlador ODBC de Visual FoxPro)
+          href: supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md
+        - name: Entradas del registro (el controlador ODBC de Visual FoxPro)
+          href: registry-entries-visual-foxpro-odbc-driver.md
+        - name: Admite las funciones escalares (controlador ODBC de Visual FoxPro)
+          href: supported-scalar-functions-visual-foxpro-odbc-driver.md
+          items:
+            - name: Funciones de cadena (el controlador ODBC de Visual FoxPro)
+              href: string-functions-visual-foxpro-odbc-driver.md
+            - name: Funciones numéricas (controlador ODBC de Visual FoxPro)
+              href: numeric-functions-visual-foxpro-odbc-driver.md
+            - name: Hora y funciones de fecha (el controlador ODBC de Visual FoxPro)
+              href: time-and-date-functions-visual-foxpro-odbc-driver.md
+        - name: CONJUNTO admitido de comandos (controlador ODBC de Visual FoxPro)
+          href: supported-set-commands-visual-foxpro-odbc-driver.md
+        - name: Compatibilidad con subprocesos (el controlador ODBC de Visual FoxPro)
+          href: thread-support-visual-foxpro-odbc-driver.md
+        - name: No compatible de Visual FoxPro comandos y funciones (controlador ODBC de Visual FoxPro)
+          href: unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md
+        - name: Mensajes de error (el controlador ODBC de Visual FoxPro)
+          href: error-messages-visual-foxpro-odbc-driver.md
+          items:
+            - name: Mensajes de Error nativo de controlador ODBC de Visual FoxPro
+              href: visual-foxpro-odbc-driver-native-error-messages.md
+            - name: Códigos de Error ODBC (controlador ODBC de Visual FoxPro)
+              href: odbc-error-codes-visual-foxpro-odbc-driver.md
+        - name: Solución de problemas (controlador ODBC de Visual FoxPro)
+          href: troubleshooting-visual-foxpro-odbc-driver.md
+    - name: Funciones ODBC y el controlador ODBC de Visual FoxPro
+      href: odbc-functions-and-the-visual-foxpro-odbc-driver.md
+      items:
+        - name: SQLAllocConnect (controlador ODBC de Visual FoxPro)
+          href: sqlallocconnect-visual-foxpro-odbc-driver.md
+        - name: SQLAllocEnv (controlador ODBC de Visual FoxPro)
+          href: sqlallocenv-visual-foxpro-odbc-driver.md
+        - name: SQLAllocStmt (controlador ODBC de Visual FoxPro)
+          href: sqlallocstmt-visual-foxpro-odbc-driver.md
+        - name: SQLBindCol (controlador ODBC de Visual FoxPro)
+          href: sqlbindcol-visual-foxpro-odbc-driver.md
+        - name: SQLBindParameter (controlador ODBC de Visual FoxPro)
+          href: sqlbindparameter-visual-foxpro-odbc-driver.md
+        - name: SQLCancel (controlador ODBC de Visual FoxPro)
+          href: sqlcancel-visual-foxpro-odbc-driver.md
+        - name: SQLColAttributes (controlador ODBC de Visual FoxPro)
+          href: sqlcolattributes-visual-foxpro-odbc-driver.md
+        - name: SQLColumns (controlador ODBC de Visual FoxPro)
+          href: sqlcolumns-visual-foxpro-odbc-driver.md
+        - name: SQLConnect (controlador ODBC de Visual FoxPro)
+          href: sqlconnect-visual-foxpro-odbc-driver.md
+        - name: SQLDataSources (controlador ODBC de Visual FoxPro)
+          href: sqldatasources-visual-foxpro-odbc-driver.md
+        - name: SQLDescribeCol (controlador ODBC de Visual FoxPro)
+          href: sqldescribecol-visual-foxpro-odbc-driver.md
+        - name: SQLDisconnect (controlador ODBC de Visual FoxPro)
+          href: sqldisconnect-visual-foxpro-odbc-driver.md
+        - name: SQLDriverConnect (controlador ODBC de Visual FoxPro)
+          href: sqldriverconnect-visual-foxpro-odbc-driver.md
+        - name: SQLDrivers (controlador ODBC de Visual FoxPro)
+          href: sqldrivers-visual-foxpro-odbc-driver.md
+        - name: SQLError (controlador ODBC de Visual FoxPro)
+          href: sqlerror-visual-foxpro-odbc-driver.md
+        - name: SQLExecDirect (controlador ODBC de Visual FoxPro)
+          href: sqlexecdirect-visual-foxpro-odbc-driver.md
+        - name: SQLExecute (controlador ODBC de Visual FoxPro)
+          href: sqlexecute-visual-foxpro-odbc-driver.md
+        - name: SQLExtendedFetch (controlador ODBC de Visual FoxPro)
+          href: sqlextendedfetch-visual-foxpro-odbc-driver.md
+        - name: SQLFetch (controlador ODBC de Visual FoxPro)
+          href: sqlfetch-visual-foxpro-odbc-driver.md
+        - name: SQLFreeConnect (controlador ODBC de Visual FoxPro)
+          href: sqlfreeconnect-visual-foxpro-odbc-driver.md
+        - name: SQLFreeEnv (controlador ODBC de Visual FoxPro)
+          href: sqlfreeenv-visual-foxpro-odbc-driver.md
+        - name: SQLFreeStmt (controlador ODBC de Visual FoxPro)
+          href: sqlfreestmt-visual-foxpro-odbc-driver.md
+        - name: SQLGetConnectOption (controlador ODBC de Visual FoxPro)
+          href: sqlgetconnectoption-visual-foxpro-odbc-driver.md
+        - name: SQLGetCursorName (controlador ODBC de Visual FoxPro)
+          href: sqlgetcursorname-visual-foxpro-odbc-driver.md
+        - name: SQLGetData (controlador ODBC de Visual FoxPro)
+          href: sqlgetdata-visual-foxpro-odbc-driver.md
+        - name: SQLGetFunctions (controlador ODBC de Visual FoxPro)
+          href: sqlgetfunctions-visual-foxpro-odbc-driver.md
+        - name: SQLGetInfo (controlador ODBC de Visual FoxPro)
+          href: sqlgetinfo-visual-foxpro-odbc-driver.md
+        - name: SQLGetStmtOption (controlador ODBC de Visual FoxPro)
+          href: sqlgetstmtoption-visual-foxpro-odbc-driver.md
+        - name: SQLGetTypeInfo (controlador ODBC de Visual FoxPro)
+          href: sqlgettypeinfo-visual-foxpro-odbc-driver.md
+        - name: SQLMoreResults (controlador ODBC de Visual FoxPro)
+          href: sqlmoreresults-visual-foxpro-odbc-driver.md
+        - name: SQLNumParams (controlador ODBC de Visual FoxPro)
+          href: sqlnumparams-visual-foxpro-odbc-driver.md
+        - name: SQLNumResultCols (controlador ODBC de Visual FoxPro)
+          href: sqlnumresultcols-visual-foxpro-odbc-driver.md
+        - name: SQLParamData (controlador ODBC de Visual FoxPro)
+          href: sqlparamdata-visual-foxpro-odbc-driver.md
+        - name: SQLParamOptions (controlador ODBC de Visual FoxPro)
+          href: sqlparamoptions-visual-foxpro-odbc-driver.md
+        - name: SQLPrepare (controlador ODBC de Visual FoxPro)
+          href: sqlprepare-visual-foxpro-odbc-driver.md
+        - name: SQLPrimaryKeys (controlador ODBC de Visual FoxPro)
+          href: sqlprimarykeys-visual-foxpro-odbc-driver.md
+        - name: SQLPutData (controlador ODBC de Visual FoxPro)
+          href: sqlputdata-visual-foxpro-odbc-driver.md
+        - name: Recuento de filas de SQL (el controlador ODBC de Visual FoxPro)
+          href: sql-row-count-visual-foxpro-odbc-driver.md
+        - name: SQLSetConnectOption (controlador ODBC de Visual FoxPro)
+          href: sqlsetconnectoption-visual-foxpro-odbc-driver.md
+        - name: SQLSetCursorName (controlador ODBC de Visual FoxPro)
+          href: sqlsetcursorname-visual-foxpro-odbc-driver.md
+        - name: SQLSetPos (controlador ODBC de Visual FoxPro)
+          href: sqlsetpos-visual-foxpro-odbc-driver.md
+        - name: SQLSetScrollOptions (controlador ODBC de Visual FoxPro)
+          href: sqlsetscrolloptions-visual-foxpro-odbc-driver.md
+        - name: SQLSetStmtOption (controlador ODBC de Visual FoxPro)
+          href: sqlsetstmtoption-visual-foxpro-odbc-driver.md
+        - name: SQLSpecialColumns (controlador ODBC de Visual FoxPro)
+          href: sqlspecialcolumns-visual-foxpro-odbc-driver.md
+        - name: SQLStatistics (controlador ODBC de Visual FoxPro)
+          href: sqlstatistics-visual-foxpro-odbc-driver.md
+        - name: SQLTables (controlador ODBC de Visual FoxPro)
+          href: sqltables-visual-foxpro-odbc-driver.md
+        - name: SQLTransact (controlador ODBC de Visual FoxPro)
+          href: sqltransact-visual-foxpro-odbc-driver.md
+    - name: Referencia del lenguaje Visual FoxPro
+      href: visual-foxpro-language-reference.md
+      items:
+        - name: Modificar tabla - comando SQL
+          href: alter-table-sql-command.md
+        - name: Crear tabla - comando SQL
+          href: create-table-sql-command.md
+        - name: 'ELIMINAR, comando SQL'
+          href: delete-sql-command.md
+        - name: 'Eliminar etiqueta, comando'
+          href: delete-tag-command.md
+        - name: Comando DROP TABLE
+          href: drop-table-command.md
+        - name: Comando de índice
+          href: index-command.md
+        - name: 'Insertar: comando SQL'
+          href: insert-sql-command.md
+        - name: Seleccione - comando SQL
+          href: select-sql-command.md
+        - name: Comando de ANSI SET
+          href: set-ansi-command.md
+        - name: Comando BLOCKSIZE Set
+          href: set-blocksize-command.md
+        - name: Comando COLLATE Set
+          href: set-collate-command.md
+        - name: Comando de eliminaciones de Set
+          href: set-deleted-command.md
+        - name: Comando exacto de conjunto
+          href: set-exact-command.md
+        - name: Comando exclusivo de Set
+          href: set-exclusive-command.md
+        - name: Comando NULL del conjunto
+          href: set-null-command.md
+        - name: Comando de ruta de acceso set
+          href: set-path-command.md
+        - name: CONJUNTO de comandos de volver a procesar
+          href: set-reprocess-command.md
+        - name: CONJUNTO único comando
+          href: set-unique-command.md
+        - name: Comando de SQL de actualización
+          href: update-sql-command.md
+        - name: Tipos de datos de campo de Visual FoxPro
+          href: visual-foxpro-field-data-types.md

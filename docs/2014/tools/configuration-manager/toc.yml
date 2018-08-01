@@ -1,0 +1,146 @@
+- name: Ayuda del Administrador de configuración de SQL Server
+  href: sql-server-configuration-manager-help.md
+- name: Servicios de SQL Server
+  href: sql-server-services.md
+- name: Analysis Server <server> (Administrador de configuración de SQL Server)
+  href: analysis-server-server-sql-server-configuration-manager.md
+  items:
+    - name: Propiedades de Analysis Server (pestaña Iniciar sesión)
+      href: analysis-server-properties-log-on-tab.md
+    - name: Propiedades de Analysis Server (pestaña Servicio)
+      href: analysis-server-properties-service-tab.md
+    - name: Propiedades de Analysis Server (pestaña Avanzadas)
+      href: analysis-server-properties-advanced-tab.md
+- name: Notification Services (Administrador de configuración de SQL Server)
+  href: notification-services-sql-server-configuration-manager.md
+  items:
+    - name: Propiedades de NS$<service name> (pestaña Iniciar sesión)
+      href: ns-service-name-properties-log-on-tab.md
+    - name: Propiedades de NS$<service name> (pestaña Servicio)
+      href: ns-service-name-properties-service-tab.md
+    - name: Propiedades de NS$<service name> (pestaña Avanzadas)
+      href: ns-service-name-properties-advanced-tab.md
+- name: Servidor de informes <server> (Administrador de configuración de SQL Server)
+  href: report-server-server-sql-server-configuration-manager.md
+  items:
+    - name: Propiedades de Servidor de informes (pestaña Iniciar sesión)
+      href: report-server-properties-log-on-tab.md
+    - name: Propiedades de Servidor de informes (pestaña Servicio)
+      href: report-server-properties-service-tab.md
+    - name: Propiedades de Servidor de informes (pestaña Avanzadas)
+      href: report-server-properties-advanced-tab.md
+- name: Agente SQL Server <server> (Administrador de configuración de SQL Server)
+  href: sql-server-agent-server-sql-server-configuration-manager.md
+  items:
+    - name: Propiedades de Agente SQL Server (pestaña Iniciar sesión)
+      href: sql-server-agent-properties-log-on-tab.md
+    - name: Propiedades de Agente SQL Server (pestaña Avanzadas)
+      href: sql-server-agent-properties-advanced-tab.md
+    - name: Propiedades de Agente SQL Server (pestaña Servicio)
+      href: sql-server-agent-properties-service-tab.md
+- name: SQL Server Browser (Administrador de configuración de SQL Server)
+  href: sql-server-browser-sql-server-configuration-manager.md
+  items:
+    - name: Propiedades de SQL Server Browser (pestaña Iniciar sesión)
+      href: sql-server-browser-properties-log-on-tab.md
+    - name: Propiedades de Explorador de SQL (pestaña Servicio)
+      href: sql-server-browser-properties-service-tab.md
+    - name: Propiedades de SQL Server Browser (pestaña Avanzadas)
+      href: sql-server-browser-properties-advanced-tab.md
+- name: <server> de SQL Server (Administrador de configuración de SQL Server)
+  href: sql-server-server-sql-server-configuration-manager.md
+  items:
+    - name: Propiedades de SQL Server (pestaña Iniciar sesión)
+      href: sql-server-properties-log-on-tab.md
+    - name: Propiedades de SQL Server (pestaña Servicio)
+      href: sql-server-properties-service-tab.md
+    - name: Propiedades de SQL Server (pestaña FILESTREAM)
+      href: sql-server-properties-filestream-tab.md
+    - name: Propiedades de SQL Server (pestaña Alta disponibilidad de AlwaysOn)
+      href: sql-server-properties-alwayson-high-availability-tab.md
+    - name: Propiedades de SQL Server (pestaña Parámetros de inicio)
+      href: sql-server-properties-startup-parameters-tab.md
+    - name: Propiedades de SQL Server (pestaña Avanzadas)
+      href: sql-server-properties-advanced-tab.md
+- name: SQL Server Integration Services 10.0 (Administrador de configuración de SQL Server)
+  href: sql-server-integration-services-10-0-sql-server-configuration-manager.md
+  items:
+    - name: Propiedades de SQL Server Integration Services (pestaña Iniciar sesión)
+      href: sql-server-integration-services-properties-log-on-tab.md
+    - name: Propiedades de SQL Server Integration Services (pestaña Servicio)
+      href: sql-server-integration-services-properties-service-tab.md
+    - name: Propiedades de SQL Server Integration Services (pestaña Avanzadas)
+      href: sql-server-integration-services-properties-advanced-tab.md
+- name: Selector de demonio de filtro de texto completo de SQL (Administrador de configuración de SQL Server)
+  href: sql-full-text-filter-daemon-launcher-sql-server-configuration-manager.md
+  items:
+    - name: Selector del demonio de filtro de texto completo de SQL (pestaña Iniciar sesión)
+      href: sql-full-text-filter-daemon-launcher-log-on-tab.md
+    - name: Selector del demonio de filtro de texto completo de SQL (pestaña Servicio)
+      href: sql-full-text-filter-daemon-launcher-service-tab.md
+    - name: Selector del demonio de filtro de texto completo de SQL Server (Avanzado)
+      href: sql-full-text-filter-daemon-launcher-advanced.md
+- name: Servicio desconocido (pestaña Iniciar sesión)
+  href: unknown-service-log-on-tab.md
+- name: Configuración de red de SQL Server
+  href: sql-server-network-configuration.md
+  items:
+    - name: Protocolos de <server> (Administrador de configuración de SQL Server)
+      href: protocols-for-server-sql-server-configuration-manager.md
+    - name: Propiedades de Protocolos de MSSQLSERVER (pestaña Marcas)
+      href: protocols-for-mssqlserver-properties-flags-tab.md
+    - name: Propiedades de Protocolos de MSSQLSERVER (pestaña Certificado)
+      href: protocols-for-mssqlserver-properties-certificate-tab.md
+    - name: Propiedades de Protocolos de MSSQLSERVER (pestaña Opciones avanzadas)
+      href: protocols-for-mssqlserver-properties-advanced-tab.md
+- name: Propiedades de Memoria compartida
+  href: shared-memory-properties.md
+- name: Propiedades de Canalizaciones con nombre
+  href: named-pipes-properties.md
+- name: Propiedades de TCP/IP (pestaña Protocolos)
+  href: tcp-ip-properties-protocols-tab.md
+- name: Propiedades de TCP/IP (pestaña Direcciones IP)
+  href: tcp-ip-properties-ip-addresses-tab.md
+- name: Configuración de SQL Native Client 11.0
+  href: sql-native-client-11-0-configuration.md
+  items:
+    - name: Propiedades de Configuración de SQL Server Native Client (pestaña Marcas)
+      href: sql-server-native-client-configuration-properties-flags-tab.md
+    - name: Protocolos de cliente (Administrador de configuración de SQL Server)
+      href: client-protocols-sql-server-configuration-manager.md
+    - name: Propiedades de los protocolos de cliente (pestaña Ordenar)
+      href: client-protocols-properties-order-tab.md
+    - name: 'Protocolos de cliente: Propiedades de Memoria compartida (pestaña Protocolo)'
+      href: client-protocols-shared-memory-properties-protocol-tab.md
+    - name: Protocolos de cliente y Propiedades de TCP/IP (pestaña Protocolo)
+      href: client-protocols-tcp-and-ip-properties-protocol-tab.md
+    - name: 'Protocolos de cliente: Propiedades de Canalizaciones con nombre (pestaña Protocolo)'
+      href: client-protocols-named-pipes-properties-protocol-tab.md
+- name: Alias (Administrador de configuración de SQL Server)
+  href: aliases-sql-server-configuration-manager.md
+  items:
+    - name: Nuevo alias (pestaña Alias)
+      href: new-alias-alias-tab.md
+    - name: Propiedades de <Alias> (pestaña Alias)
+      href: alias-properties-alias-tab.md
+    - name: Crear una cadena de conexión válida con el protocolo de memoria compartida
+      href: creating-a-valid-connection-string-using-shared-memory-protocol.md
+    - name: Crear una cadena de conexión válida con TCP/IP
+      href: creating-a-valid-connection-string-using-tcp-ip.md
+    - name: Crear una cadena de conexión válida con canalizaciones con nombre
+      href: creating-a-valid-connection-string-using-named-pipes.md
+- name: servicio SQL Server Browser
+  href: sql-server-browser-service.md
+- name: Conectar utilizando IPv6
+  href: connecting-using-ipv6.md
+- name: Elegir un protocolo de red
+  href: choosing-a-network-protocol.md
+- name: Supervisar los registros de errores
+  href: monitoring-the-error-logs.md
+  items:
+    - name: Ver el registro de errores de SQL Server
+      href: viewing-the-sql-server-error-log.md
+    - name: Ver el registro de la aplicación Windows
+      href: viewing-the-windows-application-log.md
+- name: Acerca de los términos de licencia de SQL Server (SSCM)
+  href: about-the-sql-server-license-terms-sscm.md

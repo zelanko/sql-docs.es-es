@@ -1,0 +1,50 @@
+- name: Subclave ODBC
+  href: odbc-subkey.md
+- name: Configurar orígenes de datos
+  href: configuring-data-sources.md
+- name: DLL instalador
+  href: installer-dll.md
+- name: Instalar y configurar el software de ODBC
+  href: installing-and-configuring-the-odbc-software.md
+- name: Subclaves de la especificación del origen de datos
+  href: data-source-specification-subkeys.md
+- name: Entradas del registro para los componentes de ODBC
+  href: registry-entries-for-odbc-components.md
+- name: Referencia de los componentes de instalación y configuración
+  href: installation-and-configuration-components-reference.md
+- name: Instalar componentes de ODBC
+  href: installing-odbc-components.md
+- name: Subclaves de la especificación del controlador
+  href: driver-specification-subkeys.md
+- name: Archivos DLL de instalación del traductor
+  href: translator-setup-dlls.md
+- name: Programa de administración
+  href: administration-program.md
+- name: Subclave predeterminada
+  href: default-subkey.md
+- name: Subclave de controlador predeterminada
+  href: default-driver-subkey.md
+- name: Componentes de instalación
+  href: installation-components.md
+- name: Programa de instalación
+  href: setup-program.md
+- name: Archivos de encabezado de ODBC
+  href: odbc-header-files.md
+- name: Subclave de controladores de ODBC
+  href: odbc-drivers-subkey.md
+- name: Entradas del registro para los orígenes de datos
+  href: registry-entries-for-data-sources.md
+- name: Subclave de traductores de ODBC
+  href: odbc-translators-subkey.md
+- name: DLL de instalación del controlador
+  href: driver-setup-dll.md
+- name: Subclaves de la especificación del traductor
+  href: translator-specification-subkeys.md
+- name: Componentes de configuración
+  href: configuration-components.md
+- name: Subclave de orígenes de datos de ODBC
+  href: odbc-data-sources-subkey.md
+- name: Recuento de uso
+  href: usage-counting.md
+- name: Subclave de ODBC Core
+  href: odbc-core-subkey.md

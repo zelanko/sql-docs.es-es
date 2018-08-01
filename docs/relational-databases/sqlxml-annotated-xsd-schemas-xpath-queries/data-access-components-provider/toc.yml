@@ -1,0 +1,18 @@
+- name: 'Componentes de acceso a datos de SQLXML 4.0: proveedor SQLXMLOLEDB'
+  href: sqlxml-4-0-data-access-components-sqlxmloledb-provider.md
+- name: Aplicar una transformación XSL (proveedor SQLXMLOLEDB)
+  href: applying-an-xsl-transformation-sqlxmloledb-provider.md
+- name: Ejecutar consultas SQL (proveedor SQLXMLOLEDB)
+  href: executing-sql-queries-sqlxmloledb-provider.md
+- name: Ejecutar plantillas que contienen consultas SQL (proveedor SQLXMLOLEDB)
+  href: executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md
+- name: Ejecutar plantillas que contienen consultas XPath (Proveedor SQLXMLOLEDB)
+  href: executing-templates-that-contain-xpath-queries-sqlxmloledb-provider.md
+- name: Ejecutar consultas XPath (proveedor SQLXMLOLEDB)
+  href: executing-xpath-queries-sqlxmloledb-provider.md
+- name: Ejecutar consultas XPath con espacios de nombres (proveedor SQLXMLOLEDB)
+  href: executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md
+- name: Introducción al proveedor SQLXMLOLEDB (SQLXML 4.0)
+  href: introduction-to-the-sqlxmloledb-provider-sqlxml-4-0.md
+- name: Usar el proveedor SQLXMLOLEDB (SQLXML 4.0)
+  href: using-the-sqlxmloledb-provider-sqlxml-4-0.md

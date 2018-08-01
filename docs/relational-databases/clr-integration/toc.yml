@@ -1,0 +1,38 @@
+- name: Conceptos de programación en el ámbito de la integración de Common Language Runtime (CLR)
+  href: common-language-runtime-clr-integration-programming-concepts.md
+- name: Objetos de base de datos +
+  href: ../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md
+- name: Acceso a datos +
+  href: ../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md
+- name: Seguridad +
+  href: ../../relational-databases/clr-integration/security/clr-integration-code-access-security.md
+- name: Ensamblados
+  href: ../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md
+- name: 'Ensamblados: diseño'
+  href: assemblies-designing.md
+- name: 'Ensamblados: obtener información'
+  href: assemblies-getting-information.md
+- name: 'Ensamblados: implementación'
+  href: assemblies-implementing.md
+- name: 'Ensamblados: propiedades'
+  href: assemblies-properties.md
+- name: Ensamblados (motor de base de datos)
+  href: assemblies-database-engine.md
+- name: 'Integración CLR: habilitar'
+  href: clr-integration-enabling.md
+- name: 'Integración CLR: información general'
+  href: clr-integration-overview.md
+- name: 'Integración CLR: novedades'
+  href: clr-integration-what-s-new.md
+- name: 'Arquitectura de integración CLR: rendimiento'
+  href: clr-integration-architecture-performance.md
+- name: 'Arquitectura de integración CLR: entorno hospedado CLR'
+  href: clr-integration-architecture-clr-hosted-environment.md
+- name: Información general sobre integración de Common Language Runtime
+  href: common-language-runtime-integration-overview.md
+- name: Depurar objetos de bases de datos CLR
+  href: debugging-clr-database-objects.md
+- name: Implementar objetos de base de datos de CLR
+  href: deploying-clr-database-objects.md
+- name: Supervisar y solucionar problemas de objetos de base de datos administrados
+  href: monitoring-and-troubleshooting-managed-database-objects.md

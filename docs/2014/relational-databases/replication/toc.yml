@@ -1,0 +1,353 @@
+- name: REPLICATION
+  href: sql-server-replication.md
+  items:
+    - name: Novedades (Replicación)
+      href: what-s-new-replication.md
+    - name: Compatibilidad con versiones anteriores de replicación
+      href: replication-backward-compatibility.md
+    - name: Características que ya no se utilizan en la replicación de SQL Server
+      href: deprecated-features-in-sql-server-replication.md
+    - name: Últimos cambios en la replicación de SQL Server
+      href: breaking-changes-in-sql-server-replication.md
+- name: Características y tareas de replicación
+  href: replication-features-and-tasks.md
+  items:
+    - name: Tipos de replicación
+      href: types-of-replication.md
+    - name: Replicación de instantáneas
+      href: snapshot-replication.md
+    - name: Replicación transaccional +
+      href: transactional/transactional-replication.md
+    - name: Replicación de mezcla +
+      href: merge/merge-replication.md
+    - name: Replicación de bases de datos heterogéneas +
+      href: non-sql/heterogeneous-database-replication.md
+    - name: Replicación en suscriptores de tablas con optimización para memoria
+      href: replication-to-memory-optimized-table-subscribers.md
+    - name: Agentes de replicación +
+      href: agents/replication-agents.md
+    - name: Volver a publicar datos
+      href: republish-data.md
+    - name: Replicación por Internet
+      href: replication-over-the-internet.md
+      items:
+        - name: Publicar datos a través de Internet mediante VPN
+          href: publish-data-over-the-internet-using-vpn.md
+        - name: Sincronización web para la replicación de mezcla
+          href: web-synchronization-for-merge-replication.md
+        - name: Configurar sincronización web
+          href: configure-web-synchronization.md
+        - name: Topologies for Web Synchronization
+          href: topologies-for-web-synchronization.md
+        - name: Configurar IIS para la sincronización web
+          href: configure-iis-for-web-synchronization.md
+        - name: Configurar IIS 7 para la sincronización web
+          href: configure-iis-7-for-web-synchronization.md
+    - name: Seguridad y protección +
+      href: security/security-and-protection-replication.md
+    - name: Administración
+      href: administration/administration-replication.md
+    - name: 'Guía del programador: temas de procedimientos'
+      href: developer-s-guide-how-to-topics-replication.md
+      items:
+        - name: Guía del desarrollador (replicación) +
+          href: concepts/replication-developer-documentation.md
+    - name: Supervisión +
+      href: monitor/monitoring-replication-overview.md
+    - name: Publicar datos y objetos de base de datos +
+      href: publish/publish-data-and-database-objects.md
+- name: Referencia de errores y eventos +
+  href: errors-events/errors-events-replication.md
+- name: Referencia técnica (replicación)
+  href: technical-reference-replication.md
+- name: Referencia de propiedades
+  href: properties-reference-replication.md
+  items:
+    - name: Propiedades del distribuidor
+      href: distributor-properties.md
+      items:
+        - name: 'Propiedades del distribuidor, General'
+          href: distributor-properties-general.md
+        - name: 'Propiedades del distribuidor, Publicadores'
+          href: distributor-properties-publishers.md
+        - name: Propiedades de base de datos de distribución
+          href: distribution-database-properties.md
+    - name: Propiedades del publicador
+      href: publisher-properties.md
+      items:
+        - name: 'Propiedades del publicador: Distribuidor'
+          href: publisher-properties-distributor.md
+        - name: 'Propiedades del publicador (Publicador, General)'
+          href: publisher-properties-publisher-general.md
+        - name: 'Propiedades del publicador - Publicador, Bases de datos de publicaciones'
+          href: publisher-properties-publisher-publication-databases.md
+        - name: 'Propiedades del publicador - Publicador, Suscriptores'
+          href: publisher-properties-publisher-subscribers.md
+    - name: Propiedades del suscriptor
+      href: subscriber-properties.md
+    - name: 'Propiedades de la publicación: <Publication>'
+      href: publication-properties-publication.md
+      items:
+        - name: 'Propiedades de la publicación, General'
+          href: publication-properties-general.md
+        - name: 'Propiedades de la publicación, Artículos'
+          href: publication-properties-articles.md
+        - name: 'Propiedades de la publicación, Filtrar filas'
+          href: publication-properties-filter-rows.md
+        - name: 'Propiedades de la publicación, Instantánea'
+          href: publication-properties-snapshot.md
+        - name: 'Propiedades de la publicación, Instantánea de FTP e Internet'
+          href: publication-properties-ftp-snapshot-and-internet.md
+        - name: 'Propiedades de la publicación, Opciones de suscripción'
+          href: publication-properties-subscription-options.md
+        - name: 'Propiedades de la publicación, lista de acceso a la publicación'
+          href: publication-properties-publication-access-list.md
+        - name: 'Propiedades de la publicación, Seguridad del agente'
+          href: publication-properties-agent-security.md
+        - name: 'Propiedades de la publicación, Particiones de datos'
+          href: publication-properties-data-partitions.md
+    - name: 'Propiedades del artículo: <Article>'
+      href: article-properties-article.md
+    - name: 'Propiedades de la suscripción: <Subscription>'
+      href: subscription-properties-subscription.md
+      items:
+        - name: 'Propiedades de suscripción: suscriptor'
+          href: subscription-properties-subscriber.md
+        - name: 'Propiedades de la suscripción: publicador'
+          href: subscription-properties-publisher.md
+- name: Referencia de herramientas
+  href: tools-reference-replication.md
+  items:
+    - name: Monitor de replicación
+      href: replication-monitor.md
+      items:
+        - name: 'Monitor de replicación, página Principal'
+          href: replication-monitor-main-page.md
+        - name: Agregar publicador
+          href: add-publisher.md
+        - name: Configuración del distribuidor
+          href: distributor-settings.md
+        - name: 'Información de distribuidor, Publicaciones'
+          href: distributor-information-publications.md
+        - name: 'Información del distribuidor, Lista de supervisión de suscripciones (Publicación transaccional, SQL Server 2005 y versiones posteriores)'
+          href: distributor-info-subscription-watch-list-transaction-pub-sql-2005.md
+        - name: 'Información de distribuidor, Lista de supervisión de suscripciones (Publicación de combinación, SQL Server 2005 y posteriores)'
+          href: distributor-info-subscription-watch-list-merge-pub-sql-2005.md
+        - name: 'Información de distribuidor, Lista de supervisión de suscripciones (Publicación de instantáneas, SQL Server 2005 y posteriores)'
+          href: distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md
+        - name: 'Información del distribuidor, Agentes'
+          href: distributor-information-agents.md
+        - name: Configuración del publicador
+          href: publisher-settings.md
+        - name: 'Información del publicador, Publicaciones'
+          href: publisher-information-publications.md
+        - name: 'Información del publicador, Lista de supervisión de suscripciones (Publicación transaccional, SQL Server 2005 y posteriores)'
+          href: publisher-information-subscription-watch-list-transactional.md
+        - name: 'Información de publicador, Lista de supervisión de suscripciones (Publicación de combinación, SQL Server 2005 y posteriores)'
+          href: publisher-information-subscription-watch-list-merge-publication.md
+        - name: 'Información de publicador, Lista de supervisión de suscripciones (Publicación de instantáneas, SQL Server 2005 y posteriores)'
+          href: publisher-information-subscription-watch-list-snapshot.md
+        - name: 'Información de publicador, Agentes'
+          href: publisher-information-agents.md
+        - name: 'Información de publicación, Todas las suscripciones (Publicación transaccional)'
+          href: publication-information-all-subscriptions-transactional-publication.md
+        - name: 'Información de publicación, Todas las suscripciones (Publicación de combinación)'
+          href: publication-information-all-subscriptions-merge-publication.md
+        - name: 'Información de publicación, Todas las suscripciones (Publicación de instantáneas)'
+          href: publication-information-all-subscriptions-snapshot-publication.md
+        - name: 'Información de publicación, Advertencias (Publicación transaccional, SQL Server 2005 y posteriores)'
+          href: publication-information-warnings-transactional-publication.md
+        - name: 'Información de publicación, Advertencias (Publicación de combinación, SQL Server 2005 y posterior)'
+          href: publication-information-warnings-merge-publication-sql-server-2005-and-later.md
+        - name: 'Información de publicación, Advertencias (Publicación de instantáneas, SQL Server 2005 y posteriores)'
+          href: publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md
+        - name: 'Información de publicación, Agentes (Publicación transaccional)'
+          href: publication-information-agents-transactional-publication.md
+        - name: 'Información de la Publicación, Agentes (Publicación de combinación)'
+          href: publication-information-agents-merge-publication.md
+        - name: 'Información de publicación, Agentes (Publicación de instantánea)'
+          href: publication-information-agents-snapshot-publication.md
+        - name: 'Información de la publicación, Testigos de seguimiento (Publicación transaccional, SQL Server 2005 y posterior)'
+          href: publication-information-tracer-tokens-sql-server-2005-and-later.md
+        - name: 'Suscripción, Comandos sin distribuir (Suscripción transaccional, SQL Server 2005 y posteriores)'
+          href: subscription-undistributed-commands-transactional-subscription.md
+        - name: 'Suscripción, Historial de Publicador a distribuidor (suscripción transaccional)'
+          href: subscription-publisher-to-distributor-history-transactional-subscription.md
+        - name: 'Suscripción, Historial de Distribuidor a suscriptor (Suscripción transaccional)'
+          href: subscription-distributor-to-subscriber-history-transactional-subscription.md
+        - name: 'Suscripción, Historial de sincronizaciones (suscripción de mezcla, SQL Server 2005 y versiones posteriores)'
+          href: subscription-synchronization-history.md
+        - name: 'Suscripción, Historial de sincronizaciones (Suscripción de mezcla, SQL Server 2000)'
+          href: subscription-synchronization-history-merge-subscription-sql-server-2000.md
+        - name: 'Suscripción, Historial de Distribuidor a suscriptor (suscripción de instantánea)'
+          href: subscription-distributor-to-subscriber-history-snapshot-subscription.md
+        - name: Agente de registro del LOG
+          href: log-reader-agent.md
+        - name: Agente de lectura de cola
+          href: queue-reader-agent.md
+        - name: Agente de instantáneas
+          href: snapshot-agent.md
+        - name: Configuración del filtro
+          href: filter-settings.md
+        - name: Ordenar columnas
+          href: sort-columns.md
+    - name: Configure Distribution Wizard
+      href: configure-distribution-wizard.md
+      items:
+        - name: Distribuidor
+          href: distributor.md
+        - name: Carpeta de instantáneas
+          href: snapshot-folder.md
+        - name: Base de datos de distribución
+          href: distribution-database.md
+        - name: Publicadores
+          href: publishers.md
+        - name: Contraseña del distribuidor
+          href: distributor-password.md
+    - name: New Publication Wizard
+      href: new-publication-wizard.md
+      items:
+        - name: Publicador de Oracle
+          href: oracle-publisher.md
+        - name: Contraseña administrativa
+          href: administrative-password.md
+        - name: Base de datos de publicaciones
+          href: publication-database.md
+        - name: Tipo de publicación
+          href: publication-type.md
+        - name: Tipos de suscriptor
+          href: subscriber-types.md
+        - name: Seguridad del agente (Asistente para nueva publicación)
+          href: agent-security-new-publication-wizard.md
+        - name: Artículos
+          href: articles.md
+        - name: Problemas de los artículos
+          href: article-issues.md
+        - name: Filtrar filas de tabla
+          href: filter-table-rows.md
+        - name: Agregar filtro o Editar filtro
+          href: add-or-edit-filter.md
+        - name: Agregar o editar combinaciones
+          href: add-or-edit-join.md
+        - name: Generar filtros
+          href: generate-filters.md
+        - name: Agente de instantáneas (Asistente para nueva publicación)
+          href: snapshot-agent-new-publication-wizard.md
+    - name: Asistente para nueva suscripción (referencia de IU)
+      href: new-subscription-wizard-ui-reference.md
+      items:
+        - name: Ubicación del agente <AgentName>
+          href: agentname-agent-location.md
+        - name: Suscriptores
+          href: subscribers.md
+        - name: Agregar suscriptor que no sea de SQL Server
+          href: add-non-sql-server-subscriber.md
+        - name: Seguridad del agente <AgentName>
+          href: agentname-agent-security.md
+        - name: Suscripciones actualizables
+          href: updatable-subscriptions.md
+        - name: Inicio de sesión para suscripciones actualizables
+          href: login-for-updatable-subscriptions.md
+        - name: Inicializar suscripciones
+          href: initialize-subscriptions.md
+        - name: Información del servidor web
+          href: web-server-information.md
+        - name: Tipo de suscripción
+          href: subscription-type.md
+        - name: Valores de HOST_NAME
+          href: host-name-values.md
+    - name: Asistente de configuración de la topología punto a punto
+      href: configure-peer-to-peer-topology-wizard.md
+      items:
+        - name: Publicación (replicación punto a punto)
+          href: publication-peer-to-peer-replication.md
+        - name: Configurar topología (replicación punto a punto)
+          href: configure-topology-peer-to-peer-replication.md
+        - name: Seguridad del Agente de registro del LOG (replicación punto a punto)
+          href: log-reader-agent-security-peer-to-peer-replication.md
+        - name: Seguridad del Agente de distribución (replicación punto a punto)
+          href: distribution-agent-security-peer-to-peer-replication.md
+        - name: Inicialización de nuevos nodos del mismo nivel (replicación punto a punto)
+          href: new-peer-initialization-peer-to-peer-replication.md
+    - name: Visor de conflictos de replicación de Microsoft y Solucionador interactivo
+      href: microsoft-replication-conflict-viewer-and-interactive-resolver.md
+      items:
+        - name: Visor de conflictos de replicación de Microsoft (Replicación de mezcla)
+          href: microsoft-replication-conflict-viewer-merge-replication.md
+        - name: Visor de conflictos de replicación de Microsoft (Replicación transaccional)
+          href: microsoft-replication-conflict-viewer-transactional-replication.md
+        - name: Solucionador interactivo de conflictos de replicación de Microsoft
+          href: microsoft-replication-interactive-conflict-resolver.md
+        - name: Definir filtros
+          href: define-filters.md
+- name: Cuadros de diálogo de replicación de SQL Server Management Studio
+  href: sql-server-management-studio-replication-dialog-boxes.md
+  items:
+    - name: Seguridad del Agente de instantáneas
+      href: snapshot-agent-security.md
+    - name: Seguridad del Agente de registro del LOG
+      href: log-reader-agent-security.md
+    - name: Seguridad del Agente de distribución
+      href: distribution-agent-security.md
+    - name: Seguridad del Agente de mezcla
+      href: merge-agent-security.md
+    - name: Seguridad del Agente de lectura de cola
+      href: queue-reader-agent-security.md
+    - name: Perfiles de agente (un solo agente)
+      href: agent-profiles-single-agent.md
+    - name: Perfiles de agente
+      href: agent-profiles.md
+    - name: Propiedades de <AgentProfileName>
+      href: agentprofilename-properties.md
+    - name: Nuevo perfil de agente
+      href: new-agent-profile.md
+    - name: Validar todas las suscripciones
+      href: validate-all-subscriptions.md
+    - name: Validar suscripciones
+      href: validate-subscriptions.md
+    - name: Validar suscripción
+      href: validate-subscription.md
+    - name: Opciones de validación de suscripciones (suscripciones transaccionales)
+      href: subscription-validation-options-transactional-subscriptions.md
+    - name: Opciones de validación de suscripciones (Suscripciones de mezcla)
+      href: subscription-validation-options-merge-subscriptions.md
+    - name: 'Reinicializar suscripciones: Todas las suscripciones'
+      href: reinitialize-subscription-s-all-subscriptions.md
+    - name: Reinicializar suscripciones - Una suscripción
+      href: reinitialize-subscription-s-one-subscription.md
+    - name: Generar script SQL (Objetos de replicación)
+      href: generate-sql-script-replication-objects.md
+    - name: 'Conectar al servidor (Oracle), Inicio de sesión'
+      href: connect-to-server-oracle-login.md
+    - name: 'Conectar al servidor (Oracle), Propiedades de conexión'
+      href: connect-to-server-oracle-connection-properties.md
+- name: Tutoriales de replicación
+  href: replication-tutorials.md
+  items:
+    - name: Preparar el servidor para la replicación
+      href: tutorial-preparing-the-server-for-replication.md
+      items:
+        - name: 'Lección 1: Crear cuentas de Windows para replicación'
+          href: lesson-1-creating-windows-accounts-for-replication.md
+        - name: 'Lección 2: Preparar la carpeta de instantáneas'
+          href: lesson-2-preparing-the-snapshot-folder.md
+        - name: 'Lección 3: Configurar la distribución'
+          href: lesson-3-configuring-distribution.md
+    - name: Replicar datos entre servidores conectados de forma continua
+      href: tutorial-replicating-data-between-continuously-connected-servers.md
+      items:
+        - name: 'Lección 1: Publicar datos con la replicación transaccional'
+          href: lesson-1-publishing-data-using-transactional-replication.md
+        - name: 'Lección 2: Crear una suscripción a la publicación transaccional'
+          href: lesson-2-creating-a-subscription-to-the-transactional-publication.md
+        - name: 'Lección 3: Validar la suscripción y medir la latencia'
+          href: lesson-3-validating-the-subscription-and-measuring-latency.md
+    - name: Replicar datos con clientes móviles
+      href: tutorial-replicating-data-with-mobile-clients.md
+      items:
+        - name: 'Lección 1: Publicar datos con la replicación de mezcla'
+          href: lesson-1-publishing-data-using-merge-replication.md
+        - name: 'Lección 2: Crear una suscripción a la publicación de combinación'
+          href: lesson-2-creating-a-subscription-to-the-merge-publication.md
+        - name: 'Lección 3: Sincronizar la suscripción con la publicación de combinación'
+          href: lesson-3-synchronizing-the-subscription-to-the-merge-publication.md

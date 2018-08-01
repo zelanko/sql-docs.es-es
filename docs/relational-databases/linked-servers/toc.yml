@@ -1,0 +1,4 @@
+- name: Información general
+  href: linked-servers-database-engine.md
+- name: Crear servidores vinculados
+  href: create-linked-servers-sql-server-database-engine.md

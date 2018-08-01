@@ -1,0 +1,16 @@
+- name: Crear objetos de base de datos con la integración de Common Language Runtime (CLR)
+  href: building-database-objects-with-common-language-runtime-clr-integration.md
+- name: 'Integración CLR, tipos de .NET Framework +'
+  href: ../../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md
+- name: 'Integración CLR, funciones definidas por el usuario +'
+  href: ../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md
+- name: 'Integración CLR, tipos definidos por el usuario +'
+  href: ../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md
+- name: Atributos personalizados de integración CLR para las rutinas CLR
+  href: clr-integration-custom-attributes-for-clr-routines.md
+- name: Restricciones del modelo de programación de la integración CLR
+  href: clr-integration-programming-model-restrictions.md
+- name: Introducción a la integración CLR
+  href: getting-started-with-clr-integration.md
+- name: Bibliotecas de .NET Framework admitidas
+  href: supported-net-framework-libraries.md

@@ -1,0 +1,14 @@
+- name: Objetos de origen de datos (OLE DB)
+  href: data-source-objects-ole-db.md
+- name: Propiedades de información de orígenes de datos
+  href: data-source-information-properties.md
+- name: Propiedades de orígenes de datos (OLE DB)
+  href: data-source-properties-ole-db.md
+- name: Propiedades de inicialización y autorización
+  href: initialization-and-authorization-properties.md
+- name: Objetos de origen de datos persistentes
+  href: persisted-data-source-objects.md
+- name: 'Propiedades de la sesión: proveedor de SQL Server Native Client OLE DB'
+  href: session-properties-sql-server-native-client-ole-db-provider.md
+- name: Sesiones
+  href: sessions.md

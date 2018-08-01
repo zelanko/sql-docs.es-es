@@ -1,0 +1,92 @@
+- name: Servidor de informes (modo nativo)
+  href: reporting-services-report-server-native-mode.md
+- name: Configurar y administrar un servidor de informes (modo nativo de SSRS)
+  href: configure-and-administer-a-report-server-ssrs-native-mode.md
+  items:
+    - name: Configurar un servidor de informes
+      href: configure-a-report-server-reporting-services-native-mode.md
+    - name: Configurar el Administrador de informes (modo nativo)
+      href: configure-web-portal.md
+    - name: Configurar el acceso al Generador de informes
+      href: configure-report-builder-access.md
+    - name: Administrar un servidor de informes en modo nativo de Reporting Services
+      href: manage-a-reporting-services-native-mode-report-server.md
+    - name: Configurar un firewall para el acceso al servidor de informes
+      href: configure-a-firewall-for-report-server-access.md
+    - name: Configurar un servidor de informes en modo nativo para la administración local (SSRS)
+      href: configure-a-native-mode-report-server-for-local-administration-ssrs.md
+    - name: Configurar un servidor de informes para la administración remota
+      href: configure-a-report-server-for-remote-administration.md
+    - name: Configurar un servidor de informes en un clúster con equilibrio de carga de red
+      href: configure-a-report-server-on-a-network-load-balancing-cluster.md
+    - name: Habilitar los errores remotos (Reporting Services)
+      href: enable-remote-errors-reporting-services.md
+    - name: Registrar un nombre principal de servicio (SPN) para un servidor de informes
+      href: register-a-service-principal-name-spn-for-a-report-server.md
+    - name: Activar o desactivar las características de Reporting Services
+      href: turn-reporting-services-features-on-or-off.md
+- name: Administración de contenido del servidor de informes (Modo nativo de SSRS)
+  href: report-server-content-management-ssrs-native-mode.md
+  items:
+    - name: 'Crear, eliminar o modificar una carpeta'
+      href: create-delete-or-modify-a-folder-report-manager.md
+    - name: Mover o eliminar un elemento
+      href: move-or-delete-an-item-report-manager.md
+    - name: Cargar archivos a una carpeta
+      href: upload-files-to-a-folder.md
+    - name: Actualizar un recurso
+      href: update-a-resource-report-manager.md
+- name: Iniciar y detener el servicio del servidor de informes
+  href: start-and-stop-the-report-server-service.md
+- name: Dominios de aplicación para las aplicaciones del servidor de informes
+  href: application-domains-for-report-server-applications.md
+- name: Habilitar y deshabilitar la impresión del lado cliente para Reporting Services
+  href: enable-and-disable-client-side-printing-for-reporting-services.md
+- name: Habilitar y deshabilitar Mis informes
+  href: enable-and-disable-my-reports.md
+- name: Cambiar el nombre de un equipo que ejecuta un servidor de informes
+  href: rename-a-report-server-computer.md
+- name: Base de datos del servidor de informes (Modo nativo de SSRS)
+  href: report-server-database-ssrs-native-mode.md
+  items:
+    - name: Administrar una base de datos del servidor de informes (Modo nativo de SSRS)
+      href: administer-a-report-server-database-ssrs-native-mode.md
+    - name: Mover las bases de datos del servidor de informes a otro equipo (Modo nativo de SSRS)
+      href: moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md
+- name: 'Rendimiento, instantáneas, almacenamiento en caché (Reporting Services)'
+  href: performance-snapshots-caching-reporting-services.md
+  items:
+    - name: Supervisar el rendimiento del servidor de informes
+      href: monitoring-report-server-performance.md
+    - name: Contadores de rendimiento para los objetos de rendimiento de MSRS 2014 Web Service y MSRS 2014 Windows Service (modo nativo)
+      href: performance-counters-msrs-2011-web-service-performance-objects.md
+    - name: Contadores de rendimiento para los objetos de rendimiento en modo SharePoint de MSRS 2014 Web Service y SharePoint de MSRS 2014 Windows Service (modo SharePoint)
+      href: performance-counters-msrs-2011-sharepoint-mode-performance-objects.md
+    - name: 'Contadores de rendimiento de los objetos ReportServer:Service y ReportServerSharePoint:Service'
+      href: performance-counters-reportserver-service-performance-objects.md
+    - name: Establecer las propiedades del procesamiento de informes
+      href: set-report-processing-properties.md
+    - name: Configurar la memoria disponible para las aplicaciones del servidor de informes
+      href: configure-available-memory-for-report-server-applications.md
+    - name: Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos (SSRS)
+      href: setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md
+    - name: Procesar informes grandes
+      href: process-large-reports.md
+    - name: Límites de tamaño de informes e instantáneas
+      href: report-and-snapshot-size-limits.md
+    - name: Informes almacenados en caché
+      href: caching-reports-ssrs.md
+    - name: Almacenar en caché conjuntos de datos compartidos
+      href: cache-shared-datasets-ssrs.md
+    - name: Cargar previamente la memoria caché
+      href: preload-the-cache-report-manager.md
+    - name: Almacenar en caché un conjunto de datos compartido
+      href: cache-a-shared-dataset.md
+    - name: Almacenar en caché un informe
+      href: cache-a-report-report-manager.md
+    - name: 'Crear, modificar y eliminar instantáneas del historial de informes'
+      href: create-modify-and-delete-snapshots-in-report-history.md
+    - name: Agregar una instantánea al historial de informes
+      href: add-a-snapshot-to-report-history-report-manager.md
+    - name: Crear historial de informe
+      href: create-report-history-reporting-services-in-sharepoint-integrated-mode.md

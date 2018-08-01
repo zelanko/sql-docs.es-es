@@ -1,0 +1,23 @@
+- name: Visor de archivos de registro
+  href: log-file-viewer.md
+  items:
+    - name: Abrir
+      href: open-log-file-viewer.md
+    - name: Ver sin conexión
+      href: view-offline-log-files.md
+    - name: Ayuda F1
+      href: log-file-viewer-f1-help.md
+- name: Registro de transacciones
+  href: the-transaction-log-sql-server.md
+  items:
+    - name: Administrar el tamaño
+      href: manage-the-size-of-the-transaction-log-file.md
+    - name: Solucionar problemas de un registro lleno (Error 9002 de SQL Server)
+      href: troubleshoot-a-full-transaction-log-sql-server-error-9002.md
+    - name: Controlar la durabilidad de las transacciones
+      href: control-transaction-durability.md
+- name: Puntos de comprobación de base de datos
+  href: database-checkpoints-sql-server.md
+  items:
+    - name: Cambiar el tiempo de recuperación de destino de una base de datos
+      href: change-the-target-recovery-time-of-a-database-sql-server.md

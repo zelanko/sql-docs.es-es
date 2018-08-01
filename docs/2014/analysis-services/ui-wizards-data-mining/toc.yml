@@ -1,0 +1,45 @@
+- name: Asistentes de la interfaz de usuario para el análisis de minería de datos +
+  href: ui-wizards-data-mining.md
+- name: Asistente para minería de datos
+  href: ../data-mining-wizards.md
+- name: Asistente para minería de datos (Ayuda F1)
+  href: ../data-mining-wizard-f1-help-analysis-services-data-mining.md
+  items:
+    - name: Seleccionar el método de definición (Asistente para minería de datos)
+      href: ../select-the-definition-method-data-mining-wizard.md
+    - name: Cree la estructura de minería de datos (Asistente para minería de datos)
+      href: ../create-the-data-mining-structure-data-mining-wizard.md
+    - name: Seleccionar vista del origen de datos (Asistente para minería de datos)
+      href: ../select-data-source-view-data-mining-wizard.md
+    - name: Buscar origen de datos (vista del Asistente para minería de datos)
+      href: ../browse-data-source-view-data-mining-wizard.md
+    - name: Especificar tipos de tablas (Asistente para minería de datos)
+      href: ../specify-table-types-data-mining-wizard.md
+    - name: Especificar los datos de entrenamiento (Asistente para minería de datos)
+      href: ../specify-the-training-data-data-mining-wizard.md
+    - name: Especificar contenido y el tipo de datos de las columnas (Asistente para minería de datos)
+      href: ../specify-column-content-and-data-type-data-mining-wizard.md
+    - name: Crear conjunto de pruebas
+      href: ../create-testing-set-data-mining-wizard.md
+    - name: Sugerir columnas relacionadas (Asistente para minería de datos)
+      href: ../suggest-related-columns-data-mining-wizard.md
+    - name: Seleccionar la dimensión de cubo de origen (Asistente para minería de datos)
+      href: ../select-the-source-cube-dimension-data-mining-wizard.md
+    - name: Seleccionar la clave de caso (Asistente para minería de datos)
+      href: ../select-the-case-key-data-mining-wizard.md
+    - name: Seleccionar columnas de nivel de caso (Asistente para minería de datos)
+      href: ../select-case-level-columns-data-mining-wizard.md
+    - name: Especificar el uso de las columnas del modelo de minería de datos (Asistente para minería de datos)
+      href: ../specify-mining-model-column-usage-data-mining-wizard.md
+    - name: Seleccionar una dimensión de grupo de medida (Agregar nueva tabla anidada)
+      href: ../select-a-measure-group-dimension-add-new-nested-table-wizard.md
+    - name: Seleccionar la clave de la tabla anidada (Agregar nueva tabla anidada)
+      href: ../select-nested-table-key-add-new-nested-table-wizard.md
+    - name: Seleccionar las columnas de la tabla anidada (Agregar nueva tabla anidada)
+      href: ../select-nested-table-columns-add-new-nested-table-wizard.md
+    - name: Especificar el contenido y el tipo de datos de la columna (Asistente para minería de datos)
+      href: ../specify-the-column-s-content-and-data-type-data-mining-wizard.md
+    - name: Segmentar el cubo de origen (Asistente para minería de datos)
+      href: ../slice-source-cube-data-mining-wizard.md
+    - name: Finalización del asistente (Asistente para minería de datos)
+      href: ../completing-the-wizard-data-mining-wizard.md

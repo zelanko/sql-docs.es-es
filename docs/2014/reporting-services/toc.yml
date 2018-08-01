@@ -1,0 +1,311 @@
+- name: Reporting Services
+  href: create-deploy-and-manage-mobile-and-paginated-reports.md
+  items:
+    - name: Novedades (Reporting Services)
+      href: what-s-new-reporting-services.md
+    - name: Compatibilidad con versiones anteriores de Reporting Services
+      href: reporting-services-backward-compatibility.md
+      items:
+        - name: Características desusadas de SQL Server Reporting Services en SQL Server 2014
+          href: deprecated-features-in-sql-server-reporting-services-ssrs.md
+        - name: Funcionalidad de SQL Server Reporting Services no incluida en SQL Server 2014
+          href: discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md
+        - name: Cambios recientes de SQL Server Reporting Services en SQL Server 2014
+          href: breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md
+        - name: Cambios de comportamiento de SQL Server Reporting Services en SQL Server 2014
+          href: behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md
+- name: Conceptos de Reporting Services (SSRS)
+  href: reporting-services-concepts-ssrs.md
+- name: Elegir herramientas de análisis e informes de Microsoft
+  href: choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md
+- name: Planeamiento
+  href: planning-for-reporting-services.md
+  items:
+    - name: Planear la compatibilidad del explorador de Reporting Services y Power View (Reporting Services 2014)
+      href: browser-support-for-reporting-services-and-power-view.md
+    - name: Planear el diseño y la implementación de informes (Reporting Services 2014)
+      href: plan-for-report-design-and-report-deployment-reporting-services.md
+    - name: Ver informes de Reporting Services en dispositivos de Microsoft Surface y de Apple iOS
+      href: view-reporting-services-reports-surface-ios-devices.md
+    - name: Comparar funciones de Business Intelligence en diferentes entornos de Microsoft
+      href: compare-business-intelligence-capabilities-in-different-microsoft-environments.md
+- name: Características y tareas de Reporting Services
+  href: reporting-services-features-and-tasks-ssrs.md
+- name: Servidor de informes de Reporting Services
+  href: reporting-services-report-server.md
+  items:
+    - name: Servidor de informes (modo de SharePoint) +
+      href: report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md
+    - name: Servidor de informes (modo nativo) +
+      href: report-server/reporting-services-report-server-native-mode.md
+    - name: Archivos de configuración
+      href: report-server/reporting-services-configuration-files.md
+      items:
+        - name: RSReportServer Configuration File
+          href: report-server/rsreportserver-config-configuration-file.md
+        - name: Archivo de configuración ReportingServicesService
+          href: report-server/reportingservicesservice-configuration-file.md
+        - name: archivo de configuración RSReportDesigner
+          href: report-server/rsreportdesigner-configuration-file.md
+        - name: Modificar un archivo de configuración de Reporting Services (RSreportserver.config)
+          href: report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md
+    - name: Archivos de registro y orígenes de Reporting Services
+      href: report-server/reporting-services-log-files-and-sources.md
+      items:
+        - name: Registro de ejecución del servidor de informes y la vista ExecutionLog3
+          href: report-server/report-server-executionlog-and-the-executionlog3-view.md
+        - name: Registros de seguimiento (ULS) de SharePoint
+          href: report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md
+        - name: Registro de seguimiento del servicio del servidor de informes
+          href: report-server/report-server-service-trace-log.md
+        - name: Registro HTTP del servidor de informes
+          href: report-server/report-server-http-log.md
+        - name: Registro de aplicación Windows
+          href: report-server/windows-application-log.md
+        - name: Comprobar la ejecución de un informe
+          href: report-server/verifying-a-report-run.md
+    - name: 'Rendimiento, instantáneas y almacenamiento en caché (Reporting Services) +'
+      href: report-server/performance-snapshots-caching-reporting-services.md
+    - name: Alta disponibilidad
+      href: high-availability-reporting-services.md
+    - name: Habilitar y deshabilitar el espacio seguro para RDL
+      href: enable-and-disable-rdl-sandboxing.md
+    - name: Configuración de Reporting Services para utilizar un nombre alternativo del asunto
+      href: configure-reporting-services-to-use-a-subject-alternative-name.md
+- name: Generador de informes en SQL Server 2014
+  href: report-builder/report-builder-in-sql-server-2016.md
+  items:
+    - name: Novedades en el Generador de informes para SQL Server 2014
+      href: what-s-new-in-report-builder-for-sql-server-2014.md
+    - name: Iniciar el Generador de informes
+      href: report-builder/start-report-builder.md
+    - name: 'Tutorial: Crear un informe de gráfico rápido sin conexión'
+      href: report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md
+    - name: Planear un informe
+      href: report-design/planning-a-report-report-builder.md
+      items:
+        - name: Sugerencias para el diseño de informes
+          href: report-design/report-design-tips-report-builder-and-ssrs.md
+    - name: Vista de diseño de informe
+      href: report-builder/report-design-view-report-builder.md
+    - name: Vista de diseño de conjunto de datos compartido
+      href: report-builder/shared-dataset-design-view-report-builder.md
+    - name: Métodos abreviados de teclado
+      href: report-builder/keyboard-shortcuts-report-builder.md
+    - name: Conceptos de creación de informes
+      href: report-design/report-authoring-concepts-report-builder-and-ssrs.md
+      items:
+        - name: 'Informes, elementos de informe y definiciones de informe'
+          href: report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md
+        - name: Conexiones de datos u orígenes de datos incrustados y compartidos
+          href: embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md
+        - name: Conjuntos de datos incrustados y compartidos
+          href: report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md
+        - name: Regiones de datos y mapas
+          href: report-design/data-regions-and-maps-report-builder-and-ssrs.md
+        - name: Parámetros de informe
+          href: report-design/report-parameters-concepts-report-builder-and-ssrs.md
+    - name: 'Búsqueda, visualización y administración de informes'
+      href: report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md
+    - name: Agregar datos a un informe +
+      href: report-data/report-datasets-ssrs.md
+    - name: 'Tablas, matrices y listas +'
+      href: report-design/tables-matrices-and-lists-report-builder-and-ssrs.md
+    - name: Elementos de informe +
+      href: report-design/report-parts-in-report-designer-ssrs.md
+    - name: Gráficos +
+      href: report-design/charts-report-builder-and-ssrs.md
+    - name: Minigráficos y barras de datos +
+      href: report-design/sparklines-and-data-bars-report-builder-and-ssrs.md
+    - name: Medidores +
+      href: report-design/gauges-report-builder-and-ssrs.md
+    - name: Indicadores +
+      href: report-design/indicators-report-builder-and-ssrs.md
+    - name: Mapas +
+      href: report-design/maps-report-builder-and-ssrs.md
+    - name: 'Imágenes, cuadros de texto, rectángulos y líneas +'
+      href: report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md
+    - name: Aplicación de formato a los elementos de informe +
+      href: report-design/formatting-report-items-report-builder-and-ssrs.md
+    - name: Parámetros de informe +
+      href: report-design/report-parameters-report-builder-and-report-designer.md
+    - name: 'Filtrado, agrupación y ordenación de datos +'
+      href: report-design/filter-group-and-sort-data-report-builder-and-ssrs.md
+    - name: Ocultar un elemento (Generador de informes y SSRS)
+      href: report-builder/hide-an-item-report-builder-and-ssrs.md
+    - name: 'Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas'
+      href: report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md
+    - name: Expresiones +
+      href: report-design/expressions-report-builder-and-ssrs.md
+    - name: 'Ordenación interactiva, mapas de documento y vínculos'
+      href: report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md
+      items:
+        - name: Ordenación interactiva (Generador de informes y SSRS)
+          href: report-design/interactive-sort-report-builder-and-ssrs.md
+    - name: Agregar una ordenación interactiva a una tabla o una matriz (Generador de informes y SSRS)
+      href: report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md
+      items:
+        - name: Agregar un hipervínculo a una dirección URL (Generador de informes y SSRS)
+          href: report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md
+        - name: Agregar un marcador a un informe (Generador de informes y SSRS)
+          href: report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md
+        - name: Crear un mapa del documento (Generador de informes y SSRS)
+          href: report-design/create-a-document-map-report-builder-and-ssrs.md
+    - name: Representación y diseño de páginas
+      href: report-design/page-layout-and-rendering-report-builder-and-ssrs.md
+      items:
+        - name: Comportamiento de la representación
+          href: report-design/rendering-behaviors-report-builder-and-ssrs.md
+        - name: Representar regiones de datos
+          href: report-design/rendering-data-regions-report-builder-and-ssrs.md
+        - name: Representar elementos de informe
+          href: report-design/rendering-report-items-report-builder-and-ssrs.md
+        - name: Representar datos
+          href: report-design/rendering-data-report-builder-and-ssrs.md
+        - name: Paginación en Reporting Services
+          href: report-design/pagination-in-reporting-services-report-builder-and-ssrs.md
+        - name: Encabezados y pies de página
+          href: report-design/page-headers-and-footers-report-builder-and-ssrs.md
+        - name: 'Controlar saltos de página, encabezados, columnas y filas'
+          href: report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md
+        - name: Agregar un salto de página
+          href: report-design/add-a-page-break-report-builder-and-ssrs.md
+        - name: Mostrar encabezados de fila y de columna en varias páginas
+          href: report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md
+        - name: Agregar o quitar un encabezado o un pie de página
+          href: report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md
+        - name: Mantener visibles los encabezados al desplazarse a través de un informe
+          href: report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md
+        - name: Mostrar números de página u otras propiedades del informe
+          href: report-design/display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md
+        - name: Ocultar un encabezado o un pie de página en la primera o en la última página
+          href: report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md
+    - name: Exportar informes +
+      href: report-builder/export-reports-report-builder-and-ssrs.md
+    - name: Imprimir informes +
+      href: report-builder/print-reports-report-builder-and-ssrs.md
+    - name: Guardar informes +
+      href: report-builder/saving-reports-report-builder.md
+    - name: Seguridad
+      href: report-builder/security-report-builder.md
+    - name: 'Instalar, desinstalar y asistencia del Generador de informes'
+      href: install-uninstall-and-report-builder-support.md
+      items:
+        - name: Instalar la versión independiente del Generador de informes
+          href: install-windows/install-report-builder.md
+        - name: Desinstalar la versión independiente del Generador de informes
+          href: install-windows/uninstall-report-builder.md
+        - name: Solucionar problemas del Generador de informes
+          href: troubleshoot-report-builder.md
+    - name: Generador de informes (Ayuda F1) +
+      href: report-builder/report-builder-f1-help.md
+    - name: Glosario (Generador de informes)
+      href: report-builder/glossary-report-builder.md
+- name: Informes de Reporting Services +
+  href: reports/reporting-services-reports-ssrs.md
+- name: Datos de informe +
+  href: report-data/report-data-ssrs.md
+- name: Programaciones +
+  href: subscriptions/schedules.md
+- name: Suscripciones y entrega +
+  href: subscriptions/subscriptions-and-delivery-reporting-services.md
+- name: Alertas de datos
+  href: reporting-services-data-alerts.md
+  items:
+    - name: Diseñador de alertas de datos
+      href: data-alert-designer.md
+    - name: Administrador de alertas de datos para los usuarios de SharePoint
+      href: data-alert-manager-for-sharepoint-users.md
+    - name: Administrador de alertas de datos para administradores de alertas
+      href: data-alert-manager-for-alerting-administrators.md
+    - name: Mensajes de alertas de datos
+      href: data-alert-messages.md
+    - name: Crear una alerta de datos en el Diseñador de alertas de datos
+      href: create-a-data-alert-in-data-alert-designer.md
+    - name: Modificar una alerta de datos en el Diseñador de alertas
+      href: edit-a-data-alert-in-alert-designer.md
+    - name: Administrar todas las alertas de datos de un sitio de SharePoint en el Administrador de alertas de datos
+      href: manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md
+    - name: Administrar mis alertas de datos en el Administrador de alertas de datos
+      href: manage-my-data-alerts-in-data-alert-manager.md
+    - name: Conceder permisos a los usuarios y alertar a los administradores
+      href: grant-permissions-to-users-and-alerting-administrators.md
+- name: Seguridad y protección +
+  href: security/reporting-services-security-and-protection.md
+- name: Acceso URL
+  href: url-access-ssrs.md
+  items:
+    - name: Acceder a elementos del servidor de informes mediante el acceso URL
+      href: access-report-server-items-using-url-access.md
+    - name: Pasar un parámetro de informe en una dirección URL
+      href: pass-a-report-parameter-within-a-url.md
+    - name: Referencia de parámetros de acceso URL
+      href: url-access-parameter-reference.md
+    - name: Establecer el idioma para los parámetros de informe en una dirección URL
+      href: set-the-language-for-report-parameters-in-a-url.md
+    - name: Especificar la configuración de la información del dispositivo en una dirección URL
+      href: specify-device-information-settings-in-a-url.md
+    - name: Exportar un informe mediante el acceso URL
+      href: export-a-report-using-url-access.md
+    - name: Buscar un informe mediante un acceso URL
+      href: search-a-report-using-url-access.md
+    - name: Representar instantáneas del historial de informes mediante acceso URL
+      href: render-a-report-history-snapshot-using-url-access.md
+- name: Extensiones
+  href: extensions-ssrs.md
+  items:
+    - name: Personalizar los parámetros de extensión de representación en RSReportServer.Config
+      href: customize-rendering-extension-parameters-in-rsreportserver-config.md
+- name: Herramientas +
+  href: tools/reporting-services-tools.md
+- name: Referencia de la biblioteca de proveedores WMI de Reporting Services +
+  href: wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md
+- name: Referencia técnica
+  href: technical-reference-ssrs.md
+- name: Referencia de errores y eventos +
+  href: troubleshooting/errors-and-events-reference-reporting-services.md
+- name: Referencia de características
+  href: feature-reference-reporting-services.md
+  items:
+    - name: Configuración de información de dispositivos para las extensiones de representación
+      href: device-information-settings-for-rendering-extensions-reporting-services.md
+      items:
+        - name: Configuración de la información del dispositivo ATOM
+          href: atom-device-information-settings.md
+        - name: Configuración de la información del dispositivo CSV
+          href: csv-device-information-settings.md
+        - name: Configuración de la información del dispositivo Excel
+          href: excel-device-information-settings.md
+        - name: Configuración de la información del dispositivo HTML
+          href: html-device-information-settings.md
+        - name: Configuración de la información del dispositivo de imagen
+          href: image-device-information-settings.md
+        - name: Configuración de la información del dispositivo MHTML
+          href: mhtml-device-information-settings.md
+        - name: Configuración de la información del dispositivo PDF
+          href: pdf-device-information-settings.md
+        - name: Configuración de la información del dispositivo XML
+          href: xml-device-information-settings.md
+        - name: Configuración de la información del dispositivo web
+          href: word-device-information-settings.md
+        - name: Configuración de la información del dispositivo RGDI
+          href: rgdi-device-information-settings.md
+    - name: Visor HTML y la barra de herramientas del informe
+      href: html-viewer-and-the-report-toolbar.md
+- name: Guía del desarrollador (Reporting Services)
+  href: reporting-services-developer-documentation.md
+  items:
+    - name: Integración de Reporting Services en las aplicaciones +
+      href: application-integration/integrating-reporting-services-into-applications.md
+    - name: Servicio web del servidor de informes +
+      href: report-server-web-service/report-server-web-service.md
+    - name: Extensiones de Reporting Services +
+      href: extensions/reporting-services-extensions.md
+    - name: Elementos de informe personalizados +
+      href: custom-report-items/custom-report-items.md
+    - name: Uso de ensamblados personalizados con informes +
+      href: custom-assemblies/using-custom-assemblies-with-reports.md
+    - name: Capacidad de programación del elemento web Visor de informes en la integración de SharePoint
+      href: report-viewer-web-part-programmability-in-sharepoint-integration.md
+    - name: Acceso al proveedor WMI mediante programación
+      href: accessing-the-wmi-provider-programmatically.md

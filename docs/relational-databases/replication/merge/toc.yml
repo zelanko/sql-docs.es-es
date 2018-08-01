@@ -1,0 +1,40 @@
+- name: Información general
+  href: merge-replication.md
+- name: Opciones de artículos para replicación de mezcla
+  href: article-options-for-merge-replication.md
+  items:
+    - name: Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga
+      href: optimize-merge-replication-performance-with-download-only-articles.md
+    - name: Optimizar el rendimiento de la replicación de mezcla con seguimiento condicional de eliminaciones
+      href: optimize-merge-replication-performance-with-conditional-delete-tracking.md
+    - name: Especificar el orden de procesamiento de los artículos de mezcla
+      href: specify-the-processing-order-of-merge-articles.md
+    - name: Agrupar cambios en filas relacionadas con registros lógicos
+      href: group-changes-to-related-rows-with-logical-records.md
+    - name: 'Replicación de mezcla avanzada: resolver conflictos de replicación de mezcla'
+      href: advanced-merge-replication-resolve-merge-replication-conflicts.md
+    - name: 'Replicación de mezcla avanzada: detección y resolución de conflictos'
+      href: advanced-merge-replication-conflict-detection-and-resolution.md
+    - name: 'Conflictos de replicación de mezcla avanzada: elegir un solucionador'
+      href: advanced-merge-replication-conflict-choose-a-resolver.md
+    - name: 'Conflictos de replicación de mezcla avanzada: solucionadores personalizados basados en COM'
+      href: advanced-merge-replication-conflict-com-based-custom-resolvers.md
+    - name: 'Conflictos de replicación de mezcla avanzada: solucionadores basados en COM'
+      href: advanced-merge-replication-conflict-com-based-resolvers.md
+    - name: 'Conflictos de replicación de mezcla avanzada: resolución interactiva'
+      href: advanced-merge-replication-conflict-interactive-resolution.md
+    - name: 'Conflictos de replicación de mezcla avanzada: resolver en un registro lógico'
+      href: advanced-merge-replication-conflict-resolving-in-logical-record.md
+    - name: Ejecutar lógica de negocios durante la sincronización de mezcla
+      href: execute-business-logic-during-merge-synchronization.md
+- name: Filtrar datos publicados para la replicación de mezcla
+  href: filter-published-data-for-merge-replication.md
+  items:
+    - name: 'Filtros con parámetros: filtros de fila'
+      href: parameterized-filters-parameterized-row-filters.md
+    - name: 'Filtros con parámetros: optimizar para las particiones precalculadas'
+      href: parameterized-filters-optimize-for-precomputed-partitions.md
+    - name: filtros de combinación
+      href: join-filters.md
+    - name: Prácticas recomendadas para filtros de fila basados en el tiempo
+      href: best-practices-for-time-based-row-filters.md

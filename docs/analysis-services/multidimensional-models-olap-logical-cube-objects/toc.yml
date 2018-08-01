@@ -1,0 +1,28 @@
+- name: Agregaciones y diseños de agregaciones
+  href: aggregations-and-aggregation-designs.md
+- name: Cálculos
+  href: calculations.md
+- name: Celdas de cubos (Analysis Services - Datos multidimensionales)
+  href: cube-cells-analysis-services-multidimensional-data.md
+- name: Objetos de cubo (Analysis Services - Datos multidimensionales)
+  href: cube-objects-analysis-services-multidimensional-data.md
+- name: 'Propiedades de cubo: Programación de modelos multidimensionales'
+  href: cube-properties-multidimensional-model-programming.md
+- name: Almacenamiento de cubos (Analysis Services - Datos multidimensionales)
+  href: cube-storage-analysis-services-multidimensional-data.md
+- name: Traducciones de cubo
+  href: cube-translations.md
+- name: Relaciones de dimensión
+  href: dimension-relationships.md
+- name: 'Particiones: Procesamiento y modos de almacenamiento de particiones'
+  href: partitions-partition-storage-modes-and-processing.md
+- name: 'Particiones: Almacenamiento en caché automático'
+  href: partitions-proactive-caching.md
+- name: 'Particiones: Particiones remotas'
+  href: partitions-remote-partitions.md
+- name: 'Particiones: Particiones habilitadas para escritura'
+  href: partitions-write-enabled-partitions.md
+- name: Particiones (Analysis Services - Datos multidimensionales)
+  href: partitions-analysis-services-multidimensional-data.md
+- name: perspectivas
+  href: perspectives.md

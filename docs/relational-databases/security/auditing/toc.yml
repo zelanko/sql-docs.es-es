@@ -1,0 +1,14 @@
+- name: Información general
+  href: sql-server-audit-database-engine.md
+- name: Acciones y grupos de acciones
+  href: sql-server-audit-action-groups-and-actions.md
+- name: Registros de auditoría
+  href: sql-server-audit-records.md
+- name: Crear una auditoría de servidor y una especificación de auditoría de servidor
+  href: create-a-server-audit-and-server-audit-specification.md
+- name: Crear una especificación de auditoría de servidor y de auditoría de base de datos
+  href: create-a-server-audit-and-database-audit-specification.md
+- name: Ver un registro de SQL Server Audit
+  href: view-a-sql-server-audit-log.md
+- name: Escribir eventos de auditoría de SQL Server en el registro de seguridad
+  href: write-sql-server-audit-events-to-the-security-log.md

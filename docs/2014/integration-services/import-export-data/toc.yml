@@ -1,0 +1,41 @@
+- name: Asistente para importación y exportación de SQL Server
+  href: import-and-export-data-with-the-sql-server-import-and-export-wizard.md
+  items:
+    - name: Ejecutar el Asistente para importación y exportación de SQL Server
+      href: start-the-sql-server-import-and-export-wizard.md
+    - name: Asistente para importación y exportación de SQL Server
+      href: welcome-to-sql-server-import-and-export-wizard.md
+    - name: Elegir un origen de datos (Asistente para importación y exportación de SQL Server)
+      href: choose-a-data-source-sql-server-import-and-export-wizard.md
+    - name: Elegir un destino (Asistente para importación y exportación de SQL Server)
+      href: choose-a-destination-sql-server-import-and-export-wizard.md
+    - name: Crear base de datos (Asistente para importación y exportación de SQL Server)
+      href: create-database-sql-server-import-and-export-wizard.md
+    - name: Especificar copia de tabla o consulta (Asistente para importación y exportación de SQL Server)
+      href: specify-table-copy-or-query-sql-server-import-and-export-wizard.md
+    - name: Seleccionar tablas y vistas de origen (Asistente para importación y exportación de SQL Server)
+      href: select-source-tables-and-views-sql-server-import-and-export-wizard.md
+    - name: Cuadro de diálogo Vista previa de los datos (Asistente para importación y exportación de SQL Server)
+      href: preview-data-dialog-box-sql-server-import-and-export-wizard.md
+    - name: Proporcionar una consulta de origen (Asistente para importación y exportación de SQL Server)
+      href: provide-a-source-query-sql-server-import-and-export-wizard.md
+    - name: Configurar el destino del archivo plano (Asistente para importación y exportación de SQL Server)
+      href: configure-flat-file-destination-sql-server-import-and-export-wizard.md
+    - name: Asignaciones de columnas (Asistente para importación y exportación de SQL Server)
+      href: column-mappings-sql-server-import-and-export-wizard.md
+    - name: Instrucción Create Table de SQL (Asistente para importación y exportación de SQL Server)
+      href: create-table-sql-statement-sql-server-import-and-export-wizard.md
+    - name: Revisar asignación de tipos de datos (Asistente para importación y exportación de SQL Server)
+      href: review-data-type-mapping-sql-server-import-and-export-wizard.md
+    - name: Cuadro de diálogo Detalles de conversión de columna (Asistente para importación y exportación de SQL Server)
+      href: column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md
+    - name: Convertir tipos sin comprobar conversión (Asistente para importación y exportación de SQL Server)
+      href: convert-types-without-conversion-checking-sql-server-import-and-export-wizard.md
+    - name: Guardar y ejecutar el paquete (Asistente para importación y exportación de SQL Server)
+      href: save-and-run-package-sql-server-import-and-export-wizard.md
+    - name: Guardar el paquete SSIS (Asistente para importación y exportación de SQL Server)
+      href: save-ssis-package-sql-server-import-and-export-wizard.md
+    - name: Finalización del asistente (Asistente para importación y exportación de SQL Server)
+      href: complete-the-wizard-sql-server-import-and-export-wizard.md
+    - name: Operación en curso (Asistente para importación y exportación de SQL Server)
+      href: performing-operation-sql-server-import-and-export-wizard.md

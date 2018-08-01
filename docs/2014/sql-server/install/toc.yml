@@ -1,0 +1,444 @@
+- name: SQL Server 2014 Upgrade Advisor
+  href: sql-server-2014-upgrade-advisor.md
+- name: Instalar el Asesor de actualizaciones
+  href: installing-upgrade-advisor.md
+  items:
+    - name: Requisitos previos del Asesor de actualizaciones
+      href: upgrade-advisor-prerequisites.md
+    - name: Instalar el Asesor de actualizaciones desde el símbolo del sistema
+      href: installing-upgrade-advisor-from-the-command-prompt.md
+- name: Trabajar con el Asesor de actualizaciones
+  href: working-with-upgrade-advisor.md
+- name: Información general sobre el Asesor de actualizaciones
+  href: overview-of-upgrade-advisor.md
+  items:
+    - name: Información general sobre el proceso de actualización
+      href: upgrade-process-overview.md
+    - name: Información general sobre el Asesor de actualizaciones
+      href: upgrade-advisor-overview.md
+    - name: Ejecutar el Asesor de actualizaciones (interfaz de usuario)
+      href: running-upgrade-advisor-user-interface.md
+    - name: Ejecutar el Asesor de actualizaciones (símbolo del sistema)
+      href: running-upgrade-advisor-command-prompt.md
+    - name: Utilizar los informes
+      href: using-reports.md
+    - name: Errores del asesor de actualizaciones
+      href: upgrade-advisor-errors.md
+- name: Temas de procedimiento del Asesor de actualizaciones
+  href: upgrade-advisor-how-to-topics.md
+  items:
+    - name: Instalar el Asesor de actualizaciones
+      href: how-to-install-upgrade-advisor.md
+    - name: Cómo iniciar el Asesor de actualizaciones
+      href: how-to-launch-upgrade-advisor.md
+    - name: Cómo ejecutar el Asistente para análisis del Asesor de actualizaciones
+      href: how-to-run-the-upgrade-advisor-analysis-wizard.md
+    - name: Cómo ver un informe del Asesor de actualizaciones
+      href: how-to-view-an-upgrade-advisor-report.md
+    - name: Cómo filtrar informes
+      href: how-to-filter-reports.md
+    - name: Cómo exportar informes
+      href: how-to-export-reports.md
+- name: Referencia de la interfaz de usuario
+  href: upgrade-advisor-user-interface-reference.md
+  items:
+    - name: Componentes de SQL Server
+      href: sql-server-components.md
+    - name: Parámetros de conexión
+      href: connection-parameters.md
+    - name: Parámetros de SQL Server
+      href: sql-server-parameters.md
+    - name: Parámetros de Analysis Services
+      href: analysis-services-parameters.md
+    - name: Parámetros de Reporting Services
+      href: reporting-services-parameters.md
+    - name: Parámetros de Integration Services
+      href: integration-services-parameters.md
+    - name: Confirmar la configuración del Asesor de actualizaciones
+      href: confirm-upgrade-advisor-settings.md
+    - name: Progreso del Asesor de actualizaciones
+      href: upgrade-advisor-progress.md
+- name: Resolver problemas de la actualización
+  href: resolving-upgrade-issues.md
+  items:
+    - name: Problemas de actualización de última hora
+      href: late-breaking-upgrade-issues.md
+    - name: Problemas de actualización del motor de la base de datos
+      href: database-engine-upgrade-issues.md
+      items:
+        - name: El carácter 0xFFFF no es válido como identificador de objeto
+          href: 0xffff-character-is-not-valid-as-an-object-identifier.md
+        - name: 'Después de la actualización, las nuevas palabras clave reservadas no se pueden utilizar como identificadores'
+          href: after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers.md
+        - name: Cambios en el comportamiento de longitud de cadena y subcadena
+          href: changes-to-behavior-of-string-length-and-substring.md
+        - name: Cambios del comportamiento de syslockinfo y sp_lock
+          href: changes-to-behavior-in-syslockinfo-and-sp-lock.md
+        - name: Cambios en el comportamiento de marcas de seguimiento
+          href: changes-to-behavior-of-trace-flags.md
+        - name: Cambios en los límites de CPU y de memoria de SQL Server Reporting Services Standard y Enterprise
+          href: cpu-memory-limits-changes-sql-server-reporting-services-standard-enterprise.md
+        - name: 'Cambios en el formato de almacenamiento de los tipos xs:dateTime, xs:date y xs:time'
+          href: changes-to-the-storage-format-for-types-xs-datetime-xs-date-and-xs-time.md
+        - name: El alias de tabla no puede asignar un prefijo a los alias de columna de la cláusula ORDER BY
+          href: column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias.md
+        - name: Se han quitado los comandos DBCC desusados
+          href: deprecated-dbcc-commands-have-now-been-removed.md
+        - name: Desasociar la base de datos ID 32767
+          href: detach-database-id-32767.md
+        - name: No se pueden actualizar los inicios de sesión inactivos de SQL Server 6.5
+          href: dormant-sql-server-6-5-logins-cannot-be-upgraded.md
+        - name: No se permite FOR BROWSE en vistas en modo de compatibilidad 90 o posteriores
+          href: for-browse-is-not-allowed-in-views-in-90-or-later-compatibility-modes.md
+        - name: Las consultas FOR XML AUTO devuelven referencias a tablas derivadas en los modos de compatibilidad 90 o superiores
+          href: for-xml-auto-queries-return-derived-table-references-90-later-compatibility-mode.md
+        - name: 'INFORMATION_SCHEMA.SCHEMATA devuelve los nombres de esquema en una base de datos, no las bases de datos en una instancia'
+          href: information-schema-schemata-returns-schema-names-not-databases.md
+        - name: Un nombre no válido de la canalización con nombre puede bloquear la actualización
+          href: invalid-named-pipe-name-can-block-upgrade.md
+        - name: Las tablas de historial de restauración o copia de seguridad de gran tamaño hacen que la actualización aparentemente no responda
+          href: large-backup-or-restore-history-tables-make-upgrade-appear-to-not-respond.md
+        - name: Las constantes de gran tamaño están tipificadas como tipos de valor grande en los modos de compatibilidad 90 o superiores
+          href: large-constants-typed-as-large-value-types-90-later-compatibility-mode.md
+        - name: El trasvase de registros no se ejecutará tras la actualización
+          href: log-shipping-will-not-run-after-upgrading.md
+        - name: Modificar las aplicaciones para obtener valores bigint de sysperfinfo.cntr_value
+          href: modify-applications-to-expect-bigint-values-from-sysperfinfo-cntr-value.md
+        - name: 'Modificar las conexiones que utilizan el protocolo de red SPP (Protocolo de paquetes secuenciados) de Banyan VINES o los protocolos Multiprotocolo, AppleTalk o NWLink IPX/SPX.'
+          href: modify-connections-banyan-vines-spp-multiprotocol-appletalk-nwlink-ipx-spx.md
+        - name: Modificar índices que dependen del tipo de valor devuelto de HOST_ID
+          href: modify-indexes-that-depend-on-the-return-type-of-host-id.md
+        - name: Modificar instrucciones UPDATETEXT que leen y escriben en objetos binarios grandes (BLOB)
+          href: modify-updatetext-statements-that-read-and-write-to-binary-large-objects-blobs.md
+        - name: El desencadenador AFTER anidado se lanza incluso cuando el anidamiento de desencadenadores está desactivado
+          href: nested-after-trigger-fires-even-when-trigger-nesting-is-off.md
+        - name: La nueva columna de la salida de sp_helptrigger podría afectar a las aplicaciones
+          href: new-column-in-output-of-sp-helptrigger-may-impact-applications.md
+        - name: osql ya no admite los comandos ED y !! comandos
+          href: osql-no-longer-supports-the-ed-and-commands.md
+        - name: No se admiten los operadores de combinación externa *= y =* en los modos de compatibilidad 90 o posteriores
+          href: outer-join-operators-and-are-not-supported-in-90-or-later-compatibility-modes.md
+        - name: No se pueden actualizar bases de datos de solo lectura
+          href: read-only-databases-cannot-be-upgraded.md
+        - name: 'Quitar llamadas al comando desusado DBCC CONCURRENCYVIOLATION '
+          href: remove-calls-to-the-deprecated-dbcc-concurrencyviolation-command.md
+        - name: Quitar los dos puntos que siguen a las palabras claves reservadas
+          href: remove-colon-following-reserved-keyword.md
+        - name: Quitar las operaciones DDL en las tablas insertadas y eliminadas en los desencadenadores DML
+          href: remove-ddl-operations-on-the-inserted-and-deleted-tables-inside-dml-triggers.md
+        - name: Quitar referencias a procedimientos almacenados del sistema desusados
+          href: remove-references-to-deprecated-system-stored-procedures.md
+        - name: Quitar referencias a tablas del sistema no documentadas
+          href: remove-references-to-undocumented-system-tables.md
+        - name: Quitar instrucciones que quiten objetos del sistema
+          href: remove-statements-that-drop-system-objects.md
+        - name: Eliminar instrucciones que modifican los permisos de nivel de columna en los objetos del sistema
+          href: remove-statements-that-modify-column-level-permissions-on-system-objects.md
+        - name: Eliminar instrucciones que modifican objetos del sistema
+          href: remove-statements-that-modify-system-objects.md
+        - name: Quitar el esquema cdc si se piensa habilitar la captura de datos modificados
+          href: remove-the-cdc-schema-if-you-plan-to-enable-change-data-capture.md
+        - name: Cambiar el nombre de los inicios de sesión que coinciden con nombres de roles fijos de servidor
+          href: rename-logins-matching-fixed-server-role-names.md
+        - name: Quitar UDT nombrados después de los tipos de datos reservados de DATE y TIME
+          href: remove-udt-s-named-after-the-reserved-date-and-time-data-types.md
+        - name: Quitar los UDT nombrados con el tipo de datos reservado ORDPATH
+          href: remove-udt-s-named-after-the-reserved-ordpath-data-type.md
+        - name: Quitar UDT con nombre después de los tipos de datos GEOMETRY y GEOGRAPHY reservados
+          href: remove-udts-named-after-the-reserved-geometry-and-geography-data-types.md
+        - name: Cambiar el nombre de usuario del sistema
+          href: rename-user-sys.md
+        - name: SERVERPROPERTY devuelve el resultado correcto para la propiedad LCID en SQL Server 2005
+          href: serverproperty-returns-correct-result-for-lcid-property-in-sql-server-2005.md
+        - name: Requisitos de cuenta de servicio para actualizar a SQL Server 2008 en un controlador de dominio
+          href: service-account-requirements-upgrade-sql-server-2008-on-domain-controller.md
+        - name: Especificar la palabra clave WITH al utilizar sugerencias de tabla en el modo de compatibilidad 90
+          href: specify-the-with-keyword-when-using-table-hints-in-90-compatibility-mode.md
+        - name: La compatibilidad nativa de SQL Server con SOAP ya no está vigente en esta versión de SQL Server.
+          href: sql-server-native-soap-support-is-discontinued-in-this-version-of-sql-server.md
+        - name: 'Las sugerencias de tabla en definiciones de vistas indizadas se omiten cuando el modo de compatibilidad es 80, mientras que en los modos 90 y superiores, no se permite su uso'
+          href: table-hints-indexed-views-ignored-80-compatibility-mode-not-allowed-90-later.md
+        - name: Actualizar expresiones XPath OPENXML para quitar funciones no compatibles
+          href: update-openxml-xpath-expressions-to-remove-unsupported-functions.md
+        - name: Utilizar sp_rename para cambiar el nombre de índice duplicado
+          href: use-sp-rename-to-rename-duplicate-index-name.md
+        - name: Utilizar la ruta de acceso completa para registrar nombres de DLL de procedimiento almacenado extendido
+          href: use-the-full-path-to-register-extended-stored-procedure-dll-names.md
+        - name: Las funciones definidas por el usuario no se permiten en system_function_schema
+          href: user-defined-functions-are-not-allowed-in-system-function-schema.md
+        - name: Comprobar que es posible escribir en todos los grupos de archivos durante el proceso de actualización
+          href: verify-all-filegroups-are-writeable-during-the-upgrade-process.md
+        - name: Comprobar que autogrow está activo para todos los datos y archivos de registro durante el proceso de actualización
+          href: verify-autogrow-turned-on-for-all-data-and-log-files-during-upgrade.md
+        - name: Comprobar que ningún archivo de base de datos se encuentre en unidades comprimidas durante el proceso de actualización
+          href: verify-no-database-files-on-compressed-drives-during-upgrade.md
+        - name: 'Advertencia sobre el uso del lado cliente de GEOMETRY, GEOGRAPHY y HIERARCHYID'
+          href: warning-about-client-side-usage-of-geometry-geography-and-hierarchyid.md
+        - name: Se han eliminado los procedimientos almacenados del Asistente de web
+          href: web-assistant-stored-procedures-have-been-removed.md
+        - name: No se admite la configuración del proxy WinSock
+          href: winsock-proxy-configuration-not-supported.md
+        - name: WITH CHECK OPTION no se admite en vistas que contengan TOP en el modo de compatibilidad 90 o superior
+          href: with-check-option-not-supported-in-top-views-90-later-compatibility-mode.md
+        - name: No se admite WITH ROW en instrucciones CREATE STATISTICS en el modo de compatibilidad de 90 o superior
+          href: with-rows-not-supported-in-create-statistics-statements-90-later-compatibility-mode.md
+        - name: Otros problemas de actualización del motor de base de datos
+          href: other-database-engine-upgrade-issues.md
+          items:
+            - name: Anuncio del desuso de la creación de reflejo de la base de datos.
+              href: database-mirroring-deprecation-announcement.md
+    - name: Problema de actualización de búsqueda de texto completo
+      href: full-text-search-upgrade-issues.md
+      items:
+        - name: La búsqueda de texto completo ha cambiado desde SQL Server 2008
+          href: full-text-search-has-changed-since-sql-server-2008.md
+        - name: Los separadores y filtros de palabras de la búsqueda de texto completo se han mejorado considerablemente en SQL Server 2005 y en SQL Server 2008
+          href: full-text-search-word-breakers-filters-improved-sql-server-2005-2008.md
+        - name: La longitud de los nombres del catálogo de texto completo está restringida a 120 caracteres
+          href: length-of-full-text-catalog-names-restricted-to-120-characters.md
+        - name: 'De forma predeterminada, el motor de texto completo de Microsoft para SQL Server no cargará componentes de terceros sin firmar'
+          href: full-text-engine-sql-server-default-will-not-load-third-party-components.md
+        - name: Modificar los procedimientos almacenados que utilizan propiedades de búsqueda de texto completo no incluidas
+          href: modify-stored-procedures-that-use-discontinued-full-text-search-properties.md
+        - name: Los índices de texto completo no están permitidos en columnas calculadas no persistentes
+          href: full-text-indexes-on-nonpersisted-computed-columns-are-not-allowed.md
+        - name: 'Los índices de texto completo no se admiten en bases de datos maestras, tempdb ni modelo'
+          href: full-text-indexes-on-master-tempdb-and-model-databases-are-not-supported.md
+        - name: 'La actualización provocará que, de forma predeterminada, la búsqueda de texto completo utilice separadores y filtros de palabras de nivel de instancia, no globales'
+          href: full-text-search-uses-instance-not-global-level-defaults-after-upgrade.md
+        - name: 'Después de la actualización, la búsqueda de texto completo no permitirá los predicados en la expresión OUTPUT INTO'
+          href: full-text-search-will-not-allow-predicates-in-output-into-expressions-after-upgrade.md
+    - name: Problemas de actualización de replicación
+      href: replication-upgrade-issues.md
+      items:
+        - name: 'Con la actualización, se modificarán las suscripciones de actualización en cola que utilicen Message Queue Server'
+          href: upgrading-will-modify-queued-updating-subscriptions-that-use-message-queuing.md
+        - name: Otros problemas de actualización de replicación
+          href: other-replication-upgrade-issues.md
+    - name: Problemas de actualización de Reporting Services (Asesor de actualizaciones)
+      href: reporting-services-upgrade-issues-upgrade-advisor.md
+      items:
+        - name: Certificados de cliente en el sitio web del servidor de informes (Asesor de actualizaciones)
+          href: client-certificates-on-the-report-server-web-site-upgrade-advisor.md
+        - name: Se han detectado extensiones personalizadas en el servidor de informes (Asesor de actualizaciones)
+          href: custom-extensions-were-detected-on-the-report-server-upgrade-advisor.md
+        - name: Se detectaron elementos de informe personalizados en el servidor de informes (Asesor de actualizaciones)
+          href: custom-report-items-were-detected-on-the-report-server-upgrade-advisor.md
+        - name: No se detectaron componentes de compatibilidad con versiones anteriores de IIS (Asesor de actualizaciones)
+          href: iis-backward-compatibility-components-were-not-detected-upgrade-advisor.md
+        - name: Se detectó una restricción de dirección IP (Asesor de actualizaciones)
+          href: ip-address-restriction-detected-upgrade-advisor.md
+        - name: Se han detectado filtros ISAPI en el sitio del servidor de informes (Asesor de actualizaciones)
+          href: isapi-filters-detected-on-the-report-server-site-upgrade-advisor.md
+        - name: Se detectaron extensiones obsoletas en el equipo del servidor de informes (Asesor de actualizaciones)
+          href: obsolete-extensions-were-detected-on-the-report-server-computer-upgrade-advisor.md
+        - name: La base de datos del servidor de informes no está configurada (Asesor de actualizaciones)
+          href: report-server-database-is-not-configured-upgrade-advisor.md
+        - name: Se ha detectado el grupo de servicio web del servidor de informes de SQL Server 2005 (Asesor de actualizaciones)
+          href: sql-server-2005-report-server-web-service-group-detected-upgrade-advisor.md
+        - name: Los directorios virtuales no están especificados (Asesor de actualizaciones)
+          href: virtual-directories-are-unspecified-upgrade-advisor.md
+        - name: El directorio virtual tiene un método de autenticación no admitido (Asesor de actualizaciones)
+          href: virtual-directory-has-unsupported-authentication-method-upgrade-advisor.md
+        - name: Cambios en los límites de CPU y de memoria de SQL Server Reporting Services Standard y Enterprise (Asesor de actualizaciones)
+          href: cpu-memory-limits-changes-sql-server-standard-enterprise-upgrade-advisor.md
+        - name: Cuentas de dominio necesarias para una granja de servidores de SharePoint (Asesor de actualizaciones)
+          href: domain-accounts-required-for-sharepoint-farm-upgrade-advisor.md
+        - name: Exploración directa del servidor de informes (Asesor de actualizaciones)
+          href: direct-browsing-to-report-server-upgrade-advisor.md
+        - name: Microsoft SharePoint 2007 está instalado (Asesor de actualizaciones)
+          href: microsoft-sharepoint-2007-is-installed-upgrade-advisor.md
+        - name: El servicio compartido de SharePoint de Microsoft SQL Server Reporting Services está instalado en paralelo (Asesor de actualizaciones)
+          href: sql-server-reporting-services-sharepoint-shared-service-side-by-side-upgrade-advisor.md
+        - name: Intercalación del servidor de motor de base de datos incompatible (Asesor de actualizaciones)
+          href: incompatible-database-engine-server-collation-upgrade-advisor.md
+        - name: Otros problemas de actualización de Reporting Services
+          href: other-reporting-services-upgrade-issues.md
+    - name: Problemas de actualización del Agente SQL Server
+      href: sql-server-agent-upgrade-issues.md
+      items:
+        - name: Se han reemplazado los planes de mantenimiento de bases de datos
+          href: database-maintenance-plans-superseded.md
+        - name: Los administradores del sistema son los únicos usuarios que pueden escribir archivos de registro de paso de trabajo en el sistema de archivos
+          href: only-sysadmin-users-can-write-job-step-log-files-to-the-file-system.md
+        - name: Reemplazar el uso del procedimiento almacenado extendido xp_sqlagent_proxy_account con nuevos procedimientos almacenados
+          href: replace-xp-sqlagent-proxy-account-extended-sp-with-new-stored-procedures.md
+        - name: La categoría del trabajo de trasvase de registros del Agente SQL Server provoca errores en la actualización
+          href: sql-server-agent-log-shipping-job-category-causes-upgrade-to-fail.md
+        - name: El servicio del Agente SQL Server no puede utilizar la autenticación de SQL Server
+          href: sql-server-agent-service-cannot-use-sql-server-authentication.md
+        - name: Actualizar la sintaxis de tokens en los pasos de trabajo del Agente SQL Server
+          href: update-token-syntax-in-sql-server-agent-job-steps.md
+        - name: Actualizar todos los servidores de destino antes de actualizar el servidor maestro
+          href: upgrade-all-target-servers-before-upgrading-the-master-server.md
+        - name: La actualización cambiará la cuenta de proxy de usuario del Agente SQL Server a la cuenta temporal UpgradedProxyAccount
+          href: upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md
+- name: Instalación inicial y de servicio
+  href: setup-and-servicing-installation.md
+  items:
+    - name: Consideraciones acerca de las licencias para SQL Server
+      href: licensing-considerations-for-sql-server.md
+- name: Información general de la documentación de instalación de SQL Server
+  href: overview-of-sql-server-setup-documentation.md
+- name: Interfaz de usuario del programa de instalación de SQL Server 2014
+  href: sql-server-2014-setup-user-interface.md
+- name: Referencia de la interfaz de usuario del programa de instalación de SQL Server
+  href: sql-server-setup-user-interface-reference.md
+  items:
+    - name: Aceptar los términos de licencia
+      href: accept-license-terms.md
+    - name: Agregar nodo de clúster de conmutación por error de SQL Server
+      href: add-sql-server-failover-cluster-node.md
+    - name: Configuración de Analysis Services - Aprovisionamiento de cuentas
+      href: analysis-services-configuration-account-provisioning.md
+    - name: Configuración de Analysis Services - Directorios de datos
+      href: analysis-services-configuration-data-directories.md
+    - name: Selección de disco en clúster
+      href: cluster-disk-selection.md
+    - name: Configuración de red en clúster
+      href: cluster-network-configuration.md
+    - name: Configuración del nodo de clúster
+      href: cluster-node-configuration.md
+    - name: Configuración de nodo de clúster (Completar)
+      href: cluster-node-configuration-complete.md
+    - name: Grupo de recursos de clúster
+      href: cluster-resource-group.md
+    - name: Directiva de seguridad de clúster
+      href: cluster-security-policy.md
+    - name: Completar - Completar imagen
+      href: complete-complete-image.md
+    - name: Progreso de compleción de la imagen
+      href: complete-image-progress.md
+    - name: Reglas de completar imagen
+      href: complete-image-rules.md
+    - name: Completar - Preparar imagen
+      href: complete-prepare-image.md
+    - name: Completar - Reparar
+      href: complete-repair.md
+    - name: Completar - Actualizar
+      href: complete-upgrade.md
+    - name: Configuración del motor de base de datos - Aprovisionamiento de cuentas
+      href: database-engine-configuration-account-provisioning.md
+    - name: Configuración del motor de base de datos - Directorios de datos
+      href: database-engine-configuration-data-directories.md
+    - name: Configuración del motor de base de datos - Secuencia de archivo
+      href: database-engine-configuration-filestream.md
+    - name: Configuración del motor de base de datos - Instancia de usuario
+      href: database-engine-configuration-user-instance.md
+    - name: Configuración de Distributed Replay Controller
+      href: distributed-replay-controller-configuration.md
+    - name: Configuración de Distributed Replay Client
+      href: distributed-replay-client-configuration.md
+    - name: Reglas de actualización de edición
+      href: edition-upgrade-rules.md
+    - name: Informe de clústeres de conmutación por error
+      href: failover-cluster-report.md
+    - name: Revisión de características
+      href: feature-review.md
+    - name: Reglas de instalación
+      href: installation-rules.md
+    - name: Reglas de características
+      href: feature-rules.md
+    - name: Selección de características
+      href: feature-selection.md
+    - name: Selección de características (Desinstalar)
+      href: feature-selection-uninstall.md
+    - name: Seleccionar características (actualización)
+      href: select-features-upgrade.md
+    - name: Opciones de actualización de búsqueda de texto completo
+      href: full-text-search-upgrade-options.md
+    - name: Completar - Instalación
+      href: complete-installation.md
+    - name: Requisitos previos de la instalación
+      href: installation-prerequisites.md
+    - name: Progreso de la instalación
+      href: installation-progress.md
+    - name: Tipo de instalación
+      href: installation-type.md
+    - name: Configuración de instancia
+      href: instance-configuration.md
+    - name: Seleccionar instancia (Desinstalar)
+      href: instance-selection-uninstall.md
+    - name: Seleccionar instancia (Actualizar)
+      href: instance-selection-upgrade.md
+    - name: Seleccionar instancia
+      href: select-instance.md
+    - name: Finalización de la desinstalación
+      href: post-uninstall.md
+    - name: Progreso de preparación de imagen
+      href: prepare-image-progress.md
+    - name: Reglas para preparar la imagen
+      href: prepare-image-rules.md
+    - name: Tipo de imagen para preparar
+      href: prepare-image-type.md
+    - name: Clave de producto
+      href: product-key.md
+    - name: Progreso (Desinstalar)
+      href: progress-uninstall.md
+    - name: Listo para completar la imagen
+      href: ready-to-complete-image.md
+    - name: Listo para instalar
+      href: ready-to-install.md
+    - name: Listo para preparar la imagen
+      href: ready-to-prepare-image.md
+    - name: Listo para reparar
+      href: ready-to-repair.md
+    - name: Eliminar un nodo de clúster de conmutación por error de SQL Server
+      href: remove-sql-server-failover-cluster-node.md
+    - name: Progreso de la reparación
+      href: repair-progress.md
+    - name: Opciones de configuración de Reporting Services
+      href: reporting-services-configuration-options-ssrs.md
+    - name: Actualización del modo de SharePoint de Reporting Services
+      href: reporting-services-sharepoint-mode-upgrade-ssrs.md
+    - name: Autenticación del modo de SharePoint de Reporting Services
+      href: reporting-services-sharepoint-mode-authentication.md
+    - name: Seleccionar una instancia preparada
+      href: select-a-prepared-instance.md
+    - name: Configurar servidor - Intercalación
+      href: server-configuration-collation.md
+    - name: Configuración del servidor - Cuentas de servicio
+      href: server-configuration-service-accounts.md
+    - name: Rol de instalación
+      href: setup-role.md
+    - name: Asistente para el clúster de conmutación por error de SQL Server (Completar)
+      href: sql-server-failover-cluster-wizard-complete.md
+    - name: Asistente para el clúster de conmutación por error de SQL Server (Instalar)
+      href: sql-server-failover-cluster-wizard-install.md
+    - name: Asistente para el clúster de conmutación por error de SQL Server (Preparar)
+      href: sql-server-failover-cluster-wizard-prepare.md
+    - name: Listo para actualizar
+      href: ready-to-upgrade.md
+    - name: Reglas de instalación
+      href: install-rules.md
+    - name: Página de desinstalación
+      href: uninstallation-rules.md
+    - name: Progreso de actualización
+      href: upgrade-progress.md
+    - name: Reglas de características (actualización)
+      href: feature-rules-upgrade.md
+    - name: Compruebe las opciones de desinstalación
+      href: verify-uninstall-options.md
+- name: Instalación de servicio de SQL Server
+  href: sql-server-servicing-installation.md
+  items:
+    - name: Instalar actualizaciones desde el símbolo del sistema
+      href: ../../database-engine/install-windows/installing-updates-from-the-command-prompt.md
+    - name: Validar una instalación correcta de una actualización de SQL Server
+      href: how-to-validate-successful-installation-of-a-sql-server-update.md
+    - name: Información general sobre la instalación de servicios de SQL Server
+      href: overview-of-sql-server-servicing-installation.md
+    - name: información general
+      href: welcome.md
+    - name: Términos de licencia
+      href: license-terms.md
+    - name: Seleccionar características
+      href: select-features.md
+    - name: Comprobar archivos en uso
+      href: check-files-in-use.md
+    - name: Listo para actualizar
+      href: ready-to-update.md
+    - name: Progreso de la actualización
+      href: update-progress.md
+    - name: Operación completada
+      href: complete.md

@@ -1,0 +1,84 @@
+- name: Instalación de SQL Server
+  href: installation-for-sql-server.md
+- name: Actualizar SQL Server
+  href: upgrade-sql-server.md
+  items:
+    - name: Actualizaciones de ediciones y versiones admitidas de SQL Server 2017
+      href: supported-version-and-edition-upgrades-2017.md
+    - name: Actualizaciones de ediciones y versiones admitidas de SQL Server 2016
+      href: supported-version-and-edition-upgrades.md
+    - name: Preparar la actualización con la ejecución de Data Migration Assistant
+      href: prepare-for-upgrade-by-running-data-migration-assistant.md
+    - name: ¿Desea actualizar desde SQL Server 2005?
+      href: are-you-upgrading-from-sql-server-2005.md
+    - name: Actualizar Analysis Services
+      href: upgrade-analysis-services.md
+    - name: Actualizar el motor de base de datos
+      href: upgrade-database-engine.md
+      items:
+        - name: Elección de un método de actualización del motor de base de datos
+          href: choose-a-database-engine-upgrade-method.md
+        - name: Planeación y prueba del plan de actualización del motor de base de datos
+          href: plan-and-test-the-database-engine-upgrade-plan.md
+        - name: Completar la actualización motor de base de datos
+          href: complete-the-database-engine-upgrade.md
+          items:
+            - name: Cambiar el modo de compatibilidad de la base de datos y usar el almacén de consultas
+              href: change-the-database-compatibility-mode-and-use-the-query-store.md
+    - name: Actualizar Data Quality Services
+      href: upgrade-data-quality-services.md
+    - name: Actualizar Master Data Services
+      href: upgrade-master-data-services.md
+    - name: Actualización de PowerPivot para SharePoint
+      href: upgrade-power-pivot-for-sharepoint.md
+    - name: Actualizar bases de datos replicadas
+      href: upgrade-replicated-databases.md
+    - name: Actualizar las herramientas de administración de SQL Server
+      href: upgrade-sql-server-management-tools.md
+    - name: Actualizar SQL Server con el Asistente para instalación (programa de instalación)
+      href: upgrade-sql-server-using-the-installation-wizard-setup.md
+    - name: Actualizar a una edición diferente de SQL Server (programa de instalación)
+      href: upgrade-to-a-different-edition-of-sql-server-setup.md
+- name: Instalar SQL Server
+  href: install-sql-server.md
+  items:
+    - name: Instalar el motor de base de datos de SQL Server
+      href: install-sql-server-database-engine.md
+    - name: Instalar la replicación de SQL Server
+      href: install-sql-server-replication.md
+    - name: Instalar SQL Server PowerShell
+      href: install-sql-server-powershell.md
+    - name: Instalar SQL Server con el recurso compartido de archivos SMB como opción de almacenamiento
+      href: install-sql-server-with-smb-fileshare-as-a-storage-option.md
+    - name: Consideraciones acerca de la instalación de SQL Server con SysPrep
+      href: considerations-for-installing-sql-server-using-sysprep.md
+    - name: Comprobar los parámetros del Comprobador de configuración del sistema
+      href: check-parameters-for-the-system-configuration-checker.md
+    - name: Configurar SQL Server en una instalación Server Core
+      href: configure-sql-server-on-a-server-core-installation.md
+    - name: Instalar SQL Server en Server Core
+      href: install-sql-server-on-server-core.md
+    - name: Instalar SQL Server desde el Asistente para la instalación (programa de instalación)
+      href: install-sql-server-from-the-installation-wizard-setup.md
+    - name: Instalar SQL Server desde el símbolo del sistema
+      href: install-sql-server-from-the-command-prompt.md
+    - name: Instalación de SQL Server mediante un archivo de configuración
+      href: install-sql-server-using-a-configuration-file.md
+    - name: Instalar SQL Server con SysPrep
+      href: install-sql-server-using-sysprep.md
+    - name: Agregar características a una instancia de SQL Server (programa de instalación)
+      href: add-features-to-an-instance-of-sql-server-setup.md
+    - name: Reparar una instalación de SQL Server con errores
+      href: repair-a-failed-sql-server-installation.md
+    - name: Cambiar el nombre de un equipo que hospeda una instancia independiente de SQL Server
+      href: rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md
+    - name: Instalar actualizaciones de servicio de SQL Server
+      href: install-sql-server-servicing-updates.md
+    - name: Ver y leer los archivos de registro de instalación de SQL Server
+      href: view-and-read-sql-server-setup-log-files.md
+    - name: Validar una instalación de SQL Server
+      href: validate-a-sql-server-installation.md
+    - name: Instalar actualizaciones desde el símbolo del sistema
+      href: installing-updates-from-the-command-prompt.md
+- name: Auditoría local para colección de comentarios sobre el uso de SQL Server
+  href: local-audit-for-sql-server-usage-feedback-collection.md

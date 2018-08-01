@@ -1,0 +1,154 @@
+- name: Administrar servidores mediante administración basada en directivas
+  href: administer-servers-by-using-policy-based-management.md
+  items:
+    - name: Almacenamiento de la administración basada en directivas
+      href: policy-based-management-storage.md
+    - name: Configurar las propiedades generales de la administración basada en directivas
+      href: configure-the-general-properties-of-policy-based-management.md
+    - name: Configurar alertas para notificar los errores de directiva a los administradores de directivas
+      href: configure-alerts-to-notify-policy-administrators-of-policy-failures.md
+    - name: Crear una directiva de administración basada en directivas
+      href: create-a-policy-based-management-policy.md
+    - name: Crear una nueva condición de administración basada en directivas.
+      href: create-a-new-policy-based-management-condition.md
+    - name: Ver o modificar las propiedades de una directiva de administración basada en directivas
+      href: view-or-modify-the-properties-of-a-policy-based-management-policy.md
+    - name: Ver o modificar las propiedades de una condición de administración basada en directivas
+      href: view-or-modify-the-properties-of-a-policy-based-management-condition.md
+    - name: Eliminar una directiva de administración basada en directivas
+      href: delete-a-policy-based-management-policy.md
+    - name: Eliminar una condición de administración basada en directivas
+      href: delete-a-policy-based-management-condition.md
+    - name: Evaluar una directiva de administración basada en directivas desde un objeto
+      href: evaluate-a-policy-based-management-policy-from-an-object.md
+    - name: Evaluar una directiva de administración basada en directivas desde dicha directiva
+      href: evaluate-a-policy-based-management-policy-from-that-policy.md
+    - name: Evaluar una directiva de administración basada en directivas según una programación
+      href: evaluate-a-policy-based-management-policy-on-a-schedule.md
+    - name: Exportar una directiva de administración basada en directivas
+      href: export-a-policy-based-management-policy.md
+    - name: Importar una directiva de administración basada en directivas
+      href: import-a-policy-based-management-policy.md
+    - name: Suscribir una base de datos a una categoría de directiva o anular la suscripción
+      href: subscribe-or-unsubscribe-a-database-to-a-policy-category.md
+    - name: Administrar categorías de directiva
+      href: manage-policy-categories.md
+- name: Trabajar con facetas de administración basada en directivas
+  href: working-with-policy-based-management-facets.md
+  items:
+    - name: Ver las facetas de administración basada en directivas en un objeto de SQL Server
+      href: view-the-policy-based-management-facets-on-a-sql-server-object.md
+    - name: Ver las propiedades de una faceta de administración basada en directivas
+      href: view-the-properties-of-a-policy-based-management-facet.md
+    - name: Copiar en un archivo XML un estado de faceta de administración basada en directivas
+      href: copy-a-policy-based-management-facet-state-to-an-xml-file.md
+- name: Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas
+  href: monitor-and-enforce-best-practices-by-using-policy-based-management.md
+  items:
+    - name: Intensidad del cifrado de claves asimétricas
+      href: asymmetric-keys-encryption-strength.md
+    - name: Los archivos de copia de seguridad deben estar en dispositivos independientes de los archivos de base de datos
+      href: dbengine-backup-files-must-be-on-separate-devices-from-the-database-files.md
+    - name: Comprobar si hay problemas de retraso en la E/S en el subsistema de E/S de disco
+      href: check-disk-input-and-output-subsystem-for-io-delay-problems.md
+    - name: Comprobación de la existencia de problemas de reintento de lectura en el subsistema de entrada y salida del disco
+      href: check-disk-input-output-subsystem-for-read-retry-problems.md
+    - name: Comprobar la integridad de una base de datos con páginas sospechosas
+      href: check-integrity-of-database-with-suspect-pages.md
+    - name: Superposición correcta de la máscara de afinidad y la máscara de E/S de afinidad
+      href: correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md
+    - name: Archivos de registro de seguimiento predeterminados deshabilitados
+      href: default-trace-log-files-disabled.md
+    - name: Detectar solicitud de E/S con error
+      href: detect-failed-input-and-output-requests.md
+    - name: Detectar problemas de adaptadores de host SCSI
+      href: detect-scsi-host-adapter-issues.md
+    - name: Error de control del controlador de dispositivo
+      href: device-driver-control-error.md
+    - name: Error por dispositivo no listo
+      href: device-not-ready-error.md
+    - name: Deshabilitar la agrupación ligera
+      href: disable-lightweight-pooling.md
+    - name: Permisos de invitado en bases de datos de usuario
+      href: guest-permissions-on-user-databases.md
+    - name: Input and Output Error During Hard Page Fault
+      href: input-and-output-error-during-hard-page-fault.md
+    - name: Aumentar o deshabilitar el umbral de procesos bloqueados
+      href: increase-or-disable-blocked-process-threshold.md
+    - name: Mantener el valor predeterminado de la máscara de afinidad
+      href: keep-the-affinity-mask-default-value.md
+    - name: Mantener el valor predeterminado de la opción de configuración Bloqueos
+      href: keep-the-locks-configuration-option-default-value.md
+    - name: El tamaño de paquete de red no debería superar 8060 bytes
+      href: network-packet-size-should-not-exceed-8060-bytes.md
+    - name: Copia de seguridad no actualizada
+      href: outdated-backup.md
+    - name: Colocar los datos y los archivos de registro en unidades independientes
+      href: place-data-and-log-files-on-separate-drives.md
+    - name: Permisos públicos de servidor
+      href: server-public-permissions.md
+    - name: Establecer en OFF la opción de base de datos AUTO_CLOSE
+      href: set-the-auto-close-database-option-to-off.md
+    - name: Establecer la opción de base de datos AUTO_SHRINK en OFF
+      href: set-the-auto-shrink-database-option-to-off.md
+    - name: Establecer la intercalación de bases de datos definidas por el usuario para que coincidan con las de las bases de datos modelo y maestra
+      href: dbengine-set-collation-user-defined-databases.md
+    - name: Establecer la opción Grado máximo de paralelismo para lograr un rendimiento óptimo
+      href: set-the-max-degree-of-parallelism-option-for-optimal-performance.md
+    - name: Establecer la opción de base de datos PAGE_VERIFY en CHECKSUM.
+      href: set-the-page-verify-database-option-to-checksum.md
+    - name: Expiración de contraseña de inicio de sesión de SQL Server
+      href: sql-server-login-password-expiration.md
+    - name: Seguridad de la contraseña de inicio de sesión de SQL Server
+      href: sql-server-login-password-strength.md
+    - name: Tiempo de espera de entrada y salida del sistema de almacenamiento
+      href: storage-system-input-output-time-out.md
+    - name: Claves simétricas en bases de datos del sistema
+      href: symmetric-keys-on-system-databases.md
+    - name: Claves simétricas en bases de datos de usuario
+      href: symmetric-keys-on-user-databases.md
+    - name: Bit de confianza
+      href: trustworthy-bit.md
+    - name: Errores del sistema inesperados
+      href: unexpected-system-failures.md
+    - name: Usar Correo electrónico de base de datos en lugar de SQL Mail
+      href: use-database-mail-instead-of-sql-mail.md
+    - name: Comprobar el valor de Máximo de subprocesos de trabajo
+      href: verify-max-worker-threads-setting.md
+- name: Nodo Administración de directivas (Explorador de objetos)
+  href: policy-management-node-object-explorer.md
+  items:
+    - name: 'Cuadro de diálogo Crear nueva condición o Abrir condición, página General'
+      href: create-new-condition-or-open-condition-dialog-box-general-page.md
+    - name: 'Cuadro de diálogo Crear nueva condición o Abrir condición, página Descripción'
+      href: create-new-condition-or-open-condition-dialog-box-description-page.md
+    - name: 'Cuadro de diálogo Abrir condición, página Directivas dependientes'
+      href: open-condition-dialog-box-dependent-policies-page.md
+    - name: Cuadro de diálogo Edición avanzada (condición)
+      href: advanced-edit-condition-dialog-box.md
+    - name: 'Cuadro de diálogo Crear nueva directiva o Abrir directiva, página General'
+      href: create-new-policy-or-open-policy-dialog-box-general-page.md
+    - name: 'Cuadro de diálogo Crear nueva directiva o Abrir directiva, página Descripción'
+      href: create-new-policy-or-open-policy-dialog-box-description-page.md
+    - name: Cuadro de diálogo Ver directivas
+      href: view-policies-dialog-box.md
+    - name: 'Cuadro de diálogo Evaluar directivas, página Selección de directiva'
+      href: evaluate-policies-dialog-box-policy-selection-page.md
+    - name: 'Cuadro de diálogo Evaluar directivas, página Resultados de la evaluación'
+      href: evaluate-policies-dialog-box-evaluation-results-page.md
+    - name: 'Cuadro de diálogo Propiedades de faceta, página General'
+      href: facet-properties-dialog-box-general-page.md
+    - name: 'Cuadro de diálogo Propiedades de faceta, página Directivas dependientes'
+      href: facet-properties-dialog-box-dependent-policies-page.md
+    - name: 'Cuadro de diálogo Propiedades de faceta, página Condiciones dependientes'
+      href: facet-properties-dialog-box-dependent-conditions-page.md
+    - name: Cuadro de diálogo Vista detallada de resultados
+      href: results-detailed-view-dialog-box.md
+    - name: Ver facetas (cuadro de diálogo)
+      href: view-facets-dialog-box.md
+    - name: Seleccionar origen (cuadro de diálogo)
+      href: select-source-dialog-box.md
+    - name: Exportar como directiva (cuadro de diálogo)
+      href: export-as-policy-dialog-box.md
+    - name: Importar directivas (cuadro de diálogo)
+      href: import-policies-dialog-box.md

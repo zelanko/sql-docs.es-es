@@ -1,0 +1,52 @@
+- name: Temas de procedimientos de ODBC
+  href: odbc-how-to-topics.md
+- name: Subáreas
+  items:
+    - name: Ejecutar consultas +
+      href: ../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md
+    - name: Cursores +
+      href: ../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md
+    - name: Copia masiva +
+      href: ../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md
+- name: Asignar identificadores y conectarse a SQL Server (ODBC)
+  href: allocate-handles-and-connect-to-sql-server-odbc.md
+- name: Llamar a SQLColumns sobre una tabla con columnas dispersas
+  href: call-sqlcolumns-on-a-table-with-sparse-columns.md
+- name: 'Configurar el controlador ODBC de SQL Server: agregar un origen de datos'
+  href: configuring-the-sql-server-odbc-driver-add-a-data-source.md
+- name: 'Configurar el controlador ODBC de SQL Server: eliminar un origen de datos'
+  href: configuring-the-sql-server-odbc-driver-delete-a-data-source.md
+- name: Obtener la autenticación mutua de Kerberos
+  href: get-mutual-kerberos-authentication.md
+- name: Insertar filas en la columna Geography (ODBC)
+  href: how-to-insert-rows-into-geography-column-odbc.md
+- name: 'Administrar columnas de texto e imagen: utilizar columnas de datos en ejecución'
+  href: managing-text-and-image-columns-use-data-at-execution-columns.md
+- name: 'Administrar columnas de texto e imagen: utilizar parámetros de datos en ejecución'
+  href: managing-text-and-image-columns-use-data-at-execution-parameters.md
+- name: Procesar errores de ODBC (ODBC)
+  href: process-odbc-errors-odbc.md
+- name: 'Procesar resultados: procesar resultados'
+  href: processing-results-process-results.md
+- name: 'Procesar resultados: recuperar información del conjunto de resultados'
+  href: processing-results-retrieve-result-set-information.md
+- name: Generar perfiles del rendimiento del controlador ODBC (ODBC)
+  href: profiling-odbc-driver-performance-odbc.md
+- name: 'Generar perfiles de datos de rendimiento del controlador ODBC: registrar las consultas de larga ejecución'
+  href: profiling-odbc-driver-performance-data-log-long-running-queries.md
+- name: Generar perfiles de datos de rendimiento del controlador ODBC
+  href: profiling-odbc-driver-performance-data.md
+- name: 'Ejecutar procedimientos almacenados: llamar a procedimientos almacenados'
+  href: running-stored-procedures-call-stored-procedures.md
+- name: 'Ejecutar procedimientos almacenados: procesar códigos de retorno y parámetros de salida'
+  href: running-stored-procedures-process-return-codes-and-output-parameters.md
+- name: Enviar y recibir datos incrementalmente con FILESTREAM (ODBC)
+  href: send-and-receive-data-incrementally-with-filestream-odbc.md
+- name: Compatibilidad con UDT de gran tamaño
+  href: support-for-large-udts.md
+- name: Usar tipos de fecha y hora
+  href: use-date-and-time-types.md
+- name: Usar Microsoft DTC (Coordinador de transacciones distribuidas) (ODBC)
+  href: use-microsoft-distributed-transaction-coordinator-odbc.md
+- name: Usar parámetros con valores de tabla (ODBC)
+  href: use-table-valued-parameters-odbc.md

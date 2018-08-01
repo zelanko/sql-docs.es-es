@@ -1,0 +1,48 @@
+- name: Características de SQL Server Native Client
+  href: sql-server-native-client-features.md
+- name: Obtener acceso a información de diagnóstico en el registro de eventos extendidos
+  href: accessing-diagnostic-information-in-the-extended-events-log.md
+- name: Cambiar las contraseñas mediante programación
+  href: changing-passwords-programmatically.md
+- name: Mejoras en la fecha y la hora
+  href: date-and-time-improvements.md
+- name: Compatibilidad con FILESTREAM
+  href: filestream-support.md
+- name: Tipos definidos por el usuario de CLR grandes
+  href: large-clr-user-defined-types.md
+- name: Detección de metadatos
+  href: metadata-discovery.md
+- name: Cambio de comportamiento del controlador ODBC al administrar las conversiones de caracteres
+  href: odbc-driver-behavior-change-when-handling-character-conversions.md
+- name: Realizar operaciones asincrónicas
+  href: performing-asynchronous-operations.md
+- name: Realizar operaciones de copia masiva
+  href: performing-bulk-copy-operations.md
+- name: Compatibilidad con Nombre de la entidad de seguridad del servicio (SPN) en conexiones cliente
+  href: service-principal-name-spn-support-in-client-connections.md
+- name: Compatibilidad con columnas dispersas en SQL Server Native Client
+  href: sparse-columns-support-in-sql-server-native-client.md
+- name: Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres
+  href: sql-server-native-client-support-for-high-availability-disaster-recovery.md
+- name: Compatibilidad de SQL Server Native Client con LocalDB
+  href: sql-server-native-client-support-for-localdb.md
+- name: Parámetros con valores de tabla (SQL Server Native Client)
+  href: table-valued-parameters-sql-server-native-client.md
+- name: Usar la creación de reflejo de bases de datos
+  href: using-database-mirroring.md
+- name: Utilizar el cifrado sin validación
+  href: using-encryption-without-validation.md
+- name: Usar tipos de valor grande
+  href: using-large-value-types.md
+- name: Utilizar conjuntos de resultados activos múltiples (MARS)
+  href: using-multiple-active-result-sets-mars.md
+- name: Usar tipos definidos por el usuario
+  href: using-user-defined-types.md
+- name: Usar tipos de datos XML
+  href: using-xml-data-types.md
+- name: Compatibilidad con UTF-16 en SQL Server Native Client 11.0
+  href: utf-16-support-in-sql-server-native-client-11-0.md
+- name: Trabajar con notificaciones de consulta
+  href: working-with-query-notifications.md
+- name: Trabajar con aislamiento de instantánea
+  href: working-with-snapshot-isolation.md

@@ -1,0 +1,264 @@
+- name: Características de la base de datos
+  href: database-features.md
+  items:
+    - name: Bases de datos (motor de base de datos) +
+      href: databases/databases.md
+    - name: Tablas +
+      href: tables/tables.md
+    - name: OLTP en memoria (optimización en memoria) +
+      href: in-memory-oltp/in-memory-oltp-in-memory-optimization.md
+    - name: Índices (motor de base de datos) +
+      href: indexes/indexes.md
+    - name: Tablas e índices con particiones +
+      href: partitions/partitioned-tables-and-indexes.md
+    - name: Replicación +
+      href: replication/sql-server-replication.md
+    - name: Vistas +
+      href: views/views.md
+    - name: Procedimientos almacenados +
+      href: stored-procedures/stored-procedures-database-engine.md
+    - name: Buscar
+      href: ../database-engine/search-sql-server.md
+      items:
+        - name: Búsqueda de texto completo +
+          href: search/full-text-search.md
+        - name: Características de la búsqueda de texto completo desusadas en SQL Server 2014
+          href: search/deprecated-full-text-search-features-in-sql-server-2016.md
+        - name: Propiedades de lista de palabras irrelevantes de texto completo
+          href: ../database-engine/full-text-stoplist-properties.md
+          items:
+            - name: Nueva lista de propiedades de búsqueda
+              href: ../database-engine/new-search-property-list.md
+            - name: Editor de lista de propiedades de búsqueda
+              href: ../database-engine/search-property-list-editor.md
+        - name: Administrar índices de texto completo
+          href: ../database-engine/manage-full-text-indexes.md
+        - name: Búsqueda de texto completo (Ayuda F1)
+          href: ../database-engine/full-text-search-f1-help.md
+          items:
+            - name: Nuevo catálogo de texto completo (página General)
+              href: ../database-engine/new-full-text-catalog-general-page.md
+            - name: Propiedades del catálogo de texto completo (página General)
+              href: ../database-engine/full-text-catalog-properties-general-page.md
+            - name: Propiedades del catálogo de texto completo (página Programación de llenado)
+              href: ../database-engine/full-text-catalog-properties-population-schedule-page.md
+            - name: Propiedades del catálogo de texto completo (Tablas/página Vistas)
+              href: ../database-engine/full-text-catalog-properties-tables-and-views-page.md
+            - name: Propiedades del índice de texto completo (página General)
+              href: ../database-engine/full-text-index-properties-general-page.md
+            - name: Propiedades del índice de texto completo (página Columnas)
+              href: ../database-engine/full-text-index-properties-columns-page.md
+            - name: Propiedades del índice de texto completo (página Programaciones)
+              href: ../database-engine/full-text-index-properties-schedules-page.md
+            - name: Nueva lista de palabras irrelevantes de texto completo (página General)
+              href: ../database-engine/new-full-text-stoplist-general-page.md
+        - name: Búsqueda semántica +
+          href: search/semantic-search-sql-server.md
+    - name: Funciones definidas por el usuario +
+      href: user-defined-functions/user-defined-functions.md
+    - name: Estadísticas +
+      href: statistics/statistics.md
+    - name: Guías de plan +
+      href: performance/plan-guides.md
+    - name: Cursores
+      href: cursors.md
+    - name: Números de secuencia
+      href: sequence-numbers/sequence-numbers.md
+      items:
+        - name: Propiedades de secuencia (página General)
+          href: sequence-numbers/sequence-properties-general-page.md
+    - name: Desencadenadores DDL +
+      href: triggers/ddl-triggers.md
+    - name: Desencadenadores DML +
+      href: triggers/dml-triggers.md
+    - name: Usar sinónimos (motor de base de datos)
+      href: synonyms/synonyms-database-engine.md
+      items:
+        - name: Crear sinónimos
+          href: synonyms/create-synonyms.md
+    - name: Datos XML +
+      href: xml/xml-data-sql-server.md
+    - name: Datos espaciales +
+      href: spatial/spatial-data-sql-server.md
+    - name: Datos de objeto binario grande (Blob) +
+      href: blob/binary-large-object-blob-data-sql-server.md
+    - name: Datos jerárquicos
+      href: hierarchical-data-sql-server.md
+    - name: Aplicaciones de capa de datos +
+      href: data-tier-applications/data-tier-applications.md
+    - name: El registro de transacciones (SQL Server) +
+      href: logs/the-transaction-log-sql-server.md
+    - name: Puntos de comprobación de base de datos
+      href: logs/database-checkpoints-sql-server.md
+      items:
+        - name: Cambiar el tiempo de recuperación de destino de una base de datos
+          href: logs/change-the-target-recovery-time-of-a-database-sql-server.md
+    - name: Realizar copias de seguridad y restaurar bases de datos de SQL Server +
+      href: backup-restore/back-up-and-restore-of-sql-server-databases.md
+    - name: Importar y exportar datos de forma masiva +
+      href: import-export/bulk-import-and-export-of-data-sql-server.md
+    - name: Compresión de datos +
+      href: data-compression/data-compression.md
+    - name: Objetos de automatización OLE en Transact-SQL +
+      href: stored-procedures/ole-automation-objects-in-transact-sql.md
+    - name: Notificaciones de eventos +
+      href: service-broker/event-notifications.md
+    - name: Supervisión y optimización del rendimiento +
+      href: performance/monitor-and-tune-for-performance.md
+- name: Guía del desarrollador (motor de base de datos)
+  href: database-engine-developer-documentation.md
+  items:
+    - name: Conceptos de programación en el ámbito de la integración de Common Language Runtime (CLR) +
+      href: clr-integration/common-language-runtime-clr-integration-programming-concepts.md
+    - name: Programación de SQL Server Native Client +
+      href: native-client/sql-server-native-client-programming.md
+    - name: Conceptos de programación en SQLXML 4.0 +
+      href: sqlxml/sqlxml-4-0-programming-concepts.md
+    - name: Programación de procedimientos almacenados extendidos de motor de base de datos +
+      href: extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md
+    - name: Programar el recopilador de datos
+      href: ../database-engine/dev-guide/data-collector-programming.md
+    - name: Programación de cuadros de mensajes de excepción
+      href: ../database-engine/dev-guide/exception-message-box-programming.md
+      items:
+        - name: Programar cuadros de mensajes de excepción
+          href: ../database-engine/dev-guide/program-exception-message-box.md
+        - name: Implementar una aplicación del cuadro de mensaje de excepción
+          href: ../database-engine/dev-guide/deploying-an-exception-message-box-application.md
+        - name: Referencia de cuadros de mensajes de excepción
+          href: ../database-engine/dev-guide/exception-message-box-reference.md
+    - name: Referencia de SQL Server Express LocalDB
+      href: sql-server-express-localdb-reference.md
+    - name: Referencia de mensajes de error de SQL Server Express LocalDB +
+      href: express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md
+    - name: Referencia de la API de instancia de SQL Server Express LocalDB +
+      href: express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md
+    - name: objetos de administración de SQL Server
+      href: ../database-engine/dev-guide/sql-server-management-objects.md
+      items:
+        - name: Prepararse para usar SMO
+          href: ../database-engine/dev-guide/preparing-to-use-smo.md
+        - name: Requisitos del sistema
+          href: ../database-engine/dev-guide/system-requirements.md
+        - name: Asignación de SQL-DMO a SMO
+          href: ../database-engine/dev-guide/sql-dmo-mapping-to-smo.md
+    - name: Guía de programación para objetos de administración de SQL Server (SMO) +
+      href: server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
+    - name: Instrumental de administración de Windows
+      href: ../database-engine/dev-guide/windows-management-instrumentation.md
+    - name: Conceptos del proveedor WMI de administración de configuración +
+      href: wmi-provider-configuration/wmi-provider-for-configuration-management.md
+    - name: SqlToolsVSNativeHelpers
+      href: sqltoolsvsnativehelpers.md
+      items:
+        - name: FrameWindowVisible
+          href: sqltoolsvsnativehelpers-framewindowvisible.md
+- name: Tutoriales del motor de base de datos
+  href: database-engine-tutorials.md
+  items:
+    - name: 'Tutorial: Introducción al motor de base de datos'
+      href: tutorial-getting-started-with-the-database-engine.md
+      items:
+        - name: 'Lección 1: Conexión al motor de base de datos'
+          href: lesson-1-connecting-to-the-database-engine.md
+        - name: 'Lección 2: Conectarse desde otro equipo'
+          href: lesson-2-connecting-from-another-computer.md
+    - name: 'Tutorial: Uso del tipo de datos hierarchyid'
+      href: tables/tutorial-using-the-hierarchyid-data-type.md
+      items:
+        - name: 'Lección 1: Convertir una tabla en una estructura jerárquica'
+          href: tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md
+          items:
+            - name: Examen de la estructura actual de la tabla Empleado
+              href: tables/lesson-1-1-examining-the-current-structure-of-the-employee-table.md
+            - name: Rellenar una tabla con los datos jerárquicos existentes
+              href: tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md
+            - name: Optimizar la tabla NewOrg
+              href: tables/lesson-1-3-optimizing-the-neworg-table.md
+            - name: 'Resumen: Conversión de una tabla en una estructura jerárquica'
+              href: tables/lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md
+        - name: 'Lección 2: Crear y administrar los datos de una tabla jerárquica'
+          href: tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
+          items:
+            - name: Crear una tabla mediante el tipo de datos hierarchyid
+              href: tables/lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md
+            - name: Rellenar una tabla jerárquica usando métodos jerárquicos
+              href: tables/lesson-2-2-populating-a-hierarchical-table-using-hierarchical-methods.md
+            - name: Realizar una consulta a una tabla jerárquica mediante métodos de jerarquía
+              href: tables/lesson-2-3-querying-a-hierarchical-table-using-hierarchy-methods.md
+            - name: Reordenar los datos de una tabla jerárquica mediante métodos jerárquicos
+              href: tables/lesson-2-4-reordering-data-in-a-hierarchical-table-using-hierarchical-methods.md
+            - name: 'Resumen: Administración de los datos de una tabla jerárquica'
+              href: tables/lesson-2-5-summary-managing-data-in-a-hierarchical-table.md
+    - name: 'Tutorial: Firmar procedimientos almacenados con un certificado'
+      href: tutorial-signing-stored-procedures-with-a-certificate.md
+    - name: 'Tutorial: Ownership Chains and Context Switching'
+      href: tutorial-ownership-chains-and-context-switching.md
+    - name: 'Tutorial: Administrar servidores mediante administración basada en directivas'
+      href: policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md
+      items:
+        - name: 'Lección 1: Crear y aplicar una directiva Desactivado de forma predeterminada'
+          href: policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md
+          items:
+            - name: Crear la directiva Desactivado de forma predeterminada
+              href: policy-based-management/lesson-1-1-create-the-off-by-default-policy.md
+            - name: Configurar un servidor para ejecutar la directiva Desactivado de forma predeterminada
+              href: policy-based-management/lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md
+        - name: 'Lección 2: Crear y aplicar una directiva de normas de denominación'
+          href: policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
+          items:
+            - name: Crear la directiva Finance Name
+              href: policy-based-management/lesson-2-1-create-the-finance-name-policy.md
+            - name: 'Suscribirse a, y comprobar, la directiva Finance Name'
+              href: policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy.md
+    - name: 'Tutorial: evaluar las prácticas recomendadas usando administración basada en directivas'
+      href: ../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md
+      items:
+        - name: 'Lección 1: evaluar las prácticas recomendadas sobre una base a petición'
+          href: ../tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md
+          items:
+            - name: Realizar una evaluación a petición usando Explorador de objetos
+              href: ../tutorials/perform-an-on-demand-evaluation-by-using-object-explorer.md
+            - name: Realizar una evaluación a petición usando servidores registrados
+              href: ../tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md
+        - name: 'Lección 2: evaluar las directivas de las prácticas recomendadas de forma programada'
+          href: ../tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md
+          items:
+            - name: Importar las directivas a una instancia única
+              href: ../tutorials/import-the-policies-to-a-single-instance.md
+            - name: Programar las directivas
+              href: ../tutorials/schedule-the-policies.md
+            - name: Implementar directivas programadas en varias instancias
+              href: ../tutorials/deploy-scheduled-policies-to-multiple-instances.md
+    - name: 'Tutorial: copias de seguridad y restauración de SQL Server en el servicio Azure Blob Storage'
+      href: tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md
+      items:
+        - name: 'Lección 1: Crear objetos de Azure Storage'
+          href: ../tutorials/lesson-1-create-windows-azure-storage-objects.md
+        - name: 'Lección 2: Crear una credencial de SQL Server'
+          href: ../tutorials/lesson-2-create-a-sql-server-credential.md
+        - name: 'Lección 3: Escribir una copia de seguridad completa de la base de datos en el servicio Azure Blob Storage'
+          href: ../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md
+        - name: 'Lección 4: Realizar una restauración desde una copia de seguridad completa de la base de datos'
+          href: ../tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md
+    - name: 'Tutorial: Archivos de datos de SQL Server en el servicio Azure Storage'
+      href: tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
+      items:
+        - name: 'Lección 1: Crear la cuenta y el contenedor de Azure Storage'
+          href: ../tutorials/lesson-1-create-windows-azure-storage-account-and-container.md
+        - name: 'Lección 2: Crear una directiva en el contenedor y generar una clave de firma de acceso compartido (SAS)'
+          href: lesson-1-create-stored-access-policy-and-shared-access-signature.md
+        - name: 'Lección 3: Crear una credencial de SQL Server'
+          href: lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md
+        - name: 'Lección 4: Crear una base de datos de Azure Storage'
+          href: lesson-3-database-backup-to-url.md
+        - name: Lección 5. (Opcional) Cifrar la base de datos mediante TDE
+          href: lesson-4-restore-database-to-virtual-machine-from-url.md
+        - name: 'Lección 6: Migrar una base de datos de una máquina de origen local a un equipo de destino de Windows Azure'
+          href: lesson-5-backup-database-using-file-snapshot-backup.md
+        - name: 'Lección 7: Mover los archivos de datos a Azure Storage'
+          href: lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md
+        - name: 'Lección 8: Restaurar una base de datos en Azure Storage'
+          href: lesson-7-restore-a-database-to-a-point-in-time.md
+        - name: Lección 9. Restaurar una base de datos desde Azure Storage
+          href: lesson-8-restore-as-new-database-from-log-backup.md

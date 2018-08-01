@@ -1,0 +1,67 @@
+- name: SQL Operations Studio (versión preliminar)
+  href: what-is.md
+- name: Install
+  href: download.md
+- name: Notas de la versión
+  href: release-notes.md
+- name: Tutoriales rápidos
+  items:
+    - name: Conectar y consultar SQL Server
+      href: quickstart-sql-server.md
+    - name: Conectar y consultar Azure SQL Database
+      href: quickstart-sql-database.md
+    - name: Conectar y consultar Azure SQL Data Warehouse
+      href: quickstart-sql-dw.md
+- name: Tutoriales
+  items:
+    - name: Editor de T-SQL
+      href: tutorial-sql-editor.md
+    - name: 'Datos de ejemplo: consultas lentas'
+      href: tutorial-qds-sql-server.md
+    - name: 'Datos de ejemplo: uso del espacio de tabla'
+      href: tutorial-table-space-sql-server.md
+    - name: Generar datos personalizados
+      href: tutorial-build-custom-insight-sql-server.md
+    - name: Copias de seguridad y restauración
+      href: tutorial-backup-restore-sql-server.md
+- name: Guías de procedimientos
+  items:
+    - name: Paneles y widgets de datos
+      href: insight-widgets.md
+    - name: Extensiones
+      href: extensions.md
+      items:
+        - name: Agente SQL Server
+          href: sql-server-agent-extension.md
+        - name: SQL Server Profiler
+          href: sql-server-profiler-extension.md
+    - name: Fragmentos de código
+      href: code-snippets.md
+    - name: 'Terminal integrada (PowerShell, Bash)'
+      href: integrated-terminal.md
+    - name: Accesos directos del teclado
+      href: keyboard-shortcuts.md
+    - name: Grupos de servidores
+      href: server-groups.md
+    - name: Control de código fuente
+      href: source-control.md
+    - name: Configuración de área de trabajo y usuario
+      href: settings.md
+    - name: Autenticación de Windows (Kerberos)
+      href: enable-kerberos.md
+    - name: Recopilación de datos de uso
+      href: usage-data-collection.md
+- name: Recursos
+  items:
+    - name: Referencia de Transact-SQL
+      href: ../t-sql/language-reference.md
+    - name: Repositorio de GitHub de SQL Operations Studio (versión preliminar)
+      href: 'https://www.github.com/Microsoft/SqlOpsStudio'
+    - name: Blog de SQL Server
+      href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
+    - name: Artículos nuevos y actualizados
+      href: new-updated-sql-operations-studio.md
+- name: P+F
+  href: faq.md
+- name: Notificar problemas y hacer sugerencias
+  href: 'https://github.com/microsoft/sqlopsstudio/issues'

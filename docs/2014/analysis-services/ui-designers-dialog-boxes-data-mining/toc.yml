@@ -1,0 +1,122 @@
+- name: Diseñadores de interfaz de usuario y cuadros de diálogo para el análisis de minería de datos +
+  href: ui-designers-dialog-boxes-data-mining.md
+- name: Cuadros de diálogo y diseñadores de minería de datos
+  href: ../data-mining-designers-and-dialog-boxes.md
+  items:
+    - name: Diseñador de modelos de minería de datos
+      href: ../data-mining-model-designer-analysis-services-data-mining.md
+    - name: Estructura de minería de datos (vista del Diseñador de modelos de minería)
+      href: ../mining-structure-view-data-mining-model-designer.md
+    - name: 'Nuevo modelo de minería de datos (vista Estructura de minería de datos, cuadro de diálogo)'
+      href: ../new-mining-model-dialog-box-mining-structure-view.md
+    - name: 'Seleccionar una columna (Vista Estructura de minería de datos, cuadro de diálogo)'
+      href: ../select-a-column-dialog-box-mining-structure-view.md
+    - name: Seleccione una columna de clave de tabla anidada (cuadro de diálogo de la vista Estructura de minería de datos)
+      href: ../select-a-nested-table-key-column-dialog-box-mining-structure-view.md
+    - name: Crear dimensión de minería de datos (cuadro de diálogo)
+      href: ../create-data-mining-dimension-dialog.md
+    - name: Modelos de minería de datos (vista del Diseñador de modelos de minería de datos)
+      href: ../mining-models-view-data-mining-model-designer.md
+    - name: 'Parámetros de algoritmo (vista Modelos de minería de datos, cuadro de diálogo)'
+      href: ../algorithm-parameters-dialog-box-mining-models-view.md
+    - name: Cuadro de diálogo Filtros de seguridad/Filtro de modelos
+      href: ../data-set-filter-or-model-filter-dialog-box.md
+      items:
+        - name: Cuadro de diálogo Filtrar (gráfico de precisión de minería de datos)
+          href: ../filter-dialog-box-mining-accuracy-chart.md
+- name: Visores de modelos de minería de datos
+  href: ../mining-model-viewers-data-mining-model-designer.md
+  items:
+    - name: Pestaña Características del atributo
+      href: ../attribute-characteristics-tab-mining-model-viewer.md
+    - name: Pestaña Distinción del atributo
+      href: ../attribute-discrimination-tab-mining-model-viewer.md
+    - name: Pestaña Perfiles del atributo
+      href: ../attribute-profiles-tab-mining-model-viewer.md
+    - name: Pestaña Gráfico (Visor de series temporales)
+      href: ../chart-tab-mining-model-viewers.md
+    - name: Pestaña Características del clúster
+      href: ../cluster-characteristics-tab-mining-model-viewer.md
+    - name: Pestaña Diagrama del clúster
+      href: ../cluster-diagram-tab-mining-model-viewer.md
+    - name: Pestaña Distinción del clúster
+      href: ../cluster-discrimination-tab-mining-model-viewer.md
+    - name: Pestaña Perfiles del clúster
+      href: ../cluster-profiles-tab-mining-model-viewer.md
+    - name: Pestaña Árbol de decisión
+      href: ../decision-tree-tab-mining-model-viewer.md
+    - name: Pestaña Red de dependencias
+      href: ../dependency-network-tab-mining-model-viewer.md
+    - name: Cuadro de diálogo Obtener detalles
+      href: ../drill-through-dialog-box-mining-model-viewer.md
+    - name: Buscar nodo (cuadro de diálogo)
+      href: ../find-node-dialog-box-mining-model-viewer.md
+    - name: Visor de árboles de contenido genérico
+      href: ../microsoft-generic-content-tree-viewer-data-mining.md
+    - name: Pestaña Conjuntos de elementos
+      href: ../itemsets-tab-mining-model-viewer.md
+    - name: 'Leyenda de minería de datos, cuadro de diálogo'
+      href: ../mining-legend-dialog-box-mining-model-viewer.md
+    - name: Pestaña Red neuronal
+      href: ../neural-network-mining-model-viewer.md
+    - name: Pestaña Reglas
+      href: ../rules-tab-mining-model-viewer.md
+    - name: Pestaña Diagrama de agrupación en clústeres de secuencia
+      href: ../sequence-clustering-cluster-diagram-tab-mining-model-viewer.md
+    - name: Pestaña Perfiles del clúster de agrupación en clústeres de secuencia
+      href: ../sequence-clustering-cluster-profiles-tab-mining-model-viewer.md
+    - name: Pestaña Características de la agrupación en clústeres de secuencia
+      href: ../sequence-clustering-cluster-characteristics-tab-mining-model-viewer.md
+    - name: Pestaña Distinción del clúster de agrupación en clústeres de secuencia
+      href: ../sequence-clustering-cluster-discrimination-tab-mining-model-viewer.md
+    - name: Pestaña Transiciones de estado de agrupación en clústeres de secuencia
+      href: ../sequence-clustering-cluster-transition-tab-mining-model-viewer.md
+    - name: Pestaña Modelo (Visor de series temporales)
+      href: ../model-tab-mining-model-viewers.md
+- name: Diseñador de gráfico de precisión de minería de datos (Minería de datos)
+  href: ../mining-accuracy-chart-designer-data-mining.md
+  items:
+    - name: Pestaña Selección de entrada
+      href: ../input-selection-tab-mining-accuracy-chart-view.md
+    - name: Pestaña de gráfico de elevación
+      href: ../lift-chart-tab-mining-accuracy-chart-view.md
+    - name: Pestaña Matriz de clasificación
+      href: ../classification-matrix-tab-mining-accuracy-chart-view.md
+    - name: Pestaña de validación cruzada
+      href: ../cross-validation-tab-mining-accuracy-chart-view.md
+    - name: Configuración del gráfico de beneficios (cuadro de diálogo de la vista Gráfico de precisión de minería de datos)
+      href: ../profit-chart-settings-dialog-box-mining-accuracy-chart-view.md
+    - name: 'Cuadro de diálogo Especificar asignación de columna (gráfico de precisión de minería de datos) '
+      href: ../specify-column-mapping-dialog-box-mining-accuracy-chart.md
+    - name: Seleccionar estructura de minería de datos (cuadro de diálogo de la vista Gráfico de precisión de minería de datos)
+      href: ../select-mining-structure-dialog-box-mining-accuracy-chart-view.md
+    - name: 'Seleccionar tabla (vista Gráfico de precisión de minería de datos, cuadro de diálogo)'
+      href: ../select-table-dialog-box-mining-accuracy-chart-view.md
+    - name: 'Cuadro de diálogo Modificar asignación (gráfico de precisión de minería de datos) '
+      href: ../modify-mapping-dialog-box-mining-accuracy-chart.md
+    - name: Especificar combinación anidada (cuadro de diálogo de la vista Gráfico de precisión de minería de datos)
+      href: ../specify-nested-join-dialog-box-mining-accuracy-chart-view.md
+- name: Generador de consultas de predicción
+  href: ../prediction-query-builder-data-mining.md
+  items:
+    - name: Panel de diseño
+      href: ../design-pane-mining-model-prediction-view.md
+    - name: Panel de consulta
+      href: ../query-pane-mining-model-prediction-view.md
+    - name: Panel de resultados
+      href: ../result-pane-mining-model-prediction-view.md
+    - name: Seleccionar modelo de minería de datos (cuadro de diálogo)
+      href: ../select-mining-model-dialog-box-mining-model-prediction-view.md
+    - name: Guardar resultado de consulta de minería de datos (cuadro de diálogo)
+      href: ../save-data-mining-query-result-dialog-box-mining-model-prediction-view.md
+- name: Cuadro de diálogo Propiedades de la estructura de minería de datos
+  href: ../mining-structure-properties-dialog-analysis-services-data-mining.md
+  items:
+    - name: General (cuadro de diálogo Estructura de minería de datos)
+      href: ../general-mining-structure-dialog-box-analysis-services-data-mining.md
+    - name: Configuración de errores (cuadro de diálogo Estructuras de minería de datos)
+      href: ../error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md
+- name: Cuadro de diálogo Propiedades del modelo de minería de datos
+  href: ../mining-model-properties-dialog-box-analysis-services-data-mining.md
+- name: Editor de consultas DMX
+  href: ../dmx-query-editor-analysis-services-data-mining.md

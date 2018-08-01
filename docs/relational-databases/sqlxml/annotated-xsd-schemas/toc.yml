@@ -1,0 +1,14 @@
+- name: Esquemas XSD anotados en SQLXML 4.0
+  href: annotated-xsd-schemas-in-sqlxml-4-0.md
+- name: Esquemas XSD anotados en SQLXML con +
+  href: ../../../relational-databases/sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md
+- name: Consultas XPath de esquemas XSD anotados +
+  href: ../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md
+- name: Esquemas XDR anotados (desusados en SQLXML 4.0)
+  href: annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md
+- name: Convertir esquemas XDR anotados en esquemas XSD equivalentes (SQLXML 4.0)
+  href: converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md
+- name: Introducción a los esquemas XSD anotados (SQLXML 4.0)
+  href: introduction-to-annotated-xsd-schemas-sqlxml-4-0.md
+- name: Usar esquemas XSD anotados en consultas (SQLXML 4.0)
+  href: using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md

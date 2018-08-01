@@ -1,0 +1,46 @@
+- name: Información general
+  href: security-center-for-sql-server-database-engine-and-azure-sql-database.md
+- name: Proteger SQL Server
+  href: securing-sql-server.md
+- name: Auditoría
+  href: ../../relational-databases/security/auditing/sql-server-audit-database-engine.md
+- name: Acceso de autenticación
+  href: ../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md
+- name: Cifrado
+  href: ../../relational-databases/security/encryption/sql-server-encryption.md
+- name: Proteger su propiedad intelectual de SQL Server
+  href: protecting-your-sql-server-intellectual-property.md
+- name: Elementos protegibles
+  href: securables.md
+- name: 'Usuarios de base de datos independiente: hacer que la base de datos sea portátil'
+  href: contained-database-users-making-your-database-portable.md
+- name: Elegir un modo de autenticación
+  href: choose-an-authentication-mode.md
+- name: Configuración de visibilidad de los metadatos
+  href: metadata-visibility-configuration.md
+- name: Configuración de Área expuesta
+  href: surface-area-configuration.md
+- name: Inyección de código SQL
+  href: sql-injection.md
+- name: Evaluación de vulnerabilidad de SQL
+  href: sql-vulnerability-assessment.md
+- name: Clasificación y detección de datos de SQL
+  href: sql-data-discovery-and-classification.md
+- name: Propiedad de base de datos TRUSTWORTHY
+  href: trustworthy-database-property.md
+- name: Permisos
+  href: permissions-database-engine.md
+- name: Jerarquía de permisos
+  href: permissions-hierarchy-database-engine.md
+- name: Página Permisos o Elementos protegibles
+  href: permissions-or-securables-page.md
+- name: Directiva de contraseñas
+  href: password-policy.md
+- name: Contraseñas seguras
+  href: strong-passwords.md
+- name: Seguridad de nivel de fila
+  href: row-level-security.md
+- name: Enmascaramiento de datos dinámicos
+  href: dynamic-data-masking.md
+- name: Certificados y claves asimétricas de SQL Server
+  href: sql-server-certificates-and-asymmetric-keys.md

@@ -1,0 +1,48 @@
+- name: Programación del controlador OLE DB para SQL Server
+  href: oledb-driver-for-sql-server-programming.md
+- name: Áreas específicas
+  items:
+    - name: Creación de un controlador OLE DB para aplicaciones de SQL Server +
+      href: ../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md
+    - name: Objetos de origen de datos OLE DB +
+      href: ../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md
+    - name: Comandos +
+      href: ../../oledb/ole-db-commands/commands.md
+    - name: Conjuntos de filas
+      href: ../../oledb/ole-db-rowsets/rowsets.md
+    - name: Blobs +
+      href: ../../oledb/ole-db-blobs/blobs-and-ole-objects.md
+    - name: Índices de tablas +
+      href: ../../oledb/ole-db-tables-indexes/tables-and-indexes.md
+    - name: Tipos de datos +
+      href: ../../oledb/ole-db-data-types/data-types-ole-db.md
+    - name: Parámetros con valores de tabla
+      href: ../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md
+    - name: Fecha y hora +
+      href: ../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md
+    - name: Transacciones +
+      href: ../../oledb/ole-db-transactions/transactions.md
+    - name: Errores +
+      href: ../../oledb/ole-db-errors/errors.md
+    - name: Interfaces +
+      href: ../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md
+    - name: Procedimiento +
+      href: ../../oledb/ole-db-how-to/ole-db-how-to-topics.md
+- name: Tipos definidos por el usuario de CLR grandes
+  href: large-clr-user-defined-types-ole-db.md
+- name: Compatibilidad con conjuntos de filas de esquema
+  href: schema-rowset-support-ole-db.md
+- name: 'Conjuntos de filas de esquema: compatibilidad con consultas distribuidas'
+  href: schema-rowsets-distributed-query-support.md
+- name: 'Conjuntos de filas de esquema: conjunto de filas LINKEDSERVERS'
+  href: schema-rowsets-linkedservers-rowset.md
+- name: Nombres de entidad de seguridad del servicio (SPN) en conexiones de cliente
+  href: service-principal-names-spns-in-client-connections-ole-db.md
+- name: Compatibilidad con columnas dispersas
+  href: sparse-columns-support-ole-db.md
+- name: 'Procedimientos almacenados: llamada'
+  href: stored-procedures-calling.md
+- name: 'Procedimientos almacenados: ejecución'
+  href: stored-procedures-running.md
+- name: Procedimientos almacenados
+  href: stored-procedures.md

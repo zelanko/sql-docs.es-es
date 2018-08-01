@@ -1,0 +1,8 @@
+- name: Administrar columnas de texto e imagen
+  href: managing-text-and-image-columns.md
+- name: Texto delimitado frente a texto sin delimitar y columnas de imagen
+  href: bound-vs-unbound-text-and-image-columns.md
+- name: 'Datos en ejecución y columnas de tipo text, ntext o image'
+  href: data-at-execution-and-text-ntext-or-image-columns.md
+- name: Modificaciones registradas frente a modificaciones no registradas
+  href: logged-vs-unlogged-modifications.md

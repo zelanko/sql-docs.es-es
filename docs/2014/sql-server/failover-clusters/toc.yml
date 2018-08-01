@@ -1,0 +1,13 @@
+- name: Soluciones de alta disponibilidad con SQL Server 2014
+  href: high-availability-solutions-sql-server.md
+  items:
+    - name: Reparación de página automática (para grupos de disponibilidad y creación de reflejo de base de datos)
+      href: automatic-page-repair-availability-groups-database-mirroring.md
+    - name: Administración de inicios de sesión y trabajos tras la conmutación de roles
+      href: management-of-logins-and-jobs-after-role-switching-sql-server.md
+    - name: Solucionar problemas de usuarios huérfanos
+      href: troubleshoot-orphaned-users-sql-server.md
+- name: Instalación de clúster de conmutación por error de SQL Server +
+  href: install/sql-server-failover-cluster-installation.md
+- name: Clústeres de conmutación por error de Windows Server (WSFC) +
+  href: windows/windows-server-failover-clustering-wsfc-with-sql-server.md

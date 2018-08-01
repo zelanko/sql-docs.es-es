@@ -1,0 +1,103 @@
+- name: Supervisar el uso de recursos (Monitor de sistema)
+  href: monitor-resource-usage-system-monitor.md
+  items:
+    - name: Ejecutar Monitor de sistema
+      href: run-system-monitor.md
+    - name: Supervisar el uso del disco
+      href: monitor-disk-usage.md
+    - name: Supervisar el uso de la CPU
+      href: monitor-cpu-usage.md
+    - name: Supervisar el uso de la memoria
+      href: monitor-memory-usage.md
+- name: Crear una alerta de base de datos de SQL Server
+  href: create-a-sql-server-database-alert.md
+- name: 'Crear gráficos, alertas, registros e informes'
+  href: create-charts-alerts-logs-and-reports.md
+- name: Usar objetos de SQL Server
+  href: use-sql-server-objects.md
+  items:
+    - name: Alerts (objeto del Agente SQL Server)
+      href: sql-server-agent-alerts-object.md
+    - name: Jobs (objeto del Agente SQL Server)
+      href: sql-server-agent-jobs-object.md
+    - name: JobSteps (objeto del Agente SQL Server)
+      href: sql-server-agent-jobsteps-object.md
+    - name: Statistics (objeto del Agente SQL Server)
+      href: sql-server-agent-statistics-object.md
+    - name: Access Methods (objeto de SQL Server)
+      href: sql-server-access-methods-object.md
+    - name: 'SQL Server, réplica de disponibilidad'
+      href: sql-server-availability-replica.md
+    - name: Backup Device (objeto de SQL Server)
+      href: sql-server-backup-device-object.md
+    - name: Broker Activation (objeto de SQL Server)
+      href: sql-server-broker-activation-object.md
+    - name: Broker Statistics (objeto de SQL Server)
+      href: sql-server-broker-statistics-object.md
+    - name: 'Objeto SQL Server, Broker TO Statistics'
+      href: sql-server-broker-to-statistics-object.md
+    - name: Broker y DBM Transport (objeto de SQL Server)
+      href: sql-server-broker-dbm-transport-object.md
+    - name: Buffer Manager (objeto de SQL Server)
+      href: sql-server-buffer-manager-object.md
+    - name: Buffer Node (objeto de SQL Server)
+      href: sql-server-buffer-node.md
+    - name: CLR (objeto de SQL Server)
+      href: sql-server-clr-object.md
+    - name: Cursor Manager by Type (objeto de SQL Server)
+      href: sql-server-cursor-manager-by-type-object.md
+    - name: Cursor Manager Total (objeto de SQL Server)
+      href: sql-server-cursor-manager-total-object.md
+    - name: Database Mirroring (objeto de SQL Server)
+      href: sql-server-database-mirroring-object.md
+    - name: 'SQL Server, réplica de base de datos'
+      href: sql-server-database-replica.md
+    - name: Databases (objeto de SQL Server)
+      href: sql-server-databases-object.md
+    - name: 'Objeto SQL Server, Características en desuso'
+      href: sql-server-deprecated-features-object.md
+    - name: ExecStatistics (objeto de SQL Server)
+      href: sql-server-execstatistics-object.md
+    - name: General Statistics (objeto de SQL Server)
+      href: sql-server-general-statistics-object.md
+    - name: 'SQL Server, HTTP_STORAGE_OBJECT'
+      href: sql-server-http-storage-object.md
+    - name: Latches (objeto de SQL Server)
+      href: sql-server-latches-object.md
+    - name: Locks (objeto de SQL Server)
+      href: sql-server-locks-object.md
+    - name: Memory Manager (objeto de SQL Server)
+      href: sql-server-memory-manager-object.md
+    - name: 'SQL Server, Nodo de memoria'
+      href: sql-server-memory-node.md
+    - name: Plan Cache (objeto de SQL Server)
+      href: sql-server-plan-cache-object.md
+    - name: 'Objeto SQL Server: Estadísticas de grupo de recursos de servidor'
+      href: sql-server-resource-pool-stats-object.md
+    - name: SQL Errors (objeto de SQL Server)
+      href: sql-server-sql-errors-object.md
+    - name: SQL Statistics (objeto de SQL Server)
+      href: sql-server-sql-statistics-object.md
+    - name: Transactions (objeto de SQL Server)
+      href: sql-server-transactions-object.md
+    - name: User Settable (objeto de SQL Server)
+      href: sql-server-user-settable-object.md
+    - name: Wait Statistics (objeto de SQL Server)
+      href: sql-server-wait-statistics-object.md
+    - name: 'Objeto SQL Server: Estadísticas de grupo de cargas de trabajo'
+      href: sql-server-workload-group-stats-object.md
+- name: Contadores de rendimiento de XTP (OLTP en memoria)
+  href: sql-server-xtp-in-memory-oltp-performance-counters.md
+  items:
+    - name: Cursores XTP
+      href: sql-server-xtp-cursors.md
+    - name: Recolección de elementos no utilizados de XTP
+      href: sql-server-xtp-garbage-collection.md
+    - name: Procesador fantasma de XTP
+      href: sql-server-xtp-phantom-processor.md
+    - name: XTP Storage
+      href: sql-server-xtp-storage.md
+    - name: Registro de transacciones XTP
+      href: sql-server-xtp-transaction-log.md
+    - name: Transacciones XTP
+      href: sql-server-xtp-transactions.md

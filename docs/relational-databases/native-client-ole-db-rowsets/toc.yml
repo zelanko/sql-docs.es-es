@@ -1,0 +1,30 @@
+- name: Conjuntos de filas
+  href: rowsets.md
+- name: Marcadores
+  href: bookmarks.md
+- name: Crear un conjunto de filas con IOpenRowset
+  href: creating-a-rowset-with-iopenrowset.md
+- name: 'Crear conjuntos de filas con ICommand::Execute'
+  href: creating-rowsets-with-icommand-execute.md
+- name: Capturar una única fila con IRow
+  href: fetching-a-single-row-with-irow.md
+- name: 'Capturar datos BLOB mediante IRow::GetColumns e ISequentialStream'
+  href: fetching-blob-data-using-irow-getcolumns-and-isequentialstream.md
+- name: 'Capturar datos BLOB mediante IRow::Open e ISequentialStream'
+  href: fetching-blob-data-using-irow-open-and-isequentialstream.md
+- name: 'Capturar filas: siguiente posición de captura'
+  href: fetching-rows-next-fetch-position.md
+- name: Capturar filas
+  href: fetching-rows.md
+- name: Propiedades y comportamientos de conjuntos de filas
+  href: rowset-properties-and-behaviors.md
+- name: Conjuntos de filas y cursores de servidor de SQL Server
+  href: rowsets-and-sql-server-cursors.md
+- name: 'Actualizar datos en conjuntos de filas: volver a sincronizar filas'
+  href: updating-data-in-rowsets-resynchronizing-rows.md
+- name: Actualizar datos en conjuntos de filas
+  href: updating-data-in-rowsets.md
+- name: Actualizar datos en cursores de SQL Server
+  href: updating-data-in-sql-server-cursors.md
+- name: 'Usar IRow::GetColumns'
+  href: using-irow-getcolumns.md

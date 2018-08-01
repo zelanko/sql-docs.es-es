@@ -1,0 +1,13 @@
+- name: 'Tutoriales: SQL Server Management Studio '
+  href: tutorial-sql-server-management-studio.md
+  items:
+    - name: Conectar y consultar SQL Server con SSMS
+      href: connect-query-sql-server.md
+    - name: Objetos de scripting en SSMS
+      href: scripting-ssms.md
+    - name: Uso de plantillas en SSMS
+      href: templates-ssms.md
+    - name: Configuración de SSMS
+      href: ssms-configuration.md
+    - name: Recomendaciones y trucos para el uso de SSMS
+      href: ssms-tricks.md

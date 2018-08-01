@@ -1,0 +1,26 @@
+- name: Información general
+  href: integration-services-ssis-scale-out.md
+- name: Introducción a la Escalabilidad horizontal de SSIS en un único equipo
+  href: get-started-with-ssis-scale-out-onebox.md
+- name: 'Tutorial: configuración del escalado horizontal de Integration Services'
+  href: walkthrough-set-up-integration-services-scale-out.md
+- name: Ejecutar paquetes en el escalado horizontal
+  href: run-packages-in-integration-services-ssis-scale-out.md
+- name: Agregar un trabajo de escalabilidad horizontal con el administrador de escalabilidad horizontal
+  href: add-scale-out-worker.md
+- name: Patrón de escalabilidad horizontal
+  href: integration-services-ssis-scale-out-master.md
+- name: Trabajo de escalabilidad horizontal
+  href: integration-services-ssis-scale-out-worker.md
+- name: Administrador de escalabilidad horizontal
+  href: integration-services-ssis-scale-out-manager.md
+- name: Cambiar la cuenta para el registro del escalabilidad horizontal
+  href: change-logdb-account.md
+- name: Administración de certificados para la escalabilidad horizontal
+  href: deal-with-certificates-in-ssis-scale-out.md
+- name: Alta disponibilidad para la escalabilidad horizontal
+  href: scale-out-support-for-high-availability.md
+- name: Alta disponibilidad mediante instancias de clúster de conmutación por error de SQL Server
+  href: scale-out-failover-cluster-instance.md
+- name: Solución de problemas de escalabilidad horizontal
+  href: troubleshooting-scale-out.md

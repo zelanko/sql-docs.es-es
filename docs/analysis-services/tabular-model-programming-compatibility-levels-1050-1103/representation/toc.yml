@@ -1,0 +1,24 @@
+- name: Representación de conexión (tabular)
+  href: connection-representation-tabular.md
+- name: Representación de la base de datos (tabular)
+  href: database-representation-tabular.md
+- name: Representación de perspectiva (tabular)
+  href: perspective-representation-tabular.md
+- name: Consultar un modelo tabular
+  href: querying-a-tabular-model.md
+- name: Representación de relaciones (tabular)
+  href: relationship-representation-tabular.md
+- name: 'Tablas: representación de la columna calculada'
+  href: tables-calculated-column-representation.md
+- name: 'Tablas: representación de la medida calculada'
+  href: tables-calculated-measure-representation.md
+- name: 'Tablas: representación de jerarquía'
+  href: tables-hierarchy-representation.md
+- name: 'Tablas: representación de indicadores clave de rendimiento'
+  href: tables-key-performance-indicator-representation.md
+- name: 'Tablas: representación de partición'
+  href: tables-partition-representation.md
+- name: Representación de tablas (tabular)
+  href: tables-representation-tabular.md
+- name: Descripción del modelo de objetos tabulares en niveles de 1050 a 1103
+  href: understanding-tabular-object-model-at-levels-1050-through-1103.md

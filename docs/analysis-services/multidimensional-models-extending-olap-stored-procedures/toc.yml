@@ -1,0 +1,14 @@
+- name: Acceder al contexto de la consulta en los procedimientos almacenados
+  href: accessing-query-context-in-stored-procedures.md
+- name: Llamar a procedimientos almacenados
+  href: calling-stored-procedures.md
+- name: Creación de procedimientos almacenados
+  href: creating-stored-procedures.md
+- name: Depurar procedimientos almacenados
+  href: debugging-stored-procedures.md
+- name: Definir procedimientos almacenados
+  href: defining-stored-procedures.md
+- name: Diseñar procedimientos almacenados
+  href: designing-stored-procedures.md
+- name: Configurar la seguridad para procedimientos almacenados
+  href: setting-security-for-stored-procedures.md

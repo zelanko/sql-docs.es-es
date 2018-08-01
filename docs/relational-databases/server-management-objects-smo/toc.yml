@@ -1,0 +1,32 @@
+- name: Información general (SMO)
+  href: overview-smo.md
+- name: Guía de programación para objetos de administración de SQL Server (SMO)
+  href: sql-server-management-objects-smo-programming-guide.md
+- name: Instalar SMO
+  href: installing-smo.md
+- name: Introducción a SMO
+  href: getting-started-in-smo.md
+- name: Crear programa +
+  href: ../../relational-databases/server-management-objects-smo/create-program/calling-methods.md
+- name: Tareas +
+  href: ../../relational-databases/server-management-objects-smo/tasks/backing-up-and-restoring-databases-and-transaction-logs.md
+- name: Compatibilidad con versiones anteriores en SMO
+  href: backward-compatibility-in-smo.md
+- name: Archivos y números de versión
+  href: files-and-version-numbers.md
+- name: 'Cómo crear un proyecto de Visual C# SMO en Visual Studio .NET'
+  href: how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md
+- name: Diagrama del modelo de objetos de SMO
+  href: smo-object-model-diagram.md
+- name: Espacios de nombres del modelo de objetos de SMO
+  href: smo-object-model-namespaces.md
+- name: Modelo de objetos SMO
+  href: smo-object-model.md
+- name: 'Programación de SMO: introducción a Visual C# .NET'
+  href: smo-programming-getting-started-in-visual-csharp-net.md
+- name: Lenguajes de programación de SMO
+  href: smo-programming-languages.md
+- name: Convenciones de sintaxis de SMO
+  href: smo-syntax-conventions.md
+- name: Términos de licencia de SMO
+  href: smo-license-terms.md

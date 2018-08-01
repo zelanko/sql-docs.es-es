@@ -1,0 +1,201 @@
+- name: Datos XML
+  href: xml-data-sql-server.md
+- name: Tipo de datos XML y columnas
+  href: xml-data-type-and-columns-sql-server.md
+  items:
+    - name: Comparar XML con tipo y XML sin tipo
+      href: compare-typed-xml-to-untyped-xml.md
+    - name: Crear instancias de datos XML
+      href: create-instances-of-xml-data.md
+    - name: Crear variables y columnas del tipo de datos XML
+      href: create-xml-data-type-variables-and-columns.md
+    - name: Cambiar columnas existentes a columnas XML
+      href: change-existing-columns-to-xml-columns.md
+    - name: Cargar datos XML
+      href: load-xml-data.md
+    - name: Crear vistas sobre columnas XML
+      href: create-views-over-xml-columns.md
+    - name: Usar XML en columnas calculadas
+      href: use-xml-in-computed-columns.md
+    - name: Recuperar y consultar datos XML
+      href: retrieve-and-query-xml-data.md
+    - name: Agregar espacios de nombres a consultas con WITH XMLNAMESPACES
+      href: add-namespaces-to-queries-with-with-xmlnamespaces.md
+    - name: Promover los valores XML usados con frecuencia con columnas calculadas
+      href: promote-frequently-used-xml-values-with-computed-columns.md
+    - name: Definir la serialización de datos XML
+      href: define-the-serialization-of-xml-data.md
+    - name: Usar la búsqueda de texto completo con columnas XML
+      href: use-full-text-search-with-xml-columns.md
+    - name: Agregar lógica comercial a los datos XML
+      href: add-business-logic-to-xml-data.md
+    - name: Usar datos XML en las aplicaciones
+      href: use-xml-data-in-applications.md
+- name: Índices XML
+  href: xml-indexes-sql-server.md
+  items:
+    - name: Crear índices XML
+      href: create-xml-indexes.md
+    - name: Modificar índices XML
+      href: modify-xml-indexes.md
+    - name: Quitar índices XML
+      href: drop-xml-indexes.md
+    - name: Índices XML selectivos (SXI)
+      href: selective-xml-indexes-sxi.md
+    - name: Especificar rutas de acceso y sugerencias de optimización para índices XML selectivos
+      href: specify-paths-and-optimization-hints-for-selective-xml-indexes.md
+    - name: 'Crear, modificar y quitar índices XML selectivos'
+      href: create-alter-and-drop-selective-xml-indexes.md
+    - name: 'Crear, modificar y quitar índices XML selectivos secundarios'
+      href: create-alter-and-drop-secondary-selective-xml-indexes.md
+- name: Colecciones de esquemas XML
+  href: xml-schema-collections-sql-server.md
+  items:
+    - name: Hacer referencia a la colección de esquemas XML integrada (sys)
+      href: reference-the-built-in-xml-schema-collection-sys.md
+    - name: Ver una colección de esquemas XML almacenada
+      href: view-a-stored-xml-schema-collection.md
+    - name: Conceder permisos para una colección de esquemas XML
+      href: grant-permissions-on-an-xml-schema-collection.md
+    - name: Revocar los permisos en una colección de esquemas XML
+      href: revoke-permissions-on-an-xml-schema-collection.md
+    - name: Denegar permisos en una colección de esquemas XML
+      href: deny-permissions-on-an-xml-schema-collection.md
+    - name: Preprocesar un esquema para combinar esquemas incluidos
+      href: preprocess-a-schema-to-merge-included-schemas.md
+    - name: Requisitos y limitaciones de las colecciones de esquemas XML en el servidor
+      href: requirements-and-limitations-for-xml-schema-collections-on-the-server.md
+    - name: Formas canónicas y restricciones de patrón
+      href: canonical-forms-and-pattern-restrictions.md
+    - name: Componentes comodín y validación del contenido
+      href: wildcard-components-and-content-validation.md
+    - name: 'Elemento <xsd:redefine>'
+      href: the-xsd-redefine-element.md
+    - name: 'The xs:QName Type'
+      href: the-xs-qname-type.md
+    - name: 'Valores de las declaraciones de <xsd:simpleType>'
+      href: values-for-xsd-simpletype-declarations.md
+    - name: facetas de enumeración
+      href: enumeration-facets.md
+    - name: Contenido simple y de tipo mixto
+      href: mixed-type-and-simple-content.md
+    - name: Las condiciones de memoria insuficiente y las grandes colecciones de esquemas XML.
+      href: large-xml-schema-collections-and-out-of-memory-conditions.md
+    - name: modelos de contenido no determinista
+      href: non-deterministic-content-models.md
+    - name: Restricción de atribución de partículas exclusivas
+      href: unique-particle-attribution-constraint.md
+- name: FOR XML
+  href: for-xml-sql-server.md
+  items:
+    - name: Sintaxis básica de la cláusula FOR XML
+      href: basic-syntax-of-the-for-xml-clause.md
+    - name: Reglas de escape y caracteres no válidos
+      href: invalid-characters-and-escape-rules.md
+    - name: Usar el modo RAW con FOR XML
+      href: use-raw-mode-with-for-xml.md
+    - name: 'Ejemplo: Recuperar información de modelos de productos como XML'
+      href: example-retrieving-product-model-information-as-xml.md
+    - name: 'Ejemplo: Especificar XSINIL con la directiva ELEMENTS'
+      href: example-specifying-xsinil-with-the-elements-directive.md
+    - name: 'Ejemplo: solicitar esquemas como resultados con las opciones XMLDATA y XMLSCHEMA'
+      href: example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md
+    - name: 'Ejemplo: Recuperar datos binarios'
+      href: example-retrieving-binary-data.md
+    - name: 'Ejemplo: Cambiar el nombre del elemento <row>'
+      href: example-renaming-the-row-element.md
+    - name: 'Ejemplo: Especificar un elemento raíz para el XML generado por FOR XML'
+      href: example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
+    - name: 'Ejemplo: Consultar columnas de tipo XML'
+      href: example-querying-xmltype-columns.md
+    - name: Usar el modo AUTO con FOR XML
+      href: use-auto-mode-with-for-xml.md
+    - name: Usar la opción BINARY BASE64
+      href: use-the-binary-base64-option.md
+    - name: Heurística del modo AUTO para dar forma al XML devuelto
+      href: auto-mode-heuristics-in-shaping-returned-xml.md
+    - name: 'Ejemplos: Usar el modo AUTO'
+      href: examples-using-auto-mode.md
+    - name: Usar el modo EXPLICIT con FOR XML
+      href: use-explicit-mode-with-for-xml.md
+    - name: 'Ejemplo: Recuperar información de los empleados'
+      href: example-retrieving-employee-information.md
+    - name: 'Ejemplo: Especificar la directiva ELEMENT'
+      href: example-specifying-the-element-directive.md
+    - name: 'Ejemplo: Especificar la directiva ELEMENTXSINIL'
+      href: example-specifying-the-elementxsinil-directive.md
+    - name: 'Ejemplo: Construir elementos del mismo nivel con el modo EXPLICIT'
+      href: example-constructing-siblings-with-explicit-mode.md
+    - name: 'Ejemplo: especificar las directivas ID e IDREF'
+      href: example-specifying-the-id-and-idref-directives.md
+    - name: 'Ejemplo: Especificar las directivas ID e IDREFS'
+      href: example-specifying-the-id-and-idrefs-directives.md
+    - name: 'Ejemplo: Especificar la directiva HIDE'
+      href: example-specifying-the-hide-directive.md
+    - name: 'Ejemplo: Especificar la directiva ELEMENT y la codificación de entidades'
+      href: example-specifying-the-element-directive-and-entity-encoding.md
+    - name: 'Ejemplo: Especificar la directiva CDATA'
+      href: example-specifying-the-cdata-directive.md
+    - name: 'Ejemplo: Especificar la directiva XMLTEXT'
+      href: example-specifying-the-xmltext-directive.md
+    - name: Usar el modo PATH con FOR XML
+      href: use-path-mode-with-for-xml.md
+    - name: Columnas sin nombre
+      href: columns-without-a-name.md
+    - name: Columnas con nombre
+      href: columns-with-a-name.md
+    - name: Columnas con un nombre especificado como carácter comodín
+      href: columns-with-a-name-specified-as-a-wildcard-character.md
+    - name: Columnas con el nombre de una prueba de nodo XPath
+      href: columns-with-the-name-of-an-xpath-node-test.md
+    - name: Nombres de columna con la ruta de acceso especificada como data()
+      href: column-names-with-the-path-specified-as-data.md
+    - name: Columnas que incluyen un valor NULL de forma predeterminada
+      href: columns-that-contain-a-null-value-by-default.md
+    - name: Compatibilidad con elementos de espacio de nombres en el modo PATH
+      href: namespace-support-in-path-mode.md
+    - name: 'Ejemplos: Usar el modo PATH'
+      href: examples-using-path-mode.md
+    - name: Directiva TYPE en consultas FOR XML
+      href: type-directive-in-for-xml-queries.md
+    - name: Generar XML a partir de conjuntos de filas con FOR XML
+      href: generate-xml-from-rowsets-with-for-xml.md
+    - name: Usar los resultados de FOR XML en el código de aplicación
+      href: use-for-xml-results-in-application-code.md
+    - name: Usar consultas FOR XML anidadas
+      href: use-nested-for-xml-queries.md
+    - name: Comparación de la consulta FOR XML con la consulta FOR XML anidada
+      href: for-xml-query-compared-to-nested-for-xml-query.md
+    - name: Generar elementos del mismo nivel con una consulta de modo AUTO anidada
+      href: generate-siblings-with-a-nested-auto-mode-query.md
+    - name: Usar consultas FOR XML anidadas en ASP.NET
+      href: use-nested-for-xml-queries-in-asp-net.md
+    - name: Dar forma a XML con consultas FOR XML anidadas
+      href: shape-xml-with-nested-for-xml-queries.md
+    - name: Generar elementos para valores NULL mediante el parámetro XSINIL
+      href: generate-elements-for-null-values-with-the-xsinil-parameter.md
+    - name: Compatibilidad con FOR XML para varios tipos de datos de SQL Server
+      href: for-xml-support-for-various-sql-server-data-types.md
+    - name: Compatibilidad de FOR XML con el tipo de datos xml
+      href: for-xml-support-for-the-xml-data-type.md
+    - name: Compatibilidad de FOR XML con los tipos de datos definidos por el usuario (UDT)
+      href: for-xml-support-for-the-user-defined-data-types-udt.md
+    - name: Compatibilidad con FOR XML para tipos de datos de cadena
+      href: for-xml-support-for-string-data-types.md
+    - name: Compatibilidad de FOR XML con el tipo de datos de marca de tiempo
+      href: for-xml-support-for-the-timestamp-data-type.md
+    - name: Generar un esquema XSD insertado
+      href: generate-an-inline-xsd-schema.md
+    - name: Generar un esquema XDR insertado
+      href: generate-an-inline-xdr-schema.md
+- name: OPENXML
+  href: openxml-sql-server.md
+  items:
+    - name: 'Ejemplos: usar OPENXML'
+      href: examples-using-openxml.md
+    - name: Especificar metapropiedades en OPENXML
+      href: specify-metaproperties-in-openxml.md
+    - name: Procedimientos almacenados del sistema XML
+      href: xml-system-stored-procedures.md
+    - name: Utilizar los métodos de valor() y nodos() con OPENXML
+      href: use-the-value-and-nodes-methods-with-openxml.md

@@ -1,0 +1,16 @@
+- name: Ejecutar consultas (ODBC)
+  href: executing-queries-odbc.md
+- name: Ejecutar instrucciones +
+  href: ../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md
+- name: Asignar un identificador de instrucción
+  href: allocating-a-statement-handle.md
+- name: Crear una instrucción SQL (ODBC)
+  href: constructing-an-sql-statement-odbc.md
+- name: Crear instrucciones SQL para cursores
+  href: constructing-sql-statements-for-cursors.md
+- name: Liberar un identificador de instrucción
+  href: freeing-a-statement-handle.md
+- name: 'Usar parámetros de instrucciones: enlazar parámetros'
+  href: using-statement-parameters-binding-parameters.md
+- name: Usar parámetros de instrucciones
+  href: using-statement-parameters.md

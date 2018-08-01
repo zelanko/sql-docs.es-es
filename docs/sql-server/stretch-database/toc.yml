@@ -1,0 +1,48 @@
+- name: Información general
+  href: stretch-database.md
+- name: Limitaciones y problemas de bloqueo
+  href: limitations-for-stretch-database.md
+- name: Introducción
+  items:
+    - name: Identificación de bases de datos y tablas
+      href: stretch-database-databases-and-tables-stretch-database-advisor.md
+    - name: Ejecutar el asistente
+      href: get-started-by-running-the-enable-database-for-stretch-wizard.md
+    - name: Configuración de las características compatibles
+      href: configure-compatible-sql-server-features-with-stretch-database.md
+- name: Procedimientos
+  items:
+    - name: Habilitar
+      items:
+        - name: Habilitar una base de datos
+          href: enable-stretch-database-for-a-database.md
+        - name: Habilitar una tabla
+          href: enable-stretch-database-for-a-table.md
+        - name: Selección de las filas que se van a migrar
+          href: select-rows-to-migrate-by-using-a-filter-function-stretch-database.md
+    - name: Administración
+      items:
+        - name: Supervisión de la migración
+          href: monitor-and-troubleshoot-data-migration-stretch-database.md
+        - name: Pausa y reanudación de la migración
+          href: pause-and-resume-data-migration-stretch-database.md
+        - name: Administración y solución de problemas
+          href: manage-and-troubleshoot-stretch-database.md
+        - name: Copia de seguridad
+          href: backup-stretch-enabled-databases-stretch-database.md
+        - name: Restaurar
+          href: restore-stretch-enabled-databases-stretch-database.md
+        - name: Deshabilitar y recuperar datos
+          href: disable-stretch-database-and-bring-back-remote-data.md
+        - name: Eventos extendidos
+          href: extended-events-for-stretch-database.md
+- name: Recursos
+  items:
+    - name: Precios
+      href: 'https://azure.microsoft.com/pricing/details/sql-server-stretch-database/'
+    - name: Blog
+      href: 'https://blogs.technet.microsoft.com/dataplatforminsider/tag/stretch-database/'
+    - name: Actualizaciones del servicio
+      href: 'https://azure.microsoft.com/updates/?product=sql-server-stretch-database'
+    - name: Vídeos
+      href: 'https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database'

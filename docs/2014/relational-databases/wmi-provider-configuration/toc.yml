@@ -1,0 +1,363 @@
+- name: Conceptos del proveedor WMI de administración de configuración
+  href: wmi-provider-for-configuration-management.md
+  items:
+    - name: Descripción del proveedor WMI para la administración de configuración
+      href: understanding-the-wmi-provider-for-configuration-management.md
+    - name: Trabajar con el proveedor WMI para la administración de configuración
+      href: working-with-the-wmi-provider-for-configuration-management.md
+    - name: Utilizar WQL y languages de scripting con el proveedor WMI para la administración de configuración
+      href: using-wql-and-scripting-languages-with-the-wmi-provider.md
+      items:
+        - name: Obtener acceso al proveedor WMI para la administración de configuración mediante WQL
+          href: access-wmi-provider-for-configuration-management-using-wql.md
+        - name: Modificar propiedades avanzadas de servicios SQL Server mediante VBScript
+          href: access-wmi-provider-for-configuration-management-using-vbscript.md
+- name: Conceptos del proveedor WMI para eventos de servidor
+  href: ../wmi-provider-server-events/wmi-provider-for-server-events-concepts.md
+  items:
+    - name: Descripción del proveedor WMI para eventos de servidor
+      href: ../wmi-provider-server-events/understanding-the-wmi-provider-for-server-events.md
+    - name: Trabajar con el proveedor WMI para eventos de servidor
+      href: ../wmi-provider-server-events/working-with-the-wmi-provider-for-server-events.md
+    - name: Usar WQL con el proveedor WMI para eventos de servidor
+      href: ../wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md
+    - name: Proveedor WMI de clases y propiedades de eventos de servidor
+      href: ../wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md
+    - name: 'Ejemplo: crear una alerta del Agente SQL Server utilizando el proveedor WMI para eventos de servidor'
+      href: ../wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md
+    - name: 'Ejemplo: utilizar el proveedor de eventos WMI con .NET Framework'
+      href: ../wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md
+- name: Errores y eventos del proveedor WMI
+  href: ../../database-engine/dev-guide/wmi-provider-events-and-errors.md
+  items:
+    - name: Error de WMI 0x8007052f
+      href: ../wmi-provider-error-0x8007052f.md
+- name: Proveedor WMI para las clases de administración de configuración
+  href: ../wmi-provider-configuration-classes/wmi-provider-for-configuration-management-classes.md
+  items:
+    - name: Clase CInstance
+      href: ../wmi-provider-configuration-classes/cinstance-class.md
+      items:
+        - name: Propiedad InstanceName (clase CInstance)
+          href: ../wmi-provider-configuration-classes/cinstance-class-instancename-property.md
+        - name: Método SetDefaults (clase CInstance)
+          href: ../wmi-provider-configuration-classes/cinstance-class-setdefaults-method.md
+    - name: Clase ClientNetLibInfo
+      href: ../wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md
+      items:
+        - name: Propiedad ProtocolName (clase ClientNetLibInfo)
+          href: ../wmi-provider-configuration-classes/clientnetlibinfo-class/protocolname-property-clientnetlibinfo-class.md
+        - name: Propiedad FileName (clase ClientNetLibInfo)
+          href: ../wmi-provider-configuration-classes/clientnetlibinfo-class/filename-property-clientnetlibinfo-class.md
+        - name: Propiedad ProtocolDisplayName (clase ClientNetLibInfo)
+          href: ../wmi-provider-configuration-classes/clientnetlibinfo-class/protocoldisplayname-property-clientnetlibinfo-class.md
+        - name: Propiedad Version (clase ClientNetLibInfo)
+          href: ../wmi-provider-configuration-classes/clientnetlibinfo-class/version-property-clientnetlibinfo-class.md
+        - name: Propiedad Date (clase ClientNetLibInfo)
+          href: ../wmi-provider-configuration-classes/clientnetlibinfo-class/date-property-clientnetlibinfo-class.md
+        - name: Propiedad Size (clase ClientNetLibInfo)
+          href: ../wmi-provider-configuration-classes/clientnetlibinfo-class/size-property-clientnetlibinfo-class.md
+    - name: Clase ClientNetworkProtocol
+      href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md
+      items:
+        - name: Propiedad ProtocolName (clase ClientNetworkProtocol)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/protocolname-property-clientnetworkprotocol-class.md
+        - name: Propiedad ProtocolOrder (clase ClientNetworkProtocol)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/protocolorder-property-clientnetworkprotocol-class.md
+        - name: Propiedad ProtocolDisplayName (clase ClientNetworkProtocol)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/protocoldisplayname-property-clientnetworkprotocol-class.md
+        - name: Propiedad ProtocolDLL (clase ClientNetworkProtocol)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/protocoldll-property-clientnetworkprotocol-class.md
+        - name: Propiedad NumberOfProps (clase ClientNetworkProtocol)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/numberofprops-property-clientnetworkprotocol-class.md
+        - name: Propiedad NumberOfFlags (clase ClientNetworkProtocol)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/numberofflags-property-clientnetworkprotocol-class.md
+        - name: Propiedad Properties (clase ClientNetworkProtocol)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/properties-property-clientnetworkprotocol-class.md
+        - name: Método GetNextOrderValue (clase ClientNetworkProtocol)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/getnextordervalue-method-clientnetworkprotocol-class.md
+        - name: Método SetOrderValue (clase ClientNetworkProtocol)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md
+        - name: Método SetEnable (clase ClientNetworkProtocol)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/setenable-method-clientnetworkprotocol-class.md
+        - name: Método SetDisable (clase ClientNetworkProtocol)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/setdisable-method-clientnetworkprotocol-class.md
+        - name: Método SetProtocolsOrder (clase ClientNetworkProtocol)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/setprotocolsorder-method-clientnetworkprotocol-class.md
+        - name: Propiedad SupportAlias (clase ClientNetworkProtocol)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/supportalias-property-clientnetworkprotocol-class.md
+    - name: Clase ClientNetworkProtocolProperty
+      href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md
+      items:
+        - name: Propiedad ProtocolName (clase ClientNetworkProtocolProperty)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/protocolname-property-clientnetworkprotocolproperty-class.md
+        - name: Propiedad PropertyType (clase ClientNetworkProtocolProperty)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertytype-property-clientnetworkprotocolproperty-class.md
+        - name: Propiedad PropertyIdx (clase ClientNetworkProtocolProperty)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md
+        - name: Propiedad PropertyName (clase ClientNetworkProtocolProperty)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyname-property-clientnetworkprotocolproperty-class.md
+        - name: Propiedad PropertyValType (clase ClientNetworkProtocolProperty)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyvaltype-property-clientnetworkprotocolproperty-class.md
+        - name: Propiedad PropertyNumVal (clase ClientNetworkProtocolProperty)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertynumval-property-clientnetworkprotocolproperty-class.md
+        - name: Propiedad PropertyStrVal (clase ClientNetworkProtocolProperty)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertystrval-property-clientnetworkprotocolproperty-class.md
+        - name: Método SetNumValue (clase ClientNetworkProtocolProperty)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/setnumvalue-method-clientnetworkprotocolproperty-class.md
+        - name: Método SetStrValue (clase ClientNetworkProtocolProperty)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/setstrvalue-method-clientnetworkprotocolproperty-class.md
+        - name: Método SetFlag (clase ClientNetworkProtocolProperty)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/setflag-method-clientnetworkprotocolproperty-class.md
+        - name: Método SetStringValue (clase ClientNetworkProtocolProperty)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/setstringvalue-method-clientnetworkprotocolproperty-class.md
+        - name: Método SetNumericalValue (clase ClientNetworkProtocolProperty)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/setnumericalvalue-method-clientnetworkprotocolproperty-class.md
+    - name: Clase ClientSettings
+      href: ../wmi-provider-configuration-classes/clientsettings-class.md
+      items:
+        - name: Propiedad InstanceName (clase ClientSettings)
+          href: ../wmi-provider-configuration-classes/clientsettings-class-instancename-property.md
+        - name: Método SetDefaults (clase ClientSettings)
+          href: ../wmi-provider-configuration-classes/clientsettings-class-setdefaults-method.md
+    - name: Clase ClientSettingsGeneralFlag
+      href: ../wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md
+      items:
+        - name: Propiedad InstanceName (clase ClientSettingsGeneralFlag)
+          href: ../wmi-provider-configuration-classes/clientsettingsgeneralflag-class/instancename-property-clientsettingsgeneralflag-class.md
+        - name: Propiedad FlagIndex (clase ClientSettingsGeneralFlag)
+          href: ../wmi-provider-configuration-classes/clientsettingsgeneralflag-class/flagindex-property-clientsettingsgeneralflag-class.md
+        - name: Propiedad FlagName (clase ClientSettingsGeneralFlag)
+          href: ../wmi-provider-configuration-classes/clientsettingsgeneralflag-class/flagname-property-clientsettingsgeneralflag-class.md
+        - name: Propiedad FlagValue (clase ClientSettingsGeneralFlag)
+          href: ../wmi-provider-configuration-classes/clientsettingsgeneralflag-class/flagvalue-property-clientsettingsgeneralflag-class.md
+        - name: Método SetValue (clase ClientSettingsGeneralFlag)
+          href: ../wmi-provider-configuration-classes/clientsettingsgeneralflag-class/setvalue-method-clientsettingsgeneralflag-class.md
+    - name: Clase SecurityCertificate
+      href: ../wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md
+      items:
+        - name: Propiedad SHA (clase SecurityCertificate)
+          href: ../wmi-provider-configuration-classes/securitycertificate-class/sha-property-securitycertificate-class.md
+        - name: Propiedad IssuedTo (clase SecurityCertificate)
+          href: ../wmi-provider-configuration-classes/securitycertificate-class/issuedto-property-securitycertificate-class.md
+        - name: Propiedad IssuedBy (clase SecurityCertificate)
+          href: ../wmi-provider-configuration-classes/securitycertificate-class/issuedby-property-securitycertificate-class.md
+        - name: Propiedad FriendlyName (clase SecurityCertificate)
+          href: ../wmi-provider-configuration-classes/securitycertificate-class/friendlyname-property-securitycertificate-class.md
+        - name: Propiedad Name (clase SecurityCertificate)
+          href: ../wmi-provider-configuration-classes/securitycertificate-class/name-property-securitycertificate-class.md
+        - name: Propiedad ExpirationDate (clase SecurityCertificate)
+          href: ../wmi-provider-configuration-classes/securitycertificate-class/expirationdate-property-securitycertificate-class.md
+        - name: Propiedad StartDate (clase SecurityCertificate)
+          href: ../wmi-provider-configuration-classes/securitycertificate-class/startdate-property-securitycertificate-class.md
+        - name: Propiedad Context (clase SecurityCertificate)
+          href: ../wmi-provider-configuration-classes/securitycertificate-class/context-property-securitycertificate-class.md
+        - name: Propiedad SystemStore (clase SecurityCertificate)
+          href: ../wmi-provider-configuration-classes/securitycertificate-class/systemstore-property-securitycertificate-class.md
+        - name: Método GetCurrentCertificate (clase SecurityCertificate)
+          href: ../wmi-provider-configuration-classes/securitycertificate-class/getcurrentcertificate-method-securitycertificate-class.md
+        - name: Método SetCurrentCertificate (clase SecurityCertificate)
+          href: ../wmi-provider-configuration-classes/securitycertificate-class/setcurrentcertificate-method-securitycertificate-class.md
+    - name: Clase ServerNetworkProtocol
+      href: ../wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md
+      items:
+        - name: Propiedad InstanceName (clase ServerNetworkProtocol)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocol-class/instancename-property-servernetworkprotocol-class.md
+        - name: Propiedad ProtocolName (clase ServerNetworkProtocol)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocol-class/protocolname-property-servernetworkprotocol-class.md
+        - name: Propiedad ProtocolDisplayName (clase ServerNetworkProtocol)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocol-class/protocoldisplayname-property-servernetworkprotocol-class.md
+        - name: Propiedad ProtocolDLL (clase ServerNetworkProtocol)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocol-class/protocoldll-property-servernetworkprotocol-class.md
+        - name: Propiedad Enabled (clase ServerNetworkProtocol)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocol-class/enabled-property-servernetworkprotocol-class.md
+        - name: Propiedad Properties (clase ServerNetworkProtocol)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocol-class/properties-property-servernetworkprotocol-class.md
+        - name: Propiedad IpAddresses (clase ServerNetworkProtocol)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocol-class/ipaddresses-property-servernetworkprotocol-class.md
+        - name: Propiedad MultiIpConfigurationSupport (clase ServerNetworkProtocol)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocol-class/multiipconfigurationsupport-property-servernetworkprotocol-class.md
+        - name: Método SetEnable (clase ServerNetworkProtocol)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocol-class/setenable-method-servernetworkprotocol-class.md
+        - name: Método SetDisable (clase ServerNetworkProtocol)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocol-class/setdisable-method-servernetworkprotocol-class.md
+    - name: Clase ServerNetworkProtocolIPAddress
+      href: ../wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md
+      items:
+        - name: Propiedad InstanceName (clase ServerNetworkProtocolIPAddress)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/instancename-property-servernetworkprotocolipaddress-class.md
+        - name: Propiedad ProtocolName (clase ServerNetworkProtocolIPAddress)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/protocolname-property-servernetworkprotocolipaddress-class.md
+        - name: Propiedad IpAddressName (clase ServerNetworkProtocolIPAddress)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/ipaddressname-property-servernetworkprotocolipaddress-class.md
+        - name: Propiedad Properties (clase ServerNetworkProtocolIPAddress)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/properties-property-servernetworkprotocolipaddress-class.md
+        - name: Método SetEnable (clase ServerNetworkProtocolIPAddress)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/setenable-method-servernetworkprotocolipaddress-class.md
+        - name: Método SetDisable (clase ServerNetworkProtocolIPAddress)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/setdisable-method-servernetworkprotocolipaddress-class.md
+        - name: Propiedad Enabled (clase ServerNetworkProtocolIpAddress)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/enabled-property-servernetworkprotocolipaddress-class.md
+    - name: Clase ServerNetworkProtocolProperty
+      href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md
+      items:
+        - name: Propiedad InstanceName (clase ServerNetworkProtocolProperty)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/instancename-property-servernetworkprotocolproperty-class.md
+        - name: Propiedad PropertyName (clase ServerNetworkProtocolProperty)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/propertyname-property-servernetworkprotocolproperty-class.md
+        - name: Propiedad IPAddressName (clase ServerNetworkProtocolProperty)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/ipaddressname-property-servernetworkprotocolproperty-class.md
+        - name: Propiedad ProtocolName (clase ServerNetworkProtocolProperty)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/protocolname-property-servernetworkprotocolproperty-class.md
+        - name: Propiedad PropertyType (clase ServerNetworkProtocolProperty)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/propertytype-property-servernetworkprotocolproperty-class.md
+        - name: Propiedad PropertyValType (clase ServerNetworkProtocolProperty)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/propertyvaltype-property-servernetworkprotocolproperty-class.md
+        - name: Propiedad PropertyNumVal (clase ServerNetworkProtocolProperty)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/propertynumval-property-servernetworkprotocolproperty-class.md
+        - name: Propiedad PropertyStrVal (clase ServerNetworkProtocolProperty)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/propertystrval-property-servernetworkprotocolproperty-class.md
+        - name: Método SetNumericalValue (clase ServerNetworkProtocolProperty)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/setnumericalvalue-method-servernetworkprotocolproperty-class.md
+        - name: Método SetStringValue (clase ServerNetworkProtocolProperty)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/setstringvalue-method-servernetworkprotocolproperty-class.md
+        - name: Método SetFlag (clase ServerNetworkProtocolProperty)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/setflag-method-servernetworkprotocolproperty-class.md
+    - name: Clase ServerSettings
+      href: ../wmi-provider-configuration-classes/serversettings-class/serversettings-class.md
+      items:
+        - name: Propiedad InstanceName (clase ServerSettings)
+          href: ../wmi-provider-configuration-classes/serversettings-class/instancename-property-serversettings-class.md
+        - name: Propiedad NumberOfFlags (clase ServerSettings)
+          href: ../wmi-provider-configuration-classes/serversettings-class/numberofflags-property-serversettings-class.md
+        - name: Propiedad GeneralFlags (clase ServerSettings)
+          href: ../wmi-provider-configuration-classes/serversettings-class/generalflags-property-serversettings-class.md
+        - name: Método SetDefaults (clase ServerSettings)
+          href: ../wmi-provider-configuration-classes/serversettings-class/setdefaults-method-serversettings-class.md
+        - name: Método GetCurrentCertificate (clase ServerSettings)
+          href: ../wmi-provider-configuration-classes/serversettings-class/getcurrentcertificate-method-serversettings-class.md
+        - name: Método SetCurrentCertificate (clase ServerSettings)
+          href: ../wmi-provider-configuration-classes/serversettings-class/setcurrentcertificate-method-serversettings-class.md
+        - name: Método RemoveCertificate (clase ServerSettings)
+          href: ../wmi-provider-configuration-classes/serversettings-class/removecertificate-method-serversettings-class.md
+    - name: Clase ServerSettingsGeneralFlag
+      href: ../wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md
+      items:
+        - name: Propiedad InstanceName (clase ServerSettingsGeneralFlag)
+          href: ../wmi-provider-configuration-classes/serversettingsgeneralflag-class/instancename-property-serversettingsgeneralflag-class.md
+        - name: Propiedad FlagName (clase ServerSettingsGeneralFlag)
+          href: ../wmi-provider-configuration-classes/serversettingsgeneralflag-class/flagname-property-serversettingsgeneralflag-class.md
+        - name: Propiedad FlagValue (clase ServerSettingsGeneralFlag)
+          href: ../wmi-provider-configuration-classes/serversettingsgeneralflag-class/flagvalue-property-serversettingsgeneralflag-class.md
+        - name: Método SetValue (clase ServerSettingsGeneralFlag)
+          href: ../wmi-provider-configuration-classes/serversettingsgeneralflag-class/setvalue-method-serversettingsgeneralflag-class.md
+    - name: Clase SInstance
+      href: ../wmi-provider-configuration-classes/sinstance-class/sinstance-class.md
+      items:
+        - name: Propiedad InstanceName (clase SInstance)
+          href: ../wmi-provider-configuration-classes/sinstance-class/instancename-property-sinstance-class.md
+        - name: Propiedad NumberOfFlags (clase SInstance)
+          href: ../wmi-provider-configuration-classes/sinstance-class/numberofflags-property-sinstance-class.md
+        - name: Método SetDefaults (clase SInstance)
+          href: ../wmi-provider-configuration-classes/sinstance-class/setdefaults-method-sinstance-class.md
+        - name: Propiedad GeneralFlags (clase SInstance)
+          href: ../wmi-provider-configuration-classes/sinstance-class/generalflags-property-sinstance-class.md
+        - name: Método GetCurrentCertificate (clase SInstance)
+          href: ../wmi-provider-configuration-classes/sinstance-class/getcurrentcertificate-method-sinstance-class.md
+        - name: Método SetCurrentCertificate (clase SInstance)
+          href: ../wmi-provider-configuration-classes/sinstance-class/setcurrentcertificate-method-sinstance-class.md
+        - name: Método RemoveCertificate (clase SInstance)
+          href: ../wmi-provider-configuration-classes/sinstance-class/removecertificate-method-sinstance-class.md
+    - name: 'SqlErrorLogEvent, clase'
+      href: ../wmi-provider-configuration-classes/sqlerrorlogevent-class.md
+    - name: Clase SqlErrorLogFile
+      href: ../wmi-provider-configuration-classes/sqlerrorlogfile-class.md
+    - name: Clase SqlServerAlias
+      href: ../wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md
+      items:
+        - name: Propiedad AliasName (clase SqlServerAlias)
+          href: ../wmi-provider-configuration-classes/sqlserveralias-class/aliasname-property-sqlserveralias-class.md
+        - name: Propiedad ServerName (clase SqlServerAlias)
+          href: ../wmi-provider-configuration-classes/sqlserveralias-class/servername-property-sqlserveralias-class.md
+        - name: Propiedad ProtocolName (clase SqlServerAlias)
+          href: ../wmi-provider-configuration-classes/sqlserveralias-class/protocolname-property-sqlserveralias-class.md
+        - name: Propiedad ConnectionString (clase SqlServerAlias)
+          href: ../wmi-provider-configuration-classes/sqlserveralias-class/connectionstring-property-sqlserveralias-class.md
+    - name: Clase SqlService
+      href: ../wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md
+      items:
+        - name: Propiedad ServiceName (clase SqlService)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/servicename-property-sqlservice-class.md
+        - name: Propiedad SqlServiceType (clase SqlService)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/sqlservicetype-property-sqlservice-class.md
+        - name: Propiedad AdvancedProperties (clase SqlService)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/advancedproperties-property-sqlservice-class.md
+        - name: Propiedad BinaryPath (clase SqlService)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/binarypath-property-sqlservice-class.md
+        - name: Propiedad HostName (clase SqlService)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/hostname-property-sqlservice-class.md
+        - name: Propiedad StartMode (clase SqlService)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/startmode-property-sqlservice-class.md
+        - name: Propiedad AcceptPause (clase SqlService)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/acceptpause-property-sqlservice-class.md
+        - name: Propiedad AcceptStop (clase SqlService)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/acceptstop-property-sqlservice-class.md
+        - name: Propiedad DisplayName (clase SqlService)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/displayname-property-sqlservice-class.md
+        - name: Propiedad ErrorControl (clase SqlService)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/errorcontrol-property-sqlservice-class.md
+        - name: Propiedad State (clase SqlService)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/state-property-sqlservice-class.md
+        - name: Clase ProcessId (clase SqlService)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/processid-class-sqlservice-class.md
+        - name: Propiedad ExitCode (clase SqlService)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/exitcode-property-sqlservice-class.md
+        - name: Propiedad Description (clase SqlService)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/description-property-sqlservice-class.md
+        - name: Propiedad Dependencies (clase SqlService)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/dependencies-property-sqlservice-class.md
+        - name: Propiedad Clustered (clase SqlService)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/clustered-property-sqlservice-class.md
+        - name: Método StopService (clase SqlService)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/stopservice-method-sqlservice-class.md
+        - name: Método StartService (clase SqlService)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/startservice-method-sqlservice-class.md
+        - name: Método PauseService (clase SqlService)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/pauseservice-method-sqlservice-class.md
+        - name: Método ResumeService (clase SqlService)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/resumeservice-method-sqlservice-class.md
+        - name: Método SetServiceAccount (clase SqlService)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/setserviceaccount-method-sqlservice-class.md
+        - name: Método SetServiceAccountPassword (clase SqlService)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/setserviceaccountpassword-method-sqlservice-class.md
+        - name: Método SetStartMode (clase SqlService)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/setstartmode-method-sqlservice-class.md
+    - name: Clase SqlServiceAdvancedProperty
+      href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md
+      items:
+        - name: Propiedad ServiceName (clase SqlServiceAdvancedProperty)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/servicename-property-sqlserviceadvancedproperty-class.md
+        - name: Propiedad SqlServiceType (clase SqlServiceAdvancedProperty)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlservicetype-property-sqlserviceadvancedproperty-class.md
+        - name: Propiedad PropertyName (clase SqlServiceAdvancedProperty)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/propertyname-property-sqlserviceadvancedproperty-class.md
+        - name: Propiedad PropertyIndex (clase SqlServiceAdvancedProperty)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/propertyindex-property-sqlserviceadvancedproperty-class.md
+        - name: Propiedad PropertyValueType (clase SqlServiceAdvancedProperty)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/propertyvaluetype-property-sqlserviceadvancedproperty-class.md
+        - name: Propiedad PropertyNumValue (clase SqlServiceAdvancedProperty)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/propertynumvalue-property-sqlserviceadvancedproperty-class.md
+        - name: Propiedad PropertyStrValue (clase SqlServiceAdvancedProperty)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/propertystrvalue-property-sqlserviceadvancedproperty-class.md
+        - name: Propiedad IsReadOnly (clase SqlServiceAdvancedProperty)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/isreadonly-property-sqlserviceadvancedproperty-class.md
+        - name: Método SetNumValue (clase SqlServiceAdvancedProperty)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/setnumvalue-method-sqlserviceadvancedproperty-class.md
+        - name: Método SetBoolValue (clase SqlServiceAdvancedProperty)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/setboolvalue-method-sqlserviceadvancedproperty-class.md
+        - name: Método SetStrValue (clase SqlServiceAdvancedProperty)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/setstrvalue-method-sqlserviceadvancedproperty-class.md
+        - name: Método SetNumericalValue (clase SqlServiceAdvancedProperty)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/setnumericalvalue-method-sqlserviceadvancedproperty-class.md
+        - name: Método SetStringValue (clase SqlServiceAdvancedProperty)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/setstringvalue-method-sqlserviceadvancedproperty-class.md

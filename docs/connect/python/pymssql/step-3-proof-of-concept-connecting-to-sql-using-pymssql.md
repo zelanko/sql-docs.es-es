@@ -1,5 +1,5 @@
 ---
-title: 'Paso 3: Prueba de concepto que se conecta a SQL con pymssql | Documentos de Microsoft'
+title: 'Paso 3: prueba de concepto de la conexión a SQL con pymssql | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e744d2e472e082cacb48a3e4f8c3a07a1f87bb03
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 8ea4fa2527fa39700647832bdd1a194389cb36e4
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309934"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982237"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Paso 3: Prueba de concepto que se conecta a SQL con pymssql
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Paso 3: prueba de concepto de la conexión a SQL con pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
-En este ejemplo debe considerarse una prueba de concepto solo.  El código de ejemplo se ha simplificado para mayor claridad y no representa necesariamente mejores prácticas recomendadas por Microsoft.  
+En este ejemplo debe considerarse como una prueba de concepto solo.  El código de ejemplo se ha simplificado para mayor claridad y no representa necesariamente las mejores prácticas recomendadas por Microsoft.  
   
 ## <a name="step-1--connect"></a>Paso 1: conectar  
   
-El [pymssql.connect](http://pymssql.org/en/latest/ref/pymssql.html) función se utiliza para conectarse a la base de datos SQL.  
+El [pymssql.connect](http://pymssql.org/en/latest/ref/pymssql.html) función se utiliza para conectarse a SQL Database.  
   
 ```python
     import pymssql  
@@ -38,7 +38,7 @@ El [pymssql.connect](http://pymssql.org/en/latest/ref/pymssql.html) función se 
   
 ## <a name="step-2--execute-query"></a>Paso 2: Ejecutar consulta  
   
-El [cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) función puede utilizarse para recuperar un conjunto de resultados de una consulta en base de datos de SQL. Esta función básicamente acepta cualquier consulta y devuelve un conjunto de resultados que puede ser recorre en iteración mediante el uso de [cursor.fetchone()](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
+El [cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) función puede utilizarse para recuperar un conjunto de resultados de una consulta en SQL Database. Esta función acepta cualquier consulta básicamente y devuelve un conjunto de resultados que se puede iterar mediante el uso de [cursor.fetchone ()](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
   
   
 ```python
@@ -54,7 +54,7 @@ El [cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor
   
 ## <a name="step-3--insert-a-row"></a>Paso 3: Insertar una fila  
   
-En este ejemplo se muestra cómo ejecutar un [insertar](../../../t-sql/statements/insert-transact-sql.md) instrucción de forma segura, pasar parámetros que protección la aplicación de [inyección de código SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) valor.    
+En este ejemplo se muestra cómo ejecutar un [insertar](../../../t-sql/statements/insert-transact-sql.md) instrucción de forma segura, pasar parámetros que protejan la aplicación de [inyección de código SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) valor.    
   
   
 ```python
@@ -72,7 +72,7 @@ En este ejemplo se muestra cómo ejecutar un [insertar](../../../t-sql/statement
   
 ## <a name="step-4--rollback-a-transaction"></a>Paso 4: Revertir una transacción  
   
-Este ejemplo de código muestra el uso de transacciones en el que es:  
+Este ejemplo de código muestra el uso de transacciones en el que puede:  
   
 * Iniciar una transacción  
 * Insertar una fila de datos  
@@ -90,4 +90,4 @@ Este ejemplo de código muestra el uso de transacciones en el que es:
     
   ## <a name="next-steps"></a>Pasos siguientes  
   
-Para obtener más información, consulte el [Centro para desarrolladores de Python](https://azure.microsoft.com/en-us/develop/python/).
+Para obtener más información, consulte el [Centro para desarrolladores de Python](https://azure.microsoft.com/develop/python/).

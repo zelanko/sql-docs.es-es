@@ -1,7 +1,7 @@
 ---
 title: table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/23/2017
+ms.date: 7/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,12 +19,12 @@ caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 035060bb8c9b0f31d6f8712d0abf94b2cf1c2939
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2e95b9e38ab4716ce244c8a1328a2f4d2437d769
+ms.sourcegitcommit: eb926c51b9caeccde1d60cfa92ddfb12067dc09e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432244"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39240687"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,6 @@ Las consultas que modifican variables **table** no generan planes de ejecución 
   
 En las variables **table** no se pueden crear índices de forma explícita; en estas variables **table** tampoco se conserva ninguna estadística. A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], se introdujo una sintaxis nueva que le permite crear determinado tipos de índice alineados con la definición de tabla.  Con esta nueva sintaxis, puede crear índices en las variables de **tabla** como parte de la definición de tabla. En determinados casos, el rendimiento puede mejorar si en su lugar se utilizan tablas temporales, las que proporcionan estadísticas y compatibilidad total del índice. Para más información sobre la creación de índices alineados y las tablas temporales, consulte[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).
 
-
 Las restricciones CHECK, los valores DEFAULT y las columnas calculadas de la declaración de tipos **table** no pueden llamar a funciones definidas por el usuario.
   
 No se permite la operación de asignación entre variables **table**.
@@ -115,6 +114,23 @@ No se permite la operación de asignación entre variables **table**.
 Las variables **table** no se ven afectadas por las operaciones de reversión de transacciones debido a que tienen un ámbito limitado y no forman parte de la base de datos persistente.
   
 Las variables de tabla no se pueden modificar una vez creadas.
+
+## <a name="table-variable-deferred-compilation"></a>Compilación diferida de variables de tabla
+La **compilación diferida de variables de tabla** mejora la calidad del plan y el rendimiento general de las consultas que hacen referencia a las variables de tabla. Durante la optimización y la compilación del plan inicial, esta característica propagará las estimaciones de cardinalidad que se basan en los recuentos de filas de variables de tabla reales. Esta información precisa del recuento de filas se usará para optimizar las operaciones del plan de bajada.
+
+> [!NOTE]
+> La compilación diferida de variables de tabla es una característica en vista previa (GB) pública de Azure SQL Database.  
+
+Con la compilación aplazada variable de tabla, la compilación de una instrucción que hace referencia a una variable de tabla se aplaza hasta que la primera ejecución real de la instrucción. El comportamiento de esta compilación diferida es idéntico al comportamiento de las tablas temporales y este cambio genera el uso de la cardinalidad real en lugar de la estimación de una fila original. 
+
+Para habilitar la versión preliminar pública de la compilación diferida de variables de tabla, habilite el nivel 150 de compatibilidad de la base de datos para la base de datos a la que se conecta cuando ejecuta la consulta.
+
+La compilación diferida de variables de tabla **no** cambia ninguna otra característica de las variables de tabla. Por ejemplo, esta característica no agrega estadísticas de columna a las variables de tabla.
+
+La compilación diferida de variables de tabla **no aumenta la frecuencia de recompilación**.  En su lugar, se desplaza a donde se produce la compilación inicial. El plan en caché resultante se genera en función del recuento de filas de variables de tabla de la compilación diferida. Consultas consecutivas vuelven a usar el plan en caché hasta que este se expulsa o vuelve a compilar. 
+
+Si el recuento de filas de variables de tabla usado para la compilación del plan inicial representa un valor típico que es significativamente distinto de una estimación del número de filas corregidas, las operaciones de bajada se beneficiarán.  Si el recuento de filas de variables de tabla varía significativamente entre las ejecuciones, es posible que esta característica no mejore el rendimiento.
+
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -187,5 +203,3 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [Usar parámetros con valores de tabla &#40;motor de base de datos&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
 [Sugerencias de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)
-  
-  

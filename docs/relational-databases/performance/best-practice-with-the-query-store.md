@@ -17,17 +17,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 30a22bd9661ea6b5be5d33fad5a9ce03e4f3b1c1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: ce8da96760e08b2388a8d3a65e0aa9abc67dd169
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981427"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279186"
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedimiento recomendado con el Almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  En este tema se describen los procedimientos recomendados para usar el Almacén de consultas con la carga de trabajo.  
+  En este artículo se describen los procedimientos recomendados para usar el Almacén de consultas con la carga de trabajo.  
   
 ##  <a name="SSMS"></a> Utilice la versión más reciente de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tiene un conjunto de interfaces de usuario diseñadas para configurar el Almacén de consultas, así como para consumir datos recopilados sobre la carga de trabajo.  
@@ -45,7 +45,7 @@ Puede usar el Almacén de consultas en todas las bases de datos sin problemas, i
 
 ##  <a name="Configure"></a>Mantener el Almacén de consultas ajustado a la carga de trabajo  
  Configure el Almacén de consultas en función de la carga de trabajo y los requisitos de solución de problemas de rendimiento.   
-Los parámetros predeterminados son buenos para un inicio rápido pero debe supervisar el comportamiento del Almacén de consultas a lo largo del tiempo y ajustar su configuración en consecuencia:  
+Los parámetros predeterminados son lo suficientemente buenos para iniciarse, pero debe supervisar el comportamiento del Almacén de consultas a lo largo del tiempo y ajustar su configuración en consecuencia:  
   
  ![query-store-properties](../../relational-databases/performance/media/query-store-properties.png "query-store-properties")  
   
@@ -276,13 +276,13 @@ La tabla siguiente proporciona prácticas recomendadas:
 |Eliminar consultas menos relevantes cuando se alcanza el tamaño máximo.|Activar la directiva de limpieza basada en el tamaño.|  
   
 ##  <a name="Parameterize"></a> Evitar el uso de consultas sin parámetros  
- El uso de consultas sin parámetros cuando no es absolutamente necesario (por ejemplo, en caso de análisis ad hoc) no es una práctica recomendada.  Los planes almacenados no se puede reutilizar, lo que obliga al optimizador de consultas a compilar consultas para cada texto de consulta única. Para obtener más información sobre este tema, consulte [Directrices para usar la parametrización forzada](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).  
-  Además, el Almacén de consultas puede superar rápidamente la cuota de tamaño debido a la posibilidad de un gran número de textos de consulta diferentes y, por consiguiente, un gran número de planes de ejecución distintos con forma similar.  
+El uso de consultas sin parámetros cuando no es absolutamente necesario (por ejemplo, en caso de análisis ad hoc) no es una práctica recomendada.  Los planes almacenados no se puede reutilizar, lo que obliga al optimizador de consultas a compilar consultas para cada texto de consulta única. Para obtener más información, consulte [Directrices para usar la parametrización forzada](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).  
+Además, el Almacén de consultas puede superar rápidamente la cuota de tamaño debido a la posibilidad de un gran número de textos de consulta diferentes y, por consiguiente, un gran número de planes de ejecución distintos con forma similar.  
 Por tanto, el rendimiento de la carga de trabajo será deficiente y el Almacén de consultas podría cambiar al modo de solo lectura o podría estar eliminando los datos constantemente intentando mantenerse al día con las consultas entrantes.  
   
- Tenga en cuenta las siguientes opciones:  
+Tenga en cuenta las siguientes opciones:  
 
-  -   Parametrice consultas donde proceda, por ejemplo, el encapsulamiento de consultas dentro de un procedimiento almacenado osp_executesql. Para obtener más información sobre este tema, consulte [Parámetros y reutilización de un plan de ejecución](../../relational-databases/query-processing-architecture-guide.md#PlanReuse).    
+-   Parametrice consultas donde proceda, por ejemplo, el encapsulamiento de consultas dentro de un procedimiento almacenado osp_executesql. Para obtener más información, consulte [Parámetros y reutilización de un plan de ejecución](../../relational-databases/query-processing-architecture-guide.md#PlanReuse).    
   
 -   Use la opción [**Optimizar para cargas de trabajo ad hoc**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) si la carga de trabajo contiene muchos lotes ad hoc de un solo uso con distintos planes de consulta.  
   
@@ -297,11 +297,11 @@ Por tanto, el rendimiento de la carga de trabajo será deficiente y el Almacén 
 -   Establezca **Modo de captura de consulta** en AUTOMÁTICO para filtrar las consultas ad hoc con consumo pequeño de recursos automáticamente.  
   
 ##  <a name="Drop"></a>Evitar un patrón DROP y CREATE al mantener de objetos contenedores para las consultas  
- El Almacén de consultas asocia la entrada de consulta a un objeto contenedor (procedimiento almacenado, función y desencadenador).  Cuando se vuelve a crear un objeto contenedor, se genera una nueva entrada de consulta para el mismo texto de consulta. Esto impide realizar un seguimiento de las estadísticas de rendimiento para esa consulta a lo largo del tiempo y usar un mecanismo para forzar el plan. Para evitar esto, utilice el proceso `ALTER <object>` para cambiar una definición de objeto contenedor siempre que sea posible.  
+El Almacén de consultas asocia la entrada de consulta a un objeto contenedor (procedimiento almacenado, función y desencadenador).  Cuando se vuelve a crear un objeto contenedor, se genera una nueva entrada de consulta para el mismo texto de consulta. Esto impide realizar un seguimiento de las estadísticas de rendimiento para esa consulta a lo largo del tiempo y usar un mecanismo para forzar el plan. Para evitar esto, utilice el proceso `ALTER <object>` para cambiar una definición de objeto contenedor siempre que sea posible.  
   
 ##  <a name="CheckForced"></a> Comprobación periódica del estado de los planes forzados  
 
- Forzar el plan es un mecanismo conveniente para corregir el rendimiento de las consultas críticas y hacer que sean más predecibles. Sin embargo, al igual que con las sugerencias de plan y las guías de plan, forzar un plan no es una garantía de que se utilizará en ejecuciones futuras. Normalmente, cuando se cambia el esquema de base de datos de forma que se modifican o se quitan objetos a los que hace referencia el plan de ejecución, al forzar el plan se empiezan a generar errores. En ese caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vuelve a la recompilación de consultas mientras el motivo real del error de la operación de forzado aparece en [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). La siguiente consulta devuelve información sobre planes forzados.  
+Forzar el plan es un mecanismo conveniente para corregir el rendimiento de las consultas críticas y hacer que sean más predecibles. Sin embargo, al igual que con las sugerencias de plan y las guías de plan, forzar un plan no es una garantía de que se utilizará en ejecuciones futuras. Normalmente, cuando se cambia el esquema de base de datos de forma que se modifican o se quitan objetos a los que hace referencia el plan de ejecución, al forzar el plan se empiezan a generar errores. En ese caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vuelve a la recompilación de consultas mientras el motivo real del error de la operación de forzado aparece en [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). La siguiente consulta devuelve información sobre planes forzados.  
   
 ```sql  
 USE [QueryStoreDB];  
@@ -314,7 +314,7 @@ JOIN sys.query_store_query AS q on p.query_id = q.query_id
 WHERE is_forced_plan = 1;  
 ```  
   
- Para ver una lista completa de motivos, vea [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). También puede usar el XEvent **query_store_plan_forcing_failed** para realizar un seguimiento de los errores forzados del plan de solución de problemas.  
+ Para ver una lista completa de motivos, vea [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). También puede usar el XEvent **query_store_plan_forcing_failed** para realizar un seguimiento de los errores forzados del plan y solucionarlos.  
   
 ##  <a name="Renaming"></a> Evitar el cambio de nombre de las bases de datos si hay consultas con planes de forzados  
 
@@ -324,11 +324,14 @@ Si cambia el nombre de una base de datos, al forzar el plan se producirá un err
 
 ##  <a name="Recovery"></a> Uso de marcas de seguimiento en servidores críticos para mejorar la recuperación ante desastres
  
-  Las marcas de seguimiento globales 7745 y 7752 pueden usarse para mejorar el rendimiento del almacén de datos de consultas en situaciones de recuperación ante desastres y alta disponibilidad. Para obtener más información, consulte [Marcas de seguimiento](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+Las marcas de seguimiento globales 7745 y 7752 pueden usarse para mejorar el rendimiento del Almacén de consultas en situaciones de recuperación ante desastres y alta disponibilidad. Para obtener más información, consulte [Marcas de seguimiento](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
   
-  La marca de seguimiento 7745 evitará el comportamiento predeterminado en el que el almacén de consultas escribe datos en el disco antes de que SQL Server pueda apagarse.
+La marca de seguimiento 7745 evitará el comportamiento predeterminado en el que el almacén de consultas escribe datos en el disco antes de que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueda apagarse.
   
-  La marca de seguimiento 7752 habilita la carga asincrónica del Almacén de consultas y también permite que SQL Server ejecute consultas antes de que el Almacén de consultas se haya cargado por completo. El comportamiento predeterminado del almacén de datos de consultas impide que se ejecuten las consultas antes de que se recupere el almacén de consultas.
+La marca de seguimiento 7752 habilita la carga asincrónica del Almacén de consultas y también permite que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecute consultas antes de que el Almacén de consultas se haya cargado por completo. El comportamiento predeterminado del almacén de datos de consultas impide que se ejecuten las consultas antes de que se recupere el almacén de consultas.
+
+> [!IMPORTANT]
+> Si usa el Almacén de consultas para conclusiones de la carga de trabajo just-in-time en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tenga previsto instalar las correcciones de escalabilidad de rendimiento en [KB 4340759](http://support.microsoft.com/help/4340759) lo antes posible. 
 
 ## <a name="see-also"></a>Ver también  
  [Query Store Catalog Views &#40;Transact-SQL&#41; (Vistas de catálogo del almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   

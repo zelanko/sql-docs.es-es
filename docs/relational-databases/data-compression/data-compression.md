@@ -27,12 +27,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1ed791ca34a8a88ce9dd8b25d38740430ce18424
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 944a0ca328ca0835601bf1cb4b75e974da6a8e7a
+ms.sourcegitcommit: eb926c51b9caeccde1d60cfa92ddfb12067dc09e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001677"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39240697"
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ Para las tablas e índices de almacén de columnas, todos los índices y tablas 
 -   Use la compresión de datos **COLUMNSTORE_ARCHIVE** para comprimir los datos de almacén de columnas con la compresión de archivo.  
 -   Use la compresión de datos de **COLUMNSTORE** para descomprimir la compresión de archivo. Los datos resultantes siguen comprimiéndose con la compresión de almacén de columnas.  
   
-Para agregar la compresión de archivo, use [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) o [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) con la opción REBUILD y DATA COMPRESSION = COLUMNSTORE.  
+Para agregar la compresión de archivo, use [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) o [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) con la opción REBUILD y DATA COMPRESSION = COLUMNSTORE_ARCHIVE.  
   
 #### <a name="examples"></a>Ejemplos:  
 ```  

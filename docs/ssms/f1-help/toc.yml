@@ -1,0 +1,40 @@
+- name: Ayuda F1 para las conexiones de servidor (SSMS)
+  href: f1-help-for-server-connections-sql-server-management-studio.md
+- name: Conectar con Almacenamiento de Microsoft Azure
+  href: connect-to-microsoft-azure-storage.md
+- name: Conectar a un componente de SQL Server desde SQL Server Management Studio
+  href: connect-to-any-sql-server-component-from-sql-server-management-studio.md
+- name: 'Propiedades de conexión, cuadro de diálogo'
+  href: connection-properties-dialog-box.md
+- name: 'Conectar con el servidor: motor de base de datos'
+  href: connect-to-server-database-engine.md
+- name: 'Conectar con el servidor: página Propiedades, motor de base de datos'
+  href: connect-to-server-connection-properties-page-database-engine.md
+- name: 'Conectar con el servidor: inicio de sesión, motor de base de datos'
+  href: connect-to-server-login-page-database-engine.md
+- name: 'Inicio de sesión: conectar con el servidor SSAS'
+  href: connect-to-server-login-page-analysis-services.md
+- name: Conectar con SSAS
+  href: connect-to-server-analysis-services.md
+- name: Conectar con el servidor SSAS (página Propiedades de conexión)
+  href: connect-to-server-connection-properties-page-analysis-services.md
+- name: 'Inicio de sesión: conectar con el servidor SSRS'
+  href: connect-to-server-login-page-reporting-services.md
+- name: Conectar con el servidor SSRS
+  href: connect-to-server-reporting-services.md
+- name: Conectar con el servidor SSRS (página Propiedades de conexión)
+  href: connect-to-server-connection-properties-page-reporting-services.md
+- name: Buscar servidores (Servidores locales)
+  href: browse-for-servers-local-servers.md
+- name: Conectar con el servidor (parámetros de conexión adicionales)
+  href: connect-to-server-additional-connection-parameters-page.md
+- name: Buscar servidores (Servidores de redes)
+  href: browse-for-servers-network-servers.md
+- name: Contraseña expirada
+  href: password-expired.md
+- name: Conectar con el servidor SSIS
+  href: connect-to-server-integration-services.md
+- name: Conectar con el servidor SSIS (página Inicio de sesión)
+  href: connect-to-server-login-page-integration-services.md
+- name: Conectar con el servidor SSIS (página Propiedades de conexión)
+  href: connect-to-server-connection-properties-page-integration-services.md

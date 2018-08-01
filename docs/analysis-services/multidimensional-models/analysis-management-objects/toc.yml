@@ -1,0 +1,30 @@
+- name: 'Clases AMO: Introducción'
+  href: amo-classes-introduction.md
+- name: Modelo de objetos y conceptos de AMO
+  href: amo-concepts-and-object-model.md
+- name: Clases de minería de datos de AMO
+  href: amo-data-mining-classes.md
+- name: Clases fundamentales de AMO
+  href: amo-fundamental-classes.md
+- name: Clases de OLAP en AMO
+  href: amo-olap-classes.md
+- name: Otras clases y métodos de AMO
+  href: amo-other-classes-and-methods.md
+- name: Clases Security de AMO
+  href: amo-security-classes.md
+- name: Desarrollar con Objetos de administración de análisis (AMO)
+  href: developing-with-analysis-management-objects-amo.md
+- name: Programar tareas administrativas con AMO
+  href: programming-administrative-tasks-with-amo.md
+- name: Programar clases y métodos complementarios de AMO
+  href: programming-amo-complementary-classes-and-methods.md
+- name: Programar objetos de minería de datos con AMO
+  href: programming-amo-data-mining-objects.md
+- name: Programar objetos fundamentales de AMO
+  href: programming-amo-fundamental-objects.md
+- name: Programar objetos avanzados OLAP en AMO
+  href: programming-amo-olap-advanced-objects.md
+- name: Programar objetos básicos OLAP en AMO
+  href: programming-amo-olap-basic-objects.md
+- name: Programar objetos de seguridad AMO
+  href: programming-amo-security-objects.md

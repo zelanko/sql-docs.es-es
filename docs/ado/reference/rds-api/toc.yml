@@ -1,0 +1,149 @@
+- name: Referencia de la API de RDS
+  href: rds-api-reference.md
+- name: Objetos RDS
+  href: rds-objects.md
+  items:
+    - name: Objeto DataControl (RDS)
+      href: datacontrol-object-rds.md
+      items:
+        - name: 'Eventos, métodos y propiedades de objeto DataControl (RDS)'
+          href: datacontrol-object-rds-properties-methods-and-events.md
+    - name: Objeto DataFactory (RDSServer)
+      href: datafactory-object-rdsserver.md
+      items:
+        - name: 'Eventos, métodos y propiedades del objeto DataFactory (RDSServer)'
+          href: datafactory-object-rdsserver-properties-methods-and-events.md
+    - name: Objeto DataSpace (RDS)
+      href: dataspace-object-rds.md
+      items:
+        - name: 'Eventos, métodos y propiedades del objeto DataSpace (RDS)'
+          href: dataspace-object-rds-properties-methods-and-events.md
+    - name: Interfaz IRDSService (RDS)
+      href: irdsservice-interface-rds.md
+- name: Propiedades de RDS
+  href: rds-properties.md
+  items:
+    - name: Propiedad Connect (RDS)
+      href: connect-property-rds.md
+    - name: Propiedad ExecuteOptions (RDS)
+      href: executeoptions-property-rds.md
+    - name: Propiedad FetchOptions (RDS)
+      href: fetchoptions-property-rds.md
+    - name: Propiedad FilterColumn (RDS)
+      href: filtercolumn-property-rds.md
+    - name: Propiedad FilterCriterion (RDS)
+      href: filtercriterion-property-rds.md
+    - name: Propiedad FilterValue (RDS)
+      href: filtervalue-property-rds.md
+    - name: Propiedad de controlador (RDS)
+      href: handler-property-rds.md
+    - name: Propiedad InternetTimeout (RDS)
+      href: internettimeout-property-rds.md
+    - name: Propiedad ReadyState (RDS)
+      href: readystate-property-rds.md
+    - name: Propiedades Recordset y SourceRecordset (RDS)
+      href: recordset-sourcerecordset-properties-rds.md
+    - name: Propiedad del servidor (RDS)
+      href: server-property-rds.md
+    - name: Propiedad SortColumn (RDS)
+      href: sortcolumn-property-rds.md
+    - name: Propiedad SortDirection (RDS)
+      href: sortdirection-property-rds.md
+    - name: Propiedad SQL
+      href: sql-property.md
+    - name: Propiedad de dirección URL (RDS)
+      href: url-property-rds.md
+- name: Métodos RDS
+  href: rds-methods.md
+  items:
+    - name: Cancel (método) (RDS)
+      href: cancel-method-rds.md
+    - name: Método CancelUpdate (RDS)
+      href: cancelupdate-method-rds.md
+    - name: Método ConvertToString (RDS)
+      href: converttostring-method-rds.md
+    - name: CreateObject (método) (RDS)
+      href: createobject-method-rds.md
+    - name: Ejemplo del método CreateRecordset (RDS)
+      href: createrecordset-method-rds.md
+    - name: Execute (método) (RDS)
+      href: execute-method-rds.md
+    - name: Método Execute21 (RDS)
+      href: execute21-method-rds.md
+    - name: InvokeService (RDS)
+      href: invokeservice-rds.md
+    - name: 'MoveFirst, MoveLast, MoveNext y MovePrevious métodos (RDS)'
+      href: movefirst-movelast-movenext-and-moveprevious-methods-rds.md
+    - name: Método Query (RDS)
+      href: query-method-rds.md
+    - name: Método Refresh (RDS)
+      href: refresh-method-rds.md
+    - name: Reset (método) (RDS)
+      href: reset-method-rds.md
+    - name: Método SubmitChanges (RDS)
+      href: submitchanges-method-rds.md
+    - name: Synchronize (método) (RDS)
+      href: synchronize-method-rds.md
+    - name: Método Synchronize21 (RDS)
+      href: synchronize21-method-rds.md
+- name: Eventos RDS
+  href: rds-events.md
+  items:
+    - name: 'onError (evento, RDS)'
+      href: onerror-event-rds.md
+    - name: 'onReadyStateChange (evento, RDS)'
+      href: onreadystatechange-event-rds.md
+- name: Ejemplos de código RDS
+  href: rds-code-examples.md
+  items:
+    - name: Ejemplos de código RDS en Visual Basic
+      href: rds-code-examples-in-visual-basic.md
+      items:
+        - name: Ejemplo de la propiedad de controlador (VB)
+          href: handler-property-example-vb.md
+        - name: Ejemplo de la propiedad InternetTimeout (VB)
+          href: internettimeout-property-example-vb.md
+    - name: Ejemplos de código RDS en VBScript
+      href: rds-code-examples-in-vbscript.md
+      items:
+        - name: Ejemplo del método Cancel (VBScript)
+          href: cancel-method-example-vbscript.md
+        - name: Ejemplo del método CancelUpdate (VBScript)
+          href: cancelupdate-method-example-vbscript.md
+        - name: Ejemplo de la propiedad Connect (VBScript)
+          href: connect-property-example-vbscript.md
+        - name: Ejemplo del método ConvertToString (VBScript)
+          href: converttostring-method-example-vbscript.md
+        - name: Ejemplo del método CreateRecordset (VBScript)
+          href: createrecordset-method-example-vbscript.md
+        - name: Ejemplo del objeto DataControl (VBScript)
+          href: datacontrol-object-example-vbscript.md
+        - name: DataSpace y el ejemplo del método CreateObject (VBScript)
+          href: dataspace-object-and-createobject-method-example-vbscript.md
+        - name: 'Objeto DataFactory, método de consulta y ejemplo del método CreateObject (VBScript)'
+          href: datafactory-object-query-method-and-createobject-method-example-vbscript.md
+        - name: Ejemplo ExecuteOptions y FetchOptions propiedades (VBScript)
+          href: executeoptions-and-fetchoptions-properties-example-vbscript.md
+        - name: 'FilterColumn, FilterCriterion, FilterValue, SortColumn, SortDirection y propiedades ejemplo del método Reset (VBScript)'
+          href: filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md
+        - name: Ejemplo de la propiedad ReadyState (VBScript)
+          href: readystate-property-example-vbscript.md
+        - name: Ejemplo de propiedades de SourceRecordset (VBScript) y el conjunto de registros
+          href: recordset-and-sourcerecordset-properties-example-vbscript.md
+        - name: Actualización de ejemplo del método (VBScript)
+          href: refresh-method-example-vbscript.md
+        - name: Ejemplo de la propiedad de servidor (VBScript)
+          href: server-property-example-vbscript.md
+        - name: Ejemplo de la propiedad SQL (VBScript)
+          href: sql-property-example-vbscript.md
+        - name: Ejemplo del método SubmitChanges (VBScript)
+          href: submitchanges-method-example-vbscript.md
+        - name: Ejemplo de la propiedad de dirección URL (VBScript)
+          href: url-property-example-vbscript.md
+    - name: Ejemplos de código RDS en Visual C++
+      href: rds-code-examples-in-visual-c.md
+      items:
+        - name: Ejemplo de la propiedad de controlador (VC ++)
+          href: handler-property-example-vc.md
+        - name: Ejemplo de la propiedad InternetTimeout (VC ++)
+          href: internettimeout-property-example-vc.md

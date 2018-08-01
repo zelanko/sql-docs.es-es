@@ -1,0 +1,171 @@
+- name: Información general
+  href: in-memory-oltp-in-memory-optimization.md
+- name: Inventario de tecnologías de OLTP en memoria para acelerar el rendimiento de Transact-SQL
+  href: survey-of-initial-areas-in-in-memory-oltp.md
+- name: Información general y escenarios de uso
+  href: overview-and-usage-scenarios.md
+- name: Notas del producto sobre el funcionamiento interno de SQL Server 2016
+  href: sql-server-in-memory-oltp-internals-for-sql-server-2016.md
+- name: Planear la adopción de características de OLTP en memoria en SQL Server
+  href: plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md
+- name: Requisitos para utilizar las tablas con optimización para memoria
+  href: requirements-for-using-memory-optimized-tables.md
+- name: Ejemplos de código de OLTP en memoria
+  href: in-memory-oltp-code-samples.md
+  items:
+    - name: 'Demostración: mejora de rendimiento de OLTP en memoria'
+      href: demonstration-performance-improvement-of-in-memory-oltp.md
+    - name: Crear una tabla con optimización para memoria y un procedimiento almacenado compilado de forma nativa
+      href: creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
+    - name: Creación de particiones en el nivel de aplicación
+      href: application-level-partitioning.md
+    - name: Base de datos de ejemplo para OLTP en memoria
+      href: sample-database-for-in-memory-oltp.md
+- name: Tablas con optimización para memoria
+  href: memory-optimized-tables.md
+  items:
+    - name: Introducción a las tablas con optimización para memoria
+      href: introduction-to-memory-optimized-tables.md
+    - name: Compilación nativa de tablas y procedimientos almacenados
+      href: native-compilation-of-tables-and-stored-procedures.md
+    - name: Modificar tablas con optimización para memoria
+      href: altering-memory-optimized-tables.md
+    - name: Transactions with Memory-Optimized Tables
+      href: transactions-with-memory-optimized-tables.md
+    - name: Patrón de aplicación para crear particiones de tablas con optimización para memoria
+      href: application-pattern-for-partitioning-memory-optimized-tables.md
+    - name: Estadísticas para las tablas con optimización para memoria
+      href: statistics-for-memory-optimized-tables.md
+    - name: Tamaño de tabla y fila de las tablas con optimización para memoria
+      href: table-and-row-size-in-memory-optimized-tables.md
+    - name: Guía del procesamiento de consultas para tablas con optimización para memoria
+      href: a-guide-to-query-processing-for-memory-optimized-tables.md
+- name: Tabla temporal y variable de tabla más rápidas con optimización para memoria
+  href: faster-temp-table-and-table-variable-by-using-memory-optimization.md
+- name: Funciones escalares definidas por el usuario para OLTP en memoria
+  href: scalar-user-defined-functions-for-in-memory-oltp.md
+- name: Índices de tablas con optimización para memoria
+  href: indexes-for-memory-optimized-tables.md
+  items:
+    - name: Índices de hash de tablas con optimización para memoria
+      href: '../../relational-databases/sql-server-index-design-guide.md#hash_index'
+    - name: Índice no agrupado de tablas optimizadas para memoria
+      href: '../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index'
+    - name: Solución de problemas de índices de hash para tablas optimizadas para memoria
+      href: hash-indexes-for-memory-optimized-tables.md
+- name: procedimientos almacenados compilados de forma nativa
+  href: natively-compiled-stored-procedures.md
+  items:
+    - name: Crear procedimientos almacenados compilados de forma nativa
+      href: creating-natively-compiled-stored-procedures.md
+    - name: Altering Natively Compiled T-SQL Modules
+      href: altering-natively-compiled-t-sql-modules.md
+    - name: Bloques atomic
+      href: atomic-blocks-in-native-procedures.md
+    - name: Procedimientos almacenados compilados de forma nativa y opciones SET de ejecución.
+      href: natively-compiled-stored-procedures-and-execution-set-options.md
+    - name: Prácticas recomendadas para llamar a un procedimiento almacenado compilado de forma nativa
+      href: best-practices-for-calling-natively-compiled-stored-procedures.md
+    - name: Supervisar el rendimiento de los procedimientos almacenados compilados de forma nativa
+      href: monitoring-performance-of-natively-compiled-stored-procedures.md
+    - name: Llamar a procedimientos almacenados compilados de forma nativa desde aplicaciones de acceso a datos
+      href: calling-natively-compiled-stored-procedures-from-data-access-applications.md
+- name: Estimar los requisitos de memoria para las tablas con optimización para memoria
+  href: estimate-memory-requirements-for-memory-optimized-tables.md
+  items:
+    - name: Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor
+      href: bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md
+    - name: Supervisar y solucionar problemas de uso de memoria
+      href: monitor-and-troubleshoot-memory-usage.md
+    - name: Resolver problemas de memoria insuficiente
+      href: resolve-out-of-memory-issues.md
+    - name: Restaurar una base de datos y enlazarla a un grupo de recursos de servidor
+      href: restore-a-database-and-bind-it-to-a-resource-pool.md
+    - name: Recolección de elementos no utilizados de OLTP en memoria
+      href: in-memory-oltp-garbage-collection.md
+- name: Crear y administrar el almacenamiento de objetos con optimización para memoria
+  href: creating-and-managing-storage-for-memory-optimized-objects.md
+  items:
+    - name: Configurar el almacenamiento para las tablas con optimización para memoria
+      href: configuring-storage-for-memory-optimized-tables.md
+    - name: El grupo de archivos con optimización para memoria
+      href: the-memory-optimized-filegroup.md
+    - name: Durabilidad de las tablas con optimización para memoria
+      href: durability-for-memory-optimized-tables.md
+    - name: Funcionamiento de los puntos de comprobación para tablas con optimización para memoria
+      href: checkpoint-operation-for-memory-optimized-tables.md
+    - name: Definir la durabilidad de los objetos con optimización para memoria
+      href: defining-durability-for-memory-optimized-objects.md
+    - name: Comparar el almacenamiento de tablas basadas en disco con el almacenamiento de tablas con optimización para memoria
+      href: comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
+    - name: Escalabilidad
+      href: scalability.md
+- name: Hacer copia de seguridad de una base de datos con tablas con optimización para memoria
+  href: backing-up-a-database-with-memory-optimized-tables.md
+  items:
+    - name: Restauración por etapas de bases de datos con tablas con optimización para memoria
+      href: piecemeal-restore-of-databases-with-memory-optimized-tables.md
+    - name: Restaurar y recuperar tablas con optimización para memoria
+      href: restore-and-recovery-of-memory-optimized-tables.md
+- name: Compatibilidad de SQL Server con OLTP en memoria
+  href: sql-server-support-for-in-memory-oltp.md
+  items:
+    - name: Características de SQL Server no admitidas para OLTP en memoria
+      href: unsupported-sql-server-features-for-in-memory-oltp.md
+    - name: Compatibilidad de Objetos de administración de SQL Server con OLTP en memoria
+      href: sql-server-management-objects-support-for-in-memory-oltp.md
+    - name: Compatibilidad de SQL Server Integration Services con OLTP en memoria
+      href: sql-server-integration-services-support-for-in-memory-oltp.md
+    - name: Compatibilidad de SQL Server Management Studio con OLTP en memoria
+      href: sql-server-management-studio-support-for-in-memory-oltp.md
+    - name: Compatibilidad con alta disponibilidad para bases de datos OLTP en memoria
+      href: high-availability-support-for-in-memory-oltp-databases.md
+    - name: Compatibilidad de Transact-SQL con OLTP en memoria
+      href: transact-sql-support-for-in-memory-oltp.md
+      items:
+        - name: Tipos de datos admitidos para OLTP en memoria
+          href: supported-data-types-for-in-memory-oltp.md
+        - name: Acceso a tablas con optimización para memoria mediante Transact-SQL interpretado
+          href: accessing-memory-optimized-tables-using-interpreted-transact-sql.md
+        - name: Características admitidas en los módulos T-SQL compilados de forma nativa
+          href: supported-features-for-natively-compiled-t-sql-modules.md
+        - name: Construcciones DDL admitidas para módulos T-SQL compilados de forma nativa
+          href: supported-ddl-for-natively-compiled-t-sql-modules.md
+        - name: Construcciones Transact-SQL no admitidas por OLTP en memoria
+          href: transact-sql-constructs-not-supported-by-in-memory-oltp.md
+- name: Migrar a OLTP en memoria
+  href: migrating-to-in-memory-oltp.md
+  items:
+    - name: Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria
+      href: determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md
+    - name: Asesor de optimización de memoria
+      href: memory-optimization-advisor.md
+    - name: Asistente de compilación nativa
+      href: native-compilation-advisor.md
+    - name: Cmdlet de PowerShell para la evaluación de la migración
+      href: powershell-cmdlet-for-migration-evaluation.md
+    - name: Implementar SQL_VARIANT en una tabla con optimización para memoria
+      href: implementing-sql-variant-in-a-memory-optimized-table.md
+    - name: Problemas de migración para los procedimientos almacenados compilados de forma nativa
+      href: migration-issues-for-natively-compiled-stored-procedures.md
+      items:
+        - name: Crear y obtener acceso a tablas de TempDB desde procedimientos almacenados compilados de forma nativa
+          href: create-and-access-tables-in-tempdb-from-stored-procedures.md
+        - name: Simular una instrucción IF-WHILE EXISTS en un módulo compilado de forma nativa
+          href: simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md
+        - name: Implementación de la funcionalidad MERGE en un procedimiento almacenado compilado de forma nativa
+          href: implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
+        - name: Implementación de una expresión CASE de un procedimiento almacenado compilado de forma nativa
+          href: implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md
+        - name: Implementación de UPDATE con FROM o subconsultas
+          href: implementing-update-with-from-or-subqueries.md
+        - name: Implementar una combinación externa
+          href: implementing-an-outer-join.md
+    - name: Migrar columnas calculadas
+      href: migrating-computed-columns.md
+    - name: Migrar desencadenadores
+      href: migrating-triggers.md
+    - name: Consultas entre bases de datos
+      href: cross-database-queries.md
+    - name: Implementar IDENTITY en una tabla con optimización para memoria
+      href: implementing-identity-in-a-memory-optimized-table.md

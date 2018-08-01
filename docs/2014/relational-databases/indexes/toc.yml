@@ -1,0 +1,60 @@
+- name: Índices (motor de base de datos)
+  href: indexes.md
+- name: Montones (tablas sin índices clúster)
+  href: heaps-tables-without-clustered-indexes.md
+- name: Índices agrupados y no agrupados descritos
+  href: clustered-and-nonclustered-indexes-described.md
+- name: Columnstore Indexes Described
+  href: columnstore-indexes-described.md
+- name: Uso de índices de almacén de columnas
+  href: dbengine-columnstore-indexes.md
+- name: Crear índices clúster
+  href: create-clustered-indexes.md
+- name: Crear índices no clúster
+  href: create-nonclustered-indexes.md
+- name: Crear índices únicos
+  href: create-unique-indexes.md
+- name: Crear índices filtrados
+  href: create-filtered-indexes.md
+- name: Crear índices con columnas incluidas
+  href: create-indexes-with-included-columns.md
+- name: Eliminar un índice
+  href: delete-an-index.md
+- name: Modificar un índice
+  href: modify-an-index.md
+- name: Mover un índice existente a un grupo de archivos diferente
+  href: move-an-existing-index-to-a-different-filegroup.md
+- name: Índices en columnas calculadas
+  href: indexes-on-computed-columns.md
+- name: Opción SORT_IN_TEMPDB para índices
+  href: sort-in-tempdb-option-for-indexes.md
+- name: Deshabilitar índices y restricciones
+  href: disable-indexes-and-constraints.md
+- name: Habilitar índices y restricciones
+  href: enable-indexes-and-constraints.md
+- name: Cambiar el nombre a los índices
+  href: rename-indexes.md
+- name: Establecer opciones de índice
+  href: set-index-options.md
+- name: Requisitos de espacio en disco para operaciones DDL de índice
+  href: disk-space-requirements-for-index-ddl-operations.md
+  items:
+    - name: Espacio en disco del registro de transacciones para operaciones de índice
+      href: transaction-log-disk-space-for-index-operations.md
+    - name: Ejemplo de espacio en disco del índice
+      href: index-disk-space-example.md
+- name: Reorganizar y volver a generar índices
+  href: reorganize-and-rebuild-indexes.md
+- name: Especificar el factor de relleno para un índice
+  href: specify-fill-factor-for-an-index.md
+- name: Realizar operaciones de índice en línea
+  href: perform-index-operations-online.md
+  items:
+    - name: Cómo funcionan las operaciones de índice en línea
+      href: how-online-index-operations-work.md
+    - name: Directrices para operaciones de índices en línea
+      href: guidelines-for-online-index-operations.md
+- name: Configurar operaciones de índice en paralelo
+  href: configure-parallel-index-operations.md
+- name: Propiedades del índice (Ayuda F1)
+  href: index-properties-f1-help.md

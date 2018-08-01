@@ -1,0 +1,30 @@
+- name: Utilizar consultas XPath en SQLXML 4.0
+  href: using-xpath-queries-in-sqlxml-4-0.md
+- name: Subáreas
+  items:
+    - name: Clases de .NET Framework +
+      href: ../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md
+    - name: Diffgram +
+      href: ../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/sqlxml-4-0-net-framework-support-using-diffgrams-to-modify-data.md
+    - name: Ruta de acceso de ubicación +
+      href: ../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-a-location-path-sqlxml-4-0.md
+    - name: EJEMPLOS
+      href: ../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-xpath-queries-sqlxml-4-0.md
+    - name: Diagramas de actualización +
+      href: ../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md
+    - name: Carga masiva de XML +
+      href: ../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md
+    - name: Proveedor de componentes de acceso a datos +
+      href: ../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md
+    - name: Esquemas XML para plantillas de almacenamiento en caché +
+      href: ../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md
+    - name: Seguridad +
+      href: ../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md
+- name: Instrucciones y limitaciones de SQLXML 4.0
+  href: guidelines-and-limitations-of-sqlxml-4-0.md
+- name: Introducción al uso de consultas XPath (SQLXML 4.0)
+  href: introduction-to-using-xpath-queries-sqlxml-4-0.md
+- name: 'Compatibilidad de SQLXML 4.0 con .NET Framework: utilizar la carga masiva'
+  href: sqlxml-4-0-net-framework-support-using-bulk-load.md
+- name: Tipos de datos de XPath (SQLXML 4.0)
+  href: xpath-data-types-sqlxml-4-0.md

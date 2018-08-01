@@ -1,0 +1,58 @@
+- name: Libros en pantalla de SQL Server 2014
+  href: books-online-for-sql-server-2014.md
+- name: Analysis Services +
+  href: ../analysis-services/analysis-services.md
+- name: Data Quality Services +
+  href: ../data-quality-services/data-quality-services.md
+- name: Motor de base de datos +
+  href: ../database-engine/sql-server-database-engine-overview.md
+- name: Introducción (SQL Server 2014) +
+  href: ../getting-started/getting-started-sql-server-2014.md
+- name: Integration Services +
+  href: ../integration-services/sql-server-integration-services.md
+- name: Master Data Services +
+  href: ../master-data-services/master-data-services.md
+- name: PowerShell para SQL Server +
+  href: ../powershell/sql-server-powershell.md
+- name: Características de las bases de datos relacionales +
+  href: ../relational-databases/database-features.md
+- name: Reporting Services +
+  href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+- name: Tutoriales de SQL Server 2014 +
+  href: ../tutorials/tutorials-for-sql-server-2014.md
+- name: Glosario
+  href: glossary.md
+- name: Novedades de SQL Server 2014 +
+  href: ../sql-server/what-s-new-in-sql-server-2016.md
+- name: Material de referencia de SQL Server 2014
+  href: developer-reference-for-sql-server-2014.md
+  items:
+    - name: Guía del desarrollador (Analysis Services) +
+      href: ../analysis-services/dev-guide/analysis-services-dev-guide.md
+    - name: Guía del desarrollador (Integration Services) +
+      href: ../integration-services/integration-services-developer-documentation.md
+    - name: Guía del desarrollador (Master Data Services) +
+      href: ../master-data-services/develop/master-data-services-developer-documentation.md
+    - name: Guía del desarrollador (Motor de base de datos relacional) +
+      href: ../relational-databases/database-engine-developer-documentation.md
+    - name: Guía del desarrollador (replicación) +
+      href: ../relational-databases/replication/concepts/replication-developer-documentation.md
+    - name: Guía del desarrollador (Reporting Services) +
+      href: ../reporting-services/reporting-services-developer-documentation.md
+- name: Instalación de SQL Server 2014 +
+  href: ../database-engine/install-windows/installation-for-sql-server.md
+  items:
+    - name: Asesor de actualizaciones +
+      href: ../sql-server/install/sql-server-2014-upgrade-advisor.md
+    - name: Instalación inicial y de servicio +
+      href: ../sql-server/install/setup-and-servicing-installation.md
+- name: Ayuda de Configuration Manager +
+  href: ../tools/configuration-manager/sql-server-configuration-manager-help.md
+- name: Guía de diseño de índices
+  href: sql-server-index-design-guide.md
+- name: Guía de versiones de fila y bloqueo de transacciones
+  href: sql-server-transaction-locking-and-row-versioning-guide.md
+- name: Arquitectura y administración de registros de transacciones
+  href: sql-server-transaction-log-architecture-and-management.md
+- name: 'Caso práctico: creación de un ecosistema empresarial utilizando la replicación de SQL Server 2014 y Microsoft Dynamics ERP para aumentar la escalabilidad y el rendimiento'
+  href: case-study-building-an-enterprise-ecosystem.md

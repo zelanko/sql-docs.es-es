@@ -1,0 +1,107 @@
+- name: Instalación de Reporting Services 2017
+  href: install-reporting-services.md
+  items:
+    - name: Búsqueda de la clave de producto de Reporting Services 2017
+      href: find-reporting-services-product-key-ssrs.md
+- name: Instalación de Reporting Services 2016 en modo nativo
+  href: install-reporting-services-native-mode-report-server.md
+  items:
+    - name: Realizar una instalación de solo archivos de Reporting Services
+      href: files-only-installation-reporting-services.md
+    - name: Instalar Reporting Services e Internet Information Services en paralelo (modo nativo de SSRS)
+      href: install-reporting-and-internet-information-services-side-by-side.md
+    - name: Hospedar una base de datos del servidor de informes en un clúster de conmutación por error de SQL Server
+      href: host-a-report-server-database-in-a-sql-server-failover-cluster.md
+    - name: Administrador de configuración de Reporting Services (modo nativo)
+      href: reporting-services-configuration-manager-native-mode.md
+      items:
+        - name: Configurar la cuenta de servicio del servidor de informes (Administrador de configuración de SSRS)
+          href: configure-the-report-server-service-account-ssrs-configuration-manager.md
+        - name: Configurar las direcciones URL del servidor de informes (Administrador de configuración de SSRS)
+          href: configure-report-server-urls-ssrs-configuration-manager.md
+          items:
+            - name: Acerca de las reservas y el registro de resrvas de URL (Administrador de configuración de SSRS)
+              href: about-url-reservations-and-registration-ssrs-configuration-manager.md
+            - name: Configurar una dirección URL (Administrador de configuración de SSRS)
+              href: configure-a-url-ssrs-configuration-manager.md
+            - name: Sintaxis de reserva de direcciones URL (Administrador de configuración de SSRS)
+              href: url-reservation-syntax-ssrs-configuration-manager.md
+            - name: Direcciones URL en archivos de configuración (Administrador de configuración de SSRS)
+              href: urls-in-configuration-files-ssrs-configuration-manager.md
+            - name: Reservas de direcciones URL para implementaciones del servidor de informes de varias instancias (Administrador de configuración de SSRS)
+              href: url-reservations-for-multi-instance-report-server-deployments.md
+        - name: Crear una base de datos
+          href: ssrs-report-server-create-a-report-server-database.md
+        - name: Creación de una base de datos en modo nativo
+          href: ssrs-report-server-create-a-native-mode-report-server-database.md
+        - name: Configurar una conexión a la base de datos del servidor de informes
+          href: configure-a-report-server-database-connection-ssrs-configuration-manager.md
+        - name: 'Configuración de correo electrónico: Modo nativo de Reporting Services (Administrador de configuración)'
+          href: e-mail-settings-reporting-services-native-mode-configuration-manager.md
+        - name: Configurar la cuenta de ejecución desatendida (Administrador de configuración de SSRS)
+          href: configure-the-unattended-execution-account-ssrs-configuration-manager.md
+        - name: 'Claves de cifrado de SSRS: Administración de claves de cifrado'
+          href: ssrs-encryption-keys-manage-encryption-keys.md
+          items:
+            - name: 'Claves de cifrado de SSRS: inicializar un servidor de informes'
+              href: ssrs-encryption-keys-initialize-a-report-server.md
+            - name: 'Claves de cifrado de SSRS: almacenar datos cifrados del servidor de informes'
+              href: ssrs-encryption-keys-store-encrypted-report-server-data.md
+            - name: 'Claves de cifrado de SSRS: copia de seguridad y restauración'
+              href: ssrs-encryption-keys-back-up-and-restore-encryption-keys.md
+            - name: 'Claves de cifrado de SSRS: eliminar y volver a crear'
+              href: ssrs-encryption-keys-delete-and-re-create-encryption-keys.md
+            - name: 'Claves de cifrado de SSRS: incorporación y eliminación de implementaciones de escalabilidad horizontal'
+              href: add-and-remove-encryption-keys-for-scale-out-deployment.md
+        - name: Configuración de la suscripción y una cuenta de recurso compartido de archivos (Administrador de configuración)
+          href: subscription-settings-and-a-file-share-account-configuration-manager.md
+        - name: Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo (Administrador de configuración de SSRS)
+          href: configure-a-native-mode-report-server-scale-out-deployment.md
+        - name: Integración de Power BI
+          href: power-bi-report-server-integration-configuration-manager.md
+- name: Instalación de Reporting Services 2016 en modo de SharePoint
+  href: install-reporting-services-sharepoint-mode.md
+  items:
+    - name: Combinaciones admitidas del servidor y el complemento de SharePoint y Reporting Services (SQL Server 2016)
+      href: supported-combinations-of-sharepoint-and-reporting-services-server.md
+    - name: Dónde encontrar el complemento SSRS para SharePoint
+      href: where-to-find-the-reporting-services-add-in-for-sharepoint-products.md
+    - name: Instalación del primer servidor de informes en modo de SharePoint
+      href: install-the-first-report-server-in-sharepoint-mode.md
+    - name: Instalar o desinstalar el complemento Reporting Services para SharePoint
+      href: install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md
+    - name: Agregar un servidor de informes adicional a una granja de servidores (escalado horizontal de SSRS)
+      href: add-an-additional-report-server-to-a-farm-ssrs-scale-out.md
+    - name: Agregar un front-end web adicional de Reporting Services a una granja de servidores
+      href: add-an-additional-reporting-services-web-front-end-to-a-farm.md
+    - name: Configurar el correo electrónico para una aplicación de servicio de Reporting Services
+      href: configure-e-mail-for-a-reporting-services-service-application.md
+    - name: Aprovisionar Subscripciones y alertas para aplicaciones de servicio SSRS
+      href: provision-subscriptions-and-alerts-for-ssrs-service-applications.md
+    - name: Notificaciones del servicio de token de Windows (c2WTS) y SSRS
+      href: claims-to-windows-token-service-c2wts-and-reporting-services.md
+- name: Instalación de Reporting Services desde el símbolo del sistema
+  href: install-reporting-services-at-the-command-prompt.md
+- name: Install Report Builder
+  href: install-report-builder.md
+- name: Desinstalar el Generador de informes
+  href: uninstall-report-builder.md
+- name: Verify a Reporting Services Installation
+  href: verify-a-reporting-services-installation.md
+- name: Solucionar problemas en una instalación de Reporting Services
+  href: troubleshoot-a-reporting-services-installation.md
+- name: Upgrade and Migrate Reporting Services
+  href: upgrade-and-migrate-reporting-services.md
+  items:
+    - name: Migrar una instalación de Reporting Services (modo nativo)
+      href: migrate-a-reporting-services-installation-native-mode.md
+    - name: Migrar una instalación de Reporting Services (modo de SharePoint)
+      href: migrate-a-reporting-services-installation-sharepoint-mode.md
+    - name: Migración del modo nativo al modo de SharePoint (SSRS)
+      href: native-to-sharepoint-migration-ssrs.md
+    - name: Actualizar una base de datos del servidor de informes
+      href: upgrade-a-report-server-database.md
+    - name: Upgrade Reports
+      href: upgrade-reports.md
+    - name: Operaciones de copia de seguridad y restauración de Reporting Services
+      href: backup-and-restore-operations-for-reporting-services.md

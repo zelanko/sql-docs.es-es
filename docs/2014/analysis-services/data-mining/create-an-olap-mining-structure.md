@@ -128,7 +128,7 @@ ms.locfileid: "37232435"
   
 -   Para el segundo filtro, elegiría la dimensión Customer, seleccionaría el atributo Gender y seleccionaría "Female" en la lista de valores de atributo.  
   
- Después de crear la estructura de minería de datos, puede modificar la definición del cubo y los criterios de filtro. Para obtener más información, consulte [Filter the Source Cube for a Mining Structure](../filter-the-source-cube-for-a-mining-structure.md).  
+ Después de crear la estructura de minería de datos, puede modificar la definición del cubo y los criterios de filtro. Para obtener más información, consulte [Filtrar el cubo de origen para una estructura de minería de datos](../filter-the-source-cube-for-a-mining-structure.md).  
   
  Tanto la pestaña **Estructura de minería de datos** como la pestaña **Modelo de minería de datos** proporcionan una opción para agregar un filtro a una estructura de minería de datos existente; basta con hacer clic en **Definir un segmento de cubo**. El cuadro de diálogo **Crear segmento de cubo** le ayuda a generar una expresión de filtro MDX válida eligiendo el valor de las listas desplegables.  
   

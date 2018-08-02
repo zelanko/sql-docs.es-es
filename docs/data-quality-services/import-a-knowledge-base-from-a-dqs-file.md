@@ -44,7 +44,7 @@ ms.locfileid: "35310924"
 ####  <a name="Permissions"></a> Permissions  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para importar una base de conocimiento desde un archivo de datos .dqs.  
   
-##  <a name="Import"></a> Import a knowledge base from a .dqs file  
+##  <a name="Import"></a> Importar una base de conocimiento desde un archivo .dqs  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   

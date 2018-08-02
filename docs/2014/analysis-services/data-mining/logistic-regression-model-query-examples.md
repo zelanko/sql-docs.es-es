@@ -44,7 +44,7 @@ ms.locfileid: "37189602"
 ##  <a name="bkmk_top"></a> Obtener información sobre el modelo de regresión logística  
  Los modelos de regresión logística se crean utilizando el algoritmo de red neuronal de Microsoft con un conjunto especial de parámetros; por consiguiente, contienen parte de la misma información que los modelos de redes neuronales, pero son menos complejos. Para entender la estructura del contenido del modelo, así como qué tipos de nodo almacenan qué clase de información, vea [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md).  
   
- Para continuar con los escenarios de la consulta, puede crear un modelo de regresión logística como se describe en la siguiente sección del tutorial intermedio de minería de datos: [Lesson 5: Building Neural Network and Logistic Regression Models &#40;Intermediate Data Mining Tutorial&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
+ Para poder continuar en los escenarios de consulta, puede crear un modelo de regresión logística como se describe en la siguiente sección del Tutorial intermedio de minería de datos: [lección 5: creación de red neuronal y modelos de regresión logística &#40; Tutorial de minería de datos de datos intermedio&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
   
  También puede usar la estructura de minería de datos, correo dirigido, desde el [Tutorial básico de minería de datos](../../tutorials/basic-data-mining-tutorial.md).  
   

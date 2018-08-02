@@ -76,7 +76,7 @@ ms.locfileid: "35401067"
   
 ## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Para crear un bucle entre tablas de Excel con el enumerador de conjunto de filas del esquema para Foreach de ADO.NET  
   
-1.  Cree un administrador de conexiones de ADO.NET que use el proveedor OLE DB para Microsoft ACE para conectarse al libro de Excel. En la página Todos del cuadro de diálogo **Administrador de conexiones**, asegúrese de especificar la versión de Excel (en este caso, Excel 12.0) como valor de la propiedad Propiedades extendidas. Para más información, consulte [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+1.  Cree un administrador de conexiones de ADO.NET que use el proveedor OLE DB para Microsoft ACE para conectarse al libro de Excel. En la página Todos del cuadro de diálogo **Administrador de conexiones**, asegúrese de especificar la versión de Excel (en este caso, Excel 12.0) como valor de la propiedad Propiedades extendidas. Para obtener más información, consulte [agregar, eliminar o compartir un administrador de conexiones en un paquete](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
 2.  Cree una variable de cadena que recibirá el nombre de la tabla actual en cada iteración del bucle.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "35401067"
 6.  Como valor de **Esquema**, seleccione Tablas.  
   
     > [!NOTE]  
-    >  La lista de tablas de un libro de Excel incluye tanto hojas (que tienen el sufijo $) como rangos con nombre. Si tiene que filtrar la lista para obtener solo las hojas o solo los rangos con nombre, escriba código personalizado en una tarea Script para este fin. Para más información, consulte [Working with Excel Files with the Script Task](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md).  
+    >  La lista de tablas de un libro de Excel incluye tanto hojas (que tienen el sufijo $) como rangos con nombre. Si tiene que filtrar la lista para obtener solo las hojas o solo los rangos con nombre, escriba código personalizado en una tarea Script para este fin. Para obtener más información, consulte [trabajar con archivos de Excel con la tarea de secuencia de comandos](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md).  
   
 7.  En la página **Asignaciones de variables** , asigne Índice 2 a la variable de cadena que creó antes para albergar el nombre de la tabla actual.  
   

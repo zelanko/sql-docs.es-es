@@ -1,7 +1,7 @@
 ---
 title: Descripción de las transacciones XA | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 80
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a78fdb7edae90289d64d4c7fdf74ac3a12d4b115
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: e86cdc909ec6c7457094125df3965008a8849dbd
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040613"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278606"
 ---
 # <a name="understanding-xa-transactions"></a>Descripción de las transacciones XA
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "38040613"
   
 -   Una marca [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) permite que las aplicaciones usen transacciones XA estrechamente ligadas, que tienen identificadores de rama de transacción XA diferentes (BQUAL), pero el mismo identificador de transacción global (GTRID, Global Transaction ID) e identificador de formato (FormatID). Para usar esta característica, debe establecer el [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) en el parámetro flags del método XAResource.start:  
   
-    ```  
+    ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
     ```  
   
@@ -94,7 +94,7 @@ ms.locfileid: "38040613"
   
  Hay tres maneras de comprobar qué versión de sqljdbc_xa.dll está actualmente instalada en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]:  
   
-1.  Abra el directorio LOG del equipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que va a participar en las transacciones distribuidas. Seleccione y abra el archivo "ERRORLOG" de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Busque la frase "Using 'SQLJDBC_XA.dll' version ..." en el archivo "ERRORLOG".  
+1.  Abra el directorio LOG del equipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que va a participar en las transacciones distribuidas. Seleccione y abra el archivo "ERRORLOG" de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Busque la frase "Using 'SQLJDBC_XA.dll' version..." en el archivo "ERRORLOG".  
   
 2.  Abra el directorio Binn del equipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que va a participar en las transacciones distribuidas. Seleccione el ensamblado sqljdbc_xa.dll.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "38040613"
 ###  <a name="BKMK_ServerSide"></a> Configurar el valor de tiempo de espera del servidor para la reversión automática de transacciones no preparadas  
   
 > [!WARNING]  
->  Esta opción de servidor es nueva en Microsoft JDBC Driver 4.2 (y superior) para SQL Server. Para obtener el comportamiento actualizado, asegúrese de que se actualiza sqljdbc_xa.dll en el servidor. Para obtener más detalles sobre cómo establecer los tiempos de espera del cliente, vea [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
+>  Esta opción de servidor es nueva en Microsoft JDBC Driver 4.2 (y superior) para SQL Server. Para obtener el comportamiento actualizado, asegúrese de que se actualiza sqljdbc_xa.dll en el servidor. Para más información sobre cómo establecer los tiempos de espera del cliente, vea [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
   
  Hay dos configuraciones de registro (valores DWORD) para controlar el comportamiento de tiempo de espera de las transacciones distribuidas:  
   
@@ -120,7 +120,7 @@ ms.locfileid: "38040613"
 > [!NOTE]  
 >  Para 32 bits SQL Server que se ejecutan en equipos de 64 bits, la configuración del registro debe crearse en la siguiente clave: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\MSSQL\<versión >. < nombre_instancia > \ XATimeout  
   
- Cuando se inicia, se establece un valor de tiempo de espera para cada transacción y el servidor SQL revierte la transacción si expira el tiempo de espera. El tiempo de espera se determina en función de esta configuración del registro y de lo que el usuario haya especificado a través de XAResource.setTransactionTimeout(). A continuación se muestran algunos ejemplos de cómo se interpretan estos valores de tiempo de espera:  
+ Cuando se inicia, se establece un valor de tiempo de espera para cada transacción y el SQL Server revierte la transacción si expira el tiempo de espera. El tiempo de espera se determina en función de esta configuración del registro y de lo que el usuario haya especificado a través de XAResource.setTransactionTimeout(). A continuación se muestran algunos ejemplos de cómo se interpretan estos valores de tiempo de espera:  
   
 -   XADefaultTimeout = 0, XAMaxTimeout = 0  
   
@@ -128,11 +128,11 @@ ms.locfileid: "38040613"
   
 -   XADefaultTimeout = 60, XAMaxTimeout = 0  
   
-     Significa que todas las transacciones tendrán un tiempo de espera de 60 segundos si el cliente no especifica ningún tiempo de espera. Si el cliente especifica un tiempo de espera, entonces se usará ese valor de tiempo de espera. No se exige ningún valor máximo para el tiempo de espera.  
+     Significa que todas las transacciones tendrán un tiempo de espera de sesenta segundos si el cliente no especifica ningún tiempo de espera. Si el cliente especifica un tiempo de espera, entonces se usará ese valor de tiempo de espera. No se exige ningún valor máximo para el tiempo de espera.  
   
 -   XADefaultTimeout = 30, XAMaxTimeout = 60  
   
-     Significa que todas las transacciones tendrán un tiempo de espera de 30 segundos si el cliente no especifica ningún tiempo de espera. Si el cliente especifica algún tiempo de espera, entonces se usará el tiempo de espera del cliente siempre y cuando sea inferior a 60 segundos (el valor máximo).  
+     Significa que todas las transacciones tendrán un tiempo de espera de treinta segundos si el cliente no especifica ningún tiempo de espera. Si el cliente especifica algún tiempo de espera, entonces se usará el tiempo de espera del cliente siempre y cuando sea inferior a 60 segundos (el valor máximo).  
   
 -   XADefaultTimeout = 0, XAMaxTimeout = 30  
   
@@ -153,7 +153,7 @@ ms.locfileid: "38040613"
 ### <a name="configuring-the-user-defined-roles"></a>Configurar los roles definidos por el usuario  
  Para conceder permisos a un usuario concreto de modo que pueda participar en las transacciones distribuidas con el controlador JDBC, agregue el usuario al rol SqlJDBCXAUser. Por ejemplo, use el siguiente código [!INCLUDE[tsql](../../includes/tsql_md.md)] para agregar un usuario denominado "shelby" (usuario de inicio de sesión estándar de SQL denominado "shelby") al rol SqlJDBCXAUser:  
   
-```  
+```sql
 USE master  
 GO  
 EXEC sp_grantdbaccess 'shelby', 'shelby'  
@@ -165,7 +165,7 @@ EXEC sp_addrolemember [SqlJDBCXAUser], 'shelby'
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```java
 import java.net.Inet4Address;  
 import java.sql.*;  
 import java.util.Random;  

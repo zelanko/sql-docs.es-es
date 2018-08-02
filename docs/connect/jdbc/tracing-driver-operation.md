@@ -1,7 +1,7 @@
 ---
 title: Funcionamiento del controlador de seguimiento | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32eecd4a6667dd25d58aa9fe09d3382f5dbc374f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 493c53ac10dd51a19139dd451f13b1a3da6901fe
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991977"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279266"
 ---
 # <a name="tracing-driver-operation"></a>Hacer un seguimiento del funcionamiento del controlador
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "37991977"
  En la siguiente sección se describen los niveles y las categorías de registro de los que se puede hacer un seguimiento y se proporciona información sobre cómo habilitar el seguimiento en la aplicación.  
   
 ## <a name="logging-levels"></a>Niveles de registro  
- Cada mensaje de registro creado tiene un nivel de registro asociado. El nivel de registro determina la importancia del mensaje de registro, que es definido por la clase **Level** de java.util.logging. Al habilitar el registro en un nivel, se habilita también en todos los niveles superiores. En esta sección se describen los niveles de registro para las categorías de registro públicas y también para las internas. Para obtener más información acerca de las categorías de registro, vea en este tema la sección Categorías de registro.  
+ Cada mensaje de registro creado tiene un nivel de registro asociado. El nivel de registro determina la importancia del mensaje de registro, que es definido por la clase **Level** de java.util.logging. Al habilitar el registro en un nivel, se habilita también en todos los niveles superiores. En esta sección se describen los niveles de registro para las categorías de registro públicas y también para las internas. Para más información acerca de las categorías de registro, vea en este artículo la sección Categorías de registro.  
   
  La tabla siguiente describe cada uno de los niveles de registro para categorías de registro públicas.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "37991977"
 |TDS.DATA|Registra mensajes que contienen la conversación de nivel de protocolo TDS entre el controlador y SQL Server. Los contenidos detallados de cada paquete TDS enviado y recibido se registran en ASCII y como hexadecimales. No se registran las credenciales de inicio de sesión (nombres y contraseñas de usuarios). Todos los demás datos se registran.<br /><br /> Esta categoría crea mensajes muy detallados y solo se puede habilitar si se establece el nivel de registro en FINEST.|  
 |TDS.Channel|Esta categoría realiza un seguimiento del canal de comunicaciones TDS con SQL Server. El mensaje registrado incluye la apertura y cierre de sockets, así como lecturas y escrituras. También realiza seguimientos de mensajes relacionados con el establecimiento de una conexión de Capa de sockets seguros (SSL) con SQL Server.<br /><br /> Esta categoría solo puede ser habilitada configurando el nivel de registro en FINE, FINER o FINEST.|  
 |TDS.Writer|Esta categoría realiza un seguimiento de las escrituras en el canal TDS. Tenga en cuenta que solo se hace un seguimiento de la longitud de las escrituras, no de los contenidos. Esta categoría también hace un seguimiento de los problemas que se producen cuando una señal de atención es enviada al servidor para cancelar la ejecución de una instrucción.<br /><br /> Esta categoría solo puede ser habilitada configurando el nivel de registro en FINEST.|  
-|TDS.Reader|Esta categoría realiza un seguimiento de determinadas operaciones de lectura desde el canal TDS en el nivel FINEST. En el nivel FINEST, el seguimiento puede ser muy detallado. En los niveles WARNING y SEVERE, esta categoría realiza un seguimiento cuando el controlador recibe un protocolo TDS no válido antes de que el controlador cierre la conexión.<br /><br /> Esta categoría solo puede ser habilitada configurando el nivel de registro en FINER y FINEST.|  
+|TDS.Reader|Esta categoría realiza un seguimiento de determinadas operaciones de lectura desde el canal TDS en el nivel FINEST. En el nivel FINEST, el seguimiento puede ser detallado. En los niveles WARNING y SEVERE, esta categoría realiza un seguimiento cuando el controlador recibe un protocolo TDS no válido antes de que el controlador cierre la conexión.<br /><br /> Esta categoría solo puede ser habilitada configurando el nivel de registro en FINER y FINEST.|  
 |TDS.Command|Esta categoría realiza un seguimiento de las transiciones de estado de bajo nivel y de otras informaciones asociadas a la ejecución de comandos TDS, como ejecuciones de instrucciones [!INCLUDE[tsql](../../includes/tsql_md.md)], recuperaciones de cursores ResultSet, confirmaciones, etc.<br /><br /> Esta categoría solo puede ser habilitada configurando el nivel de registro en FINEST.|  
 |TDS.TOKEN|Esta categoría registra solo los tokens de los paquetes TDS y es menos detallado que la categoría TDS.DATA. Solo se puede habilitar configurando el nivel de registro en FINEST.<br /><br /> En el nivel FINEST, esta categoría hace un seguimiento de los tokens TDS conforme son procesados en la respuesta. En el nivel SEVERE, esta categoría hace un seguimiento cuando encuentra un token TDS no válido.|  
 |SQLServerDatabaseMetaData|Registra mensajes en la clase [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md). La aplicación puede configurar el nivel de registro como FINE.|  
@@ -110,27 +110,27 @@ ms.locfileid: "37991977"
 ## <a name="enabling-tracing-programmatically"></a>Habilitar seguimiento mediante programación  
  El seguimiento se puede habilitar mediante programación si se crea un objeto Logger y se indica la categoría que se va a registrar. Por ejemplo, el siguiente código muestra cómo habilitar el registro para las instrucciones SQL:  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");  
 logger.setLevel(Level.FINER);  
 ```  
   
  Para desactivar el registro en el código, use lo siguiente:  
   
-```  
+```java
 logger.setLevel(Level.OFF);  
 ```  
   
  Para registrar todas las categorías disponibles, use lo siguiente:  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc");  
 logger.setLevel(Level.FINE);  
 ```  
   
  Para deshabilitar el registro de una categoría específica, use lo siguiente:  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");  
 logger.setLevel(Level.OFF);  
 ```  

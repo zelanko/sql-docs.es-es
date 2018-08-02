@@ -6,6 +6,7 @@
   href: sql-server-guides.md
   items:
     - name: Guía de solución de problemas y supervisión de grupos de disponibilidad AlwaysOn
+      href: ../database-engine/availability-groups/windows/always-on-availability-groups-troubleshooting-and-monitoring-guide.md
     - name: Arquitectura y diseño de los índices
       href: sql-server-index-design-guide.md
     - name: Arquitectura de administración de memoria

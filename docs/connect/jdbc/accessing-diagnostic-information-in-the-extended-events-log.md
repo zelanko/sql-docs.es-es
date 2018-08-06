@@ -1,7 +1,7 @@
 ---
-title: Obtener acceso a información de diagnóstico en el registro de eventos extendidos | Documentos de Microsoft
+title: Obtener acceso a información de diagnóstico en el registro de eventos extendidos | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,38 +14,38 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06da8446c04bf656d5ae4dfb13d15f8a173e5bbf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ca0f63442af44bdce4b8c3b18af0beab1cd8a9ee
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832089"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278716"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Obtener acceso a información de diagnóstico en el registro de eventos extendidos
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  En el [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], el seguimiento ([el funcionamiento del controlador de seguimiento](../../connect/jdbc/tracing-driver-operation.md)) se ha actualizado para facilitar más fácil correlacionar eventos de cliente con información de diagnóstico, como errores de conexión, de anillo de conectividad del servidor información de rendimiento de búfer y aplicación en el registro de eventos extendidos. Para obtener información acerca de cómo leer el registro de eventos extendidos, vea [View Event Session Data](http://msdn.microsoft.com/library/hh710068(SQL.110).aspx).  
+  En [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], el seguimiento ([Hacer un seguimiento del funcionamiento del controlador](../../connect/jdbc/tracing-driver-operation.md)) se ha actualizado para facilitar la correlación de eventos de cliente con la información de diagnóstico, como los errores de conexión, a partir del búfer en anillo de conectividad del servidor y la información de rendimiento de aplicación en el registro de eventos extendidos. Para obtener información sobre la lectura del registro de eventos extendidos, vea [Ver datos de sesión de evento](http://msdn.microsoft.com/library/hh710068(SQL.110).aspx).  
   
 ## <a name="details"></a>Detalles  
- Para las operaciones de conexión, el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] enviará un cliente de identificador de conexión. Si se produce un error en la conexión, puede tener acceso al búfer de anillo de conectividad ([solucionar problemas de conectividad en SQL Server 2008 con el búfer de anillo de conectividad](http://go.microsoft.com/fwlink/?LinkId=207752)) y busque la **ClientConnectionID** campo y obtener información de diagnóstico sobre el error de conexión. Los identificadores de conexión del cliente se registran en el búfer de anillo únicamente si se produce un error. (Si se produce un error en una conexión antes de enviar el paquete de inicio de sesión previo, no se generará un identificador de conexión del cliente.) El identificador de conexión del cliente es un GUID de 16 bytes. También puede encontrar la conexión de cliente del identificador en el resultado de destino de eventos extendidos, si la **client_connection_id** acción se agrega a los eventos en una sesión de eventos extendidos. Puede habilitar el seguimiento y vuelva a ejecutar el comando de conexión y observar la **ClientConnectionID** campo en el seguimiento, si necesita más ayuda de diagnóstico de controlador de cliente.  
+ Para las operaciones de conexión, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] enviará un identificador de conexión de cliente. Si se produce un error en la conexión, puede tener acceso al búfer de anillo de conectividad ([Solución de problemas de conectividad en SQL Server 2008 con el búfer de anillo de conectividad](http://go.microsoft.com/fwlink/?LinkId=207752)) y buscar el campo **ClientConnectionID** para obtener información de diagnóstico sobre el error de conexión. Los identificadores de conexión del cliente se registran en el búfer de anillo únicamente si se produce un error. (Si se produce un error en una conexión antes de enviar el paquete de inicio de sesión previo, no se generará un identificador de conexión del cliente.) El identificador de conexión del cliente es un GUID de 16 bytes. También puede buscar el identificador de conexión del cliente en la salida de destino de eventos extendidos si se agrega la acción **client_connection_id** a los eventos de una sesión de eventos extendidos. Si necesita más ayuda de diagnóstico del controlador cliente, puede habilitar el seguimiento, volver a ejecutar el comando de conexión y observar el campo **ClientConnectionID** en el seguimiento.  
   
- Puede obtener el cliente de identificador de conexión mediante programación usando [ISQLServerConnection, interfaz](../../connect/jdbc/reference/isqlserverconnection-interface.md). El identificador de conexión también estará presente en cualquier excepción relacionada con la conexión.  
+ El cliente puede obtener Id. de conexión mediante programación usando [ISQLServerConnection, interfaz](../../connect/jdbc/reference/isqlserverconnection-interface.md). El identificador de conexión también estará presente en cualquier excepción relacionada con la conexión.  
   
- Cuando se produzca un error de conexión, el identificador de conexión de cliente en la información de seguimiento de BID del servidor y en el búfer de anillo de conectividad puede ayudar a correlacionar las conexiones de cliente con las conexiones en el servidor. Para obtener más información acerca de BID realiza un seguimiento en el servidor, consulte [Data Access Tracing](http://go.microsoft.com/fwlink/?LinkId=125805). Tenga en cuenta que el artículo de seguimiento de acceso de datos también contiene información acerca de cómo realizar un seguimiento de acceso a datos, que no se aplica a la [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]; vea [el funcionamiento del controlador de seguimiento](../../connect/jdbc/tracing-driver-operation.md) para obtener información sobre cómo hacer un seguimiento de acceso a datos mediante el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
+ Cuando se produzca un error de conexión, el identificador de conexión de cliente en la información de seguimiento de diagnósticos integrados (BID) del servidor y en el búfer en anillo de conectividad puede ayudar a correlacionar las conexiones de cliente con las conexiones en el servidor. Para más información sobre los seguimientos de BID en el servidor, vea [Data Access Tracing](http://go.microsoft.com/fwlink/?LinkId=125805) (Seguimiento de acceso de datos). Tenga en cuenta que el artículo de seguimiento de acceso de datos también incluye información sobre el seguimiento de acceso de datos que no se aplica a [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]; vea [Hacer un seguimiento del funcionamiento del controlador](../../connect/jdbc/tracing-driver-operation.md) para obtener información sobre cómo realizar un seguimiento de acceso de datos mediante [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
   
  El controlador JDBC también envía un identificador de actividad específico de subproceso. El identificador de actividad se captura en las sesiones de eventos extendidos si las sesiones se inician con la opción TRACK_CAUSAILITY habilitada. En el caso de problemas de rendimiento con una conexión activa, puede obtener el identificador de actividad del seguimiento del cliente (campo ActivityID) y, a continuación, buscar el identificador de actividad en la salida de eventos extendidos. El identificador de actividad en los eventos extendidos es un GUID de 16 bytes (no es el mismo GUID que el identificador de conexión de cliente) anexado con un número de secuencia de cuatro bytes. El número de secuencia representa el orden de una solicitud en un subproceso. El campo ActivityId se envía para las instrucciones por lotes SQL y las solicitudes RPC. Para habilitar el envío de ActivityId al servidor, primero debe especificar el siguiente par clave-valor en el archivo Logging.Properties:  
   
-```  
+```
 com.microsoft.sqlserver.jdbc.traceactivity = on  
 ```  
   
- Cualquier valor distinto de `on` (distingue mayúsculas de minúsculas) deshabilitará el envío de ActivityId.  
+ Cualquier otro valor distinto de `on` (distingue mayúsculas de minúsculas) deshabilitará el envío de ActivityId.  
   
- Para obtener más información, consulte [funcionamiento del controlador de seguimiento](../../connect/jdbc/tracing-driver-operation.md). Esta marca de seguimiento se utiliza con los registradores de objetos JDBC correspondientes para decidir si se realiza el seguimiento y enviar ActivityId en el controlador JDBC. Además de actualizar el archivo Logging.Properties, el registrador com.microsoft.sqlserver.jdbc debe estar habilitado en FINER o superior. Si desea enviar ActivityId al servidor para las solicitudes efectuadas por una determinada clase, se debe habilitar el registrador de clase correspondiente en FINER o FINEST. Por ejemplo, si la clase es SQLServerStatement, habilite el registrador com.microsoft.sqlserver.jdbc.SQLServerStatement.  
+ Para obtener más información, vea [Hacer un seguimiento del funcionamiento del controlador](../../connect/jdbc/tracing-driver-operation.md). Esta marca de seguimiento se utiliza con los registradores de objetos JDBC correspondientes para decidir si se realiza el seguimiento y enviar ActivityId en el controlador JDBC. Además de actualizar el archivo Logging.Properties, el registrador com.microsoft.sqlserver.jdbc debe estar habilitado en FINER o superior. Si quiere enviar ActivityId al servidor para las solicitudes efectuadas por una determinada clase, se debe habilitar el registrador de clase correspondiente en FINER o FINEST. Por ejemplo, si la clase es SQLServerStatement, habilite el registrador com.microsoft.sqlserver.jdbc.SQLServerStatement.  
   
- El siguiente es un ejemplo que utiliza [!INCLUDE[tsql](../../includes/tsql_md.md)] iniciar una sesión de eventos extendidos que se almacenarán en un búfer de anillo y registrará el Id. de actividad enviado desde un cliente en operaciones RPC y por lotes:  
+ El ejemplo siguiente usa [!INCLUDE[tsql](../../includes/tsql_md.md)] para iniciar una sesión de eventos extendidos que se almacenará en un búfer en anillo y registrará el identificador de actividad enviado por un cliente en operaciones RPC y por lotes:  
   
-```  
+```sql
 create event session MySession on server  
 add event connectivity_ring_buffer_recorded,  
 add event sql_statement_starting (action (client_connection_id)),  
@@ -55,7 +55,7 @@ add event rpc_completed (action (client_connection_id))
 add target ring_buffer with (track_causality=on)  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Diagnosticar problemas del controlador JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

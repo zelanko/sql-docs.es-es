@@ -1,7 +1,7 @@
 ---
-title: Realizar operaciones por lotes | Documentos de Microsoft
+title: Realizar operaciones por lotes | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,37 +14,37 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55470e4246256f2dfce11464ab8aafb9c9e7873c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c668dabd9b9a1957ffb69d034a59cc8df1cc4025
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831870"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279020"
 ---
 # <a name="performing-batch-operations"></a>Realizar operaciones por lotes
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Para mejorar el rendimiento al realizar varias actualizaciones para un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos se producen, el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ofrece la posibilidad de enviar varias actualizaciones como una sola unidad de trabajo, también denominada como un lote.  
+  Con el fin de aumentar el rendimiento al realizar varias actualizaciones en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ofrece la posibilidad de enviar varias actualizaciones como una sola unidad de trabajo, denominada también lote.  
   
- El [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), y [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) clases pueden utilizarse para enviar actualizaciones por lotes. El [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) método se utiliza para agregar un comando. El [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) método se usa para borrar la lista de comandos. El [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) método se usa para enviar todos los comandos para su procesamiento. Tan solo las instrucciones de lenguaje de definición de datos (DDL) y lenguaje de manipulación de datos (DML) que devuelven un recuento de actualizaciones sencillo se pueden ejecutar como parte de un lote.  
+ Las clases [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) y [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) se pueden usar para enviar actualizaciones por lotes. El método [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) se usa para agregar un comando. El método [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) se usa para borrar la lista de comandos. El método [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) se usa para enviar todos los comandos para su procesamiento. Tan solo las instrucciones de lenguaje de definición de datos (DDL) y lenguaje de manipulación de datos (DML) que devuelven un recuento de actualizaciones sencillo se pueden ejecutar como parte de un lote.  
   
- El método executeBatch devuelve una matriz de **int** valores que se corresponden con el número de actualizaciones de cada comando. Si se produce un error en uno de los comandos, se produce un BatchUpdateException y debe usar el método getUpdateCounts de la clase BatchUpdateException para recuperar la matriz de recuento de actualizaciones. Si un comando produce un error, el controlador sigue procesando los comandos restantes. No obstante, si un comando contiene un error de sintaxis, las instrucciones del lote generan un error.  
+ El método executeBatch devuelve una matriz de valores **int** que se corresponde con el recuento de actualizaciones de cada comando. Si se produce un error en uno de los comandos, se produce un BatchUpdateException y debe usar el método getUpdateCounts de la clase BatchUpdateException para recuperar la matriz de recuento de actualización. Si un comando produce un error, el controlador sigue procesando los comandos restantes. No obstante, si un comando contiene un error de sintaxis, las instrucciones del lote generan un error.  
   
 > [!NOTE]  
->  Si no tiene que usar recuentos de actualizaciones, primero puede emitir una instrucción SET NOCOUNT ON para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. De este modo, se reduce el tráfico de red y, además, se aumenta el rendimiento de la aplicación.  
+>  Si no necesita usar recuentos de actualizaciones, puede ejecutar primero la instrucción SET NOCOUNT ON para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. De este modo, se reduce el tráfico de red y, además, se aumenta el rendimiento de la aplicación.  
   
- Por ejemplo, cree la siguiente tabla en la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] base de datos de ejemplo:  
+ A modo de ejemplo, cree la siguiente tabla en la base de datos de ejemplo de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:  
   
-```  
+```sql
 CREATE TABLE TestTable   
    (Col1 int IDENTITY,   
     Col2 varchar(50),   
     Col3 int);  
 ```  
   
- En el ejemplo siguiente, una conexión abierta a la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] base de datos de ejemplo se pasa a la función, el método addBatch se usa para crear las instrucciones que se ejecutará y se llama al método executeBatch para enviar el lote a la base de datos.  
+ En el siguiente ejemplo, se pasa una conexión abierta a la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] a la función, se usa el método addBatch para crear las instrucciones que se van a ejecutar y se llama al método executeBatch para enviar el lote a la base de datos.  
   
-```  
+```java
 public static void executeBatchUpdate(Connection con) {  
    try {  
       Statement stmt = con.createStatement();  
@@ -60,7 +60,7 @@ public static void executeBatchUpdate(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Usar instrucciones con el controlador JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   

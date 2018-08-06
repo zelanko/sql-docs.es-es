@@ -1,7 +1,7 @@
 ---
-title: Ejemplo de dirección URL de conexión | Documentos de Microsoft
+title: Ejemplo de dirección URL de conexión | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,81 +14,64 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38d0ae6f113968d2774ce5d842a34d38b2274609
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 31a3a492c9c6405e4d7f3c8d629adca38c2a3199
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829650"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278766"
 ---
 # <a name="connection-url-sample"></a>Ejemplo de URL de conexión
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Esto [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] aplicación de ejemplo muestra cómo conectarse a un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de datos mediante una dirección URL de conexión. También se muestra cómo recuperar los datos de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de datos mediante una instrucción SQL.  
+  En esta aplicación de ejemplo de [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] se muestra cómo conectar con una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] mediante una dirección URL de conexión. Además, se muestra cómo recuperar los datos de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] con una instrucción SQL.  
   
- El archivo de código para este ejemplo se llama connectURL.java y se encuentra en la siguiente ubicación:  
+ El archivo de código para este ejemplo se denomina ConnectURL.java y se encuentra en la siguiente ubicación:  
   
- \<*directorio de instalación de*> \sqljdbc_\<*versión*>\\<*lenguaje*> \samples\connections  
+ \<*directorio de instalación*> \sqljdbc_\<*versión*>\\<*lenguaje*> \samples\connections  
   
 ## <a name="requirements"></a>Requisitos  
- Para ejecutar esta aplicación de ejemplo, debe establecer la ruta de clase para incluir el archivo sqljdbc.jar o sqljdbc4.jar. Si en la ruta de clase falta una entrada para sqljdbc.jar o sqljdbc4.jar, la aplicación de ejemplo produce la excepción común "Clase no encontrada". También necesitará acceso a la [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] base de datos de ejemplo. Para obtener más información sobre cómo establecer la ruta de clase, consulte [con el controlador JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
+ Para ejecutar esta aplicación de ejemplo, debe configurar la ruta de clase para que incluya el archivo mssql-jdbc.jar. Además, debe tener acceso a la base de datos de ejemplo de [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Para obtener más información sobre cómo establecer la ruta de clase, vea [con el controlador JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
->  El [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] proporciona sqljdbc.jar y sqljdbc4.jar los archivos de biblioteca de clases que se usan según su configuración preferida de Java Runtime Environment (JRE). Para obtener más información acerca de qué archivo JAR para elegir, consulte [requisitos del sistema para el controlador JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+>  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] proporciona los archivos de biblioteca de clases mssql-jdbc que se usan según la configuración preferida de Java Runtime Environment (JRE). Para obtener más información acerca de qué archivo JAR para elegir, consulte [requisitos del sistema para el controlador JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente, el código de ejemplo establece varias propiedades de conexión en la dirección URL de conexión y, a continuación, llama al método getConnection de la clase DriverManager para devolver un [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) objeto.  
+ En el siguiente ejemplo, el código establece varias propiedades de conexión en la dirección URL de conexión y, después, llama al método getConnection de la clase DriverManager para devolver un objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
- A continuación, el código de ejemplo utiliza la [createStatement](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) método del objeto SQLServerConnection para crear un [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) objeto y, a continuación, el [executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) (método) se llama para ejecutar la instrucción SQL.  
+ Después, el código usa el método [createStatement](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) del objeto SQLServerConnection para crear un objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) y, luego, se llama al método [executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) para ejecutar la instrucción SQL.  
   
- Por último, el ejemplo usa el [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto devuelto desde el método executeQuery para recorrer en iteración los resultados devueltos por la instrucción SQL.  
+ Finalmente, el ejemplo usa el objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) devuelto por el método executeQuery para iterar por los resultados devueltos por la instrucción SQL.  
   
 ```java  
-import java.sql.*;  
-  
-public class connectURL {  
-  
-   public static void main(String[] args) {  
-  
-      // Create a variable for the connection string.  
-      String connectionUrl = "jdbc:sqlserver://localhost:1433;" +  
-         "databaseName=AdventureWorks;user=UserName;password=*****";  
-  
-      // Declare the JDBC objects.  
-      Connection con = null;  
-      Statement stmt = null;  
-      ResultSet rs = null;  
-  
-      try {  
-         // Establish the connection.  
-         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-         con = DriverManager.getConnection(connectionUrl);  
-  
-         // Create and execute an SQL statement that returns some data.  
-         String SQL = "SELECT TOP 10 * FROM Person.Contact";  
-         stmt = con.createStatement();  
-         rs = stmt.executeQuery(SQL);  
-  
-         // Iterate through the data in the result set and display it.  
-         while (rs.next()) {  
-            System.out.println(rs.getString(4) + " " + rs.getString(6));  
-         }  
-      }  
-  
-      // Handle any errors that may have occurred.  
-      catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-      finally {  
-         if (rs != null) try { rs.close(); } catch(Exception e) {}  
-         if (stmt != null) try { stmt.close(); } catch(Exception e) {}  
-         if (con != null) try { con.close(); } catch(Exception e) {}  
-      }  
-   }  
-}  
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class ConnectURL {
+    public static void main(String[] args) {
+
+        // Create a variable for the connection string.
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+
+        try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement();) {
+            String SQL = "SELECT TOP 10 * FROM Person.Contact";
+            ResultSet rs = stmt.executeQuery(SQL);
+
+            // Iterate through the data in the result set and display it.
+            while (rs.next()) {
+                System.out.println(rs.getString("FirstName") + " " + rs.getString("LastName"));
+            }
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Conexión y recuperación de datos](../../../connect/jdbc/connecting-and-retrieving-data.md)  
-  
-  
+## <a name="see-also"></a>Ver también  
+ [Conexión y recuperación de datos](../../../connect/jdbc/connecting-and-retrieving-data.md)

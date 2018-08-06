@@ -1,5 +1,5 @@
 ---
-title: Ejemplo versión 6.0.0 del almacén de claves de Azure | Documentos de Microsoft
+title: Ejemplo de versión 6.0.0 el almacén de claves de Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2018
 ms.prod: sql
@@ -14,20 +14,20 @@ caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 530d952126de09c46fffe7537e91be443f1bd4da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e7526276da62ea6f251944eca7b7ce4b1a03c2f6
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828601"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278936"
 ---
-# <a name="azure-key-vault-sample-version-600"></a>Ejemplo de almacén de claves de Azure versión 6.0.0
+# <a name="azure-key-vault-sample-version-600"></a>Versión de ejemplo de Azure Key Vault 6.0.0
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-##  <a name="sample-application-using-azure-key-vault-feature"></a>Aplicación de ejemplo mediante la característica almacén de claves de Azure
-Esta aplicación no es ejecutable mediante el controlador JDBC 6.0.0 y Azure-Keyvault (versión 0.9.7), Adal4j (versión 1.3.0) y sus dependencias.  Las dependencias subyacentes pueden resolverse mediante la adición de estas bibliotecas en el archivo pom del proyecto como se describe [aquí](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md): 
+##  <a name="sample-application-using-azure-key-vault-feature"></a>Aplicación de ejemplo mediante la característica Azure Key Vault
+Esta aplicación es ejecutable mediante el controlador JDBC 6.0.0 y Azure-Keyvault (versión 0.9.7), Adal4j (versión 1.3.0) y sus dependencias.  Se pueden resolver las dependencias subyacentes mediante la adición de estas bibliotecas en el archivo pom del proyecto como se describe [aquí](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md): 
 
-```xml
+```java
 import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -285,5 +285,5 @@ public class AE_AKV_Maven {
 
 ```
 
-## <a name="see-also"></a>Vea también  
- [Versión de ejemplo de almacén de claves de Azure 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  
+## <a name="see-also"></a>Ver también  
+ [Versión de ejemplo de Azure Key Vault 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  

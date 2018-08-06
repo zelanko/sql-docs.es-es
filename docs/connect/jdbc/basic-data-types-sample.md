@@ -1,7 +1,7 @@
 ---
-title: Ejemplo de tipos de datos básicos | Documentos de Microsoft
+title: Ejemplo de tipos de datos básicos | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,28 +14,28 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0181d670a4b5d3c347b23b5d4776ce1d557fa8c8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1ad4aae1e069b487351dd63f6f7bc7f5fc791407
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831930"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278897"
 ---
 # <a name="basic-data-types-sample"></a>Ejemplo de tipos de datos básicos
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Esto [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] aplicación de ejemplo muestra cómo usar métodos captadores del conjunto de resultados para recuperar básica [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] valores y cómo usar los métodos de actualización del conjunto de resultados para actualizar dichos valores de tipo de datos.  
+  En esta aplicación de ejemplo de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] se muestra cómo usar métodos captadores de conjuntos de resultados para recuperar valores de tipos de datos básicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y cómo usar métodos de actualización de conjuntos de resultados para actualizar dichos valores.  
   
- El archivo de código para este ejemplo se denomina basicDT.java y se encuentra en la siguiente ubicación:  
+ El archivo de código para este ejemplo se denomina BasicDT.java y se encuentra en la siguiente ubicación:  
   
- \<*directorio de instalación de*> \sqljdbc_\<*versión*>\\<*lenguaje*> \samples\datatypes  
+ \<*directorio de instalación*> \sqljdbc_\<*versión*>\\<*lenguaje*> \samples\datatypes  
   
 ## <a name="requirements"></a>Requisitos  
- Para ejecutar esta aplicación de ejemplo, debe establecer la ruta de clase para incluir el archivo sqljdbc.jar o sqljdbc4.jar. Si en la ruta de clase falta una entrada para sqljdbc.jar o sqljdbc4.jar, la aplicación de ejemplo produce la excepción común "Clase no encontrada". También necesitará acceso a la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] base de datos de ejemplo. Para obtener más información sobre cómo establecer la ruta de clase, consulte [con el controlador JDBC](../../connect/jdbc/using-the-jdbc-driver.md).  
+ Para ejecutar esta aplicación de ejemplo, debe configurar la ruta de clase para que incluya el archivo mssql-jdbc.jar. Además, debe tener acceso a la base de datos de ejemplo de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Para obtener más información sobre cómo establecer la ruta de clase, vea [con el controlador JDBC](../../connect/jdbc/using-the-jdbc-driver.md).  
   
- También debe crear los siguientes datos de ejemplo y la tabla en la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] base de datos de ejemplo:  
+ Cree la siguiente tabla y datos de ejemplo en la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:  
   
-```  
+```sql
 use AdventureWorks  
 CREATE TABLE DataTypesTable   
    (Col1 int IDENTITY,   
@@ -56,119 +56,92 @@ VALUES ('A', 'Some text.', 0, 15.25, 10.00, '01/01/2006 23:59:59.991', '01/01/20
 ```  
   
 > [!NOTE]  
->  El [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] proporciona sqljdbc.jar y sqljdbc4.jar los archivos de biblioteca de clases que se usan según su configuración preferida de Java Runtime Environment (JRE). Para obtener más información acerca de qué archivo JAR para elegir, consulte [requisitos del sistema para el controlador JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+>  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] proporciona los archivos de biblioteca de clases mssql-jdbc que se usan según la configuración preferida de Java Runtime Environment (JRE). Para obtener más información acerca de qué archivo JAR para elegir, consulte [requisitos del sistema para el controlador JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente, el código de ejemplo realiza una conexión a la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] la base de datos y, a continuación, recupera una sola fila de datos de la tabla de prueba DataTypesTable. A continuación, se llama al método de displayRow personalizado para mostrar todos los datos contenidos en el conjunto de resultados mediante diversos get\<tipo > métodos de la [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) clase.  
+ En el siguiente ejemplo, el código establece una conexión con la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] y, después, recupera una sola fila de datos de la tabla de prueba DataTypesTable. Luego, se llama al método displayRow personalizado para mostrar todos los datos del conjunto de resultados mediante varios métodos get\<Type> de la clase [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
- A continuación, el ejemplo usa varias actualizaciones\<tipo > métodos de SQLServerResultSet clase para actualizar los datos contenidos en el conjunto de resultados y, a continuación, llama a la [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) método para volver a almacenar datos en la base de datos.  
+ Después, en el ejemplo se usan varios métodos update\<Type> de la clase SQLServerResultSet para actualizar los datos del conjunto de resultados y se llama al método [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) para volver a almacenar los datos en la base de datos.  
   
- Por último, establezca el ejemplo actualiza los datos contenidos en el resultado de establecerán y, a continuación, llamen al método de displayRow personalizado para mostrar los datos contenidos en el resultado.  
+ Por último, en el ejemplo se actualizan los datos del conjunto de resultados y se vuelve a llamar al método displayRow personalizado para mostrar los datos del conjunto de resultados.  
   
 ```java
-import java.sql.*;  
-  
-import com.microsoft.sqlserver.jdbc.SQLServerResultSet;  
-import microsoft.sql.DateTimeOffset;  
-  
-public class basicDT {  
-   public static void main(String[] args) {  
-  
-      // Create a variable for the connection string.  
-      String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=AdventureWorks;integratedSecurity=true;";  
-  
-      // Declare the JDBC objects.  
-      Connection con = null;  
-      Statement stmt = null;  
-      ResultSet rs = null;  
-  
-      try {  
-         // Establish the connection.  
-         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-         con = DriverManager.getConnection(connectionUrl);  
-  
-         // Create and execute an SQL statement that returns some data  
-         // and display it.  
-         String SQL = "SELECT * FROM DataTypesTable";  
-         stmt = con.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);  
-         rs = stmt.executeQuery(SQL);           
-         rs.next();  
-         displayRow("ORIGINAL DATA", rs);  
-  
-         // Update the data in the result set.  
-         rs.updateString(2, "B");  
-         rs.updateString(3, "Some updated text.");  
-         rs.updateBoolean(4, true);  
-         rs.updateDouble(5, 77.89);  
-         rs.updateDouble(6, 1000.01);  
-         long timeInMillis = System.currentTimeMillis();  
-         Timestamp ts = new Timestamp(timeInMillis);  
-         rs.updateTimestamp(7, ts);  
-         rs.updateDate(8, new Date(timeInMillis));  
-         rs.updateTime(9, new Time(timeInMillis));  
-         rs.updateTimestamp(10, ts);  
-  
-         //-480 indicates GMT - 8:00 hrs  
-         ((SQLServerResultSet)rs).updateDateTimeOffset(11, DateTimeOffset.valueOf(ts, -480));  
-  
-         rs.updateRow();  
-  
-         // Get the updated data from the database and display it.  
-         rs = stmt.executeQuery(SQL);  
-         rs.next();  
-         displayRow("UPDATED DATA", rs);  
-      }  
-  
-      // Handle any errors that may have occurred.  
-      catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-  
-      finally {  
-         if (rs != null)   
-         try {   
-         rs.close();   
-         }   
-         catch(Exception e) {}  
-  
-         if (stmt != null)   
-         try { stmt.close();   
-         }   
-         catch(Exception e) {}  
-  
-         if (con != null)   
-         try {   
-         con.close();   
-         }   
-         catch(Exception e) {}  
-      }  
-   }  
-  
-   private static void displayRow(String title, ResultSet rs) {  
-      try {  
-         System.out.println(title);  
-         System.out.println(rs.getInt(1) + " , " +  // SQL integer type.  
-               rs.getString(2) + " , " +            // SQL char type.  
-               rs.getString(3) + " , " +            // SQL varchar type.  
-               rs.getBoolean(4) + " , " +           // SQL bit type.  
-               rs.getDouble(5) + " , " +            // SQL decimal type.  
-               rs.getDouble(6) + " , " +            // SQL money type.  
-               rs.getTimestamp(7) + " , " +            // SQL datetime type.  
-               rs.getDate(8) + " , " +              // SQL date type.  
-               rs.getTime(9) + " , " +              // SQL time type.  
-               rs.getTimestamp(10) + " , " +            // SQL datetime2 type.  
-               ((SQLServerResultSet)rs).getDateTimeOffset(11)); // SQL datetimeoffset type.   
-  
-         System.out.println();  
-      } catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-   }  
-}  
-  
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.Time;
+import java.sql.Timestamp;
+
+import com.microsoft.sqlserver.jdbc.SQLServerResultSet;
+
+import microsoft.sql.DateTimeOffset;
+
+public class BasicDT {
+    public static void main(String[] args) {
+
+        // Create a variable for the connection string.
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+
+        try (Connection con = DriverManager.getConnection(connectionUrl);
+                Statement stmt = con.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);) {
+
+            String SQL = "SELECT * FROM DataTypesTable";
+            ResultSet rs = stmt.executeQuery(SQL);
+            rs.next();
+            displayRow("ORIGINAL DATA", rs);
+
+            // Update the data in the result set.
+            rs.updateString(2, "B");
+            rs.updateString(3, "Some updated text.");
+            rs.updateBoolean(4, true);
+            rs.updateDouble(5, 77.89);
+            rs.updateDouble(6, 1000.01);
+            long timeInMillis = System.currentTimeMillis();
+            Timestamp ts = new Timestamp(timeInMillis);
+            rs.updateTimestamp(7, ts);
+            rs.updateDate(8, new Date(timeInMillis));
+            rs.updateTime(9, new Time(timeInMillis));
+            rs.updateTimestamp(10, ts);
+
+            // -480 indicates GMT - 8:00 hrs
+            ((SQLServerResultSet) rs).updateDateTimeOffset(11, DateTimeOffset.valueOf(ts, -480));
+
+            rs.updateRow();
+
+            // Get the updated data from the database and display it.
+            rs = stmt.executeQuery(SQL);
+            rs.next();
+            displayRow("UPDATED DATA", rs);
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void displayRow(String title,
+            ResultSet rs) throws SQLException {
+        System.out.println(title);
+        System.out.println(rs.getInt(1) + " , " +                 // SQL integer type.
+                rs.getString(2) + " , " +                         // SQL char type.
+                rs.getString(3) + " , " +                         // SQL varchar type.
+                rs.getBoolean(4) + " , " +                        // SQL bit type.
+                rs.getDouble(5) + " , " +                         // SQL decimal type.
+                rs.getDouble(6) + " , " +                         // SQL money type.
+                rs.getTimestamp(7) + " , " +                      // SQL datetime type.
+                rs.getDate(8) + " , " +                           // SQL date type.
+                rs.getTime(9) + " , " +                           // SQL time type.
+                rs.getTimestamp(10) + " , " +                     // SQL datetime2 type.
+                ((SQLServerResultSet) rs).getDateTimeOffset(11)); // SQL datetimeoffset type.
+        System.out.println();
+    }
+}
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Trabajar con tipos de datos &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)  
   
   

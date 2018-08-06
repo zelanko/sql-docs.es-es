@@ -1,7 +1,7 @@
 ---
-title: Actualizar datos de gran tamaño ejemplo | Documentos de Microsoft
+title: Actualización de ejemplo de datos de gran tamaño | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,42 +14,42 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8ff0d903d9e4f47580fbce5b4c117a2a339dd22c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b8c4fe76531a4557e0c7915fa67a50e2da794095
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852920"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278706"
 ---
 # <a name="updating-large-data-sample"></a>Actualizar un ejemplo de datos grandes
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Esto [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] aplicación de ejemplo muestra cómo actualizar una columna grande en una base de datos.  
+  En esta aplicación de ejemplo del [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] se muestra cómo actualizar una columna grande en una base de datos.  
   
- El archivo de código para este ejemplo se llama updateLargeData.java y se encuentra en la siguiente ubicación:  
+ El archivo de código para este ejemplo se denomina UpdateLargeData.java y se encuentra en la siguiente ubicación:  
   
- \<*directorio de instalación de*> \sqljdbc_\<*versión*>\\<*lenguaje*> \samples\adaptive  
+ \<*directorio de instalación*> \sqljdbc_\<*versión*>\\<*lenguaje*> \samples\adaptive  
   
 ## <a name="requirements"></a>Requisitos  
- Para ejecutar esta aplicación de ejemplo, necesitará acceso a la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] base de datos de ejemplo. También deberá establecer la ruta de clase para incluir el archivo sqljdbc4.jar. Si en la ruta de clase falta una entrada para sqljdbc4.jar, la aplicación de ejemplo produce la excepción común "Clase no encontrada". Para obtener más información sobre cómo establecer la ruta de clase, consulte [con el controlador JDBC](../../connect/jdbc/using-the-jdbc-driver.md).  
+ Para ejecutar esta aplicación de ejemplo, deberá tener acceso a la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. También deberá establecer la ruta de clase para incluir el archivo sqljdbc4.jar. Si en la ruta de clase falta una entrada para sqljdbc4.jar, la aplicación de ejemplo produce la excepción común "Clase no encontrada". Para obtener más información sobre cómo establecer la ruta de clase, vea [con el controlador JDBC](../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
->  El [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] proporciona los archivos de biblioteca de clases sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar o sqljdbc42.jar que se usan según su configuración preferida de Java Runtime Environment (JRE). Este ejemplo se utiliza la [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) y [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) métodos, que se presentan en la API de JDBC 4.0, para tener acceso a los métodos del búfer de respuestas específicas del controlador. Para compilar y ejecutar este ejemplo, necesitará la biblioteca de clases sqljdbc4.jar, que proporciona compatibilidad con JDBC 4.0. Para obtener más información acerca de qué archivo JAR para elegir, consulte [requisitos del sistema para el controlador JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+>  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] proporciona los archivos de biblioteca de clases sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar y sqljdbc42.jar que hay que usar en función de la configuración preferida de Java Runtime Environment (JRE). En este ejemplo se usan los métodos [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) y [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md), que se incluyen en la API de JDBC 4.0, para obtener los métodos de almacenamiento en búfer de respuestas específicos del controlador. Para compilar y ejecutar este ejemplo, necesitará la biblioteca de clases sqljdbc4.jar, que proporciona compatibilidad con JDBC 4.0. Para obtener más información acerca de qué archivo JAR para elegir, consulte [requisitos del sistema para el controlador JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente, el código de ejemplo realiza una conexión a la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] base de datos. A continuación, el código de ejemplo crea un objeto de instrucción y usa el [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) método para comprobar si el objeto de instrucción es un contenedor para el elemento especificado [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) clase. El [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) método se usa para tener acceso a los métodos del búfer de respuestas específicas del controlador.  
+ En el siguiente ejemplo, el código realiza una conexión a la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Después, el código crea un objeto Statement y usa el método [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) para comprobar si el objeto es un contenedor de la clase [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) especificada. El método [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) se usa para obtener acceso a los métodos de almacenamiento en búfer de respuestas específicos del controlador.  
   
- A continuación, el código de ejemplo establece el modo como el almacenamiento en búfer de respuesta "**adaptable**" mediante el uso de la [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) método de la [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) clase y también se muestra cómo obtener el modo de almacenamiento en búfer adaptable.  
+ Después, el código establece el modo de almacenamiento en búfer de respuestas como "**adaptive**" mediante el uso del método [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) de la clase [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), además de mostrar cómo obtener el modo de almacenamiento en búfer adaptable.  
   
- A continuación, se ejecuta la instrucción SQL y coloca los datos que devuelve en una actualizable [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.  
+ Después, ejecuta la instrucción SQL y coloca los datos que devuelve en un objeto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) actualizable.  
   
- Finalmente, el código muestra recorre en iteración las filas de datos que están contenidas en el conjunto de resultados. Si encuentra un documento vacío resumen, usa la combinación de [updateString](../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md) y [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) métodos para actualizar la fila de datos y vuelve a almacenar en la base de datos. Si ya hay datos, utiliza el [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) método para mostrar algunos de los datos que contiene.  
+ Finalmente, el código itera por las filas de datos que se encuentran en el conjunto de resultados. Si encuentra un resumen de documento vacío, usa la combinación de los métodos [updateString](../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md) y [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) para actualizar las filas de datos y vuelve a almacenar los datos en la base de datos. Si ya hay datos, usa el método [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) para mostrar algunos de los datos.  
   
- El comportamiento predeterminado del controlador es "**adaptable.**" Sin embargo, para los conjuntos de resultados adaptables de solo avance y cuando los datos del conjunto de resultados están mayores que la memoria de la aplicación, la aplicación tiene que establecer el modo de almacenamiento en búfer adaptable explícitamente mediante la [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) método de la [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) clase.  
+ El comportamiento predeterminado del controlador es "**adaptive**". Aun así, para los conjuntos de resultados adaptables de solo avance y cuando los datos del conjunto de resultados son mayores que la memoria de la aplicación, la aplicación tiene que configurar explícitamente el modo de almacenamiento en búfer adaptable mediante el método [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) de la clase [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md).  
   
  [!code[JDBC#UsingAdaptiveBuffering3](../../connect/jdbc/codesnippet/Java/updating-large-data-sample_1.java)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Trabajo con datos grandes](../../connect/jdbc/working-with-large-data.md)  
   
   

@@ -36,13 +36,13 @@ caps.latest.revision: 75
 author: uc-msft
 ms.author: umajay
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3ef8ab735511e5885fde7c3e5a218a75bc6f41fb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 45f0e42f637f452b12ff32a0b2f580c3c87e9bd3
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262635"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454639"
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,7 +98,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## <a name="result-sets"></a>Conjuntos de resultados  
 En la tabla siguiente se describen las columnas devueltas en el conjunto de resultados si se especifica STAT_HEADER.
   
-|Nombre de columna|Description|  
+|Nombre de columna|Descripción|  
 |-----------------|-----------------|  
 |Nombre|Nombre del objeto de estadísticas.|  
 |Actualizado|Fecha y hora de la última actualización de las estadísticas. La función [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) constituye otro modo de recuperar esta información. Para más información, vea la sección [Comentarios](#Remarks) en esta página.|  
@@ -114,7 +114,7 @@ En la tabla siguiente se describen las columnas devueltas en el conjunto de resu
   
 En la tabla siguiente se describen las columnas devueltas en el conjunto de resultados si se especifica DENSITY_VECTOR.
   
-|Nombre de columna|Description|  
+|Nombre de columna|Descripción|  
 |-----------------|-----------------|  
 |Toda la densidad|La densidad es 1 / *valores distintos*. Los resultados muestran la densidad de cada prefijo de columnas del objeto de estadísticas (una fila por cada densidad). Un valor distinto es una lista Distinct de los valores de columna de cada fila y prefijo de columna. Por ejemplo, si el objeto de estadísticas contiene las columnas de clave (A, B, C), los resultados indican la densidad de las listas de valores distintos de cada uno de estos prefijos de columna: (A), (A,B) y (A, B, C). Con el prefijo (A, B, C), cada una de estas listas es una lista de valores distintos: (3, 5, 6) (4, 4, 6) (4, 5, 6) (4, 5, 7). Con el prefijo (A, B) los mismos valores de columna tiene estas listas de valores distintos: (3, 5), (4, 4) y (4, 5)|  
 |Promedio de longitud|Promedio de longitud, en bytes, para almacenar una lista de los valores de columna del prefijo de columna. Por ejemplo, si cada valor de la lista (3, 5, 6) necesita 4 bytes, la longitud es 12 bytes.|  
@@ -122,7 +122,7 @@ En la tabla siguiente se describen las columnas devueltas en el conjunto de resu
   
 En la tabla siguiente se describen las columnas devueltas en el conjunto de resultados si se especifica la opción HISTOGRAM.
   
-|Nombre de columna|Description|  
+|Nombre de columna|Descripción|  
 |---|---|
 |RANGE_HI_KEY|Valor de columna límite superior de un paso del histograma. El valor de columna también se denomina valor de clave.|  
 |RANGE_ROWS|Número calculado de filas cuyo valor de columna está comprendido en un paso del histograma, sin incluir el límite superior.|  

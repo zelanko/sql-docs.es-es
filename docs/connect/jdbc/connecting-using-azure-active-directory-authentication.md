@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d8f83d0f838304f6f541d1d88e56ce316b07d25
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: c86fc615bcf3dec2a87581bbb09f482c8befc943
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278846"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452649"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Conectarse usando la autenticación de Azure Active Directory
 
@@ -211,10 +211,12 @@ You have successfully logged on as: <your user name>
 > [!NOTE]  
 > Debe existir una base de datos de usuario contenido y un usuario de base de datos independiente que representa el usuario de Azure AD o uno de los grupos de Azure especificado pertenece al usuario de AD, debe existir en la base de datos y debe tener el permiso CONNECT (excepto Azure Active Directory Administrador del servidor o grupo)
 
-
 ## <a name="connecting-using-access-token"></a>Conectar con el Token de acceso
-Aplicaciones y servicios puede recuperar un token de acceso de Azure Active Directory y usarlo para conectarse a la base de datos de SQL Azure. Tenga en cuenta que accessToken solo puede establecerse mediante el parámetro de propiedades del método getConnection() en la clase DriverManager. No se puede usar en la cadena de conexión.
- 
+Aplicaciones y servicios puede recuperar un token de acceso de Azure Active Directory y usarlo para conectarse a la base de datos de SQL Azure.
+
+> [!NOTE] 
+> **accessToken** solo puede establecerse mediante el parámetro de propiedades del método getConnection() en la clase DriverManager. No se puede usar en la cadena de conexión.
+
 El ejemplo siguiente contiene una sencilla aplicación Java que se conecta a Azure SQL Database mediante la autenticación basada en token de acceso. Antes de compilar y ejecutar el ejemplo, realice los pasos siguientes:
 1.  Crear una cuenta de la aplicación en Azure Active Directory para el servicio.
     1. Inicie sesión en Azure Portal.

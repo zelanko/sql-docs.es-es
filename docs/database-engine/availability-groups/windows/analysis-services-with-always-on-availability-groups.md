@@ -13,13 +13,13 @@ caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6874419218be60b58b11a2a3009b1eb8577e000a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 6f2642ece9de3e8a90a5ef18604bf287c46ce545
+ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769111"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39509094"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con grupos de disponibilidad AlwaysOn
 
@@ -158,7 +158,7 @@ ms.locfileid: "34769111"
   
      Finalice el origen de datos y cierre el Asistente para orígenes de datos.  
   
-6.  Agregue **MultiSubnetFailover=Yes** a la cadena de conexión para especificar una detección y una conexión más rápidas al servidor activo. Para obtener más información acerca de esta propiedad, vea [Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+6.  Agregue **MultiSubnetFailover=Yes** a la cadena de conexión para especificar una detección y una conexión más rápidas al servidor activo. Para obtener más información acerca de esta propiedad, vea [Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastresy](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
      Esta propiedad no está visible en la cuadrícula de propiedades. Para agregar la propiedad, haga clic con el botón derecho en el origen de datos y elija **Ver código**. Agregue `MultiSubnetFailover=Yes` a la cadena de conexión.  
   

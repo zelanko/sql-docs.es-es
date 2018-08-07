@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1179443d8b86e23a51fdf2250f007914e27cf0b
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: b0327a7fb471299785d7899befabcbd9f228aa2e
+ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335869"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39482706"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Implementar un proyecto de SSIS desde el símbolo del sistema con ISDeploymentWizard.exe
 En este inicio rápido se muestra cómo implementar un proyecto de SSIS desde el símbolo del sistema mediante la ejecución del asistente para la implementación de Integration Services, `ISDeploymentWizard.exe`.
@@ -47,7 +47,7 @@ Para implementar el proyecto en Azure SQL Database, debe obtener la información
 3. En la página **Introducción** de la base de datos, compruebe el nombre completo del servidor. Mantenga el puntero del ratón sobre el nombre del servidor para ver la opción **Haga clic para copiar**. 
 4. Si olvida la información de inicio de sesión del servidor de Azure SQL Database, navegue a la página del servidor de SQL Database para ver el nombre del administrador del servidor. Si es necesario, puede restablecer la contraseña.
 
-## <a name="authentication-methods-in-the-deployment-wizard"></a>Métodos de autenticación en el Asistente para implementación
+## <a name="wizard_auth"></a> Métodos de autenticación en el Asistente para implementación
 
 Si va a efectuar una implementación en un servidor de SQL Server con el Asistente para implementación, deberá usar la autenticación de Windows, puesto que no se puede usar la autenticación de SQL Server.
 

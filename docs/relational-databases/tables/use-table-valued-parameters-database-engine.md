@@ -19,13 +19,13 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ff370e7b4814397b067fd82c566fe809bc27e18a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f9e1e7d2985bec6009530e2a010692c3a2020eed
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012892"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545035"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Usar parámetros con valores de tabla (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

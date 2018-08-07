@@ -14,13 +14,13 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ca667951d50ddf996d5ef5a46ee7d699681325c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 32d37930a8ceec8df41fce76c6a0f9f758ca9a84
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973830"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538145"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Desarrollar con Always Encrypted con el proveedor de datos .NET Framework
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -282,7 +282,7 @@ El proceso para obtener una clave de cifrado de columna:
 El proveedor de datos .NET Framework para SQL Server incluye los siguientes proveedores integrados de almacenamiento de claves maestras de columna, que se registran previamente con los nombres específicos del proveedor (se usan para buscar el proveedor).
 
 
-| Clase | Description | Nombre del proveedor (búsqueda) |
+| Clase | Descripción | Nombre del proveedor (búsqueda) |
 |:---|:---|:---|
 |Clase SqlColumnEncryptionCertificateStoreProvider| Un proveedor para el Almacén de certificados de Windows. | MSSQL_CERTIFICATE_STORE |
 |[Clase SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**Nota:** Este proveedor está disponible en la versión 4.6.1 y posteriores de .NET Framework. |Un proveedor de un almacén de claves que es compatible con [Microsoft Cryptography API: Next Generation (CNG) API (Cryptography API: Next Generation (CNG) de Microsoft)](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx). Normalmente, un almacén de este tipo es un módulo de seguridad de hardware (un dispositivo físico que protege y administra las claves digitales y proporciona un procesamiento criptográfico).  | MSSQL_CNG_STORE|
@@ -552,7 +552,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 
 
-|Nombre|Description|Incluido en la versión de .NET
+|Nombre|Descripción|Incluido en la versión de .NET
 |:---|:---|:---
 |[Clase SqlColumnEncryptionCertificateStoreProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Un proveedor de almacén de claves para el almacén de certificados de Windows.|  4.6
 |[Clase SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Un proveedor de almacén de claves para Microsoft Cryptography API: Next Generation (CNG).|  4.6.1

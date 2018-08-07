@@ -19,13 +19,13 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c0a87403ce74d29fd1a967e4eb0775a70f7d10ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 318d2ee649a083023485ee3eed3507aeb643cfe3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940570"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543657"
 ---
 # <a name="non-xml-format-files-sql-server"></a>Archivos de formato no XML [SQL Server]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,14 +63,14 @@ ms.locfileid: "32940570"
   
  Los campos **Versión** y **Número de columnas** solo aparecen una vez. Los significados se describen en la siguiente tabla.  
   
-|Campo del archivo de formato|Description|  
+|Campo del archivo de formato|Descripción|  
 |------------------------|-----------------|  
 |Versión|Número de versión de la utilidad **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> El número de versión solo se reconoce en **bcp**, no en [!INCLUDE[tsql](../../includes/tsql-md.md)].<br /><br /> <br /><br /> Nota: La versión de la utilidad **bcp** (Bcp.exe) que se usa para leer un archivo de formato debe ser la misma, o una versión posterior, que la que se usó para crear el archivo de formato. Por ejemplo, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** puede leer un formato de archivo de la versión 10.0, generado por [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**, pero [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** no puede leer un formato de archivo de la versión 12.0, generado por [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**bcp**.|  
 |Número de columnas|Número de campos del archivo de datos. Este número debe ser el mismo en todas las filas.|  
   
  Los otros campos del archivo de formato describen los campos de datos que se importarán o exportarán masivamente. Cada campo de datos requiere una fila distinta en el archivo de formato. Cada fila del archivo de formato contiene los valores de los campos del archivo de formato que se describen en la siguiente tabla.  
   
-|Campo del archivo de formato|Description|  
+|Campo del archivo de formato|Descripción|  
 |------------------------|-----------------|  
 |**Orden de campo del archivo host**|Número que indica la posición de cada campo en el archivo de datos. El primer campo de la fila es 1 y así sucesivamente.|  
 |**Tipo de datos del archivo host**|Indica el tipo de datos que se almacena en un campo determinado del archivo de datos. Para archivos de datos ASCII, utilice SQLCHAR; para archivos de datos con formato nativo, utilice tipos de datos predeterminados. Para obtener más información, vea [Especificar el tipo de almacenamiento en archivo mediante bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md).|  

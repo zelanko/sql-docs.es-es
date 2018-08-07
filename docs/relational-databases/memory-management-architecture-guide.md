@@ -19,13 +19,13 @@ caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 048a6b5a2a704a353fddce56a9d565e8f3792b92
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 281eb9435fc3b251b9dfbc3d723a10f1df652f66
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239375"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541725"
 ---
 # <a name="memory-management-architecture-guide"></a>guía de arquitectura de administración de memoria
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -166,7 +166,7 @@ La <a name="stacksizes"></a>memoria para pilas de subprocesos<sup>1</sup>, CLR<s
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa la API de notificación de memoria **QueryMemoryResourceNotification** para determinar el momento en que el Administrador de memoria de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede asignar y liberar memoria.  
 
-Cuando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se inicia, calcula el tamaño del espacio de direcciones virtuales del grupo de búferes basándose en un número de parámetros, como  la cantidad de memoria física en el sistema, el número de subprocesos de servidor y varios parámetros de inicio. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserva la cantidad calculada de su espacio de direcciones virtuales del proceso para el grupo de búferes, pero solo adquiere (confirma) la cantidad necesaria de memoria física para la carga actual.
+Cuando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se inicia, calcula el tamaño del espacio de direcciones virtuales del grupo de búferes basándose en un número de parámetros, como la cantidad de memoria física en el sistema, el número de subprocesos de servidor y varios parámetros de inicio. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reserva la cantidad calculada de su espacio de direcciones virtuales del proceso para el grupo de búferes, pero solo adquiere (confirma) la cantidad necesaria de memoria física para la carga actual.
 
 A continuación, la instancia sigue adquiriendo la memoria que necesita para la carga de trabajo. A medida que se conectan más usuarios y se ejecutan consultas, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adquiere la memoria física adicional según la demanda. Una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sigue adquiriendo memoria física hasta que alcanza su asignación de memoria de servidor máxima o hasta que el sistema operativo indica que ya no existe más memoria libre; libera memoria cuando se supera el valor de memoria de servidor mínima y el sistema operativo indica que hay escasez de memoria libre. 
 

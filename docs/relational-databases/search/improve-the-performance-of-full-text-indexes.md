@@ -22,13 +22,13 @@ caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d5c8427cc756a3aa4635e97288cec3aa2e6fb8e0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 55938d1a17e4a6f1d2e6321b74340fde24814df9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182121"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537705"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Mejorar el rendimiento de los índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -184,7 +184,7 @@ El rendimiento de los rellenados completos no es el óptimo cuando el consumo de
   
      En la tabla siguiente se describen los tipos de espera de interés aquí.  
   
-    |Tipo de espera|Description|Solución posible:|  
+    |Tipo de espera|Descripción|Solución posible:|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX o _UP)|Esto podría indicar un cuello de botella de la E/S, en cuyo caso normalmente vería también una longitud promedio de la cola del disco alta.|Al mover el índice de texto completo a un grupo de archivos diferente de un disco diferente, podría ayudar a reducir el cuello de botella de la E/S.|  
     |PAGELATCH_EX (o _UP)|Podría indicar una gran contención entre los subprocesos que están intentando escribir en el mismo archivo de base de datos.|Al agregar los archivos al grupo de archivos en el que el índice de texto completo reside podría ayudar a aliviar tal contención.|  

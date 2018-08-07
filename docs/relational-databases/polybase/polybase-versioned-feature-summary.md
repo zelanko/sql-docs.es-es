@@ -12,13 +12,13 @@ ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: df01d5e4503aeb4004f06ec0310ac613a6318d8b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 1402225fcfd38a8515e762164577dc9308a60ad3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993976"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538795"
 ---
 # <a name="polybase-versioned-feature-summary"></a>Resumen de características de PolyBase con versiones
 [!INCLUDE[appliesto-ss2016-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-all-md.md)]

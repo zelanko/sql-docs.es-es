@@ -20,12 +20,13 @@ caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f2d1a1463b751bcd820419db24c978ed08d7e463
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c674869b9c478bd5accf85f74106aba6a33dcaa9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534785"
 ---
 # <a name="configure-parallel-index-operations"></a>Configurar operaciones de índice en paralelo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
 -   La opción de índice MAXDOP reemplaza la opción de configuración max degree of parallelism solo para la consulta que especifica esta opción. En la tabla siguiente se muestran los valores enteros válidos que se pueden especificar con la opción de configuración max degree of parallelism y la opción de índice MAXDOP.  
   
-    |Valor|Description|  
+    |Valor|Descripción|  
     |-----------|-----------------|  
     |0|Especifica que el servidor determina el número de CPU que se usan, según la carga de trabajo del sistema actual. Éste es el valor predeterminado y recomendado.|  
     |1|Suprime la generación de planes paralelos. La operación se ejecutará en serie.|  

@@ -19,13 +19,13 @@ caps.latest.revision: 27
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aa8adef85d2b1eb0513763174446837f41f158dd
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5e5ebbec5b812be6fe5c74d2035f19c2d1c0cdd9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697486"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546635"
 ---
 # <a name="encrypt-a-column-of-data"></a>Cifrar una columna de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ PASSWORD = '<some strong password>';
 ```  
 Realice siempre una copia de seguridad de la clave maestra de base de datos. Para obtener más información sobre las claves maestras de base de datos, vea [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md).
 
-#### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Para cifrar una columna de datos usando un cifrado simétrico simple  
+#### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>Para cifrar una columna de datos usando el cifrado simétrico que incluye un autenticador  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -123,7 +123,7 @@ Realice siempre una copia de seguridad de la clave maestra de base de datos. Par
     GO  
     ```  
   
-#### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>Para cifrar una columna de datos usando el cifrado simétrico que incluye un autenticador  
+#### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Para cifrar una columna de datos usando un cifrado simétrico simple  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

@@ -23,13 +23,13 @@ caps.latest.revision: 51
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f33f3d2a3bba860e943bac52f00912fcde3478cb
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4a1dcdf67235e5652cb3bbd03e0d8272799d983a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106941"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546975"
 ---
 # <a name="metadata-visibility-configuration"></a>Configuración de visibilidad de los metadatos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -108,7 +108,7 @@ GO
 ## <a name="benefits-and-limits-of-metadata-visibility-configuration"></a>Beneficios y límites de la configuración de visibilidad de los metadatos  
  La configuración de visibilidad de los metadatos puede desempeñar un rol importante en el plan de seguridad global. Sin embargo, hay casos en los que un usuario con conocimientos y determinación puede forzar la divulgación de algunos metadatos. Es recomendable implementar permisos sobre los metadatos como una de las distintas medidas de defensa más completa.  
   
- Teóricamente, es posible forzar la emisión de metadatos en los mensajes de error mediante la manipulación del orden de evaluación de predicados en las consultas. La posibilidad de estos *ataques de prueba y error* no es específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es una implicación de las transformaciones asociativas y conmutativas que admite el álgebra relacional. Puede mitigar este riesgo mediante la limitación de la información que se devuelve en los mensajes de error. Para restringir más la visibilidad de metadatos de esta manera, puede iniciar el servidor con la marca de seguimiento 3625. Esta marca de seguimiento limita la cantidad de información que se muestra en los mensajes de error. A su vez, ayuda a evitar divulgaciones forzadas. La contrapartida es que los mensajes de error se simplificarán y puede resultar difícil su uso para fines de depuración. Para obtener más información, vea [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md) y [Marcas de seguimiento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
+ Teóricamente, es posible forzar la emisión de metadatos en los mensajes de error mediante la manipulación del orden de evaluación de predicados en las consultas. La posibilidad de estos *ataques de prueba y error* no es específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es una implicación de las transformaciones asociativas y conmutativas que admite el álgebra relacional. Puede mitigar este riesgo mediante la limitación de la información que se devuelve en los mensajes de error. Para restringir más la visibilidad de metadatos de esta manera, puede iniciar el servidor con la marca de seguimiento 3625. Esta marca de seguimiento limita la cantidad de información que se muestra en los mensajes de error. A su vez, ayuda a evitar divulgaciones forzadas. La contrapartida es que los mensajes de error se simplificarán y puede resultar difícil su uso para fines de depuración. Para obtener más información, vea [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md) y [Marcas de seguimiento &amp;#40;Transact-SQL&amp;#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
  Los metadatos que se muestran a continuación no están sujetos a una divulgación forzada:   
   

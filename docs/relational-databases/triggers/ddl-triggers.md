@@ -14,13 +14,13 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: da86c799085983f5d2bc73ba970893e9fbcc7385
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4fc7d5df1d8e7d11e97512a31cda94fbf2687e6b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432394"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539035"
 ---
 # <a name="ddl-triggers"></a>Desencadenadores DDL
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "37432394"
 >  Pruebe los desencadenadores DDL para determinar su respuesta a los procedimientos almacenados del sistema que se ejecutan. Por ejemplo, tanto la instrucción CREATE TYPE como el procedimiento almacenado **sp_addtype** activarán un desencadenador DDL que se crea en un evento CREATE_TYPE.  
   
 ## <a name="types-of-ddl-triggers"></a>Tipos de desencadenadores DDL  
- Desencadenador DDL de Transact-SQL  
+ ### <a name="transact-sql-ddl-trigger"></a>Desencadenador DDL de Transact-SQL  
  Un tipo especial de procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)] que ejecuta una o más instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] como respuesta a un evento con ámbito de servidor o de base de datos. Por ejemplo, un desencadenador DDL se puede activar si se ejecuta una instrucción como ALTER SERVER CONFIGURATION o si se elimina una tabla mediante DROP TABLE.  
   
- Desencadenador DDL de CLR  
+ ### <a name="clr-ddl-trigger"></a>Desencadenador DDL de CLR  
  En lugar de ejecutar un procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)] , un desencadenador CLR ejecuta uno o más métodos escritos en código administrado que son miembros de un ensamblado creado en .NET Framework y cargado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Los desencadenadores DDL solo se activan cuando se ejecutan las instrucciones DDL que los desencadenan. Los desencadenadores DDL no se pueden usar como desencadenadores INSTEAD OF. Los desencadenadores DDL no se activan como respuesta a eventos que afectan a procedimientos almacenados y tablas temporales, ya sean locales o globales.  

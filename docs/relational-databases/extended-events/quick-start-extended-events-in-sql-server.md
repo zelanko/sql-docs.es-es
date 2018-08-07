@@ -14,12 +14,13 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 28dad124a7c4552418f103dc03d6893d5718632b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2af8f48646f0cb99ffd2bd5bf6ac734dcaeecf52
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534915"
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>Quick Start: Extended Events in SQL Server (Inicio rápido: Eventos extendidos en SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -426,7 +427,7 @@ En los siguientes artículos se describen escenarios específicos para las sesio
 En la siguiente tabla se enumeran los términos que se usan en los eventos extendidos, y se describe su significado.
 
 
-| Término | Description |
+| Término | Descripción |
 | :--- | :---------- |
 | sesión de eventos | Una construcción que se centra en torno a uno o más eventos, además de elementos complementarios como acciones y destinos. La instrucción CREATE EVENT SESSION construye cada sesión de eventos. Puede modificar una sesión de eventos para iniciarla y detenerla a su voluntad. <br/> <br/> A veces, se hace referencia a una sesión de eventos solo como *sesión*, cuando el contexto lo aclara significa *sesión de eventos*. <br/> <br/> Puede encontrar más información sobre las sesiones de eventos en: [SQL Server Extended Events Sessions (Sesiones de eventos extendidos de SQL Server)](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
 | event | Una repetición específica en el sistema que se observa mediante una sesión de eventos activa. <br/> <br/> Por ejemplo, el evento *sql_statement_completed* representa el momento en que cualquier instrucción T-SQL se completa. El evento puede notificar su duración y otros datos. |

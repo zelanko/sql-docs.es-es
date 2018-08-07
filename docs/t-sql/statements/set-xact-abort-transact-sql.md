@@ -31,13 +31,13 @@ caps.latest.revision: 50
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2579dd7dda4725c2779e4ff7917cf46a0a0b833f
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 14b9d90ff7db67fb4594d18daaa0b18e843b630c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790786"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552065"
 ---
 # <a name="set-xactabort-transact-sql"></a>SET XACT_ABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,17 +52,10 @@ ms.locfileid: "37790786"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
+```    
 SET XACT_ABORT { ON | OFF }  
 ```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET XACT_ABORT ON   
-```  
+
   
 ## <a name="remarks"></a>Notas  
  Cuando SET XACT_ABORT es ON, si una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] genera un error en tiempo de ejecución, se termina toda la transacción y se revierte.  

@@ -17,13 +17,13 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cba499f3a6c8966427fa242e6f0b868f35d94f98
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: adbc9bec494a16c0dd536638b7a6dd04ab7979f6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329806"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563069"
 ---
 # <a name="objects-event-category"></a>Objetos (categoría de eventos)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

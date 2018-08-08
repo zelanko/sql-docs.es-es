@@ -14,13 +14,13 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 356cfffea1189b3d7efb042fcec7e26eedc9b747
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e9aaab4dcc9a914f83e87e81d70cb52cc7398d7f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941360"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556825"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Instrucciones SELECT y JOIN en vistas del sistema para eventos extendidos en SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -118,9 +118,9 @@ Encontrará documentación de referencia sobre las vistas de catálogo para even
 
 Para iniciar el cuadro de diálogo **Nueva sesión**en el **Explorador de objetos** de SSMS, expanda **Administración** > **Eventos extendidos**y haga clic con el botón derecho en **Sesiones** > **Nueva sesión**.
 
-En el cuadro de diálogo grande de **Nueva sesión** , vemos en la primera sección con la etiqueta **General**que se ha seleccionado la opción para **Iniciar la sesión de eventos al iniciar el servidor**.
+En el cuadro de diálogo grande de **Nueva sesión**, vemos en la primera sección con la etiqueta **General** que se ha seleccionado la opción para **Iniciar la sesión de eventos al iniciar el servidor**.
 
-![Nueva sesión > General, Iniciar la sesión de eventos al iniciar el servidor.](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
+![Nueva sesión &gt; General, Iniciar la sesión de eventos al iniciar el servidor.](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
 
 En la sección **Eventos**, vemos que se ha elegido el evento **lock_deadlock**. Para ese evento, vemos que se han seleccionado tres **Acciones** . Esto significa que se ha hecho clic en el botón **Configurar** , que aparece en gris después de que se haga clic en él.

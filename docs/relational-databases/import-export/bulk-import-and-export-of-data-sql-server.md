@@ -28,13 +28,13 @@ caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e6ed82f416bdc4e94b779a98671d7382749e626b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 26b45540c69237cc8bce4e105dff6d496f3eff0b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940060"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561045"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Importar y exportar datos de forma masiva (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "32940060"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la exportación masiva de datos desde una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la importación masiva de datos en una tabla o vista sin particiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Están disponibles los métodos básicos siguientes.  
  
   
-|Método|Description|Importa datos|Exporta datos|  
+|Método|Descripción|Importa datos|Exporta datos|  
 |------------|-----------------|------------------|------------------|  
 |[bcp, utilidad](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|Utilidad de línea de comandos (Bcp.exe) que importa y exporta datos masivamente y genera archivos de formato.|Sí|Sí|  
 |[BULK INSERT, instrucción](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que importa datos directamente de un archivo de datos en una tabla o vista sin particionar de una base de datos.|Sí|no|  

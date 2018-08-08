@@ -21,13 +21,13 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c0993d9437044b1eba713e2ac7cd10b2ab5372b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 50ae9731b974753b0a3fef174314ef5bbe3e03d5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973800"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563229"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guía de versiones de fila y bloqueo de transacciones
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -346,7 +346,7 @@ GO
   
  En la siguiente tabla se muestran los recursos que el [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] puede bloquear.  
   
-|Recurso|Description|  
+|Recurso|Descripción|  
 |--------------|-----------------|  
 |RID|Identificador de fila que se utiliza para bloquear una sola fila de un montón.|  
 |KEY|Bloqueo de fila dentro de un índice que se utiliza para proteger intervalos de claves en transacciones serializables.|  
@@ -368,7 +368,7 @@ GO
   
  En la siguiente tabla se indican los modos de bloqueo de recursos que emplea [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
   
-|Modo de bloqueo|Description|  
+|Modo de bloqueo|Descripción|  
 |---------------|-----------------|  
 |Compartido (S)|Se utiliza para operaciones de lectura que no cambian ni actualizan datos, como la instrucción `SELECT`.|  
 |Actualizar (U)|Se utiliza en recursos que se pueden actualizar. Evita una forma común de interbloqueo que se produce cuando varias sesiones leen, bloquean y actualizan recursos.|  
@@ -403,7 +403,7 @@ GO
   
 <a name="lock_intent_table"></a> Los bloqueos con intención incluyen: Intención compartida (IS), Intención exclusiva (IX) e Intención compartida exclusiva (SIX).  
   
-|Modo de bloqueo|Description|  
+|Modo de bloqueo|Descripción|  
 |---------------|-----------------|  
 |Intención compartida (IS)|Protege los bloqueos compartidos solicitados o adquiridos de algunos recursos (aunque no todos) situados en un nivel inferior de la jerarquía.|  
 |Con intención exclusivo (IX)|Protege los bloqueos exclusivos solicitados o adquiridos de algunos recursos (aunque no todos) situados en un nivel inferior de la jerarquía. IX es un superconjunto de IS, y protege las solicitudes de bloqueos compartidos en recursos de niveles inferiores.|  
@@ -467,7 +467,7 @@ GO
 -   La fila representa el modo de bloqueo que protege la entrada de índice.  
 -   El modo representa el modo de bloqueo combinado que se utiliza. Los modos de bloqueo del intervalo de claves constan de dos partes. La primera representa el tipo de bloqueo que se utiliza para bloquear el intervalo del índice (Range*T*) y la segunda representa el tipo de bloqueo que se utiliza para bloquear una clave específica (*K*). Ambas partes se conectan con un guion (-), como Range*T*-*K*.  
   
-    |Intervalo|Fila|Mode|Description|  
+    |Intervalo|Fila|Mode|Descripción|  
     |-----------|---------|----------|-----------------|  
     |RangeS|S|RangeS-S|Intervalo compartido, bloqueo de recurso compartido; recorrido de intervalo serializable.|  
     |RangeS|U|RangeS-U|Intervalo compartido, bloqueo de recurso de actualización; recorrido de actualización serializable.|  
@@ -1500,7 +1500,7 @@ ALTER DATABASE AdventureWorks2016
   
  En la tabla siguiente se enumeran y describen los estados de la opción ALLOW_SNAPSHOT_ISOLATION. El uso de ALTER DATABASE con la opción ALLOW_SNAPSHOT_ISOLATION no bloquea a los usuarios que actualmente tienen acceso a la base de datos.  
   
-|Estado del marco de aislamiento de instantánea para la base de datos actual|Description|  
+|Estado del marco de aislamiento de instantánea para la base de datos actual|Descripción|  
 |----------------------------------------------------------------|-----------------|  
 |OFF|La compatibilidad de transacciones de aislamiento de instantánea no está activada. No se permiten transacciones de aislamiento de instantánea.|  
 |PENDING_ON|La compatibilidad de transacciones de aislamiento de instantánea se encuentra en estado de transición (de OFF a ON). Las operaciones abiertas deben finalizar.<br /><br /> No se permiten transacciones de aislamiento de instantánea.|  

@@ -15,13 +15,13 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6088feafdf971cf4593c119ec608f5e282bda9a9
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8afb41d09efe51eb19544521d8bd44fea196f9d7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34328126"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561025"
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted, clase de eventos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

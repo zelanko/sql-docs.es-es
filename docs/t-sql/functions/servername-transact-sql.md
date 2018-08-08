@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0adbdba1c04ad4cc2e39f532ded83d3964a47ea
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 4335b063b5b8f734be6fe76bb0a1f43c3f7e8622
+ms.sourcegitcommit: 50144371c9ee924e5c0b4b9d3d4860f531c27426
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787366"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39582191"
 ---
 # <a name="x40x40servername-transact-sql"></a>&#x40;&#x40;SERVERNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "37787366"
 |--------------|------------------------|  
 |Instancia predeterminada|'*servername*'|  
 |Instancia con nombre|'*servername*\\*instancename*'|  
-|instancia en clúster de conmutación por error: instancia predeterminada|'*virtualservername*'|  
-|instancia en clúster de conmutación por error: instancia con nombre|'*virtualservername*\\*instancename*'|  
+|instancia de clúster de conmutación por error: instancia predeterminada|'*network_name_for_fci_in_wsfc*'|  
+|instancia de clúster de conmutación por error: instancia con nombre|'*network_name_for_fci_in_wsfc*\\*instancename*'|  
   
  Aunque la función @@SERVERNAME y la propiedad SERVERNAME de la función SERVERPROPERTY puedan devolver cadenas con formatos similares, la información puede ser distinta. La propiedad SERVERNAME informa automáticamente de los cambios en el nombre de red del equipo.  
   

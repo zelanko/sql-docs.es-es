@@ -1,7 +1,7 @@
 ---
-title: 'Lección 3: Eliminar objetos de base de datos | Microsoft Docs'
+title: 'Tutorial de T-SQL: Eliminación de objetos de base de datos | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 07/30/2018
 ms.prod: sql
 ms.technology: t-sql
 ms.reviewer: ''
@@ -17,24 +17,94 @@ caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 491a95099bdb7b70bca11c9567a450b42d2012d3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f9b41982cf0d71ad138d6eb43462174633c8d2de
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420924"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39455549"
 ---
-# <a name="lesson-3-deleting-database-objects"></a>Lección 3: Eliminar objetos de base de datos
+# <a name="lesson-3-delete-database-objects"></a>Lección 3: Eliminar objetos de base de datos
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 Esta breve lección quita los objetos que ha creado en las lecciones 1 y 2 y, a continuación, quita la base de datos.  
   
-Esta lección incluye un tema:  
+Antes de eliminar objetos, asegúrese de que está en la base de datos correcta:
   
--   [Eliminar objetos de base de datos](../t-sql/lesson-3-1-deleting-database-objects.md)  
+  ```sql  
+  USE TestData;  
+  GO  
+  ```  
+
+## <a name="revoke-stored-procedure-permissions"></a>Revocación permisos de procedimientos almacenados
   
-## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
-[Deleting Database Objects](../t-sql/lesson-3-1-deleting-database-objects.md)  
+Use la instrucción `REVOKE` para quitar el permiso de ejecución para `Mary` en el procedimiento almacenado:
   
+  ```sql  
+  REVOKE EXECUTE ON pr_Names FROM Mary;  
+  GO  
+  ```  
+  
+## <a name="drop-permissions"></a>Rescisión de permisos
+
+1. Use la instrucción `DROP` para quitar el permiso de `Mary` para tener acceso a la base de datos `TestData` :
+  
+  ```sql  
+  DROP USER Mary;  
+  GO  
+  ```  
+
+
+2. Use la instrucción `DROP` para quitar el permiso de `Mary` para tener acceso a esta instancia de [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]:
+  
+  ```sql  
+    DROP LOGIN [<computer_name>\Mary];  
+    GO   
+  ```  
+  
+3.   Use la instrucción `DROP` para quitar el procedimiento almacenado `pr_Names`:  
+  
+    ```sql  
+    DROP PROC pr_Names;  
+    GO  
+    ```  
+  
+6.  Use la instrucción `DROP` para quitar la vista `vw_Names`:  
+  
+    ```sql  
+    DROP VIEW vw_Names;  
+    GO  
+  
+    ```  
+
+## <a name="delete-table"></a>Eliminación de tablas
+  
+1. Use la instrucción `DELETE` para quitar todas las filas de la tabla `Products` :  
+  
+    ```sql  
+    DELETE FROM Products;  
+    GO  
+    ```  
+  
+2.  Use la instrucción `DROP` para quitar la tabla `Products` :  
+  
+    ```sql  
+    DROP TABLE Products;  
+    GO    
+    ```  
+
+## <a name="remove-database"></a>Eliminación de bases de datos
+  
+No puede quitar la base de datos `TestData` mientras esté en la base de datos; por tanto, cambie primero el contexto a otra base de datos y, a continuación, use la instrucción `DROP` para quitar la base de datos `TestData` :  
+  
+  ```sql  
+  USE MASTER;  
+  GO  
+  DROP DATABASE TestData;  
+  GO   
+  ```  
+  
+Esto finaliza el tutorial de escritura de instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] . Recuerde que este tutorial es una introducción breve y en él no se describen todas las opciones de las instrucciones que se usan. El diseño y la creación de una estructura de base de datos eficaz y la configuración del acceso seguro a los datos requiere una base de datos más compleja que la que se muestra en este tutorial.  
+
   
   

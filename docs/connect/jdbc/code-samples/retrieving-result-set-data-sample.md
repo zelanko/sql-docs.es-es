@@ -1,7 +1,7 @@
 ---
 title: Recuperar conjunto de resultados muestra de datos | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,33 +14,38 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb68f2bedb680f990e2b0c4e4e559191915dd300
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: e7bea017a9fd36dc0e910fc2dfff69df10aabbde
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279066"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39453083"
 ---
 # <a name="retrieving-result-set-data-sample"></a>Recuperar ejemplos de datos de conjunto de resultados
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Esta aplicación de ejemplo de [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] muestra cómo recuperar un conjunto de datos de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] y luego cómo mostrar esos datos.  
-  
- El archivo de código para este ejemplo se llama RetrieveRS.java y se encuentra en la siguiente ubicación:  
-  
- \<*directorio de instalación*> \sqljdbc_\<*versión*>\\<*lenguaje*> \samples\resultsets  
-  
-## <a name="requirements"></a>Requisitos  
- Para ejecutar esta aplicación de ejemplo, debe configurar la ruta de clase para que incluya el archivo mssql-jdbc.jar. Además, debe tener acceso a la base de datos de ejemplo de [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Para obtener más información sobre cómo establecer la ruta de clase, vea [con el controlador JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
-  
+Esta aplicación de ejemplo de [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] muestra cómo recuperar un conjunto de datos de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] y luego cómo mostrar esos datos.
+
+El archivo de código para este ejemplo se llama RetrieveResultSet.java y se encuentra en la siguiente ubicación:
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\samples\resultsets  
+```
+
+## <a name="requirements"></a>Requisitos
+
+Para ejecutar esta aplicación de ejemplo, debe configurar la ruta de clase para que incluya el archivo mssql-jdbc.jar. Además, debe tener acceso a la base de datos de ejemplo de [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Para obtener más información sobre cómo establecer la ruta de clase, vea [con el controlador JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).
+
 > [!NOTE]  
->  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] proporciona los archivos de biblioteca de clases mssql-jdbc que se usan según la configuración preferida de Java Runtime Environment (JRE). Para obtener más información acerca de qué archivo JAR para elegir, consulte [requisitos del sistema para el controlador JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
-  
-## <a name="example"></a>Ejemplo  
- En el siguiente ejemplo, el código de ejemplo realiza una conexión a la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Luego, mediante una instrucción SQL con el objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), ejecuta la instrucción SQL y coloca los datos devueltos en un objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
-  
- Después, el código de ejemplo llama al método displayRow personalizado para recorrer en iteración las filas de datos que están en el conjunto de resultados y usa el método [getString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) para mostrar algunos de los datos.
-  
+> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] proporciona los archivos de biblioteca de clases mssql-jdbc que se usan según la configuración preferida de Java Runtime Environment (JRE). Para obtener más información acerca de qué archivo JAR para elegir, consulte [requisitos del sistema para el controlador JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+
+## <a name="example"></a>Ejemplo
+
+En el siguiente ejemplo, el código de ejemplo realiza una conexión a la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Luego, mediante una instrucción SQL con el objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), ejecuta la instrucción SQL y coloca los datos devueltos en un objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).
+
+Después, el código de ejemplo llama al método displayRow personalizado para recorrer en iteración las filas de datos que están en el conjunto de resultados y usa el método [getString](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) para mostrar algunos de los datos.
+
 ```java
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -56,7 +61,8 @@ public class RetrieveRS {
         String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
 
         try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement();) {
-            String SQL = "SELECT * FROM Production.Product;";
+            createTable(stmt);
+        String SQL = "SELECT * FROM Production.Product;";
             ResultSet rs = stmt.executeQuery(SQL);
             displayRow("PRODUCTS", rs);
         }
@@ -73,10 +79,50 @@ public class RetrieveRS {
             System.out.println(rs.getString("ProductNumber") + " : " + rs.getString("Name"));
         }
     }
+
+    private static void createTable(Statement stmt) throws SQLException {
+        stmt.execute("if exists (select * from sys.objects where name = 'Product_JDBC_Sample')"
+                + "drop table Product_JDBC_Sample");
+
+        String sql = "CREATE TABLE [Product_JDBC_Sample](" + "[ProductID] [int] IDENTITY(1,1) NOT NULL,"
+                + "[Name] [varchar](30) NOT NULL," + "[ProductNumber] [nvarchar](25) NOT NULL,"
+                + "[MakeFlag] [bit] NOT NULL," + "[FinishedGoodsFlag] [bit] NOT NULL," + "[Color] [nvarchar](15) NULL,"
+                + "[SafetyStockLevel] [smallint] NOT NULL," + "[ReorderPoint] [smallint] NOT NULL,"
+                + "[StandardCost] [money] NOT NULL," + "[ListPrice] [money] NOT NULL," + "[Size] [nvarchar](5) NULL,"
+                + "[SizeUnitMeasureCode] [nchar](3) NULL," + "[WeightUnitMeasureCode] [nchar](3) NULL,"
+                + "[Weight] [decimal](8, 2) NULL," + "[DaysToManufacture] [int] NOT NULL,"
+                + "[ProductLine] [nchar](2) NULL," + "[Class] [nchar](2) NULL," + "[Style] [nchar](2) NULL,"
+                + "[ProductSubcategoryID] [int] NULL," + "[ProductModelID] [int] NULL,"
+                + "[SellStartDate] [datetime] NOT NULL," + "[SellEndDate] [datetime] NULL,"
+                + "[DiscontinuedDate] [datetime] NULL," + "[rowguid] [uniqueidentifier] ROWGUIDCOL  NOT NULL,"
+                + "[ModifiedDate] [datetime] NOT NULL,)";
+
+        stmt.execute(sql);
+
+        sql = "INSERT Product_JDBC_Sample VALUES ('Adjustable Time','AR-5381','0','0',NULL,'1000','750','0.00','0.00',NULL,NULL,NULL,NULL,'0',NULL,NULL,NULL,NULL,NULL,'2008-04-30 00:00:00.000',NULL,NULL,'694215B7-08F7-4C0D-ACB1-D734BA44C0C8','2014-02-08 10:01:36.827') ";
+        stmt.execute(sql);
+
+        sql = "INSERT Product_JDBC_Sample VALUES ('ML Bottom Bracket','BB-8107','0','0',NULL,'1000','750','0.00','0.00',NULL,NULL,NULL,NULL,'0',NULL,NULL,NULL,NULL,NULL,'2008-04-30 00:00:00.000',NULL,NULL,'694215B7-08F7-4C0D-ACB1-D734BA44C0C8','2014-02-08 10:01:36.827') ";
+        stmt.execute(sql);
+
+        sql = "INSERT Product_JDBC_Sample VALUES ('Mountain-500 Black, 44','BK-M18B-44','0','0',NULL,'1000','750','0.00','0.00',NULL,NULL,NULL,NULL,'0',NULL,NULL,NULL,NULL,NULL,'2008-04-30 00:00:00.000',NULL,NULL,'694215B7-08F7-4C0D-ACB1-D734BA44C0C8','2014-02-08 10:01:36.827') ";
+        stmt.execute(sql);
+    }
+
+    private static void displayRow(String title, ResultSet rs) {
+        try {
+            System.out.println(title);
+            while (rs.next()) {
+                System.out.println(rs.getString("ProductNumber") + " : " + rs.getString("Name"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
-```  
-  
-## <a name="see-also"></a>Ver también  
- [Trabajo con conjuntos de resultados](../../../connect/jdbc/working-with-result-sets.md)  
-  
-  
+
+```
+
+## <a name="see-also"></a>Ver también
+
+[Trabajo con conjuntos de resultados](../../../connect/jdbc/code-samples/working-with-result-sets.md)

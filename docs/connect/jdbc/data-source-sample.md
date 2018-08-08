@@ -1,7 +1,7 @@
 ---
 title: Ejemplo de origen de datos | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,35 +14,40 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f43f757ce9d6ea8e16f400c71e4e7f3321a6bd4b
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: a4a21ae103b226fb74ffa384b1d0696162d72931
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278786"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39453979"
 ---
 # <a name="data-source-sample"></a>Ejemplo de origen de datos
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  En esta aplicación de ejemplo de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] se muestra cómo conectar con una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mediante un objeto de origen de datos. Además, se muestra cómo recuperar datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mediante un procedimiento almacenado.  
-  
- El archivo de código para este ejemplo se llama ConnectDS.java y se encuentra en la siguiente ubicación:  
-  
- \<*directorio de instalación*> \sqljdbc_\<*versión*>\\<*lenguaje*> \samples\connections  
-  
-## <a name="requirements"></a>Requisitos  
- Para ejecutar esta aplicación de ejemplo, debe configurar la ruta de clase para que incluya el archivo mssql-jdbc.jar. Además, debe tener acceso a la base de datos de ejemplo de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Para obtener más información sobre cómo establecer la ruta de clase, vea [con el controlador JDBC](../../connect/jdbc/using-the-jdbc-driver.md).  
-  
+En esta aplicación de ejemplo de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] se muestra cómo conectar con una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mediante un objeto de origen de datos. Además, se muestra cómo recuperar datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mediante un procedimiento almacenado.
+
+El archivo de código para este ejemplo se llama ConnectDataSource.java y se encuentra en la siguiente ubicación:
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\samples\connections
+```
+
+## <a name="requirements"></a>Requisitos
+
+Para ejecutar esta aplicación de ejemplo, debe configurar la ruta de clase para que incluya el archivo mssql-jdbc.jar. Además, debe tener acceso a la base de datos de ejemplo de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Para obtener más información sobre cómo establecer la ruta de clase, vea [con el controlador JDBC](../../connect/jdbc/using-the-jdbc-driver.md).
+
 > [!NOTE]  
->  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] proporciona los archivos de biblioteca de clases mssql-jdbc que se usan según la configuración preferida de Java Runtime Environment (JRE). Para obtener más información acerca de qué archivo JAR para elegir, consulte [requisitos del sistema para el controlador JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
-  
-## <a name="example"></a>Ejemplo  
- En el siguiente ejemplo, el código establece varias propiedades de conexión con métodos establecedores del objeto [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) y, después, llama al método [getConnection](../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) del objeto SQLServerDataSource para devolver un objeto [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md).  
-  
- Después, el código muestra usa el método [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) del objeto SQLServerConnection para crear un objeto [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) y, luego, se llama al método [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) para ejecutar el procedimiento almacenado.  
-  
- Finalmente, el ejemplo usa el objeto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) devuelto por el método executeQuery para procesar una iteración mediante los resultados devueltos por el procedimiento almacenado.  
-  
+> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] proporciona los archivos de biblioteca de clases mssql-jdbc que se usan según la configuración preferida de Java Runtime Environment (JRE). Para obtener más información acerca de qué archivo JAR para elegir, consulte [requisitos del sistema para el controlador JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+
+## <a name="example"></a>Ejemplo
+
+En el siguiente ejemplo, el código establece varias propiedades de conexión con métodos establecedores del objeto [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) y, después, llama al método [getConnection](../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) del objeto SQLServerDataSource para devolver un objeto [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md).
+
+Después, el código muestra usa el método [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) del objeto SQLServerConnection para crear un objeto [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) y, luego, se llama al método [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) para ejecutar el procedimiento almacenado.
+
+Finalmente, el ejemplo usa el objeto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) devuelto por el método executeQuery para procesar una iteración mediante los resultados devueltos por el procedimiento almacenado.
+
 ```java
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -51,7 +56,7 @@ import java.sql.SQLException;
 
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
-public class ConnectDS {
+public class ConnectDataSource {
 
     public static void main(String[] args) {
 
@@ -63,7 +68,7 @@ public class ConnectDS {
         ds.setPortNumber(<port>);
         ds.setDatabaseName("AdventureWorks");
 
-        try (Connection con = ds.getConnection(); 
+        try (Connection con = ds.getConnection();
                 CallableStatement cstmt = con.prepareCall("{call dbo.uspGetEmployeeManagers(?)}");) {
             // Execute a stored procedure that returns some data.
             cstmt.setInt(1, 50);
@@ -82,9 +87,8 @@ public class ConnectDS {
         }
     }
 }
-```  
-  
-## <a name="see-also"></a>Ver también  
- [Conexión y recuperación de datos](../../connect/jdbc/connecting-and-retrieving-data.md)  
-  
-  
+```
+
+## <a name="see-also"></a>Ver también
+
+[Conexión y recuperación de datos](../../connect/jdbc/connecting-and-retrieving-data.md)

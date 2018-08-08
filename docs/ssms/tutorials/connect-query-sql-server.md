@@ -12,12 +12,12 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 5ccc024b8589efa95af2503a8ea5bdba0c47147b
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: e487537bd5051d396e5f24243a33ded4aa38daf7
+ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33988759"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367667"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Tutorial: Conectarse a una instancia de SQL Server y efectuar consultas con SQL Server Management Studio
 En este tutorial aprenderá a usar SQL Server Management Studio (SSMS) para conectarse a su instancia de SQL Server y a ejecutar algunos comandos básicos de Transact-SQL (T-SQL). En el artículo se muestra cómo hacer lo siguiente:
@@ -184,5 +184,11 @@ Siga estos pasos para cambiar el servidor al que está conectada la ventana de c
     > [!NOTE]
     > Esta acción cambia solo el servidor al que está conectada la ventana de consulta, y no el servidor al que está conectado el Explorador de objetos. 
 
+## <a name="next-steps"></a>Pasos siguientes
+En el siguiente artículo se muestra cómo programar varios objetos en SQL Server Management Studio. 
+
+Vaya al siguiente artículo para más información:
+> [!div class="nextstepaction"]
+> [Pasos siguientes](scripting-ssms.md)
 
 

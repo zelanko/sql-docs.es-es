@@ -16,13 +16,13 @@ caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ce8da96760e08b2388a8d3a65e0aa9abc67dd169
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9bc9c0f916a26a46d2bfc3aaed05ce8e4072f57a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279186"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549535"
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedimiento recomendado con el Almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ El Almacén de consultas de[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.
   
  Cuando identifique una consulta con un rendimiento deficiente, la acción dependerá de la naturaleza del problema.  
   
--   Si la consulta se ejecutó con varios planes y el último plan es mucho peor que el plan anterior, puede utilizar el mecanismo que fuerza el plan para exigir a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que utilice siempre el plan óptimo para ejecuciones futuras.  
+-   Si la consulta se ejecutó con varios planes y el último plan es mucho peor que el anterior, puede utilizar el mecanismo que fuerza el plan. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta forzar el plan en el optimizador. Si se produce un error al exigir el plan, se producirá un evento XEvent y el optimizador realizará su trabajo de forma normal. 
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 

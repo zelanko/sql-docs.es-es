@@ -1,7 +1,7 @@
 ---
-title: Características de las dependencias del controlador JDBC de Microsoft para SQL Server | Documentos de Microsoft
+title: Dependencias de características de Microsoft JDBC Driver para SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/28/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,54 +14,59 @@ caps.latest.revision: 57
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 052628258ae1d8c1f31430ea132ed594a976be98
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 70179d55c6aae5fc01c84f0c4af860f86d528a06
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832590"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454229"
 ---
-# <a name="feature-dependencies-of-microsoft-jdbc-driver-for-sql-server"></a>Dependencias de características del controlador JDBC de Microsoft para SQL Server
+# <a name="feature-dependencies-of-microsoft-jdbc-driver-for-sql-server"></a>Dependencias de características de Microsoft JDBC Driver para SQL Server
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
- Esta página contiene la lista de bibliotecas que depende el controlador JDBC de Microsoft para SQL Server. El proyecto tiene las siguientes dependencias.
- 
- ## <a name="compile-time"></a>Tiempo de compilación
- - `azure-keyvault` : Proveedor de almacén de claves azure para la característica de siempre cifrado Azure Key Vault (opcional)
- - `adal4j` : Biblioteca de Active Directory azure para Java para la característica de autenticación de Azure Active Directory y la característica de almacén de claves de Azure (opcional)
+Esta página se enumera las bibliotecas que depende de Microsoft JDBC Driver para SQL Server. El proyecto tiene las siguientes dependencias.
 
- ##  <a name="test-time"></a>Tiempo de la prueba
-Proyectos específicos que requieran cualquiera de las dos funciones anteriores deben declarar explícitamente las dependencias correspondientes en su archivo pom:
+## <a name="compile-time"></a>Tiempo de compilación
 
-***Por ejemplo:*** si utilizas *característica de autenticación de Azure Active Directory*, deberá volver a declarar *adal4j* dependencia en el archivo del proyecto pom. Ver el fragmento de código siguiente: 
+- `azure-keyvault`: Azure Key Vault Provider para la característica Always Encrypted Azure Key Vault (opcional)
+- `adal4j`: Biblioteca de Active Directory azure para Java para la característica de autenticación de Azure Active Directory y la característica de Azure Key Vault (opcional)
+
+## <a name="test-time"></a>Tiempo de la prueba
+
+Deben declarar explícitamente las dependencias correspondientes en su archivo pom proyectos específicos que requieran cualquiera de las dos características anteriores:
+
+**_Por ejemplo:_**  al usar _característica de autenticación de Azure Active Directory_, deberá volver a declarar _adal4j_ dependencia en el archivo del proyecto pom. Vea el siguiente fragmento:
+
 ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>6.4.0.jre8</version>
+    <version>7.0.0.jre10</version>
     <scope>compile</scope>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>adal4j</artifactId>
-    <version>1.4.0</version>
+    <version>1.6.0</version>
 </dependency>
 ```
 
-***Por ejemplo:*** si utilizas *característica almacén de claves de Azure* , a continuación, debe volver a declarar *azure keyvault* dependencia y *adal4j* dependencia en el archivo de pom del proyecto. Ver el fragmento de código siguiente: 
+**_Por ejemplo:_**  al usar _la característica Azure Key Vault_, deberá volver a declarar _azure-keyvault_ dependencia y _adal4j_ dependencia en el archivo del proyecto pom. Vea el siguiente fragmento:
+
 ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>6.4.0.jre8</version>
+    <version>7.0.0.jre10</version>
     <scope>compile</scope>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>adal4j</artifactId>
-    <version>1.4.0</version>
+    <version>1.6.0</version>
 </dependency>
 
 <dependency>
@@ -70,29 +75,35 @@ Proyectos específicos que requieran cualquiera de las dos funciones anteriores 
     <version>1.0.0</version>
 </dependency>
 ```
- 
- ## <a name="dependency-requirements-for-the-jdbc-driver"></a>Requisitos de dependencia para el controlador JDBC
 
- ### <a name="azure-keyvault-feature"></a>Característica Keyvault Azure:
-- Versión 6.0.0 del controlador JDBC 
-    - Versiones de dependencia: Keyvault de Azure (versión 0.9.7), Adal4j (versión 1.3.0) y sus dependencias ( [aplicación de ejemplo](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
-- Versión 6.2.2 del controlador JDBC y versiones posteriores (incluido el 6.4.0 más reciente)
-    - Versiones de dependencia: Keyvault de Azure (versión 1.0.0), Adal4j (versión 1.4.0) y sus dependencias ([aplicación de ejemplo](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
+## <a name="dependency-requirements-for-the-jdbc-driver"></a>Requisitos de dependencias para el controlador JDBC
+
+### <a name="working-with-azure-key-vault-provider"></a>Trabajar con Azure Key Vault Provider:
+
+- Versión del controlador JDBC 7.0.0 - las versiones de dependencias: Azure-Keyvault (versión 1.0.0), Adal4j (versión 1.6.0) y sus dependencias ([aplicación de ejemplo](../../connect/jdbc/azure-key-vault-sample-version-7-0-0.md))
+- Versión del controlador JDBC 6.4.0 - las versiones de dependencias: Azure-Keyvault (versión 1.0.0), Adal4j (versión 1.4.0) y sus dependencias ([aplicación de ejemplo](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
+- Versión del controlador JDBC 6.2.2 - las versiones de dependencias: Azure-Keyvault (versión 1.0.0), Adal4j (versión 1.4.0) y sus dependencias ([aplicación de ejemplo](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
+- Versión del controlador JDBC 6.0.0 - las versiones de dependencias: Azure-Keyvault (versión 0.9.7), Adal4j (versión 1.3.0) y sus dependencias ( [aplicación de ejemplo](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
 
 > [!NOTE]
->   A partir de v6.2.2, la dependencia de java de keyvault de azure se actualiza a la versión 1.0.0. Sin embargo, la nueva versión no es compatible con la versión anterior (versión 0.9.7) y, por tanto, interrumpe la implementación existente en el controlador. La nueva implementación en el controlador requiere cambios en la API, que a su vez interrumpir los programas de clientes que utilizan la característica de almacén de claves de Azure.
+> Con las versiones de controlador v6.2.2 y v6.4.0, la dependencia de azure-keyvault-java había actualizada a la versión 1.0.0. Sin embargo, la nueva versión no era compatible con la versión anterior (versión 0.9.7) y, por tanto, interrumpe la implementación existente en el controlador. La nueva implementación en el controlador requiere cambios en la API, que a su vez interrumpe programas cliente que usan el proveedor de almacén de claves de Azure.
 
-  
- ### <a name="azure-active-directory-authentication"></a>Autenticación de Azure Active Directory:
-- Versión 6.0.0 del controlador JDBC 
-    - Versiones de dependencia: Adal4j (versión 1.3.0) y sus dependencias
-        - En esta versión del controlador, se puede conectar con *ActiveDirectoryIntegrated* modo de autenticación solo en una ventana de sistema operativo y el uso de sqljdbc_auth.dll y biblioteca de autenticación de Active Directory para SQL Server () ADALSQL. (DLL). 
-- Versión 6.4.0 del controlador JDBC
-    - Versiones de dependencia: Adal4j (versión 1.4.0) y sus dependencias
-        - En esta versión del controlador, la aplicación no requieren el uso de ADALSQL. DLL. Dependiendo de los sistemas operativos. Para **sistemas operativos que no sean Windows**, el controlador requiere el vale de Kerberos para trabajar con la autenticación de ActiveDirectoryIntegrated. Vea [vale de Kerberos establecido en Windows, Linux y Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac) para obtener más detalles. Para **sistemas operativos Windows**, controlador de forma predeterminada comprueba si sqljdbc_auth.dll se carga y no requiere la dependencia de instalación o adal4j del vale de Kerberos. Sin embargo, si no se carga sqljdbc_auth.dll, controlador se comporta del mismo modo que los sistemas operativos que no son Windows y requeriría el programa de instalación, que se describe en el ejemplo siguiente: una aplicación de ejemplo con esta característica puede encontrarse [aquí](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md) .
+> Este problema se ha resuelto con v7.0.0 de versión más reciente de controlador como el constructor quitado mediante el mecanismo de devolución de llamada de autenticación se agrega al proveedor de Azure Key Vault para hacia atrás compatibilidad.
 
- ## <a name="see-also"></a>Vea también  
- [Repositorio de GitHub del controlador JDBC](https://github.com/microsoft/mssql-jdbc)  
- [Referencia de API del controlador JDBC](../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
-  
-  
+### <a name="working-with-azure-active-directory-authentication"></a>Uso de la autenticación de Azure Active Directory:
+
+- Versión del controlador JDBC 7.0.0 - las versiones de dependencias: Ada4j (versión 1.6.0) y sus dependencias
+- Versión del controlador JDBC 6.4.0 - las versiones de dependencias: Adal4j (versión 1.4.0) y sus dependencias
+- Versión del controlador JDBC 6.2.2 - las versiones de dependencias: Adal4j (versión 1.4.0) y sus dependencias
+- Versión del controlador JDBC 6.0.0 - las versiones de dependencias: Adal4j (versión 1.3.0), y sus dependencias: en esta versión del controlador, se puede conectar con _ActiveDirectoryIntegrated_ modo de autenticación solo en un sistema operativo de Windows y mediante sqljdbc_auth.dll y Active Directory Authentication Library para SQL Server (ADALSQL. (DLL).
+
+Desde la versión del controlador 6.4.0 y versiones posteriores, las aplicaciones no requieren necesariamente utilizando ADALSQL. Archivo DLL en sistemas operativos de Windows. Para **sistemas que no son Windows**, el controlador requiere el vale de Kerberos para trabajar con la autenticación de ActiveDirectoryIntegrated. Para obtener más información sobre cómo conectarse a Active Directory con Kerberos, vea [vale de Kerberos establecido en Windows, Linux y Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac).
+
+Para **los sistemas operativos de Windows**, controlador busca sqljdbc_auth.dll de forma predeterminada y no requiere instalación de vale de Kerberos o las dependencias de biblioteca de Azure. Sin embargo, si sqljdbc_auth.dll no está disponible, controlador busca el vale de Kerberos para autenticarse en Active Directory como en otros sistemas operativos.
+
+Puede encontrar una aplicación de ejemplo utilizando esta característica [aquí](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md).
+
+## <a name="see-also"></a>Ver también
+
+[Repositorio de GitHub del controlador JDBC](https://github.com/microsoft/mssql-jdbc)  
+ [Referencia de API del controlador JDBC](../../connect/jdbc/reference/jdbc-driver-api-reference.md)

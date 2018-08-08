@@ -26,12 +26,12 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9314c7ffa3a25aa9feb0e8632c68667a4662f86e
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: a29b8d92aecddb64020bd12dfd4be4559f8c4399
+ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356057"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39482686"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aumentar el rendimiento de la replicación transaccional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,6 +124,36 @@ Se puede especificar un valor para este parámetro del agente mediante el **@sub
 
 Para más información sobre cómo implementar secuencias de suscripción, consulte el artículo sobre cómo [navegar por la configuración subscriptionStream de replicación de SQL](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting).
   
+### <a name="blocking-monitor-thread"></a>Subproceso de supervisión de bloqueos
+
+El Agente de distribución mantiene un subproceso de supervisión de bloqueo que detecta bloqueos entre sesiones. Si el subproceso de supervisión de bloqueos detecta un bloqueo entre las sesiones, el Agente de distribución pasará a utilizar una sesión para volver a aplicar el lote actual de comandos que no se pudo aplicar anteriormente.
+
+El subproceso de supervisión de bloqueos puede detectar el bloqueo entre las sesiones del Agente de distribución. Sin embargo, el subproceso de supervisión de bloqueos no puede detectar bloqueos en las siguientes situaciones:
+- Una de las sesiones en las que se produce el bloqueo no es una sesión de Agente de distribución.
+- Un interbloqueo de sesión inmoviliza las actividades del Agente de distribución.
+
+En esta situación, el Agente de distribución coordinará todas las sesiones para realizar confirmaciones simultáneas en cuanto se ejecuten los comandos. Para que se produzca un interbloqueo en las sesiones, se deben cumplir las siguientes condiciones:
+
+- El bloqueo se produce entre las sesiones del Agente de distribución y una sesión que no es del Agente de distribución.
+- El Agente de distribución está esperando a que todas las sesiones acaben de ejecutar sus comandos antes de que el Agente de distribución coordine todas las sesiones para realizar confirmaciones simultáneas.
+
+Por ejemplo, puede configurar el parámetro *SubscriptionStreams* en 8. Las sesiones de la 10 a la 17 son sesiones de Agente de distribución. La sesión 18, no. La sesión 10 está bloqueada por la sesión 18, y la sesión 18, por la sesión 11. Además, la sesión 10 y 11 deben confirmarse de forma conjunta. Sin embargo, el Agente de distribución no puede confirmar la sesión 10 y la sesión 11 simultáneamente debido al bloqueo. Por lo tanto, el Agente de distribución no puede coordinar estas ocho sesiones para confirmarse simultáneamente hasta que las sesiones 10 y 11 terminen de ejecutar sus comandos.
+
+Este ejemplo resulta en un estado en el cual ninguna sesión ejecuta sus comandos. Cuando se alcance el tiempo especificado en la propiedad **QueryTimeout**, el Agente de distribución cancelará todas las sesiones.
+
+> [!Note]
+> De forma predeterminada, el valor de la propiedad **QueryTimeout** es de 5 minutos.
+
+Es posible que se haya percatado de las siguientes tendencias en los contadores de rendimiento del Agente de distribución en este período de espera de la consulta: 
+
+- El valor del contador de rendimiento **Dist: Comandos entregados/s** es siempre 0.
+- El valor del contador de rendimiento **Dist: Transacciones entregadas/s** es siempre 0.
+- El contador de rendimiento **Dist: Latencia de entrega** informa de un aumento del valor hasta que se resuelve el interbloqueo.
+
+El tema "Agente de distribución de replicación" de los Libros en pantalla de SQL Server contiene la siguiente descripción del parámetro *SubscriptionStreams*: "Si una de las conexiones no se puede ejecutar o confirmar, todas las conexiones anularán el lote actual y el agente utilizará un solo flujo para volver a intentar los lotes con errores".
+
+El Agente de distribución utiliza una sesión para reintentar el lote que no se pudo aplicar. Después de que el Agente de distribución haya aplicado correctamente el lote, retomará el uso de varias sesiones sin reiniciar.
+
 #### <a name="commitbatchsize"></a>CommitBatchSize
 - Aumente el valor del parámetro **-CommitBatchSize** del Agente de distribución.  
   

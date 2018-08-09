@@ -1,7 +1,7 @@
 ---
-title: Descargue el controlador JDBC de Microsoft para SQL Server | Documentos de Microsoft
+title: Descarga del controlador Microsoft JDBC para SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,27 +14,28 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a113c8690b10c2d7e525acb4c762d44bdcba1001
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8f354c557aaa44633f15640458138678ee18dfab
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828720"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39459479"
 ---
-# <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Descargue el controlador JDBC de Microsoft para SQL Server
+# <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Descarga de Microsoft JDBC Driver para SQL Server
 
-## <a name="using-the-jdbc-driver-with-maven-central"></a>Usar el controlador JDBC con el centro de Maven
-El controlador JDBC se pueden agregar a un proyecto de Maven, éste se agrega como una dependencia en el archivo POM.xml con el código siguiente:
+## <a name="using-the-jdbc-driver-with-maven-central"></a>Usar el controlador JDBC con Maven Central
+El controlador JDBC puede agregarse a un proyecto de Maven, éste se agrega como una dependencia en el archivo POM.xml con el código siguiente:
 
 ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>6.4.0.jre8</version>
+    <version>7.0.0.jre10</version>
 </dependency>
 ```  
 
-## <a name="available-downloads-of-jdbc-driver-for-sql-server"></a>Descargas disponibles del controlador JDBC para SQL Server
+## <a name="available-downloads-of-jdbc-driver-for-sql-server"></a>Descargas disponibles de JDBC Driver para SQL Server
+ * [Microsoft JDBC Driver 7.0 para SQL Server](http://go.microsoft.com/fwlink/?linkid=2005972) 
  * [Microsoft JDBC Driver 6.4 para SQL Server](http://go.microsoft.com/fwlink/?linkid=868290) 
  * [Microsoft JDBC Driver 6.2 para SQL Server](http://go.microsoft.com/fwlink/?linkid=852460) 
  * [Microsoft JDBC Driver 6.0 para SQL Server](http://go.microsoft.com/fwlink/?LinkId=245496) 
@@ -42,6 +43,6 @@ El controlador JDBC se pueden agregar a un proyecto de Maven, éste se agrega co
  * [Microsoft JDBC Driver 4.1 para SQL Server](http://go.microsoft.com/fwlink/?linkid=841533) 
   
 ## <a name="unsupported-drivers"></a>Controladores no compatibles  
-Versiones de controladores no compatibles no están disponibles para su descarga aquí. Estamos mejorando continuamente la compatibilidad con conectividad de Java. Por lo tanto se recomienda trabajar con la versión más reciente del controlador JDBC de Microsoft.  
+Las versiones de controladores no compatibles no están disponibles para descargarse aquí. Estamos trabajando continuamente para mejorar la compatibilidad con la conectividad de Java. Por lo tanto se recomienda encarecidamente trabajar con la versión más reciente del controlador JDBC de Microsoft.  
   
   

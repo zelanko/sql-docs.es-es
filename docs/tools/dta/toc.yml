@@ -85,21 +85,7 @@
   items:
     - name: 'Lección 1: Navegación básica en el Asistente para la optimización de motor de base de datos'
       href: lesson-1-basic-navigation-in-database-engine-tuning-advisor.md
-      items:
-        - name: 'Lección 1-1: Iniciar el Asistente para la optimización de motor de base de datos'
-          href: lesson-1-1-launching-database-engine-tuning-advisor.md
-        - name: 'Lección 1-2: Establecer las opciones de herramienta y el diseño'
-          href: lesson-1-2-setting-tool-options-and-layout.md
-- name: 'Lección 2: Usar el Asistente para la optimización de motor de base de datos'
-  href: lesson-2-using-database-engine-tuning-advisor.md
-  items:
-    - name: 'Lección 1-1: Optimizar una carga de trabajo'
-      href: lesson-1-1-tuning-a-workload.md
-    - name: 'Lección 1-2: Ver recomendaciones de optimización'
-      href: lesson-1-2-viewing-tuning-recommendations.md
-    - name: 'Lección 1-3: Ver informes de optimización'
-      href: lesson-1-3-viewing-tuning-reports.md
+    - name: 'Lección 2: Usar el Asistente para la optimización de motor de base de datos'
+      href: lesson-2-using-database-engine-tuning-advisor.md
     - name: 'Lección 3: Usar la utilidad del símbolo del sistema dta'
       href: lesson-3-using-the-dta-command-prompt-utility.md
-    - name: 'Lección 3-1: Iniciar la utilidad del símbolo del sistema dta y optimizar una carga de trabajo'
-      href: lesson-3-1-starting-the-dta-command-prompt-utility-and-tuning-a-workload.md

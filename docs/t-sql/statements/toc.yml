@@ -142,8 +142,6 @@
       href: backup-transact-sql.md
     - name: BACKUP CERTIFICATE
       href: backup-certificate-transact-sql.md
-    - name: BACKUP DATABASE (Almacenamiento de datos paralelos)
-      href: backup-database-parallel-data-warehouse.md
     - name: BACKUP MASTER KEY
       href: backup-master-key-transact-sql.md
     - name: BACKUP SERVICE MASTER KEY
@@ -152,8 +150,6 @@
       href: restore-statements-transact-sql.md
     - name: Instrucciones RESTORE
       href: restore-statements-for-restoring-recovering-and-managing-backups-transact-sql.md
-    - name: RESTORE DATABASE (Almacenamiento de datos paralelos)
-      href: restore-database-parallel-data-warehouse.md
     - name: Argumentos RESTORE
       href: restore-statements-arguments-transact-sql.md
     - name: RESTORE FILELISTONLY

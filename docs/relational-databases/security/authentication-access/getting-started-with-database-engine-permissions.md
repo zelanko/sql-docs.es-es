@@ -17,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: c8036ef72c9397a9f89c5536bdd598c6f560d78f
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4c064b421de59e435522de1f08fa6ed01d3ba901
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39543425"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008957"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Introducción a los permisos de los motores de bases de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -232,7 +232,7 @@ JOIN sys.database_principals AS dRole
 ## <a name="next-steps"></a>Next Steps  
  Para obtener más temas para comenzar, consulte:  
   
--   [Tutorial: Getting Started with the Database Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) (Tutorial: Introducción al motor de base de datos) [Creating a Database &#40;Tutorial&#41;](../../../t-sql/lesson-1-1-creating-a-database.md) (Tutorial: Crear una base de datos)  
+-   [Tutorial: Getting Started with the Database Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) (Tutorial: Introducción al motor de base de datos) [Creating a Database &#40;Tutorial&#41;](../../../t-sql/lesson-1-creating-database-objects.md#) (Tutorial: Crear una base de datos)  
   
 -   [Tutorial: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   

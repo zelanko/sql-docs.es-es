@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8195661f681d3f0e694e040e2319efdfcd3803bc
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4860d2b38d6a2da7c6204e4fa6224b5ef08619c7
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39553105"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008967"
 ---
 # <a name="principals-database-engine"></a>Entidades de seguridad (motor de base de datos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,18 +47,18 @@ ms.locfileid: "39553105"
   
 ## <a name="sql-server-level-principals"></a>Entidades de seguridad de nivel de SQL Server  
   
--  Inicio de sesión con autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]   
--  Inicio de sesión con autenticación de Windows para un usuario de Windows  
--  Inicio de sesión con autenticación de Windows para un grupo de Windows   
--  Inicio de sesión con autenticación de Azure Active Directory para un usuario de AD
--  Inicio de sesión con autenticación de Azure Active Directory para un grupo de AD
--  Rol del servidor  
+- Inicio de sesión con autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]   
+- Inicio de sesión con autenticación de Windows para un usuario de Windows  
+- Inicio de sesión con autenticación de Windows para un grupo de Windows   
+- Inicio de sesión con autenticación de Azure Active Directory para un usuario de AD
+- Inicio de sesión con autenticación de Azure Active Directory para un grupo de AD
+- Rol del servidor  
   
- ## <a name="database-level-principals"></a>Entidades de seguridad de nivel de bases de datos  
+## <a name="database-level-principals"></a>Entidades de seguridad de nivel de bases de datos
   
--   Usuario de base de datos (hay 11 tipos de usuarios. Para obtener más información, vea [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md)). 
--   Rol de base de datos  
--   Rol de aplicación  
+- Usuario de base de datos (hay 11 tipos de usuarios. Para obtener más información, vea [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md)).
+- Rol de base de datos
+- Rol de aplicación
   
 ## <a name="sa-login"></a>Inicio de sesión sa  
  El inicio de sesión `sa` de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es una entidad de seguridad a nivel de servidor. Se crea de forma predeterminada cuando se instala una instancia. A partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la base de datos predeterminada de sa es master. Es un cambio de comportamiento con respecto a versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El inicio de sesión `sa` es miembro del rol fijo de base de datos `sysadmin`. Este inicio de sesión `sa` tiene todos los permisos en el servidor y no puede limitarse. Además, `sa` no se puede quitar, pero puede deshabilitarse para que nadie lo emplee.

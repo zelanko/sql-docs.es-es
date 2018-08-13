@@ -14,12 +14,12 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98c351eef36810032e55941683996c007a8c39d3
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 04511587586fc2faef1471a9e6a8d1629fe62c78
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452082"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662417"
 ---
 # <a name="basic-data-types-sample"></a>Ejemplo de tipos de datos básicos
 
@@ -29,7 +29,7 @@ En esta aplicación de ejemplo de [!INCLUDE[jdbcNoVersion](../../../includes/jdb
   
 El archivo de código para este ejemplo se denomina BasicDataTypes.java y se encuentra en la siguiente ubicación:  
 
-```
+```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\datatypes  
 ```
 

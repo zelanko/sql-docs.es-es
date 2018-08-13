@@ -14,12 +14,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 0e99381224c03bf185044d57cc4b415fcfaedd3b
-ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
+ms.openlocfilehash: 1aa3823813392c660c8e31fc517ec4b7ae2e1e29
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39024231"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661877"
 ---
 # <a name="release-notes"></a>Notas de la versión
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "39024231"
 
 **Características agregadas**:
 
-Clasificación de datos para Azure SQL Database y SQL Server
+Clasificación de datos para Azure SQL Database y SQL Server, para obtener más información consulte [clasificación de datos](../data-classification.md)
 
 [Correcciones de errores](../bug-fixes.md)
 

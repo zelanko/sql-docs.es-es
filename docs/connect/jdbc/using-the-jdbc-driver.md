@@ -14,12 +14,12 @@ caps.latest.revision: 54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1af25d246de93812aca83c490a7a11c7dc66fbdc
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
-ms.translationtype: HT
+ms.openlocfilehash: f62bc7457eaa02eedf9d15a377d70515229384ef
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456399"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661797"
 ---
 # <a name="using-the-jdbc-driver"></a>Usar el controlador JDBC
 
@@ -35,7 +35,7 @@ Proporciona la 7.0 de Microsoft JDBC Driver para SQL Server **mssql-jdbc-7.0.0.j
 
 Microsoft JDBC Driver 6.4 para SQL Server proporciona **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar**, y **mssql-jdbc-6.4.0.jre9.jar** biblioteca de clases archivos.
 
-Microsoft JDBC Driver 6.2 para SQL Server proporciona **mssql-jdbc-6.2.1.jre7.jar**, y **mssql-jdbc-6.2.1.jre8.jar** los archivos de biblioteca de clases.
+Microsoft JDBC Driver 6.2 para SQL Server proporciona **mssql-jdbc-6.2.2.jre7.jar**, y **mssql-jdbc-6.2.2.jre8.jar** los archivos de biblioteca de clases.
   
 Microsoft JDBC Drivers 6.0 y 4.2 para SQL Server proporcionan **sqljdbc41.jar**, y **sqljdbc42.jar** los archivos de biblioteca de clases.
   
@@ -49,7 +49,7 @@ Los archivos JAR de controlador de Microsoft JDBC no forman parte del SDK de Jav
 
 Si usa JDBC Driver 4.1 o 4.2, Establece la ruta de clase para incluir **sqljdbc41.jar** o **sqljdbc42.jar** archivo desde la descarga del controlador correspondiente.
 
-Si usar JDBC Driver 6.2, Establece la ruta de clase para incluir el **mssql-jdbc-6.2.1.jre7.jar** o **mssql-jdbc-6.2.1.jre8.jar**.
+Si usar JDBC Driver 6.2, Establece la ruta de clase para incluir el **mssql-jdbc-6.2.2.jre7.jar** o **mssql-jdbc-6.2.2.jre8.jar**.
 
 Si usar JDBC Driver 6.4, Establece la ruta de clase para incluir el **mssql-jdbc-6.4.0.jre7.jar**, ** mssql-jdbc-6.4.0.jre8.jar o **mssql-jdbc-6.4.0.jre9.jar**.
 
@@ -62,9 +62,9 @@ Si la ruta de clase falta una entrada para el archivo Jar correcto, una aplicaci
 El **mssql-jdbc-7.0.0.jre8.jar** o **mssql-jdbc-7.0.0.jre10.jar** archivos se instalan en las siguientes ubicaciones:
 
 ```bash
-\<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-7.0.0.jre8.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.0.0.jre8.jar
 
-\<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-7.0.0.jre10.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.0.0.jre10.jar
 ```
 
 El siguiente fragmento de código es un ejemplo de la instrucción CLASSPATH usada para una aplicación Windows:  
@@ -82,11 +82,11 @@ Asegúrese de que la instrucción CLASSPATH contiene solamente un [!INCLUDE[jdbc
 El **mssql-jdbc-6.4.0.jre7.jar**, ** mssql-jdbc-6.4.0.jre8.jar o **mssql-jdbc-6.4.0.jre9.jar** archivos se instalan en la siguiente ubicación:  
 
 ```bash  
-\<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre7.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.4.0.jre7.jar
   
-\<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre8.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.4.0.jre8.jar
 
-\<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre9.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.4.0.jre9.jar
 ```
 
 El siguiente fragmento de código es un ejemplo de la instrucción CLASSPATH usada para una aplicación Windows:  
@@ -101,36 +101,36 @@ Asegúrese de que la instrucción CLASSPATH contiene solamente un [!INCLUDE[jdbc
 
 ### <a name="for-microsoft-jdbc-driver-62"></a>De Microsoft JDBC Driver 6.2
 
-El **mssql-jdbc-6.2.1.jre7.jar** o **mssql-jdbc-6.2.1.jre8.jar** archivos se instalan en las siguientes ubicaciones:
+El **mssql-jdbc-6.2.2.jre7.jar** o **mssql-jdbc-6.2.2.jre8.jar** archivos se instalan en las siguientes ubicaciones:
 
 ```bash
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\mssql-jdbc-6.2.2.jre7.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.2.2.jre7.jar
   
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\mssql-jdbc-6.2.2.jre8.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.2.2.jre8.jar
 ```
 
 El siguiente fragmento de código es un ejemplo de la instrucción CLASSPATH usada para una aplicación Windows:  
   
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.2 for SQL Server\sqljdbc_6.2\enu\mssql-jdbc-6.2.1.jre8.jar`  
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.2 for SQL Server\sqljdbc_6.2\enu\mssql-jdbc-6.2.2.jre8.jar`  
   
 El siguiente fragmento de código es un ejemplo de la instrucción CLASSPATH usada para una aplicación Unix/Linux:  
   
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.2/enu/mssql-jdbc-6.2.1.jre8.jar`  
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.2/enu/mssql-jdbc-6.2.2.jre8.jar`  
   
-Asegúrese de que la instrucción CLASSPATH contiene solamente un [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], por ejemplo, mssql-jdbc-6.2.1.jre7.jar o mssql-jdbc-6.2.1.jre8.jar.  
+Asegúrese de que la instrucción CLASSPATH contiene solamente un [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], por ejemplo, mssql-jdbc-6.2.2.jre7.jar o mssql-jdbc-6.2.2.jre8.jar.  
 
 ### <a name="for-microsoft-jdbc-driver-41-42-and-60"></a>De Microsoft JDBC Driver 4.1, 4.2 y 6.0
 
 El archivo sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar o sqljdbc42.jar se instalan en la siguiente ubicación:  
 
 ```bash
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\sqljdbc.jar  
+\<installation directory>\sqljdbc_<version>\<language>\sqljdbc.jar  
   
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\sqljdbc4.jar  
+\<installation directory>\sqljdbc_<version>\<language>\sqljdbc4.jar  
   
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\sqljdbc41.jar  
+\<installation directory>\sqljdbc_<version>\<language>\sqljdbc41.jar  
   
-\<*installation directory*>\sqljdbc_\<*version*>\<*language*>\sqljdbc42.jar  
+\<installation directory>\sqljdbc_<version>\<language>\sqljdbc42.jar  
 ```
 
 El siguiente fragmento de código es un ejemplo de la instrucción CLASSPATH usada para una aplicación Windows:  

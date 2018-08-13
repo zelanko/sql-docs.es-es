@@ -1,5 +1,5 @@
 ---
-title: Crear, modificar y eliminar las claves externas | Microsoft Docs
+title: Crear, modificar y eliminar las claves externas | Documentos de Microsoft
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fb86a1463eef4a4e438a2bda7b329c9d78a46c6f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 25f8aac1cf7257742e48d8cd6f847f1cf65cd8d3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37998017"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563859"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>Crear, modificar y eliminar las claves externas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

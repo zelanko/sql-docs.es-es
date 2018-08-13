@@ -1,5 +1,5 @@
 ---
-title: Los archivos y números de versión | Microsoft Docs
+title: Los archivos y números de versión | Documentos de Microsoft
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 10e11076ce023a3d969b4ba95a30c15de43eafa6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 871ce9d2aaded63b20965d4cd9ec2e1d53323d1f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38046233"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540015"
 ---
 # <a name="files-and-version-numbers"></a>Archivos y números de versión
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

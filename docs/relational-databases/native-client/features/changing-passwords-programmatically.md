@@ -22,13 +22,13 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 697abcfb8c989aac510d9b4e8730a6ebe83677d4
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 77770df52a8bd21c6686b3db086aca1d3553d143
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415454"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536995"
 ---
 # <a name="changing-passwords-programmatically"></a>Cambiar las contraseñas mediante programación
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "37415454"
   En versiones anteriores de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], cuando expiraba una contraseña de usuario, solo el administrador podía restablecerla. A partir [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client permite administrar la caducidad de contraseña mediante programación a través de ambos el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client y el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client y a través de los cambios realizados en el **El inicio de sesión de SQL Server** cuadros de diálogo.  
   
 > [!NOTE]  
->  Cuando sea posible, solicite a los usuarios que escriban las credenciales en tiempo de ejecución y eviten almacenarlas en un formato guardado. Si tiene que conservar sus credenciales, debería cifrarlas con la [API de criptografía de Win32](http://go.microsoft.com/fwlink/?LinkId=64532). Para obtener más información sobre el uso de contraseñas, consulte [contraseñas seguras](../../../relational-databases/security/strong-passwords.md).  
+>  Cuando sea posible, solicite a los usuarios que escriban las credenciales en tiempo de ejecución y eviten almacenarlas en un formato guardado. Si tiene que conservar las credenciales, debe cifrarlas con la [API de cifrado de Win32](http://go.microsoft.com/fwlink/?LinkId=64532). Para obtener más información sobre el uso de contraseñas seguras, vea [Contraseñas seguras](../../../relational-databases/security/strong-passwords.md).  
   
 ## <a name="sql-server-login-error-codes"></a>Códigos de error de inicio de sesión de SQL Server  
  Cuando no se puede realizar una conexión debido a problemas de autenticación, uno de los códigos de error de SQL Server siguientes estará disponible para la aplicación para ayudar en el diagnóstico y recuperación.  
@@ -46,7 +46,7 @@ ms.locfileid: "37415454"
 |---------------------------|-------------------|  
 |15113|Error de inicio de sesión del usuario '%. * ls'. Motivo: error de validación de contraseña. Se ha bloqueado la cuenta.|  
 |18463|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no se puede utilizar en este momento.|  
-|18464|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado corta.|  
+|18464|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado larga.|  
 |18465|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado larga.|  
 |18466|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de directiva porque no es bastante compleja.|  
 |18467|Error de inicio de sesión del usuario '%.*ls'. Motivo: error de cambio de contraseña. La contraseña no cumple los requisitos de la DLL de filtro de contraseña.|  
@@ -60,12 +60,12 @@ ms.locfileid: "37415454"
 ### <a name="ole-db-user-interface-password-expiration"></a>Expiración de contraseñas de la interfaz de usuario de OLE DB  
  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite la expiración de contraseña a través de los cambios realizados en el **el inicio de sesión de SQL Server** cuadros de diálogo. Si el valor de DBPROP_INIT_PROMPT está establecido en DBPROMPT_NOPROMPT, se producirá un error en el intento de conexión inicial si la contraseña ha expirado.  
   
- Si DBPROP_INIT_PROMPT se ha establecido en cualquier otro valor, el usuario ve el **el inicio de sesión de SQL Server** cuadro de diálogo, independientemente de si la contraseña ha expirado. El usuario puede hacer clic en el **opciones** botón y comprobar **cambiar contraseña** para cambiar la contraseña.  
+ Si DBPROP_INIT_PROMPT se ha establecido en cualquier otro valor, el usuario ve el cuadro de diálogo **Inicio de sesión de SQL Server**, independientemente de que la contraseña haya expirado o no. El usuario puede hacer clic en el botón **Opciones** y seleccionar **Cambiar contraseña** para cambiar la contraseña.  
   
- Si el usuario hace clic en Aceptar y la contraseña ha expirado, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pide al usuario que escriba y confirme una contraseña nueva mediante el **cambiar contraseña de SQL Server** cuadro de diálogo.  
+ Si el usuario hace clic en Aceptar y la contraseña ha expirado, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pedirá al usuario que escriba y confirme una nueva contraseña mediante el cuadro de diálogo **Cambiar contraseña de SQL Server**.  
   
 #### <a name="ole-db-prompt-behavior-and-locked-accounts"></a>Comportamiento de las solicitudes de OLE DB y cuentas bloqueadas  
- Los intentos de conexión pueden producir un error debido a que la cuenta está bloqueada. Si esto ocurre después de la presentación del **el inicio de sesión de SQL Server** cuadro de diálogo, el mensaje de error de servidor se muestra al usuario y se anula el intento de conexión. También puede producirse después de la presentación de la **cambiar contraseña de SQL Server** cuadro de diálogo si el usuario escribe un valor incorrecto para la contraseña antigua. En este caso se muestra el mismo mensaje de error y se anula el intento de conexión.  
+ Los intentos de conexión pueden producir un error debido a que la cuenta está bloqueada. Si se produce esto después de la presentación del cuadro de diálogo **Inicio de sesión de SQL Server**, se muestra un mensaje de error del servidor al usuario y se anula el intento de conexión. Se puede producir también después de la presentación del cuadro de diálogo **Cambiar contraseña de SQL Server** si el usuario especifica un valor incorrecto de la contraseña anterior. En este caso se muestra el mismo mensaje de error y se anula el intento de conexión.  
   
 #### <a name="ole-db-connection-pooling-password-expiration-and-locked-accounts"></a>Agrupación de conexiones de OLE DB, expiración de contraseña y cuentas bloqueadas  
  Se puede bloquear una cuenta o puede expirar la contraseña cuando la conexión está activa todavía en un grupo de conexiones. El servidor comprueba las contraseñas expiradas y las cuentas bloqueadas en dos ocasiones. La primera vez es cuando se crea una conexión. La segunda ocasión es al restablecer una conexión, cuando se toma la conexión del grupo.  
@@ -87,7 +87,7 @@ ms.locfileid: "37415454"
   
  Recuerde que siempre que se establece la propiedad "Contraseña anterior", el proveedor asume que intenta cambiar la contraseña, a menos que se especifique también la Autenticación de Windows, en cuyo caso tiene siempre prioridad.  
   
- Si se utiliza la autenticación de Windows, especificando la contraseña anterior da como resultado DB_E_ERRORSOCCURRED o DB_S_ERRORSOCCURRED dependiendo de si se ha especificado la contraseña antigua como REQUIRED u OPTIONAL respectivamente y el valor de estado de DBPROPSTATUS_ Se devuelve CONFLICTINGBADVALUE en *dwStatus*. Esto se detecta cuando **IDBInitialize:: Initialize** se llama.  
+ Si se usa la autenticación de Windows, especificar la contraseña anterior da como resultado DB_E_ERRORSOCCURRED o DB_S_ERRORSOCCURRED en función de que la contraseña anterior se haya especificado como REQUIRED u OPTIONAL respectivamente, y se devuelve el valor de estado de DBPROPSTATUS_CONFLICTINGBADVALUE en *dwStatus*. Esto se detecta cuando se llama a **IDBInitialize::Initialize**.  
   
  Si el intento de cambiar la contraseña produce un error inesperadamente, el servidor devuelve el código de error 18468. Se devuelve un error OLEDB estándar del intento de conexión.  
   
@@ -101,12 +101,12 @@ ms.locfileid: "37415454"
   
  Si [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) se llama y el valor de **DriverCompletion** está establecido en SQL_DRIVER_NOPROMPT, el intento de conexión inicial, se produce un error si la contraseña ha expirado. Se devuelven el valor 28000 de SQLSTATE y el valor de código de error nativo 18487 llamadas subsiguientes a **SQLError** o **SQLGetDiagRec**.  
   
- Si **DriverCompletion** se ha establecido en cualquier otro valor, el usuario ve el **el inicio de sesión de SQL Server** cuadro de diálogo, independientemente de si la contraseña ha expirado. El usuario puede hacer clic en el **opciones** botón y comprobar **cambiar contraseña** para cambiar la contraseña.  
+ Si **DriverCompletion** se ha establecido en cualquier otro valor, el usuario ve el **el inicio de sesión de SQL Server** cuadro de diálogo, independientemente de si la contraseña ha expirado. El usuario puede hacer clic en el botón **Opciones** y seleccionar **Cambiar contraseña** para cambiar la contraseña.  
   
  Si el usuario hace clic en Aceptar y la contraseña ha expirado, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] indicaciones que escribas y confirmes una contraseña nueva mediante el **cambiar contraseña de SQL Server** cuadro de diálogo.  
   
 #### <a name="odbc-prompt-behavior-and-locked-accounts"></a>Comportamiento de las solicitudes de ODBC y cuentas bloqueadas  
- Los intentos de conexión pueden producir un error debido a que la cuenta está bloqueada. Si esto ocurre después de la presentación del **el inicio de sesión de SQL Server** cuadro de diálogo, el mensaje de error de servidor se muestra al usuario y se anula el intento de conexión. También puede producirse después de la presentación de la **cambiar contraseña de SQL Server** cuadro de diálogo si el usuario escribe un valor incorrecto para la contraseña antigua. En este caso se muestra el mismo mensaje de error y se anula el intento de conexión.  
+ Los intentos de conexión pueden producir un error debido a que la cuenta está bloqueada. Si se produce esto después de la presentación del cuadro de diálogo **Inicio de sesión de SQL Server**, se muestra un mensaje de error del servidor al usuario y se anula el intento de conexión. Se puede producir también después de la presentación del cuadro de diálogo **Cambiar contraseña de SQL Server** si el usuario especifica un valor incorrecto de la contraseña anterior. En este caso se muestra el mismo mensaje de error y se anula el intento de conexión.  
   
 #### <a name="odbc-connection-pooling-password-expiry-and-locked-accounts"></a>Expiración de la agrupación de conexiones de ODBC y cuentas bloqueadas  
  Se puede bloquear una cuenta o puede expirar la contraseña cuando la conexión está activa todavía en un grupo de conexiones. El servidor comprueba las contraseñas expiradas y las cuentas bloqueadas en dos ocasiones. La primera vez es cuando se crea una conexión. La segunda ocasión es al restablecer una conexión, cuando se toma la conexión del grupo.  

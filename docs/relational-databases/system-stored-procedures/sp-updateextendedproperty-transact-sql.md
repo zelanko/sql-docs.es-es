@@ -1,5 +1,5 @@
 ---
-title: sp_updateextendedproperty (Transact-SQL) | Documentos de Microsoft
+title: sp_updateextendedproperty (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/12/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fef4a744e237d81edc15ec7dbcef79a67e5edc70
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9e8d86bbcb6a35babce5ce2da7a0c63a8c310ddf
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261191"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533104"
 ---
 # <a name="spupdateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,22 +64,22 @@ sp_updateextendedproperty
  Es el valor asociado a la propiedad. *valor* es **sql_variant**, su valor predeterminado es null. El tamaño de *valor* no puede ser superior a 7.500 bytes.  
   
  [ @level0type=] {'*level0_object_type*'}  
- Es el usuario o el tipo definido por el usuario. *level0_object_type* es **varchar (128)**, su valor predeterminado es null. Las entradas válidas son el ENSAMBLADO, contrato, notificación de eventos, grupo de archivos, tipo de mensaje, función de partición, esquema de partición, Guía de PLAN, REMOTE SERVICE BINDING, ROUTE, esquema, servicio, usuario, DESENCADENADOR, tipo y NULL.  
+ Es el usuario o el tipo definido por el usuario. *level0_object_type* es **varchar (128)**, su valor predeterminado es null. Las entradas válidas son el ENSAMBLADO, contrato, notificación de eventos, grupo de archivos, tipo de mensaje, la función de partición, esquema de partición, Guía de PLAN, REMOTE SERVICE BINDING, ROUTE, esquema, servicio, usuario, DESENCADENADOR, tipo y NULL.  
   
 > [!IMPORTANT]  
 >  USER y TYPE como tipos de nivel 0 se quitarán en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar estas características en los nuevos trabajos de programación y planee modificar las aplicaciones que actualmente las utilizan. En lugar de USER, use SCHEMA como tipo de nivel 0. Para TYPE, use SCHEMA como tipo de nivel 0 y TYPE como tipo de nivel 1.  
   
  [ @level0name=] {'*level0_object_name*'}  
- Nombre del tipo de objeto de nivel 1 especificado. *level0_object_name* es **sysname** con un valor predeterminado es NULL.  
+ Nombre del tipo de objeto de nivel 1 especificado. *level0_object_name* es **sysname** con el valor predeterminado es NULL.  
   
  [ @level1type=] {'*level1_object_type*'}  
- Tipo de objeto de nivel 1. *level1_object_type* es **varchar (128)** con un valor predeterminado es NULL. Las entradas válidas son AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION y NULL.  
+ Tipo de objeto de nivel 1. *level1_object_type* es **varchar (128)** con el valor predeterminado es NULL. Las entradas válidas son AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION y NULL.  
   
  [ @level1name=] {'*level1_object_name*'}  
- Nombre del tipo de objeto de nivel 1 especificado. *level1_object_name* es **sysname** con un valor predeterminado es NULL.  
+ Nombre del tipo de objeto de nivel 1 especificado. *level1_object_name* es **sysname** con el valor predeterminado es NULL.  
   
  [ @level2type=] {'*level2_object_type*'}  
- Es el tipo de objeto de nivel 2. *level2_object_type* es **varchar (128)** con un valor predeterminado es NULL. Las entradas válidas son COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER y NULL.  
+ Es el tipo de objeto de nivel 2. *level2_object_type* es **varchar (128)** con el valor predeterminado es NULL. Las entradas válidas son COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER y NULL.  
   
  [ @level2name=] {'*level2_object_name*'}  
  Es el nombre del tipo de objeto de nivel 2 especificado. *level2_object_name* es **sysname**, su valor predeterminado es null.  
@@ -87,12 +87,12 @@ sp_updateextendedproperty
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Los objetos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se clasifican en tres niveles (0, 1, 2) con el fin de especificar las propiedades extendidas. El nivel 0 es el nivel más elevado y se define como los objetos incluidos en el ámbito de la base de datos. Los objetos de nivel 1 se incluyen en un ámbito de esquema o de usuario, y los objetos de nivel 2 están incluidos en los objetos de nivel 1. Se pueden definir propiedades extendidas para los objetos de cualquiera de estos niveles. Las referencias a un objeto de un nivel deben estar calificadas con los nombres de los objetos del nivel superior que son sus propietarios o que los contienen.  
   
  Dado un válido *property_name* y *valor*, si todos los tipos de objetos y nombres son null, la propiedad actualizada pertenece a la base de datos actual.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Los miembros de los roles fijos de base de datos db_owner y db_ddladmin pueden actualizar las propiedades extendidas de cualquier objeto con la siguiente excepción: db_ddladmin no puede agregar propiedades a la base de datos, a los usuarios ni a los roles.  
   
  Los usuarios pueden actualizar las propiedades extendidas de los objetos de los que sean propietarios, o para los que tengan permisos ALTER o CONTROL.  
@@ -144,7 +144,7 @@ GO
  [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
- [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [los procedimientos sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [Sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

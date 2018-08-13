@@ -24,13 +24,13 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c457cd76f0c1090147d2df41a47c4c6f3c2ef5ad
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 65f48f853fca55961a69e4e6905e5fa148cf739f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463821"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560195"
 ---
 # <a name="sysdmdbmissingindexcolumns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,19 +54,19 @@ sys.dm_db_missing_index_columns(index_handle)
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|Identificador de la columna.|  
 |**column_name**|**sysname**|Nombre de la columna de la tabla.|  
-|**column_usage**|**varchar (20)**|Forma en que la consulta utiliza la columna. Los valores posibles y sus descripciones son:<br /><br /> IGUALDAD: Columna contribuye a crear un predicado que expresa igualdad, con el formato: <br />                        *table.column* = *constant_value*<br /><br /> DESIGUALDAD: Columna contribuye a crear un predicado que expresa desigualdad, por ejemplo, un predicado con el formato: *table.column* > *constant_value*. Cualquier operador de comparación distinto de "=" expresa desigualdad.<br /><br /> INCLUDE: Columna no se usa para evaluar un predicado, pero se utiliza por otro motivo, por ejemplo, para cubrir una consulta.|  
+|**column_usage**|**varchar (20)**|Forma en que la consulta utiliza la columna. Son los valores posibles y sus descripciones:<br /><br /> IGUALDAD: Columna contribuye a crear un predicado que expresa igualdad, del formulario: <br />                        *table.column* = *constant_value*<br /><br /> DESIGUALDAD: Columna contribuye a crear un predicado que expresa desigualdad, por ejemplo, un predicado del formulario: *table.column* > *constant_value*. Cualquier operador de comparación distinto de "=" expresa desigualdad.<br /><br /> INCLUDE: No se usa para evaluar un predicado de columna, pero se utiliza cualquier otro motivo, por ejemplo, para cubrir una consulta.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Información devuelta por **sys.dm_db_missing_index_columns** se actualiza cuando una consulta está optimizada por el optimizador de consultas y no se conserva. La información sobre índices que faltan solo se conserva hasta que se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los administradores de bases de datos deben realizar copias de seguridad de forma periódica de la información de índices que faltan si desean conservarla después de reciclar el servidor.  
   
 ## <a name="transaction-consistency"></a>Coherencia de las transacciones  
  Si una transacción crea o quita una tabla, las filas que contienen información de índices que faltan sobre los objetos quitados se eliminan de este objeto de administración dinámica para mantener la coherencia de la transacción.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Los usuarios deben disponer del permiso VIEW SERVER STATE o de cualquier permiso que implique el permiso VIEW SERVER STATE para consultar esta función de administración dinámica.  
   
 ## <a name="examples"></a>Ejemplos  

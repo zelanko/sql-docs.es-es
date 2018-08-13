@@ -1,5 +1,5 @@
 ---
-title: Tipos definidos por el usuario CLR | Microsoft Docs
+title: Tipos definidos por el usuario CLR | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -35,16 +35,16 @@ caps.latest.revision: 67
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 71f1417b1fd54226be6d2bfe001e3e3f95b6ceff
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 7d78c002d25d5804230ce53be05d809489d26b77
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353987"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008877"
 ---
 # <a name="clr-user-defined-types"></a>Tipos definidos por el usuario de CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece la posibilidad de crear objetos de base de datos programados en un ensamblado creado en Common Language Runtime (CLR) de .NET Framework. Los objetos de base de datos que pueden aprovechar el complejo modelo de programación que proporciona CLR incluyen desencadenadores, procedimientos almacenados, funciones, funciones de agregado y tipos.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le ofrece la capacidad para crear objetos de base de datos que se programan en un ensamblado creado en common language runtime (CLR) de .NET Framework. Los objetos de base de datos que pueden aprovechar el complejo modelo de programación que proporciona CLR incluyen desencadenadores, procedimientos almacenados, funciones, funciones de agregado y tipos.  
   
 > [!NOTE]  
 >  La capacidad para ejecutar el código CLR se encuentra desactivada (OFF) de manera predeterminada en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El CLR puede habilitarse mediante la **sp_configure** procedimiento almacenado del sistema.  

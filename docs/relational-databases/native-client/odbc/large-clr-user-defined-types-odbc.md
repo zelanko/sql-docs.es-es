@@ -1,5 +1,5 @@
 ---
-title: Tipos definidos por el usuario CLR grandes (ODBC) | Microsoft Docs
+title: Tipos definidos por el usuario CLR grandes (ODBC) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 14dcac32a0e8e6af89cf3f9dc87b2458a986a2ef
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: ac70196d3b343a0f5a4fedbbedb2367a80665abb
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414424"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565799"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipos CLR grandes definidos por el usuario (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

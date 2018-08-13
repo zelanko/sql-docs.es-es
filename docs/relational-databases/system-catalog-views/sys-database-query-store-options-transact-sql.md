@@ -25,13 +25,13 @@ caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a9ce2b5f63405a0754782e0dddae5584c1b47ee2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9a674efd6c2e7d9db42a0d731e9722fb267830e9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031182"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552175"
 ---
 # <a name="sysdatabasequerystoreoptions-transact-sql"></a>sys.database_query_store_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "38031182"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**desired_state**|**smallint**|Indica el modo de operación deseada de la consulta Store, establezca explícitamente por el usuario.<br /> 0 = OFF <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE|  
-|**desired_state_desc**|**nvarchar (64)**|Descripción textual del modo de operación deseada de Query Store:<br />OFF<br />READ_ONLY<br />READ_WRITE|  
+|**desired_state_desc**|**Nvarchar (64)**|Descripción textual del modo de operación deseada de Query Store:<br />OFF<br />READ_ONLY<br />READ_WRITE|  
 |**actual_state**|**smallint**|Indica el modo de operación de consulta Store. Además de la lista de los Estados deseados requeridos por el usuario, el estado real puede ser un estado de error.<br /> 0 = OFF <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE<br /> 3 = ERROR|  
-|**actual_state_desc**|**nvarchar (64)**|Descripción textual del modo de operación real de la consulta Store.<br />OFF<br />READ_ONLY<br />READ_WRITE<br />error<br /><br /> Cuando el estado real es diferente del estado deseado, existen situaciones:<br /><br /> Query Store puede funcionar en modo de solo lectura incluso si el usuario especificó la lectura y escritura. Por ejemplo, que podría suceder si la base de datos está en modo de solo lectura o si el tamaño de la consulta Store superó la cuota.<br /><br /> Extremadamente raras, Query Store puede terminar en estado de ERROR debido a errores internos. Si esto ocurre, Query Store podría recuperarse mediante la ejecución de **sp_query_store_consistency_check** procedimiento almacenado dentro de la base de datos afectada.|  
+|**actual_state_desc**|**Nvarchar (64)**|Descripción textual del modo de operación real de la consulta Store.<br />OFF<br />READ_ONLY<br />READ_WRITE<br />error<br /><br /> Cuando el estado real es diferente del estado deseado, existen situaciones:<br /><br /> Query Store puede funcionar en modo de solo lectura incluso si el usuario especificó la lectura y escritura. Por ejemplo, que podría suceder si la base de datos está en modo de solo lectura o si el tamaño de la consulta Store superó la cuota.<br /><br /> Extremadamente raras, Query Store puede terminar en estado de ERROR debido a errores internos. Si esto ocurre, Query Store podría recuperarse mediante la ejecución de **sp_query_store_consistency_check** procedimiento almacenado dentro de la base de datos afectada.|  
 |**readonly_reason**|**int**|Cuando el **desired_state_desc** es READ_WRITE y **actual_state_desc** es READ_ONLY, **readonly_reason** devuelve un poco de mapa para indicar por qué el Store de la consulta está en modo de solo lectura.<br /><br /> 1: la base de datos está en modo de solo lectura<br /><br /> 2 – la base de datos está en modo de usuario único<br /><br /> 4: base de datos está en modo de emergencia<br /><br /> 8: base de datos es la réplica secundaria (se aplica a Azure y Always On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] replicación geográfica). Este valor se puede observar eficazmente solo en **legible** réplicas secundarias<br /><br /> 65536: el Store de la consulta ha alcanzado el límite de tamaño definido por la opción MAX_STORAGE_SIZE_MB.<br /><br /> 131072: el número de instrucciones diferentes en la consulta Store ha alcanzado el límite de memoria interna. Considere la posibilidad de quitar las consultas que no es necesario o actualizar a un mayor nivel de servicio para habilitar la transferencia de Query Store a modo de lectura y escritura.<br />Solo se aplica a [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br /> 262144: tamaño de los elementos en la memoria a la espera se conserva en el disco ha alcanzado el límite de memoria interna. Query Store estará en modo de solo lectura temporalmente hasta que se conservan los elementos en la memoria en disco. <br />Solo se aplica a [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br />524288: base de datos ha alcanzado el límite de tamaño de disco. Query Store es parte de la base de datos de usuario, por lo que si hay espacio no están disponible para una base de datos, lo que significa que la consulta Store no puede crecer más.<br />Solo se aplica a [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. <br /> <br /> Para cambiar las operaciones de consulta Store back del modo de lectura y escritura, consulte **Compruebe Query Store está recopilando datos de consulta continuamente** sección de [recomendado con el Store consulta](../../relational-databases/performance/best-practice-with-the-query-store.md).|  
 |**current_storage_size_mb**|**bigint**|Tamaño de la consulta Store en disco en megabytes.|  
 |**flush_interval_seconds**|**bigint**|Define el período para regular el vaciado de datos de la consulta Store en el disco. Valor predeterminado es 900 (15 minutos).<br /><br /> Cambio mediante el uso de la `ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)` instrucción.|  

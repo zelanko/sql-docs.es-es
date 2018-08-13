@@ -1,5 +1,5 @@
 ---
-title: Sys.system_objects (Transact-SQL) | Documentos de Microsoft
+title: Sys.system_objects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,22 +24,22 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: eda958fa160f98aa4930eb12a6a14f402eee1f41
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 747e0e44db51db4b5e143b79645d1b1fc677607e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221766"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552645"
 ---
 # <a name="syssystemobjects-transact-sql"></a>sys.system_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Contiene una fila para todos los objetos de sistema en el ámbito de esquema que se incluyen con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Todos los objetos del sistema están incluidos en esquemas denominados sys o INFORMATION_SCHEMA.  
+  Contiene una fila para todos los objetos del sistema con ámbito de esquema que se incluyen con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Todos los objetos del sistema están incluidos en esquemas denominados sys o INFORMATION_SCHEMA.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|Nombre del objeto.|  
+|NAME|**sysname**|Nombre del objeto.|  
 |object_id|**int**|Número de identificación del objeto. Es único en una base de datos.|  
 |principal_id|**int**|Identificador del propietario individual si es diferente del propietario del esquema. De forma predeterminada, los objetos contenidos en el esquema pertenecen al propietario del esquema. No obstante, se puede especificar otro propietario mediante la instrucción ALTER AUTHORIZATION para cambiar la propiedad.<br /><br /> Es NULL si no existe otro propietario individual.<br /><br /> Es NULL si el tipo de objeto es uno de los siguientes:<br /><br /> C = restricción CHECK<br /><br /> D = DEFAULT (restricción o independiente)<br /><br /> F = Restricción FOREIGN KEY<br /><br /> PK = Restricción PRIMARY KEY<br /><br /> R = Regla (estilo antiguo, independiente)<br /><br /> TA = Desencadenador de ensamblado (CLR)<br /><br /> TR = Desencadenador SQL<br /><br /> UQ = Restricción UNIQUE|  
 |schema_id|**int**|Id. del esquema que contiene el objeto.<br /><br /> Para todos los objetos del sistema en el ámbito del esquema que se incluyen con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], este valor siempre estará en (schema_id('sys'), schema_id('INFORMATION_SCHEMA')).|  
@@ -52,11 +52,11 @@ ms.locfileid: "33221766"
 |is_published|**bit**|El objeto se publica.|  
 |is_schema_published|**bit**|Solo se ha publicado el esquema del objeto.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Vistas de catálogo del objeto &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
+ [Vistas de catálogo de objetos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

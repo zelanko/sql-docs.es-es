@@ -1,5 +1,5 @@
 ---
-title: Sys.foreign_key_columns (Transact-SQL) | Documentos de Microsoft
+title: Sys.foreign_key_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,20 +24,20 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 110528e8445703497beab5eb9339fb65d026d582
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 84a994759cf06b5ce3a0e41e6fa731a8477ce4ca
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179861"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561526"
 ---
 # <a name="sysforeignkeycolumns-transact-sql"></a>sys.foreign_key_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contiene una fila para cada columna o conjunto de columnas que componen una clave externa.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**constraint_object_id**|**int**|Id. de la restricción FOREIGN KEY.|  
 |**constraint_column_id**|**int**|Id. de la columna o conjunto de columnas que componen la clave externa (*1.. n* donde n = número de columnas).|  
@@ -46,7 +46,7 @@ ms.locfileid: "33179861"
 |**referenced_object_id**|**int**|Id. del objeto al que se hace referencia, que tiene la clave candidata.|  
 |**referenced_column_id**|**int**|Id. de la columna a la que se hace referencia (columna de clave candidata).|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

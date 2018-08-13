@@ -1,5 +1,5 @@
 ---
-title: Copia masiva desde Variables de programa | Microsoft Docs
+title: Copia masiva desde Variables de programa | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 253123cc62751c39c39e9f5ab9282e2b1e6a3c10
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: ed392b026edc2a28219b3ee84ff6301b0cf26dd8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420024"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556895"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Copia masiva de variables de programa
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,11 +47,11 @@ ms.locfileid: "37420024"
   
  **bcp_bind** admite tres métodos para tratar con datos de longitud variable:  
   
--   Use *cbData* con solo una variable de datos. Coloque la longitud de los datos de *cbData*. Cada vez que la longitud de los datos de forma masiva copia los cambios, llame a [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)restablecer *cbData*. Si se está usando uno de los otros dos métodos, especifique SQL_VARLEN_DATA para *cbData*. Si todos los valores de datos que se proporcionan para una columna son NULL, especifique SQL_NULL_DATA para *cbData*.  
+-   Uso *cbData* con sólo una variable de datos. Colocar la longitud de los datos de *cbData*. Cada vez que la longitud de los datos de forma masiva copia los cambios, llame a [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)restablecer *cbData*. Si se está usando uno de los otros dos métodos, especifique SQL_VARLEN_DATA para *cbData*. Si todos los valores de datos que se proporcionan para una columna son NULL, especifique SQL_NULL_DATA para *cbData*.  
   
--   Usar variables de indicador. A medida que cada nuevo valor de datos se pase a la variable de datos, almacene la longitud del valor en la variable de indicador. Si se está usando uno de los otros dos métodos, especifique 0 para *cbIndicator*.  
+-   Usar variables de indicador. A medida que cada nuevo valor de datos se pase a la variable de datos, almacene la longitud del valor en la variable de indicador. Si se utiliza uno de los otros dos métodos, especifique 0 para *cbIndicator*.  
   
--   Usar punteros de terminador. Carga el **bcp_bind *** pTerm* parámetro con la dirección del patrón de bits que finaliza los datos. Si se está usando uno de los otros dos métodos, especifique NULL para *pTerm*.  
+-   Usar punteros de terminador. Carga el **bcp_bind *** pTerm* parámetro con la dirección del patrón de bits que finaliza los datos. Si se utiliza uno de los otros dos métodos, especifique NULL para la *pTerm*.  
   
  Tres de estos métodos pueden usarse en el mismo **bcp_bind** llamar, en cuyo caso se usa la especificación que da como resultado la menor cantidad de datos que se va a copiar.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "37420024"
   
  Las funciones de copia masiva no admiten todos los tipos de datos C de ODBC. Por ejemplo, las funciones de copia masiva no admiten la estructura SQL_C_TYPE_TIMESTAMP de ODBC, así que use [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) o [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) para convertir datos SQL_TYPE_TIMESTAMP de ODBC a una variable SQL_C_CHAR. Si después usa **bcp_bind** con un *tipo* parámetro igual a sqlcharacter para enlazar la variable a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** conversión las funciones de copia masiva de columna, el cláusula de escape de marca de tiempo en la variable de caracteres al formato de fecha y hora adecuado.  
   
- En la tabla siguiente se enumera los tipos de datos recomendado para usar en la asignación de un tipo de datos SQL de ODBC a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.  
+ La siguiente tabla enumera los tipos de datos recomendados para utilizar en la asignación de un tipo de datos de SQL ODBC a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el tipo de datos.  
   
 |Tipo de datos SQL de ODBC|Tipo de datos C de ODBC|bcp_bind *tipo* parámetro|Tipo de datos de SQL Server|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
@@ -83,7 +83,7 @@ ms.locfileid: "37420024"
 |SQL_FLOAT|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_DOUBLE|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_BINARY|SQL_C_BINARY|SQLBINARY|**binario**<br /><br /> **timestamp**|  
-|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **variable binaria**|  
+|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **binary varying**|  
 |SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**imagen**|  
 |SQL_TYPE_DATE|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_TYPE_TIME|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  

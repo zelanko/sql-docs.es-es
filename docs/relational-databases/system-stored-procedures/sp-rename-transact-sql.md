@@ -1,5 +1,5 @@
 ---
-title: sp_rename (Transact-SQL) | Documentos de Microsoft
+title: sp_rename (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/09/2018
 ms.prod: sql
@@ -25,18 +25,18 @@ caps.latest.revision: 54
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 97d14dc014827310706bdea8143e41a628a666d6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 836ef351d2af7e187420b680a90382fc504b9e89
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260861"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563079"
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Cambia el nombre de un objeto creado por el usuario en la base de datos actual. Este objeto puede ser una tabla, índice, columna, alias de tipo de datos, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] tipo definido por el usuario de common language runtime (CLR).  
+  Cambia el nombre de un objeto creado por el usuario en la base de datos actual. Este objeto puede ser una tabla, índice, columna, tipo de datos alias, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] tipo definido por el usuario de common language runtime (CLR).  
   
 > [!CAUTION]  
 >  Al cambiar cualquier parte del nombre de un objeto se pueden interrumpir scripts y procedimientos almacenados. Se recomienda no utilizar esta instrucción para cambiar el nombre a procedimientos almacenados, desencadenadores, funciones definidas por el usuario o vistas; en su lugar, quite el objeto y vuelva a crearlo con el nuevo nombre.  
@@ -64,32 +64,32 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 >  Los nombres de los desencadenadores no pueden comenzar por # o ##.  
   
  [ @objtype =] '*object_type*'  
- Es el tipo de objeto cuyo nombre se va a cambiar. *object_type* es **varchar (13)**, su valor predeterminado es null y puede tener uno de estos valores.  
+ Es el tipo de objeto cuyo nombre se va a cambiar. *object_type* es **varchar (13)**, su valor predeterminado es null, y puede tener uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |COLUMN|Una columna cuyo nombre se va a cambiar.|  
 |DATABASE|Una base de datos definida por el usuario. Este tipo de objeto es necesario cuando se cambia el nombre de una base de datos|  
 |INDEX|Índice definido por el usuario. Si se cambia el nombre a un índice con estadísticas, también se cambia automáticamente a las estadísticas.|  
-|OBJECT|Realiza el seguimiento de un elemento de un tipo en [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). Por ejemplo, OBJECT podría utilizarse para cambiar el nombre de objetos como restricciones (CHECK, FOREIGN KEY, PRIMARY o UNIQUE KEY), tablas de usuario y reglas.|  
+|OBJECT|Realiza un seguimiento de un elemento de un tipo en [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). Por ejemplo, OBJECT podría utilizarse para cambiar el nombre de objetos como restricciones (CHECK, FOREIGN KEY, PRIMARY o UNIQUE KEY), tablas de usuario y reglas.|  
 |STATISTICS|**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Estadísticas que crea un usuario explícitamente o que se crean implícitamente con un índice. Si se cambia el nombre de las estadísticas de un índice, también se cambia automáticamente el nombre del índice.|  
-|USERDATATYPE|A [tipos definidos por el usuario CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) agregados mediante la ejecución [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) o [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md).|  
+|USERDATATYPE|Un [tipos definidos por el usuario CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) agregados mediante la ejecución [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) o [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md).|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o un número distinto de cero (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Solo se puede cambiar el nombre de un objeto o tipo de datos de la base de datos actual. No se pueden cambiar los nombres de la mayoría de los tipos de datos y objetos del sistema.  
   
  sp_rename cambia automáticamente el nombre del índice asociado cuando se cambia el nombre de una restricción PRIMARY KEY o UNIQUE. Si un índice cuyo nombre se ha cambiado está enlazado a una restricción PRIMARY KEY, sp_rename también cambia automáticamente el nombre de esta restricción.  
   
  sp_rename se puede utilizar para cambiar el nombre de los índices XML principales y secundarios.  
   
- Cambiar el nombre de un procedimiento almacenado, la función, la vista o el desencadenador no se cambiará el nombre del objeto correspondiente en la columna de definición de la [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vista de catálogo u obtenido utilizando la [OBJECT_ DEFINICIÓN de](../../t-sql/functions/object-definition-transact-sql.md) función integrada. Por lo tanto, se recomienda no utilizar sp_rename para cambiar el nombre a estos tipos de objetos. En su lugar, quite el objeto y vuelva a crearlo con su nuevo nombre.  
+ Cambiar el nombre de un procedimiento almacenado, función, vista o desencadenador no cambiará el nombre del objeto correspondiente en la columna de definición de la [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vista de catálogo, o bien obtenido usando la [OBJECT_ DEFINICIÓN](../../t-sql/functions/object-definition-transact-sql.md) función integrada. Por lo tanto, se recomienda no utilizar sp_rename para cambiar el nombre a estos tipos de objetos. En su lugar, quite el objeto y vuelva a crearlo con su nuevo nombre.  
   
  Al cambiar el nombre de un objeto como una tabla o columna, no se cambia automáticamente el nombre de las referencias a ese objeto. Es necesario modificar de forma manual los objetos que hacen referencia al objeto cuyo nombre se ha cambiado. Por ejemplo, si se cambia el nombre de una columna de una tabla y en un desencadenador existe una referencia a esa columna, es necesario modificar el desencadenador para reflejar el nuevo nombre de la columna. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) para ver las dependencias del objeto antes de cambiarle el nombre.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para cambiar el nombre de objetos, columnas e índices, se necesita permiso ALTER en el objeto. Para cambiar el nombre de tipos de usuario, se necesita el permiso CONTROL en el tipo. Para cambiar el nombre de una base de datos, debe pertenecer a los roles fijos de servidor sysadmin o dbcreator.   
   
 ## <a name="examples"></a>Ejemplos  
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-renaming-a-column"></a>B. Cambiar el nombre de una columna  
- En el ejemplo siguiente se cambia el nombre del `TerritoryID` columna en el `SalesTerritory` tabla a `TerrID`.  
+ El ejemplo siguiente se cambia el nombre el `TerritoryID` columna en el `SalesTerritory` tabla `TerrID`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -197,7 +197,7 @@ CK_Employee_SickLeaveHours            HumanResources     CHECK_CONSTRAINT
 ```  
   
 ### <a name="f-renaming-statistics"></a>F. Cambiar el nombre de las estadísticas  
- En el ejemplo siguiente se crea un objeto de estadísticas denominado contactMail1 y, a continuación, cambia el nombre de la estadística para el nuevo contacto utilizando sp_rename. Al cambiar el nombre de las estadísticas, el objeto se debe especificar con el formato schema.table.statistics_name.  
+ El ejemplo siguiente crea un objeto de estadísticas denominado contactMail1 y, a continuación, cambia el nombre de la estadística para el nuevo contacto mediante sp_rename. Al cambiar el nombre de las estadísticas, el objeto se debe especificar con el formato schema.table.statistics_name.  
   
 ```  
 CREATE STATISTICS ContactMail1  

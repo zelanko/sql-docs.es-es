@@ -25,13 +25,13 @@ caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 08f3d90937968713c598418a125ad0167ed94fe7
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9216f9babb03814fb7f644add94f20db7bcc4439
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980527"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556915"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ fn_get_audit_file ( file_pattern,
     
     Este argumento debe incluir una ruta de acceso (letra de unidad o recurso compartido de red) y un nombre de archivo que pueda contener un carácter comodín. Un asterisco (*) sirve para recopilar varios archivos de un conjunto de archivos de auditoría. Por ejemplo:  
   
-    -   **\<ruta de acceso >\\ \***  : recopile todos los archivos de auditoría de la ubicación especificada.  
+    -   **\<ruta de acceso >\\ \* ** : recopile todos los archivos de auditoría de la ubicación especificada.  
   
     -   **\<ruta de acceso > \LoginsAudit_{GUID}** : recopile todos los archivos que tienen el nombre especificado y un par GUID de auditoría.  
   
@@ -66,7 +66,7 @@ fn_get_audit_file ( file_pattern,
  
     Este argumento se utiliza para especificar una dirección URL del blob (incluido el punto de conexión de almacenamiento y el contenedor). Aunque no se admite un carácter comodín asterisco, puede usar un prefijo de nombre de archivo parcial (blob) (en lugar del nombre del blob completo) para recopilar varios archivos (BLOB) que comienzan por este prefijo. Por ejemplo:
  
-      - **\<Storage_endpoint\>/\<contenedor\>/\<ServerName\>/\<DatabaseName\> /**  -recopila todos los archivos de auditoría (BLOB) para la base de datos específica.    
+      - **\<Storage_endpoint\>/\<contenedor\>/\<ServerName\>/\<DatabaseName\> / ** -recopila todos los archivos de auditoría (BLOB) para la base de datos específica.    
       
       - **\<Storage_endpoint\>/\<contenedor\>/\<ServerName\>/\<DatabaseName\> / \< AuditName\>/\<CreationDate\>/\<FileName\>.xel** -recopila un archivo de auditoría específicos (blob).
   

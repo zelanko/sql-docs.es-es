@@ -27,25 +27,25 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 56d8b1c92560e0a161c7b020d6e9f111bc8dd44d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 40ba819fcc6e488b76717c61c225180e91571473
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179031"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542935"
 ---
 # <a name="sysfulltextsystemstopwords-transact-sql"></a>sys.fulltext_system_stopwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Proporciona acceso a la lista de palabras irrelevantes del sistema.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**palabra irrelevante**|**nvarchar(64)**|Término que se considera como coincidencia de palabra irrelevante.|  
+|**palabra irrelevante**|**Nvarchar (64)**|Término que se considera como coincidencia de palabra irrelevante.|  
 |**language_id**|**int**|Identificador de configuración regional (LCID) del idioma. Este LCID se utiliza para la separación de palabras.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>Vea también  

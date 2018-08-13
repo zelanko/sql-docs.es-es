@@ -25,13 +25,13 @@ caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: acdf8059c75ac6bec1bdd45fc7e1d348331a7e90
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f1cb77a5da692f17a790d2eb5ffca6f82a939449
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219926"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538295"
 ---
 # <a name="sysspatialreferencesystems-transact-sql"></a>sys.spatial_reference_systems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,16 +39,16 @@ ms.locfileid: "33219926"
   Enumera los sistemas de referencia espacial (SRID) que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite.  
 
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |spatial_reference_id|**int**|SRID que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite.|  
 |authority_name|**nvarchar(128)**|Autoridad del SRID.|  
-|authorized_spatial_reference_id|**int**|SRID proporcionado por la autoridad denominada **authority_name**.|  
+|authorized_spatial_reference_id|**int**|SRID dado por la autoridad nombrada en **authority_name**.|  
 |well_known_text|**nvarchar(4000)**|Representación WKT del SRID.|  
 |unit_of_measure|**nvarchar(128)**|Nombre de la unidad de medida.|  
 |unit_conversion_factor|**float**|Longitud de la unidad de medida en metros.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
   

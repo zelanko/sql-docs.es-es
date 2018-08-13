@@ -1,5 +1,5 @@
 ---
-title: Ejecutar procedimientos almacenados (OLE DB) | Microsoft Docs
+title: Ejecutar procedimientos almacenados (OLE DB) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,21 +19,21 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ed9df8c1c51143442b622e9aa14831ede809a1b6
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c58147840fe81e24308299b034d6486d1e5eb009
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415404"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537565"
 ---
 # <a name="stored-procedures---running"></a>Procedimientos almacenados: ejecución
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Al ejecutar las instrucciones, llamar a un procedimiento almacenado en el origen de datos (en lugar de ejecutar o preparar directamente una instrucción en la aplicación cliente) puede proporcionar:  
+  Cuando se ejecutan instrucciones, llamar a un procedimiento almacenado en el origen de datos (en lugar de ejecutar o preparar directamente una instrucción en la aplicación cliente) puede proporcionar lo siguiente:  
   
--   Un mayor rendimiento.  
+-   Mayor rendimiento.  
   
 -   Sobrecarga de red reducida.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "37415404"
   
 -   Mayor exactitud  
   
--   Funcionalidad agregada.  
+-   Función agregada.  
   
  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client es compatible con tres de los mecanismos que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizan procedimientos almacenados para devolver datos:  
   

@@ -22,13 +22,13 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9b73215f275f2171f72a70a71f1855d88d60c034
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 62156897510a969bc0ed99de56b59ae3251067e1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238512"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564809"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,19 +37,19 @@ ms.locfileid: "33238512"
   
  Para recuperar información de estas vistas, especifique el nombre completo de **INFORMATION_SCHEMA. *** view_name*.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**SPECIFIC_CATALOG**|**nvarchar (** 128 **)**|Nombre del catálogo de la rutina de la cual éste es un parámetro.|  
-|**SPECIFIC_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema de la rutina de la cual éste es un parámetro.<br /><br /> **\*\* Importante \* \***  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
+|**SPECIFIC_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema de la rutina de la cual éste es un parámetro.<br /><br /> **\*\* Importante \* \* ** no utilizan utilicemos vistas para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
 |**SPECIFIC_NAME**|**nvarchar (** 128 **)**|Nombre de la rutina de la cual éste es un parámetro.|  
 |**ORDINAL_POSITION**|**int**|Posición ordinal del parámetro que empieza en 1. para el valor devuelto de una función, es un 0.|  
 |**PARAMETER_MODE**|**nvarchar (** 10 **)**|Devuelve IN si es un parámetro de entrada, OUT si es un parámetro de salida e INOUT si es un parámetro de entrada/salida.|  
 |**IS_RESULT**|**nvarchar (** 10 **)**|Devuelve YES si indica que el resultado de la rutina es una función. De lo contrario, devuelve NO.|  
 |**AS_LOCATOR**|**nvarchar (** 10 **)**|Devuelve YES si se ha declarado como localizador. De lo contrario, devuelve NO.|  
-|**PARAMETER_NAME**|**nvarchar (** 128 **)**|Nombre del parámetro. NULL si corresponde al valor devuelto de una función.|  
+|**NOMBRE DE PARÁMETRO**|**nvarchar (** 128 **)**|Nombre del parámetro. NULL si corresponde al valor devuelto de una función.|  
 |**DATA_TYPE**|**nvarchar (** 128 **)**|Tipo de datos proporcionado por el sistema.|  
-|**CAMPO CHARACTER_MAXIMUM_LENGTH**|**int**|Longitud máxima en caracteres de los tipos de datos binarios o de caracteres.<br /><br /> -1 para **xml** y los datos de tipo de valor grande. De lo contrario, devuelve NULL.|  
-|**CHARACTER_OCTET_LENGTH**|**int**|Longitud máxima, en bytes, de los tipos de datos binarios o de caracteres.<br /><br /> -1 para **xml** y los datos de tipo de valor grande. De lo contrario, devuelve NULL.|  
+|**CAMPO CHARACTER_MAXIMUM_LENGTH**|**int**|Longitud máxima en caracteres de los tipos de datos binarios o de caracteres.<br /><br /> -1 para **xml** y datos de tipo de valor grande. De lo contrario, devuelve NULL.|  
+|**CHARACTER_OCTET_LENGTH**|**int**|Longitud máxima, en bytes, de los tipos de datos binarios o de caracteres.<br /><br /> -1 para **xml** y datos de tipo de valor grande. De lo contrario, devuelve NULL.|  
 |**COLLATION_CATALOG**|**nvarchar (** 128 **)**|Siempre devuelve NULL.|  
 |**COLLATION_SCHEMA**|**nvarchar (** 128 **)**|Siempre devuelve NULL.|  
 |**COLLATION_NAME**|**nvarchar (** 128 **)**|Nombre de la intercalación del parámetro. Si no es de uno de los tipos de carácter, devuelve NULL.|  
@@ -74,6 +74,6 @@ ms.locfileid: "33238512"
  [Vistas de esquema de información &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [Sys.Parameters & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
+ [sys.parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
   
   

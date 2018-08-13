@@ -24,20 +24,20 @@ caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 10263b4418b90b2284d0abb3d433101a9afcaa98
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 9c36883f8595b51239c78b178217a094f37e9484
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180621"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547935"
 ---
 # <a name="sysprocedures-transact-sql"></a>sys.procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contiene una fila por cada objeto que es un procedimiento de algún tipo, con **sys.objects.type** = P, X, RF y PC.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**\<Las columnas que se heredan de sys.objects >**||Para obtener una lista de columnas que hereda esta vista, consulte [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
 |**is_auto_executed**|**bit**|1 = El procedimiento se ejecuta automáticamente en el inicio del servidor; de lo contrario, 0. Solo se puede establecer para procedimientos en la base de datos maestra.|  
@@ -45,7 +45,7 @@ ms.locfileid: "33180621"
 |**is_repl_serializable_only**|**bit**|La replicación de la ejecución del procedimiento solo se realiza cuando la transacción se puede ejecutar en serie.|  
 |**skips_repl_constraints**|**bit**|Durante la ejecución, el procedimiento omite las restricciones marcadas como NOT FOR REPLICATION.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

@@ -1,5 +1,5 @@
 ---
-title: sp_unprepare (Transact-SQL) | Microsoft Docs
+title: sp_unprepare (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c444b5b8fbd83a490993dde2a864d60afa9b6932
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f0b34db0fd76d9fa358ae6028d0b4f78a8238ded
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978168"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557615"
 ---
 # <a name="spunprepare-transact-sql"></a>sp_unprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Descarta el plan de ejecución creado por el procedimiento almacenado sp_prepare. sp_unprepare se invoca especificando el identificador 15 en un paquete de flujo TDS.  
+  Descarta el plan de ejecución creado por el procedimiento almacenado de sp_prepare. sp_unprepare se invoca mediante la especificación de ID = 15 en un paquete de datos tabulares (TDS) de la secuencia.  
   
 ## <a name="syntax"></a>Sintaxis  
   

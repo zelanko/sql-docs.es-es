@@ -1,5 +1,5 @@
 ---
-title: 'Utilizar las anotaciones SQL: GUID y: Identity | Microsoft Docs'
+title: Con las anotaciones de sql:identity y sql:guid | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -28,17 +28,17 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: da967220c77451d807a79d2e10701fd1f76791d2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4f7f86988159f02b24159b1d0562d1c32785fa90
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050223"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539575"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>Utilizar las anotaciones sql:guid y sql:identity
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Puede especificar el **: Identity** y **SQL** anotaciones en un esquema XSD en cualquier nodo que se asigna a una columna de base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mientras que el formato de diagrama de actualización admite la **updg: en identidad** y **updg: GUID** atributos, el formato DiffGram no. El **updg: en identidad** atributo define el comportamiento en la actualización de una columna de tipo IDENTITY. El **updg: GUID** atributo le permite obtener un valor GUID de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y su uso en el diagrama de actualización. Para obtener más información y ejemplos prácticos, vea [Updategrams de inserción de datos utilizando XML &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+  Puede especificar el **: Identity** y **SQL** anotaciones en un esquema XSD en cualquier nodo que se asigna a una columna de base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mientras que el formato de diagrama de actualización admite la **updg: en identidad** y **updg: GUID** atributos, el formato DiffGram no. El **updg: en identidad** atributo define el comportamiento en la actualización de una columna de tipo IDENTITY. El **updg: GUID** atributo le permite obtener un valor GUID de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y su uso en el diagrama de actualización. Para obtener más información y ejemplos de trabajo, consulte [actualización de inserción de datos usando XML &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
  El **: Identity** y **SQL** anotaciones amplían esta funcionalidad a los DiffGrams.  
   

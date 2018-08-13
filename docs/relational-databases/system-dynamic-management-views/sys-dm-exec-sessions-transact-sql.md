@@ -23,13 +23,13 @@ caps.latest.revision: 60
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cc1293a87ddfb743964a40377ba126a2f745d59d
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: fac27390005afad19f67c5e774c381067ee78745
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467851"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542105"
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,22 +38,22 @@ ms.locfileid: "34467851"
   
  Las vistas de administración dinámica sys.dm_exec_connections, sys.dm_exec_sessions y sys.dm_exec_requests se asignan a la [sys.sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) tabla del sistema.  
   
-> **Nota:** para llamar a esta desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_exec_sessions**.  
+> **Nota:** para llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_exec_sessions**.  
   
 |Nombre de columna|Tipo de datos|Descripción e información específica de la versión|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifica la sesión asociada a cada conexión principal activa. No admite valores NULL.|  
 |login_time|**datetime**|Hora en que se estableció la sesión. No admite valores NULL.|  
-|host_name|**nvarchar(128)**|Nombre de la estación de trabajo cliente específica de una sesión. El valor es NULL para las sesiones internas. Acepta valores NULL.<br /><br /> **Nota de seguridad:** la aplicación cliente proporciona el nombre de estación de trabajo y puede proporcionar datos inexactos. No confíe en HOST_NAME como característica de seguridad.|  
+|host_name|**nvarchar(128)**|Nombre de la estación de trabajo cliente específica de una sesión. El valor es NULL para las sesiones internas. Acepta valores NULL.<br /><br /> **Nota de seguridad:** la aplicación cliente proporciona el nombre de la estación de trabajo y puede proporcionar datos inexactos. No confíe en HOST_NAME como característica de seguridad.|  
 |program_name|**nvarchar(128)**|Nombre del programa cliente que inició la sesión. El valor es NULL para las sesiones internas. Acepta valores NULL.|  
 |host_process_id|**int**|Identificador de proceso del programa cliente que inició la sesión. El valor es NULL para las sesiones internas. Acepta valores NULL.|  
 |client_version|**int**|Versión del protocolo TDS de la interfaz utilizada por el cliente para conectarse al servidor. El valor es NULL para las sesiones internas. Acepta valores NULL.|  
-|client_interface_name|**nvarchar(32)**|Nombre de biblioteca/controlador utilizada por el cliente para comunicarse con el servidor. El valor es NULL para las sesiones internas. Acepta valores NULL.|  
+|client_interface_name|**nvarchar(32)**|Nombre de la biblioteca o controlador utilizada por el cliente para comunicarse con el servidor. El valor es NULL para las sesiones internas. Acepta valores NULL.|  
 |security_id|**varbinary(85)**|Identificador de seguridad de Microsoft Windows asociado al inicio de sesión. No admite valores NULL.|  
 |login_name|**nvarchar(128)**|Nombre de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se está ejecutando la sesión. Para saber qué nombre de inicio de sesión original ha creado la sesión, vea original_login_name. Puede ser un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autentica el nombre de inicio de sesión o un nombre de usuario de dominio autenticado de Windows. No admite valores NULL.|  
 |nt_domain|**nvarchar(128)**|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Dominio de Windows para el cliente si la sesión utiliza la autenticación de Windows o una conexión de confianza. Este valor es NULL para las sesiones internas y los usuarios que no son del dominio. Acepta valores NULL.|  
 |nt_user_name|**nvarchar(128)**|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nombre de usuario de Windows para el cliente si la sesión utiliza la autenticación de Windows o una conexión de confianza. Este valor es NULL para las sesiones internas y los usuarios que no son del dominio. Acepta valores NULL.|  
-|status|**nvarchar(30)**|Estado de la sesión. Valores posibles:<br /><br /> **Ejecuta** -ejecutando una o varias solicitudes actualmente<br /><br /> **En modo de suspensión** -no hay solicitudes en ejecución actualmente<br /><br /> **Inactivo** : sesión se ha restablecido debido a la agrupación de conexiones y ahora está en estado de inicio de sesión previo.<br /><br /> **Preconnect** -sesión está en el clasificador del regulador de recursos.<br /><br /> No admite valores NULL.|  
+|status|**nvarchar(30)**|Estado de la sesión. Valores posibles:<br /><br /> **Ejecutando** -uno o más solicitudes en ejecución<br /><br /> **En modo de suspensión** -no hay solicitudes en ejecución actualmente<br /><br /> **Latente** : sesión se ha restablecido debido a la agrupación de conexiones y ahora está en estado de inicio.<br /><br /> **Preconnect** -sesión está en el clasificador del regulador de recursos.<br /><br /> No admite valores NULL.|  
 |context_info|**varbinary(128)**|Valor CONTEXT_INFO para la sesión. La información de contexto se establece por el usuario mediante el [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) instrucción. Acepta valores NULL.|  
 |cpu_time|**int**|Tiempo de CPU, en milisegundos, utilizado por esta sesión. No admite valores NULL.|  
 |memory_usage|**int**|Número de páginas de memoria de 8 KB utilizadas por esta sesión. No admite valores NULL.|  
@@ -92,16 +92,16 @@ ms.locfileid: "34467851"
 |database_id|**smallint**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Identificador de la base de datos actual para cada sesión.|  
 |authenticating_database_id|**int**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Identificador de la base de datos que autentica la entidad de seguridad. Para los inicios de sesión, el valor será 0. Para los usuarios de base de datos independiente, el valor será el identificador de base de datos de la base de datos independiente.|  
 |open_transaction_count|**int**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número de transacciones abiertas por sesión.|  
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo en esta distribución.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
 Todos pueden ver su propia información de sesión.  
 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** Requiere `VIEW SERVER STATE` permiso en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] para ver todas las sesiones en el servidor.  
 **[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Requiere `VIEW DATABASE STATE` para ver todas las conexiones a la base de datos actual. `VIEW DATABASE STATE` no se puede conceder en el `master` base de datos. 
   
   
-## <a name="remarks"></a>Comentarios  
- Cuando el **compatibilidad con criterio común habilitada** está habilitada la opción de configuración del servidor, se muestran las estadísticas de inicio de sesión en las siguientes columnas.  
+## <a name="remarks"></a>Notas  
+ Cuando el **compatibilidad con criterio común habilitada** está habilitada la opción de configuración del servidor, las estadísticas de inicio de sesión se muestran en las siguientes columnas.  
   
 -   last_successful_logon  
   
@@ -109,15 +109,15 @@ Todos pueden ver su propia información de sesión.
   
 -   unsuccessful_logons  
   
- Si esta opción no está habilitada, estas columnas devuelven valores NULL. Para obtener más información acerca de cómo establecer esta opción de configuración servidor, consulte [compatibilidad con criterio común habilitada la opción de configuración del servidor](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md).  
+ Si esta opción no está habilitada, estas columnas devuelven valores NULL. Para obtener más información sobre cómo establecer la opción de configuración de este servidor, consulte [compatibilidad con criterio común habilitada la opción de configuración del servidor](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md).  
  
  
- Las conexiones de administrador de base de datos de SQL Azure verá una fila por cada sesión autenticada. Las sesiones de "sa" que aparecen en el conjunto de resultados, no tiene ningún efecto en la cuota de usuario para las sesiones. Las conexiones de administrador no solamente podrá ver la información relacionada con sus sesiones de usuario de base de datos.
+ Las conexiones de administrador en Azure SQL Database verá una fila por cada sesión autenticada. Las sesiones de "sa" que aparecen en el conjunto de resultados, no tiene ningún impacto en la cuota de usuario para las sesiones. Las conexiones que no es administrador solo verán información relacionada con sus sesiones de usuario de base de datos.
  
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|A|En / Apply|Relación|  
+|De|En|En / Apply|Relación|  
 |----------|--------|---------------|------------------|  
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|Uno a ninguno o uno a varios|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|Uno a ninguno o uno a varios|  
@@ -188,7 +188,7 @@ WHERE c.session_id = @@SPID;
   
 ## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Vistas de administración dinámica y funciones relacionadas con ejecuciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Funciones y vistas de administración dinámica relacionadas con ejecuciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

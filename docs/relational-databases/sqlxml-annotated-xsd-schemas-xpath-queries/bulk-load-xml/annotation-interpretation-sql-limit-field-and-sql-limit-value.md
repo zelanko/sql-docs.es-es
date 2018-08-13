@@ -22,15 +22,15 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fb356e56bdd4453df6d0b62d921efafbde2dfdea
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bea85f19dde9e91bd62a603bdab4c98031567f3c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050098"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551155"
 ---
-# <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>Interpretación de anotaciones: SQL: limit-campo y SQL: limit-valor
+# <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>Interpretación de anotaciones: sql:limit-field y sql:limit-value
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Carga masiva XML procesa las anotaciones **sql:limit-field** y **sql:limit-value** por su definición. Para obtener más información, consulte [filtrar valores mediante SQL: limit-campo y SQL: limit-valor &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md).  
   

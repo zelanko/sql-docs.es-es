@@ -1,5 +1,5 @@
 ---
-title: Comandos | Microsoft Docs
+title: Comandos | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,19 +16,19 @@ ms.assetid: de03b27e-8c5a-4060-b650-f77279be01df
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e98822b180c5b1a745cc1265ca090de5f0c6305d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 1fed504f802e4fecf1ea851f29e8ce00a012ba34
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418704"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537495"
 ---
 # <a name="commands"></a>Comandos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client expone la **ICommand** interfaz y objetos de comando, que se describen en esta sección:  
+  La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB expone la **ICommand** objetos interfaz y comandos, que se describen en esta sección:  
   
 -   [Sintaxis de comandos](../../relational-databases/native-client-ole-db-commands/command-syntax.md)  
   

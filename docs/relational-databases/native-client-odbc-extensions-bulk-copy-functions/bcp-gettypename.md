@@ -1,5 +1,5 @@
 ---
-title: bcp_gettypename | Microsoft Docs
+title: bcp_gettypename | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 281cbb68960ad96e1f9712e7ad38030c0a6a7934
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 90b98b23bff869b0fbf0498669d389a7d834a84d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426227"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539685"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,8 +78,8 @@ RETCODE bcp_gettypename (
 |**SQLTEXT**|Antes o después|**texto**|  
 |**SQLBIGBINARY**|no|**binario**|  
 |**SQLBINARY**|no|**Binario**|  
-|**SQLBIGVARBINARY**|no|**Varbinary**|  
-|**SQLVARBINARY**|no|**Varbinary**|  
+|**SQLBIGVARBINARY**|no|**varbinary**|  
+|**SQLVARBINARY**|no|**varbinary**|  
 |**SQLIMAGE**|Antes o después|**Imagen**|  
 |**SQLINTN**|Antes o después|**int null**|  
 |**SQLDATETIMN**|Antes o después|**datetime-null**|  
@@ -91,12 +91,12 @@ RETCODE bcp_gettypename (
 |**SQLAOPMIN**|Antes o después|**Min**|  
 |**SQLAOPMAX**|Antes o después|**Max**|  
 |**SQLDATETIM4**|Antes o después|**smalldatetime**|  
-|**SQLMONEY4**|Antes o después|**Smallmoney**|  
-|**SQLFLT4**|Antes o después|**Real**|  
+|**SQLMONEY4**|Antes o después|**smallmoney**|  
+|**SQLFLT4**|Antes o después|**real**|  
 |**SQLUNIQUEID**|Antes o después|**uniqueidentifier**|  
-|**SQLNCHAR**|no|**Nchar**|  
+|**SQLNCHAR**|no|**nchar**|  
 |**SQLNVARCHAR**|no|**Nvarchar**|  
-|**SQLNTEXT**|Antes o después|**Ntext**|  
+|**SQLNTEXT**|Antes o después|**ntext**|  
 |**SQLVARIANT**|Antes o después|**sql_variant**|  
 |**SQLINT8**|Antes o después|**Bigint**|  
 |**SQLCHARACTER**|Sí|**ntext**|  

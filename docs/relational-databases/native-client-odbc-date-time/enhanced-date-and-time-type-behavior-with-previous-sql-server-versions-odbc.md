@@ -15,13 +15,13 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ee7aefcd01746b7af290746702ed94caab66837d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 61359be082f8b5fa9ea9a30df2c1d9888b6da6d7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426274"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563469"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Comportamiento mejorado de tipos de fecha y hora con versiones anteriores de SQL Server (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "37426274"
   
  Metadatos de instrucción devueltos por SQLDescribeCol, SQLDescribeParam, SQGetDescField y SQLColAttribute devolverán los metadatos que son coherente con el tipo de nivel inferior en todos los respectos, incluyendo el nombre de tipo. Un ejemplo de este tipo de nivel inferior es **nvarchar**.  
   
- Cuando se ejecuta una aplicación de cliente de nivel inferior en un [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o posterior) en que los cambios de esquema a la fecha y hora se realizaron los tipos de servidor, el comportamiento esperado es como sigue:  
+ Cuando se ejecuta una aplicación de cliente de nivel inferior con un [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o posterior) en los cambios de esquema a la fecha y hora se han realizado los tipos de servidor, el comportamiento esperado es como sigue:  
   
 |Tipo de SQL Server 2005|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o posterior) Tipo|Tipo de cliente ODBC|Conversión del resultado (SQL a C)|Conversión de parámetros (C a SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "37426274"
 ||Time(7)|SQL_C_TIME|Se produce un error: literal de hora no válido.|ACEPTAR (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Se produce un error: literal de hora no válido.|ACEPTAR (1)|  
 ||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|Aceptar|ACEPTAR (1)|  
-||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|Aceptar|El valor se redondeará a la fracción 1/300 de segundo por conversión del cliente.|  
+||datetime2 (7)|SQL_C_TYPE_TIMESTAMP|Aceptar|El valor se redondeará a la fracción 1/300 de segundo por conversión del cliente.|  
 |Smalldatetime|date|SQL_C_TYPE_DATE|Aceptar|Aceptar|  
 |||SQL_C_TYPE_TIMESTAMP|Los campos de hora se establecen en cero.|OK (2)<br /><br /> Se produce un error si el campo de hora es distinto de cero. Funciona con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(0)|SQL_C_TYPE_TIME|Aceptar|Aceptar|  

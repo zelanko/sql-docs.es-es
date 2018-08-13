@@ -1,5 +1,5 @@
 ---
-title: Sys.database_event_session_actions (base de datos de SQL Azure) | Documentos de Microsoft
+title: Sys.database_event_session_actions (Azure SQL Database) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,35 +17,35 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 92b6aa34b8419c493f6da4dfe3b946b988899034
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a5f0a70cdf6f242b36c6cf9888d2bf9d0fc37d61
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182151"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549955"
 ---
-# <a name="sysdatabaseeventsessionactions-azure-sql-database"></a>Sys.database_event_session_actions (base de datos de SQL Azure)
+# <a name="sysdatabaseeventsessionactions-azure-sql-database"></a>sys.database_event_session_actions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Devuelve una fila por cada acción en cada evento de una sesión de eventos.  
   
 ||  
 |-|  
-|**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 y las versiones posteriores.|  
+|**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 y cualquier versión posterior.|  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Identificador de la sesión de eventos. No admite valores NULL.|  
 |event_id|**int**|Id. del evento. Este Id. es único dentro del objeto de sesión de eventos. No admite valores NULL.|  
-|name|**sysname**|El nombre de la acción. Acepta valores NULL.|  
+|NAME|**sysname**|El nombre de la acción. Acepta valores NULL.|  
 |paquete|**sysname**|Nombre del paquete de eventos que contiene el evento. Acepta valores NULL.|  
-|Módulo|**sysname**|Nombre del módulo que contiene el evento. Acepta valores NULL.|  
+|módulo|**sysname**|Nombre del módulo que contiene el evento. Acepta valores NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Necesita el permiso VIEW DATABASE STATE en el servidor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta vista tiene las siguientes cardinalidades de relación.  
   
 ||||  

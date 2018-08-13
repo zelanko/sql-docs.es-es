@@ -1,5 +1,5 @@
 ---
-title: Sys.column_master_keys (Transact-SQL) | Documentos de Microsoft
+title: Sys.column_master_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -32,30 +32,30 @@ caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7f961586da2bb4bd9a3169fe955d989557535ba7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 61b7c2eb43ec5d30dea98b7eda00f072f883793d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181781"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553015"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Devuelve una fila para cada clave maestra de base de datos agregado mediante la [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) instrucción. Cada fila representa una clave maestra de columna (CMK).  
+  Devuelve una fila para cada clave maestra de base de datos agregado mediante el [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) instrucción. Cada fila representa una clave maestra de columna (CMK).  
     
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|El nombre de la CMK.|  
 |**column_master_key_id**|**int**|Id. de la clave maestra de columna.|  
-|**create_date**|**datetime**|Fecha en que se creó la clave maestra de columna.|  
+|**create_date**|**datetime**|Fecha de que creación de la clave maestra de columna.|  
 |**modify_date**|**datetime**|Fecha en la que se modificó por última vez la clave maestra de columna.|  
-|**key_store_provider_name**|**sysname**|Nombre del proveedor para el almacén de claves maestras de columna que contiene la CMK. Los valores permitidos son:<br /><br /> MSSQL_CERTIFICATE_STORE: si el almacén de claves maestras de columna es un almacén de certificados.<br /><br /> Un valor definido por el usuario, si el almacén de claves maestras de columna es de un tipo personalizado.|  
-|**key_path**|**nvarchar(4000)**|Una columna de clave principal específico del almacén ruta de acceso de la clave. El formato de la ruta de acceso depende del tipo de almacén de clave maestra de columna. Ejemplo:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Para un almacén de claves maestras de columna personalizada, el programador es responsable de definir qué una ruta de acceso de clave es para el almacén de claves maestras de columna personalizado.|  
+|**key_store_provider_name**|**sysname**|Nombre del proveedor para el almacén de claves maestras de columna que contiene la CMK. Los valores permitidos son:<br /><br /> MSSQL_CERTIFICATE_STORE: si el almacén de claves maestras de columna es un certificado de Store.<br /><br /> Un valor definido por el usuario, si el almacén de claves maestras de columna es de un tipo personalizado.|  
+|**key_path**|**nvarchar(4000)**|Una columna de clave principal específico del almacén ruta de acceso de la clave. El formato de la ruta de acceso depende el tipo de almacén de clave maestra de columna. Ejemplo:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Para un almacén de claves maestras de columna personalizada, el desarrollador es responsable de definir lo que una ruta de acceso de clave es para el almacén de claves maestras de columna personalizada.|  
   
-## <a name="permissions"></a>Permissions  
- Requiere la **VIEW ANY COLUMN MASTER KEY** permiso.  
+## <a name="permissions"></a>Permisos  
+ Requiere el **VIEW ANY COLUMN MASTER KEY** permiso.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

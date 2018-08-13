@@ -23,18 +23,18 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7de332c09b586b1c3a7feba4097a940ba9f29a83
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bfb296c8224eb066c8e5f03f94436e05ce6cd4b4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467631"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561925"
 ---
 # <a name="sysdmtranversionstore-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve una tabla virtual que muestra todos los registros de versión del almacén de versiones. **Sys.dm_tran_version_store** es eficaz ejecutar, ya que consulta el almacén de versiones completo y el almacén de versiones puede ser muy grande.  
+  Devuelve una tabla virtual que muestra todos los registros de versión del almacén de versiones. **Sys.dm_tran_version_store** no es eficaz ejecutar porque consulta el almacén de versiones completo y el almacén de versiones puede ser muy grande.  
   
  Cada registro de versión se almacena como datos binarios junto con alguna información de estado o seguimiento. Al igual que los registros en tablas de base de datos, los registros del almacén de versiones se almacenan en páginas de 8.192 bytes. Si un registro supera los 8.192 bytes, se dividirá en dos registros diferentes.  
   
@@ -49,7 +49,7 @@ sys.dm_tran_version_store
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|Número de secuencia de la transacción que genera la versión de registro.|  
 |**version_sequence_num**|**bigint**|Número de secuencia del registro de versión. Este valor es único en la transacción que genera la versión.|  
@@ -62,7 +62,7 @@ sys.dm_tran_version_store
 |**record_length_second_part_in_bytes**|**smallint**|Longitud de la segunda parte del registro de versiones en bytes.|  
 |**record_image_second_part**|**varbinary(8000)**|Imagen binaria de la segunda parte del registro de versiones.|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Permisos
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   

@@ -1,5 +1,5 @@
 ---
-title: sp_recompile (Transact-SQL) | Documentos de Microsoft
+title: sp_recompile (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 484008523d109f8852cdef34911c52d8f081218f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7c04b6daf385a80f82dc39e1b1891f737e7fb19a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246143"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544645"
 ---
 # <a name="sprecompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,12 +46,12 @@ sp_recompile [ @objname = ] 'object'
   
 ## <a name="arguments"></a>Argumentos  
  [ @objname=] '*objeto*'  
- El nombre calificado o no calificado de un desencadenador, tabla, vista, procedimiento almacenado o función definida por el usuario de la base de datos actual. *objeto* es **nvarchar(776)**, no tiene ningún valor predeterminado. Si *objeto* es el nombre de un desencadenador de función definida por el usuario, el procedimiento almacenado, desencadenador o procedimiento almacenado o función se volverán a compilar la próxima vez que se ejecute. Si *objeto* es el nombre de una tabla o vista, todos los procedimientos almacenados, desencadenadores o funciones definidas por el usuario que hacen referencia a la tabla o vista se volverán a compilar la próxima vez que se ejecuten.  
+ El nombre calificado o no calificado de un desencadenador, tabla, vista, procedimiento almacenado o función definida por el usuario de la base de datos actual. *objeto* es **nvarchar(776)**, no tiene ningún valor predeterminado. Si *objeto* es el nombre de un desencadenador de función definido por el usuario, el procedimiento almacenado, desencadenador o procedimiento almacenado o función se volverá a compilar la próxima vez que se ejecute. Si *objeto* es el nombre de una tabla o vista, todos los procedimientos almacenados, desencadenadores o funciones definidas por el usuario que hacen referencia a la tabla o vista se recompilarán la próxima vez que se ejecuten.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o un número distinto de cero (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  sp_recompile busca un objeto solo en la base de datos actual.  
   
  Las consultas que utilizan los procedimientos almacenados o desencadenadores y funciones definidas por el usuario solo se optimizan cuando se compilan. A medida que se crean índices o se realizan otros cambios que afectan a las estadísticas de la base de datos, los procedimientos almacenados, desencadenadores y funciones definidas por el usuario compilados pueden perder eficacia. Al volver a compilar los procedimientos almacenados y desencadenadores que actúan sobre una tabla, puede volver a optimizar las consultas.  
@@ -59,7 +59,7 @@ sp_recompile [ @objname = ] 'object'
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vuelve a compilar automáticamente los procedimientos almacenados, desencadenadores y funciones definidas por el usuario cuando esto supone una mejora.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER en el objeto especificado.  
   
 ## <a name="examples"></a>Ejemplos  

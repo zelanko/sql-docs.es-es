@@ -1,5 +1,5 @@
 ---
-title: Ejecutar archivos de plantilla mediante el uso de la propiedad CommandText | Documentos de Microsoft
+title: Ejecutar archivos de plantilla con la propiedad CommandText | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,17 +21,17 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d96e75c3cd077b6985d76994cef35cb0b9dc7853
-ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5a6079aa56a74b85eddb9b9fa1135be008015cce
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35619502"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563989"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Ejecutar archivos de plantilla utilizando la propiedad CommandText
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Este ejemplo muestra cómo se pueden especificar archivos de plantilla que están compuestos de consultas SQL o XPath utilizando la CommandTextproperty. En lugar de especificar la consulta SQL o XPath como el valor de CommandText, puede especificar un nombre de archivo como el valor. En el ejemplo siguiente, la propiedad CommandType se especifica como SqlXmlCommandType.TemplateFile.  
+  En este ejemplo se muestra cómo se pueden especificar archivos de plantilla que están compuestos de consultas SQL o XPath utilizando el CommandTextproperty. En lugar de especificar la consulta SQL o XPath como el valor de CommandText, puede especificar un nombre de archivo como valor. En el ejemplo siguiente, se especifica la propiedad CommandType como SqlXmlCommandType.TemplateFile.  
   
  La aplicación de ejemplo ejecuta esta plantilla:  
   

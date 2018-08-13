@@ -22,15 +22,15 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e825d46a60fe8a0d27e54e1989658861f77a7c9a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 74363d1385e535fec2086f283b6f262e2cc9a7ab
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049993"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534165"
 ---
-# <a name="sqlxml-40-data-access-components---sqlxmloledb-provider"></a>SQLXML 4.0 Data Access Components: proveedor SQLXMLOLEDB
+# <a name="sqlxml-40-data-access-components---sqlxmloledb-provider"></a>Componentes de acceso a datos de SQLXML 4.0: proveedor SQLXMLOLEDB
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 incluye tres proveedores de datos que pueden insertar y recuperar datos XML de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   

@@ -1,5 +1,5 @@
 ---
-title: COLUMNAS (Transact-SQL) | Documentos de Microsoft
+title: Las columnas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 54467131c2360d961421dd90b43024febbf06883
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 8294d3cabda817f68999fc80de45171b09451d4e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238905"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536195"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,34 +37,34 @@ ms.locfileid: "33238905"
   
  Para recuperar información de estas vistas, especifique el nombre completo de **INFORMATION_SCHEMA ***.** view_name *.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Calificador de tabla.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nombre de esquema que contiene la tabla.<br /><br /> **\*\* Importante \* \***  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nombre de esquema que contiene la tabla.<br /><br /> **\*\* Importante \* \* ** no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
 |**TABLE_NAME**|**nvarchar (** 128 **)**|Nombre de la tabla.|  
 |**COLUMN_NAME**|**nvarchar (** 128 **)**|Nombre de columna.|  
 |**ORDINAL_POSITION**|**int**|Número de identificación de la columna.|  
 |**COLUMN_DEFAULT**|**nvarchar (** 4000 **)**|Valor predeterminado de la columna.|  
-|**IS_NULLABLE**|**varchar (** 3 **)**|Nulabilidad de la columna. Si esta columna permite valores NULL, devuelve YES. En caso contrario devuelve NO.|  
+|**IS_NULLABLE**|**varchar (** 3 **)**|Nulabilidad de la columna. Si esta columna permite valores NULL, esta columna devuelve YES. En caso contrario devuelve NO.|  
 |**DATA_TYPE**|**nvarchar (** 128 **)**|Tipo de datos proporcionado por el sistema.|  
-|**CAMPO CHARACTER_MAXIMUM_LENGTH**|**int**|Longitud máxima, en caracteres, de los datos binarios, de caracteres, o de texto e imagen.<br /><br /> -1 para **xml** y los datos de tipo de valor grande. En caso contrario se devuelve NULL. Para obtener más información, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
-|**CHARACTER_OCTET_LENGTH**|**int**|Longitud máxima, en bytes, para datos binarios, datos de caracteres o datos de texto e imagen.<br /><br /> -1 para **xml** y los datos de tipo de valor grande. En caso contrario se devuelve NULL.|  
+|**CAMPO CHARACTER_MAXIMUM_LENGTH**|**int**|Longitud máxima, en caracteres, de los datos binarios, de caracteres, o de texto e imagen.<br /><br /> -1 para **xml** y datos de tipo de valor grande. En caso contrario se devuelve NULL. Para obtener más información, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
+|**CHARACTER_OCTET_LENGTH**|**int**|Longitud máxima, en bytes, para datos binarios, datos de caracteres o datos de texto e imagen.<br /><br /> -1 para **xml** y datos de tipo de valor grande. En caso contrario se devuelve NULL.|  
 |**CAMPO NUMERIC_PRECISION**|**tinyint**|Precisión de los datos numéricos aproximados, datos numéricos exactos, datos enteros o datos monetarios. En caso contrario se devuelve NULL.|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|Base de la precisión de datos numéricos aproximados, datos numéricos exactos, datos enteros o datos monetarios. En caso contrario se devuelve NULL.|  
 |**NUMERIC_SCALE**|**int**|Escala de datos numéricos aproximados, datos numéricos exactos, datos enteros o datos monetarios. En caso contrario se devuelve NULL.|  
 |**DATETIME_PRECISION**|**smallint**|Código de subtipo para **datetime** e ISO **intervalo** tipos de datos. Para los demás tipos de datos, se devuelve NULL.|  
-|**CHARACTER_SET_CATALOG**|**nvarchar (** 128 **)**|Devuelve **principal**. Esto indica la base de datos en el que se encuentra, el juego de caracteres si la columna contiene datos de caracteres o **texto** tipo de datos. En caso contrario se devuelve NULL.|  
+|**CHARACTER_SET_CATALOG**|**nvarchar (** 128 **)**|Devuelve **maestro**. Esto indica a la base de datos en el que se encuentra, el juego de caracteres si la columna de datos de caracteres o **texto** tipo de datos. En caso contrario se devuelve NULL.|  
 |**CHARACTER_SET_SCHEMA**|**nvarchar (** 128 **)**|Siempre devuelve NULL.|  
 |**CHARACTER_SET_NAME**|**nvarchar (** 128 **)**|Devuelve el nombre único para el juego de caracteres si esta columna contiene datos de caracteres o **texto** tipo de datos. En caso contrario se devuelve NULL.|  
 |**COLLATION_CATALOG**|**nvarchar (** 128 **)**|Siempre devuelve NULL.|  
 |**COLLATION_SCHEMA**|**nvarchar (** 128 **)**|Siempre devuelve NULL.|  
-|**COLLATION_NAME**|**nvarchar (** 128 **)**|Devuelve el nombre único para la intercalación si la columna contiene datos de caracteres o **texto** tipo de datos. En caso contrario se devuelve NULL.|  
+|**COLLATION_NAME**|**nvarchar (** 128 **)**|Devuelve el nombre único para la intercalación si la columna de datos de caracteres o **texto** tipo de datos. En caso contrario se devuelve NULL.|  
 |**DOMAIN_CATALOG**|**nvarchar (** 128 **)**|Si la columna es de un tipo de datos de alias, esta columna es el nombre de la base de datos en que se creó el tipo de datos definido por el usuario. En caso contrario se devuelve NULL.|  
-|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Si la columna es de un tipo de datos definido por el usuario, devuelve el nombre del esquema del tipo de datos definido por el usuario. En caso contrario se devuelve NULL.<br /><br /> **\*\* Importante \* \***  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un tipo de datos. La única manera confiable de localizar el esquema de un tipo consiste en utilizar la función TYPEPROPERTY.|  
+|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Si la columna es de un tipo de datos definido por el usuario, devuelve el nombre del esquema del tipo de datos definido por el usuario. En caso contrario se devuelve NULL.<br /><br /> **\*\* Importante \* \* ** no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un tipo de datos. La única manera confiable de localizar el esquema de un tipo consiste en utilizar la función TYPEPROPERTY.|  
 |**NOMBRE_DOMINIO**|**nvarchar (** 128 **)**|Si la columna es de un tipo de datos definido por el usuario, esta columna es el nombre del tipo de datos definido por el usuario. En caso contrario se devuelve NULL.|  
   
-## <a name="remarks"></a>Comentarios  
- El **ORDINAL_POSITION** columna de la **INFORMATION_SCHEMA. COLUMNAS** vista no es compatible con el patrón de bits de las columnas devueltas por la función COLUMNS_UPDATED. Para obtener un patrón de bits que es compatible con COLUMNS_UPDATED, debe hacer referencia a la **ColumnID** propiedad de la función del sistema COLUMNPROPERTY al consultar el **INFORMATION_SCHEMA. COLUMNAS** vista. Por ejemplo:  
+## <a name="remarks"></a>Notas  
+ El **ORDINAL_POSITION** columna de la **INFORMATION_SCHEMA. COLUMNAS** vista no es compatible con el patrón de bits de las columnas devueltas por la función COLUMNS_UPDATED. Para obtener un patrón de bits que es compatible con COLUMNS_UPDATED, debe hacer referencia a la **ColumnID** propiedad de la función de sistema COLUMNPROPERTY al consultar el **INFORMATION_SCHEMA. COLUMNAS** vista. Por ejemplo:  
   
 ```  
 USE AdventureWorks2012;  

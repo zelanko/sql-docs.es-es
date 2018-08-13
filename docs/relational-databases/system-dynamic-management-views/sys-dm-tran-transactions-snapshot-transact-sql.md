@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_tran_transactions_snapshot (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_tran_transactions_snapshot (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7e862da4552d605993a5dde7913fe1bec5856603
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bdf2bfdcd5f0f6963660b865053765351f224e31
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464321"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555485"
 ---
 # <a name="sysdmtrantransactionssnapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34464321"
   
 -   Identificar modificaciones de datos pasadas por alto por una transacción de instantáneas determinada. Si existe una transacción activa cuando comienza una transacción de instantáneas, todas las modificaciones de datos de la primera, incluso después de confirmarla, se pasan por alto en la transacción de instantáneas.  
   
- Por ejemplo, considere el siguiente resultado de **sys.dm_tran_transactions_snapshot**:  
+ Por ejemplo, considere la siguiente salida de **sys.dm_tran_transactions_snapshot**:  
   
 ```  
 transaction_sequence_num snapshot_id snapshot_sequence_num  
@@ -71,18 +71,18 @@ dm_tran_transactions_snapshot
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|Número de secuencia de transacción (XSN) de una transacción de instantáneas.|  
 |**snapshot_id**|**int**|Id. de instantánea de cada instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] iniciada con lectura confirmada y que utiliza las versiones de fila. Este valor se utiliza para generar una vista de la base de datos transaccionalmente coherente que admita cada consulta que se ejecute en una lectura confirmada utilizando las versiones de fila.|  
 |**snapshot_sequence_num**|**bigint**|Número de secuencia de una transacción que estaba activa cuando se inició la transacción de instantánea.|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Permisos
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando se inicia una transacción de instantáneas, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] registra todas las transacciones activas en ese momento determinado. **Sys.dm_tran_transactions_snapshot** proporciona esta información de todas las transacciones de instantáneas actualmente activas.  
   
  Cada transacción se identifica mediante un número de secuencia que se asigna cuando se inicia la transacción. Las transacciones empiezan en el momento en que se ejecuta una instrucción BEGIN TRANSACTION o BEGIN WORK. No obstante, [!INCLUDE[ssDE](../../includes/ssde-md.md)] asigna el número de secuencia de la transacción con la ejecución de la primera instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] que tiene acceso a datos después de la instrucción BEGIN TRANSACTION o BEGIN WORK. Los números de secuencia de la transacción se incrementan de uno en uno.  

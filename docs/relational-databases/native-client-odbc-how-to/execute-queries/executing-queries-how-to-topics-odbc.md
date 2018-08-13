@@ -1,5 +1,5 @@
 ---
-title: Ejecutar consultas (ODBC) de temas de procedimientos | Microsoft Docs
+title: Ejecutar consultas (ODBC) de temas | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: 3594c908-192e-41ea-9db0-7045da8812b5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9a477162483297046f098807c334b0103708ce88
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 92cc962335c4cbd4f9360c917043ab465ab6b8a1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415544"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558385"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>Temas de procedimientos de ejecución de consultas (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,11 +31,11 @@ ms.locfileid: "37415544"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Usar una instrucción &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/use-a-statement-odbc.md)  
+-   [Utilice una instrucción &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/use-a-statement-odbc.md)  
   
 -   [Establecer opciones de Cursor &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/set-cursor-options-odbc.md)  
   
--   [Ejecutar directamente una instrucción &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/execute-a-statement-directly-odbc.md)  
+-   [Ejecutar una instrucción directamente &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/execute-a-statement-directly-odbc.md)  
   
 -   [Preparar y ejecutar una instrucción &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/prepare-and-execute-a-statement-odbc.md)  
   

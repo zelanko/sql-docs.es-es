@@ -1,5 +1,5 @@
 ---
-title: sp_column_privileges (Transact-SQL) | Documentos de Microsoft
+title: sp_column_privileges (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5071d68cfe594b2b4266a5c83398ebdd5a9bfbea
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4742d442cf410d936706d5a67b50e08732ad253c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239775"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545611"
 ---
 # <a name="spcolumnprivileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,20 +52,20 @@ sp_column_privileges [ @table_name = ] 'table_name'
  Es la tabla que se usa para devolver información de catálogo. *table_name* es **sysname**, no tiene ningún valor predeterminado. No se admite la coincidencia de patrón de caracteres comodín.  
   
  [ @table_owner=] '*table_owner*'  
- Es el propietario de la tabla que se utiliza para devolver información de catálogo. *TABLE_OWNER* es **sysname**, su valor predeterminado es null. No se admite la coincidencia de patrón de caracteres comodín. Si *table_owner* no se especifica, se aplican las reglas predeterminadas de visibilidad de tabla del sistema subyacente de administración de base de datos (DBMS).  
+ Es el propietario de la tabla que se utiliza para devolver información de catálogo. *TABLE_OWNER* es **sysname**, su valor predeterminado es null. No se admite la coincidencia de patrón de caracteres comodín. Si *table_owner* no se especifica, se aplican las reglas predeterminadas de visibilidad de tabla del sistema de administración base de datos (DBMS) subyacente.  
   
- Si el usuario actual es propietario de una tabla con el nombre especificado, se devuelven las columnas de esa tabla. Si *table_owner* no se especifica y el usuario actual no posee una tabla con los valores especificados *table_name*, sp_columnprivileges buscan una tabla con los valores especificados *table_name* pertenecen al propietario de la base de datos. Si hay una, se devuelven las columnas de esa tabla.  
+ Si el usuario actual es propietario de una tabla con el nombre especificado, se devuelven las columnas de esa tabla. Si *table_owner* no se especifica y el usuario actual no posee una tabla con los valores especificados *table_name*, sp_columnprivileges buscan una tabla con los valores especificados *table_name* que pertenezca al propietario de la base de datos. Si hay una, se devuelven las columnas de esa tabla.  
   
  [ @table_qualifier=] '*table_qualifier*'  
  Es el nombre del calificador de tabla. *TABLE_QUALIFIER* es *sysname*, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para tablas (*calificador ***.*** propietario ***.*** nombre*). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
  [ @column_name=] '*columna*'  
- Es una sola columna que se usa cuando solo se obtiene una columna de información del catálogo. *columna* es **nvarchar (** 384 **)**, su valor predeterminado es null. Si *columna* no es se especifica, se devuelven todas las columnas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *columna* representa el nombre de columna como se muestra en la tabla sys.columns. *columna* puede incluir caracteres comodín mediante caracteres comodín patrones de coincidencia del DBMS subyacente. Para obtener una interoperabilidad máxima, el cliente de puerta de enlace solo debe dar por supuesta la coincidencia de patrón estándar de ISO (caracteres comodín % y _).  
+ Es una sola columna que se usa cuando solo se obtiene una columna de información del catálogo. *columna* es **nvarchar (** 384 **)**, su valor predeterminado es null. Si *columna* no es se especifica, se devuelven todas las columnas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *columna* representa el nombre de columna como se muestra en la tabla sys.columns. *columna* puede incluir caracteres comodín mediante patrones del DBMS subyacente de coincidencia caracteres comodín. Para obtener una interoperabilidad máxima, el cliente de puerta de enlace solo debe dar por supuesta la coincidencia de patrón estándar de ISO (caracteres comodín % y _).  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  sp_column_privileges es equivalente a SQLColumnPrivileges en ODBC. Los resultados devueltos se ordenan por TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME, COLUMN_NAME y PRIVILEGE.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |TABLE_QUALIFIER|**sysname**|Nombre del calificador de tabla. Este campo puede ser NULL.|  
 |TABLE_OWNER|**sysname**|Nombre de propietario de la tabla. Este campo siempre devuelve un valor.|  
@@ -76,10 +76,10 @@ sp_column_privileges [ @table_name = ] 'table_name'
 |PRIVILEGE|**varchar (** 32 **)**|Uno de los permisos de columna disponibles. Los permisos de columna pueden ser uno de los valores siguientes (u otros valores compatibles con el origen de datos cuando se define la implementación):<br /><br /> SELECT = GRANTEE puede recuperar datos de las columnas.<br /><br /> INSERT = GRANTEE puede proporcionar datos para esta columna cuando se inserten nuevas filas (por parte de GRANTEE) en la tabla.<br /><br /> UPDATE = GRANTEE puede modificar datos existentes en la columna.<br /><br /> REFERENCES = GRANTEE puede hacer referencia a una columna de una tabla externa en una relación entre clave principal y clave externa. Las relaciones entre clave principal y clave externa se definen mediante restricciones de tabla.|  
 |IS_GRANTABLE|**varchar (** 3 **)**|Indica si se permite que GRANTEE conceda permisos a otros usuarios (a menudo se hace referencia a esta operación como permiso “conceder por concesión”). Puede ser YES, NO o NULL. Un valor desconocido, o NULL, hace referencia a un origen de datos para el que “conceder por concesión” no se aplica.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los permisos se conceden mediante la instrucción GRANT y se retiran mediante la instrucción REVOKE.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  
   
 ## <a name="examples"></a>Ejemplos  

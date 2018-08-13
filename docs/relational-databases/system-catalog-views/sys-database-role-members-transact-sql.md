@@ -1,5 +1,5 @@
 ---
-title: Sys.database_role_members (Transact-SQL) | Microsoft Docs
+title: Sys.database_role_members (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql
@@ -24,18 +24,18 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ac347dbb4748c575b8f4388952a45315f28a5b01
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 50c617d4dd3467d30cfac1d4628f8bee50edc3a7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001297"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537835"
 ---
 # <a name="sysdatabaserolemembers-transact-sql"></a>sys.database_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Devuelve una fila por cada miembro de cada rol de base de datos.  Los usuarios de base de datos, roles de aplicación y otros roles de base de datos pueden ser miembros de un rol de base de datos. Para agregar miembros a un rol, use la [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) instrucción con el `ADD MEMBER` opción. Combinar con [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) para devolver los nombres de los `principal_id` valores.
+  Devuelve una fila por cada miembro de cada rol de base de datos.  Los usuarios de base de datos, roles de aplicación y otros roles de base de datos pueden ser miembros de un rol de base de datos. Para agregar miembros a un rol, use la [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) instrucción con el `ADD MEMBER` opción. Unir con [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) para devolver los nombres de los `principal_id` valores.
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  

@@ -1,5 +1,5 @@
 ---
-title: sp_fkeys (Transact-SQL) | Documentos de Microsoft
+title: sp_fkeys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fdb582cf8e77e61d7723ea1c6ed2e854ef8f6940
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: fc012a7b05f2387756e25bfb86c93896d3f94190
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258627"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536665"
 ---
 # <a name="spfkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,23 +50,23 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
 ## <a name="arguments"></a>Argumentos  
  [ @pktable_name=] '*pktable_name*'  
- Es el nombre de la tabla, con la clave externa, utilizada para devolver información del catálogo. *pktable_name* es **sysname**, su valor predeterminado es null. No se admite la coincidencia de patrón de caracteres comodín. Este parámetro o el *fktable_name* parámetro, o ambos, deben especificarse.  
+ Es el nombre de la tabla, con la clave externa, utilizada para devolver información del catálogo. *pktable_name* es **sysname**, su valor predeterminado es null. No se admite la coincidencia de patrón de caracteres comodín. Este parámetro o el *fktable_name* parámetro, o ambos, deben proporcionarse.  
   
  [ @pktable_owner=] '*pktable_owner*'  
- Es el nombre del propietario de la tabla (con la clave principal) utilizada para devolver información del catálogo. *pktable_owner* es **sysname**, su valor predeterminado es null. No se admite la coincidencia de patrón de caracteres comodín. Si *pktable_owner* no se especifica, se aplican las reglas de visibilidad de tabla predeterminadas del DBMS subyacente.  
+ Es el nombre del propietario de la tabla (con la clave principal) se usa para devolver información del catálogo. *pktable_owner* es **sysname**, su valor predeterminado es null. No se admite la coincidencia de patrón de caracteres comodín. Si *pktable_owner* no se especifica, se aplican las reglas predeterminadas de visibilidad de tabla del DBMS subyacente.  
   
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el usuario actual es propietario de una tabla con el nombre especificado, se devuelven las columnas de esa tabla. Si *pktable_owner* no se especifica y el usuario actual no posee una tabla con los valores especificados *pktable_name*, el procedimiento busca una tabla con los valores especificados *pktable_name* pertenecen al propietario de la base de datos. Si hay una, se devuelven las columnas de esa tabla.  
+ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el usuario actual es propietario de una tabla con el nombre especificado, se devuelven las columnas de esa tabla. Si *pktable_owner* no se especifica y el usuario actual no posee una tabla con los valores especificados *pktable_name*, el procedimiento busca una tabla con los valores especificados *pktable_name* que pertenezca al propietario de la base de datos. Si hay una, se devuelven las columnas de esa tabla.  
   
  [ @pktable_qualifier =] '*pktable_qualifier*'  
- Es el nombre del calificador de la tabla (con la clave principal). *pktable_qualifier* es de tipo sysname y su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para tablas (*qualifier.owner.name*). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el calificador representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
+ Es el nombre del calificador de la tabla (con la clave principal). *pktable_qualifier* es de tipo sysname y su valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para tablas (*qualifier.owner.name*). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el calificador representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
  [ @fktable_name=] '*fktable_name*'  
- Es el nombre de la tabla, con una clave externa, utilizada para devolver información del catálogo. *fktable_name* es de tipo sysname y su valor predeterminado es null. No se admite la coincidencia de patrón de caracteres comodín. Este parámetro o el *pktable_name* parámetro, o ambos, deben especificarse.  
+ Es el nombre de la tabla, con una clave externa, utilizada para devolver información del catálogo. *fktable_name* es de tipo sysname y su valor predeterminado es NULL. No se admite la coincidencia de patrón de caracteres comodín. Este parámetro o el *pktable_name* parámetro, o ambos, deben proporcionarse.  
   
  [ @fktable_owner =] '*fktable_owner*'  
- Es el nombre del propietario de la tabla, con una clave externa, utilizada para devolver información del catálogo. *fktable_owner* es **sysname**, su valor predeterminado es null. No se admite la coincidencia de patrón de caracteres comodín. Si *fktable_owner* no se especifica, se aplican las reglas de visibilidad de tabla predeterminadas del DBMS subyacente.  
+ Es el nombre del propietario de la tabla, con una clave externa, utilizada para devolver información del catálogo. *fktable_owner* es **sysname**, su valor predeterminado es null. No se admite la coincidencia de patrón de caracteres comodín. Si *fktable_owner* no se especifica, se aplican las reglas predeterminadas de visibilidad de tabla del DBMS subyacente.  
   
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el usuario actual es propietario de una tabla con el nombre especificado, se devuelven las columnas de esa tabla. Si *fktable_owner* no se especifica y el usuario actual no posee una tabla con los valores especificados *fktable_name*, el procedimiento busca una tabla con los valores especificados *fktable_name* pertenecen al propietario de la base de datos. Si hay una, se devuelven las columnas de esa tabla.  
+ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el usuario actual es propietario de una tabla con el nombre especificado, se devuelven las columnas de esa tabla. Si *fktable_owner* no se especifica y el usuario actual no posee una tabla con los valores especificados *fktable_name*, el procedimiento busca una tabla con los valores especificados *fktable_name* que pertenezca al propietario de la base de datos. Si hay una, se devuelven las columnas de esa tabla.  
   
  [ @fktable_qualifier=] '*fktable_qualifier*'  
  Es el nombre del calificador de la tabla (con una clave externa). *fktable_qualifier* es **sysname**, su valor predeterminado es null. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el calificador representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
@@ -76,7 +76,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |PKTABLE_QUALIFIER|**sysname**|Nombre del calificador de la tabla (con la clave principal). Este campo puede ser NULL.|  
 |PKTABLE_OWNER|**sysname**|Nombre del propietario de la tabla (con la clave principal). Este campo siempre devuelve un valor.|  
@@ -94,7 +94,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
  Los resultados devueltos se ordenan por FKTABLE_QUALIFIER, FKTABLE_OWNER, FKTABLE_NAME y KEY_SEQ.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La codificación de aplicaciones que incluye tablas con claves externas deshabilitadas se puede implementar si:  
   
 -   Se deshabilita temporalmente la comprobación de restricciones (ALTER TABLE NOCHECK o CREATE TABLE NOT FOR REPLICATION) mientras se trabaja con las tablas y, después, se vuelve a habilitar.  
@@ -105,7 +105,7 @@ Si se proporciona el nombre de tabla de la clave principal y el nombre de tabla 
   
 El procedimiento almacenado sp_fkeys es equivalente a SQLForeignKeys en ODBC.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere `SELECT` permiso en el esquema.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -119,7 +119,7 @@ EXEC sp_fkeys @pktable_name = N'Department'
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- En el siguiente ejemplo se recupera una lista de claves externas de la tabla `DimDate` en la base de datos `AdventureWorksPDW2012`. No se devuelven filas porque [!INCLUDE[ssDW](../../includes/ssdw-md.md)] no admite claves externas.  
+ En el siguiente ejemplo se recupera una lista de claves externas de la tabla `DimDate` en la base de datos `AdventureWorksPDW2012`. No se devuelven filas porque [!INCLUDE[ssDW](../../includes/ssdw-md.md)] no es compatible con las claves externas.  
   
 ```sql  
 EXEC sp_fkeys @pktable_name = N'DimDate;  

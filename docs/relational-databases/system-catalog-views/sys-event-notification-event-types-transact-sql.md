@@ -1,5 +1,5 @@
 ---
-title: Sys.event_notification_event_types (Transact-SQL) | Documentos de Microsoft
+title: Sys.event_notification_event_types (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,26 +24,26 @@ caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f8399316e6342929214cd4ff8a387444f71d9438
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1964856fb7a0a2233c8a7fd4721a7186dcf36d7c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177931"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533395"
 ---
 # <a name="syseventnotificationeventtypes-transact-sql"></a>sys.event_notification_event_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Devuelve una fila para cada evento o grupo de eventos en el que se puede activar una notificación de eventos.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Tipo**|**int**|Tipo de evento o grupo de eventos que activa una notificación de eventos.|  
 |**type_name**|**nvarchar(128)**|Nombre de un evento o grupo de eventos. Esto se puede especificar en la cláusula FOR de una [CREATE EVENT NOTIFICATION](../../t-sql/statements/create-event-notification-transact-sql.md) instrucción.|  
 |**parent_type**|**int**|Tipo de grupo de eventos que es el elemento primario del evento o grupo de eventos.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

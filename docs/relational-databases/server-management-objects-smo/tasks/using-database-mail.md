@@ -1,5 +1,5 @@
 ---
-title: Usar el correo electrónico de base de datos | Microsoft Docs
+title: Usar el correo electrónico de base de datos | Documentos de Microsoft
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b1e816228829d31d9ab114143ef45e806f226850
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7a6a71afa455de7770efc0a928324e48ec00dc1b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061783"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539825"
 ---
 # <a name="using-database-mail"></a>Utilizar el correo electrónico de base de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

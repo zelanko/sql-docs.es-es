@@ -19,13 +19,13 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 653cf3fc07cbdf9178c9554dbc602671607b9f3b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 85e069c731bb8ea4429ff107a97fdc9c227538c7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430734"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555515"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,24 +45,24 @@ HRESULT BCPInit(
 ```  
   
 ## <a name="remarks"></a>Notas  
- El **BCPInit** método debe llamarse antes que cualquier otro método de copia masiva. El **BCPInit** método realiza las inicializaciones necesarias para una copia masiva de datos entre la estación de trabajo y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Es necesario llamar al método **BCPInit** antes de llamar a cualquier otro método de copia masiva. El método **BCPInit** realiza las inicializaciones necesarias para una copia masiva de datos entre la estación de trabajo y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- El **BCPInit** método examina la estructura de la tabla base de datos origen o destino, no el archivo de datos. Especifica los valores de formato de datos del archivo de datos basándose en cada columna de la tabla de base de datos, la vista o el conjunto de resultados de la instrucción SELECT. Esta especificación incluye el tipo de datos de cada columna, la presencia o ausencia de cadenas de bytes de un indicador de longitud o nulo y de terminador en los datos, y el ancho de los tipos de datos de longitud fija. El **BCPInit** método establece estos valores como sigue:  
+ El método **BCPInit** examina la estructura del origen de base de datos o la tabla de destino, no el archivo de datos. Especifica los valores de formato de datos del archivo de datos basándose en cada columna de la tabla de base de datos, la vista o el conjunto de resultados de la instrucción SELECT. Esta especificación incluye el tipo de datos de cada columna, la presencia o ausencia de cadenas de bytes de un indicador de longitud o nulo y de terminador en los datos, y el ancho de los tipos de datos de longitud fija. El método **BCPInit** establece estos valores como sigue:  
   
 -   El tipo de datos especificado es el tipo de datos de la columna de la tabla de base de datos, la vista o el conjunto de resultados de una instrucción SELECT. El tipo de datos es enumerado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos nativo especificados en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivo de encabezado de Native Client (sqlncli.h). Sus valores están en el modelo de BCP_TYPE_XXX. Los datos están representados en el formato del equipo. Es decir, los datos de una columna de tipo de datos entero están representados por una secuencia de cuatro bytes "big endian" o "little endian" basada en el equipo que creó el archivo de datos.  
   
--   Si un tipo de datos de base de datos es de longitud fija, los datos del archivo de datos también serán de longitud fija. Métodos de copia masiva que procesan datos (por ejemplo, [Ibcpsession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpexec-ole-db.md)) analizan filas de datos que se esperan que la longitud de los datos en el archivo de datos sea idéntica a la longitud de los datos especificados en la tabla de base de datos, ver o seleccionar columna lista. Por ejemplo, los datos de una columna de base de datos definidos como `char(13)` deben estar representados por 13 caracteres por cada fila de datos del archivo. Los datos de longitud fija pueden tener como prefijo un indicador nulo si la columna de base de datos permite valores nulos.  
+-   Si un tipo de datos de base de datos es de longitud fija, los datos del archivo de datos también serán de longitud fija. Los métodos de copia masiva que procesan los datos (por ejemplo, [IBCPSession::BCPExec](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpexec-ole-db.md)) analizan las filas de datos esperando que la longitud de los datos del archivo de datos sea idéntica a la longitud de los datos especificados en la tabla de base de datos, la vista o la lista de columnas de la instrucción SELECT. Por ejemplo, los datos de una columna de base de datos definidos como `char(13)` deben estar representados por 13 caracteres por cada fila de datos del archivo. Los datos de longitud fija pueden tener como prefijo un indicador nulo si la columna de base de datos permite valores nulos.  
   
 -   Cuando se copian datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el archivo de datos debe tener datos para cada columna de la tabla de base de datos. Cuando se copian datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los datos de todas las columnas de la tabla de base de datos, la vista o el conjunto de resultados de la instrucción SELECT se copian en el archivo de datos.  
   
--   Cuando se copian datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la posición ordinal de una columna en el archivo de datos debe ser idéntica a la de la columna en la tabla de base de datos. Cuando se copian datos desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **BCPExec** método coloca los datos basándose en la posición ordinal de la columna en la tabla de base de datos.  
+-   Cuando se copian datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la posición ordinal de una columna en el archivo de datos debe ser idéntica a la de la columna en la tabla de base de datos. Cuando se copian datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el método **BCPExec** coloca los datos en función de la posición ordinal de la columna en la tabla de base de datos.  
   
--   Si un tipo de datos de base de datos es de longitud variable (por ejemplo, `varbinary(22)`) o si una columna de base de datos puede contener valores NULL, se antepone a los datos del archivo de datos un indicador de longitud o nulo. El ancho del indicador varía en función del tipo de datos y de la versión de copia masiva. El [ibcpsession:: Bcpcontrol](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) opción BCP_OPTION_FILEFMT del método proporciona compatibilidad entre los archivos de datos de copia masiva anteriores y los servidores que ejecutan versiones posteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indicando cuándo el ancho de los indicadores de la datos están inferior a lo esperado.  
+-   Si un tipo de datos de base de datos es de longitud variable (por ejemplo, `varbinary(22)`) o si una columna de base de datos puede contener valores NULL, se antepone a los datos del archivo de datos un indicador de longitud o nulo. El ancho del indicador varía en función del tipo de datos y de la versión de copia masiva. La opción [IBCPSession::BCPControl](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) del método BCP_OPTION_FILEFMT proporciona compatibilidad entre los archivos de datos de copia masiva anteriores y los servidores donde se ejecutan versiones posteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al indicar cuándo el ancho de los indicadores de los datos es inferior a lo esperado.  
   
 > [!NOTE]  
->  Para cambiar los valores de formato de datos especificados para un archivo de datos, use el [ibcpsession:: BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) y [ibcpsession:: BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) métodos.  
+>  Para cambiar los valores de formato de datos especificados para un archivo de datos, use los métodos [IBCPSession::BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) e [IBCPSession::BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md).  
   
- Las copias masivas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden optimizar para las tablas que no contienen índices estableciendo la opción de base de datos **select / into**.  
+ Las copias masivas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden optimizar para las tablas que no contienen índices estableciendo la opción de base de datos **select into/bulkcopy**.  
   
 ## <a name="arguments"></a>Argumentos  
  *pwszTable*[in]  
@@ -70,7 +70,7 @@ HRESULT BCPInit(
   
  Si el argumento eDirection está establecido en BCP_DIRECTION_OUT, el argumento pwszTable puede ser el nombre de una vista de base de datos.  
   
- Si el argumento eDirection está establecido en BCP_DIRECTION_OUT y se especifica una instrucción SELECT utilizando el **BCPControl** método antes de la **BCPExec** se invoca el *pwszTable*argumento debe establecerse en NULL.  
+ Si el argumento eDirection está establecido en BCP_DIRECTION_OUT y se especifica una instrucción SELECT con el método **BCPControl** antes de llamar al método **BCPExec**, el argumento *pwszTable* tiene que establecerse en NULL.  
   
  *pwszDataFile*[in]  
  Nombre del archivo de usuario en o del que se va a copiar.  
@@ -86,7 +86,7 @@ HRESULT BCPInit(
  El método se ha llevado a cabo de forma correcta.  
   
  E_FAIL  
- Se produjo un error específico del proveedor ' para obtener información detallada, use el [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) interfaz.  
+ Se ha producido un error específico del proveedor; para obtener información detallada, use la interfaz [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).  
   
  E_OUTOFMEMORY  
  Error de memoria insuficiente.  

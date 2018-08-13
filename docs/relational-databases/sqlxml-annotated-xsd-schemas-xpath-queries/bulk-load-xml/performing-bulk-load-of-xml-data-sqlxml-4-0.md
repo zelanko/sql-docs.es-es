@@ -1,5 +1,5 @@
 ---
-title: Realizar la carga masiva de datos XML (SQLXML 4.0) | Microsoft Docs
+title: Realizar la carga masiva de datos XML (SQLXML 4.0) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c4087c97debb92415c9a4e72a4fc29ffeaf81713
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 068e8044f083dacd547c39da3a5c1e8b7f7fe79e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032493"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561535"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>Realizar la carga masiva de datos XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

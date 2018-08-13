@@ -1,5 +1,5 @@
 ---
-title: Sys.Objects (Transact-SQL) | Documentos de Microsoft
+title: Sys.Objects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: sql
@@ -26,13 +26,13 @@ ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cfbf6fa606834c9582392635670b5f04fe9995a3
-ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 23053e11757682180c78a594632b75a466e126bb
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225383"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552965"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "34225383"
  Para obtener más información, vea [Funciones escalares definidas por el usuario para OLTP en memoria](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
 > [!NOTE]  
->  sys.objects no muestra los desencadenadores DDL, porque no tienen el ámbito de esquema. Todos los desencadenadores, tanto DML como DDL, se encuentran en [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md). Sys.Triggers admite una mezcla de reglas de ámbito de nombre para los distintos tipos de desencadenadores.  
+>  sys.objects no muestra los desencadenadores DDL, porque no tienen el ámbito de esquema. Todos los desencadenadores tanto DML como DDL, se encuentran en [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md). Sys.Triggers admite una mezcla de reglas de ámbito con nombre para los distintos tipos de desencadenadores.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|Nombre del objeto.|  
+|NAME|**sysname**|Nombre del objeto.|  
 |object_id|**int**|Número de identificación del objeto. Es único en una base de datos.|  
 |principal_id|**int**|Identificador del propietario individual, si es diferente del propietario del esquema. De forma predeterminada, los objetos contenidos en el esquema pertenecen al propietario del esquema. No obstante, es posible especificar un propietario alternativo mediante la instrucción ALTER AUTHORIZATION para cambiar la propiedad.<br /><br /> Es NULL si no existe ningún propietario individual alternativo.<br /><br /> Es NULL si el tipo de objeto es uno de los siguientes:<br /><br /> C = restricción CHECK<br /><br /> D = DEFAULT (restricción o independiente)<br /><br /> F = Restricción FOREIGN KEY<br /><br /> PK = Restricción PRIMARY KEY<br /><br /> R = Regla (estilo antiguo, independiente)<br /><br /> TA = Desencadenador de ensamblado (integración CLR)<br /><br /> TR = Desencadenador SQL<br /><br /> UQ = Restricción UNIQUE|  
 |schema_id|**int**|Id. del esquema que contiene el objeto.<br /><br /> Los objetos de sistema con ámbito de esquema siempre están contenidos en los esquemas sys o INFORMATION_SCHEMA.|  
@@ -59,10 +59,10 @@ ms.locfileid: "34225383"
 |is_published|**bit**|El objeto se publica.|  
 |is_schema_published|**bit**|Solo se ha publicado el esquema del objeto.|  
   
-## <a name="remarks"></a>Comentarios  
- Puede aplicar el [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md), [OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md), y [OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md)las funciones integradas de () para los objetos mostrados en sys.objects.  
+## <a name="remarks"></a>Notas  
+ Puede aplicar el [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md), [OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md), y [OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md)() de las funciones integradas para los objetos que se muestran en sys.objects.  
   
- Hay una versión de esta vista con el mismo esquema, denominado [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md), que muestra los objetos del sistema. Hay otra vista denominada [sys.all_objects](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md) que muestra los objetos de usuario y del sistema. Las tres vistas de catálogo tienen la misma estructura.  
+ Hay una versión de esta vista con el mismo esquema, llamado [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md), que muestra los objetos del sistema. Hay otra vista denominada [sys.all_objects](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md) que muestra los objetos de usuario y del sistema. Las tres vistas de catálogo tienen la misma estructura.  
   
  En esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un índice extendido, por ejemplo un índice XML o espacial, se considera como una tabla interna en sys.objects (type = IT y type_desc = INTERNAL_TABLE). En un índice extendido:  
   
@@ -72,13 +72,13 @@ ms.locfileid: "34225383"
   
 -   Las columnas is_ms_shipped, is_published y is_schema_published están establecidas en 0.  
 
-**Vistas del sistema útil relacionados**  
-Subconjuntos de los objetos se pueden ver mediante el uso de vistas del sistema para un tipo específico del objeto, como:  
+**Vistas del sistema útiles relacionados**  
+Subconjuntos de los objetos se pueden ver mediante el uso de vistas del sistema para un tipo específico de objeto, como:  
 - [sys.tables](sys-tables-transact-sql.md)  
 - [sys.views](sys-views-transact-sql.md)  
 - [sys.procedures](sys-procedures-transact-sql.md)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Ejemplos  
@@ -170,7 +170,7 @@ GO
  [sys.system_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
  [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   
  [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
- [Consultar el catálogo de sistema SQL Server preguntas más frecuentes](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [Consultar el catálogo del sistema SQL Server preguntas más frecuentes](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [Sys.internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md)  
   
   

@@ -23,20 +23,20 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d2cfed528dcbc58e4abed89ae1b76d0532d6bf6f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b746df94b0b7c36802663ca22c6b49107f10db18
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467731"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558435"
 ---
 # <a name="sysdmosmemoryobjects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Devuelve los objetos de memoria asignados actualmente por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede usar **sys.dm_os_memory_objects** para analizar el uso de memoria e identificar memoria posibles pérdidas.  
+  Devuelve los objetos de memoria asignados actualmente por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede utilizar **sys.dm_os_memory_objects** para analizar el uso de la memoria e identificar memoria posibles pérdidas.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**memory_object_address**|**varbinary (8)**|Dirección del objeto de memoria. No admite valores NULL.|  
 |**parent_address**|**varbinary (8)**|Dirección del objeto de memoria primario. Acepta valores NULL.|  
@@ -54,23 +54,23 @@ ms.locfileid: "34467731"
 |**page_allocator_address**|**varbinary (8)**|Dirección de memoria del asignador de la página. No admite valores NULL. Para obtener más información, consulte [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
 |**creation_stack_address**|**varbinary (8)**|Exclusivamente para uso interno. Acepta valores NULL.|  
 |**sequence_num**|**int**|Exclusivamente para uso interno. Acepta valores NULL.|  
-|**partition_type**|**int**|El tipo de partición:<br /><br /> 0 - no cargas objeto de memoria<br /><br /> 1 - objeto de memoria cargas, actualmente no tienen particionada<br /><br /> 2 - objeto de memoria cargas, particionado por nodo NUMA. En un entorno con un solo nodo NUMA Esto equivale a 1.<br /><br /> 3 - objeto de memoria cargas, dividida por CPU.|  
-|**contention_factor**|**real**|Valor que especifica la contención en este objeto de memoria, con lo que significa que no hay contención de 0. El valor se actualiza cada vez que un número especificado de las asignaciones de memoria realizado reflejan contención durante ese período. Se aplica sólo a los objetos de memoria seguros para subprocesos.|  
-|**waiting_tasks_count**|**bigint**|Número de esperas de este objeto de memoria. Este contador se incrementa cada vez que se asigna memoria de este objeto de memoria. El incremento es el número de tareas que esperan actualmente para el acceso a este objeto de memoria. Se aplica sólo a los objetos de memoria seguros para subprocesos. Esto es un valor de esfuerzo mejor sin una garantía de corrección.|  
-|**exclusive_access_count**|**bigint**|Especifica la frecuencia en que este objeto de memoria accedió exclusivamente. Se aplica sólo a los objetos de memoria seguros para subprocesos.  Esto es un valor de esfuerzo mejor sin una garantía de corrección.|  
-|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
+|**partition_type**|**int**|El tipo de partición:<br /><br /> 0 - no se pueden particionar objeto de memoria<br /><br /> 1 - objeto de memoria divisibles, actualmente no particionado<br /><br /> 2 - objeto de memoria divisibles, dividida por nodo NUMA. En un entorno con un solo nodo NUMA equivale a 1.<br /><br /> 3 - objeto de memoria divisibles, dividida por CPU.|  
+|**contention_factor**|**real**|Valor que especifica la contención en este objeto de memoria, donde 0 no significa contención. El valor se actualiza siempre que un número especificado de las asignaciones de memoria realizado reflectante contención durante ese período. Sólo se aplica a los objetos de memoria seguros para subprocesos.|  
+|**waiting_tasks_count**|**bigint**|Número de esperas en este objeto de memoria. Este contador se incrementa cada vez que se asigna la memoria de este objeto de memoria. El incremento es el número de tareas que esperan actualmente para tener acceso a este objeto de memoria. Sólo se aplica a los objetos de memoria seguros para subprocesos. Éste es un valor de esfuerzo mejor sin una garantía de corrección.|  
+|**exclusive_access_count**|**bigint**|Especifica la frecuencia en que este objeto de memoria accedió exclusivamente. Sólo se aplica a los objetos de memoria seguros para subprocesos.  Éste es un valor de esfuerzo mejor sin una garantía de corrección.|  
+|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo en esta distribución.|  
   
  **partition_type**, **contention_factor**, **waiting_tasks_count**, y **exclusive_access_count** aún no están implementadas en [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Permisos
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Los objetos de memoria son montones. Proporcionan asignaciones con una granularidad más fina que las que proporcionan los distribuidores de memoria. Los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizan objetos de memoria en lugar de distribuidores de memoria. Los objetos de memoria utilizan la interfaz del asignador de la página del distribuidor de memoria para asignar páginas. Los objetos de memoria no utilizan interfaces de memoria virtual o compartida. Según los patrones de asignación, los componentes pueden crear diferentes tipos de objetos de memoria para asignar regiones de tamaño arbitrario.  
   
- El tamaño de página típico para un objeto de memoria es de 8 KB. No obstante, los objetos de memoria incrementales pueden tener tamaños de página que van desde 512 bytes hasta 8 KB.  
+ El tamaño típico de un objeto de memoria es 8 KB. No obstante, los objetos de memoria incrementales pueden tener tamaños de página que van desde 512 bytes hasta 8 KB.  
   
 > [!NOTE]  
 >  El tamaño de página no tiene una asignación máxima. En su lugar, el tamaño de página es la granularidad de la asignación que admite una asignador de la página y que se implementa mediante un distribuidor de memoria. Puede solicitar asignaciones mayores de 8 KB de los objetos de memoria.  

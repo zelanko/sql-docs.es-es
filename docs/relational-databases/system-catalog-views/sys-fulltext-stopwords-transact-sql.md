@@ -1,5 +1,5 @@
 ---
-title: Sys.fulltext_stopwords (Transact-SQL) | Documentos de Microsoft
+title: Sys.fulltext_stopwords (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,27 +27,27 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1060a852471394d6b0773e69bb00bc908723ea4c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: beff58fb561fcb3568efee6c6d5a74f31be04701
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179891"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553865"
 ---
 # <a name="sysfulltextstopwords-transact-sql"></a>sys.fulltext_stopwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Contiene una fila por cada palabra irrelevante de todas las listas de palabras irrelevantes de la base de datos.  
  
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**stoplist_id**|**int**|Identificador de la lista de palabras irrelevantes a la que pertenece **stopword** . El identificador es único en la base de datos.|  
-|**palabra irrelevante**|**nvarchar(64)**|Término que se va a considerar como coincidencia de palabra irrelevante.|  
+|**palabra irrelevante**|**Nvarchar (64)**|Término que se va a considerar como coincidencia de palabra irrelevante.|  
 |**Idioma**|**sysname**|Es el valor del alias en [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)corresponde al valor de identificador de configuración regional (**LCID**), o la representación de cadena del LCID numérico.|  
 |**language_id**|**int**|LCID utilizado para la separación de palabras.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>Vea también  

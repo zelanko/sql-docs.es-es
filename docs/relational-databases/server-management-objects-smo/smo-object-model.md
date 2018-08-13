@@ -1,5 +1,5 @@
 ---
-title: Modelo de objetos SMO | Microsoft Docs
+title: Modelo de objetos SMO | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e3bc9ec53d5550f8671b7ac9bb786ae9d631f6df
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bb4aa648d8874a64a23f13be2611d9016361554b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061991"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563879"
 ---
 # <a name="smo-object-model"></a>Modelo de objetos SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "38061991"
  El modelo de objetos SMO se compone de varios espacios de nombres. Para más información, vea [Espacios de nombres SMO](../../relational-databases/server-management-objects-smo/smo-object-model-namespaces.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Diagrama del modelo de objetos de SMO](../../relational-databases/server-management-objects-smo/smo-object-model-diagram.md)   
+ [Diagrama de modelo de objetos SMO](../../relational-databases/server-management-objects-smo/smo-object-model-diagram.md)   
  [Espacios de nombres SMO](../../relational-databases/server-management-objects-smo/smo-object-model-namespaces.md)   
  [Conceptos del proveedor WMI de administración de configuración](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: Objetos de administración (SMO) - términos de licencia compartida de SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 08/06/2017
+ms.date: 08/08/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -12,13 +12,13 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 944e1c1274dad8b359206c9d4f0ea0b5440ac762
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: da7a9a138a5fd027f3b89c5f4b1d5db219c7d5d0
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040433"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662247"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>Términos de licencia de (SMO) de objetos de administración compartida de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -67,14 +67,13 @@ de Microsoft para este software, a menos que haya otros términos que acompañen
   * el código se divulgue o distribuya como código fuente; o
   * que otros tengan derecho a modificarlo.
 
-**3.    ALCANCE DE LA LICENCIA.** El software se cede sujeto a licencia y no es objeto de venta. A menos que la ley aplicable le otorgue más derechos, Microsoft se reserva todos los demás derechos no otorgados expresamente en este contrato, ya sea por implicación, desestimación o de otro modo. Puede usar el software solo como se permite expresamente en este contrato. Si lo hace, debe cumplir con todas las limitaciones técnicas del software que solo le permiten usarlo de ciertas maneras. No puede
-* eludir ninguna limitación técnica del software,
-* usar técnicas de ingeniería inversa, descompilar ni desensamblar el software, excepto y únicamente en la medida en que ello esté expresamente permitido por la legislación aplicable, a pesar de la presente limitación,
-* hacer más copias del software de las que especifica este contrato o permite la ley vigente, a pesar de esta limitación,
-* hacer público el software para que otros lo copien;
-* alquilar, arrendar o ceder el software,
-* transferir el software o este contrato a ningún tercero, o
-* usar el software para prestar servicios de hospedaje de software comercial.
+
+**3. ALCANCE DE LA LICENCIA.** El software se cede sujeto a licencia y no es objeto de venta. A menos que la ley aplicable le otorgue más derechos, Microsoft se reserva todos los demás derechos no otorgados expresamente en este contrato, ya sea por implicación, desestimación o de otro modo. Puede usar el software solo como se permite expresamente en este contrato. Si lo hace, debe cumplir con todas las limitaciones técnicas del software que solo le permiten usarlo de ciertas maneras. No puede hacerlo siguiente:
+
+- Eludir ninguna limitación técnica del software.
+- Ingeniería inversa, descompilar ni desensamblar el software, excepto y únicamente en la medida en que permita expresamente la legislación aplicable a pesar de esta limitación.
+- Hacer más copias del software de los que están especificados en este contrato o permite la ley aplicable a pesar de esta limitación.
+- Compartir, publicar, alquilar o el software de la concesión o proporcionar el software como una solución independiente hospedada para otro uso.
 
 **4.    NOTIFICACIONES DE TERCEROS.** El software puede incluir componentes de terceros que tengan avisos legales independientes o que se rijan por otros contratos, que pueden estar descritos en el archivo ThirdPartyNotices que acompaña al software.  Aunque estos componentes se rijan por otros contratos, también se aplican las limitaciones, la declinación de responsabilidades y las exclusiones de daños siguientes.
 
@@ -106,3 +105,7 @@ Esta limitación se aplica a
 * reclamaciones por incumplimiento de contrato, incumplimiento de garantía, condición impuesta, responsabilidad estricta, negligencia u otro agravio hasta el límite permitido por la ley vigente.
 
 También se aplica incluso si Microsoft conocía o debería haber conocido la posibilidad de dichos daños. Algunos estados no admiten la exclusión o limitación de la responsabilidad por daños consecuentes o incidentales, por lo que es posible que la limitación o las exclusiones anteriores no sean de aplicación a su caso.
+
+> [!NOTE]
+> Sección 3 se actualizó el 8 de agosto de 2018.
+

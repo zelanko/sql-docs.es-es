@@ -15,13 +15,13 @@ ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 17474864dfad7f4f960c1a1189893f02fe95622f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4fc41f837a3cfc75dc3384f8db4eb45e96013812
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408094"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539105"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Enlace y transferencia de datos de valores de columnas y parámetros con valores de tabla
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "37408094"
   
 5.  Cuando se han enviado todas las filas, llama a SQLPutData para el parámetro con valores de tabla con un *Str_Len_or_Ind* valor de 0, a continuación, continúa en el paso 3a anterior.  
   
-6.  Llama a SQLParamData de nuevo. Si hay algún parámetro de datos en ejecución entre las columnas de parámetro con valores de tabla, estas se identifica mediante el valor *ValuePtrPtr* devuelto por SQLParamData. Cuando estén disponibles todos los valores de columna, SQLParamData devolverá de nuevo el *ParameterValuePtr* valor para el parámetro con valores de tabla y la aplicación comienza de nuevo.  
+6.  Llama a SQLParamData de nuevo. Si hay parámetros entre las columnas del parámetro con valores de tabla de datos en ejecución, éstas se identificarán mediante el valor *ValuePtrPtr* devuelto por SQLParamData. Cuando están disponibles todos los valores de columna, SQLParamData devolverá nuevamente el *ParameterValuePtr* valor para el parámetro con valores de tabla y la aplicación comienza de nuevo.  
   
 ## <a name="see-also"></a>Vea también  
  [Parámetros con valores de tabla &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  

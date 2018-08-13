@@ -16,13 +16,13 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 60a4113f849a150ed0e639559fb93ae5d22fb1f3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 532c19c25b13ade56076b9bfd61c031270d6ae19
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407724"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536255"
 ---
 # <a name="ole-db-how-to-topics"></a>Temas de procedimientos de OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,25 +32,25 @@ ms.locfileid: "37407724"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Temas de procedimientos de los resultados de procesamiento &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+-   [Temas de procedimientos para procesar resultados &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
 -   [Conjunto de datos de gran tamaño &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md)  
   
 -   [Enumerar orígenes de datos OLE DB &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
   
--   [Copia masiva de datos mediante IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)  
+-   [Copiar datos de forma masiva mediante IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)  
   
 -   [Obtener un cursor FAST_FORWARD](../../relational-databases/native-client-ole-db-how-to/obtain-a-fast-forward-cursor.md)  
   
 -   [Recuperar filas mediante marcadores &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/retrieve-rows-using-bookmarks-ole-db.md)  
   
--   [Capturar columnas mediante IRow:: GetColumns &#40;o IRow:: Open&#41; e ISequentialStream](../../relational-databases/native-client-ole-db-how-to/fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md)  
+-   [Capturar columnas mediante IRow::GetColumns &#40;o IRow::Open&#41; e ISequentialStream](../../relational-databases/native-client-ole-db-how-to/fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md)  
   
--   [Capturar columnas mediante IRow:: GetColumns &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/fetch-columns-using-irow-getcolumns-ole-db.md)  
+-   [Capturar columnas mediante IRow::GetColumns &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/fetch-columns-using-irow-getcolumns-ole-db.md)  
   
 -   [Cambiar una contraseña de usuario de autenticación de SQL Server &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/change-a-sql-server-authentication-user-password-ole-db.md)  
   
--   [Uso mejorado de características de fecha y hora &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)  
+-   [Usar las características mejoradas de fecha y hora &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)  
   
 -   [Filestream y OLE DB](../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "37407724"
   
 -   [Usar UDT de CLR grandes &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)  
   
--   [Columna de presentación y los metadatos de catálogo para columnas dispersas &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
+-   [Mostrar metadatos de columna y del catálogo para columnas dispersas &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   
 -   [Autenticación Kerberos integrada &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)  
   

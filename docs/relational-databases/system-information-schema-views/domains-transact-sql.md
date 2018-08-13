@@ -1,5 +1,5 @@
 ---
-title: DOMINIOS (Transact-SQL) | Documentos de Microsoft
+title: DOMINIOS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c12449f39c5c114907163b1c593ed6389a91c41b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 10100f54381573bfc3000eb7c31e108aee9829ab
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236157"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39554045"
 ---
 # <a name="domains-transact-sql"></a>DOMAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,18 +37,18 @@ ms.locfileid: "33236157"
   
  Para recuperar información de estas vistas, especifique el nombre completo de **INFORMATION_SCHEMA. *** view_name*.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**DOMAIN_CATALOG**|**nvarchar (** 128 **)**|Base de datos donde existe el tipo de datos de alias.|  
-|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema que contiene el tipo de datos de alias.<br /><br /> **\*\* Importante \* \***  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un tipo de datos. La única manera confiable de localizar el esquema de un tipo consiste en utilizar la función TYPEPROPERTY.|  
+|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema que contiene el tipo de datos de alias.<br /><br /> **\*\* Importante \* \* ** no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un tipo de datos. La única manera confiable de localizar el esquema de un tipo consiste en utilizar la función TYPEPROPERTY.|  
 |**NOMBRE_DOMINIO**|**sysname**|Tipo de datos de alias.|  
 |**DATA_TYPE**|**sysname**|Tipo de datos proporcionado por el sistema.|  
-|**CAMPO CHARACTER_MAXIMUM_LENGTH**|**int**|Longitud máxima, en caracteres, de los datos binarios, de caracteres, o de texto e imagen.<br /><br /> -1 para **xml** y los datos de tipo de valor grande. En caso contrario se devuelve NULL. Para obtener más información, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
-|**CHARACTER_OCTET_LENGTH**|**int**|Longitud máxima, en bytes, para datos binarios, datos de caracteres o datos de texto e imagen.<br /><br /> -1 para **xml** y los datos de tipo de valor grande. En caso contrario se devuelve NULL.|  
+|**CAMPO CHARACTER_MAXIMUM_LENGTH**|**int**|Longitud máxima, en caracteres, de los datos binarios, de caracteres, o de texto e imagen.<br /><br /> -1 para **xml** y datos de tipo de valor grande. En caso contrario se devuelve NULL. Para obtener más información, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
+|**CHARACTER_OCTET_LENGTH**|**int**|Longitud máxima, en bytes, para datos binarios, datos de caracteres o datos de texto e imagen.<br /><br /> -1 para **xml** y datos de tipo de valor grande. En caso contrario se devuelve NULL.|  
 |**COLLATION_CATALOG**|**varchar (** 6 **)**|Siempre devuelve NULL.|  
 |**COLLATION_SCHEMA**|**varchar (** 3 **)**|Siempre devuelve NULL.|  
-|**COLLATION_NAME**|**nvarchar (** 128 **)**|Devuelve el nombre único para el criterio de ordenación si la columna contiene datos de caracteres o **texto** tipo de datos. En caso contrario se devuelve NULL.|  
-|**CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|Devuelve **principal**. Esto indica la base de datos en el que se encuentra, el juego de caracteres si la columna contiene datos de caracteres o **texto** tipo de datos. En caso contrario se devuelve NULL.|  
+|**COLLATION_NAME**|**nvarchar (** 128 **)**|Devuelve el nombre único para el criterio de ordenación si la columna de datos de caracteres o **texto** tipo de datos. En caso contrario se devuelve NULL.|  
+|**CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|Devuelve **maestro**. Esto indica a la base de datos en el que se encuentra, el juego de caracteres si la columna de datos de caracteres o **texto** tipo de datos. En caso contrario se devuelve NULL.|  
 |**CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|Siempre devuelve NULL.|  
 |**CHARACTER_SET_NAME**|**nvarchar (** 128 **)**|Devuelve el nombre único para el juego de caracteres si esta columna contiene datos de caracteres o **texto** tipo de datos. En caso contrario se devuelve NULL.|  
 |**CAMPO NUMERIC_PRECISION**|**tinyint**|Precisión de los datos numéricos aproximados, datos numéricos exactos, datos enteros o datos monetarios. En caso contrario se devuelve NULL.|  

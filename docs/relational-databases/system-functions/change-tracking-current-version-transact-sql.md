@@ -23,18 +23,18 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a83c0a60da4029892b258443833902f24c954d19
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5e317243066e51a9c253af8177d8245fa33dac5a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230244"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540475"
 ---
 # <a name="changetrackingcurrentversion-transact-sql"></a>CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve una versión que está asociada a la última transacción confirmada. Esta versión se puede utilizar al enumerar los cambios mediante el uso de [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md).  
+  Devuelve una versión que está asociada a la última transacción confirmada. Esta versión se puede usar cuando se enumeren los cambios mediante [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ CHANGE_TRACKING_CURRENT_VERSION ( )
 ## <a name="return-type"></a>Tipo devuelto  
  **bigint**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Devuelve NULL si no está habilitado el seguimiento de cambios para la base de datos.  
   
 ## <a name="examples"></a>Ejemplos  

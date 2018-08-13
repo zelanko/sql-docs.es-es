@@ -1,5 +1,5 @@
 ---
-title: sp_pkeys (Transact-SQL) | Documentos de Microsoft
+title: sp_pkeys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d5321f34ae72051bc84a83dca70f12f772f22fc9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5d51be7029c9f9da4ef7a51958f756352c5ddc1f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259485"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562999"
 ---
 # <a name="sppkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,22 +49,22 @@ sp_pkeys [ @table_name = ] 'name'
   
 ## <a name="arguments"></a>Argumentos  
  [ @table_name=] '*nombre*'  
- Es la tabla para la que se va a devolver información. *nombre* es **sysname**, no tiene ningún valor predeterminado. No se admite la coincidencia de patrón de caracteres comodín.  
+ Es la tabla que se va a devolver información. *nombre* es **sysname**, no tiene ningún valor predeterminado. No se admite la coincidencia de patrón de caracteres comodín.  
   
  [ @table_owner=] '*propietario*'  
- Especifica el propietario de la tabla especificada. *propietario* es **sysname**, su valor predeterminado es null. No se admite la coincidencia de patrón de caracteres comodín. Si *propietario* no se especifica, se aplican las reglas de visibilidad de tabla predeterminadas del DBMS subyacente.  
+ Especifica el propietario de la tabla especificada. *propietario* es **sysname**, su valor predeterminado es null. No se admite la coincidencia de patrón de caracteres comodín. Si *propietario* no se especifica, se aplican las reglas predeterminadas de visibilidad de tabla del DBMS subyacente.  
   
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el usuario actual posee una tabla en la que se especifica el nombre, se devuelven las columnas de esa tabla. Si el *propietario* no se especifica y el usuario actual no posee una tabla con los valores especificados *nombre*, este procedimiento busca una tabla con los valores especificados *nombre* pertenecen a la propietario de la base de datos. Si existe una, se devuelven las columnas de esa tabla.  
+ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el usuario actual posee una tabla en la que se especifica el nombre, se devuelven las columnas de esa tabla. Si el *propietario* no se especifica y el usuario actual no posee una tabla con los valores especificados *nombre*, este procedimiento busca una tabla con los valores especificados *nombre* que pertenecen a la propietario de la base de datos. Si existe una, se devuelven las columnas de esa tabla.  
   
  [ @table_qualifier=] '*calificador*'  
- Es el calificador de la tabla. *calificador de* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para tablas (*calificador ***.*** propietario ***.*** nombre*). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
+ Es el calificador de la tabla. *calificador* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para tablas (*calificador ***.*** propietario ***.*** nombre*). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |TABLE_QUALIFIER|**sysname**|Nombre del calificador de tabla. Este campo puede ser NULL.|  
 |TABLE_OWNER|**sysname**|Nombre del propietario de la tabla. Este campo siempre devuelve un valor.|  
@@ -73,12 +73,12 @@ sp_pkeys [ @table_name = ] 'name'
 |KEY_SEQ|**smallint**|Número de secuencia de la columna en una clave principal con varias columnas.|  
 |PK_NAME|**sysname**|Identificador de la clave principal. Devuelve NULL si no es aplicable al origen de datos.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  sp_pkeys devuelve información acerca de las columnas definidas explícitamente con una restricción PRIMARY KEY. Debido a que no todos los sistemas aceptan claves principales con nombre explícito, el implementador de puerta de enlace determina qué constituye una clave principal. Observe que el término clave principal hace referencia a la clave principal lógica de una tabla. Se espera que cada clave enumerada como clave principal lógica tenga un índice único definido en la misma. Este índice único también se devuelve en sp_statistics.  
   
  El procedimiento almacenado sp_pkeys es equivalente a SQLPrimaryKeys en ODBC. Los resultados devueltos se ordenan por TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME y KEY_SEQ.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -92,7 +92,7 @@ EXEC sp_pkeys @table_name = N'Department'
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- En el siguiente ejemplo se recupera la clave principal de la tabla `DimAccount` de la base de datos `AdventureWorksPDW2012`. Devuelve cero filas que indica que la tabla no tiene una clave principal.  
+ En el siguiente ejemplo se recupera la clave principal de la tabla `DimAccount` de la base de datos `AdventureWorksPDW2012`. Devuelve cero filas indicando que la tabla no tiene una clave principal.  
   
 ```  
 -- Uses AdventureWorks  

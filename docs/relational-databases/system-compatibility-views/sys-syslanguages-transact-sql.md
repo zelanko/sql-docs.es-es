@@ -1,5 +1,5 @@
 ---
-title: Sys.syslanguages (Transact-SQL) | Documentos de Microsoft
+title: Sys.syslanguages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -25,26 +25,26 @@ caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4c879ed679052a14d420211c5977d2152d5ccb8f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c927af11c853a2cd2ff94049f4eb99de3c5e10f7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222076"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556395"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contiene una fila por cada idioma presente en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|Id. de idioma único.|  
 |dateformat|**nchar(3)**|Orden de la fecha (por ejemplo, DMA).|  
 |datefirst|**tinyint**|Primer día de la semana: 1 para lunes, 2 para martes y así sucesivamente hasta 7 para domingo.|  
-|Actualización|**int**|Reservado para uso del sistema.|  
-|name|**sysname**|Nombre de idioma oficial, por ejemplo, Français.|  
+|Actualizar|**int**|Reservado para uso del sistema.|  
+|NAME|**sysname**|Nombre de idioma oficial, por ejemplo, en francés.|  
 |alias|**sysname**|Nombre alternativo del idioma (por ejemplo, francés).|  
 |meses|**nvarchar(372)**|Lista separada por comas con los nombres completos de los meses, de enero a diciembre, en la que cada mes puede contener hasta 20 caracteres.|  
 |shortmonths|**nvarchar(132)**|Lista separada por comas con los nombres cortos de los meses, de enero a diciembre, en la que cada mes puede contener hasta 9 caracteres.|  
@@ -57,7 +57,7 @@ ms.locfileid: "33222076"
 |Nombre en español|LCID de Windows|Id. de grupo de mensajes del [!INCLUDE[ssDE](../../includes/ssde-md.md)]|  
 |---------------------|------------------|-----------------------------------------|  
 |Inglés|3082|3082|  
-|Alemán|1031|1031|  
+|German|1031|1031|  
 |Francés|1036|1036|  
 |Japonés|1041|1041|  
 |Danish|1030|1030|  

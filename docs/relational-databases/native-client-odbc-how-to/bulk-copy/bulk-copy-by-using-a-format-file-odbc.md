@@ -1,5 +1,5 @@
 ---
-title: Realizar una copia masiva con un archivo de formato (ODBC) | Microsoft Docs
+title: Realizar una copia masiva con un archivo de formato (ODBC) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: aaca3a02e03a5ec73a0b37c7c8bebc1c1f850c09
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 61f47adcdb859748140f7e8bc34b52e6975be7ec
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416944"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562469"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>Realizar una copia masiva con un archivo de formato (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

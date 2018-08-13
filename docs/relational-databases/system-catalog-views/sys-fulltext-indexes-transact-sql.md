@@ -25,20 +25,20 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3d70bde5e89591257b185bbe52b8d9b1b8ec00a2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 34c97569e3cbb13dd5e66c56db685d16db5c0115
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182321"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548685"
 ---
 # <a name="sysfulltextindexes-transact-sql"></a>sys.fulltext_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Contiene una fila por índice de texto completo de un objeto tabular.  
 
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Identificador del objeto al que pertenece este índice de texto completo.|  
 |**unique_index_id**|**int**|Identificador del índice único que no es de texto completo correspondiente que se utiliza para relacionar el índice de texto completo con las filas.|  
@@ -52,18 +52,18 @@ ms.locfileid: "33182321"
 |**crawl_start_date**|**datetime**|Inicio del rastreo último o actual.<br /><br /> NULL = Ninguno|  
 |**crawl_end_date**|**datetime**|Fin del rastreo último o actual.<br /><br /> NULL = Ninguno|  
 |**incremental_timestamp**|**binary (8)**|Valor de marca de tiempo que deberá utilizarse para el siguiente rastreo incremental.<br /><br /> NULL = Ninguno|  
-|**stoplist_id**|**int**|Id. de la [lista de palabras irrelevantes](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) que está asociado a este índice de texto completo.|  
+|**stoplist_id**|**int**|Id. de la [stoplist](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) que está asociado a este índice de texto completo.|  
 |**data_space_id**|**int**|Grupo de archivos donde reside este índice de texto completo.|  
-|**property_list_id**|**int**|Identificador de la lista de propiedades de búsqueda asociada a este índice de texto completo. NULL indica que no hay ninguna lista de propiedades de búsqueda asociada al índice de texto completo. Para obtener más información acerca de esta lista de propiedades de búsqueda, use la [sys.registered_search_property_lists &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) vista de catálogo.|  
+|**property_list_id**|**int**|Identificador de la lista de propiedades de búsqueda asociada a este índice de texto completo. NULL indica que no hay ninguna lista de propiedades de búsqueda asociada al índice de texto completo. Para obtener más información acerca de esta lista de propiedades de búsqueda, use el [sys.registered_search_property_lists &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) vista de catálogo.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente usa un índice de texto completo en la tabla `HumanResources.JobCandidate` de la base de datos de ejemplo `AdventureWorks2012`. En el ejemplo se devuelve el identificador de objeto de la tabla, el identificador de la lista de propiedades de búsqueda y el identificador de la lista de palabras irrelevantes usada por el índice de texto completo.  
   
 > [!NOTE]  
->  En el ejemplo de código que crea este índice de texto completo, consulte la sección "Ejemplos" de [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
+>  El ejemplo de código que crea este índice de texto completo, consulte la sección "Ejemplos" de [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
 ```  
 USE AdventureWorks2012;  

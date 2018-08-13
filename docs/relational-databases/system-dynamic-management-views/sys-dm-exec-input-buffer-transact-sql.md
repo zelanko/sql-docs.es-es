@@ -23,13 +23,13 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: da708fb9606b5e5d52165680af8dff74a9201115
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 583a49e34b922e128ea7b55cf0c738789ca60a06
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464071"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565059"
 ---
 # <a name="sysdmexecinputbuffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
   
 ## <a name="arguments"></a>Argumentos  
 *session_id*  
-Es el identificador de sesión ejecutando el lote que se va a buscar. *session_id* es **smallint**. *session_id* puede obtenerse de los siguientes objetos de administración dinámica:  
+Es el identificador de sesión ejecutando el lote que se va a buscar. *session_id* es **smallint**. *session_id* puede obtenerse de los objetos de administración dinámica siguientes:  
   
 -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
@@ -53,36 +53,36 @@ Es el identificador de sesión ejecutando el lote que se va a buscar. *session_i
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)   
   
 *request_id*  
-El request_id de [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). *request_id* es **int**.  
+Este campo desde [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). *request_id* es **int**.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**event_type**|**nvarchar(256)**|El tipo de evento en el búfer de entrada para el spid determinado.|  
+|**event_type**|**nvarchar(256)**|El tipo de evento en el búfer de entrada para el spid especificado.|  
 |**parameters**|**smallint**|Los parámetros proporcionados para la instrucción.|  
-|**event_info**|**nvarchar(max)**|El texto de la instrucción en el búfer de entrada para el spid determinado.|  
+|**event_info**|**nvarchar(max)**|El texto de la instrucción en el búfer de entrada para el spid especificado.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el usuario tiene permiso VIEW SERVER STATE, el usuario verá las sesiones en ejecución todo en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; de lo contrario, el usuario verá solo la sesión actual.  
   
  En [!INCLUDE[ssSDS](../../includes/sssds-md.md)], si el usuario es el propietario de la base de datos, el usuario verá las sesiones en ejecución todo en el [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; en caso contrario, el usuario verá solo la sesión actual.  
   
-## <a name="remarks"></a>Comentarios  
- Esta función de administración dinámica puede utilizarse junto con sys.dm_exec_sessions o sys.dm_exec_requests de manera práctica **CROSS APPLY**.  
+## <a name="remarks"></a>Notas  
+ Esta función de administración dinámica puede usarse junto con sys.dm_exec_sessions o sys.dm_exec_requests realizando **CROSS APPLY**.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-simple-example"></a>A. Ejemplo sencillo  
- En el ejemplo siguiente se muestra cómo pasar un identificador de sesión (SPID) y un identificador de solicitud a la función.  
+ El ejemplo siguiente muestra pasando un identificador de sesión (SPID) y un identificador de solicitud a la función.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_input_buffer (52, 0);
 GO
 ```  
   
-### <a name="b-using-cross-apply-to-additional-information"></a>B. Con la entre aplicar a información adicional  
- En el ejemplo siguiente se muestra el búfer de entrada para las sesiones con Id. de sesión mayor que 50.  
+### <a name="b-using-cross-apply-to-additional-information"></a>B. Con la entre se aplican a información adicional  
+ El ejemplo siguiente muestra el búfer de entrada para las sesiones con el Id. de sesión mayor que 50.  
   
 ```sql  
 SELECT es.session_id, ib.event_info   

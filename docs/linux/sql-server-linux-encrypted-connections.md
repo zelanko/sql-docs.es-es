@@ -1,9 +1,9 @@
 ---
 title: Cifrar conexiones a SQL Server en Linux | Microsoft Docs
 description: Este artículo describe cifrar conexiones a SQL Server en Linux.
-author: tmullaney
+author: vin-yu
 ms.date: 01/30/2018
-ms.author: meetb
+ms.author: vinsonyu
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 574699c5cb3d1215e85af3f176812950dd4219da
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b1ccab9ac575640434b33a970e0e676376ef4b4e
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085037"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40009037"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Cifrar conexiones a SQL Server en Linux
 
@@ -32,7 +32,7 @@ Antes de comenzar, deberá asegurarse de que los certificados cumplen estos requ
 - La hora actual del sistema debe ser posterior válido de propiedad del certificado y antes de la fecha válido para la propiedad del certificado.
 - El certificado debe estar destinado a la autenticación del servidor. Esto requiere que la propiedad de uso mejorado de clave del certificado para especificar la autenticación de servidor (1.3.6.1.5.5.7.3.1).
 - El certificado debe crearse con la opción KeySpec de AT_KEYEXCHANGE. Normalmente, la propiedad de uso de la clave del certificado (KEY_USAGE) también incluye cifrado de clave (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
-- La propiedad de asunto del certificado debe indicar que el nombre común (CN) es el mismo como el nombre de host o nombre de dominio completo (FQDN) del equipo del servidor. Nota: se admiten certificados comodín. 
+- La propiedad de asunto del certificado debe indicar que el nombre común (CN) es el mismo como el nombre de host o nombre de dominio completo (FQDN) del equipo del servidor. Nota: se admiten certificados comodín.
 
 ## <a name="overview"></a>Información general
 TLS se utiliza para cifrar las conexiones desde una aplicación cliente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Cuando se configura correctamente, TLS proporciona privacidad y la integridad de los datos para las comunicaciones entre el cliente y el servidor.  Las conexiones TLS pueden ser iniciado por el cliente o servidor iniciada. 

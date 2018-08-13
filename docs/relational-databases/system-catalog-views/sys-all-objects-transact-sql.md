@@ -1,5 +1,5 @@
 ---
-title: Sys.all_objects (Transact-SQL) | Documentos de Microsoft
+title: Sys.all_objects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,22 +24,22 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bc5aef0a9a816ba6a500587e46a3f7b2e1b6cda3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: ab10ab7fa14f8b5e888536a94553b6a1e3db61e2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181121"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552825"
 ---
 # <a name="sysallobjects-transact-sql"></a>sys.all_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Muestra la unión de todos los objetos definidos por el usuario y los objetos del sistema en el ámbito del esquema.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|Nombre del objeto.|  
+|NAME|**sysname**|Nombre del objeto.|  
 |object_id|**int**|Número de identificación del objeto. Es único en una base de datos.|  
 |principal_id|**int**|Identificador del propietario individual si es diferente del propietario del esquema. De forma predeterminada, los objetos contenidos en el esquema pertenecen al propietario del esquema. No obstante, se puede especificar otro propietario mediante la instrucción ALTER AUTHORIZATION para cambiar la propiedad.<br /><br /> Es NULL si no hay ningún propietario individual alternativo.<br /><br /> Es NULL si el tipo de objeto es uno de los siguientes:<br /><br /> C = restricción CHECK<br /><br /> D = DEFAULT (restricción o independiente)<br /><br /> F = Restricción FOREIGN KEY<br /><br /> PK = Restricción PRIMARY KEY<br /><br /> R = Regla (estilo antiguo, independiente)<br /><br /> TA = Desencadenador de ensamblado (CLR)<br /><br /> TR = Desencadenador SQL<br /><br /> UQ = Restricción UNIQUE|  
 |schema_id|**int**|Identificador del esquema que contiene el objeto.<br /><br /> Para todos los objetos del sistema del ámbito del esquema incluidos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], este valor siempre se encuentra en (schema_id('sys'), schema_id('INFORMATION_SCHEMA')).|  
@@ -52,7 +52,7 @@ ms.locfileid: "33181121"
 |is_published|**bit**|El objeto se publica.|  
 |is_schema_published|**bit**|Solo se ha publicado el esquema del objeto.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

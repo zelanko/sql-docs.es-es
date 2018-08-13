@@ -1,5 +1,5 @@
 ---
-title: Sesiones | Microsoft Docs
+title: Sesiones | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 06d705cb21fe6a10ed30daab57a3534856d633f3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 29d7c48e70aeb19f66ff5aa9db031c124a160de2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416844"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559205"
 ---
 # <a name="sessions"></a>Sesiones
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -187,10 +187,10 @@ EXIT:
   
  Conexión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de sesión de proveedor OLE DB de Native Client a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede generar una sobrecarga significativa en las aplicaciones que crean continuamente y liberan objetos de sesión. Se puede minimizar la sobrecarga al administrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eficazmente los objetos de sesión de proveedor OLE DB de Native Client. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Pueden mantener las aplicaciones de proveedor de OLE DB de cliente nativas el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conexión de un objeto de sesión activo si mantienen una referencia en al menos una interfaz del objeto.  
   
- Si se mantiene un grupo de referencias a objeto de creación de comando, por ejemplo, se mantienen conexiones activas para estos objetos de sesión en el grupo. Cuando se requieren los objetos de sesión, el código de mantenimiento de grupo pasa válido **IDBCreateCommand** puntero de interfaz para el método de aplicación que requiere la sesión. Cuando el método de aplicación ya no requiere la sesión, devuelve el puntero de interfaz al código de mantenimiento de grupo en lugar de liberar la referencia de la aplicación al objeto de creación de comando.  
+ Si se mantiene un grupo de referencias a objeto de creación de comando, por ejemplo, se mantienen conexiones activas para estos objetos de sesión en el grupo. Como los objetos de sesión son necesarios, el código de mantenimiento de grupo pasa un puntero de interfaz **IDBCreateCommand** válido al método de aplicación que requiere la sesión. Cuando el método de aplicación ya no requiere la sesión, devuelve el puntero de interfaz al código de mantenimiento de grupo en lugar de liberar la referencia de la aplicación al objeto de creación de comando.  
   
 > [!NOTE]  
->  En el ejemplo anterior, el **IDBCreateCommand** interfaz se usa porque el **ICommand** interfaz implementa la **GetDBSession** método, el único método de comando o ámbito de conjunto de filas que permite que un objeto determinar la sesión en el que se creó. Por tanto, un objeto de comando, y solo un objeto de comando, permite a una aplicación recuperar un puntero de objeto de origen de datos a partir del cual se pueden crear sesiones adicionales.  
+>  En el ejemplo anterior, se usa la interfaz **IDBCreateCommand** porque la interfaz **ICommand** implementa el método **GetDBSession**, el único método en el ámbito de comando o de conjunto de filas que permite a un objeto determinar la sesión en la que se ha creado. Por tanto, un objeto de comando, y solo un objeto de comando, permite a una aplicación recuperar un puntero de objeto de origen de datos a partir del cual se pueden crear sesiones adicionales.  
   
 ## <a name="see-also"></a>Vea también  
  [Objetos de origen de datos &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  

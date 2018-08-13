@@ -25,37 +25,37 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 22284069373e5eed5786486c6e1e49409d3ea14c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c913b06203308734b0209cee0977a149f874b9bb
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219616"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545705"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Contiene una fila por cada objeto de secuencia de una base de datos.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |\<hereda columnas >||Hereda todas las columnas de [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**start_value**|**sql_variant no NULL**|El valor de inicio del objeto de secuencia. Si se reinicia el objeto de secuencia usando ALTER SEQUENCE, se reiniciará en ese valor. Cuando el objeto de secuencia ciclos, continúa en el **minimum_value** o **maximum_value**, no el **start_value**.|  
 |**increment**|**sql_variant no NULL**|El valor que se usa para incrementar el objeto de secuencia a continuación de cada valor generado.|  
-|**minimum_value**|**sql_variant es NULL**|El valor mínimo que puede generar el objeto de secuencia. Después de llegar a este valor, el objeto de secuencia devolverá un error al intentar generar más valores o se reiniciará si se especifica la opción CYCLE. Si no se ha especificado MINVALUE, esta columna devuelve el valor mínimo admitido por el tipo de datos del generador de secuencias.|  
-|**maximum_value**|**sql_variant es NULL**|El valor máximo que puede generar el objeto de secuencia. Después de llegar a este valor, el objeto de secuencia empezará a devolver un error al intentar generar más valores o se reiniciará si se especifica la opción CYCLE. Si no se ha especificado MAXVALUE, esta columna devuelve el valor máximo admitido por el tipo de datos del objeto de secuencia.|  
-|**is_cycling**|**bits no NULL**|Devuelve 0 si se ha especificado NO CYCLE para el objeto de secuencia y 1 si se ha especificado CYCLE.|  
-|**is_cached**|**bits no NULL**|Devuelve 0 si se ha especificado NO CACHE para el objeto de secuencia y 1 si se ha especificado CACHE.|  
+|**minimum_value**|**sql_variant NULL**|El valor mínimo que puede generar el objeto de secuencia. Después de llegar a este valor, el objeto de secuencia devolverá un error al intentar generar más valores o se reiniciará si se especifica la opción CYCLE. Si no se ha especificado MINVALUE, esta columna devuelve el valor mínimo admitido por el tipo de datos del generador de secuencias.|  
+|**maximum_value**|**sql_variant NULL**|El valor máximo que puede generar el objeto de secuencia. Después de llegar a este valor, el objeto de secuencia empezará a devolver un error al intentar generar más valores o se reiniciará si se especifica la opción CYCLE. Si no se ha especificado MAXVALUE, esta columna devuelve el valor máximo admitido por el tipo de datos del objeto de secuencia.|  
+|**is_cycling**|**bit NOT NULL**|Devuelve 0 si se ha especificado NO CYCLE para el objeto de secuencia y 1 si se ha especificado CYCLE.|  
+|**is_cached**|**bit NOT NULL**|Devuelve 0 si se ha especificado NO CACHE para el objeto de secuencia y 1 si se ha especificado CACHE.|  
 |**cache_size**|**int NULL**|Devuelve el tamaño de memoria caché especificado para el objeto de secuencia. Esta columna contiene NULL si se creó la secuencia con la opción NO CACHE o si se especificó CACHE sin especificar ningún tamaño de memoria caché. Si el valor especificado por el tamaño de memoria caché es mayor que el número máximo de valores que puede devolver el objeto de secuencia, se sigue mostrando ese tamaño de memoria caché que no se puede obtener.|  
 |**system_type_id**|**tinyint no NULL**|Identificador del tipo de sistema del tipo de datos del objeto de secuencia.|  
-|**user_type_id**|**int NOT NULL**|Identificador del tipo de datos para el objeto de secuencia definido por el usuario.|  
-|**precisión**|**tinyint no NULL**|Precisión máxima del tipo de datos.|  
-|**escala**|**tinyint no NULL**|Escala máxima del tipo de datos. Se devuelve la escala con la precisión para proporcionar a los usuarios los metadatos completos. La escala siempre es 0 para los objetos de secuencia porque solo se permiten tipos enteros.|  
+|**user_type_id**|**int no NULL**|Identificador del tipo de datos para el objeto de secuencia definido por el usuario.|  
+|**Precisión**|**tinyint no NULL**|Precisión máxima del tipo de datos.|  
+|**Escala**|**tinyint no NULL**|Escala máxima del tipo de datos. Se devuelve la escala con la precisión para proporcionar a los usuarios los metadatos completos. La escala siempre es 0 para los objetos de secuencia porque solo se permiten tipos enteros.|  
 |**Current_value**|**sql_variant no NULL**|El último valor obligado. Es decir, el valor devuelto de la ejecución más reciente de la función NEXT VALUE FOR o el último valor de ejecución de la **sp_sequence_get_range** procedimiento. Devuelve el valor START WITH si nunca se ha usado la secuencia.|  
-|**is_exhausted**|**bits no NULL**|0 indica que se pueden generar más valores desde la secuencia. 1 indica que el objeto de secuencia ha alcanzado el parámetro MAXVALUE y la secuencia no se ha establecido en CYCLE. La función NEXT VALUE FOR devuelve un error hasta que la secuencia la reinicie ALTER SEQUENCE.|  
+|**is_exhausted**|**bit NOT NULL**|0 indica que se pueden generar más valores desde la secuencia. 1 indica que el objeto de secuencia ha alcanzado el parámetro MAXVALUE y la secuencia no se ha establecido en CYCLE. La función NEXT VALUE FOR devuelve un error hasta que la secuencia la reinicie ALTER SEQUENCE.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, la visibilidad de los metadatos se limita a los elementos protegibles que son propiedad de un usuario o sobre los que el usuario tiene algún permiso. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

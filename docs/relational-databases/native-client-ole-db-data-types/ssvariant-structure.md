@@ -18,13 +18,13 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5d45c3b54eb6b5e09c00ea94cfef924b3c94fa70
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6c15bfc29ae02e362ea1010ef67b0a99e4b05dc0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420484"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551135"
 ---
 # <a name="ssvariant-structure"></a>Estructura SSVARIANT
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "37420484"
 
   El **SSVARIANT** estructura, que se define en sqlncli.h, corresponde a un valor DBTYPE_SQLVARIANT en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de cliente nativo.  
   
- **SSVARIANT** es una unión de discriminación. Según el valor del miembro vt, el consumidor puede determinar qué miembro para leer. los valores de VT se corresponden con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos. Por lo tanto, el **SSVARIANT** estructura puede contener cualquier tipo de SQL Server. Para obtener más información sobre la estructura de datos para los tipos OLE DB estándar, consulte [indicadores de tipo](http://go.microsoft.com/fwlink/?LinkId=122171).  
+ **SSVARIANT** es una unión de discriminación. Según el valor del miembro vt, el consumidor puede determinar qué miembro tiene que leerse. Los valores de vt se corresponden con tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por tanto, la estructura **SSVARIANT** puede contener cualquier tipo de SQL Server. Para obtener más información sobre la estructura de datos para los tipos OLE DB estándar, consulte [indicadores de tipo](http://go.microsoft.com/fwlink/?LinkId=122171).  
   
 ## <a name="remarks"></a>Notas  
- Cuando DataTypeCompat == 80, varios **SSVARIANT** subtipos se convierten en cadenas. Por ejemplo, aparecerán los siguientes valores de vt en **SSVARIANT** como VT_SS_WVARSTRING:  
+ Cuando DataTypeCompat==80, varios subtipos **SSVARIANT** se convierten en cadenas. Por ejemplo, los siguientes valores de vt se mostrarán en **SSVARIANT** como VT_SS_WVARSTRING:  
   
 -   VT_SS_DATETIMEOFFSET  
   
@@ -58,13 +58,13 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
   
  Para el conjunto completo de macros de acceso para cada miembro de la **SSVARIANT** estructura, consulte el archivo sqlncli.hi.  
   
- En la tabla siguiente se describe los miembros de la **SSVARIANT** estructura:  
+ En la tabla siguiente, se describen los miembros de la estructura **SSVARIANT**:  
   
 |Miembro|Indicador de tipo OLE DB|Tipo de datos de OLE DB C|Valor de vt|Comentarios|  
 |------------|---------------------------|------------------------|--------------|--------------|  
-|VT|SSVARTYPE|||Especifica el tipo de valor contenido en el **SSVARIANT** struct.|  
-|bTinyIntVal|DBTYPE_UI1|**BYTES**|**VT_SS_UI1**|Admite la **tinyint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.|  
-|sShortIntVal|DBTYPE_I2|**CORTO**|**VT_SS_I2**|Admite la **smallint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.|  
+|VT|SSVARTYPE|||Especifica el tipo de valor incluido en la estructura **SSVARIANT**.|  
+|bTinyIntVal|DBTYPE_UI1|**BYTE**|**VT_SS_UI1**|Admite la **tinyint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.|  
+|sShortIntVal|DBTYPE_I2|**SHORT**|**VT_SS_I2**|Admite la **smallint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.|  
 |lIntVal|DBTYPE_I4|**LONG**|**VT_SS_I4**|Admite la **int** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.|  
 |llBigIntVal|DBTYPE_I8|**LARGE_INTEGER**|**VT_SS_I8**|Admite la **bigint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.|  
 |fltRealVal|DBTYPE_R4|**float**|**VT_SS_R4**|Admite la **real** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.|  
@@ -73,7 +73,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |fBitVal|DBTYPE_BOOL|**VARIANT_BOOL**|**VT_SS_BIT**|Admite la **bit** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.|  
 |rgbGuidVal|DBTYPE_GUID|**GUID**|**VT_SS_GUID**|Admite la **uniqueidentifier** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.|  
 |numNumericVal|DBTYPE_NUMERIC|**DB_NUMERIC**|**VT_SS_NUMERIC**|Admite la **numérico** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.|  
-|dDateVal|DBTYPE_DATE|**DBDATE**|**VT_SS_DATE**|Admite la **fecha** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.|  
+|dDateVal|DBTYPE_DATE|**DBDATE**|**VT_SS_DATE**|Admite el tipo de datos **date**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |tsDateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_SMALLDATETIME VT_SS_DATETIME VT_SS_DATETIME2**|Admite la **smalldatetime**, **datetime**, y **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos.|  
 |Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|Admite la **tiempo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.<br /><br /> Incluye los miembros siguientes:<br /><br /> *tTime2Val* (**DBTIME2**)<br /><br /> *bScale* (**bytes**) especifica la escala para *tTime2Val* valor.|  
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|Admite la **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.<br /><br /> Incluye los miembros siguientes:<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (**bytes**) especifica la escala para *tsDataTimeVal* valor.|  
@@ -81,7 +81,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |NCharVal|No hay indicador de tipo OLE DB correspondiente.|**struct _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|Admite la **nchar** y **nvarchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos.<br /><br /> Incluye los miembros siguientes:<br /><br /> *sActualLength* (**corto**) especifica la longitud real de la cadena a la que *pwchNCharVal* puntos. No incluye cero de terminación.<br /><br /> *sMaxLength* (**corto**) especifica la longitud máxima de la cadena que *pwchNCharVal* puntos.<br /><br /> *pwchNCharVal* (**WCHAR** \*) puntero a la cadena.<br /><br /> Miembros no usados: *rgbReserved*, *dwReservado*, y *pwchReserved*.|  
 |CharVal|No hay indicador de tipo OLE DB correspondiente.|**struct _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|Admite la **char** y **varchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos.<br /><br /> Incluye los miembros siguientes:<br /><br /> *sActualLength* (**corto**) especifica la longitud real de la cadena a la que *pchCharVal* puntos. No incluye cero de terminación.<br /><br /> *sMaxLength* (**corto**) especifica la longitud máxima de la cadena a la que *pchCharVal* puntos.<br /><br /> *pchCharVal* (**CHAR** \*) puntero a la cadena.<br /><br /> Miembros no usados:<br /><br /> *rgbReserved*, *dwReservado*, y *pwchReserved*.|  
 |BinaryVal|No hay indicador de tipo OLE DB correspondiente.|**struct _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|Admite la **binario** y **varbinary** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos.<br /><br /> Incluye los miembros siguientes:<br /><br /> *sActualLength* (**corto**) especifica la longitud real de los datos a la que *prgbBinaryVal* puntos.<br /><br /> *sMaxLength* (**corto**) especifica la longitud máxima de los datos a la que *prgbBinaryVal* puntos.<br /><br /> *prgbBinaryVal* (**bytes** \*) puntero a los datos binarios.<br /><br /> Miembro no usado: *dwReservado*.|  
-|UnknownType|No se usa|No se usa|No se usa|No se usa|  
+|TipoDesconocido|No se usa|No se usa|No se usa|No se usa|  
 |BLOBType|No se usa|No se usa|No se usa|No se usa|  
   
 ## <a name="see-also"></a>Vea también  

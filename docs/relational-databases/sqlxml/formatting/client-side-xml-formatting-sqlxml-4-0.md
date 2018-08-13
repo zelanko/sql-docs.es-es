@@ -1,5 +1,5 @@
 ---
-title: Formato de XML del lado cliente (SQLXML 4.0) | Documentos de Microsoft
+title: Formato XML en el cliente (SQLXML 4.0) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8fa08dbdb74ae8fcf7aa61b5f35fa98249b40277
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a685297ebdfaaff343e6e404864989baabc1109d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972830"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560875"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>Aplicación de formato XML en el cliente (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ AS
 </ROOT>  
 ```  
   
- Dado que la **client-side-xml** atributo se establece en 1 (verdadero) en la plantilla, el procedimiento almacenado se ejecuta en el servidor y se transforma en XML en el nivel intermedio y se devuelve en el conjunto de filas de dos columnas devuelto por el servidor el cliente. (Aquí solamente se muestra un resultado parcial.)  
+ Dado que el **client-side-xml** atributo se establece en 1 (true) en la plantilla, el procedimiento almacenado se ejecuta en el servidor y se transforma en XML en el nivel intermedio y se devuelve para el conjunto de filas de dos columnas devuelto por el servidor el cliente. (Aquí solamente se muestra un resultado parcial.)  
   
 ```  
  <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -124,10 +124,10 @@ AS
      Puede especificar el formato del lado cliente estableciendo esta propiedad de las clases administradas SQLXML en True.  
   
 ## <a name="enhanced-xml-template-support"></a>Compatibilidad con plantillas XML mejorada  
- A partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la plantilla XML de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se ha mejorado con la adición de la **client-side-xml** atributo. Si este atributo está establecido en True, se aplica formato al XML en el cliente. Tenga en cuenta que este atributo de plantilla es idéntico en funcionalidad a la clientsidexml, SQLXMLOLEDB específicas del proveedor de propiedad.  
+ A partir [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la plantilla XML de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se ha mejorado con la adición de la **client-side-xml** atributo. Si este atributo está establecido en True, se aplica formato al XML en el cliente. Tenga en cuenta que este atributo de plantilla es idéntico en funcionalidad a la clientsidexml, SQLXMLOLEDB específicas del proveedor de propiedad.  
   
 > [!NOTE]  
->  Si ejecuta una plantilla XML en una aplicación ADO que está utilizando el proveedor SQLXMLOLEDB y especifica tanto el **client-side-xml** atributo en la plantilla y el proveedor clientsidexml, propiedad, el valor especificado en el plantilla tiene prioridad.  
+>  Si ejecuta una plantilla XML en una aplicación ADO que usa el proveedor SQLXMLOLEDB y especifica tanto el **client-side-xml** atributo en la plantilla y el proveedor clientsidexml, propiedad, el valor especificado en el plantilla tiene prioridad.  
   
 ## <a name="see-also"></a>Vea también  
  [Arquitectura de formato XML del lado cliente y servidor &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
@@ -135,8 +135,8 @@ AS
  [Para conocer las consideraciones de seguridad XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
  [compatibilidad con tipos de datos en SQLXML 4.0 XML](../../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)   
  [Clases administradas de SQLXML](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)   
- [Diferencias de aplicación de formato XML en el cliente Formato XML en el servidor &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)   
- [Objeto SqlXmlCommand & #40; Administradas de SQLXML clases & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
+ [Diferencias de aplicación de formato XML en el cliente Aplicación de formato XML del lado servidor &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)   
+ [Objeto SqlXmlCommand &#40;clases administradas de SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
  [Datos XML &#40;SQL Server&#41;](../../../relational-databases/xml/xml-data-sql-server.md)  
   
   

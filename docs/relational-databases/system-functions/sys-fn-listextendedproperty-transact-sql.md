@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_listextendedproperty (Transact-SQL) | Documentos de Microsoft
+title: Sys.fn_listextendedproperty (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -30,13 +30,13 @@ caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3484c32c00c5f94f084cd5c0e49837181054df40
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d0480fcc7880febe136431ff50cb3405b8427c40
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238442"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559725"
 ---
 # <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,32 +62,32 @@ fn_listextendedproperty (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- {predeterminado | '*property_name*' | NULL}  
+ {predeterminada | '*property_name*' | NULL}  
  Es el nombre de la propiedad. *property_name* es **sysname**. Las entradas válidas son default, NULL o un nombre de propiedad.  
   
- {predeterminado | '*level0_object_type*' | NULL}  
+ {predeterminada | '*level0_object_type*' | NULL}  
  Es el usuario o el tipo definido por el usuario. *level0_object_type* es **varchar (128)**, su valor predeterminado es null. Las entradas válidas son ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, TRIGGER, TYPE, USER y NULL.  
   
 > [!IMPORTANT]  
 >  USER y TYPE como tipos de nivel 0 se quitarán en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar estas características en los nuevos trabajos de programación y planee modificar las aplicaciones que actualmente las utilizan. En lugar de USER, use SCHEMA como tipo de nivel 0. Para TYPE, use SCHEMA como tipo de nivel 0 y TYPE como tipo de nivel 1.  
   
- {predeterminado | '*level0_object_name*' | NULL}  
- Nombre del tipo de objeto de nivel 0 especificado. *level0_object_name* es **sysname** con un valor predeterminado es NULL. Las entradas válidas son default, NULL o un nombre de objeto.  
+ {predeterminada | '*level0_object_name*' | NULL}  
+ Nombre del tipo de objeto de nivel 0 especificado. *level0_object_name* es **sysname** con el valor predeterminado es NULL. Las entradas válidas son default, NULL o un nombre de objeto.  
   
- {predeterminado | '*level1_object_type*' | NULL}  
- Tipo de objeto de nivel 1. *level1_object_type* es **varchar (128)** con un valor predeterminado es NULL. Las entradas válidas son AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TYPE, VIEW, XML SCHEMA COLLECTION y NULL.  
+ {predeterminada | '*level1_object_type*' | NULL}  
+ Tipo de objeto de nivel 1. *level1_object_type* es **varchar (128)** con el valor predeterminado es NULL. Las entradas válidas son AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TYPE, VIEW, XML SCHEMA COLLECTION y NULL.  
   
 > [!NOTE]  
 >  El valor predeterminado se asigna a NULL y default al tipo de objeto DEFAULT.  
   
- {predeterminado | '*level1_object_name*' | NULL}  
- Nombre del tipo de objeto de nivel 1 especificado. *level1_object_name* es **sysname** con un valor predeterminado es NULL. Las entradas válidas son default, NULL o un nombre de objeto.  
+ {predeterminada | '*level1_object_name*' | NULL}  
+ Nombre del tipo de objeto de nivel 1 especificado. *level1_object_name* es **sysname** con el valor predeterminado es NULL. Las entradas válidas son default, NULL o un nombre de objeto.  
   
- {predeterminado | '*level2_object_type*' | NULL}  
- Es el tipo de objeto de nivel 2. *level2_object_type* es **varchar (128)** con un valor predeterminado es NULL. Las entradas válidas son DEFAULT, default (se asigna a NULL) y NULL. Las entradas válidas para *level2_object_type* son columna, restricción, EVENT NOTIFICATION, índice, parámetro, TRIGGER y NULL.  
+ {predeterminada | '*level2_object_type*' | NULL}  
+ Es el tipo de objeto de nivel 2. *level2_object_type* es **varchar (128)** con el valor predeterminado es NULL. Las entradas válidas son DEFAULT, default (se asigna a NULL) y NULL. Las entradas válidas para *level2_object_type* son la columna, restricción, notificación de eventos, índice, parámetro, DESENCADENADOR o NULL.  
   
- {predeterminado | '*level2_object_name*' | NULL}  
- Es el nombre del tipo de objeto de nivel 2 especificado. *level2_object_name* es **sysname** con un valor predeterminado es NULL. Las entradas válidas son default, NULL o un nombre de objeto.  
+ {predeterminada | '*level2_object_name*' | NULL}  
+ Es el nombre del tipo de objeto de nivel 2 especificado. *level2_object_name* es **sysname** con el valor predeterminado es NULL. Las entradas válidas son default, NULL o un nombre de objeto.  
   
 ## <a name="tables-returned"></a>Tablas devueltas  
  Este es el formato de las tablas que devuelve fn_listextendedproperty.  
@@ -96,19 +96,19 @@ fn_listextendedproperty (
 |-----------------|---------------|  
 |objtype|**sysname**|  
 |objname|**sysname**|  
-|name|**sysname**|  
+|NAME|**sysname**|  
 |value|**sql_variant**|  
   
  Si la tabla devuelta está vacía, el objeto no tiene propiedades extendidas o el usuario no tiene permisos para mostrar las propiedades extendidas del objeto. Cuando se devuelven propiedades extendidas de la propia base de datos, el valor de las columnas objtype y objname será NULL.  
   
-## <a name="remarks"></a>Comentarios  
- Si el valor de *property_name* es NULL o valor predeterminado, fn_listextendedproperty devuelve todas las propiedades para el objeto especificado.  
+## <a name="remarks"></a>Notas  
+ Si el valor de *property_name* es NULL o valor predeterminado, fn_listextendedproperty devuelve todas las propiedades del objeto especificado.  
   
  Cuando se especifica el tipo de objeto y el valor del nombre de objeto correspondiente es NULL o el valor predeterminado, fn_listextendedproperty devuelve todas las propiedades extendidas de todos los objetos del tipo especificado.  
   
  Los objetos se distinguen en función de sus niveles, siendo el nivel 0 el más alto y el nivel 2 el más bajo. Si se especifica el nombre y el tipo de un objeto de nivel inferior (nivel 1 ó 2), se deben proporcionar valores distintos de NULL o default para el nombre y el tipo del objeto primario. En caso contrario, la función devuelve un conjunto de resultados vacío.  
   
- **objname** es fijo como Latin1_General_CI_AI. Sin embargo, se puede solucionar esto mediante la invalidación de la intercalación de comparación.  
+ **objname** se fija como Latin1_General_CI_AI. Sin embargo, puede solucionar esto mediante la invalidación de intercalación en la comparación.  
   
 ```  
 SELECT o.[object_id] AS 'table_id', o.[name] 'table_name',  
@@ -120,7 +120,7 @@ LEFT JOIN sys.fn_listextendedproperty(N'MS_Description', N'user',N'HumanResource
 WHERE o.name = 'Employee';  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Los permisos necesarios para mostrar las propiedades extendidas de los objetos varían en función del tipo de objeto.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -147,7 +147,7 @@ GO
  `(1 row(s) affected)`  
   
 ### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>B. Mostrar las propiedades extendidas de todas las columnas de una tabla  
- En el ejemplo siguiente se muestra las propiedades extendidas de las columnas de la `ScrapReason` tabla. que se incluye en el esquema `Production`.  
+ En el ejemplo siguiente se enumeran las propiedades extendidas de las columnas de la `ScrapReason` tabla. que se incluye en el esquema `Production`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -172,7 +172,7 @@ GO
  `(3 row(s) affected)`  
   
 ### <a name="c-displaying-extended-properties-on-all-tables-in-a-schema"></a>C. Mostrar las propiedades extendidas de todas las tablas de un esquema  
- En el ejemplo siguiente se muestra las propiedades extendidas de todas las tablas contenidas en el `Sales` esquema.  
+ En el ejemplo siguiente se enumeran las propiedades extendidas de todas las tablas contenidas en el `Sales` esquema.  
   
 ```  
 USE AdventureWorks2012;  
@@ -184,7 +184,7 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
- [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [los procedimientos sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
  [Sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   

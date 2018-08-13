@@ -23,18 +23,18 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: adf5f058b8eb39f4eecfd13d922ba723664a73a0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b78b7d54b5065496b587b6493e986b263d8919fd
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467771"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548955"
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve una fila para cada entidad en la base de datos actual que hace referencia por nombre a otra entidad definida por el usuario. Se crea una dependencia entre dos entidades cuando una entidad, llamada la *hacía referencia a entidad*, aparece por nombre en una expresión SQL persistente de otra entidad, llamada la *que hacen referencia a entidad*. Por ejemplo, si un tipo definido por el usuario (UDT) se especifica como la entidad a la que se hace referencia, esta función devuelve cada entidad definida por el usuario que hace referencia a ese tipo por nombre en su definición. La función no devuelve las entidades en otras bases de datos que pueden hacer referencia a la entidad especificada. Se puede ejecutar esta función en el contexto de la base de datos maestra para devolver un desencadenador DDL de nivel de servidor como una entidad que hace la referencia.  
+  Devuelve una fila para cada entidad en la base de datos actual que hace referencia por nombre a otra entidad definida por el usuario. Se crea una dependencia entre dos entidades cuando una entidad, llamada la *hace referencia a entidad*, aparece por nombre en una expresión SQL persistente de otra entidad, llamada la *que hacen referencia a entidad*. Por ejemplo, si un tipo definido por el usuario (UDT) se especifica como la entidad a la que se hace referencia, esta función devuelve cada entidad definida por el usuario que hace referencia a ese tipo por nombre en su definición. La función no devuelve las entidades en otras bases de datos que pueden hacer referencia a la entidad especificada. Se puede ejecutar esta función en el contexto de la base de datos maestra para devolver un desencadenador DDL de nivel de servidor como una entidad que hace la referencia.  
   
  Puede usar esta función de administración dinámica para informar sobre los tipos siguientes de entidades de la base de datos actual que hacen referencia a la entidad especificada:  
   
@@ -78,7 +78,7 @@ sys.dm_sql_referencing_entities (
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |referencing_schema_name|**sysname**|Esquema al que pertenece la entidad que hace la referencia. Acepta valores NULL.<br /><br /> NULL para desencadenadores DDL de nivel de base de datos y nivel de servidor.|  
 |referencing_entity_name|**sysname**|Nombre de la entidad que hace la referencia. No admite valores NULL.|  
@@ -100,7 +100,7 @@ sys.dm_sql_referencing_entities (
   
  Devuelve un error si la entidad especificada a la que se hace referencia es un procedimiento almacenado numerado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La tabla siguiente enumera los tipos de entidades para las que se crea y mantiene la información de dependencia. La información de dependencia no se crea ni mantiene para reglas, valores predeterminados, tablas temporales, procedimientos almacenados temporales u objetos del sistema.  
   
 |Tipo de entidad|Entidad que hace la referencia|Entidad a la que se hace referencia|  
@@ -122,11 +122,11 @@ sys.dm_sql_referencing_entities (
 |Colección de esquemas XML|no|Sí|  
 |Función de partición|no|Sí|  
   
- \* Una tabla se realiza un seguimiento como una entidad de referencia sólo cuando se hace referencia una [!INCLUDE[tsql](../../includes/tsql-md.md)] module, tipo definido por el usuario o la colección de esquemas XML en la definición de una columna calculada, una restricción CHECK o una restricción DEFAULT.  
+ \* Una tabla se realiza un seguimiento como una entidad de referencia solo cuando hace referencia a un [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, tipo definido por el usuario o la colección de esquemas XML en la definición de una columna calculada, restricción CHECK o restricción predeterminada.  
   
  ** No se realiza el seguimiento de los procedimientos almacenados numerados con un valor entero mayor que 1 como la entidad que hace referencia ni como la entidad a la que se hace referencia.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
   
 ### <a name="includesskatmaiincludessskatmai-mdmd--includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] – [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
@@ -158,7 +158,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. Devolver las entidades que hacen referencia a un tipo determinado  
- El ejemplo siguiente devuelve las entidades que hacen referencia al tipo de alias `dbo.Flag`. El conjunto de resultados muestra que dos procedimientos almacenados utilizan este tipo. El `dbo.Flag` tipo también se utiliza en la definición de varias columnas en el `HumanResources.Employee` tabla; sin embargo, dado que el tipo no está en la definición de una columna calculada, una restricción CHECK o una restricción DEFAULT en la tabla, se devolverá ninguna fila para el `HumanResources.Employee`tabla.  
+ El ejemplo siguiente devuelve las entidades que hacen referencia al tipo de alias `dbo.Flag`. El conjunto de resultados muestra que dos procedimientos almacenados utilizan este tipo. El `dbo.Flag` tipo también se utiliza en la definición de varias columnas en el `HumanResources.Employee` tabla; sin embargo, dado que el tipo no está en la definición de una columna calculada, restricción CHECK o restricción DEFAULT en la tabla, se devolverá ninguna fila para el `HumanResources.Employee`tabla.  
   
 ```sql  
 USE AdventureWorks2012;  

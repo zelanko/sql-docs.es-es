@@ -1,5 +1,5 @@
 ---
-title: Sys.change_tracking_tables (Transact-SQL) | Documentos de Microsoft
+title: Sys.change_tracking_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -25,20 +25,20 @@ caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3f5e3702008c5913fa7321f89d14d06d47321499
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ebea733f742efcc02d515eae685619820dbbfcd3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179021"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544685"
 ---
 # <a name="change-tracking-catalog-views---syschangetrackingtables"></a>Cambiar las vistas de catálogo de seguimiento - sys.change_tracking_tables
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Devuelve una fila por cada tabla en la base de datos actual que tiene habilitado el seguimiento de cambios.  
    
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Id. de una tabla que contiene un diario de cambios. La tabla puede contener un diario de cambios aun cuando el seguimiento de cambios esté actualmente deshabilitado.<br /><br /> El Id. de tabla es único en la base de datos.|  
 |is_track_columns_updated_on|**bit**|El estado actual de seguimiento de cambios en la tabla:<br /><br /> 0 = OFF<br /><br /> 1 = ON |  
@@ -46,7 +46,7 @@ ms.locfileid: "33179021"
 |cleanup_version|**bigint**|Versión hasta la que el proceso de limpieza podría haber quitado la información de seguimiento de cambios.|  
 |min_valid_version|**bigint**|Versión válida mínima de la información de seguimiento de cambios disponible para la tabla.<br /><br /> Al obtener los cambios de la tabla asociada a esta fila, el valor de last_sync_version debe ser mayor o igual que la versión indicada por la columna. Para obtener más información, consulte [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md).|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

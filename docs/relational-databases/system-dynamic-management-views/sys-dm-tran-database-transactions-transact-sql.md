@@ -23,13 +23,13 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3054cc3cc8378e34b44d97720692b040e1b1bade
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 192c5637932c5137c26e00ad380584b83a541e09
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467601"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544625"
 ---
 # <a name="sysdmtrandatabasetransactions-transact-sql"></a>sys.dm_tran_database_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "34467601"
 > [!NOTE]  
 >  Para llamar a esta DMV de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_tran_database_transactions**.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |transaction_id|**bigint**|Identificador de la transacción en el nivel de instancia, no en el de base de datos. Es exclusivo solo en todas las bases de datos de una instancia, pero no es exclusivo en todas las instancias del servidor.|  
 |database_id|**int**|Id. de la base de datos asociado a la transacción.|  
 |database_transaction_begin_time|**datetime**|Hora en la que la base de datos se implica en la transacción. Concretamente, es la hora del primer registro en la base de datos para la transacción.|  
 |database_transaction_type|**int**|1 = Transacciones de lectura/escritura<br /><br /> 2 = Transacción de solo lectura<br /><br /> 3 = Transacción de sistema|  
-|database_transaction_state|**int**|1 = La transacción no se ha inicializado.<br /><br /> 3 = La transacción se ha inicializado, pero no se han generado registros.<br /><br /> 4 = La transacción ha generado registros.<br /><br /> 5 = La transacción se ha preparado.<br /><br /> 10 = La transacción se ha confirmado.<br /><br /> 11 = La transacción se ha revertido.<br /><br /> 12 = La transacción se está confirmando. (La entrada de registro se está generando, pero no se ha materializado o persistente.)|  
+|database_transaction_state|**int**|1 = La transacción no se ha inicializado.<br /><br /> 3 = La transacción se ha inicializado, pero no se han generado registros.<br /><br /> 4 = La transacción ha generado registros.<br /><br /> 5 = La transacción se ha preparado.<br /><br /> 10 = La transacción se ha confirmado.<br /><br /> 11 = La transacción se ha revertido.<br /><br /> 12 = La transacción se está confirmando. (La entrada de registro se está generando, pero no está materializada o persistente.)|  
 |database_transaction_status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |database_transaction_status2|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |database_transaction_log_record_count|**bigint**|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número de registros generados en la base de datos para la transacción.|  
@@ -60,9 +60,9 @@ ms.locfileid: "34467601"
 |database_transaction_commit_lsn|**numeric(25,0)**|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LSN del registro de confirmación para la transacción en el registro de la base de datos.|  
 |database_transaction_last_rollback_lsn|**numeric(25,0)**|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LSN que se ha revertido más recientemente. Si no ha tenido lugar, el valor será MaxLSN.|  
 |database_transaction_next_undo_lsn|**numeric(25,0)**|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LSN del siguiente registro que se deshará.|  
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo en esta distribución.|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Permisos
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   

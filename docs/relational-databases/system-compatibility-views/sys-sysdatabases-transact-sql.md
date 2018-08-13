@@ -25,13 +25,13 @@ caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9a19ff47d576a7a2ffe5a72f609a27d5c1214f70
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 561af4e645f757880a3b5319f437e21e9e97a526
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993905"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549185"
 ---
 # <a name="syssysdatabases-transact-sql"></a>sys.sysdatabases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -46,14 +46,14 @@ ms.locfileid: "37993905"
 |**Nombre**|**sysname**|Nombre de la base de datos|  
 |**dbid**|**smallint**|Id. de base de datos|  
 |**SID**|**varbinary(85)**|Id. de sistema del creador de la base de datos|  
-|**modo**|**smallint**|Utilizado internamente para bloquear una base de datos mientras se crea.|  
+|**Modo**|**smallint**|Utilizado internamente para bloquear una base de datos mientras se crea.|  
 |**status**|**int**|Bits de estado, algunos de los cuales se pueden establecer mediante el uso de [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) como se indica:<br /><br /> 1 = **autoclose** (ALTER DATABASE)<br /><br /> 4 = **select / into** (ALTER DATABASE con SET RECOVERY)<br /><br /> 8 = **trunc. log en chkpt** (ALTER DATABASE con SET RECOVERY)<br /><br /> 16 = **rasgado la detección de página** (ALTER DATABASE)<br /><br /> 32 = **cargar**<br /><br /> 64 = **recuperación previa**<br /><br /> 128 = **recuperación**<br /><br /> 256 = **no ha recuperado**<br /><br /> 512 = **sin conexión** (ALTER DATABASE)<br /><br /> 1024 = **de sólo lectura** (ALTER DATABASE)<br /><br /> 2048 = **sólo para uso dbo** (ALTER DATABASE con SET RESTRICTED_USER)<br /><br /> 4096 = **solo usuario** (ALTER DATABASE)<br /><br /> 32768 = **modo de emergencia**<br /><br /> 65536 = **SUMA DE COMPROBACIÓN** (ALTER DATABASE)<br /><br /> 4194304 = **autoshrink** (ALTER DATABASE)<br /><br /> 1073741824 = **cerrado**<br /><br /> Puede haber varios bits establecidos en ON a la vez.|  
 |**status2**|**int**|16384 = **null ANSI predeterminado** (ALTER DATABASE)<br /><br /> 65536 = **concatenar valores null produce null** (ALTER DATABASE)<br /><br /> 131072 = **los desencadenadores recursivos** (ALTER DATABASE)<br /><br /> 1048576 = **predeterminado al cursor local** (ALTER DATABASE)<br /><br /> 8388608 = **identificador entrecomillado** (ALTER DATABASE)<br /><br /> 33554432 = **cierre del cursor al confirmar** (ALTER DATABASE)<br /><br /> 67108864 = **valores NULL ANSI** (ALTER DATABASE)<br /><br /> 268435456 = **advertencias ANSI** (ALTER DATABASE)<br /><br /> 536870912 = **habilitado de texto completo** (establecer mediante **sp_fulltext_database**)|  
 |**crdate**|**datetime**|Fecha de creación|  
 |**Reservado**|**datetime**|Reservado para uso futuro.|  
 |**Categoría**|**int**|Contiene un mapa de bits de información utilizado en la replicación:<br /><br /> 1 = Publicado para réplica de instantáneas o replicación transaccional.<br /><br /> 2 = Suscrito a una publicación de instantáneas o transaccional.<br /><br /> 4 = Publicado para replicación de mezcla.<br /><br /> 8 = Suscrito a una publicación de combinación.<br /><br /> 16 = Base de datos de distribución.|  
 |**cmptlevel**|**tinyint**|Nivel de compatibilidad para la base de datos. Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|  
-|**nombre de archivo**|**nvarchar(260)**|Ruta de acceso y nombre en el sistema operativo del archivo principal de la base de datos.<br /><br /> **nombre de archivo** es visible para **dbcreator**, **sysadmin**, el propietario de la base de datos con permisos CREATE ANY DATABASE o receptores que dispongan de uno de los siguientes permisos: ALTER ANY DATABASE CREAR CUALQUIER BASE DE DATOS, VER CUALQUIER DEFINICIÓN. Para devolver la ruta de acceso y nombre de archivo, consulte el [sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md) vista de compatibilidad, o la [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) vista.|  
+|**Nombre de archivo**|**nvarchar(260)**|Ruta de acceso y nombre en el sistema operativo del archivo principal de la base de datos.<br /><br /> **nombre de archivo** es visible para **dbcreator**, **sysadmin**, el propietario de la base de datos con permisos CREATE ANY DATABASE o receptores que dispongan de uno de los siguientes permisos: ALTER ANY DATABASE CREAR CUALQUIER BASE DE DATOS, VER CUALQUIER DEFINICIÓN. Para devolver la ruta de acceso y nombre de archivo, consulte el [sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md) vista de compatibilidad, o la [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) vista.|  
 |**version**|**smallint**|Número interno de versión del código de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el que se creó la base de datos. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="see-also"></a>Vea también  

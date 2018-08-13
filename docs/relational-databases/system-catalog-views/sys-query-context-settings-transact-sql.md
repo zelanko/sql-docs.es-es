@@ -1,5 +1,5 @@
 ---
-title: Sys.query_context_settings (Transact-SQL) | Documentos de Microsoft
+title: Sys.query_context_settings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2016
 ms.prod: sql
@@ -24,36 +24,36 @@ caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 448727aa29d55e0cd41b0859f620ad393b738e09
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3f1dbbc0ad525e8158949e538690552ea7463327
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182101"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39554055"
 ---
 # <a name="sysquerycontextsettings-transact-sql"></a>Sys.query_context_settings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Contiene información sobre la semántica que afectan a los valores de contexto asociados con una consulta. Hay una serie de valores de contexto disponibles en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que influyen en la semántica de consulta (definiendo el resultado correcto de la consulta). El mismo texto de consulta compilado con configuraciones diferentes puede producir resultados diferentes (en función de los datos subyacentes).  
+  Contiene información sobre la semántica de valores de contexto asociados con una consulta. Hay una serie de valores de contexto disponibles en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que influyen en la semántica de consulta (definiendo el resultado correcto de la consulta). El mismo texto de consulta compilado en configuraciones diferentes puede producir resultados diferentes (en función de los datos subyacentes).  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**context_settings_id**|**bigint**|Clave principal. Este valor se expone en Showplan XML para las consultas.|  
-|**set_options**|**varbinary (8)**|Máscara de bits reflejar el estado de varias opciones SET. Para obtener más información, consulte [sys.dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).|  
+|**set_options**|**varbinary (8)**|Máscara de bits que refleja el estado de varias opciones SET. Para obtener más información, consulte [sys.dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).|  
 |**language_id**|**smallint**|El identificador del idioma. Para obtener más información, consulte [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |**DATE_FORMAT**|**smallint**|El formato de fecha. Para más información, vea [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |**date_first**|**tinyint**|El primer valor de fecha. Para más información, vea [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
-|**status**|**varbinary(2)**|Campo de máscara de bits que indica el tipo de consulta o el contexto en el que se ejecutó la consulta. <br />Valor de la columna puede ser una combinación de varias marcas (expresado en formato hexadecimal):<br /><br /> 0 x 0: consulta normal (no hay marcas específicas)<br /><br /> 0 x 1: consulta que se ejecuta a través de uno de los procedimientos almacenados de API de cursor<br /><br /> 0 x 2: consulta de notificación<br /><br /> 0 x 4: consulta interna<br /><br /> 0 x 8: automática de consulta con parámetros sin parametrización universal<br /><br /> 0 x 10: captura de cursor Actualizar consulta<br /><br /> 0 x 20 - consulta que se usa en las solicitudes de actualización de cursor<br /><br /> 0 x 40 - devuelve el conjunto de resultados inicial cuando se abre un cursor (Cursor automática Fetch)<br /><br /> 0 x 80 – consulta cifrada<br /><br /> 0 x 100 – consulta en el contexto del predicado de seguridad de nivel de fila|  
+|**status**|**varbinary(2)**|Campo de máscara de bits que indica el tipo de consulta o contexto en el que se ejecutó la consulta. <br />Valor de la columna puede ser una combinación de varias marcas (expresado en formato hexadecimal):<br /><br /> 0 x 0 – consulta normal (sin marcas específicas)<br /><br /> 0 x 1: consulta ejecutada a través de uno de los procedimientos almacenados de API de cursor<br /><br /> 0 x 2: consulta de notificación<br /><br /> 0 x 4: consulta interna<br /><br /> 0 x 8: consulta con parámetros automática sin la parametrización universal<br /><br /> 0 x 10: captura de cursor refresh query<br /><br /> 0 x 20 - consulta que se usa en las solicitudes de actualización de cursor<br /><br /> 0 x 40 - conjunto de resultados inicial se devuelve cuando se abre un cursor (Cursor automática capturar)<br /><br /> 0 x 80 – consulta cifrada<br /><br /> 0 x 100: la consulta en el contexto del predicado de seguridad de nivel de fila|  
 |**required_cursor_options**|**int**|Opciones de cursor especificadas por el usuario, como el tipo de cursor.|  
 |**acceptable_cursor_options**|**int**|Opciones de cursor que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede convertir de forma implícita para permitir la ejecución de la instrucción.|  
-|**merge_action_type**|**smallint**|El tipo de plan de ejecución de desencadenadores usado como resultado de un **mezcla** instrucción.<br /><br /> 0 indica un plan sin desencadenadores, un plan de desencadenadores que no se ejecuta como resultado de un **mezcla** instrucción o un plan de desencadenadores que se ejecuta como resultado de un **mezcla** instrucción que solo especifica un **Eliminar** acción.<br /><br /> 1 indica un **insertar** plan de desencadenadores que se ejecuta como resultado de un **mezcla** instrucción.<br /><br /> 2 indica un **actualización** plan de desencadenadores que se ejecuta como resultado de un **mezcla** instrucción.<br /><br /> 3 indica un **eliminar** plan de desencadenadores que se ejecuta como resultado de un **mezcla** una instrucción que contiene su correspondiente **insertar** o **actualización** acción.<br /><br /> <br /><br /> Para ejecutar acciones en cascada de desencadenadores anidados, este valor es la acción de la **mezcla** instrucción que provocó la cascada.|  
-|**default_schema_id**|**int**|Id. del esquema predeterminado, que se utiliza para resolver nombres que no son nombres completos.|  
-|**is_replication_specific**|**bit**|Se usa para la replicación.|  
+|**merge_action_type**|**smallint**|El tipo de plan de ejecución de desencadenador utilizado como resultado de una **mezcla** instrucción.<br /><br /> 0 indica un plan sin desencadenadores, un plan de desencadenadores que no se ejecuta como resultado de una **mezcla** instrucción o un plan de desencadenadores que se ejecuta como resultado de una **mezcla** instrucción que solo especifica un **Eliminar** acción.<br /><br /> 1 indica un **insertar** plan de desencadenadores que se ejecuta como resultado de una **mezcla** instrucción.<br /><br /> 2 indica un **actualización** plan de desencadenadores que se ejecuta como resultado de una **mezcla** instrucción.<br /><br /> 3 indica un **eliminar** plan de desencadenadores que se ejecuta como resultado de una **mezcla** instrucción que contiene el correspondiente **insertar** o **actualización** acción.<br /><br /> <br /><br /> Para ejecutar las acciones en cascada de desencadenadores anidados, este valor es la acción de la **mezcla** instrucción que provocó la cascada.|  
+|**default_schema_id**|**int**|Id. del esquema predeterminado, que se usa para resolver los nombres que no son nombres completos.|  
+|**is_replication_specific**|**bit**|Utilizado para la replicación.|  
 |**is_contained**|**varbinary(1)**|1 indica que una base de datos independiente.|  
   
-## <a name="permissions"></a>Permissions  
- Requiere la **VIEW DATABASE STATE** permiso.  
+## <a name="permissions"></a>Permisos  
+ Requiere el **VIEW DATABASE STATE** permiso.  
   
 ## <a name="see-also"></a>Vea también  
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
@@ -65,7 +65,7 @@ ms.locfileid: "33182101"
  [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Query Store Stored Procedures &#40;Transact-SQL&#41; (Procedimientos almacenados del almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [Query Store Stored Procedures &#40;Transact-SQL&#41; (Procedimientos almacenados del Almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
   

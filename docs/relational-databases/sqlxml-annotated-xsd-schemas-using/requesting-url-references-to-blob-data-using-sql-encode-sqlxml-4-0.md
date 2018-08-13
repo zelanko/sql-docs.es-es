@@ -1,5 +1,5 @@
 ---
-title: 'Solicitar referencias URL para datos BLOB mediante sql: encode (SQLXML 4.0) | Documentos de Microsoft'
+title: 'Solicitar referencias URL a datos BLOB mediante sql: encode (SQLXML 4.0) | Documentos de Microsoft'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,25 +24,25 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 537e2656730c7659edd22ac68722bf43e892ad3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5eba5d17938d4bcfce27fb70476cad3e8974a1c0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970660"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543345"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>Solicitar referencias URL a los datos BLOB mediante sql:encode (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   En un esquema XSD anotado, cuando un atributo (o elemento) se asigna a una columna de BLOB en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de Microsoft, los datos se devuelven en formato codificado de base 64 en XML.  
   
- Si desea obtener una referencia a los datos (un URI) que se devuelvan que puede usarse posteriormente para recuperar los datos BLOB en un formato binario, especifique la **sql: codificar** anotación. Puede especificar **sql: codificar** en un atributo o elemento de tipo simple.  
+ Si desea obtener una referencia a los datos (un URI) que se devuelve que puede utilizarse posteriormente para recuperar los datos BLOB en un formato binario, especifique el **sql: encode** anotación. Puede especificar **sql: encode** en un atributo o elemento de tipo simple.  
   
- Especifique el **sql: codificar** anotación para indicar que se debe devolver una dirección URL para el campo en lugar del valor del campo. **SQL: codificar** depende de la clave principal para generar un select singleton en la dirección URL. La clave principal puede especificarse mediante la **SQL: Key-campos** anotación.  
+ Especifique el **sql: encode** anotación para indicar que se debe devolver al campo un dirección URL en lugar del valor del campo. **SQL: encode** depende de la clave principal para generar un select singleton en la dirección URL. Se puede especificar la clave principal mediante el **SQL: Key-campos** anotación.  
   
- El **sql: codificar** anotación se puede asignar la dirección "url" o el valor "predeterminado". Un valor de "valor predeterminado" devuelve los datos en formato codificado de base 64.  
+ El **sql: encode** anotación se puede asignar la dirección "url" o el valor "predeterminado". Un valor de "valor predeterminado" devuelve los datos en formato codificado de base 64.  
   
- El **sql: codificar** anotación no puede utilizarse con **SQL: use-cdata** o en el atributo ID, IDREF, IDREFS, NMTOKEN o NMTOKENS tipos. También no se puede utilizar con XSD **fijo** atributo.  
+ El **sql: encode** anotación no puede utilizarse con **SQL: use-cdata** o en el atributo ID, IDREF, IDREFS, NMTOKEN o NMTOKENS tipos. También no se puede utilizar con XSD **fijo** atributo.  
   
 > [!NOTE]  
 >  Las columnas de tipo BLOB no se pueden usar como parte de una clave o clave externa.  
@@ -51,7 +51,7 @@ ms.locfileid: "32970660"
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, consulte [requisitos para ejecutar los ejemplos de SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. Especificar sql:encode para obtener una referencia de URL a los datos BLOB  
- En este ejemplo, se especifica el esquema de asignación **sql: codificar** en el **LargePhoto** atributo para recuperar la referencia URI a una fotografía del producto determinada (en lugar de recuperar los datos binarios en Base 64: formato codificado).  
+ En este ejemplo, el esquema de asignación especifica **sql: encode** en el **LargePhoto** atributo para recuperar la referencia URI a una fotografía del producto determinada (en lugar de recuperar los datos binarios en Base 64: formato codificado).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

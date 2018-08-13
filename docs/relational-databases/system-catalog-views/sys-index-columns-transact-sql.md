@@ -1,5 +1,5 @@
 ---
-title: Sys.index_columns (Transact-SQL) | Documentos de Microsoft
+title: Sys.index_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,31 +24,31 @@ caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: eb87377beeff12c6071ace2f03fee14ba9d92bf5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4d46709b314df0511faad3abc3dc9a80947264dd
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182271"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533925"
 ---
 # <a name="sysindexcolumns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contiene una fila por cada columna que forma parte de un **sys.indexes** índice o tabla no ordenada (montón).  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Id. del objeto en el que se define el índice.|  
 |**index_id**|**int**|Id. del índice en el que se define la columna.|  
-|**index_column_id**|**int**|Id. de la columna de índice. **index_column_id** es único solo dentro de **index_id**.|  
-|**column_id**|**int**|Identificador de la columna en **object_id**.<br /><br /> 0 = Identificador de fila (RID) en un índice no clúster.<br /><br /> **column_id** es único solo dentro de **object_id**.|  
-|**key_ordinal**|**tinyint**|Ordinal (de base 1) en el conjunto de columnas de clave.<br /><br /> 0 = No es una columna de clave; es un índice XML, un índice de almacén de columnas o un índice espacial.<br /><br /> Nota: Un índice espacial o XML no puede ser una clave porque las columnas subyacentes no son comparables, lo que significa que no se puede ordenar sus valores.|  
+|**index_column_id**|**int**|Id. de la columna de índice. **index_column_id** es exclusivo solo dentro **index_id**.|  
+|**column_id**|**int**|Identificador de la columna en **object_id**.<br /><br /> 0 = Identificador de fila (RID) en un índice no clúster.<br /><br /> **column_id** es exclusivo solo dentro **object_id**.|  
+|**key_ordinal**|**tinyint**|Ordinal (de base 1) en el conjunto de columnas de clave.<br /><br /> 0 = No es una columna de clave; es un índice XML, un índice de almacén de columnas o un índice espacial.<br /><br /> Nota: Un índice XML o espacial no puede ser una clave ya que las columnas subyacentes no son comparables, lo que significa que no se puede ordenar sus valores.|  
 |**partition_ordinal**|**tinyint**|Ordinal (de base 1) en el conjunto de columnas de partición. Un índice de almacén de columnas en clúster puede tener como máximo 1 columna de particionamiento.<br /><br /> 0 = No es una columna de partición.|  
 |**is_descending_key**|**bit**|1 = El orden de la columna de clave de índice es descendente.<br /><br /> 0 = La columna de clave de índice tiene una dirección de orden ascendente, o bien la columna es parte de un índice de almacén de columnas o hash.|  
 |**is_included_column**|**bit**|1 = La columna es una columna sin clave que se agrega al índice utilizando la cláusula CREATE INDEX INCLUDE, o bien la columna forma parte de un índice de almacén de columnas.<br /><br /> 0 = La columna no es una columna incluida.<br /><br /> No se muestran las columnas agregadas implícitamente porque forman parte de la clave de agrupación en clústeres en **sys.index_columns**.<br /><br /> Las columnas agregadas implícitamente porque son una columna de partición se devuelven como 0.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Ejemplos  

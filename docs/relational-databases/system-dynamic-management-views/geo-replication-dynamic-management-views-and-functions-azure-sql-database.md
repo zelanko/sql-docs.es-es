@@ -21,13 +21,13 @@ caps.latest.revision: 10
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 76e405d57c5cc47b15af7a8943c506b04c09c19c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 77604b1cdaa57ca2d715e3f4fd8ba6f626ddce0a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981667"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553575"
 ---
 # <a name="geo-replication-dynamic-management-views-and-functions-azure-sql-database"></a>Vistas de administración dinámica de replicación geográfica y funciones (base de datos SQL Azure)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

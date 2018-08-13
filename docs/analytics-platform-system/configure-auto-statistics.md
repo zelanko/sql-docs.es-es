@@ -10,12 +10,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 000a31f76118a3f2acaf702ce5c74c1dd5703422
-ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
+ms.openlocfilehash: 448c9de27422c01d68602c00945b1ea72bcddd61
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107143"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400918"
 ---
 # <a name="configure-auto-statistics"></a>Configuración automática de estadísticas
 
@@ -45,7 +45,7 @@ Después de actualizar a AU7 APS, automática de estadísticas está habilitada 
 Cambiar los valores de conmutador de característica requiere un reinicio del servicio en puntos de acceso.
 
 ## <a name="change-auto-statistics-settings-on-a-database"></a>Cambiar la configuración de las estadísticas automáticamente en una base de datos
-Cuando las estadísticas automáticamente está habilitada el administrador del sistema, puede usar [ALTER DATABASE (almacenamiento de datos paralelos)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) para cambiar la configuración de las estadísticas en una base de datos. Si el modificador de característica de estadísticas automática está habilitado por el administrador del sistema, las bases de datos creadas después de actualizar a AU7 tendrá automática de estadísticas habilitada. Todas las bases de datos que existían antes de la actualización a AU7 tienen estadísticas automáticamente deshabilitadas. El ejemplo siguiente habilita las estadísticas automáticamente en el myPDW de base de datos existente.
+Cuando las estadísticas automáticamente está habilitada el administrador del sistema, puede usar [ALTER DATABASE (almacenamiento de datos paralelos)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) para cambiar la configuración de las estadísticas en una base de datos. Si el modificador de característica de estadísticas automática está habilitado por el administrador del sistema, las bases de datos creadas después de actualizar a AU7 tendrá automática de estadísticas habilitada. Todas las bases de datos que existían antes de la actualización a AU7 tienen estadísticas automáticamente deshabilitadas. El ejemplo siguiente habilita las estadísticas automáticamente en el myPDW de base de datos existente.
 
 ```sql
 ALTER DATABASE myPDW SET AUTO_CREATE_STATISTICS ON

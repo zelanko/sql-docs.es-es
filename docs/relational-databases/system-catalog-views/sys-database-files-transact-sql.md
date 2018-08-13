@@ -1,5 +1,5 @@
 ---
-title: Sys.database_files (Transact-SQL) | Documentos de Microsoft
+title: Sys.database_files (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/19/2016
 ms.prod: ''
@@ -24,20 +24,20 @@ caps.latest.revision: 61
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 465a9f57e7787e992f61ec548bdfb8cabdada848
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f50b9b9da7eb904222ef307355e86c91a093db5b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181701"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550315"
 ---
 # <a name="sysdatabasefiles-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contiene una fila por cada archivo de una base de datos como se almacena en la propia base de datos. Es una vista por base de datos.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|Identificador del archivo dentro de la base de datos.|  
 |**file_guid**|**uniqueidentifier**|GUID del archivo.<br /><br /> NULL = La base de datos se actualizó desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -45,12 +45,12 @@ ms.locfileid: "33181701"
 |**type_desc**|**nvarchar(60)**|Descripción del tipo de archivo:<br /><br /> ROWS (incluye archivos de catálogos de texto completo que se han creado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o actualizado a esta versión).<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (catálogos de texto completo anteriores a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|  
 |**data_space_id**|**int**|El valor puede ser 0 o mayor que 0. El valor 0 representa el archivo de registro de base de datos y un valor mayor que 0, el identificador del grupo de archivos donde está almacenado este archivo de datos.|  
 |**Nombre**|**sysname**|Nombre lógico del archivo de la base de datos.|  
-|**argumento physical_name**|**nvarchar(260)**|Nombre del archivo del sistema operativo. Si la base de datos está hospedado por un AlwaysOn [réplica secundaria legible](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), **physical_name** indica la ubicación del archivo de la base de datos de la réplica principal. Para la ubicación de archivo correcto de una base de datos secundaria legible, consulte [sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md).|  
+|**physical_name**|**nvarchar(260)**|Nombre del archivo del sistema operativo. Si la base de datos está hospedada por un AlwaysOn [réplica secundaria legible](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), **physical_name** indica la ubicación del archivo de la base de datos de la réplica principal. Para la ubicación correcta del archivo de base de datos secundaria legible, consultar [sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md).|  
 |**state**|**tinyint**|Estado del archivo:<br /><br /> 0 = Con conexión <br /><br /> 1 = En restauración <br /><br /> 2 = En recuperación <br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = Sospechoso <br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = Sin conexión <br /><br /> 7 = Inactivo|  
 |**state_desc**|**nvarchar(60)**|Descripción del estado del archivo:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING <br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Para más información, vea [Estados de los archivos](../../relational-databases/databases/file-states.md).|  
-|**size**|**int**|Tamaño actual de archivo, en páginas de 8 KB.<br /><br /> 0 = No aplicable.<br /><br /> En una instantánea de base de datos, size refleja el espacio máximo que la instantánea puede utilizar para el archivo.<br /><br /> Contenedores de grupo de archivos FILESTREAM, size refleja que actual utiliza el tamaño del contenedor.|  
-|**max_size**|**int**|Tamaño máximo del archivo, en páginas de 8 KB:<br /><br /> 0 = No se permite el crecimiento.<br /><br /> -1 = El archivo crece hasta que el disco esté lleno.<br /><br /> 268435456 = El archivo de registro aumentará de tamaño hasta un tamaño máximo de 2 TB.<br /><br /> Contenedores de grupo de archivos FILESTREAM, max_size refleja el tamaño máximo del contenedor.<br /><br /> Tenga en cuenta que las bases de datos que se actualizan con un tamaño de archivo de un número ilimitado de registro indican -1 para el tamaño máximo del archivo de registro.|  
-|**crecimiento**|**int**|0 = El archivo tiene un tamaño fijo y no puede crecer.<br /><br /> >0 = El archivo crece automáticamente.<br /><br /> Si is_percent_growth = 0, el aumento de crecimiento es en unidades de páginas de 8 KB, redondeado a los 64 KB más próximos.<br /><br /> Si is_percent_growth = 1, el aumento de crecimiento se expresa como un porcentaje numérico entero.|  
+|**size**|**int**|Tamaño actual de archivo, en páginas de 8 KB.<br /><br /> 0 = No aplicable.<br /><br /> En una instantánea de base de datos, size refleja el espacio máximo que la instantánea puede utilizar para el archivo.<br /><br /> Contenedores de grupo de archivos FILESTREAM, tamaño refleja que actual utiliza el tamaño del contenedor.|  
+|**max_size**|**int**|Tamaño máximo del archivo, en páginas de 8 KB:<br /><br /> 0 = No se permite el crecimiento.<br /><br /> -1 = El archivo crece hasta que el disco esté lleno.<br /><br /> 268435456 = El archivo de registro aumentará de tamaño hasta un tamaño máximo de 2 TB.<br /><br /> Contenedores de grupo de archivos FILESTREAM, max_size refleja el tamaño máximo del contenedor.<br /><br /> Tenga en cuenta que las bases de datos que se actualizan con un tamaño de archivo ilimitado del registro indican -1 para el tamaño máximo del archivo de registro.|  
+|**Crecimiento**|**int**|0 = El archivo tiene un tamaño fijo y no puede crecer.<br /><br /> >0 = El archivo crece automáticamente.<br /><br /> Si is_percent_growth = 0, el aumento de crecimiento es en unidades de páginas de 8 KB, redondeado a los 64 KB más próximos.<br /><br /> Si is_percent_growth = 1, el aumento de crecimiento se expresa como un porcentaje numérico entero.|  
 |**is_media_read_only**|**bit**|1 = El archivo está en medios de solo lectura.<br /><br /> 0 = El archivo está en un medio de lectura y escritura.|  
 |**is_read_only**|**bit**|1 = El archivo está marcado como de solo lectura.<br /><br /> 0 = El archivo está marcado como de lectura y escritura.|  
 |**is_sparse**|**bit**|1 = El archivo es un archivo disperso.<br /><br /> 0 = El archivo no es un archivo disperso.<br /><br /> Para obtener más información, vea [Ver el tamaño del archivo disperso de una instantánea de base de datos &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).|  
@@ -72,7 +72,7 @@ ms.locfileid: "33181701"
 > [!NOTE]  
 >  Al quitar o volver a generar índices grandes, o al quitar o truncar tablas grandes, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] difiere las cancelaciones de asignación de páginas, así como sus bloqueos asociados, hasta que se confirma la transacción. Las operaciones de eliminación diferidas no liberan inmediatamente el espacio asignado. Por tanto, los valores devueltos por sys.database_files inmediatamente después de quitar o truncar un objeto grande pueden no reflejar el espacio de disco real disponible.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** . Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
 
 ## <a name="examples"></a>Ejemplos  
@@ -84,7 +84,7 @@ size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0
    AS EmptySpaceInMB
 FROM sys.database_files;
 ```
-Para obtener más información al usar [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], consulte [determinar el tamaño de base de datos en la base de datos de SQL Azure V12](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) en el blog del equipo de asesoramiento al cliente de SQL.
+Para obtener más información al usar [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], consulte [determinar el tamaño de base de datos en Azure SQL Database V12](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) en el blog de Customer Advisory Team de SQL.
   
 ## <a name="see-also"></a>Vea también  
  [Vistas de catálogo de archivos y bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
@@ -92,6 +92,6 @@ Para obtener más información al usar [!INCLUDE[ssSDS_md](../../includes/sssds-
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
- [Sys.data_spaces & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
+ [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
   
   

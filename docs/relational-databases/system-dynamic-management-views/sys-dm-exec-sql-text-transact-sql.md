@@ -23,18 +23,18 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 21b22b837cc4e46bdd5169b0c669e7dde74c029c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5bc68b376f5524324756715497c00094eb2ed101
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465161"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557145"
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve el texto de la instrucción SQL lote que se identifica mediante especificado *sql_handle*. Esta función con valores de tabla reemplaza a la función del sistema **fn_get_sql**.  
+  Devuelve el texto de la instrucción SQL por lotes que es identificado por el *sql_handle*. Esta función con valores de tabla reemplaza la función del sistema **fn_get_sql**.  
   
  
 ## <a name="syntax"></a>Sintaxis  
@@ -45,7 +45,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 ## <a name="arguments"></a>Argumentos  
 *sql_handle*  
-Es el identificador SQL del lote que se va a buscar. *sql_handle* es **varbinary(64)**. *sql_handle* puede obtenerse de los siguientes objetos de administración dinámica:  
+Es el identificador SQL del lote que se va a buscar. *sql_handle* es **varbinary (64)**. *sql_handle* puede obtenerse de los objetos de administración dinámica siguientes:  
   
 -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
@@ -60,7 +60,7 @@ Es el identificador SQL del lote que se va a buscar. *sql_handle* es **varbinary
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
   
 *plan_handle*  
-Identifica de forma exclusiva un plan de consulta para un lote que está almacenado en caché o ejecutándose. *plan_handle* es **varbinary(64)**. *plan_handle* puede obtenerse de los siguientes objetos de administración dinámica:  
+Identifica de forma exclusiva un plan de consulta para un lote que está almacenado en caché o ejecutándose. *plan_handle* es **varbinary (64)**. *plan_handle* puede obtenerse de los objetos de administración dinámica siguientes:  
   
 -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
@@ -70,33 +70,33 @@ Identifica de forma exclusiva un plan de consulta para un lote que está almacen
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|Id. de base de datos.<br /><br /> En el caso de instrucciones SQL ad hoc y preparadas, identificador de la base de datos en que se compilaron las instrucciones.|  
 |**objectid**|**int**|Identificador del objeto.<br /><br /> Este valor es NULL para las instrucciones SQL ad hoc y preparadas.|  
-|**number**|**smallint**|En un procedimiento almacenado numerado, esta columna devuelve el número del procedimiento almacenado. Para obtener más información, consulte [sys.numbered_procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> Este valor es NULL para las instrucciones SQL ad hoc y preparadas.|  
+|**Número**|**smallint**|En un procedimiento almacenado numerado, esta columna devuelve el número del procedimiento almacenado. Para obtener más información, consulte [sys.numbered_procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> Este valor es NULL para las instrucciones SQL ad hoc y preparadas.|  
 |**Cifrado**|**bit**|1 = El texto SQL está cifrado.<br /><br /> 0 = El texto SQL no está cifrado.|  
 |**texto**|**nvarchar (max** **)**|Texto de la consulta de SQL.<br /><br /> Este valor es NULL para objetos cifrados.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso `VIEW SERVER STATE` en el servidor.  
   
-## <a name="remarks"></a>Comentarios  
-Para las consultas ad hoc, los identificadores de SQL son valores de hash basados en el texto SQL que se va a enviar al servidor y pueden originarse en cualquier base de datos. 
+## <a name="remarks"></a>Notas  
+Para consultas ad hoc, los identificadores SQL son valores hash basados en el texto SQL que se va a enviar al servidor y pueden originarse en cualquier base de datos. 
 
 Para los objetos de base de datos, como procedimientos almacenados, desencadenadores o funciones, los identificadores SQL se derivan del identificador de base de datos, del identificador de objeto y del número de objeto. 
 
 Identificador del plan es un valor hash derivado del plan compilado del lote completo. 
 
 > [!NOTE]
-> **dbid** no se puede determinar de *sql_handle* para consultas ad hoc. Para determinar **dbid** para consultas ad hoc, use *plan_handle* en su lugar.
+> **dbid** no se puede determinar desde *sql_handle* para consultas ad hoc. Para determinar **dbid** para consultas ad hoc, use *plan_handle* en su lugar.
   
 ## <a name="examples"></a>Ejemplos 
 
 ### <a name="a-conceptual-example"></a>A. Ejemplo conceptual
-El siguiente es un ejemplo básico para ilustrar el hecho de pasar un **sql_handle** directamente o con **CROSS APPLY**.
-  1.  Crear la actividad.  
-Ejecute el siguiente código T-SQL en una nueva ventana de consulta en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].   
+El siguiente es un ejemplo básico para ilustrar pasando un **sql_handle** directamente o con **CROSS APPLY**.
+  1.  Creación de actividad.  
+Ejecute el siguiente T-SQL en una nueva ventana de consulta en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].   
       ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
@@ -106,8 +106,8 @@ Ejecute el siguiente código T-SQL en una nueva ventana de consulta en [!INCLUDE
         WAITFOR DELAY '00:02:00';
       ```
       
-    2.  Usar **CROSS APPLY**.  
-    El identificador sql_handle de **sys.dm_exec_requests** se pasará a **sys.dm_exec_sql_text** con **CROSS APPLY**. Abra una nueva ventana de consulta y pase el spid identificado en el paso 1. En este ejemplo resulta ser el spid `59`.
+    2.  Uso de **CROSS APPLY**.  
+    El identificador sql_handle desde **sys.dm_exec_requests** se pasarán al **sys.dm_exec_sql_text** mediante **CROSS APPLY**. Abra una nueva ventana de consulta y pase el spid identificado en el paso 1. En este ejemplo resulta ser el spid `59`.
 
         ```sql
         SELECT t.*
@@ -117,7 +117,7 @@ Ejecute el siguiente código T-SQL en una nueva ventana de consulta en [!INCLUDE
          ```      
  
     2.  Pasar **sql_handle** directamente.  
-Adquirir el **sql_handle** de **sys.dm_exec_requests**. A continuación, pase el **sql_handle** directamente a **sys.dm_exec_sql_text**. Abra una nueva ventana de consulta y pase el spid identificado en el paso 1 para **sys.dm_exec_requests**. En este ejemplo resulta ser el spid `59`. A continuación, pasar el valor devuelto **sql_handle** como argumento a **sys.dm_exec_sql_text**.
+Adquirir el **sql_handle** desde **sys.dm_exec_requests**. A continuación, pase el **sql_handle** directamente a **sys.dm_exec_sql_text**. Abra una nueva ventana de consulta y pase el spid identificado en el paso 1 para **sys.dm_exec_requests**. En este ejemplo resulta ser el spid `59`. A continuación, pasar el valor devuelto **sql_handle** como argumento a **sys.dm_exec_sql_text**.
 
         ```sql
         -- acquire sql_handle
@@ -128,7 +128,7 @@ Adquirir el **sql_handle** de **sys.dm_exec_requests**. A continuación, pase el
          ```      
     
   
-### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>B. Obtener información sobre las cinco mejores consultas por promedio de tiempo de CPU  
+### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>B. Obtener información acerca de las cinco mejores consultas por promedio de tiempo de CPU  
  El ejemplo siguiente devuelve el texto de la instrucción SQL y el promedio de tiempo de CPU de las cinco mejores consultas.  
   
 ```sql  

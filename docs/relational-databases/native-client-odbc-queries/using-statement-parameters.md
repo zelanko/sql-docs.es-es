@@ -1,5 +1,5 @@
 ---
-title: Usar parámetros de instrucciones | Microsoft Docs
+title: Usar parámetros de instrucciones | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b2533a645d18fbcfc14408c1a22b14f32641bd4b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e5a0f9c839b2b5ab704e69b82d531c12766de97f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418824"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563649"
 ---
 # <a name="using-statement-parameters"></a>Usar parámetros de instrucciones
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

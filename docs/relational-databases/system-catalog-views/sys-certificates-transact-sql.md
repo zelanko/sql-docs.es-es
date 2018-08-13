@@ -1,5 +1,5 @@
 ---
-title: Sys.Certificates (Transact-SQL) | Documentos de Microsoft
+title: Sys.Certificates (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,20 +24,20 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f5aaf349d050b2b1b1d27ae3067f003186c8c6eb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 35e026a66a0d170be49cfbf8d220e591a73a2f37
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180321"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552665"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Devuelve una fila por cada certificado en la base de datos.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|Nombre del certificado. Es único en la base de datos.|  
 |**certificate_id**|**int**|Id. del certificado. Es único en la base de datos.|  
@@ -46,7 +46,7 @@ ms.locfileid: "33180321"
 |**pvt_key_encryption_type_desc**|**nvarchar(60)**|Descripción de cómo se ha cifrado la clave privada.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
 |**is_active_for_begin_dialog**|**bit**|Si el valor es 1, este certificado se utiliza para iniciar diálogos de servicio cifrados.|  
 |**issuer_name**|**nvarchar(442)**|Nombre del emisor del certificado.|  
-|**cert_serial_number**|**nvarchar(64)**|Número de serie del certificado.|  
+|**cert_serial_number**|**Nvarchar (64)**|Número de serie del certificado.|  
 |**SID**|**varbinary(85)**|SID (identificador de seguridad) de inicio de sesión para este certificado.|  
 |**string_sid**|**nvarchar(128)**|Representación en forma de cadena del SID de inicio de sesión para este certificado.|  
 |**Asunto**|**nvarchar(4000)**|Asunto del certificado.|  
@@ -56,7 +56,7 @@ ms.locfileid: "33180321"
 |**attested_by**|**nvarchar(260)**|Solo para uso del sistema.|  
 |pvt_key_last_backup_date|**datetime**|Fecha y hora cuando la clave privada del certificado se exportó por última vez.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

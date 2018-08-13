@@ -24,13 +24,13 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e0287d1c3a88281bb1b56a6d632e77beeeb7791f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f036dfc2f64b230d5023118bfb55b812665e7f29
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036388"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550805"
 ---
 # <a name="syspartitionparameters-transact-sql"></a>sys.partition_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -43,8 +43,8 @@ ms.locfileid: "38036388"
 |**parameter_id**|**int**|Id. del parámetro. Es único en la función de partición y empieza por 1.|  
 |**system_type_id**|**tinyint**|Id. del tipo de sistema del parámetro. Corresponde a la **system_type_id** columna de la **sys.types** vista de catálogo.|  
 |**max_length**|**smallint**|Longitud máxima del parámetro en bytes.|  
-|**precisión**|**tinyint**|Precisión del parámetro si está basado en numerales; de lo contrario es 0.|  
-|**escala**|**tinyint**|Escala del parámetro si está basado en numerales; de lo contrario es 0.|  
+|**Precisión**|**tinyint**|Precisión del parámetro si está basado en numerales; de lo contrario es 0.|  
+|**Escala**|**tinyint**|Escala del parámetro si está basado en numerales; de lo contrario es 0.|  
 |**collation_name**|**sysname**|Nombre de la intercalación del parámetro, si está basado en caracteres; en caso contrario, es NULL.|  
 |**user_type_id**|**int**|Id. del tipo. Es único en la base de datos. Tipos de datos del sistema, **user_type_id** = **system_type_id**.|  
   

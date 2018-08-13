@@ -24,13 +24,13 @@ caps.latest.revision: 95
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1853bdbf62701cfbaa5302615eac61684089ac5a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d52b15fc3aec74734a23f16e865a0ce3c59269d4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468081"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544765"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "34468081"
   Devuelve información de tamaño y fragmentación de los datos y los índices de la tabla o vista especificada en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En el caso de un índice, se devuelve una fila por cada nivel de árbol b en cada partición. En el caso de un montón, se devuelve una fila para la unidad de asignación IN_ROW_DATA en cada partición. En el caso de datos de objetos grandes (LOB), se devuelve una fila para la unidad de asignación LOB_DATA en cada partición. Si en la tabla hay datos de desbordamiento de fila, se devuelve una fila para la unidad de asignación ROW_OVERFLOW_DATA en cada partición. No devuelve información sobre los índices de almacén de columnas optimizadas en memoria xVelocity.  
   
 > [!IMPORTANT]
-> Si consulta **sys.dm_db_index_physical_stats** en una instancia del servidor que hospeda un siempre en [réplica secundaria legible](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), podría producirse un problema bloqueo de REDO. Esto se debe a que esta vista de administración dinámica adquiere un bloqueo IS en la tabla de usuario especificada o la vista que puede bloquear las solicitudes de un subproceso de REDO durante un bloqueo X en esa tabla o vista de usuario.  
+> Si consulta **sys.dm_db_index_physical_stats** en una instancia de servidor que hospeda un Always On [réplica secundaria legible](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), podría encontrar un problema de bloqueo de puesta al día. Esto se debe a que esta vista de administración dinámica adquiere un bloqueo IS en la tabla de usuario especificada o la vista que puede bloquear las solicitudes de un subproceso de REDO durante un bloqueo X en esa tabla o vista de usuario.  
   
- **Sys.dm_db_index_physical_stats** no devuelve información acerca de los índices con optimización para memoria. Para obtener información sobre el uso de los índices con optimización para memoria, vea [sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
+ **Sys.dm_db_index_physical_stats** no devuelve información acerca de los índices optimizados para memoria. Para obtener información sobre el uso de índices optimizados para memoria, vea [sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -62,51 +62,51 @@ sys.dm_db_index_physical_stats (
  *database_id* | NULL | 0 | VALOR PREDETERMINADO  
  Es el identificador de la base de datos. *database_id* es **smallint**. Las entradas válidas son el número de identificador de una base de datos, NULL, 0 y DEFAULT. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.  
   
- Especifique NULL para devolver información de todas las bases de datos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si especifica NULL para *database_id*, también debe especificar NULL para *object_id*, *index_id*, y *número_de_partición*.  
+ Especifique NULL para devolver información de todas las bases de datos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si especifica NULL para *database_id*, también debe especificar NULL para *object_id*, *index_id*, y *partition_number*.  
   
- La función integrada [DB_ID](../../t-sql/functions/db-id-transact-sql.md) puede especificarse. Al usar DB_ID sin especificar ningún nombre de base de datos, el nivel de compatibilidad de la base de datos actual debe ser 90 o superior.  
+ La función integrada [DB_ID](../../t-sql/functions/db-id-transact-sql.md) se pueden especificar. Al usar DB_ID sin especificar ningún nombre de base de datos, el nivel de compatibilidad de la base de datos actual debe ser 90 o superior.  
   
  *object_id* | NULL | 0 | VALOR PREDETERMINADO  
  Es el identificador de objeto de la tabla o vista donde está activado el índice. *object_id* es **int**.  
   
- Las entradas válidas son el número de identificador de una tabla o vista, NULL, 0 y DEFAULT. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto. Fecha de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], las entradas válidas también incluyen el nombre de cola de service broker o el nombre de la tabla interna de cola. Cuando se aplican los parámetros predeterminados (es decir, todos los objetos, todos los índices, etcetera), información de fragmentación de todas las colas se incluyen en el conjunto de resultados.  
+ Las entradas válidas son el número de identificador de una tabla o vista, NULL, 0 y DEFAULT. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto. Como de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], las entradas válidas incluyen también el nombre de cola de service broker o el nombre de tabla interna de la cola. Cuando se aplican los parámetros predeterminados (es decir, todos los objetos, todos los índices, etcetera), la información de fragmentación para todas las colas se incluyen en el conjunto de resultados.  
   
- Especifique NULL para devolver información de todas las tablas y vistas de la base de datos especificada. Si especifica NULL para *object_id*, también debe especificar NULL para *index_id* y *número_de_partición*.  
+ Especifique NULL para devolver información de todas las tablas y vistas de la base de datos especificada. Si especifica NULL para *object_id*, también debe especificar NULL para *index_id* y *partition_number*.  
   
  *index_id* | 0 | NULL | -1 | VALOR PREDETERMINADO  
- Es el identificador del índice. *index_id* es **int**. Las entradas válidas son el número de identificación de un índice, 0 si *object_id* es un montón, NULL, -1 o DEFAULT. El valor predeterminado es -1. NULL, -1 y DEFAULT son valores equivalentes en este contexto.  
+ Es el identificador del índice. *index_id* es **int**. Las entradas válidas son el número de identificación de un índice, 0 si *object_id* es un montón, NULL, -1 y DEFAULT. El valor predeterminado es -1. Es NULL, -1 y DEFAULT son valores equivalentes en este contexto.  
   
- Especifique NULL para devolver información de todos los índices de una tabla o vista base. Si especifica NULL para *index_id*, también debe especificar NULL para *número_de_partición*.  
+ Especifique NULL para devolver información de todos los índices de una tabla o vista base. Si especifica NULL para *index_id*, también debe especificar NULL para *partition_number*.  
   
- *número_de_partición* | NULL | 0 | VALOR PREDETERMINADO  
- Es el número de partición en el objeto. *número_de_partición* es **int**. Las entradas válidas son el *partion_number* de un índice o montón, NULL, 0 o DEFAULT. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.  
+ *partition_number* | NULL | 0 | VALOR PREDETERMINADO  
+ Es el número de partición en el objeto. *partition_number* es **int**. Las entradas válidas son el *partion_number* de un índice o montón, NULL, 0 o DEFAULT. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.  
   
  Especifique NULL para obtener información sobre todas las particiones del objeto propietario.  
   
- *número_de_partición* está basado en 1. Un montón o índice sin particiones tiene *número_de_partición* establecido en 1.  
+ *partition_number* está basado en 1. Un montón o un índice sin particiones tiene *partition_number* establecido en 1.  
   
  *modo* | NULL | VALOR PREDETERMINADO  
- Es el nombre del modo. *modo* especifica el nivel de recorrido que se usa para obtener estadísticas. *modo* es **sysname**. Las entradas válidas son DEFAULT, NULL, LIMITED, SAMPLED o DETAILED. El valor predeterminado (NULL) es LIMITED.  
+ Es el nombre del modo. *modo* especifica el nivel de examen que se utiliza para obtener las estadísticas. *modo* es **sysname**. Las entradas válidas son DEFAULT, NULL, LIMITED, SAMPLED o DETAILED. El valor predeterminado (NULL) es LIMITED.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|Identificador de base de datos de la tabla o vista.|  
 |object_id|**int**|Identificador de objeto de la tabla o vista en la que se encuentra el índice.|  
 |index_id|**int**|Identificador de índice.<br /><br /> 0 = Montón.|  
 |partition_number|**int**|Número de partición de base 1 en el objeto propietario, una tabla, vista o índice.<br /><br /> 1 = Montón o índice sin particiones.|  
 |index_type_desc|**nvarchar(60)**|Descripción del tipo de índice:<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> SPATIAL INDEX<br /><br /> XML INDEX<br /><br /> ÍNDICE de asignación del almacén de columnas (interno)<br /><br /> ÍNDICE de almacén de columnas DELETEBUFFER (interno)<br /><br /> ÍNDICE de almacén de columnas DELETEBITMAP (interno)|  
-|hobt_id|**bigint**|Montón o Id. de árbol B del índice o partición.<br /><br /> Además de devolver el hobt_id de índices definidos por el usuario, también se devuelve el hobt_id de los índices de almacén de columnas interno.|  
-|alloc_unit_type_desc|**nvarchar(60)**|Descripción del tipo de unidad de asignación:<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> La unidad de asignación LOB_DATA contiene los datos que se almacenan en columnas de tipo **texto**, **ntext**, **imagen**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, y **xml**. Para obtener más información, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> La unidad de asignación ROW_OVERFLOW_DATA contiene los datos que se almacenan en columnas de tipo **varchar**, **nvarchar (n)**, **varbinary**, y **sql_ variante** que se han insertado de manera no consecutiva.|  
+|hobt_id|**bigint**|Montón o el Id. de árbol B del índice o partición.<br /><br /> Además de devolver el hobt_id de los índices definidos por el usuario, también se devuelve el hobt_id de los índices de almacén de columnas interno.|  
+|alloc_unit_type_desc|**nvarchar(60)**|Descripción del tipo de unidad de asignación:<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> La unidad de asignación LOB_DATA contiene los datos que se almacenan en columnas de tipo **texto**, **ntext**, **imagen**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, y **xml**. Para obtener más información, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> La unidad de asignación ROW_OVERFLOW_DATA contiene los datos que se almacenan en columnas de tipo **varchar**, **nvarchar (n)**, **varbinary**, y **sql_ variante** que se han insertado no consecutiva.|  
 |index_depth|**tinyint**|Número de niveles del índice.<br /><br /> 1 = Montón, o unidad de asignación LOB_DATA o ROW_OVERFLOW_DATA.|  
-|index_level|**tinyint**|Nivel actual del índice.<br /><br /> 0 para niveles hoja del índice, montones y unidades de asignación LOB_DATA o ROW_OVERFLOW_DATA.<br /><br /> Mayor que 0 para niveles de índice no hoja. *index_level* será el nivel más alto en el nivel raíz de un índice.<br /><br /> Los niveles no hoja de índices solo están procesan cuando *modo* = DETAILED.|  
+|index_level|**tinyint**|Nivel actual del índice.<br /><br /> 0 para niveles hoja del índice, montones y unidades de asignación LOB_DATA o ROW_OVERFLOW_DATA.<br /><br /> Mayor que 0 para niveles de índice no hoja. *index_level* será el más alto en el nivel raíz de un índice.<br /><br /> Los niveles no hoja de índices sólo están procesarse cuando *modo* = detallado.|  
 |avg_fragmentation_in_percent|**float**|Fragmentación lógica para índices o fragmentación de extensión para montones en la unidad de asignación IN_ROW_DATA.<br /><br /> El valor se mide como porcentaje y tiene en cuenta varios archivos. Para obtener definiciones de fragmentación lógica y de extensión, vea la sección Comentarios.<br /><br /> 0 para unidades de asignación LOB_DATA y ROW_OVERFLOW_DATA.<br /><br /> NULL para montones cuando *modo* = SAMPLED.|  
 |fragment_count|**bigint**|Número de fragmentos en el nivel hoja de una unidad de asignación IN_ROW_DATA. Para obtener más información sobre los fragmentos, vea la sección Comentarios.<br /><br /> NULL para niveles no hoja de un índice y unidades de asignación LOB_DATA o ROW_OVERFLOW_DATA.<br /><br /> NULL para montones cuando *modo* = SAMPLED.|  
 |avg_fragment_size_in_pages|**float**|Promedio de páginas en un fragmento en el nivel hoja de una unidad de asignación IN_ROW_DATA.<br /><br /> NULL para niveles no hoja de un índice y unidades de asignación LOB_DATA o ROW_OVERFLOW_DATA.<br /><br /> NULL para montones cuando *modo* = SAMPLED.|  
 |page_count|**bigint**|Número total de páginas de datos o de índice.<br /><br /> En el caso de un índice, el número total de páginas de índice en el nivel actual de un árbol b en la unidad de asignación IN_ROW_DATA.<br /><br /> En el caso de un montón, el número total de páginas de datos en la unidad de asignación IN_ROW_DATA.<br /><br /> En el caso de unidades de asignación LOB_DATA o ROW_OVERFLOW_DATA, el número total de páginas en la unidad de asignación.|  
 |avg_page_space_used_in_percent|**float**|Porcentaje medio del espacio de almacenamiento de datos disponible utilizado en todas las páginas.<br /><br /> En el caso de un índice, el promedio se aplica al nivel actual del árbol b en la unidad de asignación IN_ROW_DATA.<br /><br /> En el caso de un montón, se trata del promedio de todas las páginas de datos en la unidad de asignación IN_ROW_DATA.<br /><br /> En el caso de unidades de asignación LOB_DATA o ROW_OVERFLOW_DATA, se trata del promedio de todas las páginas en la unidad de asignación.<br /><br /> NULL cuando *modo* = LIMITED.|  
-|record_count|**bigint**|Número total de registros.<br /><br /> En el caso de un índice, el número total de registros se aplica al nivel actual del árbol b en la unidad de asignación IN_ROW_DATA.<br /><br /> En el caso de un montón, el número total de registros en la unidad de asignación IN_ROW_DATA.<br /><br /> **Nota:** un montón, el número de registros devueltos por esta función podría no coincidir con el número de filas que se devuelve al ejecutar un SELECT COUNT (\*) en el montón. Esto es debido a que una fila puede contener varios registros. Por ejemplo, en algunas situaciones de una actualización, una única fila del montón puede tener un registro de reenvío y un registro reenviado como resultado de la actualización. Asimismo, la mayoría de las filas LOB de gran tamaño se dividen en varios registros en almacenamiento de LOB_DATA.<br /><br /> En el caso de unidades de asignación LOB_DATA o ROW_OVERFLOW_DATA, el número total de registros en toda la unidad de asignación.<br /><br /> NULL cuando *modo* = LIMITED.|  
+|record_count|**bigint**|Número total de registros.<br /><br /> En el caso de un índice, el número total de registros se aplica al nivel actual del árbol b en la unidad de asignación IN_ROW_DATA.<br /><br /> En el caso de un montón, el número total de registros en la unidad de asignación IN_ROW_DATA.<br /><br /> **Nota:** un montón, el número de registros devueltos por esta función podría no coincidir con el número de filas que se devuelven mediante la ejecución de un SELECT COUNT (\*) en el montón. Esto es debido a que una fila puede contener varios registros. Por ejemplo, en algunas situaciones de una actualización, una única fila del montón puede tener un registro de reenvío y un registro reenviado como resultado de la actualización. Asimismo, la mayoría de las filas LOB de gran tamaño se dividen en varios registros en almacenamiento de LOB_DATA.<br /><br /> En el caso de unidades de asignación LOB_DATA o ROW_OVERFLOW_DATA, el número total de registros en toda la unidad de asignación.<br /><br /> NULL cuando *modo* = LIMITED.|  
 |ghost_record_count|**bigint**|Número de registros fantasma preparados para su eliminación mediante la tarea de limpieza de registros fantasma en la unidad de asignación.<br /><br /> 0 para niveles no hoja de un índice en la unidad de asignación IN_ROW_DATA.<br /><br /> NULL cuando *modo* = LIMITED.|  
 |version_ghost_record_count|**bigint**|Número de registros fantasma retenidos por una transacción de aislamiento de instantánea pendiente en una unidad de asignación.<br /><br /> 0 para niveles no hoja de un índice en la unidad de asignación IN_ROW_DATA.<br /><br /> NULL cuando *modo* = LIMITED.|  
 |min_record_size_in_bytes|**int**|Tamaño mínimo del registro en bytes.<br /><br /> En el caso de un índice, el tamaño mínimo del registro se aplica al nivel actual del árbol b en la unidad de asignación IN_ROW_DATA.<br /><br /> En el caso de un montón, el tamaño mínimo del registro en la unidad de asignación IN_ROW_DATA.<br /><br /> En el caso de unidades de asignación LOB_DATA o ROW_OVERFLOW_DATA, el tamaño mínimo del registro en toda la unidad de asignación.<br /><br /> NULL cuando *modo* = LIMITED.|  
@@ -114,11 +114,11 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|Promedio de tamaño del registro en bytes.<br /><br /> En el caso de un índice, el promedio de tamaño del registro se aplica al nivel actual del árbol b en la unidad de asignación IN_ROW_DATA.<br /><br /> En el caso de un montón, el promedio de tamaño del registro en la unidad de asignación IN_ROW_DATA.<br /><br /> En el caso de unidades de asignación LOB_DATA o ROW_OVERFLOW_DATA, el promedio de tamaño del registro en toda la unidad de asignación.<br /><br /> NULL cuando *modo* = LIMITED.|  
 |forwarded_record_count|**bigint**|Número de registros en un montón que han reenviado punteros a otra ubicación de datos. Este estado se produce durante una actualización, cuando no existe suficiente espacio para almacenar la nueva fila en la ubicación original.<br /><br /> NULL para todas las unidades de asignación salvo IN_ROW_DATA para un montón.<br /><br /> NULL para montones cuando *modo* = LIMITED.|  
 |compressed_page_count|**bigint**|Número de páginas comprimidas.<br /><br /> En el caso de los montones, las nuevas páginas asignadas no usan la compresión de página. Un montón usa la compresión de página bajo dos condiciones especiales: cuando los datos se importan de forma masiva o cuando vuelve a generarse un montón. Las operaciones DML que producen las asignaciones de página no usarán la compresión de página. Vuelva a generar un montón cuando el valor compressed_page_count sea mayor que el umbral que desea.<br /><br /> En las tablas que tienen un índice clúster, el valor compressed_page_count indica la eficacia de la compresión de página.|  
-|hobt_id|bigint|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Para los índices de almacén de columnas solo, este es el identificador para un conjunto de filas que realiza un seguimiento de los datos de almacén de columnas interno de una partición. Los conjuntos de filas están almacenadas como datos montones o binario árboles. Tienen el mismo identificador de índice que el índice de almacén de columnas primario. Para obtener más información, consulte [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL si|  
-|column_store_delete_buffer_state|tinyint|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = PURGANDO<br /><br /> 3 = BAJA<br /><br /> 4 = RETIRAR<br /><br /> 5 = LISTO|  
-|column_store_delete_buff_state_desc||**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NOT_APPLICABLE: el índice del elemento primario no es un índice de almacén de columnas.<br /><br /> Abrir elementos Deleter y escáneres Utilícelo.<br /><br /> DESCARGANDO: se está purgando elementos Deleter pero escáneres seguir usándolo.<br /><br /> El VACIADO: búfer se cierra y filas en el búfer se escriben en el mapa de bits de eliminación.<br /><br /> RETIRING – filas en el búfer de eliminación cerrado se han escrito en el mapa de bits de eliminación, pero el búfer no se ha truncado porque escáneres lo están usando. Escáneres nueva no es necesario utilizar el búfer retirar porque el búfer abierto es suficiente.<br /><br /> Listo: este búfer de delete está listo para su uso.|  
+|hobt_id|BIGINT|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Para los índices de almacén de columnas, es el identificador para un conjunto de filas que realiza el seguimiento de los datos de almacén de columnas interno de una partición. Los conjuntos de filas están almacenadas como datos montones o binario árboles. Tienen el mismo Id. de índice como el índice de almacén de columnas primario. Para obtener más información, consulte [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL si|  
+|column_store_delete_buffer_state|TINYINT|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = PURGA<br /><br /> 3 = BAJA<br /><br /> 4 = RETIRADA<br /><br /> 5 = LISTO|  
+|column_store_delete_buff_state_desc||**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NOT_APPLICABLE: el índice del elemento primario no es un índice de almacén de columnas.<br /><br /> Abrir elementos Deleter y escáneres usan esto.<br /><br /> DESCARGA: elementos Deleter está purgando pero escáneres seguir utilizándola.<br /><br /> BAJA: se cierra el búfer y se escriben filas en el búfer en el mapa de bits de eliminación.<br /><br /> Se han escrito RETIRING – filas en el búfer de eliminación cerrado en el mapa de bits de eliminación, pero el búfer no se ha truncado porque escáneres lo están usando. Escáneres nuevo no es necesario utilizar el búfer reemplazan porque el búfer abierto es suficiente.<br /><br /> LISTO, que este búfer de eliminación está listo para su uso.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La función de administración dinámica sys.dm_db_index_physical_stats sustituye a la instrucción DBCC SHOWCONTIG.  
   
 ## <a name="scanning-modes"></a>Modos de recorrido  
@@ -172,7 +172,7 @@ GO
 ```  
   
 ### <a name="best-practice"></a>Práctica recomendada  
- Asegúrese de que se devuelva un identificador válido cuando utilice DB_ID u OBJECT_ID. Por ejemplo, cuando utilice OBJECT_ID, especifique un nombre de tres partes, como `OBJECT_ID(N'AdventureWorks2012.Person.Address')`, o bien pruebe el valor devuelto por las funciones antes de usarlos en la función sys.dm_db_index_physical_stats. En los ejemplos A y B siguientes se ilustra una forma segura de especificar identificadores de objetos y bases de datos.  
+ Asegúrese de que se devuelva un identificador válido cuando utilice DB_ID u OBJECT_ID. Por ejemplo, cuando utilice OBJECT_ID, especifique un nombre de tres partes, como `OBJECT_ID(N'AdventureWorks2012.Person.Address')`, o probar el valor devuelto por las funciones antes de usarlos en la función sys.dm_db_index_physical_stats. En los ejemplos A y B siguientes se ilustra una forma segura de especificar identificadores de objetos y bases de datos.  
   
 ## <a name="detecting-fragmentation"></a>Detectar la fragmentación  
  La fragmentación es consecuencia de los procesos de modificación de los datos (instrucciones INSERT, UPDATE y DELETE) efectuados en la tabla y en los índices definidos en la tabla. Como dichas modificaciones no suelen estar distribuidas de forma equilibrada entre las filas de la tabla y los índices, el llenado de cada página puede variar con el paso del tiempo. Para las consultas que examinan parcial o totalmente los índices de una tabla, este tipo de fragmentación puede producir lecturas de páginas adicionales. Esto impide el examen paralelo de los datos.  
@@ -200,7 +200,7 @@ GO
   
 -   Utilice ALTER INDEX REBUILD, el sustituto de DBCC DBREINDEX, para volver a generar el índice en línea o sin conexión. Para obtener más información, vea [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
- La fragmentación por sí sola no es una razón suficiente para reorganizar o volver a generar un índice. El principal efecto de la fragmentación es una disminución del rendimiento de la lectura anticipada de páginas durante los recorridos de índice. Esto se traduce en tiempos de respuesta más lentos. Si la carga de consultas en un índice o tabla fragmentado no implica recorridos, debido a que la carga incluye principalmente búsquedas singleton, es posible que la eliminación de la fragmentación no tenga ninguna consecuencia. Para obtener más información, vea este [sitio Web de Microsoft](http://go.microsoft.com/fwlink/?linkid=31012).  
+ La fragmentación por sí sola no es una razón suficiente para reorganizar o volver a generar un índice. El principal efecto de la fragmentación es una disminución del rendimiento de la lectura anticipada de páginas durante los recorridos de índice. Esto se traduce en tiempos de respuesta más lentos. Si la carga de consultas en un índice o tabla fragmentado no implica recorridos, debido a que la carga incluye principalmente búsquedas singleton, es posible que la eliminación de la fragmentación no tenga ninguna consecuencia. Para obtener más información, consulte este [sitio Web de Microsoft](http://go.microsoft.com/fwlink/?linkid=31012).  
   
 > [!NOTE]  
 >  Al ejecutar DBCC SHRINKFILE o DBCC SHRINKDATABASE, puede producirse una fragmentación si un índice se mueve parcial o totalmente durante la operación de reducción. Por esta razón, si tiene que realizar una operación de reducción, debe realizarla antes de quitar la fragmentación.  
@@ -225,18 +225,18 @@ GO
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
  No devuelve datos para los índices de almacén de columnas en clúster.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Necesita los siguientes permisos:  
   
 -   El permiso CONTROL en el objeto especificado en la base de datos.  
   
--   Permiso VIEW DATABASE STATE para devolver información sobre todos los objetos de la base de datos especificada, utilizando el carácter comodín de objeto @*object_id*= NULL.  
+-   Permiso VIEW DATABASE STATE para devolver información sobre todos los objetos dentro de la base de datos especificada mediante el carácter comodín de objeto @*object_id*= NULL.  
   
--   Permiso VIEW SERVER STATE para devolver información sobre todas las bases de datos, mediante el carácter comodín de base de datos @*database_id* = NULL.  
+-   Permiso VIEW SERVER STATE para devolver información acerca de todas las bases de datos, utilizando el carácter comodín de base de datos @*database_id* = NULL.  
   
  El permiso VIEW DATABASE STATE permite devolver todos los objetos de la base de datos, independientemente de los permisos CONTROL denegados en objetos específicos.  
   
- Si se deniega el permiso VIEW DATABASE STATE, no se puede devolver ningún objeto de la base de datos, independientemente de que se hayan concedido permisos CONTROL a objetos específicos. Además, cuando el carácter comodín de base de datos @*database_id*= se especifica NULL, se omite la base de datos.  
+ Si se deniega el permiso VIEW DATABASE STATE, no se puede devolver ningún objeto de la base de datos, independientemente de que se hayan concedido permisos CONTROL a objetos específicos. También, cuando el carácter comodín de base de datos @*database_id*= se especifica NULL, se omite la base de datos.  
   
  Para obtener más información, consulte [funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
@@ -288,7 +288,7 @@ GO
   
 ```  
   
-### <a name="c-returning-information-for-all-databases"></a>C. Devolver información acerca de todas las bases de datos  
+### <a name="c-returning-information-for-all-databases"></a>C. Devolver la información de todas las bases de datos  
  En el ejemplo siguiente se devuelven todas las estadísticas de todas las tablas e índices de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; para ello, se especifica el comodín `NULL` en todos los parámetros. Para ejecutar esta consulta requiere el permiso VIEW SERVER STATE.  
   
 ```  
@@ -410,13 +410,13 @@ FROM sys.dm_db_index_physical_stats (db_id(),
     object_id ('t3'), null, null, 'DETAILED');  
 ```  
   
-### <a name="g-querying-service-broker-queues-for-index-fragmentation"></a>G. Consultar colas de service broker para la fragmentación de índices  
+### <a name="g-querying-service-broker-queues-for-index-fragmentation"></a>G. Consultar colas de service broker para la fragmentación de índice  
   
 ||  
 |-|  
 |**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
- Los ejemplos siguientes se muestra cómo consultar las colas del agente de servidor fragmentación.  
+ Los ejemplos siguientes se muestra cómo consultar las colas de agente de servidor para la fragmentación.  
   
 ```  
 --Using queue internal table name   

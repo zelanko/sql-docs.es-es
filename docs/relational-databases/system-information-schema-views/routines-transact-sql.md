@@ -1,5 +1,5 @@
 ---
-title: RUTINAS (Transact-SQL) | Documentos de Microsoft
+title: RUTINAS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 00ec03e10cd41e964c9687f04478e05871de5b68
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5053bb891d06888776e49613803d71a4273da30f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240605"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548895"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,13 +40,13 @@ ms.locfileid: "33240605"
 > [!NOTE]  
 >  La columna ROUTINE_DEFINITION contiene las instrucciones de origen que crearon la función o el procedimiento almacenado. Estas instrucciones de origen sirven, probablemente, para contener los retornos de carro incrustados. Si devuelve esta columna a una aplicación que muestra los resultados en formato de texto, los retornos de carro incrustados en los resultados de ROUTINE_DEFINITION pueden afectar al formato del conjunto de resultados general. Si selecciona la columna ROUTINE_DEFINITION, debe tener en cuenta los retornos de carro incrustados; por ejemplo, devolviendo el conjunto de resultados en una cuadrícula o devolviendo ROUTINE_DEFINITION a su propio cuadro de texto.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar (** 128 **)**|Nombre específico del catálogo. Este nombre es el mismo que ROUTINE_CATALOG.|  
-|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Nombre específico del esquema.<br /><br /> **\*\* Importante \* \***  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
+|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Nombre específico del esquema.<br /><br /> **\*\* Importante \* \* ** no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
 |SPECIFIC_NAME|**nvarchar (** 128 **)**|Nombre específico del catálogo. Este nombre es el mismo que ROUTINE_NAME.|  
 |ROUTINE_CATALOG|**nvarchar (** 128 **)**|Nombre del catálogo de la función.|  
-|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Nombre del esquema que contiene esta función.<br /><br /> **\*\* Importante \* \***  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
+|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Nombre del esquema que contiene esta función.<br /><br /> **\*\* Importante \* \* ** no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
 |ROUTINE_NAME|**nvarchar (** 128 **)**|Nombre de la función.|  
 |ROUTINE_TYPE|**nvarchar (** 20 **)**|Devuelve PROCEDURE para los procedimientos almacenados y FUNCTION para las funciones.|  
 |MODULE_CATALOG|**nvarchar (** 128 **)**|NULL. Reservado para uso futuro.|  
@@ -56,8 +56,8 @@ ms.locfileid: "33240605"
 |UDT_SCHEMA|**nvarchar (** 128 **)**|NULL. Reservado para uso futuro.|  
 |UDT_NAME|**nvarchar (** 128 **)**|NULL. Reservado para uso futuro.|  
 |DATA_TYPE|**nvarchar (** 128 **)**|Tipo de datos del valor devuelto de la función. Devuelve **tabla** si una función con valores de tabla.|  
-|CHARACTER_MAXIMUM_LENGTH|**int**|Longitud máxima en caracteres, si el tipo devuelto es un tipo de caracteres.<br /><br /> -1 para **xml** y los datos de tipo de valor grande.|  
-|CHARACTER_OCTET_LENGTH|**int**|Longitud máxima en bytes, si el tipo devuelto es un tipo de caracteres.<br /><br /> -1 para **xml** y los datos de tipo de valor grande.|  
+|CHARACTER_MAXIMUM_LENGTH|**int**|Longitud máxima en caracteres, si el tipo devuelto es un tipo de caracteres.<br /><br /> -1 para **xml** y datos de tipo de valor grande.|  
+|CHARACTER_OCTET_LENGTH|**int**|Longitud máxima en bytes, si el tipo devuelto es un tipo de caracteres.<br /><br /> -1 para **xml** y datos de tipo de valor grande.|  
 |COLLATION_CATALOG|**nvarchar (** 128 **)**|Siempre devuelve NULL.|  
 |COLLATION_SCHEMA|**nvarchar (** 128 **)**|Siempre devuelve NULL.|  
 |COLLATION_NAME|**nvarchar (** 128 **)**|Nombre de la intercalación del valor devuelto. Para tipos que no son de caracteres devuelve NULL.|  

@@ -23,13 +23,13 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d8e7f577a0939312123b398e3be1ab5b4cce0cd8
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ebd078b47fde7d7cd8202c1c31d7ee6a76dbff0a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465171"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559545"
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sys.dm_exec_text_query_plan
   
 ## <a name="arguments"></a>Argumentos  
 *plan_handle*  
-Identifica de forma exclusiva un plan de consulta para un lote que está almacenado en caché o ejecutándose. *plan_handle* es **varbinary(64)**.  
+Identifica de forma exclusiva un plan de consulta para un lote que está almacenado en caché o ejecutándose. *plan_handle* es **varbinary (64)**.  
   
 El identificador del plan puede obtenerse de los siguientes objetos de administración dinámica:  
   
@@ -87,27 +87,27 @@ El valor -1 indica el final del lote. El valor predeterminado es -1.
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|Identificador de la base de datos de contexto que estaba activa al compilarse la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondiente a este plan. En el caso de instrucciones SQL ad hoc y preparadas, identificador de la base de datos en que se compilaron las instrucciones.<br /><br /> Esta columna acepta valores NULL.|  
 |**objectid**|**int**|Identificador del objeto (por ejemplo, procedimiento almacenado o función definida por el usuario) de este plan de consulta. Para lotes ad hoc y preparados, esta columna es **null**.<br /><br /> Esta columna acepta valores NULL.|  
-|**number**|**smallint**|Entero de procedimiento almacenado numerado. Por ejemplo, un grupo de procedimientos de la **pedidos** aplicación puede llamarse **orderproc; 1**, **orderproc; 2**, y así sucesivamente. Para lotes ad hoc y preparados, esta columna es **null**.<br /><br /> Esta columna acepta valores NULL.|  
+|**Número**|**smallint**|Entero de procedimiento almacenado numerado. Por ejemplo, un grupo de procedimientos para la **pedidos** aplicación podría llamarse **orderproc; 1**, **orderproc; 2**, y así sucesivamente. Para lotes ad hoc y preparados, esta columna es **null**.<br /><br /> Esta columna acepta valores NULL.|  
 |**Cifrado**|**bit**|Indica si el procedimiento almacenado correspondiente está cifrado.<br /><br /> 0 = no cifrado<br /><br /> 1 = cifrado<br /><br /> La columna no acepta valores NULL.|  
-|**query_plan**|**nvarchar(max)**|Contiene la representación del plan de presentación de tiempo de compilación del plan de ejecución de consulta que se especifica con *plan_handle*. El plan de presentación está en formato de texto. Se genera un plan para cada lote que contiene, por ejemplo, instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] "ad hoc", llamadas a procedimientos almacenados y llamadas a funciones definidas por el usuario.<br /><br /> Esta columna acepta valores NULL.|  
+|**query_plan**|**nvarchar(max)**|Contiene la representación de plan de presentación de tiempo de compilación del plan de ejecución de consulta que se especifica con *plan_handle*. El plan de presentación está en formato de texto. Se genera un plan para cada lote que contiene, por ejemplo, instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] "ad hoc", llamadas a procedimientos almacenados y llamadas a funciones definidas por el usuario.<br /><br /> Esta columna acepta valores NULL.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  En las siguientes condiciones, no se devuelve ninguna salida de Showplan en el **plan** columna de la tabla devuelta para **sys.dm_exec_text_query_plan**:  
   
--   Si el plan de consulta se especifica mediante el uso de *plan_handle* se ha desalojado de la caché del plan, el **query_plan** columna de la tabla devuelta es null. Por ejemplo, esta condición puede producirse si hay un retraso entre el momento en que se captura el identificador del plan y cuando se utiliza con **sys.dm_exec_text_query_plan**.  
+-   Si el plan de consulta se especifica mediante el uso de *plan_handle* se ha desalojado de la caché del plan, el **query_plan** columna de la tabla devuelta es null. Por ejemplo, esta condición puede producirse si hay un retraso entre el momento en que se captura el identificador del plan y cuando se usa con **sys.dm_exec_text_query_plan**.  
   
 -   Algunas instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] no se almacenan en la caché, como, por ejemplo, instrucciones de operaciones masivas o instrucciones que contienen literales de cadenas de más de 8 KB. Planes de presentación de dichas instrucciones no se puede recuperar mediante el uso de **sys.dm_exec_text_query_plan** porque no existen en la memoria caché.  
   
--   Si un [!INCLUDE[tsql](../../includes/tsql-md.md)] lote o procedimiento almacenado contiene una llamada a una función definida por el usuario o una llamada a SQL dinámico, por ejemplo, con EXEC (*cadena*), la compila el plan de presentación XML por la función definida por el usuario no se incluye en la tabla devuelto por **sys.dm_exec_text_query_plan** para el lote o procedimiento almacenado. En su lugar, debe realizar una llamada independiente a **sys.dm_exec_text_query_plan** para el *plan_handle* que corresponde a la función definida por el usuario.  
+-   Si un [!INCLUDE[tsql](../../includes/tsql-md.md)] lote o procedimiento almacenado contiene una llamada a una función definida por el usuario o una llamada a SQL dinámico, por ejemplo, con EXEC (*cadena*), la compila el plan de presentación XML por la función definida por el usuario no se incluye en la tabla devuelto por **sys.dm_exec_text_query_plan** para el procedimiento almacenado o lote. En su lugar, debe realizar una llamada independiente a **sys.dm_exec_text_query_plan** para el *plan_handle* que corresponde a la función definida por el usuario.  
   
-Cuando se utiliza una consulta "ad hoc" [simple](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) o [parametrización forzada](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), **query_plan** columna contendrá el texto de la instrucción y no el plan de consulta real. Para devolver el plan de consulta, llame a **sys.dm_exec_text_query_plan** con el identificador del plan de la consulta con parámetros preparada. Puede determinar si la consulta era con parámetros haciendo referencia a la **sql** columna de la [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) vista o la columna de texto de la [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)vista de administración dinámica.  
+Cuando se usa una consulta ad hoc [simple](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) o [parametrización forzada](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), **query_plan** columna contendrá el texto de la instrucción y no en el plan de consulta real. Para devolver el plan de consulta, llame a **sys.dm_exec_text_query_plan** con el identificador del plan de la consulta con parámetros preparada. Puede determinar si la consulta incluía parámetros haciendo referencia a la **sql** columna de la [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) vista o la columna de texto de la [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)vista de administración dinámica.  
   
-## <a name="permissions"></a>Permissions  
- Para ejecutar **sys.dm_exec_text_query_plan**, un usuario debe ser un miembro de la **sysadmin** rol fijo de servidor o tener el permiso VIEW SERVER STATE en el servidor.  
+## <a name="permissions"></a>Permisos  
+ Para ejecutar **sys.dm_exec_text_query_plan**, un usuario debe ser miembro de la **sysadmin** rol fijo de servidor o tener el permiso VIEW SERVER STATE en el servidor.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -147,7 +147,7 @@ GO
 ```  
   
 ### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>B. Recuperar todos los planes de consulta de caché del plan  
- Para recuperar una instantánea de todos los planes de consulta que residen en la caché del plan, recupere los identificadores de todos los planes de consulta de la caché; para ello, consulte la vista de administración dinámica `sys.dm_exec_cached_plans`. Los identificadores del plan se almacenan en la columna `plan_handle` de `sys.dm_exec_cached_plans`. Acto seguido, utilice el operador CROSS APPLY para pasar los identificadores del plan a `sys.dm_exec_text_query_plan` como se indica a continuación. El plan de presentación de salida de cada planes almacenados actualmente en la caché del plan se muestra en la `query_plan` columna de la tabla que se devuelve.  
+ Para recuperar una instantánea de todos los planes de consulta que residen en la caché del plan, recupere los identificadores de todos los planes de consulta de la caché; para ello, consulte la vista de administración dinámica `sys.dm_exec_cached_plans`. Los identificadores del plan se almacenan en la columna `plan_handle` de `sys.dm_exec_cached_plans`. Acto seguido, utilice el operador CROSS APPLY para pasar los identificadores del plan a `sys.dm_exec_text_query_plan` como se indica a continuación. El plan de presentación de salida de cada plan actualmente en la caché del plan se muestra en la `query_plan` columna de la tabla que se devuelve.  
   
 ```sql  
 USE master;  
@@ -169,7 +169,7 @@ CROSS APPLY sys.dm_exec_text_query_plan(qs.plan_handle, qs.statement_start_offse
 GO  
 ```  
   
-### <a name="d-retrieving-information-about-the-top-five-queries-by-average-cpu-time"></a>D. Al recuperar la información acerca de las cinco mejores consultas por promedio de tiempo de CPU  
+### <a name="d-retrieving-information-about-the-top-five-queries-by-average-cpu-time"></a>D. Recuperar información acerca de las cinco mejores consultas por promedio de tiempo de CPU  
  En el ejemplo siguiente se devuelven los planes de consulta y el promedio de tiempo de CPU de las cinco mejores consultas. El **sys.dm_exec_text_query_plan** función especifica los valores predeterminados 0 y -1 para devolver todas las instrucciones del lote en el plan de consulta.  
   
 ```sql  

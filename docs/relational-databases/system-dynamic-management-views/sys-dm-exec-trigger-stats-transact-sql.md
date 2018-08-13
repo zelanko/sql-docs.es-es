@@ -23,27 +23,27 @@ caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8dace7d8dccee89fadac0ff88fe7d1400b28b023
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: cb086e85072bf3b8a4713a7b4fb81c82fcaa1b5c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467671"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548515"
 ---
 # <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve estadísticas de rendimiento de agregado para los desencadenadores en memoria caché. La vista contiene una fila por cada desencadenador y la duración de la fila corresponde al tiempo que el desencadenador permanece en memoria caché. Cuando se quita un desencadenador de la memoria caché, la fila correspondiente se elimina de esta vista. En ese momento, se provoca un evento de seguimiento de SQL de estadísticas de rendimiento similar a **sys.dm_exec_query_stats**.  
+  Devuelve estadísticas de rendimiento de agregado para los desencadenadores en memoria caché. La vista contiene una fila por cada desencadenador y la duración de la fila corresponde al tiempo que el desencadenador permanece en memoria caché. Cuando se quita un desencadenador de la memoria caché, la fila correspondiente se elimina de esta vista. En ese momento, se produce un evento de seguimiento de SQL de estadísticas de rendimiento similar a **sys.dm_exec_query_stats**.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Identificador de base de datos en que reside el desencadenador.|  
 |**object_id**|**int**|Número de identificación del objeto del desencadenador.|  
 |**Tipo**|**char(2)**|Tipo del objeto:<br /><br /> TA = Desencadenador de ensamblado (CLR)<br /><br /> TR = Desencadenador SQL|  
 |**Type_desc**|**nvarchar(60)**|Descripción del tipo de objeto:<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
-|**sql_handle**|**varbinary(64)**|Esto puede usarse para poner en correlación con las consultas en **sys.dm_exec_query_stats** que se ejecutaron desde dentro de este desencadenador.|  
-|**plan_handle**|**varbinary(64)**|Identificador del plan en memoria. Este identificador es transitorio y permanece constante solo mientras el plan permanece en la memoria caché. Este valor se puede usar con el **sys.dm_exec_cached_plans** vista de administración dinámica.|  
+|**sql_handle**|**varbinary (64)**|Esto puede usarse para poner en correlación con las consultas en **sys.dm_exec_query_stats** que se ejecutaron desde dentro de este desencadenador.|  
+|**plan_handle**|**varbinary (64)**|Identificador del plan en memoria. Este identificador es transitorio y permanece constante solo mientras el plan permanece en la memoria caché. Este valor se puede usar con el **sys.dm_exec_cached_plans** vista de administración dinámica.|  
 |**cached_time**|**datetime**|Momento en que el desencadenador se agregó a la caché.|  
 |**last_execution_time**|**datetime**|Última vez que se ejecutó el desencadenador vez.|  
 |**execution_count**|**bigint**|El número de veces que el desencadenador se ha ejecutado desde que se compiló por última vez.|  
@@ -55,7 +55,7 @@ ms.locfileid: "34467671"
 |**last_physical_reads**|**bigint**|El número de lecturas físicas realizadas la última vez que se ejecutó el desencadenador.|  
 |**min_physical_reads**|**bigint**|El número mínimo de lecturas físicas que ha realizado este desencadenador durante una ejecución.|  
 |**max_physical_reads**|**bigint**|El número máximo de lecturas físicas que ha realizado este desencadenador durante una ejecución.|  
-|**total_logical_writes**|**bigint**|El número total de lecturas lógicas realizadas por las ejecuciones de este desencadenador desde que se compiló.|  
+|**total_logical_writes**|**bigint**|El número total de escrituras lógicas realizadas por las ejecuciones de este desencadenador desde que se compiló.|  
 |**last_logical_writes**|**bigint**|El número de escrituras lógicas realizadas la última vez que se ejecutó el desencadenador.|  
 |**min_logical_writes**|**bigint**|El número mínimo de escrituras lógicas que ha realizado este desencadenador durante una ejecución.|  
 |**max_logical_writes**|**bigint**|El número máximo de escrituras lógicas que ha realizado este desencadenador durante una ejecución.|  
@@ -65,19 +65,19 @@ ms.locfileid: "34467671"
 |**max_logical_reads**|**bigint**|El número máximo de lecturas lógicas que ha realizado este desencadenador durante una ejecución.|  
 |**total_elapsed_time**|**bigint**|El tiempo total transcurrido, en microsegundos para las ejecuciones completadas de este desencadenador.|  
 |**last_elapsed_time**|**bigint**|Tiempo transcurrido, en microsegundos, hasta la finalización de la ejecución más reciente de este desencadenador.|  
-|**min_elapsed_time**|**bigint**|El tiempo mínimo transcurrido, en microsegundos, para cualquier ejecución completada de este desencadenador.|  
-|**max_elapsed_time**|**bigint**|El tiempo máximo transcurrido, en microsegundos, para cualquier ejecución completada de este desencadenador.| 
-|**total_spills**|**bigint**|El número total de páginas derramado mediante la ejecución de este desencadenador desde que se compiló.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**last_spills**|**bigint**|El número de páginas derramado la última vez que se ejecutó el desencadenador.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**min_spills**|**bigint**|El número mínimo de páginas que alguna vez ha derramado este desencadenador durante una ejecución.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**max_spills**|**bigint**|El número máximo de páginas que alguna vez ha derramado este desencadenador durante una ejecución.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_elapsed_time**|**bigint**|El tiempo mínimo transcurrido, en microsegundos, completa cualquier ejecución de este desencadenador.|  
+|**max_elapsed_time**|**bigint**|El tiempo máximo transcurrido, en microsegundos, completa cualquier ejecución de este desencadenador.| 
+|**total_spills**|**bigint**|El número total de páginas transferidas por la ejecución de este desencadenador desde que se compiló.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|El número de páginas transferidas la última vez que se ejecutó el desencadenador.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|El número mínimo de páginas que alguna vez ha transferido este desencadenador durante una ejecución.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|El número máximo de páginas que alguna vez ha transferido este desencadenador durante una ejecución.<br /><br /> **Se aplica a**: a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  En [!INCLUDE[ssSDS](../../includes/sssds-md.md)], las vistas de administración dinámica no pueden exponer información que impactaría a la contención de la base de datos ni acerca de otras bases de datos a las que el usuario tenga acceso. Para evitar exponer esta información, cada fila que contiene datos que no pertenecen al inquilino conectado se filtra.  
 
 Cuando se completa una consulta, se actualizan las estadísticas en la vista.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   

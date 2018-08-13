@@ -19,13 +19,13 @@ caps.latest.revision: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 0e77a1d7e24fa2635b3e699672338e588c1f5c1c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c6f0e6d58674be38b6394759c67c3ecd0758a615
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023863"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556475"
 ---
 # <a name="automatic-tuning"></a>Ajuste automático
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -106,8 +106,7 @@ En la lista siguiente se describen algunas columnas de esta vista:
  - Descripción que contiene información sobre por qué [!INCLUDE[ssde_md](../../includes/ssde_md.md)] considera que este cambio de plan es una regresión del rendimiento potencial.
  - Fecha y hora cuando se detecta la regresión posibles.
  - Puntuación de esta recomendación. 
- - Detalles sobre los problemas, como el identificador del plan, identificador del plan con regresión, identificador del plan que se debería forzar a corregir el problema, detectado [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
- secuencia de comandos que pueda tener aplicado para corregir el problema, etcetera. Los detalles se almacenan en [formato JSON](../../relational-databases/json/index.md).
+ - Detalles sobre los problemas, como el identificador del plan detectado, identificador del plan con regresión, identificador del plan que se debería forzar a corregir el problema, [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script que pueda tener aplicado para corregir el problema, etcetera. Los detalles se almacenan en [formato JSON](../../relational-databases/json/index.md).
 
 Use la siguiente consulta para obtener un script que corrige el problema y obtener información adicional sobre el estimado obtener:
 

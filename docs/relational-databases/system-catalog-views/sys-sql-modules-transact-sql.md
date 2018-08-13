@@ -24,22 +24,22 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: af128c6c3b28c448111f49adf55c66c12ab4bbae
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7277009805307ed5f9208227cc98c72df3fc3e2a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222096"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542355"
 ---
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Devuelve una fila por cada objeto que es un módulo SQL definida por el lenguaje en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluido de forma nativa compila la función escalar definida por el usuario. Los objetos del tipo P, RF, V, TR, FN, IF, TF y R tienen un módulo SQL asociado. Los valores predeterminados independientes, objetos del tipo D, también incluyen una definición de módulo SQL en esta vista. Para obtener una descripción de estos tipos, vea la **tipo** columna en el [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) vista de catálogo.  
+  Devuelve una fila para cada objeto que es un módulo definido con lenguaje SQL en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluido de forma nativa compila función escalar definida por el usuario. Los objetos del tipo P, RF, V, TR, FN, IF, TF y R tienen un módulo SQL asociado. Los valores predeterminados independientes, objetos del tipo D, también incluyen una definición de módulo SQL en esta vista. Para obtener una descripción de estos tipos, vea la **tipo** columna en el [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) vista de catálogo.  
   
  Para obtener más información, vea [Funciones escalares definidas por el usuario para OLTP en memoria](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Id. de objeto del objeto contenedor. Es único en una base de datos.|  
 |**Definición**|**nvarchar(max)**|Texto SQL que define este módulo. Este valor también se puede obtener mediante la [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) función integrada.<br /><br /> NULL = Cifrado.|  
@@ -49,15 +49,15 @@ ms.locfileid: "33222096"
 |**uses_database_collation**|**bit**|1 = La definición del módulo enlazado a un esquema depende de la intercalación predeterminada de la base de datos para la evaluación correcta; en caso contrario, 0. Esta dependencia impide cambiar la intercalación predeterminada de la base de datos.|  
 |**is_recompiled**|**bit**|El procedimiento se ha creado con la opción WITH RECOMPILE.|  
 |**null_on_null_input**|**bit**|Módulo declarado para generar una salida NULL en cualquier entrada NULL.|  
-|**execute_as_principal_id**|**Int**|Id. de la entidad de seguridad de base de datos EXECUTE AS.<br /><br /> NULL de manera predeterminada o si EXECUTE AS CALLER.<br /><br /> Id. de la entidad de seguridad especificada si EXECUTE AS SELF o EXECUTE AS \<principal >.<br /><br /> -2 = EXECUTE AS OWNER.|  
+|**execute_as_principal_id**|**Int**|Id. de la entidad de seguridad de base de datos EXECUTE AS.<br /><br /> NULL de manera predeterminada o si EXECUTE AS CALLER.<br /><br /> Id. de la entidad de seguridad especificado si EXECUTE AS SELF o EXECUTE AS \<principal >.<br /><br /> -2 = EXECUTE AS OWNER.|  
 |**uses_native_compilation**|**bit**|**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = no está compilado de forma nativa<br /><br /> 1 = está compilado de forma nativa<br /><br /> El valor predeterminado es 0.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La expresión SQL para una restricción DEFAULT, objeto de tipo D, se encuentra en la [sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) vista de catálogo. La expresión SQL para una restricción CHECK, objeto de tipo C, se encuentra en la [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) vista de catálogo.  
   
  Esta información también se describe en [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Ejemplos  
@@ -74,7 +74,7 @@ GO
 ## <a name="see-also"></a>Vea también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
- [Consultar el catálogo de sistema SQL Server preguntas más frecuentes](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [Consultar el catálogo del sistema SQL Server preguntas más frecuentes](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

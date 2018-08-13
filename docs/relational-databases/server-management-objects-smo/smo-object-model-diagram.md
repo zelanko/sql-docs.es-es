@@ -1,5 +1,5 @@
 ---
-title: Diagrama del modelo de objetos de SMO | Microsoft Docs
+title: Diagrama de modelo de objetos SMO | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7e23c88851afef3d990c3dcac8d83bd7091a72f6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5a7dddec7c4bf133f224d4d6e8f7ecb84c5d99f2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38046223"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539475"
 ---
 # <a name="smo-object-model-diagram"></a>Diagrama del modelo de objetos de SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "38046223"
   
  ![Diagrama que muestra las relaciones jerárquicas](../../relational-databases/server-management-objects-smo/media/object-diagram.gif "diagrama que muestra las relaciones jerárquicas")  
   
- ![Modelo de objetos, vista de árbol que muestra la jerarquía](../../relational-databases/server-management-objects-smo/media/object-diagram-02.gif "modelo de objetos, vista de árbol que muestra la jerarquía")  
+ ![Modelo de objetos de vista de árbol que muestra la jerarquía de](../../relational-databases/server-management-objects-smo/media/object-diagram-02.gif "modelo de objetos de vista de árbol con jerarquía")  
   
- ![Modelo de objetos, vista de árbol que muestra la jerarquía](../../relational-databases/server-management-objects-smo/media/object-diagram-03.gif "modelo de objetos, vista de árbol que muestra la jerarquía")  
+ ![Modelo de objetos de vista de árbol que muestra la jerarquía de](../../relational-databases/server-management-objects-smo/media/object-diagram-03.gif "modelo de objetos de vista de árbol con jerarquía")  
   
- ![Modelo de objetos, vista de árbol que muestra la jerarquía](../../relational-databases/server-management-objects-smo/media/object-diagram-04.gif "modelo de objetos, vista de árbol que muestra la jerarquía")  
+ ![Modelo de objetos de vista de árbol que muestra la jerarquía de](../../relational-databases/server-management-objects-smo/media/object-diagram-04.gif "modelo de objetos de vista de árbol con jerarquía")  
   
   

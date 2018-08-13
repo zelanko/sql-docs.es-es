@@ -15,13 +15,13 @@ ms.assetid: 281482ba-f9f7-4548-b5c4-96c9fd7b0286
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a4db4694096971fc97e03a67ea79e29c5c0dc5d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e32015594bd9f2fbbe3e4e98981e86f3788ac22b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424304"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566149"
 ---
 # <a name="table-valued-parameter-diagnostic-record-fields"></a>Campos de registros de diagnóstico para parámetros con valores de tabla
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

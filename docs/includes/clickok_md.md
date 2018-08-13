@@ -1,2 +1,0 @@
- Haga clic en **Aceptar**.
-    

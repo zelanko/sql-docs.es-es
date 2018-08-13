@@ -1,1 +1,0 @@
-![Descargar](../ssdt/media/download.png)[Descargar controlador para .Net](http://www.microsoft.com/net/download/)

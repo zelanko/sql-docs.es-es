@@ -1,1 +1,0 @@
-![Descargar](../ssdt/media/download.png)[Instalar el controlador para Ruby](http://msdn.microsoft.com/library/mt711041.aspx)

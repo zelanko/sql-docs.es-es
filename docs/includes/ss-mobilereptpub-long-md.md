@@ -1,1 +1,0 @@
-Publicador de informes móviles de SQL Server 

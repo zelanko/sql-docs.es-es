@@ -1,5 +1,5 @@
 ---
-title: sp_validname (Transact-SQL) | Documentos de Microsoft
+title: sp_validname (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bb61ed8782ecea8109799bbb1ba6596323913c49
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bf047124042380187412b16ccf302ea2757df535
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256901"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540715"
 ---
 # <a name="spvalidname-transact-sql"></a>sp_validname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Comprueba la validez de los nombres de identificadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Todos los datos no binarios y es distinto de cero, incluidos los datos Unicode que pueden almacenarse mediante el uso de la **nchar**, **nvarchar**, o **ntext** tipos de datos, se aceptan como caracteres válidos para nombres de identificador.  
+  Comprueba la validez de los nombres de identificadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Todos los datos no binarios y distinto de cero, incluidos los datos Unicode que pueden almacenarse mediante el uso de la **nchar**, **nvarchar**, o **ntext** tipos de datos, se aceptan como caracteres válidos para nombres de identificador.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,15 +47,15 @@ sp_validname [@name =] 'name'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@name=** ] **'***nombre***'**  
- Es el nombre de la [identificadores](../../relational-databases/databases/database-identifiers.md) para que se va a comprobar la validez. *nombre* es **sysname**, no tiene ningún valor predeterminado. *nombre de* no puede ser NULL, no puede ser una cadena vacía y no puede contener un carácter cero binario.  
+ Es el nombre de la [identificadores](../../relational-databases/databases/database-identifiers.md) para que se va a comprobar la validez. *nombre* es **sysname**, no tiene ningún valor predeterminado. *nombre* no puede ser NULL, no puede ser una cadena vacía y no puede contener un carácter cero binario.  
   
  [  **@raise_error=** ] *raise_error*  
- Especifica si se produce un error. *raise_error* es **bits**, su valor predeterminado es 1. Esto significa que aparecerán errores. 0 hace que no aparezca ningún mensaje de error.  
+ Especifica si se produce un error. *raise_error* es **bit**, su valor predeterminado es 1. Esto significa que aparecerán errores. 0 hace que no aparezca ningún mensaje de error.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="see-also"></a>Vea también  

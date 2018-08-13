@@ -1,5 +1,5 @@
 ---
-title: sp_helpindex (Transact-SQL) | Documentos de Microsoft
+title: sp_helpindex (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e6e64715eeb893e1a93df1c1c7c52b62e0d18d4d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6560726bb583d823ad0cf0b36310eb68691705f2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255384"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547625"
 ---
 # <a name="sphelpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,14 +46,14 @@ sp_helpindex [ @objname = ] 'name'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@objname=** ] **'***nombre***'**  
- Es el nombre calificado o no calificado de una tabla o vista definida por un usuario. Solo son necesarias las comillas si se especifica una tabla o nombre de vista calificada. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. *nombre* es **nvarchar(776)**, no tiene ningún valor predeterminado.  
+ Es el nombre calificado o no calificado de una tabla o vista definida por un usuario. Solo son necesarias las comillas si se especifica una tabla o nombre de vista calificada. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. *nombre* es **nvarchar(776)**, no tiene valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**index_name**|**sysname**|Nombre del índice.|  
 |**index_description**|**varchar(210)**|Descripción del índice incluido el grupo de archivos en el que está ubicado.|  
@@ -61,12 +61,12 @@ sp_helpindex [ @objname = ] 'name'
   
  Aparecerá listada una columna de índice descendente en el conjunto de resultados con un signo menos (-) tras el nombre; la columna predeterminada de índice ascendente aparecerá listada solamente por su nombre.  
   
-## <a name="remarks"></a>Comentarios  
- Si se han establecido los índices mediante la opción NORECOMPUTE de UPDATE STATISTICS, dicha información se incluye en el **index_description** columna.  
+## <a name="remarks"></a>Notas  
+ Si se han establecido los índices mediante la opción NORECOMPUTE de UPDATE STATISTICS, esa información se incluye en el **index_description** columna.  
   
- **sp_helpindex** expone solo las columnas de índice ordenable; por lo tanto, no expone información acerca de los índices XML o espaciales.  
+ **sp_helpindex** expone solo las columnas de índice ordenable; por lo tanto, no expone información sobre los índices XML o índices espaciales.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="examples"></a>Ejemplos  

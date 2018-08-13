@@ -1,5 +1,5 @@
 ---
-title: CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL) | Documentos de Microsoft
+title: CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 00c55659ddc52fb5e6299b82be8102d526bd9e43
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6f44cd13dbabc10aa228892f9ce927e746c4aff5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229465"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547515"
 ---
 # <a name="changetrackingiscolumninmask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
   
 ## <a name="arguments"></a>Argumentos  
  *column_id*  
- Es el Id. de la columna que se está comprobando. La columna de identificador se puede obtener mediante el uso de la [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) función.  
+ Es el Id. de la columna que se está comprobando. La columna de identificador puede obtenerse mediante el uso de la [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) función.  
   
  *change_columns*  
- Son los datos binarios de la columna SYS_CHANGE_COLUMNS de la [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) datos.  
+ Son los datos binarios de la columna SYS_CHANGE_COLUMNS de los [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) datos.  
   
 ## <a name="return-type"></a>Tipo devuelto  
  **bit**  
@@ -58,16 +58,16 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 ## <a name="return-values"></a>Valores devueltos  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK devuelve los siguientes valores.  
   
-|Valor devuelto|Description|  
+|Valor devuelto|Descripción|  
 |------------------|-----------------|  
 |0|La columna especificada no está en el *change_columns* lista.|  
-|1|La columna especificada está en la *change_columns* lista.|  
+|1|La columna especificada está en el *change_columns* lista.|  
   
-## <a name="remarks"></a>Comentarios  
- CHANGE_TRACKING_IS_COLUMN_IN_MASK no realiza ninguna comprobación para validar el *column_id* valor o que la *change_columns* parámetro se obtuvo de la tabla desde la que el  *column_id* se obtuvo.  
+## <a name="remarks"></a>Notas  
+ CHANGE_TRACKING_IS_COLUMN_IN_MASK no realiza ninguna comprobación para validar el *column_id* valor o que el *change_columns* parámetro se obtuvo de la tabla desde el que el  *column_id* obtuvo.  
   
 ## <a name="examples"></a>Ejemplos  
- El siguiente ejemplo determina si la columna `Salary` de la tabla `Employees` está actualizada. El `COLUMNPROPERTY` función devuelve el identificador de columna de la `Salary` columna. La variable local `@change_columns` debe establecerse en los resultados de una consulta con CHANGETABLE como origen de datos.  
+ El siguiente ejemplo determina si la columna `Salary` de la tabla `Employees` está actualizada. El `COLUMNPROPERTY` función devuelve el Id. de columna de la `Salary` columna. La variable local `@change_columns` debe establecerse en los resultados de una consulta con CHANGETABLE como origen de datos.  
   
 ```sql  
 SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK  

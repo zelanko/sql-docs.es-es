@@ -1,5 +1,5 @@
 ---
-title: 'Identificar columnas de clave mediante SQL: key-fields (SQLXML 4.0) | Documentos de Microsoft'
+title: 'Identificar columnas de clave mediante SQL: Key-campos (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -26,34 +26,34 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a96060e6efaf0623cbc4c9fb738af3863f1010fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3e75779626c8769c609fa27f97b44562d3e9a8aa
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971330"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535565"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identificar columnas de clave mediante sql:key-fields (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Cuando se especifica una consulta XPath en un esquema XSD, la información de claves resulta necesaria en la mayoría de los casos para obtener un anidamiento correcto en el resultado. Especificar el **SQL: Key-campos** anotación es una manera de asegurarse de que se genera la jerarquía correcta.  
   
 > [!NOTE]  
->  Para garantizar un anidamiento correcto, se recomienda especificar **SQL: Key-campos** para los elementos que se asignan a las tablas. El código XML generado distingue la ordenación del conjunto de resultados subyacente. Si **SQL: Key-campos** no se especifica, el XML generado no se puede formar correctamente.  
+>  Para garantizar un anidamiento correcto, se recomienda que especifique **SQL: Key-campos** para los elementos que se asignan a las tablas. El código XML generado distingue la ordenación del conjunto de resultados subyacente. Si **SQL: Key-campos** no se especifica, el XML generado es posible que no se tiene el formato correcto.  
   
  El valor de **SQL: Key-campos** identifica las columnas que identifican de forma única las filas de la relación. Si es necesaria más de una columna para identificar de forma única una fila, los valores de columna se delimitan mediante espacios.  
   
- Debe utilizar el **SQL: Key-campos** anotación cuando un elemento contiene una  **\<SQL: Relationship >** que se define entre el elemento y un elemento secundario, pero no proporciona la clave principal de la tabla especificada en el elemento primario.  
+ Debe usar el **SQL: Key-campos** anotación cuando un elemento contiene un  **\<SQL: Relationship >** que se define entre el elemento y un elemento secundario, pero no proporciona la clave principal de la tabla que se especifica en el elemento primario.  
   
 ## <a name="examples"></a>Ejemplos  
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, consulte [requisitos para ejecutar los ejemplos de SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Crear un anidamiento correcto cuando \<SQL: Relationship > no proporciona suficiente información  
- Este ejemplo muestra dónde **SQL: Key-campos** debe especificarse.  
+ En este ejemplo se muestra dónde **SQL: Key-campos** debe especificarse.  
   
- Fíjese en el siguiente esquema. El esquema especifica una jerarquía entre el  **\<orden >** y  **\<cliente >** elementos en los que la  **\<orden >** es el elemento primario y el  **\<cliente >** es un elemento secundario.  
+ Fíjese en el siguiente esquema. El esquema especifica una jerarquía entre el  **\<orden >** y  **\<cliente >** elementos en los que el  **\<orden >** elemento es el elemento primario y el  **\<cliente >** es un elemento secundario.  
   
- El  **\<SQL: Relationship >** etiqueta se utiliza para especificar la relación de elementos primarios y secundarios. Identifica CustomerID en la tabla Sales.SalesOrderHeader como la clave primaria que hace referencia a la clave secundaria CustomerID en la tabla Sales.Customer. La información proporcionada en  **\<SQL: Relationship >** no es suficiente para identificar filas de la tabla primaria (Sales.SalesOrderHeader). Por lo tanto, sin la **SQL: Key-campos** anotación, la jerarquía que se genera es inexacta.  
+ El  **\<SQL: Relationship >** etiqueta a la que se usa para especificar la relación de elementos primarios y secundarios. Identifica CustomerID en la tabla Sales.SalesOrderHeader como la clave primaria que hace referencia a la clave secundaria CustomerID en la tabla Sales.Customer. La información proporcionada en  **\<SQL: Relationship >** no es suficiente para identificar de forma única las filas de la tabla primaria (Sales.SalesOrderHeader). Por lo tanto, sin la **SQL: Key-campos** anotación, la jerarquía que se genera es inexacta.  
   
  Con **SQL: Key-campos** especificado en  **\<orden >**, la anotación identifica de forma única las filas en el elemento primario (tabla Sales.SalesOrderHeader) y sus elementos secundarios aparecen debajo de su elemento primario.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "32971330"
   
 1.  Copie el código de esquema anterior y péguelo en un archivo de texto. Guarde el archivo como KeyFields1.xml.  
   
-2.  Copie la plantilla siguiente y péguela en un archivo de texto. Guarde el archivo como KeyFields1T.xml en el mismo directorio donde guardó KeyFields1.xml. La consulta XPath en la plantilla devuelve todos los  **\<orden >** elementos cuyo valor CustomerID es menor que 3.  
+2.  Copie la plantilla siguiente y péguela en un archivo de texto. Guarde el archivo como KeyFields1T.xml en el mismo directorio donde guardó KeyFields1.xml. La consulta XPath en la plantilla devuelve todos los  **\<orden >** elementos con un CustomerID es inferior a 3.  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

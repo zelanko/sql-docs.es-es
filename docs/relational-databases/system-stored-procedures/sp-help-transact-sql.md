@@ -1,5 +1,5 @@
 ---
-title: sp_help (Transact-SQL) | Documentos de Microsoft
+title: sp_help (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -22,18 +22,18 @@ caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6b3effbe023b79ded3115eac3e62503d7a820993
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 20d86aae268c704b72310a3215756627d0662eb8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263493"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550525"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Ofrece información acerca de un objeto de base de datos (todos los objetos enumerados en la **sys.sysobjects** vista de compatibilidad), un tipo de datos definido por el usuario o un tipo de datos.  
+  Proporciona información acerca de un objeto de base de datos (todos los objetos enumerados en la **sys.sysobjects** vista de compatibilidad), un tipo de datos definido por el usuario o un tipo de datos.  
   
  
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -47,45 +47,45 @@ sp_help [ [ @objname = ] 'name' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@objname=**] **'***nombre***'**  
- Es el nombre de cualquier objeto en **sysobjects** o tipo de los datos definidos por el usuario en el **systypes** tabla. *nombre* es **nvarchar (** 776 **)**, su valor predeterminado es null. No se aceptan nombres de bases de datos.  Se deben delimitar dos o tres nombres de partes, como "Person.AddressType" o [Person.AddressType].   
+ Es el nombre de cualquier objeto, en **sysobjects** o cualquier dato definido por el usuario escriba en el **systypes** tabla. *nombre* es **nvarchar (** 776 **)**, su valor predeterminado es null. No se aceptan nombres de bases de datos.  Se deben delimitar dos o tres nombres de partes, como "Person.AddressType" o [Person.AddressType].   
    
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Los conjuntos de resultados devueltos dependen de si *nombre* está especificada, cuando se especifica, y qué objeto de base de datos es.  
+ Los conjuntos de resultados devueltos dependen de si *nombre* está especificado, cuando se especifica, y qué objeto de base de datos es.  
   
 1.  Si **sp_help** se ejecuta sin argumentos, se devuelve información de resumen de los objetos de todos los tipos que existen en la base de datos actual.  
   
-    |Nombre de columna|Tipo de datos|Description|  
+    |Nombre de columna|Tipo de datos|Descripción|  
     |-----------------|---------------|-----------------|  
     |**Nombre**|**nvarchar (** 128 **)**|Nombre del objeto|  
     |**Propietario**|**nvarchar (** 128 **)**|Propietario del objeto (esta es la entidad de seguridad de base de datos que posee el objeto. De forma predeterminada, es el propietario del esquema que contiene el objeto).|  
-    |**object_type**|**nvarchar (** 31 **)**|Tipo de objeto|  
+    |**Object_type**|**nvarchar (** 31 **)**|Tipo de objeto|  
   
 2.  Si *nombre* es un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos o tipo de datos definido por el usuario, **sp_help** devuelve este conjunto de resultados.  
   
-    |Nombre de columna|Tipo de datos|Description|  
+    |Nombre de columna|Tipo de datos|Descripción|  
     |-----------------|---------------|-----------------|  
-    |**TYPE_NAME**|**nvarchar (** 128 **)**|Nombre del tipo de datos.|  
+    |**Type_name**|**nvarchar (** 128 **)**|Nombre del tipo de datos.|  
     |**Storage_type**|**nvarchar (** 128 **)**|Nombre del tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
     |**Longitud**|**smallint**|Longitud física del tipo de datos (en bytes).|  
     |**Prec**|**int**|Precisión (número total de dígitos).|  
     |**Escala**|**int**|Número de dígitos a la derecha del separador decimal.|  
     |**Admisión de valores NULL**|**varchar (** 35 **)**|Indica si se permiten valores NULL: Yes o No.|  
-    |**default_name**|**nvarchar (** 128 **)**|Nombre de un valor predeterminado enlazado a este tipo.<br /><br /> NULL = No hay un valor predeterminado enlazado.|  
-    |**rule_name**|**nvarchar (** 128 **)**|Nombre de una regla enlazada a este tipo.<br /><br /> NULL = No hay un valor predeterminado enlazado.|  
+    |**Default_name**|**nvarchar (** 128 **)**|Nombre de un valor predeterminado enlazado a este tipo.<br /><br /> NULL = No hay un valor predeterminado enlazado.|  
+    |**Nombre_regla**|**nvarchar (** 128 **)**|Nombre de una regla enlazada a este tipo.<br /><br /> NULL = No hay un valor predeterminado enlazado.|  
     |**Intercalación**|**sysname**|Intercalación del tipo de datos. NULL para tipos de datos que no sean de caracteres.|  
   
-3.  Si *nombre* es cualquier objeto de base de datos que no sea un tipo de datos, **sp_help** devuelve este resultado conjuntos de resultados de conjunto y también adicional, según el tipo de objeto especificado.  
+3.  Si *nombre* es cualquier objeto de base de datos que no sea un tipo de datos, **sp_help** devuelve este resultado conjuntos de resultados establecido y también adicionales, según el tipo del objeto especificado.  
   
-    |Nombre de columna|Tipo de datos|Description|  
+    |Nombre de columna|Tipo de datos|Descripción|  
     |-----------------|---------------|-----------------|  
     |**Nombre**|**nvarchar (** 128 **)**|Nombre de la tabla|  
     |**Propietario**|**nvarchar (** 128 **)**|Propietario de la tabla.|  
     |**Tipo**|**nvarchar (** 31 **)**|Tipo de tabla.|  
-    |**Created_datetime**|**datetime**|Tabla de fecha creada|  
+    |**Created_datetime**|**datetime**|Tabla de fechas creado|  
   
      Según el objeto de base de datos especificado, **sp_help** devuelve conjuntos de resultados adicionales.  
   
@@ -93,22 +93,22 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   Conjunto de resultados adicional devuelto en los objetos de columna:  
   
-        |Nombre de columna|Tipo de datos|Description|  
+        |Nombre de columna|Tipo de datos|Descripción|  
         |-----------------|---------------|-----------------|  
-        |**column_name**|**nvarchar (** 128 **)**|Nombre de columna.|  
+        |**Column_name**|**nvarchar (** 128 **)**|Nombre de columna.|  
         |**Tipo**|**nvarchar (** 128 **)**|Tipo de datos de la columna.|  
         |**Calculado**|**varchar (** 35 **)**|Indica si los valores de la columna son calculados: Yes o No.|  
         |**Longitud**|**int**|Longitud de la columna en bytes.<br /><br /> Nota: Si el tipo de datos de columna es un tipo de valor grande (**varchar (max)**, **nvarchar (max)**, **varbinary (max)**, o **xml**), el valor será se mostrará como -1.|  
-        |**Prec**|**Char (** 5 **)**|Precisión de la columna.|  
+        |**Prec**|**Char (** 5 **)**|Precisión de columna.|  
         |**Escala**|**Char (** 5 **)**|Escala de la columna.|  
         |**Admisión de valores NULL**|**varchar (** 35 **)**|Indica si se permiten valores NULL en la columna: Yes o No.|  
         |**TrimTrailingBlanks**|**varchar (** 35 **)**|Recorta los espacios en blanco finales. Devuelve Yes o No.|  
         |**FixedLenNullInSource**|**varchar (** 35 **)**|Se conserva únicamente por compatibilidad con versiones anteriores.|  
-        |**Intercalación**|**sysname**|Intercalación de la columna. NULL para los tipos de datos.|  
+        |**Intercalación**|**sysname**|Intercalación de la columna. NULL para los tipos de datos que no son caracteres.|  
   
     -   Conjunto de resultados adicional devuelto en las columnas de identidad:  
   
-        |Nombre de columna|Tipo de datos|Description|  
+        |Nombre de columna|Tipo de datos|Descripción|  
         |-----------------|---------------|-----------------|  
         |**Identidad**|**nvarchar (** 128 **)**|Nombre de la columna cuyo tipo de datos se declara como identidad.|  
         |**Valor de inicialización**|**numeric**|Valor inicial de la columna de identidad.|  
@@ -117,27 +117,27 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   Conjunto de resultados adicional devuelto en las columnas:  
   
-        |Nombre de columna|Tipo de datos|Description|  
+        |Nombre de columna|Tipo de datos|Descripción|  
         |-----------------|---------------|-----------------|  
         |**RowGuidCol**|**sysname**|Nombre de la columna de identificador único global.|  
   
     -   Conjunto de resultados adicional devuelto en los grupos de archivos:  
   
-        |Nombre de columna|Tipo de datos|Description|  
+        |Nombre de columna|Tipo de datos|Descripción|  
         |-----------------|---------------|-----------------|  
         |**Data_located_on_filegroup**|**nvarchar (** 128 **)**|Grupo de archivos en el que se encuentran los datos: Principal, Secundario o Registro de transacciones.|  
   
     -   Conjunto de resultados adicional devuelto en los índices:  
   
-        |Nombre de columna|Tipo de datos|Description|  
+        |Nombre de columna|Tipo de datos|Descripción|  
         |-----------------|---------------|-----------------|  
         |**index_name**|**sysname**|Nombre del índice.|  
-        |**index_description**|**varchar (** 210 **)**|Descripción del índice.|  
+        |**Index_description**|**varchar (** 210 **)**|Descripción del índice.|  
         |**index_keys**|**nvarchar (** 2078 **)**|Nombres de las columnas en las que se ha generado el índice. Devuelve NULL para los índices de almacén de columnas optimizados de memoria xVelocity.|  
   
     -   Conjunto de resultados adicional devuelto en las restricciones:  
   
-        |Nombre de columna|Tipo de datos|Description|  
+        |Nombre de columna|Tipo de datos|Descripción|  
         |-----------------|---------------|-----------------|  
         |**constraint_type**|**nvarchar (** 146 **)**|Tipo de restricción.|  
         |**constraint_name**|**nvarchar (** 128 **)**|Nombre de la restricción.|  
@@ -149,30 +149,30 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   Conjunto de resultados adicional devuelto en los objetos de referencia:  
   
-        |Nombre de columna|Tipo de datos|Description|  
+        |Nombre de columna|Tipo de datos|Descripción|  
         |-----------------|---------------|-----------------|  
         |**Tabla hace referencia**|**nvarchar (** 516 **)**|Identifica otros objetos de base de datos que hacen referencia a la tabla.|  
   
     -   Conjunto de resultados adicional devuelto en los procedimientos almacenados, las funciones o los procedimientos almacenados extendidos.  
   
-        |Nombre de columna|Tipo de datos|Description|  
+        |Nombre de columna|Tipo de datos|Descripción|  
         |-----------------|---------------|-----------------|  
-        |**parameter_name**|**nvarchar (** 128 **)**|Nombre del parámetro del procedimiento almacenado.|  
+        |**Nombre de parámetro**|**nvarchar (** 128 **)**|Nombre del parámetro del procedimiento almacenado.|  
         |**Tipo**|**nvarchar (** 128 **)**|Tipo de datos del parámetro del procedimiento almacenado.|  
         |**Longitud**|**smallint**|Longitud máxima de almacenamiento físico en bytes.|  
         |**Prec**|**int**|Precisión o número total de dígitos.|  
         |**Escala**|**int**|Número de dígitos a la derecha del separador decimal.|  
         |**Param_order**|**smallint**|Orden del parámetro.|  
   
-## <a name="remarks"></a>Comentarios  
- El **sp_help** procedimiento busca un objeto en la base de datos actual.  
+## <a name="remarks"></a>Notas  
+ El **sp_help** procedimiento busca un objeto solo la base de datos actual.  
   
  Cuando *nombre* no se especifica, **sp_help** listas objeto nombres, propietarios y tipos de objeto para todos los objetos de la base de datos actual. **sp_helptrigger** proporciona información acerca de los desencadenadores.  
   
- **sp_help** expone solo las columnas de índice ordenable; por lo tanto, no expone información acerca de los índices XML o espaciales.  
+ **sp_help** expone solo las columnas de índice ordenable; por lo tanto, no expone información sobre los índices XML o índices espaciales.  
   
-## <a name="permissions"></a>Permissions  
- Debe pertenecer al rol **public** . El usuario debe tener al menos un permiso en *objname*. Para ver claves de restricción de columna, valores predeterminados o reglas, debe tener el permiso VIEW DEFINITION en la tabla.  
+## <a name="permissions"></a>Permisos  
+ Debe pertenecer al rol **public** . El usuario debe tener al menos un permiso *objname*. Para ver claves de restricción de columna, valores predeterminados o reglas, debe tener el permiso VIEW DEFINITION en la tabla.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -200,7 +200,7 @@ GO
  [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [sp_helpserver & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

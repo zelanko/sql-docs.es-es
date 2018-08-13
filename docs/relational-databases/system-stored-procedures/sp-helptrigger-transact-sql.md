@@ -22,13 +22,13 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 61c6c78c302266ce3a9e29c432e1a913c263d704
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6435e1b79907debc159b3ba39eb35980b783c791
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255093"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566239"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,9 +50,9 @@ sp_helptrigger [ @tabname = ] 'table'
  Es el nombre de la tabla de la base de datos actual cuya información de desencadenadores se va a presentar. *tabla* es **nvarchar(776)**, no tiene ningún valor predeterminado.  
   
  [  **@triggertype=** ] **'***tipo***'**  
- Es el tipo de desencadenador DML cuya información se va a presentar. *tipo de* es **char(6)**, su valor predeterminado es null y puede tener uno de estos valores.  
+ Es el tipo de desencadenador DML cuya información se va a presentar. *tipo* es **char(6)**, su valor predeterminado es null, y puede tener uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**DELETE**|Devuelve información de desencadenadores DELETE.|  
 |**INSERT**|Devuelve información de desencadenadores INSERT.|  
@@ -64,7 +64,7 @@ sp_helptrigger [ @tabname = ] 'table'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  La siguiente tabla muestra la información del conjunto de resultados.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**trigger_name**|**sysname**|Nombre del desencadenador.|  
 |**trigger_owner**|**sysname**|Nombre del propietario de la tabla donde se definió el desencadenador.|  
@@ -75,7 +75,7 @@ sp_helptrigger [ @tabname = ] 'table'
 |**isinsteadof**|**int**|1=Desencadenador INSTEAD OF<br /><br /> 0=No es un desencadenador INSTEAD OF|  
 |**trigger_schema**|**sysname**|Nombre del esquema al que pertenece el desencadenador.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md) permiso en la tabla.  
   
 ## <a name="examples"></a>Ejemplos  

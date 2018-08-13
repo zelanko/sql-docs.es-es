@@ -1,5 +1,5 @@
 ---
-title: 'Crear válido IDREF de Id. de IDREFS escriba atributos - SQL: prefix (SQLXML 4.0) | Documentos de Microsoft'
+title: 'Crear válido atributos - SQL: prefix (SQLXML 4.0) de tipo ID-IDREF-IDREFS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -27,13 +27,13 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 891182053b28673b8a7a16c484b591f4924f3842
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d7d84cbb4d4ca2fc7646d794698fe7c10e8188c9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970432"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547595"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Crear atributos válidos de tipo ID, IDREF e IDREFS mediante sql:prefix (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,17 +49,17 @@ ms.locfileid: "32970432"
   
 -   El valor de un atributo ID, IDREF e IDREFS debe ser un token con nombre. (Por ejemplo, el valor entero 101 no puede ser un valor ID.)  
   
--   Los atributos de tipo ID, IDREF e IDREFS no puede asignarse a columnas del tipo **texto**, **ntext**, o **imagen** o cualquier otro tipo de datos binarios (por ejemplo, **marca de tiempo**).  
+-   Los atributos de tipo ID, IDREF e IDREFS no pueden asignarse a columnas de tipo **texto**, **ntext**, o **imagen** o cualquier otro tipo de datos binarios (por ejemplo, **timestamp**).  
   
- Si un documento XML contiene varios identificadores, use la **SQL: prefix** anotación para asegurarse de que los valores sean únicos.  
+ Si un documento XML contiene varios identificadores, use el **SQL: prefix** anotación para asegurarse de que los valores sean únicos.  
   
- Tenga en cuenta que **SQL: prefix** anotación no se puede usar con un atributo XSD fijo.  
+ Tenga en cuenta que **SQL: prefix** anotación no puede utilizarse con un atributo XSD fijo.  
   
 ## <a name="examples"></a>Ejemplos  
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, consulte [requisitos para ejecutar los ejemplos de SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. Especificar tipos ID e IDREFS  
- En el esquema siguiente, la  **\<cliente >** elemento consta de los  **\<orden >** elemento secundario. El  **\<orden >** elemento también incluye un elemento secundario, el  **\<OrderDetail >** elemento.  
+ En el siguiente esquema, el  **\<cliente >** elemento consta de los  **\<orden >** elemento secundario. El  **\<orden >** elemento también tiene un elemento secundario, el  **\<OrderDetail >** elemento.  
   
  El **OrderIDList** atributo de  **\<cliente >** es un atributo de tipo IDREFS que hace referencia a la **OrderID** atributo de la  **\< Orden >** elemento.  
   

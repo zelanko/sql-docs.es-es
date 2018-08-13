@@ -23,13 +23,13 @@ caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fdea1704b8942191bf79cb9074715f61eb9a9e81
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 29f366517986620444e018a5348e623aa541b00a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260438"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560635"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,28 +47,28 @@ sp_helplanguage [ [ @language = ] 'language' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@language=** ] **'***lenguaje***'**  
- Es el nombre del idioma alternativo para el que se muestra información. *idioma* es **sysname**, su valor predeterminado es null. Si *lenguaje* está especificado, se devuelve información sobre el idioma especificado. Si no se especifica el idioma, información acerca de todos los idiomas en el **sys.syslanguages** se devuelve la vista de compatibilidad.  
+ Es el nombre del idioma alternativo para el que se muestra información. *lenguaje* es **sysname**, su valor predeterminado es null. Si *lenguaje* está especificado, se devuelve información sobre el lenguaje especificado. Si no se especifica el idioma, información acerca de todos los idiomas en el **sys.syslanguages** se devuelve la vista de compatibilidad.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**LangID**|**smallint**|Número de identificación del idioma.|  
 |**dateformat**|**nchar(3)**|Formato de la fecha.|  
 |**DATEFIRST**|**tinyint**|Primer día de la semana: 1 para lunes, 2 para martes y así sucesivamente hasta 7 para domingo.|  
-|**Actualización**|**int**|Versión de la última actualización de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para este idioma.|  
+|**Actualizar**|**int**|Versión de la última actualización de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para este idioma.|  
 |**Nombre**|**sysname**|Nombre del idioma.|  
 |**alias**|**sysname**|Nombre alternativo del idioma.|  
-|**Meses**|**nvarchar(372)**|Nombres de los meses.|  
+|**meses**|**nvarchar(372)**|Nombres de los meses.|  
 |**SHORTMONTHS**|**nvarchar(132)**|Abreviaturas de los nombres de los meses.|  
 |**Días**|**nvarchar(217)**|Nombres de los días.|  
-|**lcid**|**int**|Id. de configuración regional de Windows para el idioma.|  
+|**LCID**|**int**|Id. de configuración regional de Windows para el idioma.|  
 |**msglangid**|**smallint**|Identificador del grupo de mensajes del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="examples"></a>Ejemplos  

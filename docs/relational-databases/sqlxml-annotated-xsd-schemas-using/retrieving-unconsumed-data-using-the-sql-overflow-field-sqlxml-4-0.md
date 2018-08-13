@@ -1,5 +1,5 @@
 ---
-title: 'Recuperar datos no consumidos mediante SQL: overflow-field (SQLXML 4.0) | Documentos de Microsoft'
+title: Recuperar datos no consumidos mediante overflow-field (SQLXML 4.0) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -22,21 +22,21 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 61c5ff309e264f78fe4e9ffa71c7deb0c41d93a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 51f9fe6c3e8053b1a03174d5e9ba3fce738c5231
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968380"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559215"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Recuperar datos no utilizados mediante sql:overflow-field (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Cuando se insertan registros en una base de datos de un documento XML utilizando la función [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML, se pueden almacenar todos los datos no consumidos del documento XML en una columna. Cuando se recuperan datos de una base de datos mediante esquemas anotados, puede especificar el **SQL: overflow-campo** atributo para identificar la columna de la tabla en la que se almacenan los datos de desbordamiento. El **SQL: overflow-campo** atributo puede especificarse en  **\<elemento >**.  
+  Cuando se insertan registros en una base de datos de un documento XML utilizando la función [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML, se pueden almacenar todos los datos no consumidos del documento XML en una columna. Al recuperar datos de una base de datos mediante esquemas anotados, puede especificar el **Overflow-campo** atributo para identificar la columna en la tabla en la que se almacenan los datos de desbordamiento. El **Overflow-campo** atributo puede especificarse en  **\<elemento >**.  
   
  Este dato se recupera después de las siguientes maneras:  
   
--   Atributos almacenados en la columna de desbordamiento se agregan al elemento que contiene el **SQL: overflow-campo** anotación.  
+-   Atributos que se almacenan en la columna de desbordamiento se agregan al elemento que contiene el **Overflow-campo** anotación.  
   
 -   Los elementos secundarios y sus descendientes, almacenados en la columna de desbordamiento de la base de datos, se agregan como elementos secundarios que siguen al contenido que se especifica explícitamente en el esquema. (No se mantiene ningún orden.)  
   
@@ -67,7 +67,7 @@ INSERT INTO Customers2 VALUES (
 GO  
 ```  
   
- Además, debe crear un directorio virtual para la base de datos tempdb y un nombre virtual de la plantilla de **plantilla** tipo denominado "plantilla".  
+ Además, debe crear un directorio virtual para la base de datos tempdb y un nombre virtual de la plantilla de **plantilla** tipo denominado "template".  
   
  En el ejemplo siguiente, el esquema de asignación recupera los datos no consumidos que están almacenados en la columna AddressOverflow de la tabla Customers2:  
   

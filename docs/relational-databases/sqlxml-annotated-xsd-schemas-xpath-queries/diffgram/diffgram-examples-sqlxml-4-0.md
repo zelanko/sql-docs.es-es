@@ -20,13 +20,13 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1ad818de46852201fc2bc111684b461d5c15ada3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2ed2d693ec69c9b85615f263e06a58c86ac3de34
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32974150"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557625"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>Ejemplos de DiffGram (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -106,11 +106,11 @@ ms.locfileid: "32974150"
 </ROOT>  
 ```  
   
- En el  **\<antes >** bloquear, hay un  **\<orden >** elemento (**diffgr: ID = "Order1"**) y un  **\< Cliente >** elemento (**diffgr: ID = "Customer1"**). Estos elementos representan registros existentes en la base de datos. El  **\<DataInstance >** elemento no tiene los registros correspondientes (con el mismo **diffgr: ID**). Esto indica una operación de eliminación.  
+ En la  **\<antes >** bloquear, hay un  **\<orden >** elemento (**diffgr: ID = "Order1"**) y un  **\< Cliente >** elemento (**diffgr: ID = "Customer1"**). Estos elementos representan registros existentes en la base de datos. La  **\<DataInstance >** el elemento no tiene los registros correspondientes (con el mismo **diffgr: ID**). Esto indica una operación de eliminación.  
   
 #### <a name="to-test-the-diffgram"></a>Para probar el DiffGram:  
   
-1.  Cree estas tablas en el **tempdb** base de datos.  
+1.  Crear estas tablas en el **tempdb** base de datos.  
   
     ```  
     CREATE TABLE Cust(  
@@ -173,11 +173,11 @@ ms.locfileid: "32974150"
 </ROOT>  
 ```  
   
- En este DiffGram el  **\<antes >** no se especifica el bloque (no existente de base de datos identifican registros). Hay dos instancias de registro (identificada por el  **\<cliente >** y  **\<orden >** elementos en la  **\<DataInstance >** bloque) que se asignan a las tablas Cust y Ord, respectivamente. Ambos de estos elementos especifican el **diffgr: HasChanges** atributo (**hasChanges = "inserted"**). Esto indica una operación de inserción. En este DiffGram, si especifica **hasChanges = "modified"**, está indicando que va a modificar un registro que no existe, lo que produce un error.  
+ En este DiffGram la  **\<antes >** no se ha especificado el bloque (ninguna base de datos identificados los registros). Hay dos instancias de registro (identificada por el  **\<cliente >** y  **\<orden >** elementos de la  **\<DataInstance >** bloque) que se asignan a las tablas Cust y Ord, respectivamente. Dos de estos elementos especifican la **diffgr: HasChanges** atributo (**hasChanges = "Insertar"**). Esto indica una operación de inserción. En este DiffGram, si especifica **hasChanges = "modified"**, se indica que desea modificar un registro que no existe, lo que produce un error.  
   
 #### <a name="to-test-the-diffgram"></a>Para probar el DiffGram:  
   
-1.  Cree estas tablas en el **tempdb** base de datos.  
+1.  Crear estas tablas en el **tempdb** base de datos.  
   
     ```  
     CREATE TABLE Cust(  
@@ -245,11 +245,11 @@ ms.locfileid: "32974150"
 </ROOT>  
 ```  
   
- El  **\<antes >** bloque incluye un  **\<cliente >** elemento (**diffgr: ID = "Customer1"**). El  **\<DataInstance >** bloque incluye el elemento correspondiente  **\<cliente >** elemento con el mismo **identificador**. El  **\<cliente >** elemento en el  **\<NewDataSet >** también especifica **diffgr: HasChanges = "modified"**. Esto indica una operación de actualización y el registro del cliente en el **Cust** tabla se actualiza en consecuencia. Tenga en cuenta que si el **diffgr: HasChanges** atributo no se especifica, la lógica de procesamiento de DiffGram omite este elemento y no se realizan actualizaciones.  
+ La  **\<antes >** bloque incluye una  **\<cliente >** elemento (**diffgr: ID = "Customer1"**). La  **\<DataInstance >** bloque incluye la correspondiente  **\<cliente >** el elemento con el mismo **id de**. La  **\<cliente >** el elemento en el  **\<NewDataSet >** también especifica **diffgr: HasChanges = "modified"**. Esto indica una operación de actualización y el registro del cliente en el **mov** tabla se actualiza en consecuencia. Observe que si la **diffgr: HasChanges** no se ha especificado el atributo, la lógica de procesamiento de DiffGram omite este elemento y no se realizan actualizaciones.  
   
 #### <a name="to-test-the-diffgram"></a>Para probar el DiffGram:  
   
-1.  Cree estas tablas en el **tempdb** base de datos.  
+1.  Crear estas tablas en el **tempdb** base de datos.  
   
     ```  
     CREATE TABLE Cust(  
@@ -348,17 +348,17 @@ ms.locfileid: "32974150"
   
 -   Con arreglo a la lógica de procesamiento de DiffGram, todos los elementos de nivel superior de la  **\<antes >** bloquear se asignan a las tablas correspondientes, como se describe en el esquema de asignación.  
   
--   El  **\<antes >** bloque tiene un  **\<orden >** elemento (**dffgr:id = "Order1"**) y un  **\<cliente >** elemento (**diffgr: ID = "Customer1"**) para que no hay ningún elemento correspondiente en el  **\<DataInstance >** bloque (con el mismo ID). Esto indica una operación de eliminación y los registros se eliminan de las tablas Cust y Ord.  
+-   La  **\<antes >** bloque tiene un  **\<orden >** elemento (**dffgr:id = "Order1"**) y un  **\<cliente >** elemento (**diffgr: ID = "Customer1"**) para que no hay ningún elemento correspondiente en el  **\<DataInstance >** bloque (con el mismo ID). Esto indica una operación de eliminación y los registros se eliminan de las tablas Cust y Ord.  
   
--   El  **\<antes >** bloque tiene un  **\<cliente >** elemento (**diffgr: ID = "Customer2"**) para que no hay un correspondiente **\<Cliente >** elemento en el  **\<DataInstance >** bloque (con el mismo ID). El elemento en el  **\<DataInstance >** bloque especifica **diffgr: HasChanges = "modified"**. Se trata de una operación de actualización en la que del cliente ANATR, la información de CompanyName y ContactName se actualiza en la tabla Cust mediante los valores que se especifican en el  **\<DataInstance >** bloque.  
+-   La  **\<antes >** bloque tiene un  **\<cliente >** elemento (**diffgr: ID = "Customer2"**) para las que hay un correspondiente **\<Cliente >** el elemento en el  **\<DataInstance >** bloque (con el mismo ID). El elemento en el  **\<DataInstance >** bloque especifica **diffgr: HasChanges = "modified"**. Se trata de una operación de actualización en la que el cliente ANATR, se actualiza la información CompanyName y ContactName de la tabla Cust con valores que se especifican en el  **\<DataInstance >** bloque.  
   
--   El  **\<DataInstance >** bloque tiene un  **\<cliente >** elemento (**diffgr: ID = "Customer3"**) y un  **\<Orden >** elemento (**diffgr: ID = "Order3"**). Ninguno de estos elementos especifican el **diffgr: HasChanges** atributo. Por lo tanto, la lógica de procesamiento de DiffGram omite estos elementos.  
+-   La  **\<DataInstance >** bloque tiene un  **\<cliente >** elemento (**diffgr: ID = "Customer3"**) y un  **\<Orden >** elemento (**diffgr: ID = "Order3"**). Ninguno de estos elementos especificar el **diffgr: HasChanges** atributo. Por lo tanto, la lógica de procesamiento de DiffGram omite estos elementos.  
   
--   El  **\<DataInstance >** bloque tiene un  **\<cliente >** elemento (**diffgr: ID = "Customer4"**) y un  **\<Orden >** elemento (**diffgr: ID = "Order4"**) para que no hay ningún elemento correspondiente en el \<antes > bloque. Estos elementos en el  **\<DataInstance >** bloque especifica **diffgr: HasChanges = "inserted"**. Por lo tanto, se agrega un nuevo registro a la tabla Cust y a la tabla Ord.  
+-   La  **\<DataInstance >** bloque tiene un  **\<cliente >** elemento (**diffgr: ID = "Customer4"**) y un  **\<Orden >** elemento (**diffgr: ID = "Order4"**) para el que no hay ningún elemento correspondiente en el \<antes > Bloquear. Estos elementos en el  **\<DataInstance >** especificar el bloque **diffgr: HasChanges = "Insertar"**. Por lo tanto, se agrega un nuevo registro a la tabla Cust y a la tabla Ord.  
   
 #### <a name="to-test-the-diffgram"></a>Para probar el DiffGram:  
   
-1.  Cree las siguientes tablas en la **tempdb** base de datos.  
+1.  Crear las siguientes tablas en la **tempdb** base de datos.  
   
     ```  
     CREATE TABLE Cust(  
@@ -397,7 +397,7 @@ ms.locfileid: "32974150"
      Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ## <a name="e-applying-updates-by-using-a-diffgram-with-the-diffgrparentid-annotation"></a>E. Aplicar actualizaciones mediante un DiffGram con la anotación diffgr:parentID  
- Este ejemplo se muestra cómo el **parentID** anotación que se especifica en el  **\<antes >** bloque del DiffGram, se utiliza para aplicar las actualizaciones.  
+ En este ejemplo se ilustra cómo el **parentID** anotación que se especifica en la  **\<antes >** bloque del DiffGram se utiliza en la aplicación de las actualizaciones.  
   
 ```  
 <NewDataSet />  
@@ -418,6 +418,6 @@ ms.locfileid: "32974150"
 </diffgr:diffgram>  
 ```  
   
- Este DiffGram especifica una operación de eliminación porque solo hay un  **\<antes >** bloque. En el DiffGram, el **parentID** anotación se utiliza para especificar una relación de elementos primarios y secundarios entre los pedidos y detalles del pedido. Cuando SQLXML elimina los registros, elimina los registros de la tabla secundaria que se identifica mediante esta relación y, a continuación, elimina los registros de la tabla primaria correspondiente.  
+ Este DiffGram especifica una operación de eliminación porque sólo hay un  **\<antes >** bloque. En el DiffGram, el **parentID** anotación se utiliza para especificar una relación de elementos primarios y secundarios entre los pedidos y detalles de pedidos. Cuando SQLXML elimina los registros, elimina los registros de la tabla secundaria que se identifica mediante esta relación y, a continuación, elimina los registros de la tabla primaria correspondiente.  
   
   

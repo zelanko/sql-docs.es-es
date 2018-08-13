@@ -1,5 +1,5 @@
 ---
-title: SQLColumns | Microsoft Docs
+title: SQLColumns | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ caps.latest.revision: 62
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f56b3e1b80687692293998b0b7b12daf9af7a330
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5e2febda8a84ca1d8479b0139947683f70a23658
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416064"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562889"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -86,8 +86,8 @@ ms.locfileid: "37416064"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|SS_IS_SPARSE|**Smallint**|Si la columna es una columna dispersa, tiene el valor SQL_TRUE; de lo contrario, SQL_FALSE.|  
-|SS_IS_COLUMN_SET|**Smallint**|Si la columna es el **column_set** columna, tiene el valor SQL_TRUE; de lo contrario, SQL_FALSE.|  
+|SS_IS_SPARSE|**smallint**|Si la columna es una columna dispersa, tiene el valor SQL_TRUE; de lo contrario, SQL_FALSE.|  
+|SS_IS_COLUMN_SET|**smallint**|Si la columna es el **column_set** columna, tiene el valor SQL_TRUE; de lo contrario, SQL_FALSE.|  
   
  Conformidad con la especificación ODBC, SS_IS_SPARSE y SS_IS_COLUMN_SET aparecen antes de todas las columnas específicas del controlador que se agregaron a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versiones anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]y después de todas las columnas asignadas por el propio ODBC.  
   

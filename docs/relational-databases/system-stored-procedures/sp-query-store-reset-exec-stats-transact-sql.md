@@ -25,13 +25,13 @@ caps.latest.revision: 6
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 152a2de5b373c9130f5d2a579737a823b752e832
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d91756ed0a9870c9748db62b7908dfb78091b175
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253756"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545125"
 ---
 # <a name="spquerystoreresetexecstats-transact-sql"></a>sp_query_store_reset_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -49,18 +49,18 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@plan_id =** ] *plan_id*  
- Es el identificador del plan de consulta que se va a borrar. *plan_id* es un **bigint**, no tiene ningún valor predeterminado.  
+ Es el identificador del plan de consulta para que se van a borrar. *plan_id* es un **bigint**, no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
-## <a name="permissions"></a>Permissions  
- Requiere la **EXECUTE** permiso en la base de datos y **eliminar** permiso en las vistas de catálogo del almacén de consultas.  
+## <a name="permissions"></a>Permisos  
+ Requiere el **EXECUTE** permiso en la base de datos y **eliminar** permiso en las vistas de catálogo del almacén de consultas.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se devuelve información acerca de las consultas en el almacén de consultas.  
+ El ejemplo siguiente devuelve información acerca de las consultas en el almacén de consultas.  
   
 ```  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
@@ -71,7 +71,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Después de identificar la plan_id que desea borrar las estadísticas, utilice el siguiente ejemplo para eliminar las estadísticas de ejecución de un plan de consulta específica. Este ejemplo elimina las estadísticas de ejecución para el número de plan 3.  
+ Después de identificar el plan_id que desea borrar las estadísticas, use el ejemplo siguiente para eliminar las estadísticas de ejecución para un plan de consulta específica. Este ejemplo elimina las estadísticas de ejecución para el número 3 de plan.  
   
 ```  
 EXEC sp_query_store_reset_exec_stats 3;  

@@ -21,22 +21,22 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9366a70d31e286ec69610f3551642ec24b1e2cad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2c0d4902bd1ec3d1c5e1e1cf7f2178275f68f2b8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971190"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549655"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Especificar funciones booleanas en consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Los ejemplos siguientes muestran cómo se especifican funciones booleanas en consultas XPath. Las consultas XPath de estos ejemplos se especifican en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [esquema de XSD anotado de ejemplo para obtener ejemplos de XPath & #40; SQLXML 4.0 & #41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Los ejemplos siguientes muestran cómo se especifican funciones booleanas en consultas XPath. Las consultas XPath de estos ejemplos se especifican en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [esquema de XSD anotado de ejemplo para obtener ejemplos de XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. Especificar la función booleana not()  
- Esta consulta devuelve todos los  **\<cliente >** los elementos secundarios del nodo de contexto que no tienen  **\<orden >** elementos secundarios:  
+ Esta consulta devuelve todos los  **\<cliente >** elementos secundarios del nodo de contexto que no tienen  **\<orden >** elementos secundarios:  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -50,7 +50,7 @@ ms.locfileid: "32971190"
   
 #### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia la [código de esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copia el [código del esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (BooleanFunctionsA.xml) y guárdela en el directorio donde esté guardado el archivo SampleSchema1.xml.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "32971190"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. Especificar las funciones booleanas true () y false ()  
- Esta consulta devuelve todos los  **\<cliente >** elementos secundarios del nodo de contexto que no tiene  **\<orden >** los elementos secundarios. En términos relacionales, esta consulta devuelve todos los clientes que no han realizado ningún pedido.  
+ Esta consulta devuelve todos los  **\<cliente >** elementos secundarios del nodo de contexto que no tienen  **\<orden >** elementos secundarios. En términos relacionales, esta consulta devuelve todos los clientes que no han realizado ningún pedido.  
   
 ```  
 /child::Customer[child::Order=false()]  
@@ -116,7 +116,7 @@ ms.locfileid: "32971190"
   
 #### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia la [código de esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copia el [código del esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (BooleanFunctionsB.xml) y guárdela en el directorio donde esté guardado el archivo SampleSchema1.xml.  
   

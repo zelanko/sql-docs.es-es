@@ -1,5 +1,5 @@
 ---
-title: Introducción a los esquemas XSD anotados (SQLXML 4.0) | Microsoft Docs
+title: Introducción a los esquemas XSD anotados (SQLXML 4.0) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -26,13 +26,13 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8b771edea6a71767e05e9d24c3ddd542bae2930c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f3167fd99964bf3bfba0bd6b8523fed6b6961f91
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38003367"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564519"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>Introducción a los esquemas XSD anotados (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -125,18 +125,18 @@ ms.locfileid: "38003367"
 ## <a name="other-resources"></a>Otros recursos  
  Puede buscar más información sobre el lenguaje de definición de esquemas XML (XSD), el lenguaje de rutas XML (XPath) y el lenguaje de transformación basado en hojas de estilo (XSLT) en los siguientes sitios web:  
   
--   XML Schema Part 0: Manual, el W3C recomendación ()http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Primer, W3C recomendación ()http://www.w3.org/TR/xmlschema-0/)  
   
 -   XML Schema Part 1: Estructuras, el W3C recomendación ()http://www.w3.org/TR/xmlschema-1/)  
   
--   Esquema XML parte 2: Datatypes, W3C recomendación ()http://www.w3.org/TR/xmlschema-2/)  
+-   Esquema XML parte 2:Datatypes, W3C recomendación ()http://www.w3.org/TR/xmlschema-2/)  
   
 -   XML Path Language (XPath) ()http://www.w3.org/TR/xpath)  
   
--   () XSL Transformations (XSLT)http://www.w3.org/TR/xslt)  
+-   (XSL Transformations (XSLT)http://www.w3.org/TR/xslt)  
   
 ## <a name="see-also"></a>Vea también  
  [Anotar las consideraciones de seguridad de esquema &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [Esquemas XDR anotados &#40;desusado en SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
+ [Esquemas XDR anotados &#40;en desuso en SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
   
   

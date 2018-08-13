@@ -1,5 +1,5 @@
 ---
-title: Especificar la profundidad en relaciones recursivas utilizando SQL-profundidad | Documentos de Microsoft
+title: Especificar la profundidad en relaciones recursivas utilizando SQL-profundidad | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -26,13 +26,13 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 025ad34e3aca3ea4330c9a5878f834c605bf645c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 0a4995693daa8d1a0f43c51628958b889101a74a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972890"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533785"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Especificar la profundidad en relaciones recursivas utilizando sql:max-depth
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
  En esta tabla, la columna ReportsTo almacena el identificador de empleado del director.  
   
- Supongamos que desea crear una jerarquía XML de empleados en la que el empleado director se sitúa en la parte superior de la jerarquía y los empleados que son subordinados directos de ese director aparecen en la jerarquía correspondiente tal y como se muestra en el siguiente fragmento XML de ejemplo. Este fragmento que se muestra es la *árbol recursivo* del empleado 1.  
+ Supongamos que desea crear una jerarquía XML de empleados en la que el empleado director se sitúa en la parte superior de la jerarquía y los empleados que son subordinados directos de ese director aparecen en la jerarquía correspondiente tal y como se muestra en el siguiente fragmento XML de ejemplo. Este fragmento que se muestra es el *árbol recursivo* del empleado 1.  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>   
@@ -66,7 +66,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
  En este fragmento, el empleado 5 es subordinado directo del empleado 4, el empleado 4 es subordinado directo del empleado 3 y los empleados 3 y 2 son subordinados directos del empleado 1.  
   
- Para generar este resultado, puede usar el siguiente esquema XSD y especificar una consulta XPath en él. El esquema describe un  **\<Emp >** elemento de tipo EmployeeType, que consta de un  **\<Emp >** elemento secundario del mismo tipo, de tipo EmployeeType. Se trata de una relación recursiva (el elemento y su antecesor son del mismo tipo). Además, el esquema usa un  **\<SQL: Relationship >** para describir la relación de elementos primarios y secundarios entre el supervisor y el supervisado. Tenga en cuenta que en este  **\<SQL: Relationship >**, Emp es el elemento primario y la tabla secundaria.  
+ Para generar este resultado, puede usar el siguiente esquema XSD y especificar una consulta XPath en él. El esquema describe un  **\<Emp >** elemento de tipo EmployeeType, que consta de un  **\<Emp >** elemento secundario del mismo tipo, EmployeeType. Se trata de una relación recursiva (el elemento y su antecesor son del mismo tipo). Además, el esquema usa un  **\<SQL: Relationship >** para describir la relación de elementos primarios y secundarios entre el supervisor y el supervisado. Tenga en cuenta que en este  **\<SQL: Relationship >**, Emp es el elemento primario y la tabla secundaria.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -100,10 +100,10 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- Dado que la relación es recursiva, necesita algún modo de especificar la profundidad de recursión del esquema. De lo contrario, el resultado será una recursión sin fin (empleado subordinado directo de empleado subordinado directo de empleado, etc.). El **SQL-profundidad** anotación permite especificar qué en la recursión. En este ejemplo concreto, para especificar un valor para **SQL-profundidad**, debe conocer la dirección de la jerarquía de administración la profundidad de la compañía.  
+ Dado que la relación es recursiva, necesita algún modo de especificar la profundidad de recursión del esquema. De lo contrario, el resultado será una recursión sin fin (empleado subordinado directo de empleado subordinado directo de empleado, etc.). El **SQL-profundidad** anotación le permite especificar la profundidad de la recursión. En este ejemplo concreto, para especificar un valor para **SQL-profundidad**, debe conocer la dirección de la jerarquía de administración de profundidad de la compañía.  
   
 > [!NOTE]  
->  El esquema especifica la **SQL: limit-campo** anotación, pero no especifica la **SQL: limit-valor** anotación. Esto limita el nodo superior de la jerarquía resultante únicamente a los empleados que no son subordinados directos de nadie. (ReportsTo es NULL.) Especificar **SQL: limit-campo** y no se especifica **SQL: limit-valor** (cuyo valor predeterminado es null) anotación para hacerlo. Si desea que el código XML resultante incluya cada informes posibles árbol (el árbol de informes para cada empleado en la tabla), quite la **SQL: limit-campo** anotación del esquema.  
+>  El esquema especifica la **SQL: limit-campo** anotación, pero no especifica la **SQL: limit-valor** anotación. Esto limita el nodo superior de la jerarquía resultante únicamente a los empleados que no son subordinados directos de nadie. (ReportsTo es NULL.) Especificar **SQL: limit-campo** y no especificar **SQL: limit-valor** (cuyo valor predeterminado es null) anotación lleva a cabo. Si desea que el código XML resultante incluya cada posible reporting árbol (el árbol de informes para todos los empleados en la tabla), quite el **SQL: limit-campo** anotación del esquema.  
   
 > [!NOTE]  
 >  El siguiente procedimiento usa la base de datos tempdb.  
@@ -176,7 +176,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 > [!NOTE]  
 >  Para crear distintas profundidades de jerarquías en el resultado, cambie el valor de la **SQL-profundidad** anotación en el esquema y ejecutar la plantilla de nuevo después de cada cambio.  
   
- En el esquema anterior, todos los  **\<Emp >** elementos tenían exactamente el mismo conjunto de atributos (**EmployeeID**, **FirstName**, y  **LastName**). El siguiente esquema se ha modificado ligeramente para devolver más **ReportsTo** atributo para todos los  **\<Emp >** elementos que dependen de un administrador.  
+ En el esquema anterior, todas las  **\<Emp >** elementos tenían exactamente el mismo conjunto de atributos (**EmployeeID**, **FirstName**, y  **LastName**). El siguiente esquema se ha modificado ligeramente para que devuelva más **ReportsTo** atributo para todos los  **\<Emp >** elementos que se comunican con un administrador de.  
   
  Por ejemplo, este fragmento XML muestra los subordinados del empleado 1:  
   
@@ -248,7 +248,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  El **SQL-profundidad** anotación puede especificarse en cualquier elemento de contenido complejo.  
   
 ### <a name="recursive-elements"></a>Elementos recursivos  
- Si **SQL-profundidad** se especifica en el elemento primario y el elemento secundario de una relación recursiva, la **SQL-profundidad** la anotación especificada en el elemento primario tiene prioridad. Por ejemplo, en el esquema siguiente, la **SQL-profundidad** anotación se especifica en el elemento primario y los elementos de empleado secundarios. En este caso, **SQL-profundidad = 4**, como se especifica en el  **\<Emp >** elemento primario (que desempeña el rol de supervisor), tiene prioridad. El **SQL-profundidad** especificado en el elemento secundario  **\<Emp >** elemento (que desempeña el rol de supervisado) se omite.  
+ Si **SQL-profundidad** se especifica en el elemento primario y el elemento secundario de una relación recursiva, la **SQL-profundidad** la anotación especificada en el elemento primario tiene prioridad. Por ejemplo, en el esquema siguiente, el **SQL-profundidad** anotación se especifica en el elemento primario y los elementos de empleado secundarios. En este caso, **SQL-profundidad = 4**, especificado en el  **\<Emp >** elemento primario (que desempeña el rol de supervisor) tiene prioridad. El **SQL-profundidad** especificado en el elemento secundario  **\<Emp >** se omite el elemento (que desempeña un rol de supervisado).  
   
 #### <a name="example-b"></a>Ejemplo B  
   
@@ -285,12 +285,12 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- Para probar este esquema, siga los pasos indicados para el ejemplo A, anteriormente en este tema.  
+ Para probar este esquema, siga los pasos indicados para un ejemplo, anteriormente en este tema.  
   
 ### <a name="nonrecursive-elements"></a>Elementos no recursivos  
- Si el **SQL-profundidad** anotación se especifica en un elemento en el esquema que no presenta ninguna recursión, se omite. En el esquema siguiente, un  **\<Emp >** elemento consta de un  **\<constante >** elemento secundario, que a su vez, tiene un  **\<Emp >** elemento secundario.  
+ Si el **SQL-profundidad** anotación se especifica en un elemento en el esquema que no presenta ninguna recursión, se omite. En el siguiente esquema, un  **\<Emp >** elemento consta de un  **\<constante >** elemento secundario, que, a su vez, tiene un  **\<Emp >** elemento secundario.  
   
- En este esquema, el **SQL-profundidad** la anotación especificada en el  **\<constante >** elemento se omite porque no hay ninguna recursión entre el  **\<Emp >** primario y el  **\<constante >** elemento secundario. Pero hay recursión entre el  **\<Emp >** antecesor y  **\<Emp >** secundarios. El esquema especifica la **SQL-profundidad** anotación en ambos. Por lo tanto, la **SQL-profundidad** anotación que se especifica en el antecesor (**\<Emp >** en el rol de supervisor) tiene prioridad.  
+ En este esquema, el **SQL-profundidad** la anotación especificada en el  **\<constante >** se omite el elemento porque no hay ninguna recursión entre el  **\<Emp >** primario y el  **\<constante >** elemento secundario. Pero hay recursión entre el  **\<Emp >** antecesor y  **\<Emp >** secundarios. El esquema especifica la **SQL-profundidad** anotación en ambos. Por lo tanto, el **SQL-profundidad** anotación que se especifica en el antecesor (**\<Emp >** en el rol de supervisor) tiene prioridad.  
   
 #### <a name="example-c"></a>Ejemplo C  
   
@@ -338,7 +338,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
   
  Por otro lado, si tiene una derivación de tipo complejo por  **\<extensión >**, pueden especificar los elementos de tipo complejo base correspondiente el **SQL-profundidad** anotación.  
   
- Por ejemplo, el siguiente esquema XSD genera un error porque el **SQL-profundidad** anotación se especifica en el tipo base. Esta anotación no se admite en un tipo derivado por  **\<restricción >** de otro tipo. Para solucionar este problema, debe cambiar el esquema y especificar el **SQL-profundidad** anotación del elemento en el tipo derivado.  
+ Por ejemplo, el siguiente esquema XSD genera un error porque el **SQL-profundidad** anotación se especifica en el tipo base. Esta anotación no se admite en un tipo que se deriva por  **\<restricción >** de otro tipo. Para corregir este problema, debe cambiar el esquema y especificar el **SQL-profundidad** anotación en el elemento en el tipo derivado.  
   
 #### <a name="example-d"></a>Ejemplo D  
   
@@ -382,9 +382,9 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 </xsd:schema>   
 ```  
   
- En el esquema, **SQL-profundidad** se especifica en un **CustomerBaseType** tipo complejo. El esquema también especifica un  **\<cliente >** elemento de tipo **CustomerType**, que se deriva de **CustomerBaseType**. Una consulta XPath especificada en un esquema de este tipo, generará un error, porque **SQL-profundidad** no se admite en un elemento que se define en un tipo base de restricción.  
+ En el esquema, **SQL-profundidad** se especifica en un **CustomerBaseType** tipo complejo. El esquema también especifica un  **\<cliente >** elemento de tipo **CustomerType**, que se deriva **CustomerBaseType**. Una consulta XPath especificada en este tipo de esquema generará un error, porque **SQL-profundidad** no se admite en un elemento que se define en un tipo de base de restricción.  
   
 ## <a name="schemas-with-a-deep-hierarchy"></a>Esquemas con una jerarquía profunda  
- Puede tener un esquema que incluya una jerarquía profunda en la que un elemento contiene un elemento secundario, que a su vez contiene otro elemento secundario, y así sucesivamente. Si el **SQL-profundidad** la anotación especificada en un esquema de este tipo genera un documento XML que incluye una jerarquía de más de 500 niveles (con el elemento de nivel superior en el nivel 1, su elemento secundario en el nivel 2 etc.), se devuelve un error.  
+ Puede tener un esquema que incluya una jerarquía profunda en la que un elemento contiene un elemento secundario, que a su vez contiene otro elemento secundario, y así sucesivamente. Si el **SQL-profundidad** la anotación especificada en un esquema de este tipo genera un documento XML que incluye una jerarquía de más de 500 niveles (con el elemento de nivel superior en el nivel 1, su elemento secundario en el nivel 2 y así sucesivamente), se devuelve un error.  
   
   

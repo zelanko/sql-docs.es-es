@@ -1,5 +1,5 @@
 ---
-title: sp_autostats (Transact-SQL) | Documentos de Microsoft
+title: sp_autostats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ab8716d2a4580edf9d9cdb34a849210d60f31d17
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5e1b26b708db7fc435ea6f37ce81e6ff734e5f7d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239865"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553445"
 ---
 # <a name="spautostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,25 +70,25 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Si *stats_flag* se especifica, **sp_autostats** informa acerca de la acción que se realizó pero no devuelve ningún conjunto de resultados.  
+ Si *stats_flag* se especifica, **sp_autostats** informa acerca de la acción que se realizó, pero no devuelve ningún conjunto de resultados.  
   
  Si *stats_flag* no se especifica, **sp_autostats** devuelve el siguiente conjunto de resultados.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre de índice**|**varchar(60)**|Nombre del índice o de las estadísticas.|  
 |**AUTOSTAT EN**|**varchar(3)**|Valor actual para la opción AUTO_UPDATE_STATISTICS.|  
 |**Última actualización**|**datetime**|Fecha de la actualización más reciente de las estadísticas.|  
   
- El conjunto de resultados para una tabla o vista indizada incluye estadísticas creadas para los índices, estadísticas de columna única generadas con la opción AUTO_CREATE_STATISTICS y estadísticas crean con la [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrucción.  
+ El conjunto de resultados para una tabla o vista indizada incluye estadísticas creadas para índices, estadísticas de columna única generadas con la opción AUTO_CREATE_STATISTICS y estadísticas crean con el [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrucción.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si el índice especificado está deshabilitado, o si la tabla especificada tiene un índice clúster deshabilitado, aparece un mensaje de error.  
   
  AUTO_UPDATE_STATISTICS siempre es OFF para las tablas optimizadas para memoria  
   
-## <a name="permissions"></a>Permissions  
- Para cambiar el AUTO_UPDATE_STATISTICS opción requiere la pertenencia a n el **db_owner** rol fijo de base de datos, o el permiso ALTER *table_name*. Para mostrar el AUTO_UPDATE_STATISTICS opción requiere la pertenencia a la **público** rol.  
+## <a name="permissions"></a>Permisos  
+ Para cambiar el AUTO_UPDATE_STATISTICS opción requiere la pertenencia a n el **db_owner** rol fijo de base de datos o permiso ALTER *table_name*. Para mostrar el AUTO_UPDATE_STATISTICS opción requiere la pertenencia a la **pública** rol.  
   
 ## <a name="examples"></a>Ejemplos  
   

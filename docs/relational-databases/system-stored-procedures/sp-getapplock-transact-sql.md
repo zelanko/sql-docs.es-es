@@ -1,5 +1,5 @@
 ---
-title: sp_getapplock (Transact-SQL) | Documentos de Microsoft
+title: sp_getapplock (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 16d750e07e8c61959e43fe15e1e3cfb47c8bf1c0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ce5a2f5350a16024dcefbdd3e162212a60d98059
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261674"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555685"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
  [ @Resource=] '*resource_name*'  
  Cadena que indica un nombre que identifica al recurso de bloqueo. La aplicación debe asegurar que el nombre del recurso sea exclusivo. El nombre especificado se convierte internamente mediante un algoritmo hash en un valor que puede almacenarse en el administrador de bloqueos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* es **nvarchar (255)** no tiene ningún valor predeterminado. Si tiene más de una cadena de recurso **nvarchar (255)**, se truncará a **nvarchar (255)**.  
   
- *resource_name* es binario compara y, por tanto, distingue mayúsculas de minúsculas, independientemente de la configuración de intercalación de la base de datos actual.  
+ *resource_name* es binario en comparación y, por tanto, distingue mayúsculas de minúsculas, independientemente de la configuración de intercalación de la base de datos actual.  
   
 > [!NOTE]  
 >  Una vez que se ha adquirido un bloqueo de aplicación, solo los primeros 32 caracteres pueden recuperarse como texto simple; al resto se le aplicará el algoritmo hash.  
@@ -63,18 +63,18 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
  Es el modo de bloqueo que se va a obtener para un recurso determinado. *lock_mode* es **nvarchar(32)** y carece de valor predeterminado. El valor puede ser cualquiera de las siguientes acciones: **Shared**, **actualización**, **IntentShared**, **IntentExclusive**, o **exclusivo** .  
   
  [ @LockOwner=] '*lock_owner*'  
- Es el propietario del bloqueo, que es el valor de *lock_owner* cuando se solicitó el bloqueo. *lock_owner* es **nvarchar(32)**. El valor puede ser **Transaction** (predeterminado) o **Session**. Cuando el *lock_owner* valor es **transacciones**, predeterminado o especificar explícitamente, sp_getapplock debe ejecutarse desde dentro de una transacción.  
+ Es el propietario del bloqueo, que es el valor de *lock_owner* cuando se solicitó el bloqueo. *lock_owner* es **nvarchar(32)**. El valor puede ser **Transaction** (predeterminado) o **Session**. Cuando el *lock_owner* valor es **transacciones**, de manera predeterminada o especificándolo explícitamente, sp_getapplock debe ejecutarse desde dentro de una transacción.  
   
  [ @LockTimeout=] '*valor*'  
  Es un valor de tiempo de espera de los bloqueos, en milisegundos. El valor predeterminado es el mismo que el valor devuelto por@LOCK_TIMEOUT. Especifique 0 para indicar que las solicitudes de bloqueo que no pueden concederse inmediatamente deben devolver un error, en lugar de esperar el bloqueo.  
   
  [ @DbPrincipal=] '*database_principal*'  
- Es el usuario, el rol o el rol de aplicación que tiene permisos para un objeto de una base de datos. El llamador de la función debe ser un miembro de *database_principal*, dbo o db_owner rol fijo de base para llamar correctamente a la función. El valor predeterminado es public.  
+ Es el usuario, el rol o el rol de aplicación que tiene permisos para un objeto de una base de datos. El llamador de la función debe ser un miembro de *database_principal*, dbo o db_owner fijo de base de datos para llamar correctamente a la función. El valor predeterminado es public.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  \>= 0 (correcto) o < 0 (error)  
   
-|Value|Resultado|  
+|Valor|Resultado|  
 |-----------|------------|  
 |0|Se concedió el bloqueo de forma sincrónica.|  
 |1|Se concedió el bloqueo después de esperar a que se liberaran otros bloqueos no compatibles.|  
@@ -83,7 +83,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |-3|La solicitud de bloqueo fue objeto del propio bloqueo.|  
 |-999|Indica un error de llamada o de validación de parámetros.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Los bloqueos colocados en un recurso se asocian a la transacción o a la sesión actuales. Los bloqueos asociados con la transacción actual se liberan cuando ésta se confirma o se revierte. Los bloqueos asociados con la sesión se liberan al salir de la misma. Si el servidor se cierra por cualquier razón, se liberan todos los bloqueos.  
   
  El bloqueo de recurso creado por sp_getapplock se crea en la base de datos actual para la sesión. Cada recurso de bloqueo se identifica mediante la combinación de los siguientes valores:  
@@ -141,7 +141,7 @@ GO
   
  Utilice la vista de administración dinámica sys.dm_tran_locks o el procedimiento almacenado sp_lock system o utilice [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para supervisar los bloqueos.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol public.  
   
 ## <a name="examples"></a>Ejemplos  

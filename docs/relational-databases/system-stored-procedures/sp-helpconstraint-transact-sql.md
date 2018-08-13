@@ -1,5 +1,5 @@
 ---
-title: sp_helpconstraint (Transact-SQL) | Documentos de Microsoft
+title: sp_helpconstraint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: db7c4131c564dad86abe569862b364fbcc6c7288
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9d2b4e51dc08ba897145d689d5ea6a918e3e7afb
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242262"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559455"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,10 +58,10 @@ sp_helpconstraint [ @objname = ] 'table'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_helpconstraint** muestra una columna de índice descendente si forma parte de las claves principales. El nombre de la columna indizada en orden descendente irá seguido de un signo menos (-) en el conjunto de resultados. La columna predeterminada, indizada en orden ascendente, aparecerá solo por su nombre.  
   
-## <a name="remarks"></a>Comentarios  
- Ejecutar **sp_help *** tabla* presenta toda la información acerca de la tabla especificada. Para ver la información de restricciones, utilice **sp_helpconstraint**.  
+## <a name="remarks"></a>Notas  
+ Ejecutar **sp_help *** tabla* presenta toda la información acerca de la tabla especificada. Para ver sólo la información de restricción, use **sp_helpconstraint**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="examples"></a>Ejemplos  

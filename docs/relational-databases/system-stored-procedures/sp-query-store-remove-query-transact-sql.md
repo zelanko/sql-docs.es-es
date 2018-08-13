@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_remove_query (Transact-SQL) | Microsoft Docs
+title: sp_query_store_remove_query (Transact-SQL) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -25,13 +25,13 @@ caps.latest.revision: 8
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 803cd0f5df8d641eeb4119ea99b588571243dd0c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f452f89e6bb7600d9322e11c25cc88c8102721b4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993657"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558395"
 ---
 # <a name="spquerystoreremovequery-transact-sql"></a>sp_query_store_remove_query (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@query_id =** ] *query_id*  
- Es el identificador de la consulta va a quitar del almacén de consultas. *query_id* es un **bigint**, no tiene ningún valor predeterminado.  
+ Es el identificador de la consulta va a quitar del almacén de consultas. *query_id* es una **bigint**, no tiene valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -71,7 +71,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Después de identificar el query_id que desea eliminar, use el ejemplo siguiente para eliminar la consulta.  
+ Después de identificar el query_id que desea eliminar, utilice el ejemplo siguiente para eliminar la consulta.  
   
  El ejemplo siguiente.  
   

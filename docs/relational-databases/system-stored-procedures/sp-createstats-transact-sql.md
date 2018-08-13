@@ -1,5 +1,5 @@
 ---
-title: sp_createstats (Transact-SQL) | Documentos de Microsoft
+title: sp_createstats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6c37e65276e14bc8687f9ffceb1f5a2a5f3ca655
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 75e05e36dfea3a36fa01d08ca79b22c3abb7e2c4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239855"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555165"
 ---
 # <a name="spcreatestats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Llamadas a la [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrucción para crear estadísticas de columna única en columnas que no sean la primera columna de un objeto de estadísticas. La creación de estadísticas de columna única aumenta el número de histogramas, lo que puede mejorar las estimaciones de cardinalidad, los planes de consulta y el rendimiento de las consultas. La primera columna de un objeto de estadísticas tiene un histograma; otras columnas no tienen un histograma.  
+  Las llamadas del [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrucción para crear estadísticas de columna única en columnas que no sean la primera columna de un objeto de estadísticas. La creación de estadísticas de columna única aumenta el número de histogramas, lo que puede mejorar las estimaciones de cardinalidad, los planes de consulta y el rendimiento de las consultas. La primera columna de un objeto de estadísticas tiene un histograma; otras columnas no tienen un histograma.  
   
  sp_createstats es útil para aplicaciones como las pruebas comparativas cuando los tiempos de ejecución de la consulta resultan críticos y no se puede esperar a que el optimizador de consultas genere estadísticas de columna única. En la mayoría de los casos, no es necesario utilizar sp_createstats; el optimizador de consultas genera estadísticas de columna única según sea necesario para mejorar los planes cuando la **AUTO_CREATE_STATISTICS** opción está activada.  
   
- Para obtener más información acerca de las estadísticas, vea [estadísticas](../../relational-databases/statistics/statistics.md). Para obtener más información acerca de cómo generar estadísticas de columna única, consulte la **AUTO_CREATE_STATISTICS** opción [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ Para obtener más información sobre las estadísticas, vea [Estadísticas](../../relational-databases/statistics/statistics.md). Para obtener más información acerca de cómo generar estadísticas de columna única, consulte el **AUTO_CREATE_STATISTICS** opción [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,12 +71,12 @@ sp_createstats
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Cada nuevo objeto de estadísticas tiene el mismo nombre que la columna en la que se creó.  
   
-## <a name="remarks"></a>Comentarios  
- sp_createstats no crea ni actualiza estadísticas en columnas que son la primera columna de un objeto de estadísticas existente;  Esto incluye la primera columna de las estadísticas creadas para índices, columnas con estadísticas de columna única generadas con la opción AUTO_CREATE_STATISTICS y la primera columna de las estadísticas creadas con la instrucción CREATE STATISTICS. sp_createstats no crea estadísticas en las primeras columnas de índices deshabilitados a menos que esa columna se utiliza en otro índice habilitado. sp_createstats no crea estadísticas en tablas con un índice clúster deshabilitado.  
+## <a name="remarks"></a>Notas  
+ sp_createstats no crea ni actualiza estadísticas en columnas que son la primera columna de un objeto de estadísticas existente;  Esto incluye la primera columna de las estadísticas creadas para índices, columnas con estadísticas de columna única generadas con la opción AUTO_CREATE_STATISTICS y la primera columna de estadísticas creada con la instrucción CREATE STATISTICS. sp_createstats no crea estadísticas en las primeras columnas de índices deshabilitados a menos que esa columna se utiliza en otro índice habilitado. sp_createstats no crea estadísticas en tablas con un índice clúster deshabilitado.  
   
  Cuando la tabla contiene un conjunto de columnas, sp_createstats no crea automáticamente estadísticas en columnas dispersas. Para obtener más información sobre conjuntos de columnas y las columnas dispersas, vea [usar conjuntos de columnas](../../relational-databases/tables/use-column-sets.md) y [usar columnas dispersas](../../relational-databases/tables/use-sparse-columns.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere pertenencia al rol fijo de base de datos db_owner.  
   
 ## <a name="examples"></a>Ejemplos  

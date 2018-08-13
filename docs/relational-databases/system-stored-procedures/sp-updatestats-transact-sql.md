@@ -22,20 +22,20 @@ caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 895c3fd65ac6cad3a0ce67dee54cfe8cf1070ea4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: cd4eada4db6af75ad794efdba231407b23f79354
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259475"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560585"
 ---
 # <a name="spupdatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Ejecuta UPDATE STATISTICS para todas las tablas internas y definidas por el usuario de la base de datos actual.  
   
- Para obtener más información acerca de UPDATE STATISTICS, vea [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md). Para obtener más información acerca de las estadísticas, vea [estadísticas](../../relational-databases/statistics/statistics.md).  
+ Para obtener más información acerca de UPDATE STATISTICS, vea [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md). Para obtener más información sobre las estadísticas, vea [Estadísticas](../../relational-databases/statistics/statistics.md).  
     
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,20 +51,20 @@ sp_updatestats [ [ @resample = ] 'resample']
   
 ## <a name="arguments"></a>Argumentos  
  [ **@resample** =] **'resample'**  
- Especifica que **sp_updatestats** utilizará la opción RESAMPLE de la [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) instrucción. Si **'resample'** no se especifica, **sp_updatestats** actualiza las estadísticas mediante el muestreo predeterminado. **volver a muestrear** es **varchar (8)** con un valor predeterminado de NO.  
+ Especifica que **sp_updatestats** utilizará la opción RESAMPLE de la [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) instrucción. Si **'resample'** no se especifica, **sp_updatestats** actualiza las estadísticas mediante el muestreo predeterminado. **volver a muestrear** es **varchar (8)** con el valor predeterminado es NO.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_updatestats** ejecuta UPDATE STATISTICS, especificando la palabra clave ALL en todas las tablas internas y definidas por el usuario en la base de datos. sp_updatestats muestra mensajes que indican su progreso. Cuando la actualización se ha completado, informa de que se han actualizado las estadísticas de todas las tablas.  
   
  sp_updatestats actualiza las estadísticas en índices no clúster deshabilitados y no actualiza las estadísticas en índices clúster deshabilitados.  
   
- Para las tablas basadas en disco, **sp_updatestats** actualiza las estadísticas basándose en el **modification_counter** información en el **sys.dm_db_stats_properties** vista de catálogo Actualizar estadísticas donde se ha modificado al menos una fila. Las estadísticas en tablas optimizadas en memoria se actualizan siempre al ejecutar **sp_updatestats**. Por lo tanto, no se ejecutan **sp_updatestats** más de lo necesario.  
+ Para las tablas basadas en disco, **sp_updatestats** actualiza las estadísticas basándose en la **modification_counter** información en el **sys.dm_db_stats_properties** vista de catálogo actualización de estadísticas que se ha modificado al menos una fila. Las estadísticas en tablas optimizadas para memoria se actualizan siempre al ejecutar **sp_updatestats**. Por lo tanto, no ejecute **sp_updatestats** más de lo necesario.  
   
- **sp_updatestats** puede desencadenar una regeneración de procedimientos almacenados u otro código compilado. Sin embargo, **sp_updatestats** podría desencadenar una regeneración si solo un plan de consulta es posible que las tablas de referencia y los índices en ellos. En estos casos sería necesaria una recompilación, aunque las estadísticas estén actualizadas.  
+ **sp_updatestats** puede desencadenar una regeneración de procedimientos almacenados u otro código compilado. Sin embargo, **sp_updatestats** podría desencadenar una regeneración si solo es posible que las tablas que se hace referenciadas y los índices en ellos un plan de consulta. En estos casos sería necesaria una recompilación, aunque las estadísticas estén actualizadas.  
   
- Para las bases de datos con un nivel de compatibilidad inferior a 90, ejecutar **sp_updatestats** no conserva la configuración más reciente de NORECOMPUTE para estadísticas específicas. Para las bases de datos con un nivel de compatibilidad de 90 o superior, sp_updatestats conserva la más reciente de NORECOMPUTE para estadísticas específicas. Para obtener más información sobre cómo deshabilitar y volver a habilitar las actualizaciones de estadísticas, vea [Estadísticas](../../relational-databases/statistics/statistics.md).  
+ Bases de datos con un nivel de compatibilidad inferior a 90, ejecutar **sp_updatestats** no conserva la configuración más reciente de NORECOMPUTE para estadísticas específicas. Bases de datos con un nivel de compatibilidad 90 o superior, sp_updatestats conserva la más reciente de NORECOMPUTE para estadísticas específicas. Para obtener más información sobre cómo deshabilitar y volver a habilitar las actualizaciones de estadísticas, vea [Estadísticas](../../relational-databases/statistics/statistics.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer a la **sysadmin** rol fijo de servidor o la propiedad de la base de datos (**dbo**).  
   
 ## <a name="examples"></a>Ejemplos  

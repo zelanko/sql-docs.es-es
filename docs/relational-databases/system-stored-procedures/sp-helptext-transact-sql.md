@@ -22,13 +22,13 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3cc2628e0c689f41ff954ae9e0d916f79e65c06b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8b71a693eeca059cdca695e17b5c0cde623863fa
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259735"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558875"
 ---
 # <a name="sphelptext-transact-sql"></a>sp_helptext (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,30 +46,30 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@objname =** ] **'***nombre***'**  
- Es el nombre, completo o no, de un objeto definido por el usuario en el ámbito de esquema. Se requieren comillas solo si se especifica un nombre de objeto calificado. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. El objeto debe estar en la base de datos actual. *nombre* es **nvarchar(776)**, no tiene ningún valor predeterminado.  
+ Es el nombre, completo o no, de un objeto definido por el usuario en el ámbito de esquema. Se requieren comillas solo si se especifica un nombre de objeto calificado. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. El objeto debe estar en la base de datos actual. *nombre* es **nvarchar(776)**, no tiene valor predeterminado.  
   
  [  **@columnname =** ] **'***computed_column_name***'**  
- Es el nombre de la columna calculada para la que se va a mostrar la definición. La tabla que contiene la columna debe especificarse como *nombre*. *column_name* es **sysname**, no tiene ningún valor predeterminado.  
+ Es el nombre de la columna calculada para la que se va a mostrar la definición. Se debe especificar la tabla que contiene la columna como *nombre de*. *nombreColumna* es **sysname**, no tiene valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Texto**|**nvarchar(255)**|Definición del objeto|  
   
-## <a name="remarks"></a>Comentarios  
- sp_helptext muestra la definición que se utiliza para crear un objeto en varias filas. Cada fila contiene 255 caracteres de la definición de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La definición reside en el **definición** columna en el [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vista de catálogo.  
+## <a name="remarks"></a>Notas  
+ sp_helptext muestra la definición que se utiliza para crear un objeto en varias filas. Cada fila contiene 255 caracteres de la definición de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La definición reside en la **definición** columna en el [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vista del catálogo.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** . Las definiciones de los objetos del sistema están visibles públicamente. La definición de los objetos de usuario está visible para el propietario del objeto o los receptores de los permisos siguientes: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-displaying-the-definition-of-a-trigger"></a>A. Mostrar la definición de un desencadenador  
- En el ejemplo siguiente se muestra la definición del desencadenador `dEmployee` en el [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]base de datos.  
+ En el ejemplo siguiente se muestra la definición del desencadenador `dEmployee` en el [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]la base de datos.  
   
 ```  
 USE AdventureWorks2012;  

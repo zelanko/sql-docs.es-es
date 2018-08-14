@@ -14,12 +14,12 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4bb058781139fd4a22fde87ddaab05a292499ca
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: eb11436fdfda8e2bb0744d866ece700259e11586
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38006877"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662257"
 ---
 # <a name="pdosetattribute"></a>PDO::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,16 +47,15 @@ Se devuelve True si la operación se realiza correctamente; de lo contrario, Fal
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Especifica la mayúsculas en los nombres de columna.<br /><br />PDO::CASE_LOWER aplica minúsculas a los nombres de columna.<br /><br />PDO::CASE_NATURAL (el valor predeterminado) muestra los nombres de columna con el mismo uso de mayúsculas y minúsculas que aparece en la base de datos.<br /><br />PDO::CASE_UPPER aplica mayúsculas a los nombres de columna.<br /><br />Este atributo también puede establecerse utilizando PDO::setAttribute.|  
 |PDO::ATTR_DEFAULT_FETCH_MODE|PDO|Consulte la documentación de PDO.|Consulte la documentación de PDO.|  
-|PDO::ATTR_ERRMODE|PDO|PDO::ERRMODE_SILENT<br /><br />PDO::ERRMODE_WARNING<br /><br />PDO::ERRMODE_EXCEPTION|Especifica cómo el controlador informa de errores.<br /><br />PDO::ERRMODE_SILENT (el valor predeterminado) establece la información y los códigos de los errores.<br /><br />PDO::ERRMODE_WARNING genera una advertencia E_WARNING.<br /><br />PDO::ERRMODE_EXCEPTION genera una excepción.<br /><br />Este atributo también puede establecerse utilizando PDO::setAttribute.|  
+|PDO::ATTR_ERRMODE|PDO|PDO::ERRMODE_SILENT<br /><br />PDO::ERRMODE_WARNING<br /><br />PDO::ERRMODE_EXCEPTION|Especifica cómo el controlador notificará los errores.<br /><br />PDO::ERRMODE_SILENT (el valor predeterminado) establece la información y los códigos de los errores.<br /><br />PDO::ERRMODE_WARNING genera una advertencia E_WARNING.<br /><br />PDO::ERRMODE_EXCEPTION genera una excepción.<br /><br />Este atributo también puede establecerse utilizando PDO::setAttribute.|  
 |PDO::ATTR_ORACLE_NULLS|PDO|Consulte la documentación de PDO.|Especifica cómo se deben devolver los valores Null.<br /><br />PDO::NULL_NATURAL no realiza ninguna conversión.<br /><br />PDO::NULL_EMPTY_STRING convierte el valor de una cadena vacía en Null.<br /><br />PDO::NULL_TO_STRING convierte el valor de una cadena vacía en Null.|  
 |PDO::ATTR_STATEMENT_CLASS|PDO|Consulte la documentación de PDO.|Establece que la clase de la instrucción proporcionada por el usuario se obtenga de PDOStatement.<br /><br />Se requiere `array(string classname, array(mixed constructor_args))`.<br /><br />Para obtener más información, vea la documentación de PDO.|  
 |PDO::ATTR_STRINGIFY_FETCHES|PDO|true o false|Convierte los valores numéricos en cadenas al recuperar los datos.|  
-|PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|1 para el límite de memoria PHP.|Configura el tamaño del búfer que contiene el conjunto de resultados.<br /><br />El valor predeterminado es 10 240 KB (10 MB).<br /><br />Para obtener más información sobre las consultas que crean un cursor de cliente, vea [Tipos de cursor &#40;controlador PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|1 para el límite de memoria PHP.|Establece el tamaño de búfer que contiene el conjunto de resultados de un cursor de cliente.<br /><br />El valor predeterminado es 10240 KB si no se especifica en el archivo php.ini.<br /><br />No se permiten ni el cero ni los números negativos.<br /><br />Para obtener más información sobre las consultas que crean un cursor de cliente, vea [Tipos de cursor &#40;controlador PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true<br /><br />false|Especifica la ejecución de la consulta directa o preparada. Para obtener más información, vea [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver (Ejecución de la instrucción preparada o directa en el controlador PDO_SQLSRV)](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_SYSTEM.|Establece el juego de caracteres que utiliza el controlador para comunicarse con el servidor.<br /><br />No se admite PDO::SQLSRV_ENCODING_BINARY.<br /><br />El valor predeterminado es PDO::SQLSRV_ENCODING_UTF8.|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true o false|Controla numéricos obtenciones de columnas con tipos SQL numéricos (bit, integer, smallint, tinyint, float o real).<br /><br />Cuando marca de la opción de conexión ATTR_STRINGIFY_FETCHES está activado, el valor devuelto es una cadena incluso cuando SQLSRV_ATTR_FETCHES_NUMERIC_TYPE está activado.<br /><br />Cuando el tipo devuelto de PDO en la columna de enlace es PDO_PARAM_INT, el valor devuelto de una columna de enteros es un valor int aunque SQLSRV_ATTR_FETCHES_NUMERIC_TYPE está desactivada.|  
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|integer|Establece el tiempo de espera de consulta en segundos.<br /><br />El valor predeterminado es 0, lo que significa que el controlador esperará indefinidamente para obtener los resultados.<br /><br />No se permiten números negativos.|  
-|PDO::SQLSRV_CLIENT_BUFFER_MAX_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|integer|Establece el tamaño del búfer de consulta.<br /><br />El valor predeterminado es 10240 KB si no se especifica en el archivo php.ini.<br /><br />No se permiten ni el cero ni los números negativos.<br /><br />Para obtener más información sobre las consultas que crean un cursor de cliente, vea [Tipos de cursor &#40;controlador PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
   
 PDO procesa algunos de los atributos predefinidos y requiere que el controlador procese otros. Todos los atributos personalizados y opciones de conexión se procesan mediante el controlador. Según la configuración de PDO::ATTR_ERRMODE, se notifican un atributo, una opción de conexión o un valor no compatibles.  
   

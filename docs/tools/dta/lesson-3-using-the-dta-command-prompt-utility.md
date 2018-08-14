@@ -1,5 +1,5 @@
 ---
-title: 'Lección 3: Usar la utilidad del símbolo del sistema dta | Microsoft Docs'
+title: 'Lección 3: Usar la utilidad del símbolo del sistema dta'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 086a2051f5ef1900c90e55c2de21d365b24905d7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6fa260e1a20f13736b9df767508e4cf8a1b94de5
+ms.sourcegitcommit: 95093f8b4f3d02f8d55d415f03a241102a641cb3
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978897"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39654240"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Lección 3: Usar la utilidad del símbolo del sistema dta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,67 @@ Además, al usar el esquema XML del Asistente para la optimización de motor de 
   
 Esta lección no cubre el uso de la funcionalidad de entrada XML del Asistente para la optimización de motor de base de datos.  
   
-Esta lección ofrece una introducción a la sintaxis básica de la utilidad del símbolo del sistema **dta** , muestra cómo obtener acceso a la Ayuda y practicar la optimización de cargas de trabajo sencillas.  
+Esta tarea le guía por los pasos necesarios para iniciar la utilidad **dta** , ver su Ayuda y usarla para optimizar una carga de trabajo desde el símbolo del sistema. Se usará la carga de trabajo (MyScript.sql) que ha creado para la práctica sobre la interfaz gráfica de usuario (GUI) del Asistente para la optimización de motor de base de datos: [Optimizar una carga de trabajo](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload).  
   
-Incluye el tema siguiente:  
+Este tutorial necesita la base de datos de ejemplo AdventureWorks. Por motivos de seguridad, las bases de datos de ejemplo no se instalan de manera predeterminada. Para instalarlas, consulte [Instalar ejemplos de SQL Server y bases de datos de ejemplo](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).  
   
--   Iniciar la utilidad del símbolo del sistema **dta** y optimizar una carga de trabajo  
+Las tareas siguientes le guían por los pasos necesarios para abrir un símbolo del sistema, iniciar la utilidad **dta** , ver la Ayuda de la sintaxis y optimizar una carga de trabajo sencilla (MyScript.sql) que ha creado en [Optimizar una carga de trabajo](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
+
+## <a name="prerequisites"></a>Prerequisites 
+
+Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, acceso a un servidor que ejecute SQL Server y una base de datos de AdventureWorks.
+
+- Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Descargue la [base de datos de ejemplo de AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+
+
+Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaurar una base de datos](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017).
+
+  >[!NOTE]
+  > Este tutorial está pensado para un usuario familiarizado con el uso de SQL Server Management Studio y las tareas de administración de base de datos básica. 
+
+## <a name="access-dta-command-prompt-utility-help-menu"></a>Lección 3: Usar la utilidad del símbolo del sistema dta
   
-## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
-[Iniciar la utilidad del símbolo del sistema dta y optimizar una carga de trabajo](../../tools/dta/lesson-3-1-starting-the-dta-command-prompt-utility-and-tuning-a-workload.md)  
   
+1.  En el menú **Inicio** , seleccione **Todos los programas**, **Accesorios**y, después, haga clic en **Símbolo del sistema**.  
   
+2.  En el símbolo del sistema, escriba lo siguiente y presione ENTRAR:  
   
+    ```  
+    dta -? | more  
+    ```  
+  
+    La parte `| more` de este comando es opcional. No obstante, si la utiliza, puede examinar la ayuda de la sintaxis para la utilidad. Presione ENTRAR para avanzar por el texto de ayuda línea a línea o la BARRA ESPACIADORA para avanzar página a página.  
+
+  ![Uso de la ayuda con la utilidad de cmd DTA](media/dta-tutorials/dta-cmd-help.png)
+
+## <a name="tune-simple-workload-using-the-dta-command-prompt-utility"></a>Optimizar una carga de trabajo sencilla mediante la utilidad del símbolo del sistema dta  
+
+
+  
+1.  En el símbolo del sistema, navegue al directorio donde haya almacenado el archivo MyScript.sql.  
+  
+2.  En el símbolo del sistema, escriba lo siguiente y presione ENTRAR para ejecutar el comando e iniciar la sesión de optimización (observe que la utilidad reconoce mayúsculas y minúsculas al analizar comandos):  
+  
+    ```  
+    dta -S YourServerName\YourSQLServerInstanceName -E -D AdventureWorks2012 -if MyScript.sql -s MySession2 -of MySession2OutputScript.sql -ox MySession2Output.xml -fa IDX_IV -fp NONE -fk NONE  
+    ```  
+  
+    donde `-S` especifica el nombre del servidor y la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] está instalada. El valor `-E` especifica que se desea utilizar una conexión de confianza para la instancia, lo cual es apropiado si piensa conectarse con una cuenta de dominio de Windows. El valor `-D` especifica la base de datos que desea optimizar, `-if` especifica el archivo de carga de trabajo, `-s` especifica el nombre de la sesión, `-of` especifica el archivo en el que desea que la herramienta escriba el script de recomendaciones [!INCLUDE[tsql](../../includes/tsql-md.md)] y `-ox` especifica el archivo en el que desea que la herramienta escriba las recomendaciones en formato XML. Los tres últimos modificadores especifican las opciones de optimización siguientes: `-fa IDX_IV` especifica que el Asistente para la optimización de motor de base de datos solo debe agregar índices (agrupados y no agrupados) y vistas indizadas; `-fp NONE` especifica que durante el análisis no se tendrá en cuenta ninguna estrategia de partición; y `-fk NONE` especifica que no se debe mantener ninguna estructura de diseño físico en la base de datos cuando el Asistente para la optimización de motor de base de datos haga sus recomendaciones.  
+
+  ![uso de CMD con DTA](media/dta-tutorials/dta-cmd.png)
+  
+3.  Una vez que el Asistente para la optimización de motor de base de datos acabe de optimizar la carga de trabajo, mostrará un mensaje para indicar que la sesión de optimización finalizó correctamente. Puede ver los resultados de la optimización utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para abrir los archivos MySession2OutputScript.sql y MySession2Output.xml. También puede abrir la sesión de optimización MySession2 en la GUI del Asistente para la optimización de motor de base de datos y ver las recomendaciones e informes de la misma forma que ha hecho en [Ver recomendaciones de optimización](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md) y [Ver informes de optimización](../../tools/dta/lesson-1-3-viewing-tuning-reports.md).  
+  
+ 
+## <a name="after-you-finish-this-tutorial"></a>Al finalizar este tutorial  
+Cuando haya finalizado las lecciones de este tutorial, consulte los temas siguientes para obtener más información acerca del Asistente para la optimización de motor de base de datos:  
+  
+-   [Asistente para la optimización de motor de base de datos](../../relational-databases/performance/database-engine-tuning-advisor.md) para obtener descripciones sobre cómo realizar tareas con esta herramienta. 
+-   [dta (utilidad)](../../tools/dta/dta-utility.md) para obtener material de referencia sobre la utilidad de símbolo del sistema y el archivo XML opcional que puede usar para controlar el funcionamiento de la utilidad.  
+  
+Para volver al principio del tutorial, consulte [Tutorial: Asistente para la optimización de motor de base de datos](../../tools/dta/tutorial-database-engine-tuning-advisor.md).  
+  
+## <a name="see-also"></a>Ver también  
+[Tutoriales del motor de base de datos](../../relational-databases/database-engine-tutorials.md)  
+    

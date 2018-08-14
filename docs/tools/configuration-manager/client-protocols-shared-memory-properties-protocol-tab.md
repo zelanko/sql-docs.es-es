@@ -26,7 +26,7 @@ ms.locfileid: "37988267"
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>Protocolos de cliente: Propiedades de Memoria compartida (pestaña Protocolo)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  En el Administrador de configuración de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilice la pestaña **Protocolo** del cuadro de diálogo **Propiedades de Memoria compartida** para ver o modificar la memoria compartida. Para obtener más información sobre cadenas de conexión, vea [Creating a Valid Connection String Using Shared Memory Protocol](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md).  
+  En el Administrador de configuración de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilice la pestaña **Protocolo** del cuadro de diálogo **Propiedades de Memoria compartida** para ver o modificar la memoria compartida. Para obtener más información sobre cadenas de conexión, vea [Crear una cadena de conexión válida con el protocolo de memoria compartida](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md).  
   
 ## <a name="options"></a>Opciones  
  **Enabled**  

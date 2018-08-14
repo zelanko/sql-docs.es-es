@@ -1,5 +1,5 @@
 ---
-title: Requisitos del sistema para el controlador JDBC | Microsoft Docs
+title: Requisitos del sistema para el controlador JDBC
 ms.custom: ''
 ms.date: 07/19/2018
 ms.prod: sql
@@ -14,12 +14,12 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7d43fbc0488886915689565475dd5e69967c348
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
-ms.translationtype: MTE75
+ms.openlocfilehash: e5363b1135cb7e5d04201b2005bda9caf8ff8811
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454059"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662287"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Requisitos del sistema para el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "39454059"
   
  A partir de [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], la compatibilidad del controlador JDBC con la API de especificaciones de Java Database Connectivity (JDBC) se ha ampliado para incluir la API de JDBC 4.0. La API de JDBC 4.0 se presentó como parte de Sun Java SE Development Kit (JDK) 6.0 y de Java Runtime Environment (JRE) 6.0. JDBC 4.0 es un superconjunto de la API de JDBC 3.0.  
   
- Cuando se implementa [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] en sistemas operativos Windows y UNIX, se deben usar los paquetes de instalación, *sqljdbc_\<versión>_enu.exe* y *sqljdbc_\<versión>_enu.tar.gz*, respectivamente. Para obtener más información sobre cómo implementar el controlador JDBC, consulte [implementar el controlador JDBC](../../connect/jdbc/deploying-the-jdbc-driver.md) tema.  
+ Cuando se implementa [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] en sistemas operativos Windows y UNIX, se deben usar los paquetes de instalación, *sqljdbc_\<versión>_enu.exe* y *sqljdbc_\<versión>_enu.tar.gz*, respectivamente. Para obtener más información acerca de cómo implementar el controlador JDBC, vea el tema [Implementar el controlador JDBC](../../connect/jdbc/deploying-the-jdbc-driver.md).  
   
 **Microsoft JDBC Driver 7.0 para SQL Server**  
 
-  La 7.0 del controlador JDBC incluye dos bibliotecas de clases JAR en cada paquete de instalación: **mssql-jdbc-7.0.0.jre8.jar**, y **mssql-jdbc-7.0.0.jre10.jar**.
+  dos bibliotecas de clases JAR en cada paquete de instalación: mssql-jdbc-7.0.jre8.jar y mssql-jdbc-7.0.0.jre10.jar.
 
   JDBC Driver 7.0 está diseñado para funcionar con todas las máquinas virtuales de Java equivalentes de Sun y ser compatible con ellas, aunque solo se ha probado en Sun JRE 8.0 y 10.0.
   
@@ -52,8 +52,8 @@ ms.locfileid: "39454059"
   
   |JAR|Cumplimiento con la versión JDBC|Versión de Java recomendada|Descripción|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-7.0.0.jre8.jar|4.2|8|Requiere la versión 8.0 de Java Runtime Environment (JRE). Uso de JRE 7.0 o menor produce una excepción.<br /><br /> Las nuevas características en 7.0 incluyen: compatibilidad con JDK 10, el nivel de compatibilidad predeterminado actualizado a las especificaciones de JDBC 4.2, compatibilidad con tipos de datos espaciales, cancelQueryTimeout propiedad de conexión, métodos de petición de límite, propiedad de conexión useBulkCopyForBatchInsert, datos Información de clasificación y detección, extensión de características de UTF-8 y soporte técnico de CityHash. |    
-|mssql-jdbc-7.0.0.jre10.jar|4.3|10|Requiere Java Runtime Environment (JRE) 10.0. Uso de JRE 9.0 o menor produce una excepción.<br /><br /> Las nuevas características en 7.0 incluyen: compatibilidad con JDK 10, el nivel de compatibilidad predeterminado actualizado a las especificaciones de JDBC 4.2, compatibilidad con tipos de datos espaciales, cancelQueryTimeout propiedad de conexión, métodos de petición de límite, propiedad de conexión useBulkCopyForBatchInsert, datos Información de clasificación y detección, extensión de características de UTF-8 y soporte técnico de CityHash. |    
+|mssql-jdbc-7.0.0.jre8.jar|4.2|8|Requiere la versión 8.0 de Java Runtime Environment (JRE). El uso de JRE 7.0 o anterior lanzará una excepción.<br /><br /> Las nuevas características en 7.0 incluyen: compatibilidad con JDK 10, el nivel de compatibilidad predeterminado actualizado a las especificaciones de JDBC 4.2, compatibilidad con tipos de datos espaciales, cancelQueryTimeout propiedad de conexión, métodos de petición de límite, propiedad de conexión useBulkCopyForBatchInsert, datos Información de clasificación y detección, extensión de características de UTF-8 y soporte técnico de CityHash. |    
+|mssql-jdbc-7.0.0.jre10.jar|4.3|10|Requiere Java Runtime Environment (JRE) 10.0. El uso de JRE 9.0 o anterior lanzará una excepción.<br /><br /> Las nuevas características en 7.0 incluyen: compatibilidad con JDK 10, el nivel de compatibilidad predeterminado actualizado a las especificaciones de JDBC 4.2, compatibilidad con tipos de datos espaciales, cancelQueryTimeout propiedad de conexión, métodos de petición de límite, propiedad de conexión useBulkCopyForBatchInsert, datos Información de clasificación y detección, extensión de características de UTF-8 y soporte técnico de CityHash. |    
 
 
   La 7.0 del controlador JDBC también está disponible en el repositorio Central de Maven y pueden agregarse a un proyecto de Maven agregando el código siguiente en el archivo POM. XML:  
@@ -76,33 +76,32 @@ ms.locfileid: "39454059"
   
   |JAR|Cumplimiento con la versión JDBC|Versión de Java recomendada|Descripción|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-6.4.0.jre7.jar|4.1|7|Requiere la versión 7.0 de Java Runtime Environment (JRE). Uso de JRE 6.0 o menor produce una excepción.<br /><br /> Las nuevas características en 6.4 incluyen: autenticación de Azure AD para Linux, el método de entidad de seguridad y la contraseña para la detección automática de REALM en SPN para la autenticación entre dominios, delegación restringida de Kerberos, el tiempo de espera de consulta, el tiempo de espera de Socket, Kerberos y preparadas identificador de instrucciones volver a usar. |  
-|mssql-jdbc-6.4.0.jre8.jar|4.2|8|Requiere la versión 8.0 de Java Runtime Environment (JRE). Uso de JRE 7.0 o menor produce una excepción.<br /><br /> Las nuevas características en 6.4 incluyen: autenticación de Azure AD para Linux, el método de entidad de seguridad y la contraseña para la detección automática de REALM en SPN para la autenticación entre dominios, delegación restringida de Kerberos, el tiempo de espera de consulta, el tiempo de espera de Socket, Kerberos y preparadas identificador de instrucciones volver a usar. |    
-|mssql-jdbc-6.4.0.jre9.jar|4.3|9|Requiere Java Runtime Environment (JRE) 9.0. Uso de JRE 8.0 o menor produce una excepción.<br /><br /> Las nuevas características en 6.4 incluyen: autenticación de Azure AD para Linux, el método de entidad de seguridad y la contraseña para la detección automática de REALM en SPN para la autenticación entre dominios, delegación restringida de Kerberos, el tiempo de espera de consulta, el tiempo de espera de Socket, Kerberos y preparadas identificador de instrucciones volver a usar. |    
+|mssql-jdbc-6.4.0.jre7.jar|4.1|7|Requiere la versión 7.0 de Java Runtime Environment (JRE). El uso de JRE 6.0 o anterior lanzará una excepción.<br /><br /> Las nuevas características en 6.4 incluyen: autenticación de Azure AD para Linux, el método de entidad de seguridad y la contraseña para la detección automática de REALM en SPN para la autenticación entre dominios, delegación restringida de Kerberos, el tiempo de espera de consulta, el tiempo de espera de Socket, Kerberos y preparadas identificador de instrucciones volver a usar. |  
+|mssql-jdbc-6.4.0.jre8.jar|4.2|8|Requiere la versión 8.0 de Java Runtime Environment (JRE). El uso de JRE 7.0 o anterior lanzará una excepción.<br /><br /> Las nuevas características en 6.4 incluyen: autenticación de Azure AD para Linux, el método de entidad de seguridad y la contraseña para la detección automática de REALM en SPN para la autenticación entre dominios, delegación restringida de Kerberos, el tiempo de espera de consulta, el tiempo de espera de Socket, Kerberos y preparadas identificador de instrucciones volver a usar. |    
+|mssql-jdbc-6.4.0.jre9.jar|4.3|9|Requiere Java Runtime Environment (JRE) 9.0. El uso de JRE 8.0 o anterior lanzará una excepción.<br /><br /> Las nuevas características en 6.4 incluyen: autenticación de Azure AD para Linux, el método de entidad de seguridad y la contraseña para la detección automática de REALM en SPN para la autenticación entre dominios, delegación restringida de Kerberos, el tiempo de espera de consulta, el tiempo de espera de Socket, Kerberos y preparadas identificador de instrucciones volver a usar. |
 
+JDBC Driver 6.4 también está disponible en el repositorio Central de Maven y pueden agregarse a un proyecto de Maven agregando el código siguiente en el archivo POM. XML 
 
-  JDBC Driver 6.4 también está disponible en el repositorio Central de Maven y pueden agregarse a un proyecto de Maven agregando el código siguiente en el archivo POM. XML 
-  
  ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
     <version>6.4.0.jre9</version>
 </dependency>
-```    
+```
 
 **Microsoft JDBC Driver 6.2 para SQL Server:**  
   
-  JDBC Driver 6.2 incluye dos bibliotecas de clases JAR en cada paquete de instalación: **mssql-jdbc-6.2.1.jre7.jar**, y **mssql-jdbc-6.2.1.jre8.jar**. 
+  JDBC Driver 6.2 incluye dos bibliotecas de clases JAR en cada paquete de instalación: **mssql-jdbc-6.2.2.jre7.jar** y **mssql-jdbc-6.2.2.jre8.jar**. 
   
- JDBC Driver 6.2 está diseñado para funcionar con todas las máquinas virtuales de Java equivalentes de Sun y ser compatible con ellas, aunque solo se ha probado en Sun JRE 5.0, 6.0, 7.0 y 8.0. 
+ JDBC Driver 6.2 está diseñado para funcionar con todas las máquinas virtuales de Java equivalentes de Sun y ser compatible con ellas, aunque solo se ha probado en Sun JRE 5.0, 6.0, 7.0 y 8.0.
   
  A continuación se resume la compatibilidad que ofrecen los dos archivos JAR incluidos en Microsoft JDBC Driver 6.0 y 4.2 para SQL Server:  
   
 |JAR|Cumplimiento con la versión JDBC|Versión de Java recomendada|Descripción|  
-|---------|-----------------------------|----------------------|-----------------|   
-|MSSQL-jdbc-6.2.1.jre7.jar|4.1|7|Requiere la versión 7.0 de Java Runtime Environment (JRE). Uso de JRE 6.0 o menor produce una excepción.<br /><br /> Nuevas características de 6.2 incluyen: autenticación de Azure AD para Linux, el método de entidad de seguridad y la contraseña para la detección automática de REALM en SPN para la autenticación entre dominios, delegación restringida de Kerberos, el tiempo de espera de consulta, el tiempo de espera de Socket, Kerberos y preparadas identificador de instrucciones volver a usar. |  
-|MSSQL-jdbc-6.2.1.jre8.jar|4.2|8|Requiere la versión 8.0 de Java Runtime Environment (JRE). Uso de JRE 7.0 o menor produce una excepción.<br /><br /> Nuevas características de 6.2 incluyen: autenticación de Azure AD para Linux, el método de entidad de seguridad y la contraseña para la detección automática de REALM en SPN para la autenticación entre dominios, delegación restringida de Kerberos, el tiempo de espera de consulta, el tiempo de espera de Socket, Kerberos y preparadas identificador de instrucción volver a usar|    
+|---------|-----------------------------|----------------------|-----------------|
+|MSSQL-jdbc-6.2.2.jre7.jar|4.1|7|Requiere la versión 7.0 de Java Runtime Environment (JRE). El uso de JRE 6.0 o anterior lanzará una excepción.<br /><br /> Nuevas características de 6.2 incluyen: autenticación de Azure AD para Linux, el método de entidad de seguridad y la contraseña para la detección automática de REALM en SPN para la autenticación entre dominios, delegación restringida de Kerberos, el tiempo de espera de consulta, el tiempo de espera de Socket, Kerberos y preparadas identificador de instrucciones volver a usar. |  
+|MSSQL-jdbc-6.2.3.jre8.jar|4.2|8|Requiere la versión 8.0 de Java Runtime Environment (JRE). El uso de JRE 7.0 o anterior lanzará una excepción.<br /><br /> Nuevas características de 6.2 incluyen: autenticación de Azure AD para Linux, el método de entidad de seguridad y la contraseña para la detección automática de REALM en SPN para la autenticación entre dominios, delegación restringida de Kerberos, el tiempo de espera de consulta, el tiempo de espera de Socket, Kerberos y preparadas identificador de instrucción volver a usar|    
 
   JDBC Driver 6.2 también está disponible en el repositorio Central de Maven y pueden agregarse a un proyecto de Maven agregando el código siguiente en el archivo POM. XML 
   
@@ -110,13 +109,13 @@ ms.locfileid: "39454059"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>6.2.1.jre8</version>
+    <version>6.2.2.jre8</version>
 </dependency>
 ```    
 
  **Microsoft JDBC Driver 6.0 y 4.2 para SQL Server:**  
   
-  JDBC Drivers 6.0 y 4.2 incluyen dos bibliotecas de clases JAR en cada paquete de instalación: **sqljdbc41.jar**, y **sqljdbc42.jar**. 
+  dos bibliotecas de clases JAR en cada paquete de instalación: sqljdbc41.jar y sqljdbc42.jar. 
   
  JDBC Driver 6.0 y 4.2 está diseñado para funcionar con todas las máquinas virtuales de Java equivalentes de Sun y ser compatible con ellas, aunque solo se ha probado en Sun JRE 5.0, 6.0, 7.0 y 8.0. 
   
@@ -124,12 +123,12 @@ ms.locfileid: "39454059"
   
 |JAR|Cumplimiento con la versión JDBC|Versión de Java recomendada|Descripción|  
 |---------|-----------------------------|----------------------|-----------------|   
-|sqljdbc41.jar|4.1|7|Requiere la versión 7.0 de Java Runtime Environment (JRE). Uso de JRE 6.0 o menor produce una excepción.<br /><br /> Las nuevas características de los paquetes 6.0 y 4.2 incluyen: JBC 4.1 Compliance y Bulk Copy<br /><br /> Además, las nuevas características solo del paquete 6.0 incluyen: Always Encrypted, los parámetros con valores de tabla, Azure autenticación de Active Directory, conexiones transparentes a grupos de disponibilidad AlwaysOn, mejora en la recuperación de metadatos de parámetro para preparado las consultas y el nombre de dominio internacionalizado (IDN)|  
-|sqljdbc42.jar|4.2|8|Requiere la versión 8.0 de Java Runtime Environment (JRE). Uso de JRE 7.0 o menor produce una excepción.<br /><br /> Las nuevas características de los paquetes 6.0 y 4.2 incluyen: JDBC 4.1 Compliance, JDBC 4.2 Compliance y Bulk Copy<br /><br /> Además, las nuevas características solo del paquete 6.0 incluyen: Always Encrypted, los parámetros con valores de tabla, Azure autenticación de Active Directory, conexiones transparentes a grupos de disponibilidad AlwaysOn, mejora en la recuperación de metadatos de parámetro para preparado las consultas y el nombre de dominio internacionalizado (IDN)|  
+|sqljdbc41.jar|4.1|7|Requiere la versión 7.0 de Java Runtime Environment (JRE). El uso de JRE 6.0 o anterior lanzará una excepción.<br /><br /> Las nuevas características de los paquetes 6.0 y 4.2 incluyen: JBC 4.1 Compliance y Bulk Copy<br /><br /> Además, las nuevas características solo del paquete 6.0 incluyen: Always Encrypted, los parámetros con valores de tabla, Azure autenticación de Active Directory, conexiones transparentes a grupos de disponibilidad AlwaysOn, mejora en la recuperación de metadatos de parámetro para preparado las consultas y el nombre de dominio internacionalizado (IDN)|  
+|sqljdbc42.jar|4.2|8|Requiere la versión 8.0 de Java Runtime Environment (JRE). El uso de JRE 7.0 o anterior lanzará una excepción.<br /><br /> Las nuevas características de los paquetes 6.0 y 4.2 incluyen: JDBC 4.1 Compliance, JDBC 4.2 Compliance y Bulk Copy<br /><br /> Además, las nuevas características solo del paquete 6.0 incluyen: Always Encrypted, los parámetros con valores de tabla, Azure autenticación de Active Directory, conexiones transparentes a grupos de disponibilidad AlwaysOn, mejora en la recuperación de metadatos de parámetro para preparado las consultas y el nombre de dominio internacionalizado (IDN)|  
   
  **Microsoft JDBC Driver 4.1 para SQL Server:**  
   
- El controlador JDBC 4.1 incluye una biblioteca de clases JAR en cada paquete de instalación: **sqljdbc41.jar**.  
+ dos bibliotecas de clases JAR en cada paquete de instalación: sqljdbc41.jar y sqljdbc42.jar.  
     
 |JAR|Descripción|  
 |---------|-----------------|  
@@ -150,7 +149,7 @@ ms.locfileid: "39454059"
  El controlador JDBC se ha diseñado para funcionar en cualquier sistema operativo que admita el uso de una máquina virtual Java (JVM). No obstante, solo se han probado oficialmente los sistemas operativos Sun Solaris, SUSE Linux y Windows.  
   
 ## <a name="supported-languages"></a>Idiomas admitidos  
- El controlador JDBC es compatible con todas las intercalaciones de columnas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Para obtener más información acerca de las intercalaciones admitidas por el controlador JDBC, consulte [características internacionales del controlador JDBC](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
+ El controlador JDBC es compatible con todas las intercalaciones de columnas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Para obtener más información acerca de las intercalaciones compatibles con el controlador JDBC, consulte [Características internacionales del controlador JDBC](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
   
  Para obtener más información sobre las intercalaciones, vea "Trabajar con intercalaciones" en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   

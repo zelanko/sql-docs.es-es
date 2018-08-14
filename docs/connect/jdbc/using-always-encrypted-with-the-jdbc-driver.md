@@ -1,5 +1,5 @@
 ---
-title: Uso de Always Encrypted con el controlador JDBC | Microsoft Docs
+title: Usar Always Encrypted con el controlador JDBC
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -14,19 +14,19 @@ caps.latest.revision: 64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fd5d3bb54c4587c177160cdf99f2f0dacc2bb086
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: b0dc1141fd4f01fef3e49380cdd048faba105ed9
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279286"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662477"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Usar Always Encrypted con el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Esta página proporciona información sobre cómo desarrollar aplicaciones de Java mediante [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) y Microsoft JDBC Driver 6.0 (o posterior) para SQL Server.
+En este artículo se proporciona información sobre cómo desarrollar aplicaciones .NET mediante [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) y el proveedor de datos .NET Framework para SQL Server.
 
-Always Encrypted permite a los clientes cifrar la información confidencial y nunca revelar los datos ni las claves de cifrado en SQL Server o Azure SQL Database. Un controlador habilitado para Always Encrypted, como Microsoft JDBC Driver 6.0 (o superior) for SQL Server, consigue este comportamiento al cifrar y descifrar de manera transparente la información confidencial en la aplicación cliente. El controlador determina automáticamente qué consulta parámetros corresponden a las columnas de base de datos de Always Encrypted y cifra los valores de esos parámetros antes de enviarlos a SQL Server o Azure SQL Database. De forma similar, el controlador descifra de manera transparente los datos que se han recuperado de las columnas de bases de datos cifradas de los resultados de la consulta. Para obtener más información, consulte [Always Encrypted (motor de base de datos)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) y [siempre cifrados referencia de la API para el controlador JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).
+Always Encrypted permite a los clientes cifrar la información confidencial y nunca revelar los datos ni las claves de cifrado en SQL Server o Azure SQL Database. Un controlador habilitado para Always Encrypted, como Microsoft JDBC Driver 6.0 (o superior) for SQL Server, consigue este comportamiento al cifrar y descifrar de manera transparente la información confidencial en la aplicación cliente. El controlador determina automáticamente qué parámetros de consulta corresponden a columnas de bases de datos confidenciales (protegidas mediante Always Encrypted) y cifra los valores de esos parámetros antes de pasar los datos a SQL Server o Azure SQL Database. De forma similar, el controlador descifra de manera transparente los datos que se han recuperado de las columnas de bases de datos cifradas de los resultados de la consulta. Para obtener más información, consulte [Always Encrypted (motor de base de datos)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) y [siempre cifrados referencia de la API para el controlador JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).
 
 ## <a name="prerequisites"></a>Prerequisites
 - Asegúrese de que Microsoft JDBC Driver 6.0 (o posterior) para SQL Server está instalado en el equipo de desarrollo. 
@@ -41,18 +41,18 @@ Always Encrypted permite a los clientes cifrar la información confidencial y nu
 ## <a name="working-with-column-master-key-stores"></a>Trabajar con almacenes de claves maestras de columna
 Para cifrar o descifrar los datos en las columnas cifradas, SQL Server mantiene las claves de cifrado de columna. Las claves de cifrado de columnas se almacenan con formato cifrado en los metadatos de la base de datos. Cada clave de cifrado de columnas tiene una clave maestra de columna correspondiente que se ha usado para cifrar la clave de cifrado de columnas. Los metadatos de la base de datos no contienen las claves maestras de columna. Dichas claves se mantienen solo por el cliente. Sin embargo los metadatos de la base de datos contienen información sobre dónde se almacenan las claves maestras de columna en relación con el cliente. Por ejemplo, los metadatos de la base de datos pueden indicará que el almacén de claves que contiene una clave maestra de columna es el Store del certificado de Windows y el certificado específico usado para cifrar y descifrar se encuentra en una ruta de acceso específica en el Store del certificado de Windows. Si el cliente tiene acceso a ese certificado en el Store del certificado de Windows, puede obtener el certificado. El certificado, a continuación, puede utilizarse para descifrar la clave de cifrado de columna. A continuación, esa clave de cifrado puede utilizarse para descifrar ni cifrar datos en las columnas cifradas que utilizan esa clave de cifrado de columna.
 
-Microsoft JDBC Driver para SQL Server se comunica con un almacén de claves mediante un proveedor de almacén de claves maestras de columna, que es una instancia de una clase derivado de **SQLServerColumnEncryptionKeyStoreProvider**.
+El proveedor de datos .NET Framework para SQL Server se comunica con un almacén de claves mediante un proveedor de almacenamiento de claves maestras de columna, que es una instancia de una clase derivada de la clase **SqlColumnEncryptionKeyStoreProvider**.
 
 ### <a name="using-built-in-column-master-key-store-providers"></a>Usar proveedores integrados de almacenamiento de claves maestras de columna
 Microsoft JDBC Driver para SQL Server incluye los siguientes proveedores de almacenes de clave maestra de columna integrada. Algunos de estos proveedores se registran previamente con los nombres de proveedor específico (que se utiliza para buscar el proveedor) y algunos requieren credenciales adicionales o registro explícito.
 
-| Clase | Descripción | Nombre del proveedor (búsqueda) |¿Se ha registrado previamente?|
-|:---|:---|:---|:---|
-|**SQLServerColumnEncryptionAzureKeyVaultProvider**| Un proveedor para un almacén de claves para Azure Key Vault.| AZURE_KEY_VAULT|no|
-|**SQLServerColumnEncryptionCertificateStoreProvider**| Un proveedor para el Almacén de certificados de Windows.|MSSQL_CERTIFICATE_STORE|Sí
-|**SQLServerColumnEncryptionJavaKeyStoreProvider**| Un proveedor del almacén de claves de Java|MSSQL_JAVA_KEYSTORE|Sí|
+| Clase                                                 | Descripción                                        | Nombre del proveedor (búsqueda)  | ¿Se ha registrado previamente? |
+| :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
+| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Un proveedor para un almacén de claves para Azure Key Vault. | AZURE_KEY_VAULT         | no                 |
+| **SQLServerColumnEncryptionCertificateStoreProvider** | Un proveedor para el Almacén de certificados de Windows.      | MSSQL_CERTIFICATE_STORE | Sí                |
+| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Un proveedor del almacén de claves de Java                   | MSSQL_JAVA_KEYSTORE     | Sí                |
 
-Para los proveedores de almacén de claves registrado previamente, no es necesario realizar ningún cambio de código de aplicación para usar estos proveedores pero tenga en cuenta los siguientes elementos:
+No necesita realizar ningún cambio de código en la aplicación para usar estos proveedores pero tenga en cuenta lo siguiente:
 
 - Usted (o su DBA) necesita asegurarse de que el nombre de proveedor, configurado en los metadatos de clave maestra de columna, sea correcto y que la ruta de acceso de la clave maestra de columna cumpla con un formato de ruta de acceso de la clave que sea válido para un proveedor determinado. Se recomienda que configure las claves mediante herramientas como SQL Server Management Studio, que genera automáticamente las rutas de acceso a la clave y los nombres de proveedor válidos al emitir la instrucción CREATE COLUMN MASTER KEY (Transact-SQL).
 - Asegúrese de que la aplicación puede tener acceso a la clave del almacén de claves. Esta tarea puede suponer conceder a la aplicación el acceso a la clave o al almacén de claves, dependiendo de este, o bien realizar cualquier otro paso de configuración específico del almacén de claves. Por ejemplo, para usar el SQLServerColumnEncryptionJavaKeyStoreProvider, deberá proporcionar la ubicación y la contraseña del almacén de claves en las propiedades de conexión. 
@@ -108,7 +108,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >
 > Para obtener un ejemplo de cómo incluir estas dependencias en un proyecto de Maven, consulte [descargar ADAL4J y AKV dependencias con Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
-### <a name="using-windows-certificate-store-provider"></a>Mediante el proveedor de Windows Certificate Store
+### <a name="using-windows-certificate-store-provider"></a>Un proveedor para el Almacén de certificados de Windows.
 SQLServerColumnEncryptionCertificateStoreProvider, que se puede utilizar para almacenar claves maestras de columna en el almacén de certificados de Windows. Utilice el Asistente para Always Encrypted SQL Server Management Studio (SSMS) u otras herramientas compatibles para crear definiciones de clave de la clave maestra de columna y el cifrado de columna en la base de datos. Puede utilizarse el mismo Asistente para generar un certificado autofirmado en el Store del certificado de Windows que puede usarse como una clave maestra de columna para los datos siempre cifrados. Para obtener más información sobre la clave maestra de columna y la sintaxis de T-SQL de claves de columna cifrado, consulte [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) y [CREATE COLUMN ENCRPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) respectivamente.
 
 El nombre de la SQLServerColumnEncryptionCertificateStoreProvider es MSSQL_CERTIFICATE_STORE y puede ser consultado por la API getName() del objeto de proveedor. Se registra automáticamente el controlador y se puede usar perfectamente sin realizar ningún cambio de la aplicación.
@@ -135,8 +135,8 @@ WITH VALUES
 > [!IMPORTANT]
 > Mientras que los otros proveedores de almacén de claves en este artículo están disponibles en todas las plataformas compatibles con el controlador, la implementación de SQLServerColumnEncryptionCertificateStoreProvider del controlador JDBC está disponible en sólo para sistemas operativos Windows. Tiene una dependencia en sqljdbc_auth.dll que está disponible en el paquete de controladores. Para usar este proveedor, copie el archivo sqljdbc_auth.dll en un directorio de la ruta del sistema de Windows en que esté instalado el controlador JDBC. Alternativamente, puede especificar la propiedad del sistema java.libary.path para especificar el directorio de sqljdbc_auth.dll. Si está ejecutando una máquina virtual Java de (JVM, Java Virtual Machine) 32 bits, utilice el archivo sqljdbc_auth.dll en la carpeta x86, aun cuando la versión del sistema operativo sea la x64. Si está ejecutando una JVM de 64 bits en un procesador x64, utilice el archivo sqljdbc_auth.dll de la carpeta x64. Por ejemplo, si está usando JVM de 32 bits y el controlador JDBC está instalado en el directorio predeterminado, puede especificar la ubicación de la DLL con el siguiente argumento de máquina virtual (VM) si la aplicación de Java se ha iniciado: `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
-### <a name="using-java-key-store-provider"></a>Mediante el proveedor de Java Key Store
-El controlador JDBC incluye una clave integrada para la implementación del proveedor del almacén de claves para el almacén de claves de Java. Si el **keyStoreAuthentication** propiedad cadena de conexión está presente en la cadena de conexión y se establece en "JavaKeyStorePassword", el controlador crea y registra el proveedor de Java Key Store automáticamente. El nombre del proveedor de Java Key Store es MSSQL_JAVA_KEYSTORE. Este nombre también se puede consultar mediante la API SQLServerColumnEncryptionJavaKeyStoreProvider.getName(). 
+### <a name="using-java-key-store-provider"></a>Seleccionar el proveedor del almacén de claves
+El controlador JDBC incluye una clave integrada para la implementación del proveedor del almacén de claves para el almacén de claves de Java. Si el **keyStoreAuthentication** propiedad cadena de conexión está presente en la cadena de conexión y se establece en "JavaKeyStorePassword", el controlador crea y registra el proveedor de Java Key Store automáticamente. El nombre del proveedor del almacén de claves de JVM es MSSQL_JVM_KEYSTORE. Este nombre también se puede consultar mediante la API SQLServerColumnEncryptionJavaKeyStoreProvider.getName(). 
 
 Hay tres propiedades de cadena de conexión que permiten que una aplicación cliente especificar las credenciales que el controlador necesita para autenticarse en el Store de la clave de Java. El controlador inicializa el proveedor según los valores de estas tres propiedades en la cadena de conexión.
 
@@ -152,11 +152,11 @@ Este es un ejemplo de proporcionar estas credenciales en la cadena de conexión:
 String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path_to_the_keystore_file>;keyStoreSecret=<keystore_key_password>";
 ```
 
-También puede obtener o establecer estas opciones mediante el objeto SQLServerDataSource. Para obtener más información, consulte [siempre cifrados referencia de la API para el controlador JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).
+También puede obtener o establecer estas opciones mediante el objeto SQLServerDataSource. Vea [Always Encrypted referencia de API para el controlador JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)
 
 El controlador JDBC crea automáticamente el SQLServerColumnEncryptionJavaKeyStoreProvider cuando estas credenciales están presentes en las propiedades de conexión.
 
-### <a name="creating-a-column-master-key-for-the-java-key-store"></a>Crear una clave maestra de columna para el Store de la clave de Java
+### <a name="creating-a-column-master-key-for-the-java-key-store"></a>Crear una clave maestra de columna (CMK) para el almacén de claves de JVM
 El SQLServerColumnEncryptionJavaKeyStoreProvider puede utilizarse con tipos de almacén de claves JKS o PKCS12. Para crear o importar una clave que se usará con este proveedor utiliza Java [keytool](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html) utilidad. La clave debe tener la misma contraseña que el almacén de claves. Este es un ejemplo de cómo crear una clave pública y su clave privada asociada con la utilidad keytool:
 
 ```
@@ -200,9 +200,9 @@ WITH
 ```
 
 > [!NOTE]
-> La administración de SQL Server integrada la funcionalidad de Studio no puede crear las definiciones de la clave maestra de columna para el Store de la clave de Java. Comandos de T-SQL se deben utilizar mediante programación.
+> La funcionalidad integrada de SQL Server Management Studio crea definiciones de CMK solo para el almacén de certificados de Windows. Comandos de T-SQL se deben utilizar mediante programación.
 
-### <a name="creating-a-column-encryption-key-for-the-java-key-store"></a>Crear una clave de cifrado de columna para el Store de la clave de Java
+### <a name="creating-a-column-encryption-key-for-the-java-key-store"></a>Crear una clave de cifrado de columna (CEK) para el almacén de claves de JVM
 SQL Server Management Studio o cualquier otra herramienta no se puede usar para crear la columna de claves de cifrado mediante claves maestras de columna en el Store de la clave de Java. La aplicación cliente debe crear la clave de cifrado de columna mediante programación con la clase SQLServerColumnEncryptionJavaKeyStoreProvider. Para obtener más información, consulte [mediante proveedores de almacén de claves maestras de columna para el aprovisionamiento de claves mediante programación](#using-column-master-key-store-providers-for-programmatic-key-provisioning).
 
 ### <a name="implementing-a-custom-column-master-key-store-provider"></a>Implementar un proveedor personalizado de almacén de claves maestras de columna
@@ -246,7 +246,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 ## <a name="using-column-master-key-store-providers-for-programmatic-key-provisioning"></a>Usar proveedores de almacén de claves maestras de columna para el aprovisionamiento de claves mediante programación
 Al tener acceso a las columnas cifradas, Microsoft JDBC Driver for SQL Server busca y llama de manera transparente al proveedor de almacenamiento de claves maestras de columna adecuado para descifrar las claves de cifrado de columnas. Normalmente, el código de aplicación normal no llama directamente a los proveedores de almacenamiento de claves maestras de columna. Sin embargo, puede crear una instancia y llamar a un proveedor mediante programación para aprovisionar y administrar claves de Always Encrypted. Este paso puede realizarse para generar una clave de cifrado de columna cifrada y descifrar una clave de cifrado de columna como parte rotación de claves maestras de columna, por ejemplo. Para obtener más información, vea [Overview of Key Management for Always Encrypted (Información general de administración de claves de Always Encrypted)](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
 
-Si usa un proveedor de claves personalizado, puede que sea necesario implementar sus propias herramientas de administración de claves. Al usar claves almacenadas en Windows Certificate Store o en Azure Key Vault, puede usar herramientas existentes, como SQL Server Management Studio o PowerShell, administrar y aprovisionar claves. Al usar claves almacenadas en el Store de la clave de Java, debe aprovisionar claves mediante programación. El ejemplo siguiente se muestra cómo utilizar la clase SQLServerColumnEncryptionJavaKeyStoreProvider para cifrar la clave con una clave almacenada en el Store de la clave de Java.
+Si usa un proveedor de claves personalizado, puede que sea necesario implementar sus propias herramientas de administración de claves. Al usar claves almacenadas en los almacenes de claves, para las que existen los proveedores integrados, o en el Almacén de claves de Azure, puede usar herramientas existentes como SQL Server Management Studio o PowerShell para administrar y aprovisionar claves. Al usar claves almacenadas en el Store de la clave de Java, debe aprovisionar claves mediante programación. El ejemplo siguiente se muestra cómo utilizar la clase SQLServerColumnEncryptionJavaKeyStoreProvider para cifrar la clave con una clave almacenada en el Store de la clave de Java.
 
 ```java
 import java.sql.Connection;
@@ -343,7 +343,7 @@ public class AlwaysEncrypted {
 ## <a name="enabling-always-encrypted-for-application-queries"></a>Habilitar Always Encrypted para consultas de la aplicación
 Establecer el valor de la palabra clave de cadena de conexión **columnEncryptionSetting** en **Enabled** es la manera más sencilla de habilitar el cifrado de parámetros y el descifrado de los resultados de la consulta que tienen como destino las columnas cifradas.
 
-La siguiente cadena de conexión es un ejemplo de cómo habilitar Always Encrypted en el controlador JDBC:
+A continuación se muestra un ejemplo de una cadena de conexión que habilita Always Encrypted:
 
 ```java
 String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<password>;databaseName=<database>;columnEncryptionSetting=Enabled;";
@@ -363,20 +363,20 @@ ds.setColumnEncryptionSetting("Enabled");
 SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 ```
 
-Always Encrypted también puede habilitarse para las consultas individuales. Para obtener más información, consulte [controlar el impacto de rendimiento de Always Encrypted](#controlling-the-performance-impact-of-always-encrypted). Habilitar Always Encrypted no es suficiente para que el cifrado o el descifrado se realicen correctamente. También necesita asegurarse de que:
+Always Encrypted también puede habilitarse para las consultas individuales. Para obtener más información, vea [Controlar el impacto en el rendimiento de Always Encrypted](#controlling-the-performance-impact-of-always-encrypted). Habilitar Always Encrypted no es suficiente para que el cifrado o el descifrado se realicen correctamente. También necesita asegurarse de que:
 - La aplicación tiene los permisos de base de datos *VIEW ANY COLUMN MASTER KEY DEFINITION* y *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* , que se requieren para tener acceso a los metadatos sobre las claves Always Encrypted de la base de datos. Para obtener más información, vea [Permisos en Always Encrypted (motor de base de datos)](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions).
 - La aplicación puede tener acceso a la clave maestra de columna que protege las claves de cifrado de columnas, las cuales cifran las columnas de bases de datos consultadas. Para usar el proveedor de Java Key Store, deberá proporcionar credenciales adicionales en la cadena de conexión. Para obtener más información, consulte [proveedor Using Java Key Store](#using-java-key-store-provider).
 
 ### <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Configurar el modo en que los valores java.sql.Time se envían al servidor
-El **sendTimeAsDatetime** propiedad de conexión se usa para configurar cómo el valor java.sql.Time se envía al servidor. Cuando se establece en false, el valor de hora se envía como un tipo en tiempo de SQL Server. Cuando se establece en true, el valor se envía como un tipo de fecha y hora de tiempo. Si se cifra una columna de hora, el **sendTimeAsDatetime** propiedad debe ser false, como las columnas cifradas no son compatibles con la conversión de tiempo a la fecha y hora. También tenga en cuenta que esta propiedad es true de forma predeterminada, por lo que cuando se usan columnas de tiempo cifrada tendrá para establecerla en false. En caso contrario, el controlador producirá una excepción. A partir de la versión 6.0 del controlador, la clase SQLServerConnection tiene dos métodos para configurar el valor de esta propiedad mediante programación:
+Puede configurar la forma de enviar el valor java.sql.Time al servidor usando la propiedad de conexión **sendTimeAsDatetime**. Cuando se establece en false, el valor de hora se envía como un tipo en tiempo de SQL Server. Cuando se establece en true, el valor se envía como un tipo de fecha y hora de tiempo. Si se cifra una columna de hora, el **sendTimeAsDatetime** propiedad debe ser false, como las columnas cifradas no son compatibles con la conversión de tiempo a la fecha y hora. También tenga en cuenta que esta propiedad es true de forma predeterminada, por lo que cuando se usan columnas de tiempo cifrada tendrá para establecerla en false. En caso contrario, el controlador producirá una excepción. A partir de la versión 6.0 del controlador, la clase SQLServerConnection tiene dos métodos para configurar el valor de esta propiedad mediante programación:
  
-* setSendTimeAsDatetime void público (sendTimeAsDateTimeValue booleano)
+* public void setSendTimeAsDatetime(boolean)
 * public boolean getSendTimeAsDatetime()
 
 Para obtener más información sobre esta propiedad, vea [java.sql.Time cómo configurar los valores se envían al servidor](configuring-how-java-sql-time-values-are-sent-to-the-server.md).
 
-### <a name="configuring-how-string-values-are-sent-to-the-server"></a>Configurar cómo se envían los valores de cadena al servidor
-El **sendStringParametersAsUnicode** propiedad de conexión se usa para configurar cómo se envían los valores de cadena a SQL Server. Si se establece en true, se envían parámetros String al servidor en formato Unicode. Si se establece en false, parámetros de cadena se envía en formato que no son Unicode, como MBCS, Unicode o ASCII. El valor predeterminado de esta propiedad es true. Cuando Always Encrypted está habilitado y se cifra una columna char/varchar/varchar(max), el valor de **sendStringParametersAsUnicode** debe establecerse en false. Si esta propiedad se establece en true, el controlador producirá una excepción al descifrar los datos de una columna cifrada char/varchar/varchar(max) que tiene caracteres Unicode. Para obtener más información sobre esta propiedad, vea [estableciendo las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).
+### <a name="configuring-how-string-values-are-sent-to-the-server"></a>Configurar el modo en que los valores java.sql.Time se envían al servidor
+El **sendStringParametersAsUnicode** propiedad de conexión se usa para configurar cómo se envían los valores de cadena a SQL Server. Si se establece en true, se envían parámetros String al servidor en formato Unicode. Si la propiedad  se establece en “false", se envían parámetros String al servidor en formato que no es Unicode, como ASCII/MBCS. El valor predeterminado de esta propiedad es true. Cuando Always Encrypted está habilitado y se cifra una columna char/varchar/varchar(max), el valor de **sendStringParametersAsUnicode** debe establecerse en false. Si esta propiedad se establece en true, el controlador producirá una excepción al descifrar los datos de una columna cifrada char/varchar/varchar(max) que tiene caracteres Unicode. Para obtener más información, vea [Establecer las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).
   
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Recuperar y modificar los datos de las columnas cifradas
 Una vez que habilite Always Encrypted para consultas de la aplicación, puede usar las API estándar de JDBC para recuperar o modificar datos en columnas de la base de datos cifrada. Si la aplicación tiene los permisos de base de datos necesarios y puede tener acceso a la clave maestra de columna, el controlador cifrará los parámetros de consulta que como destino las columnas cifradas y descifrar los datos que se recuperan de las columnas cifradas.
@@ -385,12 +385,13 @@ Si Always Encrypted no está habilitado, se producirá un error en las consultas
 
 En la tabla siguiente se resume el comportamiento de las consultas, dependiendo de si Always Encrypted está habilitado o no:
 
-|Característica de las consultas | Always Encrypted está habilitado y la aplicación puede tener acceso a las claves y a los metadatos de clave|Always Encrypted está habilitado y la aplicación no puede tener acceso a las claves ni a los metadatos de clave | Always Encrypted está deshabilitado|
-|:---|:---|:---|:---|
-| Consultas con parámetros que tienen como destino las columnas cifradas. | Los valores de parámetro se cifran de manera transparente. | Error | Error|
-| Consultas que recuperan datos de las columnas cifradas, sin parámetros que tengan como destino las columnas cifradas.| Los resultados de las columnas cifradas se descifran de manera transparente. La aplicación recibe valores de texto sin formato de los tipos de datos JDBC que corresponden a los tipos de SQL Server configurados para las columnas cifradas. | Error | Los resultados de las columnas cifradas no se descifran. La aplicación recibe valores cifrados como matrices de bytes (byte[]).
+| Característica de las consultas                                                                           | Always Encrypted está habilitado y la aplicación puede tener acceso a las claves y a los metadatos de clave                                                                                                                        | Always Encrypted está habilitado y la aplicación no puede tener acceso a las claves ni a los metadatos de clave | Always Encrypted está deshabilitado                                                                                        |
+| :--------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------ |
+| Consultas con parámetros que tienen como destino las columnas cifradas.                                           | Los valores de parámetro se cifran de manera transparente.                                                                                                                                                           | Error                                                                             | Error                                                                                                               |
+| Consultas que recuperan datos de las columnas cifradas, sin parámetros que tengan como destino las columnas cifradas. | Los resultados de las columnas cifradas se descifran de manera transparente. La aplicación recibe valores de texto sin formato de los tipos de datos JDBC que corresponden a los tipos de SQL Server configurados para las columnas cifradas. | Error                                                                             | Los resultados de las columnas cifradas no se descifran. La aplicación recibe valores cifrados como matrices de bytes (byte[]). |
 
-### <a name="inserting-and-retrieving-encrypted-data-examples"></a>Insertar y recuperar datos cifrados ejemplos 
+### <a name="inserting-and-retrieving-encrypted-data-examples"></a>Ejemplo de la recuperación de los datos cifrados
+
 En el siguiente ejemplo se ilustra la recuperación y la modificación de datos en las columnas cifradas. Los ejemplos supone la tabla de destino con el siguiente esquema y las columnas SSN y BirthDate cifradas. Si ha configurado una clave maestra de columna denominado "MyCMK" y una clave de cifrado de columna denominan "MyCEK" (como se describe en las secciones anteriores de los proveedores de almacén de claves), puede crear la tabla mediante este script:
 
 ```sql
@@ -436,12 +437,14 @@ Si usa un proveedor de almacén de claves de Java Key Store:
 ```
 
 ### <a name="inserting-data-example"></a>Ejemplo de inserción de datos
+
 En este ejemplo se inserta una fila en la tabla Patients. Tenga en cuenta los siguientes aspectos:
-- No existe nada específico al cifrado en el código de ejemplo. Microsoft JDBC Driver para SQL Server detecta automáticamente y cifra los parámetros que tienen como destino las columnas cifradas. Este comportamiento hace que el cifrado se realice de manera transparente en la aplicación.
-- Los valores insertados en las columnas de base de datos, incluidas las columnas cifradas, se pasan como parámetros mediante SQLServerPreparedStatement. Aunque el uso de parámetros es opcional al enviar valores a las columnas no cifradas (aunque es altamente recomendable porque ayuda a evitar la inyección de código SQL), es necesario para los valores que tienen como destino las columnas cifradas. Si los valores insertados en las columnas cifradas se pasan como literales incrustados en la instrucción de consulta, la consulta produciría un error porque el controlador no sería capaz de determinar los valores de las columnas cifradas de destino y, no cifra los valores. Como resultado, el servidor los rechazará considerándolos incompatibles con las columnas cifradas.
+
+- No existe nada específico al cifrado en el código de ejemplo. El proveedor de datos .NET Framework para SQL Server detecta y cifra automáticamente los parámetros paramSSN y paramBirthdate que tienen como destino las columnas cifradas. Este comportamiento hace que el cifrado se realice de manera transparente en la aplicación.
+- Los valores que se insertan en las columnas de bases de datos, incluidas las columnas cifradas, se pasan como parámetros enlazados. Aunque el uso de parámetros es opcional al enviar valores a las columnas no cifradas (aunque es altamente recomendable porque ayuda a evitar la inyección de código SQL), es necesario para los valores que tienen como destino las columnas cifradas. Si los valores que se han insertado en las columnas SSN o BirthDate se pasan como literales incrustados en la instrucción de consulta, la consulta producirá un error porque el proveedor de datos .NET Framework para SQL Server no podrá determinar los valores de las columnas cifradas de destino, por lo que no los cifrará. Como resultado, el servidor los rechazará considerándolos incompatibles con las columnas cifradas.
 - Todos los valores impresos por el programa estarán en texto sin formato, ya que Microsoft JDBC Driver for SQL Server descifrará los datos que se han recuperado de las columnas cifradas.
-- Si va a realizar una búsqueda con una cláusula WHERE, el valor usado en la cláusula WHERE debe pasarse como un parámetro para que el controlador puede cifrarlo de manera transparente antes de enviarlo a la base de datos. En el ejemplo siguiente, el SSN se pasa como un parámetro, pero el apellido se pasa como un literal como LastName no está cifrado.
-- El método de establecedor usado para el parámetro tiene como destino la columna SSN es setString(), que se asigna a char o varchar de tipo de datos de SQL Server. Si el método establecedor que se ha usado para este parámetro es setNString(), que se asigna a nchar o nvarchar, la consulta producirá un error, ya que Always Encrypted no admite conversiones de valores cifrados de nchar o nvarchar a valores cifrados char o varchar.
+- El valor que se ha usado en la cláusula WHERE para filtrar por la columna SSN necesita pasarse como un parámetro, de forma que Microsoft JDBC Driver for SQL Server pueda cifrarlo de manera transparente antes de enviarlo a la base de datos. En el ejemplo siguiente, el SSN se pasa como un parámetro, pero el apellido se pasa como un literal como LastName no está cifrado.
+- El tipo de datos del parámetro que tiene como destino la columna SSN se establece como una cadena ANSI (no Unicode), que se asigna al tipo de datos char o varchar de SQL Server. Si el método establecedor que se ha usado para este parámetro es setNString(), que se asigna a nchar o nvarchar, la consulta producirá un error, ya que Always Encrypted no admite conversiones de valores cifrados de nchar o nvarchar a valores cifrados char o varchar.
 
 ```java
 // <Insert keystore-specific code here>
@@ -461,7 +464,9 @@ catch (SQLException e) {
 ```
 
 ### <a name="retrieving-plaintext-data-example"></a>Ejemplo de la recuperación de datos de texto sin formato
+
 En el siguiente ejemplo se muestra el filtrado de datos en función de valores cifrados, así como la recuperación de datos de texto sin formato de las columnas cifradas. Tenga en cuenta los siguientes aspectos:
+
 - El valor que se ha usado en la cláusula WHERE para filtrar por la columna SSN necesita pasarse como un parámetro, de forma que Microsoft JDBC Driver for SQL Server pueda cifrarlo de manera transparente antes de enviarlo a la base de datos.
 - Todos los valores impresos por el programa estarán en texto sin formato, ya que Microsoft JDBC Driver for SQL Server descifrará los datos que se han recuperado de las columnas SSN y BirthDate de manera transparente.
 
@@ -485,11 +490,13 @@ catch (SQLException e) {
     e.printStackTrace();
 }
 ```
-  
+
 ### <a name="retrieving-encrypted-data-example"></a>Ejemplo de la recuperación de los datos cifrados
+
 Si Always Encrypted no está habilitado, una consulta todavía puede recuperar datos de las columnas cifradas, siempre y cuando la consulta no tenga parámetros que tengan como destino las columnas cifradas.
 
 En el siguiente ejemplo se ilustra la recuperación de datos binarios cifrados de las columnas cifradas. Tenga en cuenta los siguientes aspectos:
+
 - Como Always Encrypted no está habilitado en la cadena de conexión, la consulta devolverá valores cifrados de SSN y BirthDate como matrices de bytes (el programa convierte los valores en cadenas).
 - Una consulta que recupera datos de columnas cifradas con Always Encrypted deshabilitado puede tener parámetros, siempre y cuando ninguno de ellos tenga como destino una columna cifrada. La siguiente consulta filtra por LastName, que no está cifrado en la base de datos. Si la consulta ha filtrado por SSN o BirthDate, esta producirá un error.
 
@@ -512,21 +519,26 @@ catch (SQLException e) {
 ```
 
 ### <a name="avoiding-common-problems-when-querying-encrypted-columns"></a>Evitar problemas comunes al consultar columnas cifradas
+
 En esta sección se describen las categorías comunes de errores al consultar columnas cifradas de aplicaciones Java y algunas instrucciones sobre cómo evitarlos.
 
 ### <a name="unsupported-data-type-conversion-errors"></a>Errores de conversión de tipos de datos no compatibles
+
 Always Encrypted admite algunas conversiones para los tipos de datos cifrados. Vea [Always Encrypted (motor de base de datos)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) para obtener una lista detallada de las conversiones de tipos compatibles. Esto es lo que puede hacer para evitar los errores de conversión de tipos de datos. Asegúrese de lo siguiente:
 
-- Utilice los métodos establecedor adecuado al pasar valores de parámetros que tienen como destino las columnas cifradas. Asegúrese de que el tipo de datos de SQL Server del parámetro es exactamente el mismo que el tipo de la columna de destino o se admite una conversión del tipo de datos de SQL Server del parámetro al tipo de destino de la columna. Métodos de API se agregaron a las clases SQLServerResultSet, SQLServerPreparedStatement y SQLServerCallableStatement para pasar parámetros que corresponden a tipos específicos de datos de SQL Server. Por ejemplo, si no se cifra una columna puede usar el método setTimestamp() para pasar un parámetro a un datetime2 o a una columna de fecha y hora. Pero cuando se cifra una columna tendrá que usar el método exacto que representa el tipo de la columna en la base de datos. Por ejemplo, utilice setTimestamp() para pasar valores a una columna cifrada datetime2 y use setDateTime() para pasar valores a una columna de cifrados de datetime. Consulte [siempre cifrados referencia de la API para el controlador JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) para obtener una lista completa de las nuevas API.
+- Utilice los métodos establecedor adecuado al pasar valores de parámetros que tienen como destino las columnas cifradas. Establezca los tipos de parámetros que tienen como destino las columnas cifradas, de forma que el tipo de datos de SQL Server del parámetro sea exactamente el mismo que el tipo de la columna de destino o una conversión compatible del tipo de datos de SQL Server del parámetro al tipo de destino de la columna. Métodos de API se agregaron a las clases SQLServerResultSet, SQLServerPreparedStatement y SQLServerCallableStatement para pasar parámetros que corresponden a tipos específicos de datos de SQL Server. Por ejemplo, si no se cifra una columna puede usar el método setTimestamp() para pasar un parámetro a un datetime2 o a una columna de fecha y hora. Pero cuando se cifra una columna tendrá que usar el método exacto que representa el tipo de la columna en la base de datos. Por ejemplo, utilice setTimestamp() para pasar valores a una columna cifrada datetime2 y use setDateTime() para pasar valores a una columna de cifrados de datetime. Vea [Always Encrypted referencia de API para el controlador JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)
 - la precisión y la escala de los parámetros que tienen como destino columnas de los tipos de datos numéricos y decimales de SQL Server debe ser la misma que la precisión y la escala configurada para la columna de destino. Métodos de API se agregaron a las clases SQLServerResultSet, SQLServerPreparedStatement y SQLServerCallableStatement para aceptar la precisión y escala junto con los valores de datos para los parámetros y columnas que representan los tipos de datos decimal y numeric. Consulte [siempre cifrados referencia de la API para el controlador JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) para obtener una lista completa de las API nuevas o sobrecargado.  
-- la precisión o escala de fracciones de segundo de los parámetros que tienen como destino columnas de datetime2, datetimeoffset o tipos de datos de SQL Server de hora no es mayor que la precisión o escala de fracciones de segundo para la columna de destino en las consultas que modifican los valores de la columna de destino . Métodos de API se agregaron a las clases SQLServerResultSet, SQLServerPreparedStatement y SQLServerCallableStatement para aceptar la precisión o escala de fracciones de segundo, junto con los valores de datos de parámetros que representan estos tipos de datos. Para obtener una lista completa de las API nuevas o sobrecargado, consulte [siempre cifrados referencia de la API para el controlador JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).   
+- la precisión de los parámetros que tienen como destino las columnas de tipos de datos datetime2, datetimeoffset o time de SQL Server no debe ser superior a la precisión de la columna de destino, en las consultas que modifiquen valores de la columna de destino. Métodos de API se agregaron a las clases SQLServerResultSet, SQLServerPreparedStatement y SQLServerCallableStatement para aceptar la precisión o escala de fracciones de segundo, junto con los valores de datos de parámetros que representan estos tipos de datos. Para obtener una lista completa de las API nuevas o sobrecargado, consulte [siempre cifrados referencia de la API para el controlador JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).
 
 ### <a name="errors-due-to-incorrect-connection-properties"></a>Errores debidos a las propiedades de conexión incorrecto
-En esta sección se describe cómo configurar opciones de conexión correctamente para usar datos Always Encrypted. Dado que los tipos de cifrado de datos admiten conversiones limitadas, el **sendTimeAsDatetime** y **sendStringParametersAsUnicode** configuración de conexión necesita la configuración correcta al usar las columnas cifradas. Asegúrese de lo siguiente: 
-- [sendTimeAsDatetime](setting-the-connection-properties.md) configuración de conexión se establece en false al insertar datos en columnas de tiempo de cifrado. Para obtener más información, consulte [configurar cómo los valores java.sql.Time se envían al servidor](configuring-how-java-sql-time-values-are-sent-to-the-server.md).
+
+En esta sección se describe cómo configurar opciones de conexión correctamente para usar datos Always Encrypted. Dado que los tipos de cifrado de datos admiten conversiones limitadas, el **sendTimeAsDatetime** y **sendStringParametersAsUnicode** configuración de conexión necesita la configuración correcta al usar las columnas cifradas. Asegúrese de lo siguiente:
+
+- [sendTimeAsDatetime](setting-the-connection-properties.md) configuración de conexión se establece en false al insertar datos en columnas de tiempo de cifrado. Para obtener más información, vea [Configurar el modo en que los valores java.sql.Time se envían al servidor](configuring-how-java-sql-time-values-are-sent-to-the-server.md).
 - [sendStringParametersAsUnicode](setting-the-connection-properties.md) configuración de conexión se establece en true (o se deja como el valor predeterminado) al insertar datos en cifrado char/varchar/varchar(max) columnas.
 
 ### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>Errores debidos a pasar texto sin formato en lugar de valores cifrados
+
 Cualquier valor que tenga como destino una columna cifrada necesita cifrarse dentro de la aplicación. Un intento para insertar, modificar o filtrar mediante un valor de texto sin formato en una columna cifrada producirá un error similar a este:
 
 ```java
@@ -534,44 +546,54 @@ com.microsoft.sqlserver.jdbc.SQLServerException: Operand type clash: varchar is 
 ```
 
 Para evitar dichos errores, asegúrese de que:
+
 - Always Encrypted esté habilitado para las consultas de la aplicación que tengan como destino las columnas cifradas (para la cadena de conexión o para una consulta específica).
-- Utilice las instrucciones preparadas y parámetros para enviar datos como destino las columnas cifran. En el ejemplo siguiente se muestra una consulta que filtra de manera incorrecta mediante un literal o constante en una columna cifrada (SSN), en lugar de pasar el literal dentro de un parámetro. Se producirá un error en esta consulta:
+- Usa un parámetro de enlace para enviar datos que tengan como destino las columnas cifradas. En el ejemplo siguiente se muestra una consulta que filtra de manera incorrecta mediante un literal o constante en una columna cifrada (SSN), en lugar de pasar el literal dentro de un parámetro. Se producirá un error en esta consulta:
 
 ```java
 ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM Customers WHERE SSN='795-73-9838'");
 ```
 
 ## <a name="force-encryption-on-input-parameters"></a>Forzar el cifrado en los parámetros de entrada
+
 La característica de Forzar cifrado aplica el cifrado de un parámetro al usar Always Encrypted. Si se usa Forzar cifrado y SQL Server indica al controlador que no hace falta cifrar el parámetro, la consulta que utilice este último generará un error. Esta propiedad confiere una protección adicional frente a ataques contra la seguridad que utilice un servidor SQL Server comprometido que proporcione metadatos de cifrado incorrectos al cliente, lo cual podría provocar la divulgación de datos. Los métodos set * en la actualización y las clases SQLServerPreparedStatement y SQLServerCallableStatement\* se sobrecargan los métodos de la clase SQLServerResultSet para que acepte un argumento booleano para especificar la configuración de cifrado de forzar. Si el valor de este argumento es false, el controlador no forzar el cifrado en los parámetros. Si fuerza el cifrado se establece en true, la consulta parámetro sólo se envía si la columna de destino está cifrada y Always Encrypted está habilitado en la conexión o en la instrucción. Uso de esta propiedad proporciona una capa adicional de seguridad, lo que garantiza que el controlador no erróneamente enviar datos a SQL Server como texto sin formato cuando se espera que se cifren.
 
 Para obtener más información sobre los métodos SQLServerPreparedStatement y SQLServerCallableStatement que están sobrecargados con la configuración de cifrado de fuerza, consulte [siempre cifrados referencia de la API para el controlador JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)  
 
 ## <a name="controlling-the-performance-impact-of-always-encrypted"></a>Controlar el impacto en el rendimiento de Always Encrypted
+
 Como Always Encrypted es una tecnología de cifrado del lado cliente, la mayoría de las sobrecargas de rendimiento se observan en el lado cliente y no en la base de datos. Además del costo de las operaciones de cifrado y descifrado, los demás orígenes de las sobrecargas de rendimiento en el lado cliente son:
+
 - Ciclos de ida y vuelta adicionales a la base de datos para recuperar metadatos para los parámetros de consulta.
 - Llamadas a un almacén de claves maestras de columna para tener acceso a una clave maestra de columna.
 
 En esta sección se describen las optimizaciones integradas de rendimiento en Microsoft JDBC Driver for SQL Server y la forma en que puede controlar el impacto de los dos factores anteriores en el rendimiento.
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Controlar los ciclos de ida y vuelta para recuperar metadatos para los parámetros de consulta
+
 De forma predeterminada, si Always Encrypted está habilitado para una conexión, el controlador llamará a [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) para cada consulta con parámetros, al pasar la instrucción de consulta (sin ningún valor de parámetro) a SQL Server. [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) analiza la instrucción de consulta para averiguar si algún parámetro necesita cifrarse y, de ser así, devuelve la información relacionada con el cifrado que permitirá al controlador cifrar los valores de parámetro para cada uno de ellos. Este comportamiento garantiza un alto nivel de transparencia para la aplicación cliente. Siempre que la aplicación usa los parámetros para pasar los valores que tienen como destino las columnas cifradas en el controlador, la aplicación (y el desarrollador de aplicaciones) no necesitan saber qué consultas acceden a columnas cifradas.
 
 ### <a name="setting-always-encrypted-at-the-query-level"></a>Configurar Always Encrypted en el nivel de consulta
+
 Para controlar el impacto en el rendimiento a la hora de recuperar metadatos de cifrado para las consultas con parámetros, puede habilitar Always Encrypted para las consultas individuales en lugar de configurarlo para la conexión. De esta manera, puede estar seguro de que sys.sp_describe_parameter_encryption se invoca solo para las consultas que sabe que incluyen parámetros que tienen como destino las columnas cifradas. Pero tenga en cuenta que haciendo esto reduce la transparencia del cifrado: si cambia las propiedades de cifrado de las columnas de la base de datos, puede que necesite cambiar el código de la aplicación para alinearlo con los cambios de esquema.
 
 Para controlar el comportamiento de Always Encrypted de las consultas individuales, deberá configurar los objetos de la instrucción individual pasando una enumeración, SQLServerStatementColumnEncryptionSetting, que especifica cómo se envía y recibe al leer y escribir datos columnas cifradas para esa instrucción específica. A continuación se exponen unas directrices prácticas:
+
 - Si la mayoría de las consultas que una aplicación cliente envía a través de una conexión de base de datos acceden a columnas cifradas, use las instrucciones siguientes:
+
     - Establezca la palabra clave de la cadena de conexión **columnEncryptionSetting** en **Enabled**.
     - Establezca SQLServerStatementColumnEncryptionSetting.Disabled para consultas individuales que no tengan acceso a ninguna columna cifrada. Esta opción deshabilitará la llamada a sys.sp_describe_parameter_encryption así como un intento de descifrar cualquier valor del conjunto de resultados.
     - Establezca SQLServerStatementColumnEncryptionSetting.ResultSet para consultas individuales que no cuenten con ningún parámetro que requiera cifrado, pero que recuperen datos de columnas cifradas. Esta opción deshabilitará la llamada a sys.sp_describe_parameter_encryption y el cifrado de parámetros. La consulta podrá descifrar los resultados de las columnas de cifrado.
+
 - Si la mayoría de las consultas que una aplicación cliente envía a través de una conexión de base de datos no acceden a columnas cifradas, use las instrucciones siguientes:
+
     - Establezca la palabra clave de la cadena de conexión **columnEncryptionSetting** en **Disabled**.
     - Establezca SQLServerStatementColumnEncryptionSetting.Enabled para consultas individuales que no cuenten con ningún parámetro que se tenga que cifrar. Esta opción habilitará la llamada a sys.sp_describe_parameter_encryption así como el descifrado de cualquier resultado de la consulta que se recupere de las columnas cifradas.
     - Establezca SQLServerStatementColumnEncryptionSetting.ResultSet para consultas que no cuenten con ningún parámetro que requiera cifrado, pero que recuperen datos de columnas cifradas. Esta opción deshabilitará la llamada a sys.sp_describe_parameter_encryption y el cifrado de parámetros. La consulta podrá descifrar los resultados de las columnas de cifrado.
 
 La configuración de SQLServerStatementColumnEncryptionSetting no se puede usar para omitir el cifrado y obtener acceso a datos de texto simple. Para obtener más información sobre cómo configurar el cifrado de columna de una instrucción, vea [siempre cifrados referencia de la API para el controlador JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).  
 
-En el ejemplo siguiente, Always Encrypted está deshabilitado para la conexión de base de datos. La consulta que ejecuta la aplicación tiene un parámetro que tiene como destino la columna LastName que no está cifrada. La consulta recupera datos de las columnas SSN y BirthDate que están cifradas. En este caso, no es necesario llamar a sys.sp_describe_parameter_encryption para recuperar los metadatos de cifrado. Pero el descifrado de los resultados de la consulta necesita habilitarse, de forma que la aplicación pueda recibir valores de texto sin formato de las dos columnas cifradas. La configuración de SQLServerStatementColumnEncryptionSetting.ResultSet sirve para asegurarse de que.
+En el ejemplo siguiente, Always Encrypted está deshabilitado para la conexión de base de datos. La consulta que ejecuta la aplicación tiene un parámetro que tiene como destino la columna LastName que no está cifrada. La consulta recupera datos de las columnas SSN y BirthDate que están cifradas. En este caso, no es necesario llamar a sys.sp_describe_parameter_encryption para recuperar los metadatos de cifrado. Pero el descifrado de los resultados de la consulta necesita habilitarse, de forma que la aplicación pueda recibir valores de texto sin formato de las dos columnas cifradas. La configuración SqlCommandColumnEncryptionSetting.ResultSet se usa para garantizar esto.
 
 ```java
 // Assumes the same table definition as in Section "Retrieving and modifying data in encrypted columns"
@@ -603,6 +625,7 @@ catch (SQLException e) {
 ```
 
 ### <a name="column-encryption-key-caching"></a>Almacenamiento en memoria caché de claves de cifrado de columnas
+
 Para reducir el número de llamadas a un almacén de claves maestras de columna para descifrar las claves de cifrado de columnas, Microsoft JDBC Driver for SQL Server almacena en memoria caché las claves de cifrado de columnas de texto sin formato en la memoria. Después de recibir el valor cifrado de la clave de cifrado de columnas de los metadatos de la base de datos, el controlador primero intenta encontrar la clave de cifrado de columnas de texto sin formato, que corresponde al valor de clave cifrado. El controlador llama al almacén de claves que contiene la clave maestra de columna, solo si no puede encontrar el valor cifrado de la clave de cifrado de columnas en la memoria caché.
 
 Puede configurar un valor de período de vida de las entradas de clave de cifrado de columna en la memoria caché mediante la API, setColumnEncryptionKeyCacheTtl(), en la clase SQLServerConnection. El valor de período de vida predeterminado para las entradas de clave de cifrado de columna en la memoria caché es de dos horas. Para desactivar el almacenamiento en caché, utilice un valor de 0. Para establecer cualquier valor de período de vida, use la siguiente API:
@@ -619,15 +642,17 @@ SQLServerConnection.setColumnEncryptionKeyCacheTtl (10, TimeUnit.MINUTES)
 
 Se admiten solo días, horas, minutos o segundos como la unidad de tiempo.  
 
-## <a name="copying-encrypted-data-using-sqlserverbulkcopy"></a>Copiar datos cifrados con SQLServerBulkCopy
+## <a name="copying-encrypted-data-using-sqlserverbulkcopy"></a>Copiar datos cifrados con SqlBulkCopy
+
 Con SQLServerBulkCopy, puede copiar datos que ya están cifrados y almacenados en una tabla a otra, sin descifrarlos. Para realizar esto:
 
 - Asegúrese de que la configuración de cifrado de la tabla de destino es idéntica a la configuración de la tabla de origen. En particular, ambas tablas debe tener las mismas columnas cifradas y estas deben cifrarse mediante los mismos tipos de cifrado y las mismas claves de cifrado. Si alguna de las columnas de destino se cifra de una manera diferente a la de su columna de origen correspondiente, no podrá descifrar los datos de la tabla de destino después de la operación de copia. Los datos estarán dañados.
 - Configure ambas conexiones de base de datos, a la tabla de origen y a la tabla de destino, sin tener habilitado Always Encrypted.
-- Establezca la opción allowEncryptedValueModifications. Para obtener más información, consulte [utilizando copia masiva con el controlador JDBC](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md).
+- Establezca la opción AllowEncryptedValueModifications (vea SqlBulkCopyOptions). Para obtener más información, vea [Uso de Always Encrypted con JDBC Driver](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md).
 
 > [!NOTE]
 > Tenga cuidado al especificar AllowEncryptedValueModifications ya que esta opción puede provocar daños en la base de datos dado que Microsoft JDBC Driver for SQL Server no comprueba si los datos están realmente cifrados, o si se han cifrado correctamente mediante la misma clave, algoritmo y tipo de cifrado que la columna de destino.
 
 ## <a name="see-also"></a>Ver también
+
 [Always Encrypted (motor de base de datos)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

@@ -1,5 +1,5 @@
 ---
-title: Notas de la versión para el controlador JDBC | Microsoft Docs
+title: Notas de la versión para el controlador JDBC
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -14,12 +14,12 @@ caps.latest.revision: 206
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1870693ad4c12a6f04cd3b01380b77de728c245c
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
-ms.translationtype: HT
+ms.openlocfilehash: 10f14eedb1a74f74cb1ee055a247a96671224ce0
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454379"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662467"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Notas de la versión para el controlador JDBC
 
@@ -27,7 +27,7 @@ ms.locfileid: "39454379"
 
 ## <a name="updates-in-microsoft-jdbc-driver-70-for-sql-server"></a>Actualizaciones de Microsoft JDBC Driver 7.0 para SQL Server
 
-La 7.0 de Microsoft JDBC Driver para SQL Server es totalmente compatible con la especificación de API de JDBC 4.2. Los archivos JAR en el paquete 7.0 se denominan según la compatibilidad de la versión de Java. Por ejemplo, el archivo mssql-jdbc-7.0.0.jre8.jar desde el paquete 7.0 debe utilizarse con Java 8.
+La 7.0 de Microsoft JDBC Driver para SQL Server es totalmente compatible con la especificación de API de JDBC 4.2. Los archivos JAR en el paquete 7.0 se denominan según la compatibilidad de la versión de Java. Por ejemplo, el archivo mssql-jdbc-7.0.0.jre10.jar desde el paquete 7.0 debe utilizarse con Java 10.
 
 ### <a name="support-for-jdk-10"></a>Compatibilidad con JDK 10
 
@@ -35,7 +35,7 @@ Ahora es compatible con Java Development Kit (JDK) versión 10.0, además de JDK
 
 ### <a name="support-for-spatial-datatypes"></a>Compatibilidad con tipos de datos espaciales
 
-Ahora, la 7.0 de Microsoft JDBC Driver para SQL Server proporciona compatibilidad con tipos de datos de SQL Server espacial 'Geography' y 'Geometry'. Para obtener más información acerca de los tipos de datos espaciales API y cómo usarlas, vea [aquí](../../connect/jdbc/use-spatial-datatypes.md).
+Ahora, la 7.0 de Microsoft JDBC Driver para SQL Server proporciona compatibilidad con tipos de datos de SQL Server espacial 'Geography' y 'Geometry'. Para obtener información acerca de las propiedades de celda y su uso, vea [aquí](../../connect/jdbc/use-spatial-datatypes.md).
 
 ### <a name="implementation-for-jdbc-43-introduced-javasqlconnection-apis-beginrequest-and-endrequest"></a>Implementación de JDBC 4.3 y las API de java.sql.Connection beginRequest() y endRequest()
 
@@ -51,7 +51,7 @@ Para obtener más información sobre cómo usar esta característica con el cont
 
 La 7.0 de Microsoft JDBC Driver para SQL Server presenta una nueva propiedad de conexión, 'useBulkCopyForBatchInsert', que solo se admite para **Azure Data Warehouse**.
 
-Esta propiedad es **deshabilitado** forma predeterminada y puede habilitarse para aumentar el rendimiento de las aplicaciones de usuario al insertar grandes cantidades de datos en Azure Data Warehouse. Habilitación de esta propiedad cambia el comportamiento de las operaciones de inserción por lotes para cambiar a las operaciones de copia masiva con los datos de proporcionada por el usuario. Para obtener más información acerca de esta propiedad y sus limitaciones, consulte [aquí](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md).
+Esta propiedad es **deshabilitado** forma predeterminada y puede habilitarse para aumentar el rendimiento de las aplicaciones de usuario al insertar grandes cantidades de datos en Azure Data Warehouse. Habilitación de esta propiedad cambia el comportamiento de las operaciones de inserción por lotes para cambiar a las operaciones de copia masiva con los datos de proporcionada por el usuario. Para obtener más información acerca de esta propiedad y de las opciones disponibles, consulte [aquí](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md).
 
 ### <a name="added-new-connection-property-cancelquerytimeout"></a>Agrega la nueva propiedad de conexión: cancelQueryTimeout
 
@@ -59,7 +59,7 @@ Nueva propiedad de conexión, se presentan la 7.0 de Microsoft JDBC Driver para 
 
 ### <a name="added-azure-key-vault-provider-constructors"></a>Constructores de proveedor de almacén de claves de Azure se ha agregado
 
-La 7.0 de Microsoft JDBC Driver para SQL Server vuelve a presenta un constructor que se han quitado previamente, para `SQLServerColumnEncryptionAzureKeyVaultProvider`, mediante un método personalizado que se implementa a través de autenticación permitido `SQLServerKeyVaultAuthenticationCallback` para capturar un token de acceso.
+La 7.0 de Microsoft JDBC Driver para SQL Server vuelve a introducir un constructor que se han quitado previamente, para `SQLServerColumnEncryptionAzureKeyVaultProvider`, mediante un método personalizado que se implementa a través de autenticación permitido `SQLServerKeyVaultAuthenticationCallback` para capturar un token de acceso.
 
 Los nuevos constructores tienen el debajo de definición:
 
@@ -80,17 +80,17 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
 
 ### <a name="updated-adal4j-version-to-160"></a>Versión actualizada de ADAL4J a la versión 1.6.0
 
-La 7.0 de Microsoft JDBC Driver para SQL Server ha actualizado su dependencia de maven de azure-activedirectory-library-for-java (ADAL4J) a la versión 1.6.0. Para más información sobre las dependencias, consulte [aquí](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+La 7.0 de Microsoft JDBC Driver para SQL Server ha actualizado su dependencia de maven de azure-activedirectory-library-for-java (ADAL4J) a la versión 1.6.0. Para obtener más información sobre las dependencias, consulte [esta página](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ## <a name="updates-in-microsoft-jdbc-driver-64-for-sql-server"></a>Actualizaciones de Microsoft JDBC Driver 6.4 para SQL Server
 
-Microsoft JDBC Driver 6.4 para SQL Server es totalmente compatible con las especificaciones de JDBC 4.1 y 4.2. Los archivos JAR en el paquete de 6,4 denominación de compatibilidad de la versión de Java. Por ejemplo, el archivo mssql-jdbc-6.4.0.jre8.jar desde el paquete de 6,4 se recomienda para su uso con Java 8.
+Microsoft JDBC Driver 6.4 para SQL Server es totalmente compatible con las especificaciones de JDBC 4.1 y 4.2. Los archivos JAR en el paquete de 6,4 denominación de compatibilidad de la versión de Java. Por ejemplo, se debe usar el archivo mssql-jdbc-6.4.0.jre8.jar desde el paquete de 6,4 con Java 8.
 
 ### <a name="support-for-jdk-9"></a>Compatibilidad con JDK 9
 
 Compatibilidad con Java Development Kit (JDK) versión 9.0, además de con JDK 8.0 y 7.0.
 
-### <a name="jdbc-43-compliance"></a>Cumplimiento de JDBC 4.3
+### <a name="jdbc-43-compliance"></a>Cumplimiento
 
 Compatibilidad con la especificación Java Database Connectivity API 4.3, además de con 4.1 y 4.2. Los métodos de API de JDBC 4.3 se agregarán pero aún no implementados. Para detalles, vea [JDBC 4.3 Compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md) (Cumplimiento de JDBC 4.3 para el controlador JDBC).
 
@@ -104,9 +104,9 @@ Propiedad de conexión "fipsProvider" se quita de la lista de propiedades de con
 
 ### <a name="added-connection-properties-for-specifying-custom-trustmanager"></a>Propiedades de conexión se ha agregado para la especificación de TrustManager personalizado
 
-Controlador ahora admite la especificación de TrustManager personalizado con propiedades de conexión de "propiedades de conexión" y "trustManagerClass" se ha agregado. Esto permite la especificación dinámica de un conjunto de certificados que son de confianza en cada conexión sin modificar la configuración global para el entorno de JVM.
+- El controlador ahora admite la especificación de TrustManager personalizado con las propiedades de conexión "trustManagerClass" y Esto permite la especificación dinámica de un conjunto de certificados que son de confianza en cada conexión sin modificar la configuración global para el entorno de JVM.
 
-### <a name="added-support-for-datetimesmalldatetime-in-table-valued-parameters-tvp"></a>Se agregó compatibilidad para datetime/smallDatetime en parámetros de valores de tabla (TVP)
+### <a name="added-support-for-datetimesmalldatetime-in-table-valued-parameters-tvp"></a>- Se ha agregado compatibilidad con tipos de datos DATETIME y SMALLDATETIME al utilizar parámetros con valores de tabla (TVP).
 
 El controlador ahora es compatible con los tipos de datos DATETIME y SMALLDATETIME al usar parámetros con valores de tabla (TVP).
 
@@ -120,9 +120,9 @@ El controlador JDBC ahora admite los tipos de datos sql_variant para su uso con 
 
 Si usa TVP para rellenar una tabla y enviar el valor NULL al tipo de columna sql_variant, encontrará una excepción como Insertar valor NULL con tipo de columna sql_variant en TVP no se admite actualmente.
 
-### <a name="implemented-prepared-statement-metadata-caching"></a>Implementa la instrucción preparada almacenamiento en caché de metadatos
+### <a name="implemented-prepared-statement-metadata-caching"></a>Almacenamiento en caché de metadatos de instrucción preparado para el controlador JDBC
 
-Ha implementado el controlador JDBC de caché de metadatos de instrucción preparado para mejorar el rendimiento. Controlador ahora admite el almacenamiento en caché los metadatos de instrucción preparado en el controlador de propiedades de conexión "disableStatementPooling" y "valor de statementPoolingCacheSize". Esta característica está deshabilitada de forma predeterminada. Puede obtener más información [aquí](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)
+Ha implementado el controlador JDBC de caché de metadatos de instrucción preparado para mejorar el rendimiento. - El controlador ahora es compatible con almacenamiento en caché de los metadatos de la instrucción preparada en el controlador con las propiedades de conexión "disableStatementPooling" y Esta característica está deshabilitada de forma predeterminada. Puede obtener más información [aquí](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)
 
 ### <a name="added-support-for-aad-integrated-authentication-on-linuxmac"></a>Se ha agregado compatibilidad para la autenticación integrada de AAD en Linux o Mac
 
@@ -134,10 +134,14 @@ El controlador JDBC actualizó su dependencia de maven de azure-activedirectory-
 
 ## <a name="updates-in-microsoft-jdbc-driver-62-for-sql-server"></a>Actualizaciones de Microsoft JDBC Driver 6.2 para SQL Server
 
-Microsoft JDBC Driver 6.2 para SQL Server es totalmente compatible con las especificaciones de JDBC 4.1 y 4.2. Los archivos JAR en el paquete 6.0 se denominan según la compatibilidad de la versión de Java. Por ejemplo, el archivo mssql-jdbc-6.2.1.jre8.jar desde el paquete 6.2 se recomienda para su uso con Java 8.
+Microsoft JDBC Driver 6.2 para SQL Server es totalmente compatible con las especificaciones de JDBC 4.1 y 4.2. Los archivos JAR en el paquete 6.2 se denominan según la compatibilidad de la versión de Java. Por ejemplo, el archivo mssql-jdbc-6.2.2.jre8.jar desde el paquete 6.2 se recomienda para su uso con Java 8.
 
 > [!NOTE]  
-> Se encontró un problema con la mejora del almacenamiento en caché de metadatos en la RTW de 6.2 JDBC publicado el 29 de junio de 2017. Se ha revertido la mejora y nuevos archivos JAR (versión 6.2.1) publicada en 17 de julio de 2017 de las [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1), y [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Actualice sus proyectos para usar el 6.2.1 archivos JAR de versión. Vea [notas de la versión](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) para obtener más detalles.
+> Se encontró un problema con la mejora del almacenamiento en caché de metadatos en la RTW de 6.2 JDBC publicado el 29 de junio de 2017. Se ha revertido la mejora y de 17 de julio de 2017 se han publicado nuevos archivos JAR (versión 6.2.1). 
+>
+> Se realizó otra mejora para actualizar la versión de la biblioteca dependiente de Azure Key Vault a 1.0.0, y se han publicado nuevos archivos JAR (versión 6.2.2) de 19 de octubre de 2017.
+>
+> Descargar las actualizaciones más recientes en JDBC Driver 6.2 en [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2), y [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Actualice sus proyectos para usar el 6.2.2 archivos JAR de versión. Vea notas de la versión [v6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) y [v6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) para obtener más detalles.
 
 ### <a name="azure-active-directory-aad-support-for-linux"></a>Soporte técnico de Azure Active Directory (AAD) para Linux
 
@@ -147,7 +151,7 @@ Conectar sus aplicaciones de Linux a Azure SQL Database mediante autenticación 
 
 Ahora se puede usar el controlador JDBC en JVM que se ejecutan en modo de cumplimiento de FIPS 140 para satisfacer el cumplimiento de normas y estándares federales.
 
-### <a name="kerberos-authentication-improvements"></a>Mejoras de autenticación de Kerberos
+### <a name="kerberos-authentication-improvements"></a>Autenticación Kerberos
 
 El controlador JDBC ahora es compatible con:
 
@@ -155,7 +159,7 @@ El controlador JDBC ahora es compatible con:
 - Autenticación entre dominios Kerberos mediante la autenticación integrada de Kerberos sin tener que establecer explícitamente el SPN del servidor. El controlador ahora calcula automáticamente el dominio KERBEROS incluso cuando no ha facilitado.
 - Delegación restringida de Kerberos mediante la aceptación de suplantar las credenciales de usuario como un objeto de credenciales de GSS a través del origen de datos. Esta credencial suplantada, a continuación, se usa para establecer una conexión de Kerberos.
 
-### <a name="added-timeouts"></a>Se ha agregado los tiempos de espera
+### <a name="added-timeouts"></a>Tiempo agregado
 
 El controlador JDBC ahora admite los siguientes tiempos de espera configurables que se pueden cambiar según las necesidades de su aplicación:
 
@@ -191,15 +195,15 @@ Ahora se admite la recuperación de metadatos de parámetros con instrucciones p
 
 ### <a name="azure-active-directory-aad"></a>Azure Active Directory (AAD)
 
-Autenticación de AAD es un mecanismo de conexión a Azure SQL Database v12 mediante identidades en AAD. Use la autenticación de AAD para administrar identidades de usuarios de base de datos de forma centralizada y como alternativa a la autenticación de SQL Server. El controlador JDBC 6.0 permite especificar las credenciales de AAD en la cadena de conexión de JDBC para conectarse a Azure SQL DB. Para obtener información detallada, consulte la propiedad de autenticación en el [estableciendo las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md) página.
+Nueva característica: Azure Active Directory (AAD). La autenticación de AAD es un mecanismo que permite conectar con Azure SQL Database v12 mediante identidades en AAD. Use la autenticación de AAD para administrar identidades de usuarios de base de datos de forma centralizada y como alternativa a la autenticación de SQL Server. El controlador JDBC 6.0 permite especificar las credenciales de AAD en la cadena de conexión de JDBC para conectarse a Azure SQL DB. Para obtener información detallada, consulte la propiedad de autenticación en el [estableciendo las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md) página.
 
 ### <a name="table-valued-parameters"></a>Parámetros con valores de tabla
 
-Los parámetros con valores de tabla proporcionan una manera sencilla de serializar varias filas de datos de una aplicación cliente en SQL Server sin necesidad de ir y volver repetidas veces ni de ninguna lógica especial de servidor para procesar los datos. Puede usar parámetros con valores de tabla para encapsular filas de datos en una aplicación cliente y enviar los datos al servidor en un único comando con parámetros. Las filas de datos entrantes se almacenan en una variable de tabla puede operar utilizando Transact-SQL. Para obtener más información, consulte [Using Table-Valued parámetros](../../connect/jdbc/using-table-valued-parameters.md).
+Los parámetros con valores de tabla proporcionan una manera sencilla de serializar varias filas de datos de una aplicación cliente en SQL Server sin necesidad de ir y volver repetidas veces ni de ninguna lógica especial de servidor para procesar los datos. Puede usar parámetros con valores de tabla para encapsular filas de datos en una aplicación cliente y enviar los datos al servidor en un único comando con parámetros. Las filas de datos entrantes se almacenan en una variable de tabla puede operar utilizando Transact-SQL. Vea [Usar parámetros con valores de tabla](../../connect/jdbc/using-table-valued-parameters.md)
 
 ### <a name="alwayson-availability-groups-ag"></a>Grupos de disponibilidad (AG) AlwaysOn
 
-El controlador ahora admite conexiones transparentes a grupos de disponibilidad AlwaysOn. El controlador detecta rápidamente la topología Always On actual de la infraestructura de servidor y conecta con el servidor activo actual de forma transparente.
+Mejora: grupos de disponibilidad Always On (AG). El controlador ahora admite conexiones transparentes a grupos de disponibilidad El controlador detecta rápidamente la topología Always On actual de la infraestructura de servidor y conecta con el servidor activo actual de forma transparente.
 
 ## <a name="updates-in-microsoft-jdbc-driver-42-for-sql-server-and-later"></a>Actualizaciones de Microsoft JDBC Driver 4.2 para SQL Server y versiones posteriores
 
@@ -226,7 +230,7 @@ Se usa la característica de copia masiva para copiar rápidamente grandes canti
 
 ### <a name="xa-transaction-rollback-option"></a>Opción de reversión de transacción de XA
 
-Se han agregado nuevas opciones de tiempo de espera para la reversión automática existente de transacciones no preparadas. Para obtener más información, consulte [descripción de las transacciones XA](../../connect/jdbc/understanding-xa-transactions.md).
+Se han agregado nuevas opciones de tiempo de espera para la reversión automática existente de transacciones no preparadas. [Descripción de las transacciones XA](../../connect/jdbc/understanding-xa-transactions.md)
 
 ### <a name="new-kerberos-principal-connection-property"></a>Nueva propiedad de conexión de entidad de seguridad de Kerberos
 

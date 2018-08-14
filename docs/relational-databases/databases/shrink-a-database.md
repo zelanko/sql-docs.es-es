@@ -68,7 +68,7 @@ ms.locfileid: "39551685"
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
--   Para ver la cantidad actual de espacio disponible (sin asignar) en la base de datos. Para obtener más información, consulte [Display Data and Log Space Information for a Database](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md).  
+-   Para ver la cantidad actual de espacio disponible (sin asignar) en la base de datos. Para obtener más información, consulte [Mostrar la información del espacio ocupado por los datos y el registro de una base de datos](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
   
 -   Tenga en cuenta la siguiente información cuando vaya a reducir una base de datos:  
   

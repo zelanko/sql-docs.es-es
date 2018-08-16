@@ -18,19 +18,18 @@ ms.locfileid: "34707043"
 ---
 # <a name="about-sql-server-analysis-services"></a>Acerca de SQL Server Analysis Services
 
-Analysis Services es un motor de datos analíticos utilizado en la decisión soporte técnico y el análisis empresarial. Proporciona a nivel empresarial modelos semánticos de datos para informes empresariales y aplicaciones cliente como Power BI, Excel, informes y otras herramientas de visualización de datos Reporting Services.  
+Analysis Services es un motor de datos analíticos utilizado en la toma de decisiones y el análisis empresarial. Proporciona modelos de datos semánticos de nivel empresarial para informes de negocios y aplicaciones de clientes como Power BI, Excel, Reporting Services y otras herramientas de visualización de datos.
 
-Un flujo de trabajo típico incluye crear un proyecto de modelos de datos tabular o multidimensional en Visual Studio, el modelo de la implementación como una base de datos a una instancia del servidor, configuración de procesamiento de datos periódico y asignar permisos para permitir el acceso a los datos por los usuarios finales. Cuando esté listo, el modelo de datos semántica son accesibles por las aplicaciones de cliente compatible con Analysis Services como un origen de datos.  
+Un flujo de trabajo típico incluye la creación de un proyecto de modelo de datos tabular o multidimensional en Visual Studio, implementación del modelo como una base de datos en una instancia, configuración del procesamiento de datos recurrentes y asignación de  permisos de acceso a los usuarios finales. Cuando esté listo, su modelo de datos semánticos puede ser accedido por las aplicaciones cliente que suporten Analysis Services como fuente de datos.
 
 Analysis Services está disponible en dos plataformas diferentes: 
 
-**Azure Analysis Services** -es compatible con los modelos tabulares en los niveles de compatibilidad 1200 y versiones posteriores. Se admiten todas las traducciones, particiones, seguridad de nivel de fila, relaciones bidireccionales y DirectQuery. Para obtener más información, consulte [Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/).
+**Azure Analysis Services** -es compatible con los modelos tabulares en los niveles de compatibilidad 1200 y versiones posteriores. DirectQuery, particiones, seguridad a nivel de fila, relaciones bidireccionales y traducciones son compatibles. Para obtener más información, consulte [Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/).
 
-**SQL Server Analysis Services** -es compatible con los modelos tabulares en todos los niveles de compatibilidad, los modelos multidimensionales, minería de datos y PowerPivot para SharePoint.
+**SQL Server Analysis Services** -es compatible con los modelos tabulares en todos los niveles de compatibilidad, modelos multidimensionales, minería de datos y PowerPivot para SharePoint.
  
  ## <a name="documentation-by-area"></a>Documentación por área  
-En general, [documentación de Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/) se incluye con la documentación de Azure. Si le interesa disponer de los modelos tabulares en la nube, es mejor empezar por ahí. Este artículo y la documentación de esta sección es principalmente para SQL Server Analysis Services. Sin embargo, al menos para los modelos tabulares, cómo crear e implementar sus proyectos de modelo tabular es igual, independientemente de la plataforma que se está usando. Estas secciones para obtener más información, consulte:
-
+En general, [documentación de Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/) se incluye con la documentación de Azure. Si está interesado en tener sus modelos tabulares en la nube, lo mejor es comenzar allí. Este artículo y la documentación en esta sección es principalmente para SQL Server Analysis Services. Sin embargo, al menos para los modelos tabulares, la forma de crear e implementar sus proyectos de modelo tabular es muy similar, independientemente de la plataforma que esté utilizando. Echa un vistazo a estas secciones para obtener más información:
    
 *  [Comparar soluciones tabulares y multidimensionales](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
 *  [Instalar SQL Server Analysis Services](../analysis-services/instances/install-windows/install-analysis-services.md)

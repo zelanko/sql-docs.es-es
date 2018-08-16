@@ -104,7 +104,7 @@ Use la tabla siguiente para determinar qué archivo va a descargar e instalar. C
 
 |Si la versión que tiene instalada actualmente es...|Y desea...|Descargue e instale...|  
 |---|---|---|  
-|**Instalaciones de&32; bits:**|||  
+|**Instalaciones de 32-bits:**|||  
 |Una versión de 32 bits de cualquier edición de SQL Server 2012|Actualizar a la versión de 32 bits de SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Una versión de 32 bits de SQL Server 2012 RTM Express|Actualizar a la versión de 32 bits de SQL Server 2012 Express SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Una versión de 32 bits únicamente las herramientas de cliente y de administración para SQL Server 2012 (incluido SQL Server 2012 Management Studio)|Actualizar las herramientas de cliente y de administración a la versión de 32 bits de SQL Server 2012 SP1|SQLManagementStudio_x86_ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=267905)|  

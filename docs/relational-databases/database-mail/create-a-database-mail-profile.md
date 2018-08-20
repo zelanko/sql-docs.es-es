@@ -20,15 +20,16 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0f728e6c4ae949573206c5a13a73879c7f7a304
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1a1a257f9ba24f18426f2f328dde0a061f9bed0c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175351"
 ---
 # <a name="create-a-database-mail-profile"></a>Crear un perfil de correo electrónico de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Para crear perfiles públicos y privados de Correo electrónico de base de datos, use el **Asistente para configuración de Correo electrónico de base de datos** o [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para más información sobre los perfiles de correo electrónico, consulte [Perfil de Correo electrónico de base de datos](https://msdn.microsoft.com/library/ms175100.aspx#Anchor_2).
+  Para crear perfiles públicos y privados de Correo electrónico de base de datos, use el **Asistente para configuración de Correo electrónico de base de datos** o [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para más información sobre los perfiles de correo electrónico, consulte [Perfil de Correo electrónico de base de datos](database-mail-configuration-objects.md).
   
 -   **Antes de empezar:** [Requisitos previos](#Prerequisites), , [Seguridad](#Security)  
   

@@ -18,18 +18,19 @@ caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f3c407c01db1931459654794923a6f8aeb345e3c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6ee798510dd33a5df695c2be9f62b37bb7314341
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175359"
 ---
 # <a name="scm-services---change-the-service-startup-account"></a>Servicios SCM: cambiar la cuenta de inicio de servicio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema se describe cómo usar el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para cambiar las opciones de inicio de los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y las cuentas de servicio usadas por [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell. Para obtener más información sobre cómo seleccionar la cuenta de servicio adecuada, vea [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 > [!IMPORTANT]  
->  Cuando cambie la cuenta de inicio del servicio para [!INCLUDE[ssDE](../../includes/ssde-md.md)] y el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssDE](../../includes/ssde-md.md)]) debe reiniciarse para que se aplique el cambio. Cuando se reinicia el servicio, todas las bases de datos asociadas a dicha instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no estarán disponibles hasta que se reinicie el servicio correctamente. Si tiene que cambiar la cuenta de inicio del servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , asegúrese de que lo hace durante el mantenimiento programado o cuando se pueden poner las bases de datos sin conexión sin interrumpir las operaciones diarias.  
+>  Cuando cambie la cuenta de inicio del servicio para [!INCLUDE[ssDE](../../includes/ssde-md.md)] y el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssDE](../../includes/ssde-md.md)]) debe reiniciarse para que se aplique el cambio. Cuando se reinicia el servicio, todas las bases de datos asociadas a dicha instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no estarán disponibles hasta que se reinicie el servicio correctamente. Si tiene que cambiar la cuenta de inicio del servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], asegúrese de que lo hace durante el mantenimiento programado o cuando se pueden poner las bases de datos sin conexión sin interrumpir las operaciones diarias.  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
@@ -73,6 +74,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>Ver también  
  [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
- [Configurar WMI para mostrar el estado del servidor en Herramientas de SQL Server](http://msdn.microsoft.com/library/7e97197b-ed4d-40d1-9a52-9ab1d92401d7)  
+ [Configurar WMI para mostrar el estado del servidor en Herramientas de SQL Server](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)  
   
   

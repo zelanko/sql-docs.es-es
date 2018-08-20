@@ -17,17 +17,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e3a839006c560f486e55214db4f73095dc3c4402
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 7745ca23391f46561f7ee73cb02410be6a4dc92d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39562019"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175303"
 ---
 # <a name="create-foreign-key-relationships"></a>Crear relaciones de clave externa
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Crear relaciones de clave externa](https://msdn.microsoft.com/library/ms189049(SQL.120).aspx).
+ > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Crear relaciones de clave externa](create-foreign-key-relationships.md).
 
 
   En este tema se describe cómo crear relaciones de clave externa en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cuando se asocian filas de una tabla con filas de otra tabla, se crea una relación entre las dos tablas.    

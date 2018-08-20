@@ -14,12 +14,12 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 50a8d11c653e7b31dd27a8705d925f60d795a7a0
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: d4d0071cbb32207d97d4df9c3bd4e69c91046691
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984097"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175362"
 ---
 # <a name="sql-server-backup-to-url"></a>Copia de seguridad en URL de SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -82,9 +82,9 @@ ms.locfileid: "38984097"
   
  Para obtener un ejemplo sobre cómo crear una firma de acceso compartido, consulte los ejemplos [Crear una firma de acceso compartido](../../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS) más adelante en este tema; para crear una credencial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea los ejemplos [Crear una credencial](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) más adelante en este tema.  
   
- Para obtener información general sobre las credenciales, vea [Credenciales](http://msdn.microsoft.com/library/ms161950.aspx).  
+ Para obtener información general sobre las credenciales, vea [Credenciales](../security/authentication-access/credentials-database-engine.md).  
   
- Para obtener información sobre otros ejemplos donde se usan credenciales, vea [Crear un proxy del Agente SQL Server](http://msdn.microsoft.com/library/ms175834.aspx).  
+ Para obtener información sobre otros ejemplos donde se usan credenciales, vea [Crear un proxy del Agente SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 ###  <a name="limitations"></a> Limitaciones  
   

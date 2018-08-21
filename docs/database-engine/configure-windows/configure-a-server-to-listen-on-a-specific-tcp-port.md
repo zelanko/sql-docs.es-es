@@ -21,17 +21,17 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 71cc5f675917e0e99c9f5a9806b8e928626c84eb
-ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
+ms.openlocfilehash: b78d6b459408aa36f2e219460e9346534c685c78
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39609674"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175346"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Configurar un servidor para que escuche en un puerto TCP específico
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  En este tema se describe cómo configurar una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para escuchar en un puerto fijo específico mediante el Administrador de configuración de SQL Server. Si está habilitada, la instancia predeterminada de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] escucha en el puerto TCP 1433. Las instancias con nombre de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssEW](../../includes/ssew-md.md)] están configuradas para [puertos dinámicos](https://msdn.microsoft.com/library/dd981060). Esto significa que seleccionan un puerto disponible cuando se inicia el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando se conecte a una instancia con nombre a través de un firewall, configure el [!INCLUDE[ssDE](../../includes/ssde-md.md)] para que escuche en un puerto específico, de modo que el puerto adecuado pueda abrirse en el firewall.  
+  En este tema se describe cómo configurar una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para escuchar en un puerto fijo específico mediante el Administrador de configuración de SQL Server. Si está habilitada, la instancia predeterminada de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] escucha en el puerto TCP 1433. Las instancias con nombre de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssEW](../../includes/ssew-md.md)] están configuradas para [puertos dinámicos](../../tools/configuration-manager/tcp-ip-properties-ip-addresses-tab.md). Esto significa que seleccionan un puerto disponible cuando se inicia el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando se conecte a una instancia con nombre a través de un firewall, configure el [!INCLUDE[ssDE](../../includes/ssde-md.md)] para que escuche en un puerto específico, de modo que el puerto adecuado pueda abrirse en el firewall.  
 
 Dado que el puerto 1433 es el estándar conocido de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en algunas organizaciones se indica que conviene cambiar el número de puerto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para mejorar la seguridad. Esto puede resultar útil en algunos entornos. A pesar de esto, las arquitecturas de TCP/IP permiten que un [examinador de puertos](https://wikipedia.org/wiki/Port_scanner) consulte cuáles son los puertos abiertos, de modo que cambiar el número de puerto no se considera una medida de seguridad eficaz.
 

@@ -19,12 +19,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8a08eebbb0c5a68afea30fccf0e4f3240b3bbb8a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4ed0905805e3d7bed8841e29739f559bbbbdc9ac
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558885"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662487"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (motor de base de datos)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,6 +64,30 @@ El servidor calcula el conjunto de resultados y, para cualquier columna cifrada 
 
 Para obtener detalles sobre cómo desarrollar aplicaciones mediante Always Encrypted con controladores de cliente determinados, vea [Always Encrypted (desarrollo de cliente)](../../../relational-databases/security/encryption/always-encrypted-client-development.md).
 
+## <a name="remarks"></a>Notas
+
+El descifrado se produce mediante el cliente. Esto significa que algunas acciones que se producen solo en el lado servidor no funcionarán cuando se use Always Encrypted. 
+
+Aquí tiene un ejemplo de una actualización que intenta mover datos desde una columna cifrada a una columna sin cifrar sin devolver al cliente un conjunto de resultados: 
+
+```sql
+update dbo.Patients set testssn = SSN
+```
+
+Si SSN es una columna cifrada mediante Always Encryption, la instrucción de actualización anterior producirá un error similar a:
+
+```
+Msg 206, Level 16, State 2, Line 89
+Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_1', column_encryption_key_database_name = 'ssn') collation_name = 'Latin1_General_BIN2' is incompatible with char
+```
+
+Para actualizar correctamente la columna, haga lo siguiente:
+
+1. SELECCIONE los datos de fuera de la columna SSN y almacénelos como un conjunto de resultados en la aplicación. Esto permitirá que la aplicación (*controlador* del cliente) descifre la columna.
+2. INSERTE los datos desde el conjunto de resultados en SQL Server. 
+
+ >[!IMPORTANT]
+ > En este escenario, los datos se descifrarán cuando se envíen al servidor, ya que la columna de destino es varchar normal que no acepta datos cifrados. 
   
 ## <a name="selecting--deterministic-or-randomized-encryption"></a>Selección del cifrado determinista o aleatorio  
  El motor de base de datos nunca funciona en los datos de texto no cifrado almacenados en columnas cifradas, pero sigue admitiendo algunas consultas en datos cifrados, según el tipo de cifrado de la columna. Always Encrypted admite dos tipos de cifrado: el cifrado aleatorio y el determinista.  

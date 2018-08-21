@@ -27,12 +27,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6deb510f0f8f358a67963ac36cb149afe836e6bf
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1d629b6dd1157c44e4a1bee1bbc944d48b4caff5
+ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401497"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020649"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Control del acceso a la información confidencial en paquetes
   Para proteger los datos de un paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , puede establecer un nivel de protección que ayude a proteger los datos confidenciales únicamente o todos los datos del paquete. Asimismo, puede cifrar estos datos con una contraseña o una clave de usuario, o confiar en que la base de datos cifre los datos. Además, el nivel de protección que utiliza para un paquete no es necesariamente estático, sino que cambia a lo largo de su ciclo de vida. A menudo se establece un nivel de protección durante el desarrollo y otro cuando el paquete se implementa.  
@@ -98,7 +98,7 @@ ms.locfileid: "35401497"
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>Para establecer o cambiar el nivel de protección de un paquete en herramientas de datos de SQL Server  
   
-1.  Revise los valores disponibles para la propiedad **ProtectionLevel** en el tema [Configurar el nivel de protección de los paquetes](#set_protection)y determine el valor adecuado para su paquete.  
+1.  Revise los valores disponibles para la propiedad **ProtectionLevel** en la sección [Niveles de protección](#protection-levels) y determine el valor adecuado para su paquete.  
   
 2.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contiene el paquete.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "35401497"
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>Para establecer o cambiar el nivel de protección de los paquetes en el símbolo del sistema  
   
-1.  Revise los valores disponibles para la propiedad **ProtectionLevel** en la sección [Configurar el nivel de protección de los paquetes](#set_protection) y determine el valor adecuado para su paquete.  
+1.  Revise los valores disponibles para la propiedad **ProtectionLevel** en la sección [Niveles de protección](#protection-levels) y determine el valor adecuado para su paquete.  
   
 2.  Revise las asignaciones para la opción **Encrypt** en el tema [dtutil Utility](../../integration-services/dtutil-utility.md)y determine el número entero adecuado que usar como valor de la propiedad **ProtectionLevel** seleccionada.  
   

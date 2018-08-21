@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 281eb9435fc3b251b9dfbc3d723a10f1df652f66
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 15143529b02c1cd51219073bdb953231bbbcc42f
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541725"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008897"
 ---
 # <a name="memory-management-architecture-guide"></a>guía de arquitectura de administración de memoria
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ Para obtener más información sobre la cantidad de memoria física admitida por
   
 Los sistemas de memoria virtual permiten una mayor asignación de memoria física, de forma que la proporción de memoria virtual a memoria física puede ser superior a 1:1. Como resultado, los programas más grandes se pueden ejecutar en equipos con una diversidad de configuraciones de memoria física. No obstante, el uso de una cantidad de memoria virtual significativamente superior al promedio combinado de los espacios de trabajo de todos los procesos puede provocar un rendimiento bajo. 
 
-## <a name="includessnoversionincludesssnoversion-mdmd-memory-architecture"></a>Arquitectura de la memoria de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+## <a name="sql-server-memory-architecture"></a>Arquitectura de la memoria de SQL Server
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] adquiere y libera memoria de manera dinámica según sea preciso. Normalmente, no es necesario que un administrador especifique la cantidad de memoria que se debe asignar a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], aunque todavía existe esta opción y es necesaria en algunos entornos.
 

@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2bae9d48b20109e129eb159f5d3d9e3e6c0651e5
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 52ef9494ea2c0b4aeceab2faca8c6bce3107959e
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39564729"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609734"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Guía de diseño de índices de almacén de columnas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -177,7 +177,7 @@ Se trata de tareas para crear y mantener índices de almacén de columnas.
 |Crear una tabla como un almacén de columnas.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede crear la tabla como un índice de almacén de columnas agrupado. No es necesario crear primero una tabla de almacén de filas y, luego, convertirla en almacén de columnas.|  
 |Crear una tabla de memoria con un índice de almacén de columnas.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede crear una tabla optimizada para memoria con un índice de almacén de columnas. El índice de almacén de columnas también se puede agregar una vez creada la tabla mediante la sintaxis de ALTER TABLE ADD INDEX.|  
 |Convertir una tabla de almacén de filas en un almacén de columnas.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Convierta un árbol binario o un montón existentes en un almacén de columnas. Los ejemplos muestran cómo tratar los índices existentes, así como el nombre del índice, al realizar esta conversión.|  
-|Convertir una tabla de almacén de columnas en un almacén de filas.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Normalmente esto no es necesario, pero puede haber ocasiones en que necesite realizar esta conversión. Los ejemplos muestran cómo convertir un almacén de columnas en un montón o un índice agrupado.|  
+|Convertir una tabla de almacén de columnas en un almacén de filas.|[CREATE CLUSTERED INDEX &#40;Transact-SQL&#41; o DROP INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Normalmente esto no es necesario, pero puede haber ocasiones en que necesite realizar esta conversión. Los ejemplos muestran cómo convertir un almacén de columnas en un montón o un índice agrupado.|  
 |Crear un índice de almacén de columnas en una tabla de almacén de filas.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Una tabla de almacén de filas puede tener un índice de almacén de columnas.  Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], los índices de almacén de columnas pueden tener una condición de filtrado. En los ejemplos se usa la sintaxis básica.|  
 |Crear índices de rendimiento para análisis operativos.|[Introducción al almacén de columnas para análisis operativos en tiempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|Se describe cómo crear índices de almacén de columnas y de árbol B complementarios para que las consultas OLTP usen los índices de árbol B y, las consultas de análisis, los índices de almacén de columnas.|  
 |Crear índices de almacén de columnas de rendimiento para el almacenamiento de datos.|[Almacenamiento de datos de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Se describe cómo usar índices de árbol B en las tablas de almacén de columnas para crear consultas de almacenamiento de datos de rendimiento.|  

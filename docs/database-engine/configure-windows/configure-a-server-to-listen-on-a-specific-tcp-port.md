@@ -21,12 +21,12 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 234996e85d88e9bed0313c2bf3abbf5f81eae65a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71cc5f675917e0e99c9f5a9806b8e928626c84eb
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32865370"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609674"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Configurar un servidor para que escuche en un puerto TCP específico
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +53,17 @@ Dado que el puerto 1433 es el estándar conocido de [!INCLUDE[ssNoVersion](../..
     > [!NOTE]  
     >  Si tiene problemas para abrir el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [Administrador de configuración de SQL Server](../../relational-databases/sql-server-configuration-manager.md).  
   
-2.  En el cuadro de diálogo **Propiedades de TCP/IP** , en la pestaña **Direcciones IP** , aparecen varias direcciones IP con el formato **IP1**, **IP2**, hasta **IPAll**. Una de estas direcciones IP, 127.0.0.1, se utiliza para el adaptador de bucle invertido. Aparecen direcciones IP adicionales para cada dirección IP del equipo. (Probablemente verá ambas direcciones, la de IP versión 4 y la de IP versión 6.) Haga clic con el botón derecho en cada dirección y luego haga clic en **Propiedades** para identificar la dirección IP que quiera configurar.  
+2.  En el cuadro de diálogo **Propiedades de TCP/IP** , en la pestaña **Direcciones IP** , aparecen varias direcciones IP con el formato **IP1**, **IP2**, hasta **IPAll**. Una de estas direcciones IP, 127.0.0.1, se utiliza para el adaptador de bucle invertido. Aparecen direcciones IP adicionales para cada dirección IP del equipo. (Probablemente verá direcciones IP de la versión 4 y la versión 6). Haga clic con el botón derecho en cada dirección y luego haga clic en **Propiedades** para identificar la dirección IP que quiera configurar.  
   
 3.  Si el cuadro de diálogo **Puertos dinámicos TCP** contiene **0**, que indica que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] escucha en los puertos dinámicos, elimine el 0.  
   
      ![puertos_TCP](../../database-engine/configure-windows/media/tcp-ports.png "puertos_TCP")  
   
-4.  En el cuadro de diálogo **Propiedades de* **IP***n**, en el cuadro **Puerto TCP**, escriba el número de puerto en el que desee que esta dirección IP escuche y, a continuación, haga clic en **Aceptar**.  
+4.  En el cuadro de diálogo **Propiedades de* **IP***n**, en el cuadro **Puerto TCP**, escriba el número de puerto en el que desee que esta dirección IP escuche y, a continuación, haga clic en **Aceptar**. Para especificar varios puertos, sepárelos con una coma.
+
+    > [!NOTE] 
+    > Si la opción **Escuchar todo** de la pestaña **Protocolo** está establecida en "Sí", entonces, solo se utilizarán los valores de **Puerto TCP** y **Puerto dinámico TCP** de la sección **IPAll** y se ignorarán las secciones individuales **IP***n* en su totalidad. Si la opción **Escuchar todo** está establecida en "No", se ignorarán los ajustes de **puerto TCP** y **puerto dinámico TCP** de la sección **IPAll** y se usarán los valores de **Puerto TCP**, **Puerto dinámico TCP** y **Habilitado** de las secciones individuales **IP***n* en su lugar.
+    > Cada sección **IP***n* tiene un ajuste **Habilitado** con un valor predeterminado de "No", lo que hace que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pase por alto esta dirección IP, incluso si tiene definido un puerto.  
   
 5.  En el panel de la consola, haga clic en **Servicios de SQL Server**.  
   

@@ -25,12 +25,12 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fbb9a185ce502828824cd15109ca92cb9ea052e7
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+ms.openlocfilehash: 7b5b27ecc45f59de8948cf6ddf0b0153132b6a35
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324439"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008907"
 ---
 # <a name="logging-in-to-sql-server"></a>Iniciar una sesión en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "36324439"
 >  Si al instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]seleccionó una intercalación que distingue entre mayúsculas y minúsculas, el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también distinguirá entre mayúsculas y minúsculas.  
   
 ## <a name="format-for-specifying-the-name-of-sql-server"></a>Formato para especificar el nombre de SQL Server  
- Al conectar a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] debe especificar el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es la instancia predeterminada (una instancia sin nombre), especifique el nombre del equipo donde está instalado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o la dirección IP del equipo. Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una instancia con nombre (como SQLEXPRESS), especifique el nombre del equipo donde está instalado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o la dirección IP del equipo, y agregue una barra diagonal y el nombre de instancia.  
+ Al conectarse a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] debe especificar el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es la instancia predeterminada (una instancia sin nombre), especifique el nombre del equipo donde está instalado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o la dirección IP del equipo. Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una instancia con nombre (como SQLEXPRESS), especifique el nombre del equipo donde está instalado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o la dirección IP del equipo, y agregue una barra diagonal y el nombre de instancia.  
   
  Los ejemplos siguientes se conectan a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecuta en un equipo denominado APPHOST. Al especificar una instancia con nombre, los ejemplos usan un nombre de instancia SQLEXPRESS.  
   
@@ -50,8 +50,8 @@ ms.locfileid: "36324439"
   
 |Tipo de instancia|Entrada para el nombre de servidor|  
 |----------------------|-------------------------------|  
-|Conexión a una instancia predeterminada mediante el protocolo predeterminado. (Esta es la entrada recomendada para una instancia predeterminada).|APPHOST|  
-|Conexión a una instancia con nombre mediante el protocolo predeterminado. (Esta es la entrada recomendada para una instancia con nombre.)|APPHOST\SQLEXPRESS|  
+|Conexión a una instancia predeterminada mediante el protocolo predeterminado.|APPHOST|  
+|Conexión a una instancia con nombre mediante el protocolo predeterminado. |APPHOST\SQLEXPRESS|  
 |Conexión a una instancia predeterminada en el mismo equipo con un punto para indicar que la instancia se está ejecutando en el equipo local.|.|  
 |Conexión a una instancia con nombre en el mismo equipo con un punto para indicar que la instancia se está ejecutando en el equipo local.|.\SQLEXPRESS|  
 |Conexión a una instancia predeterminada en el mismo equipo con localhost para indicar que la instancia se está ejecutando en el equipo local.|localhost|  
@@ -62,8 +62,8 @@ ms.locfileid: "36324439"
 |Conexión a una instancia con nombre en el mismo equipo que fuerza una conexión de memoria compartida.|lpc:APPHOST\SQLEXPRESS|  
 |Conexión a una instancia predeterminada que escucha en la dirección TCP 192.168.17.28 con una dirección IP.|192.168.17.28|  
 |Conexión a una instancia con nombre que escucha en la dirección TCP 192.168.17.28 con una dirección IP.|192.168.17.28\SQLEXPRESS|  
-|Conexión a una instancia predeterminada que no escucha en el puerto TCP, mediante la especificación del puerto que se está usando, en este caso 2828. (Esto no es necesario si [!INCLUDE[ssDE](../../includes/ssde-md.md)] escucha en el puerto predeterminado (1433)).|APPHOST,2828|  
-|Conexión a una instancia con nombre en un puerto TCP designado, en este caso 2828. (Esto suele ser necesario si el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser no se está ejecutando en el equipo host.)|APPHOST,2828|  
+|Conexión a una instancia predeterminada que no escucha en el puerto TCP, mediante la especificación del puerto que se está usando, en este caso 2828. (No es necesario especificar un número de puerto si [!INCLUDE[ssDE](../../includes/ssde-md.md)] escucha en el puerto predeterminado (1433)).|APPHOST,2828|  
+|Conexión a una instancia con nombre en un puerto TCP designado, en este caso 2828. (Suele ser necesario especificar un número de puerto si el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser no se está ejecutando en el equipo host).|APPHOST,2828|  
 |Conexión a una instancia predeterminada que no escucha en el puerto TCP, mediante la especificación tanto de la dirección IP como del puerto TCP que se está usando, en este caso 2828.|192.168.17.28,2828|  
 |Conexión a una instancia con nombre mediante la especificación tanto de la dirección IP como del puerto TCP que se está usando, en este caso 2828.|192.168.17.28\SQLEXPRESS,2828|  
 |Conexión a una instancia predeterminada por nombre, lo que fuerza una conexión TCP.|tcp:APPHOST|  
@@ -96,6 +96,6 @@ WHERE session_id = @@SPID;
   
  [Usar la utilidad sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
- [Crear un inicio de sesión](../../t-sql/lesson-2-1-creating-a-login.md)  
+ [Crear un inicio de sesión](../../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
   
   

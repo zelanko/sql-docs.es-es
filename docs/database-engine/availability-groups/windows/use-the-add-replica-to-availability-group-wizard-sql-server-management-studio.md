@@ -18,12 +18,12 @@ caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cd49e3ee7241a25531b6a2efcefe891b5993e8b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 21316e480ddaa3ea7f96ffdf530ef61edbbda2c1
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771121"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609684"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>Usar el Asistente para agregar una réplica al grupo de disponibilidad (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "34771121"
     |**Extremos**|Utilice esta pestaña para comprobar el extremo de creación de reflejo de la base de datos existente, si existe, para cada nueva réplica secundaria. Si este extremo no está en una instancia de servidor cuyas cuentas de servicio utilizan la autenticación de Windows, el asistente intentará crear el extremo automáticamente.<br /><br /> <br /><br /> Nota: Si cualquier instancia de servidor se ejecuta bajo una cuenta de usuario que no es de dominio, se debe realizar un cambio manual en la instancia de servidor antes de continuar con el asistente. Para obtener más información, vea [Requisitos previos](#Prerequisites), anteriormente en este tema.|  
     |**Preferencias de copia de seguridad**|Utilice esta pestaña para especificar sus preferencias de copias de seguridad para el grupo de disponibilidad en conjunto, si desea modificar la configuración actual, y las prioridades de copias de seguridad para las réplicas de disponibilidad individuales.|  
   
-6.  Si las réplicas seleccionadas contienen bases de datos que tienen una clave maestra de base de datos, escriba las contraseñas para las claves maestras de base de datos en la página **Escribir contraseñas** . La columna **Estado** indica **Se requiere contraseña** para bases de datos que tienen una clave maestra de base de datos. Después de escribir las contraseñas, haga clic en **Actualizar**. Si ha especificado la contraseña correctamente, la columna Estado indica **Contraseña especificada**.  
+6.  Si las réplicas seleccionadas contienen bases de datos que tienen una clave maestra de base de datos, escriba las contraseñas para las claves maestras de base de datos en la columna **Contraseña**. La columna **Estado** indica **Se requiere contraseña** para bases de datos que tienen una clave maestra de base de datos. **Siguiente** está atenuado hasta que se escriba la contraseña correcta en la columna **Contraseña**. Después de escribir las contraseñas, haga clic en **Actualizar**. Si ha especificado la contraseña correctamente, la columna Estado indica **Password entered** (Contraseña escrita), y **Siguiente** pasará a estar disponible.  
   
 7.  En la página **Seleccionar sincronización de datos iniciales** , elija cómo desea que las nuevas bases de datos secundarias se creen y se unan al grupo de disponibilidad. Elija una de las opciones siguientes:  
   

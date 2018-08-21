@@ -1,58 +1,62 @@
 ---
-title: Cargar datos de SQL Server en Azure SQL Data Warehouse (SSIS) | Microsoft Docs
-description: Muestra cómo crear un paquete de SQL Server Integration Services (SSIS) para mover datos desde una gran variedad de orígenes de datos a SQL Data Warehouse.
+title: Cargar datos en Azure SQL Data Warehouse con SQL Server Integration Services (SSIS) | Microsoft Docs
+description: Muestra cómo crear un paquete de SQL Server Integration Services (SSIS) para mover datos desde una gran variedad de orígenes de datos a Azure SQL Data Warehouse.
 documentationcenter: NA
-ms.service: sql-data-warehouse
-ms.component: data-movement
+ms.prod: sql
+ms.prod_service: integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.devlang: NA
 ms.topic: conceptual
 ms.tgt_pltfrm: NA
 ms.custom: loading
-ms.date: 04/04/2018
+ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 75a352ff4bb1f074a89ad4cc007844261d20c431
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 7d4be381230a4f78a0f0ca4849f2251b3d575ded
+ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087587"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020659"
 ---
-# <a name="load-data-from-sql-server-to-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Cargar datos de SQL Server en Azure SQL Data Warehouse con SQL Server Integration Services (SSIS)
+# <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Cargar datos en Azure SQL Data Warehouse con SQL Server Integration Services (SSIS)
 
-Cree un paquete de SQL Server Integration Services (SSIS) para cargar datos de SQL Server en [Azure SQL Data Warehouse](/azure/sql-data-warehouse/index). Si quiere, puede reestructurar, transformar y limpiar los datos a medida que pasan a través del flujo de datos de SSIS.
+Cree un paquete de SQL Server Integration Services (SSIS) para cargar datos en [Azure SQL Data Warehouse](/azure/sql-data-warehouse/index). Si quiere, puede reestructurar, transformar y limpiar los datos a medida que pasan a través del flujo de datos de SSIS.
 
-En este tutorial, aprenderá a:
+En este artículo se explica cómo realizar las siguientes tareas:
 
 * Crear un nuevo proyecto de Integration Services en Visual Studio.
-* Conectarse a orígenes de datos, incluidos SQL Server (como origen) y SQL Data Warehouse (como destino).
 * Diseñar un paquete de SSIS que cargue datos del origen en el destino.
 * Ejecutar el paquete de SSIS para cargar los datos.
 
-En este tutorial se usa SQL Server como origen de datos. SQL Server se puede ejecutar en local o en una máquina virtual de Azure.
-
 ## <a name="basic-concepts"></a>Conceptos básicos
-El paquete es la unidad de trabajo en SSIS. Los paquetes relacionados se agrupan en proyectos. Los proyectos y los paquetes de diseño se crean en Visual Studio con SQL Server Data Tools. El proceso de diseño es un proceso visual en el que se arrastran componentes del cuadro de herramientas y se colocan en la superficie de diseño, se conectan y se establecen sus propiedades. Después de terminar el paquete, puede implementarlo opcionalmente en SQL Server para una administración, supervisión y seguridad globales.
 
-## <a name="options-for-loading-data-with-ssis"></a>Opciones para cargar datos con SSIS
+El paquete es la unidad de trabajo básica en SSIS. Los paquetes relacionados se agrupan en proyectos. Los proyectos y los paquetes de diseño se crean en Visual Studio con SQL Server Data Tools. El proceso de diseño es un proceso visual en el que se arrastran componentes del cuadro de herramientas y se colocan en la superficie de diseño, se conectan y se establecen sus propiedades. Después de terminar el paquete, puede ejecutarlo y puede implementarlo opcionalmente en SQL Server para una administración, supervisión y seguridad globales.
+
+Una introducción detallada a SSIS queda fuera del ámbito de este artículo. Para más información, vea los siguientes artículos:
+
+- [SQL Server Integration Services](sql-server-integration-services.md)
+
+- [Tutorial de SSIS: Crear un paquete ETL sencillo](ssis-how-to-create-an-etl-package.md)
+
+## <a name="options-for-loading-data-into-sql-data-warehouse-with-ssis"></a>Opciones para cargar datos en SQL Data Warehouse con SSIS
 SQL Server Integration Services (SSIS) es un conjunto de herramientas flexible que proporciona una serie de opciones para conectarse a SQL Data Warehouse y cargar datos en él.
 
-1. Use un destino de ADO NET para conectarse a SQL Data Warehouse. En este tutorial se usa un destino de ADO NET porque tiene las mínimas opciones de configuración.
-2. Use un destino de OLE DB para conectarse a SQL Data Warehouse. Esta opción puede proporcionar un rendimiento ligeramente mejor que el destino de ADO NET.
-3. Use la tarea de carga en el blob de Azure para cargar los datos en Azure Blob Storage. Luego use la tarea Ejecutar SQL de SSIS para iniciar un script de Polybase que cargue los datos en SQL Data Warehouse. Esta opción proporciona el mejor rendimiento de las tres que se muestran aquí. Para obtener la tarea de carga en el blob de Azure, descargue [Microsoft SQL Server 2016 Integration Services Feature Pack for Azure][Microsoft SQL Server 2016 Integration Services Feature Pack for Azure]. Para obtener más información sobre Polybase, vea [Guía de PolyBase][PolyBase Guide].
+1. El método preferido, que proporciona el mejor rendimiento, consiste en crear un paquete que use la [tarea de carga de Azure SQL DW](control-flow/azure-sql-dw-upload-task.md) para cargar los datos. Esta tarea encapsula la información de origen y destino. Se supone que los datos de origen se almacenan localmente en archivos de texto delimitado.
 
-## <a name="before-you-start"></a>Antes de empezar
-Para realizar este tutorial, necesita:
+2. De forma alternativa, puede crear un paquete que use una tarea Flujo de datos que contenga un origen y un destino. Este enfoque es compatible con una amplia gama de orígenes de datos, incluidos SQL Server y Azure SQL Data Warehouse.
 
-1. **SQL Server Integration Services (SSIS)**. SSIS es un componente de SQL Server y exige una versión de evaluación o una versión con licencia de SQL Server. Para obtener una versión de evaluación de SQL Server 2016 Preview, vea [SQL Server Evaluaciones][SQL Server Evaluations].
-2. **Visual Studio**. Para obtener la edición gratuita de Visual Studio Community, vea [Visual Studio Community][Visual Studio Community].
+## <a name="prerequisites"></a>Prerequisites
+Para realizar este tutorial, necesita lo siguiente:
+
+1. **SQL Server Integration Services (SSIS)**. SSIS es un componente de SQL Server y exige una versión con licencia, de desarrollador o de evaluación de SQL Server. Para obtener una versión de evaluación de SQL Server, vea [Evaluaciones de SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
+2. **Visual Studio** (opcional). Para obtener la edición gratuita de Visual Studio Community, vea [Visual Studio Community][Visual Studio Community]. Si no quiere instalar Visual Studio, puede instalar solo SQL Server Data Tools (SSDT). SSDT instala una versión de Visual Studio con funcionalidad limitada.
 3. **SQL Server Data Tools para Visual Studio (SSDT)**. Para obtener SQL Server Data Tools para Visual Studio, vea [Descargar SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
-4. **Datos de ejemplo**. En este tutorial se usan datos de ejemplo almacenados en SQL Server en la base de datos de ejemplo AdventureWorks como datos de origen para cargar en SQL Data Warehouse. Para obtener la base de datos de ejemplo AdventureWorks, vea [Bases de datos de ejemplo AdventureWorks 2014][AdventureWorks 2014 Sample Databases].
-5. **Una base de datos de SQL Data Warehouse y permisos**. Este tutorial se conecta a una instancia de SQL Data Warehouse y carga datos en ella. Necesita permisos para crear una tabla y cargar datos.
-6. **Una regla de firewall**. Tiene que crear una regla de firewall en SQL Data Warehouse con la dirección IP del equipo local para cargar datos en SQL Data Warehouse.
+4. **Una base de datos de Azure SQL Data Warehouse y permisos**. Este tutorial se conecta a una instancia de SQL Data Warehouse y carga datos en ella. Necesita permisos para conectarse, crear una tabla y cargar datos.
 
-## <a name="step-1-create-a-new-integration-services-project"></a>Paso 1: Crear un nuevo proyecto de Integration Services
+## <a name="create-a-new-integration-services-project"></a>Crear un proyecto de Integration Services
 1. Inicie Visual Studio.
 2. En el menú **Archivo**, seleccione **Nuevo | Proyecto**.
 3. Vaya a los tipos de proyecto **Instalados | Plantillas | Inteligencia empresarial | Integration Services**.
@@ -66,7 +70,55 @@ Se abre Visual Studio y crea un nuevo proyecto de Integration Services (SSIS). L
   
     ![][01]
 
-## <a name="step-2-create-the-basic-data-flow"></a>Paso 2: Crear el flujo de datos básico
+## <a name="option-1---use-the-sql-dw-upload-task"></a>Opción 1: usar la tarea de carga de SQL DW
+
+El primer enfoque es un paquete que usa la tarea de carga de SQL DW. Esta tarea encapsula la información de origen y destino. Se supone que los datos de origen se almacenan en archivos de texto delimitado, ya sea localmente o en Azure Blob Storage.
+
+### <a name="prerequisites-for-option-1"></a>Requisitos previos de la opción 1
+
+Para seguir el tutorial con esta opción, necesitará lo siguiente:
+
+- El [Feature Pack de Microsoft SQL Server Integration Services para Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]. La tarea de carga de SQL DW es un componente del Feature Pack.
+
+- Una cuenta de [Azure Blob Storage](https://docs.microsoft.com/azure/storage/). La tarea de carga de SQL DW carga datos desde Azure Blob Storage en Azure SQL Data Warehouse. Puede cargar los archivos que ya están en el Blob Storage, o bien puede cargar los archivos de su equipo. Si selecciona los archivos en el equipo, la tarea de carga de SQL DW los carga en Blob Storage en primer lugar para el almacenamiento provisional y, después, los carga en SQL Data Warehouse.
+
+### <a name="add-and-configure-the-sql-dw-upload-task"></a>Agregar y configurar la tarea de carga de SQL DW
+
+1. Arrastre una tarea de carga de SQL DW desde el cuadro de herramientas al centro de la superficie de diseño (en la pestaña **Flujo de control**).
+
+2. Haga doble clic en la tarea para abrir el **Editor de la tarea de carga de SQL DW**.
+
+    ![Página General del Editor de la tarea de carga de SQL DW](media/load-data-to-sql-data-warehouse/azure-sql-dw-upload-task-editor.png)
+
+3. Configure la tarea con la ayuda de las instrucciones del artículo [Tarea de carga de Azure SQL DW](control-flow/azure-sql-dw-upload-task.md). Dado que esta tarea encapsula tanto la información de origen como de destino, así como las asignaciones entre las tablas de origen y destino, el editor de tareas tiene varias páginas de ajustes para configurar.
+
+### <a name="create-a-similar-solution-manually"></a>Crear una solución similar manualmente
+
+Para obtener más control, puede crear manualmente un paquete que emule el trabajo realizado por la tarea de carga de SQL DW. 
+
+1. Use la tarea de carga en el blob de Azure para cargar los datos en Azure Blob Storage. Para obtener la tarea de carga en el blob de Azure, descargue [el Feature pack de Microsoft SQL Server Integration Services para Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure].
+
+2. Luego use la tarea Ejecutar SQL de SSIS para iniciar un script de Polybase que cargue los datos en SQL Data Warehouse. Para obtener un ejemplo que cargue datos desde Azure Blob Storage en SQL Data Warehouse (pero no con SSIS), vea [Tutorial: Carga de datos en Azure SQL Data Warehouse](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
+
+## <a name="option-2---use-a-source-and-destination"></a>Opción 2: usar un origen y un destino
+
+El segundo enfoque es un paquete típico que usa una tarea Flujo de datos que contiene un origen y un destino. Este enfoque es compatible con una amplia gama de orígenes de datos, incluidos SQL Server y Azure SQL Data Warehouse.
+
+En este tutorial se usa SQL Server como origen de datos. SQL Server se ejecuta en local o en una máquina virtual de Azure.
+
+Para conectarse a SQL Server y a SQL Data Warehouse, puede usar un administrador de conexiones de ADO.NET y un origen y un destino, o bien un administrador de conexiones OLE DB y un origen y un destino. En este tutorial se usa ADO NET porque tiene las mínimas opciones de configuración. OLE DB puede proporcionar un rendimiento ligeramente mejor que ADO NET.
+
+Como método abreviado, puede usar el Asistente para importación y exportación de SQL Server para crear el paquete básico. Después, guarde el paquete y ábralo en Visual Studio o SSDT para verlo y personalizarlo. Para más información, vea [Importar y exportar datos con el Asistente para importación y exportación de SQL Server](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
+
+### <a name="prerequisites-for-option-2"></a>Requisitos previos de la opción 2
+
+Para seguir el tutorial con esta opción, necesitará lo siguiente:
+
+1. **Datos de ejemplo**. En este tutorial se usan datos de ejemplo almacenados en SQL Server en la base de datos de ejemplo AdventureWorks como datos de origen para cargar en SQL Data Warehouse. Para obtener la base de datos de ejemplo AdventureWorks, vea [AdventureWorks Sample Databases][AdventureWorks 2014 Sample Databases] (Bases de datos de ejemplo de AdventureWorks).
+
+2. **Una regla de firewall**. Tiene que crear una regla de firewall en SQL Data Warehouse con la dirección IP del equipo local para cargar datos en SQL Data Warehouse.
+
+### <a name="create-the-basic-data-flow"></a>Crear el flujo de datos básico
 1. Arrastre una tarea Flujo de datos desde el cuadro de herramientas al centro de la superficie de diseño (en la pestaña **Flujo de control**).
    
     ![][02]
@@ -76,7 +128,7 @@ Se abre Visual Studio y crea un nuevo proyecto de Integration Services (SSIS). L
    
     ![][09]
 
-## <a name="step-3-configure-the-source-adapter"></a>Paso 3: Configurar el adaptador de origen
+### <a name="configure-the-source-adapter"></a>Configurar el adaptador de origen
 1. Haga doble clic en el adaptador de origen para abrir el **Editor de orígenes de ADO.NET**.
    
     ![][03]
@@ -107,7 +159,7 @@ Se abre Visual Studio y crea un nuevo proyecto de Integration Services (SSIS). L
 8. En el cuadro de diálogo **Vista previa de los resultados de la consulta**, haga clic en **Cerrar** para volver al **Editor de orígenes de ADO.NET**.
 9. En el **Editor de orígenes de ADO.NET**, haga clic en **Aceptar** para acabar de configurar el origen de datos.
 
-## <a name="step-4-connect-the-source-adapter-to-the-destination-adapter"></a>Paso 4: Conectar el adaptador de origen al adaptador de destino
+### <a name="connect-the-source-adapter-to-the-destination-adapter"></a>Conectar el adaptador de origen al adaptador de destino
 1. Seleccione el adaptador de origen en la superficie de diseño.
 2. Seleccione la flecha azul que va desde el adaptador de origen y arrástrela al editor de destino hasta que quede en su lugar.
    
@@ -115,7 +167,7 @@ Se abre Visual Studio y crea un nuevo proyecto de Integration Services (SSIS). L
    
     En un paquete de SSIS típico, se usa una serie de otros componentes del cuadro de herramientas de SSIS entre el origen y el destino para reestructurar, transformar y limpiar los datos a medida que pasan a través del flujo de datos de SSIS. Para que este ejemplo sea lo más sencillo posible, se conecta el origen directamente al destino.
 
-## <a name="step-5-configure-the-destination-adapter"></a>Paso 5: Configurar el adaptador de destino
+### <a name="configure-the-destination-adapter"></a>Configurar el adaptador de destino
 1. Haga doble clic en el adaptador de destino para abrir el **Editor de destinos de ADO.NET**.
    
     ![][11]
@@ -146,8 +198,10 @@ Se abre Visual Studio y crea un nuevo proyecto de Integration Services (SSIS). L
     ![][13]
 9. Haga clic en **Aceptar** para acabar de configurar el origen de datos.
 
-## <a name="step-6-run-the-package-to-load-the-data"></a>Paso 6: Ejecutar el paquete para cargar los datos
+## <a name="run-the-package-to-load-the-data"></a>Ejecutar el paquete para cargar los datos
 Para ejecutar el paquete, haga clic en el botón **Iniciar** de la barra de herramientas o seleccione una de las opciones **Ejecutar** del menú **Depurar**.
+
+En los siguientes párrafos se describe lo que verá si ha creado el paquete con la segunda opción que se describe en este artículo, es decir, con un flujo de datos que contiene un origen y un destino.
 
 A medida que el paquete comienza a ejecutarse, se ven ruedas amarillas que giran para indicar actividad, además del número de filas procesadas hasta el momento.
 
@@ -160,9 +214,10 @@ Cuando el paquete termina de ejecutarse, se ven marcas de verificación verdes p
 ¡Enhorabuena! Ha usado correctamente SQL Server Integration Services para cargar datos en Azure SQL Data Warehouse.
 
 ## <a name="next-steps"></a>Pasos siguientes
-* Obtenga más información sobre el flujo de datos de SSIS. Empiece aquí: [Flujo de datos][Data Flow].
-* Obtenga más información sobre cómo depurar paquetes y solucionar los problemas que planteen en el entorno de diseño. Empiece aquí: [Herramientas para solucionar problemas con el desarrollo de paquetes][Troubleshooting Tools for Package Development].
-* Obtenga más información sobre cómo implementar los paquetes y los proyectos de SSIS en Integration Services Server u otra ubicación de almacenamiento. Empiece aquí: [Implementación de proyectos y paquetes][Deployment of Projects and Packages].
+
+- Obtenga más información sobre cómo depurar paquetes y solucionar los problemas que planteen en el entorno de diseño. Empiece aquí: [Herramientas para solucionar problemas con el desarrollo de paquetes][Troubleshooting Tools for Package Development].
+
+- Obtenga más información sobre cómo implementar los paquetes y los proyectos de SSIS en Integration Services Server u otra ubicación de almacenamiento. Empiece aquí: [Implementación de proyectos y paquetes][Deployment of Projects and Packages].
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-data-warehouse/ssis-designer-01.png
@@ -193,7 +248,7 @@ Cuando el paquete termina de ejecutarse, se ven marcas de verificación verdes p
 [Deployment of Projects and Packages]: ./packages/deploy-integration-services-ssis-projects-and-packages.md
 
 <!--Other Web references-->
-[Microsoft SQL Server 2016 Integration Services Feature Pack for Azure]: http://go.microsoft.com/fwlink/?LinkID=626967
-[SQL Server Evaluations]: https://www.microsoft.com/evalcenter/evaluate-sql-server-2016
+[Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]: https://www.microsoft.com/download/details.aspx?id=54798
+[SQL Server Evaluations]: https://www.microsoft.com/evalcenter/evaluate-sql-server-2017
 [Visual Studio Community]: https://www.visualstudio.com/products/visual-studio-community-vs.aspx
 [AdventureWorks 2014 Sample Databases]: https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks

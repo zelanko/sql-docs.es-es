@@ -18,19 +18,19 @@ caps.latest.revision: 52
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 8c7882dc973f51379483d629a6d02422931de7b1
-ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
+ms.openlocfilehash: 53f49ad6acc123634143eec72b0f9b5b084cd929
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066005"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609664"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Crear o configurar un agente de escucha del grupo de disponibilidad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema se explica cómo crear o configurar un único *agente de escucha de grupo de disponibilidad* para un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 > [!IMPORTANT]  
->  Para crear el primer agente de escucha del grupo de disponibilidad de un grupo de disponibilidad, se recomienda encarecidamente usar [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Evite crear un agente de escucha directamente en el clúster de WSFC salvo cuando sea necesario, por ejemplo para crear un agente de escucha adicional.  
+>  Para crear el primer agente de escucha del grupo de disponibilidad de un grupo de disponibilidad, se recomienda encarecidamente usar [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Evite crear un agente de escucha directamente en el clúster de WSFC salvo cuando sea necesario, por ejemplo para crear un agente de escucha adicional.  
   
 -   **Antes de empezar:**  
   

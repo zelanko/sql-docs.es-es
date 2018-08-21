@@ -18,12 +18,12 @@ caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 29c9a2ee3c323c9689e7ece0b2b1318a7051321e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d973be20ee14975fce34e7712d44ea8338931fa
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011742"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661458"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Captura de datos modificados y otras características de SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,11 @@ ms.locfileid: "33011742"
   
 -   [Replicación transaccional](#TransReplication)  
   
--   [Restaurar o asociar una base de datos habilitada para la captura de datos modificados](#RestoreOrAttach)  
+-   [Restaurar o asociar una base de datos habilitada para la captura de datos modificados](#RestoreOrAttach)
+
+-   [Bases de datos independientes](#Contained)
   
-##  <a name="ChangeTracking"></a> Change Tracking  
+##  <a name="ChangeTracking"></a> Seguimiento de los cambios  
  La captura de datos modificados y el [seguimiento de cambios](../../relational-databases/track-changes/about-change-tracking-sql-server.md) pueden habilitarse en la misma base de datos. No se requiere ninguna consideración especial. Para obtener más información, vea [Trabajar con el seguimiento de cambios &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md).  
   
 ##  <a name="DatabaseMirroring"></a> Creación de reflejo de base de datos  
@@ -79,6 +81,9 @@ ms.locfileid: "33011742"
      `SQL Server cannot load database '%.*ls' because Change Data Capture is enabled. The currently installed edition of SQL Server does not support Change Data Capture. Either restore database without KEEP_CDC option, or upgrade the instance to one that supports Change Data Capture.`  
   
  Puede usar [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) para quitar la captura de datos modificados desde una base de datos restaurada o asociada.  
+  
+##  <a name="Contained"></a> Bases de datos independientes  
+ La captura de datos modificados no se admite en [bases de datos independientes](../../relational-databases/databases/contained-databases.md).
   
 ## <a name="change-data-capture-and-always-on"></a>Captura de datos modificados y AlwaysOn  
  Cuando se usa AlwaysOn, la enumeración de cambios se debe realizar en la réplica secundaria con el fin de reducir la carga del disco en la réplica principal.  

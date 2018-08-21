@@ -16,12 +16,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e559147286aa4f5664c09c38a80a4e568eff175
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 61e97bf25b13f8edd225e7b57ede4cecd0a78e35
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407957"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175330"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Tutorial: Publicar un paquete SSIS como una vista SQL
   En este tutorial se explica detalladamente cómo publicar un paquete SSIS como una vista SQL en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -130,7 +130,7 @@ ms.locfileid: "35407957"
   
         1.  Especifique el esquema de base de datos en el que quiere crear la vista (campo Esquema).  
   
-        2.  Especifique si los datos se van a cifrar antes de enviarlos a través de la red (campo Cifrar). Consulte el tema [Usar el cifrado sin validación](http://msdn.microsoft.com/library/ms131691.aspx) para ver más detalles sobre esta configuración y la configuración de TrustServerCertificate.  
+        2.  Especifique si los datos se van a cifrar antes de enviarlos a través de la red (campo Cifrar). Consulte el tema [Usar el cifrado sin validación](../../relational-databases/native-client/features/using-encryption-without-validation.md) para ver más detalles sobre esta configuración y la configuración de TrustServerCertificate.  
   
         3.  Especifique si se puede usar un certificado de servidor autofirmado cuando la opción de cifrado esté habilitada (campo**TrustServerCertificate** ).  
   
@@ -213,7 +213,7 @@ GO
   
  En el tiempo de ejecución, cuando la vista se ejecuta, la consulta de servidor vinculado definida en la vista inicia el paquete SSIS especificado en dicha consulta y recibe el resultado del paquete como un conjunto de resultados tabulares.  
   
-1.  Antes de crear la vista, escriba y ejecute la siguiente consulta en la ventana de nueva consulta. OPENQUERY es una función de conjunto de filas compatible con SQL Server. Ejecuta la consulta de paso a través especificada en el servidor vinculado por medio del proveedor OLE DB asociado al servidor vinculado. Se puede hacer referencia a OPENQUERY en la cláusula FROM de una consulta como si fuera un nombre de tabla. Para obtener más información, consulte la [documentación de OPENQUERY en MSDN Library](http://msdn.microsoft.com/library/ms188427.aspx) .  
+1.  Antes de crear la vista, escriba y ejecute la siguiente consulta en la ventana de nueva consulta. OPENQUERY es una función de conjunto de filas compatible con SQL Server. Ejecuta la consulta de paso a través especificada en el servidor vinculado por medio del proveedor OLE DB asociado al servidor vinculado. Se puede hacer referencia a OPENQUERY en la cláusula FROM de una consulta como si fuera un nombre de tabla. Para obtener más información, consulte la [documentación de OPENQUERY en MSDN Library](../../t-sql/functions/openquery-transact-sql.md) .  
   
     ```sql
     SELECT * FROM OPENQUERY(SSISFeedServer,N'Folder=Eldorado;Project=SSISPackagePublishing;Package=Package.dtsx')   

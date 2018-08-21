@@ -19,12 +19,12 @@ caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ccbf65c2b1d297b8fd36ef75f84a6a8c09b21175
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 470355f14c589d5ef62d9de2493d64ef4b8f48aa
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950500"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175315"
 ---
 # <a name="sql-server-agent-jobs-object"></a>Jobs (objeto del Agente SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "32950500"
   
  La tabla siguiente contiene los contadores de **SQLAgent:Jobs** .  
   
-|Nombre|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
 |**Trabajos activos**|Este contador muestra el número de trabajos que se están ejecutando.|  
 |**Trabajos con error**|Este contador muestra el número de trabajos que han terminado con un error.|  
@@ -43,7 +43,7 @@ ms.locfileid: "32950500"
   
  Cada contador del objeto contiene las instancias siguientes:  
   
-|Instancia|Description|  
+|Instancia|Descripción|  
 |--------------|-----------------|  
 |**_Total**|Información para todos los trabajos.|  
 |**Alertas**|Información de los trabajos iniciados por las alertas.|  
@@ -51,8 +51,8 @@ ms.locfileid: "32950500"
 |**Programaciones**|Información de los trabajos iniciados por las programaciones.|  
   
 ## <a name="see-also"></a>Ver también  
- [Implementar trabajos](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
- [Usar objetos de rendimiento](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [Implementar trabajos](../../ssms/agent/implement-jobs.md)   
+ [Usar objetos de rendimiento](../../ssms/agent/use-performance-objects.md)   
  [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

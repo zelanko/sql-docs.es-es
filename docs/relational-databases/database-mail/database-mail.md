@@ -20,11 +20,12 @@ caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9364bacf4e9f601c8cce9d5dfe4cd550d4b7405e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 79469da3f919204e3ceb0d3e9a4b9968ba56ba02
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175331"
 ---
 # <a name="database-mail"></a>Correo electrónico de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +114,7 @@ ms.lasthandoff: 05/03/2018
   
  Puede configurar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para enviar mensajes de correo electrónico a operadores predefinidos cuando:  
   
--   Se desencadene una alerta. Las alertas se pueden configurar para enviar una notificación por correo electrónico acerca de eventos específicos que se produzcan. Por ejemplo, es posible configurar alertas para que avisen a un operador acerca de un determinado evento de la base de datos o una situación del sistema operativo que precise una acción inmediata. Para obtener más información sobre cómo configurar alertas, vea [Alertas](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef).  
+-   Se desencadene una alerta. Las alertas se pueden configurar para enviar una notificación por correo electrónico acerca de eventos específicos que se produzcan. Por ejemplo, es posible configurar alertas para que avisen a un operador acerca de un determinado evento de la base de datos o una situación del sistema operativo que precise una acción inmediata. Para obtener más información sobre cómo configurar alertas, vea [Alertas](../../ssms/agent/alerts.md).  
   
 -   Se lleve a cabo o no se complete una tarea programada, como una copia de seguridad de la base de datos o un evento de replicación. Por ejemplo, puede usar el correo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para notificar a los operadores si se produce un error durante el procesamiento a fin de mes.  
   

@@ -18,12 +18,12 @@ caps.latest.revision: 49
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9ec58d3ab88003d1b0ff3fefae3196557043db0b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 51e618a3b81243883276193260b68848d8b2f9fe
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922318"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175319"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>Realizar copia de seguridad de un registro de transacciones (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "32922318"
 
 De forma predeterminada, los permisos BACKUP DATABASE y BACKUP LOG necesarios se conceden a los miembros del rol fijo de servidor **sysadmin** y de los roles fijos de base de datos **db_owner** y **db_backupoperator** .  
   
- Los problemas de propiedad y permisos del archivo físico del dispositivo de copia de seguridad pueden interferir con una operación de copia de seguridad. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe poder leer y escribir en el dispositivo y la cuenta en la que se ejecuta el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener permisos de escritura. Pero [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), que agrega una entrada para un dispositivo de copia de seguridad en las tablas del sistema, no comprueba los permisos de acceso a los archivos. Es posible que los problemas con los permisos del archivo físico del dispositivo de copia de seguridad no sean evidentes para usted hasta que intente tener acceso al [recurso físico](https://msdn.microsoft.com/library/ms179313.aspx) al tratar de realizar una copia de seguridad o restaurar. De este modo, una vez más, compruebe los permisos antes de empezar.
+ Los problemas de propiedad y permisos del archivo físico del dispositivo de copia de seguridad pueden interferir con una operación de copia de seguridad. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe poder leer y escribir en el dispositivo y la cuenta en la que se ejecuta el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener permisos de escritura. Pero [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), que agrega una entrada para un dispositivo de copia de seguridad en las tablas del sistema, no comprueba los permisos de acceso a los archivos. Es posible que los problemas con los permisos del archivo físico del dispositivo de copia de seguridad no sean evidentes para usted hasta que intente tener acceso al [recurso físico](backup-devices-sql-server.md) al tratar de realizar una copia de seguridad o restaurar. De este modo, una vez más, compruebe los permisos antes de empezar.
   
   
 ## <a name="back-up-using-ssms"></a>Realizar una copia de seguridad usando SSMS  

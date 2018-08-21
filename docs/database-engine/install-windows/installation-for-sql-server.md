@@ -18,13 +18,14 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 781bebda84fe0d4e48414fb327e45fe837ed9356
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 228202a91e14b7735cd0fba1f6eb60dad8832a7e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771541"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175342"
 ---
 # <a name="sql-server-installation"></a>Instalación de SQL Server
 
@@ -80,7 +81,7 @@ Describe cómo preparar el equipo para [!INCLUDE[ssNoVersion](../../includes/ssn
 [Instalar las características de SQL Server BI con SharePoint &#40;Power Pivot y Reporting Services&#41;](http://msdn.microsoft.com/library/3166107c-30c2-468e-bb1b-bb42b79b37c3)  
  En esta sección se explica cómo instalar las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un entorno de SharePoint. Identifica qué características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] están disponibles para una versión y edición concreta de SharePoint. También incluye los procedimientos de instalación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint y Reporting Services en modo de SharePoint.  
   
-![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Instale la nueva base de datos de ejemplo, [Wide World Importers](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx). 
+![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Instale la nueva base de datos de ejemplo, [Wide World Importers](../../sample/world-wide-importers/wide-world-importers-documentation.md). 
   
 [Otras bases de datos de ejemplo y ejemplos de SQL Server](http://sqlserversamples.codeplex.com/)  
  Describe cómo instalar y configurar ejemplos y bases de datos de ejemplo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

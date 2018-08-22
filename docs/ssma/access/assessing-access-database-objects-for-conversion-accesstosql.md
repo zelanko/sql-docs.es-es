@@ -25,18 +25,18 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d2d804734432cfd396acb017d6358310debeec1f
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: dc8649b028ba925e215d21ca9c7f4f52a8e69ec5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979427"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392626"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>Evaluación de los objetos de base de datos de acceso para la conversión (AccessToSQL)
-Antes de cargar los objetos y migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, debe determinar cuánto de la migración se realice correctamente y cuánto tiempo puede tardar la conversión. SSMA puede crear un informe de evaluación que muestra el porcentaje de objetos que se han convertido correctamente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o estimaciones de tiempo y la sintaxis de SQL Azure para realizar la migración. SSMA también le permite ver los problemas específicos que causaba errores de conversión.  
+Antes de cargar los objetos y migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, debe determinar cuánto de la migración se realice correctamente y cuánto tiempo puede tardar la conversión. SSMA puede crear un informe de evaluación que muestra el porcentaje de objetos que se han convertido correctamente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o estimaciones de tiempo y la sintaxis de SQL Azure para realizar la migración. SSMA también le permite ver los problemas específicos que causaba errores de conversión.  
   
 ## <a name="creating-assessment-reports"></a>Creación de informes de evaluación  
-Cuando crea un informe de evaluación, SSMA convierte los objetos seleccionados de base de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o sintaxis de SQL Azure y, a continuación, muestra los resultados.  
+Cuando crea un informe de evaluación, SSMA convierte los objetos seleccionados de base de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o sintaxis de SQL Azure y, a continuación, muestra los resultados.  
   
 **Para crear un informe de evaluación**  
   
@@ -50,7 +50,7 @@ Cuando crea un informe de evaluación, SSMA convierte los objetos seleccionados 
   
     SSMA muestra el progreso en la barra de estado en la parte inferior de la ventana. Si está visible el panel de resultados, también verá los mensajes en el panel de salida.  
   
-Una vez completada la evaluación, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant para Access: aparecerá la ventana de informe de evaluación.  
+Una vez completada la evaluación, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant para Access: aparecerá la ventana de informe de evaluación.  
   
 ## <a name="using-assessment-reports"></a>Uso de informes de evaluación  
 La ventana de informe de evaluación contiene tres paneles: un explorador, un panel de detalles y un panel de mensajes.  
@@ -64,8 +64,8 @@ La ventana de informe de evaluación contiene tres paneles: un explorador, un pa
 Debe corregir los errores antes de volver a ejecutar el informe de evaluación o convertir los esquemas. Para buscar errores, haga clic en el **errores** situado en el panel de mensajes y, a continuación, expanda cada error para ver una lista de objetos donde se produjo el error. Si hace clic en un objeto en el panel de mensajes, todos los errores y advertencias para ese objeto aparecerá en el panel de detalles.  
   
 ## <a name="next-step"></a>Paso siguiente  
-[Conversión de objetos de base de datos de Access](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+[Conversión de objetos de base de datos de Access](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Migrar bases de datos de Access a SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrar bases de datos de Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

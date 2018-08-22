@@ -1,5 +1,5 @@
 ---
-title: Configuración (migración) (OracleToSQL) del proyecto | Documentos de Microsoft
+title: Configuración (migración) (OracleToSQL) del proyecto | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,53 +13,53 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: f5c4568708ddb4b19cd9b49d232746f0b1e7693f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: d644a2dd1d8cef03618aec7651b4db37795b1507
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777821"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392147"
 ---
 # <a name="project-settings-migration-oracletosql"></a>Configuración del proyecto (migración) (OracleToSQL)
-La página de migración de la **configuración del proyecto** cuadro de diálogo contiene la configuración que permiten personalizar cómo SSMA migra los datos de Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+La página de migración de la **configuración del proyecto** cuadro de diálogo contiene la configuración que permiten personalizar cómo SSMA migra datos desde Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-El panel de migración está disponible tanto en el **configuración del proyecto** y **configuración de proyecto predeterminada** cuadros de diálogo.  
+El panel de la migración está disponible tanto en el **configuración del proyecto** y **configuración de proyecto predeterminada** cuadros de diálogo.  
   
--   Para especificar la configuración para todos los proyectos SSMA, en la **herramientas** menú, seleccione **la configuración predeterminada del proyecto**, seleccione el tipo de proyecto de migración para el que se requiere para puede ver o cambiar de configuración **versión de destino de migración** desplegable haga clic en **General** en la parte inferior del panel izquierdo y, a continuación, haga clic en **migración**.  
+-   Para especificar la configuración para todos los proyectos SSMA, en el **herramientas** menú, seleccione **la configuración predeterminada del proyecto**, seleccione el tipo de proyecto de migración para el que la configuración es necesaria para ver o cambiar de **Versión de destino de migración** desplegable clic **General** en la parte inferior del panel izquierdo y, a continuación, haga clic en **migración**.  
   
--   Para especificar la configuración para el proyecto actual, en la **herramientas** menú, seleccione **configuración del proyecto**, haga clic en **General** en la parte inferior del panel izquierdo y, a continuación, haga clic en **migración**.  
+-   Para especificar la configuración para el proyecto actual, en el **herramientas** menú, seleccione **configuración del proyecto**, haga clic en **General** en la parte inferior del panel izquierdo y, a continuación, haga clic en **Migración**.  
   
 ## <a name="migration-engine"></a>Motor de migración  
   
 |Término|Definición|  
 |--------|--------------|  
-|**Motor de migración**|Especifica el motor de base de datos utilizado durante la migración de datos. Migración de datos del lado cliente se refiere al cliente SSMA recuperar los datos de origen y masiva insertar datos en SQL Server. Migración de datos del lado servidor se refiere a SSMA datos migración engine (programa de copia masiva) en el cuadro de SQL Server como un trabajo del Agente SQL recuperan datos del origen de e insertando directamente en SQL Server, lo que evita un cliente-salto adicional (un mejor rendimiento).<br /><br />**Modo predeterminado**: motor de migración de datos de lado cliente<br /><br />**Modo optimista**: motor de migración de datos de lado cliente<br /><br />**Modo completo**: motor de migración de datos de lado cliente|  
+|**Motor de migración**|Especifica utilizada durante la migración de datos de motor de base de datos. Migración de datos del lado cliente se refiere al cliente SSMA recuperar los datos de origen y de insertar datos en SQL Server de forma masiva. Migración de datos del lado servidor se refiere a SSMA datos motor de migración (programa de copia masiva) que se ejecutan en el cuadro de SQL Server como un trabajo del Agente SQL al recuperar datos desde el origen e insertar directamente en SQL Server, lo que evita un cliente de-salto adicional (un mejor rendimiento).<br /><br />**Modo predeterminado**: motor de migración de datos de lado cliente<br /><br />**Modo optimista**: motor de migración de datos de lado cliente<br /><br />**Modo completo**: motor de migración de datos de lado cliente|  
   
 > [!IMPORTANT]  
-> Cuando el **motor de migración de** opción está establecida en **motor de migración de datos de lado servidor**, un nuevo proyecto de opción de configuración **motor de migración de datos de lado de servidor de uso 32 bits** se muestra. Especifica si la utilidad de programa de copia masiva (BCP) de 32 bits o 64 bits se usa para migrar los datos.  
+> Cuando el **migración motor** opción está establecida en **motor de migración de datos de lado servidor**, un nuevo proyecto, establecer la opción **motor de migración de datos de uso 32 bits Server lado** se muestra . Especifica si se usa la utilidad de programa de copia masiva (BCP) de 32 bits o 64 bits para migrar los datos.  
   
 ## <a name="miscellaneous-options"></a>Otras opciones  
   
 |Término|Definición|  
 |--------|--------------|  
-|**Tamaño del lote**|Especifica el lote de tamaño que se usa durante la migración de datos.<br /><br />**Modo predeterminado**: 10000<br /><br />**Modo optimista**: 10000<br /><br />**Modo completo**: 10000|  
+|**Tamaño de lote**|Especifica el lote de tamaño que se usa durante la migración de datos.<br /><br />**Modo predeterminado**: 10000<br /><br />**Modo optimista**: 10000<br /><br />**Modo completo**: 10000|  
 |**Restricciones CHECK**|Especifica si SSMA debe comprobar restricciones cuando inserta datos en tablas de SQL Server.<br /><br />**Modo predeterminado**: False<br /><br />**Modo optimista**: False<br /><br />**Modo completo**: False|  
-|**Tiempo de espera de migración de datos**|Especifica el tiempo de espera que se utiliza durante la migración de datos<br /><br />**Modo predeterminado**: 15<br /><br />**Modo optimista**: 15<br /><br />**Modo completo**: 15|  
-|**Opciones de migración de datos extendidos**|Muestra opciones de migración de datos adicionales para cada tabla en la pestaña de detalle independiente.<br /><br />**Modo predeterminado**: ocultar<br /><br />**Modo optimista**: ocultar<br /><br />**Modo completo**: ocultar|  
+|**Tiempo de espera de migración de datos**|Especifica el tiempo de espera utilizado durante la migración de datos<br /><br />**Modo predeterminado**: 15<br /><br />**Modo optimista**: 15<br /><br />**Modo completo**: 15|  
+|**Opciones de migración de datos extendidos**|Muestra las opciones de migración de datos adicionales para cada tabla en la pestaña Detalles independientes.<br /><br />**Modo predeterminado**: ocultar<br /><br />**Modo optimista**: ocultar<br /><br />**Modo completo**: ocultar|  
 |**Activar desencadenadores**|Especifica si SSMA debe activar desencadenadores de inserción cuando agrega datos a tablas de SQL Server.<br /><br />**Modo predeterminado**: False<br /><br />**Modo optimista**: False<br /><br />**Modo completo**: False|  
 |**Mantener valores de identidad**|Especifica si SSMA conserva valores null en los datos de origen cuando agrega datos a SQL Server, independientemente de los valores predeterminados que se especifican en SQL Server.<br /><br />**Modo predeterminado**: True<br /><br />**Modo optimista**: True<br /><br />**Modo completo**: False|  
 |**Mantener valores NULL**|Especifica si SSMA conserva valores null en los datos de origen cuando agrega datos a SQL Server, independientemente de los valores predeterminados que se especifican en SQL Server.<br /><br />**Modo predeterminado**: True<br /><br />**Modo optimista**: True<br /><br />**Modo completo**: True|  
 |**Marcar la operación de recorte de cadena con error**|Si el tamaño de la columna de destino es menor que la longitud de la cadena de origen, el valor se recorta y se marcará como error.<br /><br />**Modo predeterminado**: Sí<br /><br />**Modo optimista**: Sí<br /><br />**Modo completo**: Sí|  
-|**Al producirse un error**|Detiene la migración de datos cuando se produce un error. Tiene tres opciones:<br /><br />**Detener la migración:** detiene la operación de migración de datos<br /><br />**Continúe con la siguiente tabla:** detiene la migración de datos a la tabla actual y avanza al siguiente<br /><br />**Vaya al siguiente lote:** detiene la migración de datos en el lote actual y avanza al siguiente<br /><br />**Modo predeterminado**: continuar con el siguiente lote<br /><br />**Modo optimista**: continuar con el siguiente lote<br /><br />**Modo completo**: continuar con el siguiente lote|  
-|**Reemplace las fechas no compatibles**|Especifica si SSMA debe corregir las fechas anteriores a la más antigua [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime** fecha (01 de enero de 1753).<br /><br />Para mantener los valores de fecha actual, seleccione **no hacen nada**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] no aceptará las fechas anteriores 01 de enero de 1753 en una columna de fecha y hora. Si utiliza las fechas anteriores, debe convertir los valores de fecha y hora a valores de caracteres.<br /><br />Para convertir las fechas anteriores 01 de enero de 1753 a NULL, seleccione **reemplace con NULL**.<br /><br />Para reemplazar las fechas anteriores 01 de enero de 1753 con una fecha admitida, seleccione **reemplazar con más cercano de fecha admitido**.<br /><br />**Modo predeterminado**: no hacer nada<br /><br />**Modo optimista**: no hacer nada<br /><br />**Modo completo**: reemplazar con más cercano de fecha admitido|  
-|**Bloqueo de tabla**|Especifica si SSMA bloquea las tablas cuando agrega datos a tablas durante la migración de datos. Obtiene un bloqueo de actualización masiva durante la operación de copia masiva. Si el valor es False, se establece un bloqueo en el nivel de fila.<br /><br />**Modo predeterminado**: True<br /><br />**Modo optimista**: True<br /><br />**Modo completo**: True|  
+|**Al producirse un error**|Detiene la migración de datos cuando se produce un error. Tiene tres opciones:<br /><br />**Detener la migración:** detiene la operación de migración de datos<br /><br />**Continúe con la siguiente tabla:** deja de migración de datos a la tabla actual y avanza a la siguiente<br /><br />**Vaya al siguiente lote:** deja de migración de datos para el lote actual y avanza a la siguiente<br /><br />**Modo predeterminado**: continúe con el siguiente lote<br /><br />**Modo optimista**: continúe con el siguiente lote<br /><br />**Modo completo**: continúe con el siguiente lote|  
+|**Reemplazar las fechas no compatibles**|Especifica si SSMA debería corregir las fechas anteriores a la primera [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** fecha (01 de enero de 1753).<br /><br />Para conservar los valores de fecha actual, seleccione **no hacen nada**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no aceptará las fechas anteriores 01 de enero de 1753 en una columna de fecha y hora. Si usa las fechas anteriores, debe convertir los valores de fecha y hora para los valores de caracteres.<br /><br />Para convertir las fechas anteriores 01 de enero de 1753 a NULL, seleccione **reemplace con NULL**.<br /><br />Para reemplazar las fechas anteriores 01 de enero de 1753 con una fecha admitida, seleccione **reemplazar con más cercano de fecha admitido**.<br /><br />**Modo predeterminado**: no hacer nada<br /><br />**Modo optimista**: no hacer nada<br /><br />**Modo completo**: reemplazar con más cercano de fecha admitido|  
+|**Bloqueo de tabla**|Especifica si SSMA bloquea las tablas cuando agrega datos a las tablas durante la migración de datos. Obtiene un bloqueo de actualización masiva para la duración de la operación de copia masiva. Si el valor es False, se establece un bloqueo en el nivel de fila.<br /><br />**Modo predeterminado**: True<br /><br />**Modo optimista**: True<br /><br />**Modo completo**: True|  
   
-## <a name="parallel-data-migration"></a>Migración de datos en paralelo  
+## <a name="parallel-data-migration"></a>Migración de datos paralelos  
   
 |Término|Definición|  
 |--------|--------------|  
-|**Modo de migración de datos en paralelo**|Especifica el modo utilizado para los subprocesos de bifurcación para permitir la migración de datos en paralelo. En el modo Auto, SSMA elige el número de subprocesos (10 de forma predeterminada) bifurcado para migrar los datos. En el modo personalizado, el usuario puede especificar el número de subprocesos bifurcado para migrar datos (valor mínimo es 1 y el máximo es 100). Actualmente, motor de migración cliente lado datos solo admite la migración de datos en paralelo.<br /><br />**Modo predeterminado**: automático<br /><br />**Modo optimista**: automático<br /><br />**Modo completo**: automático|  
+|**Modo de migración de datos paralelos**|Especifica el modo utilizado para los subprocesos de bifurcación para habilitar la migración de datos en paralelo. En el modo Auto, SSMA elige el número de subprocesos (10 de forma predeterminada) bifurcado para migrar los datos. En el modo personalizado, el usuario puede especificar el número de subprocesos bifurcado para migrar datos (valor mínimo es 1 y el máximo es 100). Actualmente, motor de migración cliente lado datos solo admite la migración de datos en paralelo.<br /><br />**Modo predeterminado**: automática<br /><br />**Modo optimista**: automática<br /><br />**Modo completo**: automática|  
   
 > [!IMPORTANT]  
-> Cuando el **modo de migración de datos paralelo** opción está establecida en **personalizado**, un nuevo proyecto de opción de configuración **el número de subprocesos** se muestra. Especifica el número de subprocesos usados para la migración de datos.  
+> Cuando el **modo de migración de datos paralelo** opción está establecida en **personalizado**, un nuevo proyecto, establecer la opción **el número de subprocesos** se muestra. Especifica el número de subprocesos usados para la migración de datos.  
   

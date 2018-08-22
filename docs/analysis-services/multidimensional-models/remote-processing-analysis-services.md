@@ -1,5 +1,5 @@
 ---
-title: Remoto de procesamiento (Analysis Services) | Documentos de Microsoft
+title: Remoto de procesamiento (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0e7afa72ef5a2f3ad9c27f0d8586b622c033be73
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4860a890ba0443b66f9568edd05257eff7ad70b2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022312"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393758"
 ---
 # <a name="remote-processing-analysis-services"></a>Procesamiento remoto (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,12 +26,12 @@ ms.locfileid: "34022312"
   
 -   En el servidor remoto, la opción **Permitir conexiones remotas a este equipo** debe estar habilitada y la cuenta que emite la solicitud de procesamiento debe aparecer como un usuario permitido.  
   
--   Deben configurarse reglas de firewall de Windows para permitir conexiones entrantes a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Compruebe que puede conectarse a la instancia remota de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Consulte [Configurar Firewall de Windows para permitir el acceso a Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+-   Deben configurarse reglas de firewall de Windows para permitir conexiones entrantes a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Compruebe que puede conectarse a la instancia remota de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Consulte [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 -   Resuelva los errores de procesamiento local existente antes de intentar ejecutar el procesamiento remoto. Compruebe que, si la solicitud de procesamiento es local, los datos se puedan recuperar correctamente desde el origen de datos relacional externo. Vea [Establezca las opciones de suplantación &#40;SSAS - multidimensional&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md) para obtener instrucciones sobre cómo especificar las credenciales que se han usado para recuperar los datos.  
   
 ## <a name="on-demand-remote-processing"></a>Procesamiento remoto a petición  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]acepta las solicitudes de procesamiento de las cuentas de usuario o aplicación que tienen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permisos de administrador. Si es administrador, compruebe que puede conectarse a la instancia remota y procesar la base de datos manualmente a través de la conexión remota.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] acepta las solicitudes de procesamiento de las cuentas de usuario o de aplicación que tienen permisos de administrador de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si es administrador, compruebe que puede conectarse a la instancia remota y procesar la base de datos manualmente a través de la conexión remota.  
   
 1.  En el equipo que se usará para programar el procesamiento, inicie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y conéctese a la instancia remota de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
@@ -48,9 +48,9 @@ ms.locfileid: "34022312"
   
  Use los siguientes vínculos para establecer permisos:  
   
--   [Configurar el Agente SQL Server](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900)  
+-   [Configurar el Agente SQL Server](../../ssms/agent/configure-sql-server-agent.md)  
   
--   [SQL Server Agent Components](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec) sugiere roles fijos de servidor alternativo si la concesión de permisos de **sysadmin** no es posible.  
+-   [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md) sugiere roles fijos de servidor alternativo si la concesión de permisos de **sysadmin** no es posible.  
   
  Una vez configurados los permisos de cuenta, continúe con estos pasos.  
   
@@ -91,10 +91,10 @@ ms.locfileid: "34022312"
 2.  Como paso final, modifique el trabajo para que se ejecute según una programación definida y agregue las alertas o las notificaciones necesarias para administrar el trabajo. También podría ser conveniente ajustar el script de procesamiento o crear varios pasos en el trabajo para procesar objetos de forma independiente.  
   
 ## <a name="see-also"></a>Vea también  
- [Componentes del Agente SQL Server](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
+ [Componentes del Agente SQL Server](../../ssms/agent/sql-server-agent.md)   
  [Programar tareas administrativas de SSAS con el Agente SQL Server](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [Procesamiento por lotes & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [Procesamiento por lotes &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [Procesar un modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Procesar objetos & #40; XMLA & #41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
+ [Procesar objetos &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
   
   

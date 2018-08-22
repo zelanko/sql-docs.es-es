@@ -2,31 +2,29 @@
 title: Cómo realizar la puntuación en tiempo real o la puntuación nativa en SQL Server Machine Learning | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 08/15/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 265a40d01be772b36ce7e49d06aeef8d3f5d81e5
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dfea308f268d666ce070c21a7dd9afa513f95406
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085857"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40393966"
 ---
-# <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>Cómo realizar la puntuación en tiempo real o la puntuación nativa en SQL Server
+# <a name="how-to-perform-real-time-scoring-or-native-scoring-in-sql-server"></a>Cómo realizar la puntuación en tiempo real o la puntuación nativa en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artículo proporciona instrucciones y código de ejemplo de cómo ejecutar la puntuación en tiempo real y las características de puntuación nativas de SQL Server 2017 y SQL Server 2016. El objetivo de puntuación en tiempo real y puntuación nativa es mejorar el rendimiento de las operaciones de puntuación en lotes pequeños.
+Este artículo se muestran dos enfoques en SQL Server para predecir los resultados en casi en tiempo real con modelos previamente entrenados escritos en R. Puntuación en tiempo real tanto puntuación nativa están diseñados para permitir el uso de un modelo de machine learning sin tener que instalar R. Proporciona un modelo previamente entrenado en un formato compatible con - guardado en una base de datos de SQL Server: puede usar técnicas de acceso a datos estándar para generar rápidamente las puntuaciones de predicción en nuevas entradas.
 
-Puntuación en tiempo real tanto puntuación nativa están diseñados para permitir el uso de un modelo de machine learning sin tener que instalar R. Todo lo que necesita hacer es obtener un modelo previamente entrenado en un formato compatible y guárdelo en una base de datos de SQL Server.
-
-## <a name="choosing-a-scoring-method"></a>Elegir un método de puntuación
+## <a name="choose-a-scoring-method"></a>Elija un método de puntuación
 
 Se admiten las siguientes opciones para la predicción por lotes rápidamente:
 
-+ **Puntuación nativa**: la función PREDICT de Transact-SQL en SQL Server 2017
-+ **Puntuación en tiempo real**: con el sp\_rxPredict el procedimiento almacenado en SQL Server 2016 o SQL Server 2017.
++ **Puntuación nativa**: la función PREDICT de Transact-SQL en Azure SQL Database, SQL Server 2017 para Linux y Windows de SQL Server 2017.
++ **Puntuación en tiempo real**: con el sp\_rxPredict el procedimiento almacenado en SQL Server 2016 o SQL Server 2017 (solo Windows).
 
 > [!NOTE]
 > Se recomienda usar la función PREDICT en SQL Server 2017.
@@ -43,9 +41,9 @@ El proceso general de preparar el modelo y, a continuación, generar puntuacione
 
 + La función PREDICT está disponible en todas las ediciones de SQL Server 2017 y está habilitada de forma predeterminada. No es necesario instalar R o habilitar características adicionales.
 
-+ Si usa sp\_rxPredict, son necesarios algunos pasos adicionales. Consulte [habilitar puntuación en tiempo real](#bkmk_enableRtScoring).
++ Si usa sp\_rxPredict, son necesarios algunos pasos adicionales. Consulte [habilitar puntuar en tiempo real](#bkmk_enableRtScoring).
 
-+ En este momento, sólo RevoScaleR y MicrosoftML pueden crear modelos compatibles. Tipos de modelo adicionales están disponibles en el futuro. Para obtener la lista de algoritmos admitidos actualmente, consulte [de puntuación en tiempo real](../real-time-scoring.md).
++ En este momento, sólo RevoScaleR y MicrosoftML pueden crear modelos compatibles. Tipos de modelo adicionales están disponibles en el futuro. Para obtener la lista de algoritmos admitidos actualmente, consulte [puntuar en tiempo real](../real-time-scoring.md).
 
 ### <a name="serialization-and-storage"></a>Almacenamiento y serialización
 
@@ -168,16 +166,16 @@ Si se produce un error, "Error durante la ejecución de la función PREDICT. Mod
 > [!NOTE]
 > Dado que las columnas y valores devuelven por **PREDICT** puede variar por tipo de modelo, debe definir el esquema de los datos devueltos mediante el uso de un **WITH** cláusula.
 
-## <a name="realtime-scoring-with-sprxpredict"></a>En tiempo real con sp_rxPredict de puntuación
+## <a name="real-time-scoring-with-sprxpredict"></a>Puntuación con sp_rxPredict en tiempo real
 
 En esta sección se describe los pasos necesarios para configurar **en tiempo real** predicción y proporciona un ejemplo de cómo llamar a la función desde T-SQL.
 
-### <a name ="bkmk_enableRtScoring"></a> Paso 1. Habilitar el procedimiento de puntuación de en tiempo real
+### <a name ="bkmk_enableRtScoring"></a> Paso 1. Habilitar el procedimiento de puntuación en tiempo real
 
 Debe habilitar esta característica para cada base de datos que desea usar para la puntuación. El administrador del servidor debe ejecutar la utilidad de línea de comandos, RegisterRExt.exe, que se incluye con el paquete RevoScaleR.
 
 > [!NOTE]
-> En tiempo real de trabajo de puntuación, funcionalidad de CLR de SQL debe habilitarse en la instancia; Además, la base de datos debe estar marcado como de confianza. Al ejecutar el script, estas acciones se realizan automáticamente. Sin embargo, tenga en cuenta las implicaciones de seguridad adicional antes de hacer esto!
+> Para puntuar en tiempo real para que funcione, la funcionalidad de CLR de SQL debe habilitarse en la instancia; Además, la base de datos debe estar marcado como de confianza. Al ejecutar el script, estas acciones se realizan automáticamente. Sin embargo, tenga en cuenta las implicaciones de seguridad adicional antes de hacer esto!
 
 1. Abra un símbolo del sistema con privilegios elevados y vaya a la carpeta donde se encuentra RegisterRExt.exe. La siguiente ruta de acceso puede usarse en una instalación predeterminada:
     
@@ -236,15 +234,17 @@ EXEC sp_rxPredict
 > 
 > Por lo tanto, es posible que deba filtrar los tipos no compatibles en los datos de entrada antes de usarlo para puntuar en tiempo real.
 > 
-> Para obtener información acerca de los correspondientes tipos SQL, vea [asignación de tipos de CLR de SQL](https://msdn.microsoft.com/library/bb386947.aspx) o [asignación de datos de parámetros CLR](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data).
+> Para obtener información acerca de los correspondientes tipos SQL, vea [asignación de tipos de CLR de SQL](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) o [asignación de datos de parámetros CLR](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data).
 
-## <a name="disable-realtime-scoring"></a>Deshabilitar la puntuación en tiempo real
+## <a name="disable-real-time-scoring"></a>Deshabilitar la puntuación en tiempo real
 
 Para deshabilitar la funcionalidad de puntuación en tiempo real, abra un símbolo del sistema con privilegios elevados y ejecute el siguiente comando: `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
-## <a name="realtime-scoring-in-microsoft-r-server-or-machine-learning-server"></a>En tiempo real de puntuación en Microsoft R Server o Machine Learning Server
+## <a name="real-time-scoring-in-other-microsoft-product"></a>Puntuación en tiempo real en otro producto de Microsoft
 
-Machine Learning Server admite distribuidos en tiempo real de puntuación de modelos publicados como un servicio web. Para más información, vea estos artículos:
+Si usa el servidor independiente o un servidor de Microsoft Machine Learning en lugar de análisis en bases de datos de SQL Server, tiene otras opciones además de procedimientos almacenados y funciones de Transact-SQL para generar predicciones.
+
+El servidor independiente y el servidor de Machine Learning admiten el concepto de un *servicio web* para la implementación de código. Puede agrupar un R o Python modelo previamente entrenado como un servicio web, que se llama en tiempo de ejecución para evaluar las nuevas entradas de datos. Para más información, vea estos artículos:
 
 + [¿Cuáles son los servicios web en Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
 + [¿Qué es la puesta en marcha?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)

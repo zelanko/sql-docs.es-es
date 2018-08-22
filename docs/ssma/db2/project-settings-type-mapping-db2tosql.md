@@ -16,15 +16,15 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4a7ea23403e1c020a717b3a6fa1e1b5bad06146a
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: e38b7be06836dbbce868356fa9a4f9784c1f5219
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509224"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392137"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Configuración del proyecto (asignación de tipo) (DB2ToSQL)
-La página de asignación de tipos de la **configuración del proyecto** cuadro de diálogo contiene la configuración que permiten personalizar cómo SSMA convierte tipos de datos de DB2 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos de datos.  
+La página de asignación de tipos de la **configuración del proyecto** cuadro de diálogo contiene la configuración que permiten personalizar cómo SSMA convierte tipos de datos de DB2 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos.  
   
 Está disponible en la página de asignación de tipos de la **configuración del proyecto** y **configuración de proyecto predeterminada** cuadros de diálogo.  
   
@@ -41,7 +41,7 @@ La tabla siguiente muestra la **Type Mapping** opciones de la pestaña:
 El tipo de datos de DB2 asignado.  
   
 **Tipo de destino**  
-El destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de datos para el tipo de datos de DB2 especificado.  
+El destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos para el tipo de datos de DB2 especificado.  
   
 Consulte las tablas en la sección siguiente para el valor predeterminado SSMA para DB2 asignaciones de tipos.  
   
@@ -63,7 +63,7 @@ De SSMA para DB2, puede establecer asignaciones de tipos personalizado para los 
 ### <a name="default-argument-type-and-return-value-type-mapping"></a>Tipo de argumento predeterminado y devolver la asignación de tipos de valor  
 En la tabla siguiente contiene la asignación de tipo de datos predeterminada para los argumentos y valores devueltos.  
   
-|DB2 Tipo de datos|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de datos|  
+|DB2 Tipo de datos|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
@@ -119,7 +119,7 @@ En la tabla siguiente contiene la asignación de tipo de datos predeterminada pa
 ### <a name="default-column-type-mapping"></a>Asignación de tipos de columna predeterminados  
 En la tabla siguiente contiene la asignación de tipo de valor predeterminado para las columnas.  
   
-|DB2 Tipo de datos|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de datos|  
+|DB2 Tipo de datos|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
@@ -187,7 +187,7 @@ En la tabla siguiente contiene la asignación de tipo de valor predeterminado pa
 ### <a name="default-local-variable-type-mapping"></a>Asignación de tipo de Variable Local predeterminada  
 En la tabla siguiente contiene la asignación de tipo de valor predeterminado para las variables locales.  
   
-|DB2 Tipo de datos|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de datos|  
+|DB2 Tipo de datos|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  

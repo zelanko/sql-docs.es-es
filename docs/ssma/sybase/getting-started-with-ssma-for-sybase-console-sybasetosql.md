@@ -20,12 +20,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4a94afc188ce7fe1ce758586a78e523908c49b1d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 320bce2d4678781e56bb18a54e0e19d4877cc1d5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980647"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396637"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Introducción a SSMA para Sybase consola (SybaseToSQL)
 En esta sección se describe el procedimiento para iniciar e Introducción a SSMA para Sybase aplicación de consola. También se enumeran en este documento se utilizan las convenciones en una ventana de salida de la consola SSMA típica.  
@@ -52,9 +52,9 @@ Después de la consola se inicia correctamente en el sistema de Windows, puede u
   
 Características adicionales:  
   
-1.  [Especifique una contraseña](http://msdn.microsoft.com/9b6a70f9-6840-4140-a059-bb7bd7ccc67c) y la exportación e importación, en otros equipos de la ventana.  
+1.  [Especifique una contraseña](managing-passwords-sybasetosql.md) y la exportación e importación, en otros equipos de la ventana.  
   
-2.  [Generar informes](http://msdn.microsoft.com/19278f6a-6d58-4867-9d71-c6228040466e) ver el xml detallado de salida de informes de evaluación/conversión y migración de datos. También puede generar informes de errores detallada para los comandos de actualización y la sincronización.  
+2.  [Generar informes](generating-reports-sybasetosql.md) ver el xml detallado de salida de informes de evaluación/conversión y migración de datos. También puede generar informes de errores detallada para los comandos de actualización y la sincronización.  
   
 ## <a name="ssma-console-output-conventions"></a>Convenciones de la salida de la consola SSMA  
 Al ejecutar los comandos de script SSMA y opciones, el programa de consola muestra los resultados y mensajes (información, error, etc.) al usuario en la consola o bien, si es necesario, se redirige a un archivo de salida xml. Cada tipo de mensaje en la salida se especifica mediante un color único. Por ejemplo, el mensaje de texto en color blanco indica los comandos del archivo de script; el que aparece en color verde representa un símbolo del sistema de entrada del usuario y así sucesivamente.  

@@ -15,15 +15,15 @@ caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f4f2697b3616e2a47e32b87913c49f76e009153a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a7322f12605256fe25bb533c0360467510be92e2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277601"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392404"
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType, elemento (CSDLBI)
-  El elemento `EntityType` es un tipo complejo que representa la estructura de una entidad de nivel superior, como un cliente o un pedido, en un modelo de datos. El `bi:EntityType` elemento extiende la definición de [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) usado en el [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx).  
+  El elemento `EntityType` es un tipo complejo que representa la estructura de una entidad de nivel superior, como un cliente o un pedido, en un modelo de datos. El `bi:EntityType` elemento extiende la definición de [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) usado en el [Entity Data Framework](/dotnet/framework/data/adonet/ef/overview).  
   
  Se debe especificar un elemento EntityType para cada una de las entidades incluidas en el modelo de datos. Los subelementos de EntityType describen las columnas y medidas de la tabla. Las relaciones entre las tablas se incluyen en el elemento `EntityContainer`.  
   

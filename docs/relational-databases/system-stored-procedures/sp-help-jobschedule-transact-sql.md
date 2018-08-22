@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobschedule (Transact-SQL) | Documentos de Microsoft
+title: sp_help_jobschedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: edaebbc89b6422bd529963dc851371747f7d22be
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ac24c12f2ec6f7228857b013c8478db070a52e64
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261564"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394366"
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [  **@job_name=** ] **'***job_name***'**  
  Nombre del trabajo. *job_name*es **sysname**, su valor predeterminado es null.  
   
-> **Nota:** cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
+> **Nota:** cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
   
  [  **@schedule_name=** ] **'***schedule_name***'**  
  Nombre del elemento de programación del trabajo. *schedule_name*es **sysname**, su valor predeterminado es null.  
@@ -63,21 +63,21 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  Número de identificación del elemento de programación del trabajo. *schedule_id*es **int**, su valor predeterminado es null.  
   
  [  **@include_description=** ] *include_description*  
- Especifica si se va a incluir la descripción de la programación en el conjunto de resultados. *include_description* es **bits**, su valor predeterminado es **0**. Cuando *include_description* es **0**, la descripción de la programación no se incluye en el conjunto de resultados. Cuando *include_description* es **1**, la descripción de la programación se incluye en el conjunto de resultados.  
+ Especifica si se va a incluir la descripción de la programación en el conjunto de resultados. *include_description* es **bit**, su valor predeterminado es **0**. Cuando *include_description* es **0**, la descripción de la programación no se incluye en el conjunto de resultados. Cuando *include_description* es **1**, la descripción de la programación se incluye en el conjunto de resultados.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|Número de identificador de la programación.|  
 |**schedule_name**|**sysname**|Nombre de la programación.|  
-|**enabled**|**int**|Si la programación está habilitada (**1**) o no habilitada (**0**).|  
-|**freq_type**|**int**|Valor que indica cuándo el trabajo se va a ejecutar.<br /><br /> **1** = una vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensualmente<br /><br /> **32** = mensualmente, relativo a la **freq_interval**<br /><br /> **64** = ejecutar cuando **SQLServerAgent** inicia el servicio.|  
+|**enabled**|**int**|Si la programación habilitada (**1**) o no habilitada (**0**).|  
+|**freq_type**|**int**|Valor que indica cuándo el trabajo se ejecutará.<br /><br /> **1** = una vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensualmente<br /><br /> **32** = mensualmente, relativo a la **freq_interval**<br /><br /> **64** = ejecutar cuando **SQLServerAgent** se inicia el servicio.|  
 |**freq_interval**|**int**|Días cuando se ejecuta el trabajo. El valor depende del valor de **freq_type**. Para obtener más información, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_type**|**int**|Unidades de **freq_subday_interval**. Para obtener más información, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_type**|**int**|Las unidades de **freq_subday_interval**. Para obtener más información, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_interval**|**int**|Número de **freq_subday_type** períodos que transcurren entre cada ejecución del trabajo. Para obtener más información, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_relative_interval**|**int**|El trabajo programado de la **freq_interval** cada mes. Para obtener más información, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_recurrence_factor**|**int**|Número de meses entre las ejecuciones programadas del trabajo.|  
@@ -86,18 +86,18 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**active_start_time**|**int**|Hora del día en que se inicia la programación.|  
 |**active_end_time**|**int**|Hora del día en que termina la programación.|  
 |**date_created**|**datetime**|Fecha en que se creó la programación.|  
-|**schedule_description**|**nvarchar(4000)**|Descripción en inglés de la programación que se deriva de los valores de **msdb.dbo.sysschedules**. Cuando *include_description* es **0**, esta columna contiene texto que indica que no se ha solicitado la descripción.|  
+|**schedule_description**|**nvarchar(4000)**|Una descripción de la programación que se deriva de los valores de **msdb.dbo.sysschedules**. Cuando *include_description* es **0**, esta columna contiene texto que indica que no se ha solicitado la descripción.|  
 |**next_run_date**|**int**|Fecha en que la programación hará que se vuelva a ejecutar el trabajo.|  
 |**next_run_time**|**int**|Hora a la que la programación hará que se vuelva a ejecutar el trabajo.|  
 |**schedule_uid**|**uniqueidentifier**|Identificador de la programación.|  
 |**job_count**|**int**|Recuento de trabajos devueltos.|  
   
-> **Nota:****sp_help_jobschedule** devuelve valores de la **dbo.sysjobschedules** y **dbo.sysschedules** tablas del sistema en **msdb** . **sysjobschedules** actualiza cada 20 minutos. Esto puede afectar a los valores devueltos por este procedimiento almacenado.  
+> **Nota:****sp_help_jobschedule** devuelve valores de la **dbo.sysjobschedules** y **dbo.sysschedules** tablas del sistema en **msdb** .   **sysjobschedules** actualiza cada 20 minutos. Esto puede afectar a los valores devueltos por este procedimiento almacenado.  
   
-## <a name="remarks"></a>Comentarios  
- Los parámetros de **sp_help_jobschedule** puede utilizarse únicamente en ciertas combinaciones. Si *schedule_id* se especifica, ninguno *job_id* ni *job_name* puede especificarse. En caso contrario, el *job_id* o *job_name* parámetros se pueden usar con *schedule_name*.  
+## <a name="remarks"></a>Notas  
+ Los parámetros de **sp_help_jobschedule** puede usarse solo en determinadas combinaciones. Si *schedule_id* se especifica, ni *job_id* ni *job_name* se pueden especificar. En caso contrario, el *job_id* o *job_name* parámetros se pueden usar con *schedule_name*.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de servidor **sysadmin** . Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -106,9 +106,9 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Los miembros de **SQLAgentUserRole** sólo puede ver las propiedades de las programaciones de trabajos que les pertenecen.  
+ Los miembros de **SQLAgentUserRole** solo puede ver las propiedades de las programaciones de trabajos que les pertenecen.  
   
 ## <a name="examples"></a>Ejemplos  
   

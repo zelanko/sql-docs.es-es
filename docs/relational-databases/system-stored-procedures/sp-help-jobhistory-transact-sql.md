@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobhistory (Transact-SQL) | Documentos de Microsoft
+title: sp_help_jobhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e001e9e0ea0dd7dfdbe64a788db465125b04e414
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b903b6e0494e94da555750cb94a3c4cd0c0c41c9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261824"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392668"
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,27 +74,27 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
  Nivel de gravedad del mensaje de error devuelto por SQL Server cuando se ejecuta el trabajo. *sql_severity* es **int**, su valor predeterminado es null.  
   
  [  **@start_run_date=** ] *start_run_date*  
- Fecha en que se inició el trabajo. *start_run_date*es **int**, su valor predeterminado es null. *start_run_date* se debe escribir con el formato AAAAMMDD, donde AAAA es un año con cuatro cifras, MM es un nombre de mes con dos cifras y DD es el día con dos cifras.  
+ Fecha en que se inició el trabajo. *start_run_date*es **int**, su valor predeterminado es null. *start_run_date* se debe escribir con el formato AAAAMMDD, donde AAAA es un año con cuatro cifras, MM es un mes con dos cifras y DD es el día con dos cifras.  
   
  [  **@end_run_date=** ] *end_run_date*  
- Fecha en que se completó el trabajo. *end_run_date* es **int**, su valor predeterminado es null. *end_run_date*se debe escribir con el formato AAAAMMDD, donde AAAA es un año con cuatro cifras, MM es un nombre de mes con dos cifras y DD es el día con dos cifras.  
+ Fecha en que se completó el trabajo. *end_run_date* es **int**, su valor predeterminado es null. *end_run_date*se debe escribir con el formato AAAAMMDD, donde AAAA es el año de cuatro dígitos, MM es un mes con dos cifras y DD es el día con dos cifras.  
   
  [  **@start_run_time=** ] *start_run_time*  
- Hora a la que comenzó el trabajo. *start_run_time* es **int**, su valor predeterminado es null. *start_run_time*se debe escribir con el formato HHMMSS, donde HH es la hora del día, MM son los minutos del día dos cifras y SS son los segundos dos caracteres del día.  
+ Hora a la que comenzó el trabajo. *start_run_time* es **int**, su valor predeterminado es null. *start_run_time*se debe escribir con el formato HHMMSS, donde HH es la hora del día, MM es un minutos del día con dos cifras y SS son los segundos dos caracteres del día.  
   
  [  **@end_run_time=** ] *end_run_time*  
- Hora a la que se completó la ejecución del trabajo. *end_run_time* es **int**, su valor predeterminado es null. *end_run_time*se debe escribir con el formato HHMMSS, donde HH es la hora del día, MM son los minutos del día dos cifras y SS son los segundos dos caracteres del día.  
+ Hora a la que se completó la ejecución del trabajo. *end_run_time* es **int**, su valor predeterminado es null. *end_run_time*se debe escribir con el formato HHMMSS, donde HH es la hora del día, MM es un minutos del día con dos cifras y SS son los segundos dos caracteres del día.  
   
  [  **@minimum_run_duration=** ] *minimum_run_duration*  
- Duración mínima de la realización del trabajo. *minimum_run_duration* es **int**, su valor predeterminado es null. *minimum_run_duration*se debe escribir con el formato HHMMSS, donde HH es la hora del día, MM son los minutos del día dos cifras y SS son los segundos dos caracteres del día.  
+ Duración mínima de la realización del trabajo. *minimum_run_duration* es **int**, su valor predeterminado es null. *minimum_run_duration*se debe escribir con el formato HHMMSS, donde HH es la hora del día, MM es un minutos del día con dos cifras y SS son los segundos dos caracteres del día.  
   
  [  **@run_status=** ] *run_status*  
- Estado de ejecución del trabajo. *run_status* es **int**, su valor predeterminado es null y puede tener uno de estos valores.  
+ Estado de ejecución del trabajo. *run_status* es **int**, su valor predeterminado es null, y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|Error|  
-|**1**|Se realizó correctamente|  
+|**1**|se ha realizado correctamente|  
 |**2**|Reintento (solo pasos)|  
 |**3**|Canceled|  
 |**4**|Mensaje en curso|  
@@ -118,9 +118,9 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  La lista de columnas depende del valor de *modo*. El conjunto de columnas más completo se muestra a continuación y se devuelve cuando *modo* es FULL.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**valor de instance_id**|**int**|Número de identificación de la entrada en el historial.|  
+|**instance_id**|**int**|Número de identificación de la entrada en el historial.|  
 |**job_id**|**uniqueidentifier**|Número de identificación del trabajo.|  
 |**job_name**|**sysname**|Nombre del trabajo.|  
 |**step_id**|**int**|Número de identificación de paso (será **0** para un historial de trabajos).|  
@@ -138,10 +138,10 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**retries_attempted**|**int**|Número de veces que se ha vuelto a intentar el paso (siempre es 0 para un historial de trabajos).|  
 |**servidor**|**nvarchar(30)**|Servidor en el que se ejecuta el paso o el trabajo. Siempre es (**local**).|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_help_jobhistory** devuelve un informe con el historial de los trabajos programados especificados. Si no se especifican parámetros, el informe contiene el historial de todos los trabajos programados.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -150,9 +150,9 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 -   **SQLAgentOperatorRole**  
   
- Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Los miembros de la **SQLAgentUserRole** rol de base de datos solo puede ver el historial de trabajos que les pertenecen.  
+ Los miembros de la **SQLAgentUserRole** rol de base de datos solamente puede ver el historial de trabajos que les pertenecen.  
   
 ## <a name="examples"></a>Ejemplos  
   

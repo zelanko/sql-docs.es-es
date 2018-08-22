@@ -19,12 +19,12 @@ caps.latest.revision: 23
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8f33769bee5c8d6d9e134eb9dd5dcf8549d651cb
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 5ec1b7d62e3e765ee43624f0e97aef60c91309ee
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983087"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392389"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Introducción a SSMA para la consola de MySQL (MySQLToSQL)
 En esta sección se describe el procedimiento para iniciar y empezar a trabajar con la aplicación de consola de MySQL. También se enumeran en este documento, se utilizan las convenciones en una ventana de salida de la consola SSMA típica.  
@@ -51,9 +51,9 @@ Después de la consola se inicia correctamente en el sistema de Windows, podría
   
 Características adicionales:  
   
-1.  [Protección de contraseña](http://msdn.microsoft.com/4ffbc587-ea3f-49ad-bc42-a654f672325e) y exportar / importar en otros equipos de la ventana  
+1.  [Protección de contraseña](managing-passwords-mysqltosql.md) y exportar / importar en otros equipos de la ventana  
   
-2.  [Generar informes](http://msdn.microsoft.com/1c0202e8-546d-4cb3-a37f-1d2e35d53839) ver el xml detallado de salida de informes de evaluación /conversion y migración de datos. También se pueden generar informes de errores detallada para los comandos de actualización y la sincronización.  
+2.  [Generar informes](generating-reports-mysqltosql.md) ver el xml detallado de salida de informes de evaluación /conversion y migración de datos. También se pueden generar informes de errores detallada para los comandos de actualización y la sincronización.  
   
 ## <a name="ssma-console-output-conventions"></a>Convenciones de salida de consola SSMA  
 Al ejecutar los comandos de script SSMA y opciones, el programa de consola muestra los resultados y mensajes (información, error, etc.) al usuario en la consola o si es necesario, se redirige a un archivo de salida xml. Cada tipo de mensaje en la salida se especifica mediante un color único. Por ejemplo, el mensaje de texto en color blanco indica los comandos del archivo de script; el que aparece en color verde representa un símbolo del sistema de entrada del usuario y así sucesivamente.  
@@ -72,5 +72,5 @@ Interpretación de color de la salida de consola en la tabla siguiente:
 |Cian|Guía de inicio, finalización y el resultado de una operación|  
   
 ## <a name="see-also"></a>Vea también  
-[Instalación de SSMA para MySQL](http://msdn.microsoft.com/e89b45bd-59c1-4d23-8bd7-3dafc1947448)  
+[Instalación de SSMA para MySQL](installing-ssma-for-mysql-mysqltosql.md)  
   

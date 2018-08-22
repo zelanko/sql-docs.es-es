@@ -1,5 +1,5 @@
 ---
-title: Servicios de aprendizaje de automático de vistas de administración de datos (DMV) para SQL Server | Documentos de Microsoft
+title: Vistas de administración de datos (DMV) para SQL Server Machine Learning Services | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,26 +7,26 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e2180794ca96fc6387105745e346802725afe1dd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8d7d20d396ca5b853d959c84a371fe808415c5fb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203147"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392840"
 ---
-# <a name="dmvs-for-sql-server-machine-learning-services"></a>DMV para servicios de aprendizaje de máquina SQL Server
+# <a name="dmvs-for-sql-server-machine-learning-services"></a>DMV de SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-El artículo enumeran las vistas de catálogo del sistema y DMV que están relacionados con el aprendizaje automático en SQL Server.
+El artículo enumeran las vistas de catálogo del sistema y DMV relacionadas con aprendizaje automático en SQL Server.
 
-Para obtener información sobre los eventos extendidos, vea [eventos extendidos para aprendizaje automático](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md).
+Para obtener información sobre los eventos extendidos, vea [eventos para el aprendizaje automático extendidos](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md).
 
 > [!TIP]
-> Usar informes integrados para las sesiones de aprendizaje automático de monitor y la utilización de paquete. Para obtener más información, consulte [supervisar aprendizaje automático con informes personalizados en Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
+> Usar informes integrados para supervisar sesiones de aprendizaje automático y la utilización de paquete. Para obtener más información, consulte [supervisar machine learning con informes personalizados en Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
 ## <a name="system-configuration-and-system-resources"></a>Configuración del sistema y los recursos del sistema
 
-Puede supervisar y analizar los recursos que usa scripts externos mediante el uso de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] vistas de catálogo del sistema y DMV.
+Puede supervisar y analizar los recursos utilizados por los scripts externos mediante el uso de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] vistas de catálogo del sistema y DMV.
 
 + [ sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
 
@@ -45,11 +45,11 @@ Puede supervisar y analizar los recursos que usa scripts externos mediante el us
   Esta DMV informa de los contadores siguientes de scripts externos por instancia:
 
   + **Total de ejecuciones**: número de procesos externos iniciados por llamadas locales o remotas
-  + **Ejecuciones en paralelo**: número de veces que una secuencia de comandos incluye la _@parallel_ especificación y que [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] fue capaz de generar y utilizar un plan de consulta en paralelo
-  + **Ejecuciones de streaming**: número de veces que se ha invocado la característica de transmisión por secuencias
-  + **Ejecuciones CC de SQL**: número de externos secuencias de comandos de ejecución donde la llamada se crearon instancias de forma remota y SQL Server se utiliza como el contexto de proceso.
+  + **Ejecuciones en paralelo**: número de veces que un script incluyó la _@parallel_ especificación y que [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] fue capaz de generar y usar un plan de consulta paralelo
+  + **Ejecuciones de streaming**: número de veces que se ha invocado la característica de streaming
+  + **Ejecuciones CC de SQL**: número de externos secuencias de comandos de ejecución donde la llamada se creó una instancia remota y SQL Server se utilizó como contexto de proceso
   + **Inicios de sesión de autenticación implícita**: número de veces que se realizó una llamada de bucle invertido ODBC mediante autenticación implícita (es decir, el [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ejecutó la llamada en nombre del usuario que envío la solicitud de script)
-  + **Total de tiempo de ejecución (ms)**: tiempo transcurrido entre la llamada y la realización de llamadas
+  + **Total de tiempo de ejecución (ms)**: tiempo transcurrido entre la llamada y la finalización de llamada
   + **Errores de ejecución**: número de veces que los scripts informaron de errores. Este recuento no incluye errores de R.
 
 
@@ -60,15 +60,15 @@ Puede supervisar y analizar los recursos que usa scripts externos mediante el us
   Esta DMV no devolverá ningún resultado si no hay scripts actualmente en ejecución. Por tanto, resulta más útil para la supervisión de scripts de ejecución prolongada. Devuelve estos valores:
 
   + **external_script_request_id**: un GUID, que también se utiliza como el nombre temporal del directorio de trabajo utilizado para almacenar resultados intermedios y secuencias de comandos
-  + **idioma**: un valor como `R` que indica el idioma de la secuencia de comandos externo
-  + **degree_of_parallelism**: un entero que indica el número de paralelo procesos que se utilizaron
-  + **external_user_name**: Launchpad de un trabajo de la cuenta, como **SQLRUser01**
+  + **lenguaje**: un valor como `R` que indica el lenguaje de script externo
+  + **degree_of_parallelism**: un entero que indica el número de procesos paralelos que se usaron
+  + **external_user_name**: Launchpad un trabajador de la cuenta, como **SQLRUser01**
 
 + [sys.dm_external_script_execution_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
 
-  Se proporciona esta DMV para que supervisar interno (telemetría) realizar un seguimiento el número de llamadas de script externo se realiza en una instancia. Inicia el servicio de telemetría cuando [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e incrementa un contador basadas en disco cada vez que se llama una función de aprendizaje de máquina específica.
+  Esta DMV se proporciona para que la supervisión interna (telemetría) realizar un seguimiento de cuántas llamadas de script externo se realizan en una instancia. El servicio de telemetría inicia cuando [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e incrementa un contador basado en disco cada vez que se llama a una máquina específica de la función de aprendizaje.
 
-  El contador se incrementa por cada llamada a una función de seguimiento específica. Por ejemplo, si se llama a `rxLinMod` y se ejecuta de manera simultánea, el contador aumenta en 1.
+  El contador se incrementa por cada llamada a una función específica de seguimiento. Por ejemplo, si se llama a `rxLinMod` y se ejecuta de manera simultánea, el contador aumenta en 1.
   
   Por lo general, los contadores de rendimiento solo son válidos siempre que el proceso que los genera esté activo. Por lo tanto, una consulta en una DMV no puede mostrar datos detallados para servicios que ya no están en ejecución. Por ejemplo, si el Launchpad crea varios trabajos paralelos de R pero se ejecutan muy rápidamente y, después, el objeto de trabajo de Windows los limpia, es posible que una DMV no muestre ningún dato.
  
@@ -78,7 +78,7 @@ Puede supervisar y analizar los recursos que usa scripts externos mediante el us
 
 ## <a name="resource-governor-views"></a>Vistas del regulador de recursos
 
-En las ediciones que admiten el regulador de recursos, crear grupos de recursos externos para las cargas de trabajo de R o Python puede ser en efectivo podrán realizar un seguimiento y administrar los recursos.
+En las ediciones que admiten el regulador de recursos, la creación de grupos de recursos externos para cargas de trabajo de R o Python puede ser forma eficaz de en realizar un seguimiento y administrar los recursos.
 
 + [sys.resource_governor_resource_pools](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)
 
@@ -95,7 +95,7 @@ En las ediciones que admiten el regulador de recursos, crear grupos de recursos 
 
   > [!NOTE]
   > 
-  > En Standard Edition, todos los trabajos de script externo se ejecutan en el mismo grupo de recursos externo predeterminado.
+  > En Standard Edition, todos los trabajos de script externo se ejecutan dentro del mismo grupo de recursos externos de forma predeterminada.
 
 + [sys.resource_governor_workload_groups](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)
 
@@ -110,7 +110,7 @@ En las ediciones que admiten el regulador de recursos, crear grupos de recursos 
 
   En la configuración predeterminada, los grupos de cargas de trabajo se asignan automáticamente a los procesadores y, por tanto, no hay ningún valor de afinidad para devolver.
 
-  La programación de afinidad asigna el grupo de recursos a las programaciones de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] indicadas por los identificadores especificados. Estos identificadores se asignan a los valores de la `scheduler_id` columna en `sys.dm_os_schedulers`.
+  La programación de afinidad asigna el grupo de recursos a las programaciones de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] indicadas por los identificadores especificados. Estos identificadores se asignan a los valores de la `scheduler_id` columna `sys.dm_os_schedulers`.
 
 
 > [!NOTE] 
@@ -123,11 +123,11 @@ Para obtener información general sobre la supervisión de instancias de [!INCLU
 
 Scripts de R y Python que se ejecutan en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] iniciados por el [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] interfaz. Pero Launchpad no es un recurso controlado ni supervisado por separado, dado que se supone que es un servicio seguro proporcionado por Microsoft que administra los recursos adecuadamente.
 
-Secuencias de comandos individuales que se ejecutan en el servicio Launchpad se administran mediante el [objeto de trabajo de Windows](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx). Un objeto de trabajo permite administrar grupos de procesos como una unidad. Cada objeto de trabajo es jerárquico y controla los atributos de todos los procesos asociados con él. Las operaciones realizadas en un objeto de trabajo afectan a todos los procesos asociados con el objeto de trabajo.
+Secuencias de comandos individuales que se ejecutan en el servicio Launchpad se administran mediante el [objeto de trabajo de Windows](/windows/desktop/ProcThread/job-objects). Un objeto de trabajo permite administrar grupos de procesos como una unidad. Cada objeto de trabajo es jerárquico y controla los atributos de todos los procesos asociados con él. Las operaciones realizadas en un objeto de trabajo afectan a todos los procesos asociados con el objeto de trabajo.
 
 Por tanto, si es necesario finalizar un trabajo asociado a un objeto, tenga en cuenta que todos los procesos relacionados también se finalizarán. Si se está ejecutando un script de R asignado a un objeto de trabajo de Windows y ese script ejecuta un trabajo de ODBC relacionado que debe finalizarse, también se finalizará el proceso de script de R primario.
 
-Si inicia un script externo que usa el procesamiento en paralelo, un único objeto de trabajo de Windows administra todos los procesos secundarios paralelas.
+Si inicia un script externo que usa el procesamiento paralelo, un único objeto de trabajo de Windows administra todos los procesos secundarios en paralelo.
 
 Para determinar si un proceso se ejecuta en un trabajo, use la función `IsProcessInJob`.
 

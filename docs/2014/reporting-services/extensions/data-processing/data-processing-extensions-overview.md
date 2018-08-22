@@ -17,12 +17,12 @@ caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 14ec583360509be356aa12751c0a090b2a7dc676
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70b692948215315a4cafaec1389a4c1996e84a97
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191695"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392802"
 ---
 # <a name="data-processing-extensions-overview"></a>Introducción a las extensiones de procesamiento de datos
   Las extensiones de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permiten conectarse a los orígenes de datos y recuperar los datos. También actúan como puente entre un origen de datos y un conjunto de datos. Las extensiones de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] se modelan según un subconjunto de las interfaces del proveedor de datos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "37191695"
 |Extensión de procesamiento de datos para Oracle|Usa el Proveedor de datos de .NET Framework para Oracle. Con esta extensión, el servidor de informes puede tener acceso a los orígenes de datos de Oracle a través del software de conectividad de cliente de Oracle.|  
 |Extensión de procesamiento de datos para ODBC|Usa el Proveedor de datos de .NET Framework para ODBC. Con esta extensión, el servidor de informes puede tener acceso a los datos de cualquier base de datos para la que haya un controlador ODBC.|  
   
- Puede utilizar la API de procesamiento de datos de [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] para agregar un procesamiento de datos personalizado al servidor de informes.  
+ Puede utilizar la API de procesamiento de datos de [!INCLUDE[ssRS](../../../includes/ssrs.md)] para agregar un procesamiento de datos personalizado al servidor de informes.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] tiene compatibilidad integrada con los proveedores de datos en [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Si ya ha implementado un proveedor de datos completo, no necesita implementar una extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Sin embargo, debería considerar extender el proveedor de datos para que incluya la funcionalidad concreta para [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005, que incluye las credenciales de conexión seguras y los agregados del lado servidor.  

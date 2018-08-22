@@ -19,12 +19,12 @@ caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d3fa961c07b1a4fbf9d688d31b2451598e5c8ca2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dd03ce75d23d7cb98a8b1fcc8181fc6fcfa9523c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187742"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392164"
 ---
 # <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>Clústeres de conmutación por error de Windows Server (WSFC) con SQL Server
   Un clúster de *clústeres de conmutación por error de Windows Server* (WSFC) es un grupo de servidores independientes que funcionan conjuntamente para aumentar la disponibilidad de aplicaciones y servicios. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aprovecha los servicios y las capacidades de WSFC para admitir instancias de clúster de conmutación por error de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -65,7 +65,7 @@ ms.locfileid: "37187742"
  Quórum forzado  
  El proceso para iniciar el clúster aunque solo una minoría de los elementos necesarios para el quórum esté en comunicación.  
   
- Para obtener más información, vea el [Glosario de clústeres de conmutación por error](http://msdn.microsoft.com/library/aa372869\(VS.85\).aspx)  
+ Para obtener más información, vea el [Glosario de clústeres de conmutación por error](/previous-versions/windows/desktop/MsCS/server-cluster-glossary)  
   
 ##  <a name="Overview"></a> Información general de clústeres de conmutación por error de Windows Server  
  Los clústeres de conmutación por error de Windows Server proporcionan características de infraestructura que admiten escenarios de alta disponibilidad y recuperación ante desastres de aplicaciones de servidor hospedadas, como Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y Microsoft Exchange. Si un nodo o un servicio de clúster tiene un error, los servicios hospedados en ese nodo se pueden transferir automática o manualmente a otro nodo disponible en un proceso denominado *conmutación por error*.  

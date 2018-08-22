@@ -25,15 +25,15 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8a6c94a1335c8ee20aa7f42e179cd924b6661f55
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 6256a21e699f3dbd6714da0e4778b9d00e8d940a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980677"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393268"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportación de un inventario de Access (AccessToSQL)
-Si tiene varias bases de datos de Access y no está seguro de cuáles para migrar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], puede exportar un inventario de todas las bases de datos de Access en un proyecto. A continuación, puede revisar y consultar los metadatos de inventario para determinar qué bases de datos y objetos dentro de esas bases de datos para migrar. Este inventario le permite rápidamente buscar respuestas a preguntas como las siguientes:  
+Si tiene varias bases de datos de Access y no está seguro de cuáles para migrar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede exportar un inventario de todas las bases de datos de Access en un proyecto. A continuación, puede revisar y consultar los metadatos de inventario para determinar qué bases de datos y objetos dentro de esas bases de datos para migrar. Este inventario le permite rápidamente buscar respuestas a preguntas como las siguientes:  
   
 -   ¿Cuáles son las bases de datos más grandes?  
   
@@ -48,15 +48,15 @@ Si tiene varias bases de datos de Access y no está seguro de cuáles para migra
 Se proporcionan ejemplos de consultas que se usan para responder a estas preguntas al final de este tema.  
   
 ## <a name="exported-metadata"></a>Metadatos exportados  
-SSMA exporta metadatos sobre el acceso a bases de datos, tablas, columnas, índices, claves externas, las consultas, informes, formularios, macros y módulos. Los metadatos sobre cada una de estas categorías de elementos se exportan a una tabla independiente. Los esquemas de estas tablas, consulte [esquemas de inventario de Access](http://msdn.microsoft.com/fdd3cff2-4d62-4395-8acf-71ea8f17f524).  
+SSMA exporta metadatos sobre el acceso a bases de datos, tablas, columnas, índices, claves externas, las consultas, informes, formularios, macros y módulos. Los metadatos sobre cada una de estas categorías de elementos se exportan a una tabla independiente. Los esquemas de estas tablas, consulte [esquemas de inventario de Access](access-inventory-schemas-accesstosql.md).  
   
 ## <a name="exporting-inventory-data"></a>Exportar datos de inventario  
-Para exportar un inventario de Access, debe abrir por primera vez o crear un proyecto de SSMA y, a continuación, agregue la base de datos que desea analizar. Después de agregar las bases de datos a un proyecto SSMA, exportar los metadatos sobre esas bases de datos para un determinado [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos y esquema. Si es necesario, SSMA crea tablas para almacenar los metadatos. SSMA, a continuación, agrega los metadatos acerca de las bases de datos de acceso a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos.  
+Para exportar un inventario de Access, debe abrir por primera vez o crear un proyecto de SSMA y, a continuación, agregue la base de datos que desea analizar. Después de agregar las bases de datos a un proyecto SSMA, exportar los metadatos sobre esas bases de datos para un determinado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos y esquema. Si es necesario, SSMA crea tablas para almacenar los metadatos. SSMA, a continuación, agrega los metadatos acerca de las bases de datos de acceso a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos.  
   
 > [!NOTE]  
-> Una base de datos de Access se puede dividir en varios archivos: una base de datos de back-end que contiene las tablas y bases de datos front-end que contienen consultas, formularios, informes, macros, módulos y los accesos directos. Si desea migrar una base de datos división [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], agregue la base de datos front-end para SSMA.  
+> Una base de datos de Access se puede dividir en varios archivos: una base de datos de back-end que contiene las tablas y bases de datos front-end que contienen consultas, formularios, informes, macros, módulos y los accesos directos. Si desea migrar una base de datos división [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], agregue la base de datos front-end para SSMA.  
   
-Las instrucciones siguientes describen cómo crear un proyecto, agregue las bases de datos al proyecto, conéctese a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]y, a continuación, exportar los datos de inventario.  
+Las instrucciones siguientes describen cómo crear un proyecto, agregue las bases de datos al proyecto, conéctese a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y, a continuación, exportar los datos de inventario.  
   
 **Para crear un proyecto**  
   
@@ -72,7 +72,7 @@ Las instrucciones siguientes describen cómo crear un proyecto, agregue las base
   
 5.  En el **Migrate To** combinado, seleccione la versión de destino al que desea migrar y, a continuación, haga clic en **Aceptar**.  
   
-Para obtener más información sobre cómo crear proyectos, vea [crear y administrar proyectos](http://msdn.microsoft.com/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7).  
+Para obtener más información sobre cómo crear proyectos, vea [crear y administrar proyectos](creating-and-managing-projects-accesstosql.md).  
   
 **Para buscar y agregar las bases de datos**  
   
@@ -101,13 +101,13 @@ Para obtener más información sobre cómo crear proyectos, vea [crear y adminis
   
 8.  En la página de comprobación, haga clic en **finalizar**.  
   
-Para obtener más información acerca de cómo agregar bases de datos a los proyectos, vea [agregar y quitar archivos de base de datos de Access](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced).  
+Para obtener más información acerca de cómo agregar bases de datos a los proyectos, vea [agregar y quitar archivos de base de datos de Access](adding-and-removing-access-database-files-accesstosql.md).  
   
 **Para conectarse a SQL Server**  
   
 1.  En el **archivo** menú, seleccione **conectar con SQL Server**.  
   
-2.  En el cuadro de diálogo de conexión, escriba o seleccione el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+2.  En el cuadro de diálogo de conexión, escriba o seleccione el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     -   Si se conecta a la instancia predeterminada en el equipo local, puede escribir **localhost** o un punto (**.**).  
   
@@ -117,11 +117,11 @@ Para obtener más información acerca de cómo agregar bases de datos a los proy
   
 3.  En el **base de datos** , escriba el nombre de la base de datos de destino para los metadatos exportados.  
   
-4.  Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] está configurado para aceptar conexiones en un puerto no predeterminado, escriba el número de puerto que se utiliza para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] conexiones en el **puerto del servidor** cuadro. Para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], el número de puerto predeterminado es 1433. Las instancias con nombre, SSMA intenta obtener el número de puerto desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] servicio Browser.  
+4.  Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para aceptar conexiones en un puerto no predeterminado, escriba el número de puerto que se utiliza para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conexiones en el **puerto del servidor** cuadro. Para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el número de puerto predeterminado es 1433. Las instancias con nombre, SSMA intenta obtener el número de puerto desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio Browser.  
   
-5.  En el **autenticación** menú de lista desplegable, seleccione el tipo de autenticación que se usará para la conexión. Para usar la cuenta de Windows actual, seleccione **Windows autenticación**. Para usar un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] inicio de sesión, seleccione **autenticación de SQL Server**y, a continuación, proporcione un nombre de usuario y una contraseña.  
+5.  En el **autenticación** menú de lista desplegable, seleccione el tipo de autenticación que se usará para la conexión. Para usar la cuenta de Windows actual, seleccione **Windows autenticación**. Para usar un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión, seleccione **autenticación de SQL Server**y, a continuación, proporcione un nombre de usuario y una contraseña.  
   
-Para obtener más información sobre cómo conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], consulte [conectarse a SQL Server &#40;AccessToSQL&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md).  
+Para obtener más información sobre cómo conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [conectarse a SQL Server &#40;AccessToSQL&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md).  
   
 **Para exportar información de inventario**  
   
@@ -138,11 +138,11 @@ Para obtener más información sobre cómo conectarse a [!INCLUDE[ssNoVersion](.
 Cada vez que exporta los metadatos, SSMA anexa los datos para el inventario. Los datos existentes en el inventario no se actualiza o elimina.  
   
 ## <a name="querying-the-exported-metadata"></a>Consultar los metadatos exportados  
-Después de exportar los metadatos sobre las bases de datos de Access, puede consultar los metadatos. Las instrucciones siguientes describen para usar la ventana del Editor de consultas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] para ejecutar consultas.  
+Después de exportar los metadatos sobre las bases de datos de Access, puede consultar los metadatos. Las instrucciones siguientes describen para usar la ventana del Editor de consultas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para ejecutar consultas.  
   
 **Para consultar los metadatos**  
   
-1.  Desde el **iniciar** menú, elija **todos los programas**, apunte a **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005** o a **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008**o a **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012**y, a continuación, haga clic en **SQL Server Management Studio**.  
+1.  Desde el **iniciar** menú, elija **todos los programas**, apunte a **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005** o a **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008**o a **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012**y, a continuación, haga clic en **SQL Server Management Studio**.  
   
 2.  En el **conectar al servidor** cuadro de diálogo, compruebe la configuración y, a continuación, haga clic en **Connect**.  
   
@@ -153,7 +153,7 @@ Después de exportar los metadatos sobre las bases de datos de Access, puede con
 5.  Presione la tecla F5 para ejecutar la consulta.  
   
 ## <a name="query-examples"></a>Ejemplos de consultas  
-Antes de ejecutar cualquiera de las consultas siguientes, debe ejecutar un uso *database_name* consulta para asegurarse de que las consultas se ejecutan en la base de datos que contiene los metadatos exportados. Por ejemplo, si exporta los metadatos para una base de datos denominada MyAccessMetadata, debe agregar la siguiente al principio de la [!INCLUDE[tsql](../../includes/tsql_md.md)] código:  
+Antes de ejecutar cualquiera de las consultas siguientes, debe ejecutar un uso *database_name* consulta para asegurarse de que las consultas se ejecutan en la base de datos que contiene los metadatos exportados. Por ejemplo, si exporta los metadatos para una base de datos denominada MyAccessMetadata, debe agregar la siguiente al principio de la [!INCLUDE[tsql](../../includes/tsql-md.md)] código:  
   
 ```  
 USE MyAccessMetadata;  
@@ -220,7 +220,7 @@ ORDER BY DateModified;
 ```  
   
 ### <a name="which-databases-contain-private-information"></a>¿Bases de datos que contienen información privada?  
-Las bases de datos de acceso podrían contener información confidencial o personal. Es posible que desee mover estas bases de datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] para aprovechar sus características de seguridad. Si sabe que tienen un nombre específico las columnas que contienen datos confidenciales o contienen caracteres específicos, puede usar una consulta para buscar todas las columnas que contienen esa información. Por ejemplo, puede encontrar todas las columnas que contienen la cadena "Salario".  La consulta, a continuación, devuelve el nombre de la base de datos, el nombre de la tabla y el nombre de columna.  
+Las bases de datos de acceso podrían contener información confidencial o personal. Es posible que desee mover estas bases de datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para aprovechar sus características de seguridad. Si sabe que tienen un nombre específico las columnas que contienen datos confidenciales o contienen caracteres específicos, puede usar una consulta para buscar todas las columnas que contienen esa información. Por ejemplo, puede encontrar todas las columnas que contienen la cadena "Salario".  La consulta, a continuación, devuelve el nombre de la base de datos, el nombre de la tabla y el nombre de columna.  
   
 ```  
 SELECT DatabaseName, TableName, ColumnName   
@@ -234,5 +234,5 @@ WHERE ColumnName LIKE '%salary%';
 Si no conoce el nombre de columna, puede escribir una consulta para devolver todas las columnas. Para ello, quite la cláusula WHERE de la consulta anterior.  
   
 ## <a name="see-also"></a>Vea también  
-[Preparar las bases de datos de acceso para la migración](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
+[Preparar las bases de datos de acceso para la migración](preparing-access-databases-for-migration-accesstosql.md)  
   

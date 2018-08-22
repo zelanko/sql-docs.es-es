@@ -14,12 +14,12 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d8145f722068b6e160d6c1c801fdadeca2051f1b
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 337b45e5f441be3de009c7cc9a4d8115c6bbb17f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353097"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394569"
 ---
 # <a name="assemblies---implementing"></a>Ensamblados: implementación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "37353097"
   
  **Para quitar un ensamblado mediante SQL Server Management Studio**  
   
--   [Eliminar objetos](http://msdn.microsoft.com/library/49541441-179c-40d3-ba0c-01bcae545984)  
+-   [Eliminar objetos](../../ssms/object/delete-objects.md)  
   
  De forma predeterminada, ningún ensamblado creado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se puede ejecutar. Puede usar el **clr habilitado** opción de la **sp_configure** deshabilitar o habilitar la ejecución de todos los ensamblados que se cargan en el procedimiento almacenado del sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al deshabilitar la ejecución de ensamblados se impide la ejecución de funciones, procedimientos almacenados, desencadenadores, agregados y tipos definidos por el usuario CLR (Common Language Runtime), y se detienen los que se están ejecutando. El hecho de deshabilitar la ejecución no deshabilita la capacidad de crear, alterar o quitar ensamblados. Para obtener más información, consulte [clr enabled (opción) configuración de servidor](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
   

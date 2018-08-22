@@ -1,6 +1,6 @@
 ---
-title: Instalar componentes de aprendizaje automático de SQL Server sin acceso a internet | Documentos de Microsoft
-description: Sin conexión o desconectada R de Machine Learning y Pytyon el programa de instalación en la instancia de SQL Server aislado.
+title: Instalar los componentes de R y Python sin acceso a internet de aprendizaje de automático de SQL Server | Microsoft Docs
+description: Sin conexión o desconectada R de Machine Learning y Python el programa de instalación en la instancia de SQL Server aislado.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/02/2018
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 56624d2a5fcc97035f434cb1ee1d4fdee4dedeba
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 94aa87c0ecad8be94498bf5571e6e4b7ed7e1af9
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39546265"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40437655"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-features-on-computers-with-no-internet-access"></a>Instalar características de R y Python en equipos sin acceso a internet de aprendizaje de automático de SQL Server
+# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Instalar SQL Server de aprendizaje automático R y Python en equipos sin acceso a internet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 De forma predeterminada, los instaladores de conecten a sitios de descarga de Microsoft para obtener necesarios y los componentes actualizados para aprendizaje automático en SQL Server. Si las restricciones de firewall impide que el instalador de llegar a estos sitios, puede usar un dispositivo conectado a internet para descargar archivos, transferir archivos a un servidor sin conexión y, a continuación, ejecute el programa de instalación.

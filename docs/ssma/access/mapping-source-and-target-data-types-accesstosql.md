@@ -22,15 +22,15 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4868bbe408b96c95a44c82516ce9bb6c9035397e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 604fe25d0b08ddc997baf381adb4a967ed8e9462
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979607"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393318"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Asignación de origen y los tipos de datos de destino (AccessToSQL)
-Tipos de base de datos de acceso difieren de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos base de datos. Al convertir objetos de base de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos, debe especificar cómo se asignan los tipos de datos de acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Puede aceptar las asignaciones de tipos de datos de forma predeterminada, o puede personalizar las asignaciones como se muestra en los procedimientos siguientes.  
+Tipos de base de datos de acceso difieren de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos base de datos. Al convertir objetos de base de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos, debe especificar cómo se asignan los tipos de datos de acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede aceptar las asignaciones de tipos de datos de forma predeterminada, o puede personalizar las asignaciones como se muestra en los procedimientos siguientes.  
   
 ## <a name="default-mappings"></a>Asignaciones predeterminadas  
 SSMA tiene un conjunto predeterminado de asignaciones de tipos de datos. Para obtener la lista de asignaciones predeterminadas, vea [configuración del proyecto (asignación de tipos)](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
@@ -70,7 +70,7 @@ El siguiente procedimiento muestra cómo asignar tipos de datos en el proyecto, 
   
         Esto le permite personalizar la asignación de datos para los valores más pequeños y más grandes del mismo tipo de datos.  
   
-    4.  En **tipo de destino**, seleccione el destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de datos.  
+    4.  En **tipo de destino**, seleccione el destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.  
   
         Algunos tipos requieren una longitud del tipo de datos de destino. Si es necesario, escriba la nueva longitud de datos en el **reemplazar con** cuadro y, a continuación, haga clic en **Aceptar**.  
   
@@ -84,7 +84,7 @@ El siguiente procedimiento muestra cómo asignar tipos de datos en el proyecto, 
   
         Esto le permite personalizar la asignación de datos para los valores más pequeños y más grandes del mismo tipo de datos.  
   
-    4.  En **tipo de destino**, seleccione el destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de datos.  
+    4.  En **tipo de destino**, seleccione el destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.  
   
         Algunos tipos requieren una longitud del tipo de datos de destino. Si es necesario, escriba la nueva longitud de datos en el **reemplazar con** cuadro y, a continuación, haga clic en **Aceptar**.  
   
@@ -95,8 +95,8 @@ El siguiente procedimiento muestra cómo asignar tipos de datos en el proyecto, 
     2.  Haga clic en **Quitar**.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
-El siguiente paso del proceso de migración es [convertir objetos de base de datos de acceso a objetos de SQL Server](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+El siguiente paso del proceso de migración es [convertir objetos de base de datos de acceso a objetos de SQL Server](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Migrar bases de datos de Access a SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrar bases de datos de Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

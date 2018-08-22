@@ -1,5 +1,5 @@
 ---
-title: Power Pivot con privilegios mínimos ejemplo - SharePoint 2016 | Documentos de Microsoft
+title: Power Pivot con privilegios mínimos Example - SharePoint 2016 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d57322b1aa0b0fa949bed2dcb093bbb6bea8e2e1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: eac736994b104ffbce855fa1ad6761d592fccad1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016202"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396641"
 ---
-# <a name="power-pivot-minimum-privilege-example---sharepoint-2016"></a>Power Pivot con privilegios mínimos ejemplo - SharePoint 2016
+# <a name="power-pivot-minimum-privilege-example---sharepoint-2016"></a>Power Pivot con privilegios mínimos Example - SharePoint 2016
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   En este tema se describe un ejemplo [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para la configuración de SharePoint 2016 con privilegios mínimos. La configuración emplea una cuenta diferente para cada uno de los tres componentes y cada cuenta tiene el nivel mínimo de privilegios.  
   
 ## <a name="summary-of-accounts"></a>Resumen de cuentas  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2016 admite el uso de la cuenta de servicio de red para la cuenta de servicio de Analysis Services. La cuenta de servicio de red no es un escenario admitido con SharePoint 2010. Para obtener más información sobre las cuentas de servicio, consulte [configurar cuentas de servicio de Windows y permisos](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx).  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2016 admite el uso de la cuenta de servicio de red para la cuenta de servicio de Analysis Services. La cuenta de servicio de red no es un escenario admitido con SharePoint 2010. Para obtener más información sobre las cuentas de servicio, consulte [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (http://msdn.microsoft.com/library/ms143504.aspx).  
   
  En la tabla siguiente se resumen las tres cuentas usadas en este ejemplo de configuración con privilegios mínimos.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "34016202"
  **SPFarm** es una cuenta de dominio que el servicio Temporizador de extensiones de SharePoint y la aplicación web de Administración central usan para acceder a la base de datos de contenido de SharePoint. No es necesario que esta cuenta sea administrador local. El Asistente para la configuración de SharePoint concede el privilegio mínimo adecuado en la base de datos back-end de SQL Server. La configuración de privilegios mínimos de SQL Server es la pertenencia a los roles **securityadmin** y **dbcreator**.  
   
 ### <a name="the-service-account-for-power-pivot-service-spsvc"></a>La cuenta de servicio para el servicio Power Pivot (SPsvc)  
- Si no se configura una nueva granja de SharePoint antes de ejecutar el [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] herramienta de configuración, a continuación, de forma predeterminada el [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] herramienta de configuración creará lo siguiente:  
+ Si no se configura una nueva granja de SharePoint antes de ejecutar el [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] herramienta de configuración, a continuación, de forma predeterminada el [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] herramienta creará lo siguiente:  
   
 -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Aplicación de servicio.  
   

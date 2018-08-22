@@ -21,12 +21,12 @@ caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f19468e128b6009a19acd2ace84c99dc2e0140d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92c1e8d4a1014e7af89e056fe43244a51fb9d9a9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303035"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394732"
 ---
 # <a name="thread-pool-properties"></a>Propiedades de grupos de subprocesos
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa el subprocesamiento múltiple para realizar muchas operaciones, mejorando el rendimiento global del servidor al ejecutar varios trabajos en paralelo. Para administrar los subprocesos de manera más eficaz, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utiliza grupos de subprocesos para preasignar subprocesos y facilitar la disponibilidad de subprocesos para el trabajo siguiente.  
@@ -279,9 +279,9 @@ ms.locfileid: "37303035"
 >  Para obtener instrucciones acerca de cómo establecer las propiedades, vea [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Acerca de los procesos y subprocesos](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
- [Varios procesadores](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
- [Grupos de procesadores](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
+ [Acerca de los procesos y subprocesos](/windows/desktop/ProcThread/about-processes-and-threads)   
+ [Varios procesadores](/windows/desktop/ProcThread/multiple-processors)   
+ [Grupos de procesadores](/windows/desktop/ProcThread/processor-groups)   
  [Cambios en SQL Server 2012 en el grupo de subprocesos de Analysis Services](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Analysis Services 2012 configuración (Blog de Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387)   
  [Sistemas compatibles que tienen más de 64 procesadores](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   

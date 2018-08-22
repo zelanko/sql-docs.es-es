@@ -1,5 +1,5 @@
 ---
-title: sp_update_jobschedule (Transact-SQL) | Documentos de Microsoft
+title: sp_update_jobschedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,27 +22,27 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a87b927a80a634c6640837e328355ef34c67b295
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5b38499fce019f6f1f9b16ee489e413b1c0068a0
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253039"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392591"
 ---
 # <a name="spupdatejobschedule-transact-sql"></a>sp_update_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cambia la configuración de la programación del trabajo especificado.  
   
- **sp_update_jobschedule** se proporciona por compatibilidad con versiones anteriores.  
+ **sp_update_jobschedule** se proporciona por razones de compatibilidad.  
   
 > [!IMPORTANT]  
->  Para obtener más información acerca de la sintaxis utilizada en versiones anteriores de Microsoft SQL Server, vea Microsoft SQL Server 2000 de Transact-SQL Referencefor *.*  
+>  Para obtener más información acerca de la sintaxis utilizada en versiones anteriores de Microsoft SQL Server, vea Transact-SQL Referencefor Microsoft SQL Server 2000 *.*  
   
-## <a name="remarks"></a>Comentarios  
- Ahora, las programaciones de trabajos se pueden administrar independientemente de los trabajos. Para actualizar una programación, utilice **sp_update_schedule**.  
+## <a name="remarks"></a>Notas  
+ Ahora, las programaciones de trabajos se pueden administrar independientemente de los trabajos. Para actualizar una programación, use **sp_update_schedule**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -51,7 +51,7 @@ ms.locfileid: "33253039"
   
 -   **SQLAgentOperatorRole**  
   
- Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Solo los miembros del **sysadmin** puede usar este procedimiento almacenado para actualizar programaciones de trabajos que pertenecen a otros usuarios.  
   

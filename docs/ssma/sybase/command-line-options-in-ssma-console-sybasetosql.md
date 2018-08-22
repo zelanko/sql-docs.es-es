@@ -18,17 +18,17 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c14e4422f0033df05dc259ad180f4f2baa380e7b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 62c56e876a3579d136eb2bff7a594d651b4e084e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982347"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393962"
 ---
-# <a name="command-line-options-in-ssma-console-sybasetosql"></a>Opciones de línea de comandos en la consola SSMA (SybaseToSQL)
+# <a name="command-line-options-in-ssma-console-sybasetosql"></a>Opciones de la línea de comandos en la consola SSMA (SybaseToSQL)
 Microsoft le proporciona un sólido conjunto de opciones de línea de comandos para ejecutar y controlar las actividades SSMA. Las secciones que detallan la misma.  
   
-## <a name="command-line-options-in-ssma-console"></a>Opciones de línea de comandos en la consola SSMA  
+## <a name="command-line-options-in-ssma-console"></a>Opciones de la línea de comandos en la consola SSMA  
 Descritos en este documento, la consola es opciones de comando.  
   
 En esta sección, el término 'opción' también se conoce como 'switch'.  
@@ -128,7 +128,7 @@ Esto indica que la carpeta de configuración del entorno de proyecto para el pro
 ### <a name="secure-password-option-psecurepassword"></a>Opción de contraseña segura: – p/securepassword  
 Esta opción indica que la contraseña cifrada de las conexiones del servidor. Difiere de todas las demás opciones: la opción ni ejecuta cualquier script ni ayuda a las actividades relacionadas con la migración, pero ayuda a administrar el cifrado de contraseña para las conexiones del servidor usado en el proyecto de migración.  
   
-No se puede especificar cualquier otra opción o contraseña como el parámetro de línea de comandos. En caso contrario, produce un error. Para obtener más información, consulte el [administrar contraseñas](http://msdn.microsoft.com/9b6a70f9-6840-4140-a059-bb7bd7ccc67c) sección.  
+No se puede especificar cualquier otra opción o contraseña como el parámetro de línea de comandos. En caso contrario, produce un error. Para obtener más información, consulte el [administrar contraseñas](managing-passwords-sybasetosql.md) sección.  
   
 Se admiten las siguientes opciones secundarias para `–p/securepassword`:  
   

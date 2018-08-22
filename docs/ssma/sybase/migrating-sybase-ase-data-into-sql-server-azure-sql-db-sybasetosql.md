@@ -19,25 +19,25 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 55f9a09e9c0ce4a3b4f290c9b8b23185e09f415e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: e39d74143e21d6b75a5a35a1f8dbde4f62f285f4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982337"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392195"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>Migración de datos de Sybase ASE a SQL Server: Azure SQL DB (SybaseToSQL)
-Después de haber cargado correctamente los objetos de base de datos de Sybase Adaptive Server Enterprise (ASE) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o Azure SQL DB, puede migrar datos desde el ASE para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o Azure SQL DB.  
+Después de haber cargado correctamente los objetos de base de datos de Sybase Adaptive Server Enterprise (ASE) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL DB, puede migrar datos desde el ASE para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL DB.  
   
 > [!IMPORTANT]  
 > Si el motor que se va a usar motor de migración de datos de lado servidor, antes de migrar datos, debe instalar SSMA para Sybase ASE extensión Pack y los proveedores de Sybase ASE en el equipo que ejecuta SSMA. También debe ejecutar el servicio Agente SQL Server. Para obtener más información sobre cómo instalar el paquete de extensiones, consulte [instalación de componentes de SSMA en SQL Server (SybaseToSQL)](http://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d)  
   
 ## <a name="setting-migration-options"></a>Establecer las opciones de migración  
-Antes de migrar datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o Azure SQL DB, revise las opciones de migración de proyecto en el **configuración del proyecto** cuadro de diálogo.  
+Antes de migrar datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL DB, revise las opciones de migración de proyecto en el **configuración del proyecto** cuadro de diálogo.  
   
 -   Mediante este cuadro de diálogo puede establecer opciones como el tamaño del lote de migración, bloqueo de tablas, comprobación de restricciones, tratamiento de los valores null y control de valor de identidad. Para obtener más información acerca de la configuración de proyecto de migración, consulte [configuración del proyecto (migración) (Sybase)](http://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924).  
   
-    Para obtener más información sobre **configuración de migración de datos extendida**, consulte [configuración de migración de datos](http://msdn.microsoft.com/94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d)  
+    Para obtener más información sobre **configuración de migración de datos extendida**, consulte [configuración de migración de datos](data-migration-settings-sybasetosql.md)  
   
 -   El **migración motor** en el **configuración del proyecto** cuadro de diálogo permite al usuario realizar el proceso de migración con dos tipos de motores de migración de datos, viz.:  
   

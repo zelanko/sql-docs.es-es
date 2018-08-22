@@ -19,12 +19,12 @@ caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a3c3afeaadab1fd80c18a1dd428a93f7a2a66c28
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1f00fb1249254cf0adbcba84babe94e967b281b9
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204875"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392572"
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>Implementar la interfaz IDeliveryExtension para una extensión de entrega
   La clase de extensión de entrega se utiliza para entregar las notificaciones de informes a los usuarios según el contenido de las notificaciones. La clase de extensión de entrega también proporciona la infraestructura para validar la configuración del usuario que se pasa a la extensión de entrega. Además, la clase de extensión de entrega debería contener las propiedades específicas que los clientes puedan utilizar para obtener información sobre el nombre de la extensión, la configuración que la extensión admite y los formatos de representación que están disponibles para la extensión de entrega.  
@@ -32,7 +32,7 @@ ms.locfileid: "37204875"
  ![Proceso de la interfaz IDeliveryExtension](../../media/bk-ext-02.gif "Proceso de la interfaz IDeliveryExtension")  
 La interfaz IDeliveryExtension permite la validación de los datos del usuario así como que los clientes obtengan información sobre la configuración de entrega necesaria  
   
- Para crear una clase de extensión de entrega, implemente <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> y <xref:Microsoft.ReportingServices.Interfaces.IExtension>. La interfaz **IDeliveryExtension** permite a la extensión de entrega entregar notificaciones de informe mediante el método <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> y validar la configuración de la extensión entrante mediante el método <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ValidateUserData%2A>. La interfaz **IExtension** permite que la extensión de entrega implemente un nombre traducido y procese la información de configuración específica de la extensión almacenada en el archivo de configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Al implementar **IExtension**, la extensión de entrega contiene la propiedad <xref:Microsoft.ReportingServices.Interfaces.Extension.LocalizedName%2A>. Se recomienda encarecidamente que las extensiones de entrega de [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] admitan la propiedad **LocalizedName**, de forma que los usuarios encuentren un nombre conocido para la extensión en una interfaz de usuario, como el Administrador de informes.  
+ Para crear una clase de extensión de entrega, implemente <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> y <xref:Microsoft.ReportingServices.Interfaces.IExtension>. La interfaz **IDeliveryExtension** permite a la extensión de entrega entregar notificaciones de informe mediante el método <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> y validar la configuración de la extensión entrante mediante el método <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ValidateUserData%2A>. La interfaz **IExtension** permite que la extensión de entrega implemente un nombre traducido y procese la información de configuración específica de la extensión almacenada en el archivo de configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Al implementar **IExtension**, la extensión de entrega contiene la propiedad <xref:Microsoft.ReportingServices.Interfaces.Extension.LocalizedName%2A>. Se recomienda encarecidamente que las extensiones de entrega de [!INCLUDE[ssRS](../../../includes/ssrs.md)] admitan la propiedad **LocalizedName**, de forma que los usuarios encuentren un nombre conocido para la extensión en una interfaz de usuario, como el Administrador de informes.  
   
  La extensión de entrega también debe implementar la propiedad **ExtensionSettings** de la interfaz **IDeliveryExtension**. El servidor de informes utiliza el valor devuelto por la propiedad <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ExtensionSettings%2A> para evaluar los valores que una extensión de entrega requiere. Los clientes que interactúan con extensiones de entrega utilizan el método <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A> del servicio web del servidor de informes para devolver una lista de valores para la extensión de entrega.  
   

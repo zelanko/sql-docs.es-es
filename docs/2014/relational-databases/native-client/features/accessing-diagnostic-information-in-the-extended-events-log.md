@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
@@ -13,17 +13,17 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eab7a558054b423e3a18e54ad94bc91060082aad
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: beb758f6edb2e34dad108f89c7cd226c66353436
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420914"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395597"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Obtener acceso a información de diagnóstico en el registro de eventos extendidos
-  A partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seguimiento de acceso a datos y Native Client ([seguimiento de acceso a datos](http://go.microsoft.com/fwlink/?LinkId=125805)) se han actualizado para que sea más fácil de obtener información de diagnóstico sobre errores de conexión desde el anillo de conectividad información de rendimiento de búfer y aplicaciones desde el registro de eventos extendidos.  
+  A partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seguimiento de acceso a datos y Native Client ([seguimiento de acceso a datos](http://go.microsoft.com/fwlink/?LinkId=125805)) se han actualizado para que sea más fácil obtener información de diagnóstico acerca de errores de conexión desde el anillo de conectividad información de rendimiento de búfer y aplicación del registro de eventos extendidos.  
   
- Para obtener información acerca de cómo leer el registro de eventos extendidos, vea [View Event Session Data](../../../database-engine/view-event-session-data.md).  
+ Para obtener información sobre la lectura del registro de eventos extendidos, vea [Ver datos de sesión de evento](../../../database-engine/view-event-session-data.md).  
   
 > [!NOTE]  
 >  Esta función está dirigida únicamente a la solución de problemas y al diagnóstico, además es posible que no sea adecuada para fines de auditoría o seguridad.  

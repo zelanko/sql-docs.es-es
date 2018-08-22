@@ -1,76 +1,76 @@
 ---
-title: En tiempo real de puntuación | Documentos de Microsoft
+title: Puntuación en tiempo real en el aprendizaje automático de SQL Server | Microsoft Docs
+description: Generar predicciones con sp_rxPredict, puntuación de entradas de dta en un modelo previamente entrenado escritas en R en SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 08/15/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: eda95bf4cd16c5c38277e6d139c224f225c9b10a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d5a3d0318f925918ef98ae18744e4287d6b81108
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202777"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40394170"
 ---
-# <a name="realtime-scoring"></a>En tiempo real de puntuación
+# <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Puntuación con sp_rxPredict en aprendizaje automático de SQL Server en tiempo real
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este tema describe una característica disponible en SQL Server 2016 y de 2017 SQL Server que admita la puntuación en modelos de aprendizaje automático en casi en tiempo real.
+En este artículo se explica cómo puntuación en funciona casi en tiempo real para datos relacionales de SQL Server, mediante el aprendizaje automático modela escritas en R. 
 
-> [!TIP]
-> Puntuación nativo es una implementación especial de en tiempo real de puntuación que usa la función nativa de T-SQL PREDECIR para puntuar muy rápido y solo está disponible en SQL Server 2017. Para obtener más información, consulte [puntuación Native](sql-native-scoring.md).
+> [!Note]
+> Puntuación nativa es una implementación especial de puntuación en tiempo real que usa la función nativa de T-SQL para PREDECIR para puntuar muy rápido. Para obtener más información y la disponibilidad, consulte [puntuación nativa](sql-native-scoring.md).
 
-## <a name="how-realtime-scoring-works"></a>Cómo funciona la puntuación en tiempo real
+## <a name="how-real-time-scoring-works"></a>En tiempo real cómo funciona la puntuación
 
-En tiempo real de puntuación se admite en 2017 de SQL Server y SQL Server 2016, en los tipos de modelo específico creados mediante el uso de algoritmos de RevoScaleR o MicrosoftML Evaluate. Usa las bibliotecas de C++ nativo para generar puntuaciones, en función de la entrada de usuario proporcionada a un modelo que se almacenan en un formato binario especial de aprendizaje automático.
+Puntuación en tiempo real se admite en SQL Server 2017 y SQL Server 2016, en tipos de modelos concretos según las funciones de RevoScaleR o MicrosoftML como [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) o [rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Usa las bibliotecas nativas de C++ para generar puntuaciones, basadas en la entrada de usuario proporcionado a un modelo almacenado en un formato binario especial de aprendizaje automático.
 
-Debido a un modelo entrenado puede utilizarse para la puntuación sin tener que llamar a un tiempo de ejecución de idiomas externos, se reduce la sobrecarga de varios procesos. Esto es compatible con un rendimiento mucho más rápido predicción para escenarios de puntuación de producción. Dado que los datos nunca dejan SQL Server, puede generar resultados e inserta una nueva tabla sin sufrir ninguna traducción de datos entre R y SQL.
+Dado que puede usar un modelo entrenado para puntuar sin tener que llamar en tiempo de ejecución de un lenguaje externo, se reduce la sobrecarga de varios procesos. Esto es compatible con un rendimiento de predicción mucho más rápido para escenarios de puntuación de producción. Dado que los datos nunca abandonan el SQL Server, se pueden generar resultados e inserta una nueva tabla sin sufrir ninguna traducción de datos entre R y SQL.
 
-En tiempo real de puntuación es un proceso de varios pasos:
+Puntuación en tiempo real es un proceso de varios pasos:
 
-1. El procedimiento almacenado que realiza la puntuación debe habilitarse para cada base de datos.
+1. El procedimiento almacenado que realiza la puntuación debe estar habilitado en bases de datos.
 2. Cargar el modelo previamente entrenado en formato binario.
-3. Proporcionar nuevos datos de entrada, filas tabulares o únicos, como entrada para el modelo.
+3. Proporcionar nuevos datos de entrada, las filas tabulares o únicas, como entrada para el modelo.
 4. Para generar puntuaciones, llame al procedimiento almacenado de sp_rxPredict.
 
 ## <a name="get-started"></a>Introducción
 
-Para obtener ejemplos de código e instrucciones, consulte [cómo realizar la puntuación nativo o en tiempo real de puntuación](r/how-to-do-realtime-scoring.md).
+Para obtener ejemplos de código e instrucciones, consulte [cómo realizar la puntuación nativa o puntuación en tiempo real](r/how-to-do-realtime-scoring.md).
 
-Para un ejemplo de cómo puede rxPredict usados para puntuar, consulte [final al final préstamo ChargeOff predicción creado utilizando Azure HDInsight Spark clústeres y el servicio de R de SQL Server 2016](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
+Para obtener un ejemplo de cómo se puede usar rxPredict para la puntuación, vea [End final préstamos incobrables predicción creado utilizando Azure HDInsight clústeres de Spark y R Services de SQL Server 2016](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
 
 > [!TIP]
-> Si está trabajando exclusivamente en el código de R, también puede usar el [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) función para puntuar rápida.
+> Si está trabajando exclusivamente en el código de R, también puede usar el [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) función para la puntuación rápida.
 
 ## <a name="requirements"></a>Requisitos
 
-En tiempo real de puntuación es compatible con estas plataformas:
+Puntuación en tiempo real es compatible con estas plataformas:
 
 + SQL Server 2017 Machine Learning Services
-+ SQL Server R Services 2016, con una actualización de la instancia de R Services para Microsoft R Server 9.1.0 o posterior
-+ Machine Learning Server (independiente)
++ SQL Server R Services 2016, con una actualización de componentes de R a 9.1.0 o posterior
 
-En SQL Server, debe habilitar la característica de puntuación de antemano de en tiempo real. Esto es porque la característica requiere la instalación de bibliotecas basados en CLR en SQL Server.
+En SQL Server, debe habilitar la característica de puntuación en tiempo real de antemano agregar las bibliotecas de CLR para SQL Server.
 
-Para obtener información sobre en tiempo real de puntuación en un entorno distribuido que se basa en Microsoft R Server, consulte el [publishService](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice) función disponible en la [mrsDeploy paquete](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package), que es compatible con publicación de modelos en tiempo real un servicio web que se ejecuta en el servidor de R de puntuación como una nueva.
+Para obtener información sobre la puntuación en tiempo real en un entorno distribuido basado en Microsoft R Server, consulte el [publishService](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice) disponibles en función del [paquete mrsDeploy](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package), que es compatible con publicación de modelos para puntuar en tiempo real como un nuevo un servicio web que se ejecutan en el servidor de R.
 
-### <a name="restrictions"></a>Restricciones
+### <a name="restrictions"></a>Restrictions
 
-+ Debe entrenar el modelo de antemano con uno de los admitidos **rx** algoritmos. Para obtener más información, consulte [admite algoritmos](#bkmk_rt_supported_algos). En tiempo real con la puntuación `sp_rxPredict` admite algoritmos de RevoScaleR y MicrosoftML.
++ Se debe entrenar el modelo de antemano con una de las **rx** algoritmos. Para obtener más información, consulte [admite algoritmos](#bkmk_rt_supported_algos). Puntuación en tiempo real con `sp_rxPredict` admite algoritmos RevoScaleR y MicrosoftML.
 
 + El modelo debe guardarse con las nuevas funciones de serialización: [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) para R, y [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) para Python. Estas funciones de serialización se han optimizado para admitir la puntuación rápida.
 
-+ En tiempo real de puntuación no se usa un intérprete de intérprete; por lo tanto, no se admite ninguna funcionalidad que requiera un intérprete durante el paso de puntuación.  Entre ellas se incluyen:
++ Puntuación en tiempo real no utiliza un intérprete; por lo tanto, no se admite ninguna funcionalidad que puede requerir un intérprete durante el paso de puntuación.  Entre ellas se incluyen:
 
-  + Modelos mediante el `rxGlm` o `rxNaiveBayes` algoritmos no son compatibles actualmente
+  + Los modelos utilizando la `rxGlm` o `rxNaiveBayes` actualmente no se admiten los algoritmos
 
-  + Modelos de RevoScaleR que utilizan una función de transformación de R o una fórmula que contenga una transformación, como <code>A ~ log(B)</code> no se admiten para determinar la puntuación en tiempo real. Para usar un modelo de este tipo, se recomienda que lleva a cabo la transformación en la que los datos de entrada antes de pasar los datos a la puntuación en tiempo real.
+  + Modelos de RevoScaleR que usan una función de transformación de R o una fórmula que contenga una transformación, tales como <code>A ~ log(B)</code> no se admiten para determinar la puntuación en tiempo real. Para usar un modelo de este tipo, se recomienda realizar la transformación en el que los datos de entrada antes de pasar los datos para puntuar en tiempo real.
 
-+ En tiempo real de puntuación actualmente está optimizada para las predicciones rápidas en conjuntos de datos más pequeños, comprendido entre unas cuantas filas a cientos de miles de filas. En conjuntos de datos muy grandes, con [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) pueden ser más rápidas.
++ Puntuación en tiempo real está optimizado actualmente para las predicciones rápidas en conjuntos de datos más pequeños, que abarcan desde unas pocas filas hasta cientos de miles de filas. En grandes conjuntos de datos, mediante [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) puede ser más rápido.
 
-### <a name="a-namebkmkrtsupportedalgosalgorithms-that-support-realtime-scoring"></a><a name="bkmk_rt_supported_algos">Algoritmos que admiten la puntuación en tiempo real
+### <a name="a-namebkmkrtsupportedalgosalgorithms-that-support-real-time-scoring"></a><a name="bkmk_rt_supported_algos">Algoritmos que admiten la puntuación en tiempo real
 
 + Modelos de RevoScaleR
 
@@ -80,7 +80,7 @@ Para obtener información sobre en tiempo real de puntuación en un entorno dist
   + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree) \*
   + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest) \*
   
-  Los modelos se marcan con \* también son compatibles con la puntuación nativo con la función de PREDICCIÓN.
+  Marcan de modelos con \* también admiten la puntuación nativa con la función PREDICT.
 
 + Modelos de MicrosoftML
 
@@ -95,24 +95,20 @@ Para obtener información sobre en tiempo real de puntuación en un entorno dist
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
-  + [Categorías](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
+  + [categorías](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
   + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
   + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
 
 ### <a name="unsupported-model-types"></a>Tipos de modelo no admitido
 
-No se admiten los siguientes tipos de modelo:
+Puntuación en tiempo real no se admite para las transformaciones de R que no sean los explícitamente de la lista en la sección anterior. 
 
-+ Modelos que contienen otros tipos de transformaciones de R no compatibles
-+ Modelos mediante el `rxGlm` o `rxNaiveBayes` algoritmos de RevoScaleR
-+ Modelos PMML
-+ Modelos creados mediante otras bibliotecas de R de CRAN u otros repositorios
-+ Modelos que contienen cualquier otro tipo de transformación de R distintos de los mencionados aquí
+Para los desarrolladores acostumbrados a trabajar con RevoScaleR y otras bibliotecas específicas de Microsoft R, incluyen funciones no admitidas `rxGlm` o `rxNaiveBayes` algoritmos de RevoScaleR, los modelos PMML y otros modelos creados mediante otras bibliotecas de R desde CRAN o otros repositorios.
 
 ### <a name="known-issues"></a>Problemas conocidos
 
-+ `sp_rxPredict` Devuelve un mensaje correcta cuando se pasa un valor NULL como el modelo: "System.Data.SqlTypes.SqlNullValueException:Data en Null".
++ `sp_rxPredict` Devuelve un mensaje incorrecto cuando se pasa un valor NULL como el modelo: "System.Data.SqlTypes.SqlNullValueException:Data en Null".
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Cómo llevar a cabo en tiempo real de puntuación](r/how-to-do-realtime-scoring.md)
+[Cómo realizar la puntuación en tiempo real](r/how-to-do-realtime-scoring.md)

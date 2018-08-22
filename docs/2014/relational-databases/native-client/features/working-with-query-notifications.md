@@ -1,11 +1,11 @@
 ---
-title: Trabajar con las notificaciones de consulta | Microsoft Docs
+title: Trabajar con las notificaciones de consulta | Documentos de Microsoft
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,12 +24,12 @@ caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a0f71aec8196f4815d8bc39ec9dd9dc0be443a01
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 28719e739e5e41967b89296f0675dee58b30770d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417934"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392424"
 ---
 # <a name="working-with-query-notifications"></a>Trabajar con notificaciones de consulta
   Las notificaciones de consulta se introdujeron con [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Las notificaciones de consulta, creadas a partir de la infraestructura de Service Broker introducida en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], permiten notificar a las aplicaciones si los datos han cambiado. Esta característica resulta especialmente útil para las aplicaciones que proporcionan una caché de información de una base de datos, como una aplicación web, y necesitan recibir notificaciones si se modifican los datos de origen.  
@@ -80,7 +80,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Número de segundos que la notificación de consulta va a permanecer activa.<br /><br /> El valor predeterminado es 432000 segundos (5 días). El valor mínimo es 1 segundo y el valor máximo es 2^31-1 segundos.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Texto del mensaje de la notificación. Lo define el usuario y no tiene ningún formato predefinido.<br /><br /> De forma predeterminada, la cadena está vacía. Puede especificarse un mensaje usando de 1 a 2000 caracteres.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Opciones de notificación de consulta. Se especifican en una cadena con *nombre*=*valor* sintaxis. El usuario es responsable de la creación del servicio y de la lectura de las notificaciones fuera de la cola.<br /><br /> El valor predeterminado es una cadena vacía.|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Opciones de notificación de consulta. Se especifican en una cadena con la sintaxis *nombre*=*valor*. El usuario es responsable de la creación del servicio y de la lectura de las notificaciones fuera de la cola.<br /><br /> El valor predeterminado es una cadena vacía.|  
   
  La suscripción de notificación se confirma siempre, independientemente de que la instrucción se haya ejecutado en una transacción de usuario o en una confirmación automática o de que la transacción en la que se haya ejecutado la instrucción se haya confirmado o revertido. La notificación del servidor se activa ante cualquiera de las siguientes condiciones de notificación no válida: cambio de esquema o datos subyacentes o cuando se alcanza el período de tiempo de espera, lo que ocurra antes. Los registros de notificación se eliminan en cuanto se activan. Por lo tanto, al recibir las notificaciones, la aplicación debe suscribirse de nuevo en caso de que deseen obtenerse actualizaciones posteriores.  
   
@@ -90,7 +90,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   
 ```  
   
- Tenga en cuenta que seleccione * no eliminar la entrada de la cola, sin embargo recibir \* FROM sí. Esto detiene un subproceso del servidor si la cola está vacía. Si hay entradas en la cola en el momento de la llamada, se devuelven inmediatamente; de lo contrario, la llamada espera a que se realice una entrada en la cola.  
+ Tenga en cuenta que SELECT * no elimina la entrada de la cola; en cambio, RECEIVE \* FROM sí que la elimina. Esto detiene un subproceso del servidor si la cola está vacía. Si hay entradas en la cola en el momento de la llamada, se devuelven inmediatamente; de lo contrario, la llamada espera a que se realice una entrada en la cola.  
   
 ```  
 RECEIVE * FROM MyQueue  
@@ -98,7 +98,7 @@ RECEIVE * FROM MyQueue
   
  Si la cola está vacía, esta instrucción devuelve inmediatamente un conjunto de resultados vacío; de lo contrario, devuelve todas las notificaciones en cola.  
   
- Si los valores SSPROP_QP_NOTIFICATION_MSGTEXT y SSPROP_QP_NOTIFICATION_OPTIONS son distintos de NULL y no están vacíos, el encabezado TDS de notificación de consulta que contiene las tres propiedades definidas anteriormente se envía al servidor cada vez que se ejecuta el comando. Si alguno de estos valores es NULL (o está vacío), el encabezado no se envía y se produce un error DB_E_ERRORSOCCURRED (o DB_S_ERRORSOCCURRED si ambas propiedades están marcadas como opcionales) y el valor de estado se establece en DBPROPSTATUS_BADVALUE. La validación se produce durante la ejecución y preparación. De forma similar, se produce un error DB_S_ERRORSOCCURED cuando se establecen las propiedades de notificación de consulta para las conexiones a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] las versiones anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. En este caso, el valor de estado es DBPROPSTATUS_NOTSUPPORTED.  
+ Si los valores SSPROP_QP_NOTIFICATION_MSGTEXT y SSPROP_QP_NOTIFICATION_OPTIONS son distintos de NULL y no están vacíos, el encabezado TDS de notificación de consulta que contiene las tres propiedades definidas anteriormente se envía al servidor cada vez que se ejecuta el comando. Si alguno de estos valores es NULL (o está vacío), el encabezado no se envía y se produce un error DB_E_ERRORSOCCURRED (o DB_S_ERRORSOCCURRED si ambas propiedades están marcadas como opcionales) y el valor de estado se establece en DBPROPSTATUS_BADVALUE. La validación se produce durante la ejecución y preparación. Del mismo modo, se produce un error DB_S_ERRORSOCCURED cuando las propiedades de notificación de consulta se establecen para conexiones con versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. En este caso, el valor de estado es DBPROPSTATUS_NOTSUPPORTED.  
   
  Iniciar una suscripción no garantiza que los mensajes posteriores se entregarán correctamente. Además, no se realiza ninguna comprobación de validez del nombre de servicio especificado.  
   

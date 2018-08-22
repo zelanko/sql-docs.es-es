@@ -1,5 +1,5 @@
 ---
-title: sp_update_job (Transact-SQL) | Documentos de Microsoft
+title: sp_update_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e36396f911c7506660fd82c5540307e95023950
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7412bc6defa6d25520570e23556e77e8824c8a88
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262220"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393716"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  [  **@job_name =**] **'***job_name***'**  
  Nombre del trabajo. *job_name*es **nvarchar (128)**.  
   
-> **Nota:** cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
+> **Nota:** cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
   
  [  **@new_name =**] **'***new_name***'**  
  Nuevo nombre del trabajo. *new_name*es **nvarchar (128)**.  
@@ -90,7 +90,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  [  **@notify_level_eventlog =**] *eventlog_level*  
  Especifica cuándo se debe incluir una entrada para este trabajo en el registro de aplicación de Microsoft Windows. *eventlog_level*es **int**, y puede tener uno de estos valores.  
   
-|Value|Descripción (acción)|  
+|Valor|Descripción (acción)|  
 |-----------|----------------------------|  
 |**0**|Never|  
 |**1**|En caso de éxito|  
@@ -106,7 +106,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  [  **@notify_level_page =**] *page_level*  
  Especifica cuándo se debe enviar una página tras finalizar este trabajo. *page_level*es **int**. *page_level*utiliza los mismos valores que *eventlog_level*.  
   
- [  **@notify_email_operator_name =**] **'***operator_name***'**  
+ [  **@notify_email_operator_name =**] **'***nombre_operador***'**  
  El nombre del operador al que se envía el correo electrónico cuando *email_level* se alcanza. *nombre de correo electrónico* es **nvarchar (128)**.  
   
  [  **@notify_netsend_operator_name =**] **'***netsend_operator***'**  
@@ -124,12 +124,12 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_update_job** se debe ejecutar desde la **msdb** base de datos.  
   
- **sp_update_job** solo cambia las opciones para el parámetro que se proporcionan los valores. Si se omite un parámetro, se conserva la configuración actual.  
+ **sp_update_job** solo cambia las opciones de parámetro que se proporcionan los valores. Si se omite un parámetro, se conserva la configuración actual.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -138,9 +138,9 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Solo los miembros del **sysadmin** puede utilizar este procedimiento almacenado para editar los atributos de los trabajos que pertenecen a otros usuarios.  
+ Solo los miembros del **sysadmin** puede usar este procedimiento almacenado para editar los atributos de los trabajos que pertenecen a otros usuarios.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se cambia el nombre, la descripción y el estado de habilitación del trabajo `NightlyBackups`.  

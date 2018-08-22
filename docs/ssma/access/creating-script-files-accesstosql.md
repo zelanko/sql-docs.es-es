@@ -1,5 +1,5 @@
 ---
-title: Crear archivos de Script (AccessToSQL) | Documentos de Microsoft
+title: Creación de archivos de Script (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
@@ -16,40 +16,40 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: cd6227abb8cc311d16a0eadf6e491f7b82d9f48b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7beb9b14c215f04fc65b3cff4cb510cd032e1331
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773461"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392659"
 ---
-# <a name="creating-script-files-accesstosql"></a>Crear archivos de script (AccessToSQL)
-El primer paso antes de iniciar la aplicación de consola SSMA consiste en crear el archivo de script y si es necesario crear el archivo de valor de la variable y el archivo de conexión de servidor.  
+# <a name="creating-script-files-accesstosql"></a>Creación de archivos de script (AccessToSQL)
+El primer paso antes de iniciar la aplicación de consola SSMA crear el archivo de script y si es necesario crear el archivo de valor de la variable y el archivo de conexión de servidor.  
   
-El archivo de script puede dividirse en tres secciones, especialmente..,:  
+El archivo de script puede dividirse en tres secciones viz..,:  
   
 1.  **config:** permite al usuario establecer los parámetros de configuración para la aplicación de consola.  
   
-2.  **servidores:** permite al usuario establecer las definiciones de servidores de origen o destino. Esto también puede estar en un archivo de conexión de servidor independiente.  
+2.  **servidores:** permite al usuario establecer el origen o destino de las definiciones de servidor. Esto también puede estar en un archivo de conexión de servidor independiente.  
   
-3.  **comandos de script:** permite al usuario ejecutar comandos de flujo de trabajo SSMA.  
+3.  **secuencias de comandos:** permite al usuario ejecutar comandos de flujo de trabajo SSMA.  
   
 Cada sección se describe en detalle a continuación:  
   
 ## <a name="configuring-access-console-settings"></a>Configuración de la consola de acceso  
-Las configuraciones de una secuencia de comandos se muestran en el archivo de secuencia de comandos de consola.  
+Las configuraciones de una secuencia de comandos se muestran en el archivo de script de la consola.  
   
-Si cualquiera de los elementos se especifican en el nodo de configuración, se establecen como la configuración global, es decir, son aplicables para todos los comandos de script. Estos elementos de configuración también pueden establecerse en cada comando en la sección de la secuencia de comandos si el usuario desea invalidar la configuración global.  
+Si cualquiera de los elementos se especifican en el nodo de configuración, se establecen como la configuración global, es decir, son aplicables a todos los comandos de script. Estos elementos de configuración también pueden establecerse dentro de cada comando en la sección de la secuencia de comandos si el usuario desea invalidar la configuración global.  
   
 Las opciones configurables por el usuario incluyen:  
   
-1.  **Proveedor de la ventana de salida:** si mensajes suprimir atributo está establecido en 'true', la específica de un comando no se muestren mensajes en la consola. La descripción de atributos se indica a continuación:  
+1.  **Proveedor de la ventana de salida:** si suprimir de mensajes está establecido en 'true', la específica del comando no se muestran mensajes en la consola. La descripción de los atributos se indica a continuación:  
   
-    -   destino: Especifica si el resultado es necesario obtener imprime en un archivo o stdout. Se trata de un valor predeterminado es false.  
+    -   destino: Especifica si la salida se debe imprimir a un archivo o stdout. Se trata de un valor predeterminado es false.  
   
     -   nombre de archivo: la ruta de acceso del archivo (opcional).  
   
-    -   mensajes suprimir: suprime los mensajes en la consola. Esto es 'false' de forma predeterminada.  
+    -   Suprimir-messages: suprime los mensajes en la consola. Esto es 'false', de forma predeterminada.  
   
     **Ejemplo:**  
   
@@ -68,7 +68,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *o*  
+    *O*  
   
     ```xml  
     <…All commands…>  
@@ -86,13 +86,13 @@ Las opciones configurables por el usuario incluyen:
     </…All commands…>  
     ```  
   
-2.  **Proveedor de la conexión de migración de datos:** especifica que el servidor de origen o destino es considerarse para la migración de datos.  Origen-use-utilizó por última vez, se indica que se usa el último servidor de origen usados para la migración de datos. De forma similar al destino-use-utilizó por última vez se indica que se utiliza el último servidor de destino utilizado para la migración de datos. El usuario también puede especificar el servidor (origen o destino) mediante el uso de los atributos de servidor de origen o el servidor de destino.  
+2.  **Proveedor de conexión de la migración de datos:** Esto especifica que el servidor de origen o destino es para considerarse para la migración de datos.  Origen-use-último uso indica que se utiliza el último servidor de origen usados para la migración de datos. Del mismo modo destino-use-último uso indica que se utiliza el último servidor de destino usada para la migración de datos. El usuario también puede especificar el servidor (origen o destino) mediante el uso de los atributos de servidor de origen o el servidor de destino.  
   
     Puede usarse, es decir, solo uno o el otro atributo especificado:  
   
-    - origen: use-utilizó por última vez = "true" (valor predeterminado) o servidor de origen = "source_servername"  
+    - origen-use-último uso = "true" (valor predeterminado) o servidor de origen = "source_servername"  
   
-    - destino-use-utilizó por última vez = "true" (valor predeterminado) o servidor de destino = "target_servername"  
+    - destino-use-último uso = "true" (valor predeterminado) o servidor de destino = "target_servername"  
   
     **Ejemplo:**  
   
@@ -105,7 +105,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *o*  
+    *O*  
   
     ```xml  
     <migrate-data>  
@@ -117,15 +117,15 @@ Las opciones configurables por el usuario incluyen:
     </migrate-data>  
     ```  
   
-3.  **Elemento emergente de entrada de usuario:** Esto permite el tratamiento de errores, cuando los objetos se cargan desde la base de datos. El usuario proporciona los modos de entrada, y si se produce un error, la consola continúa tal y como especifica el usuario.  
+3.  **Menú emergente de entrada de usuario:** Esto permite el tratamiento de errores, cuando los objetos se cargan desde la base de datos. El usuario proporciona los modos de entrada y, si se produce un error, la consola continúa tal como especifica el usuario.  
   
-    Los modos son:  
+    Los modos incluyen:  
   
-    -   **pida-usuario -** pide al usuario que continue('yes') o error ('n').  
+    -   **formular-usuario -** pide al usuario que continue('yes') o error ('n').  
   
-    -   **error -** la consola mostrará un error y detiene la ejecución.  
+    -   **Error:** la consola mostrará un error y detiene la ejecución.  
   
-    -   **continuar-** la consola continúa con la ejecución.  
+    -   **continuar-** continúa de la consola con la ejecución.  
   
     El modo predeterminado es **error**.  
   
@@ -138,7 +138,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *o*  
+    *O*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -150,11 +150,11 @@ Las opciones configurables por el usuario incluyen:
     </connect-target-database>  
     ```  
   
-4.  **Volver a conectar el proveedor:** Esto permite al usuario establecer la configuración de reconexión en caso de errores de conexión. Esto se puede establecer para servidores de origen y destino.  
+4.  **Volver a conectar el proveedor:** Esto permite al usuario establecer la configuración de reconexión en el caso de errores de conexión. Esto se puede establecer para servidores de origen y destino.  
   
     Los modos de reconexión son:  
   
-    -   volver a conectarse-a-última-usa-server: si la conexión no está activa, intenta volver a conectarse hasta el último servidor que se usa al menos 5 veces.  
+    -   volver a conectarse a último-usar-servidor: si la conexión no está activa, intenta volver a conectarse hasta el último servidor que se usa como máximo 5 veces.  
   
     -   generar un error: si la conexión no está activa, se genera un error.  
   
@@ -171,7 +171,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *o*  
+    *O*  
   
     ```xml  
     <!--synchronization-->  
@@ -182,7 +182,7 @@ Las opciones configurables por el usuario incluyen:
   
     </synchronize-target>  
     ```  
-    *o*  
+    *O*  
   
     ```xml  
     <!--data migration-->  
@@ -198,7 +198,7 @@ Las opciones configurables por el usuario incluyen:
     </migrate-data>  
     ```  
   
-5.  **Proveedor de sobrescritura de convertidor:** Esto permite al usuario controlar los objetos que ya están presentes en el destino de la metabase. Las acciones posibles incluyen:  
+5.  **Proveedor de sobrescritura de convertidor:** Esto permite al usuario controlar los objetos que ya están presentes en el destino de la metabase. Las posibles acciones incluyen:  
   
     -   Error: la consola mostrará un error y detiene la ejecución.  
   
@@ -206,7 +206,7 @@ Las opciones configurables por el usuario incluyen:
   
     -   Omitir: la consola omite los objetos que ya existen en la base de datos  
   
-    -   usuario pida: pide al usuario para la entrada ('Sí' / 'no')  
+    -   usuario preguntar: pide al usuario para la entrada ('Sí' / 'no')  
   
     **Ejemplo:**  
   
@@ -217,7 +217,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *o*  
+    *O*  
   
     ```xml  
     <convert-schema object-name="ssma.TT1">  
@@ -227,7 +227,7 @@ Las opciones configurables por el usuario incluyen:
     </convert-schema>  
     ```  
   
-6.  **Error de requisitos previos de proveedor:** Esto permite al usuario controlar todos los requisitos previos necesarios para procesar un comando. De forma predeterminada, el modo strict es 'false'. Si se establece en 'true', una excepción se genera para que si no se cumplen los requisitos previos.  
+6.  **Error de requisitos previos de proveedor:** Esto permite al usuario controlar los requisitos previos que son necesarios para procesar un comando. De forma predeterminada, el modo strict es 'false'. Si se establece en 'true', una excepción se genera si hay errores a cumplir los requisitos previos.  
   
     **Ejemplo:**  
   
@@ -239,23 +239,23 @@ Las opciones configurables por el usuario incluyen:
     </output-providers>  
     ```  
   
-7.  **Operación de detención:** durante la operación intermedia, si el usuario desea detener la operación, a continuación, **'Ctrl + C'** se puede utilizar la tecla de acceso rápido. SSMA para la consola de acceso se va a esperar a que finalice la operación y finaliza la ejecución de la consola.  
+7.  **Operación de detención:** durante la operación intermedio, si el usuario desea detener la operación, a continuación, **'Ctrl + C'** se puede usar la tecla de acceso rápido. SSMA para Access consola esperará a que se complete la operación y finaliza la ejecución de la consola.  
   
-    Si el usuario desea detener la ejecución inmediatamente, a continuación, **'Ctrl + C'** teclas de acceso rápido pueden presionarse nuevo para la terminación repentina de la aplicación de consola SSMA.  
+    Si el usuario desea detener la ejecución inmediatamente, a continuación, **'Ctrl + C'** pueden presionar teclas de acceso rápido nuevo para la terminación repentina de la aplicación de consola de SSMA.  
   
-8.  **Proveedor de progreso:** informa del progreso de cada comando de la consola. Esto está deshabilitada de forma predeterminada. Los atributos de informes de progreso comprenden:  
+8.  **Proveedor de progreso:** informa del progreso de cada comando de la consola. Esta opción está deshabilitada de forma predeterminada. Constan de los atributos de informes de progreso:  
   
     -   off  
   
     -   cada 1%  
   
-    -   cada 2%  
+    -   una de las 2%  
   
-    -   cada 5%  
+    -   una de las 5%  
   
-    -   cada 10%  
+    -   una de las 10%  
   
-    -   cada 20%  
+    -   una de las 20%  
   
     **Ejemplo:**  
   
@@ -270,7 +270,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *o*  
+    *O*  
   
     ```xml  
     <…All commands…>  
@@ -292,16 +292,16 @@ Las opciones configurables por el usuario incluyen:
   
     -   error irrecuperable: se registran los mensajes solo error irrecuperable.  
   
-    -   Error: se registran solo los mensajes de error y error irrecuperable.  
+    -   Error: se registran los mensajes de error y el error irrecuperable única.  
   
-    -   Advertencia: se registran todos los niveles excepto los mensajes de depuración y la información.  
+    -   Advertencia: se registran todos los niveles, excepto los mensajes de depuración e información.  
   
-    -   Info: todos los niveles salvo que se registran los mensajes de depuración.  
+    -   Info: todos los niveles, salvo que se registran los mensajes de depuración.  
   
     -   depurar: todos los niveles de los mensajes registrados.  
   
     > [!NOTE]  
-    > Obligatorios mensajes se registran en cualquier nivel.  
+    > Se registran mensajes obligatorios en cualquier nivel.  
   
     **Ejemplo:**  
   
@@ -312,7 +312,7 @@ Las opciones configurables por el usuario incluyen:
   
     </output-providers>  
     ```  
-    *o*  
+    *O*  
   
     ```xml  
     <…All commands…>  
@@ -322,13 +322,13 @@ Las opciones configurables por el usuario incluyen:
     </…All commands…>  
     ```  
   
-10. **Contraseña de cifrado de invalidación:** si es 'true', la contraseña de texto no cifrado especificado en la sección de definición de servidor del archivo de conexión del servidor o en el archivo de script, invalida la contraseña cifrada que se almacenan en el almacenamiento protegido si ya existe. Si se especifica ninguna contraseña en texto no cifrado, se solicita al usuario que escriba la contraseña.  
+10. **Contraseña cifrada de invalidación:** si es 'true', la contraseña de texto no cifrado especificado en la sección de definición de servidor del archivo de conexión del servidor o en el archivo de script, invalidaciones de la contraseña cifrada almacenada en almacenamiento protegido, si ya existe. Si se especifica ninguna contraseña en texto no cifrado, se solicita al usuario que escriba la contraseña.  
   
     Aquí surgen dos casos:  
   
     1.  Si invalidar la opción es **false**, el orden de búsqueda estarán protegidos almacenamiento -&gt;archivo de Script -&gt;archivo de conexión de servidor -&gt; preguntar al usuario.  
   
-    2.  Si reemplaza la opción es **true**, será el orden de búsqueda de archivo de Script -&gt;archivo de conexión de servidor -&gt;preguntar al usuario.  
+    2.  Si invalidar la opción es **true**, será el orden de búsqueda de archivo de Script -&gt;archivo de conexión de servidor -&gt;preguntar al usuario.  
   
     **Ejemplo:**  
   
@@ -340,19 +340,19 @@ Las opciones configurables por el usuario incluyen:
     </output-providers>  
     ```  
   
-La opción no configurable es:  
+Es la opción que no es configurable:  
   
--   **Número máximo de intentos de reconexión:** cuando una conexión establecida se agota el tiempo o se interrumpe deba a errores de red, el servidor es necesario volver a conectarse. Se permiten los intentos de reconexión hasta un máximo de **5** reintentos transcurrido ese período, la consola realiza automáticamente la reconexión. La funcionalidad de reconexión automática reduce el esfuerzo de volver a ejecutar la secuencia de comandos.  
+-   **Número máximo de intentos de reconexión:** cuando una conexión establecida se agota el tiempo o se interrumpe debida a errores de red, el servidor es necesario volver a conectarse. Se permiten los intentos de reconexión a un máximo de **5** reintentos después de eso, la consola realiza automáticamente la reconexión. La instalación de la reconexión automática reduce el esfuerzo de volver a ejecutar el script.  
   
-## <a name="server-connection-parameters"></a>Parámetros de conexión de servidor  
+## <a name="server-connection-parameters"></a>Parámetros de conexión del servidor  
 Parámetros de conexión de servidor pueden definirse en el archivo de script o en el archivo de conexión de servidor. Consulte la [crear los archivos de conexión de servidor &#40;AccessToSQL&#41; ](../../ssma/access/creating-the-server-connection-files-accesstosql.md) sección para obtener más detalles.  
   
 ## <a name="script-commands"></a>Comandos de script  
-El archivo de script contiene una secuencia de comandos de flujo de trabajo de migración en el formato XML. La aplicación de consola SSMA procesa la migración en el orden de los comandos que aparecen en el archivo de script.  
+El archivo de script contiene una secuencia de comandos de flujo de trabajo de migración en formato XML. La aplicación de consola SSMA procesa la migración en el orden de los comandos que aparecen en el archivo de script.  
   
-Por ejemplo, una migración típica de datos de una tabla específica en una base de datos de Access sigue la jerarquía de: base de datos -&gt; tabla.  
+Por ejemplo, sigue a la jerarquía de una migración de datos típica de una tabla específica en una base de datos de Access: base de datos -&gt; tabla.  
   
-Cuando todos los comandos en el archivo de script se ejecuta correctamente, la aplicación de consola SSMA sale y devuelve el control al usuario. El contenido de un archivo de script es más o menos estático con información sobre las variable contenidas en una [archivos de valores de Variable](http://msdn.microsoft.com/808595c3-8ef1-40bd-a93e-5cf237950e08) o, en una sección independiente dentro del archivo de script para los valores de las variables.  
+Cuando todos los comandos en el archivo de script se ejecuta correctamente, la aplicación de consola SSMA sale y devuelve el control al usuario. El contenido de un archivo de script es más o menos estático con información sobre las variable contenidas en un [archivos de valores de Variable](creating-variable-value-files-accesstosql.md) o, en una sección independiente dentro del archivo de script para los valores de variable.  
   
 **Ejemplo:**  
   
@@ -379,7 +379,7 @@ Cuando todos los comandos en el archivo de script se ejecuta correctamente, la a
   
 </ssma-script-file>  
 ```  
-Se proporcionan plantillas que consta de 3 archivos de script (para la ejecución de varios escenarios), archivo de valores de variable y un archivo de conexión de servidor en la carpeta de secuencias de comandos de consola de ejemplo del directorio del producto:  
+Se proporcionan plantillas que consta de 3 archivos de script (para ejecutar varios escenarios), archivo de valores de variable y un archivo de conexión de servidor en la carpeta de Scripts de la consola de ejemplo del directorio del producto:  
   
 -   AssessmentReportGenerationSample.xml  
   
@@ -389,16 +389,16 @@ Se proporcionan plantillas que consta de 3 archivos de script (para la ejecució
   
 -   ServersConnectionFileSample.xml  
   
-Puede ejecutar las plantillas (archivos) después de cambiar los parámetros que aparecen en él para relevancia.  
+Puede ejecutar las plantillas (archivos) después de cambiar los parámetros que aparecen en ella por su gran relevancia.  
   
-Lista completa de los comandos de script puede encontrarse en [ejecutando la consola SSMA &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
+Encontrará una lista completa de comandos de script en [ejecutando la consola de SSMA &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
 ## <a name="script-file-validation"></a>Validación del archivo de script  
-El usuario puede validar fácilmente su archivo de script en el archivo de definición de esquema **'A2SSConsoleScriptSchema.xsd'** disponible en la carpeta 'Esquemas'.  
+El usuario puede validar fácilmente su archivo de script en el archivo de definición de esquema **'A2SSConsoleScriptSchema.xsd'** disponible en la carpeta "Esquemas".  
   
 ## <a name="next-step"></a>Paso siguiente
-El siguiente paso en la utilización de la consola es [crear archivos de valores Variable &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md).  
+El siguiente paso en el funcionamiento de la consola es [crear archivos de valor Variable &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md).  
   
 ## <a name="see-also"></a>Vea también  
-[Crear archivos de valor de la Variable &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
+[Creación de archivos de valor Variable &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   

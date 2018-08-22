@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
@@ -14,17 +13,17 @@ caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 78aea34abfc3621ea7ebbd50a3236c81308f128b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6dad3747b1a597603f071ebdcea4d7f46b478015
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152566"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393048"
 ---
 # <a name="application-level-partitioning"></a>Creación de particiones en el nivel de aplicación
   Este ejemplo muestra la creación de particiones de nivel de aplicación donde se almacenan los datos en una tabla optimizada en memoria o en una tabla basada en disco dependiendo de si el pedido se encuentra antes o después de una fecha específica. Todos los pedidos posteriores o iguales a *hotDate* se encuentran en la tabla optimizada en memoria y todos los pedidos antes de *hotDate* se encuentran en la tabla basada en disco. Suponga que hay un carga de trabajo de OLTP extrema con muchas transacciones simultáneas. Esta regla de negocios (pedidos recientes en una tabla optimizada para memoria) se debe aplicar incluso si varias transacciones simultáneas intentan cambiar *hotDate*.  
   
- Este ejemplo no usa [tablas con particiones](https://msdn.microsoft.com/library/ms190787.aspx) para la tabla basada en disco pero realiza el seguimiento de un punto de división explícito entre dos tablas con una tercera tabla. El punto de división se puede usar para asegurarse de que los datos recién insertados se insertan siempre en la tabla adecuada según la fecha. También se puede usar para determinar dónde buscar datos. Los últimos datos en llegar siguen estando en la tabla adecuada.  
+ Este ejemplo no usa [tablas con particiones](../partitions/partitioned-tables-and-indexes.md) para la tabla basada en disco pero realiza el seguimiento de un punto de división explícito entre dos tablas con una tercera tabla. El punto de división se puede usar para asegurarse de que los datos recién insertados se insertan siempre en la tabla adecuada según la fecha. También se puede usar para determinar dónde buscar datos. Los últimos datos en llegar siguen estando en la tabla adecuada.  
   
  Para obtener un ejemplo relacionado que use tablas con particiones, consulte [Application Pattern for Partitioning Memory-Optimized Tables](memory-optimized-tables.md).  
   

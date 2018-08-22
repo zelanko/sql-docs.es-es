@@ -1,5 +1,5 @@
 ---
-title: sp_post_msx_operation (Transact-SQL) | Documentos de Microsoft
+title: sp_post_msx_operation (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f6d0dfc8c9a9925f7bf2fa84c4b9330b99c60c3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a1524f9e3f20a774d32c491bc264f2c6c63e7b18
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261041"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393555"
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Inserta operaciones (filas) en el **sysdownloadlist** tabla del sistema de servidores de destino descargar y ejecutar.  
+  Inserta operaciones (filas) en el **sysdownloadlist** tabla del sistema para servidores de destino descargar y ejecutar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,9 +55,9 @@ sp_post_msx_operation
   
 |Tipo de objeto|Operación|  
 |-----------------|---------------|  
-|**TRABAJO**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
+|**TRABAJO**|INSERT<br /><br /> UPDATE<br /><br /> Delete<br /><br /> START<br /><br /> STOP|  
 |**SERVIDOR**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
-|**PROGRAMACIÓN**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
+|**PROGRAMACIÓN**|INSERT<br /><br /> UPDATE<br /><br /> Delete|  
   
  [  **@object_type =**] **'***objeto***'**  
  Tipo de objeto para el que se expone una operación. Los tipos válidos son **trabajo**, **SERVER**, y **programación**. *objeto* es **varchar(64)**, su valor predeterminado es **trabajo**.  
@@ -66,7 +66,7 @@ sp_post_msx_operation
  Número de identificación del trabajo al que se aplica la operación. *job_id* es **uniqueidentifier**, no tiene ningún valor predeterminado. **0 x 00** indica todos los trabajos. Si *objeto* es **SERVER**, a continuación, *job_id*no es necesario.  
   
  [  **@specific_target_server =**] **'***target_server***'**  
- Nombre del servidor de destino al que se aplica la operación especificada. Si *job_id* se especifica, pero *target_server* no se especifica, las operaciones se exponen para todos los servidores de la tarea de trabajos. *target_server* es **nvarchar (30)**, su valor predeterminado es null.  
+ Nombre del servidor de destino al que se aplica la operación especificada. Si *job_id* se especifica, pero *target_server* no se especifica, las operaciones se exponen para todos los trabajos del trabajo de los servidores. *target_server* es **nvarchar (30)**, su valor predeterminado es null.  
   
  [  **@value =**] *valor*  
  Intervalo de sondeo, en segundos. *value* es de tipo **int**y su valor predeterminado es NULL. Especifique este parámetro solo si *operación* es **SET-POLL**.  
@@ -80,17 +80,17 @@ sp_post_msx_operation
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_post_msx_operation** se debe ejecutar desde la **msdb** base de datos.  
   
  **sp_post_msx_operation** siempre se puede llamar sin ningún riesgo porque primero determina si el servidor actual es un agente de Microsoft SQL Server multiservidor y, si es así, si *objeto*es un trabajo multiservidor.  
   
- Después de que se ha registrado una operación, aparece en la **sysdownloadlist** tabla. Después de crear y exponer un trabajo, también se deben comunicar los cambios siguientes de ese trabajo a los servidores de destino (TSX). Esto también se realiza mediante la lista de descarga.  
+ Una vez que se ha registrado una operación, aparece en el **sysdownloadlist** tabla. Después de crear y exponer un trabajo, también se deben comunicar los cambios siguientes de ese trabajo a los servidores de destino (TSX). Esto también se realiza mediante la lista de descarga.  
   
- Es muy recomendable administrar la lista de descarga con SQL Server Management Studio. Para obtener más información, consulte [ver o modificar trabajos](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7).  
+ Es muy recomendable administrar la lista de descarga con SQL Server Management Studio. Para obtener más información, consulte [ver o modificar trabajos](../../ssms/agent/view-or-modify-jobs.md).  
   
-## <a name="permissions"></a>Permissions  
- Para ejecutar este procedimiento almacenado, deben concederse a los usuarios la **sysadmin** rol fijo de servidor.  
+## <a name="permissions"></a>Permisos  
+ Para ejecutar este procedimiento almacenado, los usuarios debe concederse el **sysadmin** rol fijo de servidor.  
   
 ## <a name="see-also"></a>Vea también  
  [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   

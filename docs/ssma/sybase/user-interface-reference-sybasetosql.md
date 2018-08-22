@@ -16,27 +16,27 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 41a72aad7d8cc2751849f87350f7d53303eca98e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 59fedb9e4fe0cfc4917cfe4995dd387807fb0b74
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979557"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393096"
 ---
 # <a name="user-interface-reference-sybasetosql"></a>Referencia de la interfaz de usuario (SybaseToSQL)
-Esta sección incluye temas de ayuda para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) para Sybase.  
+Esta sección incluye temas de ayuda para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para Sybase.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
 |Tema|Descripción|  
 |---------|---------------|  
 |[Selección avanzada de objetos &#40;SybaseToSQL&#41;](../../ssma/sybase/advanced-object-selection-sybasetosql.md)|Use la **avanzada Seleccionar objeto** cuadro de diálogo para buscar objetos de base de datos mediante el uso de criterios de filtro y, a continuación, active o desactive esos objetos.|  
-|[Informe de evaluación &#40;SybaseToSQL&#41;](../../ssma/sybase/assessment-report-sybasetosql.md)|Utilice el informe de evaluación para ver los resultados de la conversión de objetos de Sybase Adaptive Server Enterprise (ASE) para [!INCLUDE[tsql](../../includes/tsql_md.md)] sintaxis y para calcular el tiempo y la complejidad de una migración a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure.|  
-|[Conectarse a SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sql-server-sybasetosql.md)|Use la **conectar con SQL Server** cuadro de diálogo para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] al que desea migrar.|  
+|[Informe de evaluación &#40;SybaseToSQL&#41;](../../ssma/sybase/assessment-report-sybasetosql.md)|Utilice el informe de evaluación para ver los resultados de la conversión de objetos de Sybase Adaptive Server Enterprise (ASE) para [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxis y para calcular el tiempo y la complejidad de una migración a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.|  
+|[Conectarse a SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sql-server-sybasetosql.md)|Use la **conectar con SQL Server** cuadro de diálogo para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al que desea migrar.|  
 |[Conectarse a Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-azure-sql-db-sybasetosql.md)|Use la **conectarse a SQL Azure** cuadro de diálogo para conectarse a la instancia de SQL Azure a la que van a migrar.|  
 |[Conectarse a Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)|Use la **conectarse a Sybase** cuadro de diálogo para conectarse a la instancia de ASE.|  
-|[Informe de migración de datos &#40;SybaseToSQL&#41;](../../ssma/sybase/data-migration-report-sybasetosql.md)|Muestra los resultados de la migración de datos de ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure.|  
-|[Configuración de la migración de datos](http://msdn.microsoft.com/94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d)|Use la **configuración de migración de datos extendida** tab para escribir consultas personalizadas para la migración de datos.|  
+|[Informe de migración de datos &#40;SybaseToSQL&#41;](../../ssma/sybase/data-migration-report-sybasetosql.md)|Muestra los resultados de la migración de datos de ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.|  
+|[Configuración de la migración de datos](data-migration-settings-sybasetosql.md)|Use la **configuración de migración de datos extendida** tab para escribir consultas personalizadas para la migración de datos.|  
 |[Editar asignación de tipo &#40;SybaseToSQL&#41;](../../ssma/sybase/edit-type-mapping-sybasetosql.md)|Use la **nueva asignación de tipo** o **Editar asignación de tipo** cuadro de diálogo para crear o editar la asignación de tipos de datos entre los objetos de base de datos y las bases de datos de origen y de destino.|  
 |[Configuración global &#40;Editor&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-editor-sybasetosql.md)|Utilice la página del Editor de la **configuración Global** cuadro de diálogo para configurar las opciones del editor de código.|  
 |[Configuración global &#40;cuadros de diálogo&#41;&#40;SybaseToSQL  &#41;](../../ssma/sybase/global-settings-dialogs-sybasetosql.md)|Utilice la página del Editor de la **configuración Global** cuadro de diálogo para configurar el cuadro de diálogo predeterminado y la configuración de la advertencia.|  
@@ -46,8 +46,8 @@ Esta sección incluye temas de ayuda para [!INCLUDE[ssNoVersion](../../includes/
 |[Nuevo proyecto &#40;SybaseToSQL&#41;](../../ssma/sybase/new-project-sybasetosql.md)|Use la **nuevo proyecto** cuadro de diálogo para crear un nuevo SSMA para Sybase proyecto.|  
 |[Configuración del proyecto &#40;conversión&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)|Use la página de conversión de la **configuración del proyecto** cuadro de diálogo para especificar cómo SSMA para Sybase convierte las funciones y variables globales.|  
 |[Configuración del proyecto &#40;GUI&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-gui-sybasetosql.md)|Use la página de la interfaz gráfica de usuario de la **configuración del proyecto** cuadro de diálogo para especificar la cantidad de datos que aparece en el **datos** ficha.|  
-|[Configuración del proyecto &#40;migración&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-migration-sybasetosql.md)|Utilice la página de migración de la **configuración del proyecto** cuadro de diálogo para personalizar cómo SSMA para Sybase migra datos desde el ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure.|  
-|[Configuración del proyecto &#40;sincronización&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-synchronization-sybasetosql.md)|Use la página sincronización de la **configuración del proyecto** migrado de cuadro de diálogo para personalizar cómo SSMA para Sybase crea o modifica objetos de base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure.|  
+|[Configuración del proyecto &#40;migración&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-migration-sybasetosql.md)|Utilice la página de migración de la **configuración del proyecto** cuadro de diálogo para personalizar cómo SSMA para Sybase migra datos desde el ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.|  
+|[Configuración del proyecto &#40;sincronización&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-synchronization-sybasetosql.md)|Use la página sincronización de la **configuración del proyecto** migrado de cuadro de diálogo para personalizar cómo SSMA para Sybase crea o modifica objetos de base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.|  
 |[Configuración del proyecto &#40;Azure SQL DB &#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md)|Use la página de SQL Azure de la **configuración del proyecto** cuadro de diálogo para personalizar la configuración de conectividad para migrar los datos de Sybase a SQL Azure.|  
 |[Configuración del proyecto &#40;asignación de tipos de&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)|Use la página de asignación de tipos de la **configuración del proyecto** cuadro de diálogo para especificar las asignaciones de tipos predeterminada para todas las bases de datos y objetos de base de datos de SSMA para Sybase proyecto.|  
 |[Guardar metadatos &#40;SybaseToSQL&#41;](../../ssma/sybase/save-metadata-sybasetosql.md)|El **guardar metadatos** cuadro de diálogo aparece cuando se guarda un proyecto que falta metadatos.|  

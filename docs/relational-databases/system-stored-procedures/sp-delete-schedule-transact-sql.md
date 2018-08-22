@@ -1,5 +1,5 @@
 ---
-title: sp_delete_schedule (Transact-SQL) | Documentos de Microsoft
+title: sp_delete_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14fd520f5447092e5f82dc786696148f3dbe3bd3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0a531b3673320e3c1e521e68c511e21b7976d1af
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255949"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392613"
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,15 +48,15 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
  [  **@schedule_id=** ] *schedule_id*  
  Número de identificación de la programación que se va a eliminar. *schedule_id* es **int**, su valor predeterminado es null.  
   
-> **Nota:** cualquier *schedule_id* o *schedule_name* debe especificarse, pero no pueden especificarse ambos.  
+> **Nota:** cualquier *schedule_id* o *schedule_name* debe especificarse, pero no se pueden especificar ambos.  
   
  [  **@schedule_name=** ] **'***schedule_name***'**  
  Nombre de la programación que se va a eliminar. *schedule_name* es **sysname**, su valor predeterminado es null.  
   
-> **Nota:** cualquier *schedule_id* o *schedule_name* debe especificarse, pero no pueden especificarse ambos.  
+> **Nota:** cualquier *schedule_id* o *schedule_name* debe especificarse, pero no se pueden especificar ambos.  
   
  [ **@force_delete** =] *force_delete*  
- Especifica si el procedimiento debe generar un error si la programación está adjunta a un trabajo. *Force_delete* es de tipo bit y su valor predeterminado **0**. Cuando *force_delete* es **0**, se produce un error en el procedimiento almacenado si la programación está adjunta a un trabajo. Cuando *force_delete* es **1**, se elimina la programación, independientemente de si la programación está adjunta a un trabajo.  
+ Especifica si el procedimiento debe generar un error si la programación está adjunta a un trabajo. *Force_delete* es de tipo bit, su valor predeterminado es **0**. Cuando *force_delete* es **0**, el procedimiento almacenado produce un error si la programación está adjunta a un trabajo. Cuando *force_delete* es **1**, se eliminó el programa independientemente de si la programación está adjunta a un trabajo.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -64,10 +64,10 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  De manera predeterminada, una programación no se puede eliminar si está adjunta a un trabajo. Para eliminar una programación que se adjunta a un trabajo, especifique un valor de **1** para *force_delete*. La eliminación de una programación no detiene los trabajos actualmente en ejecución.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -78,9 +78,9 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
  Observe que el propietario del trabajo puede adjuntar un trabajo a una programación y separar un trabajo de una programación sin tener que ser asimismo el propietario de la programación. Sin embargo, una programación no se puede eliminar si la separación la dejase sin trabajos, a menos que el llamador sea propietario de la programación.  
   
- Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Solo los miembros de la **sysadmin** rol puede eliminar una programación de trabajo que pertenece a otro usuario.  
+ Solo los miembros de la **sysadmin** pueden eliminar una programación de trabajo que pertenece a otro usuario.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -110,7 +110,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Implementar trabajos](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
+ [Implementar trabajos](../../ssms/agent/implement-jobs.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
   
   

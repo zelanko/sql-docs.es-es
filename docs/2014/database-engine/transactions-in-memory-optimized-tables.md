@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2cd07d26-a1f1-4034-8d6f-f196eed1b763
@@ -14,12 +13,12 @@ caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d4f3f8fcac44dc238440006eddaf44681f8cbaee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3712e3b2e602bd403f4c1d312603577a4045a95a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158876"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393074"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Transacciones en tablas con optimización para memoria
   La versión de las filas de las tablas basadas en disco (con el aislamiento de instantánea o READ_COMMITTED_SNAPSHOT) proporciona una forma de control de simultaneidad optimista. Los lectores y los escritores no se bloquean entre sí. Con las tablas optimizadas para memoria, los escritores no bloquean a los escritores. Con las versiones de fila de las tablas basadas en disco, una transacción cierra la fila y se bloquean las transacciones simultáneas que intentan actualizar la fila. Con las tablas optimizadas para memoria, no hay bloqueos. En su lugar, si dos transacciones intentan actualizar la misma fila, se produciría un conflicto de escritura/escritura (error 41302).  
@@ -74,7 +73,7 @@ ms.locfileid: "37158876"
 ### <a name="transaction-lifetime"></a>Período de duración de las transacciones  
  Los errores enumerados en la tabla anterior pueden producirse en varios momentos durante una transacción. La ilustración siguiente muestra las fases de una transacción que tiene acceso a tablas optimizadas para memoria.  
   
- ![Duración de una transacción. ] (../../2014/database-engine/media/hekaton-transactions.gif "Duración de una transacción.")  
+ ![Duración de una transacción. ](../../2014/database-engine/media/hekaton-transactions.gif "Duración de una transacción.")  
 Duración de una transacción que tiene acceso a tablas optimizadas para memoria.  
   
 #### <a name="regular-processing"></a>Procesamiento normal  

@@ -15,15 +15,15 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 54b67cbb38c9884afc19f6da6283bfda99f93e88
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 6948b81ca2460d4de74393aa880f95fe3f11dfb1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979328"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395001"
 ---
-# <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Asignación de Oracle y tipos de datos SQL Server (OracleToSQL)
-Tipos de base de datos de Oracle se diferencian [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos base de datos. Al convertir los objetos de base de datos de Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos, debe especificar cómo asignar tipos de datos de Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Puede aceptar las asignaciones de tipos de datos de forma predeterminada, o puede personalizar las asignaciones como se muestra en las secciones siguientes.  
+# <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Asignación de tipos de datos de Oracle y de SQL Server (OracleToSQL)
+Tipos de base de datos de Oracle se diferencian [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos base de datos. Al convertir los objetos de base de datos de Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos, debe especificar cómo asignar tipos de datos de Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede aceptar las asignaciones de tipos de datos de forma predeterminada, o puede personalizar las asignaciones como se muestra en las secciones siguientes.  
   
 ## <a name="default-mappings"></a>Asignaciones predeterminadas  
 SSMA tiene un conjunto predeterminado de asignaciones de tipos de datos. Para obtener la lista de asignaciones predeterminadas, vea [configuración del proyecto &#40;Type Mapping&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
@@ -62,11 +62,11 @@ El siguiente procedimiento muestra cómo asignar tipos de datos en el proyecto, 
   
         Esto le permite personalizar la asignación de datos para los valores más pequeños y más grandes del mismo tipo de datos.  
   
-    4.  En **tipo de destino**, seleccione el destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de datos.  
+    4.  En **tipo de destino**, seleccione el destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.  
   
         Algunos tipos requieren una longitud del tipo de datos de destino. Si es necesario, escriba la nueva longitud de datos en el **reemplace** cuadro.  
   
-    5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+    5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  Para modificar una asignación de tipos de datos, realice lo siguiente:  
   
@@ -78,9 +78,9 @@ El siguiente procedimiento muestra cómo asignar tipos de datos en el proyecto, 
   
         Esto le permite personalizar la asignación de datos para los valores más pequeños y más grandes del mismo tipo de datos.  
   
-    4.  En **tipo de destino**, seleccione el destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de datos.  
+    4.  En **tipo de destino**, seleccione el destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.  
   
-        Algunos tipos requieren una longitud del tipo de datos de destino. Si es necesario, escriba la nueva longitud de datos en el **reemplace** cuadro y, a continuación, [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+        Algunos tipos requieren una longitud del tipo de datos de destino. Si es necesario, escriba la nueva longitud de datos en el **reemplace** cuadro y, a continuación, [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  Para quitar una asignación de tipos de datos personalizados, realice lo siguiente:  
   
@@ -91,7 +91,7 @@ El siguiente procedimiento muestra cómo asignar tipos de datos en el proyecto, 
         No se puede quitar asignaciones heredadas. Sin embargo, las asignaciones heredadas son reemplazadas por asignaciones personalizadas en un objeto específico o una categoría de objeto.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
-El siguiente paso del proceso de migración consiste en [crear un informe de evaluación](http://msdn.microsoft.com/4de9bcf6-1346-4740-87f9-7f24a8226357) o [convertir los objetos de base de datos de Oracle en la sintaxis de SQL Server](http://msdn.microsoft.com/e021182d-31da-443d-b110-937f5db27272). Si crea un informe de evaluación, los objetos de Oracle se convierten automáticamente durante la evaluación.  
+El siguiente paso del proceso de migración consiste en [crear un informe de evaluación](assessing-oracle-schemas-for-conversion-oracletosql.md) o [convertir los objetos de base de datos de Oracle en la sintaxis de SQL Server](converting-oracle-schemas-oracletosql.md). Si crea un informe de evaluación, los objetos de Oracle se convierten automáticamente durante la evaluación.  
   
 ## <a name="see-also"></a>Vea también  
 [Bases de datos de migración de Oracle a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

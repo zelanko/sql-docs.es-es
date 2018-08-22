@@ -1,5 +1,5 @@
 ---
-title: Trabajar con SSMA para la consola de Oracle (DB2ToSQL) | Documentos de Microsoft
+title: Trabajar con SSMA para Oracle de consola (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,33 +16,33 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f4906c70c84d0bd0c3d9f298cbd4b47cb2ecc078
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: b90b7f0941179fd1a34fd8105c6dcffc6c46eb7b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775481"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392146"
 ---
-# <a name="working-with-ssma-for-oracle-console-db2tosql"></a>Trabajar con SSMA para la consola de Oracle (DB2ToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Versión de Assistant (SSMA) de migración para DB2 ahora es accesible a través de una aplicación de consola en línea de comandos. Los archivos de script forman la entrada a la aplicación para ejecutar los comandos. Como una aplicación de consola, SSMA permite crear una interfaz de nivel de script, reduce el ciclo de migración y pasa el esfuerzo de migración.  
+# <a name="working-with-ssma-for-oracle-console-db2tosql"></a>Trabajar con SSMA para Oracle de consola (DB2ToSQL)
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Versión de Migration Assistant (SSMA) para DB2 ahora es accesible a través de una aplicación de consola en línea de comandos. La entrada a la aplicación para ejecutar los comandos de formulario de los archivos de script. Como una aplicación de consola, SSMA permite la comunicación de nivel de script, reduce el ciclo de migración y escala el esfuerzo de migración.  
   
-Esta sección explica el procedimiento para migrar la base de datos de DB2 mediante la aplicación de consola SSMA.  
+Esta sección explica el procedimiento para migrar la base de datos de DB2 mediante la aplicación de consola de SSMA.  
   
-Entre los temas tratados en esta sección se incluyen:  
+Los temas de esta sección incluyen:  
   
 |||  
 |-|-|  
 |**Temas**|**Descripción**|  
-|[Introducción a SSMA para la consola de DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-console-db2tosql.md)|Explica el procedimiento para ejecutar la aplicación de consola.|  
+|[Introducción a SSMA para DB2 consola &#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-console-db2tosql.md)|Explica el procedimiento para ejecutar la aplicación de consola.|  
 |[Opciones de línea de comandos en la consola SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/command-line-options-in-ssma-console-db2tosql.md)|Describe las opciones de línea de comandos y parámetros para que funcione la aplicación de consola SSMA.|  
-|[Crear archivos de Script &#40;DB2ToSQL&#41;](../../ssma/db2/creating-script-files-db2tosql.md)|Explica cómo crear un archivo de script.|  
-|[Crear archivos de valor de la Variable &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)|Explica cómo crear un archivo de valores de variable.|  
-|[Crear los archivos de conexión de servidor &#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)|Explica cómo crear un archivo de conexión de servidor.|  
-|[Ejecutar la consola SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)|Se describen los comandos del archivo de script para que funcione la aplicación de consola SSMA.|  
-|[Trabajar con los archivos de comandos de consola de ejemplo &#40;DB2ToSQL&#41;](../../ssma/db2/working-with-the-sample-console-script-files-db2tosql.md)|Describe la forma de personalizar fácilmente los scripts que se han proporcionado en los archivos de ejemplo junto con el producto|  
-|[Administrar contraseñas &#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md)|Describe acerca del cifrado de contraseña y descifrado y obtener información de contraseña de importación / exportación.|  
-|[Generar informes &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)|Enumera los comandos para generar informes.|  
-|[Solución de problemas de &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)|Proporciona una breve información acerca de cómo solucionar problemas de migración.|  
+|[Creación de archivos de Script &#40;DB2ToSQL&#41;](../../ssma/db2/creating-script-files-db2tosql.md)|Explica cómo crear un archivo de script.|  
+|[Creación de archivos de valor Variable &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)|Explica cómo crear un archivo de valores de variable.|  
+|[Creación de los archivos de conexión de servidor &#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)|Explica cómo crear un archivo de conexión de servidor.|  
+|[Ejecución de la consola SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)|Describe la secuencia de comandos de archivo para que funcione la aplicación de consola SSMA.|  
+|[Trabajar con los archivos de Script de la consola de ejemplo &#40;DB2ToSQL&#41;](../../ssma/db2/working-with-the-sample-console-script-files-db2tosql.md)|Describe la manera de personalizar con facilidad las secuencias de comandos que se han proporcionado en los archivos de ejemplo junto con el producto|  
+|[Administración de contraseñas &#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md)|Describe sobre cifrado de contraseña y el descifrado y la información de contraseña de importación / exportación.|  
+|[Generación de informes &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)|Enumera los comandos para generar informes.|  
+|[Solución de problemas &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)|Proporciona información breve acerca de cómo solucionar problemas de migración.|  
   
 ## <a name="see-also"></a>Vea también  
 [Introducción a SSMA para la consola de DB2](http://msdn.microsoft.com/en-us/f245c017-023e-4880-8721-8908d339525e)  

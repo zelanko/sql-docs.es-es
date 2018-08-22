@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: ac69b80773b1554c6f0b920aaff146871beb40ab
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 4dc9dd24bc3bdfa918ffdc7d02688303d8dcde5e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086417"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392217"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Instalar sqlcmd y bcp las herramientas de línea de comandos de SQL Server en Linux
 
@@ -63,7 +63,7 @@ Use los pasos siguientes para instalar el **mssql-tools** en Red Hat Enterprise 
 1. Si tiene una versión anterior de **mssql-tools** instalado, quite los paquetes de unixODBC anteriores.
 
    ```bash
-   sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
+   sudo yum remove mssql-tools unixODBC-utf16-devel
    ```
 
 1. Ejecute los comandos siguientes para instalar **mssql-tools** con el paquete de desarrollador de unixODBC.

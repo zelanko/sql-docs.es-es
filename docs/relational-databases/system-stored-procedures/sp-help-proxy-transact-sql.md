@@ -1,5 +1,5 @@
 ---
-title: sp_help_proxy (Transact-SQL) | Documentos de Microsoft
+title: sp_help_proxy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a64cf35c51d4857b666798debb633828b6c66b8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0cfde22d702fa71b46ae4795beca42b8e7bd37d7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259805"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393062"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,24 +49,24 @@ sp_help_proxy
   
 ## <a name="arguments"></a>Argumentos  
  [ **@proxy_id** =] *Id.*  
- Número de identificación del proxy del que se muestra información. El *proxy_id* es **int**, su valor predeterminado es null. Ya sea la *Id. de* o *proxy_name* se puede especificar.  
+ Número de identificación del proxy del que se muestra información. El *proxy_id* es **int**, su valor predeterminado es null. Ya sea el *id* o el *proxy_name* se puede especificar.  
   
  [ **@proxy_name** =] **'***proxy_name***'**  
- Nombre del proxy del que se va a mostrar información. El *proxy_name* es **sysname**, su valor predeterminado es null. Ya sea la *Id. de* o *proxy_name* se puede especificar.  
+ Nombre del proxy del que se va a mostrar información. El *proxy_name* es **sysname**, su valor predeterminado es null. Ya sea el *id* o el *proxy_name* se puede especificar.  
   
  [ **@subsystem_name** =] '*subsystem_name*'  
  Nombre del subsistema del que se van a mostrar los servidores proxy. El *subsystem_name* es **sysname**, su valor predeterminado es null. Cuando *subsystem_name* se especifica, *nombre* también debe especificarse.  
   
  En la tabla siguiente se muestran los valores disponibles para cada subsistema.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |ActiveScripting|Script ActiveX|  
 |CmdExec|Sistema operativo (CmdExec)|  
 |Snapshot|Agente de instantáneas de replicación|  
 |LogReader|Agente de registro del LOG de replicación|  
 |Distribución|Agente de distribución de replicación|  
-|Mezcla|Agente de mezcla de replicación|  
+|Mezcla|Replication Merge Agent|  
 |QueueReader|Agente de lectura de cola de replicación|  
 |ANALYSISQUERY|Comando de Analysis Services|  
 |ANALYSISCOMMAND|Consulta de Analysis Services|  
@@ -81,7 +81,7 @@ sp_help_proxy
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Número de identificación del proxy.|  
 |**Nombre**|**sysname**|Nombre del proxy.|  
@@ -92,15 +92,15 @@ sp_help_proxy
 |**credential_id**|**int**|Identificador de la credencial asociada con este proxy.|  
 |**credential_identity_exists**|**int**|Si existe credential_identity. { 0 = no existe, 1 = existe }|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si no se proporcionan parámetros, **sp_help_proxy** muestra información de todos los servidores proxy de la instancia.  
   
- Para determinar los servidores proxy que un inicio de sesión pueden usar para un subsistema dado, especifique *nombre* y *subsystem_name*. Cuando se proporcionan estos argumentos, **sp_help_proxy** muestra los servidores proxy que el inicio de sesión especificado puede acceso y que puede utilizarse para el subsistema especificado.  
+ Para determinar qué servidores proxy de un inicio de sesión se puede usar para un subsistema dado, especifique *nombre* y *subsystem_name*. Cuando se proporcionan estos argumentos, **sp_help_proxy** muestra los servidores proxy que el inicio de sesión especificado el acceso y que es posible que se puede usar para el subsistema especificado.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. A otros usuarios debe concederse el rol fijo de base de datos **SQLAgentOperatorRole** en la base de datos **msdb** .  
   
- Para obtener más información acerca de **SQLAgentOperatorRole**, consulte [Roles fijos de base de datos de SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para obtener más información acerca de **SQLAgentOperatorRole**, consulte [Roles fijos de base de datos de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 > [!NOTE]  
 >  El **credential_identity** y **user_sid** solo se devuelven las columnas en el conjunto de resultados cuando los miembros de **sysadmin** ejecutar este procedimiento almacenado.  

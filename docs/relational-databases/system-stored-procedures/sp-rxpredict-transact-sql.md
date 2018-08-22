@@ -1,7 +1,7 @@
 ---
 title: sp_rxPredict | Microsoft Docs
 ms.custom: ''
-ms.date: 07/14/2017
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -17,26 +17,26 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sp_rxPredict procedure
-author: jeannt
-ms.author: jeannt
-manager: craigg
-ms.openlocfilehash: ede8232f36f42cc2b9758bdee8f50457ebd58dfe
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 8f46403afef0e2f6cf967561a8fd24ec6409fe93
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036053"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40434865"
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Genera un valor de predicción según un modelo almacenado.
+Genera un valor de predicción para una entrada determinada en función de un modelo de machine learning almacenado en un formato binario en una base de datos de SQL Server.
 
-Proporciona la puntuación en los modelos de aprendizaje automático en casi en tiempo real. `sp_rxPredict` es un procedimiento almacenado que se proporciona como un contenedor para el `rxPredict` funcionando en [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) y [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package). Está escrito en C++ / y está optimizado específicamente para las operaciones de puntuación. Admite ambos R o Python modelos de aprendizaje automático.
+Proporciona la puntuación en R y Python modelos de machine learning en casi en tiempo real. `sp_rxPredict` es un procedimiento almacenado que se proporciona como un contenedor para el `rxPredict` función de R en [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) y [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)y el [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) función de Python en [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) y [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). Está escrito en C++ / y está optimizado específicamente para las operaciones de puntuación.
 
-**En este tema se aplica a**:  
+**En este artículo se aplica a**:  
 - SQL Server 2017  
-- SQL Server 2016 R Services con la actualización a Microsoft R Server  
+- SQL Server 2016 R Services con [actualizar componentes de R](https://docs.microsoft.com/sql/advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server)
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -69,11 +69,10 @@ Para habilitar el uso del procedimiento almacenado, SQLCLR debe habilitarse en l
 El usuario debe `EXECUTE` permiso en la base de datos.
 
 ### <a name="supported-platforms"></a>Plataformas compatibles
-
-Requiere una de las siguientes ediciones:  
-- SQL Server 2017 Machine Learning Services (incluye Microsoft R Server 9.1.0)  
-- Servidor de Microsoft Machine Learning  
-- SQL Server R Services 2016, con una actualización de la instancia de R Services para Microsoft R Server 9.1.0 o posterior  
+ 
+- SQL Server 2017 Machine Learning Services (incluye R Server 9.2)  
+- Machine Learning Server (independiente) de SQL Server 2017 
+- SQL Server R Services 2016, con una actualización de la instancia de servicios de R para R Server 9.1.0 o posterior  
 
 ### <a name="supported-algorithms"></a>Algoritmos admitidos
 
@@ -101,5 +100,5 @@ Además de ser una consulta SQL válida, los datos de entrada en *@inputData* de
 
 `sp_rxPredict` admite solo los siguientes tipos de columna. NET: double, float, short, ushort, long, ulong y cadena. Es posible que deba filtrar los tipos no compatibles en los datos de entrada antes de usarlo para puntuar en tiempo real. 
 
-  Para obtener información acerca de los correspondientes tipos SQL, vea [asignación de tipos de CLR de SQL](https://msdn.microsoft.com/library/bb386947.aspx) o [asignación de datos de parámetros CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
+  Para obtener información acerca de los correspondientes tipos SQL, vea [asignación de tipos de CLR de SQL](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) o [asignación de datos de parámetros CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
 

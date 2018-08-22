@@ -16,12 +16,12 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0e2a7465cc46e5ca2bb69ba4c7ef61dd85bf9882
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3a218ba28025f882d96cdfc122ceda01464419a3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985407"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392664"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Introducción a SSMA para la consola de acceso (AccessToSQL)
 En esta sección se describe el procedimiento para iniciar y empezar a trabajar con la aplicación de consola de acceso. También se enumeran en este documento, se utilizan las convenciones en una ventana de salida de la consola SSMA típica.  
@@ -48,9 +48,9 @@ Después de la consola se inicia correctamente en el sistema de Windows, podría
   
 Características adicionales:  
   
-1.  [Especifique una contraseña](http://msdn.microsoft.com/b099d0f9-dd37-4c87-8b6f-ed0177881ea4) y exportar / importar en otros equipos de la ventana  
+1.  [Especifique una contraseña](managing-passwords-accesstosql.md) y exportar / importar en otros equipos de la ventana  
   
-2.  [Generar informes](http://msdn.microsoft.com/abb4264a-622e-4215-af5b-14e309b8a399) ver el xml detallado de salida de informes de evaluación /conversion y migración de datos. También se pueden generar informes de errores detallada para los comandos de actualización y la sincronización.  
+2.  [Generar informes](generating-reports-accesstosql.md) ver el xml detallado de salida de informes de evaluación /conversion y migración de datos. También se pueden generar informes de errores detallada para los comandos de actualización y la sincronización.  
   
 ## <a name="ssma-console-output-conventions"></a>Convenciones de salida de consola SSMA  
 Al ejecutar los comandos de script SSMA y opciones, el programa de consola muestra los resultados y mensajes (información, error, etc.) al usuario en la consola o si es necesario, se redirige a un archivo de salida xml. Cada tipo de mensaje en la salida se especifica mediante un color único. Por ejemplo, el mensaje de texto en color blanco indica los comandos del archivo de script; el que aparece en color verde representa un símbolo del sistema de entrada del usuario y así sucesivamente.  
@@ -69,5 +69,5 @@ Interpretación de color de la salida de consola en la tabla siguiente:
 |Cian|Guía de inicio, finalización y el resultado de una operación|  
   
 ## <a name="see-also"></a>Vea también  
-[Instalación de SQL Server Migration Assistant para Access](http://msdn.microsoft.com/dd50eebd-75df-4e0d-8c4d-88b511aae4c7)  
+[Instalación de SQL Server Migration Assistant para Access](installing-sql-server-migration-assistant-for-access-accesstosql.md)  
   

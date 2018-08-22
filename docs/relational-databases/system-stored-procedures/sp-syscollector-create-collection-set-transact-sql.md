@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_create_collection_set (Transact-SQL) | Documentos de Microsoft
+title: sp_syscollector_create_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +23,12 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6cefec5de4c7bba8d2b184a202f5a21c4a25901c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e709e05834ed30701d2944547945ba439b8d418d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261614"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392595"
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,14 +66,14 @@ sp_syscollector_create_collection_set
  *nombre* deben ser únicos. Para obtener una lista de los nombres de conjuntos de recopilación actuales, consulte la vista del sistema syscollector_collection_sets.  
   
  [  **@target =** ] '*destino*'  
- Reservado para uso futuro. *nombre* es **nvarchar (128)** con un valor predeterminado es NULL.  
+ Reservado para uso futuro. *nombre* es **nvarchar (128)** con un valor predeterminado es null.  
   
  [  **@collection_mode =** ] *collection_mode*  
  Especifica la manera en la que se recopilan y se almacenan los datos. *collection_mode* es **smallint** y puede tener uno de los siguientes valores:  
   
  0 - Modo de almacenamiento en caché. La recopilación y la carga de datos están en programaciones independientes. Especifique el modo de almacenamiento en caché para la recopilación continua.  
   
- 1 - Modo sin almacenamiento en caché. Carga y recopilación de datos está en la misma programación. Establezca el modo sin almacenamiento en caché para la recopilación ad hoc o la recopilación de instantáneas.  
+ 1 - Modo sin almacenamiento en caché. Recopilación de datos y la carga se encuentra en la misma programación. Establezca el modo sin almacenamiento en caché para la recopilación ad hoc o la recopilación de instantáneas.  
   
  El valor predeterminado de *collection_mode* es 0. Cuando *collection_mode* es 0, *valor schedule_uid* o *schedule_name* debe especificarse.  
   
@@ -81,18 +81,18 @@ sp_syscollector_create_collection_set
  Es el número de días que los datos recopilados se guardan en el almacén de administración de datos. *days_until_expiration* es **smallint** con un valor predeterminado de 730 (dos años). *days_until_expiration* debe ser 0 o un entero positivo.  
   
  [  **@proxy_id =** ] *proxy_id*  
- Es el identificador único para una cuenta proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *proxy_id* es **int** con un valor predeterminado es NULL. Si se especifica, *proxy_name* debe ser NULL. Para obtener *proxy_id*, consulte la tabla del sistema sysproxies. El rol fijo de base de datos dc_admin debe disponer de los permisos necesarios para obtener acceso al proxy. Para obtener más información, consulte [crear un Proxy del Agente SQL Server](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988).  
+ Es el identificador único para una cuenta proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *proxy_id* es **int** con un valor predeterminado es null. Si se especifica, *proxy_name* debe ser NULL. Para obtener *proxy_id*, consulta la tabla del sistema sysproxies. El rol fijo de base de datos dc_admin debe disponer de los permisos necesarios para obtener acceso al proxy. Para obtener más información, consulte [crear un Proxy del Agente SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
  [  **@proxy_name =** ] '*proxy_name*'  
- Es el nombre de la cuenta del proxy. *proxy_name* es **sysname** con un valor predeterminado es NULL. Si se especifica, *proxy_id* debe ser NULL. Para obtener *proxy_name*, consulte la tabla del sistema sysproxies.  
+ Es el nombre de la cuenta del proxy. *proxy_name* es **sysname** con un valor predeterminado es null. Si se especifica, *proxy_id* debe ser NULL. Para obtener *proxy_name*, consulta la tabla del sistema sysproxies.  
   
  [  **@schedule_uid =** ] '*valor schedule_uid*'  
- Es el GUID que apunta a una programación. *valor schedule_uid* es **uniqueidentifier** con un valor predeterminado es NULL. Si se especifica, *schedule_name* debe ser NULL. Para obtener *valor schedule_uid*, consulte la tabla del sistema sysschedules.  
+ Es el GUID que apunta a una programación. *valor schedule_uid* es **uniqueidentifier** con un valor predeterminado es null. Si se especifica, *schedule_name* debe ser NULL. Para obtener *valor schedule_uid*, consulta la tabla del sistema sysschedules.  
   
  Cuando *collection_mode* se establece en 0, *valor schedule_uid* o *schedule_name* debe especificarse. Cuando *collection_mode* está establecido en 1, *valor schedule_uid* o *schedule_name* se omite si se especifica.  
   
  [  **@schedule_name =** ] '*schedule_name*'  
- Es el nombre de la programación. *schedule_name* es **sysname** con un valor predeterminado es NULL. Si se especifica, *valor schedule_uid* debe ser NULL. Para obtener *schedule_name*, consulte la tabla del sistema sysschedules.  
+ Es el nombre de la programación. *schedule_name* es **sysname** con un valor predeterminado es null. Si se especifica, *valor schedule_uid* debe ser NULL. Para obtener *schedule_name*, consulta la tabla del sistema sysschedules.  
   
  [  **@logging_level =** ] *logging_level*  
  Es el nivel de registro. *LOGGING_LEVEL* es **smallint** con uno de los siguientes valores:  
@@ -118,21 +118,21 @@ sp_syscollector_create_collection_set
  El valor predeterminado de *logging_level* es 1.  
   
  [  **@description =** ] '*descripción*'  
- Es la descripción del conjunto de recopilación. *descripción* es **nvarchar (4000)** con un valor predeterminado es NULL.  
+ Es la descripción del conjunto de recopilación. *descripción* es **nvarchar (4000)** con un valor predeterminado es null.  
   
  [  **@collection_set_id =** ] *collection_set_id*  
- Es el identificador único local del conjunto de recopilaciones. *collection_set_id* es **int** con OUTPUT y es necesario.  
+ Es el identificador único local del conjunto de recopilaciones. *collection_set_id* es **int** con los resultados y es necesario.  
   
  [  **@collection_set_uid =** ] '*collection_set_uid*'  
- Es el GUID del conjunto de recopilación. *collection_set_uid* es **uniqueidentifier** con OUTPUT y su valor predeterminado es NULL.  
+ Es el GUID del conjunto de recopilación. *collection_set_uid* es **uniqueidentifier** con OUTPUT y un valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  sp_syscollector_create_collection_set se debe ejecutar en el contexto de la base de datos del sistema msdb.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol fijo de base de datos dc_admin (con permiso EXECUTE) para ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  

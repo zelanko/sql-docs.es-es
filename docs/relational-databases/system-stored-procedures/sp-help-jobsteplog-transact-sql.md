@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobsteplog (Transact-SQL) | Documentos de Microsoft
+title: sp_help_jobsteplog (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,17 +22,17 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0957fff641ef4306d66c3ee4a233062503008b9e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5f8ce4b84dc7fd8e049cc9fafd71995dfb09bca7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261694"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392642"
 ---
 # <a name="sphelpjobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve los metadatos sobre un determinado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registro de paso de trabajo de agente. **sp_help_jobsteplog** no devuelve el registro real.  
+  Devuelve los metadatos de un determinado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registro de paso de trabajo del agente. **sp_help_jobsteplog** no devuelve el registro real.  
 
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -54,7 +54,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  Nombre del trabajo. *job_name* es **sysname**, su valor predeterminado es NULL.  
   
 > [!NOTE]  
->  Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
+>  Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
   
  [ **@step_id =**] *step_id*  
  Número de identificación del paso en el trabajo. Si no se especifica, se incluirán todos los pasos del trabajo. *step_id* es **int**, su valor predeterminado es null.  
@@ -67,7 +67,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|Identificador único del trabajo.|  
 |**job_name**|**sysname**|Nombre del trabajo.|  
@@ -79,10 +79,10 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**log_size**|**float**|Tamaño del registro de pasos de trabajo, en megabytes (MB).|  
 |**registro**|**nvarchar(max)**|Salida del registro de pasos de trabajo.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_help_jobsteplog** está en el **msdb** base de datos.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -91,9 +91,9 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Los miembros de **SQLAgentUserRole** solo se pueden ver los metadatos del registro de paso de trabajo de pasos de trabajo que les pertenecen.  
+ Los miembros de **SQLAgentUserRole** solo pueden ver los metadatos del registro de paso de trabajo de pasos de trabajo que les pertenecen.  
   
 ## <a name="examples"></a>Ejemplos  
   

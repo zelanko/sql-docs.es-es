@@ -1,5 +1,5 @@
 ---
-title: PowerPivot para SharePoint (SSAS) | Documentos de Microsoft
+title: Power Pivot para SharePoint (SSAS) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dc21ce644416c93367552e6ba19ac8aca9e0f48e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fcfce0a21e66e0ae1e5a440eda0fd32fd7d1964b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023642"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392132"
 ---
 # <a name="power-pivot-for-sharepoint-ssas"></a>Power Pivot para SharePoint (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "34023642"
  El hospedaje de servidor de esos datos requiere SharePoint, Excel Services y una instalación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Los datos se cargan en las instancias de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint donde pueden actualizarse en los intervalos programados mediante la funcionalidad de actualización de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que el servidor proporciona para los libros de Excel 2010 o que [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] proporciona para los libros de Excel 2013 y 2016.  
   
 ## <a name="power-pivot-for-sharepoint-2016"></a>Power Pivot para SharePoint 2016  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] admite el uso por parte de [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 2016 y [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)] de libros de Excel que contienen modelos de datos e informes de Power View de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] admite [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 2016 y Office Online Server el uso de libros de Excel que contienen modelos de datos y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] informes de Power View.  
   
- Excel, en [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)] , incluye funcionalidad de modelo de datos para habilitar la interacción con un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en el explorador. No es necesario implementar el complemento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2016 en la granja de servidores. Solo tiene que instalar un servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y registrar el servidor en [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)].  
+ Excel, Office Online Server incluye funcionalidad de modelo de datos para habilitar la interacción con un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] libro en el explorador. No es necesario implementar el complemento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2016 en la granja de servidores. Deberá instalar un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server en [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modo y registrar el servidor con Office Online Server.  
   
  La implementación del complemento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2016 habilita funcionalidad y características adicionales en la granja de servidores de SharePoint. Entre las características adicionales se incluyen la galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y la actualización de datos programada.  
   
- ![SSAS Power Pivot modo 3 Server en Office Online Server](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-mode-3server-oos-deploy.png "SSAS Power Pivot modo 3 Server en Office Online Server")  
+ ![SSAS Power Pivot 3 modo servidor con Office Online Server](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-mode-3server-oos-deploy.png "SSAS Power Pivot 3 modo servidor con Office Online Server")  
   
 ## <a name="power-pivot-for-sharepoint-2013"></a>Power Pivot para SharePoint 2013  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] admite el uso por parte de Excel Services de [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 2013 de libros de Excel que contienen modelos de datos e informes de Power View de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

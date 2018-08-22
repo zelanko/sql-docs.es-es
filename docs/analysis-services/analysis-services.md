@@ -11,16 +11,16 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 704c2f1638676bd838c7aac367a1b610143fd85d
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 06/04/2018
 ms.locfileid: "34707043"
 ---
 # <a name="about-sql-server-analysis-services"></a>Acerca de SQL Server Analysis Services
 
-Analysis Services es un motor de datos analíticos que se usa en la toma de decisiones y el análisis de negocios. Proporciona modelos de datos semánticos de nivel empresarial para informes de negocios y aplicaciones cliente como Power BI, Excel, Reporting Services y otras herramientas de visualización de datos.
+Analysis Services es un motor de datos analíticos utilizado en la decisión soporte técnico y el análisis empresarial. Proporciona a nivel empresarial modelos semánticos de datos para informes empresariales y aplicaciones cliente como Power BI, Excel, informes y otras herramientas de visualización de datos Reporting Services.  
 
-Un flujo de trabajo típico incluye la creación de un proyecto de modelo de datos tabular o multidimensional en Visual Studio, la implementación del modelo como una base de datos en una instancia del servidor, la configuración del procesamiento de datos periódico y la asignación de permisos para que los usuarios finales puedan acceder a los datos. Cuando esté listo, las aplicaciones cliente que admitan Analysis Services como origen de datos podrán acceder al modelo de datos semánticos.
+Un flujo de trabajo típico incluye la creación de un proyecto de modelo de datos tabular o multidimensional en Visual Studio, la implementación del modelo como una base de datos en una instancia del servidor, la configuración del procesamiento de datos periódico y la asignación de permisos para que los usuarios finales puedan acceder a los datos. Cuando esté listo, las aplicaciones cliente que admitan Analysis Services como origen de datos podrán acceder al modelo de datos semánticos.  
 
 Analysis Services está disponible en dos plataformas diferentes: 
 
@@ -29,7 +29,8 @@ Analysis Services está disponible en dos plataformas diferentes:
 **SQL Server Analysis Services**: es compatible con los modelos tabulares en todos los niveles de compatibilidad, los modelos multidimensionales, la minería de datos y PowerPivot para SharePoint.
  
  ## <a name="documentation-by-area"></a>Documentación por área  
-En general, [documentación de Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/) se incluye con la documentación de Azure. Si está interesado en tener sus modelos tabulares en la nube, lo mejor es comenzar allí. Este artículo y la documentación en esta sección es principalmente para SQL Server Analysis Services. Sin embargo, al menos para los modelos tabulares, la forma de crear e implementar sus proyectos de modelo tabular es muy similar, independientemente de la plataforma que esté utilizando. Echa un vistazo a estas secciones para obtener más información:
+En general, [documentación de Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/) se incluye con la documentación de Azure. Si le interesa disponer de los modelos tabulares en la nube, es mejor empezar por ahí. Este artículo y la documentación de esta sección es principalmente para SQL Server Analysis Services. Sin embargo, al menos para los modelos tabulares, cómo crear e implementar sus proyectos de modelo tabular es igual, independientemente de la plataforma que se está usando. Estas secciones para obtener más información, consulte:
+
    
 *  [Comparar soluciones tabulares y multidimensionales](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
 *  [Instalar SQL Server Analysis Services](../analysis-services/instances/install-windows/install-analysis-services.md)

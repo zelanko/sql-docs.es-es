@@ -15,12 +15,12 @@ caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0a62aafb5512562339ad387dcb1bf8f34efac09d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: cd9099b3f814fd65ac0c5d54e187fcfbc9cffb86
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981217"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175307"
 ---
 # <a name="reporting-services-data-alerts"></a>Alertas de datos de Reporting Services
 
@@ -124,7 +124,7 @@ A continuación se resumen las áreas clave de las alertas de datos de [!INCLUDE
   
  Si desea más información sobre cómo instalar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo de SharePoint, incluido el servicio compartido de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que es nuevo en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] y la aplicación de servicio de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que debe crear y configurar para poder usar las características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consulte [Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) en MSDN Library.  
   
- Como se muestra en el diagrama del tema anterior, las alertas de datos usan trabajos del Agente SQL Server. Para poder crear los trabajos, es necesario que el Agente SQL Server se esté ejecutando. Es posible que haya configurado el Agente SQL Server para que se inicie automáticamente cuando instaló [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Si no es así, puede iniciar el Agente SQL Server manualmente. Para obtener más información, vea [Configurar el Agente SQL Server](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) e [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+ Como se muestra en el diagrama del tema anterior, las alertas de datos usan trabajos del Agente SQL Server. Para poder crear los trabajos, es necesario que el Agente SQL Server se esté ejecutando. Es posible que haya configurado el Agente SQL Server para que se inicie automáticamente cuando instaló [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Si no es así, puede iniciar el Agente SQL Server manualmente. Para obtener más información, vea [Configurar el Agente SQL Server](../ssms/agent/configure-sql-server-agent.md) e [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
  Puede usar la página **Aprovisionar suscripciones y alertas** en Administración central de SharePoint para averiguar si el Agente SQL Server se está ejecutando y crear y descargar scripts de [!INCLUDE[tsql](../includes/tsql-md.md)] personalizados que puede ejecutar después para conceder permisos al Agente SQL Server. Si puede también generar los scripts de [!INCLUDE[tsql](../includes/tsql-md.md)] mediante PowerShell. Para más información, vea [Aprovisionar suscripciones y alertas para aplicaciones de servicio SSRS](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
@@ -252,7 +252,7 @@ A continuación se resumen las áreas clave de las alertas de datos de [!INCLUDE
   
 -   ReadSentAlerts  
   
- Puede utilizar el Agente SQL para ejecutar el procedimiento almacenado de acuerdo con una programación. Para obtener más información, consulte [SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec).  
+ Puede utilizar el Agente SQL para ejecutar el procedimiento almacenado de acuerdo con una programación. Para obtener más información, consulte [SQL Server Agent](../ssms/agent/sql-server-agent.md).  
   
 #### <a name="report-server-execution-log"></a>Registro de ejecución del servidor de informes  
  Los informes se ejecutan para generar fuentes de distribución de datos en las que se basan las definiciones de alerta de datos. El registro de ejecución del servidor de informes de la base de datos del servidor de informes recopila información cada vez que se ejecuta el informe. Puede realizar una consulta de la vista ExecutionLog2 en la base de datos para obtener información detallada. Para obtener más información, vea [Registro de ejecución del servidor de informes y la vista ExecutionLog3](../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  

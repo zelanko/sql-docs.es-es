@@ -1,7 +1,7 @@
 ---
 title: Origen de Azure Data Lake Store | Microsoft Docs
 ms.custom: ''
-ms.date: 03/02/2017
+ms.date: 08/16/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8bcab4b05afd22e06951e31f3037075830fba22
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3d179247f8d76a06c154ee2585a79ba6d1193554
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409307"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175314"
 ---
 # <a name="azure-data-lake-store-source"></a>Origen de Azure Data Lake Store
   El componente **Origen de Azure Data Lake Store** permite que un paquete SSIS lea datos de un Azure Data Lake Store. Los formatos de archivo admitidos son: Text y Avro.
@@ -44,3 +44,7 @@ ms.locfileid: "35409307"
         Si el formato de archivo es Text, debe especificar el valor **Carácter de delimitador de columna** . Seleccione también **Nombres de columna de la primera fila de datos** si la primera fila del archivo contiene nombres de columna.  
   
 3.  Después de especificar la información de conexión, cambie a la página **Columnas** para asignar columnas de origen a columnas de destino para el flujo de datos SSIS.   
+
+## <a name="text-qualifier"></a>Calificador de texto
+
+El **origen de Azure Data Lake Store** no admite un calificador de texto. Si tiene que especificar un calificador de texto para procesar correctamente los archivos, le recomendamos que descargue los archivos en el equipo local y que los procese con el **origen de archivo plano**. El origen de archivo plano le permite especificar un calificador de texto. Para obtener más información, consulte [Origen de archivo plano](flat-file-source.md).

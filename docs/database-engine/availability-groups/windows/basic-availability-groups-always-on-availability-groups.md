@@ -13,12 +13,12 @@ caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cf0814bacd6c47d86f21709d24acaf2af742f0d5
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: bf0b1b5a0455fcc35e35614b5abbd2e350aa108e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768661"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175326"
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>Grupos de disponibilidad básica (grupos de disponibilidad AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "34768661"
 ## <a name="configuration"></a>Configuración  
  Un grupo de disponibilidad básica AlwaysOn se puede crear en dos servidores SQL Server 2016 Standard Edition. Cuando crea un grupo de disponibilidad básica, debe especificar ambas réplicas durante la creación.  
   
- Para crear un grupo de disponibilidad básica, use el comando Transact-SQL **CREATE AVAILABILITY GROUP** y especifique la opción **WITH BASIC** (el valor predeterminado es **ADVANCED**). Para obtener más información, vea [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md). En este momento, no existe ninguna compatibilidad de interfaz de usuario para crear grupos de disponibilidad básica en SQL Server Management Studio.  
+ Para crear un grupo de disponibilidad básica, use el comando Transact-SQL **CREATE AVAILABILITY GROUP** y especifique la opción **WITH BASIC** (el valor predeterminado es **ADVANCED**). También puede crear el grupo de disponibilidad básico con la interfaz de usuario de SQL Server Management Studio a partir de la versión 17.8. Para obtener más información, vea [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md). 
   
 > [!NOTE]  
 >  Las limitaciones de los grupos de disponibilidad básica se aplican al comando **CREATE AVAILABILITY GROUP** cuando **WITH BASIC** está especificado. Por ejemplo, obtendrá un error si intenta crear un grupo de disponibilidad básica que permita el acceso de lectura. Otras limitaciones se aplican de la misma manera. Consulte la sección Limitaciones de este tema para obtener más información.  

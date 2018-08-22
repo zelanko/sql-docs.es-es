@@ -15,12 +15,12 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5b6bdc2fb6be0a80639d5f396fa9bc24abfb8833
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60ce71e2b7a1991b6ebf4b495907c74c1e59c939
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022692"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175302"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Informes móviles de SQL Server: tutorial completo
 Recorra la creación de informes móviles para cualquier tamaño de pantalla con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] en el portal web de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] y véalos en las aplicaciones móviles de Power BI.
@@ -70,7 +70,7 @@ Lea más información sobre los [orígenes de datos compartidos en Reporting Ser
    
 ## <a name="shared-dataset">Creación de un conjunto de datos compartido</a>  
   
-Use una herramienta de cliente de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] existente, como Diseñador de informes en [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], para crear el conjunto de datos compartido.  Este tutorial usa [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Instalar el Generador de informes](https://msdn.microsoft.com/library/ff519551.aspx)o ábralo desde el portal web. Creará tres conjuntos de datos, uno para: el valor del KPI, la tendencia del KPI y otro con más campos para el informe móvil de Reporting Services.     
+Use una herramienta de cliente de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] existente, como Diseñador de informes en [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], para crear el conjunto de datos compartido.  Este tutorial usa [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Instale el Generador de informes](../install-windows/install-report-builder.md) o ábralo desde el portal web. Creará tres conjuntos de datos, uno para: el valor del KPI, la tendencia del KPI y otro con más campos para el informe móvil de Reporting Services.     
   
 1. En el portal web de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , haga clic en **Nuevo** > **Informe paginado** para iniciar [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)].  
   

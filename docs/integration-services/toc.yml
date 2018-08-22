@@ -1,66 +1,67 @@
+items:
 - name: SQL Server Integration Services
   href: sql-server-integration-services.md
 - name: Información general
   items:
-    - name: Novedades de Integration Services en SQL Server 2016
-      href: what-s-new-in-integration-services-in-sql-server-2016.md
-    - name: Novedades de Integration Services en SQL Server 2017
-      href: what-s-new-in-integration-services-in-sql-server-2017.md
-    - name: Artículos nuevos y actualizados
-      href: new-updated-integration-services.md
-    - name: Características de Integration Services compatibles con las ediciones de SQL Server
-      href: integration-services-features-supported-by-the-editions-of-sql-server.md
-    - name: Compatibilidad con versiones anteriores de Integration Services
-      href: integration-services-backward-compatibility.md
+  - name: Novedades de Integration Services en SQL Server 2016
+    href: what-s-new-in-integration-services-in-sql-server-2016.md
+  - name: Novedades de Integration Services en SQL Server 2017
+    href: what-s-new-in-integration-services-in-sql-server-2017.md
+  - name: Artículos nuevos y actualizados
+    href: new-updated-integration-services.md
+  - name: Características de Integration Services compatibles con las ediciones de SQL Server
+    href: integration-services-features-supported-by-the-editions-of-sql-server.md
+  - name: Compatibilidad con versiones anteriores de Integration Services
+    href: integration-services-backward-compatibility.md
 - name: Tutoriales rápidos
   items:
-    - name: Implementar
-      items:
-        - name: Implementar con SSMS
-          href: ./ssis-quickstart-deploy-ssms.md
-        - name: Implementar con Transact-SQL (SSMS)
-          href: ./ssis-quickstart-deploy-tsql-ssms.md
-        - name: Implementar con Transact-SQL (VS Code)
-          href: ssis-quickstart-deploy-tsql-vscode.md
-        - name: Implementar desde el símbolo del sistema
-          href: ./ssis-quickstart-deploy-cmdline.md
-        - name: Implementar con PowerShell
-          href: ssis-quickstart-deploy-powershell.md
-        - name: 'Implementar con C#'
-          href: ./ssis-quickstart-deploy-dotnet.md
-    - name: Ejecutar
-      items:
-        - name: Ejecutar con SSMS
-          href: ./ssis-quickstart-run-ssms.md
-        - name: Ejecutar con Transact-SQL (SSMS)
-          href: ./ssis-quickstart-run-tsql-ssms.md
-        - name: Ejecutar con Transact-SQL (VS Code)
-          href: ssis-quickstart-run-tsql-vscode.md
-        - name: Ejecutar desde el símbolo del sistema
-          href: ./ssis-quickstart-run-cmdline.md
-        - name: Ejecutar con PowerShell
-          href: ssis-quickstart-run-powershell.md
-        - name: 'Ejecutar con C#'
-          href: ./ssis-quickstart-run-dotnet.md
+  - name: Implementar
+    items:
+    - name: Implementar con SSMS
+      href: ./ssis-quickstart-deploy-ssms.md
+    - name: Implementar con Transact-SQL (SSMS)
+      href: ./ssis-quickstart-deploy-tsql-ssms.md
+    - name: Implementar con Transact-SQL (VS Code)
+      href: ssis-quickstart-deploy-tsql-vscode.md
+    - name: Implementar desde el símbolo del sistema
+      href: ./ssis-quickstart-deploy-cmdline.md
+    - name: Implementar con PowerShell
+      href: ssis-quickstart-deploy-powershell.md
+    - name: Implementar con C#
+      href: ./ssis-quickstart-deploy-dotnet.md
+  - name: Ejecutar
+    items:
+    - name: Ejecutar con SSMS
+      href: ./ssis-quickstart-run-ssms.md
+    - name: Ejecutar con Transact-SQL (SSMS)
+      href: ./ssis-quickstart-run-tsql-ssms.md
+    - name: Ejecutar con Transact-SQL (VS Code)
+      href: ssis-quickstart-run-tsql-vscode.md
+    - name: Ejecutar desde el símbolo del sistema
+      href: ./ssis-quickstart-run-cmdline.md
+    - name: Ejecutar con PowerShell
+      href: ssis-quickstart-run-powershell.md
+    - name: Ejecutar con C#
+      href: ./ssis-quickstart-run-dotnet.md
 - name: Implementación y ejecución de paquetes en Azure
   href: lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md
   items:
-    - name: 'Tutorial: implementación y ejecución de un paquete en Azure'
-      href: lift-shift/ssis-azure-deploy-run-monitor-tutorial.md
-    - name: Conexión a datos con la autenticación de Windows
-      href: lift-shift/ssis-azure-connect-with-windows-auth.md
-    - name: Guardar archivos y conectarse a recursos compartidos de archivos
-      href: lift-shift/ssis-azure-files-file-shares.md
-    - name: Conexión al Catálogo de SSIS en Azure
-      href: lift-shift/ssis-azure-connect-to-catalog-database.md
-    - name: Validación de paquetes implementados en Azure
-      href: lift-shift/ssis-azure-validate-packages.md
-    - name: Ejecutar paquetes en Azure
-      href: lift-shift/ssis-azure-run-packages.md
-    - name: Programación de paquetes en Azure
-      href: lift-shift/ssis-azure-schedule-packages.md
-    - name: Programación de paquetes en Azure con SSMS
-      href: lift-shift/ssis-azure-schedule-packages-ssms.md
+  - name: 'Tutorial: implementación y ejecución de un paquete en Azure'
+    href: lift-shift/ssis-azure-deploy-run-monitor-tutorial.md
+  - name: Conexión a datos con la autenticación de Windows
+    href: lift-shift/ssis-azure-connect-with-windows-auth.md
+  - name: Guardar archivos y conectarse a recursos compartidos de archivos
+    href: lift-shift/ssis-azure-files-file-shares.md
+  - name: Conexión al Catálogo de SSIS en Azure
+    href: lift-shift/ssis-azure-connect-to-catalog-database.md
+  - name: Validación de paquetes implementados en Azure
+    href: lift-shift/ssis-azure-validate-packages.md
+  - name: Ejecutar paquetes en Azure
+    href: lift-shift/ssis-azure-run-packages.md
+  - name: Programación de paquetes en Azure
+    href: lift-shift/ssis-azure-schedule-packages.md
+  - name: Programación de paquetes en Azure con SSMS
+    href: lift-shift/ssis-azure-schedule-packages-ssms.md
 - name: Instalar o actualizar
   href: ../integration-services/install-windows/install-integration-services.md
 - name: Herramientas de desarrollo y administración
@@ -70,47 +71,47 @@
 - name: Interfaz de usuario
   href: integration-services-user-interface.md
   items:
-    - name: Diseñador SSIS
-      href: ssis-designer.md
-    - name: Editor avanzado
-      href: advanced-editor.md
-    - name: Agrupar o desagrupar componentes
-      href: group-or-ungroup-components.md
-    - name: Usar anotaciones en paquetes
-      href: use-annotations-in-packages.md
-    - name: Cuadro de herramientas de SSIS
-      href: ssis-toolbox.md
-    - name: Opciones de diseñadores de página general de la integración de servicios
-      href: general-page-of-integration-services-designers-options.md
+  - name: Diseñador SSIS
+    href: ssis-designer.md
+  - name: Editor avanzado
+    href: advanced-editor.md
+  - name: Agrupar o desagrupar componentes
+    href: group-or-ungroup-components.md
+  - name: Usar anotaciones en paquetes
+    href: use-annotations-in-packages.md
+  - name: Cuadro de herramientas de SSIS
+    href: ssis-toolbox.md
+  - name: Opciones de diseñadores de página general de la integración de servicios
+    href: general-page-of-integration-services-designers-options.md
 - name: .
   href: integration-services-ssis-packages.md
   items:
-    - name: Crear paquetes en herramientas de datos de SQL Server
-      href: create-packages-in-sql-server-data-tools.md
-    - name: Agregar copia de paquete existente
-      href: add-copy-of-existing-package.md
-    - name: Establecer las propiedades de paquetes
-      href: set-package-properties.md
-    - name: Ver objetos de paquete
-      href: view-package-objects.md
-    - name: Copiar un paquete en herramientas de datos de SQL Server
-      href: copy-a-package-in-sql-server-data-tools.md
-    - name: Copiar objetos de paquete
-      href: copy-package-objects.md
-    - name: Guardar paquetes
-      href: save-packages.md
-    - name: Reutilización del flujo de control en paquetes mediante el uso de elementos del paquete de flujo de control
-      href: reuse-control-flow-across-packages-by-using-control-flow-package-parts.md
-    - name: Volver a utilizar objetos de paquete
-      href: reuse-of-package-objects.md
-    - name: Eliminar paquetes
-      href: delete-packages.md
-    - name: 'dtutil, utilidad'
-      href: dtutil-utility.md
-    - name: Ayuda F1 del Asistente para actualizar paquetes
-      href: ssis-package-upgrade-wizard-f1-help.md
-    - name: Parámetros de paquete y proyecto
-      href: integration-services-ssis-package-and-project-parameters.md
+  - name: Crear paquetes en herramientas de datos de SQL Server
+    href: create-packages-in-sql-server-data-tools.md
+  - name: Agregar copia de paquete existente
+    href: add-copy-of-existing-package.md
+  - name: Establecer las propiedades de paquetes
+    href: set-package-properties.md
+  - name: Ver objetos de paquete
+    href: view-package-objects.md
+  - name: Copiar un paquete en herramientas de datos de SQL Server
+    href: copy-a-package-in-sql-server-data-tools.md
+  - name: Copiar objetos de paquete
+    href: copy-package-objects.md
+  - name: Guardar paquetes
+    href: save-packages.md
+  - name: Reutilización del flujo de control en paquetes mediante el uso de elementos del paquete de flujo de control
+    href: reuse-control-flow-across-packages-by-using-control-flow-package-parts.md
+  - name: Volver a utilizar objetos de paquete
+    href: reuse-of-package-objects.md
+  - name: Eliminar paquetes
+    href: delete-packages.md
+  - name: dtutil, utilidad
+    href: dtutil-utility.md
+  - name: Ayuda F1 del Asistente para actualizar paquetes
+    href: ssis-package-upgrade-wizard-f1-help.md
+  - name: Parámetros de paquete y proyecto
+    href: integration-services-ssis-package-and-project-parameters.md
 - name: Conexiones
   href: ../integration-services/connection-manager/integration-services-ssis-connections.md
 - name: Flujo de control
@@ -120,10 +121,10 @@
 - name: Variables
   href: integration-services-ssis-variables.md
   items:
-    - name: Ventana Variables
-      href: variables-window.md
-    - name: Variables del sistema
-      href: system-variables.md
+  - name: Ventana Variables
+    href: variables-window.md
+  - name: Variables del sistema
+    href: system-variables.md
 - name: Expresiones
   href: ../integration-services/expressions/integration-services-ssis-expressions.md
 - name: Controladores de eventos
@@ -157,24 +158,24 @@
 - name: Referencia de errores y eventos
   href: errors-and-events-reference-integration-services.md
   items:
-    - name: Referencia de errores y mensajes de Integration Services
-      href: integration-services-error-and-message-reference.md
+  - name: Referencia de errores y mensajes de Integration Services
+    href: integration-services-error-and-message-reference.md
 - name: Scripting y programación
   items:
-    - name: Información general sobre la programación de Integration Services
-      href: integration-services-programming-overview.md
-    - name: Descripción de las transformaciones sincrónicas y asincrónicas
-      href: understanding-synchronous-and-asynchronous-transformations.md
-    - name: Trabajar con administradores de conexiones mediante programación
-      href: working-with-connection-managers-programmatically.md
-    - name: Ampliar paquetes con scripting
-      href: ../integration-services/extending-packages-scripting/extending-packages-with-scripting.md
-    - name: Ampliar paquetes con objetos personalizados
-      href: ../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md
-    - name: Compilar paquetes mediante programación
-      href: ../integration-services/building-packages-programmatically/adding-connections-programmatically.md
-    - name: Ejecutar y administrar paquetes mediante programación
-      href: ../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md
+  - name: Información general sobre la programación de Integration Services
+    href: integration-services-programming-overview.md
+  - name: Descripción de las transformaciones sincrónicas y asincrónicas
+    href: understanding-synchronous-and-asynchronous-transformations.md
+  - name: Trabajar con administradores de conexiones mediante programación
+    href: working-with-connection-managers-programmatically.md
+  - name: Ampliar paquetes con scripting
+    href: ../integration-services/extending-packages-scripting/extending-packages-with-scripting.md
+  - name: Ampliar paquetes con objetos personalizados
+    href: ../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md
+  - name: Compilar paquetes mediante programación
+    href: ../integration-services/building-packages-programmatically/adding-connections-programmatically.md
+  - name: Ejecutar y administrar paquetes mediante programación
+    href: ../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md
 - name: Referencia del lenguaje de Integration Services
   href: integration-services-language-reference.md
 - name: Azure Feature Pack para Integration Services (SSIS)
@@ -187,6 +188,8 @@
   href: ../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md
 - name: Importar desde Excel o exportar a Excel
   href: load-data-to-from-excel-with-ssis.md
+- name: Carga de datos en SQL Server o SQL Database
+  href: load-data-to-sql-database-with-ssis.md
 - name: Carga de datos en SQL Data Warehouse
   href: load-data-to-sql-data-warehouse.md
 - name: captura de datos modificados
@@ -194,137 +197,143 @@
 - name: Microsoft Connector for SAP BW
   href: microsoft-connector-for-sap-bw.md
   items:
-    - name: Instalación de Microsoft Connector for SAP BW
-      href: installing-the-microsoft-connector-for-sap-bw.md
-    - name: Componentes de Microsoft Connector for SAP BW
-      href: microsoft-connector-for-sap-bw-components.md
-    - name: Ayuda F1 de Microsoft Connector 1.1 for SAP BW
-      href: microsoft-connector-for-sap-bw-f1-help.md
-    - name: Certificación de SAP
-      href: certification-by-sap.md
+  - name: Instalación de Microsoft Connector for SAP BW
+    href: installing-the-microsoft-connector-for-sap-bw.md
+  - name: Componentes de Microsoft Connector for SAP BW
+    href: microsoft-connector-for-sap-bw-components.md
+  - name: Ayuda F1 de Microsoft Connector 1.1 for SAP BW
+    href: microsoft-connector-for-sap-bw-f1-help.md
+  - name: Certificación de SAP
+    href: certification-by-sap.md
 - name: Tutoriales
   href: integration-services-tutorials.md
   items:
-    - name: Crear un paquete
-      href: ssis-how-to-create-an-etl-package.md
+  - name: Crear un paquete
+    href: ssis-how-to-create-an-etl-package.md
+    items:
+    - name: 'Lección 1: Crear un proyecto y un paquete básico'
+      href: lesson-1-create-a-project-and-basic-package-with-ssis.md
       items:
-        - name: 'Lección 1: Crear un proyecto y un paquete básico'
-          href: lesson-1-create-a-project-and-basic-package-with-ssis.md
-          items:
-            - name: 'Lección 1-1: Crear un nuevo proyecto de Integration Services'
-              href: lesson-1-1-creating-a-new-integration-services-project.md
-            - name: 'Lección 1-2: Agregar y configurar un administrador de conexiones de archivos planos'
-              href: lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md
-            - name: 'Lección 1-3: Agregar y configurar un administrador de conexiones OLE DB'
-              href: lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md
-            - name: 'Lección 1-4: Agregar una tarea Flujo de datos al paquete'
-              href: lesson-1-4-adding-a-data-flow-task-to-the-package.md
-            - name: 'Lección 1-5: Agregar y configurar el origen de archivo plano'
-              href: lesson-1-5-adding-and-configuring-the-flat-file-source.md
-            - name: 'Lección 1-6: Agregar y configurar transformaciones de búsqueda'
-              href: lesson-1-6-adding-and-configuring-the-lookup-transformations.md
-            - name: 'Lección 1-7: Agregar y configurar el destino de OLE DB'
-              href: lesson-1-7-adding-and-configuring-the-ole-db-destination.md
-            - name: 'Lección 1-8: Facilitar la comprensión del paquete de la lección 1'
-              href: lesson-1-8-making-the-lesson-1-package-easier-to-understand.md
-            - name: 'Lección 1-9: Probar el paquete del tutorial de la lección 1'
-              href: lesson-1-9-testing-the-lesson-1-tutorial-package.md
-        - name: 'Lección 2: Agregar bucles'
-          href: lesson-2-adding-looping-with-ssis.md
-          items:
-            - name: 'Lección 2-1: Copiar el paquete de la lección 1'
-              href: lesson-2-1-copying-the-lesson-1-package.md
-            - name: 'Lección 2-2: Agregar y configurar el contenedor de bucles Para cada uno'
-              href: lesson-2-2-adding-and-configuring-the-foreach-loop-container.md
-            - name: 'Lección 2-3: Modificar el Administrador de conexiones de archivos planos'
-              href: lesson-2-3-modifying-the-flat-file-connection-manager.md
-            - name: 'Lección 2-4: Probar el paquete del tutorial de la lección 2'
-              href: lesson-2-4-testing-the-lesson-2-tutorial-package.md
-        - name: 'Lección 3: Agregar un registro'
-          href: lesson-3-add-logging-with-ssis.md
-          items:
-            - name: 'Lección 3-1: Copiar el paquete de la lección 2'
-              href: lesson-3-1-copying-the-lesson-2-package.md
-            - name: 'Lección 3-2: Agregar y configurar el registro'
-              href: lesson-3-2-adding-and-configuring-logging.md
-            - name: 'Lección 3-3: Probar el paquete del tutorial de la lección 3'
-              href: lesson-3-3-testing-the-lesson-3-tutorial-package.md
-        - name: 'Lección 4: Agregar redireccionamiento de flujo de errores'
-          href: lesson-4-add-error-flow-redirection-with-ssis.md
-          items:
-            - name: 'Lección 4-1: Copiar el paquete de la lección 3'
-              href: lesson-4-1-copying-the-lesson-3-package.md
-            - name: 'Lección 4-2: Crear un archivo dañado'
-              href: lesson-4-2-creating-a-corrupted-file.md
-            - name: 'Lección 4-3: Agregar redireccionamiento de flujo de errores'
-              href: lesson-4-3-adding-error-flow-redirection.md
-            - name: 'Lección 4-4: Agregar un destino de archivo plano'
-              href: lesson-4-4-adding-a-flat-file-destination.md
-            - name: 'Lección 4-5: Probar el paquete del tutorial de la lección 4'
-              href: lesson-4-5-testing-the-lesson-4-tutorial-package.md
-        - name: 'Lección 5: Agregar configuraciones de paquete para el modelo de implementación de paquetes'
-          href: lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md
-          items:
-            - name: 'Lección 5-1: Copiar el paquete de la lección 4'
-              href: lesson-5-1-copying-the-lesson-4-package.md
-            - name: 'Lección 5-2: Habilitar y configurar las configuraciones de paquetes'
-              href: lesson-5-2-enabling-and-configuring-package-configurations.md
-            - name: 'Lección 5-3: Modificar el valor de configuración de la propiedad Directory'
-              href: lesson-5-3-modifying-the-directory-property-configuration-value.md
-            - name: 'Lección 5-4: Probar el paquete del tutorial de la lección 5'
-              href: lesson-5-4-testing-the-lesson-5-tutorial-package.md
-        - name: 'Lección 6: usar parámetros con el modelo de implementación de proyectos'
-          href: lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md
-          items:
-            - name: 'Lección 6-1: Copiar el paquete de la lección 5'
-              href: lesson-6-1-copying-the-lesson-5-package.md
-            - name: 'Lección 6-2: Convertir el proyecto al modelo de implementación del proyectos'
-              href: lesson-6-2-converting-the-project-to-the-project-deployment-model.md
-            - name: 'Lección 6-3: Probar el paquete de la lección 6'
-              href: lesson-6-3-testing-the-lesson-6-package.md
-            - name: 'Lección 6-4: Implementar el paquete de la lección 6'
-              href: lesson-6-4-deploying-the-lesson-6-package.md
-    - name: Implementar paquetes
-      href: deploy-packages-with-ssis.md
+      - name: 'Lección 1-1: Crear un nuevo proyecto de Integration Services'
+        href: lesson-1-1-creating-a-new-integration-services-project.md
+      - name: 'Lección 1-2: Agregar y configurar un administrador de conexiones de archivos planos'
+        href: lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md
+      - name: 'Lección 1-3: Agregar y configurar un administrador de conexiones OLE DB'
+        href: lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md
+      - name: 'Lección 1-4: Agregar una tarea Flujo de datos al paquete'
+        href: lesson-1-4-adding-a-data-flow-task-to-the-package.md
+      - name: 'Lección 1-5: Agregar y configurar el origen de archivo plano'
+        href: lesson-1-5-adding-and-configuring-the-flat-file-source.md
+      - name: 'Lección 1-6: Agregar y configurar transformaciones de búsqueda'
+        href: lesson-1-6-adding-and-configuring-the-lookup-transformations.md
+      - name: 'Lección 1-7: Agregar y configurar el destino de OLE DB'
+        href: lesson-1-7-adding-and-configuring-the-ole-db-destination.md
+      - name: 'Lección 1-8: Facilitar la comprensión del paquete de la lección 1'
+        href: lesson-1-8-making-the-lesson-1-package-easier-to-understand.md
+      - name: 'Lección 1-9: Probar el paquete del tutorial de la lección 1'
+        href: lesson-1-9-testing-the-lesson-1-tutorial-package.md
+    - name: 'Lección 2: Agregar bucles'
+      href: lesson-2-adding-looping-with-ssis.md
       items:
-        - name: 'Lección 1: Preparar la creación del paquete de implementación'
-          href: lesson-1-preparing-to-create-the-deployment-bundle.md
-          items:
-            - name: 'Lección 1-1: Crear carpetas de trabajo y variables de entorno'
-              href: lesson-1-1-creating-working-folders-and-environment-variables.md
-            - name: 'Lección 1-2: Crear el proyecto de implementación'
-              href: lesson-1-2-creating-the-deployment-project.md
-            - name: 'Lección 1-3: Agregar paquetes y otros archivos'
-              href: lesson-1-3-adding-packages-and-other-files.md
-            - name: 'Lección 1-4: Agregar configuraciones de paquetes'
-              href: lesson-1-4-adding-package-configurations.md
-            - name: 'Lección 1-5: Probar los paquetes actualizados'
-              href: lesson-1-5-testing-the-updated-packages.md
-        - name: 'Lección 2: Crear el paquete de implementación'
-          href: lesson-2-create-the-deployment-bundle-in-ssis.md
-          items:
-            - name: 'Lección 2-1: Generar la utilidad de implementación'
-              href: lesson-2-1-building-the-deployment-utility.md
-            - name: 'Lección 2-2: Comprobar el conjunto de implementación'
-              href: lesson-2-2-verifying-the-deployment-bundle.md
-        - name: 'Lección 3: Instalar paquetes'
-          href: lesson-3-install-ssis-packages.md
-          items:
-            - name: 'Lección 3-1: Copiar el conjunto de implementación'
-              href: lesson-3-1-copying-the-deployment-bundle.md
-            - name: 'Lección 3-2: Ejecutar el Asistente para instalar paquetes'
-              href: lesson-3-2-running-the-package-installation-wizard.md
-            - name: 'Lección 3-3: Probar los paquetes implementados'
-              href: lesson-3-3-testing-the-deployed-packages.md
+      - name: 'Lección 2-1: Copiar el paquete de la lección 1'
+        href: lesson-2-1-copying-the-lesson-1-package.md
+      - name: 'Lección 2-2: Agregar y configurar el contenedor de bucles Para cada uno'
+        href: lesson-2-2-adding-and-configuring-the-foreach-loop-container.md
+      - name: 'Lección 2-3: Modificar el Administrador de conexiones de archivos planos'
+        href: lesson-2-3-modifying-the-flat-file-connection-manager.md
+      - name: 'Lección 2-4: Probar el paquete del tutorial de la lección 2'
+        href: lesson-2-4-testing-the-lesson-2-tutorial-package.md
+    - name: 'Lección 3: Agregar un registro'
+      href: lesson-3-add-logging-with-ssis.md
+      items:
+      - name: 'Lección 3-1: Copiar el paquete de la lección 2'
+        href: lesson-3-1-copying-the-lesson-2-package.md
+      - name: 'Lección 3-2: Agregar y configurar el registro'
+        href: lesson-3-2-adding-and-configuring-logging.md
+      - name: 'Lección 3-3: Probar el paquete del tutorial de la lección 3'
+        href: lesson-3-3-testing-the-lesson-3-tutorial-package.md
+    - name: 'Lección 4: Agregar redireccionamiento de flujo de errores'
+      href: lesson-4-add-error-flow-redirection-with-ssis.md
+      items:
+      - name: 'Lección 4-1: Copiar el paquete de la lección 3'
+        href: lesson-4-1-copying-the-lesson-3-package.md
+      - name: 'Lección 4-2: Crear un archivo dañado'
+        href: lesson-4-2-creating-a-corrupted-file.md
+      - name: 'Lección 4-3: Agregar redireccionamiento de flujo de errores'
+        href: lesson-4-3-adding-error-flow-redirection.md
+      - name: 'Lección 4-4: Agregar un destino de archivo plano'
+        href: lesson-4-4-adding-a-flat-file-destination.md
+      - name: 'Lección 4-5: Probar el paquete del tutorial de la lección 4'
+        href: lesson-4-5-testing-the-lesson-4-tutorial-package.md
+    - name: 'Lección 5: Agregar configuraciones de paquete para el modelo de implementación de paquetes'
+      href: lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md
+      items:
+      - name: 'Lección 5-1: Copiar el paquete de la lección 4'
+        href: lesson-5-1-copying-the-lesson-4-package.md
+      - name: 'Lección 5-2: Habilitar y configurar las configuraciones de paquetes'
+        href: lesson-5-2-enabling-and-configuring-package-configurations.md
+      - name: 'Lección 5-3: Modificar el valor de configuración de la propiedad Directory'
+        href: lesson-5-3-modifying-the-directory-property-configuration-value.md
+      - name: 'Lección 5-4: Probar el paquete del tutorial de la lección 5'
+        href: lesson-5-4-testing-the-lesson-5-tutorial-package.md
+    - name: 'Lección 6: usar parámetros con el modelo de implementación de proyectos'
+      href: lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md
+      items:
+      - name: 'Lección 6-1: Copiar el paquete de la lección 5'
+        href: lesson-6-1-copying-the-lesson-5-package.md
+      - name: 'Lección 6-2: Convertir el proyecto al modelo de implementación del proyectos'
+        href: lesson-6-2-converting-the-project-to-the-project-deployment-model.md
+      - name: 'Lección 6-3: Probar el paquete de la lección 6'
+        href: lesson-6-3-testing-the-lesson-6-package.md
+      - name: 'Lección 6-4: Implementar el paquete de la lección 6'
+        href: lesson-6-4-deploying-the-lesson-6-package.md
+  - name: Implementar paquetes
+    href: deploy-packages-with-ssis.md
+    items:
+    - name: 'Lección 1: Preparar la creación del paquete de implementación'
+      href: lesson-1-preparing-to-create-the-deployment-bundle.md
+      items:
+      - name: 'Lección 1-1: Crear carpetas de trabajo y variables de entorno'
+        href: lesson-1-1-creating-working-folders-and-environment-variables.md
+      - name: 'Lección 1-2: Crear el proyecto de implementación'
+        href: lesson-1-2-creating-the-deployment-project.md
+      - name: 'Lección 1-3: Agregar paquetes y otros archivos'
+        href: lesson-1-3-adding-packages-and-other-files.md
+      - name: 'Lección 1-4: Agregar configuraciones de paquetes'
+        href: lesson-1-4-adding-package-configurations.md
+      - name: 'Lección 1-5: Probar los paquetes actualizados'
+        href: lesson-1-5-testing-the-updated-packages.md
+    - name: 'Lección 2: Crear el paquete de implementación'
+      href: lesson-2-create-the-deployment-bundle-in-ssis.md
+      items:
+      - name: 'Lección 2-1: Generar la utilidad de implementación'
+        href: lesson-2-1-building-the-deployment-utility.md
+      - name: 'Lección 2-2: Comprobar el conjunto de implementación'
+        href: lesson-2-2-verifying-the-deployment-bundle.md
+    - name: 'Lección 3: Instalar paquetes'
+      href: lesson-3-install-ssis-packages.md
+      items:
+      - name: 'Lección 3-1: Copiar el conjunto de implementación'
+        href: lesson-3-1-copying-the-deployment-bundle.md
+      - name: 'Lección 3-2: Ejecutar el Asistente para instalar paquetes'
+        href: lesson-3-2-running-the-package-installation-wizard.md
+      - name: 'Lección 3-3: Probar los paquetes implementados'
+        href: lesson-3-3-testing-the-deployed-packages.md
 - name: Recursos
   items:
-    - name: Obtener ayuda en el foro de SSIS
-      href: 'https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices'
-    - name: Obtener ayuda en Stack Overflow
-      href: 'http://stackoverflow.com/questions/tagged/ssis'
-    - name: Seguir el blog del equipo de SSIS
-      href: 'https://blogs.msdn.microsoft.com/ssis/'
-    - name: Informar de problemas y solicitar características
-      href: 'https://feedback.azure.com/forums/908035-sql-server'
-    - name: Obtención de documentos en el equipo
-      href: ../sql-server/sql-server-help-installation.md
+  - name: Obtener ayuda en el foro de SSIS
+    href: https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices
+  - name: Obtener ayuda en Stack Overflow
+    href: http://stackoverflow.com/questions/tagged/ssis
+  - name: Seguir el blog del equipo de SSIS
+    href: https://blogs.msdn.microsoft.com/ssis/
+  - name: Informar de problemas y solicitar características
+    href: https://feedback.azure.com/forums/908035-sql-server
+  - name: Obtención de documentos en el equipo
+    href: ../sql-server/sql-server-help-installation.md
+ms.openlocfilehash: d512b3afd525342f8839d084813d5e46ddc53fed
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40427326"

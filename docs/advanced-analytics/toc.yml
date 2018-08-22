@@ -1,323 +1,330 @@
+items:
 - name: Información general
   items:
-    - name: ¿Qué es SQL Server Machine Learning Services?
-      href: what-is-sql-server-machine-learning.md
-      items:
-        - name: Análisis en base de datos
-          href: r/sql-server-r-services.md
-        - name: Servidor independiente
-          href: r/r-server-standalone.md
-    - name: Nuevas características
-      href: what-s-new-in-sql-server-machine-learning-services.md
-    - name: Características por edición
-      href: r/differences-in-r-features-between-editions-of-sql-server.md
+  - name: ¿Qué es SQL Server Machine Learning Services?
+    href: what-is-sql-server-machine-learning.md
+    items:
+    - name: Análisis en base de datos
+      href: r/sql-server-r-services.md
+    - name: Servidor independiente
+      href: r/r-server-standalone.md
+  - name: Nuevas características
+    href: what-s-new-in-sql-server-machine-learning-services.md
+  - name: Características por edición
+    href: r/differences-in-r-features-between-editions-of-sql-server.md
 - name: Architecture
   href: architecture-overview-machine-learning.md
   items:
-    - name: R
-      href: r/architecture-overview-sql-server-r.md
-      items:
-        - name: Interoperabilidad de R
-          href: r/r-interoperability-in-sql-server.md
-        - name: Componentes que admiten la integración de R
-          href: r/new-components-in-sql-server-to-support-r.md
-        - name: Seguridad para R
-          href: r/security-overview-sql-server-r.md
-    - name: Python
-      href: python/architecture-overview-sql-server-python.md
-      items:
-        - name: Python en Machine Learning Services
-          href: python/sql-server-python-services.md
-        - name: Interoperabilidad de Python
-          href: python/python-interoperability.md
-        - name: Componentes para admitir Python
-          href: python/new-components-in-sql-server-to-support-python-integration.md
-        - name: Seguridad de Python
-          href: python/security-overview-sql-server-python-services.md
+  - name: R
+    href: r/architecture-overview-sql-server-r.md
+    items:
+    - name: Interoperabilidad de R
+      href: r/r-interoperability-in-sql-server.md
+    - name: Componentes que admiten la integración de R
+      href: r/new-components-in-sql-server-to-support-r.md
+    - name: Seguridad para R
+      href: r/security-overview-sql-server-r.md
+  - name: Python
+    href: python/architecture-overview-sql-server-python.md
+    items:
+    - name: Python en Machine Learning Services
+      href: python/sql-server-python-services.md
+    - name: Interoperabilidad de Python
+      href: python/python-interoperability.md
+    - name: Componentes para admitir Python
+      href: python/new-components-in-sql-server-to-support-python-integration.md
+    - name: Seguridad de Python
+      href: python/security-overview-sql-server-python-services.md
 - name: Install
   items:
-    - name: SQL Server 2017
-      items:
-        - name: Análisis en base de datos
-          href: install/sql-machine-learning-services-windows-install.md
-        - name: Servidor independiente
-          href: install/sql-machine-learning-standalone-windows-install.md
-    - name: SQL Server 2016
-      items:
-        - name: R Services (en bases de datos)
-          href: install/sql-r-services-windows-install.md
-        - name: R Server (Standalone)
-          href: install/sql-r-standalone-windows-install.md
-    - name: Modelos entrenados previamente
-      href: install/sql-pretrained-models-install.md
-    - name: Instalación del símbolo del sistema
-      href: install/sql-ml-component-commandline-install.md
-    - name: Instalación sin conexión (sin Internet)
-      href: install/sql-ml-component-install-without-internet-access.md
-    - name: Descargas de CAB (programa de instalación sin conexión)
-      href: install/sql-ml-cab-downloads.md
-    - name: Actualización R y Python
-      href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
-    - name: Configuración de las herramientas de R
-      href: r/set-up-a-data-science-client.md
-    - name: Configuración de las herramientas de Python
-      href: python/setup-python-client-tools-sql.md
+  - name: SQL Server 2017
+    items:
+    - name: Análisis en base de datos
+      href: install/sql-machine-learning-services-windows-install.md
+    - name: Servidor independiente
+      href: install/sql-machine-learning-standalone-windows-install.md
+  - name: SQL Server 2016
+    items:
+    - name: R Services (en bases de datos)
+      href: install/sql-r-services-windows-install.md
+    - name: R Server (Standalone)
+      href: install/sql-r-standalone-windows-install.md
+  - name: Modelos entrenados previamente
+    href: install/sql-pretrained-models-install.md
+  - name: Instalación del símbolo del sistema
+    href: install/sql-ml-component-commandline-install.md
+  - name: Instalación sin conexión (sin Internet)
+    href: install/sql-ml-component-install-without-internet-access.md
+  - name: Descargas de CAB (programa de instalación sin conexión)
+    href: install/sql-ml-cab-downloads.md
+  - name: Actualización R y Python
+    href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
+  - name: Configuración de las herramientas de R
+    href: r/set-up-a-data-science-client.md
+  - name: Configuración de las herramientas de Python
+    href: python/setup-python-client-tools-sql.md
 - name: Tutoriales rápidos
   items:
-    - name: R
-      items:
-        - name: Hola mundo en R y SQL
-          href: tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md
-        - name: Control de entradas y salidas
-          href: tutorials/rtsql-working-with-inputs-and-outputs.md
-        - name: Control de tipos de datos y objetos
-          href: tutorials/rtsql-r-and-sql-data-types-and-data-objects.md
-        - name: Crear un modelo predictivo
-          href: tutorials/rtsql-create-a-predictive-model-r.md
-        - name: Predecir y trazar a partir del modelo
-          href: tutorials/rtsql-predict-and-plot-from-model.md
+  - name: R
+    items:
+    - name: Hola mundo en R y SQL
+      href: tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md
+    - name: Control de entradas y salidas
+      href: tutorials/rtsql-working-with-inputs-and-outputs.md
+    - name: Control de tipos de datos y objetos
+      href: tutorials/rtsql-r-and-sql-data-types-and-data-objects.md
+    - name: Crear un modelo predictivo
+      href: tutorials/rtsql-create-a-predictive-model-r.md
+    - name: Predecir y trazar a partir del modelo
+      href: tutorials/rtsql-predict-and-plot-from-model.md
 - name: Tutoriales
   href: tutorials/machine-learning-services-tutorials.md
   items:
-    - name: R
-      href: tutorials/sql-server-r-tutorials.md
+  - name: R
+    href: tutorials/sql-server-r-tutorials.md
+    items:
+    - name: Información sobre análisis en base de datos
+      href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
-        - name: Información sobre análisis en base de datos
-          href: tutorials/sqldev-in-database-r-for-sql-developers.md
-          items:
-            - name: 1. Obtener datos y scripts
-              href: tutorials/sqldev-download-the-sample-data.md
-            - name: 2. Configurar el entorno
-              href: r/sqldev-import-data-to-sql-server-using-powershell.md
-            - name: 3. Visualizar datos
-              href: tutorials/sqldev-explore-and-visualize-the-data.md
-            - name: 4. Crear características de datos
-              href: tutorials/sqldev-create-data-features-using-t-sql.md
-            - name: 5.-Entrenar y guardar en SQL
-              href: r/sqldev-train-and-save-a-model-using-t-sql.md
-            - name: 6. Predecir los resultados
-              href: tutorials/sqldev-operationalize-the-model.md
-        - name: Tutorial integral de ciencia de datos
-          href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
-          items:
-            - name: Preparar datos
-              href: tutorials/walkthrough-prepare-the-data.md
-            - name: Explorar datos con SQL
-              href: tutorials/walkthrough-view-and-explore-the-data.md
-            - name: Resumir datos con R
-              href: tutorials/walkthrough-view-and-summarize-data-using-r.md
-            - name: Crear gráficos y trazados
-              href: tutorials/walkthrough-create-graphs-and-plots-using-r.md
-            - name: Crear características de datos
-              href: tutorials/walkthrough-create-data-features.md
-            - name: Generar y guardar el modelo
-              href: tutorials/walkthrough-build-and-save-the-model.md
-            - name: Implementar y usar el modelo
-              href: tutorials/walkthrough-deploy-and-use-the-model.md
-        - name: Profundizar con RevoScaleR
-          href: tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
-          items:
-            - name: Crear bases de datos y permisos
-              href: tutorials/deepdive-work-with-sql-server-data-using-r.md
-            - name: Crear objetos de datos mediante RxSqlServerData
-              href: tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
-            - name: Consultar y modificar datos
-              href: tutorials/deepdive-query-and-modify-the-sql-server-data.md
-            - name: Definir un contexto de cálculo
-              href: tutorials/deepdive-define-and-use-compute-contexts.md
-            - name: Crear y ejecutar scripts de R
-              href: tutorials/deepdive-create-and-run-r-scripts.md
-            - name: Visualizar datos
-              href: tutorials/deepdive-visualize-sql-server-data-using-r.md
-            - name: Crear modelos
-              href: tutorials/deepdive-create-models.md
-            - name: Puntuación de nuevos datos
-              href: tutorials/deepdive-score-new-data.md
-            - name: Transformar datos
-              href: tutorials/deepdive-transform-data-using-r.md
-            - name: Cargar datos en memoria mediante rxImport
-              href: tutorials/deepdive-load-data-into-memory-using-rximport.md
-            - name: Crear una tabla mediante rxDataStep
-              href: tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
-            - name: Realizar análisis de fragmentación mediante rxDataStep
-              href: tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
-            - name: Analizar datos en el contexto del proceso local
-              href: tutorials/deepdive-analyze-data-in-local-compute-context.md
-            - name: Mover datos entre SQL Server y el archivo XDF
-              href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
-            - name: Crear una simulación sencilla
-              href: tutorials/deepdive-create-a-simple-simulation.md
-    - name: Python
-      href: tutorials/sql-server-python-tutorials.md
+      - name: 1. Preparar datos de demostración
+        href: tutorials/sqldev-download-the-sample-data.md
+      - name: 2. Visualizar datos
+        href: tutorials/sqldev-explore-and-visualize-the-data.md
+      - name: 3. Crear características de datos
+        href: tutorials/sqldev-create-data-features-using-t-sql.md
+      - name: 4. Entrenar y guardar en SQL
+        href: r/sqldev-train-and-save-a-model-using-t-sql.md
+      - name: 5. Predecir los resultados
+        href: tutorials/sqldev-operationalize-the-model.md
+    - name: Tutorial integral de ciencia de datos
+      href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
       items:
-        - name: Ejecutar Python mediante T-SQL
-          href: tutorials/run-python-using-t-sql.md
-          items:
-            - name: Encapsulamiento de Python en un procedimiento almacenado
-              href: tutorials/wrap-python-in-tsql-stored-procedure.md
-            - name: Entrenamiento y puntuación de un modelo de Python en SQL Server
-              href: tutorials/train-score-using-python-in-tsql.md
-            - name: Creación de un modelo usando revoscalepy en un contexto de proceso de SQL Server
-              href: tutorials/use-python-revoscalepy-to-create-model.md
-        - name: Información sobre análisis en base de datos
-          href: tutorials/sqldev-in-database-python-for-sql-developers.md
-          items:
-            - name: Obtener datos y scripts
-              href: tutorials/sqldev-py1-download-the-sample-data.md
-            - name: Importar datos
-              href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
-            - name: Explorar y visualizar datos
-              href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-            - name: Crear características de datos
-              href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-            - name: Entrenar y guardar el modelo
-              href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-            - name: Hacer operativo el modelo
-              href: tutorials/sqldev-py6-operationalize-the-model.md
+      - name: Preparar datos
+        href: tutorials/walkthrough-prepare-the-data.md
+      - name: Explorar datos con SQL
+        href: tutorials/walkthrough-view-and-explore-the-data.md
+      - name: Resumir datos con R
+        href: tutorials/walkthrough-view-and-summarize-data-using-r.md
+      - name: Crear gráficos y trazados
+        href: tutorials/walkthrough-create-graphs-and-plots-using-r.md
+      - name: Crear características de datos
+        href: tutorials/walkthrough-create-data-features.md
+      - name: Generar y guardar el modelo
+        href: tutorials/walkthrough-build-and-save-the-model.md
+      - name: Implementar y usar el modelo
+        href: tutorials/walkthrough-deploy-and-use-the-model.md
+    - name: Profundizar con RevoScaleR
+      href: tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
+      items:
+      - name: Crear bases de datos y permisos
+        href: tutorials/deepdive-work-with-sql-server-data-using-r.md
+      - name: Crear objetos de datos mediante RxSqlServerData
+        href: tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
+      - name: Consultar y modificar datos
+        href: tutorials/deepdive-query-and-modify-the-sql-server-data.md
+      - name: Definir un contexto de cálculo
+        href: tutorials/deepdive-define-and-use-compute-contexts.md
+      - name: Crear y ejecutar scripts de R
+        href: tutorials/deepdive-create-and-run-r-scripts.md
+      - name: Visualizar datos
+        href: tutorials/deepdive-visualize-sql-server-data-using-r.md
+      - name: Crear modelos
+        href: tutorials/deepdive-create-models.md
+      - name: Puntuación de nuevos datos
+        href: tutorials/deepdive-score-new-data.md
+      - name: Transformar datos
+        href: tutorials/deepdive-transform-data-using-r.md
+      - name: Cargar datos en memoria mediante rxImport
+        href: tutorials/deepdive-load-data-into-memory-using-rximport.md
+      - name: Crear una tabla mediante rxDataStep
+        href: tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
+      - name: Realizar análisis de fragmentación mediante rxDataStep
+        href: tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
+      - name: Analizar datos en el contexto del proceso local
+        href: tutorials/deepdive-analyze-data-in-local-compute-context.md
+      - name: Mover datos entre SQL Server y el archivo XDF
+        href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
+      - name: Crear una simulación sencilla
+        href: tutorials/deepdive-create-a-simple-simulation.md
+  - name: Python
+    href: tutorials/sql-server-python-tutorials.md
+    items:
+    - name: Ejecutar Python mediante T-SQL
+      href: tutorials/run-python-using-t-sql.md
+      items:
+      - name: Encapsulamiento de Python en un procedimiento almacenado
+        href: tutorials/wrap-python-in-tsql-stored-procedure.md
+      - name: Entrenamiento y puntuación de un modelo de Python en SQL Server
+        href: tutorials/train-score-using-python-in-tsql.md
+      - name: Creación de un modelo usando revoscalepy en un contexto de proceso de SQL Server
+        href: tutorials/use-python-revoscalepy-to-create-model.md
+    - name: Información sobre análisis en base de datos
+      href: tutorials/sqldev-in-database-python-for-sql-developers.md
+      items:
+      - name: Obtener datos y scripts
+        href: tutorials/sqldev-py1-download-the-sample-data.md
+      - name: Importar datos
+        href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
+      - name: Explorar y visualizar datos
+        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
+      - name: Crear características de datos
+        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
+      - name: Entrenar y guardar el modelo
+        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+      - name: Hacer operativo el modelo
+        href: tutorials/sqldev-py6-operationalize-the-model.md
 - name: Ejemplos
-  href: 'https://github.com/Microsoft/sql-server-samples'
+  href: https://github.com/Microsoft/sql-server-samples
 - name: Soluciones
   href: tutorials/data-science-scenarios-and-solution-templates.md
 - name: Procedimientos
   href: r/sql-server-machine-learning-tasks.md
   items:
-    - name: Administración de paquetes
+  - name: Administración de paquetes
+    items:
+    - name: Paquetes predeterminados
+      href: r/installing-and-managing-r-packages.md
+    - name: Obtención de información del paquete
+      href: r/determine-which-packages-are-installed-on-sql-server.md
+    - name: Instalación de paquetes de Python adicionales
+      href: python/install-additional-python-packages-on-sql-server.md
+    - name: Instalación de paquetes de R adicionales
+      href: r/install-additional-r-packages-on-sql-server.md
       items:
-        - name: Paquetes predeterminados
-          href: r/installing-and-managing-r-packages.md
-        - name: Obtención de información del paquete
-          href: r/determine-which-packages-are-installed-on-sql-server.md
-        - name: Instalación de paquetes de Python adicionales
-          href: python/install-additional-python-packages-on-sql-server.md
-        - name: Instalación de paquetes de R adicionales
-          href: r/install-additional-r-packages-on-sql-server.md
-          items:
-            - name: Uso de administradores de paquetes de R
-              href: r/use-r-package-managers-on-sql-server.md
-            - name: Uso de T-SQL
-              href: r/install-r-packages-tsql.md
-            - name: Uso de RevoScaleR
-              href: r/use-revoscaler-to-manage-r-packages.md
-              items:
-                - name: Habilitación de la administración de paquetes de R remota
-                  href: r/r-package-how-to-enable-or-disable.md
-                - name: Sincronización de paquetes de R
-                  href: r/package-install-uninstall-and-sync.md
-            - name: Creación de un repositorio de miniCRAN
-              href: r/create-a-local-package-repository-using-minicran.md
-            - name: Sugerencias para usar paquetes de R
-              href: r/packages-installed-in-user-libraries.md
-    - name: Modelado y exploración de datos
-      items:
-        - name: Bibliotecas de R y tipos de datos
-          href: r/r-libraries-and-data-types.md
-        - name: Bibliotecas de Python y tipos de datos
-          href: python/python-libraries-and-data-types.md
-        - name: Puntuación nativa
-          href: sql-native-scoring.md
-        - name: Puntuación en tiempo real
-          href: real-time-scoring.md
-        - name: Modelado de predicción con R
-          href: r/data-exploration-and-predictive-modeling-with-r.md
-        - name: Cómo efectuar una puntuación nativa o en tiempo real
-          href: r/how-to-do-realtime-scoring.md
-        - name: Cargar objetos de R mediante ODBC
-          href: r/save-and-load-r-objects-from-sql-server-using-odbc.md
-        - name: Convertir el código de R para usarlo en Machine Learning Services
-          href: r/converting-r-code-for-use-in-sql-server.md
-        - name: Crear varios modelos mediante rxExecBy
-          href: r/creating-multiple-models-using-rxexecby.md
-        - name: Usar datos de cubos OLAP en R
-          href: r/using-data-from-olap-cubes-in-r.md
-        - name: Crear un procedimiento almacenado mediante sqlrutils
-          href: r/how-to-create-a-stored-procedure-using-sqlrutils.md
-    - name: Rendimiento
-      items:
-        - name: 'Optimización del rendimiento de R: Información general'
-          href: r/sql-server-r-services-performance-tuning.md
-        - name: 'Optimización del rendimiento de R: Configuración de SQL Server'
-          href: r/sql-server-configuration-r-services.md
-        - name: 'Optimización del rendimiento de R: R y optimización de datos'
-          href: r/r-and-data-optimization-r-services.md
-        - name: 'Optimización del rendimiento de R: Resultados'
-          href: r/performance-case-study-r-services.md
-        - name: Usar las funciones de generación de perfiles de código de R
-          href: r/using-r-code-profiling-functions.md
-    - name: Administración
-      items:
-        - name: Configurar y administrar R
-          href: r/configuration-sql-server-r-services.md
-        - name: Opciones de configuración avanzada de Machine Learning Services
-          href: r/configure-and-manage-advanced-analytics-extensions.md
-        - name: Consideraciones de seguridad para el tiempo de ejecución de R en SQL Server
-          href: r/security-considerations-for-the-r-runtime-in-sql-server.md
-        - name: Modificar el grupo de cuentas de usuario de SQL Server Machine Learning Services
-          href: r/modify-the-user-account-pool-for-sql-server-r-services.md
-        - name: Agregar SQLRUserGroup como usuario de base de datos
-          href: r/add-sqlrusergroup-to-database.md
-        - name: Implementar y usar modelos mediante servicios web
-          href: operationalization-with-mrsdeploy.md
-        - name: Administración y supervisión de soluciones
-          href: r/managing-and-monitoring-r-solutions.md
-        - name: Regulación de recursos para Machine Learning Services
-          href: r/resource-governance-for-r-services.md
-        - name: Creación de grupos de recursos para el aprendizaje automático
-          href: r/how-to-create-a-resource-pool-for-r.md
-        - name: Eventos extendidos de Machine Learning Services
-          href: r/extended-events-for-sql-server-r-services.md
-        - name: Eventos extendidos para la supervisión de instrucciones PREDICT
-          href: xe-event-predict-tsql.md
-        - name: DMV de Machine Learning Services
-          href: r/dmvs-for-sql-server-r-services.md
-        - name: Uso de funciones de generación de perfiles de código de R
-          href: r/using-r-code-profiling-functions.md
-        - name: Supervisar Machine Learning Services con informes personalizados en Management Studio
-          href: r/monitor-r-services-using-custom-reports-in-management-studio.md
+      - name: Uso de administradores de paquetes de R
+        href: r/use-r-package-managers-on-sql-server.md
+      - name: Uso de T-SQL
+        href: r/install-r-packages-tsql.md
+      - name: Uso de RevoScaleR
+        href: r/use-revoscaler-to-manage-r-packages.md
+        items:
+        - name: Habilitación de la administración de paquetes de R remota
+          href: r/r-package-how-to-enable-or-disable.md
+        - name: Sincronización de paquetes de R
+          href: r/package-install-uninstall-and-sync.md
+      - name: Creación de un repositorio de miniCRAN
+        href: r/create-a-local-package-repository-using-minicran.md
+      - name: Sugerencias para usar paquetes de R
+        href: r/packages-installed-in-user-libraries.md
+  - name: Modelado y exploración de datos
+    items:
+    - name: Bibliotecas de R y tipos de datos
+      href: r/r-libraries-and-data-types.md
+    - name: Bibliotecas de Python y tipos de datos
+      href: python/python-libraries-and-data-types.md
+    - name: Modelado de predicción con R
+      href: r/data-exploration-and-predictive-modeling-with-r.md
+    - name: Cargar objetos de R mediante ODBC
+      href: r/save-and-load-r-objects-from-sql-server-using-odbc.md
+    - name: Convertir el código de R para usarlo en Machine Learning Services
+      href: r/converting-r-code-for-use-in-sql-server.md
+    - name: Crear varios modelos mediante rxExecBy
+      href: r/creating-multiple-models-using-rxexecby.md
+    - name: Usar datos de cubos OLAP en R
+      href: r/using-data-from-olap-cubes-in-r.md
+    - name: Crear un procedimiento almacenado mediante sqlrutils
+      href: r/how-to-create-a-stored-procedure-using-sqlrutils.md
+  - name: Predicciones
+    items:
+    - name: Cómo generar predicciones
+      href: r/how-to-do-realtime-scoring.md
+    - name: Puntuación en tiempo real con sp_rxpredict
+      href: real-time-scoring.md
+    - name: Puntuación nativa con PREDICT T-SQL
+      href: sql-native-scoring.md
+  - name: Rendimiento
+    items:
+    - name: 'Optimización del rendimiento de R: Información general'
+      href: r/sql-server-r-services-performance-tuning.md
+    - name: 'Optimización del rendimiento de R: Configuración de SQL Server'
+      href: r/sql-server-configuration-r-services.md
+    - name: 'Optimización del rendimiento de R: R y optimización de datos'
+      href: r/r-and-data-optimization-r-services.md
+    - name: 'Optimización del rendimiento de R: Resultados'
+      href: r/performance-case-study-r-services.md
+    - name: Usar las funciones de generación de perfiles de código de R
+      href: r/using-r-code-profiling-functions.md
+  - name: Administración
+    items:
+    - name: Configurar y administrar R
+      href: r/configuration-sql-server-r-services.md
+    - name: Opciones de configuración avanzada de Machine Learning Services
+      href: r/configure-and-manage-advanced-analytics-extensions.md
+    - name: Consideraciones de seguridad para el tiempo de ejecución de R en SQL Server
+      href: r/security-considerations-for-the-r-runtime-in-sql-server.md
+    - name: Modificar el grupo de cuentas de usuario de SQL Server Machine Learning Services
+      href: r/modify-the-user-account-pool-for-sql-server-r-services.md
+    - name: Agregar SQLRUserGroup como usuario de base de datos
+      href: r/add-sqlrusergroup-to-database.md
+    - name: Implementar y usar modelos mediante servicios web
+      href: operationalization-with-mrsdeploy.md
+    - name: Administración y supervisión de soluciones
+      href: r/managing-and-monitoring-r-solutions.md
+    - name: Regulación de recursos para Machine Learning Services
+      href: r/resource-governance-for-r-services.md
+    - name: Creación de grupos de recursos para el aprendizaje automático
+      href: r/how-to-create-a-resource-pool-for-r.md
+    - name: Eventos extendidos de Machine Learning Services
+      href: r/extended-events-for-sql-server-r-services.md
+    - name: Eventos extendidos para la supervisión de instrucciones PREDICT
+      href: xe-event-predict-tsql.md
+    - name: DMV de Machine Learning Services
+      href: r/dmvs-for-sql-server-r-services.md
+    - name: Uso de funciones de generación de perfiles de código de R
+      href: r/using-r-code-profiling-functions.md
+    - name: Supervisar Machine Learning Services con informes personalizados en Management Studio
+      href: r/monitor-r-services-using-custom-reports-in-management-studio.md
 - name: Referencia de paquete
   href: r/machine-learning-services-r-reference.md
   items:
-    - name: MicrosoftML en SQL
-      href: using-the-microsoftml-package.md
-    - name: RevoScaleR en SQL
-      href: r/revoscaler-overview.md
-    - name: Lista de funciones de RevoScaleR para los datos de SQL Server
-      href: r/scaler-functions-for-working-with-sql-server-data.md
-    - name: sqlrutils en SQL
-      href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
-    - name: olapR en SQL
-      href: r/how-to-create-mdx-queries-using-olapr.md
-    - name: revoscalepy en SQL
-      href: python/what-is-revoscalepy.md
+  - name: MicrosoftML en SQL
+    href: using-the-microsoftml-package.md
+  - name: RevoScaleR en SQL
+    href: r/revoscaler-overview.md
+  - name: Lista de funciones de RevoScaleR para los datos de SQL Server
+    href: r/scaler-functions-for-working-with-sql-server-data.md
+  - name: sqlrutils en SQL
+    href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
+  - name: olapR en SQL
+    href: r/how-to-create-mdx-queries-using-olapr.md
+  - name: revoscalepy en SQL
+    href: python/what-is-revoscalepy.md
 - name: Recursos
   items:
-    - name: Problemas conocidos
-      href: known-issues-for-sql-server-machine-learning-services.md
-    - name: Notas de la versión
-      href: 'https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes'
-    - name: Configurar una máquina virtual
-      href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
-    - name: Solucionar problemas
-      href: machine-learning-troubleshooting-faq.md
-      items:
-        - name: 'datos, recopilación'
-          href: data-collection-ml-troubleshooting-process.md
-        - name: Errores de instalación y actualización
-          href: r/upgrade-and-installation-faq-sql-server-r-services.md
-        - name: LaunchPad y errores de ejecución de script externos
-          href: common-issues-external-script-execution.md
-        - name: Errores de scripting de R
-          href: r-script-execution-errors.md
-    - name: Blogs
-      items:
-        - name: SQL Server
-          href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: R Server
-          href: 'https://blogs.msdn.microsoft.com/microsoftrservertigerteam/'
-        - name: Aprendizaje automático
-          href: 'https://blogs.technet.microsoft.com/machinelearning/'
-    - name: Foros
-      items:
-        - name: SQL Server
-          href: 'https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver'
-        - name: Machine Learning Server
-          href: 'https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR'
+  - name: Problemas conocidos
+    href: known-issues-for-sql-server-machine-learning-services.md
+  - name: Notas de la versión
+    href: https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes
+  - name: Configurar una máquina virtual
+    href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
+  - name: Solucionar problemas
+    href: machine-learning-troubleshooting-faq.md
+    items:
+    - name: datos, recopilación
+      href: data-collection-ml-troubleshooting-process.md
+    - name: Errores de instalación y actualización
+      href: r/upgrade-and-installation-faq-sql-server-r-services.md
+    - name: LaunchPad y errores de ejecución de script externos
+      href: common-issues-external-script-execution.md
+    - name: Errores de scripting de R
+      href: r-script-execution-errors.md
+  - name: Blogs
+    items:
+    - name: SQL Server
+      href: https://blogs.technet.microsoft.com/dataplatforminsider/
+    - name: R Server
+      href: https://blogs.msdn.microsoft.com/microsoftrservertigerteam/
+    - name: Aprendizaje automático
+      href: https://blogs.technet.microsoft.com/machinelearning/
+  - name: Foros
+    items:
+    - name: SQL Server
+      href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
+    - name: Machine Learning Server
+      href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
+ms.openlocfilehash: 85ed543ae5239ab46c388de63714756b15a58190
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40427388"

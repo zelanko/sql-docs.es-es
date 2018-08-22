@@ -1,5 +1,5 @@
 ---
-title: sp_detach_schedule (Transact-SQL) | Documentos de Microsoft
+title: sp_detach_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df165b840d0785fb87e7e5abeffc72ca660317cf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 708dea0c3ba2c3abc9ca0827caa9f5c548c56902
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245136"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393932"
 ---
 # <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_detach_schedule
  Nombre del trabajo cuya programación se va a quitar. *job_name* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
->  Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
+>  Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
   
  [  **@schedule_id=** ] *schedule_id*  
  Número de identificación de la programación que se va a quitar del trabajo. *schedule_id* es **int**, su valor predeterminado es null.  
@@ -63,10 +63,10 @@ sp_detach_schedule
  Nombre de la programación se va a quitar del trabajo. *schedule_name* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
->  Cualquier *schedule_id* o *schedule_name* debe especificarse, pero no pueden especificarse ambos.  
+>  Cualquier *schedule_id* o *schedule_name* debe especificarse, pero no se pueden especificar ambos.  
   
  [  **@delete_unused_schedule=** ] *delete_unused_schedule*  
- Especifica si se van a eliminar las programaciones de trabajo no utilizadas. *delete_unused_schedule* es **bits**, su valor predeterminado es **0**, lo que significa que todas las programaciones se mantendrán, aunque ningún trabajo haga referencia a ellos. Si establece en **1**, las programaciones de trabajo no utilizadas se eliminan si ningún trabajo haga referencia a ellos.  
+ Especifica si se van a eliminar las programaciones de trabajo no utilizadas. *delete_unused_schedule* es **bit**, su valor predeterminado es **0**, lo que significa que todas las programaciones se mantendrán, aunque ningún trabajo haga referencia a ellos. Si establece en **1**, las programaciones de trabajo no utilizadas se eliminan si ningún trabajo haga referencia a ellos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -74,7 +74,7 @@ sp_detach_schedule
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -85,7 +85,7 @@ sp_detach_schedule
   
  Observe que el propietario del trabajo puede adjuntar un trabajo a una programación y separar un trabajo de una programación sin tener que ser asimismo el propietario de la programación. Sin embargo, una programación no se puede eliminar si la separación la dejase sin trabajos, a menos que el autor de la llamada sea el propietario de la programación.  
   
- Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza una comprobación para determinar si el usuario es propietario de la programación. Solo los miembros de la **sysadmin** rol fijo de servidor puede separar programaciones de trabajos que pertenecen a otro usuario.  
   

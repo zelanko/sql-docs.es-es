@@ -1,5 +1,5 @@
 ---
-title: sp_add_schedule (Transact-SQL) | Documentos de Microsoft
+title: sp_add_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 53
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f1ce62c23519f44e9673e425662bd0e24dc80da
-ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
+ms.openlocfilehash: f418ec24668eacbf6198c8d98db7561db1faf58b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36262239"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393047"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,9 +86,9 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**1** (una vez)|*freq_interval* no se utiliza.|  
 |**4** (diariamente)|Cada *freq_interval* días.|  
 |**8** (semanalmente)|*freq_interval* es uno o varios de los siguientes (combinados con un operador lógico OR):<br /><br /> **1** = el domingo<br /><br /> **2** = el lunes<br /><br /> **4** = el martes<br /><br /> **8** = el miércoles<br /><br /> **16** = el jueves<br /><br /> **32** = el viernes<br /><br /> **64** = el sábado|  
-|**16** (mensualmente)|En el *freq_interval* día del mes.|  
+|**16** (mensual)|En el *freq_interval* día del mes.|  
 |**32** (relativo mensual)|*freq_interval* es uno de los siguientes:<br /><br /> **1** = el domingo<br /><br /> **2** = el lunes<br /><br /> **3** = el martes<br /><br /> **4** = el miércoles<br /><br /> **5** = el jueves<br /><br /> **6** = el viernes<br /><br /> **7** = el sábado<br /><br /> **8** = día<br /><br /> **9** = día de la semana<br /><br /> **10** = día del fin de semana|  
-|**64** (cuando inicia el servicio SQLServerAgent)|*freq_interval* no se utiliza.|  
+|**64** (cuando se inicia el servicio SQLServerAgent)|*freq_interval* no se utiliza.|  
 |**128**|*freq_interval* no se utiliza.|  
   
  [ **@freq_subday_type =** ] *freq_subday_type*  
@@ -105,7 +105,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  El número de *freq_subday_type* períodos que transcurren entre cada ejecución de un trabajo. *freq_subday_interval* es **int**, su valor predeterminado es **0**. Nota: el intervalo debe ser mayor que 10 segundos. *freq_subday_interval* se omite en los casos donde *freq_subday_type* es igual a **1**.  
   
  [ **@freq_relative_interval =** ] *freq_relative_interval*  
- Aparición de un trabajo de *freq_interval* cada mes, si *freq_interval* es 32 (relativo mensual). *freq_relative_interval* es **int**, su valor predeterminado es **0**, y puede tener uno de estos valores. *freq_relative_interval* se omite en los casos donde *freq_type* no es igual a 32.  
+ Aparición de un trabajo de *freq_interval* en cada mes, si *freq_interval* es 32 (relativo mensual). *freq_relative_interval* es **int**, su valor predeterminado es **0**, y puede tener uno de estos valores. *freq_relative_interval* se omite en los casos donde *freq_type* no es igual a 32.  
   
 |Valor|Descripción (unidad)|  
 |-----------|--------------------------|  
@@ -116,12 +116,12 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**16**|Último|  
   
  [ **@freq_recurrence_factor =** ] *freq_recurrence_factor*  
- Número de semanas o meses entre las ejecuciones programadas de un trabajo. *freq_recurrence_factor* solo se utiliza si *freq_type* es **8**, **16**, o **32**. *freq_recurrence_factor* es **int**, su valor predeterminado es **0**.  
+ Número de semanas o meses entre las ejecuciones programadas de un trabajo. *freq_recurrence_factor* solo se usa si *freq_type* es **8**, **16**, o **32**. *freq_recurrence_factor* es **int**, su valor predeterminado es **0**.  
   
  [ **@active_start_date =** ] *active_start_date*  
- La fecha en la que puede comenzar la ejecución de un trabajo. *active_start_date* es **int**, su valor predeterminado es null, lo que indica la fecha de hoy. La fecha tiene el formato AAAAMMDD. Si *active_start_date* no es NULL, la fecha debe ser mayor o igual a 19900101.  
+ La fecha en que puede comenzar la ejecución de un trabajo. *active_start_date* es **int**, su valor predeterminado es NULL, lo que indica la fecha de hoy. La fecha tiene el formato AAAAMMDD. Si *active_start_date* no es NULL, la fecha debe ser mayor o igual a 19900101.  
   
- Una vez creada la programación, revise la fecha de inicio y confirme que es correcta. Para obtener más información, vea la sección "Programar fechas de inicio" en [crear y adjuntar programaciones a trabajos](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5).  
+ Una vez creada la programación, revise la fecha de inicio y confirme que es correcta. Para obtener más información, vea la sección "Programar fechas de inicio" en [crear y adjuntar programaciones a trabajos](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
  En las programaciones semanales o mensuales, el agente desconoce si active_start_date corresponde al pasado, y en su lugar utiliza la fecha actual. Cuando se crea una programación del Agente SQL mediante sp_add_schedule, existe la opción de especificar el parámetro active_start_date, que es la fecha en la que comenzará la ejecución del trabajo. Si el tipo de programación es semanal o mensual y el parámetro active_start_date se establece en una fecha en el pasado, se hace caso omiso de dicho parámetro y se utilizará en su lugar la fecha actual.  
   
@@ -132,10 +132,10 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  La hora de un día entre *active_start_date* y *active_end_date* para comenzar la ejecución de un trabajo. *active_start_time* es **int**, su valor predeterminado es **000000**, lo que indica 12:00:00 A.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
  [  **@active_end_time =** ] *active_end_time*  
- La hora de un día entre *active_start_date* y *active_end_date* para finalizar la ejecución de un trabajo. *active_end_time* es **int**, su valor predeterminado es **235959**, lo que indica 11:59:59 p. M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
+ La hora de un día entre *active_start_date* y *active_end_date* para finalizar la ejecución de un trabajo. *active_end_time* es **int**, su valor predeterminado es **235959**, lo que indica 11:59:59 P.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
  [ **@owner_login_name**=] **'***owner_login_name***'**  
- Nombre de la entidad de seguridad del servidor a la que pertenece la programación. *owner_login_name* es **sysname**, su valor predeterminado es null, lo que indica que la programación pertenece al creador.  
+ Nombre de la entidad de seguridad del servidor a la que pertenece la programación. *owner_login_name* es **sysname**, su valor predeterminado es NULL, lo que indica que la programación pertenece al creador.  
   
  [ **@schedule_uid**=] *valor schedule_uid *** salida**  
  Es un identificador único para la programación. *valor schedule_uid* es una variable de tipo **uniqueidentifier**.  
@@ -143,7 +143,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [ **@schedule_id**=] *schedule_id *** salida**  
  Identificador de la programación. *schedule_id* es una variable de tipo **int**.  
   
- [ **@originating_server**=] *nombre_servidor*  
+ [ **@originating_server**=] *nombreDeServidor*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -164,7 +164,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 -   **SQLAgentOperatorRole**  
   
- Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -212,9 +212,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Crear y adjuntar programaciones a trabajos](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5)   
- [Programar un trabajo](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)   
- [Crear una programación](http://msdn.microsoft.com/library/8c7ef3b3-c06d-4a27-802d-ed329dc86ef3)   
+ [Crear y adjuntar programaciones a trabajos](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
+ [Programar un trabajo](../../ssms/agent/schedule-a-job.md)   
+ [Crear una programación](../../ssms/agent/create-a-schedule.md)   
  [Procedimientos almacenados del Agente SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_jobschedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)   
  [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   

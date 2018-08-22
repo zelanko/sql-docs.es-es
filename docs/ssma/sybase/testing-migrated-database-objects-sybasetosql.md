@@ -1,5 +1,5 @@
 ---
-title: Pruebas migran objetos de base de datos (SybaseToSQL) | Documentos de Microsoft
+title: Pruebas con objetos de base de datos (SybaseToSQL) migrados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,20 +16,20 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6f95ab1a14679d919a11fcc5a0c26554ac6120f2
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ac7654f43f2d453ad0e55a0a7ebcfee79ac2c91c
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779411"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393690"
 ---
-# <a name="testing-migrated-database-objects-sybasetosql"></a>Pruebas migran objetos de base de datos (SybaseToSQL)
-Microsoft SQL Server Migration Assistant para Sybase evaluador (SSMA evaluador) prueba automáticamente la conversión del objeto de base de datos y la migración de datos realizadas por SSMA. Después de que haya finalizado todos los pasos de migración de SSMA, use SSMA evaluador para comprobar que los objetos convertidos funcionan del mismo modo y que todos los datos se transfirió correctamente.  
+# <a name="testing-migrated-database-objects-sybasetosql"></a>Pruebas con objetos de base de datos migrados (SybaseToSQL)
+Microsoft SQL Server Migration Assistant para Sybase evaluador (SSMA evaluador) comprueba automáticamente la conversión del objeto de base de datos y la migración de datos realizadas por SSMA. Una vez finalizados todos los pasos de migración de SSMA, use el evaluador de SSMA para comprobar que los objetos convertidos funcionan del mismo modo, y que todos los datos se transfirió correctamente.  
   
 > [!NOTE]  
-> Componente de evaluador está deshabilitada en el caso de conectividad de Azure.  
+> El componente herramienta de comprobación está deshabilitado en el caso de conectividad de Azure.  
   
-Puede probar los siguientes tipos de objeto con la herramienta de comprobación de SSMA:  
+Puede probar los siguientes tipos de objeto con SSMA evaluador:  
   
 -   Tablas  
   
@@ -39,7 +39,7 @@ Puede probar los siguientes tipos de objeto con la herramienta de comprobación 
   
 -   Instrucciones independientes.  
   
-SSMA evaluador ejecuta objetos seleccionados para realizar pruebas en Sybase y sus homólogos en SQL Server. A continuación, compara los resultados según los criterios siguientes:  
+SSMA Tester ejecuta los objetos seleccionados para realizar pruebas en Sybase y sus homólogos en SQL Server. Después de eso, comparan los resultados según los criterios siguientes:  
   
 -   ¿Son los cambios en los datos de la tabla idénticas?  
   
@@ -47,26 +47,26 @@ SSMA evaluador ejecuta objetos seleccionados para realizar pruebas en Sybase y s
   
 -   ¿Las funciones devuelven los mismos resultados?  
   
--   ¿Son que los conjuntos de resultados idéntico?  
+-   ¿Son que los conjuntos de resultados idénticos?  
   
 > [!NOTE]  
 > ¡Atención! Nunca utilice SSMA evaluador en sistemas de producción. Durante la ejecución de la herramienta de comprobación se modifican el esquema de origen y los datos. Mientras tanto, la restauración completa del estado original puede ser imposible para algunos tipos de código probado.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
-Si desea usar la herramienta de comprobación de SSMA, instalar paquete de extensión de SSMA Sybase con los **instalar bases de datos de evaluador** opción activada.  
+Si desea usar SSMA evaluador, instalar el paquete de extensión de Sybase de SSMA con el **instalar base de datos de evaluador** opción activada.  
   
 Además, compruebe lo siguiente:  
   
--   Proveedor OLE DB de Sybase está instalado en el equipo donde [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] se ejecuta.  
+-   Proveedor OLE DB de Sybase está instalado en el equipo donde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta.  
   
--   Se ha habilitado la integración de Common Language Runtime (CLR) en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] motor de base de datos.  
+-   Se ha habilitado la integración de Common Language Runtime (CLR) en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motor de base de datos.  
   
-Tenga en cuenta que la versión actual de la herramienta de comprobación de SSMA no admite la ejecución en paralelo por usuarios diferentes en el mismo servidor de origen o de destino.  
+Tenga en cuenta que la versión actual de SSMA evaluador no admite la ejecución paralela por usuarios diferentes en el mismo servidor de origen o destino.  
   
 ## <a name="getting-started"></a>Introducción  
 [Crear casos de prueba &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-test-cases-sybasetosql.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Instalar componentes SSMA en SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
+[Instalación de componentes de SSMA en SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
 [Configuración del proyecto &#40;conversión&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
   

@@ -21,18 +21,18 @@ caps.latest.revision: 40
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2bc1151b2df35b7912d03519cdf7f659ba96af16
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 881075f22468cb384aa3c3b5a4677a6e0d70bdf7
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216595"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40394920"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>Ejecutar el Asesor de actualizaciones (interfaz de usuario)
   Puede ejecutar el Asesor de actualizaciones para analizar componentes locales o remotos durante la planeación de la actualización. El Asesor de actualizaciones genera un informe para cada componente y la instancia que se está analizando.  
   
 > [!IMPORTANT]  
->  El Asesor de actualizaciones no analiza instancias remotas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para analizar una instancia de [!INCLUDE[ssRS](../../includes/ssrs-md.md)], el Asesor de actualizaciones se debe instalar en el equipo donde esté instalado [!INCLUDE[ssRS](../../includes/ssrs-md.md)].  
+>  El Asesor de actualizaciones no analiza instancias remotas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para analizar una instancia de [!INCLUDE[ssRS](../../includes/ssrs.md)], el Asesor de actualizaciones se debe instalar en el equipo donde esté instalado [!INCLUDE[ssRS](../../includes/ssrs.md)].  
 >   
 >  Para analizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services, debe tener la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instalado y [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instalado en el mismo equipo.  
   

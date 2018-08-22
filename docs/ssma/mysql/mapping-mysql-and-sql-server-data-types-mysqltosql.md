@@ -19,15 +19,15 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4690c8db938d53dd290ce642a7fa4ae3884b2a29
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a66311fcb2a02e5366fad180a648bcdce117dec8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982567"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396200"
 ---
-# <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Asignación de MySQL y tipos de datos SQL Server (MySQLToSQL)
-Tipos de base de datos MySQL difieren de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o tipos de base de datos de SQL Azure. Al convertir los objetos de base de datos de MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] u objetos de SQL Azure, debe especificar cómo asignar tipos de datos de MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. Puede aceptar las asignaciones de tipos de datos de forma predeterminada, o puede personalizar las asignaciones como se muestra en los procedimientos siguientes.  
+# <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Asignación de tipos de datos de MySQL y de SQL Server (MySQLToSQL)
+Tipos de base de datos MySQL difieren de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tipos de base de datos de SQL Azure. Al convertir los objetos de base de datos de MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u objetos de SQL Azure, debe especificar cómo asignar tipos de datos de MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Puede aceptar las asignaciones de tipos de datos de forma predeterminada, o puede personalizar las asignaciones como se muestra en los procedimientos siguientes.  
   
 ## <a name="default-mappings"></a>Asignaciones predeterminadas  
 SSMA tiene un conjunto predeterminado de asignaciones de tipos de datos. Para obtener la lista de asignaciones predeterminadas, vea [configuración del proyecto &#40;Type Mapping&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
@@ -86,7 +86,7 @@ Cuando ve el **Type Mapping** ficha en SSMA, el fondo está codificada por color
     2.  Haga clic en **Quitar**.  
   
 ## <a name="next-step"></a>Paso siguiente  
-El siguiente paso del proceso de migración consiste en [crear un informe de evaluación](http://msdn.microsoft.com/2a56a003-3b0f-453a-963c-00c9e40933ec) o [MySQL convertir objetos de base de datos a la sintaxis de SQL Server o SQL Azure](http://msdn.microsoft.com/ac21850b-fb32-4704-9985-5759b7c688c7). Si crea un informe, los objetos de MySQL se convierten automáticamente durante la evaluación.  
+El siguiente paso del proceso de migración consiste en [crear un informe de evaluación](assessing-mysql-databases-for-conversion-mysqltosql.md) o [MySQL convertir objetos de base de datos a la sintaxis de SQL Server o SQL Azure](converting-mysql-databases-mysqltosql.md). Si crea un informe, los objetos de MySQL se convierten automáticamente durante la evaluación.  
   
 ## <a name="see-also"></a>Vea también  
 [Bases de datos de migración desde MySQL a SQL Server: base de datos SQL Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  

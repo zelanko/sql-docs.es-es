@@ -19,12 +19,12 @@ caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 653369ef20b2febbf90c34e059c9105cdfeaafbf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 112fd1263b0dce321093a271964173e924c703d2
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194890"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395138"
 ---
 # <a name="deploying-a-delivery-extension"></a>Implementar una extensión de entrega
   Las extensiones de entrega proporcionan su información de configuración en forma de archivo de configuración XML. El archivo XML cumple el esquema XML definido para las extensiones de entrega. Las extensiones de entrega proporcionan la infraestructura para establecer y modificar el archivo de configuración.  
@@ -91,7 +91,7 @@ ms.locfileid: "37194890"
     </CodeGroup>  
     ```  
   
-     La pertenencia de dirección URL es solo una de las muchas condiciones de pertenencia que podría elegir para la extensión de entrega. Para más información sobre la seguridad de acceso del código de [!INCLUDE[ssRS](../../../includes/ssrs-md.md)], vea [Desarrollo seguro &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md).  
+     La pertenencia de dirección URL es solo una de las muchas condiciones de pertenencia que podría elegir para la extensión de entrega. Para más información sobre la seguridad de acceso del código de [!INCLUDE[ssRS](../../../includes/ssrs.md)], vea [Desarrollo seguro &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md).  
   
 ## <a name="deploying-the-extension-to-report-manager"></a>Implementar la extensión en el Administrador de informes  
  Si la extensión de entrega implementa la interfaz <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl>, se puede utilizar con la página de Suscripción del Administrador de informes. Si desea que la interfaz de usuario de la suscripción esté disponible, necesita implementar la extensión para el Administrador de informes.  
@@ -138,7 +138,7 @@ ms.locfileid: "37194890"
     </CodeGroup>  
     ```  
   
-     La pertenencia de dirección URL es solo una de las muchas condiciones de pertenencia que podría elegir para la extensión de entrega. Para más información sobre la seguridad de acceso del código de [!INCLUDE[ssRS](../../../includes/ssrs-md.md)], vea [Desarrollo seguro &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md).  
+     La pertenencia de dirección URL es solo una de las muchas condiciones de pertenencia que podría elegir para la extensión de entrega. Para más información sobre la seguridad de acceso del código de [!INCLUDE[ssRS](../../../includes/ssrs.md)], vea [Desarrollo seguro &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md).  
   
 ## <a name="verifying-the-deployment"></a>Comprobación de la implementación  
  Puede comprobar si la extensión de entrega se implementó correctamente en el servidor de informes utilizando el método <xref:ReportService2010.ReportingService2010.ListExtensions%2A> del servicio web. También puede abrir el Administrador de informes y comprobar que la extensión está incluida en la lista de extensiones de entrega disponibles para una suscripción. Para obtener más información sobre el Administrador de informes y suscripciones, vea [suscripciones y entrega &#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md).  

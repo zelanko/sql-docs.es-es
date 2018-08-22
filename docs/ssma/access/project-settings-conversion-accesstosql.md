@@ -1,5 +1,5 @@
 ---
-title: Configuración (conversión) (AccessToSQL) del proyecto | Documentos de Microsoft
+title: Configuración (conversión) (AccessToSQL) del proyecto | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,25 +19,25 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0d910b3d32f9ff05571fd965d29ac3028cc43144
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8afec0f77dcb47a4b201ddf86dfbde5d58ec1d20
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774571"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40396351"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Configuración del proyecto (conversión) (AccessToSQL)
-La configuración del proyecto de conversión le permite configurar cómo se convierten los objetos de objetos de base de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] u objetos de base de datos de SQL Azure.  
+La configuración del proyecto de conversión le permite configurar cómo se convierten los objetos de objetos de base de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u objetos de base de datos de SQL Azure.  
   
-El panel de conversión está disponible en la **configuración del proyecto** y **configuración de proyecto predeterminada** cuadros de diálogo.  
+El panel de conversión está disponible en el **configuración del proyecto** y **configuración de proyecto predeterminada** cuadros de diálogo.  
   
--   Use la **configuración del proyecto** cuadro de diálogo para establecer las opciones de configuración para el proyecto actual. Para acceder a la configuración de conversión, en la **herramientas** menú, seleccione **configuración del proyecto**, haga clic en **General** en la parte inferior del panel izquierdo y, a continuación, seleccione **conversión**.  
+-   Use la **configuración del proyecto** cuadro de diálogo para establecer las opciones de configuración para el proyecto actual. Para obtener acceso a la configuración de conversión, en el **herramientas** menú, seleccione **configuración del proyecto**, haga clic en **General** en la parte inferior del panel izquierdo y a continuación, seleccione  **Conversión**.  
   
--   Use la **configuración de proyecto predeterminada** cuadro de diálogo para establecer las opciones de configuración para todos los proyectos. Para acceder a la configuración de conversión, en la **herramientas** menú, seleccione **la configuración predeterminada del proyecto**, seleccione el tipo de proyecto de migración para el que se requiere para ver / cambiar de configuración **versión de destino de migración** de lista desplegable, haga clic en **General** en la parte inferior del panel izquierdo y, a continuación, seleccione **conversión**.  
+-   Use la **configuración de proyecto predeterminada** cuadro de diálogo para establecer las opciones de configuración para todos los proyectos. Para obtener acceso a la configuración de conversión, en el **herramientas** menú, seleccione **la configuración predeterminada del proyecto**, seleccione el tipo de proyecto de migración para los que es necesaria para ver o cambiar de configuración  **Versión de destino de migración** lista desplegable, haga clic en **General** en la parte inferior del panel izquierdo y a continuación, seleccione **conversión**.  
   
 ## <a name="options"></a>Opciones  
 **Agregar la clave principal**  
-Crea una nueva clave principal en la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o una tabla de SQL Azure, si una tabla de Access no tiene clave principal o índice único.  
+Crea una nueva clave principal en la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o una tabla de SQL Azure, si una tabla de Access no tiene ninguna clave principal o índice único.  
   
 -   **Modo predeterminado**: False  
   
@@ -54,7 +54,7 @@ Especifica si SSMA debe crear un valor de marca de tiempo si es necesario.
   
 -   **Modo completo**: SSMA permiten decidir  
   
-**Incluir un informe de evaluación de datos con informes de evaluación de conversión**  
+**Incluir un informe de evaluación de datos con los informes de evaluación de conversión**  
 Incluye una evaluación de datos en el informe de evaluación.  
   
 -   **Modo predeterminado**: True  
@@ -64,34 +64,34 @@ Incluye una evaluación de datos en el informe de evaluación.
 -   **Modo completo**: True  
   
 **Tipo de mensaje cuando una clave principal incluye columnas que aceptan valores null**  
-Especifica el tipo de mensaje (Error, advertencia o nada) que SSMA se muestra en el panel de resultados cuando encuentra las claves principales con las columnas que aceptan valores NULL.  
+Especifica el tipo de mensaje (Error, advertencia o Nothing) SSMA se muestra en el panel de salida cuando encuentra las claves principales con las columnas que aceptan valores NULL.  
   
 -   **Modo predeterminado**: advertencia  
   
--   **Modo optimista**: no hay ningún mensaje  
+-   **Modo optimista**: ningún mensaje  
   
 -   **Modo completo**: Error  
   
-**Tipo de mensaje cuando se tienen tamaños diferentes columnas de clave externa**  
-Especifica el tipo de mensaje (Error, advertencia o nada) que SSMA se muestra en el panel de resultados cuando encuentra una clave externa de texto incorrecta.  
+**Tipo de mensaje cuando tienen tamaños diferentes columnas de clave externa**  
+Especifica el tipo de mensaje (Error, advertencia o Nothing) SSMA se muestra en el panel de salida cuando encuentra una clave externa de texto incorrecta.  
   
 -   **Modo predeterminado**: advertencia  
   
--   **Modo optimista**: no hay ningún mensaje  
+-   **Modo optimista**: ningún mensaje  
   
 -   **Modo completo**: Error  
   
 **Tipo de mensaje cuando se indizan las columnas memorando**  
-Especifica el tipo de mensaje (Error, advertencia o nada) que SSMA se muestra en el panel de resultados cuando encuentra un índice que contenga un **memorando** columna.  
+Especifica el tipo de mensaje (Error, advertencia o Nothing) SSMA se muestra en el panel de salida cuando encuentra un índice que contenga un **memorando** columna.  
   
 -   **Modo predeterminado**: advertencia  
   
--   **Modo optimista**: no hay ningún mensaje  
+-   **Modo optimista**: ningún mensaje  
   
 -   **Modo completo**: Error  
   
-**Advertir cuando una consulta compleja utiliza un carácter comodín (\&#42;)**  
-En el panel de resultados y lista de errores, muestra una advertencia cuando un nombre de columna en una instrucción SELECT es un carácter comodín (*).  
+**Advertir cuando una consulta compleja usa un carácter comodín (\&#42;)**  
+Muestra una advertencia en el panel de resultados y lista de errores cuando un nombre de columna en una instrucción SELECT es un carácter comodín (*).  
   
 -   **Modo predeterminado**: True  
   
@@ -99,8 +99,8 @@ En el panel de resultados y lista de errores, muestra una advertencia cuando un 
   
 -   **Modo completo**: True  
   
-**Advertir cuando se cambia el nombre de identificador**  
-Muestra un mensaje en el informe de evaluación y en el panel de resultados cuando se cambia un nombre de identificador de objeto SSMA.  
+**Advertir cuando se cambia el nombre del identificador**  
+Muestra un mensaje en el informe de evaluación y en el panel de resultados cuando se cambia el nombre de un identificador de objeto por SSMA.  
   
 -   **Modo predeterminado**: True  
   
@@ -108,8 +108,8 @@ Muestra un mensaje en el informe de evaluación y en el panel de resultados cuan
   
 -   **Modo completo**: True  
   
-**Advertir cuando se entrecomillará identificador**  
-Muestra un mensaje en el informe de evaluación y en el panel de resultados cuando un nombre de identificador de objeto se entrecomillará por SSMA. Los identificadores de comillas es necesario cuando el nombre es una palabra clave o contiene caracteres especiales.  
+**Advertir al identificador que se entrecomillará**  
+Muestra un mensaje en el informe de evaluación y en el panel de resultados cuando un nombre de identificador de objeto de estas SSMA. Los identificadores de comillas es necesario cuando el nombre es una palabra clave o contiene caracteres especiales.  
   
 -   **Modo predeterminado**: True  
   

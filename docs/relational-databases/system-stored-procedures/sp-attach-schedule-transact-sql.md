@@ -1,5 +1,5 @@
 ---
-title: sp_attach_schedule (Transact-SQL) | Documentos de Microsoft
+title: sp_attach_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 788afc8121948fa628cd9e0d2e1162464357dbc6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5c1ec7f73e6fefadb9e73ca8295afb858f6d1d6a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238362"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394727"
 ---
 # <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_attach_schedule
  El nombre del trabajo al que se agrega la programación. *job_name*es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
->  Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
+>  Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
   
  [ **@schedule_id =** ] *schedule_id*  
  Número de identificación de la programación que se va a configurar para el trabajo. *schedule_id*es **int**, su valor predeterminado es null.  
@@ -63,16 +63,16 @@ sp_attach_schedule
  Nombre de la programación que se va a configurar para el trabajo. *schedule_name*es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
->  Cualquier *schedule_id* o *schedule_name* debe especificarse, pero no pueden especificarse ambos.  
+>  Cualquier *schedule_id* o *schedule_name* debe especificarse, pero no se pueden especificar ambos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  La programación y el trabajo deben tener el mismo propietario.  
   
  Se puede configurar una programación para más de un trabajo. Se puede ejecutar un trabajo en más de una programación.  
   
  Este procedimiento almacenado se debe ejecutar desde la **msdb** base de datos.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -83,7 +83,7 @@ sp_attach_schedule
   
  Observe que el propietario del trabajo puede adjuntar un trabajo a una programación y separar un trabajo de una programación sin tener que ser asimismo el propietario de la programación. Sin embargo, una programación no se puede eliminar si la separación la dejase sin trabajos, a menos que el llamador sea propietario de la programación.  
   
- Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprueba si el usuario es propietario del trabajo y la programación.  
   

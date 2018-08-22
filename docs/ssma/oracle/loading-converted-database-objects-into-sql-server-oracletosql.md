@@ -16,20 +16,20 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 31b7f6b63aadd36d9d933da27a817adea9aeb9ac
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: b1e1f8d4efe504680b5b6fb5decc8497e6ec7844
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982277"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394774"
 ---
-# <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>Cargando convertido la base de datos objetos en SQL Server (OracleToSQL)
+# <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>Carga de objetos de base de datos convertidos en SQL Server (OracleToSQL)
 Después de convertir los esquemas de Oracle a SQL Server, puede cargar los objetos resultantes de la base de datos en SQL Server. Se puede tener SSMA crear los objetos, o puede incluir los objetos y ejecutar las secuencias de comandos usted mismo. Además, SSMA permite actualizar los metadatos de destino con el contenido real de la base de datos de SQL Server.  
   
 ## <a name="choosing-between-synchronization-and-scripts"></a>Elegir entre sincronización y las secuencias de comandos  
-Si desea cargar los objetos de base de datos convertida en SQL Server sin modificación, puede tener SSMA crear o volver a crear los objetos de base de datos directamente. Que el método es rápido y sencillo, pero no permiten la personalización de la [!INCLUDE[tsql](../../includes/tsql_md.md)] código que define los objetos de SQL Server, que no sea de procedimientos almacenados.  
+Si desea cargar los objetos de base de datos convertida en SQL Server sin modificación, puede tener SSMA crear o volver a crear los objetos de base de datos directamente. Que el método es rápido y sencillo, pero no permiten la personalización de la [!INCLUDE[tsql](../../includes/tsql-md.md)] código que define los objetos de SQL Server, que no sea de procedimientos almacenados.  
   
-Si desea modificar el [!INCLUDE[tsql](../../includes/tsql_md.md)] que se utiliza para crear objetos, o si desea más control sobre la creación de objetos, utilice SSMA para crear secuencias de comandos. Puede, a continuación, modificar los scripts, crear cada objeto individualmente e incluso usar el Agente SQL Server para programar la creación de esos objetos.  
+Si desea modificar el [!INCLUDE[tsql](../../includes/tsql-md.md)] que se utiliza para crear objetos, o si desea más control sobre la creación de objetos, utilice SSMA para crear secuencias de comandos. Puede, a continuación, modificar los scripts, crear cada objeto individualmente e incluso usar el Agente SQL Server para programar la creación de esos objetos.  
   
 ## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>Uso de SSMA para sincronizar objetos con SQL Server  
 Para usar SSMA para crear objetos de base de datos de SQL Server, seleccione los objetos en el Explorador de metadatos de SQL Server y, a continuación, sincronice los objetos con SQL Server, como se muestra en el siguiente procedimiento. De forma predeterminada, si los objetos que ya existen en SQL Server, y si están más reciente que el objeto de SQL Server, los metadatos SSMA SSMA modificará las definiciones de objetos en SQL Server. Puede cambiar el comportamiento predeterminado mediante la edición **configuración del proyecto**.  
@@ -64,7 +64,7 @@ Para usar SSMA para crear objetos de base de datos de SQL Server, seleccione los
 Haga clic en el signo de acción para cambiar el estado. Sincronización real se realizará al hacer clic en **Aceptar** botón de la **sincronizar con base de datos** cuadro de diálogo.  
   
 ## <a name="scripting-objects"></a>Objetos de scripting  
-Para guardar [!INCLUDE[tsql](../../includes/tsql_md.md)] las definiciones de los objetos de base de datos convertida, o para modificar las definiciones de objeto y ejecutar scripts usted mismo, puede guardar la base de datos convertida a las definiciones de objeto [!INCLUDE[tsql](../../includes/tsql_md.md)] secuencias de comandos.  
+Para guardar [!INCLUDE[tsql](../../includes/tsql-md.md)] las definiciones de los objetos de base de datos convertida, o para modificar las definiciones de objeto y ejecutar scripts usted mismo, puede guardar la base de datos convertida a las definiciones de objeto [!INCLUDE[tsql](../../includes/tsql-md.md)] secuencias de comandos.  
   
 **Para guardar los objetos como secuencias de comandos**  
   
@@ -75,11 +75,11 @@ Para guardar [!INCLUDE[tsql](../../includes/tsql_md.md)] las definiciones de los
 2.  En el **Guardar como** diálogo cuadro, busque la carpeta donde desea guardar el script, escriba un nombre de archivo en el **nombre de archivo** cuadro y, a continuación, haga clic en Aceptar SSMA anexará la extensión de nombre de archivo. SQL.  
   
 ### <a name="modifying-scripts"></a>Modificación de las secuencias de comandos  
-Después de guardar las definiciones de objetos de SQL Server como uno o varios scripts, puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] para ver y modificar los scripts.  
+Después de guardar las definiciones de objetos de SQL Server como uno o varios scripts, puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para ver y modificar los scripts.  
   
 **Para modificar una secuencia de comandos**  
   
-1.  En el [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **archivo** menú, elija **abierto**y, a continuación, haga clic en **archivo**.  
+1.  En el [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **archivo** menú, elija **abierto**y, a continuación, haga clic en **archivo**.  
   
 2.  En el **abierto** cuadro de diálogo, seleccione el archivo de script, a continuación, haga clic en Aceptar.
   
@@ -90,11 +90,11 @@ Después de guardar las definiciones de objetos de SQL Server como uno o varios 
 4.  Para guardar el script, haga clic en menú archivo **guardar**.  
   
 ### <a name="running-scripts"></a>Ejecución de Scripts  
-Puede ejecutar una secuencia de comandos o instrucciones individuales, en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+Puede ejecutar una secuencia de comandos o instrucciones individuales, en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 **Para ejecutar un script**  
   
-1.  En el [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] **archivo** menú, elija **abierto**y, a continuación, haga clic en **archivo**.  
+1.  En el [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **archivo** menú, elija **abierto**y, a continuación, haga clic en **archivo**.  
   
 2.  En el **abierto** cuadro de diálogo, seleccione el archivo de script y, a continuación, haga clic en Aceptar  
   
@@ -102,7 +102,7 @@ Puede ejecutar una secuencia de comandos o instrucciones individuales, en [!INCL
   
 4.  Para ejecutar un conjunto de instrucciones, las instrucciones select en la ventana del editor de consultas y, a continuación, presione el **F5** clave.  
   
-Para obtener más información acerca de cómo usar el editor de consultas para ejecutar scripts, vea "[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] [!INCLUDE[tsql](../../includes/tsql_md.md)] consulta" en libros en pantalla de SQL Server.  
+Para obtener más información acerca de cómo usar el editor de consultas para ejecutar scripts, vea "[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta" en libros en pantalla de SQL Server.  
   
 También puede ejecutar scripts desde la línea de comandos mediante la **sqlcmd** utilidad y desde el Agente SQL Server. Para obtener más información acerca de **sqlcmd**, vea "utilidad sqlcmd" en libros en pantalla de SQL Server. Para obtener más información acerca del Agente SQL Server, vea "Automatizar tareas administrativas (Agente SQL Server)" en libros en pantalla de SQL Server.  
   
@@ -110,7 +110,7 @@ También puede ejecutar scripts desde la línea de comandos mediante la **sqlcmd
 Después de haber cargado los objetos de base de datos convertida en SQL Server, puede otorgar y denegar permisos en esos objetos. Es una buena idea hacerlo antes de migrar datos a SQL Server. Para obtener información acerca de cómo proteger los objetos en SQL Server, vea "Consideraciones para las bases de datos y base de datos de aplicaciones de seguridad" en libros en pantalla de SQL Server.  
   
 ## <a name="next-step"></a>Paso siguiente  
-El siguiente paso del proceso de migración es [migrar datos a SQL Server](http://msdn.microsoft.com/e23c5268-41ed-4e55-9fe7-a11376202a13).  
+El siguiente paso del proceso de migración es [migrar datos a SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md).  
   
 ## <a name="see-also"></a>Vea también  
 [Bases de datos de migración de Oracle a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

@@ -17,12 +17,12 @@ caps.latest.revision: 143
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 64ca4f9c72739d9b5875e7adeec38e5a59f590fc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db9392c92568442a17c4683b2c8a25a5487f59d4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254757"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395979"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>Cambios recientes en las características del Motor de base de datos de SQL Server 2014
   En este tema se describen los cambios recientes en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] y versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Estos cambios pueden provocar errores en las aplicaciones, en los scripts o en las funcionalidades basados en versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Podría encontrar estos problemas al actualizar. Para obtener más información, vea [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -57,13 +57,13 @@ ms.locfileid: "37254757"
 |Ver|Descripción|  
 |----------|-----------------|  
 |sys.dm_exec_requests|La columna de comandos cambia de `nvarchar(16)` a `nvarchar(32)`.|  
-|Sys.dm_os_memory_cache_counters|Se han cambiado las columnas siguientes:<br /><br /> single_pages_kb es ahora: <br />                          pages_kb<br /><br /> multi_pages_kb<br />                           Ahora es: pages_in_use_kb|  
-|Sys.dm_os_memory_cache_entries|La columna pages_allocated_count columna ha sido pages_kb cuyo nombre ha cambiado.|  
-|Sys.dm_os_memory_clerks|Se ha quitado el multi_pages_kb de columna.<br /><br /> La columna single_pages_kb columna ha sido pages_kb cuyo nombre ha cambiado.|  
+|sys.dm_os_memory_cache_counters|Se han cambiado las columnas siguientes:<br /><br /> single_pages_kb es ahora: <br />                          pages_kb<br /><br /> multi_pages_kb<br />                           Ahora es: pages_in_use_kb|  
+|sys.dm_os_memory_cache_entries|La columna pages_allocated_count columna ha sido pages_kb cuyo nombre ha cambiado.|  
+|sys.dm_os_memory_clerks|Se ha quitado el multi_pages_kb de columna.<br /><br /> La columna single_pages_kb columna ha sido pages_kb cuyo nombre ha cambiado.|  
 |sys.dm_os_memory_nodes|Se han cambiado las columnas siguientes:<br /><br /> single_pages_kb es ahora: <br />                            pages_kb<br /><br /> multi_pages_kb es ahora: <br />                            foreign_committed_kb|  
-|Sys.dm_os_memory_objects|Se ha cambiado el nombre de las siguientes columnas.<br /><br /> pages_allocated_count es ahora:<br />                            pages_in_bytes<br /><br /> max_pages_allocated_count es ahora: max_pages_in_bytes|  
+|sys.dm_os_memory_objects|Se ha cambiado el nombre de las siguientes columnas.<br /><br /> pages_allocated_count es ahora:<br />                            pages_in_bytes<br /><br /> max_pages_allocated_count es ahora: max_pages_in_bytes|  
 |sys.dm_os_sys_info|Se han cambiado las columnas siguientes:<br /><br /> physical_memory_in_bytes es ahora: <br />                            physical_memory_kb<br /><br /> valor de bpool_commit_target es ahora: <br />                            committed_target_kb<br /><br /> bpool_visible es ahora: <br />                            visible_target_kb<br /><br /> virtual_memory_in_bytes es ahora: <br />                            virtual_memory_kb<br /><br /> bpool_commited es ahora:<br />                            committed_kb|  
-|Sys.dm_os_workers|La columna regional se ha quitado.|  
+|sys.dm_os_workers|La columna regional se ha quitado.|  
   
 ### <a name="catalog-views"></a>Vistas de catálogo  
   
@@ -266,7 +266,7 @@ ms.locfileid: "37254757"
 ||Haga que se emita un certificado para shortname.<br /><br /> -Esta opción funciona para todas las aplicaciones.|  
   
 ##  <a name="Yukon"></a> Cambios importantes en SQL Server 2005  
- Para obtener una lista de los principales cambios presentados en [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], consulte [cambios recientes en las características del motor de base de datos en SQL Server 2005](http://msdn.microsoft.com/library/ms143179\(SQL.90\).aspx).  
+ Para obtener una lista de los principales cambios presentados en [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], consulte [cambios recientes en las características del motor de base de datos en SQL Server 2005](breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Características del motor de base de datos en desuso en SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)   

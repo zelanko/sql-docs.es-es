@@ -16,14 +16,14 @@ caps.latest.revision: 31
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 86b8adc8841e06d91d164c2c35e2329511ac0e28
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: b15f982d6da89d669fbf80507459e0c419afbe73
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985757"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396595"
 ---
-# <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Introducción a SSMA para la consola de Oracle (OracleToSQL)
+# <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Introducción a la consola de SSMA para Oracle (OracleToSQL)
 En esta sección se describe el procedimiento para iniciar y empezar a trabajar con la aplicación de consola de Oracle. También se enumeran en este documento, se utilizan las convenciones en una ventana de salida de la consola SSMA típica.  
   
 ## <a name="launching-ssma-console"></a>Iniciar la consola SSMA  
@@ -31,7 +31,7 @@ Use los pasos siguientes para iniciar la aplicación de consola SSMA:
   
 1.  Vaya a **iniciar** y apuntar a **todos los programas**.  
   
-2.  Haga clic en el  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant para Oracle símbolo del sistema** acceso directo.  
+2.  Haga clic en el  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant para Oracle símbolo del sistema** acceso directo.  
   
     Muestra el menú de uso de la consola SSMA y `(/? Help)`, que le ayudarán a empezar a trabajar con la aplicación de consola.  
   
@@ -48,9 +48,9 @@ Después de la consola se inicia correctamente en el sistema de Windows, podría
   
 Características adicionales:  
   
-1.  [Especifique una contraseña](http://msdn.microsoft.com/8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c) y exportar / importar en otros equipos de la ventana  
+1.  [Especifique una contraseña](managing-passwords-oracletosql.md) y exportar / importar en otros equipos de la ventana  
   
-2.  [Generar informes](http://msdn.microsoft.com/ccad6262-01e1-447a-bd2b-c105154c80ce) ver el xml detallado de salida de informes de evaluación /conversion y migración de datos. También se pueden generar informes de errores detallada para los comandos de actualización y la sincronización.  
+2.  [Generar informes](generating-reports-oracletosql.md) ver el xml detallado de salida de informes de evaluación /conversion y migración de datos. También se pueden generar informes de errores detallada para los comandos de actualización y la sincronización.  
   
 ## <a name="ssma-console-output-conventions"></a>Convenciones de salida de consola SSMA  
 Al ejecutar los comandos de script SSMA y opciones, el programa de consola muestra los resultados y mensajes (información, error, etc.) al usuario en la consola o si es necesario, se redirige a un archivo de salida xml. Cada tipo de mensaje en la salida se especifica mediante un color único. Por ejemplo, el mensaje de texto en color blanco indica los comandos del archivo de script; el que aparece en color verde representa un símbolo del sistema de entrada del usuario y así sucesivamente.  
@@ -69,5 +69,5 @@ Interpretación de color de la salida de consola en la tabla siguiente:
 |Cian|Guía de inicio, finalización y el resultado de una operación|  
   
 ## <a name="see-also"></a>Vea también  
-[Instalación de SSMA para Oracle](http://msdn.microsoft.com/9211013a-ab24-4c52-9b26-87994b35e502)  
+[Instalación de SSMA para Oracle](installing-ssma-for-oracle-oracletosql.md)  
   

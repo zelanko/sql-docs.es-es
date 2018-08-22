@@ -1,11 +1,11 @@
 ---
-title: Parámetros con valores de tabla (SQL Server Native Client) | Microsoft Docs
+title: Parámetros con valores de tabla (SQL Server Native Client) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +16,15 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4a3ddbb9e2ad681dbc1b054cc724ec989c71465
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c3cf4742331f811cac8dd53baa8f11e06dafb02f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422384"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393294"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>Parámetros con valores de tabla (SQL Server Native Client)
-  Parámetros con valores de tabla se introdujeron en [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]y proporcionan una manera eficaz de pasar varias filas de datos al servidor. Parámetros con valores de tabla proporcionan una funcionalidad similar a las matrices de parámetros, pero ofrecen más flexibilidad y una integración más estrecha con [!INCLUDE[tsql](../../../includes/tsql-md.md)]y con frecuencia puede mejorar el rendimiento. Parámetros con valores de tabla también pueden participar en operaciones basadas en conjunto, mientras que las matrices de parámetros no.  
+  Los parámetros con valores de tabla se introdujeron en [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] y proporcionan una manera eficaz de pasar varias filas de datos al servidor. Los parámetros con valores de tabla proporcionan una funcionalidad similar a las matrices de parámetros, pero ofrecen más flexibilidad y una integración más estrecha con [!INCLUDE[tsql](../../../includes/tsql-md.md)], y pueden mejorar con frecuencia el rendimiento. Los parámetros con valores de tabla pueden participar también en operaciones basadas en conjuntos, mientras que las matrices de parámetros no.  
   
  Para obtener información acerca de los parámetros con valores de tabla y ODBC, vea [parámetros con valores de tabla &#40;ODBC&#41;](../../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   

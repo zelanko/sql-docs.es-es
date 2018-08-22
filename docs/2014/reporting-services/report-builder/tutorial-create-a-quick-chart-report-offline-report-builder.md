@@ -18,17 +18,17 @@ caps.latest.revision: 25
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 31d50f1fa8869cd3bff62f137a61a704518e588d
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 2875419d255b10d73a5c7df88841ca11926bd039
+ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39400788"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40396358"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Crear un informe de gráfico rápido sin conexión (Generador de informes)
   En este tutorial, creará un gráfico circular usando un asistente y, a continuación, lo modificará un poco, solo para hacerse una idea de las posibilidades. Puede hacerlo de dos maneras diferentes: Ambos métodos tienen el mismo resultado; un gráfico circular como el de la siguiente ilustración:  
   
- ! [Ver "Mi primer gráfico circular" en ejecución] (.. /Media/RS-my1stpierunview.gif "Mi primer gráfico circular" en la vista de ejecución")  
+ ![Ver "Mi primer gráfico circular" en ejecución](../media/rs-my1stpierunview.gif "mi primer gráfico circular en la vista de ejecución")  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Si usa datos XML o una consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)], necesita tener acceso al Generador de informes [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Puede ejecutar la versión independiente o la versión de ClickOnce disponible en el Administrador de informes o en un sitio de SharePoint. El primer paso, cómo abrir el generador de informes es diferente para las versiones de ClickOnce. Para obtener más información, consulte [instalar, desinstalar y asistencia del generador de informes](../install-uninstall-and-report-builder-support.md).  

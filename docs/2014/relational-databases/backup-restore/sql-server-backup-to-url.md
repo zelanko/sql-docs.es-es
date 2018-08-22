@@ -13,12 +13,12 @@ caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ee9bf066e246dec2432b4a0874a3f3d99c7d2779
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d99796f219623e72fd42e0a9780ea0d2d9458250
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264881"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394333"
 ---
 # <a name="sql-server-backup-to-url"></a>Copia de seguridad en URL de SQL Server
   Este tema presenta los conceptos, los requisitos y los componentes necesarios para utilizar el servicio de almacenamiento Blob de Windows Azure como destino de copia de seguridad. La funcionalidad de copia de seguridad y restauración es igual o similar que la que usa DISK o TAPE, con algunas diferencias. En este tema se incluyen las diferencias, excepciones notables y algunos ejemplos de código.  
@@ -86,9 +86,9 @@ ms.locfileid: "37264881"
   
  Para obtener instrucciones paso a paso sobre cómo crear un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credencial, vea [crear una credencial](#credential) ejemplo más adelante en este tema.  
   
- Para obtener información general sobre las credenciales, vea [Credenciales](http://msdn.microsoft.com/en-us/library/ms161950.aspx).  
+ Para obtener información general sobre las credenciales, vea [Credenciales](../security/authentication-access/credentials-database-engine.md).  
   
- Para obtener información sobre otros ejemplos donde se usan credenciales, vea [Crear un proxy del Agente SQL Server](http://msdn.microsoft.com/library/ms175834.aspx).  
+ Para obtener información sobre otros ejemplos donde se usan las credenciales, vea [crear un Proxy del Agente SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 ###  <a name="limitations"></a> Limitaciones  
   
@@ -282,7 +282,7 @@ ms.locfileid: "37264881"
 ###  <a name="credential"></a> Crear una credencial  
  En el ejemplo siguiente se crea una credencial que almacena la información de autenticación de Almacenamiento Windows Azure.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     IF NOT EXISTS  
@@ -327,7 +327,7 @@ ms.locfileid: "37264881"
 ###  <a name="complete"></a> La copia de seguridad de una base de datos completa  
  En el ejemplo siguiente se hace copia de seguridad de la base de datos AdventureWorks2012 en el servicio de almacenamiento Blob de Windows Azure.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     BACKUP DATABASE AdventureWorks2012   
@@ -385,7 +385,7 @@ ms.locfileid: "37264881"
 ###  <a name="databaselog"></a> Copia de seguridad de la base de datos y registro  
  En el ejemplo siguiente se realiza la copia de seguridad de la base de datos de ejemplo AdventureWorks2012, que usa de forma predeterminada el modelo de recuperación simple. Para admitir copias de seguridad de registros, se ha modificado la base de datos AdventureWorks2012 para usar el modelo de recuperación completa. A continuación, en el ejemplo se crea una copia de seguridad de base de datos completa en Blob de Windows Azure y, tras un periodo de actividad de actualización, se hace una copia de seguridad del registro. En este ejemplo se crea un nombre de archivo de copia de seguridad con una marca de fecha y hora.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     -- To permit log backups, before the full database backup, modify the database   
@@ -496,7 +496,7 @@ ms.locfileid: "37264881"
 ###  <a name="filebackup"></a> Creación de una copia de seguridad completa del grupo de archivos principal  
  En el ejemplo siguiente se crea una copia de seguridad de archivos completa del grupo de archivos principal.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -563,7 +563,7 @@ ms.locfileid: "37264881"
 ###  <a name="differential"></a> Creación de una copia de seguridad diferencial de archivos del grupo de archivos principal  
  En el ejemplo siguiente se crea una copia de seguridad de archivos diferencial del grupo de archivos principal.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -635,7 +635,7 @@ ms.locfileid: "37264881"
 ###  <a name="restoredbwithmove"></a> Restaurar una base de datos y mover archivos  
  Para restaurar una copia de seguridad completa y mover la base de datos restaurada al directorio C:\Archivos de programa\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data, realice los pasos siguientes.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     -- Backup the tail of the log first  
@@ -752,7 +752,7 @@ ms.locfileid: "37264881"
 ###  <a name="PITR"></a> Restaurar a un momento dado con STOPAT  
  En el ejemplo siguiente se restaura una base de datos a su estado en un momento dado y se muestra una operación de restauración.  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     RESTORE DATABASE AdventureWorks FROM URL = 'https://mystorageaccount.blob.core.windows.net/mycontainer/AdventureWorks2012.bak'   

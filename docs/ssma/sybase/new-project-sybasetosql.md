@@ -1,5 +1,5 @@
 ---
-title: Nuevo proyecto (SybaseToSQL) | Documentos de Microsoft
+title: Nuevo proyecto (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9c7b69fdbf09e76b75f4dd203fba356b5eda34c9
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 2fa535a8e6e59f7cde78ea73cc65699086b762a7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779111"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393899"
 ---
 # <a name="new-project-sybasetosql"></a>Nuevo proyecto (SybaseToSQL)
-Use la **nuevo proyecto** cuadro de diálogo para crear un nuevo proyecto SSMA. Para tener acceso a la **nuevo proyecto** cuadro de diálogo, en la **archivo** menú, haga clic en **nuevo proyecto**.  
+Use la **nuevo proyecto** cuadro de diálogo para crear un nuevo proyecto SSMA. Para tener acceso a la **nuevo proyecto** cuadro de diálogo el **archivo** menú, haga clic en **nuevo proyecto**.  
   
 ## <a name="options"></a>Opciones  
 **Nombre**  
@@ -36,15 +36,15 @@ Escriba o busque la carpeta o ubicación de red para guardar el proyecto.
 **Migrar a**  
 Seleccione uno de la versión de la base de datos de destino desde abajo de la lista:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
 -   SQL Azure  
   

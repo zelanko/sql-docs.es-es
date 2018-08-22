@@ -1,5 +1,5 @@
 ---
-title: (Asignación de tipos) de la configuración del proyecto (SybaseToSQL) | Documentos de Microsoft
+title: Configuración del proyecto (asignación de tipo) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,30 +16,30 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d0a2f1d6883afc093162e97fc30d39881655544e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: b0c4e2743c4169bd7626ca66c9d9dba609facdaa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779451"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394717"
 ---
-# <a name="project-settings-type-mapping-sybasetosql"></a>(Asignación de tipos) de la configuración del proyecto (SybaseToSQL)
-La página de asignación de tipo de la **configuración del proyecto** cuadro de diálogo contiene la configuración que permiten personalizar cómo SSMA convierte los tipos de datos de Sybase Adaptive Server Enterprise (ASE) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos de datos.  
+# <a name="project-settings-type-mapping-sybasetosql"></a>Configuración del proyecto (asignación de tipo) (SybaseToSQL)
+La página de asignación de tipos de la **configuración del proyecto** cuadro de diálogo contiene la configuración que permiten personalizar cómo SSMA convierte tipos de datos de Sybase Adaptive Server Enterprise (ASE) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos.  
   
-La página de asignación de tipo está disponible en la **configuración del proyecto** y **la configuración predeterminada del proyecto** cuadros de diálogo.  
+Está disponible en la página de asignación de tipos de la **configuración del proyecto** y **configuración de proyecto predeterminada** cuadros de diálogo.  
   
--   Para especificar la configuración de asignación de tipo para todos los proyectos futuros de SSMA, en la **herramientas** menú, seleccione **la configuración predeterminada del proyecto**, seleccione el tipo de proyecto de migración para el que se requiere para puede ver o cambiar de configuración **versión de destino de migración** de lista desplegable y, a continuación, seleccione **asignación de tipos de** en la parte inferior del panel izquierdo.  
+-   Para especificar la configuración de asignación de tipo para todos los proyectos SSMA futuros, en el **herramientas** menú, seleccione **la configuración predeterminada del proyecto**, seleccione el tipo de proyecto de migración para que la configuración es necesaria para verse o ha cambiado de **versión de destino de migración** lista desplegable y, a continuación, seleccione **Type Mapping** en la parte inferior del panel izquierdo.  
   
--   Para especificar la configuración para el proyecto actual, en la **herramientas** menú, seleccione **configuración del proyecto**y, a continuación, seleccione **Type Mapping** en la parte inferior del panel izquierdo.  
+-   Para especificar la configuración para el proyecto actual, en el **herramientas** menú, seleccione **configuración del proyecto**y, a continuación, seleccione **Type Mapping** en la parte inferior del panel izquierdo.  
   
 ## <a name="options"></a>Opciones  
 **Tipo de origen**  
-El tipo de datos de ASE asignado.  
+El tipo de datos asignado de ASE.  
   
 **Tipo de destino**  
-El destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de datos para el tipo de datos de ASE especificado.  
+El destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos para el tipo de datos especificado de ASE.  
   
-Vea la tabla en la sección siguiente para el valor predeterminado SSMA para Sybase asignación de tipo.  
+Consulte la tabla en la sección siguiente para el valor predeterminado SSMA para Sybase asignación de tipos.  
   
 **Agregar**  
 Haga clic para agregar un tipo de datos a la lista de asignación.  
@@ -50,11 +50,11 @@ Haga clic para editar el tipo de datos seleccionado en la lista de asignación.
 **Quitar**  
 Haga clic para quitar la asignación de tipos de datos seleccionados de la lista de asignación.  
   
-**Restablecer valores predeterminados**  
+**Valores predeterminados**  
 Haga clic para restablecer la lista de asignación de tipo para los valores predeterminados SSMA.  
   
 ## <a name="default-type-mapping"></a>Asignación de tipos predeterminados  
-En la tabla siguiente contiene la asignación de tipo de valor predeterminado entre ASE y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos de datos.  
+La tabla siguiente contiene la asignación de tipos predeterminada entre ASE y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos.  
   
 |Tipo de datos de ASE|Tipo de datos de SQL Server|  
 |-----------------|------------------------|  
@@ -70,9 +70,9 @@ En la tabla siguiente contiene la asignación de tipo de valor predeterminado en
 |**char[\*..8000]**|**Char [\*]**|  
 |**char[8001..\*;]**|**ntext**|  
 |**carácter**|**char**|  
-|**carácter variable**|**varchar**|  
-|**carácter variable [\*... 8000]**|**varchar [\*]**|  
-|**carácter variable [8001..\*]**|**ntext**|  
+|**variable de carácter**|**varchar**|  
+|**variable de carácter [\*... 8000]**|**varchar [\*]**|  
+|**variable de carácter [8001..\*]**|**ntext**|  
 |**caracteres [\*... 8000]**|**Char [\*]**|  
 |**caracteres [8001..\*]**|**ntext**|  
 |**date**|**date**|  
@@ -83,7 +83,7 @@ En la tabla siguiente contiene la asignación de tipo de valor predeterminado en
 |**decimal**|**decimal**|  
 |**decimal[\*..\*]**|**decimal[\*]**|  
 |**decimal[\*..\*][\*..\*]**|**decimal[\*][\*]**|  
-|**precisión doble**|**float [53]**|  
+|**doble precisión**|**float [53]**|  
 |**float**|**float [53]**|  
 |**float [\*... 15]**|**float [24]**|  
 |**float [16..\*]**|**float [53]**|  
@@ -92,21 +92,21 @@ En la tabla siguiente contiene la asignación de tipo de valor predeterminado en
 |**integer**|**int**|  
 |**longsysname**|**nvarchar[255]**|  
 |**money**|**money**|  
-|**Car.**|**nchar**|  
-|**National char [\*... 4000]**|**nchar [\*]**|  
-|**variación car.**|**nvarchar**|  
-|**variación car [\*... 4000]**|**nvarchar [\*]**|  
-|**variación car [4001..\*]**|**nvarchar(max)**|  
-|**National char [4001..\*]**|**nvarchar(max)**|  
-|**caracteres no nacionales**|**nchar**|  
-|**caracteres no nacionales [\*... 4000]**|**nchar [\*]**|  
-|**caracteres no nacionales [4001..\*]**|**nvarchar(max)**|  
+|**carácter nacional**|**nchar**|  
+|**carácter nacional [\*... 4000]**|**nchar [\*]**|  
+|**variable de Car. nacional**|**nvarchar**|  
+|**National char varying [\*... 4000]**|**nvarchar [\*]**|  
+|**National char varying [4001..\*]**|**nvarchar(max)**|  
+|**carácter nacional [4001..\*]**|**nvarchar(max)**|  
+|**carácter nacional**|**nchar**|  
+|**carácter nacional [\*... 4000]**|**nchar [\*]**|  
+|**carácter nacional [4001..\*]**|**nvarchar(max)**|  
 |**national character varying de**|**nvarchar**|  
 |**national character varying de [\*... 4000]**|**nvarchar [\*]**|  
 |**national character varying de [4001..\*]**|**nvarchar(max)**|  
 |**varchar nacional**|**nvarchar**|  
-|**varchar nacional [\*... 4000]**|**nvarchar [\*]**|  
-|**varchar nacional [4001..\*]**|**nvarchar(max)**|  
+|**National varchar [\*... 4000]**|**nvarchar [\*]**|  
+|**National varchar [4001..\*]**|**nvarchar(max)**|  
 |**nchar**|**nchar**|  
 |**nchar varying**|**nvarchar**|  
 |**nchar varying [\*... 4000]**|**nvarchar [\*]**|  
@@ -130,7 +130,7 @@ En la tabla siguiente contiene la asignación de tipo de valor predeterminado en
 |**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
 |**UNICHAR**|**nchar**|  
-|**UNICHAR variable**|**nvarchar**|  
+|**variable UNICHAR**|**nvarchar**|  
 |**variable UNICHAR [\*... 4000]**|**nvarchar [\*]**|  
 |**variable UNICHAR [4001..\*]**|**nvarchar(max)**|  
 |**unichar[\*..4000]**|**nchar [\*]**|  

@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 057d7d988fd6f7f5d490cbf30f06e83270438983
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cffbc00b5b3a3c1c8ab01e14319f3267e323022a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042890"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394337"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Lección 3: Explorar y visualizar los datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -277,8 +277,8 @@ Para ver el trazado, abra la carpeta de destino y revise los archivos creados po
 
 ## <a name="next-lesson"></a>Lección siguiente
 
-[Lección 4: Crear características de datos mediante T-SQL](../tutorials/sqldev-create-data-features-using-t-sql.md)
+[Lección 3: Crear características de datos mediante T-SQL](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>Lección anterior
 
-[Lección 2: Preparar el entorno de tutorial con PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+[Lección 1: Configurar los datos de demostración de taxis de Nueva York](sqldev-download-the-sample-data.md)

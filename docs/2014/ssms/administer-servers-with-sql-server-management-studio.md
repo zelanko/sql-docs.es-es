@@ -17,12 +17,12 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 095c9f205a98b5ac2ecd5a40ab66448ad9e21176
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6dabef37d796ca1279c1444cf6ecafce6973c86b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308875"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395320"
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>Administrar servidores con SQL Server Management Studio
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] es un cliente administrativo enriquecido e integrado diseñado para satisfacer el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requisitos del administrador del servidor. En [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], las tareas administrativas se realizan mediante el Explorador de objetos, que permite conectarse a cualquier servidor de la familia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y examinar de forma gráfica su contenido. Un servidor puede ser una instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "37308875"
   
 -   Registrar servidores.  
   
--   Conectarse a una instancia del [!INCLUDE[ssDE](../includes/ssde-md.md)], [!INCLUDE[ssAS](../includes/ssas-md.md)], [!INCLUDE[ssRS](../includes/ssrs-md.md)] o [!INCLUDE[ssIS](../includes/ssis-md.md)].  
+-   Conectarse a una instancia del [!INCLUDE[ssDE](../includes/ssde-md.md)], [!INCLUDE[ssAS](../includes/ssas-md.md)], [!INCLUDE[ssRS](../includes/ssrs.md)] o [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
 -   Configurar las propiedades del servidor.  
   

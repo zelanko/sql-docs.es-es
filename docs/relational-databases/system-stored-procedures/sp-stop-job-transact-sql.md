@@ -1,5 +1,5 @@
 ---
-title: sp_stop_job (Transact-SQL) | Documentos de Microsoft
+title: sp_stop_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 67e1476e8f0612796e3f31644aca192c2c25a90f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0e057b6c0178ca87803aede7d83c2054aac852f2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258700"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395588"
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,12 +70,12 @@ sp_stop_job
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- **sp_stop_job** envía una señal de detención para la base de datos. Algunos procesos se pueden detener inmediatamente y algunos deben llegar a un punto estable (o punto de entrada a la ruta de acceso del código) antes de que puede detener. Algunas instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] de ejecución prolongada, como BACKUP, RESTORE y algunos comandos DBCC, pueden tardar mucho tiempo en finalizar. Cuando se ejecutan, puede tardar unos instantes antes de que se cancele el trabajo. Si se detiene un trabajo, se registrará una entrada de trabajo cancelado en el historial de trabajos.  
+## <a name="remarks"></a>Notas  
+ **sp_stop_job** envía una señal de detención para la base de datos. Algunos procesos se pueden detener inmediatamente y algunos deben alcanzar un punto estable (o punto de entrada a la ruta de acceso del código) antes de que puede detener. Algunas instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] de ejecución prolongada, como BACKUP, RESTORE y algunos comandos DBCC, pueden tardar mucho tiempo en finalizar. Cuando se estén ejecutando, puede tardar unos minutos antes de que se cancela el trabajo. Si se detiene un trabajo, se registrará una entrada de trabajo cancelado en el historial de trabajos.  
   
- Si un trabajo está ejecutando un paso de tipo **CmdExec** o **PowerShell**, el proceso que se va a ejecutar (por ejemplo, MyProgram.exe) se ve obligado a finalización prematura del objeto. La finalización prematura puede provocar un comportamiento imprevisible como, por ejemplo, que los archivos que el proceso utiliza se mantengan abiertos. Por lo tanto, **sp_stop_job** debe usarse solo en situaciones extremas si el trabajo contiene pasos de tipo **CmdExec** o **PowerShell**.  
+ Si un trabajo se está ejecutando actualmente un paso de tipo **CmdExec** o **PowerShell**, el proceso en ejecución (por ejemplo, MyProgram.exe) está obligado a finalizar prematuramente. La finalización prematura puede provocar un comportamiento imprevisible como, por ejemplo, que los archivos que el proceso utiliza se mantengan abiertos. Por lo tanto, **sp_stop_job** debe usarse solo en circunstancias muy especiales si el trabajo contiene pasos de tipo **CmdExec** o **PowerShell**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -84,9 +84,9 @@ sp_stop_job
   
 -   **SQLAgentOperatorRole**  
   
- Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Los miembros de **SQLAgentUserRole** y **SQLAgentReaderRole** sólo se puede detener trabajos que les pertenecen. Los miembros de **SQLAgentOperatorRole** puede detener todos los trabajos locales, incluidos los que pertenecen a otros usuarios. Los miembros de **sysadmin** pueden detener todos los trabajos locales y multiservidor.  
+ Los miembros de **SQLAgentUserRole** y **SQLAgentReaderRole** sólo se puede detener los trabajos que les pertenecen. Los miembros de **SQLAgentOperatorRole** puede detener todos los trabajos locales, los que pertenecen a otros usuarios incluidos. Los miembros de **sysadmin** pueden detener todos los trabajos locales y multiservidor.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se detiene un trabajo denominado `Weekly Sales Data Backup`.  

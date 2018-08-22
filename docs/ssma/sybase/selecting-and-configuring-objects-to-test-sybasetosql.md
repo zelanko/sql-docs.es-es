@@ -1,5 +1,5 @@
 ---
-title: Seleccionar y configurar los objetos a prueba (SybaseToSQL) | Documentos de Microsoft
+title: Selección y configuración de objetos de prueba (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,32 +19,32 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0f3302787cedc18565e60251f4ae24e08640a88e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 09103b9294754a7634a1d28109f3129286acae94
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779391"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392810"
 ---
-# <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>Seleccionar y configurar los objetos a prueba (SybaseToSQL)
-En este paso se seleccionan objetos para probar y configurar las opciones de comparación de funciones y procedimientos parámetros de salida, así como los valores devueltos de funciones.  
+# <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>Selección y configuración de objetos de prueba (SybaseToSQL)
+En este paso, se seleccionan objetos para probar y configurar las opciones de comparación procedimientos y los funciones de parámetros de salida, así como los valores devueltos de funciones.  
   
-## <a name="selection-of-objects-to-test"></a>Selección de objetos a prueba  
-En el árbol de objetos de Sybase situado en el lado izquierdo de la ventana, compruebe los objetos que desea invocar durante el proceso de prueba. Ver la lista completa de objetos pueden someterse a prueba en el [probar los objetos migrados de la base de datos &#40;SybaseToSQL&#41; ](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md) tema.  
+## <a name="selection-of-objects-to-test"></a>Selección de objetos de prueba  
+En el árbol de objetos de Sybase ubicado en el lado izquierdo de la ventana, compruebe los objetos que desea invocar durante el proceso de pruebas. Ver la lista completa de objetos puede probar en el [pruebas migrar objetos de base de datos &#40;SybaseToSQL&#41; ](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md) tema.  
   
-Si el evaluador de SSMA no admite cualquiera de los objetos seleccionados para las pruebas, verá el vínculo con la etiqueta **algunos objetos seleccionados contienen errores** bajo el árbol de objetos. Haga clic en este vínculo para ver los motivos por qué no se pueden probar estos objetos y anule la selección de objetos incorrectos.  
+Si el evaluador de SSMA no es compatible con cualquiera de los objetos seleccionados para las pruebas, verá el vínculo con la etiqueta **algunos objetos seleccionados contienen errores** bajo el árbol de objetos. Haga clic en este vínculo para ver los motivos por qué no se puede probar estos objetos y anule la selección de objetos incorrectos.  
   
-Puede ver varias páginas en el lado derecho del **SQL** página muestra la definición del objeto actual. En el **Pre SQL** y **Post SQL** páginas pueden especificar scripts que se ejecutan antes y después de la invocación de objeto se prueba inicia. Se trata de puede ser útil cuando el objeto requiere objeto adicionales como tablas temporales o los cursores. El **parámetros** página enumera los parámetros si el objeto es un procedimiento almacenado o una función. El **propiedades** página muestra las características adicionales del objeto. Vea la descripción de **parámetros Comparsions** y **llamar a valores** páginas siguientes.  
+En el lado derecho puede ver varias páginas del **SQL** página muestra la definición del objeto actual. En el **Pre SQL** y **Post SQL** páginas pueden especificar scripts que se ejecutan antes y después de la invocación de guías de objeto de prueba. Se trata de puede ser útil cuando el objeto requiere objetos adicionales, como tablas temporales o los cursores. El **parámetros** página enumera los parámetros si el objeto es un procedimiento almacenado o una función. El **propiedades** página muestra características adicionales del objeto. Vea la descripción de **parámetros Comparsions** y **llamar a valores** las páginas siguientes.  
   
-## <a name="parameter-comparison-settings"></a>Configuración de la comparación de parámetro  
+## <a name="parameter-comparison-settings"></a>Configuración de la comparación de parámetros  
 Establecer las reglas de comparación para los parámetros output y devolver valores en el **comparar parámetros** página. Puede realizar las siguientes opciones.  
   
 ### <a name="use-during-comparisons"></a>Uso durante las comparaciones  
-Habilitar el uso del parámetro seleccionado en la comparación de resultados de pruebas.  
+Habilitar el uso del parámetro seleccionado en la comparación de los resultados de pruebas.  
   
--   Si elige **True**, SSMA comparará el valor de salida de este parámetro después de ejecutar el procedimiento de Sybase con el valor correspondiente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   Si elige **True**, SSMA comparará el valor de salida de este parámetro después de ejecutar el procedimiento de Sybase con el valor correspondiente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   Si elige**False**, el parámetro se excluirá de la comprobación de resultados.  
+-   Si elige**False**, el parámetro se excluirán de la comprobación de los resultados.  
   
 ### <a name="use-custom-scale"></a>Usar escala personalizada  
 Para los parámetros de tipo de datos numérico de longitud fija y aproximada, puede establecer una escala personalizada para la comparación.  
@@ -54,41 +54,41 @@ Para los parámetros de tipo de datos numérico de longitud fija y aproximada, p
 -   Si elige**False**, la comparación numérica serán exacta.  
   
 ### <a name="comparing-scale"></a>Comparación de escala  
-Sólo está disponible si la **Use Custom Scale** opción está establecida en **True**. Se trata de la precisión de comparación numérica.  
+Sólo está disponible si el **Use Custom Scale** opción está establecida en **True**. Se trata de la precisión de comparación numérica.  
   
 ### <a name="date-time-comparing"></a>Comparación de fecha hora  
-Define la fecha y hora se comparan valores.  
+Define cómo de fecha y hora se comparan los valores.  
   
--   Si selecciona **comparar todo fecha**, se realizará la comparación completa de los valores de ambas plataformas.  
+-   Si selecciona **comparar todo fecha**, se realizará una comparación completa de los valores de ambas plataformas.  
   
--   Si selecciona **comparar solo fecha**, la hora parte se pasará por alto.  
+-   Si selecciona **comparar solo fecha**, la hora se omitirá parte.  
   
--   Si selecciona **comparar solo hora**, la fecha en la parte se pasará por alto.  
+-   Si selecciona **comparar tiempo solo**, la fecha se omitirá parte.  
   
--   Si selecciona **milisegundos omitir**, los resultados se compararán hasta segundos.  
+-   Si selecciona **omitir milisegundos**, los resultados se compararán hasta segundos.  
   
--   Si selecciona **Omitir fecha y milisegundos**, el resultado será comparados sólo por parte de hora y omitir partes fraccionarias de segundo.  
+-   Si selecciona **Omitir fecha y milisegundos**, el resultado será comparadas sólo por parte de hora y omitir partes fraccionarias de segundo.  
   
-### <a name="ignore-strings-case"></a>Omitir mayúsculas y minúsculas cadenas  
-Controla la distinción entre mayúsculas y de la comparación.  
+### <a name="ignore-strings-case"></a>Omitir mayúsculas y minúsculas de cadenas  
+Controla las mayúsculas y minúsculas de la comparación.  
   
 -   Si elige **True**, la comparación será entre mayúsculas y minúsculas.  
   
--   Si elige **False**, la comparación será entre mayúsculas y minúsculas.  
+-   Si elige **False**, la comparación será distingue mayúsculas de minúsculas.  
   
 ### <a name="ignore-trailing-spaces"></a>Omitir espacios finales  
-Controla cómo espacios se tratan durante la comparación.  
+Controla los espacios finales de cómo se tratan durante la comparación.  
   
--   Si elige **True**, las cadenas comparadas será recortan derecha antes de comparar.  
+-   Si elige **True**, las cadenas comparadas será recortes derecha antes de comparar.  
   
 -   Si elige **False**, las cadenas comparadas conservará espacios en blanco finales.  
   
-## <a name="specify-input-values-for-procedures-and-functions-call-values"></a>Especificar valores de entrada para los procedimientos y funciones (valores de llamadas)  
-Puede especificar valores de parámetro de entrada en el **llamar a valores** página. El **agregar llamada** botón agrega una nueva llamada con valores de parámetros vacía. El **quitar llamar** botón quita la llamada actual.  
+## <a name="specify-input-values-for-procedures-and-functions-call-values"></a>Especifique los valores de entrada para procedimientos y funciones (llamar a valores)  
+Puede especificar valores de parámetro de entrada en el **llamar a valores** página. El **agregar llamada** botón agrega una nueva llamada con los valores de parámetros vacía. El **quitar llamar** botón quita la llamada actual.  
   
 ## <a name="next-step"></a>Paso siguiente  
-[Seleccionar y configurar los objetos afectados &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
+[Selección y configuración de los objetos afectados &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Pruebas de objetos de base de datos migran &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Pruebas con objetos de base de datos migrados &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

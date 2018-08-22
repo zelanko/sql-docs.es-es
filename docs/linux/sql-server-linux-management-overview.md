@@ -12,12 +12,12 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: sql-linux
-ms.openlocfilehash: 26123d12c48c6c8abd51590d3f6d42c7476acd29
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: d537c4ef2bb84833b4676acebdaf0906ee7a85c9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102423"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393273"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Elija la herramienta adecuada para administrar SQL Server en Linux
 
@@ -31,7 +31,7 @@ El **mssql-conf** herramienta configura SQL Server en Linux. Para obtener más i
 
 ## <a name="transact-sql"></a>Transact-SQL
 
-Casi todo lo que puede hacer en una herramienta de cliente también se puede lograr con las instrucciones Transact-SQL. SQL Server proporciona [vistas de administración dinámica (DMV)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) que consultan el estado y la configuración de SQL Server. También hay [comandos Transact-SQL](https://msdn.microsoft.com/library/bb510741.aspx) para tareas de administración de base de datos. Puede ejecutar estos comandos en cualquier herramienta de cliente que admite la conexión a SQL Server y ejecutar consultas de Transact-SQL, por ejemplo [sqlcmd](sql-server-linux-setup-tools.md) o [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
+Casi todo lo que puede hacer en una herramienta de cliente también se puede lograr con las instrucciones Transact-SQL. SQL Server proporciona [vistas de administración dinámica (DMV)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) que consultan el estado y la configuración de SQL Server. También hay [comandos Transact-SQL](../t-sql/language-reference.md) para tareas de administración de base de datos. Puede ejecutar estos comandos en cualquier herramienta de cliente que admite la conexión a SQL Server y ejecutar consultas de Transact-SQL, por ejemplo [sqlcmd](sql-server-linux-setup-tools.md) o [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
 
 ## <a name="sql-server-operations-studio-preview"></a>SQL Server Operations Studio (versión preliminar)
 

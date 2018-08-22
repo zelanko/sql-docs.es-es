@@ -15,28 +15,28 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: f15152c782b16b7939f26e8b94b66a2ca20b234c
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 76dd1388f5abdc2219270f0745c03fcdb0334030
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985247"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393028"
 ---
-# <a name="working-with-ssma-projects-oracletosql"></a>Trabajar con proyectos de SSMA (OracleToSQL)
-Para migrar bases de datos de Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], creará primero un proyecto de SSMA. El proyecto es un archivo que contiene la información siguiente:  
+# <a name="working-with-ssma-projects-oracletosql"></a>Proyectos de SSMA (OracleToSQL)
+Para migrar bases de datos de Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], creará primero un proyecto de SSMA. El proyecto es un archivo que contiene la información siguiente:  
   
--   Metadatos acerca de las bases de datos de Oracle que van a migrar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   Metadatos acerca de las bases de datos de Oracle que van a migrar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Metadatos acerca de la instancia de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que recibirán los objetos migrados y los datos.  
+-   Metadatos acerca de la instancia de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que recibirán los objetos migrados y los datos.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] información de conexión.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] información de conexión.  
   
 -   Configuración del proyecto.  
   
-Al abrir un proyecto, se desconecta de Oracle y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Que le permite trabajar sin conexión. Para obtener información sobre cómo volver a conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], consulte [conectarse a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md).  
+Al abrir un proyecto, se desconecta de Oracle y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Que le permite trabajar sin conexión. Para obtener información sobre cómo volver a conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [conectarse a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md).  
   
 ## <a name="reviewing-default-project-settings"></a>Revisar la configuración predeterminada del proyecto  
-SSMA contiene varias opciones de conversión y cargar objetos de base de datos, migración de datos y sincronización SSMA con Oracle y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Los valores predeterminados son adecuados para muchos usuarios. Sin embargo, antes de crear un nuevo proyecto SSMA, debe revisar la configuración. Si desea, puede cambiar la configuración predeterminada que se usará para todos los proyectos nuevos.  
+SSMA contiene varias opciones de conversión y cargar objetos de base de datos, migración de datos y sincronización SSMA con Oracle y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores predeterminados son adecuados para muchos usuarios. Sin embargo, antes de crear un nuevo proyecto SSMA, debe revisar la configuración. Si desea, puede cambiar la configuración predeterminada que se usará para todos los proyectos nuevos.  
   
 **Para revisar la configuración predeterminada del proyecto**  
   
@@ -54,14 +54,14 @@ SSMA contiene varias opciones de conversión y cargar objetos de base de datos, 
   
     -   Para obtener información acerca de la configuración de objeto del sistema, consulte [configuración del proyecto&#40;cargar objetos del sistema&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-loading-system-objects-oracletosql.md).  
   
-    -   Para obtener información sobre la configuración de sincronización a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], consulte [configuración del proyecto&#40;sincronización&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md).  
+    -   Para obtener información sobre la configuración de sincronización a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [configuración del proyecto&#40;sincronización&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md).  
   
     -   Para obtener información acerca de la configuración de la interfaz gráfica de usuario, consulte [configuración del proyecto &#40;GUI&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-gui-oracletosql.md).  
   
     -   Para obtener información acerca de la configuración de asignación de tipos de datos, vea [configuración del proyecto &#40;asignación de tipo&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
   
 ## <a name="creating-new-projects"></a>Creación de nuevos proyectos  
-Para migrar datos desde bases de datos de Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], primero debe crear un proyecto.  
+Para migrar datos desde bases de datos de Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], primero debe crear un proyecto.  
   
 **Para crear un proyecto**  
   
@@ -73,15 +73,15 @@ Para migrar datos desde bases de datos de Oracle para [!INCLUDE[ssNoVersion](../
   
 3.  En el **ubicación** cuadro, escriba o seleccione una carpeta para el proyecto y, a continuación, haga clic en **Aceptar**.  
   
-4.  En el **migración a** lista desplegable, seleccione la versión de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usados para la migración. Las opciones disponibles son:  
+4.  En el **migración a** lista desplegable, seleccione la versión de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usados para la migración. Las opciones disponibles son:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
     -   Base de datos SQL Azure  
   
@@ -108,7 +108,7 @@ Cuando se guarda un proyecto, SSMA conserva la configuración del proyecto y, op
         SSMA analizará los esquemas de Oracle y guardar los metadatos en el archivo de proyecto.  
   
 ## <a name="opening-projects"></a>Abrir proyectos  
-Al abrir un proyecto, se desconecta de Oracle y de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Que le permite trabajar sin conexión. Para actualizar los metadatos, cargar los objetos de base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Para migrar datos, debe volver a conectarse a Oracle y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+Al abrir un proyecto, se desconecta de Oracle y de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Que le permite trabajar sin conexión. Para actualizar los metadatos, cargar los objetos de base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para migrar datos, debe volver a conectarse a Oracle y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 **Para abrir un proyecto**  
   
@@ -120,7 +120,7 @@ Al abrir un proyecto, se desconecta de Oracle y de [!INCLUDE[ssNoVersion](../../
   
 2.  Para volver a conectarse a Oracle, en la **archivo** menú, haga clic en **volver a conectar con Oracle**.  
   
-3.  Para volver a conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], en el **archivo** menú, haga clic en **volver a conectar a SQL Server**.  
+3.  Para volver a conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en el **archivo** menú, haga clic en **volver a conectar a SQL Server**.  
   
 ## <a name="next-step"></a>Paso siguiente  
 El siguiente paso del proceso de migración es [conectarse a la base de datos de Oracle (OracleToSQL)](http://msdn.microsoft.com/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6).  

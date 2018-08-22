@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
@@ -14,12 +13,12 @@ caps.latest.revision: 21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fc33caf1e45d85abdffbeb295f7d874b6bf2aea5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5ce387856b47c92947a6b779b2cbc9d82e09e67
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269388"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396001"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor
   Un grupo de recursos de servidor representa un subconjunto de recursos físicos que se pueden regular. De forma predeterminada, las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] están enlazadas a los recursos del grupo de recursos de servidor predeterminado y los consumen. Para proteger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de manera que una o más tablas optimizadas para memoria no consuman sus recursos, y evitar que otros usuarios consuman memoria que las tablas optimizadas para memoria necesitan, debe crear un grupo de recursos de servidor diferente para administrar el consumo de memoria para la base de datos con tablas optimizadas para memoria.  

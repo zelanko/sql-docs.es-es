@@ -26,17 +26,17 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 83e8fddb94f2c2cdc51131417b589d7c8691a88d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: beddb03c2d5806f9a3e3114346808d54379a9d74
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985597"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395985"
 ---
-# <a name="command-line-options-in-ssma-console-mysqltosql"></a>Opciones de línea de comandos en la consola SSMA (MySQLToSQL)
+# <a name="command-line-options-in-ssma-console-mysqltosql"></a>Opciones de la línea de comandos en la consola SSMA (MySQLToSQL)
 Microsoft le proporciona un opciones de línea de comandos de un conjunto robusto para ejecutar y controlar las actividades SSMA. Las secciones que detallan la misma.  
   
-## <a name="command-line-options-in-ssma-console"></a>Opciones de línea de comandos en la consola SSMA  
+## <a name="command-line-options-in-ssma-console"></a>Opciones de la línea de comandos en la consola SSMA  
 Descritos en este documento, la consola es opciones de comando.  
   
 En esta sección, el término 'opción' también se conoce como 'switch'.  
@@ -136,7 +136,7 @@ Esto indica que la carpeta de configuración del entorno de proyecto para el pro
 ### <a name="secure-password-option-psecurepassword"></a>Opción de contraseña segura: – p/securepassword  
 Esta opción indica que la contraseña cifrada de las conexiones del servidor. Difiere de todas las demás opciones: la opción ni ejecuta cualquier script ni ayuda a las actividades relacionadas con la migración, pero ayuda a administrar el cifrado de contraseña para las conexiones del servidor usado en el proyecto de migración.  
   
-No se puede especificar cualquier otra opción o contraseña como el parámetro de línea de comandos. En caso contrario, produce un error. Para obtener más información, consulte el [administrar contraseñas](http://msdn.microsoft.com/4ffbc587-ea3f-49ad-bc42-a654f672325e) sección.  
+No se puede especificar cualquier otra opción o contraseña como el parámetro de línea de comandos. En caso contrario, produce un error. Para obtener más información, consulte el [administrar contraseñas](managing-passwords-mysqltosql.md) sección.  
   
 Se admiten las siguientes opciones secundarias para `–p/securepassword`:  
   

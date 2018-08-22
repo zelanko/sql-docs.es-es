@@ -16,12 +16,12 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e29e979597563511f91977cf9815aa0e06290ae1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f5acb0977326b148667a62ae0c86bb47f443174
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983317"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393918"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Referencia de la interfaz de usuario (MySQLToSQL)
 Esta sección incluye temas de ayuda para SQL Server Migration Assistant (SSMA) para MySQL.  
@@ -39,7 +39,7 @@ En la tabla siguiente se enumera los cuadros de diálogo SSMA:
 |[Conectarse a Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|Use la **conectarse a SQL Azure** cuadro de diálogo para conectarse a la instancia de SQL Azure a la que van a migrar.|  
 |[Configuración de conversión (MySQL)](http://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|Use la **configuración** pestaña para establecer la configuración del nivel de nodo.|  
 |[Informe de migración de datos &#40;MySQLToSQL&#41;](../../ssma/mysql/data-migration-report-mysqltosql.md)|Muestra los resultados de la migración de datos desde MySQL a SQL Server o SQL Azure.|  
-|[Configuración de la migración de datos](http://msdn.microsoft.com/9c396df4-5676-4f32-9c57-70d4f15f9b7a)|Use la **configuración de migración de datos extendida** tab para escribir consultas personalizadas para la migración de datos.|  
+|[Configuración de la migración de datos](data-migration-settings-mysqltosql.md)|Use la **configuración de migración de datos extendida** tab para escribir consultas personalizadas para la migración de datos.|  
 |[Editar asignación de tipo &#40;MySQLToSQL&#41;](../../ssma/mysql/edit-type-mapping-mysqltosql.md)|Use la **Editar asignación de tipo** cuadro de diálogo para crear o modificar la asignación de tipos de datos entre los objetos de base de datos y las bases de datos de origen y de destino.|  
 |[Configuración global &#40;Editor&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-editor-mysqltosql.md)|Utilice la página del Editor de la **configuración Global** cuadro de diálogo para configurar las opciones del editor de código.|  
 |[Configuración global &#40;cuadros de diálogo&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-dialogs-mysqltosql.md)|Use la página de los cuadros de diálogo de la **configuración Global** cuadro de diálogo para configurar el cuadro de diálogo predeterminado y la configuración de la advertencia.|  

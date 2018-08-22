@@ -19,12 +19,12 @@ caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 827bffa5df372d2f55a52b6da0fc10d169df97aa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5d9fa625bbd9ebb661fb0ebad8b191b6075e8397
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219435"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395322"
 ---
 # <a name="rebuild-system-databases"></a>Volver a generar bases de datos del sistema
   Las bases de datos del sistema deben volver a generarse para corregir problemas por daños en las bases de datos [maestra](master-database.md), [modelo](model-database.md), [msdb](msdb-database.md)o de [recursos](resource-database.md) , o para modificar la intercalación de nivel de servidor predeterminada. En este tema se ofrecen instrucciones paso a paso para volver a generar las bases de datos del sistema en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -156,7 +156,7 @@ ms.locfileid: "37219435"
 > [!WARNING]  
 >  Volver a generar el `msdb` base de datos mediante el **instmsdb** script eliminará toda la información almacenada en `msdb` como trabajos, alerta, operadores, los planes de mantenimiento, historial de copia de seguridad, la configuración de administración basada en directivas , Correo, etcetera, el almacenamiento de datos de rendimiento de la base de datos.  
   
-1.  Detenga todos los servicios que se conectan al [!INCLUDE[ssDE](../../includes/ssde-md.md)], incluido el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssRS](../../includes/ssrs-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)]y todas las aplicaciones que usan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como almacén de datos.  
+1.  Detenga todos los servicios que se conectan al [!INCLUDE[ssDE](../../includes/ssde-md.md)], incluido el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssRS](../../includes/ssrs.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)]y todas las aplicaciones que usan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como almacén de datos.  
   
 2.  Inicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde la línea de comandos usando el comando: `NET START MSSQLSERVER /T3608`  
   

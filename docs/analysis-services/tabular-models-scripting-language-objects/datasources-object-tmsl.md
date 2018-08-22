@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7beabaaf63194cc699c3711a87dd1e59d244c068
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 0a83ac3429a3012269a35c64ba5fdcbec18b2d4c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981337"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393305"
 ---
 # <a name="datasources-object-tmsl"></a>Objeto DataSources (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "38981337"
  El tipo de objeto DataSource. En la actualidad, el único valor válido es proveedor (1) - cadena de conexión Normal.  
   
  connectionString  
- La cadena de conexión que especifica el servidor y base de datos como mínimo, pero también puede incluir otras propiedades admitidas por el RDBMS externo, como una cuenta de usuario o el proveedor de datos. Este valor es necesario. Consulte [clase SqlConnectionStringBuilder](https://msdn.microsoft.com/library/ms254500\(v=vs.110\).aspx) para obtener más información acerca de SQL Server las propiedades de la cadena de conexión de base de datos.  
+ La cadena de conexión que especifica el servidor y base de datos como mínimo, pero también puede incluir otras propiedades admitidas por el RDBMS externo, como una cuenta de usuario o el proveedor de datos. Este valor es necesario. Consulte [clase SqlConnectionStringBuilder](/dotnet/framework/data/adonet/connection-string-syntax) para obtener más información acerca de SQL Server las propiedades de la cadena de conexión de base de datos.  
   
  elemento impersonationMode  
  Especifica si Analysis Services debe suplantar la identidad del usuario que solicita la consulta. Esta propiedad es un valor numérico que especifica las credenciales que se usarán para la suplantación. Los valores de enumeración son los siguientes:  

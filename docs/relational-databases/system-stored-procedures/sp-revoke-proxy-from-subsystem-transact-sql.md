@@ -1,5 +1,5 @@
 ---
-title: sp_revoke_proxy_from_subsystem (Transact-SQL) | Documentos de Microsoft
+title: sp_revoke_proxy_from_subsystem (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c80739e4a888316837b22838b92f6d5919c998d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5c19e54fe6f9d9280d19ab6861cf27ffa20df636
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261866"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395801"
 ---
 # <a name="sprevokeproxyfromsubsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,22 +49,22 @@ sp_revoke_proxy_from_subsystem
   
 ## <a name="arguments"></a>Argumentos  
  [ **@proxy_id** =] *Id.*  
- Número de identificación del proxy desde el que se revoca el acceso. El *proxy_id* es **int**, su valor predeterminado es null. Cualquier *proxy_id* o *proxy_name* debe especificarse, pero no pueden especificarse ambos.  
+ Número de identificación del proxy desde el que se revoca el acceso. El *proxy_id* es **int**, su valor predeterminado es null. Cualquier *proxy_id* o *proxy_name* debe especificarse, pero no se pueden especificar ambos.  
   
  [ **@proxy_name** =] **'***proxy_name***'**  
- Nombre del proxy desde el que se revoca el acceso. El *proxy_name* es **sysname**, su valor predeterminado es null. Cualquier *proxy_id* o *proxy_name* debe especificarse, pero no pueden especificarse ambos.  
+ Nombre del proxy desde el que se revoca el acceso. El *proxy_name* es **sysname**, su valor predeterminado es null. Cualquier *proxy_id* o *proxy_name* debe especificarse, pero no se pueden especificar ambos.  
   
  [ **@subsystem_id** =] *Id.*  
- El id. del subsistema al que se revoca el acceso. El *subsystem_id* es **int**, su valor predeterminado es null. Cualquier *subsystem_id* o *subsystem_name* debe especificarse, pero no pueden especificarse ambos. En la tabla siguiente se muestran los valores disponibles para cada subsistema.  
+ El id. del subsistema al que se revoca el acceso. El *subsystem_id* es **int**, su valor predeterminado es null. Cualquier *subsystem_id* o *subsystem_name* debe especificarse, pero no se pueden especificar ambos. En la tabla siguiente se muestran los valores disponibles para cada subsistema.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|**2**|Script ActiveX<br /><br /> **\*\* Importante \* \***  subsistema de scripts de ActiveX en el que se va a quitar de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.|  
+|**2**|Script ActiveX<br /><br /> **\*\* Importante \* \***  subsistema de los scripts de ActiveX se quitará de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.|  
 |**3**|Sistema operativo (CmdExec)|  
 |**4**|Agente de instantáneas de replicación|  
 |**5**|Agente de registro del LOG de replicación|  
 |**6**|Agente de distribución de replicación|  
-|**7**|Agente de mezcla de replicación|  
+|**7**|Replication Merge Agent|  
 |**8**|Agente de lectura de cola de replicación|  
 |**9**|Comando de Analysis Services|  
 |**10**|Consulta de Analysis Services|  
@@ -72,29 +72,29 @@ sp_revoke_proxy_from_subsystem
 |**12**|Script de PowerShell|  
   
  [ **@subsystem_name**=] **'***subsystem_name***'**  
- Nombre del subsistema al que se revoca el acceso. El *subsystem_name* es **sysname**, su valor predeterminado es null. Cualquier *subsystem_id* o *subsystem_name* debe especificarse, pero no pueden especificarse ambos. En la tabla siguiente se muestran los valores disponibles para cada subsistema.  
+ Nombre del subsistema al que se revoca el acceso. El *subsystem_name* es **sysname**, su valor predeterminado es null. Cualquier *subsystem_id* o *subsystem_name* debe especificarse, pero no se pueden especificar ambos. En la tabla siguiente se muestran los valores disponibles para cada subsistema.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |ActiveScripting|Script ActiveX|  
 |CmdExec|Sistema operativo (CmdExec)|  
 |Snapshot|Agente de instantáneas de replicación|  
 |LogReader|Agente de registro del LOG de replicación|  
 |Distribución|Agente de distribución de replicación|  
-|Mezcla|Agente de mezcla de replicación|  
+|Mezcla|Replication Merge Agent|  
 |QueueReader|Agente de lectura de cola de replicación|  
 |ANALYSISQUERY|Comando de Analysis Services|  
 |ANALYSISCOMMAND|Consulta de Analysis Services|  
 |Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)] ejecución de paquetes|  
 |PowerShell|Script de PowerShell|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Al revocar el acceso a un subsistema no se cambian los permisos de la entidad de seguridad especificada en el proxy.  
   
 > [!NOTE]  
->  Para determinar los pasos de trabajo hacen referencia a un proxy, haga clic en el **proxy** nodo bajo **Agente SQL Server** en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y, a continuación, haga clic en **propiedades**. En el **propiedades de la cuenta de Proxy** cuadro de diálogo, seleccione la **referencias** página para ver todos los pasos de trabajo que hacen referencia a este proxy.  
+>  Para determinar qué pasos de trabajo hacen referencia a un proxy, haga clic en el **Proxies** nodo bajo **del Agente SQL Server** en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y, a continuación, haga clic en **propiedades**. En el **propiedades de la cuenta de Proxy** cuadro de diálogo, seleccione el **referencias** página para ver todos los pasos de trabajo que hacen referencia a este proxy.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_revoke_proxy_from_subsystem**.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -111,7 +111,7 @@ EXEC dbo.sp_revoke_proxy_from_subsystem
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del Agente SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [Implementar la seguridad del Agente SQL Server](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)   
+ [Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

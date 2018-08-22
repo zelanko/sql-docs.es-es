@@ -15,12 +15,12 @@ caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 025d5eac30815b6d9110dcca7214e7e88412a23d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8930abc8ead43bed31d53ed8e412d5d367b6051c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290961"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392874"
 ---
 # <a name="back-up-database-general-page"></a>Copia de seguridad de base de datos (página General)
   Utilice la página **General** del cuadro de diálogo **Copia de seguridad de base de datos** para ver o modificar la configuración de una operación de copia de seguridad de la base de datos.  
@@ -37,7 +37,7 @@ ms.locfileid: "37290961"
 -   [Crear una copia de seguridad diferencial de una base de datos &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
     > [!IMPORTANT]  
-    >  Puede definir un plan de mantenimiento de base de datos para crear copias de seguridad. Para obtener más información, vea [Planes de mantenimiento](http://msdn.microsoft.com/library/ms187658.aspx) en los Libros en pantalla de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
+    >  Puede definir un plan de mantenimiento de base de datos para crear copias de seguridad. Para obtener más información, vea [Planes de mantenimiento](../maintenance-plans/maintenance-plans.md) en los Libros en pantalla de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
  **Para crear una copia de seguridad parcial**  
   

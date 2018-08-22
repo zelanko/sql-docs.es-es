@@ -13,15 +13,15 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5368db04a4f5442620a8f347608bf5aded86703b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 917f18c705c5cb0615cc5ac0b702f31372cf8a8a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982377"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394133"
 ---
-# <a name="running-test-cases-oracletosql"></a>Ejecutar casos de prueba (OracleToSQL)
-Cuando el evaluador de SSMA se ejecuta un caso de prueba, los objetos seleccionados para las pruebas se ejecuta y crea un informe sobre los resultados de la comprobación. Si los resultados son idénticos en ambas plataformas, la prueba fue correcta. La correspondencia de objetos entre Oracle y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] se determina según la configuración de asignación de esquema para el proyecto SSMA actual.  
+# <a name="running-test-cases-oracletosql"></a>Ejecución de casos de prueba (OracleToSQL)
+Cuando el evaluador de SSMA se ejecuta un caso de prueba, los objetos seleccionados para las pruebas se ejecuta y crea un informe sobre los resultados de la comprobación. Si los resultados son idénticos en ambas plataformas, la prueba fue correcta. La correspondencia de objetos entre Oracle y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se determina según la configuración de asignación de esquema para el proyecto SSMA actual.  
   
 Un requisito necesario para una prueba correcta es que todos los objetos de Oracle se convierten y se cargan en la base de datos de destino. También, se deben migrar los datos de tabla para que se sincroniza el contenido de las tablas en ambas plataformas.  
   
@@ -32,7 +32,7 @@ Para ejecutar el caso de prueba preparada:
   
 2.  En el **conectar con Oracle** cuadro de diálogo, escriba la información de conexión y, a continuación, haga clic en **Connect**.  
   
-Una vez completada la prueba, se crea el informe de casos de prueba. Haga clic en el **informe** para ver el [informe casos de prueba](http://msdn.microsoft.com/8da14323-9dd6-4019-bf79-3e8b972a9bc0). El resultado de la prueba (informe de casos de prueba) se almacena automáticamente en el [repositorio de resultados de pruebas](http://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4) para su uso posterior.  
+Una vez completada la prueba, se crea el informe de casos de prueba. Haga clic en el **informe** para ver el [informe casos de prueba](viewing-test-case-reports-oracletosql.md). El resultado de la prueba (informe de casos de prueba) se almacena automáticamente en el [repositorio de resultados de pruebas](using-test-repositories-oracletosql.md) para su uso posterior.  
   
 ## <a name="test-case-execution-steps"></a>Pasos de ejecución de casos de prueba  
   
@@ -55,14 +55,14 @@ Suponga que la tabla comprobada se denomina USER_TABLE. Para este tipo de tabla,
 |USER_TABLE$ NEW_ID|ver|Identificación de las filas insertadas y modificadas.|  
 |USER_TABLE$ ANTIGUO|ver|Representación simplificada de las filas eliminadas y sobrescribir.|  
   
-Se crea el siguiente objeto en el esquema de tabla comprobado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+Se crea el siguiente objeto en el esquema de tabla comprobado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ||||  
 |-|-|-|  
 |Nombre|Tipo|Descripción|  
 |USER_TABLE$ Trg|desencadenador|Auditoría de los cambios en la tabla comprobado el desencadenador.|  
   
-Y los siguientes objetos se crean en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]en la base de datos ssmatesterdb.  
+Y los siguientes objetos se crean en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en la base de datos ssmatesterdb.  
   
 ||||  
 |-|-|-|  

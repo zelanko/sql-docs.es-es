@@ -1,5 +1,5 @@
 ---
-title: Configuración (migración) (AccessToSQL) del proyecto | Documentos de Microsoft
+title: Configuración (migración) (AccessToSQL) del proyecto | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,25 +19,25 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8ee97b6e47a51a8ed2e8b69c0f4044d8e583e949
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 10346770784c94fe18357b5717e60f7e3f88a8c7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774481"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394311"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Configuración del proyecto (migración) (AccessToSQL)
-La configuración del proyecto de migración le permite configurar la forma en que se migren los datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure.  
+La configuración del proyecto de migración le permite configurar cómo se migran datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
   
-El panel de migración está disponible en la **configuración del proyecto** y **configuración de proyecto predeterminada** cuadros de diálogo.  
+El panel de la migración está disponible en el **configuración del proyecto** y **configuración de proyecto predeterminada** cuadros de diálogo.  
   
--   Use la **configuración del proyecto** cuadro de diálogo para establecer las opciones de configuración para el proyecto actual. Para acceder a la configuración de la migración, en el **herramientas** menú, seleccione **configuración del proyecto**, haga clic en **General** en la parte inferior del panel izquierdo y, a continuación, haga clic en **migración**.  
+-   Use la **configuración del proyecto** cuadro de diálogo para establecer las opciones de configuración para el proyecto actual. Para obtener acceso a la configuración de migración, en el **herramientas** menú, seleccione **configuración del proyecto**, haga clic en **General** en la parte inferior del panel izquierdo y, a continuación, haga clic en  **Migración**.  
   
--   Use la **configuración de proyecto predeterminada** cuadro de diálogo para establecer las opciones de configuración para todos los proyectos. Para acceder a la configuración de la migración, en el **herramientas** menú, seleccione **la configuración predeterminada del proyecto**, seleccione el tipo de proyecto en **versión de destino de migración** cuadro combinado de los cuales desea acceder a la configuración, haga clic en **General** en la parte inferior del panel izquierdo y, a continuación, haga clic en **migración**.  
+-   Use la **configuración de proyecto predeterminada** cuadro de diálogo para establecer las opciones de configuración para todos los proyectos. Para acceder a la configuración de migración, en el **herramientas** menú, seleccione **la configuración predeterminada del proyecto**, seleccione el tipo de proyecto en **versión de destino de migración** cuadro combinado de los cuales se acceso a la configuración, haga clic en **General** en la parte inferior del panel izquierdo y, a continuación, haga clic en **migración**.  
   
 ## <a name="options"></a>Opciones  
 **Restricciones CHECK**  
-Especifica si SSMA debe comprobar restricciones cuando agrega datos a tablas.  
+Especifica si SSMA debe comprobar restricciones cuando agrega datos a las tablas.  
   
 -   **Modo predeterminado**: False  
   
@@ -46,7 +46,7 @@ Especifica si SSMA debe comprobar restricciones cuando agrega datos a tablas.
 -   **Modo completo**: False  
   
 **Activar desencadenadores**  
-Especifica si SSMA debe activar desencadenadores de inserción cuando agrega datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tablas.  
+Especifica si SSMA debe activar desencadenadores de inserción cuando se agregan datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tablas.  
   
 -   **Modo predeterminado**: False  
   
@@ -55,7 +55,7 @@ Especifica si SSMA debe activar desencadenadores de inserción cuando agrega dat
 -   **Modo completo**: False  
   
 **Mantener valores de identidad**  
-Especifica si SSMA conserva los valores de identidad de acceso cuando agrega datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Si este valor es False, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] asigna valores de identidad.  
+Especifica si SSMA conserva los valores de identidad de acceso cuando se agregan datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si este valor es False, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna los valores de identidad.  
   
 -   **Modo predeterminado**: True  
   
@@ -64,7 +64,7 @@ Especifica si SSMA conserva los valores de identidad de acceso cuando agrega dat
 -   **Modo completo**: False  
   
 **Mantener valores NULL**  
-Especifica si SSMA conserva valores null en los datos de origen cuando agrega datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], independientemente de los valores predeterminados que se especifican en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+Especifica si SSMA conserva valores null en los datos de origen cuando se agregan datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], independientemente de los valores predeterminados que se especifican en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   **Modo predeterminado**: True  
   
@@ -73,7 +73,7 @@ Especifica si SSMA conserva valores null en los datos de origen cuando agrega da
 -   **Modo completo**: True  
   
 **Bloqueos de tabla**  
-Especifica si SSMA bloquea las tablas cuando agrega datos a tablas durante la migración de datos. Si el valor es False, SSMA utiliza bloqueos de fila.  
+Especifica si SSMA bloquea las tablas cuando agrega datos a las tablas durante la migración de datos. Si el valor es False, SSMA utiliza bloqueos de fila.  
   
 -   **Modo predeterminado**: True  
   
@@ -81,16 +81,16 @@ Especifica si SSMA bloquea las tablas cuando agrega datos a tablas durante la mi
   
 -   **Modo completo**: True  
   
-**Reemplace las fechas no compatibles**  
-Especifica si SSMA debe corregir las fechas de acceso que son anteriores a la más antigua [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] fecha de fecha y hora (01 de enero de 1753).  
+**Reemplazar las fechas no compatibles**  
+Especifica si debería corregir la fechas de acceso anteriores a la primera SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fecha de fecha y hora (01 de enero de 1753).  
   
--   Para mantener los valores de fecha actual, seleccione **no hacen nada**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] no aceptará las fechas anteriores 01 de enero de 1753 en una columna de fecha y hora. Si utiliza las fechas anteriores, debe convertir los valores de fecha y hora a valores de caracteres.  
+-   Para conservar los valores de fecha actual, seleccione **no hacen nada**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no aceptará las fechas anteriores 01 de enero de 1753 en una columna de fecha y hora. Si usa las fechas anteriores, debe convertir los valores de fecha y hora para los valores de caracteres.  
   
 -   Para convertir las fechas anteriores 01 de enero de 1753 a NULL, seleccione **reemplace con NULL**.  
   
--   Para reemplazar las fechas anteriores 01 de enero de 1753 con una fecha admitida, seleccione **reemplazar con más cercano de fecha admitido**. Si selecciona este valor más cercano de forma predeterminada se seleccionará compatible fecha como 01 de enero de 1753.  
+-   Para reemplazar las fechas anteriores 01 de enero de 1753 con una fecha admitida, seleccione **reemplazar con más cercano de fecha admitido**. Si selecciona este valor, más cercano de forma predeterminada se seleccionará admitido fecha como 01 de enero de 1753.  
   
-**Tamaño del lote**  
+**Tamaño de lote**  
 Tamaño de lote utilizado durante la migración de datos. Se registra una transacción después de cada lote. De forma predeterminada, el tamaño del lote para todos los esquemas es 10000.  
   
 ## <a name="see-also"></a>Vea también  

@@ -23,15 +23,15 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0403c7074df0f81081cda167fe9bbf04626f2522
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 4f1d6ce53d09c120784505245ac903a6f3833920
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985747"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394539"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Configuración del proyecto (asignación de tipo) (AccessToSQL)
-La configuración del proyecto de asignación de tipos le permite establecer asignaciones de tipos predeterminadas para el proyecto SSMA. También puede especificar asignaciones de tipos para objetos de base de datos individual. Para obtener más información, consulte [tipos de datos de destino y origen de asignación](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9).  
+La configuración del proyecto de asignación de tipos le permite establecer asignaciones de tipos predeterminadas para el proyecto SSMA. También puede especificar asignaciones de tipos para objetos de base de datos individual. Para obtener más información, consulte [tipos de datos de destino y origen de asignación](mapping-source-and-target-data-types-accesstosql.md).  
   
 Asignación de tipos está disponible en el **configuración del proyecto** y **configuración de proyecto predeterminada** cuadros de diálogo:  
   
@@ -44,7 +44,7 @@ Asignación de tipos está disponible en el **configuración del proyecto** y **
 El tipo de datos de acceso para asignar.  
   
 **Tipo de destino**  
-El destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o tipo de datos de SQL Azure para el tipo de datos de acceso especificado.  
+El destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tipo de datos de SQL Azure para el tipo de datos de acceso especificado.  
   
 En la tabla siguiente se muestra la asignación predeterminada entre los tipos de datos de origen y de destino.  
   
@@ -76,10 +76,10 @@ Haga clic para editar un tipo de datos en la lista de asignación.
 **Quitar**  
 Haga clic para quitar la asignación de tipos de datos seleccionados de la lista de asignación.  
   
-**Restablecer valores predeterminados**  
+**Valores predeterminados**  
 Haga clic para restablecer todas las asignaciones de tipo de datos a los valores predeterminados SSMA.  
   
 ## <a name="see-also"></a>Vea también  
-[Asignación de tipos de datos de origen y de destino](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)  
+[Asignación de tipos de datos de origen y de destino](mapping-source-and-target-data-types-accesstosql.md)  
 [Reference(Access) de interfaz de usuario](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

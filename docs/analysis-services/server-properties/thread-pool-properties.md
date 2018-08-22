@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 47efe6ddd741cb458e5f3c5eda765f2e4e28c86f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ea8ea712579b4d9c96d793a0c633c63508c376b1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050606"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394964"
 ---
 # <a name="thread-pool-properties"></a>Propiedades de grupos de subprocesos
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -272,9 +272,9 @@ Se recomienda la actualización acumulativa 1 (CU1) para SQL Server 2016 o poste
 >  Para obtener instrucciones sobre cómo establecer las propiedades, vea [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Acerca de los procesos y subprocesos](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
- [Varios procesadores](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
- [Grupos de procesadores](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
+ [Acerca de los procesos y subprocesos](/windows/desktop/ProcThread/about-processes-and-threads)   
+ [Varios procesadores](/windows/desktop/ProcThread/multiple-processors)   
+ [Grupos de procesadores](/windows/desktop/ProcThread/processor-groups)   
  [Cambios en SQL Server 2012 en el grupo de subprocesos de Analysis Services](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Analysis Services 2012 configuración (Blog de Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387)   
  [Sistemas compatibles que tienen más de 64 procesadores](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   

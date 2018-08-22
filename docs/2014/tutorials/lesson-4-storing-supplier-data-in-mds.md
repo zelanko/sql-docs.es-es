@@ -16,12 +16,12 @@ caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4c366d18c9f8c4606da6cc864df7a7d399151c6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 778e28463c8fcb6b46a59e5929801dd56c819186
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180952"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395387"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>Lección 4: almacenar datos de proveedor en MDS
   Master Data Services (MDS) es la solución de SQL Server para la administración de datos maestros. La administración de datos maestros (MDM) describe los esfuerzos realizados por una organización para detectar y definir listas no transaccionales de datos.  
@@ -30,9 +30,9 @@ ms.locfileid: "37180952"
   
  Un modelo puede contener una o varias entidades. Cada entidad tiene atributos (columnas) y miembros (filas). Cada fila contiene los datos maestros. En esta lección, creará un modelo Proveedores con dos entidades denominadas Proveedor y Estado. La entidad Proveedor tendrá los atributos siguientes: Código, Nombre, Nombre de contacto, Apellido de contacto, Dirección de correo electrónico de contacto, Línea de dirección, Ciudad, Estado, Código postal y País. Vea [Atributos (Master Data Services)](http://msdn.microsoft.com/library/ee633745.aspx) para obtener más detalles sobre los atributos en general. Los atributos Código y Nombre corresponden a las columnas SupplierID y Supplier Name del archivo de Excel Cleansed and Matched Suppliers.  
   
- Un atributo basado en dominio es un atributo con valores rellenados por miembros de otra entidad. Los atributos basados en dominio impiden que los usuarios escriban valores de atributo que no sean válidos. Un valor de atributo solo se puede seleccionar en la lista desplegable rellena por otra entidad. En este tutorial, el atributo Estado de la entidad Proveedor es un atributo basado en dominio con valores de la entidad Estado. Solo puede cambiar el valor del atributo Estado de la entidad Proveedor a uno de los valores de la entidad Estado. Vea [Atributos basados en dominio](http://msdn.microsoft.com/library/ff487058.aspx) para obtener más detalles.  
+ Un atributo basado en dominio es un atributo con valores rellenados por miembros de otra entidad. Los atributos basados en dominio impiden que los usuarios escriban valores de atributo que no sean válidos. Un valor de atributo solo se puede seleccionar en la lista desplegable rellena por otra entidad. En este tutorial, el atributo Estado de la entidad Proveedor es un atributo basado en dominio con valores de la entidad Estado. Solo puede cambiar el valor del atributo Estado de la entidad Proveedor a uno de los valores de la entidad Estado. Vea [Atributos basados en dominio](../master-data-services/domain-based-attributes-master-data-services.md) para obtener más detalles.  
   
- En MDS, una jerarquía derivada se deriva de la relación de atributo basado en dominio del modelo. En este tutorial, creará una jerarquía derivada entre las entidades Proveedor y Estado. Después de crear la jerarquía derivada, verá una lista de estados en el explorador de Master Data Manager. Al hacer clic en un estado en la lista, verá los proveedores de ese estado en el panel derecho. Más adelante creará una jerarquía derivada basada en esta relación. Vea [Jerarquías derivadas](http://msdn.microsoft.com/library/ee633747.aspx) para obtener más detalles.  
+ En MDS, una jerarquía derivada se deriva de la relación de atributo basado en dominio del modelo. En este tutorial, creará una jerarquía derivada entre las entidades Proveedor y Estado. Después de crear la jerarquía derivada, verá una lista de estados en el explorador de Master Data Manager. Al hacer clic en un estado en la lista, verá los proveedores de ese estado en el panel derecho. Más adelante creará una jerarquía derivada basada en esta relación. Vea [Jerarquías derivadas](../master-data-services/derived-hierarchies-master-data-services.md) para obtener más detalles.  
   
  Ha creado una base de conocimiento en DQS y la ha usado para limpiar y buscar coincidencias en los datos de proveedor, y ha almacenado los resultados en el archivo Cleansed and Matched Supplier Data.xls. En esta lección, cargará los datos limpios y coincidentes en MDS. DQS solo contiene información sobre los datos (metadatos), mientras que MDS almacena los datos propiamente dichos (conjunto maestro). Por ejemplo: DQS puede tener información sobre varios proveedores, pero MDS solo mantiene los proveedores que una empresa usa.  
   

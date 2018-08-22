@@ -1,11 +1,11 @@
 ---
-title: Mediante la creación de reflejo de base de datos | Microsoft Docs
+title: Mediante la creación de reflejo de base de datos | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +21,12 @@ caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df1bd5838df40add7438ef8a9020ce2a753f983f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8d3e206f913d13fe4ff030bec1a6024f8d4b339b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425714"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393725"
 ---
 # <a name="using-database-mirroring"></a>Usar la creación de reflejo de bases de datos
     
@@ -35,11 +35,11 @@ ms.locfileid: "37425714"
   
  La creación de reflejo de la base de datos, introducida en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], es una solución de software para aumentar la disponibilidad de la base de datos y la redundancia de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client proporciona compatibilidad implícita con creación de reflejo de base de datos, por lo que el desarrollador no necesita escribir ningún código ni realizar ninguna otra acción una vez que se ha configurado para la base de datos.  
   
- Creación de reflejo, que se implementa en una base por base de datos, conserva una copia de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de datos de producción en un servidor en espera. Este servidor puede ser un servidor en estado de espera activa o semiactiva, dependiendo de la configuración y del estado de la sesión de creación de reflejo de la base de datos. Un servidor en estado de espera activa admite la conmutación por error rápida sin pérdida de las transacciones confirmadas, mientras que un servidor en estado de espera semiactiva admite la acción de forzar el servicio (con posible pérdida de datos).  
+ La creación de reflejo de la base de datos, implementada para cada base de datos, conserva una copia de una base de datos de producción de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un servidor en espera. Este servidor puede ser un servidor en estado de espera activa o semiactiva, dependiendo de la configuración y del estado de la sesión de creación de reflejo de la base de datos. Un servidor en estado de espera activa admite la conmutación por error rápida sin pérdida de las transacciones confirmadas, mientras que un servidor en estado de espera semiactiva admite la acción de forzar el servicio (con posible pérdida de datos).  
   
- Se llama a la base de datos de producción la *base de datos principal*, y se llama a la copia en espera la *base de datos reflejada*. La base de datos principal y la base de datos reflejada deben residir en instancias independientes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instancias de servidor), y debe residir en equipos distintos si es posible.  
+ La base de datos de producción se llama *base de datos principal* y la copia en espera se llama *base de datos reflejada*. La base de datos principal y la base de datos reflejada deben residir en instancias independientes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instancias del servidor) y, si es posible, en equipos diferentes.  
   
- La instancia del servidor de producción, llamada el *servidor principal*, se comunica con la instancia de servidor en espera, llamada el *servidor reflejado*. Los servidores principal y reflejado actúan como asociados dentro de una base de datos reflejada *sesión*. Si se produce un error en el servidor principal, el servidor reflejado puede convertir su base de datos en la base de datos principal mediante un proceso denominado *conmutación por error*. Por ejemplo, Partner_A y Partner_B son dos servidores asociados, con la base de datos principal inicialmente en Partner_A como servidor principal y la base de datos reflejada en Partner_B como servidor reflejado. Si Partner_A se queda sin conexión, la base de datos de Partner_B puede realizar la conmutación por error para convertirse en la base de datos principal actual. Cuando Partner_A se vuelve a unir a la sesión de creación de reflejo, se convierte en el servidor reflejado y su base de datos pasa a ser la base de datos reflejada.  
+ La instancia del servidor de producción, denominado *servidor principal*, se comunica con la instancia del servidor en espera, denominado *servidor reflejado*. Los servidores principal y reflejado actúan como asociados dentro de una *sesión* de creación de reflejo de la base de datos. Si el servidor principal genera un error, el servidor reflejado puede convertir su base de datos en la base de datos principal mediante un proceso llamado *conmutación por error*. Por ejemplo, Partner_A y Partner_B son dos servidores asociados, con la base de datos principal inicialmente en Partner_A como servidor principal y la base de datos reflejada en Partner_B como servidor reflejado. Si Partner_A se queda sin conexión, la base de datos de Partner_B puede realizar la conmutación por error para convertirse en la base de datos principal actual. Cuando Partner_A se vuelve a unir a la sesión de creación de reflejo, se convierte en el servidor reflejado y su base de datos pasa a ser la base de datos reflejada.  
   
  Las configuraciones alternativas de creación de reflejo de la base de datos proporcionan diferentes niveles de rendimiento y de seguridad de los datos, y admiten varias formas de conmutación por error. Para obtener más información, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   

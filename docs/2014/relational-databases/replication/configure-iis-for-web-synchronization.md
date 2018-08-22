@@ -18,12 +18,12 @@ caps.latest.revision: 86
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eda7d98c6c90cf53f8b788a52717db01bcc8fae9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5556c3e3392dd52fdd27acacd6c3320b7d9fbff0
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307595"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395321"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurar IIS para la sincronización web
   Los procedimientos descritos en este tema son el segundo paso para configurar la sincronización web para la replicación de mezcla. Este paso se lleva a cabo después de habilitar una publicación para la sincronización web. Para obtener información general sobre el proceso de configuración, vea [Configurar sincronización web](configure-web-synchronization.md). Una vez terminados los procedimientos de este tema, siga con el tercer paso: configurar una suscripción para usar la sincronización web. El tercer paso se describe en los siguientes temas:  
@@ -34,7 +34,7 @@ ms.locfileid: "37307595"
   
 -   RMO: [Cómo configurar una suscripción para usar la sincronización web (programación con RMO)](http://msdn.microsoft.com/library/ms345207.aspx)  
   
- La sincronización web utiliza un equipo en el que se ejecuta [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) para sincronizar las suscripciones de extracción con las publicaciones de combinación. Se admiten IIS versión 5.0, IIS versión 6.0 e [!INCLUDE[iisver](../../includes/iisver-md.md)] . El Asistente para configurar la sincronización web no se admite en [!INCLUDE[iisver](../../includes/iisver-md.md)].  
+ La sincronización web utiliza un equipo en el que se ejecuta [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) para sincronizar las suscripciones de extracción con las publicaciones de combinación. Se admiten IIS versión 5.0, IIS versión 6.0 e IIS versión 7.0. El Asistente para configurar la sincronización web no se admite en la versión 7.0 de IIS.  
   
 > [!IMPORTANT]  
 >  Asegúrese de que la aplicación solo utilice [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] o versiones posteriores, y de que no haya versiones anteriores de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] instaladas en el servidor IIS. Las versiones anteriores de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pueden producir errores. Entre estos errores se incluyen los siguientes: "El formato de un mensaje durante la sincronización web no es válido. Asegúrese de que los componentes de replicación se han configurado correctamente en el servidor web".  

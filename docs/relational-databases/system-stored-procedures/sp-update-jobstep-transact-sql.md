@@ -1,5 +1,5 @@
 ---
-title: sp_update_jobstep (Transact-SQL) | Documentos de Microsoft
+title: sp_update_jobstep (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 67986dbdbace492fc2fb82bcb94e6cc32a05616a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 43dfe2a04a6c4f12fad0df12c3cf520d7d08d7a7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263483"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395595"
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,10 +67,10 @@ sp_update_jobstep
   
 ## <a name="arguments"></a>Argumentos  
  [ **@job_id =**] *job_id*  
- Número de identificación del trabajo al que perteneces el paso. *job_id*es **uniqueidentifier**, su valor predeterminado es null. Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
+ Número de identificación del trabajo al que perteneces el paso. *job_id*es **uniqueidentifier**, su valor predeterminado es null. Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
   
  [  **@job_name =**] **'***job_name***'**  
- El nombre del trabajo al que pertenece el paso. *job_name*es **sysname**, su valor predeterminado es null. Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
+ El nombre del trabajo al que pertenece el paso. *job_name*es **sysname**, su valor predeterminado es null. Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
   
  [ **@step_id =**] *step_id*  
  Número de identificación del paso de trabajo que va a modificarse. Este número no puede modificarse. *step_id*es **int**, no tiene ningún valor predeterminado.  
@@ -79,7 +79,7 @@ sp_update_jobstep
  Es el nombre nuevo del paso. *Step_name*es **sysname**, su valor predeterminado es null.  
   
  [ **@subsystem =**] **'***subsystem***'**  
- El subsistema que utiliza el agente de Microsoft SQL Server para ejecutar *comando*. *subsistema* es **nvarchar (40)**, su valor predeterminado es null.  
+ El subsistema utilizado por el agente de Microsoft SQL Server para ejecutar *comando*. *subsistema* es **nvarchar (40)**, su valor predeterminado es null.  
   
  [  **@command =**] **'***comando***'**  
  Los comandos que se ejecutará a través de *subsistema*. *comando* es **nvarchar (max)**, su valor predeterminado es null.  
@@ -88,12 +88,12 @@ sp_update_jobstep
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@cmdexec_success_code =**] *success_code*  
- El valor devuelto por un **CmdExec** comando del subsistema para indicar que *comando* ejecutado correctamente. *success_code* es **int**, su valor predeterminado es null.  
+ El valor devuelto por un **CmdExec** comando del subsistema para indicar que *comando* se ha ejecutado correctamente. *success_code* es **int**, su valor predeterminado es null.  
   
  [ **@on_success_action =**] *success_action*  
- La acción que se realizará si el paso termina correctamente. *success_action* es **tinyint**, su valor predeterminado es null y puede tener uno de estos valores.  
+ La acción que se realizará si el paso termina correctamente. *success_action* es **tinyint**, su valor predeterminado es null, y puede tener uno de estos valores.  
   
-|Value|Descripción (acción)|  
+|Valor|Descripción (acción)|  
 |-----------|----------------------------|  
 |**1**|Salir correctamente.|  
 |**2**|Salir con error.|  
@@ -101,12 +101,12 @@ sp_update_jobstep
 |**4**|Vaya al paso *success_step_id.*|  
   
  [ **@on_success_step_id =**] *success_step_id*  
- El número de identificación del paso de este trabajo que se ejecutará si el paso termina correctamente y *success_action* es **4**. *success_step_id* es **int**, su valor predeterminado es null.  
+ El número de identificación del paso de este trabajo que se ejecutará si el paso se realiza correctamente y *success_action* es **4**. *success_step_id* es **int**, su valor predeterminado es null.  
   
  [  **@on_fail_action =**] *fail_action*  
  La acción que se realizará si se produce un error en el paso. *fail_action* es **tinyint**, su valor predeterminado es null y puede tener uno de estos valores.  
   
-|Value|Descripción (acción)|  
+|Valor|Descripción (acción)|  
 |-----------|----------------------------|  
 |**1**|Salir correctamente.|  
 |**2**|Salir con error.|  
@@ -137,14 +137,14 @@ sp_update_jobstep
  [  **@output_file_name =**] **'***file_name***'**  
  Nombre del archivo en el que se guarda el resultado de este paso. *file_name* es **nvarchar (200)**, su valor predeterminado es null. Este parámetro solo es válido con comandos que se ejecutan en subsistemas [!INCLUDE[tsql](../../includes/tsql-md.md)] o CmdExec.  
   
- Para restablecer output_file_name en NULL, debe establecer *nombre_archivo_de_salida* en una cadena vacía (' ') o en una cadena de caracteres en blanco, pero no se puede usar el **CHAR(32)** (función). Por ejemplo, establezca este argumento en una cadena vacía del modo siguiente:  
+ Para restablecer output_file_name en NULL, se debe establecer *nombre_archivo_de_salida* en una cadena vacía (' ') o en una cadena de caracteres en blanco, pero no se puede usar el **CHAR(32)** función. Por ejemplo, establezca este argumento en una cadena vacía del modo siguiente:  
   
  **@output_file_name = ' '**  
   
  [ **@flags =**] *flags*  
- Una opción que controla el comportamiento. *marcas de* es **int**, y puede tener uno de estos valores.  
+ Una opción que controla el comportamiento. *marcas* es **int**, y puede tener uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0** (valor predeterminado)|Sobrescribir el archivo de salida.|  
 |**2**|Anexar al archivo de salida|  
@@ -153,20 +153,20 @@ sp_update_jobstep
 |**16**|Escribir el registro en la tabla (anexar al historial existente)|  
   
  [ **@proxy_id**=] *proxy_id*  
- Número de identificación del proxy con el que se ejecuta el paso de trabajo. *proxy_id* es de tipo **int**, su valor predeterminado es null. Si no hay ningún *proxy_id* se especifica, no *proxy_name* se especifica y no *nombre_usuario* se especifica, el paso de trabajo se ejecuta como la cuenta de servicio para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
+ Número de identificación del proxy con el que se ejecuta el paso de trabajo. *proxy_id* es de tipo **int**, su valor predeterminado es null. Si no hay ningún *proxy_id* se especifica, no hay *proxy_name* se especifica y no *user_name* se especifica, el paso de trabajo se ejecuta como la cuenta de servicio para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
  [ **@proxy_name**=] **'***proxy_name***'**  
- Nombre del proxy con el que se ejecuta el paso de trabajo. *proxy_name* es de tipo **sysname**, su valor predeterminado es null. Si no hay ningún *proxy_id* se especifica, no *proxy_name* se especifica y no *nombre_usuario* se especifica, el paso de trabajo se ejecuta como la cuenta de servicio para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
+ Nombre del proxy con el que se ejecuta el paso de trabajo. *proxy_name* es de tipo **sysname**, su valor predeterminado es null. Si no hay ningún *proxy_id* se especifica, no hay *proxy_name* se especifica y no *user_name* se especifica, el paso de trabajo se ejecuta como la cuenta de servicio para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_update_jobstep** se debe ejecutar desde la **msdb** base de datos.  
   
  La actualización de un paso de trabajo incrementa el número de la versión del trabajo.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -175,11 +175,11 @@ sp_update_jobstep
   
 -   **SQLAgentOperatorRole**  
   
- Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Solo los miembros del **sysadmin** puede actualizar un paso de trabajo pertenece a otro usuario.  
   
- Si el paso de trabajo requiere acceso a un proxy, el creador del paso de trabajo debe tener acceso al proxy del paso de trabajo. Todos los subsistemas, excepto Transact-SQL, necesitan una cuenta de proxy. Los miembros de **sysadmin** tienen acceso a todos los servidores proxy y puede usar la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta de servicio del agente para el proxy.  
+ Si el paso de trabajo requiere acceso a un proxy, el creador del paso de trabajo debe tener acceso al proxy del paso de trabajo. Todos los subsistemas, excepto Transact-SQL, necesitan una cuenta de proxy. Los miembros de **sysadmin** tienen acceso a todos los servidores proxy y puede usar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta de servicio del agente para el proxy.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se modifica el número de reintentos para el primer paso del trabajo `Weekly Sales Data Backup`. Después de ejecutar este ejemplo, el número de reintentos es `10`.  
@@ -196,7 +196,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Ver o modificar trabajos](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
+ [Ver o modificar trabajos](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

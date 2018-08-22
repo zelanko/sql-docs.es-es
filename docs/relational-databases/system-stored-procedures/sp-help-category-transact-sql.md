@@ -1,5 +1,5 @@
 ---
-title: sp_help_category (Transact-SQL) | Documentos de Microsoft
+title: sp_help_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e131d1152c3deb2debf78a59686365b85953530
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a84cde301cf3c3db39f8df1999b9e4c39416c324
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254887"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395592"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,53 +50,53 @@ sp_help_category [ [ @class = ] 'class' ]
  [  **@class=**] **'***clase***'**  
  La clase sobre la que se solicita información. *clase* es **varchar (8)**, con un valor predeterminado de **trabajo**. *clase* puede ser uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**TRABAJO**|Proporciona información acerca de una categoría de trabajo.|  
 |**ALERTA**|Proporciona información acerca de una categoría de alerta.|  
 |**OPERADOR**|Proporciona información acerca de una categoría de operador.|  
   
  [  **@type=** ] **'***tipo***'**  
- Tipo de categoría cuya información se solicita. *tipo de* es **varchar (12)**, su valor predeterminado es null y puede tener uno de estos valores.  
+ Tipo de categoría cuya información se solicita. *tipo* es **varchar (12)**, su valor predeterminado es null, y puede tener uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**LOCAL**|Categoría de trabajo local.|  
 |**MULTI-SERVIDOR**|Categoría de trabajo multiservidor.|  
-|**NONE**|Categoría para una clase distinta de **trabajo**.|  
+|**NONE**|Categoría para una clase distinta **trabajo**.|  
   
  [  **@name=** ] **'***nombre***'**  
  Nombre de la categoría cuya información se solicita. *nombre* es **sysname**, su valor predeterminado es null.  
   
  [  **@suffix=** ] *sufijo*  
- Especifica si el **category_type** columna del conjunto de resultados es un identificador o un nombre. *sufijo* es **bits**, su valor predeterminado es **0**. **1** muestra la **category_type** como un nombre, y **0** muestra como un identificador.  
+ Especifica si el **category_type** columna del conjunto de resultados es un identificador o un nombre. *sufijo* es **bit**, su valor predeterminado es **0**. **1** muestra el **category_type** como un nombre, y **0** lo muestra como un identificador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Cuando **@suffix** es **0**, **sp_help_category** devuelve el siguiente conjunto de resultados:  
+ Cuando **@suffix** es **0**, **sp_help_category** devuelve el conjunto de resultados siguientes:  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Id. de categoría|  
 |**category_type**|**tinyint**|Tipo de categoría:<br /><br /> **1** = local<br /><br /> **2** = multiservidor<br /><br /> **3** = ninguno|  
 |**Nombre**|**sysname**|Nombre de la categoría|  
   
- Cuando **@suffix** es **1**, **sp_help_category** devuelve el siguiente conjunto de resultados:  
+ Cuando **@suffix** es **1**, **sp_help_category** devuelve el conjunto de resultados siguientes:  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Id. de categoría|  
 |**category_type**|**sysname**|Tipo de categoría. Uno de **LOCAL**, **MULTISERVIDOR**, o **NONE**|  
 |**Nombre**|**sysname**|Nombre de la categoría|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_help_category** se debe ejecutar desde la **msdb** base de datos.  
   
  Si no se especifica ningún parámetro, el conjunto de resultados proporciona información acerca de todas las categorías de trabajo.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -105,7 +105,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 -   **SQLAgentOperatorRole**  
   
- Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Ejemplos  
   

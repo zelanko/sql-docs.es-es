@@ -1,5 +1,5 @@
 ---
-title: Trabajar con SSMA para Sybase consola (SybaseToSQL) | Documentos de Microsoft
+title: Trabajar con SSMA para Sybase consola (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,33 +16,33 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1b498ad1e10815caa39b9c613e188015d48a7a4a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 028fa397959b62b1adba3d83448acb5ddde05d1d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779621"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393897"
 ---
-# <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Trabajar con SSMA para Sybase consola (SybaseToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA), versión de Sybase Adaptive Server Enterprise (ASE), ahora es accesible a través de una aplicación de consola en línea de comandos. Los archivos de script forman la entrada a la aplicación para ejecutar los comandos. Como una aplicación de consola, SSMA permite crear una interfaz de nivel de script, reduce el ciclo de migración y pasa el esfuerzo de migración.  
+# <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Consola de SSMA para Sybase (SybaseToSQL)
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA), versión para Sybase Adaptive Server Enterprise (ASE), ahora es accesible a través de una aplicación de consola en línea de comandos. La entrada a la aplicación para ejecutar los comandos de formulario de los archivos de script. Como una aplicación de consola, SSMA permite la comunicación de nivel de script, reduce el ciclo de migración y escala el esfuerzo de migración.  
   
-Esta sección explica el procedimiento para migrar la base de datos de ASE mediante la aplicación de consola SSMA.  
+Esta sección explica el procedimiento para migrar la base de datos de ASE mediante la aplicación de consola de SSMA.  
   
-Entre los temas tratados en esta sección se incluyen:  
+Los temas de esta sección incluyen:  
   
 |||  
 |-|-|  
 |**Temas**|**Descripción**|  
 |[Introducción a SSMA para Sybase consola &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md)|Explica el procedimiento para ejecutar la aplicación de consola.|  
 |[Opciones de línea de comandos en la consola SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md)|Describe las opciones de línea de comandos y parámetros para que funcione la aplicación de consola SSMA.|  
-|[Crear archivos de Script &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)|Explica cómo crear un archivo de script.|  
-|[Crear archivos de valor de la Variable &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)|Explica cómo crear un archivo de valores de variable.|  
-|[Crear los archivos de conexión de servidor &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)|Explica cómo crear un archivo de conexión de servidor.|  
-|[Ejecutar la consola SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)|Se describen los comandos del archivo de script para que funcione la aplicación de consola SSMA.|  
-|[Trabajar con los archivos de comandos de consola de ejemplo &#40;SybaseToSQL&#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)|Describe la forma de personalizar fácilmente los scripts que se han proporcionado en los archivos de ejemplo junto con el producto|  
-|[Administrar contraseñas &#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md)|Describe acerca del cifrado de contraseña y descifrado y obtener información de contraseña de importación / exportación.|  
-|[Generar informes &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)|Enumera los comandos para generar informes.|  
-|[Solución de problemas de &#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)|Proporciona una breve información acerca de cómo solucionar problemas de migración.|  
+|[Creación de archivos de Script &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)|Explica cómo crear un archivo de script.|  
+|[Creación de archivos de valor Variable &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)|Explica cómo crear un archivo de valores de variable.|  
+|[Creación de los archivos de conexión de servidor &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)|Explica cómo crear un archivo de conexión de servidor.|  
+|[Ejecución de la consola SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)|Describe la secuencia de comandos de archivo para que funcione la aplicación de consola SSMA.|  
+|[Trabajar con los archivos de Script de la consola de ejemplo &#40;SybaseToSQL&#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)|Describe la manera de personalizar con facilidad las secuencias de comandos que se han proporcionado en los archivos de ejemplo junto con el producto|  
+|[Administración de contraseñas &#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md)|Describe sobre cifrado de contraseña y el descifrado y la información de contraseña de importación / exportación.|  
+|[Generación de informes &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)|Enumera los comandos para generar informes.|  
+|[Solución de problemas &#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)|Proporciona información breve acerca de cómo solucionar problemas de migración.|  
   
 ## <a name="see-also"></a>Vea también  
 [Introducción a SSMA para Sybase Console(SybaseToSQL)](http://msdn.microsoft.com/en-us/43219dbe-bcfa-427d-9242-f07b1455f15f)  

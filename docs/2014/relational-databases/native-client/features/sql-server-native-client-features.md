@@ -1,11 +1,11 @@
 ---
-title: Características SQL Server Native Client | Microsoft Docs
+title: Características SQL Server Native Client | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +18,12 @@ caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76e7798edc0d11555d0281ff6c026f63f7ea3426
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ce15c9964eb7f0fe8dfc8338aba2499043ff7e77
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411314"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393501"
 ---
 # <a name="sql-server-native-client-features"></a>Características de SQL Server Native Client
   Además de exponer las características de Windows (Microsoft en versiones anteriores) Data Access Components (WDAC), [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa también muchas otras características para exponer la funcionalidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -74,7 +74,7 @@ ms.locfileid: "37411314"
  [Compatibilidad con FILESTREAM](filestream-support.md)  
  Describe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con la característica mejorada FILESTREAM.  
   
- [Nombre de entidad de servicio &#40;SPN&#41; compatibilidad en las conexiones de cliente](service-principal-name-spn-support-in-client-connections.md)  
+ [Compatibilidad con Nombre de entidad de seguridad de servicio &#40;SPN&#41; en conexiones cliente](service-principal-name-spn-support-in-client-connections.md)  
  Explica cómo se ha ampliado la compatibilidad con los nombres principales de servicio (SPN) para habilitar la autenticación mutua en todos los protocolos.  
   
  [Compatibilidad con columnas dispersas en SQL Server Native Client](sparse-columns-support-in-sql-server-native-client.md)  
@@ -90,7 +90,7 @@ ms.locfileid: "37411314"
  Describe un cambio de comportamiento presentado en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Si proporciona un búfer de longitud fija al enlazar un parámetro de salida o el resultado de una columna y si el carácter `wchar` escrito en el búfer antes del carácter de terminación es un punto de código que actúa como suplente superior de un par de suplentes y el carácter `wchar` siguiente es un punto de código que actúa como suplente inferior, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client no agregará al búfer el punto de código que actúa como suplente superior.  
   
  [Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres](sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
- Describe cómo se puede configurar la aplicación para aprovechar las ventajas de la recuperación ante desastres de alta disponibilidad y funciones de agregan en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+ Describe cómo se puede configurar una aplicación para aprovechar las características de alta disponibilidad con recuperación ante desastres que se han agregado en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
  [Obtener acceso a información de diagnóstico en el registro de eventos extendidos](accessing-diagnostic-information-in-the-extended-events-log.md)  
  Describe las mejoras realizadas en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y en el seguimiento de datos que le ofrecen acceso a la información de diagnóstico del búfer de anillo y del registro de XEvents.  

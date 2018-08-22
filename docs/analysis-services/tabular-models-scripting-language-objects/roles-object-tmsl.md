@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 375a0f62bbf482a7c033d235836ea64b78cb2da2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 19da91838703adc4ae224a645e1f0a6e65fe032c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983877"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393509"
 ---
-# <a name="roles-object-tmsl"></a>Objeto roles (TMSL)
+# <a name="roles-object-tmsl"></a>Objeto Roles (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Define un rol en el modelo que especifica una colección de permisos. Pertenencia a roles consta de los principios de seguridad de Windows. Puede establecer filtros en un rol para restringir el acceso a objetos específicos.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "38983877"
                   y administrador. Consulte [Roles y permisos &#40;Analysis Services&#41; ](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md) para obtener información acerca de los permisos de base de datos.  
   
  miembros  
- Miembros que se componen de un nombre de miembro y el Id., donde el nombre del miembro es el alias o nombre descriptivo de un principio de seguridad de Windows, y el identificador es el identificador de seguridad. Se especifican en la definición de roles. Consulte [componentes SID](https://msdn.microsoft.com/library/windows/desktop/aa379597\(v=vs.85\).aspx) para obtener más información acerca de los identificadores.  
+ Miembros que se componen de un nombre de miembro y el Id., donde el nombre del miembro es el alias o nombre descriptivo de un principio de seguridad de Windows, y el identificador es el identificador de seguridad. Se especifican en la definición de roles. Consulte [componentes SID](/windows/desktop/SecAuthZ/sid-components) para obtener más información acerca de los identificadores.  
   
  permisos de tabla  
  Un permiso de tabla es un objeto con los permisos definidos a través de una expresión DAX con nombre. Esta propiedad es opcional, usa para aplicar un filtro de seguridad.  

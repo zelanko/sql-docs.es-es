@@ -1,8 +1,8 @@
 ---
-title: Novedades de SSMA para MySQL (MySQLToSql) | Documentos de Microsoft
+title: Novedades de SSMA para MySQL (MySQLToSql) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 03/01/2018
+ms.date: 08/14/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -16,88 +16,107 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d818a1ce31d752898d5d1ebde5a27addbedd91ad
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ad86fed5cfa7eab443ce214cb7cc0965fd7062b8
+ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776681"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394519"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Novedades de SSMA para MySQL (MySQLToSql)
-Este tema enumeran SSMA para cambios de MySQL en cada versión. 
+En este artículo se enumera SSMA para MySQL cambios en cada versión. 
+
+## <a name="ssma-v79"></a>SSMA v7.9
+La versión de v7.9 de SSMA para MySQL contiene los siguientes cambios:
+- Correcciones de destino que mejoran las métricas de calidad y la conversión.
+- Compatibilidad parcial con tipos de datos espaciales migración desde MySQL a Azure SQL Database.
+- Soporte técnico en línea de comandos SSMA para modificar la asignación de tipos de datos y las preferencias del proyecto.
+- Soporte técnico para migrar datos mediante SQL Server Integration Services (SSIS). Después de convertir el esquema, es posible crear un paquete SSIS mediante una opción del menú contextual.
+- El cuadro de diálogo de conexión de Azure SQL Database de SSMA también se ha modificado para especificar el nombre completo del servidor. En versiones anteriores de SSMA, el prefijo de la base de datos de SQL Azure se tenía que se menciona explícitamente dentro de la configuración de proyectos.
+
+> [!IMPORTANT]
+> Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación.
+
+## <a name="ssma-v78"></a>SSMA v7.8
+La versión de v7.8 de SSMA para MySQL contiene los siguientes cambios:
+- Asignación de tipo de cambio resaltado en la configuración del proyecto.
+- Proporciona la capacidad de los usuarios deshabilitar la telemetría.
+
+> [!IMPORTANT]
+> Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación.
 
 ## <a name="ssma-v77"></a>SSMA v7.7
 La versión de v7.7 de SSMA para MySQL contiene los siguientes cambios:
 - SSMA para MySQL se ha mejorado con correcciones de destino que mejoran las métricas de calidad y la conversión.
-- Según la gran demanda existente, la versión de 32 bits de SSMA para MySQL es volver. En comparación con la implementación anterior (anterior a v7.4), hay dos paquetes de instalador, pero no se puede instalar en paralelo. Como resultado, debe elegir la versión más adecuada en función de los componentes de conectividad que tiene. Siempre es preferible utilizar la versión de 64 bits, si es posible.
-- SSMA para MySQL tiene ahora el modo de conexión de la cadena de conexión ODBC, que le permite usar los controladores ODBC de otros fabricantes que es compatible con MySQL.
+- Según la demanda popular, es volver la versión de 32 bits de SSMA para MySQL. En comparación con la implementación anterior (anterior a v7.4), hay dos paquetes de instalador, pero no se puede instalar en paralelo. Como resultado, debe elegir la versión más adecuada en función de los componentes de conectividad que tiene. Siempre es preferible usar la versión de 64 bits, si es posible.
+- SSMA para MySQL ahora tiene el modo de conexión de la cadena de conexión ODBC, que le permite usar los controladores ODBC de terceros que son compatibles con MySQL.
 
 > [!IMPORTANT]
 > Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación.
 
 ## <a name="ssma-v76"></a>SSMA v7.6
-Se ha mejorado la versión v7.6 de SSMA para MySQL con correcciones de destino que mejoran las métricas de calidad y la conversión y con el soporte para SQL Server 2017 (vista previa pública). Compatibilidad con SQL Server 2017 en Windows y Linux se encuentra en versión preliminar pública y no debe usarse para las migraciones de producción.
+Se ha mejorado la versión de v7.6 de SSMA para MySQL con correcciones de destino que mejoran la calidad y la conversión de las métricas y con compatibilidad con SQL Server 2017 (versión preliminar pública). Compatibilidad con SQL Server 2017 en Windows y Linux en versión preliminar pública y no debe usarse para las migraciones de producción.
 
 > [!IMPORTANT]
-> Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación y se ha cancelado la versión de 32 bits de la herramienta.
+> Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación y se ha dejado de usar la versión de 32 bits de la herramienta.
 
-## <a name="ssma-v75"></a>SSMA 7.5
-La versión 7.5 de SSMA para MySQL se ha mejorado con varias mejoras para garantizar una mayor accesibilidad para personas con discapacidades.
+## <a name="ssma-v75"></a>SSMA v7.5
+La versión 7.5 de SSMA para MySQL se ha mejorado con varias mejoras para garantizar mayor accesibilidad para personas con discapacidades.
 
 > [!IMPORTANT]
-> .NET 4.5.2 es un requisito previo para la instalación de SSMA 7.5. Además, a partir de v7.4, la versión de 32 bits de SSMA se está suspendida.
+> .NET 4.5.2 es un requisito previo para la instalación de SSMA v7.5. Además, a partir de v7.4, la versión de 32 bits de SSMA está en desuso.
 
 ## <a name="ssma-v74"></a>SSMA v7.4
 La versión v7.4 de SSMA para MySQL contiene los siguientes cambios:
-- El **tiempo de espera de consulta** opción ahora está disponible durante la detección de objetos de esquema en el origen y de destino.
+- El **tiempo de espera de consulta** opción ahora está disponible durante la detección de objetos de esquema de origen y destino.
 ![opción de tiempo de espera de consulta](../media/query-timeout_red.png)
-- La métrica de calidad y la conversión se ha mejorado con correcciones de destino, en función de los comentarios de clientes.
+- La métrica de calidad y la conversión se ha mejorado con correcciones de destino, según los comentarios recibidos.
 
 > [!IMPORTANT]
-> .NET 4.5.2 es un requisito previo para la instalación de SSMA v7.4. Además, a partir de v7.4, la versión de 32 bits de SSMA se está suspendida. 
+> .NET 4.5.2 es un requisito previo para la instalación de SSMA v7.4. Además, a partir de v7.4, la versión de 32 bits de SSMA está en desuso. 
 
 ## <a name="ssma-v73"></a>SSMA v7.3
 La versión v7.3 de SSMA para MySQL contiene los siguientes cambios:
-- Métrica de calidad y la conversión mejorada con correcciones de destino en función de los comentarios de clientes.
+- Métrica de calidad y la conversión mejorada con correcciones de destino según los comentarios recibidos.
 - Marco de extensibilidad SSMA expuesta a través de los siguientes elementos:
   - Funcionalidad de exportación a un proyecto de SQL Server Data Tools (SSDT).
-    -   Ahora puede exportar las secuencias de comandos de esquema de SSMA para un proyecto de SSDT. Puede utilizar las secuencias de comandos de esquema para realizar cambios de esquema adicionales e implementar la base de datos.
+    -   Ahora puede exportar las secuencias de comandos de esquema de SSMA para un proyecto de SSDT. Puede usar los scripts de esquema para realizar cambios de esquema adicional e implementar la base de datos.
 ![Guardar como comando de proyecto SSDT](../media/export-schema-scripts_red.png)
-  - Bibliotecas que pueden utilizarse SSMA para realizar conversiones personalizadas.
-    - Ahora puede construir código que puede controlar las conversiones de sintaxis personalizados y las conversiones que antes no estaban realizaba SSMA.
-      - Las instrucciones sobre cómo construir un convertidor personalizado están disponibles en esta entrada de blog, [funciones de conversión del ampliación de SQL Server Migration Assistant](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
+  - Bibliotecas que pueden utilizarse en SSMA para realizar conversiones personalizadas.
+    - Ahora se puede crear código que pueda controlar las conversiones de sintaxis personalizada y las conversiones que antes no estaban controlaba SSMA.
+      - Las instrucciones sobre cómo construir un convertidor personalizado están disponibles en esta entrada de blog, [funciones de conversión de ampliación de SQL Server Migration Assistant](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
       - Proyecto de ejemplo para la conversión se puede descargar este [entrada de blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
 ## <a name="ssma-v72"></a>SSMA v7.2
 La versión de v7.2 de SSMA para MySQL contiene los siguientes cambios:
-- Métrica de calidad y la conversión mejorada con correcciones de destino en función de los comentarios de clientes.
+- Métrica de calidad y la conversión mejorada con correcciones de destino según los comentarios recibidos.
 - Mejoras de telemetría para proporcionar una mejor puntos de datos para solucionar problemas de los clientes y mejorar las tasas de conversión de SSMA.
 
 ## <a name="ssma-v71"></a>SSMA v7.1
 La versión 7.1 de SSMA para Access contiene los siguientes cambios:
-- 2017 de SQL Server en Windows y Linux CTP1 ahora es una plataforma de destino admitida para la migración. Esta característica está en versión preliminar técnica y permite el movimiento de datos y el esquema para servidores SQL Server de destino.
-- SSMA ahora es compatible con las actualizaciones automáticas para descargar la versión más reciente de SSMA tan pronto como está disponible.
+- SQL Server 2017 en Windows y Linux CTP1 ahora es una plataforma de destino admitida para la migración. Esta característica está en versión preliminar técnica y permite el movimiento de datos y esquema para servidores SQL Server de destino.
+- SSMA ahora es compatible con las actualizaciones automáticas para descargar la versión más reciente de SSMA en cuanto está disponible.
 - Archivos binarios de instalación de SSMA ahora se entregan a través de los archivos de paquete de Windows installer (.msi).
 
 **Recursos**
 
-[Amplía las capacidades de SQL Server Migration Assistant conversión](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)
+[Funciones de conversión de SQL Server Migration Assistant de ampliación](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)
 
-[Evaluar y migrar datos de plataformas de datos no sean de Microsoft para SQL Server *(con el ejemplo de Oracle)*](https://blogs.msdn.microsoft.com/datamigration/2016/11/16/sql-server-migration-assistant-how-to-assess-and-migrate-databases-from-non-microsoft-data-platforms-to-sql-server/) 
+[Evaluar y migrar datos desde las plataformas de datos que no sea Microsoft SQL Server *(con el ejemplo de Oracle)*](https://blogs.msdn.microsoft.com/datamigration/2016/11/16/sql-server-migration-assistant-how-to-assess-and-migrate-databases-from-non-microsoft-data-platforms-to-sql-server/) 
 
 ## <a name="may-2016"></a>Mayo de 2016  
 La versión de mayo de 2016 de SSMA para MySQL contiene los siguientes cambios:.
 
 -  Se agregó compatibilidad para SQL Server 2016.
--  Analizador mejorada y resolución.
--  Quita la comprobación de instalador para .net 2.0.
--  Dependencia del módulo de extensión actualizada desde .net 3.5 a .net 4.0.
+-  Analizador mejorada y la resolución.
+-  Quitar la comprobación de instalador para .net 2.0.
+-  Dependencia del módulo de extensión actualizado de .net 3.5 a .net 4.0.
 -  Valor predeterminado fijo BigInt typemapping para MySql.
--  Fija "guardar el proyecto" y "Abrir proyecto" comandos de consola SSMA.
--  Se ha corregido "securepassword" comando de consola SSMA.
+-  Se ha corregido "guardar el proyecto" y "open project" comandos para la consola SSMA.
+-  Se ha corregido el comando "securepassword" para la consola SSMA.
 -  Se ha corregido el recuento de objetos para la carga inicial.
--  Cargar los objetos MsSql fijos.
--  Ha corregido el error en configuración global.
+-  Cargando los objetos MsSql fijos.
+-  Se corrigió el error en la configuración global.
  
 ## <a name="march-2016"></a>Marzo de 2016  
 La versión de vista previa de marzo de 2016 de SSMA para MySQL contiene los siguientes cambios:  
@@ -107,44 +126,44 @@ La versión de vista previa de marzo de 2016 de SSMA para MySQL contiene los sig
 ## <a name="january-2016"></a>Enero de 2016  
 La versión de mantenimiento de enero de 2016 de SSMA para MySQL contiene los siguientes cambios:  
   
--  Vista ha agregado el elemento de menú de registro para SSMA (RFC 5706203).  
--  Telemetría agregada.  
+-  La vista se ha agregado el elemento de menú de registro para SSMA (RFC 5706203).  
+-  Se ha agregado telemetría.  
   
 ## <a name="july-2014"></a>Julio de 2014  
 La versión de julio de 2014 de SSMA para MySQL contiene los siguientes cambios:  
   
--  Conversión de código de base de datos de SQL Azure mejorada. 
--  Funcionalidad del módulo de extensión se movió al esquema para admitir la base de datos de SQL Azure.  
+-  Conversión de código de Azure SQL DB mejorada. 
+-  Funcionalidad del módulo de extensión se mueve al esquema para admitir la base de datos de SQL Azure.  
 -  Mejoras de rendimiento habían probado para bases de datos con más de 10k objetos.  
--  Mejoras de la interfaz de usuario para trabajar con un gran número de objetos.  
--  El resaltado de los esquemas LOB "conocidos" (de manera que puede hacer caso omiso de conversión).  
--  Mejoras de la velocidad de conversión.  
--  Mostrar recuentos de objetos de interfaz de usuario.  
--  Reducción del tamaño de informe por más de 25%.  
--  Mensajes de error mejorados para estructuras sin analizar.  
+-  Mejoras de la interfaz de usuario para tratar con un gran número de objetos.  
+-  Resaltado de esquemas LOB "conocidos" (por lo que se pueden omitir en la conversión).  
+-  Mejoras de velocidad de conversión.  
+-  Mostrar recuentos de objetos en la interfaz de usuario.  
+-  Reducción del tamaño de informes en más del 25%.  
+-  Mensajes de error mejorados para construcciones sin analizar.  
   
 ## <a name="april-2014"></a>Abril de 2014  
 La versión de julio de 2011 de SSMA para MySQL contiene los siguientes cambios:  
   
 -  Se agregó compatibilidad de MS SQL Server 2014.  
--  Los errores corregidos en relación con la conversión a Azure  
--  Los errores corregidos en relación con páginas de informe invisible en Internet Explorer 10.  
+-  Errores corregidos con respecto a la conversión a Azure  
+-  Errores corregidos con respecto a las páginas de informe invisible en Internet Explorer 10.  
   
 ## <a name="july-2011"></a>Julio de 2011  
 La versión de julio de 2011 de SSMA para MySQL contiene los siguientes cambios:  
   
--   Admite la conversión de límite en cuanto al [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] desplazamiento "Denali".  
--   Notificación durante la migración de datos de errores mejorada.  
+-   Admite la conversión del límite a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desplazamiento "Denali".  
+-   Durante la migración de datos de informes de errores mejorado.  
   
 ## <a name="april-2011"></a>Abril de 2011  
 La versión de abril de 2011 de SSMA para MySQL contiene los siguientes cambios:  
   
--   Único instalable de "SSMA para MySQL", que es compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] "Denali" y SQL Azure.  
--   La capacidad de conectar [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] "Denali".  
--   Motor de migración de datos de cliente mejorado, admitir la migración de paralelo de datos.  
--   Rendimiento de la migración de datos mejorada con simples y de forma masiva registra los modelos de recuperación.  
--   SSMA para la versión de la consola de MySQL admite compatibilidad con versiones anteriores. Puede abrir los proyectos creados con versiones anteriores a v5.0 SSMA.  
--   SSMA para MySQL v5.0 producto puede ser instalado en paralelo (SxS) con las versiones anteriores del producto SSMA.  
+-   Solo puede instalar "SSMA para MySQL", que es compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali" y SQL Azure.  
+-   La posibilidad de conectar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "Denali".  
+-   Motor de migración mejorada de los datos del lado cliente, que admiten la migración paralela de datos.  
+-   Rendimiento de la migración de datos mejorada con Simple y masiva registra los modelos de recuperación.  
+-   SSMA para la versión de la consola de MySQL es compatible con la compatibilidad con versiones anteriores. Puede abrir los proyectos creados con versiones anteriores a v5.0 SSMA.  
+-   SSMA para MySQL v5.0 producto puede ser instalado en paralelo (SxS) con versiones anteriores del producto SSMA.  
   
 ## <a name="july-2010"></a>Julio de 2010  
 La versión de julio de 2010 de SSMA para MySQL contiene las siguientes características:  
@@ -152,41 +171,41 @@ La versión de julio de 2010 de SSMA para MySQL contiene las siguientes caracter
 1.  **Mejoras en la interfaz de usuario:**  
   
     -   Pestaña "Modos de SQL" para los objetos de base de datos MySQL  
-    -   Ficha "Configuración" para los objetos de base de datos MySQL  
-    -   Pestaña de "Datos" para las tablas de MySQL  
-    -   Configuración del proyecto actualizado en la conversión y páginas de migración  
+    -   Pestaña "Configuración" para los objetos de base de datos MySQL  
+    -   Pestaña 'Data' para las tablas de MySQL  
+    -   Configuración del proyecto actualizado en la conversión y las páginas de la migración  
     -   "Configuración de migración de datos" en el nivel de tabla  
   
-2.  **Mejoras para conectarse a SQL Server y MySQL:**  
+2.  **Mejoras para conectarse a MySQL y SQL Server:**  
   
-    -   Conectividad SSL de MySQL  
-    -   Cifrado conectividad en SQL Server  
+    -   Conectividad SSL en MySQL  
+    -   Conexión cifrada en SQL Server  
   
-3.  **Mejoras en el Explorador de Metabase de MySQL:**  
+3.  **Mejoras en el Explorador de la Metabase de MySQL:**  
   
-    -   Cargar todos los objetos de base de datos MySQL y sus respectivas fichas.  
+    -   Carga de todos los objetos de base de datos MySQL y sus respectivas fichas.  
   
-4.  **Mejoras en la conversión de objetos:**  
+4.  **Mejoras para la conversión de objeto:**  
   
-    -   Conversión de objetos de la MySQL Metabase, procedimientos, funciones, vistas, desencadenadores y las instrucciones.  
-    -   Compatibilidad limitada para los tipos de datos espaciales en tablas.  
+    -   Conversión de objetos de la MySQL Metabase: procedimientos, funciones, vistas, desencadenadores y las instrucciones.  
+    -   Compatibilidad limitada para los tipos de datos espaciales en las tablas.  
     -   Opción para convertir las funciones de MySQL a procedimientos almacenados de SQL Server  
-    -   Opción para aplicar la asignación de conjunto de caracteres y modos de SQL durante la conversión de objetos  
+    -   Opción para aplicar la asignación de juego de caracteres y modos de SQL durante la conversión de objeto  
   
 5.  **Mejoras en la migración de datos:**  
   
-    -   Soporte para la migración de datos mediante motores de migración de datos de cliente y servidor  
+    -   Compatibilidad con la migración de datos mediante motores de migración de datos del lado cliente y servidor  
     -   Compatibilidad con la migración de datos espaciales  
-    -   SQL personalizada para la migración de datos para tablas  
+    -   SQL personalizado para la migración de datos para las tablas  
   
 6.  **SSMA para la consola de MySQL:**  
   
-    -   Compatibilidad con características de consola SSMA para MySQL  
-    -   Compatibilidad para crear una interfaz de nivel de Script  
+    -   Compatibilidad con característica de consola de SSMA para MySQL  
+    -   Compatibilidad con interfaz a nivel de secuencia de comandos  
   
 ## <a name="january-2010"></a>Enero de 2010  
-La versión de enero de 2010 de SSMA para MySQL fue la versión inicial. Contiene las siguientes características:  
+La versión de enero de 2010 de SSMA para MySQL fue la versión inicial. Incluyen las siguientes características:  
   
--   Ha agregado compatibilidad para migración tanto local de SQL Server y SQL Azure.  
+-   Se ha agregado compatibilidad para la migración a ambos local SQL Server y SQL Azure.  
   
--   **Característica de instantánea:** migración de datos y esquema de MySQL tablas o índices y restricciones.
+-   **Característica de instantánea:** esquema y los datos de migración de MySQL tablas/índices y restricciones.

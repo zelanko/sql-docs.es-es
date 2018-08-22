@@ -5,7 +5,7 @@ ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,19 +17,19 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c7eec938ad1b94286b986d3897e9935763dcd108
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: b3bc95c58caafc0f1aa60c0d02b1c53c09b0c712
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422374"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394755"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>Compatibilidad con columnas dispersas en SQL Server Native Client
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite las columnas dispersas. Para obtener más información sobre las columnas dispersas en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [usar columnas dispersas](../../tables/use-sparse-columns.md) y [usar conjuntos de columnas](../../tables/use-column-sets.md).  
   
  Para obtener más información sobre columnas dispersas compatibilidad en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, vea [las columnas dispersas admiten &#40;ODBC&#41; ](../odbc/sparse-columns-support-odbc.md) y [las columnas dispersas admiten &#40;OLE DB&#41; ](../ole-db/sparse-columns-support-ole-db.md) .  
   
- Para obtener información acerca de las aplicaciones de ejemplo que muestran esta característica, consulte [ejemplos de programación de datos de SQL Server](http://msftdpprodsamples.codeplex.com/).  
+ Para obtener información sobre las aplicaciones de ejemplo que muestran esta característica, vea [Ejemplos de programación de datos de SQL Server](http://msftdpprodsamples.codeplex.com/).  
   
 ## <a name="user-scenarios-for-sparse-columns-and-sql-server-native-client"></a>Escenarios de usuarios de columnas dispersas y SQL Server Native Client  
  En la tabla siguiente se resumen los escenarios comunes de usuario para los usuarios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con columnas dispersas:  

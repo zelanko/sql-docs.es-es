@@ -13,19 +13,19 @@ caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: bd1bc616c3a897f0c7b3b3ea4fda256b240f75ab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e9f17e76dca1f5f3266908ed8f009161cf1d829
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155426"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396388"
 ---
 # Guía de diseño de índices de SQL Server
   Los índices mal diseñados y la falta de índices constituyen las principales fuentes de atascos en aplicaciones de base de datos. El diseño eficaz de los índices tiene gran importancia para conseguir un buen rendimiento de una base de datos y una aplicación. Esta guía de diseño de índices de SQL Server contiene información y prácticas recomendadas que le ayudarán a diseñar índices eficaces que resuelvan las necesidades de la aplicación.  
   
 **Se aplica a**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] a través de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] a menos que se indique lo contrario.  
   
- En esta guía se da por supuesto que el lector tiene información general sobre los tipos de índice disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener una descripción general de los tipos de índice, vea [Tipos de índice](http://msdn.microsoft.com/library/ms175049.aspx).  
+ En esta guía se da por supuesto que el lector tiene información general sobre los tipos de índice disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener una descripción general de los tipos de índice, vea [Tipos de índice](../relational-databases/indexes/indexes.md).  
   
 ##  <a name="Top"></a> En esta guía  
  [Conceptos básicos del diseño de índices](#Basics)  
@@ -171,7 +171,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  El siguiente plan de ejecución para esta consulta muestra que el optimizador de consultas utilizó un operador SORT para devolver el conjunto de resultados en el orden especificado mediante la cláusula ORDER BY.  
   
- ![Plan de ejecución muestra un criterio de ordenación que se utiliza el operador. ] (media/indexsort1.gif "Plan de ejecución muestra un criterio de ordenación se utiliza el operador.")  
+ ![Plan de ejecución muestra un criterio de ordenación que se utiliza el operador. ](media/indexsort1.gif "Plan de ejecución muestra un criterio de ordenación se utiliza el operador.")  
   
  Si se crea un índice con columnas de clave que coincidan con las de la cláusula ORDER BY de la consulta, se puede eliminar el operador SORT del plan de consultas y éste resulta más eficaz.  
   

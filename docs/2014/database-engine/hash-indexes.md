@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f4bdc9c1-7922-4fac-8183-d11ec58fec4e
@@ -14,19 +13,19 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2c2b4c055eea6aef2e7825ee6589c6611ceaf7a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 04cc9e0bea00d1eb2bc542a996ff4bc39e1009f2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295235"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392871"
 ---
 # <a name="hash-indexes"></a>Índices hash
   Los índices se utilizan como puntos de entrada para las tablas optimizadas para memoria. Leer filas de una tabla requiere un índice para buscar los datos en la memoria.  
   
  Un índice hash consta de una colección de cubos organizados en una matriz. Una función hash asigna las claves de índice a los cubos correspondientes en el índice hash. La ilustración siguiente muestra las tres claves de índice que se asignan a tres cubos distintos en el índice hash. Con fines meramente ilustrativos, el nombre de función hash es f(x).  
   
- ![Claves de índice asignadas a diferentes cubos. ] (../../2014/database-engine/media/hekaton-tables-2.gif "Claves asignadas a diferentes cubos de índice.")  
+ ![Claves de índice asignadas a diferentes cubos. ](../../2014/database-engine/media/hekaton-tables-2.gif "Claves asignadas a diferentes cubos de índice.")  
   
  La función hash que se utiliza para los índices hash tiene las siguientes características:  
   
@@ -44,7 +43,7 @@ ms.locfileid: "37295235"
   
  La estructura de índice hash en memoria consta de una matriz de punteros de memoria. Cada cubo asigna un desplazamiento en esta matriz. Cada cubo de la matriz señala a la primera fila del cubo de hash. Cada fila del cubo señala a la siguiente fila, por lo que genera una cadena de filas para cada cubo de hash, como se muestra en la ilustración siguiente.  
   
- ![La estructura del índice hash en memoria. ] (../../2014/database-engine/media/hekaton-tables-3.gif "La estructura del índice hash en memoria.")  
+ ![La estructura del índice hash en memoria. ](../../2014/database-engine/media/hekaton-tables-3.gif "La estructura del índice hash en memoria.")  
   
  La ilustración tiene tres cubos con filas. El segundo cubo de la parte superior contiene las tres filas rojas. El cuarto cubo contiene la única fila azul. El cubo inferior contiene las dos filas verdes. Estas podrían ser versiones diferentes de la misma fila.  
   

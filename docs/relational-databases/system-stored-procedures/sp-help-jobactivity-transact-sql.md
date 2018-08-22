@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobactivity (Transact-SQL) | Documentos de Microsoft
+title: sp_help_jobactivity (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 648fb94f5a14365356a293f6fb0652336ca0625b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: de55ccede25cbfffd1930cfbb9088b9de1394ff0
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259405"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394126"
 ---
 # <a name="sphelpjobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  Nombre del trabajo. *job_name*es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
->  Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
+>  Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
   
  [ **@session_id** =] *session_id*  
  Identificador de sesión sobre el que se proporcionará información. *session_id* es **int**, su valor predeterminado es null.  
@@ -63,7 +63,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Devuelve el siguiente conjunto de resultados:  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|Número de identificación de la sesión del Agente.|  
 |**job_id**|**uniqueidentifier**|Identificador del trabajo.|  
@@ -75,24 +75,24 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**last_executed_step_id**|**int**|Identificado de paso del paso de trabajo ejecutado más recientemente.|  
 |**last_exectued_step_date**|**datetime**|Momento en que comenzó a ejecutarse el paso de trabajo ejecutado más recientemente.|  
 |**stop_execution_date**|**datetime**|Momento en el que el trabajo dejó de ejecutarse.|  
-|**next_scheduled_run_date**|**datetime**|Cuando el trabajo se ha programado la próxima a ejecutar.|  
+|**next_scheduled_run_date**|**datetime**|Cuando el trabajo a continuación está programado para ejecutarse.|  
 |**job_history_id**|**int**|Identificador del historial de trabajos en la tabla del historial de trabajos.|  
 |**message**|**nvarchar(1024)**|Mensaje generado durante la última ejecución del trabajo.|  
 |**run_status**|**int**|Estado devuelto en la última ejecución del trabajo:<br /><br /> **0** = error de error<br /><br /> **1** = se ha realizado correctamente<br /><br /> **3** = cancelado<br /><br /> **5** = estado desconocido|  
 |**operator_id_emailed**|**int**|Número de Id. del operador notificado a través de correo electrónico al término del trabajo.|  
-|**operator_id_netsent**|**int**|Número de identificación del operador notificado a través de **mediante net send** al término del trabajo.|  
+|**operator_id_netsent**|**int**|Número de identificación del operador notificado a través de **net send** al término del trabajo.|  
 |**operator_id_paged**|**int**|Número de Id. del operador notificado a través de buscapersonas al término del trabajo.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este procedimiento proporciona una instantánea del estado actual de los trabajos. Los resultados devueltos representan la información disponible en el momento de procesar la solicitud.  
   
  El Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un Id. de sesión cada vez que se inicia el servicio del Agente. El identificador de sesión se almacena en la tabla **msdb.dbo.syssessions**.  
   
- Si no *session_id* se proporciona, se muestra información acerca de la sesión más reciente.  
+ Cuando no hay ninguna *session_id* se proporciona, se muestra información acerca de la sesión más reciente.  
   
- Si no *job_name* o *job_id* se proporciona, se muestra información de todos los trabajos.  
+ Cuando no hay ninguna *job_name* o *job_id* se proporciona, se muestra información de todos los trabajos.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -101,7 +101,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Solo los miembros del **sysadmin** puede ver la actividad de trabajos que pertenecen a otros usuarios.  
   

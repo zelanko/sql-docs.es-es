@@ -1,5 +1,5 @@
 ---
-title: Execute (método) (RDS) | Documentos de Microsoft
+title: Execute (método) (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,18 +17,18 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 488b4056ca768cfae943558aefc9922bd1a16368
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9da5eafd3533e4384a5c7e40e6e81691ede173e9
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288197"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40394099"
 ---
 # <a name="execute-method-rds"></a>Execute (método) (RDS)
-Ejecuta la solicitud y crea un conjunto de registros de ADO para su uso en ADO 2.5 y versiones posteriores.  
+Ejecuta la solicitud y crea un conjunto de registros ADO para su uso en ADO 2.5 y versiones posteriores.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar a [servicio de datos de WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,16 +38,16 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *connectionString*  
- Una cadena que se utiliza para conectar con el proveedor OLE DB donde se enviará la solicitud para su ejecución. Si se especifica utilizando un controlador *HandlerString* puede modificar o reemplazar la cadena de conexión.  
+ *ConnectionString*  
+ Cadena utilizada para conectarse al proveedor OLE DB donde se enviará la solicitud para su ejecución. Si se especifica utilizando un controlador *HandlerString* puede modificar o reemplazar la cadena de conexión.  
   
  *HandlerString*  
- Una cadena de dos partes que identifica el controlador que se usarán con esta ejecución. La cadena consta de dos partes. La primera parte contiene el nombre (ProgID) del controlador que se usará. La segunda parte contiene argumentos que se pasan al controlador. Los detalles de cómo se interpreta la cadena de argumentos son específicos para cada controlador. Las dos partes se separan mediante la primera instancia de una coma en la cadena. La cadena de argumentos puede contener comas adicionales. Los argumentos son opcionales.  
+ Una cadena de dos partes que identifica el controlador que se usará con esta ejecución. La cadena contiene dos partes. La primera parte contiene el nombre (ProgID) del controlador que se usará. La segunda parte contiene argumentos que se pasarán al controlador. Los detalles de cómo se interpreta la cadena de argumentos son específicos para cada controlador. Las dos partes se separan con la primera instancia de una coma en la cadena. La cadena de argumentos puede contener comas adicionales. Los argumentos son opcionales.  
   
  *Cadena de consulta*  
- Un comando en el lenguaje de comandos admitido por el proveedor OLE DB identificado en la cadena de conexión. Para los proveedores basados en SQL, *QueryString* puede contener una instrucción de comando de Transact-SQL, pero para los proveedores no son de SQL (por ejemplo, MSDataShape) no puede ser un [!INCLUDE[tsql](../../../includes/tsql_md.md)] instrucción de consulta.  
+ Un comando en el lenguaje de comandos admitido por el proveedor OLE DB identificado en la cadena de conexión. Para los proveedores basados en SQL, *QueryString* podría contener una instrucción de comando de Transact-SQL, pero para los proveedores que no son de SQL (por ejemplo, MSDataShape) no puede ser un [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucción de consulta.  
   
- Si se utiliza un controlador, el controlador puede modificar o reemplazar el valor especificado aquí. Por ejemplo, el controlador normalmente reemplaza *QueryString* con una cadena de consulta mediante el archivo. ini. De forma predeterminada, se utiliza el archivo Msdfmap.ini.  
+ Si se utiliza un controlador, el controlador puede modificar o reemplazar el valor especificado aquí. Por ejemplo, el controlador normalmente reemplaza *QueryString* con una cadena de consulta mediante el archivo. ini. De forma predeterminada, se usa el archivo Msdfmap.ini.  
   
  *lFetchOptions*  
  Indica el tipo de recuperación asincrónica.  
@@ -55,7 +55,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  Para obtener más información, consulte [propiedad FetchOptions (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md).  
   
  *TableID*  
- A **Variant** de tipo VT_EMPTY o VT_BSTR. Si este valor es de tipo VT_EMPTY, se omite. Si es de tipo VT_BSTR, el conjunto de registros se crea mediante **adCmdTableDirect** y el valor especificado aquí y *QueryString* parámetro se ignora.  
+ Un **Variant** del tipo VT_EMPTY o VT_BSTR. Si este valor es de tipo VT_EMPTY, se omite. Si es de tipo VT_BSTR, se crea el conjunto de registros mediante **adCmdTableDirect** y el valor especificado aquí y *QueryString* parámetro se omite.  
   
  *lExecuteOptions*  
  Una máscara de bits de las opciones de ejecución:  
@@ -64,25 +64,25 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
   
  2 =*NoBatch* se abrirá el conjunto de registros mediante el uso de **adLockOptimistic**.  
   
- 4 =*AllParamInfoSupplied* el llamador garantiza que la información de parámetro para todos los parámetros se proporciona en *pParameters*.  
+ 4 =*AllParamInfoSupplied* el llamador garantiza que se proporciona información de parámetros para todos los parámetros en *pParameters*.  
   
- 8 =*GetInfo* información de parámetros para la consulta se obtenido del proveedor de OLE DB y se devolverá en el *pParameters* parámetro. No se ejecuta la consulta y no se devuelve ningún conjunto de registros.  
+ 8 =*GetInfo* información de parámetros para la consulta se obtenido del proveedor OLE DB y se devolverá en la *pParameters* parámetro. No se ejecuta la consulta y no se devuelve ningún conjunto de registros.  
   
  16 =*GetHiddenColumns* se abrirá el conjunto de registros mediante el uso de **adLockBatchOptimistic** y las columnas ocultas se incluirán en el conjunto de registros.  
   
- *ReadOnly*, *NoBatch* y *GetHiddenColumns* son opciones mutuamente excluyentes; sin embargo, no genera un error para establecer más de uno de ellos. Si se establecen varias opciones, *GetHiddenColumns* tiene prioridad sobre todos los demás, seguido de *ReadOnly*. Si no se especifica ninguna opción, de forma predeterminada, se abre el conjunto de registros mediante **adLockBatchOptimistic** y las columnas ocultas no se incluyen en el conjunto de registros.  
+ *ReadOnly*, *NoBatch* y *GetHiddenColumns* son opciones mutuamente excluyentes; sin embargo, no genera un error para establecer más de uno de ellos. Si se establecen varias opciones, *GetHiddenColumns* tiene prioridad sobre todos los demás, seguido de *ReadOnly*. Si se especifica ninguna opción, de forma predeterminada, se abre el conjunto de registros mediante **adLockBatchOptimistic** y las columnas ocultas no se incluyen en el conjunto de registros.  
   
  *pParameters*  
- A **Variant** que contiene una matriz segura de las definiciones de parámetro. Si el *GetInfo* se especificó la opción de *lExecuteOptions*, este parámetro se usa para devolver las definiciones de parámetro obtenidas del proveedor de OLE DB. En caso contrario, este parámetro puede estar vacío.  
+ Un **Variant** que contiene una matriz segura de las definiciones de parámetro. Si el *GetInfo* especificó la opción de *lExecuteOptions*, este parámetro se usa para devolver las definiciones de parámetro obtenidas del proveedor OLE DB. En caso contrario, este parámetro puede estar vacío.  
   
  *lcid*  
  El LCID utilizado para generar los errores que se devuelven en *pInformation*.  
   
  *pInformation*  
- Un puntero al error de la información devuelto por la ejecución. Si es NULL, no se devuelve ninguna información de error.  
+ Un puntero al error de la información devuelta por la ejecución. Si es NULL, no se devuelve ninguna información de error.  
   
 ## <a name="remarks"></a>Notas  
- El *HandlerString* parámetro puede ser null. ¿Qué ocurre en este caso depende de cómo esté configurado el servidor RDS. Una cadena de controlador de "MSDFMAP.handler" indica que se debe usar el controlador de Microsoft proporcionado (Msdfmap.dll). Una cadena de controlador de "MASDFMAP.handler,sample.ini" indica que se debe usar el controlador Msdfmap.dll y que se debe pasar el argumento "sample.ini" para el controlador. MSDFMAP.dll interpretará el argumento como una dirección que desea utilizar el sample.ini para comprobar las cadenas de conexión y consulta.  
+ El *HandlerString* parámetro puede ser null. ¿Qué ocurre en este caso depende de cómo se configura el servidor RDS. Una cadena de controlador de "MSDFMAP.handler" indica que se debe usar el controlador de Microsoft proporcionada (Msdfmap.dll). Una cadena de controlador de "MASDFMAP.handler,sample.ini" indica que se debe usar el controlador Msdfmap.dll y que se debe pasar el argumento "sample.ini" al controlador. MSDFMAP.dll interpretará el argumento como una dirección que desea utilizar el sample.ini para comprobar las cadenas de conexión y consulta.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)

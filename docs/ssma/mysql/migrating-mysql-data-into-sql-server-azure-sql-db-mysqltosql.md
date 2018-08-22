@@ -19,25 +19,25 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6143733af6824518b8a54ed856844c5e01702d0a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 4651ec2de2680d9c1c855f352768228e1835f22b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985217"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393752"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>Migrar datos de MySQL a SQL Server: Azure SQL DB (MySQLToSQL)
-Después de haber sincronizado correctamente los objetos convertidos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, puede migrar datos desde MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure.  
+Después de haber sincronizado correctamente los objetos convertidos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, puede migrar datos desde MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
   
 > [!IMPORTANT]  
-> Si el motor que se va a usar es el motor de migración de datos de lado servidor, a continuación, antes de migrar datos, debe instalar SSMA para el paquete de extensión de MySQL y los proveedores de MySQL en el equipo que ejecuta SSMA. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] también debe ejecutarse el servicio del agente. Para obtener más información sobre cómo instalar el paquete de extensiones, consulte [instalación de componentes de SSMA en SQL Server (MySQL a SQL)](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
+> Si el motor que se va a usar es el motor de migración de datos de lado servidor, a continuación, antes de migrar datos, debe instalar SSMA para el paquete de extensión de MySQL y los proveedores de MySQL en el equipo que ejecuta SSMA. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también debe ejecutarse el servicio del agente. Para obtener más información sobre cómo instalar el paquete de extensiones, consulte [instalación de componentes de SSMA en SQL Server (MySQL a SQL)](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
   
 ## <a name="setting-migration-options"></a>Establecer las opciones de migración  
-Antes de migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, revise las opciones de migración de proyecto en el **configuración del proyecto** cuadro de diálogo.  
+Antes de migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, revise las opciones de migración de proyecto en el **configuración del proyecto** cuadro de diálogo.  
   
 -   Mediante este cuadro de diálogo puede establecer opciones como el tamaño del lote de migración, bloqueo de tablas, comprobación de restricciones, tratamiento de los valores null y control de valor de identidad. Para obtener más información acerca de la configuración de proyecto de migración, consulte [configuración del proyecto (migración)](http://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9).  
   
-    Para obtener más información sobre **configuración de migración de datos extendida**, consulte [configuración de migración de datos](http://msdn.microsoft.com/9c396df4-5676-4f32-9c57-70d4f15f9b7a)  
+    Para obtener más información sobre **configuración de migración de datos extendida**, consulte [configuración de migración de datos](data-migration-settings-mysqltosql.md)  
   
 -   El **migración motor** en el **configuración del proyecto** permite al usuario realizar el proceso de migración con dos tipos de motores de migración de datos de cuadro de diálogo:  
   
@@ -64,7 +64,7 @@ Antes de migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)
 > **Migración de datos del lado cliente** opción solo está disponible para SQL Azure.  
   
 ## <a name="migrating-data-to-sql-server-or-sql-azure"></a>Migrar datos a SQL Server o SQL Azure  
-Migración de datos están una operación de carga masiva que mueve las filas de datos de tablas de MySQL en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o tablas de SQL Azure en las transacciones. El número de filas que se carga en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] en cada transacción se configura en la configuración del proyecto.  
+Migración de datos están una operación de carga masiva que mueve las filas de datos de tablas de MySQL en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tablas de SQL Azure en las transacciones. El número de filas que se carga en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cada transacción se configura en la configuración del proyecto.  
   
 Para ver los mensajes de la migración, asegúrese de que está visible el panel de salida. En caso contrario, desde el **vista** menú, seleccione **salida**.  
   
@@ -94,7 +94,7 @@ Para ver los mensajes de la migración, asegúrese de que está visible el panel
   
         1.  SSMA para MySQL: paquete de extensión se instala en la instancia de SQL Server.  
   
-        2.  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] servicio del agente se está ejecutando en la instancia de SQL Server  
+        2.  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del agente se está ejecutando en la instancia de SQL Server  
   
     -   Para llevar a cabo **migración de datos del lado servidor**, seleccione el **motor de migración de datos de lado servidor** opción el **configuración del proyecto** cuadro de diálogo.  
   

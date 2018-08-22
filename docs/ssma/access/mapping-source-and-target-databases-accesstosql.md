@@ -24,23 +24,23 @@ caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d0a76c4fdeff8abbe2b5e1ba2bafd615bba4b919
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: acb6a8c71c3f144850cb9c24431bcff440cdf761
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980168"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395359"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>Asignación de origen y bases de datos de destino (AccessToSQL)
-Cuando se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, deberá especificar una base de datos de destino para la migración. Si tiene varias bases de datos de Access se puede asignar a varios [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] bases de datos (o esquemas) o a varios esquemas en la base de datos de SQL Azure conectada.  
+Cuando se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, deberá especificar una base de datos de destino para la migración. Si tiene varias bases de datos de Access se puede asignar a varios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de datos (o esquemas) o a varios esquemas en la base de datos de SQL Azure conectada.  
   
 ## <a name="sql-server-or-sql-azure-database-schemas"></a>SQL Server o los esquemas de base de datos de SQL Azure  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] las bases de datos usan el concepto de esquemas para separar los objetos dentro de una base de datos en grupos lógicos. Por ejemplo, una base de datos de la biblioteca podría utilizar tres esquemas denominados **libros**, **audio**, y **vídeo** para separar los objetos de audio y vídeo de libro, entre sí. De forma predeterminada, la base de datos se asigna a **maestro** base de datos y **dbo** esquema en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y a la base de datos conectada y **dbo** esquema en SQL Azure.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las bases de datos usan el concepto de esquemas para separar los objetos dentro de una base de datos en grupos lógicos. Por ejemplo, una base de datos de la biblioteca podría utilizar tres esquemas denominados **libros**, **audio**, y **vídeo** para separar los objetos de audio y vídeo de libro, entre sí. De forma predeterminada, la base de datos se asigna a **maestro** base de datos y **dbo** esquema en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y a la base de datos conectada y **dbo** esquema en SQL Azure.  
   
-A menos que personalice la asignación entre cada base de datos de Access y la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos y esquema, SSMA migrará todos los esquemas y datos asociados con la base de datos de acceso a la base de datos predeterminado asignado.  
+A menos que personalice la asignación entre cada base de datos de Access y la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos y esquema, SSMA migrará todos los esquemas y datos asociados con la base de datos de acceso a la base de datos predeterminado asignado.  
   
 ## <a name="modifying-the-target-database-and-schema"></a>Modificación de la base de datos de destino y el esquema  
-SSMA le permite asignar cada base de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o base de datos de SQL Azure y el esquema. El siguiente procedimiento describe cómo personalizar la asignación de cada base de datos.  
+SSMA le permite asignar cada base de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o base de datos de SQL Azure y el esquema. El siguiente procedimiento describe cómo personalizar la asignación de cada base de datos.  
   
 **Para modificar la base de datos de destino y el esquema**  
   
@@ -60,22 +60,22 @@ SSMA le permite asignar cada base de datos de Access a [!INCLUDE[ssNoVersion](..
   
 -   Asignar a SQL Server  
   
-Base de datos de origen se puede asignar a cualquier base de datos de destino. De forma predeterminada se asigna la base de datos de origen a destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos con el que se ha conectado con SSMA. Si no existe la base de datos de destino que se está asignando en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], a continuación, se le pedirá con un mensaje **"la base de datos y/o esquema no existe en el destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] metadatos. Se crearán durante la sincronización. ¿Desea continuar?"** Haga clic en Sí. De forma similar, se puede asignar el esquema al esquema que no existe en el destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos que se creará durante la sincronización.  
+Base de datos de origen se puede asignar a cualquier base de datos de destino. De forma predeterminada se asigna la base de datos de origen a destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos con el que se ha conectado con SSMA. Si no existe la base de datos de destino que se está asignando en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a continuación, se le pedirá con un mensaje **"la base de datos y/o esquema no existe en el destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadatos. Se crearán durante la sincronización. ¿Desea continuar?"** Haga clic en Sí. De forma similar, se puede asignar el esquema al esquema que no existe en el destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos que se creará durante la sincronización.  
   
 -   Asignación de SQL Azure  
   
-Puede asignar la base de datos de origen al destino conectado [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos o al cualquier esquema en el destino conectado [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos. Si el esquema de origen se asignan a cualquier esquema que no existe en la base de datos de destino conectados, entonces se le pedirá con un mensaje **"esquema no existe en los metadatos de destino. Se crearán durante la sincronización. ¿Desea continuar? "** Haga clic en Sí.  
+Puede asignar la base de datos de origen al destino conectado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos o al cualquier esquema en el destino conectado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos. Si el esquema de origen se asignan a cualquier esquema que no existe en la base de datos de destino conectados, entonces se le pedirá con un mensaje **"esquema no existe en los metadatos de destino. Se crearán durante la sincronización. ¿Desea continuar? "** Haga clic en Sí.  
   
 ## <a name="reverting-to-your-initial-database-and-schema"></a>Revertir a la base de datos inicial y el esquema  
-Si personaliza la asignación entre una base de datos y un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o base de datos de SQL Azure y el esquema, puede revertir la asignación a la base de datos que especificó cuando conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure.  
+Si personaliza la asignación entre una base de datos y un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o base de datos de SQL Azure y el esquema, puede revertir la asignación a la base de datos que especificó cuando conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
   
 **Restablecer al esquema y la base de datos predeterminada**  
   
 1.  En la pestaña asignación de esquema, seleccione cualquier fila y haga clic en **Restablecer valores predeterminados** para revertir a la base de datos predeterminada y el esquema.  
   
 ## <a name="next-step"></a>Paso siguiente  
-El siguiente paso del proceso de migración es [convertir objetos de base de datos](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+El siguiente paso del proceso de migración es [convertir objetos de base de datos](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Migrar bases de datos de Access a SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrar bases de datos de Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

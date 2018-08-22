@@ -14,12 +14,12 @@ caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 122f0209e7254d558ac5cc3db806d8bb648a849c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f1988ea03795dd8eee6d86844560935ed44b30d3
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251217"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392806"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>Cuentas de dominio necesarias para una granja de servidores de SharePoint (Asesor de actualizaciones)
   Los productos de SharePoint que están configurados para un entorno de una granja requieren el uso de cuentas de dominio.  
@@ -29,7 +29,7 @@ ms.locfileid: "37251217"
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo de SharePoint.|  
   
 ## <a name="component"></a>Componente  
- [!INCLUDE[ssRS](../../includes/ssrs-md.md)]  
+ [!INCLUDE[ssRS](../../includes/ssrs.md)]  
   
 ### <a name="description"></a>Descripción  
  Los productos de SharePoint que se configuran para el entorno de una granja requieren el uso de cuentas de dominio para las conexiones a bases de datos y servicios. Esto incluye la cuenta que ha especificado para la cuenta de servicio de Reporting Services.  

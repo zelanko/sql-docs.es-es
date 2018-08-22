@@ -6,8 +6,7 @@ ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -25,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4cb287936b2cdbb73a53f04f3e10dc5304e41a54
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: c16f4ae091e48b46e2978d0287ff90a95e116e5a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39557265"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395151"
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "39557265"
   
 |Nombre de columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
-|container_id|**int**|Identificador del contenedor (representado como un archivo de tipo FILESTREAM en sys.database_files) del que forma parte el archivo de datos o delta. Se une con file_id en [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
+|container_id|**int**|Identificador del contenedor (representado como un archivo de tipo FILESTREAM en sys.database_files) del que forma parte el archivo de datos o delta. Combinaciones con file_id en [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|GUID del contenedor, que forma parte del archivo raíz, datos o delta. Combinaciones con file_guid en la tabla sys.database_files.|  
 |checkpoint_file_id|**uniqueidentifier**|GUID del archivo de punto de comprobación.|  
 |relative_file_path|**nvarchar(256)**|Ruta de acceso del archivo relativa al contenedor se asigna a.|  
@@ -62,7 +61,7 @@ ms.locfileid: "39557265"
 |file_size_used_in_bytes|**bigint**|Para los pares de archivos de punto de comprobación que todavía se están llenando, esta columna se actualizará después del punto de comprobación siguiente.|  
 |logical_row_count|**bigint**|Para los datos, el número de filas insertadas.<br /><br /> Delta, número de filas se elimina después de contabilidad para la tabla de destino.<br /><br /> Para la raíz, es NULL.|  
 |state|**smallint**|0 – PRECREATED<br /><br /> 1: EN CONSTRUCCIÓN<br /><br /> 2 - ACTIVE<br /><br /> 3 – MERGE TARGET<br /><br /> 8: ESPERANDO EL TRUNCAMIENTO DEL REGISTRO|  
-|state_desc|**nvarchar(60)**|PRECREATED: un número de archivos de punto de comprobación se preasignan para minimizar o eliminar cualquier espera para asignar nuevos archivos mientras se ejecutan las transacciones. Los archivos previamente creados pueden variar de tamaño, según las necesidades estimadas de la carga de trabajo, pero no contienen ningún dato. Se trata de una sobrecarga de almacenamiento de información en bases de datos con un grupo de archivos MEMORY_OPTIMIZED_DATA.<br /><br /> EN construcción - estos archivos de punto de control están en construcción, lo que significa que se están actualizando en función de los registros generados por la base de datos y aún no forman parte de un punto de control.<br /><br /> ACTIVE: contienen las filas insertadas y eliminadas de puntos de control cerrados anteriores. Contienen el contenido de las tablas que se lee de área en la memoria antes de aplicar la parte activa del registro de transacciones en el reinicio de la base de datos. Se espera que el tamaño de estos archivos de punto de comprobación para ser de aproximadamente 2 x el tamaño en memoria de tablas optimizadas para memoria, suponiendo que la operación de combinación es mantenerse al día con la carga de trabajo transaccional.<br /><br /> TARGET MERGE: el destino de las operaciones de combinación: estos archivos de punto de control almacenan las filas de datos consolidados de los archivos de origen que se han identificado por la directiva de combinación. Una vez instalada la mezcla, TARGET MERGE cambia al estado ACTIVE.<br /><br /> Una vez que se ha instalado la combinación y el CFP de combinar destino forma parte de un punto de comprobación durable, la transición de archivos mezcla punto de control de origen a este estado en espera de TRUNCAMIENTO del registro. Archivos en este estado son necesarios para el correcto funcionamiento de la base de datos con la tabla optimizada para memoria.  Por ejemplo, para recuperarse de un punto de comprobación durable para ir a un momento anterior en el tiempo.|  
+|state_desc|**nvarchar(60)**|PRECREATED: un número de archivos de punto de comprobación se preasignan para minimizar o eliminar cualquier espera para asignar nuevos archivos mientras se ejecutan las transacciones. Los archivos previamente creados pueden variar de tamaño, según las necesidades estimadas de la carga de trabajo, pero no contienen ningún dato. Se trata de una sobrecarga de almacenamiento en bases de datos con un grupo de archivos MEMORY_OPTIMIZED_DATA.<br /><br /> EN construcción - estos archivos de punto de control están en construcción, lo que significa que se están actualizando en función de los registros generados por la base de datos y aún no forman parte de un punto de control.<br /><br /> ACTIVE: contienen las filas insertadas y eliminadas de puntos de control cerrados anteriores. Contienen el contenido de las tablas que se lee de área en la memoria antes de aplicar la parte activa del registro de transacciones en el reinicio de la base de datos. Se espera que el tamaño de estos archivos de punto de comprobación para ser de aproximadamente 2 x el tamaño en memoria de tablas optimizadas para memoria, suponiendo que la operación de combinación es mantenerse al día con la carga de trabajo transaccional.<br /><br /> TARGET MERGE: el destino de las operaciones de combinación: estos archivos de punto de control almacenan las filas de datos consolidados de los archivos de origen que se han identificado por la directiva de combinación. Una vez instalada la mezcla, TARGET MERGE cambia al estado ACTIVE.<br /><br /> Una vez que se ha instalado la combinación y el CFP de combinar destino forma parte de un punto de comprobación durable, la transición de archivos mezcla punto de control de origen a este estado en espera de TRUNCAMIENTO del registro. Archivos en este estado son necesarios para el correcto funcionamiento de la base de datos con la tabla optimizada para memoria.  Por ejemplo, para recuperarse de un punto de comprobación durable para ir a un momento anterior en el tiempo.|  
 |lower_bound_tsn|**bigint**|Límite inferior de la transacción en el archivo. null si no está en estado (1, 3).|  
 |upper_bound_tsn|**bigint**|Límite superior de la transacción en el archivo. null si no está en estado (1, 3).|  
 |begin_checkpoint_id|**bigint**|Id. del punto de comprobación de inicio.|  
@@ -76,12 +75,12 @@ ms.locfileid: "39557265"
   
 |Nombre de columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
-|container_id|**int**|Identificador del contenedor (representado como un archivo de tipo FILESTREAM en sys.database_files) del que forma parte el archivo de datos o delta. Se une con file_id en [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
+|container_id|**int**|Identificador del contenedor (representado como un archivo de tipo FILESTREAM en sys.database_files) del que forma parte el archivo de datos o delta. Combinaciones con file_id en [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|GUID del contenedor del que forma parte el archivo de datos o delta.|  
 |checkpoint_file_id|**GUID**|Identificador del archivo de datos o delta.|  
 |relative_file_path|**nvarchar(256)**|Ruta de acceso al archivo de datos o delta, con respecto a la ubicación del contenedor.|  
 |file_type|**tinyint**|0 para el archivo de datos.<br /><br /> 1 para el archivo delta.<br /><br /> Es NULL si la columna state está establecida en 7.|  
-|file_type_desc|**nvarchar(60)**|El tipo de archivo: DATA_FILE, DELTA_FILE o NULL si la columna de estado se establece en 7.|  
+|file_type_desc|**nvarchar(60)**|El tipo de archivo: DATA_FILE, DELTA_FILE o NULL si la columna state está establecida en 7.|  
 |internal_storage_slot|**int**|El índice del archivo en la matriz de almacenamiento interno. Es NULL si la columna state está establecida en 2 o 3.|  
 |checkpoint_pair_file_id|**uniqueidentifier**|Archivo de datos o delta correspondiente.|  
 |file_size_in_bytes|**bigint**|Tamaño del archivo que se usa. Es NULL si la columna state está establecida en 5, 6 o 7.|  

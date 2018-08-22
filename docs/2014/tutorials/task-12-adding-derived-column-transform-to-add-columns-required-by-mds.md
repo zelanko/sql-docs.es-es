@@ -16,15 +16,15 @@ caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d1bb94b040aee5ba1db6870edc71e3153a3c7a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5af0cf91842df82fbe4ef5d6147779619aaf717
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165716"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395000"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Tarea 12: agregar la transformación Columna derivada para agregar las columnas necesarias en MDS
-  En esta tarea, agregará la transformación Columna derivada al flujo de datos. Agregar dos columnas derivadas, **ImportType** y **BatchTag**, a los registros pasados a esta transformación. Debe agregar estas columnas antes de cargar los datos en las tablas de ensayo en MDS. Son dos columnas necesarias para las tablas de ensayo en MDS. Consulte [tablas de ensayo de miembros hoja](http://msdn.microsoft.com/library/ee633854.aspx) para obtener más detalles.  
+  En esta tarea, agregará la transformación Columna derivada al flujo de datos. Agregar dos columnas derivadas, **ImportType** y **BatchTag**, a los registros pasados a esta transformación. Debe agregar estas columnas antes de cargar los datos en las tablas de ensayo en MDS. Son dos columnas necesarias para las tablas de ensayo en MDS. Consulte [tablas de ensayo de miembros hoja](../master-data-services/leaf-member-staging-table-master-data-services.md) para obtener más detalles.  
   
 1.  Arrastrar y colocar **transformación columna derivada** desde **común** sección la **cuadro de herramientas de SSIS** a la **de flujo de datos** ficha.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "37165716"
   
      ![Ventana de Variables SSIS](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-02.jpg "ventana de Variables SSIS")  
   
-7.  Tipo **ImportType** para el **nombre** y **2** para el **valor**. Debe especificar el valor 2 porque desea agregar dos miembros nuevos a una entidad en MDS. Para obtener más información acerca de este parámetro, vea [tabla de ensayo de miembros hoja](http://msdn.microsoft.com/library/ee633854.aspx).  
+7.  Tipo **ImportType** para el **nombre** y **2** para el **valor**. Debe especificar el valor 2 porque desea agregar dos miembros nuevos a una entidad en MDS. Para obtener más información acerca de este parámetro, vea [tabla de ensayo de miembros hoja](../master-data-services/leaf-member-staging-table-master-data-services.md).  
   
 8.  Haga clic en **agregar Variable** nuevo botón de barra de herramientas.  
   

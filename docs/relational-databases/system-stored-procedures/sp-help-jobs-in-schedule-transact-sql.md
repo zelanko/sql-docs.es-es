@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobs_in_schedule (Transact-SQL) | Documentos de Microsoft
+title: sp_help_jobs_in_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78bffc1432bb650d5c1a7f37c0a712c34236dca1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5160cd777567d671a170d31d3638e7ef9dc74a34
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260065"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396170"
 ---
 # <a name="sphelpjobsinschedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_help_jobs_in_schedule
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Devuelve el siguiente conjunto de resultados:  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|Id. único del trabajo.|  
 |**originating_server**|**nvarchar(30)**|Nombre del servidor del que proviene el trabajo.|  
@@ -67,7 +67,7 @@ sp_help_jobs_in_schedule
 |**Descripción**|**nvarchar(512)**|Descripción del trabajo.|  
 |**start_step_id**|**int**|Id. del paso del trabajo en el que debe comenzar la ejecución.|  
 |**Categoría**|**sysname**|Categoría del trabajo|  
-|**propietario**|**sysname**|Propietario del trabajo.|  
+|**Propietario**|**sysname**|Propietario del trabajo.|  
 |**notify_level_eventlog**|**int**|Máscara de bits que indica en qué circunstancias se debe registrar un evento de notificación en el registro de aplicación de Microsoft Windows. Puede ser uno de estos valores:<br /><br /> **0** no = nunca<br /><br /> **1** = cuando se realiza correctamente un trabajo<br /><br /> **2** = cuando se produce un error en el trabajo<br /><br /> **3** = cuando el trabajo se completa (independientemente del resultado del trabajo)|  
 |**notify_level_email**|**int**|Máscara de bits que indica en qué circunstancias se debe enviar una notificación por correo electrónico cuando se completa un trabajo. Los valores posibles son los mismos que para **notify_level_eventlog**.|  
 |**notify_level_netsend**|**int**|Máscara de bits que indica en qué circunstancias se debe enviar un mensaje de red cuando se completa un trabajo. Los valores posibles son los mismos que para **notify_level_eventlog**.|  
@@ -93,10 +93,10 @@ sp_help_jobs_in_schedule
 |**has_target**|**int**|Número de servidores de destino que tiene el trabajo.|  
 |**Tipo**|**int**|Tipo de trabajo:<br /><br /> **1** = trabajo local.<br /><br /> **2** = trabajo multiservidor.<br /><br /> **0** = trabajo no tiene ningún servidor de destino.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este procedimiento muestra información acerca de los trabajos adjuntos a la programación especificada.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -105,9 +105,9 @@ sp_help_jobs_in_schedule
   
 -   **SQLAgentOperatorRole**  
   
- Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Los miembros de **SQLAgentUserRole** solo se puede ver el estado de los trabajos que les pertenecen.  
+ Los miembros de **SQLAgentUserRole** solo puede ver el estado de los trabajos que les pertenecen.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se muestran los trabajos adjuntos a la programación `NightlyJobs`.  

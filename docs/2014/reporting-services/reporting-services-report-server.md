@@ -30,12 +30,12 @@ caps.latest.revision: 89
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f9aff1bba090ec29cad3eef94453858e1f2b0029
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 63cd3c39d5c58d31eef427f309fe9d941903ad01
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189842"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40396334"
 ---
 # <a name="reporting-services-report-server"></a>Servidor de informes de Reporting Services
   En este tema se ofrece información general del servidor de informes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , el componente central de una instalación de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Está compuesto por un par de motores de procesamiento, además de una serie de extensiones con finalidades especiales que administran la autenticación, el procesamiento de datos, la representación y las operaciones de entrega. Un servidor de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se ejecuta en uno de dos modos de implementación: modo nativo o modo de SharePoint. Consulte la sección [Comparación de características de SharePoint en modo nativo](#bkmk_featuresupport) para obtener una comparación de las características.  
@@ -119,7 +119,7 @@ ms.locfileid: "37189842"
  Los programadores de otros fabricantes pueden crear extensiones adicionales para reemplazar o ampliar la capacidad de procesamiento del servidor de informes. Para obtener más información acerca de las interfaces de programación disponibles para los desarrolladores de aplicaciones, vea la [Referencia técnica](../../2014/reporting-services/technical-reference-ssrs.md).  
   
 ###  <a name="bkmk_nativewithwebparts"></a> Modo nativo con elementos Web de SharePoint  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona dos elementos Web que puede instalar y registrar en una instancia de [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2.0 o posterior, o [!INCLUDE[spPortalServ](../includes/spportalserv-md.md)] 2003 o posterior. Desde un sitio de SharePoint, puede utilizar los elementos web para buscar y ver informes almacenados y procesados en el servidor de informes que se ejecuta en modo nativo. Estos elementos web se incluyeron en versiones anteriores de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona dos elementos Web que puede instalar y registrar en una instancia de [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2.0 o posterior, o SharePoint Portal Server 2003 o posterior. Desde un sitio de SharePoint, puede utilizar los elementos web para buscar y ver informes almacenados y procesados en el servidor de informes que se ejecuta en modo nativo. Estos elementos web se incluyeron en versiones anteriores de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 ##  <a name="bkmk_sharepointmode"></a> Modo de SharePoint  
  En el modo de SharePoint, un servidor de informes se debe ejecutar en una granja de servidores de SharePoint. Las características de administración, representación y procesamiento del servidor de informes se representan mediante un servidor de aplicaciones de SharePoint que ejecuta el [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] compartido de SharePoint de servicio y uno o más [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] las aplicaciones de servicio. Un sitio de SharePoint proporciona el acceso front-end al contenido y las operaciones del servidor de informes.  
@@ -156,7 +156,7 @@ ms.locfileid: "37189842"
   
  Reporting Services proporciona extensiones predeterminadas para que se puedan utilizar todas las características de servidor sin tener que desarrollar componentes personalizados. En la tabla siguiente se describen las extensiones predeterminadas que contribuyen a una instancia del servidor de informes completa con la funcionalidad lista para su uso:  
   
-|Tipo|Valor predeterminado|  
+|Tipo|Default|  
 |----------|-------------|  
 |Autenticación|Una instancia del servidor de informes predeterminada admite la autenticación de Windows, incluso las características de suplantación y delegación si están habilitadas en el dominio.|  
 |Procesamiento de datos|Una instancia del servidor de informes predeterminada incluye extensiones de procesamiento de datos para orígenes de datos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, Hyperion Essbase, SAPBW, OLE DB, Almacenamiento de datos paralelo y ODBC.|  

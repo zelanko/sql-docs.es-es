@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
@@ -14,12 +13,12 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f8135f70466ecef4fb77a876a38823af7dd8c27d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ef00c8493ab700976e1ede1b6d6631b6d2fe8da
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312335"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393735"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Extensiones de AdventureWorks para mostrar OLTP en memoria
     
@@ -578,10 +577,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**Tipo**|**Nombre**|**pages_MB**|  
-|MEMORYCLERK_XTP|Valor predeterminado|94|  
+|MEMORYCLERK_XTP|Default|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
-|MEMORYCLERK_XTP|Valor predeterminado|0|  
-|MEMORYCLERK_XTP|Valor predeterminado|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  Los distribuidores de memoria predeterminados contienen estructuras de memoria de todo el sistema y son relativamente pequeños. El distribuidor de memoria para la base de datos de usuario, en este caso la base de datos con el identificador 5, tiene unos 900 MB.  
   
@@ -627,10 +626,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**Tipo**|**Nombre**|**pages_MB**|  
-|MEMORYCLERK_XTP|Valor predeterminado|146|  
+|MEMORYCLERK_XTP|Default|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
-|MEMORYCLERK_XTP|Valor predeterminado|0|  
-|MEMORYCLERK_XTP|Valor predeterminado|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  Como puede ver, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa un bit por debajo de 8 GB para las tablas y los índices optimizados para memoria de la base de datos de ejemplo.  
   
@@ -674,10 +673,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**Tipo**|**Nombre**|**pages_MB**|  
-|MEMORYCLERK_XTP|Valor predeterminado|2261|  
+|MEMORYCLERK_XTP|Default|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
-|MEMORYCLERK_XTP|Valor predeterminado|0|  
-|MEMORYCLERK_XTP|Valor predeterminado|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  Esto es lo esperado: la memoria se recuperará cuando se ejecute la carga de trabajo transaccional.  
   
@@ -693,10 +692,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**Tipo**|**Nombre**|**pages_MB**|  
-|MEMORYCLERK_XTP|Valor predeterminado|1863|  
+|MEMORYCLERK_XTP|Default|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
-|MEMORYCLERK_XTP|Valor predeterminado|0|  
-|MEMORYCLERK_XTP|Valor predeterminado|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>Uso de disco para las tablas optimizadas para memoria  
  El tamaño total en disco de los archivos de punto de comprobación de una base de datos en un momento dado se puede averiguar con la consulta:  

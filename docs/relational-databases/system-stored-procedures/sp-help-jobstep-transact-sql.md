@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobstep (Transact-SQL) | Documentos de Microsoft
+title: sp_help_jobstep (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a614a40001e21fadf708cb2079dbe45171cafe62
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7e610198b2a7c26ad11811157b52a066639592a8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261774"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396616"
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  Nombre del trabajo. *job_name* es **sysname**, su valor predeterminado es NULL.  
   
 > [!NOTE]  
->  Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
+>  Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
   
  [ **@step_id =**] *step_id*  
  Número de identificación del paso en el trabajo. Si no se especifica, se incluirán todos los pasos del trabajo. *step_id* es **int**, su valor predeterminado es null.  
@@ -63,25 +63,25 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  Nombre del paso en el trabajo. *Step_name* es **sysname**, su valor predeterminado es null.  
   
  [  **@suffix =**] *sufijo*  
- Una marca que indica si una descripción de texto se anexa a la **marcas** columna en la salida. *sufijo*es **bits**, con el valor predeterminado de **0**. Si *sufijo* es **1**, se agrega una descripción.  
+ Una marca que indica si una descripción de texto se anexa a la **marcas** columna en la salida. *sufijo*es **bit**, con el valor predeterminado de **0**. Si *sufijo* es **1**, se agrega una descripción.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|Identificador único del paso.|  
 |**Step_name**|**sysname**|Nombre del paso del trabajo.|  
 |**subsystem**|**nvarchar(40)**|Subsistema en el que se ejecuta el comando del paso.|  
 |**command**|**nvarchar(max)**|Comando que se ejecuta en el paso.|  
 |**flags**|**int**|Máscara de bits que controla el comportamiento del paso.|  
-|**cmdexec_success_code**|**int**|Para una **CmdExec** paso, éste es el código de salida de proceso de un comando correcto.|  
+|**cmdexec_success_code**|**int**|Para un **CmdExec** paso, se trata de procesar el código de salida de un comando correcto.|  
 |**on_success_action**|**tinyint**|Acción que se realiza si el paso termina correctamente:<br /><br /> **1** = salir del trabajo que se ha ejecutado correctamente.<br /><br /> **2** = salir del trabajo informa de un error.<br /><br /> **3** = ir al paso siguiente.<br /><br /> **4** = ir al paso.|  
-|**on_success_step_id**|**int**|Si **on_success_action** es 4, indica el paso siguiente para ejecutar.|  
+|**on_success_step_id**|**int**|Si **on_success_action** es 4, esto indica que se ejecute el siguiente paso.|  
 |**on_fail_action**|**tinyint**|Qué hacer si el paso da error. Los valores son los mismos que **on_success_action**.|  
-|**on_fail_step_id**|**int**|Si **on_fail_action** es 4, indica el paso siguiente para ejecutar.|  
+|**on_fail_step_id**|**int**|Si **on_fail_action** es 4, esto indica que se ejecute el siguiente paso.|  
 |**servidor**|**sysname**|Reservado.|  
 |**database_name**|**sysname**|Para pasos [!INCLUDE[tsql](../../includes/tsql-md.md)], la base de datos en que se ejecuta el comando.|  
 |**database_user_name**|**sysname**|Para pasos [!INCLUDE[tsql](../../includes/tsql-md.md)], el contexto de usuario de la base de datos en que se ejecuta el comando.|  
@@ -96,10 +96,10 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**last_run_time**|**int**|Hora en que se inició la ejecución del paso por última vez.|  
 |**proxy_id**|**int**|Proxy del paso de trabajo.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_help_jobstep** está en el **msdb** base de datos.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -108,9 +108,9 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Los miembros de **SQLAgentUserRole** sólo puede ver los pasos de los trabajos que les pertenecen.  
+ Los miembros de **SQLAgentUserRole** solo pueden ver los pasos de trabajo para trabajos que les pertenecen.  
   
 ## <a name="examples"></a>Ejemplos  
   

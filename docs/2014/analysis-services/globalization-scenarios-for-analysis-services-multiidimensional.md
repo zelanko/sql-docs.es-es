@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0c8aeb19e6773b3f772ae0a62e7d72f647ee365e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 423cc509e4b7c915ae9170350090d866d66d6165
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185402"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394980"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Escenarios de globalización para Analysis Services Multidimensional
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] almacena y manipula datos multilingües y metadatos en ambos modelos de datos tabulares y multidimensionales. El almacenamiento de datos es Unicode (UTF-16), en los juegos de caracteres que utilizan la codificación Unicode. Si carga datos ANSI en un modelo de datos, los caracteres se almacenan con puntos de código equivalentes de Unicode.  
@@ -79,7 +79,7 @@ ms.locfileid: "37185402"
 |[Sugerencias de globalización y procedimientos recomendados &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|Revisa varios procedimientos de diseño y codificación que pueden ayudarle a evitar problemas relacionados con los datos en diversos idiomas.|  
   
 ## <a name="see-also"></a>Vea también  
- [Internacionalización para aplicaciones de Windows](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
+ [Internacionalización para aplicaciones de Windows](/windows/desktop/Intl/international-support)   
  [Ir al Centro para desarrolladores Global](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
  [Aplicaciones de escritura Windows Store con diseño adaptable basado en la configuración regional](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
  [Desarrollo de aplicaciones Windows universales con C# y XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  

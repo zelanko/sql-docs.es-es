@@ -1,5 +1,5 @@
 ---
-title: sp_add_jobserver (Transact-SQL) | Documentos de Microsoft
+title: sp_add_jobserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ee7344ebe282a5cbf8baa61cfeb88175f6f235d
-ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
+ms.openlocfilehash: c2bcb3132902669a6ea544b9962942ed3adadc4a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36262319"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396389"
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  Nombre del trabajo. *job_name* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
->  Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
+>  Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
   
  [ **@server_name =** ] **'***server***'**  
- Nombre del servidor al que se va a destinar el trabajo. *servidor* es **nvarchar (30)**, su valor predeterminado es n '. *servidor* puede ser **(LOCAL)** para un servidor local o el nombre de un servidor de destino existente.  
+ Nombre del servidor al que se va a destinar el trabajo. *servidor* es **nvarchar (30)**, su valor predeterminado es n '. *servidor* puede ser **(LOCAL)** para un servidor local, o el nombre de un servidor de destino existente.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -77,9 +77,9 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_add_jobserver** para los trabajos que implican varios servidores.  
+ Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_add_jobserver** para las tareas que implican varios servidores.  
   
 ## <a name="examples"></a>Ejemplos  
   

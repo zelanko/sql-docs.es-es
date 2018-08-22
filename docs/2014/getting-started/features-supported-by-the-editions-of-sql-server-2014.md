@@ -20,12 +20,12 @@ caps.latest.revision: 126
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dac6134987f8a6d3964d919d1aff7688b74da7fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 02aa7277a06857f415143fd4497b0971773a03b6
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312315"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40394919"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Características compatibles con las ediciones de SQL Server 2014
   Este tema proporciona información detallada de las características admitidas por las diversas ediciones de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -363,7 +363,7 @@ ms.locfileid: "37312315"
 |Particiones|Sí|Sí||||||  
 |Modos de almacenamiento In-Memory y DirectQuery (solo tabulares)|Sí|Sí||||||  
   
-###  <a name="PowerPivot"></a> Modelo de objetos de informe utilizado por las extensiones de representación.  
+###  <a name="PowerPivot"></a> PowerPivot para SharePoint  
   
 |Nombre de la característica|Enterprise|Business Intelligence|Estándar|Web|Express con Advanced Services|Express con herramientas|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -446,7 +446,7 @@ ms.locfileid: "37312315"
   
 |Nombre de la característica|Enterprise|Business Intelligence|Estándar|Web|Express con Advanced Services|Express con herramientas|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)]|Sí|Sí|Sí|||||  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]|Sí|Sí|Sí|||||  
 |Complementos de minería de datos para Excel y Visio 2010|Sí|Sí|Sí|||||  
 |[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 2010|Sí|Sí||||||  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|Sí|Sí||||||  

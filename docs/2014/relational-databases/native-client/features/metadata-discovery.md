@@ -1,11 +1,11 @@
 ---
-title: Detección de metadatos | Microsoft Docs
+title: Detección de metadatos | Documentos de Microsoft
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
@@ -13,12 +13,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5bb0c1c7b0ff489e5addff5bb84649984b97f527
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2d26329d11885061b01e6147f145ce42a2a8855b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416264"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395358"
 ---
 # <a name="metadata-discovery"></a>Detección de metadatos
   La mejora de la detección de metadatos en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] permite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] las aplicaciones cliente nativas para asegurarse de que esos metadatos de columna o parámetro devuelto de la ejecución de una consulta están compatible con los metadatos o idéntico al formato especificado antes de ejecuta la consulta. Se producirá un error si los metadatos devueltos tras la ejecución de la consulta no son compatibles con el formato de los metadatos especificados antes de la ejecución de la consulta.  
@@ -62,7 +62,7 @@ ms.locfileid: "37416264"
   
 -   ICommandWithParameters:: GetParameterInfo (consulte [ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md) para obtener más información)  
   
- También verá una mejora del rendimiento cuando se especifica el formato de metadatos mediante IBCPSession::BCPSetBulkMode  
+ También percibirá una mejora del rendimiento si especifica el formato de metadatos mediante IBCPSession::BCPSetBulkMode.  
   
  La detección del metadatos mejorada en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client es posible debido a la unión de dos procedimientos almacenados de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]:  
   

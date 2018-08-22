@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
@@ -14,12 +13,12 @@ caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 171af425cfa479dcf9be3f555250de9a246daa1e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2922d77122bdf87616e8869e6e03b29eb9a4cbf0
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248505"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394349"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demostración: mejora de rendimiento de OLTP en memoria
   En este ejemplo se muestran las mejoras de rendimiento al usar OLTP en memoria al hacer una comparación de las diferencias en la respuesta el tiempo de espera cuando se ejecuta una consulta de Transact-SQL idéntica en tablas optimizadas en memoria y basadas en disco tradicionales. Además, también se crea un procedimiento almacenado compilado de forma nativa (basado en la misma consulta) y luego se ejecuta para demostrar que se suelen obtener los mejores tiempos de respuesta al consultar una tabla optimizada en memoria con un procedimiento almacenado compilado de forma nativa. En este ejemplo solo se muestra un aspecto de las mejoras de rendimiento al acceder a los datos en tablas optimizadas en memoria; la eficacia del acceso a datos al realizar inserciones. Este ejemplo es de un solo subproceso y no aprovecha las ventajas de simultaneidad de OLTP en memoria. Una carga de trabajo que utiliza simultaneidad verá mayor mejora de rendimiento.  

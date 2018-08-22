@@ -26,12 +26,12 @@ caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: b71bfa8857cb754cbab2fa983dea96cb45ea4ae0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b3ae73ca452d15504d59f02f4103f04fced28ec
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299975"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396382"
 ---
 # <a name="create-a-database-user"></a>Crear un usuario de base de datos
   Este tema describe cómo crear un usuario de base de datos asignado a un inicio de sesión en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. El usuario de la base de datos es la identidad del inicio de sesión cuando está conectado a una base de datos. El usuario de la base de datos puede utilizar el mismo nombre que el inicio de sesión, pero no es necesario. En este tema se supone que ya existe un inicio de sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener información sobre cómo crear un inicio de sesión, vea [crear un inicio de sesión](create-a-login.md).  
@@ -110,7 +110,7 @@ ms.locfileid: "37299975"
      Muestra o especifica las propiedades extendidas del objeto. Cada propiedad extendida está formada por un par nombre/valor de metadatos asociados al objeto.  
   
      **Puntos suspensivos (…)**  
-     Haga clic en los puntos suspensivos **(…)** que se encuentran a continuación de **Valor** para abrir el cuadro de diálogo **Valor para propiedad extendida** . Escriba o muestre el valor de la propiedad extendida en esta ubicación mayor. Para obtener más información, vea [Valor para propiedad extendida (cuadro de diálogo)](http://msdn.microsoft.com/library/ms189353.aspx).  
+     Haga clic en los puntos suspensivos **(…)** que se encuentran a continuación de **Valor** para abrir el cuadro de diálogo **Valor para propiedad extendida** . Escriba o muestre el valor de la propiedad extendida en esta ubicación mayor. Para obtener más información, vea [Valor para propiedad extendida (cuadro de diálogo)](../../databases/value-for-extended-property-dialog-box.md).  
   
      **Eliminar**  
      Elimina la propiedad extendida que se ha seleccionado.  

@@ -1,5 +1,5 @@
 ---
-title: Crear archivos de valor de la Variable (DB2ToSQL) | Documentos de Microsoft
+title: Creación de archivos de valor Variable (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,20 +16,20 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 87cd293fcfa801499c7ef3cad583b05ff2ecf2a1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 73afb63d53be87baaaf1e969ae06c803100aa4f7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774591"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396626"
 ---
-# <a name="creating-variable-value-files-db2tosql"></a>Crear archivos de valor de la Variable (DB2ToSQL)
-Archivo de valores de variable es un archivo XML que contiene los valores de parámetro de comandos como el nombre del servidor de origen o de destino que cambian con frecuencia de la migración de un servidor a otro. Cuando se produce un gran número de migraciones de base de datos, varios archivos de variable para almacenar el valor de cada servidor de origen se creará y se hace referencia en un archivo de script maestra con la **– v** cambiar en la línea de comandos. Esto ayuda a mantener los valores estáticos en unos pocos archivos de script con los valores de variables en varios archivos de variable.  
+# <a name="creating-variable-value-files-db2tosql"></a>Creación de archivos de valor Variable (DB2ToSQL)
+Archivo de valores de variable es un archivo XML que contiene los valores de parámetro de comandos, como el nombre del servidor de origen o destino que cambian con frecuencia de la migración de un servidor a otro. Cuando se produce un gran número de migraciones de base de datos, se creará varios archivos de variable para almacenar el valor de cada servidor de origen y se hace referencia en un archivo de script maestro con el **– v** cambiar en la línea de comandos. Esto ayuda a mantener los valores estáticos en unos pocos archivos de script con los valores de variables en varios archivos de variable.  
   
 > [!NOTE]  
-> 1.  Los nombres de variable son el prefijo y sufijo con un símbolo $ (dólar). Si las variables no se asignan un valor en el archivo de valor de la variable, se producirá un error durante el análisis del archivo de script resultante en demora el proceso de ejecución de la consola.  
-> 2.  The escape character for **$** is **$$**. Si el valor de un valor de variable o estático de un parámetro contiene **$** símbolos (dólar), a continuación, **$$** debe especificarse para tratarlo como un carácter en lugar de una variable.  
-> 3.  Por motivos de mantenimiento, las variables pueden declararse dentro de `‘variable-group’` variables definidas por elementos de una separación lógica del usuario.  Uso de este elemento no es obligatorio.  
+> 1.  Los nombres de variable son el prefijo y sufijo con un símbolo $ (dólar). Si las variables no se asignan un valor en el archivo de valor de la variable, se producirá un error durante el análisis del archivo de script, lo que detienen el proceso de ejecución de la consola.  
+> 2.  El carácter de escape para **$** es **$$**. Si el valor de un valor estático o variable de un parámetro contiene **$** símbolos (dólar), a continuación, **$$** debe especificarse para tratarlo como un carácter en lugar de una variable.  
+> 3.  Para fines de mantenimiento, se pueden declarar variables dentro `‘variable-group’` elementos para una separación lógica del usuario definen las variables.  Uso de este elemento no es obligatorio.  
   
 **Ejemplos:**  
   
@@ -91,8 +91,8 @@ Archivo de valores de variable es un archivo XML que contiene los valores de par
 ```  
   
 ## <a name="next-step"></a>Paso siguiente  
-El siguiente paso en la utilización de la consola es [crear los archivos de conexión de servidor &#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
+El siguiente paso en el funcionamiento de la consola es [crear los archivos de conexión de servidor &#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Creación de archivos de conexión del servidor](http://msdn.microsoft.com/en-us/002f129e-0868-48ad-a4b4-c68b5007e12e)  
+[Creación de archivos de conexión del servidor](../oracle/creating-the-server-connection-files-oracletosql.md)  
   

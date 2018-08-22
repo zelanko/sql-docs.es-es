@@ -1,5 +1,5 @@
 ---
-title: Informe de migración de datos (SybaseToSQL) | Documentos de Microsoft
+title: Informe de migración de datos (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0e4f2e50603b970a2b1ec5c1eec4e258e80cfb3b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 9e1f04f6a5df77be0bfc13227e1033842b5dd291
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778512"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392814"
 ---
 # <a name="data-migration-report-sybasetosql"></a>Informe de migración de datos (SybaseToSQL)
-El **informe de migración de datos** aparece el cuadro de diálogo después de migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+El **informe de migración de datos** aparece el cuadro de diálogo después de migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Opciones  
 **Estado**  
@@ -39,14 +39,14 @@ La tabla de destino.
 **Número total de filas**  
 El número de filas de datos en la tabla de origen.  
   
-**Número de filas migradas correctamente**  
-El número de filas de datos se migró correctamente a la tabla de destino.  
+**Número de filas se migró correctamente**  
+El número de filas de datos se migrado correctamente a la tabla de destino.  
   
-**Proporción**  
-El porcentaje de filas se migró correctamente.  
+**Relación**  
+El porcentaje de filas se migrado correctamente.  
   
 **Detalles**  
-Si se produce un error en cualquier migración de datos, haga clic para mostrar los detalles de la migración para la fila seleccionada en el informe. SSMA mostrará el motivo del error.  
+Si se produjo un error en cualquier migración de datos, haga clic para mostrar los detalles de la migración de la fila seleccionada en el informe. SSMA mostrará el motivo del error.  
   
 **Guardar informe**  
 Guarda el informe a una. CSV, archivo (valores separados por comas), que se puede examinar con Microsoft Excel.  

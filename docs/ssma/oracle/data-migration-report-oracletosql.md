@@ -1,5 +1,5 @@
 ---
-title: Informe de migración de datos (OracleToSQL) | Documentos de Microsoft
+title: Informe de migración de datos (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,15 +13,15 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
-ms.openlocfilehash: b9001e61cb409be635f99780085a47656ab53b8d
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 947015f7c22e65c8a42787df16cc5a7ee0455c94
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777041"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393900"
 ---
 # <a name="data-migration-report--oracletosql"></a>Informe de migración de datos (OracleToSQL)
-El **informe de migración de datos** aparece el cuadro de diálogo después de migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+El **informe de migración de datos** aparece el cuadro de diálogo después de migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Opciones  
 **Estado**  
@@ -36,14 +36,14 @@ La tabla de destino.
 **Número total de filas**  
 El número de filas de datos en la tabla de origen.  
   
-**Número de filas migradas correctamente**  
-El número de filas de datos se migró correctamente a la tabla de destino.  
+**Número de filas se migró correctamente**  
+El número de filas de datos se migrado correctamente a la tabla de destino.  
   
-**Proporción**  
-El porcentaje de filas se migró correctamente.  
+**Relación**  
+El porcentaje de filas se migrado correctamente.  
   
 **Detalles**  
-Si se produce un error en cualquier migración de datos, haga clic para mostrar los detalles de la migración para la fila seleccionada en el informe. SSMA mostrará el motivo del error.  
+Si se produjo un error en cualquier migración de datos, haga clic para mostrar los detalles de la migración de la fila seleccionada en el informe. SSMA mostrará el motivo del error.  
   
 **Guardar informe**  
 Guarda el informe a una. CSV, archivo (valores separados por comas), que se puede examinar con Microsoft Excel.  

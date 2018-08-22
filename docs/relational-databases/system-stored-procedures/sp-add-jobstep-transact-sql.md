@@ -22,12 +22,12 @@ caps.latest.revision: 80
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc7970a2d38786a49beed08e63068be1abab4d51
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b8e883169b394c181765df03218bd19a0ffce18f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38003666"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396181"
 ---
 # <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -103,9 +103,9 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 > [!IMPORTANT]  
 >  Todos los tokens que se usan en pasos de trabajo deben adjuntar ahora una macro de escape; de lo contrario, esos pasos de trabajo producirán un error. Además, ahora debe escribir los nombres de los tokens entre paréntesis y colocar un signo de dólar (`$`) al principio de la sintaxis del token. Por ejemplo:  
 >   
->  `$(ESCAPE_` *nombre de macro* `(DATE))`  
+>  `$(ESCAPE_` *Nombre de macro* `(DATE))`  
   
- Para obtener más información acerca de estos tokens y actualizar los pasos de trabajo para usar la nueva sintaxis de token, consulte [usar Tokens en pasos de trabajo](http://msdn.microsoft.com/library/105bbb66-0ade-4b46-b8e4-f849e5fc4d43).  
+ Para obtener más información acerca de estos tokens y actualizar los pasos de trabajo para usar la nueva sintaxis de token, consulte [usar Tokens en pasos de trabajo](../../ssms/agent/use-tokens-in-job-steps.md).  
   
 > [!IMPORTANT]  
 >  Todos los usuarios de Windows que tengan permisos de escritura en el Registro de eventos de Windows pueden tener acceso a los pasos de trabajo activados por alertas del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o de WMI. Para evitar este riesgo de seguridad, se deshabilitan de manera predeterminada los tokens del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que pueden utilizarse en trabajos activados por alertas. Estos tokens son: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**., and **WMI(***propiedad***)**. Tenga en cuenta que en esta versión el uso de los tokens se ha ampliado a todas las alertas.  
@@ -208,7 +208,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  El creador del paso de trabajo debe tener acceso al proxy para el paso de trabajo. Los miembros de la **sysadmin** rol fijo de servidor tiene acceso a todos los servidores proxy. Se debe conceder acceso al proxy de forma explícita al resto de los usuarios.  
   
@@ -232,7 +232,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Ver o modificar trabajos](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
+ [Ver o modificar trabajos](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   

@@ -13,25 +13,25 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 76e532a39a7571bf90ab2b032b86ba4c5e07da44
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 5e231fd84b85a44392527e7f082b55da1c7826ac
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981307"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395559"
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>Asignación de esquemas de Oracle a esquemas de SQL Server (OracleToSQL)
-En Oracle, cada base de datos tiene uno o varios esquemas. De forma predeterminada, SSMA migra todos los objetos en un esquema de Oracle para un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] denominado para el esquema de base de datos. Sin embargo, puede personalizar la asignación entre esquemas de Oracle y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] bases de datos.  
+En Oracle, cada base de datos tiene uno o varios esquemas. De forma predeterminada, SSMA migra todos los objetos en un esquema de Oracle para un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominado para el esquema de base de datos. Sin embargo, puede personalizar la asignación entre esquemas de Oracle y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de datos.  
   
 ## <a name="oracle-and-sql-server-schemas"></a>Esquemas de SQL Server y Oracle  
-Una base de datos de Oracle contiene esquemas. Una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] contiene varias bases de datos, cada uno de los cuales puede tener varios esquemas.  
+Una base de datos de Oracle contiene esquemas. Una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene varias bases de datos, cada uno de los cuales puede tener varios esquemas.  
   
-El concepto de Oracle de un esquema se asigna a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] concepto de una base de datos y uno de sus esquemas. Por ejemplo, Oracle podría tener un esquema denominado **HR**. Una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] podría tener una base de datos denominada **HR**, y dentro de esa base de datos son los esquemas. Un esquema es el **dbo** (o el propietario de la base de datos) esquema. De forma predeterminada, el esquema de Oracle **HR** se asignará a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos y esquema **HR.dbo**. SSMA se refiere a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] combinación de la base de datos y el esquema como un esquema.  
+El concepto de Oracle de un esquema se asigna a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concepto de una base de datos y uno de sus esquemas. Por ejemplo, Oracle podría tener un esquema denominado **HR**. Una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría tener una base de datos denominada **HR**, y dentro de esa base de datos son los esquemas. Un esquema es el **dbo** (o el propietario de la base de datos) esquema. De forma predeterminada, el esquema de Oracle **HR** se asignará a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos y esquema **HR.dbo**. SSMA se refiere a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinación de la base de datos y el esquema como un esquema.  
   
-Puede modificar la asignación entre Oracle y [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esquemas.  
+Puede modificar la asignación entre Oracle y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquemas.  
   
 ## <a name="modifying-the-target-database-and-schema"></a>Modificación de la base de datos de destino y el esquema  
-En SSMA, se puede asignar un esquema de Oracle que haya disponibles [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esquema.  
+En SSMA, se puede asignar un esquema de Oracle que haya disponibles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquema.  
   
 **Para modificar la base de datos y esquema**  
   
@@ -41,7 +41,7 @@ En SSMA, se puede asignar un esquema de Oracle que haya disponibles [!INCLUDE[ss
   
 2.  En el panel derecho, haga clic en el **esquema de asignación** ficha.  
   
-    Verá una lista de todos los esquemas de Oracle, seguido por un valor de destino. Este destino se indica en una notación de dos partes (*database.schema*) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] donde se migrarán los objetos y datos.  
+    Verá una lista de todos los esquemas de Oracle, seguido por un valor de destino. Este destino se indica en una notación de dos partes (*database.schema*) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde se migrarán los objetos y datos.  
   
 3.  Seleccione la fila que contiene la asignación que desea cambiar y, a continuación, haga clic en **modificar**.  
   
@@ -53,17 +53,17 @@ En SSMA, se puede asignar un esquema de Oracle que haya disponibles [!INCLUDE[ss
   
 -   Asignar a SQL Server  
   
-Base de datos de origen se puede asignar a cualquier base de datos de destino. De forma predeterminada se asigna la base de datos de origen a destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos con el que se ha conectado con SSMA. Si la base de datos de destino que se está asignando es que no existe en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], a continuación, se le pedirá con un mensaje **"la base de datos y/o esquema no existe en el destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] metadatos. Se crearán durante la sincronización. ¿Desea continuar?"** Haga clic en Sí. De forma similar, se puede asignar el esquema al esquema que no existe en el destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de datos que se creará durante la sincronización.  
+Base de datos de origen se puede asignar a cualquier base de datos de destino. De forma predeterminada se asigna la base de datos de origen a destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos con el que se ha conectado con SSMA. Si la base de datos de destino que se está asignando es que no existe en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a continuación, se le pedirá con un mensaje **"la base de datos y/o esquema no existe en el destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadatos. Se crearán durante la sincronización. ¿Desea continuar?"** Haga clic en Sí. De forma similar, se puede asignar el esquema al esquema que no existe en el destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos que se creará durante la sincronización.  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>Revertir a la base de datos predeterminada y el esquema  
-Si personaliza la asignación entre un esquema de Oracle y un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esquema, puede revertir la asignación a los valores predeterminados.  
+Si personaliza la asignación entre un esquema de Oracle y un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquema, puede revertir la asignación a los valores predeterminados.  
   
 **Para revertir a la base de datos predeterminada y el esquema**  
   
 1.  En la pestaña asignación de esquema, seleccione cualquier fila y haga clic en **Restablecer valores predeterminados** para revertir a la base de datos predeterminada y el esquema.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
-Si desea analizar la conversión de los objetos de Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos, puede [crear un informe de conversión](http://msdn.microsoft.com/4de9bcf6-1346-4740-87f9-7f24a8226357). En caso contrario puede [convertir las definiciones de objeto de base de datos de Oracle](http://msdn.microsoft.com/e021182d-31da-443d-b110-937f5db27272) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] definiciones de objetos.  
+Si desea analizar la conversión de los objetos de Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos, puede [crear un informe de conversión](assessing-oracle-schemas-for-conversion-oracletosql.md). En caso contrario puede [convertir las definiciones de objeto de base de datos de Oracle](converting-oracle-schemas-oracletosql.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definiciones de objetos.  
   
 ## <a name="see-also"></a>Vea también  
 [Conectarse a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  

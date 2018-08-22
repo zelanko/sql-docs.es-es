@@ -1,84 +1,87 @@
+items:
 - name: Información general
   href: report-builder-in-sql-server-2016.md
 - name: Iniciar el Generador de informes
   href: start-report-builder.md
   items:
-    - name: Establecimiento de opciones predeterminadas para el Generador de informes
-      href: set-default-options-for-report-builder.md
+  - name: Establecimiento de opciones predeterminadas para el Generador de informes
+    href: set-default-options-for-report-builder.md
 - name: 'Tutorial: Crear un informe de gráfico rápido sin conexión'
   href: tutorial-create-a-quick-chart-report-offline-report-builder.md
 - name: Vista de diseño de informe
   href: report-design-view-report-builder.md
   items:
-    - name: Mostrar la vista previa de informes en el Generador de informes
-      href: previewing-reports-in-report-builder.md
+  - name: Mostrar la vista previa de informes en el Generador de informes
+    href: previewing-reports-in-report-builder.md
 - name: Vista de diseño de conjunto de datos compartido
   href: shared-dataset-design-view-report-builder.md
 - name: Métodos abreviados de teclado
   href: keyboard-shortcuts-report-builder.md
-- name: 'Buscar, ver y administrar informes'
+- name: Buscar, ver y administrar informes
   href: finding-viewing-and-managing-reports-report-builder-and-ssrs.md
   items:
-    - name: Buscar y visualizar informes en el portal web
-      href: finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md
-    - name: Buscar y ver informes con un explorador
-      href: finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md
-    - name: Buscar informes y otros elementos
-      href: searching-for-reports-and-other-items-report-builder-and-ssrs.md
-    - name: Usar Mis informes
-      href: using-my-reports-report-builder-and-ssrs.md
-    - name: Inicio de sesión de Reporting Services (cuadro de diálogo)
-      href: reporting-services-login-dialog-box-report-builder.md
-    - name: Cuadro de diálogo Secciones del informe
-      href: report-sections-dialog-box-report-builder.md
-    - name: Cuadro de diálogo Convertir CRI
-      href: convert-cri-dialog-box-report-builder.md
+  - name: Buscar y visualizar informes en el portal web
+    href: finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md
+  - name: Buscar y ver informes con un explorador
+    href: finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md
+  - name: Buscar informes y otros elementos
+    href: searching-for-reports-and-other-items-report-builder-and-ssrs.md
+  - name: Usar Mis informes
+    href: using-my-reports-report-builder-and-ssrs.md
+  - name: Cuadro de diálogo Convertir CRI
+    href: convert-cri-dialog-box-report-builder.md
 - name: Ocultar un elemento (Generador de informes y SSRS)
   href: hide-an-item-report-builder-and-ssrs.md
 - name: Export Reports
   href: export-reports-report-builder-and-ssrs.md
   items:
-    - name: Funcionalidad interactiva para diferentes extensiones de representación de informes
-      href: interactive-functionality-different-report-rendering-extensions.md
-    - name: Exportar a un archivo CSV
-      href: exporting-to-a-csv-file-report-builder-and-ssrs.md
-    - name: Exportar a Microsoft Excel
-      href: exporting-to-microsoft-excel-report-builder-and-ssrs.md
-    - name: Exportar a Microsoft Word
-      href: exporting-to-microsoft-word-report-builder-and-ssrs.md
-    - name: Representar en HTML
-      href: rendering-to-html-report-builder-and-ssrs.md
-    - name: Exportar a un archivo de imagen
-      href: exporting-to-an-image-file-report-builder-and-ssrs.md
-    - name: Exportar a un archivo PDF
-      href: exporting-to-a-pdf-file-report-builder-and-ssrs.md
-    - name: Exportar a XML
-      href: exporting-to-xml-report-builder-and-ssrs.md
-    - name: Generar fuentes de distribución de datos a partir de informes
-      href: generating-data-feeds-from-reports-report-builder-and-ssrs.md
-    - name: Generar fuentes de distribución de datos a partir de un informe
-      href: generate-data-feeds-from-a-report-report-builder-and-ssrs.md
-    - name: Work Around the Excel 2003 Row Limitation
-      href: work-around-the-excel-2003-row-limitation.md
+  - name: Funcionalidad interactiva para diferentes extensiones de representación de informes
+    href: interactive-functionality-different-report-rendering-extensions.md
+  - name: Exportar a un archivo CSV
+    href: exporting-to-a-csv-file-report-builder-and-ssrs.md
+  - name: Exportar a Microsoft Excel
+    href: exporting-to-microsoft-excel-report-builder-and-ssrs.md
+  - name: Exportar a Microsoft Word
+    href: exporting-to-microsoft-word-report-builder-and-ssrs.md
+  - name: Representar en HTML
+    href: rendering-to-html-report-builder-and-ssrs.md
+  - name: Exportar a un archivo de imagen
+    href: exporting-to-an-image-file-report-builder-and-ssrs.md
+  - name: Exportar a un archivo PDF
+    href: exporting-to-a-pdf-file-report-builder-and-ssrs.md
+  - name: Exportar a XML
+    href: exporting-to-xml-report-builder-and-ssrs.md
+  - name: Generar fuentes de distribución de datos a partir de informes
+    href: generating-data-feeds-from-reports-report-builder-and-ssrs.md
+  - name: Generar fuentes de distribución de datos a partir de un informe
+    href: generate-data-feeds-from-a-report-report-builder-and-ssrs.md
+  - name: Work Around the Excel 2003 Row Limitation
+    href: work-around-the-excel-2003-row-limitation.md
 - name: Imprimir informes
   href: print-reports-report-builder-and-ssrs.md
   items:
-    - name: Imprimir informes desde un explorador usando el control de impresión
-      href: print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md
-    - name: Imprimir informes desde otras aplicaciones
-      href: print-reports-from-other-applications-report-builder-and-ssrs.md
-    - name: Imprimir un informe
-      href: print-a-report-report-builder-and-ssrs.md
-    - name: Imprimir un informe (Reporting Services en el modo de SharePoint)
-      href: print-a-report-reporting-services-in-sharepoint-mode.md
+  - name: Imprimir informes desde un explorador usando el control de impresión
+    href: print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md
+  - name: Imprimir informes desde otras aplicaciones
+    href: print-reports-from-other-applications-report-builder-and-ssrs.md
+  - name: Imprimir un informe
+    href: print-a-report-report-builder-and-ssrs.md
+  - name: Imprimir un informe (Reporting Services en el modo de SharePoint)
+    href: print-a-report-reporting-services-in-sharepoint-mode.md
 - name: Guardar informes
   href: saving-reports-report-builder.md
   items:
-    - name: Guardar informes en un servidor de informes
-      href: save-reports-to-a-report-server-report-builder.md
-    - name: Guardar un informe en una biblioteca de SharePoint
-      href: save-a-report-to-a-sharepoint-library-report-builder.md
+  - name: Guardar informes en un servidor de informes
+    href: save-reports-to-a-report-server-report-builder.md
+  - name: Guardar un informe en una biblioteca de SharePoint
+    href: save-a-report-to-a-sharepoint-library-report-builder.md
 - name: Seguridad
   href: security-report-builder.md
 - name: Glosario (Generador de informes)
   href: glossary-report-builder.md
+ms.openlocfilehash: 0d2bd1b356f4f5dac7b4040658da5107d1b0b3f7
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40427342"

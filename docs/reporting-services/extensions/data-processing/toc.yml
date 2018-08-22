@@ -1,3 +1,4 @@
+items:
 - name: Crear una biblioteca de extensión de procesamiento de datos
   href: creating-a-data-processing-extension-library.md
 - name: Introducción a las extensiones de procesamiento de datos
@@ -20,7 +21,11 @@
   href: implementing-a-datareader-class-for-a-data-processing-extension.md
 - name: Prepararse para implementar una extensión de procesamiento de datos
   href: preparing-to-implement-a-data-processing-extension.md
-- name: Quitar una extensión de procesamiento de datos
-  href: removing-a-data-processing-extension.md
 - name: Usar un conjunto de datos externo con Reporting Services
   href: using-an-external-dataset-with-reporting-services.md
+ms.openlocfilehash: e1b61ca6a9f921b65466ada897b820aefb678aba
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40427292"

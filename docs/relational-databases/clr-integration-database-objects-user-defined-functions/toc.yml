@@ -1,12 +1,21 @@
+items:
 - name: Funciones CLR definidas por el usuario
   href: clr-user-defined-functions.md
-- name: Funciones escalares de CLR
-  href: clr-scalar-valued-functions.md
-- name: Funciones con valores de tabla en CLR
-  href: clr-table-valued-functions.md
-- name: 'Agregado definido por el usuario de CLR: invocar funciones'
-  href: clr-user-defined-aggregate-invoking-functions.md
-- name: 'Agregados definidos por el usuario de CLR: requisitos'
-  href: clr-user-defined-aggregates-requirements.md
-- name: Agregados definidos por el usuario de CLR
-  href: clr-user-defined-aggregates.md
+  items:
+  - name: Funciones escalares de CLR
+    href: clr-scalar-valued-functions.md
+  - name: Funciones con valores de tabla en CLR
+    href: clr-table-valued-functions.md
+  - name: Agregados definidos por el usuario de CLR
+    href: clr-user-defined-aggregates.md
+    items:
+    - name: 'Agregados definidos por el usuario de CLR: requisitos'
+      href: clr-user-defined-aggregates-requirements.md
+    - name: 'Agregado definido por el usuario de CLR: invocar funciones'
+      href: clr-user-defined-aggregate-invoking-functions.md
+ms.openlocfilehash: ae796e9a7d5725f7ff115760bd89f2b28d91c7b7
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40427316"

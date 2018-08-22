@@ -1,3 +1,4 @@
+items:
 - name: Información general
   href: sql-server-encryption.md
 - name: Jerarquía de cifrado
@@ -7,78 +8,84 @@
 - name: Cifrado de datos transparente (TDE)
   href: transparent-data-encryption.md
   items:
-    - name: Mover una base de datos protegida por TDE a otra instancia de SQL Server
-      href: move-a-tde-protected-database-to-another-sql-server.md
-    - name: Habilitar TDE en SQL Server con EKM
-      href: enable-tde-on-sql-server-using-ekm.md
+  - name: Mover una base de datos protegida por TDE a otra instancia de SQL Server
+    href: move-a-tde-protected-database-to-another-sql-server.md
+  - name: Habilitar TDE en SQL Server con EKM
+    href: enable-tde-on-sql-server-using-ekm.md
 - name: TDE con Azure SQL
-  href: transparent-data-encryption-azure-sql.md
+  href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?toc=/docs/relational-databases/security/encryption/toc.json
   items:
-    - name: TDE con Bring Your Own Key
-      href: transparent-data-encryption-byok-azure-sql.md
-    - name: Configuración de TDE con BYOK
-      href: transparent-data-encryption-byok-azure-sql-configure.md
-    - name: Rotación de claves BYOK de TDE
-      href: transparent-data-encryption-byok-azure-sql-key-rotation.md
-    - name: Eliminación del protector de TDE
-      href: transparent-data-encryption-byok-azure-sql-remove-tde-protector.md
+  - name: TDE con Bring Your Own Key
+    href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql?toc=/docs/relational-databases/security/encryption/toc.json
+  - name: Configuración de TDE con BYOK
+    href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?toc=/docs/relational-databases/security/encryption/toc.json
+  - name: Rotación de claves BYOK de TDE
+    href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation?toc=/docs/relational-databases/security/encryption/toc.json
+  - name: Eliminación del protector de TDE
+    href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector?toc=/docs/relational-databases/security/encryption/toc.json
 - name: SQL Server y claves de cifrado de la Base de datos
   href: sql-server-and-database-encryption-keys-database-engine.md
   items:
-    - name: clave maestra de servicio
-      href: service-master-key.md
-    - name: Administración extensible de claves (EKM)
-      href: extensible-key-management-ekm.md
-    - name: Administración extensible de claves con el Almacén de claves de Azure
-      href: extensible-key-management-using-azure-key-vault-sql-server.md
-      items:
-        - name: Setup Steps for Extensible Key Management Using the Azure Key Vault (Pasos de instalación de Administración extensible de claves con el Almacén de claves de Azure)
-          href: setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
-        - name: Use SQL Server Connector with SQL Encryption Features (Usar el conector de SQL Server con características de cifrado de SQL)
-          href: use-sql-server-connector-with-sql-encryption-features.md
-        - name: 'Conector de SQL Server, apéndice'
-          href: sql-server-connector-maintenance-troubleshooting.md
-    - name: Hacer una copia de seguridad de la clave maestra de servicio
-      href: back-up-the-service-master-key.md
-    - name: Restaurar la clave maestra de servicio
-      href: restore-the-service-master-key.md
-    - name: Crear la clave maestra de una base de datos
-      href: create-a-database-master-key.md
-    - name: Hacer copias de seguridad de una clave maestra de una base de datos
-      href: back-up-a-database-master-key.md
-    - name: Restaurar una clave maestra de base de datos
-      href: restore-a-database-master-key.md
-    - name: Crear claves simétricas idénticas en dos servidores
-      href: create-identical-symmetric-keys-on-two-servers.md
-    - name: Cifrar una columna de datos
-      href: encrypt-a-column-of-data.md
+  - name: clave maestra de servicio
+    href: service-master-key.md
+  - name: Administración extensible de claves (EKM)
+    href: extensible-key-management-ekm.md
+  - name: Administración extensible de claves con el Almacén de claves de Azure
+    href: extensible-key-management-using-azure-key-vault-sql-server.md
+    items:
+    - name: Setup Steps for Extensible Key Management Using the Azure Key Vault (Pasos de instalación de Administración extensible de claves con el Almacén de claves de Azure)
+      href: setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
+    - name: Use SQL Server Connector with SQL Encryption Features (Usar el conector de SQL Server con características de cifrado de SQL)
+      href: use-sql-server-connector-with-sql-encryption-features.md
+    - name: Conector de SQL Server, apéndice
+      href: sql-server-connector-maintenance-troubleshooting.md
+  - name: Hacer una copia de seguridad de la clave maestra de servicio
+    href: back-up-the-service-master-key.md
+  - name: Restaurar la clave maestra de servicio
+    href: restore-the-service-master-key.md
+  - name: Crear la clave maestra de una base de datos
+    href: create-a-database-master-key.md
+  - name: Hacer copias de seguridad de una clave maestra de una base de datos
+    href: back-up-a-database-master-key.md
+  - name: Restaurar una clave maestra de base de datos
+    href: restore-a-database-master-key.md
+  - name: Crear claves simétricas idénticas en dos servidores
+    href: create-identical-symmetric-keys-on-two-servers.md
+  - name: Cifrar una columna de datos
+    href: encrypt-a-column-of-data.md
 - name: Always Encrypted
   href: always-encrypted-database-engine.md
   items:
-    - name: Asistente para Always Encrypted
-      href: always-encrypted-wizard.md
-    - name: Overview of Key Management for Always Encrypted (Información general de administración de claves de Always Encrypted)
-      href: overview-of-key-management-for-always-encrypted.md
-      items:
-        - name: Crear y almacenar claves maestras de columna (Always Encrypted)
-          href: create-and-store-column-master-keys-always-encrypted.md
-    - name: Configure Always Encrypted using SQL Server Management Studio (Configurar Always Encrypted con SQL Server Management Studio)
-      href: configure-always-encrypted-using-sql-server-management-studio.md
-    - name: Configure Always Encrypted using PowerShell
-      href: configure-always-encrypted-using-powershell.md
-      items:
-        - name: Configure Always Encrypted Keys using PowerShell (Configurar claves Always Encrypted con PowerShell)
-          href: configure-always-encrypted-keys-using-powershell.md
-        - name: Rotate Always Encrypted Keys using PowerShell (Rotar claves Always Encrypted con PowerShell)
-          href: rotate-always-encrypted-keys-using-powershell.md
-        - name: Configurar el cifrado de columna con PowerShell
-          href: configure-column-encryption-using-powershell.md
-    - name: Always Encrypted (desarrollo de clientes)
-      href: always-encrypted-client-development.md
-      items:
-        - name: Develop Applications using Always Encrypted with the .NET Framework Data Provider for SQL Server (Desarrollar aplicaciones mediante Always Encrypted con el proveedor de datos .NET Framework para SQL Server)
-          href: develop-using-always-encrypted-with-net-framework-data-provider.md
-    - name: Criptografía de Always Encrypted
-      href: always-encrypted-cryptography.md
-    - name: Migración de datos confidenciales protegidos mediante Always Encrypted
-      href: migrate-sensitive-data-protected-by-always-encrypted.md
+  - name: Asistente para Always Encrypted
+    href: always-encrypted-wizard.md
+  - name: Overview of Key Management for Always Encrypted (Información general de administración de claves de Always Encrypted)
+    href: overview-of-key-management-for-always-encrypted.md
+    items:
+    - name: Crear y almacenar claves maestras de columna (Always Encrypted)
+      href: create-and-store-column-master-keys-always-encrypted.md
+  - name: Configure Always Encrypted using SQL Server Management Studio (Configurar Always Encrypted con SQL Server Management Studio)
+    href: configure-always-encrypted-using-sql-server-management-studio.md
+  - name: Configure Always Encrypted using PowerShell
+    href: configure-always-encrypted-using-powershell.md
+    items:
+    - name: Configure Always Encrypted Keys using PowerShell (Configurar claves Always Encrypted con PowerShell)
+      href: configure-always-encrypted-keys-using-powershell.md
+    - name: Rotate Always Encrypted Keys using PowerShell (Rotar claves Always Encrypted con PowerShell)
+      href: rotate-always-encrypted-keys-using-powershell.md
+    - name: Configurar el cifrado de columna con PowerShell
+      href: configure-column-encryption-using-powershell.md
+  - name: Always Encrypted (desarrollo de clientes)
+    href: always-encrypted-client-development.md
+    items:
+    - name: Develop Applications using Always Encrypted with the .NET Framework Data Provider for SQL Server (Desarrollar aplicaciones mediante Always Encrypted con el proveedor de datos .NET Framework para SQL Server)
+      href: develop-using-always-encrypted-with-net-framework-data-provider.md
+  - name: Criptografía de Always Encrypted
+    href: always-encrypted-cryptography.md
+  - name: Migración de datos confidenciales protegidos mediante Always Encrypted
+    href: migrate-sensitive-data-protected-by-always-encrypted.md
+ms.openlocfilehash: 4d6219ec9932717897d1ddd559e73e96c8a45c16
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40427413"

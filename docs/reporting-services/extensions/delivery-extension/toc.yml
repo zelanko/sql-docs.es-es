@@ -1,3 +1,4 @@
+items:
 - name: Crear la biblioteca de una extensión de entrega
   href: creating-a-delivery-extension-library.md
 - name: Depurar el código de extensión de entrega
@@ -10,19 +11,21 @@
   href: implementing-a-delivery-extension.md
 - name: Implementar la interfaz IDeliveryExtension para una extensión de entrega
   href: implementing-the-ideliveryextension-interface-for-a-delivery-extension.md
-- name: Implementar la interfaz ISubscriptionBaseUIUserControl
-  href: implementing-the-isubscriptionbaseuiusercontrol-interface.md
 - name: Preparar la implementación de una extensión de entrega
   href: preparing-to-implement-a-delivery-extension.md
 - name: Quitar una extensión de entrega
   href: removing-a-delivery-extension.md
 - name: Usar una clase Notification para una extensión de entrega
   href: using-a-notification-class-for-a-delivery-extension.md
-- name: Utilizar la interfaz IDeliveryReportServerInformation para una extensión de entrega
-  href: using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md
 - name: Usar la clase RenderedOutputFile para una extensión de entrega
   href: using-the-renderedoutputfile-class-for-a-delivery-extension.md
 - name: Usar la clase Report para una extensión de entrega
   href: using-the-report-class-for-a-delivery-extension.md
 - name: Usar la clase Setting para una extensión de entrega
   href: using-the-setting-class-for-a-delivery-extension.md
+ms.openlocfilehash: 55a35a95603851ade5fb25b64a857b47f3912a92
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40427325"

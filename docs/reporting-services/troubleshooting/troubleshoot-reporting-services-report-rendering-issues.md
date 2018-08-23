@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1e067f6a03b839f9de233bc71eccbf6631bb599f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e98809ab3981cc1af2482ef518be3ddfc639a574
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047127"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "40412751"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Solución de problemas de representación de informes de Reporting Services
 Una vez combinados los datos y la información de diseño, el informe compilado se envía a un representador de informes. Por ejemplo, al obtener una vista previa de un informe localmente, se utiliza el representador de HTML para ver el informe compilado. Utilice este tema para ayudar a solucionar problemas concretos de la representación de informes.   
@@ -78,5 +78,5 @@ Cuando el origen de datos se configura para un tipo de conexión de Lista de Mic
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

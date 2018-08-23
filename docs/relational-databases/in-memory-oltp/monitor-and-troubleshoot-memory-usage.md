@@ -31,8 +31,7 @@ ms.locfileid: "39537435"
   
 ## <a name="sections-in-this-topic"></a>Secciones de este tema  
   
--   
-            [Crear una base de datos de ejemplo con tablas optimizadas para memoria](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_CreateDB)  
+-   [Crear una base de datos de ejemplo con tablas optimizadas para memoria](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_CreateDB)  
   
 -   [Supervisar el uso de la memoria](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_Monitoring)  
   
@@ -40,14 +39,11 @@ ms.locfileid: "39537435"
   
     -   [Usar DMVs](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_UsingDMVs)  
   
--   
-            [Administrar la memoria utilizada por los objetos optimizados para memoria](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_MemOptObjects)  
+-   [Administrar la memoria utilizada por los objetos optimizados para memoria](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_MemOptObjects)  
   
 -   [Solucionar problemas de memoria](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_Troubleshooting)  
   
-##  
-            <a name="bkmk_CreateDB">
-            </a> Crear una base de datos de ejemplo con tablas optimizadas para memoria  
+##  <a name="bkmk_CreateDB"></a> Crear una base de datos de ejemplo con tablas optimizadas para memoria  
  Puede omitir esta sección si ya tiene una base de datos con tablas optimizadas para memoria.  
   
  En los pasos siguientes se crea una base de datos con tres tablas optimizadas para memoria que puede usar en el resto de este tema. En el ejemplo, asignamos la base de datos a un grupo de recursos de servidor de modo que pueda controlar cuánta memoria pueden utilizar las tablas optimizadas para memoria.  
@@ -281,9 +277,7 @@ MEMORYCLERK_XTP      Default    64             0
   
  Para obtener más información, vea [sys.dm_os_memory_clerks (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).  
   
-##  
-            <a name="bkmk_MemOptObjects">
-            </a> Administrar la memoria utilizada por los objetos optimizados para memoria  
+##  <a name="bkmk_MemOptObjects"></a> Administrar la memoria utilizada por los objetos optimizados para memoria  
  Puede controlar la memoria total que han usado las tablas optimizadas para memoria enlazándola a un grupo de recursos con nombre como se describe en el tema [Enlazar una base de datos con tablas optimizadas para memoria a un grupo de recursos de servidor](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md).  
   
 ##  <a name="bkmk_Troubleshooting"></a> Solucionar problemas de memoria  

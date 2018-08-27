@@ -1,37 +1,36 @@
+items:
 - name: Información general
   href: database-features.md
-- name: Artículos nuevos y actualizados
-  href: new-updated-relational-databases.md
 - name: Guías de SQL Server
   href: sql-server-guides.md
   items:
-    - name: Guía de solución de problemas y supervisión de grupos de disponibilidad AlwaysOn
-      href: ../database-engine/availability-groups/windows/always-on-availability-groups-troubleshooting-and-monitoring-guide.md
-    - name: Arquitectura y diseño de los índices
-      href: sql-server-index-design-guide.md
-    - name: Arquitectura de administración de memoria
-      href: memory-management-architecture-guide.md
-      items:
-        - name: Leer páginas
-          href: reading-pages.md
-        - name: Escribir páginas
-          href: writing-pages.md
-    - name: Arquitectura de páginas y extensiones
-      href: pages-and-extents-architecture-guide.md
-    - name: Optimización y validación posterior a la migración
-      href: post-migration-validation-and-optimization-guide.md
-    - name: Rendimiento
-      href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
-    - name: Arquitectura de procesamiento de consultas
-      href: query-processing-architecture-guide.md
-    - name: Arquitectura de subprocesos y tareas
-      href: thread-and-task-architecture-guide.md
-    - name: Guía de arquitectura y administración de registros de transacciones
-      href: sql-server-transaction-log-architecture-and-management-guide.md
-    - name: Guía de versiones de fila y bloqueo de transacciones
-      href: sql-server-transaction-locking-and-row-versioning-guide.md
-    - name: Proceso de limpieza de registros fantasma
-      href: ghost-record-cleanup-process-guide.md
+  - name: Guía de solución de problemas y supervisión de grupos de disponibilidad AlwaysOn
+    href: ../database-engine/availability-groups/windows/always-on-availability-groups-troubleshooting-and-monitoring-guide.md
+  - name: Arquitectura y diseño de los índices
+    href: sql-server-index-design-guide.md
+  - name: Arquitectura de administración de memoria
+    href: memory-management-architecture-guide.md
+    items:
+    - name: Leer páginas
+      href: reading-pages.md
+    - name: Escribir páginas
+      href: writing-pages.md
+  - name: Arquitectura de páginas y extensiones
+    href: pages-and-extents-architecture-guide.md
+  - name: Optimización y validación posterior a la migración
+    href: post-migration-validation-and-optimization-guide.md
+  - name: Rendimiento
+    href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
+  - name: Arquitectura de procesamiento de consultas
+    href: query-processing-architecture-guide.md
+  - name: Arquitectura de subprocesos y tareas
+    href: thread-and-task-architecture-guide.md
+  - name: Guía de arquitectura y administración de registros de transacciones
+    href: sql-server-transaction-log-architecture-and-management-guide.md
+  - name: Guía de versiones de fila y bloqueo de transacciones
+    href: sql-server-transaction-locking-and-row-versioning-guide.md
+  - name: Proceso de limpieza de registros fantasma
+    href: ghost-record-cleanup-process-guide.md
 - name: Copias de seguridad y restauración
   href: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
 - name: Blob
@@ -42,7 +41,7 @@
   href: sql-server-configuration-manager.md
 - name: Cursores
   href: cursors.md
-- name: 'datos, recopilación'
+- name: datos, recopilación
   href: ../relational-databases/data-collection/data-collection.md
 - name: Compresión de datos
   href: ../relational-databases/data-compression/data-compression.md
@@ -54,30 +53,30 @@
   href: ../relational-databases/databases/databases.md
 - name: Desarrollar clientes
   items:
-    - name: integración CLR
-      href: ../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md
-    - name: Programación de procedimientos almacenados extendidos
-      href: ../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md
-    - name: Referencia de procedimientos almacenados extendidos
-      href: ../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md
-    - name: Mensajes de error de Express LocalDB
-      href: ../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md
-    - name: API de instancia de Express LocalDB
-      href: ../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md
-    - name: Native Client
-      href: ../relational-databases/native-client/sql-server-native-client-programming.md
-    - name: Objetos de administración de SQL Server (SMO)
-      href: ../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
-    - name: SQLXML
-      href: ../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md
-    - name: Proveedor WMI (Instrumental de administración de Windows)
-      items:
-        - name: Configuración del proveedor WMI
-          href: ../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md
-        - name: Clases de configuración del proveedor WMI
-          href: ../relational-databases/wmi-provider-configuration-classes/wmi-provider-for-configuration-management-classes.md
-        - name: Eventos de servidor del proveedor WMI
-          href: ../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md
+  - name: integración CLR
+    href: ../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md
+  - name: Programación de procedimientos almacenados extendidos
+    href: ../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md
+  - name: Referencia de procedimientos almacenados extendidos
+    href: ../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md
+  - name: Mensajes de error de Express LocalDB
+    href: ../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md
+  - name: API de instancia de Express LocalDB
+    href: ../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md
+  - name: Native Client
+    href: ../relational-databases/native-client/sql-server-native-client-programming.md
+  - name: Objetos de administración de SQL Server (SMO)
+    href: ../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
+  - name: SQLXML
+    href: ../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md
+  - name: Proveedor WMI (Instrumental de administración de Windows)
+    items:
+    - name: Configuración del proveedor WMI
+      href: ../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md
+    - name: Clases de configuración del proveedor WMI
+      href: ../relational-databases/wmi-provider-configuration-classes/wmi-provider-for-configuration-management-classes.md
+    - name: Eventos de servidor del proveedor WMI
+      href: ../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md
 - name: Errores y eventos
   href: ../relational-databases/errors-events/errors-and-events-reference-database-engine.md
 - name: Clases de evento
@@ -103,10 +102,10 @@
 - name: Administración
   href: ../relational-databases/manage/sql-server-utility-features-and-tasks.md
   items:
-    - name: Administración del ciclo de vida de base de datos
-      href: database-lifecycle-management.md
-    - name: Administrar varios servidores mediante Servidores de administración central
-      href: administer-multiple-servers-using-central-management-servers.md
+  - name: Administración del ciclo de vida de base de datos
+    href: database-lifecycle-management.md
+  - name: Administrar varios servidores mediante Servidores de administración central
+    href: administer-multiple-servers-using-central-management-servers.md
 - name: Combinaciones
   href: ../relational-databases/performance/joins.md
 - name: Particiones
@@ -174,37 +173,43 @@
 - name: Tutoriales
   href: database-engine-tutorials.md
   items:
-    - name: Introducción al motor de base de datos
-      href: tutorial-getting-started-with-the-database-engine.md
-      items:
-        - name: 'Lección 1: Conexión al motor de base de datos'
-          href: lesson-1-connecting-to-the-database-engine.md
-        - name: 'Lección 2: Conectarse desde otro equipo'
-          href: lesson-2-connecting-from-another-computer.md
-    - name: Copia de seguridad y restauración de SQL Server en el servicio Azure Blob Storage
-      href: tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md
-    - name: Firmar procedimientos almacenados con un certificado
-      href: tutorial-signing-stored-procedures-with-a-certificate.md
-    - name: Cadenas de propiedad y cambio de contexto
-      href: tutorial-ownership-chains-and-context-switching.md
-    - name: Usar el servicio Microsoft Azure Blob Storage con bases de datos de SQL Server 2016
-      href: tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
-      items:
-        - name: 'Lección 1: Crear una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure'
-          href: lesson-1-create-stored-access-policy-and-shared-access-signature.md
-        - name: 'Lección 2: Crear una credencial de SQL Server con una firma de acceso compartido'
-          href: lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md
-        - name: 'Lesson 3: Database backup to URL (Lección 3: Copia de seguridad de base de datos en la dirección URL)'
-          href: lesson-3-database-backup-to-url.md
-        - name: 'Lección 4: Restaurar la base de datos a la máquina virtual desde la dirección URL'
-          href: lesson-4-restore-database-to-virtual-machine-from-url.md
-        - name: 'Lesson 5: Backup database using file-snapshot backup (Lección 5: Realizar una copia de seguridad de la base de datos mediante la copia de seguridad de instantáneas de archivos)'
-          href: lesson-5-backup-database-using-file-snapshot-backup.md
-        - name: 'Lección 6: Generar el registro de actividades y copias de seguridad mediante la copia de seguridad de instantáneas de archivos'
-          href: lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md
-        - name: 'Lección 7: Restaurar una base de datos a un momento dado'
-          href: lesson-7-restore-a-database-to-a-point-in-time.md
-        - name: 'Lección 8: Restaurar como una base de datos nueva desde una copia de seguridad de registros'
-          href: lesson-8-restore-as-new-database-from-log-backup.md
-        - name: 'Lección 9: Administrar conjuntos de copia de seguridad y copias de seguridad de instantáneas de archivos'
-          href: lesson-9-manage-backup-sets-and-file-snapshot-backups.md
+  - name: Introducción al motor de base de datos
+    href: tutorial-getting-started-with-the-database-engine.md
+    items:
+    - name: 'Lección 1: Conexión al motor de base de datos'
+      href: lesson-1-connecting-to-the-database-engine.md
+    - name: 'Lección 2: Conectarse desde otro equipo'
+      href: lesson-2-connecting-from-another-computer.md
+  - name: Copia de seguridad y restauración de SQL Server en el servicio Azure Blob Storage
+    href: tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md
+  - name: Firmar procedimientos almacenados con un certificado
+    href: tutorial-signing-stored-procedures-with-a-certificate.md
+  - name: Cadenas de propiedad y cambio de contexto
+    href: tutorial-ownership-chains-and-context-switching.md
+  - name: Usar el servicio Microsoft Azure Blob Storage con bases de datos de SQL Server 2016
+    href: tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
+    items:
+    - name: 'Lección 1: Crear una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure'
+      href: lesson-1-create-stored-access-policy-and-shared-access-signature.md
+    - name: 'Lección 2: Crear una credencial de SQL Server con una firma de acceso compartido'
+      href: lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md
+    - name: 'Lesson 3: Database backup to URL (Lección 3: Copia de seguridad de base de datos en la dirección URL)'
+      href: lesson-3-database-backup-to-url.md
+    - name: 'Lección 4: Restaurar la base de datos a la máquina virtual desde la dirección URL'
+      href: lesson-4-restore-database-to-virtual-machine-from-url.md
+    - name: 'Lesson 5: Backup database using file-snapshot backup (Lección 5: Realizar una copia de seguridad de la base de datos mediante la copia de seguridad de instantáneas de archivos)'
+      href: lesson-5-backup-database-using-file-snapshot-backup.md
+    - name: 'Lección 6: Generar el registro de actividades y copias de seguridad mediante la copia de seguridad de instantáneas de archivos'
+      href: lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md
+    - name: 'Lección 7: Restaurar una base de datos a un momento dado'
+      href: lesson-7-restore-a-database-to-a-point-in-time.md
+    - name: 'Lección 8: Restaurar como una base de datos nueva desde una copia de seguridad de registros'
+      href: lesson-8-restore-as-new-database-from-log-backup.md
+    - name: 'Lección 9: Administrar conjuntos de copia de seguridad y copias de seguridad de instantáneas de archivos'
+      href: lesson-9-manage-backup-sets-and-file-snapshot-backups.md
+ms.openlocfilehash: 52b5bd2d2b20c5e8853d79a3255670ec27464d1b
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899387"

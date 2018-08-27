@@ -1,16 +1,15 @@
+items:
 - name: ¿Qué es SSMS?
   href: sql-server-management-studio-ssms.md
 - name: Descargar SSMS
   href: download-sql-server-management-studio-ssms.md
   items:
-    - name: Registro de cambios de SSMS y versiones anteriores
-      href: sql-server-management-studio-changelog-ssms.md
-    - name: Notas de la versión
-      href: 'download-sql-server-management-studio-ssms.md#release-notes'
-    - name: Instalación de versiones de SSMS en otros idiomas que no sean inglés
-      href: install-other-languages.md
-    - name: Artículos nuevos y actualizados
-      href: new-updated-ssms.md
+  - name: Registro de cambios de SSMS y versiones anteriores
+    href: sql-server-management-studio-changelog-ssms.md
+  - name: Notas de la versión
+    href: download-sql-server-management-studio-ssms.md#release-notes
+  - name: Instalación de versiones de SSMS en otros idiomas que no sean inglés
+    href: install-other-languages.md
 - name: Instalación de un módulo de SQL Server PowerShell
   href: ../powershell/download-sql-server-ps-module.md?toc=/sql/ssms/toc.json
 - name: Agente SQL Server +
@@ -43,7 +42,7 @@
   href: understand-sql-server-management-studio-windows-management.md
 - name: Cuadro de diálogo Herramientas externas
   href: external-tools-dialog-box.md
-- name: 'Argumentos, cuadro de diálogo'
+- name: Argumentos, cuadro de diálogo
   href: arguments-dialog-box.md
 - name: Administrar servidores con SSMS
   href: administer-servers-with-sql-server-management-studio.md
@@ -81,3 +80,9 @@
   href: sql-server-management-studio-keyboard-shortcuts.md
 - name: Datos de uso anónimos
   href: sql-server-management-studio-telemetry-ssms.md
+ms.openlocfilehash: 82996fe6b504a872c7eba7f662e30519400f3c1e
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899694"

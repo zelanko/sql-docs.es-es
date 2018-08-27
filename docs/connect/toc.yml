@@ -1,9 +1,8 @@
+items:
 - name: Programación para interactuar con SQL Server
   href: homepage-sql-connection-programming.md
 - name: Controladores de SQL Server
   href: sql-connection-libraries.md
-- name: Artículos nuevos y actualizados
-  href: new-updated-connect.md
 - name: Historial de controladores de SQL Server
   href: connect-history.md
 - name: ADO.NET
@@ -26,3 +25,9 @@
   href: ../ado/microsoft-activex-data-objects-ado.md
 - name: Desarrollador de datos SQL
   href: sql-data-developer.md
+ms.openlocfilehash: 918eea6f04b74f72be00fe2b22611caace176885
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899359"

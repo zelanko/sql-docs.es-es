@@ -1,208 +1,213 @@
+items:
 - name: Acerca de esta versión
   items:
-    - name: Novedades
-      href: whats-new-analytics-platform-system.md
-    - name: Artículos nuevos y actualizados
-      href: new-updated-analytics-platform-system.md
+  - name: Novedades
+    href: whats-new-analytics-platform-system.md
 - name: Architecture
   items:
-    - name: Información general sobre Almacenamiento de datos paralelo
-      href: parallel-data-warehouse-overview.md
-    - name: Componentes de hardware
-      href: hardware-components.md
-    - name: Configuraciones de hardware
-      href: hardware-configurations.md
-    - name: Capacidad de procesamiento y almacenamiento
-      href: processing-and-storage-capacity-planning.md
-    - name: Alta disponibilidad
-      href: high-availability.md
+  - name: Información general sobre Almacenamiento de datos paralelo
+    href: parallel-data-warehouse-overview.md
+  - name: Componentes de hardware
+    href: hardware-components.md
+  - name: Configuraciones de hardware
+    href: hardware-configurations.md
+  - name: Capacidad de procesamiento y almacenamiento
+    href: processing-and-storage-capacity-planning.md
+  - name: Alta disponibilidad
+    href: high-availability.md
 - name: Copia de seguridad y carga de hardware
   items:
-    - name: Información general
-      href: backup-and-loading-hardware.md
-    - name: Adquisición y configuración de servidores de carga
-      href: acquire-and-configure-loading-server.md
-    - name: Hoja de cálculo de planeamiento de capacidad del servidor de carga
-      href: loading-server-capacity-planning-worksheet.md
-    - name: Adquisición y configuración de servidores de copia de seguridad
-      href: acquire-and-configure-backup-server.md
-    - name: Hoja de cálculo de planeamiento de capacidad del servidor de copia de seguridad
-      href: backup-capacity-planning-worksheet.md
-    - name: Configuración de adaptadores de red InfiniBand
-      href: configure-infiniband-network-adapters.md
+  - name: Información general
+    href: backup-and-loading-hardware.md
+  - name: Adquisición y configuración de servidores de carga
+    href: acquire-and-configure-loading-server.md
+  - name: Hoja de cálculo de planeamiento de capacidad del servidor de carga
+    href: loading-server-capacity-planning-worksheet.md
+  - name: Adquisición y configuración de servidores de copia de seguridad
+    href: acquire-and-configure-backup-server.md
+  - name: Hoja de cálculo de planeamiento de capacidad del servidor de copia de seguridad
+    href: backup-capacity-planning-worksheet.md
+  - name: Configuración de adaptadores de red InfiniBand
+    href: configure-infiniband-network-adapters.md
 - name: Consulta
   items:
-    - name: Configurar estadísticas automáticas
-      href: configure-auto-statistics.md
-    - name: Supervisión de consultas activas
-      href: monitoring-active-queries.md
+  - name: Configurar estadísticas automáticas
+    href: configure-auto-statistics.md
+  - name: Supervisión de consultas activas
+    href: monitoring-active-queries.md
 - name: Cargar
   items:
-    - name: Información general
-      href: load-overview.md
-    - name: Creación de bases de datos de almacenamiento provisional
-      href: staging-database.md
-    - name: Carga con Integration Services
-      href: load-with-ssis.md
-    - name: Creación de tareas de script de Integration Services que utiliza el adaptador de destino de PDW
-      href: create-ssis-script-task-using-pdw-destination-adapter.md
-    - name: Reglas de conversión de tipos de datos para dwloader
-      href: dwloader-data-type-conversion-rules.md
-    - name: Carga de datos con INSERT
-      href: load-with-insert.md
-    - name: Herramienta de carga de la línea de comandos de dwloader
-      href: dwloader.md
-    - name: Cargas de monitor
-      href: monitor-loads.md
+  - name: Información general
+    href: load-overview.md
+  - name: Creación de bases de datos de almacenamiento provisional
+    href: staging-database.md
+  - name: Carga con Integration Services
+    href: load-with-ssis.md
+  - name: Creación de tareas de script de Integration Services que utiliza el adaptador de destino de PDW
+    href: create-ssis-script-task-using-pdw-destination-adapter.md
+  - name: Reglas de conversión de tipos de datos para dwloader
+    href: dwloader-data-type-conversion-rules.md
+  - name: Carga de datos con INSERT
+    href: load-with-insert.md
+  - name: Herramienta de carga de la línea de comandos de dwloader
+    href: dwloader.md
+  - name: Cargas de monitor
+    href: monitor-loads.md
 - name: Administración de bases de datos
   items:
-    - name: Copias de seguridad y restauración
-      items:
-        - name: Información general
-          href: backup-and-restore-overview.md
-        - name: Restauración de bases de datos protegidas mediante TDE
-          href: restore-database-protected-by-tde.md
-    - name: Permisos de PDW
-      href: pdw-permissions.md
-      items:
-        - name: Conceder permisos
-          href: grant-permissions.md
-    - name: Mensajes de error
-      href: error-messages.md
-    - name: Comportamiento de bloqueo
-      href: locking-behavior.md
-    - name: Copia de la tabla remota
-      href: remote-table-copy.md
-      items:
-        - name: Configuración de sistemas externos de Windows para recibir copias de la tabla remota con InfiniBand
-          href: configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md
-        - name: Configuración de SQL Server de SMP externo para recibir copias de la tabla remota
-          href: configure-an-external-smp-sql-server-to-receive-remote-table-copies.md
-        - name: Configuración de SQL Server PDW para las copias de la tabla remota
-          href: configure-sql-server-pdw-for-remote-table-copies.md
-    - name: Bases de datos del sistema
-      href: system-databases.md
-      items:
-        - name: Nombres reservados de la base de datos
-          href: reserved-database-names.md
-        - name: 'tempdb [base de datos]'
-          href: tempdb-database.md
-        - name: base de datos maestra
-          href: master-database.md
-    - name: Sesiones de usuario
-      href: user-sessions.md
-    - name: Administración de cargas de trabajo
-      href: workload-management.md
-      items:
-        - name: Tareas de administración de cargas de trabajo
-          href: workload-management-tasks.md
+  - name: Copias de seguridad y restauración
+    items:
+    - name: Información general
+      href: backup-and-restore-overview.md
+    - name: Restauración de bases de datos protegidas mediante TDE
+      href: restore-database-protected-by-tde.md
+  - name: Permisos de PDW
+    href: pdw-permissions.md
+    items:
+    - name: Conceder permisos
+      href: grant-permissions.md
+  - name: Mensajes de error
+    href: error-messages.md
+  - name: Comportamiento de bloqueo
+    href: locking-behavior.md
+  - name: Copia de la tabla remota
+    href: remote-table-copy.md
+    items:
+    - name: Configuración de sistemas externos de Windows para recibir copias de la tabla remota con InfiniBand
+      href: configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md
+    - name: Configuración de SQL Server de SMP externo para recibir copias de la tabla remota
+      href: configure-an-external-smp-sql-server-to-receive-remote-table-copies.md
+    - name: Configuración de SQL Server PDW para las copias de la tabla remota
+      href: configure-sql-server-pdw-for-remote-table-copies.md
+  - name: Bases de datos del sistema
+    href: system-databases.md
+    items:
+    - name: Nombres reservados de la base de datos
+      href: reserved-database-names.md
+    - name: tempdb [base de datos]
+      href: tempdb-database.md
+    - name: base de datos maestra
+      href: master-database.md
+  - name: Sesiones de usuario
+    href: user-sessions.md
+  - name: Administración de cargas de trabajo
+    href: workload-management.md
+    items:
+    - name: Tareas de administración de cargas de trabajo
+      href: workload-management-tasks.md
 - name: Seguridad
   items:
-    - name: Cifrado de datos transparente
-      href: transparent-data-encryption.md
-    - name: Aprovisionamiento de certificados
-      href: provision-certificate.md
+  - name: Cifrado de datos transparente
+    href: transparent-data-encryption.md
+  - name: Aprovisionamiento de certificados
+    href: provision-certificate.md
 - name: Tareas de administración del dispositivo
   href: appliance-management-tasks.md
   items:
-    - name: Información general sobre la instalación y configuración del dispositivo
-      href: appliance-installation-and-configuration-overview.md
+  - name: Información general sobre la instalación y configuración del dispositivo
+    href: appliance-installation-and-configuration-overview.md
+    items:
+    - name: Información que es necesario obtener de IHV
+      href: information-to-obtain-from-your-ihv.md
+    - name: Instalación de hardware
+      href: hardware-installation.md
+  - name: Conexión a los nodos del dispositivo
+    href: connect-to-appliance-nodes.md
+  - name: Software antivirus
+    href: antivirus-software.md
+  - name: Configuración del dispositivo
+    href: appliance-configuration.md
+    items:
+    - name: Componentes físicos del tejido del dispositivo y de PDW
+      href: pdw-and-appliance-fabric-physical-components.md
+    - name: Inicio de Configuration Manager
+      href: launch-the-configuration-manager.md
+    - name: Topología del dispositivo
+      href: appliance-topology.md
+    - name: Restablecimiento de contraseña
+      href: password-reset.md
+    - name: Configuración de la zona horaria del dispositivo
+      href: appliance-time-zone-configuration.md
+    - name: Configuración de la red del dispositivo
+      href: appliance-network-configuration.md
+    - name: Topología de PDW
+      href: pdw-topology.md
+    - name: Aprovisionamiento del certificado de PDW
+      href: pdw-certificate-provisioning.md
+    - name: Modificador de características de PDW
+      href: appliance-feature-switch.md
+    - name: Configuración de firewall de PDW
+      href: pdw-firewall-configuration.md
+    - name: Estado de los servicios de PDW
+      href: pdw-services-status.md
+    - name: Configuración de la inicialización instantánea de archivos
+      href: instant-file-initialization-configuration.md
+    - name: Restauración de la base de datos maestra
+      href: restore-the-master-database.md
+    - name: Establecimiento de la contraseña de administrador para iniciar sesión en los nodos de AD en el modo de restauración de servicios de directorio (DSRM)
+      href: set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md
+    - name: Configuración de Windows Server Update Services
+      href: configure-windows-server-update-services-wsus.md
+    - name: Configuración de la conectividad de PolyBase a datos externos
+      href: configure-polybase-connectivity-to-external-data.md
+    - name: Uso de un reenviador DNS para resolver los nombres DNS que no sean de dispositivos
+      href: use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md
+    - name: Creación de un administrador de dominio de APS
+      href: create-an-aps-domain-administrator-aps.md
+    - name: Envío de comentarios de telemetría a Microsoft
+      href: send-telemetry-feedback-to-microsoft-sql-server-pdw.md
+  - name: Servicio de software
+    href: software-servicing.md
+    items:
+    - name: Descarga y aplicación de las actualizaciones de Microsoft
+      href: download-and-apply-microsoft-updates.md
+    - name: Desinstalación de las actualizaciones de Microsoft
+      href: uninstall-microsoft-updates.md
+    - name: Aplicación de las revisiones de Analytics Platform System
+      href: apply-analytics-platform-system-hotfixes.md
+    - name: Desinstalación de las revisiones de Analytics Platform System
+      href: uninstall-analytics-platform-system-hotfixes.md
+  - name: Encendido y apagado del dispositivo APS
+    href: power-the-aps-appliance-on-or-off.md
+  - name: Supervisión del dispositivo
+    href: appliance-monitoring.md
+    items:
+    - name: Supervisión del dispositivo mediante la consola de administración
+      href: monitor-the-appliance-by-using-the-admin-console.md
+    - name: Supervisión del dispositivo mediante el uso de vistas del sistema
+      href: monitor-the-appliance-by-using-system-views.md
+    - name: Supervisión del dispositivo mediante el uso de System Center Operations Manager
+      href: monitor-the-appliance-by-using-system-center-operations-manager.md
       items:
-        - name: Información que es necesario obtener de IHV
-          href: information-to-obtain-from-your-ihv.md
-        - name: Instalación de hardware
-          href: hardware-installation.md
-    - name: Conexión a los nodos del dispositivo
-      href: connect-to-appliance-nodes.md
-    - name: Software antivirus
-      href: antivirus-software.md
-    - name: Configuración del dispositivo
-      href: appliance-configuration.md
-      items:
-        - name: Componentes físicos del tejido del dispositivo y de PDW
-          href: pdw-and-appliance-fabric-physical-components.md
-        - name: Inicio de Configuration Manager
-          href: launch-the-configuration-manager.md
-        - name: Topología del dispositivo
-          href: appliance-topology.md
-        - name: Restablecimiento de contraseña
-          href: password-reset.md
-        - name: Configuración de la zona horaria del dispositivo
-          href: appliance-time-zone-configuration.md
-        - name: Configuración de la red del dispositivo
-          href: appliance-network-configuration.md
-        - name: Topología de PDW
-          href: pdw-topology.md
-        - name: Aprovisionamiento del certificado de PDW
-          href: pdw-certificate-provisioning.md
-        - name: Modificador de características de PDW
-          href: appliance-feature-switch.md
-        - name: Configuración de firewall de PDW
-          href: pdw-firewall-configuration.md
-        - name: Estado de los servicios de PDW
-          href: pdw-services-status.md
-        - name: Configuración de la inicialización instantánea de archivos
-          href: instant-file-initialization-configuration.md
-        - name: Restauración de la base de datos maestra
-          href: restore-the-master-database.md
-        - name: Establecimiento de la contraseña de administrador para iniciar sesión en los nodos de AD en el modo de restauración de servicios de directorio (DSRM)
-          href: set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md
-        - name: Configuración de Windows Server Update Services
-          href: configure-windows-server-update-services-wsus.md
-        - name: Configuración de la conectividad de PolyBase a datos externos
-          href: configure-polybase-connectivity-to-external-data.md
-        - name: Uso de un reenviador DNS para resolver los nombres DNS que no sean de dispositivos
-          href: use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md
-        - name: Creación de un administrador de dominio de APS
-          href: create-an-aps-domain-administrator-aps.md
-        - name: Envío de comentarios de telemetría a Microsoft
-          href: send-telemetry-feedback-to-microsoft-sql-server-pdw.md
-    - name: Servicio de software
-      href: software-servicing.md
-      items:
-        - name: Descarga y aplicación de las actualizaciones de Microsoft
-          href: download-and-apply-microsoft-updates.md
-        - name: Desinstalación de las actualizaciones de Microsoft
-          href: uninstall-microsoft-updates.md
-        - name: Aplicación de las revisiones de Analytics Platform System
-          href: apply-analytics-platform-system-hotfixes.md
-        - name: Desinstalación de las revisiones de Analytics Platform System
-          href: uninstall-analytics-platform-system-hotfixes.md
-    - name: Encendido y apagado del dispositivo APS
-      href: power-the-aps-appliance-on-or-off.md
-    - name: Supervisión del dispositivo
-      href: appliance-monitoring.md
-      items:
-        - name: Supervisión del dispositivo mediante la consola de administración
-          href: monitor-the-appliance-by-using-the-admin-console.md
-        - name: Supervisión del dispositivo mediante el uso de vistas del sistema
-          href: monitor-the-appliance-by-using-system-views.md
-        - name: Supervisión del dispositivo mediante el uso de System Center Operations Manager
-          href: monitor-the-appliance-by-using-system-center-operations-manager.md
-          items:
-            - name: Instalación de los módulos de administración de SCOM
-              href: install-the-scom-management-packs.md
-            - name: Importación del módulo de administración de SCOM para PDW
-              href: import-the-scom-management-pack-for-pdw.md
-            - name: Configuración de SCOM para supervisar Analytics Platform System
-              href: configure-scom-to-monitor-analytics-platform-system.md
-        - name: Supervisión del estado de mantenimiento del dispositivo
-          href: monitor-appliance-health-state.md
-        - name: Seguimiento de las alertas del dispositivo
-          href: track-appliance-alerts.md
-        - name: Consulta del uso de la capacidad
-          href: view-capacity-utilization.md
-        - name: Determinar la frecuencia de sondeo
-          href: determine-polling-frequency.md
-        - name: Determinar en qué nodo de clúster se ha producido un error
-          href: determine-which-cluster-node-failed.md
-        - name: Información sobre las alertas de la consola de administración
-          href: understanding-admin-console-alerts.md
+      - name: Instalación de los módulos de administración de SCOM
+        href: install-the-scom-management-packs.md
+      - name: Importación del módulo de administración de SCOM para PDW
+        href: import-the-scom-management-pack-for-pdw.md
+      - name: Configuración de SCOM para supervisar Analytics Platform System
+        href: configure-scom-to-monitor-analytics-platform-system.md
+    - name: Supervisión del estado de mantenimiento del dispositivo
+      href: monitor-appliance-health-state.md
+    - name: Seguimiento de las alertas del dispositivo
+      href: track-appliance-alerts.md
+    - name: Consulta del uso de la capacidad
+      href: view-capacity-utilization.md
+    - name: Determinar la frecuencia de sondeo
+      href: determine-polling-frequency.md
+    - name: Determinar en qué nodo de clúster se ha producido un error
+      href: determine-which-cluster-node-failed.md
+    - name: Información sobre las alertas de la consola de administración
+      href: understanding-admin-console-alerts.md
 - name: Referencia
   items:
-    - name: Elementos de lenguaje T-SQL
-      href: tsql-language-elements.md
-    - name: Instrucciones T-SQL
-      href: tsql-statements.md
-    - name: Vistas del sistema T-SQL
-      href: tsql-system-views.md
+  - name: Elementos de lenguaje T-SQL
+    href: tsql-language-elements.md
+  - name: Instrucciones T-SQL
+    href: tsql-statements.md
+  - name: Vistas del sistema T-SQL
+    href: tsql-system-views.md
+ms.openlocfilehash: 32d381643c714c23db1eaefff309b45a0fd01a84
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899545"

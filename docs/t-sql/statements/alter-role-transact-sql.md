@@ -25,16 +25,16 @@ caps.latest.revision: 64
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 84ba7cea614adc50ad3f3d94aa978fa3fa0deb2a
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 621a49f9cc30b254390c50c00d3879912900fc58
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453679"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43058965"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Agrega o quita miembros en un rol de base de datos o cambia el nombre de un rol de base de datos definido por el usuario.  
   
@@ -124,7 +124,7 @@ Además, para cambiar la pertenencia a un rol fijo de base de datos, se necesita
 ### <a name="a-change-the-name-of-a-database-role"></a>A. Cambiar el nombre de un rol de base de datos  
  **SE APLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- En el ejemplo siguiente se cambia el nombre del rol `buyers` a `purchasing`. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
+ En el ejemplo siguiente se cambia el nombre del rol `buyers` a `purchasing`.   Este ejemplo se puede ejecutar en la base de datos de ejemplo [AdventureWorks](http://msftdbprodsamples.codeplex.com/).
   
 ```sql  
 ALTER ROLE buyers WITH NAME = purchasing;  
@@ -133,7 +133,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ### <a name="b-add-or-remove-role-members"></a>B. Agregar o quitar a miembros del rol  
  **SE APLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- En este ejemplo se crea el rol de base de datos `Sales`. Se agrega un usuario de base de datos denominado Barry a la pertenencia y, luego, se indica cómo quitar el miembro Barry. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
+ En este ejemplo se crea el rol de base de datos `Sales`. Se agrega un usuario de base de datos denominado Barry a la pertenencia y, luego, se indica cómo quitar el miembro Barry.   Este ejemplo se puede ejecutar en la base de datos de ejemplo [AdventureWorks](http://msftdbprodsamples.codeplex.com/).
   
 ```sql  
 CREATE ROLE Sales;  

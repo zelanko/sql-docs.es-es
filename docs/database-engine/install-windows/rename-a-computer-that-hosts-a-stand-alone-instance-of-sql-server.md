@@ -21,19 +21,20 @@ ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
 caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 179371efbc47f39c4e24e44ef15d44dc30ebe2ed
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: d17382e314fa322b67071139bc6f9c6ae389205d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770681"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405577"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Cambiar el nombre de un equipo que hospeda una instancia independiente de SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cuando se cambia el nombre del equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el nombre nuevo se reconoce durante el inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No es necesario que vuelva a ejecutar el programa de instalación para restablecer el nombre del equipo. En su lugar, realice los siguientes pasos para actualizar los metadatos del sistema que están almacenados en sys.servers y que son notificados por la función de sistema @@SERVERNAME. Actualice los metadatos del sistema para reflejar los cambios de nombre de equipo de las conexiones remotas y las aplicaciones que usan @@SERVERNAME, o que consultan el nombre del servidor desde sys.servers.  
+Cuando se cambia el nombre del equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el nombre nuevo se reconoce durante el inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No es necesario que vuelva a ejecutar el programa de instalación para restablecer el nombre del equipo. En su lugar, realice los siguientes pasos para actualizar los metadatos del sistema que están almacenados en sys.servers y que son notificados por la función de sistema @@SERVERNAME. Actualice los metadatos del sistema para reflejar los cambios de nombre de equipo de las conexiones remotas y las aplicaciones que usan @@SERVERNAME, o que consultan el nombre del servidor desde sys.servers.  
   
 Los siguientes pasos no se pueden utilizar para cambiar el nombre de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Estos pasos solo se pueden usar para cambiar la parte del nombre de la instancia que corresponde al nombre del equipo. Por ejemplo, puede cambiar el nombre de un equipo denominado MB1 que hospeda una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada Instance1 por otro nombre, por ejemplo MB2. Sin embargo, la parte del nombre que corresponde a la instancia, Instance1, permanecerá intacta. En este ejemplo, \\\\*nombreDeEquipo*\\*nombreDeInstancia* cambiará de \\\MB1\Instance1 a \\\MB2\Instance1.  
   

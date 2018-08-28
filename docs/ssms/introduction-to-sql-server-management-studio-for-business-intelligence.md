@@ -19,40 +19,40 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34e614c397fd1de17c7c46fe320d76dd0fb17581
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: ae76873ce9156dd62478f7088d383ddff2c42b7d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985357"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775660"
 ---
 # <a name="introduction-to-sql-server-management-studio-for-business-intelligence"></a>Introducción a SQL Server Management Studio para Business Intelligence
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Para obtener acceso, configurar y administrar [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion_md.md)] y [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion_md.md)], utilice [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]. Aunque las tres tecnologías de Business Intelligence se basan en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)], las tareas administrativas asociadas a cada una de ellas son ligeramente diferentes.  
+Para obtener acceso, configurar y administrar [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], utilice [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Aunque las tres tecnologías de Business Intelligence se basan en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], las tareas administrativas asociadas a cada una de ellas son ligeramente diferentes.  
   
 > [!NOTE]  
-> Para crear y modificar soluciones de [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion_md.md)]e [!INCLUDE[ssISnoversion](../includes/ssisnoversion_md.md)] , utilice [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)], no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)] es un entorno de desarrollo basado en [!INCLUDE[msCoName](../includes/msconame_md.md)][!INCLUDE[vsprvs](../includes/vsprvs_md.md)].  
+> Para crear y modificar soluciones de [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]e [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , utilice [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)], no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)] es un entorno de desarrollo basado en [!INCLUDE[msCoName](../includes/msconame_md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
 ## <a name="managing-analysis-services-solutions-using-sql-server-management-studio"></a>Administrar las soluciones de Analysis Services con SQL Server Management Studio  
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] permite administrar los objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] , por ejemplo, realizar copias de seguridad y procesar los objetos.  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] permite administrar los objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] , por ejemplo, realizar copias de seguridad y procesar los objetos.  
   
-[!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] proporciona un proyecto de Script de [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] en el que se desarrollan y guardan los scripts escritos en expresiones multidimensionales (MDX), Extensiones de minería de Datos (DMX) y XML for Analysis (XMLA). Los proyectos de Scripts de [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] se usan para realizar tareas de administración o para volver a crear objetos, como bases de datos y cubos, en instancias de [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] . Por ejemplo, puede desarrollar un script XMLA en un proyecto de Script de [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] que cree directamente los objetos nuevos en una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] existente. Los proyectos de Scripts de [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] se pueden guardar como parte de una solución e integrarlos con un control de código fuente.  
+[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] proporciona un proyecto de Script de [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] en el que se desarrollan y guardan los scripts escritos en expresiones multidimensionales (MDX), Extensiones de minería de Datos (DMX) y XML for Analysis (XMLA). Los proyectos de Scripts de [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] se usan para realizar tareas de administración o para volver a crear objetos, como bases de datos y cubos, en instancias de [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] . Por ejemplo, puede desarrollar un script XMLA en un proyecto de Script de [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] que cree directamente los objetos nuevos en una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] existente. Los proyectos de Scripts de [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] se pueden guardar como parte de una solución e integrarlos con un control de código fuente.  
   
-Para más información sobre cómo usar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)], consulte [Desarrollar e implementar usando SQL Server Management Studio](http://msdn.microsoft.com/c4f5a06b-e2e4-4660-a3a8-6fd356742c02).  
+Para más información sobre cómo usar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], consulte [Desarrollar e implementar usando SQL Server Management Studio](../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md).  
   
 ## <a name="managing-integration-services-solutions-using-sql-server-management-studio"></a>Administrar las soluciones de Integration Services con SQL Server Management Studio  
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] permite usar el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion_md.md)] para administrar paquetes y supervisar los paquetes en ejecución. Además, se puede utilizar [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] para organizar los paquetes en carpetas; ejecutar, importar y exportar paquetes; migrar los paquetes de Servicios de transformación de datos (DTS); y actualizar los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion_md.md)] .  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] permite usar el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para administrar paquetes y supervisar los paquetes en ejecución. Además, se puede utilizar [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para organizar los paquetes en carpetas; ejecutar, importar y exportar paquetes; migrar los paquetes de Servicios de transformación de datos (DTS); y actualizar los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 ## <a name="managing-reporting-services-projects-using-sql-server-management-studio"></a>Administrar proyectos de Reporting Services con SQL Server Management Studio  
 Utilice SQL Server Management Studio para habilitar las características de Reporting Services y administrar el servidor, las bases de datos, los roles y los trabajos.  
   
-Las programaciones compartidas se administran con la carpeta Programaciones compartidas y las bases de datos del servidor de informes (ReportServer, ReportServerTempdb) también se administran. También se crea un rol RSExecRole en la base de datos del sistema maestra cuando se mueve una base de datos del servidor de informes a un motor de base de datos de SQL Server nuevo o diferente ([!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]). Para obtener más información sobre estas tareas, vea los temas siguientes:  
+Las programaciones compartidas se administran con la carpeta Programaciones compartidas y las bases de datos del servidor de informes (ReportServer, ReportServerTempdb) también se administran. También se crea un rol RSExecRole en la base de datos del sistema maestra cuando se mueve una base de datos del servidor de informes a un motor de base de datos de SQL Server nuevo o diferente ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]). Para obtener más información sobre estas tareas, vea los temas siguientes:  
   
 -   [Temas de procedimientos de Management Studio](http://msdn.microsoft.com/60685458-9108-47bf-820a-5e7db454d408)  
   
--   [Administrar una base de datos del servidor de informes](http://msdn.microsoft.com/97b2e1b5-3869-4766-97b9-9bf206b52262)  
+-   [Administrar una base de datos del servidor de informes](../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)  
   
--   [Cómo crear RSExecRole](http://msdn.microsoft.com/7ac17341-df7e-4401-870e-652caa2859c0)  
+-   [Cómo crear RSExecRole](../reporting-services/security/create-the-rsexecrole.md)  
   
 También administra el servidor habilitando y configurando diversas características, estableciendo los servidores predeterminados y administrando los roles y los trabajos. Para obtener más información sobre estas tareas, vea los temas siguientes:  
   
@@ -63,6 +63,6 @@ También administra el servidor habilitando y configurando diversas característ
 -   [Habilitar y deshabilitar la impresión del lado cliente para Reporting Services](http://msdn.microsoft.com/0e709c96-7517-4547-8ef6-5632f8118524)  
   
 ## <a name="see-also"></a>Ver también  
-[Desarrollar e implementar usando SQL Server Data Tools](http://msdn.microsoft.com/132ed779-3ec8-4734-9698-802116d1b017)  
-[Reporting Services en SQL Server Data Tools](http://msdn.microsoft.com/0903c7b2-ac59-45f1-b7d0-922ecd9d76f8)  
+[Desarrollar e implementar usando SQL Server Data Tools](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
+[Reporting Services en SQL Server Data Tools](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)  
   

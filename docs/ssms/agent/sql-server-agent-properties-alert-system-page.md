@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 493e81d1d245920b391374ef146d6b4dfb0586a9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a9a27740fe2aaa85a4341baf44dcb8b8e99e1fd2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38035947"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776422"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>Propiedades de Agente SQL Server (página Sistema de alerta)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,23 +31,23 @@ ms.locfileid: "38035947"
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
-Use esta página para ver y modificar la configuración de los mensajes enviados por alertas del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+Use esta página para ver y modificar la configuración de los mensajes enviados por alertas del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Opciones  
 **Sesión de correo**  
-Las opciones de esta sección configuran el correo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+Las opciones de esta sección configuran el correo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **Habilitar perfil de correo**  
-Habilita el correo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . De forma predeterminada, el correo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] no está habilitado.  
+Habilita el correo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . De forma predeterminada, el correo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no está habilitado.  
   
 **Sistema de correo**  
-Establece el sistema de correo que debe utilizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Correo electrónico de base de datos  
+Establece el sistema de correo que debe utilizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Correo electrónico de base de datos  
   
 > [!NOTE]  
-> Después de cambiar el sistema de correo electrónico, debe reiniciar el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] para que el cambio entre en vigor.  
+> Después de cambiar el sistema de correo electrónico, debe reiniciar el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que el cambio entre en vigor.  
   
 **Perfil de correo**  
-Establece el perfil que debe utilizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . También puede seleccionar **\<nuevo perfil de Correo electrónico de base de datos...>** para crear un perfil.  
+Establece el perfil que debe utilizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . También puede seleccionar **\<nuevo perfil de Correo electrónico de base de datos...>** para crear un perfil.  
   
 **Correo electrónico de buscapersonas**  
 Las opciones de esta sección le permiten configurar los mensajes de correo electrónico enviados a direcciones de buscapersonas para que funcionen con su sistema de buscapersonas.  
@@ -104,18 +104,18 @@ Establece el nombre del operador para recibir notificaciones de error.
 Establece el método que se va a utilizar para las notificaciones al operador para notificaciones de error.  
   
 **Reemplazo de tokens**  
-Esta sección le permite habilitar tokens de paso de trabajo que pueden utilizarse en trabajos ejecutados por alertas del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Para más información sobre los tokens de paso de trabajo, consulte [Usar tokens en pasos de trabajo](../../ssms/agent/use-tokens-in-job-steps.md).  
+Esta sección le permite habilitar tokens de paso de trabajo que pueden utilizarse en trabajos ejecutados por alertas del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para más información sobre los tokens de paso de trabajo, consulte [Usar tokens en pasos de trabajo](../../ssms/agent/use-tokens-in-job-steps.md).  
   
 > [!IMPORTANT]  
-> Todos los usuarios de Windows con permisos de escritura en el Registro de eventos de Windows pueden tener acceso a pasos de trabajo activados por alertas del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Para evitar este riesgo de seguridad, se deshabilitan de manera predeterminada los tokens del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que pueden utilizarse en trabajos activados por alertas. Los tokens son: **$(A-DBN)**, **$(A-SVR)**, **$(A-ERR)**, **$(A-SEV)** y **$(A-MSG)**.  
+> Todos los usuarios de Windows con permisos de escritura en el Registro de eventos de Windows pueden tener acceso a pasos de trabajo activados por alertas del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para evitar este riesgo de seguridad, se deshabilitan de manera predeterminada los tokens del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que pueden utilizarse en trabajos activados por alertas. Los tokens son: **$(A-DBN)**, **$(A-SVR)**, **$(A-ERR)**, **$(A-SEV)** y **$(A-MSG)**.  
 >   
-> Si necesita utilizar estos tokens, asegúrese de que solo los miembros de grupos de seguridad confiables de Windows, tales como el grupo de administradores, tengan permisos de escritura en el Registro de eventos del equipo en el que reside [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , antes de habilitarlos.  
+> Si necesita utilizar estos tokens, asegúrese de que solo los miembros de grupos de seguridad confiables de Windows, tales como el grupo de administradores, tengan permisos de escritura en el Registro de eventos del equipo en el que reside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , antes de habilitarlos.  
   
 **Reemplazar tokens para todas las respuestas de trabajos a alertas**  
-Seleccione esta casilla para habilitar el reemplazo de tokens en trabajos activados por alertas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+Seleccione esta casilla para habilitar el reemplazo de tokens en trabajos activados por alertas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Ver también  
 [Operadores](../../ssms/agent/operators.md)  
-[Configurar el Agente SQL Server para que use el Correo electrónico de base de datos](http://msdn.microsoft.com/en-us/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
-[Correo electrónico de base de datos](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
+[Configurar el Agente SQL Server para que use el Correo electrónico de base de datos](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
+[Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)  
   

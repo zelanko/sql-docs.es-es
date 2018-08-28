@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8beaff6457919ea892715dbd527b8cb17ef9cef2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4d51e053e6ac4518743a737000baf926ccfd5adc
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987827"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776137"
 ---
 # <a name="job-properties---new-job-steps-page"></a>Propiedades del trabajo - Nuevo trabajo (página Pasos)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "37987827"
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
-Utilice esta página para ver y organizar los pasos de trabajo para un trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+Utilice esta página para ver y organizar los pasos de trabajo para un trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opciones  
 **Lista de pasos de trabajo**  
@@ -41,7 +41,7 @@ Enumera los pasos de este trabajo.
 Mueve el trabajo un paso arriba o abajo en la lista.  
   
 **Iniciar paso**  
-Seleccione el paso por el que debe comenzar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] cuando se inicie el trabajo.  
+Seleccione el paso por el que debe comenzar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se inicie el trabajo.  
   
 **Nueva**  
 Crea un nuevo paso debajo del paso de trabajo seleccionado.  

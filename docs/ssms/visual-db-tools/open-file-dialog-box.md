@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20f698a0f85f54a31b18f74ad364de1fc1dfb187
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 839d26440ad4f6d00c4992feb76211daba49617f
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997927"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774198"
 ---
 # <a name="open-file-dialog-box"></a>Cuadro de diálogo Abrir archivo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ Use el cuadro de diálogo **Abrir archivo** para abrir un archivo existente en e
 Para tener acceso a este cuadro de diálogo, seleccione **Abrir** en el menú **Archivo** y, a continuación, elija **Archivo**. Este cuadro de diálogo también aparece al abrir archivos desde otros elementos, como el cuadro de diálogo **Herramientas externas** . En el menú **Archivo** , seleccione **Abrir**y elija **Proyecto o solución** para abrir el cuadro de diálogo similar **Abrir proyecto** .  
   
 > [!NOTE]  
-> Antes de abrir un proyecto o un componente en [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)], asegúrese de que su código es de confianza. El acto de abrir el proyecto o componente en [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] puede hacer que su código se ejecute en un proceso de confianza del equipo local.  
+> Antes de abrir un proyecto o un componente en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], asegúrese de que su código es de confianza. El acto de abrir el proyecto o componente en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] puede hacer que su código se ejecute en un proceso de confianza del equipo local.  
   
 ## <a name="option"></a>Opción  
 **Look in**  

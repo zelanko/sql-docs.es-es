@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 65e30fea2df001d16bc7873fb64b2da594d3dacf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 32bebbedf03e064a92a7bf7043806cd3dd4fce9d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987857"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774728"
 ---
 # <a name="implement-sql-server-agent-security"></a>Implementar la seguridad del Agente SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "37987857"
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] El Agente le permite al administrador de la base de datos ejecutar cada paso de trabajo en un contexto seguro que solo tiene los permisos necesarios para realizar ese paso de trabajo, que está determinado por un servidor proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Para establecer los permisos para un paso de trabajo concreto, cree un proxy que disponga de los permisos necesarios y, a continuación, asigne ese proxy al paso de trabajo. Se puede especificar un servidor proxy en más de un paso de trabajo. Para los pasos de trabajo que necesitan los mismos permisos se utiliza el mismo proxy.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente le permite al administrador de la base de datos ejecutar cada paso de trabajo en un contexto seguro que solo tiene los permisos necesarios para realizar ese paso de trabajo, que está determinado por un servidor proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para establecer los permisos para un paso de trabajo concreto, cree un proxy que disponga de los permisos necesarios y, a continuación, asigne ese proxy al paso de trabajo. Se puede especificar un servidor proxy en más de un paso de trabajo. Para los pasos de trabajo que necesitan los mismos permisos se utiliza el mismo proxy.  
   
-En las siguientes secciones se explica el rol de base de datos que debe conceder a los usuarios para que puedan crear o ejecutar trabajos mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+En las siguientes secciones se explica el rol de base de datos que debe conceder a los usuarios para que puedan crear o ejecutar trabajos mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="granting-access-to-sql-server-agent"></a>Conceder acceso al Agente SQL Server  
-Para utilizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , los usuarios deben ser miembros de uno o más de los siguientes roles fijos de base de datos:  
+Para utilizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los usuarios deben ser miembros de uno o más de los siguientes roles fijos de base de datos:  
   
 -   **SQLAgentUserRole**  
   
@@ -47,30 +47,30 @@ Para utilizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)
   
 -   **SQLAgentOperatorRole**  
   
-Estos roles se almacenan en la base de datos **msdb** . De manera predeterminada, ningún usuario es miembro de estos roles de base de datos. La pertenencia a estos roles se debe conceder explícitamente. Los usuarios que sean miembros del rol fijo de servidor **sysadmin** tienen acceso total al Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , y no necesitan ser miembros de estos roles fijos de base de datos para utilizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Si un usuario no es miembro de uno de estos roles de base de datos ni del rol **sysadmin** , el nodo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] no estará disponible para ellos cuando se conecten con [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+Estos roles se almacenan en la base de datos **msdb** . De manera predeterminada, ningún usuario es miembro de estos roles de base de datos. La pertenencia a estos roles se debe conceder explícitamente. Los usuarios que sean miembros del rol fijo de servidor **sysadmin** tienen acceso total al Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , y no necesitan ser miembros de estos roles fijos de base de datos para utilizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si un usuario no es miembro de uno de estos roles de base de datos ni del rol **sysadmin** , el nodo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no estará disponible para ellos cuando se conecten con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 Los miembros de estos roles de base de datos pueden ver y ejecutar trabajos que les pertenecen, así como crear pasos de trabajos que se ejecuten como una cuenta de proxy existente. Para información sobre los permisos específicos asociados a cada uno de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
-Los miembros del rol fijo de servidor **sysadmin** tienen permiso para crear, modificar o eliminar cuentas de proxy. Los miembros del rol **sysadmin** tienen permiso para crear pasos de trabajo que no especifiquen un proxy, sino que se ejecuten como la cuenta de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , que es la cuenta que se utiliza para iniciar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+Los miembros del rol fijo de servidor **sysadmin** tienen permiso para crear, modificar o eliminar cuentas de proxy. Los miembros del rol **sysadmin** tienen permiso para crear pasos de trabajo que no especifiquen un proxy, sino que se ejecuten como la cuenta de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que es la cuenta que se utiliza para iniciar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="guidelines"></a>Instrucciones  
-Siga estas instrucciones para mejorar la seguridad de la implementación del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] :  
+Siga estas instrucciones para mejorar la seguridad de la implementación del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   Crear cuentas de usuario dedicadas especialmente para servidores proxy y utilizarlas únicamente para ejecutar pasos de trabajos.  
   
 -   Conceder solo los permisos necesarios a las cuentas de usuarios de proxy. Conceder únicamente los permisos realmente necesarios para ejecutar los pasos de trabajo que están asignados a una cuenta de proxy determinada.  
   
--   No ejecutar el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] en una cuenta de Microsoft Windows que sea miembro del grupo **Administradores** de Windows.  
+-   No ejecutar el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una cuenta de Microsoft Windows que sea miembro del grupo **Administradores** de Windows.  
   
--   Los servidores proxy son tan seguros como el almacén de credenciales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+-   Los servidores proxy son tan seguros como el almacén de credenciales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Si las operaciones de escritura de usuario pueden escribir en el registro de eventos de NT, pueden producir alertas mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+-   Si las operaciones de escritura de usuario pueden escribir en el registro de eventos de NT, pueden producir alertas mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   No especifique la cuenta de administración de NT como una cuenta de servicio o una cuenta de proxy.  
   
--   Tenga en cuenta que [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tienen acceso a activos entre sí. Los dos servicios comparten un único espacio del proceso y el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] es un administrador del sistema en el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+-   Tenga en cuenta que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen acceso a activos entre sí. Los dos servicios comparten un único espacio del proceso y el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un administrador del sistema en el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Cuando un servidor de destino (TSX) se registra con un servidor principal (MSX), los administradores del sistema del servidor principal obtienen el control total en la instancia del servidor de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   Cuando un servidor de destino (TSX) se registra con un servidor principal (MSX), los administradores del sistema del servidor principal obtienen el control total en la instancia del servidor de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   ACE es una extensión y no se puede invocar a sí misma. La invocación de ACE la realiza Chainer ScenarioEngine.exe, también conocido como Microsoft.SqlServer.Chainer.Setup.exe, u otro proceso de host.  
   
@@ -85,7 +85,7 @@ Siga estas instrucciones para mejorar la seguridad de la implementación del Age
     -   **Extension** : Microsoft.SqlServer.Configuration.ConfigExtension.dll  
   
 ## <a name="see-also"></a>Ver también  
-[Usar los roles predefinidos](http://msdn.microsoft.com/en-us/6b46db51-7c30-467d-a251-50f50647fe21)  
+[Usar los roles predefinidos](../../reporting-services/security/role-definitions-predefined-roles.md)  
 [sp_addrolemember (Transact-SQL)](http://msdn.microsoft.com/en-us/a583c087-bdb3-46d2-b9e5-3921b3e6d10b)  
 [sp_droprolemember (Transact-SQL)](http://msdn.microsoft.com/en-us/c2f19ab1-e742-4d56-ba8e-8ffd40cf4925)  
 [Seguridad y protección (motor de base de datos)](http://msdn.microsoft.com/en-us/dfb39d16-722a-4734-94bb-98e61e014ee7)  

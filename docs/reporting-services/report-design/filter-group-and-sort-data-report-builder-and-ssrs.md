@@ -1,7 +1,7 @@
 ---
 title: Filtrar, agrupar y ordenar datos (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -24,12 +24,12 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c2173ba773d10cb443c3c8b973cd64cd453ce567
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11081d98ab0f182e81a499b9222c15f3cf979141
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027372"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405364"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtrar, agrupar y ordenar datos (Generador de informes y SSRS)
   En un informe, las expresiones sirven para ayudar a controlar, organizar y ordenar los datos de informe. De forma predeterminada, cuando se crean conjuntos de datos y se diseñan informes, las propiedades de los elementos de informe están se establecen de forma automática en las expresiones basadas en los campos de conjunto de datos, los parámetros y otros elementos que aparecen en el panel Datos de informe. Puede agregar también un botón de ordenación interactivo a una tabla o a una celda de la matriz para permitir a los usuarios cambiar el criterio de ordenación de las filas para los grupos o las filas dentro de los grupos.  
@@ -119,7 +119,7 @@ ms.locfileid: "33027372"
 ### <a name="sorting-data-in-a-dataset-query"></a>Ordenar datos en una consulta de conjunto de datos  
  Incluya el criterio de ordenación en la consulta de conjunto de datos para preordenar los datos antes de que estos se recuperen para un informe. La ordenación de los datos en la consulta permite que el trabajo de ordenación lo realice el origen de datos en lugar del procesador de informes.  
   
- Puede agregar una cláusula ORDER BY a la consulta de conjunto de datos para un tipo de origen de datos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por ejemplo, la consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] siguiente ordena las columnas Sales y Region por la columna Sales en orden descendente en la tabla SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. Para obtener más información, vea el tema que explica cómo ordenar filas con ORDER BY en los [Libros en pantalla de SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
+ Puede agregar una cláusula ORDER BY a la consulta de conjunto de datos para un tipo de origen de datos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por ejemplo, la consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] siguiente ordena las columnas Sales y Region por la columna Sales en orden descendente en la tabla SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`.  
   
 > [!NOTE]  
 >  No todos los orígenes de datos permiten especificar el criterio de ordenación en la consulta.  

@@ -21,12 +21,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54714f5d4c1cd0db5c9117e3812107caf039676e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: dfa43eb6ced096a5ae4facd215cf06a87a97976f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997667"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775422"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>Configurar el Diseñador de diagramas de base de datos (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,9 +41,9 @@ Para usar el diseñador de diagramas de base de datos, un miembro del rol **db_o
 3.  Seleccione **Sí** cuando se le pregunte si desea configurar la creación de diagramas de base de datos.  
   
     > [!NOTE]  
-    > De esta forma creará la tabla de diagrama de base de datos, los procedimientos almacenados del sistema y una función del sistema en la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+    > De esta forma creará la tabla de diagrama de base de datos, los procedimientos almacenados del sistema y una función del sistema en la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-4.  Visual Studio creará los siguientes objetos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]:  
+4.  Visual Studio creará los siguientes objetos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
     1.  sysdiagrams - Tabla  
   

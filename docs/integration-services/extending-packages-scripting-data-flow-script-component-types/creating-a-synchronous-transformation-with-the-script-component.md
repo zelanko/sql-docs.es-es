@@ -22,12 +22,12 @@ caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4b60892548f532385ff12a011b3cb89d631dabbf
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: b9fcea82b032cd709385e7d981d04d108295f19e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404707"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405465"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Crear una transformación sincrónica con el componente de script
   Un componente de transformación se utiliza en el flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para modificar y analizar los datos cuando pasan del origen al destino. Una transformación con salidas sincrónicas procesa cada fila de entrada a medida que pasa por el componente. Una transformación con salidas asincrónicas espera hasta que haya recibido todas las filas de entrada para completar su procesamiento. En este tema se describe una transformación sincrónica. Para obtener información sobre transformaciones asincrónicas, vea [Crear una transformación asincrónica con el componente de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Para obtener más información acerca de la diferencia entre los componentes sincrónicos y asincrónicos, consulte [Understanding Synchronous and Asynchronous Transformations](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md) (Descripción de las transformaciones sincrónicas y asincrónicas).  
@@ -45,7 +45,7 @@ ms.locfileid: "35404707"
  Para establecer el lenguaje de script para el componente de script, puede establecer la propiedad **ScriptLanguage** en la página **Script** del **Editor de transformación Script**.  
   
 > [!NOTE]  
->  Para establecer el lenguaje de scripting predeterminado para el componente de script, utilice la opción **Lenguaje de scripting** en la página **General** del cuadro de diálogo **Opciones**. Para obtener más información, vea [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx) (Página General).  
+>  Para establecer el lenguaje de scripting predeterminado para el componente de script, utilice la opción **Lenguaje de scripting** en la página **General** del cuadro de diálogo **Opciones**. Para obtener más información, vea [General Page](../general-page-of-integration-services-designers-options.md) (Página General).  
   
  Un componente de transformación de flujo de datos tiene una entrada y admite una o varias salidas. La configuración de la entrada y las salidas del componente es uno de los pasos que debe completar en el modo de diseño de metadatos, mediante el **Editor de transformación Script**, antes de escribir un script personalizado.  
   

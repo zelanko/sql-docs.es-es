@@ -21,16 +21,16 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c74d4bd3ccb6770acfdadcbb6cf266890233e91
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 491efcd61e5143439ed9cd22d510f978af062c63
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981807"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774573"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propiedades de columna (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Hay dos conjuntos de propiedades de columnas: un conjunto completo que se puede ver en la pestaña **Propiedades de columna** del Diseñador de tablas (solo disponible para las bases de datos de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ) y un subconjunto que se puede ver en la ventana Propiedades con el Explorador de servidores.  
+Hay dos conjuntos de propiedades de columnas: un conjunto completo que se puede ver en la pestaña **Propiedades de columna** del Diseñador de tablas (solo disponible para las bases de datos de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) y un subconjunto que se puede ver en la ventana Propiedades con el Explorador de servidores.  
   
 > [!NOTE]  
 > Las propiedades de este tema se ordenan por categoría en lugar de alfabéticamente.  
@@ -42,7 +42,7 @@ Hay dos conjuntos de propiedades de columnas: un conjunto completo que se puede 
 Estas propiedades aparecen en la ventana Propiedades cuando selecciona una columna en el Explorador de servidores.  
   
 > [!NOTE]  
-> Estas propiedades, a las que se tiene acceso con el Explorador de servidores, son de solo lectura. Para editar las propiedades de columna de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , seleccione la columna en el Diseñador de tablas. Dichas propiedades se describen posteriormente en este tema.  
+> Estas propiedades, a las que se tiene acceso con el Explorador de servidores, son de solo lectura. Para editar las propiedades de columna de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , seleccione la columna en el Diseñador de tablas. Dichas propiedades se describen posteriormente en este tema.  
   
 **Categoría Identidad**  
 Se expande para mostrar las propiedades de **Nombre** y **Base de datos** .  
@@ -60,13 +60,13 @@ Se expande para mostrar las propiedades restantes.
 Muestra el tipo de datos de la columna seleccionada. Para obtener más información, vea [Tipos de datos (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
 **Incremento de identidad**  
-Muestra el incremento que se agregará a la **Inicialización de identidad** para cada fila posterior de la columna de identidad. (Solo se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
+Muestra el incremento que se agregará a la **Inicialización de identidad** para cada fila posterior de la columna de identidad. (Solo se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **Inicialización de identidad**  
-Muestra el valor de inicialización asignado a la primera fila de la tabla para la columna de identidad. (Solo se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
+Muestra el valor de inicialización asignado a la primera fila de la tabla para la columna de identidad. (Solo se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **Identidad**  
-Muestra si la columna seleccionada es la columna de identidad de la tabla. (Solo se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
+Muestra si la columna seleccionada es la columna de identidad de la tabla. (Solo se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **Longitud**  
 Muestra el número de caracteres permitidos para los tipos de datos basados en caracteres.  
@@ -84,7 +84,7 @@ Muestra el número máximo de dígitos que pueden aparecer a la derecha del sepa
 Para tener acceso a estas propiedades, en el Explorador de servidores haga clic con el botón derecho en la tabla a la que pertenece la columna, elija **Abrir definición de tabla**y seleccione la fila en la cuadrícula de tabla en el Diseñador de tablas.  
   
 > [!NOTE]  
-> Estas propiedades solo se aplican a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+> Estas propiedades solo se aplican a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 **Categoría General**  
 Se expande para mostrar **Nombre**, **Permitir valores NULL**, **Tipo de datos**, **Valor o enlace predeterminado**, **Longitud**, **Precisión**y **Escala**.  
@@ -185,11 +185,11 @@ Indica si los valores de identidad originales se conservan durante la replicaci�
 Muestra si esta columna se replica en otra ubicación.  
   
 **RowGuid**  
-Indica si [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usa la columna como ROWGUID. Puede establecer este valor en **Sí** solo para una columna con el tipo de datos **uniqueidentifier**. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor.  
+Indica si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa la columna como ROWGUID. Puede establecer este valor en **Sí** solo para una columna con el tipo de datos **uniqueidentifier**. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor.  
   
 **Tamaño**  
 Muestra el tamaño en bytes permitido por el tipo de datos de la columna. Por ejemplo, un tipo de datos **nchar** puede tener una longitud de 10 (número de caracteres) pero tendría un tamaño de 20 para los juegos de caracteres Unicode.  
   
 > [!NOTE]  
-> La longitud de un tipo de datos **varchar(max)** varía en cada fila. sp_help devuelve (-1) como la longitud de la columna **varchar(max)** . [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] muestra -1 como tamaño de columna.  
+> La longitud de un tipo de datos **varchar(max)** varía en cada fila. sp_help devuelve (-1) como la longitud de la columna **varchar(max)** . [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] muestra -1 como tamaño de columna.  
   

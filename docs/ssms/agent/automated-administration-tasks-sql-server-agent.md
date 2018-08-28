@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 64cf56df3d9e7ff4f2cb82bf157226b9a8f33993
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 307253f2bf44c24872a4ba90e6b6132819071250
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984777"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775745"
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>Tareas administrativas automatizadas (Agente SQL Server)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "37984777"
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
-Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] le permite automatizar las tareas administrativas. Para automatizar la administración, se definen las tareas administrativas previsibles y, después, se especifican las condiciones en las que se produce cada tarea. El uso de la administración automatizada para controlar las tareas y eventos habituales le permite disponer de tiempo para realizar otras funciones administrativas.  
+Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le permite automatizar las tareas administrativas. Para automatizar la administración, se definen las tareas administrativas previsibles y, después, se especifican las condiciones en las que se produce cada tarea. El uso de la administración automatizada para controlar las tareas y eventos habituales le permite disponer de tiempo para realizar otras funciones administrativas.  
   
 ## <a name="in-this-section"></a>En esta sección  
 [Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)  

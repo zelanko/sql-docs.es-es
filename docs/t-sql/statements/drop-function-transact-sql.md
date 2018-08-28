@@ -26,15 +26,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1654d9d81598edb09c3fafe09b808ecbabe8c812
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 4d4ac6a599ae50b7dcbf84731e3e754a1e27b6ef
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458259"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40405681"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Quita una o más funciones definidas por el usuario de la base de datos actual. Las funciones definidas por el usuario se crean mediante [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) y se modifican con [ALTER FUNCTION](../../t-sql/statements/alter-function-transact-sql.md).  
   
@@ -61,7 +61,7 @@ DROP FUNCTION [ schema_name. ] function_name
   
 ## <a name="arguments"></a>Argumentos  
  *IF EXISTS*    
- Quita la función condicionalmente solo si ya existe. Disponible a partir de [!INCLUDE[ssnoversion_md](../../includes/ssnoversion_md.md)] 2016 y en [!INCLUDE[sssds_md](../../includes/sssds_md.md)].
+ Quita la función condicionalmente solo si ya existe. Disponible a partir de [!INCLUDE[ssnoversion_md](../../includes/ssnoversion-md.md)] 2016 y en [!INCLUDE[sssds_md](../../includes/sssds-md.md)].
   
  *schema_name*  
  Nombre del esquema al que pertenece la función definida por el usuario.  

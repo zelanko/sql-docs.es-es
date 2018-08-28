@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0988084d539c6e6b581bbde831be10789fcd923a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: cc1562108e35f34c417d2472a9930a2e47502b13
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981467"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774828"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Set Job Step Success or Failure Flow
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "38981467"
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
-Al crear trabajos del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , puede especificar la acción que [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] realizará si se produce un error durante la ejecución de un trabajo. Tras la resolución correcta o errónea de cada paso del trabajo, determine la acción que [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] debería realizar. A continuación, utilice el siguiente procedimiento para configurar la lógica del flujo de las acciones de los pasos de trabajo mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+Al crear trabajos del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede especificar la acción que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realizará si se produce un error durante la ejecución de un trabajo. Tras la resolución correcta o errónea de cada paso del trabajo, determine la acción que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debería realizar. A continuación, utilice el siguiente procedimiento para configurar la lógica del flujo de las acciones de los pasos de trabajo mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   **Antes de empezar:**  
   
@@ -71,7 +71,7 @@ Para obtener información detallada, vea [Implement SQL Server Agent Security](.
   
 7.  En la lista **Acción en caso de error** , haga clic en la acción que se realizará si el paso del trabajo no se realiza correctamente.  
   
-8.  Si el trabajo es un script de [!INCLUDE[tsql](../../includes/tsql_md.md)] , puede elegir una de las siguientes opciones:  
+8.  Si el trabajo es un script de [!INCLUDE[tsql](../../includes/tsql-md.md)] , puede elegir una de las siguientes opciones:  
   
     -   En el cuadro **Archivo de salida** , escriba el nombre de un archivo de salida en el que se escribirá la salida del script. De forma predeterminada, el archivo se sobrescribe cada vez que se ejecuta el paso de trabajo. Si no desea que se sobrescriba el archivo de salida, active la casilla **Anexar salida al archivo existente**.  
   

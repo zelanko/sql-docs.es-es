@@ -13,12 +13,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 521fac21807393cfce0bffd7f2c6219c3a07359b
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: ce07cf1898291221f0c33111468d3f8e7187ce6c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322456"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774354"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Ejecutar los pasos Windows PowerShell del Agente SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ Hay varios tipos de pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../includ
 ##  <a name="PShellJob"></a> Crear un paso de trabajo de PowerShell  
  **Para crear un paso de trabajo de PowerShell**  
   
-1.  Expanda el **Agente SQL Server**, cree un trabajo o haga clic con el botón derecho en uno existente y, después, haga clic en **Propiedades**. Para obtener más información acerca de cómo crear un trabajo, vea [Crear trabajos](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b).  
+1.  Expanda el **Agente SQL Server**, cree un trabajo o haga clic con el botón derecho en uno existente y, después, haga clic en **Propiedades**. Para obtener más información acerca de cómo crear un trabajo, vea [Crear trabajos](../ssms/agent/create-jobs.md).  
   
 2.  En el cuadro de diálogo **Propiedades del trabajo** , haga clic en la página **Pasos** y, a continuación, haga clic en **Nuevo**.  
   
@@ -64,7 +64,7 @@ Hay varios tipos de pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../includ
 ##  <a name="CmdExecJob"></a> Crear un paso de trabajo del símbolo del sistema  
  **Para crear un paso de trabajo de CmdExec**  
   
-1.  Expanda el **Agente SQL Server**, cree un trabajo o haga clic con el botón derecho en uno existente y, después, haga clic en **Propiedades**. Para obtener más información acerca de cómo crear un trabajo, vea [Crear trabajos](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b).  
+1.  Expanda el **Agente SQL Server**, cree un trabajo o haga clic con el botón derecho en uno existente y, después, haga clic en **Propiedades**. Para obtener más información acerca de cómo crear un trabajo, vea [Crear trabajos](../ssms/agent/create-jobs.md).  
   
 2.  En el cuadro de diálogo **Propiedades del trabajo** , haga clic en la página **Pasos** y, a continuación, haga clic en **Nuevo**.  
   

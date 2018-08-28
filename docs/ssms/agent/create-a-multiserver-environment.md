@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1cf2e30ab5da5906beef8a73e8d04c6be014aae9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 361457778678c8edc08df87091174d0c5b65d31f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985317"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774446"
 ---
 # <a name="create-a-multiserver-environment"></a>Crear un entorno multiservidor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ La administración multiservidor requiere que se configure un servidor maestro (
   
 De forma predeterminada, el cifrado SSL (Capa de sockets seguros) y la validación de certificados completos se habilitan para las conexiones entre los servidores maestros y los servidores de destino. Para más información, [Establecer opciones de cifrado en servidores de destino](../../ssms/agent/set-encryption-options-on-target-servers.md).  
   
-Si tiene un muchos servidores de destino, no defina el servidor maestro en un servidor de producción con requisitos de rendimiento elevados de otras funciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , ya que el tráfico del servidor de destino puede afectar negativamente al rendimiento del servidor de producción. Si también reenvía eventos a este servidor maestro dedicado, puede centralizar la administración en un servidor. Para más información, consulte [Administrar eventos](../../ssms/agent/manage-events.md).  
+Si tiene un muchos servidores de destino, no defina el servidor maestro en un servidor de producción con requisitos de rendimiento elevados de otras funciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ya que el tráfico del servidor de destino puede afectar negativamente al rendimiento del servidor de producción. Si también reenvía eventos a este servidor maestro dedicado, puede centralizar la administración en un servidor. Para más información, consulte [Administrar eventos](../../ssms/agent/manage-events.md).  
   
 > [!NOTE]  
-> Para usar el procesamiento de trabajos multiservidor, la cuenta de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] debe ser miembro del rol **TargetServersRole** de la base de datos **msdb** del servidor maestro. El Asistente para servidor maestro agrega automáticamente la cuenta de servicio a este rol como parte del proceso de alta.  
+> Para usar el procesamiento de trabajos multiservidor, la cuenta de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser miembro del rol **TargetServersRole** de la base de datos **msdb** del servidor maestro. El Asistente para servidor maestro agrega automáticamente la cuenta de servicio a este rol como parte del proceso de alta.  
   
 ## <a name="considerations-for-multiserver-environments"></a>Consideraciones para entornos multiservidor  
   

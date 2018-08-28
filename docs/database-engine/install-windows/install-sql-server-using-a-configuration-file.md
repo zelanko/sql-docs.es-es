@@ -12,13 +12,14 @@ ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 48ae5549290ab4c8701da6bd75641dfabfc02872
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a8b7e7fdc732376e58d9b7923f2889a0ebc055e1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771081"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405234"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Instalar SQL Server mediante un archivo de configuración
 
@@ -26,7 +27,7 @@ ms.locfileid: "34771081"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación permite generar un archivo de configuración basado en las entradas de tiempo de ejecución y en la configuración predeterminada del sistema. Puede usar el archivo de configuración para implementar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en toda la empresa con la misma configuración. También puede normalizar las instalaciones manuales en toda la empresa mediante la creación de un archivo por lotes que inicie Setup.exe. 
  
-Este artículo está actualizado específicamente para SQL Server 2016 y SQL Server 2017. En cuanto a las versiones anteriores de SQL Server, vea [Instalar SQL Server 2014 mediante un archivo de configuración](http://msdn.microsoft.com/library/dd239405(v=sql.120).aspx).
+Este artículo está actualizado específicamente para SQL Server 2016 y SQL Server 2017. En cuanto a las versiones anteriores de SQL Server, vea [Instalar SQL Server 2014 mediante un archivo de configuración](install-sql-server-2016-using-a-configuration-file.md).
  
 El programa de instalación admite el uso del archivo de configuración solamente a través del símbolo del sistema. A continuación se indica el orden de procesamiento de los parámetros cuando se usa el archivo de configuración:  
   

@@ -26,18 +26,18 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 100c84e221b7add9eab09cd7b2b0bf4c3ab0669b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e0bad4aef18b77c53f850cbcfe2dafd5d8181ac4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38060183"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775325"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 
- > Para obtener contenido relacionado con las versiones anteriores de SQL Server, vea [Configurar Firewall de Windows para permitir el acceso a SQL Server](https://msdn.microsoft.com/en-US/library/cc646023(SQL.120).aspx).
+ > Para obtener contenido relacionado con las versiones anteriores de SQL Server, vea [Configurar Firewall de Windows para permitir el acceso a SQL Server](configure-the-windows-firewall-to-allow-sql-server-access.md).
 
 Los sistemas de firewall ayudan a evitar el acceso no autorizado a los recursos de los equipos. Si un firewall está activado pero no está configurado correctamente, es posible que se bloqueen los intentos de conexión a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

@@ -17,12 +17,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26112fd5fa3052e6aa5f873a436aafce7430d498
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76ca616057ba53fa60fb9d53bd7ff79ff2598864
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33047312"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776402"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>Expresión de restricción CHECK (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +60,7 @@ En la pestaña Restricciones CHECK de las páginas de propiedades, escriba una e
   
 La sintaxis de SQL está formada por los siguientes parámetros:  
   
-|Parámetro|Description|  
+|Parámetro|Descripción|  
 |-------------|---------------|  
 |constant|Valor literal, como un valor numérico o una cadena de caracteres. Los datos de caracteres deben escribirse entre comillas sencillas (').|  
 |column_name|Especifica una columna.|  
@@ -71,6 +71,6 @@ La sintaxis de SQL está formada por los siguientes parámetros:
 |NOT|Niega cualquier expresión booleana (que puede incluir palabras clave como LIKE, NULL, BETWEEN, IN y EXISTS).<br /><br />Cuando se utiliza más de un operador lógico en una instrucción, se procesará primero el operador NOT. Puede cambiar el orden de ejecución utilizando paréntesis.|  
   
 ## <a name="see-also"></a>Ver también  
-[Restricciones UNIQUE y restricciones CHECK](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
-[Crear restricciones UNIQUE](http://msdn.microsoft.com/en-us/a86f9d6f-f242-43be-b65d-b3435b71b62a)  
+[Restricciones UNIQUE y restricciones CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
+[Crear restricciones UNIQUE](../../relational-databases/tables/create-unique-constraints.md)  
   

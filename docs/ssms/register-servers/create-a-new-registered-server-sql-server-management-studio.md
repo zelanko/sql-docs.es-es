@@ -19,12 +19,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1894d3542613398d50ba0fb998439ce9b57b1af
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: c1d2c0f80d80a48005821038b2cb90367fef6cdd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36806980"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775668"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Crear un servidor registrado (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "36806980"
  Para ejecutar las consultas con todos los servidores que se registran con un Servidor de administración central, expanda el servidor, haga clic con el botón derecho en el grupo de servidores, haga clic en **Conectar**y, después, haga clic en **Nueva consulta**. Cuando las consultas se ejecuten en la nueva ventana del Editor de consultas, ejecutarán con todos los servidores del grupo de servidores, utilizando la información de conexión almacenada y el contexto de autenticación de Windows del usuario.  
   
 ## <a name="see-also"></a>Ver también  
- [Ocultar objetos del sistema en el Explorador de objetos](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)   
+ [Ocultar objetos del sistema en el Explorador de objetos](../object/hide-system-objects-in-object-explorer.md)   
  [Exportar información de servidores registrados &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
  [Importar información de servidores registrados &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)  
   

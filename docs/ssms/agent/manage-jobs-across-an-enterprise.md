@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 296c951dcd5ae00740c4040c717857c915c3dce9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: e719267e0d774ce04e0c42049f5d9b16a4e9a479
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983947"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775916"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>Administrar trabajos en una empresa
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "38983947"
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
-Si realiza cambios en definiciones de trabajos multiservidor fuera del [!INCLUDE[msCoName](../../includes/msconame_md.md)] de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], deberá exponer los cambios en la lista de descarga para que los servidores de destino puedan volver a descargar el trabajo actualizado. Para asegurarse de que los servidores de destino tienen las definiciones de trabajos actuales, exponga una instrucción INSERT después de actualizar el trabajo multiservidor, como se explica a continuación:  
+Si realiza cambios en definiciones de trabajos multiservidor fuera del [!INCLUDE[msCoName](../../includes/msconame_md.md)] de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], deberá exponer los cambios en la lista de descarga para que los servidores de destino puedan volver a descargar el trabajo actualizado. Para asegurarse de que los servidores de destino tienen las definiciones de trabajos actuales, exponga una instrucción INSERT después de actualizar el trabajo multiservidor, como se explica a continuación:  
   
 ```  
 EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'  
@@ -49,7 +49,7 @@ Para notificar a los servidores de destino de que se ha modificado un trabajo mu
   
 -   [sp_delete_jobstep (Transact-SQL)](http://msdn.microsoft.com/421ede8e-ad57-474a-9fb9-92f70a3e77e3)  
   
--   [Administrar eventos](http://msdn.microsoft.com/80c80eaf-cf23-4ed8-b8dd-65fe59830dd1)  
+-   [Administrar eventos](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
 -   [sp_detach_schedule (Transact-SQL)](http://msdn.microsoft.com/9a1fc335-1bef-4638-a33a-771c54a5dd19)  
   

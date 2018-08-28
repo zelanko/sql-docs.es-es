@@ -29,12 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 22f1d2aba775db69f184c7a934a6200ace7ac4c0
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: b3fa66e5c0f80fe1954527a99bd731f2e9153a96
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982727"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776534"
 ---
 # <a name="create-a-user-defined-event"></a>Crear un evento definido por el usuario
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,14 +42,14 @@ ms.locfileid: "38982727"
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
-Puede crear eventos definidos por el usuario si desea supervisar los eventos distintos de otros predefinidos por [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. También puede asignar un nivel de gravedad a cada evento definido por el usuario.  
+Puede crear eventos definidos por el usuario si desea supervisar los eventos distintos de otros predefinidos por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También puede asignar un nivel de gravedad a cada evento definido por el usuario.  
   
 > [!NOTE]  
-> Cuando use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], seleccione la opción **Escribir en el registro de eventos de aplicación Windows** para cada mensaje de evento definido por el usuario, y garantizar así que se registran los mensajes. De manera predeterminada, los mensajes definidos por el usuario con niveles de gravedad inferiores a 19 no se envían al registro de aplicación de [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows cuando se producen. Por tanto, no desencadenan alertas del Agente SQL Server.  
+> Cuando use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], seleccione la opción **Escribir en el registro de eventos de aplicación Windows** para cada mensaje de evento definido por el usuario, y garantizar así que se registran los mensajes. De manera predeterminada, los mensajes definidos por el usuario con niveles de gravedad inferiores a 19 no se envían al registro de aplicación de [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows cuando se producen. Por tanto, no desencadenan alertas del Agente SQL Server.  
   
 Los mensajes de eventos definidos por el usuario deben tener un número de mensaje exclusivo. Los números de los mensajes de eventos definidos por el usuario deben ser mayores de 50.000. Se pueden definir mensajes para el evento en varios idiomas. No obstante, debe existir un mensaje de error en **En-US** para que se puedan agregar mensajes en otros idiomas.  
   
-Si administra un entorno [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] en varios idiomas, cree mensajes definidos por el usuario en cada uno de los idiomas admitidos. Por ejemplo, si crea un nuevo mensaje de evento que se va a utilizar en un servidor en inglés y en alemán, utilice el mismo número de mensaje para ambos, pero asigne un idioma distinto a cada uno.  
+Si administra un entorno [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en varios idiomas, cree mensajes definidos por el usuario en cada uno de los idiomas admitidos. Por ejemplo, si crea un nuevo mensaje de evento que se va a utilizar en un servidor en inglés y en alemán, utilice el mismo número de mensaje para ambos, pero asigne un idioma distinto a cada uno.  
   
 Las tareas siguientes ofrecen información acerca de cómo crear eventos definidos por el usuario y alertas que respondan a los eventos:  
   

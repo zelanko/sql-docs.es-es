@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9fae50bb7b88e7ea2f291fc0baa375b46f0a380c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 647177b67d9094e5f316f4e119dcecca6dafe1ff
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38035850"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774927"
 ---
 # <a name="sql-server-agent-properties-general-page"></a>Propiedades de Agente SQL Server (página General)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,17 +31,17 @@ ms.locfileid: "38035850"
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
-Utilice esta página para ver y modificar las propiedades generales del servicio del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+Utilice esta página para ver y modificar las propiedades generales del servicio del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opciones  
 **Estado del servicio**  
-Muestra el estado actual del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+Muestra el estado actual del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **Reiniciar SQL Server si se detiene inesperadamente**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] El Agente reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] si [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] se detiene de forma inesperada.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se detiene de forma inesperada.  
   
 **Reiniciar el Agente SQL Server automáticamente si se detiene inesperadamente**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] reinicia el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] si el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] se detiene de forma inesperada.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reinicia el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se detiene de forma inesperada.  
   
 **Nombre de archivo**  
 Especifica el nombre de archivo del registro de errores.  
@@ -50,13 +50,13 @@ Especifica el nombre de archivo del registro de errores.
 Permite buscar el archivo del registro de errores.  
   
 **Incluir mensajes de seguimiento de ejecución**  
-Incluye mensajes de seguimiento de ejecución en el registro de errores. Los mensajes de seguimiento proporcionan información detallada sobre la operación del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Por tanto, el archivo de registro requiere más espacio en disco cuando se selecciona esta opción. Solo se debe seleccionar si se intenta solucionar un problema que puede estar relacionado con el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+Incluye mensajes de seguimiento de ejecución en el registro de errores. Los mensajes de seguimiento proporcionan información detallada sobre la operación del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por tanto, el archivo de registro requiere más espacio en disco cuando se selecciona esta opción. Solo se debe seleccionar si se intenta solucionar un problema que puede estar relacionado con el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **Escribir archivo OEM**  
 Escribe el archivo de registro de errores como un archivo no Unicode. De esta forma, se reduce el espacio en disco que utiliza el archivo de registro. Sin embargo, si se habilita esta opción, puede resultar más difícil leer los mensajes que incluyen datos Unicode.  
   
 **Destinatario de NET SEND**  
-Escribe el nombre de un operador que recibirá una notificación mediante NET SEND de los mensajes que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] escribe en el archivo de registro.  
+Escribe el nombre de un operador que recibirá una notificación mediante NET SEND de los mensajes que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escribe en el archivo de registro.  
   
 ## <a name="see-also"></a>Ver también  
 [Operadores](../../ssms/agent/operators.md)  

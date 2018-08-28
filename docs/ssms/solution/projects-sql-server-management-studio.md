@@ -15,19 +15,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2329d95d6f93ad639d85ce85f3d1f35752eaef0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60f0a9ef2b0d1345d7f1ef7605a861e9283f8c18
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045032"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776641"
 ---
 # <a name="projects-sql-server-management-studio"></a>Proyectos (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Un proyecto de [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] es una colección de scripts y archivos relacionados lógicamente que se pueden guardar juntos para la administración y el desarrollo de bases de datos.  
+Un proyecto de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] es una colección de scripts y archivos relacionados lógicamente que se pueden guardar juntos para la administración y el desarrollo de bases de datos.  
   
 ## <a name="script-project-overview"></a>Información general del proyecto de script  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] aparecen en el Explorador de soluciones de [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]. Un proyecto de script puede contener cero o varios archivos de proyecto. Puede agregar un proyecto a una solución o combinar más de un proyecto en una solución.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aparecen en el Explorador de soluciones de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Un proyecto de script puede contener cero o varios archivos de proyecto. Puede agregar un proyecto a una solución o combinar más de un proyecto en una solución.  
   
 Entre los proyectos se pueden incluir los siguientes:  
   
@@ -42,11 +42,11 @@ Entre los proyectos se pueden incluir los siguientes:
 Los proyectos también pueden estar integrados en un sistema de control de código fuente.  
   
 ## <a name="connecting-to-an-instance-of-sql-server-from-a-script-project"></a>Conectar a una instancia de SQL Server desde un proyecto de script  
-Un proyecto de script puede contener conexiones a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Puede conectar a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] en un proyecto si hace clic en la conexión. Así se abrirá una ventana de script SQL conectada a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] definida en la conexión seleccionada. Si abre un script [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o MDX con una conexión que use autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , se le solicitará la contraseña mediante el cuadro de diálogo **Conectar con el servidor SQL Server** una vez que el editor se haya abierto y el script se haya cargado.  
+Un proyecto de script puede contener conexiones a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede conectar a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un proyecto si hace clic en la conexión. Así se abrirá una ventana de script SQL conectada a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definida en la conexión seleccionada. Si abre un script [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o MDX con una conexión que use autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se le solicitará la contraseña mediante el cuadro de diálogo **Conectar con el servidor SQL Server** una vez que el editor se haya abierto y el script se haya cargado.  
   
 La conexión se cerrará una vez que se cierre la ventana correspondiente.  
   
-Para modificar información sobre una conexión, use la ventana de propiedades de [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+Para modificar información sobre una conexión, use la ventana de propiedades de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="project-tasks"></a>Tareas de proyecto  
   

@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 5d1c1d149f89cbbd34365531b56885a84a5d89ae
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: d13eab13d49cfa9de13f398df75febb87368f5b7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39533425"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405352"
 ---
 # <a name="populate-full-text-indexes"></a>Rellenar índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -208,7 +208,7 @@ En algunos casos, la solicitud de un rellenado incremental produce un llenado co
          De esta forma se abre el cuadro de diálogo **Nueva programación de tabla de indexación de texto completo** , donde puede modificar una programación.  
   
         > [!NOTE]  
-        >  Para obtener información sobre cómo modificar un trabajo del Agente SQL Server, vea [Modificar un trabajo](http://msdn.microsoft.com/library/dd5e5f20-20c4-4ab9-a19a-db87577dcd43).  
+        >  Para obtener información sobre cómo modificar un trabajo del Agente SQL Server, vea [Modificar un trabajo](../../ssms/agent/modify-a-job.md).  
   
     -   Para **eliminar** una programación existente, seleccione la programación existente y haga clic en **Eliminar**.  
   

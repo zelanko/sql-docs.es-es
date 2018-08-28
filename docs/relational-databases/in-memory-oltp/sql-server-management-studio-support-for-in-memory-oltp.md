@@ -16,12 +16,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 042d7aa32742f0cddf18963a7a50ac1cc2dc9ec6
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 6dbc4b3fe31419f89dba28b1f8c067ef74e70edd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558275"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405705"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Compatibilidad de SQL Server Management Studio con OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "39558275"
   
 2.  Para reemplazar los parámetros de plantilla, en el menú **Consulta** , haga clic en **Especificar valores para parámetros de plantilla** .  
   
-     Para obtener más información acerca de cómo usar plantillas, vea [Template Explorer](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8).  
+     Para obtener más información acerca de cómo usar plantillas, vea [Template Explorer](../../ssms/template/template-explorer.md).  
   
 3.  En el **Explorador de objetos**, las tablas se ordenarán primero según las tablas basadas en disco, seguidas de las tablas optimizadas para memoria. Use **Detalles del Explorador de objetos** para ver todas las tablas ordenadas por nombre.  
   

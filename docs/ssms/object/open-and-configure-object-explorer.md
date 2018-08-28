@@ -15,19 +15,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06ca866e29f6499224bdaa03ce723ac13befd6ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03a98a1e29f251663c962795fac0e64382526ff9
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041802"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775988"
 ---
 # <a name="open-and-configure-object-explorer"></a>Abrir y configurar el Explorador de objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Abra el Explorador de objetos mediante el menú **Ver** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Configure las opciones del Explorador de objetos mediante **Opciones** en el menú **Herramientas** .  
+Abra el Explorador de objetos mediante el menú **Ver** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Configure las opciones del Explorador de objetos mediante **Opciones** en el menú **Herramientas** .  
   
 ## <a name="viewing-object-explorer"></a>Ver el Explorador de objetos  
-El Explorador de objetos es visible de forma predeterminada en [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] . Si no lo ve, haga clic en **Explorador de objetos** , en el menú **Ver**.  
+El Explorador de objetos es visible de forma predeterminada en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Si no lo ve, haga clic en **Explorador de objetos** , en el menú **Ver**.  
   
 ## <a name="configuring-object-explorer-options"></a>Configurar las opciones del Explorador de objetos  
 Configurar los valores del Explorador de objetos, en el menú **Herramientas** , hace clic en **Opciones**y, a continuación, hace clic en **Explorador de objetos de SQL Server**.  

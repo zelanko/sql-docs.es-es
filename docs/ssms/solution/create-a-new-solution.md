@@ -17,16 +17,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2b7a760a15c8ea953e87b8ff9ab550212c29cd7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c28c04376a010c3329dcd1df28e716229cab8f27
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043172"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776624"
 ---
 # <a name="create-a-new-solution"></a>Crear una nueva solución
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Cuando se crea un proyecto, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] crea una solución que lo incluye. Solo puede abrir una solución al mismo tiempo. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] no permite crear carpetas dentro de los proyectos. Para organizar el trabajo, cree varios proyectos.  
+Cuando se crea un proyecto, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] crea una solución que lo incluye. Solo puede abrir una solución al mismo tiempo. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no permite crear carpetas dentro de los proyectos. Para organizar el trabajo, cree varios proyectos.  
   
 Para obtener acceso al Explorador de soluciones, en el menú **Ver** , haga clic en **Explorador de soluciones** .  
   

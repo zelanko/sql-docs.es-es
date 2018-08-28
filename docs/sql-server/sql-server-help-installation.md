@@ -16,12 +16,12 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 537b5ed189edfb66b2842179ad44b2da81a064dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e43296dc139f2e8b53454f088fc341ab40656f5f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036023"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776160"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Visor de Ayuda y ayuda sin conexión de SQL Server
 
@@ -105,7 +105,7 @@ SSMS 17.x y VS 2015 y 2017 usan el Visor de Ayuda 2.x, que es compatible con la 
 |Referencia del lenguaje XQuery (SQL Server) | Referencia del lenguaje XQuery (SQL Server)|
 
 > [!NOTE]
-> Si el Visor de Ayuda se bloquea al agregar contenido, cambie la línea Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" en los archivos %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings o HlpViewer_VisualStudiox_en-US.settings a una fecha en el futuro. Para obtener más información sobre este problema, vea [Visual Studio Help Viewer freezes](https://msdn.microsoft.com/en-us/library/dd831853.aspx)(El Visor de Ayuda de Visual Studio se bloquea).
+> Si el Visor de Ayuda se bloquea al agregar contenido, cambie la línea Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" en los archivos %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings o HlpViewer_VisualStudiox_en-US.settings a una fecha en el futuro. Para obtener más información sobre este problema, vea [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio)(El Visor de Ayuda de Visual Studio se bloquea).
 
 **Para ver contenido de ayuda en línea en SSMS con el Visor de Ayuda v2.x**
 

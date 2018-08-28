@@ -18,12 +18,12 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 574677284e2614f665fb1cf663d78b898dcdafe2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60ceeadd0f4608d241b9609bf050bc97de264e98
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32932996"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405231"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>Configuración de copias de seguridad de trasvase de registros de transacciones
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "32932996"
 |**No comprimir copia de seguridad**|Haga clic para crear una copia de seguridad sin comprimir, independientemente del valor predeterminado de nivel de servidor.|  
   
 ## <a name="see-also"></a>Ver también  
- [Configurar un usuario para crear y administrar trabajos del Agente SQL Server](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)   
+ [Configurar un usuario para crear y administrar trabajos del Agente SQL Server](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)   
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   
   

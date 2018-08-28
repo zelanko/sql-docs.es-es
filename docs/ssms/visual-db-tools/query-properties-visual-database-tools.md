@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ecdcf360a7aad1b9468367cc706849d4da2f90c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e3d3c8c92a78dd0548c115b9bdfa3baed3a396df
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053602"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774226"
 ---
 # <a name="query-properties-visual-database-tools"></a>Propiedades de la consulta (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ Estas propiedades aparecen en la ventana Propiedades cuando hay una consulta abi
 Se expande para mostrar la propiedad **Nombre** .  
   
 **Nombre**  
-Muestra el nombre de la consulta actual. No se puede cambiar en [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+Muestra el nombre de la consulta actual. No se puede cambiar en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 **Database Name**  
 Muestra el nombre del origen de datos de la tabla seleccionada  
@@ -60,7 +60,7 @@ En las consultas MAKE TABLE, escriba el nombre de la nueva tabla. Para crear una
 Especifica que la consulta filtrará los duplicados del conjunto de resultados. Esta opción es útil cuando solo se utilizan algunas columnas de la tabla o tablas y dichas columnas podrían contener valores duplicados, o cuando el proceso de combinar dos o más tablas genera filas duplicadas en el conjunto de resultados. Elegir esta opción equivale a insertar la palabra DISTINCT en la instrucción en el panel SQL.  
   
 **Extensión GROUP BY**  
-Especifica que las opciones adicionales para consultas basadas en consultas de agregado están disponibles. (Solo se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
+Especifica que las opciones adicionales para consultas basadas en consultas de agregado están disponibles. (Solo se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **Todas las columnas**  
 Especifica que se incluirán todas las columnas de todas las tablas de la consulta actual en el conjunto de resultados. La elección de esta opción equivale a especificar en la instrucción SQL un asterisco (*) en lugar de los nombres de columnas individuales a continuación de la palabra clave SELECT.  
@@ -69,7 +69,7 @@ Especifica que se incluirán todas las columnas de todas las tablas de la consul
 Muestra los parámetros de la consulta. Para editar los parámetros, haga clic en la propiedad y, a continuación, en el botón de puntos suspensivos **(…)** situado a la derecha de la propiedad. (Solo se aplica a OLE DB genérico.)  
   
 **Comentario de SQL**  
-Muestra una descripción de las instrucciones SQL. Para ver o editar la descripción completa, haga clic en la descripción y después en el botón de puntos suspensivos **(…)** situado a la derecha de la propiedad. Los comentarios pueden incluir información, como quién utiliza la consulta y cuándo. (Solo se aplica a las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 o versiones posteriores.)  
+Muestra una descripción de las instrucciones SQL. Para ver o editar la descripción completa, haga clic en la descripción y después en el botón de puntos suspensivos **(…)** situado a la derecha de la propiedad. Los comentarios pueden incluir información, como quién utiliza la consulta y cuándo. (Solo se aplica a las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 o versiones posteriores.)  
   
 **Especificación superior (Categoría)**  
 Se expande para mostrar las propiedades **Superior**, **Porcentaje**, **Expresión**y **Con valores equivalentes** .  
@@ -77,16 +77,16 @@ Se expande para mostrar las propiedades **Superior**, **Porcentaje**, **Expresi�
 **(Superior)**  
 Permite especificar que la consulta incluirá una cláusula TOP, que solo devuelve las primeras *n* o el primer *n* por ciento de filas del conjunto de resultados. De forma predeterminada, la consulta devolverá las diez primeras filas del conjunto de resultados.  
   
-Utilice este cuadro para cambiar el número de filas que se van a devolver o para especificar un porcentaje diferente. (Solo se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o posterior.)  
+Utilice este cuadro para cambiar el número de filas que se van a devolver o para especificar un porcentaje diferente. (Solo se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o posterior.)  
   
 **Expresión**  
-Especifica el número o el porcentaje de filas que la consulta va a devolver. Si establece **Porcentaje** en Sí, este número indicará el porcentaje de filas que devolverá la consulta, mientras que si establece **Porcentaje** en No, representará el número de filas que se devolverá. (Solo se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 o posterior.)  
+Especifica el número o el porcentaje de filas que la consulta va a devolver. Si establece **Porcentaje** en Sí, este número indicará el porcentaje de filas que devolverá la consulta, mientras que si establece **Porcentaje** en No, representará el número de filas que se devolverá. (Solo se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 o posterior.)  
   
 **Porcentaje**  
-Permite especificar que la consulta devolverá solo el primer *n* por ciento de filas del conjunto de resultados. (Solo se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 o posterior.)  
+Permite especificar que la consulta devolverá solo el primer *n* por ciento de filas del conjunto de resultados. (Solo se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 o posterior.)  
   
 **Con valores equivalentes**  
-Especifica que la vista incluirá una cláusula WITH TIES. WITH TIES es útil si una vista incluye una cláusula ORDER BY y una cláusula TOP basadas en un porcentaje. Si se establece esta opción y el límite del porcentaje queda dentro de un conjunto de filas con valores idénticos en la cláusula ORDER BY, se ampliará la vista hasta que incluya todas las filas que faltan. (Solo se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 o posterior.)  
+Especifica que la vista incluirá una cláusula WITH TIES. WITH TIES es útil si una vista incluye una cláusula ORDER BY y una cláusula TOP basadas en un porcentaje. Si se establece esta opción y el límite del porcentaje queda dentro de un conjunto de filas con valores idénticos en la cláusula ORDER BY, se ampliará la vista hasta que incluya todas las filas que faltan. (Solo se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 o posterior.)  
   
 ## <a name="see-also"></a>Ver también  
 [Realizar consultas con parámetros &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  

@@ -18,12 +18,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 037dce27c8c237b28a5575de76d0f9adb36a4054
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0227077885117994437fc6f2d9bb4aa712706d70
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046432"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774624"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Opciones (Explorador de objetos de SQL Server - página Script)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ Para especificar las opciones de scripts, seleccione las opciones de configuraci
   
 ### <a name="general-scripting-options"></a>Opciones generales de scripting  
 **Delimitar instrucciones individuales**  
-Separa instrucciones [!INCLUDE[tsql](../../includes/tsql_md.md)] individuales mediante un separador de lotes. Para cambiar el separador de lotes predeterminado del **Editor de consultas**, seleccione **Herramientas**/**Opciones**/**Ejecución de la consulta**/**SQL Server**/**General**/**Separador de lotes**. El valor predeterminado es False. Para más información, consulte [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738).  
+Separa instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] individuales mediante un separador de lotes. Para cambiar el separador de lotes predeterminado del **Editor de consultas**, seleccione **Herramientas**/**Opciones**/**Ejecución de la consulta**/**SQL Server**/**General**/**Separador de lotes**. El valor predeterminado es False. Para más información, consulte [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738).  
   
 **Incluir encabezados descriptivos**  
 Agrega comentarios descriptivos al script dividiéndolo en secciones para cada objeto. El valor predeterminado es True. Para más información, consulte [/*...*/ (Comment) (Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c).  
@@ -70,7 +70,7 @@ Agrega la instrucción USE DATABASE al script para crear objetos de base de dato
 Genera un script para objetos adicionales que son necesarios cuando se ejecuta el script para el objeto seleccionado. El valor predeterminado es False.  
   
 **Nombres de objeto de certificación de esquema**  
-Califica nombres de objeto con el esquema de objetos. El valor predeterminado es False. Para más información, consulte [Crear un esquema de base de datos](https://msdn.microsoft.com/ed2a5522-f4d2-4111-95a4-d3e1e5081739).  
+Califica nombres de objeto con el esquema de objetos. El valor predeterminado es False. Para más información, consulte [Crear un esquema de base de datos](../../relational-databases/security/authentication-access/create-a-database-schema.md).  
 
 **Incluir opciones de compresión de datos en el script** Incluye las opciones de compresión de datos en el script. El valor predeterminado es False.
 
@@ -81,7 +81,7 @@ Incluye propiedades extendidas en el script si el objeto tiene propiedades exten
 Incluye el propietario en el script generado. El valor predeterminado es False.  
   
 **Generar script de permisos**  
-Incluye permisos sobre los objetos de la base de datos en el script. El valor predeterminado es True. Para más información, consulte [Permisos](https://msdn.microsoft.com/f28e3dea-24e6-4a81-877b-02ec4c7e36b9).  
+Incluye permisos sobre los objetos de la base de datos en el script. El valor predeterminado es True. Para más información, consulte [Permisos](../../relational-databases/security/permissions-database-engine.md).  
   
 ### <a name="tableview-options"></a>Opciones de tabla o vista  
 Las siguientes opciones solo se aplican a scripts para tablas o vistas.  
@@ -93,7 +93,7 @@ Convierte los tipos de datos definidos por el usuario en los tipos base a partir
 Agrega la instrucción SET ANSI_PADDING antes y después de cada instrucción CREATE TABLE. El valor predeterminado es True. Para más información, consulte [SET ANSI_PADDING (Transact-SQL)](https://msdn.microsoft.com/92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0).  
   
 **Incluir intercalación**  
-Incluye una intercalación en la definición de columna. El valor predeterminado es True. Para más información, consulte [Compatibilidad con la intercalación y Unicode](https://msdn.microsoft.com/92d34f48-fa2b-47c5-89d3-a4c39b0f39eb).  
+Incluye una intercalación en la definición de columna. El valor predeterminado es True. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 **Incluir propiedad IDENTITY**  
 Incluye definiciones para el valor de inicialización IDENTITY y el incremento IDENTITY. El valor predeterminado es True. Para más información, consulte [IDENTITY (propiedad) (Transact-SQL)](https://msdn.microsoft.com/8429134f-c821-4033-a07c-f782a48d501c).  
@@ -105,7 +105,7 @@ Agrega el nombre de esquema a las referencias de tabla para las restricciones FO
 Incluye las llamadas a los procedimientos almacenados enlazados **sp_bindefault** y **sp_bindrule** . El valor predeterminado es True. Para más información, consulte [sp_bindefault (Transact-SQL)](https://msdn.microsoft.com/3da70c10-68d0-4c16-94a5-9e84c4a520f6) y [sp_bindrule (Transact-SQL)](https://msdn.microsoft.com/2606073e-c52f-498d-a923-5026b9d97e67).  
   
 **Generar script de restricciones CHECK**  
-Agrega [restricciones CHECK](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e) al script. El valor predeterminado es True.  
+Agrega [restricciones CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md) al script. El valor predeterminado es True.  
   
 **Incluir valores predeterminados**  
 Incluye valores predeterminados de columna en el script. El valor predeterminado es False. Para más información, consulte [CREATE DEFAULT (Transact-SQL)](https://msdn.microsoft.com/08475db4-7d90-486a-814c-01a99d783d41).  
@@ -114,7 +114,7 @@ Incluye valores predeterminados de columna en el script. El valor predeterminado
 Especifica el grupo de archivos en la cláusula ON para definiciones de tabla. El valor predeterminado es False. Para más información, consulte [CREATE TABLE (Transact-SQL)](https://msdn.microsoft.com/1e068443-b9ea-486a-804f-ce7b6e048e8b).  
   
 **Incluir claves externas en el script**  
-Incluye [restricciones FOREIGN KEY](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd) en el script. El valor predeterminado es False.  
+Incluye [restricciones FOREIGN KEY](../../relational-databases/tables/primary-and-foreign-key-constraints.md) en el script. El valor predeterminado es False.  
   
 **Incluir índices de texto completo**  
 Incluye índices de texto completo en el script. El valor predeterminado es False. Para más información, consulte [CREATE FULLTEXT INDEX (Transact-SQL)](https://msdn.microsoft.com/8b80390f-5f8b-4e66-9bcc-cabd653c19fd).  
@@ -126,7 +126,7 @@ Incluye índices clúster, no clúster y XML en el script. El valor predetermina
 Incluye esquemas de particiones de tabla en el script. El valor predeterminado es False. Para más información, consulte [CREATE PARTITION SCHEME (Transact-SQL)](https://msdn.microsoft.com/5b21c53a-b4f4-4988-89a2-801f512126e4).  
   
 **Incluir claves principales en el script**  
-Incluye [Restricciones entre claves principales y claves externas](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd) en el script. El valor predeterminado es True.  
+Incluye [Restricciones entre claves principales y claves externas](../../relational-databases/tables/primary-and-foreign-key-constraints.md) en el script. El valor predeterminado es True.  
   
 **Incluir estadísticas en el script**  
 Incluye estadísticas definidas por el usuario en el script. El valor predeterminado es False. Para más información, consulte [CREATE STATISTICS (Transact-SQL)](https://msdn.microsoft.com/b23e2f6b-076c-4e6d-9281-764bdb616ad2).  
@@ -135,7 +135,7 @@ Incluye estadísticas definidas por el usuario en el script. El valor predetermi
 Incluye desencadenadores en el script. El valor predeterminado es False. Para más información, consulte [CREATE TRIGGER (Transact-SQL)](https://msdn.microsoft.com/edeced03-decd-44c3-8c74-2c02f801d3e7).  
   
 **Incluir claves únicas en el script**  
-Incluye [Restricciones UNIQUE y restricciones CHECK](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e) en el script. El valor predeterminado es False.  
+Incluye [Restricciones UNIQUE y restricciones CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md) en el script. El valor predeterminado es False.  
   
 **Generar script de columnas de vista**  
 Declara columnas de vista en encabezados de vista. El valor predeterminado es False. Para más información, consulte [CREATE VIEW (Transact-SQL)](https://msdn.microsoft.com/aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9).  
@@ -152,7 +152,7 @@ Incluye nombres de restricción generados por el sistema para aplicar la integri
 **Script para tipo de motor de base de datos** Los scripts generados se dirigirán al [Tipo de motor de base de datos](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.databaseenginetype.aspx) especificado.
 
 **Script para versión de servidor**  
-Los scripts generados se dirigirán a la versión especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Las características nuevas de [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] no se pueden incluir en scripts para versiones anteriores. Algunos scripts creados para [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] no pueden ejecutarse en servidores que ejecutan una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]o en una base de datos con un [valor de nivel de compatibilidad de base de datos](https://msdn.microsoft.com/ca5fd220-d5ea-4182-8950-55d4101a86f6)anterior.  
+Los scripts generados se dirigirán a la versión especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las características nuevas de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no se pueden incluir en scripts para versiones anteriores. Algunos scripts creados para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no pueden ejecutarse en servidores que ejecutan una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o en una base de datos con un [valor de nivel de compatibilidad de base de datos](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)anterior.  
 
 ## <a name="see-also"></a>Vea también  
 [Generar scripts (SQL Server Management Studio)](https://msdn.microsoft.com/9711c617-3c68-4e5a-aea3-befc64d51524)  

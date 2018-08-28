@@ -13,38 +13,38 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 98875ca77fcc6b0f49f33d79d552c658b61daa3e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 0f8464293ae32ff8635afcc9525c88381d5d031b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773001"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774936"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Actualizar instancias de SQL Server que se ejecutan en clústeres de Windows Server 2008/2008 R2/2012
 
-[!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)] y [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)] impiden que los clústeres de conmutación por error de Windows Server realicen actualizaciones del sistema de operativo locales, por lo que limitan la versión permitida de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] para un clúster. Una vez que el clúster se actualice al menos a [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)], podrá permanecer actualizado.
+[!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)] y [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)] impiden que los clústeres de conmutación por error de Windows Server realicen actualizaciones del sistema de operativo locales, por lo que limitan la versión permitida de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para un clúster. Una vez que el clúster se actualice al menos a [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)], podrá permanecer actualizado.
 
 ## <a name="prerequisites"></a>Prerequisites
 
--   Antes de realizar cualquiera de las estrategias de migración, se debe preparar un clúster de conmutación por error de Windows Server paralelo con Windows Server 2016/2012 R2. Todos los nodos que contengan instancias de clúster de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] deben estar unidas al clúster de Windows con los FCI instalados. Cualquier equipo independiente **no debe** combinarse con el clúster de conmutación por error de Windows Server antes de la migración. Las bases de datos de usuario deberán estar sincronizadas con el nuevo entorno antes de la migración.
--   Todas las instancias de destino deberán estar ejecutando la misma versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] como su instancia paralela en el entorno original, con los mismos nombres de instancia e identificadores. Además, deberán estar instaladas con las mismas características. Las rutas de acceso de instalación y la estructura del directorio deberán ser idénticas en los equipos de destino. Esto no incluye los nombres de red virtual de FCI, que deben ser diferentes antes de la migración. Las funciones habilitadas por la instancia original (como Always On y FILESTREAM) deberán estar habilitadas en la instancia de destino.
+-   Antes de realizar cualquiera de las estrategias de migración, se debe preparar un clúster de conmutación por error de Windows Server paralelo con Windows Server 2016/2012 R2. Todos los nodos que contengan instancias de clúster de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deben estar unidas al clúster de Windows con los FCI instalados. Cualquier equipo independiente **no debe** combinarse con el clúster de conmutación por error de Windows Server antes de la migración. Las bases de datos de usuario deberán estar sincronizadas con el nuevo entorno antes de la migración.
+-   Todas las instancias de destino deberán estar ejecutando la misma versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como su instancia paralela en el entorno original, con los mismos nombres de instancia e identificadores. Además, deberán estar instaladas con las mismas características. Las rutas de acceso de instalación y la estructura del directorio deberán ser idénticas en los equipos de destino. Esto no incluye los nombres de red virtual de FCI, que deben ser diferentes antes de la migración. Las funciones habilitadas por la instancia original (como Always On y FILESTREAM) deberán estar habilitadas en la instancia de destino.
 
 -   El clúster paralelo no deberá tener [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)] instalado antes de la migración.
 
 -   El tiempo de actividad al realizar la migración de un clúster que usa Grupos de disponibilidad de forma estricta (con o sin FCI de SQL) se puede limitar ampliamente usando grupos de disponibilidad distribuidos, pero no requiere que todas las instancias ejecuten [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] RTM o versiones posteriores.
 
--   Todas las estrategias de migración requieren el rol sysadmin de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]. Todos los usuarios de Windows usados por los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] (es decir, la cuenta Windows que ejecuta los agentes de replicación) deberán tener los permisos de nivel de sistema operativo en cada equipo del nuevo entorno.
+-   Todas las estrategias de migración requieren el rol sysadmin de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Todos los usuarios de Windows usados por los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (es decir, la cuenta Windows que ejecuta los agentes de replicación) deberán tener los permisos de nivel de sistema operativo en cada equipo del nuevo entorno.
 
--   Todos los recursos compartidos de archivos y las unidades asignadas de la red que se usen en el entorno del clúster de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] original deberán existir y permanecer disponibles para el clúster de destino con los mismos permisos que las instancias originales.
+-   Todos los recursos compartidos de archivos y las unidades asignadas de la red que se usen en el entorno del clúster de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] original deberán existir y permanecer disponibles para el clúster de destino con los mismos permisos que las instancias originales.
 
--   Ninguno de los puertos TCP/IP que escucha la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] original deberán estar sin uso y permitir el tráfico de entrada en el equipo de destino.
+-   Ninguno de los puertos TCP/IP que escucha la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] original deberán estar sin uso y permitir el tráfico de entrada en el equipo de destino.
 -   Todos los servicios relacionados con SQL deben instalarse y ejecutarse con el mismo usuario de Windows.
 
 -   Las instancias de destino deben instalarse con la misma configuración regional que las instancias originales.
 
 ## <a name="migration-scenarios"></a>Escenarios de migración
 
-La estrategia de migración adecuada dependerá de ciertos parámetros de la topología del clúster de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] original, es decir, el uso de instancias de clúster de conmutación por error de [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)] y SQL. La estrategia elegida dependerá también de los requisitos del entorno de destino. Si el nuevo entorno requiere que cada equipo o FCI de SQL mantenga el nombre original de la red virtual (VNN), o si la topología de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] depende de las nuevas instancias que heredarán todos los objetos de sistema de las instancias originales, deberá elegir una estrategia que incluya su migración.
+La estrategia de migración adecuada dependerá de ciertos parámetros de la topología del clúster de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] original, es decir, el uso de instancias de clúster de conmutación por error de [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)] y SQL. La estrategia elegida dependerá también de los requisitos del entorno de destino. Si el nuevo entorno requiere que cada equipo o FCI de SQL mantenga el nombre original de la red virtual (VNN), o si la topología de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] depende de las nuevas instancias que heredarán todos los objetos de sistema de las instancias originales, deberá elegir una estrategia que incluya su migración.
 
 |                                   | Requiere todos los objetos de servidor y VNNS | Requiere todos los objetos de servidor y VNNS | No requiere ningún objeto de servidor ni VNN\* | No requiere ningún objeto de servidor ni VNN\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
@@ -54,11 +54,11 @@ La estrategia de migración adecuada dependerá de ciertos parámetros de la top
 \* Excluir nombres de agentes de escucha del grupo de disponibilidad
 
 ## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>Escenario 1: Windows Cluster con grupos de disponibilidad de SQL Server y sin instancias de clúster de conmutación por error (FCI)
-Si tiene una configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] que usa grupos de disponibilidad sin instancias de clúster de conmutación por error, puede llevar a cabo la migración a un nuevo clúster creando una implementación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] paralela en otra instancia de Windows Cluster con Windows Server 2016/2012 R2. Después de esto, puede crear un grupo de disponibilidad distribuido en el que el clúster de destino sea la base de datos secundaria para el clúster de producción actual. Esto requiere que el usuario actualice a [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] o versiones posteriores.
+Si tiene una configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que usa grupos de disponibilidad sin instancias de clúster de conmutación por error, puede llevar a cabo la migración a un nuevo clúster creando una implementación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] paralela en otra instancia de Windows Cluster con Windows Server 2016/2012 R2. Después de esto, puede crear un grupo de disponibilidad distribuido en el que el clúster de destino sea la base de datos secundaria para el clúster de producción actual. Esto requiere que el usuario actualice a [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] o versiones posteriores.
 
 ###  <a name="to-perform-the-upgrade"></a>Para realizar la actualización
 
-1.  Si es necesario, actualice todas las instancias a [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] o versiones posteriores. Las instancias paralelas deben estar ejecutando la misma versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)].
+1.  Si es necesario, actualice todas las instancias a [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] o versiones posteriores. Las instancias paralelas deben estar ejecutando la misma versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 2.  Cree un grupo de disponibilidad para el clúster de destino. Si el nodo principal del clúster de destino no es una FCI, cree un agente de escucha.
 
@@ -91,11 +91,11 @@ Si tiene una configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 
 ## <a name="scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis"></a>Escenario 2: Windows Cluster con instancias de clúster de conmutación por error de SQL Server (FCI)
 
-Si tiene un entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] que solo usa instancias de FCI de SQL, puede realizar la migración a un nuevo clúster creando un entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] paralelo en otra instancia de Windows Cluster con Windows Server 2016/2012 R2. Realizará la migración del clúster de destino "adquiriendo" los VNN de las FCI de SQL antiguas y incorporándolos a los nuevos clústeres. Esto creará tiempo de inactividad adicional en función de los tiempos de propagación de DNS.
+Si tiene un entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que solo usa instancias de FCI de SQL, puede realizar la migración a un nuevo clúster creando un entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] paralelo en otra instancia de Windows Cluster con Windows Server 2016/2012 R2. Realizará la migración del clúster de destino "adquiriendo" los VNN de las FCI de SQL antiguas y incorporándolos a los nuevos clústeres. Esto creará tiempo de inactividad adicional en función de los tiempos de propagación de DNS.
 
 ###  <a name="to-perform-the-upgrade"></a>Para realizar la actualización
 
-1.  Realice una copia de seguridad completa y detenga el tráfico hacia el clúster de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] original.
+1.  Realice una copia de seguridad completa y detenga el tráfico hacia el clúster de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] original.
 
 2.  Realice una copia de seguridad del final del registro que incluya las bases de datos de usuario y restaure mediante recuperación en el nuevo entorno.
 
@@ -109,26 +109,26 @@ Si tiene un entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)]
 
 7.  Copie las bases de datos del sistema de los equipos originales en su equipo de destino correspondiente.
 
-8.  En el entorno original del Administrador de clústeres de conmutación por error, cambie el nombre del recurso "Nombre de servidor" de cada rol de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)].
+8.  En el entorno original del Administrador de clústeres de conmutación por error, cambie el nombre del recurso "Nombre de servidor" de cada rol de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 9.  Ahora vuelva a conectar el recurso de nombre de servidor con el nuevo nombre para cada uno de los roles de FCI de SQL.
 
-10. Ahora, en el clúster de destino del Administrador de clústeres de conmutación por error, cambie el nombre el recurso "Nombre de servidor" de cada rol de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] al nombre que tenía el clúster original.
+10. Ahora, en el clúster de destino del Administrador de clústeres de conmutación por error, cambie el nombre el recurso "Nombre de servidor" de cada rol de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] al nombre que tenía el clúster original.
 
     >[!NOTE]
     >Los errores derivados de nombres que ya se hayan usado en otros equipos desparecerán cuando se eliminen los registros DNS del nombre en cuestión.
 
 11. Una vez que se haya cambiado el nombre de todos las FCI, reinicie cada uno de los equipos en el nuevo clúster.
 
-12. Cuando los equipos se reinicien y vuelvan a conectarse, inicie cada uno de los roles de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] en el Administrador de clústeres de conmutación por error.
+12. Cuando los equipos se reinicien y vuelvan a conectarse, inicie cada uno de los roles de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el Administrador de clústeres de conmutación por error.
 
 ## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>Escenario 3: Windows Cluster tiene tanto FCI de SQL como grupos de disponibilidad de SQL Server
 
-Si tiene una configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] que no usa ninguna instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] independiente, sino que solo usa FCI de SQL contenidas en al menos un grupo de disponibilidad, podrá realizar la migración de esta configuración a un nuevo clúster usando métodos parecidos al escenario en el que no hay ningún grupo de disponibilidad ni ninguna instancia independiente. Antes de copiar las tablas del sistema en los discos compartidos de FCI de destino, deberá quitar todos los grupos de disponibilidad del entorno original. Después de que se haya realizado la migración de todas las bases de datos a los equipos de destino, volverá a crear los grupos de disponibilidad con los mismos nombres de esquema y agente de escucha. Al hacerlo, los recursos de clúster de conmutación por error de Windows Server se formarán y administrarán correctamente en el clúster de destino. **Always On debe estar habilitado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] Configuration Manager en cada equipo del entorno de destino antes de la migración.**
+Si tiene una configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que no usa ninguna instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] independiente, sino que solo usa FCI de SQL contenidas en al menos un grupo de disponibilidad, podrá realizar la migración de esta configuración a un nuevo clúster usando métodos parecidos al escenario en el que no hay ningún grupo de disponibilidad ni ninguna instancia independiente. Antes de copiar las tablas del sistema en los discos compartidos de FCI de destino, deberá quitar todos los grupos de disponibilidad del entorno original. Después de que se haya realizado la migración de todas las bases de datos a los equipos de destino, volverá a crear los grupos de disponibilidad con los mismos nombres de esquema y agente de escucha. Al hacerlo, los recursos de clúster de conmutación por error de Windows Server se formarán y administrarán correctamente en el clúster de destino. **Always On debe estar habilitado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager en cada equipo del entorno de destino antes de la migración.**
 
 ### <a name="to-perform-the-upgrade"></a>Para realizar la actualización
 
-1.  Detenga el tráfico hacia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)].
+1.  Detenga el tráfico hacia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 2.  Realice una copia de seguridad del final del registro que incluya bases de datos de usuario mediante la recuperación en el nuevo elemento principal del entorno y con el valor NORECOVERY en todos los elementos secundarios.
 
@@ -144,15 +144,15 @@ Si tiene una configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 
 8.  Copie las bases de datos del sistema de los equipos originales en su equipo de destino correspondiente.
 
-9.  En el entorno original del Administrador de clústeres de conmutación por error, cambie el nombre del recurso "Nombre de servidor" de cada rol de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)].
+9.  En el entorno original del Administrador de clústeres de conmutación por error, cambie el nombre del recurso "Nombre de servidor" de cada rol de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 10. Ahora vuelva a conectar el recurso de nombre de servidor con el nuevo nombre para cada uno de los roles de FCI de SQL.
 
-11. Ahora, en el clúster de destino del Administrador de clústeres de conmutación por error, cambie el nombre el recurso "Nombre de servidor" de cada rol de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] al nombre que tenía el clúster original.
+11. Ahora, en el clúster de destino del Administrador de clústeres de conmutación por error, cambie el nombre el recurso "Nombre de servidor" de cada rol de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] al nombre que tenía el clúster original.
 
 12. Una vez que se haya cambiado el nombre de todas las FCI, reinicie cada uno de los equipos en el nuevo clúster.
 
-13. Cuando los equipos se reinicien y vuelvan a conectarse, inicie cada uno de los roles de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] en el Administrador de clústeres de conmutación por error.
+13. Cuando los equipos se reinicien y vuelvan a conectarse, inicie cada uno de los roles de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el Administrador de clústeres de conmutación por error.
 
 14. Una vez que todas las instancias estén conectadas, forme el grupo de disponibilidad en la réplica en la que se restauraron las bases de datos mediante recuperación.
 
@@ -162,11 +162,11 @@ Si tiene una configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 
 ## <a name="scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups"></a>Escenario 4: Windows Cluster con instancias independientes de SQL Server y sin grupos de disponibilidad
 
-Realizar la migración de un clúster con instancias independientes es un proceso similar a realizar la migración de un clúster de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] que solo tiene FCI; en lugar de cambiar el VNN del recurso de clúster de nombre de red de las FCI, deberá cambiar el nombre de equipo del equipo independiente original y "adquirir" el nombre del equipo antiguo en el equipo de destino. Esto presenta un tiempo de inactividad adicional con respecto a los escenarios no independientes, ya que no podrá combinar el equipo independiente de destino con el WSFC hasta que haya adquirido el nombre de red del equipo antiguo.
+Realizar la migración de un clúster con instancias independientes es un proceso similar a realizar la migración de un clúster de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que solo tiene FCI; en lugar de cambiar el VNN del recurso de clúster de nombre de red de las FCI, deberá cambiar el nombre de equipo del equipo independiente original y "adquirir" el nombre del equipo antiguo en el equipo de destino. Esto presenta un tiempo de inactividad adicional con respecto a los escenarios no independientes, ya que no podrá combinar el equipo independiente de destino con el WSFC hasta que haya adquirido el nombre de red del equipo antiguo.
 
 ###  <a name="to-perform-the-upgrade"></a>Para realizar la actualización
 
-1.  Detenga el tráfico hacia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)].
+1.  Detenga el tráfico hacia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 2.  Realice una copia de seguridad del final del registro que incluya las bases de datos de usuario y restaure mediante recuperación en el nuevo entorno de cada equipo.
 
@@ -174,7 +174,7 @@ Realizar la migración de un clúster con instancias independientes es un proces
 
 4.  Sin salir del clúster de destino del Administrador de clústeres de conmutación por error, aumente la prioridad de los discos en clúster para cada FCI de SQL.
 
-5.  En el clúster original del Administrador de clústeres de conmutación por error, reduzca la prioridad de los roles en clúster de cada FCI de SQL y detenga las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] independientes en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] Configuration Manager.
+5.  En el clúster original del Administrador de clústeres de conmutación por error, reduzca la prioridad de los roles en clúster de cada FCI de SQL y detenga las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] independientes en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager.
 
 6.  Para cada equipo independiente del clúster original, cambie el nombre de cada equipo a un nuevo nombre de equipo único. Reinicie cada uno de los equipos tal como se indica.
 
@@ -182,7 +182,7 @@ Realizar la migración de un clúster con instancias independientes es un proces
 
 8.  Copie las bases de datos del sistema en los equipos de destino.
 
-9.  En el entorno original del Administrador de clústeres de conmutación por error, cambie el recurso "Nombre de servidor" de cada rol de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] a un nuevo nombre único.
+9.  En el entorno original del Administrador de clústeres de conmutación por error, cambie el recurso "Nombre de servidor" de cada rol de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a un nuevo nombre único.
 
 10. Ahora vuelva a conectar el recurso de nombre de servidor con el nuevo nombre para cada uno de los roles de FCI de SQL.
 
@@ -190,11 +190,11 @@ Realizar la migración de un clúster con instancias independientes es un proces
 
 12. Después del reinicio, combine cada uno de los equipos independientes con el clúster de conmutación por error de Windows Server de destino.
 
-13. Ahora, en el clúster de destino del Administrador de clústeres de conmutación por error, cambie el nombre el recurso "Nombre de servidor" de cada rol de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] al nombre que tenía el clúster original.
+13. Ahora, en el clúster de destino del Administrador de clústeres de conmutación por error, cambie el nombre el recurso "Nombre de servidor" de cada rol de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] al nombre que tenía el clúster original.
 
 14. Una vez que se haya cambiado el nombre de todas las FCI, reinicie cada uno de los equipos en el nuevo clúster.
 
-15. Cuando los equipos se reinicien y vuelvan a conectarse, inicie cada uno de los roles de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] en el Administrador de clústeres de conmutación por error.
+15. Cuando los equipos se reinicien y vuelvan a conectarse, inicie cada uno de los roles de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el Administrador de clústeres de conmutación por error.
 
 ## <a name="scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups"></a>Escenario 5: Windows Cluster con instancias independientes de SQL Server y grupos de disponibilidad
 
@@ -202,7 +202,7 @@ Realizar la migración de un clúster que usa grupos de disponibilidad con répl
 
 ###  <a name="to-perform-the-upgrade"></a>Para realizar la actualización
 
-1.  Detenga el tráfico hacia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)].
+1.  Detenga el tráfico hacia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 2.  Realice una copia de seguridad del final del registro que incluya bases de datos de usuario mediante la recuperación en el nuevo elemento principal del entorno y con el valor NORECOVERY en cada elemento secundario.
 
@@ -212,7 +212,7 @@ Realizar la migración de un clúster que usa grupos de disponibilidad con répl
 
 5.  Sin salir del clúster de destino del Administrador de clústeres de conmutación por error, aumente la prioridad de los discos en clúster para cada FCI de SQL.
 
-6.  En el clúster original del Administrador de clústeres de conmutación por error, reduzca la prioridad de los roles en clúster de cada FCI de SQL y detenga las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] independientes en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] Configuration Manager.
+6.  En el clúster original del Administrador de clústeres de conmutación por error, reduzca la prioridad de los roles en clúster de cada FCI de SQL y detenga las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] independientes en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager.
 
 7.  Para cada equipo independiente del clúster original, cambie el nombre de cada equipo a un nuevo nombre de equipo único. Reinicie cada uno de los equipos tal como se indica.
 
@@ -220,7 +220,7 @@ Realizar la migración de un clúster que usa grupos de disponibilidad con répl
 
 9.  Copie las bases de datos del sistema en los equipos de destino.
 
-10. En el entorno original del Administrador de clústeres de conmutación por error, cambie el recurso "Nombre de servidor" de cada rol de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] a un nuevo nombre único.
+10. En el entorno original del Administrador de clústeres de conmutación por error, cambie el recurso "Nombre de servidor" de cada rol de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a un nuevo nombre único.
 
 11. Ahora vuelva a conectar el recurso de nombre de servidor con el nuevo nombre para cada uno de los roles de FCI de SQL.
 
@@ -228,11 +228,11 @@ Realizar la migración de un clúster que usa grupos de disponibilidad con répl
 
 13. Después del reinicio, combine cada uno de los equipos independientes con el clúster de conmutación por error de Windows Server de destino.
 
-14. Ahora, en el clúster de destino del Administrador de clústeres de conmutación por error, cambie el nombre el recurso "Nombre de servidor" de cada rol de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] al nombre que tenía el clúster original.
+14. Ahora, en el clúster de destino del Administrador de clústeres de conmutación por error, cambie el nombre el recurso "Nombre de servidor" de cada rol de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] al nombre que tenía el clúster original.
 
 15. Una vez que se haya cambiado el nombre de todas las FCI, reinicie cada uno de los equipos en el nuevo clúster.
 
-16. Cuando los equipos se reinicien y vuelvan a conectarse, inicie cada uno de los roles de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] en el Administrador de clústeres de conmutación por error.
+16. Cuando los equipos se reinicien y vuelvan a conectarse, inicie cada uno de los roles de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el Administrador de clústeres de conmutación por error.
 
 17. Una vez que todas las instancias estén conectadas, vuelva a crear el grupo de disponibilidad en el elemento principal adecuado.
 
@@ -246,7 +246,7 @@ Realizar la migración de un clúster que usa grupos de disponibilidad con répl
 
 -   **Punto de conexión** **de creación de reflejo** **de la base de datos**
 
-    Desde el punto de vista de SQL, se realzará la migración del punto de conexión de creación de reflejo de la base de datos a la nueva instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] junto con las tablas del sistema. Antes de la migración, asegúrese de que se apliquen las reglas correspondientes en los firewall y que ningún otro proceso esté escuchando en el mismo puerto.
+    Desde el punto de vista de SQL, se realzará la migración del punto de conexión de creación de reflejo de la base de datos a la nueva instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] junto con las tablas del sistema. Antes de la migración, asegúrese de que se apliquen las reglas correspondientes en los firewall y que ningún otro proceso esté escuchando en el mismo puerto.
 
 -   **Grupos de disponibilidad**
 
@@ -260,17 +260,17 @@ Realizar la migración de un clúster que usa grupos de disponibilidad con répl
 
 -   **Suscriptores,** **publicadores** **y distribuidores** **remotos**
 
-    La relación entre un distribuidor y un publicador se basa solo en el VNN de los equipos que los hospeden, que se resolverán adecuadamente en el nuevo equipo. También se realizará la migración de los trabajos del agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] junto con las tablas del sistema, por lo que varios agentes de replicación podrán continuar ejecutándose normalmente. Es necesario que, antes de la migración, las cuentas de Windows que ejecuten el agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] o cualquier trabajo del agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] tengan los mismos permisos en el entorno de destino. La comunicación con el publicador y los suscriptores se ejecutará con normalidad.
+    La relación entre un distribuidor y un publicador se basa solo en el VNN de los equipos que los hospeden, que se resolverán adecuadamente en el nuevo equipo. También se realizará la migración de los trabajos del agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] junto con las tablas del sistema, por lo que varios agentes de replicación podrán continuar ejecutándose normalmente. Es necesario que, antes de la migración, las cuentas de Windows que ejecuten el agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o cualquier trabajo del agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tengan los mismos permisos en el entorno de destino. La comunicación con el publicador y los suscriptores se ejecutará con normalidad.
 
 -   **Carpeta** **de instantáneas**
 
-    Antes de la migración, es necesario que todos los recursos compartidos de red usados por cualquier característica de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] estén disponibles para los equipos del entorno de destino con los mismos permisos que en el entorno original. Tendrá que asegurarse de que sea cierto antes de la migración.
+    Antes de la migración, es necesario que todos los recursos compartidos de red usados por cualquier característica de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] estén disponibles para los equipos del entorno de destino con los mismos permisos que en el entorno original. Tendrá que asegurarse de que sea cierto antes de la migración.
 
 ### <a name="service-broker"></a>Service Broker
 
 -   **Punto de conexión** **de Service** **Broker**
 
-    Desde el punto de vista de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)], no hay ninguna consideración relacionada con el punto de conexión. Antes de la migración, tendrá que asegurarse de que no haya ningún proceso que ya esté escuchando en el mismo puerto, así como de que no haya ninguna regla de firewall que esté bloqueando o permitiendo específicamente el puerto.
+    Desde el punto de vista de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], no hay ninguna consideración relacionada con el punto de conexión. Antes de la migración, tendrá que asegurarse de que no haya ningún proceso que ya esté escuchando en el mismo puerto, así como de que no haya ninguna regla de firewall que esté bloqueando o permitiendo específicamente el puerto.
 
 -   **Certificados**
 
@@ -284,7 +284,7 @@ Realizar la migración de un clúster que usa grupos de disponibilidad con répl
 
     Los enlaces de servicio remoto funcionarán adecuadamente después de la migración, ya que se realizará correctamente la migración de cualquier usuario que use esta función.
 
-### <a name="includessnoversionincludesssnoversionmd-agent"></a>e[!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] 
+### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>e[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 
 
 -   **Jobs**
 

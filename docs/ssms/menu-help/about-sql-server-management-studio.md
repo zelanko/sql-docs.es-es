@@ -19,20 +19,20 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8784beb120a0d9bdfbe9e558984ff01fa3054a59
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf1609438ec0306fa6b374db2d5ed6b921121062
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040672"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774201"
 ---
 # <a name="about-sql-server-management-studio"></a>Acerca de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Utilice este cuadro de diálogo para ver o copiar información sobre la instalación de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Las ediciones de evaluación muestran el número de días que faltan hasta el vencimiento del producto.  
+Utilice este cuadro de diálogo para ver o copiar información sobre la instalación de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Las ediciones de evaluación muestran el número de días que faltan hasta el vencimiento del producto.  
   
 ## <a name="options"></a>Opciones  
 **Nombre de componente**  
-Muestra una cuadrícula que presenta los nombres de los componentes instalados de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] y del sistema operativo.  
+Muestra una cuadrícula que presenta los nombres de los componentes instalados de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y del sistema operativo.  
   
 -   **Microsoft SQL Server Management Studio**  
   

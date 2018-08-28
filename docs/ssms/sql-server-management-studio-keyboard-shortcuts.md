@@ -25,12 +25,12 @@ caps.latest.revision: 82
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7579eb32749cf41763f37980ddc6dc0b85997c2
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: f3954a9b74c32b7bc5ae36708ffc41e2bcb346d0
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36927036"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775108"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Métodos abreviados de teclado de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -466,6 +466,6 @@ ms.locfileid: "36927036"
 |Mostrar la cuadrícula en la superficie de diseño|ENTRAR|Sin equivalencia|  
   
 ## <a name="see-also"></a>Ver también  
- [Personalizar los menús y los métodos abreviados de teclado](http://msdn.microsoft.com/library/fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b)  
+ [Personalizar los menús y los métodos abreviados de teclado](customize-menus-and-shortcut-keys.md)  
   
   

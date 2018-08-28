@@ -17,12 +17,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0099048b3de1461971e115ea3cfff0d1ff9d95e6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7cc4329825ce9374cb7dae6bdd8b8823a913b2f4
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999667"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774809"
 ---
 # <a name="page-setup-dialog-box"></a>Configurar página (cuadro de diálogo)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ Puede personalizar su diseño de la página seleccionando las opciones del cuadr
 Seleccione un tamaño de la lista.  
   
 **Source**  
-Especifica el papel que se va a utilizar. [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] elabora una lista de los orígenes disponibles para la impresora seleccionada.  
+Especifica el papel que se va a utilizar. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] elabora una lista de los orígenes disponibles para la impresora seleccionada.  
   
 ## <a name="orientation"></a>Orientación  
 **Vertical**  

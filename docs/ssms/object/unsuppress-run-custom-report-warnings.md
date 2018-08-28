@@ -17,16 +17,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5952681cf102d162c7e4b2d930509ab580667ee8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e6482635aacc3c7b6091672263c858dfd952c1a
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043942"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774324"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>Anular la supresión de las advertencias de Ejecutar informe personalizado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Para los informes personalizados existen dos cuadros de diálogo de advertencia. En este tema se describe cómo anular la supresión de la presentación de estos cuadros en [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+Para los informes personalizados existen dos cuadros de diálogo de advertencia. En este tema se describe cómo anular la supresión de la presentación de estos cuadros en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 De forma predeterminada, el cuadro de diálogo **Ejecutar informe personalizado** aparece antes de la ejecución de un informe personalizado. Si activa la casilla **No volver a mostrar esta advertencia** , el cuadro de diálogo ya no aparecerá más. De forma predeterminada, el cuadro de diálogo **Ejecutar informe personalizado** también aparece cuando se abre un informe personalizado y, a continuación, se hace clic en un vínculo para abrir otro informe personalizado. Este cuadro de diálogo muestra la ruta completa al archivo de informe detallado personalizado. Si activa la casilla **No volver a mostrar esta advertencia** , el cuadro de diálogo ya no aparecerá más.  
   
@@ -40,7 +40,7 @@ De forma predeterminada, el cuadro de diálogo **Ejecutar informe personalizado*
   
 3.  Cambie**<SuppressWarning>true\<\/SuppressWarning> a <SuppressWarning>false\<\/SuppressWarning>**.  
   
-4.  Reinicie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+4.  Reinicie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-unsuppress-the-drill-through-custom-report-warning-dialog-box"></a>Para anular la supresión del cuadro de diálogo de advertencia del informe de obtención de detalles personalizado  
   
@@ -50,7 +50,7 @@ De forma predeterminada, el cuadro de diálogo **Ejecutar informe personalizado*
   
 3.  Cambie **<SuppressDrillthroughWarning>true\<\/SuppressDrillthroughWarning> a <SuppressDrillthroughWarning>false\<\/SuppressDrillthroughWarning>**.  
   
-4.  Reinicie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+4.  Reinicie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Ver también  
 [Informes personalizados en Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  

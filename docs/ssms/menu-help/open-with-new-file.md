@@ -19,12 +19,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1947ca3301de74d1837633047a86dcf4460bfdaa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa285718d089457b70543fbd4d060c3a51ab3c9f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043802"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776407"
 ---
 # <a name="open-with-new-file"></a>Abrir con (Nuevo archivo)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,11 +44,11 @@ Haga clic en este botón para agregar un programa a la lista **Seleccione el pro
 Para quitar un programa, selecciónelo y haga clic en **Quitar**.  
   
 **Predeterminado**  
-Para especificar un editor predeterminado (y las opciones de codificación de lenguaje, si procede) para el tipo de archivo seleccionado, elija un programa en la lista **Seleccione el programa que desee usar** y haga clic en **Predeterminado**. La próxima vez que abra este tipo de archivo en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], el documento se abrirá en el nuevo editor predeterminado.  
+Para especificar un editor predeterminado (y las opciones de codificación de lenguaje, si procede) para el tipo de archivo seleccionado, elija un programa en la lista **Seleccione el programa que desee usar** y haga clic en **Predeterminado**. La próxima vez que abra este tipo de archivo en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], el documento se abrirá en el nuevo editor predeterminado.  
   
 > [!NOTE]  
 > En la lista **Seleccione el programa que desee usar**, el nombre del editor predeterminado del tipo de archivo seleccionado aparece seguido de **(Predeterminado)**.  
   
 ## <a name="see-also"></a>Ver también  
-[Asociación de extensiones de archivo a un editor de código](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
+[Asociación de extensiones de archivo a un editor de código](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   

@@ -19,16 +19,16 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4da622bd856de2c2eabf22a9f7f2fbef1f64144
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 83752eac337db70ea2aa382cc426c7eb1859d096
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979877"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774977"
 ---
 # <a name="external-tools-dialog-box"></a>Cuadro de diálogo Herramientas externas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Use el cuadro de diálogo **Herramientas externas** para agregar herramientas externas como SQLCMD o el Bloc de notas al menú **Herramientas**. La adición de herramientas externas permite iniciar fácilmente otras aplicaciones mientras se trabaja en el entorno de [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] . Cuando inicie la herramienta, podrá especificar argumentos y un directorio de trabajo. Además, el resultado de algunas herramientas puede verse en la **Ventana de resultados** . El cuadro de diálogo **Herramientas externas** está disponible en el menú **Herramientas** .  
+Use el cuadro de diálogo **Herramientas externas** para agregar herramientas externas como SQLCMD o el Bloc de notas al menú **Herramientas**. La adición de herramientas externas permite iniciar fácilmente otras aplicaciones mientras se trabaja en el entorno de [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Cuando inicie la herramienta, podrá especificar argumentos y un directorio de trabajo. Además, el resultado de algunas herramientas puede verse en la **Ventana de resultados** . El cuadro de diálogo **Herramientas externas** está disponible en el menú **Herramientas** .  
   
 ## <a name="options"></a>Opciones  
 **Contenido del menú**  
@@ -56,7 +56,7 @@ Especifique la ruta de acceso al archivo que se va a iniciar.
 Especifica las variables que pasan a la herramienta cuando ésta se selecciona en el menú. Los argumentos pueden especificar valores que pasan a la herramienta o el comando cuando estos se inician. Por ejemplo, un valor puede especificar un nombre de archivo o un directorio. Utilice el botón de flecha para seleccionar entre una lista de argumentos predefinidos. Es posible agregar más de uno. Para obtener una lista completa de los argumentos predefinidos y sus definiciones, vea [Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md). También puede especificar argumentos personalizados (por ejemplo, modificadores de la línea de comandos) según el comando o la herramienta que utilice.  
   
 **Usar la ventana de resultados**  
-Abra la ventana de resultados de [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] para mostrar el resultado del comando que se está ejecutando. No todas las herramientas presentan el resultado en un formato que puede verse en la ventana de resultados. Para más información, consulte [Ventana Resultados](http://msdn.microsoft.com/9808e00c-c8f6-45cc-896e-192b8420f747).  
+Abra la ventana de resultados de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para mostrar el resultado del comando que se está ejecutando. No todas las herramientas presentan el resultado en un formato que puede verse en la ventana de resultados. Para más información, consulte [Ventana Resultados](../relational-databases/scripting/transact-sql-debugger-output-window.md).  
   
 **Tratar resultado como Unicode**  
 Interpreta el resultado como Unicode.  
@@ -76,7 +76,7 @@ Al especificar los siguientes valores en el cuadro de diálogo **Herramientas ex
 |Cuadro|Valor|  
 |-------|---------|  
 |**Title**|DAC|  
-|**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath_md.md)]Tools\Binn\SQLCMD.exe|  
+|**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**Argumentos**|-A|  
   
 ## <a name="see-also"></a>Ver también  

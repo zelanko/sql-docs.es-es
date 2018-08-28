@@ -17,18 +17,18 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef9e1bc117338fe66816b32634c188730caf4244
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: fd0d50155ff76ef5860913e071fc35350fb71f88
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981877"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776292"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Cuadro de diálogo Índices espaciales (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Use el cuadro de diálogo **Índices espaciales** para crear índices para las columnas del tipo de datos **geometry** o **geography** (*columnas espaciales*) que no pueden indizarse mediante el cuadro de diálogo **Índice y claves** . Cada columna espacial puede tener más de un índice espacial, pero se deben crear de uno en uno.  
   
-Para más información sobre las restricciones de la creación de índices espaciales, consulte [Información general sobre los índices espaciales](http://msdn.microsoft.com/b1ae7b78-182a-459e-ab28-f743e43f8293).  
+Para más información sobre las restricciones de la creación de índices espaciales, consulte [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
 ## <a name="options"></a>Opciones  
 **Índice espacial seleccionado**  
@@ -122,5 +122,5 @@ Especifica si se deben calcular estadísticas nuevas cuando se crea el índice. 
 Especifica si se permite el bloqueo de filas en este índice. Permitir o denegar el bloqueo de fila afecta al rendimiento de la base de datos.  
   
 ## <a name="see-also"></a>Ver también  
-[Información general sobre los índices espaciales](http://msdn.microsoft.com/b1ae7b78-182a-459e-ab28-f743e43f8293)  
+[Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)  
   

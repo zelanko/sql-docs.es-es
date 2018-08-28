@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: de162af663c3de079e23283d3a3ec19c4e5c176c
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c9d44860db0243d9db1306748bd84df1c79a0d45
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979997"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774439"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>Create a SQL Server Agent Proxy
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "38979997"
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
-En este tema se describe cómo crea un proxy del Agente SQL Server en [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] o [!INCLUDE[tsql](../../includes/tsql_md.md)].  
+En este tema se describe cómo crea un proxy del Agente SQL Server en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-Una cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] define un contexto de seguridad en el que es posible ejecutar un paso de trabajo. Cada proxy se corresponde con unas credenciales de seguridad. Para establecer los permisos para un paso de trabajo concreto, cree un proxy que disponga de los permisos necesarios para un subsistema del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y, a continuación, asigne ese proxy al paso de trabajo.  
+Una cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define un contexto de seguridad en el que es posible ejecutar un paso de trabajo. Cada proxy se corresponde con unas credenciales de seguridad. Para establecer los permisos para un paso de trabajo concreto, cree un proxy que disponga de los permisos necesarios para un subsistema del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y, a continuación, asigne ese proxy al paso de trabajo.  
   
 **En este tema**  
   
@@ -55,11 +55,11 @@ Una cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
 -   Debe crear una credencial antes de crear un proxy si todavía no hay uno disponible.  
   
--   Las cuentas de proxy del Agente[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] utilizan credenciales para almacenar información acerca de las cuentas de usuario de Windows. El usuario especificado en las credenciales debe tener el permiso "Tener acceso a este equipo desde la red" (SeNetworkLogonRight) en el equipo en el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   Las cuentas de proxy del Agente[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizan credenciales para almacenar información acerca de las cuentas de usuario de Windows. El usuario especificado en las credenciales debe tener el permiso "Tener acceso a este equipo desde la red" (SeNetworkLogonRight) en el equipo en el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] comprueba el acceso al subsistema de un proxy y da acceso al proxy cada vez que se ejecuta el paso de trabajo. Si el proxy ya no tiene acceso al subsistema, el paso de trabajo da error. De lo contrario, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] suplanta al usuario especificado en el proxy y ejecuta el paso de trabajo.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprueba el acceso al subsistema de un proxy y da acceso al proxy cada vez que se ejecuta el paso de trabajo. Si el proxy ya no tiene acceso al subsistema, el paso de trabajo da error. De lo contrario, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suplanta al usuario especificado en el proxy y ejecuta el paso de trabajo.  
   
--   La creación de un proxy no cambia los permisos del usuario especificado en las credenciales del proxy. Por ejemplo, puede crear un proxy para un usuario que no tiene permisos para conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. En este caso, los pasos de trabajo que usan el proxy no pueden conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   La creación de un proxy no cambia los permisos del usuario especificado en las credenciales del proxy. Por ejemplo, puede crear un proxy para un usuario que no tiene permisos para conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En este caso, los pasos de trabajo que usan el proxy no pueden conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Si el inicio de sesión del usuario tiene acceso al proxy o si el usuario pertenece a un rol con acceso al proxy, puede usarlo en un paso de trabajo.  
   
@@ -67,7 +67,7 @@ Una cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
 #### <a name="Permissions"></a>Permissions  
   
--   Solo los miembros del rol fijo de servidor **sysadmin** disponen del permiso necesario para crear, modificar o eliminar cuentas de proxy. Los usuarios que no son miembros del rol fijo de servidor **sysadmin** deben agregarse a uno de los siguientes roles fijos de base de datos del Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] en la base de datos **msdb** para usar los servidores proxy: **SQLAgentUserRole**, **SQLAgentReaderRole**o **SQLAgentOperatorRole**.  
+-   Solo los miembros del rol fijo de servidor **sysadmin** disponen del permiso necesario para crear, modificar o eliminar cuentas de proxy. Los usuarios que no son miembros del rol fijo de servidor **sysadmin** deben agregarse a uno de los siguientes roles fijos de base de datos del Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** para usar los servidores proxy: **SQLAgentUserRole**, **SQLAgentReaderRole**o **SQLAgentOperatorRole**.  
   
 -   Requiere el permiso **ALTER ANY CREDENTIAL** si crea una credencial además del proxy.  
   

@@ -18,18 +18,18 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4f8160145814a85b909c0edd41e240102fc893a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 452bd8ea4481c7ecea6e778994262c8a7bffc73f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045232"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775662"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Opciones (Entorno -página Fuentes y colores)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-El cuadro de diálogo **Opciones[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] le permite establecer una combinación personalizada de fuentes y colores para diversos elementos de la interfaz de usuario de**  [!INCLUDE[msCoName](../../includes/msconame_md.md)]. En el menú **Herramientas**, haga clic en **Opciones**, expanda la carpeta **Entorno** y seleccione **Fuentes y colores**.  
+El cuadro de diálogo **Opciones[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] le permite establecer una combinación personalizada de fuentes y colores para diversos elementos de la interfaz de usuario de**  [!INCLUDE[msCoName](../../includes/msconame_md.md)]. En el menú **Herramientas**, haga clic en **Opciones**, expanda la carpeta **Entorno** y seleccione **Fuentes y colores**.  
   
-Los cambios en la combinación de colores no surtirán efecto durante la sesión en la que los realice. Puede evaluar los cambios de color abriendo otra instancia de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] y creando las condiciones bajo las cuales espera que se apliquen los cambios.  
+Los cambios en la combinación de colores no surtirán efecto durante la sesión en la que los realice. Puede evaluar los cambios de color abriendo otra instancia de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y creando las condiciones bajo las cuales espera que se apliquen los cambios.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
 **Mostrar valores para**  
@@ -37,13 +37,13 @@ Muestra todos los elementos de la interfaz de usuario en los que puede modificar
   
 |Término|Definición|  
 |--------|--------------|  
-|Editor de texto|Los cambios en la configuración del estilo, tamaño y color de fuente para el Editor de texto afectan a la apariencia del editor de texto predeterminado. Los documentos abiertos en un editor de texto fuera de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] no afectarán a esta configuración.|  
+|Editor de texto|Los cambios en la configuración del estilo, tamaño y color de fuente para el Editor de texto afectan a la apariencia del editor de texto predeterminado. Los documentos abiertos en un editor de texto fuera de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no afectarán a esta configuración.|  
 |Impresora|Los cambios en la configuración del estilo, tamaño y color de fuente para la impresora afectan a la apariencia del texto de los documentos impresos.<br /><br />Nota: Puede seleccionar una fuente predeterminada para imprimir distinta a la que se usa para la visualización en el Editor de texto. Esta opción puede ser útil para imprimir código que contenga caracteres de un solo byte o de doble byte.|  
-|[Todas las ventanas de herramientas de texto **]**|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto de las ventanas de herramientas que tienen paneles de resultados en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Por ejemplo, ventana Resultados, ventana TextResults, etc.<br /><br />Nota: Los cambios en el texto de los elementos [Todas las ventanas de herramientas de texto] no surten efecto durante la sesión en la que se realizan. Puede evaluar dichos cambios abriendo otra instancia de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].|  
+|[Todas las ventanas de herramientas de texto **]**|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto de las ventanas de herramientas que tienen paneles de resultados en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Por ejemplo, ventana Resultados, ventana TextResults, etc.<br /><br />Nota: Los cambios en el texto de los elementos [Todas las ventanas de herramientas de texto] no surten efecto durante la sesión en la que se realizan. Puede evaluar dichos cambios abriendo otra instancia de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
 |Ventana Resultados de la búsqueda|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto de la ventana FindResults.|  
 |Resultados (ventana)|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto de la ventana Resultados.|  
 |Resultados de la cuadrícula|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto del área **Resultados de la cuadrícula** de la ventana Consultar.|  
-|Plan de ejecución|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto en el plan de ejecución de las consultas de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y [!INCLUDE[ssEW](../../includes/ssew_md.md)] .|  
+|Plan de ejecución|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto en el plan de ejecución de las consultas de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssEW](../../includes/ssew-md.md)] .|  
 |Resultados del texto|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto del área **Resultados del texto** de la ventana de consulta.|  
 |Diseñadores de Business Intelligence|Los cambios en la configuración del estilo de fuente, tamaño y color de fuente para este elemento afectan a la apariencia del texto de la ventana BusinessIntelligenceDesigners.|  
   
@@ -75,7 +75,7 @@ Muestra los colores disponibles que puede elegir para el primer plano del elemen
 Muestra el cuadro de diálogo **Color** , en el que se establece un color personalizado para el elemento seleccionado en la lista **Mostrar los elementos** .  
   
 > [!NOTE]  
-> La posibilidad de definir colores personalizados puede estar limitada por la configuración del color de la pantalla del equipo. Por ejemplo, si el equipo está configurado para mostrar 256 colores y selecciona un color personalizado en el cuadro de diálogo **Color[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)],**  elegirá como predeterminado el valor disponible de **Colores básicos** que más se aproxime, y mostrará el color negro en el cuadro de diálogo **Color**.  
+> La posibilidad de definir colores personalizados puede estar limitada por la configuración del color de la pantalla del equipo. Por ejemplo, si el equipo está configurado para mostrar 256 colores y selecciona un color personalizado en el cuadro de diálogo **Color[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)],**  elegirá como predeterminado el valor disponible de **Colores básicos** que más se aproxime, y mostrará el color negro en el cuadro de diálogo **Color**.  
   
 **Fondo del elemento**  
 Proporciona una paleta de colores de la que puede elegir un color de fondo para el elemento seleccionado en **Mostrar los elementos**. Puesto que algunos elementos están relacionados, debe mantenerse una combinación de visualización coherente; por ejemplo, al cambiar el color de fondo del texto también cambiará el color de fondo de elementos como Cadena.  
@@ -90,6 +90,6 @@ Seleccione esta casilla para mostrar el texto de los displayitems seleccionados 
 Muestra un ejemplo de la combinación de estilo, tamaño y color de fuente para los valores seleccionados en **Mostrar valores para** y **Mostrar los elementos**. Puede utilizar este cuadro de texto para mostrar una vista previa de los resultados a medida que experimente con opciones de formatos diferentes.  
   
 ## <a name="see-also"></a>Ver también  
-[Codificación de colores en los editores de código](http://msdn.microsoft.com/en-us/802882dc-c997-4e3f-8a01-994bb43169ae)  
+[Codificación de colores en los editores de código](../../relational-databases/scripting/color-coding-in-query-editors.md)  
 [Opciones (pestaña Editor de texto/Editor y página Barra de estado)](http://msdn.microsoft.com/en-us/e4815678-7885-4631-878f-c6a2b857ee05)  
   

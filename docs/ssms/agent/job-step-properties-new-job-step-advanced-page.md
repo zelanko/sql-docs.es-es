@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ba89c1f12638f4a9ed4698d82dca0f97d3d931a0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 771869ddfa25e6b19fe0545e638a7b305441e2fa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987837"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774210"
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>Propiedades de paso de trabajo - Nuevo paso de trabajo (página Opciones avanzadas)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,20 +31,20 @@ ms.locfileid: "37987837"
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
-Use esta página para ver y cambiar las propiedades de un paso de trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+Use esta página para ver y cambiar las propiedades de un paso de trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Opciones  
 **Acción en caso de éxito**  
-Establece la acción que debe realizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] si el paso de trabajo se realiza correctamente.  
+Establece la acción que debe realizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si el paso de trabajo se realiza correctamente.  
   
 **Número de reintentos**  
-Establece el número de veces que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] intenta volver a ejecutar un paso de trabajo con error.  
+Establece el número de veces que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta volver a ejecutar un paso de trabajo con error.  
   
 **Intervalo de reintento (minutos)**  
-Establece el tiempo que espera el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] entre los reintentos.  
+Establece el tiempo que espera el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre los reintentos.  
   
 **Acción en caso de error**  
-Establece la acción que debe realizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] si el paso de trabajo no se realiza correctamente.  
+Establece la acción que debe realizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si el paso de trabajo no se realiza correctamente.  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Opciones de pasos de trabajo Transact-SQL  
 **Archivo de salida**  
@@ -54,7 +54,7 @@ Establece el archivo que se utiliza para la salida desde el paso de trabajo. Est
 Permite buscar el archivo que se utiliza para la salida desde el paso de trabajo.  
   
 **Ver**  
-En [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)], este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
+En [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
   
 **Anexar la salida al archivo existente**  
 Anexa la salida al contenido existente del archivo. De lo contrario, el anterior contenido del archivo se sobrescribe cada vez que se ejecuta el paso de trabajo.  
@@ -82,7 +82,7 @@ Establece el archivo que se utiliza para la salida desde el paso de trabajo.
 Permite buscar el archivo que se utiliza para la salida desde el paso de trabajo.  
   
 **Ver**  
-En [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)], este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
+En [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
   
 **Anexar la salida al archivo existente**  
 Anexa la salida del paso de trabajo al contenido anterior del archivo cada vez que se ejecuta.  
@@ -107,7 +107,7 @@ Establece el archivo que se utiliza para la salida desde el paso de trabajo.
 Permite buscar el archivo que se utiliza para la salida desde el paso de trabajo.  
   
 **Ver**  
-En [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)], este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
+En [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
   
 **Anexar la salida al archivo existente**  
 Anexa la salida del paso de trabajo al contenido anterior del archivo cada vez que se ejecuta.  
@@ -139,7 +139,7 @@ Establece el archivo que se utiliza para la salida desde el paso de trabajo. Est
 Permite buscar el archivo que se utiliza para la salida desde el paso de trabajo.  
   
 **Ver**  
-En [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)], este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
+En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
   
 **Anexar la salida al archivo existente**  
 Anexa la salida al contenido existente del archivo. De lo contrario, el anterior contenido del archivo se sobrescribe cada vez que se ejecuta el paso de trabajo.  

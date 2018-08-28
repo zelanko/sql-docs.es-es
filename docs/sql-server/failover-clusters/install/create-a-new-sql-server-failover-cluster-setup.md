@@ -20,12 +20,12 @@ caps.latest.revision: 77
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0890c77c50af48ce34cdcb21cf7784ae69616a52
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 89eb39275b25147ca062c7b4e05ac3f4fae78967
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772041"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774626"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Crear un nuevo clúster de conmutación por error de SQL Server (programa de instalación)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ ms.locfileid: "34772041"
   
 10. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ejecuta uno o varios conjuntos de reglas que se basan en las características que seleccionó para validar la configuración.  
   
-11. En la página Configuración de instancia, especifique si desea instalar una instancia predeterminada o una instancia con nombre. Para obtener más información, vea [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).  
+11. En la página Configuración de instancia, especifique si desea instalar una instancia predeterminada o una instancia con nombre. Para obtener más información, vea [Instance Configuration](../../install/instance-configuration.md).  
   
      **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Nombre de red** : especifique un nombre de red para el nuevo clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Este es el nombre que se usa para identificar los clústeres de conmutación por error en la red.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "34772041"
   
 17. En la página Configuración del servidor - Cuentas de servicio, especifique las cuentas de inicio de sesión para los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Los servicios reales que se configuran en esta página dependen de las características que se van a instalar.  
   
-     Puede asignar la misma cuenta de inicio de sesión a todos los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o configurar cada cuenta de servicio individualmente. El tipo de inicio se establece en manual para todos los servicios que reconocen clústeres, incluidos la búsqueda de texto completo y el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , y no se puede cambiar durante la instalación. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomienda configurar las cuentas de servicio de forma individual para proporcionar a cada servicio los privilegios mínimos; así, los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] obtendrán los permisos mínimos que necesitan para completar sus tareas. Para obtener más información, vea [Configuración del servidor - Cuentas de servicio](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) y [Configurar los permisos y las cuentas de servicio de Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     Puede asignar la misma cuenta de inicio de sesión a todos los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o configurar cada cuenta de servicio individualmente. El tipo de inicio se establece en manual para todos los servicios que reconocen clústeres, incluidos la búsqueda de texto completo y el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], y no se puede cambiar durante la instalación. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomienda configurar las cuentas de servicio de forma individual para proporcionar a cada servicio los privilegios mínimos; así, los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] obtendrán los permisos mínimos que necesitan para completar sus tareas. Para obtener más información, vea [Configuración del servidor - Cuentas de servicio](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) y [Configurar los permisos y las cuentas de servicio de Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Para especificar la misma cuenta de inicio de sesión para todas las cuentas de servicio en esta instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], las credenciales se proporcionan en los campos de la parte inferior de la página.  
   
@@ -295,7 +295,7 @@ ms.locfileid: "34772041"
   
 15. En la página Configuración del servidor - Cuentas de servicio, especifique las cuentas de inicio de sesión para los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Los servicios reales que se configuran en esta página dependen de las características que se van a instalar.  
   
-     Puede asignar la misma cuenta de inicio de sesión a todos los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o configurar cada cuenta de servicio individualmente. El tipo de inicio se establece en manual para todos los servicios que reconocen clústeres, incluidos la búsqueda de texto completo y el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , y no se puede cambiar durante la instalación. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomienda configurar las cuentas de servicio de forma individual para proporcionar a cada servicio los privilegios mínimos; así, los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] obtendrán los permisos mínimos que necesitan para completar sus tareas. Para obtener más información, vea [Configurar los permisos y las cuentas de servicio de Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     Puede asignar la misma cuenta de inicio de sesión a todos los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o configurar cada cuenta de servicio individualmente. El tipo de inicio se establece en manual para todos los servicios que reconocen clústeres, incluidos la búsqueda de texto completo y el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], y no se puede cambiar durante la instalación. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomienda configurar las cuentas de servicio de forma individual para proporcionar a cada servicio los privilegios mínimos; así, los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] obtendrán los permisos mínimos que necesitan para completar sus tareas. Para obtener más información, vea [Configurar los permisos y las cuentas de servicio de Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Para especificar la misma cuenta de inicio de sesión para todas las cuentas de servicio en esta instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], las credenciales se proporcionan en los campos de la parte inferior de la página.  
   

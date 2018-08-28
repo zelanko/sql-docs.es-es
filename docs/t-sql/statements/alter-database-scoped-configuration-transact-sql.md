@@ -25,12 +25,12 @@ caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 811376d76608af8d75ab68649f0eea61bfb8a5c3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1e4dab492102f4505c22dd5b415a590372855294
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041943"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405706"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -242,7 +242,7 @@ en la base de datos. Este permiso se puede conceder por un usuario con permiso C
   
 **DacFx**  
   
- Como ALTER DATABASE SCOPED CONFIGURATION es una característica nueva de Azure SQL Database y SQL Server a partir de SQL Server 2016 que afecta al esquema de base de datos, las exportaciones del esquema (con o sin datos) no se pueden importar a una versión anterior de SQL Server como [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. Por ejemplo, una exportación a un [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) o un [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) desde una base de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] que usara esta nueva característica no podría importarse a un servidor de nivel inferior.  
+ Como ALTER DATABASE SCOPED CONFIGURATION es una característica nueva de Azure SQL Database y SQL Server a partir de SQL Server 2016 que afecta al esquema de base de datos, las exportaciones del esquema (con o sin datos) no se pueden importar a una versión anterior de SQL Server como [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. Por ejemplo, una exportación a un [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) o un [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) desde una base de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] que usara esta nueva característica no podría importarse a un servidor de nivel inferior.  
 
 **ELEVATE_ONLINE** 
 

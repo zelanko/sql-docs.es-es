@@ -20,16 +20,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a7eef59e5e20ff33936e0db32849c4f1be4bf6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06ce90737135ad4eb6e098d6d8005663c1e47338
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33050102"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775981"
 ---
 # <a name="use-the-toolbox"></a>Utilizar el cuadro de herramientas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Se pueden seleccionar y arrastrar elementos, texto y controles del cuadro de herramientas a formularios, páginas y diseñadores, y arrastrar de nuevo elementos de estos orígenes al cuadro de herramientas para volver a usarlos más adelante. Por ejemplo, en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] puede arrastrar una tarea a un plan de mantenimiento.  
+Se pueden seleccionar y arrastrar elementos, texto y controles del cuadro de herramientas a formularios, páginas y diseñadores, y arrastrar de nuevo elementos de estos orígenes al cuadro de herramientas para volver a usarlos más adelante. Por ejemplo, en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] puede arrastrar una tarea a un plan de mantenimiento.  
   
 Los elementos del cuadro de herramientas se agrupan en secciones denominadas pestañas. Ésta es una lista de referencia de la tareas más habituales del cuadro de herramientas y cómo realizarlas:  
   

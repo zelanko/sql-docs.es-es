@@ -18,26 +18,26 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1a7706eb126c28a40f06917ea6b7e976ce89efb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d5ba9b644ab7712b6ac52c26761e1a15435be1fa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032002"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42773975"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Ventanas de herramientas de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] proporciona un gran número de eficaces ventanas de herramientas para todas las fases del desarrollo y la administración. Algunas herramientas se pueden utilizar en cualquier componente de [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] , mientras que otras son solo para ciertos componentes. En la tabla siguiente se identifican las herramientas que se pueden utilizar con todos los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)].  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] proporciona un gran número de eficaces ventanas de herramientas para todas las fases del desarrollo y la administración. Algunas herramientas se pueden utilizar en cualquier componente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , mientras que otras son solo para ciertos componentes. En la tabla siguiente se identifican las herramientas que se pueden utilizar con todos los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 |||  
 |-|-|  
 |**Herramienta**|**Finalidad**|  
 |[Explorador de objetos](../ssms/object/object-explorer.md)|Examinar servidores, crear y ubicar objetos, administrar orígenes de datos y ver registros. A esta herramienta se obtiene acceso desde el menú **Ver** .|  
-|[Explorador de soluciones](../ssms/solution/solution-explorer.md)|Almacenar y organizar scripts e información de conexión relacionada en proyectos denominados Scripts de [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] . Es posible almacenar varios Scripts de [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] como Soluciones y utilizar el control de código fuente para administrar los scripts a medida que evolucionan. A esta herramienta se obtiene acceso desde el menú **Ver** .|  
+|[Explorador de soluciones](../ssms/solution/solution-explorer.md)|Almacenar y organizar scripts e información de conexión relacionada en proyectos denominados Scripts de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Es posible almacenar varios Scripts de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como Soluciones y utilizar el control de código fuente para administrar los scripts a medida que evolucionan. A esta herramienta se obtiene acceso desde el menú **Ver** .|  
 |[Explorador de plantillas](../ssms/template/template-explorer.md)|Crear consultas basadas en las plantillas existentes. También es posible crear consultas personalizadas o modificar las plantillas existentes de modo que se ajusten a su situación. A esta herramienta se obtiene acceso desde el menú **Ver** .|  
 |[Ayuda dinámica](../ssms/user-assistance-in-sql-server-management-studio.md)|Mostrar una lista de temas relacionados de la Ayuda cuando se hace clic en un componente o en un tipo de código.|  
   
-Las herramientas de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] funcionan conjuntamente. Por ejemplo, puede:  
+Las herramientas de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] funcionan conjuntamente. Por ejemplo, puede:  
   
 -   Registrar un servidor con el Explorador de objetos.  
   

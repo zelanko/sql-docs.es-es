@@ -27,12 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 21c40862e43cd7f5c4e883c6482d83faa4175ede
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ace865623d23cc7081ac162b33821ee7757a47df
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38030873"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776539"
 ---
 # <a name="monitor-and-respond-to-events"></a>Supervisar y responder a eventos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,26 +40,26 @@ ms.locfileid: "38030873"
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] El Agente puede supervisar y responder automáticamente a *eventos*, como, por ejemplo, mensajes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], condiciones de rendimiento específicas y eventos de Instrumental de administración de Windows (WMI).  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente puede supervisar y responder automáticamente a *eventos*, como, por ejemplo, mensajes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], condiciones de rendimiento específicas y eventos de Instrumental de administración de Windows (WMI).  
   
 ## <a name="in-this-section"></a>En esta sección  
 [Alertas](../../ssms/agent/alerts.md)  
 Contiene información acerca de la nomenclatura de alertas y la selección de los eventos o las condiciones de rendimiento a las que responden las alertas.  
   
 [Crear un evento definido por el usuario](../../ssms/agent/create-a-user-defined-event.md)  
-Contiene información acerca de cómo crear eventos distintos a los predefinidos por [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+Contiene información acerca de cómo crear eventos distintos a los predefinidos por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 [Operadores](../../ssms/agent/operators.md)  
-Contiene información acerca de la creación de alias para administradores que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] puede utilizar para enviar notificaciones cuando los trabajos se realizan correctamente o generan un error.  
+Contiene información acerca de la creación de alias para administradores que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede utilizar para enviar notificaciones cuando los trabajos se realizan correctamente o generan un error.  
   
 ## <a name="about-monitoring-and-responding-to-events"></a>Acerca de cómo supervisar y responder a eventos  
-Las respuestas automatizadas a los eventos se llaman *alertas*. Puede definir una alerta sobre uno o varios eventos para especificar cómo desea que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] responda cuando aparezcan. Una alerta puede responder a un evento notificando a un administrador o ejecutando un trabajo, o ambos. Una alerta también puede reenviar un evento al registro de la aplicación de Microsoft Windows en otro equipo. Por ejemplo, puede especificar que se notifique inmediatamente a un operador si se produce un evento de gravedad 19. Si se definen alertas, los administradores de bases de datos pueden supervisar y administrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]de forma más eficaz.  
+Las respuestas automatizadas a los eventos se llaman *alertas*. Puede definir una alerta sobre uno o varios eventos para especificar cómo desea que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] responda cuando aparezcan. Una alerta puede responder a un evento notificando a un administrador o ejecutando un trabajo, o ambos. Una alerta también puede reenviar un evento al registro de la aplicación de Microsoft Windows en otro equipo. Por ejemplo, puede especificar que se notifique inmediatamente a un operador si se produce un evento de gravedad 19. Si se definen alertas, los administradores de bases de datos pueden supervisar y administrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de forma más eficaz.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] El Agente solo responde a los eventos para los que se ha definido una alerta. El método que utiliza el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] para supervisar eventos depende del tipo de evento.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente solo responde a los eventos para los que se ha definido una alerta. El método que utiliza el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para supervisar eventos depende del tipo de evento.  
   
-Cuando se define una alerta del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] para un contador de rendimiento, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] supervisa directamente el contador de rendimiento. Para un evento WMI, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] registra una consulta de evento para el evento WMI.  
+Cuando se define una alerta del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para un contador de rendimiento, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supervisa directamente el contador de rendimiento. Para un evento WMI, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registra una consulta de evento para el evento WMI.  
   
-Para responder a mensajes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] supervisa el registro de la aplicación Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] El Agente solo puede responder a mensajes que aparecen en este registro. De manera predeterminada, SQL Server registra los siguientes mensajes en el registro de la aplicación de Windows:  
+Para responder a mensajes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supervisa el registro de la aplicación Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente solo puede responder a mensajes que aparecen en este registro. De manera predeterminada, SQL Server registra los siguientes mensajes en el registro de la aplicación de Windows:  
   
 -   Errores sysmessages de gravedad 19 o superior.  
   
@@ -74,10 +74,10 @@ Para responder a mensajes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_m
     > [!NOTE]  
     > Registrar eventos de aplicación consume espacio de registro y puede provocar que el registro de la aplicación de Windows supere el tamaño máximo. Asegúrese de que el tamaño máximo del registro de la aplicación Windows es suficiente como para evitar la pérdida de información de eventos de SQL Server.  
   
-Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] registra un mensaje, el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] compara el mensaje con las alertas definidas por el administrador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registra un mensaje, el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compara el mensaje con las alertas definidas por el administrador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-Independientemente del origen del evento, el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] responde al evento realizando las tareas especificadas en la alerta del evento.  
+Independientemente del origen del evento, el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] responde al evento realizando las tareas especificadas en la alerta del evento.  
   
 ## <a name="see-also"></a>Ver también  
-[sp_altermessage](http://msdn.microsoft.com/en-us/1b28f280-8ef9-48e9-bd99-ec14d79abaca)  
+[sp_altermessage](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)  
   

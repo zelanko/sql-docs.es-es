@@ -29,12 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2ddf3e46378c8db62de8c2e04ba5674bf28c6ce2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 1d4233dae5b3ac669c50132a1589efe024009956
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980437"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774978"
 ---
 # <a name="operators"></a>Operadores
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "38980437"
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
-Los operadores son alias para personas o grupos que pueden recibir una notificación electrónica cuando los trabajos se completan o se activa una alerta. El servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] admite la notificación de administradores a través de operadores. Los operadores habilitan las capacidades de notificación y supervisión del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+Los operadores son alias para personas o grupos que pueden recibir una notificación electrónica cuando los trabajos se completan o se activa una alerta. El servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la notificación de administradores a través de operadores. Los operadores habilitan las capacidades de notificación y supervisión del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="operator-attributes-and-concepts"></a>Atributos y conceptos de operador  
 Los atributos principales de un operador son:  
@@ -52,13 +52,13 @@ Los atributos principales de un operador son:
 -   Información de contacto  
   
 ### <a name="naming-an-operator"></a>Asignar nombres a operadores  
-Cada operador debe tener asignado un nombre. Los nombres de los operadores deben ser únicos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y no pueden tener más de **128** caracteres.  
+Cada operador debe tener asignado un nombre. Los nombres de los operadores deben ser únicos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no pueden tener más de **128** caracteres.  
   
 ### <a name="contact-information"></a>Información de contacto  
 La información de contacto de un operador define cómo se va a notificar a dicho operador. Se puede notificar a los operadores mediante correo electrónico, buscapersonas o con el comando **net send** :  
   
 > [!IMPORTANT]  
-> Las opciones Buscapersonas y **net send** se quitarán del Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] en una versión futura de [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Evite utilizar estas características en los nuevos trabajos de programación y planee modificar las aplicaciones que actualmente las utilizan.  
+> Las opciones Buscapersonas y **net send** se quitarán del Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una versión futura de [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar estas características en los nuevos trabajos de programación y planee modificar las aplicaciones que actualmente las utilizan.  
   
 -   **Notificación mediante correo electrónico**  
   
@@ -80,7 +80,7 @@ La información de contacto de un operador define cómo se va a notificar a dich
   
         Este software es propiedad de los proveedores de servicios de localización. El software funciona como un cliente de correo electrónico que procesa periódicamente su bandeja de entrada mediante la interpretación de toda o parte de la información de la dirección de correo electrónico como un número de buscapersonas o mediante la correspondencia del nombre de correo electrónico con un número de buscapersonas en una tabla de traducción.  
   
-        Si todos los operadores comparten el mismo proveedor de buscapersonas, puede utilizar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] para especificar el formato especial de correo electrónico necesario para el sistema de conversión del buscapersonas a correo electrónico. El formato especial puede ser un prefijo o un sufijo y puede incluirse en las siguientes líneas del mensaje de correo electrónico:  
+        Si todos los operadores comparten el mismo proveedor de buscapersonas, puede utilizar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para especificar el formato especial de correo electrónico necesario para el sistema de conversión del buscapersonas a correo electrónico. El formato especial puede ser un prefijo o un sufijo y puede incluirse en las siguientes líneas del mensaje de correo electrónico:  
   
         **Asunto:**  
   
@@ -96,7 +96,7 @@ La información de contacto de un operador define cómo se va a notificar a dich
     Envía un mensaje al operador mediante el comando **net send** . Si usa **net send**, especifique el destinatario (el equipo o el usuario) de un mensaje de red.  
   
     > [!NOTE]  
-    > El comando **net send** usa Microsoft Windows Messenger. Para enviar alertas correctamente, este servicio debe ejecutarse tanto en el equipo en el que [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] se está ejecutando como en el equipo que usa el operador.  
+    > El comando **net send** usa Microsoft Windows Messenger. Para enviar alertas correctamente, este servicio debe ejecutarse tanto en el equipo en el que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se está ejecutando como en el equipo que usa el operador.  
   
 ## <a name="alerting-and-fail-safe-operators"></a>Alertas y operadores para notificaciones de error  
 Puede elegir a qué operadores notificará en respuesta a una alerta. Por ejemplo, puede asignar responsabilidades rotativas para notificar a los operadores mediante la programación de alertas. Por ejemplo, se notifica a A de las alertas que se producen los lunes, miércoles o viernes, y a B de las que se producen los martes, jueves y sábados.  
@@ -109,7 +109,7 @@ Se notifica al operador para notificaciones de error cuando:
   
     Entre los motivos que impiden contactar con los operadores principales se incluyen el uso de direcciones de buscapersonas incorrectas y los operadores fuera de servicio.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] El Agente no puede tener acceso a las tablas del sistema en la base de datos **msdb** .  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente no puede tener acceso a las tablas del sistema en la base de datos **msdb** .  
   
     La tabla del sistema **sysnotifications** especifica las responsabilidades de los operadores respecto a las alertas.  
   
@@ -133,5 +133,5 @@ Debe configurar al menos uno de los elementos siguientes para poder notificar a 
 |Tareas relacionadas con la asignación de alertas|[Asignar alertas a un operador](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Definir la respuesta a una alerta &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Asignar alertas a un operador](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a>Ver también  
-[Correo electrónico de base de datos](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
+[Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)  
   

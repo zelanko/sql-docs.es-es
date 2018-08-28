@@ -18,12 +18,12 @@ caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e77e2f11cef4859412c0805d6dd1e082274b82ac
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 567b2bf3e75de80ca32ec22f4efb8b353bda173c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772241"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774729"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Cambiar el nombre de una instancia de clúster de conmutación por error de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,9 +73,9 @@ ms.locfileid: "34772241"
   
 -   Corregir los nombres de instancia de los servidores de destino (TSX) y el servidor maestro (MSX) cuando se cambie el nombre de red en clúster o equipos. Para obtener más información, consulte los temas siguientes:  
   
-    -   [Dar de baja varios servidores de destino desde un servidor maestro](http://msdn.microsoft.com/library/61a3713b-403a-4806-bfc4-66db72ca1156)  
+    -   [Dar de baja varios servidores de destino desde un servidor maestro](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
-    -   [Crear un entorno multiservidor](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)  
+    -   [Crear un entorno multiservidor](../../../ssms/agent/create-a-multiserver-environment.md)  
   
 -   Volver a configurar el trasvase de registros de modo que se use el nombre de servidor actualizado para realizar la copia de seguridad de los registros y para restaurarlos. Para obtener más información, consulte los temas siguientes:  
   
@@ -83,7 +83,7 @@ ms.locfileid: "34772241"
   
     -   [Quitar el trasvase de registros &#40;SQL Server&#41;](../../../database-engine/log-shipping/remove-log-shipping-sql-server.md)  
   
--   Actualizar los pasos de trabajo que dependen del nombre de servidor. Para más información, consulte [Manage Job Steps](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31).  
+-   Actualizar los pasos de trabajo que dependen del nombre de servidor. Para más información, consulte [Manage Job Steps](../../../ssms/agent/manage-job-steps.md).  
   
 ## <a name="see-also"></a>Ver también  
  [Cambiar el nombre de un equipo que hospeda una instancia independiente de SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  

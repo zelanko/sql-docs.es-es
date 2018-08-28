@@ -16,15 +16,15 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d4a2823e644e002dbb326ea98531d449377accac
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 29d06a93a797ca312ce4a6e60fabb9a221be4dc7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083817"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774353"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>Cómo: Trabajar con objetos de base de datos CLR
-Además del lenguaje de programación Transact\-SQL, puede usar los lenguajes .NET Framework para crear objetos de base de datos que recuperen y actualicen los datos. Los objetos de base de datos que se escriben en código administrado se denominan objetos de base de datos de Common Language Runtime (CLR) de SQL Server. Para ver una explicación de las ventajas de usar objetos de base de datos CLR hospedados en SQL Server y de cómo elegir entre Transact\-SQL y CLR, consulte [Ventajas de la integración CLR](http://msdn.microsoft.com/en-us/library/ms131045.aspx) y [Ventajas de utilizar código administrado para crear objetos de base de datos](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx).  
+Además del lenguaje de programación Transact\-SQL, puede usar los lenguajes .NET Framework para crear objetos de base de datos que recuperen y actualicen los datos. Los objetos de base de datos que se escriben en código administrado se denominan objetos de base de datos de Common Language Runtime (CLR) de SQL Server. Para ver una explicación de las ventajas de usar objetos de base de datos CLR hospedados en SQL Server y de cómo elegir entre Transact\-SQL y CLR, consulte [Ventajas de la integración CLR](../relational-databases/clr-integration/clr-integration-overview.md) y [Ventajas de utilizar código administrado para crear objetos de base de datos](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx).  
   
 Para crear un objeto de base de datos CLR con SQL Server Data Tools, cree un proyecto de base de datos y, después, agréguele un objeto de base de datos CLR. A diferencia de lo que ocurre en versiones anteriores de Visual Studio, no es necesario crear un proyecto CLR diferente y agregarle una referencia desde el proyecto de base de datos. Al compilar y publicar el proyecto de base de datos, se publican automáticamente los objetos CLR del proyecto al mismo tiempo. Después de publicar estos objetos CLR, se les puede llamar y se pueden ejecutar como cualquier otro objeto de base de datos.  
   
@@ -86,7 +86,7 @@ Para más información sobre los requisitos para compilar objetos de base de dat
   
 1.  En el **Explorador de objetos de SQL Server**, vaya a la base de datos local en la que esté implementando el proyecto.  
   
-2.  De manera predeterminada, la integración con CLR está desactivada en SQL Server. Para usar objetos de base de datos CLR, se debe habilitar la integración con CLR. Para ello, use la opción "clr enabled" del procedimiento almacenado sp_configure. Para más información, consulte el tema sobre [la opción clr habilitada](http://msdn.microsoft.com/en-us/library/ms131048.aspx).  
+2.  De manera predeterminada, la integración con CLR está desactivada en SQL Server. Para usar objetos de base de datos CLR, se debe habilitar la integración con CLR. Para ello, use la opción "clr enabled" del procedimiento almacenado sp_configure. Para más información, consulte el tema sobre [la opción clr habilitada](../relational-databases/clr-integration/clr-integration-enabling.md).  
   
     Haga clic con el botón derecho en la base de datos y seleccione **Nueva consulta**. En el panel de consulta, pegue el código siguiente y haga clic en el botón **Ejecutar consulta**.  
   
@@ -105,7 +105,7 @@ Para más información sobre los requisitos para compilar objetos de base de dat
 5.  Cambie la entrada a **425 312 1222** y salga del campo. Observe que ahora se acepta la entrada.  
   
 ## <a name="see-also"></a>Ver también  
-[Ventajas de la integración CLR](http://msdn.microsoft.com/en-us/library/ms131045.aspx)  
+[Ventajas de la integración CLR](../relational-databases/clr-integration/clr-integration-overview.md)  
 [Ventajas de utilizar código administrado para crear objetos de base de datos](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx)  
 [Crear objetos de base de datos con la integración de Common Language Runtime (CLR)](http://msdn.microsoft.com/en-us/library/ms131046.aspx)  
   

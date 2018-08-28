@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c0c79369a1486f175fb23321e706a799059c92c9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 35f4eaba0ff477e6577b4805a02db2c668f647ae
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37971407"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774833"
 ---
 # <a name="sql-server-agent-properties-advanced-page"></a>Propiedades de Agente SQL Server (página Avanzadas)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,38 +31,38 @@ ms.locfileid: "37971407"
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
-Utilice esta página para ver y modificar las propiedades avanzadas del servicio del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+Utilice esta página para ver y modificar las propiedades avanzadas del servicio del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opciones  
 **Reenvío de eventos de SQL Server**  
 Las opciones de esta categoría activan y configuran el reenvío de eventos.  
   
 **Reenviar eventos a otro servidor**  
-Reenvía los eventos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] a otro servidor.  
+Reenvía los eventos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a otro servidor.  
   
 **Server**  
 Seleccione el nombre del servidor al que se reenvían los eventos.  
   
 **Eventos no controlados**  
-Solo reenvía eventos no controlados al servidor especificado. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] solo reenvía eventos a los que no responde ninguna alerta.  
+Solo reenvía eventos no controlados al servidor especificado. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo reenvía eventos a los que no responde ninguna alerta.  
   
 **Todos los eventos**  
-Reenvía todos los eventos. Cuando una alerta de la instancia local responde al evento, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] reenvía el evento y procesa la alerta.  
+Reenvía todos los eventos. Cuando una alerta de la instancia local responde al evento, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reenvía el evento y procesa la alerta.  
   
 **Si el evento tiene una gravedad de o por encima de**  
 Solo reenvía eventos con el nivel de gravedad igual o superior al especificado.  
   
 **Condición de CPU inactiva**  
-Las opciones de esta categoría definen las condiciones en las que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ejecuta trabajos programados para ejecutarse en la programación de CPU inactiva.  
+Las opciones de esta categoría definen las condiciones en las que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta trabajos programados para ejecutarse en la programación de CPU inactiva.  
   
 **Definir condición de CPU inactiva**  
-Define las condiciones en las que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] considera que la CPU está inactiva.  
+Define las condiciones en las que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera que la CPU está inactiva.  
   
 **El promedio de uso de la CPU baja de**  
 Porcentaje de uso de CPU por debajo del cual se considera inactiva la CPU.  
   
 **Y permanece por debajo durante**  
-Cantidad de tiempo que el promedio de uso de la CPU debe situarse por debajo del nivel especificado antes de que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ejecute trabajos en la programación de CPU inactiva.  
+Cantidad de tiempo que el promedio de uso de la CPU debe situarse por debajo del nivel especificado antes de que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecute trabajos en la programación de CPU inactiva.  
   
 ## <a name="see-also"></a>Ver también  
 [Crear y adjuntar programaciones a trabajos](../../ssms/agent/create-and-attach-schedules-to-jobs.md)  

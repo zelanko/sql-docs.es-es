@@ -22,21 +22,21 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02ac675f7dd209cb538e90142f6b9049068e2ad7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6c5f45b7445b3ef0d35869a10e291cbc5f6a8678
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38045963"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774812"
 ---
 # <a name="solution-explorer"></a>Explorador de soluciones
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-El panel Explorador de soluciones de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] proporciona contenedores denominados proyectos para administrar elementos, tales como scripts de base de datos, consultas, conexiones de datos y archivos. Uno o varios proyectos que están relacionados entre sí se pueden combinar en un contenedor denominado solución.  
+El panel Explorador de soluciones de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona contenedores denominados proyectos para administrar elementos, tales como scripts de base de datos, consultas, conexiones de datos y archivos. Uno o varios proyectos que están relacionados entre sí se pueden combinar en un contenedor denominado solución.  
   
 Una solución contiene uno o varios proyectos, además de archivos y metadatos que ayudan a definir la solución como un conjunto. Un proyecto es un conjunto de archivos y metadatos relacionados, por ejemplo, información de conexión. Las soluciones y los proyectos contienen elementos que representan los scripts, las consultas, la información de conexión y los archivos necesarios para crear la solución de base de datos.  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid_md.md)]  
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="benefits-of-using-solutions"></a>Ventajas de usar Soluciones  
 Use estos contenedores para:  
@@ -51,7 +51,7 @@ Use estos contenedores para:
   
 -   Trabajar en varios archivos independientes de las soluciones o los proyectos.  
   
-Los elementos incluidos en los proyectos dependen del tipo de proyecto y de si se está usando o no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+Los elementos incluidos en los proyectos dependen del tipo de proyecto y de si se está usando o no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="related-tasks"></a>Related Tasks  
 Use los siguientes temas para empezar a trabajar con Soluciones de SQL Server:  
@@ -61,5 +61,5 @@ Use los siguientes temas para empezar a trabajar con Soluciones de SQL Server:
 |**Descripción**|**Tema**|  
 |Describe cómo recopilar uno o varios proyectos en una solución.|[Soluciones &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)|  
 |Describe cómo crear un proyecto y agregar elementos como scripts y conexiones.|[Proyectos &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)|  
-|Proporciona información acerca de los archivos usados por [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] para administrar soluciones y archivos.|[Archivos que administran soluciones y proyectos](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  
+|Proporciona información acerca de los archivos usados por [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para administrar soluciones y archivos.|[Archivos que administran soluciones y proyectos](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  
   

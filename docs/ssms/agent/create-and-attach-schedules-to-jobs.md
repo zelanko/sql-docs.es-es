@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e972f506f9b805d0cca28e0dfe3340e2ee28cd57
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2c8c8340bf5501b1bdf33137be16a03044775d6e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979717"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774976"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Crear y adjuntar programaciones a trabajos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "38979717"
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
-La programación de trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] consiste en definir las condiciones que provocan el inicio de la ejecución de los trabajos sin intervención del usuario. Puede programar que un trabajo se ejecute automáticamente creando una nueva programación para el trabajo, o adjuntando una programación existente al trabajo.  
+La programación de trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste en definir las condiciones que provocan el inicio de la ejecución de los trabajos sin intervención del usuario. Puede programar que un trabajo se ejecute automáticamente creando una nueva programación para el trabajo, o adjuntando una programación existente al trabajo.  
   
 Hay dos maneras de crear una programación:  
   
@@ -49,7 +49,7 @@ Una vez creada una programación, puede adjuntarla a varios trabajos, aun cuando
   
 Una programación puede basarse en tiempo o en un evento. Por ejemplo, puede programar un trabajo para que se ejecute en los momentos siguientes:  
   
--   Cuando se inicia el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+-   Cuando se inicia el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Cuando el uso de la CPU del equipo se encuentre en un nivel que se haya definido como inactivo.  
   
@@ -60,7 +60,7 @@ Una programación puede basarse en tiempo o en un evento. Por ejemplo, puede pro
 Como alternativa a las programaciones de trabajo, también puede crear una alerta que responda a un evento ejecutando un trabajo.  
   
 > [!NOTE]  
-> Solo se puede ejecutar una instancia del trabajo cada vez. Si intenta ejecutar un trabajo manualmente mientras se está ejecutando en el momento programado, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] rechazará la solicitud.  
+> Solo se puede ejecutar una instancia del trabajo cada vez. Si intenta ejecutar un trabajo manualmente mientras se está ejecutando en el momento programado, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rechazará la solicitud.  
   
 Para impedir que un trabajo programado se ejecute, debe realizar una de las siguientes acciones:  
   
@@ -70,7 +70,7 @@ Para impedir que un trabajo programado se ejecute, debe realizar una de las sigu
   
 -   Separar la programación del trabajo.  
   
--   Detener el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+-   Detener el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Eliminar la programación.  
   
@@ -86,22 +86,22 @@ Al adjuntar una programación a un trabajo, se debe revisar la fecha de inicio q
 Puede cambiar la fecha de inicio de la programación después de adjuntar la programación a un trabajo.  
   
 ## <a name="cpu-idle-schedules"></a>Programaciones de inactividad de CPU  
-Para maximizar los recursos de CPU, puede definir una condición de CPU inactiva para el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] El Agente usa la configuración de la condición de CPU inactiva para determinar el momento más conveniente para ejecutar trabajos. Por ejemplo, puede programar la ejecución de un trabajo de generación de índices durante el tiempo de inactividad de CPU y en periodos de baja producción.  
+Para maximizar los recursos de CPU, puede definir una condición de CPU inactiva para el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente usa la configuración de la condición de CPU inactiva para determinar el momento más conveniente para ejecutar trabajos. Por ejemplo, puede programar la ejecución de un trabajo de generación de índices durante el tiempo de inactividad de CPU y en periodos de baja producción.  
   
-Antes de definir trabajos para que se ejecuten durante el tiempo de inactividad de CPU, determine la carga de la CPU durante el procesamiento normal. Para ello, utilice el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] o el Monitor de rendimiento para supervisar el tráfico del servidor y obtener estadísticas. La información que obtenga puede utilizarla para establecer el porcentaje y la duración del tiempo de inactividad de CPU.  
+Antes de definir trabajos para que se ejecuten durante el tiempo de inactividad de CPU, determine la carga de la CPU durante el procesamiento normal. Para ello, utilice el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o el Monitor de rendimiento para supervisar el tráfico del servidor y obtener estadísticas. La información que obtenga puede utilizarla para establecer el porcentaje y la duración del tiempo de inactividad de CPU.  
   
-Defina la condición de CPU inactiva como un porcentaje por debajo del cual el uso de CPU debe permanecer durante un intervalo de tiempo especificado. A continuación, establezca la duración. Cuando el uso de CPU esté por debajo del porcentaje especificado para el tiempo determinado, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] iniciará todos los trabajos que tengan una programación de tiempo de inactividad de CPU. Para más información sobre cómo usar el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] o el Monitor de rendimiento para supervisar el uso de CPU, consulte [Supervisar el uso de CPU](http://msdn.microsoft.com/2a02a3b6-07b2-4ad0-8a24-670414d19812).  
+Defina la condición de CPU inactiva como un porcentaje por debajo del cual el uso de CPU debe permanecer durante un intervalo de tiempo especificado. A continuación, establezca la duración. Cuando el uso de CPU esté por debajo del porcentaje especificado para el tiempo determinado, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] iniciará todos los trabajos que tengan una programación de tiempo de inactividad de CPU. Para más información sobre cómo usar el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o el Monitor de rendimiento para supervisar el uso de CPU, consulte [Supervisar el uso de CPU](../../relational-databases/performance-monitor/monitor-cpu-usage.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
 |**Descripción**|**Tema**|  
-|Describe cómo crear una programación para un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .|[Create a Schedule](../../ssms/agent/create-a-schedule.md)|  
-|Describe cómo programar un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .|[Programar un trabajo](../../ssms/agent/schedule-a-job.md)|  
+|Describe cómo crear una programación para un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Create a Schedule](../../ssms/agent/create-a-schedule.md)|  
+|Describe cómo programar un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Programar un trabajo](../../ssms/agent/schedule-a-job.md)|  
 |Explica cómo definir la condición de inactividad de la CPU para el servidor.|[Establecer la duración y el tiempo de inactividad de la CPU &#40;SQL Server Management Studio&#41;](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>Ver también  
-[sp_help_jobschedule](http://msdn.microsoft.com/2cded902-9272-4667-ac4b-a4f95a9f008e)  
-[sysjobschedules](http://msdn.microsoft.com/ccdafec7-2a9b-4356-bffb-1caa3a12db59)  
+[sp_help_jobschedule](../../relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql.md)  
+[sysjobschedules](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   

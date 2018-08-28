@@ -20,25 +20,25 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3dda4b94a26b0a2e88d6ad9be75abfa6721cd77
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8781d1c91f03800cf59a87a4458903d0a92c8aff
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37983901"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774620"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>Generar proyectos de bases de datos mediante SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Un proyecto de scripts de base de datos es un conjunto organizado de scripts, información de conexión y plantillas asociado a una base de datos o a parte de ella. [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] proporciona [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] para administrar y diseñar bases de datos [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] en el contexto de un proyecto de script. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] incluye diseñadores, editores, guías y asistentes para ayudar a los usuarios a desarrollar, implementar y mantener bases de datos.  
+Un proyecto de scripts de base de datos es un conjunto organizado de scripts, información de conexión y plantillas asociado a una base de datos o a parte de ella. [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para administrar y diseñar bases de datos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el contexto de un proyecto de script. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] incluye diseñadores, editores, guías y asistentes para ayudar a los usuarios a desarrollar, implementar y mantener bases de datos.  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] es un conjunto de herramientas administrativas que permite administrar los componentes que pertenecen a [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. Este entorno integrado permite a los usuarios realizar varias tareas, como realizar copias de seguridad de los datos, editar consultas y automatizar funciones comunes en una misma interfaz.  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] es un conjunto de herramientas administrativas que permite administrar los componentes que pertenecen a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Este entorno integrado permite a los usuarios realizar varias tareas, como realizar copias de seguridad de los datos, editar consultas y automatizar funciones comunes en una misma interfaz.  
   
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] incluye las siguientes herramientas:  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] incluye las siguientes herramientas:  
   
--   El Editor de código es un editor de script completo que sirve para escribir y modificar scripts. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] proporciona cuatro versiones del Editor de código: el Editor de consultas del [!INCLUDE[ssDE](../includes/ssde_md.md)] para scripts [!INCLUDE[tsql](../includes/tsql_md.md)] , el Editor de consultas de MDX, el Editor de consultas de MDX y el Editor de consultas de XML/A.  
+-   El Editor de código es un editor de script completo que sirve para escribir y modificar scripts. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] proporciona cuatro versiones del Editor de código: el Editor de consultas del [!INCLUDE[ssDE](../includes/ssde_md.md)] para scripts [!INCLUDE[tsql](../includes/tsql-md.md)] , el Editor de consultas de MDX, el Editor de consultas de MDX y el Editor de consultas de XML/A.  
   
--   El Explorador de objetos sirve para buscar, modificar e incluir en scripts objetos que pertenecen a instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]o ejecutarlos.  
+-   El Explorador de objetos sirve para buscar, modificar e incluir en scripts objetos que pertenecen a instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]o ejecutarlos.  
   
 -   El Explorador de plantillas sirve para buscar plantillas y crear scripts para ellas.  
   
@@ -46,16 +46,16 @@ Un proyecto de scripts de base de datos es un conjunto organizado de scripts, in
   
 -   La Ventana Propiedades sirve para mostrar las propiedades actuales de los objetos seleccionados.  
   
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] permite desarrollar procesos de trabajo de manera eficaz al proporcionar:  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] permite desarrollar procesos de trabajo de manera eficaz al proporcionar:  
   
--   Acceso sin conexión. Puede escribir y modificar scripts sin conectarse a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)].  
+-   Acceso sin conexión. Puede escribir y modificar scripts sin conectarse a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 -   Creación de scripts desde cualquier cuadro de diálogo. Puede crear un script desde cualquier cuadro de diálogo para que pueda leer, modificar, almacenar y reutilizar los scripts después de crearlos.  
   
--   Cuadros de diálogo no modales. Al obtener acceso a un cuadro de diálogo de interfaz de usuario, puede examinar otros recursos en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] sin cerrar el cuadro de diálogo.  
+-   Cuadros de diálogo no modales. Al obtener acceso a un cuadro de diálogo de interfaz de usuario, puede examinar otros recursos en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sin cerrar el cuadro de diálogo.  
   
 ## <a name="solutions-and-script-projects"></a>Soluciones y proyectos de scripts  
-El Explorador de soluciones es una utilidad que sirve para almacenar y volver a abrir soluciones de bases de datos. Las soluciones organizan proyectos de scripts y archivos relacionados. Los proyectos de script almacenan archivos de scripts de [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] , plantillas SQL, información de conexión y otros archivos varios. Cuando se guarda un script en un proyecto de scripts, los usuarios pueden:  
+El Explorador de soluciones es una utilidad que sirve para almacenar y volver a abrir soluciones de bases de datos. Las soluciones organizan proyectos de scripts y archivos relacionados. Los proyectos de script almacenan archivos de scripts de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , plantillas SQL, información de conexión y otros archivos varios. Cuando se guarda un script en un proyecto de scripts, los usuarios pueden:  
   
 -   Mantener un control de versiones de los scripts.  
   
@@ -65,7 +65,7 @@ El Explorador de soluciones es una utilidad que sirve para almacenar y volver a 
   
 -   Guardar información de conexión con scripts.  
   
-El Explorador de soluciones es una herramienta para los programadores que crean y reutilizan scripts relacionados con el mismo proyecto. Si se requiere realizar una tarea similar posteriormente, puede utilizar el grupo de scripts que se almacenó en un proyecto. Si creó aplicaciones mediante [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[vsprvs](../includes/vsprvs_md.md)], el Explorador de soluciones le resultará muy familiar.  
+El Explorador de soluciones es una herramienta para los programadores que crean y reutilizan scripts relacionados con el mismo proyecto. Si se requiere realizar una tarea similar posteriormente, puede utilizar el grupo de scripts que se almacenó en un proyecto. Si creó aplicaciones mediante [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], el Explorador de soluciones le resultará muy familiar.  
   
 Una solución consta de uno o más proyectos de script. Un proyecto está formado por uno o más scripts o conexiones. Un proyecto también puede incluir archivos que no sean scripts.  
   

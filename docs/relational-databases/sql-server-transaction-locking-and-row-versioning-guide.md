@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 50ae9731b974753b0a3fef174314ef5bbe3e03d5
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: db3afb17e019c5c02d385418d72e1b5f175802d5
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39563229"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405257"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guía de versiones de fila y bloqueo de transacciones
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -235,7 +235,7 @@ GO
     --Transaction 2  
     BEGIN TRAN;  
     INSERT INTO dbo.employee  
-       SET name = 'New' WHERE ID = 5;  
+      (Id, Name) VALUES(6 ,'New');  
     COMMIT;   
     ```  
   

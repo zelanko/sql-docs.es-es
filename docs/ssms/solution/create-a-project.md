@@ -20,12 +20,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 617e0bb42882883a51f5da0bb22ae59eb18dae88
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7b9549bfce672b3ddf5c67ddb8a6a4968e87a5b7
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38064666"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775623"
 ---
 # <a name="create-a-project"></a>Crear un proyecto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ Puede crear uno o varios proyectos nuevos en una solución existente.
     En el cuadro **Plantillas** , seleccione una plantilla. Aparecerá una breve descripción de la plantilla del proyecto seleccionado debajo del cuadro **Plantillas** .  
   
     **Nombre**  
-    Escriba el nombre del proyecto de scripts que desea crear. También se creará una carpeta con el mismo nombre que el proyecto en la ubicación que aparece en el campo **Ubicación** . En algunos proyectos, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] crea archivos de origen y otros archivos de compatibilidad, y los agrega a la nueva carpeta del proyecto.  
+    Escriba el nombre del proyecto de scripts que desea crear. También se creará una carpeta con el mismo nombre que el proyecto en la ubicación que aparece en el campo **Ubicación** . En algunos proyectos, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] crea archivos de origen y otros archivos de compatibilidad, y los agrega a la nueva carpeta del proyecto.  
   
     > [!NOTE]  
     > En algunos tipos de proyecto, el cuadro de texto **Nombre** no está disponible porque al especificar la ubicación se establece el nombre. Por ejemplo, las aplicaciones y los servicios web se ubican en un servidor web y obtienen su nombre del directorio virtual especificado en ese servidor.  
@@ -100,7 +100,7 @@ Puede crear uno o varios proyectos nuevos en una solución existente.
   
 4.  Haga clic en **Aceptar**.  
   
-Puede establecer un nombre para el proyecto de script, aunque [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] establece los nombres de las carpetas y no se pueden modificar. Puede configurar la unidad y la especificación de la ruta de acceso de los conjuntos comunes de carpetas mediante el cuadro de diálogo **Agregar nuevo proyecto** . Haga clic con el botón derecho en el icono de soluciones del **Explorador de soluciones**y, a continuación, haga clic en **Agregar**. La ubicación predeterminada de las carpetas de los proyectos de script es: C:\Documents and Settings\\*NombreDeUsuario*\Mis documentos\SQL Server Management Studio\Projects\\.  
+Puede establecer un nombre para el proyecto de script, aunque [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] establece los nombres de las carpetas y no se pueden modificar. Puede configurar la unidad y la especificación de la ruta de acceso de los conjuntos comunes de carpetas mediante el cuadro de diálogo **Agregar nuevo proyecto** . Haga clic con el botón derecho en el icono de soluciones del **Explorador de soluciones**y, a continuación, haga clic en **Agregar**. La ubicación predeterminada de las carpetas de los proyectos de script es: C:\Documents and Settings\\*NombreDeUsuario*\Mis documentos\SQL Server Management Studio\Projects\\.  
   
 ## <a name="see-also"></a>Ver también  
 [Explorador de soluciones](../../ssms/solution/solution-explorer.md)  

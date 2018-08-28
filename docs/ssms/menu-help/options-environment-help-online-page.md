@@ -17,16 +17,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 601439745dffa9c8902aa448cb8ce42c23ed867d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 445c56c70edc8f045ede5efdf921ba34c0ffa291
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042602"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774695"
 ---
 # <a name="options-environment---help---online-page"></a>Opciones (Entorno - Ayuda - Página En línea)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-El cuadro de diálogo **Opciones** le permite especificar los orígenes de la Ayuda que se van a utilizar para las búsquedas de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] , incluida la Ayuda F1. En el menú **Herramientas** , haga clic en **Opciones**, expanda la carpeta **Entorno** , seleccione **Ayuda**y, a continuación, haga clic en **En línea**. Si la página **En línea** no aparece en la lista, active la casilla **Mostrar todas las configuraciones** en el cuadro de diálogo **Opciones** .  
+El cuadro de diálogo **Opciones** le permite especificar los orígenes de la Ayuda que se van a utilizar para las búsquedas de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , incluida la Ayuda F1. En el menú **Herramientas** , haga clic en **Opciones**, expanda la carpeta **Entorno** , seleccione **Ayuda**y, a continuación, haga clic en **En línea**. Si la página **En línea** no aparece en la lista, active la casilla **Mostrar todas las configuraciones** en el cuadro de diálogo **Opciones** .  
   
 **Cuando cargue contenido de la Ayuda**  
 Establece el orden en que deben utilizarse los orígenes de la Ayuda F1 y especifica cuáles deben utilizarse.  

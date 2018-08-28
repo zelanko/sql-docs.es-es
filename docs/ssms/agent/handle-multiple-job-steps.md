@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3b88a2d50bd748da3e56d43367706715fa4739f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f136453aadd5562a5d6263752af7413abed86c1c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043872"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776544"
 ---
 # <a name="handle-multiple-job-steps"></a>Controlar varios pasos del trabajo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,25 +39,25 @@ Si el trabajo está formado por varios pasos, debe especificar el orden de ejecu
   
 ![Control de flujo de los pasos de trabajo del Agente SQL Server](../../ssms/agent/media/dbflow01.gif "Control de flujo de los pasos de trabajo del Agente SQL Server")  
   
-El primer paso es Copia de seguridad de la base de datos. Si este paso genera un error, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] informa del error al operador que se ha definido que reciba la notificación. Si el paso Copia de seguridad de la base de datos es correcto, el trabajo pasa al siguiente paso: "Normalizar" los datos del cliente. Si este paso genera un error, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] avanza a Restaurar base de datos. Si "Normalizar" los datos del cliente es correcto, el trabajo avanza al siguiente paso: Actualizar estadísticas y, así sucesivamente, hasta que el paso final da como resultado un informe correcto o con errores.  
+El primer paso es Copia de seguridad de la base de datos. Si este paso genera un error, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informa del error al operador que se ha definido que reciba la notificación. Si el paso Copia de seguridad de la base de datos es correcto, el trabajo pasa al siguiente paso: "Normalizar" los datos del cliente. Si este paso genera un error, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avanza a Restaurar base de datos. Si "Normalizar" los datos del cliente es correcto, el trabajo avanza al siguiente paso: Actualizar estadísticas y, así sucesivamente, hasta que el paso final da como resultado un informe correcto o con errores.  
   
 Se define una acción de control de flujo para la ejecución satisfactoria o con errores de cada paso del trabajo. Debe especificar una acción que se deberá realizar cuando un paso del trabajo se ejecute correctamente y la acción que se llevará a cabo cuando se ejecute con errores. También puede definir el número de reintentos y el intervalo entre ellos para los pasos del trabajo que no se han ejecutado correctamente.  
   
 > [!NOTE]  
-> Cuando utiliza la interfaz gráfica de usuario (GUI) del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y se elimina uno o varios pasos de un trabajo de varios pasos, la GUI quita todos los pasos del trabajo y vuelve a agregar los pasos restantes con las referencias correctas en caso de éxito o en caso de error. Por ejemplo, imagine que tiene un trabajo de cinco pasos en el que el primero se configura para que salte al cuarto paso si se completa con éxito. Si elimina el tercer paso, la GUI elimina todos los pasos del trabajo y agrega los cuatro pasos restantes (1, 2, 4 y 5) con las referencias corregidas. En este caso, la referencia del primer paso se volvería a configurar para que salte al tercer paso si el primero se completa con éxito.  
+> Cuando utiliza la interfaz gráfica de usuario (GUI) del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se elimina uno o varios pasos de un trabajo de varios pasos, la GUI quita todos los pasos del trabajo y vuelve a agregar los pasos restantes con las referencias correctas en caso de éxito o en caso de error. Por ejemplo, imagine que tiene un trabajo de cinco pasos en el que el primero se configura para que salte al cuarto paso si se completa con éxito. Si elimina el tercer paso, la GUI elimina todos los pasos del trabajo y agrega los cuatro pasos restantes (1, 2, 4 y 5) con las referencias corregidas. En este caso, la referencia del primer paso se volvería a configurar para que salte al tercer paso si el primero se completa con éxito.  
   
-Los pasos del trabajo deben ser independientes. Es decir, un trabajo no puede pasar datos, valores booleanos o numéricos entre pasos del trabajo. Sin embargo, puede pasar valores de un paso del trabajo de [!INCLUDE[tsql](../../includes/tsql_md.md)] a otro si utiliza tablas permanentes o tablas temporales globales. También puede pasar valores de pasos del trabajo que ejecuten programas ejecutables de un paso del trabajo a otro mediante archivos. Por ejemplo, el programa ejecutado mediante un paso del trabajo escribe un archivo y el programa ejecutado por un paso del trabajo posterior lee el archivo.  
+Los pasos del trabajo deben ser independientes. Es decir, un trabajo no puede pasar datos, valores booleanos o numéricos entre pasos del trabajo. Sin embargo, puede pasar valores de un paso del trabajo de [!INCLUDE[tsql](../../includes/tsql-md.md)] a otro si utiliza tablas permanentes o tablas temporales globales. También puede pasar valores de pasos del trabajo que ejecuten programas ejecutables de un paso del trabajo a otro mediante archivos. Por ejemplo, el programa ejecutado mediante un paso del trabajo escribe un archivo y el programa ejecutado por un paso del trabajo posterior lee el archivo.  
   
 > [!NOTE]  
-> Si crea pasos del trabajo en bucle (el paso del trabajo 1 va seguido del paso del trabajo 2 y, a continuación, del paso del trabajo 2 se vuelve al paso del trabajo 1), aparecerá un mensaje de advertencia cuando cree el trabajo mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+> Si crea pasos del trabajo en bucle (el paso del trabajo 1 va seguido del paso del trabajo 2 y, a continuación, del paso del trabajo 2 se vuelve al paso del trabajo 1), aparecerá un mensaje de advertencia cuando cree el trabajo mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] El Agente registra la información del trabajo y de los pasos de trabajo en el historial de trabajos.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente registra la información del trabajo y de los pasos de trabajo en el historial de trabajos.  
   
 ## <a name="see-also"></a>Ver también  
-[sp_add_job](http://msdn.microsoft.com/en-us/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
-[sysjobhistory](http://msdn.microsoft.com/en-us/1b1fcdbb-2af2-45e6-bf3f-e8279432ce13)  
+[sp_add_job](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)  
+[sysjobhistory](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
 [sysjobs (Transact-SQL)](http://msdn.microsoft.com/en-us/e244a6a5-54c2-47a6-8039-dd1852b0ae59)  
-[sysjobsteps](http://msdn.microsoft.com/en-us/978b8205-535b-461c-91f3-af9b08eca467)  
+[sysjobsteps](../../relational-databases/system-tables/dbo-sysjobsteps-transact-sql.md)  
 [Implementar trabajos](../../ssms/agent/implement-jobs.md)  
 [Administrar pasos de trabajo](../../ssms/agent/manage-job-steps.md)  
   

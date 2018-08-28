@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 98355b237197ac6b2f52d9439fdb0fa1ebc2132a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 22e94828bc111318b3bdfbdfca71c863912b9064
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981178"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774440"
 ---
 # <a name="create-an-alert-using-severity-level"></a>Create an Alert Using Severity Level
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "38981178"
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
-En este tema se describe el modo de crear una alerta del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que se active cuando se produzca un evento con un nivel de gravedad específico en [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] o [!INCLUDE[tsql](../../includes/tsql_md.md)].  
+En este tema se describe el modo de crear una alerta del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se active cuando se produzca un evento con un nivel de gravedad específico en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 **En este tema**  
   
@@ -54,11 +54,11 @@ En este tema se describe el modo de crear una alerta del Agente [!INCLUDE[msCoNa
   
 ### <a name="Restrictions"></a>Limitaciones y restricciones  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] proporciona una forma gráfica y fácil de administrar todo el sistema de alertas, y constituye el método recomendado para configurar una infraestructura de alertas.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona una forma gráfica y fácil de administrar todo el sistema de alertas, y constituye el método recomendado para configurar una infraestructura de alertas.  
   
 -   Los eventos generados durante **xp_logevent** se producen en la base de datos maestra. Por tanto, **xp_logevent** no desencadena una alerta a menos que el valor de **@database_name** de la alerta sea is **'master'** o NULL.  
   
--   Con los niveles de gravedad entre 19 y 25 se envía un mensaje de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] al registro de la aplicación de [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows y se desencadena una alerta. Los eventos con niveles de gravedad inferiores a 19 solo desencadenarán alertas si ha utilizado **sp_altermessage**, RAISERROR WITH LOG o **xp_logevent** para forzar que se escriban en el registro de la aplicación Windows.  
+-   Con los niveles de gravedad entre 19 y 25 se envía un mensaje de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al registro de la aplicación de [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows y se desencadena una alerta. Los eventos con niveles de gravedad inferiores a 19 solo desencadenarán alertas si ha utilizado **sp_altermessage**, RAISERROR WITH LOG o **xp_logevent** para forzar que se escriban en el registro de la aplicación Windows.  
   
 ### <a name="Security"></a>Seguridad  
   

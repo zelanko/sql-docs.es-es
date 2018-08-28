@@ -18,16 +18,16 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74dc369cb88d644f02a6db142fbf3e320fe15e8a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: fac8561bcc2fb119918937b00e91c48afc3749fa
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979857"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774913"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Opciones (Ayuda F1 de cuadros de diálogos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Esta sección contiene la Ayuda F1 de los cuadros de diálogo disponibles cuando se hace clic en **Opciones** en el menú **Herramientas** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+Esta sección contiene la Ayuda F1 de los cuadros de diálogo disponibles cuando se hace clic en **Opciones** en el menú **Herramientas** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 [Opciones &#40;Diseñadores - Diseñadores de Analysis Services - General&#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   

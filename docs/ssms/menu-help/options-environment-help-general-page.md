@@ -17,23 +17,23 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfc7a585b40acca4658174b403207ad8480abf46
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7684bccbeb7151730cdfdd541ecf02850f24c377
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042642"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776006"
 ---
 # <a name="options-environment---help---general-page"></a>Opciones (Entorno - Ayuda - Página General)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Use el cuadro de diálogo **Opciones** para elegir conjuntos de documentación y decidir si deben mostrarse temas internamente en [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] o externamente en otra ventana. Para tener acceso a este cuadro de diálogo, haga clic en **Opciones** en el menú **Herramientas** , expanda el elemento **Ayuda** del nodo **Entorno** y, a continuación, haga clic en **General**.  
+Use el cuadro de diálogo **Opciones** para elegir conjuntos de documentación y decidir si deben mostrarse temas internamente en [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o externamente en otra ventana. Para tener acceso a este cuadro de diálogo, haga clic en **Opciones** en el menú **Herramientas** , expanda el elemento **Ayuda** del nodo **Entorno** y, a continuación, haga clic en **General**.  
   
 > [!NOTE]  
 > Los cambios realizados en las opciones de esta página no tendrán efecto hasta que se reinicie el entorno.  
   
 ## <a name="settings"></a>Configuración  
 **Mostrar la Ayuda usando**  
-Especifica cómo se muestra la Ayuda. Seleccione **Visor de ayuda externo** en la lista desplegable para ver los temas en una ventana flotante externa. Seleccione **Visor de ayuda integrada** para mostrar los temas de Ayuda en una ventana de explorador web acoplada en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+Especifica cómo se muestra la Ayuda. Seleccione **Visor de ayuda externo** en la lista desplegable para ver los temas en una ventana flotante externa. Seleccione **Visor de ayuda integrada** para mostrar los temas de Ayuda en una ventana de explorador web acoplada en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 **Resultados de búsqueda por página**  
 Especifica el número de temas que se muestran en una única página de **Resultados de la búsqueda** .  

@@ -33,12 +33,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1ece4cfc83ce8abf9eede88183bcca9c04816391
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: ab1e1997f92ca6cc23670e33d29b3005b7e92a00
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558465"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405689"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importar un archivo de bacpac para crear una nueva base de datos de usuario
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "39558465"
  Se puede importar una DAC en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o en una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que ejecute [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o posterior. Si exporta una DAC de una versión anterior, puede contener objetos que [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]no admita. No puede implementar dicha DAC en instancias de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="prerequisites"></a>Prerequisites  
- Se recomienda no importar un archivo de exportación de DAC desde orígenes desconocidos o que no sean de confianza. Es posible que estos archivos contengan código malintencionado que podría ejecutar código Transact-SQL no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Antes de usar un archivo de exportación de un origen desconocido o que no sea de confianza, desempaquete la DAC y examine el código, como procedimientos almacenados y otro código definido por el usuario. Para más información sobre cómo realizar estas comprobaciones, consulte [Validar un paquete de DAC](https://msdn.microsoft.com/library/ee633948(SQL.130).aspx).  
+ Se recomienda no importar un archivo de exportación de DAC desde orígenes desconocidos o que no sean de confianza. Es posible que estos archivos contengan código malintencionado que podría ejecutar código Transact-SQL no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Antes de usar un archivo de exportación de un origen desconocido o que no sea de confianza, desempaquete la DAC y examine el código, como procedimientos almacenados y otro código definido por el usuario. Para más información sobre cómo realizar estas comprobaciones, consulte [Validar un paquete de DAC](validate-a-dac-package.md).  
   
 ## <a name="security"></a>Seguridad  
  Para mejorar la seguridad, los inicios de sesión de autenticación de SQL Server están almacenados en un archivo de exportación de DAC sin contraseña. Cuando el archivo se importa, el inicio de sesión se crea como un inicio de sesión deshabilitado con una contraseña generada. Para habilitar los inicios de sesión, use un inicio de sesión que disponga del permiso ALTER ANY LOGIN y emplee ALTER LOGIN para habilitar el inicio de sesión y asignar una nueva contraseña que pueda comunicar al usuario. Esto no se necesita para los inicios de sesión de Autenticación de Windows, porque SQL Server no administra sus contraseñas.  

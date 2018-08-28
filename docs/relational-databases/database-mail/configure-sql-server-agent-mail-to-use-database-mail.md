@@ -19,12 +19,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3a49117cfe2bb24b4a5f47f22c9bff9e1afb9910
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fbfb5af92127ab9d08d3bfabcb589250d748f1d7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32924840"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405233"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Configurar el Agente SQL Server para que use el Correo electrónico de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,11 +77,11 @@ ms.locfileid: "32924840"
 ##  <a name="Follow_Up"></a> Tareas de seguimiento  
  Las siguientes tareas son necesarias para completar la configuración del agente con el fin de que envíe alertas y notificaciones.  
   
--   [Alertas](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef)  
+-   [Alertas](../../ssms/agent/alerts.md)  
   
      Las alertas se pueden configurar para notificar a un operador de una determinada condición de evento o de sistema operativo de la base de datos.  
   
--   [Operadores](http://msdn.microsoft.com/library/38e8488f-2669-4cea-b9c3-5f394a663678)  
+-   [Operadores](../../ssms/agent/operators.md)  
   
      Los operadores son alias de personas o grupos que pueden recibir la notificación electrónica  
   

@@ -20,12 +20,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c9126d758d0b51948072a924da34a5f8674ce2f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7b168a0164ac2acc212344e898d04c07913ae29
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041842"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775279"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Elegir elementos del cuadro de herramientas (página Tareas de mantenimiento)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ Esta pestaña del cuadro de diálogo **Personalizar el cuadro de herramientas** 
 La pestaña **Tareas de mantenimiento** incluye las siguientes columnas de información.  
   
 **Nombre**  
-Muestra el nombre de los componentes disponibles. Delante del nombre aparece una casilla. Si está activada, indica que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ha encontrado una entrada para el componente en el Registro del equipo. El componente ya se encuentra en la pestaña **Cuadro de herramientas** activa o se agregará a ella cuando haga clic en **Aceptar**. Si está desactivada, indica que el componente no se encuentra en el **Cuadro de herramientas**o que se quitará del **Cuadro de herramientas** cuando haga clic en **Aceptar**.  
+Muestra el nombre de los componentes disponibles. Delante del nombre aparece una casilla. Si está activada, indica que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ha encontrado una entrada para el componente en el Registro del equipo. El componente ya se encuentra en la pestaña **Cuadro de herramientas** activa o se agregará a ella cuando haga clic en **Aceptar**. Si está desactivada, indica que el componente no se encuentra en el **Cuadro de herramientas**o que se quitará del **Cuadro de herramientas** cuando haga clic en **Aceptar**.  
   
 **Ruta de acceso**  
 Muestra la ruta de acceso completa al componente. Para identificar los componentes predeterminados enviados con el producto, ordene esta columna y localice los almacenados en la ruta de instalación de [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio.  

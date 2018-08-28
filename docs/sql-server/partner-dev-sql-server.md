@@ -1,25 +1,21 @@
 ---
 title: Asociados de desarrollo de SQL Server | Microsoft Docs
 description: Listas de asociados externos que cuentan con soluciones de desarrollo para Server.
-services: sql-server
-documentationcenter: NA
-ms.suite: sql
-ms.devlang: NA
 ms.topic: conceptual
-ms.tgt_pltfrm: NA
 ms.custom: ''
-ms.date: 17/09/2017
+ms.date: 09/17/2017
 ms.prod: sql
+ms.technology: ''
 ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: db27c4c54a46057957b5f28cd07f0cc828671028
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: e03d3d32ec15ed5ec195f1cfc6e1759bdc2d02c9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087517"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024524"
 ---
 # <a name="sql-server-development-partners"></a>Asociados de desarrollo de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7e5060410bb21487f93a732f9b30fc33e9e4cd98
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: b572a5fe585d36f106c15ccc48e8a18215141f23
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979917"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774211"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>Crear un trabajo maestro del Agente SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "38979917"
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
-En este tema se describe cómo crear un trabajo maestro del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] o [!INCLUDE[tsql](../../includes/tsql_md.md)].  
+En este tema se describe cómo crear un trabajo maestro del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 **En este tema**  
   
@@ -52,7 +52,7 @@ En este tema se describe cómo crear un trabajo maestro del Agente [!INCLUDE[msC
 ## <a name="BeforeYouBegin"></a>Antes de empezar  
   
 ### <a name="Restrictions"></a>Limitaciones y restricciones  
-Los cambios en los trabajos principales del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] se deben transmitir a todos los servidores de destino implicados. Dado que los servidores de destino no descargan inicialmente un trabajo hasta que se especifican dichos destinos, [!INCLUDE[msCoName](../../includes/msconame_md.md)] recomienda completar todos los pasos y programaciones de un trabajo concreto antes de especificar los servidores de destino. De lo contrario, debe solicitar manualmente que los servidores de destino vuelvan a descargar el trabajo modificado, ejecutando el procedimiento almacenado **sp_post_msx_operation** o modificando el trabajo mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Para más información, consulte [sp_post_msx_operation (Transact-SQL)](http://msdn.microsoft.com/085deef8-2709-4da9-bb97-9ab32effdacf) o [Modificar un trabajo](../../ssms/agent/modify-a-job.md).  
+Los cambios en los trabajos principales del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se deben transmitir a todos los servidores de destino implicados. Dado que los servidores de destino no descargan inicialmente un trabajo hasta que se especifican dichos destinos, [!INCLUDE[msCoName](../../includes/msconame_md.md)] recomienda completar todos los pasos y programaciones de un trabajo concreto antes de especificar los servidores de destino. De lo contrario, debe solicitar manualmente que los servidores de destino vuelvan a descargar el trabajo modificado, ejecutando el procedimiento almacenado **sp_post_msx_operation** o modificando el trabajo mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para más información, consulte [sp_post_msx_operation (Transact-SQL)](http://msdn.microsoft.com/085deef8-2709-4da9-bb97-9ab32effdacf) o [Modificar un trabajo](../../ssms/agent/modify-a-job.md).  
   
 ### <a name="Security"></a>Seguridad  
   
@@ -87,7 +87,7 @@ Si se producen errores en los pasos de trabajo que utilizan cuentas de proxy dur
   
 7.  En la página **Alertas** , organice las alertas del trabajo. Para más información sobre las opciones disponibles en esta página, consulte [Propiedades de trabajo - Nuevo trabajo &#40;Página Alertas&#41;](../../ssms/agent/job-properties-new-job-alerts-page.md)  
   
-8.  En la página **Notificaciones** , establezca las acciones que el Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] debe realizar cuando se complete el trabajo. Para más información sobre las opciones disponibles en esta página, consulte [Propiedades de trabajo - Nuevo trabajo &#40;Página Notificaciones&#41;](../../ssms/agent/job-properties-new-job-notifications-page.md).  
+8.  En la página **Notificaciones** , establezca las acciones que el Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe realizar cuando se complete el trabajo. Para más información sobre las opciones disponibles en esta página, consulte [Propiedades de trabajo - Nuevo trabajo &#40;Página Notificaciones&#41;](../../ssms/agent/job-properties-new-job-notifications-page.md).  
   
 9. En la página **Destinos** , administre los servidores de destino del trabajo. Para más información sobre las opciones disponibles en esta página, consulte [Propiedades de trabajo - Nuevo trabajo &#40;Página Destinos&#41;](../../ssms/agent/job-properties-new-job-targets-page.md).  
   

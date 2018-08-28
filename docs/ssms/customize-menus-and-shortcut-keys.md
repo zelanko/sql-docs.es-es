@@ -25,12 +25,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4152bca5efcafb59de4f08c299b4ff3c9a66b9d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6bcca6b82d28f350571105826131c0fd99152a12
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045872"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775273"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizar los menús y los métodos abreviados de teclado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -164,7 +164,7 @@ Las teclas de aceleración de los procedimientos almacenados que usan la tecla C
 6.  En el cuadro de diálogo **Personalizar** , haga clic en **Cerrar**.  
   
 > [!NOTE]  
-> Algunos comandos solo están disponibles cuando [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] está mostrando el contenido pertinente. Si no está disponible ninguno de los comandos del menú, el elemento de menú no estará disponible.  
+> Algunos comandos solo están disponibles cuando [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] está mostrando el contenido pertinente. Si no está disponible ninguno de los comandos del menú, el elemento de menú no estará disponible.  
   
 ## <a name="see-also"></a>Ver también  
 [Características de SQL Server Management Studio](../ssms/features-in-sql-server-management-studio.md)  

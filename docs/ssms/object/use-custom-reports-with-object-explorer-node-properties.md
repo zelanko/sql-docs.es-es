@@ -17,12 +17,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ac0e1dee00d57400f24a17932bddb8e6183e11b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71f2c1bce85c86a19a12fa1c00f2643d7aa2f6f4
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046212"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776623"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Usar informes personalizados con las propiedades de nodo del Explorador de objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ Para ejecutar el ejemplo, use el procedimiento siguiente.
   
 2.  Copie el archivo de informe en una carpeta creada para informes personalizados en el servidor de la base de datos.  
   
-3.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)], haga clic con el botón derecho en un nodo del Explorador de objetos, seleccione **Informes**y haga clic en Informes personalizados. En el cuadro de diálogo **Abrir archivo** , busque la carpeta de informes personalizados y seleccione el archivo de informe. A continuación, haga clic en **Abrir**.  
+3.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], haga clic con el botón derecho en un nodo del Explorador de objetos, seleccione **Informes**y haga clic en Informes personalizados. En el cuadro de diálogo **Abrir archivo** , busque la carpeta de informes personalizados y seleccione el archivo de informe. A continuación, haga clic en **Abrir**.  
   
     La primera vez que se abre un nuevo informe personalizado desde un nodo del Explorador de objetos, el informe personalizado se agrega a la lista de **Informes personalizados** usados más recientemente en el menú contextual de dicho nodo. Al abrir un informe estándar por primera vez, aparece además en la lista de informes usados más recientemente en **Informes personalizados**. Si se elimina un archivo de informe personalizado, la próxima vez que se seleccione el elemento aparecerá un mensaje que le indicará que elimine el elemento de la lista de informes usados más recientemente.  
   

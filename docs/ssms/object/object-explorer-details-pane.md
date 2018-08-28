@@ -23,24 +23,24 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb6cb14124589796e0e1a8e31f437b4eb7d6c383
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: f75fac8ec104d32b84383b4303c3a9d3de1d53b8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984027"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774351"
 ---
 # <a name="object-explorer-details-pane"></a>Panel de detalles del Explorador de objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Detalles del Explorador de objetos, un componente de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], proporciona una vista tabular de todos los objetos del servidor y presenta una interfaz de usuario para administrarlos. Las funciones del Explorador de objetos varían ligeramente según el tipo de servidor, aunque, por lo general, incluyen características de desarrollo de bases de datos y características de administración de todo tipo de servidores.  
+Detalles del Explorador de objetos, un componente de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], proporciona una vista tabular de todos los objetos del servidor y presenta una interfaz de usuario para administrarlos. Las funciones del Explorador de objetos varían ligeramente según el tipo de servidor, aunque, por lo general, incluyen características de desarrollo de bases de datos y características de administración de todo tipo de servidores.  
   
-El panel Detalles del Explorador de objetos aparece en [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] de forma predeterminada. Si no aparece el Explorador de objetos, en el menú **Ver** , haga clic en **Detalles del Explorador de objetos** o presione **F7**.  
+El panel Detalles del Explorador de objetos aparece en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] de forma predeterminada. Si no aparece el Explorador de objetos, en el menú **Ver** , haga clic en **Detalles del Explorador de objetos** o presione **F7**.  
   
 > [!NOTE]  
-> [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] muestra las fechas con el formato de las opciones de configuración regional y de idioma de Microsoft Windows seleccionadas cuando se inició [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] . Reinicie [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] para reflejar la nueva configuración.  
+> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] muestra las fechas con el formato de las opciones de configuración regional y de idioma de Microsoft Windows seleccionadas cuando se inició [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Reinicie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para reflejar la nueva configuración.  
   
 ## <a name="object-explorer-details"></a>Detalles del Explorador de objetos  
-Detalles del Explorador de objetos se puede utilizar para navegar por las carpetas y los objetos de su instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . En sistemas operativos de 32 bits, el Explorador de objetos solamente puede mostrar 64.000 objetos. Se debe seleccionar un icono para tener acceso a más objetos.  
+Detalles del Explorador de objetos se puede utilizar para navegar por las carpetas y los objetos de su instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En sistemas operativos de 32 bits, el Explorador de objetos solamente puede mostrar 64.000 objetos. Se debe seleccionar un icono para tener acceso a más objetos.  
   
 Detalles del explorador de objetos incluye una barra de herramientas que contiene los iconos descritos en la siguiente tabla. Los iconos solo están disponibles cuando proceda.  
   
@@ -55,13 +55,13 @@ Detalles del explorador de objetos incluye una barra de herramientas que contien
 |**Buscar**|Proporciona un área donde escribir un término de búsqueda para algunos objetos de la base de datos.|  
   
 ### <a name="column-header-selections"></a>Selecciones de encabezados de columnas  
-Las columnas de Detalles del Explorador de objetos se pueden seleccionar. Puede hacer clic con el botón secundario en cualquier encabezado de columna y buscar los elementos que desea mostrar. Sus selecciones se mantendrán en los distintos objetos por los que navegue. Las selecciones de cada usuario se mantienen al salir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]y reiniciarlo.  
+Las columnas de Detalles del Explorador de objetos se pueden seleccionar. Puede hacer clic con el botón secundario en cualquier encabezado de columna y buscar los elementos que desea mostrar. Sus selecciones se mantendrán en los distintos objetos por los que navegue. Las selecciones de cada usuario se mantienen al salir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y reiniciarlo.  
   
 > [!CAUTION]  
 > Si se muestran todas las columnas de algunos tipos de objetos, como las bases de datos, se puede reducir ligeramente la velocidad de representación de conjuntos de objetos grandes.  
   
 ### <a name="sorting"></a>Ordenar  
-Al hacer clic una vez en el encabezado de una columna, se ordenará por esa columna. Si vuelve a hacer clic en la misma columna, se clasifica en orden inverso por esa columna. Las selecciones de ordenación se mantienen para cada usuario en los objetos y las carpetas, así como al reiniciar [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] .  
+Al hacer clic una vez en el encabezado de una columna, se ordenará por esa columna. Si vuelve a hacer clic en la misma columna, se clasifica en orden inverso por esa columna. Las selecciones de ordenación se mantienen para cada usuario en los objetos y las carpetas, así como al reiniciar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
 ### <a name="filtering"></a>Filtrar  
 Algunas listas de objetos que se muestran en Detalles del Explorador de objetos se pueden filtrar mediante el icono **Filtro** de la barra de herramientas de Detalles del Explorador de objetos. El icono se habilitará cuando sea posible la operación de filtrado.  
@@ -93,7 +93,7 @@ Detalles del Explorador de objetos admite la selección de varios objetos. Por e
 ## <a name="sql-server-object-search"></a>Buscar objetos de SQL Server  
 Caracteres comodín  
   
--   Se admiten los caracteres comodín estándar. Por ejemplo, si se busca **dm_os%counters** , se devuelve tanto dm_os_memory_cache_counters como dm_os_performance_counters. Para más información, consulte [Buscar texto con caracteres comodín](http://msdn.microsoft.com/449600f8-cc87-4b3f-878a-59c158a88a40).  
+-   Se admiten los caracteres comodín estándar. Por ejemplo, si se busca **dm_os%counters** , se devuelve tanto dm_os_memory_cache_counters como dm_os_performance_counters. Para más información, consulte [Buscar texto con caracteres comodín](../../relational-databases/scripting/search-text-with-wildcards.md).  
   
 Ámbito de búsqueda  
   

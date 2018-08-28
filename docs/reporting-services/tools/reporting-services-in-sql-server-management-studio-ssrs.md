@@ -17,19 +17,19 @@ caps.latest.revision: 57
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d737e132369afdfe6d45d72d4c769e3970786bd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 756aa4f5a4b03ffea76d907e8e2205428b565065
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031472"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405817"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Reporting Services en SQL Server Management Studio (SSRS)
   Los administradores del servidor de informes pueden usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para:  
   
 -   Habilitar características, establecer valores predeterminados y administrar trabajos en ejecución.  
   
--   Ver y crear informes personalizados. En el Explorador de objetos, muchos nodos muestran un conjunto de informes estándar que se instalan con [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Debe contar con los siguientes permisos de administrador. El esquema de un informe personalizado debe coincidir con el esquema de los informes instalados. Para más información, vea [Informes personalizados en Management Studio](http://msdn.microsoft.com/library/1ba3f758-f39b-4f5f-91ca-516cedc78979) y [Buscar la versión del esquema de definición de informe &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
+-   Ver y crear informes personalizados. En el Explorador de objetos, muchos nodos muestran un conjunto de informes estándar que se instalan con [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Debe contar con los siguientes permisos de administrador. El esquema de un informe personalizado debe coincidir con el esquema de los informes instalados. Para más información, vea [Informes personalizados en Management Studio](../../ssms/object/custom-reports-in-management-studio.md) y [Buscar la versión del esquema de definición de informe &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
  Los autores de informes pueden usar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para:  
   

@@ -16,12 +16,12 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38748bfc0ff21b9920ba554e6d7e0e89d5020e95
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: bc6b8d884857ef39716e1a5b0e05fc1a148252fd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997327"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774979"
 ---
 # <a name="failover-cluster-troubleshooting"></a>Solucionar problemas de clústeres de conmutación por error
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ Clúster de conmutación por error incorpora una medida de seguridad integrada p
   
      La recuperación de un error del sistema operativo de esta forma puede llevar algún tiempo. Si el error del sistema operativo se puede recuperar fácilmente, evite el uso de esta técnica.  
   
-     Para más información, consulte [Crear un nuevo clúster de conmutación por error de SQL Server &#40;Programa de instalación&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) y [Cómo recuperarse de un error en un clúster de conmutación por error en el escenario 2](https://msdn.microsoft.com/library/ms181075\(v=sql.105\).aspx).  
+     Para más información, consulte [Crear un nuevo clúster de conmutación por error de SQL Server &#40;Programa de instalación&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) y [Cómo recuperarse de un error en un clúster de conmutación por error en el escenario 2](recover-from-failover-cluster-instance-failure.md).  
   
 ## <a name="resolving-common-problems"></a>Resolver problemas habituales  
  En la siguiente lista se describen los problemas de uso más comunes y se explica cómo resolverlos.  

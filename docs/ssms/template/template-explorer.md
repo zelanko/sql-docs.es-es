@@ -24,23 +24,23 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d6fadfa9b084a16f6464bbebf6d6a8e32b7cbbb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a5f04afddbc388dba0e4efde00f4cd1096ce1bc0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015974"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774817"
 ---
 # <a name="template-explorer"></a>Template Explorer
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] proporciona una variedad de plantillas. Las plantillas son archivos estereotipados que contienen scripts SQL que ayudan a crear objetos en una base de datos. La primera vez que se abre el explorador de plantillas, se coloca una copia de las plantillas en la carpeta del usuario C:\Users, en AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una variedad de plantillas. Las plantillas son archivos estereotipados que contienen scripts SQL que ayudan a crear objetos en una base de datos. La primera vez que se abre el explorador de plantillas, se coloca una copia de las plantillas en la carpeta del usuario C:\Users, en AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates.  
   
 Puede examinar las plantillas disponibles en el explorador de plantillas; a continuación abra una plantilla para escribir el código en una ventana del editor de código. También puede crear plantillas personalizadas.  
   
 ## <a name="benefits-of-templates"></a>Ventajas de las plantillas  
 Las plantillas están disponibles para las soluciones, los proyectos y diversos tipos de editores de código. Las plantillas están disponibles para crear objetos como bases de datos, tablas, vistas, índices, procedimientos almacenados, desencadenadores, estadísticas y funciones. Además, existen plantillas que ayudan a administrar el servidor al crear propiedades extendidas, servidores vinculados, inicios de sesión, roles, usuarios y plantillas para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)].  
   
-Los scripts de las plantillas que se proporcionan con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] contienen parámetros para ayudarle a personalizar el código. Cuando abra una plantilla, use el cuadro de diálogo **Reemplazar parámetros de plantilla** para insertar valores en el script.  
+Los scripts de las plantillas que se proporcionan con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] contienen parámetros para ayudarle a personalizar el código. Cuando abra una plantilla, use el cuadro de diálogo **Reemplazar parámetros de plantilla** para insertar valores en el script.  
   
 Cree plantillas personalizadas para aquellas tareas que realice con frecuencia. Organice los scripts personalizados en las carpetas existentes o cree una nueva estructura de carpetas.  
   

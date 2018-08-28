@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6687b8dd57301ae62f6b5fbe6d11a70aad18c141
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 420fdd127b50a21dda67b681976462e553d9882e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045602"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774836"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Conectar al servidor (página Propiedades de conexión del motor de base de datos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,9 +32,9 @@ Use esta pestaña para ver o especificar opciones cuando se conecte a una enstan
 **Conectar con base de datos**  
 Seleccione en la lista una base de datos a la que conectarse. Si selecciona **<default>**, se conectará a la base de datos predeterminada del servidor. Si selecciona **<Browse server>**, podrá buscar el servidor de la base de datos a la que se conecta.  
   
-Al conectarse a una instancia del motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] a través de la base de datos de [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)], es preciso que use la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y especifique una base de datos en el cuadro de diálogo **Conectar al servidor** en la pestaña **Propiedades de conexión** . Asegúrese de que activa la casilla **Cifrar conexión** .  
+Al conectarse a una instancia del motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de la base de datos de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], es preciso que use la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y especifique una base de datos en el cuadro de diálogo **Conectar al servidor** en la pestaña **Propiedades de conexión** . Asegúrese de que activa la casilla **Cifrar conexión** .  
   
-De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] se conecta a **master**. Al conectarse a [!INCLUDE[ssSDS](../../includes/sssds_md.md)], si especifica una base de datos de usuario, verá solo esa base de datos y sus objetos en el Explorador de objetos. Si se conecta a **master**, podrá ver todas las bases de datos. Para más información, consulte la [Introducción a Microsoft Azure SQL Database](http://go.microsoft.com/fwlink/?LinkId=163948).  
+De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conecta a **master**. Al conectarse a [!INCLUDE[ssSDS](../../includes/sssds-md.md)], si especifica una base de datos de usuario, verá solo esa base de datos y sus objetos en el Explorador de objetos. Si se conecta a **master**, podrá ver todas las bases de datos. Para más información, consulte la [Introducción a Microsoft Azure SQL Database](http://go.microsoft.com/fwlink/?LinkId=163948).  
   
 **Protocolo de red**  
 Seleccione un protocolo de la lista. Los protocolos de cliente disponibles se configuran con la Configuración de red de cliente en Administración de equipos.  

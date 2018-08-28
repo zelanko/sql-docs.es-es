@@ -18,20 +18,20 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 275fb31571f9f57df40eb146b80b76e0c7dfd95b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e42c55f9a6f1239ad035d12d6ac3c0a76049765
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041362"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774562"
 ---
 # <a name="change-the-default-location-for-projects"></a>Cambiar la ubicación predeterminada de los proyectos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-La ubicación predeterminada de los archivos y los proyectos es la carpeta [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] Projects, en la carpeta Mis documentos.  
+La ubicación predeterminada de los archivos y los proyectos es la carpeta [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Projects, en la carpeta Mis documentos.  
   
 ### <a name="to-change-the-default-location-for-projects"></a>Para cambiar la ubicación predeterminada de los proyectos  
   
-1.  Cambie la ubicación predeterminada mediante la apertura o el almacenamiento de un archivo o un proyecto de otra ubicación. [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] almacena la ubicación del proyecto abierto anteriormente y la usa para la siguiente apertura o almacenamiento de un proyecto.  
+1.  Cambie la ubicación predeterminada mediante la apertura o el almacenamiento de un archivo o un proyecto de otra ubicación. [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] almacena la ubicación del proyecto abierto anteriormente y la usa para la siguiente apertura o almacenamiento de un proyecto.  
   
 ## <a name="see-also"></a>Ver también  
 [Explorador de soluciones](../../ssms/solution/solution-explorer.md)  

@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: e3d71bc8ebf7ddcc0d0fcd725b74567834bd4d00
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 888cfce4963b7ed118aa2cb20fbe97da65508734
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023333"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774243"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Notas de la versión de SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,12 +53,13 @@ Los Service Pack solo están disponibles en línea, no en los soportes de instal
 - **Adición de seguimiento de protocolos a los pasos de negociación SSL**: agrega información de seguimiento de bits de negociación correcta o errónea, incluido el protocolo, etc. Puede ser útil a la hora de solucionar problemas de escenarios de conectividad mientras, por ejemplo, se implementa TLS 1.2
 - **Establecimiento del nivel de compatibilidad correcto para la base de datos de distribución**: después de la instalación del Service Pack, cambia el nivel de compatibilidad de la base de datos de distribución a 90. El cambio de nivel se debe a un problema en el procedimiento almacenado sp_vupgrade_replication. Ahora el SP se ha modificado para establecer el nivel de compatibilidad correcto para la base de datos de distribución. 
 - **Nuevo comando DBCC para clonar una base de datos**: Base de datos clonada es un nuevo comando DBCC agregado que permite a los usuarios avanzados, como CSS, solucionar problemas de bases de datos de producción existentes mediante la clonación del esquema y los metadatos, sin los datos. La llamada se realiza con clonedatabase de DBCC (‘source_database_name’, ‘clone_database_name’). Las bases de datos clonadas no se deben usar en entornos de producción. Para ver si una base de datos se ha generado a partir de una llamada a la base de datos clonada, puede usar el comando siguiente, select DATABASEPROPERTYEX('clonedb', 'isClone'). El valor devuelto de 1 es true y 0 es false. 
-- **Información del archivo TempDB y del tamaño de archivo en el registro de errores de SQL**: si el tamaño y el crecimiento automático es diferente para los archivos de datos de TempDB durante el inicio, imprime el número de archivos y desencadena una advertencia.
+- 
+  **Información del archivo TempDB y del tamaño de archivo en el registro de errores de SQL**: si el tamaño y el crecimiento automático es diferente para los archivos de datos de TempDB durante el inicio, imprime el número de archivos y desencadena una advertencia.
 - **IFI admite mensajes en el registro de errores de SQL Server**: indica en el registro de errores que la inicialización instantánea de archivos de base de datos está habilitada o deshabilitada
 - **Nueva DMF para reemplazar a DBCC INPUTBUFFER**: se ha presentado una nueva función de administración dinámica sys.dm_input_buffer que toma session_id como parámetro para reemplazar a DBCC INPUTBUFFER
 - **Mejora de XEvents para el error de enrutamiento de lectura de un grupo de disponibilidad**: actualmente el XEvent read_only_rout_fail solo se desencadena si hay una lista de enrutamiento, pero ninguno de los servidores de la lista de enrutamiento está disponible para las conexiones. Esta mejora incluye información adicional para ayudar a solucionar el problema y además se expande en los puntos de código donde se desencadena el XEvent. 
 - **Mejora del control de Service Broker con conmutación por error de grupo de disponibilidad**: actualmente, cuando Service Broker está habilitado en bases de datos de un grupo de disponibilidad, durante una conmutación por error del grupo de disponibilidad se dejan abiertas todas las conexiones de Service Broker originadas en la réplica principal. La mejora cierra todas estas conexiones abiertas durante una conmutación por error del grupo de disponibilidad.
-- **Creación de particiones de soft-NUMA automática**: con SQL 2014 SP2, se presenta la creación de particiones de [soft-NUMA](https://msdn.microsoft.com/library/ms345357(SQL.120).aspx) automática cuando la marca de seguimiento 8079 está habilitada en el nivel de servidor. Cuando la marca de seguimiento 8079 está habilitada durante el inicio, SQL Server 2014 SP2 interroga al diseño de hardware y configura automáticamente soft-NUMA en los sistemas que notifican ocho o más CPU por nodo NUMA. El comportamiento de soft-NUMA automática reconoce el hiperproceso (procesador HT/lógico). La creación de particiones y la creación de nodos adicionales escala el procesamiento en segundo plano al aumentar el número de agentes de escucha, escalado y capacidades de red y cifrado. Se recomienda probar primero el rendimiento de la carga de trabajo con soft-NUMA automática antes de activarla en producción.
+- **Creación de particiones de soft-NUMA automática**: con SQL 2014 SP2, se presenta la creación de particiones de [soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) automática cuando la marca de seguimiento 8079 está habilitada en el nivel de servidor. Cuando la marca de seguimiento 8079 está habilitada durante el inicio, SQL Server 2014 SP2 interroga al diseño de hardware y configura automáticamente soft-NUMA en los sistemas que notifican ocho o más CPU por nodo NUMA. El comportamiento de soft-NUMA automática reconoce el hiperproceso (procesador HT/lógico). La creación de particiones y la creación de nodos adicionales escala el procesamiento en segundo plano al aumentar el número de agentes de escucha, escalado y capacidades de red y cifrado. Se recomienda probar primero el rendimiento de la carga de trabajo con soft-NUMA automática antes de activarla en producción.
 
 ## <a name="service-pack-3-release-notes"></a>Notas de la versión del Service Pack 3
 
@@ -104,7 +105,7 @@ Use la tabla siguiente para determinar qué archivo va a descargar e instalar. C
 
 |Si la versión que tiene instalada actualmente es...|Y desea...|Descargue e instale...|  
 |---|---|---|  
-|**Instalaciones de 32-bits:**|||  
+|**Instalaciones de&32; bits:**|||  
 |Una versión de 32 bits de cualquier edición de SQL Server 2012|Actualizar a la versión de 32 bits de SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Una versión de 32 bits de SQL Server 2012 RTM Express|Actualizar a la versión de 32 bits de SQL Server 2012 Express SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Una versión de 32 bits únicamente las herramientas de cliente y de administración para SQL Server 2012 (incluido SQL Server 2012 Management Studio)|Actualizar las herramientas de cliente y de administración a la versión de 32 bits de SQL Server 2012 SP1|SQLManagementStudio_x86_ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=267905)|  
@@ -115,7 +116,7 @@ Use la tabla siguiente para determinar qué archivo va a descargar e instalar. C
 |No instalar la versión de 32 bits de SQL Server 2012 Management Studio|Instalar la versión de 32 bits de SQL Server 2012 Management Studio junto con el SP1|SQLManagementStudio_x86_ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkId=267905)|  
 |Sin versión de 32 bits de SQL Server 2012 RTM Express|Instalar versión de 32 bits de SQL Server 2012 Express incluido el SP1|SQLEXPR32_x86_ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkId=267905)|  
 |Instalación de una versión de 32 bits de **SQL Server 2008** o **SQL Server 2008 R2**|**Actualización en contexto** a la versión de 32 bits de SQL Server 2012 incluido el SP1|SQLServer2012SP1-FullSlipstream-x86-ENU.exe **y** SQLServer2012SP1-FullSlipstream-x86-ENU.box desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|**Instalaciones de 64-bits:**|||  
+|**Instalaciones de&64; bits:**|||  
 |Una versión de 64 bits de cualquier edición de SQL Server 2012|Actualizar a la versión de 64 bits de SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Una versión de 64 bits de SQL Server 2012 RTM Express|Actualizar a la versión de 64 bits de SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Una versión de 64 bits únicamente las herramientas de cliente y de administración para SQL Server 2012 (incluido SQL Server 2012 Management Studio)|Actualizar las herramientas de cliente y de administración a la versión de 64 bits de SQL Server 2012 SP1|SQLManagementStudio_x64_ENU.exe desde [aquí](http://go.microsoft.com/fwlink/p/?LinkID=267905)|  
@@ -133,7 +134,7 @@ Para obtener una lista completa de errores y de problemas conocidos corregidos e
 ### <a name="reinstalling--instances-of-sql-server-failover-cluster-fails-if-you-use-the-same-ip-address"></a>La reinstalación de instancias de un clúster de conmutación por error de SQL Server produce un error si usa la misma dirección IP  
 **Problema:** si especifica una dirección IP incorrecta durante la instalación de una instancia de clúster de conmutación por error de SQL Server, la instalación produce errores. Después de desinstalar la instancia con errores, y si intenta reinstalar la instancia de clúster de conmutación por error de SQL Server con el mismo nombre de instancia, y la dirección IP correcta, la instalación produce errores. El error se debe al grupo de recursos duplicados que deja atrás la instalación anterior.  
   
-**Solución alternativa:** para resolver este problema, utilice un nombre de instancia diferente durante la reinstalación, o elimine manualmente el grupo de recursos antes de reinstalar. Para obtener más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server](http://msdn.microsoft.com/library/ms191545). 
+**Solución alternativa:** para resolver este problema, utilice un nombre de instancia diferente durante la reinstalación, o elimine manualmente el grupo de recursos antes de reinstalar. Para obtener más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md). 
   
 ### <a name="analysis-services-and-powerpivot"></a>Analysis Services y PowerPivot  
   

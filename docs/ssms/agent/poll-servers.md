@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c2e7ded81d62f01ec739cd02358410bbae299451
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 428b2e0c4dd2ac3657f209fbdc2e1bcacbc69f48
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981857"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775409"
 ---
 # <a name="poll-servers"></a>Sondear servidores
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ Utilice este comando para mantener sincronizados los servidores de destino con l
   
 Si usa los siguientes elementos, no es necesario publicar las operaciones explícitamente:  
   
--   Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] para controlar trabajos multiservidor.  
+-   Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para controlar trabajos multiservidor.  
   
 -   Procedimientos almacenados de trabajo que no modifican pasos de trabajos ni programaciones de trabajos.  
   

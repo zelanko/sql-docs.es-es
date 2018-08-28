@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 52f6f4c0406bd1aa90585723025ce5456c34c1e9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: d661cde875e4bbec00f503c86d623279fa97622d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980137"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776135"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "38980137"
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
-En este tema se describe cómo crear y definir los pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] que ejecutan comandos y consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Analysis Services utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)] u Objetos de administración de SQL Server.  
+En este tema se describe cómo crear y definir los pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que ejecutan comandos y consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] u Objetos de administración de SQL Server.  
   
 -   **Antes de empezar:**  
   
@@ -51,7 +51,7 @@ En este tema se describe cómo crear y definir los pasos de trabajo del Agente [
   
 ### <a name="Restrictions"></a>Limitaciones y restricciones  
   
--   Si el paso de trabajo utiliza un comando de Analysis Services, la instrucción de comando debe ser un método **Execute** de XML for Analysis Services. Puede que la instrucción no contenga un sobre SOAP (Protocolo simple de acceso a objetos) completo o un método **Discover** de XML for Analysis Services. Mientras [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] admite sobres SOAP (Protocolo simple de acceso a objetos) completos y el método **Discover** , los pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] no los admiten. Para más información sobre XML for Analysis Services, consulte [Información general de XML for Analysis (XMLA)](http://msdn.microsoft.com/library/ms187190.aspx).  
+-   Si el paso de trabajo utiliza un comando de Analysis Services, la instrucción de comando debe ser un método **Execute** de XML for Analysis Services. Puede que la instrucción no contenga un sobre SOAP (Protocolo simple de acceso a objetos) completo o un método **Discover** de XML for Analysis Services. Mientras [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] admite sobres SOAP (Protocolo simple de acceso a objetos) completos y el método **Discover** , los pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no los admiten. Para más información sobre XML for Analysis Services, consulte [Información general de XML for Analysis (XMLA)](http://msdn.microsoft.com/library/ms187190.aspx).  
   
 -   Si el paso de trabajo utiliza una consulta de Analysis Services, la instrucción de consulta debe ser una consulta de expresiones multidimensionales (MDX). Para más información sobre MDX, consulte [Aspectos básicos de la instrucción MDX (MDX)](http://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b).  
   
@@ -59,9 +59,9 @@ En este tema se describe cómo crear y definir los pasos de trabajo del Agente [
   
 #### <a name="Permissions"></a>Permissions  
   
--   Para ejecutar un paso de trabajo que utilice el subsistema de Analysis Services, un usuario debe ser miembro del rol fijo de servidor **sysadmin** o tener acceso a una cuenta de proxy válida definida para utilizar este subsistema. Además, la cuenta de servicio o el proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] deben ser un administrador de Analysis Services y una cuenta de dominio de Windows válida.  
+-   Para ejecutar un paso de trabajo que utilice el subsistema de Analysis Services, un usuario debe ser miembro del rol fijo de servidor **sysadmin** o tener acceso a una cuenta de proxy válida definida para utilizar este subsistema. Además, la cuenta de servicio o el proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben ser un administrador de Analysis Services y una cuenta de dominio de Windows válida.  
   
--   Los miembros del rol fijo de servidor **sysadmin** son los únicos que pueden escribir la salida de un paso de trabajo en un archivo. Si ejecutan el paso de trabajo usuarios miembros del rol de base de datos **SQLAgentUserRole** en la base de datos **msdb** , solo se podrá escribir la salida en una tabla. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] escribe la salida del paso de trabajo en la tabla **sysjobstepslog** de la base de datos **msdb** .  
+-   Los miembros del rol fijo de servidor **sysadmin** son los únicos que pueden escribir la salida de un paso de trabajo en un archivo. Si ejecutan el paso de trabajo usuarios miembros del rol de base de datos **SQLAgentUserRole** en la base de datos **msdb** , solo se podrá escribir la salida en una tabla. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escribe la salida del paso de trabajo en la tabla **sysjobstepslog** de la base de datos **msdb** .  
   
 -   Para obtener información detallada, vea [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
   
@@ -85,7 +85,7 @@ En este tema se describe cómo crear y definir los pasos de trabajo del Agente [
   
 8.  En el cuadro **Comando** , escriba la instrucción que se debe ejecutar o haga clic en **Abrir** para seleccionar una instrucción.  
   
-9. Haga clic en la página **Avanzadas** para definir opciones para este paso de trabajo, como la acción que debe realizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] si el paso de trabajo se realiza correctamente o con errores, las veces que se debe intentar ejecutar el paso de trabajo y el lugar en el que se debe escribir la salida.  
+9. Haga clic en la página **Avanzadas** para definir opciones para este paso de trabajo, como la acción que debe realizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si el paso de trabajo se realiza correctamente o con errores, las veces que se debe intentar ejecutar el paso de trabajo y el lugar en el que se debe escribir la salida.  
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>Para crear un paso de trabajo de consulta de Analysis Services  
   
@@ -105,7 +105,7 @@ En este tema se describe cómo crear y definir los pasos de trabajo del Agente [
   
 8.  En el cuadro **Comando** , escriba la instrucción que se debe ejecutar o haga clic en **Abrir** para seleccionar una instrucción.  
   
-9. Haga clic en la página **Avanzadas** para definir opciones para este paso de trabajo, como la acción que debe realizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] si el paso de trabajo se realiza correctamente o con errores, las veces que se debe intentar ejecutar el paso de trabajo y el lugar en el que se debe escribir la salida.  
+9. Haga clic en la página **Avanzadas** para definir opciones para este paso de trabajo, como la acción que debe realizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si el paso de trabajo se realiza correctamente o con errores, las veces que se debe intentar ejecutar el paso de trabajo y el lugar en el que se debe escribir la salida.  
   
 ## <a name="TSQL"></a>Usar Transact-SQL  
   

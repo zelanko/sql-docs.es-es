@@ -19,16 +19,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2adb4b06480baf0411f8564a2de4815624cf470
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 341344db9bd0e33d044ab9746bc89c8a7d648837
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040062"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776532"
 ---
 # <a name="configure-login-auditing-sql-server-management-studio"></a>Configurar la auditoría de inicio de sesión (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-En este tema se describe cómo configurar la auditoría de inicio de sesión en [!INCLUDE[ssCurrent](../includes/sscurrent_md.md)] para supervisar la actividad de inicio de sesión de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)]. Se puede configurar para que escriba en el registro de errores cuando se produzcan los eventos que se indican a continuación.  
+En este tema se describe cómo configurar la auditoría de inicio de sesión en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] para supervisar la actividad de inicio de sesión de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)]. Se puede configurar para que escriba en el registro de errores cuando se produzcan los eventos que se indican a continuación.  
   
 -   Inicios de sesión erróneos  
   
@@ -36,13 +36,13 @@ En este tema se describe cómo configurar la auditoría de inicio de sesión en 
   
 -   Inicios de sesión correctos y erróneos  
   
-Para que esta opción surta efecto, debe reiniciar [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] .  
+Para que esta opción surta efecto, debe reiniciar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
   
 #### <a name="to-configure-login-auditing"></a>Para configurar la auditoría de inicio de sesión  
   
-1.  En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)], conéctese a una instancia de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)] con el Explorador de objetos.  
+1.  En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], conéctese a una instancia de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)] con el Explorador de objetos.  
   
 2.  En el Explorador de objetos, haga clic con el botón derecho en el nombre del servidor y, después, haga clic en **Propiedades**.  
   

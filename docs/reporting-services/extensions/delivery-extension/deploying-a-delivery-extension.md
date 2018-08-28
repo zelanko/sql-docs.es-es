@@ -21,12 +21,12 @@ caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 99ada408d4f2a783d2a545d00f780763b7a27796
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c348f71719a25ae4b4ea6c180fb7dfe8a08157f
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016372"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405330"
 ---
 # <a name="deploying-a-delivery-extension"></a>Implementar una extensión de entrega
   Las extensiones de entrega proporcionan su información de configuración en forma de archivo de configuración XML. El archivo XML cumple el esquema XML definido para las extensiones de entrega. Las extensiones de entrega proporcionan la infraestructura para establecer y modificar el archivo de configuración.  
@@ -40,7 +40,7 @@ ms.locfileid: "33016372"
   
  En la tabla siguiente se describen los atributos del elemento **Extension** para las extensiones de entrega.  
   
-|Attribute|Description|  
+|Attribute|Descripción|  
 |---------------|-----------------|  
 |**Nombre**|Un nombre único para la extensión (por ejemplo, "Correo electrónico del servidor de informes", para la extensión de entrega por correo electrónico, o "Recurso compartido de archivos del servidor de informes", para la extensión de entrega en recursos compartidos de archivos). La longitud máxima para el atributo **Name** es de 255 caracteres. El nombre debe ser único entre todas las entradas en el elemento **Extension** del archivo de configuración. Si hay un nombre duplicado, el servidor de informes devuelve un error.|  
 |**Tipo**|Lista separada por comas que incluye el espacio de nombres completo junto con el nombre del ensamblado.|  
@@ -93,7 +93,7 @@ ms.locfileid: "33016372"
     </CodeGroup>  
     ```  
   
-     La pertenencia de dirección URL es solo una de las muchas condiciones de pertenencia que podría elegir para la extensión de entrega. Para más información sobre la seguridad de acceso del código de [!INCLUDE[ssRS](../../../includes/ssrs-md.md)], vea [Desarrollo seguro &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md).  
+     La pertenencia de dirección URL es solo una de las muchas condiciones de pertenencia que podría elegir para la extensión de entrega. Para más información sobre la seguridad de acceso del código de [!INCLUDE[ssRS](../../../includes/ssrs.md)], vea [Desarrollo seguro &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md).  
    
 ## <a name="verifying-the-deployment"></a>Comprobación de la implementación  
  Puede comprobar si la extensión de entrega se implementó correctamente en el servidor de informes utilizando el método <xref:ReportService2010.ReportingService2010.ListExtensions%2A> del servicio web. También puede abrir el portal web y comprobar que la extensión está incluida en la lista de extensiones de entrega disponibles para una suscripción. Para más información sobre el portal web y las suscripciones, vea [Suscripciones y entrega &#40;Reporting Services&#41;](../../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  

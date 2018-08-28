@@ -17,16 +17,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8cc97cf0c6c6c332e6c6476e1152ba2c30db3802
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 31f3a7f0efa120cae62d2390d2d4bf5b571ee6f0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981318"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774089"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>Entorno de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] proporciona numerosas características para la administración y el desarrollo de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)].  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] proporciona numerosas características para la administración y el desarrollo de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
 [Elementos generales de la interfaz de usuario](../ssms/general-user-interface-elements.md)  
@@ -36,5 +36,5 @@ Esboza las características generales de la interfaz de usuario, como el Explora
 Presenta el Explorador de soluciones, que proporciona una vista organizada de los proyectos y sus archivos, así como un fácil acceso a los comandos necesarios para administrarlos.  
   
 [Control de código fuente del Explorador de soluciones](https://msdn.microsoft.com/library/ms173879.aspx)  
-Describe cómo se integra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] con los productos de control de código fuente.  
+Describe cómo se integra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] con los productos de control de código fuente.  
   

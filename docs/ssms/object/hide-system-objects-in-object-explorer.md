@@ -20,16 +20,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 106c73db70f12616f85920067863a25c529810a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d851d79c7fcfd79779395259ddb60c3154420273
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040512"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774815"
 ---
 # <a name="hide-system-objects-in-object-explorer"></a>Ocultar objetos del sistema en el Explorador de objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-En este tema se describe cómo ocultar objetos del sistema en el Explorador de objetos en [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. El nodo **Bases de datos** del Explorador de objetos contiene objetos del sistema tales como las bases de datos del sistema. Use las páginas **Herramientas**/**Opciones** para ocultar los objetos del sistema. Algunos objetos del sistema, por ejemplo, funciones del sistema y tipos de datos del sistema, no se ven afectados por esta configuración.  
+En este tema se describe cómo ocultar objetos del sistema en el Explorador de objetos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. El nodo **Bases de datos** del Explorador de objetos contiene objetos del sistema tales como las bases de datos del sistema. Use las páginas **Herramientas**/**Opciones** para ocultar los objetos del sistema. Algunos objetos del sistema, por ejemplo, funciones del sistema y tipos de datos del sistema, no se ven afectados por esta configuración.  
   
 ## <a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
   

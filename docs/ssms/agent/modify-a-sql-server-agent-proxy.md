@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d92382ab70a380eb85659e728e1e83d8380d153d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 213eba99b7774cf1000d413a719eed02198ed099
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985207"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774816"
 ---
 # <a name="modify-a-sql-server-agent-proxy"></a>Modify a SQL Server Agent Proxy
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "38985207"
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
-En este tema se describe cómo modificar un proxy del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] o [!INCLUDE[tsql](../../includes/tsql_md.md)].  
+En este tema se describe cómo modificar un proxy del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 **En este tema**  
   
@@ -52,9 +52,9 @@ En este tema se describe cómo modificar un proxy del Agente [!INCLUDE[msCoName]
   
 ### <a name="Restrictions"></a>Limitaciones y restricciones  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] utilizan credenciales para almacenar información acerca de las cuentas de usuario de Windows. El usuario especificado en las credenciales debe tener el permiso "Iniciar sesión como proceso por lotes" en el equipo en que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizan credenciales para almacenar información acerca de las cuentas de usuario de Windows. El usuario especificado en las credenciales debe tener el permiso "Iniciar sesión como proceso por lotes" en el equipo en que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] comprueba el acceso al subsistema de un proxy y da acceso al proxy cada vez que se ejecuta el paso de trabajo. Si el proxy ya no tiene acceso al subsistema, el paso de trabajo da error. De lo contrario, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] suplanta al usuario especificado en el proxy y ejecuta el paso de trabajo.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprueba el acceso al subsistema de un proxy y da acceso al proxy cada vez que se ejecuta el paso de trabajo. Si el proxy ya no tiene acceso al subsistema, el paso de trabajo da error. De lo contrario, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suplanta al usuario especificado en el proxy y ejecuta el paso de trabajo.  
   
 -   Si el inicio de sesión del usuario tiene acceso al proxy o si el usuario pertenece a un rol con acceso al proxy, puede usarlo en un paso de trabajo.  
   
@@ -65,9 +65,9 @@ Solo los miembros del rol fijo de servidor **sysadmin** pueden crear, modificar 
   
 ## <a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
   
-#### <a name="to-modify-a-includessnoversionincludesssnoversionmdmd-agent-proxy"></a>Para modificar un proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+#### <a name="to-modify-a-includessnoversionincludesssnoversion-mdmd-agent-proxy"></a>Para modificar un proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  En el **Explorador de objetos**, haga clic en el signo más para expandir el servidor que contiene la cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que desea modificar.  
+1.  En el **Explorador de objetos**, haga clic en el signo más para expandir el servidor que contiene la cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que desea modificar.  
   
 2.  Haga clic en el signo más para expandir **Agente SQL Server**.  
   
@@ -83,7 +83,7 @@ Solo los miembros del rol fijo de servidor **sysadmin** pueden crear, modificar 
   
 ## <a name="TsqlProcedure"></a>Usar Transact-SQL  
   
-#### <a name="to-modify-a-includessnoversionincludesssnoversionmdmd-agent-proxy"></a>Para modificar un proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+#### <a name="to-modify-a-includessnoversionincludesssnoversion-mdmd-agent-proxy"></a>Para modificar un proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   

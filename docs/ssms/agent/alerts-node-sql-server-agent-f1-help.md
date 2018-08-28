@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8d9b92985a554616be1db41a6367307c00491d40
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8a41a92f8f17ab65d7fcbc0620772b7deefc625d
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015771"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776629"
 ---
 # <a name="alerts-node-sql-server-agent-f1-help"></a>Nodo Alertas (Ayuda F1 del Agente SQL Server)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,6 +29,6 @@ ms.locfileid: "38015771"
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
-Esta sección contiene la Ayuda F1 del nodo **Alertas** del Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+Esta sección contiene la Ayuda F1 del nodo **Alertas** del Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 

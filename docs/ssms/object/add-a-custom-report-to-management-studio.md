@@ -17,16 +17,16 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c4459d482fad2639e8aa3ff35dccb38e2aa5cd25
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e4be2922f005d96a7db71ff642a1a05054e5e479
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045242"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774627"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>agregar un informe personalizado a Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-En este tema se describe cómo se crea un informe sencillo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] que se guarda como archivo .rdl y, a continuación, cómo se agrega dicho archivo a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] como informe personalizado. [!INCLUDE[ssRS](../../includes/ssrs_md.md)] puede crear una gran variedad de informes complejos. Para crear un informe siguiendo las instrucciones de este tema, debe tener instalado [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] en el equipo. No es necesario instalar [!INCLUDE[ssRS](../../includes/ssrs_md.md)] en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] para ejecutar un informe personalizado mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+En este tema se describe cómo se crea un informe sencillo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se guarda como archivo .rdl y, a continuación, cómo se agrega dicho archivo a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] como informe personalizado. [!INCLUDE[ssRS](../../includes/ssrs.md)] puede crear una gran variedad de informes complejos. Para crear un informe siguiendo las instrucciones de este tema, debe tener instalado [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] en el equipo. No es necesario instalar [!INCLUDE[ssRS](../../includes/ssrs.md)] en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar un informe personalizado mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  
 ### <a name="to-create-a-simple-report-saved-as-an-rdl-file"></a>Para crear un informe simple guardado como un archivo .rdl  
@@ -47,11 +47,11 @@ En este tema se describe cómo se crea un informe sencillo de [!INCLUDE[ssRSnove
   
 8.  En el cuadro de diálogo **Propiedades de conexión** , en el cuadro **Nombre del servidor** , escriba el nombre de la instancia de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
-9. En el cuadro **Seleccione o escriba un nombre de base de datos** , escriba el nombre de cualquier base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], como [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)], y haga clic en **Aceptar**.  
+9. En el cuadro **Seleccione o escriba un nombre de base de datos** , escriba el nombre de cualquier base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], y haga clic en **Aceptar**.  
   
 10. En la página **Seleccionar el origen de datos** , haga clic en **Siguiente**.  
   
-11. En la página **Diseñar la consulta** , en el cuadro **Cadena de consulta** , escriba la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql_md.md)] que muestra las conexiones actuales a [!INCLUDE[ssDE](../../includes/ssde_md.md)]y, a continuación, haga clic en **Siguiente**. El cuadro Cadena de consulta del Asistente para informes no aceptará parámetros de informe. Los informes personalizados más complejos deben crearse manualmente.  
+11. En la página **Diseñar la consulta** , en el cuadro **Cadena de consulta** , escriba la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que muestra las conexiones actuales a [!INCLUDE[ssDE](../../includes/ssde_md.md)]y, a continuación, haga clic en **Siguiente**. El cuadro Cadena de consulta del Asistente para informes no aceptará parámetros de informe. Los informes personalizados más complejos deben crearse manualmente.  
   
     **SELECT session_id, net_transport FROM sys.dm_exec_connections;**  
   
@@ -59,13 +59,13 @@ En este tema se describe cómo se crea un informe sencillo de [!INCLUDE[ssRSnove
   
 13. En la página **Finalización del asistente** , en el cuadro **Nombre del informe** , escriba **ConnectionsReport**y, a continuación, haga clic en **Finalizar** para crear y guardar el informe.  
   
-14. Cierre [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio_md.md)].  
+14. Cierre [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 15. Copie **ConnectionsReport.rdl** en una carpeta que haya creado en el servidor de bases de datos para los informes personalizados.  
   
 ### <a name="to-add-a-report-to-management-studio"></a>Para agregar un informe a Management Studio  
   
--   En [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)], haga clic con el botón derecho en un nodo del Explorador de objetos, seleccione **Informes**y haga clic en **Informes personalizados**. En el cuadro de diálogo **Abrir archivo** , busque la carpeta de informes personalizados, seleccione el archivo **ConnectionsReport.rdl** y, a continuación, haga clic en **Abrir**.  
+-   En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], haga clic con el botón derecho en un nodo del Explorador de objetos, seleccione **Informes**y haga clic en **Informes personalizados**. En el cuadro de diálogo **Abrir archivo** , busque la carpeta de informes personalizados, seleccione el archivo **ConnectionsReport.rdl** y, a continuación, haga clic en **Abrir**.  
   
     La primera vez que se abre un nuevo informe personalizado desde un nodo del Explorador de objetos, el informe personalizado se agrega a la lista de **Informes personalizados** usados más recientemente en el menú contextual de dicho nodo. Al abrir un informe estándar por primera vez, aparece además en la lista de informes usados más recientemente en **Informes personalizados**. Si se elimina un archivo de informe personalizado, la próxima vez que se seleccione el elemento aparecerá un mensaje que le indicará que elimine el elemento de la lista de informes usados más recientemente.  
   
@@ -77,5 +77,5 @@ En este tema se describe cómo se crea un informe sencillo de [!INCLUDE[ssRSnove
 [Informes personalizados en Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
 [Usar informes personalizados con las propiedades de nodo del Explorador de objetos](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
 [Anular la supresión de las advertencias de Ejecutar informe personalizado](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
-[SQL Server Reporting Services](http://msdn.microsoft.com/en-us/b8d18d3d-9db0-43e7-8286-7b46cc3a37ed)  
+[SQL Server Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

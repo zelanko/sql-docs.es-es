@@ -17,19 +17,19 @@ caps.latest.revision: 32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7983692ff403f5d6330e3c4fc2169ee35d813125
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 34298ca95d57673ff8dd60af5a133f7106fa3834
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145476"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405710"
 ---
 # <a name="data-collector-security"></a>Seguridad del recopilador de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   El recopilador de datos utiliza el modelo de seguridad basada en roles implementado por el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este modelo permite al administrador de bases de datos ejecutar las distintas tareas de recopilador de datos en un contexto de seguridad que solo tiene los permisos necesarios realizar dicha tarea. Este enfoque también se utiliza para operaciones que implican tablas internas, a las que solamente se puede tener acceso utilizando un procedimiento almacenado o vista. No se concede ningún permiso a las tablas internas. En lugar de ello, los permisos se comprueban en el usuario del procedimiento almacenado o vista que se utiliza para tener acceso a una tabla.  
   
 > [!IMPORTANT]  
->  Otro aspecto clave de este modelo de seguridad son los permisos concéntricos. Con los permisos concéntricos, los roles con más privilegios heredan los permisos de los roles con menos privilegios sobre los objetos (incluidos alertas, operadores, trabajos, programaciones y servidores proxy). Para más información, consulte [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+>  Otro aspecto clave de este modelo de seguridad son los permisos concéntricos. Con los permisos concéntricos, los roles con más privilegios heredan los permisos de los roles con menos privilegios sobre los objetos (incluidos alertas, operadores, trabajos, programaciones y servidores proxy). Para más información, consulte [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  En las secciones siguientes se describe la seguridad de la recopilación de datos en general, así como los roles que debe conceder a los usuarios para que puedan configurar y utilizar el recopilador de datos y llevar a cabo tareas asociadas al almacén de administración de datos.  
   
@@ -149,6 +149,6 @@ ms.locfileid: "33145476"
  Los miembros del rol **mdw_reader** tienen acceso de lectura al almacén de administración de datos. Dado que la finalidad de este rol es permitir solucionar problemas proporcionando acceso a datos históricos, los miembros de este rol no pueden ver otros elementos del esquema de almacén de administración de datos.  
   
 ## <a name="see-also"></a>Ver también  
- [Implementar la seguridad del Agente SQL Server](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
+ [Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)  
   
   

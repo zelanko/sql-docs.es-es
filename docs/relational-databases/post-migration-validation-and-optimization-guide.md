@@ -19,12 +19,12 @@ caps.latest.revision: 3
 author: pelopes
 ms.author: harinid
 manager: ''
-ms.openlocfilehash: a38a652ad967b8e473d51eda335e430426d1187e
-ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
+ms.openlocfilehash: 041b08244a94ebb9a8ae8f377591e35ba5046819
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36297371"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405673"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guía de optimización y validación posterior a la migración
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ Surge un posible problema si esa primera compilación puede que no haya usado lo
 5.  Vuelva a escribir la consulta para usar la sugerencia `DISABLE_PARAMETER_SNIFFING`. Se consigue el mismo efecto que al usar la técnica de variable local al deshabilitar completamente el examen de parámetros, a menos que se usen `OPTION(RECOMPILE)`, `WITH RECOMPILE` o `OPTIMIZE FOR <value>`.
 
 > [!TIP] 
-> Aproveche la característica de análisis de plan de [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] para identificar rápidamente si se trata de un problema. Encontrará más información [aquí](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/).
+> Aproveche la característica de análisis de plan de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para identificar rápidamente si se trata de un problema. Encontrará más información [aquí](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/).
 
 ## <a name="MissingIndexes"></a> Faltan índices
 

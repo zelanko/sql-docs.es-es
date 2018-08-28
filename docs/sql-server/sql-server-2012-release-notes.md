@@ -15,12 +15,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d4e350a885524670905e5aa67d146b1531c32dae
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: bc599762d69e06886e95a85c3e58dbf3923e2ddf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926206"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774623"
 ---
 # <a name="sql-server-2012-release-notes"></a>Notas de la versión de SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ o Administrador de configuración de
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
   
-**Solución alternativa:** esto puede ocurrir cuando el Motor de SQL Server o Analysis Services no puede instalarse. Para corregir este problema, consulte los registros del programa de instalación de SQL Server y solucione los errores del Motor de SQL Server y de Analysis Services. Para obtener más información, vea Ver y leer los archivos de registro de instalación de SQL Server. Para obtener más información, vea [Ver y leer los archivos de registro de instalación de SQL Server](http://msdn.microsoft.com/library/ms143702(SQL.110).aspx).  
+**Solución alternativa:** esto puede ocurrir cuando el Motor de SQL Server o Analysis Services no puede instalarse. Para corregir este problema, consulte los registros del programa de instalación de SQL Server y solucione los errores del Motor de SQL Server y de Analysis Services. Para obtener más información, vea Ver y leer los archivos de registro de instalación de SQL Server. Para obtener más información, vea [Ver y leer los archivos de registro de instalación de SQL Server](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
 ### <a name="14-sql-server-2008-2008-r2-analysis-services-failover-cluster-upgrade-to-sql-server-2012-might-fail-after-renaming-the-network-name"></a>1.4 Se puede producir un error en la actualización del clúster de conmutación por error de SQL Server 2008 y 2008 R2 Analysis Services a SQL Server 2012 después de cambiar el nombre de red  
 **Problema:** después de cambiar el nombre de red de una instancia de clúster de conmutación por error de Microsoft SQL Server 2008 o 2008 R2 Analysis Services mediante la herramienta Administrador de clústeres de Windows, se puede producir un error en la operación de actualización.  
@@ -225,7 +225,7 @@ SQL Server 2012 se admite en los sistemas operativos Windows Vista SP2, Windows 
   
 8.  La página **Progreso de la reparación** muestra el estado de la operación de reparación. La página **Operación completada** indica que la operación ha finalizado.  
   
-Para obtener más información acerca de cómo reparar una instancia de SQL Server, vea [Reparar una instalación de SQL Server 2012 con error](http://msdn.microsoft.com/library/cc646006(SQL.110).aspx).  
+Para obtener más información acerca de cómo reparar una instancia de SQL Server, vea [Reparar una instalación de SQL Server 2012 con error](../database-engine/install-windows/repair-a-failed-sql-server-installation.md).  
   
 ### <a name="111-an-instance-of-sql-server-2012-might-fail-after-an-os-upgrade"></a>1.11 Una instancia de SQL Server 2012 podría dar error después de actualizar el sistema operativo  
 **Problema:** una instancia de SQL Server 2012 podría dar el error siguiente tras actualizar el sistema operativo a Windows 7 SP1 desde Windows Vista.  
@@ -237,7 +237,7 @@ Para obtener más información acerca de cómo reparar una instancia de SQL Serv
 ### <a name="112-sql-server-edition-upgrade-requires-a-restart"></a>1.12 La actualización de SQL Server Edition necesita un reinicio  
 **Problema**: cuando la edición actualiza una instancia de SQL Server 2012, algunas de las funcionalidades asociadas con la nueva edición pueden no activarse inmediatamente.  
   
-**Solución alternativa**: reinicie el equipo tras la actualización de edición de una instancia de SQL Server 2012. Para obtener más información sobre actualizaciones admitidas en SQL Server 2012, vea [Actualizaciones de versión y edición admitidas](http://msdn.microsoft.com/library/ms143393.aspx).  
+**Solución alternativa**: reinicie el equipo tras la actualización de edición de una instancia de SQL Server 2012. Para obtener más información sobre actualizaciones admitidas en SQL Server 2012, vea [Actualizaciones de versión y edición admitidas](../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
   
 ### <a name="113-database-with-read-only-filegroup-or-files-cannot-be-upgraded"></a>1.13 No se puede actualizar una base de datos con archivos o un grupo de archivos de solo lectura  
 **Problema**: no puede actualizar una base de datos ya sea por adjuntar la base de datos o restaurarla de una copia de seguridad si la base de datos o sus archivos o grupos de archivos están configurados de solo lectura.  Se devuelve el error 3415.  Este problema también se aplica cuando se realiza una actualización en contexto de una instancia de SQL Server. Es decir, intenta reemplazar una instancia existente de SQL Server mediante la instalación de SQL Server 2012 y una o varias bases de datos existentes están configuradas de solo lectura.  
@@ -247,7 +247,7 @@ Para obtener más información acerca de cómo reparar una instancia de SQL Serv
 ### <a name="114-reinstalling-an-instance-of-sql-server-failover-custer-fails-if-you-use-the-same-ip-address"></a>1.14 Reinstalar una instancia de clúster de conmutación por error de SQL Server produce un error si utiliza la misma dirección IP  
 **Problema:** si especifica una dirección IP incorrecta durante la instalación de una instancia de clúster de conmutación por error de SQL Server, la instalación produce errores. Después de desinstalar la instancia con errores, y si intenta reinstalar la instancia de clúster de conmutación por error de SQL Server con el mismo nombre de instancia, y la dirección IP correcta, la instalación produce errores. El error se debe al grupo de recursos duplicados que deja atrás la instalación anterior.  
   
-**Solución alternativa:** para resolver este problema, utilice un nombre de instancia diferente durante la reinstalación, o elimine manualmente el grupo de recursos antes de reinstalar. Para obtener más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server](http://msdn.microsoft.com/library/ms191545).  
+**Solución alternativa:** para resolver este problema, utilice un nombre de instancia diferente durante la reinstalación, o elimine manualmente el grupo de recursos antes de reinstalar. Para obtener más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 ![barra_horizontal](media/horizontal-bar.png "barra_horizontal")  
   

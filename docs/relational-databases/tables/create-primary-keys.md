@@ -17,17 +17,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e6fab6666fd5f0d28462d4f8ff90fbb80fbce23b
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 10ba4a529d8e04503b0ff2f3ae06191ea3fdf3aa
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39539116"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405229"
 ---
 # <a name="create-primary-keys"></a>Crear claves principales
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Crear claves principales](https://msdn.microsoft.com/library/ms189039(SQL.120).aspx).
+ > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Crear claves principales](create-primary-keys.md).
 
   Puede definir una clave principal en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Al crear una clave principal, se crea automáticamente un índice agrupado único o bien un índice no agrupado si así se especifica.  
   

@@ -17,12 +17,12 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee8da38abc3b4725530abaf812381d0197812fe6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e74ee9c4579071b14072dcccbab493126d69a0cb
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33049542"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42773965"
 ---
 # <a name="print-dialog-box"></a>Cuadro de diálogo Imprimir
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ Puede especificar cómo desea imprimir un documento seleccionando las opciones d
   
 ## <a name="printer"></a>Impresora  
 **Nombre**  
-Especifica la impresora. Seleccione una impresora de la lista. La impresora que seleccione se convierte en la impresora predeterminada hasta que cierre [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] o seleccione una impresora diferente. La información que aparece en los campos debajo de la lista se refiere a la impresora seleccionada.  
+Especifica la impresora. Seleccione una impresora de la lista. La impresora que seleccione se convierte en la impresora predeterminada hasta que cierre [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o seleccione una impresora diferente. La información que aparece en los campos debajo de la lista se refiere a la impresora seleccionada.  
   
 **Estado**  
 Describe el estado de la impresora seleccionada; por ejemplo, ocupado o listo.  

@@ -17,12 +17,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57d472c063bd4b2cf697186323942842f8d037c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbff0ee5307e9f0d6d7e53a740c950c869dc93c5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041882"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774717"
 ---
 # <a name="select-objects-object-explorer"></a>Seleccionar objetos (Explorador de objetos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ Use el cuadro de diálogo **Seleccionar objetos** para agregar un objeto a una l
   
 ## <a name="options"></a>Opciones  
 **Seleccionar estos tipos de objeto**  
-Muestra una lista de los tipos a los que pertenecen los objetos que se van a seleccionar. Los tipos incluyen entidades de seguridad y elementos protegibles de nivel de base de datos y nivel de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Este cuadro se llena con las selecciones efectuadas en el cuadro de diálogo **Seleccionar tipos de objetos** , al que se tiene acceso mediante el botón **Tipo de objeto** .  
+Muestra una lista de los tipos a los que pertenecen los objetos que se van a seleccionar. Los tipos incluyen entidades de seguridad y elementos protegibles de nivel de base de datos y nivel de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este cuadro se llena con las selecciones efectuadas en el cuadro de diálogo **Seleccionar tipos de objetos** , al que se tiene acceso mediante el botón **Tipo de objeto** .  
   
 **Escribir los nombres de objeto para seleccionar**  
 Escriba una lista, separada por puntos y comas, de los nombres de los objetos que se van a seleccionar. Los objetos que se desea seleccionar deben ser de uno de los tipos que aparecen en la lista del cuadro **Seleccionar estos tipos de objeto** . Los objetos se pueden seleccionar en una lista a la que se tiene acceso al hacer clic en el botón **Examinar** .  

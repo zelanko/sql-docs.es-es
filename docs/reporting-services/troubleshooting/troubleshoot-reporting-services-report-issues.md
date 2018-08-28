@@ -15,12 +15,12 @@ caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: cb93c59cec663a99ebc0460d948f4c2bd0a78f94
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7566afc5761a094dfad1c27717cd6810415c9511
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38055863"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40409518"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Solución de problemas de informes de Reporting Services
 Este tema contiene información útil para solucionar problemas con el diseño de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] , la vista previa de un informe, la publicación de un informe en un servidor de informes en modo nativo o en modo de SharePoint, la visualización de un informe en el servidor de informes o la exportación de un informe en un formato de archivo diferente.  
@@ -65,6 +65,6 @@ Siempre que el valor esté establecido en 1, solo se utilizan los datos del info
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 

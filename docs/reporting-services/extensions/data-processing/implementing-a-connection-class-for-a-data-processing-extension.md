@@ -21,21 +21,21 @@ caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: f77a34196a6299e07942fc5809b80cb81955cf08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 584087ad10018a0ba6f020c55256a8cb2d7486fe
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016352"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40411802"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>Implementar una clase Connection para una extensión de procesamiento de datos
   El objeto **Connection** representa una conexión a bases de datos o un recurso similar, y es el punto inicial para los usuarios de una extensión de procesamiento de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Representa las conexiones a los servidores de bases de datos, aunque cualquier entidad con un comportamiento similar se puede exponer como **Connection**.  
   
  Para implementar un objeto **Connection**, cree una clase que implemente <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> y que implemente opcionalmente <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>.  
   
- En la implementación debe asegurarse de que se crea y se abre una conexión para que se puedan ejecutar los comandos. Asegúrese de que la implementación requiere que los clientes abran y cierren las conexiones explícitamente, en lugar de hacer que abra y cierre las conexiones para el cliente de forma implícita. Realice comprobaciones de seguridad cuando se obtenga la conexión. Al requerir una conexión existente para las otras clases en la extensión de procesamiento de datos de [!INCLUDE[ssRS](../../../includes/ssrs-md.md)], se asegurará de que las comprobaciones de seguridad se realicen siempre al trabajar con el origen de datos.  
+ En la implementación debe asegurarse de que se crea y se abre una conexión para que se puedan ejecutar los comandos. Asegúrese de que la implementación requiere que los clientes abran y cierren las conexiones explícitamente, en lugar de hacer que abra y cierre las conexiones para el cliente de forma implícita. Realice comprobaciones de seguridad cuando se obtenga la conexión. Al requerir una conexión existente para las otras clases en la extensión de procesamiento de datos de [!INCLUDE[ssRS](../../../includes/ssrs.md)], se asegurará de que las comprobaciones de seguridad se realicen siempre al trabajar con el origen de datos.  
   
- Las propiedades de la conexión deseada se representan como una cadena de conexión. Se recomienda encarecidamente que las extensiones de procesamiento de datos de [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] admitan la propiedad <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> mediante el conocido sistema de par de nombre y valor definido por OLE DB.  
+ Las propiedades de la conexión deseada se representan como una cadena de conexión. Se recomienda encarecidamente que las extensiones de procesamiento de datos de [!INCLUDE[ssRS](../../../includes/ssrs.md)] admitan la propiedad <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> mediante el conocido sistema de par de nombre y valor definido por OLE DB.  
   
 > [!NOTE]  
 >  Para obtener objetos **Connection**, a menudo se necesitan muchos recursos, de modo que puede ser conveniente que considere agrupar las conexiones u otras técnicas para mitigar esto.  

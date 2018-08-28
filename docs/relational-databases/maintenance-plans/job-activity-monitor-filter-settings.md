@@ -18,11 +18,12 @@ caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 76e11f1afb39cb8ddd82f99d74e2d2a21c776664
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 278ac96f3c4517e998ae21516c5c7584cc17993d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409425"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Monitor de actividad de trabajo (Configuración del filtro)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,6 +72,6 @@ ms.lasthandoff: 05/03/2018
  Recupera la configuración predeterminada del filtro.  
   
 ## <a name="see-also"></a>Ver también  
- [Actividad de trabajos de monitor](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
+ [Actividad de trabajos de monitor](../../ssms/agent/monitor-job-activity.md)  
   
   

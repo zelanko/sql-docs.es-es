@@ -1,7 +1,7 @@
 ---
 title: Referencias a campos globales y de usuario integrados (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 55074e9c10cbe8b5afb3e94533c37befb892416a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f5e0a3a9876af054da4e868ec809609effc117c
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022072"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40409568"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Colecciones integradas: referencias a campos globales y de usuario integrados (Generador de informes)
   La colección de campos integrados, que incluye las colecciones **Globals** y **User** , representa valores globales proporcionados por Reporting Services al procesar un informe. La colección **Globals** proporciona valores como el nombre del informe, la hora a la que comenzó el procesamiento del informe y el número de la página actual para el encabezado o el pie de página del informe. La colección **User** proporciona el identificador de usuario y la configuración de idioma. Estos valores se pueden usar en expresiones para filtrar los resultados de un informe.  
@@ -49,7 +49,7 @@ ms.locfileid: "33022072"
 ### <a name="renderformat"></a>RenderFormat  
  En esta tabla se describen los miembros de **RenderFormat**.  
   
-|Miembro|Tipo|Description|  
+|Miembro|Tipo|Descripción|  
 |------------|----------|-----------------|  
 |Nombre|**String**|Nombre del representador como está registrado en el archivo de configuración de RSReportServer.<br /><br /> Está disponible durante el ciclo de procesamiento o representación de partes concretas del informe.|  
 |IsInteractive|**Boolean**|Si la solicitud de representación actual utiliza un formato de representación interactivo.|  
@@ -81,9 +81,7 @@ ms.locfileid: "33022072"
 |----------------|--------------|---------------------|  
 |**Lenguaje**|**String**|Idioma del usuario que ejecuta el informe. Por ejemplo, `en-US`.|  
 |**UserID**|**String**|Identificador del usuario que ejecuta el informe. Si está utilizando la autenticación de Windows, este valor será la cuenta de dominio del usuario actual. El valor viene determinado por la extensión de seguridad de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , que puede utilizar la autenticación de Windows o una autenticación personalizada.|  
-  
- Para obtener más información sobre el uso de varios idiomas en un informe, vea "Consideraciones de diseño de soluciones para las implementaciones plurilingües o globales" en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla de SQL Server](http://go.microsoft.com/fwlink/?LinkId=120955).  
-  
+ 
 ### <a name="using-locale-settings"></a>Usar la configuración regional  
  Para determinar la apariencia de un informe, puede usar expresiones que hagan referencia a la configuración regional en un equipo cliente mediante el valor de **User.Language** . Por ejemplo, puede crear un informe que utilice una expresión de consulta diferente basada en el valor de configuración regional. La consulta puede cambiar para obtener información traducida de otra columna según el idioma devuelto. También se puede utilizar una expresión en la configuración de idioma del informe o elementos del informe basados en esta variable.  
   

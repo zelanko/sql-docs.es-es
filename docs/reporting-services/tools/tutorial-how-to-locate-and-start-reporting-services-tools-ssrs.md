@@ -25,12 +25,12 @@ caps.latest.revision: 63
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 13258b6c570aa0e40c5cca7cbde7b583abd5f297
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ce5c4f7872003f3d2f74dddd31cf93929202185
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036442"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406538"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Tutorial: Cómo buscar e iniciar herramientas de Reporting Services (SSRS)
 
@@ -138,43 +138,43 @@ Descargar [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
   
  Para empezar a crear su primer informe, vea [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Para más información sobre los diseñadores de consultas que puede usar en el Diseñador de informes, vea [Herramientas de diseño de consulta &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md).  
   
-##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
- [Generador de informes en SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) es una aplicación independiente que puede usar para crear informes paginados fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede personalizar y actualizar todos los informes existentes, independientemente de que se hayan creado en el Diseñador de informes o en las versiones anteriores del [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Puede instalarlo desde el portal web de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o desde el Centro de descarga de Microsoft.  
+##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
+ [Generador de informes en SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) es una aplicación independiente que puede usar para crear informes paginados fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede personalizar y actualizar todos los informes existentes, independientemente de que se hayan creado en el Diseñador de informes o en las versiones anteriores del [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Puede instalarlo desde el portal web de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o desde el Centro de descarga de Microsoft.  
   
  [Descargue el Generador de informes](http://go.microsoft.com/fwlink/?LinkID=219138) del Centro de descarga de Microsoft.  
   
-### <a name="to-start-includessrbnoversionincludesssrbnoversion-mdmd"></a>Para iniciar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
+### <a name="to-start-includessrbnoversionincludesssrbnoversionmd"></a>Para iniciar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
 1.  En el portal web de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , en el menú  **New** (Nuevo), seleccione **Paginated Report**(Informe paginado).  
   
      ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png "PBI_SSMRP_NewMenu")  
   
-2.  Si [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] aún no está instalado en el equipo, seleccione **Get [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]** (Obtener el Publicador de informes móviles).  
+2.  Si [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] aún no está instalado en el equipo, seleccione **Get [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]** (Obtener el Publicador de informes móviles).  
   
      o bien  
   
      [Descargue el Generador de informes](http://go.microsoft.com/fwlink/?LinkID=219138) del Centro de descarga de Microsoft.  
   
-3.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] se abre y, a continuación, ya se puede crear o abrir un informe paginado.  
+3.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] se abre y, a continuación, ya se puede crear o abrir un informe paginado.  
   
-##  <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]  
+##  <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]  
  Use el [Publicador de informes móviles de Microsoft SQL Server](http://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) para crear informes móviles que puede ver en el portal web de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en dispositivos móviles, como iPad y iPhone.   Puede instalarlo desde el portal web de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o desde el Centro de descarga de Microsoft.  
   
  [Descargue el Publicador de informes móviles de SQL Server](http://go.microsoft.com/fwlink/?LinkID=733527) desde el Centro de descarga de Microsoft.  
   
-### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-short-mdmd"></a>Para iniciar el [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)]  
+### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-shortmd"></a>Para iniciar el [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]  
   
 1.  En el portal web de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , en el menú  **New** (Nuevo), seleccione **Mobile Report**(Informe móvil).  
   
      ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png "PBI_SSMRP_NewMenu")  
   
-2.  Si [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)] aún no está instalado en el equipo, seleccione **Get [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)]** (Obtener el Publicador de informes móviles).  
+2.  Si [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] aún no está instalado en el equipo, seleccione **Get [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]** (Obtener el Publicador de informes móviles).  
   
      o bien  
   
      [Descargue el Publicador de informes móviles de SQL Server](http://go.microsoft.com/fwlink/?LinkID=733527) desde el Centro de descarga de Microsoft.  
   
-3.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)] se abre y, a continuación, ya se puede crear o abrir un informe móvil.  
+3.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] se abre y, a continuación, ya se puede crear o abrir un informe móvil.  
 
 ## <a name="next-steps"></a>Pasos siguientes
 

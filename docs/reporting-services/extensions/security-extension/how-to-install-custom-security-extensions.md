@@ -15,12 +15,12 @@ caps.latest.revision: 3
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7b344fb4320af3ca9c4778740c6a5055481d6fce
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a830d8fe28aec04b5c0ded2e382e41db535fd0e2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37971762"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406000"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>Cómo instalar extensiones de seguridad personalizadas
 
@@ -127,6 +127,6 @@ El nuevo portal y reportserver se comunican mediante las API internas de Soap pa
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Configuración de la autenticación de formularios o personalizada en el servidor de informes](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
-[Configurar el Administrador de informes para pasar cookies de autenticación personalizadas](https://msdn.microsoft.com/library/ms345241(v=sql.120).aspx)
+[Configurar el Administrador de informes para pasar cookies de autenticación personalizadas](../../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

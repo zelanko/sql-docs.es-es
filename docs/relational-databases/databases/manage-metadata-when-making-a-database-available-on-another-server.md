@@ -40,12 +40,12 @@ caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0b300bc3f204af062eac1e151933659216dd921
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 610c566e97a700ee47f48aedd99874c9ac719064
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993957"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412665"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Administración de los metadatos cuando una base de datos pasa a estar disponible en otro servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,8 @@ ms.locfileid: "37993957"
   
 -   [Aplicaciones de Service Broker](#sb_applications)  
   
--   [Procedimientos de inicio](#startup_procedures)  
+-   
+  [Procedimientos de inicio](#startup_procedures)  
   
 -   [Desencadenadores (en el nivel de servidor)](#triggers)  
   
@@ -167,7 +168,7 @@ ms.locfileid: "37993957"
   
  **Para crear una alerta WMI mediante SQL Server Management Studio**  
   
--   [Crear una alerta de evento WMI](http://msdn.microsoft.com/library/b8c46db6-408b-484e-98f0-a8af3e7ec763)  
+-   [Crear una alerta de evento WMI](../../ssms/agent/create-a-wmi-event-alert.md)  
   
 ### <a name="how-event-notifications-work-for-a-mirrored-database"></a>Funcionamiento de las notificaciones de eventos para una base de datos reflejada  
  La entrega entre bases de datos de notificaciones de eventos que implica una base de datos reflejada es remota, por definición, porque la base de datos reflejada puede conmutar por error. [!INCLUDE[ssSB](../../includes/sssb-md.md)] proporciona compatibilidad especial para las bases de datos reflejadas, en forma de *rutas reflejadas*. En una ruta reflejada hay dos direcciones: una para la instancia de servidor principal y otra para la instancia del servidor reflejado.  
@@ -214,11 +215,11 @@ ms.locfileid: "37993957"
   
 -   El inicio de sesión que utiliza el trabajo  
   
-     Para crear o ejecutar trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , primero debe agregar en la instancia de servidor de destino cualquier inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que el trabajo requiera. Para obtener más información, vea [Configurar un usuario para crear y administrar trabajos del Agente SQL Server](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef).  
+     Para crear o ejecutar trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , primero debe agregar en la instancia de servidor de destino cualquier inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que el trabajo requiera. Para obtener más información, vea [Configurar un usuario para crear y administrar trabajos del Agente SQL Server](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cuenta de inicio del servicio del Agente  
+-   Cuenta de inicio del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-     La cuenta de inicio del servicio define la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus permisos de red. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta como una cuenta de usuario especificada. El contexto del servicio del Agente afecta a la configuración del trabajo y a su entorno de ejecución. La cuenta debe tener acceso a los recursos (como por ejemplo, los recursos compartidos de red) que requiere el trabajo. Para obtener información sobre cómo seleccionar y modificar la cuenta de inicio del servicio, vea [Seleccionar una cuenta para el servicio del Agente SQL Server](http://msdn.microsoft.com/library/fe658e32-9e6b-4147-a189-7adc3bd28fe7).  
+     La cuenta de inicio del servicio define la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus permisos de red. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta como una cuenta de usuario especificada. El contexto del servicio del Agente afecta a la configuración del trabajo y a su entorno de ejecución. La cuenta debe tener acceso a los recursos (como por ejemplo, los recursos compartidos de red) que requiere el trabajo. Para obtener información sobre cómo seleccionar y modificar la cuenta de inicio del servicio, vea [Seleccionar una cuenta para el servicio del Agente SQL Server](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md).  
   
      Para que funcione correctamente, la cuenta de inicio del servicio se debe configurar para que disponga del dominio, el sistema de archivos y los permisos del Registro correctos. Además, es posible que un trabajo requiera un recurso de red compartido que debe configurarse para la cuenta de servicio. Para obtener información, vea [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -229,35 +230,35 @@ ms.locfileid: "37993957"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Servidores proxy del Agente  
   
-     Un proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define el contexto de seguridad de un paso de trabajo especificado. Para ejecutar un trabajo en la instancia de servidor de destino, todos los servidores proxy que requiere se deben volver a crear manualmente en esa instancia. Para obtener más información, vea [Crear un proxy del Agente SQL Server](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988) y [Solucionar problemas de trabajos multiservidor que usan servidores proxy](http://msdn.microsoft.com/library/fc579bd3-010c-4f72-8b5c-d0cc18a1f280).  
+     Un proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define el contexto de seguridad de un paso de trabajo especificado. Para ejecutar un trabajo en la instancia de servidor de destino, todos los servidores proxy que requiere se deben volver a crear manualmente en esa instancia. Para obtener más información, vea [Crear un proxy del Agente SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md) y [Solucionar problemas de trabajos multiservidor que usan servidores proxy](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md).  
   
  Para obtener más información, vea también:  
   
--   [Implementar trabajos](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)  
+-   [Implementar trabajos](../../ssms/agent/implement-jobs.md)  
   
 -   [Administración de inicios de sesión y trabajos tras la conmutación de roles &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md) (para la creación de reflejo de base de datos)  
   
 -   [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (al instalar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
--   [Configurar el Agente SQL Server](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) (al instalar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   [Configurar el Agente SQL Server](../../ssms/agent/configure-sql-server-agent.md) (al instalar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
--   [Implementar la seguridad del Agente SQL Server](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
+-   [Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)  
   
  **Para ver los trabajos existentes y sus propiedades**  
   
--   [Actividad de trabajos de monitor](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
+-   [Actividad de trabajos de monitor](../../ssms/agent/monitor-job-activity.md)  
   
 -   [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
   
--   [Ver información de pasos de trabajo](http://msdn.microsoft.com/library/e3f06492-dc86-4e06-b186-ea58aff6d591)  
+-   [Ver información de pasos de trabajo](../../ssms/agent/view-job-step-information.md)  
   
 -   [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
   
  **Para crear un trabajo**  
   
--   [Crear un trabajo](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [Crear un trabajo](../../ssms/agent/create-a-job.md)  
   
--   [Crear un trabajo](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [Crear un trabajo](../../ssms/agent/create-a-job.md)  
   
 #### <a name="best-practices-for-using-a-script-to-re-create-a-job"></a>Prácticas recomendadas para usar un script para volver a crear un trabajo  
  Se recomienda empezar por la generación de un script para un trabajo simple; volver a crear el trabajo en el otro servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y ejecutarlo para ver si funciona como se espera. Esto le permitirá identificar las incompatibilidades e intentar resolverlas. Si el trabajo generado con el script no funciona como se espera en este nuevo entorno, se recomienda crear un trabajo equivalente que funcione de forma correcta en ese entorno.  
@@ -331,7 +332,7 @@ La propiedad de base de datos TRUSTWORTHY sirve para indicar si esta instancia d
   
   
 ##  <a name="startup_procedures"></a> Startup Procedures  
- Un procedimiento de inicio es un procedimiento almacenado que se marca para su ejecución automática y se ejecuta cada vez que se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si la base de datos depende de algún procedimiento de inicio, se deben definir en la instancia de servidor de destino y configurarse para su ejecución automática durante el inicio.  
+ Un procedimiento de inicio es un procedimiento almacenado que se marca para su ejecución automática y se ejecuta cada vez que se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la base de datos depende de algún procedimiento de inicio, se deben definir en la instancia de servidor de destino y configurarse para su ejecución automática durante el inicio.  
 
   
 ##  <a name="triggers"></a> Triggers (at Server Level)  

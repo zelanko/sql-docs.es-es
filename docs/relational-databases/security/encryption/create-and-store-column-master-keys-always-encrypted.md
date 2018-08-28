@@ -14,13 +14,13 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3c14fc0032b2b7bf6c36ce6f8cd592e82603265d
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 54e46ce9630ed8ae84a5998946f36d05544df34c
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549835"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43073746"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Crear y almacenar claves maestras de columna (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -168,7 +168,7 @@ Una clave maestra de columna para Always Encrypted puede almacenarse en un almac
 
 Para que un HSM esté disponible para las aplicaciones de un equipo determinado, debe instalarse y configurarse un proveedor de almacenamiento de claves (KSP), que implementa CNG, en el equipo. Un controlador cliente de Always Encrypted (un proveedor de almacenamiento de claves maestras de columna dentro del controlador) usa el KSP para cifrar y descifrar claves de cifrado de columnas, protegidas con una clave maestra de columna almacenada en el almacén de claves.
 
-Windows incluye el proveedor de almacenamiento de claves de software de Microsoft; un KSP basado en software que puede usarse con fines de pruebas. Vea [CNG Key Storage Providers (Proveedores de almacenamiento de claves CNG)](https://msdn.microsoft.com/library/windows/desktop/bb931355.aspx)
+Windows incluye el proveedor de almacenamiento de claves de software de Microsoft; un KSP basado en software que puede usarse con fines de pruebas. Vea [CNG Key Storage Providers (Proveedores de almacenamiento de claves CNG)](/windows/desktop/SecCertEnroll/cng-key-storage-providers)
 
 ### <a name="creating-column-master-keys-in-a-key-store-using-cngksp"></a>Crear claves maestras de columna en un almacén de claves mediante CNG o KSP
 

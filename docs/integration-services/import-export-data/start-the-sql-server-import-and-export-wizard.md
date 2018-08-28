@@ -19,16 +19,16 @@ caps.latest.revision: 130
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d98aa23142afc7ff988b5088cd061dd7fc0287b2
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 10f60ea68e9296936c426c8f722e1de3c1faf31b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410157"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410515"
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>Iniciar el Asistente para importación y exportación de SQL Server
 
- > Para el contenido relacionado con las versiones anteriores de SQL Server, vea [Ejecutar el Asistente para importación y exportación de SQL Server](https://msdn.microsoft.com/library/ms140052(SQL.120).aspx).
+ > Para el contenido relacionado con las versiones anteriores de SQL Server, vea [Ejecutar el Asistente para importación y exportación de SQL Server](start-the-sql-server-import-and-export-wizard.md).
 
 Inicie el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siguiendo uno de los métodos que se describen en este tema para importar datos de cualquier origen de datos admitido o exportar datos a este.
 

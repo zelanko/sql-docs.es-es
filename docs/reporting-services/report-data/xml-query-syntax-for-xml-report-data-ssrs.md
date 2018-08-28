@@ -20,12 +20,12 @@ caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 24dd0f5497d89f49234dc53e0ad71a7cf2e9ab47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d206256152536c562128072ceaf47b88fb78b0de
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021492"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40410417"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintaxis de consulta XML para los datos de informe XML (SSRS)
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], se pueden crear conjuntos de datos para orígenes de datos XML. Después de definir un origen de datos, se crea una consulta para el conjunto de datos. En función del tipo de datos XML a los que señala el origen de datos, la consulta del conjunto de datos se crea incluyendo un elemento XML **Query** o una ruta de acceso de elemento. Un elemento XML **Query** empieza con una etiqueta **\<Consulta>** e incluye espacios de nombres y elementos XML que varían en función del origen de datos. Una ruta de acceso de elemento es independiente del espacio de nombres y especifica qué nodos y atributos de nodo se utilizan de los datos XML subyacentes con una sintaxis del tipo de XPath. Para más información sobre las rutas de acceso de elemento, vea [Sintaxis de ruta de acceso de elemento para datos de informe XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "33021492"
   
 -   Para solicitudes de dirección URL, los parámetros de consulta se incluyen como parámetros de dirección URL estándar.  
   
--   Para solicitudes de servicio web, los parámetros de consulta se pasan al método del servicio web. Para definir un parámetro de consulta, utilice la página **Parámetros** del cuadro de diálogo **Propiedades del conjunto de datos** . Para obtener más información, vea [Propiedades del conjunto de datos (cuadro de diálogo), Parámetros](../../reporting-services/report-data/dataset-properties-dialog-box-parameters.md).  
+-   Para solicitudes de servicio web, los parámetros de consulta se pasan al método del servicio web. Para definir un parámetro de consulta, utilice la página **Parámetros** del cuadro de diálogo **Propiedades del conjunto de datos** . 
   
 ### <a name="example"></a>Ejemplo  
  En los ejemplos de la tabla siguiente se muestra cómo se recuperan los datos desde el servicio web del servidor de informes, un documento XML y datos XML incrustados.  

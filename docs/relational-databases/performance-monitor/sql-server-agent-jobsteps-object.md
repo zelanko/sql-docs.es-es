@@ -19,11 +19,12 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 21835671518515b1efe02698a0f01f4dcd051179
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4746f6d8cdc836f98d8f2d33369e65af2d111a81
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406807"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>JobSteps (objeto del Agente SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
  La siguiente tabla contiene los contadores de **SQLAgent:JobSteps** .  
   
-|Nombre|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
 |**Pasos activos**|Este contador muestra el número de pasos de trabajo que se están ejecutando actualmente.|  
 |**Pasos en cola**|Este contador informa acerca del número de pasos de trabajo preparados para que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los ejecute, pero cuya ejecución aún no se ha iniciado.|  
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
  Cada contador del objeto contiene las instancias siguientes:  
   
-|Instancia|Description|  
+|Instancia|Descripción|  
 |--------------|-----------------|  
 |**_Total**|Información de todos los pasos de trabajo.|  
 |**ActiveScripting**|Información de los pasos de trabajo que utilizan el subsistema **ActiveScripting** .|  
@@ -56,8 +57,8 @@ ms.lasthandoff: 05/03/2018
 |**TSQL**|Información de los pasos de trabajo que ejecutan [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
 ## <a name="see-also"></a>Ver también  
- [Administrar pasos de trabajo](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)   
- [Usar objetos de rendimiento](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [Administrar pasos de trabajo](../../ssms/agent/manage-job-steps.md)   
+ [Usar objetos de rendimiento](../../ssms/agent/use-performance-objects.md)   
  [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

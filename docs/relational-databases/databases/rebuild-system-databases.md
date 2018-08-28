@@ -21,11 +21,12 @@ caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5bc4b141721417b3097dc9142e2f47404021f159
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ae2466902ae6cd60a69687b33aab38fc6a72fd5
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406088"
 ---
 # <a name="rebuild-system-databases"></a>Volver a generar bases de datos del sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +106,7 @@ ms.lasthandoff: 05/03/2018
   
      **Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=nombreDeInstancia /SQLSYSADMINACCOUNTS=cuentas [ /SAPWD=contraseñaSegura ] [ /SQLCOLLATION=nombreDeIntercalación]**  
   
-    |Nombre del parámetro|Description|  
+    |Nombre del parámetro|Descripción|  
     |--------------------|-----------------|  
     |/QUIET o /Q|Especifica que el programa de instalación se ejecute sin ninguna interfaz de usuario.|  
     |/ACTION=REBUILDDATABASE|Especifica que el programa de instalación vuelva a crear las bases de datos del sistema.|  
@@ -167,7 +168,7 @@ ms.lasthandoff: 05/03/2018
 > [!WARNING]  
 >  Al recompilar la base de datos **msdb** con el script **instmsdb** , eliminará toda la información almacenada en **msdb** como los trabajos, las alertas, los operadores, los planes de mantenimiento, el historial de copia de seguridad, la configuración de la administración basada en directivas, Correo electrónico de base de datos, Almacenamiento de datos de rendimiento, etc.  
   
-1.  Detenga todos los servicios que se conectan al [!INCLUDE[ssDE](../../includes/ssde-md.md)], incluido el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssRS](../../includes/ssrs-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)]y todas las aplicaciones que usan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como almacén de datos.  
+1.  Detenga todos los servicios que se conectan al [!INCLUDE[ssDE](../../includes/ssde-md.md)], incluido el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssRS](../../includes/ssrs.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)]y todas las aplicaciones que usan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como almacén de datos.  
   
 2.  Inicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde la línea de comandos usando el comando: `NET START MSSQLSERVER /T3608`  
   

@@ -20,11 +20,12 @@ caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08498dcec9823006babd265e79945d1273953a57
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03aada845eaf77e83833f3cc3252bca4a2d49e42
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409564"
 ---
 # <a name="model-database"></a>Base de datos model
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/03/2018
 |Datos principales|modeldev|model.mdf|Crecimiento automático de 64 MB hasta llenar el disco.|  
 |Log|modellog|modellog.ldf|Crecimiento automático de 64 KB hasta un máximo de 2 terabytes.|  
   
- Para las versiones anteriores a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], consulte [Base de datos modelo](https://msdn.microsoft.com/library/ms186388\(v=sql.120\).aspx)para conocer los valores de crecimiento de archivo predeterminados.  
+ Para las versiones anteriores a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], consulte [Base de datos modelo](model-database.md)para conocer los valores de crecimiento de archivo predeterminados.  
   
  Para mover la base de datos **model** o los archivos de registro, consulte [Mover bases de datos del sistema](../../relational-databases/databases/move-system-databases.md).  
   

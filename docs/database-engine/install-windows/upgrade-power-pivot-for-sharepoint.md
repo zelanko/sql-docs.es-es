@@ -12,13 +12,14 @@ ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 6b256c8c22b1b9928dd016ecd84ed844baf13546
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 441d1377e41a2837a92fc7119226af62fc75e5d8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770981"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409536"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Actualización de PowerPivot para SharePoint
 
@@ -106,7 +107,7 @@ ms.locfileid: "34770981"
   
          En el menú **Inicio** , elija **Todos los programas**, haga clic en [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], en **Herramientas de configuración**y, después, en **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 Configuration Tool**(Herramienta de configuración de PowerPivot para SharePoint 2013). Observe que esta herramienta solo se enumera cuando [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] está instalado en el servidor local.  
   
-    2.  Al iniciarse, la herramienta de configuración comprueba el estado de actualización de la solución de granja de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y las soluciones de aplicación web de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si se detectan versiones anteriores de estas soluciones, verá el mensaje "**Se han detectado versiones más recientes de los archivos de solución de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Seleccione la opción de actualización para actualizar la granja**". Haga clic en **Aceptar** para cerrar el mensaje de validación del sistema.  
+    2.  Al iniciarse, la herramienta de configuración comprueba el estado de actualización de la solución de granja de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y las soluciones de aplicación web de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Si se detectan versiones anteriores de estas soluciones, verá el mensaje "**Se han detectado versiones más recientes de los archivos de solución de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Seleccione la opción de actualización para actualizar la granja**". Haga clic en **Aceptar** para cerrar el mensaje de validación del sistema.  
   
     3.  Haga clic en **Actualizar características, servicios, aplicaciones y soluciones**y, a continuación, haga clic en **Aceptar**.  
   
@@ -174,7 +175,7 @@ ms.locfileid: "34770981"
   
     1.  En el menú **Inicio**, elija **Todos los programas**, haga clic en [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], en **Herramientas de configuración** y, después, en **Herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**. Observe que esta herramienta solo se enumera cuando [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] está instalado en el servidor local.  
   
-    2.  Al iniciarse, la herramienta de configuración comprueba el estado de actualización de la solución de granja de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y las soluciones de aplicación web de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si se detectan versiones anteriores de estas soluciones, verá el mensaje “Se han detectado versiones más recientes de los archivos de solución de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Seleccione la opción de actualización para actualizar la granja". Haga clic en **Aceptar** para cerrar el mensaje.  
+    2.  Al iniciarse, la herramienta de configuración comprueba el estado de actualización de la solución de granja de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y las soluciones de aplicación web de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Si se detectan versiones anteriores de estas soluciones, verá el mensaje “Se han detectado versiones más recientes de los archivos de solución de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Seleccione la opción de actualización para actualizar la granja". Haga clic en **Aceptar** para cerrar el mensaje.  
   
     3.  Haga clic en **Actualizar características, servicios, aplicaciones y soluciones**y, a continuación, haga clic en **Aceptar** para continuar.  
   

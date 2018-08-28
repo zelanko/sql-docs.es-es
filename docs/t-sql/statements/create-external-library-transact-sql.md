@@ -20,13 +20,13 @@ helpviewer_keywords:
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 23f57dcabfa354d68aef8aafa7a27a1ae1960bd6
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a277172819f3ff1dd7be1128e12b7274fbf59265
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452169"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43102884"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -34,7 +34,7 @@ ms.locfileid: "39452169"
 
 Carga los paquetes de R en una base de datos desde la ruta de acceso de archivo o la secuencia de bytes especificada.
 
-Esta instrucción actúa como un mecanismo genérico para que el administrador de base de datos pueda cargar los artefactos necesarios para cualquier tiempo de ejecución de lenguaje externo nuevo (R, Python, Java, etc.) y plataformas de sistemas operativos compatibles con [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)]. 
+Esta instrucción actúa como un mecanismo genérico para que el administrador de base de datos pueda cargar los artefactos necesarios para cualquier tiempo de ejecución de lenguaje externo nuevo (R, Python, Java, etc.) y plataformas de sistemas operativos compatibles con [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
 
 Actualmente, solo se admiten el lenguaje R y la plataforma Windows. Está previsto incluir la compatibilidad con Python y Linux en una versión posterior.
 

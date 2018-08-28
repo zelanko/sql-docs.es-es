@@ -19,12 +19,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bac74e291dbaddb45662610abfb0681d1b144ae9
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 454daed366316554c181249414dd899d5d02c836
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405157"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409534"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Trabajos del Agente SQL Server para paquetes
   Puede automatizar y programar la ejecución de paquetes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede programar paquetes que se implementan en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y se almacena en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos.  
@@ -121,13 +121,13 @@ ms.locfileid: "35405157"
   
 6.  Seleccione **Paquete de Integración Services** en el tipo de paso de trabajo.  
   
-7.  En la lista **Ejecutar como** , seleccione **Cuenta de servicio del Agente SQL Server** o seleccione una cuenta de proxy que tenga las credenciales que el paso de trabajo usará. Para obtener información acerca de cómo crear una cuenta de proxy, vea [Create a SQL Server Agent Proxy](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988).  
+7.  En la lista **Ejecutar como** , seleccione **Cuenta de servicio del Agente SQL Server** o seleccione una cuenta de proxy que tenga las credenciales que el paso de trabajo usará. Para obtener información acerca de cómo crear una cuenta de proxy, vea [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
      El uso de una cuenta de proxy en lugar la **Cuenta de servicio del Agente SQL Server** puede resolver problemas frecuentes que pueden surgir al ejecutar un paquete mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información sobre estos problemas, vea el artículo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base [Un paquete SSIS no se ejecuta cuando se le llama desde un paso de trabajo del Agente SQL Server](http://support.microsoft.com/kb/918760).  
   
     > **NOTA:** Si cambia la contraseña para la credencial que la cuenta de proxy usa, necesita actualizar la contraseña de la credencial. De lo contrario, se producirá un error en el paso de trabajo.  
   
-     Para más información sobre cómo configurar la cuenta del servicio del Agente SQL Server, vea [Establecer la cuenta de inicio del servicio para el Agente SQL Server &#40;Administrador de configuración de SQL Server&#41;](http://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472).  
+     Para más información sobre cómo configurar la cuenta del servicio del Agente SQL Server, vea [Establecer la cuenta de inicio del servicio para el Agente SQL Server &amp;#40;Administrador de configuración de SQL Server&amp;#41;](http://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472).  
   
 8.  En el cuadro de lista **Origen del paquete** , haga clic en el origen del paquete y configure después las opciones del paso de trabajo.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "35405157"
     >   
     >  El entorno del servidor que contiene la variable no está seleccionado en el cuadro de lista de la pestaña **Configuración** .  
   
-10. Para crear una programación para un paso trabajo, haga clic en **Programaciones** en el panel **Seleccionar una página** . Para obtener información sobre cómo configurar una programación, vea [Schedule a Job](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c).  
+10. Para crear una programación para un paso trabajo, haga clic en **Programaciones** en el panel **Seleccionar una página** . Para obtener información sobre cómo configurar una programación, vea [Schedule a Job](../../ssms/agent/schedule-a-job.md).  
   
     > [!TIP]  
     >  Cuando asigne nombre a la programación, considere la posibilidad de usar un nombre que sea único y descriptivo para que pueda distinguir más fácilmente la programación de otras programación del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

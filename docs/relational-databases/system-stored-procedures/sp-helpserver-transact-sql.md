@@ -1,5 +1,5 @@
 ---
-title: sp_helpserver (Transact-SQL) | Documentos de Microsoft
+title: sp_helpserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpserver
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa1a9a5841f5b43a6dea6f0650a7686f499b4965
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5252f299a0d542fe2f91f75d658ff63aec980712
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258597"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038638"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,12 +50,12 @@ sp_helpserver [ [ @server = ] 'server' ]
  Es el servidor cuya información se va a presentar. Cuando *server* no se especifica, los informes sobre todos los servidores de **master.sys.servers**. *servidor* es **sysname**, su valor predeterminado es null.  
   
  [  **@optname =** ] **'***opción***'**  
- Es la opción que describe al servidor. *opción* es **varchar (** 35 **)**, su valor predeterminado es null y debe ser uno de estos valores.  
+ Es la opción que describe al servidor. *opción* es **varchar (** 35 **)**, su valor predeterminado es null, y debe ser uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**intercalación compatible**|Afecta a la ejecución de consultas distribuidas sobre servidores vinculados. Si esta opción se establece en TRUE,|  
-|**Acceso a datos**|Habilita y deshabilita un servidor vinculado para el acceso a consultas distribuidas.|  
+|**acceso a datos**|Habilita y deshabilita un servidor vinculado para el acceso a consultas distribuidas.|  
 |**dist**|Distribuidor.|  
 |**dpub**|Publicador remoto de este distribuidor.|  
 |**validación diferida de esquema**|Omite la comprobación del esquema de las tablas remotas al comienzo de la consulta.|  
@@ -67,14 +67,14 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**Usar intercalación remota**|Usa la intercalación de una columna remota en lugar de la del servidor local.|  
   
  [  **@show_topology =** ] **'***show_topology***'**  
- Es la relación del servidor especificado con otros servidores. *show_topology* es **varchar (** 1 **)**, su valor predeterminado es null. Si *show_topology* no es igual a **t** o es NULL, **sp_helpserver** devuelve columnas enumeradas en la sección de conjuntos de resultados. Si *show_topology* es igual a **t**, además de las columnas enumeradas en los conjuntos de resultados, **sp_helpserver** también devuelve **topx** y **topy** información.  
+ Es la relación del servidor especificado con otros servidores. *show_topology* es **varchar (** 1 **)**, su valor predeterminado es null. Si *show_topology* no es igual a **t** o es NULL, **sp_helpserver** devuelve columnas que se muestran en la sección conjuntos de resultados. Si *show_topology* es igual a **t**, además de las columnas enumeradas en los conjuntos de resultados, **sp_helpserver** también devuelve **topx** y **topy** información.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error).  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|Nombre de servidor.|  
 |**nombre_red**|**sysname**|El nombre de red del servidor.|  
@@ -84,10 +84,10 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**connect_timeout**|**int**|Valor del tiempo de espera para conectar a un servidor vinculado.|  
 |**query_timeout**|**int**|Valor del tiempo de espera para consultas sobre un servidor vinculado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Un servidor puede tener varios estados.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  No se comprueba ningún permiso.  
   
 ## <a name="examples"></a>Ejemplos  

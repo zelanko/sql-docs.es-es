@@ -1,5 +1,5 @@
 ---
-title: sp_changesubstatus (Transact-SQL) | Documentos de Microsoft
+title: sp_changesubstatus (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94c26330636d4e13fe84a2776a72315a418d3d96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 269b2eab987560b2c043c887d7a90c2c4ddc1a95
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993472"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019442"
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,16 +82,16 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  Es el nombre del suscriptor cuyo estado se va a cambiar. *suscriptor* es **sysname**, su valor predeterminado es **%**. Si *suscriptor* no se especifica, se cambia el estado para todos los suscriptores al artículo especificado.  
   
  [  **@status =**] **'***estado***'**  
- Es el estado de suscripción en el **syssubscriptions** tabla. *estado* es **sysname**, no tiene ningún valor predeterminado y puede ser uno de estos valores.  
+ Es el estado de la suscripción en el **syssubscriptions** tabla. *estado* es **sysname**, no tiene ningún valor predeterminado y puede ser uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Active**|El suscriptor está sincronizado y recibe datos.|  
-|**Inactivo**|Existe una entrada de suscriptor sin que haya una suscripción.|  
+|**inactivo**|Existe una entrada de suscriptor sin que haya una suscripción.|  
 |**suscrito**|El suscriptor solicita datos, pero aún no está sincronizado.|  
   
  [  **@previous_status=**] **'***previous_status***'**  
- Es el estado anterior de la suscripción. *previous_status* es **sysname**, su valor predeterminado es null. Este parámetro permite cambiar las suscripciones que tienen actualmente ese estado, lo que permite agrupar funciones en un conjunto específico de suscripciones (por ejemplo, establecer active todas las suscripciones de nuevo a **suscrito**).  
+ Es el estado anterior de la suscripción. *previous_status* es **sysname**, su valor predeterminado es null. Este parámetro le permite cambiar las suscripciones que tienen actualmente ese estado, lo que permite agrupar funciones en un conjunto específico de suscripciones (por ejemplo, establecer todos los activos hacer una copia de las suscripciones a **suscrito**).  
   
  [  **@destination_db=**] **'***destination_db***'**  
  Es el nombre de la base de datos de destino. *destination_db* es **sysname**, su valor predeterminado es **%**.  
@@ -105,7 +105,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  Es la fecha de la tarea de distribución. Este parámetro se utiliza cuando *frequency_type* está establecido en 32 (relativo mensual). *frequency_relative_interval* es **int**, y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Primero|  
 |**2**|Second|  
@@ -120,7 +120,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  [  **@frequency_subday=**] *frequency_subday*  
  Indica la frecuencia, en minutos, con que se reprograma durante el período definido. *frequency_subday* es **int**, y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|Second|  
@@ -157,23 +157,23 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
  [  **@offloadagent=** ] *remote_agent_activation*  
  > [!NOTE]  
->  La activación remota del agente ha quedado desusada y ya no es compatible. Este parámetro solamente se admite por compatibilidad de scripts con versiones anteriores. Establecer *remote_agent_activation* en un valor distinto de **0** genera un error.  
+>  La activación remota del agente ha quedado desusada y ya no es compatible. Este parámetro solamente se admite por compatibilidad de scripts con versiones anteriores. Establecer *remote_agent_activation* a un valor distinto de **0** genera un error.  
   
  [  **@offloadserver=** ] **'***remote_agent_server_name***'**  
  > [!NOTE]  
->  La activación remota del agente ha quedado desusada y ya no es compatible. Este parámetro solamente se admite por compatibilidad de scripts con versiones anteriores. Establecer *remote_agent_server_name* en cualquier valor distinto de NULL, genera un error.  
+>  La activación remota del agente ha quedado desusada y ya no es compatible. Este parámetro solamente se admite por compatibilidad de scripts con versiones anteriores. Establecer *remote_agent_server_name* en cualquier valor distinto de NULL se genera un error.  
   
  [ **@dts_package_name**=] **'***dts_package_name***'**  
  Especifica el nombre del paquete de Servicios de transformación de datos (DTS). *dts_package_name* es un **sysname**, su valor predeterminado es null. Por ejemplo, para un paquete denominado **DTSPub_Package** especificaría `@dts_package_name = N'DTSPub_Package'`.  
   
  [ **@dts_package_password**=] **'***dts_package_password***'**  
- Especifica la contraseña del paquete. *dts_package_password* es **sysname** con un valor predeterminado es NULL, que especifica que la propiedad de contraseña se debe dejar sin cambios.  
+ Especifica la contraseña del paquete. *dts_package_password* es **sysname** con el valor predeterminado es NULL, que especifica que la propiedad de contraseña se dejará sin cambios.  
   
 > [!NOTE]  
 >  Un paquete DTS debe tener una contraseña.  
   
  [ **@dts_package_location**=] *dts_package_location*  
- Especifica la ubicación del paquete. *dts_package_location* es un **int**, su valor predeterminado es **0**. Si **0**, la ubicación del paquete está en el distribuidor. Si **1**, la ubicación del paquete está en el suscriptor. La ubicación del paquete puede ser **distribuidor** o **suscriptor**.  
+ Especifica la ubicación del paquete. *dts_package_location* es un **int**, su valor predeterminado es **0**. Si **0**, es la ubicación del paquete en el distribuidor. Si **1**, la ubicación del paquete está en el suscriptor. La ubicación del paquete puede ser **distribuidor** o **suscriptor**.  
   
  [ **@skipobjectactivation**=] *skipobjectactivation*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -182,20 +182,20 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  Es el nombre del trabajo de distribución. *distribution_job_name* es **sysname**, su valor predeterminado es null.  
   
  [ **@publisher**=] **'***publisher***'**  
- Especifica un no[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *Publisher* es **sysname**, su valor predeterminado es null.  
+ Especifica que no es[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
->  *Publisher* no debe usarse al cambiar las propiedades de artículo en una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
+>  *publicador* no debe usarse cuando se cambia las propiedades del artículo en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_changesubstatus** se utiliza en la replicación de instantáneas y transaccional.  
   
- **sp_changesubstatus** cambia el estado del suscriptor en el **syssubscriptions** tabla con el estado cambiado. Si es necesario, actualiza el estado del artículo en el **sysarticles** tabla para indicar activo o inactivo. Si es necesario, Establece la marca de replicación o desactivar el **sysobjects** tabla para la tabla replicada.  
+ **sp_changesubstatus** cambia el estado del suscriptor en el **syssubscriptions** tabla con el estado cambiado. Si es necesario, actualiza el estado del artículo en el **sysarticles** tabla para indicar el activo o inactivo. Si es necesario, Establece la marca de replicación o desactivar el **sysobjects** tabla para la tabla replicada.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor **db_owner** rol fijo de base de datos o el creador de la suscripción puede ejecutar **sp_changesubstatus**.  
   
 ## <a name="see-also"></a>Vea también  

@@ -1,5 +1,5 @@
 ---
-title: Sys.master_key_passwords (Transact-SQL) | Documentos de Microsoft
+title: Sys.master_key_passwords (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,29 +21,29 @@ helpviewer_keywords:
 - sys.master_key_passwords catalog view
 ms.assetid: b8e18cff-a9e6-4386-98ce-1cd855506e03
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5753296ea9c8b5fb90b92d1c612b4966e89b6db
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8a0aa45dc4ee0e54e7880837e289b2331b5ff11e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181451"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017725"
 ---
 # <a name="sysmasterkeypasswords-transact-sql"></a>sys.master_key_passwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve una fila por cada contraseña de la clave maestra de base de datos agregada con la **sp_control_dbmasterkey_password** procedimiento almacenado. Las contraseñas que se usan para proteger las claves maestras se almacenan en el almacén de credenciales. El nombre de credencial sigue este formato: ##DBMKEY_<database_family_guid>_<random_password_guid>##. La contraseña se almacena como el secreto de la credencial. Para cada contraseña agregada con **sp_control_dbmasterkey_password**, hay una fila en **sys.credentials**.  
+  Devuelve una fila por cada contraseña de clave maestra de base de datos agregada mediante el uso de la **sp_control_dbmasterkey_password** procedimiento almacenado. Las contraseñas que se usan para proteger las claves maestras se almacenan en el almacén de credenciales. El nombre de credencial sigue este formato: ##DBMKEY_<database_family_guid>_<random_password_guid>##. La contraseña se almacena como el secreto de la credencial. Para cada contraseña agregada con **sp_control_dbmasterkey_password**, hay una fila en **sys.credentials**.  
   
- Cada fila de esta vista muestra una **credential_id** y **family_guid** de una base de datos de la clave maestra de la que está protegida por la contraseña asociada con esa credencial. Una combinación con **sys.credentials** en el **credential_id** devolverá campos útiles, como el **create_date** y nombre de la credencial.  
+ Cada fila en esta vista muestra una **credential_id** y **family_guid** de una base de datos de la clave maestra de la que está protegida por la contraseña asociada con esa credencial. Una combinación con **sys.credentials** en el **credential_id** devolverá campos útiles, como el **create_date** y nombre de la credencial.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**credential_id**|**int**|Id. de la credencial a la que pertenece la contraseña. Este identificador es único en la instancia del servidor.|  
-|**family_guid**|**uniqueidentifier**|Id. único de la base de datos original cuando se creó. Este GUID sigue igual después de restaurar o adjuntar la base de datos, incluso si se cambia el nombre de la base de datos.<br /><br /> Si se produce un error en el descifrado automático con la clave maestra de servicio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza la **family_guid** para identificar las credenciales que pueden contener la contraseña utilizada para proteger la clave maestra de base de datos.|  
+|**family_guid**|**uniqueidentifier**|Id. único de la base de datos original cuando se creó. Este GUID sigue igual después de restaurar o adjuntar la base de datos, incluso si se cambia el nombre de la base de datos.<br /><br /> Si se produce un error en el descifrado automático mediante la clave maestra de servicio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el **family_guid** para identificar las credenciales que pueden contener la contraseña utilizada para proteger la clave maestra de base de datos.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

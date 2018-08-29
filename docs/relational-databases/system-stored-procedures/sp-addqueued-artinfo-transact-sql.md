@@ -1,5 +1,5 @@
 ---
-title: sp_addqueued_artinfo (Transact-SQL) | Documentos de Microsoft
+title: sp_addqueued_artinfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addqueued_artinfo
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
-caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1bb30e29e1e3dc8d23dfff4a105d835470e51ea9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9e6ee6f6be9aa7887fc323ab7ba392c4e1c1dbd3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990200"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021854"
 ---
 # <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
  Es el nombre del artículo que se va a agregar al script. *artículo* es **sysname**, no tiene ningún valor predeterminado  
   
  [  **@publisher=**] **'***publisher***'**  
- Es el nombre del servidor del publicador. *Publisher* es **sysname**, no tiene ningún valor predeterminado.  
+ Es el nombre del servidor del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
  Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
@@ -84,13 +83,13 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_addqueued_artinfo** es utilizado por el agente de distribución como parte de la inicialización de la suscripción. Los usuarios no suelen ejecutar este procedimiento almacenado, pero puede resultar útil si el usuario debe configurar manualmente una suscripción.  
   
  [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) en lugar de **sp_addqueued_artinfo**.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_addqueued_artinfo**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_addqueued_artinfo**.  
   
 ## <a name="see-also"></a>Vea también  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   

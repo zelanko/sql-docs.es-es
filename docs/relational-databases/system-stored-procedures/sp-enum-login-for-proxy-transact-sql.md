@@ -1,5 +1,5 @@
 ---
-title: sp_enum_login_for_proxy (Transact-SQL) | Documentos de Microsoft
+title: sp_enum_login_for_proxy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_enum_login_for_proxy
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
-caps.latest.revision: 18
-author: stevestein
-ms.author: sstein
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f3c4751f3d9dfaa60110f7e859bc8157de2c9246
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7faec16e49bb2776babb126a5f4d314889b70c2b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249937"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036277"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,36 +46,36 @@ sp_enum_login_for_proxy
   
 ## <a name="arguments"></a>Argumentos  
  [ **@name**=] '*nombre*'  
- El nombre de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entidad de seguridad, el inicio de sesión, el rol de servidor o **msdb** rol de base de datos para mostrar los servidores proxy. El nombre es **nvarchar (256)**, su valor predeterminado es null.  
+ El nombre de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entidad de seguridad, inicio de sesión, el rol de servidor, o **msdb** rol de base de datos para mostrar los servidores proxy para. El nombre es **nvarchar (256)**, su valor predeterminado es null.  
   
  [ **@proxy_id**=] *Id.*  
- Número de identificación del proxy del que se muestra información. El *proxy_id* es **int**, su valor predeterminado es null. Ya sea la *Id. de* o *proxy_name* se puede especificar.  
+ Número de identificación del proxy del que se muestra información. El *proxy_id* es **int**, su valor predeterminado es null. Ya sea el *id* o el *proxy_name* se puede especificar.  
   
  [ **@proxy_name**=] **'***proxy_name***'**  
- Nombre del proxy del que se va a mostrar información. El *proxy_name* es **sysname**, su valor predeterminado es null. Ya sea la *Id. de* o *proxy_name* se puede especificar.  
+ Nombre del proxy del que se va a mostrar información. El *proxy_name* es **sysname**, su valor predeterminado es null. Ya sea el *id* o el *proxy_name* se puede especificar.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Número de identificación del proxy.|  
 |**proxy_name**|**sysname**|Nombre del proxy.|  
 |**Nombre**|**sysname**|Nombre de la entidad de seguridad para la asociación.|  
 |**flags**|**int**|Tipo de la entidad de seguridad.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión<br /><br /> **1** = rol fijo del sistema<br /><br /> **2** = rol de base de datos en **msdb**|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si no se proporcionan parámetros, **sp_enum_login_for_proxy** muestra información acerca de todos los inicios de sesión en la instancia para cada servidor proxy.  
   
- Cuando se proporciona un Id. o nombre del proxy, **sp_enum_login_for_proxy** muestra los inicios de sesión que tienen acceso al proxy. Cuando se proporciona un nombre de inicio de sesión, **sp_enum_login_for_proxy** los servidores proxy que el inicio de sesión tiene acceso a las listas.  
+ Cuando se proporciona un Id. o nombre del proxy, **sp_enum_login_for_proxy** se enumeran los inicios de sesión que tienen acceso al proxy. Cuando se proporciona un nombre de inicio de sesión, **sp_enum_login_for_proxy** listas de los servidores proxy que el inicio de sesión tiene acceso a.  
   
  Cuando se suministra información acerca del proxy y un nombre de inicio de sesión, el conjunto de resultados devuelve una fila si el inicio de sesión especificado tiene acceso al proxy especificado.  
   
  Este procedimiento almacenado se encuentra en **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Permisos de ejecución para este procedimiento de forma predeterminada a los miembros de la **sysadmin** rol fijo de servidor.  
   
 ## <a name="examples"></a>Ejemplos  

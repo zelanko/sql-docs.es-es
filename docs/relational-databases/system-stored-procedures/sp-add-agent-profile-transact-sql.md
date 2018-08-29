@@ -1,5 +1,5 @@
 ---
-title: sp_add_agent_profile (Transact-SQL) | Documentos de Microsoft
+title: sp_add_agent_profile (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_add_agent_profile
 ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 75184f18fafc70f4e88a4ee8b250c8d9eb80fbc9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4d69bc8803bf7c5b6b5b2d0e674c7513d5d9fae
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990160"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036651"
 ---
 # <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +53,12 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
  Es el identificador asociado al perfil que se acaba de insertar. *profile_id* es **int** y es un parámetro OUTPUT opcional. Si se especifica, el valor se establece en el nuevo Id. de perfil.  
   
  [  **@profile_name=** ] **'***profile_name***'**  
- Es el nombre del perfil. *profile_name* es **sysname**, no tiene ningún valor predeterminado.  
+ Es el nombre del perfil. *nombre_perfil* es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@agent_type=** ] **'***agent_type***'**  
  Es el tipo de agente de replicación. *agent_type* es **int**, no tiene ningún valor predeterminado y puede ser uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Agente de instantáneas|  
 |**2**|Agente de registro del LOG|  
@@ -70,25 +69,25 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
  [  **@profile_type=** ] *profile_type*  
  Es el tipo de perfil. *profile_type* es **int**, su valor predeterminado es **1**.  
   
- **0** indica un perfil del sistema. **1** indica un perfil personalizado. Solo los perfiles personalizados pueden crearse con este procedimiento almacenado; por lo tanto, el único valor válido es **1**. Solo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea perfiles del sistema.  
+ **0** indica un perfil del sistema. **1** indica un perfil personalizado. Se pueden crear perfiles personalizados solo mediante este procedimiento almacenado; por lo tanto, el único valor válido es **1**. Solo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea perfiles del sistema.  
   
  [  **@description=** ] **'***descripción***'**  
  Es una descripción del perfil. *descripción* es **nvarchar (3000)**, no tiene ningún valor predeterminado.  
   
- [  **@default=** ] *predeterminado*  
- Indica si el perfil es el valor predeterminado de *agent_type **.* *valor predeterminado* es **bits**, su valor predeterminado es **0**. **1** indica que el perfil que se va a agregar se convertirá en el nuevo perfil predeterminado para el agente especificado por *agent_type*.  
+ [  **@default=** ] *predeterminada*  
+ Indica si el perfil es el valor predeterminado para *agent_type **.* *valor predeterminado* es **bit**, su valor predeterminado es **0**. **1** indica que el perfil que se va a agregar se convertirá en el nuevo perfil predeterminado para el agente especificado por *agent_type*.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_add_agent_profile** se utiliza en la replicación de instantáneas, transaccional y de mezcla.  
   
  Los perfiles de agente personalizados se agregan con los valores predeterminados de los parámetros de agente. Use [sp_change_agent_parameter &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md) para cambiar estos valores predeterminados o [sp_add_agent_parameter &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md) para agregar parámetros adicionales.  
   
  Cuando **sp_add_agent_profile** es ejecuta, se agrega una fila para el nuevo perfil personalizado en el [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) tabla y los parámetros predeterminados asociados para este perfil se agregan a la [MSagent_parameters &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) tabla.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_add_agent_profile**.  
   
 ## <a name="see-also"></a>Vea también  

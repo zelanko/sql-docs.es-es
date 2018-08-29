@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_delete_policy_execution_history (Transact-SQL) | Documentos de Microsoft
+title: sp_syspolicy_delete_policy_execution_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_delete_policy_execution_history
 ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
-caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d4e7f496124727389993c1e249b80aeaa7414b5f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b87056b364b5861c771496622176024a8748008c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262738"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019241"
 ---
 # <a name="spsyspolicydeletepolicyexecutionhistory-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,10 +53,10 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Debe ejecutar sp_syspolicy_delete_policy_execution_history en el contexto de la base de datos del sistema msdb.  
   
- Para obtener los valores de *policy_id*, y para ver las fechas del historial de ejecución, puede usar la consulta siguiente:  
+ Para obtener los valores de *policy_id*, y para ver las fechas del historial de ejecución, puede usar la siguiente consulta:  
   
 ```  
 SELECT a.name AS N'policy_name', b.policy_id, b.start_date, b.end_date  
@@ -70,13 +69,13 @@ ON a.policy_id = b.policy_id
   
 -   Para eliminar el historial de ejecución de todas las directivas, especifique NULL para *policy_id* y *oldest_date*.  
   
--   Para eliminar el historial de ejecución de todas las directivas de una directiva concreta, especifique un identificador de la directiva *policy_id*, y especifique NULL como *oldest_date*.  
+-   Para eliminar el historial de ejecución de todas las directivas de una directiva concreta, especifique un identificador de directiva para *policy_id*, y especifique NULL como *oldest_date*.  
   
 -   Para eliminar el historial de ejecución de directiva para todas las directivas antes de una fecha concreta, especifique NULL para *policy_id*y especifique una fecha para *oldest_date*.  
   
- Para almacenar el historial de ejecución de directivas, puede abrir el registro de historial de directivas en el Explorador de objetos y exportar el historial de ejecución a un archivo. Para acceder al registro de historial de directivas, expanda **administración**, haga clic en **administración de directivas de**y, a continuación, haga clic en **Ver historial**.  
+ Para almacenar el historial de ejecución de directivas, puede abrir el registro de historial de directivas en el Explorador de objetos y exportar el historial de ejecución a un archivo. Para obtener acceso al registro de historial de directivas, expanda **administración**, haga clic en **administración de directivas**y, a continuación, haga clic en **Ver historial**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de base de datos PolicyAdministratorRole.  
   
 > [!IMPORTANT]  

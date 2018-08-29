@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_configure (Transact-SQL) | Documentos de Microsoft
+title: sp_syspolicy_configure (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_configure
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
-caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c51d30c8453cd5a9c2a92a3eb2ad22016c461b8f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b6214cd4658ac5ad9b6bd0b959a3040223dc1c3c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255939"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020981"
 ---
 # <a name="spsyspolicyconfigure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_syspolicy_configure [ @name = ] 'name'
  [  **@value =** ] *valor*  
  Es el valor que está asociado con el valor especificado para *nombre*. *valor* es **sql_variant**y es necesario.  
   
--   Si especifica 'Enabled' para *nombre*, puede utilizar cualquiera de los siguientes valores:  
+-   Si especifica 'Enabled' para *nombre*, puede usar cualquiera de los siguientes valores:  
   
     -   0 = Deshabilita la administración basada en directivas.  
   
@@ -67,7 +66,7 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   Si especifica 'HistoryRententionInDays' para *nombre*, especifique el número de días como un valor entero.  
   
--   Si especifica 'LogOnSuccess' para *nombre*, puede utilizar cualquiera de los siguientes valores:  
+-   Si especifica 'LogOnSuccess' para *nombre*, puede usar cualquiera de los siguientes valores:  
   
     -   0 = Registra solo las evaluaciones de directiva con errores.  
   
@@ -76,12 +75,12 @@ sp_syspolicy_configure [ @name = ] 'name'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Debe ejecutar sp_syspolicy_configure en el contexto de la base de datos del sistema msdb.  
   
  Para ver los valores actuales de esta configuración, consulte la vista del sistema msdb.dbo.syspolicy_configuration.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de base de datos PolicyAdministratorRole.  
   
 > [!IMPORTANT]  

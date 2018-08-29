@@ -1,5 +1,5 @@
 ---
-title: sp_changedynamicsnapshot_job (Transact-SQL) | Documentos de Microsoft
+title: sp_changedynamicsnapshot_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changedynamicsnapshot_job
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c31883e19d688dd7158ece061144ae7d44ccf30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a87e787339fec7991d1cc4a1bee5e14b79a1a3fc
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992172"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018398"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
  [ **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
- Es el nombre del trabajo de instantánea que se cambia. *dynamic_snapshot_jobname*es **sysname**, con el valor predeterminado de N '%'. Si *dynamic_snapshot_jobid* se especifica, debe usar el valor predeterminado de *dynamic_snapshot_jobname*.  
+ Es el nombre del trabajo de instantánea que se cambia. *dynamic_snapshot_jobname*es **sysname**, con el valor predeterminado es N '%'. Si *dynamic_snapshot_jobid* se especifica, debe usar el valor predeterminado de *dynamic_snapshot_jobname*.  
   
  [ **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
  Es el identificador del trabajo de instantánea que se cambia. *dynamic_snapshot_jobid* es **uniqueidentifier**, su valor predeterminado es NULL. Si *dynamic_snapshot_jobname*se especifica, debe usar el valor predeterminado de *dynamic_snapshot_jobid*.  
@@ -71,7 +71,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_type =** ] *frequency_type*  
  Es la frecuencia con que se programa el agente. *frequency_type* es **int**, y puede tener uno de los siguientes valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
@@ -86,7 +86,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_interval =** ] *frequency_interval*  
  Los días en que se ejecuta el agente. *frequency_interval* es **int**, y puede tener uno de los siguientes valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Lunes|  
@@ -103,7 +103,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_subday =** ] *frequency_subday*  
  Es la frecuencia de repetición de la programación durante el periodo definido. *frequency_subday* es **int**, y puede tener uno de los siguientes valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|Second|  
@@ -117,7 +117,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  Es la fecha de ejecución del Agente de mezcla. Este parámetro se utiliza cuando *frequency_type* está establecido en **32** (relativo mensual). *frequency_relative_interval* es **int**, y puede tener uno de los siguientes valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Primero|  
 |**2**|Second|  
@@ -153,16 +153,16 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_changedynamicsnapshot_job** se utiliza en la replicación de mezcla para publicaciones con filtros de fila con parámetros.  
   
  Después de cambiar un inicio de sesión o una contraseña de agente, debe detener y reiniciar el agente para que el cambio surta efecto.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_changedynamicsnapshot_job**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_changedynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>Vea también  
  [View and Modify Replication Security Settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  (Ver y modificar la configuración de seguridad de la replicación)  
- [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [Instantáneas para publicaciones de combinación con filtros con parámetros](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

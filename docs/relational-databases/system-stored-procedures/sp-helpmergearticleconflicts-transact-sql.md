@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergearticleconflicts (Transact-SQL) | Documentos de Microsoft
+title: sp_helpmergearticleconflicts (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergearticleconflicts
 ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d533e2cf1aad3d7ee0b9610e010b42baabf054ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9fb4fe8ff1dadebe5f2bb2a7af5209c2e761e0af
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995172"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037308"
 ---
 # <a name="sphelpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**article**|**sysname**|Nombre del artículo.|  
 |**source_owner**|**sysname**|Propietario del objeto de origen.|  
@@ -67,16 +67,16 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 |**guidcolname**|**sysname**|Nombre de la propiedad RowGuidCol para el objeto de origen.|  
 |**centralized_conflicts**|**int**|Indica si los registros de conflictos se almacenan en el publicador dado.|  
   
- Si el artículo tiene sólo conflictos de eliminación y no **conflict_table** filas, el nombre de la **conflict_table** en el resultado de conjunto es NULL.  
+ Si el artículo tiene únicamente los conflictos de eliminación y no **conflict_table** filas, el nombre de la **conflict_table** en el resultado de conjunto es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_helpmergearticleconflicts** se utiliza en la replicación de mezcla.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor y el **db_owner** rol fijo de base de datos puede ejecutar **sp_helpmergearticleconflicts**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor y el **db_owner** rol fijo de base de datos se puede ejecutar **sp_helpmergearticleconflicts**.  
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

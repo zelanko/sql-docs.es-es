@@ -1,5 +1,5 @@
 ---
-title: sp_OADestroy (Transact-SQL) | Documentos de Microsoft
+title: sp_OADestroy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_OADestroy
 ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 745b9f47c6fded870a6a4453e868cebdc88eb2b3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 758f9be98c13f599fabcea77d1007c73a688d5e4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251225"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037382"
 ---
 # <a name="spoadestroy-transact-sql"></a>sp_OADestroy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,21 +45,21 @@ sp_OADestroy objecttoken
   
 ## <a name="arguments"></a>Argumentos  
  *objecttoken*  
- Es el token de objeto de un objeto OLE que se creó previamente mediante **sp_OACreate**.  
+ Es el token de un objeto OLE creado anteriormente mediante el uso de **sp_OACreate**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o un valor distinto de cero (error) que es el valor entero del HRESULT devuelto por el objeto de OLE Automation.  
   
- Para obtener más información sobre códigos de retorno HRESULT, vea [OLE Automation códigos de retorno e información de Error](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Para obtener más información sobre los códigos de retorno HRESULT, vea [OLE Automation códigos de retorno e información de Error](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
-## <a name="remarks"></a>Comentarios  
- Si **sp_OADestroy** no se llama, creado objeto OLE se destruye automáticamente al final del lote.  
+## <a name="remarks"></a>Notas  
+ Si **sp_OADestroy** no se llama, el objeto OLE se destruye automáticamente al final del lote.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se destruye creado previamente **SQLServer** objeto.  
+ El siguiente ejemplo destruye creado previamente **SQLServer** objeto.  
   
 ```  
 EXEC @hr = sp_OADestroy @object;  
@@ -71,7 +71,7 @@ END;
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [OLE procedimientos almacenados de automatización &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [OLE Automation procedimientos almacenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Ejemplo de script de automatización OLE](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

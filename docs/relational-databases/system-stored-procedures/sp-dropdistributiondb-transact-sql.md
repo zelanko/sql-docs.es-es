@@ -1,5 +1,5 @@
 ---
-title: sp_dropdistributiondb (Transact-SQL) | Documentos de Microsoft
+title: sp_dropdistributiondb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropdistributiondb
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b7dacdf22808f4bc3a4192a7adebafdd66eeb3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6cf4ab210cfd94cfc2f35ec6adadb47fb47a184f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989280"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038147"
 ---
 # <a name="spdropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_dropdistributiondb** se utiliza en todos los tipos de replicación.  
   
  Este procedimiento almacenado se debe ejecutar antes de quitar el distribuidor mediante la ejecución de **sp_dropdistributor**.  
@@ -63,7 +63,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributiondb-tr_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_dropdistributiondb**.  
   
 ## <a name="see-also"></a>Vea también  

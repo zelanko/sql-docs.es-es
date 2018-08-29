@@ -18,7 +18,7 @@ ms.locfileid: "40392837"
 ---
 # <a name="about-sql-server-analysis-services"></a>Acerca de SQL Server Analysis Services
 
-Analysis Services es un motor de datos analíticos utilizado en la toma de decisiones y el análisis empresarial. Proporciona a nivel empresarial modelos de datos semánticos para informes empresariales y aplicaciones cliente como Power BI, Excel, Reporting Services informes y otras herramientas de visualización de datos.  
+Analysis Services es un motor de datos analíticos que se usa en la toma de decisiones y el análisis de negocios. Proporciona modelos de datos semánticos de nivel empresarial para informes de negocios y aplicaciones cliente como Power BI, Excel, Reporting Services y otras herramientas de visualización de datos.  
 
 Un flujo de trabajo típico incluye la creación de un proyecto de modelo de datos tabular o multidimensional en Visual Studio, la implementación del modelo como una base de datos en una instancia del servidor, la configuración del procesamiento de datos periódico y la asignación de permisos para que los usuarios finales puedan acceder a los datos. Cuando esté listo, las aplicaciones cliente que admitan Analysis Services como origen de datos podrán acceder al modelo de datos semánticos.  
 

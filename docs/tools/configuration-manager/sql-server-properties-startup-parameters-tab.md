@@ -13,20 +13,22 @@ ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: f3020bba3dc9270744a1dae0e16994dddc002587
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 276fc010339a6db6e4b277a63d052ffaf036e4c4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37986050"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42785203"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propiedades de SQL Server (pestaña Parámetros de inicio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  Utilice este cuadro de diálogo para agregar o quitar parámetros de inicio para el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Los parámetros de inicio pueden tener una gran influencia en el rendimiento del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Antes de agregar o cambiar los parámetros de inicio, vea el tema "Usar las opciones de inicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Utilice este cuadro de diálogo para agregar o quitar parámetros de inicio para el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Los parámetros de inicio pueden tener una gran influencia en el rendimiento del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Antes de agregar o cambiar los parámetros de inicio, vea el tema "Usar las opciones de inicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opciones  
- **Especifique un parámetro de inicio**  
+ 
+  **Especifique un parámetro de inicio**  
  Para agregar un parámetro, escríbalo y haga clic en **Agregar**.  
   
  Para modificar uno de los parámetros necesarios, seleccione el parámetro en el cuadro **Parámetros existentes** , cambie los valores en el cuadro **Especifique un parámetro de inicio** y, a continuación, haga clic en **Actualizar**.  
@@ -56,7 +58,7 @@ ms.locfileid: "37986050"
  Para obtener más información sobre cómo mover la base de datos maestra, vea el tema "Mover bases de datos del sistema" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="optional-parameters"></a>Parámetros opcionales  
- Todos los parámetros de inicio admitidos se describen en el tema "Usar las opciones de inicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un parámetro de inicio de -T*n.º de seguimiento* indica que una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha de iniciarse con una marca de seguimiento especificada (*n.º de seguimiento*) activa. Las marcas de seguimiento se utilizan para iniciar el servidor con un comportamiento distinto del habitual. Para más información sobre las marcas de seguimiento, vea el tema "Marcas de seguimiento ([!INCLUDE[tsql](../../includes/tsql-md.md)])" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Todos los parámetros de inicio admitidos se describen en el tema "Usar las opciones de inicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un parámetro de inicio de -T*n.º de seguimiento* indica que una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha de iniciarse con una marca de seguimiento especificada (*n.º de seguimiento*) activa. Las marcas de seguimiento se utilizan para iniciar el servidor con un comportamiento distinto del habitual. Para más información sobre las marcas de seguimiento, vea el tema "Marcas de seguimiento ([!INCLUDE[tsql](../../includes/tsql-md.md)])" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!CAUTION]  
 >  Puede ver parámetros de inicio y marcas de seguimiento sin documentar adicionales en Internet. Los parámetros de inicio y marcas de seguimiento sin documentar se crean para resolver problemas poco habituales o forzar determinadas condiciones requeridas para las pruebas. El uso de parámetros de inicio sin documentar puede proporcionar resultados inesperados. No utilice parámetros sin documentar a menos que estén dirigidos por los servicios de soporte al cliente de Microsoft.  

@@ -14,22 +14,22 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d58e4913be6db14bec53f5e8bbf63055b2a1344
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 61926079d3a9494831e0a182b4217ecb5b8b92b6
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662357"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786382"
 ---
 # <a name="using-basic-data-types"></a>Usar tipos de datos básicos
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] usa los tipos de datos básicos de JDBC para convertir los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] a un formato que el lenguaje de programación Java pueda entender y viceversa. El controlador JDBC proporciona compatibilidad con la API de JDBC 4.0, que incluye el **SQLXML** tipo de datos y los tipos de datos nacionales (Unicode), como **NCHAR**, **NVARCHAR**, **LONGNVARCHAR**, y **NCLOB**.  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] usa los tipos de datos básicos de JDBC para convertir los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un formato que el lenguaje de programación Java pueda entender y viceversa. El controlador JDBC proporciona compatibilidad con la API de JDBC 4.0, que incluye el **SQLXML** tipo de datos y los tipos de datos nacionales (Unicode), como **NCHAR**, **NVARCHAR**, **LONGNVARCHAR**, y **NCLOB**.  
   
 ## <a name="data-type-mappings"></a>Asignaciones de tipo de datos
 
-En la siguiente tabla se muestran las asignaciones predeterminadas entre los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] básicos, JDBC y del lenguaje de programación Java:  
+En la siguiente tabla se muestran las asignaciones predeterminadas entre los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] básicos, JDBC y del lenguaje de programación Java:  
   
 | Tipos de SQL Server   | Tipos de JDBC (Tipos de java.sql.)                        | Tipos del lenguaje Java          |
 | ------------------ | -------------------------------------------------- | ---------------------------- |
@@ -70,7 +70,7 @@ En la siguiente tabla se muestran las asignaciones predeterminadas entre los tip
 | geometry           | VARBINARY                                          | byte[]                       |
 | geography          | VARBINARY                                          | byte[]                       |
   
-(1) Para usar java.sql.Time con el tipo de hora [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], debe establecer la propiedad de conexión **sendTimeAsDatetime** en FALSE.  
+(1) Para usar java.sql.Time con el tipo de hora [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe establecer la propiedad de conexión **sendTimeAsDatetime** en FALSE.  
   
 (2) mediante programación puede tener acceso a los valores de **datetimeoffset** con [clase DateTimeOffset](../../connect/jdbc/reference/datetimeoffset-class.md).  
   

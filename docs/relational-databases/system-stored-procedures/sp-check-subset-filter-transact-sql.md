@@ -1,5 +1,5 @@
 ---
-title: sp_check_subset_filter (Transact-SQL) | Documentos de Microsoft
+title: sp_check_subset_filter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - sp_check_subset_filter
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29eb4ae1b96c8f9a116b221282ea4b293059b2c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 33964ac01b09fe9a67a194fe62f37f34eb50d4cd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989960"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038735"
 ---
 # <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,14 +59,14 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
  Es la cláusula de filtro que se comprueba. *subset_filterclause* es **nvarchar (1000)**, no tiene ningún valor predeterminado.  
   
  [ **@has_dynamic_filters**=] *has_dynamic_filters*  
- Especifica si la cláusula de filtro es un filtro de fila con parámetros. *has_dynamic_filters* es **bits**, su valor predeterminado es null y es un parámetro de salida. Devuelve un valor de **1** cuando la cláusula de filtro es un filtro de fila con parámetros.  
+ Especifica si la cláusula de filtro es un filtro de fila con parámetros. *has_dynamic_filters* es **bit**, su valor predeterminado es null y es un parámetro de salida. Devuelve un valor de **1** cuando la cláusula de filtro es un filtro de fila con parámetros.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|Es si la publicación es apta para usar particiones precalculadas; donde **1** significa que las particiones precalculadas pueden estar usando, y **0** significa que no se puede usar.|  
-|**has_dynamic_filters**|**bit**|Especifica si la cláusula de filtro suministrada incluye al menos un filtro de fila con parámetros; donde **1** significa que se utiliza un filtro de fila con parámetros, y **0** significa que esa función no se utiliza.|  
+|**can_use_partition_groups**|**bit**|Es si la publicación cumple los requisitos para usar particiones precalculadas; donde **1** significa que las particiones precalculadas pueden estar usando, y **0** significa que no puede utilizarse.|  
+|**has_dynamic_filters**|**bit**|Si la cláusula de filtro suministrada incluye al menos un filtro de fila con parámetros; donde **1** significa que se utiliza un filtro de fila con parámetros, y **0** significa que no se utiliza una función de ese tipo.|  
 |**dynamic_filters_function_list**|**nvarchar(500)**|Lista de las funciones de la cláusula de filtro que filtran un artículo dinámicamente; las funciones están separadas por puntos y comas.|  
 |**uses_host_name**|**bit**|Si el [HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md) función se utiliza en la cláusula de filtro, donde **1** significa que esta función está presente.|  
 |**uses_suser_sname**|**bit**|Si el [SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md) función se utiliza en la cláusula de filtro, donde **1** significa que esta función está presente.|  
@@ -74,15 +74,15 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_check_subset_filter** se utiliza en la replicación de mezcla.  
   
  **sp_check_subset_filter** se puede ejecutar en cualquier tabla, incluso si no se publica la tabla. Este procedimiento almacenado se puede utilizar para comprobar una cláusula de filtro antes de definir un artículo filtrado.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_check_subset_filter**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_check_subset_filter**.  
   
 ## <a name="see-also"></a>Vea también  
- [Optimizar el rendimiento de filtro con parámetros con particiones precalculadas](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)  
+ [Optimizar el rendimiento de los filtros con parámetros con particiones calculadas previamente](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)  
   
   

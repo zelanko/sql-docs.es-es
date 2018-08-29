@@ -1,5 +1,5 @@
 ---
-title: sp_control_dbmasterkey_password (Transact-SQL) | Documentos de Microsoft
+title: sp_control_dbmasterkey_password (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/25/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_control_dbmasterkey_password
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a9894a10965affbd65406276445f6c84f05ce76e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6a468fc35805dc51bd76a51021fab82f66c8fc25
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239235"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037538"
 ---
 # <a name="spcontroldbmasterkeypassword-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  @action= N'drop'  
  Especifica que se quitará del almacén de credenciales una credencial para la base de datos especificada. El valor pasado a @action es **nvarchar**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesita la clave maestra de una base de datos para cifrar o descifrar una clave, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intentará descifrar la clave maestra de la base de datos con la clave maestra de servicio de la instancia. Si el descifrado produce errores, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] buscará en el almacén de credenciales las credenciales de clave maestra con el mismo GUID de familia que la base de datos para la que se necesita la clave maestra. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intentará después descifrar la clave maestra de la base de datos con cada credencial coincidente hasta que el descifrado se realice correctamente o no queden más credenciales.  
   
 > [!CAUTION]  
@@ -81,13 +80,13 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
   
  **Posible problema de compatibilidad con versiones anteriores:** actualmente, el procedimiento almacenado no comprueba si existe una clave maestra. Esto se admite por cuestiones de compatibilidad con versiones anteriores, pero muestra una advertencia. Este comportamiento se ha desaprobado. En una versión futura de la clave maestra debe existir y la contraseña utilizada en el procedimiento almacenado **sp_control_dbmasterkey_password** debe ser la misma contraseña que una de las contraseñas utilizadas para cifrar la clave maestra de base de datos.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Necesita el permiso CONTROL en la base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>A. Crear una credencial para la clave maestra de AdventureWorks2012  
- En el siguiente ejemplo se crea una credencial para la clave maestra de la base de datos `AdventureWorks2012` y se guarda la contraseña de la clave maestra como secreto en la credencial. Dado que todos los parámetros que se pasan a `sp_control_dbmasterkey_password` debe ser del tipo de datos **nvarchar**, las cadenas de texto se convierten con el operador de conversión `N`.  
+ En el siguiente ejemplo se crea una credencial para la clave maestra de la base de datos `AdventureWorks2012` y se guarda la contraseña de la clave maestra como secreto en la credencial. Dado que todos los parámetros que se pasan a `sp_control_dbmasterkey_password` debe ser del tipo de datos **nvarchar**, se convierten las cadenas de texto con el operador de conversión `N`.  
   
 ```  
 EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',   

@@ -1,5 +1,5 @@
 ---
-title: (Transact-SQL) de vistas de catálogo de esquemas XML (sistema de tipo XML) | Documentos de Microsoft
+title: Esquemas XML (sistema de tipo XML) (Transact-SQL) de las vistas de catálogo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ helpviewer_keywords:
 - catalog views [SQL Server], XML schemas
 - XML schemas [SQL Server], catalog views
 ms.assetid: e92304ae-f920-4b28-8f63-6324973ba359
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 847569353fe07e6d38bd415c01bd34bd949fabe3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 62ebc79992deca77026477563c828c609036b0f3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220606"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021035"
 ---
 # <a name="xml-schemas-xml-type-system-catalog-views-transact-sql"></a>Vistas de catálogo de esquemas XML (sistema de tipo XML, Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: sp_audit_write (Transact-SQL) | Documentos de Microsoft
+title: sp_audit_write (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_audit_write
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
-caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84b7ea14b205b2642c8c67c24793310ca8245832
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9e52313f827d49200e58910d4fa577d39d91567f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239305"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037897"
 ---
 # <a name="spauditwrite-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,11 +60,11 @@ sp_audit_write [ @user_defined_event_id =  ] user_defined_event_id ,
   
  Los errores los producen parámetros de entrada incorrectos o errores al escribir en el registro de auditoría de destino.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando el **USER_DEFINED_AUDIT_GROUP** se agrega a una especificación de auditoría de servidor o una especificación de auditoría de base de datos, el evento desencadenado por **sp_audit_write** se incluirán en el registro de auditoría.  
   
-## <a name="permissions"></a>Permissions  
- Debe pertenecer a la **público** rol de base de datos.  
+## <a name="permissions"></a>Permisos  
+ Debe pertenecer a la **pública** rol de base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
   

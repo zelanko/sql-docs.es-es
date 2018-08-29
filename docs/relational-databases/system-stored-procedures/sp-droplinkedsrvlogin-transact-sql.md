@@ -1,5 +1,5 @@
 ---
-title: sp_droplinkedsrvlogin (Transact-SQL) | Documentos de Microsoft
+title: sp_droplinkedsrvlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_droplinkedsrvlogin
 ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2e33633f7ac76fd58db3fba0da141d426de14e97
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6e85ed0511ea1986bc19f46903513dfd8a5bc2c1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254402"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021016"
 ---
 # <a name="spdroplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
   
 ## <a name="arguments"></a>Argumentos  
  [  **@rmtsrvname =** ] **'***rmtsrvname***'**  
- Es el nombre de un servidor vinculado que la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se aplica la asignación de inicio de sesión. *rmtsrvname* es **sysname**, no tiene ningún valor predeterminado. *rmtsrvname* ya debe existir.  
+ Es el nombre de un servidor vinculado que el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se aplica la asignación de inicio de sesión. *rmtsrvname* es **sysname**, no tiene ningún valor predeterminado. *rmtsrvname* ya debe existir.  
   
  [  **@locallogin =** ] **'***locallogin***'**  
  Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión en el servidor local que tiene una asignación para el servidor vinculado *rmtsrvname*. *locallogin* es **sysname**, no tiene ningún valor predeterminado. Una asignación para *locallogin* a *rmtsrvname* ya debe existir. Si es NULL, la asignación predeterminada creada por **sp_addlinkedserver**, que asigna todos los inicios de sesión en el servidor local a inicios de sesión en el servidor vinculado, se elimina.  
@@ -54,14 +54,14 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando la asignación existente para un inicio de sesión se elimina, el servidor local utiliza la asignación predeterminada creada por **sp_addlinkedserver** cuando se conecta al servidor vinculado en nombre de ese inicio de sesión. Para cambiar la asignación predeterminada, use **sp_addlinkedsrvlogin**.  
   
- Si también se elimina la asignación predeterminada, solo los inicios de sesión que se les ha asignado explícitamente una asignación de inicio de sesión para el servidor vinculado, mediante el uso de **sp_addlinkedsrvlogin**, puede tener acceso al servidor vinculado.  
+ Si también se elimina la asignación predeterminada, solo los inicios de sesión que se han asignado explícitamente una asignación de inicio de sesión para el servidor vinculado, mediante el uso de **sp_addlinkedsrvlogin**, puede tener acceso al servidor vinculado.  
   
  **sp_droplinkedsrvlogin** no se puede ejecutar desde una transacción definida por el usuario.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER ANY LOGIN en el servidor.  
   
 ## <a name="examples"></a>Ejemplos  

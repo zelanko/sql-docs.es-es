@@ -1,5 +1,5 @@
 ---
-title: sp_removedistpublisherdbreplication (Transact-SQL) | Documentos de Microsoft
+title: sp_removedistpublisherdbreplication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_removedistpublisherdbreplication
 ms.assetid: 9bfe002a-25b5-4226-bcfb-feb2060d6b4a
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02194543d95dc03491d4b882555e48698c100ba2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a99244a59c0022ed92797fc8c5e10bd3bf3dae63
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996062"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022573"
 ---
 # <a name="spremovedistpublisherdbreplication-transact-sql"></a>sp_removedistpublisherdbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publisher=** ] **'***publisher***'**  
- Es el nombre del servidor del publicador. *Publisher* es **sysname**, no tiene ningún valor predeterminado.  
+ Es el nombre del servidor del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
  Es el nombre de la base de datos de publicación. *publisher_db* es **sysname** no tiene ningún valor predeterminado.  
@@ -55,8 +55,8 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
- **sp_removedistpublisherdbreplication** se usa para la replicación de instantáneas y transaccional.  
+## <a name="remarks"></a>Notas  
+ **sp_removedistpublisherdbreplication** usada para la replicación de instantáneas y transaccional.  
   
  **sp_removedistpublisherdbreplication** se utiliza cuando se debe volver a crear una base de datos publicada sin quitar también la base de datos de distribución. Se quitan los siguientes metadatos:  
   
@@ -68,7 +68,7 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
   
 -   Los metadatos de todos los trabajos de Agente de replicación que pertenecen a la publicación.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor en el distribuidor o los miembros de la **db_owner** rol fijo de base de datos en la base de datos de distribución puede ejecutar **sp_ removedistpublisherdbreplication**.  
   
 ## <a name="see-also"></a>Vea también  

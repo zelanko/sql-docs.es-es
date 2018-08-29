@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergesubscription (Transact-SQL) | Documentos de Microsoft
+title: sp_helpmergesubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergesubscription
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb5387d011b3987262415e3a88b5fd8bc65a8e2f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37939073edaef5c8647cd173a83dfb05e63ae3cd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33002922"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019774"
 ---
 # <a name="sphelpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,34 +61,34 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
  Es el nombre de la base de datos de suscripción. *subscriber_db*es **sysname**, su valor predeterminado es **%**, que devuelve información sobre todas las bases de datos de suscripción.  
   
  [  **@publisher=**] **'***publisher***'**  
- Es el nombre del publicador. El publicador debe ser un servidor válido. *Publisher*es **sysname**, su valor predeterminado es **%**, que devuelve información acerca de todos los publicadores.  
+ Es el nombre del publicador. El publicador debe ser un servidor válido. *publicador*es **sysname**, su valor predeterminado es **%**, que devuelve información acerca de todos los publicadores.  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
- Es el nombre de la base de datos del publicador. *publisher_db*es **sysname**, su valor predeterminado es **%**, que devuelve información sobre todas las bases de datos de publicador.  
+ Es el nombre de la base de datos del publicador. *publisher_db*es **sysname**, su valor predeterminado es **%**, que devuelve información acerca de todas las bases de datos del publicador.  
   
  [  **@subscription_type=**] **'***subscription_type***'**  
  Es el tipo de suscripción. *subscription_type*es **nvarchar (15)**, y puede tener uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**inserción** (valor predeterminado)|Suscripción de inserción.|  
 |**Incorporación de cambios**|Suscripción de extracción|  
 |**ambos**|Suscripción de inserción y extracción|  
   
  [  **@found=**] **'***encuentra***' salida**  
- Es una marca para indicar que se devuelven filas. *se encontró*es **int** y un parámetro de salida, su valor predeterminado es null. **1** indica que se encuentra la publicación. **0** indica que no se encuentra la publicación.  
+ Es una marca para indicar que se devuelven filas. *se encontró*es **int** y un parámetro OUTPUT y su valor predeterminado es null. **1** indica que se encuentra la publicación. **0** indica que no se encuentra la publicación.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**sysname**|Nombre de la suscripción.|  
-|**Publicación**|**sysname**|Nombre de la publicación.|  
+|**publicación**|**sysname**|Nombre de la publicación.|  
 |**publicador**|**sysname**|Nombre del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador.|  
 |**suscriptor**|**sysname**|Nombre del suscriptor.|  
 |**subscriber_db**|**sysname**|Nombre de la base de datos de suscripciones.|  
-|**status**|**int**|Estado de la suscripción:<br /><br /> **0** todos los = trabajos están esperando el inicio<br /><br /> **1** = uno o varios trabajos se están iniciando<br /><br /> **2** todos los = trabajos se han ejecutado correctamente<br /><br /> **3** = al menos un trabajo se está ejecutando<br /><br /> **4** = todos los trabajos están programados y se encuentran inactivos<br /><br /> **5** = al menos un trabajo intenta ejecutarse después de un error anterior<br /><br /> **6** = al menos un trabajo no se ha podido ejecutar correctamente|  
+|**status**|**int**|Estado de la suscripción:<br /><br /> **0** todos los = trabajos están esperando para iniciar<br /><br /> **1** = uno o más trabajos se están iniciando<br /><br /> **2** = todos los trabajos se han ejecutado correctamente<br /><br /> **3** = al menos un trabajo se está ejecutando<br /><br /> **4** = todos los trabajos están programados y se encuentran inactivos<br /><br /> **5** = al menos un trabajo intenta ejecutarse después de un error anterior<br /><br /> **6** = al menos un trabajo no ha podido ejecutar correctamente|  
 |**propiedad subscriber_type**|**int**|Tipo de suscriptor.|  
 |**subscription_type**|**int**|Tipo de suscripción:<br /><br /> **0** = inserción<br /><br /> **1** = extracción<br /><br /> **2** = both|  
 |**priority**|**float(8)**|Número que indica la prioridad de la suscripción.|  
@@ -99,20 +99,20 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**offload_enabled**|**bit**|Especifica si se ha establecido que la ejecución de la descarga de un agente de replicación se lleve a cabo en el suscriptor. Si es NULL, la ejecución se lleva a cabo en el publicador.|  
 |**offload_server**|**sysname**|Nombre del servidor donde se está ejecutando el agente.|  
 |**use_interactive_resolver**|**int**|Devuelve si se utiliza o no el solucionador interactivo durante la reconciliación. Si **0**, no se utiliza el solucionador interactivo.|  
-|**Nombre de host**|**sysname**|Valor proporcionado cuando se filtra una suscripción con el valor de la [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) función.|  
+|**Nombre de host**|**sysname**|Valor suministrado cuando una suscripción se filtra por el valor de la [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) función.|  
 |**subscriber_security_mode**|**smallint**|Es el modo de seguridad en el suscriptor, donde **1** significa autenticación de Windows y **0** significa [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.|  
 |**subscriber_login**|**sysname**|Es el nombre de inicio de sesión del suscriptor.|  
-|**subscriber_password**|**sysname**|La contraseña real del suscriptor no se devuelve nunca. El resultado se enmascara mediante un "**\*\*\*\*\*\***" cadena.|  
+|**subscriber_password**|**sysname**|La contraseña real del suscriptor no se devuelve nunca. El resultado se enmascara mediante una "**\*\*\*\*\*\***" cadena.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_helpmergesubscription** se utiliza en la replicación de mezcla para devolver información de suscripción almacenada en el publicador o suscriptor de republicación.  
   
- Para las suscripciones anónimas, la *subscription_type*valor es siempre **1** (extracción). Sin embargo, debe ejecutar [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) en el suscriptor para obtener información sobre suscripciones anónimas.  
+ Las suscripciones anónimas, el *subscription_type*valor siempre es **1** (extracción). Sin embargo, debe ejecutar [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) en el suscriptor para obtener información sobre suscripciones anónimas.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor, el **db_owner** rol fijo de base de datos o la lista de acceso de publicación para la publicación a la que pertenece la suscripción puede ejecutar **sp_ helpmergesubscription**.  
   
 ## <a name="see-also"></a>Vea también  

@@ -1,5 +1,5 @@
 ---
-title: sp_describe_cursor_columns (Transact-SQL) | Documentos de Microsoft
+title: sp_describe_cursor_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_describe_cursor_columns
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1a39ab87291a51f272966bb60e407d89b4f2cb2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5a02701d091f2294af34450d3e370022a32cc143
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260278"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036238"
 ---
 # <a name="spdescribecursorcolumns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_describe_cursor_columns
   
 ## <a name="arguments"></a>Argumentos  
  [ @cursor_return=] *output_cursor_variable* salida  
- Es el nombre de una variable de cursor declarada que recibirá la salida del cursor. *output_cursor_variable* es **cursor**, no tiene ningún valor predeterminado y debe no ser asociado a ningún cursor en el momento en que se llama a sp_describe_cursor_columns. El cursor devuelto es un cursor desplazable, dinámico y de solo lectura.  
+ Es el nombre de una variable de cursor declarada que recibirá la salida del cursor. *output_cursor_variable* es **cursor**, no tiene ningún valor predeterminado y debe no ser asociada a ningún cursor en el momento en que se llama a sp_describe_cursor_columns. El cursor devuelto es un cursor desplazable, dinámico y de solo lectura.  
   
  [ @cursor_source=] {N ' | N'global' | N'variable'}  
  Especifica si el cursor del que se informa está especificado con el nombre de un cursor local, un cursor global o una variable de cursor. El parámetro es **nvarchar (30)**.  
@@ -62,7 +62,7 @@ sp_describe_cursor_columns
  Es el nombre de un cursor creado por una instrucción DECLARE CURSOR que tiene la palabra clave LOCAL u obtuvo el valor predeterminado LOCAL. *local_cursor_name* es **nvarchar (128)**.  
   
  [ @cursor_identity=] N'*global_cursor_name*'  
- Es el nombre de un cursor creado por una instrucción DECLARE CURSOR que tiene la palabra clave GLOBAL u obtuvo el valor predeterminado global. *global_cursor_name* es **nvarchar (128)**.  
+ Es el nombre de un cursor creado por una instrucción DECLARE CURSOR que tiene la palabra clave GLOBAL u obtuvo el valor predeterminado GLOBAL. *global_cursor_name* es **nvarchar (128)**.  
   
  *global_cursor_name* también puede ser el nombre de un cursor de servidor API que se abrió con una aplicación ODBC y, a continuación, se denominó al llamar a SQLSetCursorName.  
   
@@ -77,27 +77,27 @@ sp_describe_cursor_columns
   
  En la siguiente tabla se muestra el formato del cursor devuelto por sp_describe_cursor_columns.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|column_name|**sysname** (admite valores NULL)|Nombre asignado a la columna del conjunto de resultados. La columna es NULL en el caso de que se especificara sin una cláusula de acompañamiento AS.|  
+|column_name|**sysname** (que aceptan valores NULL)|Nombre asignado a la columna del conjunto de resultados. La columna es NULL en el caso de que se especificara sin una cláusula de acompañamiento AS.|  
 |ordinal_position|**int**|Posición relativa de la columna desde la primera columna de la izquierda en el conjunto de resultados. La primera columna está en la posición 0.|  
 |column_characteristics_flags|**int**|Máscara de bits que indica la información almacenada en DBCOLUMNFLAGS dentro de OLE DB. Puede tener uno o una combinación de los valores siguientes:<br /><br /> 1 = Marcador<br /><br /> 2 = Longitud fija <br /><br /> 4 = Acepta valores NULL<br /><br /> 8 = Versiones de fila<br /><br /> 16 = Columna que se puede actualizar (configurada para columnas previstas de un cursor sin cláusula FOR UPDATE y, en caso de existir esa columna, solo puede ser una por cursor).<br /><br /> Cuando se combinan valores de bit, se aplican las características de los valores de bit combinados. Por ejemplo, si el valor de bit es 6, la columna es una columna que acepta valores NULL (4) de longitud fija (2).|  
 |column_size|**int**|Tamaño máximo posible para un valor de esta columna.|  
 |data_type_sql|**smallint**|Número que indica el tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la columna.|  
-|column_precision|**tinyint**|Precisión máxima de la columna según la *bPrecision* valor en OLE DB.|  
-|column_scale|**tinyint**|Número de dígitos a la derecha del separador decimal para la **numérico** o **decimal** tipos de datos según la *bScale* valor en OLE DB.|  
+|column_precision|**tinyint**|Precisión máxima de la columna tal como se indicó el *bPrecision* valor en OLE DB.|  
+|column_scale|**tinyint**|Número de dígitos a la derecha del separador decimal para la **numérico** o **decimal** los tipos de datos tal como se indicó el *bScale* valor en OLE DB.|  
 |order_position|**int**|Si la columna participa en la ordenación del conjunto de resultados, es la posición de la columna en la clave de orden relativa a la columna situada en el extremo izquierdo.|  
-|order_direction|**varchar (1)**(admite valores NULL)|A = La columna se encuentra en la clave de orden y la ordenación es ascendente.<br /><br /> D = La columna se encuentra en la clave de orden y la ordenación es descendente.<br /><br /> NULL = La columna no participa en la ordenación.|  
+|order_direction|**varchar (1)**(que aceptan valores NULL)|A = La columna se encuentra en la clave de orden y la ordenación es ascendente.<br /><br /> D = La columna se encuentra en la clave de orden y la ordenación es descendente.<br /><br /> NULL = La columna no participa en la ordenación.|  
 |hidden_column|**smallint**|0 = Esta columna aparece en la lista de selección.<br /><br /> 1 = Reservado para uso futuro.|  
 |columnid|**int**|Id. de columna para la columna base. Si se generó la columna del conjunto de resultados a partir de una expresión, columnid es -1.|  
 |objectid|**int**|Id. de objeto del objeto o la tabla base que proporciona la columna. Si se generó la columna del conjunto de resultados a partir de una expresión, objectid es -1.|  
 |dbid|**int**|Id. de la base de datos que contiene la tabla base que proporciona la columna. Si se generó la columna del conjunto de resultados a partir de una expresión, dbid es -1.|  
 |dbname|**sysname**<br /><br /> (acepta valores NULL)|Nombre de la base de datos que contiene la tabla base que proporciona la columna. Si se generó la columna del conjunto de resultados a partir de una expresión, dbname es NULL.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  sp_describe_cursor_columns describe los atributos de las columnas en el conjunto de resultados de un cursor de servidor, como, por ejemplo, el nombre y el tipo de datos de cada cursor. Utilice sp_describe_cursor para obtener una descripción de los atributos globales del cursor de servidor. Utilice sp_describe_cursor_tables para obtener un informe de las tablas base a las que hace referencia el cursor. Para obtener un informe de los cursores de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)] visibles en la conexión, use sp_cursor_list.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol public.  
   
 ## <a name="examples"></a>Ejemplos  

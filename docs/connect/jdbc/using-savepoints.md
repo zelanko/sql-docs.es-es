@@ -14,18 +14,18 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 125c15caac95f152c6f5009b1a794bd0fb625a2c
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 9b2eb246686e69c6c890b069b400662515dc71cd
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661867"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787941"
 ---
 # <a name="using-savepoints"></a>Usar puntos de retorno
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Los puntos de retorno ofrecen un mecanismo para revertir partes de una transacción. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], puede crear un punto de retorno con la instrucción SAVE TRANSACTION savepoint_name. Más adelante, ejecute una instrucción ROLLBACK TRANSACTION savepoint_name para revertir al punto de retorno en vez de revertir al inicio de la transacción.
+Los puntos de retorno ofrecen un mecanismo para revertir partes de una transacción. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede crear un punto de retorno con la instrucción SAVE TRANSACTION savepoint_name. Más adelante, ejecute una instrucción ROLLBACK TRANSACTION savepoint_name para revertir al punto de retorno en vez de revertir al inicio de la transacción.
 
 Los puntos de retorno son útiles en situaciones en que no es probable que se produzcan errores. El uso de un punto de retorno para revertir parte de una transacción, en caso de producirse un error no frecuente, puede resultar más eficaz que hacer que cada transacción pruebe si una actualización es válida antes de realizarla. Las operaciones de actualización y reversión son costosas, por lo que los puntos de retorno solamente son eficaces si la probabilidad de encontrar un error es baja y el costo de comprobar de antemano la validez de una actualización es relativamente alto.
 

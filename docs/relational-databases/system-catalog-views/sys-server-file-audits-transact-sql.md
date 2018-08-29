@@ -1,5 +1,5 @@
 ---
-title: Sys.server_file_audits (Transact-SQL) | Documentos de Microsoft
+title: Sys.server_file_audits (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,28 +21,28 @@ helpviewer_keywords:
 - sys.server_file_audits catalog view
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4e10ec5dc755f1a8487aecd40b620eb0a3eefe8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d0ac050160e62718a87a5dfa920471861eaadcfd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222106"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035935"
 ---
 # <a name="sysserverfileaudits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene información adicional sobre el tipo de auditoría de archivos en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una instancia del servidor de auditoría. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Contiene información ampliada sobre el tipo de archivo de auditoría en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una instancia del servidor de auditoría. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |audit_id|**int**|Identificador de la auditoría.|  
-|name|**sysname**|Nombre de la auditoría.|  
+|NAME|**sysname**|Nombre de la auditoría.|  
 |audit_guid|**uniqueidentifier**|GUID de la auditoría.|  
 |create_date|**datetime**|Fecha UTC en la que se creó la auditoría de archivos.|  
-|modify_date|**DateTime**|Fecha UTC en la que se modificó por última vez la auditoría de archivos.|  
+|modify_date|**valor DataTime**|Fecha UTC en la que se modificó por última vez la auditoría de archivos.|  
 |principal_id|**int**|Identificador del propietario de la auditoría tal y como se registró en el servidor.|  
 |Tipo|**char(2)**|Tipo de auditoría:<br /><br /> 0 = Registro de eventos de seguridad de NT<br /><br /> 1 = Registro de eventos de aplicación de NT<br /><br /> 2 = Archivo del sistema de archivos|  
 |type_desc|**nvarchar(60)**|Descripción del tipo de auditoría.|  
@@ -58,8 +58,8 @@ ms.locfileid: "33222106"
 |log_file_path|**nvarchar(260)**|Ruta de acceso a la auditoría. Para auditorías de archivos, la ruta de acceso del archivo; para auditorías de registro de la aplicación, la ruta de acceso del registro de la aplicación.|  
 |log_file_name|**nvarchar(260)**|Nombre base para el archivo de registro proporcionado en la instrucción DDL CREATE AUDIT. Se agrega un número incremental al archivo base_log_name como un sufijo para crear el nombre del archivo de registro.|  
   
-## <a name="permissions"></a>Permissions  
- Entidades de seguridad con la **ALTER ANY SERVER AUDIT** o **VIEW ANY DEFINITION** permiso tiene acceso a esta vista de catálogo. Además, la entidad de seguridad no se debe denegar **VIEW ANY DEFINITION** permiso.  
+## <a name="permissions"></a>Permisos  
+ Las entidades de seguridad con el **ALTER ANY SERVER AUDIT** o **VIEW ANY DEFINITION** permisos tienen acceso a esta vista de catálogo. Además, no se debe denegar la entidad de seguridad **VIEW ANY DEFINITION** permiso.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

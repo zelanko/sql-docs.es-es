@@ -14,18 +14,18 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c62942580b403bbacd62c6fc65e0a19b0960f1e6
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: affc0c18f38ca45e572a65d92a204457025ccd55
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39457819"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787451"
 ---
 # <a name="sample-jdbc-driver-applications"></a>Aplicaciones del controlador JDBC de ejemplo
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-Las aplicaciones de ejemplo [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] muestran varias características del controlador JDBC. Además, muestran las prácticas recomendadas de programación que puede aplicar al usar el controlador JDBC con una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Las aplicaciones de ejemplo [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] muestran varias características del controlador JDBC. Además, muestran las prácticas recomendadas de programación que puede aplicar al usar el controlador JDBC con una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 Todas las aplicaciones de ejemplo se incluyen en archivos de código *.java que se pueden compilar y ejecutar en el equipo local, y se encuentran en varias subcarpetas de la siguiente ubicación:  
 
@@ -39,11 +39,11 @@ Todas las aplicaciones de ejemplo se incluyen en archivos de código *.java que 
   
 | Tema                                                                                                                  | Descripción                                                                                                                                                                                                                                                                   |
 | ---------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Conexión y recuperación de datos](../../../connect/jdbc/code-samples/connecting-and-retrieving-data.md)                              | Estas aplicaciones de ejemplo demuestran cómo conectarse a una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Además, explican los distintos modos en los que se pueden recuperar datos de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. |
-| [Trabajar con tipos de datos &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)                        | Estas aplicaciones de ejemplo demuestran cómo usar los métodos de tipos de datos del controlador JDBC para trabajar con los datos de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].                                                                                              |
-| [Trabajo con conjuntos de resultados](../../../connect/jdbc/code-samples/working-with-result-sets.md)                                          | Estas aplicaciones de ejemplo demuestran cómo usar los conjuntos de resultados para procesar los datos de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].                                                                                                            |
-| [Trabajo con datos grandes](../../../connect/jdbc/code-samples/working-with-large-data.md)                                            | Estas aplicaciones de ejemplo demuestran cómo usar el almacenamiento en búfer adaptable para recuperar datos de valores grandes de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sin la sobrecarga que suponen los cursores de servidor.                                                         |
-| [Clasificación y detección de datos de SQL](../../jdbc/code-samples/data-discovery-and-classification-sample.md) | Esta aplicación de ejemplo muestra cómo recuperar información de clasificación y detección de datos contenida en un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de datos de un objeto de conjunto de resultados mediante el controlador JDBC.                                            |
+| [Conexión y recuperación de datos](../../../connect/jdbc/code-samples/connecting-and-retrieving-data.md)                              | Estas aplicaciones de ejemplo demuestran cómo conectarse a una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Además, explican los distintos modos en los que se pueden recuperar datos de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. |
+| [Trabajar con tipos de datos &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)                        | Estas aplicaciones de ejemplo demuestran cómo usar los métodos de tipos de datos del controlador JDBC para trabajar con los datos de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].                                                                                              |
+| [Trabajo con conjuntos de resultados](../../../connect/jdbc/code-samples/working-with-result-sets.md)                                          | Estas aplicaciones de ejemplo demuestran cómo usar los conjuntos de resultados para procesar los datos de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].                                                                                                            |
+| [Trabajo con datos grandes](../../../connect/jdbc/code-samples/working-with-large-data.md)                                            | Estas aplicaciones de ejemplo demuestran cómo usar el almacenamiento en búfer adaptable para recuperar datos de valores grandes de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sin la sobrecarga que suponen los cursores de servidor.                                                         |
+| [Clasificación y detección de datos de SQL](../../jdbc/code-samples/data-discovery-and-classification-sample.md) | Esta aplicación de ejemplo muestra cómo recuperar información de clasificación y detección de datos contenida en un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de datos de un objeto de conjunto de resultados mediante el controlador JDBC.                                            |
   
 ## <a name="see-also"></a>Ver también
 

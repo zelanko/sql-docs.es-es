@@ -1,5 +1,5 @@
 ---
-title: sp_changesubscriber (Transact-SQL) | Documentos de Microsoft
+title: sp_changesubscriber (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_changesubscriber
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2cb0047dd66b0c3fd96d399e404b801401d202a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 799a2a8b398d3ff6eff13a83a3cc60af90421cc4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993132"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019836"
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Cambia las opciones de un suscriptor. Se actualizan todas las tareas de distribución de los suscriptores de este publicador. Este procedimiento almacenado escribe en el **MSsubscriber_info** tabla en la base de datos de distribución. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
+  Cambia las opciones de un suscriptor. Se actualizan todas las tareas de distribución de los suscriptores de este publicador. Este procedimiento almacenado se escribe en el **MSsubscriber_info** tabla en la base de datos de distribución. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,7 +68,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  Es el nombre del suscriptor donde se van a cambiar las opciones. *suscriptor* es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@type=**] *tipo*  
- Es el tipo de suscriptor. *tipo de* es **tinyint**, su valor predeterminado es null. **0** indica un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suscriptor. **1** especifica no[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otro servidor de origen de datos ODBC suscriptor.  
+ Es el tipo de suscriptor. *tipo* es **tinyint**, su valor predeterminado es null. **0** indica un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suscriptor. **1** especifica que no es[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otro servidor de origen de datos ODBC suscriptor.  
   
  [  **@login=**] **'***inicio de sesión***'**  
  Es el identificador de inicio de sesión para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* es de tipo **sysname** y su valor predeterminado es NULL.  
@@ -88,7 +88,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@frequency_type=**] *frequency_type*  
  Es la frecuencia con que se programa la tarea de distribución. *frequency_type* es **int**, y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
@@ -105,7 +105,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  Es la fecha de la tarea de distribución. Este parámetro se utiliza cuando *frequency_type* está establecido en **32** (relativo mensual). *frequency_relative_interval* es **int**, y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Primero|  
 |**2**|Second|  
@@ -114,12 +114,12 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**16**|Último|  
   
  [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- Es la frecuencia con la tarea de distribución se repetirá periódicamente durante las personalizaciones definidas *frequency_type*. *frequency_recurrence_factor* es **int**, su valor predeterminado es null.  
+ Es con qué frecuencia debe repetirse la tarea de distribución durante la definido *frequency_type*. *frequency_recurrence_factor* es **int**, su valor predeterminado es null.  
   
  [  **@frequency_subday=**] *frequency_subday*  
  Es la frecuencia de repetición de la programación durante el periodo definido. *frequency_subday* es **int**, y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|Second|  
@@ -147,31 +147,31 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  [  **@security_mode=**] *security_mode*  
  Es el modo de seguridad implementado. *security_mode* es **int**, y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Autenticación|  
 |**1**|Autenticación de Windows|  
   
  [ **@publisher**=] **'***publisher***'**  
- Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Publisher* es **sysname**, su valor predeterminado es null.  
+ Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
->  *Publisher* no debe usarse al cambiar las propiedades de artículo en una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
+>  *publicador* no debe usarse cuando se cambia las propiedades del artículo en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_changesubscriber** se utiliza en todos los tipos de replicación.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_changesubscriber**.  
   
 ## <a name="see-also"></a>Vea también  
  [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
  [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [sp_helpserver & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

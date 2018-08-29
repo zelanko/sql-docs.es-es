@@ -1,5 +1,5 @@
 ---
-title: sp_describe_cursor_tables (Transact-SQL) | Documentos de Microsoft
+title: sp_describe_cursor_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_describe_cursor_tables
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 767cf7be622e557f78e207cfc8fecb9c4b0707e9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ea3ceaa425321202c14c3df6f1d2c225a7ec16b7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261874"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038838"
 ---
 # <a name="spdescribecursortables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,16 +54,16 @@ sp_describe_cursor_tables
   
 ## <a name="arguments"></a>Argumentos  
  [ @cursor_return=] *output_cursor_variable*salida  
- Es el nombre de una variable de cursor declarada que recibirá la salida del cursor. *output_cursor_variable* es **cursor**, no tiene ningún valor predeterminado y debe no ser asociado a ningún cursor en el momento en que se llama a sp_describe_cursor_tables. El cursor devuelto es un cursor desplazable, dinámico y de solo lectura.  
+ Es el nombre de una variable de cursor declarada que recibirá la salida del cursor. *output_cursor_variable* es **cursor**, no tiene ningún valor predeterminado y debe no ser asociada a ningún cursor en el momento en que se llama a sp_describe_cursor_tables. El cursor devuelto es un cursor desplazable, dinámico y de solo lectura.  
   
  [ @cursor_source=] {N ' | N'global' | N'variable'}  
  Especifica si el cursor del que se informa está especificado con el nombre de un cursor local, un cursor global o una variable de cursor. El parámetro es **nvarchar (30)**.  
   
  [ @cursor_identity=] N'*local_cursor_name*'  
- El nombre de un cursor creado por una instrucción DECLARE CURSOR que tiene la palabra clave LOCAL o que su valor predeterminado LOCAL. *local_cursor_name* es **nvarchar (128)**.  
+ El nombre de un cursor creado por una instrucción DECLARE CURSOR que tiene la palabra clave LOCAL, o que su valor predeterminado LOCAL. *local_cursor_name* es **nvarchar (128)**.  
   
  [ @cursor_identity=] N'*global_cursor_name*'  
- Es el nombre de un cursor creado por una instrucción DECLARE CURSOR que tiene la palabra clave GLOBAL u obtuvo el valor predeterminado GLOBAL. *global_cursor_name* también puede ser el nombre de un cursor de servidor API abierto por una aplicación ODBC que, a continuación, dio nombre al cursor mediante una llamada a SQLSetCursorName. *global_cursor_name* es **nvarchar (128)**.  
+ Es el nombre de un cursor creado por una instrucción DECLARE CURSOR que tiene la palabra clave GLOBAL u obtuvo el valor predeterminado GLOBAL. *global_cursor_name* también puede ser el nombre de un cursor de servidor de API abierto por una aplicación ODBC que, a continuación, dio nombre al cursor mediante una llamada a SQLSetCursorName. *global_cursor_name* es **nvarchar (128)**.  
   
  [ @cursor_identity=] N'*input_cursor_variable*'  
  Es el nombre de una variable de cursor asociada a un cursor abierto. *input_cursor_variable* es **nvarchar (128)**.  
@@ -76,7 +76,7 @@ sp_describe_cursor_tables
   
  En la tabla siguiente se muestra el formato del cursor devuelto por sp_describe_cursor_tables.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |table owner|**sysname**|Id. de usuario del propietario de la tabla.|  
 |Table_name|**sysname**|Nombre del objeto o tabla base. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los cursores de servidor siempre devuelven el objeto especificado por el usuario, no las tablas base.|  
@@ -85,12 +85,12 @@ sp_describe_cursor_tables
 |server_name|**sysname, que acepta valores null**|Nombre del servidor vinculado en el que reside la tabla. NULL cuando se utiliza OPENQUERY u OPENROWSET.|  
 |Objectid|**int**|Id. de objeto de la tabla. 0 cuando se utiliza OPENQUERY u OPENROWSET.|  
 |dbid|**int**|Identificador de la base de datos en la que reside la tabla. 0 cuando se utiliza OPENQUERY u OPENROWSET.|  
-|dbname|**sysname**, **que aceptan valores null**|Nombre de la base de datos en la que reside la tabla. NULL cuando se utiliza OPENQUERY u OPENROWSET.|  
+|dbname|**sysname**, **que acepta valores null**|Nombre de la base de datos en la que reside la tabla. NULL cuando se utiliza OPENQUERY u OPENROWSET.|  
   
-## <a name="remarks"></a>Comentarios  
- sp_describe_cursor_tables describe las tablas base a las que hace referencia un cursor de servidor. Utilice sp_describe_cursor_columns para obtener una descripción de los atributos del conjunto de resultados devuelto por el cursor. Para obtener una descripción de las características globales del cursor, como por ejemplo sus posibilidades de desplazamiento y actualización, use sp_describe_cursor. Para obtener un informe de la [!INCLUDE[tsql](../../includes/tsql-md.md)] cursores de servidor que están visibles en la conexión, use sp_cursor_list.  
+## <a name="remarks"></a>Notas  
+ sp_describe_cursor_tables describe las tablas base a las que hace referencia un cursor de servidor. Utilice sp_describe_cursor_columns para obtener una descripción de los atributos del conjunto de resultados devuelto por el cursor. Para obtener una descripción de las características globales del cursor, como por ejemplo sus posibilidades de desplazamiento y actualización, use sp_describe_cursor. Para obtener un informe de la [!INCLUDE[tsql](../../includes/tsql-md.md)] los cursores de servidor que están visibles en la conexión, use sp_cursor_list.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol public.  
   
 ## <a name="examples"></a>Ejemplos  

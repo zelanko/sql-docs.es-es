@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_primary_secondary (Transact-SQL) | Documentos de Microsoft
+title: sp_help_log_shipping_primary_secondary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_primary_secondary
 ms.assetid: bc0044b4-7831-4ff9-8856-825c76aa9893
-caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 378e343b0fd7a699c9455676dc1e4f5a5f2d25e5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 43880bb1fac1de9fb9d8657f5fcc143cf96645f3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250409"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022165"
 ---
 # <a name="sphelplogshippingprimarysecondary-transact-sql"></a>sp_help_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,19 +52,19 @@ sp_help_log_shipping_primary_secondary
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Description|  
+|Nombre de columna|Descripción|  
 |-----------------|-----------------|  
 |**secondary_server**|El nombre de la instancia secundaria de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la configuración de trasvase de registros.|  
 |**secondary_database**|Nombre de la base de datos secundaria en la configuración del trasvase de registros.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_help_log_shipping_primary_secondary** se debe ejecutar desde la **maestro** base de datos en el servidor principal.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
- En este ejemplo se muestra cómo utilizar **sp_help_log_shipping_primary_secondary** para recuperar una lista de base de datos secundaria se asocie las bases de datos con la base de datos principal [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ En este ejemplo se muestra cómo utilizar **sp_help_log_shipping_primary_secondary** para recuperar una lista de la base de datos secundaria bases de datos asociación con la base de datos principal [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  
 EXECUTE master.dbo.sp_help_log_shipping_primary_secondary @primary_database=N'AdventureWorks';  
@@ -73,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Acerca del trasvase de registros & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

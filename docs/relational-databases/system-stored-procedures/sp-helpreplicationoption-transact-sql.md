@@ -1,5 +1,5 @@
 ---
-title: sp_helpreplicationoption (Transact-SQL) | Documentos de Microsoft
+title: sp_helpreplicationoption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpreplicationoption
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 462d7532b3f5eefe7d933cd4801ee45cfc028d04
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8cefbf375ec5e952f2c3c69d7cc0b934c9f5757b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994982"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020440"
 ---
 # <a name="sphelpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,30 +48,30 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
  [  **@optname =**] **'***option_name***'**  
  Es el nombre de la opción de replicación que se va a consultar. *option_name* es **sysname**, su valor predeterminado es null.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Transaccional**|Se devuelve un conjunto de resultados cuando se habilita la replicación transaccional.|  
-|**Combinar**|Se devuelve un conjunto de resultados cuando se habilita la replicación de mezcla.|  
+|**fusión mediante combinación**|Se devuelve un conjunto de resultados cuando se habilita la replicación de mezcla.|  
 |NULL (predeterminado)|No se devuelve ningún conjunto de resultados.|  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**optname**|**sysname**|Es el nombre de la opción de replicación y puede ser uno de los valores siguientes:<br /><br /> **Transaccional**<br /><br /> **Combinar**|  
-|**value**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**optname**|**sysname**|Es el nombre de la opción de replicación y puede ser uno de los valores siguientes:<br /><br /> **Transaccional**<br /><br /> **fusión mediante combinación**|  
+|**Valor**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**versión_principal**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**versión_secundaria**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**Revisión**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**revisión**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**install_failures**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
- **sp_helpreplicationoption** se utiliza para obtener información acerca de las opciones de replicación habilitada en un servidor determinado. Para obtener información sobre una base de datos determinado, use **sp_helpreplicationdboption**.  
+## <a name="remarks"></a>Notas  
+ **sp_helpreplicationoption** se utiliza para obtener información acerca de las opciones de replicación habilitada en un servidor determinado. Para obtener información sobre una determinada base de datos, use **sp_helpreplicationdboption**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, los permisos de ejecución corresponden al rol **public** .  
   
 ## <a name="see-also"></a>Vea también  

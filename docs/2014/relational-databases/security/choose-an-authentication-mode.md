@@ -22,16 +22,15 @@ helpviewer_keywords:
 - mixed authentication mode
 - SQL authentication mode
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
-caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 513a28480fbcd3c664b090ddcd68ebc0aa9df308
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 226a36b90d14e6a24ca651bec5ffee0688e6aaa9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155926"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019534"
 ---
 # <a name="choose-an-authentication-mode"></a>Elegir un modo de autenticación
   Durante la instalación, debe seleccionar un modo de autenticación para [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Hay dos modos posibles: modo de autenticación de Windows y modo mixto. El modo de autenticación de Windows habilita la autenticación de Windows y deshabilita la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El modo mixto habilita tanto la autenticación de Windows como la de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La autenticación de Windows está disponible siempre y no se puede deshabilitar.  

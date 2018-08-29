@@ -1,5 +1,5 @@
 ---
-title: sp_invalidate_textptr (Transact-SQL) | Documentos de Microsoft
+title: sp_invalidate_textptr (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_invalidate_textptr
 ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d9f490e3ce135e0baf503dc044be702770fe44f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a3822cc5d7ec4d346c70d717c58d4f0dc391f177
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251524"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019710"
 ---
 # <a name="spinvalidatetextptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Invalida el puntero de texto consecutivo especificado en la transacción, o todos ellos. **sp_invalidate_textptr** puede usarse solo en punteros de texto en fila. Estos punteros son de tablas que tienen la **texto de fila** opción habilitada.  
+  Invalida el puntero de texto consecutivo especificado en la transacción, o todos ellos. **sp_invalidate_textptr** puede usarse solo en punteros de texto consecutivos. Estos punteros son de tablas que tienen el **texto en fila** opción habilitada.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,18 +50,18 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite un máximo de 1.024 punteros de texto consecutivos activos y válidos por transacción y base de datos; sin embargo, una transacción que comprenda más de una base de datos puede disponer de 1.024 punteros de texto consecutivos en cada una. **sp_invalidate_textptr** puede utilizarse para invalidar los punteros de texto de fila y, por lo tanto, liberar más espacio para los punteros de texto en fila adicional.  
+## <a name="remarks"></a>Notas  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite un máximo de 1.024 punteros de texto consecutivos activos y válidos por transacción y base de datos; sin embargo, una transacción que comprenda más de una base de datos puede disponer de 1.024 punteros de texto consecutivos en cada una. **sp_invalidate_textptr** puede utilizarse para invalidar los punteros de texto consecutivos y, por lo tanto, liberar más espacio para los punteros de texto en fila adicional.  
   
  Para obtener más información acerca de la opción text in row, vea [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_tableoption & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
+ [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
  [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
  [TEXTVALID &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textvalid-transact-sql.md)  
   

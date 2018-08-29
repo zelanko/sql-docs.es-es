@@ -14,12 +14,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a253f000a31b939308b17e408f177ce721ef76c0
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: f39566af4b5fce341e37f991cfb1a67507dd0c7a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661637"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786537"
 ---
 # <a name="using-auto-generated-keys"></a>Usar claves generadas automáticamente
 
@@ -27,7 +27,7 @@ ms.locfileid: "39661637"
 
 El [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] admite las API de JDBC 3.0 opcionales para recuperar los identificadores de fila generados automáticamente. El valor principal de esta característica es proporcionar un método de modo que los valores IDENTITY estén disponibles para la aplicación que actualiza la tabla de base de datos sin necesidad de una consulta y un segundo ciclo de ida y vuelta en el servidor.
 
-Dado que [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] no admite seudocolumnas para los identificadores, las actualizaciones en las que se debe usar la característica de clave generada automáticamente deben funcionar en una tabla que contenga una columna IDENTITY. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] solo permite una única columna IDENTITY por tabla. El conjunto de resultados devuelto por el método [getGeneratedKeys](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md) de la clase [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) contiene tan solo una columna y se devuelve el nombre de columna GENERATED_KEYS. Si las claves generadas se solicitan en una tabla que no contiene la columna IDENTITY, el controlador JDBC devuelve un conjunto de resultados con valores nulos.
+Dado que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite seudocolumnas para los identificadores, las actualizaciones en las que se debe usar la característica de clave generada automáticamente deben funcionar en una tabla que contenga una columna IDENTITY. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo permite una única columna IDENTITY por tabla. El conjunto de resultados devuelto por el método [getGeneratedKeys](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md) de la clase [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) contiene tan solo una columna y se devuelve el nombre de columna GENERATED_KEYS. Si las claves generadas se solicitan en una tabla que no contiene la columna IDENTITY, el controlador JDBC devuelve un conjunto de resultados con valores nulos.
 
 A modo de ejemplo, cree la siguiente tabla en la base de datos de ejemplo de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:
 

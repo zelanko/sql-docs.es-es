@@ -14,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Audit
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
-caps.latest.revision: 55
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d684a808a2bb6c8c9aa23c6dce969acb933c44db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8debb182069b7294f1fb8027c072a3fb720b62c8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238785"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022073"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (motor de base de datos)
   La*auditoría* de una instancia de [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] o de una base de datos individual implica el seguimiento y registro de los eventos que se producen en [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. La auditoría de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite crear auditorías de servidor, que pueden contener especificaciones de auditoría de servidor para los eventos de servidor, y especificaciones de auditoría de base de datos para los eventos de base de datos. Los eventos auditados se pueden escribir en los registros de eventos o en los archivos de auditoría.  

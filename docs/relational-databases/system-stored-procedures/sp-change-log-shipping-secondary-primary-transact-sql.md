@@ -1,5 +1,5 @@
 ---
-title: sp_change_log_shipping_secondary_primary (Transact-SQL) | Documentos de Microsoft
+title: sp_change_log_shipping_secondary_primary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_change_log_shipping_secondary_primary
 ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 caps.latest.revision: 17
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 499c95fc980bd6e8d996b14c47907b814cbb94aa
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 284aca27c2c75cb23d489e915acf1ef48a082c7a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240005"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019491"
 ---
 # <a name="spchangelogshippingsecondaryprimary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,14 +65,14 @@ sp_change_log_shipping_secondary_primary
  Directorio del servidor secundario donde se copian los archivos de copia de seguridad. *backup_destination_directory* es **nvarchar (500)** y no puede ser NULL.  
   
  [ **@file_retention_period** =] '*file_retention_period*'  
- Es la cantidad de tiempo en minutos durante la que se retendrá el historial. *history_retention_period* es **int**, su valor predeterminado es null. Si no se especifica ninguno, se usará un valor de 14420.  
+ Es la cantidad de tiempo en minutos durante la que se retendrá el historial. *history_retention_period* es **int**, su valor predeterminado es null. Si se especifica ninguno, se usará un valor de 14420.  
   
  [ **@monitor_server_security_mode** =] '*monitor_server_security_mode*'  
  Modo de seguridad utilizado para conectarse al servidor de supervisión.  
   
  1 = Autenticación de Windows;  
   
- 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. *monitor_server_security_mode* es **bits** y no puede ser NULL.  
+ 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. *monitor_server_security_mode* es **bit** y no puede ser NULL.  
   
  [ **@monitor_server_login** =] '*monitor_server_login*'  
  Es el nombre de usuario de la cuenta utilizada para tener acceso al servidor de supervisión.  
@@ -86,18 +86,18 @@ sp_change_log_shipping_secondary_primary
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_change_log_shipping_secondary_primary** se debe ejecutar desde la **maestro** base de datos en el servidor secundario. Este procedimiento almacenado hace lo siguiente:  
   
 1.  Cambia la configuración de la **log_shipping_secondary** registra según sea necesario.  
   
-2.  Si el servidor de supervisión es diferente del servidor secundario, cambios de registro de supervisión de **log_shipping_monitor_secondary** en el monitor de servidor con los argumentos proporcionados, si es necesario.  
+2.  Si el servidor de supervisión es diferente del servidor secundario, los cambios de registro de supervisión de **log_shipping_monitor_secondary** en el monitor de servidor con los argumentos proporcionados, si es necesario.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento.  
   
 ## <a name="see-also"></a>Vea también  
- [Acerca del trasvase de registros & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

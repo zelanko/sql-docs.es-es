@@ -1,5 +1,5 @@
 ---
-title: sp_cursorprepexec (Transact-SQL) | Documentos de Microsoft
+title: sp_cursorprepexec (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_cursorprepexec
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 378a389780e8af6ed966c4e0757352b16fbc0dd1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 175971e37ad9977af11bbf76e4753b525943a982
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240385"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021423"
 ---
 # <a name="spcursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +46,16 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
   
 ## <a name="arguments"></a>Argumentos  
  *identificador preparado*  
- Es un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera preparado *controlar* identificador. *identificador preparado* es necesario y devuelve **int**.  
+ Es un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generado preparado *controlar* identificador. *identificador preparado* es necesario y devuelve **int**.  
   
  *cursor*  
  Es el identificador de cursor generado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *cursor* es un parámetro necesario que se debe proporcionar en todos los procedimientos subsiguientes que actúen en este cursor, por ejemplo sp_cursorfetch.  
   
- *Params*  
+ *params*  
  Identifica instrucciones con parámetros. El *params* definición de las variables se sustituye por marcadores de parámetros en la instrucción. *params* es un parámetro necesario que requiere un **ntext**, **nchar**, o **nvarchar** valor de entrada.  
   
 > [!NOTE]  
->  Use un **ntext** cadena como entrada de valor cuando *stmt* tiene parámetros y la *scrollopt* valor PARAMETERIZED_STMT es ON.  
+>  Use un **ntext** cadena como entrada valor cuando *stmt* tiene parámetros y el *scrollopt* valor PARAMETERIZED_STMT es ON.  
   
  *instrucción*  
  Define el conjunto de resultados del cursor. El *instrucción* parámetro es necesario y requiere un **ntext**, **nchar** o **nvarchar** valor de entrada.  
@@ -66,14 +66,14 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *options*  
  Parámetro opcional que devuelve una descripción de las columnas del conjunto de resultados del cursor. *Opciones de* requiere lo siguiente **int** valor de entrada.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  Opción de desplazamiento. *scrollopt* es un parámetro opcional que requiere uno de los siguientes **int** valores de entrada.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -95,7 +95,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *ccopt*  
  Opción de control de simultaneidad. *ccopt* es un parámetro opcional que requiere uno de los siguientes **int** valores de entrada.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (conocido anteriormente como LOCKCC)|  
@@ -109,7 +109,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- Al igual que con *scrollpt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede asignar un valor diferente de la solicitada.  
+ Igual que con *scrollpt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede asignar un valor diferente al solicitado.  
   
  *recuento de filas*  
  Es un parámetro opcional que indica el número de filas del búfer de captura que se van a usar con AUTO_FETCH. El valor predeterminado es 20 filas. *recuento de filas* tiene un comportamiento diferente cuando se asigna como un valor de entrada frente a un valor devuelto.  

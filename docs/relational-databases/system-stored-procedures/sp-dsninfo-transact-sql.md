@@ -1,5 +1,5 @@
 ---
-title: sp_dsninfo (Transact-SQL) | Documentos de Microsoft
+title: sp_dsninfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dsninfo
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a9c04611a342f81b6aa0a0b403eb6ff4ce8a643
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 63e4783420f9298e2e820341993774b81bbab7e3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992582"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017498"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,9 +53,9 @@ sp_dsninfo [ @dsn =] 'dsn'
  Es el nombre del DSN ODBC o del servidor vinculado OLE DB. *DSN* es **varchar (128)**, no tiene ningún valor predeterminado.  
   
  [  **@infotype =**] **'***tipo_de_info***'**  
- Es el tipo de información que se va a devolver. Si *tipo_de_info* no se especifica o si se especifica NULL, se devuelven todos los tipos de información. *tipo_de_info* es **varchar (128)**, su valor predeterminado es null y puede tener uno de estos valores.  
+ Es el tipo de información que se va a devolver. Si *tipo_de_info* no se especifica o si se especifica NULL, se devuelven todos los tipos de información. *tipo_de_info* es **varchar (128)**, su valor predeterminado es null, y puede tener uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**DBMS_NAME**|Especifica el nombre del proveedor del origen de datos.|  
 |**DBMS_VERSION**|Especifica la versión del origen de datos.|  
@@ -71,7 +71,7 @@ sp_dsninfo [ @dsn =] 'dsn'
  [  **@dso_type=**] *dso_type*  
  Es el tipo del origen de datos. *dso_type* es **int**, y puede tener uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1** (predeterminado)|Origen de datos ODBC|  
 |**3**|Origen de datos OLE DB|  
@@ -81,17 +81,17 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Tipo de información**|**nvarchar(64)**|Tipos de información, como DBMS_NAME, DBMS_VERSION, DATABASE_NAME o SQL_SUBSCRIBER.|  
+|**Tipo de información**|**Nvarchar (64)**|Tipos de información, como DBMS_NAME, DBMS_VERSION, DATABASE_NAME o SQL_SUBSCRIBER.|  
 |**Valor**|**nvarchar(512)**|Valor del tipo de información asociado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_dsninfo** se utiliza en todos los tipos de replicación.  
   
- **sp_dsninfo** recupera ODBC u OLE DB información de origen de datos que muestra si la base de datos puede utilizarse para la replicación o la consulta.  
+ **sp_dsninfo** recupera información origen de datos ODBC u OLE DB que se muestra si se puede usar la base de datos para replicación o consultas.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_dsninfo**.  
   
 ## <a name="see-also"></a>Vea también  

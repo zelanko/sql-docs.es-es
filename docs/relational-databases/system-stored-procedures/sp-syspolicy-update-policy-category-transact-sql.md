@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_update_policy_category (Transact-SQL) | Documentos de Microsoft
+title: sp_syspolicy_update_policy_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_update_policy_category
 ms.assetid: 6b6413c2-7a3b-4eff-91d9-5db2011869d6
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1c90839aff5de8d9f1a93efc10321fe162394f51
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 73e7eee22127c7b2e928004f997eac6b80dbddfd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256157"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035338"
 ---
 # <a name="spsyspolicyupdatepolicycategory-transact-sql"></a>sp_syspolicy_update_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_syspolicy_update_policy_category { [ @name = ] 'name' | [ @policy_category_id
  Es el identificador de la categoría de directiva. *policy_category_id* es **int**y debe especificarse si *nombre* es NULL.  
   
  [  **@mandate_database_subscriptions=** ] *mandate_database_subscriptions*  
- Determina si la suscripción de la base de datos está asignada para la categoría de directiva. *mandate_database_subscriptions* es un **bits** , y su valor predeterminado es null. Puede usar alguno de los valores siguientes:  
+ Determina si la suscripción de la base de datos está asignada para la categoría de directiva. *mandate_database_subscriptions* es un **bit** valor, su valor predeterminado es null. Puede usar alguno de los valores siguientes:  
   
 -   0 = no asignado  
   
@@ -61,12 +60,12 @@ sp_syspolicy_update_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Debe ejecutar sp_syspolicy_update_policy_category en el contexto de la base de datos del sistema msdb.  
   
  Debe especificar un valor para *nombre* o para *policy_category_id*. Ambos no pueden ser NULL. Para obtener estos valores, consulte la vista del sistema msdb.dbo.syspolicy_policy_categories.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de base de datos PolicyAdministratorRole.  
   
 > [!IMPORTANT]  

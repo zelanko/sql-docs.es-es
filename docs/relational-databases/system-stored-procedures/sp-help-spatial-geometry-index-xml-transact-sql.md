@@ -1,5 +1,5 @@
 ---
-title: sp_help_spatial_geometry_index_xml (Transact-SQL) | Documentos de Microsoft
+title: sp_help_spatial_geometry_index_xml (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_spatial_geometry_index_xml procedure
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
-caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b1c602c48071122b7f77613b56f251895619ad08
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1a166589b4544cf38709736ef45d30e383531d8e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259175"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036106"
 ---
 # <a name="sphelpspatialgeometryindexxml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve los nombres y valores para un conjunto específico de propiedades sobre un **geometry** índice espacial. Puede decidir devolver un conjunto básico de propiedades o todas las propiedades del índice.  
+  Devuelve los nombres y valores para un conjunto especificado de propiedades sobre un **geometría** índice espacial. Puede decidir devolver un conjunto básico de propiedades o todas las propiedades del índice.  
   
  Los resultados se devuelven en un fragmento XML que muestra el nombre y valor de las propiedades seleccionadas.  
   
@@ -50,21 +49,21 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- Vea [procedimientos almacenan de argumentos y las propiedades del índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ Consulte [procedimientos almacenan de argumentos y propiedades de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="properties"></a>Propiedades  
- Vea [procedimientos almacenan de argumentos y las propiedades del índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ Consulte [procedimientos almacenan de argumentos y propiedades de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
-## <a name="permissions"></a>Permissions  
- Usuario debe ser un miembro de la **público** rol. Requiere el permiso READ ACCESS en el servidor y el objeto.  
+## <a name="permissions"></a>Permisos  
+ Usuario debe ser un miembro de la **pública** rol. Requiere el permiso READ ACCESS en el servidor y el objeto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Las propiedades que contienen valores NULL están incluidas en el conjunto XML que se devuelve.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se utiliza `sp_help_spatial_geometry_index_xml` para investigar el índice espacial **SIndx_SpatialTable_geometry_col2** definido en la tabla **geometry_col** para el ejemplo de consulta determinado en **@qs**. En este ejemplo se devuelven las propiedades básicas del índice especificado en un fragmento XML que muestra el nombre y valor de las propiedades seleccionadas.  
+ En el ejemplo siguiente se usa `sp_help_spatial_geometry_index_xml` para investigar el índice espacial **SIndx_SpatialTable_geometry_col2** definido en la tabla **geometry_col** para el ejemplo de consulta determinado en **@qs**. En este ejemplo se devuelven las propiedades básicas del índice especificado en un fragmento XML que muestra el nombre y valor de las propiedades seleccionadas.  
   
- Un [XQuery](../../xquery/xquery-basics.md) , a continuación, se ejecuta en el conjunto de resultados, devolver una propiedad concreta.  
+ Un [XQuery](../../xquery/xquery-basics.md) , a continuación, se ejecuta en el conjunto de resultados que devuelve una propiedad concreta.  
   
 ```  
 DECLARE @qs geometry  
@@ -79,7 +78,7 @@ SELECT @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
 ## <a name="requirements"></a>Requisitos  
   
 ## <a name="see-also"></a>Vea también  
- [Procedimientos almacenados de índice de argumentos y las propiedades de espaciales](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)   
+ [Procedimientos almacenados de índice de argumentos y propiedades de espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)   
  [Procedimientos almacenados de índice espacial](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)   

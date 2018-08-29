@@ -14,26 +14,26 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 819a1a2a3a5203d8f706cba5a2daad2d83e835cf
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: d0a4d3409d9d87bfaca810405e542130a90a471b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661777"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787915"
 ---
 # <a name="using-adaptive-buffering"></a>Usar el almacenamiento en búfer adaptable
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-El almacenamiento en búfer adaptable está diseñado para recuperar cualquier tipo de datos de valores grandes sin sufrir la sobrecarga de los cursores de servidor. Las aplicaciones pueden usar la característica de almacenamiento en búfer adaptable con todas las versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que son compatibles con el controlador.
+El almacenamiento en búfer adaptable está diseñado para recuperar cualquier tipo de datos de valores grandes sin sufrir la sobrecarga de los cursores de servidor. Las aplicaciones pueden usar la característica de almacenamiento en búfer adaptable con todas las versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que son compatibles con el controlador.
 
-Normalmente, cuando el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ejecuta una consulta, lleva todos los resultados del servidor a la memoria de la aplicación. Aunque este enfoque reduce el uso de recursos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], puede iniciar un OutOfMemoryError en la aplicación JDBC para las consultas que producen resultados muy grandes.
+Normalmente, cuando el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ejecuta una consulta, lleva todos los resultados del servidor a la memoria de la aplicación. Aunque este enfoque reduce el uso de recursos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede iniciar un OutOfMemoryError en la aplicación JDBC para las consultas que producen resultados muy grandes.
 
-Para permitir que las aplicaciones administren resultados muy grandes, el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] proporciona almacenamiento en búfer adaptable. Con el almacenamiento en búfer adaptable, el controlador recupera los resultados de la ejecución de una instrucción de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] a medida que la aplicación los necesita, en lugar de todos a la vez. El controlador también descarta los resultados en cuanto la aplicación ya no puede tener acceso a ellos. Se incluyen a continuación algunos ejemplos en los que el almacenamiento en búfer adaptable puede ser útil:
+Para permitir que las aplicaciones administren resultados muy grandes, el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] proporciona almacenamiento en búfer adaptable. Con el almacenamiento en búfer adaptable, el controlador recupera los resultados de la ejecución de una instrucción de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a medida que la aplicación los necesita, en lugar de todos a la vez. El controlador también descarta los resultados en cuanto la aplicación ya no puede tener acceso a ellos. Se incluyen a continuación algunos ejemplos en los que el almacenamiento en búfer adaptable puede ser útil:
 
 - **La consulta genera un conjunto de resultados muy grandes:** la aplicación puede ejecutar una instrucción SELECT que genera más filas de la aplicación puede almacenar en memoria. En las versiones anteriores, la aplicación tenía que utilizar un cursor de servidor para evitar un OutOfMemoryError. El almacenamiento en búfer adaptable permite hacer un paso de solo lectura y solo avance de un conjunto de resultados arbitrariamente grande sin requerir un cursor de servidor.
 
-- **La consulta genera columnas grandes** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **columnas o** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **los valores de parámetro:** La aplicación puede recuperar un valor único (columna o parámetro de salida) que es demasiado grande para que quepa completamente en memoria de la aplicación. Almacenamiento en búfer adaptable permite a la aplicación cliente recuperar este valor como una secuencia, utilizando el getAsciiStream, el getBinaryStream o los métodos getCharacterStream. La aplicación recupera el valor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] cuando lee del flujo.
+- **La consulta genera columnas grandes** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **columnas o** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **los valores de parámetro:** La aplicación puede recuperar un valor único (columna o parámetro de salida) que es demasiado grande para que quepa completamente en memoria de la aplicación. Almacenamiento en búfer adaptable permite a la aplicación cliente recuperar este valor como una secuencia, utilizando el getAsciiStream, el getBinaryStream o los métodos getCharacterStream. La aplicación recupera el valor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando lee del flujo.
 
 > [!NOTE]  
 > Con el almacenamiento en búfer adaptable, el controlador JDBC solamente almacena en búfer las cantidad de datos que debe almacenar. El controlador no proporciona un método público para controlar o limitar el tamaño del búfer.
@@ -56,7 +56,7 @@ Pero, con la versión 2.0 del controlador JDBC, las aplicaciones pueden usar el 
 
 ## <a name="retrieving-large-data-with-adaptive-buffering"></a>Recuperar datos grandes con el almacenamiento en búfer adaptable
 
-Cuando se leen valores grandes una vez con los métodos get\<Type>Stream y se tiene acceso a las columnas ResultSet y a los parámetros OUT CallableStatement en el orden que devuelve [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], el almacenamiento en búfer adaptable reduce la utilización de memoria de la aplicación al procesar los resultados. Al utilizar el almacenamiento en búfer adaptable:
+Cuando se leen valores grandes una vez con los métodos get\<Type>Stream y se tiene acceso a las columnas ResultSet y a los parámetros OUT CallableStatement en el orden que devuelve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el almacenamiento en búfer adaptable reduce la utilización de memoria de la aplicación al procesar los resultados. Al utilizar el almacenamiento en búfer adaptable:
 
 - Los métodos get\<Type>Stream definidos en las clases [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) y [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) devuelven secuencias de una sola lectura de forma predeterminada, aunque se pueden restablecer las secuencias si lo determina la aplicación. Si la aplicación quiere `reset` el flujo, tiene que llamar primero al método `mark` en ese flujo.
 
@@ -83,7 +83,7 @@ Los desarrolladores de software deberían seguir estas importantes directrices p
 
 - Hay algunos casos donde se usan **selectMethod = cursor** en lugar de **responseBuffering = adaptive** sería más beneficioso, como:
 
-  - Si su aplicación procesa solo avance, solo lectura conjunto de resultados lentamente, como la lectura de cada fila después de alguna intervención del usuario, mediante **selectMethod = cursor** en lugar de **responseBuffering = adaptive** podría ayudar a reducir el uso de recursos por [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].
+  - Si su aplicación procesa solo avance, solo lectura conjunto de resultados lentamente, como la lectura de cada fila después de alguna intervención del usuario, mediante **selectMethod = cursor** en lugar de **responseBuffering = adaptive** podría ayudar a reducir el uso de recursos por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
   - Si la aplicación procesa dos o más conjuntos de resultados de solo avance y solo lectura al mismo tiempo en la misma conexión, utilizar **selectMethod=cursor** en lugar de **responseBuffering=adaptive** podría ayudar a reducir la memoria necesaria para el controlador mientras procesa estos conjuntos de resultados.
 

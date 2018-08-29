@@ -1,5 +1,5 @@
 ---
-title: sp_linkedservers (Transact-SQL) | Documentos de Microsoft
+title: sp_linkedservers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_linkedservers
 ms.assetid: d8f82f78-8a1f-4831-bcee-7c36c6e7dfbb
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 58c827d61009f2c4be3ba86f2a12f49c3eb178ff
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 009131848d6e9cf942737ddc54c3d1b00f6e1163
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252677"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038168"
 ---
 # <a name="splinkedservers-transact-sql"></a>sp_linkedservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_linkedservers
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**SRV_NAME**|**sysname**|Nombre del servidor vinculado.|  
 |**SRV_PROVIDERNAME**|**nvarchar (** 128 **)**|Nombre descriptivo del proveedor OLE DB que administra el acceso al servidor vinculado especificado.|  
@@ -58,7 +58,7 @@ sp_linkedservers
 |**SRV_LOCATION**|**nvarchar (** 4000 **)**|Propiedad de ubicación de OLE DB correspondiente al servidor vinculado especificado.|  
 |**SRV_CAT**|**sysname**|Propiedad de catálogo de OLE DB correspondiente al servidor vinculado especificado.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  
   
 ## <a name="see-also"></a>Vea también  

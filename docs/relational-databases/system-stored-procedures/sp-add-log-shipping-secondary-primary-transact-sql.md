@@ -1,5 +1,5 @@
 ---
-title: sp_add_log_shipping_secondary_primary (Transact-SQL) | Documentos de Microsoft
+title: sp_add_log_shipping_secondary_primary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_secondary_primary
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
-caps.latest.revision: 19
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f4f5ef8c72155b83595f04c92cdeb2c1cf16a34
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 40e4e8e4ab9603648abe6f92ae99a287755390a8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239215"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019945"
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,10 +73,10 @@ sp_add_log_shipping_secondary_primary
  Nombre que se usará para el trabajo del agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se va a crear para copiar las copias de seguridad del registro de transacciones en el servidor secundario. *copy_job_name* es **sysname** y no puede ser NULL.  
   
  [ **@restore_job_name** =] '*restore_job_name*'  
- Es el nombre de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente en el servidor secundario que restaura las copias de seguridad en la base de datos secundaria. *restore_job_name* es **sysname** y no puede ser NULL.  
+ Es el nombre de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente en el servidor secundario que restaura las copias de seguridad a la base de datos secundaria. *restore_job_name* es **sysname** y no puede ser NULL.  
   
  [ **@file_retention_period** =] '*file_retention_period*'  
- El período de tiempo, en minutos, que un archivo de copia de seguridad se retiene en el servidor secundario en la ruta especificada por el @backup_destination_directory parámetro antes de ser eliminados. *history_retention_period* es **int**, su valor predeterminado es null. Si no se especifica ninguno, se usará un valor de 14420.  
+ El período de tiempo, en minutos, que se conserva un archivo de copia de seguridad en el servidor secundario en la ruta de acceso especificada por el @backup_destination_directory parámetro antes de eliminarse. *history_retention_period* es **int**, su valor predeterminado es null. Si se especifica ninguno, se usará un valor de 14420.  
   
  [ **@monitor_server** =] '*monitor_server*'  
  Es el nombre del servidor de supervisión. *Monitor_server* es **sysname**, no tiene ningún valor predeterminado, y no puede ser NULL.  
@@ -89,7 +88,7 @@ sp_add_log_shipping_secondary_primary
   
  0 = Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *monitor_server_security_mode* es **bits** y no puede ser NULL.  
+ *monitor_server_security_mode* es **bit** y no puede ser NULL.  
   
  [ **@monitor_server_login** =] '*monitor_server_login*'  
  Es el nombre de usuario de la cuenta utilizada para tener acceso al servidor de supervisión.  
@@ -112,24 +111,24 @@ sp_add_log_shipping_secondary_primary
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_add_log_shipping_secondary_primary** se debe ejecutar desde la **maestro** base de datos en el servidor secundario. Este procedimiento almacenado hace lo siguiente:  
   
 1.  Genera un Id. secundario para el servidor principal y la base de datos principal especificados.  
   
-2.  Hace lo siguiente:  
+2.  ocurre lo siguiente:  
   
-    1.  Agrega una entrada para el Id. secundario en **log_shipping_secondary** con los argumentos proporcionados.  
+    1.  Agrega una entrada para el Id. secundario en **log_shipping_secondary** utilizando los argumentos proporcionados.  
   
     2.  Crea un trabajo de copia para el Id. secundario que está deshabilitado.  
   
-    3.  Establece el identificador de trabajo de copia de la **log_shipping_secondary** entrada para el Id. de trabajo del trabajo de copia.  
+    3.  Establece el identificador de trabajo de copia en el **log_shipping_secondary** entrada para el Id. de trabajo del trabajo de copia.  
   
     4.  Crea un trabajo de restauración para el Id. secundario que está deshabilitado.  
   
     5.  Establecer el Id. de trabajo de restauración en el **log_shipping_secondary** entrada para el Id. de trabajo del trabajo de restauración.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -153,7 +152,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Acerca del trasvase de registros & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

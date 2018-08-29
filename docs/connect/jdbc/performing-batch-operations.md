@@ -14,24 +14,24 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c668dabd9b9a1957ffb69d034a59cc8df1cc4025
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: 39596d1bc481005606a7442d755b3cc9a1ec668b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279020"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787446"
 ---
 # <a name="performing-batch-operations"></a>Realizar operaciones por lotes
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Con el fin de aumentar el rendimiento al realizar varias actualizaciones en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ofrece la posibilidad de enviar varias actualizaciones como una sola unidad de trabajo, denominada también lote.  
+  Con el fin de aumentar el rendimiento al realizar varias actualizaciones en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ofrece la posibilidad de enviar varias actualizaciones como una sola unidad de trabajo, denominada también lote.  
   
  Las clases [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) y [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) se pueden usar para enviar actualizaciones por lotes. El método [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) se usa para agregar un comando. El método [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) se usa para borrar la lista de comandos. El método [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) se usa para enviar todos los comandos para su procesamiento. Tan solo las instrucciones de lenguaje de definición de datos (DDL) y lenguaje de manipulación de datos (DML) que devuelven un recuento de actualizaciones sencillo se pueden ejecutar como parte de un lote.  
   
  El método executeBatch devuelve una matriz de valores **int** que se corresponde con el recuento de actualizaciones de cada comando. Si se produce un error en uno de los comandos, se produce un BatchUpdateException y debe usar el método getUpdateCounts de la clase BatchUpdateException para recuperar la matriz de recuento de actualización. Si un comando produce un error, el controlador sigue procesando los comandos restantes. No obstante, si un comando contiene un error de sintaxis, las instrucciones del lote generan un error.  
   
 > [!NOTE]  
->  Si no necesita usar recuentos de actualizaciones, puede ejecutar primero la instrucción SET NOCOUNT ON para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. De este modo, se reduce el tráfico de red y, además, se aumenta el rendimiento de la aplicación.  
+>  Si no necesita usar recuentos de actualizaciones, puede ejecutar primero la instrucción SET NOCOUNT ON para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. De este modo, se reduce el tráfico de red y, además, se aumenta el rendimiento de la aplicación.  
   
  A modo de ejemplo, cree la siguiente tabla en la base de datos de ejemplo de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:  
   

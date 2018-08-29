@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ce23bc4217f4bc538de0ddc1dbbaf8284a3c177
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0dbdc7e2ccfdd2afc3e674100605a39d727bf5ec
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969091"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42783965"
 ---
 # <a name="sqllogship-application"></a>sqllogship (aplicación)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 ## <a name="remarks"></a>Notas  
  Se recomienda que use los trabajos de copia de seguridad, copia y restauración para realizar la copia de seguridad, copia y restauración cuando sea posible. Para iniciar estos trabajos desde una operación por lotes u otra aplicación, llame al procedimiento almacenado [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) .  
   
- El historial de trasvase de registros creado por **sqllogship** se combina con el historial creado por los trabajos de copia de seguridad, copia y restauración de trasvase de registros. Si tiene previsto usar **sqllogship** repetidamente para realizar operaciones de copia de seguridad, copia y restauración para una configuración de trasvase de registros, considere la posibilidad de deshabilitar los trabajos de trasvase de registros correspondientes. Para obtener más información, consulte [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
+ El historial de trasvase de registros creado por **sqllogship** se combina con el historial creado por los trabajos de copia de seguridad, copia y restauración de trasvase de registros. Si tiene previsto usar **sqllogship** repetidamente para realizar operaciones de copia de seguridad, copia y restauración para una configuración de trasvase de registros, considere la posibilidad de deshabilitar los trabajos de trasvase de registros correspondientes. Para obtener más información, consulte [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  
   
  La aplicación **sqllogship** , SqlLogShip.exe, está instalada en el directorio x:\Archivos de programa\Microsoft SQL Server\130\Tools\Binn.  
   

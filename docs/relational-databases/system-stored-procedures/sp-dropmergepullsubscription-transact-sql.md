@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergepullsubscription (Transact-SQL) | Documentos de Microsoft
+title: sp_dropmergepullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropmergepullsubscription
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f623dfa9aa2f00f681092543c4539da37ab7485
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1fa2a31c5ef60b869fe387e4a3ac8155a73d3690
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992622"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017961"
 ---
 # <a name="spdropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,21 +49,21 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=**] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es null. Este parámetro es obligatorio. Especifique un valor de **todos los** para quitar las suscripciones a todas las publicaciones  
+ Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es null. Este parámetro es obligatorio. Especifique un valor de **todas** para quitar las suscripciones a todas las publicaciones  
   
  [  **@publisher=**] **'***publisher***'**  
- Es el nombre del publicador. *Publisher*es **sysname**, su valor predeterminado es null. Este parámetro es obligatorio.  
+ Es el nombre del publicador. *publicador*es **sysname**, su valor predeterminado es null. Este parámetro es obligatorio.  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
  Es el nombre de la base de datos del publicador. *publisher_db*es **sysname**, su valor predeterminado es null. Este parámetro es obligatorio.  
   
  [  **@reserved=**] **'***reservada***'**  
- Está reservado para su uso futuro. *reservada* es **bits**, su valor predeterminado es **0**.  
+ Está reservado para su uso futuro. *reservado* es **bit**, su valor predeterminado es **0**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_dropmergepullsubscription** se utiliza en la replicación de mezcla.  
   
  **sp_dropmergepullsubscription** quita el agente de mezcla para esta suscripción de extracción de mezcla, aunque el agente de mezcla no se crea en **sp_addmergepullsubscription**.  
@@ -71,8 +71,8 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_dropmergepullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepullsubscrip_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el usuario que creó la suscripción de extracción de mezcla puede ejecutar **sp_dropmergepullsubscription**. El **db_owner** rol fijo de base de datos sólo es capaz de ejecutar **sp_dropmergepullsubscription** si el usuario que creó la suscripción de extracción de mezcla pertenece a este rol.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o el usuario que creó la suscripción de extracción de mezcla puede ejecutar **sp_dropmergepullsubscription**. El **db_owner** sólo es capaz de ejecutar el rol fijo de base de datos **sp_dropmergepullsubscription** si el usuario que creó la suscripción de extracción de mezcla pertenece a este rol.  
   
 ## <a name="see-also"></a>Vea también  
  [Eliminar una suscripción de extracción](../../relational-databases/replication/delete-a-pull-subscription.md)   

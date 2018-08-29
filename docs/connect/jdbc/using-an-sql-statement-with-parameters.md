@@ -14,18 +14,18 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dbbe0ff57b131cf3e7d3c943d72bdf34bdc4e4ce
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 962b03d93647b5d5972421a0e0fbd8a3384cd787
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661697"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784982"
 ---
 # <a name="using-an-sql-statement-with-parameters"></a>Usar una instrucción SQL con parámetros
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Para trabajar con los datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] con una instrucción SQL que contiene parámetros IN, puede usar el método [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) de la clase [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) para devolver [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), que contiene los datos solicitados. Para ello, primero debe crear un objeto SQLServerPreparedStatement mediante el método [prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) de la clase [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md).
+Para trabajar con los datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una instrucción SQL que contiene parámetros IN, puede usar el método [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) de la clase [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) para devolver [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), que contiene los datos solicitados. Para ello, primero debe crear un objeto SQLServerPreparedStatement mediante el método [prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) de la clase [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md).
 
 Al generar la instrucción SQL, los parámetros IN se especifican mediante el carácter ? (signo de interrogación), que actúa como un marcador de posición para los valores de parámetros que se van a pasar a la instrucción SQL. Para especificar un valor para un parámetro, puede usar uno de los métodos de establecedor de la clase SQLServerPreparedStatement. El método de establecedor usado se determina mediante el tipo de datos del valor que desea pasar a la instrucción SQL.
 

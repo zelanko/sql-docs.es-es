@@ -1,5 +1,5 @@
 ---
-title: sp_repladdcolumn (Transact-SQL) | Documentos de Microsoft
+title: sp_repladdcolumn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_repladdcolumn
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad4517c4dfa5d71b63fdd07ff7a116f36f6c5038
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e7bf61e04a1bb8bb001385e793c9b973b4b671fe
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001162"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034843"
 ---
 # <a name="sprepladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33001162"
   Agrega una columna a un artículo de tabla existente que ha sido publicado. Permite agregar la nueva columna a todos los publicadores que publican esta tabla o, simplemente, agregar la columna a una publicación específica que publica la tabla. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
 > [!IMPORTANT]  
->  Este procedimiento almacenado ha quedado desusado y se admite por cuestiones de compatibilidad con las versiones anteriores. Solo debe usarse con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] publicadores y [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] los suscriptores de republicación. Este procedimiento no se debería utilizar en columnas con tipos de datos introducidos en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior.  
+>  Este procedimiento almacenado ha quedado desusado y se admite por cuestiones de compatibilidad con las versiones anteriores. Solo debe utilizarse con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] publicadores y [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] los suscriptores de republicación. Este procedimiento no se debería utilizar en columnas con tipos de datos introducidos en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,36 +64,36 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  Es la definición de la columna que se va a agregar. *TypeText* es **nvarchar (3000)**, no tiene ningún valor predeterminado. Por ejemplo, si se va a agregar la columna order_filled y es un único carácter campo no es NULL y tiene un valor predeterminado de **N**, order_filled sería el *columna* parámetro, mientras que la definición de la columna, **char (1) NOT NULL CONSTRAINT constraint_name DEFAULT ' n '** sería el *typetext* el valor del parámetro.  
   
  [ @publication_to_add =] '*publication_to_add*'  
- Es el nombre de la publicación a la que se agrega la nueva columna. *publication_to_add* es **nvarchar (4000)**, su valor predeterminado es **todos los**. Si **todos los**, a continuación, se ven afectadas todas las publicaciones que contienen esta tabla. Si *publication_to_add* se especifica, solo esta publicación no tiene la nueva columna agregada.  
+ Es el nombre de la publicación a la que se agrega la nueva columna. *publication_to_add* es **nvarchar (4000)**, su valor predeterminado es **todas**. Si **todas**, a continuación, se ven afectadas todas las publicaciones que contiene esta tabla. Si *publication_to_add* se especifica, entonces solo esta publicación tiene la nueva columna agregada.  
   
  [ @from_agent =] *from_agent*  
- Si un agente de replicación está ejecutando el procedimiento almacenado. *from_agent* es **int**, su valor predeterminado es **0**, donde un valor de **1** se utiliza cuando se ejecuta este procedimiento almacenado por un agente de replicación y, en cada otro caso, el valor predeterminado de **0**debe utilizarse.  
+ Si un agente de replicación está ejecutando el procedimiento almacenado. *from_agent* es **int**, su valor predeterminado es **0**; el valor de **1** se utiliza cuando se ejecuta este procedimiento almacenado por un agente de replicación y, en cada otro caso, el valor predeterminado de **0**debe usarse.  
   
  [ @schema_change_script =] '*el argumento schema_change_script*'  
  Especifica el nombre y la ruta de acceso de un script de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizado para modificar los procedimientos almacenados personalizados generados por el sistema. *el argumento schema_change_script* es **nvarchar (4000)**, su valor predeterminado es null. La replicación permite que los procedimientos almacenados personalizados definidos por el usuario sustituyan a uno o más de los procedimientos predeterminados utilizados en la replicación transaccional. *el argumento schema_change_script* se ejecuta después de un cambio de esquema se realiza en un artículo de tabla replicado mediante sp_repladdcolumn y puede utilizarse para realizar uno de los siguientes:  
   
--   Si los procedimientos almacenados personalizados se generan automáticamente, *el argumento schema_change_script* puede utilizarse para quitar estos procedimientos almacenados personalizados y sustituirlos por otros definidos por el usuario procedimientos almacenados personalizados que admite el nuevo esquema.  
+-   Si los procedimientos almacenados personalizados se generan automáticamente, *el argumento schema_change_script* puede usarse para quitar estos procedimientos almacenados personalizados y reemplazarlos con definido por el usuario los procedimientos almacenados personalizados que admite el nuevo esquema.  
   
--   Si no se generan automáticamente procedimientos almacenados personalizados, *el argumento schema_change_script*puede utilizarse para volver a generar estos procedimientos almacenados o crear personalizado definido por el usuario de los procedimientos almacenados.  
+-   Si los procedimientos almacenados personalizados no se generan automáticamente, *el argumento schema_change_script*se puede usar para volver a generar estos procedimientos almacenados o crear personalizado definido por el usuario de los procedimientos almacenados.  
   
  [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
- Habilita o deshabilita la capacidad de que se invalide una instantánea. *force_invalidate_snapshot* es un **bits**, su valor predeterminado es **1**.  
+ Habilita o deshabilita la capacidad de que se invalide una instantánea. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **1**.  
   
- **1** especifica que los cambios en un artículo pueden invalidar la instantánea no es válida, y si ese es el caso, un valor de **1** concede permiso para la nueva instantánea para que se produzca.  
+ **1** especifica que los cambios en el artículo pueden invalidar la instantánea no es válido, y si es así, un valor de **1** concede permiso para la nueva instantánea que se produzca.  
   
- **0** especifica que los cambios en el artículo no invalidarán la instantánea no es válida.  
+ **0** especifica que los cambios en el artículo no invalidarán la instantánea no es válido.  
   
  [ @force_reinit_subscription =] *force_reinit_subscription*  
- Habilita o deshabilita la capacidad de reinicializar la suscripción. *force_reinit_subscription* es un **bits** con un valor predeterminado de **0**.  
+ Habilita o deshabilita la capacidad de reinicializar la suscripción. *force_reinit_subscription* es un **bit** con un valor predeterminado de **0**.  
   
- **0** especifica que los cambios en el artículo hacen que la suscripción para reinicializarla.  
+ **0** especifica que los cambios en el artículo no invalidarán la suscripción para reinicializarla.  
   
- **1** especifica que los cambios en el artículo pueden causar la suscripción para reinicializarla, y si ese es el caso, un valor de **1** concede permiso para que se lleve a cabo la reinicialización.  
+ **1** especifica que los cambios en el artículo pueden causar la suscripción para reinicializarla, y si es así, un valor de **1** concede permiso para que se produzca la reinicialización de suscripción.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor sysadmin y del rol fijo de base de datos db_owner pueden ejecutar sp_repladdcolumn.  
   
 ## <a name="see-also"></a>Vea también  

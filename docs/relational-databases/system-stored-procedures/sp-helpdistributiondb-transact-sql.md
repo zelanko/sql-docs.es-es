@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistributiondb (Transact-SQL) | Documentos de Microsoft
+title: sp_helpdistributiondb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpdistributiondb
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02065dbaa89a16c0d00ce8737bb79f29c5256495
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df4a44be4ef3271e6af8e7148bfee50f40c71617
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996932"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018301"
 ---
 # <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|Nombre de la base de datos de distribución.|  
 |**min_distretention**|**int**|Período mínimo de retención, en horas, antes de que se eliminen las transacciones.|  
@@ -69,11 +69,11 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_helpdistributiondb** se utiliza en todos los tipos de replicación.  
   
-## <a name="permissions"></a>Permissions  
- Los miembros de la **db_owner** rol fijo de base de datos o la **replmonitor** rol en una base de datos de distribución y los usuarios en la lista de acceso de la publicación de una publicación con la base de datos de distribución pueden ejecutar **sp_helpdistributiondb** para devolver información relacionada con el archivo. Los miembros de la **público** pueden ejecutar **sp_helpdistributiondb** para devolver información no relacionado con el archivo de bases de datos de distribución a los que tienen acceso.  
+## <a name="permissions"></a>Permisos  
+ Los miembros de la **db_owner** rol fijo de base de datos o el **replmonitor** rol en una base de datos de distribución y los usuarios en la lista de acceso de publicación de una publicación con la base de datos de distribución pueden ejecutar **sp_helpdistributiondb** para devolver información relacionada con el archivo. Los miembros de la **pública** pueden ejecutar **sp_helpdistributiondb** para devolver información no relacionada con el archivo para las bases de datos de distribución a las que tengan acceso.  
   
 ## <a name="see-also"></a>Vea también  
  [Ver y modificar las propiedades del distribuidor y del publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

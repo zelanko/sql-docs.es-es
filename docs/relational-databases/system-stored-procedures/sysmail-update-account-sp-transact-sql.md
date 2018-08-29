@@ -1,5 +1,5 @@
 ---
-title: sysmail_update_account_sp (Transact-SQL) | Documentos de Microsoft
+title: sysmail_update_account_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_account_sp
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
-caps.latest.revision: 51
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ad64d1d455a4419c66949ba0196f9a9557a8ae52
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3aa7b018044aca4dec144e2be66bfba68cef5597
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262187"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021838"
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,27 +86,27 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
  [ **@timeout** =] **'***tiempo de espera***'**  
  Parámetro Timeout para SmtpClient.Send de un único mensaje de correo electrónico. *Tiempo de espera* es **int** en segundos, no tiene ningún valor predeterminado.  
   
- [ **@username** =] **'***nombre de usuario***'**  
+ [ **@username** =] **'***username***'**  
  Nuevo nombre de usuario que se utilizará para iniciar sesión en el servidor de correo. *Nombre de usuario* es **sysname**, no tiene ningún valor predeterminado.  
   
  [ **@password** =] **'***contraseña***'**  
  Nueva contraseña que se utilizará para iniciar sesión en el servidor de correo. *contraseña* es **sysname**, no tiene ningún valor predeterminado.  
   
  [ **@use_default_credentials** =] use_default_credentials  
- Especifica si se debe enviar el correo al servidor SMTP con las credenciales del servicio de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** es de tipo bit no tiene ningún valor predeterminado. Si el valor de este parámetro es 1, el Correo electrónico de base de datos usa las credenciales de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Si este parámetro es 0, el correo electrónico de base de datos utiliza el **@username** y **@password** para la autenticación en el servidor SMTP. Si **@username** y **@password** son NULL, a continuación, utiliza la autenticación anónima. Consulte con el administrador de SMTP antes de especificar este parámetro.  
+ Especifica si se debe enviar el correo al servidor SMTP con las credenciales del servicio de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** es de tipo bit, no tiene ningún valor predeterminado. Si el valor de este parámetro es 1, el Correo electrónico de base de datos usa las credenciales de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Cuando este parámetro es 0, el correo electrónico de base de datos utiliza el **@username** y **@password** para la autenticación en el servidor SMTP. Si **@username** y **@password** son NULL, utiliza la autenticación anónima. Consulte con el administrador de SMTP antes de especificar este parámetro.  
   
  [ **@enable_ssl** =] enable_ssl  
- Especifica si el Correo electrónico de base de datos cifra la comunicación mediante Capa de sockets seguros (SSL). Utilice esta opción si se requiere SSL en el servidor SMTP. **enable_ssl** es de tipo bit no tiene ningún valor predeterminado.  
+ Especifica si el Correo electrónico de base de datos cifra la comunicación mediante Capa de sockets seguros (SSL). Utilice esta opción si se requiere SSL en el servidor SMTP. **enable_ssl** es de tipo bit, no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si se especifican el nombre y el Id. de cuenta, el procedimiento almacenado cambia el nombre de la cuenta además de actualizar su información. Cambiar el nombre de la cuenta puede ser útil para corregir errores en el nombre.  
   
- El procedimiento almacenado **sysmail_update_account_sp** está en el **msdb** la base de datos y es propiedad de la **dbo** esquema. El procedimiento se debe ejecutar con un nombre de tres partes si la base de datos actual no es **msdb**.  
+ El procedimiento almacenado **sysmail_update_account_sp** está en el **msdb** de base de datos y que pertenece el **dbo** esquema. El procedimiento debe ejecutarse con un nombre de tres partes si la base de datos actual no es **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  

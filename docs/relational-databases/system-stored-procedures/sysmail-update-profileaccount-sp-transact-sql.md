@@ -1,5 +1,5 @@
 ---
-title: sysmail_update_profileaccount_sp (Transact-SQL) | Documentos de Microsoft
+title: sysmail_update_profileaccount_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_profileaccount_sp
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
-caps.latest.revision: 41
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ee2f44070644e305163e6a7ae38eea9a81ba9fa1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b81459e3c11c2ce17b133359074a921ddc1e1b66
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260911"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037425"
 ---
 # <a name="sysmailupdateprofileaccountsp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +47,16 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
   
 ## <a name="arguments"></a>Argumentos  
  [ **@profile_id** =] *profile_id*  
- El identificador del perfil que se va a actualizar. *profile_id* es **int**, su valor predeterminado es null. Ya sea la *profile_id* o *profile_name* debe especificarse.  
+ El identificador del perfil que se va a actualizar. *profile_id* es **int**, su valor predeterminado es null. Ya sea el *profile_id* o *profile_name* debe especificarse.  
   
  [ **@profile_name** =] **'***profile_name***'**  
- Nombre del perfil que se va a actualizar. *profile_name* es **sysname**, su valor predeterminado es null. Ya sea la *profile_id* o *profile_name* debe especificarse.  
+ Nombre del perfil que se va a actualizar. *nombre_perfil* es **sysname**, su valor predeterminado es null. Ya sea el *profile_id* o *profile_name* debe especificarse.  
   
  [ **@account_id** =] *account_id*  
- Identificador de la cuenta que se va a actualizar. *account_id* es **int**, su valor predeterminado es null. Ya sea la *account_id* o *account_name* debe especificarse.  
+ Identificador de la cuenta que se va a actualizar. *account_id* es **int**, su valor predeterminado es null. Ya sea el *account_id* o *account_name* debe especificarse.  
   
  [ **@account_name** =] **'***account_name***'**  
- Nombre de la cuenta que se va a actualizar. *account_name* es **sysname**, su valor predeterminado es null. Ya sea la *account_id* o *account_name* debe especificarse.  
+ Nombre de la cuenta que se va a actualizar. *account_name* es **sysname**, su valor predeterminado es null. Ya sea el *account_id* o *account_name* debe especificarse.  
   
  [ **@sequence_number** =] *sequence_number*  
  Nuevo número de secuencia de la cuenta. *sequence_number* es **int**, no tiene ningún valor predeterminado. El número de secuencia determina el orden en que las cuentas se utilizan en el perfil.  
@@ -68,20 +67,20 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Devuelve un error si la cuenta especificada no está asociada al perfil especificado.  
   
  El número de secuencia determina el orden en que el Correo electrónico de base de datos utiliza las cuentas en el perfil. En el caso de un mensaje de correo electrónico nuevo, el Correo electrónico de base de datos se inicia con la cuenta con el número de secuencia más bajo. Si la cuenta genera un error, el Correo electrónico de base de datos utiliza la cuenta con el siguiente número de secuencia superior y así sucesivamente hasta que el Correo electrónico de base de datos envía el mensaje correctamente o la cuenta con el número de secuencia superior genera un error. Si la cuenta con el número de secuencia superior genera un error, el mensaje de correo electrónico también genera un error.  
   
  Si hay más de una cuenta con el mismo número de secuencia, el Correo electrónico de base de datos solo utiliza una de estas cuentas para un mensaje de correo electrónico determinado. En este caso, el Correo electrónico de base de datos no confirma qué cuenta se va a usar para el número de secuencia o que se vaya a usar la misma cuenta de un mensaje a otro.  
   
- El procedimiento almacenado **sysmail_update_profileaccount_sp** está en el **msdb** la base de datos y es propiedad de la **dbo** esquema. El procedimiento se debe ejecutar con un nombre de tres partes si la base de datos actual no es **msdb**.  
+ El procedimiento almacenado **sysmail_update_profileaccount_sp** está en el **msdb** de base de datos y que pertenece el **dbo** esquema. El procedimiento debe ejecutarse con un nombre de tres partes si la base de datos actual no es **msdb**.  
   
-## <a name="permissions"></a>Permissions  
- Permisos de ejecución para este procedimiento de forma predeterminada a los miembros de la **sysadmin** rol fijo de servidor.  
+## <a name="permissions"></a>Permisos  
+ Permisos de ejecución de este procedimiento de forma predeterminada a los miembros de la **sysadmin** rol fijo de servidor.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se cambia el número de secuencia de la cuenta `Admin-BackupServer` en el perfil de `AdventureWorks Administrator` en el **msdb** base de datos. Tras ejecutar este código, el número de secuencia para la cuenta es `3`, lo que indica que se va a probar si las dos primeras cuentas generan un error.  
+ En el ejemplo siguiente se cambia el número de secuencia de la cuenta `Admin-BackupServer` dentro del perfil `AdventureWorks Administrator` en el **msdb** base de datos. Tras ejecutar este código, el número de secuencia para la cuenta es `3`, lo que indica que se va a probar si las dos primeras cuentas generan un error.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profileaccount_sp  

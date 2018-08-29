@@ -1,5 +1,5 @@
 ---
-title: sp_who (Transact-SQL) | Documentos de Microsoft
+title: sp_who (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_who
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
-caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f21ac270ac0f448291b5e6eb8874182598e933ef
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 17d178f1fdf5784ca1e9d9f7dc9042a70611137c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261924"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036945"
 ---
 # <a name="spwho-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,28 +60,28 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_who** devuelve un conjunto de resultados con la siguiente información.  
   
-|Columna|Data type|Description|  
+|columna|Data type|Descripción|  
 |------------|---------------|-----------------|  
 |**spid**|**smallint**|Id. de sesión.|  
 |**ECID**|**smallint**|Id. de contexto de ejecución de un subproceso determinado, asociado con un Id. de sesión específico.<br /><br /> ECID = {0, 1, 2, 3,... *n*}, donde 0 siempre representa el método main o subproceso primario y {1, 2, 3,... *n*} representan los subprocesos secundarios.|  
-|**status**|**nchar(30)**|Estado del proceso. Los valores posibles son:<br /><br /> **inactivo**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está restableciendo la sesión.<br /><br /> **Ejecutando**. La sesión está ejecutando uno o varios lotes. Si Conjuntos de resultados activos múltiples (MARS) está habilitado, una sesión puede ejecutar varios lotes. Para obtener más información, vea [utilizando conjuntos de resultados activos múltiples & #40; MARS & #41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **fondo**. La sesión está ejecutando una tarea en segundo plano, como una detección de interbloqueos.<br /><br /> **reversión**. La sesión está realizando una reversión de una transacción.<br /><br /> **pendiente**. La sesión está esperando que un subproceso de trabajo esté disponible.<br /><br /> **ejecutable**. La tarea de la sesión está en la cola de ejecutables de un programador mientras espera obtener un cuanto de tiempo.<br /><br /> **bloqueo por bucle**. La tarea de la sesión está esperando que se libere un bloqueo por bucle.<br /><br /> **suspende**. La sesión está esperando a que finalice un evento, como una entrada o salida.|  
+|**status**|**nchar(30)**|Estado del proceso. Los valores posibles son:<br /><br /> **latente**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está restableciendo la sesión.<br /><br /> **ejecutando**. La sesión está ejecutando uno o varios lotes. Si Conjuntos de resultados activos múltiples (MARS) está habilitado, una sesión puede ejecutar varios lotes. Para obtener más información, vea [Usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **en segundo plano**. La sesión está ejecutando una tarea en segundo plano, como una detección de interbloqueos.<br /><br /> **reversión**. La sesión está realizando una reversión de una transacción.<br /><br /> **pendiente**. La sesión está esperando que un subproceso de trabajo esté disponible.<br /><br /> **puede ejecutar**. La tarea de la sesión está en la cola de ejecutables de un programador mientras espera obtener un cuanto de tiempo.<br /><br /> **spinloop**. La tarea de la sesión está esperando que se libere un bloqueo por bucle.<br /><br /> **suspende**. La sesión está esperando a que finalice un evento, como una entrada o salida.|  
 |**loginame**|**nchar(128)**|Nombre de inicio de sesión asociado al proceso específico.|  
 |**Nombre de host**|**nchar(128)**|Nombre del host o equipo de cada proceso.|  
 |**BLK**|**Char (5)**|Id. de sesión del proceso de bloqueo, si existe. De lo contrario, esta columna tiene el valor cero.<br /><br /> Cuando una transacción huérfana distribuida bloquea una transacción asociada con un Id. de sesión determinado, esta columna devolverá '-2' para la transacción huérfana de bloqueo.|  
-|**dbname**|**nchar(128)**|Base de datos utilizada por el proceso.|  
-|**Cmd**|**nchar(16)**|Comando de [!INCLUDE[ssDE](../../includes/ssde-md.md)] (instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)], proceso de [!INCLUDE[ssDE](../../includes/ssde-md.md)] interno, etc.) que se ejecuta para el proceso.|  
+|**dbname**|**nchar(128)**|Base de datos utilizado por el proceso.|  
+|**cmd**|**nchar(16)**|Comando de [!INCLUDE[ssDE](../../includes/ssde-md.md)] (instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)], proceso de [!INCLUDE[ssDE](../../includes/ssde-md.md)] interno, etc.) que se ejecuta para el proceso.|  
 |**request_id**|**int**|Id. de las solicitudes que se ejecutan en una sesión específica.|  
   
  En el caso de procesamiento paralelo, se crean subprocesos secundarios para el identificador de sesión específico. El subproceso principal se indica como `spid = <xxx>` y `ecid =0`. Los otros subprocesos tienen el mismo `spid = <xxx>`, pero con **ecid** > 0.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Un proceso de bloqueo, que puede tener un bloqueo exclusivo, es el que contiene recursos que otro proceso necesita.  
   
  A todas las transacciones distribuidas huérfanas se les asigna como identificador de sesión el valor '-2'. Las transacciones distribuidas huérfanas son transacciones distribuidas que no están asociadas con ningún identificador de sesión. Para obtener más información, vea [Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
- Consulta el **is_user_process** columnas de sys.dm_exec_sessions para separar los procesos del sistema de procesos de usuario.  
+ Consulta el **is_user_process** columnas de sys.dm_exec_sessions para separar los procesos del sistema de los procesos de usuario.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW SERVER STATE en el servidor para ver todas las sesiones en ejecución en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. De lo contrario, el usuario solo ve la sesión actual.  
   
 ## <a name="examples"></a>Ejemplos  

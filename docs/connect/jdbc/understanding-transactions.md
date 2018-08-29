@@ -1,5 +1,5 @@
 ---
-title: Transacciones XTP de SQL Server | Microsoft Docs
+title: Información general sobre transacciones | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20ec695090a164fb0cb5509833db78bd6b38fe69
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: b6d923bce43ad2f9ed3fd0a7d33d456910125768
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662117"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787063"
 ---
 # <a name="understanding-transactions"></a>Descripción de transacciones
 
@@ -43,7 +43,7 @@ El siguiente ejemplo realiza una transacción local que se compone de dos instru
 
 Una transacción distribuida es una transacción que actualiza datos en dos o más bases de datos conectadas a una red manteniendo las propiedades atómicas, coherentes, aisladas y durables (ACID) del procesamiento de la transacción. La compatibilidad con las transacciones distribuidas se incluyó en la API de JDBC de la especificación API Opcional de JDBC 2.0. La administración de transacciones distribuidas normalmente se realiza de forma automática por parte del administrador de transacciones Servicio de Transacciones de Java (JTS) dentro de un entorno de servidor de aplicaciones Java EE. No obstante, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] admite las transacciones distribuidas realizadas en cualquier administrador de transacciones compatible con la API de transacciones de Java (JTA).
 
-El controlador JDBC se integra a la perfección con el Coordinador de transacciones distribuidas (MS DTC) de [!INCLUDE[msCoName](../../includes/msconame_md.md)] para proporcionar una compatibilidad real con las transacciones distribuidas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. MS DTC es una herramienta de transacciones distribuidas que proporciona [!INCLUDE[msCoName](../../includes/msconame_md.md)] para sistemas [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. MS DTC usa tecnología probada de procesamiento de transacciones de [!INCLUDE[msCoName](../../includes/msconame_md.md)] para proporcionar compatibilidad con características XA tales como el protocolo de confirmación distribuido de dos fases completo y la recuperación de transacciones distribuidas.
+El controlador JDBC se integra a la perfección con el Coordinador de transacciones distribuidas (MS DTC) de [!INCLUDE[msCoName](../../includes/msconame_md.md)] para proporcionar una compatibilidad real con las transacciones distribuidas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. MS DTC es una herramienta de transacciones distribuidas que proporciona [!INCLUDE[msCoName](../../includes/msconame_md.md)] para sistemas [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. MS DTC usa tecnología probada de procesamiento de transacciones de [!INCLUDE[msCoName](../../includes/msconame_md.md)] para proporcionar compatibilidad con características XA tales como el protocolo de confirmación distribuido de dos fases completo y la recuperación de transacciones distribuidas.
 
 Para obtener más información sobre cómo utilizar las transacciones distribuidas, consulte [Descripción de las transacciones XA](../../connect/jdbc/understanding-xa-transactions.md).
 

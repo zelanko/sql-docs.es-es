@@ -1,5 +1,5 @@
 ---
-title: sp_browsemergesnapshotfolder (Transact-SQL) | Documentos de Microsoft
+title: sp_browsemergesnapshotfolder (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsemergesnapshotfolder
 ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e69c698e36e850a76178a279f47a99407376585
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 153abe2a9466c6f0496dfe86b852571828111a43
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32987280"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021003"
 ---
 # <a name="spbrowsemergesnapshotfolder-transact-sql"></a>sp_browsemergesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,19 +52,19 @@ sp_browsemergesnapshotfolder [@publication= ] 'publication'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**snapshot_folder**|**nvarchar(2000)**|Ruta de acceso completa del directorio de instantáneas.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_browsemergesnapshotfolder** se utiliza en la replicación de mezcla.  
   
  Si la publicación está configurada para generar archivos de instantáneas en el directorio de trabajo y en la carpeta de instantáneas del publicador, el conjunto de resultados contendrá dos filas: la primera fila contendrá la carpeta de instantáneas de la publicación y la segunda fila contendrá el directorio de trabajo del publicador.  
   
- **sp_browsemergesnapshotfolder** es útil para determinar el directorio donde se generan los archivos de instantánea de mezcla. Esta carpeta o ruta de acceso y su contenido se pueden copiar en un medio extraíble, así como la instantánea utilizada para sincronizar una suscripción desde una ubicación de instantáneas alternativa.  
+ **sp_browsemergesnapshotfolder** es útil para determinar el directorio donde se generan los archivos de instantáneas de mezcla. Esta carpeta o ruta de acceso y su contenido se pueden copiar en un medio extraíble, así como la instantánea utilizada para sincronizar una suscripción desde una ubicación de instantáneas alternativa.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_browsemergesnapshotfolder**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_browsemergesnapshotfolder**.  
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

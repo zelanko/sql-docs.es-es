@@ -1,5 +1,5 @@
 ---
-title: sp_article_validation (Transact-SQL) | Documentos de Microsoft
+title: sp_article_validation (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_article_validation
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8eabbaf95392de7e5389fdd54f8724045682ec2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2670bd674589cf67acac91100d4419365de66da2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991572"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037757"
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,46 +60,46 @@ sp_article_validation [ @publication = ] 'publication'
  [  **@rowcount_only=**] *type_of_check_requested*  
  Especifica si solamente se devuelve el recuento de filas de la tabla. *type_of_check_requested* es **smallint**, su valor predeterminado es **1**.  
   
- Si **0**, realizar un recuento de filas y un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 de suma de comprobación compatible.  
+ Si **0**, realizar un recuento de filas y un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 suma de comprobación compatible.  
   
- Si **1**, realizar solo una comprobación de recuento de filas.  
+ Si **1**, realizar solo una comprobación del recuento de filas.  
   
  Si **2**, realizar un recuento de filas y binario de suma de comprobación.  
   
  [  **@full_or_fast=**] *full_or_fast*  
  Es el método utilizado para calcular el recuento de filas. *full_or_fast* es **tinyint**, y puede tener uno de estos valores.  
   
-|**Valor**|**Description**|  
+|**Valor**|**Descripción**|  
 |---------------|---------------------|  
-|**0**|Realiza un recuento completo mediante Count.|  
-|**1**|Realiza un recuento rápido de **sysindexes.rows**. Recuento de filas en **sysindexes** es más rápido que el recuento de filas en la tabla real. Sin embargo, **sysindexes** se actualiza de forma diferida y el recuento de filas puede no ser exacto.|  
-|**2** (predeterminado)|Realiza un recuento rápido condicional probando primero con el método rápido. Si el método rápido muestra diferencias, se utiliza el método completo. Si *expected_rowcount* es NULL y el procedimiento almacenado se utiliza para obtener el valor, se utiliza siempre un Count completa.|  
+|**0**|Realiza un recuento completo mediante COUNT(*).|  
+|**1**|Realiza un recuento rápido de **sysindexes.rows**. Recuento de filas en **sysindexes** es más rápido que el recuento de filas en la tabla real. Sin embargo, **sysindexes** se actualiza de forma diferida, y el recuento de filas puede no ser exacto.|  
+|**2** (predeterminado)|Realiza un recuento rápido condicional probando primero con el método rápido. Si el método rápido muestra diferencias, se utiliza el método completo. Si *expected_rowcount* es NULL y el procedimiento almacenado que se usa para obtener el valor, una completa COUNT(*) siempre se utiliza.|  
   
  [  **@shutdown_agent=**] *shutdown_agent*  
- Especifica si el agente de distribución debe cerrarse inmediatamente cuando finalice la validación. *shutdown_agent* es **bits**, su valor predeterminado es **0**. Si **0**, el agente de distribución no se cierra. Si **1**, el agente de distribución se cierra después de valida el artículo.  
+ Especifica si el agente de distribución debe cerrarse inmediatamente cuando finalice la validación. *shutdown_agent* es **bit**, su valor predeterminado es **0**. Si **0**, el agente de distribución no se cierra. Si **1**, el agente de distribución se cierra después de validar el artículo.  
   
  [  **@subscription_level=**] *subscription_level*  
- Especifica si un conjunto de suscriptores recoge o no la validación. *subscription_level* es **bits**, su valor predeterminado es **0**. Si **0**, la validación se aplica a todos los suscriptores. Si **1**, validación solo se aplica a un subconjunto de los suscriptores especificados por las llamadas a **sp_marksubscriptionvalidation** en la transacción abierta actual.  
+ Especifica si un conjunto de suscriptores recoge o no la validación. *subscription_level* es **bit**, su valor predeterminado es **0**. Si **0**, validación se aplica a todos los suscriptores. Si **1**, validación solo se aplica a un subconjunto de los suscriptores especificados mediante llamadas a **sp_marksubscriptionvalidation** en la transacción abierta actual.  
   
- [  **@reserved=**] *reservadas*  
+ [  **@reserved=**] *reservado*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@publisher**=] **'***publisher***'**  
- Especifica un no[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *Publisher* es **sysname**, su valor predeterminado es null.  
+ Especifica que no es[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
->  *Publisher* no debe usarse al solicitar la validación en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
+>  *publicador* no debe usarse al solicitar la validación en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_article_validation** se utiliza en la replicación transaccional.  
   
  **sp_article_validation** hace que la información de validación se recopile en el artículo especificado y envía una solicitud de validación para el registro de transacciones. Cuando el Agente de distribución recibe la solicitud, compara la información de validación de la solicitud con la tabla del suscriptor. El resultado de la validación se muestra en el Monitor de replicación y en las alertas del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="permissions"></a>Permissions  
- Solo los usuarios con permisos selección ALL en la tabla de origen para el artículo que se está validando puede ejecutar **sp_article_validation**.  
+## <a name="permissions"></a>Permisos  
+ Solo los usuarios con permisos selección ALL en la tabla de origen para el artículo que se está validando se puede ejecutar **sp_article_validation**.  
   
 ## <a name="see-also"></a>Vea también  
  [Validar datos replicados](../../relational-databases/replication/validate-replicated-data.md)   

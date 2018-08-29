@@ -19,12 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99ffe958cae6a13f4df573385b91143c7c259ea9
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b29a013eac8e08f274c771d12913fb60ea410799
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084817"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785345"
 ---
 # <a name="getextranamecharacters-method-sqlserverdatabasemetadata"></a>Método getExtraNameCharacters (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public java.lang.String getExtraNameCharacters()
 ## <a name="remarks"></a>Notas  
  Este método getExtraNameCharacters especificado por el método getExtraNameCharacters en la interfaz java.sql.DatabaseMetaData.  
   
- Cuando se usa [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] con una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], este método devuelve los caracteres adicionales $, # y \@.  
+ Cuando se usa [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] con una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], este método devuelve los caracteres adicionales $, # y \@.  
   
 ## <a name="see-also"></a>Ver también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

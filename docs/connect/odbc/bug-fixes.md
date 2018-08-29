@@ -16,18 +16,18 @@ caps.latest.revision: 69
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 3b5969a723b230139b9466f75569375f97a0d7b0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6ef479b95e62c2f489b06905b33318a877a60ad5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37946909"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785353"
 ---
 # <a name="list-of-bugs-fixed"></a>Lista de errores corregidos
 
-Esta página contiene una lista de errores corregidos en cada versión, empezando por [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+Esta página contiene una lista de errores corregidos en cada versión, empezando por [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversionmdmd"></a>Correcciones de errores en el [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17.2 del controlador de ODBC para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>Correcciones de errores en el [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17.2 del controlador de ODBC para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Se ha corregido un mensaje de error acerca de la autenticación de Azure Active Directory
 - Detección de codificación fija cuando se establecen las variables de entorno de configuración regional de forma diferente
@@ -40,7 +40,7 @@ Esta página contiene una lista de errores corregidos en cada versión, empezand
 - Se ha corregido un problema de la caché cuando se usa la autenticación de ADAL en Windows
 - Se corrigió un problema que era el bloqueo y sobrescribir el seguimiento de los registros en Windows
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd"></a>Correcciones de errores en el [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17.1 de controlador ODBC para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd"></a>Correcciones de errores en el [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17.1 de controlador ODBC para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Se ha corregido el retraso de 1 segundo cuando se llama a SQLFreeHandle teniendo MARS habilitado y el atributo de conexión "Encrypt = yes"
 - Se ha corregido un bloqueo de error 22003 en SQLGetData cuando el tamaño del búfer pasado es menor, a continuación, los datos recuperados (Windows)
@@ -50,7 +50,7 @@ Esta página contiene una lista de errores corregidos en cada versión, empezand
 - Se ha corregido una advertencia en el instalador de Mac OS
 - Se ha corregido el envío de un estado incorrecto a SQL Server durante el intento de recuperación de sesión cuando resistencia de conexión y agrupación de conexiones ambas están habilitadas, provocando la sesión que se puede quitar el servidor
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>Correcciones de errores en el [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd"></a>Correcciones de errores en el [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Se ha corregido un error que cuando se usa la autenticación Kerberos, podría producirse un error de inserción masiva con el error "acceso denegado"
 - Quitado solución a un error de unixODBC presente en la versión siguiente 2.3.1 (controlador duplica el tamaño de algunos búferes pasados a unixODBC)

@@ -14,12 +14,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca0f63442af44bdce4b8c3b18af0beab1cd8a9ee
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: a717bcf2a5c7b0c0b80bece12b77871573414a31
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278716"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42786715"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Obtener acceso a información de diagnóstico en el registro de eventos extendidos
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ com.microsoft.sqlserver.jdbc.traceactivity = on
   
  Para obtener más información, vea [Hacer un seguimiento del funcionamiento del controlador](../../connect/jdbc/tracing-driver-operation.md). Esta marca de seguimiento se utiliza con los registradores de objetos JDBC correspondientes para decidir si se realiza el seguimiento y enviar ActivityId en el controlador JDBC. Además de actualizar el archivo Logging.Properties, el registrador com.microsoft.sqlserver.jdbc debe estar habilitado en FINER o superior. Si quiere enviar ActivityId al servidor para las solicitudes efectuadas por una determinada clase, se debe habilitar el registrador de clase correspondiente en FINER o FINEST. Por ejemplo, si la clase es SQLServerStatement, habilite el registrador com.microsoft.sqlserver.jdbc.SQLServerStatement.  
   
- El ejemplo siguiente usa [!INCLUDE[tsql](../../includes/tsql_md.md)] para iniciar una sesión de eventos extendidos que se almacenará en un búfer en anillo y registrará el identificador de actividad enviado por un cliente en operaciones RPC y por lotes:  
+ El ejemplo siguiente usa [!INCLUDE[tsql](../../includes/tsql-md.md)] para iniciar una sesión de eventos extendidos que se almacenará en un búfer en anillo y registrará el identificador de actividad enviado por un cliente en operaciones RPC y por lotes:  
   
 ```sql
 create event session MySession on server  

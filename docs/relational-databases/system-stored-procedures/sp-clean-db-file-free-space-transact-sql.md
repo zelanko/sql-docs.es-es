@@ -1,5 +1,5 @@
 ---
-title: sp_clean_db_file_free_space (Transact-SQL) | Documentos de Microsoft
+title: sp_clean_db_file_free_space (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_clean_db_file_free_space
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 52f5fb5b32a49ef6bcb4922069dc7f5250c771c9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: bcd6c21404593244104bc58cc9beab4164c4283a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34689133"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036667"
 ---
 # <a name="spcleandbfilefreespace-transact-sql"></a>sp_clean_db_file_free_space (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_clean_db_file_free_space
  Es el id. del archivo de datos que se va a limpiar. *file_number* es **int** y no puede ser NULL.  
   
  [ @cleaning_delay=] '*retraso_en_segundos*'  
- Especifica un intervalo de retardo entre la limpieza de páginas. Esto ayuda a reducir el efecto en el sistema de E/S. *retraso_en_segundos* es **int** con un valor predeterminado es 0.  
+ Especifica un intervalo de retardo entre la limpieza de páginas. Esto ayuda a reducir el efecto en el sistema de E/S. *retraso_en_segundos* es **int** con el valor predeterminado es 0.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -67,7 +67,7 @@ sp_clean_db_file_free_space
   
  Antes de ejecutar sp_clean_db_file_free_space es aconsejable crear una copia de seguridad completa de la base de datos.  
   
- Relacionado [sp_clean_db_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md) procedimiento almacenado limpia todos los archivos de la base de datos.  
+ Relacionado [sp_clean_db_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md) procedimiento almacenado limpia todos los archivos en la base de datos.  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol de la base de datos db_owner.  

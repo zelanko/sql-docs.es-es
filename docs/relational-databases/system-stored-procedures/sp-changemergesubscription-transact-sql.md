@@ -1,5 +1,5 @@
 ---
-title: sp_changemergesubscription (Transact-SQL) | Documentos de Microsoft
+title: sp_changemergesubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_changemergesubscription
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2426efe2b47c5bdd6fbf952202d70dbc4fc5e365
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82fcd86e9b80c2492da938000a0510d52583dc55
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991512"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018061"
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
  [  **@value=**] **'***valor***'**  
  Es el nuevo valor para el elemento especificado *propiedad*. *valor* es **nvarchar (255)**, y puede tener uno de los valores de la tabla.  
   
-|Propiedad|Value|Description|  
+|Property|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**Descripción**||Descripción de esta suscripción de mezcla.|  
 |**priority**||Es la prioridad de la suscripción. La prioridad la utiliza el solucionador predeterminado para elegir un ganador cuando se detectan conflictos.|  
@@ -86,13 +86,13 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_changemergesubscription** se utiliza en la replicación de mezcla.  
   
  Después de cambiar un inicio de sesión o una contraseña de agente, debe detener y reiniciar el agente para que el cambio surta efecto.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_changemergesubscription**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_changemergesubscription**.  
   
 ## <a name="see-also"></a>Vea también  
  [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   

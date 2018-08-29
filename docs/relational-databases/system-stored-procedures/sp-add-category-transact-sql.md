@@ -1,5 +1,5 @@
 ---
-title: sp_add_category (Transact-SQL) | Documentos de Microsoft
+title: sp_add_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_category
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
-caps.latest.revision: 29
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6f98fd4dbccc6b47297c8b0ebb2073dd23d35c6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c884d126356f4347616370ce9cd8b8eb41089fc0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238915"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021929"
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,18 +47,18 @@ sp_add_category
   
 ## <a name="arguments"></a>Argumentos  
  [  **@class =** ] **'***clase***'**  
- Clase de la categoría que se va a agregar. *clase* es **varchar (8)** con un valor predeterminado de trabajo, y puede tener uno de estos valores.  
+ Clase de la categoría que se va a agregar. *clase* es **varchar (8)** con un valor predeterminado es JOB, y puede tener uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |JOB|Agrega una categoría de trabajo.|  
 |ALERT|Agrega una categoría de alerta.|  
 |OPERATOR|Agrega una categoría de operador.|  
   
  [  **@type =** ] **'***tipo***'**  
- Tipo de la categoría que se va a agregar. *tipo de* es **varchar (12)**, con un valor predeterminado de **LOCAL**, y puede tener uno de estos valores.  
+ Tipo de la categoría que se va a agregar. *tipo* es **varchar (12)**, con un valor predeterminado de **LOCAL**, y puede tener uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |LOCAL|Categoría de trabajos locales.|  
 |VARIOS SERVIDORES|Categoría de trabajos multiservidor.|  
@@ -74,10 +73,10 @@ sp_add_category
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_add_category** se debe ejecutar desde la **msdb** base de datos.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_add_category**.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -98,7 +97,7 @@ GO
  [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [dbo.sysjobs & #40; Transact-SQL & #41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
+ [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
  [dbo.sysjobservers &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_cursor_list (Transact-SQL) | Documentos de Microsoft
+title: sp_cursor_list (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_cursor_list
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 368c1b64a7c6eea9d338a1698e5a20d90948b696
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 249b6789d6242a982e3b23b577740fdca9bafcdd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239595"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018087"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @cursor_return=] *variableDeCursor*salida  
+ [ @cursor_return=] *cursor_variable_name*salida  
  Es el nombre de una variable de cursor declarada. *cursor_variable_name* es **cursor**, no tiene ningún valor predeterminado. El cursor es un cursor desplazable, dinámico de solo lectura.  
   
  [ @cursor_scope=] *cursor_scope*  
  Especifica el nivel de los cursores que se notificarán. *cursor_scope* es **int**, no tiene ningún valor predeterminado y puede ser uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |1|Informa de todos los cursores locales.|  
 |2|Informa de todos los cursores globales.|  
@@ -66,7 +66,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
   
  Éste es el formato del cursor devuelto por sp_cursor_list. El formato del cursor es el mismo que el que devuelve sp_describe_cursor.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |reference_name|**sysname**|El nombre que se utiliza para hacer referencia al cursor. Si la referencia al cursor se realizó utilizando el nombre dado en una instrucción DECLARE CURSOR, el nombre de referencia es el mismo que el nombre del cursor. Si la referencia al cursor se realizó a través de una variable, el nombre de la referencia es el de la variable de cursor.|  
 |cursor_name|**sysname**|El nombre del cursor desde una instrucción DECLARE CURSOR. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el cursor se creó estableciendo una variable de cursor en un cursor, **cursor_name** devuelve el nombre de la variable de cursor.  En versiones anteriores, esta columna de salida devuelve un nombre generado por el sistema.|  
@@ -80,10 +80,10 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |fetch_status|**smallint**|El estado de la última captura de este cursor. Para obtener más información, consulte [@@FETCH_STATUS](../../t-sql/functions/fetch-status-transact-sql.md):<br /><br /> 0 = Captura correcta.<br /><br /> -1 = Error en la captura o se sobrepasaron los límites del cursor<br /><br /> -2 = Falta la fila solicitada.<br /><br /> -9 = No se registró ninguna captura en el cursor.|  
 |column_count|**smallint**|El número de columnas del conjunto de resultados del cursor.|  
 |row_count|**smallint**|El número de filas afectadas por la última operación del cursor. Para obtener más información, consulte [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md).|  
-|last_operation|**smallint**|La última operación realizada en el cursor:<br /><br /> 0 = No se realizó ninguna operación en el cursor.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = INSERTAR<br /><br /> 4 = UPDATE<br /><br /> 5 = ELIMINAR<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
+|last_operation|**smallint**|La última operación realizada en el cursor:<br /><br /> 0 = No se realizó ninguna operación en el cursor.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = INSERCIÓN<br /><br /> 4 = UPDATE<br /><br /> 5 = DELETE<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|Un valor único que identifica el cursor dentro del ámbito del servidor.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  sp_cursor_list presenta una lista de los actuales cursores de servidor abiertos por la conexión y describe los atributos globales de cada cursor, como por ejemplo, las posibilidades de desplazamiento y actualización del mismo. sp_cursor_list enumera los cursores siguientes:  
   
 -   Cursores de servidor [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -92,7 +92,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
   
  Utilice sp_describe_cursor_columns para obtener una descripción de los atributos del conjunto de resultados devuelto por el cursor. Utilice sp_describe_cursor_tables para obtener un informe de las tablas base a las que hace referencia el cursor. sp_describe_cursor notifica la misma información que sp_cursor_list, pero solo para el cursor especificado.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, los permisos de ejecución corresponden al rol public.  
   
 ## <a name="examples"></a>Ejemplos  

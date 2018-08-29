@@ -1,5 +1,5 @@
 ---
-title: sp_helplinkedsrvlogin (Transact-SQL) | Documentos de Microsoft
+title: sp_helplinkedsrvlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helplinkedsrvlogin
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b9615c833939c18b3653fa4035258b91bb5bdfc8
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 74f2885b8b1226afbcd7f4aceb4d6f5835e20a0b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33253268"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036577"
 ---
 # <a name="sphelplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 |**Inicio de sesión remoto**|**sysname**|Nombre de inicio de sesión en **LinkedServer** que se asigna a **LocalLogin** cuando **IsSelfMapping** es 0. Si **IsSelfMapping** es 1, **RemoteLogin** es NULL.|  
   
 ## <a name="remarks"></a>Notas  
- Antes de eliminar asignaciones de inicio de sesión, utilice **sp_helplinkedsrvlogin** para determinar los servidores vinculados que están implicados.  
+ Antes de eliminar las asignaciones de inicio de sesión, utilice **sp_helplinkedsrvlogin** para determinar los servidores vinculados que están implicados.  
   
 ## <a name="permissions"></a>Permisos  
  No se comprueba ningún permiso.  

@@ -1,5 +1,5 @@
 ---
-title: Sys.user_token (Transact-SQL) | Documentos de Microsoft
+title: Sys.user_token (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,23 +24,22 @@ helpviewer_keywords:
 - tokens [SQL Server]
 - user_token catalog view
 ms.assetid: be018103-5e57-43a4-9160-9bf420892aa7
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 09bed48e868b85f25af9ba962a180855d9f6e95c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 217528671012e90ab126ad39b079791c6ced022b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222430"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036824"
 ---
 # <a name="sysusertoken-transact-sql"></a>sys.user_token (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila por cada entidad de seguridad de base de datos que forma parte del token del usuario en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**principal_id**|**int**|Id. de la entidad de seguridad. El valor es único en la base de datos.|  
 |**SID**|**varbinary(85)**|Identificador de seguridad de la entidad de seguridad si ésta está definida como externa a la base de datos. Por ejemplo, puede ser un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un inicio de sesión de Windows, un inicio de sesión del grupo de Windows o un inicio de sesión asignado a un certificado; de lo contrario, este valor es NULL.|  

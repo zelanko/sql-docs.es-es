@@ -1,5 +1,5 @@
 ---
-title: sp_attachsubscription (Transact-SQL) | Documentos de Microsoft
+title: sp_attachsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_attachsubscription
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
-caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f01aa56a511e6a9800e543bb034cf21a9f3496ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7bc27f24669cb85c748b6f41715316a3390399e0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993842"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022024"
 ---
 # <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,13 +76,13 @@ sp_attachsubscription [ @dbname = ] 'dbname'
  Es el nombre de inicio de sesión del suscriptor que se debe utilizar al conectarse con un suscriptor durante la sincronización. *subscriber_login* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
->  Este parámetro ha quedado desusado y se mantiene solo cuestiones de compatibilidad de las secuencias de comandos. Si *subscriber_security_mode* no **1** y *subscriber_login* está especificado, se devuelve un error.  
+>  Este parámetro ha quedado en desuso y se mantiene solo permitir la compatibilidad de las secuencias de comandos. Si *subscriber_security_mode* no **1** y *subscriber_login* está especificado, se devuelve un error.  
   
  [  **@subscriber_password=** ] **'***subscriber_password***'**  
  Es la contraseña del suscriptor. *subscriber_password* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
->  Este parámetro ha quedado desusado y se mantiene solo cuestiones de compatibilidad de las secuencias de comandos. Si *subscriber_security_mode* no **1** y *subscriber_password* está especificado, se devuelve un error.  
+>  Este parámetro ha quedado en desuso y se mantiene solo permitir la compatibilidad de las secuencias de comandos. Si *subscriber_security_mode* no **1** y *subscriber_password* está especificado, se devuelve un error.  
   
  [  **@distributor_security_mode=** ] *distributor_security_mode*  
  Es el modo de seguridad que se debe utilizar al conectarse con un distribuidor durante la sincronización. *distributor_security_mode* es **int**, su valor predeterminado es **0**. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. **1** especifica autenticación de Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -98,7 +97,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 >  No utilice una contraseña en blanco. Utilice una contraseña segura. Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
   
  [  **@publisher_security_mode=** ] *publisher_security_mode*  
- Es el modo de seguridad que se debe utilizar al conectarse con un publicador durante la sincronización. *publisher_security_mode* es **int**, su valor predeterminado es **1**. Si **0**, especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. Si **1**, especifica autenticación de Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+ Es el modo de seguridad que se debe utilizar al conectarse con un publicador durante la sincronización. *publisher_security_mode* es **int**, su valor predeterminado es **1**. Si **0**, especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. Si **1**, especifica la autenticación de Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  [  **@publisher_login=** ] **'***publisher_login***'**  
  Es el inicio de sesión que se debe utilizar al conectarse con un publicador durante la sincronización. *publisher_login* es **sysname**, su valor predeterminado es null.  
@@ -119,7 +118,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
   
  [  **@db_master_key_password=** ] **'***db_master_key_password***'**  
- Es la contraseña de una clave maestra de base de datos definida por el usuario. *db_master_key_password* es **nvarchar (524)**, su valor predeterminado es null. Si *db_master_key_password* no se especifica, se quita y vuelve a crear una clave maestra de base de datos existente.  
+ Es la contraseña de una clave maestra de base de datos definida por el usuario. *db_master_key_password* es **nvarchar (524)**, su valor predeterminado es null. Si *db_master_key_password* no se especifica, se puede quitar y volver a crear una clave maestra de base de datos existente.  
   
 > [!IMPORTANT]  
 >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
@@ -127,12 +126,12 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_attachsubscription** se utiliza en la replicación de instantáneas, transaccional y de mezcla.  
   
  No se puede adjuntar una suscripción a la publicación si el período de retención de la publicación ha expirado. Si se especifica una suscripción con un período de retención transcurrido, se produce un error cuando se adjunta la suscripción o cuando se sincroniza por primera vez. Las publicaciones con un período de retención de publicación de **0** (nunca expiran) se omiten.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_attachsubscription**.  
   
 ## <a name="see-also"></a>Vea también  

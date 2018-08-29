@@ -15,16 +15,15 @@ helpviewer_keywords:
 - security [SQL Server], predicate based access control
 - predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: eefc0764be46d8356dc1ac8e04b8025bf6119afd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 344497fea67a2bfdadf66095056ac9e909d945a2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311285"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017488"
 ---
 # <a name="row-level-security"></a>Seguridad de nivel de fila
   La seguridad de nivel de fila permite a los clientes controlar el acceso a las filas de una tabla de base de datos según las características del usuario que ejecuta una consulta (por ejemplo, pertenencia a grupos o contexto de ejecución). Seguridad de nivel de fila ahora está disponible en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. Consulte [Seguridad de nivel de fila](https://msdn.microsoft.com/library/dn765131.aspx) en la documentación actual para obtener la descripción actual de esta característica.  

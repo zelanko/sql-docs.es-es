@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergealternatepublisher (Transact-SQL) | Documentos de Microsoft
+title: sp_dropmergealternatepublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropmergealternatepublisher
 ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46c3e124cee4c4d8ff9190c063433ca97f19aa72
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c259f83b37577425764d2d0ea2325c5cc275dec2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991802"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036858"
 ---
 # <a name="spdropmergealternatepublisher-transact-sql"></a>sp_dropmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_dropmergealaternatepublisher [ @publisher = ] 'publisher'    , [ @publisher_d
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publisher=**] **'***publisher***'**  
- Es el nombre del publicador actual. *Publisher*es **sysname**, no tiene ningún valor predeterminado.  
+ Es el nombre del publicador actual. *publicador*es **sysname**, no tiene ningún valor predeterminado.  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
  Es el nombre de la base de datos de publicación actual. *publisher_db*es **sysname**, no tiene ningún valor predeterminado.  
@@ -66,11 +66,11 @@ sp_dropmergealaternatepublisher [ @publisher = ] 'publisher'    , [ @publisher_d
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_dropmergealternatepublisher** se utiliza en la replicación de mezcla.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos puede ejecutar **sp_dropmergelternatepublisher**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos se puede ejecutar **sp_dropmergelternatepublisher**.  
   
 ## <a name="see-also"></a>Vea también  
  [sp_addmergealternatepublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergealternatepublisher-transact-sql.md)  

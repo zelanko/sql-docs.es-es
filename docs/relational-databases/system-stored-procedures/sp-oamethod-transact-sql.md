@@ -1,5 +1,5 @@
 ---
-title: sp_OAMethod (Transact-SQL) | Documentos de Microsoft
+title: sp_OAMethod (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef5d79a14aaee0b8f23738c3e359e37032d80318
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 28e14076113b89c980756d42ddc126f75792d1a4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260811"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035105"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,23 +47,23 @@ sp_OAMethod objecttoken , methodname
   
 ## <a name="arguments"></a>Argumentos  
  *objecttoken*  
- Es el token de objeto de un objeto OLE que se creó previamente mediante **sp_OACreate**.  
+ Es el token de un objeto OLE creado anteriormente mediante el uso de **sp_OACreate**.  
   
  *MethodName*  
  Es el nombre de método del objeto OLE al que se llamará.  
   
- *ReturnValue***salida**  
+ *ReturnValue***salida**   
  Es el valor devuelto del método del objeto OLE. Si se especifica, debe ser una variable local del tipo de datos adecuado.  
   
- Si el método devuelve un valor único, especifique una variable local para *returnvalue*, que devuelve el método de valor devuelto en la variable local, o no especifique *returnvalue*, que devuelve el método devuelve el valor al cliente como un conjunto de resultados de una sola columna y fila única.  
+ Si el método devuelve un valor único, especifique una variable local para *returnvalue*, que devuelve el método devuelve el valor en la variable local o que no se especifica *returnvalue*, que devuelve el método devuelve el valor al cliente como un conjunto de resultados de una sola columna, fila única.  
   
- Si el método de valor devuelto es un objeto OLE, *returnvalue* debe ser una variable local del tipo de datos **int**. En la variable local se almacena un token de objeto que se puede utilizar con otros procedimientos almacenados de OLE Automation.  
+ Si el método devuelve el valor es un objeto OLE, *returnvalue* debe ser una variable local del tipo de datos **int**. En la variable local se almacena un token de objeto que se puede utilizar con otros procedimientos almacenados de OLE Automation.  
   
  Cuando el método de valor devuelto es una matriz, si *returnvalue* se especifica, se establece en NULL.  
   
  Se genera un error si se da uno de los casos siguientes:  
   
--   *ReturnValue* se especifica, pero el método no devuelve ningún valor.  
+-   *ReturnValue* se especifica, pero el método no devuelve un valor.  
   
 -   El método devuelve una matriz con más de dos dimensiones.  
   
@@ -72,20 +72,20 @@ sp_OAMethod objecttoken , methodname
  [  *@parametername*** =**] *parámetro*[ **salida** ]  
  Es un parámetro del método. Si se especifica, *parámetro* debe ser un valor de tipo de datos adecuado.  
   
- Para obtener el valor devuelto de un parámetro de salida, *parámetro* debe ser una variable local del tipo de datos adecuado, y **salida** debe especificarse. Si se especifica un parámetro constante o si **salida** no se especifica, ningún valor devuelto se omite el valor de un parámetro de salida.  
+ Para obtener el valor devuelto de un parámetro de salida, *parámetro* debe ser una variable local del tipo de datos adecuado, y **salida** debe especificarse. Si se especifica un parámetro constante, o si **salida** no se especifica, todos de retorno se omite el valor de un parámetro de salida.  
   
- Si se especifica, *parametername* debe ser el nombre de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] con el nombre de parámetro. Tenga en cuenta que  **@** *parametername*no es un [!INCLUDE[tsql](../../includes/tsql-md.md)] variable local. El signo de arroba (**@**) se quita, y *parametername*se pasa al objeto OLE como el nombre del parámetro. Todos los parámetros con nombre deben especificarse después de especificar todos los parámetros de posición.  
+ Si se especifica, *parametername* debe ser el nombre de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] parámetro con nombre. Tenga en cuenta que  **@** *parametername*no es un [!INCLUDE[tsql](../../includes/tsql-md.md)] variable local. El signo de arroba (**@**) se quita, y *parametername*se pasa al objeto OLE como el nombre del parámetro. Todos los parámetros con nombre deben especificarse después de especificar todos los parámetros de posición.  
   
  *n*  
  Es un marcador de posición que indica que se pueden especificar varios parámetros.  
   
 > [!NOTE]  
->  *@parametername* puede ser un parámetro con nombre porque forma parte del método especificado y se pasa a través del objeto. Los demás parámetros de este procedimiento almacenado se especifican por la posición, no por el nombre.  
+>  *@parametername* puede ser un parámetro con nombre porque forma parte del método especificado y se pasa al objeto. Los demás parámetros de este procedimiento almacenado se especifican por la posición, no por el nombre.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o un valor distinto de cero (error) que es el valor entero del HRESULT devuelto por el objeto de OLE Automation.  
   
- Para obtener más información sobre códigos de retorno HRESULT, [OLE Automation códigos de retorno e información de Error](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Para obtener más información sobre los códigos de retorno HRESULT, [OLE Automation códigos de retorno e información de Error](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Si el valor devuelto del método es una matriz con una o dos dimensiones, se devuelve la matriz al cliente como un conjunto de resultados:  
@@ -98,7 +98,7 @@ sp_OAMethod objecttoken , methodname
   
  Cuando todos los valores de datos de una columna comparten el mismo tipo de datos, se utiliza ese tipo para toda la columna. Cuando los valores de datos de una columna utilizan tipos de datos diferentes, el tipo de datos de toda la columna se elige como se muestra a continuación.  
   
-||int|float|money|datetime|varchar|nvarchar|  
+||INT|FLOAT|money|DATETIME|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -107,10 +107,10 @@ sp_OAMethod objecttoken , methodname
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  También puede usar **sp_OAMethod** para obtener un valor de propiedad.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
@@ -128,8 +128,8 @@ BEGIN
 END;  
 ```  
   
-### <a name="b-getting-a-property"></a>B. Al obtener una propiedad  
- En el ejemplo siguiente se obtiene la `HostName` propiedad (de la que se han creado previamente **SQLServer** objeto) y lo almacena en una variable local.  
+### <a name="b-getting-a-property"></a>B. Obtener una propiedad  
+ En el ejemplo siguiente se obtiene el `HostName` propiedad (de creado previamente **SQLServer** objeto) y lo almacena en una variable local.  
   
 ```  
 DECLARE @property varchar(255);  
@@ -143,7 +143,7 @@ PRINT @property;
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [OLE procedimientos almacenados de automatización &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [OLE Automation procedimientos almacenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Ejemplo de script de automatización OLE](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

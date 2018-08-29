@@ -1,5 +1,5 @@
 ---
-title: sp_helpsrvrole (Transact-SQL) | Documentos de Microsoft
+title: sp_helpsrvrole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpsrvrole
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3addbb80d8423147a34c5b9fd9b1e3eab29471ab
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 03da770b709c30d02ef785f747bde2d4c403b105
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253767"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020760"
 ---
 # <a name="sphelpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
  [  **@srvrolename=** ] **'***rol***'**  
  Es el nombre del rol fijo de servidor. *rol* es **sysname**, su valor predeterminado es null. *rol* puede ser uno de los siguientes valores.  
   
-|Rol fijo de servidor|Description|  
+|Rol fijo de servidor|Descripción|  
 |-----------------------|-----------------|  
 |sysadmin|Administradores del sistema|  
 |securityadmin|Administradores de seguridad|  
@@ -63,21 +63,21 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|Nombre del rol de servidor|  
-|Description|**sysname**|Descripción de ServerRole|  
+|Descripción|**sysname**|Descripción de ServerRole|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Los roles fijos de servidor están definidos en el nivel de servidor y tienen permisos para ejecutar actividades administrativas específicas en el servidor. Los roles fijos de servidor no se pueden agregar, quitar ni cambiar.  
   
- Para agregar o quitar miembros de roles de servidor, consulte [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ Para agregar o quitadas miembros de los roles de servidor, consulte [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
- Todos los inicios de sesión están miembro del público. sp_helpsrvrole no reconoce la función public porque, internamente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no implementa públicos como un rol.  
+ Todos los inicios de sesión están miembro del público. sp_helpsrvrole no reconoce el rol público porque, internamente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no implementa pública como un rol.  
   
- sp_helpsrvrole no tiene un rol de servidor definidos por el usuario como un argumento. Para obtener una lista de los roles de servidor definidos por el usuario, vea los ejemplos de [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ sp_helpsrvrole no tiene un rol de servidor definido por el usuario como argumento. Para obtener una lista de los roles de servidor definido por el usuario, vea los ejemplos de [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol public.  
   
 ## <a name="examples"></a>Ejemplos  

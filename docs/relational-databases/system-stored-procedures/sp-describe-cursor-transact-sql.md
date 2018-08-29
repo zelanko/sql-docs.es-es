@@ -1,5 +1,5 @@
 ---
-title: sp_describe_cursor (Transact-SQL) | Documentos de Microsoft
+title: sp_describe_cursor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_describe_cursor
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72278631cebc617666317df77fd62e28442b9706
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 81b6e932fb824d636b06dc92980114fbb956ff08
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260651"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034829"
 ---
 # <a name="spdescribecursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
   
 ## <a name="arguments"></a>Argumentos  
  [ @cursor_return=] *output_cursor_variable* salida  
- Es el nombre de una variable de cursor declarada que recibirá la salida del cursor. *output_cursor_variable* es **cursor**, no tiene ningún valor predeterminado y debe no ser asociado a ningún cursor en el momento en que se llama a sp_describe_cursor. El cursor devuelto es un cursor desplazable, dinámico y de solo lectura.  
+ Es el nombre de una variable de cursor declarada que recibirá la salida del cursor. *output_cursor_variable* es **cursor**, no tiene ningún valor predeterminado y debe no ser asociada a ningún cursor en el momento en que se llama a sp_describe_cursor. El cursor devuelto es un cursor desplazable, dinámico y de solo lectura.  
   
  [ @cursor_source=] {N ' | N'global' | N'variable'}  
  Especifica si el cursor del que se informa está especificado con el nombre de un cursor local, un cursor global o una variable de cursor. El parámetro es **nvarchar (30)**.  
@@ -62,9 +62,9 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
  Es el nombre de un cursor creado por una instrucción DECLARE CURSOR que tiene la palabra clave LOCAL u obtuvo el valor predeterminado LOCAL. *local_cursor_name* es **nvarchar (128)**.  
   
  [ @cursor_identity=] N'*global_cursor_name*']  
- Es el nombre de un cursor creado por una instrucción DECLARE CURSOR que tiene la palabra clave GLOBAL u obtuvo el valor predeterminado global. *global_cursor_name* es **nvarchar (128)**.  
+ Es el nombre de un cursor creado por una instrucción DECLARE CURSOR que tiene la palabra clave GLOBAL u obtuvo el valor predeterminado GLOBAL. *global_cursor_name* es **nvarchar (128)**.  
   
- *global_cursor_name* también puede ser el nombre de un cursor de servidor API que se abre con una aplicación ODBC que, a continuación, con el nombre mediante una llamada a SQLSetCursorName.  
+ *global_cursor_name* también puede ser el nombre de un cursor de servidor API que se abre una aplicación ODBC que, a continuación, se denomina mediante una llamada a SQLSetCursorName.  
   
  [ @cursor_identity=] N'*input_cursor_variable*']  
  Es el nombre de una variable de cursor asociada a un cursor abierto. *input_cursor_variable* es **nvarchar (128)**.  
@@ -77,7 +77,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
   
  En la siguiente tabla se muestra el formato del cursor devuelto por sp_describe_cursor. El formato del cursor es el mismo que el devuelto con sp_cursor_list.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |reference_name|**sysname**|Nombre que se utiliza para hacer referencia al cursor. Si la referencia al cursor se realizó utilizando el nombre especificado en una instrucción DECLARE CURSOR, el nombre de referencia es el mismo que el nombre del cursor. Si la referencia al cursor se hizo utilizando una variable, el nombre de referencia es el de la variable.|  
 |cursor_name|**sysname**|Nombre del cursor desde una instrucción DECLARE CURSOR. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el cursor se creó estableciendo una variable de cursor como un cursor, cursor_name devuelve el nombre de la variable de cursor. En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna de salida devuelve un nombre generado por el sistema.|  
@@ -91,15 +91,15 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |fetch_status|**smallint**|Estado de la última captura de este cursor. Para más información, vea [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md).<br /><br /> 0 = Captura correcta.<br /><br /> -1 = Error en la captura o se sobrepasaron los límites del cursor<br /><br /> -2 = Falta la fila solicitada.<br /><br /> -9 = No se registró ninguna captura en el cursor.|  
 |column_count|**smallint**|Número de columnas del conjunto de resultados del cursor.|  
 |row_count|**decimal(10,0)**|Número de filas afectadas por la última operación del cursor. Para más información, vea [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).|  
-|last_operation|**tinyint**|Última operación realizada en el cursor:<br /><br /> 0 = No se realizó ninguna operación en el cursor.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = INSERTAR<br /><br /> 4 = UPDATE<br /><br /> 5 = ELIMINAR<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
+|last_operation|**tinyint**|Última operación realizada en el cursor:<br /><br /> 0 = No se realizó ninguna operación en el cursor.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = INSERCIÓN<br /><br /> 4 = UPDATE<br /><br /> 5 = DELETE<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|Valor único del cursor dentro del ámbito del servidor.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  sp_describe_cursor describe los atributos globales de un cursor de servidor, como la posibilidad de desplazarlo y actualizarlo. Utilice sp_describe_cursor_columns para obtener una descripción de los atributos del conjunto de resultados devuelto por el cursor. Utilice sp_describe_cursor_tables para obtener un informe de las tablas base a las que hace referencia el cursor. Para obtener un informe de los cursores de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)] visibles en la conexión, use sp_cursor_list.  
   
- Una instrucción DECLARE CURSOR puede solicitar un tipo de cursor no compatible con la instrucción SELECT de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de DECLARE CURSOR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte implícitamente el cursor a un tipo compatible con la instrucción SELECT. Si se especifica TYPE_WARNING en la instrucción DECLARE CURSOR, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envía a la aplicación un mensaje informativo que indica que se ha completado una conversión. a continuación, se llama a sp_describe_cursor para determinar el tipo de cursor que se ha implementado.  
+ Una instrucción DECLARE CURSOR puede solicitar un tipo de cursor no compatible con la instrucción SELECT de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de DECLARE CURSOR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte implícitamente el cursor a un tipo compatible con la instrucción SELECT. Si se especifica TYPE_WARNING en la instrucción DECLARE CURSOR, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envía a la aplicación un mensaje informativo que indica que se ha completado una conversión. a continuación, se puede llamar a sp_describe_cursor para determinar el tipo de cursor que se ha implementado.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol public.  
   
 ## <a name="examples"></a>Ejemplos  

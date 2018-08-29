@@ -1,5 +1,5 @@
 ---
-title: Sys.extended_procedures (Transact-SQL) | Documentos de Microsoft
+title: Sys.extended_procedures (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,28 +21,28 @@ helpviewer_keywords:
 - sys.extended_procedures catalog view
 ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be24a61208f854976b45a7ba927e83a4c87fecb5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a753cdd737512d8a450e1a7156c477e19b5e45fd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178001"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021272"
 ---
 # <a name="sysextendedprocedures-transact-sql"></a>sys.extended_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una fila por cada objeto que es un procedimiento almacenado extendido, con **sys.objects.type** = X. Dado que los procedimientos almacenados extendidos se instalan en el **maestro** base de datos, solo son visibles desde el contexto de base de datos. Selección de la **sys.extended_procedures** vista en cualquier otro contexto de base de datos devolverá un conjunto de resultados vacío.  
+  Contiene una fila por cada objeto que es un procedimiento almacenado extendido, con **sys.objects.type** = X. Dado que los procedimientos almacenados extendidos se instalan en el **maestro** base de datos, solo son visibles desde el contexto de base de datos. Seleccionar desde el **sys.extended_procedures** vista en cualquier otro contexto de base de datos devolverá un conjunto de resultados vacío.  
 
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**\<Las columnas que se heredan de sys.objects >**||Para obtener una lista de columnas que hereda esta vista, consulte [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
-|**nombre_dll**|**nvarchar(260)**|Nombre, incluida la ruta, de la DLL para este procedimiento almacenado extendido.|  
+|**dll_name**|**nvarchar(260)**|Nombre, incluida la ruta, de la DLL para este procedimiento almacenado extendido.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

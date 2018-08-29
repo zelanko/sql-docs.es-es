@@ -17,14 +17,14 @@ helpviewer_keywords:
 - properties [OLE DB]
 - property values [OLE DB Driver for SQL Server]
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: a424615a54a5917d52f4144b995589345d6cb534
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 48d85439f485621d7967b72e1f3ddaf60f61ef4e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39105981"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018101"
 ---
 # <a name="about-ole-db-properties"></a>Acerca de las propiedades de OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "39105981"
 7.  Llamar a un método para establecer las propiedades y pasar el recuento y la matriz de estructuras DBPROPSET.  
   
 ## <a name="see-also"></a>Ver también  
- [Creación de una aplicación del controlador OLE DB para SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
+ [Creación de un controlador OLE DB para la aplicación de SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
  [Propiedades (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=112207)  
   
   

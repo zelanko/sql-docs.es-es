@@ -1,5 +1,5 @@
 ---
-title: sp_helpsubscription_properties (Transact-SQL) | Documentos de Microsoft
+title: sp_helpsubscription_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpsubscription_properties
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83f6699993f9ee4d0d3df4662bb75e4e07edb942
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8bf2f6b3cf99b90662e609311fb787b0225759dc
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003182"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019694"
 ---
 # <a name="sphelpsubscriptionproperties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publisher=**] **'***publisher***'**  
- Es el nombre del publicador. *Publisher* es **sysname**, su valor predeterminado es **%**, que devuelve información acerca de todos los publicadores.  
+ Es el nombre del publicador. *publicador* es **sysname**, su valor predeterminado es **%**, que devuelve información acerca de todos los publicadores.  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
- Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, su valor predeterminado es **%**, que devuelve información sobre todas las bases de datos de publicador.  
+ Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, su valor predeterminado es **%**, que devuelve información acerca de todas las bases de datos del publicador.  
   
  [  **@publication=**] **'***publicación***'**  
  Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es **%**, que devuelve información acerca de todas las publicaciones.  
@@ -60,7 +60,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
  [  **@publication_type=**] *publication_type*  
  Es el tipo de publicación. *publication_type* es **int**, su valor predeterminado es null. Si se proporciona, *publication_type* debe ser uno de los siguientes valores:  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|Publicación transaccional|  
 |**1**|Publicación de instantáneas|  
@@ -68,16 +68,16 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**publicador**|**sysname**|Nombre del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador.|  
-|**Publicación**|**sysname**|Nombre de la publicación.|  
-|**publication_type**|**int**|Tipo de publicación:<br /><br /> **0** = transaccional<br /><br /> **1** = instantánea<br /><br /> **2** = mezcla|  
+|**publicación**|**sysname**|Nombre de la publicación.|  
+|**publication_type**|**int**|Tipo de publicación:<br /><br /> **0** = transaccional<br /><br /> **1** = instantánea<br /><br /> **2** = la mezcla|  
 |**publisher_login**|**sysname**|Id. de inicio de sesión utilizado en el publicador para la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_password**|**nvarchar (524)**|Contraseña utilizada en el publicador para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (cifrada).|  
 |**publisher_security_mode**|**int**|Modo de seguridad utilizado en el publicador.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** = autenticación de Windows|  
-|**Distribuidor**|**sysname**|Nombre del distribuidor.|  
+|**distribuidor**|**sysname**|Nombre del distribuidor.|  
 |**distributor_login**|**sysname**|Inicio de sesión del distribuidor.|  
 |**distributor_password**|**nvarchar (524)**|Contraseña del distribuidor (cifrada).|  
 |**distributor_security_mode**|**int**|Modo de seguridad utilizado en el distribuidor:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** = autenticación de Windows|  
@@ -90,11 +90,11 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**use_ftp**|**bit**|Especifica que se utilizará FTP en lugar del protocolo regular para recuperar las instantáneas. Si **1**, se utiliza FTP.|  
 |**dts_package_name**|**sysame**|Especifica el nombre del paquete de Servicios de transformación de datos (DTS).|  
 |**dts_package_password**|**nvarchar (524)**|Especifica la contraseña del paquete, si procede.|  
-|**dts_package_location**|**int**|La ubicación donde se almacena el paquete DTS.<br /><br /> **0** = el paquete se encuentra en el distribuidor.<br /><br /> **1** = el paquete se encuentra en el suscriptor.|  
+|**dts_package_location**|**int**|La ubicación donde se almacena el paquete DTS.<br /><br /> **0** = el paquete de ubicación está en el distribuidor.<br /><br /> **1** = el paquete de ubicación está en el suscriptor.|  
 |**offload_agent**|**bit**|Especifica si el agente puede activarse de forma remota. Si **0**, el agente no puede activarse de forma remota.|  
 |**offload_server**|**sysname**|Especifica el nombre de red del servidor utilizado para la activación remota.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Especifica la ruta de acceso a la carpeta donde se guardan los archivos de instantáneas.|  
-|**use_web_sync**|**bit**|Especifica si la suscripción se puede sincronizar a través de HTTPS, donde un valor de **1** significa que esta característica está habilitada.|  
+|**use_web_sync**|**bit**|Especifica si se puede sincronizar la suscripción a través de HTTPS, el valor **1** significa que esta característica está habilitada.|  
 |**internet_url**|**nvarchar(260)**|URL que representa la ubicación de la escucha de replicación para la sincronización web.|  
 |**internet_login**|**nvarchar(128)**|Inicio de sesión que utiliza el Agente de mezcla al conectarse al servidor web que hospeda la sincronización web utilizando autenticación básica.|  
 |**internet_password**|**nvarchar (524)**|Contraseña para el Inicio de sesión que utiliza el Agente de mezcla al conectarse al servidor web que hospeda la sincronización web utilizando autenticación básica.|  
@@ -105,11 +105,11 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_helpsubscription_properties** se utiliza en la replicación de instantáneas, transaccional y de mezcla.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_helpsubscription_properties**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_helpsubscription_properties**.  
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: sp_mergedummyupdate (Transact-SQL) | Documentos de Microsoft
+title: sp_mergedummyupdate (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_mergedummyupdate
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d31ad74486c8be2b964f4dd3f02c5b5a04ac0b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c06f7c39d495808bd700947082b7416f7dd2853
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994842"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021574"
 ---
 # <a name="spmergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +54,13 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_mergedummyupdate** se utiliza en la replicación de mezcla.  
   
- **sp_mergedummyupdate** es útil cuando escriba su propia alternativa al Visor de conflictos de replicación (Wzcnflct.exe).  
+ **sp_mergedummyupdate** es útil si escribe su propia alternativa al Visor de conflictos de replicación (Wzcnflct.exe).  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **db_owner** rol fijo de base de datos puede ejecutar **sp_mergedummyupdate**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **db_owner** rol fijo de base de datos se puede ejecutar **sp_mergedummyupdate**.  
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

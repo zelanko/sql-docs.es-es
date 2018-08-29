@@ -26,15 +26,15 @@ helpviewer_keywords:
 - sp_helpdynamicsnapshot_job
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17a7d69869e9879d485f1a8cac107836a5984a44
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 00ed352027fb4779142b56e3f5c87a3f13df80c1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001252"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036348"
 ---
 # <a name="sphelpdynamicsnapshotjob-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,11 +68,11 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identifica el trabajo de instantáneas de datos filtrados.|  
 |**job_name**|**sysname**|Nombre del trabajo de instantáneas de datos filtrados.|  
-|**job_id**|**uniqueidentifier**|Identifica la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente en el distribuidor.|  
+|**job_id**|**uniqueidentifier**|Identifica el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente en el distribuidor.|  
 |**dynamic_filter_login**|**sysname**|Valor utilizado para evaluar la [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) función en un filtro de fila con parámetros definido para la publicación.|  
 |**dynamic_filter_hostname**|**sysname**|Valor utilizado para evaluar la [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) función en un filtro de fila con parámetros definido para la publicación.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Ruta a la carpeta de la que se leen los archivos de instantáneas si se utiliza un filtro de fila con parámetros.|  
@@ -80,7 +80,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 |**frequency_interval**|**int**|Los días en los que se ejecuta el agente; puede tener los valores siguientes.<br /><br /> **1** = el domingo<br /><br /> **2** = el lunes<br /><br /> **3** = el martes<br /><br /> **4** = el miércoles<br /><br /> **5** = el jueves<br /><br /> **6** = el viernes<br /><br /> **7** = el sábado<br /><br /> **8** = día<br /><br /> **9** = días laborables<br /><br /> **10** = días del fin de semana|  
 |**frequency_subday_type**|**int**|Es el tipo que define la frecuencia con que el agente ejecuta cuando *frequency_type* es **4** (diariamente), y puede tener uno de estos valores.<br /><br /> **1** = a la hora especificada<br /><br /> **2** = segundos<br /><br /> **4** = minutos<br /><br /> **8** = horas|  
 |**frequency_subday_interval**|**int**|Número de intervalos de *frequency_subday_type* que se producen entre las ejecuciones programadas del agente.|  
-|**frequency_relative_interval**|**int**|Es la semana en que el agente se ejecuta en un mes determinado cuando *frequency_type* es **32** (relativo mensual), y puede tener uno de estos valores.<br /><br /> **1** = primero<br /><br /> **2** = segundo<br /><br /> **4** = tercero<br /><br /> **8** = cuarto<br /><br /> **16** = último|  
+|**frequency_relative_interval**|**int**|Es la semana que se ejecuta el agente en un mes determinado cuando *frequency_type* es **32** (relativo mensual), y puede tener uno de estos valores.<br /><br /> **1** = primero<br /><br /> **2** = segundo<br /><br /> **4** = tercero<br /><br /> **8** = cuarto<br /><br /> **16** = último|  
 |**frequency_recurrence_factor**|**int**|Número de semanas o meses entre las ejecuciones programadas del agente.|  
 |**active_start_date**|**int**|Fecha en que se programa la primera ejecución del agente, con el formato AAAAMMDD.|  
 |**active_end_date**|**int**|Fecha en que se programa la última ejecución del agente, con el formato AAAAMMDD.|  
@@ -90,13 +90,13 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_helpdynamicsnapshot_job** se utiliza en la replicación de mezcla.  
   
  Si se utilizan todos los valores de parámetros predeterminados, se devuelve información sobre todos los trabajos de instantáneas de datos con particiones para toda la base de datos de publicaciones.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor, el **db_owner** corregidos rol de base de datos y la lista de acceso de publicación para la publicación pueden ejecutar **sp_helpdynamicsnapshot_job**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor, el **db_owner** se ha corregido el rol de base de datos y la lista de acceso de publicación para la publicación pueden ejecutar **sp_helpdynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

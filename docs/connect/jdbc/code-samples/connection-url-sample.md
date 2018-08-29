@@ -14,18 +14,18 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 578789591b1f0eb62c6da1f3048909962b9f1bc5
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 8b0365cf9427d11353e7f086d1f2faf1de511d30
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39451570"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787909"
 ---
 # <a name="connection-url-sample"></a>Ejemplo de URL de conexión
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-En esta aplicación de ejemplo de [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] se muestra cómo conectar con una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] mediante una dirección URL de conexión. Además, se indica cómo recuperar los datos de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] con una instrucción SQL.
+En esta aplicación de ejemplo de [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] se muestra cómo conectar con una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante una dirección URL de conexión. Además, se indica cómo recuperar los datos de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con una instrucción SQL.
 
 El archivo de código para este ejemplo se denomina ConnectURL.java y se encuentra en la siguiente ubicación:
 

@@ -1,5 +1,5 @@
 ---
-title: sp_tables_ex (Transact-SQL) | Documentos de Microsoft
+title: sp_tables_ex (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_tables_ex
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ee56221f4ea21c1b1845d526992e27cf1f42893
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c75021c64cb009dbd1e4c97f773020735e517a86
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260941"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038408"
 ---
 # <a name="sptablesex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
  [  **@table_type=** ] **'***table_type***'**  
  Es el tipo de la tabla que se va a devolver. *TABLE_TYPE* es **sysname**, su valor predeterminado es null y puede tener uno de los siguientes valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**ALIAS**|Nombre de un alias.|  
 |**TEMPORAL GLOBAL**|Nombre de una tabla temporal disponible en todo el sistema.|  
@@ -76,27 +76,27 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**VIEW**|Nombre de una vista.|  
   
  [  **@fUsePattern=** ] **'***fUsePattern***'**  
- Determina si los caracteres **_**, **%**, **[**, y **]** se interpretan como caracteres comodín. Los valores válidos son 0 (coincidencia de patrón desactivada) y 1 (coincidencia de patrón activada). *fUsePattern* es **bits**, su valor predeterminado es 1.  
+ Determina si los caracteres **_**, **%**, **[**, y **]** se interpretan como caracteres comodín. Los valores válidos son 0 (coincidencia de patrón desactivada) y 1 (coincidencia de patrón activada). *fUsePattern* es **bit**, su valor predeterminado es 1.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|Nombre del calificador de tabla. Varios productos DBMS admiten nombres de tres partes para tablas (*calificador ***.*** propietario ***.*** nombre*). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En otros productos, representa el nombre del servidor del entorno de base de datos de la tabla. Este campo puede ser NULL.|  
-|**SEGÚN TABLE_SCHEM**|**sysname**|Nombre de propietario de la tabla. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de usuario de base de datos que creó la tabla. Este campo siempre devuelve un valor.|  
+|**SEGÚN TABLE_SCHEM**|**sysname**|Nombre de propietario de la tabla. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre del usuario de base de datos que creó la tabla. Este campo siempre devuelve un valor.|  
 |**TABLE_NAME**|**sysname**|Nombre de la tabla. Este campo siempre devuelve un valor.|  
 |**TABLE_TYPE**|**varchar (32)**|Tabla, tabla del sistema o vista.|  
 |**COMENTARIOS**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor para esta columna.|  
   
-## <a name="remarks"></a>Comentarios  
- **sp_tables_ex** se ejecuta al consultar el conjunto de filas TABLES de la **IDBSchemaRowset** interfaz del proveedor OLE DB correspondiente a *table_server*. El *table_name*, *table_schema*, *table_catalog*, y *columna* parámetros se pasan a esta interfaz para restringir las filas Devuelve.  
+## <a name="remarks"></a>Notas  
+ **sp_tables_ex** se ejecuta al consultar el conjunto de filas TABLES de la **IDBSchemaRowset** interfaz del proveedor OLE DB correspondiente a *table_server*. El *table_name*, *table_schema*, *table_catalog*, y *columna* los parámetros se pasan a esta interfaz para restringir las filas Devuelve.  
   
- **sp_tables_ex** devuelve un resultado vacío establecer si el proveedor OLE DB del servidor vinculado especificado no es compatible con el conjunto de filas TABLES de la **IDBSchemaRowset** interfaz.  
+ **sp_tables_ex** devuelve un resultado vacío se establece si el proveedor OLE DB del servidor vinculado especificado no es compatible con el conjunto de filas TABLES de la **IDBSchemaRowset** interfaz.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -116,7 +116,7 @@ EXEC sp_tables_ex @table_server = 'LONDON2',
  [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
  [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

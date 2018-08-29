@@ -1,5 +1,5 @@
 ---
-title: sp_addremotelogin (Transact-SQL) | Documentos de Microsoft
+title: sp_addremotelogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_addremotelogin
 ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
-caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ec988334611350fdf736b69100b27d79d5374342
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7be04649abd0a9bfdfb502074fa2f80d3209b92c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238825"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023243"
 ---
 # <a name="spaddremotelogin-transact-sql"></a>sp_addremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,23 +49,23 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
   
 ## <a name="arguments"></a>Argumentos  
  [ @remoteserver **=** ] **'***remoteserver***'**  
- Es el nombre del servidor remoto al que se aplica el inicio de sesión remoto. *remoteserver* es **sysname**, no tiene ningún valor predeterminado. Si solo *remoteserver* se especifica, todos los usuarios de *remoteserver* se asignan a los inicios de sesión existentes del mismo nombre en el servidor local. El servidor debe ser un servidor conocido por el servidor local. Esto se agrega mediante sp_addserver. Cuando los usuarios en *remoteserver* conectarse al servidor local que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar un procedimiento almacenado remoto, conectan con el inicio de sesión local que coincide con su inicio de sesión en *remoteserver* . *remoteserver* es el servidor que inicia la llamada a procedimiento remoto.  
+ Es el nombre del servidor remoto al que se aplica el inicio de sesión remoto. *remoteserver* es **sysname**, no tiene ningún valor predeterminado. Si solo *remoteserver* se especifica, todos los usuarios en *remoteserver* se asignan a inicios de sesión existentes del mismo nombre en el servidor local. El servidor debe ser un servidor conocido por el servidor local. Esto se agrega mediante sp_addserver. Cuando los usuarios en *remoteserver* conectarse al servidor local que se está ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar un procedimiento almacenado remoto, conectan con el inicio de sesión local que coincide con su propio inicio de sesión en *remoteserver* . *remoteserver* es el servidor que inicia la llamada a procedimiento remoto.  
   
  [ @loginame **=** ] **'***inicio de sesión***'**  
- Es el identificador de inicio de sesión del usuario en la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* es de tipo **sysname** y su valor predeterminado es NULL. *inicio de sesión*ya debe existir en la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si *inicio de sesión* se especifica, todos los usuarios de *remoteserver* se asignan a ese inicio de sesión local específico. Cuando los usuarios en *remoteserver* conectarse a la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar un procedimiento almacenado remoto, conectan con *inicio de sesión*.  
+ Es el identificador de inicio de sesión del usuario en la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* es de tipo **sysname** y su valor predeterminado es NULL. *inicio de sesión*ya debe existir en la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si *inicio de sesión* se especifica, todos los usuarios en *remoteserver* se asignan a ese inicio de sesión local específico. Cuando los usuarios en *remoteserver* conectarse a la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar un procedimiento almacenado remoto, conectan con *inicio de sesión*.  
   
  [ @remotename **=** ] **'***remote_name***'**  
- Es el identificador de inicio de sesión del usuario en el servidor remoto. *remote_name* es **sysname**, su valor predeterminado es null. *remote_name* debe existir en *remoteserver*. Si *remote_name* se especifica, el usuario concreto *remote_name* se asigna a *inicio de sesión* en el servidor local. Cuando *remote_name* en *remoteserver* se conecta a la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar un procedimiento almacenado remoto, se conecta como *inicio de sesión*. El identificador de inicio de sesión de *remote_name* puede ser diferente de la Id. de inicio de sesión en el servidor remoto, *inicio de sesión*.  
+ Es el identificador de inicio de sesión del usuario en el servidor remoto. *remote_name* es **sysname**, su valor predeterminado es null. *remote_name* debe existir en *remoteserver*. Si *remote_name* se especifica, el usuario específico *remote_name* se asigna a *inicio de sesión* en el servidor local. Cuando *remote_name* en *remoteserver* se conecta a la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar un procedimiento almacenado remoto, se conecta como *inicio de sesión*. El identificador de inicio de sesión de *remote_name* puede ser diferente del identificador de inicio de sesión en el servidor remoto, *inicio de sesión*.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Para ejecutar consultas distribuidas, utilice sp_addlinkedsrvlogin.  
   
  sp_addremotelogin no se puede usar dentro de una transacción definida por el usuario.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de sysadmin y securityadmin roles fijos de servidor pueden ejecutar sp_addremotelogin.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -99,7 +98,7 @@ EXEC sp_addremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';
  [sp_dropremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_helpremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
- [sp_helpserver & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_remoteoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

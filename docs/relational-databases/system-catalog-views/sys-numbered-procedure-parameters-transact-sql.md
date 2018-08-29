@@ -1,5 +1,5 @@
 ---
-title: Sys.numbered_procedure_parameters (Transact-SQL) | Documentos de Microsoft
+title: Sys.numbered_procedure_parameters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sys.numbered_procedure_parameters catalog view
 ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c64c6eadb57cf8e1c2d431a7d8af5164f704e21b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0594feab6b69a9917b084cfa20c71af9885a880a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181151"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021902"
 ---
 # <a name="sysnumberedprocedureparameters-transact-sql"></a>sys.numbered_procedure_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "33181151"
 > [!NOTE]  
 >  Los parámetros XML y CLR no son compatibles con los procedimientos numerados.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Identificador del objeto al que pertenece el parámetro.|  
 |**procedure_number**|**smallint**|Número de este procedimiento en el objeto, 2 o mayor.|  
@@ -51,15 +51,15 @@ ms.locfileid: "33181151"
 |**system_type_id**|**tinyint**|Id. del tipo de sistema del parámetro.|  
 |**user_type_id**|**int**|Id. del tipo, definido por el usuario, del parámetro.|  
 |**max_length**|**smallint**|Longitud máxima del parámetro en bytes.<br /><br /> -1 = El tipo de datos de las columnas es varchar(max), nvarchar(max) o varbinary(max).|  
-|**precisión**|**tinyint**|Precisión del parámetro si está basado en numerales; de lo contrario es 0.|  
-|**escala**|**tinyint**|Escala del parámetro si está basado en numerales; de lo contrario es 0.|  
+|**Precisión**|**tinyint**|Precisión del parámetro si está basado en numerales; de lo contrario es 0.|  
+|**Escala**|**tinyint**|Escala del parámetro si está basado en numerales; de lo contrario es 0.|  
 |**is_output**|**bit**|1 = El parámetro es de salida o retorno; de lo contrario, es 0|  
 |**is_cursor_ref**|**bit**|1 = El parámetro es un parámetro de referencia a un cursor.|  
   
 > [!NOTE]  
 >  Los parámetros XML y CLR no son compatibles con los procedimientos numerados.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

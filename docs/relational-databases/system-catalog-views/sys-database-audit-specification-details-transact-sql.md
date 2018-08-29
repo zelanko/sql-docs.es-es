@@ -1,5 +1,5 @@
 ---
-title: Sys.database_audit_specification_details (Transact-SQL) | Documentos de Microsoft
+title: Sys.database_audit_specification_details (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,26 +21,26 @@ helpviewer_keywords:
 - sys.database_audit_specification_details catalog view
 ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 95acf20e3ec873910eeecf6e9c3b66b5c9ededa0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4cf364f771797a16302fcdcb09e19bf60dba77e2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182441"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019752"
 ---
 # <a name="sysdatabaseauditspecificationdetails-transact-sql"></a>sys.database_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene información sobre las especificaciones de auditoría de base de datos en una auditoría de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de una instancia de servidor para todas las bases de datos. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Para obtener una lista de todos los audit_action_id y sus nombres, consultar [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
+  Contiene información sobre las especificaciones de auditoría de base de datos en una auditoría de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de una instancia de servidor para todas las bases de datos. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Para obtener una lista de todos los audit_action_id y sus nombres, consulta [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**database_specification_id**|**int**|Id. de la especificación de auditoría.|  
 |**audit_action_id**|**int**|Id. de la acción de auditoría.|  
-|**audit_action_name**|**sysname**|Nombre de acción de auditoría o grupo de acciones de auditoría|  
+|**audit_action_name**|**sysname**|Nombre de acción de auditoría o el grupo de acciones de auditoría|  
 |**Clase**|**int**|Identifica la clase del objeto que se está auditando.|  
 |**class_ desc**|**nvarchar (60)**|Descripción de la clase del objeto que se está auditando:<br /><br /> - SCHEMA<br /><br /> - TABLE|  
 |**major_id**|**int**|Id. principal del objeto que se está auditando; por ejemplo, el Id. de tabla de una acción de auditoría de tabla.|  
@@ -49,8 +49,8 @@ ms.locfileid: "33182441"
 |**audited_result**|**nvarchar (60)**|Resultados de la acción de auditoría:<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
 |**is_group**|**Bit**|Indica si el objeto es un grupo:<br /><br /> 0 - no es un grupo<br /><br /> 1 - es un grupo|  
   
-## <a name="permissions"></a>Permissions  
- Entidades de seguridad con la **ALTER ANY DATABASE AUDIT** o **VIEW DEFINITION** permisos, la **dbo** rol y los miembros de la **db_owners** rol fijo de base de datos tienen acceso a esta vista de catálogo. Además, la entidad de seguridad no se debe denegar **VIEW DEFINITION** permiso.  
+## <a name="permissions"></a>Permisos  
+ Las entidades de seguridad con el **ALTER ANY DATABASE AUDIT** o **VIEW DEFINITION** permisos, el **dbo** y a los miembros de la **db_owners** rol fijo de base de datos tiene acceso a esta vista de catálogo. Además, no se debe denegar la entidad de seguridad **VIEW DEFINITION** permiso.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

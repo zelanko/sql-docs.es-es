@@ -1,5 +1,5 @@
 ---
-title: sp_control_plan_guide (Transact-SQL) | Documentos de Microsoft
+title: sp_control_plan_guide (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_control_plan_guide
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f7514e07f4a363072dc527827a858becab8dc0d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dd0be5eaefe85082de07b9d815e836016407ee00
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238382"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038425"
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,20 +71,20 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Deshabilita todas las guías de plan de la base de datos actual. **N'*** plan_guide_name* no se puede especificar cuando se especifica DISABLE ALL.  
   
  ENABLE  
- Permite que la Guía de plan especificada por *plan_guide_name*. Una guía de plan puede coincidir con una consulta apta después de ser habilitada. De manera predeterminada, las guías de plan se habilitan en el momento en que se crean.  
+ Habilita la Guía de plan especificada por *plan_guide_name*. Una guía de plan puede coincidir con una consulta apta después de ser habilitada. De manera predeterminada, las guías de plan se habilitan en el momento en que se crean.  
   
  ENABLE ALL  
  Habilita todas las guías de plan de la base de datos actual. **N'***plan_guide_name***'** no se puede especificar cuando se especifica ENABLE ALL.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Se producirá un error si se intenta quitar o modificar una función, procedimiento almacenado o desencadenador DML al que una guía de plan, habilitada o deshabilitada, haga referencia.  
   
  Al deshabilitar una guía de plan deshabilitada o habilitar una guía de plan habilitada, no se produce ningún cambio o error.  
   
- Guías de planes no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Sin embargo, puede ejecutar **sp_control_plan_guide** con la opción DROP o DROP ALL en cualquier edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Las guías de planes no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Sin embargo, puede ejecutar **sp_control_plan_guide** con la opción DROP o DROP ALL en cualquier edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="permissions"></a>Permissions  
- Para ejecutar **sp_control_plan_guide** en una guía de plan de tipo OBJECT (crear especificación de  **@type ='** objeto **'** ) requiere el permiso ALTER en el objeto que se hace referencia a la Guía de plan. Todas las demás guías de plan requieren el permiso ALTER DATABASE.  
+## <a name="permissions"></a>Permisos  
+ Para ejecutar **sp_control_plan_guide** en una guía de plan de tipo OBJECT (crea especifica  **@type ='** objeto **'** ) requiere el permiso ALTER en el objeto que se hace referencia a la Guía de plan. Todas las demás guías de plan requieren el permiso ALTER DATABASE.  
   
 ## <a name="examples"></a>Ejemplos  
   

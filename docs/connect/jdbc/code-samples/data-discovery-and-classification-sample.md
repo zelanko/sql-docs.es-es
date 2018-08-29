@@ -13,18 +13,18 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f5a705de3823ea04d1cb79f8e6106152599fc0b
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: bb31601b55af1b95c53b37c846c3a8bbf17b10f4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467743"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786000"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Clasificación y detección de datos de SQL
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-Esto [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] aplicación de ejemplo muestra cómo usar los métodos captadores de conjunto de resultados para recuperar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 'información de clasificación y detección de datos de SQL' de las tablas que contienen dicha información.
+Esto [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] aplicación de ejemplo muestra cómo usar los métodos captadores de conjunto de resultados para recuperar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 'información de clasificación y detección de datos de SQL' de las tablas que contienen dicha información.
   
 El archivo de código para este ejemplo se denomina DataDiscoveryAndClassification.java y se puede encontrar en la siguiente ubicación:  
 

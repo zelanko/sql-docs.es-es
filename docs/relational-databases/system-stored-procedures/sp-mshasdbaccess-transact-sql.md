@@ -1,5 +1,5 @@
 ---
-title: sp_MShasdbaccess (Transact-SQL) | Documentos de Microsoft
+title: sp_MShasdbaccess (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_MShasdbaccess
 ms.assetid: a9a23b90-2c60-4460-80a7-d7e14cc5a6a8
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3cfaa25b0595a809e6c505f6c0a487a501562b0a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: be21ad6f70e49f2c89c0903bde127d9d23413edc
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253921"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020553"
 ---
 # <a name="spmshasdbaccess-transact-sql"></a>sp_MShasdbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +46,8 @@ sp_MShasdbaccess
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="permissions"></a>Permissions  
- Ejecutar permiso se concede a la **público** rol.  
+## <a name="permissions"></a>Permisos  
+ Ejecutar permiso se concede a los **pública** rol.  
   
 ## <a name="see-also"></a>Vea también  
  [sys.sysdatabases &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)  

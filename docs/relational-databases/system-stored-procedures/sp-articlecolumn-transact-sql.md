@@ -1,5 +1,5 @@
 ---
-title: sp_articlecolumn (Transact-SQL) | Documentos de Microsoft
+title: sp_articlecolumn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_articlecolumn
 ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 407c4470ae7dad6a871736df822cb00a22882122
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e01dd3b2c0a7592520c63462de4e4e41bc15c8d3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993202"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020152"
 ---
 # <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,34 +64,34 @@ sp_articlecolumn [ @publication = ] 'publication'
  Es el nombre de la columna que se va a agregar o quitar. *columna* es **sysname**, su valor predeterminado es null. Si es NULL, se publican todas las columnas.  
   
  [  **@operation=**] **'***operación***'**  
- Especifica si se agregan o se quitan columnas en un artículo. *operación* es **nvarchar (5)**, con un valor predeterminado es add. **agregar** marca la columna para la replicación. **quitar** anula la selección de la columna.  
+ Especifica si se agregan o se quitan columnas en un artículo. *operación* es **nvarchar (5)**, con el valor predeterminado es add. **agregar** marca la columna para la replicación. **quitar** anula la selección de la columna.  
   
  [  **@refresh_synctran_procs=**] *refresh_synctran_procs*  
- Especifica si se vuelven a generar los procedimientos almacenados compatibles con las suscripciones de actualización inmediata para que coincidan con el número de columnas replicadas. *refresh_synctran_procs* es **bits**, su valor predeterminado es **1**. Si **1**, se vuelven a generar los procedimientos almacenados.  
+ Especifica si se vuelven a generar los procedimientos almacenados compatibles con las suscripciones de actualización inmediata para que coincidan con el número de columnas replicadas. *refresh_synctran_procs* es **bit**, su valor predeterminado es **1**. Si **1**, se vuelven a generar los procedimientos almacenados.  
   
  [  **@ignore_distributor =**] *ignore_distributor*  
- Indica si este procedimiento almacenado se ejecuta sin conectarse con el distribuidor. *ignore_distributor* es **bits**, su valor predeterminado es **0**. Si **0**, la base de datos debe estar habilitado para la publicación y la caché de artículos debe actualizarse para reflejar las nuevas columnas replicadas por el artículo. Si **1**, permite que las columnas de artículo que se quiten para los artículos que residen en una base de datos no publicada; deben usarse solo en situaciones de recuperación.  
+ Indica si este procedimiento almacenado se ejecuta sin conectarse con el distribuidor. *ignore_distributor* es **bit**, su valor predeterminado es **0**. Si **0**, la base de datos debe estar habilitado para la publicación y la caché de artículos debe actualizarse para reflejar las nuevas columnas replicadas en el artículo. Si **1**, permite quitar los artículos que residen en una base de datos no publicada; deben usarse solo en situaciones de recuperación de las columnas de artículo.  
   
  [  **@change_active =** ] *change_active*  
  Permite modificar las columnas en publicaciones con suscripciones. *change_active* es un **int** con un valor predeterminado de **0**. Si **0**, no se modifican columnas. Si **1**, las columnas se pueden agregar o quitar de los artículos activos que tienen suscripciones.  
   
  [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es un **bits**, su valor predeterminado es **0**.  
+ Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
   
- **0** especifica que los cambios en el artículo no invalidarán la instantánea no es válida. Si el procedimiento almacenado detecta que el cambio requiere una nueva instantánea, se producirá un error y no se realizarán cambios.  
+ **0** especifica que los cambios en el artículo no invalidarán la instantánea no es válido. Si el procedimiento almacenado detecta que el cambio requiere una nueva instantánea, se producirá un error y no se realizarán cambios.  
   
- **1** especifica que los cambios en el artículo pueden invalidar la instantánea no es válida y si hay suscripciones existentes que requieran una nueva instantánea, concede permiso para marcar como obsoleta la instantánea existente y generar una nueva.  
+ **1** especifica que los cambios en el artículo pueden invalidar la instantánea no es válido y si hay suscripciones existentes que requieran una nueva instantánea, concede permiso para marcar como obsoleta la instantánea existente y una nueva instantánea generada.  
   
  [ **@force_reinit_subscription =** ] *force_reinit_subscription*  
- Confirma que la acción realizada por este procedimiento almacenado puede requerir que se reinicialicen las suscripciones existentes. *force_reinit_subscription* es un **bits**, su valor predeterminado es **0**.  
+ Confirma que la acción realizada por este procedimiento almacenado puede requerir la reinicialización de las suscripciones existentes. *force_reinit_subscription* es un **bit**, su valor predeterminado es **0**.  
   
- **0** especifica que los cambios en el artículo hacen que la suscripción para reinicializarla. Si el procedimiento almacenado detecta que el cambio requiere la reinicialización de suscripciones, se producirá un error y no se realizarán cambios. **1** especifica que los cambios en el artículo harán que se reinicialicen las suscripciones existentes y concede permiso para que se lleve a cabo la reinicialización.  
+ **0** especifica que los cambios en el artículo no invalidarán la suscripción para reinicializarla. Si el procedimiento almacenado detecta que el cambio requiere la reinicialización de suscripciones, se producirá un error y no se realizarán cambios. **1** especifica que los cambios en el artículo que se reinicialicen las suscripciones existentes y concede permiso para que se produzca la reinicialización de suscripción.  
   
  [  **@publisher=** ] **'***publisher***'**  
- Especifica un no[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *Publisher* es **sysname**, su valor predeterminado es null.  
+ Especifica que no es[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
->  *Publisher* no debe usarse con un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
+>  *publicador* no debe usarse con un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
  [  **@internal=** ] **'***interno***'**  
  Exclusivamente para uso interno.  
@@ -100,7 +99,7 @@ sp_articlecolumn [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_articlecolumn** se utiliza en la replicación de instantáneas y transaccional.  
   
  Solo un artículo sin suscripciones se puede filtrar usando **sp_articlecolumn**.  
@@ -108,8 +107,8 @@ sp_articlecolumn [ @publication = ] 'publication'
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articlecolumn-transac_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_articlecolumn**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_articlecolumn**.  
   
 ## <a name="see-also"></a>Vea también  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   

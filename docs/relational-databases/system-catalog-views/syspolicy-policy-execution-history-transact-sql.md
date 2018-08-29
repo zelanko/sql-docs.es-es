@@ -1,5 +1,5 @@
 ---
-title: syspolicy_policy_execution_history (Transact-SQL) | Documentos de Microsoft
+title: syspolicy_policy_execution_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,23 +18,22 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_policy_execution_history view
 ms.assetid: b13c44a7-6d49-4d50-abe1-e657fc52bb05
-caps.latest.revision: 23
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c5d21894663f8ad36a44e825a1b0e8ced4966ee8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7db5a20395ec6e0e41d70d6b2dbb04dee991a0c1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220326"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021399"
 ---
 # <a name="syspolicypolicyexecutionhistory-transact-sql"></a>syspolicy_policy_execution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Muestra el momento en que se ejecutaron las directivas, el resultado de cada ejecución y detalles sobre errores, si se produjo alguno. En la tabla siguiente se describen las columnas de la vista de syspolicy_policy_execution_history.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |history_id|**bigint**|Identificador de este registro. Cada registro indica una directiva y el momento en que se inició.|  
 |policy_id|**int**|Identificador de la directiva.|  
@@ -44,10 +43,10 @@ ms.locfileid: "33220326"
 |exception_message|**nvarchar(max)**|Mensaje generado por la excepción, si se produjo alguna.|  
 |excepción|**nvarchar(max)**|Descripción de la excepción, si se produjo alguna.|  
   
-## <a name="remarks"></a>Comentarios  
- El [syspolicy_policy_execution_history_details](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-details-transact-sql.md) vista contiene detalles relacionados sobre los destinos de la directiva y las expresiones de condición de prueba.  
+## <a name="remarks"></a>Notas  
+ El [syspolicy_policy_execution_history_details](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-details-transact-sql.md) vista contiene los detalles relacionados sobre los objetivos de la directiva y las expresiones de condición probadas.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol PolicyAdministratorRole en la base de datos msdb.  
   
 ## <a name="see-also"></a>Vea también  

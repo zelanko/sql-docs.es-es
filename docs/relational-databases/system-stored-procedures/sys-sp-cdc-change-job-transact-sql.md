@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_change_job (Transact-SQL) | Documentos de Microsoft
+title: Sys.sp_cdc_change_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,21 +20,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_change_job
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
-caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ca1b4bf87be7b0b102bb139aad650dfa16e5c3a1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7603f20095fa09bfcd574aeea1bcad5ca357cd40
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260821"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018071"
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Modifica la configuración de un trabajo de captura o de limpieza de captura de datos de cambio en la base de datos actual. Para ver la configuración actual de un trabajo, consulte la [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) tabla o usar [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
+  Modifica la configuración de un trabajo de captura o de limpieza de captura de datos de cambio en la base de datos actual. Para ver la configuración actual de un trabajo, consulte el [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) de tabla o usar [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,43 +52,43 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@job_type=** ] **'***job_type***'**  
- Tipo de trabajo para modificar. *job_type* es **nvarchar (20)** su valor predeterminado es 'capture'. Las entradas válidas son 'capture' y 'cleanup'.  
+ Tipo de trabajo para modificar. *job_type* es **nvarchar (20)** con un valor predeterminado es 'capture'. Las entradas válidas son 'capture' y 'cleanup'.  
   
  [ **@maxtrans** ] **= *** max_trans*  
  Número máximo de transacciones para procesar en cada ciclo de recorrido. *max_trans* es **int** su valor predeterminado es null, que no indica que ningún cambio para este parámetro. Si se especifica, el valor debe ser un entero positivo.  
   
- *max_trans* es válida únicamente para los trabajos de captura.  
+ *max_trans* solo es válida para los trabajos de captura.  
   
  [ **@maxscans** ] **= *** max_scans*  
  Número máximo de ciclos de recorrido que se ejecutarán para extraer todas las filas del registro. *max_scans* es **int** su valor predeterminado es null, que no indica que ningún cambio para este parámetro.  
   
- *max_scan* es válida únicamente para los trabajos de captura.  
+ *max_scan* solo es válida para los trabajos de captura.  
   
  [ **@continuous** ] **= *** continua*  
- Indica si el trabajo de captura se ejecutará continuamente (1), o solo una vez (0). *continuo* es **bits** su valor predeterminado es null, que no indica que ningún cambio para este parámetro.  
+ Indica si el trabajo de captura se ejecutará continuamente (1), o solo una vez (0). *continua* es **bit** su valor predeterminado es null, que no indica que ningún cambio para este parámetro.  
   
- Cuando *continua* = 1, el [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) trabajo examina el registro y procesa hasta (*max_trans* \* *max_scans*) transacciones. A continuación, espera el número de segundos especificado en *polling_interval* antes de comenzar el recorrido del registro siguiente.  
+ Cuando *continua* = 1, el [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) examina el registro de trabajo y procesa hasta (*max_trans* \* *max_scans*) transacciones. A continuación, espera a que el número de segundos especificado en *polling_interval* antes de comenzar el recorrido del registro siguiente.  
   
- Cuando *continua* = 0, el **sp_cdc_scan** hasta se ejecuta el trabajo *max_scans* recorridos del registro, procesando hasta *max_trans* transacciones durante cada recorrido y, a continuación, se cierra.  
+ Cuando *continua* = 0, el **sp_cdc_scan** hasta que se ejecuta trabajo *max_scans* recorridos del registro, procesando hasta *max_trans* transacciones durante cada examen y, a continuación, sale.  
   
- Si **@continuous** se cambia de 1 a 0, **@pollinginterval** se establece automáticamente en 0. Un valor especificado para **@pollinginterval** distinto de 0 se omite.  
+ Si **@continuous** se cambia de 1 a 0, **@pollinginterval** automáticamente se establece en 0. Un valor especificado para **@pollinginterval** distinto de 0 se omite.  
   
- Si **@continuous** se omite o se establece explícitamente en NULL y **@pollinginterval** se establece explícitamente en un valor mayor que 0, **@continuous** automáticamente Establezca en 1.  
+ Si **@continuous** se omite o se establece explícitamente en NULL y **@pollinginterval** se establece explícitamente en un valor mayor que 0, **@continuous** automáticamente se establece en 1.  
   
- *continuo* es válida únicamente para los trabajos de captura.  
+ *continua* solo es válida para los trabajos de captura.  
   
  [ **@pollinginterval** ] **= *** polling_interval*  
  Número de segundos entre los ciclos de recorrido del registro. *polling_interval* es **bigint** su valor predeterminado es null, que no indica que ningún cambio para este parámetro.  
   
- *polling_interval* es válida sólo para la captura de los trabajos al *continua* está establecido en 1.  
+ *polling_interval* es válido sólo para la captura de los trabajos cuando *continua* está establecido en 1.  
   
  [ **@retention** ] **= *** retención*  
  Número de minutos durante los que las filas de cambio deben retenerse en las tablas de cambio. *retención* es **bigint** su valor predeterminado es null, que no indica que ningún cambio para este parámetro. El valor máximo es 52494800 (100 años). Si se especifica, el valor debe ser un entero positivo.  
   
- *retención* es válida únicamente para los trabajos de limpieza.  
+ *retención* solo es válida para los trabajos de limpieza.  
   
  [  **@threshold=** ] **'***eliminar umbral***'**  
- Número máximo de entradas de eliminación que se pueden eliminar mediante el uso de una única instrucción en el proceso de limpieza. *eliminar umbral* es **bigint** su valor predeterminado es null, que no indica que ningún cambio para este parámetro. *eliminar umbral* es válida únicamente para los trabajos de limpieza.  
+ Número máximo de entradas de eliminación que se pueden eliminar mediante el uso de una única instrucción en el proceso de limpieza. *eliminar umbral* es **bigint** su valor predeterminado es null, que no indica que ningún cambio para este parámetro. *eliminar umbral* solo es válida para los trabajos de limpieza.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -97,14 +96,14 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si se omite un parámetro, el valor asociado en el [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) no se actualiza la tabla. Un parámetro establecido explícitamente en NULL se trata como si se omitiese el parámetro.  
   
  Si se especifica un parámetro que no es válido para el tipo de trabajo, la instrucción generará un error.  
   
- Cambios a un trabajo no surtirán efecto hasta que se detenga el trabajo mediante el uso de [sp_cdc_stop_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md) y reiniciar mediante el uso de [sp_cdc_start_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md).  
+ Los cambios realizados en un trabajo no surtirán efecto hasta que se detenga el trabajo con [sp_cdc_stop_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md) y reiniciar mediante el uso de [sp_cdc_start_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer a la **db_owner** rol fijo de base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -137,6 +136,6 @@ GO
 ## <a name="see-also"></a>Vea también  
  [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [Sys.sp_cdc_add_job & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
+ [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

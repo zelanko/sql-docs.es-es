@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_cleanup_change_table (Transact-SQL) | Documentos de Microsoft
+title: Sys.sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,21 +21,20 @@ helpviewer_keywords:
 - sys.sp_cdc_cleanup_change_tables
 - sp_cdc_cleanup_change_tables
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0f0fc4f6a24143e23bb118a24f6061f5458eebe2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8dcfb1d487b3dd977b9837723c49e7fdf14b9ae5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261341"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035094"
 ---
 # <a name="sysspcdccleanupchangetable-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Quita las filas de la tabla de cambios en la base de datos actual en las clases *low_water_mark* valor. Este procedimiento almacenado se proporciona a los usuarios que desean administrar directamente la proceso de limpieza de las tablas de cambios. Sin embargo, se debe utilizar con precaución, porque el procedimiento afecta a todos los consumidores de los datos en la tabla de cambios.  
+  Quita las filas de la tabla de cambios en la base de datos según lo especificado *low_water_mark* valor. Este procedimiento almacenado se proporciona a los usuarios que desean administrar directamente la proceso de limpieza de las tablas de cambios. Sin embargo, se debe utilizar con precaución, porque el procedimiento afecta a todos los consumidores de los datos en la tabla de cambios.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,17 +52,17 @@ sys.sp_cdc_cleanup_change_table
  [ @capture_instance =] '*capture_instance*'  
  Es el nombre de la instancia de captura asociada a la tabla de cambios. *capture_instance* es **sysname**, no tiene ningún valor predeterminado, y no puede ser NULL.  
   
- *capture_instance* debe asignar nombre a una instancia de captura que existe en la base de datos actual.  
+ *capture_instance* debe asignar nombre a una instancia de captura que exista en la base de datos actual.  
   
  [ @low_water_mark =] *low_water_mark*  
- Es un número de secuencia de registro (LSN) que se va a usar como el nuevo límite inferior para el *instancia de captura*. *low_water_mark* es **binary (10)**, no tiene ningún valor predeterminado.  
+ Es un número de secuencia de registro (LSN) que se utiliza como el nuevo límite inferior para el *instancia de captura*. *low_water_mark* es **binary (10)**, no tiene ningún valor predeterminado.  
   
- Si el valor es distinto de null, debe aparecer como el valor start_lsn de una entrada actual en el [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) tabla. Si otras entradas de cdc.lsn_time_mapping comparten la misma la hora de confirmación que la entrada identificada por el nuevo límite inferior, el LSN más pequeño asociado a dicho grupo de entradas se elige como límite inferior.  
+ Si el valor no es null, debe aparecer como el valor start_lsn de una entrada actual en el [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) tabla. Si otras entradas de cdc.lsn_time_mapping comparten la misma la hora de confirmación que la entrada identificada por el nuevo límite inferior, el LSN más pequeño asociado a dicho grupo de entradas se elige como límite inferior.  
   
- Si el valor se establece explícitamente en NULL, actual *mínimo* para el *instancia de captura* se utiliza para definir el límite superior para la operación de limpieza.  
+ Si el valor se establece explícitamente en NULL, actual *límite mínimo* para el *instancia de captura* se utiliza para definir el límite superior para la operación de limpieza.  
   
  [ @threshold=] '*eliminar umbral*'  
- Es el número máximo de entradas de eliminación que se pueden eliminar mediante el uso de una única instrucción en el proceso de limpieza. *delete_threshold* es **bigint**, con un valor predeterminado es 5000.  
+ Es el número máximo de entradas de eliminación que se pueden eliminar mediante el uso de una única instrucción en el proceso de limpieza. *delete_threshold* es **bigint**, su valor predeterminado es 5000.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -71,10 +70,10 @@ sys.sp_cdc_cleanup_change_table
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  sys.sp_cdc_cleanup_change_table realiza las operaciones siguientes:  
   
-1.  Si el @low_water_mark parámetro no es NULL, Establece el valor de start_lsn para la *instancia de captura* al nuevo *mínimo*.  
+1.  Si el @low_water_mark parámetro no es NULL, Establece el valor de start_lsn para la *instancia de captura* al nuevo *límite mínimo*.  
   
     > [!NOTE]  
     >  El nuevo límite mínimo puede no ser el límite mínimo que se especifica en la llamada al procedimiento almacenado. Si otras entradas de la tabla cdc.lsn_time_mapping tienen la misma hora de confirmación, se selecciona el valor start_lsn menor representado en el grupo de entradas como el límite mínimo ajustado. Si el @low_water_mark parámetro es NULL o el límite mínimo actual es mayor que el nuevo límite mínimo, el valor start_lsn de la instancia de captura permanece sin cambios.  
@@ -85,13 +84,13 @@ sys.sp_cdc_cleanup_change_table
   
 -   El agente de limpieza notifica errores de eliminación.  
   
-     Un administrador puede ejecutar explícitamente este procedimiento almacenado para reintentar una operación que no se ha ejecutado correctamente. Para volver a intentar la limpieza de una instancia de captura determinada, ejecute sys.sp_cdc_cleanup_change_table y especifique NULL para el @low_water_mark parámetro.  
+     Un administrador puede ejecutar explícitamente este procedimiento almacenado para reintentar una operación que no se ha ejecutado correctamente. Para volver a intentar la limpieza para una instancia de captura determinada, ejecute sys.sp_cdc_cleanup_change_table y especifique NULL para el @low_water_mark parámetro.  
   
 -   La directiva simple basada en retención utilizada por el trabajo del agente de limpieza no es correcta.  
   
      Como este procedimiento almacenado realiza la limpieza para una instancia de captura única, se puede utilizar para generar una estrategia de limpieza personalizada que se adapte a las reglas de limpieza de cada instancia de captura.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere pertenencia al rol fijo de base de datos db_owner.  
   
 ## <a name="see-also"></a>Vea también  

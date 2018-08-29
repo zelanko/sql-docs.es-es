@@ -1,5 +1,5 @@
 ---
-title: sp_setsubscriptionxactseqno (Transact-SQL) | Documentos de Microsoft
+title: sp_setsubscriptionxactseqno (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_setsubscriptionxactseqno
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f59325c709b8d16d5e120a135d5d9f9697692b1e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96592ae1f8f2b1de9e2d294c27d68598d2718ed7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000472"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037982"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publisher=** ] **'***publisher***'**  
- Es el nombre del publicador. *Publisher* es **sysname**, no tiene ningún valor predeterminado.  
+ Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
- Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, no tiene ningún valor predeterminado. Para una no - publicador de SQL Server, *publisher_db* es el nombre de la base de datos de distribución.  
+ Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, no tiene ningún valor predeterminado. Para un publicador que no es - SQL Server, *publisher_db* es el nombre de la base de datos de distribución.  
   
  [  **@publication=** ] **'***publicación***'**  
  Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado. Cuando el agente de distribución se comparte por más de una publicación, debe especificar un valor de ALL para *publicación*.  
@@ -65,29 +65,29 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**XACT_SEQNO ORIGINAL**|**varbinary (16)**|El LSN original de la siguiente transacción que se va a aplicar en el suscriptor.|  
 |**XACT_SEQNO ACTUALIZADA**|**varbinary (16)**|El LSN actualizado de la siguiente transacción que se va a aplicar en el suscriptor.|  
-|**NÚMERO DE SECUENCIA DE SUSCRIPCIÓN**|**int**|El número de flujos de suscripción utilizados durante la última sincronización.|  
+|**NÚMERO DE SECUENCIA DE LA SUSCRIPCIÓN**|**int**|El número de flujos de suscripción utilizados durante la última sincronización.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_setsubscriptionxactseqno** se utiliza en la replicación transaccional.  
   
  **sp_setsubscriptionxactseqno** no se puede usar en una topología de replicación transaccional punto a punto.  
   
- **sp_setsubscriptionxactseqno** puede utilizarse para omitir una transacción específica que está provocando un error cuando se aplica en el suscriptor. Cuando se produce un error y después se detiene el agente de distribución, llame a [sp_helpsubscriptionerrors &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) en el distribuidor para recuperar el valor de xact_seqno de la transacción errónea y, a continuación, llamar a **sp_setsubscriptionxactseqno**, pasando este valor para *xact_seqno*. Así se garantizará que se procesen solamente los comandos después de este LSN.  
+ **sp_setsubscriptionxactseqno** se puede usar para omitir una transacción específica que está provocando un error cuando se aplica en el suscriptor. Cuando se produce un error y después se detiene el agente de distribución, llame a [sp_helpsubscriptionerrors &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) en el distribuidor para recuperar el valor xact_seqno de la transacción errónea y, a continuación, llamar a **sp_setsubscriptionxactseqno**, pasando este valor para *xact_seqno*. Así se garantizará que se procesen solamente los comandos después de este LSN.  
   
- Especifique un valor de **0** para *xact_seqno* para entregar todos los comandos pendientes en la base de datos de distribución en el suscriptor.  
+ Especifique un valor de **0** para *xact_seqno* entregar todos los comandos pendientes en la base de datos de distribución al suscriptor.  
   
  **sp_setsubscriptionxactseqno** puede producir un error si el agente de distribución utiliza flujos de varias suscripciones.  
   
  Cuando se produzca este error, debe ejecutar el Agente de distribución con un flujo de suscripción único. Para más información, consulte [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_setsubscriptionxactseqno**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_setsubscriptionxactseqno**.  
   
   

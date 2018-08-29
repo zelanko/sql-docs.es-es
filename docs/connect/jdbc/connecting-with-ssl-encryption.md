@@ -14,19 +14,19 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c3b72cb8d69659202b9a8f138ca14860dfe275c
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: d47c4234482c879e2ee564f8035c9e2033a469f3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278557"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786919"
 ---
 # <a name="connecting-with-ssl-encryption"></a>Conectar con el cifrado SSL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   En los ejemplos de este artículo se describe cómo usar propiedades de cadena de conexión que permiten a las aplicaciones usar el cifrado de Capa de sockets seguros (SSL) en una aplicación Java. Para más información sobre estas nuevas propiedades de cadena de conexión, como **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword** y **hostNameInCertificate**, vea [Establecer las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).  
   
- Cuando la propiedad **encrypt** se establece en **true** y la propiedad **trustServerCertificate** se establece en **true**, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] no validará el certificado SSL de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Esto suele ser necesario para permitir conexiones en entornos de prueba, por ejemplo, cuando la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] solo tiene un certificado autofirmado.  
+ Cuando la propiedad **encrypt** se establece en **true** y la propiedad **trustServerCertificate** se establece en **true**, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] no validará el certificado SSL de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esto suele ser necesario para permitir conexiones en entornos de prueba, por ejemplo, cuando la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo tiene un certificado autofirmado.  
   
  En el ejemplo de código siguiente se muestra cómo establecer la propiedad **trustServerCertificate** en una cadena de conexión:  
   
@@ -37,7 +37,7 @@ String connectionUrl =
      "encrypt=true;trustServerCertificate=true";  
 ```  
   
- Cuando la propiedad **encrypt** se establece en **true** y la propiedad **trustServerCertificate** se establece en **false**, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] validará el certificado SSL de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Validar el certificado de servidor es una parte del protocolo de enlace de SSL y asegurarse de que el servidor es el apropiado al que hay que conectarse. Para validar el certificado de servidor, se debe suministrar material de confianza en el momento de la conexión, ya sea mediante el uso explícito de las propiedades de conexión **trustStore** y **trustStorePassword**, o mediante el uso implícito del almacén de confianza predeterminado de la máquina virtual Java (JVM) subyacente.  
+ Cuando la propiedad **encrypt** se establece en **true** y la propiedad **trustServerCertificate** se establece en **false**, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] validará el certificado SSL de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Validar el certificado de servidor es una parte del protocolo de enlace de SSL y asegurarse de que el servidor es el apropiado al que hay que conectarse. Para validar el certificado de servidor, se debe suministrar material de confianza en el momento de la conexión, ya sea mediante el uso explícito de las propiedades de conexión **trustStore** y **trustStorePassword**, o mediante el uso implícito del almacén de confianza predeterminado de la máquina virtual Java (JVM) subyacente.  
   
  La propiedad **trustStore** especifica la ruta de acceso (incluido el nombre de archivo) del archivo trustStore de certificado, que contiene la lista de certificados en los que el cliente confía. La propiedad **trustStorePassword** especifica la contraseña que se usa para comprobar la integridad de los datos de trustStore. Para obtener más información sobre el uso de almacén de confianza predeterminado de JVM, vea el [configuración del cliente para el cifrado SSL](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md).  
   
@@ -67,7 +67,7 @@ String connectionUrl =
 > [!NOTE]  
 >  También puede establecer el valor de las propiedades de conexión mediante los métodos **establecedores** adecuados que proporciona la clase [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
- Si la propiedad **encrypt** se establece en **true** y la propiedad **trustServerCertificate** se establece en **false**, y si el nombre de servidor de la cadena de conexión no coincide con el nombre de servidor del certificado SSL de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], se generará el siguiente error: El controlador no pudo establecer una conexión segura con [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] con el cifrado de Capa de sockets seguros (SSL). Error: "java.security.cert.CertificateException: No se pudo validar el nombre del servidor en un certificado durante la inicialización de SSL (Capa de sockets seguros)."  
+ Si la propiedad **encrypt** se establece en **true** y la propiedad **trustServerCertificate** se establece en **false**, y si el nombre de servidor de la cadena de conexión no coincide con el nombre de servidor del certificado SSL de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se generará el siguiente error: El controlador no pudo establecer una conexión segura con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el cifrado de Capa de sockets seguros (SSL). Error: "java.security.cert.CertificateException: No se pudo validar el nombre del servidor en un certificado durante la inicialización de SSL (Capa de sockets seguros)."  
   
 ## <a name="see-also"></a>Ver también  
  [Usar el cifrado SSL](../../connect/jdbc/using-ssl-encryption.md)   

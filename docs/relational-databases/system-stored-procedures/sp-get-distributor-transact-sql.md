@@ -1,5 +1,5 @@
 ---
-title: sp_get_distributor (Transact-SQL) | Documentos de Microsoft
+title: sp_get_distributor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_get_distributor
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f4cd34760ff4bd447bc5a2621508629264adee1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 088b2d2c6e334d48fae3e9257f76c5fd8129c15d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994102"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021294"
 ---
 # <a name="spgetdistributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +46,19 @@ sp_get_distributor
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Instalado**|**int**|**0** = No; **1** = yes|  
+|**instalado**|**int**|**0** = No; **1** = yes|  
 |**servidor de distribución**|**sysname**|Nombre del servidor distribuidor|  
-|**base de datos de distribución instalado**|**int**|**0** = No; **1** = yes|  
+|**base de datos de distribución instalada**|**int**|**0** = No; **1** = yes|  
 |**es el publicador de distribución**|**int**|**0** = No; **1** = yes|  
 |**con publicador de distribución remoto**|**int**|**0** = No; **1** = yes|  
   
-## <a name="remarks"></a>Comentarios  
- **sp_get_distributor** se usa principalmente en la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de instantáneas, transaccional y de mezcla.  
+## <a name="remarks"></a>Notas  
+ **sp_get_distributor** se usa principalmente en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en instantáneas, transaccional y replicación de mezcla.  
   
-## <a name="permissions"></a>Permissions  
- Cualquier usuario puede ejecutar **sp_get_distributor**. Se devuelve un conjunto de resultados no NULL cuando este almacenado se ejecuta el procedimiento los miembros de la **db_owner** o **replmonitor** fijo roles de base de datos en la base de datos de distribución o los miembros de la  **db_owner** rol fijo de base de datos en al menos una base de datos publicada. Un conjunto de resultados no NULL también se devuelve cuando se ejecuta este procedimiento almacenado por los usuarios en la lista de acceso de publicación (PAL) de al menos una base de datos publicada, o en la lista PAL de la base de datos de distribución para una no - publicador de SQL Server, también puede ejecutar **sp _get_distributor**.  
+## <a name="permissions"></a>Permisos  
+ Cualquier usuario puede ejecutar **sp_get_distributor**. Un conjunto de resultados distinto de NULL se devuelve cuando este almacenado se ejecuta el procedimiento los miembros de la **db_owner** o **replmonitor** roles fijos de base de datos la base de datos de distribución o los miembros de la  **db_owner** rol fijo de base de datos en al menos una base de datos publicada. Un conjunto de resultados no NULL también se devuelve cuando se ejecuta este procedimiento almacenado por los usuarios en la lista de acceso de publicación (PAL) de al menos una base de datos publicada, o en la lista PAL de la base de datos de distribución para un publicador que no es - SQL Server, también puede ejecutar **sp _get_distributor**.  
   
 ## <a name="see-also"></a>Vea también  
  [Configurar la publicación y la distribución](../../relational-databases/replication/configure-publishing-and-distribution.md)   

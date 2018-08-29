@@ -14,18 +14,18 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0ae22a9fac4333271d564fb242803e4cc8eb0b4
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 2fd75507ca7c1615b0282a9f56a1e8f4b33bc22b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661827"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787074"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>Usar un procedimiento almacenado con un estado de devolución
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Un procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] al que puede llamar es el que devuelve un parámetro de estado o resultado. Se usa normalmente para indicar el funcionamiento correcto o incorrecto del procedimiento almacenado. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] proporciona la clase [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), que puede usar para llamar a este tipo de procedimiento almacenado y procesar los datos que devuelve.
+Un procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al que puede llamar es el que devuelve un parámetro de estado o resultado. Se usa normalmente para indicar el funcionamiento correcto o incorrecto del procedimiento almacenado. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] proporciona la clase [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), que puede usar para llamar a este tipo de procedimiento almacenado y procesar los datos que devuelve.
 
 Al llamar a este tipo de procedimiento almacenado mediante el controlador JDBC, debe usar la secuencia de escape `call` de SQL junto con el método [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) de la clase [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). La sintaxis de la secuencia de escape `call` con un parámetro de estado de devolución es la siguiente:
 

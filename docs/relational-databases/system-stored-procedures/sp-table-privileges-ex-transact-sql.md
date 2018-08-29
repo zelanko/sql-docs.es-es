@@ -1,5 +1,5 @@
 ---
-title: sp_table_privileges_ex (Transact-SQL) | Documentos de Microsoft
+title: sp_table_privileges_ex (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_table_privileges_ex
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc97335ccb0e014e130a2f47c70f480dd7c23554
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 97486a281f2c962cb10d24762957769eba806387
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260006"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035924"
 ---
 # <a name="sptableprivilegesex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,27 +61,27 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
  Es el nombre de la base de datos en el que el especificado *table_name* reside. *TABLE_CATALOG* es **sysname**, su valor predeterminado es null.  
   
  [  **@fUsePattern =**] **'***fUsePattern***'**  
- Determina si los caracteres '_', '%', '[' y ']' se interpretan como caracteres comodín. Los valores válidos son 0 (coincidencia de patrón desactivada) y 1 (coincidencia de patrón activada). *fUsePattern* es **bits**, su valor predeterminado es 1.  
+ Determina si los caracteres '_', '%', '[' y ']' se interpretan como caracteres comodín. Los valores válidos son 0 (coincidencia de patrón desactivada) y 1 (coincidencia de patrón activada). *fUsePattern* es **bit**, su valor predeterminado es 1.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|Nombre del calificador de tabla. Varios productos DBMS admiten nombres de tres partes para tablas (*calificador ***.*** propietario ***.*** nombre*). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla. Este campo puede ser NULL.|  
-|**SEGÚN TABLE_SCHEM**|**sysname**|Nombre de propietario de la tabla. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de usuario de base de datos que creó la tabla. Este campo siempre devuelve un valor.|  
+|**SEGÚN TABLE_SCHEM**|**sysname**|Nombre de propietario de la tabla. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre del usuario de base de datos que creó la tabla. Este campo siempre devuelve un valor.|  
 |**TABLE_NAME**|**sysname**|Nombre de la tabla. Este campo siempre devuelve un valor.|  
-|**OTORGANTE DE PERMISOS**|**sysname**|Nombre de usuario de base de datos que ha concedido permisos en el objeto **TABLE_NAME** a la lista **receptor**. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna siempre es el mismo que el **TABLE_OWNER**. Este campo siempre devuelve un valor. Además, la columna GRANTOR puede ser el propietario de la base de datos (**TABLE_OWNER**) o un usuario a los que el propietario de la base de datos haya concedido permiso mediante la cláusula WITH GRANT OPTION en la instrucción GRANT.|  
-|**RECEPTOR**|**sysname**|Nombre de usuario de base de datos que se ha concedido permisos en el objeto **TABLE_NAME** la **otorgante de permisos**. Este campo siempre devuelve un valor.|  
-|**CON PRIVILEGIOS**|**varchar (** 32 **)**|Uno de los permisos de tabla disponibles. Los permisos de tabla pueden ser uno de los valores siguientes u otros valores que el origen de datos admita al definirse la implementación.<br /><br /> Seleccione = **receptor** puede recuperar datos para una o varias de las columnas.<br /><br /> INSERT = **receptor** puede proporcionar datos para nuevas filas de una o varias de las columnas.<br /><br /> UPDATE = **receptor** puede modificar datos existentes para uno o más de las columnas.<br /><br /> ELIMINAR = **receptor** puede quitar filas de la tabla.<br /><br /> REFERENCIAS = **receptor** puede hacer referencia a una columna de una tabla externa en una relación de clave principal/clave externa. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], las relaciones entre clave principal y clave externa se definen mediante restricciones de tabla.<br /><br /> El ámbito de acción dado a la **receptor** por una tabla específica con privilegios son depende del origen de datos. Por ejemplo, el permiso de UPDATE podría permitir la **receptor** para actualizar todas las columnas de una tabla en un origen de datos y solo aquellas columnas para que la **otorgante de permisos** tiene permiso UPDATE en otro origen de datos.|  
-|**IS_GRANTABLE**|**varchar (** 3 **)**|Indica si la **receptor** permiten conceder permisos a otros usuarios. A esto se le suele denominar permiso "conceder por concesión". Puede ser YES, NO o NULL. Un valor desconocido, o NULL, hace referencia a un origen de datos en el que “conceder por concesión” no es aplicable.|  
+|**OTORGANTE DE PERMISOS**|**sysname**|Nombre de usuario de base de datos que ha concedido permisos **TABLE_NAME** al **receptor**. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna siempre es el mismo que el **TABLE_OWNER**. Este campo siempre devuelve un valor. Además, la columna GRANTOR puede ser el propietario de la base de datos (**TABLE_OWNER**) o un usuario a los que el propietario de la base de datos haya concedido permiso mediante la cláusula WITH GRANT OPTION en la instrucción GRANT.|  
+|**RECEPTOR DE PERMISOS**|**sysname**|Nombre de usuario de base de datos que se ha concedido permisos sobre este **TABLE_NAME** por la lista **otorgante de permisos**. Este campo siempre devuelve un valor.|  
+|**PRIVILEGIO**|**varchar (** 32 **)**|Uno de los permisos de tabla disponibles. Los permisos de tabla pueden ser uno de los valores siguientes u otros valores que el origen de datos admita al definirse la implementación.<br /><br /> Seleccione = **receptor** puede recuperar datos de una o varias de las columnas.<br /><br /> INSERT = **receptor** puede proporcionar datos para nuevas filas de una o varias de las columnas.<br /><br /> UPDATE = **receptor** puede modificar datos existentes de una o varias de las columnas.<br /><br /> ELIMINAR = **receptor** puede quitar filas de la tabla.<br /><br /> REFERENCIAS = **receptor** puede hacer referencia a una columna de una tabla externa en una relación de clave principal/clave externa. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], las relaciones entre clave principal y clave externa se definen mediante restricciones de tabla.<br /><br /> El ámbito de acción dado a la **receptor** por una tabla específica privilegio es depende del origen de datos. Por ejemplo, el permiso de UPDATE podría permitir la **receptor** para actualizar todas las columnas de una tabla en un origen de datos y solo aquellas columnas para que el **otorgante de permisos** tiene el permiso UPDATE en otro origen de datos.|  
+|**IS_GRANTABLE**|**varchar (** 3 **)**|Indica si el **receptor** tiene permiso para conceder permisos a otros usuarios. A esto se le suele denominar permiso "conceder por concesión". Puede ser YES, NO o NULL. Un valor desconocido, o NULL, hace referencia a un origen de datos en el que “conceder por concesión” no es aplicable.|  
   
-## <a name="remarks"></a>Comentarios  
- Los resultados devueltos se ordenan por **TABLE_QUALIFIER**, **TABLE_OWNER**, **TABLE_NAME**, y **privilegios**.  
+## <a name="remarks"></a>Notas  
+ Los resultados devueltos se ordenan por **TABLE_QUALIFIER**, **TABLE_OWNER**, **TABLE_NAME**, y **PRIVILEGIO**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  
   
 ## <a name="examples"></a>Ejemplos  

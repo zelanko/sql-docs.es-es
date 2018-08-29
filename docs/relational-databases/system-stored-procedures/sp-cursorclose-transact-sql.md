@@ -1,5 +1,5 @@
 ---
-title: sp_cursorclose (Transact-SQL) | Documentos de Microsoft
+title: sp_cursorclose (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_cursorclose
 ms.assetid: d9b7b44d-cdff-456e-97df-7031a3b9beb6
 caps.latest.revision: 7
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bb3db5049ff370a9dccad98dd7e90efb2e346f0f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b1556ebbfd0f5e01cfccae734036122360e68944
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237131"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022011"
 ---
 # <a name="spcursorclose-transact-sql"></a>sp_cursorclose (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Cierra y desasigna el cursor, así como libera todos los recursos asociados; es decir, quita la tabla temporal que se usa para admitir KEYSET o STATIC **cursor**. sp_cursorclose se invoca especificando el identificador = 9 en un paquete de flujo TDS.  
+  Cierra y desasigna el cursor, así como libera todos los recursos asociados; es decir, quita la tabla temporal que se usa para admitir KEYSET o STATIC **cursor**. sp_cursorclose se invoca especificando el identificador 9 en un paquete de flujo TDS.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,8 +50,8 @@ sp_cursorclose cursor
 > [!NOTE]  
 >  El valor de entrada -1 se aplicará en todos los cursores de la conexión actual.  
   
-## <a name="remarks"></a>Comentarios  
- *cursor* devolverá mensajes de error si se ha ejecutado el procedimiento después de que se ha cerrado el cursor o si se especifica un identificador no válido.  
+## <a name="remarks"></a>Notas  
+ *cursor* devolverá mensajes de error si se ha ejecutado el procedimiento una vez cerrado el cursor o si se especifica un identificador no válido.  
   
  El estado de la RPC indica el éxito o error general.  
   

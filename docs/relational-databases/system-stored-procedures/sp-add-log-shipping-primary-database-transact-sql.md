@@ -1,5 +1,5 @@
 ---
-title: sp_add_log_shipping_primary_database (Transact-SQL) | Documentos de Microsoft
+title: sp_add_log_shipping_primary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_primary_database
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
-caps.latest.revision: 35
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39627cca65071d2f08fe990c63d6e3ce836ce3b0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b73ec62b6b0abc8ab8334efdc5f26c5bd2748605
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240035"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034743"
 ---
 # <a name="spaddlogshippingprimarydatabase-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,8 +62,8 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
  [  **@database=** ] '*base de datos*'  
  Es el nombre de la base de datos principal de trasvase de registros. *base de datos* es **sysname**, no tiene ningún valor predeterminado, y no puede ser NULL.  
   
- [  **@backup_directory=** ] '*backup_directory*'  
- Es la ruta de acceso a la carpeta de copia de seguridad del servidor principal. *backup_directory* es **nvarchar (500)**, no tiene ningún valor predeterminado, y no puede ser NULL.  
+ [  **@backup_directory=** ] '*directorio_de_copia_de_seguridad*'  
+ Es la ruta de acceso a la carpeta de copia de seguridad del servidor principal. *directorio_de_copia_de_seguridad* es **nvarchar (500)**, no tiene ningún valor predeterminado, y no puede ser NULL.  
   
  [  **@backup_share=** ] '*backup_share*'  
  Es la ruta de acceso de red al directorio de copia de seguridad del servidor principal. *backup_share* es **nvarchar (500)**, no tiene ningún valor predeterminado, y no puede ser NULL.  
@@ -83,7 +82,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
  1 = Autenticación de Windows.  
   
- 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. *monitor_server_security_mode* es **bits** y no puede ser NULL.  
+ 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. *monitor_server_security_mode* es **bit** y no puede ser NULL.  
   
  [  **@monitor_server_login=** ] '*monitor_server_login*'  
  Es el nombre de usuario de la cuenta utilizada para tener acceso al servidor de supervisión.  
@@ -92,16 +91,16 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
  Es la contraseña de la cuenta utilizada para tener acceso al servidor de supervisión.  
   
  [  **@backup_threshold=** ] *backup_threshold*  
- Es el periodo de tiempo, en minutos, después de la última copia de seguridad antes de una *threshold_alert* se genera el error. *backup_threshold* es **int**, su valor predeterminado es 60 minutos.  
+ Es el período de tiempo, en minutos, tras la última copia de seguridad antes de un *threshold_alert* se genera el error. *backup_threshold* es **int**, su valor predeterminado es de 60 minutos.  
   
  [  **@threshold_alert=** ] *threshold_alert*  
  Es la alerta que se generará cuando se sobrepase el umbral de copia de seguridad. *threshold_alert* es **int**, su valor predeterminado es 14,420.  
   
  [  **@threshold_alert_enabled=** ] *threshold_alert_enabled*  
- Especifica si una alerta se genera cuando *backup_threshold* se supera. El valor cero (0), valor predeterminado, significa que la alerta está deshabilitada y no se generará. *threshold_alert_enabled* es **bits**.  
+ Especifica si va a una alerta se genera cuando *backup_threshold* se supera. El valor cero (0), valor predeterminado, significa que la alerta está deshabilitada y no se generará. *threshold_alert_enabled* es **bits**.  
   
  [  **@history_retention_period=** ] *history_retention_period*  
- Es la cantidad de tiempo en minutos durante la que se retendrá el historial. *history_retention_period* es **int**, su valor predeterminado es null. Si no se especifica ninguno, se usará un valor de 14420.  
+ Es la cantidad de tiempo en minutos durante la que se retendrá el historial. *history_retention_period* es **int**, su valor predeterminado es null. Si se especifica ninguno, se usará un valor de 14420.  
   
  [  **@backup_job_id=** ] *backup_job_id* salida  
  Id. del trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asociado al trabajo de copia de seguridad en el servidor principal. *backup_job_id* es **uniqueidentifier** y no puede ser NULL.  
@@ -116,7 +115,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
  1 = Habilitada. Se comprimen siempre las copias de seguridad de registros.  
   
- 2 = utilizar la configuración de la [ver o establecer la opción de configuración del servidor de compresión de copia de seguridad predeterminada](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Es el valor predeterminado.  
+ 2 = use el valor de la [ver o establecer la opción de configuración del servidor de compresión de copia de seguridad predeterminada](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Este es el valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -124,20 +123,20 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_add_log_shipping_primary_database** se debe ejecutar desde la **maestro** base de datos en el servidor principal. Este procedimiento almacenado realiza las siguientes funciones:  
   
-1.  Genera un identificador principal y agrega una entrada para la base de datos principal en la tabla **log_shipping_primary_databases** con los argumentos proporcionados.  
+1.  Genera un Id. principal y agrega una entrada para la base de datos principal en la tabla **log_shipping_primary_databases** utilizando los argumentos proporcionados.  
   
 2.  Crea un trabajo de copia de seguridad para la base de datos principal que está deshabilitada.  
   
 3.  Establece el identificador de trabajo de copia de seguridad el **log_shipping_primary_databases** entrada para el Id. de trabajo del trabajo de copia de seguridad.  
   
-4.  Agrega un registro de monitor local en la tabla **log_shipping_monitor_primary** en el servidor principal utilizando los argumentos proporcionados.  
+4.  Agrega un registro de supervisión local en la tabla **log_shipping_monitor_primary** en el servidor principal con los argumentos proporcionados.  
   
 5.  Si el servidor de supervisión es diferente del servidor principal, agrega un registro de monitor en **log_shipping_monitor_primary** en el monitor de servidor con los argumentos proporcionados.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -167,7 +166,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Acerca del trasvase de registros & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

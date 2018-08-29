@@ -1,5 +1,5 @@
 ---
-title: sp_foreignkeys (Transact-SQL) | Documentos de Microsoft
+title: sp_foreignkeys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_foreignkeys
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf14d0f424a81b7e990d33d5dc596676e12505ad
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bd49a4fd7f1c172c2f46d686cef941d19add2dad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261844"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020664"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Varios productos DBMS admiten nombres de tres partes para tablas (*catálogo ***.*** esquema ***.*** tabla*), que se representa en el conjunto de resultados.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**PKTABLE_CAT**|**sysname**|Catálogo de la tabla en que reside la clave principal.|  
 |**PKTABLE_SCHEM**|**sysname**|Esquema de la tabla en que reside la clave principal.|  
@@ -90,16 +90,16 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 |**KEY_SEQ**|**smallint**|Número de secuencia de la columna en una clave principal con varias columnas. Este campo siempre devuelve un valor.|  
 |**UPDATE_RULE**|**smallint**|Acción aplicada a la clave externa si la operación de SQL es una actualización. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve 0, 1 o 2 para estas columnas:<br /><br /> 0=CASCADE cambia a clave externa.<br /><br /> 1=NO ACTION cambia si la clave externa está presente.<br /><br /> 2=SET_NULL; establece la clave externa como NULL.|  
 |**DELETE_RULE**|**smallint**|Acción aplicada a la clave externa si la operación de SQL es una eliminación. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve 0, 1 o 2 para estas columnas:<br /><br /> 0=CASCADE cambia a clave externa.<br /><br /> 1=NO ACTION cambia si la clave externa está presente.<br /><br /> 2=SET_NULL; establece la clave externa como NULL.|  
-|**COLUMNAS FK_NAME**|**sysname**|Identificador de la clave externa. Es NULL si no es aplicable al origen de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve el nombre de la restricción FOREIGN KEY.|  
+|**FK_NAME**|**sysname**|Identificador de la clave externa. Es NULL si no es aplicable al origen de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve el nombre de la restricción FOREIGN KEY.|  
 |**PK_NAME**|**sysname**|Identificador de la clave principal. Es NULL si no es aplicable al origen de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve el nombre de la restricción PRIMARY KEY.|  
 |**APLAZAMIENTO NO**|**smallint**|Indica si se puede diferir la comprobación de restricciones.|  
   
  En el conjunto de resultados, las columnas FK_NAME y PK_NAME siempre devuelven NULL.  
   
-## <a name="remarks"></a>Comentarios  
- **sp_foreignkeys** consulta el conjunto de filas FOREIGN_KEYS de la **IDBSchemaRowset** interfaz del proveedor OLE DB que corresponde a *table_server*. El *table_name*, *table_schema*, *table_catalog*, y *columna* parámetros se pasan a esta interfaz para restringir las filas Devuelve.  
+## <a name="remarks"></a>Notas  
+ **sp_foreignkeys** consulta el conjunto de filas FOREIGN_KEYS de la **IDBSchemaRowset** interfaz del proveedor OLE DB que corresponde a *table_server*. El *table_name*, *table_schema*, *table_catalog*, y *columna* los parámetros se pasan a esta interfaz para restringir las filas Devuelve.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -115,7 +115,7 @@ EXEC sp_foreignkeys @table_server = N'Seattle1',
  [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_primarykeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
  [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   

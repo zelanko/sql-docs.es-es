@@ -1,5 +1,5 @@
 ---
-title: Sys.linked_logins (Transact-SQL) | Documentos de Microsoft
+title: Sys.linked_logins (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,23 +20,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.linked_logins catalog view
 ms.assetid: af57bf0c-a265-410f-9bab-63b78569b4a6
-caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 51517820a9c402448f2d19423dd6a62a16ba9875
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9b03700e08422b6e6fd585f5612713c95b11115d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179271"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036792"
 ---
 # <a name="syslinkedlogins-transact-sql"></a>sys.linked_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila por asignación de inicio de sesión de servidor vinculado para su uso por parte de las RPC y las consultas distribuidas desde el servidor local al servidor vinculado correspondiente.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Id. del servidor en **sys.servers**.|  
 |**local_principal_id**|**int**|Entidad de seguridad de servidor a la que se aplica la asignación.<br /><br /> 0 = comodín o public.|  
@@ -44,7 +43,7 @@ ms.locfileid: "33179271"
 |**remote_name**|**sysname**|Nombre de usuario remoto que se va a utilizar al conectar. La contraseña también se almacena, pero no se expone en las interfaces de la vista de catálogo.|  
 |**modify_date**|**datetime**|Fecha en que se cambió el inicio de sesión vinculado por última vez.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

@@ -14,12 +14,12 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31cc897383c7ffc8a11bc74a1881b12313da68f4
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: ec8254c61cabff08ae788327ee2e5449ed68ec7f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278826"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786558"
 ---
 # <a name="building-the-connection-url"></a>Generar URL de conexión
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "39278826"
 > [!NOTE]  
 >  Aunque en el ejemplo anterior se usan un nombre de usuario y una contraseña en la cadena de conexión, debe usar la seguridad integrada dado que resulta más seguro. Para más información, vea la sección [Conexión con la autenticación integrada](#Connectingintegrated) más adelante en este tema.  
   
- La siguiente cadena de conexión muestra un ejemplo de cómo realizar la conexión a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] con una autenticación integrada y Kerberos desde una aplicación que se ejecuta en cualquier sistema operativo compatible con [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]:  
+ La siguiente cadena de conexión muestra un ejemplo de cómo realizar la conexión a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una autenticación integrada y Kerberos desde una aplicación que se ejecuta en cualquier sistema operativo compatible con [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]:  
   
 ```java
 jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos  
@@ -77,7 +77,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>Instancias de SQL Server múltiples y con nombre  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] permite la instalación de varias instancias de base de datos por servidor. Cada instancia se identifica con un nombre concreto. Para conectarse a una instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], puede especificar el número de puerto de la instancia con nombre (opción preferida) o bien el nombre de instancia como propiedad de URL de JDBC o propiedad **datasource**. Si no se especifica ningún nombre de instancia o propiedad de número de puerto, se crea una conexión a la instancia predeterminada. Vea los ejemplos siguientes:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite la instalación de varias instancias de base de datos por servidor. Cada instancia se identifica con un nombre concreto. Para conectarse a una instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede especificar el número de puerto de la instancia con nombre (opción preferida) o bien el nombre de instancia como propiedad de URL de JDBC o propiedad **datasource**. Si no se especifica ningún nombre de instancia o propiedad de número de puerto, se crea una conexión a la instancia predeterminada. Vea los ejemplos siguientes:  
   
  Para usar un número de puerto, haga lo siguiente:  
   

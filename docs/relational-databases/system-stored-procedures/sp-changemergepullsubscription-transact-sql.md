@@ -1,5 +1,5 @@
 ---
-title: sp_changemergepullsubscription (Transact-SQL) | Documentos de Microsoft
+title: sp_changemergepullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changemergepullsubscription
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 31e745e3ab75ae237a440db10c05b3ed4cd7d29e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81b03ee49bb3184490d8ba8182b70557e5b0d8a8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992392"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018280"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
  Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es %.  
   
  [  **@publisher=**] **'***publisher***'**  
- Es el nombre del publicador. *Publisher*es **sysname**, su valor predeterminado es %.  
+ Es el nombre del publicador. *publicador*es **sysname**, su valor predeterminado es %.  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
  Es el nombre de la base de datos del publicador. *publisher_db*es **sysname**, su valor predeterminado es %.  
@@ -64,18 +64,18 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
  [  **@value=**] **'***valor***'**  
  Es el nuevo valor para la propiedad especificada. *valor*es **nvarchar (255)**, y puede tener uno de los valores de la tabla.  
   
-|Propiedad|Value|Description|  
+|Property|Valor|Descripción|  
 |--------------|-----------|-----------------|  
-|**alt_snapshot_folder**||Ubicación donde se almacena la carpeta de instantáneas si la ubicación es distinto de o además de en la ubicación predeterminada.|  
+|**alt_snapshot_folder**||Ubicación donde se almacena la carpeta de instantáneas si la ubicación es distinto o además en la ubicación predeterminada.|  
 |**Descripción**||Descripción de esta suscripción de extracción de mezcla.|  
-|**Distribuidor**||Nombre del distribuidor.|  
+|**distribuidor**||Nombre del distribuidor.|  
 |**distributor_login**||Id. de inicio de sesión utilizado en el distribuidor para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_password**||Contraseña (cifrada) utilizada en el distribuidor para la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_security_mode**|**1**|Se utiliza la autenticación de Windows para la conexión con el distribuidor.|  
 ||**0**|Se utiliza la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la conexión con el distribuidor.|  
 |**dynamic_snapshot_location**||Ruta de acceso a la carpeta donde se guardan los archivos de instantáneas.|  
 |**ftp_address**||Disponible únicamente por compatibilidad con versiones anteriores. Es la dirección de red del servicio FTP (Protocolo de transferencia de archivos) del distribuidor.|  
-|**ftp_login**||Disponible únicamente por compatibilidad con versiones anteriores. Es el nombre de usuario que se utiliza para conectar con el servicio FTP.|  
+|**ftp_login**||Disponible únicamente por compatibilidad con versiones anteriores. Se usa el nombre de usuario para conectarse al servicio FTP.|  
 |**ftp_password**||Disponible únicamente por compatibilidad con versiones anteriores. Es la contraseña del usuario que se utiliza para conectarse al servicio FTP.|  
 |**ftp_port**||Disponible únicamente por compatibilidad con versiones anteriores. Es el número de puerto del servicio FTP para el distribuidor.|  
 |**Nombre de host**||Especifica el valor de HOST_NAME() cuando esta función se utiliza en la cláusula WHERE de un filtro de combinación o relación de registros lógicos.|  
@@ -87,16 +87,16 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**internet_url**||URL que representa la ubicación de la escucha de replicación para la sincronización web.|  
 |**merge_job_login**||Inicio de sesión de la cuenta de Windows con la que se ejecuta el agente.|  
 |**merge_job_password**||Contraseña de la cuenta de Windows con la que se ejecuta el agente.|  
-|**priority**||Disponible para compatibilidad con versiones anteriores; ejecutar [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) en el publicador en su lugar, para modificar la prioridad de una suscripción.|  
+|**priority**||Disponible para la compatibilidad con versiones anteriores; ejecute [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) en el publicador en su lugar, para modificar la prioridad de una suscripción.|  
 |**publisher_login**||Id. de inicio de sesión utilizado en el publicador para la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_password**||Contraseña (cifrada) utilizada en el publicador para la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_security_mode**|**0**|Se utiliza la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la conexión con el publicador.|  
 ||**1**|Se utiliza la autenticación de Windows para la conexión con el publicador.|  
-||**2**|Desencadenadores de sincronización utilizan una variable static **sysservers** entrada para realizar la llamada a procedimiento remoto (RPC) y el publicador debe estar definido en el **sysservers** tabla como un servidor remoto o vinculado.|  
+||**2**|Desencadenadores de sincronización utilizan una estática **sysservers** entrada para realizar la llamada a procedimiento remoto (RPC) y el publicador debe estar definido en el **sysservers** tabla como un servidor remoto o vinculado.|  
 |**sync_type**|**Automático**|El esquema y los datos iniciales de las tablas publicadas se transfieren primero al suscriptor.|  
 ||**Ninguno**|El suscriptor ya tiene el esquema y los datos iniciales de las tablas publicadas; los datos y las tablas del sistema se transfieren siempre.|  
 |**use_ftp**|**true**|Se utiliza FTP en lugar del protocolo habitual para recuperar instantáneas.|  
-||**False**|Utiliza el protocolo normal para recuperar instantáneas.|  
+||**False**|Utiliza el protocolo habitual para recuperar instantáneas.|  
 |**use_web_sync**|**true**|La suscripción se puede sincronizar a través de HTTP.|  
 ||**False**|La suscripción no se puede sincronizar a través de HTTP.|  
 |**use_interactive_resolver**|**true**|Durante la reconciliación se utiliza el Solucionador interactivo.|  
@@ -107,18 +107,18 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_changemergepullsubscription** se utiliza en la replicación de mezcla.  
   
  Se considera que el servidor y la base de datos actuales son el suscriptor y la base de datos del suscriptor.  
   
  Después de cambiar un inicio de sesión o una contraseña de agente, debe detener y reiniciar el agente para que el cambio surta efecto.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_changemergepullsubscription**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_changemergepullsubscription**.  
   
 ## <a name="see-also"></a>Vea también  
- [Ver y modificar las propiedades de una suscripción de extracción](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
+ [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)  (Ver y modificar las propiedades de una suscripción de extracción)  
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
  [sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   

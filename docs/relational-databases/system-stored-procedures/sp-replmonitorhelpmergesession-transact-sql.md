@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorhelpmergesession (Transact-SQL) | Documentos de Microsoft
+title: sp_replmonitorhelpmergesession (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorhelpmergesession
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1d59aba126e66d523e23c680c55f679cbbfa6ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25bacdedf9ed9be6baa5e467cf81b809ff9cab1f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003592"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037678"
 ---
 # <a name="spreplmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,22 +56,22 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
  [ **@hours** =] *horas*  
  Es el intervalo de tiempo en horas sobre el que se devuelve información de historial de las sesiones del agente. *horas* es **int**, que puede ser uno de los siguientes intervalos.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |< **0**|Devuelve información sobre las ejecuciones pasadas del agente, hasta un máximo de 100.|  
 |**0** (valor predeterminado)|Devuelve información sobre todas las ejecuciones pasadas del agente.|  
-|> **0**|Devuelve información sobre agente ejecuciones que se ha producido en los últimos *horas* número de horas.|  
+|> **0**|Devuelve información de agente de ejecuciones que se ha producido en los últimos *horas* número de horas.|  
   
  [ **@session_type** =] *session_type*  
  Filtra el conjunto de resultados según el resultado del fin de la sesión. *session_type* es **int**, y puede tener uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1** (predeterminado)|Sesiones del agente con un reintento o un resultado correcto.|  
 |**0**|Sesiones del agente con un resultado erróneo.|  
   
  [ **@publisher** =] **'***publisher***'**  
- Es el nombre del publicador. *Publisher* es **sysname**, su valor predeterminado es null. Este parámetro se usa al ejecutar **sp_replmonitorhelpmergesession** en el suscriptor.  
+ Es el nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null. Este parámetro se usa al ejecutar **sp_replmonitorhelpmergesession** en el suscriptor.  
   
  [ **@publisher_db** = ] **'***publisher_db***'**  
  Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, su valor predeterminado es null. Este parámetro se usa al ejecutar **sp_replmonitorhelpmergesession** en el suscriptor.  
@@ -81,9 +81,9 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|Identificador de la sesión de trabajo del agente.|  
+|**Session_id**|**int**|Identificador de la sesión de trabajo del agente.|  
 |**Estado**|**int**|Estado de la ejecución del agente:<br /><br /> **1** = inicio<br /><br /> **2** = correctamente<br /><br /> **3** = en curso<br /><br /> **4** = inactivo<br /><br /> **5** = reintento<br /><br /> **6** = error|  
 |**StartTime**|**datetime**|Hora en que se inició la sesión de trabajo de agente.|  
 |**EndTime**|**datetime**|Hora en que finalizó la sesión de trabajo de agente.|  
@@ -100,12 +100,12 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_replmonitorhelpmergesession** se usa para supervisar la replicación de mezcla.  
   
  Cuando se ejecuta en el suscriptor, **sp_replmonitorhelpmergesession** solamente devuelve información sobre las últimas cinco sesiones del agente de mezcla.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **db_owner** o **replmonitor** fijo de base de datos en la base de datos de distribución en el distribuidor o en la base de datos de suscripción en el suscriptor pueden ejecutar **sp_ replmonitorhelpmergesession**.  
   
 ## <a name="see-also"></a>Vea también  

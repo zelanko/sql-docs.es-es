@@ -1,5 +1,5 @@
 ---
-title: sysmail_stop_sp (Transact-SQL) | Documentos de Microsoft
+title: sysmail_stop_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_stop_sp
 ms.assetid: 045ee36f-5bf0-4626-b5ee-e84db06ce16f
-caps.latest.revision: 28
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f304337470d0117b6f44d03bf7e459c6b9f51d5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0d52e7f18373303673afc3e5ef67aeb91e094360
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257787"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021139"
 ---
 # <a name="sysmailstopsp-transact-sql"></a>sysmail_stop_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,23 +48,23 @@ sysmail_stop_sp
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este procedimiento almacenado se encuentra en la **msdb** base de datos.  
   
  Este procedimiento almacenado detiene la cola de Correo electrónico de base de datos que contiene las solicitudes de mensajes salientes y desactiva la activación de [!INCLUDE[ssSB](../../includes/sssb-md.md)] para el programa externo.  
   
  Cuando las colas se detienen, el programa externo de Correo electrónico de base de datos no procesa mensajes. Este procedimiento almacenado permite detener el Correo electrónico de base de datos para solucionar problemas o realizar tareas de mantenimiento.  
   
- Para iniciar el correo electrónico de base de datos, utilice **sysmail_start_sp**. Tenga en cuenta que **sp_send_dbmail** sigue aceptando correo cuando el [!INCLUDE[ssSB](../../includes/sssb-md.md)] objetos estén detenidos.  
+ Para iniciar el correo electrónico de base de datos, use **sysmail_start_sp**. Tenga en cuenta que **sp_send_dbmail** sigue aceptando correo cuando el [!INCLUDE[ssSB](../../includes/sssb-md.md)] se detienen los objetos.  
   
 > [!NOTE]  
->  Este procedimiento almacenado solamente detiene las colas del Correo electrónico de base de datos. No desactiva la entrega de mensajes de [!INCLUDE[ssSB](../../includes/sssb-md.md)] en la base de datos. Este procedimiento almacenado no deshabilita los procedimientos almacenados extendidos del Correo electrónico de base de datos para reducir el área expuesta. Para deshabilitar los procedimientos almacenados extendidos, consulte la [opción Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) de la **sp_configure** procedimiento almacenado del sistema.  
+>  Este procedimiento almacenado solamente detiene las colas del Correo electrónico de base de datos. No desactiva la entrega de mensajes de [!INCLUDE[ssSB](../../includes/sssb-md.md)] en la base de datos. Este procedimiento almacenado no deshabilita los procedimientos almacenados extendidos del Correo electrónico de base de datos para reducir el área expuesta. Para deshabilitar los procedimientos almacenados extendidos, vea el [opción Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) de la **sp_configure** procedimiento almacenado del sistema.  
   
-## <a name="permissions"></a>Permissions  
- Permisos de ejecución para este procedimiento de forma predeterminada a los miembros de la **sysadmin** rol fijo de servidor.  
+## <a name="permissions"></a>Permisos  
+ Permisos de ejecución de este procedimiento de forma predeterminada a los miembros de la **sysadmin** rol fijo de servidor.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se muestra cómo detener el correo electrónico de base de datos en el **msdb** base de datos. En este ejemplo se da por supuesto que el Correo electrónico de base de datos está habilitado.  
+ El ejemplo siguiente muestra la detención de correo electrónico de base de datos en el **msdb** base de datos. En este ejemplo se da por supuesto que el Correo electrónico de base de datos está habilitado.  
   
 ```  
 USE msdb ;  

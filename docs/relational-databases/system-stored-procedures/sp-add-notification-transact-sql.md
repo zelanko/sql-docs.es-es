@@ -1,5 +1,5 @@
 ---
-title: sp_add_notification (Transact-SQL) | Documentos de Microsoft
+title: sp_add_notification (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_notification
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
-caps.latest.revision: 33
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a79b98fb3f44f3c69e7b4108502a3e6ea14e5c09
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d17936912a9adca46ddf64724401432c7ef9d43f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238412"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038295"
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +51,9 @@ sp_add_notification [ @alert_name = ] 'alert' ,
  Operador al que se notificará cuando se produzca la alerta. *operador* es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@notification_method=** ] *notification_method*  
- Método que se utilizará para notificar al operador. *notification_method* es **tinyint**, no tiene ningún valor predeterminado. *notification_method* puede tener uno o varios de estos valores, combinados con un **OR** operador lógico.  
+ Método que se utilizará para notificar al operador. *notification_method* es **tinyint**, no tiene ningún valor predeterminado. *notification_method* puede ser uno o varios de estos valores, combinados con un **OR** operador lógico.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Correo electrónico|  
 |**2**|Buscapersonas|  
@@ -66,7 +65,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_add_notification** se debe ejecutar desde la **msdb** base de datos.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona una sencilla forma gráfica de administrar todo el sistema de alertas. Se recomienda utilizar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para configurar la infraestructura de alertas.  
@@ -75,7 +74,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
   
  Si se produce algún error al enviar un mensaje de correo electrónico o una notificación por buscapersonas, el error se comunica en el registro de errores de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_add_notification**.  
   
 ## <a name="examples"></a>Ejemplos  

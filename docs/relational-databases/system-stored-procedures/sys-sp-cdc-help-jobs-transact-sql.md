@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_help_jobs (Transact-SQL) | Documentos de Microsoft
+title: Sys.sp_cdc_help_jobs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_help_jobs
 ms.assetid: 9399b4bc-8293-408f-b3cb-f904e0657fb5
-caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1f193f632ca8095e42bb73eb76f8b283382a5069
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 100dc01e91f0864043e1dd37ba33275ea7d2e1dd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257609"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037627"
 ---
 # <a name="sysspcdchelpjobs-transact-sql"></a>sys.sp_cdc_help_jobs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,18 +49,18 @@ sys.sp_cdc_help_jobs
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|Id. del trabajo.|  
 |**job_type**|**nvarchar (20)**|Tipo de trabajo.|  
-|**maxtrans**|**int**|El número máximo de transacciones que se va a procesar en cada ciclo de examen.<br /><br /> **maxtrans** es válida únicamente para los trabajos de captura.|  
-|**maxscans**|**int**|El número máximo de ciclos de recorrido para ejecutar en orden y extraer todas las filas del registro.<br /><br /> **maxscans** es válida únicamente para los trabajos de captura.|  
-|**Continuo**|**bit**|Una marca que indica si el trabajo de captura debe ejecutarse continuamente (1) o solo una vez (0). Para obtener más información, consulte [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).<br /><br /> **continuo** es válida únicamente para los trabajos de captura.|  
-|**pollingInterval**|**bigint**|El número de segundos entre los ciclos del recorrido del registro.<br /><br /> **pollingInterval** es válida únicamente para los trabajos de captura.|  
-|**Retención**|**bigint**|El número de minutos que se conservan las filas de cambios en las tablas de cambios.<br /><br /> **retención** es válida únicamente para los trabajos de limpieza.|  
-|**Umbral**|**bigint**|El número máximo de entradas correspondientes a operaciones de eliminación que se pueden eliminar mediante una única instrucción durante el proceso de limpieza.|  
+|**maxtrans**|**int**|El número máximo de transacciones para procesar en cada ciclo de examen.<br /><br /> **maxtrans** solo es válida para los trabajos de captura.|  
+|**maxscans**|**int**|El número máximo de ciclos de recorrido para ejecutar en orden y extraer todas las filas del registro.<br /><br /> **maxscans** solo es válida para los trabajos de captura.|  
+|**continua**|**bit**|Una marca que indica si el trabajo de captura debe ejecutarse continuamente (1) o solo una vez (0). Para obtener más información, consulte [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).<br /><br /> **continua** solo es válida para los trabajos de captura.|  
+|**pollingInterval**|**bigint**|El número de segundos entre los ciclos del recorrido del registro.<br /><br /> **pollingInterval** solo es válida para los trabajos de captura.|  
+|**retención**|**bigint**|El número de minutos que se conservan las filas de cambios en las tablas de cambios.<br /><br /> **retención** solo es válida para los trabajos de limpieza.|  
+|**umbral**|**bigint**|El número máximo de entradas correspondientes a operaciones de eliminación que se pueden eliminar mediante una única instrucción durante el proceso de limpieza.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer a la **db_owner** rol fijo de base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -76,6 +75,6 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [Sys.sp_cdc_add_job & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
+ [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

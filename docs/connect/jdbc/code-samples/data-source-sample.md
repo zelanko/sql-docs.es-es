@@ -14,18 +14,18 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61fb9ed58ab1afddfcb0375e6a6048dbee994360
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 166cc1aa7764a310d7cc6741afcd3e4dce3f2f62
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452179"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787068"
 ---
 # <a name="data-source-sample"></a>Ejemplo de origen de datos
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-En esta aplicación de ejemplo de [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] se muestra cómo conectar con una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] mediante un objeto de origen de datos. Además, se muestra cómo recuperar datos de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] mediante un procedimiento almacenado.
+En esta aplicación de ejemplo de [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] se muestra cómo conectar con una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante un objeto de origen de datos. Además, se muestra cómo recuperar datos de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante un procedimiento almacenado.
 
 El archivo de código para este ejemplo se llama ConnectDataSource.java y se encuentra en la siguiente ubicación:
 

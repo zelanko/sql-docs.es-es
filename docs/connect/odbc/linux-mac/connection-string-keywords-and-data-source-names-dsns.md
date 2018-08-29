@@ -18,17 +18,17 @@ caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 878a88fac188f23f48c25fdc54fec7540a9b6771
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: abd4df2a4f08cd8f47bacc4a209375b65a541e1a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982317"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786177"
 ---
 # <a name="connecting-to-sql-server"></a>Conectarse a SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-En este tema se describe cómo crear una conexión a una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+En este tema se describe cómo crear una conexión a una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="connection-properties"></a>Propiedades de conexión  
 
@@ -67,7 +67,7 @@ Puede comprobar que el controlador funciona mediante el uso de `isql` probar la 
  - **master.INFORMATION_SCHEMA.TABLES bcp out -S de este archivo <server> - U <name> - P <password>**  
 
 ## <a name="using-secure-sockets-layer-ssl"></a>Uso de la capa de sockets seguros (SSL)  
-Puede usar Capa de sockets seguros (SSL) para cifrar las conexiones a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Este protocolo protege los nombres de usuario y las contraseñas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] a través de la red. SSL también comprueba la identidad del servidor para protegerse de ataques de tipo "Man in the middle" (MITM).  
+Puede usar Capa de sockets seguros (SSL) para cifrar las conexiones a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Este protocolo protege los nombres de usuario y las contraseñas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a través de la red. SSL también comprueba la identidad del servidor para protegerse de ataques de tipo "Man in the middle" (MITM).  
 
 Al habilitar el cifrado, aumenta la seguridad a expensas del rendimiento.
 
@@ -78,7 +78,7 @@ Con independencia de la configuración de **Encrypt** y **TrustServerCertificate
 ||**TrustServerCertificate = no**|**TrustServerCertificate = yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|No se comprueba el certificado de servidor.<br /><br />No se cifran los datos enviados entre cliente y servidor.|No se comprueba el certificado de servidor.<br /><br />No se cifran los datos enviados entre cliente y servidor.|  
-|**Encrypt=yes**|Se comprueba el certificado de servidor.<br /><br />Se cifran los datos enviados entre cliente y servidor.<br /><br />El nombre (o la dirección IP) de un nombre común (CN) del sujeto o el nombre alternativo del sujeto (SAN) de un certificado SSL de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] debe coincidir exactamente con el nombre (o la dirección IP) del servidor especificado en la cadena de conexión.|No se comprueba el certificado de servidor.<br /><br />Se cifran los datos enviados entre cliente y servidor.|  
+|**Encrypt=yes**|Se comprueba el certificado de servidor.<br /><br />Se cifran los datos enviados entre cliente y servidor.<br /><br />El nombre (o la dirección IP) de un nombre común (CN) del sujeto o el nombre alternativo del sujeto (SAN) de un certificado SSL de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debe coincidir exactamente con el nombre (o la dirección IP) del servidor especificado en la cadena de conexión.|No se comprueba el certificado de servidor.<br /><br />Se cifran los datos enviados entre cliente y servidor.|  
 
 De forma predeterminada, las conexiones cifradas siempre comprueban el certificado del servidor. Sin embargo, si se conecta a un servidor que tenga un certificado autofirmado, también agrega el `TrustServerCertificate` opción para omitir la comprobación del certificado con la lista de entidades emisoras de certificados de confianza:  
 

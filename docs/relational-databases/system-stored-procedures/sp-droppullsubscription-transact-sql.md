@@ -1,5 +1,5 @@
 ---
-title: sp_droppullsubscription (Transact-SQL) | Documentos de Microsoft
+title: sp_droppullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_droppullsubscription
 ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f87d5298d9f67c349a71faf8cff95b2ac23304d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73c7f78803805c03acef7e0c7055c60eab2b1924
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989684"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021118"
 ---
 # <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,21 +49,21 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publisher=** ] **'***publisher***'**  
- Es el nombre del servidor remoto. *Publisher* es **sysname**, no tiene ningún valor predeterminado. Si **todos los**, la suscripción se quita de todos los publicadores.  
+ Es el nombre del servidor remoto. *publicador* es **sysname**, no tiene ningún valor predeterminado. Si **todas**, se quita la suscripción de todos los publicadores.  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
  Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, no tiene ningún valor predeterminado. **todos los** significa que todas las bases de datos del publicador.  
   
  [  **@publication=** ] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado. Si **todos los**, se quitará la suscripción a todas las publicaciones.  
+ Es el nombre de publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado. Si **todas**, se quita la suscripción a todas las publicaciones.  
   
- [  **@reserved=** ] *reservadas*  
+ [  **@reserved=** ] *reservado*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_droppullsubscription** se utiliza en la replicación de instantáneas y transaccional.  
   
  **sp_droppullsubscription** elimina la fila correspondiente en el [MSreplication_subscriptions &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) tabla y el agente de distribución correspondiente en el suscriptor. Si no quedan filas en [MSreplication_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md), quita la tabla.  
@@ -71,8 +71,8 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_droptranpullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-droppullsubscription-_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el usuario que creó la suscripción de extracción puede ejecutar **sp_droppullsubscription**. El **db_owner** rol fijo de base de datos sólo es capaz de ejecutar **sp_droppullsubscription** si el usuario que creó la suscripción de extracción pertenece a este rol.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o el usuario que creó la suscripción de extracción puede ejecutar **sp_droppullsubscription**. El **db_owner** sólo es capaz de ejecutar el rol fijo de base de datos **sp_droppullsubscription** si el usuario que creó la suscripción de extracción pertenece a este rol.  
   
 ## <a name="see-also"></a>Vea también  
  [Eliminar una suscripción de extracción](../../relational-databases/replication/delete-a-pull-subscription.md)   

@@ -1,5 +1,5 @@
 ---
-title: Sys.server_audit_specifications (Transact-SQL) | Documentos de Microsoft
+title: Sys.server_audit_specifications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,22 +21,22 @@ helpviewer_keywords:
 - sys.server_audit_specifications catalog view
 ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8f6eba2b4cd9d41c00fa48434f72bee8d093559
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e00fc4993b4afcc559b11ec8e057349aa8bee310
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219636"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038336"
 ---
 # <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene información sobre las especificaciones de auditoría de servidor de una auditoría de SQL Server en una instancia del servidor. Para más información sobre SQL Server Audit, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|Nombre de la especificación de servidor.|  
 |**server_specification_id**|**Int**|Id. de la **server_specification**.|  
@@ -45,8 +45,8 @@ ms.locfileid: "33219636"
 |**is_state_enabled**|**tinyint**|Estado de la especificación de auditoría:<br /><br /> 0 – Deshabilitada<br /><br /> 1 – Habilitada|  
 |**audit_GUID**|**uniqueidentifier**|GUID de la auditoría que contiene esta especificación. Se usa durante la enumeración de especificaciones de auditoría de servidores miembro al iniciar el servidor.|  
   
-## <a name="permissions"></a>Permissions  
- Entidades de seguridad con la **ALTER ANY SERVER AUDIT** o **VIEW ANY DEFINITION** permiso tiene acceso a esta vista de catálogo. Además, la entidad de seguridad no se debe denegar **VIEW ANY DEFINITION** permiso.  
+## <a name="permissions"></a>Permisos  
+ Las entidades de seguridad con el **ALTER ANY SERVER AUDIT** o **VIEW ANY DEFINITION** permisos tienen acceso a esta vista de catálogo. Además, no se debe denegar la entidad de seguridad **VIEW ANY DEFINITION** permiso.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

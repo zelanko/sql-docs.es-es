@@ -1,5 +1,5 @@
 ---
-title: Sys.database_mirroring (Transact-SQL) | Documentos de Microsoft
+title: Sys.database_mirroring (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,30 +21,30 @@ helpviewer_keywords:
 - sys.database_mirroring catalog view
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
 caps.latest.revision: 53
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50b7b4df6a6583831c81b021db98df2a42fc3620
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 757c967ea8a1f647bec4a6f7d9a607e9a75449c9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181951"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020132"
 ---
 # <a name="sysdatabasemirroring-transact-sql"></a>sys.database_mirroring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una fila por cada base de datos de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la base de datos no está en línea o no está habilitada la creación de reflejo de base de datos, los valores de todas las columnas excepto database_id serán NULL.  
+  Contiene una fila por cada base de datos de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la base de datos no está en línea o no está habilitada la creación de reflejo de base de datos, los valores de todas las columnas excepto database_id será NULL.  
   
- Para ver la fila de una base de datos que no sea master o tempdb, debe ser el propietario de la base de datos o tener al menos permiso de nivel de servidor ALTER ANY DATABASE o VIEW ANY DATABASE o permiso CREATE DATABASE en la base de datos maestra. Para ver los valores no NULL de una base de datos reflejada, debe ser miembro de la **sysadmin** rol fijo de servidor.  
+ Para ver la fila de una base de datos que no sea master o tempdb, debe ser el propietario de la base de datos o tener al menos permiso de nivel de servidor ALTER ANY DATABASE o VIEW ANY DATABASE o el permiso CREATE DATABASE en la base de datos maestra. Para ver los valores no NULL en una base de datos reflejada, debe ser miembro de la **sysadmin** rol fijo de servidor.  
   
 > [!NOTE]  
 >  Si una base de datos no participa en la creación de reflejo, todas las columnas con el prefijo "mirroring_" son NULL.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Identificador de la base de datos. Es único en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**mirroring_guid**|**uniqueidentifier**|Id. de la asociación de creación de reflejo.<br /><br /> NULL = la base de datos es inaccesible o no está reflejada.<br /><br /> Nota: Si la base de datos no participa en la creación de reflejo, todas las columnas con el prefijo "mirroring_" son NULL.|  
+|**mirroring_guid**|**uniqueidentifier**|Id. de la creación de reflejo de la asociación.<br /><br /> NULL = la base de datos es inaccesible o no está reflejada.<br /><br /> Nota: Si la base de datos no participa en la creación de reflejo, todas las columnas con el prefijo "mirroring_" son NULL.|  
 |**mirroring_state**|**tinyint**|Estado de la base de datos reflejada y de la sesión de creación de reflejo de la base de datos.<br /><br /> 0 = suspensión<br /><br /> 1 = Desconectada del otro asociado<br /><br /> 2 = En proceso de sincronización<br /><br /> 3 = Pendiente de conmutación por error<br /><br /> 4 = Sincronizada<br /><br /> 5 = Los asociados no están sincronizados. La conmutación por error no es posible.<br /><br /> 6 = Los socios están sincronizados. La conmutación por error es potencialmente posible. Para obtener información sobre los requisitos para la conmutación por error, vea [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).<br /><br /> NULL= No se puede tener acceso a la base de datos o no está reflejada.|  
 |**mirroring_state_desc**|**nvarchar(60)**|Descripción del estado de la base de datos reflejada y de la sesión de creación de reflejo de base de datos, uno de los siguientes:<br /><br /> DISCONNECTED<br /><br /> SYNCHRONIZED<br /><br /> SYNCHRONIZING<br /><br /> PENDING_FAILOVER<br /><br /> SUSPENDED<br /><br /> UNSYNCHRONIZED<br /><br /> SYNCHRONIZED<br /><br /> NULL<br /><br /> Para obtener más información, vea [Estados de creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md).|  
 |**mirroring_role**|**tinyint**|Rol que representa la base de datos local en la sesión de creación de reflejo de la base de datos.<br /><br /> 1 = Entidad de seguridad<br /><br /> 2 = Reflejo<br /><br /> NULL= No se puede tener acceso a la base de datos o no está reflejada.|  
@@ -65,7 +65,7 @@ ms.locfileid: "33181951"
 |**mirroring_end_of_log_lsn**|**numeric(25,0)**|El final de registro local se ha volcado en el disco. Esto es comparable al LSN protegido del servidor reflejado (vea la **mirroring_failover_lsn** columna).|  
 |**mirroring_replication_lsn**|**numeric(25,0)**|El LSN máximo que la replicación puede enviar.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

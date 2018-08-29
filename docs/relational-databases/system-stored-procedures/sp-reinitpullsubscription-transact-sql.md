@@ -1,5 +1,5 @@
 ---
-title: sp_reinitpullsubscription (Transact-SQL) | Documentos de Microsoft
+title: sp_reinitpullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_reinitpullsubscription
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1f044d6ae29565326b130e248e4e0e770ab8e60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ed19307a7a79856b808ade07338e2e8d595fdf4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997082"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018258"
 ---
 # <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publisher=**] **'***publisher***'**  
- Es el nombre del publicador. *Publisher* es **sysname**, no tiene ningún valor predeterminado.  
+ Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
  Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
@@ -59,22 +59,22 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_reinitpullsubscription** se utiliza en la replicación transaccional.  
   
- **sp_reinitpullsubscription** no es compatible con la replicación transaccional punto a punto.  
+ **sp_reinitpullsubscription** no se admite para la replicación transaccional punto a punto.  
   
- **sp_reinitpullsubscription** pueden llamarse desde el suscriptor para reinicializar la suscripción, durante la siguiente ejecución del agente de distribución.  
+ **sp_reinitpullsubscription** pueden llamarse desde el suscriptor para reinicializar la suscripción, durante la próxima ejecución del agente de distribución.  
   
- Las suscripciones a las publicaciones creadas con un valor de **false** para **@immediate_sync** no se pueden reinicializar desde el suscriptor.  
+ Las suscripciones a publicaciones creadas con un valor de **false** para **@immediate_sync** no pueden reinicializarse desde el suscriptor.  
   
  Puede reinicializar una suscripción de extracción ejecutando **sp_reinitpullsubscription** en el suscriptor o **sp_reinitsubscription** en el publicador.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos puede ejecutar **sp_reinitpullsubscription**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos se puede ejecutar **sp_reinitpullsubscription**.  
   
 ## <a name="see-also"></a>Vea también  
  [Reinicializar una suscripción](../../relational-databases/replication/reinitialize-a-subscription.md)   

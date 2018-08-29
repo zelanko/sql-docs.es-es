@@ -1,5 +1,5 @@
 ---
-title: sp_setdefaultdatatypemapping (Transact-SQL) | Documentos de Microsoft
+title: sp_setdefaultdatatypemapping (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_setdefaultdatatypemapping
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b8d3751448d553666f7b7301c42329f32a7713a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c980adc28cfa99348cd771652d23df424c92d8b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003752"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019328"
 ---
 # <a name="spsetdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,12 +63,12 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@mapping_id=** ] *mapping_id*  
- Identifica una asignación de tipos de datos existente.  *mapping_id* es **int**, su valor predeterminado es NULL. Si especifica *mapping_id*, a continuación, el resto de parámetros no es necesario.  
+ Identifica una asignación de tipos de datos existente.  *mapping_id* es **int**, su valor predeterminado es NULL. Si especifica *mapping_id*, no se requieren los parámetros restantes.  
   
  [ **@source_dbms**=] **'***source_dbms***'**  
  Es el nombre del DBMS desde el que se asignan los tipos de datos. *source_dbms* es **sysname**, y puede tener uno de los siguientes valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|El origen es una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|El origen es una base de datos de Oracle.|  
@@ -101,12 +101,12 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  Es la escala máxima del tipo de datos en el DBMS de origen. *source_scale_max* es **int**, su valor predeterminado es null.  
   
  [  **@source_nullable=** ] *source_nullable*  
- Indica si el tipo de datos del DBMS de origen admite un valor NULL. *source_nullable* es **bits**, su valor predeterminado es null. **1** significa que se admiten valores NULL.  
+ Indica si el tipo de datos del DBMS de origen admite un valor NULL. *source_nullable* es **bit**, su valor predeterminado es null. **1** significa que se admiten valores NULL.  
   
  [ **@destination_dbms** =] **'***destination_dbms***'**  
  Es el nombre del DBMS de destino. *destination_dbms* es **sysname**, y puede tener uno de los siguientes valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|El destino es una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|El destino es una base de datos de Oracle.|  
@@ -130,17 +130,17 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  Es la escala del tipo de datos en el sistema DBMS de destino. *destination_scale* es **int**, su valor predeterminado es null.  
   
  [  **@destination_nullable=** ] *destination_nullable*  
- Indica si el tipo de datos del DBMS de destino admite un valor NULL. *destination_nullable* es **bits**, su valor predeterminado es null. **1** significa que se admiten valores NULL.  
+ Indica si el tipo de datos del DBMS de destino admite un valor NULL. *destination_nullable* es **bit**, su valor predeterminado es null. **1** significa que se admiten valores NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_setdefaultdatatypemapping** se utiliza en todos los tipos de replicación entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y que no es[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS.  
   
  Las asignaciones de tipos de datos predeterminados se aplican a todas las topologías de replicación que incluyen el DBMS especificado.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_setdefaultdatatypemapping**.  
   
 ## <a name="see-also"></a>Vea también  

@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_purge_history (Transact-SQL) | Documentos de Microsoft
+title: sp_syspolicy_purge_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_purge_history
 ms.assetid: 6db414e7-4946-4bd2-8264-6b490810b306
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e59d843103da4dbee71013cf18116c1a9be5c441
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 95c595a1806ca31202b2797aaf6958b533fd0eb2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263201"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020734"
 ---
 # <a name="spsyspolicypurgehistory-transact-sql"></a>sp_syspolicy_purge_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_syspolicy_purge_history
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Debe ejecutar sp_syspolicy_purge_history en el contexto de la base de datos del sistema msdb.  
   
  Para ver el intervalo de retención del historial, puede utilizar la consulta siguiente:  
@@ -64,7 +63,7 @@ GO
 > [!NOTE]  
 >  Si el intervalo de retención del historial está establecido en 0, el historial de evaluaciones de directivas no se quitará.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de base de datos PolicyAdministratorRole.  
   
 > [!IMPORTANT]  

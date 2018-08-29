@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 757820680533cfa2eaff8403e2056f0a4d3b1a96
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
+ms.openlocfilehash: cbdcbe160e585fc1d5dfc30c51f511f32d4a0be9
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39556955"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43104669"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Catálogo de base de datos de WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -66,7 +66,7 @@ WideWorldImportersDW tiene las siguientes tablas de hechos. La descripción incl
 |Pedido de|`Sales.Orders` y `Sales.OrderLines`|Personal, productividad de selector/envasador, de ventas y en tiempo para elegir los pedidos. Además, bajo stock situaciones conducen a pedidos en espera.|
 |Venta|`Sales.Invoices` y `Sales.InvoiceLines`|Fechas de ventas, las fechas de entrega, rentabilidad con el tiempo, rentabilidad por vendedor.|
 |Compra|`Purchasing.PurchaseOrderLines`|Tiempos de entrega real vs esperado|
-|Transaction|`Sales.CustomerTransactions` y `Purchasing.SupplierTransactions`|Medición de importes y fechas de finalización de vs de fechas de problema.|
+|Transacción|`Sales.CustomerTransactions` y `Purchasing.SupplierTransactions`|Medición de importes y fechas de finalización de vs de fechas de problema.|
 |Movimiento|`Warehouse.StockTransactions`|Movimientos con el tiempo.|
 |Cartera de valores|`Warehouse.StockItemHoldings`|Los niveles de existencias del inventario y el valor.|
 
@@ -84,7 +84,7 @@ Estos procedimientos se utilizan para configurar la muestra. Se utilizan para ap
 |-----------------------------|---------------------|
 |Configuration_ApplyPartitionedColumnstoreIndexing|Se aplica a particionar y columnstore índices para las tablas de hechos.|
 |Configuration_ConfigureForEnterpriseEdition|Aplica la partición columnstore indización y en la memoria.|
-|Configuration_EnableInMemory|Reemplaza las tablas de ensayo de integración con tablas SCHEMA_ONLY optimizado de memoria para mejorar el rendimiento de ETL.|
+|Configuration_EnableInMemory|Reemplaza las tablas de ensayo de la integración con las tablas optimizadas para memoria SCHEMA_ONLY para mejorar el rendimiento de ETL.|
 |Configuration_ApplyPolybase|Configura un origen de datos externo, el formato de archivo y la tabla.|
 |Configuration_PopulateLargeSaleTable|Aplica cambios de edición enterprise y rellena una mayor cantidad de datos para el año 2012 como historial adicional.|
 |Configuration_ReseedETL|Elimina los datos existentes y reinicia las semillas ETL. Esto permite rellenar la base de datos OLAP para que coincidan con las filas actualizadas en la base de datos OLTP.|

@@ -15,13 +15,13 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1e657780fd2f5ca551eb65e65b1910e2d039220b
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: bb6ae27f2a936ab8b102a5e6e043e5b7b70c811c
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558675"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43099992"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Nuevas características de fecha y hora con versiones de SQL Server anteriores (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "39558675"
   
 -   Cambiar a **datetime2** porque éste es el tipo preferido de los datos de fecha y hora.  
   
- Las aplicaciones que utilizan los metadatos de servidor obtenido a través de conjuntos de filas de esquema o ICommandWithParameters:: GetParameterInfo para establecer la información de tipo de parámetro a través de ICommandWithParameters:: SetParameterInfo producirán errores durante las conversiones de cliente donde la cadena representación de un tipo de origen es mayor que la representación de cadena del tipo de destino. Por ejemplo, si un cliente de enlace utiliza DBTYPE_DBTIMESTAMP y la columna del servidor es fecha, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client convierte el valor a "fff aaaa-mm-dd", pero los metadatos del servidor se devolverán como **tipo (10)**. El desbordamiento resultante produce DBSTATUS_E_CATCONVERTVALUE. Problemas similares surgen con las conversiones de datos por IRowsetChange, ya que los metadatos del conjunto de filas se establece desde los metadatos del conjunto de resultados.  
+ Las aplicaciones que utilizan los metadatos de servidor obtenido a través de conjuntos de filas de esquema o ICommandWithParameters:: GetParameterInfo para establecer la información de tipo de parámetro a través de ICommandWithParameters:: SetParameterInfo producirán errores durante las conversiones de cliente donde la cadena representación de un tipo de origen es mayor que la representación de cadena del tipo de destino. Por ejemplo, si un enlace de cliente usa DBTYPE_DBTIMESTAMP y la columna del servidor es la fecha, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client convertirá el valor a "aaaa-mm-dd fff", pero los metadatos del servidor se devolverán como **nvarchar (10)**. El desbordamiento resultante produce DBSTATUS_E_CATCONVERTVALUE. Problemas similares surgen con las conversiones de datos por IRowsetChange, ya que los metadatos del conjunto de filas se establece desde los metadatos del conjunto de resultados.  
   
 ### <a name="parameter-and-rowset-metadata"></a>Parámetros y metadatos de conjuntos de filas  
  Esta sección describe los metadatos de los parámetros, columnas de resultados y conjuntos de filas de esquema para los clientes que se compiló con una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
@@ -160,14 +160,14 @@ ms.locfileid: "39558675"
 |IS_FIXEDLENGTH|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
   
 ## <a name="down-level-server-behavior"></a>Comportamiento de un servidor de nivel inferior  
- Cuando se conecta a un servidor de una versión anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], dará como resultado cualquier intento de utilizar los nuevos nombres de tipo de servidor (por ejemplo, con ICommandWithParameters:: SetParameterInfo o ITableDefinition::CreateTable) en DB_E_BADTYPENAME.  
+ Cuando se conecta a un servidor de una versión anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], cualquier intento de usar los nuevos nombres de tipo de servidor (por ejemplo, con ICommandWithParameters:: SetParameterInfo o ITableDefinition:: CreateTable) dará lugar a DB_E_BADTYPENAME.  
   
  Si los nuevos tipos se enlazan en parámetros o resultados sin usar un nombre de tipo y el nuevo tipo se usa para especificar implícitamente el tipo de servidor, o no hay ninguna conversión válida del tipo de servidor al tipo de cliente, se devuelve DB_E_ERRORSOCCURRED, y DBBINDSTATUS_UNSUPPORTED_CONVERSION se establece como estado de enlace para el descriptor de acceso que se usó en Execute.  
   
  Si hay una conversión de cliente compatible del tipo de búfer al tipo de servidor para la versión del servidor en la conexión, pueden usarse todos los tipos de búfer del cliente. En este contexto, *tipo de servidor* : el tipo especificado por ICommandWithParameters:: SetParameterInfo o implícita en el tipo de búfer si no se ha llamado ICommandWithParameters:: SetParameterInfo. Esto significa que DBTYPE_DBTIME2 y DBTYPE_DBTIMESTAMPOFFSET pueden usarse con servidores de nivel inferior, o cuando DataTypeCompatibility=80, si la conversión del cliente a un tipo de servidor compatible se realiza correctamente. Es evidente que si el tipo de servidor es incorrecto, el servidor todavía podría notificar un error si no puede realizar una conversión implícita al tipo de servidor real.  
   
 ## <a name="sspropinitdatatypecompatibility-behavior"></a>Comportamiento de SSPROP_INIT_DATATYPECOMPATIBILITY  
- Cuando SSPROP_INIT_DATATYPECOMPATIBILITY se establece en SSPROPVAL_DATATYPECOMPATIBILITY_SQL2000, los tipos de fecha y hora nuevas y metadatos asociados aparezcan ante los clientes como aparecen para los clientes de nivel inferior, como se describe en [cambios en la copia masiva de Mejorado tipos fecha y hora &#40;OLE DB y ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+ Cuando SSPROP_INIT_DATATYPECOMPATIBILITY se establece en SSPROPVAL_DATATYPECOMPATIBILITY_SQL2000, los tipos de fecha y hora nuevas y los metadatos asociados aparecen en los clientes en que aparecen para los clientes de nivel inferior, como se describe en [cambios de copia masiva Mejorado de tipos de fecha y hora &#40;de OLE DB y ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
 ## <a name="comparability-for-irowsetfind"></a>Comparaciones en IRowsetFind  
  Se permiten todos los operadores de comparación para los nuevos tipos de fecha y hora, debido a que aparecen como tipos de cadena en lugar de tipos de fecha y hora.  

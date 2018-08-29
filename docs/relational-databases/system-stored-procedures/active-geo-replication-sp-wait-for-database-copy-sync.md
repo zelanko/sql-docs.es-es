@@ -1,5 +1,5 @@
 ---
-title: sp_wait_for_database_copy_sync (base de datos de SQL Azure) | Documentos de Microsoft
+title: sp_wait_for_database_copy_sync (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
@@ -23,18 +23,18 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d1200ffc3a7bf643b55478297dc25e40b02a3dff
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: bb228500b59252898bbe25cf377b87b62b754860
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39557345"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43104376"
 ---
-# <a name="active-geo-replication---spwaitfordatabasecopysync"></a>Replicación activa Geo - sp_wait_for_database_copy_sync
+# <a name="active-geo-replication---spwaitfordatabasecopysync"></a>Replicación geográfica activa - sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Este procedimiento tiene como ámbito una relación de [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] entre una base de datos principal y una base de datos secundaria. Llamar a la **sp_wait_for_database_copy_sync** hace que la aplicación debe esperar hasta que todas las transacciones confirmadas se replican y reconocidas por la base de datos secundaria activa. Ejecutar **sp_wait_for_database_copy_sync** sólo la base de datos principal.  
+  Este procedimiento tiene como ámbito una relación de [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] entre una base de datos principal y una base de datos secundaria. Una llamada a la **sp_wait_for_database_copy_sync** hace que la aplicación espera hasta que todas las transacciones confirmadas se replica y confirma la base de datos secundaria activa. Ejecute **sp_wait_for_database_copy_sync** solo la base de datos principal.  
   
 ||  
 |-|  
@@ -63,16 +63,16 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
   
 -   El vínculo no se puede encontrar en la base de datos o el nombre de servidor especificados.  
   
--   La conectividad interlink se pierde. **sp_wait_for_database_copy_sync** volverá tras el tiempo de espera de conexión.  
+-   La conectividad interlink se pierde. **sp_wait_for_database_copy_sync** devolverá tras el tiempo de espera de conexión.  
   
 ## <a name="permissions"></a>Permisos  
  Cualquier usuario de la base de datos principal puede llamar a este procedimiento almacenado del sistema. El inicio de sesión debe ser un usuario tanto en la base de datos principal como en la secundaria activa.  
   
 ## <a name="remarks"></a>Notas  
- Todas las transacciones confirmadas antes de un **sp_wait_for_database_copy_sync** llamada se envían a la base de datos secundaria activa.  
+ Todas las transacciones confirmadas antes un **sp_wait_for_database_copy_sync** llamada se envían a la base de datos secundaria activa.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se invoca **sp_wait_for_database_copy_sync** para asegurarse de que todas las transacciones se confirman en la base de datos principal, db0, te enviará a su base de datos secundaria activa en el ubfyu5ssyt del servidor de destino.  
+ El ejemplo siguiente se invoca **sp_wait_for_database_copy_sync** para asegurarse de que todas las transacciones se confirman en la base de datos principal, db0, se envía a su base de datos secundaria activa en el ubfyu5ssyt del servidor de destino.  
   
 ```  
 USE db0;  
@@ -82,7 +82,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Sys.dm_continuous_copy_status &#40;base de datos de SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
+ [Sys.dm_continuous_copy_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
  [Funciones y vistas de administración dinámica de replicación geográfica &#40;base de datos SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
   
   

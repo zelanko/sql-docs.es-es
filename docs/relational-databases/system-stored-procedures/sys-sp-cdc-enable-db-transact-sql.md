@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_enable_db (Transact-SQL) | Documentos de Microsoft
+title: Sys.sp_cdc_enable_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], enabling databases
 - sp_cdc_enable_db
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 03a2ffce46b6789e32cccc361760f2aea842adb7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0f8c68e5366d8cd55475621ff4985c48a47ed4ae
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255776"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030289"
 ---
 # <a name="sysspcdcenabledb-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,12 +55,12 @@ sys.sp_cdc_enable_db
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- No se puede habilitar la captura de datos modificados en [bases de datos de sistema](../../relational-databases/databases/system-databases.md) o bases de datos de distribución.  
+## <a name="remarks"></a>Notas  
+ Captura de datos modificados no se puede habilitar en [las bases de datos del sistema](../../relational-databases/databases/system-databases.md) o bases de datos de distribución.  
   
- sys.sp_cdc_enable_db crea los objetos de captura de datos modificados con un ámbito aplicable a toda la base de datos, incluidas las tablas de metadatos y los desencadenadores DDL. También crea el esquema cdc y el usuario de base de datos de cdc y establece la columna is_cdc_enabled de la entrada de base de datos en el [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) vista en 1 de catálogo.  
+ sys.sp_cdc_enable_db crea los objetos de captura de datos modificados con un ámbito aplicable a toda la base de datos, incluidas las tablas de metadatos y los desencadenadores DDL. También crea el esquema cdc y el usuario de base de datos cdc y establece la columna is_cdc_enabled de la entrada de la base de datos en el [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) en 1 la vista de catálogo.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de servidor sysadmin.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -1,5 +1,5 @@
 ---
-title: syspolicy_policy_category_subscriptions (Transact-SQL) | Documentos de Microsoft
+title: syspolicy_policy_category_subscriptions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,33 +18,32 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_policy_group_subscriptions view
 ms.assetid: b3b3a7d7-0b78-46c0-9755-045f7a5692b9
-caps.latest.revision: 16
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3092a2977a35d7ab42cfaafe07611ddd51b9bc5b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e0d08a739b2fe0d56a263cf2cd77890232592148
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221646"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026352"
 ---
 # <a name="syspolicypolicycategorysubscriptions-transact-sql"></a>syspolicy_policy_category_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Muestra una fila para cada suscripción de administración basada en directivas en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cada fila describe un par de categoría de directiva y de destino. En la tabla siguiente se describen las columnas de la vista syspolicy_policy_groups_subscriptions.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |policy_category_subscription_id|**int**|Identificador de este registro.|  
 |target_type|**sysname**|Tipo de objeto de base de datos que es el destino de esta suscripción.|  
 |target_object|**sysname**|Nombre del objeto de destino.|  
 |policy_category_id|**int**|Identificador de la categoría de directiva que se aplica al destino.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta vista muestra los destinos que se suscriben a categorías de directiva.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol PolicyAdministratorRole en la base de datos msdb.  
   
 ## <a name="see-also"></a>Vea también  

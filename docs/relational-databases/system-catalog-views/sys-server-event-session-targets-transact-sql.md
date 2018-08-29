@@ -1,5 +1,5 @@
 ---
-title: Sys.server_event_session_targets (Transact-SQL) | Documentos de Microsoft
+title: Sys.server_event_session_targets (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,33 +22,33 @@ helpviewer_keywords:
 - xe
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54af7feefe5241df2af127a4e684f3dce2b3b7a8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9b38bfd00a699cb997f6cc73776daf6bed5f4cb8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219866"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024004"
 ---
 # <a name="sysservereventsessiontargets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila para cada destino de evento de una sesión de eventos.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Identificador de la sesión de eventos. No admite valores NULL.|  
 |target_id|**int**|Id. del destino. El Id. es único dentro del objeto de sesión de evento. No admite valores NULL.|  
-|name|**sysname**|Nombre del destino del evento. No admite valores NULL.|  
+|NAME|**sysname**|Nombre del destino del evento. No admite valores NULL.|  
 |paquete|**sysname**|Nombre del paquete de eventos que contiene el destino de evento. No admite valores NULL.|  
-|Módulo|**sysname**|Nombre del módulo que contiene el destino de evento. No admite valores NULL.|  
+|módulo|**sysname**|Nombre del módulo que contiene el destino de evento. No admite valores NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta vista tiene las siguientes cardinalidades de relación.  
   
 ||||  

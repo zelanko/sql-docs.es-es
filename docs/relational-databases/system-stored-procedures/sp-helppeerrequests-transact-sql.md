@@ -1,5 +1,5 @@
 ---
-title: sp_helppeerrequests (Transact-SQL) | Documentos de Microsoft
+title: sp_helppeerrequests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helppeerrequests
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfb696723ce749ec3db1cea12b88a4bf36a27c8f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba660dbcaf09b3df5890032ab0f1b428cce7860e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996182"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028105"
 ---
 # <a name="sphelppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,27 +50,27 @@ sp_helppeerrequests [ @publication = ] 'publication'
  Es el nombre de la publicación de una topología punto a punto para la que se han enviado solicitudes de estado. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
  [ **@description**=] **'***descripción***'**  
- Valor que puede usarse para identificar las solicitudes de estado individuales, lo que permite filtrar las respuestas devueltas en función de usuario define la información proporcionada al llamar a [sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *descripción* es **nvarchar (4000)**, su valor predeterminado es **%**. De forma predeterminada, se devuelven todas las solicitudes de estado para la publicación. Este parámetro se usa para devolver solamente las solicitudes de estado con una descripción que coincide con el valor proporcionado en *descripción*, donde se comparan las cadenas de caracteres con un [como &#40;Transact-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)cláusula.  
+ Valor que se puede usar para identificar solicitudes de estado individuales, lo que permite filtrar las respuestas devueltas en función de usuario define la información proporcionada al llamar a [sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *descripción* es **nvarchar (4000)**, su valor predeterminado es **%**. De forma predeterminada, se devuelven todas las solicitudes de estado para la publicación. Este parámetro se usa para devolver sólo las solicitudes de estado con una descripción que coincide con el valor proporcionado en *descripción*, donde se comparan las cadenas de caracteres con un [como &#40;Transact-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)cláusula.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identifica una solicitud.|  
-|**Publicación**|**sysname**|Nombre de la publicación para la que se envía la solicitud de estado.|  
+|**publicación**|**sysname**|Nombre de la publicación para la que se envía la solicitud de estado.|  
 |**sent_date**|**datetime**|Fecha y hora en que se envía la solicitud de estado.|  
-|**Descripción**|**nvarchar(4000)**|Información que puede usarse para identificar las solicitudes de estado individual definido por el usuario.|  
+|**Descripción**|**nvarchar(4000)**|Información que puede usarse para identificar las solicitudes de estado individuales definidas por el usuario.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_helppeerrequests** se utiliza en la replicación transaccional punto a punto.  
   
  **sp_helppeerrequests** se utiliza al restaurar una base de datos publicada en una topología punto a punto.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos puede ejecutar **sp_helppeerrequests**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos se puede ejecutar **sp_helppeerrequests**.  
   
 ## <a name="see-also"></a>Vea también  
  [sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   

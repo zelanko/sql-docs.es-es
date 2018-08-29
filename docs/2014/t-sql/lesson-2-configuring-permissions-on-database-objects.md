@@ -5,23 +5,21 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database permissions
 ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
-caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: eaa016c0ab656ada2ddd29a55a1f9bb29bc7c10b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 006a7960c6b8ac6f3d855f2613887abf24430528
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210375"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027997"
 ---
 # <a name="lesson-2-configuring-permissions-on-database-objects"></a>Lección 2: Configurar permisos en objetos de base de datos
   La concesión de acceso de usuario a una base de datos implica tres pasos. Primero, debe crear un inicio de sesión. El inicio de sesión permite al usuario conectarse a [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Luego, debe configurar el inicio de sesión como un usuario de una base de datos determinada. Y, por último, debe conceder al usuario permiso a objetos de la base de datos. En esta lección se muestran estos tres pasos y cómo crear una vista y un procedimiento almacenado como el objeto.  

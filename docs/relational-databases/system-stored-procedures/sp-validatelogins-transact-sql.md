@@ -1,5 +1,5 @@
 ---
-title: sp_validatelogins (Transact-SQL) | Documentos de Microsoft
+title: sp_validatelogins (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_validatelogins
 ms.assetid: 6ac52e21-e20d-469b-ad40-5aa091e06b61
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f8bfcefdd3b43e8a52fce6514583a47ed6aa4119
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: be184539a88e4a89fb841a26594a28eb0f2a2d33
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252933"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029542"
 ---
 # <a name="spvalidatelogins-transact-sql"></a>sp_validatelogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,17 +47,17 @@ sp_validatelogins
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**SID**|**varbinary(85)**|Identificador de seguridad (SID) de Windows del usuario o grupo de Windows.|  
 |**Inicio de sesión de NT**|**sysname**|Nombre del usuario o grupo de Windows.|  
   
-## <a name="remarks"></a>Comentarios  
- Si la entidad de seguridad a nivel de servidor huérfana es propietaria de un usuario de base de datos, es necesario quitar el usuario de la base de datos antes de quitar la entidad de seguridad de servidor huérfana. Para quitar un usuario de base de datos, use [DROP USER](../../t-sql/statements/drop-user-transact-sql.md). Si la entidad de seguridad a nivel de servidor es propietaria de elementos protegibles en la base de datos, la propiedad de estos elementos debe transferirse o quitarse. Para transferir la propiedad de elementos protegibles de base de datos, utilice [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
+## <a name="remarks"></a>Notas  
+ Si la entidad de seguridad a nivel de servidor huérfana es propietaria de un usuario de base de datos, es necesario quitar el usuario de la base de datos antes de quitar la entidad de seguridad de servidor huérfana. Para quitar un usuario de base de datos, use [DROP USER](../../t-sql/statements/drop-user-transact-sql.md). Si la entidad de seguridad a nivel de servidor es propietaria de elementos protegibles en la base de datos, la propiedad de estos elementos debe transferirse o quitarse. Para transferir la propiedad de los elementos protegibles de base de datos, utilice [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
- Para quitar las asignaciones a los usuarios de Windows y grupos que ya no existen, utilice [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md).  
+ Para quitar las asignaciones a los usuarios de Windows y grupos que ya no existen, use [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer a la **sysadmin** o **securityadmin** rol fijo de servidor.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -72,8 +71,8 @@ GO
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Eliminar usuario & #40; Transact-SQL & #41;](../../t-sql/statements/drop-user-transact-sql.md)   
- [QUITAR el inicio de sesión & #40; Transact-SQL & #41;](../../t-sql/statements/drop-login-transact-sql.md)   
+ [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)  
   
   

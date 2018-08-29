@@ -1,5 +1,5 @@
 ---
-title: sp_xml_removedocument (Transact-SQL) | Documentos de Microsoft
+title: sp_xml_removedocument (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_removedocument
 ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
-caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2c0c3fd21797d0281001ed6f917908d4ea5d42c5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ed76914663049816d7877e6fe4e3ad3709d2f3b4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255866"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027096"
 ---
 # <a name="spxmlremovedocument-transact-sql"></a>sp_xml_removedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_xml_removedocument hdoc
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o >0 (error)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="examples"></a>Ejemplos  

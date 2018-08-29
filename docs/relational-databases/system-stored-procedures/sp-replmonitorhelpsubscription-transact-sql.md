@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorhelpsubscription (Transact-SQL) | Documentos de Microsoft
+title: sp_replmonitorhelpsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorhelpsubscription
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 805b06a5346f10b2fb312828906ca2c923777022
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5029a4e0a903e2487941201e077888960c0a8d56
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003342"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030956"
 ---
 # <a name="spreplmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>Argumentos  
  [ **@publisher** =] **'***publisher***'**  
- Es el nombre del publicador cuyo estado se está supervisando. *Publisher* es **sysname**, su valor predeterminado es null. Si **null**, se devuelve información sobre todos los publicadores que utilizan el distribuidor.  
+ Es el nombre del publicador cuyo estado se está supervisando. *publicador* es **sysname**, su valor predeterminado es null. Si **null**, se devuelve información para todos los publicadores que utilizan el distribuidor.  
   
  [ **@publisher_db** = ] **'***publisher_db***'**  
  Es el nombre de la base de datos publicada. *publisher_db* es **sysname**, su valor predeterminado es null. Si es NULL, se devuelve información sobre todas las bases de datos publicadas en el publicador.  
@@ -64,7 +64,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
  [ **@publication_type** =] *publication_type*  
  Es el tipo de publicación. *publication_type* es **int**, y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|Publicación transaccional.|  
 |**1**|Publicación de instantáneas.|  
@@ -74,13 +74,13 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
  [ **@mode** =] *modo*  
  Es el modo de filtrado que se va a utilizar al devolver información sobre la supervisión de la suscripción. *modo* es **int**, y puede tener uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0** (valor predeterminado)|Devuelve todas las suscripciones.|  
 |**1**|Solo devuelve las suscripciones con errores.|  
 |**2**|Solo devuelve las suscripciones que han generado advertencias de métrica de umbral.|  
 |**3**|Solo devuelve las suscripciones que o tienen errores o han generado advertencias de métrica de umbral.|  
-|**4**|Devuelve el 25 suscripciones peor rendimiento superiores.|  
+|**4**|Devuelve las 25 suscripciones con peor rendimiento superiores.|  
 |**5**|Devuelve las 50 suscripciones con un rendimiento peor.|  
 |**6**|Solo devuelve las suscripciones que se están sincronizando en ese momento.|  
 |**7**|Solo devuelve las suscripciones que no se están sincronizando en ese momento.|  
@@ -89,24 +89,24 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
  Restringe el conjunto de resultados únicamente al número especificado de suscripciones situadas en la parte superior de los datos devueltos. *topnum* es **int**, no tiene ningún valor predeterminado.  
   
  [ **@exclude_anonymous** =] *exclude_anonymous*  
- Indica si las suscripciones de extracción anónimas se excluyen del conjunto de resultados. *exclude_anonymous* es **bits**, su valor predeterminado es **0**; el valor de **1** significa que las suscripciones anónimas se excluyen y un valor de **0**  significa que se incluyen.  
+ Indica si las suscripciones de extracción anónimas se excluyen del conjunto de resultados. *exclude_anonymous* es **bit**, su valor predeterminado es **0**; el valor **1** significa que las suscripciones anónimas se excluyen y el valor de **0**  significa que se incluyen.  
   
  [  **@refreshpolicy=** ] *refreshpolicy*  
  Exclusivamente para uso interno.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**status**|**int**|Examina el estado de todos los agentes de replicación asociados a la publicación, y devuelve el estado más alto encontrado en el orden siguiente:<br /><br /> **6** = error<br /><br /> **5** = reintentando<br /><br /> **2** = detenido<br /><br /> **4** = inactivo<br /><br /> **3** = en curso<br /><br /> **1** = iniciado|  
-|**Advertencia**|**int**|Advertencia de umbral máximo generada por una suscripción que pertenece a la publicación, que puede ser el resultado de OR lógico de uno o más de estos valores.<br /><br /> **1** = expiration: una suscripción a una publicación transaccional no se ha sincronizado dentro del umbral de período de retención.<br /><br /> **2** = latency: el tiempo que tarda en replicar datos desde un publicador transaccional al suscriptor supera el umbral, en segundos.<br /><br /> **4** = mergeexpiration: una suscripción a una publicación de combinación no se ha sincronizado dentro del umbral de período de retención.<br /><br /> **8** = mergefastrunduration: el tiempo necesario para completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red rápida.<br /><br /> **16** = mergeslowrunduration: el tiempo necesario para completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red lenta o telefónico.<br /><br /> **32** = mergefastrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, en una conexión de red rápida.<br /><br /> **64** = mergeslowrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, en una conexión de red lenta o telefónico.|  
+|**Advertencia**|**int**|Advertencia de umbral máximo generada por una suscripción que pertenece a la publicación, que puede ser el resultado de OR lógico de uno o más de estos valores.<br /><br /> **1** = expiration: una suscripción a una publicación transaccional no se sincronizó dentro del umbral del período de retención.<br /><br /> **2** = latency: el tiempo necesario para replicar datos desde un publicador transaccional al suscriptor supera el umbral, en segundos.<br /><br /> **4** = mergeexpiration: una suscripción a una publicación de mezcla no se sincronizó dentro del umbral del período de retención.<br /><br /> **8** = mergefastrunduration: el tiempo necesario para completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red rápida.<br /><br /> **16** = mergeslowrunduration: el tiempo necesario para completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red lenta o telefónico.<br /><br /> **32** = mergefastrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, a través de una conexión de red rápida.<br /><br /> **64** = mergeslowrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, a través de una conexión de red lenta o telefónico.|  
 |**suscriptor**|**sysname**|Es el nombre del suscriptor.|  
 |**subscriber_db**|**sysname**|Es el nombre de la base de datos utilizada para la suscripción.|  
 |**publisher_db**|**sysname**|Es el nombre de la base de datos de publicación.|  
-|**Publicación**|**sysname**|Es el nombre de una publicación.|  
+|**publicación**|**sysname**|Es el nombre de una publicación.|  
 |**publication_type**|**int**|Es el tipo de publicación, que puede ser uno de estos valores:<br /><br /> **0** = publicación transaccional<br /><br /> **1** = publicación de instantáneas<br /><br /> **2** = publicación de combinación|  
-|**Subtipo**|**int**|Es el tipo de suscripción, que puede ser uno de los siguientes valores:<br /><br /> **0** = inserción<br /><br /> **1** = extracción<br /><br /> **2** = anónima|  
-|**Latencia**|**int**|La mayor latencia, en segundos, para los cambios de datos propagados por los agentes de distribución o de registro del LOG para una publicación transaccional.|  
+|**subtipo**|**int**|Es el tipo de suscripción, que puede ser uno de los siguientes valores:<br /><br /> **0** = inserción<br /><br /> **1** = extracción<br /><br /> **2** = anónima|  
+|**latencia**|**int**|La mayor latencia, en segundos, para los cambios de datos propagados por los agentes de distribución o de registro del LOG para una publicación transaccional.|  
 |**LatencyThreshold**|**int**|La latencia máxima para la publicación transaccional por encima de la cual se genera una advertencia.|  
 |**agentnotrunning**|**int**|Es la cantidad de tiempo, en horas, durante la que el agente no se ha ejecutado.|  
 |**agentnotrunningthreshold**|**int**|Es el tiempo, en horas, que el agente no se ha ejecutado antes de que se genere una advertencia.|  
@@ -121,7 +121,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**mergePerformance**|**int**|Rendimiento de la última sincronización con respecto a todas las sincronizaciones de la suscripción. Se basa en la tasa de entrega de la última sincronización dividida entre la media de todas las tasas de entrega anteriores.|  
 |**mergerunspeed**|**float**|Tasa de entrega de la última sincronización de la suscripción.|  
 |**mergerunduration**|**int**|Es el tiempo necesario para completar la última sincronización de la suscripción.|  
-|**monitorranking**|**int**|Es el valor de categoría utilizado para ordenar las suscripciones en el conjunto de resultados. Puede ser uno de estos valores:<br /><br /> Para una publicación transaccional:<br /><br /> **60** = error<br /><br /> **56** = advertencia: rendimiento crítico<br /><br /> **52** = advertencia: con expiración en breve o expirado<br /><br /> **50** = advertencia: suscripción no inicializada<br /><br /> **40** = reintentando comando con errores<br /><br /> **30** = no está en ejecución (correcto)<br /><br /> **20** = en ejecución (inicio, ejecución o inactivo)<br /><br /> Para una publicación de combinación:<br /><br /> **60** = error<br /><br /> **56** = advertencia: rendimiento crítico<br /><br /> **54** = advertencia: mezcla de ejecución prolongada<br /><br /> **52** = advertencia: con expiración en breve<br /><br /> **50** = advertencia: suscripción no inicializada<br /><br /> **40** = reintentando comando con errores<br /><br /> **30** = en ejecución (inicio, ejecución o inactivo)<br /><br /> **20** = no está en ejecución (correcto)|  
+|**monitorranking**|**int**|Es el valor de categoría utilizado para ordenar las suscripciones en el conjunto de resultados. Puede ser uno de estos valores:<br /><br /> Para una publicación transaccional:<br /><br /> **60** = error<br /><br /> **56** = advertencia: rendimiento crítico<br /><br /> **52** = advertencia: con expiración en breve o expirada<br /><br /> **50** = advertencia: suscripción no inicializada<br /><br /> **40** = reintentando comando con errores<br /><br /> **30** = no está en ejecución (correcto)<br /><br /> **20** = en ejecución (inicio, ejecución o inactivo)<br /><br /> Para una publicación de combinación:<br /><br /> **60** = error<br /><br /> **56** = advertencia: rendimiento crítico<br /><br /> **54** = advertencia: mezcla de ejecución prolongada<br /><br /> **52** = advertencia: con expiración en breve<br /><br /> **50** = advertencia: suscripción no inicializada<br /><br /> **40** = reintentando comando con errores<br /><br /> **30** = en ejecución (inicio, ejecución o inactivo)<br /><br /> **20** = no está en ejecución (correcto)|  
 |**distributionagentjobid**|**binary (16)**|Id. del trabajo de Agente de distribución para las suscripciones a una publicación transaccional.|  
 |**mergeagentjobid**|**binary (16)**|Id. del trabajo de Agente de mezcla para las suscripciones a una publicación de combinación.|  
 |**distributionagentid**|**int**|Id. del trabajo de Agente de distribución para la suscripción.|  
@@ -132,12 +132,12 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_replmonitorhelpsubscription** se utiliza con todos los tipos de replicación.  
   
- **sp_replmonitorhelpsubscription** ordena el conjunto de resultados en función de la gravedad del estado de la suscripción, que viene determinado por el valor de *monitorranking*. Por ejemplo, las filas de todas las suscripciones con un estado de error se colocan por encima de las filas de suscripciones con un estado de advertencia.  
+ **sp_replmonitorhelpsubscription** ordena el conjunto de resultados según la gravedad del estado de la suscripción, que viene determinada por el valor de *monitorranking*. Por ejemplo, las filas de todas las suscripciones con un estado de error se colocan por encima de las filas de suscripciones con un estado de advertencia.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **db_owner** o **replmonitor** rol fijo de base de datos en la base de datos de distribución puede ejecutar **sp_replmonitorhelpsubscription**.  
   
 ## <a name="see-also"></a>Vea también  

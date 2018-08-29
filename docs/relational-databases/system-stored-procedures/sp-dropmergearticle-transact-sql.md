@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergearticle (Transact-SQL) | Documentos de Microsoft
+title: sp_dropmergearticle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/02/2016
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_dropmergearticle
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: adcb52b18b12c61f8ea0154d668e000c9ca47020
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 87a999b49b7239531b7aa374c1695226af3df1a0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991288"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028974"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,27 +53,27 @@ sp_dropmergearticle [ @publication= ] 'publication'
  Es el nombre de la publicación de la que se va a quitar un artículo. *publicación*es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@article=**] **'***artículo***'**  
- Es el nombre del artículo que se va a quitar de la publicación especificada. *artículo*es **sysname**, no tiene ningún valor predeterminado. Si **todos los**, se quitan todos los artículos existentes en la publicación de combinación especificada. Aunque *artículo* es **todos los**, la publicación debe quitarse por separado desde el artículo.  
+ Es el nombre del artículo que se va a quitar de la publicación especificada. *artículo*es **sysname**, no tiene ningún valor predeterminado. Si **todas**, se quitan todos los artículos existentes en la publicación de combinación especificada. Incluso si *artículo* es **todas**, la publicación debe quitarse por separado desde el artículo.  
   
  [  **@ignore_distributor=**] *ignore_distributor*  
- Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es **bits**, su valor predeterminado es **0**.  
+ Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es **bit**, su valor predeterminado es **0**.  
   
- [  **@reserved=**] *reservadas*  
- Está reservado para su uso futuro. *reservada* es **nvarchar (20)**, su valor predeterminado es null.  
+ [  **@reserved=**] *reservado*  
+ Está reservado para su uso futuro. *reservado* es **nvarchar (20)**, su valor predeterminado es null.  
   
  [  **@force_invalidate_snapshot=**] *force_invalidate_snapshot*  
- Habilita o deshabilita la capacidad de que se invalide una instantánea. *force_invalidate_snapshot* es un **bits**, su valor predeterminado es **0**.  
+ Habilita o deshabilita la capacidad de que se invalide una instantánea. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
   
- **0** especifica que los cambios en el artículo de mezcla no invalidarán la instantánea no es válida.  
+ **0** especifica que los cambios realizados en el artículo de mezcla no invalidarán la instantánea no es válido.  
   
- **1** significa que los cambios en el artículo de mezcla puede invalidar la instantánea no es válida, y si ese es el caso, un valor de **1** concede permiso para la nueva instantánea para que se produzca.  
+ **1** significa que los cambios en el artículo de mezcla puede invalidar la instantánea no es válido, y si es así, un valor de **1** concede permiso para la nueva instantánea que se produzca.  
   
  [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- Confirma que para quitar el artículo deben reinicializarse las suscripciones existentes. *force_reinit_subscription* es un **bits**, su valor predeterminado es **0**.  
+ Confirma que para quitar el artículo deben reinicializarse las suscripciones existentes. *force_reinit_subscription* es un **bit**, su valor predeterminado es **0**.  
   
- **0** especifica que al quitar el artículo no harán que se reinicialice la suscripción.  
+ **0** especifica que al quitar el artículo no invalidarán la suscripción para reinicializarla.  
   
- **1** significa que al quitar el artículo que se reinicialicen las suscripciones existentes y concede permiso para que se lleve a cabo la reinicialización.  
+ **1** significa que al quitar el artículo hace que se reinicialicen las suscripciones existentes y concede permiso para que se produzca la reinicialización de suscripción.  
   
  [  **@ignore_merge_metadata=** ] *ignore_merge_metadata*  
  Exclusivamente para uso interno.  
@@ -81,13 +81,13 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_dropmergearticle** se utiliza en la replicación de mezcla. Para obtener más información acerca de cómo quitar artículos, vea [agregar y quitar artículos de publicaciones existentes](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
  Ejecutar **sp_dropmergearticle** quitar un artículo de una publicación no quita el objeto de la base de datos de publicación o el objeto correspondiente de la base de datos de suscripción. Si es necesario, utilice `DROP <object>` para quitar estos objetos manualmente.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos puede ejecutar **sp_dropmergearticle**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos se puede ejecutar **sp_dropmergearticle**.  
   
 ## <a name="example"></a>Ejemplo  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_helparticledts (Transact-SQL) | Documentos de Microsoft
+title: sp_helparticledts (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helparticledts
 ms.assetid: cd1aed60-e056-4ff3-86ee-62b19433d890
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e296b7e03f64fc95338750ef57360dd3f250af98
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c095e7567a61758c23c434ddd04f26730a57b058
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994752"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029386"
 ---
 # <a name="sphelparticledts-transact-sql"></a>sp_helparticledts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**pre_script_ignore_error_task_name**|**sysname**|Nombre de la tarea de programación que tiene lugar antes de que se copien los datos de la instantánea. La ejecución del programa debe continuar si se encuentra un error de script.|  
 |**pre_script_task_name**|**sysname**|Nombre de la tarea de programación que tiene lugar antes de que se copien los datos de la instantánea. La ejecución del programa se detiene si encuentra un error.|  
@@ -64,12 +64,12 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_helparticledts** se utiliza en la replicación de instantáneas y transaccional.  
   
  Existen convenciones de nomenclatura, necesarias para los agentes de replicación, que se deben seguir cuando se da nombre a las tareas de un programa de Servicios de transformación de datos (DTS) de replicación. En las tareas personalizadas, como una tarea Ejecutar SQL, el nombre es una cadena concatenada que consta del nombre del artículo, un prefijo y una parte opcional. Al escribir el código, si no está seguro de cómo deben ser los nombres de tarea, el conjunto de resultados proporciona los nombres de tarea que se deben utilizar.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor y el **db_owner** rol fijo de base de datos puede ejecutar **sp_helparticledts**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor y el **db_owner** rol fijo de base de datos se puede ejecutar **sp_helparticledts**.  
   
   

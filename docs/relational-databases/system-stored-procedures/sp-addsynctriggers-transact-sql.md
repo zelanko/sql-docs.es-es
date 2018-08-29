@@ -1,5 +1,5 @@
 ---
-title: sp_addsynctriggers (Transact-SQL) | Documentos de Microsoft
+title: sp_addsynctriggers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsynctriggers
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 711126c199480bd1d8ef836b9b587f51db8e4552
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 229daeed8cc9c38fc1379565d3f1acffd83317ec
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992202"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032575"
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  Es el nombre del propietario de la tabla del suscriptor. *sub_table_owner* es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@publisher=**] **'***publisher***'**  
- Es el nombre del servidor del publicador. *Publisher* es **sysname**, no tiene ningún valor predeterminado.  
+ Es el nombre del servidor del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
  [ **@publisher_db=**] **'***publisher_db***'**  
  Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, no tiene ningún valor predeterminado. Si es NULL, se utiliza la base de datos actual.  
@@ -108,7 +107,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  Es un mapa de bits de las columnas de clave principal de la tabla. *primary_key_bitmap* es **varbinary (4000)**, no tiene ningún valor predeterminado.  
   
  [  **@identity_support =** ] *identity_support*  
- Habilita o deshabilita el control automático de rangos de identidad cuando se utiliza la actualización en cola. *identity_support* es un **bits**, su valor predeterminado es **0**. **0** significa que no hay ninguna identidad de intervalo de soporte técnico, **1** habilita el control de intervalo automático de identidad.  
+ Habilita o deshabilita el control automático de rangos de identidad cuando se utiliza la actualización en cola. *identity_support* es un **bit**, su valor predeterminado es **0**. **0** significa que no hay ninguna identidad de intervalo de soporte técnico, **1** permite la administración de intervalos de identidad automáticos.  
   
  [  **@independent_agent =** ] *independent_agent*  
  Indica si existe un único Agente de distribución (un agente independiente) en esta publicación, o un Agente de distribución por cada base de datos de publicación y pareja de base de datos de suscripciones (un agente compartido). Este valor refleja el valor de la propiedad independent_agent de la publicación definida en el publicador. *independent_agent* es un poco con un valor predeterminado de **0**. Si **0**, se trata de un agente compartido. Si **1**, el agente es un agente independiente.  
@@ -117,16 +116,16 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  Es el nombre del distribuidor. *distribuidor* es **sysname**, no tiene ningún valor predeterminado.  
   
  [ **@pubversion**=] *pubversion*  
- Indica la versión del publicador. *pubversion* es **int**, su valor predeterminado es 1. **1** significa que la versión del publicador es [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 o una versión anterior; **2** significa que el publicador es [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 3 (SP3) o posterior. *pubversion* debe establecerse explícitamente en **2** cuando la versión del publicador es [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 o posterior.  
+ Indica la versión del publicador. *pubversion* es **int**, su valor predeterminado es 1. **1** significa que la versión del publicador es [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 o anterior; **2** significa que el publicador es [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 3 (SP3) o posterior. *pubversion* debe establecerse explícitamente en **2** cuando la versión del publicador es [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 o posterior.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_addsynctriggers** es utilizado por el agente de distribución como parte de la inicialización de la suscripción. Este procedimiento almacenado no lo suelen ejecutar los usuarios, pero puede resultar útil si el usuario debe configurar manualmente una suscripción de tipo no sync.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_addsynctriggers**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_addsynctriggers**.  
   
 ## <a name="see-also"></a>Vea también  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   

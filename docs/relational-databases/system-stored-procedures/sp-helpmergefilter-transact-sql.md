@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergefilter (Transact-SQL) | Documentos de Microsoft
+title: sp_helpmergefilter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergefilter
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e35fe61b91fb503b87ba0a0195e77ad7ea0de50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 327e47c5dbb48b7944a8389c2fd56ccec96b8668
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996042"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030821"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,28 +58,28 @@ sp_helpmergefilter [ @publication= ] 'publication'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**join_filterid**|**int**|Id. del filtro de combinación.|  
 |**filtername**|**sysname**|Nombre del filtro.|  
-|**nombre del artículo de combinación**|**sysname**|Nombre del artículo de combinación.|  
+|**nombre de artículo de combinación**|**sysname**|Nombre del artículo de combinación.|  
 |**join_filterclause**|**nvarchar(2000)**|Cláusula de filtro que califica la combinación.|  
 |**join_unique_key**|**int**|Indica si la combinación se hace sobre una clave exclusiva.|  
 |**propietario de la tabla base**|**sysname**|Nombre del propietario de la tabla base.|  
 |**nombre de la tabla base**|**sysname**|Nombre de la tabla base.|  
 |**propietario de la tabla de combinación**|**sysname**|Nombre del propietario de la tabla que se combina con la tabla base.|  
-|**nombre de la tabla de combinación**|**sysname**|Nombre de la tabla que se combina con la tabla base.|  
-|**nombre del artículo**|**sysname**|Nombre del artículo de la tabla que se combina con la tabla base.|  
+|**nombre de tabla combinada**|**sysname**|Nombre de la tabla que se combina con la tabla base.|  
+|**nombre de artículo**|**sysname**|Nombre del artículo de la tabla que se combina con la tabla base.|  
 |**filter_type**|**tinyint**|Tipo de filtro de mezcla, que puede ser uno de los siguientes:<br /><br /> **1** = solo filtro de combinación<br /><br /> **2** = relación de registros lógicos<br /><br /> **3** = both|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_helpmergefilter** se utiliza en la replicación de mezcla.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor y el **db_owner** rol fijo de base de datos puede ejecutar **sp_helpmergefilter**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor y el **db_owner** rol fijo de base de datos se puede ejecutar **sp_helpmergefilter**.  
   
 ## <a name="see-also"></a>Vea también  
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   

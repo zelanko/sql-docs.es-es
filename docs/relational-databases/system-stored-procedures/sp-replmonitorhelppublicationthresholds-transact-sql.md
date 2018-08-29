@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorhelppublicationthresholds (Transact-SQL) | Documentos de Microsoft
+title: sp_replmonitorhelppublicationthresholds (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorhelppublicationthresholds
 ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c77f8e36cc33dfee704ef8f5b945a58c7011a23b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d87de8d4ab74bc5c9d776b9d08e9e0680e2530cd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999572"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032243"
 ---
 # <a name="spreplmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>Argumentos  
  [ **@publisher**=] **'***publisher***'**  
- Es el nombre del publicador. *Publisher* es **sysname**, no tiene ningún valor predeterminado.  
+ Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
  [ **@publisher_db**=] **'***publisher_db***'**  
  Es el nombre de la base de datos publicada. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
@@ -61,7 +61,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
  [ **@publication_type**=] *publication_type*  
  Es el tipo de publicación. *publication_type* es **int**, y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|Publicación transaccional.|  
 |**1**|Publicación de instantáneas.|  
@@ -70,21 +70,21 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**metric_id**|**int**|Id. de la métrica del rendimiento de la replicación, que puede tener uno de los siguientes valores.<br /><br /> **1expiration** -supervisa la expiración inminente de suscripciones a publicaciones transaccionales.<br /><br /> **2latency** -supervisa el rendimiento de las suscripciones a publicaciones transaccionales.<br /><br /> **4mergeexpiration** -supervisa la expiración inminente de suscripciones a publicaciones de mezcla.<br /><br /> **5mergeslowrunduration** -supervisa la duración de sincronizaciones de mezcla en conexiones de ancho de banda bajo (telefónico).<br /><br /> **6mergefastrunduration** -supervisa la duración de sincronizaciones de mezcla en conexiones de ancho de banda alto (LAN).<br /><br /> **7mergefastrunspeed** -supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de ancho de banda alto (LAN).<br /><br /> **8mergeslowrunspeed** -supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de ancho de banda bajo (telefónico).|  
+|**metric_id**|**int**|Id. de la métrica del rendimiento de la replicación, que puede tener uno de los siguientes valores.<br /><br /> **1expiration** -supervisa la expiración inminente de suscripciones a publicaciones transaccionales.<br /><br /> **2latency** -supervisa el rendimiento de las suscripciones a publicaciones transaccionales.<br /><br /> **4mergeexpiration** -supervisa la expiración inminente de suscripciones a publicaciones de mezcla.<br /><br /> **5mergeslowrunduration** -supervisa la duración de sincronizaciones de mezcla en conexiones de poco ancho de banda (acceso telefónico).<br /><br /> **6mergefastrunduration** -supervisa la duración de sincronizaciones de mezcla en conexiones de alto y ancho de banda (LAN).<br /><br /> **7mergefastrunspeed** -supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de alto y ancho de banda (LAN).<br /><br /> **8mergeslowrunspeed** -supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de poco ancho de banda (acceso telefónico).|  
 |**title**|**sysname**|Nombre de la métrica de rendimiento de la replicación.|  
-|**value**|**int**|El valor de umbral de la métrica de rendimiento.|  
-|**shouldalert**|**bit**|Especifica si se debe generar una alerta cuando la métrica supera el umbral definido para esta publicación; un valor de **1** indica que debe generarse una alerta.|  
+|**Valor**|**int**|El valor de umbral de la métrica de rendimiento.|  
+|**shouldalert**|**bit**|Es si se debe generar una alerta cuando la métrica supera el umbral definido para esta publicación; un valor de **1** indica que debe generarse una alerta.|  
 |**IsEnabled**|**bit**|Especifica si se habilita la supervisión para esta métrica de rendimiento de replicación para esta publicación; un valor de **1** indica que la supervisión está habilitada.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_replmonitorhelppublicationthresholds** se utiliza con todos los tipos de replicación.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **db_owner** o **replmonitor** rol fijo de base de datos en la base de datos de distribución puede ejecutar **sp_replmonitorhelppublicationthresholds**.  
   
 ## <a name="see-also"></a>Vea también  

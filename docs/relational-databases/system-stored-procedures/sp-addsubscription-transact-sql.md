@@ -17,16 +17,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscription
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
-caps.latest.revision: 53
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08f0e46bde340eb1b64f8c7ad9ba2d1f8ec63d9f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ea2923af852801639d3cc2007d872a2823bc5d1b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989337"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026874"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -283,7 +282,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|0 (predeterminado)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Suscriptor|  
+|0 (predeterminado)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suscriptor|  
 |1|Servidor del origen de datos ODBC|  
 |2|Base de datos [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet|  
 |3|Proveedor OLE DB|  

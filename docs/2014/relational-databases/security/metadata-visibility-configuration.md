@@ -18,16 +18,15 @@ helpviewer_keywords:
 - database metadata [SQL Server]
 - metadata [SQL Server], permissions
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
-caps.latest.revision: 51
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8d4eaac9765f36b72e068bb39cda4d3377a67d56
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1cd39b93b761bd6466f3c0627df40aa9b67bbb2b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323965"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024124"
 ---
 # <a name="metadata-visibility-configuration"></a>Configuración de visibilidad de los metadatos
   La visibilidad de los metadatos se limita a los elementos protegibles que son propiedad de un usuario o sobre los que el usuario tienen algún permiso. Por ejemplo, la siguiente consulta devuelve una fila si se ha concedido al usuario un permiso como SELECT o INSERT sobre la tabla `myTable`.  
@@ -105,7 +104,7 @@ GO
 ## <a name="benefits-and-limits-of-metadata-visibility-configuration"></a>Beneficios y límites de la configuración de visibilidad de los metadatos  
  La configuración de visibilidad de los metadatos puede desempeñar un rol importante en el plan de seguridad global. Sin embargo, hay casos en los que un usuario con conocimientos y determinación puede forzar la divulgación de algunos metadatos. Es recomendable implementar permisos sobre los metadatos como una de las distintas medidas de defensa más completa.  
   
- Teóricamente, es posible forzar la emisión de metadatos en los mensajes de error mediante la manipulación del orden de evaluación de predicados en las consultas. La posibilidad de estos *ataques de prueba y error* no es específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es una implicación de las transformaciones asociativas y conmutativas que admite el álgebra relacional. Puede mitigar este riesgo mediante la limitación de la información que se devuelve en los mensajes de error. Para restringir más la visibilidad de metadatos de esta manera, puede iniciar el servidor con la marca de seguimiento 3625. Esta marca de seguimiento limita la cantidad de información que se muestra en los mensajes de error. A su vez, ayuda a evitar divulgaciones forzadas. La contrapartida es que los mensajes de error se simplificarán y puede resultar difícil su uso para fines de depuración. Para obtener más información, vea [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md) y [Marcas de seguimiento &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
+ Teóricamente, es posible forzar la emisión de metadatos en los mensajes de error mediante la manipulación del orden de evaluación de predicados en las consultas. La posibilidad de estos *ataques de prueba y error* no es específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es una implicación de las transformaciones asociativas y conmutativas que admite el álgebra relacional. Puede mitigar este riesgo mediante la limitación de la información que se devuelve en los mensajes de error. Para restringir más la visibilidad de metadatos de esta manera, puede iniciar el servidor con la marca de seguimiento 3625. Esta marca de seguimiento limita la cantidad de información que se muestra en los mensajes de error. A su vez, ayuda a evitar divulgaciones forzadas. La contrapartida es que los mensajes de error se simplificarán y puede resultar difícil su uso para fines de depuración. Para obtener más información, vea [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md) y [Marcas de seguimiento &amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
  Los metadatos que se muestran a continuación no están sujetos a una divulgación forzada:   
   

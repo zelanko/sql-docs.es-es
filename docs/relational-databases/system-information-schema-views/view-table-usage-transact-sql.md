@@ -1,5 +1,5 @@
 ---
-title: VIEW_TABLE_USAGE (Transact-SQL) | Documentos de Microsoft
+title: VIEW_TABLE_USAGE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.VIEW_TABLE_USAGE view
 - VIEW_TABLE_USAGE view
 ms.assetid: 0aeefb3f-02ef-457e-8c42-84ddb26f1c88
-caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d470f3a5e8d38a0ead1342724ab581cca7573909
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 5c2afb2559917d670b23037eb372840de47bf875
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39557325"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43093323"
 ---
 # <a name="viewtableusage-transact-sql"></a>VIEW_TABLE_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,10 +39,10 @@ ms.locfileid: "39557325"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**VIEW_CATALOG**|**nvarchar (** 128 **)**|Calificador de la vista.|  
-|**VIEW_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema que contiene la vista.<br /><br /> **\*\* Importante \* \* ** no utilizan utilicemos vistas para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
-|**NOMBREVISTA**|**sysname**|Nombre de la vista.|  
+|**VIEW_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema que contiene la vista.<br /><br /> **\*\* Importante \* \***  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
+|**VIEW_NAME**|**sysname**|Nombre de la vista.|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Calificador de tabla.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema que contiene la tabla base.<br /><br /> **\*\* Importante \* \* ** no utilizan utilicemos vistas para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema que contiene la tabla base.<br /><br /> **\*\* Importante \* \***  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
 |**TABLE_NAME**|**sysname**|Tabla base en la que se basa la vista.|  
   
 ## <a name="see-also"></a>Vea también  

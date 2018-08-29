@@ -1,5 +1,5 @@
 ---
-title: sp_changesubscriber_schedule (Transact-SQL) | Documentos de Microsoft
+title: sp_changesubscriber_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_changesubscriber_schedule
 ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f07d6cdb364e6ff4ef03cae49db7c320c9778c4f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b5ac5b579a2988e2cd7d1f123d51dad7043c509
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993652"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029088"
 ---
 # <a name="spchangesubscriberschedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,13 +58,13 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
  Es el nombre del suscriptor. *suscriptor* es **sysname**. El nombre del suscriptor tiene que ser único en la base de datos, no puede existir previamente y no puede ser NULL.  
   
  [  **@agent_type=**] *tipo*  
- Es el tipo de agente. *tipo de* es **smallint**, su valor predeterminado es **0**. **0** indica un agente de distribución. **1** indica un agente de mezcla.  
+ Es el tipo de agente. *tipo* es **smallint**, su valor predeterminado es **0**. **0** indica un agente de distribución. **1** indica un agente de mezcla.  
   
  [  **@frequency_type=**] *frequency_type*  
  Es la frecuencia con que se programa la tarea de distribución. *frequency_type* es **int**, su valor predeterminado es **64**. Hay 10 columnas de programación.  
   
  [  **@frequency_interval=**] *frequency_interval*  
- Es el valor que se aplica a la frecuencia establecida *frequency_type*. *frequency_interval* es **int**, su valor predeterminado es **1**.  
+ Es el valor que se aplica a la frecuencia establecida por *frequency_type*. *frequency_interval* es **int**, su valor predeterminado es **1**.  
   
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  Es la fecha de la tarea de distribución. *frequency_relative_interval* es **int**, su valor predeterminado es **1**.  
@@ -82,7 +82,7 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
  Es la hora del día en que la tarea de distribución se programa por primera vez. *active_start_time_of_day* es **int**, su valor predeterminado es **0**.  
   
  [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- Es la hora del día en que la tarea de distribución deja de estar programada. *active_end_time_of_day* es **int**, su valor predeterminado es **235959**, lo que significa 11:59:59 p. M. en un reloj de 24 horas.  
+ Es la hora del día en que la tarea de distribución deja de estar programada. *active_end_time_of_day* es **int**, su valor predeterminado es **235959**, lo que significa 11:59:59 P.M. en un reloj de 24 horas.  
   
  [  **@active_start_date=**] *active_start_date*  
  Es la fecha en que la tarea de distribución se programa por primera vez, con el formato AAAAMMDD. *active_start_date* es **int**, su valor predeterminado es **0**.  
@@ -91,18 +91,18 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
  Es la fecha en la que la tarea de distribución deja de estar programada, con el formato AAAAMMDD. *active_end_date* es **int**, su valor predeterminado es **99991231**, lo que significa 31 de diciembre de 9999.  
   
  [ **@publisher**=] **'***publisher***'**  
- Especifica un no[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *Publisher* es **sysname**, su valor predeterminado es null.  
+ Especifica que no es[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
->  *Publisher* no debe usarse al cambiar las propiedades de artículo en una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
+>  *publicador* no debe usarse cuando se cambia las propiedades del artículo en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_changesubscriber_schedule** se utiliza en todos los tipos de replicación.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_changesubscriber_schedule**.  
   
 ## <a name="see-also"></a>Vea también  

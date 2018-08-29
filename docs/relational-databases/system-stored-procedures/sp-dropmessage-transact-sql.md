@@ -1,5 +1,5 @@
 ---
-title: sp_dropmessage (Transact-SQL) | Documentos de Microsoft
+title: sp_dropmessage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_dropmessage
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3bac74ff66a266fd0987dc869145c70287232c09
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 216f5e9ffca4865cb9a2deddbe38097099d74f9c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246920"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032988"
 ---
 # <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_dropmessage [ @msgnum = ] message_number
  Es el número de mensaje que se va a quitar. *message_number* debe ser un mensaje definido por el usuario que tiene un número de mensaje superior a 50000. *message_number* es **int**, su valor predeterminado es null.  
   
  [  **@lang =** ] **'***lenguaje***'**  
- Es el idioma del mensaje que se va a quitar. Si **todos los** se especifica, todas las versiones de idioma de *message_number* se quitan. *idioma* es **sysname**, su valor predeterminado es null.  
+ Es el idioma del mensaje que se va a quitar. Si **todas** se especifica, todas las versiones de idioma de *message_number* se quitan. *lenguaje* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -57,16 +57,16 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Ninguno.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer a la **sysadmin** y **serveradmin** roles fijos de servidor.  
   
-## <a name="remarks"></a>Comentarios  
- A menos que **todos los** especificado para *lenguaje*localizado todas las versiones de un mensaje deben quitarse antes de los Estados Unidos para poder quitar a su vez la versión en inglés (EE.UU.) del mensaje.  
+## <a name="remarks"></a>Notas  
+ A menos que **todos los** se especifica para *lenguaje*todo localizado versiones de un mensaje deben quitarse antes de Estados Unidos para poder quitar a su vez la versión en inglés (EE.UU.) del mensaje.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-dropping-a-user-defined-message"></a>A. Quitar un mensaje definido por el usuario  
- En el ejemplo siguiente se quita un mensaje definido por el usuario, el número `50001`, de **sys.messages**.  
+ En el ejemplo siguiente se quita un mensaje definido por el usuario, el número `50001`, desde **sys.messages**.  
   
 ```  
 USE master;  

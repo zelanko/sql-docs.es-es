@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_enable_table (Transact-SQL) | Documentos de Microsoft
+title: Sys.sp_cdc_enable_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_enable_table
 - sp_cdc_enable_table
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
-caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0ed70b21e667a1738433335e3e3c869c3b410523
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 309c72bea23d32f50070e140f641030703ee42b1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263523"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032895"
 ---
 # <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,12 +74,12 @@ sys.sp_cdc_enable_table
  [  **@capture_instance =** ] **'***capture_instance***'**  
  Es el nombre de la instancia de captura que se usa para denominar los objetos de captura de datos de cambio específicos de una instancia. *capture_instance* es **sysname** y no puede ser NULL.  
   
- Si no se especifica, el nombre se deriva del nombre de esquema de origen más el nombre de la tabla de origen en el formato *schemaname_sourcename*. *capture_instance* no puede superar los 100 caracteres y debe ser único dentro de la base de datos. Si especificado o derivado, *capture_instance* se recortan los espacios en blanco a la derecha de la cadena.  
+ Si no se especifica, el nombre se deriva del nombre de esquema de origen más el nombre de la tabla de origen en el formato *schemaname_sourcename*. *capture_instance* no puede superar los 100 caracteres y debe ser único dentro de la base de datos. Especificado o derivado, *capture_instance* se recortan los espacios en blanco a la derecha de la cadena.  
   
  Una tabla de origen puede tener un máximo de dos instancias de captura. Para obtener más información, vea [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
   
  [  **@supports_net_changes =** ] *supports_net_changes*  
- Indica si se permiten las consultas de cambios netos para esta instancia de captura. *supports_net_changes* es **bits** con un valor predeterminado es 1 si la tabla tiene una clave principal o la tabla tiene un índice único que se ha identificado mediante el uso de la @index_name parámetro. De lo contrario, el parámetro tiene como valor predeterminado 0.  
+ Indica si se permiten las consultas de cambios netos para esta instancia de captura. *supports_net_changes* es **bit** con el valor predeterminado es 1 si la tabla tiene una clave principal o la tabla tiene un índice único identificado mediante el uso de la @index_name parámetro. De lo contrario, el parámetro tiene como valor predeterminado 0.  
   
  Si es 0, solo se generan las funciones de compatibilidad para consultar todos los cambios.  
   
@@ -94,19 +93,19 @@ sys.sp_cdc_enable_table
  [  **@captured_column_list =** ] **'***captured_column_list***'**  
  Identifica las columnas de la tabla de origen que se incluirán en la tabla de cambios. *captured_column_list* es **nvarchar (max)** y puede ser NULL. Si es NULL, se incluyen todas las columnas en la tabla de cambios.  
   
- Los nombres de columna deben ser columnas válidas de la tabla de origen. Las columnas definidas en un índice de clave principal o columnas definidas en un índice al que hace referencia *index_name* se deben incluir.  
+ Los nombres de columna deben ser columnas válidas de la tabla de origen. Las columnas definidas en un índice de clave principal o las columnas definidas en un índice al que hace referencia *index_name* debe incluirse.  
   
  *captured_column_list* es una lista separada por comas de nombres de columna. Los nombres de las columnas individuales que figuran en la lista se pueden incluir opcionalmente entre comillas dobles ("") o corchetes ([]). Si un nombre de columna contiene una coma, se debe entrecomillar el nombre de columna.  
   
  *captured_column_list* no puede contener los siguientes nombres de columna reservados: **__ $start_lsn**, **__ $end_lsn**, **__ $seqval**, **__ $ operación**, y **__ $update_mask**.  
   
  [  **@filegroup_name =** ] **'***filegroup_name***'**  
- Es el grupo de archivos que se va a usar en la tabla de cambios creada para la instancia de captura. *filegroup_name* es **sysname** y puede ser NULL. Si se especifica, *filegroup_name* debe estar definida para la base de datos actual. Si es NULL, se usa el grupo de archivos predeterminado.  
+ Es el grupo de archivos que se va a usar en la tabla de cambios creada para la instancia de captura. *filegroup_name* es **sysname** y puede ser NULL. Si se especifica, *filegroup_name* debe definirse para la base de datos actual. Si es NULL, se usa el grupo de archivos predeterminado.  
   
  Se recomienda crear un grupo de archivos independiente para las tablas de cambios de la captura de datos modificados.  
   
  [  **@allow_partition_switch=** ] **'***allow_partition_switch***'**  
- Indica si el comando SWITCH PARTITION de ALTER TABLE se puede ejecutar en una tabla que esté habilitada para la captura de datos de cambio. *allow_partition_switch* es **bits**, su valor predeterminado es 1.  
+ Indica si el comando SWITCH PARTITION de ALTER TABLE se puede ejecutar en una tabla que esté habilitada para la captura de datos de cambio. *allow_partition_switch* es **bit**, su valor predeterminado es 1.  
   
  Para las tablas sin particiones, el valor del modificador es siempre 1 y se omite el valor real. Si el modificador está establecido explícitamente en 0 para una tabla sin particiones, se genera la advertencia 22857 para indicar que se ha omitido el valor del modificador. Si el modificador está establecido explícitamente en 0 para una tabla con particiones, se genera la advertencia 22356 para indicar que se denegarán las operaciones de modificador de partición en la tabla de origen. Por último, si el valor del modificador está establecido explícitamente en 1 o permite tener como valor predeterminado 1 y la tabla habilitada tiene particiones, se genera la advertencia 22855 para indicar que los modificadores de partición no se bloquearán. Si se realiza alguna operación de modificador de partición, la captura de datos modificados no realizará el seguimiento de los cambios resultantes de dicha operación. Esto producirá incoherencia en los datos cuando se utilicen los datos modificados.  
   
@@ -119,21 +118,21 @@ sys.sp_cdc_enable_table
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- Para poder habilitar una tabla para la captura de datos modificados, la base de datos debe estar habilitada. Para determinar si la base de datos está habilitada para la captura de datos modificados, consulte el **is_cdc_enabled** columna en el [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) vista de catálogo. Para habilitar la base de datos, use la [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) procedimiento almacenado.  
+## <a name="remarks"></a>Notas  
+ Para poder habilitar una tabla para la captura de datos modificados, la base de datos debe estar habilitada. Para determinar si la base de datos está habilitada para la captura de datos modificados, consulte el **is_cdc_enabled** columna en el [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) vista de catálogo. Para habilitar la base de datos, use el [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) procedimiento almacenado.  
   
  Cuando la captura de datos modificados está habilitada para una tabla, se generan una tabla de cambios y una o dos funciones de consulta. La tabla de cambios actúa de repositorio para los cambios de la tabla de origen extraídos del registro de transacciones por el proceso de captura. Las funciones de consulta se utilizan para extraer los datos de la tabla de cambios. Los nombres de estas funciones se derivan los *capture_instance* parámetro de las maneras siguientes:  
   
--   Todas las funciones de cambios: **cdc.fn_cdc_get_all_changes_ < capture_instance >**  
+-   Función de todos los cambios: **cdc.fn_cdc_get_all_changes_ < capture_instance >**  
   
--   Función de cambios netos: **cdc.fn_cdc_get_net_changes_ < capture_instance >**  
+-   Función de los cambios de red: **cdc.fn_cdc_get_net_changes_ < capture_instance >**  
   
- **Sys.sp_cdc_enable_table** crea también los trabajos de captura y la limpieza de la base de datos si la tabla de origen es la primera tabla de la base de datos esté habilitado para la captura de datos modificados y no existe ninguna publicación transaccional para la base de datos. Establece el **is_tracked_by_cdc** columna en el [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) vista en 1 de catálogo.  
+ **Sys.sp_cdc_enable_table** también crea los trabajos de captura y limpieza de la base de datos si la tabla de origen es la primera tabla de la base de datos esté habilitado para la captura de datos modificados y no existe ninguna publicación transaccional para la base de datos. Establece el **is_tracked_by_cdc** columna en el [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) en 1 la vista de catálogo.  
   
 > [!NOTE]  
 >  No es necesario que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se esté ejecutando cuando se habilita la captura de datos modificados para una tabla. Sin embargo, el proceso de captura no procesará las entradas de escritura y del registro de transacciones en la tabla de cambios a menos que se ejecute el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer a la **db_owner** rol fijo de base de datos.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -1,5 +1,5 @@
 ---
-title: syspolicy_policy_execution_history_details (Transact-SQL) | Documentos de Microsoft
+title: syspolicy_policy_execution_history_details (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_policy_execution_history_details view
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
-caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1c3c5836dd2811e95db27392e9bd77cbe91f6e38
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 252c61b6fbaf5635361df79f89a4f9ec7ec66e50
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220876"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031841"
 ---
 # <a name="syspolicypolicyexecutionhistorydetails-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +34,10 @@ ms.locfileid: "33220876"
   Muestra las expresiones de condiciones que se ejecutaron, los destinos de las expresiones, el resultado de cada ejecución y detalles sobre los errores, si se produjo alguno. En la tabla siguiente se describen las columnas de la vista syspolicy_execution_history_details.  
   
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |detail_id|**bigint**|Identificador de este registro. Cada registro representa el intento para evaluar o exigir una expresión de condición en una directiva. Si se aplica a varios destinos, cada condición tendrá un registro de detalle para cada uno.|  
-|history_id|**bigint**|Identificador del evento del historial. Cada evento del historial representa un intento de ejecutar una directiva. Dado que una condición puede tener varias expresiones de condiciones y varios destinos, un identificador history_id puede crear varios registros de detalle. Utilice la columna history_id para unir esta vista para la [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) vista.|  
+|history_id|**bigint**|Identificador del evento del historial. Cada evento del historial representa un intento de ejecutar una directiva. Dado que una condición puede tener varias expresiones de condiciones y varios destinos, un identificador history_id puede crear varios registros de detalle. Utilice la columna history_id para unir esta vista a la [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) vista.|  
 |target_query_expression|**nvarchar(max)**|Destino de la directiva y vista syspolicy_policy_execution_history.|  
 |execution_date|**datetime**|Fecha y hora cuando se creó este registro de detalle.|  
 |result|**bit**|Corrección o error de este destino y evaluación de la expresión de condición:<br /><br /> 0 (correcto) o 1 (error).|  
@@ -46,7 +45,7 @@ ms.locfileid: "33220876"
 |exception_message|**nvarchar(max)**|Mensaje generado por la excepción, si se produjo alguna.|  
 |excepción|**nvarchar(max)**|Descripción de la excepción, si se produjo alguna.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cuando solucione problemas de la administración basada en directivas, consulte la vista  syspolicy_policy_execution_history_details para determinar en qué combinaciones de expresión de condición y destino se produjo un error y cuándo, y revise los errores relacionados.  
   
  La consulta siguiente combina la vista `syspolicy_policy_execution_history_details` con las vistas `syspolicy_policy_execution_history_details` y `syspolicy_policies` para mostrar el nombre de la directiva, el nombre de la condición y detalles sobre los errores.  
@@ -70,7 +69,7 @@ JOIN msdb.dbo.syspolicy_policy_execution_history_details AS PolHistDet
 WHERE PolHistDet.result = 0 ;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol PolicyAdministratorRole en la base de datos msdb.  
   
 ## <a name="see-also"></a>Vea también  

@@ -1,5 +1,5 @@
 ---
-title: Sys.server_event_session_events (Transact-SQL) | Documentos de Microsoft
+title: Sys.server_event_session_events (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,35 +22,35 @@ helpviewer_keywords:
 - xe
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1e1422d0b32df504e42c2a94742533bff5fdbc0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 62909fb21035f6cd9415dab60e4ef6b6d0fa99f9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220816"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030063"
 ---
 # <a name="sysservereventsessionevents-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila para cada evento de una sesión de eventos.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Identificador de la sesión de eventos. No admite valores NULL.|  
 |event_id|**int**|Id. del evento. Este Id. es único dentro de un objeto de sesión de eventos. No admite valores NULL.|  
-|name|**sysname**|Nombre del evento. No admite valores NULL.|  
+|NAME|**sysname**|Nombre del evento. No admite valores NULL.|  
 |paquete|**sysname**|Nombre del paquete de eventos que contiene el evento. No admite valores NULL.|  
-|Módulo|**sysname**|Nombre del módulo que contiene el evento. No admite valores NULL.|  
+|módulo|**sysname**|Nombre del módulo que contiene el evento. No admite valores NULL.|  
 |predicate|**nvarchar(3000)**|La expresión de predicado aplicada al evento. Acepta valores NULL.|  
 |predicate_xml|**nvarchar(3000)**|La expresión de predicado XML aplicada al evento. Acepta valores NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta vista tiene las siguientes cardinalidades de relación.  
   
 ||||  

@@ -1,5 +1,5 @@
 ---
-title: sp_adddistributiondb (Transact-SQL) | Documentos de Microsoft
+title: sp_adddistributiondb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/30/2018
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddistributiondb
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7c542df69b94ae6022b8914b050f97d4295e6df5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db1cc4feb71c3b7c7bdc09e1c62f5fa1237a3d0d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992502"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029180"
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,13 +82,13 @@ sp_adddistributiondb [ @database= ] 'database'
  Es el tamaño inicial del archivo de registro en megabytes (MB). *log_file_size* es **int**, su valor predeterminado es 0 MB, lo que significa que el tamaño del archivo se crea mediante el registro más pequeño archivo tamaño permitido por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [  **@min_distretention=**] *min_distretention*  
- Es el período de retención mínimo, en horas, antes de que las transacciones se eliminen de la base de datos de distribución. *min_distretention* es **int**, su valor predeterminado es 0 horas.  
+ Es el período de retención mínimo, en horas, antes de que las transacciones se eliminen de la base de datos de distribución. *min_distretention* es **int**, su valor predeterminado de 0 horas.  
   
  [  **@max_distretention=**] *max_distretention*  
- Es el período máximo de retención, en horas, antes de que se eliminen las transacciones. *max_distretention* es **int**, con un valor predeterminado de 72 horas. Las suscripciones que no han recibido comandos replicados más antiguos que el período máximo de retención de la distribución se marcarán como inactivas y tendrán que reinicializarse. Se emite RAISERROR 21011 por cada suscripción inactiva. Un valor de **0** significa que las transacciones replicadas no se almacena en la base de datos de distribución.  
+ Es el período máximo de retención, en horas, antes de que se eliminen las transacciones. *max_distretention* es **int**, su valor predeterminado de 72 horas. Las suscripciones que no han recibido comandos replicados más antiguos que el período máximo de retención de la distribución se marcarán como inactivas y tendrán que reinicializarse. Se emite RAISERROR 21011 por cada suscripción inactiva. Un valor de **0** significa que las transacciones replicadas no se almacena en la base de datos de distribución.  
   
  [  **@history_retention=**] *history_retention*  
- Es el número de horas que se mantiene el historial. *history_retention* es **int**, su valor predeterminado es 48 horas.  
+ Es el número de horas que se mantiene el historial. *history_retention* es **int**, su valor predeterminado es de 48 horas.  
   
  [  **@security_mode=**] *security_mode*  
  Es el modo de seguridad que se debe utilizar al conectarse con el distribuidor. *security_mode* es **int**, su valor predeterminado es 1. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación; **1** especifica la autenticación integrada de Windows.  
@@ -103,31 +102,31 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@createmode=**] *createmode*  
  *createmode* es **int**, su valor predeterminado es 1, y puede tener uno de los siguientes valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**1** (predeterminado)|Usar existente o crear base de datos de base de datos y, a continuación, aplicar **instdist.sql** archivo para crear objetos de replicación en la base de datos de distribución.|  
+|**1** (predeterminado)|CREATE DATABASE o usar existente de base de datos y, a continuación, aplicar **instdist.sql** archivo para crear objetos de replicación de la base de datos de distribución.|  
 |**2**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
  [  **@from_scripting =** ] *from_scripting*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
  
  [  **@deletebatchsize_xact=**] *deletebatchsize_xact*  
- Especifica el tamaño del lote que se usará durante la limpieza de transacciones expiradas de las tablas de MSRepl_Transactions. *deletebatchsize_xact* es **int**, con un valor predeterminado es 5000. En primer lugar, este parámetro se introdujo en SQL Server 2017, seguido de las versiones de SQL Server 2012 SP4 y el Service Pack 2 de SQL Server 2016.  
+ Especifica el tamaño del lote que se usará durante la limpieza de transacciones expiradas de las tablas MSRepl_Transactions. *deletebatchsize_xact* es **int**, su valor predeterminado es 5000. Este parámetro se introdujo por primera vez en SQL Server 2017, seguido de las versiones de SQL Server 2012 SP4 y SQL Server 2016 SP2.  
 
  [  **@deletebatchsize_cmd=**] *deletebatchsize_cmd*  
- Especifica el tamaño del lote que se usarán durante la limpieza de comandos expiradas de las tablas MSRepl_Commands. *deletebatchsize_cmd* es **int**, su valor predeterminado es 2000. En primer lugar, este parámetro se introdujo en SQL Server 2017, seguido de las versiones de SQL Server 2012 SP4 y el Service Pack 2 de SQL Server 2016. 
+ Especifica el tamaño del lote que se usará durante la limpieza de los comandos expiradas de las tablas MSRepl_Commands. *deletebatchsize_cmd* es **int**, su valor predeterminado es 2000. Este parámetro se introdujo por primera vez en SQL Server 2017, seguido de las versiones de SQL Server 2012 SP4 y SQL Server 2016 SP2. 
  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_adddistributiondb** se utiliza en todos los tipos de replicación. Sin embargo, este procedimiento almacenado se ejecuta únicamente en un distribuidor.  
   
  Debe configurar el distribuidor mediante la ejecución de [sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) antes de ejecutar **sp_adddistributiondb**.  
   
- Ejecutar **sp_adddistributor** antes de ejecutar **sp_adddistributiondb**.  
+ Ejecute **sp_adddistributor** antes de ejecutar **sp_adddistributiondb**.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -185,7 +184,7 @@ GO
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_adddistributiondb**.  
   
 ## <a name="see-also"></a>Vea también  
@@ -194,6 +193,6 @@ GO
  [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Configurar la distribución](../../relational-databases/replication/configure-distribution.md)  
+ [Configurar distribución](../../relational-databases/replication/configure-distribution.md)  
   
   

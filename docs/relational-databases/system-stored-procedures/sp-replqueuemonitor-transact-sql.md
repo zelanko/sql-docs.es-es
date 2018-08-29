@@ -1,5 +1,5 @@
 ---
-title: sp_replqueuemonitor (Transact-SQL) | Documentos de Microsoft
+title: sp_replqueuemonitor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replqueuemonitor
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8c1d4737d5f1502d98a58f268b58c93cf71d71ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 57bf20aa17d7c60e0902a1e216b4d892da54f62f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998718"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023313"
 ---
 # <a name="spreplqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>Argumentos  
  [ **@publisher** =] **'***publisher***'**  
- Es el nombre del publicador. *Publisher* es **sysname**, su valor predeterminado es null. El servidor debe estar configurado para publicación. Su valor es NULL para todos los publicadores.  
+ Es el nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null. El servidor debe estar configurado para publicación. Su valor es NULL para todos los publicadores.  
   
  [ **@publisherdb** =] **'***publisher_db***'** ]  
  Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, su valor predeterminado es null. Su valor es NULL para todas las bases de datos de publicaciones.  
@@ -64,7 +64,7 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
  [**@queuetype=** ] **'***queuetype***'** ]  
  Es el tipo de cola que almacena las transacciones. *queuetype* es **tinyint** con un valor predeterminado de **0**, y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|Todos los tipos de colas|  
 |**1**|Message Queue Server|  
@@ -73,11 +73,11 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
- **sp_replqueuemonitor** se utiliza en la replicación de instantáneas o replicación transaccional con suscripciones de actualización en cola. No muestra los mensajes de la cola que no contienen comandos SQL o que forman parte de un comando SQL múltiple.  
+## <a name="remarks"></a>Notas  
+ **sp_replqueuemonitor** se usa en la replicación de instantáneas o replicación transaccional con suscripciones de actualización en cola. No muestra los mensajes de la cola que no contienen comandos SQL o que forman parte de un comando SQL múltiple.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_replqueuemonitor**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_replqueuemonitor**.  
   
 ## <a name="see-also"></a>Vea también  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   

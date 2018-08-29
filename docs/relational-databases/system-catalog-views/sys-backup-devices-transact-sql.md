@@ -1,5 +1,5 @@
 ---
-title: Sys.backup_devices (Transact-SQL) | Documentos de Microsoft
+title: Sys.backup_devices (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,28 +21,27 @@ helpviewer_keywords:
 - backup devices [SQL Server], viewing information
 - sys.backup_devices catalog view
 ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
-caps.latest.revision: 32
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: be1c29322063c33797ff56451b55c619fd07db82
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 4f7ec178a19cc62891f41e1431d3272aca3237ca
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33178251"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026006"
 ---
 # <a name="sysbackupdevices-transact-sql"></a>sys.backup_devices (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una fila por cada dispositivo de copia de seguridad registrado mediante **sp_addumpdevice** o creados en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Contiene una fila para cada dispositivo de copia de seguridad registrado mediante **sp_addumpdevice** o creados en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|Nombre del dispositivo de copia de seguridad. Es único en el conjunto.|  
 |**Tipo**|**tinyint**|Tipo de dispositivo de copia de seguridad:<br /><br /> 2 = Disco<br /><br /> 3 = Disquete (obsoleto)<br /><br /> 5 = Cinta<br /><br /> 6 = Canalización (obsoleto)<br /><br /> 7 = Virtual (opcional, para su uso por proveedores de copia de seguridad de otros fabricantes)<br /><br /> Normalmente se utilizan el disco (2) y la cinta (5).|  
 |**type_desc**|**nvarchar(60)**|Descripción del tipo de dispositivo de copia de seguridad:<br /><br /> DISK<br /><br /> DISKETTE (obsoleto)<br /><br /> TAPE<br /><br /> PIPE (obsoleto)<br /><br /> VIRTUAL_DEVICE (opcional, para su uso por proveedores de copia de seguridad de otros fabricantes)<br /><br /> Normalmente se utilizan solo DISK y TAPE.|  
-|**argumento physical_name**|**nvarchar(260)**|Nombre de archivo o ruta de acceso físicos del dispositivo de copia de seguridad.|  
+|**physical_name**|**nvarchar(260)**|Nombre de archivo o ruta de acceso físicos del dispositivo de copia de seguridad.|  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

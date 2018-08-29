@@ -1,5 +1,5 @@
 ---
-title: sp_unsetapprole (Transact-SQL) | Documentos de Microsoft
+title: sp_unsetapprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_unsetapprole
 ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad1bc32a3d1eb6b42ccd7c709217427d2926bac6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f57eb690c679218d9bd8f639e3f3215652351f5b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252340"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026944"
 ---
 # <a name="spunsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,21 +45,21 @@ sp_unsetapprole @cookie
   
 ## <a name="arguments"></a>Argumentos  
  **@cookie**  
- Especifica la cookie que se creó cuando se activó el rol de aplicación. La cookie se crea por [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary (8000)**.  
+ Especifica la cookie que se creó cuando se activó el rol de aplicación. La cookie es creada por [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary (8000)**.  
   
 > [!NOTE]  
->  El parámetro **OUTPUT** de la cookie para **sp_setapprole** está documentado actualmente como **varbinary(8000)** , que es la longitud máxima correcta. Pero la implementación actual devuelve **varbinary(50)**. Las aplicaciones deben seguir reservando **varbinary (8000)** para que la aplicación siga funcionando correctamente si la cookie de tamaño devuelto aumenta en una versión futura.  
+>  El parámetro **OUTPUT** de la cookie para **sp_setapprole** está documentado actualmente como **varbinary(8000)** , que es la longitud máxima correcta. Pero la implementación actual devuelve **varbinary(50)**. Las aplicaciones deben seguir reservando **varbinary (8000)** para que la aplicación siga funcionando correctamente si la cookie devuelto tamaño aumenta en una versión futura.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) y 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
- Después de una aplicación se activa la función mediante **sp_setapprole**, el rol permanece activo hasta que el usuario se desconecta del servidor o ejecuta **sp_unsetapprole**.  
+## <a name="remarks"></a>Notas  
+ Después de una aplicación de función se activa mediante **sp_setapprole**, el rol permanece activo hasta que el usuario se desconecta del servidor o ejecuta **sp_unsetapprole**.  
   
  Para obtener información general de las funciones de aplicación, consulte [Roles de aplicación](../../relational-databases/security/authentication-access/application-roles.md).  
   
-## <a name="permissions"></a>Permissions  
- Requiere la pertenencia a **público** y conocimiento de la cookie guardada cuando se activó el rol de aplicación.  
+## <a name="permissions"></a>Permisos  
+ Requiere la pertenencia a **pública** y conocimiento de la cookie guardada cuando se activó el rol de aplicación.  
   
 ## <a name="examples"></a>Ejemplos  
   

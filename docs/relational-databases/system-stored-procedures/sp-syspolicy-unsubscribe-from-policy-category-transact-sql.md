@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL) | Documentos de Microsoft
+title: sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_unsubscribe_from_policy_category
 ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0c448584efd1921b7e88a84f17d2f53bb0596944
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1bad5bdd2dafa962689d3952b649388f20620722
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243924"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025254"
 ---
 # <a name="spsyspolicyunsubscribefrompolicycategory-transact-sql"></a>sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +51,10 @@ sp_syspolicy_unsubscribe_from_policy_category [ @policy_category = ] 'policy_cat
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Debe ejecutar sp_syspolicy_unsubscribe_from_policy_category en el contexto de la base de datos donde desee quitar una suscripción de categoría de directiva.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere pertenencia al rol fijo de base de datos db_owner.  
   
 ## <a name="examples"></a>Ejemplos  

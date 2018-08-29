@@ -1,5 +1,5 @@
 ---
-title: sp_markpendingschemachange (Transact-SQL) | Documentos de Microsoft
+title: sp_markpendingschemachange (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_markpendingschemachange
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3bfd0bb51e6d269b84fdb57a5a64139ce23cedc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 08d059d2a2a01ba7f0c4fe86fee0673adb0041ef
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994822"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032348"
 ---
 # <a name="spmarkpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,13 +60,13 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
- **sp_markpendingschemachange** se utiliza con la replicación de mezcla.  
+## <a name="remarks"></a>Notas  
+ **sp_markpendingschemachange** se usa con la replicación de mezcla.  
   
- **sp_markpendingschemachange** es un procedimiento almacenado pensado para la compatibilidad de la replicación de mezcla y debe usarse solo cuando otras acciones correctivas, como la reinicialización, no se han podido corregir la situación o son demasiado costosas en condiciones de rendimiento.  
+ **sp_markpendingschemachange** es un procedimiento almacenado pensado para la compatibilidad de la replicación de mezcla y debe usarse solo cuando otras acciones correctivas, como la reinicialización, no se han podido corregir la situación o son demasiado costosas en términos de rendimiento.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_markpendingschemachange**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_markpendingschemachange**.  
   
 ## <a name="see-also"></a>Vea también  
  [sysmergeschemachange &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  

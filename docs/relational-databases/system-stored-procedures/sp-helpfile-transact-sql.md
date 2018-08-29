@@ -1,5 +1,5 @@
 ---
-title: sp_helpfile (Transact-SQL) | Documentos de Microsoft
+title: sp_helpfile (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpfile
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4de2e386d30c718177482cd50d38f169922f5d8a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 74acb22b50ce918f070c817cb8954b46e47bb876
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245126"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023843"
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,18 +52,18 @@ sp_helpfile [ [ @filename= ] 'name' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|Nombre de archivo lógico.|  
 |**FileID**|**smallint**|Identificador numérico del archivo. No se devuelve si *nombre* se especifica *.*|  
-|**nombre de archivo**|**nchar(260)**|Nombre de archivo físico.|  
+|**Nombre de archivo**|**nchar(260)**|Nombre de archivo físico.|  
 |**filegroup**|**sysname**|Grupo al que pertenece el archivo.<br /><br /> NULL = El archivo es un archivo de registro. Nunca forma parte de un grupo de archivos.|  
 |**size**|**nvarchar (15)**|Tamaño del archivo en kilobytes.|  
-|**MaxSize**|**nvarchar (15)**|Tamaño máximo que puede alcanzar el archivo. El valor UNLIMITED en este campo indica que el archivo puede aumentar hasta que el disco esté lleno.|  
-|**crecimiento**|**nvarchar (15)**|Incremento de crecimiento del archivo. Esto indica la cantidad de espacio que se agrega al archivo cada vez que se necesita más ese espacio.<br /><br /> 0 = El archivo tiene un tamaño fijo y no aumenta.|  
-|**Uso de**|**varchar (9)**|Archivo de datos, el valor es **'solo datos'** y el archivo de registro es el valor de **'registro'**.|  
+|**tamaño máximo**|**nvarchar (15)**|Tamaño máximo que puede alcanzar el archivo. El valor UNLIMITED en este campo indica que el archivo puede aumentar hasta que el disco esté lleno.|  
+|**Crecimiento**|**nvarchar (15)**|Incremento de crecimiento del archivo. Esto indica la cantidad de espacio que se agrega al archivo cada vez que se necesita más ese espacio.<br /><br /> 0 = El archivo tiene un tamaño fijo y no aumenta.|  
+|**Uso de**|**varchar (9)**|Para el archivo de datos, el valor es **"solo datos"** y para el archivo de registro es el valor **'iniciar solo'**.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="examples"></a>Ejemplos  

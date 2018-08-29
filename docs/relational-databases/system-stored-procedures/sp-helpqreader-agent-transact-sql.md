@@ -1,5 +1,5 @@
 ---
-title: sp_helpqreader_agent (Transact-SQL) | Documentos de Microsoft
+title: sp_helpqreader_agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpqreader_agent
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be49f8a6303096487ef2c36593280fcc72e38a91
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d240d66768ee4b812542f959108ebea6baec4d9a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995952"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022713"
 ---
 # <a name="sphelpqreaderagent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,25 +46,25 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@frompublisher=** ] *frompublisher*  
- Especifica si se llama al procedimiento almacenado en el publicador o en el distribuidor. *frompublisher* es de tipo bit, con un valor predeterminado de 0. **1** significa que se llama al procedimiento almacenado del publicador, y **0** significa que el procedimiento almacenado se llama desde el distribuidor.  
+ Especifica si se llama al procedimiento almacenado en el publicador o en el distribuidor. *frompublisher* es de tipo bit, con un valor predeterminado de 0. **1** significa que el procedimiento almacenado se llama desde el publicador, y **0** significa que el procedimiento almacenado se llama desde el distribuidor.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|Id. del agente.|  
-|**Nombre**|**nvarchar (100)**|Nombre del agente.|  
+|**id**|**int**|ID. del agente.|  
+|**Nombre**|**Nvarchar (100)**|Nombre del agente.|  
 |**job_id**|**uniqueidentifier**|Id. único del trabajo del agente.|  
-|**job_login**|**nvarchar(512)**|Es la cuenta de Windows bajo la que se ejecuta el agente de distribución, que se devuelve en el formato *dominio*\\*nombre de usuario*.|  
+|**job_login**|**nvarchar(512)**|Es la cuenta de Windows bajo la que se ejecuta el agente de distribución, que se devuelve en el formato *dominio*\\*username*.|  
 |**job_password**|**sysname**|Por motivos de seguridad, un valor de **\* \* \* \* \* \* \* \* \* \*** siempre es Devuelve.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_helpqreader_agent** se utiliza en la replicación transaccional.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Cuando el valor de *frompublisher* es **1**, solo los miembros de la **sysadmin** rol fijo de servidor en el publicador o los miembros de la **db_owner**rol fijo de base de datos en la base de datos de publicación puede ejecutar **sp_helpqreader_agent**. En caso contrario, solo los miembros de la **sysadmin** rol fijo de servidor en el distribuidor o los miembros de la **db_owner** rol fijo de base de datos en la base de datos de distribución puede ejecutar **sp_helpqreader_ agente**.  
   
 ## <a name="see-also"></a>Vea también  

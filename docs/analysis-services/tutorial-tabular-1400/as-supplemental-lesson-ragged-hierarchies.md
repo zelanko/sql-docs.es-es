@@ -1,6 +1,6 @@
 ---
 title: 'Lección complementaria tutorial de Analysis Services: jerarquías desiguales | Microsoft Docs'
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bc5a2164576e2e6142d8835dad6f6c114b7a9c5b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1aa9b8b0e456bb4f4aeff0a2a8e03d4938a46399
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042309"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43074835"
 ---
-# <a name="supplemental-lesson---ragged-hierarchies"></a>Lección complementaria: jerarquías desiguales
+# <a name="supplemental-lesson---ragged-hierarchies"></a>Lección complementaria: Jerarquías desiguales
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 

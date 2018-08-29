@@ -1,5 +1,5 @@
 ---
-title: sp_enumdsn (Transact-SQL) | Documentos de Microsoft
+title: sp_enumdsn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_enumdsn
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90d5e3c361471777952378cccfafb9f5b4f479fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 30aa77cb33e5d55bef6b110e020116467536eaff
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993452"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031077"
 ---
 # <a name="spenumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,19 +49,19 @@ sp_enumdsn
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre del origen de datos**|**sysname**|Nombre del origen de datos.|  
-|**Description**|**varchar (255)**|Descripción del origen de datos.|  
+|**Descripción**|**varchar (255)**|Descripción del origen de datos.|  
 |**Tipo**|**int**|Tipo del origen de datos.<br /><br /> **1** = DSN DE ODBC<br /><br /> **3** = origen de datos OLE DB|  
 |**Nombre del proveedor**|**varchar (255)**|Nombre del proveedor OLE DB. El valor es NULL para DSN de ODBC.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Cada [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio tiene un contexto de usuario. Un contexto de usuario es un conjunto de entradas del Registro que incluye las definiciones de los orígenes de datos ODBC del usuario. El nombre de usuario con el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona el contexto de usuario.  
   
  Por ejemplo, si el servidor se está ejecutando en el contexto de usuario de la cuenta del sistema, todos los nombres de origen de datos (DSN) obtenidos serán DSN del sistema asociados a la cuenta de sistema. Si el servidor se ejecuta con una cuenta de usuario privada, solo se devolverán los DSN definidos para esa cuenta.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_enumdsn**.  
   
 ## <a name="see-also"></a>Vea también  

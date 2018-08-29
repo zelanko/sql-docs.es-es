@@ -1,5 +1,5 @@
 ---
-title: sp_cursorexecute (Transact-SQL) | Documentos de Microsoft
+title: sp_cursorexecute (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_cursor_execute
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 caps.latest.revision: 7
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cae17034cdcc2d048e539961bf07971acb3b3410
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 47c6f3a1c0356f00843ba086d1d7994071c24ba6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238795"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029876"
 ---
 # <a name="spcursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Crea y rellena un cursor basado en el plan de ejecución creado por sp_cursorprepare. Este procedimiento, junto con sp_cursorprepare, tiene la misma función que sp_cursoropen, pero se divide en dos fases. sp_cursorexecute se invoca especificando el identificador = 4 en un paquete de flujo TDS.  
+  Crea y rellena un cursor basado en el plan de ejecución creado por sp_cursorprepare. Este procedimiento, junto con sp_cursorprepare, tiene la misma función que sp_cursoropen, pero se divide en dos fases. sp_cursorexecute se invoca especificando el identificador 4 en un paquete de flujo TDS.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,19 +51,19 @@ sp_cursorexecute prepared_handle, cursor
  Es la instrucción preparada *controlar* valor devuelto por sp_cursorprepare. *prepared_handle* es un parámetro necesario que requiere un **int** valor de entrada.  
   
  *cursor*  
- Es el identificador del cursor generado por SQL Server. *cursor* es un parámetro necesario que se debe proporcionar en todos los procedimientos subsiguientes que actúen en el cursor, como sp_cursorfetch  
+ Es el identificador del cursor generado por SQL Server. *cursor* es un parámetro necesario que se debe proporcionar en todos los procedimientos subsiguientes que actúen en este cursor, como sp_cursorfetch  
   
  *scrollopt*  
- Opción de desplazamiento. *scrollopt* es un parámetro opcional que requiere un **int** valor de entrada. El sp_cursorexecute*scrollopt* parámetro tiene las mismas opciones que para sp_cursoropen.  
+ Opción de desplazamiento. *scrollopt* es un parámetro opcional que requiere un **int** valor de entrada. El sp_cursorexecute*scrollopt* parámetro tiene las mismas opciones de valor que para sp_cursoropen.  
   
 > [!NOTE]  
 >  No se admite el valor PARAMETERIZED_STMT.  
   
 > [!IMPORTANT]  
->  Si un *scrollopt* valor no se especifica, el valor predeterminado es KEYSET con independencia de *scrollopt* valor especificado en sp_cursorprepare.  
+>  Si un *scrollopt* valor no se especifica, el valor predeterminado es KEYSET, con independencia de *scrollopt* valor especificado en sp_cursorprepare.  
   
  *ccopt*  
- Opción de control de divisa. *ccopt* es un parámetro opcional que requiere un **int** valor de entrada. El sp_cursorexecute*ccopt* parámetro tiene las mismas opciones que para sp_cursoropen.  
+ Opción de control de divisa. *ccopt* es un parámetro opcional que requiere un **int** valor de entrada. El sp_cursorexecute*ccopt* parámetro tiene las mismas opciones de valor que para sp_cursoropen.  
   
 > [!IMPORTANT]  
 >  Si un *ccopt* valor no se especifica, el valor predeterminado es OPTIMISTIC, con independencia de *ccopt* valor especificado en sp_cursorprepare.  
@@ -84,15 +84,15 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="code-return-value"></a>Valor del código de retorno  
  *recuento de filas* puede devolver los valores siguientes.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |-1|Número de filas desconocido.|  
 |-n|Un rellenado asincrónico está en vigor.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>Parámetros ccopt y scrollopt  
- *scrollopt* y *ccopt* son útiles cuando se reemplazan los planes almacenados en caché para la caché del servidor, lo que significa que se debe volver a compilar el identificador preparado que identifica la instrucción. El *scrollopt* y *ccopt* valores de parámetro deben coincidir con los valores enviados en la solicitud original a sp_cursorprepare.  
+ *scrollopt* y *ccopt* son útiles cuando se reemplazan los planes almacenados en caché para la caché del servidor, lo que significa que se debe volver a compilar el identificador preparado que identifica la instrucción. El *scrollopt* y *ccopt* los valores de parámetro deben coincidir con los valores enviados en la solicitud original a sp_cursorprepare.  
   
 > [!NOTE]  
 >  PARAMETERIZED_STMT no debe asignarse a *scrollopt*.  

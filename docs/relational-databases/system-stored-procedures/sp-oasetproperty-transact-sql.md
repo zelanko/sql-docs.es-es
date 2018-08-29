@@ -1,5 +1,5 @@
 ---
-title: sp_OASetProperty (Transact-SQL) | Documentos de Microsoft
+title: sp_OASetProperty (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_OASetProperty
 ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7aeadb381a7bb5c55d9a26e5e0e8b9e148f7b120
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 689549b2741e4b334f664cf7662204702686a93f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258617"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023745"
 ---
 # <a name="spoasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
   
 ## <a name="arguments"></a>Argumentos  
  *objecttoken*  
- Es el token de objeto de un objeto OLE que se creó anteriormente mediante **sp_OACreate**.  
+ Es el token de un objeto OLE creado anteriormente por **sp_OACreate**.  
   
  *propertyname*  
  Es el nombre de la propiedad del objeto OLE que se va establecer en un nuevo valor.  
@@ -59,18 +59,18 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
  Algunas propiedades tienen parámetros. Estas propiedades se llaman propiedades indizadas y los parámetros se llaman parámetros de índice. Una propiedad puede tener varios parámetros de índice.  
   
 > [!NOTE]  
->  Los parámetros para este procedimiento almacenado se especifican por la posición, no por el nombre.  
+>  Los parámetros para este procedimiento almacenado se especifican por posición, no por el nombre.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o un valor distinto de cero (error) que es el valor entero del HRESULT devuelto por el objeto de OLE Automation.  
   
- Para obtener más información sobre códigos de retorno HRESULT, vea [OLE Automation códigos de retorno e información de Error](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Para obtener más información sobre los códigos de retorno HRESULT, vea [OLE Automation códigos de retorno e información de Error](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente se establece la `HostName` propiedad (de la que se han creado previamente **SQLServer** objeto) a un nuevo valor.  
+ El ejemplo siguiente se establece la `HostName` propiedad (de creado previamente **SQLServer** objeto) a un nuevo valor.  
   
 ```  
 EXEC @hr = sp_OASetProperty @object, 'HostName', 'Gizmo';  
@@ -82,7 +82,7 @@ END'
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [OLE procedimientos almacenados de automatización &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [OLE Automation procedimientos almacenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Ejemplo de script de automatización OLE](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

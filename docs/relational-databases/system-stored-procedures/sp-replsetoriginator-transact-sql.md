@@ -1,5 +1,5 @@
 ---
-title: sp_replsetoriginator (Transact-SQL) | Documentos de Microsoft
+title: sp_replsetoriginator (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replsetoriginator
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 680fdf8c36c87549de43825ffd2a7aa5c8fba0f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1bfba001bb6890c4a15975c78aee7818f02835b0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996142"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026824"
 ---
 # <a name="spreplsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +55,10 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_replsetoriginator** se ejecuta el agente de distribución para registrar el origen de las transacciones aplicadas mediante replicación. Esta información se utiliza para invocar la detección de bucles invertidos en suscripciones transaccionales bidireccionales que tienen establecida la propiedad de bucles invertidos.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor en el publicador, los miembros de la **db_owner** rol fijo de base de datos en la base de datos de publicación, o los usuarios en la lista de acceso de publicación (PAL) puede ejecutar **sp_replsetoriginator**.  
   
 ## <a name="see-also"></a>Vea también  

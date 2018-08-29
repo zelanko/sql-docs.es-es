@@ -1,5 +1,5 @@
 ---
-title: sp_server_diagnostics (Transact-SQL) | Documentos de Microsoft
+title: sp_server_diagnostics (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 181b5ba51d87db43392af280d8fc4178da54dcc4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4896d26edb0aeb186f8408dff2ccf31d1aedcfe8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263304"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028174"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,30 +62,30 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>Conjuntos de resultados  
 **sp_server_diagnostics** devuelve la siguiente información  
   
-|Columna|Data type|Description|  
+|columna|Data type|Descripción|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Indica la marca de tiempo de creación de la fila. Cada fila de un conjunto de filas único tiene la misma marca de tiempo.|  
-|**component_type**|**sysname**|Indica si la fila contiene información para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente o para un grupo de disponibilidad AlwaysOn de nivel de instancia:<br /><br /> instancia<br /><br /> AlwaysOn: AvailabilityGroup|  
+|**component_type**|**sysname**|Indica si la fila contiene información para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente o de un grupo de disponibilidad Always On de nivel de instancia:<br /><br /> instancia<br /><br /> AlwaysOn: AvailabilityGroup|  
 |**nombre_componente**|**sysname**|Indica el nombre del componente o el nombre del grupo de disponibilidad:<br /><br /> sistema<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventos<br /><br /> *\<nombre del grupo de disponibilidad >*|  
 |**state**|**int**|Indica el estado de mantenimiento del componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
-|**state_desc**|**sysname**|Describe la columna de estado. Las descripciones que corresponden a los valores de la columna de estado son:<br /><br /> 0: desconocido<br /><br /> 1: correcto<br /><br /> 2: advertencia<br /><br /> 3: error|  
+|**state_desc**|**sysname**|Describe la columna de estado. Las descripciones que corresponden a los valores de la columna de estado son:<br /><br /> 0: desconocido<br /><br /> 1: limpiar<br /><br /> 2: advertencia<br /><br /> 3: error|  
 |**data**|**varchar (max)**|Especifica los datos que son específicos del componente.|  
   
  Estas son las descripciones de los cinco componentes:  
   
--   **sistema**: recopila los datos desde la perspectiva del sistema en bloqueos por subproceso, condiciones de procesamiento graves, tareas improductivas, errores de página y el uso de CPU. Esta información genera una recomendación del estado de mantenimiento total.  
+-   **sistema**: recopila los datos desde la perspectiva del sistema en los bloqueos por subproceso, condiciones de procesamiento graves, tareas improductivas, errores de página y el uso de CPU. Esta información genera una recomendación del estado de mantenimiento total.  
   
--   **recursos**: recopila los datos desde una perspectiva de los recursos en las páginas de memoria física y virtual, grupos de búferes y otros objetos de la memoria caché. Esta información genera una recomendación general del estado de mantenimiento.  
+-   **recurso**: recopila los datos desde una perspectiva de los recursos de memoria física y virtual, grupos de búferes, páginas, caché y otros objetos de memoria. Esta información genera una recomendación general del estado de mantenimiento.  
   
--   **query_processing**: recopila datos desde la perspectiva del procesamiento de consultas en los subprocesos de trabajo, tareas, esperan tipos, las sesiones de uso intensivo de CPU y tareas de bloqueo. Esta información genera una recomendación general del estado de mantenimiento.  
+-   **query_processing**: recopila datos desde la perspectiva del procesamiento de consultas en los subprocesos de trabajo, tareas, esperar tipos, las sesiones intensivas de CPU y tareas de bloqueo. Esta información genera una recomendación general del estado de mantenimiento.  
   
--   **io_subsystem**: recopila datos en E/S. Además de los datos de diagnóstico, este componente genera un estado de mantenimiento limpio o de advertencia solamente para un subsistema de E/S.  
+-   **io_subsystem**: recopila los datos de E/S. Además de los datos de diagnóstico, este componente genera un estado de mantenimiento limpio o de advertencia solamente para un subsistema de E/S.  
   
--   **eventos**: recopila datos y superficies mediante el procedimiento almacenado en los errores y eventos de interés registrados por el servidor, incluidos los detalles sobre las excepciones de búfer de anillo, sobre el agente de memoria, memoria insuficiente, supervisor del programador, los eventos de búfer de anillo grupo de búferes, bloqueos por subproceso, seguridad y conectividad. Los eventos mostrarán siempre 0 como estado.  
+-   **eventos**: recopila datos y las superficies de mediante el procedimiento almacenado de los errores y eventos de interés registrados por el servidor, incluidos los detalles sobre las excepciones de búfer de anillo, sobre el agente de memoria, fuera de la memoria, el monitor del programador, los eventos de búfer de anillo grupo de búferes, bloqueos por subproceso, seguridad y conectividad. Los eventos mostrarán siempre 0 como estado.  
   
 -   **\<nombre del grupo de disponibilidad >**: recopila datos para el grupo de disponibilidad especificado (si component_type = "siempre en: AvailabilityGroup").  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
 Desde la perspectiva de los errores, los componentes del sistema, recursos y procesamiento de consultas se aprovecharán para la detección de errores mientras que los componentes de eventos e io_subsystem se aprovecharán solo con fines de diagnóstico.  
   
 En la tabla siguiente se asignan los componentes a sus estados de mantenimiento asociados.  
@@ -101,9 +101,9 @@ En la tabla siguiente se asignan los componentes a sus estados de mantenimiento 
 La (x) de cada fila representa los estados de mantenimiento válidos para el componente. Por ejemplo, io_subsystem se mostrará como limpio o como advertencia. No mostrará los estados de error.  
  
 > [!NOTE]
-> Ejecución del procedimiento interno de sp_server_diagnostics se implementa en un subproceso con una prioridad alta preferente.
+> Ejecución de procedimiento interna sp_server_diagnostics se implementa en un subproceso con una prioridad alta preferente.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
 es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
 ## <a name="examples"></a>Ejemplos  

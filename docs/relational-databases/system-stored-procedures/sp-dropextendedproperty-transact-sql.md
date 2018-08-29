@@ -1,5 +1,5 @@
 ---
-title: sp_dropextendedproperty (Transact-SQL) | Documentos de Microsoft
+title: los procedimientos sp_addextendedproperty (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_dropextendedproperty
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 750b1df6bff427c2e5c4931ad3007a66ddbb1917
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9652fbb73cb3efc8d2ddd562593e2c2b457ab0e2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258434"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023190"
 ---
 # <a name="spdropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,29 +67,29 @@ sp_dropextendedproperty
 >  USER y TYPE como tipos de nivel 0 se quitarán en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar estas características en los nuevos trabajos de programación y planee modificar las aplicaciones que actualmente las utilizan. En lugar de USER, use SCHEMA como tipo de nivel 0. Para TYPE, use SCHEMA como tipo de nivel 0 y TYPE como tipo de nivel 1.  
   
  [ @level0name=] {'*level0_object_name*'}  
- Nombre del tipo de objeto de nivel 0 especificado. *level0_object_name* es **sysname** con un valor predeterminado es NULL.  
+ Nombre del tipo de objeto de nivel 0 especificado. *level0_object_name* es **sysname** con el valor predeterminado es NULL.  
   
  [ @level1type=] {'*level1_object_type*'}  
- Tipo de objeto de nivel 1. *level1_object_type* es **varchar (128)** con un valor predeterminado es NULL. Las entradas válidas son AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION y NULL.  
+ Tipo de objeto de nivel 1. *level1_object_type* es **varchar (128)** con el valor predeterminado es NULL. Las entradas válidas son AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION y NULL.  
   
  [ @level1name=] {'*level1_object_name*'}  
- Nombre del tipo de objeto de nivel 1 especificado. *level1_object_name* es **sysname** con un valor predeterminado es NULL.  
+ Nombre del tipo de objeto de nivel 1 especificado. *level1_object_name* es **sysname** con el valor predeterminado es NULL.  
   
  [ @level2type=] {'*level2_object_type*'}  
- Es el tipo de objeto de nivel 2. *level2_object_type* es **varchar (128)** con un valor predeterminado es NULL. Las entradas válidas son COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER y NULL.  
+ Es el tipo de objeto de nivel 2. *level2_object_type* es **varchar (128)** con el valor predeterminado es NULL. Las entradas válidas son COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER y NULL.  
   
  [ @level2name=] {'*level2_object_name*'}  
- Es el nombre del tipo de objeto de nivel 2 especificado. *level2_object_name* es **sysname** con un valor predeterminado es NULL.  
+ Es el nombre del tipo de objeto de nivel 2 especificado. *level2_object_name* es **sysname** con el valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Con el fin de especificar las propiedades extendidas, los objetos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se clasifican en tres niveles: 0, 1y 2. El nivel 0 es el nivel más elevado y se define como los objetos incluidos en el ámbito de la base de datos. Los objetos de nivel 1 se incluyen en un ámbito de esquema o de usuario, y los objetos de nivel 2 están incluidos en los objetos de nivel 1. Se pueden definir propiedades extendidas para los objetos de cualquiera de estos niveles. Las referencias a un objeto de un nivel deben completarse con los tipos y nombres de los objetos de nivel superior.  
   
- Dado un válido *property_name*, si todos los tipos de objetos y nombres son null y existe una propiedad en la base de datos actual, esa propiedad se elimina. Vea el ejemplo B más adelante en este tema.  
+ Dado un válido *property_name*, si todos los tipos de objetos y nombres son null y existe una propiedad en la base de datos actual, que se ha eliminado la propiedad. Vea el ejemplo B más adelante en este tema.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Los miembros de los roles fijos de base de datos db_owner y db_ddladmin pueden eliminar las propiedades extendidas de cualquier objeto con la siguiente excepción: db_ddladmin no puede agregar propiedades a la base de datos, a los usuarios o a los roles.  
   
  Los usuarios pueden quitar propiedades extendidas para los objetos que poseen o en los que tienen permisos ALTER o CONTROL.  

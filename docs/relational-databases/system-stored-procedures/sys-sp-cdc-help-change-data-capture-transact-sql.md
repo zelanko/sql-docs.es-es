@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_help_change_data_capture (Transact-SQL) | Documentos de Microsoft
+title: Sys.sp_cdc_help_change_data_capture (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b1fd52d38d96f83c6be7c0a327fca797f934a466
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f29ac764c9d948d435765abd3d11d260cbd0d59c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263221"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027251"
 ---
 # <a name="sysspcdchelpchangedatacapture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|Nombre del esquema de la tabla de origen.|  
 |source_table|**sysname**|Nombre de la tabla de origen.|  
@@ -87,10 +86,10 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|Lista de las columnas de índice utilizada para identificar de forma exclusiva las filas en la tabla de origen.|  
 |captured_column_list|**nvarchar(max)**|Lista de las columnas de origen capturadas.|  
   
-## <a name="remarks"></a>Comentarios  
- Cuando ambos *source_schema* y *source_name* NULL como valor predeterminado o se establecen explícitamente en NULL, este procedimiento almacenado devuelve información de la base de datos todos instancias de captura que ha seleccionado el autor de llamada el acceso a. Cuando *source_schema* y *source_name* son distintos de NULL, se devuelve información solo en la tabla habilitada con nombre específica.  
+## <a name="remarks"></a>Notas  
+ Cuando ambos *source_schema* y *source_name* NULL de forma predeterminada, o se establecen explícitamente en NULL, este procedimiento almacenado devuelve información para todos los de la base de datos de instancias de captura que ha seleccionado el llamador acceso a. Cuando *source_schema* y *source_name* son distintos de NULL, se devuelve información solo en la tabla habilitada con nombre específica.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Cuando *source_schema* y *source_name* son NULL, la autorización del llamador determina qué tablas habilitadas se incluyen en el conjunto de resultados. Los autores de las llamadas deben tener el permiso SELECT en todas las columnas capturadas de la instancia de captura y también ser miembros de cualquier rol de acceso definido para la información de la tabla que se va a incluir. Los miembros del rol de la base de datos db_owner pueden ver información sobre todas las instancias de captura definidas. Cuando se solicita información para una tabla habilitada concreta, para la tabla con nombre se aplican los mismos criterios de pertenencia y SELECT.  
   
 ## <a name="examples"></a>Ejemplos  

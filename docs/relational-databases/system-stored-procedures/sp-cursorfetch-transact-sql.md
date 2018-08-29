@@ -1,5 +1,5 @@
 ---
-title: sp_cursorfetch (Transact-SQL) | Documentos de Microsoft
+title: sp_cursorfetch (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9bbffe757b6b9c76bc1eb0b95e883f3d4d30b461
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 830e298365f3414c57f4419b8f0f9309ba908607
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240245"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034658"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,14 +51,14 @@ sp_cursorfetch cursor
  *fetchType*  
  Especifica qué búfer de cursor se va a capturar. *fetchType* es un parámetro opcional que requiere uno de los siguientes valores de entrada de enteros.  
   
-|Value|Nombre|Description|  
+|Valor|Nombre|Descripción|  
 |-----------|----------|-----------------|  
-|0x0001|FIRST|Captura el primer búfer de *nrows* filas. Si *nrows* es igual a 0, el cursor se coloca antes del conjunto de resultados y no devuelve ninguna fila.|  
+|0x0001|FIRST|Captura el primer búfer de *nrows* filas. Si *nrows* es igual a 0, el cursor se coloca antes del conjunto de resultados y se devuelve ninguna fila.|  
 |0x0002|NEXT|Captura el siguiente búfer de *nrows* filas.|  
-|0x0004|PREV|Captura el anterior búfer de *nrows* filas.<br /><br /> Nota: Al utilizar PREV para un cursor FORWARD_ONLY devuelve un mensaje de error porque FORWARD_ONLY solo permite el desplazamiento en una dirección.|  
-|0x0008|LAST|Captura el último búfer de *nrows* filas. Si *nrows* es igual a 0, el cursor se coloca después de que el conjunto de resultados y no devuelve ninguna fila.<br /><br /> Nota: Al utilizar LAST para un cursor FORWARD_ONLY devuelve un mensaje de error porque FORWARD_ONLY solo permite el desplazamiento en una dirección.|  
+|0x0004|PREV|Captura el anterior búfer de *nrows* filas.<br /><br /> Nota: Al utilizar PREV para un cursor FORWARD_ONLY, devuelve un mensaje de error porque FORWARD_ONLY solo permite el desplazamiento en una dirección.|  
+|0x0008|LAST|Captura el último búfer de *nrows* filas. Si *nrows* es igual a 0, el cursor se coloca después de que el conjunto de resultados y se devuelve ninguna fila.<br /><br /> Nota: Al utilizar LAST para un cursor FORWARD_ONLY, devuelve un mensaje de error porque FORWARD_ONLY solo permite el desplazamiento en una dirección.|  
 |0x10|ABSOLUTE|Captura un búfer de *nrows* filas a partir de la *rownum* fila.<br /><br /> Nota: Al usar ABSOLUTE para un cursor dinámico o un cursor FORWARD_ONLY devuelve un mensaje de error porque FORWARD_ONLY solo permite el desplazamiento en una dirección.|  
-|0x20|RELATIVE|Captura el búfer de *nrows* filas a partir de la fila que se especifica como el *rownum* valor de filas de la primera fila en el bloque actual. En este caso *rownum* puede ser un número negativo.<br /><br /> Nota: Al utilizar RELATIVE para un cursor FORWARD_ONLY devuelve un mensaje de error porque FORWARD_ONLY solo permite el desplazamiento en una dirección.|  
+|0x20|RELATIVE|Captura el búfer de *nrows* filas a partir de la fila que se especifica como el *rownum* valor de las filas de la primera fila en el bloque actual. En este caso *rownum* puede ser un número negativo.<br /><br /> Nota: Al utilizar RELATIVE para un cursor FORWARD_ONLY, devuelve un mensaje de error porque FORWARD_ONLY solo permite el desplazamiento en una dirección.|  
 |0x80|REFRESH|Rellena el búfer a partir de las tablas subyacentes.|  
 |0x100|INFO|Recupera información acerca del cursor. Esta información se devuelve mediante el uso de la *rownum* y *nrows* parámetros. Por lo tanto, cuando se especifica INFO, *rownum* y *nrows* se convierten en parámetros de salida.|  
 |0x200|PREV_NOADJUST|Se utiliza como PREV. Sin embargo, si el principio del conjunto de resultados se encontrara prematuramente, los resultados podrían variar.|  
@@ -70,13 +70,13 @@ sp_cursorfetch cursor
  Para obtener más información, vea la sección Comentarios más adelante en este tema.  
   
  *rownum*  
- Es un parámetro opcional que se utiliza para especificar la posición de fila para el ABSOLUTE e INFO *fetchtype* valores utilizando solo valores enteros para la entrada o salida o ambos. *ROWNUM* actúa como el desplazamiento de fila para la *fetchtype* valor relativo de bits. *ROWNUM* se omite para todos los demás valores. Para obtener más información, vea la sección Comentarios más adelante en este tema.  
+ Es un parámetro opcional que se utiliza para especificar la posición de fila para el ABSOLUTE e INFO *fetchtype* valores utilizando solo valores enteros para entrada o salida o ambos. *ROWNUM* actúa como el desplazamiento de fila para el *fetchtype* valor relativo de bits. *ROWNUM* se omite para todos los demás valores. Para obtener más información, vea la sección Comentarios más adelante en este tema.  
   
  *nRows*  
  Es un parámetro opcional que se utiliza para especificar el número de filas que capturar. Si *nrows* no se especifica, el valor predeterminado es 20 filas. Para establecer la posición sin devolver los datos, especifique un valor de 0. Cuando *nrows* se aplica a la *fetchtype* consulta INFO, devuelve el número total de filas en la consulta.  
   
 > [!NOTE]  
->  *nRows* omite la actualización *fetchtype* valor de bit.  
+>  *nRows* omite la actualización *fetchtype* valor de bits.  
 >   
 >  Para obtener más información, vea la sección Comentarios más adelante en este tema.  
   
@@ -84,7 +84,7 @@ sp_cursorfetch cursor
  Al especificar el valor de bit INFO, los valores que se pueden devolver se muestran en las siguientes tablas.  
   
 > [!NOTE]  
->  : Si no se devuelve ninguna fila, el contenido del búfer permanece tal como estaban.  
+>  : Si se devuelve ninguna fila, el contenido del búfer permanece como estuviera.  
   
 |*\<ROWNUM >*|Establecer en|  
 |------------------|------------|  
@@ -93,21 +93,21 @@ sp_cursorfetch cursor
 |Si está colocado después del conjunto de resultados|-1|  
 |Para los cursores KEYSET y STATIC|Número de fila absoluto de la posición actual en el conjunto de resultados|  
 |Para los cursores DYNAMIC|1|  
-|Para ABSOLUTE|-1 devuelve la última fila de un conjunto.<br /><br /> -2 devuelve de la segunda a la última fila de un conjunto, etc.<br /><br /> Nota: Si se solicita más de una fila que se capturan en este caso, se devuelven las dos últimas filas del conjunto de resultados.|  
+|Para ABSOLUTE|-1 devuelve la última fila de un conjunto.<br /><br /> -2 devuelve de la segunda a la última fila de un conjunto, etc.<br /><br /> Nota: Si se solicita más de una fila que se capturará en este caso, se devuelven las dos últimas filas del conjunto de resultados.|  
   
 |*\<nRows >*|Establecer en|  
 |-----------------|------------|  
 |Si no está abierto|0|  
-|Para los cursores KEYSET y STATIC|Normalmente, el tamaño del conjunto de claves actual.<br /><br /> **– m** si el cursor está en la creación asincrónica con *m* filas encontradas en este punto.|  
+|Para los cursores KEYSET y STATIC|Normalmente, el tamaño del conjunto de claves actual.<br /><br /> **– m** si el cursor se crea de forma asincrónica con *m* filas encontradas en este punto.|  
 |Para los cursores DYNAMIC|-1|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
   
 ## <a name="cursor-parameter"></a>Parámetro cursor  
  Antes de que se produzca ninguna operación de captura, la posición predeterminada de un cursor está antes de la primera fila del conjunto de resultados.  
   
 ## <a name="fetchtype-parameter"></a>Parámetro fetchtype  
- Excepción de SKIP_UPD_CNCY, la *fetchtype* valores son mutuamente excluyentes.  
+ Excepto SKIP_UPD_CNCY, los *fetchtype* valores son mutuamente excluyentes.  
   
  Cuando se especifica SKIP_UPDT_CNCY, los valores de columna de marca de tiempo no se escriben en la tabla de conjunto de claves cuando una fila se captura o actualiza. Si la fila del conjunto de claves se está actualizando, los valores de las columnas de marca de tiempo permanecen como el valor anterior. Si se inserta la fila del conjunto de claves, los valores de las columnas de marca de tiempo son indefinidos.  
   
@@ -122,23 +122,23 @@ sp_cursorfetch cursor
   
  El *fetchtype* valor ABSOLUTO se refiere a la posición de *rownum* dentro de todo el resultado establecido. Un número negativo con ABSOLUTE especifica que la operación cuenta las filas desde el final del conjunto de resultados.  
   
- El *fetchtype* valor RELATIVE hace referencia a la posición de *rownum* en relación con la posición del cursor al principio del búfer actual. Un número negativo con RELATIVE especifica que el cursor va atrasado desde la posición del cursor actual.  
+ El *fetchtype* valor RELATIVE hace referencia a la posición de *rownum* respecto a la posición del cursor al principio del búfer actual. Un número negativo con RELATIVE especifica que el cursor va atrasado desde la posición del cursor actual.  
   
 ## <a name="nrows-parameter"></a>Parámetro nrows  
  El *fetchtype* valores REFRESH e INFO omiten este parámetro.  
   
- Cuando se especifica un *fetchtype* valor de primera que tenga un *nrow* valor de 0, el cursor se coloca antes del conjunto de resultados que no tiene filas en el búfer de captura.  
+ Cuando se especifica un *fetchtype* valor FIRST tiene un *funciones nrow* valor de 0, el cursor se coloca antes del conjunto de resultados que no tiene filas en el búfer de captura.  
   
- Cuando se especifica un *fetchtype* valor de la última que tenga un *nrow* valor de 0, el cursor se coloca después del conjunto de resultados que no tiene filas en el búfer de captura actual.  
+ Cuando se especifica un *fetchtype* valor LAST que tiene un *funciones nrow* valor de 0, el cursor se coloca después del conjunto de resultados que no tiene filas en el búfer de captura actual.  
   
- Para el *fetchtype* valores del siguiente, PREV, ABSOLUTE, RELATIVE y PREV_NOADJUST, un *nrow* valor de 0 no es válido.  
+ Para el *fetchtype* valores del siguiente, PREV, ABSOLUTE, RELATIVE y PREV_NOADJUST, un *funciones nrow* valor de 0 no es válido.  
   
 ## <a name="rpc-considerations"></a>Consideraciones sobre RPC  
  El estado de retorno de RPC indica si el parámetro de tamaño del conjunto de claves es final o no; es decir, si el conjunto de claves o la tabla temporal se rellenan de forma asincrónica.  
   
  El parámetro de estado de RPC se establece en uno de los valores mostrados en la siguiente tabla.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |0|El procedimiento se ejecutó correctamente.|  
 |0x0001|Se produjo un error en el procedimiento.|  
@@ -147,7 +147,7 @@ sp_cursorfetch cursor
   
  Las filas se devuelven como un conjunto de resultados típico, es decir, formato de columna (0x2a), filas (0xd1), seguido de Done (0xfd). Los tokens de metadatos se envían en el mismo formato que el especificado para sp_cursoropen, es decir, 0x81, 0xa5 y 0xa4 para los usuarios de SQL Server 7.0, etc. Los indicadores del estado de la fila se envían como columnas ocultas, similar al modo BROWSE, al final de cada fila con el nombre de columna rowstat y el tipo de datos INT4. Esta columna rowstat tiene uno de los valores que se muestran en la tabla siguiente.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  
@@ -172,7 +172,7 @@ row 5 contents
 row 6 contents  
 ```  
   
- A continuación, una operación sp_cursorfetch PREV que tiene un *nrows* valor de 5 colocaría lógicamente el cursor dos filas antes de la primera fila del conjunto de resultados. En estos casos, el cursor se ajusta para iniciarse en la primera fila y devolver el número de filas solicitadas. Esto suele significar que devolverá las filas que estaban en el búfer de captura PRIOR.  
+ A continuación, un sp_cursorfetch PREV que tiene un *nrows* valor 5 colocaría lógicamente el cursor dos filas antes de la primera fila del conjunto de resultados. En estos casos, el cursor se ajusta para iniciarse en la primera fila y devolver el número de filas solicitadas. Esto suele significar que devolverá las filas que estaban en el búfer de captura PRIOR.  
   
 > [!NOTE]  
 >  Este es el caso exacto en el que el parámetro de estado de RPC está establecido en 2.  

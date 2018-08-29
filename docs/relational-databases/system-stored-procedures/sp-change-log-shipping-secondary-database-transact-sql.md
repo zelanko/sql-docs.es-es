@@ -1,5 +1,5 @@
 ---
-title: sp_change_log_shipping_secondary_database (Transact-SQL) | Documentos de Microsoft
+title: sp_change_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_change_log_shipping_secondary_database
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
-caps.latest.revision: 23
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e4ee6324e92130f3f887fe3a36ecd5469cd9d99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bee5104ed19e6d7d7454a0fc91fb5059153bb8b0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239145"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023634"
 ---
 # <a name="spchangelogshippingsecondarydatabase-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_change_log_shipping_secondary_database
  Cantidad de tiempo, en minutos, que espera el servidor secundario antes de restaurar un archivo de copia de seguridad dado. *restore_delay* es **int** y no puede ser NULL. El valor predeterminado es 0.  
   
  [  **@restore_all =** ] '*restore_all*'  
- Si se establece en 1, el servidor secundario restaura todas las copias de seguridad disponibles del registro de transacciones cuando se ejecuta el trabajo de restauración. De lo contrario, se detiene tras haber restaurado un archivo. *restore_all* es **bits** y no puede ser NULL.  
+ Si se establece en 1, el servidor secundario restaura todas las copias de seguridad disponibles del registro de transacciones cuando se ejecuta el trabajo de restauración. De lo contrario, se detiene tras haber restaurado un archivo. *restore_all* es **bit** y no puede ser NULL.  
   
  [  **@restore_mode =** ] '*restore_mode*'  
  Modo de restauración para la base de datos secundaria.  
@@ -69,10 +68,10 @@ sp_change_log_shipping_secondary_database
   
  1 = Restaurar registro con STANDBY.  
   
- *restaurar* es **bits** y no puede ser NULL.  
+ *restaurar* es **bit** y no puede ser NULL.  
   
  [  **@disconnect_users =** ] '*disconnect_users*'  
- Si se establece en 1, los usuarios se desconecta de la base de datos secundaria cuando se realiza una operación de restauración. Valor predeterminado = 0. *disconnect_users* es **bits** y no puede ser NULL.  
+ Si se establece en 1, los usuarios se desconecta de la base de datos secundaria cuando se realiza una operación de restauración. Valor predeterminado = 0. *disconnect_users* es **bit** y no puede ser NULL.  
   
  [  **@block_size =** ] '*block_size*'  
  Tamaño, en bytes, que se utiliza como tamaño de bloque para el dispositivo de copia de seguridad. *block_size* es **int** con un valor predeterminado de -1.  
@@ -90,10 +89,10 @@ sp_change_log_shipping_secondary_database
  Es la alerta que se generará cuando se supere el umbral de restauración. *threshold_alert* es **int**, su valor predeterminado es 14420.  
   
  [  **@threshold_alert_enabled =** ] '*threshold_alert_enabled*'  
- Especifica si una alerta se genera cuando *restore_threshold*se supera. 1 = habilitadas; 0 = deshabilitadas. *threshold_alert_enabled* es **bits** y no puede ser NULL.  
+ Especifica si va a una alerta se genera cuando *restore_threshold*se supera. 1 = habilitadas; 0 = deshabilitadas. *threshold_alert_enabled* es **bit** y no puede ser NULL.  
   
  [  **@history_retention_period =** ] '*history_retention_period*'  
- Es la cantidad de tiempo en minutos durante la que se retendrá el historial. *history_retention_period* es **int**. Si no se especifica ninguno, se usará un valor de 1440.  
+ Es la cantidad de tiempo en minutos durante la que se retendrá el historial. *history_retention_period* es **int**. Si se especifica ninguno, se usará un valor de 1440.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -101,14 +100,14 @@ sp_change_log_shipping_secondary_database
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_change_log_shipping_secondary_database** se debe ejecutar desde la **maestro** base de datos en el servidor secundario. Este procedimiento almacenado hace lo siguiente:  
   
 1.  Cambia la configuración de la **log_shipping_secondary_database** registra según sea necesario.  
   
 2.  Cambia el registro de monitor local en **log_shipping_monitor_secondary** en el servidor secundario utilizando los argumentos proporcionados, si es necesario.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -127,7 +126,7 @@ EXEC master.dbo.sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Acerca del trasvase de registros & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

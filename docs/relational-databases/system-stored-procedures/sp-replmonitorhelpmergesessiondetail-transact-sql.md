@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorhelpmergesessiondetail (Transact-SQL) | Documentos de Microsoft
+title: sp_replmonitorhelpmergesessiondetail (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorhelpmergesessiondetail
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d76b4c7001f946ad01836c36982d81f90df397c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f3f7c7a2ac9ea4230ca286dce90eda3d48458d41
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999042"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027731"
 ---
 # <a name="spreplmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**PhaseID**|**int**|Es la fase de la sesión de sincronización, que puede ser:<br /><br /> **0** = inicialización o fila de resumen<br /><br /> **1** = carga<br /><br /> **2** = descarga|  
 |**ArticleName**|**sysname**|Es el nombre del artículo que se va a sincronizar. **ArticleName** también contiene información de resumen para las filas del conjunto de resultados que no representan detalles del artículo.|  
@@ -62,19 +62,19 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**Eliminaciones**|**int**|Número de eliminaciones de cada sesión.|  
 |**Conflictos**|**int**|Número de conflictos ocurridos en una sesión.|  
 |**Identificador del error**|**int**|Identificador de un error de la sesión.|  
-|**Seqno no**|**int**|Orden de las sesiones en el conjunto de resultados.|  
-|**RowType**|**int**|Indica el tipo de información que representa cada fila del conjunto de resultados.<br /><br /> **0** = inicialización<br /><br /> **1** = resumen de la carga<br /><br /> **2** = detalles de la carga de artículo<br /><br /> **3** = resumen de la descarga<br /><br /> **4** = detalles de la descarga de artículo|  
+|**SeqNo**|**int**|Orden de las sesiones en el conjunto de resultados.|  
+|**RowType**|**int**|Indica el tipo de información que representa cada fila del conjunto de resultados.<br /><br /> **0** = inicialización<br /><br /> **1** = resumen de la carga<br /><br /> **2** = detalles de la carga de artículo<br /><br /> **3** = resumen de la descarga<br /><br /> **4** = detalles de descarga del artículo|  
 |**Modificar esquema**|**int**|Número de cambios de esquema de cada sesión.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_replmonitorhelpmergesessiondetail** se usa para supervisar la replicación de mezcla.  
   
- Cuando se ejecuta en el suscriptor, **sp_replmonitorhelpmergesessiondetail** sólo devuelve información detallada sobre las últimas 5 sesiones del agente de mezcla.  
+ Cuando se ejecuta en el suscriptor, **sp_replmonitorhelpmergesessiondetail** sólo devuelve información detallada acerca de las últimas 5 sesiones del agente de mezcla.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **db_owner** o **replmonitor** fijo de base de datos en la base de datos de distribución en el distribuidor o en la base de datos de suscripción en el suscriptor pueden ejecutar **sp_ replmonitorhelpmergesessiondetail**.  
   
 ## <a name="see-also"></a>Vea también  

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_hadr_cluster_members (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_hadr_cluster_members (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/23/2017
 ms.prod: sql
@@ -25,13 +25,13 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8bb7ad8870f4e139a00003fba0b17675eb629070
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1e1f9275aaf39727f18e2a103ccf1eb3bffa050d
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39543595"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43085756"
 ---
 # <a name="sysdmhadrclustermembers-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

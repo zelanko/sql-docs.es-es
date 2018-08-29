@@ -1,5 +1,5 @@
 ---
-title: Sys.database_audit_specifications (Transact-SQL) | Documentos de Microsoft
+title: Sys.database_audit_specifications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,22 +21,22 @@ helpviewer_keywords:
 - sys.database_audit_specifications catalog view
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91195df8c736b15429d4ac7e339ff19217c91bfd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9581acdf727d46157925010c47f92cea00862d8b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181651"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027303"
 ---
 # <a name="sysdatabaseauditspecifications-transact-sql"></a>sys.database_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene información sobre las especificaciones de auditoría de base de datos en una auditoría de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de una instancia del servidor. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |Nombre|**sysname**|Nombre de la especificación de auditoría.|  
 |database_specification_id|**int**|Identificador de la especificación de base de datos.|  
@@ -45,11 +45,11 @@ ms.locfileid: "33181651"
 |is_state_enabled|**bit**|Estado de la especificación de auditoría:<br /><br /> 0 – Deshabilitada<br /><br /> 1 – Habilitada|  
 |audit_GUID|**uniqueidentifier**|GUID de la auditoría que contiene esta especificación. Se usa durante la enumeración de las especificaciones de auditoría de base de datos miembro al adjuntar o iniciar la base de datos.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si una base de datos está en modo de solo lectura, la característica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit no puede agregar especificaciones de auditoría de base de datos.  
   
-## <a name="permissions"></a>Permissions  
- Entidades de seguridad con la **ALTER ANY DATABASE AUDIT** o **VIEW DEFINITION** permisos, el rol dbo y los miembros del rol fijo de base de datos db_owners tienen acceso a esta vista de catálogo. Además, la entidad de seguridad no se debe denegar **VIEW DEFINITION** permiso.  
+## <a name="permissions"></a>Permisos  
+ Las entidades de seguridad con el **ALTER ANY DATABASE AUDIT** o **VIEW DEFINITION** permisos, el rol dbo y los miembros del rol fijo de base de datos db_owners tienen acceso a esta vista de catálogo. Además, no se debe denegar la entidad de seguridad **VIEW DEFINITION** permiso.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

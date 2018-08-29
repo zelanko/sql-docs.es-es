@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_secondary_database (Transact-SQL) | Documentos de Microsoft
+title: sp_help_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_secondary_database
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
-caps.latest.revision: 28
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0e2a943234d835d1f78cf57c096fd8492849bfa0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bfdfd891065f0a0fa4cf30376fdaa0c55c5e10a0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259605"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033631"
 ---
 # <a name="sphelplogshippingsecondarydatabase-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_help_log_shipping_secondary_database
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Description|  
+|Nombre de columna|Descripción|  
 |-----------------|-----------------|  
 |**secondary_id**|Id. del servidor secundario en la configuración del trasvase de registros.|  
 |**primary_server**|El nombre de la instancia principal de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la configuración de trasvase de registros.|  
@@ -91,17 +90,17 @@ sp_help_log_shipping_secondary_database
 |**history_retention_period**|Cantidad de tiempo, en minutos, durante la que los registros de historial del trasvase de registros se mantienen en una base de datos secundaria determinada antes de ser eliminados.|  
 |**last_restored_latency**|Período de tiempo, en minutos, transcurrido desde que se creó la copia de seguridad de registros en el servidor primario hasta que se restauró en el servidor secundario.<br /><br /> El valor inicial es NULL.|  
   
-## <a name="remarks"></a>Comentarios  
- Si incluye el *secondary_database* parámetro, el conjunto de resultados contendrá información acerca de la base de datos secundaria; si incluye el *secondary_id* parámetro, que contendrá el conjunto de resultados obtener información sobre todas las bases de datos secundarias asociadas con ese Id. secundario.  
+## <a name="remarks"></a>Notas  
+ Si incluye el *secondary_database* parámetro, el conjunto de resultados contendrá información acerca de la base de datos secundaria; si incluye el *secondary_id* parámetro, que contendrá el conjunto de resultados información acerca de todas las bases de datos secundarias asociadas con ese Id. secundario.  
   
  **sp_help_log_shipping_secondary_database** se debe ejecutar desde la **maestro** base de datos en el servidor secundario.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento.  
   
 ## <a name="see-also"></a>Vea también  
  [sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
- [Acerca del trasvase de registros & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

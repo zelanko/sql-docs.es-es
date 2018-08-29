@@ -1,5 +1,5 @@
 ---
-title: Sys.xml_indexes (Transact-SQL) | Documentos de Microsoft
+title: Sys.xml_indexes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,23 +20,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_indexes catalog view
 ms.assetid: 3408de72-b067-4fda-b5d5-8e856dfd9db3
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbc15a06d6179165bd2f6f1d3c19eb24d42dfcc8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9751374d0e2a259ba8ba0c2abdb38592dc40ac01
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220796"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033768"
 ---
 # <a name="sysxmlindexes-transact-sql"></a>sys.xml_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila por índice XML.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**\<hereda columnas >**||Hereda columnas de [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).|  
 |**using_xml_index_id**|**int**|NULL = Índice XML principal.<br /><br /> Nonnull = Índice XML secundario.<br /><br /> Nonnull es una referencia de autocombinación al índice XML principal.|  
@@ -46,11 +45,11 @@ ms.locfileid: "33220796"
 |**xml_index_type_description**|**nvarchar(60)**|Descripción del tipo de índice:<br /><br /> PRIMARY_XML<br /><br /> Índice XML secundario<br /><br /> Índice XML selectivo<br /><br /> Índice XML selectivo secundario|  
 |**de path_id**|**int**|NULL para todos los índices XML, salvo el índice XML selectivo secundario.<br /><br /> También es el identificador de la ruta de acceso promovida en la que se va a generar el índice XML selectivo secundario. Este valor es el mismo que el de path_id de la vista del sistema sys.selective_xml_index_paths.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Vistas de catálogo del objeto &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
+ [Vistas de catálogo de objetos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

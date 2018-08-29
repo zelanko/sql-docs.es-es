@@ -1,5 +1,5 @@
 ---
-title: sp_changemergefilter (Transact-SQL) | Documentos de Microsoft
+title: sp_changemergefilter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changemergefilter
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 332cb7bd6d4afa477064bd014e36dc2e5b6e8aa7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c700ffbcee68cd3557dd5e5a170e8cbba59a0f50
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992912"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033008"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  En esta tabla se describen las propiedades de los artículos y los valores de esas propiedades.  
   
-|Propiedad|Value|Description|  
+|Property|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|Filtro de combinación.<br /><br /> Esta opción es necesaria para admitir los suscriptores de [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 ||**2**|Relación de registros lógicos.|  
@@ -80,31 +80,31 @@ sp_changemergefilter [ @publication= ] 'publication'
 ||**False**|La combinación no se hace sobre una clave exclusiva.|  
   
  [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es un **bits**, su valor predeterminado es **0**.  
+ Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
   
- **0** especifica que los cambios en el artículo de mezcla no invalidarán la instantánea no es válida. Si el procedimiento almacenado detecta que el cambio requiere una nueva instantánea, se producirá un error y no se realizarán cambios.  
+ **0** especifica que los cambios realizados en el artículo de mezcla no invalidarán la instantánea no es válido. Si el procedimiento almacenado detecta que el cambio requiere una nueva instantánea, se producirá un error y no se realizarán cambios.  
   
- **1** significa que los cambios en el artículo de mezcla pueden invalidar la instantánea no es válida y si hay suscripciones existentes que requieran una nueva instantánea, concede permiso para marcar como obsoleta la instantánea existente y generado una nueva.  
+ **1** significa que los cambios realizados en el artículo de mezcla pueden invalidar la instantánea no es válido y, si hay suscripciones existentes que requieran una nueva instantánea, concede el permiso necesario para marcar como obsoleta la instantánea existente y generado una nueva.  
   
  [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- Confirma que la acción realizada por este procedimiento almacenado puede requerir que se reinicialicen las suscripciones existentes. *force_reinit_subscription* es un **bits** con un valor predeterminado de **0**.  
+ Confirma que la acción realizada por este procedimiento almacenado puede requerir la reinicialización de las suscripciones existentes. *force_reinit_subscription* es un **bit** con un valor predeterminado de **0**.  
   
- **0** especifica que los cambios realizados en el artículo de mezcla hacen que la suscripción para reinicializarla. Si el procedimiento almacenado detecta que el cambio requiere la reinicialización de las suscripciones existentes, se producirá un error y no se realizarán cambios.  
+ **0** especifica que los cambios realizados en el artículo de mezcla no invalidarán la suscripción para reinicializarla. Si el procedimiento almacenado detecta que el cambio requiere la reinicialización de las suscripciones existentes, se producirá un error y no se realizarán cambios.  
   
- **1** significa que los cambios en el artículo de mezcla provocará que se reinicialicen las suscripciones existentes y concede permiso para que se lleve a cabo la reinicialización.  
+ **1** significa que los cambios en el artículo de mezcla hará que se reinicialicen las suscripciones existentes y concede permiso para que se produzca la reinicialización de suscripción.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_changemergefilter** se utiliza en la replicación de mezcla.  
   
  Para cambiar el filtro de un artículo de mezcla es preciso recrear la instantánea, si ya existe. Esto se realiza estableciendo la **@force_invalidate_snapshot** a **1**. Asimismo, si hay suscripciones para este artículo, es necesario reinicializarlas. Esto se hace estableciendo el **@force_reinit_subscription** a **1**.  
   
  Para utilizar registros lógicos, la publicación y los artículos deben satisfacer una serie de requisitos. Para más información, vea [Agrupar cambios en filas relacionadas con registros lógicos](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_changemergefilter**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_changemergefilter**.  
   
 ## <a name="see-also"></a>Vea también  
  [Cambiar las propiedades de la publicación y de los artículos](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   

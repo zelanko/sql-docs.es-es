@@ -1,5 +1,5 @@
 ---
-title: sysmail_start_sp (Transact-SQL) | Documentos de Microsoft
+title: sysmail_start_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sysmail_start_sp
 ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 caps.latest.revision: 32
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9513e95d52aed4ee7fb525504dfb112092e1807d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2fa805836387ae94cca2cba189eb4a9a9b20d8a3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255015"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024184"
 ---
 # <a name="sysmailstartsp-transact-sql"></a>sysmail_start_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,21 +52,21 @@ sysmail_start_sp
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Correo electrónico de base de datos no está habilitada o instalada[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalación. Utilice el Asistente para configuración de Correo electrónico de base de datos con el fin de habilitar e instalar los objetos de Correo electrónico de base de datos.  
   
  Este procedimiento almacenado se encuentra en la **msdb** base de datos. Este procedimiento almacenado inicia la cola de Correo electrónico de base de datos que contiene las solicitudes de mensajes salientes y habilita la activación de [!INCLUDE[ssSB](../../includes/sssb-md.md)] para el programa externo.  
   
- Cuando las colas se inician, el programa externo de Correo electrónico de base de datos puede procesar mensajes. Este procedimiento permite reiniciar las colas después de las colas se han detenido con el **sysmail_stop_sp** procedimiento almacenado.  
+ Cuando las colas se inician, el programa externo de Correo electrónico de base de datos puede procesar mensajes. Este procedimiento permite reiniciar las colas después de las colas se han detenido con la **sysmail_stop_sp** procedimiento almacenado.  
   
 > [!NOTE]  
 >  Este procedimiento almacenado solamente inicia las colas del Correo electrónico de base de datos. No activa la entrega de mensajes de [!INCLUDE[ssSB](../../includes/sssb-md.md)] en la base de datos.  
   
-## <a name="permissions"></a>Permissions  
- Permisos de ejecución para este procedimiento de forma predeterminada a los miembros de la **sysadmin** rol fijo de servidor.  
+## <a name="permissions"></a>Permisos  
+ Permisos de ejecución de este procedimiento de forma predeterminada a los miembros de la **sysadmin** rol fijo de servidor.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se muestra a partir de correo electrónico de base de datos de la **msdb** base de datos. En este ejemplo se da por supuesto que el Correo electrónico de base de datos está habilitado.  
+ El ejemplo siguiente muestra a partir de correo electrónico de base de datos la **msdb** base de datos. En este ejemplo se da por supuesto que el Correo electrónico de base de datos está habilitado.  
   
 ```  
 USE msdb ;  
@@ -78,7 +78,7 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)   
- [Opción de configuración de servidor de XPs de correo electrónico de base de datos](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)   
+ [Opción de configuración del servidor de base de datos Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)   
  [sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)   
  [Procedimientos almacenados de correo electrónico de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   

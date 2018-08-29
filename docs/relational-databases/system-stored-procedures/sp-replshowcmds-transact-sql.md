@@ -1,5 +1,5 @@
 ---
-title: sp_replshowcmds (Transact-SQL) | Documentos de Microsoft
+title: sp_replshowcmds (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replshowcmds
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74526c46a3758829a89c71d41c071070ec907d5f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4572fb1e09be2064fda17860ac64beb495783177
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998692"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023434"
 ---
 # <a name="spreplshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,29 +51,29 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_replshowcmds** es un procedimiento de diagnóstico que devuelve información acerca de la base de datos de publicación desde la que se ejecuta.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**xact_seqno**|**binary(10)**|Número de secuencia del comando.|  
-|**originator_id**|**int**|Id. del originador del comando, siempre **0**.|  
+|**originator_id**|**int**|Id. de originador del comando, siempre **0**.|  
 |**publisher_database_id**|**int**|Id. de la base de datos de publicador, siempre **0**.|  
-|**article_id**|**int**|Id. del artículo.|  
+|**article_id**|**int**|ID. del artículo.|  
 |**Tipo**|**int**|Tipo de comando.|  
 |**command**|**nvarchar(1024)**|Comando [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_replshowcmds** se utiliza en la replicación transaccional.  
   
- Usar **sp_replshowcmds**, puede ver las transacciones que están actualmente no distribuyan (aquellas transacciones que permanecen en el registro de transacciones que no se han enviado al distribuidor).  
+ Uso de **sp_replshowcmds**, puede ver las transacciones que están actualmente no distribuyan (aquellas transacciones restantes en el registro de transacciones que no se han enviado al distribuidor).  
   
- Los clientes que ejecutan **sp_replshowcmds** y **sp_replcmds** en la misma base de datos reciben el error 18752.  
+ Los clientes que ejecutan **sp_replshowcmds** y **sp_replcmds** dentro de la misma base de datos reciben el error 18752.  
   
- Para evitar este error, debe desconectar el primer cliente o el rol del cliente como lector del registro debe liberarse mediante la ejecución de **sp_replflush**. Después de que han desconectado todos los clientes de registro del log, **sp_replshowcmds** se puede ejecutar correctamente.  
+ Para evitar este error, debe desconectar el primer cliente o el rol de cliente como el registro del log debe liberarse mediante la ejecución de **sp_replflush**. Una vez que han desconectado todos los clientes de registro del log, **sp_replshowcmds** se puede ejecutar correctamente.  
   
 > [!NOTE]  
 >  **sp_replshowcmds** se debe ejecutar solo para solucionar problemas de replicación.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos puede ejecutar **sp_replshowcmds**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos se puede ejecutar **sp_replshowcmds**.  
   
 ## <a name="see-also"></a>Vea también  
  [Mensajes de error](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   

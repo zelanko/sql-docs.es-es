@@ -1,5 +1,5 @@
 ---
-title: sp_addmergefilter (Transact-SQL) | Documentos de Microsoft
+title: sp_addmergefilter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergefilter
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
-caps.latest.revision: 49
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fcb8e6ae00e7dfe644cbbd05eb72d6f574c993f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94e3fe6f22e683cdd61b8f4c831c2b0eed0e45a6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992022"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022700"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,35 +62,35 @@ sp_addmergefilter [ @publication = ] 'publication'
  Es el nombre del filtro. *filtername* es un parámetro necesario. *filtername*es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@join_articlename=** ] **'***join_articlename***'**  
- Es el artículo primario al que el artículo secundario, especificado por *artículo*, debe combinarse con la cláusula de combinación especificada por *join_filterclause*, para determinar las filas del artículo secundario que cumplen el criterio de filtro del filtro de combinación. *join_articlename* es **sysname**, no tiene ningún valor predeterminado. El artículo debe encontrarse en la publicación dada por *publicación*.  
+ Es el artículo primario al que el artículo secundario, especificado por *artículo*, debe combinarse con la cláusula de combinación especificada por *join_filterclause*, con el fin de determinar las filas del artículo secundario que cumplen el criterio de filtro del filtro de combinación. *join_articlename* es **sysname**, no tiene ningún valor predeterminado. El artículo debe estar en la publicación dada por *publicación*.  
   
  [  **@join_filterclause=** ] *join_filterclause*  
- Es la cláusula de combinación que se debe usar para combinar el artículo secundario especificado por *artículo*y el artículo primario especificado por *join_article*, para determinar las filas que cumplen criterios del filtro de mezcla. *join_filterclause* es **nvarchar (1000)**.  
+ Es la cláusula de combinación que debe usarse para combinar el artículo secundario especificado por *artículo*y el artículo primario especificado por *join_article*, con el fin de determinar las filas que cumplen criterios del filtro de mezcla. *join_filterclause* es **nvarchar (1000)**.  
   
  [  **@join_unique_key=** ] *join_unique_key*  
- Especifica si la combinación entre el artículo secundario *artículo*y el artículo primario *join_article*es uno a varios, uno a uno, varios a uno o varios a varios. *join_unique_key* es **int**, con un valor predeterminado es 0. **0** indica una combinación de varios a uno o varios a varios. **1** indica una combinación uno a uno o uno a varios. Este valor es **1** cuando las columnas de combinación forman una clave única en *join_article*, o si *join_filterclause* entre una clave externa en *artículo* y una clave principal en *join_article*.  
+ Especifica si la combinación entre el artículo secundario *artículo*y el artículo primario *join_article*es uno a varios, uno a uno, varios a uno o varios a varios. *join_unique_key* es **int**, su valor predeterminado es 0. **0** indica una combinación de varios a uno o varios a varios. **1** indica una combinación uno a uno o uno a varios. Este valor es **1** cuando las columnas de combinación forman una clave única en *join_article*, o si *join_filterclause* entre una clave externa en *artículo* y una clave principal en *join_article*.  
   
 > [!CAUTION]  
->  Solo se establece este parámetro en **1** si tiene una restricción en la columna de combinación en la tabla subyacente para el artículo primario que garantiza la exclusividad. Si *join_unique_key* está establecido en **1** incorrectamente, puede producirse la no convergencia de los datos.  
+>  Solo se establece este parámetro en **1** si tiene una restricción en la columna de combinación en la tabla subyacente para el artículo primario que garantice su unicidad. Si *join_unique_key* está establecido en **1** incorrectamente, puede producirse la no convergencia de los datos.  
   
  [  **@force_invalidate_snapshot=** ] *force_invalidate_snapshot*  
- Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es un **bits**, su valor predeterminado es **0**.  
+ Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
   
- **0** especifica que los cambios realizados en el artículo de mezcla no invalidarán la instantánea no es válida. Si el procedimiento almacenado detecta que el cambio requiere una nueva instantánea, se producirá un error y no se realizará ningún cambio.  
+ **0** especifica que los cambios realizados en el artículo de mezcla no invalidarán la instantánea no es válido. Si el procedimiento almacenado detecta que el cambio requiere una nueva instantánea, se producirá un error y no se realizará ningún cambio.  
   
- **1** especifica que los cambios en el artículo de mezcla pueden invalidar la instantánea no es válida y si hay suscripciones existentes que requieran una nueva instantánea, concede permiso para marcar como obsoleta la instantánea existente y una nueva instantánea genera.  
+ **1** especifica que los cambios realizados en el artículo de mezcla pueden invalidar la instantánea no es válido y si hay suscripciones existentes que requieran una nueva instantánea, concede permiso para marcar como obsoleta la instantánea existente y una nueva instantánea generado.  
   
  [  **@force_reinit_subscription=** ] *force_reinit_subscription*  
- Confirma que la acción realizada por este procedimiento almacenado puede requerir que se reinicialicen las suscripciones existentes. *force_reinit_subscription* es un **bits**, con un valor predeterminado es 0.  
+ Confirma que la acción realizada por este procedimiento almacenado puede requerir la reinicialización de las suscripciones existentes. *force_reinit_subscription* es un **bit**, su valor predeterminado es 0.  
   
- **0** especifica que los cambios realizados en el artículo de mezcla no hará que se reinicialice la suscripción. Si el procedimiento almacenado detecta que el cambio requiere que se reinicialicen las suscripciones, se producirá un error y no se realizarán cambios.  
+ **0** especifica que los cambios realizados en el artículo de mezcla no invalidarán la suscripción para reinicializarla. Si el procedimiento almacenado detecta que el cambio requiere que se reinicialicen las suscripciones, se producirá un error y no se realizarán cambios.  
   
- **1** especifica que los cambios en el artículo de mezcla darán lugar a que se reinicialicen las suscripciones existentes y concede permiso para que se lleve a cabo la reinicialización.  
+ **1** especifica que los cambios realizados en el artículo de mezcla hará que se reinicialicen las suscripciones existentes y concede permiso para que se produzca la reinicialización de suscripción.  
   
  [  **@filter_type=** ] *filter_type*  
  Especifica el tipo de filtro que se agrega. *filter_type* es **tinyint**, y puede tener uno de los siguientes valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Solo filtro de combinación. Debe admitir [!INCLUDE[ssEW](../../includes/ssew-md.md)] los suscriptores.|  
 |**2**|Solo relación de registros lógicos.|  
@@ -102,12 +101,12 @@ sp_addmergefilter [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_addmergefilter** se utiliza en la replicación de mezcla.  
   
- **sp_addmergefilter** sólo puede utilizarse con artículos de la tabla. No se admiten los artículos de vista ni de vista indizada.  
+ **sp_addmergefilter** solo se puede usar con artículos de tabla. No se admiten los artículos de vista ni de vista indizada.  
   
- Este procedimiento se puede utilizar también para agregar una relación lógica entre dos artículos que pueden tener o no un filtro de combinación entre ellos. *filter_type* se utiliza para especificar si el filtro de mezcla que se va a agregar es un filtro de combinación, una relación lógica o ambas cosas.  
+ Este procedimiento se puede utilizar también para agregar una relación lógica entre dos artículos que pueden tener o no un filtro de combinación entre ellos. *filter_type* se utiliza para especificar si el filtro de mezcla que se va a agregar es un filtro de combinación, una relación lógica o ambos.  
   
  Para utilizar registros lógicos, la publicación y los artículos deben satisfacer una serie de requisitos. Para más información, vea [Agrupar cambios en filas relacionadas con registros lógicos](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
@@ -120,13 +119,13 @@ sp_addmergefilter [ @publication = ] 'publication'
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_addmergefilter](../../relational-databases/replication/codesnippet/tsql/sp-addmergefilter-transa_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_addmergefilter**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_addmergefilter**.  
   
 ## <a name="see-also"></a>Vea también  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
- [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Filtros de combinación](../../relational-databases/replication/merge/join-filters.md)   
+ [Definir y modificar un filtro de combinación entre artículos de mezcla](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: sp_copysubscription (Transact-SQL) | Documentos de Microsoft
+title: sp_copysubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_copysubscription
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3cae06562e37cf10c2fa94934eedb20880b4391a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8b96c458f38dc43a7d35f00d88b4572a9ae95d5d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993222"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030326"
 ---
 # <a name="spcopysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,22 +55,22 @@ sp_copysubscription [ @filename = ] 'file_name'
  Es la cadena que especifica la ruta de acceso completa, incluido el nombre de archivo, donde se guardará una copia del archivo de datos (.mdf). *nombre de archivo* es **nvarchar (260)**, no tiene ningún valor predeterminado.  
   
  [  **@temp_dir=**] **'***temp_dir***'**  
- Es el nombre del directorio que contiene los archivos temporales. *temp_dir* es **nvarchar (260)**, su valor predeterminado es null. Si es NULL, el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se utilizará el directorio de datos predeterminado. El directorio debe tener espacio suficiente para contener un archivo que tenga el tamaño de todos los archivos de la base de datos del suscriptor combinados.  
+ Es el nombre del directorio que contiene los archivos temporales. *temp_dir* es **nvarchar (260)**, su valor predeterminado es null. Si es NULL, el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se usará el directorio de datos predeterminado. El directorio debe tener espacio suficiente para contener un archivo que tenga el tamaño de todos los archivos de la base de datos del suscriptor combinados.  
   
  [  **@overwrite_existing_file=**] **'***overwrite_existing_file***'**  
- Es una marca booleana opcional que especifica si se debe o no sobrescribir un archivo existente del mismo nombre especificado en **@filename**. *overwrite_existing_file*es **bits**, su valor predeterminado es **0**. Si **1**, sobrescribe el archivo especificado por **@filename**, si existe. Si **0**, el procedimiento almacenado produce un error si el archivo existe y no se sobrescribe el archivo.  
+ Es una marca booleana opcional que especifica si se debe o no sobrescribir archivos existentes del mismo nombre especificado en **@filename**. *overwrite_existing_file*es **bit**, su valor predeterminado es **0**. Si **1**, sobrescribe el archivo especificado por **@filename**, si existe. Si **0**, el procedimiento almacenado produce un error si el archivo existe y no se sobrescribe el archivo.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
- **sp_copysubscription** se utiliza en todos los tipos de replicación para copiar una base de datos de suscripción a un archivo como alternativa al aplicar la instantánea en el suscriptor. La base de datos se debe configurar para que solo admita suscripciones de extracción. Los usuarios que tengan los permisos apropiados pueden realizar copias de la base de datos de suscripciones y, a continuación, enviar por correo electrónico, copiar o transportar el archivo de suscripción (.msf) a otro suscriptor, donde se puede adjuntar como una suscripción.  
+## <a name="remarks"></a>Notas  
+ **sp_copysubscription** se utiliza en todos los tipos de replicación para copiar una base de datos de suscripción a un archivo como una alternativa al aplicar una instantánea en el suscriptor. La base de datos se debe configurar para que solo admita suscripciones de extracción. Los usuarios que tengan los permisos apropiados pueden realizar copias de la base de datos de suscripciones y, a continuación, enviar por correo electrónico, copiar o transportar el archivo de suscripción (.msf) a otro suscriptor, donde se puede adjuntar como una suscripción.  
   
  El tamaño de la base de datos de suscripciones que se va a copiar debe ser inferior a 2 gigabytes (GB).  
   
- **sp_copysubscription** solo se admite para bases de datos con las suscripciones de cliente y no se puede ejecutar cuando la base de datos tiene suscripciones de servidor.  
+ **sp_copysubscription** solo se admite para bases de datos con las suscripciones de cliente y no se puede ejecutar cuando la base de datos tiene las suscripciones de servidor.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_copysubscription**.  
   
 ## <a name="see-also"></a>Vea también  

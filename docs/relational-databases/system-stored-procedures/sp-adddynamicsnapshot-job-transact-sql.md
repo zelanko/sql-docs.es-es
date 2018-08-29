@@ -1,5 +1,5 @@
 ---
-title: sp_adddynamicsnapshot_job (Transact-SQL) | Documentos de Microsoft
+title: sp_adddynamicsnapshot_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddynamicsnapshot_job
 ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
-caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2a4967dd959be15f8f9bb1ef4654486b6fee6ace
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5592667914cc3109058b81366288dba3d27234da
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993802"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032216"
 ---
 # <a name="spadddynamicsnapshotjob-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +88,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_type=**] *frequency_type*  
  Es la frecuencia con que se programa el trabajo de instantáneas de datos filtrados. *frequency_type* es **int**, y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
@@ -107,16 +106,16 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |--------------------------------|-------------------------------------|  
 |**1**|*frequency_interval* no se utiliza.|  
 |**4** (valor predeterminado)|Cada *frequency_interval* días, con un valor predeterminado de diariamente.|  
-|**8**|*frequency_interval* es uno o varios de los siguientes (combinado con un [ &#124; &#40;OR bit a bit&#41; &#40;Transact-SQL&#41; ](../../t-sql/language-elements/bitwise-or-transact-sql.md) operador lógico):<br /><br /> **1** = el domingo &#124; **2** = el lunes &#124; **4** = el martes &#124; **8** = el miércoles &#124; **16** = El jueves &#124; **32** = el viernes &#124; **64** = el sábado|  
+|**8**|*frequency_interval* es uno o varios de los siguientes (combinados con un [ &#124; &#40;OR bit a bit&#41; &#40;Transact-SQL&#41; ](../../t-sql/language-elements/bitwise-or-transact-sql.md) operador lógico):<br /><br /> **1** = el domingo &#124; **2** = el lunes &#124; **4** = el martes &#124; **8** = el miércoles &#124; **16** = El jueves &#124; **32** = el viernes &#124; **64** = el sábado|  
 |**16**|En el *frequency_interval* día del mes.|  
-|**32**|*frequency_interval* es uno de los siguientes:<br /><br /> **1** = el domingo &#124; **2** = el lunes &#124; **3** = el martes &#124; **4** = el miércoles &#124; **5** = El jueves &#124; **6** = el viernes &#124; **7** = el sábado &#124; **8** = día &#124; **9** = día de la semana &#124; **10** = día del fin de semana|  
+|**32**|*frequency_interval* es uno de los siguientes:<br /><br /> **1** = el domingo &#124; **2** = el lunes &#124; **3** = el martes &#124; **4** = el miércoles &#124; **5** = El jueves &#124; **6** = el viernes &#124; **7** = el sábado &#124; **8** = día &#124; **9** = día laborable &#124; **10** = día del fin de semana|  
 |**64**|*frequency_interval* no se utiliza.|  
 |**128**|*frequency_interval* no se utiliza.|  
   
  [  **@frequency_subday=**] *frequency_subday*  
  Especifica las unidades de *frequency_subday_interval*. *frequency_subday* es **int**, y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|Second|  
@@ -129,7 +128,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  Es la repetición del trabajo de instantáneas de datos filtrados en cada mes. Este parámetro se utiliza cuando *frequency_type* está establecido en **32** (relativo mensual). *frequency_relative_interval* es **int**, y puede tener uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1** (predeterminado)|Primero|  
 |**2**|Second|  
@@ -138,7 +137,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**16**|Último|  
   
  [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es **int**, con un valor predeterminado es 0.  
+ Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es **int**, su valor predeterminado es 0.  
   
  [  **@active_start_date=**] *active_start_date*  
  Es la fecha en que el trabajo de instantáneas de datos filtrados se programa por primera vez, con el formato AAAAMMDD. *active_start_date* es **int**, su valor predeterminado es null.  
@@ -154,7 +153,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identifica el trabajo de instantáneas de datos filtrados en el [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) tabla del sistema.|  
 |**dynamic_snapshot_jobname**|**sysname**|Nombre del trabajo de instantáneas de datos filtrados.|  
@@ -163,18 +162,18 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_adddynamicsnapshot_job** se utiliza en la replicación de mezcla para publicaciones que utilizan un filtro con parámetros.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_MergeDynamicPubPlusPartition](../../relational-databases/replication/codesnippet/tsql/sp-adddynamicsnapshot-jo_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos puede ejecutar **sp_adddynamicsnapshot_job**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos se puede ejecutar **sp_adddynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>Vea también  
  [Crear una instantánea para una publicación de mezcla con filtros con parámetros](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
- [Filtros de fila con parámetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
+ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [sp_dropdynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
  [sp_helpdynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)  
   

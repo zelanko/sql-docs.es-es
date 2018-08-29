@@ -1,5 +1,5 @@
 ---
-title: sp_helpsubscriptionerrors (Transact-SQL) | Documentos de Microsoft
+title: sp_helpsubscriptionerrors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpsubscriptionerrors
 ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d02a5a5323956bb5835d41ff3c9df6fcccf630d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 870e8197a8182ab813ea8b165b46b4888f96726e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996862"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031968"
 ---
 # <a name="sphelpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publisher=** ] **'***publisher***'**  
- Es el nombre del publicador. *Publisher* es **sysname**, no tiene ningún valor predeterminado.  
+ Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
  Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
@@ -66,27 +66,27 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Id. del error.|  
-|**time**|**datetime**|Hora que del error.|  
+|**time**|**datetime**|Se produjo el error de tiempo.|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|Id. del tipo de origen del error.|  
-|**source_name**|**nvarchar (100)**|Nombre del origen del error.|  
+|**source_name**|**Nvarchar (100)**|Nombre del origen del error.|  
 |**error_code**|**sysname**|Código de error.|  
-|**error_text**|**ntext**|Mensaje de error.|  
+|**error_text**|**ntext**|mensaje de error.|  
 |**xact_seqno**|**varbinary (16)**|Número de secuencia del registro de transacciones de inicio del lote de ejecución fallido. Solo lo utilizan los Agentes de distribución; se trata del número de secuencia del registro de transacciones de la primera transacción en el proceso por lotes de ejecución errónea.|  
-|**command_id**|**int**|Identificador de comando del lote de ejecución fallido. Solo lo utilizan los Agentes de distribución, y se trata del Id. del comando del primer comando del proceso por lotes de ejecución fallida.|  
+|**$command_id**|**int**|Identificador de comando del lote de ejecución con errores. Solo lo utilizan los Agentes de distribución, y se trata del Id. del comando del primer comando del proceso por lotes de ejecución fallida.|  
 |**session_id**|**int**|Id. de la sesión del agente en el que se produjo el error.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
- **sp_helpsubscriptionerrors** se utiliza con la replicación de instantáneas y transaccional.  
+## <a name="remarks"></a>Notas  
+ **sp_helpsubscriptionerrors** se usa con la replicación de instantáneas y transaccional.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_helpsubscriptionerrors**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_helpsubscriptionerrors**.  
   
 ## <a name="see-also"></a>Vea también  
  [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   

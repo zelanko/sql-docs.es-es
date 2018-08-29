@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_disable_table (Transact-SQL) | Documentos de Microsoft
+title: Sys.sp_cdc_disable_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_disable_table
 - change data capture [SQL Server], disabling tables
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 16356cc8a5d427a9432ac8c753b1e51d915337d4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9450d80191ac611004cc39528820f49949232823
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255929"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028333"
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +60,10 @@ sys.sp_cdc_disable_table
   
  *source_name* debe existir en la base de datos actual.  
   
- [  **@capture_instance=** ] **'***capture_instance***'** | **'** todos los **'**  
+ [  **@capture_instance=** ] **'***capture_instance***'** | **'** todas **'**  
  Es el nombre de la instancia de captura que se deshabilitará para la tabla de origen especificada. *capture_instance* es **sysname** y no puede ser NULL.  
   
- Cuando se especifica 'all', todas las instancias de captura definidas para *source_name* están deshabilitados.  
+ Cuando se especifica 'all', todas las instancias definidas para de captura *source_name* están deshabilitados.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -72,10 +71,10 @@ sys.sp_cdc_disable_table
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- **Sys.sp_cdc_disable_table** quita la captura de datos modificados cambiar funciones del sistema y de la tabla asociadas a la instancia de captura y la tabla de origen especificado. Elimina cualquier fila asociada a la instancia de captura especificada desde la tablas de sistema de captura de datos de cambio y establece el **is_tracked_by_cdc** columna para la entrada de la tabla en la [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) vista de catálogo en 0.  
+## <a name="remarks"></a>Notas  
+ **Sys.sp_cdc_disable_table** quita la captura de datos modificados cambiar funciones del sistema y de la tabla asociadas a la instancia de captura y la tabla de origen especificado. Elimina cualquier fila asociada a la instancia de captura especificada desde las tablas del sistema de captura de datos y establece el **is_tracked_by_cdc** columna para la entrada de tabla en la [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) vista de catálogo en 0.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer a la **db_owner** rol fijo de base de datos.  
   
 ## <a name="examples"></a>Ejemplos  

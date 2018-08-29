@@ -1,5 +1,5 @@
 ---
-title: sp_migrate_user_to_contained (Transact-SQL) | Documentos de Microsoft
+title: sp_migrate_user_to_contained (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,22 +19,22 @@ helpviewer_keywords:
 - sp_migrate_user_to_contained
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 606898bf92ff727cd3d48f49f7f352cf06e8f9fe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: da98251792db96d766f63183715bd39f0a394406
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257840"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031938"
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Convierte a un usuario de base de datos asignado a un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un usuario de base de datos independiente con contraseña. En una base de datos independiente, utilice este procedimiento para quitar las dependencias sobre la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde se instala la base de datos. **sp_migrate_user_to_contained** separa al usuario original [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión, para que los valores como contraseña e idioma predeterminado se puedan administrar por separado para la base de datos independiente. **sp_migrate_user_to_contained** puede usarse antes de mover la base de datos independiente a una instancia distinta de la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para eliminar las dependencias en la actual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicios de sesión de la instancia.  
+  Convierte a un usuario de base de datos asignado a un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un usuario de base de datos independiente con contraseña. En una base de datos independiente, utilice este procedimiento para quitar las dependencias sobre la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde se instala la base de datos. **sp_migrate_user_to_contained** separa al usuario original [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión, para que la configuración de como contraseña e idioma predeterminado se puedan administrar independientemente de la base de datos independiente. **sp_migrate_user_to_contained** puede usarse antes de mover la base de datos independiente a una instancia diferente de la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para eliminar las dependencias en la actual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicios de sesión de instancia.  
   
- **Tenga en cuenta** este procedimiento sólo se utiliza en una base de datos independiente. Para más información, consulte [Contained Databases](../../relational-databases/databases/contained-databases.md).  
+ **Tenga en cuenta** este procedimiento solo se usa en una base de datos independiente. Para más información, consulte [Contained Databases](../../relational-databases/databases/contained-databases.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -58,8 +58,8 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
- **sp_migrate_user_to_contained** crea el usuario de base de datos independiente con contraseña, independientemente de las propiedades o los permisos del inicio de sesión. Por ejemplo, el procedimiento puede tener éxito si el inicio de sesión está deshabilitado o si el usuario tiene denegado el **conectar** permiso para la base de datos.  
+## <a name="remarks"></a>Notas  
+ **sp_migrate_user_to_contained** crea el usuario de base de datos independiente con contraseña, independientemente de las propiedades o los permisos del inicio de sesión. Por ejemplo, el procedimiento puede realizarse correctamente si el inicio de sesión está deshabilitado o si el usuario se ha denegado la **CONNECT** permiso para la base de datos.  
   
  **sp_migrate_user_to_contained** tiene las siguientes restricciones.  
   
@@ -69,16 +69,16 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
   
 -   El usuario no puede especificarse en el **EXECUTE AS** cláusula de un procedimiento almacenado firmado.  
   
--   El usuario no puede poseer un procedimiento almacenado que incluye el **EXECUTE AS OWNER** cláusula.  
+-   El usuario no puede poseer un procedimiento almacenado que incluya el **EXECUTE AS OWNER** cláusula.  
   
 -   **sp_migrate_user_to_contained** no se puede usar en una base de datos del sistema.  
   
 ## <a name="security"></a>Seguridad  
- Al realizar la migración de los usuarios, tenga el cuidado de no deshabilitar o eliminar todos los inicios de sesión de administrador de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si se eliminan todos los inicios de sesión, vea [conectar a SQL Server al sistema los administradores no tienen acceso](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md).  
+ Al realizar la migración de los usuarios, tenga el cuidado de no deshabilitar o eliminar todos los inicios de sesión de administrador de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si se eliminan todos los inicios de sesión, vea [conectarse a SQL Server al sistema los administradores son bloqueado](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md).  
   
  Si el **BUILTIN\Administrators** inicio de sesión está presente, los administradores pueden conectar iniciando su aplicación mediante la **ejecutar como administrador** opción.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Permisos  
  Requiere el permiso **CONTROL SERVER** .  
   
 ## <a name="examples"></a>Ejemplos  

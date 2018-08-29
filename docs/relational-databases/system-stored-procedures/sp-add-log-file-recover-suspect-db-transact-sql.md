@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_file_recover_suspect_db
 ms.assetid: b41ca3a5-7222-4c22-a012-e66a577a82f6
-caps.latest.revision: 37
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7da1686b6b03b75e6ba40cd7d4f9686d8af17980
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2f6745cd02ef098b6a7dd8825ec585ac1e74c5f6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239045"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029777"
 ---
 # <a name="spaddlogfilerecoversuspectdb-transact-sql"></a>sp_add_log_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +52,10 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
  Es el nombre de la base de datos. *base de datos* es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@name=** ] **'***nombre_de_archivo_lógico***'**  
- Es el nombre usado en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se hace referencia al archivo. El nombre debe ser único en el servidor. *nombre_de_archivo_lógico* es **nvarchar (260)**, no tiene ningún valor predeterminado.  
+ Es el nombre usado en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se hace referencia al archivo. El nombre debe ser único en el servidor. *logical_file_name* es **nvarchar (260)**, no tiene ningún valor predeterminado.  
   
- [  **@filename =** ] **'***nombre_de_archivo_de_sistema_operativo***'**  
- Es la ruta de acceso y el nombre de archivo que el sistema operativo utiliza para el archivo. El archivo debe residir en el servidor donde esté instalado el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. *nombre_de_archivo_de_sistema_operativo* es **nvarchar (260)**, no tiene ningún valor predeterminado.  
+ [  **@filename =** ] **'***os_file_name***'**  
+ Es la ruta de acceso y el nombre de archivo que el sistema operativo utiliza para el archivo. El archivo debe residir en el servidor donde esté instalado el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. *os_file_name* es **nvarchar (260)**, no tiene ningún valor predeterminado.  
   
  [ **@size=** ] **'***size* **'**  
  Es el tamaño inicial del archivo. *tamaño* es **nvarchar (20)**, su valor predeterminado es null. Especifique un número entero; no incluya decimales. Se pueden utilizar los sufijos MB y KB para especificar megabytes o kilobytes, respectivamente. El valor predeterminado es MB. El valor mínimo es 512 KB. Si *tamaño* no se especifica, el valor predeterminado es 1 MB.  
@@ -67,7 +66,7 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
  Si *max_size* no se especifica, el archivo crecerá hasta que el disco está lleno. El registro de aplicación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows avisa a un administrador cuando un disco está a punto de llenarse.  
   
  [  **@filegrowth=** ] **' *** growth_increment* **'**  
- Es la cantidad de espacio que se agrega al archivo cada vez que se necesita más espacio. *growth_increment* es **nvarchar (20)**, su valor predeterminado es null. Un valor 0 indica que no hay crecimiento. Especifique un número entero; no incluya decimales. El valor se puede especificar en MB, KB o como un porcentaje (%). Cuando se especifica %, el incremento de crecimiento es el porcentaje especificado del tamaño del archivo en el momento en que tiene lugar el incremento. Si se especifica un número sin los sufijos MB, KB o %, el valor predeterminado es MB.  
+ Es la cantidad de espacio que se agrega al archivo cada vez que se necesita más espacio. *growth_increment* es **nvarchar (20)**, su valor predeterminado es null. Un valor 0 indica que no hay crecimiento. Especifique un número entero; no incluya decimales. El valor se puede especificar en MB, KB o como un porcentaje (%). Cuando se especifica %, el incremento de crecimiento es el porcentaje del tamaño del archivo especificado en el momento en que tiene lugar el incremento. Si se especifica un número sin los sufijos MB, KB o %, el valor predeterminado es MB.  
   
  Si *growth_increment* es NULL, el valor predeterminado es 10% y el valor de tamaño mínimo es 64 KB. El tamaño especificado se redondea al múltiplo de 64 KB más cercano.  
   
@@ -77,7 +76,7 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Permisos de ejecución predeterminados a los miembros de la **sysadmin** rol fijo de servidor. Estos permisos no se pueden transferir.  
   
 ## <a name="examples"></a>Ejemplos  

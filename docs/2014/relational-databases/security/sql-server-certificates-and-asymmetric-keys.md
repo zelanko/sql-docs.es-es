@@ -11,16 +11,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server], certificates and asymmetric keys
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
-caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0e638dfb02fb5b944a6d7607cdc3bb320a8aeb94
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e789ea94a33db2f53a526c00a588d259eba69c1b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191595"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027921"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificados y claves asimétricas de SQL Server
   La criptografía de clave pública (PKI) es un método para mantener la confidencialidad de los mensajes en el que el usuario crea una clave *pública* y una clave *privada* . La clave privada se mantiene en secreto, mientras que la clave pública se puede distribuir a otras personas. Aunque existe una relación matemática entre las claves, no resulta sencillo deducir la clave privada partiendo de la clave pública. La clave pública se utiliza para cifrar los datos y la clave privada se utiliza para descifrarlos. Un mensaje que se cifra mediante la clave pública solo se puede descifrar con la clave privada correcta. Dado que existen dos claves diferentes, estas claves son *asimétricas*.  

@@ -1,5 +1,5 @@
 ---
-title: sp_refreshview (Transact-SQL) | Documentos de Microsoft
+title: sp_refreshview (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_refreshview
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9871a4ce62ce2916a1cd27c3ca8735de28cfa1b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ed5f50b9b95f2f156632fb14c2cd471ef010bcac
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249437"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031483"
 ---
 # <a name="sprefreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_refreshview [ @viewname = ] 'viewname'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o un número distinto de cero (error)  
   
-## <a name="remarks"></a>Comentarios  
- Si no se crea una vista con schemabinding, **sp_refreshview** deben ejecutarse cuando se realizan cambios en los objetos subyacentes de la vista que afectan a la definición de la vista. De lo contrario, la vista podría producir resultados inesperados en las consultas.  
+## <a name="remarks"></a>Notas  
+ Si no se crea una vista con schemabinding, **sp_refreshview** debe ejecutarse cuando se realizan cambios en los objetos subyacentes de la vista que afectan a la definición de la vista. De lo contrario, la vista podría producir resultados inesperados en las consultas.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER en la vista y el permiso REFERENCES en los tipos definidos por el usuario Common Language Runtime (CLR) y las colecciones de esquemas XML a los que hacen referencia las columnas de la vista.  
   
 ## <a name="examples"></a>Ejemplos  

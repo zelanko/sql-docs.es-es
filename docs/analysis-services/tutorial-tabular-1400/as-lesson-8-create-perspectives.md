@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services tutorial lección 8: creación de perspectivas | Microsoft Docs'
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 69511478e6580328776548d354e6801323a5f7e0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 080b20dbcf7438d26102a3bf906256343271af45
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37973067"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43085326"
 ---
 # <a name="create-perspectives"></a>Crear perspectivas
 

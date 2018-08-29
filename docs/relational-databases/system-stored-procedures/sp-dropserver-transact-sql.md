@@ -1,5 +1,5 @@
 ---
-title: sp_dropserver (Transact-SQL) | Documentos de Microsoft
+title: sp_dropserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - sp_dropserver
 ms.assetid: 0fc83e35-0caa-49a3-a4b6-a1890d4f46ef
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: de6ca972e28636a9b6e71164dd31180bdd9f7a12
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: faf0d79f399a714e4402d59c662df12021eb34f2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39559655"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031908"
 ---
 # <a name="spdropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

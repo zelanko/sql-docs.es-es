@@ -1,5 +1,5 @@
 ---
-title: sp_getmergedeletetype (Transact-SQL) | Documentos de Microsoft
+title: sp_getmergedeletetype (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_getmergedeletetype
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04437ebf7d33c81a847fe8f17ca74a0cb68b4279
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96258cb01e49c3d0b3fc2b83960e7d4aff6b64a1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994084"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027762"
 ---
 # <a name="spgetmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,19 +52,19 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
  Es el identificador de fila del tipo de eliminación. *ROWGUID* es **uniqueidentifier**, no tiene ningún valor predeterminado.  
   
  [  **@delete_type=**] *delete_type* **salida**  
- Es el código que indica el tipo de eliminación. *delete_type* es **int**, no tiene ningún valor predeterminado. *delete_type* también es un parámetro OUTPUT y puede tener uno de estos valores.  
+ Es el código que indica el tipo de eliminación. *delete_type* es **int**, no tiene ningún valor predeterminado. *delete_type* también es un parámetro de salida, y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Eliminación por parte del usuario|  
 |**5**|Eliminación parcial|  
 |**6**|Eliminación por parte del sistema|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_getmergedeletetype** se utiliza en la replicación de mezcla.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos puede ejecutar **sp_getmergedeletetype**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos se puede ejecutar **sp_getmergedeletetype**.  
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

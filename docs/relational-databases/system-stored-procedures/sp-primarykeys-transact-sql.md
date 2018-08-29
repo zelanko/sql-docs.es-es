@@ -1,5 +1,5 @@
 ---
-title: sp_primarykeys (Transact-SQL) | Documentos de Microsoft
+title: sp_primarykeys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_primarykeys
 ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4377ac2958a2c5e1f00cf83985f6730d8194e6b9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 072654778b1f2485d0d425f450209ddabcb994fe
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262675"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024093"
 ---
 # <a name="spprimarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|Catálogo de la tabla.|  
 |**SEGÚN TABLE_SCHEM**|**sysname**|Esquema de la tabla|  
@@ -73,12 +73,12 @@ sp_primarykeys [ @table_server = ] 'table_server'
 |**KEY_SEQ**|**int**|Número de secuencia de la columna en una clave principal con varias columnas.|  
 |**PK_NAME**|**sysname**|Identificador de la clave principal. Devuelve NULL si no es aplicable al origen de datos.|  
   
-## <a name="remarks"></a>Comentarios  
- **sp_primarykeys** se ejecuta al consultar el conjunto de filas PRIMARY_KEYS de la **IDBSchemaRowset** interfaz del proveedor OLE DB correspondiente a *table_server*. El *table_name*, *table_schema*, *table_catalog*, y *columna* parámetros se pasan a esta interfaz para restringir las filas Devuelve.  
+## <a name="remarks"></a>Notas  
+ **sp_primarykeys** se ejecuta al consultar el conjunto de filas PRIMARY_KEYS de la **IDBSchemaRowset** interfaz del proveedor OLE DB correspondiente a *table_server*. El *table_name*, *table_schema*, *table_catalog*, y *columna* los parámetros se pasan a esta interfaz para restringir las filas Devuelve.  
   
- **sp_primarykeys** devuelve un resultado vacío establecer si el proveedor OLE DB del servidor vinculado especificado no es compatible con el conjunto de filas PRIMARY_KEYS de la **IDBSchemaRowset** interfaz.  
+ **sp_primarykeys** devuelve un resultado vacío se establece si el proveedor OLE DB del servidor vinculado especificado no es compatible con el conjunto de filas PRIMARY_KEYS de la **IDBSchemaRowset** interfaz.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -97,7 +97,7 @@ EXEC sp_primarykeys @table_server = N'LONDON1',
  [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
  [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

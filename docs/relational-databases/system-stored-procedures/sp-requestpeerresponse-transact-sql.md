@@ -1,5 +1,5 @@
 ---
-title: sp_requestpeerresponse (Transact-SQL) | Documentos de Microsoft
+title: sp_requestpeerresponse (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_requestpeerresponse
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83f5cfcac2f109b88fc63ab96942d7682bdb2a90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b722bac6727e6d64bb0c2c475ca900ea78c8fc1d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998212"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024377"
 ---
 # <a name="sprequestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,15 +59,15 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_requestpeerresponse** se utiliza en la replicación transaccional punto a punto.  
   
- **sp_requestpeerresponse** se utiliza para garantizar que todos los comandos se han recibido todos los otros nodos antes de restaurar una base de datos publicada en una topología punto a punto. Se utiliza también al replicar cambios del lenguaje de definición de datos (DDL) realizados mientras un nodo estaba sin conexión para calcular cuándo llegan estos cambios a los otros nodos.  
+ **sp_requestpeerresponse** se utiliza para garantizar que todos los comandos han sido recibidos por todos los demás nodos antes de restaurar una base de datos publicada en una topología punto a punto. Se utiliza también al replicar cambios del lenguaje de definición de datos (DDL) realizados mientras un nodo estaba sin conexión para calcular cuándo llegan estos cambios a los otros nodos.  
   
- **sp_requestpeerresponse** no puede ejecutarse en una transacción definida por el usuario.  
+ **sp_requestpeerresponse** no se puede ejecutar dentro de una transacción definida por el usuario.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos puede ejecutar **sp_requestpeerresponse**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos se puede ejecutar **sp_requestpeerresponse**.  
   
 ## <a name="see-also"></a>Vea también  
  [sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   

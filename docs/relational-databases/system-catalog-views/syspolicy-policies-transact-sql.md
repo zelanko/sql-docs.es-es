@@ -1,5 +1,5 @@
 ---
-title: syspolicy_policies (Transact-SQL) | Documentos de Microsoft
+title: syspolicy_policies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,26 +18,25 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_policies view
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
-caps.latest.revision: 25
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5c05a24d94ba5b65eff8c3aec2791c9993b99589
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5eb4c6d9586b2e7b6e946b461e9d6c200042223c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221506"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031256"
 ---
 # <a name="syspolicypolicies-transact-sql"></a>syspolicy_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Muestra una fila para cada directiva de administración basada en directivas en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. syspolicy_policies que pertenece al esquema dbo en la base de datos msdb. En la tabla siguiente se describen las columnas de la vista syspolicy_policies.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |policy_id|**int**|Identificador de la directiva.|  
-|name|**sysname**|Nombre de la directiva.|  
+|NAME|**sysname**|Nombre de la directiva.|  
 |condition_id|**int**|Identificador de la condición exigida o probada por esta directiva.|  
 |root_condition_id|**int**|Exclusivamente para uso interno.|  
 |date_created|**datetime**|Fecha y hora cuando se creó la directiva.|  
@@ -54,10 +53,10 @@ ms.locfileid: "33221506"
 |modified_by|**sysname**|Inicio de sesión que modificó la directiva por última vez. Es NULL si nunca se produjo una modificación.|  
 |date_modified|**datetime**|Fecha y hora cuando se creó la directiva. Es NULL si nunca se produjo una modificación.|  
   
-## <a name="remarks"></a>Comentarios  
- Cuando está solucionando problemas de administración basada en directivas, consulte la [syspolicy_conditions](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md) vista para determinar si la directiva está habilitada. Esta vista también muestra quién creó la directiva o la cambió en último lugar.  
+## <a name="remarks"></a>Notas  
+ Cuando solucione problemas de administración basada en directivas, consulte el [syspolicy_conditions](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md) vista para determinar si la directiva está habilitada. Esta vista también muestra quién creó la directiva o la cambió en último lugar.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol PolicyAdministratorRole en la base de datos msdb.  
   
 ## <a name="see-also"></a>Vea también  

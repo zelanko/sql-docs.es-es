@@ -18,16 +18,15 @@ helpviewer_keywords:
 - permissions [SQL Server], hierarchy
 - security [SQL Server], granting access
 ms.assetid: f6d20a55-ef03-4e14-85f9-009902889866
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: bd63fe14bf1f21196a727e44596fae5682b51117
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a3ffccce83685f3ec765264ab3eaf6b78a11953b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247955"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030627"
 ---
 # <a name="permissions-hierarchy-database-engine"></a>Jerarquía de permisos (motor de base de datos)
   El [!INCLUDE[ssDE](../../../includes/ssde-md.md)] administra un conjunto jerárquico de entidades que se pueden proteger mediante permisos. Estas entidades se conocen como *elementos protegibles*. Los protegibles más prominentes son los servidores y las bases de datos, pero los permisos discretos se pueden establecer en un nivel mucho más específico. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] regula las acciones de las entidades de seguridad en los elementos protegibles comprobando que se les ha concedido los permisos adecuados.  

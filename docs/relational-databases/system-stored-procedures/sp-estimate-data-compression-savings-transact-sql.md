@@ -1,5 +1,5 @@
 ---
-title: sp_estimate_data_compression_savings (Transact-SQL) | Documentos de Microsoft
+title: sp_estimate_data_compression_savings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_estimate_data_compression_savings
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25798372f2b949446b746164665dbfe6752443d7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1271953cc69e8302c2a36088fcea1bca3588a01e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260588"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027544"
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "33260588"
   
  Para calcular el tamaño del objeto, en caso de que se use el valor de compresión solicitado, el procedimiento almacenado prueba el objeto de origen y carga los datos en una tabla e índice equivalentes creados en tempdb. La tabla o índice creados en tempdb se comprimen al valor solicitado y se calcula el ahorro estimado de la compresión.  
   
- Para cambiar el estado de compresión de una tabla, índice o partición, use la [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instrucciones. Para obtener información general acerca de la compresión, vea [compresión de datos](../../relational-databases/data-compression/data-compression.md).  
+ Para cambiar el estado de compresión de una tabla, índice o partición, utilice el [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instrucciones. Para obtener información general acerca de la compresión, vea [compresión de datos](../../relational-databases/data-compression/data-compression.md).  
   
 > [!NOTE]  
 >  Si se fragmentan los datos existentes, es posible que pueda reducir su tamaño regenerando el índice y sin necesidad de utilizar la compresión. Para los índices, el factor de relleno se aplicará cuando se vuelva a generar el índice. Esto podría aumentar el tamaño del índice.  
@@ -68,10 +68,10 @@ sp_estimate_data_compression_savings
  Es el nombre de la tabla o vista indizada en la que está el índice. *object_name* es **sysname**.  
   
  [ @index_id=] '*index_id*'  
- Es el identificador del índice. *index_id* es **int**, y puede tener uno de los siguientes valores: el número de identificación de un índice, NULL o 0 si *object_id* es un montón. Para obtener información de todos los índices de una tabla base o vista, especifique NULL. Si se especifica NULL, también debe especificar NULL para *número_de_partición*.  
+ Es el identificador del índice. *index_id* es **int**, y puede tener uno de los siguientes valores: el número de identificación de un índice, NULL o 0 si *object_id* es un montón. Para obtener información de todos los índices de una tabla base o vista, especifique NULL. Si especifica NULL, también debe especificar NULL para *partition_number*.  
   
- [ @partition_number=] '*número_de_partición*'  
- Es el número de partición en el objeto. *número_de_partición* es **int**, y puede tener uno de los siguientes valores: el número de partición de un índice o montón, NULL o 1 para un montón o índice sin particiones.  
+ [ @partition_number=] '*partition_number*'  
+ Es el número de partición en el objeto. *partition_number* es **int**, y puede tener uno de los siguientes valores: el número de partición de un índice o montón, NULL o 1 para un índice sin particiones o montón.  
   
  Para especificar la partición, también puede especificar el [$partition](../../t-sql/functions/partition-transact-sql.md) función. Para obtener información sobre todas las particiones del objeto propietario, especifique NULL.  
   
@@ -84,7 +84,7 @@ sp_estimate_data_compression_savings
 ## <a name="result-sets"></a>Conjuntos de resultados  
  El siguiente conjunto de resultados se devuelve para proporcionar el tamaño actual y estimado de la tabla, índice o partición.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |object_name|**sysname**|Nombre de la tabla o vista indizada.|  
 |schema_name|**sysname**|Esquema de la tabla o vista indizada.|  
@@ -95,7 +95,7 @@ sp_estimate_data_compression_savings
 |sample_size_with_current_compression_setting (KB)|**bigint**|Tamaño del ejemplo con la opción de compresión actual. Esto incluye cualquier fragmentación.|  
 |sample_size_with_requested_compression_setting (KB)|**bigint**|Tamaño del ejemplo que se crea utilizando el valor de compresión solicitado y, si es aplicable, factor de relleno existente, sin fragmentación.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Utilice sp_estimate_data_compression_savings para estimar el ahorro que se puede obtener al habilitar una tabla o partición para la compresión de fila o de página. Por ejemplo, si el tamaño medio de una fila se puede reducir un 40 por ciento, potencialmente también se puede reducir el tamaño del objeto en un 40 por ciento. Es posible que no consiga ahorrar espacio, ya que depende del factor de relleno y del tamaño de la fila. Por ejemplo, si una fila tiene 8.000 bytes de longitud y reduce su tamaño en un 40 por ciento, solo podrá seguir incluyendo una fila en una página de datos. No se obtiene ningún ahorro.  
   
  Si los resultados de ejecutar sp_estimated_rowsize_reduction_for_vardecimal indican que la tabla crecerá, eso quiere decir que muchas filas de la tabla utilizan prácticamente toda la precisión en los tipos de datos, y la adición de la mínima sobrecarga necesaria para el formato comprimido es mayor que el ahorro obtenido por la compresión. En este caso excepcional, no habilite la compresión.  
@@ -108,7 +108,7 @@ sp_estimate_data_compression_savings
   
  Si no existe el identificador de índice o la partición, no se devolverá ningún resultado.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Es necesario contar con un permiso de tipo SELECT en la tabla.  
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  

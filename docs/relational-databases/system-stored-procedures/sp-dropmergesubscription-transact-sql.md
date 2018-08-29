@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergesubscription (Transact-SQL) | Documentos de Microsoft
+title: sp_dropmergesubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropmergesubscription
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0fb4d9bcd2f72db252380fe3ee0d914645255b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d639b189f1b271f6563c32090992c376113ccfa2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990230"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027218"
 ---
 # <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=** ] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es null. La publicación debe existir y debe cumplir las normas de los identificadores.  
+ Es el nombre de publicación. *publicación* es **sysname**, su valor predeterminado es null. La publicación debe existir y debe cumplir las normas de los identificadores.  
   
  [  **@subscriber=**] **'***suscriptor***'**  
  Es el nombre del suscriptor. *suscriptor* es **sysname**, su valor predeterminado es null.  
@@ -62,31 +62,31 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
  [  **@subscription_type=** ] **'***subscription_type***'**  
  Es el tipo de suscripción. *subscription_type*es **nvarchar (15)**, y puede tener uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Todos los**|Suscripciones de inserción, de extracción y anónimas.|  
 |**Anónimo**|Suscripción anónima.|  
-|**Inserción**|Suscripción de inserción.|  
+|**inserción**|Suscripción de inserción.|  
 |**Incorporación de cambios**|Suscripción de extracción.|  
 |**ambos** (valor predeterminado)|Suscripción de inserción y de extracción.|  
   
  [  **@ignore_distributor =** ] *ignore_distributor*  
- Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es **bits**, su valor predeterminado es **0**. Este parámetro se puede utilizar para quitar una suscripción sin tener que realizar tareas de limpieza en el distribuidor. También es útil cuando ha sido necesario volver a instalar el distribuidor.  
+ Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es **bit**, su valor predeterminado es **0**. Este parámetro se puede utilizar para quitar una suscripción sin tener que realizar tareas de limpieza en el distribuidor. También es útil cuando ha sido necesario volver a instalar el distribuidor.  
   
- [  **@reserved=** ] *reservadas*  
- Está reservado para su uso futuro. *reservada* es **bits**, su valor predeterminado es **0**.  
+ [  **@reserved=** ] *reservado*  
+ Está reservado para su uso futuro. *reservado* es **bit**, su valor predeterminado es **0**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_dropmergesubscription** se utiliza en la replicación de mezcla.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_dropmergesubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropmergesubscription_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos puede ejecutar **sp_dropmergesubscription**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos se puede ejecutar **sp_dropmergesubscription**.  
   
 ## <a name="see-also"></a>Vea también  
  [Eliminar una suscripción de inserción](../../relational-databases/replication/delete-a-push-subscription.md)   

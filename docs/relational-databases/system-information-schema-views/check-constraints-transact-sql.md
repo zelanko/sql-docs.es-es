@@ -1,5 +1,5 @@
 ---
-title: CHECK_CONSTRAINTS (Transact-SQL) | Documentos de Microsoft
+title: CHECK_CONSTRAINTS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - CHECK_CONSTRAINTS view
 - INFORMATION_SCHEMA.CHECK_CONSTRAINTS view
 ms.assetid: e9577fd2-c349-4dff-874c-9e57d2e5a3ec
-caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: bdaff0d468acf89b5ec429ad36244484a4804564
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 6f5a9cdb939f9d093350c5dcbac75c82653d56f3
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39564799"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43082848"
 ---
 # <a name="checkconstraints-transact-sql"></a>CHECK_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "39564799"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|Calificador de la restricción.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema al que pertenece la restricción.<br /><br /> **\*\* Importante \* \* ** no utilizan utilicemos vistas para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema al que pertenece la restricción.<br /><br /> **\*\* Importante \* \***  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
 |**CONSTRAINT_NAME**|**sysname**|Nombre de la restricción.|  
 |**CHECK_CLAUSE**|**nvarchar (** 4000 **)**|Texto real de la instrucción de definición [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   

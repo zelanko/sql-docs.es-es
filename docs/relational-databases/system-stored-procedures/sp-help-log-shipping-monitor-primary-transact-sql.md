@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_monitor_primary (Transact-SQL) | Documentos de Microsoft
+title: sp_help_log_shipping_monitor_primary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_monitor_primary
 ms.assetid: d9dfcb8f-1da6-49ca-a2c8-411574915434
-caps.latest.revision: 21
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0a818e8b944a7fbb296ee17a1b892cd2c6ebf77d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 07b8769d1c466b9f70f0a84cfab53dea518227c2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243871"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029286"
 ---
 # <a name="sphelplogshippingmonitorprimary-transact-sql"></a>sp_help_log_shipping_monitor_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_help_log_shipping_monitor_primary
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Description|  
+|Nombre de columna|Descripción|  
 |-----------------|-----------------|  
 |**primary_id**|Id. de la base de datos principal para la configuración del trasvase de registros.|  
 |**primary_server**|Nombre de la instancia principal del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la configuración del trasvase de registros.|  
@@ -70,14 +69,14 @@ sp_help_log_shipping_monitor_primary
 |**last_backup_date_utc**|Fecha y hora de la última operación de copia de seguridad del registro de transacciones en la base de datos principal, expresadas en UTC (hora universal coordinada).|  
 |**history_retention_period**|Cantidad de tiempo, en minutos, durante la que los registros de historial del trasvase de registros se mantienen en una base de datos principal determinada antes de ser eliminados.|  
   
-## <a name="remarks"></a>Comentarios  
- **sp_help_log_shipping_monitor_primary** se debe ejecutar desde la **maestro** base de datos en el servidor de supervisión.  
+## <a name="remarks"></a>Notas  
+ **sp_help_log_shipping_monitor_primary** se debe ejecutar desde la **maestro** base de datos del servidor de supervisión.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento.  
   
 ## <a name="see-also"></a>Vea también  
- [Acerca del trasvase de registros & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

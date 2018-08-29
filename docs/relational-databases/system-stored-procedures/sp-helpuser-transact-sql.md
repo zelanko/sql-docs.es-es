@@ -1,5 +1,5 @@
 ---
-title: sp_helpuser (Transact-SQL) | Documentos de Microsoft
+title: sp_helpuser (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpuser
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 343439dd04f9f74c0a5444afef25921072d9d14c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2f69c77b548de159a6b6c40ceddccb169e477ede
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261131"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028948"
 ---
 # <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33261131"
   Proporciona información acerca de las entidades de seguridad de base de datos en la base de datos actual.  
   
 > [!IMPORTANT]  
->  **sp_helpuser** no devuelve información sobre elementos protegibles que se introdujeron en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Use [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) en su lugar.  
+>  **sp_helpuser** no devuelve información acerca de los elementos protegibles que se introdujeron en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Use [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) en su lugar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,38 +54,38 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- La siguiente tabla muestra el conjunto de resultados cuando ninguna de ellas una cuenta de usuario ni una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o usuario de Windows se especifica para *security_account*.  
+ En la tabla siguiente se muestra el conjunto de resultados cuando ninguna de ellas una cuenta de usuario ni una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o se especificó un usuario de Windows para *security_account*.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**UserName**|**sysname**|Usuarios en la base de datos actual.|  
-|**RoleName**|**sysname**|Roles a los que **nombre de usuario** pertenece.|  
-|**LoginName**|**sysname**|Inicio de sesión de **nombre de usuario**.|  
-|**DefDBName**|**sysname**|Base de datos predeterminada **nombre de usuario**.|  
+|**RoleName**|**sysname**|Roles a los que **UserName** pertenece.|  
+|**LoginName**|**sysname**|Inicio de sesión de **UserName**.|  
+|**DefDBName**|**sysname**|Base de datos predeterminada de **UserName**.|  
 |**DefSchemaName**|**sysname**|Esquema predeterminado del usuario de la base de datos.|  
-|**UserID**|**smallint**|Id. de **nombre de usuario** en la base de datos actual.|  
+|**UserID**|**smallint**|Id. de **UserName** en la base de datos actual.|  
 |**SID**|**smallint**|Número de identificación de seguridad del usuario (SID).|  
   
  En la siguiente tabla se muestra el conjunto de resultados cuando no se especifica una cuenta de usuario y existen alias en la base de datos actual.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Inicios de sesión asociados con los usuarios en la base de datos actual.|  
 |**UserNameAliasedTo**|**sysname**|Nombre de usuario en la base de datos actual al que está asociado el inicio de sesión.|  
   
- La siguiente tabla muestra el conjunto de resultados cuando se especifica un rol para *security_account*.  
+ En la tabla siguiente se muestra el conjunto de resultados cuando se especifica un rol para *security_account*.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**role_name**|**sysname**|Nombre del rol en la base de datos actual.|  
+|**Role_name**|**sysname**|Nombre del rol en la base de datos actual.|  
 |**Role_id**|**smallint**|Id. de rol para el rol en la base de datos actual.|  
 |**Users_in_role**|**sysname**|Miembro del rol en la base de datos actual.|  
-|**identificador de usuario**|**smallint**|Id. de usuario para el miembro del rol.|  
+|**Identificador de usuario**|**smallint**|Id. de usuario para el miembro del rol.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Para obtener información acerca de la pertenencia de roles de base de datos, use [sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Para obtener información acerca de los miembros del rol de servidor, use [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)y para obtener información acerca de las entidades de nivel de servidor, use [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
  La información mostrada está sometida a restricciones de acceso a los metadatos. No se mostrarán las entidades en las que la entidad de seguridad no tiene permiso. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

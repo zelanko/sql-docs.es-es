@@ -1,5 +1,5 @@
 ---
-title: sp_helpremotelogin (Transact-SQL) | Documentos de Microsoft
+title: sp_helpremotelogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpremotelogin
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 60fe6f30365e63394f80b481fe155b26caa4061b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e0dc7cdc8e647adf1d8ea5e4e2903509c16a2f62
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249447"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033378"
 ---
 # <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,24 +52,24 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
  Es el servidor remoto cuya información de inicio de sesión remoto se va a devolver. *remoteserver* es **sysname**, su valor predeterminado es null. Si *remoteserver* no es se especifica, se devuelve información sobre todos los servidores remotos definidos en el servidor local.  
   
  [ @remotename **=** ] **'***remote_name***'**  
- Es un inicio de sesión remoto específico en el servidor remoto. *remote_name* es **sysname**, su valor predeterminado es null. Si *remote_name* no se especifica, obtener información acerca de todos los usuarios remotos definidos para *remoteserver* se devuelve.  
+ Es un inicio de sesión remoto específico en el servidor remoto. *remote_name* es **sysname**, su valor predeterminado es null. Si *remote_name* no se especifica, la información acerca de todos los usuarios remotos definidos para *remoteserver* se devuelve.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |servidores|**sysname**|Nombre de un servidor remoto definido en el servidor local.|  
 |local_user_name|**sysname**|Inicio de sesión del servidor local al que está asociado el inicio de sesión remoto.|  
-|remote_user_name|**sysname**|Inicio de sesión en el servidor remoto que se asigna a local_user_name.|  
+|remote_user_name|**sysname**|Inicio de sesión en el servidor remoto a local_user_name.|  
 |opciones|**sysname**|Trusted = El inicio de sesión remoto no necesita contraseña cuando se conecta con el servidor local desde el servidor remoto.<br /><br /> Untrusted (o en blanco) = El inicio de sesión remoto tiene que suministrar una contraseña cuando se conecta con el servidor local desde el servidor remoto.|  
   
-## <a name="remarks"></a>Comentarios  
- Utilice sp_helpserver para presentar los nombres de servidores remotos definidos en el servidor local.  
+## <a name="remarks"></a>Notas  
+ Utilice sp_helpserver para enumerar los nombres de servidores remotos definidos en el servidor local.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  No se comprueba ningún permiso.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -91,7 +91,7 @@ EXEC sp_helpremotelogin;
 ## <a name="see-also"></a>Vea también  
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
  [sp_dropremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_helpserver & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_remoteoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

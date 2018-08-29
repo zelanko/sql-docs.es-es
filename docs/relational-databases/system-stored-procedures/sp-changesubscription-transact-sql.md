@@ -1,5 +1,5 @@
 ---
-title: sp_changesubscription (Transact-SQL) | Documentos de Microsoft
+title: sp_changesubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2015
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - sp_changesubscription
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47ce4c99261b7b7fd5ee7b3af4636d5ced5cf4f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 64a34ed640dc9efac57d948475071690ed266d2e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991832"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023336"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Cambia las propiedades de una suscripción de inserción transaccional o de instantáneas o de una suscripción de extracción relacionada con la replicación transaccional de actualización en cola. Para cambiar las propiedades de todos los demás tipos de suscripciones de extracción, utilice [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md). **sp_changesubscription** se ejecuta en el publicador de la base de datos de publicación.  
+  Cambia las propiedades de una suscripción de inserción transaccional o de instantáneas o de una suscripción de extracción relacionada con la replicación transaccional de actualización en cola. Para cambiar las propiedades de todos los demás tipos de suscripciones de extracción, use [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md). **sp_changesubscription** se ejecuta en el publicador de la base de datos de publicación.  
   
 > [!IMPORTANT]  
 >  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto sin formato. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -69,47 +69,47 @@ sp_changesubscription [ @publication = ] 'publication'
  Es el nombre de la base de datos de suscripción. *destination_db* es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@property=**] **'***propiedad***'**  
- Es la propiedad que se va a cambiar para la suscripción especificada. *propiedad* es **nvarchar (30)**, y puede tener uno de los valores de la tabla.  
+ Es la propiedad para cambiar de la suscripción especificada. *propiedad* es **nvarchar (30)**, y puede tener uno de los valores de la tabla.  
   
  [  **@value=**] **'***valor***'**  
  Es el nuevo valor para el elemento especificado *propiedad*. *valor* es **nvarchar (4000)**, y puede tener uno de los valores de la tabla.  
   
-|Propiedad|Value|Description|  
+|Property|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Inicio de sesión de la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el agente.|  
 |**distrib_job_password**||Contraseña de la cuenta de Windows con la que se ejecuta el agente.|  
-|**subscriber_catalog**||Catálogo que debe utilizarse al establecer una conexión con el proveedor OLE DB. Solo es válida para esta propiedad no es[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.|  
-|**subscriber_datasource**||Nombre del origen de datos tal y como lo entiende el proveedor OLE DB. *Solo es válida para esta propiedad no es* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *los suscriptores.*|  
-|**subscriber_location**||Ubicación de la base de datos tal y como la interpreta el proveedor OLE DB. *Solo es válida para esta propiedad no es* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *los suscriptores.*|  
+|**subscriber_catalog**||Catálogo que debe utilizarse al establecer una conexión con el proveedor OLE DB. Esta propiedad sólo es válida para que no sean de[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores.|  
+|**subscriber_datasource**||Nombre del origen de datos tal y como lo entiende el proveedor OLE DB. *Esta propiedad sólo es válida para que no sean de* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *los suscriptores.*|  
+|**subscriber_location**||Ubicación de la base de datos tal y como la interpreta el proveedor OLE DB. *Esta propiedad sólo es válida para que no sean de* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *los suscriptores.*|  
 |**subscriber_login**||Nombre de inicio de sesión del suscriptor.|  
 |**subscriber_password**||Contraseña segura para el inicio de sesión que se ha proporcionado.|  
 |**subscriber_security_mode**|**1**|Se utiliza la autenticación de Windows para la conexión con el suscriptor.|  
 ||**0**|Se utiliza la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la conexión con el suscriptor.|  
-|**subscriber_provider**||Identificador de programación único (PROGID) mediante el cual se registra el proveedor OLE DB para los orígenes de datos que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Solo es válida para esta propiedad no es* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *los suscriptores.*|  
-|**subscriber_providerstring**||Cadena de conexión específica del proveedor OLE DB que identifica el origen de datos. *Solo es válida para esta propiedad no es* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *los suscriptores.*|  
-|**flujos de suscripción**||Es el número de conexiones permitidas por Agente de distribución para aplicar lotes de cambios en paralelo a un suscriptor. Un intervalo de valores de **1** a **64** es compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores. Esta propiedad debe ser **0** para no[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores, los publicadores de Oracle o suscripciones punto a punto.|  
+|**subscriber_provider**||Identificador de programación único (PROGID) mediante el cual se registra el proveedor OLE DB para los orígenes de datos que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Esta propiedad sólo es válida para que no sean de* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *los suscriptores.*|  
+|**subscriber_providerstring**||Cadena de conexión específica del proveedor OLE DB que identifica el origen de datos. *Esta propiedad sólo es válida para que no sean de* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *los suscriptores.*|  
+|**flujos de suscripción**||Es el número de conexiones permitidas por Agente de distribución para aplicar lotes de cambios en paralelo a un suscriptor. Un intervalo de valores de **1** a **64** es compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores. Esta propiedad debe ser **0** para que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores, los publicadores de Oracle o suscripciones punto a punto.|  
 |**propiedad subscriber_type**|**1**|Servidor del origen de datos ODBC|  
 ||**3**|Proveedor OLE DB|  
-|**con optimización para memoria**|**bit**|Indica que la suscripción admite tablas optimizadas en memoria. *memory_optimized* es **bits**, donde 1 es igual a true (la suscripción es compatible con tablas optimizadas en memoria).|  
+|**memory_optimized**|**bit**|Indica que la suscripción admite tablas optimizadas para memoria. *memory_optimized* es **bit**, donde 1 es igual a true (la suscripción es compatible con tablas optimizadas para memoria).|  
   
  [  **@publisher =** ] **'***publisher***'**  
- Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Publisher* es **sysname**, su valor predeterminado es null.  
+ Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
->  *Publisher* no se debe especificar para una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
+>  *publicador* no se debe especificar para una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_changesubscription** se utiliza en la replicación de instantáneas y transaccional.  
   
- **sp_changesubscription** solo se puede utilizar para modificar las propiedades de las suscripciones de inserción o extracción relacionadas con la replicación transaccional de actualización en cola. Para cambiar las propiedades de todos los demás tipos de suscripciones de extracción, utilice [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md).  
+ **sp_changesubscription** solo puede usarse para modificar las propiedades de las suscripciones de inserción o extracción relacionadas con la replicación transaccional de actualización en cola. Para cambiar las propiedades de todos los demás tipos de suscripciones de extracción, use [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md).  
   
  Después de cambiar un inicio de sesión o una contraseña de agente, debe detener y reiniciar el agente para que el cambio surta efecto.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_changesubscription**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_changesubscription**.  
   
 ## <a name="see-also"></a>Vea también  
  [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   

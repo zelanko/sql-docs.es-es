@@ -1,5 +1,5 @@
 ---
-title: sp_changereplicationserverpasswords (Transact-SQL) | Documentos de Microsoft
+title: sp_changereplicationserverpasswords (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changereplicationserverpasswords
 ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 7c27142aa0e628e7041202429ae6bbaee0b87a1f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ae1883006db7eaffe1e10ffcee2c36619f66c73
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989700"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029966"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,9 +66,9 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
  [ **@server** =] **'***server***'**  
  Es la conexión con el servidor cuya contraseña almacenada se está cambiando. *servidor* es **sysname**, y puede tener uno de estos valores:  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|**Distribuidor**|Todas las conexiones del agente al distribuidor.|  
+|**distribuidor**|Todas las conexiones del agente al distribuidor.|  
 |**publicador**|Todas las conexiones del agente al publicador.|  
 |**suscriptor**|Todas las conexiones del agente al suscriptor.|  
 |**%** (valor predeterminado)|Todas las conexiones del agente a todos los servidores de una topología de replicación.|  
@@ -77,10 +76,10 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_changereplicationserverpasswords** se utiliza con todos los tipos de replicación.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_changereplicationserverpasswords**.  
   
 ## <a name="see-also"></a>Vea también  

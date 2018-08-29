@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_monitor_secondary (Transact-SQL) | Documentos de Microsoft
+title: sp_help_log_shipping_monitor_secondary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_monitor_secondary
 ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
-caps.latest.revision: 22
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f6e667981bd9fb3ba0f67e260da05a7b92d324d5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 598f988483e3bef6ffe784f7be18145ebf1a89e5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247364"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028009"
 ---
 # <a name="sphelplogshippingmonitorsecondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_help_log_shipping_monitor_secondary
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Columna|Description|  
+|columna|Descripción|  
 |------------|-----------------|  
 |**secondary_server**|El nombre de la instancia secundaria de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la configuración de trasvase de registros.|  
 |**secondary_database**|Nombre de la base de datos secundaria en la configuración del trasvase de registros.|  
@@ -76,14 +75,14 @@ sp_help_log_shipping_monitor_secondary
 |**last_restored_date_utc**|Fecha y hora de la última operación de restauración en la base de datos secundaria, expresadas en hora universal coordinada (UTC).|  
 |**history_retention_period**|Cantidad de tiempo, en minutos, durante la que los registros de historial del trasvase de registros se mantienen en una base de datos secundaria determinada antes de ser eliminados.|  
   
-## <a name="remarks"></a>Comentarios  
- **sp_help_log_shipping_monitor_secondary** se debe ejecutar desde la **maestro** base de datos en el servidor de supervisión.  
+## <a name="remarks"></a>Notas  
+ **sp_help_log_shipping_monitor_secondary** se debe ejecutar desde la **maestro** base de datos del servidor de supervisión.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento.  
   
 ## <a name="see-also"></a>Vea también  
- [Acerca del trasvase de registros & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

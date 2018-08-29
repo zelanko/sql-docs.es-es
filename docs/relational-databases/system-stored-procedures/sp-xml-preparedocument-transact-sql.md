@@ -1,5 +1,5 @@
 ---
-title: sp_xml_preparedocument (Transact-SQL) | Documentos de Microsoft
+title: sp_xml_preparedocument (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_preparedocument
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
-caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02946ee1a36df965d11c85eabbaba86d7f1a7e14
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: afc84c779c05dc2826bde815b4f499abc95c8380
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262686"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025724"
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +39,15 @@ ms.locfileid: "33262686"
 >  Un documento analizado se guarda en la caché interna de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El analizador MSXML usa un octavo de la memoria total disponible para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para evitar quedarse sin memoria, ejecute **sp_xml_removedocument** para liberar la memoria.  
   
 > [!NOTE]  
->  Para retroceder compatibilidad, **sp_xml_preparedocument** contrae el CR (char(13)) y LF (char(10)) caracteres en atributos incluso si estos caracteres se crean las entidades.  
+>  Para versiones anteriores compatibilidad, **sp_xml_preparedocument** contrae el CR (char(13)) y LF (char(10)) caracteres en atributos incluso si estos caracteres se crean las entidades.  
   
 > [!NOTE]  
->  El analizador XML invocado por **sp_xml_preparedocument** puede analizar DTD internas y las declaraciones de entidad. Dado que creadas de forma malintencionada DTD y entidad declaraciones pueden usarse para realizar un ataque de denegación de servicio, se recomienda que los usuarios no pasen directamente documentos XML de orígenes que no se confía para **sp_xml_preparedocument**.  
+>  El analizador XML invocado por **sp_xml_preparedocument** puede analizar DTD internas y las declaraciones de entidad. Ya creadas de forma malintencionada DTD y entidades declaraciones pueden usarse para realizar un ataque de denegación de servicio, se recomienda encarecidamente que los usuarios no pasen directamente documentos XML de fuentes no confiables a **sp_xml_preparedocument**.  
 >   
 >  Para mitigar los ataques de expansión de entidades recursivos, **sp_xml_preparedocument** limita a 10.000 el número de entidades que pueden expandirse debajo de una sola entidad en el nivel superior de un documento. Este límite no se aplica a los caracteres o entidades numéricas. Este límite permite almacenar documentos con muchas entidades, pero evita que cualquier entidad se expanda de forma recursiva en una cadena con más de 10.000 expansiones.  
   
 > [!NOTE]  
->  **sp_xml_preparedocument** limita el número de elementos que pueden estar abiertos simultáneamente a 256.  
+>  **sp_xml_preparedocument** limita el número de elementos que se pueden abrir simultáneamente a 256.  
 
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -74,14 +73,14 @@ OUTPUT
 >  **sp_xml_preparedocument** sólo puede procesar texto o XML sin tipo. Si el valor de instancia que se va a utilizar como entrada ya es XML con tipo, primero conviértalo a una nueva instancia XML sin tipo o a una cadena y, a continuación, pase ese valor como entrada. Para obtener más información, vea [Comparar XML con tipo y XML sin tipo](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
  [ *xpath_namespaces* ]  
- Especifica las declaraciones de espacio de nombres que se utilizan en las expresiones XPath de fila y columna de OPENXML. *xpath_namespaces* es un parámetro de texto: **char**, **nchar**, **varchar**, **nvarchar**, **detexto**, **ntext** o **xml**.  
+ Especifica las declaraciones de espacio de nombres que se utilizan en las expresiones XPath de fila y columna de OPENXML. *xpath_namespaces* es un parámetro de texto: **char**, **nchar**, **varchar**, **nvarchar**, **texto**, **ntext** o **xml**.  
   
- El valor predeterminado es  **\<root xmlns:mp = "urn: schemas-microsoft-com-metaprop" >**. *xpath_namespaces* proporciona el URI de espacio de nombres para los prefijos utilizados en las expresiones de XPath de OPENXML mediante un documento XML bien formado. *xpath_namespaces* declara el prefijo que se debe utilizar para hacer referencia al espacio de nombres **urn: schemas-microsoft-com-metaprop**; proporciona metadatos sobre los elementos XML analizados. Aunque puede redefinir el prefijo del espacio de nombres para el espacio de nombres de metapropiedad mediante esta técnica, este espacio de nombres no se pierde. El prefijo **mp** sigue siendo válido para **urn: schemas-microsoft-com-metaprop** aunque *xpath_namespaces* no contenga esa declaración.  
+ El valor predeterminado es  **\<xmlns:mp de raíz = "urn: schemas-microsoft-com-metaprop" >**. *xpath_namespaces* proporciona el URI de espacio de nombres para los prefijos utilizados en las expresiones de XPath de OPENXML mediante un documento XML bien formado. *xpath_namespaces* declara el prefijo que debe usarse para hacer referencia al espacio de nombres **urn: schemas-microsoft-com-metaprop**; proporciona metadatos sobre los elementos XML analizados. Aunque puede redefinir el prefijo del espacio de nombres para el espacio de nombres de metapropiedad mediante esta técnica, este espacio de nombres no se pierde. El prefijo **mp** sigue siendo válido para **urn: schemas-microsoft-com-metaprop** aunque *xpath_namespaces* no contenga esa declaración.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o >0 (error)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="examples"></a>Ejemplos  
@@ -132,7 +131,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;
 ```  
   
 ### <a name="c-specifying-a-namespace-uri"></a>C. Especificar un URI de espacio de nombres  
- En el siguiente ejemplo se devuelve un identificador para la representación interna que se acaba de crear del documento XML proporcionado como entrada. La llamada a `sp_xml_preparedocument` conserva la `mp` anteponer a la asignación de espacio de nombres de metapropiedad y agrega el `xyz` prefijo de asignación al espacio de nombres `urn:MyNamespace`.  
+ En el siguiente ejemplo se devuelve un identificador para la representación interna que se acaba de crear del documento XML proporcionado como entrada. La llamada a `sp_xml_preparedocument` conserva la `mp` prefijo para la asignación de espacio de nombres de metapropiedad y agrega el `xyz` prefijo de asignación al espacio de nombres `urn:MyNamespace`.  
   
 ```  
 DECLARE @hdoc int;  
@@ -158,8 +157,8 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespac
 ```  
   
 ## <a name="see-also"></a>Vea también  
- <br>[XML almacenado Procedures(Transact-SQL)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
- <br>[Procedures(Transact-SQL) almacenado del sistema](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
+ <br>[Procedures(Transact-SQL) almacenados de XML](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
+ <br>[Procedures(Transact-SQL) almacenados del sistema](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
  <br>[OPENXML(Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
  <br>[Sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
  <br>[sp_xml_removedocument (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)

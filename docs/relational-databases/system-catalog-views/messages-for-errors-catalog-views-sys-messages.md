@@ -1,5 +1,5 @@
 ---
-title: Sys.Messages (Transact-SQL) | Documentos de Microsoft
+title: Sys.Messages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,30 +23,30 @@ helpviewer_keywords:
 - error numbers [SQL Server]
 ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07a5a426c0a2cf0b4b7c0385850471c3580d4fd3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ac13b8d68accd744803b7524f9d6d179cca0446b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179001"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032438"
 ---
-# <a name="messages-for-errors-catalog-views---sysmessages"></a>Vistas de catálogo de mensajes (de errores) - sys.messages
+# <a name="messages-for-errors-catalog-views---sysmessages"></a>Vistas de catálogo de mensajes (para errores): sys.messages
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una fila por cada **message_id** o **language_id** de los mensajes de error en el sistema, para los mensajes definidos por el usuario y definidas por el sistema. Para obtener más información, vea [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md).  
+  Contiene una fila para cada **message_id** o **language_id** los mensajes de error en el sistema, para los mensajes definidos por el usuario y definido por el sistema. Para obtener más información, vea [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md).  
    
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**message_id**|**int**|Id. del mensaje. Es único en todo el servidor. Los Id. de mensaje inferiores a 50000 son mensajes del sistema.|  
-|**language_id**|**smallint**|Id. de idioma para el que el texto en **texto** se utiliza, como se define en **syslanguages**. Esta capacidad es única para un determinado **message_id**.|  
-|**severity**|**tinyint**|Nivel de gravedad del mensaje, entre 1 y 25. Este es el mismo para todos los idiomas del mensaje un **message_id**.|  
-|**is_event_logged**|**bit**|1 = Cuando hay un error, el mensaje se registra en el registro de eventos. Este es el mismo para todos los idiomas del mensaje un **message_id**.|  
-|**texto**|**nvarchar(2048)**|Texto del mensaje utilizado para la correspondiente **language_id** está activo.|  
+|**language_id**|**smallint**|Id. de idioma para el que el texto en **texto** se usa, como se define en **syslanguages**. Debe ser único para un determinado **message_id**.|  
+|**severity**|**tinyint**|Nivel de gravedad del mensaje, entre 1 y 25. Esto es lo mismo para todos los idiomas del mensaje un **message_id**.|  
+|**is_event_logged**|**bit**|1 = Cuando hay un error, el mensaje se registra en el registro de eventos. Esto es lo mismo para todos los idiomas del mensaje un **message_id**.|  
+|**texto**|**nvarchar(2048)**|Texto del mensaje utilizado para el correspondiente **language_id** está activo.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** . Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

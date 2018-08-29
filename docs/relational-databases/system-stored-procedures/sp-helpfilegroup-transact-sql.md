@@ -1,5 +1,5 @@
 ---
-title: sp_helpfilegroup (Transact-SQL) | Documentos de Microsoft
+title: sp_helpfilegroup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpfilegroup
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 61e297999776254e85372c4b6ce25927396fdff6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 085425bd8d50c31fb894268ebce416c23c285b6b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260791"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028023"
 ---
 # <a name="sphelpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,31 +45,31 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@filegroupname =** ] **'***nombre***'**  
- Es el nombre lógico de cualquier grupo de archivos de la base de datos actual. *nombre* es **sysname**, su valor predeterminado es null. Si *nombre* no se especifica, se enumeran todos los grupos de archivos de la base de datos actual y se muestran solo el primer conjunto de resultados se muestran en la sección de conjuntos de resultados.  
+ Es el nombre lógico de cualquier grupo de archivos de la base de datos actual. *nombre* es **sysname**, su valor predeterminado es null. Si *nombre* no se especifica, se enumeran todos los grupos de archivos en la base de datos actual y se muestran solo el primer conjunto de resultados que se muestra en la sección conjuntos de resultados.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**nombre de grupo**|**sysname**|Nombre del grupo de archivos.|  
-|**Id. de grupo**|**smallint**|Identificador numérico del grupo de archivos.|  
+|**GroupID**|**smallint**|Identificador numérico del grupo de archivos.|  
 |**FileCount**|**int**|Número de archivos del grupo de archivos.|  
   
- Si *nombre* está especificado, se devuelve una fila por cada archivo en el grupo de archivos.  
+ Si *nombre* está especificado, se devuelve una fila para cada archivo en el grupo de archivos.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**file_in_group**|**sysname**|Nombre lógico del campo en el grupo de archivos.|  
 |**FileID**|**smallint**|Identificador numérico del archivo.|  
-|**nombre de archivo**|**nchar(260)**|Nombre físico del archivo, incluida la ruta de acceso del directorio.|  
+|**Nombre de archivo**|**nchar(260)**|Nombre físico del archivo, incluida la ruta de acceso del directorio.|  
 |**size**|**nvarchar (15)**|Tamaño del archivo en kilobytes.|  
-|**MaxSize**|**nvarchar (15)**|Tamaño máximo del archivo.<br /><br /> Es el tamaño máximo que puede alcanzar el archivo. El valor UNLIMITED en este campo indica que el archivo puede aumentar hasta que el disco esté lleno.|  
-|**crecimiento**|**nvarchar (15)**|Incremento de crecimiento del archivo. Indica la cantidad de espacio que se agrega al archivo cada vez que se necesita espacio.<br /><br /> 0 = El archivo tiene un tamaño fijo y no aumenta.|  
+|**tamaño máximo**|**nvarchar (15)**|Tamaño máximo del archivo.<br /><br /> Es el tamaño máximo que puede alcanzar el archivo. El valor UNLIMITED en este campo indica que el archivo puede aumentar hasta que el disco esté lleno.|  
+|**Crecimiento**|**nvarchar (15)**|Incremento de crecimiento del archivo. Indica la cantidad de espacio que se agrega al archivo cada vez que se necesita espacio.<br /><br /> 0 = El archivo tiene un tamaño fijo y no aumenta.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="examples"></a>Ejemplos  

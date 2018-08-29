@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_add_policy_category (Transact-SQL) | Documentos de Microsoft
+title: sp_syspolicy_add_policy_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_add_policy_category
 ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
-caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 134777b90dcb5213d1f8a747de4bd34151afcca2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 20bf30b2f0ad96ce46f6990d3d4efeab1a1fe398
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254730"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033319"
 ---
 # <a name="spsyspolicyaddpolicycategory-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +46,10 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@name=** ] **'***nombre***'**  
- Es el nombre de la categoría de directiva. *nombre* es **sysname**y es necesario. *nombre de* no puede ser NULL ni una cadena vacía.  
+ Es el nombre de la categoría de directiva. *nombre* es **sysname**y es necesario. *nombre* no puede ser NULL ni una cadena vacía.  
   
  [  **@mandate_database_subscriptions =** ] *mandate_database_subscriptions*  
- Determina si la suscripción de la base de datos está asignada para la categoría de directiva. *mandate_database_subscriptions* es un **bits** , y su valor predeterminado de 1 (habilitado).  
+ Determina si la suscripción de la base de datos está asignada para la categoría de directiva. *mandate_database_subscriptions* es un **bit** valor, su valor predeterminado es 1 (habilitado).  
   
  [  **@policy_category_id=** ] *policy_category_id*  
  Es el identificador de la categoría de directiva. *policy_category_id* es **int**y se devuelve como OUTPUT.  
@@ -58,10 +57,10 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Debe ejecutar sp_syspolicy_add_policy_category en el contexto de la base de datos del sistema msdb.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de base de datos PolicyAdministratorRole.  
   
 > [!IMPORTANT]  

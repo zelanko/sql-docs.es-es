@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_external_work (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_exec_external_work (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -25,27 +25,27 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: bb8054d49ecbcd3f4140c63e2adf460e4330b9e6
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b283150a55046b10d41674c1b604f9d395976ef6
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39538475"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43060588"
 ---
 # <a name="sysdmexecexternalwork-transact-sql"></a>sys.dm_exec_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Devuelve información acerca de la carga de trabajo por trabajo, en cada nodo de proceso.  
   
- Sys.dm_exec_external_work de consulta para identificar el trabajo terminado para comunicarse con el origen de datos externo (por ejemplo, Hadoop o externa de SQL Server).  
+ Sys.dm_exec_external_work de consulta para identificar el trabajo en marcha para comunicarse con el origen de datos externo (por ejemplo, Hadoop o externas de SQL Server).  
   
 |Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|Identificador único para las consultas de PolyBase asociado.|Vea *request_ID* en [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|step_index|**int**|La solicitud está realizando este trabajador.|Vea *step_index* en [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|dms_step_index|**int**|El paso en el plan DMS que se está ejecutando este trabajo.|Vea [sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
-|compute_node_id|**int**|El nodo del trabajador se ejecuta en.|Vea [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|execution_id|**nvarchar(32)**|Identificador único para las consultas de PolyBase asociado.|Consulte *request_ID* en [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|step_index|**int**|La solicitud está realizando este trabajador.|Consulte *step_index* en [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|dms_step_index|**int**|El paso en el plan DMS que se está ejecutando este trabajo.|Consulte [sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
+|compute_node_id|**int**|El nodo del trabajador se ejecuta en.|Consulte [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |Tipo|**nvarchar(60)**|El tipo de trabajo externo.|"División de archivos"|  
 |work_id|**int**|Id. de la división real.|Mayor o igual que 0.|  
 |input_name|**nvarchar(4000)**|Nombre de la entrada de lectura|Nombre de archivo cuando el uso de Hadoop.|  

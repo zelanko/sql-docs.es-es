@@ -1,5 +1,5 @@
 ---
-title: sp_revoke_login_from_proxy (Transact-SQL) | Documentos de Microsoft
+title: sp_revoke_login_from_proxy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_revoke_login_from_proxy
 ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
-caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6275facb81f14269eca19979c115c5ea80844563
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 66a96c8c55bf344c7750e4706ad8c89593a29fde
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253554"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027858"
 ---
 # <a name="sprevokeloginfromproxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,21 +47,21 @@ sp_revoke_login_from_proxy
   
 ## <a name="arguments"></a>Argumentos  
  [  **@name=** ] **'***nombre***'**  
- El nombre de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión, rol de servidor o **msdb** rol de base de datos para quitar el acceso para. *nombre* es **nvarchar (256)** no tiene ningún valor predeterminado.  
+ El nombre de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión, rol de servidor o **msdb** rol de base de datos para quitar el acceso. *nombre* es **nvarchar (256)** no tiene ningún valor predeterminado.  
   
  [  **@proxy_id=** ] *Id.*  
- Id. del proxy del que se va a quitar el acceso. Cualquier *identificador* o *proxy_name* debe especificarse, pero no pueden especificarse ambos. El *identificador* es **int**, su valor predeterminado es null.  
+ Id. del proxy del que se va a quitar el acceso. Cualquier *id* o *proxy_name* debe especificarse, pero no se pueden especificar ambos. El *id* es **int**, su valor predeterminado es null.  
   
  [  **@proxy_name=** ] **'***proxy_name***'**  
- Nombre del proxy del que se va a quitar el acceso. Cualquier *identificador* o *proxy_name* debe especificarse, pero no pueden especificarse ambos. El *proxy_name* es **sysname**, su valor predeterminado es null.  
+ Nombre del proxy del que se va a quitar el acceso. Cualquier *id* o *proxy_name* debe especificarse, pero no se pueden especificar ambos. El *proxy_name* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Los trabajos propiedad del inicio de sesión que hace referencia a este proxy no podrán ejecutarse.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para ejecutar este procedimiento almacenado, un usuario debe ser miembro del rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  

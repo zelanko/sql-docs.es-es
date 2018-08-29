@@ -1,8 +1,8 @@
 ---
-title: Comentarios de los clientes de SQL Server en Linux | Documentos de Microsoft
+title: Comentarios del cliente para SQL Server en Linux | Microsoft Docs
 description: Describe cómo se recopilan y se configura en Linux comentarios del cliente de SQL Server.
-author: annashres
-ms.author: anshrest
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.date: 06/22/2018
 ms.topic: conceptual
@@ -10,20 +10,20 @@ ms.prod: sql
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 69a1e82544ad1566cdf9ec1937d88a8cc2a61975
-ms.sourcegitcommit: 23e71a8afba194e0893f31532db0aaa29288acb2
+ms.openlocfilehash: 4bbe6fc1aa961c3a1e0e699b1d3a8df87233e874
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2018
-ms.locfileid: "36329510"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43072184"
 ---
-# <a name="customer-feedback-for-sql-server-on-linux"></a>Comentarios de los clientes de SQL Server en Linux
+# <a name="customer-feedback-for-sql-server-on-linux"></a>Comentarios del cliente para SQL Server en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 De forma predeterminada, Microsoft SQL Server recopila información sobre cómo sus clientes usan la aplicación. En concreto, SQL Server recopila información sobre la experiencia de instalación, el uso y el rendimiento. Esta información ayuda a Microsoft a mejorar el producto para satisfacer mejor las necesidades del cliente. Por ejemplo, Microsoft recopila información sobre los tipos de códigos de error que encuentran los clientes para que podamos corregir errores relacionados, mejorar nuestra documentación sobre cómo usar SQL Server y determinar si deben agregarse características al producto para ofrecer un mejor servicio a los clientes.
 
-Este documento proporciona información detallada sobre qué tipos de información se recopilan y sobre cómo configurar Microsoft SQL Server en Linux para enviar que recopilan información a Microsoft. SQL Server 2017 incluye una declaración de privacidad que explica qué información y no se recopilan de los usuarios. Para obtener más información, consulte el [declaración de privacidad](http://go.microsoft.com/fwlink/?LinkID=868444).
+Este documento proporciona detalles acerca de qué tipos de información se recopilan y cómo configurar Microsoft SQL Server en Linux para enviar ese recopilados a Microsoft. SQL Server 2017 incluye una declaración de privacidad que explica qué información y no se recopilan de los usuarios. Para obtener más información, consulte el [declaración de privacidad](http://go.microsoft.com/fwlink/?LinkID=868444).
 
 En concreto, Microsoft no envía ninguno de los tipos de información siguientes a través de este mecanismo:
 
@@ -38,10 +38,10 @@ SQL Server 2017 siempre recopila y envía información sobre la experiencia de i
 
 ## <a name="disable-customer-feedback"></a>Deshabilitar los comentarios de clientes
 
-Esta opción permite cambiar si SQL Server envía comentarios a Microsoft o no. De forma predeterminada, este valor se establece en true. Para cambiar el valor, ejecute los siguientes comandos:
+Esta opción le permite cambiar si SQL Server envía comentarios a Microsoft o no. De forma predeterminada, este valor se establece en true. Para cambiar el valor, ejecute los siguientes comandos:
 
 > [!IMPORTANT]
-> Puede no desactivar los comentarios del cliente de forma gratuita ediciones de SQL Server, Express y Developer.
+> Puede no desactivar los comentarios de clientes de forma gratuita las ediciones de SQL Server, Express y Developer.
 
 ### <a name="on-red-hat-suse-and-ubuntu"></a>En Red Hat, SUSE y Ubuntu
 
@@ -78,13 +78,13 @@ Para deshabilitar los comentarios de clientes en docker, debe tener Docker [cons
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
    ```
    
-## <a name="local-audit-for-sql-server-on-linux-usage-feedback-collection"></a>Auditoría local de SQL Server en la recopilación de comentarios de uso de Linux
+## <a name="local-audit-for-sql-server-on-linux-usage-feedback-collection"></a>Auditoría local de SQL Server en la colección de comentarios sobre el uso de Linux
 
-Microsoft SQL Server 2017 contiene características habilitadas para Internet que pueden recopilar y enviar a Microsoft información sobre el equipo o dispositivo ("información estándar del equipo"). El componente de auditoría Local de la recopilación de comentarios de uso de SQL Server puede escribir los datos recopilados por el servicio en una carpeta designada, que representa los datos (registros) que se enviará a Microsoft. El propósito de la Auditoría local es permitir que los clientes vean todos los datos que Microsoft recopila con esta característica, por motivos de cumplimiento, reglamentarios o por validación de privacidad.
+Microsoft SQL Server 2017 contiene características habilitadas para Internet que pueden recopilar y enviar a Microsoft información sobre el equipo o dispositivo ("información estándar del equipo"). El componente de auditoría Local de la colección de comentarios sobre el uso de SQL Server puede escribir los datos recopilados por el servicio en una carpeta designada, que representa los datos (registros) que se enviará a Microsoft. El propósito de la Auditoría local es permitir que los clientes vean todos los datos que Microsoft recopila con esta característica, por motivos de cumplimiento, reglamentarios o por validación de privacidad.
 
-En SQL Server en Linux, auditoría Local es configurable en el nivel de instancia para el motor de base de datos de SQL Server. Otros componentes de SQL Server y las herramientas de SQL Server no tiene capacidad de auditoría Local para la recopilación de comentarios de uso.
+En SQL Server en Linux, auditoría Local es configurable en el nivel de instancia para motor de base de datos de SQL Server. Otros componentes de SQL Server y las herramientas de SQL Server no tiene funcionalidad de auditoría Local para la recopilación de comentarios de uso.
 
-### <a name="enable-local-audit"></a>Habilitar la auditoría Local
+### <a name="enable-local-audit"></a>Habilitar auditoría Local
 
 Esta opción habilita la auditoría Local y le permite establecer el directorio donde se crean los registros de auditoría Local.
 
@@ -94,7 +94,7 @@ Esta opción habilita la auditoría Local y le permite establecer el directorio 
    sudo mkdir /tmp/audit
    ```
 
-1. Cambiar el propietario y el grupo del directorio para la **mssql** usuario:
+1. Cambiar el propietario y el grupo del directorio para el **mssql** usuario:
 
    ```bash
    sudo chown mssql /tmp/audit
@@ -114,9 +114,9 @@ Esta opción habilita la auditoría Local y le permite establecer el directorio 
    ```
    
 ### <a name="on-docker"></a>En Docker
-Para habilitar la auditoría Local en docker, debe tener Docker [conservar los datos](sql-server-linux-configure-docker.md). 
+Para habilitar la auditoría Local de docker, debe tener Docker [conservar los datos](sql-server-linux-configure-docker.md). 
 
-1. El directorio de destino para los nuevos registros de auditoría Local estará en el contenedor. Cree un directorio de destino para los nuevos registros de auditoría Local en el directorio de host en su equipo. En el ejemplo siguiente se crea un nuevo **/auditoría** directorio:
+1. El directorio de destino para los nuevos registros de auditoría Local estará en el contenedor. Cree un directorio de destino para los nuevos registros de auditoría Local en el directorio de host en el equipo. En el ejemplo siguiente se crea un nuevo **auditoría** directorio:
 
    ```bash
    sudo mkdir <host directory>/audit
@@ -143,4 +143,4 @@ Para habilitar la auditoría Local en docker, debe tener Docker [conservar los d
    
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información acerca de SQL Server en Linux, consulte la [información general de SQL Server en Linux](sql-server-linux-overview.md).
+Para obtener más información acerca de SQL Server en Linux, consulte el [información general de SQL Server en Linux](sql-server-linux-overview.md).

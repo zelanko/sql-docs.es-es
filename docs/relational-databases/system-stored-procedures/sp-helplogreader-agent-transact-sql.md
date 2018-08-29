@@ -1,5 +1,5 @@
 ---
-title: sp_helplogreader_agent (Transact-SQL) | Documentos de Microsoft
+title: sp_helplogreader_agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_helplogreader_agent
 ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bafe93763e2814b67f7455d2a4918193c5a1c40b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef9fd50728a4bc9ebf661b2dbb22ad8ca4e9f4ad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995362"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031826"
 ---
 # <a name="sphelplogreaderagent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,28 +44,28 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
   
 ## <a name="arguments"></a>Argumentos  
  [ **@publisher**=] **'***publisher***'**  
- Es el nombre del publicador. *Publisher* es **sysname**, su valor predeterminado es null.  
+ Es el nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|Id. del agente.|  
-|**Nombre**|**nvarchar (100)**|Nombre del agente.|  
+|**id**|**int**|ID. del agente.|  
+|**Nombre**|**Nvarchar (100)**|Nombre del agente.|  
 |**publisher_security_mode**|**smallint**|Modo de seguridad utilizado por el agente al conectarse al publicador, que puede ser uno de los siguientes:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** = autenticación de Windows.|  
 |**publisher_login**|**sysname**|Inicio de sesión utilizado para conectarse al publicador.|  
 |**publisher_password**|**nvarchar (524)**|Por motivos de seguridad, un valor de **\* \* \* \* \* \* \* \* \* \*** siempre es Devuelve.|  
 |**job_id**|**uniqueidentifier**|Id. único del trabajo del agente.|  
-|**job_login**|**nvarchar(512)**|Es la cuenta de Windows bajo la que se ejecuta el agente de lector del registro, que se devuelve en el formato *dominio*\\*nombre de usuario*.|  
+|**job_login**|**nvarchar(512)**|Es la cuenta de Windows bajo la que se ejecuta el agente de lector del registro, que se devuelve en el formato *dominio*\\*username*.|  
 |**job_password**|**sysname**|Por motivos de seguridad, un valor de **\* \* \* \* \* \* \* \* \* \*** siempre es Devuelve.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_helplogreader_agent** se utiliza en la replicación transaccional.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor en el publicador o los miembros de la **db_owner** rol fijo de base de datos en la base de datos de publicación puede ejecutar **sp_helplogreader_agent**.  
   
 ## <a name="see-also"></a>Vea también  

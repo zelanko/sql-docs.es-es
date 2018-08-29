@@ -1,5 +1,5 @@
 ---
-title: sp_delete_log_shipping_primary_database (Transact-SQL) | Documentos de Microsoft
+title: sp_delete_log_shipping_primary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_log_shipping_primary_database
 ms.assetid: cb1d5d00-2805-4d47-bd04-545232067345
-caps.latest.revision: 22
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 76a1b1ac129d33866984eb7a0f428149e4e299a2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 302cdeb85ad475354d26a988580283db57415a40
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258720"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023581"
 ---
 # <a name="spdeletelogshippingprimarydatabase-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Este procedimiento almacenado quita el trasvase de registros de la base de datos principal, incluyendo el trabajo de copia de seguridad y los historiales local y remoto. Sólo utilice este procedimiento almacenado después de haber quitado las bases de datos secundarias mediante **sp_delete_log_shipping_primary_secondary**.  
+  Este procedimiento almacenado quita el trasvase de registros de la base de datos principal, incluyendo el trabajo de copia de seguridad y los historiales local y remoto. Solo Utilice este procedimiento almacenado después de haber quitado las bases de datos secundaria mediante **sp_delete_log_shipping_primary_secondary**.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +53,7 @@ sp_delete_log_shipping_primary_database
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Ninguno.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_delete_log_shipping_primary_database** se debe ejecutar desde la **maestro** base de datos en el servidor principal. Este procedimiento almacenado hace lo siguiente:  
   
 1.  Elimina el trabajo de copia de seguridad para la base de datos principal especificada.  
@@ -69,9 +68,9 @@ sp_delete_log_shipping_primary_database
   
 6.  Quita la entrada de **log_shipping_primary_databases** para esta base de datos principal.  
   
-7.  Llamadas **sp_delete_log_shipping_alert_job** en el servidor de supervisión.  
+7.  Las llamadas **sp_delete_log_shipping_alert_job** en el servidor de supervisión.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -83,7 +82,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Acerca del trasvase de registros & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

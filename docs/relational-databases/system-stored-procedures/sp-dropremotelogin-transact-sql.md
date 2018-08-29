@@ -1,5 +1,5 @@
 ---
-title: sp_dropremotelogin (Transact-SQL) | Documentos de Microsoft
+title: sp_dropremotelogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropremotelogin
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4565f5a3005a556d24777a220ff020816f01a346
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 89633f39028047e4caf4bb2dd8db0f4ce022c96c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256591"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026502"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +33,7 @@ ms.locfileid: "33256591"
   Quita un inicio de sesión remoto asignado a un inicio de sesión local que se utiliza para ejecutar procedimientos almacenados remotos en el servidor local que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Utilice en su lugar servidores vinculados y procedimientos almacenados del servidor vinculado.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Utilice en su lugar servidores vinculados y procedimientos almacenados de servidor vinculado.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,16 +59,16 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
- Si solo *remoteserver* se especifica, se quitan todos los inicios de sesión remotos para ese servidor remoto desde el servidor local. Si *inicio de sesión* también está especificados, que todos los inicios de sesión de *remoteserver* inicio de sesión local asignado específicos que se quitan del servidor local. Si *remote_name* también se especifica, solo el inicio de sesión remoto de ese usuario remoto desde *remoteserver* se quita del servidor local.  
+## <a name="remarks"></a>Notas  
+ Si solo *remoteserver* se especifica, se quitan todos los inicios de sesión remotos para ese servidor remoto desde el servidor local. Si *inicio de sesión* también está especificados, remotos todos los inicios de sesión de *remoteserver* inicio de sesión local asignado a específico que se quitan del servidor local. Si *remote_name* también se especifica, solo el inicio de sesión remoto de ese usuario remoto desde *remoteserver* se quita del servidor local.  
   
  Para agregar usuarios al servidor local, use **sp_addlogin**. Para quitar usuarios del servidor local, use **sp_droplogin**.  
   
- Los inicios de sesión remotos solo son necesarios cuando se usan versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7.0 y posteriores utilizan en su lugar inicios de sesión de servidores vinculados. Use **sp_addlinkedsrvlogin** y **sp_droplinkedsrvlogin** para agregar y quitar inicios de sesión de servidor vinculado.  
+ Los inicios de sesión remotos solo son necesarios cuando se usan versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7.0 y posteriores utilizan en su lugar inicios de sesión de servidores vinculados. Use **sp_addlinkedsrvlogin** y **sp_droplinkedsrvlogin** para agregar y quitar inicios de sesión del servidor vinculado.  
   
- **sp_dropremotelogin** no puede ejecutarse en una transacción definida por el usuario.  
+ **sp_dropremotelogin** no se puede ejecutar dentro de una transacción definida por el usuario.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer a la **sysadmin** o **securityadmin** roles fijos de servidor.  
   
 ## <a name="examples"></a>Ejemplos  

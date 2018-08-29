@@ -1,5 +1,5 @@
 ---
-title: sp_helpdb (Transact-SQL) | Documentos de Microsoft
+title: sp_helpdb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpdb
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7961664bce12a2f1b73e8ca90c6cca11e1075d27
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 09dc7e451e5122600b0ea32222f6fa913c2716f8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255139"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027709"
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,43 +45,43 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@dbname=** ] **'***nombre***'**  
- Es el nombre de la base de datos para el que se proporciona información. *nombre* es **sysname**, no tiene ningún valor predeterminado. Si *nombre* no se especifica, **sp_helpdb** informa sobre todas las bases de datos de la **sys.databases** vista de catálogo.  
+ Es el nombre de la base de datos para el que se proporciona información. *nombre* es **sysname**, no tiene ningún valor predeterminado. Si *nombre* no se especifica, **sp_helpdb** informa sobre todas las bases de datos en el **sys.databases** vista de catálogo.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|Nombre de base de datos.|  
-|**db_size**|**nvarchar(13)**|Tamaño total de la base de datos.|  
-|**propietario**|**sysname**|Base de datos como propietario, **sa**.|  
+|**valor de db_size**|**nvarchar(13)**|Tamaño total de la base de datos.|  
+|**Propietario**|**sysname**|Bases de datos como propietario, **sa**.|  
 |**dbid**|**smallint**|Id. de la base de datos.|  
 |**Creado**|**nvarchar(11)**|Fecha de creación de la base de datos.|  
-|**status**|**nvarchar(600)**|Lista de valores separados por comas de las opciones actualmente establecidas en la base de datos.<br /><br /> Las opciones con valores booleanos aparecen solamente si están habilitadas. Opciones no booleanas se muestran con sus valores correspondientes en el formulario de *option_name*=*valor*.<br /><br /> Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
+|**status**|**nvarchar(600)**|Lista de valores separados por comas de las opciones actualmente establecidas en la base de datos.<br /><br /> Las opciones con valores booleanos aparecen solamente si están habilitadas. Las opciones no booleanas se muestran con sus valores correspondientes en forma de *option_name*=*valor*.<br /><br /> Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |**COMPATIBILITY_LEVEL**|**tinyint**|Nivel de compatibilidad de la base de datos: 60, 65, 70, 80 o 90.|  
   
- Si *nombre* se especifica, hay un conjunto de resultados adicional que muestra la asignación de archivos de la base de datos especificada.  
+ Si *nombre* se especifica, hay un conjunto de resultados adicional que muestra la asignación de archivos de la base de datos especificado.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**nchar(128)**|Nombre de archivo lógico.|  
 |**FileID**|**smallint**|Identificador de archivo.|  
-|**nombre de archivo**|**nchar(260)**|Nombre del archivo en el sistema operativo (nombre de archivo físico).|  
+|**Nombre de archivo**|**nchar(260)**|Nombre del archivo en el sistema operativo (nombre de archivo físico).|  
 |**filegroup**|**nvarchar(128)**|Grupo al que pertenece el archivo.<br /><br /> NULL = El archivo es de registro. Nunca forma parte de un grupo de archivos.|  
 |**size**|**nvarchar(18)**|Tamaño del archivo, en megabytes.|  
-|**MaxSize**|**nvarchar(18)**|Tamaño máximo que puede alcanzar el archivo. El valor UNLIMITED en este campo indica que el archivo puede aumentar hasta que el disco esté lleno.|  
-|**crecimiento**|**nvarchar(18)**|Incremento de crecimiento del archivo. Esto indica la cantidad de espacio que se agrega al archivo que se necesita espacio cada vez.|  
-|**Uso de**|**varchar (9)**|Uso del archivo. Para un archivo de datos, el valor es **'solo datos'** y el archivo de registro es el valor de **'registro'**.|  
+|**tamaño máximo**|**nvarchar(18)**|Tamaño máximo que puede alcanzar el archivo. El valor UNLIMITED en este campo indica que el archivo puede aumentar hasta que el disco esté lleno.|  
+|**Crecimiento**|**nvarchar(18)**|Incremento de crecimiento del archivo. Esto indica la cantidad de espacio que se agrega al archivo que se necesita espacio cada vez.|  
+|**Uso de**|**varchar (9)**|Uso del archivo. Para un archivo de datos, el valor es **"solo datos"** y para el archivo de registro es el valor **'iniciar solo'**.|  
   
-## <a name="remarks"></a>Comentarios  
- El **estado** qué opciones se han establecido en ON en la base de datos de informes del conjunto de columnas en el resultado. Todas las opciones de base de datos no se notifican mediante la **estado** columna. Para ver una lista completa de la configuración de opción de base de datos actual, use la **sys.databases** vista de catálogo.  
+## <a name="remarks"></a>Notas  
+ El **estado** conjunto de columnas en el resultado de las opciones que se han establecido en ON en la base de datos de informes. No todas las opciones de base de datos notificadas por el **estado** columna. Para ver una lista completa de la configuración de opción de base de datos actual, use el **sys.databases** vista de catálogo.  
   
-## <a name="permissions"></a>Permissions  
- Cuando se especifica una sola base de datos, la pertenencia a la **público** se requiere el rol en la base de datos. Cuando no se especifica ninguna base de datos, pertenencia a la **público** rol en el **maestro** se requiere la base de datos.  
+## <a name="permissions"></a>Permisos  
+ Cuando se especifica una sola base de datos, la pertenencia a la **pública** se requiere el rol en la base de datos. Cuando no se especifica ninguna base de datos, pertenencia a la **pública** rol en el **maestro** se requiere la base de datos.  
   
- Si no se puede tener acceso a una base de datos, **sp_helpdb** muestra información de 15622 y gran parte del mensaje de error acerca de la base de datos como sea posible.  
+ Si no se puede tener acceso a una base de datos, **sp_helpdb** muestra información del mensaje 15622 y toda la base de datos como sea posible.  
   
 ## <a name="examples"></a>Ejemplos  
   

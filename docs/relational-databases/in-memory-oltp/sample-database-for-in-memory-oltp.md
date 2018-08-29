@@ -454,9 +454,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> Uso de memoria y de espacio en disco del ejemplo  
  A continuación se describe qué cabe esperar en cuando a uso de la memoria y del espacio en disco para la base de datos de ejemplo. También se muestran los resultados obtenidos en un servidor de prueba con 16 núcleos lógicos.  
   
-###  
-            <a name="Memoryutilizationforthememory-optimizedtables">
-            </a> Uso de memoria para las tablas optimizadas para memoria  
+###  <a name="Memoryutilizationforthememory-optimizedtables"></a> Uso de memoria para las tablas optimizadas para memoria  
   
 #### <a name="overall-utilization-of-the-database"></a>Utilización global de la base de datos  
  Se puede usar la consulta siguiente para obtener la utilización de memoria total para OLTP en memoria en el sistema.  

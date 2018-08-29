@@ -1,5 +1,5 @@
 ---
-title: sp_helptracertokenhistory (Transact-SQL) | Documentos de Microsoft
+title: sp_helptracertokenhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helptracertokenhistory
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6cab0dacd02e57cead03cdb0aeef35a385afb349
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: deeab8c5a6f7e7b8897c55a86ccf95f965645574
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996692"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026144"
 ---
 # <a name="sphelptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,17 +55,17 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
  Es el identificador del token de seguimiento en el [MStracer_tokens &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) qué historial se devuelve información de tabla. *tracer_id* es **int**, no tiene ningún valor predeterminado.  
   
  [  **@publisher=** ] **'***publisher***'**  
- El nombre del publicador. *Publisher* es **sysname**, su valor predeterminado es null.  
+ El nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
->  Este parámetro solo debe especificarse para no -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores.  
+>  Este parámetro solo debe especificarse para que no sean de[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores.  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
  El nombre de la base de datos de publicación. *publisher_db* es **sysname**, su valor predeterminado es null. Si el procedimiento almacenado se ejecuta en el publicador, se omite este parámetro.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**distributor_latency**|**bigint**|Número de segundos entre la confirmación del registro del token de seguimiento en el publicador y la confirmación del registro en el distribuidor.|  
 |**suscriptor**|**sysname**|Nombre del suscriptor que ha recibido el token de seguimiento.|  
@@ -76,7 +76,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_helptracertokenhistory** se utiliza en la replicación transaccional.  
   
  Ejecutar [sp_helptracertokens &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) para obtener una lista de los testigos de seguimiento para la publicación.  
@@ -86,8 +86,8 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-helptracertokenhistor_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor, el **db_owner** fijo de base de datos en la base de datos de publicación, o **db_owner** fijo de base de datos o  **replmonitor** roles en la base de datos de distribución pueden ejecutar **sp_helptracertokenhistory**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor, el **db_owner** fijo de base de datos en la base de datos de publicación o **db_owner** fijo de base de datos o  **replmonitor** roles en la base de datos de distribución pueden ejecutar **sp_helptracertokenhistory**.  
   
 ## <a name="see-also"></a>Vea también  
  [Medir la latencia y validar las conexiones de la replicación transaccional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   

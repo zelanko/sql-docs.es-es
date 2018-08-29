@@ -1,5 +1,5 @@
 ---
-title: sp_helptext (Transact-SQL) | Documentos de Microsoft
+title: sp_helptext (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - sp_helptext
 ms.assetid: 24135456-05f0-427c-884b-93cf38dd47a8
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8b71a693eeca059cdca695e17b5c0cde623863fa
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 96f3998b2a1630c6f23277f6a6cf58040ca15a1a
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558875"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43069102"
 ---
 # <a name="sphelptext-transact-sql"></a>sp_helptext (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
  Es el nombre, completo o no, de un objeto definido por el usuario en el ámbito de esquema. Se requieren comillas solo si se especifica un nombre de objeto calificado. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. El objeto debe estar en la base de datos actual. *nombre* es **nvarchar(776)**, no tiene valor predeterminado.  
   
  [  **@columnname =** ] **'***computed_column_name***'**  
- Es el nombre de la columna calculada para la que se va a mostrar la definición. Se debe especificar la tabla que contiene la columna como *nombre de*. *nombreColumna* es **sysname**, no tiene valor predeterminado.  
+ Es el nombre de la columna calculada para la que se va a mostrar la definición. Se debe especificar la tabla que contiene la columna como *nombre de*. *column_name* es **sysname**, no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -61,7 +61,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 |**Texto**|**nvarchar(255)**|Definición del objeto|  
   
 ## <a name="remarks"></a>Notas  
- sp_helptext muestra la definición que se utiliza para crear un objeto en varias filas. Cada fila contiene 255 caracteres de la definición de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La definición reside en la **definición** columna en el [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vista del catálogo.  
+ sp_helptext muestra la definición que se utiliza para crear un objeto en varias filas. Cada fila contiene 255 caracteres de la definición de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La definición reside en el **definición** columna en el [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vista de catálogo.  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** . Las definiciones de los objetos del sistema están visibles públicamente. La definición de los objetos de usuario está visible para el propietario del objeto o los receptores de los permisos siguientes: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION.  

@@ -1,5 +1,5 @@
 ---
-title: sp_droppublication (Transact-SQL) | Documentos de Microsoft
+title: sp_droppublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_droppublication
 ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
 caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: afc974ff0f74d728eda66a7e889d4bcd598da673
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd144d59aae02cb5f6e18b991050518dee3da31a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989640"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029731"
 ---
 # <a name="spdroppublication-transact-sql"></a>sp_droppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_droppublication [ @publication= ] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=** ] **'***publicación***'**  
- Es el nombre de la publicación que se va a quitar. *publicación* es **sysname**, no tiene ningún valor predeterminado. Si **todos los** se especifica, se quitan todas las publicaciones de la base de datos de publicación, excepto las que tienen suscripciones.  
+ Es el nombre de la publicación que se va a quitar. *publicación* es **sysname**, no tiene ningún valor predeterminado. Si **todas** se especifica, se quitan todas las publicaciones de la base de datos de publicación, excepto las que tienen suscripciones.  
   
  [  **@ignore_distributor =** ] *ignore_distributor*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -55,14 +55,14 @@ sp_droppublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_droppublication** se utiliza en la replicación de instantáneas y transaccional.  
   
- **sp_droppublication** quita recursivamente todos los artículos asociados con una publicación y, a continuación, quita la propia publicación. No se puede quitar una publicación si tiene una o más suscripciones. Para obtener información acerca de cómo quitar suscripciones, vea [eliminar una suscripción de inserción](../../relational-databases/replication/delete-a-push-subscription.md) y [eliminar una suscripción de extracción](../../relational-databases/replication/delete-a-pull-subscription.md).  
+ **sp_droppublication** quita recursivamente todos los artículos asociados con una publicación y, a continuación, quita la propia publicación. No se puede quitar una publicación si tiene una o más suscripciones. Para obtener información acerca de cómo quitar suscripciones, vea [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md) y [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
  Ejecutar **sp_droppublication** quitar una publicación no quita los objetos publicados de la base de datos de publicación o los objetos correspondientes de la base de datos de suscripción. Utilice DROP \<objeto > para quitar estos objetos manualmente si es necesario.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_droppublication**.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -1,5 +1,5 @@
 ---
-title: sp_helparticlecolumns (Transact-SQL) | Documentos de Microsoft
+title: sp_helparticlecolumns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helparticlecolumns
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b5f5e70a599df333a4d00083929108f9a7172d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6847491bbf8cbf517478ab6cb620f158577ca3e3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995862"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034327"
 ---
 # <a name="sphelparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,30 +54,30 @@ sp_helparticlecolumns [ @publication = ] 'publication'
  Es el nombre del artículo cuyas columnas se han devuelto. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
   
  [ **@publisher**=] **'***publisher***'**  
- Especifica un no[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *Publisher* es **sysname**, su valor predeterminado es null.  
+ Especifica que no es[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
->  *Publisher* no debe especificarse cuando se publica el artículo solicitado por un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
+>  *publicador* no debe especificarse cuando se publica el artículo solicitado por un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (columnas que no están publicadas) o **1** (columnas que se publican)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Id. de columna**|**int**|Identificador de la columna.|  
 |**column**|**sysname**|Nombre de la columna.|  
 |**Publicado**|**bit**|Indica si la columna está publicada:<br /><br /> **0** = No<br /><br /> **1** = Sí|  
 |**tipo de publicador**|**sysname**|Tipo de datos de la columna del publicador.|  
-|**Tipo de suscriptor**|**sysname**|Tipo de datos de la columna del suscriptor.|  
+|**tipo de suscriptor**|**sysname**|Tipo de datos de la columna del suscriptor.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_helparticlecolumns** se utiliza en la replicación de instantáneas y transaccional.  
   
  **sp_helparticlecolumns** es útil para comprobar una partición vertical.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor, el **db_owner** rol fijo de base de datos o la lista de acceso de publicación para la publicación actual puede ejecutar **sp_helparticlecolumns**.  
   
 ## <a name="see-also"></a>Vea también  

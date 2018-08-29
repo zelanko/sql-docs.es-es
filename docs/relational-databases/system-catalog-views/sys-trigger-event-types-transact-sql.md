@@ -1,5 +1,5 @@
 ---
-title: Sys.trigger_event_types (Transact-SQL) | Documentos de Microsoft
+title: Sys.trigger_event_types (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,28 +21,28 @@ helpviewer_keywords:
 - sys.trigger_event_types catalog view
 ms.assetid: 054aed54-7151-4760-934a-149fa434f1ae
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2b9d5f6df14e02395ea204f7037d2324a0f936b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c2db90c3796263171c90ded10ef95ab6c632e4d1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219826"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024932"
 ---
 # <a name="systriggereventtypes-transact-sql"></a>sys.trigger_event_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila para cada evento o grupo de eventos en el que se puede activar un desencadenador.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Tipo**|**int**|Tipo de evento o grupo de eventos que provoca la activación de un desencadenador.|  
-|**type_name**|**nvarchar(64)**|Nombre de un evento o grupo de eventos. Esto se puede especificar en la cláusula FOR de una [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) instrucción.|  
+|**type_name**|**Nvarchar (64)**|Nombre de un evento o grupo de eventos. Esto se puede especificar en la cláusula FOR de una [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) instrucción.|  
 |**parent_type**|**int**|Tipo de grupo de eventos que es el elemento primario del evento o grupo de eventos.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

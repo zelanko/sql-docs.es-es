@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_drop_job (Transact-SQL) | Documentos de Microsoft
+title: Sys.sp_cdc_drop_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_drop_job
 ms.assetid: e8265846-8051-4848-b28e-fac27c10bdeb
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3c9f5df44d98e28dcd261a01002451a206f6fee5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 36ffc0bbc703489140829dea8da594927219234f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252146"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031605"
 ---
 # <a name="sysspcdcdropjob-transact-sql"></a>sys.sp_cdc_drop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +54,10 @@ sys.sp_cdc_drop_job [ [ @job_type = ] 'job_type' ]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Nones  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  sp_cdc_drop_job se llama internamente en [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere pertenencia al rol fijo de base de datos db_owner.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -73,6 +72,6 @@ EXEC sys.sp_cdc_drop_job @job_type = N'cleanup';
 ## <a name="see-also"></a>Vea también  
  [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [Sys.sp_cdc_disable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)   
- [Sys.sp_cdc_add_job & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
+ [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

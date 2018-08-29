@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_start_job (Transact-SQL) | Documentos de Microsoft
+title: Sys.sp_cdc_start_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_start_job
 ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1d5d423c3bf0eea7488839928b9c11b9e266a16c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0e744a907cf7991c0e913bc8a240a5743b91d8a2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249774"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031553"
 ---
 # <a name="sysspcdcstartjob-transact-sql"></a>sys.sp_cdc_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +54,10 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Un administrador puede utilizar sys.sp_cdc_start_job para iniciar explícitamente el trabajo de captura o el trabajo de limpieza.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere pertenencia al rol fijo de base de datos db_owner.  
   
 ## <a name="examples"></a>Ejemplos  

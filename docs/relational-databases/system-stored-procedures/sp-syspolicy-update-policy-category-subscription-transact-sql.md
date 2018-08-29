@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_update_policy_category_subscription (Transact-SQL) | Documentos de Microsoft
+title: sp_syspolicy_update_policy_category_subscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_update_policy_category_subscription
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
-caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 46ca3100a203d3afc9e3b618d4264629ddf1ce58
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2d285728aafbfedc3c194ab65351a90d1daba019
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261031"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033287"
 ---
 # <a name="spsyspolicyupdatepolicycategorysubscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,8 +54,8 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
   
  Si especifica *tipo_de_destino*, el valor debe establecerse en 'DATABASE'.  
   
- [  **@target_object=** ] **'** objeto_de_destino **'**  
- Es el nombre de la base de datos que se suscribirá a la categoría de directiva. *objeto_de_destino* es **sysname**, su valor predeterminado es null.  
+ [  **@target_object=** ] **'** target_object **'**  
+ Es el nombre de la base de datos que se suscribirá a la categoría de directiva. *target_object* es **sysname**, su valor predeterminado es null.  
   
  [  **@policy_category=** ] **'** categoría_de_directiva **'**  
  Es el nombre de la categoría de directiva a la que desea que la base de datos se suscriba. *categoría_de_directiva* es **sysname**, su valor predeterminado es null.  
@@ -64,10 +63,10 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Debe ejecutar sp_syspolicy_update_policy_category_subscription en el contexto de la base de datos del sistema msdb.  
   
- Para obtener los valores de *policy_category_subscription_id* y *categoría_de_directiva*, puede utilizar la siguiente consulta:  
+ Para obtener los valores de *policy_category_subscription_id* y *categoría_de_directiva*, puede usar la siguiente consulta:  
   
 ```  
 SELECT a.policy_category_subscription_id, a.target_type, a.target_object  
@@ -77,7 +76,7 @@ INNER JOIN msdb.dbo.syspolicy_policy_categories AS b
 ON a.policy_category_id = b.policy_category_id;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de base de datos PolicyAdministratorRole.  
   
 > [!IMPORTANT]  

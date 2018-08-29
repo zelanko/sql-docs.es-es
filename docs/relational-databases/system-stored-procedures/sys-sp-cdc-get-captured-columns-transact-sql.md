@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_get_captured_columns (Transact-SQL) | Documentos de Microsoft
+title: Sys.sp_cdc_get_captured_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sp_cdc_get_captured_columns
 - change data capture [SQL Server], querying metadata
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b131dce10e231bc0ee479ff0157a614bcfb2d6f4
-ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
+ms.openlocfilehash: a53411c8be883f65f511473415dfc0226b21dcf2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34550586"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024150"
 ---
 # <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,12 +73,12 @@ sys.sp_cdc_get_captured_columns
 |numeric_scale|**int**|Escala de la columna, si está basada en números; en caso contrario, es NULL.|  
 |datetime_precision|**smallint**|Precisión de la columna, si está basada en fecha y hora; en caso contrario, es NULL.|  
   
-## <a name="remarks"></a>Comentarios  
- Utilice sys.sp_cdc_get_captured_columns para obtener información acerca de las columnas capturadas devueltas consultando las funciones de consulta de la instancia de captura [cdc.fn_cdc_get_all_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) o [cdc.fn_cdc_get_net_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md). Los nombres de columna, Id. y posición siguen siendo constantes para la duración de la instancia de captura. Solo el tipo de datos de columna cambia cuando el tipo de datos de la columna de origen subyacente en la tabla de la que se ha realizado un seguimiento cambia. Las columnas que se agregan o se quitan de una tabla de origen tienen ningún impacto en las columnas capturadas de instancias de captura existente.  
+## <a name="remarks"></a>Notas  
+ Utilice sys.sp_cdc_get_captured_columns para obtener información acerca de las columnas capturadas devueltas consultando las funciones de consulta de la instancia de captura [cdc.fn_cdc_get_all_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) o [cdc.fn_cdc_get_net_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md). Los nombres de columna, Id. y posición siguen siendo constantes para la duración de la instancia de captura. Solo el tipo de datos de columna cambia cuando el tipo de datos de la columna de origen subyacente en la tabla de la que se ha realizado un seguimiento cambia. Las columnas que se agregan o se quita de una tabla de origen no tienen ningún impacto en las columnas capturadas de instancias de captura existentes.  
   
  Use [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) para obtener información acerca de la definición de datos de las instrucciones de DDL (lenguaje) aplicadas a una tabla de origen. Cualquier cambio de DDL que ha modificado la estructura de una columna de origen de la que se ha realizado un seguimiento se devuelve en el conjunto de resultados.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere pertenencia al rol fijo de base de datos db_owner. Para el resto de usuarios, requiere el permiso SELECT en todas las columnas capturadas en la tabla de origen y, si se ha definido un rol de acceso para la instancia de captura, la pertenencia a ese rol de base de datos. Cuando el autor de la llamada no tiene permiso para ver los datos del origen, la función devuelve el error 22981 (El objeto no existe o se ha denegado el acceso).  
   
 ## <a name="examples"></a>Ejemplos  

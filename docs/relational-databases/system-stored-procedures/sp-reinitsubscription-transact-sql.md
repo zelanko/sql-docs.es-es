@@ -1,5 +1,5 @@
 ---
-title: sp_reinitsubscription (Transact-SQL) | Documentos de Microsoft
+title: sp_reinitsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_reinitsubscription
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 233448ed17ee55bb2d2c1c2b0a906191c73d4cf6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ebb5a03977d6c01eba57061142e589b5946f7f0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000692"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030552"
 ---
 # <a name="spreinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
  Es el nombre de la publicación. *publicación* es **sysname**, con un valor predeterminado es all.  
   
  [  **@article=**] **'***artículo***'**  
- Es el nombre del artículo. *artículo* es **sysname**, con un valor predeterminado es all. Para una publicación de actualización inmediata, *artículo* debe ser **todos los**; en caso contrario, el procedimiento almacenado omite la publicación y notifica un error.  
+ Es el nombre del artículo. *artículo* es **sysname**, con un valor predeterminado es all. Para una publicación de actualización inmediata, *artículo* debe ser **todas**; en caso contrario, el procedimiento almacenado omite la publicación y notifica un error.  
   
  [  **@subscriber=**] **'***suscriptor***'**  
  Es el nombre del suscriptor. *suscriptor* es **sysname**, no tiene ningún valor predeterminado.  
@@ -65,35 +65,35 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
  Es el nombre de la base de datos de destino. *destination_db* es **sysname**, con un valor predeterminado es all.  
   
  [  **@for_schema_change=**] **'***for_schema_change***'**  
- Indica si la reinicialización se produce como resultado de un cambio de esquema en la base de datos de publicación. *for_schema_change* es **bits**, con un valor predeterminado es 0. Si **0**, las suscripciones activas para las publicaciones que permiten la actualización inmediata se reactivan siempre y cuando se reinicializan toda la publicación y no solo algunos de los artículos. Esto significa que la reinicialización se produce como resultado de un cambio de esquema. Si **1**, las suscripciones activas no se reactivan hasta que se ejecuta el agente de instantáneas.  
+ Indica si la reinicialización se produce como resultado de un cambio de esquema en la base de datos de publicación. *for_schema_change* es **bit**, su valor predeterminado es 0. Si **0**, las suscripciones activas para las publicaciones que permiten la actualización inmediata se reactivan siempre y cuando toda la publicación y no solo algunos de los artículos se reinicialicen. Esto significa que la reinicialización se produce como resultado de un cambio de esquema. Si **1**, las suscripciones activas no se reactivan hasta que se ejecuta el agente de instantáneas.  
   
  [  **@publisher=** ] **'***publisher***'**  
- Especifica un no[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *Publisher* es **sysname**, su valor predeterminado es null.  
+ Especifica que no es[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
->  *Publisher* no debe usarse para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores.  
+>  *publicador* no debe usarse para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores.  
   
  [  **@ignore_distributor_failure=** ] *ignore_distributor_failure*  
- Permite la reinicialización incluso si el distribuidor no existe o está sin conexión. *ignore_distributor_failure* es **bits**, con un valor predeterminado es 0. Si **0**, la reinicialización se produce un error si el distribuidor no existe o está sin conexión.  
+ Permite la reinicialización incluso si el distribuidor no existe o está sin conexión. *ignore_distributor_failure* es **bit**, su valor predeterminado es 0. Si **0**, reinicialización se produce un error si el distribuidor no existe o está sin conexión.  
   
  [  **@invalidate_snapshot=** ] *invalidate_snapshot*  
- Invalida la instantánea de publicación existente. *invalidate_snapshot* es **bits**, con un valor predeterminado es 0. Si **1**, se genera una nueva instantánea para la publicación.  
+ Invalida la instantánea de publicación existente. *invalidate_snapshot* es **bit**, su valor predeterminado es 0. Si **1**, se genera una nueva instantánea para la publicación.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_reinitsubscription** se utiliza en la replicación transaccional.  
   
- **sp_reinitsubscription** no es compatible con la replicación transaccional punto a punto.  
+ **sp_reinitsubscription** no se admite para la replicación transaccional punto a punto.  
   
  Para aquellas suscripciones en las que se aplica automáticamente la instantánea inicial y en las que la publicación no admite suscripciones actualizables, es necesario ejecutar el Agente de instantáneas después de ejecutar el procedimiento almacenado a fin de que el esquema y los archivos del programa de copia masiva estén preparados; a continuación, los Agentes de distribución estarán preparados para volver a sincronizar las suscripciones.  
   
- Para aquellas suscripciones en las que la instantánea inicial se aplica automáticamente y en las que la publicación admite suscripciones actualizables, el Agente de distribución vuelve a sincronizar la suscripción utilizando el esquema y los archivos del programa de copia masiva más recientes creados previamente por el Agente de instantáneas. El agente de distribución vuelve a sincronizar la suscripción inmediatamente después de que el usuario ejecuta **sp_reinitsubscription**, si el agente de distribución no está ocupado; de lo contrario, la sincronización puede producirse después el (intervalo de mensaje especificado por el parámetro de línea de comandos del agente de distribución: **MessageInterval**).  
+ Para aquellas suscripciones en las que la instantánea inicial se aplica automáticamente y en las que la publicación admite suscripciones actualizables, el Agente de distribución vuelve a sincronizar la suscripción utilizando el esquema y los archivos del programa de copia masiva más recientes creados previamente por el Agente de instantáneas. El agente de distribución vuelve a sincronizar la suscripción inmediatamente después de que el usuario ejecuta **sp_reinitsubscription**, si el agente de distribución no está ocupado; de lo contrario, la sincronización puede producir cuando el intervalo de mensaje () especificado por el parámetro de línea de comandos del agente de distribución: **MessageInterval**).  
   
- **sp_reinitsubscription** no tiene ningún efecto sobre las suscripciones que la instantánea inicial se aplica manualmente.  
+ **sp_reinitsubscription** no tiene ningún efecto en las suscripciones donde se aplica manualmente la instantánea inicial.  
   
- Para volver a sincronizar las suscripciones anónimas a una publicación, pase **todos los** o NULL como *suscriptor*.  
+ Para volver a sincronizar las suscripciones anónimas a una publicación, pase **todas** o NULL como *suscriptor*.  
   
  La replicación transaccional admite la reinicialización de suscripciones en el nivel del artículo. La instantánea del artículo se volverá a aplicar en el suscriptor durante la siguiente sincronización una vez que se haya marcado el artículo para reinicializarlo. Sin embargo, si hay artículos dependientes a los que también está suscrito el mismo suscriptor, se puede generar un error al volver a aplicar la instantánea en el artículo, a menos que los artículos dependientes de la publicación se reinicialicen también automáticamente en determinadas circunstancias:  
   
@@ -104,7 +104,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_reinittranpushsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitsubscription-tr_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor, los miembros de la **db_owner** rol fijo de base de datos o el creador de la suscripción puede ejecutar **sp_reinitsubscription** .  
   
 ## <a name="see-also"></a>Vea también  

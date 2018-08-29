@@ -1,5 +1,5 @@
 ---
-title: sp_dropdistributor (Transact-SQL) | Documentos de Microsoft
+title: sp_dropdistributor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropdistributor
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0288daacc8f88decf6af642d0a864f3f08057fbd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e321b5e5976192146f9cd8d993304d5f5ae55e67
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989740"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029065"
 ---
 # <a name="spdropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@no_checks=**] *no_checks*  
- Indica si se comprobará si existen objetos dependientes antes de quitar el distribuidor. *no_checks* es **bits**, con un valor predeterminado es 0.  
+ Indica si se comprobará si existen objetos dependientes antes de quitar el distribuidor. *no_checks* es **bit**, su valor predeterminado es 0.  
   
- Si **0**, **sp_dropdistributor** comprobaciones para asegurarse de que se han quitado todos los objetos de publicación y distribución además del distribuidor.  
+ Si **0**, **sp_dropdistributor** comprobaciones para asegurarse de que se han quitado todos los objetos de publicación y distribución y el distribuidor.  
   
  Si **1**, **sp_dropdistributor** quita todos los objetos de publicación y distribución antes de desinstalar el distribuidor.  
   
  [  **@ignore_distributor=**] *ignore_distributor*  
- Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es **bits**, su valor predeterminado es **0**.  
+ Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es **bit**, su valor predeterminado es **0**.  
   
  Si **0**, **sp_dropdistributor** se conecta al distribuidor y quita todos los objetos de replicación. Si **sp_dropdistributor** no puede conectarse al distribuidor, el procedimiento almacenado, produce un error.  
   
@@ -63,7 +63,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_dropdistributor** se utiliza en todos los tipos de replicación.  
   
  Si existen otros publicador u objetos de distribución en el servidor, **sp_dropdistributor** se produce un error a menos que **@no_checks** está establecido en **1**.  
@@ -73,7 +73,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributor-trans_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_dropdistributor**.  
   
 ## <a name="see-also"></a>Vea también  

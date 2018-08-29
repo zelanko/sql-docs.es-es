@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_delete_policy_category (Transact-SQL) | Documentos de Microsoft
+title: sp_syspolicy_delete_policy_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_delete_policy_category
 ms.assetid: e09d0d50-94d5-48fd-b284-445ddea6dfcd
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b1eaa9dc797bdf1bf7afc2a6d85771b02e8ad728
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7b4c8fb9dcac2487dec7f6ece96556cc5705ea13
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258509"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032862"
 ---
 # <a name="spsyspolicydeletepolicycategory-transact-sql"></a>sp_syspolicy_delete_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,14 +52,14 @@ sp_syspolicy_delete_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Debe ejecutar sp_syspolicy_delete_policy_category en el contexto de la base de datos del sistema msdb.  
   
  Debe especificar un valor para *nombre* o para *policy_category_id*. Ambos no pueden ser NULL. Para obtener estos valores, consulte la vista del sistema msdb.dbo.syspolicy_policy_categories.  
   
  Para eliminar una categoría de directiva, la categoría no debe hacer referencia a ninguna directiva.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de base de datos PolicyAdministratorRole.  
   
 > [!IMPORTANT]  

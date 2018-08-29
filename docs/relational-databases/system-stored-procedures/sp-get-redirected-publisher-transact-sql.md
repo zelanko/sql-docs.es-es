@@ -1,5 +1,5 @@
 ---
-title: sp_get_redirected_publisher (Transact-SQL) | Documentos de Microsoft
+title: sp_get_redirected_publisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ f1_keywords:
 - sp_get_redirected_publisher
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28785969ea0bab2319d52461aa3e9a60f9be916d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a2abcc6205929146a37be95fa3943cad1b0ce4d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994992"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028622"
 ---
 # <a name="spgetredirectedpublisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,30 +53,30 @@ sp_get_redirected_publisher
  El nombre de la base de datos que se va a publicar. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
   
  [ **@bypass_publisher_validation** = ] [0 | 1 ]  
- Se utiliza para omitir la validación del publicador redirigido. Si es 0, se realiza la validación. Si es 1, no se realiza la validación. *bypass_publisher_validation* es **bits**, con un valor predeterminado es 0.  
+ Se utiliza para omitir la validación del publicador redirigido. Si es 0, se realiza la validación. Si es 1, no se realiza la validación. *bypass_publisher_validation* es **bit**, su valor predeterminado es 0.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**redirected_publisher**|**sysname**|El nombre del publicador después de la redirección.|  
 |**error_number**|**int**|El número de error del error de validación.|  
 |**error_severity**|**int**|La gravedad del error de validación.|  
 |**error_message**|**nvarchar(4000)**|El texto del mensaje de error de validación.|  
   
-## <a name="remarks"></a>Comentarios  
- *redirected_publisher* devuelve el nombre del publicador actual. Devuelve null si el publicador y la publicación de bases de datos no se ha redirigido mediante **sp_redirect_publisher**.  
+## <a name="remarks"></a>Notas  
+ *redirected_publisher* devuelve el nombre del publicador actual. Devuelve null si el publicador y publicar bases de datos no se han redirigido mediante **sp_redirect_publisher**.  
   
  Si no se solicita la validación o si no existe ninguna entrada para el publicador y la base de datos de publicación, *error_number* y *error_severity* devuelven 0 y *error_message* Devuelve null.  
   
- Si se solicita la validación, la validación del procedimiento almacenado [sp_validate_redirected_publisher &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md) se llama para comprobar que el destino de la redirección es un host adecuado para la publicación base de datos. Si la validación es correcta, **sp_get_redirected_publisher** devuelve el nombre del publicador redirigido, 0 para el *error_number* y *error_severity* y null en columnas el *error_message* columna.  
+ Si se solicita la validación, la validación del procedimiento almacenado [sp_validate_redirected_publisher &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md) se llama para comprobar que el destino de la redirección es un host adecuado para la publicación base de datos. Si la validación es correcta, **sp_get_redirected_publisher** devuelve el nombre del publicador redirigido, 0 para el *error_number* y *error_severity* columnas y el valor null el *error_message* columna.  
   
  Si se solicita la validación y se produce un error, se devuelve el nombre del publicador redirigido junto con información sobre el error.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Autor de la llamada debe ser un miembro de la **sysadmin** rol fijo de servidor, el **db_owner** rol fijo de base de datos para la base de datos de distribución o un miembro de una lista de acceso de publicación para una publicación definida asociado a la base de datos del publicador.  
   
 ## <a name="see-also"></a>Vea también  

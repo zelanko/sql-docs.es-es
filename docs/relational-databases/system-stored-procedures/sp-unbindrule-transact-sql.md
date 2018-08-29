@@ -1,5 +1,5 @@
 ---
-title: sp_unbindrule (Transact-SQL) | Documentos de Microsoft
+title: sp_unbindrule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_unbindrule
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be14a4885cea481edda6ba7465ac2c5aa969ec1b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d7a014b00a5fba5192e3bd9227f88968980dfd89
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257441"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028938"
 ---
 # <a name="spunbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33257441"
   Deshace el enlace de una regla de una columna o de un tipo de datos del alias en la base de datos actual.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Le recomendamos que cree definiciones predeterminadas utilizando la palabra clave DEFAULT en la [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) instrucciones en su lugar.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Se recomienda crear definiciones predeterminadas utilizando la palabra clave DEFAULT en la [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) instrucciones en su lugar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,14 +60,14 @@ sp_unbindrule [ @objname = ] 'object_name'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Para que se muestre el texto de una regla, ejecute **sp_helptext** con el nombre de la regla como parámetro.  
   
- Cuando tiene que desenlazar una regla, se quita la información sobre el enlace de la **sys.columns** tabla si la regla estaba enlazada a una columna y de la **sys.types** si la regla estaba enlazada a un tipo de datos de alias de tabla.  
+ Cuando una regla está enlazada, se quita la información sobre el enlace de la **sys.columns** tabla si la regla estaba enlazada a una columna y desde el **sys.types** si la regla estaba enlazada a un tipo de datos de alias de tabla.  
   
  Cuando se deshace el enlace de una regla de un tipo de datos de alias, también se deshace el enlace de las columnas que tengan ese tipo de datos de alias. La regla también todavía puede estar enlazada a columnas cuyos tipos de datos se han cambiado posteriormente mediante la cláusula ALTER COLUMN de una instrucción ALTER TABLE, específicamente debe desenlazar la regla de estas columnas mediante **sp_unbindrule** y especificando el nombre de columna.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para deshacer el enlace de una regla de una columna de tabla es necesario el permiso ALTER para la tabla. Para deshacer el enlace de una regla de un tipo de datos de alias es necesario el permiso CONTROL para el tipo o el permiso ALTER para el esquema al que pertenece el tipo.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -93,8 +93,8 @@ EXEC sp_unbindrule ssn;
 EXEC sp_unbindrule 'ssn', 'futureonly';  
 ```  
   
-### <a name="d-using-delimited-identifiers"></a>D. Usar identificadores delimitados  
- En el ejemplo siguiente se muestra el uso de identificadores delimitados en el *object_name* parámetro.  
+### <a name="d-using-delimited-identifiers"></a>D. Uso de identificadores delimitados  
+ El ejemplo siguiente muestra el uso de identificadores delimitados en los *object_name* parámetro.  
   
 ```  
 CREATE TABLE [t.4] (c1 int); -- Notice the period as part of the table   

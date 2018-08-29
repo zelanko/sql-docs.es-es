@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_rename_condition (Transact-SQL) | Documentos de Microsoft
+title: sp_syspolicy_rename_condition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_rename_condition
 ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0c44a683e247b8de88c1223f1320683486611d9c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 09cfb601bbe73d202fcc478edf0160f4c31bd110
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257504"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033717"
 ---
 # <a name="spsyspolicyrenamecondition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
  Es el nombre de la condición a la que desea cambiar el nombre. *nombre* es **sysname**y debe especificarse si *condition_id* es NULL.  
   
  [  **@condition_id=** ] *condition_id*  
- Es el identificador de la condición que desea cambiar. *condition_id* es **int**y debe especificarse si *nombre* es NULL.  
+ Es el identificador de la condición que desea cambiar el nombre. *condition_id* es **int**y debe especificarse si *nombre* es NULL.  
   
  [  **@new_name=** ] **'***new_name***'**  
  Es el nuevo nombre de la condición. *new_name* es **sysname**y es necesario. No puede ser NULL ni una cadena vacía.  
@@ -57,12 +56,12 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Debe ejecutar sp_syspolicy_rename_condition en el contexto de la base de datos del sistema msdb.  
   
  Debe especificar un valor para *nombre* o *condition_id*. Ambos no pueden ser NULL. Para obtener estos valores, consulte la vista del sistema msdb.dbo.syspolicy_conditions.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de base de datos PolicyAdministratorRole.  
   
 > [!IMPORTANT]  

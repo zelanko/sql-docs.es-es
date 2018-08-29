@@ -1,5 +1,5 @@
 ---
-title: sp_droprole (Transact-SQL) | Documentos de Microsoft
+title: sp_droprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_droprole
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39ef6031494b8e5bd4718c26d7635be4f916517e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cdc97dbb75487300d228a53b7550f4687abf8a0f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263410"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024715"
 ---
 # <a name="spdroprole-transact-sql"></a>sp_droprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33263410"
   Quita un rol de base de datos de la base de datos actual.  
   
 > [!IMPORTANT]  
->  En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], **sp_droprole** ha sido reemplazado por la instrucción DROP ROLE. **sp_droprole** sólo se incluye por compatibilidad con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y podrían no admitirse en una versión futura.  
+>  En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], **sp_droprole** ha sido reemplazado por la instrucción DROP ROLE. **sp_droprole** se incluye únicamente por compatibilidad con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y podrían no admitirse en una versión futura.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,18 +53,18 @@ sp_droprole [ @rolename= ] 'role'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
- Roles de base de datos solo se pueden quitar con **sp_droprole**.  
+## <a name="remarks"></a>Notas  
+ Roles de base de datos solo se pueden quitar mediante el uso de **sp_droprole**.  
   
- No se puede quitar un rol de base de datos que tenga miembros. Todos los miembros de un rol de base de datos deben eliminarse previamente para poder quitar el rol de base de datos. Para quitar usuarios de un rol, utilice **sp_droprolemember**. Si los usuarios siguen siendo miembros del rol, **sp_droprole** muestra dichos miembros.  
+ No se puede quitar un rol de base de datos que tenga miembros. Todos los miembros de un rol de base de datos deben eliminarse previamente para poder quitar el rol de base de datos. Para quitar los usuarios de un rol, use **sp_droprolemember**. Si los usuarios siguen siendo miembros del rol, **sp_droprole** muestra esos miembros.  
   
- Roles fijos y los **público** no se puede quitar el rol.  
+ Roles fijos y los **pública** rol no se puede quitar.  
   
  Tampoco se puede quitar un rol que sea propietario de algún elemento protegible. Para poder quitar un rol de aplicación que posea elementos protegibles, primero debe transferir la propiedad de esos elementos o quitarlos. Use ALTER AUTHORIZATION para cambiar el propietario de los objetos que no se deban quitar.  
   
- **sp_droprole** no puede ejecutarse en una transacción definida por el usuario.  
+ **sp_droprole** no se puede ejecutar dentro de una transacción definida por el usuario.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL para el rol.  
   
 ## <a name="examples"></a>Ejemplos  

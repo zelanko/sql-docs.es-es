@@ -1,5 +1,5 @@
 ---
-title: sp_addqreader_agent (Transact-SQL) | Documentos de Microsoft
+title: sp_addqreader_agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addqreader_agent
 ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
-caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d89800f8eeaa7c960b636f93555009cbc87c028f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d3e67683fe75f555b58acf09cb2b1bee939d7151
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990670"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034716"
 ---
 # <a name="spaddqreaderagent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,14 +65,14 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_addqreader_agent** se utiliza en la replicación transaccional.  
   
- **sp_addqreader_agent** deben ejecutar al menos una vez en un distribuidor que admite la actualización en cola tras [sp_adddistributiondb](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) pero antes [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md).  
+ **sp_addqreader_agent** debe ejecutarse al menos una vez en un distribuidor que admite la actualización en cola tras [sp_adddistributiondb](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) pero antes [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md).  
   
- El trabajo del agente de lectura de cola se quita cuando se ejecuta [sp_dropdistributiondb](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md).  
+ El trabajo del agente de lector de cola se quita al ejecutar [sp_dropdistributiondb](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_addqreader_agent**.  
   
 ## <a name="see-also"></a>Vea también  

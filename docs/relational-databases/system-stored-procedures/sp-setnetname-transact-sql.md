@@ -1,5 +1,5 @@
 ---
-title: sp_setnetname (Transact-SQL) | Documentos de Microsoft
+title: sp_setnetname (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_setnetname
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8671aea34c2a6ffb4e8da9791a535f0dfd0d0baf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 71dcca516c1533c048d424e68d6aaae197d032ba
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251631"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024889"
 ---
 # <a name="spsetnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Establece los nombres de red **sys.servers** a sus nombres de red del equipo actuales para las instancias remotas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este procedimiento puede utilizarse para habilitar la ejecución de llamadas a procedimientos almacenados remotos a equipos cuyos nombres de red contienen identificadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no válidos.  
+  Establece los nombres de red en **sys.servers** a sus nombres de equipo de red real para las instancias remotas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este procedimiento puede utilizarse para habilitar la ejecución de llamadas a procedimientos almacenados remotos a equipos cuyos nombres de red contienen identificadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no válidos.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +60,7 @@ sp_setnetname
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Algunas llamadas a procedimientos almacenados remotos a equipos que ejecutan Windows pueden experimentar problemas si el nombre del equipo contiene identificadores no válidos.  
   
  Debido a que los servidores vinculados y los servidores remotos residen en el mismo espacio de nombres, no pueden tener el mismo nombre. Sin embargo, puede definir un servidor vinculado y un servidor remoto en un servidor especificado asignando nombres distintos y utilizando **sp_setnetname** para establecer el nombre de red de uno de ellos en el nombre de red del servidor subyacente.  
@@ -76,9 +76,9 @@ EXEC sp_setnetname 'rpcserv2', 'sqlserv2';
 ```  
   
 > [!NOTE]  
->  Usar **sp_setnetname** señalar el servidor local de un servidor vinculado no se admite. Los servidores a los que se hace referencia de esta forma no pueden participar en una transacción distribuida.  
+>  Uso de **sp_setnetname** para que apunte a un servidor vinculado al servidor local no se admite. Los servidores a los que se hace referencia de esta forma no pueden participar en una transacción distribuida.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer a la **sysadmin** y **setupadmin** roles fijos de servidor.  
   
 ## <a name="examples"></a>Ejemplos  

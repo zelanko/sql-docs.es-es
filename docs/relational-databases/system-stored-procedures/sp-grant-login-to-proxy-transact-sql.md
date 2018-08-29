@@ -1,5 +1,5 @@
 ---
-title: sp_grant_login_to_proxy (Transact-SQL) | Documentos de Microsoft
+title: sp_grant_login_to_proxy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_grant_login_to_proxy
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
-caps.latest.revision: 32
-author: stevestein
-ms.author: sstein
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e07e03296c9264245504b65136a467e0fe7040e2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 87c6185eb5da00bd004e56eb45a48ac0d963258e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259615"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033664"
 ---
 # <a name="spgrantlogintoproxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,10 +54,10 @@ sp_grant_login_to_proxy
  Rol fijo de servidor al que se concede el acceso. El *fixed_server_role* es **nvarchar (256)**, su valor predeterminado es null. Uno de **@login_name**, **@fixed_server_role**, o **@msdb_role** debe especificarse, o se produce un error en el procedimiento almacenado.  
   
  [ **@msdb_role**=] '*msdb_role*'  
- El rol de base de datos en el **msdb** conceder acceso a la base de datos. El *msdb_role* es **nvarchar (256)**, su valor predeterminado es null. Uno de **@login_name**, **@fixed_server_role**, o **@msdb_role** debe especificarse, o se produce un error en el procedimiento almacenado.  
+ El rol de base de datos en el **msdb** para conceder acceso a base de datos. El *msdb_role* es **nvarchar (256)**, su valor predeterminado es null. Uno de **@login_name**, **@fixed_server_role**, o **@msdb_role** debe especificarse, o se produce un error en el procedimiento almacenado.  
   
  [ **@proxy_id**=] *Id.*  
- Identificador del proxy al que se va a conceder el acceso. El *identificador* es **int**, su valor predeterminado es null. Uno de **@proxy_id** o **@proxy_name** debe especificarse, o se produce un error en el procedimiento almacenado.  
+ Identificador del proxy al que se va a conceder el acceso. El *id* es **int**, su valor predeterminado es null. Uno de **@proxy_id** o **@proxy_name** debe especificarse, o se produce un error en el procedimiento almacenado.  
   
  [ **@proxy_name**=] **'***proxy_name***'**  
  Nombre del proxy al que se va a conceder el acceso. El *proxy_name* es **nvarchar (256)**, su valor predeterminado es null. Uno de **@proxy_id** o **@proxy_name** debe especificarse, o se produce un error en el procedimiento almacenado.  
@@ -67,14 +65,14 @@ sp_grant_login_to_proxy
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_grant_login_to_proxy** se debe ejecutar desde la **msdb** base de datos.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_grant_login_to_proxy**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** puede ejecutar el rol fijo de servidor **sp_grant_login_to_proxy**.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente, se permite el inicio de sesión `adventure-works\terrid` para usar el proxy `Catalog application proxy`.  
+ En el ejemplo siguiente se permite el inicio de sesión `adventure-works\terrid` para usar el proxy `Catalog application proxy`.  
   
 ```  
 USE msdb ;  

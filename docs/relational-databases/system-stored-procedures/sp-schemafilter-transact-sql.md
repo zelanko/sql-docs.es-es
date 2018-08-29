@@ -1,5 +1,5 @@
 ---
-title: sp_schemafilter (Transact-SQL) | Documentos de Microsoft
+title: sp_schemafilter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_schemafilter
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce33fa1ffb73f3ba663eb9ec7fedf0e13d5ec8e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4da23d87736d7ad9af4c00c5f4704e9cbbdd5160
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997522"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027039"
 ---
 # <a name="spschemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>Argumentos  
  [**@publisher** =] **'***publisher***'**  
- Es el nombre de no es[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *Publisher* es **sysname**, no tiene ningún valor predeterminado.  
+ Es el nombre de la que no sean de[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
  [**@schema** =] **'***esquema***'**  
  Es el nombre del esquema. *esquema* es **sysname**, su valor predeterminado es null.  
@@ -56,25 +56,25 @@ sp_schemafilter [ @publisher = ] 'publisher'
  [**@operation** =] **'***operación***'**  
  Es la acción que se realiza en este esquema. *operación* es **nvarchar (4)**, y puede tener uno de los siguientes valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Agregar**|Agrega el esquema especificado a la lista de esquemas no aptos para su publicación.|  
-|**quitar**|Quita el esquema especificado de la lista de esquemas no aptos para su publicación.|  
+|**DROP**|Quita el esquema especificado de la lista de esquemas no aptos para su publicación.|  
 |**Ayuda**|Devuelve la lista de esquemas no aptos para su publicación.|  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**SchemaName**|**sysname**|Es el nombre del esquema no apto para su publicación.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_schemafilter** solo debe usarse para los publicadores heterogéneos.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor en el distribuidor puede ejecutar **sp_schemafilter**.  
   
 ## <a name="see-also"></a>Vea también  

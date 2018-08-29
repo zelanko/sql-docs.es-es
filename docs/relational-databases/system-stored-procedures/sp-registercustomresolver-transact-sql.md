@@ -1,5 +1,5 @@
 ---
-title: sp_registercustomresolver (Transact-SQL) | Documentos de Microsoft
+title: sp_registercustomresolver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_registercustomresolver
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 56bc885e9c149b736bee5f5662816fdb90a144eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d891a458c6f150a72d5c04393825e49b5a0dabe2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998962"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027152"
 ---
 # <a name="spregistercustomresolver-transact-sql"></a>sp_registercustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,22 +56,22 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
  Especifica el valor CLSID del objeto COM que se va a registrar. Lógica de negocios personalizada *resolver_clsid* es **nvarchar (50)**, su valor predeterminado es null. Este parámetro debe estar establecido en un valor CLSID válido o en NULL cuando se registre un ensamblado de controlador de lógica de negocios.  
   
  [  **@is_dotnet_assembly=** ] **'***is_dotnet_assembly***'**  
- Especifica el tipo de la lógica de negocios personalizada que se va a registrar. *is_dotnet_assembly* es **nvarchar (50)**, con un valor predeterminado es FALSE. **True** indica que la lógica de negocios personalizada que se va a registrar es un controlador de lógica de negocios ensamblado; **false** indica que es un componente COM.  
+ Especifica el tipo de la lógica de negocios personalizada que se va a registrar. *is_dotnet_assembly* es **nvarchar (50)**, su valor predeterminado es False. **True** indica que la lógica de negocios personalizada que se va a registrar es un controlador de lógica de negocios de ensamblado; **false** indica que es un componente COM.  
   
  [  **@dotnet_assembly_name=** ] **'***dotnet_assembly_name***'**  
  Es el nombre del ensamblado que implementa el controlador de lógica de negocios. *dotnet_assembly_name* es **nvarchar (255)**, su valor predeterminado es null. Debe especificar la ruta de acceso completa al ensamblado si no está implementado en el mismo directorio que el ejecutable del Agente de mezcla, en el mismo directorio que la aplicación que inicia de forma sincrónica el Agente de mezcla o en la caché de ensamblados global (GAC).  
   
  [  **@dotnet_class_name=** ] **'***dotnet_class_name***'**  
- Es el nombre de la clase que reemplaza <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para implementar el controlador de lógica de negocios. El nombre debe especificarse en el formulario **Namespace.Classname**. *dotnet_class_name* es **nvarchar (255)**, su valor predeterminado es null.  
+ Es el nombre de la clase que reemplaza <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para implementar el controlador de lógica de negocios. El nombre debe especificarse en el formulario **EspacioDeNombres.nombreDeClase**. *dotnet_class_name* es **nvarchar (255)**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_registercustomresolver** se utiliza en la replicación de mezcla.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_registercustomresolver**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_registercustomresolver**.  
   
 ## <a name="see-also"></a>Vea también  
  [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  (Implementar un controlador de lógica de negocios para un artículo de mezcla)  

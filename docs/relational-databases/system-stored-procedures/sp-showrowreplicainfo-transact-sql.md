@@ -1,5 +1,5 @@
 ---
-title: sp_showrowreplicainfo (Transact-SQL) | Documentos de Microsoft
+title: sp_showrowreplicainfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_showrowreplicainfo
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be0fcfb203c6f9e5fc72909930433926675c64f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d9b56608d6ba26760a0a6da5e841f6ce38848774
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003162"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028184"
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,19 +62,19 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
   
 ## <a name="result-sets-for-row-information"></a>Conjuntos de resultados para información de fila  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|Nombre del servidor que hospeda la base de datos que realizó la entrada de versión de fila.|  
 |**db_name**|**sysname**|Nombre de la base de datos que realizó esta entrada.|  
 |**db_nickname**|**binary(6)**|Alias de la base de datos que realizó esta entrada.|  
 |**version**|**int**|Versión de la entrada.|  
-|**current_state**|**nvarchar(9)**|Devuelve información sobre el estado actual de la fila.<br /><br /> **y** -datos de la fila representan el estado actual de la fila.<br /><br /> **n** -datos de la fila no representan el estado actual de la fila.<br /><br /> **\<n / >** : no es aplicable.<br /><br /> **\<desconocido >** -no se puede determinar el estado actual.|  
-|**rowversion_table**|**nchar(17)**|Indica si las versiones de fila se almacenan en la [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) tabla o la [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) tabla.|  
+|**current_state como**|**nvarchar(9)**|Devuelve información sobre el estado actual de la fila.<br /><br /> **y** -datos de la fila representan el estado actual de la fila.<br /><br /> **n** -los datos de fila no representan el estado actual de la fila.<br /><br /> **\<n/a >** : no aplicable.<br /><br /> **\<desconocido >** -no se puede determinar el estado actual.|  
+|**rowversion_table**|**nchar(17)**|Indica si las versiones de fila se almacenan en el [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) tabla o la [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) tabla.|  
 |**Comentario**|**nvarchar(255)**|Información adicional acerca de esta entrada de versión de fila. Este campo suele estar vacío.|  
   
 ## <a name="result-sets-for-column-information"></a>Conjuntos de resultados para información de columna  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|Nombre del servidor que hospeda la base de datos que realizó la entrada de versión de columna.|  
 |**db_name**|**sysname**|Nombre de la base de datos que realizó esta entrada.|  
@@ -84,16 +84,16 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**Comentario**|**nvarchar(255)**|Información adicional acerca de esta entrada de versión de columna. Este campo suele estar vacío.|  
   
 ## <a name="result-set-for-both"></a>Conjuntos de resultados para ambos  
- Si el valor **ambos** elegido para *mostrar*, a continuación, se devuelven los conjuntos de resultados de la fila y la columna.  
+ Si el valor **ambos** se elige para *mostrar*, a continuación, se devuelven los conjuntos de resultados de la fila y la columna.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_showrowreplicainfo** se utiliza en la replicación de mezcla.  
   
-## <a name="permissions"></a>Permissions  
- **sp_showrowreplicainfo** sólo se puede ejecutar los miembros de la **db_owner** rol fijo de base en la base de datos de publicación o los miembros de la lista de acceso de publicación (PAL) en la base de datos de publicación.  
+## <a name="permissions"></a>Permisos  
+ **sp_showrowreplicainfo** solo se puede ejecutar los miembros de la **db_owner** los roles fijos de base de datos en la base de datos de publicación o los miembros de la lista de acceso de publicación (PAL) en la base de datos de publicación.  
   
 ## <a name="see-also"></a>Vea también  
- [Detectar y resolver los conflictos de replicación de mezcla](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)   
+ [Detectar y resolver conflictos de replicación de mezcla](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

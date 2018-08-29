@@ -1,5 +1,5 @@
 ---
-title: sp_databases (Transact-SQL) | Documentos de Microsoft
+title: sp_databases (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_databases
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c22415c34f0e25dc1117b6a5f86839c66f0ba53b
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3fefa914e8b4eb591dcd222df1de6753770d85c9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33238006"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029218"
 ---
 # <a name="spdatabases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +44,17 @@ sp_databases
 ```  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- Ninguno  
+ None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**DATABASE_NAME**|**sysname**|Nombre de la base de datos. En el [!INCLUDE[ssDE](../../includes/ssde-md.md)], esta columna representa el nombre de la base de datos tal como se almacena en la **sys.databases** vista de catálogo.|  
+|**DATABASE_NAME**|**sysname**|Nombre de la base de datos. En el [!INCLUDE[ssDE](../../includes/ssde-md.md)], esta columna representa el nombre de la base de datos tal como está almacenado en el **sys.databases** vista de catálogo.|  
 |**DATABASE_SIZE**|**int**|Tamaño de la base de datos, en kilobytes.|  
 |**COMENTARIOS**|**varchar(254)**|Para el [!INCLUDE[ssDE](../../includes/ssde-md.md)], este campo siempre devuelve NULL.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Los nombres de bases de datos devueltos pueden utilizarse como parámetros en la instrucción USE para cambiar el contexto de la base de datos actual.  
   
  **sp_databases** no tiene ningún equivalente en Open Database Connectivity (ODBC).  

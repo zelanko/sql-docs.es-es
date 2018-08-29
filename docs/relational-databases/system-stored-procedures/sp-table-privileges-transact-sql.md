@@ -1,5 +1,5 @@
 ---
-title: sp_table_privileges (Transact-SQL) | Documentos de Microsoft
+title: sp_table_privileges (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_table_privileges
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
 caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d2863e17258fd0dea68548a15c059676c745424
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ddd0407cda5bf3a623c0fad4121384aaa61d8264
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259535"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032195"
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,20 +53,20 @@ sp_table_privileges [ @table_name = ] 'table_name'
  [ @table_owner=] '*table_owner*'  
  Es el propietario de la tabla de la tabla utilizada para devolver información del catálogo. *TABLE_OWNER*es **nvarchar (** 384 **)**, su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín. Si no se especifica el propietario, se aplican las reglas de visibilidad de tabla predeterminadas del DBMS subyacente.  
   
- Si el usuario actual posee una tabla con el nombre especificado, se devuelven las columnas de dicha tabla. Si *propietario* no se especifica y el usuario actual no posee una tabla con los valores especificados *nombre*, este procedimiento busca una tabla con los valores especificados *table_name* pertenecen a la propietario de la base de datos. Si existe una, se devuelven las columnas de esa tabla.  
+ Si el usuario actual posee una tabla con el nombre especificado, se devuelven las columnas de dicha tabla. Si *propietario* no se especifica y el usuario actual no posee una tabla con los valores especificados *nombre*, este procedimiento busca una tabla con los valores especificados *table_name* que pertenecen a la propietario de la base de datos. Si existe una, se devuelven las columnas de esa tabla.  
   
  [ @table_qualifier=] '*table_qualifier*'  
  Es el nombre del calificador de tabla. *TABLE_QUALIFIER* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para tablas (*qualifier.owner.name*). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
  [ @fUsePattern=] '*fUsePattern*'  
- Determina si el carácter de subrayado (_), porcentaje (%) y corchete de cierre ([o]) caracteres se interpretan como caracteres comodín. Los valores válidos son 0 (coincidencia de patrón desactivada) y 1 (coincidencia de patrón activada). *fUsePattern* es **bits**, su valor predeterminado es 1.  
+ Determina si el carácter de subrayado (_), porcentaje (%) y entre corchetes ([o]) caracteres se interpretan como caracteres comodín. Los valores válidos son 0 (coincidencia de patrón desactivada) y 1 (coincidencia de patrón activada). *fUsePattern* es **bit**, su valor predeterminado es 1.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |TABLE_QUALIFIER|**sysname**|Nombre del calificador de tabla. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. Este campo puede ser NULL.|  
 |TABLE_OWNER|**sysname**|Nombre de propietario de la tabla. Este campo siempre devuelve un valor.|  
@@ -76,10 +76,10 @@ sp_table_privileges [ @table_name = ] 'table_name'
 |PRIVILEGE|**sysname**|Uno de los permisos de tabla disponibles. Los permisos de tabla pueden ser uno de los valores siguientes (u otros valores que el origen de datos admita al definirse la implementación):<br /><br /> SELECT = GRANTEE puede recuperar datos para una o varias columnas.<br /><br /> INSERT = GRANTEE puede proporcionar datos para nuevas filas de una o más de las columnas.<br /><br /> UPDATE = GRANTEE puede modificar datos existentes de una o más de las columnas.<br /><br /> DELETE = GRANTEE puede quitar filas de la tabla.<br /><br /> REFERENCES = GRANTEE puede hacer referencia a una columna de una tabla externa en una relación entre clave principal y clave externa. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], las relaciones entre clave principal y clave externa se definen con restricciones de tabla.<br /><br /> El ámbito de acción dado a GRANTEE por un privilegio de tabla específico depende del origen de datos. Por ejemplo, el privilegio UPDATE podría permitir que GRANTEE actualizara todas las columnas de una tabla en un origen de datos y solo aquellas columnas para las que GRANTOR tiene el privilegio UPDATE en otro origen de datos.|  
 |IS_GRANTABLE|**sysname**|Indica si se permite que GRANTEE conceda permisos a otros usuarios (que a menudo se conoce como el permiso “conceder por concesión”). Puede ser YES, NO o NULL. Un valor desconocido (o NULL) hace referencia a un origen de datos para el que "conceder por concesión" no se aplica.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  El procedimiento almacenado sp_table_privileges es equivalente a SQLTablePrivileges en ODBC. Los resultados devueltos se ordenan por TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME y PRIVILEGE.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  
   
 ## <a name="examples"></a>Ejemplos  

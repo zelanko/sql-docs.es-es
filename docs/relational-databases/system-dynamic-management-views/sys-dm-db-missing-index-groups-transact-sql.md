@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_missing_index_groups (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_db_missing_index_groups (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 05597efbdc9172fe9ca51f2f9851dc4042390df9
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a6bb53e0f67c6db6f9ca0e5f6260812abfdac4c1
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39557435"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43066827"
 ---
 # <a name="sysdmdbmissingindexgroups-transact-sql"></a>sys.dm_db_missing_index_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ ms.locfileid: "39557435"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**index_group_handle**|**int**|Identifica un grupo de índices que faltan.|  
-|**index_handle**|**int**|Identifica un índice perdido que pertenece al grupo especificado por **index_group_handle**.<br /><br /> Un grupo de índices solo contiene un índice.|  
+|**index_handle**|**int**|Identifica un índice que falta que pertenece al grupo especificado por **index_group_handle**.<br /><br /> Un grupo de índices solo contiene un índice.|  
   
 ## <a name="remarks"></a>Notas  
- Información devuelta por **sys.dm_db_missing_index_groups** se actualiza cuando una consulta se optimiza mediante el optimizador de consultas y no se conserva. La información sobre índices que faltan solo se conserva hasta que se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los administradores de bases de datos deben realizar copias de seguridad de forma periódica de la información de índices que faltan si desean conservarla después de reciclar el servidor.  
+ Información devuelta por **sys.dm_db_missing_index_groups** se actualiza cuando una consulta está optimizada por el optimizador de consultas y no se conserva. La información sobre índices que faltan solo se conserva hasta que se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los administradores de bases de datos deben realizar copias de seguridad de forma periódica de la información de índices que faltan si desean conservarla después de reciclar el servidor.  
   
  Ninguna columna del conjunto de resultados de salida es una clave, pero juntas forman una clave de índice.  
 

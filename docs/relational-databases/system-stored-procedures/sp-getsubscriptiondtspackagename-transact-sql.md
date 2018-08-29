@@ -1,5 +1,5 @@
 ---
-title: sp_getsubscriptiondtspackagename (Transact-SQL) | Documentos de Microsoft
+title: sp_getsubscriptiondtspackagename (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_getsubscriptiondtspackagename
 ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 755cd58c1e67ad0136e030cc63ae5d03437b76da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d3dd962761890021c5e5af2375489b8ef2d4d7b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994272"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031388"
 ---
 # <a name="spgetsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,21 +50,21 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
  Es el nombre de la publicación. **'***publicación***'** es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@subscriber=**] **'***suscriptor***'**  
- Es el nombre del suscriptor. *suscriptor* es de tipo sysname y su valor predeterminado es null.  
+ Es el nombre del suscriptor. *suscriptor* es de tipo sysname y su valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**new_package_name**|**sysname**|Nombre del paquete DTS.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_getsubscriptiondtspackagename** se utiliza en la replicación de instantáneas y transaccional.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos puede ejecutar **sp_getsubscriptiondtspackagename**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos se puede ejecutar **sp_getsubscriptiondtspackagename**.  
   
   

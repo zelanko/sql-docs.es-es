@@ -1,6 +1,6 @@
 ---
 title: 'Lección del tutorial de Analysis Services 6: crear medidas | Microsoft Docs'
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 61ead234a52f258f2c535f85c0992523b5b4e146
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f9b466a703dd04a53c6ebf7c6fac624476abcc52
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37973097"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43093968"
 ---
 # <a name="create-measures"></a>Crear medidas
 

@@ -14,16 +14,15 @@ helpviewer_keywords:
 - audits [SQL Server], creating database specification
 - database audit [SQL Server]
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
-caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 34cc4d4d0e7c55218efde4bcb0789b227bd86600
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b4ee2d4ba29e6abb8536ea9a6a1173df8cef9336
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313735"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025435"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Crear una especificación de auditoría de servidor y de auditoría de base de datos
   En este tema se describe cómo crear una especificación de auditoría de servidor y de auditoría de base de datos en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  

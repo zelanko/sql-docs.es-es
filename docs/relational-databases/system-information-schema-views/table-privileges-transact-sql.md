@@ -1,5 +1,5 @@
 ---
-title: TABLE_PRIVILEGES (Transact-SQL) | Documentos de Microsoft
+title: TABLE_PRIVILEGES (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.TABLE_PRIVILEGES view
 - TABLE_PRIVILEGES view
 ms.assetid: 70269d26-b085-4a98-8a9f-b4742c2848bd
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0eb4bc6b4b81e6c03334d966c181ffc3b1e4e391
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5b082fe97699f76add7973e35cee7cd266202995
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39544585"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43067668"
 ---
 # <a name="tableprivileges-transact-sql"></a>TABLE_PRIVILEGES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "39544585"
 |**OTORGANTE DE PERMISOS**|**nvarchar (** 128 **)**|La persona que concede el privilegio.|  
 |**RECEPTOR DE PERMISOS**|**nvarchar (** 128 **)**|La persona que recibe el privilegio.|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Calificador de tabla.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nombre de esquema que contiene la tabla.<br /><br /> **\*\* Importante \* \* ** no utilizan utilicemos vistas para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nombre de esquema que contiene la tabla.<br /><br /> **\*\* Importante \* \***  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
 |**TABLE_NAME**|**sysname**|Nombre de la tabla.|  
 |**PRIVILEGE_TYPE**|**varchar (** 10 **)**|Tipo de privilegio.|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|Especifica si la persona que recibe el privilegio puede conceder permisos a otros.|  

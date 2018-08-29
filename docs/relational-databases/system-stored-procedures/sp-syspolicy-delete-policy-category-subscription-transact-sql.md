@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_delete_policy_category_subscription (Transact-SQL) | Documentos de Microsoft
+title: sp_syspolicy_delete_policy_category_subscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_delete_policy_category_subscription
 ms.assetid: eeab0120-c869-4c95-a79d-6dc418d0b23a
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fb514ae527e7b3a116dfa96974e1b8342a953363
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2df8a0c11270371ea793081008b1cd1cccc7d33a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261461"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025686"
 ---
 # <a name="spsyspolicydeletepolicycategorysubscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,15 +49,15 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Debe ejecutar sp_syspolicy_delete_policy_category_subscription en el contexto de la base de datos del sistema msdb.  
   
  No puede eliminar una suscripción de categoría de directiva cuando la suscripción está asignada.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Este procedimiento almacenado se ejecuta en el contexto del propietario actual del procedimiento almacenado.  
   
- Para obtener los valores de *policy_category_subscription_id*, puede utilizar la siguiente consulta:  
+ Para obtener los valores de *policy_category_subscription_id*, puede usar la siguiente consulta:  
   
 ```  
 SELECT a.policy_category_subscription_id, a.target_object, b.name AS category_name  

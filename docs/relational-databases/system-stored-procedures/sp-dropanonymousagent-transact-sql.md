@@ -1,5 +1,5 @@
 ---
-title: sp_dropanonymousagent (Transact-SQL) | Documentos de Microsoft
+title: sp_dropanonymousagent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,16 +19,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropanonymousagent
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 10b75c7c2e083a09dbebfc720487511397a1af90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6440ede3f3fe645946cfc1bfc01fe65fb20c6e55
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988510"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025958"
 ---
 # <a name="spdropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,17 +47,17 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
  Es el identificador global de una suscripción anónima. *sub_id* es **uniqueidentifier**, no tiene ningún valor predeterminado. Este identificador se puede recuperar en el suscriptor mediante **sp_helppullsubscription**. El valor de la **subid** campo del conjunto de resultados devuelto es este identificador global.  
   
  [  **@type=**] *tipo*  
- Es el tipo de suscripción. *tipo de* es **int**, no tiene ningún valor predeterminado. Los valores válidos son **1** o **2**. Especifique **1**, si la duplicación de instantáneas o replicación transaccional con el agente de distribución. Especifique **2**, si utiliza el agente de mezcla de replicación de mezcla.  
+ Es el tipo de suscripción. *tipo* es **int**, no tiene ningún valor predeterminado. Los valores válidos son **1** o **2**. Especificar **1**, si la replicación de instantáneas o replicación transaccional con el agente de distribución. Especificar **2**, si utiliza el agente de mezcla de replicación de mezcla.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_dropanonymousagent** se utiliza en todos los tipos de replicación.  
   
  Este procedimiento almacenado solo se utiliza para quitar agentes de suscripción anónima y no se puede utilizar para quitar suscripciones conocidas.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **db_owner** rol fijo de base de datos en la base de datos de distribución puede ejecutar **sp_dropanonymousagent**.  
   
 ## <a name="see-also"></a>Vea también  

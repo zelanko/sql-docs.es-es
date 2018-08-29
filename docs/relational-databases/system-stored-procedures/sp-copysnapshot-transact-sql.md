@@ -1,5 +1,5 @@
 ---
-title: sp_copysnapshot (Transact-SQL) | Documentos de Microsoft
+title: sp_copysnapshot (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_copysnapshot
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d21d69faf204e2d6c26f7af2d5fac1bc2e9371eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4cecb47009788605b0840be74b720cf064db0ba5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988050"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029886"
 ---
 # <a name="spcopysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,22 +51,22 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
  Es el nombre de la publicación cuyo contenido de instantáneas se va a copiar. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@destination_folder=**] **'***destination_folder***'**  
- Es el nombre de la carpeta donde el contenido de la instantánea de publicación se va a copiar. *destination_folder*es **nvarchar (255)**, no tiene ningún valor predeterminado. El *destination_folder* puede ser una ubicación alternativa, como en otro servidor, en una unidad de red o en un medio extraíble (como CD-ROM o discos extraíbles).  
+ Es el nombre de la carpeta donde va a copiar el contenido de la instantánea de publicación. *destination_folder*es **nvarchar (255)**, no tiene ningún valor predeterminado. El *destination_folder* puede ser una ubicación alternativa, como en otro servidor, en una unidad de red o en un medio extraíble (como CD-ROM o discos extraíbles).  
   
  [  **@subscriber=**] **'***suscriptor***'**  
- Es el nombre del suscriptor. *suscriptor* es de tipo sysname y su valor predeterminado es null.  
+ Es el nombre del suscriptor. *suscriptor* es de tipo sysname y su valor predeterminado es NULL.  
   
  [  **@subscriber_db=**] **'***subscriber_db***'**  
- Es el nombre de la base de datos de suscripción. *subscriber_db* es de tipo sysname y su valor predeterminado es null.  
+ Es el nombre de la base de datos de suscripción. *subscriber_db* es de tipo sysname y su valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
- **sp_copysnapshot** se utiliza en todos los tipos de replicación. Los suscriptores que ejecuten [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7.0 y anteriores no puede utilizar la ubicación de instantáneas alternativa.  
+## <a name="remarks"></a>Notas  
+ **sp_copysnapshot** se utiliza en todos los tipos de replicación. Los suscriptores que ejecuten [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7.0 y anteriores no puede usar la ubicación de instantáneas alternativa.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_copysnapshot**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_copysnapshot**.  
   
 ## <a name="see-also"></a>Vea también  
  [Ubicaciones alternativas para las carpetas de instantáneas](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   

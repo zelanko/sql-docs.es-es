@@ -1,5 +1,5 @@
 ---
-title: Vistas de catálogo de seguridad (Transact-SQL) | Documentos de Microsoft
+title: Vistas de catálogo de seguridad (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ helpviewer_keywords:
 - catalog views [SQL Server], security
 - security catalog views [SQL Server]
 ms.assetid: 4d5cf1bf-09a7-4ee0-9dbb-5c584750fc67
-caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a0a9eb44272ca932831b3084ab6fe2a0eb6840f1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0600ad6384914c4de5467918aa1770ac84040b69
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181331"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027554"
 ---
 # <a name="security-catalog-views-transact-sql"></a>Vistas de catálogo de seguridad (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ ms.locfileid: "33181331"
 |[sys.server_audit_specifications](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)|[sys.server_audit_specifications_details](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)|  
 |[sys.database_ audit_specifications](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|[Sys.audit_database_specification_details](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

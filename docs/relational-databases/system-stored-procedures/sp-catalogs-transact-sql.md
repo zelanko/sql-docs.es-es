@@ -1,5 +1,5 @@
 ---
-title: sp_catalogs (Transact-SQL) | Documentos de Microsoft
+title: sp_catalogs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_catalogs
 ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
-caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 360cc30c65068ffe2b3b6b38eab57cc7b9fe1f91
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: d4a5f266872a8e16932fb2fd52c06636ecdcb54e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33239375"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030112"
 ---
 # <a name="spcatalogs-transact-sql"></a>sp_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_catalogs [ @server_name = ] 'linked_svr'
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Catalog_Name**|**nvarchar (** 128 **)**|Nombre del catálogo|  
+|**Catalog_name**|**nvarchar (** 128 **)**|Nombre del catálogo|  
 |**Descripción**|**nvarchar (** 4000 **)**|Descripción del catálogo.|  
   
 ## <a name="permissions"></a>Permisos  
@@ -61,7 +60,7 @@ sp_catalogs [ @server_name = ] 'linked_svr'
  En el siguiente ejemplo se devuelve información acerca del catálogo para el servidor vinculado denominado `OLE DB ODBC Linked Server #3`.  
   
 > [!NOTE]  
->  Para **sp_catalogs** para proporcionar información útil, la `OLE DB ODBC Linked Server #3` ya debe existir.  
+>  Para **sp_catalogs** para proporcionar información útil, el `OLE DB ODBC Linked Server #3` ya debe existir.  
   
 ```  
 USE master;  

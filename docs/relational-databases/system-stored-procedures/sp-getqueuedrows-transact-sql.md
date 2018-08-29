@@ -1,5 +1,5 @@
 ---
-title: sp_getqueuedrows (Transact-SQL) | Documentos de Microsoft
+title: sp_getqueuedrows (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_getqueuedrows
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ec0e31b852a1aea3cfd964a47660fd4953c196d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7aa57cc268f5bc70bc0c2ebf03e0f05a4d8950d8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994422"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029006"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
  Es el propietario de la suscripción. *propietario* es **sysname**, su valor predeterminado es null.  
   
  [  **@tranid =** ] **'***transaction_id***'**  
- Permite filtrar el resultado por el identificador de la transacción. *valor de transaction_id* es **nvarchar (70)**, su valor predeterminado es null. Si se especifica, se muestra el Id. de la transacción asociado con el comando en cola. Si es NULL, se muestran todos los comandos de la cola.  
+ Permite filtrar el resultado por el identificador de la transacción. *transaction_id* es **nvarchar (70)**, su valor predeterminado es null. Si se especifica, se muestra el Id. de la transacción asociado con el comando en cola. Si es NULL, se muestran todos los comandos de la cola.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -62,19 +62,19 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Muestra todas las filas que tienen actualmente al menos una transacción en cola para la tabla suscrita.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Acción**|**nvarchar (10)**|Tipo de acción que se llevará a cabo cuando tenga lugar la sincronización.<br /><br /> INS= insertar <br /><br /> DEL = eliminar<br /><br /> UPD = actualizar|  
-|**Transacción**|**nvarchar (70)**|Id. de transacción con el que se ejecutó el comando.|  
-|**tabla column1... n**||El valor de cada columna de la tabla especificada en *tablename*.|  
+|**transacción**|**nvarchar (70)**|Id. de transacción con el que se ejecutó el comando.|  
+|**tabla column1... n**||El valor para cada columna de la tabla especificada en *tablename*.|  
 |**MSrepl_tran_version**|**uniqueidentifier**|Esta columna se utiliza para realizar un seguimiento de los cambios de datos replicados y para llevar a cabo la detección de conflictos en el publicador. Esta columna se agrega a la tabla automáticamente.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_getqueuedrows** se utiliza en los suscriptores que participan en la actualización en cola.  
   
- **sp_getqueuedrows** busca filas de una tabla determinada en una suscripción de la base de datos que han participado en una actualización en cola, pero actualmente no ha resuelto por el agente de lector de cola.  
+ **sp_getqueuedrows** busca filas de una tabla determinada en una suscripción de la base de datos que han participado en una actualización en cola, pero actualmente no se han resuelto por el agente de lector de cola.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  **sp_getqueuedrows** requiere permisos SELECT en la tabla especificada en *tablename*.  
   
 ## <a name="see-also"></a>Vea también  

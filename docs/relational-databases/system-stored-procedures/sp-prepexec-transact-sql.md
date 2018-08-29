@@ -1,5 +1,5 @@
 ---
-title: sp_prepexec (Transact-SQL) | Documentos de Microsoft
+title: sp_prepexec (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_prepexec
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
 caps.latest.revision: 6
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca8dd4639c4c2382ef17c4de89eee6fde1fdf9b9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 863aa34286ba6ed55f27a32bd1862c5f7e5896ec
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250009"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025224"
 ---
 # <a name="spprepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Prepara y ejecuta un con parámetros [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción. sp_prepexec combina las funciones de sp_prepare y sp_execute. Se invoca mediante el identificador 13 en un paquete de flujo TDS.  
+  Prepara y ejecuta un parametrizada [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción. sp_prepexec combina las funciones de sp_prepare y sp_execute. Se invoca mediante el identificador 13 en un paquete de flujo TDS.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,10 +45,10 @@ sp_prepexec handle OUTPUT, params , stmt
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Identificador*  
+ *identificador*  
  Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-genera *controlar* identificador. *controlar* es un parámetro necesario con un **int** valor devuelto.  
   
- *Params*  
+ *params*  
  Identifica instrucciones con parámetros. El *params* definición de las variables se sustituye por marcadores de parámetros en la instrucción. *params* es un parámetro necesario que requiere un **ntext**, **nchar**, o **nvarchar** valor de entrada. Escriba un valor NULL si la instrucción no tiene parámetros.  
   
  *stmt*  

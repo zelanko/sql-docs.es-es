@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergepartition (Transact-SQL) | Documentos de Microsoft
+title: sp_helpmergepartition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergepartition
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21f209b61786b07bac4a9941073d3e75b282b846
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6ef6a1192ac2216ff335a98709520f10610cb373
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996082"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027933"
 ---
 # <a name="sphelpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,9 +64,9 @@ sp_helpmergepartition [ @publication= ] 'publication'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Partición**|**int**|Identifica la partición del suscriptor.|  
+|**partición**|**int**|Identifica la partición del suscriptor.|  
 |**HOST_NAME**|**sysname**|Valor utilizado al crear la partición para una suscripción que está filtrada por el valor de la [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) función en el suscriptor.|  
 |**SUSER_SNAME**|**sysname**|Valor utilizado al crear la partición para una suscripción que está filtrada por el valor de la [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) función en el suscriptor.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Ubicación de la instantánea de datos filtrados para la partición del suscriptor.|  
@@ -76,11 +76,11 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_helpmergepartition** se utiliza en la replicación de mezcla.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor y el **db_owner** rol fijo de base de datos puede ejecutar **sp_helpmergepartition**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor y el **db_owner** rol fijo de base de datos se puede ejecutar **sp_helpmergepartition**.  
   
 ## <a name="see-also"></a>Vea también  
  [sp_addmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   

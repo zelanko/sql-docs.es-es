@@ -1,5 +1,5 @@
 ---
-title: sp_mergearticlecolumn (Transact-SQL) | Documentos de Microsoft
+title: sp_mergearticlecolumn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_mergearticlecolumn
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e426586be6229cb62e36d8fdcab13663785240b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50886bd5bd4ab34852362e678a2f8c2f4a2fc459
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999562"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023933"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,35 +58,35 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
  Es el nombre del artículo de la publicación. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@column =**] **'***columna***'**  
- Identifica las columnas donde se va a crear la partición vertical. *columna* es **sysname**, su valor predeterminado es null. Si es NULL y `@operation = N'add'`, de manera predeterminada se agregan al artículo todas las columnas de la tabla de origen. *columna* no puede ser NULL cuando *operación* está establecido en **quitar**. Para excluir las columnas de un artículo, ejecute **sp_mergearticlecolumn** y especifique *columna* y `@operation = N'drop'` para cada columna que desee quitar del elemento especificado *artículo*.  
+ Identifica las columnas donde se va a crear la partición vertical. *columna* es **sysname**, su valor predeterminado es null. Si es NULL y `@operation = N'add'`, de manera predeterminada se agregan al artículo todas las columnas de la tabla de origen. *columna* no puede ser NULL cuando *operación* está establecido en **drop**. Para excluir las columnas de un artículo, ejecute **sp_mergearticlecolumn** y especifique *columna* y `@operation = N'drop'` para cada columna que se va a quitar de la especificada *artículo*.  
   
  [  **@operation =**] **'***operación***'**  
- Es el estado de replicación. *operación* es **nvarchar (4)**, con un valor predeterminado es ADD. **agregar** marca la columna para la replicación. **quitar** borra la columna.  
+ Es el estado de replicación. *operación* es **nvarchar (4)**, con el valor predeterminado es ADD. **agregar** marca la columna para la replicación. **quitar** borra la columna.  
   
  [  **@schema_replication=**] **'***el argumento schema_replication***'**  
- Especifica que un cambio en el esquema se propagará al ejecutar el agente de mezcla. *el argumento schema_replication* es **nvarchar (5)**, con un valor predeterminado es FALSE.  
+ Especifica que un cambio en el esquema se propagará al ejecutar el agente de mezcla. *el argumento schema_replication* es **nvarchar (5)**, su valor predeterminado es False.  
   
 > [!NOTE]  
 >  Solo **FALSE** es compatible con *el argumento schema_replication*.  
   
  [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Habilita o deshabilita la capacidad de que se invalide una instantánea. *force_invalidate_snapshot* es un **bits**, su valor predeterminado es **0**.  
+ Habilita o deshabilita la capacidad de que se invalide una instantánea. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
   
- **0** especifica que los cambios realizados en el artículo de mezcla no invalidarán la instantánea no es válida.  
+ **0** especifica que los cambios realizados en el artículo de mezcla no invalidarán la instantánea no es válido.  
   
- **1** especifica que los cambios realizados en el artículo de mezcla pueden invalidar la instantánea no es válida, y si ese es el caso, un valor de **1** concede permiso para la nueva instantánea para que se produzca.  
+ **1** especifica que los cambios realizados en el artículo de mezcla pueden invalidar la instantánea no es válido, y si es así, un valor de **1** concede permiso para la nueva instantánea que se produzca.  
   
  [* *@force_reinit_subscription =] *** force_reinit_subscription*  
  Habilita o deshabilita la capacidad de reinicializar la suscripción. *force_reinit_subscription* es un poco con un valor predeterminado de **0**.  
   
- **0** especifica que los cambios realizados en el artículo de mezcla no hará que se reinicialice la suscripción.  
+ **0** especifica que los cambios realizados en el artículo de mezcla no invalidarán la suscripción para reinicializarla.  
   
- **1** especifica que los cambios realizados en el artículo de mezcla pueden causar la suscripción para reinicializarla, y si ese es el caso, un valor de **1** concede permiso para que se lleve a cabo la reinicialización.  
+ **1** especifica que los cambios realizados en el artículo de mezcla pueden causar la suscripción para reinicializarla, y si es así, un valor de **1** concede permiso para que se produzca la reinicialización de suscripción.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_mergearticlecolumn** se utiliza en la replicación de mezcla.  
   
  No es posible quitar una columna de identidad del artículo si se está utilizando la administración automática del intervalo de identidad. Para más información, vea [Replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).  
@@ -98,12 +98,12 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-mergearticlecolumn-tr_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_mergearticlecolumn**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_mergearticlecolumn**.  
   
 ## <a name="see-also"></a>Vea también  
- [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Definición y modificación de un filtro de fila con parámetros para un artículo de mezcla](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [Definir y modificar un filtro de combinación entre artículos de mezcla](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [Definir y modificar un filtro de fila con parámetros para un artículo de mezcla](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Filtrar datos publicados](../../relational-databases/replication/publish/filter-published-data.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

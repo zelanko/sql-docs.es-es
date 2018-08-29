@@ -1,5 +1,5 @@
 ---
-title: sp_check_dynamic_filters (Transact-SQL) | Documentos de Microsoft
+title: sp_check_dynamic_filters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -31,15 +31,15 @@ helpviewer_keywords:
 - sp_check_dynamic_filters
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 248a5234a0620ce18122723db7bce88c61201758
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f63c62f5aa36fe85b38922c68d5daf90f919642
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990050"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023445"
 ---
 # <a name="spcheckdynamicfilters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +61,10 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|Es si la publicación es apta para usar particiones precalculadas; donde **1** significa que las particiones precalculadas pueden estar usando, y **0** significa que no se puede usar.|  
-|**has_dynamic_filters**|**bit**|Es si se ha definido el filtro de al menos una fila con parámetros en la publicación; donde **1** significa que existen uno o más filtros de fila con parámetros, y **0** significa que existe ningún filtro dinámico.|  
+|**can_use_partition_groups**|**bit**|Es si la publicación cumple los requisitos para usar particiones precalculadas; donde **1** significa que las particiones precalculadas pueden estar usando, y **0** significa que no puede utilizarse.|  
+|**has_dynamic_filters**|**bit**|Es si se ha definido el filtro de al menos una fila con parámetros en la publicación; donde **1** significa que existen uno o varios filtros de fila con parámetros, y **0** significa que existe ningún filtro dinámico.|  
 |**dynamic_filters_function_list**|**nvarchar(500)**|Lista de funciones utilizadas para filtrar artículos en una publicación, donde las funciones se separan mediante puntos y coma.|  
 |**validate_subscriber_info**|**nvarchar(500)**|Lista de funciones utilizadas para filtrar artículos en una publicación, donde las funciones se separan mediante signos más (+).|  
 |**uses_host_name**|**bit**|Si el [HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md) función se utiliza en filtros de fila con parámetros, donde **1** significa que esta función se utiliza para filtrado dinámico.|  
@@ -73,15 +73,15 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_check_dynamic_filters** se utiliza en la replicación de mezcla.  
   
- Si una publicación se ha definido para usar particiones precalculadas, **sp_check_dynamic_filters** comprueba si hay alguna infracción de las restricciones de las particiones precalculadas. Si se infringió alguna restricción, se devuelve un error. Para obtener más información, vea [Optimizar el rendimiento de los filtros con parámetros con particiones calculadas previamente](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
+ Si una publicación se ha definido para usar particiones precalculadas, **sp_check_dynamic_filters** busca las infracciones de las restricciones de las particiones precalculadas. Si se infringió alguna restricción, se devuelve un error. Para obtener más información, vea [Optimización del rendimiento de los filtros con parámetros con particiones calculadas previamente](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
  Si se ha definido que una publicación posee filtros de filas con parámetros, pero no se encuentra ninguno, se devuelve un error.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_check_dynamic_filters**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_check_dynamic_filters**.  
   
 ## <a name="see-also"></a>Vea también  
  [Administrar particiones para una publicación de mezcla con filtros con parámetros](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   

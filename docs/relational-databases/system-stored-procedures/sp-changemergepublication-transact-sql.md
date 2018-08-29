@@ -1,5 +1,5 @@
 ---
-title: sp_changemergepublication (Transact-SQL) | Documentos de Microsoft
+title: sp_changemergepublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 016105db76d618ed2753fc95dc5a7ee5d1288b14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 471f0f8f764256c35b0922867f0560d329123d2b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992932"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034408"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  Esta tabla describe las propiedades de la publicación que se pueden cambiar, así como las restricciones de los valores de esas propiedades.  
   
-|Propiedad|Value|Description|  
+|Property|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Se admiten las suscripciones anónimas.|  
 ||**False**|No se admiten las suscripciones anónimas.|  
@@ -88,7 +88,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**conflict_logging**|**publicador**|Los registros de conflictos se almacenan en el publicador.|  
 ||**suscriptor**|Los registros de conflictos se almacenan en el suscriptor que causó el conflicto. No se admite para [!INCLUDE[ssEW](../../includes/ssew-md.md)] suscriptores *.*|  
 ||**ambos**|Los registros de conflictos se almacenan tanto en el publicador como en el suscriptor.|  
-|**conflict_retention**||Un **int** que especifica el período de retención, expresado en días, para el que se conservan los conflictos. Establecer *conflict_retention* a **0** significa que no se necesita ninguna limpieza de conflictos.|  
+|**conflict_retention**||Un **int** que especifica el período de retención en días, para el que se conservan los conflictos. Establecer *conflict_retention* a **0** significa que no es necesaria ninguna limpieza de conflictos.|  
 |**Descripción**||Descripción de la publicación.|  
 |**dynamic_filters**|**true**|La publicación se filtra según una cláusula dinámica.|  
 ||**False**|La publicación no se filtra dinámicamente.|  
@@ -103,7 +103,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**keep_partition_changes**|**true**|La sincronización se optimiza y solo se ven afectados los suscriptores que tienen filas en las particiones que han cambiado. Para cambiar esta propiedad, se requiere una instantánea nueva.|  
 ||**False**|La sincronización no se optimiza y las particiones que se envían a todos los suscriptores se comprueban cuando los datos cambian en una partición. Para cambiar esta propiedad, se requiere una instantánea nueva.|  
 |**max_concurrent_merge**||Se trata de un **int** que representa el número máximo de procesos de mezcla simultáneos que se pueden ejecutar con una publicación. Si es 0, no hay límite. Si se programa un número de procesos de mezcla superior a éste para que se ejecuten a la vez, el exceso de trabajos se coloca en una cola y se espera hasta que termine de procesarse la mezcla que se está ejecutando.|  
-|**max_concurrent_dynamic_snapshots**||Se trata de un **int** que representa el número máximo de sesiones de instantánea para generar los datos filtrados de instantánea que puede ejecutar simultáneamente con una publicación de combinación que utiliza con parámetros de los filtros de fila. Si **0**, no hay ningún límite. Si se programa un número de procesos de instantáneas superior a éste para que se ejecuten a la vez, el exceso de trabajos se coloca en una cola y se espera hasta que termine de procesarse la mezcla que se está ejecutando.|  
+|**max_concurrent_dynamic_snapshots**||Se trata de un **int** que representa el número máximo de sesiones de instantáneas para generar los datos filtrados de instantánea que puede ejecutar simultáneamente con una publicación de mezcla que utiliza filtros de filas con. Si **0**, no hay ningún límite. Si se programa un número de procesos de instantáneas superior a éste para que se ejecuten a la vez, el exceso de trabajos se coloca en una cola y se espera hasta que termine de procesarse la mezcla que se está ejecutando.|  
 |**post_snapshot_script**||Especifica un puntero a un **.sql** ubicación del archivo. El Agente de distribución o el Agente de mezcla ejecutan el script posterior a la instantánea después de que se aplique el resto de scripts de objetos replicados y datos durante la sincronización inicial. Para cambiar esta propiedad, se requiere una instantánea nueva.|  
 |**pre_snapshot_script**||Especifica un puntero a un **.sql** ubicación del archivo. El Agente de mezcla ejecuta el script previo a la instantánea antes que cualquiera de los scripts de objetos replicados al aplicar la instantánea en un suscriptor. Para cambiar esta propiedad, se requiere una instantánea nueva.|  
 |**publication_compatibility_level**|**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
@@ -112,47 +112,47 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**False**|Quita la información de publicaciones de Active Directory.|  
 |**replicate_ddl**|**1**|Las instrucciones de lenguaje de definición de datos (DDL) que se ejecutan en el publicador se replican.|  
 ||**0**|Las instrucciones de DDL no se replican.|  
-|**Retención**||Se trata de un **int** que representa el número de *retention_period_unit* unidades para el que desea guardar los cambios para la publicación indicada. Si la suscripción no está sincronizada en el período de retención y se han quitado, por medio de una operación de limpieza en el distribuidor, los cambios pendientes que podía haber recibido, la suscripción expira y es necesario reinicializarla. El período de retención máximo admitido es el número de días entre el 31 de diciembre de 9999 y la fecha actual.<br /><br /> Nota: El período de retención para publicaciones de mezcla tiene un período de gracia de 24 horas para dar cabida a los suscriptores en zonas horarias diferentes.|  
+|**retención**||Se trata de un **int** que representa el número de *retention_period_unit* unidades para el que se va a guardar los cambios para la publicación indicada. Si la suscripción no está sincronizada en el período de retención y se han quitado, por medio de una operación de limpieza en el distribuidor, los cambios pendientes que podía haber recibido, la suscripción expira y es necesario reinicializarla. El período de retención máximo admitido es el número de días entre el 31 de diciembre de 9999 y la fecha actual.<br /><br /> Nota: El período de retención para las publicaciones de combinación tiene un período de gracia de 24 horas para dar cabida a los suscriptores en diferentes zonas horarias.|  
 |**retention_period_unit**|**day**|El período de retención se especifica en días.|  
 ||**week**|El período de retención se especifica en semanas.|  
 ||**month**|El período de retención se especifica en meses.|  
 ||**year**|El período de retención se especifica en años.|  
 |**snapshot_in_defaultfolder**|**true**|Los archivos de instantánea se almacenan en la carpeta de instantáneas predeterminada.|  
-||**False**|Archivos de instantánea se almacenan en la ubicación alternativa especificada por *alt_snapshot_folder*. Esta combinación especifica que los archivos de instantáneas se almacenan tanto en la ubicación predeterminada como en la alternativa.|  
+||**False**|Los archivos de instantánea se almacenan en la ubicación alternativa especificada por *alt_snapshot_folder*. Esta combinación especifica que los archivos de instantáneas se almacenan tanto en la ubicación predeterminada como en la alternativa.|  
 |**snapshot_ready**|**true**|Está disponible la instantánea para la publicación.|  
 ||**False**|No está disponible la instantánea para la publicación.|  
 |**status**|**Active**|La publicación está en estado activo.|  
-||**Inactivo**|La publicación está en estado inactivo.|  
-|**sync_mode**|**Native** o<br /><br /> **bcp nativo**|La salida del programa de copia masiva de todas las tablas en modo nativo se utiliza para la instantánea inicial.|  
+||**inactivo**|La publicación está en estado inactivo.|  
+|**sync_mode**|**nativo** o<br /><br /> **bcp nativo**|La salida del programa de copia masiva de todas las tablas en modo nativo se utiliza para la instantánea inicial.|  
 ||**carácter**<br /><br /> o **carácter bcp**|La salida del programa de copia masiva de todas las tablas en modo de carácter se utiliza para la instantánea inicial, que se necesita para todos los suscriptores que no lo son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**use_partition_groups**<br /><br /> Nota: después de utilizar partition_groups, si se revierte al uso **setupbelongs**y establezca **use_partition_groups = false** en **changemergearticle**, esto puede no ser refleja correctamente después de toma una instantánea. Los desencadenadores que genera una instantánea son conformes con los grupos de particiones.<br /><br /> La solución para este escenario consiste en establecer el estado en inactivo, modifique la **use_partition_groups**y, a continuación, establecer el estado a activo.|**true**|La publicación utiliza particiones previamente calculadas.|  
+|**use_partition_groups**<br /><br /> Nota: después de utilizar partition_groups, si se revierte al uso **setupbelongs**y establezca **use_partition_groups = false** en **changemergearticle**, esto podría no ser refleja correctamente después de tomar una instantánea. Los desencadenadores que genera una instantánea son conformes con los grupos de particiones.<br /><br /> La solución para este escenario consiste en establecer el estado en Inactive, modificar el **use_partition_groups**y, a continuación, establezca el estado en activo.|**true**|La publicación utiliza particiones previamente calculadas.|  
 ||**False**|La publicación no utiliza particiones previamente calculadas.|  
 |**validate_subscriber_info**||Muestra las funciones que se utilizan para recuperar información del suscriptor. Después, valida los criterios de filtro dinámico que se están utilizando para que el suscriptor compruebe que la información se está dividiendo de un modo coherente.|  
 |**web_synchronization_url**||Valor predeterminado de la URL de Internet utilizada para la sincronización web.|  
 |NULL (predeterminado)||Devuelve la lista de valores admitidos para *propiedad*.|  
   
  [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es un **bits**, su valor predeterminado es **0**.  
+ Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
   
  **0** especifica que el cambio de la publicación no invalidan la instantánea. Si el procedimiento almacenado detecta que el cambio requiere una nueva instantánea, se producirá un error y no se realizarán cambios.  
   
- **1** especifica que cambios en la publicación es posible que invvalidate la instantánea. Si hay suscripciones existentes que requieran una nueva instantánea, se da permiso para que la instantánea existente se marque como obsoleta y se genere otra nueva.  
+ **1** especifica que el cambio de la publicación, es posible que invvalidate la instantánea. Si hay suscripciones existentes que requieran una nueva instantánea, se da permiso para que la instantánea existente se marque como obsoleta y se genere otra nueva.  
   
  Vea en la sección de Observaciones las propiedades que, si se cambian, requieren que se genere una nueva instantánea.  
   
  [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- Confirma que la acción realizada por este procedimiento almacenado puede requerir la reinicialización de las suscripciones existentes. *force_reinit_subscription* es un **bits** con un valor predeterminado de **0**.  
+ Confirma que la acción realizada por este procedimiento almacenado puede requerir la reinicialización de las suscripciones existentes. *force_reinit_subscription* es un **bit** con un valor predeterminado de **0**.  
   
- **0** especifica que cambios en la publicación no requieren que se reinicialicen las suscripciones. Si el procedimiento almacenado detecta que el cambio requiere la reinicialización de las suscripciones existentes, se producirá un error y no se realizarán cambios.  
+ **0** especifica que el cambio de la publicación no requiere que se reinicialicen las suscripciones. Si el procedimiento almacenado detecta que el cambio requiere la reinicialización de las suscripciones existentes, se producirá un error y no se realizarán cambios.  
   
- **1** especifica que, al cambiar la publicación, que se reinicialicen las suscripciones existentes y concede permiso para que se lleve a cabo la reinicialización.  
+ **1** especifica que el cambio hace que la publicación se reinicialicen las suscripciones existentes y concede permiso para que se produzca la reinicialización de suscripción.  
   
  Vea en la sección de Notas las propiedades que, si se cambian, requieren que se reinicialicen todas las suscripciones existentes.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_changemergepublication** se utiliza en la replicación de mezcla.  
   
  Si se cambian las propiedades siguientes, se requiere que se genere una nueva instantánea. Debe especificar un valor de **1** para el *force_invalidate_snapshot* parámetro.  
@@ -175,7 +175,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 -   **post_snapshot_script**  
   
--   **valor de publication_compatibility_level** (a **80SP3** solo)  
+-   **valor de publication_compatibility_level** (a **80SP3** sólo)  
   
 -   **pre_snapshot_script**  
   
@@ -191,13 +191,13 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 -   **validate_subscriber_info**  
   
- Para enumerar los objetos de publicación a Active Directory mediante el uso de la *publish_to_active_directory*, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto debe estar ya creado en Active Directory.  
+ Para enumerar los objetos de publicación a Active Directory mediante el uso de la *publish_to_active_directory*, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ya se debe crear el objeto en Active Directory.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_changemergepublication](../../relational-databases/replication/codesnippet/tsql/sp-changemergepublicatio_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos puede ejecutar **sp_changemergepublication**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_changemergepublication**.  
   
 ## <a name="see-also"></a>Vea también  
  [Ver y modificar propiedades de publicación](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   

@@ -22,17 +22,16 @@ helpviewer_keywords:
 - event_log
 - sys.event_log
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 55408f62c8e66c33bcb58682831970312c51130d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7091aa6596fd66260ae43d39f0f19e5770b6dcdf
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37998177"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030145"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -49,10 +48,10 @@ ms.locfileid: "37998177"
 |**database_name**|**sysname**|Nombre de la base de datos. Si la conexión no se realiza correctamente y el usuario no especificó un nombre de base de datos, esta columna está en blanco.|  
 |**start_time**|**datetime2**|Fecha y hora UTC del inicio del intervalo de agregación. Para los eventos de agregado, la hora es siempre un múltiplo de 5 minutos. Por ejemplo:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Fecha y hora UTC del final del intervalo de agregación. Para los eventos de agregado, **End_time** es siempre exactamente 5 minutos posterior a la correspondiente **start_time** en la misma fila. Para los eventos que no se agregan, **start_time** y **end_time** igual a la fecha UTC actual y la hora del evento.|  
-|**event_category**|**nvarchar (64)**|Componente de nivel superior que generó este evento.<br /><br /> Consulte [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
-|**event_type**|**nvarchar (64)**|El tipo de evento.<br /><br /> Consulte [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
+|**event_category**|**Nvarchar (64)**|Componente de nivel superior que generó este evento.<br /><br /> Consulte [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
+|**event_type**|**Nvarchar (64)**|El tipo de evento.<br /><br /> Consulte [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
 |**event_subtype**|**int**|Subtipo del evento que se está produciendo.<br /><br /> Consulte [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
-|**event_subtype_desc**|**nvarchar (64)**|Descripción del subtipo de evento.<br /><br /> Consulte [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
+|**event_subtype_desc**|**Nvarchar (64)**|Descripción del subtipo de evento.<br /><br /> Consulte [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
 |**severity**|**int**|Gravedad del error. Los valores posibles son:<br /><br /> 0 = Información<br />1 = Advertencia<br />2 = Error|  
 |**event_count**|**int**|El número de veces que se produjo este evento para la base de datos especificada en el intervalo de tiempo especificado (**start_time** y **end_time**).|  
 |**Descripción**|**nvarchar(max)**|Descripción detallada del evento.<br /><br /> Consulte [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
@@ -87,7 +86,7 @@ ms.locfileid: "37998177"
 |**conectividad**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Nota: Solo se aplica a Azure SQL Database V11.*<br /><br /> La sesión ha terminado debido al uso excesivo de TEMPDB. Intente modificar la consulta para reducir el uso de espacio de la tabla temporal. Para obtener más información, consulte [los límites de recursos](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**conectividad**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Nota: Solo se aplica a Azure SQL Database V11.*<br /><br /> La sesión ha terminado debido al excesivo uso de espacio del registro de transacciones. Intente modificar menos filas en una sola transacción. Para obtener más información, consulte [los límites de recursos](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**conectividad**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Nota: Solo se aplica a Azure SQL Database V11.*<br /><br /> La sesión ha terminado debido al uso excesivo de la memoria. Intente modificar la consulta para procesar menos filas. Para obtener más información, consulte [los límites de recursos](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**motor de**|**interbloqueo**|0|**interbloqueo**|2|Se ha producido un interbloqueo.|  
+|**Motor de**|**interbloqueo**|0|**interbloqueo**|2|Se ha producido un interbloqueo.|  
   
 ## <a name="permissions"></a>Permisos  
  Los usuarios con permiso para tener acceso a la **maestro** base de datos tiene acceso de solo lectura a esta vista.  

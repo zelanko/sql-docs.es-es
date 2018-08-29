@@ -18,13 +18,13 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 57447d0d15ceaf5cb3d6ab72654a595c8e3e952a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: d6c14be858d6ba9d2b9ac40b462967c8d600f1b6
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39557255"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43058667"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Compatibilidad con tipos de datos para mejoras de fecha y hora de OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -165,7 +165,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- Aplicaciones que migran a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client utilice **sql_variant** y confiar en la precisión limitada de **datetime** tendrá que actualizarse si se actualiza el esquema subyacente para utilizar **datetime2** en lugar de **datetime**.  
+ Aplicaciones que migran a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client que utilice **sql_variant** y dependen de la precisión limitada de **datetime** tendrán que actualizarse si el esquema subyacente está actualizado para usar **datetime2** lugar **datetime**.  
   
  Las macros de acceso para SSVARIANT también se han extendido con la adición de lo siguiente:  
   
@@ -186,7 +186,7 @@ enum SQLVARENUM {
 |DBTYPE_DBTIME2|**time**(p)|La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB proveedor inspecciona la DBCOLUMDESC *bScale* miembro para determinar la precisión de fracciones de segundo.|  
 |DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB proveedor inspecciona la DBCOLUMDESC *bScale* miembro para determinar la precisión de fracciones de segundo.|  
   
- Cuando una aplicación especifica DBTYPE_DBTIMESTAMP en *wType*, puede reemplazar la asignación a **datetime2** proporcionando un nombre de tipo de *pwszTypeName*. Si **datetime** se especifica, *bScale* debe ser 3. Si **smalldatetime** se especifica, *bScale* debe ser 0. Si *bScale* no es coherente con *wType* y *pwszTypeName*, se devuelve DB_E_BADSCALE.  
+ Cuando una aplicación especifica DBTYPE_DBTIMESTAMP en *wType*, puede invalidar la asignación a **datetime2** proporcionando un nombre de tipo *pwszTypeName*. Si **datetime** se especifica, *bScale* debe ser 3. Si **smalldatetime** se especifica, *bScale* debe ser 0. Si *bScale* no es coherente con *wType* y *pwszTypeName*, se devuelve DB_E_BADSCALE.  
   
 ## <a name="see-also"></a>Vea también  
  [Mejoras de fecha y hora &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  

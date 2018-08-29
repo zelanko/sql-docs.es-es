@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergearticlecolumn (Transact-SQL) | Documentos de Microsoft
+title: sp_helpmergearticlecolumn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergearticlecolumn
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eea23a02bca21cdb714c3437bdcbb3c5ea10042f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82240c6d24f6387e8d1a9e6e105e8fdc9e0ee9e2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994642"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025244"
 ---
 # <a name="sphelpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,20 +54,20 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**sysname**|Identifica la columna.|  
 |**column_name**|**sysname**|Es el nombre de la columna de una tabla o vista.|  
-|**Publicado**|**bit**|Especifica si se publica el nombre de la columna.<br /><br /> **1** especifica que se publica la columna.<br /><br /> **0** especifica que no se publica.|  
+|**Publicado**|**bit**|Especifica si se publica el nombre de la columna.<br /><br /> **1** especifica que se publica la columna.<br /><br /> **0** especifica que no se ha publicado.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_helpmergearticlecolumn** se utiliza en la replicación de mezcla.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **replmonitor** rol fijo de base de datos en la base de datos de distribución o la lista de acceso de publicación para la publicación puede ejecutar **sp_helpmergearticlecolumn**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **replmonitor** rol fijo de base de datos en la base de datos de distribución o en la lista de acceso de publicación para la publicación puede ejecutar **sp_helpmergearticlecolumn**.  
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

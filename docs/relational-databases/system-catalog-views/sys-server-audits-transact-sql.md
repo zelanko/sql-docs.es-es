@@ -1,5 +1,5 @@
 ---
-title: Sys.server_audits (Transact-SQL) | Documentos de Microsoft
+title: Sys.server_audits (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,26 +21,26 @@ helpviewer_keywords:
 - sys.server_audits catalog view
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f71da894aa31fa192c5abc6f64683fa1c2036f99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f6dd82c3232e941d4db08f9e5079d9e821e84804
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221926"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024537"
 ---
 # <a name="sysserveraudits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene una fila para cada auditoría de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de una instancia de servidor. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|Identificador de la auditoría.|  
 |**Nombre**|**sysname**|Nombre de la auditoría.|  
-|**AUDIT_GUID**|**uniqueidentifier**|GUID de la auditoría que se utiliza para enumerar las auditorías con miembros Server&#124;adjuntar especificaciones de auditoría de base de datos durante el inicio del servidor y base de datos.|  
+|**AUDIT_GUID**|**uniqueidentifier**|GUID de la auditoría que se utiliza para enumerar las auditorías con el servidor miembro&#124;adjuntar especificaciones de auditoría de base de datos durante el inicio del servidor y base de datos.|  
 |**create_date**|**datetime**|Fecha UTC en la que se creó la auditoría.|  
 |**modify_date**|**datetime**|Fecha UTC en la que se modificó por última vez la auditoría.|  
 |**principal_id**|**int**|ID del propietario de la auditoría, tal y como se registró en el servidor.|  
@@ -52,8 +52,8 @@ ms.locfileid: "33221926"
 |**QUEUE_DELAY**|**int**|Tiempo máximo, en milisegundos, que debe transcurrir antes de realizar la escritura en disco. Si es igual a 0, la auditoría garantizará la escritura antes de que continúe un evento.|  
 |**predicado**|**nvarchar(3000)**|La expresión de predicado aplicada al evento.|  
   
-## <a name="permissions"></a>Permissions  
- Entidades de seguridad con la **ALTER ANY SERVER AUDIT** o **VIEW ANY DEFINITION** permiso tiene acceso a esta vista de catálogo. Además, la entidad de seguridad no se debe denegar **VIEW ANY DEFINITION** permiso.  
+## <a name="permissions"></a>Permisos  
+ Las entidades de seguridad con el **ALTER ANY SERVER AUDIT** o **VIEW ANY DEFINITION** permisos tienen acceso a esta vista de catálogo. Además, no se debe denegar la entidad de seguridad **VIEW ANY DEFINITION** permiso.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

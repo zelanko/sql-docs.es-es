@@ -1,5 +1,5 @@
 ---
-title: Sys.server_event_notifications (Transact-SQL) | Documentos de Microsoft
+title: Sys.server_event_notifications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,22 +21,22 @@ helpviewer_keywords:
 - sys.server_event_notifications catalog view
 ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
 caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7736946316131a6760d7bd9d9f2ab7b258b560ed
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 91e033b5931f00761cb79e208287c784cf3ecd5e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222126"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026533"
 ---
 # <a name="sysservereventnotifications-transact-sql"></a>sys.server_event_notifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila para cada objeto de notificación de eventos de nivel de servidor.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|Nombre de notificación de eventos de servidor. Este nombre es único en todas las notificaciones de eventos de nivel de servidor.|  
 |**object_id**|**int**|Número de identificación del objeto. Es único dentro de la **maestro** base de datos.|  
@@ -50,7 +50,7 @@ ms.locfileid: "33222126"
 |**creator_sid**|**varbinary(85)**|El SID del inicio de sesión que ejecuta la instrucción que crea la notificación de eventos. NULL si WITH FAN_IN no se especifica en la definición de notificación de eventos.|  
 |**principal_id**|**int**|El Id. de la entidad de seguridad del servidor a la que pertenece.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  

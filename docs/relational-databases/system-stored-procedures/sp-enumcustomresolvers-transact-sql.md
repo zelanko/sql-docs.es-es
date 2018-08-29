@@ -1,5 +1,5 @@
 ---
-title: sp_enumcustomresolvers (Transact-SQL) | Documentos de Microsoft
+title: sp_enumcustomresolvers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_enumcustomresolvers
 ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb49ae55f4bde2304713f4fd336076585a987904
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4f0b23d39e365a27cc2734e7e051e431055a21f2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993162"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032448"
 ---
 # <a name="spenumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**article_resolver**|**nvarchar(255)**|Nombre descriptivo del controlador de lógica de negocios o del solucionador de conflictos.|  
 |**resolver_clsid**|**nvarchar(50)**|Identificador de clase (CLSID) del solucionador basado en COM. Para un controlador de lógica de negocios, esta columna devuelve un valor de CLSID de cero.|  
@@ -61,11 +61,11 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  **sp_enumcustomresolvers** se utiliza en la replicación de mezcla.  
   
-## <a name="permissions"></a>Permissions  
- Solo los miembros de la **sysadmin** rol fijo de servidor y el **db_owner** rol fijo de base de datos puede ejecutar **sp_enumcustomresolvers**.  
+## <a name="permissions"></a>Permisos  
+ Solo los miembros de la **sysadmin** rol fijo de servidor y el **db_owner** rol fijo de base de datos se puede ejecutar **sp_enumcustomresolvers**.  
   
 ## <a name="see-also"></a>Vea también  
  [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  (Implementar un controlador de lógica de negocios para un artículo de mezcla)  

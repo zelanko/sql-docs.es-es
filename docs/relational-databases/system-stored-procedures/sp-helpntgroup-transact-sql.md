@@ -1,5 +1,5 @@
 ---
-title: sp_helpntgroup (Transact-SQL) | Documentos de Microsoft
+title: sp_helpntgroup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpntgroup
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d47be90ed518d818dfc731121215935f30bf9a1f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f049e76dc7d31331c0939c9d24809f8752ea9f7c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247816"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032597"
 ---
 # <a name="sphelpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,17 +52,17 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**NTGroupName**|**sysname**|Nombre del grupo de Windows.|  
+|**Nombre GrupoNT**|**sysname**|Nombre del grupo de Windows.|  
 |**NTGroupId**|**smallint**|Id. del grupo.|  
 |**SID**|**varbinary(85)**|Identificador de seguridad (SID) de **NTGroupName**.|  
 |**HasDbAccess**|**int**|1 = el grupo de Windows tiene permiso de acceso a la base de datos.|  
   
-## <a name="remarks"></a>Comentarios  
- Para ver una lista de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] roles en la base de datos actual, use **sp_helprole**.  
+## <a name="remarks"></a>Notas  
+ Para ver una lista de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] roles en la base de datos actual, utilice **sp_helprole**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="examples"></a>Ejemplos  

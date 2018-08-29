@@ -1,5 +1,5 @@
 ---
-title: Objeto de la sintaxis de jerarquía (Transact-SQL) | Documentos de Microsoft
+title: Objeto de la sintaxis de jerarquía (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - objects [SQL Server], hierarchy syntax
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e7b3df2aad780cabe33855374cc5b6372366eeaf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 979d67b930d95817c0c27f671885c9b5fd9fb0d4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238056"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032543"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>Sintaxis de jerarquía de objetos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  El *propertyname* parámetro de sp_OAGetProperty y sp_OASetProperty y *methodname* parámetro de sp_OAMethod admiten una sintaxis de jerarquía de objetos que es similar a la de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Cuando se utiliza esta sintaxis especial, estos parámetros tienen la forma general siguiente:  
+  El *propertyname* parámetro de sp_OAGetProperty y sp_OASetProperty y *methodname* parámetro de sp_OAMethod admiten una sintaxis de jerarquía de objetos similar al de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Cuando se utiliza esta sintaxis especial, estos parámetros tienen la forma general siguiente:  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,7 +39,7 @@ ms.locfileid: "33238056"
   
 ## <a name="arguments"></a>Argumentos  
  *TraversedObject*  
- Es un objeto OLE en la jerarquía en la *objecttoken* especificado en el procedimiento almacenado. Utilice la sintaxis de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para especificar un conjunto de colecciones, propiedades de objetos y métodos que devuelven objetos. Cada especificador de objeto del conjunto debe estar separado con un punto .  
+ Es un objeto OLE en la jerarquía bajo el *objecttoken* especificado en el procedimiento almacenado. Utilice la sintaxis de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para especificar un conjunto de colecciones, propiedades de objetos y métodos que devuelven objetos. Cada especificador de objeto del conjunto debe estar separado con un punto .  
   
  Un elemento del conjunto puede ser el nombre de una colección. Utilice esta sintaxis para especificar una colección:  
   
@@ -61,19 +60,19 @@ ms.locfileid: "33238056"
   
  Las comillas dobles (") son necesarias. Todos los parámetros con nombre deben especificarse después de especificar todos los parámetros de posición.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Si *TraversedObject* no se especifica, *PropertyOrMethod* es necesario.  
   
- Si *PropertyOrMethod* no se especifica, el *TraversedObject* se devuelve como un parámetro de salida de símbolo (token) de objeto del procedimiento almacenado de automatización OLE. Si *PropertyOrMethod* se especifica, la propiedad o método de la *TraversedObject* se llama, y el valor de propiedad o valor devuelto del método se devuelve como un parámetro de salida de la automatización OLE procedimiento almacenado.  
+ Si *PropertyOrMethod* no se especifica, el *TraversedObject* se devuelve como un parámetro de salida de token de objeto del procedimiento almacenado de automatización OLE. Si *PropertyOrMethod* se especifica, la propiedad o método de la *TraversedObject* se llama a, y el valor de propiedad o valor devuelto del método se devuelve como un parámetro de salida de la automatización OLE procedimiento almacenado.  
   
- Si algún elemento de la *TraversedObject* lista no devuelve un objeto OLE, se produce un error.  
+ Si algún elemento en el *TraversedObject* lista no devuelve un objeto OLE, se produce un error.  
   
  Para obtener más información acerca de la sintaxis de objetos OLE de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], vea la documentación de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
- Para obtener más información sobre códigos de retorno HRESULT, vea [sp_OACreate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md).  
+ Para obtener más información sobre los códigos de retorno HRESULT, vea [sp_OACreate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md).  
   
 ## <a name="examples"></a>Ejemplos  
- Los siguientes son ejemplos de sintaxis de la jerarquía de objetos que utilizan un objeto SQLServer de SQL-DMO.  
+ Los siguientes son ejemplos de sintaxis de jerarquía de objetos que utilizan un objeto SQLServer de SQL-DMO.  
   
 ```  
 -- Get the AdventureWorks2012 Person.Address Table object.  

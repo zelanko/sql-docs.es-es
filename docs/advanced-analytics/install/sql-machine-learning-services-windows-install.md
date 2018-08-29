@@ -7,14 +7,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8297d57ad1a29778e23d2ce02198c426825abf02
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: b5b37ef8d9fd3fba6b9e87839f32112724db9abe
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40437695"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118583"
 ---
-# <a name="install-sql-server-machine-learning-services-in-database-on-windows"></a>Instalar SQL Server Machine Learning Services (en bases de datos) en Windows 
+# <a name="install-sql-server-machine-learning-services"></a>Instalar SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 A partir de SQL Server 2017, se proporciona compatibilidad con R y Python para realizar análisis en bases de datos en SQL Server Machine Learning Services, el sucesor de la característica R Services introducida en SQL Server 2016. Bibliotecas de funciones están disponibles en R y Python y de identificación de script externo en una instancia del motor de base de datos. 
@@ -100,7 +100,7 @@ En instalaciones locales, debe ejecutar el programa de instalación como adminis
 
 7. Una vez completada la instalación, si se indica que reinicie el equipo, hágalo ahora. Es importante leer el mensaje del Asistente para la instalación tras finalizar el programa de instalación. Para obtener más información, vea [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
-## <a name="bkmk_enableFeature"></a>Habilitar la ejecución de scripts externos
+## <a name="bkmk_enableFeature"></a>Habilitar la ejecución del script
 
 1. Abra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 

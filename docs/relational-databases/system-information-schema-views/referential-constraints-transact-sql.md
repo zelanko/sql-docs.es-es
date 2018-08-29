@@ -18,17 +18,16 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS view
 - REFERENTIAL_CONSTRAINTS view
 ms.assetid: 5d358f18-0a85-4b55-af4b-98d5f4cd1020
-caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1732ea37cf7a6f84ef2f3a09c9c94fba9413fdfc
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2844927e05c33c38134432918027cd2902091374
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39555665"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43106283"
 ---
 # <a name="referentialconstraints-transact-sql"></a>REFERENTIAL_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,10 +39,10 @@ ms.locfileid: "39555665"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|Calificador de la restricción.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema que contiene la restricción.<br /><br /> **\*\* Importante \* \* ** no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema que contiene la restricción.<br /><br /> **\*\* Importante \* \***  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
 |**CONSTRAINT_NAME**|**sysname**|Nombre de la restricción.|  
 |**UNIQUE_CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|Calificador de la restricción UNIQUE.|  
-|**UNIQUE_CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema que contiene la restricción UNIQUE.<br /><br /> **\*\* Importante \* \* ** no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
+|**UNIQUE_CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema que contiene la restricción UNIQUE.<br /><br /> **\*\* Importante \* \***  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
 |**UNIQUE_CONSTRAINT_NAME**|**sysname**|Restricción UNIQUE.|  
 |**MATCH_OPTION**|**varchar (** 7 **)**|Condiciones de coincidencia de restricción referencial. Siempre devuelve SIMPLE. Esto significa que no se define ninguna coincidencia. La condición se considera una coincidencia en una de las siguientes circunstancias:<br /><br /> Al menos un valor de la columna de clave externa es NULL.<br /><br /> Ninguno de los valores de la columna de clave externa es NULL y una fila de la tabla de clave principal tiene la misma clave.|  
 |**UPDATE_RULE**|**varchar (** 11 **)**|Acción realizada cuando un [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción infringe la integridad referencial definida por esta restricción. Devuelve una de las siguientes opciones: <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> Si para esta restricción se especifica NO ACTION en ON UPDATE, la actualización de la clave principal a la que se hace referencia en la restricción no se propagará a la clave externa. Si una actualización de una clave principal de estas características provocara una infracción de la integridad referencial porque al menos una clave externa contiene el mismo valor, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no realizará ningún cambio en las tablas primaria y de referencia. Asimismo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generará un error.<br /><br /> Si para esta restricción se especifica CASCADE en ON UPDATE, cualquier cambio en el valor de clave principal se propagará automáticamente al valor de clave externa.|  

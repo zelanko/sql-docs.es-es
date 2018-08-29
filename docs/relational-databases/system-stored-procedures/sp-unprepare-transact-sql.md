@@ -1,5 +1,5 @@
 ---
-title: sp_unprepare (Transact-SQL) | Documentos de Microsoft
+title: sp_unprepare (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 - sp_unprepare
 ms.assetid: 14320251-c551-49d8-b933-057406114978
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f0b34db0fd76d9fa358ae6028d0b4f78a8238ded
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ecf5c98f46179af90956d03f08158fc7e6c44cb2
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39557615"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43111810"
 ---
 # <a name="spunprepare-transact-sql"></a>sp_unprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Descarta el plan de ejecución creado por el procedimiento almacenado de sp_prepare. sp_unprepare se invoca mediante la especificación de ID = 15 en un paquete de datos tabulares (TDS) de la secuencia.  
+  Descarta el plan de ejecución creado por el procedimiento almacenado sp_prepare. sp_unprepare se invoca especificando el identificador 15 en un paquete de flujo TDS.  
   
 ## <a name="syntax"></a>Sintaxis  
   

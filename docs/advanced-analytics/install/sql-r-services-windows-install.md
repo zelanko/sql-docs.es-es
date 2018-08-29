@@ -7,14 +7,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 75e962b9be2acb1d44451081f0aef2bccd5a09fc
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 4f5c39c62b63aa3d2bf8daf83b9212423cf258a1
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40437624"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118513"
 ---
-# <a name="install-sql-server-2016-r-services-in-database"></a>Instalar SQL Server 2016 R Services (en bases de datos) 
+# <a name="install-sql-server-2016-r-services"></a>Instalar SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 En este artículo se explica cómo instalar y configurar **SQL Server 2016 R Services (In-Database)**. Si tiene SQL Server 2016, instale esta característica para habilitar la ejecución del código de R en SQL Server.
@@ -85,7 +85,7 @@ En instalaciones locales, debe ejecutar el programa de instalación como adminis
 7. Una vez completada la instalación, si se indica que reinicie el equipo, hágalo ahora. Es importante leer el mensaje del Asistente para la instalación tras finalizar el programa de instalación. Para obtener más información, vea [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
 
-##  <a name="bkmk_enableFeature"></a>Habilitar la ejecución de scripts externos
+##  <a name="bkmk_enableFeature"></a>Habilitar la ejecución del script
 
 1. Abra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 

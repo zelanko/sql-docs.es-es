@@ -141,13 +141,13 @@ caps.latest.revision: 51
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e380f6d0aebf6671a7931ef179e149976b6d90f6
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: becf0ffa2b44cb69db191bbdacf13ab72e379b04
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39556185"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43091027"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Referencia de operadores lógicos y físicos del plan de presentación
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -212,7 +212,7 @@ ms.locfileid: "39556185"
 |![Exploración de índice de almacén de columnas](../relational-databases/media/columnstoreindexscan.gif "Exploración de índice de almacén de columnas")|**Exploración de índice de almacén de columnas**|El operador **Columnstore Index Scan** recorre el índice columnstore especificado en la columna **Argument** del plan de ejecución de consulta.|  
 |![Icono del operador Compute Scalar](../relational-databases/media/compute-scalar-32x.gif "Icono del operador Compute Scalar")|**Compute Scalar**|El operador **Compute Scalar** evalúa una expresión para generar un valor escalar calculado. que se puede devolver al usuario, hacer referencia a él en cualquier otra parte de la consulta, o ambas cosas a la vez, por ejemplo, en un predicado de filtro o de combinación. **Compute Scalar** es un operador lógico y físico.<br /><br /> Es posible que los operadores**Compute Scalar** que aparecen en planes de presentación generados por SET STATISTICS XML no contengan el elemento **RunTimeInformation** . En planes de presentación gráficos, es posible que las opciones **Número de filas real**, **Reenlaces reales**y **Rebobinados reales** no aparezcan en la ventana **Propiedades** cuando la opción **Incluir plan de ejecucion real** está seleccionada en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Si esto ocurre, significa que, aunque estos operadores se han utilizado en el plan de consulta compilado, otros operadores han realizado su trabajo en el plan de consulta en tiempo de ejecución. Tenga en cuenta también que el número de ejecuciones en el resultado del plan de presentación generado por SET STATISTICS PROFILE es equivalente a la suma de reenlaces y rebobinados de planes de presentación generados por SET STATISTICS XML.|  
 |![Icono del operador Concatenation](../relational-databases/media/concatenation-32x.gif "Icono del operador Concatenation")|**Concatenation**|El operador **Concatenation** explora varias entradas y devuelve cada fila explorada. Normalmente,**Concatenation** se utiliza para implementar la construcción UNION ALL de [!INCLUDE[tsql](../includes/tsql-md.md)] . El operador físico **Concatenation** tiene dos o más entradas y una salida. Concatenation copia filas del primer flujo de entrada en el flujo de salida y, a continuación, repite esta operación con cada flujo de entrada adicional. **Concatenation** es un operador lógico y físico.|  
-|![Icono del operador Constant Scan](../relational-databases/media/constant-scan-32x.gif "Icono del operador Constant Scan")|**Constant Scan**|El operador **Constant Scan** escribe una o varias filas de constantes en una consulta. El operador **Compute Scalar** se suele usar después de **Constant Scan** para agregar columnas a una fila generada por él mismo **** .|  
+|![Icono del operador Constant Scan](../relational-databases/media/constant-scan-32x.gif "Icono del operador Constant Scan")|**Constant Scan**|El operador **Constant Scan** escribe una o varias filas de constantes en una consulta. El operador **Compute Scalar** se suele usar después de **Constant Scan** para agregar columnas a una fila generada por el operador **Compute Scalar**.|  
 |![Icono del elemento del lenguaje Convert (motor de base de datos)](../relational-databases/media/convert-32x.gif "Icono del elemento del lenguaje Convert (motor de base de datos)")|**Convertir**|El operador **Convert** convierte un tipo de datos escalar en otro. **Convert** es un elemento del lenguaje.|  
 |None|**Cross Join**|El operador **Cross Join** combina cada fila de la primera entrada (superior) con cada fila de la segunda entrada (inferior). **Cross Join** es un operador lógico.|  
 |![Icono del operador de cursor de selección de cursor (catchall)](../relational-databases/media/cursor-catch-all.gif "Icono del operador de cursor de selección de cursor (catchall)")|**catchall**|El icono de selección (catchall) se muestra cuando la lógica que genera planes de presentación gráficos no puede encontrar un icono adecuado para el iterador. Este icono no indica necesariamente una condición de error. Hay tres iconos de selección (catchall): azul (para iteradores), naranja (para cursores) y verde (para elementos del lenguaje [!INCLUDE[tsql](../includes/tsql-md.md)] ).|  

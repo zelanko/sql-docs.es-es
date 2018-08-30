@@ -19,7 +19,7 @@ ms.locfileid: "40394942"
 # <a name="analysis-services-samples"></a>Ejemplos de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
 
-Use la siguiente información para buscar bases de datos y proyectos de ejemplo que le ayudarán a conocer y probar sus soluciones de Analysis Services.
+  Use la siguiente información para buscar bases de datos y proyectos de ejemplo que le ayudarán a conocer y probar sus soluciones de Analysis Services.
   
 
 ## <a name="samples-on-github"></a>Ejemplos en GitHub

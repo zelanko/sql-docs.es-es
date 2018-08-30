@@ -14,12 +14,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd787ee638e570419362fd62a4844ff856e8dbf1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3287815e6622d2d44693b401e2829275d22a2785
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982357"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42785396"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Características de Microsoft ODBC Driver for SQL Server en Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -35,28 +35,28 @@ Azure Active Directory permite a los usuarios, DBA y los programadores de aplica
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-windows"></a>Microsoft® ODBC Driver 11 for SQL Server® en Windows  
 
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] contiene todas las funciones del controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client incluido en [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. Para obtener más información, consulte [Programación de SQL Server Native Client](http://msdn.microsoft.com/library/ms130892.aspx). El controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client se basa en el controlador ODBC que se incluye en el sistema operativo Windows. Para obtener más información, vea [Windows Data Access Components SDK (SDK de componentes de Windows Data Access)](http://msdn.microsoft.com/library/aa968814(VS.85).aspx).  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contiene todas las funciones del controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client incluido en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Para obtener más información, vea [Programación de SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md). El controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client se basa en el controlador ODBC que se incluye en el sistema operativo Windows. Para obtener más información, vea [Windows Data Access Components SDK (SDK de componentes de Windows Data Access)](http://msdn.microsoft.com/library/aa968814(VS.85).aspx).  
   
-Esta versión de ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] contiene las siguientes características nuevas:  
+Esta versión de ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contiene las siguientes características nuevas:  
   
 ### <a name="bcpexe-l-option-for-specifying-a-login-timeout"></a>opción – l de bcp.exe para especificar un tiempo de espera de inicio de sesión
  
-La opción –l especifica el número de segundos que tienen que transcurrir antes de que un inicio de sesión de `bcp.exe` en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] agote el tiempo de espera cuando se trate de conectar a un servidor. El tiempo de espera de inicio de sesión predeterminado es 15 segundos. El período de tiempo de espera de inicio de sesión debe ser un número comprendido entre 0 y 65534. Si el valor proporcionado no es numérico o no está dentro de este intervalo, `bcp.exe` genera un mensaje de error. Un valor de 0 especifica un tiempo de espera infinito. Un tiempo de espera de inicio de sesión de menos de 10 segundos (aproximadamente) no resulta confiable.  
+La opción –l especifica el número de segundos que tienen que transcurrir antes de que un inicio de sesión de `bcp.exe` en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agote el tiempo de espera cuando se trate de conectar a un servidor. El tiempo de espera de inicio de sesión predeterminado es 15 segundos. El período de tiempo de espera de inicio de sesión debe ser un número comprendido entre 0 y 65534. Si el valor proporcionado no es numérico o no está dentro de este intervalo, `bcp.exe` genera un mensaje de error. Un valor de 0 especifica un tiempo de espera infinito. Un tiempo de espera de inicio de sesión de menos de 10 segundos (aproximadamente) no resulta confiable.  
   
 ### <a name="driver-aware-connection-pooling"></a>Agrupación de conexiones dependientes del controlador  
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] es compatible con la [agrupación de conexiones dependientes del controlador](http://msdn.microsoft.com/library/hh405031(VS.85).aspx). Para obtener más información, consulte [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es compatible con la [agrupación de conexiones dependientes del controlador](http://msdn.microsoft.com/library/hh405031(VS.85).aspx). Para obtener más información, consulte [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
   
 ### <a name="asynchronous-execution-notification-method"></a>Ejecución asincrónica (método de notificación)  
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] es compatible con la [ejecución asincrónica (método de notificación)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx). Para obtener un ejemplo de uso, vea [Ejemplo de ejecución asincrónica &#40;método de notificación&#41;](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md).  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es compatible con la [ejecución asincrónica (método de notificación)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx). Para obtener un ejemplo de uso, vea [Ejemplo de ejecución asincrónica &#40;método de notificación&#41;](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md).  
   
 ### <a name="connection-resiliency"></a>Resistencia de conexión
 Para garantizar que las aplicaciones permanecen conectadas a una base de datos SQL de Microsoft Azure, el controlador ODBC de Windows puede restaurar conexiones inactivas. Para obtener más información, consulte [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).  
   
 ## <a name="behavior-changes"></a>Cambios de comportamiento
 
-En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client, el `-y0` opción `sqlcmd.exe` hace que la salida se trunque en 1 MB si el ancho de pantalla era 0.
+En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, el `-y0` opción `sqlcmd.exe` hace que la salida se trunque en 1 MB si el ancho de pantalla era 0.
   
-A partir de la versión ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], no existe ningún límite en la cantidad de datos que se pueden recuperar en una sola columna al especificar `–y0`. `sqlcmd.exe` ahora transmite columnas de hasta 2 GB (tamaño máximo del tipo de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]).  
+A partir de la versión ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], no existe ningún límite en la cantidad de datos que se pueden recuperar en una sola columna al especificar `–y0`. `sqlcmd.exe` ahora transmite columnas de hasta 2 GB (tamaño máximo del tipo de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
 Otra diferencia es que si se especifica tanto `-h` y `-y0` ahora produce un error que informa de que las opciones son incompatibles. `-h`, que especifica el número de filas que se van a imprimir entre los encabezados de columna y que nunca ha sido compatible con `-y0`, se omitía, aunque no se imprimiera ningún encabezado.
   

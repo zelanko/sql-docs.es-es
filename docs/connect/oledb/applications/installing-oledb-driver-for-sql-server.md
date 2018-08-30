@@ -1,5 +1,5 @@
 ---
-title: Instalar el controlador OLE DB para SQL Server | Microsoft Docs
+title: Controlador Microsoft OLE DB para SQL Server | Microsoft Docs
 description: Instalar y desinstalar el controlador de OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], installing OLE DB Driver for SQL Server
 - removing OLE DB Driver for SQL Server
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7e435aef0d4499f62ea8b6255ce25440436c3cbc
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 10bf2ce673543cbad21bccdac35ac863647e910a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106221"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019154"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>Instalación del controlador OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

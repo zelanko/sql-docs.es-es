@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 775596cb3978254401c27f7584a7694fc65a7a64
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6e455225592c6f8ddd4964f9df80c2159543aade
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979728"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784638"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ En la tabla siguiente se incluye la lista de atributos admitidos.
 |Attribute|Procesado mediante|Valores admitidos:|Descripción|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Especifica el uso de mayúsculas y minúsculas en los nombres de columna. PDO::CASE_LOWER obliga a que los nombres de columna usen minúsculas, PDO::CASE_NATURAL deja el nombre de columna que devuelve la base de datos y PDO::CASE_UPPER fuerza que los nombres de columna estén en mayúsculas.<br /><br />El valor predeterminado es PDO::CASE_NATURAL.<br /><br />Este atributo también puede establecerse utilizando PDO::setAttribute.|  
-|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Matriz de cadenas|Describe las versiones del controlador y las bibliotecas relacionadas. Devuelve una matriz con los siguientes elementos: la versión de ODBC (*MajorVer*.*MinorVer*), el nombre y la versión de la DLL de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Native Client y la versión de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*).|  
+|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Matriz de cadenas|Describe las versiones del controlador y las bibliotecas relacionadas. Devuelve una matriz con los siguientes elementos: la versión de ODBC (*MajorVer*.*MinorVer*), el nombre y la versión de la DLL de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client y la versión de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*).|  
 |PDO::ATTR_DRIVER_NAME|PDO|String|Siempre devuelve "sqlsrv".|  
 |PDO::ATTR_DRIVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|String|Indica la versión de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*).|  
 |PDO::ATTR_ERRMODE|PDO|PDO::ERRMODE_SILENT<br /><br />PDO::ERRMODE_WARNING<br /><br />PDO::ERRMODE_EXCEPTION|Especifica cómo debe controlar los errores el controlador.<br /><br />PDO::ERRMODE_SILENT (el valor predeterminado) establece la información y los códigos de los errores.<br /><br />PDO::ERRMODE_WARNING genera una advertencia E_WARNING.<br /><br />PDO::ERRMODE_EXCEPTION produce una excepción.<br /><br />Este atributo también puede establecerse utilizando PDO::setAttribute.|  

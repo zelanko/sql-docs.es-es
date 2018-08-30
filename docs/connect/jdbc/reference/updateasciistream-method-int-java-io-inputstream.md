@@ -14,12 +14,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a98f78397a2bd9b86b788c696ad13c11f5e9dbe9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f5d1ac4c8c6c5a89d365dfc760463323de00f210
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020163"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784475"
 ---
 # <a name="updateasciistream-method-int-javaioinputstream"></a>Método updateAsciiStream (int, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public void updateAsciiStream(int columnIndex,
 #### <a name="parameters"></a>Parámetros  
  *columnIndex*  
   
- Valor **int** que indica el índice de columna.  
+ Valor **int** que indica el índice de la columna.  
   
  *x*  
   
@@ -51,7 +51,7 @@ public void updateAsciiStream(int columnIndex,
   
  Este método pasa caracteres ASCII (bytes) desde un objeto InputStream a las columnas de caracteres convertibles, que son el rango ASCII [0x00 - 0x7F] de Unicode y las páginas de códigos 874, 932, 936, 949, 950 y desde la 1250 a la 1258. Este método realiza una conversión en la página de intercalación de destino. Si se intenta actualizar una columna de destino no convertible se producirá una excepción. Para las columnas binarias, se pasan bytes sin formato.  
   
- Con este método para el **imagen**, **texto**, y **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipos de datos podrían afectar al rendimiento.  
+ Con este método para el **imagen**, **texto**, y **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de datos podrían afectar al rendimiento.  
   
 ## <a name="see-also"></a>Ver también  
  [Método updateAsciiStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)   

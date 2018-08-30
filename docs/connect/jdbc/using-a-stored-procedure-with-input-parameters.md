@@ -14,18 +14,18 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 79f3198c1d8308ea2142683562a4c0d15a173504
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: b1662275280f97dcba0c02a21747738e1984b34f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661767"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784109"
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>Usar un procedimiento almacenado con parámetros de entrada
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Un procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] al que se puede llamar es aquel que contiene uno o más parámetros IN, parámetros que se pueden usar para pasar datos al procedimiento almacenado. El [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] proporciona la clase [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), que puede usar para llamar a este procedimiento almacenado y para procesar los datos que devuelve.
+Un procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al que se puede llamar es aquel que contiene uno o más parámetros IN, parámetros que se pueden usar para pasar datos al procedimiento almacenado. El [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] proporciona la clase [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), que puede usar para llamar a este procedimiento almacenado y para procesar los datos que devuelve.
 
 Si usa el controlador JDBC para llamar a un procedimiento almacenado con los parámetros IN, debe usar la secuencia de escape `call` de SQL junto con el método [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) de la clase [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). La sintaxis de la secuencia de escape `call` con los parámetros IN es la siguiente:
 

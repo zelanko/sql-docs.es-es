@@ -1,5 +1,5 @@
 ---
-title: updateBinaryStream (método) (java.io.InputStream) | Documentos de Microsoft
+title: Método updateBinaryStream (int, java.io.InputStream) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e228e4914fb9fd5790450d5f246592581bf0397a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8c5fa61211d6d1adcdcd1944d191b944486afc95
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850420"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784632"
 ---
 # <a name="updatebinarystream-method-javalangstring-javaioinputstream"></a>Método updateBinaryStream (java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public void updateBinaryStream(java.lang.String columnLabel,
 #### <a name="parameters"></a>Parámetros  
  *columnLabel*  
   
- A **cadena** que contiene la etiqueta de columna.  
+ Valor **string** que contiene la etiqueta de columna.  
   
  *x*  
   
@@ -46,14 +46,14 @@ public void updateBinaryStream(java.lang.String columnLabel,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método updateBinaryStream especificado por el método updateBinaryStream en la interfaz java.sql.ResultSet.  
   
- Utiliza este método para el **imagen**, **texto**, y **ntext** tipos de datos de SQL Server podrían afectar al rendimiento.  
+ Con este método para el **imagen**, **texto**, y **ntext** tipos de datos de SQL Server podrían afectar al rendimiento.  
   
- Este método pasa bytes desde un objeto InputStream que seleccione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] columnas binarias como binary, varbinary, varbinary (max), image, xml y udt. Este método no admite la actualización de columnas de caracteres. Para actualizar las columnas de caracteres con un InputStream, use la [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md) método.  
+ Este método pasa bytes desde un objeto InputStream a las columnas binarias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seleccionadas, como binary, varbinary, varbinary(max), image, xml y udt. Este método no admite la actualización de columnas de caracteres. Para actualizar las columnas de caracteres con un elemento InputStream, use el método [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Método updateBinaryStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebinarystream-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

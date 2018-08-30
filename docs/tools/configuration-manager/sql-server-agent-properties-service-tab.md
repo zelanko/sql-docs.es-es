@@ -13,13 +13,14 @@ ms.assetid: 452857fb-be1b-4e1e-851c-dd2216640f35
 caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c95a67c5907b1e546506827a32d69f848026ab1b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b05257b51c3685f4ac5e265869a24193283114d2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020083"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42784659"
 ---
 # <a name="sql-server-agent-properties-service-tab"></a>Propiedades de Agente SQL Server (pestaña Servicio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

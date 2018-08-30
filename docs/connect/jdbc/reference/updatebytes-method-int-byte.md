@@ -19,12 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cbdada667e3e3c5e35eb64edc56c2772ae465f80
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d8fdad2f99ced5590827713f04eae8ed8e10959a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38046542"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783957"
 ---
 # <a name="updatebytes-method-int-byte"></a>Método updateBytes (int, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public void updateBytes(int index,
 #### <a name="parameters"></a>Parámetros  
  *index*  
   
- Valor **int** que indica el índice de columna.  
+ Valor **int** que indica el índice de la columna.  
   
  *x*  
   
@@ -54,7 +54,7 @@ public void updateBytes(int index,
 ## <a name="remarks"></a>Notas  
  Este método updateBytes especificado por el método updateBytes en la interfaz java.sql.ResultSet.  
   
- En una versión anterior de [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], se podía usar SQLServerResultSet.updateBytes para convertir valores entre matrices de bytes y tipos de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **date**, **time**, **datetime2** o **datetimeoffset**. Ahora, al usar este método con esos tipos de datos, se producirá una excepción que indica que no se admite la conversión.  
+ En una versión anterior de [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], se podía usar SQLServerResultSet.updateBytes para convertir valores entre matrices de bytes y tipos de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **date**, **time**, **datetime2** o **datetimeoffset**. Ahora, al usar este método con esos tipos de datos, se producirá una excepción que indica que no se admite la conversión.  
   
 ## <a name="see-also"></a>Ver también  
  [Método updateBytes &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebytes-method-sqlserverresultset.md)   

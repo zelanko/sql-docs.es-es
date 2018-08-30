@@ -1,5 +1,5 @@
 ---
-title: Propiedades de servidor (pestaña servicio) del informe | Documentos de Microsoft
+title: Propiedades de SQL Server (pestaña Servicio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
 caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e69f6b4cbe72ccb635f573fb01bc84508a18de78
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 38013f87cd94649dde759dd347223dbba0148002
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33068172"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42786925"
 ---
 # <a name="report-server-properties-service-tab"></a>Propiedades de Servidor de informes (pestaña Servicio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

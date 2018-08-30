@@ -19,17 +19,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0774a09fce93a774e911fba28ea9ed9559313fb4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f0bdfd8694ff9617025acd211036e304aaf8a0aa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38046813"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785697"
 ---
 # <a name="typessscrollstatic-field-sqlserverresultset"></a>Campo TYPE_SS_SCROLL_STATIC (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Se utiliza para especificar un tipo de cursor estático de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+  Se utiliza para especificar un tipo de cursor estático de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintaxis  
   

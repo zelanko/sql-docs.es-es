@@ -1,5 +1,5 @@
 ---
-title: Conectar al servidor | Microsoft Docs
+title: Conectarse a SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -14,19 +14,19 @@ caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 03f3e44683ab329e67360be3992fb942c3799165
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 36a147c4231d9c2c90f0f2151d4e69bebd5eefb1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38062478"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785849"
 ---
 # <a name="connecting-to-the-server"></a>Conexión al servidor
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-En los temas de esta sección se describen las opciones y los procedimientos para conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mediante los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+En los temas de esta sección se describen las opciones y los procedimientos para conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 
-Los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] pueden conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] mediante la autenticación de Windows o SQL Server. De forma predeterminada, los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] intentan conectarse al servidor mediante la autenticación de Windows.  
+Los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] pueden conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la autenticación de Windows o SQL Server. De forma predeterminada, los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] intentan conectarse al servidor mediante la autenticación de Windows.  
 
 ## <a name="in-this-section"></a>En esta sección  
 
@@ -39,8 +39,8 @@ Los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] pueden conectarse 
 |[Agrupar conexiones](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md)|Proporciona información acerca de la agrupación de conexiones en el controlador.|  
 |[Deshabilitar los conjuntos de resultados activos múltiples (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)|Describe cómo deshabilitar la característica MARS al establecer una conexión.|  
 |[Opciones de conexión](../../connect/php/connection-options.md)|Enumera las opciones que se permiten en la matriz asociativa que contiene atributos de conexión.|  
-|[Compatibilidad con LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)|Describe la compatibilidad de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] con la característica LocalDB, que se agregó en [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)].|  
-|[Compatibilidad con alta disponibilidad y recuperación ante desastres](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)|Describe cómo se puede configurar la aplicación para aprovechar las características de alta disponibilidad y recuperación ante desastres que se han agregado en [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)].|  
+|[Compatibilidad con LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)|Describe la compatibilidad de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] con la característica LocalDB, que se agregó en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].|  
+|[Compatibilidad con alta disponibilidad y recuperación ante desastres](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)|Describe cómo se puede configurar una aplicación para aprovechar las características de alta disponibilidad con recuperación ante desastres que se han agregado en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].|  
 |[Conexión a Microsoft Azure SQL Database](../../connect/php/connecting-to-microsoft-azure-sql-database.md)|Trata sobre cómo conectar a Azure SQL Database.|  
 |[Resistencia de conexión](../../connect/php/connection-resiliency.md)|Describe la característica de resistencia de conexión que restablece las conexiones interrumpidas.|  
 

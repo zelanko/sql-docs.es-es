@@ -1,5 +1,5 @@
 ---
-title: Requisitos del sistema (controlador ODBC para SQL Server) | Microsoft Docs
+title: Requisitos del sistema del controlador OLE DB para SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 02/14/2018
 ms.prod: sql
@@ -18,17 +18,17 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bab69d8a2ebf405e99cc9cff7e4cdadb94d79f98
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fcac85e31f20d84377a2788e373892e05e8fddfa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047488"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785699"
 ---
 # <a name="system-requirements"></a>Requisitos del sistema
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-En este tema se muestran los requisitos para utilizar [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] en Linux y MacOS.
+En este tema se muestran los requisitos para utilizar [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Linux y MacOS.
 
 
 ## <a name="microsoft-odbc-driver-13-131-and-17-for-sql-server"></a>Microsoft ODBC Driver 13, 13.1 y 17 for SQL Server
@@ -52,7 +52,7 @@ Los controladores de Linux y macOS solo están disponibles para las versiones de
 |Ubuntu Linux 16.10|13, 13.1|
 |Ubuntu Linux 17.10|17|
 
-La instalación de paquetes para el [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13, 13.1 y 17 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] en Linux y macOS resolver las dependencias del controlador automáticamente cuando se instala con el sistema de administración de paquetes de la distribución, como se describe en [ Instalar el controlador](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+La instalación de paquetes para el [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13, 13.1 y 17 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Linux y macOS resolver las dependencias del controlador automáticamente cuando se instala con el sistema de administración de paquetes de la distribución, como se describe en [ Instalar el controlador](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
 ## <a name="microsoft-odbc-driver-11-for-sql-server"></a>Controlador ODBC 11 de Microsoft para SQL Server  
   

@@ -14,18 +14,18 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6548433059e4537f58b70681b1958e40af0bb7f5
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 6f67563ccf884c47b7fc3b86d32cd2b09fa393c9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456739"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784472"
 ---
 # <a name="basic-data-types-sample"></a>Ejemplo de tipos de datos básicos
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-En esta aplicación de ejemplo de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] se muestra cómo usar métodos captadores de conjuntos de resultados para recuperar valores de tipos de datos básicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y cómo usar métodos de actualización de conjuntos de resultados para actualizar dichos valores.
+En esta aplicación de ejemplo de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] se muestra cómo usar métodos captadores de conjuntos de resultados para recuperar valores de tipos de datos básicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y cómo usar métodos de actualización de conjuntos de resultados para actualizar dichos valores.
 
 El archivo de código para este ejemplo se denomina BasicDT.java y se encuentra en la siguiente ubicación:
 

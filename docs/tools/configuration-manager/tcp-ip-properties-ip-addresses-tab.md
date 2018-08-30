@@ -17,12 +17,12 @@ caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4371bbb3c202087b88bb5b29ce7ea5976cd6bdf7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5c17fba2f6b8745cb58d829f1c9ac9e28cd682cd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37986015"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42784136"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Propiedades de TCP/IP (pestaña Direcciones IP)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -67,6 +67,6 @@ ms.locfileid: "37986015"
 ## <a name="see-also"></a>Ver también  
  [Elegir un protocolo de red](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
  [Crear una cadena de conexión válida con TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)   
- [Servicio SQL Server Browser](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  
+ [Servicio SQL Server Browser](sql-server-browser-service.md)  
   
   

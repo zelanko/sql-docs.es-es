@@ -14,12 +14,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c24424c7c7f4183293871a39bb8eb04d72dacd05
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 58980081aafd10046b9268a6d23d62b7c1990c00
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982567"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784986"
 ---
 # <a name="updatecharacterstream-method-int-javaioreader"></a>Método updateCharacterStream (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public void updateCharacterStream(int columnIndex,
 #### <a name="parameters"></a>Parámetros  
  *columnIndex*  
   
- Valor **int** que indica el índice de columna.  
+ Valor **int** que indica el índice de la columna.  
   
  *x*  
   
@@ -51,7 +51,7 @@ public void updateCharacterStream(int columnIndex,
   
  Este método pasa los caracteres Unicode de un objeto Reader al texto seleccionado y las columnas binarias. Esto incluye todas las columnas de texto y las columnas **binary**, **varbinary**, **varbinary(max)**, **image** y **xml**, pero no las **udt**.  
   
- Con este método para el **imagen**, **texto**, y **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipos de datos podrían afectar al rendimiento.  
+ Con este método para el **imagen**, **texto**, y **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de datos podrían afectar al rendimiento.  
   
 ## <a name="see-also"></a>Ver también  
  [Método updateCharacterStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)   

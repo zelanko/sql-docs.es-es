@@ -14,20 +14,20 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f3cc9428f84db56675dbf58c977078fa4dcca6ae
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b5bbe5489392ec9fbce5e55e1ad72d90416b5242
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38060013"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787302"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Agrupación de conexiones dependientes del controlador ODBC para SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] es compatible con la [agrupación de conexiones dependientes del controlador](http://msdn.microsoft.com/library/hh405031(VS.85).aspx). En este tema se describen las mejoras realizadas en la característica de agrupación de conexiones dependientes del controlador de Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] en Windows:  
+  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es compatible con la [agrupación de conexiones dependientes del controlador](http://msdn.microsoft.com/library/hh405031(VS.85).aspx). En este tema se describen las mejoras realizadas en la característica de agrupación de conexiones dependientes del controlador de Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Windows:  
   
 -   Con independencia de las propiedades de conexión, las conexiones que usan `SQLDriverConnect` forman parte de un grupo independiente de las conexiones que usan `SQLConnect`.
-- Al usar la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] y la agrupación de conexiones dependientes del controlador, el controlador no emplea el contexto de seguridad del usuario de Windows para el subproceso actual con el fin de separar las conexiones del grupo. Es decir, si las conexiones contienen parámetros equivalentes en escenarios de suplantación de Windows con autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] y usan las mismas credenciales de autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] para conectarse al back-end, varios usuarios de Windows podrían utilizar el mismo grupo de conexiones. Al usar la autenticación de Windows y la agrupación de conexiones dependientes del controlador, el controlador utiliza el contexto de seguridad del usuario de Windows en el subproceso actual con el fin de separar las conexiones del grupo. Es decir, en escenarios de suplantación de Windows, varios usuarios de Windows no compartirán las conexiones aunque utilicen los mismos parámetros.
+- Al usar la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y la agrupación de conexiones dependientes del controlador, el controlador no emplea el contexto de seguridad del usuario de Windows para el subproceso actual con el fin de separar las conexiones del grupo. Es decir, si las conexiones contienen parámetros equivalentes en escenarios de suplantación de Windows con autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y usan las mismas credenciales de autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para conectarse al back-end, varios usuarios de Windows podrían utilizar el mismo grupo de conexiones. Al usar la autenticación de Windows y la agrupación de conexiones dependientes del controlador, el controlador utiliza el contexto de seguridad del usuario de Windows en el subproceso actual con el fin de separar las conexiones del grupo. Es decir, en escenarios de suplantación de Windows, varios usuarios de Windows no compartirán las conexiones aunque utilicen los mismos parámetros.
 - Cuando se usa Azure Active Directory y la agrupación de conexiones dependientes del controlador, el controlador también usa el valor de autenticación para determinar la pertenencia del grupo de conexiones.
   
 -   La característica de agrupación de conexiones dependientes del controlador impide que se devuelva una conexión incorrecta del grupo.  

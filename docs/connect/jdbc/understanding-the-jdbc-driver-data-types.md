@@ -1,5 +1,5 @@
 ---
-title: Describir los tipos de datos del controlador JDBC
+title: Descripción de los tipos de datos del controlador JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 594e5770335779e0555d0ba9911923e487d5db53
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 98fc3495571a434b21d2e58c55c125f049469663
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661667"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784648"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>Describir los tipos de datos del controlador JDBC
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-El [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] admite el uso de los tipos de datos básicos y avanzados de JDBC dentro de una aplicación Java que use [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] como base de datos.  
+El [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] admite el uso de los tipos de datos básicos y avanzados de JDBC dentro de una aplicación Java que use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como base de datos.  
   
-El sistema de tipos de JDBC arbitra la conversión entre los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y los tipos y objetos del lenguaje Java. Los tipos de JDBC se modelan en los tipos SQL-92 y SQL-99. El controlador JDBC sigue la especificación de JDBC y está diseñado para proporcionar un equilibrio correcto derecho entre previsibilidad y flexibilidad.  
+El sistema de tipos de JDBC arbitra la conversión entre los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los tipos y objetos del lenguaje Java. Los tipos de JDBC se modelan en los tipos SQL-92 y SQL-99. El controlador JDBC sigue la especificación de JDBC y está diseñado para proporcionar un equilibrio correcto derecho entre previsibilidad y flexibilidad.  
   
 En los temas de esta sección se describe cómo utilizar los tipos de datos básicos y avanzados, y cómo se pueden convertir en otros tipos de datos.  
   

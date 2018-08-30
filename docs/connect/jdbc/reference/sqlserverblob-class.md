@@ -1,5 +1,5 @@
 ---
-title: Clase SQLServerBlob | Documentos de Microsoft
+title: Clase SQLServerBlob | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83662d032d762eb4109576ab2f2aa253aaabb6fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c6f9ccb8e9a479d026430dece3ec1fed9bc8c33e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845510"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787473"
 ---
 # <a name="sqlserverblob-class"></a>Clase SQLServerBlob
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "32845510"
   
  **Extiende:** java.lang.Object  
   
- **Implementa:** java.sql.Blob, java.io.Serializable  
+ Implementa:** java.sql.Blob, java.io.Serializable  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,11 +44,11 @@ ms.locfileid: "32845510"
 public class SQLServerBlob  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- Un BLOB se almacena en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] como un tipo de datos de imagen.  
+## <a name="remarks"></a>Notas  
+ Un objeto BLOB está almacenado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como un tipo de datos IMAGE.  
   
-## <a name="see-also"></a>Vea también  
- [Miembros de SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-members.md)   
+## <a name="see-also"></a>Ver también  
+ [Miembros SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [Referencia de API del controlador JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

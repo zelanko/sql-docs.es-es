@@ -14,12 +14,12 @@ caps.latest.revision: 1
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 0d3a3b25ca2ead96d23b0d367ab633d900951de8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 613f8809003ba8f4501ea95371dedd44cff18a8d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047520"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42784486"
 ---
 # <a name="custom-keystore-providers"></a>Proveedores de almacén de claves personalizados
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -147,7 +147,7 @@ Nombre de marcador de posición para una función definida por el proveedor de d
 |`alg`|[Entrada] El valor de la [algoritmo](../../t-sql/statements/create-column-encryption-key-transact-sql.md) atributo de metadatos para ECEK determinado. Terminada en null amplia-cadena de caracteres. Esto está pensado para identificar el algoritmo de cifrado usado para cifrar el ECEK determinado.|
 |`ecek`|[Entrada] Puntero a la que se va a descifrar ECEK.|
 |`ecekLen`|[Entrada] Longitud de ECEK.|
-|`cekOut`|[Salida] El proveedor deberá asignar memoria para ECEK descifrado y escribir su dirección en el puntero apuntado a cekOut. Debe ser posible liberar este bloque de memoria utilizando la [LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) o función (Linux/Mac) gratis. Si no hay memoria se ha asignado debido a un error o en caso contrario, el proveedor debe establecer * cekOut a un puntero nulo.|
+|`cekOut`|[Salida] El proveedor deberá asignar memoria para ECEK descifrado y escribir su dirección en el puntero apuntado a cekOut. Debe ser posible liberar este bloque de memoria utilizando la [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) o función (Linux/Mac) gratis. Si no hay memoria se ha asignado debido a un error o en caso contrario, el proveedor debe establecer * cekOut a un puntero nulo.|
 |`cekLen`|[Salida] El proveedor deberá escribir en la dirección cekLen apuntada a la longitud de ECEK descifrado que se ha escrito para ** cekOut.|
 |`Return Value`|Devolver distinto de cero para indicar el éxito o cero para indicar el error.|
 
@@ -164,7 +164,7 @@ Nombre de marcador de posición para una función definida por el proveedor de c
 |`alg`|[Entrada] El valor de la [algoritmo](../../t-sql/statements/create-column-encryption-key-transact-sql.md) atributo de metadatos para ECEK determinado. Terminada en null amplia-cadena de caracteres. Esto está pensado para identificar el algoritmo de cifrado usado para cifrar el ECEK determinado.|
 |`cek`|[Entrada] Puntero a la CEK se cifren.|
 |`cekLen`|[Entrada] Longitud de la CEK.|
-|`ecekOut`|[Salida] El proveedor deberá asignar memoria para la CEK cifrada y escribir su dirección en el puntero apuntado a ecekOut. Debe ser posible liberar este bloque de memoria utilizando la [LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) o función (Linux/Mac) gratis. Si no hay memoria se ha asignado debido a un error o en caso contrario, el proveedor debe establecer * ecekOut a un puntero nulo.|
+|`ecekOut`|[Salida] El proveedor deberá asignar memoria para la CEK cifrada y escribir su dirección en el puntero apuntado a ecekOut. Debe ser posible liberar este bloque de memoria utilizando la [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) o función (Linux/Mac) gratis. Si no hay memoria se ha asignado debido a un error o en caso contrario, el proveedor debe establecer * ecekOut a un puntero nulo.|
 |`ecekLen`|[Salida] El proveedor deberá escribir en la dirección ecekLen apuntada a la longitud de la CEK cifrada que se ha escrito para ** ecekOut.|
 |`Return Value`|Devolver distinto de cero para indicar el éxito o cero para indicar el error.|
 
@@ -190,7 +190,7 @@ El **onError** parámetro señala a una función de informes de errores, con el 
 |Argumento|Descripción|
 |:--|:--|
 |`ctx`|[Entrada] Para notificar el error en el contexto.|
-|`msg`|[Entrada] El mensaje de error para el informe. Cadena de caracteres anchos terminada en null. Para permitir que se presente la información con parámetros, esta cadena puede contener secuencias de formato para insertar el formato aceptado por el [FormatMessage](https://msdn.microsoft.com/library/windows/desktop/ms679351(v=vs.85).aspx) función. Funcionalidad extendida se puede especificar mediante este parámetro, tal como se describe a continuación.|
+|`msg`|[Entrada] El mensaje de error para el informe. Cadena de caracteres anchos terminada en null. Para permitir que se presente la información con parámetros, esta cadena puede contener secuencias de formato para insertar el formato aceptado por el [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) función. Funcionalidad extendida se puede especificar mediante este parámetro, tal como se describe a continuación.|
 |…|[Entrada] Parámetros adicionales variadic ajustar especificadores de formato de mensaje, según corresponda.|
 
 Para notificar cuando se ha producido un error, el onError de llamadas de proveedor, proporcionando el parámetro de contexto se pasa a la función de proveedor por el controlador y un mensaje de error con parámetros adicionales opcionales para dar formato. El proveedor puede llamar a esta función varias veces para enviar varios mensajes de error consecutivas en la invocación de una función de proveedor. Por ejemplo:

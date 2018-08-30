@@ -14,17 +14,17 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 976893003e65ea226e5df03a3d636b20d38018ca
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 534b66f4988ec2bdfbb775a293b3de16bd1eaa82
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38052727"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785361"
 ---
 # <a name="sqlserverdriver-class"></a>Clase SQLServerDriver
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Representa [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Esta clase incluye métodos para efectuar una conexión a una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] y para obtener información sobre el controlador JDBC.  
+  Representa [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Esta clase incluye métodos para efectuar una conexión a una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y para obtener información sobre el controlador JDBC.  
   
  **Paquete:** com.microsoft.sqlserver.jdbc  
   

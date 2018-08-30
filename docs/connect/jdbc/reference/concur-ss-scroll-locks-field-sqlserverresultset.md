@@ -1,5 +1,5 @@
 ---
-title: Campo CONCUR_SS_SCROLL_LOCKS (SQLServerResultSet) | Documentos de Microsoft
+title: Campo CONCUR_SS_SCROLL_LOCKS (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3965327a41cacb25e76346b82128fb583aaf83b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 04915501bf8e4618b35c8019779af5e60cda8057
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828010"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785008"
 ---
 # <a name="concurssscrolllocks-field-sqlserverresultset"></a>Campo CONCUR_SS_SCROLL_LOCKS (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Se utiliza para especificar un tipo de simultaneidad optimista de lectura y escritura de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] con bloqueos de fila.  
+  Se utiliza para especificar un tipo de simultaneidad optimista de lectura y escritura de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con bloqueos de fila.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,9 +39,9 @@ public static final int CONCUR_SS_SCROLL_LOCKS
 ```  
   
 ## <a name="field-value"></a>Valor de campo  
- Un **int** valo 1009.  
+ Un **int** valor 1009.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

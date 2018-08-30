@@ -16,14 +16,14 @@ helpviewer_keywords:
 author: yitam
 ms.author: v-yitam
 manager: mbarwin
-ms.openlocfilehash: 32599ca0facc7a35877f6d59573b27209ce68d31
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0cf0256c337d8851f6223ea895eb7e6d90e30665
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979827"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784474"
 ---
-# <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>Envío y recuperación de datos ASCII en Linux y MacOS 
+# <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>Envío y recuperación de datos ASCII en Linux y Mac OS 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 En este artículo se da por supuesto que se han generado las configuraciones regionales de ASCII (no UTF-8) o instalado en los sistemas Linux o macOS. 
@@ -43,7 +43,7 @@ La codificación predeterminada para el controlador PDO_SQLSRV es UTF-8 (PDO:: s
 ## <a name="example"></a>Ejemplo  
 Los ejemplos siguientes muestran cómo enviar y recuperar datos de ASCII mediante los controladores de PHP para SQL Server especificando una configuración regional determinada antes de realizar la conexión. Las configuraciones regionales en distintas plataformas Linux pueden llamarse de forma diferente de las configuraciones regionales mismas en macOS. Por ejemplo, la configuración regional de nosotros ISO-8859-1 (Latín 1) es `en_US.ISO-8859-1` en Linux, mientras que en macOS es el nombre `en_US.ISO8859-1`.
   
-Los ejemplos supone que [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] está instalado en un servidor. Los resultados se agregan al explorador cuando se ejecuta el ejemplo en el explorador.  
+Los ejemplos supone que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado en un servidor. Los resultados se agregan al explorador cuando se ejecuta el ejemplo en el explorador.  
   
 ```  
 <?php  

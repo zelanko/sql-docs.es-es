@@ -16,17 +16,17 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 707db709188db15bc3627d65a2dba5a2bc516308
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 626f2144d29ba15d162e35c40ebc9b5b9317fded
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041406"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785387"
 ---
 # <a name="connecting-with-bcp"></a>Conexión con bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-La utilidad [bcp](http://go.microsoft.com/fwlink/?LinkID=190626) está disponible en [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] en Linux y MacOS. Esta página documenta las diferencias con respecto a la versión de Windows de `bcp`.
+La utilidad [bcp](http://go.microsoft.com/fwlink/?LinkID=190626) está disponible en [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Linux y MacOS. Esta página documenta las diferencias con respecto a la versión de Windows de `bcp`.
   
 - El terminador de campo es una tabulación ("\t").  
   
@@ -82,7 +82,7 @@ Especifica el número de la primera fila que se exportará desde una tabla o que
 Especifica que las columnas vacías deben conservar un valor NULL durante la operación, en vez de tener valores predeterminados para las columnas insertadas.  
   
 - -l  
-Especifica un tiempo de espera de inicio de sesión. La opción –l especifica el número de segundos que tienen que transcurrir antes de que un inicio de sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] agote el tiempo de espera cuando se trate de conectar a un servidor. El tiempo de espera de inicio de sesión predeterminado es 15 segundos. El período de tiempo de espera de inicio de sesión debe ser un número comprendido entre 0 y 65534. Si el valor proporcionado no es numérico o no está dentro de este intervalo, `bcp` genera un mensaje de error. Un valor de 0 especifica un tiempo de espera infinito.
+Especifica un tiempo de espera de inicio de sesión. La opción –l especifica el número de segundos que tienen que transcurrir antes de que un inicio de sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agote el tiempo de espera cuando se trate de conectar a un servidor. El tiempo de espera de inicio de sesión predeterminado es 15 segundos. El período de tiempo de espera de inicio de sesión debe ser un número comprendido entre 0 y 65534. Si el valor proporcionado no es numérico o no está dentro de este intervalo, `bcp` genera un mensaje de error. Un valor de 0 especifica un tiempo de espera infinito.
   
 - -L *last_row*  
 Especifica el número de la última fila que se exportará desde una tabla o que se importará desde un archivo de datos.  
@@ -97,25 +97,25 @@ Utiliza los tipos de datos nativos (de la base de datos) de los datos para reali
 Especifica la contraseña para el identificador de inicio de sesión.  
   
 - -Q  
-Ejecuta la instrucción SET QUOTED_IDENTIFIERS ON en la conexión entre la utilidad `bcp` y una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Ejecuta la instrucción SET QUOTED_IDENTIFIERS ON en la conexión entre la utilidad `bcp` y una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 - -r *row_terminator*  
 Especifica el terminador de la fila.  
   
 - -r  
-Especifica que se realice la copia masiva de datos de moneda, fecha y hora en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] con el formato regional definido para la configuración regional del equipo cliente.  
+Especifica que se realice la copia masiva de datos de moneda, fecha y hora en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con el formato regional definido para la configuración regional del equipo cliente.  
   
 - -S *server*  
-Especifica el nombre de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] instancia para conectarse a, o si es -D utiliza, un DSN.  
+Especifica el nombre de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia para conectarse a, o si es -D utiliza, un DSN.  
   
 - -t *field_terminator*  
 Especifica el terminador del campo.  
   
 - -T  
-Especifica que la utilidad `bcp` se conecte a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] con una conexión de confianza (seguridad integrada).  
+Especifica que la utilidad `bcp` se conecte a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con una conexión de confianza (seguridad integrada).  
   
 - -U *login_id*  
-Especifica el identificador de inicio de sesión para conectar con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Especifica el identificador de inicio de sesión para conectar con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 - -V  
 Facilita información acerca del número de versión y de los derechos de autor de la utilidad `bcp`.  
@@ -144,7 +144,7 @@ Utiliza los tipos de datos nativos (de la base de datos) para datos que no sean 
 Especifica el nombre de un archivo que recibe la salida redirigida desde el símbolo del sistema.  
   
 - -V (80 | 90 | 100)  
-Utiliza los tipos de datos de una versión anterior de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Utiliza los tipos de datos de una versión anterior de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 - -X  
 Si se usa con las opciones format y -f format_file, genera un archivo de formato basado en XML en lugar del archivo de formato predeterminado que no es XML.  

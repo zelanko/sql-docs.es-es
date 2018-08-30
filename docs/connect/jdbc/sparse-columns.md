@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51310c2848526942e23152b9c02a4ad914118392
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: c582cfcd744d009cae0c966c4640f7406c200246
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39459559"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784815"
 ---
 # <a name="sparse-columns"></a>Columnas dispersas
 
@@ -27,7 +27,7 @@ ms.locfileid: "39459559"
 
 Las columnas dispersas son columnas normales que disponen de un almacenamiento optimizado para los valores NULL. Este tipo de columnas reducen los requisitos de espacio de los valores NULL a costa de una mayor sobrecarga a la hora de recuperar valores no NULL. Considere la posibilidad de utilizar columnas dispersas si el ahorro de espacio se sitúa entre el 20 y el 40 por ciento.
 
-El controlador JDBC 3.0 de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] admite columnas dispersas al conectarse a un servidor [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (o versiones posteriores). Puede utilizar [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) o [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) para determinar qué columnas son dispersas y cuál es la columna del conjunto.
+El controlador JDBC 3.0 de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite columnas dispersas al conectarse a un servidor [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (o versiones posteriores). Puede utilizar [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) o [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) para determinar qué columnas son dispersas y cuál es la columna del conjunto.
 
 El archivo de código de este ejemplo se denomina SpareseColumns.java y se encuentra en la siguiente ubicación:  
 

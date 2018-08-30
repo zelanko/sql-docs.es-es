@@ -1,5 +1,5 @@
 ---
-title: Requisitos del sistema para los controladores de Microsoft para PHP para SQL Server | Microsoft Docs
+title: Requisitos del sistema para los controladores de Microsoft para PHP para SQL Server
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
@@ -16,12 +16,12 @@ caps.latest.revision: 93
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9cfb813b857557a3a30bd89d9c96346ee261bc89
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 1941388b2bd7b0bb21e0da5a55876166c378c01e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174952"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784983"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Requisitos del sistema para los controladores de Microsoft para PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -67,7 +67,7 @@ Si va a descargar la versión de Windows del controlador en una versión de 64 b
 |ODBC Driver 13  | | | |S| | |
 |ODBC Driver 11  |S|S|S|S|S|S|
 
-Si usa el controlador SQLSRV, [sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) devuelve información acerca de qué versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Microsoft ODBC Driver para SQL Server está usando el [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Si está usando el controlador PDO_SQLSRV, puede usar [PDO::getAttribute](../../connect/php/pdo-getattribute.md) para detectar la versión.  
+Si usa el controlador SQLSRV, [sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) devuelve información acerca de qué versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver para SQL Server está usando el [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Si está usando el controlador PDO_SQLSRV, puede usar [PDO::getAttribute](../../connect/php/pdo-getattribute.md) para detectar la versión.  
 
 ## <a name="sql-server"></a>SQL Server
 
@@ -251,4 +251,4 @@ En Windows, se incluyen las siguientes versiones del controlador:
 
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Referencia de API del controlador PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  
+[Referencia de la API del controlador PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  

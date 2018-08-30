@@ -16,17 +16,17 @@ caps.latest.revision: 69
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 6d26bdd9d3d91ca138e6ae4413acd122eb4676b3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ab32d1ac12bbe6f81241590a1e61b9579772cb7d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37946949"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783961"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Instalación de Microsoft ODBC Driver for SQL Server en Linux y macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-En este artículo se explica cómo instalar el [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] en Linux y macOS, así como las herramientas de línea de comandos opcionales para SQL Server (`bcp` y `sqlcmd`) y el desarrollo de encabezados de unixODBC.
+En este artículo se explica cómo instalar el [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Linux y macOS, así como las herramientas de línea de comandos opcionales para SQL Server (`bcp` y `sqlcmd`) y el desarrollo de encabezados de unixODBC.
 
 ## <a name="microsoft-odbc-driver-17-for-sql-server"></a>Microsoft ODBC Driver 17 for SQL Server 
 
@@ -439,7 +439,7 @@ Programa de instalación coloca el controlador `/opt/microsoft/msodbcsql/11.0.22
   
 Para comprobar que se haya registrado correctamente Microsoft ODBC Driver en Linux, ejecute el siguiente comando: ```odbcinst -q -d -n "ODBC Driver 11 for SQL Server"```.  
   
-En el artículo sobre el[uso de muestras de ODBC con C++ de MSDN existentes para el controlador ODBC en Linux](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) , se muestra un ejemplo de código que se conecta a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] con el controlador ODBC en Linux.  
+En el artículo sobre el[uso de muestras de ODBC con C++ de MSDN existentes para el controlador ODBC en Linux](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) , se muestra un ejemplo de código que se conecta a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con el controlador ODBC en Linux.  
   
 **Desinstalación**  
   
@@ -454,7 +454,7 @@ Puede desinstalar ODBC Driver 11 en Linux ejecutando los siguientes comandos:
 4.  `odbcinst -u -d -n "ODBC Driver 11 for SQL Server"`
   
 ## <a name="troubleshooting-connection-problems"></a>Solucionar problemas de conexión  
-Si no se puede establecer una conexión con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] mediante el controlador ODBC, utilice la siguiente información para identificar el problema.  
+Si no se puede establecer una conexión con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante el controlador ODBC, utilice la siguiente información para identificar el problema.  
   
 El problema de conexión más común es que existan dos copias instaladas del Administrador de controladores unixODBC. Busque libodbc\*.so\*en /usr. Si ve más de una versión del archivo, posiblemente signifique que tiene instalado más de un administrador de controladores. La aplicación podría utilizar una versión incorrecta.
   
@@ -510,7 +510,7 @@ El controlador ODBC en Linux y MacOS consta de los siguientes componentes:
 
 |Componente|Descripción|  
 |---------------|-----------------|  
-|libmsodbcsql-17. X.so.X.X o libmsodbcsql-13. X.so.X.X|El objeto compartido (`so`) archivo de biblioteca dinámica que contiene toda la funcionalidad del controlador. Este archivo se instala en `/opt/microsoft/msodbcsql17/lib64/` para el 17 de controlador y en `/opt/microsoft/msodbcsql/lib64/` para Microsoft ODBC Driver 13.|  
+|libmsodbcsql-17. X.so.X.X o libmsodbcsql-13. X.so.X.X|El archivo de biblioteca dinámica (`so`) que contiene toda la funcionalidad del controlador. Este archivo se instala en `/opt/microsoft/msodbcsql17/lib64/` para el 17 de controlador y en `/opt/microsoft/msodbcsql/lib64/` para Microsoft ODBC Driver 13.|  
 |`msodbcsqlr17.rll` o `msodbcsqlr13.rll`|El archivo de recursos asociado de la biblioteca de controladores. Este archivo se instala en `[driver .so directory]../share/resources/en_US/`| 
 |msodbcsql.h|El archivo de encabezado que contiene todas las definiciones nuevas necesarias para utilizar el controlador.<br /><br /> **Nota:**  No se puede hacer referencia a msodbcsql.h y odbcss.h en el mismo programa.<br /><br /> msodbcsql.h está instalado en `/opt/microsoft/msodbcsql17/include/` para Driver 17 y en `/opt/microsoft/msodbcsql/include/` para Microsoft ODBC Driver 13. |
 |LICENSE.txt|El archivo de texto que contiene los términos del contrato de licencia del usuario final. Este archivo se coloca en `/usr/share/doc/msodbcsql17/` para Driver 17 y en `/usr/share/doc/msodbcsql/` para Microsoft ODBC Driver 13.|

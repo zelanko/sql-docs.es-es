@@ -18,21 +18,21 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6218358bced6d36056b33ce82720d53cbc32bdab
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 26d1e4734ae01e751a17c3a088c3e1a5e0f7af7e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982497"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776294"
 ---
 # <a name="options-environment---keyboard-page"></a>Opciones (Entorno - Página Teclado)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-El cuadro de diálogo **Opciones** le permite personalizar el esquema de teclado para [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Utilice esta opción para elegir un esquema de teclado. Para obtener acceso a esta página, haga clic en **Opciones** en el menú **Herramientas** , seleccione la carpeta **Entorno** y, a continuación, haga clic en **Teclado**.  
+El cuadro de diálogo **Opciones** le permite personalizar el esquema de teclado para [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Utilice esta opción para elegir un esquema de teclado. Para obtener acceso a esta página, haga clic en **Opciones** en el menú **Herramientas** , seleccione la carpeta **Entorno** y, a continuación, haga clic en **Teclado**.  
   
-La lista desplegable **Esquema de teclado** proporciona las colecciones disponibles de teclas de método abreviado. Para cargar un esquema específico, selecciónelo en la lista. Cuando esté preparado para dejar el cuadro de diálogo **Opciones** , haga clic en **Aceptar**. El esquema que haya seleccionado se cargará en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+La lista desplegable **Esquema de teclado** proporciona las colecciones disponibles de teclas de método abreviado. Para cargar un esquema específico, selecciónelo en la lista. Cuando esté preparado para dejar el cuadro de diálogo **Opciones** , haga clic en **Aceptar**. El esquema que haya seleccionado se cargará en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 **Standard**  
-El esquema Estándar es el esquema predeterminado en [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y se parece bastante a las teclas de método abreviado de [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio.  
+El esquema Estándar es el esquema predeterminado en [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se parece bastante a las teclas de método abreviado de [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio.  
   
 Utilice la cuadrícula **Accesos directos de consulta** para asociar un procedimiento almacenado a un método abreviado de teclado.  
   
@@ -42,5 +42,5 @@ Combinación de teclas presionada para ejecutar el procedimiento almacenado.
 **Procedimiento almacenado**  
 Procedimiento almacenado que se ejecuta cuando se presiona el método abreviado de teclado.  
   
-Para una lista de las teclas de método abreviado de teclado, consulte [Métodos abreviados de teclado de SQL Server Management Studio](http://msdn.microsoft.com/98baaac4-0727-4ce4-8bfe-c63793ae69b8).  
+Para una lista de las teclas de método abreviado de teclado, consulte [Métodos abreviados de teclado de SQL Server Management Studio](../sql-server-management-studio-keyboard-shortcuts.md).  
   

@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26a8c38f11fe4860437dda427ba3e2046b9b4867
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 62be6ad99231fb6fde258e145fb6c29e86759309
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456239"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785536"
 ---
 # <a name="caching-result-set-data-sample"></a>Almacenar en caché ejemplos de datos de conjunto de resultados
 
@@ -30,7 +30,7 @@ En esta aplicación de ejemplo de [!INCLUDE[jdbcNoVersion](../../includes/jdbcno
 > [!NOTE]  
 > La limitación del número de filas almacenadas en la memoria caché del cliente es distinta de la limitación del número total de filas que contiene el conjunto de resultados. Para controlar el número total de filas que contiene un conjunto de resultados, use el método [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) del objeto [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), que heredan los objetos [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) y [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).
 
-Para establecer el límite del número de filas almacenadas en la memoria caché del cliente, primero debe usar un cursor de servidor para crear uno de los objetos Statement, para lo que debe especificar el tipo de cursor que se va a usar al crear el objeto Statement. Por ejemplo, JDBC Driver proporciona el tipo de cursor TYPE_SS_SERVER_CURSOR_FORWARD_ONLY, que es un cursor de servidor de solo avance rápido y solo lectura para su uso con las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].
+Para establecer el límite del número de filas almacenadas en la memoria caché del cliente, primero debe usar un cursor de servidor para crear uno de los objetos Statement, para lo que debe especificar el tipo de cursor que se va a usar al crear el objeto Statement. Por ejemplo, JDBC Driver proporciona el tipo de cursor TYPE_SS_SERVER_CURSOR_FORWARD_ONLY, que es un cursor de servidor de solo avance rápido y solo lectura para su uso con las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!NOTE]  
 > Una alternativa al tipo de cursor específico de SQL Server es usar la propiedad de cadena de conexión selectMethod y establecer su valor en "cursor". Para obtener más información acerca de los tipos de cursor compatibles con el controlador JDBC, consulte [descripción de tipos de Cursor](../../connect/jdbc/understanding-cursor-types.md).

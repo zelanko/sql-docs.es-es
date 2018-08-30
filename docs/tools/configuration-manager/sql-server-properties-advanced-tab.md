@@ -13,13 +13,14 @@ ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 2c6c71003694d4b696fc771c6b89a29ffafbff0b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9d26e77c892d981ae489d0ce393d2838b64c62ba
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38043041"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42785869"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>Propiedades de SQL Server (pestaña Avanzadas)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -62,7 +63,8 @@ ms.locfileid: "38043041"
  **Nombre de SKU**  
  Muestra la referencia de almacén (SKU) del producto, que también se denomina edición del producto.  
   
- **Parámetros de inicio**  
+ 
+  **Parámetros de inicio**  
  Enumera los parámetros de inicio utilizados por esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los parámetros se separan mediante signos de punto y coma. Los parámetros predeterminados incluyen la ruta de acceso del archivo de datos de la base de datos maestra (`master.mdf`), el archivo de registro de la base de datos maestra (`mastlog.ldf`) y el archivo de registro de errores. Para conocer la sintaxis de parámetros de inicio, busque el tema **Uso de las opciones de inicio de servicio de SQL Server**en los libros en pantalla.  
   
  **Referencia de almacén**  

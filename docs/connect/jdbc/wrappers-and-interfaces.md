@@ -14,12 +14,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 58276b03877423afe86f9c68841656b00ce0a8c6
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: ad3412a5d296a7d243d6b73b6275c613da5c962b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39457789"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783944"
 ---
 # <a name="wrappers-and-interfaces"></a>Contenedores e interfaces
 
@@ -61,7 +61,7 @@ La interfaz java.sql.Wrapper define dos métodos: **isWrapperFor** y **unwrap**.
 
 ## <a name="interfaces"></a>Interfaces
 
-A partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0, las interfaces están disponibles para que un servidor de aplicaciones acceda a un método específico del controlador desde la clase asociada. El servidor de aplicaciones puede incluir la clase si crea un proxy, de forma que se exponga la funcionalidad específica de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] desde una interfaz. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] admite interfaces que tienen los métodos y constantes propios de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], de forma que un servidor de aplicaciones pueda crear un proxy de la clase.
+A partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC Driver 3.0, las interfaces están disponibles para que un servidor de aplicaciones acceda a un método específico del controlador desde la clase asociada. El servidor de aplicaciones puede incluir la clase si crea un proxy, de forma que se exponga la funcionalidad específica de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] desde una interfaz. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] admite interfaces que tienen los métodos y constantes propios de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], de forma que un servidor de aplicaciones pueda crear un proxy de la clase.
 
 Las interfaces se derivan de interfaces de Java estándar, por lo que se puede usar el mismo objeto una vez que se haya desencapsulado para acceder a funcionalidad específica del controlador o a funcionalidad genérica de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
 

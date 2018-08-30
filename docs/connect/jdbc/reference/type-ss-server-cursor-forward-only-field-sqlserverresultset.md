@@ -1,5 +1,5 @@
 ---
-title: Campo TYPE_SS_SERVER_CURSOR_FORWARD_ONLY (SQLServerResultSet) | Documentos de Microsoft
+title: Campo TYPE_SS_SERVER_CURSOR_FORWARD_ONLY (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7af382db57ad0fbd3ecc615e2ab4f142398ec2b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 457c2a8e537b06d444e122f3e3ea1b0e4d6bf5f9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848680"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784990"
 ---
 # <a name="typessservercursorforwardonly-field-sqlserverresultset"></a>Campo TYPE_SS_SERVER_CURSOR_FORWARD_ONLY (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Se utiliza para especificar un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipo de cursor de solo avance rápido, de sólo lectura.  
+  Se usa para especificar un tipo de cursor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de solo avance y solo lectura.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,7 +41,7 @@ public static final int TYPE_SS_SERVER_CURSOR_FORWARD_ONLY
 ## <a name="field-value"></a>Valor de campo  
  Un **int** valor de 2004.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

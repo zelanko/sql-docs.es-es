@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: enviar y recuperar datos UTF-8 con compatibilidad integrada con UTF-8 | Documentos de Microsoft'
+title: Envío y recuperación de datos UTF-8 gracias a la compatibilidad integrada con UTF-8
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
@@ -18,12 +18,12 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01baad352386b88b54412b4390df7cce40df6996
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: cfeb770ad5151216fecbf796851f7eb06da8545f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307764"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786722"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>Cómo enviar y recuperar datos UTF-8 gracias a la compatibilidad integrada con UTF-8
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,12 +40,12 @@ Para enviar o recuperar datos codificados UTF-8 en el servidor, haga lo siguient
   
     Al especificar un juego de caracteres como parte de las opciones de conexión, el controlador da por hecho que las otras cadenas de conexión opción usan ese mismo juego de caracteres. También se da por hecho que las cadenas de nombre del servidor y consulta utilizan el mismo juego de caracteres.  
   
-Puede pasar UTF-8 o SQLSRV_ENC_CHAR a **CharacterSet**, pero no se puede transmitir SQLSRV_ENC_BINARY. La codificación predeterminada es SQLSRV_ENC_CHAR.  
+Tenga en cuenta que puede transmitir UTF-8 o SQLSRV_ENC_CHAR a CharacterSet** (no se puede transmitir SQLSRV_ENC_BINARY). La codificación predeterminada es SQLSRV_ENC_CHAR.  
   
 ## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente se muestra cómo enviar y recuperar datos con codificación UTF-8 especificando el juego de caracteres UTF-8 al realizar la conexión. En el ejemplo se actualiza la columna Comentarios de la tabla Production.ProductReview para un id. de revisión especificado. En el ejemplo también se recuperan los datos actualizados recientemente y los muestra. Tenga en cuenta que la columna comentarios es del tipo **nvarchar (3850).** Tenga en cuenta también que antes de enviar datos al servidor se convierten a UTF-8 de codificación utilizando el archivo PHP **utf8_encode** (función). Esta operación se realiza únicamente con fines de demostración. En un escenario real de aplicaciones, comenzaría con datos con codificación UTF-8.  
+En el ejemplo siguiente se muestra cómo enviar y recuperar datos con codificación UTF-8 especificando el juego de caracteres UTF-8 al realizar la conexión. En el ejemplo se actualiza la columna Comentarios de la tabla Production.ProductReview para un id. de revisión especificado. En el ejemplo también se recuperan los datos actualizados recientemente y los muestra. Tenga en cuenta que la columna Comentarios es del tipo nvarcahr(3850).** Recuerde también que antes de enviar los datos al servidor se convierten a la codificación UTF-8 mediante la función PHP utf8_encode**. Esta operación se realiza únicamente con fines de demostración. En un escenario real de aplicaciones, comenzaría con UTF-8.  
   
-En el ejemplo se da por supuesto que [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] y [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan al explorador cuando se ejecuta el ejemplo en el explorador.  
+En el ejemplo se da por hecho que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan al explorador cuando se ejecuta el ejemplo en el explorador.  
   
 ```  
 <?php  
@@ -129,7 +129,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-Para obtener información sobre cómo almacenar datos Unicode, vea [trabajar con datos Unicode](https://msdn.microsoft.com/library/ms175180.aspx).  
+Para obtener información sobre cómo almacenar datos Unicode, consulte [Trabajar con datos Unicode](https://msdn.microsoft.com/library/ms175180.aspx).  
   
 ## <a name="example"></a>Ejemplo  
 El ejemplo siguiente es similar al primero, pero en lugar de especificar el juego de caracteres UTF-8 en la conexión, muestra cómo especificar el juego de caracteres UTF-8 en la columna.  
@@ -222,10 +222,10 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Recuperación de datos](../../connect/php/retrieving-data.md)
 
-[Trabajar con datos de ASCII de distinta de Windows](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
+[Trabajar con datos ASCII en los que no son de Windows](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
 
 [Actualización de datos &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 

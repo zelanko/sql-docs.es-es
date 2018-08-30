@@ -1,5 +1,5 @@
 ---
-title: sp_get_query_template (Transact-SQL) | Documentos de Microsoft
+title: sp_get_query_template (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3fac47c5b84894f681ffc9c6729dd526f9e8488c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e2d96ffa9a2375905246a515601c77afdc50d231
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253511"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027751"
 ---
 # <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,24 +48,24 @@ sp_get_query_template
   
 ## <a name="arguments"></a>Argumentos  
  '*query_text*'  
- Es la consulta para la que se va a generar la versión con parámetros. '*query_text*' debe incluirse entre comillas simples y precedida por el especificador Unicode n. N'*query_text*' es el valor asignado a la @querytext parámetro. Esto es de tipo **nvarchar (max)**.  
+ Es la consulta para la que se va a generar la versión con parámetros. '*query_text*' debe ir entre comillas simples y precedida por el especificador Unicode n. N'*query_text*' es el valor asignado a la @querytext parámetro. Se trata del tipo **nvarchar (max)**.  
   
  @templatetext  
- Es un parámetro de salida de tipo **nvarchar (max)**, suministrado como se indica, para recibir el formulario parametrizado de *query_text* como un literal de cadena.  
+ Es un parámetro de salida de tipo **nvarchar (max)**, suministrado como se indica, para recibir la forma con parámetros de *query_text* como un literal de cadena.  
   
  @parameters  
  Es un parámetro de salida de tipo **nvarchar (max)**, suministrado como se indica, para recibir un literal de cadena de los tipos de datos y los nombres de parámetro con parámetros en @templatetext.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  sp_get_query_template devuelve un error cuando se produce lo siguiente:  
   
--   No se parametriza los valores literales constantes en *query_text*.  
+-   No se parametriza ningún valor literal constante en *query_text*.  
   
--   *query_text* es NULL, no una cadena de Unicode, no es válida sintácticamente o no se pueden compilar.  
+-   *query_text* es NULL, no una cadena de Unicode, no es válida sintácticamente o no se puede compilar.  
   
- Si sp_get_query_template devuelve un error, no se modifican los valores de la @templatetext y @parameters parámetros de salida.  
+ Si sp_get_query_template devuelve un error, no modifica los valores de la @templatetext y @parameters parámetros de salida.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol de base de datos public.  
   
 ## <a name="examples"></a>Ejemplos  

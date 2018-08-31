@@ -1,6 +1,6 @@
 ---
-title: Lección 9 creación de perspectivas | Microsoft Docs
-ms.date: 05/08/2018
+title: Lección 8 creación de perspectivas | Microsoft Docs
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4e917e817768571e1959ae6163743ecdad0409af
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 90120c5dd439e4518086b261d507bf49f62450f1
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031623"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42795544"
 ---
 # <a name="lesson-8-create-perspectives"></a>Lección 8: Crear perspectivas
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]

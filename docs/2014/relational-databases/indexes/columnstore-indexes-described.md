@@ -19,12 +19,12 @@ caps.latest.revision: 50
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9cd8b98b2e62dbc11d62e07b9b0d7e2ac3e05c6b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8dd4fdcc7031f56850cded09b098356d2fbad195
+ms.sourcegitcommit: 4a9c89d72d91158832e89d96eb88cda616d36452
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211325"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42802535"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
   El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *índice columnstore en memoria* almacena y administra datos mediante el uso de almacenamiento de datos basado en columnas y el procesamiento de consultas basado en columnas. Los índices de almacén de columnas funcionan correctamente para las cargas de trabajo de almacenamiento de datos que ejecutan principalmente cargas masivas y consultas de solo lectura. Use el índice de almacén de columnas para aumentar **hasta en diez veces el rendimiento de las consultas** en relación con el almacenamiento tradicional orientado a filas, y hasta **en siete veces la compresión de datos** en relación con el tamaño de los datos sin comprimir.  

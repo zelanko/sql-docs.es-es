@@ -1,1 +1,1 @@
-<Token>**En este tema se aplica a:** ![Sí](media/yes.png)(solo Linux) de SQL Server![ningún](media/no.png)Azure SQL Database![ningún](media/no.png)Azure SQL Data Warehouse![ningún](media/no.png) Almacenamiento de datos paralelos </Token>
+<Token>**Se aplica a:** ![Sí](media/yes.png)(solo Linux) de SQL Server ![ningún](media/no.png)Azure SQL Database ![ningún](media/no.png)Azure SQL Data Warehouse ![ningún](media/no.png)paralelo Almacenamiento de datos </Token>

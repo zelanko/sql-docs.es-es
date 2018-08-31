@@ -1,6 +1,6 @@
 ---
-title: 'Lección 6: Crear columnas calculadas | Microsoft Docs'
-ms.date: 05/08/2018
+title: 'Lección 5: Crear columnas calculadas | Microsoft Docs'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c3b86f84567e85fb604883e7cd7f8de83feb252e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e5e23ca8ccf344ec9f250eac032946ac074a735d
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031593"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42792186"
 ---
 # <a name="lesson-5-create-calculated-columns"></a>Lección 5: Crear columnas calculadas
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]

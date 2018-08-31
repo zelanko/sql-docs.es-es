@@ -1,6 +1,6 @@
 ---
-title: 'Lección 7: Crear medidas | Microsoft Docs'
-ms.date: 05/08/2018
+title: 'Lección 6: Crear medidas | Microsoft Docs'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 146d93bc2c7257ce409f3a293f6c9050acde9ca7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 05855af1bf6809c6977b22bfdb3915e4e6dbbe03
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37994967"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42795624"
 ---
 # <a name="lesson-6-create-measures"></a>Lección 6: Crear medidas
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]

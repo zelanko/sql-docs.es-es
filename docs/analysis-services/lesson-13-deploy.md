@@ -1,6 +1,6 @@
 ---
-title: 'Lección 14: Implementar | Microsoft Docs'
-ms.date: 05/08/2018
+title: 'Lección 13: Implementación | Microsoft Docs'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 533b6197c72d03876b928f4024fc5eb4fb0f2fc0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6b2ed8149cef9e9886398feebf43329f962b9537
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034740"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42792286"
 ---
-# <a name="lesson-13-deploy"></a>Lección 13: implementación
+# <a name="lesson-13-deploy"></a>Lección 13: Implementar
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 En esta lección, configurará propiedades de implementación; especificar una local o instancia de servidor de Azure y un nombre para el modelo. A continuación, implementará el modelo a esa instancia. Después de implementa el modelo, los usuarios pueden conectarse a él mediante el uso de una aplicación cliente de informes. Para más información acerca de la implementación, consulte [implementación de la solución de modelo Tabular](../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md) y [implementar en Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy).  

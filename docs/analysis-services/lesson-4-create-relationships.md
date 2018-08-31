@@ -1,6 +1,6 @@
 ---
-title: 'Lección 5: Crear relaciones | Microsoft Docs'
-ms.date: 05/08/2018
+title: 'Lección 4: Crear relaciones | Microsoft Docs'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 36993a468a6997ff8de40da542deac00b25b18b4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: bbddc0966729b93b2e9ac202966dff645c28c32c
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034773"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42792035"
 ---
 # <a name="lesson-4-create-relationships"></a>Lección 4: Creación de relaciones
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-En esta lección comprobará las relaciones que se crearon automáticamente cuando importó los datos y agregará nuevas relaciones entre tablas diferentes. Una relación es una conexión entre dos tablas de datos que establece cómo se deben poner en correlación los datos de esas tablas. Por ejemplo, la tabla DimProduct y la tabla DimProductSubcategory tienen una relación basada en el hecho que cada producto pertenece a una subcategoría. Para obtener más información, consulte [relaciones](../analysis-services/tabular-models/relationships-ssas-tabular.md).
+En esta lección, comprobará las relaciones que se han creado de forma automática al importar datos y agregará nuevas relaciones entre tablas diferentes. Una relación es una conexión entre dos tablas de datos que establece cómo se deben poner en correlación los datos de esas tablas. Por ejemplo, la tabla DimProduct y la tabla DimProductSubcategory tienen una relación basada en el hecho que cada producto pertenece a una subcategoría. Para obtener más información, consulte [relaciones](../analysis-services/tabular-models/relationships-ssas-tabular.md).
   
 Tiempo estimado para completar esta lección: **10 minutos**  
   
@@ -37,11 +37,11 @@ Cuando importó los datos mediante el Asistente para importación de tablas, se 
     
     ![como-tabular-lesson4-diagrama](../analysis-services/media/as-tabular-lesson4-diagram.png)
   
-    Use los controles de minimapa de la esquina inferior derecha del diseñador de modelos para ajustar la vista e incluir tantas tablas como sea posible. También puede hacer clic y arrastrar las tablas a ubicaciones diferentes, aunando las tablas o colocándolas en un orden determinado. El movimiento de las tablas no afecta a las relaciones existentes entre ellas. Para ver todas las columnas de una determinada tabla, haga clic y arrastre un borde de la tabla para expandirla o reducirla.  
+    Use los controles de minimapa de la esquina inferior derecha del diseñador de modelos para ajustar la vista e incluir tantas tablas como sea posible. También puede haga clic y arrastre las tablas a ubicaciones diferentes, aunando las tablas o colocándolas en un orden concreto. El movimiento de las tablas no afecta a las relaciones existentes entre ellas. Para ver todas las columnas de una tabla determinada, haga clic y arrastre un borde de tabla para expandir o reducir el tamaño.  
   
 2.  Haga clic en la línea sólida entre la **DimCustomer** tabla y el **DimGeography** tabla. La línea sólida entre estas dos tablas muestra que esta relación está activa, es decir, se utiliza de forma predeterminada al calcular fórmulas DAX.  
   
-    Tenga en cuenta la **GeographyKey** columna en el **DimCustomer** tabla y el **GeographyKey** columna en el **DimGeography** tabla ahora ambos aparecen dentro de un cuadro. Esto indica que esas son las columnas usadas en la relación. Las propiedades de la relación aparecen ahora también en la ventana **Propiedades** .  
+    Tenga en cuenta la **GeographyKey** columna en el **DimCustomer** tabla y el **GeographyKey** columna en el **DimGeography** tabla ahora ambos aparecen dentro de un cuadro. Esta presentación trata las columnas utilizadas en la relación. Las propiedades de la relación aparecen ahora también en la ventana **Propiedades** .  
   
     > [!TIP]  
     > Además de usar el Diseñador de modelos de vista de diagrama, también puede usar el cuadro de diálogo Administrar relaciones para mostrar las relaciones entre todas las tablas en un formato de tabla. Haga clic en **relaciones** en el Explorador de modelos tabulares y, a continuación, haga clic en **administrar relaciones**. El cuadro de diálogo Administrar relaciones muestra las relaciones que se crearon automáticamente cuando importó los datos.  
@@ -86,7 +86,7 @@ En algunos casos, tal vez necesite crear relaciones adicionales entre las tablas
   
     Aparece una línea punteada que indica que ha creado una relación inactiva entre la **DueDate** columna en el **FactInternetSales** tabla y el **fecha** columna en el  **DimDate** tabla. Puede haber varias relaciones entre las tablas, pero solo una puede estar activa cada vez.  
   
-3.  Por último, cree una relación más; en el **FactInternetSales** de tabla, haga clic y mantenga presionado el **ShipDate** columna, a continuación, arrastre el cursor hasta la **fecha** columna en el **DimDate** tabla y, a continuación, suelte.  
+3.  Por último, cree una relación más; en el **FactInternetSales** de tabla, haga clic y mantenga presionado el **ShipDate** columna, a continuación, arrastre el cursor hasta la **fecha** columna en el **DimDate**de tabla y suéltelo.  
     
      ![como-tabular-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
   

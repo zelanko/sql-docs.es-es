@@ -1,24 +1,24 @@
 ---
-title: Descargar datos de demostración de taxis de Nueva York y scripts de R incrustado (SQL Server Machine Learning) | Microsoft Docs
-description: Instrucciones para descargar datos de ejemplo de taxi de Nueva York y crear una base de datos. Datos se utilizan en los tutoriales de SQL Server que se muestra cómo insertar código de R en procedimientos almacenados de SQL Server y funciones de Transact-SQL.
+title: Descargue los datos de demostración de taxis de Nueva York y scripts incrustado R y Python (SQL Server Machine Learning) | Microsoft Docs
+description: Instrucciones para descargar datos de ejemplo de taxi de Nueva York y crear una base de datos. Datos que se utilizan en los tutoriales de SQL Server que se muestra cómo insertar código de R y Python en SQL Server los procedimientos almacenados y funciones de Transact-SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2018
+ms.date: 08/22/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: aca4450bdc152449fd30e974305d14a4ccbf77c5
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6d5030287e7ad526816f89fd23b13fedae070c56
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392200"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703608"
 ---
-# <a name="load-nyc-taxi-demo-data-for-sql-server-tutorials"></a>Cargar datos de taxis de Nueva York demostración de tutoriales de SQL Server
+# <a name="nyc-taxi-demo-data-for-sql-server"></a>Datos de demostración de taxis de Nueva York para SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En este artículo se prepara el sistema para ver tutoriales sobre cómo usar R para análisis en bases de datos en SQL Server.
+En este artículo se prepara el sistema para ver tutoriales sobre cómo usar R y Python para realizar análisis en bases de datos en SQL Server.
 
 En este ejercicio, se descargará los datos de ejemplo, un script de PowerShell para preparar el entorno, y [!INCLUDE[tsql](../../includes/tsql-md.md)] usados en varios tutoriales de archivos de script. Cuando haya terminado, un **NYCTaxi_Sample** base de datos está disponible en la instancia local, y proporciona datos de demostración para obtener conocimientos prácticos. 
 
@@ -30,9 +30,9 @@ Necesitará una conexión a internet, PowerShell y los derechos administrativos 
 
 1.  Abra una consola de comandos de Windows PowerShell.
   
-    Use la opción **Ejecutar como administrador**si se necesitan privilegios administrativos para crear el directorio de destino o para escribir archivos en el destino especificado.
+    Use la **ejecutar como administrador** opción para crear el directorio de destino o para escribir archivos en el destino especificado.
   
-2.  Ejecute los siguientes comandos de PowerShell, y cambie el valor del parámetro *DestDir* por cualquier directorio local.  El valor predeterminado que hemos usado aquí es **TempRSQL**.
+2.  Ejecute los siguientes comandos de PowerShell, y cambie el valor del parámetro *DestDir* por cualquier directorio local. El valor predeterminado que hemos usado aquí es **TempRSQL**.
   
     ```ps
     $source = ‘https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/RSQL/Download_Scripts_SQL_Walkthrough.ps1’  
@@ -45,7 +45,7 @@ Necesitará una conexión a internet, PowerShell y los derechos administrativos 
     Si la carpeta que especifique en *DestDir* no existe, el script de PowerShell la creará.
   
     > [!TIP]
-    > Si se produce un error, puede establecer temporalmente la directiva para la ejecución de scripts de PowerShell **sin restricciones** solo para este tutorial, mediante el argumento de omisión y definir el ámbito de los cambios en la sesión actual.
+    > Si se produce un error, puede establecer temporalmente la directiva para la ejecución de scripts de PowerShell para **sin restricciones** solo para este tutorial utilizando el argumento de omisión y definir el ámbito de los cambios en la sesión actual.
     >   
     >````
     > Set\-ExecutionPolicy Bypass \-Scope Process
@@ -54,7 +54,7 @@ Necesitará una conexión a internet, PowerShell y los derechos administrativos 
   
     Dependiendo de la conexión a Internet, es posible que la descarga tarde un rato.
   
-3.  Cuando se descarguen todos los archivos, el script de PowerShell se abre en la carpeta especificada por  *DestDir*. En el símbolo del sistema de PowerShell, ejecute el siguiente comando y revise los archivos que se han descargado.
+3.  Cuando se han descargado todos los archivos, el script de PowerShell se abre en el *DestDir* carpeta. En el símbolo del sistema de PowerShell, ejecute el siguiente comando y revise los archivos que se han descargado.
   
     ```
     ls
@@ -93,7 +93,7 @@ Se le pedirá que escriba la siguiente información:
 
 - Instancia de servidor donde [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] se ha instalado. En una instancia predeterminada, esto puede ser tan simple como el nombre del equipo.
 
-- Nombre de base de datos. Para este tutorial, secuencias de comandos asumen `TaxiNYC_Sample`.
+- Nombre de base de datos. Para este tutorial, secuencias de comandos asumen `NYCTaxi_Sample`.
 
 - Nombre de usuario y contraseña de usuario. Escriba un inicio de sesión de base de datos de SQL Server para estos valores. Como alternativa, si modifica la secuencia de comandos para que acepte una identidad de Windows de confianza, presione ENTRAR para dejar estos valores en blanco. La identidad de Windows se usa en la conexión.
 

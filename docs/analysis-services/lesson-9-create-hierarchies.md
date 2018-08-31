@@ -1,6 +1,6 @@
 ---
-title: 'Lección 10: Crear jerarquías | Microsoft Docs'
-ms.date: 05/08/2018
+title: 'Lección 9: Creación de jerarquías | Microsoft Docs'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d4c1fc4905c52351b61a4e79b2ff21f47501f337
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: da8f3d0fb3f733c5a9307d633025bb67a1a4d8cb
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033376"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42791702"
 ---
 # <a name="lesson-9-create-hierarchies"></a>Lección 9: Creación de jerarquías
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]

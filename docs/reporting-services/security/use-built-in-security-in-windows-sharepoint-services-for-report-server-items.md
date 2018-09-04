@@ -1,30 +1,24 @@
 ---
 title: Usar la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 5155c5689a4c7a51f2d392e8560a2c87dbf44fdd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6733d9db27ce01e7fcc063e1f6affa13be7b276
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33033232"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280188"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Usar la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes
   SharePoint proporciona características de seguridad integradas que se pueden usar para tener acceso a elementos del servidor de informes desde bibliotecas y sitios de SharePoint. Si ya asignó permisos de sitio y lista a los usuarios, dichos usuarios tendrán acceso a los elementos y las operaciones del servidor de informes inmediatamente después de configurar la integración entre SharePoint y un servidor de informes.  
@@ -32,7 +26,7 @@ ms.locfileid: "33033232"
 ## <a name="securable-items"></a>Elementos protegibles  
  Los permisos definidos en el sitio o la biblioteca se pueden usar para conceder acceso a los elementos del servidor de informes. Sin embargo, si desea proteger elementos concretos, puede establecer permisos para los siguientes tipos de contenido:  
   
-|Tipo de archivo|Description|  
+|Tipo de archivo|Descripción|  
 |---------------|-----------------|  
 |.rdl|Un archivo de definición de informe que define el diseño del informe y los comandos usados para recuperar datos. Una definición de informe usa información sobre la conexión del origen de datos para recuperar datos al procesar el informe. Si la definición del informe es un informe ad hoc que se creó en el Generador de informes, el informe se empareja con un archivo de modelo de informe (.smdl) que define el ámbito de exploración de datos en el informe representado.|  
 |.smdl|Un archivo de modelo de informe que describe las estructuras de datos y cómo se relacionan. Se usa para crear y ejecutar informes del Generador de informes.|  

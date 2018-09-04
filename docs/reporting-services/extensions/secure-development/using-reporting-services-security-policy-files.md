@@ -1,14 +1,10 @@
 ---
 title: Usar los archivos de directivas de seguridad de Reporting Services | Microsoft Docs
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -21,16 +17,14 @@ helpviewer_keywords:
 - security configuration files [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e606f248ba8343ab5bddae2b0968b80d0d7e4cb4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0746a087870157e0336f20c5114387e02d48de48
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016742"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278516"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Usar los archivos de directivas de seguridad de Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] almacena la información de los componentes de directiva de seguridad en tres archivos de configuración que se copian en el sistema de archivos durante la instalación. Estos archivos de configuración pueden contener una combinación de uso interno y las directivas de seguridad definidas por el usuario para los ensamblados de código en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Los tres archivos de configuración corresponden a tres componentes protegibles de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: el servidor de informes y el servicio de Windows, la aplicación web del Administrador de informes y la ventana de vista previa del Diseñador de Informes.  
@@ -43,7 +37,7 @@ ms.locfileid: "33016742"
 ## <a name="policy-files-in-reporting-services"></a>Archivos de directivas en Reporting Services  
  La tabla siguiente contiene una lista de los archivos de configuración de directivas en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], sus ubicaciones (para una instalación predeterminada) y sus funciones respectivas.  
   
-|Nombre de archivo|Ubicación (instalación predeterminada)|Description|  
+|Nombre de archivo|Ubicación (instalación predeterminada)|Descripción|  
 |---------------|---------------------------------------|-----------------|  
 |rssrvpolicy.config|C:\Archivos de programa\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|El archivo de configuración de directivas del servidor de informes. Estas directivas de seguridad afectan principalmente a las expresiones de informe y a los ensamblados personalizados una vez que se implementa un informe en un servidor de informes. Este archivo de directivas también afecta a los datos personalizados, entregas, representaciones y extensiones de seguridad que se implementan en el servidor de informes.|  
 |rsmgrpolicy.config|C:\Archivos de programa\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager|Archivo de configuración de directivas del Administrador de informes. Estas directivas de seguridad afectan a todos los ensamblados que abarca el Administrador de informes; por ejemplo, extensiones de interfaz de usuario de suscripciones para entregas personalizadas.|  

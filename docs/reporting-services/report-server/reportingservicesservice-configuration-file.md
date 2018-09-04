@@ -1,30 +1,24 @@
 ---
 title: Archivo de configuración ReportingServicesService | Microsoft Docs
-ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [Reporting Services]
 - Report Server Windows service, ReportingServicesService configuration file
 - ReportingServicesService configuration file
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 071650750724cf8a58c4ac6377f9e2b1f635fe12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd16e3838519e9de7e10878837d5023c1f10842d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026742"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281012"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>archivo de configuración ReportingServicesService
  ||  
@@ -80,7 +74,7 @@ El archivo ReportingServicesService.exe.config incluye valores que configuran la
 ## <a name="configuration-settings"></a>Parámetros de configuración  
  La siguiente tabla proporciona información sobre parámetros específicos. Los parámetros se presentan en el orden en que aparecen en el archivo de configuración.  
   
-|Configuración|Description|  
+|Configuración|Descripción|  
 |-------------|-----------------|  
 |**RStrace**|Especifica espacios de nombres utilizados para errores y traza.|  
 |**DefaultTraceSwitch**|Especifica el nivel de información que se incluye en el registro de seguimiento de ReportServerService. Cada nivel incluye la información proporcionada para todos los niveles inferiores. No se recomienda deshabilitar la traza. Los valores válidos incluyen:<br /><br /> 0= Deshabilita la traza<br /><br /> 1= Excepciones y reinicios<br /><br /> 2= Excepciones, reinicios y advertencias<br /><br /> 3= Excepciones, reinicios, advertencias y mensajes de estado (predeterminado)<br /><br /> 4= Modo detallado|  

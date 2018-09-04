@@ -1,30 +1,24 @@
 ---
 title: 'Lección 1: Crear un proyecto de servidor de informes (Reporting Services) | Microsoft Docs'
-ms.custom: ''
 ms.date: 11/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-caps.latest.revision: 57
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: d898041ee9e03612227fcc29c43d42859c54ffda
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 38aacd6741406c38e4aff19fef0ee792563c1e7a
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980867"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348096"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lección 1: Crear un proyecto de servidor de informes (Reporting Services)
 
- > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Lección 1: Crear un proyecto de servidor de informes (Reporting Services)](https://msdn.microsoft.com/library/ms167559(SQL.120).aspx).
+ > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Lección 1: Crear un proyecto de servidor de informes (Reporting Services)](lesson-1-creating-a-report-server-project-reporting-services.md).
 
 En esta lección, creará un *proyecto de servidor de informes* y un archivo de *definición de informe (.rdl)* en [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] dentro de Visual Studio. 
 

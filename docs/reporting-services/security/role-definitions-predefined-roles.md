@@ -1,30 +1,24 @@
 ---
 title: Roles predefinidos | Microsoft Docs
-ms.custom: ''
 ms.date: 10/22/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], defaults
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 59deac2a0b2e20d94fad6dc46f6d70a76ee884ef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 480578f2454ed6410038800194336fc3cb831b65
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028562"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282437"
 ---
 # <a name="role-definitions---predefined-roles"></a>Definiciones de roles: roles predefinidos
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se instala junto con roles predefinidos que puede usar para conceder acceso a operaciones del servidor de informes. Cada rol predefinido describe una recopilación de tareas relacionadas. Puede asignar grupos y cuentas de usuario a los roles predefinidos para proporcionar acceso inmediato a las operaciones del servidor de informes.  
@@ -44,7 +38,7 @@ ms.locfileid: "33028562"
   
  En la tabla siguiente se describen los roles predefinidos, su ámbito y el modo de usarlos.  
   
-|Rol predefinido|ámbito|Description|  
+|Rol predefinido|ámbito|Descripción|  
 |---------------------|-----------|-----------------|  
 |[Rol Administrador de contenido](#bkmk_content)|Elemento|Incluye todas las tareas de nivel de elemento. Los usuarios que se asignan a este rol tienen permiso total para administrar el contenido del servidor de informes, así como capacidad para conceder permisos a otros usuarios y definir la estructura de carpetas para almacenar informes y otros elementos.|  
 |[Rol Publicador](#bkmk_publisher)|Elemento|Los usuarios que se asignan a este rol pueden agregar elementos a un servidor de informes, así como crear y administrar las carpetas que contienen esos elementos.|  
@@ -62,7 +56,7 @@ ms.locfileid: "33028562"
 ### <a name="content-manager-tasks"></a>Tareas del Administrador de contenido  
  La siguiente tabla muestra las tareas que se incluyen en el rol **Administrador de contenido** .  
   
-|Tarea|Description|  
+|Tarea|Descripción|  
 |----------|-----------------|  
 |Usar informes|Permite leer definiciones de informes.|  
 |Crear informes vinculados|Crear informes vinculados que se basen en un informe no vinculado.|  
@@ -99,7 +93,7 @@ ms.locfileid: "33028562"
 ### <a name="publisher-tasks"></a>Tareas de Publicador  
  La siguiente tabla muestra las tareas que se incluyen en el rol **Publicador** .  
   
-|Tarea|Description|  
+|Tarea|Descripción|  
 |----------|-----------------|  
 |Crear informes vinculados|Cree informes vinculados y publíquelos en una carpeta del servidor de informes.|  
 |Administrar orígenes de datos|Cree y elimine elementos de orígenes de datos compartidos; vea y modifique el contenido y las propiedades de un origen de datos.|  
@@ -121,7 +115,7 @@ ms.locfileid: "33028562"
 ### <a name="browser-tasks"></a>Tareas del Explorador  
  La siguiente tabla muestra las tareas que se incluyen en la definición del rol **Explorador** .  
   
-|Tarea|Description|  
+|Tarea|Descripción|  
 |----------|-----------------|  
 |Ver informes|Ejecutar un informe y ver propiedades de informe.|  
 |Ver recursos|Ver recursos y propiedades de recursos.|  
@@ -140,7 +134,7 @@ ms.locfileid: "33028562"
 ### <a name="report-builder-tasks"></a>Tareas del Generador de informes  
  La siguiente tabla muestra las tareas que se incluyen en la definición del rol **Generador de informes** .  
   
-|Tarea|Description|  
+|Tarea|Descripción|  
 |----------|-----------------|  
 |Usar informes|Permite leer definiciones de informes.|  
 |Ver informes|Ejecutar un informe y ver propiedades de informe.|  
@@ -162,7 +156,7 @@ ms.locfileid: "33028562"
 ### <a name="my-reports-tasks"></a>Tareas de Mis informes  
  En la siguiente tabla se muestran las tareas que se incluyen en el rol **Mis informes** .  
   
-|Tarea|Description|  
+|Tarea|Descripción|  
 |----------|-----------------|  
 |Crear informes vinculados|Cree informes vinculados que se basen en informes almacenados en la carpeta Mis informes del usuario.|  
 |Administrar carpetas|Cree, vea y elimine carpetas; vea y modifique propiedades de carpetas.|  
@@ -190,7 +184,7 @@ ms.locfileid: "33028562"
 ### <a name="system-administrator-tasks"></a>Tareas de Administrador del sistema  
  La siguiente tabla muestra las tareas que se incluyen en el rol **Administrador del sistema** .  
   
-|Tarea|Description|  
+|Tarea|Descripción|  
 |----------|-----------------|  
 |Ejecutar definiciones de informe|Inicie la ejecución de la definición del informe sin publicarlo en un servidor de informes.|  
 |Administrar trabajos|Vea y cancele trabajos que se estén ejecutando. Para obtener más información, vea [Administrar un proceso en ejecución](../../reporting-services/subscriptions/manage-a-running-process.md).|  
@@ -206,7 +200,7 @@ ms.locfileid: "33028562"
   
 ### <a name="system-user-tasks"></a>Tareas de Usuario del sistema  
   
-|Tarea|Description|  
+|Tarea|Descripción|  
 |----------|-----------------|  
 |Ejecutar definiciones de informe|Ejecute un informe sin publicarlo en un servidor de informes.|  
 |Ver propiedades del servidor de informes|Vea las propiedades correspondientes al servidor de informes, como el nombre de aplicación, si está habilitado Mis informes y los valores predeterminados del historial del informe.<br /><br /> Si quita esta tarea del rol **Usuario del sistema** , la página Configuración del sitio no estará disponible. Además, el título de la aplicación no aparecerá en la parte superior de todas las páginas. De forma predeterminada, el título para Administrador de informes es "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]".|  

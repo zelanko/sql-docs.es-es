@@ -1,14 +1,10 @@
 ---
 title: Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - security [Reporting Services], SharePoint integrated mode
 - permission sets [Reporting Services]
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 79bfc468d44f86fad3aca24637ab66b25700cb39
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c89daa9b9ede26b005480abdcfc2dfc2a675d065
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032922"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278707"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes
   En este tema se proporciona una referencia de los permisos de SharePoint que se pueden usar para conceder acceso a las operaciones del servidor de informes para un servidor de informes que se ejecuta en el modo integrado de SharePoint. Si va a crear niveles de permisos personalizados, este tema puede ayudarle a elegir qué permisos usar.  
@@ -49,7 +43,7 @@ ms.locfileid: "33032922"
 ## <a name="list-permissions"></a>Permisos de lista  
  Los permisos que se establecen en la biblioteca que contiene los elementos del servidor de informes determinan la forma en que los usuarios obtienen acceso a dichos elementos.  
   
-|Permiso|Description|F|C|V|Operación del servidor de informes|  
+|Permiso|Descripción|F|C|V|Operación del servidor de informes|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |Administrar listas|Crear y eliminar listas, agregar o quitar columnas de una lista y agregar o quitar vistas públicas de una lista.|X|||Crear una carpeta en una biblioteca de SharePoint durante una operación de publicación desde una herramienta de creación. También se requiere este permiso para administrar el historial de informes.|  
 |Agregar elementos|Agregar elementos a listas, agregar documentos a bibliotecas de documentos y agregar comentarios de discusión web.|X|X||Agregar informes, modelos de informe, orígenes de datos compartidos y recursos (archivos de imagen externos) a bibliotecas de SharePoint. Crear orígenes de datos compartidos. Generar modelos de informe a partir de orígenes de datos compartidos. Iniciar el Generador de informes y crear un nuevo informe o cargar un modelo en el Generador de informes.|  
@@ -66,7 +60,7 @@ ms.locfileid: "33032922"
 ## <a name="site-permissions"></a>Permisos de sitio  
  Los permisos de sitio determinan el acceso a las operaciones del servidor de informes que no están directamente relacionadas con los elementos almacenados en una biblioteca específica. Entre los ejemplos se incluye la creación y administración de programaciones compartidas, que los elementos pueden usar en varias bibliotecas, y la configuración del elemento web Visor de informes, que se puede usar en todo un sitio.  
   
-|Permiso|Description|F|C|V|Operación del servidor de informes|  
+|Permiso|Descripción|F|C|V|Operación del servidor de informes|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |Administrar permisos|Crear y cambiar niveles de permiso en el sitio web y asignar permisos a usuarios y grupos.|X|||Puede cambiar los permisos de todos los elementos y operaciones del servidor de informes. Puede establecer la seguridad de elementos de modelo.|  
 |Administración del sitio web|Realizar todas las tareas de administración para el sitio web y administrar el contenido.|X|||Crear, modificar y eliminar programaciones compartidas.|  

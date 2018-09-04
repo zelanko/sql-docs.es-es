@@ -1,26 +1,20 @@
 ---
 title: Colección de campos de conjunto de datos (Generador de informes y SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: d7b5f9f4e9dba9018455eec10d552cdb9afc54e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0986f432f2d94bcc81bdf2112ebe19c589767ae
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023012"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273607"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Colección Campos del conjunto de datos (Generador de informes y SSRS)
   Los campos de conjunto de datos representan los datos de una conexión de datos. Un campo puede representar datos numéricos o no numéricos. En los ejemplos se incluyen cantidades de ventas, ventas totales, nombres de cliente, identificadores de base de datos, direcciones URL, imágenes, datos espaciales y direcciones de correo electrónico. En la superficie de diseño, los campos aparecen como expresiones en los elementos de informe como los cuadros de texto, tablas y gráficos.  
@@ -96,7 +90,7 @@ ms.locfileid: "33023012"
   
      Por ejemplo, en la tabla siguiente, se muestran los tipos de datos que usa el procesador de informes para los nuevos tipos de fecha y hora introducidos en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] :  
   
-    |Tipo de datos de SQL|Tipo de datos de CLR|Description|  
+    |Tipo de datos de SQL|Tipo de datos de CLR|Descripción|  
     |-------------------|-------------------|-----------------|  
     |**Date**|**DateTime**|Solo fecha|  
     |**Time**|**Timespan**|Solo hora|  

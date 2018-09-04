@@ -1,26 +1,20 @@
 ---
 title: Protección ampliada para la autenticación con Reporting Services | Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 6abe1579a0b54f701ed648746b4a5fc5ae597b08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 49827ffcafca3131554ec806afa61e49ad03dd58
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028312"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281371"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protección ampliada para la autenticación con Reporting Services
 
@@ -117,7 +111,7 @@ SSRS admite y aplica la protección ampliada que se ha habilitado en el sistema 
 ###  <a name="ConfigurationSettings"></a> Configuración de la protección ampliada de los servicios de informes  
  La tabla siguiente proporciona información sobre los valores de configuración que aparecen en **rsreportserver.config** para la protección ampliada.  
   
-|Configuración|Description|  
+|Configuración|Descripción|  
 |-------------|-----------------|  
 |**RSWindowsExtendedProtectionLevel**|Especifica el grado de aplicación de la protección ampliada. Los valores válidos son:<br /><br /> **Off**: valor predeterminado. Especifica que no existe comprobación de enlace de canal ni de enlace de servicio<br /><br /> El valor**Allow** admite la protección ampliada, pero no la necesita.  Especifica lo siguiente:<br /><br /> -La protección ampliada se aplicará en las aplicaciones cliente que se ejecuten en sistemas operativos que la admitan. La forma de aplicar la protección la determina la opción **RsWindowsExtendedProtectionScenario**.<br /><br /> -Se permitirá la autenticación en aplicaciones que se ejecuten en sistemas operativos que no sean compatibles con la protección ampliada.<br /><br /> **Require** especifica lo siguiente:<br /><br /> -La protección ampliada se aplicará en las aplicaciones cliente que se ejecuten en sistemas operativos que la admitan.<br /><br /> **No** se permitirá la autenticación en aplicaciones que se ejecuten en sistemas operativos que no sean compatibles con la protección ampliada.|  
 |**RsWindowsExtendedProtectionScenario**|Especifica las formas de la protección ampliada que se validan: enlace de canal, enlace de servicio o ambos. Los valores válidos son:<br /><br /> **Proxy**: valor predeterminado. Especifica lo siguiente:<br /><br /> -Si está presente, la autenticación de Windows NTLM, Kerberos y Negotiate cuando está presente un token de enlace de canal.<br /><br /> -Se aplica el enlace de servicio.<br /><br /> **Any** Especifica lo siguiente:<br /><br /> -No se necesitan la autenticación de Windows NTLM, Kerberos ni Negotiate, ni ningún enlace de canal.<br /><br /> -Se aplica el enlace de servicio.<br /><br /> **Direct** Especifica lo siguiente:<br /><br /> -La autenticación de Windows NTLM, Kerberos y Negotiate cuando están presentes un CBT y una conexión SSL al servicio actual, y el CBT para que la conexión SSL coincida con el CBT del token de NTLM, Kerberos o Negotiate.<br /><br /> -No se aplica el enlace de servicio.<br /><br /> <br /><br /> Nota: Se ignora la configuración **RsWindowsExtendedProtectionScenario** si **RsWindowsExtendedProtectionLevel** está establecido en **OFF**.|  
@@ -149,7 +143,7 @@ SSRS admite y aplica la protección ampliada que se ha habilitado en el sistema 
 ### <a name="hosts-collection-sources"></a>Orígenes de la colección de hosts.  
  En la tabla siguiente se citan los posible orígenes para la colección de hosts.  
   
-|Tipo de origen de datos|Description|  
+|Tipo de origen de datos|Descripción|  
 |--------------------|-----------------|  
 |ComputerNameDnsDomain|El nombre del dominio DNS asignado al equipo local. Si el equipo local es un nodo de un clúster, se usa el nombre de dominio DNS del servidor virtual de clústeres.|  
 |ComputerNameDnsFullyQualified|El nombre DNS completo que identifica exclusivamente el equipo local. Este nombre es una combinación del nombre del host DNS y el nombre del dominio DNS, con el formato *nombreDeHost*.*nombreDeDominio*. Si el equipo local es un nodo de un clúster, se usa el nombre DNS completo del servidor virtual de clústeres.|  

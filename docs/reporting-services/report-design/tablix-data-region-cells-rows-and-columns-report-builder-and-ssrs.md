@@ -1,14 +1,10 @@
 ---
 title: Celdas, filas y columnas de la región de datos Tablix (Generador de informes y SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10058"
@@ -16,16 +12,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.deletecolumns.f1
 - sql13.rtp.rptdesigner.deleterows.f1
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 8eb51a0c7240f1eff35ecc754d3a6b1d6fdc1000
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8ec3075444b0885cb6e6ea5b52c2f2fe6b60941
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028672"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281350"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Celdas, filas y columnas de la región de datos Tablix (Generador de informes y SSRS)
   Para controlar el modo en que las filas y columnas de una región de datos Tablix muestran los datos en un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , debe entender cómo especificar las filas y columnas para los datos de detalle, los datos de grupo, las etiquetas y los totales. En muchos casos, puede usar las estructuras predeterminadas de una tabla, matriz o lista para mostrar los datos. Para más información, vea [Tablas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [Matrices](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) o [Listas](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
@@ -43,7 +37,7 @@ ms.locfileid: "33028672"
 ### <a name="row-and-column-handles"></a>Identificadores de filas y columnas  
  Al seleccionar una región de datos Tablix, los gráficos de los identificadores de filas y de columnas indican el propósito de cada fila y columna. Los identificadores indican las filas y columnas que están dentro o fuera de un grupo. En la tabla siguiente se muestran diversas presentaciones del identificador.  
   
-|Icono|Description|  
+|Icono|Descripción|  
 |----------|-----------------|  
 |![Identificador de fila con 3 líneas paralelas para la fila de detalles](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Identificador de fila con 3 líneas paralelas para la fila de detalles")|Solo el grupo de detalles en la jerarquía de grupos de filas|  
 |![Identificador de fila con fila de detalles y un grupo exterior](../../reporting-services/report-design/media/rs-icontablix-groupwithdetails.gif "Identificador de fila con fila de detalles y un grupo exterior")|Un grupo exterior y el grupo de detalles secundario|  

@@ -1,26 +1,20 @@
 ---
 title: Referencia de funciones de agregado (Generador de informes y SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 931cd60d3a2e1691dcb6f9d2c58976ec242d2d68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e396de825687166c9d110c375e3c77e392e1fd89
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028342"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275594"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funciones del Generador de informes: referencia de funciones de agregado
   Para incluir valores de agregado en un informe, puede utilizar las funciones de agregado integradas en las expresiones. La función de agregado predeterminada para los campos numéricos es SUM. Puede modificar la expresión y utilizar una función de agregado integrada diferente o especificar un ámbito diferente. El ámbito identifica qué conjunto de datos utilizar para el cálculo.  
@@ -180,7 +174,7 @@ ms.locfileid: "33028342"
 ##  <a name="TestingforScope"></a> Comprobar el ámbito  
  La función integrada siguiente comprueba el contexto actual de un elemento de informe para ver si es un miembro de un ámbito determinado.  
   
-|Función|Description|  
+|Función|Descripción|  
 |--------------|-----------------|  
 |[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|Indica si la instancia actual de un elemento se halla en el ámbito especificado.|  
   
@@ -189,7 +183,7 @@ ms.locfileid: "33028342"
 ##  <a name="RetrievingRecursiveLevel"></a> Recuperar nivel recursivo  
  La función integrada siguiente recupera el nivel actual cuando se procesa una jerarquía recursiva. Use el resultado de esta función con la propiedad **Padding** de un cuadro de texto para controlar el nivel de sangría de una jerarquía visual para un grupo recursivo. Para obtener más información, vea [Crear grupos de jerarquía recursiva &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
-|Función|Description|  
+|Función|Descripción|  
 |--------------|-----------------|  
 |[Nivel](../../reporting-services/report-design/report-builder-functions-level-function.md)|Devuelve el nivel actual de profundidad de una jerarquía recursiva.|  
   

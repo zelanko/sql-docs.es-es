@@ -3,27 +3,21 @@ title: Visor HTML y barra de herramientas de informe | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.custom: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 00353fa42e692ef0a4e25d279a0ea5def83a067c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f53e3459a1a52884995575dd0e19c6b237875a76
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017902"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269482"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visor HTML y la barra de herramientas del informe
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona un Visor HTML que se usa para mostrar informes a petición conforme se solicitan del servidor de informes. El Visor HTML ofrece un marco para ver informes en HTML. Incluye una barra de herramientas de informe, una sección de parámetros, una sección de credenciales y un mapa del documento. La barra de herramientas de informe del Visor HTML incluye características que se pueden usar para trabajar con un informe, incluidas las opciones de exportación para verlo con formatos distintos de HTML. La sección de parámetros y el mapa del documento solamente aparecen cuando se abren informes configurados para usar parámetros y un control de mapa de documento.  
@@ -59,7 +53,7 @@ ms.locfileid: "33017902"
   
  En una instalación de servidor de informes predeterminada, se incluyen los siguientes formatos de exportación. La lista de formatos de exportación disponibles puede ser distinta de la que se muestra aquí.  
   
-|Formato de exportación|Description|  
+|Formato de exportación|Descripción|  
 |-------------------|-----------------|  
 |XML|Muestra el informe con sintaxis XML. Se abrirá una nueva ventana del explorador para mostrar los informes en XML.|  
 |CSV|Muestra un informe en formato delimitado por comas. El informe se abre en una aplicación asociada al tipo de archivos CSV.|  

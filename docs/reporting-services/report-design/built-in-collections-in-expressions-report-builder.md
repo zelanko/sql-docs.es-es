@@ -1,26 +1,20 @@
 ---
 title: Colecciones integradas en expresiones (Generador de informes y SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: e73b24b9680a18dcc19ab294aa6357310ac6cf36
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 93c0b81d1a267f447564605b86b34fadcfcb1c83
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021222"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278157"
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>Colecciones integradas en expresiones (Generador de informes)
   En una expresión de un informe, puede incluir referencias a las siguientes colecciones integradas: ReportItems, Parameters, Fields, DataSets, DataSources, Variables y a campos integrados para información global, como el nombre del informe. No todas las colecciones aparecen en el cuadro de diálogo **Expresión** . Las colecciones DataSets y DataSources solo están disponibles en tiempo de ejecución para los informes publicados en un servidor de informes. ReportItems es un conjunto de cuadros de texto situados en una región del informe; por ejemplo, los cuadros de texto de una página o de un encabezado de página.  
@@ -33,7 +27,7 @@ ms.locfileid: "33021222"
 ##  <a name="Collections"></a> Descripción de las colecciones integradas  
  En la tabla siguiente se enumeran las colecciones integradas disponibles cuando se escribe una expresión. Cada fila incluye: el nombre de programación para la colección con distinción de mayúsculas y minúsculas, si se puede usar el cuadro de diálogo Expresión para agregar una referencia a la colección de forma interactiva, un ejemplo y una descripción que incluye el momento en que se inicializan y se ponen a disposición de los usuarios los valores de la colección.  
   
-|Colección integrada|Categoría en el cuadro de diálogo Expresión|Ejemplo|Description|  
+|Colección integrada|Categoría en el cuadro de diálogo Expresión|Ejemplo|Descripción|  
 |--------------------------|-------------------------------------------|-------------|-----------------|  
 |**Globales**|Campos integrados|`=Globals.ReportName`<br /><br /> `- or -`<br /><br /> `=Globals.PageNumber`|Representa variables globales útiles para los informes, como el nombre del informe o el número de página. Siempre está disponible.<br /><br /> Para obtener más información, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).|  
 |**Usuario**|Campos integrados|`=User.UserID`<br /><br /> O bien<br /><br /> `=User.Language`|Representa una recopilación de datos acerca del usuario que ejecuta el informe, como la configuración de idioma o el identificador de usuario. Siempre está disponible.<br /><br /> Para obtener más información, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).|  

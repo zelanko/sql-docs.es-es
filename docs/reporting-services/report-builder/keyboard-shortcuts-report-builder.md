@@ -1,29 +1,23 @@
 ---
 title: Métodos abreviados de teclado (Generador de informes) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - keyboard shortcuts
 - shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
-caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 4e2fa3d574930cbf03ee9fbf1664431668b808c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8e3346a95c8b03f1f256088901d99579faf433a
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33020632"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264544"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Métodos abreviados de teclado (Generador de informes)
   Al crear y editar informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el Generador de informes, tendrá acceso a todas las teclas de método abreviado para la navegación que se proporcionan para el entorno de Windows. Puede seleccionar entre varios esquemas de asignación de teclado estándar.  
@@ -37,7 +31,7 @@ ms.locfileid: "33020632"
   
 ## <a name="keyboard-shortcuts-in-report-builder"></a>Métodos abreviados de teclado del Generador de informes  
   
-|Description|Combinación de teclas|  
+|Descripción|Combinación de teclas|  
 |-----------------|---------------------|  
 |Abrir el menú Generador de informes.|ALT+F|  
 |Crear un informe.|CTRL+N|  

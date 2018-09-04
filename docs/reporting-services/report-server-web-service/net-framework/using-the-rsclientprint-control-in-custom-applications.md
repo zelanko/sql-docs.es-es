@@ -1,14 +1,10 @@
 ---
 title: Usar el control RSClientPrint en aplicaciones personalizadas | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - custom printing [Reporting Services]
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 67ee94b303f8d75e3249b1f20b2ed891c632dc92
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eef2cedf56fd314244a598ddc77df391f44237ca
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027872"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272984"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Usar el control RSClientPrint en aplicaciones personalizadas
   El control ActiveX de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] **RSPrintClient** proporciona impresión del lado cliente para los informes mostrados en el Visor HTML. Proporciona un cuadro de diálogo **Imprimir** para que un usuario pueda iniciar un trabajo de impresión, obtener una vista previa de un informe, especificar las páginas que se van a imprimir y cambiar los márgenes. Durante una operación de impresión del lado cliente, el servidor de informes representa el informe en la extensión de representación en imágenes (EMF) y utiliza las capacidades de impresión del sistema operativo para crear el trabajo de impresión y enviarlo a una impresora.  
@@ -72,7 +66,7 @@ ms.locfileid: "33027872"
   
 ### <a name="rsclientprint-properties"></a>Propiedades de RSClientPrint  
   
-|Propiedad|Tipo|RW|Valor predeterminado|Description|  
+|Propiedad|Tipo|RW|Valor predeterminado|Descripción|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Doble|RW|Valor del informe|Obtiene o establece el margen izquierdo. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
 |MarginRight|Doble|RW|Valor del informe|Obtiene o establece el margen derecho. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
@@ -109,7 +103,7 @@ ms.locfileid: "33027872"
 ### <a name="rsprintclient-support-for-the-print-method"></a>Compatibilidad de RSPrintClient con el método Print  
  El objeto **RSClientPrint** admite el método **Print** usado para iniciar el cuadro de diálogo Imprimir. El método **Print** dispone de los siguientes argumentos.  
   
-|Argumento|E/S|Tipo|Description|  
+|Argumento|E/S|Tipo|Descripción|  
 |--------------|----------|----------|-----------------|  
 |ServerPath|Entrada|String|Especifica el directorio virtual del servidor de informes (por ejemplo, `https://adventure-works/reportserver`).|  
 |ReportPathParameters|Entrada|String|Especifica el nombre completo para obtener acceso al informe en el espacio de nombres de carpetas del servidor de informes, incluidos los parámetros. Los informes se recuperan mediante el acceso a una dirección URL. Por ejemplo, "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  

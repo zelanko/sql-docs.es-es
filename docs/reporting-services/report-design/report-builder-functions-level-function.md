@@ -1,26 +1,20 @@
 ---
 title: Función Level (Generador de informes y SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: e092b79a5ddd1e43a740520fc2505cc0dede5b4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee908199262066372b6bb00e41ebe9e341209592
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024152"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275547"
 ---
 # <a name="report-builder-functions---level-function"></a>Funciones del Generador de informes: función Level
   Devuelve el nivel actual de profundidad de una jerarquía recursiva.  

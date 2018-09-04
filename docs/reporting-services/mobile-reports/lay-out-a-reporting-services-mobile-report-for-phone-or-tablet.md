@@ -1,26 +1,20 @@
 ---
 title: Diseñar un informe para dispositivos móviles de Reporting Services para una tableta o teléfono | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: mobile-reports
-ms.reviewer: ''
+ms.technology: mobile-reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f8632816-068f-4a87-b15a-779387f3d3a3
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 68e84cf29e013461dba77f67294901eef05a5101
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1bec2d40ac002b1e952bde416fd30963be722abd
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018262"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43270163"
 ---
 # <a name="lay-out-a-reporting-services-mobile-report-for-phone-or-tablet"></a>Diseñar un informe para dispositivos móviles de Reporting Services para una tableta o teléfono
 Ahora que ya ha [creado un informe para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) en el [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)], puede diseñar una versión del mismo para teléfono o tableta.  

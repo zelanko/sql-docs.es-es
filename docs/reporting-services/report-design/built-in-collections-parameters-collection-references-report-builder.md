@@ -1,26 +1,20 @@
 ---
 title: Referencias a la colección de parámetros (Generador de informes y SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 6f4f702b15f214c43a5d866f27eba0519932d6f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70f4c9c14b2c79a6b97370ebf71298540399a93e
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021802"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280285"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>Colecciones integradas: referencias a la colección de parámetros (Generador de informes)
   Los parámetros de informe son una de las colecciones integradas a las que se puede hacer referencia desde una expresión. Al incluir parámetros en una expresión, puede personalizar los datos y el aspecto de los informes basándose en las opciones seleccionadas por el usuario. Se pueden usar expresiones para cualquier propiedad de elemento de informe o de cuadro de texto que proporcione la opción (*Fx*) o \<**Expresión**>. Las expresiones también se usan para controlar el contenido y el aspecto de los informes de otras maneras. Para más información, vea [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
@@ -35,7 +29,7 @@ ms.locfileid: "33021802"
 ##  <a name="Single"></a> Usar un parámetro de un solo valor en una expresión  
  En la tabla siguiente se muestran ejemplos de la sintaxis que se debe usar cuando se incluye una referencia a un parámetro de un solo valor de cualquier tipo de datos en una expresión.  
   
-|Ejemplo|Description|  
+|Ejemplo|Descripción|  
 |-------------|-----------------|  
 |`=Parameters!` *\<NombreDeParámetro>* `.IsMultiValue`|Devuelve **False**.<br /><br /> Comprueba si un parámetro es de varios valores. Si el valor es **True**, el parámetro es de varios valores y es una colección de objetos. Si el valor es **False**, el parámetro es de un solo valor y es un solo objeto.|  
 |`=Parameters!` *\<NombreDeParámetro>* `.Count`|Devuelve el valor entero 1. Para un parámetro de un solo valor, el recuento es siempre 1.|  
@@ -49,7 +43,7 @@ ms.locfileid: "33021802"
 ##  <a name="Multi"></a> Usar un parámetro de varios valores en una expresión  
  En la tabla siguiente se muestran ejemplos de la sintaxis que se debe usar cuando se incluye una referencia a un parámetro de varios valores de cualquier tipo de datos en una expresión.  
   
-|Ejemplo|Description|  
+|Ejemplo|Descripción|  
 |-------------|-----------------|  
 |`=Parameters!` *\<NombreDeParámetroConVariosValores>* `.IsMultiValue`|Devuelve **True** o **False**.<br /><br /> Comprueba si un parámetro es de varios valores. Si el valor es **True**, el parámetro es de varios valores y es una colección de objetos. Si el valor es **False**, el parámetro es de un solo valor y es un solo objeto.|  
 |`=Parameters!` *\<NombreDeParámetroConVariosValores>* `.Count`|Devuelve un valor entero.<br /><br /> Se refiere al número de valores. Para un parámetro de un solo valor, el recuento es siempre 1. Para un parámetro de varios valores, el recuento es 0 o más.|  

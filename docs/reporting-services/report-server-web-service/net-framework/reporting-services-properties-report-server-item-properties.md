@@ -1,14 +1,10 @@
 ---
 title: Propiedades de los elementos del servidor de informes | Microsoft Docs
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - report items [Reporting Services], properties
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 2b3ba4bdc49c822d059ec86b4cb8064877af0d90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 346fefd3cbbeb1e0422401ef22a4ce32106348a2
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027012"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267641"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Propiedades de Reporting Services: propiedades de los elementos del servidor de informes
   Las propiedades de los elementos son específicas de los elementos de la base de datos del servidor de informes. Tales elementos incluyen informes, informes vinculados, carpetas, recursos, modelos y orígenes de datos.  
@@ -37,7 +31,7 @@ ms.locfileid: "33027012"
 ## <a name="item-properties"></a>Propiedades de los elementos  
  Las propiedades siguientes se aplican a todos los elementos de la base de datos del servidor de informes.  
   
-|Propiedad|Description|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |**CreatedBy**|Nombre del usuario que agregó originalmente el elemento para la base de datos del servidor de informes.|  
 |**CreationDate**|Fecha y hora cuando el elemento se agregó a la base de datos del servidor de informes.|  
@@ -55,14 +49,14 @@ ms.locfileid: "33027012"
 ## <a name="folder-properties"></a>Propiedades de carpeta  
  Además de las propiedades de los elementos enumerados previamente, la propiedad siguiente se aplica a las carpetas en la base de datos del servidor de informes.  
   
-|Propiedad|Description|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |**Reserved**|Valor que devuelve el método <xref:ReportService2010.ReportingService2010.GetProperties%2A> para las carpetas que reserva el servidor de informes. Las carpetas reservadas incluyen Usuarios, Mis informes y /. Las carpetas reservadas no se pueden modificar ni quitar.|  
   
 ## <a name="report-properties"></a>Propiedades de informe  
  Además de las propiedades de los elementos enumerados previamente, las propiedades siguientes se aplican a las carpetas en la base de datos del servidor de informes.  
   
-|Propiedad|Description|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |**Lenguaje**|Lenguaje utilizado en un informe. El valor es un código de idioma definido en la especificación del Grupo de trabajo de ingeniería de Internet (IETF) RFC1766. La primera parte es una designación de dos caracteres del lenguaje de bajo nivel. La segunda parte se separa con un guión y designa la variación o dialecto del lenguaje. Si no se especifica un valor en el elemento **Style** asociado al elemento **Body** en la definición de informe, el valor predeterminado es el lenguaje del servidor de informes.|  
 |**ReportProcessingTimeout**|Tiempo de espera, en segundos, para un informe individual. Si se establece este valor, el servidor de informes intenta detener el procesamiento de un informe cuando ha transcurrido el tiempo especificado. Los valores válidos para esta propiedad van desde **-1** a **2** **147** **483** **647**. Si el valor es **-1**, no se agota el tiempo de espera del informe durante el procesamiento. Si el valor es **null**, el valor de propiedad del sistema **ReportProcessingTimeout** se usa para el tiempo de espera del procesamiento del informe. El valor predeterminado es **null**. Para más información, vea [Propiedades del sistema del servidor de informes](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).|  
@@ -76,7 +70,7 @@ ms.locfileid: "33027012"
 ## <a name="resource-properties"></a>Propiedades de los recursos  
  Además de las propiedades de los elementos enumerados previamente, la propiedad siguiente se aplica a los recursos en la base de datos del servidor de informes.  
   
-|Propiedad|Description|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |**MimeType**|Tipo MIME de un recurso en la base de datos del servidor de informes.|  
   

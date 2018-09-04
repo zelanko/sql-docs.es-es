@@ -1,26 +1,20 @@
 ---
 title: Script rs.exe de ejemplo de Reporting Services para copiar contenido entre servidores de informes | Microsoft Docs
-ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 9927a7cdf05e82f48fb43bd954534c04f9a32dad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbdf7ee66f59738c0874c6bfc21b6ad4b33b1091
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036852"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267687"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Script rs.exe de ejemplo de Reporting Services para copiar contenido entre servidores de informes
 
@@ -53,7 +47,7 @@ El script se puede usar para copiar contenido entre servidores de informes del m
 ###  <a name="bkmk_what_is_migrated"></a> Elementos y recursos que migra el script  
  El script no se sobrescribirá en elementos de contenido existentes que tengan el mismo nombre.  Si el script detecta en el servidor de destino elementos con el mismo nombre que en el servidor de origen, los elementos individuales producirán un mensaje de "error" y el script continuará. En la tabla siguiente se enumeran los tipos de contenido y los recursos que el script puede migrar en los modos del servidor de informes de destino.  
   
-|Elemento|Migrado|SharePoint|Description|  
+|Elemento|Migrado|SharePoint|Descripción|  
 |----------|--------------|----------------|-----------------|  
 |Contraseñas|**No**|**No**|Las contraseñas **NO** se migran. Después de migrar elementos de contenido, actualice la información de credenciales en el servidor de destino. Por ejemplo, orígenes de datos con credenciales almacenadas.|  
 |Mis informes|**No**|**No**|La característica "Mis informes" del modo nativo se basa en inicios de sesión de usuarios individuales, por lo que el servicio de scripting no tiene acceso al contenido de las carpetas "Mis informes" para los usuarios que no hayan usado el parámetro **– u** para ejecutar el script RSS. Además, "Mis informes" no es una característica del modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y los elementos de las carpetas no se pueden copiar a un entorno de SharePoint. Por tanto, el script no copia elementos de informe que se encuentran en las carpetas "Mis informes” de un servidor de informes en modo nativo de origen.<br /><br /> Para migrar el contenido de las carpetas "Mis informes" con este script, siga estos pasos:<br /><br /> 1.  Cree nuevas carpetas en el Administrador de informes. Opcionalmente, puede crear carpetas o subcarpetas para cada usuario.<br />2.  Inicie sesión como uno de los usuarios que tenga contenido de "Mis informes".<br />3.  En el Administrador de informes, haga clic en la carpeta **Mis informes**.<br />4.  Haga clic en la vista **Detalles** de la carpeta.<br />5.  Seleccione cada informe que desea copiar.<br />6.  Haga clic en **Mover** en la barra de herramientas del Administrador de informes.<br />7.  Seleccione la carpeta de destino deseada.<br />8.  Repita los pasos 2 a 7 para cada usuario.<br />9. Ejecute el script.|  
@@ -206,7 +200,7 @@ El script se puede usar para copiar contenido entre servidores de informes del m
   
 ##  <a name="bkmk_parameter_description"></a> Descripción de los parámetros  
   
-|Parámetro|Description|Obligatorio|  
+|Parámetro|Descripción|Obligatorio|  
 |---------------|-----------------|--------------|  
 |**-s** Dirección_URL_Origen|Dirección URL del servidor de informes de origen.|Sí|  
 |**-u** Dominio\contraseña **–p** contraseña|Credenciales del servidor de origen.|OPCIONAL, se usan las credenciales predeterminadas si no se especifica|  

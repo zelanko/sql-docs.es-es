@@ -1,28 +1,22 @@
 ---
 title: Exportación de informes (Generador de informes y SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
-caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 9c4b6d1ac7e16cc7260667ffc786b68a5f2d9a18
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 035452208fbd27c3669239f9177136d71051d854
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022412"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268134"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>Exportación de informes (Generador de informes y SSRS)
 
@@ -119,7 +113,7 @@ ms.locfileid: "33022412"
 ##  <a name="ExportFormats"></a> Formatos que puede exportar durante la visualización de informes  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona extensiones de presentación que presentan los informes en formatos diferentes. Debería optimizar el diseño de informe para el formato de archivo elegido.  En la tabla siguiente se enumeran los formatos que puede exportar desde la interfaz de usuario.  Existen formatos adicionales que puede utilizar con suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o si va a exportar desde el acceso de la dirección URL.  Vea la sección [Otras maneras de exportar Informes](#OtherWaysExportingReports)de este tema.  
   
-|Formato|Tipo de extensión de presentación|Description|  
+|Formato|Tipo de extensión de presentación|Descripción|  
 |------------|------------------------------|-----------------|  
 |Archivo PDF de Acrobat|Salto de página duro|La extensión de representación en PDF representa un informe en archivos que se pueden abrir en Adobe Acrobat y en visores de PDF de otros fabricantes que admiten PDF 1.3. Aunque PDF 1.3 es compatible con Adobe Acrobat 4.0 y versiones posteriores, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite Adobe Acrobat 6 o posterior. La extensión de representación no requiere el software Adobe para representar el informe. Sin embargo, se necesitan visores de PDF, como Adobe Acrobat, para ver o imprimir un informe en formato PDF.<br /><br /> Para más información, vea [Exportar a un archivo PDF](../../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md).|  
 |Atom|data|La extensión de presentación Atom genera fuentes de distribución de datos compatibles con Atom desde los informes. Las fuentes de distribución de datos son legibles y se pueden intercambiar con aplicaciones como Power Pivot o Power BI que pueden usar fuentes de distribución de datos compatibles con Atom.<br /><br /> El resultado es un documento de servicio de Atom que enumera las fuentes de los datos disponibles de un informe. Se crea al menos una fuente de datos para cada región de datos de un informe. Según el tipo de región de datos y los datos que esta muestra, podrían generarse varias fuentes de distribución de datos.<br /><br /> Para más información, vea [Generar fuentes de distribución de datos a partir de informes](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).|  

@@ -1,14 +1,10 @@
 ---
 title: Aplicar formato a las etiquetas de los ejes de un gráfico (Generador de informes y SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.axisproperties.majortickmarks.f1
@@ -28,16 +24,14 @@ f1_keywords:
 helpviewer_keywords:
 - "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 326bc2a7516d7401fe3af763237b0f5f0c7a1170
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7b18f14d4a21b1515438715d24378a8e272a317
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027982"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273372"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a las etiquetas de los ejes de un gráfico (Generador de informes y SSRS)
   Los tipos de gráficos basados en coordenadas (de columnas, de barras, de áreas, de puntos, de líneas y de intervalos) tienen dos ejes que se usan para clasificar y mostrar las relaciones entre los datos. A cada eje se le aplican distintos tipos de formato.  
@@ -63,7 +57,7 @@ ms.locfileid: "33027982"
   
  La escala de un eje viene determinada por un valor mínimo y un valor máximo que definen el intervalo de datos que se va a mostrar a lo largo del eje. El gráfico calcula dichos valores mínimo y máximo para cada eje basándose en los valores del conjunto de resultados. En el eje de valores, la escala siempre vendrá determinada por los números más pequeño y más grande del campo de valores. En el eje de categorías, los tipos del valor máximo y del mínimo se determinan dependiendo del tipo de campo de categorías. Cualquier campo de un conjunto de datos se puede clasificar en uno de los tres tipos de campos de categorías posibles. En la tabla siguiente se muestran estos tres tipos de campos de categorías.  
   
-|Tipo de campo de categorías|Description|Ejemplo|  
+|Tipo de campo de categorías|Descripción|Ejemplo|  
 |-------------------------|-----------------|-------------|  
 |Numérico|Las categorías se muestran por orden numérico a lo largo del eje X.|Un informe de ventas por número de identificación de empleado muestra los números de identificación de los empleados a lo largo del eje X.|  
 |Fecha y hora|Las categorías se muestran por orden cronológico a lo largo del eje X.|Un informe de ventas por meses muestra las fechas con formato a lo largo del eje X.|  

@@ -19,16 +19,16 @@ caps.latest.revision: 63
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9a9f8f115dd24f27f1c140677775ba9e29dd7468
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3fbeaf60a67386aff9a286b80dd4f1a60b98b7a5
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982897"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348486"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Crear una copia de seguridad completa de base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Para SQL Server 2014, vaya a [Crear una copia de seguridad completa de base de datos (SQL Server)](https://msdn.microsoft.com/library/ms187510(SQL.120).aspx).
+ > Para SQL Server 2014, vaya a [Crear una copia de seguridad completa de base de datos (SQL Server)](create-a-full-database-backup-sql-server.md).
 
   En este tema se explica cómo crear una copia de seguridad completa de la base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
   

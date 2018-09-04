@@ -1,26 +1,20 @@
 ---
 title: Cambiar el texto de un elemento de leyenda (Generador de informes y SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 96bf59c33e72a6271b5b1f6421df2101839f5a1a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff6d22f2ed031a64061b0adab3c19f85df706e74
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33020852"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275797"
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>Leyenda del gráfico: cambiar texto de elementos (Generador de informes)
   Cuando se coloca un campo en el área Valores del gráfico, se genera automáticamente un elemento de leyenda que contiene el nombre de este campo. Cada elemento de leyenda se conecta a una serie individual del gráfico, a excepción de los gráficos de formas, donde la leyenda se conecta a puntos de datos individuales en lugar de a series individuales.  
@@ -42,7 +36,7 @@ ms.locfileid: "33020852"
   
  En la tabla siguiente se proporcionan ejemplos de palabras clave específicas de los gráficos que pueden usarse para la propiedad **Texto de leyenda personalizado** . Para obtener más información sobre las palabras clave, vea [Aplicar formato a los puntos de datos de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
-|Palabra clave|Description|El ejemplo de lo que aparece como texto en la leyenda|  
+|Palabra clave|Descripción|El ejemplo de lo que aparece como texto en la leyenda|  
 |-------------|-----------------|---------------------------------------------------|  
 |`#PERCENT{P1}`|Muestra el porcentaje del valor total con un decimal.|85.0%|  
 |`#VALY`|Muestra el valor numérico real del campo de datos.|17000|  

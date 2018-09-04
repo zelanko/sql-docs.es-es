@@ -1,26 +1,20 @@
 ---
 title: Administrar elementos de informe | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 4209c0fd93e8a0c9a2702971e114a4cbb7cfaadd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ebfe30b11c7d4aea0d98557b2457577f1c8632d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024522"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273727"
 ---
 # <a name="managing-report-parts"></a>Administrar elementos de informe
   Los elementos de informe se pueden reutilizar en informes paginados, por varios usuarios y en varios informes. Los usuarios pueden buscar elementos de informe en el servidor y agregarlos a un informe.  También pueden informarse de las actualizaciones del elemento de informe en el servidor y volver a publicar versiones nuevas de un elemento de informe. Esas acciones de creación de informes se pueden ver afectadas por los permisos de seguridad de los servicios de informe, que las controlan.  En este tema se revisan las propiedades de los elementos de informe y su comportamiento cuando se encuentran en el servidor.  
@@ -54,10 +48,10 @@ ms.locfileid: "33024522"
   
  (*) indica que es nuevo en esta versión.  
   
-|Propiedad|Description|Elemento de informe<br /><br /> Criterios de búsqueda de la galería|  
+|Propiedad|Descripción|Elemento de informe<br /><br /> Criterios de búsqueda de la galería|  
 |--------------|-----------------|---------------------------------------------|  
 |Nombre|Este es uno de los criterios que un usuario puede buscar en la Galería de elementos de informe.|Sí|  
-|Description|Puede ser conveniente organizar los nombres de los elementos de informe de una manera que facilite a los usuarios la búsqueda en la galería. Por ejemplo, puede buscar la descripción que empiece con "Ventas>>" para encontrar los elementos de informe que tengan que ver con los datos relacionados con las ventas y su presentación.|Sí|  
+|Descripción|Puede ser conveniente organizar los nombres de los elementos de informe de una manera que facilite a los usuarios la búsqueda en la galería. Por ejemplo, puede buscar la descripción que empiece con "Ventas>>" para encontrar los elementos de informe que tengan que ver con los datos relacionados con las ventas y su presentación.|Sí|  
 |CreatedBy|Identificador del usuario que agregó el elemento de informe a la base de datos del servidor de informes. El formato exacto depende del método de autenticación. Por ejemplo, algunos métodos de autenticación provocan que se muestre el nombre de usuario precedido por el dominio completo en los campos CreatedBy y ModifiedBy.|Sí|  
 |CreationDate|Fecha en que originalmente se creó el elemento de informe.<br /><br /> Este es uno de los criterios que un usuario puede buscar en la Galería de elementos de informe.|Sí|  
 |ModifiedBy|Se trata del identificador del usuario que modificó por última vez el elemento de informe.|Sí|  

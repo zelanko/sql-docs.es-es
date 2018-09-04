@@ -17,12 +17,12 @@ caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39bc4afa05f9f72fcf2ec08cdfd85e65fa8bce04
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2d5e99d7bfd140af1e26217118211da98a167a93
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145606"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348180"
 ---
 # <a name="data-collection"></a>Recopilación de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,12 +115,12 @@ ms.locfileid: "33145606"
   
 ## <a name="things-you-can-do"></a>Cosas que puede hacer  
   
-|Description|Tema|  
+|Descripción|Tema|  
 |----------------------|-----------|  
 |Administrar distintos aspectos de la recopilación de datos, como habilitar o deshabilitar la recopilación de datos, cambiar la configuración de un conjunto de recopilación o ver los datos en el almacén de administración de datos.|[Administrar la recopilación de datos](../../relational-databases/data-collection/manage-data-collection.md)|  
 |Usar los informes para obtener información con el fin de supervisar la capacidad del sistema y solucionar problemas de rendimiento del sistema.|[Informes de conjuntos de recopilación de datos del sistema](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  
 |Usar el almacén de administración de datos para recopilar datos de un servidor que ejecute un destino de recopilación de datos.|[Almacén de administración de datos](../../relational-databases/data-collection/management-data-warehouse.md)| 
-|Aprovechar la funcionalidad de seguimiento del lado servidor de SQL Server Profiler para exportar una definición de seguimiento y emplearla después para crear un conjunto de recopilación que use el tipo de recopilador genérico de Seguimiento de SQL| [Usar SQL Server Profiler para crear un conjunto de recopilación de Seguimiento SQL (SQL Server Management Studio)](https://msdn.microsoft.com/library/cc645955(v=sql.130).aspx)
+|Aprovechar la funcionalidad de seguimiento del lado servidor de SQL Server Profiler para exportar una definición de seguimiento y emplearla después para crear un conjunto de recopilación que use el tipo de recopilador genérico de Seguimiento de SQL| [Usar SQL Server Profiler para crear un conjunto de recopilación de Seguimiento SQL (SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)
   
   
 

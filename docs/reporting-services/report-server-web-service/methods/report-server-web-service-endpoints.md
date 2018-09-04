@@ -1,14 +1,10 @@
 ---
 title: Puntos de conexión de servicios web del servidor de informes | Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -19,16 +15,14 @@ helpviewer_keywords:
 - execution endpoints [Reporting Services]
 - Report Server Web service, endpoints
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 66feb1faf61d3d317fdbae4d70d1344782608c6a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c7c0362271c57f9e69a3b2d628d95b1ec629a07
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028692"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271859"
 ---
 # <a name="report-server-web-service-endpoints"></a>Extremos de servicios web del servidor de informes
   El servicio web del servidor de informes proporciona varios extremos para administrar un servidor de informes además de ejecutar los informes y navegar por ellos.  
@@ -70,7 +64,7 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
 ## <a name="sharepoint-proxy-endpoints"></a>Extremos proxy de SharePoint  
  Cuando un servidor de informes se configura para el modo integrado de SharePoint y se ha instalado el Complemento de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], un conjunto de extremos proxy se instala en el servidor de SharePoint. Los extremos proxy constituyen la API principal para desarrollar soluciones de informe cuando un servidor de informes se configura en el modo integrado de SharePoint. Al desarrollar con los extremos del proxy, el Complemento de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] administra el intercambio de las credenciales entre el servidor de SharePoint y el servidor de informes en el modo de autenticación de cuentas de confianza. Al desarrollar con los extremos del servidor de informes, la aplicación que realiza la llamada tendrá que administrar el intercambio de credenciales en el modo de autenticación de cuentas de confianza. En la tabla siguiente se enumeran los extremos que se instalan con el Complemento de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Extremo proxy|Description|  
+|Extremo proxy|Descripción|  
 |--------------------|-----------------|  
 |<xref:ReportService2006>|Proporciona las API para administrar un servidor de informes que se configura para el modo integrado de SharePoint.<br /><br /> Nota: Este punto de conexión está en desuso en [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].|  
 |<xref:ReportService2010>|Proporciona las API para administrar un servidor de informes que se configura para el modo nativo o para el modo integrado de SharePoint.|  

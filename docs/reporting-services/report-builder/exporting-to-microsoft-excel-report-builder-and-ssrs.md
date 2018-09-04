@@ -1,26 +1,20 @@
 ---
 title: Exportar a Microsoft Excel (Generador de informes y SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-caps.latest.revision: 28
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 2985d8337cfbbb33b867de3f84f307bea4a6a67b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ad451fd016345ec541782f4ac4aed85dd3974799
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022392"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275660"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exportar a Microsoft Excel (Generador de informes y SSRS)
   La extensión de representación de Excel [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] representa un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el formato de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (.xlsx). Con la extensión de representación de Excel, el ancho de las columnas de Excel refleja más exactamente el ancho de las columnas de los informes.  
@@ -215,7 +209,7 @@ ms.locfileid: "33022392"
 |-------------------------------|-----------------|  
 |Creado|Fecha y hora de ejecución del informe como un valor de fecha y hora de ISO.|  
 |Autor|Autor del informe|  
-|Description|Descripción del informe|  
+|Descripción|Descripción del informe|  
 |LastSaved|Fecha y hora de ejecución del informe como un valor de fecha y hora de ISO.|  
   
 ##  <a name="PageHeadersFooters"></a> Encabezados y pies de página  

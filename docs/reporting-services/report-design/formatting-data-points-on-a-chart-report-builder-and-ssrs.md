@@ -1,29 +1,23 @@
 ---
 title: Aplicar formato a los puntos de datos de un gráfico (Generador de informes y SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10248"
 - sql13.rtp.rptdesigner.serieslabelproperties.general.f1
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: f99265199740d65002f061c9f7c8ce612bf312d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2d7d53489a89c5cb7f4790f437e5e61e5892048
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028152"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269675"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a los puntos de datos de un gráfico (Generador de informes y SSRS)
 En el informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , un punto de datos es la entidad individual más pequeña del gráfico. En los gráficos que no son de formas, los puntos de datos se representan en función del tipo de gráfico. Por ejemplo, una serie de líneas está formada por uno o más puntos de datos conectados. En los gráficos de formas, los puntos de datos se representan por sectores o segmentos individuales que se agregan al gráfico. Por ejemplo, en un gráfico circular, cada sector es un punto de datos. Para más información, vea [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
@@ -63,7 +57,7 @@ En el informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>Agregar palabras clave para las etiquetas de punto de datos, información sobre herramientas y texto de la leyenda  
  Puede usar palabras clave específicas del gráfico, con distinción de mayúsculas y minúsculas, para representar un elemento que existe en el gráfico. Estas palabras clave solo son aplicables a información sobre herramientas, texto de leyenda personalizado y propiedades de etiquetas de puntos de datos. En muchos casos, una palabra clave de gráfico tiene una expresión simple equivalente, pero la palabra clave se puede escribir más rápida y fácilmente. La lista siguiente es una relación de palabras clave de gráfico.  
   
-|Palabra clave de gráfico|Description|Aplicable al tipo de gráfico|Ejemplo de una expresión simple equivalente|  
+|Palabra clave de gráfico|Descripción|Aplicable al tipo de gráfico|Ejemplo de una expresión simple equivalente|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
 |#VALY|Valor Y del punto de datos.|All|`=Fields!MyDataField.Value`|  
 |#VALY2|Valor Y nº 2 del punto de datos.|De intervalo y de burbuja|None|  

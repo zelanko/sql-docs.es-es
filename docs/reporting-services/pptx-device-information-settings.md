@@ -1,31 +1,25 @@
 ---
 title: Configuración de la información del dispositivo PPTX | Microsoft Docs
-ms.custom: ''
 ms.date: 09/11/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - render
 - powerpoint
 - pptx
 - export
 ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 67510c7caebe9497ccd827f5afe258f09fae7102
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15707ea09cc0a5af3629fea8308a044d619ed2d7
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33019892"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269616"
 ---
 # <a name="pptx-device-information-settings"></a>Configuración de la información del dispositivo PPTX
   En la tabla siguiente se muestra la configuración de la información de los dispositivos para representar informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en formato PPTX.  

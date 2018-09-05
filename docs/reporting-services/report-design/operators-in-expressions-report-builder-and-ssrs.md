@@ -1,26 +1,20 @@
 ---
 title: Usar operadores en expresiones (Generador de informes y SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 8c2d21c06a97b78bb774911078b6e9e5e00f1859
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a098567515f7f5884c787c288ea01b09bb34c06
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027442"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266731"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Usar operadores en expresiones (Generador de informes y SSRS)
   Un operador es un símbolo que representa las acciones que se aplican a uno o a varios términos de una expresión. En una expresión, se pueden usar las categorías de operadores siguientes: aritméticos, de comparación, de concatenación, lógicos o bit a bit, y de desplazamiento de bits.  
@@ -31,7 +25,7 @@ ms.locfileid: "33027442"
 ### <a name="arithmetic"></a>Aritméticos  
  Los operadores aritméticos realizan operaciones matemáticas entre dos términos numéricos de una expresión.  
   
-|Operador|Description|  
+|Operador|Descripción|  
 |--------------|-----------------|  
 |^|Eleva un número a la potencia de otro número.|  
 |*|Multiplica dos números.|  
@@ -44,7 +38,7 @@ ms.locfileid: "33027442"
 ### <a name="comparison"></a>Comparación  
  Los operadores de comparación comprueban si dos expresiones son iguales.  
   
-|Operador|Description|  
+|Operador|Descripción|  
 |--------------|-----------------|  
 |<|Menor que.|  
 |\<=|Menor o igual que.|  
@@ -58,7 +52,7 @@ ms.locfileid: "33027442"
 ### <a name="string-concatenation"></a>Concatenación de cadenas  
  Los operadores de concatenación de cadenas anexan la segunda cadena a la primera en una expresión. Para las demás operaciones de cadena, use las funciones integradas.  
   
-|Operador|Description|  
+|Operador|Descripción|  
 |--------------|-----------------|  
 |&|Concatena dos cadenas|  
 |+|Concatena dos cadenas|  
@@ -66,7 +60,7 @@ ms.locfileid: "33027442"
 ### <a name="logical-and-bitwise"></a>Lógicos y bit a bit  
  Los operadores lógicos y bit a bit realizan manipulaciones lógicas entre dos términos enteros de una expresión.  
   
-|Operador|Description|  
+|Operador|Descripción|  
 |--------------|-----------------|  
 |And|Realiza una conjunción lógica entre dos expresiones booleanas o una conjunción bit a bit entre dos expresiones numéricas.|  
 |Not|Realiza una negación lógica de una expresión booleana o una negación bit a bit de una expresión numérica.|  
@@ -78,7 +72,7 @@ ms.locfileid: "33027442"
 ### <a name="bit-shift"></a>Desplazamiento de bits  
  Los operadores de desplazamiento de bits realizan manipulaciones de bits entre dos términos enteros de una expresión.  
   
-|Operador|Description|  
+|Operador|Descripción|  
 |--------------|-----------------|  
 |<\<|Realiza un desplazamiento aritmético a la izquierda en un patrón de bits.|  
 |>>|Realiza un desplazamiento aritmético a la derecha en un patrón de bits.|  

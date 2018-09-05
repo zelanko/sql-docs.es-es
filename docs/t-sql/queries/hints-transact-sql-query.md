@@ -1,7 +1,7 @@
 ---
 title: Sugerencias de consulta (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2018
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -58,12 +58,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 534251e03b3f2a76994a3138475dc0de35388fd4
-ms.sourcegitcommit: 046d29e700981594725af698a5e079922cf5dbe7
+ms.openlocfilehash: 450812006d18f143ec2b6083bf2bd0701ea4c252
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39331601"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240293"
 ---
 # <a name="hints-transact-sql---query"></a>Sugerencias (Transact-SQL): consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ ms.locfileid: "39331601"
  Impide que la consulta use un índice no agrupado de almacén de columnas optimizado para memoria. Si la consulta contiene la sugerencia de consulta para evitar el uso del índice de almacén de columnas y una sugerencia de índice para usar un índice de almacén de columnas, las sugerencias están en conflicto y la consulta devuelve un error.  
   
  MAX_GRANT_PERCENT = *percent*  
- Tamaño de concesión de memoria máximo en PERCENT. Se garantiza que la consulta no superará este límite. El límite real puede ser menor si la configuración de Resource Governor es inferior a este valor. Los valores válidos están comprendidos entre 0,0 y 100,0.  
+ Tamaño de concesión de memoria máximo en PERCENT. Se garantiza que la consulta no superará este límite. El límite real puede ser menor si la configuración de Resource Governor es inferior al valor especificado por esta sugerencia. Los valores válidos están comprendidos entre 0,0 y 100,0.  
   
 **Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -255,7 +255,7 @@ ms.locfileid: "39331601"
  Si no es posible realizar tal plan, el optimizador de consultas devuelve un error en lugar de diferir la detección de errores hasta la ejecución de la consulta. Las filas pueden contener columnas de longitud variable; el [!INCLUDE[ssDE](../../includes/ssde-md.md)] permite definir filas con un tamaño potencial máximo que supere la capacidad del [!INCLUDE[ssDE](../../includes/ssde-md.md)] para procesarlas. Normalmente, a pesar del tamaño potencial máximo, una aplicación almacena filas cuyo tamaño real se encuentra dentro de los límites que puede procesar el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Si el [!INCLUDE[ssDE](../../includes/ssde-md.md)] encuentra una fila demasiado larga, devuelve un error de ejecución.  
  
 <a name="use_hint"></a> USE HINT ( **'***hint_name***'** )    
- **Se aplica a**: se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) y a [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
  
  Proporciona una o varias sugerencias adicionales para el procesador de consultas según lo especificado mediante un nombre de sugerencia **entre comillas simples**.   
 
@@ -285,11 +285,17 @@ ms.locfileid: "39331601"
  Deshabilita los comentarios de concesión de memoria en modo por lotes. Para obtener más información, vea [Comentarios de concesión de memoria de modo de proceso por lotes](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).
 *  "DISABLE_BATCH_MODE_ADAPTIVE_JOINS"     
  Deshabilita las combinaciones adaptables del modo por lotes. Para obtener más información, vea [Combinaciones adaptables del modo por lotes](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
+*  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
+ Fuerza el comportamiento del optimizador de consultas en un nivel de consulta, como si la consulta se compilara con nivel de compatibilidad de base de datos *n*, donde *n* es un nivel de compatibilidad de base de datos compatible. Consulte [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) para ver una lista de los valores admitidos actualmente para *n*. **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].   
  
-> [!TIP]
-> Los nombres de sugerencia no distinguen mayúsculas de minúsculas.
+    > [!NOTE]
+    > La sugerencia QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n no invalida la configuración de la estimación de cardinalidad heredada o predeterminada, si se fuerza a través de la configuración con ámbito de base de datos, marca de seguimiento u otra sugerencia de consulta como QUERYTRACEON.   
+    > Esta sugerencia solo afecta al comportamiento del optimizador de consultas. No afecta a otras características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que pueden depender del [nivel de compatibilidad de base de datos](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md), como la disponibilidad de determinadas características de base de datos.   
   
   Puede consultar la lista de todos los nombres de USE HINT compatibles mediante la vista de administración dinámica [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).    
+
+> [!TIP]
+> Los nombres de sugerencia no distinguen mayúsculas de minúsculas.   
   
 > [!IMPORTANT] 
 > Algunas sugerencias USE HINT pueden entrar en conflicto con las marcas de seguimiento habilitadas a nivel global o de sesión, o con las opciones de configuración con ámbito de base de datos. En este caso, la sugerencia de nivel de consulta (USE HINT) siempre tiene prioridad. Si una sugerencia USE HINT entra en conflicto con otra sugerencia de consulta o una marca de seguimiento habilitada en el nivel de consulta (por ejemplo, mediante QUERYTRACEON), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generará un error al intentar ejecutar la consulta. 

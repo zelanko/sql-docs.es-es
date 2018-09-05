@@ -32,12 +32,12 @@ caps.latest.revision: 140
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ecf29c3e591bce67ef204ad8aabdb4eea84fa992
-ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
+ms.openlocfilehash: fb429009395a190380f2200dba7ccd3f6cda4c27
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39038142"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240273"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -365,7 +365,7 @@ RETURN;
  Los desencadenadores logon no admiten las transacciones distribuidas. Se devuelve el error 3969 cuando se activa un desencadenador logon que contiene una transacción distribuida.  
   
 ### <a name="disabling-a-logon-trigger"></a>Deshabilitar un desencadenador logon  
- Un desencadenador LOGON puede evitar la conexión a [!INCLUDE[ssDE](../../includes/ssde-md.md)] de todos los usuarios, incluidos los miembros del rol fijo de servidor **sysadmin** . Cuando el desencadenador LOGON evita que se realicen las conexiones, los miembros del rol fijo de servidor **sysadmin** pueden conectarse mediante la conexión de administrador dedicada o iniciando [!INCLUDE[ssDE](../../includes/ssde-md.md)] en modo de configuración mínima (-f). Para más información, consulte [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
+ Un desencadenador LOGON puede evitar la conexión a [!INCLUDE[ssDE](../../includes/ssde-md.md)] de todos los usuarios, incluidos los miembros del rol fijo de servidor **sysadmin** . Cuando el desencadenador LOGON evita que se realicen las conexiones, los miembros del rol fijo de servidor **sysadmin** pueden conectarse mediante la conexión de administrador dedicada o iniciando [!INCLUDE[ssDE](../../includes/ssde-md.md)] en modo de configuración mínima (-f). Para más información, consulte [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
 ## <a name="general-trigger-considerations"></a>Consideraciones generales sobre los desencadenadores  
   
@@ -558,7 +558,7 @@ END;
 ```  
   
 ### <a name="g-viewing-the-events-that-cause-a-trigger-to-fire"></a>G. Ver los eventos que hacen que se active un desencadenador  
- En el ejemplo siguiente se efectúa una consulta en las vistas de catálogo `sys.triggers` y `sys.trigger_events` para determinar qué eventos de lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)] hacen que se active el desencadenador `safety`. `safety` se ha creado en el ejemplo anterior.  
+ En el ejemplo siguiente se efectúa una consulta en las vistas de catálogo `sys.triggers` y `sys.trigger_events` para determinar qué eventos de lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)] hacen que se active el desencadenador `safety`. El desencadenador, `safety`, se crea en el ejemplo "D", encontrado más arriba.  
   
 ```sql  
 SELECT TE.*  

@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 659776929b9dc950ca8b8776eda47b12f921fe60
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e08bea1e070ff69fe1fe46f681a28024a54e62f4
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43069974"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240083"
 ---
 # <a name="columnstore-indexes-overview"></a>Introducción a los índices de almacén de columnas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -147,7 +147,7 @@ Cuando se crea una tabla con la instrucción `CREATE TABLE`, puede crearla como 
 |Crear una tabla como un almacén de columnas.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede crear la tabla como un índice de almacén de columnas agrupado. No es necesario crear primero una tabla de almacén de filas y, luego, convertirla en almacén de columnas.|  
 |Crear una tabla de memoria con un índice de almacén de columnas.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede crear una tabla optimizada para memoria con un índice de almacén de columnas. El índice de almacén de columnas también se puede agregar una vez creada la tabla mediante el uso de la sintaxis de `ALTER TABLE ADD INDEX`.|  
 |Convertir una tabla de almacén de filas en un almacén de columnas.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Convierta un árbol binario o un montón existentes en un almacén de columnas. Los ejemplos muestran cómo tratar los índices existentes, así como el nombre del índice, al realizar esta conversión.|  
-|Convertir una tabla de almacén de columnas en un almacén de filas.|[CREATE CLUSTERED INDEX &#40;Transact-SQL&#41; o DROP INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Habitualmente, esta conversión no es necesaria pero puede haber ocasiones en las que necesite realizarla. Los ejemplos muestran cómo convertir un almacén de columnas en un montón o un índice agrupado.|  
+|Convertir una tabla de almacén de columnas en un almacén de filas.|[CREATE CLUSTERED INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md#d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index) o [Volver a convertir una tabla de almacén de columnas en un montón de almacén de filas](../../t-sql/statements/create-columnstore-index-transact-sql.md#e-convert-a-columnstore-table-back-to-a-rowstore-heap) |Habitualmente, esta conversión no es necesaria pero puede haber ocasiones en las que necesite realizarla. Los ejemplos muestran cómo convertir un almacén de columnas en un montón o un índice agrupado.|  
 |Crear un índice de almacén de columnas en una tabla de almacén de filas.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Una tabla de almacén de filas puede tener un índice de almacén de columnas. Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], los índices de almacén de columnas pueden tener una condición de filtrado. En los ejemplos se usa la sintaxis básica.|  
 |Crear índices de rendimiento para análisis operativos.|[Introducción al almacén de columnas para el análisis operativo en tiempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|Se describe cómo crear índices de almacén de columnas y de árbol b complementarios para que las consultas OLTP usen los índices de árbol b y, las consultas de análisis, los índices de almacén de columnas.|  
 |Crear índices de almacén de columnas de rendimiento para el almacenamiento de datos.|[Índices de almacén de columnas para almacenamiento de datos](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Se describe cómo usar índices de árbol b en las tablas de almacén de columnas para crear consultas de almacenamiento de datos de rendimiento.|  

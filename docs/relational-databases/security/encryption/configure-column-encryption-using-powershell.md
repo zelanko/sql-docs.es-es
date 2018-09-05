@@ -10,16 +10,16 @@ ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ae62547a028def1e4f27fe167f68838a8a2b74b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d8b5d7dc2d8a3fd618adc83995e8b3722d3beea9
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43089920"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240253"
 ---
 # <a name="configure-column-encryption-using-powershell"></a>Configurar el cifrado de columna con PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ El cmdlet **Set-SqlColumnEncryption** admite dos enfoques para configurar el cif
 
 Con el enfoque sin conexión, las tablas de destino (y cualquier tabla relacionada con las tablas de destino, es decir, cualquier tabla con la que una tabla de destino tenga relaciones de clave externa) no están disponibles para escribir transacciones durante todo el tiempo que demore la operación. La semántica de restricciones de clave externa (**CHECK** o **NOCHECK**) siempre se conserva cuando se utiliza el enfoque sin conexión.
 
-Con el enfoque en línea (requiere el módulo SqlServer PowerShell de SSMS 21.x o una versión posterior), la operación de copiar y cifrar, descifrar o volver a cifrar los datos se realiza de forma incremental. Las aplicaciones pueden leer y escribir datos desde y hacia las tablas de destino a través de la operación de movimiento de datos, excepto en la última iteración, cuya duración está limitada por el parámetro **MaxDownTimeInSeconds** (que puede definir). Para detectar y procesar los cambios que las aplicaciones pueden hacer mientras se copian los datos, el cmdlet habilita el [seguimiento de cambios](../../track-changes/enable-and-disable-change-tracking-sql-server.md) en la base de datos de destino. Debido a esto, es probable que el enfoque en línea consuma más recursos en el lado servidor que el enfoque sin conexión. Es posible que la operación también demore mucho más con el enfoque en línea, especialmente si se ejecuta una carga de trabajo muy pesada en la base de datos. El enfoque en línea se puede usar para cifrar una tabla a la vez y la tabla debe tener una clave principal. De forma predeterminada, se vuelven a crear restricciones de clave externa con la opción **NOCHECK** para minimizar el impacto en las aplicaciones. Puede exigir la conservación de la semántica de restricciones de clave externa mediante la especificación de la opción **KeepCheckForeignKeyConstraints**.
+Con el enfoque en línea (requiere el módulo SqlServer de PowerShell 21.x o una versión posterior), la operación de copiar y cifrar, descifrar o volver a cifrar los datos se realiza de forma incremental. Las aplicaciones pueden leer y escribir datos desde y hacia las tablas de destino a través de la operación de movimiento de datos, excepto en la última iteración, cuya duración está limitada por el parámetro **MaxDownTimeInSeconds** (que puede definir). Para detectar y procesar los cambios que las aplicaciones pueden hacer mientras se copian los datos, el cmdlet habilita el [seguimiento de cambios](../../track-changes/enable-and-disable-change-tracking-sql-server.md) en la base de datos de destino. Debido a esto, es probable que el enfoque en línea consuma más recursos en el lado servidor que el enfoque sin conexión. Es posible que la operación también demore mucho más con el enfoque en línea, especialmente si se ejecuta una carga de trabajo muy pesada en la base de datos. El enfoque en línea se puede usar para cifrar una tabla a la vez y la tabla debe tener una clave principal. De forma predeterminada, se vuelven a crear restricciones de clave externa con la opción **NOCHECK** para minimizar el impacto en las aplicaciones. Puede exigir la conservación de la semántica de restricciones de clave externa mediante la especificación de la opción **KeepCheckForeignKeyConstraints**.
 
 A continuación, las directrices para elegir entre los enfoques sin conexión y en línea:
 

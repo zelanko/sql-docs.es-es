@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 34be09f068196ce51f44c47a02e36a9149ff17bf
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: a5be61888c34ef4931c65475921225198bef0091
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118303"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240033"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (independiente) y Machine Learning Server (independiente) en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,7 +41,7 @@ SQL Server 2016 solo es R. SQL Server 2017 admite R y Python. En la tabla siguie
 | Secuencias de comandos y ejemplos de Python | Al igual que con R, Python incluye conjuntos de datos integrados y secuencias de comandos. Encontrar los datos de revoscalepy en \Program files\Microsoft SQL Server\140\PYTHON_SERVER\lib\site-packages\revoscalepy\data\sample-data. |
 | Modelos previamente entrenados en R y Python | Modelos previamente entrenados se crean para casos de uso específicos y mantenidos por el equipo de ingeniería de ciencia de datos de Microsoft. Puede usar los modelos previamente entrenados como-es la puntuación de opiniones positivas y negativas en texto, o bien detectar características de imágenes, con nuevas entradas de datos que proporcione. Modelos previamente entrenados son compatibles y se pueden usar en un servidor independiente, pero no instalarlas a través del programa de instalación de SQL Server. Para obtener más información, consulte [instalar previamente entrenada modelos de aprendizaje automático en SQL Server](../install/sql-pretrained-models-install.md). |
 
-## <a name="use-cases"></a>Casos de uso
+## <a name="using-a-standalone-server"></a>Uso de un servidor independiente
 
 Los desarrolladores de R y Python suele elegir un servidor independiente para ir más allá de las restricciones de memoria y procesamiento de código abierto R y Python. Ejecutar en un servidor independiente de bibliotecas de R y Python pueden cargar y procesar grandes cantidades de datos en varios núcleos y agregar los resultados en una única salida consolidada. Funciones de alto rendimiento que están diseñadas para el escalado y utilidad: entrega de análisis predictivo, modelado estadístico, visualizaciones de datos y algoritmos en un producto de servidor comercial de aprendizaje de automático de vanguardia diseñada y compatibles con Microsoft.
 

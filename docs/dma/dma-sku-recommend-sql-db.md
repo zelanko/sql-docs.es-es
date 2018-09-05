@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 415de36195960c1a2fa60d3e5dd68168682028e0
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 84601b6a556df64d3708fd749af06be8e753048d
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152836"
+ms.locfileid: "43240153"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Identificar la SKU de base de datos SQL de Azure adecuada para la base de datos local
 
@@ -34,11 +34,14 @@ En este artículo se centra principalmente en la característica de recomendacio
 > [!NOTE] 
 > Esta funcionalidad está disponible actualmente solo a través de la interfaz de línea de comandos (CLI). Compatibilidad con esta característica a través de la interfaz de usuario DMA se agregará en una próxima versión.
 
+> [!IMPORTANT]
+> Recomendaciones de SKU de Azure SQL Database están disponibles actualmente para las migraciones de SQL Server 2016 o posterior.
+
 Las instrucciones siguientes ayudan a determinar las recomendaciones de SKU de base de datos de SQL Azure y aprovisionar las bases de datos asociadas en Azure mediante Data Migration Assistant.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Descargar Database Migration Assistant v4.0 o posterior y, a continuación, vuelva a instalarlo. Si ya tiene la herramienta instalado, cierre y vuelva a abrirlo y se le indicará que la herramienta de actualización.
+Descargar Database Migration Assistant v4.0 o posterior y, a continuación, vuelva a instalarlo. Si ya tiene la herramienta instalado, cierre y vuelva a abrirlo y le pedirá que la herramienta de actualización.
 
 ## <a name="collect-performance-counters"></a>Recopilar contadores de rendimiento
 
@@ -144,7 +147,7 @@ Sigue una descripción de cada columna.
 - **ExclusionReasons** : este valor está en blanco si se recomienda un nivel. Para cada nivel que no se recomienda, proporcionamos los motivos por qué no ha sido seleccionada.
 - **AppliedRules** -una notación breve de las reglas que se aplicaron.
 
-Tenga en cuenta que el valor recomendado es la SKU mínima necesaria para que las consultas ejecutar en Azure con una tasa de éxito similar a las bases de datos de forma local. Por ejemplo, si la SKU mínima recomendada es S4 del nivel estándar, a continuación, elegir S3 o por debajo se generan consultas en tiempo de espera o no se pueden ejecutar.
+El valor recomendado es la SKU mínima necesaria para que las consultas ejecutar en Azure con una tasa de éxito similar a las bases de datos de forma local. Por ejemplo, si la SKU mínima recomendada es S4 del nivel estándar, a continuación, elegir S3 o por debajo se generan consultas en tiempo de espera o no se pueden ejecutar.
 
 El archivo HTML contiene esta información en un formato gráfico. Puede usar el archivo HTML para introducir información de suscripción de Azure, elija el plan de tarifa, nivel y el tamaño máximo de datos de proceso para las bases de datos y generar un script para aprovisionar las bases de datos. Este script se puede ejecutar con PowerShell.
 

@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc9531e174c95f43d93f0b041094af842c2487a4
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9c8a7aeb998b9a79faa644a3d371bb5f4f98c8f5
+ms.sourcegitcommit: 82bb56269faf3fb5dd1420418e32a0a6476780cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43106265"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43694698"
 ---
 # <a name="sysserverprincipals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "43106265"
 |**default_language_name**|**sysname**|Lenguaje predeterminado para esta entidad de seguridad.|  
 |**credential_id**|**int**|Id. de una credencial asociada a esta entidad de seguridad. Si no se asocia ninguna credencial a esta entidad de seguridad, el valor de credential_id será NULL.|  
 |**owning_principal_id**|**int**|El **principal_id** del propietario de un rol de servidor. Es NULL si la entidad de seguridad no es un rol fijo de servidor.|  
-|**is_fixed_role**|**bit**|Devuelve 1 si la entidad de seguridad es uno de los roles fijos de servidor. Para obtener más información, vea [Roles de nivel de servidor](../../relational-databases/security/authentication-access/server-level-roles.md).|  
+|**is_fixed_role**|**bit**|Devuelve 1 si la entidad de seguridad es uno de los roles de servidor integrado con permisos fijos. Para obtener más información, vea [Roles de nivel de servidor](../../relational-databases/security/authentication-access/server-level-roles.md).|  
   
 ## <a name="permissions"></a>Permisos  
  Cualquier inicio de sesión puede ver su propio nombre de inicio de sesión, los inicios de sesión del sistema y los roles fijos de servidor. Para ver otros inicios de sesión, se requiere ALTER ANY LOGIN o un permiso en el inicio de sesión. Para ver los roles de servidor definidos por el usuario, se requiere ALTER ANY SERVER ROLE o la pertenencia al rol.  
@@ -61,7 +61,7 @@ ms.locfileid: "43106265"
  La consulta siguiente enumera los permisos que se otorgan o deniegan específicamente a las entidades de seguridad de servidor.  
   
 > [!IMPORTANT]  
->  Los permisos de roles fijos de servidor no aparecen en sys.server_permissions. Por tanto, es posible que las entidades de seguridad de servidor tengan permisos adicionales que no aparezcan aquí.  
+>  Los permisos de los roles fijos de servidor (que no sea público) no aparecen en sys.server_permissions. Por tanto, es posible que las entidades de seguridad de servidor tengan permisos adicionales que no aparezcan aquí.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

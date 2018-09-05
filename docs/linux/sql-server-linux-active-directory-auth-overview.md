@@ -13,12 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 9d55275269ee09daf933521330b093a8d98411fd
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c1d6116509a87fae2e91307f06f527910c204510
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087117"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381173"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Autenticación de Active Directory para SQL Server en Linux
 
@@ -52,7 +52,6 @@ Se proporcionan los detalles acerca de cómo configurar la autenticación de AD 
 ## <a name="known-issues"></a>Problemas conocidos
 
 - En este momento, el único método de autenticación admitido para el extremo de reflejo de la base de datos es el certificado. Método de autenticación de WINDOWS se habilitará en una versión futura.
-- Herramientas de AD de otros fabricantes como Centrify, Powerbroker, y no se admiten Vintela.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

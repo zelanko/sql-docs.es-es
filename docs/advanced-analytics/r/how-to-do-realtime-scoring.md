@@ -1,253 +1,112 @@
 ---
-title: Cómo realizar la puntuación en tiempo real o la puntuación nativa en SQL Server Machine Learning | Microsoft Docs
+title: Cómo generar predicciones con modelos de aprendizaje automático de SQL Server y previsiones | Microsoft Docs
+description: Use rxPredict o sp_rxPredict para puntuar en tiempo real o PREDECIR Transact-SQL para la puntuación para las predicciones nativo y la previsión de R y Pythin en SQL Server Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2018
+ms.date: 08/30/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: dfea308f268d666ce070c21a7dd9afa513f95406
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: 09b94de43aaba54dced6d300587c0492b00c8f3d
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40393966"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348216"
 ---
-# <a name="how-to-perform-real-time-scoring-or-native-scoring-in-sql-server"></a>Cómo realizar la puntuación en tiempo real o la puntuación nativa en SQL Server
+# <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Cómo generar predicciones con modelos de aprendizaje automático de SQL Server y previsiones
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artículo se muestran dos enfoques en SQL Server para predecir los resultados en casi en tiempo real con modelos previamente entrenados escritos en R. Puntuación en tiempo real tanto puntuación nativa están diseñados para permitir el uso de un modelo de machine learning sin tener que instalar R. Proporciona un modelo previamente entrenado en un formato compatible con - guardado en una base de datos de SQL Server: puede usar técnicas de acceso a datos estándar para generar rápidamente las puntuaciones de predicción en nuevas entradas.
+Con un modelo existente para prever o predecir los resultados de las nuevas entradas de datos es una tarea esencial en machine learning. En este artículo se enumera los métodos para generar predicciones en SQL Server. Entre los métodos se ejecutan las metodologías de procesamiento interno para las predicciones de alta velocidad, donde la velocidad se basa en reducciones incrementales de las dependencias de tiempo. Menos dependencias significan predicciones más rápidas.
 
-## <a name="choose-a-scoring-method"></a>Elija un método de puntuación
+Mediante la infraestructura de procesamiento interno (puntuación en tiempo real o nativo) incluye requisitos de la biblioteca. Las funciones deben ser de las bibliotecas de Microsoft. Código de R o Python llamar a funciones de código abierto o de terceros no se admite en las extensiones de CLR o C++.
 
-Se admiten las siguientes opciones para la predicción por lotes rápidamente:
+En la tabla siguiente se resume los marcos de puntuación para la previsión y predicciones. 
 
-+ **Puntuación nativa**: la función PREDICT de Transact-SQL en Azure SQL Database, SQL Server 2017 para Linux y Windows de SQL Server 2017.
-+ **Puntuación en tiempo real**: con el sp\_rxPredict el procedimiento almacenado en SQL Server 2016 o SQL Server 2017 (solo Windows).
+| Metodología           | Interfaz         | Requisitos de la biblioteca | Velocidades de procesamiento |
+|-----------------------|-------------------|----------------------|----------------------|
+| Marco de extensibilidad | R: [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>Python: [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Ninguno. Los modelos se pueden basar en cualquier función de R o Python | Cientos de milisegundos. <br/>Carga de un entorno en tiempo de ejecución tiene un costo fijo, calcular el promedio de tres a seis cientos de milisegundos, antes de que se usa para puntuar nuevos datos. |
+| Extensión CLR de puntuación en tiempo real | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) en un modelo serializado | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | Decenas de milisegundos por término medio. |
+| Extensión de C++ puntuación nativa| [Función T-SQL PREDECIR](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) en un modelo serializado | R: RevoScaleR <br/>Python: revoscalepy | Menos de 20 milisegundos, en promedio. | 
 
-> [!NOTE]
-> Se recomienda usar la función PREDICT en SQL Server 2017.
-> Para usar sp\_rxPredict requiere que habilite la integración de SQLCLR. Antes de habilitar esta opción, tenga en cuenta las implicaciones de seguridad.
+Velocidad de procesamiento y no la sustancia de la salida es la característica distintiva. La salida con puntuación suponiendo que las mismas funciones y entradas, no debería variar según el enfoque que utilice.
 
-El proceso general de preparar el modelo y, a continuación, generar puntuaciones es similar:
+El modelo debe creado mediante una función admitida y luego se serializa en una secuencia de bytes sin procesar guardados en disco o almacenados en formato binario en una base de datos. Con Transact-SQL o un procedimiento almacenado, puede cargar y usar un modelo binario sin la sobrecarga de un tiempo de ejecución de lenguaje R o Python, resultante en un tiempo más rápido hasta su finalización al generar puntuaciones de predicción en nuevas entradas.
+
+La importancia de las extensiones de CLR y C++ está cerca del propio motor de base de datos. El lenguaje nativo del motor de base de datos es de C++, lo que significa que las extensiones escritas en C++ que se ejecute con menos dependencias. En cambio, las extensiones CLR dependen de .NET Core. 
+
+Como cabría esperar, compatibilidad con la plataforma se ve afectado por estos entornos de tiempo de ejecución. Extensiones de motor de base de datos nativa ejecutan desde cualquier lugar la base de datos relacional es compatible: Windows, Linux, Azure. Extensiones CLR con el requisito de .NET Core solo está actualmente Windows.
+
+## <a name="scoring-overview"></a>Información general de puntuación
+
+_Puntuación_ es un proceso en dos pasos. En primer lugar, especifique un modelo ya entrenado para cargar desde una tabla. En segundo lugar, pase nuevos datos de entrada en la función para generar valores de predicción (o _puntuaciones_). La entrada a menudo es una consulta Transact-SQL, y devuelve filas tabulares o únicas. Puede elegir como resultado un valor de columna única que representa una probabilidad, o pueden generar varios valores, como un intervalo de confianza, error u otro complemento útil para la predicción.
+
+Cómo dar un paso hacer una copia, el proceso general de la preparación del modelo y, a continuación, generar puntuaciones puede resumirse así:
 
 1. Crear un modelo usando un algoritmo compatible.
 2. Serializa el modelo utilizando un formato binario especial.
 3. Realice el modelo disponible en SQL Server. Normalmente, esto significa que almacenar el modelo serializado en una tabla de SQL Server.
-4. Llame a la función o procedimiento almacenado y pasar el modelo y datos de entrada.
+4. Llame a la función o procedimiento almacenado, especificando el modelo y datos de entrada como parámetros.
 
-### <a name="requirements"></a>Requisitos
+Cuando la entrada incluye muchas filas de datos, es normalmente más rápido insertar los valores de predicción en una tabla como parte del proceso de puntuación.  Generar una puntuación única es más habitual en un escenario donde obtener los valores de entrada de una solicitud de formulario o de usuario y devolver la puntuación a una aplicación cliente. Para mejorar el rendimiento al generar puntuaciones sucesivas, SQL Server puede almacenar en caché el modelo para que se puede volver a cargar en la memoria.
 
-+ La función PREDICT está disponible en todas las ediciones de SQL Server 2017 y está habilitada de forma predeterminada. No es necesario instalar R o habilitar características adicionales.
+## <a name="compare-methods"></a>Comparación de métodos
 
-+ Si usa sp\_rxPredict, son necesarios algunos pasos adicionales. Consulte [habilitar puntuar en tiempo real](#bkmk_enableRtScoring).
+Para conservar la integridad de los procesos de motor de base de datos principales, compatibilidad con R y Python está habilitado en una arquitectura dual que aísla el procesamiento de lenguaje de procesamiento de RDBMS. A partir de SQL Server 2016, Microsoft agregó un marco de extensibilidad que permite que los scripts de R que se ejecutará desde T-SQL. En SQL Server 2017, se agregó integración de Python. 
 
-+ En este momento, sólo RevoScaleR y MicrosoftML pueden crear modelos compatibles. Tipos de modelo adicionales están disponibles en el futuro. Para obtener la lista de algoritmos admitidos actualmente, consulte [puntuar en tiempo real](../real-time-scoring.md).
+El marco de extensibilidad admite cualquier operación que podría realizar en R o Python, comprendido entre funciones sencillas y entrenamiento complejos modelos de machine learning. Sin embargo, la arquitectura de doble proceso requiere invocar un proceso externo de R o Python para todas las llamadas, independientemente de la complejidad de la operación. Cuando la carga de trabajo implica cargar un modelo previamente entrenado de una tabla y la puntuación en el mismo en los datos ya incluidos en SQL Server, la sobrecarga de la llamada a los procesos externos agrega latencia a los que puede ser inaceptable en determinadas circunstancias. Por ejemplo, la detección de fraudes requiere puntuación rápida para que sea relevante.
 
-### <a name="serialization-and-storage"></a>Almacenamiento y serialización
+Para aumentar las velocidades de puntuación para escenarios como la detección de fraudes, SQL Server agrega las bibliotecas integradas de puntuación como extensiones de C++ y CLR que eliminan la sobrecarga de procesos de inicio de R y Python.
+
+[**Puntuación en tiempo real** ](../real-time-scoring.md) fue la primera solución para la puntuación de alto rendimiento. Se introdujo en las versiones anteriores de SQL Server 2017 y las actualizaciones posteriores a SQL Server 2016, puntuación en tiempo real se basa en las bibliotecas CLR que representan R y Python de procesamiento a través de funciones controladas por Microsoft en RevoScaleR, MicrosoftML (R), revoscalepy, y microsoftml (Python). Bibliotecas CLR se invocan mediante el **sp_rxPredict** procedimiento almacenado que genera las puntuaciones desde cualquier tipo de modelo admitidos, sin llamar en tiempo de ejecución de R o Python.
+
+[**Puntuación nativa** ](../sql-native-scoring.md) es una característica de SQL Server 2017, implementada como una biblioteca de C++ nativa, pero solo para modelos de RevoScaleR y revoscalepy. Es el enfoque más rápido y más seguro, pero es compatible con un conjunto más pequeño de funciones en relación con otras metodologías.
+
+## <a name="choose-a-scoring-method"></a>Elija un método de puntuación
+
+Requisitos de la plataforma a menudo determinan qué puntuación metodología que se va a usar.
+
+| Plataforma y versión del producto | Metodología |
+|------------------------------|-------------|
+| SQL Server 2017 en Windows, SQL Server 2017 para Linux y Azure SQL Database | **Puntuación nativa** con T-SQL PREDECIR |
+| SQL Server 2017 (solo Windows), SQL Server 2016 R Services SP1 o superior | **Puntuación en tiempo real** con sp\_rxPredict procedimiento almacenado |
+
+Se recomienda la puntuación nativa con la función PREDICT. Con sp\_rxPredict requiere que habilite la integración de SQLCLR. Antes de habilitar esta opción, tenga en cuenta las implicaciones de seguridad.
+
+## <a name="serialization-and-storage"></a>Almacenamiento y serialización
 
 Para usar un modelo con cualquiera de las opciones rápidas de puntuación, guarde el modelo con un formato serializado especial, que se ha optimizado para el tamaño y la eficacia de puntuación.
 
-+ Llame a `rxSerializeModel` para escribir un modelo compatible para la **raw** formato.
-+ Llame a `rxUnserializeModel` para reconstituir el modelo para su uso en otro código de R, o para ver el modelo.
-
-Para obtener más información, consulte [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel).
++ Llame a [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) para escribir un modelo compatible para la **raw** formato.
++ Llame a [rxUnserializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)' para reconstituir el modelo para su uso en otro código de R, o para ver el modelo.
 
 **Uso de SQL**
 
-Desde el código SQL, puede entrenar el modelo mediante `sp_execute_external_script`e insertar directamente los modelos entrenados en una tabla, en una columna de tipo **varbinary (max)**.
-
-Para obtener un ejemplo simple, vea [en este tutorial](../tutorials/rtsql-create-a-predictive-model-r.md)
+Desde el código SQL, puede entrenar el modelo mediante [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)e insertar directamente los modelos entrenados en una tabla, en una columna de tipo **varbinary (max)**. Para obtener un ejemplo simple, vea [crear un modelo preditive en R](../tutorials/rtsql-create-a-predictive-model-r.md)
 
 **Uso de R**
 
-Desde el código de R, hay dos maneras de guardar el modelo en una tabla:
-
-+ Llame a la `rxWriteObject` función desde el paquete RevoScaleR, para escribir el modelo directamente en la base de datos.
-
-  El `rxWriteObject()` función puede recuperar objetos de R desde un origen de datos ODBC, como SQL Server, o escribir objetos en SQL Server. La API se modela después de un almacén de pares clave-valor simple.
+Desde el código de R, llame a la [rxWriteObject](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxwriteobject) función del paquete RevoScaleR para escribir el modelo directamente en la base de datos. El **rxWriteObject()** función puede recuperar objetos de R desde un origen de datos ODBC, como SQL Server, o escribir objetos en SQL Server. La API se modela después de un almacén de pares clave-valor simple.
   
-  Si usa esta función, asegúrese de serializar el modelo mediante la nueva función de serialización en primer lugar. A continuación, establezca el *serializar* argumento en `rxWriteObject` en FALSE para evitar repetir el paso de serialización.
+Si usa esta función, asegúrese de serializar el modelo mediante [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) primero. A continuación, establezca el *serializar* argumento en **rxWriteObject** en FALSE para evitar repetir el paso de serialización.
 
-+ Puede también guardar el modelo en formato sin procesar en un archivo y, a continuación, se leen desde el archivo en SQL Server. Esta opción puede ser útil si va a mover o copiar modelos entre entornos.
+Serializar un modelo a un formato binario es útil, pero no es necesario si está puntuando predicciones que usan R y Python ejecuta el entorno de tiempo en el marco de extensibilidad. Puede guardar un modelo en formato de bytes sin procesar en un archivo y, a continuación, se leen desde el archivo en SQL Server. Esta opción puede ser útil si va a mover o copiar modelos entre entornos.
 
-## <a name="native-scoring-with-predict"></a>Puntuación con PREDICT nativa
+## <a name="scoring-in-related-products"></a>Puntuación en productos relacionados
 
-En este ejemplo, crear un modelo y, a continuación, llame a la función de predicción en tiempo real desde T-SQL.
-
-### <a name="step-1-prepare-and-save-the-model"></a>Paso 1. Preparar y guardar el modelo
-
-Ejecute el código siguiente para crear la base de datos de ejemplo y las tablas necesarias.
-
-```SQL
-CREATE DATABASE NativeScoringTest;
-GO
-USE NativeScoringTest;
-GO
-DROP TABLE IF EXISTS iris_rx_data;
-GO
-CREATE TABLE iris_rx_data (
-  "Sepal.Length" float not null, "Sepal.Width" float not null
-  , "Petal.Length" float not null, "Petal.Width" float not null
-  , "Species" varchar(100) null
-);
-GO
-```
-
-Use la siguiente instrucción para rellenar la tabla de datos con los datos de la **iris** conjunto de datos.
-
-```SQL
-INSERT INTO iris_rx_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width" , "Species")
-EXECUTE sp_execute_external_script
-  @language = N'R'
-  , @script = N'iris_data <- iris;'
-  , @input_data_1 = N''
-  , @output_data_1_name = N'iris_data';
-GO
-```
-
-Ahora, cree una tabla para almacenar los modelos.
-
-```SQL
-DROP TABLE IF EXISTS ml_models;
-GO
-CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
-  , model_version nvarchar(100) not null
-  , native_model_object varbinary(max) not null);
-GO
-```
-
-El código siguiente crea un modelo basado en el **iris** conjunto de datos y lo guarda en la tabla denominada **modelos**.
-
-```SQL
-DECLARE @model varbinary(max);
-EXECUTE sp_execute_external_script
-  @language = N'R'
-  , @script = N'
-    iris.sub <- c(sample(1:50, 25), sample(51:100, 25), sample(101:150, 25))
-    iris.dtree <- rxDTree(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data = iris[iris.sub, ])
-    model <- rxSerializeModel(iris.dtree, realtimeScoringOnly = TRUE)
-    '
-  , @params = N'@model varbinary(max) OUTPUT'
-  , @model = @model OUTPUT
-  INSERT [dbo].[ml_models]([model_name], [model_version], [native_model_object])
-  VALUES('iris.dtree','v1', @model) ;
-```
-
-> [!NOTE] 
-> Asegúrese de usar el [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) función de RevoScaleR para guardar el modelo. El estándar de R `serialize` función no puede generar el formato requerido.
-
-Puede ejecutar una instrucción como la siguiente para ver el modelo almacenado en formato binario:
-
-```SQL
-SELECT *, datalength(native_model_object)/1024. as model_size_kb
-FROM ml_models;
-```
-
-### <a name="step-2-run-predict-on-the-model"></a>Paso 2. Ejecutar PREDICT en el modelo
-
-La siguiente instrucción de PREDICCIÓN simple Obtiene una clasificación desde el modelo de árbol de decisión mediante el **puntuación nativa** función. Predice la especie de iris en función de los atributos proporcionados, la longitud del pétalo y ancho.
-
-```SQL
-DECLARE @model varbinary(max) = (
-  SELECT native_model_object
-  FROM ml_models
-  WHERE model_name = 'iris.dtree'
-  AND model_version = 'v1');
-SELECT d.*, p.*
-  FROM PREDICT(MODEL = @model, DATA = dbo.iris_rx_data as d)
-  WITH(setosa_Pred float, versicolor_Pred float, virginica_Pred float) as p;
-go
-```
-
-Si se produce un error, "Error durante la ejecución de la función PREDICT. Modelo está dañado o no válido", normalmente significa que la consulta no devolvió un modelo. Compruebe si ha escrito el nombre del modelo correctamente, o si la tabla de modelos está vacía.
-
-> [!NOTE]
-> Dado que las columnas y valores devuelven por **PREDICT** puede variar por tipo de modelo, debe definir el esquema de los datos devueltos mediante el uso de un **WITH** cláusula.
-
-## <a name="real-time-scoring-with-sprxpredict"></a>Puntuación con sp_rxPredict en tiempo real
-
-En esta sección se describe los pasos necesarios para configurar **en tiempo real** predicción y proporciona un ejemplo de cómo llamar a la función desde T-SQL.
-
-### <a name ="bkmk_enableRtScoring"></a> Paso 1. Habilitar el procedimiento de puntuación en tiempo real
-
-Debe habilitar esta característica para cada base de datos que desea usar para la puntuación. El administrador del servidor debe ejecutar la utilidad de línea de comandos, RegisterRExt.exe, que se incluye con el paquete RevoScaleR.
-
-> [!NOTE]
-> Para puntuar en tiempo real para que funcione, la funcionalidad de CLR de SQL debe habilitarse en la instancia; Además, la base de datos debe estar marcado como de confianza. Al ejecutar el script, estas acciones se realizan automáticamente. Sin embargo, tenga en cuenta las implicaciones de seguridad adicional antes de hacer esto!
-
-1. Abra un símbolo del sistema con privilegios elevados y vaya a la carpeta donde se encuentra RegisterRExt.exe. La siguiente ruta de acceso puede usarse en una instalación predeterminada:
-    
-    `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\`
-
-2. Ejecute el siguiente comando, sustituyendo el nombre de la instancia y la base de datos de destino donde desea habilitar los procedimientos almacenados extendidos:
-
-    `RegisterRExt.exe /installRts [/instance:name] /database:databasename`
-
-    Por ejemplo, para agregar el procedimiento almacenado extendido a la base de datos CLRPredict en la instancia predeterminada, escriba:
-
-    `RegisterRExt.exe /installRts /database:CLRPRedict`
-
-    El nombre de instancia es opcional si se encuentra la base de datos en la instancia predeterminada. Si usa una instancia con nombre, debe especificar el nombre de instancia.
-
-3. RegisterRExt.exe crea los siguientes objetos:
-
-    + Ensamblados de confianza
-    + El procedimiento almacenado `sp_rxPredict`
-    + Un nuevo rol de base de datos, `rxpredict_users`. El Administrador de base de datos puede usar esta función para conceder permiso a los usuarios que utilizan la funcionalidad de puntuación en tiempo real.
-
-4. Agregar los usuarios que necesitan para ejecutar `sp_rxPredict` al nuevo rol.
-
-> [!NOTE]
-> 
-> En SQL Server 2017, las medidas de seguridad adicionales están en vigor para evitar problemas con la integración CLR. Estas medidas imponen restricciones adicionales sobre el uso de este procedimiento almacenado también. 
-
-### <a name="step-2-prepare-and-save-the-model"></a>Paso 2. Preparar y guardar el modelo
-
-El formato binario requerido por el sp\_rxPredict es el mismo que el formato necesario para usar la función PREDICT. Por lo tanto, en el código de R, incluya una llamada a [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)y no olvide especificar `realtimeScoringOnly = TRUE`, como en este ejemplo:
-
-```R
-model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
-```
-
-### <a name="step-3-call-sprxpredict"></a>Paso 3. Llamada sp_rxPredict
-
-Llamar a sp\_rxPredict como haría con cualquier otro procedimiento almacenado. En la versión actual, el procedimiento almacenado solo acepta dos parámetros:  _\@modelo_ para el modelo en formato binario, y  _\@inputData_ para que los datos que se va a usar para determinar la puntuación, se definen como una consulta SQL válida.
-
-Dado que el formato binario es el mismo que se usa la función de PREDICCIÓN, puede usar la tabla de datos y modelos del ejemplo anterior.
-
-```SQL
-DECLARE @irismodel varbinary(max)
-SELECT @irismodel = [native_model_object] from [ml_models]
-WHERE model_name = 'iris.dtree' 
-AND model_version = 'v1''
-
-EXEC sp_rxPredict
-@model = @irismodel,
-@inputData = N'SELECT * FROM iris_rx_data'
-```
-
-> [!NOTE]
-> 
-> La llamada a sp\_rxPredict se produce un error si los datos de entrada para la puntuación no incluyen columnas que coinciden con los requisitos del modelo. Actualmente, se admiten solo los siguientes tipos de datos. NET: double, float, short, ushort, long, ulong y cadena.
-> 
-> Por lo tanto, es posible que deba filtrar los tipos no compatibles en los datos de entrada antes de usarlo para puntuar en tiempo real.
-> 
-> Para obtener información acerca de los correspondientes tipos SQL, vea [asignación de tipos de CLR de SQL](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) o [asignación de datos de parámetros CLR](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data).
-
-## <a name="disable-real-time-scoring"></a>Deshabilitar la puntuación en tiempo real
-
-Para deshabilitar la funcionalidad de puntuación en tiempo real, abra un símbolo del sistema con privilegios elevados y ejecute el siguiente comando: `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
-
-## <a name="real-time-scoring-in-other-microsoft-product"></a>Puntuación en tiempo real en otro producto de Microsoft
-
-Si usa el servidor independiente o un servidor de Microsoft Machine Learning en lugar de análisis en bases de datos de SQL Server, tiene otras opciones además de procedimientos almacenados y funciones de Transact-SQL para generar predicciones.
-
-El servidor independiente y el servidor de Machine Learning admiten el concepto de un *servicio web* para la implementación de código. Puede agrupar un R o Python modelo previamente entrenado como un servicio web, que se llama en tiempo de ejecución para evaluar las nuevas entradas de datos. Para más información, vea estos artículos:
+Si usas el [servidor independiente](r-server-standalone.md) o un [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), tiene otras opciones además de procedimientos almacenados y funciones de Transact-SQL para generar predicciones rápidamente. El servidor independiente y el servidor de Machine Learning admiten el concepto de un *servicio web* para la implementación de código. Puede agrupar un R o Python modelo previamente entrenado como un servicio web, que se llama en tiempo de ejecución para evaluar las nuevas entradas de datos. Para más información, vea estos artículos:
 
 + [¿Cuáles son los servicios web en Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
 + [¿Qué es la puesta en marcha?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
 + [Implementar un modelo de Python como un servicio web con Azure ml-model-management-sdk](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [Publicar un modelo en tiempo real o un bloque de código de R como un servicio web nuevo](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [paquete de mrsdeploy para R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)
+
+
+## <a name="see-also"></a>Vea también
+
++ [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)  
++ [rxRealTimeScoring](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxrealtimescoring)
++ [SP-rxPredict](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)
++ [PREDECIR TRANSACT-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)

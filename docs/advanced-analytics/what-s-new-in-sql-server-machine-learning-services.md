@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8d3dc4c730ea9c7c9ba0126a50ed4bb8129efc9c
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: f01177114dd175767652a9bbd28e15afc3ce812e
+ms.sourcegitcommit: c86335a432e109322d718a13c37ff4b948c39d2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152585"
+ms.locfileid: "43193031"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novedades de SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,21 @@ Capacidades de aprendizaje automático se agregan a SQL Server en cada versión 
 
 Esta versión agrega [compatibilidad con Python y algoritmos de aprendizaje automático de líderes del sector](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Cambia para reflejar el nuevo ámbito, SQL Server 2017 marca la introducción de [SQL Server Machine Learning Services (In-Database)](what-is-sql-server-machine-learning.md), con compatibilidad con lenguaje Python y R. 
 
-Esta versión también introducida [SQL Server Machine Learning Server (independiente)](r/r-server-standalone.md), totalmente independiente de SQL Server, para las cargas de trabajo de R y Python que se desean ejecutar en un sistema dedicado. Con el servidor independiente, puede distribuir y escalar soluciones de R o Python sin usar SQL Server.
+### <a name="r-enhancements"></a>Mejoras de R
+
+El componente de R de Machine Learning Services de SQL Server 2017 es la próxima generación de SQL Server 2016 R Services, con las versiones actualizadas de R base, RevoScaler y otros paquetes.
+
+Las nuevas capacidades para R incluyen [ **administración de paquetes**](r/install-additional-r-packages-on-sql-server.md), destacan los siguientes aspectos: 
+
++ Roles de base de datos ayudan a los DBA administrar paquetes y asignar permisos para la instalación del paquete.
++ [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) ayuda a los DBA administrar paquetes en el lenguaje T-SQL que ya conoce.
++ [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md) funciones ayudará a instalar, quitar o enumerar los paquetes que pertenecen a los usuarios. Para obtener más información, consulte [paquetes de cómo usar las funciones de RevoScaleR para buscar o instalar R en SQL Server](r/use-revoscaler-to-manage-r-packages.md).
+
+### <a name="r-libraries"></a>Bibliotecas de R
+
+| Paquete | Descripción |
+|---------|-------------|
+| [**MicrosoftML**](using-the-microsoftml-package.md) | En esta versión, MicrosoftML se incluye en una instalación de R de forma predeterminada, lo que elimina el paso de actualización necesario en SQL Server 2016 R Services anterior. MicrosoftML proporciona transformaciones de datos que se pueden escalar o ejecutar en contextos de cálculo remotos y los algoritmos de aprendizaje de automático de última generación. Los algoritmos incluyen regresión logística, árboles de decisiones rápidos y bosques de decisión, regresión lineal y redes neurales profundas personalizables.  |
 
 ### <a name="python-integration-for-in-database-analytics"></a>Integración de Python para realizar análisis en bases de datos
 
@@ -39,16 +53,13 @@ Puede usar el T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) realice 
 [**revoscalepy**](python/what-is-revoscalepy.md)| Equivalente de Python de RevoScaleR. Puede crear modelos de Python para regresiones logísticas y lineales, árboles de decisión, árboles impulsados y bosques aleatorios, todos los que se pueden paralelizar y es capaces de que se ejecuten en contextos de cálculo remoto. Este paquete es compatible con el uso de varios orígenes de datos y contextos de cálculo remoto. El desarrollador o científico de datos puede ejecutar código de Python en un servidor SQL remoto, para explorar datos o crear modelos sin mover datos. |
 |[**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) |Equivalente de Python del paquete MicrosoftML R. |
 
-### <a name="r-libraries"></a>Bibliotecas de R
-
-| Paquete | Descripción |
-|---------|-------------|
-| [**MicrosoftML (R)**](using-the-microsoftml-package.md) | Algoritmos de aprendizaje automático de última generación y transformación de datos que puede ser remoto ha escalado ni se ejecutarán en contextos de cálculo. Los algoritmos incluyen regresión logística, árboles de decisiones rápidos y bosques de decisión, regresión lineal y redes neurales profundas personalizables.  |
-| [**Administración de paquetes de R**](r/install-additional-r-packages-on-sql-server.md) | Mejora en esta versión, destacan los siguientes aspectos: base de datos para administrar paquetes y asignar permisos para instalar paquetes, el DBA [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) instrucción T-SQL para ayudar a los DBA administrar los paquetes sin necesidad de conocer R y un amplio conjunto de funciones de R en [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md) ayudar a instalar, quitar o enumerar los paquetes que pertenecen a los usuarios. |
-
 ### <a name="pre-trained-models"></a>Modelos entrenados previamente
 
 [**Modelos previamente entrenados** ](install/sql-pretrained-models-install.md) están disponibles para Python y R. usan estos modelos de reconocimiento de imágenes y análisis de opiniones positivas y negativas, para generar las predicciones con sus propios datos. 
+
+### <a name="standalone-server-as-a-shared-feature-in-sql-server-setup"></a>Servidor independiente como una característica compartida en el programa de instalación de SQL Server
+
+Esta versión también agrega [SQL Server Machine Learning Server (independiente)](r/r-server-standalone.md), un servidor de ciencia de datos totalmente independiente, que admiten el análisis predictivo y estadística en R y Python. Como con R Services, este servidor es la próxima versión de SQL Server 2016 R Server (independiente). Con el servidor independiente, puede distribuir y escalar soluciones de R o Python sin dependencias en SQL Server.
 
 
 ## <a name="new-in-sql-server-2016"></a>Novedades de SQL Server 2016

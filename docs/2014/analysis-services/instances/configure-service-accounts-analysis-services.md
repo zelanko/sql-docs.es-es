@@ -19,12 +19,12 @@ caps.latest.revision: 52
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 19512299b7eacf0e768ef2a53bd867f05d5cc6d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 12c58fcc3e844e820dbea02e93b52854dc25f05f
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206545"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348366"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurar las cuentas de servicio (Analysis Services)
   El aprovisionamiento de cuentas para todo un producto se documenta en [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), un tema que contiene gran cantidad de información sobre las cuentas de servicio de todos los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluido [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Consulte ese tema para obtener información sobre los tipos de cuenta válidos, los privilegios de Windows que se asignan durante la instalación, los permisos del sistema de archivos, los permisos del Registro, etc.  
@@ -60,7 +60,7 @@ ms.locfileid: "37206545"
  El único miembro del grupo es el SID por servicio. Junto a este se encuentra la cuenta de inicio de sesión. El nombre de la cuenta de inicio de sesión es estético: su función es dar contexto al SID por servicio. Si posteriormente cambia la cuenta de inicio de sesión y, a continuación, vuelve a esta página, observará que el grupo de seguridad y el SID por servicio no cambian, pero la etiqueta de la cuenta de inicio de sesión es diferente.  
   
 ##  <a name="bkmk_winpriv"></a> Privilegios de Windows asignados a la cuenta de servicio de Analysis Services  
- Analysis Services necesita permisos del sistema operativo para iniciar el servicio y para solicitar recursos del sistema. Los requisitos varían según el modo del servidor y en función de si la instancia está en clúster. Si no está familiarizado con los privilegios de Windows, vea los temas sobre [privilegios](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) y [constantes de privilegios (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb530716\(v=vs.85\).aspx) para obtener más información.  
+ Analysis Services necesita permisos del sistema operativo para iniciar el servicio y para solicitar recursos del sistema. Los requisitos varían según el modo del servidor y en función de si la instancia está en clúster. Si no está familiarizado con los privilegios de Windows, vea los temas sobre [privilegios](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) y [constantes de privilegios (Windows)](/windows/desktop/SecAuthZ/privilege-constants) para obtener más información.  
   
  Todas las instancias de Analysis Services requieren el privilegio **Iniciar sesión como servicio** (SeServiceLogonRight). El programa de instalación de SQL Server asigna automáticamente el privilegio en la cuenta de servicio que se haya especificado durante la instalación. Para los servidores que se ejecutan en el modo Multidimensional y Minería de datos, es el único privilegio de Windows que requiere la cuenta de servicio de Analysis Services para instalaciones de servidor aisladas y es el único privilegio que configura el programa de instalación para Analysis Services. Para instancias en clúster y tabulares, es preciso agregar manualmente privilegios de Windows.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "37206545"
   
  Por cada instancia que instale, se crea un grupo de seguridad. El grupo de seguridad se denomina la instancia, ya sea **SQLServerMSASUser$ MSSQLSERVER** para la instancia predeterminada, o `SQLServerMSASUser$` \<nombreDeServidor >$\<instancename > para una instancia con nombre. El programa de instalación aprovisiona este grupo de seguridad con los permisos de archivo necesarios para realizar operaciones de servidor. Si comprueba los permisos de seguridad del directorio \MSAS12.MSSQLSERVER\OLAP\BIN, verá que el grupo de seguridad (no la cuenta de servicio ni su SID por servicio) es el titular de los permisos de ese directorio.  
   
- El grupo de seguridad solo contiene un miembro: el identificador de seguridad (SID) por servicio de la cuenta de inicio de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . El programa de instalación agrega un SID por servicio al grupo de seguridad local. El uso de un grupo de seguridad local, con su pertenencia de SID, constituye una diferencia pequeña pero apreciable de cómo el programa de instalación de SQL Server aprovisiona a Analysis Services, en comparación con el motor de base de datos.  
+ El grupo de seguridad solo contiene un miembro: el identificador de seguridad (SID) por servicio de la cuenta de inicio de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El programa de instalación agrega un SID por servicio al grupo de seguridad local. El uso de un grupo de seguridad local, con su pertenencia de SID, constituye una diferencia pequeña pero apreciable de cómo el programa de instalación de SQL Server aprovisiona a Analysis Services, en comparación con el motor de base de datos.  
   
  Si cree que los permisos de archivo están dañados, siga estos pasos para comprobar que el servicio se sigue aprovisionando correctamente:  
   
@@ -156,8 +156,8 @@ ms.locfileid: "37206545"
  [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [Cuenta de servicio SQL Server y SID por servicio (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
  [SQL Server usa un SID de servicio para proporcionar aislamiento del servicio (artículo de KB)](http://support.microsoft.com/kb/2620201)   
- [Token de acceso (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
- [Identificadores de seguridad (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
+ [Token de acceso (MSDN)](/windows/desktop/SecAuthZ/access-tokens)   
+ [Identificadores de seguridad (MSDN)](/windows/desktop/SecAuthZ/security-identifiers)   
  [Token de acceso (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
  [Listas de Control de acceso (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   

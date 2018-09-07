@@ -19,23 +19,23 @@ caps.latest.revision: 31
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7ff4d216b7122e3500a99871834029d92d9aa072
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fb6a3891e7adb4c0159f2b98e78336c51196dac
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022422"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40410487"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Crear un informe de gráfico rápido sin conexión (Generador de informes)
 
-  En este tutorial, use un asistente para crear un gráfico circular en un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. A continuación, agregue porcentajes y modifique el gráfico circular un poco. 
+  En este tutorial, se usará un asistente para crear un gráfico circular en un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. A continuación, agregue porcentajes y modifique el gráfico circular un poco. 
   
 Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un gráfico circular semejante al de esta ilustración:  
   
  ![Gráfico circular rápido del Generador de informes](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Gráfico circular rápido del Generador de informes")  
   
 ## <a name="prerequisites"></a>Prerequisites  
- Si usa datos XML o una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)], necesita tener acceso al Generador de informes. Puede iniciar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo o en modo integrado de SharePoint, o bien puede descargar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] desde Centro de descarga de Microsoft. Para obtener más información, consulte [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
+ Si usa datos XML o una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)], necesita tener acceso al Generador de informes. Puede iniciar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] desde un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo o en modo integrado de SharePoint, o bien puede descargar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] desde Centro de descarga de Microsoft. Para obtener más información, consulte [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
   
 ##  <a name="TwoWays"></a> Dos maneras de hacer este tutorial  
   
@@ -51,7 +51,7 @@ Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un
 ### <a name="using-a-includetsqlincludestsql-mdmd-query-that-contains-data-for-this-tutorial"></a>Usar una consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] que contenga los datos de este tutorial  
  Puede copiar desde este tema una consulta con datos incluidos en él y pegarlos en el asistente. Necesitará el nombre de una instancia de SQL Server y credenciales suficiente para el acceso de solo lectura a cualquier base de datos. La consulta del conjunto de datos en el tutorial usa datos literales, pero la consulta debe ser procesada por una instancia de SQL Server para que devuelva los metadatos requeridos por un conjunto de datos de informe.  
   
- La ventaja de usar la consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] es que todos los demás tutoriales del [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] usan el mismo método, de modo que cuando realice los otros tutoriales ya sabrá lo que debe hacer.  
+ La ventaja de usar la consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] es que todos los demás tutoriales del [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] usan el mismo método, de modo que cuando realice los otros tutoriales ya sabrá lo que debe hacer.  
   
  La consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] TSQL requiere otros requisitos previos. Para obtener más información, consulte [Requisitos previos para los tutoriales&#40;Generador de informes&#41;](../../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
@@ -227,7 +227,7 @@ Observe que la superficie de diseño aumenta a medida que realiza la acción de 
  Para obtener más información acerca de cómo personalizar las etiquetas del gráfico y las leyendas, consulte [Mostrar valores de porcentaje en un gráfico circular &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) y [Cambiar el texto de un elemento de leyenda&#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   
 ##  <a name="WhatsNext"></a> ¿Qué debe hacer a continuación?  
- Ahora que ha creado su primer informe en el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], está listo para leer los demás tutoriales y empezar a crear informes a partir de sus propios datos. Para ejecutar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], necesitará permiso de acceso a los orígenes de datos, como las bases de datos, con una *cadena de conexión*, que le conecta al origen de datos. El administrador del sistema tiene esta información y puede facilitársela.  
+ Ahora que ha creado su primer informe en el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], está listo para leer los demás tutoriales y empezar a crear informes a partir de sus propios datos. Para ejecutar el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], necesitará permiso de acceso a los orígenes de datos, como las bases de datos, con una *cadena de conexión*, que le conecta al origen de datos. El administrador del sistema tiene esta información y puede facilitársela.  
   
  Para trabajar con otros tutoriales, necesita el nombre de una instancia de SQL Server y credenciales suficientes para el acceso de solo lectura a cualquier base de datos. El administrador del sistema puede facilitárselo también.  
   

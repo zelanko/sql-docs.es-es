@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3503952eb791c4423826626b98e8f8feb2bce0c7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 961f4e01d9a3a027f7b6cf065103a8076feac52b
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38066673"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42432516"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Solución de problemas de recuperación de datos de informes de Reporting Services
 El primer paso durante el procesamiento de informes es recuperar los datos del informe para cada conjunto de datos ejecutando la consulta del conjunto de datos. Al obtener una vista previa de un informe localmente, las conexiones a un origen de datos y las credenciales deben utilizar los permisos suficientes para recuperar los datos en el equipo. Al ejecutar un informe en el servidor de informes, las conexiones a un origen de datos y las credenciales deben utilizar los permisos suficientes para recuperar los datos en el servidor de informes. Utilice este tema como ayuda para solucionar los problemas de la recuperación de datos del informe.   
@@ -47,7 +47,7 @@ Para los orígenes de datos con credenciales pedidas o credenciales especificado
 Compruebe que la contraseña no incluya caracteres especiales. Si cambiar la contraseña resulta poco práctico, hable con el administrador de la base de datos para almacenar las credenciales adecuadas de forma local en el servidor como parte de un nombre del origen de datos OBDC (DSN) del sistema. Para más información, consulte "OdbcConnection.ConnectionString" en la documentación del SDK de .NET Framework en MSDN.   
   
 > [!NOTE]  
->Se recomienda no agregar información de inicio de sesión, como contraseñas, a la cadena de conexión. El Diseñador de informes proporciona una página **Credenciales** en los cuadros de diálogo [Propiedades del origen de datos](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) o [Propiedades del origen de datos compartidos](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) que puede utilizar para escribir las credenciales. Estas credenciales se almacenan de forma segura en el equipo en el que se crea el informe.  
+>Se recomienda no agregar información de inicio de sesión, como contraseñas, a la cadena de conexión. El Diseñador de informes proporciona una página **Credenciales** en los cuadros de diálogo **Propiedades del origen de datos** o **Propiedades del origen de datos compartidos** que se puede usar para escribir las credenciales. Estas credenciales se almacenan de forma segura en el equipo en el que se crea el informe.  
   
 ## <a name="why-do-i-see-no-data-when-i-run-my-query-in-the-query-designer"></a>¿Por qué no veo ningún dato cuando ejecuto una consulta en el diseñador de consultas?  
 Cuando haya creado el conjunto de datos, la colección de campos de conjunto de datos aparecerá en el panel Datos de informe. A veces, la colección de campos del conjunto de datos no se muestra como se esperaba.   
@@ -71,7 +71,7 @@ Para rellenar la colección de campos de conjunto de datos, haga lo siguiente:
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 
 

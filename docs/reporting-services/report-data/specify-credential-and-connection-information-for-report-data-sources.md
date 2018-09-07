@@ -1,7 +1,7 @@
 ---
 title: Especificar información de credenciales y conexión para los orígenes de datos de informes | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2018
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -33,12 +33,12 @@ caps.latest.revision: 61
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 30e9d5668ada3bbe6d231147b9930f6d079c6f29
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: e0a75286b8a4e3529202c5ef700d4157b85f2a8a
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550736"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42440070"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Especificar información de credenciales y conexión para los orígenes de datos de informes
   Un servidor de informes utiliza credenciales para conectarse a orígenes de datos externos que proporcionan contenido a informes o información de destinatarios a una suscripción controlada por datos. Puede especificar credenciales que utilicen la autenticación de Windows, la autenticación de la base de datos, la autenticación personalizada o que no utilicen autenticación. Al enviar una solicitud de conexión a través de la red, el servidor de informes suplantará una cuenta de usuario o una cuenta de ejecución desatendida. Para obtener más información acerca del contexto de seguridad en el que se realiza una solicitud de conexión, vea [Configuración de orígenes de datos y conexiones de red](#DataSourceConfigurationConnections) más adelante en este tema.  
@@ -51,7 +51,7 @@ ms.locfileid: "34550736"
 ## <a name="when-credentials-are-used-in-report-builder"></a>Cuando se usan las credenciales en el Generador de informes  
  En el Generador de informes, se suelen usar credenciales al conectarse a un servidor de informes o para las tareas relacionadas con datos, como crear un origen de datos incrustado, ejecutar una consulta del conjunto de datos u ofrecer una vista previa de un informe. Las credenciales no se guardan en el informe. Se administran separadamente en el servidor de informes o en el cliente local. La siguiente lista describe los tipos de credenciales que podría necesitar proporcionar, donde están almacenadas y cómo se utilizan:  
   
--   Las credenciales del servidor de informes que escriba en el [cuadro de diálogo Inicio de sesión de Reporting Services &#40;Generador de informes&#41;](../../reporting-services/report-builder/reporting-services-login-dialog-box-report-builder.md).  
+-   Las credenciales del servidor de informes que se escriben en el cuadro de diálogo Inicio de sesión de Reporting Services.  
   
      La primera vez que guarda en, publica en o va a un servidor de informes o un sitio de SharePoint, es posible que necesite escribir sus credenciales. Las credenciales que escribe se utilizan hasta el final de la sesión en el Generador de informes. Si decide guardar las credenciales, se almacenan con seguridad en el equipo junto con su configuración de usuario. En las siguientes sesiones del Generador de informes, se usan las credenciales guardadas para conectar con el mismo servidor de informes o con el sitio de SharePoint. El administrador del servidor de informes o el administrador de SharePoint especifica qué tipo de credenciales hay que utilizar.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "34550736"
   
      El servidor de informes utiliza estas credenciales para realizar una conexión de datos al origen de datos externo. Para algunos tipos de orígenes de datos, las credenciales pueden estar almacenadas con seguridad en el servidor de informes. Estas credenciales permiten a otros usuarios ejecutar el informe sin proporcionar las credenciales para la conexión de datos subyacente.  
   
--   Las credenciales del origen de datos que escriba en el [cuadro de diálogo Escribir credenciales de origen de datos &#40;Generador de informes&#41;](../../reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) al ejecutar una consulta de conjunto de datos, actualizar campos del conjunto de datos o generar una vista previa del informe.  
+-   Las credenciales del origen de datos que se escriben en el cuadro de diálogo **Escribir credenciales de origen de datos** al ejecutar una consulta de conjunto de datos, actualizar campos del conjunto de datos o generar una vista previa del informe.  
   
      Estas credenciales se utilizan para realizar una conexión de datos desde el Generador de informes al origen de datos externo o para ofrecer una vista previa de un informe que se configura para que pida las credenciales. Las credenciales que escribe en este cuadro de diálogo no están almacenadas en el servidor de informes y no están disponible para su uso por otros usuarios. El Generador de informes almacena en memoria caché las credenciales durante la sesión de edición del informe, para que no necesite escribirlas cada vez ejecuta la consulta u ofrece una vista previa del informe.  
   

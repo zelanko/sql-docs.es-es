@@ -1,7 +1,7 @@
 ---
 title: Actualizar una base de datos del servidor de informes | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.reviewer: ''
@@ -18,20 +18,20 @@ caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4a15d4ee21977d16ed3f8b0a49d12b4c9e88cbd2
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 9997e0c0d68d01721a33924f8d7b1e7842a9a21a
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322614"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40406660"
 ---
 # <a name="upgrade-a-report-server-database"></a>Actualizar una base de datos del servidor de informes
 
 La base de datos del servidor de informes proporciona almacenamiento para una o varias instancias del servidor de informes. Dado que el esquema de la base de datos del servidor de informes puede cambiar con cada versión nueva de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], es necesario que la versión de base de datos coincida con la versión de la instancia del servidor de informes que esté utilizando. En la mayoría de los casos, una base de datos del servidor de informes se puede actualizar automáticamente sin ninguna acción específica de su parte.  
   
- **Modo nativo:** en el modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , la base de datos del servidor de informes consta realmente de dos bases de datos que tienen los nombres predeterminados “ReportServer y ReportServerTempDB”.  
+ **Modo nativo:** en el modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la base de datos del servidor de informes consta realmente de dos bases de datos que tienen los nombres predeterminados ReportServer y ReportServerTempDB.  
   
- **Modo de SharePoint:** en el modo de SharePoint de SQL Server 2016 Reporting Services, la base de datos del servidor de informe es realmente una colección de bases de datos que se crea para cada instancia de la aplicación de servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ **Modo de SharePoint:** en el modo de SharePoint de SQL Server 2016 Reporting Services, la base de datos del servidor de informes es realmente una colección de bases de datos que se crea para cada instancia de la aplicación de servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>Formas de actualizar una base de datos del servidor de informes en modo nativo
 
@@ -45,7 +45,7 @@ La base de datos del servidor de informes proporciona almacenamiento para una o 
   
      El Administrador de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ya no dispone de un botón Actualizar independiente ni de un script de actualización. Esas características están obsoletas a partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] debido a la característica de actualización automática del servicio del servidor de informes.  
   
- Una vez actualizado el esquema, no es posible revertir la actualización a una versión anterior. Realice siempre una copia de seguridad de la base de datos del servidor de informes, por si necesita volver a crear una instalación previa.  
+ Una vez actualizado el esquema, no se puede revertir la actualización a una versión anterior. Realice siempre una copia de seguridad de la base de datos del servidor de informes, por si necesita volver a crear una instalación previa.  
   
 ## <a name="how-the-schema-metadata-and-report-server-content-is-updated"></a>Cómo se actualizan el esquema, los metadatos y el contenido del servidor de informes  
  La base de datos del servidor de informes se actualiza en tres etapas:  
@@ -73,8 +73,7 @@ La base de datos del servidor de informes proporciona almacenamiento para una o 
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Administrador de configuración de Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
-[Crear una base de datos del servidor de informes](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
-[Asistente para cambiar base de datos](http://msdn.microsoft.com/library/1a2e8d18-5997-482f-a9c1-87d99f7407b8)   
+[Crear una base de datos del servidor de informes](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
 [Actualizar y migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Migrar una instalación de Reporting Services](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 

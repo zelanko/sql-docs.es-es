@@ -13,12 +13,12 @@ ms.topic: get-started-article
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 25acdc921c925d3882fb8282a3f78a7ed04a757f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5195e5c7c6e1c3126db3c2335fac605bbb869f2b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042603"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40411080"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novedades de SQL Server Reporting Services (SSRS)
 
@@ -70,7 +70,7 @@ Lea más en el [blog de Reporting Services](https://blogs.msdn.microsoft.com/sql
 ### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
  Un nuevo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] está disponible. Se trata de un portal actualizado y moderno que incorpora KPI, informes móviles, informes paginados y archivos de Excel y Power BI Desktop. El [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] reemplaza al Administrador de informes de versiones anteriores. También puede descargar el Publicador de informes móviles y el Generador de informes desde el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] , sin que sea necesario usar la tecnología ClickOnce.
  
- Para crear informes móviles, necesitará el [!INCLUDE[SS_MobileReptPub_Short](../includes/ss-mobilereptpub-short-md.md)].  
+ Para crear informes móviles, necesitará el [!INCLUDE[SS_MobileReptPub_Short](../includes/ss-mobilereptpub-short.md)].  
   
  Para más información sobre el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)], consulte [Portal web (modo nativo de SSRS)](../reporting-services/web-portal-ssrs-native-mode.md).  
   
@@ -95,7 +95,7 @@ Puede crear KPI directo en el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/
 Los informes móviles de Reporting Services son informes dedicados optimizados para una amplia variedad de factores de forma y para ofrecer una experiencia óptima para usuarios que accedan a informes en dispositivos móviles. Los informes móviles cuentan con una amplia variedad de visualizaciones, desde gráficos de tiempo, categoría y comparación, hasta gráficos de rectángulos y mapas personalizados. Puede conectar sus informes móviles a una gran variedad de orígenes de datos, como datos tabulares y multidimensionales de SQL Server Analysis Services local. Cree informes móviles en una superficie de diseño con cuadrícula ajustable de filas y columnas, y elementos flexibles de informes móviles que se escalan correctamente para cualquier tamaño de pantalla. Después, guarde estos informes móviles en un servidor de Reporting Services y visualice e interactúe con estos en un explorador o en la aplicación móvil de Power BI en dispositivos iPad, iPhone, Android y Windows 10.
   
 #### <a name="mobile-report-publisher"></a>Publicador de informes móviles  
- El [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)]le permite crear y publicar informes móviles de SQL Server en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)].  
+ El [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] le permite crear y publicar informes móviles de SQL Server en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)].  
   
  ![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
   
@@ -170,7 +170,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 
 ### <a name="report-builder-improvements"></a>Mejoras del generador de informes
 
-**Nueva interfaz de usuario del Generador de informes:** la interfaz de usuario principal de [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] ahora tiene una apariencia moderna, con elementos de interfaz de usuario simplificados.  
+**Nueva interfaz de usuario del Generador de informes:** la interfaz de usuario principal de [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] ahora tiene una apariencia moderna, con elementos de interfaz de usuario simplificados.  
   
 |||  
 |-|-|  
@@ -182,7 +182,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
  ![Lista de parámetros en el panel Datos de informe y en el panel Parámetros](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "Lista de parámetros en el panel Datos de informe y en el panel Parámetros")  
 
   
-**Compatibilidad con ppp elevado:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] es compatible con el escalado y los dispositivos con valores altos de PPP (puntos por pulgada).  Para obtener más información sobre los valores altos de PPP, consulte los artículos siguientes:  
+**Compatibilidad con configuración elevada de ppp:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] es compatible con el escalado y los dispositivos con valores altos de PPP (puntos por pulgada).  Para obtener más información sobre los valores altos de PPP, consulte los artículos siguientes:  
   
 -   [Windows 8.1 DPI Scaling Enhancements (Mejoras en el ajuste de escala de PPP en Windows 8.1)](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
   
@@ -192,7 +192,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 
 [Novedades de Analysis Services](http://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [Notas de la versión de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)   
-[Compatibilidad con versiones anteriores](http://msdn.microsoft.com/675b0e0e-cfee-4790-9675-80fc3ea6d30f)   
+[Compatibilidad con versiones anteriores](reporting-services-backward-compatibility.md)   
 [Características de Reporting Services compatibles con las ediciones de SQL Server 2016](http://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [Actualizar y migrar Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  

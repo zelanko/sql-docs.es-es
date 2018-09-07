@@ -11,7 +11,7 @@ Initially used in:
 -->
 
 
-En versiones anteriores de Microsoft SQL Server podría provocar la ralentización del sistema para reorganizar o recompilar un índice grande. SQL Server 2015 implementó mejoras importantes de rendimiento para estas operaciones de índice.
+En versiones anteriores de Microsoft SQL Server podría provocar la ralentización del sistema para reorganizar o recompilar un índice grande. En SQL Server 2016 se implementaron mejoras importantes de rendimiento para estas operaciones de índice.
 
 Además, en versiones anteriores, la granularidad del control era menos restringida. Esto provocó que el sistema reorganizara o recompilara algunos índices incluso aunque no estuvieran muy fragmentados, algo que resultaba innecesario. Los últimos controles de la interfaz de usuario (UI) del plan de mantenimiento permiten excluir índices que no es necesario actualizar, en función de los criterios de las estadísticas de índice. Para ello, se usan internamente las siguientes vistas de administración dinámica (DMV) de Transact-SQL:
 

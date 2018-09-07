@@ -1,6 +1,6 @@
 ---
-title: Cargar datos en Azure SQL Database con SQL Server Integration Services (SSIS) | Microsoft Docs
-description: Muestra cómo crear un paquete de SQL Server Integration Services (SSIS) para mover datos desde una gran variedad de orígenes de datos a Azure SQL Database.
+title: Carga de datos en SQL Server o Azure SQL Database con SQL Server Integration Services (SSIS) | Microsoft Docs
+description: Se muestra cómo crear un paquete de SQL Server Integration Services (SSIS) para mover datos desde una gran variedad de orígenes de datos a SQL Server o Azure SQL Database.
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
@@ -10,26 +10,27 @@ ms.devlang: NA
 ms.topic: conceptual
 ms.tgt_pltfrm: NA
 ms.custom: loading
-ms.date: 08/14/2018
+ms.date: 08/20/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: ed87e5a83e992ba5de6289d72465d92c94126748
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ab5ce3238285cbe687b2608edb5236d460baa197
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175031"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40412681"
 ---
-# <a name="load-data-into-azure-sql-database-with-sql-server-integration-services-ssis"></a>Cargar datos en Azure SQL Database con SQL Server Integration Services (SSIS)
+# <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Carga de datos en SQL Server o Azure SQL Database con SQL Server Integration Services (SSIS)
 
-Cree un paquete de SQL Server Integration Services (SSIS) para cargar datos en [Azure SQL Database](/azure/sql-database/). Si quiere, puede reestructurar, transformar y limpiar los datos a medida que pasan a través del flujo de datos de SSIS.
+Cree un paquete de SQL Server Integration Services (SSIS) para cargar datos en SQL Server o [Azure SQL Database](/azure/sql-database/). Si quiere, puede reestructurar, transformar y limpiar los datos a medida que pasan a través del flujo de datos de SSIS.
 
 En este artículo se explica cómo realizar las siguientes tareas:
 
 * Crear un nuevo proyecto de Integration Services en Visual Studio.
 * Diseñar un paquete de SSIS que cargue datos del origen en el destino.
 * Ejecutar el paquete de SSIS para cargar los datos.
+
 
 ## <a name="basic-concepts"></a>Conceptos básicos
 
@@ -57,9 +58,13 @@ Para realizar este tutorial, necesita lo siguiente:
 1. **SQL Server Integration Services (SSIS)**. SSIS es un componente de SQL Server y exige una versión con licencia, de desarrollador o de evaluación de SQL Server. Para obtener una versión de evaluación de SQL Server, vea [Evaluaciones de SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
 2. **Visual Studio** (opcional). Para obtener la edición gratuita de Visual Studio Community, vea [Visual Studio Community][Visual Studio Community]. Si no quiere instalar Visual Studio, puede instalar solo SQL Server Data Tools (SSDT). SSDT instala una versión de Visual Studio con funcionalidad limitada.
 3. **SQL Server Data Tools para Visual Studio (SSDT)**. Para obtener SQL Server Data Tools para Visual Studio, vea [Descargar SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
-4. **Una base de datos de Azure SQL Database y permisos**. Este tutorial se conecta a una instancia de SQL Database y carga datos en ella. Necesita permisos para conectarse, crear una tabla y cargar datos.
-5. **Datos de ejemplo**. En este tutorial se usan datos de ejemplo almacenados en SQL Server en la base de datos de ejemplo AdventureWorks como datos de origen para cargar en SQL Database. Para obtener la base de datos de ejemplo AdventureWorks, vea [AdventureWorks Sample Databases][AdventureWorks 2014 Sample Databases] (Bases de datos de ejemplo de AdventureWorks).
-6. **Una regla de firewall**. Tiene que crear una regla de firewall en SQL Database con la dirección IP del equipo local para cargar datos en SQL Database.
+4. Este tutorial se conecta a una instancia de SQL Server o SQL Database y carga datos en ella. Necesita permisos para conectarse, crear una tabla y cargar datos en:
+   - **Una base de datos de Azure SQL Database**. Para obtener más información, vea [Azure SQL Database](/azure/sql-database/).  
+      o Administrador de configuración de
+   - **Una instancia de SQL Server**. SQL Server se ejecuta en local o en una máquina virtual de Azure. Para descargar una edición gratuita de evaluación o desarrollador de SQL Server, vea [Descargas de SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).
+
+5. **Datos de ejemplo**. En este tutorial se usan datos de ejemplo almacenados en SQL Server en la base de datos de ejemplo AdventureWorks como los datos de origen. Para obtener la base de datos de ejemplo AdventureWorks, vea [AdventureWorks Sample Databases][AdventureWorks 2014 Sample Databases] (Bases de datos de ejemplo de AdventureWorks).
+6. **Una regla de firewall** si se van a cargar datos en SQL Database. Tiene que crear una regla de firewall en SQL Database con la dirección IP del equipo local para cargar datos en SQL Database.
 
 ## <a name="create-a-new-integration-services-project"></a>Crear un proyecto de Integration Services
 1. Inicie Visual Studio.
@@ -81,7 +86,7 @@ Se abre Visual Studio y crea un nuevo proyecto de Integration Services (SSIS). L
     ![][02]
 2. Haga doble clic en la tarea Flujo de datos para ir a la pestaña Flujo de datos.
 3. En la lista Otros orígenes del cuadro de herramientas, arrastre un origen de ADO.NET a la superficie de diseño. Con el adaptador de origen aún seleccionado, cambie su nombre a **Origen de SQL Server** en el panel **Propiedades**.
-4. Desde la lista Otros destinos del cuadro de herramientas, arrastre un destino de ADO.NET a la superficie de diseño bajo el origen de ADO.NET. Con el adaptador de destino aún seleccionado, cambie su nombre a **Destino de SQL DB** en el panel **Propiedades**.
+4. Desde la lista Otros destinos del cuadro de herramientas, arrastre un destino de ADO.NET a la superficie de diseño bajo el origen de ADO.NET. Con el adaptador de destino aún seleccionado, cambie su nombre a **Destino de SQL** en el panel **Propiedades**.
    
     ![][09]
 
@@ -128,16 +133,16 @@ Se abre Visual Studio y crea un nuevo proyecto de Integration Services (SSIS). L
 1. Haga doble clic en el adaptador de destino para abrir el **Editor de destinos de ADO.NET**.
    
     ![][11]
-2. En la pestaña **Administrador de conexiones** del **Editor de destinos de ADO.NET**, haga clic en el botón **Nuevo** situado junto a la lista **Administrador de conexiones** para abrir el cuadro de diálogo **Configurar el administrador de conexiones ADO.NET** y crear la configuración de conexión para la base de datos de Azure SQL Database en la que carga datos este tutorial.
+2. En la pestaña **Administrador de conexiones** del **Editor de destinos de ADO.NET**, haga clic en el botón **Nuevo** situado junto a la lista **Administrador de conexiones** para abrir el cuadro de diálogo **Configurar el administrador de conexiones ADO.NET** y crear la configuración de conexión para la base de datos en la que se cargan los datos de este tutorial.
 3. En el cuadro de diálogo **Configurar el administrador de conexiones ADO.NET**, haga clic en el botón **Nuevo** para abrir el cuadro de diálogo **Administrador de conexiones** y crear una nueva conexión de datos.
 4. En el cuadro de diálogo **Administrador de conexiones**, haga lo siguiente.
    1. En **Proveedor**, seleccione el proveedor de datos SqlClient.
-   2. En **Nombre del servidor**, escriba el nombre de SQL Database.
+   2. En **Nombre del servidor**, escriba el nombre de SQL Server o del servidor de SQL Database.
    3. En la sección **Iniciar sesión en el servidor**, seleccione **Usar la autenticación de SQL Server** y escriba la información de autenticación.
-   4. En la sección **Conectar con una base de datos**, seleccione una base de datos de SQL Database existente.
-   5. Haga clic en **Probar conexión**.
-   6. En el cuadro de diálogo que informa de los resultados de la prueba de conexión, haga clic en **Aceptar** para volver al cuadro de diálogo **Administrador de conexiones**.
-   7. En el cuadro de diálogo **Administrador de conexiones**, haga clic en **Aceptar** para volver al cuadro de diálogo **Configurar el administrador de conexiones ADO.NET**.
+   4. En la sección **Conectar con una base de datos**, seleccione una base de datos existente.
+    A. Haga clic en **Probar conexión**.
+    B. En el cuadro de diálogo que informa de los resultados de la prueba de conexión, haga clic en **Aceptar** para volver al cuadro de diálogo **Administrador de conexiones**.
+    c. En el cuadro de diálogo **Administrador de conexiones**, haga clic en **Aceptar** para volver al cuadro de diálogo **Configurar el administrador de conexiones ADO.NET**.
 5. En el cuadro de diálogo **Configurar el administrador de conexiones ADO.NET**, haga clic en **Aceptar** para volver al **Editor de destinos de ADO.NET**.
 6. En el **Editor de destinos de ADO.NET**, haga clic en **Nuevo** junto a la lista **Usar una tabla o una vista** para abrir el cuadro de diálogo **Crear tabla** para crear una tabla de destino con una lista de columnas que coincida con la tabla de origen.
    
@@ -167,7 +172,7 @@ Cuando el paquete termina de ejecutarse, se ven marcas de verificación verdes p
 
 ![][15]
 
-¡Enhorabuena! Ha usado correctamente SQL Server Integration Services para cargar datos en Azure SQL Database.
+¡Enhorabuena! Ha usado correctamente SQL Server Integration Services para cargar datos en SQL Server o Azure SQL Database.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

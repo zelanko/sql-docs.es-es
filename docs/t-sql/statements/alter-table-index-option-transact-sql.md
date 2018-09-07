@@ -18,12 +18,12 @@ caps.latest.revision: 68
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 92426569e62b69590cce538968faf0008d0ae741
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: c0f5af9180e8c9799126fb2c2d84f11ab01d0920
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786076"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703708"
 ---
 # <a name="alter-table-indexoption-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "37786076"
 >  Los valores de factor de relleno 0 y 100 son idénticos en todos los sentidos.  
   
  IGNORE_DUP_KEY **=** { ON | **OFF** }  
- Especifica la respuesta de error cuando una operación de inserción intenta insertar valores de clave duplicados en un índice único. La opción IGNORE_DUP_KEY se aplica solamente a operaciones de inserción realizadas tras crear o volver a generar el índice. La opción no tiene efecto cuando se ejecutan [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) o [UPDATE](../../t-sql/queries/update-transact-sql.md). El valor predeterminado es OFF.  
+ Especifica el tipo de respuesta cuando una operación de inserción intenta insertar valores de clave duplicados en un índice único. La opción IGNORE_DUP_KEY se aplica solamente a operaciones de inserción realizadas tras crear o volver a generar el índice. La opción no tiene efecto cuando se ejecutan [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) o [UPDATE](../../t-sql/queries/update-transact-sql.md). El valor predeterminado es OFF.  
   
  ON  
  Se produce un mensaje de advertencia cuando se inserten valores de clave duplicados en un índice único. Solo dan error las filas que infringen la restricción de unicidad.  

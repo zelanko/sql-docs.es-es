@@ -13,12 +13,12 @@ caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e576153f1e9f0fc43360bc3ce25af284c402b14e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75b17cc357f3affc8fac293c771fbc63940d4fb4
+ms.sourcegitcommit: 42455727824e2bfa0173d9752f4ae6839ee6031f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870060"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "40406814"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Supervisar el rendimiento de los grupos de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "32870060"
   
 -   [Eventos extendidos de utilidad](#BKMK_XEVENTS)  
   
-##  <a name="BKMK_DATA_SYNC_PROCESS"></a> Proceso de sincronización de datos  
+##  <a name="data-synchronization-process"></a>Proceso de sincronización de datos  
  Para estimar el tiempo necesario para una sincronización completa e identificar el cuello de botella, debe comprender el proceso de sincronización. Un cuello de botella de rendimiento puede estar en cualquier fase del proceso; su detección puede ayudar a profundizar en los problemas subyacentes. En la ilustración y la tabla siguientes se muestra el proceso de sincronización de datos:  
   
  ![Sincronización de datos de grupo de disponibilidad](media/always-onag-datasynchronization.gif "Sincronización de datos de grupo de disponibilidad")  
@@ -55,7 +55,7 @@ ms.locfileid: "32870060"
 |5|Protección|El registro se vacía en la réplica secundaria para su protección. Tras el vaciado del registro, se envía una confirmación a la réplica principal.<br /><br /> Una vez protegido el registro, se evita la pérdida de datos.|Contador de rendimiento [SQL Server: Base de datos > Bytes de registro vaciados/s](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> Tipo de espera [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|Rehacer|Las páginas vaciadas se ponen al día en la réplica secundaria. Las páginas se mantienen en la cola de puesta al día mientras esperan.|[SQL Server: Réplica de base de datos > Bytes puestos al día/s](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) y [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).<br /><br /> Tipo de espera [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
   
-##  <a name="BKMK_FLOW_CONTROL_GATES"></a> Puertas de control de flujo  
+##  <a name="flow-control-gates"></a>Puertas de control de flujo  
  Los grupos de disponibilidad se diseñan con puertas de control de flujo en la réplica principal para evitar un uso excesivo de recursos, por ejemplo de red y memoria, en todas las réplicas de disponibilidad. Estas puertas de control de flujo no afectan al estado de sincronización de las réplicas de disponibilidad, pero sí pueden hacerlo al rendimiento general de las bases de datos de disponibilidad, incluido el RPO.  
   
  Una vez capturados los registros en la réplica principal, están sujetos a dos niveles de control de flujo, como se muestra en la tabla siguiente.  
@@ -72,7 +72,7 @@ ms.locfileid: "32870060"
   
  Dos útiles contadores de rendimiento, [SQL Server: Réplica de disponibilidad > Control de flujo/s](~/relational-databases/performance-monitor/sql-server-availability-replica.md) y [SQL Server: Réplica de disponibilidad > Tiempo de control de flujo (ms/s)](~/relational-databases/performance-monitor/sql-server-availability-replica.md), muestran, durante el último segundo, cuántas veces se ha activado el control de flujo y cuánto tiempo se ha esperado en el control de flujo. Un mayor tiempo de espera en el control de flujo se traduce en un RPO superior. Para obtener más información sobre los tipos de problemas que pueden dar lugar a un tiempo de espera elevado en el control de flujo, vea [Solución de problemas: el grupo de disponibilidad superó el RPO](troubleshoot-availability-group-exceeded-rpo.md).  
   
-##  <a name="BKMK_RTO"></a> Estimación del tiempo de conmutación por error (RTO)  
+##  <a name="estimating-failover-time-rto"></a>Estimación del tiempo de conmutación por error (RTO)  
  El RTO del SLA depende del tiempo de conmutación por error de la implementación de Always On en un momento dado, que se puede expresar en la siguiente fórmula:  
   
  ![Cálculo de RTO de grupos de disponibilidad](media/always-on-rto.gif "Cálculo de RTO de grupos de disponibilidad")  
@@ -90,7 +90,7 @@ ms.locfileid: "32870060"
   
  El tiempo de sobrecarga de conmutación por error, Toverhead, incluye el tiempo necesario para conmutar por error el clúster WSFC y poner en línea las bases de datos. Este tiempo suele ser breve y constante.  
   
-##  <a name="BKMK_RPO"></a> Estimación de la posible pérdida de datos (RPO)  
+## <a name="estimating-potential-data-loss-rpo"></a>Estimación de la posible pérdida de datos (RPO)  
  El RPO del SLA depende de la posible pérdida de datos de la implementación de Always On en un momento dado. Esta posible pérdida de datos se puede expresar en la siguiente fórmula:  
   
  ![Cálculo de RPO de grupos de disponibilidad](media/always-on-rpo.gif "Cálculo de RPO de grupos de disponibilidad")  
@@ -103,8 +103,234 @@ ms.locfileid: "32870060"
  La cola de envío de registro representa todos los datos que se pueden perder a causa de un error irrecuperable. A primera vista, es curioso que se use la velocidad de generación de registro en lugar de la velocidad de envío de registro (vea [log_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)). Pero recuerde que el uso de la velocidad de envío de registro solo proporciona el tiempo de sincronización, mientras que el RPO mide la pérdida de datos en función de la velocidad de generación, no la rapidez con que se sincroniza.  
   
  Una manera más sencilla de estimar Tdata_loss es usar [last_commit_time](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md). La DMV de la réplica principal notifica este valor para todas las réplicas. Puede calcular la diferencia entre el valor de la réplica principal y el de la réplica secundaria para estimar la velocidad con que el registro de la réplica secundaria alcanza a la réplica principal. Como se ha mencionado anteriormente, este cálculo no indica la posible pérdida de datos en función de la velocidad con que se genera el registro, aunque debería ser una buena aproximación.  
+
+## <a name="estimate-rto--rpo-with-the-ssms-dashboard"></a>Estimación de RTO y RPO con el panel SSMS
+En los grupos de disponibilidad Always On, el RTO y RPO se calculan y se muestran para las bases de datos hospedadas en las réplicas secundarias. En el panel de la réplica principal, el RTO y RPO se agrupan por la réplica secundaria. 
+
+Para ver el RTO y RPO en el panel, siga estos pasos:
+1. En SQL Server Management Studio, expanda el nodo **Alta disponibilidad de Always On**, haga clic con el botón derecho en el nombre del grupo de disponibilidad y seleccione **Mostrar panel**. 
+1. Seleccione **Agregar o quitar columnas** en la pestaña **Agrupar por**. Active **Tiempo de recuperación calculado (segundos)** [RTO] y **Pérdida de datos calculada (tiempo)** [RPO]. 
+
+   ![rto-rpo-dashboard.png](media/rto-rpo-dashboard.png)
+
+### <a name="calculation-of-secondary-database-rto"></a>Cálculo del RTO de la base de datos secundaria 
+El cálculo del tiempo de recuperación determina cuánto tiempo se necesita para recuperar la *base de datos secundaria* después de que s e produzca una conmutación por error.  El tiempo de conmutación por error suele ser breve y constante. El tiempo de detección depende de la configuración del clúster y no de las réplicas de disponibilidad individuales. 
+
+
+Para una base de datos secundaria (DB_sec), el cálculo y la presentación de su RTO se basan en sus valores **redo_queue_size** y **redo_rate**:
+
+![Cálculo del RTO](media/calculate-rto.png)
+
+Salvo en casos excepcionales, la fórmula para calcular el RTO de la base de datos secundaria es la siguiente:
+
+![Fórmula para calcular el RTO](media/formula-calc-second-dba-rto.png)
+
+
+
+### <a name="calculation-of-secondary-database-rpo"></a>Cálculo del RPO de la base de datos secundaria
+
+Para una base de datos secundaria (DB_sec), el cálculo y la presentación de su RPO se basa en los valores is_failover_ready, last_commit_time y last_commit_time de su base de datos principal correlacionada (DB_pri). Cuando en la base de datos secundaria is_failover_ready = 1, se sincroniza daa y no se produce pérdida de datos tras la conmutación por error. Pero si este valor es 0, hay una diferencia entre el valor **last_commit_time** de la base de datos principal y el valor **last_commit_time** de la base de datos secundaria. 
+
+Para la base de datos principal, el valor **last_commit_time** es la hora de confirmación de la transacción más reciente. Para la base de datos secundaria, el valor **last_commit_time** es la hora de confirmación más reciente de la transacción en la base de datos principal que también se ha protegido correctamente en la base de datos secundaria. Este número debe ser el mismo para la base de datos principal y la secundaria. Una diferencia entre estos dos valores es la duración en la que las transacciones pendientes no se han protegido en la base de datos secundaria y se perderán si se produce una conmutación por error. 
+
+![Cálculo del RPO](media/calculate-rpo.png)
+
+### <a name="performance-counters-used-in-rtorpo-formulas"></a>Contadores de rendimiento que se usan en las fórmulas de RTO/RPO
+
+- **redo_queue_size** (KB) [*se usa en RTO*]: el tamaño de cola de fase de puesta al día es el tamaño de los registros de transacciones entre sus valores **last_received_lsn** y **last_redone_lsn**. **last_received_lsn** es el identificador de bloque de registro que identifica el punto en el que todos los bloques de registro han sido recibidos por la réplica secundaria en la que se hospeda esta base de datos secundaria. **Last_redone_lsn** es el número de secuencia de registro real de la última entrada de registro que se rehízo en la base de datos secundaria. En función de estos dos valores, se pueden encontrar los identificadores del bloque de registro inicial (**last_received_lsn**) y el bloque de registro final (**last_redone_lsn**). El espacio entre estos dos bloques de registro puede representar la cantidad de bloques de registro de transacciones que todavía no se han puesto al día. Esto se mide en kilobytes (KB).
+-  **redo_rate** (KB/s) [*se usa en RTO*]: un valor acumulativo que representa, en un período de tiempo transcurrido, qué cantidad del registro de transacciones (KB) se ha puesto al día en la base de datos secundaria, expresado en kilobytes (KB)/segundo. 
+- **last_commit_time** (Datetime) [*se usa en RPO*]: para la base de datos principal, el valor **last_commit_time** es la hora de confirmación de la transacción más reciente. Para la base de datos secundaria, el valor **last_commit_time** es la hora de confirmación más reciente de la transacción en la base de datos principal que también se ha protegido correctamente en la base de datos secundaria. Como en la base de datos secundaria este valor se debe sincronizar con el mismo valor de la principal, cualquier diferencia entre estos dos valores es la estimación de la pérdida de datos (RPO).  
+ 
+## <a name="estimate-rto-and-rpo-using-dmvs"></a>Estimación de RTO y RPO mediante DMV
+
+Se pueden consultar las DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) y [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) para calcular el RPO y RTO de una base de datos. Las consultas siguientes crean procedimientos almacenados que realizan las dos operaciones. 
+
+  >[!NOTE]
+  > Asegúrese de crear y ejecutar el procedimiento almacenado para estimar el RTO en primer lugar, ya que los valores que genera son necesarios para ejecutar el procedimiento almacenado para calcular el RPO. 
+
+### <a name="create-a-stored-procedure-to-estimate-rto"></a>Creación de un procedimiento almacenado para calcular el RTO 
+
+1. En la réplica secundaria de destino, cree el procedimiento almacenado **proc_calculate_RTO**. Si este procedimiento almacenado ya existe, primero debe eliminarlo y después volver a crearlo. 
+
+ ```sql
+    if object_id(N'proc_calculate_RTO', 'p') is not null
+        drop procedure proc_calculate_RTO
+    go
+    
+    raiserror('creating procedure proc_calculate_RTO', 0,1) with nowait
+    go
+    --
+    -- name: proc_calculate_RTO
+    --
+    -- description: Calculate RTO of a secondary database.
+    -- 
+    -- parameters:  @secondary_database_name nvarchar(max): name of the secondary database.
+    --
+    -- security: this is a public interface object.
+    --
+    create procedure proc_calculate_RTO
+    (
+    @secondary_database_name nvarchar(max)
+    )
+    as
+    begin
+      declare @db sysname
+      declare @is_primary_replica bit 
+      declare @is_failover_ready bit 
+      declare @redo_queue_size bigint 
+      declare @redo_rate bigint
+      declare @replica_id uniqueidentifier
+      declare @group_database_id uniqueidentifier
+      declare @group_id uniqueidentifier
+      declare @RTO float 
+
+      select 
+      @is_primary_replica = dbr.is_primary_replica, 
+      @is_failover_ready = dbcs.is_failover_ready, 
+      @redo_queue_size = dbr.redo_queue_size, 
+      @redo_rate = dbr.redo_rate, 
+      @replica_id = dbr.replica_id,
+      @group_database_id = dbr.group_database_id,
+      @group_id = dbr.group_id 
+      from sys.dm_hadr_database_replica_states dbr join sys.dm_hadr_database_replica_cluster_states dbcs    on dbr.replica_id = dbcs.replica_id and 
+      dbr.group_database_id = dbcs.group_database_id  where dbcs.database_name = @secondary_database_name
+
+      if  @is_primary_replica is null or @is_failover_ready is null or @redo_queue_size is null or @replica_id is null or @group_database_id is null or @group_id is null
+      begin
+        print 'RTO of Database '+ @secondary_database_name +' is not available'
+        return
+      end
+      else if @is_primary_replica = 1
+      begin
+        print 'You are visiting wrong replica';
+        return
+      end
+
+      if @redo_queue_size = 0 
+        set @RTO = 0 
+      else if @redo_rate is null or @redo_rate = 0 
+      begin
+        print 'RTO of Database '+ @secondary_database_name +' is not available'
+        return
+      end
+      else 
+        set @RTO = CAST(@redo_queue_size AS float) / @redo_rate
+    
+      print 'RTO of Database '+ @secondary_database_name +' is ' + convert(varchar, ceiling(@RTO))
+      print 'group_id of Database '+ @secondary_database_name +' is ' + convert(nvarchar(50), @group_id)
+      print 'replica_id of Database '+ @secondary_database_name +' is ' + convert(nvarchar(50), @replica_id)
+      print 'group_database_id of Database '+ @secondary_database_name +' is ' + convert(nvarchar(50), @group_database_id)
+    end
+ ```
+
+2. Ejecute **proc_calculate_RTO** con el nombre de la base de datos secundaria de destino:
+  ```sql
+   exec proc_calculate_RTO @secondary_database_name = N'DB_sec'
+  ```
+3. En la salida se muestra el valor de RTO de la base de datos de réplica secundaria de destino. Guarde los valores *group_id*, *replica_id* y *group_database_id* para usarlos con el procedimiento almacenado de estimación del RPO. 
+   
+   Resultado de ejemplo:
+<br>RTO of Database DB_sec' is 0
+<br>group_id of Database DB4 is F176DD65-C3EE-4240-BA23-EA615F965C9B
+<br>replica_id of Database DB4 is 405554F6-3FDC-4593-A650-2067F5FABFFD
+<br>group_database_id of Database DB4 is 39F7942F-7B5E-42C5-977D-02E7FFA6C392
+
+### <a name="create-a-stored-procedure-to-estimate-rpo"></a>Creación de un procedimiento almacenado para calcular el RPO 
+1. En la réplica principal, cree el procedimiento almacenado **proc_calculate_RPO**. Si ya existe, primero debe eliminarlo y, después, volver a crearlo. 
+
+ ```sql
+    if object_id(N'proc_calculate_RPO', 'p') is not null
+                    drop procedure proc_calculate_RPO
+    go
+    
+    raiserror('creating procedure proc_calculate_RPO', 0,1) with nowait
+    go
+    --
+    -- name: proc_calculate_RPO
+    --
+    -- description: Calculate RPO of a secondary database.
+    -- 
+    -- parameters:  @group_id uniqueidentifier: group_id of the secondary database.
+    --              @replica_id uniqueidentifier: replica_id of the secondary database.
+    --              @group_database_id uniqueidentifier: group_database_id of the secondary database.
+    --
+    -- security: this is a public interface object.
+    --
+    create procedure proc_calculate_RPO
+    (
+     @group_id uniqueidentifier,
+     @replica_id uniqueidentifier,
+     @group_database_id uniqueidentifier
+    )
+    as
+    begin
+          declare @db_name sysname
+          declare @is_primary_replica bit
+          declare @is_failover_ready bit
+          declare @is_local bit
+          declare @last_commit_time_sec datetime 
+          declare @last_commit_time_pri datetime      
+          declare @RPO nvarchar(max) 
+
+          -- secondary database's last_commit_time 
+          select 
+          @db_name = dbcs.database_name,
+          @is_failover_ready = dbcs.is_failover_ready, 
+          @last_commit_time_sec = dbr.last_commit_time 
+          from sys.dm_hadr_database_replica_states dbr join sys.dm_hadr_database_replica_cluster_states dbcs on dbr.replica_id = dbcs.replica_id and 
+          dbr.group_database_id = dbcs.group_database_id  where dbr.group_id = @group_id and dbr.replica_id = @replica_id and dbr.group_database_id = @group_database_id
+
+          -- correlated primary database's last_commit_time 
+          select
+          @last_commit_time_pri = dbr.last_commit_time,
+          @is_local = dbr.is_local
+          from sys.dm_hadr_database_replica_states dbr join sys.dm_hadr_database_replica_cluster_states dbcs on dbr.replica_id = dbcs.replica_id and 
+          dbr.group_database_id = dbcs.group_database_id  where dbr.group_id = @group_id and dbr.is_primary_replica = 1 and dbr.group_database_id = @group_database_id
+
+          if @is_local is null or @is_failover_ready is null
+          begin
+            print 'RPO of database '+ @db_name +' is not available'
+            return
+          end
+
+          if @is_local = 0
+          begin
+            print 'You are visiting wrong replica'
+            return
+          end  
+
+          if @is_failover_ready = 1
+            set @RPO = '00:00:00'
+          else if @last_commit_time_sec is null or  @last_commit_time_pri is null 
+          begin
+            print 'RPO of database '+ @db_name +' is not available'
+            return
+          end
+          else
+          begin
+            if DATEDIFF(ss, @last_commit_time_sec, @last_commit_time_pri) < 0
+            begin
+                print 'RPO of database '+ @db_name +' is not available'
+                return
+            end
+            else
+                set @RPO =  CONVERT(varchar, DATEADD(ms, datediff(ss ,@last_commit_time_sec, @last_commit_time_pri) * 1000, 0), 114)
+          end
+          print 'RPO of database '+ @db_name +' is ' + @RPO
+      end
+ ```
+
+2. Ejecute **proc_calculate_RPO** con los valores *group_id*, *replica_id* y *group_database_id* de la base secundaria de destino. 
+
+ ```sql
+   exec proc_calculate_RPO @group_id= 'F176DD65-C3EE-4240-BA23-EA615F965C9B',
+        @replica_id =  '405554F6-3FDC-4593-A650-2067F5FABFFD',
+        @group_database_id  = '39F7942F-7B5E-42C5-977D-02E7FFA6C392'
+ ```
+3. En la salida se muestra el valor de RPO de la base de datos de réplica secundaria de destino. 
+
   
-##  <a name="BKMK_Monitoring_for_RTO_and_RPO"></a> Supervisión de RTO y RPO  
+##  <a name="monitoring-for-rto-and-rpo"></a>Supervisión de RTO y RPO  
  En esta sección se muestra cómo supervisar las métricas RTO y RPO de los grupos de disponibilidad. Esta demostración es similar al tutorial de GUI de [The Always On health model, part 2: Extending the health model](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (Parte 2 del modelo de estado de Always On: extensión del modelo de estado).  
   
  Se proporcionan elementos de los cálculos de tiempo de conmutación por error y de posible pérdida de datos de [Estimación del tiempo de conmutación por error (RTO)](#BKMK_RTO) y [Estimación de la posible pérdida de datos (RPO)](#BKMK_RPO) como métricas de rendimiento de la faceta de administración de directivas **Estado de réplica de base de datos** (vea [Ver las facetas de administración basada en directivas en un objeto de SQL Server](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). Puede supervisar estas dos métricas según una programación y recibir alertas cuando superen el RTO y el RPO, respectivamente.  
@@ -232,7 +458,7 @@ Para crear las directivas, siga las instrucciones siguientes en todas las instan
 ##  <a name="BKMK_SCENARIOS"></a> Escenarios de solución de problemas de rendimiento  
  En la tabla siguiente se enumeran los escenarios de solución de problemas relacionados con el rendimiento comunes.  
   
-|Escenario|Description|  
+|Escenario|Descripción|  
 |--------------|-----------------|  
 |[Solución de problemas: el grupo de disponibilidad superó el RTO](troubleshoot-availability-group-exceeded-rto.md)|Después de una conmutación por error automática o una manual planeada sin pérdida de datos, el tiempo de conmutación por error supera el RTO. O bien, al estimar el tiempo de conmutación por error de una réplica secundaria de confirmación sincrónica (por ejemplo, un asociado de conmutación automática por error), descubre que supera el RTO.|  
 |[Solución de problemas: el grupo de disponibilidad superó el RPO](troubleshoot-availability-group-exceeded-rpo.md)|Después de realizar una conmutación por error manual forzada, la pérdida de datos supera la RPO. O bien, al calcular la posible pérdida de datos de una réplica secundaria de confirmación asincrónica, descubre que supera la RPO.|  

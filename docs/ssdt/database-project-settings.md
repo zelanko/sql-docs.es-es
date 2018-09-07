@@ -44,12 +44,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 006dde8f0c41ffe266c34ec5cbbf112473a49b4b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: f77719ef5ea1dafa149a00a73ec470162b769f2d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087197"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776158"
 ---
 # <a name="database-project-settings"></a>Configuración del proyecto de base de datos
 Utilice la configuración del proyecto de base de datos para controlar aspectos de las configuraciones de base de datos, depuración y compilación. Existen varias categorías de configuraciones.  
@@ -108,7 +108,7 @@ Los valores de configuración de la siguiente tabla se aplican a todas las confi
 La comprobación extendida de Transact-SQL es una característica dentro del sistema del proyecto de base de datos que permite a los desarrolladores enviar su proyecto de base de datos al Servicio Compilador de Transact-SQL en tiempo de compilación para validar su código con el analizador y el intérprete del Motor de SQL Server.  
   
 ### <a name="transact-sql-compiler-service"></a>Servicio Compilador de Transact-SQL  
-Transact-SQL Compiler Service es un componente basado en el Motor de base de datos de Microsoft SQL Server 2012. Este servicio puede validar la sintaxis y la semántica de las instrucciones DDL con la misma fidelidad que un motor de base de datos de Microsoft SQL Server 2012. Esto, de modo inherente, significa que el Servicio compilador no admite la sintaxis ni las características que hayan dejado de usarse en Microsoft SQL Server 2012. Para obtener más información acerca de las características en desuso, vea [Funcionalidad del Motor de base de datos que han dejado de usarse en SQL Server 2012](http://msdn.microsoft.com/en-us/library/ms144262%28v=sql.110%29.aspx).  
+Transact-SQL Compiler Service es un componente basado en el Motor de base de datos de Microsoft SQL Server 2012. Este servicio puede validar la sintaxis y la semántica de las instrucciones DDL con la misma fidelidad que un motor de base de datos de Microsoft SQL Server 2012. Esto, de modo inherente, significa que el Servicio compilador no admite la sintaxis ni las características que hayan dejado de usarse en Microsoft SQL Server 2012. Para obtener más información sobre las características en desuso, vea [Funcionalidad del motor de base de datos no incluida en SQL Server 2012](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).  
   
 Para validar el proyecto de base de datos, el Servicio Compilador crea una base de datos parcialmente independiente y simula la ejecución de instrucciones DDL con dicha base de datos. Para obtener más información, vea [Bases de datos parcialmente independientes](http://msdn.microsoft.com/en-us/library/ff929071%28v=SQL.110%29.aspx).  
   

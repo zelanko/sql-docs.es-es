@@ -15,17 +15,19 @@ caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 15bf16dc24c14855356083093d386a2c0a6b78af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c7815346582774bf53034aa368ea6459fe7fcd75
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022682"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42432588"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Crear un conjunto de datos compartido o un conjunto de datos incrustado (Generador de informes y SSRS)
 Los conjuntos de datos incrustados se usan en un único informe de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Los conjuntos de datos compartidos en un servidor de informes se pueden usar en varios informes, tanto móviles como paginados. Para crear un conjunto de datos, necesita un origen de datos incrustado o compartido.  
   
- Use el **Generador de informes** para realizar las tareas siguientes:  
+## <a name="report-builder-tasks"></a>Tareas del Generador de informes
+
+Use el Generador de informes para las tareas siguientes:  
   
 1.  Crear un conjunto de datos compartido en la vista de diseño de conjunto de datos. Los conjuntos de datos compartidos deben usar orígenes de datos compartidos publicados.  
   
@@ -33,7 +35,9 @@ Los conjuntos de datos incrustados se usan en un único informe de [!INCLUDE[ssR
   
 3.   Guardar el conjunto de datos directamente en el servidor de informes o el sitio de SharePoint.  
   
- Use el **Diseñador de informes** en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para realizar las tareas siguientes:  
+## <a name="report-designer-tasks"></a>Tareas del Diseñador de informes
+
+Use el Diseñador de informes en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para las tareas siguientes:  
   
 1.  Crear un conjunto de datos compartido en el Explorador de soluciones. Los orígenes de datos compartidos deben usar orígenes de datos de la capeta Orígenes de datos compartidos en el Explorador de soluciones.  
   
@@ -46,7 +50,7 @@ Los conjuntos de datos incrustados se usan en un único informe de [!INCLUDE[ssR
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="to-open-report-builder-and-create-a-shared-dataset"></a>Para abrir el Generador de informes y crear un conjunto de datos compartido  
+## <a name="to-create-a-shared-dataset-in-report-builder"></a>Para crear un conjunto de datos compartido en el Generador de informes
   
 1.  Abra el Generador de informes. Se abre el panel **Nuevo informe o conjunto de datos** , como se muestra en en la siguiente figura:  
   

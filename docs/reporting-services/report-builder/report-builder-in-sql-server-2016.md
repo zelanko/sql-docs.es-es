@@ -20,15 +20,15 @@ caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7b0e65fda3c8aab492d45546428db43b8af7fc1a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 482fc7069a480d41122535e139be2726df75f972
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022932"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40412661"
 ---
 # <a name="report-builder-in-sql-server-2016"></a>Generador de informes en SQL Server 2016
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] es una herramienta de creación de informes paginados para usuarios profesionales que prefieren trabajar en un entorno independiente en lugar de usar el Diseñador de informes de Visual Studio.  Al diseñar un informe paginado, crea una definición de informe que especifica dónde obtener los datos, qué datos obtener y cómo visualizarlos. Al ejecutar el informe, el procesador de informes usa la definición de informe especificada, recupera los datos y los combina con el diseño del informe para generar el informe. Puede obtener una vista previa del informe en el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] o publicarlo en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo o en modo integrado de SharePoint, donde otros usuarios podrán ejecutarlo.  
+  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] es una herramienta de creación de informes paginados para usuarios profesionales que prefieren trabajar en un entorno independiente en lugar de usar el Diseñador de informes de Visual Studio.  Al diseñar un informe paginado, crea una definición de informe que especifica dónde obtener los datos, qué datos obtener y cómo visualizarlos. Al ejecutar el informe, el procesador de informes usa la definición de informe especificada, recupera los datos y los combina con el diseño del informe para generar el informe. Puede obtener una vista previa del informe en el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] o publicarlo en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo o en modo integrado de SharePoint, donde otros usuarios podrán ejecutarlo.  
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -50,7 +50,7 @@ ms.locfileid: "33022932"
   
 -   **Informes a partir de diferentes orígenes de datos.** Cree informes con datos de cualquier tipo de origen de datos que tenga un proveedor de datos administrado por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], un proveedor OLE DB o un origen de datos ODBC. Puede crear informes que utilizan datos relacionales y multidimensionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion y otras bases de datos. Puede utilizar una extensión de procesamiento de datos XML para recuperar datos desde cualquier origen de datos XML. Puede utilizar funciones con valores de tabla para diseñar orígenes de datos personalizados.  
   
--   **Modifique los informes existentes.** Con el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], puede personalizar y actualizar informes creados en el Diseñador de informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+-   **Modifique los informes existentes.** Con el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], puede personalizar y actualizar informes creados en el Diseñador de informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 -   **Modifique los datos** filtrando, agrupando y ordenando los datos o agregando fórmulas o expresiones.  
   
@@ -79,15 +79,15 @@ ms.locfileid: "33022932"
   [Instalación del Generador de informes](../../reporting-services/install-windows/install-report-builder.md)
 
   [Novedades en Reporting Services y el Generador de informes de SQL Server 2016](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
-  Se describen las nuevas características de esta versión de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] y [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].   
+  Se describen las nuevas características de esta versión de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] y [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].   
   [Tutorial: crear un informe de gráfico rápido sin conexión](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
- Presenta el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] y los asistentes disponibles para ayudarlo a crear los informes. El tutorial proporciona un conjunto de datos para que los use de modo que no tenga que conectarse a un origen de datos para empezar.  
+ Presenta el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] y los asistentes disponibles para ayudarlo a crear los informes. El tutorial proporciona un conjunto de datos para que los use de modo que no tenga que conectarse a un origen de datos para empezar.  
   
  [Planear un informe &#40;Generador de informes&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  
  Proporciona información acerca de lo que debería tener en cuenta antes de empezar a generar el informe.  
   
  [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
- Define conceptos básicos usados en toda la documentación del [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] .  
+ Define conceptos básicos usados en toda la documentación del [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
  [Vista de diseño de informe &#40;Generador de informes&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
  Explica los diferentes paneles y regiones de la vista de diseño del informe.  
@@ -96,6 +96,6 @@ ms.locfileid: "33022932"
  Explica los diferentes paneles y regiones de la vista de diseño del conjunto de datos compartido.  
   
  [Métodos abreviados de teclado &#40;Generador de informes&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
- Se describen las teclas de método abreviado disponibles para navegar y diseñar informes en el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
+ Se describen las teclas de método abreviado disponibles para navegar y diseñar informes en el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
 

@@ -14,12 +14,12 @@ caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8c68b455a8d37a7cb7b796a46a7ba1589100a54f
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 020e3c23760f6bbd88bbf7be2fe29d06211ec604
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980987"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40410531"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>Instalar o desinstalar el complemento Reporting Services para SharePoint
 
@@ -31,7 +31,7 @@ ms.locfileid: "38980987"
 > La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
   
 ##  <a name="bkmk_prereq"></a> Requisitos previos  
- La instalación del complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es uno de los diversos pasos necesarios para integrar un servidor de informes con una instancia de un producto de SharePoint. Para más información sobre cómo instalar y configurar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Instalación del primer servidor de informes en modo de SharePoint](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
+ La instalación del complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es uno de los diversos pasos necesarios para integrar un servidor de informes con una instancia de un producto de SharePoint. Para obtener más información sobre cómo instalar y configurar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Instalación del primer servidor de informes en modo de SharePoint](install-the-first-report-server-in-sharepoint-mode.md).  
   
 -   Si va a integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con una granja de SharePoint que tenga varias aplicaciones front-end web, instale el complemento en cada equipo de la granja que tenga un servidor front-end web. Haga esto únicamente para los front-end web que se vayan a usar para tener acceso al contenido del servidor de informes.  
   
@@ -83,7 +83,7 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\16\` (SharePoint 2016)  
   
-3.  Configure los parámetros del servidor de informes y la activación de características en Administración central de SharePoint. . Para obtener más información sobre cómo instalar y configurar el modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vea [Instalación del primer servidor de informes en modo de SharePoint](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
+3.  Configure los parámetros del servidor de informes y la activación de características en Administración central de SharePoint. . Para obtener más información sobre cómo instalar y configurar el modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Instalación del primer servidor de informes en modo de SharePoint](install-the-first-report-server-in-sharepoint-mode.md).  
   
 ###  <a name="bkmk_files_only_installation"></a> Instalación de solo archivos  
  Para instalar los archivos, pero omitir la fase de instalación de acciones personalizadas, ejecute rssharepoint.msi desde la línea de comandos con la opción SKIPCA.  
@@ -271,11 +271,11 @@ Rssharepoint.msi /?
 |t|Solo SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 2005. El modificador comprueba si el servidor de informes tiene una conexión activa con la base de datos del servidor de informes.|  
   
 ## <a name="configuring-reporting-services"></a>Configurar Reporting Services  
- Una vez instalado el complemento en todos los equipos necesarios, es preciso configurar el servidor de informes desde Administración central de SharePoint. Los pasos necesarios dependerán del orden en que se instalaron las distintas tecnologías. Para más información, consulte [Instalación del primer servidor de informes en modo de SharePoint](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538) y [Servidor de informes de Reporting Services &#40;modo de SharePoint&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
+ Una vez instalado el complemento en todos los equipos necesarios, es preciso configurar el servidor de informes desde Administración central de SharePoint. Los pasos necesarios dependerán del orden en que se instalaron las distintas tecnologías. Para obtener más información, vea [Instalación del primer servidor de informes en modo de SharePoint](install-the-first-report-server-in-sharepoint-mode.md) y [Servidor de informes de Reporting Services &#40;modo de SharePoint&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
   
 ## <a name="see-also"></a>Ver también
 
-[Instalar el primer servidor de informes en el modo de SharePoint](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)   
+[Instalación del primer servidor de informes en modo de SharePoint](install-the-first-report-server-in-sharepoint-mode.md)   
 [Servidor de informes de Reporting Services &#40;modo de SharePoint&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

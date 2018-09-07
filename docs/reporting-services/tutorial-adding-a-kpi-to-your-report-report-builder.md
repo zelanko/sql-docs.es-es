@@ -17,15 +17,15 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9c6c7edf99179ba576fbb2a30668768eeca222e4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d9c3e64d56db1d24a386619a274e293135f3d95d
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036392"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405441"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Agregar un KPI a un informe (Generador de informes y SSRS)
-En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , agregue un indicador de rendimiento clave (KPI) a un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
+En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], agregará un indicador clave de rendimiento (KPI) a un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
 
 Los KPI son valores medibles con significado empresarial. En este escenario, el resumen de ventas por subcategorías de producto es el KPI. El estado actual del KPI se muestra con colores, medidores e indicadores.
   

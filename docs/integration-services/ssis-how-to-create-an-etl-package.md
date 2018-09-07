@@ -1,14 +1,14 @@
 ---
 title: 'Tutorial de SSIS: Crear un paquete ETL sencillo | Microsoft Docs'
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
@@ -23,16 +23,16 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5d2af071661576fdcd63a46a424a457fb969aac9
-ms.sourcegitcommit: 87efa581f7d4d84e9e5c05690ee1cb43bd4532dc
+ms.openlocfilehash: 1b2863ac1e5a9f9bdf072e674bb4e556eeecc268
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38999285"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029601"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>Tutorial de SSIS: Crear un paquete ETL sencillo
 
- > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Tutorial de SSIS: Crear un paquete ETL sencillo](https://msdn.microsoft.com/library/ms169917(SQL.120).aspx).
+ > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Tutorial de SSIS: Crear un paquete ETL sencillo](ssis-how-to-create-an-etl-package.md).
 
 En este tutorial, aprenderá a usar el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] para crear un paquete de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sencillo. El paquete que cree toma los datos de un archivo plano, formatea de nuevo lo datos y luego inserta dichos datos en una tabla de hechos. En las lecciones siguientes, el paquete se expande para mostrar la creación de bucles, configuraciones de paquete, registro y flujo de errores.  
   
@@ -54,7 +54,7 @@ Para ejecutar este tutorial, debe tener instalados los componentes siguientes:
 
 -   La base de datos **AdventureWorksDW2012** de ejemplo. Para descargar la base de datos **AdventureWorksDW2012**, descargue `AdventureWorksDW2012.bak` de las [bases de datos de ejemplo de AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) y restaure la copia de seguridad.  
 
--   Los archivos de **datos de ejemplo**. Los datos de ejemplo se incluyen con los paquetes de lecciones de [!INCLUDE[ssIS](../includes/ssis-md.md)] . Para descargar los datos de ejemplo y los paquetes de lecciones como un archivo Zip, vea [Tutorial de SSIS: Crear un paquete ETL sencillo](https://www.microsoft.com/download/details.aspx?id=56827).
+-   Los archivos de **datos de ejemplo**. Los datos de ejemplo se incluyen con los paquetes de lecciones de [!INCLUDE[ssIS](../includes/ssis-md.md)] . Para descargar los datos de ejemplo y los paquetes de lecciones como un archivo ZIP, vea [SQL Server Integration Services Tutorial Files](https://www.microsoft.com/download/details.aspx?id=56827) (Archivos de tutoriales de SQL Server Integration Services).
 
     - La mayoría de los archivos del archivo ZIP son de solo lectura para evitar cambios no deseados. Para escribir la salida en un archivo o para cambiarla, puede que tenga que desactivar el atributo de solo lectura en las propiedades del archivo.
     - Los paquetes de ejemplo suponen que los archivos de datos están ubicados en la carpeta `C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Creating a Simple ETL Package`. Si descomprime la descarga en otra ubicación, puede que tenga que actualizar la ruta de acceso del archivo en varios lugares en los paquetes de ejemplo.

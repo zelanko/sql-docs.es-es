@@ -1,13 +1,12 @@
 ---
-title: common criteria compliance enabled (opción de configuración del servidor) | Microsoft Docs
+title: Configuración de compatibilidad con criterio común habilitada | Microsoft Docs
 ms.custom: ''
-ms.date: 03/02/2017
+ms.date: 08/21/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - common criteria compliance
@@ -17,23 +16,22 @@ helpviewer_keywords:
 - Risidual Information Protection [Database Engine]
 - RIP (Residual Information Protection)
 ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
-caps.latest.revision: 24
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 320c81ef93d11e1ebd73c861617be322a99f2655
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: 5f259daef42200f05fe3bc495559d1ed4292638f
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863710"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40427285"
 ---
-# <a name="common-criteria-compliance-enabled-server-configuration-option"></a>common criteria compliance enabled (opción de configuración del servidor)
+# <a name="common-criteria-compliance-enabled-server-configuration"></a>Configuración de compatibilidad con criterio común habilitada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  La opción common criteria compliance enabled habilita los siguientes elementos necesarios para Criterio común.  
+La opción de compatibilidad con el criterio común habilita los elementos siguientes necesarios para los [Common Criteria for Information Technology Security Evaluation](https://www.commoncriteriaportal.org/) (Criterios comunes para la evaluación de seguridad de tecnologías de la información).  
   
-|Criterios|Description|  
+|Criterios|Descripción|  
 |--------------|-----------------|  
 |Protección de información residual (RIP)|RIP requiere que una asignación de memoria se sobrescriba con un patrón de bits conocido antes de que la memoria se reasigne a un nuevo recurso. Ajustarse al estándar RIP puede contribuir a mejorar la seguridad; sin embargo, sobrescribir la asignación de memoria puede ralentizar el rendimiento. Una vez habilitada la opción common criteria compliance enabled, se produce la sobrescritura.|  
 |La capacidad para ver estadísticas de inicio de sesión|Una vez habilitada la opción common criteria compliance enabled, se habilita la auditoría de inicio de sesión. Cada vez que un usuario inicia sesión correctamente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se muestra la información acerca del último inicio de sesión correcto, el último inicio de sesión incorrecto y el número de intentos realizados entre la hora del último inicio de sesión correcto y la hora actual. Estas estadísticas de inicio de sesión se pueden ver consultando la vista de administración dinámica [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) .|  
@@ -67,6 +65,4 @@ GO
 Reinicie [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
   
 ## <a name="see-also"></a>Ver también  
- [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
-  
-  
+ [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)

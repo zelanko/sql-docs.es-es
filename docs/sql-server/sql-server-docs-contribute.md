@@ -1,6 +1,6 @@
 ---
 title: Cómo colaborar en la documentación de SQL Server | Microsoft Docs
-ms.date: 04/12/2018
+ms.date: 08/13/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 52bc0371c7f60b7b6fcff5c64c5972d7a178b629
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 57b35b9edbfb257d327f310d526729b7a60215e2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926536"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774094"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Cómo colaborar en la documentación de SQL Server
 
@@ -33,36 +33,14 @@ Hay dos flujos de trabajo principales que se pueden aplicar para colaborar:
 
 ## <a id="githubui"></a> Edición en el navegador
 
-En los siguientes pasos se da una visión general de cómo hacer ediciones sencillas en el contenido de SQL Server con el navegador. El proceso completo está documentado en el artículo [Flujo de trabajo de colaboración de GitHub para cambios menores o poco frecuentes](https://docs.microsoft.com/contribute/light-workflow).
+Puede realizar modificaciones sencillas en el contenido de SQL Server en el explorador y, después, enviarlas a Microsoft. El proceso completo está documentado en el artículo [Guía para colaboradores de Microsoft Docs: información general](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). En el vídeo siguiente se muestra el proceso completo para enviar los cambios en el explorador:
 
-1. En todos los artículos, incluido este, aparece el botón **Editar** situado a la derecha. Busque un artículo que quiera cambiar y haga clic en el botón **Editar** para empezar a trabajar.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE23pxh]
 
-   ![Botón Editar para un artículo de SQL](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
-
-   Todo el contenido de docs.microsoft.com se administra en distintos repositorios de GitHub. Al hacer clic en el botón Editar, se le direccionará al artículo del repositorio **sql-docs**. En cambio, si edita un artículo de SQL en la documentación de Azure, se le direccionará al repositorio **azure-docs**. 
-
-1. Después, haga clic en el icono de lápiz situado en la parte superior derecha del artículo de GitHub.
-
-   ![Botón Editar](./media/sql-server-docs-contribute/edit-button.png)
-
-   > [!NOTE]
-   > Debe iniciar sesión en GitHub para poder editar un artículo. Si no tiene ninguna cuenta de GitHub, vea [Configuración de la cuenta de GitHub](https://docs.microsoft.com/contribute/get-started-setup-github). Después de crear una cuenta, también deberá comprobar su dirección de correo electrónico con GitHub para poder editar.
-
-1. Edite el artículo en el navegador. Todos los artículos se escriben en Markdown. Si necesita ayuda relacionada con Markdown, puede consultar [Markdown basics](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/) (Conceptos básicos de Markdown). También puede aprender observando cómo representan los artículos publicados el Markdown existente.
-
-1. Desplácese hasta el final de la ventana de edición, escriba un título para el cambio y haga clic en el botón **Propose file change** (Proponer cambio de archivo).
-
-   ![Proponer solicitud de incorporación de cambios](./media/sql-server-docs-contribute/propose-file-change.png)
-
-1. En la siguiente página, haga clic en **Crear solicitud de incorporación de cambios**.
-
-   ![Crear solicitud de incorporación de cambios](./media/sql-server-docs-contribute/create-pull-request.png)
-
-1. Escriba un título y una descripción para la solicitud de incorporación de cambios. Luego, vuelva a hacer clic en **Crear solicitud de incorporación de cambios**.
-
-   ![Crear solicitud de incorporación de cambios](./media/sql-server-docs-contribute/create-pull-request2.png)
-
-En este punto se le debería guiar por el resto del proceso en los comentarios de la solicitud de incorporación de cambios. El proceso completo y los detalles adicionales están en la [guía del colaborador](https://docs.microsoft.com/contribute/light-workflow).
+> [!TIP]
+> Tenga en cuenta que la ubicación del botón **Editar** es ligeramente diferente a la que se muestra en el vídeo, pero el proceso es el mismo.
+>
+> ![Botón Editar](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
 
 ## <a id="tools"></a> Edición local con herramientas
 
@@ -73,7 +51,7 @@ Para colaborar con este método, consulte los siguientes artículos:
 - [Creación de una cuenta de GitHub](https://docs.microsoft.com/contribute/get-started-setup-github)
 - [Instalación de herramientas de creación de contenido](https://docs.microsoft.com/contribute/get-started-setup-tools)
 - [Configuración local de un repositorio de Git](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [Uso de herramientas para la colaboración](https://docs.microsoft.com/contribute/how-to-write-workflows-majo)
+- [Uso de herramientas para la colaboración](https://docs.microsoft.com/contribute/how-to-write-workflows-major)
 
 Si envía una solicitud de incorporación de cambios con cambios importantes en la documentación, recibirá un comentario en GitHub en el que se le pedirá que envíe un **contrato de licencia de colaboración (CLA)** en línea. Debe cumplimentar el formulario en línea para que se pueda aceptar la solicitud de incorporación de cambios.
 
@@ -115,10 +93,11 @@ De esta manera se agrega el siguiente texto en la parte superior del artículo:
 
 Para buscar el archivo de inclusión applies-to correcto para su artículo, aplique las siguientes sugerencias:
 
+- Para obtener una lista de los archivos de inclusión más utilizados, vea ["Applies to" e "Includes" de SQL](applies-to-includes.md).
 - Consulte otros artículos que aborden la misma función o una tarea relacionada. Si edita ese mismo artículo, puede copiar el Markdown del vínculo del archivo de inclusión applies-to (puede cancelar la edición sin enviarla).
 - Busque el directorio [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) de los archivos que contienen el texto "applies-to". Puede usar el botón **Find** (Buscar) en GitHub para filtrar rápidamente. Haga clic en el archivo para ver cómo se representa.
 - Preste atención a la convención de nomenclatura. Si hay x en el nombre, suelen ser marcadores de posición que indican la falta de compatibilidad de un servicio. Por ejemplo, **appliesto-xx-xxxx-asdw-xxx-md.md** indica compatibilidad con solo Azure SQL Data Warehouse, porque solo se especifica **asdw** y los demás campos contienen x.
-- Algunos archivos de inclusión especifican un número de versión, como **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md**. Use estos archivos de inclusión únicamente si sabe que la característica se ha introducido con una versión específica de SQL Server. 
+- Algunos archivos de inclusión especifican un número de versión, como **tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md**. Use estos archivos de inclusión únicamente si sabe que la característica se ha introducido con una versión específica de SQL Server.
 
 ## <a name="contributor-resources"></a>Recursos para los colaboradores
 

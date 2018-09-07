@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: fb8fb779fdd28114cdea97abf572315795f7f7d2
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 1d7c5b5165b3e67956750203d31904a539469125
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452129"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42441438"
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>Instrucciones RESTORE: VERIFYONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -124,6 +124,14 @@ FROM <backup_device> [ ,...n ]
   
 ### <a name="permissions"></a>Permisos  
  A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], para obtener información sobre un conjunto de copia de seguridad o un dispositivo de copia de seguridad, es necesario el permiso CREATE DATABASE. Para obtener más información, vea [GRANT &#40;permisos de base de datos de Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
+ 
+## <a name="examples"></a>Ejemplos  
+ En el ejemplo siguiente se comprueba la copia de seguridad desde el disco.
+  
+```  
+RESTORE VERIFYONLY FROM DISK = 'D:\AdventureWorks.bak';
+GO
+```  
   
 ## <a name="see-also"></a>Ver también  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   

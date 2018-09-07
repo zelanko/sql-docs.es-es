@@ -1,14 +1,14 @@
 ---
 title: Implementar paquetes con SSIS | Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2016
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 helpviewer_keywords:
 - deployment tutorial [Integration Services]
 - deploying packages [Integration Services]
@@ -24,12 +24,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9f7abdad422347e140e230eac9b7f19a78d5ba47
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f7f28ae86cab01c86aa7360618b080ec4ff124e2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328269"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028819"
 ---
 # <a name="deploy-packages-with-ssis"></a>Implementar paquetes con SSIS
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona herramientas que permiten implementar paquetes en otro equipo. Las herramientas de implementación también administran las dependencias, como configuraciones y archivos que necesita el paquete. En este tutorial, aprenderá a usar estas herramientas para instalar paquetes y sus dependencias en un equipo de destino.    
@@ -45,37 +45,49 @@ A continuación, copiará el paquete de implementación en el equipo de destino 
 Por último, ejecutará los paquetes en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] con la Utilidad de ejecución de paquetes.    
     
 El objetivo de este tutorial es simular la complejidad de los problemas reales de implementación que puede encontrarse. No obstante, si no puede implementar los paquetes en otro equipo, puede seguir este tutorial instalando los paquetes en la base de datos msdb en una instancia local de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]y, a continuación, ejecutar los paquetes desde [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] en la misma instancia.    
-    
-## <a name="what-you-will-learn"></a>Aprendizaje    
+
+**Tiempo estimado para completar este tutorial:** 2 horas
+
+## <a name="what-you-learn"></a>Lo que aprenderá    
 La mejor forma de familiarizarse con las nuevas herramientas, los controles y las características disponibles en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es usándolas. Este tutorial le guía por los pasos para crear un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y, a continuación, agregar los paquetes y otros archivos necesarios al proyecto. Después de completar el proyecto, creará un paquete de implementación, copiará el paquete al equipo de destino e instalará los paquetes en él.    
     
-## <a name="requirements"></a>Requisitos    
+## <a name="prerequisites"></a>Prerequisites    
 Este tutorial está concebido para los usuarios familiarizados con las operaciones básicas del sistema de archivos, pero que no conocen con detalle las nuevas características disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para comprender mejor los conceptos básicos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que usará en este tutorial, puede resultarle útil completar primero el siguiente tutorial de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] : [Tutorial de SSIS: Crear un paquete ETL sencillo](../integration-services/ssis-how-to-create-an-etl-package.md).    
     
-**Equipo de origen.** El equipo en el que creará el paquete de implementación **debe tener instalados los siguientes componentes:**
-- SQL Server  
-- Datos de ejemplo, paquetes completados, configuraciones y un archivo Léame. Estos archivos se instalan conjuntamente si descarga [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)(Bases de datos de ejemplo de Adventure Works 2014).     
-> **Nota** asegúrese de que tiene permiso para crear y quitar tablas en AdventureWorks u otros datos que use.         
+### <a name="on-the-source-computer"></a>En el equipo de origen
+
+El equipo en el que se crea el paquete de implementación **debe tener instalados los componentes siguientes:**
+
+- SQL Server. (Descargue una edición gratuita de evaluación o desarrollador de SQL Server desde [Descargas de SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)).
+
+- Datos de ejemplo, paquetes completados, configuraciones y un archivo Léame. Para descargar los datos de ejemplo y los paquetes de lecciones como un archivo ZIP, vea [SQL Server Integration Services Tutorial Files](https://www.microsoft.com/download/details.aspx?id=56827) (Archivos de tutoriales de SQL Server Integration Services). La mayoría de los archivos del archivo ZIP son de solo lectura para evitar cambios no deseados. Para escribir la salida en un archivo o para cambiarla, puede que tenga que desactivar el atributo de solo lectura en las propiedades del archivo.
+
+-   La base de datos de ejemplo **AdventureWorks2014**. Para descargar la base de datos **AdventureWorks2014**, descargue `AdventureWorks2014.bak` de las [bases de datos de ejemplo de AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) y restaure la copia de seguridad.  
+
+-   Debe tener permiso para crear y quitar tablas en la base de datos AdventureWorks.
     
 -   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).    
     
-**Equipo de destino.** El equipo en el que implementará los paquetes **debe tener instalados los siguientes componentes:**    
+### <a name="on-the-destination-computer"></a>En el equipo de destino
+
+El equipo en el que implementará los paquetes **debe tener instalados los siguientes componentes:**    
     
-- SQL Server
-- Datos de ejemplo, paquetes completados, configuraciones y un archivo Léame. Estos archivos se instalan conjuntamente si descarga [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)(Bases de datos de ejemplo de Adventure Works 2014). 
+- SQL Server. (Descargue una edición gratuita de evaluación o desarrollador de SQL Server desde [Descargas de SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)).
+
+- Datos de ejemplo, paquetes completados, configuraciones y un archivo Léame. Para descargar los datos de ejemplo y los paquetes de lecciones como un archivo ZIP, vea [SQL Server Integration Services Tutorial Files](https://www.microsoft.com/download/details.aspx?id=56827) (Archivos de tutoriales de SQL Server Integration Services). La mayoría de los archivos del archivo ZIP son de solo lectura para evitar cambios no deseados. Para escribir la salida en un archivo o para cambiarla, puede que tenga que desactivar el atributo de solo lectura en las propiedades del archivo.
+
+-   La base de datos de ejemplo **AdventureWorks2014**. Para descargar la base de datos **AdventureWorks2014**, descargue `AdventureWorks2014.bak` de las [bases de datos de ejemplo de AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) y restaure la copia de seguridad.  
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).    
     
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].    
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para instalar SSIS, vea [Instalar Integration Services](install-windows/install-integration-services.md).
     
--   Debe tener permiso para crear y quitar tablas en AdventureWorks para y ejecutar paquetes en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].    
+-   Debe tener permiso para crear y quitar tablas en la base de datos AdventureWorks, y para ejecutar paquetes de SSIS en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].    
     
--   Debe tener permiso de lectura y de escritura para la tabla sysssispackages en la base de datos del sistema msdb de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .    
+-   Debe tener permiso de lectura y de escritura para la tabla `sysssispackages` en la base de datos del sistema `msdb` de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].    
     
 Si planea implementar paquetes en el mismo equipo en el que va a crear el paquete de implementación, ese equipo debe cumplir los requisitos de los equipos de origen y destino.    
-    
-**Tiempo estimado para completar este tutorial:** 2 horas    
-    
+        
 ## <a name="lessons-in-this-tutorial"></a>Lecciones de este tutorial    
 [Lección 1: Preparar la creación del paquete de implementación](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
 En esta lección, se preparará para implementar una solución ETL creando un nuevo proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y agregando los paquetes y otros archivos necesarios al proyecto.    

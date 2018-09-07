@@ -1,1 +1,1 @@
-**ESTE TEMA SE APLICA A:** ![sí](media/yes.png)SQL Server (solo Windows a partir de 2016)![no](media/no.png)Azure SQL Database![no](media/no.png)Azure SQL Data Warehouse ![ no](media/no.png)Almacenamiento de datos paralelos
+**SE APLICA A:** ![sí](media/yes.png)SQL Server (solo en Windows a partir de 2016) ![no](media/no.png)Azure SQL Database ![no](media/no.png)Azure SQL Data Warehouse ![no](media/no.png)Almacenamiento de datos paralelos

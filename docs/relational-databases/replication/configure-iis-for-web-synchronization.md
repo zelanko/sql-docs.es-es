@@ -19,12 +19,12 @@ caps.latest.revision: 88
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7ffab68d239f7992d7f3b1c3a289f8c67c17b53
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: ed503598b4a093876b0323ee1284a7bb9d782171
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358817"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405812"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurar IIS para la sincronización web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "37358817"
   
 -   RMO: [Cómo configurar una suscripción para usar la sincronización web (programación con RMO)](http://msdn.microsoft.com/library/ms345207.aspx)  
   
- La sincronización web utiliza un equipo en el que se ejecuta [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) para sincronizar las suscripciones de extracción con las publicaciones de combinación. Se admiten IIS versión 5.0, IIS versión 6.0 e [!INCLUDE[iisver](../../includes/iisver-md.md)] . El Asistente para configurar la sincronización web no se admite en [!INCLUDE[iisver](../../includes/iisver-md.md)].  
+ La sincronización web utiliza un equipo en el que se ejecuta [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) para sincronizar las suscripciones de extracción con las publicaciones de combinación. Las versiones 5.0, 6.0 y 7.0 de IIS son compatibles. El Asistente para configurar la sincronización web no se admite en la versión 7.0 de IIS.  
   
 > [!IMPORTANT]  
 >  Asegúrese de que la aplicación solo utilice [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] o versiones posteriores, y de que no haya versiones anteriores de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] instaladas en el servidor IIS. Las versiones anteriores de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pueden producir errores. Entre estos errores se incluyen los siguientes: "El formato de un mensaje durante la sincronización web no es válido. Asegúrese de que los componentes de replicación se han configurado correctamente en el servidor web".  

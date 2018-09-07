@@ -1,7 +1,7 @@
 ---
 title: Tipo de conexión SQL Azure (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/24/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -15,12 +15,12 @@ caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3183a2d7ec717cfd5f00768c16a142727d3fc058
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2e8ed9c88cf2e6c77321e26e6704ae64cb2249b3
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022792"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40406115"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Tipo de conexión SQL Azure (SSRS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] es una base de datos relacional hospedada y basada en la nube, que se integra en las tecnologías de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para incluir en el informe los datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , debe tener un conjunto de datos que se base en un origen de datos de informe de tipo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Este tipo de origen de datos integrado se basa en la extensión de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Utilice este tipo de origen de datos para conectarse y recuperar datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -126,7 +126,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
   
  Si un procedimiento almacenado incluye un parámetro que tiene un valor predeterminado, puede tener acceso a dicho valor utilizando la palabra clave DEFAULT como valor del parámetro. Si el parámetro de consulta está vinculado a un parámetro de informe, el usuario puede escribir o seleccionar la palabra DEFAULT en el cuadro de entrada del parámetro de informe.  
   
- Para obtener más información sobre los procedimientos almacenados, vea "Procedimientos almacenados (motor de base de datos)" en los [Libros en pantalla de SQL Server](http://go.microsoft.com/fwlink/?linkid=98335) en msdn.microsoft.com.  
+ Para obtener más información sobre los procedimientos almacenados, vea [Procedimientos almacenados (motor de base de datos)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md).  
   
   
 ##  <a name="Parameters"></a> Parámetros  

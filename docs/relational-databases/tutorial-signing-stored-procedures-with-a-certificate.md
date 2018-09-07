@@ -1,66 +1,59 @@
 ---
 title: 'Tutorial: Firmar procedimientos almacenados con un certificado | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/23/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.technology: ''
+ms.topic: quickstart
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
 - signing stored procedures tutorial [SQL Server]
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 caps.latest.revision: 11
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b0cfd18b508f13499ce5cf7bdf4cc12be4440562
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f2adac6728e7c288a50d525a0760a98a26c5b2b2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011942"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021089"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Tutorial: Firmar procedimientos almacenados con un certificado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 En este tutorial se describe cómo se firman los procedimientos almacenados con un certificado generado por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
-> Para ejecutar el código de este tutorial, debe estar configurada la seguridad de modo mixto y la base de datos [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] debe estar instalada. Escenario  
+> Para ejecutar el código de este tutorial, la seguridad de modo mixto debe estar configurada y la base de datos AdventureWorks2017 debe estar instalada.   
   
 La firma de procedimientos almacenados mediante un certificado es útil si desea exigir permisos en el procedimiento almacenado sin conceder explícitamente esos derechos al usuario. Aunque esto se puede conseguir de distintas maneras, por ejemplo, mediante la instrucción EXECUTE AS, los certificados le permiten usar un seguimiento para buscar al autor de la llamada original del procedimiento almacenado. De este modo, se consigue un alto nivel de auditoría, especialmente durante las operaciones de seguridad o de lenguaje de definición de datos (DDL).  
   
-Puede crear un certificado en la base de datos maestra para permitir permisos de nivel de servidor o puede crear un certificado en cualquier base de datos de usuario para permitir permisos de nivel de base de datos. En este escenario, un usuario sin derechos en las tablas base deberá obtener acceso a un procedimiento almacenado de la base de datos [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] y deberá realizar una auditoría del acceso a los objetos. En lugar de usar los métodos de cadenas de propiedad, deberá crear una cuenta de servidor y de usuario de base de datos sin derechos en los objetos base, y una cuenta de usuario de base de datos con derechos en una tabla y en un procedimiento almacenado. Tanto el procedimiento almacenado como la segunda cuenta de usuario de base de datos estarán protegidos con un certificado. La segunda cuenta de la base de datos tendrá acceso a todos los objetos y podrá conceder acceso al procedimiento almacenado en la primera cuenta de usuario de la base de datos.  
+Puede crear un certificado en la base de datos maestra para permitir permisos de nivel de servidor o puede crear un certificado en cualquier base de datos de usuario para permitir permisos de nivel de base de datos. En este escenario, un usuario sin derechos en las tablas base tendrá que acceder a un procedimiento almacenado de la base de datos AdventureWorks2017 y deberá realizar una auditoría del acceso a los objetos. En lugar de usar los métodos de cadenas de propiedad, deberá crear una cuenta de servidor y de usuario de base de datos sin derechos en los objetos base, y una cuenta de usuario de base de datos con derechos en una tabla y en un procedimiento almacenado. Tanto el procedimiento almacenado como la segunda cuenta de usuario de base de datos estarán protegidos con un certificado. La segunda cuenta de la base de datos tendrá acceso a todos los objetos y podrá conceder acceso al procedimiento almacenado en la primera cuenta de usuario de la base de datos.  
   
 En este escenario, en primer lugar creará un certificado de base de datos, un procedimiento almacenado y un usuario y, a continuación, comprobará el proceso mediante los pasos siguientes:  
   
-1.  Configure el entorno.  
-  
-2.  Cree un certificado.  
-  
-3.  Cree y firme un procedimiento almacenado mediante el certificado.  
-  
-4.  Cree una cuenta de certificado mediante el certificado.  
-  
-5.  Conceda al certificado derechos de base de datos de cuentas.  
-  
-6.  Muestre el contexto de acceso.  
-  
-7.  Restablezca el entorno.  
-  
 Cada bloque de código incluido en este ejemplo se describe en línea. Para copiar el ejemplo completo, vea [Ejemplo completo](#CompleteExample) al final de este tutorial.  
+
+## <a name="prerequisites"></a>Prerequisites
+Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, acceso a un servidor que ejecute SQL Server y una base de datos de AdventureWorks.
+
+- Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Descargue las [bases de datos de ejemplo de AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+
+Para obtener instrucciones sobre cómo restaurar una base de datos en SQL Server Management Studio, vea [Restauración de una base de datos](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
   
 ## <a name="1-configure-the-environment"></a>1. Configurar el entorno  
-Para establecer el contexto inicial del ejemplo, en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] abra una consulta nueva y ejecute el código siguiente para abrir la base de datos [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]. Este código cambia el contexto de la base de datos a `AdventureWorks2012` y crea un inicio de sesión de servidor y una cuenta de usuario de base de datos nuevos (`TestCreditRatingUser`) mediante una contraseña.  
+Para establecer el contexto inicial del ejemplo, abra una consulta nueva en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y ejecute el código que se indica a continuación para abrir la base de datos Adventureworks2017. Este código cambia el contexto de la base de datos a `AdventureWorks2012` y crea un inicio de sesión de servidor y una cuenta de usuario de base de datos nuevos (`TestCreditRatingUser`) mediante una contraseña.  
   
-```  
-USE AdventureWorks2012;  
+```sql  
+USE AdventureWorks2017;  
 GO  
 -- Set up a login for the test user  
 CREATE LOGIN TestCreditRatingUser  
@@ -78,18 +71,18 @@ Puede crear certificados en los servidores mediante la base de datos maestra com
   
 Ejecute este código para crear un certificado de base de datos y protéjalo mediante una contraseña.  
   
-```  
+```sql  
 CREATE CERTIFICATE TestCreditRatingCer  
    ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
       WITH SUBJECT = 'Credit Rating Records Access',   
-      EXPIRY_DATE = '12/05/2014';  
+      EXPIRY_DATE = '12/05/2020';  -- Error 3701 will occur if this date is not in the future
 GO  
 ```  
   
 ## <a name="3-create-and-sign-a-stored-procedure-using-the-certificate"></a>3. Crear y firmar un procedimiento almacenado mediante el certificado  
 Utilice el siguiente código para crear un procedimiento almacenado que seleccione los datos de la tabla `Vendor` en el esquema de la base de datos `Purchasing` y restrinja el acceso únicamente a las compañías con una solvencia de 1. Tenga en cuenta que la primera sección del procedimiento almacenado muestra el contexto de la cuenta de usuario que ejecuta el procedimiento almacenado, que solo se usa para demostrar los conceptos. No es necesario cumplir los requisitos.  
   
-```  
+```sql  
 CREATE PROCEDURE TestCreditRatingSP  
 AS  
 BEGIN  
@@ -111,7 +104,7 @@ GO
   
 Ejecute este código para firmar el procedimiento almacenado con el certificado de base de datos mediante una contraseña.  
   
-```  
+```sql  
 ADD SIGNATURE TO TestCreditRatingSP   
    BY CERTIFICATE TestCreditRatingCer  
     WITH PASSWORD = 'pGFD4bb925DGvbd2439587y';  
@@ -125,8 +118,8 @@ Para obtener más información sobre cómo firmar los procedimientos almacenados
 ## <a name="4-create-a-certificate-account-using-the-certificate"></a>4. Crear una cuenta de certificado mediante el certificado  
 Ejecute este código para crear un usuario de base de datos (`TestCreditRatingcertificateAccount`) a partir del certificado. Esta cuenta no tiene inicio de sesión en el servidor y en última instancia controlará el acceso a las tablas subyacentes.  
   
-```  
-USE AdventureWorks2012;  
+```sql  
+USE AdventureWorks2017;  
 GO  
 CREATE USER TestCreditRatingcertificateAccount  
    FROM CERTIFICATE TestCreditRatingCer;  
@@ -136,7 +129,7 @@ GO
 ## <a name="5-grant-the-certificate-account-database-rights"></a>5. Conceder al certificado derechos de base de datos de cuentas  
 Ejecute este código para conceder derechos `TestCreditRatingcertificateAccount` a la tabla base y al procedimiento almacenado.  
   
-```  
+```sql  
 GRANT SELECT   
    ON Purchasing.Vendor   
    TO TestCreditRatingcertificateAccount;  
@@ -153,7 +146,7 @@ Para obtener más información sobre cómo conceder permisos a los objetos, cons
 ## <a name="6-display-the-access-context"></a>6. Mostrar el contexto de acceso  
 Para mostrar los derechos asociados al acceso al procedimiento almacenado, ejecute el siguiente código para conceder al usuario de `TestCreditRatingUser` los derechos para ejecutar el procedimiento almacenado.  
   
-```  
+```sql  
 GRANT EXECUTE   
    ON TestCreditRatingSP   
    TO TestCreditRatingUser;  
@@ -162,14 +155,14 @@ GO
   
 A continuación, ejecute el siguiente código para ejecutar el procedimiento almacenado como el inicio de sesión dbo que ha usado en el servidor. Compruebe la salida de la información de contexto del usuario. Mostrará la cuenta dbo como el contexto con sus derechos propios y no a través de una pertenencia a un grupo.  
   
-```  
+```sql  
 EXECUTE TestCreditRatingSP;  
 GO  
 ```  
   
 Ejecute el siguiente código para que la instrucción `EXECUTE AS` se convierta en la cuenta `TestCreditRatingUser` y ejecute el procedimiento almacenado. En esta ocasión, el contexto de usuario se establece en el contexto USER MAPPED TO CERTIFICATE.  
   
-```  
+```sql  
 EXECUTE AS LOGIN = 'TestCreditRatingUser';  
 GO  
 EXECUTE TestCreditRatingSP;  
@@ -184,7 +177,7 @@ Se muestra la auditoría disponible porque ha firmado el procedimiento almacenad
 ## <a name="7-reset-the-environment"></a>7. Restablecer el entorno  
 El código siguiente usa la instrucción `REVERT` para devolver el contexto de la cuenta actual a dbo y, a continuación, restablece el entorno.  
   
-```  
+```sql  
 REVERT;  
 GO  
 DROP PROCEDURE TestCreditRatingSP;  
@@ -204,9 +197,9 @@ Para obtener más información sobre la instrucción REVERT, consulte [REVERT &#
 ## <a name="CompleteExample"></a>Ejemplo completo  
 En esta sección se muestra el código de ejemplo completo.  
   
-```  
-/* Step 1 - Open the AdventureWorks2012 database */  
-USE AdventureWorks2012;  
+```sql  
+/* Step 1 - Open the AdventureWorks2017 database */  
+USE AdventureWorks2017;  
 GO  
 -- Set up a login for the test user  
 CREATE LOGIN TestCreditRatingUser  
@@ -220,7 +213,7 @@ GO
 CREATE CERTIFICATE TestCreditRatingCer  
    ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
       WITH SUBJECT = 'Credit Rating Records Access',   
-      EXPIRY_DATE = '12/05/2014';  
+      EXPIRY_DATE = '12/05/2020';   -- Error 3701 will occur if this date is not in the future
 GO  
   
 /* Step 3 - Create a stored procedure and  

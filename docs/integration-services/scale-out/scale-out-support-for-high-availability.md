@@ -14,12 +14,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 3af4b868e42a1f327af5ee8616fe5629e0e2a485
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3ab8635837723b99a559bffcd546ff99d27fe283
+ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411807"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40405997"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Compatibilidad con la escalabilidad horizontal para una alta disponibilidad
 
@@ -109,6 +109,9 @@ En el servidor SQL Server principal, ejecute el procedimiento almacenado `[catal
 ## <a name="9-add-the-scale-out-workers"></a>9. Agregar trabajos de escalabilidad horizontal
 
 Ahora puede agregar trabajos de escalabilidad horizontal con la ayuda del [Administrador de escalabilidad horizontal de Integration Services](integration-services-ssis-scale-out-manager.md). Escriba `[SQL Server Availability Group Listener DNS name],[Port]` en la página de conexión.
+
+# <a name="upgrade-scale-out-in-high-availability-environment"></a>Actualización de la escalabilidad horizontal en entornos de alta disponibilidad
+Para actualizar la escalabilidad horizontal en entornos de alta disponibilidad, siga los [pasos de actualización de Always On para el catálogo de SSIS](../catalog/ssis-catalog.md#Upgrade), actualice el Servicio principal de escalabilidad horizontal y el Trabajo de escalabilidad horizontal en todas las máquinas y vuelva a crear el rol de clúster de conmutación por error de Windows Server en el paso 7 anterior con la nueva versión del Servicio principal de escalabilidad horizontal.
 
 ## <a name="next-steps"></a>Pasos siguientes
 Para obtener más información, vea los artículos siguientes:

@@ -1,6 +1,6 @@
 ---
 title: Documentación de SQL Server | Microsoft Docs
-ms.date: 05/03/2018
+ms.date: 08/10/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -23,12 +23,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e481ca33bd3d3eae0c4aec4ea1cc3af1aac4276a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f199e904967d5a0420baed584ec73c5b2fd5b933
+ms.sourcegitcommit: 01fccb8015644e75fd99fc5543d8216a1539f6ca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37986389"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42775738"
 ---
 # <a name="sql-server-documentation"></a>Documentación de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,11 +51,7 @@ SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL 
 |[Novedades de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [Notas de la versión de SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)        |
 |[Novedades de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Notas de la versión de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
 
-![info_tip](../sql-server/media/info-tip.png) El contenido de SQL Server 2014 pronto se combinará con el del sitio .docs.  Por ahora, vea:
-- [Libros en pantalla de SQL Server 2014](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
-- [Novedades de SQL Server 2014](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)
-- [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
-- [Versiones anteriores](https://docs.microsoft.com/previous-versions/sql/)
+![info_tip](../sql-server/media/info-tip.png) La documentación de SQL Server **2014** está disponible [aquí](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014).
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -70,8 +66,8 @@ SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL 
 |[Novedades de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Notas de la versión de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
 ::: moniker-end
 
-::: moniker range="= sql-server-2016"
-**Probar SQL Server**
+::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"
+**Pruebe SQL Server 2016.**
 - [![Descargar desde el Centro de evaluación](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Descargar SQL Server para Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Descargar desde el Centro de evaluación](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Descargar SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 - [![Descargar desde el Centro de evaluación](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Descargar SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
@@ -99,9 +95,10 @@ SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL 
 |![Servicios de replicación](../sql-server/media/replication-services.png "Servicios de replicación")|**[Replicación](../relational-databases/replication/sql-server-replication.md)**<br /><br /> La replicación es un conjunto de tecnologías destinadas a la copia y distribución de datos y objetos de base de datos de una base de datos a otra, para luego sincronizar ambas bases de datos con el fin de mantener su coherencia. La replicación permite distribuir datos a diferentes ubicaciones y a usuarios remotos o móviles mediante redes de área local y de área extensa, conexiones de acceso telefónico, conexiones inalámbricas e Internet.|
 |![Data Quality Services](../sql-server/media/data-quality-services.png "Data Quality Services")|**[Data Quality Services](../data-quality-services/data-quality-services.md)**<br /><br /> SQL Server Data Quality Services (DQS) proporciona una solución de limpieza de datos controlada por conocimiento. DQS permite generar una base de conocimiento y usarla para realizar tareas de corrección de datos y eliminación de datos duplicados, usando medios asistidos por ordenador e interactivos. Puede usar servicios de consulta de datos basados en la nube y puede generar una solución de administración de datos que integra DQS con SQL Server Integration Services y Master Data Services.|
 |![Master Data Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] es la solución de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para la administración de datos maestros. Una solución basada en [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ayuda a asegurarse de que los informes y los análisis se basan en la información correcta. Con [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], se crea un repositorio central de los datos maestros y se mantiene un registro auditable y protegible de los mismos a medida que van cambiando con el tiempo.|
+| &nbsp; | &nbsp; |
 
-::: moniker range="= sql-server-2016"
-## <a name="migrate-and-move-data"></a>Migrar y mover los datos
+::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"
+## <a name="migrate-and-move-data-in-version-2016"></a>Migrar y mover los datos, en la versión de 2016
 
 - [Importar y exportar datos con el Asistente para importación y exportación de SQL Server](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 - [Migración de su base de datos SQL Server a Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)

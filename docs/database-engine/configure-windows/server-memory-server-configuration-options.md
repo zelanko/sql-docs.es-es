@@ -25,12 +25,12 @@ caps.latest.revision: 78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3544a4530c1650d02952c750d82bb9d51e2d6d50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eabd43020196d312bb954f95e019b720b388410b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870240"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405589"
 ---
 # <a name="server-memory-server-configuration-options"></a>Opciones de configuración de memoria del servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ La configuración predeterminada para la **memoria de servidor mínima** es 0, y
 La cantidad de memoria mínima permitida para **memoria de servidor máxima** es 128 MB.
   
 > [!IMPORTANT]  
-> Si establece el valor de **memoria de servidor máxima** en una cifra demasiado alta, puede producir que una única de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenga que competir por la memoria con otras instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hospedadas en el mismo host. Sin embargo, si establece este valor en una cifra demasiado baja, podría producir problemas de rendimiento y presión de memoria significativos. Si establece **Memoria de servidor máxima** en el valor mínimo, puede incluso evitar que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inicie. Si no puede iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tras cambiar esta opción, inicie esta herramienta mediante la opción de inicio ***-f*** y restablezca la opción **memoria de servidor máxima** a su valor anterior. Para más información, consulte [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
+> Si establece el valor de **memoria de servidor máxima** en una cifra demasiado alta, puede producir que una única de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenga que competir por la memoria con otras instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hospedadas en el mismo host. Sin embargo, si establece este valor en una cifra demasiado baja, podría producir problemas de rendimiento y presión de memoria significativos. Si establece **Memoria de servidor máxima** en el valor mínimo, puede incluso evitar que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inicie. Si no puede iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tras cambiar esta opción, inicie esta herramienta mediante la opción de inicio ***-f*** y restablezca la opción **memoria de servidor máxima** a su valor anterior. Para más información, consulte [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
     
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede usar memoria dinámicamente; sin embargo, es posible establecer las opciones de memoria manualmente y restringir la cantidad de memoria a la que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede acceder. Antes de establecer la cantidad de memoria para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], determine la configuración de memoria apropiada restando de la memoria física total la memoria necesaria para el sistema operativo, las asignaciones de memorias no controladas por la configuración max_server_memory y todas las demás instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (y otros usos del sistema, si el equipo no está dedicado totalmente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Esta diferencia es la cantidad de memoria máxima que puede asignar a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actual.  
  
@@ -89,7 +89,8 @@ Para deshabilitar la opción **Bloquear páginas en memoria** para [!INCLUDE[ssN
 La configuración de esta opción no afecta a la [administración dinámica de memoria](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], lo que permite realizar expansiones y contracciones mediante solicitudes de otros distribuidores de memoria. Cuando se usa el derecho de usuario *Bloquear páginas en la memoria* se recomienda establecer un límite superior para la **memoria de servidor máxima**, tal y como [se describe anteriormente](#max_server_memory).
 
 > [!IMPORTANT]
-> Esta opción solo se debería usar en caso necesario, principalmente si hay algún indicio de que el proceso sqlservr se está transfiriendo al almacenamiento auxiliar. En este caso, se informará del error 17890 en el registro de errores de una forma similar a la siguiente: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.` A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], la [marca de seguimiento 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) no es necesaria para usar Páginas bloqueadas con la edición Estándar. 
+> Esta opción solo se debería usar en caso necesario, principalmente si hay algún indicio de que el proceso sqlservr se está transfiriendo al almacenamiento auxiliar. En este caso, se notificará el error 17890 en el registro de errores, similar al ejemplo siguiente: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
+> A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], no se necesita la [marca de seguimiento 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) en Standard Edition para usar páginas bloqueadas. 
   
 ### <a name="to-enable-lock-pages-in-memory"></a>Para habilitar Bloquear páginas en la memoria  
 Para habilitar la opción de bloqueo de páginas en memoria:  
@@ -122,7 +123,7 @@ Para habilitar la opción de bloqueo de páginas en memoria:
  Esta configuración se puede cambiar sin tener que reiniciar las instancias; por tanto, se puede experimentar fácilmente para encontrar la mejor configuración para el patrón de uso.  
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>Proporcionar la cantidad máxima de memoria a SQL Server  
-Se puede configurar memoria hasta el límite del espacio de direcciones virtuales de proceso en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [Memory Limits for Windows and Windows Server Releases](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx#physical_memory_limits_windows_server_2016) (Límites de memoria para versiones de Windows y Windows Server).
+Se puede configurar memoria hasta el límite del espacio de direcciones virtuales de proceso en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [Memory Limits for Windows and Windows Server Releases](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016) (Límites de memoria para versiones de Windows y Windows Server).
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -168,5 +169,5 @@ FROM sys.dm_os_process_memory;
  [Ediciones y características admitidas de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md#Cross-BoxScaleLimits)   
  [Ediciones y características admitidas de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)   
  [Ediciones y características admitidas de SQL Server 2017 en Linux](../../linux/sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits)   
- [Memory Limits for Windows and Windows Server Releases](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx) (Límites de memoria para versiones de Windows y Windows Server)
+ [Memory Limits for Windows and Windows Server Releases](/windows/desktop/Memory/memory-limits-for-windows-releases) (Límites de memoria para versiones de Windows y Windows Server)
  

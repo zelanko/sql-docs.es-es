@@ -14,18 +14,18 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e4cdf1a8b5c690e8f4ac25ddf28843dc36a5b63e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 72a6b25840fe897d2fa15c3ced283e6968893ec4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322794"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406644"
 ---
 # <a name="uninstall-report-builder"></a>Desinstalar el Generador de informes
 
 Podrá desinstalar la versión independiente del Generador de informes desde el panel de control o la línea de comandos.
 
-La desinstalación del Generador de informes desde la línea de comandos utiliza una sintaxis que es idéntica a la que se utiliza para instalar el Generador de informes, excepto en que se usa la opción /x en lugar de la opción /i. Las líneas de comandos para desinstalar también pueden incluir la opción /quiet y otras opciones estándar. Si se ha quitado el paquete de Windows Installer para el Generador de informes (ReportBuilder3_x86.msi), no podrá utilizar con facilidad la línea de comandos para desinstalar el Generador de informes. Para aprender cómo podría quitar el Generador de informes mediante su GUID, vea la documentación del programa msiexec en [Opciones de la línea de comandos](https://msdn.microsoft.com/library/windows/desktop/aa367988.aspx).  
+La desinstalación del Generador de informes desde la línea de comandos utiliza una sintaxis que es idéntica a la que se utiliza para instalar el Generador de informes, excepto en que se usa la opción /x en lugar de la opción /i. Las líneas de comandos para desinstalar también pueden incluir la opción /quiet y otras opciones estándar. Si se ha quitado el paquete de Windows Installer para el Generador de informes (ReportBuilder3_x86.msi), no podrá utilizar con facilidad la línea de comandos para desinstalar el Generador de informes. Para obtener información sobre cómo podría quitar el Generador de informes mediante su GUID, vea la documentación del programa msiexec en [Command-Line Options](/windows/desktop/Msi/command-line-options) (Opciones de línea de comandos).  
 
 Si las carpetas utilizadas por el Generador de informes incluyen archivos personalizados, las carpetas y archivos se conservan cuando se quita el Generador de informes. Solamente se quitan los archivos del Generador de informes.  
 

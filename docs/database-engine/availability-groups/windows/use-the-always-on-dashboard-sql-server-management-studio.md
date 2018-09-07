@@ -1,7 +1,7 @@
 ---
-title: Usar el panel de grupo de disponibilidad AlwaysOn (SQL Server Management Studio) | Microsoft Docs
+title: Uso del panel de grupo de disponibilidad Always On (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/30/2017
+ms.date: 08/09/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -18,59 +18,48 @@ caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4512fb251a34eaeb53bfdc18bb3bec98473f0cf
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 19772eb3ac64f060288a82353fa4d2ea705d9880
+ms.sourcegitcommit: b91c0a7e981749758bd38e47a530d4e7bf1c5dd9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770561"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40411071"
 ---
-# <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Usar el panel de grupo de disponibilidad AlwaysOn (SQL Server Management Studio)
+# <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Uso del panel de grupo de disponibilidad Always On (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Los administradores de bases de datos usan el panel de grupo de disponibilidad AlwaysOn para obtener una vista global del estado de un grupo de disponibilidad y de sus réplicas y bases de datos de disponibilidad en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Estos son algunos de los usos habituales del panel de grupo de disponibilidad AlwaysOn:  
+  Los administradores de bases de datos usan el panel de grupo de disponibilidad Always On para obtener una vista global del estado de un grupo de disponibilidad y de sus réplicas y bases de datos de disponibilidad en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Algunos de los usos habituales del panel de grupo de disponibilidad son estos:  
   
--   Elegir una réplica para una conmutación por error manual.  
-  
+-   Elegir una réplica para una conmutación por error manual.    
 -   Estimar la pérdida de datos si se fuerza la conmutación por error.  
-  
--   Evaluar el rendimiento de la sincronización de datos.  
-  
--   Evaluar el impacto en el rendimiento de una réplica secundaria de confirmación asincrónica  
-  
- El panel proporciona indicadores de rendimiento y estados de grupos de disponibilidad, lo que permite tomar fácilmente decisiones operativas para conseguir una alta disponibilidad gracias a los siguientes tipos de información.  
-  
--   Estado acumulado de réplica  
-  
--   Modo y estado de sincronización  
-  
--   Pérdida de datos calculada  
-  
--   Tiempo calculado de recuperación (rehacer puesta al día)  
-  
--   Detalles de réplica de base de datos  
-  
--   Modo y estado de sincronización  
-  
+-   Evaluar el rendimiento de la sincronización de datos.   
+-   Evaluar el impacto en el rendimiento de una réplica secundaria de confirmación asincrónica 
+  -  El panel proporciona indicadores de rendimiento y estados de grupos de disponibilidad, lo que permite tomar fácilmente decisiones operativas para conseguir una alta disponibilidad gracias a los siguientes tipos de información.  
+-   Estado acumulado de réplica    
+-   Modo y estado de sincronización   
+-   Pérdida de datos calculada    
+-   Tiempo calculado de recuperación (rehacer puesta al día)    
+-   Detalles de réplica de base de datos    
+-   Modo y estado de sincronización    
 -   Tiempo para restaurar registro  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="before-you-begin"></a>Antes de comenzar  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+### <a name="prerequisites"></a>Prerequisites  
  Debe estar conectado a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instancia del servidor) que hospeda la réplica principal o una réplica secundaria de un grupo de disponibilidad.  
   
-###  <a name="Security"></a> Seguridad  
+### <a name="security"></a>Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+#### <a name="permissions"></a>Permisos  
  Requiere permisos CONNECT TO, VIEW SERVER STATE y VIEW ANY DEFINITION.  
   
-##  <a name="SSMSProcedure"></a> Para iniciar el panel AlwaysOn  
+##  <a name="to-start-the-always-on-dashboard"></a>Para iniciar el panel Always On  
   
 1.  En el Explorador de objetos, conéctese a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la que quiere ejecutar el panel AlwaysOn.  
   
 2.  Expanda el nodo **Alta disponibilidad de AlwaysOn** , haga clic con el botón derecho en el nodo **Grupos de disponibilidad** y, luego, haga clic en **Mostrar panel**.  
   
-###  <a name="DashboardOptions"></a> Para cambiar las opciones del panel AlwaysOn  
+###  <a name="change-always-on-dashboard-options"></a>Cambio de las opciones del panel Always On  
  Puede usar el cuadro de diálogo **Opciones** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para configurar el comportamiento del panel AlwaysOn de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la hora de habilitar y actualizar automáticamente una directiva de AlwaysOn autodefinida.  
   
 1.  En el menú **Herramientas** , haga clic en **Opciones**.  
@@ -79,7 +68,7 @@ ms.locfileid: "34770561"
   
 3.  Para habilitar una directiva definida por el usuario, seleccione **Habilitar la directiva de AlwaysOn definida por el usuario**.  
   
-##  <a name="AvGroupsView"></a> Resumen de grupos de disponibilidad  
+##  <a name="availability-group-summary"></a>Resumen de grupos de disponibilidad  
  La pantalla de grupos de disponibilidad muestra una línea de resumen para cada grupo de disponibilidad para el que la instancia del servidor conectado hospeda una réplica. Este panel muestra las columnas siguientes.  
   
  **Nombre del grupo de disponibilidad**  
@@ -183,16 +172,11 @@ El panel **Réplica de disponibilidad** muestra las columnas siguientes:
  **Estado operativo**  
  Indica el estado operativo actual de la réplica secundaria. Este valor está oculto de forma predeterminada. Los valores posibles son:  
   
- **0**. Conmutación por error pendiente  
-  
- **1**. Pendiente  
-  
- **2**. En línea  
-  
- **3**. Sin conexión  
-  
- **4**. Error  
-  
+ **0**. Conmutación por error pendiente    
+ **1**. Pendiente    
+ **2**. En línea    
+ **3**. Sin conexión   
+ **4**. Error    
  **5**. No se pudo establecer quórum  
   
  **NULL**. La réplica no es local  
@@ -209,17 +193,13 @@ El panel **Réplica de disponibilidad** muestra las columnas siguientes:
 > [!NOTE]  
 >  Para obtener más información sobre los contadores de rendimiento para réplicas de disponibilidad, vea [SQL Server, réplica de disponibilidad](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
-##  <a name="AvDbDetails"></a> Para agrupar la información del grupo de disponibilidad  
+##  <a name="group-by-availability-group-information"></a>Agrupación por la información del grupo de disponibilidad  
  Para agrupar la información, haga clic en **Agrupar por**y seleccione una de las opciones siguientes:  
   
--   **Réplicas de disponibilidad**  
-  
--   **Bases de datos de disponibilidad**  
-  
+-   **Réplicas de disponibilidad**    
+-   **Bases de datos de disponibilidad** 
 -   **Synchronization state**  
-  
--   **Preparación para la conmutación por error**  
-  
+-   **Preparación para la conmutación por error**   
 -   **Problemas**  
   
  El panel que muestra que muestra la información agrupada tiene las siguientes columnas:  
@@ -233,27 +213,22 @@ El panel **Réplica de disponibilidad** muestra las columnas siguientes:
  **Estado de sincronización**  
  Indica si la base de datos de disponibilidad está sincronizada actualmente con la réplica principal. Este valor se muestra de forma predeterminada. Los posibles estados de sincronización son los siguientes:  
   
--   **No se están sincronizando**  
-  
-    -   En el rol principal, indica que la base de datos no está lista para sincronizar su registro de transacciones con las bases de datos secundarias correspondientes.  
-  
+-   **No se están sincronizando**:  
+-   
+    -   En el rol principal, indica que la base de datos no está lista para sincronizar su registro de transacciones con las bases de datos secundarias correspondientes.   
     -   En una base de datos secundaria, indica que la base de datos no ha iniciado la sincronización del registro debido a un problema de conexión, se está suspendiendo o está pasando por estados de transición durante el inicio o en una conmutación de roles.  
   
--   **En proceso de sincronización**  
+-   **En proceso de sincronización**:
+-   
+     En una réplica principal:   
+    - En una base de datos principal, indica que esta base de datos está lista para aceptar una solicitud de examen de una base de datos secundaria.  
+    - En una réplica secundaria, indica que hay en curso un movimiento de datos activo para esa base de datos secundaria. 
   
-     En una réplica principal:  
   
-    -   En una base de datos principal, indica que esta base de datos está lista para aceptar una solicitud de examen de una base de datos secundaria.  
+-   **Sincronizado**: 
   
-    -   En una réplica secundaria, indica que hay en curso un movimiento de datos activo para esa base de datos secundaria.  
-  
-     En una réplica secundaria, indica que hay en curso un movimiento de datos activo para esa réplica.  
-  
--   **Sincronizada**  
-  
-     Para una base de datos principal, indica que al menos una base de datos secundaria está sincronizada.  
-  
-     Para una base de datos secundaria, indica que la base de datos está sincronizada con la base de datos principal correspondiente.  
+    - Para una base de datos principal, indica que al menos una base de datos secundaria está sincronizada.
+    - Para una base de datos secundaria, indica que la base de datos está sincronizada con la base de datos principal correspondiente.  
   
 -   **Revirtiendo**.  
   
@@ -272,15 +247,13 @@ El panel **Réplica de disponibilidad** muestra las columnas siguientes:
  **Failover Readiness**  
  Indica qué réplica de disponibilidad puede ser objeto de conmutación por error con o sin pérdida potencial de datos. Esta columna se muestra de forma predeterminada. Los valores posibles son:  
   
--   **Pérdida de datos**  
-  
+-   **Pérdida de datos**   
 -   **No se produce pérdida de datos**  
   
  **Problemas**  
  Muestra el nombre del problema. Esta columna se muestra de forma predeterminada. Los valores posibles son:  
   
--   **Advertencias**. Haga clic para mostrar los umbrales y problemas de advertencias.  
-  
+-   **Advertencias**. Haga clic para mostrar los umbrales y problemas de advertencias.   
 -   **Crítico**. Haga clic para mostrar los problemas críticos.  
   
  Para obtener una lista con todos los problemas relativos a directivas de AlwaysOn, vea [Directivas de AlwaysOn para problemas operativos con grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
@@ -301,13 +274,13 @@ El panel **Réplica de disponibilidad** muestra las columnas siguientes:
  Indica el tiempo en segundos necesario para la sincronización entre las réplicas principal y secundaria. Este valor está oculto de forma predeterminada.  
   
  **Rendimiento de sincronización (KB)**  
- Indica la cantidad de entradas de registro en los archivos de registro de la base de datos principal que no se han enviado a la réplica secundaria. Este valor está oculto de forma predeterminada.  
+ Indica el número de entradas de registro en los archivos de registro de la base de datos principal que no se han enviado a la réplica secundaria. Este valor está oculto de forma predeterminada.  
   
  **Tasa de envío del registro (KB/seg)**  
  Indica la velocidad en KB por segundo a la que las entradas de registro se envían a la réplica secundaria. Este valor está oculto de forma predeterminada.  
   
  **Tamaño de la cola Rehacer (KB)**  
- Indica la cantidad de entradas de registro en los archivos de registro de la réplica secundaria que no se han rehecho todavía. Este valor está oculto de forma predeterminada.  
+ Indica el número de entradas de registro en los archivos de registro de la réplica secundaria que no se han puesto al día todavía. Este valor está oculto de forma predeterminada.  
   
  **Tasa de puesta al día (KB/seg)**  
  Indica la velocidad en KB por segundo a la que las entradas de registro se están rehaciendo. Este valor está oculto de forma predeterminada.  
@@ -353,8 +326,16 @@ El panel **Réplica de disponibilidad** muestra las columnas siguientes:
   
  **Última hora de rehacer**  
  Indica la hora en que la última entrada de registro se rehízo en la base de datos secundaria. Este valor está oculto de forma predeterminada.  
-  
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+ 
+
+## <a name="always-on-availability-group-latency-reports"></a>Informes de latencia del grupo de disponibilidad Always On
+El informe de latencia del grupo de disponibilidad es una herramienta de generación de informes integrada en el panel de grupo de disponibilidad y disponible en la versión [SQL Server Management Studio 17.4](../../../ssms/download-sql-server-management-studio-ssms.md). Esta característica proporciona un informe fácil de entender en el que se detalla el tiempo empleado durante las distintas fases del proceso de transporte de registro. Esto proporciona una manera de reducir la posible causa de la latencia durante el proceso de sincronización. 
+
+Agente SQL ejecuta la colección de datos y debe estar habilitado en la réplica principal y al menos una de las réplicas secundarias. Para ver el informe, haga clic con el botón derecho en el grupo de disponibilidad > Informes > Informes estándar en el **Explorador de objetos** de SQL Server Management Studio.  
+
+Para obtener más información, vea [Informes de latencia del grupo de disponibilidad Always On](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports/).
+
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Usar directivas de AlwaysOn para ver el estado de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   

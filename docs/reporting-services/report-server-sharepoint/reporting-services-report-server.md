@@ -13,12 +13,12 @@ ms.topic: get-started-article
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8f5ff80e5eb44133c98fffdce779733636ef0a5f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d8a8ee44c055d9679656ec5cf15b23096dc8c257
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38053353"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40411074"
 ---
 # <a name="reporting-services-report-server"></a>Servidor de informes de Reporting Services
 
@@ -85,7 +85,7 @@ Un servidor de informes de Reporting Services se ejecuta en uno de dos modos de 
   
 ### <a name="native-mode-with-sharepoint-web-parts"></a>Modo nativo con elementos web de SharePoint
 
- Reporting Services proporciona dos elementos web que puede instalar y registrar en una instancia de [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 o posterior, o en [!INCLUDE[spPortalServ](../../includes/spportalserv-md.md)] 2003 o posterior. Desde un sitio de SharePoint, puede usar los elementos web para buscar y ver informes almacenados y procesados en el servidor de informes que se ejecuta en modo nativo. Estos elementos web se incluyeron en versiones anteriores de Reporting Services.  
+ Reporting Services proporciona dos elementos web que se pueden instalar y registrar en una instancia de [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 o posterior, o bien en SharePoint Portal Server 2003 o posterior. Desde un sitio de SharePoint, puede usar los elementos web para buscar y ver informes almacenados y procesados en el servidor de informes que se ejecuta en modo nativo. Estos elementos web se incluyeron en versiones anteriores de Reporting Services.  
   
 ## <a name="sharepoint-mode"></a>Modo de SharePoint
 

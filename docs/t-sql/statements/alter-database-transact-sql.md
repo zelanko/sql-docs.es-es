@@ -29,14 +29,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d632476cd9d113e31eabbf26835fe0d7eb43ce5
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: 1256884f13a576580588e877dd490f0757bfba9e
+ms.sourcegitcommit: 4a9c89d72d91158832e89d96eb88cda616d36452
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008977"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42802574"
 ---
-# <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
+# <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL) 
 
 Modifica ciertas opciones de configuración de una base de datos. 
 
@@ -50,23 +50,10 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *</em></strong></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">Servidor lógico<br />de SQL DB</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">Instancia administrada<br />de SQL DB</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">Almacenamiento de datos<br />paralelos de SQL</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> ||||||  
+> |---|---|---|---|---|  
+> |**_\* SQL Server \*_** &nbsp;|[Servidor lógico de <br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de <br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Almacenamiento de datos<br /> paralelos de SQL](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -300,7 +287,7 @@ GO
 > </tr>
 > <tr>
 >   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th style="border: 1"><strong><em>*Servidor lógico<br />de SQL DB *</em></strong></th>
+>   <th><strong><em>* Servidor lógico<br />de SQL DB *</em></strong></th>
 >   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">Instancia administrada<br />de SQL DB</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">Almacenamiento de datos<br />paralelos de SQL</a></th>
@@ -665,7 +652,7 @@ ALTER DATABASE db1 FAILOVER
 > <tr>
 >   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">Servidor lógico<br />de SQL DB</a></th>
->   <th><strong><em>* Instancia administrada<br />de SQL DB</th>
+>   <th><strong><em>* Instancia administrada<br />de SQL Database *</em></strong></th>
 >   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">Almacenamiento de datos<br />paralelos de SQL</a></th>
 > </tr>
@@ -913,7 +900,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
   
 ## <a name="see-also"></a>Ver también  
 [CREATE DATABASE (Azure SQL Data Warehouse)](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldw.md)
-[Lista de artículos de referencia de SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/) 
+[Lista de artículos de referencia de SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/) 
  
 ::: moniker-end
 ::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
@@ -984,7 +971,7 @@ LOG_SIZE = *tamaño* [GB]
 Especifica el nuevo tamaño máximo en gigabytes por base de datos para almacenar todas los registros de transacciones de la base de datos que se va a modificar. El tamaño se distribuye entre todos los nodos de ejecución en el dispositivo.  
   
 ENCRYPTION { ON | OFF }  
-Establece que se cifre (ON) o no se cifre (OFF) la base de datos. Solo se puede configurar el cifrado para [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] cuando [sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) se haya establecido en **1**. Se debe crear una clave de cifrado de base de datos antes de poder configurar el cifrado de datos transparente. Para obtener más información sobre el cifrado de bases de datos, vea [Cifrado de datos transparente &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+Establece que se cifre (ON) o no se cifre (OFF) la base de datos. Solo se puede configurar el cifrado para [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] cuando [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) se haya establecido en **1**. Se debe crear una clave de cifrado de base de datos antes de poder configurar el cifrado de datos transparente. Para obtener más información sobre el cifrado de bases de datos, vea [Cifrado de datos transparente &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
 
 SET AUTO_CREATE_STATISTICS { ON | OFF } Cuando se activa la opción automática de creación de estadísticas, AUTO_CREATE_STATISTICS, el optimizador de consultas crea las estadísticas en columnas individuales en el predicado de consulta, según sea necesario, para mejorar las estimaciones de cardinalidad para el plan de consulta. Estas estadísticas de columna única se crean en las columnas que aún no tienen un histograma en un objeto de estadísticas existente.
 
@@ -1022,7 +1009,7 @@ Las operaciones de crecimiento y reducción son aproximadas. Los tamaños reales
 La configuración de las estadísticas solo funcionará si el administrador ha habilitado las estadísticas automáticas.  Si es un administrador, use el modificador de características [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) para habilitar o deshabilitar las estadísticas automáticas. 
   
 ## <a name="locking-behavior"></a>Comportamiento del bloqueo  
-Toma un bloqueo compartido en el objeto DATABASE. No se puede modificar una base de datos que está en uso por otro usuario para operaciones lectura o escritura. Esto incluye las sesiones que han emitido una instrucción [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) en la base de datos.  
+Toma un bloqueo compartido en el objeto DATABASE. No se puede modificar una base de datos que está en uso por otro usuario para operaciones lectura o escritura. Esto incluye las sesiones que han emitido una instrucción [USE](../language-elements/use-transact-sql.md) en la base de datos.  
   
 ## <a name="performance"></a>Rendimiento  
 Reducir una base de datos puede consumir mucho tiempo y recursos del sistema, en función del tamaño de los datos reales en la base de datos y la cantidad de fragmentación del disco. Por ejemplo, reducir una base de datos puede tardar varias horas o más.  

@@ -19,12 +19,12 @@ caps.latest.revision: 144
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 191155643b072cc2963d3de5e4b1651e219e35f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b43a8008fcfddc43cad78b049483b6ff3b1fb75
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863241"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409551"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>Cambios substanciales en las características del Motor de base de datos de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,11 @@ ms.locfileid: "32863241"
   
 ## <a name="previous-versions"></a>Versiones anteriores  
   
--   [Cambios recientes en las características del Motor de base de datos de SQL Server 2014](https://msdn.microsoft.com/library/ms143179\(v=sql.120\))  
+-   [Cambios recientes en las características del Motor de base de datos de SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
   
--   [Cambios recientes en las características del Motor de base de datos de SQL Server 2012](https://msdn.microsoft.com/library/ms143179\(v=sql.110\))  
+-   [Cambios recientes en las características del Motor de base de datos de SQL Server 2012](breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
   
--   [Cambios recientes en las características del Motor de base de datos de SQL Server 2008](https://msdn.microsoft.com/library/ms143179\(v=sql.100\))  
+-   [Cambios recientes en las características del Motor de base de datos de SQL Server 2008](breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
   
 ## <a name="see-also"></a>Ver también  
  [Características desusadas del motor de base de datos de SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   

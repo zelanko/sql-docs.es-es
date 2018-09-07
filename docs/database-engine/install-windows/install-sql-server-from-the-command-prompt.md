@@ -85,13 +85,14 @@ helpviewer_keywords:
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a12eab1a7ea003c1837c68f53eae33989ed884ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 509fd76b510df010e4dc3c7f8364dc2424e223d9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225155"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409538"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Instalar SQL Server desde el símbolo del sistema
 
@@ -272,7 +273,7 @@ Use las instrucciones siguientes para desarrollar comandos de instalación que t
 |Configuración de red de SQL Server|/TCPENABLED<br /><br /> **Opcional**|Especifica el estado del protocolo TCP para el servicio de SQL Server. Valores admitidos:<br /><br /> 0=Deshabilitar el protocolo TCP<br /><br /> 1= Habilitar el protocolo TCP|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **Opcional**|Especifica el modo de instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Valores admitidos:<br /><br /> **SharePointFilesOnlyMode**<br /><br /> **DefaultNativeMode**<br /><br /> **FilesOnlyMode**<br /><br /> <br /><br /> Nota: Si la instalación incluye SQL Server[!INCLUDE[ssDE](../../includes/ssde-md.md)], el valor predeterminado de RSINSTALLMODE es DefaultNativeMode.<br /><br /> Si la instalación no incluye SQL Server[!INCLUDE[ssDE](../../includes/ssde-md.md)], el valor predeterminado de RSINSTALLMODE es FilesOnlyMode.<br /><br /> Si elige DefaultNativeMode pero la instalación no incluye SQL Server[!INCLUDE[ssDE](../../includes/ssde-md.md)], la instalación cambiará automáticamente RSINSTALLMODE a FilesOnlyMode.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **Obligatorio**|Especifica la cuenta de inicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña de la cuenta de inicio del servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña de la cuenta de inicio del servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Opcional**|Especifica el modo de [inicio](#Accounts) de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |Python/Machine Learning Services (en base de datos)|MPYCACHEDIRECTORY|Use este parámetro para especificar el directorio Caché para la compatibilidad con las características de Python en SQL Server 2017 Machine Learning Services o Machine Learning Server (independiente). Esta opción se usa normalmente cuando se instalan componentes de Python desde la [línea de comandos en un equipo sin acceso a Internet](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
 |R/Machine Learning Services (en base de datos)|MRCACHEDIRECTORY|Use este parámetro para especificar el directorio Caché para la compatibilidad con las características de Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server (independiente) o R en SQL Server 2017 Machine Learning Services o Machine Learning Server (independiente). Esta opción se usa normalmente cuando se instalan componentes de R desde la [línea de comandos en un equipo sin acceso a Internet](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
@@ -377,7 +378,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |Configuración de red de SQL Server|/TCPENABLED<br /><br /> **Opcional**|Especifica el estado del protocolo TCP para el servicio de SQL Server. Valores admitidos:<br /><br /> 0=Deshabilitar el protocolo TCP<br /><br /> 1= Habilitar el protocolo TCP|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **Opcional**|Especifica el modo de instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **Obligatorio**|Especifica la cuenta de inicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña de la cuenta de inicio del servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña de la cuenta de inicio del servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Opcional**|Especifica el modo de [inicio](#Accounts) de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
 ###### <a name="sample-syntax"></a>Sintaxis de ejemplo:  
@@ -583,7 +584,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **Opcional**|Especifica el modo de [inicio](#Accounts) del servicio de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **Opcional**|Especifica el modo de instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **Obligatorio**|Especifica la cuenta de inicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña para la cuenta de inicio del servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña para la cuenta de inicio del servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Opcional**|Especifica el modo de [inicio](#Accounts) de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
  Recomendamos usar el SID de servicio en lugar de grupos de dominios. 
@@ -643,7 +644,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **Opcional**|Especifica el modo de [inicio](#Accounts) del servicio de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **Disponible únicamente en modo de solo archivos.**|Especifica el modo de instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **Obligatorio**|Especifica la cuenta de inicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña para la cuenta de inicio del servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña para la cuenta de inicio del servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Opcional**|Especifica el modo de [inicio](#Accounts) de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
  Recomendamos usar el SID de servicio en lugar de grupos de dominios. 
@@ -789,7 +790,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña de SQLSVCACCOUNT.|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **Disponible en modo de solo archivos**|Especifica el modo de instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña de cuenta de inicio para el servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña de cuenta de inicio para el servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
 ##### <a name="additional-notes"></a>Notas adicionales:  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] son los únicos componentes que son conscientes del clúster. Otras características no son conscientes del clúster y no tienen una alta disponibilidad mediante la conmutación por error. 
@@ -831,7 +832,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
  Para obtener más información sobre la configuración de la cuenta de servicio, vea [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). 
   
-|Componente de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parámetro de cuenta|Parámetro de contraseña|Tipo de inicio|  
+|Componente de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|Parámetro de cuenta|Parámetro de contraseña|cuadro de tipo de inicio,|  
 |-----------------------------------------|-----------------------|------------------------|------------------|  
 |Agente SQL Server|/AGTSVCACCOUNT|/AGTSVCPASSWORD|/AGTSVCSTARTUPTYPE|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCACCOUNT|/ASSVCPASSWORD|/ASSVCSTARTUPTYPE|  
@@ -886,7 +887,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=SQLEngine, PolyBase|Instala el motor de PolyBase.|  
   
 ##  <a name="RoleParameters"></a> Parámetros de rol  
- El rol de instalación o el parámetro /Role se utiliza para instalar una selección preconfigurada de características. Los roles de [!INCLUDE[ssAS_md](../../includes/ssas-md.md)] instalan una instancia de [!INCLUDE[ssAS_md](../../includes/ssas-md.md)] en una granja de SharePoint existente o en una nueva granja sin configurar. Se proporcionan dos roles de instalación para ser compatibles con cada escenario. Puede elegir solo un rol de instalación que instalar a la vez. Si elige un rol de instalación, el programa de instalación instala las características y componentes que pertenecen al rol. No puede variar las características y los componentes que están designados para ese rol. Para obtener más información sobre cómo usar el parámetro de roles de características, vea [Instalar PowerPivot desde el símbolo del sistema](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328). 
+ El rol de instalación o el parámetro /Role se utiliza para instalar una selección preconfigurada de características. Los roles de SSAS instalan una instancia de SSAS en una granja de SharePoint existente o en una granja nueva sin configurar. Se proporcionan dos roles de instalación para ser compatibles con cada escenario. Puede elegir solo un rol de instalación que instalar a la vez. Si elige un rol de instalación, el programa de instalación instala las características y componentes que pertenecen al rol. No puede variar las características y los componentes que están designados para ese rol. Para obtener más información sobre cómo usar el parámetro de roles de características, vea [Instalar PowerPivot desde el símbolo del sistema](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328). 
   
  El rol AllFeatures_WithDefaults es el comportamiento predeterminado para las ediciones de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] y reduce el número de cuadros de diálogo que se presentan al usuario. Se puede especificar desde la línea de comandos al instalar una edición de SQL Server diferente de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. 
   

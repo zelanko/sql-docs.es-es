@@ -40,9 +40,7 @@ ms.locfileid: "40396171"
   
 -   [Memoria para el crecimiento](#bkmk_MemoryForGrowth)  
   
-##  
-            <a name="bkmk_ExampleTable">
-            </a> tabla optimizada para memoria de ejemplo  
+##  <a name="bkmk_ExampleTable"></a> tabla optimizada para memoria de ejemplo  
  Considere el esquema de tabla optimizada para memoria siguiente:  
   
 ```tsql  

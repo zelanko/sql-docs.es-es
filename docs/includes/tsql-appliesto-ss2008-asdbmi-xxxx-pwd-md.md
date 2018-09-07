@@ -1,1 +1,0 @@
-<Token>**Se aplica a:** ![Sí](media/yes.png)SQL Server (a partir de 2008) ![Sí](media/yes.png)Azure SQL Database (solo instancia administrada) ![ningún](media/no.png)Azure SQL Data Warehouse ![ Sí](media/yes.png)almacenamiento de datos paralelos </Token>

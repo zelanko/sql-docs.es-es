@@ -1,7 +1,7 @@
 ---
 title: Selección de un algoritmo de cifrado | Microsoft Docs
 ms.custom: ''
-ms.date: 01/08/2016
+ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,13 +18,13 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5056f8097b9fc96448f5a281a5a67d7d047389b3
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e96d3dd33c71172c10f5fcd99dbc7690286586c1
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549605"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43096563"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Elegir un algoritmo de cifrado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,11 +41,13 @@ ms.locfileid: "39549605"
   
 -   Las claves largas suelen producir un cifrado más seguro que las claves cortas.  
   
--   El cifrado asimétrico es menos seguro que el simétrico con la misma longitud de clave, pero es relativamente lento.  
+-   El cifrado asimétrico es más lento que el simétrico.  
   
 -   Los cifrados en bloque con claves largas son más seguros que los cifrados de flujo.  
   
 -   Las contraseñas largas y complejas son más seguras que las contraseñas cortas.  
+
+-   Por lo general, el cifrado simétrico se recomienda cuando la clave solo se almacena de forma local; el asimétrico se recomienda cuando las claves deben compartirse a través de la conexión.
   
 -   Si cifra una gran cantidad de datos, debe cifrar los datos con una clave simétrica y cifrar la clave simétrica con una clave asimétrica.  
   

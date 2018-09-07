@@ -18,13 +18,13 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: a6ccc7e2964568b71c25d92bea6658c0d8abf590
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b67b64f3166febe9327b770cb67a6c2f979967f1
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549395"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43067856"
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>Configurar IntelliSense (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,6 +34,11 @@ ms.locfileid: "39549395"
 >  Algunos cambios no surtirán efecto en la sesión actual del editor.  Debe abrir una nueva sesión del editor de Transact-SQL para ver el cambio.
   
 ### <a name="to-turn-statement-completion-options-off-by-default"></a>Para desactivar las opciones de finalización de instrucciones de forma predeterminada  
+
+> [!NOTE]
+> SQL Data Warehouse no admite IntelliSense.
+>
+>
   
 1.  En el menú **Herramientas** , haga clic en **Opciones**.  
   

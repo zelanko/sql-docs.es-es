@@ -37,12 +37,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ae24a68e74b5c349c5c7a3ed732d8260064a31c
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: cfd0cb735888be8e5869ed8f13cd66a981da375d
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40184709"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42780766"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Ediciones y características admitidas de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -297,12 +297,12 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
   
 |Característica|Enterprise|Estándar|Web|Express con Advanced Services|Express 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Integración básica de R|Sí|Sí|Sí|Sí|no|   
-|Integración avanzada de R|Sí|no|no|no|no| 
+|Integración básica de R <sup>1</sup>|Sí|Sí|Sí|Sí|no|   
+|Integración avanzada de R <sup>2</sup>|Sí|no|no|no|no| 
 |Integración básica de Python|Sí|Sí|Sí|Sí|no|
 |Integración avanzada de Python|Sí|no|no|no|no| 
 |Machine Learning Server (independiente)|Sí|no|no|no|no|   
-|Nodo de ejecución de Polybase|Sí|Sí <sup>1</sup>|Sí <sup>1</sup>|Sí <sup>1</sup>|Sí <sup>1</sup> | 
+|Nodo de ejecución de Polybase|Sí|Sí <sup>3</sup>|Sí <sup>3</sup>|Sí <sup>3</sup>|Sí <sup>3</sup> | 
 |Nodo principal de Polybase|Sí|no|no|no|no| 
 |JSON|Sí|Sí|Sí|Sí|Sí|   
 |Almacén de consultas|Sí|Sí|Sí|Sí|Sí|   
@@ -322,7 +322,12 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Gráfico|Sí|Sí|Sí|Sí|Sí|  
 
 
-<sup>1</sup> El escalado horizontal con varios nodos de cálculo exige un nodo principal.
+<sup>1</sup> La integración básica se limita a dos núcleos y conjuntos de datos en memoria. 
+
+<sup>2</sup> La integración avanzada puede usar todos los núcleos disponibles para el procesamiento paralelo de conjuntos de datos de cualquier tamaño sujeto a las limitaciones del hardware. 
+
+<sup>3</sup> El escalado horizontal con varios nodos de cálculo exige un nodo principal.
+
 
 ## <a name="IS"></a> Integration Services
 

@@ -24,13 +24,13 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 3e65dd6ddbb2b71c92e7e3dd967a4cf50af2d687
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 58c276a0e70857b09c30bc405a0437cb2fbba61f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453919"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43087804"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -120,7 +120,7 @@ END
   
  La expresión CASE no se puede utilizar para controlar el flujo de ejecución de los bloques de instrucciones, funciones definidas por el usuario, procedimientos almacenados e instrucciones de Transact-SQL. Para obtener una lista de los métodos de control de flujo, vea [Lenguaje de control de flujo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
   
- La instrucción CASE devuelve las condiciones de forma secuencial y se detiene en la primera condición cuya condición se cumple. En algunas situaciones, se evalúa una expresión antes de que una instrucción CASE reciba los resultados de la expresión como entrada. Los errores de evaluación de estas expresiones son posibles. Las expresiones de agregado que aparecen en los argumentos WHEN para una instrucción CASE se evalúan primero y, a continuación, se proporcionan a la instrucción CASE. Por ejemplo, la siguiente consulta genera un error de división por cero al obtener el valor de agregado MAX. Esto ocurre antes de evaluar la expresión CASE.  
+ La expresión CASE evalúa sus condiciones de forma secuencial y se detiene en la primera condición cuya condición se cumple. En algunas situaciones, se evalúa una expresión antes de que una expresión CASE reciba los resultados de la expresión como entrada. Los errores de evaluación de estas expresiones son posibles. Las expresiones de agregado que aparecen en los argumentos WHEN para una expresión CASE se evalúan primero y, después, se proporcionan a la expresión CASE. Por ejemplo, la siguiente consulta genera un error de división por cero al obtener el valor de agregado MAX. Esto ocurre antes de evaluar la expresión CASE.  
   
 ```sql  
 WITH Data (value) AS   

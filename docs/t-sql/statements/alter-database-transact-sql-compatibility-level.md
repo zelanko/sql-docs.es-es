@@ -27,13 +27,13 @@ caps.latest.revision: 89
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: edf54224fddb5fce7eafdc978d05535264aa29d0
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2c57b2d89689207885f621e6619b4771a4a217fe
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452679"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43099381"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nivel de compatibilidad de ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -148,7 +148,7 @@ Desde el plano de las aplicaciones, el objetivo debería seguir siendo actualiza
 > La funcionalidad descontinuada incluida en una determinada versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no está protegida por el nivel de compatibilidad. Esto hace referencia a una funcionalidad que se quitó del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
 > 
 > Por ejemplo, la sugerencia `FASTFIRSTROW` está descontinuada en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y se ha reemplazado por la sugerencia `OPTION (FAST n )`. Establecer el nivel de compatibilidad de base de datos en 110 no hará que la sugerencia descontinuada se restaure.
-> Para más información sobre las funcionalidades descontinuadas, vea [Funcionalidad del motor de base de datos no incluida en SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Funcionalidad del motor de base de datos no incluida en SQL Server 2014](http://msdn.microsoft.com/library/ms144262(v=sql.120)), [Funcionalidad del motor de base de datos no incluida en SQL Server 2012](http://msdn.microsoft.com/library/ms144262(v=sql.110)) y [Funcionalidad del motor de base de datos no incluida en SQL Server 2008](http://msdn.microsoft.com/library/ms144262(v=sql.100)).
+> Para obtener más información sobre las funcionalidades no incluidas, vea [Funcionalidad del motor de base de datos no incluida en SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Funcionalidad del motor de base de datos no incluida en SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Funcionalidad del motor de base de datos no incluida en SQL Server 2012](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md) y [Funcionalidad del motor de base de datos no incluida en SQL Server 2008](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).
 
 > [!IMPORTANT]
 > Los cambios importantes incluidos en una determinada versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **pueden** no estar protegidos por el nivel de compatibilidad. Esto hace referencia a cambios de comportamiento entre las versiones del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. El comportamiento de [!INCLUDE[tsql](../../includes/tsql-md.md)] suele estar protegido por el nivel de compatibilidad. En cambio, los objetos del sistema eliminados o modificados **no** están protegidos por el nivel de compatibilidad.
@@ -159,7 +159,7 @@ Desde el plano de las aplicaciones, el objetivo debería seguir siendo actualiza
 > -  Nombres de columna modificados en objetos del sistema. En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] la columna *single_pages_kb* en sys.dm_os_sys_info se ha cambiado a *pages_kb*. Independientemente del nivel de compatibilidad, la consulta `SELECT single_pages_kb FROM sys.dm_os_sys_info` generará el error 207 (Nombre de columna no válido).
 > -  Objetos del sistema quitados. En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], la columna `sp_dboption` se ha quitado. Independientemente del nivel de compatibilidad, la instrucción `EXEC sp_dboption 'AdventureWorks2016CTP3', 'autoshrink', 'FALSE';` generará el error 2812 (No se encontró el procedimiento almacenado 'sp_dboption').
 >
-> Para más información sobre los cambios importantes, vea [Cambios sustanciales en las características del motor de base de datos de SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Cambios sustanciales en las características del motor de base de datos de SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Cambios sustanciales en las características del motor de base de datos de SQL Server 2014](http://msdn.microsoft.com/library/ms143179(v=sql.120)), [Cambios sustanciales en las características del motor de base de datos de SQL Server 2012](http://msdn.microsoft.com/library/ms143179(v=sql.110)) y [Cambios sustanciales en las características del motor de base de datos de SQL Server 2008](http://msdn.microsoft.com/library/ms143179(v=sql.100)).
+> Para obtener más información sobre los cambios importantes, vea [Cambios importantes en las características del motor de base de datos de SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Cambios importantes en las características del motor de base de datos de SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Cambios importantes en las características del motor de base de datos de SQL Server 2014](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Cambios importantes en las características del motor de base de datos de SQL Server 2012](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md) y [Cambios importantes en las características del motor de base de datos de SQL Server 2008](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).
   
 ## <a name="best-practices-for-upgrading-database-compatibility-level"></a>Prácticas recomendadas para actualizar el nivel de compatibilidad de base de datos 
 Para ver el flujo de trabajo recomendado para actualizar el nivel de compatibilidad, vea [Cambiar el modo de compatibilidad de la base de datos y usar el almacén de consultas](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md).  

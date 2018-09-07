@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b8d694b0afadd7504b60bd7bcc06df3151e42735
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: a7e684df914684b48f9742aee5d67d6769973cb3
+ms.sourcegitcommit: aac654706b21f70962c7311f3b193000113d00d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40405685"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43321255"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -63,24 +63,10 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">Servidor lógico<br />de SQL DB</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">Instancia administrada<br />de SQL DB</a></th>
->   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">Almacenamiento de datos<br />paralelos de SQL</a></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |**_\* SQL Server \*_** | [Servidor lógico de <br />SQL Database](create-database-transact-sql.md?view=azuresqldb-current) | [Instancia administrada de <br />SQL Database](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Almacenamiento de datos<br /> paralelos de SQL](create-database-transact-sql.md?view=aps-pdw-2016) | 
 
-&nbsp;
 
 # <a name="sql-server"></a>SQL Server
 
@@ -898,7 +884,7 @@ GO
 > </tr>
 > <tr>
 >   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* Servidor lógico<br />de SQL DB *</em></strong></th>
+>   <th><strong><em>* Instancia administrada<br />de SQL DB *</em></strong></th>
 >   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">Instancia administrada<br />de SQL DB</a></th>
 >   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">Almacenamiento de datos<br />paralelos de SQL</a></th>
@@ -1232,7 +1218,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 > </tr>
 > <tr>
 >   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">Servidor lógico<br />de SQL DB</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">Instancia administrada<br />de SQL DB</a></th>
 >   <th><strong><em>* Instancia administrada<br />de SQL Database *</em></strong></th>
 >   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">Almacenamiento de datos<br />paralelos de SQL</a></th>
@@ -1316,7 +1302,7 @@ Consulte [ALTER DATABASE](alter-database-transact-sql.md?&tabs=sqldbmi)
 > </tr>
 > <tr>
 >   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">Servidor lógico<br />de SQL DB</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">Instancia administrada<br />de SQL DB</a></th>
 >   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">Instancia administrada<br />de SQL DB</a></th>
 >   <th><strong><em>* SQL Data<br />Warehouse *</em></strong></th>
 >   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">Almacenamiento de datos<br />paralelos de SQL</a></th>
@@ -1440,7 +1426,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 > </tr>
 > <tr>
 >   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">Servidor lógico<br />de SQL DB</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">Instancia administrada<br />de SQL DB</a></th>
 >   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">Instancia administrada<br />de SQL DB</a></th>
 >   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><strong><em>* Almacenamiento de datos<br />paralelos de SQL *</em></strong></th>

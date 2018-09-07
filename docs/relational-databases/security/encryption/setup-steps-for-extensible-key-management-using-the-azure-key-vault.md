@@ -1,7 +1,7 @@
 ---
 title: SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup Steps (Pasos de instalación de Administración extensible de claves de SQL Server TDE mediante Azure Key Vault) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/11/2018
+ms.date: 08/24/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -17,12 +17,12 @@ caps.latest.revision: 34
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: e4b0ffd4d01aaf17d00c17390e4074653225efb7
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4f8581201f9303c87a848a7456849efa7a09396a
+ms.sourcegitcommit: 0ab652fd02039a014c9661f3c5ccf4281cfb025b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702986"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925995"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup Steps (Pasos de instalación de Administración extensible de claves de SQL Server TDE mediante Azure Key Vault)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -153,14 +153,14 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
     En este caso, vamos a usar la entidad de servicio de Azure Active Directory que creó en la Parte I para autorizar la instancia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
     > [!IMPORTANT]  
-    >  La entidad de servicio de Azure Active Directory debe tener al menos los permisos `get`, `list`, `wrapKey`y `unwrapKey` para el almacén de claves.  
+    >  La entidad de servicio de Azure Active Directory debe tener al menos los permisos `get`, `wrapKey` y `unwrapKey` para el almacén de claves.  
   
      Tal y como se muestra a continuación, use el **id. de cliente** de la Parte I para el parámetro `ServicePrincipalName` . El `Set-AzureRmKeyVaultAccessPolicy` se ejecuta en modo silencioso sin resultados si se ejecuta correctamente.  
   
     ```powershell  
     Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
       -ServicePrincipalName EF5C8E09-4D2A-4A76-9998-D93440D8115D `  
-      -PermissionsToKeys get, list, wrapKey, unwrapKey  
+      -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
      Llame al cmdlet `Get-AzureRmKeyVault` para confirmar los permisos. En el resultado de la instrucción en "Directivas de acceso", debería aparecer el nombre de la aplicación de AAD como otro inquilino con acceso a este Almacén de claves.  

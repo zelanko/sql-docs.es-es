@@ -30,10 +30,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 1256884f13a576580588e877dd490f0757bfba9e
-ms.sourcegitcommit: 4a9c89d72d91158832e89d96eb88cda616d36452
+ms.sourcegitcommit: aac654706b21f70962c7311f3b193000113d00d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
+ms.lasthandoff: 08/31/2018
 ms.locfileid: "42802574"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL) 
@@ -287,7 +287,7 @@ GO
 > </tr>
 > <tr>
 >   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* Servidor lógico<br />de SQL DB *</em></strong></th>
+>   <th><strong><em>* Instancia administrada<br />de SQL DB *</em></strong></th>
 >   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">Instancia administrada<br />de SQL DB</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">Almacenamiento de datos<br />paralelos de SQL</a></th>
@@ -651,7 +651,7 @@ ALTER DATABASE db1 FAILOVER
 > </tr>
 > <tr>
 >   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">Servidor lógico<br />de SQL DB</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">Instancia administrada<br />de SQL DB</a></th>
 >   <th><strong><em>* Instancia administrada<br />de SQL Database *</em></strong></th>
 >   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">Almacenamiento de datos<br />paralelos de SQL</a></th>
@@ -787,7 +787,7 @@ ALTER DATABASE WideWorldImporters
 > </tr>
 > <tr>
 >   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">Servidor lógico<br />de SQL DB</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">Instancia administrada<br />de SQL DB</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">Instancia administrada<br />de SQL DB</a></th>
 >   <th><strong><em>* SQL Data<br />Warehouse *</em></strong></th>
 >   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">Almacenamiento de datos<br />paralelos de SQL</a></th>
@@ -916,7 +916,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 > </tr>
 > <tr>
 >   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">Servidor lógico<br />de SQL DB</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">Instancia administrada<br />de SQL DB</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">Instancia administrada<br />de SQL DB</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
 >   <th><strong><em>* Almacenamiento de datos<br />paralelos de SQL *</em></strong></th>

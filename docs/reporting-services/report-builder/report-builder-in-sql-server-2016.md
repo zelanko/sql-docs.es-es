@@ -1,31 +1,25 @@
 ---
 title: Generador de informes en SQL Server 2016 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 f1_keywords:
 - "10428"
 helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 482fc7069a480d41122535e139be2726df75f972
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 91b33f6aabc245bd79ff48b1202f20d71ae9293d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40412661"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269651"
 ---
 # <a name="report-builder-in-sql-server-2016"></a>Generador de informes en SQL Server 2016
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] es una herramienta de creación de informes paginados para usuarios profesionales que prefieren trabajar en un entorno independiente en lugar de usar el Diseñador de informes de Visual Studio.  Al diseñar un informe paginado, crea una definición de informe que especifica dónde obtener los datos, qué datos obtener y cómo visualizarlos. Al ejecutar el informe, el procesador de informes usa la definición de informe especificada, recupera los datos y los combina con el diseño del informe para generar el informe. Puede obtener una vista previa del informe en el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] o publicarlo en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo o en modo integrado de SharePoint, donde otros usuarios podrán ejecutarlo.  

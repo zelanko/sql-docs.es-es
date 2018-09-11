@@ -26,12 +26,12 @@ caps.latest.revision: 76
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8bd3cc266d1f706179c6627316dcd8dfcdcf4a09
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 28f9302f9849a24fd980d40e6576ac695c6c1b20
+ms.sourcegitcommit: 82bb56269faf3fb5dd1420418e32a0a6476780cc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956151"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43694678"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrar servidores mediante administración basada en directivas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -122,9 +122,12 @@ Por ejemplo, como el administrador de la base de datos, puede que desee asegurar
 
   
  ## <a name="examples"></a>Ejemplos
+ 
  - [Crear la directiva Desactivado de forma predeterminada](lesson-1-1-create-the-off-by-default-policy.md)
-  - [Configurar un servidor para ejecutar la directiva Desactivado de forma predeterminada](lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)
-## <a name="see-also"></a>Vea también  
+ - [Configurar un servidor para ejecutar la directiva Desactivado de forma predeterminada](lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)
+ 
+ ## <a name="see-also"></a>Vea también  
+ 
  [Vistas de administración basada en directivas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

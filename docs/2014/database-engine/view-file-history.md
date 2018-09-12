@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0e658cbbc1d121c6433a49d5d42d8a42962eb02
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ac14534a577f8e43aa87342593d655c6ca469651
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37318855"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807311"
 ---
 # <a name="view-file-history"></a>Ver el historial de un archivo
   Puede usar el **historial** comando para ver un historial de versiones para los archivos controlados por código fuente. Este historial incluye la fecha y la hora en que el archivo se agregó al control de código fuente o se protegió en él.  

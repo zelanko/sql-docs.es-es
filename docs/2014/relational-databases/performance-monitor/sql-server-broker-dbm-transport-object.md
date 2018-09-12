@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,14 +16,14 @@ caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 278e3776c19c9220b77347a0360e337184c4fd1f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 817d965a1f3ec36088dcecc80e5018be8aa6368a
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253927"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818311"
 ---
-# <a name="sql-server-broker-and-dbm-transport-object"></a>SQL Server, Broker y DBM Transport objeto
+# <a name="sql-server-broker-and-dbm-transport-object"></a>Broker y DBM Transport (objeto de SQL Server)
   El objeto de rendimiento **Broker / DBM Transport** contiene contadores de rendimiento que proporcionan información de red sobre Service Broker y sobre la creación de reflejo de la base de datos. En la siguiente tabla se enumeran los contadores incluidos en este objeto.  
   
 |Contador de Broker / DBM Transport de SQL Server|Descripción|  

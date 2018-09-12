@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c5520359d8dd661d6636dbfcccddf60577adad2c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cb23912591cf03291311430dbacaef8d89d661cd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298565"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813761"
 ---
 # <a name="sql-server-agent-statistics-object"></a>Statistics (objeto del Agente SQL Server)
   El objeto de rendimiento **Statistics** del Agente SQL Server contiene contadores de rendimiento que proporcionan información acerca del Agente SQL Server.  

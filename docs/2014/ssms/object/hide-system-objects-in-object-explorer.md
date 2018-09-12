@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe585c68ad41999a669401e48b47b2b393620ac1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c04c87d7ba3d4ed9bd7099bb6c6272b902a50dfd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151766"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815291"
 ---
 # <a name="hide-system-objects-in-object-explorer"></a>Ocultar objetos del sistema en el Explorador de objetos
   En este tema se describe cómo ocultar objetos del sistema en el Explorador de objetos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. El nodo **Bases de datos** del Explorador de objetos contiene objetos del sistema tales como las bases de datos del sistema. Use las páginas **Herramientas**/**Opciones** para ocultar los objetos del sistema. Algunos objetos del sistema, por ejemplo, funciones del sistema y tipos de datos del sistema, no se ven afectados por esta configuración.  

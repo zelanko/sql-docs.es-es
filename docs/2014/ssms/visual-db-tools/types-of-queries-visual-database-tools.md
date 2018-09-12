@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 64332c8ebfd93f8467ae56d594d3c5fcec874be4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0ab7aa0c57afbcdb02904d6aff48011742c106c
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224645"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817601"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>Tipos de consultas (Visual Database Tools)
   El Diseñador de consultas y vistas proporciona características integradas para algunos tipos de consulta (Select, Insert Results, Insert Values, Update, Delete y Make Table) y admite también las consultas UNION, las búsquedas de texto completo y las consultas de expresiones CASE.  

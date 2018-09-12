@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
@@ -14,12 +13,12 @@ caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 79e6a3adf386915ce70a9d116cff03778f2d7c63
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: adef011389ce41bb01b508f7d4d050bbffa0642f
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324345"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813641"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Utilizar el explorador de Utilidad para administrar la utilidad de SQL Server
   El explorador de Utilidad, un componente de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], se conecta a instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para proporcionar una vista de árbol de todos los objetos de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El panel de contenido del explorador de la utilidad proporciona varias maneras para ver datos de resumen y detallados sobre el estado de las instancias administradas de SQL Server. El explorador de la utilidad también proporciona una interfaz de usuario para ver y administrar las definiciones de directiva. Las capacidades del explorador de la utilidad varían ligeramente dependiendo de los objetos de la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pero, generalmente, incluyen objetos, datos y directivas administrados por la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Características y tareas de la utilidad de SQL Server](sql-server-utility-features-and-tasks.md).  

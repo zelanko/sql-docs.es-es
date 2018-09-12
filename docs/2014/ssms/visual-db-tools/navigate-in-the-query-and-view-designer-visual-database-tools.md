@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 282b2830166b17bb2e5a860afdef8c3bf00fc99a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1fca31b7ab462429000c9398091581e02b2fead3
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185682"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812131"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Desplazarse por el Diseñador de consultas y vistas (Visual Database Tools)
   En el Diseñador de consultas y vistas puede trabajar tanto con el teclado como con el mouse (ratón). En las tablas siguientes se describen los métodos específicos.  
@@ -55,7 +54,7 @@ ms.locfileid: "37185682"
   
 ## <a name="criteria-pane"></a>Panel de criterios  
   
-|A|Presione|Hacer clic en .|  
+|En|Presione|Hacer clic en .|  
 |--------|-----------|-----------|  
 |Desplazarse por las celdas|Teclas de dirección o TAB o MAYÚS+TAB|En la celda de destino|  
 |Desplazarse a la última fila de la columna seleccionada|CTRL+FLECHA ABAJO||  

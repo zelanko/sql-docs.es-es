@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
@@ -14,12 +13,12 @@ caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c213c892403e4d6bdf527601f5f7482ebb7e2ed
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5ce6df9740f54c73f29fbf648f733a8b3563e7fe
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189652"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815691"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
   Los detalles de configuración de Distributed Replay de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se especifican en archivos XML en Distributed Replay Controller, en los clientes y donde se encuentra instalada la herramienta de administración. Entre los archivos figuran los siguientes:  
@@ -39,7 +38,7 @@ ms.locfileid: "37189652"
   
  El nivel de registro especificado por el archivo de configuración del controlador incluye lo siguiente:  
   
-|Configuración|Elemento XML|Descripción|Valores permitidos|Obligatorio|  
+|Parámetro|Elemento XML|Descripción|Valores permitidos|Obligatorio|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Nivel de registro|`<LoggingLevel>`|Especifica el nivel de registro para el servicio del controlador.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|No. El valor es `CRITICAL`de forma predeterminada.|  
   
@@ -60,7 +59,7 @@ ms.locfileid: "37189652"
   
  La configuración especificada por el archivo de configuración del cliente incluye lo siguiente:  
   
-|Configuración|Elemento XML|Descripción|Valores permitidos|Obligatorio|  
+|Parámetro|Elemento XML|Descripción|Valores permitidos|Obligatorio|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Controlador|`<Controller>`|Especifica el nombre del equipo que se va a controlar. El cliente intentará registrarse con el entorno de Distributed Replay poniéndose en contacto con el controlador.|Puede utilizar "`localhost`" o "`.`" para hacer referencia al equipo local.|No. De forma predeterminada, el cliente intenta registrarse con la instancia del controlador que se está ejecutando localmente ("`.`"), si existe.|  
 |Directorio de trabajo del cliente|`<WorkingDirectory>`|Es la ruta de acceso local del cliente donde se guardan los archivos de distribución.<br /><br /> Los archivos de este directorio se sobrescriben en la siguiente reproducción.|Un nombre de directorio completo, empezando con la letra de unidad.|No. Si no se especifica ningún valor, los archivos de distribución se guardarán en la misma ubicación que el archivo de configuración del cliente predeterminado. Si se especifica un valor y esa carpeta no existe en el cliente, el servicio del cliente no se iniciará.|  
@@ -91,7 +90,7 @@ ms.locfileid: "37189652"
   
  Los valores de configuración de preproceso se especifican en elementos XML secundarios del elemento `<PreprocessModifiers>` en el archivo de configuración de preproceso. Entre estas opciones de configuración, se incluyen las siguientes:  
   
-|Configuración|Elemento XML|Descripción|Valores permitidos|Obligatorio|  
+|Parámetro|Elemento XML|Descripción|Valores permitidos|Obligatorio|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Incluir las actividades de sesión de sistema|`<IncSystemSession>`|Indica si las actividades de sesión de sistema en la captura se incluirán durante la reproducción.|`Yes` &#124; `No`|No. El valor es `No`de forma predeterminada.|  
 |Tiempo de inactividad máximo|`<MaxIdleTime>`|Limita el tiempo de inactividad a un número absoluto (en segundos).|Un entero > = -1<br /><br /> `-1` indica que no ha habido ningún cambio respecto del valor original en el archivo de seguimiento original.<br /><br /> `0` indica que existe alguna actividad en algún momento.|No. El valor es `-1`de forma predeterminada.|  
@@ -123,7 +122,7 @@ ms.locfileid: "37189652"
 ### <a name="replayoptions-element"></a>\<ReplayOptions > elemento  
  Los valores especificados por el archivo de configuración de reproducción en el elemento `<ReplayOptions>` incluyen lo siguiente:  
   
-|Configuración|Elemento XML|Descripción|Valores permitidos|Obligatorio|  
+|Parámetro|Elemento XML|Descripción|Valores permitidos|Obligatorio|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Instancia de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (el servidor de prueba)|`<Server>`|Especifica el nombre del servidor y la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la conexión.|*server_name*[\\*instance_name*]<br /><br /> No puede usar "`localhost`" o "`.`" para representar el host local.|No, si el nombre del servidor ya se especifica con el parámetro **-s***target server* con la opción **replay** de la herramienta de administración.|  
 |Modo de secuenciación|`<SequencingMode>`|Especifica el modo que se usa para la programación de eventos.|`synchronization` &#124; `stress`|No. El valor es `stress`de forma predeterminada.|  
@@ -138,7 +137,7 @@ ms.locfileid: "37189652"
 ### <a name="outputoptions-element"></a>\<OutputOptions > elemento  
  Los valores especificados por el archivo de configuración de reproducción en el elemento `<OutputOptions>` incluyen lo siguiente:  
   
-|Configuración|Elemento XML|Descripción|Valores permitidos|Obligatorio|  
+|Parámetro|Elemento XML|Descripción|Valores permitidos|Obligatorio|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Registrar el recuento de filas|`<RecordRowCount>`|Indica si se debe registrar el recuento de filas para cada conjunto de resultados.|`Yes` &#124; `No`|No. El valor es `Yes`de forma predeterminada.|  
 |Registrar el conjunto de resultados|`<RecordResultSet>`|Indica si se debe registrar el contenido de todos los conjuntos de resultados.|`Yes` &#124; `No`|No. El valor es `No`de forma predeterminada.|  

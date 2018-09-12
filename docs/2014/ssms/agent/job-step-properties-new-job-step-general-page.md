@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa2ee7a5a54c02618230a91b67e0d4c1db8a294e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db65dfaec0688ab7eec9a7597bcf94b2cbcfc131
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224745"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811111"
 ---
 # <a name="job-step-properties-new-job-step-general-page"></a>Propiedades de paso de trabajo: Nuevo paso de trabajo (página General)
   Use esta página para ver y cambiar las propiedades de un paso de trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o para definir un nuevo paso de trabajo.  
@@ -328,7 +327,7 @@ ms.locfileid: "37224745"
  **Ruta de acceso de la propiedad**  
  Permite ver o cambiar la ruta de acceso de la propiedad.  
   
- **Value**  
+ **Valor**  
  Permite ver o cambiar el valor de la propiedad.  
   
  **Quitar**  

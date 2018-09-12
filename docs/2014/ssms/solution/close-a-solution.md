@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f6a59ab707b18f9196f46357576e2523c3b287a5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 344ff9e4a6378805a8a882701d59cc9f7885cd42
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303125"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817541"
 ---
 # <a name="close-a-solution"></a>Cerrar una solución
   Es posible cerrar una solución y quitarla del Explorador de soluciones. Al cerrar una solución, ésta ya no puede ser utilizada por el Explorador de soluciones.  

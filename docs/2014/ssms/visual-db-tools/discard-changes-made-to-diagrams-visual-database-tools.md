@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e896e93a07e56cb26b2a83e3cd8f7290f60e847
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d620cfdb16085f8abefe17682b40b4437a11e14b
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253427"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818841"
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>Descartar los cambios realizados en diagramas (Visual Database Tools)
   Puede descartar los cambios realizados en el diagrama de base de datos que no desee guardar en la base de datos.  

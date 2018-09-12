@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 50
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7ca5884a90b3e6e94eca1bc98988417e7b8a8bd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d9f4e2c226324950f21ea27b00e1b8a47d590e50
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169356"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810081"
 ---
 # <a name="use-sql-server-management-studio"></a>Usar SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) es un entorno integrado para obtener acceso, configurar, administrar, administrar y desarrollar todos los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS combina un amplio grupo de herramientas gráficas con una serie de editores de script enriquecidos que permiten a desarrolladores y administradores de todos los niveles obtener acceso [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

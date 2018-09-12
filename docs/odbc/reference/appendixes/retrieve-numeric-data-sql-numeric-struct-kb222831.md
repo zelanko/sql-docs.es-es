@@ -1,34 +1,30 @@
 ---
-title: Recuperar datos numéricos con SQL_NUMERIC_STRUCT | Documentos de Microsoft
-description: C/C++ con ODBC recupera el tipo de datos numérico de SQL Server mediante SQL_NUMERIC_STRUCT, relacionados con SQL_C_NUMERIC.
-documentationCenter: ''
+title: Recuperar datos numéricos con SQL_NUMERIC_STRUCT | Microsoft Docs
+description: C/C ++ mediante ODBC recupera el tipo de datos numérico de SQL Server con SQL_NUMERIC_STRUCT, relacionados con SQL_C_NUMERIC.
 authors: MightyPen
 manager: craigg
 editor: ''
 ms.prod: sql
-ms.prod_service: connectivity
-ms.suite: sql
-ms.technology: dbe-data-tier-apps
+ms.technology: ''
 ms.devlang: C++
 ms.topic: conceptual
 ms.custom: ''
-ms.tgt_pltfrm: NA
 ms.date: 07/13/2017
 ms.author: genemi
-ms.openlocfilehash: 57bd5ffbe1adb9c0ecbefda8d99434767ed6c3e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7a8a4d4272ad15b0ba045f5a683dc009711ee0e8
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913230"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809831"
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>Recuperar datos numéricos con SQL\_numérico\_STRUCT
 
-Este artículo describe cómo recuperar datos numéricos desde el controlador ODBC de SQL Server en una estructura numérica. También describe cómo obtener los valores correctos con precisión específica y valores de escala.
+En este artículo se describe cómo recuperar datos numéricos en el controlador ODBC de SQL Server en una estructura numérica. También se describe cómo obtener los valores correctos con precisión específica y valores de escala.
 
-Este tipo de datos permite a las aplicaciones administrar directamente los datos numéricos. Alrededor del año 2003, ODBC 3.0 introdujo un nuevo tipo de datos de C de ODBC, identificado por **SQL\_C\_numérico**. Este tipo de datos sigue siendo pertinente a partir de 2017.
+Este tipo de datos permite a las aplicaciones administrar directamente los datos numéricos. Alrededor del año 2003, ODBC 3.0 introdujo un nuevo tipo de datos ODBC C, identificado por **SQL\_C\_numérico**. Este tipo de datos sigue siendo pertinente a partir de 2017.
 
-El búfer de C que se utiliza tiene la definición de tipo de **SQL\_numérico\_STRUCT**. Esta estructura tiene campos para almacenar la precisión, la escala, el inicio de sesión y el valor de los datos numéricos. El propio valor se almacena como un entero con escala con el principio de byte menos significativo en la posición más a la izquierda. 
+El búfer de C que se utiliza tiene la definición de tipo de **SQL\_numérico\_STRUCT**. Esta estructura tiene campos para almacenar la precisión, escala, inicio de sesión y el valor de los datos numéricos. El propio valor se almacena como un entero de escalado con el principio del byte menos significativo en la posición más a la izquierda. 
 
 El artículo [tipos de datos C](c-data-types.md) proporciona más información sobre el formato y el uso de SQL\_numérico\_STRUCT. Por lo general el [apéndice D](appendix-d-data-types.md) de referencia del programador de ODBC 3.0 se describen los tipos de datos.
 
@@ -36,7 +32,7 @@ El artículo [tipos de datos C](c-data-types.md) proporciona más información s
 ## <a name="sqlnumericstruct-overview"></a>SQL\_numérico\_información general STRUCT
 
 
-La instrucción SQL\_numérico\_STRUCT se define en el archivo de encabezado sqltypes.h como sigue:
+El código SQL\_numérico\_STRUCT se define en el archivo de encabezado sqltypes.h como sigue:
 
 
 ``` C
@@ -51,11 +47,11 @@ typedef struct tagSQL_NUMERIC_STRUCT
 ```
 
             
-Los campos de precisión y escala de la estructura numérica nunca se usan para la entrada de una aplicación únicamente para la salida desde el controlador a la aplicación.
+Los campos de precisión y escala de la estructura numérica nunca se usan para la entrada desde una aplicación, solo para la salida desde el controlador a la aplicación.
 
-El controlador utiliza la precisión predeterminada (definida por el controlador) y la escala de manera predeterminada (0) siempre que devolver datos a la aplicación. A menos que la aplicación especifica valores de precisión y escala, el controlador supone el valor predeterminado y trunca la parte decimal de los datos numéricos.
+El controlador utiliza la precisión predeterminada (definido por el controlador) y la escala de predeterminado (0) cada vez que la devolución de datos a la aplicación. A menos que la aplicación especifica los valores de precisión y escala, el controlador supone el valor predeterminado y trunca la parte decimal de los datos numéricos.
 
-## <a name="sqlnumericstruct-code-sample"></a>SQL\_numérico\_ejemplo de código STRUCT
+## <a name="sqlnumericstruct-code-sample"></a>SQL\_numérico\_ejemplo de código de estructura
 
 Este ejemplo de código muestra cómo para:
 
@@ -231,17 +227,17 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 ```
 
 
-En la estructura numérica, el campo val es una matriz de caracteres de 16 elementos. Por ejemplo, 25.212 se escala a 25212 y la escala es 3. En formato hexadecimal este número debería ser 627C.
+En la estructura numérica, el campo val es una matriz de caracteres de 16 elementos. Por ejemplo, se escala 25.212 a 25212 y la escala es 3. En formato hexadecimal, este número sería 627C.
 
-El controlador devuelve los elementos siguientes:
+El controlador devuelve los siguientes elementos:
 
 - El carácter equivalente de C de 7, que es ' |' (canalización) en el primer elemento de la matriz de caracteres.
-- Es el equivalente de 62, que es "b" en el segundo elemento.
+- El equivalente de 62, que es 'b' en el segundo elemento.
 - El resto de los elementos de matriz contiene ceros, por lo que el búfer contiene ' | b\0'.
 
-Ahora el desafío consiste en construir el entero con escala fuera de esta matriz de cadenas. Cada carácter de la cadena se corresponde con dos dígitos hexadecimales, por ejemplo menos significativo (LSD) y dígitos más significativos (MSD). El valor entero con escala pudo generarse mediante la multiplicación de cada dígito (LSD & MSD) con un múltiplo de 16, comenzando por 1.
+Ahora el desafío consiste en construir el entero escalado fuera de esta matriz de cadenas. Cada carácter de la cadena se corresponde con dos dígitos hexadecimales, por ejemplo, menos significativo (LSD) y dígitos más significativos (MSD). El valor entero escalado se puede generar mediante la multiplicación de cada dígito (LSD & MSD) con un múltiplo de 16, comenzando por 1.
 
-Código que implementa la conversión desde el modo little-endian en un entero de escalado. Es el desarrollador de aplicaciones para implementar esta funcionalidad. El siguiente ejemplo de código es solo una de las muchas maneras posibles.
+Código que implementa la conversión desde el modo little-endian en el entero escalado. Es responsabilidad del desarrollador de aplicaciones para implementar esta funcionalidad. El siguiente ejemplo de código es solo una de las muchas maneras posibles.
 
 
 ``` C
@@ -279,12 +275,12 @@ La información anterior sobre SQL\_numérico\_STRUCT se aplica a las siguientes
 - Microsoft Data Access Components 2.7
 
 
-## <a name="sqlcnumeric-overview"></a>SQL\_C\_numérico información general
+## <a name="sqlcnumeric-overview"></a>SQL\_C\_Introducción a numérico
 
 
-El programa de ejemplo siguiente muestra el uso de SQL\_C\_numérico, insertando 123,45 en una tabla. En la tabla, la columna se define como un valor numérico o decimal, con precisión 5 y escala de 2.
+El programa de ejemplo siguiente muestra el uso de SQL\_C\_numérico, insertando 123,45 en una tabla. En la tabla, la columna se define como un valor numérico o decimal, con una precisión de 5 y con la escala de 2.
 
-El controlador ODBC que se usa para ejecutar este programa debe admitir funcionalidad de ODBC 3.0.
+El controlador ODBC que se usa para ejecutar este programa debe admitir la funcionalidad de ODBC 3.0.
 
 
 ``` C

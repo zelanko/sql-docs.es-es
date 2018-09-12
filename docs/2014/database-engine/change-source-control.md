@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 19
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 825cdbb6f25afb31d49e8150c19790385bc1cf14
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 676d87266ecb64d52a97ed1ee27c01a4cffa1fb1
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312305"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812101"
 ---
 # <a name="change-source-control"></a>Cambiar el control de código fuente
   Crea y administra las conexiones y los enlaces que vinculan una solución o un proyecto guardados localmente con una carpeta de la base de datos de control de código fuente.  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39e85fdf4d46136ef64b2c081d3dcd2e729bd109
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3477e8c4ae9c5bca0ae21ab7b384ba423c1e0ffb
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259941"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813871"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>Contraer grupos de filas (Visual Database Tools)
   Puede crear un resultado de consulta en el que cada fila de resultados se corresponda con un grupo de filas completo de los datos originales. Cuando se contraen filas, conviene tener en cuenta lo siguiente:  

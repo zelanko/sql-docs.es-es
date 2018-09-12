@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2775efff866f9f9bb1b6aebc50b14d8d976f248e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cbcdda76b13780788550e57211871d1ebbc79fad
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233045"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808981"
 ---
 # <a name="asymmetric-keys-encryption-strength"></a>Intensidad del cifrado de claves asimétricas
   Esta regla comprueba si las claves asimétricas se crearon utilizando 1024 bits o un cifrado más seguro.  

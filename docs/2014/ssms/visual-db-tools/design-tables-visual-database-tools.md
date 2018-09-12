@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba130e5c5b62ff4f37eb7b13f75c3ee85d332b31
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d131b91003b77bc5a7a2721e0935d1d0006f91c8
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148996"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815471"
 ---
 # <a name="design-tables-visual-database-tools"></a>Diseñar tablas (Visual Database Tools)
   El Diseñador de tablas dedica una ventana completa al diseño de una tabla individual. En los temas de esta sección se explica cómo utilizar el Diseñador de tablas para crear y modificar las tablas de base de datos.  

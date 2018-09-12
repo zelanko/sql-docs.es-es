@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6cb0c2cd4f715c947e11b5ae68d8d7ea9f7618a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c0e422a938822982ea716a9b4c7d90f57d2c597a
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290081"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814111"
 ---
 # <a name="customize-toolbars-page"></a>Personalizar (página Barras de herramientas)
   La pestaña **Barras de herramientas** permite crear, renombrar, eliminar y restablecer las barras de herramientas. Para obtener acceso a esta pestaña haga clic en **Personalizar** en el menú **Herramientas** y luego haga clic en **Barras de herramientas**.  

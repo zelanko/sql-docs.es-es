@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 47f12ad0e22f42506660e9f684d0defeb90c1da4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 87a9bddfbd8261eccd9e2de20ce6020ba8e77335
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268741"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819281"
 ---
 # <a name="export-as-policy-dialog-box"></a>Exportar como directiva (cuadro de diálogo)
   Utilice este cuadro de diálogo para guardar un conjunto de propiedades de faceta de administración basada en directivas como una directiva. Las directivas se pueden guardar en un archivo XML o directamente en la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]actual.  

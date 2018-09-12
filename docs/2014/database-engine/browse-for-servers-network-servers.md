@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 27
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: af846a1348d67acbb1b1d5776a357baaf99bf07e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a43e1efc508195b837879305080c7eb6636a2141
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176502"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811631"
 ---
 # <a name="browse-for-servers-network-servers"></a>Buscar servidores (Servidores de redes)
   Si se conecta a un componente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y no conoce el nombre exacto de la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], haga clic en **Buscar más** del cuadro **Nombre del servidor** para abrir el cuadro de diálogo **Buscar servidores**.  

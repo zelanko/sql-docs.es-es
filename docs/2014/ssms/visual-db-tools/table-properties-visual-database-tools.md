@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 060a7edb73315f1d4f1d12ed98f9982a85f1a638
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 417327fc8c6b85d1e791b3d67d5ccd8922c1fe64
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330895"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810531"
 ---
 # <a name="table-properties-visual-database-tools"></a>Propiedades de la tabla (Visual Database Tools)
   Estas propiedades aparecen en la ventana Propiedades cuando se hace clic con el botón secundario en el Diseñador de tablas y se selecciona Propiedades. A menos que se especifique lo contrario, podrá modificar estas propiedades en la ventana Propiedades cuando la tabla esté seleccionada.  

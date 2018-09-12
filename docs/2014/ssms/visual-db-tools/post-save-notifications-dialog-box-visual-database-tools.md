@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 274bf22ef6d5c22f840074a7e510ad5aff084d34
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b10056debcba87b7f2a87118e865c97870ef81c5
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214385"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811911"
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>Notificaciones después de guardar (cuadro de diálogo, Visual Database Tools)
   Este cuadro de diálogo aparece cuando se producen errores al intentar guardar los cambios en una tabla. En este cuadro de diálogo se muestran los objetos que se guardaron correctamente en la base de datos, los objetos que no se guardaron y los errores que se encontraron.  

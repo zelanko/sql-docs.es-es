@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ace4fb5b33cb2649e81398be6483d87f4371321
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ce2907ba9ce510239d62dc6e9db35b2c4360d89
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330855"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807361"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>Agregar nuevas filas en el panel Resultados (Visual Database Tools)
   Puede agregar datos nuevos escribiéndolos manualmente o pegándolos desde otro programa, como el Bloc de notas o Excel. La fila que se vaya a pegar deberá tener exactamente el mismo número y tipos de columnas que la tabla en la que se pegue. Puede pegar varias filas en el panel Resultados de una vez.  

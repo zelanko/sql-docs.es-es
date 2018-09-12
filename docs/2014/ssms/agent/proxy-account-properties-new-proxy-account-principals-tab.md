@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +15,14 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 123f0f9b98cafc4c145e2a310ac19991cffaaebe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3834662f4cea2e0957fe821b0d2015c1d00a001e
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327055"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814211"
 ---
-# <a name="proxy-account-properties-and-new-proxy-account-principals-tab"></a>Propiedades de la cuenta de proxy y la nueva cuenta de Proxy (pestaña entidades de seguridad)
+# <a name="proxy-account-properties-and-new-proxy-account-principals-tab"></a>Propiedades de cuenta de proxy y Nueva cuenta de proxy (pestaña Entidades de seguridad)
   Use esta página para ver o cambiar las entidades de seguridad que pueden utilizar una cuenta de proxy del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en los pasos de trabajo.  
   
 ## <a name="options"></a>Opciones  

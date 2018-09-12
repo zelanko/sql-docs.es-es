@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,12 +22,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 577cdb20b79903cc8133e2ce6c5fc788639494dd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e007ca5b58c557b73910f07a1eef698d00ba505
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317515"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814231"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Convenciones para combinar condiciones de búsqueda en el panel Criterios (Visual Database Tools)
   Puede crear consultas que incluyan un número arbitrario de condiciones de búsqueda vinculadas con un número arbitrario de operadores AND y OR. Una consulta con una combinación de cláusulas AND y OR puede llegar a ser compleja, por lo que le será de ayuda entender cómo se interpreta una consulta cuando se ejecuta y cómo se representa en el [panel Criterios](visual-database-tools.md) y en el [panel SQL](sql-pane-visual-database-tools.md).  

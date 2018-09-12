@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +15,14 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 275ef2bbb5caa00bb954e3d0d225c615fbf2ad53
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4db184ea0e079dd638d9c9186041652b5dee6e40
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288271"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820391"
 ---
-# <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>Propiedades de la cuenta de proxy y la nueva cuenta de Proxy (página General)
+# <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>Propiedades de cuenta de proxy y Nueva cuenta de proxy (página General)
   Utilice esta página para ver y cambiar las propiedades de una cuenta de proxy del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opciones  

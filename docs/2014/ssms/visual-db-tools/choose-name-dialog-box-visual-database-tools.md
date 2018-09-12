@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b6198bb639cf4b56f943b47d9b82e5419daef001
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3b0d65109a81e9d4eee5524209ae015e2c9546be
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304975"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808041"
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>Elegir nombre (cuadro de diálogo, Visual Database Tools)
   Este cuadro de diálogo aparece cuando se elige **guardar \<TableName**>, **guardar \<nombrediagrama >**, o **guardar \<ViewName >** desde el **archivo** menú.  

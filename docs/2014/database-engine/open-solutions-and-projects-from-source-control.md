@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,14 +16,14 @@ caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2f034cadd18ea0cf448a2044debe6b081c2a7e2c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b307be56b6711f4c51b6bf7b96d03d946296e57
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239415"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807431"
 ---
-# <a name="open-solutions-and-projects-from-source-control"></a>Abrir soluciones y proyectos de Control de código fuente
+# <a name="open-solutions-and-projects-from-source-control"></a>Abrir soluciones y proyectos desde el control de código fuente
   Puede usar [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para abrir una solución o proyecto directamente desde el control de código fuente. Al abrir una solución desde el control de código fuente, el entorno de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] recupera automáticamente la última versión de la solución y la copia en la ubicación que especifique.  
   
  Si no dispone de una copia local de una solución, debe abrirla desde el control de código fuente para poder realizar operaciones de control de código fuente en ella. Una vez que haya recuperado una copia local de la solución, no es necesario volver a abrirlo desde el control de código fuente; puede abrir la copia local y usar comandos de control de fuente estándar, tales como **obtener última versión** o **desproteger**, para realizar la operación deseada.  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e443a2bf75c4d6b7e3a8106641322f71d52e20e0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4244119cf9a3ab4d34020c7d0565c4bbea543db4
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240055"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814271"
 ---
 # <a name="stop-a-query-visual-database-tools"></a>Detener una consulta (Visual Database Tools)
   Si ve que la consulta está tardando demasiado tiempo o que no devuelve los resultados esperados, puede detenerla si todavía no ha finalizado.  

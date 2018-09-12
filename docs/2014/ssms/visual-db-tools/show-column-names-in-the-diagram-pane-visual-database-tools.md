@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d42d36a22be0f65552435b1ddef0d7328eaeb2d8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ed84257be696772ee89d2f72968ae6b41a219fc2
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306855"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809851"
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>Mostrar nombres de columna en el panel Diagrama (Visual Database Tools)
   Puede decidir si desea ocultar o mostrar los nombres de columna de las tablas en el **panel Diagrama** del Diseñador de consultas y vistas.  

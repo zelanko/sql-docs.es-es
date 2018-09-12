@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aedbf40ab545b79261fffe116d08d29a61bd4e70
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 38222658d4502b18c47458c9cff44bf229dfc315
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256274"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813371"
 ---
 # <a name="device-not-ready-error"></a>Error por dispositivo no listo
   Esta regla comprueba si el identificador EventId 15 se encuentra en el registro de eventos del sistema. Este error puede ser debido a errores de configuración o problemas relacionados del adaptador host SCSI.  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
@@ -14,12 +13,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 19f0ec63f3f2f2372e9f7803b5256692910f6242
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9f2d811dc542bf24c2cf75fe792a079046830076
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222515"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815511"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>Conectarse a una instancia desde el Explorador de objetos
   Para administrar objetos mediante el Explorador de objetos, primero debe conectarlo a la instancia que contiene los objetos. Puede conectar el Explorador de objetos a varias instancias simultáneamente.  
@@ -40,7 +39,7 @@ ms.locfileid: "37222515"
   
 4.  Haga clic en el pestaña **Propiedades de conexión** para definir los valores adicionales. Los valores disponibles varían según el tipo de servidor. En el [!INCLUDE[ssDE](../../includes/ssde-md.md)]están disponibles los valores siguientes.  
   
-    |Configuración|Descripción|  
+    |Parámetro|Descripción|  
     |-------------|-----------------|  
     |**Conectar con base de datos**|Se elige entre las bases de datos disponibles en el servidor. Esta lista solo mostrará las bases de datos que esté autorizado a ver.|  
     |**Protocolo de red**|Se selecciona entre Memoria compartida, TCP/IP o Canalizaciones con nombre.|  

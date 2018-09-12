@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dab0c64711da6e8e975920aa3c584f76a0713881
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 14070558242ca59336b097664c5510729d85a840
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301315"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814361"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>Quitar columnas de los resultados de una consulta (Visual Database Tools)
   Si utiliza una columna en una Consulta de selección pero no desea mostrarla en el conjunto de resultados (es decir, no desea mostrarla en la lista SELECT de la consulta), puede quitarla de los resultados. Después de quitar la columna de los resultados de la consulta, podrá seguir utilizándola en las condiciones de búsqueda o como un campo de ordenación.  

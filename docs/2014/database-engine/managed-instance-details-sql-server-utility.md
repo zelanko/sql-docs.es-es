@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
@@ -14,12 +13,12 @@ caps.latest.revision: 5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 042a6c0cb83b0bba4cbf80608dbfa52496e95394
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 80548c0ea7ba2b8bf8232a66daf709050f4cdc4f
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178482"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814161"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Detalles de las instancias administradas (Utilidad de SQL Server)
   La información de la vista Instancias administradas del Explorador de Utilidad proporciona los detalles de utilización para las instancias individuales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el historial de uso de la CPU, los detalles de utilización del almacenamiento en el nivel de archivo y la capacidad de ver y actualizar los umbrales de la directiva. Los umbrales de la directiva se pueden controlar en el nivel de instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , para un equipo, para los archivos de base de datos y los archivos de registro, y en el nivel de volúmenes de almacenamiento. También se pueden ver los detalles sobre las propiedades correspondientes a las instancias administradas individuales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

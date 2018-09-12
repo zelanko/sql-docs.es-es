@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f01177114dd175767652a9bbd28e15afc3ce812e
-ms.sourcegitcommit: c86335a432e109322d718a13c37ff4b948c39d2d
+ms.openlocfilehash: c49e56331a48921a123f067f32062cd138930d2c
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43193031"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888861"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novedades de SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,6 +23,8 @@ Capacidades de aprendizaje automático se agregan a SQL Server en cada versión 
 ## <a name="new-in-sql-server-2017"></a>Novedades de SQL Server 2017
 
 Esta versión agrega [compatibilidad con Python y algoritmos de aprendizaje automático de líderes del sector](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Cambia para reflejar el nuevo ámbito, SQL Server 2017 marca la introducción de [SQL Server Machine Learning Services (In-Database)](what-is-sql-server-machine-learning.md), con compatibilidad con lenguaje Python y R. 
+
+Para todos los anuncios de características de seguridad, consulte [What ' s New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 
 ### <a name="r-enhancements"></a>Mejoras de R
 
@@ -42,7 +44,11 @@ Las nuevas capacidades para R incluyen [ **administración de paquetes**](r/inst
 
 ### <a name="python-integration-for-in-database-analytics"></a>Integración de Python para realizar análisis en bases de datos
 
-Ahora se admite la integración de T-SQL y Python a través de la [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) procedimiento almacenado del sistema. Puede llamar a cualquier código de Python mediante este procedimiento almacenado. Código que se ejecuta en una arquitectura segura dual que permite la implementación empresarial de los modelos de Python y secuencias de comandos, que se puede llamar desde una aplicación mediante un procedimiento almacenado simple. Mejoras adicionales del rendimiento se consiguen mediante transmisión por secuencias datos de SQL a procesos de Python y la paralelización de anillos de MPI.
+Python es un lenguaje que proporciona gran flexibilidad y capacidad para una variedad de tareas de aprendizaje automático. Bibliotecas de código abierto para Python incluyen varias plataformas para redes neurales personalizables, así como bibliotecas comunes para el procesamiento de lenguaje natural. Ahora, se admite este idioma utilizado en el aprendizaje automático de SQL Server 2017.
+
+Dado que Python está integrado con el motor de base de datos, puede mantener análisis cerca de los datos y eliminar los costos y riesgos de seguridad asociados con el movimiento de datos. Puede implementar soluciones de aprendizaje automático basadas en Python con herramientas como Visual Studio. Las aplicaciones de producción pueden obtener predicciones, modelos, o métodos de acceso de los objetos visuales del tiempo de ejecución de Python 3.5 con datos de SQL Server.
+
+Se admite la integración de T-SQL y Python a través de la [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) procedimiento almacenado del sistema. Puede llamar a cualquier código de Python mediante este procedimiento almacenado. Código que se ejecuta en una arquitectura segura dual que permite la implementación empresarial de los modelos de Python y secuencias de comandos, que se puede llamar desde una aplicación mediante un procedimiento almacenado simple. Mejoras adicionales del rendimiento se consiguen mediante transmisión por secuencias datos de SQL a procesos de Python y la paralelización de anillos de MPI.
 
 Puede usar el T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) realice función [puntuación nativa](sql-native-scoring.md) en un modelo previamente entrenado que se ha guardado previamente en el formato binario necesario.
 
@@ -67,6 +73,8 @@ Esta versión también agrega [SQL Server Machine Learning Server (independiente
 Esta funcionalidad en SQL Server a través de aprendizaje de automático de versión introducida **SQL Server 2016 R Services**, un motor de análisis en bases de datos para la secuencia de comandos de R de procesamiento de datos residentes en una instancia del motor de base de datos.
 
 Además, **SQL Server 2016 R Server (independiente)** se publicó como una manera de instalar R Server en un servidor de Windows. Inicialmente, el programa de instalación de SQL Server proporciona la única manera de instalar R Server para Windows. En versiones posteriores, los desarrolladores y científicos de datos que deseaban R Server en Windows podrían usar a otro instalador independiente para lograr el mismo objetivo. El servidor independiente de SQL Server es funcionalmente equivalente al producto de servidor independiente, [Microsoft R Server para Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
+
+Para todos los anuncios de características de seguridad, consulte [What ' s New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
 
 | Versión |Actualización de características |
 |---------|----------------|

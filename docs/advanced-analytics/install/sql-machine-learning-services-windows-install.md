@@ -1,29 +1,30 @@
 ---
 title: Instalar SQL Server Machine Learning Services (en bases de datos) en Windows | Microsoft Docs
+description: R en SQL Server o Python en SQL Server está disponible al instalar SQL Server 2017 Machine Learning Services en Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2018
+ms.date: 09/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b5b37ef8d9fd3fba6b9e87839f32112724db9abe
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 285745a36552a0029ae0df383fc629b94632d524
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118583"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311655"
 ---
 # <a name="install-sql-server-machine-learning-services"></a>Instalar SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-A partir de SQL Server 2017, se proporciona compatibilidad con R y Python para realizar análisis en bases de datos en SQL Server Machine Learning Services, el sucesor de la característica R Services introducida en SQL Server 2016. Bibliotecas de funciones están disponibles en R y Python y de identificación de script externo en una instancia del motor de base de datos. 
+A partir de SQL Server 2017, R y Python ofrece compatibilidad para análisis en bases de datos están en SQL Server Machine Learning Services, el sucesor de [SQL Server R Services](../r/sql-server-r-services.md) introducidas en SQL Server 2016. Bibliotecas de funciones están disponibles en R y Python y de identificación de script externo en una instancia del motor de base de datos. 
 
 En este artículo se explica cómo instalar el componente de machine learning mediante la ejecución de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Asistente para la instalación y seguir las indicaciones en pantalla.
 
 ## <a name="bkmk_prereqs"> </a> Lista de comprobación previa a la instalación
 
-+ El programa de instalación de SQL Server 2017 es necesario si va a instalar servicios de Machine Learning con compatibilidad con lenguajes para R, Python o ambos. Si en su lugar tiene los medios de instalación de SQL Server 2016, puede instalar [SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md) para obtener compatibilidad con el lenguaje R.
++ El programa de instalación de SQL Server 2017 es necesario para servicios de Machine Learning con R y Python. Si en su lugar tiene los medios de instalación de SQL Server 2016, consulte [instalar SQL Server 2016 R Services](sql-r-services-windows-install.md) para obtener compatibilidad con el lenguaje R.
 
 + Se requiere una instancia del motor de base de datos. No se puede instalar solo características R o Python, aunque se puede agregar gradualmente a una instancia existente.
 
@@ -146,7 +147,7 @@ Use los pasos siguientes para comprobar que se están ejecutando todos los compo
 
     **run_value** debería estar establecido ahora en 1.
     
-2. Abra el **servicios** panel o el Administrador de configuración de SQL Server y compruebe **servicio Launchpad de SQL Server** se está ejecutando. Debe tener un servicio para cada instancia del motor de base de datos que tenga R o Python instalado. Para obtener más información, consulte [componentes para admitir la integración de Python](../python/new-components-in-sql-server-to-support-python-integration.md). 
+2. Abra el **servicios** panel o el Administrador de configuración de SQL Server y compruebe **servicio Launchpad de SQL Server** se está ejecutando. Debe tener un servicio para cada instancia del motor de base de datos que tenga R o Python instalado. Para obtener más información sobre el servicio, consulte [Extensibility framework](../concepts/extensibility-framework.md). 
    
 3. Si Launchpad se está ejecutando, debe ser capaz de ejecutar scripts de R y Python para comprobar que los tiempos de ejecución de secuencias de comandos externos pueden comunicarse con SQL Server.
 

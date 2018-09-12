@@ -1,5 +1,5 @@
 ---
-title: Seguridad de aprendizaje automático de SQL Server y R | Documentos de Microsoft
+title: Seguridad para SQL Server machine learning y R | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,36 +7,36 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2ca7b24b46c1d32fb12f050b31c74fef26769ca3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c04670464d23f0951a957df945a2e81b817ae134
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203577"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889191"
 ---
-# <a name="security-for-sql-server-machine-learning-and-r"></a>Seguridad de aprendizaje automático de SQL Server y R
+# <a name="security-for-sql-server-machine-learning-and-r"></a>Seguridad para SQL Server machine learning y R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artículo describe la arquitectura global de seguridad que se utiliza para conectar el [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] motor y componentes relacionados con el runtime de R de la base de datos. Se proporcionan ejemplos del proceso de seguridad para estos escenarios comunes para poder usar R en un entorno empresarial:
+Este artículo describe la arquitectura general de seguridad que se utiliza para conectar el [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] motor y los componentes relacionados con el tiempo de ejecución de R de la base de datos. Se proporcionan ejemplos del proceso de seguridad para estos escenarios habituales para usar R en un entorno empresarial:
 
 + Ejecutar funciones de RevoScaleR en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] desde un cliente de ciencia de datos
 + Ejecutar R directamente desde [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] mediante procedimientos almacenados
 
 ## <a name="security-overview"></a>Información general sobre seguridad
 
-Un [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] se requiere inicio de sesión o cuenta de usuario de Windows para ejecutar scripts de R que usan datos de SQL Server o que se ejecutan con SQL Server como el contexto de proceso. Este requisito se aplica a ambos [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] y SQL Server 2017 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)].
+Un [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] inicio de sesión o cuenta de usuario de Windows se requiere para ejecutar scripts de R que usan datos de SQL Server o que se ejecutan con SQL Server como el contexto de cálculo. Este requisito se aplica a ambos [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] y SQL Server 2017 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)].
 
-Identifica la cuenta de inicio de sesión o usuario la *entidad de seguridad*, que puedan necesitar varios niveles de acceso, según los requisitos de script de R:
+La cuenta de inicio de sesión o usuario identifica la *entidad de seguridad*, que puedan necesitar varios niveles de acceso, según los requisitos de script de R:
 
-+ Permiso de acceso a la base de datos donde está habilitada la R
-+ Permisos para leer datos de objetos protegidos, como las tablas
-+ La capacidad para escribir nuevos datos a una tabla, por ejemplo, un modelo o resultados de puntuación
-+ La capacidad para crear nuevos objetos, como tablas, procedimientos almacenados que utilice un script de R o personalizar las funciones que use R el trabajo
-+ El derecho para instalar nuevos paquetes en el equipo de SQL Server o en paquetes de R de uso proporcionados a un grupo de usuarios. 
++ Permiso para acceder a la base de datos donde está habilitado R
++ Permisos para leer datos de objetos protegidos, como tablas
++ La capacidad de escribir nuevos datos en una tabla, como un modelo o los resultados de puntuación
++ La capacidad para crear nuevos objetos, como tablas, procedimientos almacenados que use el script de R o personalizado, las funciones que el trabajo de uso de R
++ El derecho a instalar nuevos paquetes en el equipo de SQL Server, o paquetes de uso de R proporcionados a un grupo de usuarios. 
 
 Por lo tanto, cada persona que ejecuta el código de R con [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] como la ejecución del contexto debe estar asignado a un inicio de sesión en la base de datos. Con la seguridad de SQL Server, es generalmente más fácil crear roles para administrar conjuntos de permisos y asignar a usuarios a esos roles, en lugar de establecer permisos de usuario de forma individual. 
 
-Por ejemplo, suponga que ha creado algún código de R que se ejecuta en su equipo portátil, y desea ejecutar ese código [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Puede hacerlo solo si se cumplen estas condiciones:
+Por ejemplo, suponga que ha creado algún código de R que se ejecuta en el equipo portátil, y que desea ejecutar ese código [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Puede hacerlo solo si se cumplen estas condiciones:
 
 + La base de datos permite las conexiones remotas.
 + Se ha agregado un inicio de sesión de SQL con el nombre y la contraseña usados en el código de R a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] en el nivel de instancia. O bien, si usa la Autenticación integrada de Windows, el usuario de Windows especificado en la cadena de conexión debe agregarse como usuario de la instancia.
@@ -46,7 +46,7 @@ Por ejemplo, suponga que ha creado algún código de R que se ejecuta en su equi
     + Escribir o actualizar datos 
     + Crear objetos como tablas o procedimientos almacenados
 
-Después de que el inicio de sesión o la cuenta de usuario de Windows se ha aprovisionado y conceder los permisos necesarios, puede ejecutar código R en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] mediante un objeto de origen de datos de R o mediante una llamada a un procedimiento almacenado. Cada vez que se inicia R desde [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], la seguridad del motor de base de datos obtiene el contexto de seguridad del usuario que inició el trabajo de R o se ejecutó el procedimiento almacenado y administra las asignaciones del usuario o inicio de sesión a los objetos protegibles. 
+El inicio de sesión o cuenta de usuario de Windows una vez aprovisionado y tengan los permisos necesarios, puede ejecutar código R en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] mediante el uso de un objeto de origen de datos de R o mediante una llamada a un procedimiento almacenado. Cada vez que se inicie R desde [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], la seguridad del motor de base de datos obtiene el contexto de seguridad del usuario que inició el trabajo de R o se ejecutó el procedimiento almacenado y administra las asignaciones del usuario o inicio de sesión a objetos protegibles. 
 
 Por lo tanto, todos los trabajos de R que se inician desde un cliente remoto deben especificar la información de inicio de sesión o usuario como parte de la cadena de conexión.
 
@@ -60,25 +60,25 @@ Después de la asignación a una cuenta de trabajo, [!INCLUDE[rsql_launchpad_md]
 
 Cuando se completen todas las operaciones de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], la cuenta de trabajo de usuario se marcará como libre y se devolverá al grupo.
 
-Para obtener más información acerca de [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], consulte [componentes de SQL Server para admitir la integración de R](../../advanced-analytics/r/new-components-in-sql-server-to-support-r.md).
+Para obtener más información sobre el servicio, consulte [Extensibility framework](../concepts/extensibility-framework.md). 
 
 ### <a name="implied-authentication"></a>Autenticación implícita
 
-**Autenticación implícita** es el término que se usa para el proceso en el que SQL Server obtiene el usuario las credenciales y, a continuación, ejecuta todas las tareas de script externo en nombre de los usuarios, suponiendo que el usuario tiene los permisos correctos en la base de datos. Autenticación implícita es especialmente importante si el script de R es necesario realizar una llamada ODBC fuera de la base de datos de SQL Server. Por ejemplo, el código puede recuperar una lista más corta de factores desde una hoja de cálculo u otro origen.
+**Autenticación implícita** es el término que se usa para el proceso en la que SQL Server obtiene el usuario las credenciales y, a continuación, ejecuta todas las tareas de script externo en nombre de los usuarios, suponiendo que el usuario tiene los permisos correctos en la base de datos. Autenticación implícita es especialmente importante si el script de R que necesita realizar una llamada ODBC fuera de la base de datos de SQL Server. Por ejemplo, el código puede recuperar una lista más corta de factores desde una hoja de cálculo u otro origen.
 
-Para que tales llamadas de bucle invertido, lleve a cabo correctamente, el grupo que contiene las cuentas de trabajo, SQLRUserGroup, debe tener permisos de "Allow Log on locally". De forma predeterminada, este derecho se concede a todos los nuevos usuarios locales, pero en algunas organizaciones puede que sea necesario más estrictas directivas de grupo.
+Para que tales llamadas de bucle invertido se realice correctamente, el grupo que contiene las cuentas de trabajo, SQLRUserGroup, debe tener permisos de "Permitir iniciar sesión localmente". De forma predeterminada, este permiso se concede a todos los nuevos usuarios locales, pero en algunas organizaciones podrían aplicarse directivas de grupo más estrictas.
 
 ![Autenticación implícita para R](media/implied-auth-rsql.png)
 
-## <a name="security-of-worker-accounts"></a>Seguridad de las cuentas de trabajo
+## <a name="security-of-worker-accounts"></a>Seguridad de cuentas de trabajo
 
-La asignación de un usuario externo de Windows o inicio de sesión SQL válido para una cuenta de trabajo es válida solo durante la duración de la duración de la consulta SQL que se ejecuta el script de R.
+La asignación de un usuario externo de Windows o inicio de sesión SQL válido para una cuenta de trabajo es válida solo durante la vigencia de la duración de la consulta SQL que se ejecuta el script de R.
 
 Las consultas en paralelo desde el mismo inicio de sesión se asignan a la misma cuenta de trabajo de usuario.
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] administra los directorios que se usan para los procesos mediante RLauncher, y directorios son de acceso restringido. La cuenta de trabajo no puede tener acceso a los archivos de las carpetas situadas por encima de la suya propia, pero puede leer, escribir o eliminar elementos secundarios situados bajo la carpeta de trabajo de la sesión que se ha creado para la consulta SQL con el script de R.
 
-Para obtener más información acerca de cómo cambiar el número de cuentas de trabajo, los nombres de cuenta o las contraseñas de cuentas, vea [modificar el grupo de cuentas de usuario para el aprendizaje automático de SQL Server](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
+Para obtener más información acerca de cómo cambiar el número de cuentas de trabajo, los nombres de cuentas o contraseñas de cuentas, vea [modificar el grupo de cuentas de usuario para el aprendizaje automático de SQL Server](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
 ## <a name="security-isolation-for-multiple-external-scripts"></a>Aislamiento de seguridad para varios scripts externos
 

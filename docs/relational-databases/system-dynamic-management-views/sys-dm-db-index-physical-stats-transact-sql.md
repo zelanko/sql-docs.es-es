@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d42c55b62530a47332e4868c3080f3f21be9be8d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 59972833705c4d8ab7c054a1a7aac8d6ee9824f8
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085558"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375708"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ sys.dm_db_index_physical_stats (
 |compressed_page_count|**bigint**|Número de páginas comprimidas.<br /><br /> En el caso de los montones, las nuevas páginas asignadas no usan la compresión de página. Un montón usa la compresión de página bajo dos condiciones especiales: cuando los datos se importan de forma masiva o cuando vuelve a generarse un montón. Las operaciones DML que producen las asignaciones de página no usarán la compresión de página. Vuelva a generar un montón cuando el valor compressed_page_count sea mayor que el umbral que desea.<br /><br /> En las tablas que tienen un índice clúster, el valor compressed_page_count indica la eficacia de la compresión de página.|  
 |hobt_id|BIGINT|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Para los índices de almacén de columnas, es el identificador para un conjunto de filas que realiza el seguimiento de los datos de almacén de columnas interno de una partición. Los conjuntos de filas están almacenadas como datos montones o binario árboles. Tienen el mismo Id. de índice como el índice de almacén de columnas primario. Para obtener más información, consulte [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL si|  
 |column_store_delete_buffer_state|TINYINT|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = PURGA<br /><br /> 3 = BAJA<br /><br /> 4 = RETIRADA<br /><br /> 5 = LISTO|  
-|column_store_delete_buff_state_desc||**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NOT_APPLICABLE: el índice del elemento primario no es un índice de almacén de columnas.<br /><br /> Abrir elementos Deleter y escáneres usan esto.<br /><br /> DESCARGA: elementos Deleter está purgando pero escáneres seguir utilizándola.<br /><br /> BAJA: se cierra el búfer y se escriben filas en el búfer en el mapa de bits de eliminación.<br /><br /> Se han escrito RETIRING – filas en el búfer de eliminación cerrado en el mapa de bits de eliminación, pero el búfer no se ha truncado porque escáneres lo están usando. Escáneres nuevo no es necesario utilizar el búfer reemplazan porque el búfer abierto es suficiente.<br /><br /> LISTO, que este búfer de eliminación está listo para su uso.|  
+|column_store_delete_buff_state_desc||**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NO es válido: el elemento primario índice no es un índice de almacén de columnas.<br /><br /> Abrir elementos Deleter y escáneres usan esto.<br /><br /> DESCARGA: elementos Deleter está purgando pero escáneres seguir utilizándola.<br /><br /> BAJA: se cierra el búfer y se escriben filas en el búfer en el mapa de bits de eliminación.<br /><br /> Se han escrito RETIRING – filas en el búfer de eliminación cerrado en el mapa de bits de eliminación, pero el búfer no se ha truncado porque escáneres lo están usando. Escáneres nuevo no es necesario utilizar el búfer reemplazan porque el búfer abierto es suficiente.<br /><br /> LISTO, que este búfer de eliminación está listo para su uso.|  
   
 ## <a name="remarks"></a>Notas  
  La función de administración dinámica sys.dm_db_index_physical_stats sustituye a la instrucción DBCC SHOWCONTIG.  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e8f46405dab619292d057d854034ea989908846
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 68cfc33604bee9ed3e4b7d0c34c1ebfb6dec2454
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084017"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888561"
 ---
 # <a name="examples-using-path-mode"></a>Ejemplos: Usar el modo PATH
   El ejemplo siguiente ilustra el uso del modo PATH en la creación de XML a partir de una consulta SELECT. Muchas de estas consultas se especifican usando los documentos XML de instrucciones de fabricación de bicicletas almacenados en la columna Instructions de la tabla ProductModel.  
@@ -126,7 +125,7 @@ GO
  `<Name>Bike Wash</Name>`  
   
 ## <a name="specifying-xpath-like-column-names"></a>Especificar nombres de columna de tipo XPath  
- En la siguiente consulta la `ProductModelID` nombre de columna especificado empieza con '\@' y no tiene una barra diagonal ('/'). Por tanto, se creará en el XML resultante un atributo del elemento <`row`> que tenga el valor de columna correspondiente.  
+ En la consulta siguiente, el nombre de columna `ProductModelID` especificado empieza por "\@" y no incluye una marca de barra diagonal ("/"). Por tanto, se creará en el XML resultante un atributo del elemento <`row`> que tenga el valor de columna correspondiente.  
   
 ```  
 USE AdventureWorks2012;  

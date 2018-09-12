@@ -1,5 +1,5 @@
 ---
-title: Paso 1 descargar los datos de ejemplo | Documentos de Microsoft
+title: Paso 1 descargar los datos de ejemplo | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,25 +7,25 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 754140cbc1c2b35338794b6919076b99c3052562
-ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
+ms.openlocfilehash: 07a9b5219649b370b0a5df1e53cf75765f18ec7f
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35249738"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888323"
 ---
 # <a name="step-1-download-the-sample-data"></a>Paso 1: Descargar los datos de ejemplo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artículo forma parte de un tutorial, [análisis de Python en bases de datos para desarrolladores de SQL](sqldev-in-database-python-for-sql-developers.md). 
 
-Los datos y las secuencias de comandos para este tutorial se comparten en Github. En este paso, usa un script de PowerShell para descargar los archivos de datos y la secuencia de comandos en un directorio local de su elección.
+Los datos y las secuencias de comandos para este tutorial se comparten en Github. En este paso, usará un script de PowerShell para descargar los archivos de datos y la secuencia de comandos en un directorio local de su elección.
 
-## <a name="run-the-script"></a>Ejecute la secuencia de comandos
+## <a name="run-the-script"></a>Ejecute el script
 
 1. Abra una consola de comandos de Windows PowerShell.
 
-    Utilice la opción **ejecutar como administrador**, si se necesitan privilegios de administrador para crear el directorio de destino o para escribir archivos en el destino especificado.
+    Utilice la opción **ejecutar como administrador**, si se necesitan privilegios administrativos para crear el directorio de destino o para escribir archivos en el destino especificado.
 
 2. Ejecute los siguientes comandos de PowerShell, y cambie el valor del parámetro *DestDir* por cualquier directorio local.  El valor predeterminado que hemos usado aquí es `C:\temp\pysql`.
 
@@ -39,19 +39,19 @@ Los datos y las secuencias de comandos para este tutorial se comparten en Github
     
     Si la carpeta que especifique en *DestDir* no existe, el script de PowerShell la creará.
     
-    Si se produce un error, establezca temporalmente la directiva de ejecución de scripts de PowerShell para **sin restricciones** para este tutorial, mediante el uso de la **omisión** argumento y el ámbito de los cambios realizados en la sesión actual. Ejecutar este comando no produce un cambio de configuración.
+    Si se produce un error, establezca temporalmente la directiva para la ejecución de scripts de PowerShell para **sin restricciones** para este tutorial, mediante el uso de la **omisión** argumento y el ámbito de los cambios en la sesión actual. Ejecutar este comando no produce un cambio de configuración.
     
     ```ps
     Set-ExecutionPolicy Bypass -Scope Process
     ```
 
-3. Dependiendo de la conexión a internet, la descarga puede tardar un poco. 
+3. Según la conexión a internet, la descarga puede tardar un rato. 
 
 ## <a name="view-results"></a>Ver los resultados
 
 Cuando se descarguen todos los archivos, el script de PowerShell se abre en la carpeta especificada por  *DestDir*. 
 
-+ En el símbolo del sistema de PowerShell, ejecute el siguiente comando para enumerar los archivos que se hayan descargado.
++ En el símbolo del sistema de PowerShell, ejecute el siguiente comando para enumerar los archivos que se han descargado.
 
     ```ps
     ls
@@ -65,10 +65,10 @@ Cuando se descarguen todos los archivos, el script de PowerShell se abre en la c
 
 ## <a name="previous-step"></a>Paso anterior
 
-[En bases de datos análisis de Python para que el programador SQL](sqldev-in-database-python-for-sql-developers.md)
+[En bases de datos análisis de Python para el desarrollador SQL](sqldev-in-database-python-for-sql-developers.md)
 
 ## <a name="see-also"></a>Vea también
 
-[Los servicios con Python de aprendizaje automático](../python/sql-server-python-services.md)
+[Extensión de Python en SQL Server](../concepts/extension-python.md)
 
 

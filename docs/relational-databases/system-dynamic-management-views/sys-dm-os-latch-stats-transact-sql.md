@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_latch_stats (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_os_latch_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72dabd38cbb974ead8a231b4da9569dee9441284
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 03e3a5a0497a1d2da15124287d557f6e27bc3e7e
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467911"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375688"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,22 +35,22 @@ ms.locfileid: "34467911"
   Devuelve información acerca de todas las esperas de bloqueos temporales organizadas por clase.  
   
 > [!NOTE]  
->  Para llamar a esta desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_os_latch_stats**.  
+>  Al llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_os_latch_stats**.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|Nombre de la clase de bloqueo temporal.|  
 |waiting_requests_count|**bigint**|Número de esperas en bloqueos temporales en esta clase Este recuento se incrementa al inicio de una espera de bloqueo temporal.|  
 |wait_time_ms|**bigint**|Tiempo total de espera, en milisegundos, en bloqueos temporales en esta clase<br /><br /> **Nota:** esta columna se actualiza cada cinco minutos durante una espera de bloqueos temporales y al final de la misma.|  
 |max_wait_time_ms|**bigint**|Tiempo máximo que un objeto de memoria ha esperado en este bloqueo temporal. Si este valor es extraordinariamente alto, puede indicar un bloqueo interno.|  
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo en esta distribución.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  sys.dm_os_latch_stats se puede utilizar para identificar el origen de la contención del bloqueo temporal examinando los tiempos y números de esperas relativos en las diferentes clases de bloqueos temporales. En algunas situaciones, se puede resolver o reducir la contención de bloqueos temporales. No obstante, puede haber situaciones que requerirán ponerse en contacto con los servicios de soporte al cliente de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
  Puede restablecer el contenido de sys.dm_os_latch_stats utilizando `DBCC SQLPERF` de la forma siguiente:  
@@ -77,7 +77,7 @@ GO
   
  En la siguiente tabla se ofrecen descripciones breves de las diversas clases de bloqueos temporales.  
   
-|Clase de bloqueo temporal|Description|  
+|Clase de bloqueo temporal|Descripción|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo utiliza internamente para inicializar la sincronización de la creación de un búfer de anillo de asignación.|  
 |ALLOC_CREATE_FREESPACE_CACHE|Se utiliza para inicializar la sincronización de cachés de espacio libre interno para montones.|  
@@ -105,7 +105,7 @@ GO
 |BACKUP_MANAGER_DIFFERENTIAL|Se utiliza para sincronizar operaciones de copia de seguridad diferencial con DBCC.|  
 |BACKUP_OPERATION|Se utiliza para sincronizar estructuras de datos internas en una operación de copia de seguridad, como base de datos, registro o copia de seguridad de archivos.|  
 |BACKUP_FILE_HANDLE|Se utiliza para sincronizar operaciones de apertura de archivos durante una operación de restauración.|  
-|BUFFER|Se utiliza para sincronizar el acceso a corto plazo a páginas de la base de datos. Se requiere un bloqueo temporal de búfer antes de leer o modificar una página de la base de datos. La contención de bloqueos temporales de búfer puede indicar varios problemas, incluidas páginas activas y operaciones de E/S lentas.<br /><br /> Esta clase de bloqueo temporal cubre todos los usos posibles de bloqueos temporales de página. Sys.dm_os_wait_stats establece diferencias entre las esperas de bloqueos temporales de página causadas por operaciones de E/S y de lectura y escritura en la página.|  
+|BUFFER|Se utiliza para sincronizar el acceso a corto plazo a páginas de la base de datos. Se requiere un bloqueo temporal de búfer antes de leer o modificar una página de la base de datos. La contención de bloqueos temporales de búfer puede indicar varios problemas, incluidas páginas activas y operaciones de E/S lentas.<br /><br /> Esta clase de bloqueo temporal cubre todos los usos posibles de bloqueos temporales de página. Sys.dm_os_wait_stats establece diferencias entre las esperas de bloqueos temporales de página causadas por operaciones de E/S y de lectura y operaciones de escritura en la página.|  
 |BUFFER_POOL_GROW|Se utiliza para sincronizar el administrador del búfer interno durante operaciones de ampliación del grupo de búferes.|  
 |DATABASE_CHECKPOINT|Se utiliza para serializar puntos de comprobación en una base de datos.|  
 |CLR_PROCEDURE_HASHTABLE|Exclusivamente para uso interno.|  
@@ -126,7 +126,7 @@ GO
 |FCB|Se utiliza para sincronizar el acceso a un bloque de control de archivos.|  
 |FCB_REPLICA|Exclusivamente para uso interno.|  
 |FGCB_ALLOC|Se utiliza para sincronizar el acceso a información de asignación por turnos en un grupo de archivos.|  
-|FGCB_ADD_REMOVE|Se utiliza para sincronizar el acceso a grupos de archivos para operaciones de archivo ADD y DROP.|  
+|FGCB_ADD_REMOVE|Usar para sincronizar el acceso a los grupos de archivos para agregar, quitar, aumentar y reducir las operaciones de archivos.|  
 |FILEGROUP_MANAGER|Exclusivamente para uso interno.|  
 |FILE_MANAGER|Exclusivamente para uso interno.|  
 |FILESTREAM_FCB|Exclusivamente para uso interno.|  
@@ -169,7 +169,7 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|Exclusivamente para uso interno.|  
 |SERVICE_BROKER_HOST_NAME|Exclusivamente para uso interno.|  
 |SERVICE_BROKER_READ_CACHE|Exclusivamente para uso interno.|  
-|SERVICE_BROKER_WAITFOR_MANAGER| Usar para sincronizar una asignación de nivel de instancia de colas de tareas en espera. Crea una cola existe por tupla de Id. y versión de base de datos, Id. de cola de la base de datos. Contención de bloqueos temporales de esta clase puede producirse cuando hay muchas conexiones: en unos WAITFOR(RECEIVE) espera estado; al llamar a WAITFOR(RECEIVE); Si se supera el tiempo de espera WAITFOR; recibir un mensaje; confirmar o revertir la transacción que contiene el WAITFOR(RECEIVE); Puede reducir la contención reduciendo el número de subprocesos en un estado de espera WAITFOR(RECEIVE). |  
+|SERVICE_BROKER_WAITFOR_MANAGER| Se utiliza para sincronizar una asignación de nivel de instancia de colas de tareas en espera. Existe una cola por cada tupla de Id. de versión de la base de datos e Id. de cola de la base de datos. La contención de bloqueos temporales de esta clase puede producirse cuando hay muchas conexiones: en unos WAITFOR(RECEIVE) espera estado; una llamada a WAITFOR(RECEIVE); Si se supera el tiempo de espera WAITFOR; recibir un mensaje; confirmar o revertir la transacción que contiene el WAITFOR(RECEIVE); Puede reducir la contención al reducir el número de subprocesos en un estado de espera WAITFOR(RECEIVE). |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|Exclusivamente para uso interno.|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|Exclusivamente para uso interno.|  
 |SERVICE_BROKER_TRANSPORT|Exclusivamente para uso interno.|  

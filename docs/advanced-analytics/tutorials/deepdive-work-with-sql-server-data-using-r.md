@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ea8fee364cd69580b8b7d0b6438349dbf2b1298c
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a59d467417c3471fa643acf9fc65ab45d5dc7a45
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084187"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375678"
 ---
 # <a name="lesson-1-create-a-database-and-permissions"></a>Lección 1: Crear una base de datos y permisos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -103,7 +103,7 @@ En esta sección se enumeran algunos problemas comunes que podrían surgir duran
   
     Cuando el esquema se asocia con un nombre de usuario en particular, el usuario es el _propietario del esquema_. Cuando crea un objeto, siempre lo crea en su propio esquema, a menos que solicite específicamente que se cree en otro esquema.
   
-    Por ejemplo, si crea una tabla con el nombre `*`TestData`, and your default schema is **db\_datareader**, the table is created with the name `.db_datareader < database_name >. TestData'.
+    Por ejemplo, si crea una tabla con el nombre **TestData**, y su esquema predeterminado es **db_datareader**, se crea la tabla con el nombre `<database_name>.db_datareader.TestData`.
   
     Por esta razón, una base de datos puede contener varias tablas con el mismo nombre, siempre y cuando las tablas pertenezcan a esquemas diferentes.
    

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2868591cbb80cfb39eaaa81d6cbe75d2bda08c6d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d331e0a22042258c087a3f58b0c72330c66f9203
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294225"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889421"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Directiva TYPE en consultas FOR XML
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatibilidad con la [xml &#40;Transact-SQL&#41; ](/sql/t-sql/xml/xml-transact-sql) le permite solicitar el resultado de una consulta FOR XML se devuelven como `xml` tipo de datos mediante la especificación de la directiva TYPE. Esto permite procesar el resultado de una consulta FOR XML en el servidor. Por ejemplo, puede especificar una XQuery en el mismo, asignar el resultado a un `xml` variable de tipo, o escribir [consultas FOR XML anidadas](use-nested-for-xml-queries.md).  

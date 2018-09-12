@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7673efc55f780f0ebd99da740c54ea4787b40260
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d2e89e934fc8e1a476b7333ffe0c622465cabfe1
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215195"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888881"
 ---
 # <a name="xml-system-stored-procedures"></a>Procedimientos almacenados del sistema XML
   SQL Server proporciona los siguientes procedimientos almacenados que se utilizan junto con OPENXML:  

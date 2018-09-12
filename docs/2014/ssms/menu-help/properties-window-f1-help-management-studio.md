@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -27,12 +26,12 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0d1e5df1490533bd797b7142e9903ce00bf33be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c9304d32ba3288d712d6869303af212ce506193
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306945"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820851"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Ventana Propiedades (Ayuda F1 de Management Studio)
   Use la ventana **Propiedades** para ver las propiedades de los elementos seleccionados. También puede usar la ventana **Propiedades** para ver las propiedades de archivos, proyectos y soluciones. Para obtener acceso a la ventana **Propiedades** , haga clic en **Ventana Propiedades** en el menú **Ver** .  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1560eb844657d806862d6a4e85bb9a52682b77d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bbca5b4d378861731b77472c5f88442a3f6e793f
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301792"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889861"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>Ver una colección de esquemas XML almacenada
   Después de importar una colección de esquemas XML mediante [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql), los componentes del esquema se almacenan en los metadatos. Puede usar la función intrínseca [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace)para reconstruir la colección de esquemas XML. Esta función devuelve un `xml` instancia del tipo de datos.  

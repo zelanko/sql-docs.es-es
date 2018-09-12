@@ -1,5 +1,5 @@
 ---
-title: Trabajar con tipos de datos de R en aprendizaje automático de SQL Server | Documentos de Microsoft
+title: Trabajar con tipos de datos de R en SQL Server Machine Learning | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,41 +7,41 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d06f34210f5ec4aee741d3f3a70a01f60f10fb98
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: bcabb40cffb00e4f3ed1f5b7bb1df72f20f3f121
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34586047"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890071"
 ---
 # <a name="r-libraries-and-r-data-types"></a>Bibliotecas de R y tipos de datos de R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En este tema se describe las bibliotecas de R que se incluyen y los tipos de datos que se admiten en los siguientes productos:
+En este artículo se describe los tipos de datos que se admiten en los siguientes productos y de las bibliotecas de R que se incluyen:
 
 + SQL Server 2016 R Services (In-Database)
-+ Equipo con SQL Server (en bases de datos) de servicios de aprendizaje
++ SQL Server Machine Learning Services (en bases de datos)
 
-Este tema también enumeran los tipos de datos no admitidos y tipo de datos de listas de las conversiones que pueden realizarse de forma implícita cuando se pasan los datos entre R y SQL Server.
+Este artículo también enumeran los tipos de datos no admitido, y se enumeran las conversiones que pueden realizarse de forma implícita cuando se pasan datos entre R y SQL Server de tipo de datos.
 
 ## <a name="r-libraries"></a>Bibliotecas de R
 
-Ambos productos, servicios de R y servicios de aprendizaje de máquina con R, se alinean con versiones específicas de Microsoft R Open. Por ejemplo, la versión más reciente, servicios de aprendizaje de máquina de 2017 de SQL Server, se crea en Microsoft R Open 3.3.3.
+Ambos productos, servicios de R y Machine Learning Services con R, se alinean con las versiones específicas de Microsoft R Open. Por ejemplo, la última versión de SQL Server 2017 Machine Learning Services se integra en Microsoft R Open 3.3.3.
 
-Para ver la versión de R asociada con una instancia concreta de SQL Server, abra RGui.
+Para ver la versión de R asociada a una determinada instancia de SQL Server, abra RGui.
 
 1. Para la instancia predeterminada, la ruta de acceso sería como sigue: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
-2. Se muestra un mensaje que muestra la distribución de R y el número de versión de Microsoft R Open.
+2. Se muestra un mensaje que se muestra la distribución de R y el número de versión de Microsoft R Open.
 
-Para obtener la versión de R incluido en una versión concreta de Microsoft R Server, consulte [R Server - What's New](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages).
+Para buscar la versión de R incluida en una versión determinada de Microsoft R Server, vea [R Server - What ' s New](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages).
 
-Tenga en cuenta que el sistema de administración de paquetes en SQL Server, significa que se pueden instalar varias versiones de un paquete de R en el mismo equipo, con varios usuarios compartir el mismo paquete o con versiones diferentes del mismo paquete. Para obtener más información, consulte [administración de paquetes de R en SQL Server](../r/install-additional-r-packages-on-sql-server.md).
+Tenga en cuenta que el sistema de administración de paquetes en SQL Server significa que se pueden instalar varias versiones de un paquete de R en el mismo equipo, con varios usuarios compartir el mismo paquete, o con versiones diferentes del mismo paquete. Para obtener más información, consulte [administración de paquetes de R en SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
 ## <a name="r-and-sql-data-types"></a>Tipos de datos SQL y R
 
-Mientras que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite varios tipos de datos de doce, R tiene un número limitado de tipos de datos escalares (numérico, entero, complejo, lógico, carácter, fecha y hora y sin formato). Como resultado, cada vez que usa los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en scripts de R, datos pueden convertirse implícitamente a un tipo de datos compatible. Sin embargo, a menudo una conversión exacta no se puede realizar automáticamente y se devuelve un error, como "Tipo de datos SQL no controlada".
+Mientras que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite varios tipos de datos de las primeras, R tiene un número limitado de tipos de datos escalares (numérico, entero, complejo, lógico, carácter, fecha y hora y sin formato). Como resultado, siempre que use datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en scripts de R, datos pueden convertirse implícitamente a un tipo de datos compatible. Sin embargo, a menudo una conversión exacta no puede realizarse automáticamente y se devuelve un error, como "Tipo de datos SQL no controlado".
 
-Esta sección enumeran las conversiones implícitas que se proporcionan y se enumeran los tipos de datos no admitido. Se proporciona alguna orientación para asignar tipos de datos entre R y SQL Server.
+Esta sección enumeran las conversiones implícitas que se proporcionan y se enumeran los tipos de datos no admitido. Se proporciona orientación para asignar los tipos de datos entre R y SQL Server.
 
 ## <a name="implicit-data-type-conversions-between-r-and-sql-server"></a>Conversiones implícitas de tipos de datos entre R y SQL Server
 
@@ -75,7 +75,7 @@ En la tabla siguiente se muestran los cambios que se producen en los tipos de da
 
 De las categorías de tipos de datos compatibles con el [sistema de tipos de SQL Server](../../t-sql/data-types/data-types-transact-sql.md), es probable que los siguientes tipos planteen problemas al pasarlos a código de R:
 
-+ Tipos de datos enumerados en el **otros** sección del tema de sistema de tipo SQL: **cursor**, **timestamp**, **hierarchyid**,  **uniqueidentifier**, **sql_variant**, **xml**, **tabla**
++ Tipos de datos que aparecen en la **otros** sección del artículo de sistema de tipo SQL: **cursor**, **timestamp**, **hierarchyid**,  **uniqueidentifier**, **sql_variant**, **xml**, **tabla**
 + Todos los tipos espaciales
 + **imagen**
 
@@ -102,7 +102,7 @@ Para obtener más información, vea [Mejoras de SQL Server 2016 en el control de
 
 En general, siempre que tenga alguna duda sobre cómo se usa en R un tipo o una estructura de datos en concreto, use la función  `str()` para obtener la estructura interna y el tipo del objeto de R. El resultado de la función se imprime en la consola de R y también está disponible en los resultados de la consulta, en la pestaña **Mensajes** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. 
 
-Al recuperar datos de una base de datos para su uso en código de R, debe eliminar siempre las columnas que no se puedan usar en R, así como las columnas que no sean útiles para el análisis, como GUID (uniqueidentifier), marcas de tiempo y otras columnas que se usan en auditoría, o información de linaje creada con procesos de ETL. 
+Al recuperar datos de una base de datos para su uso en código de R, siempre debe eliminar las columnas que no pueden usarse en R, así como las columnas que no son útiles para análisis, como GUID (uniqueidentifier), marcas de tiempo y otras columnas que se utiliza para la auditoría, o linaje información creada por los procesos ETL. 
 
 Tenga en cuenta que la inclusión de columnas innecesarias puede reducir considerablemente el rendimiento del código de R, especialmente si se usan columnas de alta cardinalidad como factores. Por consiguiente, se recomienda usar vistas de información y procedimientos almacenados del sistema de SQL Server para obtener de antemano los tipos de datos de una tabla determinada y eliminar o convertir las columnas incompatibles. Para obtener más información, vea [Vistas de esquema de información del sistema (Transact-SQL)](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 
@@ -190,4 +190,3 @@ sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 
 ## <a name="see-also"></a>Vea también
 
-[Tipos de datos y las bibliotecas de Python](../python/python-libraries-and-data-types.md)

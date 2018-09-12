@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 71a3843d61edf9f8764b421e18a89f0bafee079b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b4a92709ffa102839c262a4909cd3bd46996f7cf
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149076"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888771"
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>Compatibilidad con FOR XML para varios tipos de datos de SQL Server
   En los temas de esta sección se describe la compatibilidad de los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]con FOR XML.  

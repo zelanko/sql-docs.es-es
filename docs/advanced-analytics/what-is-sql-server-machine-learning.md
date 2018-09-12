@@ -1,26 +1,26 @@
 ---
-title: Machine Learning Services en SQL Server | Microsoft Docs
-description: Soporte técnico de introducción de introducción a servicios de SQL Server 2017 Machine Learning, R y Python para realizar análisis en bases de datos
+title: R y Python de Machine Learning Services en SQL Server | Microsoft Docs
+description: R en SQL Server y Python en SQL Server, la integración con datos relacionales para ciencia de datos y modelado estadístico, modelos de aprendizaje automático, análisis predictivo, visualización de datos y mucho más.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/27/2018
+ms.date: 09/10/2018
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6f29867351f0fa19817c7f39cbcca5da96a7e862
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: cf67348b703677035435e54c323334478a1dfdf4
+ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240193"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44343120"
 ---
-# <a name="machine-learning-services-in-sql-server-2017"></a>Machine Learning Services en SQL Server 2017
+# <a name="machine-learning-services-r-python-in-sql-server-2017"></a>Machine Learning Services (R, Python) en SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2017 Machine Learning Services es un complemento a una instancia del motor de base de datos, utilizado para ejecutar código R y Python en SQL Server. Código se ejecuta en un marco de extensibilidad, aislada de los procesos del motor principal, pero totalmente disponible para datos relacionales como procedimientos almacenados, como script de Transact-SQL que contiene instrucciones de R o Python o como código de R o Python con T-SQL. 
 
-Si anteriormente utilizó SQL Server 2016 R Services, Machine Learning Services en SQL Server 2017 es la próxima generación de soporte técnico de R, con las versiones actualizadas de R base, RevoScaleR, MicrosoftML y otras bibliotecas que se incorporaron en 2016.
+Si usó anteriormente [SQL Server 2016 R Services](r/sql-server-r-services.md), Machine Learning Services en SQL Server 2017 es la próxima generación de soporte técnico de R, con las versiones actualizadas de base R, RevoScaleR, MicrosoftML, y otras bibliotecas incorporaron en 2016.
 
 La propuesta de valor de clave de Machine Learning Services es la potencia de su empresa R y paquetes de Python para ofrecer análisis avanzado a escala y la capacidad de poner los cálculos y procesamiento de donde residen los datos, lo que elimina la necesidad de extraer los datos a través de la red.
 
@@ -44,6 +44,8 @@ SQL Server 2017 admite R y Python. En la tabla siguiente se describe los compone
 ## <a name="using-sql-mls"></a>Uso de SQL MLS
 
 Los programadores y analistas suelen tengan código que se ejecutan en una instancia de SQL Server local. Adición de Machine Learning Services y habilitar la ejecución de scripts externos, ofrece la posibilidad de ejecutar código R y Python en modalidades de SQL Server: ajuste el script en los procedimientos almacenados, almacenar modelos en una tabla de SQL Server o combinación de funciones de R o Python y T-SQL en las consultas.
+
+Ejecución del script está dentro de los límites del modelo de seguridad de datos: los permisos en la base de datos relacional son la base de acceso a datos en la secuencia de comandos. Un usuario que ejecuta el script de R o Python no debe ser capaz de utilizar los datos que no se pudieran tener acceso a dicho usuario en una consulta SQL. Necesita permisos de escritura y lectura de la base de datos estándar, además de un permiso adicional para ejecutar scripts externos. Modelos y el código que se escribe para datos relacionales son ajustados en procedimientos almacenados, serializar a un formato binario y almacenan en una tabla o cargados desde el disco si serializa la secuencia de bytes sin procesar en un archivo.
 
 El enfoque más común para realizar análisis en bases de datos es usar [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), pasando el script de R o Python como un parámetro de entrada.
 

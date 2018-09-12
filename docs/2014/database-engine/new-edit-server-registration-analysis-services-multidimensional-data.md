@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 28
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e006cbe7729d35a34bf8f652c7560a66a39e0ad8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e542f2498ef035cb35f4a12f4dfe3a845bcd8cae
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184802"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820811"
 ---
 # <a name="new-or-edit-server-registration-general-tab-analysis-services---multidimensional-data"></a>Nuevo o Editar propiedades de registro de servidor (pestaña General) (Analysis Services - Datos multidimensionales)
   Utilice esta pestaña para especificar opciones cuando registre una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  

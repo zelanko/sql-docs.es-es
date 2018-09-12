@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4591615a01d43d0fe2aa6f734f854a24119187d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ad20ad3800da311b078fc332bd919819485973c
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181182"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820601"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>Crear un diagrama de base de datos nuevo (Visual Database Tools)
   Puede utilizar el Explorador de objetos para crear nuevos diagramas de base de datos. Estos diagramas muestran gráficamente la estructura de la base de datos. Mediante el uso de diagramas de base de datos puede crear y modificar tablas, columnas, relaciones y claves. Además, puede modificar índices y restricciones.  

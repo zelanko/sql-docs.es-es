@@ -1,7 +1,7 @@
 ---
 title: Agente de instantáneas de replicación | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 09/07/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
@@ -19,12 +19,12 @@ caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1fce4a187ffb9887cf56d2ef621cb753ededc833
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 699fc162d167bf22695d6eb1d7e5b1ede5704d12
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190175"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311695"
 ---
 # <a name="replication-snapshot-agent"></a>Agente de instantáneas de replicación
   El Agente de instantáneas de replicación es un archivo ejecutable que prepara archivos de instantáneas que contienen el esquema y los datos de las tablas y objetos de base de datos publicados, almacena los archivos en la carpeta de instantáneas y registra los trabajos de sincronización en la base de datos de distribución.  
@@ -62,7 +62,8 @@ ms.locfileid: "37190175"
 [-MaxNetworkOptimization [0|1]]  
 [-Outputoutput_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2] ]  
-[-PacketSizepacket_size]  
+[-PacketSizepacket_size]
+[-PrefetchTables [0|1] ]  
 [-ProfileNameprofile_name]  
 [-PublisherDBpublisher_database]  
 [-PublisherDeadlockPriority [-1|0|1] ]  
@@ -194,6 +195,14 @@ ms.locfileid: "37190175"
 |**0**|Solo se imprimen los mensajes de error.|  
 |**1** (predeterminado)|Se imprimen todos los mensajes de informe de progreso (predeterminado).|  
 |**2**|Se imprimen todos los mensajes de error y mensajes del informe de progreso, la información útil para depurar.|  
+
+ **-PrefetchTables** [ **0**| **1**]  
+ Parámetro opcional que especifica si se realiza la captura previa y almacenar en caché los objetos de tabla.  El comportamiento predeterminado es que se precarga determinadas propiedades de tabla mediante el componente SMO basado en un cálculo interno.  Este parámetro puede ser útil en escenarios donde SMO captura previa operación tarda mucho ya para ejecutar. Si no se usa este parámetro, esta decisión se realiza en tiempo de ejecución según el porcentaje de las tablas que se agregan como artículos a la publicación.  
+  
+|Valor OutputVerboseLevel|Descripción|  
+|------------------------------|-----------------|  
+|**0**|Llame al método de captura previa del componente SMO está deshabilitada.|  
+|**1**|Agente de instantáneas llamará al método de captura previa para almacenar en caché algunas propiedades de tabla mediante SMO|  
   
  **-PacketSize** *packet_size*  
  Es el tamaño del paquete (en bytes) que usa el Agente de instantáneas al conectar a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El valor predeterminado es 8192 bytes.  

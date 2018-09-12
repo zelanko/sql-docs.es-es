@@ -1,7 +1,7 @@
 ---
 title: Sys.Servers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-catalog-views
@@ -25,25 +25,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e8c70890bf8571621cd82aaab7e3d2796eb3bb0e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: f192a8ba5a7ae18287c13c8c58c6a54f27d14778
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038818"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171757"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Contiene una fila por cada servidor vinculado o remoto registrado y una fila para el servidor local que tenga **server_id** = 0.  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]  
-  
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Id. local del servidor vinculado.|  
-|**Nombre**|**sysname**|Cuando **server_id** = 0, este es el nombre de servidor.<br /><br /> Cuando **server_id** > 0, este es el nombre local del servidor vinculado.|  
-|**product**|**sysname**|Nombre de producto del servidor vinculado. "SQL Server" indica que ésta es otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Nombre**|**sysname**|Cuando **server_id** = 0, el valor devuelto es el nombre del servidor.<br /><br /> Cuando **server_id** > 0, el valor devuelto es el nombre local del servidor vinculado.|  
+|**product**|**sysname**|Nombre de producto del servidor vinculado. Un valor de "SQL Server" indica que otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Proveedor**|**sysname**|Nombre del proveedor OLE DB para la conexión con el servidor vinculado.|  
 |**data_source**|**nvarchar(4000)**|Propiedad de conexión del origen de datos OLE DB.|  
 |**Ubicación**|**nvarchar(4000)**|Propiedad de conexión de la ubicación OLE DB. Es NULL si no hay ninguna.|  
@@ -72,13 +70,12 @@ ms.locfileid: "43038818"
   
  No se requieren permisos para ver el servidor local (**server_id** = 0).  
   
- Cuando se crea un servidor vinculado o remoto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea una asignación de inicio de sesión predeterminada para el **pública** rol de servidor. Esto significa que, de forma predeterminada, todos los inicios de sesión pueden ver todos los servidores vinculados y remotos. Para restringir la visibilidad a estos servidores, quite la asignación de inicio de sesión predeterminada ejecutando [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) y especificar NULL para el *locallogin* parámetro.  
+ Cuando se crea un servidor vinculado o remoto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea una asignación de inicio de sesión predeterminada para el **pública** rol de servidor. Asignación de inicio de sesión predeterminada significa que todos los inicios de sesión pueden ver todos los servidores vinculados y remotos. Para restringir la visibilidad a estos servidores, quite la asignación de inicio de sesión predeterminada ejecutando [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) y especificar NULL para el *locallogin* parámetro.  
   
- Si se elimina la asignación de inicio de sesión predeterminada, solo los usuarios que se hayan agregado de forma explícita como un inicio de sesión vinculado o remoto podrán ver los servidores vinculados o remotos para los que tienen un inicio de sesión. Para ver todos los servidores vinculados y remotos después de eliminar la asignación de inicio de sesión predeterminada se requieren los permisos siguientes:  
+ Si se elimina la asignación de inicio de sesión predeterminada, solo los usuarios que se hayan agregado de forma explícita como un inicio de sesión vinculado o remoto podrán ver los servidores vinculados o remotos para los que tienen un inicio de sesión.  Los siguientes permisos son necesarios para ver todos los servidores vinculados y remotos después de la asignación de inicio de sesión predeterminada:  
   
--   ALTER ANY LINKED SERVER o ALTER ANY LOGIN ON SERVER  
-  
--   Pertenencia a la **setupadmin** o **sysadmin** roles fijos de servidor  
+- `ALTER ANY LINKED SERVER` o `ALTER ANY LOGIN ON SERVER`  
+- Pertenencia a la **setupadmin** o **sysadmin** roles fijos de servidor  
   
 ## <a name="see-also"></a>Vea también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

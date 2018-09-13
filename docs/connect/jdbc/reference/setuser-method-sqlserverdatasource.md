@@ -1,5 +1,5 @@
 ---
-title: Método setUser (SQLServerDataSource) | Documentos de Microsoft
+title: Método setUser (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b6bf6d311e318dd9f233de2f698ad1d7892714e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b6f50e60bfbf13a92ffb2cbcbd1a4920236427e9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845060"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785174"
 ---
 # <a name="setuser-method-sqlserverdatasource"></a>Método setUser (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,12 +41,12 @@ public void setUser(java.lang.String user)
 #### <a name="parameters"></a>Parámetros  
  *user*  
   
- A **cadena** que contiene el nombre de usuario.  
+ Objeto **String** que contiene el nombre del usuario.  
   
-## <a name="remarks"></a>Comentarios  
- El método setUser establece el nombre de usuario que se usarán para conectarse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Si no se establece un valor de nombre de usuario, el [getUser](../../../connect/jdbc/reference/getuser-method-sqlserverdatasource.md) método devuelve el valor predeterminado es null.  
+## <a name="remarks"></a>Notas  
+ El método setUser establece el nombre de usuario que se utilizará para conectar a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si no se establece un valor de nombre de usuario, el método [getUser](../../../connect/jdbc/reference/getuser-method-sqlserverdatasource.md) devuelve el valor predeterminado o NULL.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Clase SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

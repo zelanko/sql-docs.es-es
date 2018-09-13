@@ -1,5 +1,5 @@
 ---
-title: Método getDateTimeOffset (int) | Documentos de Microsoft
+title: Método getDateTimeOffset (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 133bafcb02c1a9ae7fbff4a037eeb038e751b426
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ae4ee709427107ed33db06f15e4b43952e0e027c
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834290"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784451"
 ---
 # <a name="getdatetimeoffset-method-int"></a>Método getDateTimeOffset (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Este método se agregó en [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] controlador JDBC 3.0.  
+  Este método se agregó en [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0.  
   
- Recupera el valor del parámetro designado como un [clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) objeto en el lenguaje según el índice de parámetro de programación Java.  
+ Recupera el valor del parámetro designado como un objeto [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) en el lenguaje de programación Java según el índice de parámetro.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,17 +41,17 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(int index)
  El ordinal del parámetro que se basa en uno.  
   
 ## <a name="return-value"></a>Valor devuelto  
- A [clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) objeto.  
+ Un [clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) objeto.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Puede establecer un [clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) valor de parámetro con [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Método getDateTimeOffset &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)   
- [Miembros de SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+ [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

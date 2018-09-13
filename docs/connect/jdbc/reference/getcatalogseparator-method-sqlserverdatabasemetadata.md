@@ -1,5 +1,5 @@
 ---
-title: Método getCatalogSeparator (SQLServerDatabaseMetaData) | Documentos de Microsoft
+title: Método getCatalogSeparator (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e03c787a5153420b4ba1171f6d0f1bc2f95137cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1a8587c005186cb9806e35eec66d0ed571f372c1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831910"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784124"
 ---
 # <a name="getcatalogseparator-method-sqlserverdatabasemetadata"></a>Método getCatalogSeparator (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera el **cadena** que esta base de datos se utiliza como separador entre un nombre de catálogo y de tabla.  
+  Recupera el objeto **String** que esta base de datos emplea como separador entre un nombre de catálogo y de tabla.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,19 +39,19 @@ public java.lang.String getCatalogSeparator()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- A **cadena** que contiene el separador del catálogo.  
+ Objeto **String** que contiene el separador del catálogo.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método getCatalogSeparator especificado por el método getCatalogSeparator en la interfaz java.sql.DatabaseMetaData.  
   
- Cuando se usa el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] con un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de datos, este método devuelve un punto (".") como separador del catálogo.  
+ Cuando el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] se usa con una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], este método devuelve un punto (".") como separador del catálogo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
- [Miembros de SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
+ [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   

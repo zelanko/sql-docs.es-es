@@ -1,5 +1,5 @@
 ---
-title: Método getServerName (SQLServerDataSource) | Documentos de Microsoft
+title: Método getServerName (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd2d58a2c47553fee1d5c8d4cf9355998078e4d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8e709a5adc084c316733333a9012beee3fd77ef4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838662"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787280"
 ---
 # <a name="getservername-method-sqlserverdatasource"></a>Método getServerName (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Devuelve el nombre de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] instancia.  
+  Devuelve el nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,12 +39,12 @@ public java.lang.String getServerName()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- A **cadena** que contiene el nombre del servidor o null si se establece ningún valor.  
+ Objeto **String** que contiene el nombre del servidor o el valor NULL si no se establece ningún valor.  
   
-## <a name="remarks"></a>Comentarios  
- El nombre del servidor es el nombre de host del equipo de destino que se está ejecutando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Si no se establece la propiedad getServerName, getServerName, devuelve el valor predeterminado es null.  
+## <a name="remarks"></a>Notas  
+ El nombre del servidor es el nombre de host del equipo de destino que ejecuta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si no se establece la propiedad getServerName, getServerName devuelve el valor predeterminado, que es NULL.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Clase SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

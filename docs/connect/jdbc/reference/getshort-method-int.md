@@ -1,5 +1,5 @@
 ---
-title: Método getShort (int) | Documentos de Microsoft
+title: Método getShort (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8cc0ad913aec89782beeba1e962d329df2302574
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 020c8982879a02c8c4d3803b0902654c6d6a227f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839190"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786546"
 ---
 # <a name="getshort-method-int"></a>Método getShort (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera el valor del parámetro designado como un **breve** en el lenguaje según el índice de parámetro de programación Java.  
+  Recupera el valor del parámetro designado como un objeto **short** en el lenguaje de programación Java según el índice de parámetro.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,22 +41,22 @@ public short getShort(int index)
 #### <a name="parameters"></a>Parámetros  
  *index*  
   
- Un **int** que indica el índice del parámetro.  
+ Un valor **int** que indica el índice del parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- A **corto** valor.  
+ Un **corto** valor.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método getShort especificado por el método getShort en la interfaz java.sql.CallableStatement.  
   
- Este método solo se admite en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipos de datos que pueden devolver de forma segura un valor entero como **smallint**, **tinyint**, y **bits**. Si se utiliza este método en cualquier otro tipo de datos, provocará una excepción.  
+ Este método solamente se admite en los tipos de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que pueden devolver de forma segura un valor entero como **smallint**, **tinyint** y **bit**. Si se utiliza este método en cualquier otro tipo de datos, provocará una excepción.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Método getShort &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getshort-method-sqlservercallablestatement.md)   
- [Miembros de SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+ [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

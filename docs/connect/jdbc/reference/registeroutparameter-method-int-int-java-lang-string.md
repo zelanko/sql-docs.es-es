@@ -1,5 +1,5 @@
 ---
-title: Método registerOutParameter (int, int, java.lang.String) | Documentos de Microsoft
+title: Método registerOutParameter (int, int, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d74a1e0d0ec8a295792ac71946d46fb673b5082
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f3bdd39fc2965e701d8b332e70fad7261f253d9b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843800"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787071"
 ---
 # <a name="registeroutparameter-method-int-int-javalangstring"></a>Método registerOutParameter (int, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,29 +43,29 @@ public void registerOutParameter(int index,
 #### <a name="parameters"></a>Parámetros  
  *index*  
   
- Un **int** que indica la posición ordinal del parámetro.  
+ Valor **int** que indica la posición ordinal del parámetro.  
   
- *SQLtype*  
+ *sqlType*  
   
  Un código de tipo JDBC tal como se define en java.sql.Types.  
   
- *TypeName*  
+ *typeName*  
   
- A **cadena** que contiene el nombre de tipo completo de SQL.  
+ Objeto **String** que contiene el nombre del tipo SQL completo.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método registerOutParameter especificado por el método registerOutParameter de la interfaz java.sql.CallableStatement.  
   
- A partir de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] controlador JDBC 3.0, cuando *sqlType* es de tipo java.sql.Types.TIME, se modifica el comportamiento de este método mediante el **sendTimeAsDatetime** propiedad de conexión ([Estableciendo las propiedades de conexión](../../../connect/jdbc/setting-the-connection-properties.md)) y [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ A partir [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador JDBC 3.0, cuando *sqlType* es de tipo java.sql.Types.TIME, se modifica el comportamiento de este método mediante el **sendTimeAsDatetime** propiedad de conexión ([Estableciendo las propiedades de conexión](../../../connect/jdbc/setting-the-connection-properties.md)) y [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- Para obtener más información, consulte [java.sql.Time cómo configurar los valores se envían al servidor](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
+ Para más información, vea [Configurar el modo en que los valores java.sql.Time se envían al servidor](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Método registerOutParameter &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   
- [Miembros de SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+ [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Características internacionales del controlador JDBC | Documentos de Microsoft
+title: Características internacionales del controlador JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,28 +14,28 @@ caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1fd4eb01d7ab8aa2314dfb8f45e0bd08c3b49488
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 6de0bde02cf07d80195f5419f690a06d435bbbcc
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832880"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787457"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Características internacionales del controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Las características de internacionalización de la [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] incluyen lo siguiente:  
+  Entre las características de internacionalización del [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] se incluyen las siguientes:  
   
--   Compatibilidad para una experiencia totalmente localizada en los mismos idiomas que [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   Compatibilidad con el trabajo en los mismos idiomas que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   Compatibilidad con las conversiones de idioma de Java para la configuración regional confidencial [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] datos  
+-   Compatibilidad con las conversiones de idioma de Java para datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en los que el idioma sea importante  
   
 -   Compatibilidad con idiomas internacionales, independientemente del sistema operativo  
   
 -   Compatibilidad con nombres de dominio internacionales (a partir de Microsoft JDBC Driver 6.0 para SQL Server)  
   
 ## <a name="handling-of-character-data"></a>Tratamiento de datos de caracteres  
- Datos de caracteres en Java se tratan como Unicode de forma predeterminada; el Java **cadena** objeto representa datos de caracteres Unicode. En el controlador JDBC, la única excepción a esta regla son los métodos establecedor y captador de flujos ASCII, que son casos especiales porque usan flujos de bytes con la presunción implícita de páginas de códigos únicas conocidas (ASCII).  
+ Los datos de caracteres en Java se tratan de forma predeterminada como Unicode, el objeto **String** de Java representa datos de caracteres Unicode. En el controlador JDBC, la única excepción a esta regla son los métodos establecedor y captador de flujos ASCII, que son casos especiales porque usan flujos de bytes con la presunción implícita de páginas de códigos únicas conocidas (ASCII).  
   
  Además, el controlador JDBC proporciona la **sendStringParametersAsUnicode** propiedad cadena de conexión. Esta propiedad se puede usar para especificar que los parámetros preparados para los datos de caracteres se envíen como ASCII o juego de caracteres multibyte (MBCS) en lugar de Unicode. Para obtener más información sobre la **sendStringParametersAsUnicode** propiedad de cadena de conexión, consulte [estableciendo las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).  
   
@@ -45,28 +45,28 @@ ms.locfileid: "32832880"
  Si la JVM no posee la compatibilidad adecuada de la página de códigos para los datos de la base de datos, el controlador JDBC lanza la excepción "la página de códigos XXX no es compatible con el entorno Java". Para solucionar este problema, debería instalar la compatibilidad completa con caracteres internacionales necesaria para esa JVM. Como ejemplo, vea la documentación relativa a las codificaciones compatibles (Supported Encodings) en el sitio web de Sun Microsystems.  
   
 ### <a name="driver-outgoing-conversions"></a>Conversiones salientes del controlador  
- Los datos de caracteres que vayan desde el controlador hasta el servidor pueden ser ASCII o Unicode. Por ejemplo, los nuevos JDBC 4.0 caracteres no nacionales métodos, como métodos setNString, setNCharacterStream y setNClob de [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) y [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) clases, Enviar siempre sus valores de parámetro para el servidor de Unicode.  
+ Los datos de caracteres que vayan desde el controlador hasta el servidor pueden ser ASCII o Unicode. Por ejemplo, los nuevos métodos de caracteres nacionales de JDBC 4.0 (como los métodos setNString, setNCharacterStream y setNClob de las clases [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) y [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)) siempre envían sus valores de parámetro al servidor en formato Unicode.  
   
- Por otro lado, los métodos de API de caracteres no nacionales, como métodos setString y setCharacterStream, setClob de [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) y [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) clases enviar sus valores para el servidor de Unicode solamente cuando el **sendStringParametersAsUnicode** propiedad se establece en "true", que es el valor predeterminado.  
+ Por otra parte, los métodos API de caracteres no nacionales (como los métodos setString, setCharacterStream y setClob de las clases [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) y [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)) envían sus valores al servidor de Unicode solamente cuando la propiedad **sendStringParametersAsUnicode** está establecida en "true", que es el valor predeterminado.  
   
 ## <a name="non-unicode-parameters"></a>Parámetros que no son Unicode  
- Para obtener un rendimiento óptimo con **CHAR**, **VARCHAR** o **LONGVARCHAR** tipo de parámetros no es Unicode, establezca la **sendStringParametersAsUnicode** conexión propiedad en "false" de la cadena y utilizar los métodos de caracteres nacionales.  
+ Para obtener un rendimiento óptimo con **CHAR**, **VARCHAR** o **LONGVARCHAR** del tipo de parámetros que no son Unicode, establezca el **sendStringParametersAsUnicode** conexión propiedad string que "false" y usar los métodos de caracteres nacionales.  
   
 ## <a name="formatting-issues"></a>Problemas de formato  
- Para fecha, hora y divisas, todo el formato con datos localizados se realiza en el nivel de lenguaje Java mediante el objeto de configuración regional; y los diversos métodos de formato para **fecha**, **calendario**, y **número** tipos de datos. En el caso excepcional en el que el controlador JDBC debe pasar datos para los que el idioma sea importante en un formato localizado, se utiliza el formateador correspondiente con la configuración regional predeterminada de la JVM.  
+ En cuanto a la fecha, la hora y las divisas, el formato con datos localizados se aplica en el nivel de lenguaje Java empleando el objeto Locale y los diversos métodos de formato correspondientes a los tipos de datos **Date**, **Calendar** y **Number**. En el caso excepcional en el que el controlador JDBC debe pasar datos para los que el idioma sea importante en un formato localizado, se utiliza el formateador correspondiente con la configuración regional predeterminada de la JVM.  
   
 ## <a name="collation-support"></a>Compatibilidad con intercalación  
- El controlador JDBC 3.0 admite todas las intercalaciones compatibles con [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]y las nuevas intercalaciones o nuevas versiones de Windows, los nombres de intercalación que se introducen en [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)].  
+ El controlador JDBC 3.0 admite todas las intercalaciones compatibles con [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] y [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], así como las nuevas intercalaciones o nuevas versiones de los nombres de intercalación de Windows que se incluyeron en [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)].  
   
- Para obtener más información acerca de las intercalaciones, vea [Collation and Unicode Support](http://go.microsoft.com/fwlink/?LinkId=131366) y [nombre de intercalación de Windows (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=131367) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] libros en pantalla.  
+ Para más información sobre las intercalaciones, vea [Compatibilidad con la intercalación y Unicode](http://go.microsoft.com/fwlink/?LinkId=131366) y [Nombre de intercalación de Windows (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=131367) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="using-international-domain-names-idn"></a>Usar nombres de dominio internacionales (IDN)  
- El controlador JDBC 6.0 para SQL Server admite el uso de nombres de dominio internacionalizados (IDN) y puede convertir un nombre de servidor de Unicode en codificación compatible con ASCII (Punycode) cuando sea necesario durante una conexión.  Si los IDN se almacenan en el sistema de nombres de dominio (DNS) como cadenas ASCII en el formato Punycode (especificado por RFC 3490), habilite la conversión del nombre de servidor Unicode al establecer la propiedad serverNameAsACE en true.  De lo contrario, si el servicio DNS está configurado para permitir el uso de caracteres Unicode, establezca la propiedad serverNameAsACE en false (valor predeterminado).  Para versiones anteriores del controlador JDBC, también es posible convertir el valor de serverName en Punycode mediante [IDN.toASCII de Java](http://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) métodos antes de establecer la propiedad para una conexión.  
+ JDBC Driver 6.0 para SQL Server admite el uso de nombres de dominio internacionalizados (IDN) y puede convertir un nombre de servidor Unicode en codificación compatible con ASCII (Punycode) cuando sea necesario durante una conexión.  Si los IDN se almacenan en el sistema de nombres de dominio (DNS) como cadenas ASCII en el formato Punycode (especificado por RFC 3490), habilite la conversión del nombre de servidor Unicode al establecer la propiedad serverNameAsACE en true.  De lo contrario, si el servicio DNS está configurado para permitir el uso de caracteres Unicode, establezca la propiedad serverNameAsACE en false (valor predeterminado).  En versiones anteriores del controlador JDBC, también es posible convertir el valor de serverName en Punycode mediante los métodos [IDN.toASCII de Java](http://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) antes de establecer la propiedad de una conexión.  
   
 > [!NOTE]  
->  La mayoría del software de resolver escrito para plataformas distintas de Windows se basa en los estándares DNS de Internet y, por tanto, es probable que use el formato Punycode para los IDN, mientras que un servidor de DNS basado en Windows en una red privada se puede configurar para permitir el uso de caracteres UTF-8 según el servidor.  Para obtener más información, consulte [compatibilidad con caracteres Unicode](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx).  
+>  La mayoría del software de resolver escrito para plataformas distintas de Windows se basa en los estándares DNS de Internet y, por tanto, es probable que use el formato Punycode para los IDN, mientras que un servidor de DNS basado en Windows en una red privada se puede configurar para permitir el uso de caracteres UTF-8 según el servidor.  Para más información, vea [Compatibilidad con caracteres Unicode](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Método getTimestamp (java.lang.String) (SQLServerResultSet) | Documentos de Microsoft
+title: Método getTimestamp (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f109d4c5e7a5d816e728d6e39ecd6a10d2fa2c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 714689555d35e8745c1779e6dcbaaa5414948c9b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839120"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786185"
 ---
 # <a name="gettimestamp-method-javalangstring-sqlserverresultset"></a>Método getTimestamp (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera el valor del nombre de columna designado en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un objeto java.sql.Timestamp en el lenguaje de programación Java.  
+  Recupera el valor del nombre de la columna designado en la fila actual de este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como un objeto java.sql.Timestamp en el lenguaje de programación Java.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,7 +41,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String columnName)
 #### <a name="parameters"></a>Parámetros  
  *columnName*  
   
- A **cadena** que contiene el nombre de columna.  
+ Valor **String** que contiene el nombre de columna.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Un objeto de la marca de tiempo.  
@@ -49,13 +49,13 @@ public java.sql.Timestamp getTimestamp(java.lang.String columnName)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
- Este método getTimestamp es especificado por el método getTimestamp en la interfaz java.sql.ResultSet.  
+## <a name="remarks"></a>Notas  
+ Este método getTimestamp especificado por el método getTimestamp en la interfaz java.sql.ResultSet.  
   
- Este método devuelve valores solo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] columnas datetime y smalldatetime.  
+ Este método solamente devuelve valores de columnas datetime y smalldatetime de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vea también  
- [Método getTimestamp &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlserverresultset.md)   
+## <a name="see-also"></a>Ver también  
+ [getTimestamp (método) &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

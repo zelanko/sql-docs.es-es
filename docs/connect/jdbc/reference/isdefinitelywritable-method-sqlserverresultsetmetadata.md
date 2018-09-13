@@ -1,5 +1,5 @@
 ---
-title: Método isDefinitelyWritable (SQLServerResultSetMetaData) | Documentos de Microsoft
+title: Método isDefinitelyWritable (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 17d20197426efa622efb0be8c8a58b7bfcd9adc7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 74d4cc4cc5f1f9032fce0b8e73c66cd01043bb86
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841120"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786009"
 ---
 # <a name="isdefinitelywritable-method-sqlserverresultsetmetadata"></a>Método isDefinitelyWritable (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,23 +41,23 @@ public boolean isDefinitelyWritable(int column)
 #### <a name="parameters"></a>Parámetros  
  *column*  
   
- Un **int** que indica el índice de columna.  
+ Valor **int** que indica el índice de la columna.  
   
 ## <a name="return-value"></a>Valor devuelto  
- **True** si la escritura en la columna será correcta. De lo contrario, se devuelve el valor **False**.  
+ **True** si la escritura de la columna será correcta. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método isDefinitelyWritable especificado por el método isDefinitelyWritable en la interfaz java.sql.ResultSetMetaData.  
   
 > [!NOTE]  
->  Cuando se usa el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] con un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de datos, este método siempre devolverá false.  
+>  Cuando se usa el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] con una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], este método devolverá siempre false.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
- [Miembros de SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
+ [Miembros SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [Clase SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
   
   

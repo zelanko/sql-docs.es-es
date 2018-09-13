@@ -1,5 +1,5 @@
 ---
-title: Controlador ODBC en Linux y macOS - alta disponibilidad y recuperación ante desastres | Documentos de Microsoft
+title: 'Controlador ODBC en Linux y macOS: alta disponibilidad y recuperación ante desastres | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
@@ -14,52 +14,52 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d416abb8076e4728724ff971845a9efd970cccc2
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
-ms.translationtype: MT
+ms.openlocfilehash: 810d5e7f43c97ccc99494073aefb3b26965bd0a5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34052105"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42785867"
 ---
-# <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Controlador ODBC en Linux y macOS compatibilidad con alta disponibilidad y recuperación ante desastres
+# <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Compatibilidad del controlador ODBC en Linux y macOS para alta disponibilidad y recuperación ante desastres
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Los controladores ODBC para la compatibilidad con Linux y Mac OS [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Para obtener más información acerca de [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], consulte:  
+Los controladores ODBC para compatibilidad con Linux y macOS [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Para obtener más información acerca de [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], consulte:  
   
--   [Agentes de escucha del grupo de disponibilidad, conectividad de cliente y conmutación por error de aplicación (SQL Server)](http://msdn.microsoft.com/library/hh213417.aspx)  
+-   [Agentes de escucha del grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación (SQL Server)](http://msdn.microsoft.com/library/hh213417.aspx)  
   
 -   [Creación y configuración de grupos de disponibilidad (SQL Server)](http://msdn.microsoft.com/library/ff878265.aspx)  
   
--   [Agrupación en clústeres de conmutación por error y grupos de disponibilidad AlwaysOn (SQL Server)](http://msdn.microsoft.com/library/ff929171.aspx)  
+-   [Clúster de conmutación por error y grupos de disponibilidad de AlwaysOn (SQL Server)](http://msdn.microsoft.com/library/ff929171.aspx)  
   
--   [Secundarias activas: Réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)](http://msdn.microsoft.com/library/ff878253.aspx)  
+-   [Secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)](http://msdn.microsoft.com/library/ff878253.aspx)  
   
-Puede especificar el agente de escucha del grupo de disponibilidad de un determinado grupo de disponibilidad en la cadena de conexión. Si una aplicación ODBC en Linux o Mac OS está conectada a una base de datos en un grupo de disponibilidad que conmuta por error, se pierde la conexión original y la aplicación debe abrir una conexión nueva para seguir trabajando después de la conmutación por error.
+Puede especificar el agente de escucha del grupo de disponibilidad de un determinado grupo de disponibilidad en la cadena de conexión. Si una aplicación de ODBC en Linux o macOS se conecta a una base de datos de un grupo de disponibilidad que conmuta por error, la conexión original se interrumpe y la aplicación debe abrir una nueva conexión para continuar el trabajo después de la conmutación por error.
 
-Los controladores ODBC en Linux y macOS iteración secuencialmente todas las direcciones IP asociadas con un nombre de host DNS si no se está conectando a un agente de escucha del grupo de disponibilidad y hay varias direcciones IP asociadas con el nombre de host.
+Los controladores ODBC en Linux y macOS iteración secuencialmente por todas las direcciones IP asociadas con un nombre de host DNS si no se está conectando a un agente de escucha del grupo de disponibilidad y varias direcciones IP asociadas con el nombre de host.
 
-Si la primera dirección IP devuelta del servidor DNS no es conectable, estas iteraciones pueden llevar mucho tiempo. Al conectarse a un agente de escucha del grupo de disponibilidad, el controlador intenta establecer conexiones con todas las direcciones IP en paralelo. Si un intento de conexión se realiza correctamente, el controlador descarta todos los intentos de conexión pendiente.
+Si la primera dirección devuelta IP del servidor DNS no es conectable, estas iteraciones pueden llevar mucho tiempo. Al conectarse a una escucha de grupo de disponibilidad, el controlador trata de establecer conexiones con todas las direcciones IP en paralelo. Si un intento de conexión se realiza correctamente, el controlador descarta todos los intentos de conexión pendiente.
 
 > [!NOTE]  
-> Dado que una conexión puede fallar debido a una conmutación por error del grupo de disponibilidad, implementar lógica de reintento de conexión; Vuelva a intentar una conexión con errores hasta que se vuelve a conectar. El aumento del tiempo de espera de la conexión y la implementación de la lógica de reintento de conexión aumentarán la probabilidad de establecer una conexión con un grupo de disponibilidad.
+> Dado que se puede producir un error de conexión debido a la conmutación por error de un grupo de disponibilidad, se recomienda implementar la lógica de reintento de conexión y volver a intentar realizar una conexión que no se ha podido establecer hasta que vuelva a conectarse. El aumento del tiempo de espera de la conexión y la implementación de la lógica de reintento de conexión aumentarán la probabilidad de establecer una conexión con un grupo de disponibilidad.
 
 ## <a name="connecting-with-multisubnetfailover"></a>Conectarse a MultiSubnetFailover
 
-Especifique siempre **MultiSubnetFailover = Yes** al conectarse a un [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] agente de escucha del grupo de disponibilidad o [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] instancia de clúster de conmutación por error. **MultiSubnetFailover** permite más rápida conmutación por error para todos los grupos de disponibilidad y una instancia de clúster de conmutación por error en [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. **MultiSubnetFailover** también reduce considerablemente el tiempo de conmutación por error para las topologías de AlwaysOn y de varias subredes. Durante una conmutación por error de varias subredes, el cliente intentará establecer conexiones en paralelo. Durante una conmutación por error de subred, el controlador reintentará agresivamente la conexión de TCP.
+Especifique siempre **MultiSubnetFailover=Yes** al conectarse a una escucha de grupo de disponibilidad de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] o a una instancia de clúster de conmutación por error de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. **MultiSubnetFailover** permite una conmutación por error más rápida en todos los grupos de disponibilidad y una instancia de clúster de conmutación por error de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. **MultiSubnetFailover** también reduce considerablemente el tiempo de conmutación por error en las topologías AlwaysOn de una y varias subredes. Durante una conmutación por error de varias subredes, el cliente intentará establecer conexiones en paralelo. Durante una conmutación por error de subred, el controlador de forma agresiva vuelve a intentar la conexión TCP.
 
-La propiedad de conexión **MultiSubnetFailover** indica que la aplicación se implementa en un grupo de disponibilidad o una instancia de clúster de conmutación por error. El controlador intenta conectarse a la base de datos en el servidor principal [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] direcciones de la instancia intenta conectarse a todas las direcciones IP. Cuando se conecta con **MultiSubnetFailover = Yes**, el cliente lo reintenta intentos de conexión TCP más rápidamente que los intervalos de retransmisión TCP del sistema operativo de forma predeterminada. **MultiSubnetFailover=Yes** permite una reconexión más rápida después de la conmutación por error de un grupo de disponibilidad o una instancia de clúster de conmutación por error de AlwaysOn. **MultiSubnetFailover = Yes** se aplica tanto único y múltiples subredes grupos de disponibilidad como instancias de clúster de conmutación por error.  
+La propiedad de conexión **MultiSubnetFailover** indica que la aplicación se implementa en un grupo de disponibilidad o una instancia de clúster de conmutación por error. El controlador trata de conectarse a la base de datos de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] principal tratando de conectarse a todas las direcciones IP. Al conectarse con **MultiSubnetFailover=Yes**, el cliente reintenta la conexión TCP con más rapidez que los intervalos de retransmisión TCP predeterminados del sistema operativo. **MultiSubnetFailover=Yes** permite una reconexión más rápida después de la conmutación por error de un grupo de disponibilidad o una instancia de clúster de conmutación por error de AlwaysOn. **MultiSubnetFailover=Yes** se aplica a instancias de clúster de conmutación por error y grupos de disponibilidad de una y varias subredes.  
 
-Utilice **MultiSubnetFailover=Yes** al conectarse a una instancia de clúster de conmutación por error o una escucha de grupo de disponibilidad. En caso contrario, puede verse afectado negativamente al rendimiento de su aplicación.
+Utilice **MultiSubnetFailover=Yes** al conectarse a una instancia de clúster de conmutación por error o una escucha de grupo de disponibilidad. De lo contrario, el rendimiento de la aplicación puede verse afectada adversamente.
 
-Cuando se conecta a un servidor en un grupo de disponibilidad o una instancia de clúster de conmutación por error, tenga en cuenta lo siguiente:
+Tenga en cuenta lo siguiente al conectarse a un servidor en un grupo de disponibilidad o una instancia de clúster de conmutación por error:
   
--   Especifique **MultiSubnetFailover = Yes** para mejorar el rendimiento cuando se conecta a una sola subred o el grupo de disponibilidad de múltiples subredes.
+-   Especificar **MultiSubnetFailover = Yes** para mejorar el rendimiento al conectarse a una única subred o un grupo de disponibilidad de múltiples subredes.
 
 -   Especifique el agente de escucha del grupo de disponibilidad del grupo de disponibilidad como el servidor en la cadena de conexión.
   
--   No se puede conectar a un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] una instancia configurada con más de 64 direcciones IP.
+-   No se puede conectar a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurada con más de 64 direcciones IP.
 
--   Ambos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] autenticación o la autenticación Kerberos puede usarse con **MultiSubnetFailover = Yes** sin afectar al comportamiento de la aplicación.
+-   Ambos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autenticación o la autenticación Kerberos se puede usar con **MultiSubnetFailover = Yes** sin afectar al comportamiento de la aplicación.
 
 -   Puede aumentar el valor de **loginTimeout** para tener en cuenta el tiempo de conmutación por error y reducir los reintentos de conexión de la aplicación.
 
@@ -81,11 +81,11 @@ Una conexión producirá un error si una réplica principal está configurada pa
 
 Dos palabras clave de cadena de conexión ODBC admiten [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]:  
   
--   **Intención de aplicaciones**  
+-   **ApplicationIntent**  
   
 -   **MultiSubnetFailover**  
   
-Para obtener más información sobre las palabras clave de cadena de conexión ODBC, consulte la sección [Usar palabras clave de cadena de conexión con SQL Server Native Client](http://msdn.microsoft.com/library/ms130822.aspx).  
+Para más información sobre las palabras clave de cadena de conexión ODBC, vea la sección [Usar palabras clave de cadena de conexión con SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 Los atributos de conexión equivalentes son:
   
@@ -93,16 +93,16 @@ Los atributos de conexión equivalentes son:
   
 -   **SQL_COPT_SS_MULTISUBNET_FAILOVER**  
   
-Para obtener más información acerca de los atributos de conexión ODBC, vea [SQLSetConnectAttr](http://msdn.microsoft.com/library/ms131709.aspx).  
+Para más información sobre los atributos de conexión de ODBC, vea [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
   
-Una aplicación ODBC que usa [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] puede usar uno de dos funciones para realizar la conexión:  
+Una aplicación de ODBC que usa [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] puede utilizar una de las dos funciones para realizar la conexión:  
   
-|Función|Description|  
+|Función|Descripción|  
 |------------|---------------|  
-|[Función SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** admite tanto **ApplicationIntent** y **MultiSubnetFailover** a través de un nombre de origen de datos (DSN) o el atributo de conexión.|  
-|[Función SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** admite **ApplicationIntent** y **MultiSubnetFailover** a través del atributo de conexión, palabra clave de cadena de conexión o DSN.|
+|[Función SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** admite **ApplicationIntent** y **MultiSubnetFailover** mediante un nombre de origen de datos (DSN) o un atributo de conexión.|  
+|[Función SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** admite **ApplicationIntent** y **MultiSubnetFailover** por medio de DNS, de una palabra clave de cadena de conexión o de un atributo de conexión.|
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 
 [Palabras clave de cadena de conexión y nombres de orígenes de datos (DSN)](../../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 

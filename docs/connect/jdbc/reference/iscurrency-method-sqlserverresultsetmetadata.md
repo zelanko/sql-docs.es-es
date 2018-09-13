@@ -1,5 +1,5 @@
 ---
-title: Método isCurrency (SQLServerResultSetMetaData) | Documentos de Microsoft
+title: Método isCurrency (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,11 +19,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 885e7a8f8f1e32822530b4afa414415e2b667db6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 442fe1d519820651f6a22fa601642092d87669dc
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787288"
 ---
 # <a name="iscurrency-method-sqlserverresultsetmetadata"></a>Método isCurrency (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,22 +41,22 @@ public boolean isCurrency(int column)
 #### <a name="parameters"></a>Parámetros  
  *column*  
   
- Un **int** que indica el índice de columna.  
+ Valor **int** que indica el índice de la columna.  
   
 ## <a name="return-value"></a>Valor devuelto  
- **True** si la columna es un valor monetario. De lo contrario, se devuelve el valor **False**.  
+ Es **true** si la columna es un valor de efectivo. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método isCurrency especificado por el método isCurrency en la interfaz java.sql.ResultSetMetaData.  
   
- Este método devolverá **true** sólo con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipos de datos money y smallmoney.  
+ Este método solamente devolverá **true** con tipos de datos money y smallmoney de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
- [Miembros de SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
+ [Miembros SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [Clase SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
   
   

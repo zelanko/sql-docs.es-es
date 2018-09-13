@@ -1,5 +1,5 @@
 ---
-title: Método getObject (int) | Documentos de Microsoft
+title: Método getObject (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 047cef57a08c8337a7d6229d04c3580d7df300a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a1820a697301b9b909895faae4598d877a76ff75
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836670"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784292"
 ---
 # <a name="getobject-method-int"></a>Método getObject (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,34 +41,34 @@ public java.lang.Object getObject(int index)
 #### <a name="parameters"></a>Parámetros  
  *index*  
   
- Un **int** que indica el índice del parámetro.  
+ Un valor **int** que indica el índice del parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un **objeto** valor.  
+ Valor **Object**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
- Este método getObject es especificado por el método getObject en la interfaz java.sql.CallableStatement.  
+## <a name="remarks"></a>Notas  
+ Este método getObject especificado por el método getObject en la interfaz java.sql.CallableStatement.  
   
  Este método devolverá el valor de la columna determinada como un objeto de Java. El tipo del objeto de Java será el tipo de objeto de Java predeterminado que corresponde al tipo SQL de la columna, tras la asignación para los tipos integrados que se indica en las especificaciones de JDBC. Si el valor es NULL de SQL, el controlador devuelve un NULL de Java.  
   
- Este método también se puede utilizar para leer los tipos de datos abstractos específicos de la base de datos. En JDBC 2.0, el comportamiento del método getObject se extiende para materializar datos de tipos definidos por el usuario SQL. Cuando una columna contiene un valor estructurado o distinto, el comportamiento de este método es como si fuera una llamada a `getObject(columnIndex, this.getStatement().getConnection().getTypeMap())`.  
+ Este método también se puede utilizar para leer los tipos de datos abstractos específicos de la base de datos. En JDBC 2.0, el comportamiento del método getObject se ha extendido para materializar datos de tipos de SQL definidos por el usuario. Cuando una columna contiene un valor estructurado o distinto, el comportamiento de este método es como si se llamara a `getObject(columnIndex, this.getStatement().getConnection().getTypeMap())`.  
   
- A partir de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] del controlador JDBC 3.0:  
+ A partir del controlador JDBC 3.0 de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
--   Un valor de tipo **fecha** se devolverá como un objeto java.sql.Date.  
+-   Se devolverá un valor de tipo **date** como un objeto java.sql.Date.  
   
--   Un valor de tipo **tiempo** se devolverá como un objeto java.sql.Time.  
+-   Se devolverá un valor de tipo **time** como un objeto java.sql.Time.  
   
--   Un valor de tipo **datetime2** se devolverá como un objeto java.sql.Timestamp.  
+-   Se devolverá un valor de tipo **datetime2** como un objeto java.sql.Timestamp.  
   
--   Un valor de tipo **datetimeoffset** se devolverá como un objeto microsoft.sql.DateTimeOffset.  
+-   Se devolverá un valor de tipo **datetimeoffset** como un objeto microsoft.sql.DateTimeOffset.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Método getObject &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
- [Miembros de SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+ [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

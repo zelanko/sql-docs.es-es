@@ -1,5 +1,5 @@
 ---
-title: Campo TYPE_SS_SCROLL_DYNAMIC (SQLServerResultSet) | Documentos de Microsoft
+title: Campo TYPE_SS_SCROLL_DYNAMIC (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d324e5e1cdf3ef2f2dd409f2624a2c243bce07e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2975fa2696422f6b1acf8b2382a9c42ab6c5cac8
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848230"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786738"
 ---
 # <a name="typessscrolldynamic-field-sqlserverresultset"></a>Campo TYPE_SS_SCROLL_DYNAMIC (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Se utiliza para especificar un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipo de cursor dinámico.  
+  Se utiliza para especificar un tipo de cursor dinámico de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,9 +39,9 @@ public static final int TYPE_SS_SCROLL_DYNAMIC
 ```  
   
 ## <a name="field-value"></a>Valor de campo  
- Un **int** valo 1006.  
+ Un **int** valor 1006.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

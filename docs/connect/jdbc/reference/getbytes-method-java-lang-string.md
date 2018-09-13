@@ -1,5 +1,5 @@
 ---
-title: Método getBytes (java.lang.String) | Documentos de Microsoft
+title: Método getBytes (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0bece743898f1dbdc78df7c7eec0130c65bdb278
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c97aceb39fb030a9f58371efc171cb88dafb5b66
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830080"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784453"
 ---
 # <a name="getbytes-method-javalangstring"></a>Método getBytes (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public byte[] getBytes(java.lang.String sCol)
 #### <a name="parameters"></a>Parámetros  
  *sCol*  
   
- A **cadena** que contiene el nombre del parámetro.  
+ Objeto **String** que contiene el nombre del parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Una matriz de **bytes** valores.  
@@ -49,14 +49,14 @@ public byte[] getBytes(java.lang.String sCol)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
- En una versión anterior de [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], podría utilizar SQLServerCallableStatement.getBytes para convertir valores entre las matrices de bytes y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipo de datos **fecha**, **tiempo**,  **datetime2**, o **datetimeoffset**. Ahora, al usar este método con esos tipos de datos, se producirá una excepción que indica que no se admite la conversión.  
+## <a name="remarks"></a>Notas  
+ En una versión anterior de [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], se podía usar SQLServerCallableStatement.getBytes para convertir valores entre matrices de bytes y los tipos de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **date**, **time**, **datetime2** o **datetimeoffset**. Ahora, al usar este método con esos tipos de datos, se producirá una excepción que indica que no se admite la conversión.  
   
- Este método getBytes es especificado por el método getBytes en la interfaz java.sql.CallableStatement.  
+ Este método getBytes especificado por el método getBytes en la interfaz java.sql.CallableStatement.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Método getBytes &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbytes-method-sqlservercallablestatement.md)   
- [Miembros de SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+ [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

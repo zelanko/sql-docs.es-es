@@ -1,5 +1,5 @@
 ---
-title: Método getTime (java.lang.String, java.util.Calendar) | Documentos de Microsoft
+title: Método getTime (java.lang.String, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1f8ce9d623a940c2e55a17e376d872d388a13ede
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f9c78428add1b57063f7bd6e55ff1902140316d0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839450"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785364"
 ---
 # <a name="gettime-method-javalangstring-javautilcalendar-sqlserverresultset"></a>Método getTime (java.lang.String, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera el valor del nombre de columna designado en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un objeto java.sql.Time en el lenguaje de programación, utilizando el objeto de calendario determinado de Java.  
+  Recupera el valor del nombre de columna designado en la fila actual de este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como un objeto java.sql.Time en el lenguaje de programación Java; para ello, usa el objeto Calendar determinado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,9 +40,9 @@ public java.sql.Time getTime(java.lang.String colName,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *ColName*  
+ *colName*  
   
- A **cadena** que contiene el nombre de columna.  
+ Valor **String** que contiene el nombre de columna.  
   
  *CAL*  
   
@@ -54,13 +54,13 @@ public java.sql.Time getTime(java.lang.String colName,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
- Este método getTime es especificado por el método getTime en la interfaz java.sql.ResultSet.  
+## <a name="remarks"></a>Notas  
+ Este método getTime especificado por el método getTime en la interfaz java.sql.ResultSet.  
   
- Este método devuelve una parte de hora válido un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipo de datos datetime o smalldatetime, con la parte de fecha establecida en la fecha de inicio de Java de 1970/01/01 en la zona horaria del calendario suministrado.  
+ Este método devuelve una hora válida que forma parte de un tipo de datos datetime o smalldatetime de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], con la parte correspondiente a la fecha establecida en la fecha de inicio de Java de 1970/01/01 en la zona horaria del calendario suministrado.  
   
-## <a name="see-also"></a>Vea también  
- [getTime (método) &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
+## <a name="see-also"></a>Ver también  
+ [Método getTime &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

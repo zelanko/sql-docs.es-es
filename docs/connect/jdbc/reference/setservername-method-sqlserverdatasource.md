@@ -1,5 +1,5 @@
 ---
-title: Método setServerName (SQLServerDataSource) | Documentos de Microsoft
+title: Método setServerName (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8843d601229fc8db7e374857857841eb5e3fc52a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 888def6d56546428b2f642f227bbf2765cc001f4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844810"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787919"
 ---
 # <a name="setservername-method-sqlserverdatasource"></a>Método setServerName (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Establece el nombre del equipo que está ejecutando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+  Establece el nombre del equipo que ejecuta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,14 +39,14 @@ public void setServerName(java.lang.String serverName)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *ServerName*  
+ *serverName*  
   
- A **cadena** que contiene el nombre del servidor.  
+ Objeto **String** que contiene el nombre del servidor.  
   
-## <a name="remarks"></a>Comentarios  
- El nombre del servidor es el nombre de host del equipo de destino que se está ejecutando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Si no se establece la propiedad serverName, [getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md) devuelve el valor predeterminado es null.  
+## <a name="remarks"></a>Notas  
+ El nombre del servidor es el nombre de host del equipo de destino que ejecuta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si no se establece la propiedad serverName, [getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md) devuelve el valor predeterminado, que es NULL.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Clase SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

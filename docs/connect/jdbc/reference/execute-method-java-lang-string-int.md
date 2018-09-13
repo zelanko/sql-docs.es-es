@@ -1,5 +1,5 @@
 ---
-title: Método Execute (java.lang.String, int[]) | Documentos de Microsoft
+title: Método Execute (java.lang.String, int[]) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/07/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: afe080df57157ae62e604ff8057027a45df39fc1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 84d3b4d916b91c95efaff5ad9e995e6bad40a9ad
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833330"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42787248"
 ---
 # <a name="execute-method-javalangstring-int"></a>Método execute (java.lang.String, int[])
 
-  Ejecuta la instrucción SQL determinada, que puede devolver varios resultados e indica [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion-md.md)] que las claves generadas automáticamente que se indican en la matriz especificada deben estar disponibles para la recuperación.
+  Ejecuta la instrucción SQL especificada, que puede devolver varios resultados, e indica al [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] que las claves que se han generado automáticamente y están presentes en la matriz dada deben estar disponibles para su recuperación.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -41,11 +41,11 @@ public final boolean execute(
 #### <a name="parameters"></a>Parámetros
 *sql*
 
-A **cadena** que contiene una instrucción SQL.
+Un **cadena** que contiene una instrucción SQL.
 
 *columnIndexes*
 
-Una matriz de **int**que indica los índices de columna de las claves generadas automáticamente que deben estar disponibles.
+Una matriz de valores **int** que indica que los índices de columna de las claves que se generaron automáticamente deben estar disponibles.
 
 ## <a name="return-value"></a>Valor devuelto
 **True** si el primer resultado es un conjunto de resultados. De lo contrario, se devuelve el valor **False**.
@@ -53,13 +53,13 @@ Una matriz de **int**que indica los índices de columna de las claves generadas 
 ## <a name="exceptions"></a>Excepciones
 [SQLServerException](./sqlserverexception-class.md)
 
-## <a name="remarks"></a>Comentarios
-Este método de ejecución especificado por el método execute en la interfaz java.sql.Statement.
+## <a name="remarks"></a>Notas
+Este método execute se especifica mediante el método execute en la interfaz java.sql.Statement.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Ver también
 
-[ejecutar el método &#40;SQLServerStatement&#41;](./execute-method-sqlserverstatement.md)
+[Método Execute &#40;SQLServerStatement&#41;](./execute-method-sqlserverstatement.md)
 
-[Miembros de SQLServerStatement](./sqlserverstatement-members.md)
+[Miembros SQLServerStatement](./sqlserverstatement-members.md)
 
 [Clase SQLServerStatement](./sqlserverstatement-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Método getDefaultTransactionIsolation (SQLServerDatabaseMetaData) | Documentos de Microsoft
+title: Método getDefaultTransactionIsolation (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c016a97d3e1494b046377d1ce6cd481385e8516b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 406881e33395f0071f06a16df4e789c70ab95e0a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834170"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787448"
 ---
 # <a name="getdefaulttransactionisolation-method-sqlserverdatabasemetadata"></a>Método getDefaultTransactionIsolation (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera el nivel de aislamiento de transacción predeterminado para esta base de datos.  
+  Recupera el nivel de aislamiento de transacción predeterminado de esta base de datos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,19 +39,19 @@ public int getDefaultTransactionIsolation()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un **int** que indica el nivel de aislamiento de transacción predeterminado.  
+ Valor **int** que indica el nivel de aislamiento de transacción predeterminado.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método getDefaultTransactionIsolation especificado por el método getDefaultTransactionIsolation en la interfaz java.sql.DatabaseMetaData.  
   
- Cuando se usa el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] con un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de datos, este método devuelve un valor de TRANSACTION_READ_COMMITTED, o la **int** valor 2.  
+ Cuando se usa el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] con una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], este método devuelve un valor TRANSACTION_READ_COMMITTED o el valor **int** 2.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
- [Miembros de SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
+ [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   

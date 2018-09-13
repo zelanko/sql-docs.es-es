@@ -1,5 +1,5 @@
 ---
-title: Método getPrimaryKeys (SQLServerDatabaseMetaData) | Documentos de Microsoft
+title: Método getPrimaryKeys (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15e8882067a67ec5d276e23c7cb3d2ea3684bf38
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 80ea0345ffa8e608c3e67ab90b0ad108cde143d4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837450"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786010"
 ---
 # <a name="getprimarykeys-method-sqlserverdatabasemetadata"></a>Método getPrimaryKeys (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,32 +41,32 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *CAT*  
+ *cat*  
   
- A **cadena** que contiene el nombre del catálogo.  
+ Objeto **String** que contiene el nombre del catálogo.  
   
  *schema*  
   
- A **cadena** que contiene el nombre del esquema.  
+ Objeto **String** que contiene el nombre del esquema.  
   
  *table*  
   
- A **cadena** que contiene el nombre de tabla.  
+ Objeto **String** que contiene el nombre de la tabla.  
   
 ## <a name="return-value"></a>Valor devuelto  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.  
+ Objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método getPrimaryKeys especificado por el método getPrimaryKeys en la interfaz java.sql.DatabaseMetaData.  
   
  El conjunto de resultados devuelto por el método getPrimaryKeys contendrá la siguiente información:  
   
-|Nombre|Tipo|Description|  
+|Nombre|Tipo|Descripción|  
 |----------|----------|-----------------|  
-|TABLE_CAT|String|El nombre de la base de datos en el que reside la tabla especificada.|  
+|TABLE_CAT|String|Nombre de la base de datos en la que reside la tabla especificada.|  
 |TABLE_SCHEM|String|El esquema para la tabla.|  
 |TABLE_NAME|String|Nombre de la tabla.|  
 |COLUMN_NAME|String|Nombre de la columna.|  
@@ -74,10 +74,10 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
 |PK_NAME|String|Nombre de la clave principal.|  
   
 > [!NOTE]  
->  Para obtener más información acerca de los datos devueltos por el método getPrimaryKeys, vea "sp_pkeys (Transact-SQL)" en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] libros en pantalla.  
+>  Para más información sobre los datos que devuelve el método getPrimaryKeys, vea "sp_pkeys (Transact-SQL)" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el método getPrimaryKeys para devolver información sobre las claves principales de la tabla Person.Contact en la [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] base de datos de ejemplo.  
+ En el siguiente ejemplo se muestra cómo utilizar el método getPrimaryKeys para devolver información sobre todas las claves principales tabla Person.Contact en la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetPrimaryKeys(Connection con) {  
@@ -102,9 +102,9 @@ public static void executeGetPrimaryKeys(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
- [Miembros de SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
+ [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   

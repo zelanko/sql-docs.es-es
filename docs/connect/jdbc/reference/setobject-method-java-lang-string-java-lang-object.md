@@ -1,5 +1,5 @@
 ---
-title: Método setObject (java.lang.String, java.lang.Object) | Documentos de Microsoft
+title: Método setObject (java.lang.String, java.lang.Object) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0867f75477cd4a66645fc34db9164c6c6e2d9e8c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2b57dcfb4e403c94ec7bc1348385b790b08ff181
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845740"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787271"
 ---
 # <a name="setobject-method-javalangstring-javalangobject"></a>Método setObject (java.lang.String, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Establece el valor del parámetro designado utilizando el objeto especificado.  
+  Establece el valor del parámetro designado utilizando el objeto determinado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,27 +42,27 @@ public void setObject(java.lang.String sCol,
 #### <a name="parameters"></a>Parámetros  
  *sCol*  
   
- A **cadena** que contiene el nombre del parámetro.  
+ Objeto **String** que contiene el nombre del parámetro.  
   
  *o*  
   
- Un **objeto** valor.  
+ Valor **Object**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
- Este método setObject es especificado por el método setObject en la interfaz java.sql.CallableStatement.  
+## <a name="remarks"></a>Notas  
+ El método setObject especifica este método setObject en la interfaz java.sql.CallableStatement.  
   
  Este método convierte el parámetro especificado en un tipo de datos CHAR si se especifica un valor NULL, antes de enviarlo a la base de datos. Si el parámetro se declara como un tipo de SQL binary, varbinary o image, se producirá una excepción cuando se ejecute la instrucción.  
   
- A partir de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] controlador JDBC 3.0, el comportamiento de este método es modificado por la **sendTimeAsDatetime** propiedad de conexión ([estableciendo las propiedades de conexión](../../../connect/jdbc/setting-the-connection-properties.md)) y [ SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ A partir [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador JDBC 3.0, se modifica el comportamiento de este método mediante el **sendTimeAsDatetime** propiedad de conexión ([estableciendo las propiedades de conexión](../../../connect/jdbc/setting-the-connection-properties.md)) y [ SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- Para obtener más información, consulte [java.sql.Time cómo configurar los valores se envían al servidor](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
+ Para más información, vea [Configurar el modo en que los valores java.sql.Time se envían al servidor](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Método setObject &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)   
- [Miembros de SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+ [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

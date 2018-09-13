@@ -1,5 +1,5 @@
 ---
-title: Campo CONCUR_SS_OPTIMISTIC_CC (SQLServerResultSet) | Documentos de Microsoft
+title: Campo CONCUR_SS_OPTIMISTIC_CC (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c4b3116c47a7a5a1a13b51d92385e96741ee181
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 83704bcd856d4ac5934260a5656646c130e9f7b9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32827740"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786729"
 ---
 # <a name="concurssoptimisticcc-field-sqlserverresultset"></a>Campo CONCUR_SS_OPTIMISTIC_CC (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Se utiliza para especificar un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipo de simultaneidad optimista con sin bloqueos de fila de lectura/escritura.  
+  Se utiliza para especificar un tipo de simultaneidad optimista de lectura y escritura de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sin bloqueos de fila.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,9 +39,9 @@ public static final int CONCUR_SS_OPTIMISTIC_CC
 ```  
   
 ## <a name="field-value"></a>Valor de campo  
- Un **int** valo 1008.  
+ Un **int** valor 1008.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

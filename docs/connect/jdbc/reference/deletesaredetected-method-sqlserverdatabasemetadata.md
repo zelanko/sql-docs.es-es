@@ -1,5 +1,5 @@
 ---
-title: Método deletesAreDetected (SQLServerDatabaseMetaData) | Documentos de Microsoft
+title: Método deletesAreDetected (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: be04cfff99afb70570cf00fc7191738593be2cc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d6def9d94b1cbfb1b3e6bee07454d5f5adad2392
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832290"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783947"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>Método deletesAreDetected (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera la elimina de una fila visible se puede detectar mediante una llamada a la [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) método de la [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) clase.  
+  Recupera si se puede detectar una eliminación de filas visible mediante una llamada al método [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) de la clase [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,7 +41,7 @@ public boolean deletesAreDetected(int type)
 #### <a name="parameters"></a>Parámetros  
  *Tipo*  
   
- Un **int** que indica el conjunto de resultados tipo, que puede ser uno de los siguientes valores tal como se define en java.sql.ResultSet o SQLServerResultSet:  
+ Un valor **int** que indica el tipo de conjunto de resultados, que puede ser uno de los siguientes valores como queda definido en java.sql.ResultSet o SQLServerResultSet:  
   
 ## <a name="javasqlresultset-types"></a>Tipos java.sql.ResultSet  
  TYPE_FORWARD_ONLY  
@@ -64,20 +64,20 @@ public boolean deletesAreDetected(int type)
 ## <a name="return-value"></a>Valor devuelto  
  **True** si un "agujero" reemplaza a la fila eliminada. **false** si se quita la fila eliminada.  
   
- Cuando se usa el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] con un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] la base de datos, este método devuelve **true** para los cursores TYPE_SS_SCROLL_KEYSET y **false** para tipos de conjunto de todos los demás resultados.  
+ Cuando se usa el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] con una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], este método devuelve **true** con los cursores TYPE_SS_SCROLL_KEYSET y **false** con todos los demás tipos de conjuntos de resultados.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método deletesAreDetected especificado por el método deletesAreDetected en la interfaz java.sql.DatabaseMetaData.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] detecta las filas eliminadas para todos los tipos de cursor actualizables, aunque la detección es transitoria para los cursores de avance y dinámicos.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] detecta las filas eliminadas para todos los tipos de cursor actualizable, aunque la detección es transitoria para los cursores dinámicos y hacia delante.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
- [Miembros de SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
+ [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   

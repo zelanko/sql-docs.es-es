@@ -1,5 +1,5 @@
 ---
-title: Clase SQLServerClob | Documentos de Microsoft
+title: Clase SQLServerClob | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 514368a42c47213db586b49fb521ca9a4b19a273
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8d4ae3c44fadc45cf577bc3da4801580ed480f27
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845960"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786363"
 ---
 # <a name="sqlserverclob-class"></a>Clase SQLServerClob
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "32845960"
   
  **Extiende:** java.lang.Object  
   
- **Implementa:** Java.SQL.DatabaseMetaData, java.io.Serializable  
+ **Implementa:** java.sql.Clob, java.io.Serializable  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,10 +39,10 @@ ms.locfileid: "32845960"
 public class SQLServerClob  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- Un CLOB está almacenado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] como un tipo de datos TEXT o NTEXT.  
+## <a name="remarks"></a>Notas  
+ Un CLOB se almacena en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como un tipo de datos TEXT o NTEXT.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [Referencia de API del controlador JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

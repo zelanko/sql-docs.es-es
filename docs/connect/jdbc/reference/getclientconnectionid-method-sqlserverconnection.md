@@ -1,5 +1,5 @@
 ---
-title: Método getClientConnectionID (SQLServerConnection) | Documentos de Microsoft
+title: Método getClientConnectionID (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bcd24325ca26bacc9f474e925f99848d68351417
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 83f20b5da967972b1b1d8c6381506468a9de3f6b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832530"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786528"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>Método getClientConnectionID (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,8 +38,8 @@ public Java.util.UUID SQLServerConnection.getClientConnectionID();
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
- Para obtener más información acerca del acceso a información de diagnóstico en el registro de eventos extendidos, vea [acceso a información de diagnóstico en el registro de eventos extendidos](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
+## <a name="remarks"></a>Notas  
+ Para obtener más información sobre el acceso a información de diagnóstico en el registro de eventos extendidos, vea [acceso a información de diagnóstico en el registro de eventos extendidos](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
  En el siguiente ejemplo se muestra cómo obtener el identificador de conexión:  
   
@@ -60,12 +60,12 @@ Connection cn = pcon.getConnection();
 UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();  
 ```  
   
- **getClientConnectionID** funciona independientemente de qué versión del servidor se conecta a, pero los registros de eventos extendidos y la entrada sobre errores de búfer de anillo de conectividad no estarán presentes en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 2008 R2 y versiones anteriores.  
+ **getClientConnectionID** funciona independientemente de qué versión del servidor se conecta a, pero los registros de eventos extendidos y entrada en errores de búfer de anillo de conectividad no estará presentes en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 y versiones anteriores.  
   
- Puede buscar el identificador de conexión en el registro de eventos extendidos para comprobar si el error se encontraba en el servidor si está habilitado el evento extendido para el registro del identificador de conexión. También puede buscar el identificador de conexión en el búfer de anillo de conexión ([solucionar problemas de conectividad en SQL Server 2008 con el búfer de anillo de conectividad](http://go.microsoft.com/fwlink/?LinkId=207752)) para ciertos errores de conexión. Si el identificador de conexión no se encuentra en el búfer de anillo de conexión, se puede suponer que hay un error de red.  
+ Puede buscar el identificador de conexión en el registro de eventos extendidos para comprobar si el error se encontraba en el servidor si está habilitado el evento extendido para el registro del identificador de conexión. También puede buscar el identificador de conexión en el búfer de anillo de conexión ([Solución de problemas de conectividad en SQL Server 2008 con el búfer de anillo de conectividad](http://go.microsoft.com/fwlink/?LinkId=207752)) para determinados errores de conexión. Si el identificador de conexión no se encuentra en el búfer de anillo de conexión, se puede suponer que hay un error de red.  
   
-## <a name="see-also"></a>Vea también  
- [Miembros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
+## <a name="see-also"></a>Ver también  
+ [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Clase SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   

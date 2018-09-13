@@ -1,5 +1,5 @@
 ---
-title: Método getTimestamp (java.lang.String) | Documentos de Microsoft
+title: Método getTimestamp (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a5aa22363251036aeb10f738a369be61a40f6f34
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 29fa80a283ed556166ca240a4cf7ebb983456b7c
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839618"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787928"
 ---
 # <a name="gettimestamp-method-javalangstring"></a>Método getTimestamp (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String sCol)
 #### <a name="parameters"></a>Parámetros  
  *sCol*  
   
- A **cadena** que contiene el nombre del parámetro.  
+ Objeto **String** que contiene el nombre del parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Un objeto de la marca de tiempo.  
@@ -49,14 +49,14 @@ public java.sql.Timestamp getTimestamp(java.lang.String sCol)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
- Este método getTimestamp es especificado por el método getTimestamp en la interfaz java.sql.CallableStatement.  
+## <a name="remarks"></a>Notas  
+ Este método getTimestamp especificado por el método getTimestamp en la interfaz java.sql.CallableStatement.  
   
- Este método devuelve valores solo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetime** y **smalldatetime** columnas.  
+ Este método solamente devuelve valores de columnas **datetime** y **smalldatetime** de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Método getTimestamp &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
- [Miembros de SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+ [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

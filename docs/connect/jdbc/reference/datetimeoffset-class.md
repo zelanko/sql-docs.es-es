@@ -1,5 +1,5 @@
 ---
-title: Clase DateTimeOffset | Documentos de Microsoft
+title: Clase DateTimeOffset | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 733b01f29fd159fb81f04274a96104fca1df6c9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: dddbe09009074ade6a24879239b106ed854f0b39
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829970"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785708"
 ---
 # <a name="datetimeoffset-class"></a>Clase DateTimeOffset
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Este tipo representa un objeto de tipo microsoft.sql.DateTimeOffset y es el tipo de Java que se corresponde con el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetimeoffset** tipo de datos.  
+  Este tipo representa un objeto de tipo microsoft.sql.DateTimeOffset y es el tipo de Java que se corresponde con el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetimeoffset** tipo de datos.  
   
  **Paquete:** microsoft.sql  
   
  **Extiende:** java.lang.Object  
   
- **Implementa:** java.lang.Comparable\<DateTimeOffset >, java.io.Serializable  
+ **Implementa:** java.lang.Comparable\<DateTimeOffset>, java.io.Serializable  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,10 +39,10 @@ ms.locfileid: "32829970"
 public final class DateTimeOffset  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- Para obtener más información acerca de los tipos de datos, vea [descripción de los tipos de datos del controlador JDBC](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).  
+## <a name="remarks"></a>Notas  
+ Para obtener más información acerca de los tipos de datos, vea [describir los tipos de datos del controlador JDBC](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Referencia de API del controlador JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)   
  [Miembros DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   

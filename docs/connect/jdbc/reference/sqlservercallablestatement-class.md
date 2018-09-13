@@ -1,5 +1,5 @@
 ---
-title: Clase SQLServerCallableStatement | Documentos de Microsoft
+title: Clase SQLServerCallableStatement | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b3813574070c53f16cd04ff262d7134c87d4ea85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8dca164af73506119cfaef376bcb7776708f76df
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846300"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786914"
 ---
 # <a name="sqlservercallablestatement-class"></a>Clase SQLServerCallableStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,17 +39,17 @@ ms.locfileid: "32846300"
 public final class SQLServerCallableStatement  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- SQLServerCallableStatement le permite especificar el nombre de procedimiento almacenado va a llamar junto con los parámetros de entrada y salidos. SQLServerCallableStatement también proporciona la capacidad para recuperar el valor de estado devuelto con el `? = call( ?, ..)` sintaxis.  
+## <a name="remarks"></a>Notas  
+ SQLServerCallableStatement permite especificar el nombre del procedimiento almacenado que se va a llamar junto con los parámetros de entrada y salida. SQLServerCallableStatement también proporciona la capacidad para recuperar el valor de estado de retorno con la `? = call( ?, ..)` sintaxis.  
   
- Esta clase admite la acción de desencapsular para la clase SQLServerCallableStatement, ISQLServerCallableStatement, interfaz, la interfaz java.sql.CallableStatement, las clases e interfaces compatibles con SQLServerPreparedStatement para la acción de desencapsular. Para obtener más información, consulte [contenedores e Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Esta clase admite la acción de desencapsular para la clase SQLServerCallableStatement, interfaz ISQLServerCallableStatement, interfaz java.sql.CallableStatement, las clases e interfaces compatibles con SQLServerPreparedStatement para la acción de desencapsular. Para obtener más información, consulte [contenedores e Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
- Cuando establece uno de la SQLServerCallableStatement métodos se llama para un tipo, si ese tipo entra en conflicto con el tipo especificado con [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md), se utiliza el tipo especificado por el último método set de SQLServerCallableStatement. Sin embargo, esto puede producir errores de conversión de tipos de datos incompatibles. Si un SQLServerCallableStatement establece el método no se llama, el tipo especificado con la primera [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) llamada se usa.  
+ Cuando establece uno de la SQLServerCallableStatement métodos se llama para un tipo, si ese tipo entra en conflicto con el tipo especificado con [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md), se usa el tipo especificado por el último método set de SQLServerCallableStatement. Sin embargo, esto puede producir errores de conversión de tipos de datos incompatibles. Si no se llama a un método set de SQLServerCallableStatement, se usará el tipo especificado con la primera llamada a [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md).  
   
- El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 3.0 del controlador JDBC es compatible con la recomendación de JDBC 4.0 que un conjunto de resultados y recuentos de actualizaciones se deben recuperar antes de recuperar los parámetros de salida. Si se recuperan los parámetros OUT antes de que se hayan procesado completamente los conjuntos de resultados y las actualizaciones, se perderán todos los conjuntos de resultados y las actualizaciones que no se hayan procesado.  
+ El controlador JDBC 3.0 de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sigue la especificación de JDBC 4.0, que indica que se deben recuperar varios conjuntos de resultados y actualizaciones antes de que se recuperen parámetros OUT. Si se recuperan los parámetros OUT antes de que se hayan procesado completamente los conjuntos de resultados y las actualizaciones, se perderán todos los conjuntos de resultados y las actualizaciones que no se hayan procesado.  
   
-## <a name="see-also"></a>Vea también  
- [Miembros de SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+## <a name="see-also"></a>Ver también  
+ [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Referencia de API del controlador JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

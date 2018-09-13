@@ -1,5 +1,5 @@
 ---
-title: Clase SQLServerPreparedStatement | Documentos de Microsoft
+title: Clase SQLServerPreparedStatement | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6c7b37e26faedf7cb064880d68e17f4688bfbe73
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0f0189a7a3a12f41c6e07414a1f548eab15404ed
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847030"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785377"
 ---
 # <a name="sqlserverpreparedstatement-class"></a>Clase SQLServerPreparedStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,14 +39,14 @@ ms.locfileid: "32847030"
 public class SQLServerPreparedStatement  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- SQLServerPreparedStatement proporciona métodos que le permiten especificar parámetros como cualquier tipo Java nativo y muchos tipos de objetos de Java. SQLServerPreparedStatement prepara una instrucción con el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **sp_prepare** procedimiento almacenado y, a continuación, vuelve al identificador de la instrucción devuelta para cada posterior ejecución de la instrucción, normalmente mediante diferentes parámetros proporcionados por el usuario.  
+## <a name="remarks"></a>Notas  
+ SQLServerPreparedStatement proporciona métodos que permiten especificar parámetros como cualquier tipo Java nativo y muchos tipos de objetos de Java. SQLServerPreparedStatement prepara una instrucción con el procedimiento almacenado **sp_prepare** de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, después, vuelve a usar el identificador de instrucciones devuelto cada vez que se ejecute la instrucción ulteriormente y, por lo general, se sirve de parámetros diferentes que proporciona el usuario.  
   
- SQLServerPreparedStatement admite el procesamiento por lotes, donde un conjunto de instrucciones preparadas se ejecuta en una sola base de datos, ida y vuelta para mejorar el rendimiento en tiempo de ejecución.  
+ SQLServerPreparedStatement admite el procesamiento por lotes, donde un conjunto de instrucciones preparadas se ejecuta en un ciclo de ida y vuelta en una misma base de datos, para mejorar el rendimiento en tiempo de ejecución.  
   
- Esta clase admite la acción de desencapsular para la clase SQLServerPreparedStatement, ISQLServerPreparedStatement, interfaz, la interfaz java.sql.PreparedStatement, las clases e interfaces compatibles con SQLServerStatement para la acción de desencapsular. Para obtener más información, consulte [contenedores e Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Esta clase admite la acción de desencapsular para la clase SQLServerPreparedStatement, la interfaz ISQLServerPreparedStatement, la interfaz java.sql.PreparedStatement y las clases e interfaces que se admite SQLServerStatement para la acción de desencapsular. Para obtener más información, consulte [contenedores e Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [Referencia de API del controlador JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

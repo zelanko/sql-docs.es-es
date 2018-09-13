@@ -1,5 +1,5 @@
 ---
-title: Método setTrustServerCertificate (SQLServerDataSource) | Documentos de Microsoft
+title: Método setTrustServerCertificate (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bb5923c3078944a446abfc763c76122f44af2396
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a9883077d2cb947f2c57e54439566f1936badbe5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845710"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787478"
 ---
 # <a name="settrustservercertificate-method-sqlserverdatasource"></a>Método setTrustServerCertificate (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Establece un **booleano** valor que indica si la propiedad trustServerCertificate está habilitada.  
+  Establece un valor **Boolean** que indica si la propiedad trustServerCertificate está habilitada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,16 +39,16 @@ public void setTrustServerCertificate(boolean trustServerCertificate)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *TrustServerCertificate*  
+ *trustServerCertificate*  
   
  **True** si el certificado de capa de Sockets seguros (SSL) de servidor debe ser de confianza automáticamente cuando el nivel de comunicación se cifra mediante SSL. De lo contrario, se devuelve el valor **False**.  
   
-## <a name="remarks"></a>Comentarios  
- Si la propiedad trustServerCertificate se establece en **true**, el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] certificado SSL se confía automáticamente cuando el nivel de comunicación se cifra mediante SSL. En otras palabras, el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] no validará el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] certificado SSL. El valor predeterminado es **false**.  
+## <a name="remarks"></a>Notas  
+ Si la propiedad trustServerCertificate se establece en **true**, se confía automáticamente en el certificado SSL de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuando el nivel de comunicación está cifrado con SSL. Es decir, el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] no validará el certificado SSL de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El valor predeterminado es **false**.  
   
- Si la propiedad trustServerCertificate se establece en **false**, el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] validará el certificado SSL de servidor.  
+ Si la propiedad trustServerCertificate se establece en **false**, el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] validará el certificado SSL del servidor.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Clase SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

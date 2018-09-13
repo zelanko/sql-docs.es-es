@@ -1,5 +1,5 @@
 ---
-title: Método getColumnPrivileges (SQLServerDatabaseMetaData) | Documentos de Microsoft
+title: Método getColumnPrivileges (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54f6ef742ac4d61e195e33590d7bdee6ebbc0739
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 16c0b0314d4e0e3b2b28e81c118ef0533ba55768
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833320"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785184"
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>Método getColumnPrivileges (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,35 +44,35 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 #### <a name="parameters"></a>Parámetros  
  *catalog*  
   
- A **cadena** que contiene el nombre del catálogo.  
+ Objeto **String** que contiene el nombre del catálogo.  
   
  *schema*  
   
- A **cadena** que contiene el nombre del esquema.  
+ Objeto **String** que contiene el nombre del esquema.  
   
  *table*  
   
- A **cadena** que contiene el nombre de tabla.  
+ Objeto **String** que contiene el nombre de la tabla.  
   
- *Col.*  
+ *col*  
   
- A **cadena** que contiene el patrón de nombre de columna.  
+ Objeto **String** que contiene el patrón de nombre de columna.  
   
 ## <a name="return-value"></a>Valor devuelto  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.  
+ Objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método getColumnPrivileges especificado por el método getColumnPrivileges en la interfaz java.sql.DatabaseMetaData.  
   
  El conjunto de resultados devuelto por el método getColumnPrivileges contendrá la siguiente información:  
   
-|Nombre|Tipo|Description|  
+|Nombre|Tipo|Descripción|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Nombre del catálogo.|  
-|TABLE_SCHEM|**String**|El nombre de esquema de la tabla.|  
+|TABLE_SCHEM|**String**|El nombre del esquema de tabla.|  
 |TABLE_NAME|**String**|El nombre de la tabla.|  
 |COLUMN_NAME|**String**|Nombre de columna.|  
 |GRANTOR|**String**|Objeto que concede el acceso.|  
@@ -81,10 +81,10 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 |IS_GRANTABLE|**String**|Indica si el receptor del acceso puede conceder acceso a otros usuarios.|  
   
 > [!NOTE]  
->  Para obtener más información acerca de los datos devueltos por el método getColumnPrivileges, vea "sp_column_privileges (Transact-SQL)" en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] libros en pantalla.  
+>  Para obtener más información sobre los datos que devuelve el método getColumnPrivileges, vea "sp_column_privileges (Transact-SQL)" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el método getColumnPrivileges para devolver los derechos de acceso para la columna FirstName en la tabla Person.Contact en la [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] base de datos de ejemplo.  
+ En el siguiente ejemplo se muestra cómo utilizar el método getColumnPrivileges para devolver los derechos de acceso para la columna FirstName en la tabla Person.Contact en la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetColumnPrivileges(Connection con) {  
@@ -109,9 +109,9 @@ public static void executeGetColumnPrivileges(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
- [Miembros de SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
+ [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   

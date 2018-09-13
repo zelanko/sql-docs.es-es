@@ -1,5 +1,5 @@
 ---
-title: Método getTablePrivileges (SQLServerDatabaseMetaData) | Documentos de Microsoft
+title: Método getTablePrivileges (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06a7bcc60d73aba7e0939d70224a765168738b64
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 43b6de38738f8bea736d3c156dadb2a288fcbc65
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840328"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785549"
 ---
 # <a name="gettableprivileges-method-sqlserverdatabasemetadata"></a>Método getTablePrivileges (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,31 +43,31 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
 #### <a name="parameters"></a>Parámetros  
  *catalog*  
   
- A **cadena** que contiene el nombre del catálogo. Si se proporciona un valor NULL en este parámetro, indicará que no es necesario utilizar el nombre de catálogo.  
+ Objeto **String** que contiene el nombre del catálogo. Si se proporciona un valor NULL en este parámetro, indicará que no es necesario utilizar el nombre de catálogo.  
   
  *schema*  
   
- A **cadena** que contiene el patrón de nombre de esquema. Si se proporciona un valor NULL en este parámetro, indicará que no es necesario utilizar el nombre de esquema.  
+ Objeto **String** que contiene el modelo de nombre del esquema. Si se proporciona un valor NULL en este parámetro, indicará que no es necesario utilizar el nombre de esquema.  
   
  *table*  
   
- A **cadena** que contiene el patrón de nombre de tabla.  
+ Objeto **String** que contiene el patrón de nombre de tabla.  
   
 ## <a name="return-value"></a>Valor devuelto  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.  
+ Objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método getTablePrivileges especificado por el método getTablePrivileges en la interfaz java.sql.DatabaseMetaData.  
   
  El conjunto de resultados devuelto por el método getTablePrivileges contendrá la siguiente información:  
   
-|Nombre|Tipo|Description|  
+|Nombre|Tipo|Descripción|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Nombre del catálogo.|  
-|TABLE_SCHEM|**String**|El nombre de esquema de la tabla.|  
+|TABLE_SCHEM|**String**|El nombre del esquema de tabla.|  
 |TABLE_NAME|**String**|El nombre de la tabla.|  
 |GRANTOR|**String**|Objeto que concede el acceso.|  
 |GRANTEE|**String**|Objeto que recibe el acceso.|  
@@ -75,10 +75,10 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
 |IS_GRANTABLE|**String**|Indica si el receptor del acceso puede conceder acceso a otros usuarios.|  
   
 > [!NOTE]  
->  Para obtener más información acerca de los datos devueltos por el método getTablePrivileges, vea "sp_table_privileges (Transact-SQL)" en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] libros en pantalla.  
+>  Para más información sobre los datos que devuelve el método getTablePrivileges, vea "sp_table_privileges (Transact-SQL)" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el método getTablePrivileges para devolver los derechos de acceso para la tabla Person.Contact en la [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] base de datos de ejemplo.  
+ En el siguiente ejemplo se muestra cómo utilizar el método getTablePrivileges para devolver los derechos de acceso correspondientes a la tabla Person.Contact en la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetTablePrivileges(Connection con) {  
@@ -103,9 +103,9 @@ public static void executeGetTablePrivileges(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
- [Miembros de SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
+ [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   

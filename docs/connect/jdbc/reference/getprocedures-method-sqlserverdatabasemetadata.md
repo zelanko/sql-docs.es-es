@@ -1,5 +1,5 @@
 ---
-title: Método getProcedures (SQLServerDatabaseMetaData) | Documentos de Microsoft
+title: Método getProcedures (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df6101068f9d64ac243666d28c231c88a7926001
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9841158629f4103540374c324e56fc54fd3f9446
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839260"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784468"
 ---
 # <a name="getprocedures-method-sqlserverdatabasemetadata"></a>Método getProcedures (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,43 +43,43 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
 #### <a name="parameters"></a>Parámetros  
  *sCatalog*  
   
- A **cadena** que contiene el nombre del catálogo. Si se proporciona un valor NULL en este parámetro, indicará que no es necesario utilizar el nombre de catálogo.  
+ Objeto **String** que contiene el nombre del catálogo. Si se proporciona un valor NULL en este parámetro, indicará que no es necesario utilizar el nombre de catálogo.  
   
  *SEL*  
   
- A **cadena** que contiene el patrón de nombre de esquema. Si se proporciona un valor NULL en este parámetro, indicará que no es necesario utilizar el nombre de esquema.  
+ Objeto **String** que contiene el modelo de nombre del esquema. Si se proporciona un valor NULL en este parámetro, indicará que no es necesario utilizar el nombre de esquema.  
   
  *proc*  
   
- A **cadena** que contiene el patrón de nombre de procedimiento.  
+ Objeto **String** que contiene el modelo de nombre del procedimiento.  
   
 ## <a name="return-value"></a>Valor devuelto  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.  
+ Objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
- Este método getProcedures es especificado por el método getProcedures en la interfaz java.sql.DatabaseMetaData.  
+## <a name="remarks"></a>Notas  
+ Este método getProcedures especificado por el método getProcedures en la interfaz java.sql.DatabaseMetaData.  
   
  El conjunto de resultados devuelto por el método getProcedures contendrá la siguiente información:  
   
-|Nombre|Tipo|Description|  
+|Nombre|Tipo|Descripción|  
 |----------|----------|-----------------|  
 |PROCEDURE_CAT|**String**|Nombre de la base de datos en la que reside el procedimiento almacenado.|  
 |PROCEDURE_SCHEM|**String**|Esquema para el procedimiento almacenado.|  
-|PROCEDURE_NAME|**String**|El nombre del procedimiento almacenado.|  
+|PROCEDURE_NAME|**String**|Nombre del procedimiento almacenado.|  
 |NUM_INPUT_PARAMS|**int**|Se reserva para su uso futuro, actualmente devuelve un valor -1.|  
 |NUM_OUTPUT_PARAMS|**int**|Se reserva para su uso futuro, actualmente devuelve un valor -1.|  
 |NUM_RESULT_SETS|**int**|Se reserva para su uso futuro, actualmente devuelve un valor -1.|  
-|REMARKS|**String**|Descripción de esta columna de procedimientos.<br /><br /> <br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] no devuelve un valor para esta columna.  |  
+|REMARKS|**String**|Descripción de esta columna de procedimientos.<br /><br /> <br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no devuelve ningún valor relativo a esta columna.|  
 |PROCEDURE_TYPE|**smallint**|Nombre tipo del procedimiento almacenado. Puede ser uno de los siguientes valores:<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   
 > [!NOTE]  
->  Para obtener más información acerca de los datos devueltos por el método getProcedures, vea "sp_stored_procedures (Transact-SQL)" en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] libros en pantalla.  
+>  Para más información sobre los datos que devuelve el método getProcedures, vea "sp_stored_procedures (Transact-SQL)" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el método getProcedures para devolver información sobre el procedimiento almacenado uspGetBillOfMaterials en la [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] base de datos de ejemplo.  
+ En el siguiente ejemplo se muestra cómo utilizar el método getProcedures para devolver información sobre el procedimiento almacenado uspGetBillOfMaterials en la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetProcedures(Connection con) {  
@@ -104,9 +104,9 @@ public static void executeGetProcedures(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
- [Miembros de SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
+ [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   

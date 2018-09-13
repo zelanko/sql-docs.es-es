@@ -1,5 +1,5 @@
 ---
-title: Método getColumnType (SQLServerResultSetMetaData) | Documentos de Microsoft
+title: Método getColumnType (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9296af59ce9defaa764e56a8ec426ac8b60cad4c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8183c5f28b747bee1fa61cb5843d5bb39b0cf794
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833130"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785159"
 ---
 # <a name="getcolumntype-method-sqlserverresultsetmetadata"></a>Método getColumnType (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,21 +41,21 @@ public int getColumnType(int column)
 #### <a name="parameters"></a>Parámetros  
  *column*  
   
- Un **int** que indica el índice de columna.  
+ Valor **int** que indica el índice de la columna.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un **int** que indica el tipo JDBC tal como se define en java.sql.Types.  
+ Valor **int** que indica el tipo JDBC como se define en java.sql.Types.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método getColumnType especificado por el método getColumnType en la interfaz java.sql.ResultSetMetaData.  
   
- [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Controlador JDBC 3.0 de incorpora cambios de comportamiento en la columna DATA_TYPE. Vea [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md) para obtener más información.  
+ El controlador JDBC 3.0 de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incorpora cambios de comportamiento en la columna DATA_TYPE. Vea [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md) para más información.  
   
-## <a name="see-also"></a>Vea también  
- [Miembros de SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
+## <a name="see-also"></a>Ver también  
+ [Miembros SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [Clase SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
   
   

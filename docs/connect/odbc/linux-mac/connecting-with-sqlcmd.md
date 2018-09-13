@@ -16,19 +16,19 @@ caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c330fd329f28fa7d89b62b9af6bb8d4bb67c2bc4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 792d167461ae330689bda8dfd10806258ccd704f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015809"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787087"
 ---
 # <a name="connecting-with-sqlcmd"></a>Conexión con sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-La utilidad [sqlcmd](http://go.microsoft.com/fwlink/?LinkID=154481) está disponible en [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] en Linux y MacOS.
+La utilidad [sqlcmd](http://go.microsoft.com/fwlink/?LinkID=154481) está disponible en [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Linux y MacOS.
   
-Los comandos siguientes muestran cómo utilizar la autenticación de Windows (Kerberos) y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] autenticación, respectivamente:
+Los comandos siguientes muestran cómo utilizar la autenticación de Windows (Kerberos) y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autenticación, respectivamente:
   
 ```  
 sqlcmd –E –Sxxx.xxx.xxx.xxx  
@@ -68,17 +68,17 @@ En la versión actual, están disponibles las siguientes opciones:
 - -k quitar o reemplazar caracteres de control.  
   
 - **-K *** application_intent*  
-Declara el tipo de carga de trabajo de la aplicación al conectarse a un servidor. El único valor actualmente admitido es **de solo lectura**. Si no se especifica **-K**, la utilidad `sqlcmd` no admitirá la conectividad con una réplica secundaria en un grupo de disponibilidad AlwaysOn. Para obtener más información, consulte [controlador ODBC en Linux y macOS: alta disponibilidad y recuperación ante desastres](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+Declara el tipo de carga de trabajo de la aplicación al conectarse a un servidor. El único valor actualmente admitido es **de solo lectura**. Si no se especifica **-K**, la utilidad `sqlcmd` no admitirá la conectividad con una réplica secundaria en un grupo de disponibilidad AlwaysOn. Para más información, vea [Controlador ODBC en Linux y macOS: alta disponibilidad y recuperación ante desastres](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > **-K** no se admite en la versión de CTP para SUSE Linux. Pero puede especificar la palabra clave **ApplicationIntent=ReadOnly** en un archivo de DSN transmitido a `sqlcmd`. Para obtener más información, vea la sección "Compatibilidad de DSN en `sqlcmd` y `bcp`" al final de este tema.  
   
-- -l *tiempo de espera* especificar el número de segundos antes de que un `sqlcmd` inicio de sesión agota el tiempo cuando intenta conectarse a un servidor.
+- -l *timeout* Especifica el número de segundos que tienen que transcurrir antes de que un inicio de sesión de `sqlcmd` agote el tiempo de espera cuando se trate de conectar a un servidor.
 
 - -m *error_level* controlar qué mensajes de error se envían a stdout.  
   
 - **-M *** multisubnet_failover*  
-Especifique siempre **-M** al conectarse a una escucha de un grupo de disponibilidad de [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] o a una instancia de clúster de conmutación por error de [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. **-M** proporciona una detección más rápida de conmutaciones por error del servidor activo actualmente y de la conexión a este. Si **-M** no se especifica, el valor de **-M** será OFF. Para obtener más información acerca de [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], consulte [controlador ODBC en Linux y macOS: alta disponibilidad y recuperación ante desastres](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+Especifique siempre **-M** al conectarse a una escucha de un grupo de disponibilidad de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] o a una instancia de clúster de conmutación por error de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. **-M** proporciona una detección más rápida de conmutaciones por error del servidor activo actualmente y de la conexión a este. Si **-M** no se especifica, el valor de **-M** será OFF. Para obtener más información acerca de [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], consulte [controlador ODBC en Linux y macOS: alta disponibilidad y recuperación ante desastres](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > **-M** no se admite en la versión de CTP para SUSE Linux. Pero puede especificar la palabra clave **MultiSubnetFailover=Yes** en un archivo de DSN transmitido a `sqlcmd`. Para obtener más información, vea la sección "Compatibilidad de DSN en `sqlcmd` y `bcp`" al final de este tema.  
@@ -102,7 +102,7 @@ Especifique siempre **-M** al conectarse a una escucha de un grupo de disponibil
 - -s *column_separator_char* especificar el carácter separador de columnas.  
 
 - -S [*protocol*:] *server*[**,***port*]  
-Especifique la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] para conectarse a, o si es -D utiliza, un DSN. El controlador ODBC en Linux y macOS requiere -S. Tenga en cuenta que **tcp** es el único protocolo válido.  
+Especifique la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para conectarse a, o si es -D utiliza, un DSN. El controlador ODBC en Linux y macOS requiere -S. Tenga en cuenta que **tcp** es el único protocolo válido.  
   
 - -t *query_timeout* especificar el número de segundos que tienen que transcurrir antes de que un comando (o la instrucción de SQL) exceda el tiempo de espera.  
   
@@ -162,7 +162,7 @@ En la versión actual, están disponibles los siguientes comandos:
 ## <a name="unavailable-options"></a>Opciones no disponibles
 En la versión actual, no están disponibles las siguientes opciones:  
 
-- -A iniciar sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] con una conexión de administrador dedicada (DAC). Para obtener información sobre cómo realizar una conexión de administrador dedicada (DAC), vea [Instrucciones de programación](../../../connect/odbc/linux-mac/programming-guidelines.md).  
+- -A iniciar sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con una conexión de administrador dedicada (DAC). Para obtener información sobre cómo realizar una conexión de administrador dedicada (DAC), vea [Instrucciones de programación](../../../connect/odbc/linux-mac/programming-guidelines.md).  
   
 - -f *code_page* especificar las páginas de códigos de entrada y de salida.  
   

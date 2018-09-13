@@ -1,5 +1,5 @@
 ---
-title: Método setApplicationName (SQLServerDataSource) | Documentos de Microsoft
+title: Método setApplicationName (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83dc2762c52a8564755355199faa59b1eb25991e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 661e8a31ad3fc240c1e8e51f03f2e4132e96fdc7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784633"
 ---
 # <a name="setapplicationname-method-sqlserverdatasource"></a>Método setApplicationName (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,14 +39,14 @@ public void setApplicationName(java.lang.String applicationName)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Nombre de aplicación*  
+ *applicationName*  
   
- A **cadena** que contiene el nombre de la aplicación.  
+ Objeto **String** que contiene el nombre de la aplicación.  
   
-## <a name="remarks"></a>Comentarios  
- El nombre de la aplicación se usa para identificar la aplicación específica en diversas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] de generación de perfiles y herramientas de registro. Si no se establece el nombre de la aplicación, el método getApplicationName devuelve la cadena no localizada "[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]".  
+## <a name="remarks"></a>Notas  
+ El nombre de la aplicación se usa para identificar la aplicación específica en diversas herramientas de creación de perfiles y registros de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si no se establece el nombre de aplicación, el método getApplicationName devuelve la cadena no localizada "[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]".  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Clase SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Método getSchemas () | Documentos de Microsoft
+title: Método getSchemas () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04066c42fabfd81d5579e4900bd6072c7f767747
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: bdfcd711d1ddc2b36fe4524b14cd12455f346b30
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839420"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785999"
 ---
 # <a name="getschemas-method-"></a>Método getSchemas ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,17 +39,17 @@ public java.sql.ResultSet getSchemas()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.  
+ Objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
- Este método getSchemas es especificado por el método getSchemas en la interfaz java.sql.DatabaseMetaData.  
+## <a name="remarks"></a>Notas  
+ Este método getSchemas especificado por el método getSchemas en la interfaz java.sql.DatabaseMetaData.  
   
- El conjunto de resultados devuelto por el método getSchemas contiene la información siguiente:  
+ El conjunto de resultados devuelto por el método getSchemas contiene la siguiente información:  
   
-|Nombre|Tipo|Description|  
+|Nombre|Tipo|Descripción|  
 |----------|----------|-----------------|  
 |TABLE_SCHEM|**String**|Nombre del esquema.|  
 |TABLE_CATALOG|**String**|Nombre del catálogo para el esquema.|  
@@ -57,10 +57,10 @@ public java.sql.ResultSet getSchemas()
  Los resultados se ordenan según TABLE_CATALOG y después, según TABLE_SCHEM. En cada fila TABLE_SCHEM es la primera columna y TABLE_CATALOG la segunda.  
   
 > [!NOTE]  
->  Para obtener más información acerca de los datos devueltos por el método getSchemas, vea "sys.schemas (Transact-SQL)" en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] libros en pantalla.  
+>  Para más información sobre los datos que devuelve el método getSchemas, vea "sys.schemas (Transact-SQL)" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el método getSchemas para devolver información sobre el catálogo y sus nombres de esquema asociados en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] cuando el argumento de conexión especifica la base de datos que se usará.  
+ En el siguiente ejemplo se muestra cómo utilizar el método getSchemas para devolver información sobre el catálogo y sus nombres de esquema asociados en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuando el argumento de conexión especifica la base de datos que se va a utilizar.  
   
 ```  
 public static void executeGetSchemas(Connection con) {  
@@ -85,9 +85,9 @@ public static void executeGetSchemas(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
- [Miembros de SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
+ [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   

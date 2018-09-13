@@ -1,5 +1,5 @@
 ---
-title: Método getImportedKeys (SQLServerDatabaseMetaData) | Documentos de Microsoft
+title: Método getImportedKeys (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de5ae39ff10c32737df637c9a6f29aab19d27574
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e086d412777dcb67e5e59bc9dad89a46e925d004
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836690"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786915"
 ---
 # <a name="getimportedkeys-method-sqlserverdatabasemetadata"></a>Método getImportedKeys (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera una descripción de las columnas de clave principal que hacen referencia las columnas de clave externa de una tabla.  
+  Recupera una descripción de las columnas de clave principal a las que hacen referencia las columnas de clave externa en una tabla.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,30 +41,30 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *CAT*  
+ *cat*  
   
- A **cadena** que contiene el nombre del catálogo.  
+ Objeto **String** que contiene el nombre del catálogo.  
   
  *schema*  
   
- A **cadena** que contiene el nombre del esquema.  
+ Objeto **String** que contiene el nombre del esquema.  
   
  *table*  
   
- A **cadena** que contiene el nombre de tabla.  
+ Objeto **String** que contiene el nombre de la tabla.  
   
 ## <a name="return-value"></a>Valor devuelto  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.  
+ Objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método getImportedKeys especificado por el método getImportedKeys en la interfaz java.sql.DatabaseMetaData.  
   
  El conjunto de resultados devuelto por el método getImportedKeys contendrá la siguiente información:  
   
-|Nombre|Tipo|Description|  
+|Nombre|Tipo|Descripción|  
 |----------|----------|-----------------|  
 |PKTABLE_CAT|**String**|Nombre del catálogo que contiene la tabla de la clave principal.|  
 |PKTABLE_SCHEM|**String**|Nombre del esquema de la tabla de la clave principal.|  
@@ -74,18 +74,18 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
 |FKTABLE_SCHEM|**String**|Nombre del esquema de la tabla de la clave externa.|  
 |FKTABLE_NAME|**String**|Nombre de la tabla de la clave externa.|  
 |FKCOLUMN_NAME|**String**|Nombre de la columna de la clave externa.|  
-|KEY_SEQ|**Corto**|Número de secuencia de la columna en una clave principal en varias columnas.|  
-|UPDATE_RULE|**Corto**|Acción aplicada a la clave externa cuando la operación de SQL sea una actualización. Puede ser uno de los siguientes valores:<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
-|DELETE_RULE|**Corto**|Acción aplicada a la clave externa cuando la operación de SQL sea una eliminación. Puede ser uno de los siguientes valores:<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
+|KEY_SEQ|**short**|Número de secuencia de la columna en una clave principal en varias columnas.|  
+|UPDATE_RULE|**short**|Acción aplicada a la clave externa cuando la operación de SQL sea una actualización. Puede ser uno de los siguientes valores:<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
+|DELETE_RULE|**short**|Acción aplicada a la clave externa cuando la operación de SQL sea una eliminación. Puede ser uno de los siguientes valores:<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
 |FK_NAME|**String**|El nombre de la clave externa.|  
 |PK_NAME|**String**|Nombre de la clave principal.|  
-|DEFERRABILITY|**Corto**|Indica si la evaluación de la restricción de la clave externa se puede diferir hasta que se efectúe una confirmación. Puede ser uno de los siguientes valores:<br /><br /> importedKeyInitiallyDeferred (5)<br /><br /> importedKeyInitiallyImmediate (6)<br /><br /> importedKeyNotDeferrable (7)|  
+|DEFERRABILITY|**short**|Indica si la evaluación de la restricción de la clave externa se puede diferir hasta que se efectúe una confirmación. Puede ser uno de los siguientes valores:<br /><br /> importedKeyInitiallyDeferred (5)<br /><br /> importedKeyInitiallyImmediate (6)<br /><br /> importedKeyNotDeferrable (7)|  
   
 > [!NOTE]  
->  Para obtener más información acerca de los datos devueltos por el método getImportedKeys, vea "sp_fkeys (Transact-SQL)" en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] libros en pantalla.  
+>  Para más información sobre los datos que devuelve el método getImportedKeys, vea "sp_fkeys (Transact-SQL)" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el método getImportedKeys para devolver información sobre todas las claves principales que hacen referencia las claves externas de la tabla Person.Address de la [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] base de datos de ejemplo.  
+ En el siguiente ejemplo se muestra cómo utilizar el método getImportedKeys para devolver información sobre todas las claves principales que hacen referencia a las claves externas de la tabla Person.Address en la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetImportedKeys(Connection con) {  
@@ -110,9 +110,9 @@ public static void executeGetImportedKeys(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
- [Miembros de SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
+ [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Implementar el controlador JDBC | Documentos de Microsoft
+title: Implementar el controlador JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43a561de7ba1e47dc9b920c3a1459d38387620d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d2ab71ea3cdbe15993f1a1641ef9d5faed7f544d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829580"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785698"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Implementar el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Cuando se implementa una aplicación que depende el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], debe redistribuir el controlador JDBC junto con la aplicación. A diferencia de Windows Data Access Components (Windows DAC), que es un componente del sistema operativo Windows, el controlador JDBC se considera un componente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+  Al implementar una aplicación que depende del [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], debe redistribuir el controlador JDBC junto con la aplicación. A diferencia de Windows Data Access Components (Windows DAC), que es un componente del sistema operativo Windows, el controlador JDBC se considera un componente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Existen dos métodos para implementar el controlador JDBC con la aplicación. Uno de estos métodos consiste en incluir los archivos del controlador JDBC como parte de su propio paquete de instalación personalizado. El segundo método implica el uso del paquete de instalación de JDBC suministrado por Microsoft, que puede descargar desde el [Microsoft JDBC Driver para SQL Server Developer Center](http://go.microsoft.com/fwlink/?LinkId=70166).  
+ Existen dos métodos para implementar el controlador JDBC con la aplicación. Uno de estos métodos consiste en incluir los archivos del controlador JDBC como parte de su propio paquete de instalación personalizado. El segundo método implica el uso del paquete de instalación de JDBC suministrado por Microsoft, que puede descargar desde el [Centro para desarrolladores del controlador Microsoft JDBC para SQL Server](http://go.microsoft.com/fwlink/?LinkId=70166).  
   
  En las siguientes secciones se describe cómo usar el paquete de instalación de JDBC en los sistemas operativos Windows y UNIX.  
   
@@ -34,17 +34,17 @@ ms.locfileid: "32829580"
 >  Para obtener información sobre cómo implementar aplicaciones Java en general, vea el sitio web de Java.  
   
 ## <a name="deploying-the-jdbc-driver-on-windows-systems"></a>Implementar el controlador JDBC en los sistemas de Windows  
- Cuando se implementa el controlador JDBC en sistemas operativos Windows, debe usar la versión del archivo zip ejecutable del paquete de instalación, que se suele denominar `sqljdbc_<version>_<language>.exe`.  
+ Al implementar el controlador JDBC en sistemas operativos Windows, debe usar la versión del archivo zip ejecutable del paquete de instalación, que se suele denominar `sqljdbc_<version>_<language>.exe`.  
   
- Para ejecutar el archivo zip ejecutable de forma silenciosa, debe utilizar el `/auto` opción de línea de comandos en la línea de comandos o en un archivo por lotes como en el siguiente ejemplo:  
+ Para ejecutar el archivo zip ejecutable de forma silenciosa, debe usar la opción de línea de comandos `/auto` en la línea de comandos o en un archivo por lotes del modo siguiente:  
   
  `sqljdbc_<version>_<language>.exe /auto`  
   
 > [!NOTE]  
->  Cuando se usa el `/auto` opción no es una instalación silenciosa, cuadro de diálogo WinZip sigue apareciendo en la pantalla del usuario. No obstante, no necesita interactuar con dicho cuadro, que se cierra una vez que la operación de descompresión se ha completado.  
+>  Si usa la opción `/auto`, no será una instalación silenciosa en sentido estricto debido a que el cuadro de diálogo WinZip sigue apareciendo en la pantalla del usuario. No obstante, no necesita interactuar con dicho cuadro, que se cierra una vez que la operación de descompresión se ha completado.  
   
 ## <a name="deploying-the-driver-on-unix-systems"></a>Implementar el controlador en sistemas UNIX  
- Cuando se implementa el controlador JDBC en sistemas operativos UNIX, debe usar la versión del archivo gzip del paquete de instalación, que se suele denominar `sqljdbc_<version>_<language>.tar.gz`.  
+ Al implementar el controlador JDBC en los sistemas operativos UNIX, debe usar la versión del archivo gzip del paquete de instalación, que se suele llamar `sqljdbc_<version>_<language>.tar.gz`.  
   
  Para poder instalar el controlador JDBC, asegúrese de que las utilidades gzip y tar están instaladas en el sistema del usuario y de que las carpetas que contienen los ejecutables para ambas utilidades se han agregado a la variable de entorno PATH.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "32829580"
   
  `tar –xf sqljdbc_<version>_<language>.tar`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

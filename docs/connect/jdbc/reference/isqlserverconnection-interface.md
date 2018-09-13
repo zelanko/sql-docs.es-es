@@ -1,5 +1,5 @@
 ---
-title: Interfaz de ISQLServerConnection | Documentos de Microsoft
+title: Interfaz ISQLServerConnection | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ca0e0504a7f28622ba2419545d2167ad917f784
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f7b9c02332b5a680fcb04c2a9d38c27f6fe5a9e2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841440"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784800"
 ---
 # <a name="isqlserverconnection-interface"></a>Interfaz de ISQLServerConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Representa una conexión JDBC a una [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de datos. Esta interfaz se agregó en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] controlador JDBC 3.0.  
+  Representa una conexión JDBC a una base de datos de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esta interfaz se agregó en el controlador JDBC 3.0 de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  **Paquete:** com.microsoft.sqlserver.jdbc  
   
@@ -37,17 +37,17 @@ ms.locfileid: "32841440"
 public interface ISQLServerConnection  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Esta interfaz se implementa mediante [clase SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
- Esta interfaz expone los siguientes [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-campo específico:  
+ Esta interfaz expone el siguiente campo específico del [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]:  
   
 |Campo|Para obtener más información, vea|  
 |-----------|-------------------------------|  
 |public final static int TRANSACTION_SNAPSHOT|[TRANSACTION_SNAPSHOT](../../../connect/jdbc/reference/transaction-snapshot-field-sqlserverconnection.md)|  
 |public UUID getClientConnectionId()|[getClientConnectionID()](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Referencia de API del controlador JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

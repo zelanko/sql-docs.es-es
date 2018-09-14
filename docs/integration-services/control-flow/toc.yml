@@ -1,3 +1,4 @@
+items:
 - name: Información general
   href: control-flow.md
 - name: Agregar o eliminar tareas o contenedores en un flujo de control
@@ -5,168 +6,176 @@
 - name: Contenedores de Integration Services
   href: integration-services-containers.md
   items:
-    - name: Contenedor Foreach Loop
-      href: foreach-loop-container.md
-    - name: Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach
-      href: loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md
-    - name: Contenedor de bucles For
-      href: for-loop-container.md
-    - name: contenedor de secuencias
-      href: sequence-container.md
-    - name: contenedor de tarea
-      href: task-host-container.md
+  - name: Contenedor Foreach Loop
+    href: foreach-loop-container.md
+  - name: Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach
+    href: loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md
+  - name: Contenedor de bucles For
+    href: for-loop-container.md
+  - name: contenedor de secuencias
+    href: sequence-container.md
+  - name: contenedor de tarea
+    href: task-host-container.md
 - name: Tareas de Integration Services
   href: integration-services-tasks.md
   items:
-    - name: Tarea Ejecutar DDL de Analysis Services
-      href: analysis-services-execute-ddl-task.md
-    - name: 'Procesamiento de Analysis Services, tarea'
-      href: analysis-services-processing-task.md
-    - name: Tarea de descarga de blobs de Azure
-      href: azure-blob-download-task.md
-    - name: Tarea de carga de blobs de Azure
-      href: azure-blob-upload-task.md
-    - name: Tarea de Azure Data Lake Analytics
-      href: azure-data-lake-analytics-task.md
-    - name: Tarea Sistema de archivos de Azure Data Lake Store
-      href: azure-data-lake-store-file-system-task.md
-    - name: Tarea de creación de clúster de HDInsight de Azure
-      href: azure-hdinsight-create-cluster-task.md
-    - name: Tarea de eliminación de clúster de HDInsight de Azure
-      href: azure-hdinsight-delete-cluster-task.md
-    - name: Tarea de Hive de HDInsight de Azure
-      href: azure-hdinsight-hive-task.md
-    - name: Tarea de Pig de Azure HDInsight
-      href: azure-hdinsight-pig-task.md
-    - name: Tarea de carga de Azure SQL DW
-      href: azure-sql-dw-upload-task.md
-    - name: Tarea Copia de seguridad de la base de datos
-      href: back-up-database-task.md
-    - name: 'Inserción masiva, tarea'
-      href: bulk-insert-task.md
-    - name: Tarea Control CDC
-      href: cdc-control-task.md
+  - name: Tarea Ejecutar DDL de Analysis Services
+    href: analysis-services-execute-ddl-task.md
+  - name: Procesamiento de Analysis Services, tarea
+    href: analysis-services-processing-task.md
+  - name: Tarea de descarga de blobs de Azure
+    href: azure-blob-download-task.md
+  - name: Tarea de carga de blobs de Azure
+    href: azure-blob-upload-task.md
+  - name: Tarea de Azure Data Lake Analytics
+    href: azure-data-lake-analytics-task.md
+  - name: Tarea Sistema de archivos de Azure Data Lake Store
+    href: azure-data-lake-store-file-system-task.md
+  - name: Tarea de creación de clúster de HDInsight de Azure
+    href: azure-hdinsight-create-cluster-task.md
+  - name: Tarea de eliminación de clúster de HDInsight de Azure
+    href: azure-hdinsight-delete-cluster-task.md
+  - name: Tarea de Hive de HDInsight de Azure
+    href: azure-hdinsight-hive-task.md
+  - name: Tarea de Pig de Azure HDInsight
+    href: azure-hdinsight-pig-task.md
+  - name: Tarea de carga de Azure SQL DW
+    href: azure-sql-dw-upload-task.md
+  - name: Tarea Copia de seguridad de la base de datos
+    href: back-up-database-task.md
+  - name: Inserción masiva, tarea
+    href: bulk-insert-task.md
+  - name: Tarea Control CDC
+    href: cdc-control-task.md
+    items:
+    - name: Propiedades personalizadas de la tarea de control CDC
+      href: cdc-control-task-custom-properties.md
+  - name: Tarea Comprobar la integridad de la base de datos
+    href: check-database-integrity-task.md
+  - name: tarea Flujo de datos
+    href: data-flow-task.md
+  - name: Data Mining Query Task
+    href: data-mining-query-task.md
+    items:
+    - name: Consulta de minería de datos
+      href: data-mining-query.md
+  - name: Visor y tarea de generación de perfiles de datos
+    href: data-profiling-task-and-viewer.md
+    items:
+    - name: Configuración de la Tarea de generación de perfiles de datos
+      href: setup-of-the-data-profiling-task.md
+    - name: Visor de perfil de datos
+      href: data-profile-viewer.md
+    - name: Tarea de generación de perfiles de datos
+      href: data-profiling-task.md
       items:
-        - name: Propiedades personalizadas de la tarea de control CDC
-          href: cdc-control-task-custom-properties.md
-    - name: Tarea Comprobar la integridad de la base de datos
-      href: check-database-integrity-task.md
-    - name: tarea Flujo de datos
-      href: data-flow-task.md
-    - name: Data Mining Query Task
-      href: data-mining-query-task.md
-      items:
-        - name: Consulta de minería de datos
-          href: data-mining-query.md
-    - name: Visor y tarea de generación de perfiles de datos
-      href: data-profiling-task-and-viewer.md
-      items:
-        - name: Configuración de la Tarea de generación de perfiles de datos
-          href: setup-of-the-data-profiling-task.md
-        - name: Visor de perfil de datos
-          href: data-profile-viewer.md
-        - name: Tarea de generación de perfiles de datos
-          href: data-profiling-task.md
-          items:
-            - name: Formulario de perfil rápido de tabla única (tarea de generación de perfiles de datos)
-              href: single-table-quick-profile-form-data-profiling-task.md
-            - name: Editor de tareas de generación de perfiles de datos (página Solicitudes de perfil)
-              href: data-profiling-task-editor-profile-requests-page.md
-              items:
-                - name: Opciones de Solicitud de perfil de claves candidatas (tarea de generación de perfiles de datos)
-                  href: candidate-key-profile-request-options-data-profiling-task.md
-                - name: Opciones de Solicitud de perfil de distribución de longitud de columnas (tarea de generación de perfiles de datos)
-                  href: column-length-distribution-profile-request-options-data-profiling-task.md
-                - name: Opciones de Solicitud de perfil de proporción de columnas nulas (tarea de generación de perfiles de datos)
-                  href: column-null-ratio-profile-request-options-data-profiling-task.md
-                - name: Opciones de Solicitud de perfil de patrón de columnas (tarea de generación de perfiles de datos)
-                  href: column-pattern-profile-request-options-data-profiling-task.md
-                - name: Opciones de Solicitud de perfil de estadísticas de columnas (tarea de generación de perfiles de datos)
-                  href: column-statistics-profile-request-options-data-profiling-task.md
-                - name: Opciones de Solicitud de perfil de distribución de valores de columna (tarea de generación de perfiles de datos)
-                  href: column-value-distribution-profile-request-options-data-profiling-task.md
-                - name: Opciones de Solicitud de perfil de dependencia funcional (tarea de generación de perfiles de datos)
-                  href: functional-dependency-profile-request-options-data-profiling-task.md
-                - name: Opciones de Solicitud de perfil de inclusión de valores (tarea de generación de perfiles de datos)
-                  href: value-inclusion-profile-request-options-data-profiling-task.md
-            - name: Incorporar una tarea de generación de perfiles de datos en un flujo de trabajo de paquetes
-              href: incorporate-a-data-profiling-task-in-package-workflow.md
-    - name: Tarea Ejecutar paquete
-      href: execute-package-task.md
-    - name: Tarea Ejecutar proceso
-      href: execute-process-task.md
-    - name: Tarea Ejecutar trabajo del Agente SQL Server
-      href: execute-sql-server-agent-job-task.md
-    - name: Tarea Ejecutar SQL
-      href: execute-sql-task.md
-    - name: MERGE en paquetes de Integration Services
-      href: merge-in-integration-services-packages.md
-    - name: Tarea Ejecutar instrucción T-SQL
-      href: execute-t-sql-statement-task.md
-    - name: Texto Expresión
-      href: expression-task.md
-    - name: Tarea Sistema de archivos
-      href: file-system-task.md
-    - name: Tarea FTP
-      href: ftp-task.md
-    - name: Tarea Sistema de archivos de Hadoop
-      href: hadoop-file-system-task.md
-    - name: Tarea de Hive de Hadoop
-      href: hadoop-hive-task.md
-    - name: Tarea de Pig con Hadoop
-      href: hadoop-pig-task.md
-    - name: Tarea Limpieza de historial
-      href: history-cleanup-task.md
-    - name: 'tarea, Limpieza de mantenimiento'
-      href: maintenance-cleanup-task.md
-    - name: Message Queue Task
-      href: message-queue-task.md
-      items:
-        - name: Seleccionar variables
-          href: select-variables.md
-        - name: Seleccionar un paquete
-          href: select-a-package.md
-    - name: 'Notificar al operador, tarea'
-      href: notify-operator-task.md
-    - name: Tarea Volver a generar índice
-      href: rebuild-index-task.md
-    - name: Tarea Reorganizar índice
-      href: reorganize-index-task.md
-    - name: Tarea Script
-      href: script-task.md
-      items:
-        - name: Página Seleccionar variables
-          href: select-variables-page.md
-    - name: 'Enviar correo, tarea'
-      href: send-mail-task.md
-    - name: 'Reducir base de datos, tarea'
-      href: shrink-database-task.md
-    - name: Tarea Transferir bases de datos
-      href: transfer-database-task.md
-    - name: Tarea Transferir mensajes de error
-      href: transfer-error-messages-task.md
-    - name: Tarea Transferir trabajos
-      href: transfer-jobs-task.md
-    - name: Tarea Transferir inicios de sesión
-      href: transfer-logins-task.md
-    - name: Tarea Transferir procedimientos almacenados principales
-      href: transfer-master-stored-procedures-task.md
-    - name: Tarea Transferir objetos de SQL Server
-      href: transfer-sql-server-objects-task.md
-    - name: Seleccionar objetos para transferir
-      href: select-objects-to-transfer.md
-    - name: Tarea Actualizar estadísticas
-      href: update-statistics-task.md
-    - name: Tarea Servicio web
-      href: web-service-task.md
-    - name: Tarea Lector de datos WMI
-      href: wmi-data-reader-task.md
-    - name: Tarea Monitor de eventos WMI
-      href: wmi-event-watcher-task.md
-    - name: Tarea XML
-      href: xml-task.md
-      items:
-        - name: Validate XML with the XML Task
-          href: validate-xml-with-the-xml-task.md
+      - name: Formulario de perfil rápido de tabla única (tarea de generación de perfiles de datos)
+        href: single-table-quick-profile-form-data-profiling-task.md
+      - name: Editor de tareas de generación de perfiles de datos (página Solicitudes de perfil)
+        href: data-profiling-task-editor-profile-requests-page.md
+        items:
+        - name: Opciones de Solicitud de perfil de claves candidatas (tarea de generación de perfiles de datos)
+          href: candidate-key-profile-request-options-data-profiling-task.md
+        - name: Opciones de Solicitud de perfil de distribución de longitud de columnas (tarea de generación de perfiles de datos)
+          href: column-length-distribution-profile-request-options-data-profiling-task.md
+        - name: Opciones de Solicitud de perfil de proporción de columnas nulas (tarea de generación de perfiles de datos)
+          href: column-null-ratio-profile-request-options-data-profiling-task.md
+        - name: Opciones de Solicitud de perfil de patrón de columnas (tarea de generación de perfiles de datos)
+          href: column-pattern-profile-request-options-data-profiling-task.md
+        - name: Opciones de Solicitud de perfil de estadísticas de columnas (tarea de generación de perfiles de datos)
+          href: column-statistics-profile-request-options-data-profiling-task.md
+        - name: Opciones de Solicitud de perfil de distribución de valores de columna (tarea de generación de perfiles de datos)
+          href: column-value-distribution-profile-request-options-data-profiling-task.md
+        - name: Opciones de Solicitud de perfil de dependencia funcional (tarea de generación de perfiles de datos)
+          href: functional-dependency-profile-request-options-data-profiling-task.md
+        - name: Opciones de Solicitud de perfil de inclusión de valores (tarea de generación de perfiles de datos)
+          href: value-inclusion-profile-request-options-data-profiling-task.md
+      - name: Editor de tareas de generación de perfiles de datos (página General)
+        href: data-profiling-task-editor-general-page.md
+      - name: Incorporar una tarea de generación de perfiles de datos en un flujo de trabajo de paquetes
+        href: incorporate-a-data-profiling-task-in-package-workflow.md
+  - name: Tarea Ejecutar paquete
+    href: execute-package-task.md
+  - name: Tarea Ejecutar proceso
+    href: execute-process-task.md
+  - name: Tarea Ejecutar trabajo del Agente SQL Server
+    href: execute-sql-server-agent-job-task.md
+  - name: Tarea Ejecutar SQL
+    href: execute-sql-task.md
+  - name: MERGE en paquetes de Integration Services
+    href: merge-in-integration-services-packages.md
+  - name: Tarea Ejecutar instrucción T-SQL
+    href: execute-t-sql-statement-task.md
+  - name: Texto Expresión
+    href: expression-task.md
+  - name: Tarea Sistema de archivos
+    href: file-system-task.md
+  - name: Tarea FTP
+    href: ftp-task.md
+  - name: Tarea Sistema de archivos de Hadoop
+    href: hadoop-file-system-task.md
+  - name: Tarea de Hive de Hadoop
+    href: hadoop-hive-task.md
+  - name: Tarea de Pig con Hadoop
+    href: hadoop-pig-task.md
+  - name: Tarea Limpieza de historial
+    href: history-cleanup-task.md
+  - name: tarea, Limpieza de mantenimiento
+    href: maintenance-cleanup-task.md
+  - name: Message Queue Task
+    href: message-queue-task.md
+    items:
+    - name: Seleccionar variables
+      href: select-variables.md
+    - name: Seleccionar un paquete
+      href: select-a-package.md
+  - name: Notificar al operador, tarea
+    href: notify-operator-task.md
+  - name: Tarea Volver a generar índice
+    href: rebuild-index-task.md
+  - name: Tarea Reorganizar índice
+    href: reorganize-index-task.md
+  - name: Tarea Script
+    href: script-task.md
+    items:
+    - name: Página Seleccionar variables
+      href: select-variables-page.md
+  - name: Enviar correo, tarea
+    href: send-mail-task.md
+  - name: Reducir base de datos, tarea
+    href: shrink-database-task.md
+  - name: Tarea Transferir bases de datos
+    href: transfer-database-task.md
+  - name: Tarea Transferir mensajes de error
+    href: transfer-error-messages-task.md
+  - name: Tarea Transferir trabajos
+    href: transfer-jobs-task.md
+  - name: Tarea Transferir inicios de sesión
+    href: transfer-logins-task.md
+  - name: Tarea Transferir procedimientos almacenados principales
+    href: transfer-master-stored-procedures-task.md
+  - name: Tarea Transferir objetos de SQL Server
+    href: transfer-sql-server-objects-task.md
+  - name: Seleccionar objetos para transferir
+    href: select-objects-to-transfer.md
+  - name: Tarea Actualizar estadísticas
+    href: update-statistics-task.md
+  - name: Tarea Servicio web
+    href: web-service-task.md
+  - name: Tarea Lector de datos WMI
+    href: wmi-data-reader-task.md
+  - name: Tarea Monitor de eventos WMI
+    href: wmi-event-watcher-task.md
+  - name: Tarea XML
+    href: xml-task.md
+    items:
+    - name: Validate XML with the XML Task
+      href: validate-xml-with-the-xml-task.md
 - name: Restricciones de precedencia
   href: precedence-constraints.md
+ms.openlocfilehash: 71692b371dbb280515e35e270e0e0c11aecf876d
+ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45533958"

@@ -14,17 +14,17 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 319abf02d87a12e8df96e6e22666da54ade16d1d
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 0a26f0ef02fbe9c6b1dd47c9ff0d111a89340469
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084507"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563900"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Usar objetos de Microsoft SQL Server 2012 en un proyecto
 En este ejemplo, agregará un objeto de secuencia a un proyecto de base de datos destinado a Microsoft SQL Server 2012.  
   
-Las secuencias se incluyeron en Microsoft SQL Server 2012. Una secuencia es un objeto enlazado a un esquema definido por el usuario que genera una secuencia de valores numéricos según la especificación con la que se creó la secuencia. La secuencia de valores numéricos se genera en orden ascendente o descendente en un intervalo definido y puede repetirse cuando se solicite.  Para más información sobre los objetos de secuencia consulte [Números de secuencia](htttp://msdn.microsoft.com/en-us/library/ff878058(SQL.110).aspx). Para información sobre las novedades de Microsoft SQL Server 2012, consulte [Novedades de SQL Server 2012](http://msdn.microsoft.com/en-us/library/bb500435(SQL.110).aspx).  
+Las secuencias se incluyeron en Microsoft SQL Server 2012. Una secuencia es un objeto enlazado a un esquema definido por el usuario que genera una secuencia de valores numéricos según la especificación con la que se creó la secuencia. La secuencia de valores numéricos se genera en orden ascendente o descendente en un intervalo definido y puede repetirse cuando se solicite.  Para más información sobre los objetos de secuencia consulte [Números de secuencia](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx). Para información sobre las novedades de Microsoft SQL Server 2012, consulte [Novedades de SQL Server 2012](http://msdn.microsoft.com/library/bb500435(SQL.110).aspx).  
   
 > [!WARNING]  
 > Los procedimientos siguientes usan entidades creadas en procedimientos anteriores de las secciones [Desarrollo de bases de datos conectadas](../ssdt/connected-database-development.md) y [Desarrollo de bases de datos sin conexión orientado a proyectos](../ssdt/project-oriented-offline-database-development.md).  

@@ -17,12 +17,12 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86b506d493b49e664062c704a4ebabf01e51b3a0
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 5aea3337f9c3c60c51c41a2c1af8e812c50af8f6
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087557"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563601"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Cómo: Cambiar la plataforma de destino y publicar un proyecto de base de datos
 Puede cambiar la versión de SQL Server de destino para su proyecto de base de datos SQL Server Data Tools (SSDT) por cualquier instancia compatible de SQL Server (SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012 o SQL Azure). De esta forma, puede centralizar el desarrollo de base de datos en un proyecto y publicarlo en varios tipos de instancias de SQL Server si es necesario.  
@@ -46,7 +46,7 @@ SSDT también simplifica esta tarea, ya que reconoce la plataforma de destino y 
   
 3.  Observe que aparece el siguiente error en el panel **Lista de errores**: SQL70015: 'Referencia de grupo de archivos y esquema de partición' no se admite en SQL Azure.  
   
-    SSDT valida automáticamente el script según la plataforma de destino. En este caso, como el grupo de archivos no se admite en SQL Azure, SSDT devuelve un error. Para obtener una lista de instrucciones Transact\-SQL no admitidas en SQL Azure, consulte [Instrucciones Transact-SQL admitidas parcialmente (Microsoft Azure SQL Database)](http://msdn.microsoft.com/en-us/library/ee336267.aspx).  
+    SSDT valida automáticamente el script según la plataforma de destino. En este caso, como el grupo de archivos no se admite en SQL Azure, SSDT devuelve un error. Para obtener una lista de instrucciones Transact\-SQL no admitidas en SQL Azure, consulte [Instrucciones Transact-SQL admitidas parcialmente (Microsoft Azure SQL Database)](http://msdn.microsoft.com/library/ee336267.aspx).  
   
 4.  Quite la cláusula `ON` . Observe que el error desaparece inmediatamente de la **Lista de errores**.  
   

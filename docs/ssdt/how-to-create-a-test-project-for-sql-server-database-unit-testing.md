@@ -14,12 +14,12 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a7997f7b2acf88ea358c9ddd42df5cca073a8f28
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 9f641380e18dbcb042e36704627e1e39e2f9a4e7
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087127"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563652"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Cómo: Crear un proyecto de prueba para las pruebas unitarias de base de datos de SQL Server
 Antes de empezar a escribir las pruebas unitarias que evalúan los objetos de base de datos, debe crear primero un proyecto de prueba. Este proyecto contiene pruebas unitarias de SQL Server, pero podría contener otros tipos de pruebas.  
@@ -32,7 +32,7 @@ Puede colocar todas las pruebas unitarias de SQL Server de un proyecto de base d
 |¿Las diferentes pruebas unitarias de SQL Server necesitan tener acceso a distintas conexiones de base de datos para la ejecución de prueba o la validación de prueba?|En caso afirmativo, necesita más de un proyecto de prueba. No puede especificar más de una conexión de base de datos para la ejecución de prueba. Sin embargo, puede especificar una conexión de base de datos diferente para la validación de prueba.|  
 |¿Desea implementar distintos proyectos de base de datos para las diferentes pruebas unitarias?|En caso afirmativo, necesita más de un proyecto de prueba. Un proyecto de prueba solo puede implementar un proyecto de base de datos.|  
   
-Para obtener más información sobre cada una de estas preguntas, consulte [Cómo: Configurar una ejecución de prueba unitaria de SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md). Como alternativa a la creación de varios proyectos de prueba, también puede proporcionar su propia implementación de Microsoft.Data.Schema.UnitTesting.DatabaseTestService [DatabaseTestService](https://msdn.microsoft.com/en-us/library/microsoft.data.schema.unittesting.databasetestservice.aspx).  
+Para obtener más información sobre cada una de estas preguntas, consulte [Cómo: Configurar una ejecución de prueba unitaria de SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md). Como alternativa a la creación de varios proyectos de prueba, también puede proporcionar su propia implementación de Microsoft.Data.Schema.UnitTesting.DatabaseTestService [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx).  
   
 Tiene tres opciones para agregar un proyecto de prueba a una solución que contenga un proyecto de base de datos:  
   

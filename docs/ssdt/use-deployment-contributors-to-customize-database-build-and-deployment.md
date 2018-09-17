@@ -14,12 +14,12 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea94d533714f17cd251805c5c33ec886ebbfb989
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 37fdcf6fdce41cf69a81eaea0d3ca3c9bd5c0c67
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083787"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563771"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>Personalizar la compilación de bases de datos y la implementación con colaboradores de implementación y compilación
 Visual Studio proporciona puntos de extensibilidad que puede utilizar para modificar el comportamiento de las acciones de compilación e implementación de los proyectos de base de datos.  
@@ -36,11 +36,11 @@ Puede crear una extensión de los puntos de extensibilidad, como se muestra en l
 ### <a name="supported-extensibility-scenarios"></a>Escenarios de extensibilidad admitidos  
 Puede implementar colaboradores de compilación o de implementación para habilitar los siguientes escenarios de ejemplo:  
   
--   **Generar la documentación de esquema durante la compilación de un proyecto**: para admitir este escenario, se implementa un [BuildContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) y se invalida el método OnExecute para generar la documentación de esquema. Puede crear un archivo de destino que defina los argumentos predeterminados que controlan si la extensión se ejecuta y para especificar el nombre del archivo de salida.  
+-   **Generar la documentación de esquema durante la compilación de un proyecto**: para admitir este escenario, se implementa un [BuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) y se invalida el método OnExecute para generar la documentación de esquema. Puede crear un archivo de destino que defina los argumentos predeterminados que controlan si la extensión se ejecuta y para especificar el nombre del archivo de salida.  
   
--   **Generar un informe de diferencias al implementar un proyecto de SQL**: para admitir este escenario, se implementa un [DeploymentPlanExecutor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) que genera el archivo XML al implementar el proyecto de SQL.  
+-   **Generar un informe de diferencias al implementar un proyecto de SQL**: para admitir este escenario, se implementa un [DeploymentPlanExecutor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) que genera el archivo XML al implementar el proyecto de SQL.  
   
--   **Modificar el plan de implementación para cambiar se produce un movimiento de datos**: Para admitir este escenario, se implementa un [DeploymentPlanModifier](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) y se efectúa una iteración sobre el plan de implementación. Para cada SqlTableMigrationStep de ese plan, examine el resultado de la comparación para determinar si el paso debe realizarse u omitirse.  
+-   **Modificar el plan de implementación para cambiar se produce un movimiento de datos**: Para admitir este escenario, se implementa un [DeploymentPlanModifier](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) y se efectúa una iteración sobre el plan de implementación. Para cada SqlTableMigrationStep de ese plan, examine el resultado de la comparación para determinar si el paso debe realizarse u omitirse.  
   
 -   **Copiar archivos del dacpac generado al implementar un proyecto de SQL**: para admitir este escenario, se implementa un colaborador de implementación y se invalida el método OnEstablishDeploymentConfiguration para especificar qué archivos están marcados como DeploymentExtensionConfiguration por el sistema del proyecto. Estos archivos se deben copiar en la carpeta de resultados y agregar al dacpac generado. También puede modificar el colaborador para fusionar varios archivos en un nuevo archivo que se copia a la carpeta de resultados y se agrega al manifiesto de implementación. Durante la implementación, puede implementar el método OnApplyDeploymentConfiguration para extraer esos archivos del dacpac y prepararlos para usarlos en el método OnExecute.  
   
@@ -50,9 +50,9 @@ Además, puede exponer pares personalizados de argumentos de nombre/valor desde 
   
 |**Tareas comunes**|**Contenido adicional**|  
 |--------------------|--------------------------|  
-|**Obtenga más información acerca de los puntos de extensibilidad:** puede obtener información acerca de las clases base que se utilizan para implementar colaboradores de compilación y de implementación.|[BuildContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
+|**Obtenga más información acerca de los puntos de extensibilidad:** puede obtener información acerca de las clases base que se utilizan para implementar colaboradores de compilación y de implementación.|[BuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
 |**Crear colaboradores de ejemplo:** aprenda los pasos necesarios para crear un colaborador de compilación o de implementación. Si sigue estos tutoriales, debe:<br /><br />-   Crear un colaborador de compilación que genere un informe que enumera todos los elementos del modelo.<br />-   Crear un colaborador de implementación que cambie el plan de implementación antes de que se ejecute.<br />-   Crear un colaborador de implementación que genere un informe de implementación al implementar un proyecto de SQL.<br /><br />Puede crear todos los colaboradores en un único ensamblado o en varios ensamblados, dependiendo de cómo desee que estén distribuidos los colaboradores en el equipo.|[Tutorial: Ampliar la compilación del proyecto de base de datos para generar estadísticas de modelo](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[Tutorial: Ampliar la implementación del proyecto de base de datos para modificar el plan de implementación](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[Tutorial: Ampliar la implementación del proyecto de base de datos para analizar el plan de implementación](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
   
 ## <a name="see-also"></a>Ver también  
-[Definir condiciones personalizadas para pruebas unitarias de SQL](http://msdn.microsoft.com/en-us/library/jj860449(v=vs.103).aspx)  
+[Definir condiciones personalizadas para pruebas unitarias de SQL](http://msdn.microsoft.com/library/jj860449(v=vs.103).aspx)  
   

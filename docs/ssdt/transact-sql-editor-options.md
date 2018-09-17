@@ -31,12 +31,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7b38d931ef80cfdbd93abab2241b3fd8def8b6b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dd9936b3b100ffc4509369a49cff767094152c97
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085947"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564021"
 ---
 # <a name="transact-sql-editor-options"></a>Opciones del Editor de Transact-SQL
 Este tema contiene información sobre algunas de las opciones del Editor de Transact-SQL. Para establecer estas opciones, navegue al cuadro de diálogo **Opción** a través del menú **Herramientas\Opciones**.  
@@ -57,7 +57,7 @@ Este tema contiene información sobre algunas de las opciones del Editor de Tran
 |**SET NOEXEC**|Cuando es **ON**, indica a Microsoft® SQL Server™ que debe compilar cada lote de instrucciones Transact-SQL pero no debe ejecutarlas. Cuando es **OFF**, indica a Microsoft® SQL Server™ que ejecute todos los lotes después de la compilación. Para más información, consulte [SET NOEXEC](http://go.microsoft.com/fwlink/?LinkId=238770).|  
 |**SET PARSEONLY**|Comprueba la sintaxis de cada instrucción Transact-SQL y devuelve los mensajes de error sin compilar ni ejecutar la instrucción. Para obtener más información, vea [SET PARSEONLY](http://go.microsoft.com/fwlink/?LinkId=238734).|  
 |**SET CONCAT_NULL_YIELDS_NULL**|Determina si los resultados de la concatenación se tratan como valor NULL o como cadena vacía. Para más información, consulte [SET CONCAT_NULL_YIELDS_NULL](http://go.microsoft.com/fwlink/?LinkId=238733).|  
-|**SET ARITHABORT**|Cancela una consulta cuando se produce un error de desbordamiento o división por cero durante su ejecución. Para más información, consulte [SET ARITHABORT](http://msdn.microsoft.com/en-us/library/aa259212(v=SQL.80).aspx).|  
+|**SET ARITHABORT**|Cancela una consulta cuando se produce un error de desbordamiento o división por cero durante su ejecución. Para más información, consulte [SET ARITHABORT](http://msdn.microsoft.com/library/aa259212(v=SQL.80).aspx).|  
 |**SET SHOWPLAN_TEXT**|Hace que Microsoft® SQL Server™ no ejecute instrucciones Transact-SQL. En su lugar, SQL Server devuelve información detallada sobre el modo en que se ejecutan las instrucciones. Para más información, consulte [SET SHOWPLAN_TEXT](http://go.microsoft.com/fwlink/?LinkID=238737).|  
 |**SET STATISTICS TIME**|Muestra el número de milisegundos necesarios para analizar, compilar y ejecutar cada instrucción.|  
 |**SET STATISTICS IO**|Hace que Microsoft® SQL Server™ muestre información relacionada con la cantidad de actividad de disco generada por las instrucciones Transact-SQL.|  

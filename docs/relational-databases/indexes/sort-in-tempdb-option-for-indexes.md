@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ecbe8b1fb2540eff9334e7c68a7b5a8872decb2b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4171e4b8636759c3df4ebfa0dc5eb0ee7f90c31c
+ms.sourcegitcommit: a41bad24d0619753471d3c79f4e57b051914836f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084658"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44499331"
 ---
 # <a name="sortintempdb-option-for-indexes"></a>Opción SORT_IN_TEMPDB para índices
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,19 +60,19 @@ ms.locfileid: "43084658"
   
  Si SORT_IN_TEMPDB se establece en OFF, el espacio de disco disponible en el grupo de archivos de destino debe ser aproximadamente el tamaño del índice final. Durante la primera fase, se crean las ordenaciones y éstas requieren aproximadamente la misma cantidad de espacio que el índice final. Durante la segunda fase, cada extensión de ordenación se libera después de haberla procesado. Esto significa que las extensiones de ordenación se liberan más o menos a la misma velocidad a la que se adquieren extensiones para albergar las páginas del índice final; por tanto, los requisitos de espacio globales no exceden en gran medida el tamaño del índice final. Un efecto secundario de esto es que, si la cantidad de espacio disponible es muy próxima al tamaño del índice final, [!INCLUDE[ssDE](../../includes/ssde-md.md)] tenderá a reutilizar las extensiones de ordenación con mucha rapidez cuando se liberen. Puesto que las extensiones de ordenación se liberan de una manera en cierto modo aleatoria, esto reduce la continuidad de las extensiones del índice en este escenario. Si SORT_IN_TEMPDB se establece en OFF, la continuidad de las extensiones del índice mejora si hay suficiente espacio disponible en el grupo de archivos de destino que se pueda asignar a las extensiones del índice desde un grupo contiguo en lugar de hacerlo desde extensiones de ordenación cuya asignación ha sido cancelada recientemente.  
   
- Cuando crea un índice no clúster, debe tener como espacio disponible:  
+Cuando crea un índice no clúster, debe tener como espacio disponible:  
   
 -   Si SORT_IN_TEMPDB se establece en ON, debe haber suficiente espacio disponible en **tempdb** para almacenar las ordenaciones y suficiente espacio disponible en el grupo de archivos de destino para almacenar la estructura del índice final. Las ordenaciones contienen las filas hoja del índice.  
   
 -   Si SORT_IN_TEMPDB se establece en OFF, el espacio disponible del grupo de archivos de destino debe ser lo suficientemente extenso como para almacenar la estructura del índice final. La continuidad de las extensiones del índice se puede mejorar si hay más espacio disponible.  
   
- Cuando crea un índice clúster en una tabla que carece de índices no clúster, debe tener disponible como espacio disponible:  
+Cuando crea un índice clúster en una tabla que carece de índices no clúster, debe tener disponible como espacio disponible:  
   
 -   Si SORT_IN_TEMPDB se establece en ON, debe haber suficiente espacio disponible en **tempdb** para almacenar las ordenaciones. incluidas las filas de datos de la tabla, y suficiente espacio disponible en el grupo de archivos de destino para almacenar la estructura del índice final, incluidas las filas de datos de la tabla y del árbol b del índice. Puede ser preciso ajustar la estimación para factores como tener un tamaño de clave grande o un factor de relleno con un valor bajo.  
   
 -   Si SORT_IN_TEMPDB se establece en OFF, el espacio disponible del grupo de archivos de destino debe ser lo suficientemente extenso como para almacenar la tabla final. Esto incluye la estructura del índice. La continuidad de la tabla y las extensiones del índice se puede mejorar si hay más espacio disponible.  
   
- Cuando crea un índice clúster en una tabla que tiene índices no clúster, debe tener disponible como espacio disponible:  
+Cuando crea un índice clúster en una tabla que tiene índices no clúster, debe tener disponible como espacio disponible:  
   
 -   Si SORT_IN_TEMPDB se establece en ON, debe haber suficiente espacio disponible en **tempdb** para almacenar el conjunto de ordenaciones para el índice más grande, normalmente el índice agrupado, y suficiente espacio disponible en el grupo de archivos de destino para almacenar las estructuras finales de todos los índices. Esto incluye el índice clúster que contiene las filas de datos de la tabla.  
   

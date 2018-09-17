@@ -17,12 +17,12 @@ caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1c070d081e622982bbead15826914b01a89179e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2c3ae93bc044f75f502a357df50495f5041b165e
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991898"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563711"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Tutorial: Copias de seguridad y restauración de SQL Server en el servicio Azure Blob Storage
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ En esta lección, creará una cuenta de Azure Storage y un contenedor de blobs.
 [Lección 2: Crear una credencial de SQL Server](http://msdn.microsoft.com/library/64f8805c-1ddc-4c96-a47c-22917d12e1ab)  
 En esta lección, creará una credencial para almacenar la información de seguridad usada para acceder a la cuenta de Azure Storage.  
   
-[Lección 3: Escribir una copia de seguridad completa de la base de datos en el servicio Azure Blob Storage](https://technet.microsoft.com/en-us/library/jj720552\(v=sql.110\).aspx)  
+[Lección 3: Escribir una copia de seguridad completa de la base de datos en el servicio Azure Blob Storage](https://technet.microsoft.com/library/jj720552\(v=sql.110\).aspx)  
 En esta lección, emitirá una instrucción T-SQL para escribir una copia de seguridad de la base de datos AdventureWorks2012 en el servicio Azure Blob Storage.  
   
 [Lección 4: Realizar una restauración desde una copia de seguridad completa de la base de datos](http://msdn.microsoft.com/library/580f76e6-9802-4abc-9043-db6de592c733)  

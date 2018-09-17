@@ -21,18 +21,18 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fcb6a4d0468dc74bbc937a11fd60783897e402cf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 513b0ca3c7cab0556f94f299afdc69207927fd01
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047343"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564171"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutorial: Configurar la replicación entre dos servidores conectados completamente (transaccional)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 La replicación transaccional es una buena solución para el problema de mover datos entre servidores conectados de forma continua. Mediante el Asistente para replicación, puede configurar y administrar fácilmente una topología de replicación. 
 
-Este tutorial le mostrará cómo configurar una topología de replicación transaccional para servidores conectados de forma continua. Para más información sobre cómo funciona la replicación transaccional, vea [Replicación transaccional](https://docs.microsoft.com/en-us/sql/relational-databases/replication/transactional/transactional-replication). 
+Este tutorial le mostrará cómo configurar una topología de replicación transaccional para servidores conectados de forma continua. Para más información sobre cómo funciona la replicación transaccional, vea [Replicación transaccional](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication). 
   
 ## <a name="what-you-will-learn"></a>Aprendizaje  
 En este tutorial aprenderá a publicar datos de una base de datos en otra mediante la replicación transaccional. 
@@ -56,13 +56,13 @@ Para completar este tutorial, necesita tener SQL Server, SQL Server Management S
   
 - En el servidor del suscriptor (destino), instale cualquier edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], excepto [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] no puede ser un suscriptor de una replicación transaccional.  
   
-- Instale [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- Descargue la [base de datos de ejemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Para obtener instrucciones sobre cómo restaurar una base de datos en SSMS, vea [Restaurar una copia de seguridad de base de datos con SSMS](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+- Descargue la [base de datos de ejemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Para obtener instrucciones sobre cómo restaurar una base de datos en SSMS, vea [Restaurar una copia de seguridad de base de datos con SSMS](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
  
 >[!NOTE]
 > - La replicación no se admite entre instancias de SQL Server que estén separadas por más de dos versiones entre sí. Para más información, vea la entrada de blog [Supported SQL Server versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/) (Versiones de SQL Server admitidas en la topología de replicación).
-> - En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], debe conectarse al publicador y al suscriptor con un inicio de sesión que sea miembro del rol fijo de servidor **sysadmin**. Para más información sobre este rol, vea [Roles de nivel de servidor](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles).  
+> - En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], debe conectarse al publicador y al suscriptor con un inicio de sesión que sea miembro del rol fijo de servidor **sysadmin**. Para más información sobre este rol, vea [Roles de nivel de servidor](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
   
   
 **Tiempo estimado para completar este tutorial: 60 minutos**  
@@ -174,7 +174,7 @@ En esta sección se agrega un suscriptor a la publicación que creada anteriorme
 
    ![Página "Publicación" con la publicación seleccionada](media/tutorial-replicating-data-between-continuously-connected-servers/selectpub.png)
   
-4. En la página **Ubicación del Agente de distribución**, seleccione **Ejecutar todos los agentes en el distribuidor** y luego seleccione **Siguiente**.  Para más información sobre las suscripciones de inserción y de extracción, vea [Suscribirse a publicaciones](https://docs.microsoft.com/en-us/sql/relational-databases/replication/subscribe-to-publications).
+4. En la página **Ubicación del Agente de distribución**, seleccione **Ejecutar todos los agentes en el distribuidor** y luego seleccione **Siguiente**.  Para más información sobre las suscripciones de inserción y de extracción, vea [Suscribirse a publicaciones](https://docs.microsoft.com/sql/relational-databases/replication/subscribe-to-publications).
 
    ![Página "Ubicación del Agente de distribución" con la opción seleccionada para ejecutar todos los agentes en el distribuidor](media/tutorial-replicating-data-between-continuously-connected-servers/runagentsatdist.png)
   

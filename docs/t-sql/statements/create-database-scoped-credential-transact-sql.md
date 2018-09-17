@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 813c9b6c661cc6d04cb586ac61f2c8041bb781df
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f0e356fc4e62fb07cff0f08c375488a759d01712
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43067147"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564001"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,7 +115,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 En el ejemplo siguiente se crea una credencial con ámbito de base de datos que se puede usar para crear un [origen de datos externo](../../t-sql/statements/create-external-data-source-transact-sql.md), que PolyBase puede usar en Azure SQL Data Warehouse.
 
 Azure Data Lake Store usa una aplicación de Azure Active Directory para la autenticación de servicio a servicio.
-[Cree una aplicación AAD](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) y documente su client_id, OAuth_2.0_Token_EndPoint y la clave antes de intentar crear una credencial con ámbito de base de datos.
+[Cree una aplicación AAD](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) y documente su client_id, OAuth_2.0_Token_EndPoint y la clave antes de intentar crear una credencial con ámbito de base de datos.
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL ADL_User

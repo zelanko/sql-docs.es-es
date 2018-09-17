@@ -1,7 +1,7 @@
 ---
 title: CREATE TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -50,20 +50,18 @@ caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d70a8a17b0a168787da8f0894e2a8c681bd40b8d
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: a9a443f1cb6d951a486a1bf58ad2c96a2b47195c
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40411816"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171897"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Crea una nueva tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
 > [!NOTE]   
 >  Para la sintaxis de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vea [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
   
@@ -412,7 +410,7 @@ TEXTIMAGE_ON solo cambia la ubicación del "espacio de almacenamiento de LOB", p
   
  FILESTREAM_ON { *partition_scheme_name* | grupo de archivos | **"** default **"** } 
  
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Azure SQL Database no admite `FILESTREAM`.
  
  Especifica el grupo de archivos para los datos FILESTREAM.  
   
@@ -852,7 +850,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }  
    
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Azure SQL Database no admite `FILETABLE`. 
   
  Especifica el nombre de la intercalación que se va a aplicar a la columna **Name** en la FileTable. La intercalación no debe distinguir mayúsculas de minúsculas para cumplir con la semántica de nomenclatura de archivos de Windows. Si no se especifica este valor, se usa la intercalación predeterminada de la base de datos. Si la intercalación predeterminada de la base de datos distingue mayúsculas de minúsculas, se genera un error en la operación CREATE TABLE.  
   
@@ -927,7 +925,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MEMORY_OPTIMIZED  
    
-**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Instancia administrada de Azure SQL Database no admite tablas optimizadas para memoria. 
   
  El valor ON indica si la tabla está optimizada para memoria. Las tablas optimizadas para memoria forman parte de la característica OLTP en memoria, que se usa para mejorar el rendimiento del procesamiento de transacciones. Para empezar con OLTP en memoria, vea [Inicio rápido 1: Tecnologías de OLTP en memoria para acelerar el rendimiento de Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Para más información sobre las tablas optimizadas para memoria, vea [Tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
@@ -967,8 +965,7 @@ Los índices de columna y de tabla se pueden especificar como parte de la instru
  Los índices hash solo se admiten en las tablas optimizadas para memoria.  
   
 ## <a name="remarks"></a>Notas  
- Para más información sobre el número de tablas, columnas, restricciones e índices permitidos, vea 
-[Especificaciones de capacidad máxima para SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
+ Para más información sobre el número de tablas, columnas, restricciones e índices permitidos, vea [Especificaciones de capacidad máxima para SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
   
  Normalmente, el espacio se asigna a las tablas e índices en incrementos de una extensión cada vez. Cuando la opción SET MIXED_PAGE_ALLOCATION de ALTER DATABASE se establece en TRUE, o siempre que se crea una tabla o índice en versiones anteriores a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], se le asignan páginas de extensiones mixtas hasta que tiene suficientes páginas para llenar una extensión uniforme. Una vez que haya suficientes páginas para llenar una extensión uniforme, se asigna otra extensión cada vez que se llenan las extensiones asignadas actualmente. Para obtener un informe sobre la cantidad de espacio asignado y usado por una tabla, ejecute **sp_spaceused**.  
   

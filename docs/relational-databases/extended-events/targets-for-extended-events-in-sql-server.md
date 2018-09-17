@@ -1,7 +1,7 @@
 ---
 title: Destinos para eventos extendidos en SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: df5fc32aa7a6d42077e93d6b1dd4ca163404dc16
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4d8a163b14cd44aab21a294fedee918b34fd95b0
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39533825"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171787"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinos para eventos extendidos en SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ Los eventos extendidos de SQL Server pueden interoperar con Seguimiento de event
 Este destino ETW procesa *de forma sincrónica* los datos que recibe, mientras que la mayoría de los destinos los procesan *de forma asincrónica*.
 
 > [!NOTE]
-> Azure SQL Database no admite el destino ETW. Instancia administrada de Azure SQL Database tampoco lo admite.
+> Azure SQL Database no admite `etw_classic_sync_target target`.
 
 <!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
@@ -157,7 +157,7 @@ El destino **event_file** escribe el resultado de la sesión de eventos desde el
 ::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
 
 > [!NOTE]
-> Azure SQL Database admite el destino **event_file**, pero solo usando un blob en Azure Storage para el resultado. SQL Database no puede almacenar el resultado del evento en un archivo en la unidad de disco duro local.
+> Azure SQL Database solo admite el almacenamiento de archivos `xel` en Azure Blob Storage. 
 >
 > Para ver un ejemplo de código de **event_file** particular de SQL Database (y de Instancia administrada de SQL Database), vea [Código de destino del archivo de evento para eventos extendidos en SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
 

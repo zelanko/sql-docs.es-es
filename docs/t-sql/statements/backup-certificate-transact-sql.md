@@ -1,7 +1,7 @@
 ---
 title: BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -32,19 +32,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e324d8823176e8153a6536be7dcd0a1ca8baae77
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: acc945ee464ae143f5ae9b2fd9ce803a3045d1f0
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43105738"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171597"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-asdw-pdw-md.md)]
 
   Exporta un certificado a un archivo.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -74,28 +74,32 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
   
 ## <a name="arguments"></a>Argumentos  
  *path_to_file*  
- Especifica la ruta de acceso completa, incluido el nombre de archivo, al archivo en el que se almacenará el certificado. Puede ser una ruta de acceso local o una ruta UNC a una ubicación de red. La ruta de acceso predeterminada es la carpeta DATA de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Especifica la ruta de acceso completa, incluido el nombre de archivo, al archivo en el que se almacenará el certificado. Esta ruta de acceso puede ser una ruta de acceso local o una ruta UNC a una ubicación de red. La ruta de acceso predeterminada es la carpeta DATA de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  *path_to_private_key_file*  
- Especifica la ruta de acceso completa, incluido el nombre de archivo, al archivo en el que se almacenará la clave privada. Puede ser una ruta de acceso local o una ruta UNC a una ubicación de red. La ruta de acceso predeterminada es la carpeta DATA de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Especifica la ruta de acceso completa, incluido el nombre de archivo, al archivo en el que se almacenará la clave privada. Esta ruta de acceso puede ser una ruta de acceso local o una ruta UNC a una ubicación de red. La ruta de acceso predeterminada es la carpeta DATA de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+
+> [!IMPORTANT]
+> Azure SQL Database no admite la copia de seguridad de un certificado a un archivo.
+
   
  *encryption_password*  
  Es la contraseña que se utiliza para cifrar la clave privada antes de escribir la clave en el archivo de copia de seguridad. La contraseña se somete a comprobaciones de complejidad.  
   
  *decryption_password*  
- Es la contraseña que se utiliza para descifrar la clave privada antes de realizar una copia de seguridad de la clave. No es necesario si el certificado está cifrado con la clave maestra. 
+ Es la contraseña que se utiliza para descifrar la clave privada antes de realizar una copia de seguridad de la clave. Este argumento no es necesario si el certificado está cifrado con la clave maestra. 
   
 ## <a name="remarks"></a>Notas  
  Si la clave privada se cifra con una contraseña en la base de datos, es necesario especificar la contraseña de descifrado.  
   
- Para realizar una copia de seguridad de la clave privada en un archivo es necesario el cifrado. La contraseña utilizada para proteger la copia de seguridad de un certificado no es la misma que la usada para cifrar la clave privada del certificado.  
+ Para realizar una copia de seguridad de la clave privada en un archivo es necesario el cifrado. La contraseña utilizada para proteger el certificado no es la misma que la usada para cifrar la clave privada del certificado.  
   
  Para restaurar la copia de seguridad de un certificado utilice la instrucción [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md).
  
  Al realizar una copia de seguridad, los archivos se agregan a la lista de control de acceso de la cuenta de servicio de la instancia de SQL Server. Si es necesario restaurar el certificado en un servidor que se ejecuta en otra cuenta, deberá ajustar los permisos en los archivos para que la nueva cuenta pueda leerlos. 
   
 ## <a name="permissions"></a>Permisos  
- Requiere el permiso CONTROL en el certificado y conocimiento de la contraseña que se utiliza para cifrar la clave privada. Si solo se hace una copia de seguridad de la parte pública del certificado, se necesita algún permiso en el certificado y que el llamador no haya denegado el permiso VIEW en el certificado.  
+ Requiere el permiso CONTROL en el certificado y conocimiento de la contraseña que se utiliza para cifrar la clave privada. Si solo se hace una copia de seguridad de la parte pública del certificado, este comando necesita algún permiso en el certificado y que el llamador no haya denegado el permiso VIEW en el certificado.  
   
 ## <a name="examples"></a>Ejemplos  
   

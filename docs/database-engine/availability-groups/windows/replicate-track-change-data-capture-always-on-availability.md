@@ -1,7 +1,7 @@
 ---
 title: Replicación, seguimiento de cambios y captura de datos modificados - Grupos de disponibilidad AlwaysOn | Microsoft Docs
 ms.custom: ''
-ms.date: 04/25/2018
+ms.date: 08/21/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -18,12 +18,12 @@ caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37070e0b036d109624048603b24464a2019ec69d
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: bc5f16247663591862c60dccd2e75975195b327c
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769381"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311675"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replicación, seguimiento de cambios y captura de datos modificados - Grupos de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -211,12 +211,10 @@ Si la captura de datos modificados debe deshabilitarse en una base de datos que 
 |||||  
 |-|-|-|-|  
 ||**publicador**|**Distribuidor***\*|**Suscriptor**|  
-|**Transaccional**|Sí<br /><br /> Nota: No incluye compatibilidad con la replicación transaccional bidireccional y recíproca.|no|Sí|  
+|**Transaccional**|Sí<br /><br /> Nota: No incluye compatibilidad con la replicación transaccional bidireccional y recíproca.|Sí|Sí| 
 |**P2P**|no|no|no|  
-|**Mezcla**|Sí|no|Sí*|  
-|**Snapshot**|Sí|no|Sí*|  
-  
- *La conmutación por error a la base de datos de réplica es un procedimiento manual. No se proporciona la conmutación por error automática.  
+|**Mezcla**|Sí|no|no|  
+|**Snapshot**|Sí|no|Sí|
   
  **La base de datos de distribución no se puede usar con la creación de reflejo de la base de datos.  
   

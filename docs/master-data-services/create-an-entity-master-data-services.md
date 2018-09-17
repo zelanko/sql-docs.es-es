@@ -18,12 +18,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 26ecc54177da5a224e1c26c5dcac58d4e4d4cf3e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bb37f2598422d739be318eec79d6ddc3a9bfdb8f
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410467"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811091"
 ---
 # <a name="create-an-entity-master-data-services"></a>Crear una entidad (Master Data Services)
 
@@ -57,9 +57,11 @@ ms.locfileid: "35410467"
      Si no completa este campo, se usa el nombre de la entidad.  
   
     > [!TIP]  
-    >  El nombre del modelo debe formar parte del nombre de la tabla de almacenamiento provisional, por ejemplo *Nombremodelo_Nombreentidad*. Esto hace que resulte más sencillo buscar tablas en la base de datos. Para obtener más información sobre las tablas de almacenamiento provisional, consulte [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
+    >  El nombre del modelo debe formar parte del nombre de la tabla de almacenamiento provisional, por ejemplo *Nombremodelo_Nombreentidad*. Esto hace que resulte más sencillo buscar tablas en la base de datos. Para obtener más información sobre las tablas de almacenamiento provisional, consulte [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).
+    > [!TIP]  
+    >  Si se utiliza la nomenclatura predeterminada para las tablas de almacenamiento provisional, MDS agregará automáticamente identificadores (por ejemplo, _1, _2) a los nombres de las tablas de almacenamiento provisional si existe una entidad con el mismo nombre en otro modelo.
   
-7.  En el campo **Tipo de registro de transacciones**, elija el tipo de registro de transacciones de la lista desplegable.  
+7.  En el campo **Tipo de registro de transacciones** , elija el tipo de registro de transacciones de la lista desplegable.  
   
      Para obtener información, consulte [Cambio del tipo de registro de transacciones de entidad &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: Agente de instantáneas de replicación | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: replication
@@ -20,12 +20,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 45976c2d0e99303c9aba9aa3251a1ea65f610901
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e2839e7dfa8c0dd32eb4904f4dde43e5ce992e6e
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349997"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311665"
 ---
 # <a name="replication-snapshot-agent"></a>Agente de instantáneas de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,6 +65,7 @@ snapshot [ -?]
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2] ]  
 [-PacketSize packet_size]  
+[-PrefetchTables [0|1] ]  
 [-ProfileName profile_name]  
 [-PublisherDB publisher_database]  
 [-PublisherDeadlockPriority [-1|0|1] ]  
@@ -202,7 +203,15 @@ snapshot [ -?]
   
 > [!NOTE]  
 >  No cambie el tamaño de los paquetes a menos que esté seguro de que mejorará el rendimiento. En la mayoría de las aplicaciones, el tamaño más conveniente de los paquetes es el tamaño predeterminado.  
+
+**-PrefetchTables** [ **0**| **1**]  
+ Parámetro opcional que especifica si se va a realizar una captura previa de los objetos de la tabla y se almacenarán en caché.  El comportamiento predeterminado es la captura previa de determinadas propiedades de tabla mediante el componente SMO basado en un cálculo interno.  Este parámetro puede ser útil en escenarios en los que la operación de la captura previa de SMO tarda bastante más tiempo en ejecutarse. Si no se utiliza este parámetro, esta decisión se toma en tiempo de ejecución en función del porcentaje de tablas que se agregan como artículos a la publicación.  
   
+|Valor OutputVerboseLevel|Descripción|  
+|------------------------------|-----------------|  
+|**0**|La llamada al método de captura previa del componente SMO está deshabilitada.|  
+|**1**|El Agente de instantáneas llamará al método de captura previa para almacenar en caché algunas propiedades de tabla mediante SMO.|  
+
  **-ProfileName** *profile_name*  
  Especifica un perfil de agente para utilizar para los parámetros del agente. Si **ProfileName** es NULL, el perfil de agente se deshabilita. Si no se especifica **ProfileName** , se utiliza el perfil predeterminado para el tipo de agente. Para obtener información, vea [Perfiles del Agente de replicación](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

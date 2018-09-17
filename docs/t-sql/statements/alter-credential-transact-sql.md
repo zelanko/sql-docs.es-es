@@ -1,13 +1,9 @@
 ---
 title: ALTER CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/19/2015
+ms.date: 09/07/2018
 ms.prod: sql
-ms.prod_service: sql-database
-ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER CREDENTIAL
@@ -21,26 +17,24 @@ helpviewer_keywords:
 - authentication [SQL Server], credentials
 - ALTER CREDENTIAL statement
 ms.assetid: b08899a6-c09e-4af4-91aa-a978ada79264
-caps.latest.revision: 27
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7b86aef0e9dd9395f1c803cc3dd2b9e14866b25d
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 6939de7db25f8f0e572cebef2181551f5190922b
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39451913"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171887"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Cambia las propiedades de una credencial.  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+> [!IMPORTANT]
+> Información "Debe hacer" como procedimiento recomendado; "tiene que hacer" para completar la tarea ![Icono del vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono del vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -58,7 +52,10 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  Especifica el nombre de la cuenta que se utilizará para conectarse fuera del servidor.  
   
  SECRET **='***secret***'**  
- Especifica el secreto necesario para la autenticación de salida. *secret* es opcional.  
+ Especifica el secreto necesario para la autenticación de salida. *secret* es opcional.
+  
+> [!IMPORTANT]
+> Azure SQL Database solo admite las identidades de Azure Key Vault y de Firma de acceso compartido. No se admiten las identidades de usuario de Windows.
   
 ## <a name="remarks"></a>Notas  
  Cuando se cambia una credencial, se restablecen los valores de *identity_name* y *secret*. Si no se especifica el argumento opcional SECRET, el valor del secreto almacenado se establecerá en NULL.  

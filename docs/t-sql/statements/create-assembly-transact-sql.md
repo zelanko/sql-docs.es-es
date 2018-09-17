@@ -1,7 +1,7 @@
 ---
 title: CREATE ASSEMBLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/30/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,20 +27,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 99d7e5d69e560fd5d94c38bdab1d29f6d5e0860e
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 44c9ba8b3514c1a28ef2bbe800e0bec0c41b1bba
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456759"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171572"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   Crea un módulo de aplicación administrada que contiene metadatos de clase y código administrado como un objeto en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mediante este módulo, puede crear en la base de datos funciones CLR (Common Language Runtime), procedimientos almacenados, desencadenadores, funciones de agregado definidas por el usuario y tipos definidos por el usuario.  
   
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
 >  [!WARNING]
 >  CLR usa la seguridad de acceso del código (CAS) de .NET Framework, que ya no se admite como un límite de seguridad. Un ensamblado CLR creado con la opción `PERMISSION_SET = SAFE` puede tener acceso a los recursos externos del sistema, llamar a código no administrado y adquirir privilegios sysadmin. A partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], se incluye una opción de `sp_configure` denominada `clr strict security` para mejorar la seguridad de los ensamblados CLR. La opción `clr strict security` está habilitada de forma predeterminada y trata los ensamblados `SAFE` y `EXTERNAL_ACCESS` como si estuvieran marcados con `UNSAFE`. La opción `clr strict security` se puede deshabilitar para permitir la compatibilidad con versiones anteriores, pero no se recomienda hacerlo. Microsoft recomienda que todos los ensamblados estén firmados con un certificado o clave asimétrica con el correspondiente inicio de sesión que tenga concedido el permiso `UNSAFE ASSEMBLY` en la base de datos maestra. Para obtener más información, vea [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md).  
   
@@ -71,6 +69,9 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  \<especificador_de_ensamblado_de_cliente>  
 Especifica la ruta de acceso local o ubicación de red en la que se encuentra el ensamblado que se carga y, además, el nombre de archivo de manifiesto que se corresponde con el ensamblado.  \<especificador_de_ensamblado_de_cliente> se puede expresar como una cadena fija o una expresión que se evalúe como una cadena fija, con variables. CREATE ASSEMBLY no admite la carga de ensamblados de varios módulos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también busca cualquier ensamblado dependiente de este ensamblado en la misma ubicación y lo carga con el mismo propietario que el ensamblado de nivel raíz. Si estos ensamblados dependientes no se encuentran o aún no están cargados en la base de datos actual, CREATE ASSEMBLY produce un error. Si los ensamblados dependientes ya están cargados en la base de datos actual, el propietario de los mismos deberá ser el mismo que el del ensamblado nuevo que se crea.
+
+> [!IMPORTANT]
+> Azure SQL Database no admite la creación de un ensamblado desde un archivo.
   
  No se puede especificar \<especificador_de_ensamblado_de_cliente> si el usuario que ha iniciado sesión es suplantado.  
   
@@ -181,6 +182,9 @@ CREATE ASSEMBLY HelloWorld
 FROM <system_drive>:\Program Files\Microsoft SQL Server\100\Samples\HelloWorld\CS\HelloWorld\bin\debug\HelloWorld.dll  
 WITH PERMISSION_SET = SAFE;  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL Database no admite la creación de un ensamblado desde un archivo.
   
 ### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Ejemplo B: creación de un ensamblado a partir de bits de ensamblado  
   

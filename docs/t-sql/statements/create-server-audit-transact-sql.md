@@ -1,7 +1,7 @@
 ---
 title: CREATE SERVER AUDIT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -26,19 +26,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7d16529308dc45fd64f6b16d7dec92f1fe8be8cc
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 85ee3b6a5f674a9d4ee63cb54ffca867abca1f04
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452119"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171747"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Crea un objeto de auditoría de servidor utilizando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +45,7 @@ ms.locfileid: "39452119"
 ```  
 CREATE SERVER AUDIT audit_name  
 {  
-    TO { [ FILE (<file_options> [ , ...n ] ) ] | APPLICATION_LOG | SECURITY_LOG }  
+    TO { [ FILE (<file_options> [ , ...n ] ) ] | APPLICATION_LOG | SECURITY_LOG | URL}  
     [ WITH ( <audit_options> [ , ...n ] ) ]   
     [ WHERE <predicate_expression> ]  
 }  
@@ -80,8 +78,11 @@ CREATE SERVER AUDIT audit_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- TO { FILE | APPLICATION_LOG | SECURITY_LOG }  
+ TO { FILE | APPLICATION_LOG | SECURITY_LOG | URL  
  Determina la ubicación del destino de la auditoría. Las opciones son un archivo binario, el registro de la aplicación Windows o el registro de seguridad de Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede escribir en el registro de seguridad de Windows sin configurar valores adicionales en Windows. Para obtener más información, vea [Escribir eventos de auditoría de SQL Server en el registro de seguridad](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
+
+> [!IMPORTANT]
+> En Instancia administrada de Azure SQL Database, la auditoría de SQL funciona en el nivel de servidor y almacena archivos `.xel` en Azure Blob Storage.
   
  FILEPATH ='*os_file_path*'  
  La ruta de acceso del registro de auditoría. El nombre de archivo se genera en función del nombre de la auditoría y del GUID de la auditoría.  

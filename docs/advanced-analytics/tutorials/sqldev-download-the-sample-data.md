@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6d5030287e7ad526816f89fd23b13fedae070c56
-ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
+ms.openlocfilehash: 7420476b20cef612c45227f66497ae554def7b1d
+ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42703608"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44724339"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server"></a>Datos de demostración de taxis de Nueva York para SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -118,7 +118,7 @@ En la tabla siguiente se resume los objetos creados en la base de datos de demos
 
 |**Nombre de objeto**|**Tipo de objeto**|**Descripción**|
 |----------|------------------------|---------------|
-|**TaxiNYC_Sample** | Base de datos |Crea el script create db tb carga data.sql. Crea una base de datos y dos tablas:<br /><br />tabla dbo.nyctaxi_sample: contiene el conjunto de datos NYC Taxi principal. Un índice de almacén de columnas agrupado se agrega a la tabla para mejorar el rendimiento de almacenamiento y de consulta. El ejemplo de 1% del conjunto de datos NYC Taxi se insertará en esta tabla.<br /><br />tabla dbo.nyc_taxi_models: usa para conservar el modelo de análisis avanzado entrenado.|
+|**NYCTaxi_Sample** | Base de datos |Crea el script create db tb carga data.sql. Crea una base de datos y dos tablas:<br /><br />tabla dbo.nyctaxi_sample: contiene el conjunto de datos NYC Taxi principal. Un índice de almacén de columnas agrupado se agrega a la tabla para mejorar el rendimiento de almacenamiento y de consulta. El ejemplo de 1% del conjunto de datos NYC Taxi se insertará en esta tabla.<br /><br />tabla dbo.nyc_taxi_models: usa para conservar el modelo de análisis avanzado entrenado.|
 |**fnCalculateDistance** |función escalar | Crea el script fnCalculateDistance.sql. Calcula la distancia directa entre las ubicaciones de recogida y destino. Esta función se utiliza en [crear características de datos](sqldev-create-data-features-using-t-sql.md), [entrenar y guardar un modelo](../r/sqldev-train-and-save-a-model-using-t-sql.md) y [Operacionalizar el modelo de R](sqldev-operationalize-the-model.md).|
 |**fnEngineerFeatures** |función con valores de tabla | Crea el script fnEngineerFeatures.sql. Crea nuevas características de datos de entrenamiento del modelo. Esta función se utiliza en [crear características de datos](sqldev-create-data-features-using-t-sql.md) y [Operacionalizar el modelo de R](sqldev-operationalize-the-model.md).|
 |**PlotHistogram** |procedimiento almacenado | Crea el script PlotHistogram.sql. Llama a una función de R para trazar el histograma de una variable y, a continuación, devuelve el gráfico como un objeto binario. Este procedimiento almacenado se usa en [explorar y visualizar datos](sqldev-explore-and-visualize-the-data.md).|

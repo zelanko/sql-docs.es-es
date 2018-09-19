@@ -1,7 +1,7 @@
 ---
 title: Sys.resource_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 09/13/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,17 +27,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c2f8a0e0cebcf64bedac33861184e806f322d7d1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ea822937f8bdf6fe0a79c20a391976169d336610
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038854"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563991"
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Devuelve los datos de almacenamiento y uso de CPU para Azure SQL Database. Los datos se recopilan y se agregan en intervalos de cinco minutos. Para cada base de datos de usuario, existe una fila para cada ventana de informes de cinco minutos en que haya cambios en el consumo de recursos. Los datos devueltos incluyen uso de CPU, el cambio de tamaño de almacenamiento o modificación de la SKU de la base de datos. Las bases de datos inactivas sin cambios no pueden tener filas por cada intervalo de cinco minutos. Los datos históricos se conservan durante 14 días aproximadamente.  
+  Devuelve los datos de almacenamiento y uso de CPU para Azure SQL Database. Los datos se recopilan y se agregan en intervalos de cinco minutos. Para cada base de datos de usuario, hay una fila por cada ventana de informes de cinco minutos en el que hay un cambio en el consumo de recursos. Los datos devueltos incluyen uso de CPU, el cambio de tamaño de almacenamiento y modificación de la SKU de la base de datos. Las bases de datos inactivas sin cambios no pueden tener filas por cada intervalo de cinco minutos. Los datos históricos se conservan durante 14 días aproximadamente.  
   
  El **sys.resource_stats** vista tiene definiciones diferentes dependiendo de la versión del servidor de base de datos de SQL de Azure que está asociada la base de datos. Tenga en cuenta estas diferencias y cualquier modificación que requiera la aplicación al actualizar a una nueva versión de servidor.  
   
@@ -56,6 +56,7 @@ ms.locfileid: "38038854"
 |max_worker_percent|**decimal(5,2)**|Máximo de trabajos simultáneos (solicitudes) en porcentaje basado en el límite del nivel de servicio de la base de datos.<br /><br /> Actualmente se calcula el máximo para el intervalo de cinco minutos en función de las muestras de 15 segundos de recuentos de trabajo simultáneas.|  
 |max_session_percent|**decimal(5,2)**|Número máximo de sesiones simultáneo en porcentaje basado en el límite del nivel de servicio de la base de datos.<br /><br /> Actualmente se calcula el máximo para el intervalo de cinco minutos en función de las muestras de 15 segundos de recuentos de sesiones simultáneas.|  
 |dtu_limit|**int**|Base de datos max DTU configuración actual de esta base de datos durante este intervalo. |  
+|allocated_storage_in_megabytes|**float**|El formato de la cantidad de espacio de archivo en MB disponible para almacenar la base de datos. Espacio de archivo con formato también se conoce como espacio de datos asignado.  Para obtener más información, consulte: [administración del espacio de archivo en la base de datos SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
 >  Para obtener más contexto sobre estos límites y los niveles de servicio, vea los temas [niveles de servicio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/).  
@@ -63,12 +64,12 @@ ms.locfileid: "38038854"
 ## <a name="permissions"></a>Permisos  
  Esta vista está disponible para todos los roles de usuario con permisos para conectarse a virtual **maestro** base de datos.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los datos devueltos por **sys.resource_stats** se expresa como un porcentaje de los límites máximos permitidos para el nivel de rendimiento o servicio que se está ejecutando.  
   
  Cuando una base de datos es un miembro de un grupo elástico, estadísticas de recursos que aparecen como los valores de porcentaje, se expresan como el porcentaje del límite máximo para las bases de datos como se establece en la configuración del grupo elástico.  
   
- Para obtener una vista más detallada de estos datos, use **sys.dm_db_resource_stats** vista de administración dinámica en una base de datos de usuario. Esta vista captura datos cada 15 segundos y mantiene datos históricos durante 1 hora.  Para obtener más información, consulte [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md).  
+ Para obtener una vista más detallada de estos datos, use **sys.dm_db_resource_stats** vista de administración dinámica en una base de datos de usuario. Esta vista captura datos cada 15 segundos u mantiene datos históricos durante 1 hora.  Para obtener más información, consulte [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md).  
 
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve todas las bases de datos cuyo promedio de uso de proceso fue al menos del 80 % durante la semana pasada.  

@@ -1,7 +1,7 @@
 ---
 title: Sys.elastic_pool_resource_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 09/13/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a04b60738a48ddbe09db3eb8d7032d2f08b4ba9c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5f7f13ebb5699fc0fe2174e7ee1af9d6c44bcbfb
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997987"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563271"
 ---
 # <a name="syselasticpoolresourcestats-azure-sql-database"></a>Sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -54,9 +54,10 @@ ms.locfileid: "37997987"
 |**max_worker_percent**|**decimal(5,2)**|Máximo de trabajos simultáneos (solicitudes) en porcentaje basado en el límite del grupo.|  
 |**max_session_percent**|**decimal(5,2)**|Número máximo de sesiones simultáneo en porcentaje basado en el límite del grupo.|  
 |**elastic_pool_dtu_limit**|**int**|Máximo de grupo elástico DTU configuración actual de este grupo elástico durante este intervalo.|  
-|**elastic_pool_storage_limit_mb**|**bigint**|Límite de almacenamiento máximo del grupo elástico actual configuración para este grupo elástico en megabytes durante este intervalo.|  
+|**elastic_pool_storage_limit_mb**|**bigint**|Límite de almacenamiento máximo del grupo elástico actual configuración para este grupo elástico en megabytes durante este intervalo.|
+|**avg_allocated_storage_percent**|**decimal(5,2)**|El porcentaje de espacio de datos asignado todas las bases de datos en el grupo elástico.  Esto es la proporción de espacio de datos asignado al tamaño máximo de datos para el grupo elástico.  Para obtener más información, consulte: [administración del espacio de archivo en la base de datos SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Esta vista existe en la base de datos maestra del servidor lógico. Debe estar conectado a la base de datos maestra para consultar **sys.elastic_pool_resource_stats**.  
   
 ## <a name="permissions"></a>Permisos  

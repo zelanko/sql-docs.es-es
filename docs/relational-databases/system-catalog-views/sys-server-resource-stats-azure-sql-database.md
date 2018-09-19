@@ -24,12 +24,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 93bb9dd2e67879368522886013772196e08dc17e
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: a8f595c79a36581bb5a2ff1ce94591134fb546dd
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37095324"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563633"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>Sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ El **sys.server_resource_stats** vista tiene definiciones diferentes dependiendo
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|Hora UTC que indica el inicio del intervalo de informes de quince segundos|  
 |end_time|**datetime**|Hora UTC que indica el final del intervalo de informes de quince segundos|
-|resource_type|Nvarchar (128)|Tipo de recurso para el que se proporcionan métricas|
+|resource_type|nvarchar (128)|Tipo de recurso para el que se proporcionan métricas|
 |resource_name|nvarchar(128)|Nombre del recurso.|
 |sku|nvarchar(128)|Administrar el nivel de servicio de instancia de la instancia. Los posibles valores son los siguientes: <br><ul><li>Uso general</li></ul><ul><li>Crucial para la empresa</li></ul>|
 |hardware_generation|nvarchar(128)|Identificador de generación de hardware: por ejemplo, Gen 4 o Gen 5|
@@ -59,12 +59,12 @@ El **sys.server_resource_stats** vista tiene definiciones diferentes dependiendo
 
  
 > [!TIP]  
->  Para obtener más contexto sobre estos límites y los niveles de servicio, vea los temas [niveles de servicio de instancia administrada](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier).  
+>  Para obtener más contexto sobre estos límites y los niveles de servicio, vea los temas [niveles de servicio de instancia administrada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier).  
     
 ## <a name="permissions"></a>Permisos  
  Esta vista está disponible para todos los roles de usuario con permisos para conectarse a la **maestro** base de datos.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los datos devueltos por **sys.server_resource_stats** se expresan como el total utilizado en bytes o megabytes (que se indica en los nombres de columna) que no sea avg_cpu, que se expresa como un porcentaje de los límites máximos permitidos para el servicio nivel de rendimiento o que se está ejecutando.  
  
 ## <a name="examples"></a>Ejemplos  
@@ -83,4 +83,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## <a name="see-also"></a>Vea también  
- [Administra los niveles de servicio de instancia](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)
+ [Administra los niveles de servicio de instancia](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)

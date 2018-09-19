@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89c9e6aae99d94525cfdf809e952300a84721b2e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fa08c3b344b399e3219c390eecb16760d23d560e
+ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068752"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534007"
 ---
 # <a name="automatic-tuning"></a>Ajuste automático
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ El ajuste automático [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] per
 
 ## <a name="why-automatic-tuning"></a>¿Por qué el ajuste automático?
 
-Una de las principales tareas de administración de base de datos clásica es la supervisión de la carga de trabajo, que identifica críticos [!INCLUDE[tsql_md](../../includes/tsql-md.md)] realiza una consulta, los índices que se deben agregar para mejorar el rendimiento y rara vez se usan los índices. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] Proporciona una visión detallada de las consultas y los índices que necesita para supervisar. Sin embargo, supervisar constantemente la base de datos es una tarea ardua y tediosa, especialmente al tratar con muchas bases de datos. Administrar un gran número de bases de datos podría ser imposible de realizar eficazmente. En lugar de supervisar y ajustar manualmente la base de datos, puede delegar algunas de la supervisión y ajuste las acciones a [!INCLUDE[ssde_md](../../includes/ssde_md.md)] mediante la característica de ajuste automático.
+Tres de las principales tareas de administración de base de datos clásica están supervisando la carga de trabajo, que identifica críticos [!INCLUDE[tsql_md](../../includes/tsql-md.md)] realiza una consulta, los índices que deben ser agregados para mejorar el rendimiento e identificación usa con poca frecuencia. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] Proporciona una visión detallada de las consultas y los índices que necesita para supervisar. Sin embargo, supervisar constantemente una base de datos es una tarea ardua y tediosa, especialmente al tratar con muchas bases de datos. Administrar un gran número de bases de datos podría ser imposible de realizar eficazmente. En lugar de supervisar y ajustar manualmente la base de datos, puede delegar algunas de la supervisión y ajuste las acciones a [!INCLUDE[ssde_md](../../includes/ssde_md.md)] mediante la característica de ajuste automático.
 
-### <a name="how-does-automatic-tuning-works"></a>¿Cómo funciona el ajuste automático?
+### <a name="how-does-automatic-tuning-work"></a>¿Cómo funciona optimización automática?
 
 El ajuste automático es un proceso de análisis que constantemente aprende sobre las características de la carga de trabajo y la supervisión continua e identificar posibles problemas y mejoras.
 

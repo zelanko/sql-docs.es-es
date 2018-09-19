@@ -1,6 +1,6 @@
 ---
 title: Roles | Microsoft Docs
-ms.date: 05/07/2018
+ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,19 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3ebefae10d3c1cd4791cc38fd5b9d30e5e29838a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f33d46750085f06f890a101382d7949a85048b9
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981537"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975694"
 ---
 # <a name="roles"></a>Roles
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Los roles, en los modelos tabulares, definen los permisos de los miembros para un modelo. Los miembros del rol pueden realizar en el modelo las acciones definidas por el permiso de rol. Los roles que se han definido con permisos de lectura también pueden proporcionar seguridad adicional en el nivel de fila mediante filtros de fila. 
   
  Para SQL Server Analysis Services, los roles contienen a miembros de usuario por nombre de usuario de Windows o por grupo de Windows y permisos (lectura, proceso, administrador). Azure Analysis Services, los usuarios deben estar en su Azure Active Directory y los nombres de usuario y grupos especificados deben ser por dirección de correo electrónico profesional o UPN. 
-  
+
+> [!IMPORTANT]  
+>  Al usar SSDT para crear roles y agregar usuarios a un modelo tabular de la organización del proyecto que se va a implementar Azure Analysis Services, use [área de trabajo integrada](workspace-database-ssas-tabular.md).
+
 > [!IMPORTANT]  
 >  Para que los usuarios se conecten a un modelo implementado mediante el uso de una aplicación cliente de informes, debe crear al menos un rol con al menos a la que los usuarios son miembros de permiso de lectura.  
   

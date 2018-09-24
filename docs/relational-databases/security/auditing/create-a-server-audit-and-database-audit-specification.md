@@ -68,7 +68,7 @@ ms.locfileid: "43018411"
   
 1.  En el Explorador de objetos, expanda la carpeta **Seguridad** .  
   
-2.  Haga clic con el botón derecho en la carpeta **Auditorías** y, después, seleccione **Nueva auditoría**. Para obtener más información, consulte [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
+2.  Haga clic con el botón derecho en la carpeta **Auditorías** y, después, seleccione **Nueva auditoría**. Para obtener más información, consulte [Crear una auditoría de servidor y una especificación de auditoría de servidor](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
   
 3.  Cuando termine de seleccionar opciones, haga clic en **Aceptar**.  
   

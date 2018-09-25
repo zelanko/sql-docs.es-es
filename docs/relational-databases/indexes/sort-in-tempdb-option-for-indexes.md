@@ -32,7 +32,7 @@ ms.locfileid: "44499331"
 # <a name="sortintempdb-option-for-indexes"></a>Opción SORT_IN_TEMPDB para índices
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Cuando crea o vuelve a generar un índice, si establece la opción SORT_IN_TEMPDB en ON, puede indicar a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que use **tempdb** para almacenar los resultados de ordenación intermedios que se usan para generar el índice. Aunque esta opción aumenta la cantidad de espacio en disco temporal utilizado para crear un índice, reduce el tiempo que tarda en crear o volver a generar un índice cuando **tempdb** está en un conjunto de discos diferente al de la base de datos de usuario. Para obtener más información acerca de **tempdb**, vea [Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md).  
+  Cuando crea o vuelve a generar un índice, si establece la opción SORT_IN_TEMPDB en ON, puede indicar a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que use **tempdb** para almacenar los resultados de ordenación intermedios que se usan para generar el índice. Aunque esta opción aumenta la cantidad de espacio en disco temporal utilizado para crear un índice, reduce el tiempo que tarda en crear o volver a generar un índice cuando **tempdb** está en un conjunto de discos diferente al de la base de datos de usuario. Para obtener más información acerca de **tempdb**, vea [Establecer la opción de configuración del servidor Memoria para creación de índices](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md).  
   
 ## <a name="phases-of-index-building"></a>Fases de la generación de un índice  
  Para generar un índice, [!INCLUDE[ssDE](../../includes/ssde-md.md)] pasa por varias fases:  
@@ -86,7 +86,7 @@ Cuando crea un índice clúster en una tabla que tiene índices no clúster, deb
 ## <a name="related-content"></a>Contenido relacionado  
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
- [Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
+ [Establecer la opción de configuración del servidor Memoria para creación de índices](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
   
  [Requisitos de espacio en disco para operaciones DDL de índice](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   

@@ -52,7 +52,7 @@ ms.locfileid: "43103998"
  Si el *DriverCompletion* valor del parámetro es SQL_DRIVER_COMPLETE o SQL_DRIVER_PROMPT y si el idioma o la base de datos no es válido, **SQLDriverConnect** vuelve a mostrar el cuadro de diálogo.  
   
 ## <a name="sqldriverconnect-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SQLDriverConnect para la alta disponibilidad con recuperación de desastres  
- Para obtener más información sobre el uso de **SQLDriverConnect** para conectarse a un [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] del clúster, consulte [SQL Server Native Client Support for High Availability, Disaster Recovery](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Para obtener más información sobre el uso de **SQLDriverConnect** para conectarse a un [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] del clúster, consulte [Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 ## <a name="sqldriverconnect-support-for-service-principal-names-spns"></a>Compatibilidad de SQLDriverConnect con los Nombres principales de servicio (SPN)  
  SQLDDriverConnect usará el inicio de sesión de ODBC diálogo están habilitados. Esto permite escribir SPN tanto para el servidor principal como para su asociado de conmutación por error.  

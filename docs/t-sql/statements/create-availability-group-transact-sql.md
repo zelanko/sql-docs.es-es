@@ -28,12 +28,12 @@ caps.latest.revision: 196
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5276c3016382fbca1521f3417ad9095d92dea1e2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7e0fc36645020d8dd349ad4239f4ed811eca4bfe
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981267"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713847"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,76 +50,71 @@ ms.locfileid: "37981267"
 ```SQL  
   
 CREATE AVAILABILITY GROUP group_name  
-  { <availability_group_spec> | <distributed_availability_group_spec> }  
+   WITH (<with_option_spec> [ ,...n ] )  
+   FOR [ DATABASE database_name [ ,...n ] ]  
+   REPLICA ON <add_replica_spec> [ ,...n ]  
+   AVAILABILITY GROUP ON <add_availability_group_spec> [ ,...2 ]  
+   [ LISTENER ‘dns_name’ ( <listener_option> ) ]  
 [ ; ]  
-
-<availability_group_spec>::=  
-  [ WITH (<with_option_spec> [ ,...n ] ) ]  
-  FOR [ DATABASE database_name [ ,...n ] ]  
-  REPLICA ON <add_replica_spec> [ ,...n ]  
-  [ LISTENER ‘dns_name’ ( <listener_option> ) ]  
-
-  <with_option_spec>::=   
-      AUTOMATED_BACKUP_PREFERENCE = { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
-    | FAILURE_CONDITION_LEVEL  = { 1 | 2 | 3 | 4 | 5 }   
-    | HEALTH_CHECK_TIMEOUT = milliseconds  
-    | DB_FAILOVER  = { ON | OFF }   
-    | DTC_SUPPORT  = { PER_DB | NONE }  
-    | BASIC  
-    | REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = { integer }
-    | CLUSTER_TYPE = { WSFC | EXTERNAL | NONE } 
-    
-  <add_replica_spec>::=  
-    <server_instance> WITH  
-      (  
-        ENDPOINT_URL = 'TCP://system-address:port',  
-        AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY },  
-        FAILOVER_MODE = { AUTOMATIC | MANUAL | EXTERNAL }  
-        [ , <add_replica_option> [ ,...n ] ]  
-      )   
-    
-    <add_replica_option>::=  
-        SEEDING_MODE = { AUTOMATIC | MANUAL }  
-      | BACKUP_PRIORITY = n  
-      | SECONDARY_ROLE ( {   
-              [ ALLOW_CONNECTIONS = { NO | READ_ONLY | ALL } ]   
-          [,] [ READ_ONLY_ROUTING_URL = 'TCP://system-address:port' ]  
-      } )  
-      | PRIMARY_ROLE ( {   
-              [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
-          [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
-      } )  
-      | SESSION_TIMEOUT = integer  
-
-  <listener_option> ::=  
-    {  
-        WITH DHCP [ ON ( <network_subnet_option> ) ]  
-      | WITH IP ( { ( <ip_address_option> ) } [ , ...n ] ) [ , PORT = listener_port ]  
-    }  
-    
-    <network_subnet_option> ::=  
-      ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’    
-    
-    <ip_address_option> ::=  
-      {   
-          ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’  
-        | ‘ipv6_address’  
-      }  
-
-<distributed_availability_group_spec>::=  
-  WITH (DISTRIBUTED)  
-  AVAILABILITY GROUP ON <add_availability_group_spec> [ ,...2 ]  
-
-  <add_availability_group_spec>::=  
-  <ag_name> WITH  
+  
+<with_option_spec>::=   
+    AUTOMATED_BACKUP_PREFERENCE = { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
+  | FAILURE_CONDITION_LEVEL  = { 1 | 2 | 3 | 4 | 5 }   
+  | HEALTH_CHECK_TIMEOUT = milliseconds  
+  | DB_FAILOVER  = { ON | OFF }   
+  | DTC_SUPPORT  = { PER_DB | NONE }  
+  | BASIC  
+  | DISTRIBUTED
+  | REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = { integer }
+  | CLUSTER_TYPE = { WSFC | EXTERNAL | NONE } 
+  
+<add_replica_spec>::=  
+  <server_instance> WITH  
     (  
-      LISTENER_URL = 'TCP://system-address:port',  
-      AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
-      FAILOVER_MODE = MANUAL,  
-      SEEDING_MODE = { AUTOMATIC | MANUAL }  
+       ENDPOINT_URL = 'TCP://system-address:port',  
+       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY },  
+       FAILOVER_MODE = { AUTOMATIC | MANUAL | EXTERNAL }  
+       [ , <add_replica_option> [ ,...n ] ]  
+    )   
+  
+  <add_replica_option>::=  
+       SEEDING_MODE = { AUTOMATIC | MANUAL }  
+     | BACKUP_PRIORITY = n  
+     | SECONDARY_ROLE ( {   
+            [ ALLOW_CONNECTIONS = { NO | READ_ONLY | ALL } ]   
+        [,] [ READ_ONLY_ROUTING_URL = 'TCP://system-address:port' ]  
+     } )  
+     | PRIMARY_ROLE ( {   
+            [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
+        [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
+        [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
+     } )  
+     | SESSION_TIMEOUT = integer  
+  
+<add_availability_group_spec>::=  
+ <ag_name> WITH  
+    (  
+       LISTENER_URL = 'TCP://system-address:port',  
+       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
+       FAILOVER_MODE = MANUAL,  
+       SEEDING_MODE = { AUTOMATIC | MANUAL }  
     )  
   
-
+<listener_option> ::=  
+   {  
+      WITH DHCP [ ON ( <network_subnet_option> ) ]  
+    | WITH IP ( { ( <ip_address_option> ) } [ , ...n ] ) [ , PORT = listener_port ]  
+   }  
+  
+  <network_subnet_option> ::=  
+     ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’    
+  
+  <ip_address_option> ::=  
+     {   
+        ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’  
+      | ‘ipv6_address’  
+     }  
+  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -190,7 +185,7 @@ CREATE AVAILABILITY GROUP group_name
  Se usa para crear un grupo de disponibilidad básica. Los grupos de disponibilidad básica se limitan a una base de datos y dos réplicas: una réplica principal y una secundaria. Esta opción sustituye a la característica de creación de reflejo de la base de datos en desuso en SQL Server Standard Edition. Para obtener más información, vea [Grupos de disponibilidad básica &#40;grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md). Los grupos de disponibilidad básica se admiten a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
 
  DISTRIBUTED  
- Se usa para crear un grupo de disponibilidad distribuido. La opción DISTRIBUTED no se puede combinar con ninguna otra opción o cláusula. Esta opción se usa con el parámetro AVAILABILITY GROUP ON para conectar dos grupos de disponibilidad de clústeres de conmutación por error de Windows Server independientes.  Para obtener más información, vea [Distributed Availability Groups &#40;Always On Availability Groups&#41; (Grupos de disponibilidad distribuida &#40;grupos de disponibilidad AlwaysOn&#41;)](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md). Los grupos de disponibilidad distribuidos se admiten a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. 
+ Se usa para crear un grupo de disponibilidad distribuido. Esta opción se usa con el parámetro AVAILABILITY GROUP ON para conectar dos grupos de disponibilidad de clústeres de conmutación por error de Windows Server independientes.  Para obtener más información, vea [Distributed Availability Groups &#40;Always On Availability Groups&#41; (Grupos de disponibilidad distribuida &#40;grupos de disponibilidad AlwaysOn&#41;)](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md). Los grupos de disponibilidad distribuidos se admiten a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. 
 
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  Introducido en SQL Server 2017. Se usa para establecer un número mínimo de réplicas secundarias sincrónicas que se deben confirmar antes de que la réplica principal confirme una transacción. Garantiza que las transacciones de SQL Server esperen hasta que se actualicen los registros de transacciones en el número mínimo de réplicas secundarias. El valor predeterminado es 0, que proporciona el mismo comportamiento que SQL Server 2016. El valor mínimo es 0. El valor máximo es el número de réplicas menos 1. Esta opción se relaciona con las réplicas en el modo de confirmación sincrónica. Cuando las réplicas están en modo de confirmación sincrónica, las escrituras en la réplica principal esperan hasta que las escrituras en las réplicas secundarias sincrónicas se confirman en el registro de transacciones de la base de datos de réplica. Si un servidor SQL Server que hospeda una réplica secundaria sincrónica deja de responder, el servidor SQL Server que hospeda la réplica principal marca esa réplica secundaria como NOT SYNCHRONIZED y continúa. Cuando la base de datos que no responde vuelve a estar en línea, se encuentra en un estado "no sincronizado" y la réplica se marca como incorrecta hasta que la réplica principal la convierte en sincrónica de nuevo. Esta configuración garantiza que la réplica principal espere hasta que el número mínimo de réplicas hayan confirmado cada transacción. Si el número mínimo de réplicas no está disponible, se produce un error en las confirmaciones de la réplica principal. Para el tipo de clúster `EXTERNAL`, se ha cambiado esta configuración cuando se agrega el grupo de disponibilidad a un recurso de clúster. Vea [Alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad](../../linux/sql-server-linux-availability-group-ha.md).
@@ -374,7 +369,7 @@ CREATE AVAILABILITY GROUP group_name
  Para obtener más información sobre el período de tiempo de espera de sesión, vea [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
  AVAILABILITY GROUP ON  
- Especifica dos grupos de disponibilidad que constituyen un *grupo de disponibilidad distribuido*. Cada grupo de disponibilidad forma parte de su propio clúster de conmutación por error de Windows Server (WSFC). Cuando se crea un grupo de disponibilidad distribuido, el grupo de disponibilidad de la instancia actual de SQL Server se convierte en el grupo de disponibilidad principal y el grupo de disponibilidad remoto se convierte en el grupo de disponibilidad secundario.  
+ Especifica dos grupos de disponibilidad que constituyen un *grupo de disponibilidad distribuido*. Cada grupo de disponibilidad forma parte de su propio clúster de conmutación por error de Windows Server (WSFC). Cuando se crea un grupo de disponibilidad distribuido, el grupo de disponibilidad de la instancia actual de SQL Server se convierte en el grupo de disponibilidad principal. El segundo grupo de disponibilidad se convierte en el grupo de disponibilidad secundario.  
   
  Tiene que combinar el grupo de disponibilidad secundario con el grupo de disponibilidad distribuido. Para obtener más información, vea [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md).  
   

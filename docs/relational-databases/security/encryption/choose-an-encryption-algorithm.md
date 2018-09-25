@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.suite: sql
 ms.technology: security
 ms.tgt_pltfrm: ''
@@ -19,12 +19,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e96d3dd33c71172c10f5fcd99dbc7690286586c1
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 0ea16b21dcdbf6abe6d92877b241006f5fd629f6
+ms.sourcegitcommit: 9fe8964647a0d413304acfd2d3c0d87a79d70862
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096563"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493776"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Elegir un algoritmo de cifrado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,8 +42,6 @@ ms.locfileid: "43096563"
 -   Las claves largas suelen producir un cifrado más seguro que las claves cortas.  
   
 -   El cifrado asimétrico es más lento que el simétrico.  
-  
--   Los cifrados en bloque con claves largas son más seguros que los cifrados de flujo.  
   
 -   Las contraseñas largas y complejas son más seguras que las contraseñas cortas.  
 

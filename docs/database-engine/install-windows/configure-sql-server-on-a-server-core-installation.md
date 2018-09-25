@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 3bcbd7999e6b273f201f3c377e9dcdab4f8e0147
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 2a0f82a4db9c6074f14b22280b7c1177f6305eef
+ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405580"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47049745"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurar SQL Server en una instalación Server Core
 
@@ -66,7 +66,7 @@ Una vez que el programa de instalación encuentra las versiones más recientes d
 Especifique los parámetros UpdateEnabled y UpdateSource para incluir las últimas actualizaciones del producto con la instalación principal del producto. Consulte el ejemplo siguiente para habilitar las actualizaciones de producto durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 ```  
-Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="\<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="\<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /UpdateEnabled=True /UpdateSource=”<SourcePath>” /IACCEPTSQLSERVERLICENSETERMS  
+Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /UpdateEnabled=True /UpdateSource=”<SourcePath>” /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
 ###  <a name="bkmk_alreadyInstall"></a> Instalar Actualizaciones para [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] una vez instalado.  

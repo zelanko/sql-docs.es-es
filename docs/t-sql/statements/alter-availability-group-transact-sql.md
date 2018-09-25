@@ -26,12 +26,12 @@ caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ecced10240ac5cc0f14ca64a2f2e2582edb1c01e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8cb006fec0248d22f5ec49e166e767787044a345
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38043292"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713877"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ALTER AVAILABILITY GROUP group_name
    | GRANT CREATE ANY DATABASE  
    | DENY CREATE ANY DATABASE  
    | FAILOVER  
-   | FORCE_FAILOVER_ALLOW_DATA_LOSS  
+   | FORCE_FAILOVER_ALLOW_DATA_LOSS   
    | ADD LISTENER ‘dns_name’ ( <add_listener_option> )  
    | MODIFY LISTENER ‘dns_name’ ( <modify_listener_option> )  
    | RESTART LISTENER ‘dns_name’  
@@ -87,17 +87,18 @@ ALTER AVAILABILITY GROUP group_name
     )   
   
   <add_replica_option>::=  
-       SEEDING_MODE = { AUTOMATIC | MANUAL }   
+       SEEDING_MODE = { AUTOMATIC | MANUAL }  
      | BACKUP_PRIORITY = n  
      | SECONDARY_ROLE ( {   
-          ALLOW_CONNECTIONS = { NO | READ_ONLY | ALL }   
-        | READ_ONLY_ROUTING_URL = 'TCP://system-address:port'   
-          } )  
+            [ ALLOW_CONNECTIONS = { NO | READ_ONLY | ALL } ]   
+        [,] [ READ_ONLY_ROUTING_URL = 'TCP://system-address:port' ]  
+     } )  
      | PRIMARY_ROLE ( {   
-          ALLOW_CONNECTIONS = { READ_WRITE | ALL }   
-        | READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE }   
-          } )  
-     | SESSION_TIMEOUT = seconds  
+            [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
+        [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
+        [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
+     } )  
+     | SESSION_TIMEOUT = integer
   
 <modify_replica_spec>::=  
   <server_instance> WITH  
@@ -130,7 +131,7 @@ ALTER AVAILABILITY GROUP group_name
 <modify_availability_group_spec>::=  
  <ag_name> WITH  
     (  
-       LISTENER_URL = 'TCP://system-address:port'  
+       LISTENER = 'TCP://system-address:port'  
        | AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
        | SEEDING_MODE = { AUTOMATIC | MANUAL }  
     )  
@@ -474,15 +475,15 @@ Inicia una conmutación por error manual del grupo de disponibilidad sin pérdid
 >  NetBIOS reconoce solo los 15 primeros caracteres en dns_name. Si tiene dos clústeres de WSFC controlados por la misma instancia de Active Directory e intenta crear agentes de escucha del grupo de disponibilidad en los dos clústeres utilizando nombres con más de 15 caracteres y un prefijo idéntico de 15 caracteres, obtendrá un error notificando que el recurso de nombre de red virtual no se pudo poner en línea. Para obtener información acerca de las reglas de nomenclatura de prefijos para los nombres DNS, vea [Asignación de nombres de dominio](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
  JOIN AVAILABILITY GROUP ON  
- Se une a un *grupo de disponibilidad distribuido*. Cuando se crea un grupo de disponibilidad distribuido, el grupo de disponibilidad del clúster donde se crea es el grupo de disponibilidad principal. Cuando se ejecuta JOIN, el grupo de disponibilidad de la instancia de servidor local es el grupo de disponibilidad secundario.  
+ Se une a un *grupo de disponibilidad distribuido*. Cuando se crea un grupo de disponibilidad distribuido, el grupo de disponibilidad del clúster donde se crea es el grupo de disponibilidad principal. El grupo de disponibilidad que se une al grupo de disponibilidad distribuido es el grupo de disponibilidad secundario.  
   
  \<ag_name>  
  Especifica el nombre del grupo de disponibilidad que constituye la mitad del grupo de disponibilidad distribuido.  
   
- LISTENER_URL **="** TCP **://***dirección_del_sistema***:***puerto***"**  
+ LISTENER **='** TCP **://***system-address***:***port***'**  
  Especifica la ruta de acceso de la dirección URL del agente de escucha asociado al grupo de disponibilidad.  
   
- La cláusula LISTENER_URL es obligatoria.  
+ La cláusula LISTENER es obligatoria.  
   
  **'** TCP **://***system-address***:***port***'**  
  Especifica una dirección URL del agente de escucha asociado al grupo de disponibilidad. Los parámetros de la dirección URL son como sigue:  
@@ -491,7 +492,7 @@ Inicia una conmutación por error manual del grupo de disponibilidad sin pérdid
  Es una cadena, como un nombre de sistema, un nombre de dominio completo o una dirección IP, que identifica sin ambigüedad al agente de escucha.  
   
  *port*  
- Es un número de puerto que está asociado al punto de conexión de creación de reflejo de la base de datos del grupo de disponibilidad. Tenga en cuenta que este no es el puerto para la conectividad de cliente que se configura en el agente de escucha.  
+ Es un número de puerto que está asociado al punto de conexión de creación de reflejo de la base de datos del grupo de disponibilidad. Tenga en cuenta que no es el puerto del agente de escucha.  
   
  AVAILABILITY_MODE **=** { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
  Especifica si la réplica principal tiene que esperar a que el grupo de disponibilidad secundario confirme la protección (escritura) de los registros en el disco para poder confirmar la transacción en una base de datos principal dada.  

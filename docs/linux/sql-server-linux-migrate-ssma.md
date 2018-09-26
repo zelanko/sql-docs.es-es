@@ -12,20 +12,20 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
 ms.custom: sql-linux
-ms.openlocfilehash: 72fe3a91c22fd773d921d7b2f1ecb17fef6c4795
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dc95b9372bb62ec184e7810a74c54ee269597812
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087377"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46711927"
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant"></a>Automatice la migración de base de datos para Linux con SQL Server Migration Assistant
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este artículo se presentan [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) que le permite migrar fácilmente las bases de datos a SQL Server 2017 en Linux desde Microsoft Access, DB2, MySQL, Oracle y Sybase. SSMA es una aplicación de Windows, así que use SSMA cuando haya una máquina de Windows que se puede conectar a una instancia remota de SQL Server en Linux. 
+Este artículo se presentan [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) que le permite migrar fácilmente las bases de datos a SQL Server en Linux desde Microsoft Access, DB2, MySQL, Oracle y Sybase. SSMA es una aplicación de Windows, así que use SSMA cuando haya una máquina de Windows que se puede conectar a una instancia remota de SQL Server en Linux. 
 
-SSMA admite una variedad de bases de datos de origen como Oracle, Sybase, MySQL, DB2 y Microsoft Access a SQL Server 2017 en Linux y ayuda a automatizar las tareas de migración, como:
+SSMA admite una variedad de bases de datos de origen como Oracle, Sybase, MySQL, DB2 y Microsoft Access a SQL Server en Linux y ayuda a automatizar las tareas de migración, como:
 
 - Evaluar la base de datos de origen
 - Convertir el esquema de base de datos de origen al esquema de Microsoft SQL Server
@@ -40,7 +40,7 @@ Para comenzar, descargue SQL Server Migration Assistant (SSMA) para la base de d
 - [SSMA para Oracle](http://aka.ms/ssmafororacle)
 - [SSMA para Sybase ASE](http://aka.ms/ssmaforsybase) 
 
-A continuación, siga el [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) para migrar la base de datos de origen a SQL Server 2017 en Linux.
+A continuación, siga el [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) para migrar la base de datos de origen a SQL Server en Linux.
 
 ## <a name="see-also"></a>Vea también
 - [Microsoft Data Migration blog](http://blogs.msdn.microsoft.com/datamigration)

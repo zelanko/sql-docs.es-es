@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 330c8be09065d6c08ba0cc8468b8a5c687fdca6b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 960ffccc2945531aa525c9a1d1db45cc47951190
+ms.sourcegitcommit: a7edd16af7be25f627d16e5c8a6e8d6de7071a28
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096819"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47178321"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,9 @@ ms.locfileid: "43096819"
 |history_retention_period|**int**|**Se aplica a**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>El valor numérico que representa la duración del período de retención de historial temporal en unidades especificadas con history_retention_period_unit. |  
 |history_retention_period_unit|**int**|**Se aplica a**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>El valor numérico que representa el tipo de unidad del período de retención temporal de historial. <br /><br />-1: INFINITO <br /><br />3: DÍA <br /><br />4: SEMANA <br /><br />5: MES <br /><br />6: AÑO |  
 |history_retention_period_unit_desc|**nvarchar (10)**|**Se aplica a**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>La descripción del tipo de unidad del período de retención temporal de historial. <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  
-  
+|is_node|**bit**|**Se aplica a**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] y [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = se trata de una tabla de nodo del gráfico. <br /><br />0 = esta no es una tabla de nodo de graph. |  
+|is_edge|**bit**|**Se aplica a**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] y [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = se trata de una tabla de borde del gráfico. <br /><br />0 = esta no es una tabla de borde de gráfico. |  
+
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

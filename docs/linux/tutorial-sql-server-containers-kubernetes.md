@@ -1,6 +1,6 @@
 ---
-title: Configurar un contenedor de SQL Server en Kubernetes para alta disponibilidad | Microsoft Docs
-description: Este tutorial muestra cómo implementar una solución de alta disponibilidad de SQL Server con Kubernetes en Azure Container Service.
+title: Implementar un contenedor de SQL Server en Kubernetes con Azure Kubernetes Services (AKS) | Microsoft Docs
+description: Este tutorial muestra cómo implementar una solución de alta disponibilidad de SQL Server con Kubernetes en Azure Kubernetes Service.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -11,20 +11,20 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 5c6e794fa2e76a0fec58d767d14e9ac73fb72534
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: fba598abb0431d2e9a80b0cdc0976f72c6eadc15
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980127"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712687"
 ---
-# <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>Configurar un contenedor de SQL Server en Kubernetes para alta disponibilidad
+# <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Implementar un contenedor de SQL Server en Kubernetes con Azure Kubernetes Services (AKS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Obtenga información sobre cómo configurar una instancia de SQL Server en Kubernetes en Azure Container Service (AKS), con el almacenamiento persistente de alta disponibilidad (HA). La solución proporciona resistencia. Si se produce un error en la instancia de SQL Server, Kubernetes automáticamente vuelve a crearla en un pod nuevo. AKS proporciona resistencia frente a un error de nodo de Kubernetes. 
+Obtenga información sobre cómo configurar una instancia de SQL Server en Kubernetes en Azure Kubernetes Service (AKS), con el almacenamiento persistente de alta disponibilidad (HA). La solución proporciona resistencia. Si se produce un error en la instancia de SQL Server, Kubernetes automáticamente vuelve a crearla en un pod nuevo. Kubernetes también proporciona resistencia frente a un error de nodo.
 
-Este tutorial muestra cómo configurar una instancia de SQL Server de alta disponibilidad en los contenedores que usar AKS. 
+Este tutorial muestra cómo configurar una instancia de SQL Server de alta disponibilidad en un contenedor de AKS. También puede [crear un grupo de disponibilidad de SQL Server en Kubernetes](tutorial-sql-server-ag-kubernetes.md). Para comparar las dos soluciones diferentes de Kubernetes, consulte [alta disponibilidad para los contenedores de SQL Server](sql-server-linux-container-ha-overview.md).
 
 > [!div class="checklist"]
 > * Crear una contraseña de SA
@@ -33,7 +33,7 @@ Este tutorial muestra cómo configurar una instancia de SQL Server de alta dispo
 > * Conectar con SQL Server Management Studio (SSMS)
 > * Compruebe el error y recuperación
 
-## <a name="ha-solution-that-uses-kubernetes-running-in-azure-container-service"></a>Alta disponibilidad de solución que use Kubernetes que se ejecuta en Azure Container Service
+## <a name="ha-solution-on-kubernetes-running-in-azure-kubernetes-service"></a>Solución de alta disponibilidad en Kubernetes que se ejecuta en Azure Kubernetes Service
 
 Kubernetes 1.6 y versiones posteriores es compatible con [clases de almacenamiento](http://kubernetes.io/docs/concepts/storage/storage-classes/), [notificaciones de volumen persistente](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)y el [tipo de volumen de disco de Azure](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk). Puede crear y administrar las instancias de SQL Server de forma nativa en Kubernetes. El ejemplo de este artículo muestra cómo crear un [implementación](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) para lograr una configuración de alta disponibilidad similar a una instancia de clúster de conmutación por error de disco compartido. En esta configuración, Kubernetes desempeña la función del orquestador de clúster. Cuando se produce un error en una instancia de SQL Server en un contenedor, el orquestador arranca otra instancia del contenedor al que se adjunta al mismo almacenamiento persistente.
 
@@ -43,11 +43,11 @@ En el diagrama anterior, `mssql-server` es un contenedor en un [pod](http://kube
 
 En el diagrama siguiente, la `mssql-server` contenedor ha producido un error. Como el orquestador, Kubernetes garantiza establece el recuento correcto de instancias en buen estado en la réplica e inicia un nuevo contenedor de acuerdo con la configuración. El orquestador inicia un nuevo conjunto pod en el mismo nodo, y `mssql-server` se vuelve a conectar al mismo almacenamiento persistente. El servicio se conecta a volver a crearse `mssql-server`.
 
-![Diagrama del clúster de Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![Diagrama del clúster de Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
 En el diagrama siguiente, el nodo que hospeda el `mssql-server` contenedor ha producido un error. El orquestador inicia el pod nuevo en un nodo diferente, y `mssql-server` se vuelve a conectar al mismo almacenamiento persistente. El servicio se conecta a volver a crearse `mssql-server`.
 
-![Diagrama del clúster de Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![Diagrama del clúster de Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -176,7 +176,7 @@ En este paso, creará un manifiesto para describir el contenedor en función del
          terminationGracePeriodSeconds: 10
          containers:
          - name: mssql
-           image: microsoft/mssql-server-linux
+           image: mcr.microsoft.com/mssql/server/mssql-server-linux
            ports:
            - containerPort: 1433
            env:

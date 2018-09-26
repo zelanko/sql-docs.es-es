@@ -2,7 +2,7 @@
 title: Novedades de SSMA para MySQL (MySQLToSql) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 08/14/2018
+ms.date: 09/22/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -16,15 +16,23 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ad86fed5cfa7eab443ce214cb7cc0965fd7062b8
-ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
+ms.openlocfilehash: aef37e4e123676d7340a6300bfb90098e8cccb55
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40394519"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362019"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Novedades de SSMA para MySQL (MySQLToSql)
 En este artículo se enumera SSMA para MySQL cambios en cada versión. 
+
+## <a name="ssma-v710"></a>SSMA v7.10
+La versión de v7.10 de SSMA para MySQL contiene los siguientes cambios:
+- Diseñado para proporcionar seguridad adicional y protecciones de seguridad para satisfacer los cambios en los requisitos globales correcciones de destino.
+- Corrección de conversión de los espacios entre la lista de argumentos y el nombre de función.
+
+> [!IMPORTANT]
+> Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación.
 
 ## <a name="ssma-v79"></a>SSMA v7.9
 La versión de v7.9 de SSMA para MySQL contiene los siguientes cambios:
@@ -85,7 +93,7 @@ La versión v7.3 de SSMA para MySQL contiene los siguientes cambios:
   - Bibliotecas que pueden utilizarse en SSMA para realizar conversiones personalizadas.
     - Ahora se puede crear código que pueda controlar las conversiones de sintaxis personalizada y las conversiones que antes no estaban controlaba SSMA.
       - Las instrucciones sobre cómo construir un convertidor personalizado están disponibles en esta entrada de blog, [funciones de conversión de ampliación de SQL Server Migration Assistant](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
-      - Proyecto de ejemplo para la conversión se puede descargar este [entrada de blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
+      - Descargar un proyecto de ejemplo para la conversión de esta [entrada de blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
 ## <a name="ssma-v72"></a>SSMA v7.2
 La versión de v7.2 de SSMA para MySQL contiene los siguientes cambios:

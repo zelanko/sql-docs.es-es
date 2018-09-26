@@ -14,12 +14,12 @@ ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: b1ccab9ac575640434b33a970e0e676376ef4b4e
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: f0c6e0e8b6999ce2ebcce009a4ac1c298ededdff
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40009037"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712127"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Cifrar conexiones a SQL Server en Linux
 
@@ -34,9 +34,13 @@ Antes de comenzar, deberá asegurarse de que los certificados cumplen estos requ
 - El certificado debe crearse con la opción KeySpec de AT_KEYEXCHANGE. Normalmente, la propiedad de uso de la clave del certificado (KEY_USAGE) también incluye cifrado de clave (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
 - La propiedad de asunto del certificado debe indicar que el nombre común (CN) es el mismo como el nombre de host o nombre de dominio completo (FQDN) del equipo del servidor. Nota: se admiten certificados comodín.
 
+## <a name="configuring-the-openssl-libraries-for-use-optional"></a>Configuración de las bibliotecas OpenSSL para su uso (opcional)
+Puede crear vínculos simbólicos en el `/opt/mssql/lib/` directorio que hacen referencia a que `libcrypto.so` y `libssl.so` bibliotecas que se deben usar para el cifrado. Esto es útil si desea obligar a SQL Server para usar una versión específica de OpenSSL que no sea el valor predeterminado proporcionado por el sistema. Si no existen estos vínculos simbólicos, SQL Server se cargará las bibliotecas OpenSSL predeterminado configurado en el sistema.
+
+Estos vínculos simbólicos deben denominarse `libcrypto.so` y `libssl.so` y se coloca en el `/opt/mssql/lib/` directory.
+
 ## <a name="overview"></a>Información general
 TLS se utiliza para cifrar las conexiones desde una aplicación cliente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Cuando se configura correctamente, TLS proporciona privacidad y la integridad de los datos para las comunicaciones entre el cliente y el servidor.  Las conexiones TLS pueden ser iniciado por el cliente o servidor iniciada. 
-
 
 ## <a name="client-initiated-encryption"></a>Cifrado por el cliente 
 - **Generar certificado** (/ CN debe coincidir con el nombre de dominio completo del host de SQL Server)

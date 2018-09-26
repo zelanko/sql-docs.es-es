@@ -8,19 +8,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2f55962069c67fe7907968e024cdacb920b02d4e
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 372c81310fea86094543319f21e409142810de97
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348616"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713157"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Puntuación nativa mediante la función de PREDICCIÓN de Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Puntuación nativa aprovecha las capacidades de extensión de C++ nativas en SQL Server 2017 para generar valores de predicción o *puntuaciones* para nuevas entradas de datos casi en tiempo real. Esta metodología ofrece la velocidad de procesamiento más rápida de las cargas de trabajo de previsión y la predicción, pero viene con los requisitos de plataforma y la biblioteca: solo las funciones de RevoScaleR y revoscalepy tienen implementaciones de C++.
+Nativo de puntuación usa [función T-SQL PREDECIR](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) y las capacidades de extensión de C++ nativas en SQL Server 2017 para generar valores de predicción o *puntuaciones* para nuevas entradas de datos casi en tiempo real. Esta metodología ofrece la velocidad de procesamiento posibles más rápida de cargas de trabajo de previsión y la predicción, pero viene con los requisitos de plataforma y la biblioteca: solo las funciones de RevoScaleR y revoscalepy tienen implementaciones de C++.
 
-Puntuación nativa requiere que tenga un modelo entrenado ya. En SQL Server 2017 Windows o Linux, o en Azure SQL Database, puede usar la función PREDICT de Transact-SQL para invocar la puntuación nativa. La función PREDICT toma un modelo previamente entrenado y genera las puntuaciones en entradas de datos que proporcione.
+Puntuación nativa requiere que tenga un modelo entrenado ya. En SQL Server 2017 Windows o Linux, o en Azure SQL Database, puede llamar a la función PREDICT de Transact-SQL para invocar nativo de puntuación con nuevos datos que se proporcionan como un parámetro de entrada. La función PREDICT devuelve las puntuaciones de las entradas de datos que proporcione.
 
 ## <a name="how-native-scoring-works"></a>Nativo cómo funciona la puntuación
 

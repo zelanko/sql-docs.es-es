@@ -1,0 +1,1 @@
+<Token>**En este tema se aplica a:**![Sí](media/yes.png)(a partir de 2019, solamente para Linux) de SQL Server![ningún](media/no.png)Azure SQL Database![ningún](media/no.png)Azure SQL Data Warehouse ![ninguna ](media/no.png)Almacenamiento de datos paralelos </Token>

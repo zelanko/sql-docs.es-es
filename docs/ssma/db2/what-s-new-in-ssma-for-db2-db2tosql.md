@@ -2,7 +2,7 @@
 title: Novedades de SSMA para DB2 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 08/14/2018
+ms.date: 09/22/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -16,15 +16,23 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: af4167d1d101fe0647a2fade000e174aeb5efa6b
-ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
+ms.openlocfilehash: 81a343c0ac4f37f02b0c461209a023f908ab608b
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393266"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46361999"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Novedades de SSMA para DB2 (DB2ToSQL)
 En este artículo se enumera SSMA para DB2 cambios en cada versión.  
+
+## <a name="ssma-v710"></a>SSMA v7.10
+La versión v7.10 de SSMA para DB2 contiene los siguientes cambios:
+- Diseñado para proporcionar seguridad adicional y protecciones de seguridad para satisfacer los cambios en los requisitos globales correcciones de destino.
+- Corrección de conversión de los bloques BEGIN-END.
+
+> [!IMPORTANT]
+> Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación.
 
 ## <a name="ssma-v79"></a>SSMA v7.9
 La versión v7.9 de SSMA para DB2 contiene los siguientes cambios:
@@ -84,7 +92,7 @@ La versión v7.3 de SSMA para DB2 contiene los siguientes cambios:
   - Bibliotecas que pueden utilizarse en SSMA para realizar conversiones personalizadas.
     - Ahora se puede crear código que pueda controlar las conversiones de sintaxis personalizada y las conversiones que antes no estaban controlaba SSMA.
       - Las instrucciones sobre cómo construir un convertidor personalizado están disponibles en esta entrada de blog, [funciones de conversión de ampliación de SQL Server Migration Assistant](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
-      - Proyecto de ejemplo para la conversión se puede descargar este [entrada de blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
+      - Descargar un proyecto de ejemplo para la conversión de esta [entrada de blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
 ## <a name="ssma-v72"></a>SSMA v7.2
 La versión v7.2 de SSMA para DB2 contiene los siguientes cambios:

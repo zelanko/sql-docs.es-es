@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 09b94de43aaba54dced6d300587c0492b00c8f3d
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 8d1ff524a0f033c4e47d7fe7f4e366cb00f2f7b5
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348216"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712477"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Cómo generar predicciones con modelos de aprendizaje automático de SQL Server y previsiones
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,9 +26,9 @@ En la tabla siguiente se resume los marcos de puntuación para la previsión y p
 
 | Metodología           | Interfaz         | Requisitos de la biblioteca | Velocidades de procesamiento |
 |-----------------------|-------------------|----------------------|----------------------|
-| Marco de extensibilidad | R: [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>Python: [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Ninguno. Los modelos se pueden basar en cualquier función de R o Python | Cientos de milisegundos. <br/>Carga de un entorno en tiempo de ejecución tiene un costo fijo, calcular el promedio de tres a seis cientos de milisegundos, antes de que se usa para puntuar nuevos datos. |
-| Extensión CLR de puntuación en tiempo real | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) en un modelo serializado | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | Decenas de milisegundos por término medio. |
-| Extensión de C++ puntuación nativa| [Función T-SQL PREDECIR](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) en un modelo serializado | R: RevoScaleR <br/>Python: revoscalepy | Menos de 20 milisegundos, en promedio. | 
+| Marco de extensibilidad | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Ninguno. Los modelos se pueden basar en cualquier función de R o Python | Cientos de milisegundos. <br/>Carga de un entorno en tiempo de ejecución tiene un costo fijo, calcular el promedio de tres a seis cientos de milisegundos, antes de que se usa para puntuar nuevos datos. |
+| [Extensión CLR de puntuación en tiempo real](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) en un modelo serializado | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | Decenas de milisegundos por término medio. |
+| [Extensión de C++ puntuación nativa](../sql-native-scoring.md) | [Función T-SQL PREDECIR](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) en un modelo serializado | R: RevoScaleR <br/>Python: revoscalepy | Menos de 20 milisegundos, en promedio. | 
 
 Velocidad de procesamiento y no la sustancia de la salida es la característica distintiva. La salida con puntuación suponiendo que las mismas funciones y entradas, no debería variar según el enfoque que utilice.
 
@@ -44,12 +44,13 @@ _Puntuación_ es un proceso en dos pasos. En primer lugar, especifique un modelo
 
 Cómo dar un paso hacer una copia, el proceso general de la preparación del modelo y, a continuación, generar puntuaciones puede resumirse así:
 
-1. Crear un modelo usando un algoritmo compatible.
-2. Serializa el modelo utilizando un formato binario especial.
-3. Realice el modelo disponible en SQL Server. Normalmente, esto significa que almacenar el modelo serializado en una tabla de SQL Server.
-4. Llame a la función o procedimiento almacenado, especificando el modelo y datos de entrada como parámetros.
+1. Crear un modelo usando un algoritmo compatible. Compatibilidad con varía según la metodología de puntuación que elija.
+2. Entrenar el modelo.
+3. Serializa el modelo utilizando un formato binario especial.
+3. Guardar el modelo en SQL Server. Normalmente, esto significa que almacenar el modelo serializado en una tabla de SQL Server.
+4. Llame a la función o procedimiento almacenado, especificar las entradas de modelo y datos como parámetros.
 
-Cuando la entrada incluye muchas filas de datos, es normalmente más rápido insertar los valores de predicción en una tabla como parte del proceso de puntuación.  Generar una puntuación única es más habitual en un escenario donde obtener los valores de entrada de una solicitud de formulario o de usuario y devolver la puntuación a una aplicación cliente. Para mejorar el rendimiento al generar puntuaciones sucesivas, SQL Server puede almacenar en caché el modelo para que se puede volver a cargar en la memoria.
+Cuando la entrada incluye muchas filas de datos, es normalmente más rápido insertar los valores de predicción en una tabla como parte del proceso de puntuación. Generar una puntuación única es más habitual en un escenario donde obtener los valores de entrada de una solicitud de formulario o de usuario y devolver la puntuación a una aplicación cliente. Para mejorar el rendimiento al generar puntuaciones sucesivas, SQL Server puede almacenar en caché el modelo para que se puede volver a cargar en la memoria.
 
 ## <a name="compare-methods"></a>Comparación de métodos
 

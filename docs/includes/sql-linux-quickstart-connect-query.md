@@ -108,7 +108,7 @@ Además **sqlcmd**, puede usar las siguientes herramientas multiplataforma para 
 
 |||
 |---|---|
-| [SQL Server Operations Studio](../sql-operations-studio/index.md) | Una utilidad de administración de base de datos de GUI multiplataforma. |
+| [Studio datos de Azure](../azure-data-studio/index.md) | Una utilidad de administración de base de datos de GUI multiplataforma. |
 | [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Una interfaz de línea de comandos multiplataforma para ejecutar comandos de Transact-SQL. |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Un editor de código de GUI multiplataforma que ejecutan las instrucciones Transact-SQL con la extensión mssql. |
 

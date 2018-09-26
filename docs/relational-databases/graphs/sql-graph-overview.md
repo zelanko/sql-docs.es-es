@@ -20,12 +20,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 276ef0d34d04f58b0b23b213dc52faf5b404693e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7cbd74e51971e46eb26438333de419fa18dba5cd
+ms.sourcegitcommit: c3e233c13ebb6fbee60723590179da00802c3f3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43101815"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47058904"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Gráfico de procesamiento con SQL Server y Azure SQL Database
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -74,11 +74,22 @@ AND Person1.Name = 'John';
 ```   
  
 ### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Completamente integrado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motor 
-Extensiones Graph están totalmente integradas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motor. Usamos el mismo motor de almacenamiento, los metadatos, el procesador de consultas, etc. para almacenar y consultar datos del gráfico. Esto permite a los usuarios consultar a través de su gráfico y los datos relacionales en una sola consulta. Los usuarios también pueden beneficiarse de la combinación de las capacidades de graph con otros [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tecnologías como almacén de columnas, de alta disponibilidad, servicios de R, etcetera. Base de datos SQL graph también es compatible con todas la seguridad y cumplimiento de las características disponibles con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Extensiones Graph están totalmente integradas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motor. Use el mismo motor de almacenamiento, los metadatos, el procesador de consultas, etc. para almacenar y consultar datos del gráfico. Consulta a través de graph y datos relacionales en una sola consulta. Combinación de funcionalidades de gráfico con otros [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tecnologías como almacén de columnas, de alta disponibilidad, servicios de R, etcetera. Base de datos SQL graph también es compatible con todas la seguridad y cumplimiento de las características disponibles con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
-### <a name="tooling-and-ecosystem"></a>Las herramientas y el ecosistema  
-Los usuarios se benefician de las herramientas existentes y el ecosistema que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece. Herramientas como copia de seguridad y restauración, importación y exportación, funcionan sin problemas BCP desde el principio. Otras herramientas o servicios como SSIS, SSRS o Power BI funcionará con tablas de graph, simplemente la forma de trabajar con tablas relacionales.
- 
+### <a name="tooling-and-ecosystem"></a>Las herramientas y el ecosistema
+
+Beneficiarse de las herramientas existentes y el ecosistema que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece. Herramientas como copia de seguridad y restauración, importación y exportación, funcionan sin problemas BCP desde el principio. Otras herramientas o servicios como SSIS, SSRS o Power BI funcionará con tablas de graph, simplemente la forma de trabajar con tablas relacionales.
+
+## <a name="edge-constraints"></a>Restricciones perimetrales
+Una restricción perimetral se define en una tabla de borde del gráfico y es un par de tablas de nodo que se puede conectar a un tipo de borde determinado. Esto ofrece a los usuarios un mejor control sobre su esquema de gráfico. Con la Ayuda de las restricciones perimetrales, los usuarios pueden restringir el tipo de nodos que se puede conectar un borde determinado. 
+
+Para obtener información acerca de cómo crear y usar las restricciones perimetrales, consulte [las restricciones perimetrales](../../relational-databases/tables/graph-edge-constraints.md)
+
+## <a name="merge-dml"></a>Mezcla de DML 
+El [mezcla](../../t-sql/statements/merge-transact-sql.md) instrucción lleva a cabo Insertar, actualizar o eliminar operaciones en una tabla de destino basándose en los resultados de una combinación con una tabla de origen. Por ejemplo, puede sincronizar dos tablas insertando, actualizando o eliminando las filas de una tabla de destino basándose en las diferencias entre la tabla de destino y la tabla de origen. Ahora se admite el uso de predicados de coincidencia en una instrucción MERGE en Azure SQL Database y SQL Server vNext. Es decir, ahora es posible combinar los datos de gráfico actual (tablas de nodo o perimetral) con nuevos datos mediante los predicados de coincidencia para especificar relaciones de gráfico en una sola instrucción, en lugar de instrucciones INSERT, UPDATE o DELETE independientes.
+
+Para obtener información acerca de cómo se puede usar la coincidencia de mezcla DML, consulte [instrucción MERGE](../../t-sql/statements/merge-transact-sql.md)
+
  ## <a name="next-steps"></a>Pasos siguientes  
 Leer el [gráfico SQL Database: arquitectura](./sql-graph-architecture.md)
    

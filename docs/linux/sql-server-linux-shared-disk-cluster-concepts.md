@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 0497e1894c60e251a9cfb0d6229f1ace65b2476e
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a89ce0acb22bf60dd05372a9cc7f7d28bb7fa3b1
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086277"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712397"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Instancias de clúster de conmutación por error: SQL Server en Linux
 
@@ -72,7 +72,7 @@ Todas las fci, ya sean Linux o Windows Server, requieren algún tipo de almacena
 En una configuración que abarca varias ubicaciones, lo que se almacena en un centro de datos debe estar sincronizada con la otra. Si se produce una conmutación por error, la FCI podrán ponerse en línea y el almacenamiento suele ser el mismo. Para lograr esto requerirá algún método externo para la replicación de almacenamiento, si esto se ejecuta mediante el hardware de almacenamiento subyacente o alguna utilidad basada en software. 
 
 >[!NOTE]
->Para SQL Server 2017, implementaciones basadas en Linux mediante discos presentados directamente a un servidor deben tener el formato con XFS o EXT4. Actualmente no se admiten otros sistemas de archivos. Aquí se reflejarán los cambios.
+>Para SQL Server, deben tener el formato implementaciones basadas en Linux mediante discos presentados directamente a un servidor con XFS o EXT4. Actualmente no se admiten otros sistemas de archivos. Aquí se reflejarán los cambios.
 
 El proceso para presentar el almacenamiento compartido es el mismo para los diferentes métodos admitidos:
 

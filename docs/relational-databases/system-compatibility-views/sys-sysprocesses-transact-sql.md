@@ -1,5 +1,5 @@
 ---
-title: Sys.sysprocesses (Transact-SQL) | Documentos de Microsoft
+title: Sys.sysprocesses (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -25,12 +25,12 @@ caps.latest.revision: 57
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c3a27e699312793e734d9a94680677eb509a2bd5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f63aeb2b2a898335037f8a9df4b36186b66900f8
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233758"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712323"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "33233758"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |spid|**smallint**|Identificador de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |kpid|**smallint**|Identificador de subproceso de Windows.|  
@@ -58,7 +58,7 @@ ms.locfileid: "33233758"
 |last_batch|**datetime**|Hora a la que un proceso de cliente ejecutó por última vez una llamada a un procedimiento almacenado remoto o una instrucción EXECUTE.|  
 |ecid|**smallint**|Identificador de contexto de ejecución usado para identificar de forma única los subprocesos que operan en nombre de un único proceso.|  
 |open_tran|**smallint**|Número de transacciones abiertas para el proceso.|  
-|status|**nchar(30)**|Estado del identificador de proceso. Los valores posibles son:<br /><br /> **inactivo**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está restableciendo la sesión.<br /><br /> **ejecuta** = la sesión está ejecutando uno o varios lotes. Si Conjuntos de resultados activos múltiples (MARS) está habilitado, una sesión puede ejecutar varios lotes. Para obtener más información, vea [utilizando conjuntos de resultados activos múltiples & #40; MARS & #41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **fondo** = la sesión está ejecutando una tarea en segundo plano, como la detección de interbloqueos.<br /><br /> **reversión** = la sesión está realizando una reversión de transacciones.<br /><br /> **pendiente** = la sesión está esperando un subproceso de trabajo esté disponible.<br /><br /> **ejecutable** = la tarea en la sesión está en la cola de ejecutables de un programador mientras espera obtener un cuanto de tiempo.<br /><br /> **bloqueo por bucle** = la tarea en la sesión está esperando un bloqueo por bucle hasta que quede libre.<br /><br /> **suspende** = la sesión está esperando un evento, como una entrada para completar o.|  
+|status|**nchar(30)**|Estado del identificador de proceso. Los valores posibles son:<br /><br /> **latente**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está restableciendo la sesión.<br /><br /> **ejecutando** = la sesión se está ejecutando uno o varios lotes. Si Conjuntos de resultados activos múltiples (MARS) está habilitado, una sesión puede ejecutar varios lotes. Para obtener más información, vea [Usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **en segundo plano** = la sesión está ejecutando una tarea en segundo plano, como la detección de interbloqueo.<br /><br /> **reversión** = la sesión está realizando una reversión de transacción.<br /><br /> **pendiente** = la sesión está esperando un subproceso de trabajo esté disponible.<br /><br /> **puede ejecutar** = la tarea en la sesión está en la cola de ejecutables de un programador mientras espera obtener un cuanto de tiempo.<br /><br /> **spinloop** = la tarea en la sesión está esperando un subproceso se libere.<br /><br /> **suspende** = la sesión está esperando un evento, como E/S, en completarse.|  
 |sid|**binary(86)**|Identificador único global (GUID) del usuario.|  
 |hostname|**nchar(128)**|Nombre de la estación de trabajo.|  
 |program_name|**nchar(128)**|Nombre del programa de aplicación.|  
@@ -67,13 +67,14 @@ ms.locfileid: "33233758"
 |nt_domain|**nchar(128)**|Dominio de Windows para el cliente, si se utiliza la autenticación de Windows o una conexión de confianza.|  
 |nt_username|**nchar(128)**|Nombre de usuario de Windows del proceso, si se utiliza la autenticación de Windows una conexión de confianza.|  
 |net_address|**nchar(12)**|Identificador único asignado al adaptador de red de la estación de trabajo de cada usuario. Cuando un usuario inicia una sesión, este identificador se inserta en la columna net_address.|  
-|net_library|**nchar(12)**|Columna en la que se almacena la biblioteca de red del cliente. Cada proceso de cliente proviene de una conexión de red. Conexiones de red tienen una biblioteca de red asociada a ellos que les permite realizar la conexión.|  
+|net_library|**nchar(12)**|Columna en la que se almacena la biblioteca de red del cliente. Cada proceso de cliente proviene de una conexión de red. Conexiones de red tienen una biblioteca de red asociada a ellos que les permite tomar la conexión.|  
 |loginame|**nchar(128)**|Nombre de inicio de sesión.|  
 |context_info|**binary(128)**|Datos almacenados en un lote con la instrucción SET CONTEXT_INFO.|  
 |sql_handle|**binary(20)**|Representa el objeto o archivo por lotes en ejecución.<br /><br /> **Tenga en cuenta** este valor se deriva de la dirección de memoria o por lotes del objeto. No se calcula mediante el algoritmo hash de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |stmt_start|**int**|Desplazamiento inicial de la instrucción SQL actual para el identificador sql_handle especificado.|  
 |stmt_end|**int**|Desplazamiento final de la instrucción SQL actual para el identificador sql_handle especificado.<br /><br /> -1 = La instrucción actual se ejecuta al final de los resultados devueltos por la función fn_get_sql para el identificador sql_handle especificado.|  
-|request_id|**int**|Id. de solicitud. Se utiliza para identificar solicitudes que se ejecutan en una sesión específica.|  
+|request_id|**int**|Id. de solicitud. Se utiliza para identificar solicitudes que se ejecutan en una sesión específica.|
+|page_resource |**binary (8)** |**Se aplica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> Una representación hexadecimal de 8 bytes del recurso de página si la `waitresource` columna contiene una página. |  
   
 ## <a name="remarks"></a>Comentarios  
  Si un usuario tiene el permiso VIEW SERVER STATE en el servidor, verá todas las sesiones en ejecución de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; de lo contrario, el usuario solo verá la sesión actual.  

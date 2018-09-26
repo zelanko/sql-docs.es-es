@@ -1,6 +1,6 @@
 ---
-title: Configurar repositorios para SQL Server en Linux | Microsoft Docs
-description: Compruebe y configure los repositorios de código fuente de SQL Server 2017 en Linux. El repositorio de origen afecta a la versión de SQL Server que se aplica durante la instalación y actualización.
+title: Configurar repositorios de Linux para SQL Server 2017 y 2019 | Microsoft Docs
+description: Compruebe y configure los repositorios de código fuente para 2019 de SQL Server y SQL Server 2017 en Linux. El repositorio de origen afecta a la versión de SQL Server que se aplica durante la instalación y actualización.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -11,21 +11,21 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 361f66fff8fecfd748b1bd573367509e93cc7b87
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 5aee3ea6a744c15afce8055d153959b8db9ac66d
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086987"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713217"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurar repositorios de instalación y actualización de SQL Server en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-En este artículo se describe cómo configurar el repositorio correcto para las actualizaciones e instalaciones de SQL Server 2017 en Linux.
+En este artículo se describe cómo configurar el repositorio correcto para las actualizaciones e instalaciones de SQL Server 2017 y 2019 de SQL Server en Linux.
 
-> [!IMPORTANT]
-> Si instaló anteriormente un CTP o la versión RC de SQL Server 2017, debe usar los pasos de este artículo para registrar un repositorio de disponibilidad General (GA) y actualizar o volver a instalar. Las versiones preliminares de SQL Server 2017 no se admiten y expirarán.
+> [!TIP]
+> SQL Server 2019 CTP 2.0 ya está disponible. Para probarlo, use este artículo para configurar el nuevo **mssql-server-vista previa** repositorio. A continuación, instalar con las instrucciones de la [Guía de instalación](sql-server-linux-setup.md).
 
 ## <a id="repositories"></a> Repositorios
 
@@ -33,7 +33,8 @@ Al instalar SQL Server en Linux, debe configurar un repositorio de Microsoft. Es
 
 | Repositorio | Nombre | Descripción |
 |---|---|---|
-| **Vista previa** | **MSSQL-server** | Repositorio de vista previa de las versiones CTP y RC de SQL Server. Este repositorio no se admite para SQL Server 2017. |
+| **Vista previa (2017)** | **MSSQL-server** | Repositorio de SQL Server 2017 CTP y RC (suspendido). |
+| **Vista previa (2019)** | **MSSQL-server-versión preliminar** | Repositorio de 2019 CTP de SQL Server y RC. |
 | **CU** | **MSSQL-server-2017** | Repositorio de SQL Server 2017 actualización acumulativa (CU). |
 | **GDR** | **MSSQL-server-2017-gdr** | Repositorio de SQL Server 2017 GDR de sólo las actualizaciones críticas. |
 
@@ -92,10 +93,11 @@ Este comando supone que el archivo identificado en la sección anterior se denom
 ### <a name="configure-new-repository-rhel"></a>Configurar el nuevo repositorio (RHEL)
 Configure el repositorio nuevo que se usará para las actualizaciones y las instalaciones de SQL Server. Utilice uno de los comandos siguientes para configurar el repositorio de su elección.
 
-| Repositorio | Comando |
-|---|---|
-| **CU** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
-| **GDR** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+| Repositorio | Versión | Comando |
+|---|---|---|
+| **Vista previa (2019)** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
+| **CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+| **GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
 ## <a id="sles"></a> Configurar repositorios SLES
 Use los pasos siguientes para configurar repositorios en SLES.
@@ -116,17 +118,19 @@ Si es necesario, quite el repositorio antiguo. Utilice uno de los siguientes com
 
 | Repositorio | Comando para quitar |
 |---|---|
-| **Vista previa** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+| **Vista previa (2017)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+| **Vista previa (2019)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-preview'` |
 | **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
 | **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
 
 ### <a name="configure-new-repository-sles"></a>Configurar el nuevo repositorio (SLES)
 Configure el repositorio nuevo que se usará para las actualizaciones y las instalaciones de SQL Server. Utilice uno de los comandos siguientes para configurar el repositorio de su elección.
 
-| Repositorio | Comando |
-|---|---|
-| **CU** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
-| **GDR** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
+| Repositorio | Versión | Comando |
+|---|---|---|
+| **Vista previa (2019)** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
+| **CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
+| **GDR** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
 
 ## <a id="ubuntu"></a> Configurar repositorios de Ubuntu
 Use los pasos siguientes para configurar repositorios en Ubuntu.
@@ -147,7 +151,8 @@ Si es necesario, quite el repositorio antiguo. Utilice uno de los siguientes com
 
 | Repositorio | Comando para quitar |
 |---|---|
-| **Vista previa** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` 
+| **Vista previa (2017)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
+| **Vista previa (2019)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview xenial main'` |
 | **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
 | **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
@@ -162,10 +167,11 @@ Configure el repositorio nuevo que se usará para las actualizaciones y las inst
 
 2. Utilice uno de los comandos siguientes para configurar el repositorio de su elección.
 
-   | Repositorio | Comando |
-   |---|---|
-   | **CU** | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
-   | **GDR** | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
+   | Repositorio | Versión | Comando |
+   |---|---|---|
+   | **Vista previa (2019)** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"` |
+   | **CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
+   | **GDR** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
 
 3. Ejecute **apt-get actualización**.
 

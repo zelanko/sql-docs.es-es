@@ -1,7 +1,7 @@
 ---
 title: Sys.column_master_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: system-catalog-views
@@ -32,12 +32,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4251ecafad275e64021729abe54fc243d9077f9f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e683a88fb9490a7041ac02edc02a8ba2f63b1382
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43079728"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713547"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -52,6 +52,10 @@ ms.locfileid: "43079728"
 |**modify_date**|**datetime**|Fecha en la que se modificó por última vez la clave maestra de columna.|  
 |**key_store_provider_name**|**sysname**|Nombre del proveedor para el almacén de claves maestras de columna que contiene la CMK. Los valores permitidos son:<br /><br /> MSSQL_CERTIFICATE_STORE: si el almacén de claves maestras de columna es un certificado de Store.<br /><br /> Un valor definido por el usuario, si el almacén de claves maestras de columna es de un tipo personalizado.|  
 |**key_path**|**nvarchar(4000)**|Una columna de clave principal específico del almacén ruta de acceso de la clave. El formato de la ruta de acceso depende el tipo de almacén de clave maestra de columna. Ejemplo:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Para un almacén de claves maestras de columna personalizada, el desarrollador es responsable de definir lo que una ruta de acceso de clave es para el almacén de claves maestras de columna personalizada.|  
+|**allow_enclave_computations**|**bit**|Indica si la clave maestra de columna está enclave habilitado (si las claves de cifrado de columna, cifradas con esta clave maestra, pueden usarse para realizar cálculos dentro de los enclaves seguros del servidor). Para obtener más información, consulte [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
+|**signature**|**varbinary(max)**|Una firma digital de **key_path** y **allow_enclave_computations**, usando la clave maestra de columna, al que hace referencia **key_path**.|
+
+
   
 ## <a name="permissions"></a>Permisos  
  Requiere el **VIEW ANY COLUMN MASTER KEY** permiso.  

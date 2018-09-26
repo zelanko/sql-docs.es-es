@@ -12,12 +12,12 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: e9bd11aefb01b607e02f11ebecc5adae7acf70ea
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1c6de6fd77de2594f4d2942fa5e5c4c82c614cc6
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086977"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46714037"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Use Visual Studio para crear bases de datos de SQL Server en Linux
 
@@ -39,7 +39,7 @@ SQL Server Data Tools (SSDT) convierte a Visual Studio en un eficaz entorno de a
 
 ## <a name="upgrade-sql-server-data-tools-to-ssdt-170-rc-release"></a>Actualizar SQL Server Data Tools a la versión RC de SSDT 17.0
 
-SQL Server 2017 en Linux es compatible con SSDT 17.0 RC o posterior de la versión.
+SQL Server en Linux es compatible con SSDT 17.0 RC o posterior de la versión.
 
 * [Descargar e instalar SSDT 17.0 RC2](https://go.microsoft.com/fwlink/?linkid=837939).
 
@@ -79,13 +79,13 @@ SQL Server 2017 en Linux es compatible con SSDT 17.0 RC o posterior de la versi�
 
 ## <a name="build-and-validate-the-database"></a>Crear y validar la base de datos
 
-1. Abra el menú de proyecto de base de datos en **TutorialDB** y seleccione **compilar**. SSDT .sql archivos de código fuente en el proyecto compila y compila un archivo de paquete (dacpac) de la aplicación de capa de datos. Esto puede usarse para publicar una base de datos en la instancia de SQL Server 2017 en Linux. 
+1. Abra el menú de proyecto de base de datos en **TutorialDB** y seleccione **compilar**. SSDT .sql archivos de código fuente en el proyecto compila y compila un archivo de paquete (dacpac) de la aplicación de capa de datos. Esto puede usarse para publicar una base de datos en la instancia de SQL Server en Linux. 
 
     <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
 
 2. Compruebe el mensaje de éxito de la compilación **salida** ventana de Visual Studio. 
 
-## <a name="publish-the-database-to-sql-server-2017-instance-on-linux"></a>Publicar la base de datos en la instancia de SQL Server 2017 en Linux
+## <a name="publish-the-database-to-sql-server-instance-on-linux"></a>Publicar la base de datos en la instancia de SQL Server en Linux
 
 1. Abra el menú de proyecto de base de datos en **TutorialDB** y seleccione **publicar**.
 

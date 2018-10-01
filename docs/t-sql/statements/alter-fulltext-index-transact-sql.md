@@ -216,8 +216,7 @@ ALTER FULLTEXT INDEX ON table_name
 |---------------------|------------------------|------------|  
 |No se ha habilitado|No se ha especificado|Se realiza un rellenado completo en el índice.|  
 |No se ha habilitado|Specified|No se produce el rellenado del índice hasta que se emite una instrucción ALTER FULLTEXT INDEX...START POPULATION.|  
-|Habilitado|
-          Specified|Se produce un error y no se altera el índice.|  
+|Habilitado|Specified|Se produce un error y no se altera el índice.|  
 |Habilitado|No se ha especificado|Se realiza un rellenado completo en el índice.|  
   
  Para más información sobre rellenar índices de texto completo, vea [Rellenar índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).  

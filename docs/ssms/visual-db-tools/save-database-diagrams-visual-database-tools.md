@@ -19,12 +19,12 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4aa10fd70f4202f659eaa41f58b40612b70d6987
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 829d8af7da228ab9fbd778fb59c68074cfaa502d
+ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999417"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47442759"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>Guardar diagramas de base de datos (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ Al guardar un diagrama de base de datos, puede guardar todos los cambios realiza
   
 ### <a name="to-save-the-database-diagram"></a>Para guardar el diagrama de base de datos  
   
-1.  En el menú **Archivo**, seleccione **Guardar \<***nombredetabla***>**.  
+1.  En el menú **Archivo** , elija **Guardar \<**_nombreDeTabla_**>**.  
   
 2.  Si se trata de un diagrama nuevo que no se ha guardado nunca, aparecerá el cuadro de diálogo **Guardar como** . Escriba un nombre para el diagrama.  
   

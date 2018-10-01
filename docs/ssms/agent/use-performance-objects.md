@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 01be4cebd589f5d30c4036a0a66f9fa29a4b48c7
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 0838b0d6620e5cfeaf528755ca5abe7d21f694df
+ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42775780"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47440249"
 ---
 # <a name="use-performance-objects"></a>Usar objetos de rendimiento
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,8 +47,8 @@ La tabla siguiente muestra cómo se denominan los objetos de rendimiento del ser
   
 |Tipo de instancia|Nombre del objeto|  
 |-----------------|---------------|  
-|Valor predeterminado|**SQLAgent:***objeto*:*número*|  
-|Con nombre|**SQLAgent$**<br /> **&#42;nombre_de_instancia&#42; :***objeto*:*número*|  
+|Valor predeterminado|**SQLAgent:**_objeto_:_contador_|  
+|Con nombre|**SQLAgent$**<br /> **&#42;nombre_instancia&#42; :**_objeto_:_contador_|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye los siguientes objetos de rendimiento para el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

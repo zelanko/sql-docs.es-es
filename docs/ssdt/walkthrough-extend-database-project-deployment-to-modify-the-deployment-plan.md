@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 22b077b1-fa25-49ff-94f6-6d0d196d870a
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dad3c26c68535c16586c7a31f87600ed7791cc03
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: f0bf343b332a92b88aab32a12eace6052b6b9b60
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45564061"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652823"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Tutorial: Ampliar la implementación del proyecto de base de datos para modificar el plan de implementación
 Puede crear colaboradores de implementación para realizar acciones personalizadas al implementar un proyecto de SQL. Puede crear un [DeploymentPlanModifier](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) o un [DeploymentPlanExecutor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). Utilice un [DeploymentPlanModifier](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) para cambiar el plan antes de ejecutarlo y un [DeploymentPlanExecutor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) para realizar operaciones mientras se ejecuta el plan. En este tutorial, creará un [DeploymentPlanModifier](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) denominado SqlRestartableScriptContributor que agrega instrucciones IF a los lotes del script de implementación para permitir volver a ejecutar el script hasta que se completen en el caso de que se produzca un error durante la ejecución.  
@@ -53,7 +50,7 @@ Para crear un colaborador de implementación, debe realizar las siguientes tarea
   
 -   Invalide el método [OnExecute](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute.aspx).  
   
--   Agregue métodos auxiliares privados.  
+-   Agregue métodos del asistente privados.  
   
 -   Compile el ensamblado resultante.  
   
@@ -358,11 +355,11 @@ A continuación, empiece a agregar el código a la clase.
   
     StringBuilder, [DeploymentScriptStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptstep.aspx) y AddBefore.  
   
-    A continuación, define los métodos auxiliares llamados por este método.  
+    A continuación, define los métodos del asistente llamados por este método.  
   
-#### <a name="to-add-the-helper-methods"></a>Para agregar los métodos auxiliares  
+#### <a name="to-add-the-helper-methods"></a>Para agregar los métodos del asistente  
   
--   Se deben definir varios métodos auxiliares. Los métodos importantes son:  
+-   Se deben definir varios métodos del asistente. Los métodos importantes son:  
   
     |**Método**|**Descripción**|  
     |--------------|-------------------|  
@@ -374,7 +371,7 @@ A continuación, empiece a agregar el código a la clase.
     |GetStepInfo|Defina el método GetStepInfo. Este método extrae la información sobre el elemento modelo usado para crear el script del paso, además del nombre del paso. Los tipos y métodos de interés son los siguientes: [DeploymentPlanContributorContext](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx), [DeploymentScriptDomStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx), [TSqlObject](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx), [CreateElementStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx) y [DropElementStep](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).|  
     |GetElementName|Crea un nombre con formato para un TSqlObject.|  
   
-1.  Agregue el código siguiente para definir los métodos auxiliares:  
+1.  Agregue el código siguiente para definir los métodos del asistente:  
   
     ```csharp  
   

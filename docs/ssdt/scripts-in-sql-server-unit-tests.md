@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f829c583b0591263eeb5db612983efc18e96fa97
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 226c4760b0e8461b9183345c9e727f288edd32dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085887"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751633"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>Scripts de pruebas unitarias de SQL Server
 Cada prueba unitaria de SQL Server contiene una única acción anterior a la prueba, una acción de prueba y una acción posterior a la prueba. Cada una de estas acciones contiene, a su vez, lo siguiente:  
@@ -59,7 +56,7 @@ En el Diseñador de pruebas unitarias de SQL Server, los scripts TestInitialize 
   
 Si solo escribe pruebas unitarias mediante el Diseñador de pruebas unitarias de SQL Server, quizás no esté familiarizado con el concepto de clase de prueba. Cada vez que se crea una prueba unitaria al abrir el menú **Prueba** y hacer clic en **Nueva prueba**, SQL Server Data Tools genera una clase de prueba. Las clases de prueba aparecen en el **Explorador de soluciones** con el nombre de prueba especificado, seguido de una extensión .cs o .vb. En cada clase de prueba, las pruebas unitarias individuales se almacenan como métodos de prueba. Sin embargo, independientemente del número de métodos de prueba (es decir, pruebas unitarias), cada clase de prueba puede tener un script TestInitialize y TestCleanup, o ninguno.  
   
-Puede usar el script TestInitialize para preparar la base de datos de prueba y el script TestCleanup para devolver la base de datos de prueba a un estado conocido. Por ejemplo, puede usar TestInitialize para crear un procedimiento almacenado auxiliar que se ejecutará después, en el script de prueba, para probar otro procedimiento almacenado.  
+Puede usar el script TestInitialize para preparar la base de datos de prueba y el script TestCleanup para devolver la base de datos de prueba a un estado conocido. Por ejemplo, puede usar TestInitialize para crear un procedimiento almacenado por el asistente que se ejecutará después, en el script de prueba, para probar otro procedimiento almacenado.  
   
 ## <a name="pre-test-and-post-test-scripts"></a>Scripts anteriores y posteriores a la prueba  
 Los scripts asociados a las acciones anteriores y posteriores a la prueba varían probablemente de una prueba unitaria a la siguiente. Puede usar estos scripts para establecer cambios incrementales en la base de datos y, a continuación, limpiar los cambios.  

@@ -4,33 +4,29 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Broker / DBM Transport object
 - SQLServer:Broker/DBM Transport
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
-caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dc79e7ca28f76cb2a2e81995448ea6f645d058a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f8ee36cc896afe72fe3f06fcb364524eeb89276c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32953780"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701253"
 ---
 # <a name="sql-server-broker---dbm-transport-object"></a>Broker - DBM Transport (objeto de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   El objeto de rendimiento **Broker / DBM Transport** contiene contadores de rendimiento que proporcionan información de red sobre Service Broker y sobre la creación de reflejo de la base de datos. En la siguiente tabla se enumeran los contadores incluidos en este objeto.  
   
-|Contador de Broker / DBM Transport de SQL Server|Description|  
+|Contador de Broker / DBM Transport de SQL Server|Descripción|  
 |------------------------------------------------|-----------------|  
 |**Bytes actuales para E/S de recepción**|Este contador informa del número de bytes que deben leer las operaciones de recepción de transporte que están en ejecución.|  
 |**Bytes actuales para E/S de envío**|Este contador informa del número de bytes en fragmentos de mensaje que están en proceso de ser enviados a través de la red.|  

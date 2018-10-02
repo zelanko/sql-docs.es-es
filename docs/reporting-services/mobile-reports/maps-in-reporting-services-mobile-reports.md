@@ -4,17 +4,16 @@ ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b50dcdf664c0c6f16849252db1962ca034aec37f
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43282467"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810995"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Mapas en informes para dispositivos móviles de Reporting Services
 Los mapas constituyen una forma excelente de visualizar datos geográficos. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] ofrece tres tipos distintos de visualización en mapas, así como mapas integrados para continentes y diversos países individuales. También puede [cargar y usar mapas personalizados](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   

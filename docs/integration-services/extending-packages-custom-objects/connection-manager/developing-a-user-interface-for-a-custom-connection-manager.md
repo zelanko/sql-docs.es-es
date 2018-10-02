@@ -5,26 +5,21 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - custom connection managers [Integration Services], developing user interface
 - custom user interface [Integration Services], custom connection manager
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7ab030542b0197bb7055160fc186df80fe66b6e7
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: ae1f86ce6127a963256bfb88f00621af1fb2cb14
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335889"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681663"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>Desarrollar una interfaz de usuario para un administrador de conexiones personalizado
   Después de invalidar la implementación de las propiedades y los métodos de la clase base para proporcionar una funcionalidad personalizada, quizá desee crear una interfaz de usuario personalizada para el administrador de conexiones. Si no crea una interfaz de usuario personalizada, los usuarios solo pueden configurar el administrador de conexiones mediante la ventana Propiedades.  
@@ -107,7 +102,7 @@ public bool New(System.Windows.Forms.IWin32Window parentWindow, Microsoft.SqlSer
 ```  
   
 ### <a name="editing-the-connection-manager"></a>Editar el administrador de conexiones  
- Dado que se llama al formulario para la edición desde los métodos <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.New%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Edit%2A>, es conveniente utilizar una función auxiliar para encapsular el código que muestra el formulario. El código siguiente muestra una implementación de esta función auxiliar.  
+ Dado que se llama al formulario para la edición desde los métodos <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.New%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Edit%2A>, es conveniente utilizar una función del asistente para encapsular el código que muestra el formulario. El código siguiente muestra una implementación de esta función del asistente.  
   
 ```vb  
 Private Function EditSqlConnection(ByVal parentWindow As IWin32Window) As Boolean  
@@ -143,7 +138,7 @@ private bool EditSqlConnection(IWin32Window parentWindow)
  }  
 ```  
   
- En el método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Edit%2A>, solo tiene que mostrar el formulario para editar. El código siguiente muestra una implementación del método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Edit%2A> que utiliza una función auxiliar para encapsular el código del formulario.  
+ En el método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Edit%2A>, solo tiene que mostrar el formulario para editar. El código siguiente muestra una implementación del método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Edit%2A> que utiliza una función del asistente para encapsular el código del formulario.  
   
 ```vb  
 Public Function Edit(ByVal parentWindow As System.Windows.Forms.IWin32Window, ByVal connections As Microsoft.SqlServer.Dts.Runtime.Connections, ByVal connectionUIArg As Microsoft.SqlServer.Dts.Runtime.Design.ConnectionManagerUIArgs) As Boolean Implements Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Edit  
@@ -192,7 +187,7 @@ public void Initialize(ConnectionManager connectionManager, IServiceProvider ser
 ```  
   
 ### <a name="setting-properties-on-the-user-interface-form"></a>Establecer las propiedades en el formulario de la interfaz de usuario  
- Finalmente, la clase de formulario necesita una función auxiliar que rellena los controles del formulario cuando se carga por primera vez con los valores existentes o predeterminados de las propiedades del administrador de conexiones. La clase de formulario también necesita una función similar que establece los valores de las propiedades en los valores escritos por el usuario cuando el usuario hace clic en Aceptar y cierra el formulario.  
+ Finalmente, la clase de formulario necesita una función del asistente que rellena los controles del formulario cuando se carga por primera vez con los valores existentes o predeterminados de las propiedades del administrador de conexiones. La clase de formulario también necesita una función similar que establece los valores de las propiedades en los valores escritos por el usuario cuando el usuario hace clic en Aceptar y cierra el formulario.  
   
 ```vb  
 Private Const CONNECTIONNAME_BASE As String = "SqlConnectionManager"  

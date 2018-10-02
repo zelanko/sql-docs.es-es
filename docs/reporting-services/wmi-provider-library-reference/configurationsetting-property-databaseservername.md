@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - DatabaseServerName Property
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 57d09ad0-66a8-44f2-a81f-736217e3815c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 23c3d5515635f6738e222d221a9d0ad0bb330c16
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 772d3aefc9d61c55edf42fb1fe8f3fa94e394bc0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265005"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744353"
 ---
 # <a name="configurationsetting-property---databaseservername"></a>Propiedad ConfigurationSetting - DatabaseServerName
   Especifica el nombre del servidor en el que está instalada la base de datos del servidor de informes. Lectura/escritura  

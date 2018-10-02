@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server 2016 XTP Databases
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
-caps.latest.revision: 3
 author: dagiro
 ms.author: v-dagir
 manager: craigg
-ms.openlocfilehash: a5550c9a6df1ae646d4960a0d9eca8bd5a43bec4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c06b0b8a55be4d231ce6593538168fad440f08c5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32955520"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852183"
 ---
 # <a name="sql-server-xtp-databases"></a>SQL Server XTP Databases
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +31,7 @@ El objeto de rendimiento **SQL Server XTP Databases** contiene contadores relaci
 
 En esta tabla se describen los contadores de **SQL Server XTP Databases** .
 
-|Contador|Description| 
+|Contador|Descripción| 
 |-------------|-----------------|  
 |**Avg Transaction Segment Large Data Size**|Tamaño promedio de la carga de datos grandes del segmento de transacciones. Es un contador de nivel muy bajo, no está pensado para uso de los clientes.|
 |**Avg Transaction Segment Size**|Tamaño promedio de la carga del segmento de transacciones. Si este valor llega a cero, se asignan más páginas desde el asignador de backend. Es un contador de nivel muy bajo, no está pensado para uso de los clientes.|

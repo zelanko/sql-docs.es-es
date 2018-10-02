@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 92353cf4dde604e191d26dc971edf83f16ae4b51
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9302e518ab06f4e7ac01d51e27bcdf7e6e6b5970
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957150"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748411"
 ---
 # <a name="sql-server-deprecated-features-object"></a>Objeto SQL Server, Características en desuso
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +38,13 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 En la tabla siguiente se describe el objeto de rendimiento **Características desusadas** de SQL Server.
 
-|**Contador SQL Server, Características en desuso**|Description|  
+|**Contador SQL Server, Características en desuso**|Descripción|  
 |-------------|-----------------|  
 |**Uso**|Uso de la característica desde que la última vez que se inició SQL Server.|
   
  En la tabla siguiente se describen las instancias del contador Características desusadas de SQL Server.  
   
-|Instancias del contador Características desusadas de SQL Server|Description|  
+|Instancias del contador Características desusadas de SQL Server|Descripción|  
 |------------------------------------------------------|-----------------|  
 |'#' y '##' como el nombre de tablas temporales y procedimientos almacenados|Se encontró un identificador que no contenía ningún carácter a parte de #. Utilice al menos un carácter adicional. Se produce una vez por cada compilación.|  
 |'::' function calling syntax|Se encontró la sintaxis de llamada a función :: para una función con valores de tabla. Reemplace por `SELECT column_list FROM` *< nombre_función>*`()`. Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)` con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produce una vez por cada compilación.|  

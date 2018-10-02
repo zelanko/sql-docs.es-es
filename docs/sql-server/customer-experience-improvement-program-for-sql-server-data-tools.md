@@ -4,21 +4,19 @@ ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssdt
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bf04dde0c16f7f7782755db0583d9f64716471b9
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 05386d70bb785aebd5093246b3545084517e7f5e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36886741"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47693273"
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>Programa para la mejora de la experiencia del usuario de SQL Server Data Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +68,7 @@ Valor = (DWORD)
 
   
 > [!CAUTION]  
->  Una modificación incorrecta del Registro puede provocar daños graves en el sistema. Antes de efectuar cambios en el Registro, debe realizar una copia de seguridad de los datos importantes del equipo. También puede utilizar la opción de inicio La última configuración válida conocida si detecta problemas una vez aplicados los cambios manuales.  
+>  Una modificación incorrecta del Registro puede provocar daños graves en el sistema. Antes de efectuar cambios en el Registro, debe realizar una copia de seguridad de los datos importantes del equipo. También puede usar la opción de inicio Última configuración buena conocida en caso de detectar problemas una vez aplicados cambios manuales.  
   
  Para obtener más información acerca de los datos que se recopilan, procesan o transmiten en el CEIP, consulte la [Declaración de privacidad](http://go.microsoft.com/fwlink/?LinkID=868444).  
  
@@ -112,7 +110,7 @@ Valor = (DWORD)
 -   1 para utilizarlo  
   
 > [!CAUTION]  
->  Una modificación incorrecta del Registro puede provocar daños graves en el sistema. Antes de efectuar cambios en el Registro, debe realizar una copia de seguridad de los datos importantes del equipo. También puede utilizar la opción de inicio La última configuración válida conocida si detecta problemas una vez aplicados los cambios manuales.  
+>  Una modificación incorrecta del Registro puede provocar daños graves en el sistema. Antes de efectuar cambios en el Registro, debe realizar una copia de seguridad de los datos importantes del equipo. También puede usar la opción de inicio Última configuración buena conocida en caso de detectar problemas una vez aplicados cambios manuales.  
   
  Para obtener más información acerca de los datos que se recopilan, procesan o transmiten en el CEIP, consulte la [Declaración de privacidad](http://go.microsoft.com/fwlink/?LinkID=868444).  
   

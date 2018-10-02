@@ -5,25 +5,22 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - global default for all users [SQL Server]
 - users [SQL Server], global defaults
 - user options option [SQL Server]
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b355563ee256302279575440b6cf59ef5c0c9c3b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73c5f451036360acdbf2b986b84d5631af75386d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32868610"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670173"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Establecer la opción de configuración del servidor Opciones de usuario
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +51,7 @@ ms.locfileid: "32868610"
   
 -   En la tabla siguiente se muestran y describen los valores de configuración para **opciones de usuario**. No todos los valores de configuración son compatibles entre sí. Por ejemplo, ANSI_NULL_DFLT_ON y ANSI_NULL_DFLT_OFF no se pueden establecer al mismo tiempo.  
   
-    |Valor|Configuración|Description|  
+    |Valor|Configuración|Descripción|  
     |-----------|-------------------|-----------------|  
     |1|DISABLE_DEF_CNST_CHK|Controla la comprobación de restricciones provisionales o diferidas.|  
     |2|IMPLICIT_TRANSACTIONS|Para las conexiones de biblioteca de red dblib, controla si una transacción se inicia de manera implícita al ejecutar una instrucción. El valor IMPLICIT_TRANSACTIONS no tiene ningún efecto en las conexiones ODBC u OLEDB.|  

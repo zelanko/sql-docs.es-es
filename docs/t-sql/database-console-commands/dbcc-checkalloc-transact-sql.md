@@ -5,9 +5,7 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKALLOC_TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - disk space [SQL Server], allocation consistency checks
 - space allocation [SQL Server], checking
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
-caps.latest.revision: 76
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 5532f6870e19e830a4d8925fbfca68862493fa6a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e772a5afba4129d90ae7ab26fb051db7fd8113bd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262645"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597784"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -117,7 +114,7 @@ DBCC CHECKALLOC utiliza una instantánea interna de base de datos para proporcio
 ## <a name="understanding-dbcc-error-messages"></a>Descripción de los mensajes de error de DBCC  
 Cuando finaliza el comando DBCC CHECKALLOC, se escribe un mensaje en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el comando DBCC se ejecuta correctamente, el mensaje lo indica, así como el tiempo de ejecución del comando. Si el comando DBCC se detiene antes de finalizar la comprobación debido a un error, el mensaje indica que el comando se ha cancelado, un valor de estado y el tiempo de ejecución del comando. En la tabla siguiente se muestran y describen los valores de estado que pueden aparecer en el mensaje.
   
-|State|Description|  
+|State|Descripción|  
 |---|---|  
 |0|Se ha generado el error número 8930. Indica un daño en los metadatos que provoca la cancelación del comando DBCC.|  
 |1|Se ha generado el error número 8967. Error DBCC interno.|  
@@ -137,7 +134,7 @@ Es posible realizar una reparación en una transacción de usuario. Esto permite
 ## <a name="result-sets"></a>Conjuntos de resultados  
 En las siguientes tablas se describe la información que devuelve DBCC CHECKALLOC.
   
-|Elemento|Description|  
+|Elemento|Descripción|  
 |---|---|  
 |FirstIAM|Exclusivamente para uso interno.|  
 |Root|Exclusivamente para uso interno.|  
@@ -147,7 +144,7 @@ En las siguientes tablas se describe la información que devuelve DBCC CHECKALLO
   
 DBCC CHECKALLOC también devuelve un resumen de asignación de cada índice y partición de los archivos. En este resumen se describe la distribución de los datos.
   
-|Elemento|Description|  
+|Elemento|Descripción|  
 |---|---|  
 |Reserved pages|Páginas asignadas al índice y páginas no utilizadas en extensiones asignadas.|  
 |Used pages|Páginas asignadas y utilizadas por el índice.|  

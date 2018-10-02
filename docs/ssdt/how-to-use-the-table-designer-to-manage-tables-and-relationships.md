@@ -6,24 +6,21 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.columnspecification.index.dialog
 - sql.data.tools.design.table.columnsgrid.view
 - sql.data.tools.design.table.scriptpanel
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 199f12a6318b9a283a62176289a2c6501444255e
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6a312fbcfe6cfb25f612bb095bcff70656009a11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085177"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652882"
 ---
 # <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Cómo: Usar el Diseñador de tablas para administrar tablas y relaciones
 El Diseñador de tablas proporciona una experiencia visual junto con el Editor de Transact\-SQL para crear y editar estructuras de tablas, incluidos objetos de programación específicos de tablas, para bases de datos de SQL Server.  Se inicia al crear una nueva tabla para una base de datos conectada o un proyecto, o al hacer doble clic para editar una tabla en el Explorador de objetos de SQL Server o en el Explorador de soluciones.  

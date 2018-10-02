@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 389f9d79713ca7a7ee1d33b91dd1778b0604f5f0
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: b7ac77271546fc6119f60fb218bb8c0d3c96c5a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563792"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822543"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Tutorial: Ampliar la implementación del proyecto de base de datos para analizar el plan de implementación
 Puede crear colaboradores de implementación para realizar acciones personalizadas al implementar un proyecto de SQL. Puede crear un DeploymentPlanModifier o un DeploymentPlanExecutor. Utilice un DeploymentPlanModifier para cambiar el plan antes de ejecutarlo y un DeploymentPlanExecutor para realizar operaciones mientras se ejecuta el plan. En este tutorial, se crea un DeploymentPlanExecutor denominado DeploymentUpdateReportContributor que crea un informe sobre las acciones que se realizan al implementar un proyecto de base de datos. Dado que este colaborador de compilación acepta un parámetro para controlar si el informe se genera, debe efectuar un paso necesario adicional.  
@@ -53,7 +50,7 @@ Para crear un colaborador de implementación, debe realizar las siguientes tarea
   
 -   Invalide el método OnExecute.  
   
--   Agregue una clase auxiliar privada.  
+-   Agregue una clase del asistente privada.  
   
 -   Compile el ensamblado resultante.  
   
@@ -252,15 +249,15 @@ Para crear un colaborador de implementación, debe realizar las siguientes tarea
             }  
     ```  
   
-    El método OnExecute se pasa a un objeto [DeploymentPlanContributorContext](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) que proporciona acceso a cualquier argumento especificado, al modelo de base de datos de origen y de destino, a las propiedades de compilación y a los archivos de la extensión. En este ejemplo, obtenemos el modelo y, a continuación llamamos a las funciones auxiliares para generar información sobre el modelo. Utilizamos el método auxiliar PublishMessage de la clase base para notificar los errores que se produzcan.  
+    El método OnExecute se pasa a un objeto [DeploymentPlanContributorContext](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) que proporciona acceso a cualquier argumento especificado, al modelo de base de datos de origen y de destino, a las propiedades de compilación y a los archivos de la extensión. En este ejemplo, obtenemos el modelo y, a continuación llamamos a las funciones del asistente para generar información sobre el modelo. Utilizamos el método del asistente PublishMessage de la clase base para notificar los errores que se produzcan.  
   
     Entre los tipos y métodos adicionales de interés se encuentran: [TSqlModel](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) y [SqlDeploymentOptions](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx).  
   
-    A continuación, defina la clase auxiliar que examina más en profundidad los detalles del plan de implementación.  
+    A continuación, defina la clase del asistente que examina más en profundidad los detalles del plan de implementación.  
   
-#### <a name="to-add-the-helper-class-that-generates-the-report-body"></a>Para agregar la clase auxiliar que genera el cuerpo del informe  
+#### <a name="to-add-the-helper-class-that-generates-the-report-body"></a>Para agregar la clase del asistente que genera el cuerpo del informe  
   
--   Agregue la clase auxiliar y sus métodos agregando el código siguiente:  
+-   Agregue la clase del asistente y sus métodos agregando el código siguiente:  
   
     ```csharp  
     /// <summary>  
@@ -523,7 +520,7 @@ Para crear un colaborador de implementación, debe realizar las siguientes tarea
             }  
     ```  
   
--   Guarde los cambios en el archivo de clase. Hay varios tipos útiles referenciados en la clase auxiliar:  
+-   Guarde los cambios en el archivo de clase. Hay varios tipos útiles referenciados en la clase del asistente:  
   
     |**Área de código**|**Tipos útiles**|  
     |-----------------|--------------------|  

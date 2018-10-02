@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.condition.advancededit.f1
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 375d21441757d274dbd62bcd94638b03a0ded57f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5985712af5eb0f4cb45446e5072229023456cea5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956640"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598893"
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>Cuadro de diálogo Edición avanzada (condición)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +64,7 @@ ms.locfileid: "32956640"
   
 > **IMPORTANTE:** Las funciones que puede utilizar para crear condiciones de administración basada en directivas no siempre utilizan la sintaxis [!INCLUDE[tsql](../../includes/tsql-md.md)] . Asegúrese de seguir la sintaxis del ejemplo. Por ejemplo, al utilizar las funciones **DateAdd** o **DatePart** , debe incluir el argumento *datepart* entre comillas simples.  
   
-|Función|Signature|Description|Argumentos|Valor devuelto|Ejemplo|  
+|Función|Signature|Descripción|Argumentos|Valor devuelto|Ejemplo|  
 |--------------|---------------|-----------------|---------------|------------------|-------------|  
 |**Add()**|Numeric Add (Numeric *expression1*, Numeric *expression2*)|Suma dos números.|*expression1* y *expression2* : es cualquier expresión válida de cualquiera de los tipos de datos de la categoría numeric, excepto el tipo de datos **bit** . Puede ser una constante, propiedad o función que devuelva un tipo numérico.|Devuelve el tipo de datos del argumento que tenga mayor prioridad.|`Add(Property1, 5)`|  
 |**Array()**|Array Array (VarArgs *expression*)|Crea una matriz a partir de una lista de valores. Se puede utilizar con funciones de agregado como Sum() y Count().|*expression* : es una expresión que se convertirá en una matriz.|La matriz|`Array(2,3,4,5,6)`|  

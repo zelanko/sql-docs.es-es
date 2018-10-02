@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - system databases [SQL Server], backing up and restoring
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - database backups [SQL Server], system databases
 - servers [SQL Server], backup
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
-caps.latest.revision: 57
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7cdf3056f71609a33910a6c4812127fc78861be5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ad6102a7d6ddef80770d028c5832d1af6fb06f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921940"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598097"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>Realizar copias de seguridad y restaurar bases de datos del sistema (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +31,7 @@ ms.locfileid: "32921940"
   
  En la tabla siguiente se resumen todas las bases de datos del sistema.  
   
-|Base de datos del sistema|Description|¿Son necesarias copias de seguridad?|modelo de recuperación|Comentarios|  
+|Base de datos del sistema|Descripción|¿Son necesarias copias de seguridad?|modelo de recuperación|Comentarios|  
 |---------------------|-----------------|---------------------------|--------------------|--------------|  
 |[maestra](../../relational-databases/databases/master-database.md)|Base de datos en la que se registra toda la información del sistema de un sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Sí|Simple|Realice copias de seguridad de la base de datos **maestra** con la frecuencia necesaria para que los datos estén suficientemente protegidos según sus necesidades empresariales. Se recomienda llevar a cabo una programación periódica de copias de seguridad, que se puede complementar con copias de seguridad adicionales cuando exista una actualización sustancial.|  
 |[model](../../relational-databases/databases/model-database.md)|Plantilla para todas las bases de datos creadas en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Sí|Configurable por el usuario*|Haga una copia de seguridad de **model** solo cuando sea necesario para sus necesidades empresariales: por ejemplo, después de personalizar las opciones de la base de datos.<br /><br /> **Recomendación:** es aconsejable crear copias de seguridad completas de base de datos de **model**, solo cuando sea necesario. Puesto que **model** es de pequeño tamaño y no suele cambiar, no es necesario realizar copia de seguridad del registro.|  

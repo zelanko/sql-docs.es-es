@@ -5,25 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - custom connection managers [Integration Services], coding
 ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7185db4d3076e7cb243a7f2ac82ef021e1dc5648
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 21212d035c8f2c047d6d3bef48900d2b3c66a58d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411607"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597264"
 ---
 # <a name="coding-a-custom-connection-manager"></a>Codificar un administrador de conexiones personalizado
   Una vez que haya creado una clase que herede de la clase base <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase> y haya aplicado el atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> a la clase, debe invalidar la implementación de las propiedades y los métodos de la clase base para proporcionar su funcionalidad personalizada.  
@@ -36,7 +31,7 @@ ms.locfileid: "35411607"
 ## <a name="configuring-the-connection-manager"></a>Configurar el administrador de conexiones  
   
 ### <a name="setting-the-connectionstring-property"></a>Establecer la propiedad ConnectionString  
- La propiedad <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ConnectionString%2A> es una propiedad importante y la única propiedad para un administrador de conexiones personalizado. El administrador de conexiones usa el valor de esta propiedad para conectar al origen de datos externo. Si combina varias propiedades, como nombre de servidor y nombre de base de datos, para crear la cadena de conexión, puede usar una función auxiliar para ensamblar la cadena reemplazando ciertos valores en una plantilla de cadena de conexión con el nuevo valor que proporciona el usuario. En el ejemplo de código siguiente se muestra una implementación de la propiedad <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ConnectionString%2A> que confía en una función auxiliar para ensamblar la cadena.  
+ La propiedad <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ConnectionString%2A> es una propiedad importante y la única propiedad para un administrador de conexiones personalizado. El administrador de conexiones usa el valor de esta propiedad para conectar al origen de datos externo. Si combina varias propiedades, como nombre de servidor y nombre de base de datos, para crear la cadena de conexión, puede usar una función del asistente para ensamblar la cadena reemplazando ciertos valores en una plantilla de cadena de conexión con el nuevo valor que proporciona el usuario. En el ejemplo de código siguiente se muestra una implementación de la propiedad <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ConnectionString%2A> que confía en una función del asistente para ensamblar la cadena.  
   
 ```vb  
 ' Default values.  

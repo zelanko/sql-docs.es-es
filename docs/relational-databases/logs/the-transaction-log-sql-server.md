@@ -5,25 +5,22 @@ ms.date: 01/04/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
 - databases [SQL Server], transaction logs
 - logs [SQL Server], transaction logs
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
-caps.latest.revision: 65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 877c48ecbe9befaf0bb04f34a866dd8fee6671bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ecd041e75644fa726e2dc388c4b5ee34d8cded8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948080"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664694"
 ---
 # <a name="the-transaction-log-sql-server"></a>El registro de transacciones (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +102,7 @@ Para evitar quedarse sin espacio, a menos que el truncamiento del registro se re
   
  En realidad, el truncamiento del registro se puede retrasar por diversos motivos. Para saber qué es lo que impide el truncamiento del registro, si hay alguna causa, consulte las columnas **log_reuse_wait** y **log_reuse_wait_desc** de la vista de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). En la tabla siguiente se describen los valores de estas columnas.  
   
-|valor log_reuse_wait|valor log_reuse_wait_desc|Description|  
+|valor log_reuse_wait|valor log_reuse_wait_desc|Descripción|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|Hay actualmente uno o más [archivos de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) reutilizables.|  
 |1|CHECKPOINT|No se ha producido ningún punto de comprobación desde el último truncamiento o el encabezado del registro no se ha movido más allá de un [archivo de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). (Todos los modelos de recuperación)<br /><br /> Este es un motivo habitual para retrasar el truncamiento. Para obtener más información, vea [Puntos de comprobación de base de datos &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  

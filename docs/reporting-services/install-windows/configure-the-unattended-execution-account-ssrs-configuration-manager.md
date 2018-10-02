@@ -3,7 +3,6 @@ title: Configurar la cuenta de ejecución desatendida (Administrador de configur
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9998fd0b3b71350f154d2698bfb2b5b5a7a1e753
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7fa941d5c7229eeba45e52bddb2b434d3cae44da
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275065"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643313"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurar la cuenta de ejecución desatendida (Administrador de configuración de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona una cuenta especial que se utiliza para el procesamiento de informes en modo desatendido y para enviar solicitudes de conexión a través de la red. La cuenta se utiliza de las formas siguientes:  

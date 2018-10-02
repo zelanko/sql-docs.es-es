@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd24537cc05c7b2786f766278832ae64ab924508
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: eadcee634436016626d6096544035e29c0d9c27e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331399"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599453"
 ---
 # <a name="user-roles"></a>Roles de usuario
   En esta sección se describen los roles de usuario para el Servicio de captura de datos modificados para Oracle de Attunity. Los roles descritos son roles de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , roles de Windows o roles de base de datos de Oracle.  

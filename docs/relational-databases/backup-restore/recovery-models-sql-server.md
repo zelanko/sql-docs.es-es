@@ -5,9 +5,7 @@ ms.date: 07/16/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database backups [SQL Server], recovery models
@@ -28,15 +26,15 @@ helpviewer_keywords:
 - full recovery model [SQL Server]
 - backing up transaction logs [SQL Server], recovery models
 ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
-caps.latest.revision: 70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f86cc963e5328247b1ee883abb658dcc57e81efc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c8c2efee10a38120717487fc6e04429de7f1bf6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653459"
 ---
 # <a name="recovery-models-sql-server"></a>Modelos de recuperación (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +49,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="RMov"></a> Introducción al modelo de recuperación  
  En la tabla siguiente se resumen los tres modelos de recuperación.  
   
-|modelo de recuperación|Description|Riesgo de pérdida de trabajo|¿Recuperación hasta un momento dado?|  
+|modelo de recuperación|Descripción|Riesgo de pérdida de trabajo|¿Recuperación hasta un momento dado?|  
 |--------------------|-----------------|------------------------|-------------------------------|  
 |**Simple**|Sin copias de seguridad de registros.<br /><br /> Recupera automáticamente el espacio de registro para mantener al mínimo los requisitos de espacio, eliminando, en esencia, la necesidad de administrar el espacio del registro de transacciones. Para obtener información sobre las copias de seguridad de base de datos en el modelo de recuperación simple, vea [Copias de seguridad completas de bases de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md).<br /><br /> Las operaciones que requieren copias de seguridad del registro de transacciones no son compatibles con el modelo de recuperación simple. Las características siguientes no se pueden utilizar en modo de recuperación simple:<br /><br /> -Trasvase de registros<br /><br /> -AlwaysOn o creación de reflejo de la base de datos<br /><br /> -Recuperación de medios sin pérdida de datos<br /><br /> -Restauraciones a un momento dado|Los cambios realizados después de la copia de seguridad más reciente no están protegidos. En caso de desastre, es necesario volver a realizar dichos cambios.|Solo se puede recuperar hasta el final de una copia de seguridad. Para obtener más información, vea [Restauraciones de base de datos completas &#40;modelo de recuperación simple&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md). <br><br> Para obtener una explicación más amplia sobre el modelo de recuperación simple, vea [Modelo de recuperación simple de SQL Server](https://www.mssqltips.com/sqlservertutorial/4/sql-server-simple-recovery-model/) proporcionado por los compañeros de [MSSQLTips!](https://www.mssqltips.com).|  
 |**Completa**|Requiere copias de seguridad de registros.<br /><br /> No se pierde trabajo si un archivo de datos se pierde o resulta dañado.<br /><br /> Se puede recuperar hasta cualquier momento, por ejemplo, antes del error de aplicación o usuario. Para obtener información sobre las copias de seguridad de base de datos en el modelo de recuperación completa, vea [Copias de seguridad completas de bases de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md) y [Restauraciones de base de datos completas &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).|Normalmente ninguno.<br /><br /> Si el final del registro resulta dañado, se deben repetir los cambios realizados desde la última copia de seguridad de registros.|Se puede recuperar hasta determinado momento, siempre que las copias de seguridad se hayan completado hasta ese momento. Para obtener más información sobre cómo usar copias de seguridad de registros para restaurar hasta el momento del error, vea [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).<br /><br /> Nota: Si tiene dos o más bases de datos con el modelo de recuperación completa que tengan que ser lógicamente coherentes, es posible que tenga que implementar procedimientos especiales para garantizar la capacidad de recuperación de dichas bases de datos. Para obtener más información, vea [Recuperación de bases de datos relacionadas que contienen transacciones marcadas](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md).|  

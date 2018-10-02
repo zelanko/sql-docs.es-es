@@ -5,28 +5,23 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 helpviewer_keywords:
 - Script task [Integration Services], comparing to Script component
 - Script component [Integration Services], comparing to Script task
 ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f88d4e3527330c57b3053a80b4885bbd919a6905
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 62b2b526fda4ee11ad73197f277ab8ee2e64bcd4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407207"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606143"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>Comparar la tarea Script y el componente de script
   La tarea Script, que está disponible en la ventana Flujo de control del diseñador de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], y el componente de script, que está disponible en la ventana Flujo de datos, tienen fines muy diferentes en un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La tarea es una herramienta de flujo de control de uso general, en tanto que el componente actúa como un origen, transformación o destino en el flujo de datos. A pesar de sus fines diferentes, sin embargo, la tarea Script y el componente de script tienen algunas similitudes en las herramientas de codificación que utilizan y los objetos del paquete que ponen a disposición del desarrollador de software. Comprender sus similitudes y diferencias puede ayudarle a utilizar la tarea y el componente de manera más eficaz.  

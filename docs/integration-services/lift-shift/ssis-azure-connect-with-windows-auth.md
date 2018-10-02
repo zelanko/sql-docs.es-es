@@ -5,19 +5,18 @@ ms.date: 06/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 8979512a2ac2edeba8a5a6479fe0ef8bb6c3179a
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 4dfe14abd938e456a1b1415226ff6d903e0b5b07
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45564011"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608654"
 ---
 # <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Conexión a orígenes de datos y a recursos compartidos de archivos con la autenticación de Windows de paquetes SSIS en Azure
 Puede usar la autenticación de Windows para conectarse a orígenes de datos y recursos compartidos de archivos que están en la misma red virtual que Azure SSIS Integration Runtime (IR), tanto en máquinas virtuales locales o de Azure como en Azure Files. Hay tres métodos para conectarse a orígenes de datos y recursos compartidos de archivos con la autenticación de Windows de paquetes SSIS que se ejecutan en Azure-SSIS IR:

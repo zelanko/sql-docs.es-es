@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.newagwizard.listeners.f1
 - sql13.swb.addreplicawizard.specifyreplicas.f1
 - sql13.swb.newagwizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d2802a87f9e4803451d3cb40860585910f943a90
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 1b2d68a048a1d2767bdbaf5931dd59f9a928e50a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769881"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623573"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Especificar la página de réplicas (Asistente para nuevo grupo de disponibilidad/Asistente para agregar réplica)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +101,7 @@ ms.locfileid: "34769881"
   
 -   Si una instancia del servidor se ejecuta con una cuenta de servicio que no es de dominio, se debe realizar un cambio manual en la instancia del servidor antes de continuar con el asistente. En este caso, si hace clic en **Siguiente** , se muestra un cuadro de diálogo de advertencia; debe hacer clic en **No**y volverá a la pestaña**Extremos** . Permaneciendo en la página **Especificar réplicas** del asistente, realice uno de los siguientes cambios en cada instancia del servidor para que la columna **Cuenta de servicio de SQL Server** muestre una cuenta de servicio que no es de dominio; puede:  
   
-    -   Usar el Administrador de configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para cambiar la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a una cuenta de dominio. Para obtener más información, vea [Cambiar la cuenta de inicio del servicio para SQL Server &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md).  
+    -   Usar el Administrador de configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para cambiar la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a una cuenta de dominio. Para obtener más información, vea [Cambiar la cuenta de inicio del servicio para SQL Server &amp;#40;Administrador de configuración de SQL Server&amp;#41;](../../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md).  
   
     -   Use [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell para crear manualmente un extremo de creación de reflejo de la base de datos que use un certificado. Para obtener más información, vea [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md) o [Crear un punto de conexión de creación de reflejo de la base de datos para grupos de disponibilidad AlwaysOn &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md).  
   

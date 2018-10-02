@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data collector [SQL Server], management data warehouse
 - data warehouse
 - management data warehouse
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 943d896b2afd0e0fe30a211899f0fe805d89cbf8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 59e9b89200e9510266f40e7ae8e471d4f6283a0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145056"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595423"
 ---
 # <a name="management-data-warehouse"></a>almacén de administración de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +40,7 @@ ms.locfileid: "33145056"
   
  En la tabla siguiente se describen las tablas de base de datos del esquema de núcleo. Estas tablas de base de datos permiten al recopilador de datos realizar el seguimiento de la procedencia de los datos y saber quién los insertó y cuándo se cargaron en el almacenamiento de datos.  
   
-|Nombre de la tabla|Description|  
+|Nombre de la tabla|Descripción|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|Almacena información sobre la forma en que se deben agrupar y agregar los contadores de rendimiento en los informes del almacén de administración de datos.|  
 |core.snapshots_internal|Identifica cada nueva instantánea. En esta tabla se inserta una nueva fila cada vez que un paquete de carga inicia la carga de un nuevo lote de datos.|  

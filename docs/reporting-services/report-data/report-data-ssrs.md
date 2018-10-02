@@ -4,17 +4,16 @@ ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: e22b7c24-edab-42d6-82f6-95068e1c6043
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 48721e1b9f57a558346b38e060758e94ea86010e
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 3df6da1da2786ede9dbde2ec417c5800046577fd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266063"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611563"
 ---
 # <a name="report-data-ssrs"></a>Datos de informe (SSRS)
   Los datos del informe pueden proceder de varios orígenes de datos de la organización. El primer paso para diseñar un informe es crear orígenes de datos y conjuntos de datos que representan los datos de informes subyacentes. Cada origen de datos incluye información de conexión de datos. Cada conjunto de datos incluye un comando de consulta que define el conjunto de campos que se van a usar como datos de un origen de datos. Para ver los datos de cada conjunto de datos, agregue una región de datos, como una tabla, una matriz, un gráfico o un mapa. Cuando se procesa el informe, las consultas se ejecutan en el origen de datos y cada región de datos se expande según sea necesario para mostrar los resultados de la consulta para el conjunto de datos.  

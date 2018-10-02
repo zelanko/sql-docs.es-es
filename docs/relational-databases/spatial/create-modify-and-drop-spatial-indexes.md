@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: spatial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexes [SQL Server], creating
@@ -19,17 +16,16 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cde2105ac4291e7553b4a073d62ecb7e43348401
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f4582efcfd91c71e1b40b454712d5d0afeeb8765
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43076775"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646453"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Crear, modificar y quitar índices espaciales
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +67,7 @@ ms.locfileid: "43076775"
   
 11. En la página **Espacial** , especifique los valores que desee usar para las propiedades espaciales del índice.  
   
-     Al crear un índice en una columna de tipo **geometry** , debe especificar las coordenadas **(***X-min***,***Y-min***)** y **(***X-max***,***Y-max***)** del cuadro de límite. Para un índice de una columna de tipo **geography** , los campos de cuadro de límite se vuelven de solo lectura después de especificar el esquema de teselación **Cuadrícula geográfica** , porque la teselación de cuadrícula de geografía no usa un cuadro de límite.  
+     Al crear un índice en una columna de tipo **geometry** , debe especificar las coordenadas **(**_X mínima_**,**_Y mínima_**)** y **(**_X máxima_**,**_Y máxima_**)** del cuadro de límite. Para un índice de una columna de tipo **geography** , los campos de cuadro de límite se vuelven de solo lectura después de especificar el esquema de teselación **Cuadrícula geográfica** , porque la teselación de cuadrícula de geografía no usa un cuadro de límite.  
   
      Opcionalmente, puede especificar valores no predeterminados para el campo **Celdas por objeto** y para la densidad de cuadrícula en cualquier nivel del esquema de teselación. El número predeterminado de celdas por objeto es 16 para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] u 8 para [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o posterior y la densidad de cuadrícula predeterminada es **Media** para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   

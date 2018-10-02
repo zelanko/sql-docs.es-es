@@ -5,24 +5,21 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.afpsubscrconn.f1
 - sql14.dts.designer.afpsubscrconn.f1
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: da67b5ad82e681273d47ca19ef8f1fc737b9aa1f
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 82431376b5c7fbb052d5f36e158d269587dd7300
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401277"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47671423"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure Subscription Connection Manager (Administrador de conexiones de suscripciones de Azure)
   El **administrador de conexiones de suscripciones de Azure** permite que un paquete de SSIS se conecte con una suscripción de Azure a través de los valores que especifica para las propiedades: identificador de suscripción de Azure y certificado de administración.  

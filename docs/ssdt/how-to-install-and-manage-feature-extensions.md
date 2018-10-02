@@ -6,20 +6,17 @@ ms.date: 04/26/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 078e69c2df09253141aa55d66e387f7972ce8b2e
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b77952b6c0d5985f4f93a7f3e81ced856e9907ce
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087887"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613233"
 ---
 # <a name="how-to-install-and-manage-feature-extensions"></a>Cómo: instalar y administrar las extensiones de características
 Puede agregar reglas para analizar código de base de datos, condiciones para pruebas unitarias de base de datos y colaboradores de compilación e implementación para aumentar la funcionalidad que ofrecen las ediciones de Visual Studio, incluido SQL Server Data Tools. Sin embargo, deberá instalar una extensión de características antes de poder utilizarla, tanto si creó la extensión usted mismo o instaló una extensión creada por otra persona.  

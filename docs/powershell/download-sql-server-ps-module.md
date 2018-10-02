@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 01/05/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: scripting
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - instalar powershell de sql server, descargar powershell de sql server
 ms.assetid: ''
-caps.latest.revision: 113
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 35969e26d8ca363acd3ada589c4c594553e9a507
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: d41d03c3bba51b919a71f195de75a7ec29f51b7e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34321746"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621563"
 ---
 # <a name="install-sql-server-powershell-module"></a>Instalación de un módulo de SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

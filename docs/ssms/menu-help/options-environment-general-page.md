@@ -4,35 +4,30 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-menu
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ENVIRONMENT.GENERAL
 - VS.ToolsOptionsPages.Environment.SQLEnvironmentOptions
 - DevLang-TSQL
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8c24de46da06f069ce147907a18db1c7640713f5
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: f9911b6ca969a329e72c393b99689867728485be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42774830"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745263"
 ---
 # <a name="options-environment---general-page"></a>Opciones (Entorno - Página General)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Use el cuadro de diálogo **Opciones** para configurar las acciones de inicio de [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , opciones generales de administración de ventanas y otros valores de configuración generales. En el menú **Herramientas** , haga clic en **Opciones**, expanda la carpeta **Entorno** y haga clic en **General**.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
-
-  **Al iniciar**  
+**Al iniciar**  
 Seleccione la acción que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] debe llevar a cabo una vez que se ha iniciado. Las opciones son:  
   
 -   **Abrir el Explorador de objetos** : solicita una conexión y abre el Explorador de objetos.  

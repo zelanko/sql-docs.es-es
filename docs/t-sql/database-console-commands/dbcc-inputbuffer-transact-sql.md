@@ -5,9 +5,7 @@ ms.date: 04/04/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC INPUTBUFFER
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - statements [SQL Server], last statement
 - DBCC INPUTBUFFER statement
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
-caps.latest.revision: 51
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: da4393aecd4371afc5a9a3cba0725b7bfa55b34c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bd0df0cb932778164dfe4c97027c19e591439fd2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262157"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805433"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +67,7 @@ Suprime todos los mensajes informativos con niveles de gravedad entre 0 y 10.
 ## <a name="result-sets"></a>Conjuntos de resultados  
 DBCC INPUTBUFFER devuelve un conjunto de filas con las siguientes columnas.
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**EventType**|**nvarchar(30)**|Tipo de evento. Puede ser **RPC Event** o **Language Event**. La salida será **No Event** si no se detectó el último evento.|  
 |**Parámetros**|**smallint**|0 = Texto<br /><br /> 1- *n* = Parámetros|  

@@ -6,11 +6,7 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.technology: integration-services
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -19,16 +15,15 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
-caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 420fd9d6204eb8bcbedaee7e7ef272d0ee88067a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 852f6e8580b59df5203ce7115c080254b78a7156
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35313094"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734663"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>Agregar componentes de flujo de datos mediante programación
   Cuando se genera un flujo de datos, se inicia agregando componentes. A continuación, se configuran esos componentes y se conectan juntos para establecer el flujo de datos en tiempo de ejecución. En esta sección se describe cómo agregar un componente a la tarea de flujo de datos, crear la instancia del componente en tiempo de diseño y, a continuación, configurar el componente. Para obtener más información acerca de cómo conectar componentes, vea [Conectar componentes de flujo de datos mediante programación](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  

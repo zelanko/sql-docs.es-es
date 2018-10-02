@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 85ebd0ec4668387609781e72becad43e9b52a4a8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 0a76c8c745101a6327be13f6865bcbc392cc40c2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273797"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808763"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Registro de ejecución del servidor de informes y la vista ExecutionLog3
   El registro de la ejecución del servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]contiene información sobre los informes que se ejecutan en el servidor o en varios servidores de una implementación escalada en modo nativo o de una granja de servidores de SharePoint. Puede usar el registro de la ejecución de informes para averiguar con qué frecuencia se solicita el informe, qué formatos de salida se usan más y cuántos milisegundos del tiempo de procesamiento se dedica a cada fase del procesamiento. El registro contiene información sobre el tiempo de ejecución de la consulta de conjunto de datos de un informe y el tiempo empleado en el procesamiento de los datos. Si es administrador del servidor de informes, puede revisar la información del registro e identificar las tareas de ejecución prolongada, y realizar sugerencias a los autores de informes en las áreas del informe (conjunto de datos o procesamiento) que se puedan mejorar.  

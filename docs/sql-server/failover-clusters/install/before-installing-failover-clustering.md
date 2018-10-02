@@ -3,26 +3,23 @@ title: Antes de instalar los clústeres de conmutación por error | Microsoft Do
 ms.custom: ''
 ms.date: 08/24/2016
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
-caps.latest.revision: 141
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 572ccd5abbfc5cae54364a13af20e0851412e38a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1d156013805b9ab681af0b4a076932365cd51005
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061213"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729133"
 ---
 # <a name="before-installing-failover-clustering"></a>Antes de instalar los clústeres de conmutación por error
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -218,7 +215,7 @@ ms.locfileid: "38061213"
   
 3.  No se admite más de una dirección IP por cada subred.  
   
-     Si decide usar más de una dirección IP configurada para la misma subred, puede experimentar errores de conexión de cliente durante el inicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+     Si decide usar más de una dirección IP configurada para la misma subred, puede experimentar errores de conexión de cliente durante el inicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 #### <a name="related-content"></a>Contenido relacionado  
  Para obtener más información sobre la conmutación por error de varios sitios de [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] , vea [Failover Clusters in Windows Server 2008 R2](http://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) (Clústeres de conmutación por error de Windows Server 2008 R2) y [Design for a Clustered Service or Application in a Multi-Site Failover Cluster](http://go.microsoft.com/fwlink/?LinkId=177873)(Diseño de una aplicación o un servicio de clúster en un clúster de conmutación por error de varios sitios).  

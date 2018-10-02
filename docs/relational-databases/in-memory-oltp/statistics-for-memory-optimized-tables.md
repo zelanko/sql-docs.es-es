@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 10/23/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b1254e3a691fae66a5e6e5af0651fe0ef65846e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 23f442dcf798a1d4f1961698958673dac007a37e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43072321"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857243"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Estadísticas para las tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,8 +50,7 @@ Haga lo siguiente para habilitar la actualización automática de estadísticas 
 
 3. Vuelva a compilar los procedimientos almacenados compilados de forma nativa para aprovechar las estadísticas actualizadas.
 
-
-            *Script único para estadísticas:* en el caso de las tablas optimizadas para memoria creadas en un nivel de compatibilidad inferior, se puede ejecutar el siguiente script Transact-SQL una vez para actualizar las estadísticas de todas esas tablas optimizadas para memoria y habilitar la actualización automática de estadísticas desde ese momento (suponiendo que AUTO_UPDATE_STATISTICS se ha habilitado para la base de datos):
+*Script único para estadísticas:* en el caso de las tablas optimizadas para memoria creadas en un nivel de compatibilidad inferior, se puede ejecutar el siguiente script Transact-SQL una vez para actualizar las estadísticas de todas esas tablas optimizadas para memoria y habilitar la actualización automática de estadísticas desde ese momento (suponiendo que AUTO_UPDATE_STATISTICS se ha habilitado para la base de datos):
 
 ```
 -- Assuming AUTO_UPDATE_STATISTICS is already ON for your database:
@@ -80,8 +75,7 @@ GO
 -- UPDATE STATISTICS [dbo].[MyMemoryOptimizedTable];
 ```
 
-
-            *Confirmar que la actualización automática está habilitada:* con el siguiente script se comprueba si la actualización automática está habilitada para las estadísticas en las tablas optimizadas para memoria. Tras ejecutar el script anterior, devolverá `1` en la columna `auto-update enabled` de todos los objetos de estadística.
+*Confirmar que la actualización automática está habilitada:* con el siguiente script se comprueba si la actualización automática está habilitada para las estadísticas en las tablas optimizadas para memoria. Tras ejecutar el script anterior, devolverá `1` en la columna `auto-update enabled` de todos los objetos de estadística.
 
 ```
 SELECT 

@@ -5,12 +5,8 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - packages [Integration Services], connections
 - custom connection managers [Integration Services], about custom connection managers
@@ -20,16 +16,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, connection managers
 - custom connection managers [Integration Services]
 ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 154474f9947ff08ab7c98c3d7a93b76d12775695
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 2ad82c5b70d56f3deefc9a06dcc2303e33f95c4e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410647"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779093"
 ---
 # <a name="developing-a-custom-connection-manager"></a>Desarrollar un administrador de conexiones personalizado
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] usa administradores de conexión para encapsular la información necesaria para conectarse a un origen de datos externo. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye diversos administradores de conexión que admiten conexiones a los orígenes de datos usados con más frecuencia, desde bases de datos empresariales hasta archivos de texto y hojas de cálculo de Excel. Si [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] admite administradores de conexiones y orígenes de datos externos que no cumplen completamente sus requisitos, puede crear un administrador de conexiones personalizado.  

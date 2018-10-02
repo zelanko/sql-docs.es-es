@@ -5,23 +5,20 @@ ms.date: 02/15/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.welcome.f1
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
-caps.latest.revision: 74
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bb1b2ce0d59eced0296548cdc560b7ff055fc9a
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3bf0971d7e65e7c9aa4b93407397f6efba90c399
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407507"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791443"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>Asistente para importación y exportación de SQL Server
   Al iniciar el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la primera página es **Asistente para importación y exportación de SQL Server**. No es necesario que realice ninguna acción en esta página.

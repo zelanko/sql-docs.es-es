@@ -5,25 +5,22 @@ ms.date: 01/06/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic SQL Server startup
 - SQL Server, automatic startup
 - starting SQL Server, automatically
 ms.assetid: aa2b6bde-e76d-4fea-a560-54a63745d9b1
-caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 34430bf70af547a54402c776b05ac6666bee8b71
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 08986df74a5df440bf1cfb589cbe39680bce8a56
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40409435"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788843"
 ---
 # <a name="scm-services---set-an-instance-to-start-automatically"></a>Servicios SCM - Configurar una instancia para que se inicie automáticamente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +49,7 @@ ms.locfileid: "40409435"
 5.  Haga clic en **Aceptar**y, a continuación, cierre el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Ver también  
- 
-  [Evitar el inicio automático de una instancia de SQL Server &amp;#40;Administrador de configuración de SQL Server&amp;#41;](../../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)   
+ [Evitar el inicio automático de una instancia de SQL Server &amp;amp;#40;Administrador de configuración de SQL Server&amp;amp;#41;](../../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)   
  [Conectarse a otro equipo &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/scm-services-connect-to-another-computer.md)   
  [Configurar WMI para mostrar el estado del servidor en Herramientas de SQL Server](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)  
   

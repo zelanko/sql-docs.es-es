@@ -5,20 +5,18 @@ ms.technology: install
 ms.custom: ''
 ms.date: 2/26/2018
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 888cfce4963b7ed118aa2cb20fbe97da65508734
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: e23ae3f88e27f29e32e78c3bafa2ae47005b7573
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42774243"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790193"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Notas de la versión de SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +51,7 @@ Los Service Pack solo están disponibles en línea, no en los soportes de instal
 - **Adición de seguimiento de protocolos a los pasos de negociación SSL**: agrega información de seguimiento de bits de negociación correcta o errónea, incluido el protocolo, etc. Puede ser útil a la hora de solucionar problemas de escenarios de conectividad mientras, por ejemplo, se implementa TLS 1.2
 - **Establecimiento del nivel de compatibilidad correcto para la base de datos de distribución**: después de la instalación del Service Pack, cambia el nivel de compatibilidad de la base de datos de distribución a 90. El cambio de nivel se debe a un problema en el procedimiento almacenado sp_vupgrade_replication. Ahora el SP se ha modificado para establecer el nivel de compatibilidad correcto para la base de datos de distribución. 
 - **Nuevo comando DBCC para clonar una base de datos**: Base de datos clonada es un nuevo comando DBCC agregado que permite a los usuarios avanzados, como CSS, solucionar problemas de bases de datos de producción existentes mediante la clonación del esquema y los metadatos, sin los datos. La llamada se realiza con clonedatabase de DBCC (‘source_database_name’, ‘clone_database_name’). Las bases de datos clonadas no se deben usar en entornos de producción. Para ver si una base de datos se ha generado a partir de una llamada a la base de datos clonada, puede usar el comando siguiente, select DATABASEPROPERTYEX('clonedb', 'isClone'). El valor devuelto de 1 es true y 0 es false. 
-- 
-  **Información del archivo TempDB y del tamaño de archivo en el registro de errores de SQL**: si el tamaño y el crecimiento automático es diferente para los archivos de datos de TempDB durante el inicio, imprime el número de archivos y desencadena una advertencia.
+- **Información del archivo TempDB y del tamaño de archivo en el registro de errores de SQL**: si el tamaño y el crecimiento automático es diferente para los archivos de datos de TempDB durante el inicio, imprime el número de archivos y desencadena una advertencia.
 - **IFI admite mensajes en el registro de errores de SQL Server**: indica en el registro de errores que la inicialización instantánea de archivos de base de datos está habilitada o deshabilitada
 - **Nueva DMF para reemplazar a DBCC INPUTBUFFER**: se ha presentado una nueva función de administración dinámica sys.dm_input_buffer que toma session_id como parámetro para reemplazar a DBCC INPUTBUFFER
 - **Mejora de XEvents para el error de enrutamiento de lectura de un grupo de disponibilidad**: actualmente el XEvent read_only_rout_fail solo se desencadena si hay una lista de enrutamiento, pero ninguno de los servidores de la lista de enrutamiento está disponible para las conexiones. Esta mejora incluye información adicional para ayudar a solucionar el problema y además se expande en los puntos de código donde se desencadena el XEvent. 

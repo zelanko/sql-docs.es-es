@@ -4,10 +4,8 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKTABLE_TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - low overhead checks
 - table integrity checks [SQL Server]
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
-caps.latest.revision: 89
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 148fcb3dd5970d84be7a0380c97ab0be7bd8ca92
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7d846878ae012a82f7ff8f6662b8a6095d664cb8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263181"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831943"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -129,7 +126,7 @@ DATA_PURITY
 MAXDOP  
  **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
  
- Invalida la opción de configuración de **grado máximo de paralelismo** de **sp_configure** para la instrucción. MAXDOP puede superar el valor configurado con sp_configure. Si MAXDOP supera el valor configurado con Resource Governor, el motor de base de datos usa el valor MAXDOP de Resource Governor, descrito en ALTER WORKLOAD GROUP (Transact-SQL). Se pueden aplicar todas las reglas semánticas utilizadas con la opción de configuración max degree of parallelism cuando se utiliza la sugerencia de consulta MAXDOP. Para obtener más información, vea [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ Invalida la opción de configuración de **grado máximo de paralelismo** de **sp_configure** para la instrucción. MAXDOP puede superar el valor configurado con sp_configure. Si MAXDOP supera el valor configurado con Resource Governor, el motor de base de datos usa el valor MAXDOP de Resource Governor, descrito en ALTER WORKLOAD GROUP (Transact-SQL). Se pueden aplicar todas las reglas semánticas utilizadas con la opción de configuración max degree of parallelism cuando se utiliza la sugerencia de consulta MAXDOP. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
     
  > [!NOTE]  
  > Si MAXDOP se establece en cero, el servidor elige el grado máximo de paralelismo.  
@@ -175,7 +172,7 @@ Cuando FILESTREAM está habilitado para una base de datos y una tabla, puede alm
 Por ejemplo, si una tabla contiene una columna **varbinary(max)** en la que se usa el atributo FILESTREAM, DBCC CHECKTABLE comprobará que existe una asignación uno a uno entre los directorios del sistema de archivos y los archivos y filas de tabla, las columnas, y los valores de columna. DBCC CHECKTABLE puede reparar el daño producido si especifica la opción de REPAIR_ALLOW_DATA_LOSS. Para reparar el daño de FILESTREAM, DBCC quitará todas las filas de tabla a las que les falten datos del sistema de archivos, así como todos los directorios y archivos no asignados a una fila de tabla, columna o valor de columna.
     
 ## <a name="checking-objects-in-parallel"></a>Comprobar objetos en paralelo    
-De forma predeterminada, DBCC CHECKTABLE realiza comprobaciones paralelas de los objetos. El grado de paralelismo se determina automáticamente mediante el procesador de consultas. El grado de paralelismo máximo se configura de la misma forma que el de las consultas paralelas. Para restringir el número máximo de procesadores disponibles para las comprobaciones DBCC, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). Para obtener más información, vea [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+De forma predeterminada, DBCC CHECKTABLE realiza comprobaciones paralelas de los objetos. El grado de paralelismo se determina automáticamente mediante el procesador de consultas. El grado de paralelismo máximo se configura de la misma forma que el de las consultas paralelas. Para restringir el número máximo de procesadores disponibles para las comprobaciones DBCC, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 La comprobación del paralelismo se puede deshabilitar utilizando el marcador de seguimiento 2528. Para obtener más información, vea [Marcas de seguimiento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
     
 > [!NOTE]    
@@ -184,7 +181,7 @@ La comprobación del paralelismo se puede deshabilitar utilizando el marcador de
 ## <a name="understanding-dbcc-error-messages"></a>Descripción de los mensajes de error de DBCC    
 Cuando finaliza el comando DBCC CHECKTABLE, se escribe un mensaje en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el comando DBCC se ejecuta correctamente, el mensaje lo indica, así como el tiempo de ejecución del comando. Si el comando DBCC se detiene antes de finalizar la comprobación debido a un error, el mensaje indica que el comando se ha cancelado, un valor de estado y el tiempo de ejecución del comando. En la tabla siguiente se muestran y describen los valores de estado que pueden aparecer en el mensaje.
     
-|State|Description|    
+|State|Descripción|    
 |-----------|-----------------|    
 |0|Se ha generado el error número 8930. Indica un daño en los metadatos que provoca la cancelación del comando DBCC.|    
 |1|Se ha generado el error número 8967. Error DBCC interno.|    

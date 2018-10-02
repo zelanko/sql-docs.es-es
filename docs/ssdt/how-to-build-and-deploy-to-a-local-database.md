@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ebca8ff8-9a09-4207-8979-9d577af7c1d5
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ced224db1a1826effe84dd713abe64c3cddf1b94
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: f99626134566335ca909fdc11d00e859b898538d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085937"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737772"
 ---
 # <a name="how-to-build-and-deploy-to-a-local-database"></a>Cómo: Compilar e implementar una base de datos local
 Microsoft SQL Server 2012 proporciona una instancia de servidor local a petición, denominada SQL Server Express Local Database Runtime, que se activa al depurar un proyecto de base de datos de SQL Server. Esta instancia de servidor local se puede usar como espacio aislado para compilar, probar y depurar un proyecto. Es independiente de cualquiera de las instancias instaladas de SQL Server y no es accesible fuera de SQL Server Data Tools (SSDT). Esa organización es ideal para los desarrolladores que tienen acceso limitado o no tienen acceso a bases de datos de producción pero desean probar sus proyectos localmente antes de que el personal autorizado los implemente en producción. Además, cuando desarrolle una solución de base de datos para SQL Azure, puede usar la comodidad que ofrece este servidor local para desarrollar y probar su proyecto de base de datos localmente, antes de implementarlo en la nube.  

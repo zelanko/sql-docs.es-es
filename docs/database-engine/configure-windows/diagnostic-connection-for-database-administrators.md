@@ -5,9 +5,7 @@ ms.date: 10/16/2015
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - server management [SQL Server], connections
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - ports [SQL Server]
 - dedicated administrator connections [SQL Server]
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
-caps.latest.revision: 65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a26a318a0675c0c0fe54e31ac8ea33376c1b2e6a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8272586fc2621a22ffa6337624fab4414e8229e8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32869390"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770133"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Conexión de diagnóstico para administradores de bases de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +85,7 @@ ms.locfileid: "32869390"
     -   Si no hay ninguna tarea en sys.dm_os_tasks asociada a esta sesión, pero la sesión permanece en sys.dm_exec_sessions tras ejecutar el comando KILL, significa que no tiene ningún trabajo disponible. Seleccione una de las tareas que se están ejecutando (una tarea que aparece en la vista sys.dm_os_tasks con `sessions_id <> NULL`), y elimine la sesión que tiene asociada para liberar el trabajo. Tenga en cuenta que es posible que no sea suficiente eliminar una sola sesión: posiblemente tendrá que eliminar varias.  
   
 ## <a name="dac-port"></a>Puerto de la DAC  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha la DAC en el puerto TCP 1434 si está disponible o en un puerto asignado dinámicamente en el inicio de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . El registro de errores contiene el número de puerto en el que escucha la DAC. De forma predeterminada, la escucha de la DAC solo acepta la conexión en el puerto local. Para ver un ejemplo de código en el que se activan conexiones de administración remota, vea [remote admin connections (opción de configuración del servidor)](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha la DAC en el puerto TCP 1434 si está disponible o en un puerto asignado dinámicamente en el inicio de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. El registro de errores contiene el número de puerto en el que escucha la DAC. De forma predeterminada, la escucha de la DAC solo acepta la conexión en el puerto local. Para ver un ejemplo de código en el que se activan conexiones de administración remota, vea [remote admin connections (opción de configuración del servidor)](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md).  
   
  Una vez configurada la conexión de administración remota, la escucha de la DAC se habilita sin necesidad de reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se puede conectar un cliente a la DAC de forma remota. Puede habilitar la escucha de la DAC para que acepte las conexiones remotamente incluso si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no responde conectándose primero a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la DAC de forma local y, a continuación, ejecutando el procedimiento almacenado sp_configure para aceptar la conexión desde conexiones remotas.  
   

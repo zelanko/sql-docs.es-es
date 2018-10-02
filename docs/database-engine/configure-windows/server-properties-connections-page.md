@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6573c0a6b939104a5b0844bde1da07effc6d8f9b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: faed832ea0ed4fa1dcc52232a36a22a6f848f5f9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789373"
 ---
 # <a name="server-properties---connections-page"></a>Propiedades del servidor (página Conexiones)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 05/03/2018
  **Default connection options**  
  Especifica las opciones de conexión predeterminadas, tal y como se describen en la siguiente tabla.  
   
-|Opción de configuración|Description|  
+|Opción de configuración|Descripción|  
 |--------------------------|-----------------|  
 |**disable deferred constraint checking**|Controla la comprobación de restricciones provisionales o diferidas.|  
 |**transacciones implícitas**|Controla si una transacción se inicia de manera implícita al ejecutar una instrucción.|  

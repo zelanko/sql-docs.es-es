@@ -4,11 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: sql-data-warehouse
-ms.component: system-objects
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 16de9489583cce2e696a94c75c7e5fd3ac1c0fe1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 23d7846bd72329a62579765679687204a8e14ec5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993717"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630243"
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -56,7 +52,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
  Ejecutar **sp_pdw_ log_user_data_masking** sin parámetros devuelve el estado actual del enmascaramiento de datos de usuario de registro TDE en el dispositivo como un conjunto de resultados escalares.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Enmascaramiento de datos del usuario [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] habilita la sustitución de literales de registros de actividad con valores constantes predefinidos en **seleccione** y las instrucciones DML, ya que pueden contener datos de usuario. Establecer *masking_mode* a 1 no enmascara los metadatos, como nombres de columna o nombres de tabla. Establecer *masking_mode* para 2 ya no instrucciones con los metadatos, como nombres de columna o nombres de tabla.  
   
  Enmascaramiento de datos del usuario [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los registros de actividad se implementa en la siguiente manera:  

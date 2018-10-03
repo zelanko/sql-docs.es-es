@@ -1,31 +1,28 @@
 ---
-title: Llamado Commands | Documentos de Microsoft
+title: Comandos con nombre | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO]
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aababf292a838f801e48a9649b9efac12b04f88f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a9d38f80dcc44afa0d399885559b10f20027f906
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272006"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670616"
 ---
 # <a name="named-commands"></a>Comandos con nombre
-[Crear y ejecutar un comando Simple](../../../ado/guide/data/creating-and-executing-a-simple-command.md) muestra una manera de ejecutar un comando. Hay otra forma: puede realizar un comando con nombre y, a continuación, llamar a este método con el nombre de comando directamente en el **conexión** objeto (asignado a la **ActiveConnection** propiedad de la **comando** objeto). Un comando de nomenclatura significa asignar un nombre a la **nombre** propiedad de un **comando** objeto. Por ejemplo,  
+[Crear y ejecutar un comando Simple](../../../ado/guide/data/creating-and-executing-a-simple-command.md) muestra una forma de ejecutar un comando. Hay otra forma: puede que sea un comando con nombre y, a continuación, llame a este con el nombre de comando directamente en el **conexión** objeto (asignado a la **ActiveConnection** propiedad de la **comando** objeto). Nomenclatura de un comando significa asignar un nombre a la **nombre** propiedad de un **comando** objeto. Por ejemplo,  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -33,9 +30,9 @@ objCmd.ActiveConnection = objConn
 objConn.GetCustomers objRs  
 ```  
   
- El comando indicado actúa como si fuera un "método personalizado" en el **conexión** objeto. El resultado del comando se devuelve como un parámetro de salida del método"personalizado".  
+ El comando con nombre actúa como si fuese un "método personalizado" en el **conexión** objeto. El resultado del comando se devuelve como un parámetro de salida de este "método personalizado".  
   
- En el ejemplo siguiente se ilustra esta característica.  
+ El ejemplo siguiente ilustra esta característica.  
   
 ```  
 'BeginNamedCmd  

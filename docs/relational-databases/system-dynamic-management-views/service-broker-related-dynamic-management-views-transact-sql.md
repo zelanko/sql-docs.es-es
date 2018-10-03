@@ -1,12 +1,10 @@
 ---
-title: Vistas de administración dinámica (Transact-SQL) relacionadas con Service Broker | Documentos de Microsoft
+title: Vistas de administración dinámica (Transact-SQL) relacionadas con Service Broker | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Service Broker, dynamic management views
 - dynamic management views [SQL Server], Service Broker
 ms.assetid: 3253bf60-5ea6-4525-8744-c21070c4df0e
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5cbe5f0ccfc806791275c188765236d44685e2e1
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 5a27c524485a51c2e720fde59d05521edb33e61d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463351"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617943"
 ---
 # <a name="service-broker-related-dynamic-management-views-transact-sql"></a>Vistas de administración dinámica relacionadas con Service Broker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

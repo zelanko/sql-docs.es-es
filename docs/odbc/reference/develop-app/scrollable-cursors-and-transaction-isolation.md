@@ -1,13 +1,11 @@
 ---
-title: Los cursores desplazables y aislamiento de transacción | Documentos de Microsoft
+title: Los cursores desplazables y aislamiento de transacción | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - isolation levels [ODBC]
@@ -15,22 +13,22 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bbbcdf0c9ce2c7e37072502ae49b43dc20d15a9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5510eb58315f70195eb40390edec1766c350fb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662353"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Los cursores desplazables y aislamiento de transacción
 En la tabla siguiente se enumera los factores que rigen la visibilidad de los cambios.  
   
 |Cambios realizados por:|Visibilidad depende de:|  
 |----------------------|----------------------------|  
-|Cursor|Tipo de cursor, implementación de cursores|  
+|Cursor|Tipo de cursor, la implementación de cursores|  
 |Otras instrucciones en la misma transacción|Tipo de cursor|  
 |Instrucciones en otras transacciones|Tipo de cursor, nivel de aislamiento de transacción|  
   
@@ -38,22 +36,22 @@ En la tabla siguiente se enumera los factores que rigen la visibilidad de los ca
   
  ![Factores que rigen la visibilidad de cambios](../../../odbc/reference/develop-app/media/pr23.gif "pr23")  
   
- En la tabla siguiente se resume la capacidad de cada tipo de cursor para detectar los cambios realizados por sí mismo, por otras operaciones en su propia transacción y por otras transacciones. La visibilidad de los cambios de esta últimas depende el tipo de cursor y el nivel de aislamiento de la transacción que contiene el cursor.  
+ En la tabla siguiente se resume la capacidad de cada tipo de cursor para detectar los cambios realizados por sí mismo, por otras operaciones en su propia transacción y por otras transacciones. La visibilidad de los cambios de esta última depende del tipo de cursor y el nivel de aislamiento de la transacción que contiene el cursor.  
   
-|Cursor type\action|En sí mismo|El propietario<br /><br /> Transacciones de|Otro<br /><br /> Transacciones de<br /><br /> (RU[a])|Otro<br /><br /> Transacciones de<br /><br /> (RC[a])|Otro<br /><br /> Transacciones de<br /><br /> (RR[a])|Otro<br /><br /> Transacciones de<br /><br /> (S[a])|  
+|Cursor type\action|Self|El propietario<br /><br /> Transacción|Otros<br /><br /> Transacción<br /><br /> (RU[a])|Otros<br /><br /> Transacción<br /><br /> (RC[a])|Otros<br /><br /> Transacción<br /><br /> (RR[a])|Otros<br /><br /> Transacción<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |Estático|||||||  
-|Insert|Quizá [b]|no|No|No|No|no|  
-|Update|Quizá [b]|no|No|No|No|no|  
-|Delete|Quizá [b]|no|No|No|No|no|  
+|Insert|Tal vez [b]|no|no|no|no|no|  
+|Update|Tal vez [b]|no|no|no|no|no|  
+|DELETE|Tal vez [b]|no|no|no|no|no|  
 |Dirigido por conjuntos de claves|||||||  
-|Insert|Quizá [b]|no|No|No|No|no|  
-|Update|Sí|Sí|Sí|Sí|No|no|  
-|Delete|Quizá [b]|Sí|Sí|Sí|No|no|  
+|Insert|Tal vez [b]|no|no|no|no|no|  
+|Update|Sí|Sí|Sí|Sí|no|no|  
+|DELETE|Tal vez [b]|Sí|Sí|Sí|no|no|  
 |Dinámica|||||||  
 |Insert|Sí|Sí|Sí|Sí|Sí|no|  
-|Update|Sí|Sí|Sí|Sí|No|no|  
-|Delete|Sí|Sí|Sí|Sí|No|no|  
+|Update|Sí|Sí|Sí|Sí|no|no|  
+|DELETE|Sí|Sí|Sí|Sí|no|no|  
   
  [a] las letras entre paréntesis indican el nivel de aislamiento de la transacción que contiene el cursor; el nivel de aislamiento de la otra transacción (en el que se realizó el cambio) es irrelevante.  
   
@@ -65,4 +63,4 @@ En la tabla siguiente se enumera los factores que rigen la visibilidad de los ca
   
  S: Serializable  
   
- [b] depende de cómo se implementa el cursor. Si el cursor puede detectar dichos cambios se notifica a través de la opción SQL_STATIC_SENSITIVITY en **SQLGetInfo**.
+ [b] depende de cómo se implementa el cursor. Si el cursor puede detectar estos cambios se notifica a través de la opción SQL_STATIC_SENSITIVITY en **SQLGetInfo**.

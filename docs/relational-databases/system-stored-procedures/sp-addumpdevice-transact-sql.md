@@ -1,14 +1,11 @@
 ---
-title: sp_addumpdevice (Transact-SQL) | Documentos de Microsoft
+title: sp_addumpdevice (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addumpdevice_TSQL
@@ -19,21 +16,20 @@ helpviewer_keywords:
 - backup devices [SQL Server], defining
 - sp_addumpdevice
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cbf23913e95b53e490d55099cde44b5ab60d3141
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f5d8fe09af9133bd0a4f4a2c6a11824f16963698
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240135"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649863"
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta la [versión actual](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
 
 Agrega un dispositivo de copia de seguridad a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -55,16 +51,16 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  [  **@devtype=** ] **'***device_type***'**  
  Es el tipo de dispositivo de copia de seguridad. *device_type* es **varchar (20)**, no tiene ningún valor predeterminado y puede ser uno de los siguientes valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**disk**|Archivo de disco duro que se utiliza como dispositivo de copia de seguridad.|  
-|**Cinta**|Todos los dispositivos de cinta admitidos por [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Nota: La compatibilidad con dispositivos de cinta de copia de seguridad se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.|  
+|**cinta**|Todos los dispositivos de cinta admitidos por [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Nota: La compatibilidad con dispositivos de cinta de copia de seguridad se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.|  
   
  [  **@logicalname =** ] **'***nombreLógico***'**  
  Es el nombre lógico del dispositivo de copia de seguridad que se utiliza en las instrucciones BACKUP y RESTORE. *nombreLógico* es **sysname**, no tiene ningún valor predeterminado, y no puede ser NULL.  
   
  [  **@physicalname =** ] **'***physical_name***'**  
- Es el nombre físico del dispositivo de copia de seguridad. Los nombres físicos tienen que cumplir las reglas de nombres de archivo del sistema operativo o las convenciones de nomenclatura universal para los dispositivos de red, y deben incluir la ruta de acceso completa. *el argumento physical_name* es **nvarchar (260)**, no tiene ningún valor predeterminado de valor y no puede ser NULL.  
+ Es el nombre físico del dispositivo de copia de seguridad. Los nombres físicos tienen que cumplir las reglas de nombres de archivo del sistema operativo o las convenciones de nomenclatura universal para los dispositivos de red, y deben incluir la ruta de acceso completa. *physical_name* es **nvarchar (260)**, no tiene ningún valor predeterminado de valor y no puede ser NULL.  
   
  Cuando cree un dispositivo de copia de seguridad en una ubicación de red remota, asegúrese de que el nombre con el que se haya iniciado el [!INCLUDE[ssDE](../../includes/ssde-md.md)] tenga permiso de escritura en el equipo remoto.  
   
@@ -73,11 +69,11 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 > [!NOTE]  
 >  Este procedimiento escribe en el catálogo el nombre físico especificado. El procedimiento no intenta tener acceso al dispositivo ni crearlo.  
   
- [  **@cntrltype =** ] **'***tipoDeControlador***'**  
- Ha quedado obsoleto. Si se especifica, este parámetro se omite. Solo se admite para mantener la compatibilidad con versiones anteriores. Los nuevos usos de **sp_addumpdevice** debe omitir este parámetro.  
+ [  **@cntrltype =** ] **'***controller_type***'**  
+ Ha quedado obsoleto. Si se especifica, este parámetro se omite. Solo se admite para mantener la compatibilidad con versiones anteriores. Nuevos usos de **sp_addumpdevice** debe omitir este parámetro.  
   
  [  **@devstatus =** ] **'***device_status***'**  
- Ha quedado obsoleto. Si se especifica, este parámetro se omite. Solo se admite para mantener la compatibilidad con versiones anteriores. Los nuevos usos de **sp_addumpdevice** debe omitir este parámetro.  
+ Ha quedado obsoleto. Si se especifica, este parámetro se omite. Solo se admite para mantener la compatibilidad con versiones anteriores. Nuevos usos de **sp_addumpdevice** debe omitir este parámetro.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -86,7 +82,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  None  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_addumpdevice** agrega un dispositivo de copia de seguridad para la **sys.backup_devices** vista de catálogo. Después, se puede hacer referencia al dispositivo de forma lógica en las instrucciones BACKUP y RESTORE. **sp_addumpdevice** no realiza ningún acceso al dispositivo físico. El acceso al dispositivo especificado solo se produce cuando se ejecuta una instrucción BACKUP o RESTORE. La creación de un dispositivo lógico de copia de seguridad puede simplificar las instrucciones BACKUP y RESTORE, en las que se puede especificar el nombre del dispositivo como alternativa mediante una cláusula "TAPE =" o "DISK =" para indicar la ruta de acceso del dispositivo.  
+ **sp_addumpdevice** agrega un dispositivo de copia de seguridad para el **sys.backup_devices** vista de catálogo. Después, se puede hacer referencia al dispositivo de forma lógica en las instrucciones BACKUP y RESTORE. **sp_addumpdevice** no lleva a cabo cualquier acceso a un dispositivo físico. El acceso al dispositivo especificado solo se produce cuando se ejecuta una instrucción BACKUP o RESTORE. La creación de un dispositivo lógico de copia de seguridad puede simplificar las instrucciones BACKUP y RESTORE, en las que se puede especificar el nombre del dispositivo como alternativa mediante una cláusula "TAPE =" o "DISK =" para indicar la ruta de acceso del dispositivo.  
   
  Los problemas de propiedad y permisos pueden interferir en el uso de los dispositivos de copia de seguridad de disco o de archivo. Asegúrese de que la cuenta de Windows con la que se inicia el [!INCLUDE[ssDE](../../includes/ssde-md.md)] disponga de los permisos de archivo apropiados.  
   
@@ -98,7 +94,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  Para eliminar un dispositivo, use [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) o[SQL Server Management Studio](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol fijo de servidor **diskadmin** .  
   
  Requiere permiso para escribir en el disco.  

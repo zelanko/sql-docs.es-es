@@ -1,13 +1,11 @@
 ---
-title: Tabla (objeto) (ADOX) | Documentos de Microsoft
+title: Objeto (ADOX) de tabla | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,22 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - Table object [ADOX]
 ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 17a34c8e53bba7cdb67024b83a8758900d8f6183
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f5af59dbc50f6e1a2cd95cbdf99874d860eceeb1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286840"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622343"
 ---
-# <a name="table-object-adox"></a>Objeto de tabla (ADOX)
-Representa una tabla de base de datos que incluye columnas, índices y claves.  
+# <a name="table-object-adox"></a>Objeto Table (ADOX)
+Representa una tabla de base de datos como columnas, índices y claves.  
   
-## <a name="remarks"></a>Notas  
- El siguiente código crea un nuevo **tabla**:  
+## <a name="remarks"></a>Comentarios  
+ El código siguiente crea un nuevo **tabla**:  
   
 ```  
 Dim obj As New Table  
@@ -42,22 +39,22 @@ Dim obj As New Table
   
 -   Determinar el tipo de tabla con el [(tabla) (ADOX) del tipo de propiedad](../../../ado/reference/adox-api/type-property-table-adox.md) propiedad.  
   
--   Acceso a las columnas de base de datos de la tabla con el [colección de columnas (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md) colección.  
+-   Acceso a las columnas de la base de datos de la tabla con el [colección de columnas (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md) colección.  
   
 -   Obtener acceso a los índices de la tabla con el [colección de índices (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md).  
   
 -   Acceso a las claves de la tabla con el [colección de claves (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md).  
   
--   Especifique el catálogo al que pertenece la tabla con el [propiedad ParentCatalog (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md) propiedad.  
+-   Especifique el catálogo que pertenece la tabla con el [propiedad ParentCatalog (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md) propiedad.  
   
 -   Devolver información de fecha con el [propiedad DateCreated (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md) y [propiedad DateModified (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md) propiedades.  
   
 -   Obtener acceso a propiedades de tabla específicas del proveedor con el [colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) colección.  
   
 > [!NOTE]
->  Puede que su proveedor de datos no admiten todas las propiedades de **tabla** objetos. Si ha configurado un valor para una propiedad que no es compatible con el proveedor, se producirá un error. Para obtener nuevos **tabla** objetos, se producirá el error cuando el objeto se anexa a la colección. Para los objetos existentes, se producirá el error al establecer la propiedad.  
+>  El proveedor de datos puede no admitir todas las propiedades de **tabla** objetos. Si ha establecido un valor para una propiedad que no es compatible con el proveedor, se producirá un error. Para el nuevo **tabla** objetos, se producirá el error cuando el objeto se anexa a la colección. Para los objetos existentes, se producirá el error al establecer la propiedad.  
 >   
->  Al crear **tabla** objetos, la existencia de un valor predeterminado adecuado para una propiedad opcional no garantiza que el proveedor admita la propiedad. Para obtener más información acerca de las propiedades que admite el proveedor, consulte la documentación del proveedor.  
+>  Al crear **tabla** objetos, la existencia de un valor predeterminado adecuado para una propiedad opcional no garantiza que el proveedor admita la propiedad. Para obtener más información sobre las propiedades que admite el proveedor, consulte la documentación del proveedor.  
   
  Esta sección contiene el siguiente tema.  
   
@@ -65,9 +62,9 @@ Dim obj As New Table
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplo de propiedad ActiveConnection de catálogo (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [Las tablas y columnas anexar métodos, ejemplo de la propiedad de nombre (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Método de cierre de conexión, ejemplo de propiedad de tipo de tabla (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Anexar de teclas de método, tipo de clave, RelatedColumn, RelatedTable y ejemplo de las propiedades UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Ejemplo de la propiedad de nombre (VB), métodos Append columnas y tablas](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Método Connection Close, ejemplo de propiedad de tipo de tabla (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
+ [Append de claves, método, tipo de clave, RelatedColumn, RelatedTable y UpdateRule propiedades (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Ejemplo de propiedad ParentCatalog (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [Colección de columnas (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Colección de índices (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)   

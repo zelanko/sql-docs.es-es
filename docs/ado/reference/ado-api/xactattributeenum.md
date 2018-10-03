@@ -1,13 +1,11 @@
 ---
-title: XactAttributeEnum | Documentos de Microsoft
+title: XactAttributeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - XactAttributeEnum enumeration [ADO]
 ms.assetid: e7dcecd3-7dc7-445c-b922-f700c3067fbc
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c99e449171b347290f832950f265c6579ba6a630
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2098830a06f8e5c2ddc38b12f0c035ec513433ca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283214"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678423"
 ---
 # <a name="xactattributeenum"></a>XactAttributeEnum
 Especifica los atributos de transacción de un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto.  
@@ -34,7 +31,7 @@ Especifica los atributos de transacción de un [conexión](../../../ado/referenc
 |**adXactAbortRetaining**|262144|Realiza anulaciones con retención mediante una llamada a [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) iniciar automáticamente una nueva transacción. No todos los proveedores admiten este comportamiento.|  
 |**adXactCommitRetaining**|131072|Realiza confirmaciones con retención mediante una llamada a [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) iniciar automáticamente una nueva transacción. No todos los proveedores admiten este comportamiento.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
+## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
  Paquete: **com.ms.wfc.data**  
   
 |Constante|  

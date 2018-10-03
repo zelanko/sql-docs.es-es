@@ -1,14 +1,11 @@
 ---
-title: sp_kill_filestream_non_transacted_handles (Transact-SQL) | Documentos de Microsoft
+title: sp_kill_filestream_non_transacted_handles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_kill_filestream_non_transacted_handles_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_kill_filestream_non_transacted_handles
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de6599caa4881800063a47d6adb25651a4c92f2c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a4f0308f8d04ae3dfb8fbefc2c6e7c70991b3afb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239075"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615593"
 ---
 # <a name="spkillfilestreamnontransactedhandles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +40,14 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
  *table_name*  
  El nombre de la tabla en la que se van a cerrar los identificadores no transaccionales.  
   
- Puede pasar *table_name* sin *handle_id* para cerrar todos los identificadores no transaccionales del abiertos para la FileTable.  
+ Puede pasar *table_name* sin *handle_id* para cerrar todos los abiertos identificadores no transaccionales para la FileTable.  
   
- Puede pasar NULL para el valor de *table_name* para cerrar todos los abiertos identificadores no transaccionales para todas las FileTables en la base de datos actual. NULL es el valor predeterminado.  
+ Puede pasar NULL para el valor de *table_name* para cerrar todos los identificadores no transaccionales del abiertos para todas las FileTables en la base de datos actual. NULL es el valor predeterminado.  
   
  *handle_id*  
- El Id. opcional del identificador individual que se cerrará. Puede obtener el *handle_id* desde el [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) vista de administración dinámica. Cada Id. es único en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si especifica *handle_id*, también tiene que proporcionar un valor para *table_name*.  
+ El Id. opcional del identificador individual que se cerrará. Puede obtener el *handle_id* desde el [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) vista de administración dinámica. Cada Id. es único en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si especifica *handle_id*, también tendrá que proporcionar un valor para *table_name*.  
   
- Puede pasar NULL para el valor de *handle_id* para cerrar todos los identificadores no transaccionales del abiertos para el objeto FileTable especificado por *table_name*. NULL es el valor predeterminado.  
+ Puede pasar NULL para el valor de *handle_id* para cerrar todos los abiertos identificadores no transaccionales para la tabla FileTable especificada por *table_name*. NULL es el valor predeterminado.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -60,20 +56,20 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
  Ninguno.  
   
 ## <a name="general-remarks"></a>Notas generales  
- El *handle_id* requiere **sp_kill_filestream_non_transacted_handles** no está relacionado con el objeto session_id o la unidad de trabajo que se utiliza en otras **kill** comandos.  
+ El *handle_id* requiere **sp_kill_filestream_non_transacted_handles** no está relacionado con el objeto session_id o la unidad de trabajo que se usa en otros **kill** comandos.  
   
  Para obtener más información, vea [Administrar FileTables](../../relational-databases/blob/manage-filetables.md).  
   
 ## <a name="metadata"></a>Metadatos  
- Para obtener información acerca de los identificadores de archivos no transaccionales abiertos, consulte la vista de administración dinámica [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
+ Para obtener información acerca de los identificadores de archivo no transaccionales abiertos, consulte la vista de administración dinámica [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
   
 ## <a name="security"></a>Seguridad  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Permisos  
  Debe tener **VIEW DATABASE STATE** permiso para obtener los identificadores de archivos desde el **sys.dm_FILESTREAM_non_transacted_handles** vista de administración dinámica y ejecutar **sp_kill_filestream_non_ transacted_handles**.  
   
 ## <a name="examples"></a>Ejemplos  
- Los ejemplos siguientes muestran cómo llamar a **sp_kill_filestream_non_transacted_handles** para cerrar identificadores de archivos no transaccionales para datos de FileTable.  
+ Los ejemplos siguientes muestran cómo llamar a **sp_kill_filestream_non_transacted_handles** para cerrar los identificadores de archivos no transaccionales para datos de FileTable.  
   
 ```sql  
 -- Close all open handles in the current database.  
@@ -86,7 +82,7 @@ sp_kill_filestream_non_transacted_handles @table_name = ’myFileTable’
 sp_kill_filestream_non_transacted_handles @table_name = ’myFileTable’, @handle_id = 0xFFFAAADD  
 ```  
   
- En el ejemplo siguiente se muestra cómo usar un script para obtener un *handle_id* y ciérrelo.  
+ El ejemplo siguiente muestra cómo utilizar una secuencia de comandos para obtener un *handle_id* y ciérrelo.  
   
 ```sql  
 DECLARE @handle_id varbinary(16);  

@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_xe_session_targets (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_xe_session_targets (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_xe_session_targets
@@ -19,23 +17,22 @@ helpviewer_keywords:
 - sys.dm_xe_session_targets dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 76fbc3e1-ad88-4a47-8bf1-471c3bee5ad8
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 95adcb1dfaaf5fb25a78703936608bfed75f4c39
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: f9964e16fa543c6e5d4e4670af846992314f0818
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466081"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649483"
 ---
 # <a name="sysdmxesessiontargets-transact-sql"></a>sys.dm_xe_session_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve información sobre los destinos de la sesión.  
   
-  |Nombre de columna|Tipo de datos|Description|  
+  |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary (8)**|La dirección de memoria de la sesión de eventos. Tiene una relación de varios a uno con sys.dm_xe_sessions.address. No admite valores NULL.|  
 |target_name|**nvarchar(60)**|El nombre del destino dentro de una sesión. No admite valores NULL.|  
@@ -44,7 +41,7 @@ ms.locfileid: "34466081"
 |execution_duration_ms|**bigint**|El tiempo total, en milisegundos, que se ha estado ejecutando el destino. No admite valores NULL.|  
 |target_data|**nvarchar(max)**|Datos que mantiene el destino como, por ejemplo, información de agregación de eventos. Acepta valores NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
 ### <a name="relationship-cardinalities"></a>Cardinalidades de relación  

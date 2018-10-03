@@ -1,27 +1,24 @@
 ---
-title: SQLGetFunctions (controlador ODBC de Visual FoxPro) | Documentos de Microsoft
+title: SQLGetFunctions (controlador ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetFunctions function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc3350e8b6a7a4ddcf505fed14a056422cbbbe41
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e0ae7b8eb0468dd401009ef58c83b87606b0679a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904780"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628613"
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
@@ -29,13 +26,13 @@ ms.locfileid: "32904780"
   
  Soporte técnico: completo  
   
- Ajuste de la API de ODBC: Nivel 1  
+ Conformidad de ODBC API: Nivel 1  
   
  Devuelve TRUE para todas las funciones compatibles.  
   
- El controlador ODBC de Visual FoxPro admite funciones de todos los núcleos de la API de ODBC y nivel 1. En la tabla siguiente indica si el controlador admite una determinada función de nivel 2.  
+ El controlador ODBC de Visual FoxPro admite funciones de todos los núcleos de la API de ODBC y nivel 1. En la tabla siguiente indica si el controlador admite una función específica de nivel 2.  
   
-|*Función*|Compatible|  
+|*Función*|Admitida|  
 |----------------|---------------|  
 |SQL_API_SQLBROWSECONNECT|no|  
 |SQL_API_SQLCOLUMNPRIVELEGES|no|  

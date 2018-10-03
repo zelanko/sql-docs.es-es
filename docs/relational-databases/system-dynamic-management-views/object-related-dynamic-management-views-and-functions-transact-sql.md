@@ -1,28 +1,25 @@
 ---
-title: Funciones (Transact-SQL) y vistas de administración dinámica, relacionadas con el objeto | Documentos de Microsoft
+title: Objeto relacionado con las vistas de administración dinámica y funciones (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/10/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - dynamic management views [SQL Server], object
 ms.assetid: f9dfff29-2e68-4c76-9460-c46085dca2e8
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d77ca822997bc0e33a8762b62e71bd78b4481baa
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 00ed60ac2b8c09df0c2699af1d5df6d778267e7f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463272"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686673"
 ---
 # <a name="object-related-dynamic-management-views-and-functions-transact-sql"></a>Funciones y vistas de administración dinámica relacionadas con objetos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

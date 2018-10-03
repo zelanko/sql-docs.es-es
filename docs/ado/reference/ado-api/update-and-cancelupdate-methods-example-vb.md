@@ -1,13 +1,11 @@
 ---
-title: Actualización y ejemplo de los métodos CancelUpdate (VB) | Documentos de Microsoft
+title: Actualización de los métodos y CancelUpdate (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - CancelUpdate method [ADO]
 - Update method [ADO], Visual Basic example
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb0ba0f097bb0885478360f4ea2cc34b2d829f54
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 506d35b93cd873aed344ebb5dd5b019d6cbf3867
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282754"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662303"
 ---
-# <a name="update-and-cancelupdate-methods-example-vb"></a>Actualización y ejemplo de los métodos CancelUpdate (VB)
-Este ejemplo se muestra la [actualización](../../../ado/reference/ado-api/update-method.md) método junto con el [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) método.  
+# <a name="update-and-cancelupdate-methods-example-vb"></a>Ejemplo de los métodos Update y CancelUpdate (VB)
+Este ejemplo se muestra el [actualización](../../../ado/reference/ado-api/update-method.md) método junto con el [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) método.  
   
 ```  
 'BeginUpdateVB  
@@ -118,7 +115,7 @@ End Sub
 ' EndUpdateVB  
 ```  
   
- Este ejemplo se muestra la **actualización** método junto con el [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) método.  
+ Este ejemplo se muestra el **actualización** método junto con el [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) método.  
   
 ```  
 Attribute VB_Name = "Update"  

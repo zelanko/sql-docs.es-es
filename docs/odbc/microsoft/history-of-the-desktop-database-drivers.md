@@ -1,39 +1,37 @@
 ---
-title: Historial de los controladores de base de datos de escritorio | Documentos de Microsoft
+title: Historial de los controladores de escritorio de la base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], history
 - ODBC desktop database drivers [ODBC], history
 - desktop database drivers [ODBC], history
 ms.assetid: b4a2aff8-bde7-4bd5-8580-bc50f27311c8
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44d0dd0c1f460bbed2b256d89bb9e986764b5256
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a77aeafff6b27b2de0b947700cef1c7251cd7548
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622503"
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>Historial de los controladores de escritorio de la base de datos
 En la tabla siguiente se muestra el historial de versiones de controladores de base de datos de escritorio.  
   
-|Versión|Fecha de la versión|Description|  
+|Versión|Fecha de la versión|Descripción|  
 |-------------|------------------|-----------------|  
-|1,0|Agosto de 1993|Usa el procesador de consultas SIMBA generado por PageAhead Software. SIMBA recibe llamadas ODBC y las instrucciones SQL, procesa las llamadas ISAM instalables de Microsoft Jet y, a continuación, llama a la capa de envío de Microsoft Jet ISAM para cargar y llamar el controlador ISAM instalable apropiado.|  
-|2.0|Diciembre de 1994|Se utiliza con ODBC 2.0, que expandido significativamente la funcionalidad de ODBC. El cambio principal en la versión 2.0 era que el motor de base de datos de Microsoft Jet reemplaza el procesador de consultas SIMBA. Con el motor de base de datos Microsoft Jet, los controladores de base de datos de escritorio integrado mucho más estrechamente con la tecnología de Microsoft Access y controladores ISAM instalables de Microsoft Jet. Eran importantes mejoras:<br /><br /> -Compatibilidad con cursores desplazables nativo.<br />-Compatibilidad para las combinaciones externas, combinaciones actualizables y heterogéneas y las transacciones.<br />-las versiones de 32 bits de los controladores para Microsoft Windows NT.|  
-|3.0|Octubre de 1995|Se ofrece compatibilidad con Windows 95 y Windows NT Workstation o NT 3.51 del servidor. Controladores de 32 bits solo se incluyen en esta versión; se quitaron los controladores de 16 bits para la versión 3.1 de Windows.|  
-|3.5|Octubre de 1996|Estos controladores fueron juego de caracteres de doble byte (DBCS)-habilitado, se ajustan mejor para su uso con aplicaciones de Internet que en versiones anteriores y adaptar el uso de nombres de origen de datos (DSN) de archivo. El controlador de Microsoft Access se publicó en una versión RISC para su uso en plataformas Alpha para Windows 95 o Windows 98 y Windows NT 3.51 y sistemas operativos posteriores.|  
-|4.0|Tiempo de ejecución de 1998|Proporciona compatibilidad con el formato Unicode de motor Jet de Microsoft junto con compatibilidad para el formato ANSI de versiones anteriores.|  
+|1,0|Agosto de 1993|Usa el procesador de consultas SIMBA producido por PageAhead Software. SIMBA recibe llamadas ODBC y las instrucciones SQL, ellos había transformado en llamadas de Microsoft Jet instalables ISAM y, a continuación, llama a la capa de expedición de Microsoft Jet ISAM para cargar y llamar el controlador ISAM instalable apropiado.|  
+|2.0|Diciembre de 1994|Puede usar con ODBC 2.0, que expande considerablemente la funcionalidad ODBC. El cambio principal en la versión 2.0 era que el motor de base de datos Microsoft Jet reemplaza el procesador de consultas SIMBA. Con el motor de base de datos Microsoft Jet, los controladores de base de datos de escritorio integrado más profundamente con la tecnología de Microsoft Access y controladores de Microsoft Jet instalables ISAM. Fueron mejoras importantes:<br /><br /> -Compatibilidad con los cursores desplazables nativo.<br />-Compatibilidad con nativo para las combinaciones externas, combinaciones heterogéneas y actualizables y transacciones.<br />-versiones de 32 bits de los controladores para Microsoft Windows NT.|  
+|3.0|Octubre de 1995|Proporciona compatibilidad con Windows 95 y Windows NT Workstation o NT 3.51 del servidor. Controladores de 32 bits solo se incluyeron en esta versión; se quitaron los controladores de 16 bits para la versión 3.1 de Windows.|  
+|3.5|Octubre de 1996|Estos controladores fueron el juego de caracteres de doble byte (DBCS)-enabled, se ajusten mejor para su uso con aplicaciones de Internet que en versiones anteriores y admite el uso de nombres de origen de datos de archivo (DSN). El controlador de Microsoft Access se publicó en una versión RISC para su uso en plataformas Alpha para Windows 95/98 y Windows NT 3.51 y sistemas operativos posteriores.|  
+|4.0|En tiempo de ejecución de 1998|Proporciona compatibilidad con el formato Unicode de motor Jet de Microsoft junto con la compatibilidad para el formato ANSI de versiones anteriores.|  
   
 > [!NOTE]  
->  Los controladores de versión3.5 se diseñaron para trabajar con ODBC2. *x*. Aunque también funcionan con ODBC 3.0, no admiten todas las características de ODBC 3.0. Para obtener más información acerca de cómo funcionan estos controladores con ODBC 3.0, consulte [compatibilidad con versiones anteriores y el cumplimiento de estándares](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).
+>  Los controladores versión3. 5 se diseñaron para trabajar con ODBC2. *x*. Aunque también funcionan con ODBC 3.0, no admiten todas las características de ODBC 3.0. Para obtener más información acerca de cómo funcionan estos controladores con ODBC 3.0, consulte [compatibilidad con versiones anteriores y el cumplimiento de estándares](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).

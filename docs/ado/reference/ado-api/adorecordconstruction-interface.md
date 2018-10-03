@@ -1,13 +1,11 @@
 ---
-title: Interfaz ADORecordConstruction | Documentos de Microsoft
+title: Interfaz ADORecordConstruction | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,28 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordConstruction interface [ADO]
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cadacd2dae2b21ea03187721eaee79aac848432f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 21975fb2442aea97e362cd71b24c087f58addc0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275634"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686873"
 ---
 # <a name="adorecordconstruction-interface"></a>Interfaz ADORecordConstruction
 El **ADORecordConstruction**interfaz se usa para construir un ADO **registro** objeto de OLE DB **fila** objeto en una aplicación de C o C++.  
   
- Esta interfaz es compatible con las siguientes propiedades:  
+ Esta interfaz admite las siguientes propiedades:  
   
 ## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
-|[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|De solo escritura.<br />Establece el contenedor de OLE DB **fila** objeto en este ADO **registro** objeto.|  
-|[Fila](../../../ado/reference/ado-api/row-property-ado.md)|Lectura/escritura.<br />Obtiene o establece OLE DB **fila** objeto de/en este ADO **registro** objeto.|  
+|[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|De solo escritura.<br />Establece el contenedor de OLE DB **fila** objeto este ADO **registro** objeto.|  
+|[Fila](../../../ado/reference/ado-api/row-property-ado.md)|Lectura/escritura.<br />Obtiene o establece OLE DB **fila** objeto desde/en este ADO **registro** objeto.|  
   
 ## <a name="methods"></a>Métodos  
  Ninguno.  
@@ -44,8 +41,8 @@ El **ADORecordConstruction**interfaz se usa para construir un ADO **registro** o
 ## <a name="events"></a>Eventos  
  Ninguno.  
   
-## <a name="remarks"></a>Notas  
- Dado OLE DB **fila** objeto (`pRow`), la construcción de ADO **registro** objeto (`adoR`), los importes de las tres operaciones básicas siguientes:  
+## <a name="remarks"></a>Comentarios  
+ Dada una OLE DB **fila** objeto (`pRow`), la construcción de ADO **registro** objeto (`adoR`), equivale a las tres operaciones básicas siguientes:  
   
 1.  Crear un ADO **registro** objeto:  
   
@@ -54,7 +51,7 @@ El **ADORecordConstruction**interfaz se usa para construir un ADO **registro** o
     adoRs.CreateInstance(__uuidof(_Record));  
     ```  
   
-2.  Consulta el **IADORecordConstruction** de la interfaz en el **registro** objeto:  
+2.  Consulta el **IADORecordConstruction** interfaz en el **registro** objeto:  
   
     ```  
     adoRecordConstructionPtr adoRConstruct=NULL;  
@@ -62,7 +59,7 @@ El **ADORecordConstruction**interfaz se usa para construir un ADO **registro** o
                         (void**)&adoRConstruct);  
     ```  
   
-3.  Llame a la **IADORecordConstruction:: put Row** método de propiedad para establecer OLE DB **fila** objeto ADO **registro** objeto:  
+3.  Llame a la **IADORecordConstruction:: put Row** método de propiedad para establecer la OLE DB **fila** objeto ADO **registro** objeto:  
   
     ```  
     IUnknown *pUnk=NULL;  
@@ -75,7 +72,7 @@ El **ADORecordConstruction**interfaz se usa para construir un ADO **registro** o
  ADO **registro** también se puede construir el objeto desde el contenedor de OLE DB **fila** objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Versión:** ADO 2.0 y versiones posteriores  
+ **Versión:** ADO 2.0 y versiones posterior  
   
  **Biblioteca:** msado15.dll  
   

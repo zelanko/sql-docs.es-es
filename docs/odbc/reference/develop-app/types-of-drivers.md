@@ -1,13 +1,11 @@
 ---
-title: Tipos de controladores | Documentos de Microsoft
+title: Tipos de controladores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - backward compatibility [ODBC], application and driver compatibility
 - compatibility [ODBC], application and driver compatibility
 ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e75e5827becd5457d0e310ca5ec0cc2a13259be5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0f619c519bd5ec6a3ebb3567fc39e73d63e8b68f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914690"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619693"
 ---
 # <a name="types-of-drivers"></a>Tipos de controladores
 Controladores ODBC se pueden clasificar como sigue:  
@@ -34,35 +31,35 @@ Controladores ODBC se pueden clasificar como sigue:
   
     -   Exporta solo ODBC 2 *.x* funciones.  
   
-    -   Exhibe ODBC 2. *x* comportamiento para cambios de comportamiento.  
+    -   Exhibe ODBC 2. *x* comportamiento cambios de comportamiento.  
   
--   **ISO y abrir el controlador compatible con el grupo** controladores de 32 bits que:  
+-   **ISO y el controlador de grupo conforme abra** controladores de 32 bits que:  
   
     -   Exporta todas las funciones que se documentan en los documentos de Open Group o ISO CLI. Esto incluye algunas de las funciones que están en desuso en ODBC.  
   
-    -   Se comporta de ODBC 3.0 para cambios de comportamiento.  
+    -   Exhibe un comportamiento de ODBC 3.0 para cambios de comportamiento.  
   
     -   No necesariamente pasa a través del Administrador de controladores ODBC 3.0.  
   
 -   **Controladores ODBC 3.0** controladores de 32 bits que:  
   
-    -   Las exportaciones solo las funciones que se encuentran en ODBC 3.0 menos funciones en desuso.  
+    -   Exporta solo las funciones que se encuentran en ODBC 3.0 menos funciones en desuso.  
   
-    -   Es capaz de cuello de ODBC 2. *x* comportamiento o ODBC 3.0 con respecto a los cambios de comportamiento, según el atributo de entorno SQL_ATTR_APP_ODBC_VERSION.  
+    -   Es capaz de presenta ODBC 2. *x* comportamiento o el comportamiento de ODBC 3.0 con respecto a los cambios de comportamiento, según el atributo de entorno SQL_ATTR_APP_ODBC_VERSION.  
   
 -   **Controlador ODBC 3.5 (o posterior) ANSI** controladores de 32 bits que:  
   
-    -   Las exportaciones solo las funciones que se encuentran en ODBC 3.5 menos funciones en desuso.  
+    -   Exporta solo las funciones que se encuentran en ODBC 3.5 menos funciones en desuso.  
   
-    -   Es capaz de cuello de ODBC 2. *x* comportamiento o comportamiento de ODBC 3.0 o comportamiento de ODBC 3.5 con respecto a los cambios de comportamiento, según el atributo de entorno SQL_ATTR_APP_ODBC_VERSION.  
+    -   Es capaz de presenta ODBC 2. *x* comportamiento o el comportamiento de ODBC 3.0 o el comportamiento de ODBC 3.5 con respecto a los cambios de comportamiento, según el atributo de entorno SQL_ATTR_APP_ODBC_VERSION.  
   
 -   **Controlador ODBC 3.5 (o posterior) Unicode** controladores de 32 bits que:  
   
     -   Es compatible con todas las características de un controlador de ODBC 3.5 ANSI.  
   
-    -   Exporta las versiones de Unicode de todas las API de cadenas ODBC.  
+    -   Exporta las versiones Unicode de todas las API de cadena de ODBC.  
   
-    -   Puede almacenar y procesar los datos de Unicode en el origen de datos.  
+    -   Puede almacenar y procesar los datos Unicode en el origen de datos.  
   
 > [!NOTE]  
->  controladores ODBC de 16 bits no funciona directamente con ODBC 3. *x* el Administrador de controladores. Sin embargo, es posible que los controladores de 16 bits trabajar con el Administrador de controladores ODBC 2.0, que posteriormente códigos thunk hasta el 3. *x* el Administrador de controladores.
+>  controladores ODBC de 16 bits no funcionará directamente con ODBC 3. *x* Administrador de controladores. Sin embargo, es posible que los controladores de 16 bits trabajar con el Administrador de controladores ODBC 2.0, que posteriormente thunks hasta el 3. *x* Administrador de controladores.

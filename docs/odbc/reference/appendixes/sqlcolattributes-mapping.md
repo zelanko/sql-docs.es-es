@@ -1,38 +1,36 @@
 ---
-title: Asignación de SQLColAttributes | Documentos de Microsoft
+title: Asignación de SQLColAttributes | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLColAttributes
 - SQLColAttribute function [ODBC], mapping
 ms.assetid: 30e25719-176b-4c48-97d4-920766b22412
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b87311d3b913395fb0529392c7bc4ed9cc93024e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0332e38a96d17589d9aa75bfe2a3c918dcc78d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639653"
 ---
 # <a name="sqlcolattributes-mapping"></a>Asignación de SQLColAttributes
-Cuando una aplicación llama **SQLColAttributes** a través de una aplicación ODBC 3 *.x* controlador, la llamada a **SQLColAttributes** se asigna a **SQLColAttribute** como se indica a continuación:  
+Cuando una aplicación llama **SQLColAttributes** a través de una aplicación ODBC 3 *.x* controlador, la llamada a **SQLColAttributes** se asigna a **SQLColAttribute** como sigue:  
   
 > [!NOTE]  
 >  El prefijo usado en *FieldIdentifier* valores en ODBC 3 *.x* cambió desde que usa en ODBC 2. *x*. El nuevo prefijo es "SQL_DESC"; el prefijo anterior era "SQL_COLUMN".  
   
-1.  Si la aplicación es una API ODBC 2. *x* aplicación, *fDescType* es SQL_COLUMN_TYPE, y el tipo de valor devuelto es un tipo de fecha y hora conciso, las asignaciones de administrador de controladores, la devolución de valores para los códigos de fecha, hora y marca de tiempo.  
+1.  Si la aplicación es una API ODBC 2. *x* aplicación, *fDescType* es SQL_COLUMN_TYPE, y el tipo devuelto es un tipo DATETIME conciso, el Administrador de controladores se asigna el retorno de los valores de los códigos de fecha, hora y marca de tiempo.  
   
-2.  Si *fDescType* es SQL_COLUMN_NAME, SQL_COLUMN_NULLABLE o SQL_COLUMN_COUNT, las llamadas de administrador de controladores **SQLColAttribute** en el controlador con el *FieldIdentifier* argumento asignado a SQL_DESC_NAME, SQL_DESC_NULLABLE o SQL_DESC_COUNT, según corresponda *.* Todos los demás valores de *fDescType* se pasan al controlador.  
+2.  Si *fDescType* es SQL_COLUMN_COUNT, las llamadas del Administrador de controladores, SQL_COLUMN_NULLABLE o SQL_COLUMN_NAME **SQLColAttribute** en el controlador con el *FieldIdentifier* argumento asignado a SQL_DESC_NAME, SQL_DESC_NULLABLE o SQL_DESC_COUNT, según corresponda *.* Todos los demás valores de *fDescType* se pasan al controlador.  
   
- Una aplicación ODBC 3 *.x* controlador debe admitir el 3 de ODBC *.x* *FieldIdentifiers* enumerados para **SQLColAttribute**.  
+ Una aplicación ODBC 3 *.x* controlador debe admitir todos los ODBC 3 *.x* *FieldIdentifiers* enumerados para **SQLColAttribute**.  
   
- Una aplicación ODBC 3 *.x* controlador debe admitir SQL_COLUMN_PRECISION y SQL_DESC_PRECISION, SQL_COLUMN_SCALE y SQL_DESC_SCALE y SQL_COLUMN_LENGTH y SQL_DESC_LENGTH. Estos valores son diferentes porque precisión, escala y longitud se definen de manera diferente en ODBC 3 *.x* que estuvieran en ODBC 2. *x*. Para obtener más información, consulte [tamaño de la columna, dígitos decimales, transferencia de longitud de bytes y el tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) en tipos de datos de apéndice D:.
+ Una aplicación ODBC 3 *.x* controlador debe admitir SQL_COLUMN_PRECISION y SQL_DESC_PRECISION, SQL_COLUMN_SCALE y SQL_DESC_SCALE y SQL_COLUMN_LENGTH y SQL_DESC_LENGTH. Estos valores son diferentes porque la precisión, escala y longitud se definen de manera diferente en ODBC 3 *.x* lo que estaban ODBC 2. *x*. Para obtener más información, consulte [tamaño de la columna, dígitos decimales, transferir la longitud en octetos y tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) en Apéndice D: tipos de datos.

@@ -1,31 +1,28 @@
 ---
-title: Las instrucciones de DDL | Documentos de Microsoft
+title: Instrucciones de DDL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], DDL statements
 - DDL statements [ODBC]
 ms.assetid: 96ac9859-5976-4b06-ae1f-2fec3231e266
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d077c86fb7a87658bc62d9530e9019e9f25da987
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 14d9eb18a5c6c3cbd62cea0c668f3c53f8da48f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909180"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626683"
 ---
 # <a name="ddl-statements"></a>Instrucciones DDL
-Las instrucciones de lenguaje de definición (DDL) de datos varían enormemente entre DBMS. SQL de ODBC define las instrucciones para las operaciones más habituales de definición de datos: crear y quitar tablas, índices y vistas; modificar tablas; conceder y revocar privilegios. Todas las demás instrucciones de DDL son específicos del origen de datos. Por lo tanto, las aplicaciones interoperables no pueden realizar algunas operaciones de definición de datos. En general, esto no supone un problema, porque estas operaciones tienden a ser muy específica de los DBMS y son más adecuadas izquierda para el software de administración de base de datos propietaria incluidos con la mayoría de los DBMS o el programa de instalación que se incluye con el controlador.  
+Instrucciones de lenguaje de definición (DDL) de datos varían enormemente según DBMS. SQL de ODBC define las instrucciones para las operaciones más comunes de definición de datos: crear y quitar tablas, índices y vistas; modificar tablas; conceder y revocar los privilegios. Todas las demás instrucciones de DDL son específicos del origen de datos. Por lo tanto, las aplicaciones interoperables no pueden realizar algunas operaciones de definición de datos. En general, esto no supone un problema, porque estas operaciones tienden a ser muy específicos para DBMS y son más adecuadas izquierda para el software de administración de base de datos propietaria se incluye con la mayoría de los DBMS o el programa de instalación se incluye con el controlador.  
   
- Otro problema de definición de datos es ese tipo de datos nombres varían enormemente entre DBMS. En lugar de definir nombres de tipo de datos estándar y forzar controladores para convertirlos en nombres específicos de DBMS, **SQLGetTypeInfo** proporciona una manera para que las aplicaciones detectar los nombres de tipo de datos específicos del DBMS. Aplicaciones interoperables deben usar estos nombres de instrucciones SQL para crear y modificar las tablas; los nombres que aparecen en [Apéndice C: SQL gramática](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md), y [tipos de datos de apéndice D:](../../../odbc/reference/appendixes/appendix-d-data-types.md), son sólo ejemplos.
+ Otro problema en la definición de datos es ese tipo de datos nombres varían enormemente según DBMS. En lugar de definir nombres de tipo de datos estándar y forzar que los controladores para convertirlas a nombres específicos de DBMS, **SQLGetTypeInfo** proporciona una manera para que las aplicaciones detectar los nombres de tipo de datos específicos para DBMS. Aplicaciones interoperables deben usar estos nombres en las instrucciones SQL para crear y modificar las tablas; los nombres que aparecen en [Apéndice C: SQL gramática](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md), y [apéndice D: tipos de datos](../../../odbc/reference/appendixes/appendix-d-data-types.md), son solo ejemplos.

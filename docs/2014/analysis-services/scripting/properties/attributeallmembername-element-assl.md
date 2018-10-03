@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AttributeAllMemberName Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AttributeAllMemberName element
 ms.assetid: 5ede46a7-d8b0-40be-98d7-b01047b27d2e
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 425e9c092dff8cc3c303672b6bfb1e2b3a8096ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c5d601864d3ceef1af243f819de8d7ef8466e91
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208055"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218775"
 ---
 # <a name="attributeallmembername-element-assl"></a>Elemento AttributeAllMemberName (ASSL)
   Contiene el título en el idioma predeterminado para el miembro All de la dimensión.  
@@ -46,7 +43,7 @@ ms.locfileid: "37208055"
 </Dimension>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37208055"
 |Elemento primario|[Dimension](../objects/dimension-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento que se corresponde con el elemento primario de `AttributeAllMemberName` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Vea también  

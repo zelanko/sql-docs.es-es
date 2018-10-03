@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - rounding expressions
 - ROUND function [SSIS]
 ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
-caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ece0f01fe74340ae96b087204ec36c0cb6ef9fff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 950d2c8aa3bd67327eb184017a71bc3851cb2abf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246817"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212265"
 ---
 # <a name="round-ssis-expression"></a>ROUND (expresión de SSIS)
   Devuelve una expresión numérica, redondeada a la longitud o precisión especificada. La evaluación del parámetro de longitud debe devolver un entero.  
@@ -44,7 +41,7 @@ ROUND(numeric_expression,length)
 ## <a name="result-types"></a>Tipos de resultado  
  El mismo tipo que *numeric*_*expression*.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  La evaluación del argumento *length* debe devolver cero o un entero positivo.  
   
  ROUND devuelve un resultado NULL si el valor del argumento es NULL.  

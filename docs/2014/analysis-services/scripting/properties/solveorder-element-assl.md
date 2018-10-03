@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SolveOrder Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - SolveOrder element
 ms.assetid: ec43e055-97dd-4f2a-9a7c-2df2e1119e56
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: defbaca134f92df4cf765dda68ad2fb30c848800
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4fbd4132a0dc27d9055956d4b49a1ad02bc5dff5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173296"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219515"
 ---
 # <a name="solveorder-element-assl"></a>Elemento SolveOrder (ASSL)
   Indica el orden de resolución en el que el [CalculationProperty](../objects/calculationproperty-element-assl.md) elemento se aplica a un miembro calculado o una definición de celda calculada.  
@@ -46,7 +43,7 @@ ms.locfileid: "37173296"
 </CalculationProperty>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37173296"
 |Elemento primario|[CalculationProperty](../objects/calculationproperty-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El `SolveOrder` propiedad se aplica a `CalculationProperty` elementos con un [CalculationType](calculationtype-element-assl.md) de *miembro* o *celdas*.  
   
  El elemento que se corresponde con el elemento primario de `SolveOrder` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.CalculationProperty>.  

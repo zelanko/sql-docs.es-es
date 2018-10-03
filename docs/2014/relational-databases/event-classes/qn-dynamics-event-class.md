@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Dynamics
 ms.assetid: 3c1ffa0c-c9e5-40a6-a26b-28339f60ebc3
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83a51fb2449bce6f671ad8ba73d4c6dd4cd79714
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a401a38c94df565d2d4369ee6941eaf217e8f0f2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300475"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214925"
 ---
 # <a name="qndynamics-event-class"></a>QN:Dynamics (clase de eventos)
   La clase de eventos QN:Dynamics ofrece información acerca de la actividad en segundo plano que realiza [!INCLUDE[ssDE](../../includes/ssde-md.md)] para admitir las notificaciones de consulta. En el [!INCLUDE[ssDE](../../includes/ssde-md.md)], un subproceso en segundo plano supervisa los tiempos de espera de las suscripciones, las suscripciones pendientes que se deben activar y la destrucción de tablas de parámetros.  

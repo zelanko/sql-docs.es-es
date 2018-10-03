@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, decision tree models
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae76bbfc4e85e0f01e384849bf6b67e52f4c574f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dbd89984e64ac3ca37c3ac9ec31e19191606dc9d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161666"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217575"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de árboles de decisión (Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener una explicación general sobre el contenido del modelo de minería de datos para todos los tipos de modelo, vea [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md). Es importante recordar que el algoritmo de árboles de decisión de Microsoft es un algoritmo híbrido que puede crear modelos con funciones muy diferentes: un árbol de decisión puede representar asociaciones, reglas o incluso una regresión lineal. La estructura del árbol es básicamente la misma, pero la forma en la que se interpretará la información dependerá del propósito para el que creó el modelo.  
@@ -161,7 +158,7 @@ ms.locfileid: "37161666"
  MSOLAP_NODE_SHORT_CAPTION  
  Etiqueta que se utiliza para la visualización.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Un modelo de árboles de decisión no dispone de un nodo independiente que almacena estadísticas para todo el modelo, a diferencia del nodo de estadísticas marginales que se puede encontrar en un modelo Bayes naive o en un modelo de red neuronal. En su lugar, el modelo crea un árbol independiente para cada atributo de predicción, con un nodo (Todos) en la parte superior de dicho árbol. Cada uno de los árboles es independiente de los demás. Si su modelo solo contiene un atributo de predicción, solo hay un árbol y, por lo tanto, solo un nodo (Todos).  
   
  Cada árbol que representa un atributo de salida se subdivide además en bifurcaciones interiores (NODE_TYPE = 3) que representan divisiones. Cada uno de estos árboles contiene estadísticas sobre la distribución del atributo de destino. Además, cada nodo hoja (NODE_TYPE = 4) contiene estadísticas que describen los atributos de entrada y sus valores, junto con el número de casos de soporte de cada par atributo-valor. Por lo tanto, puede ver fácilmente las probabilidades o la distribución de los datos en cualquier bifurcación de un árbol de decisión sin necesidad de consultar los datos de origen. Cada nivel del árbol representa necesariamente la suma de sus nodos secundarios inmediatos.  

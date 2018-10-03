@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - custom connection managers [Integration Services], developing user interface
 - custom user interface [Integration Services], custom connection manager
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55289eb7ca5455495133563de383bc5c335d67e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: beadb88c8423c88ac7a412ca1f234694fb095665
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250645"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216765"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>Desarrollar una interfaz de usuario para un administrador de conexiones personalizado
   Después de invalidar la implementación de las propiedades y los métodos de la clase base para proporcionar una funcionalidad personalizada, quizá desee crear una interfaz de usuario personalizada para el administrador de conexiones. Si no crea una interfaz de usuario personalizada, los usuarios solo pueden configurar el administrador de conexiones mediante la ventana Propiedades.  
@@ -106,7 +103,7 @@ public bool New(System.Windows.Forms.IWin32Window parentWindow, Microsoft.SqlSer
 ```  
   
 ### <a name="editing-the-connection-manager"></a>Editar el administrador de conexiones  
- Dado que se llama al formulario para la edición desde los métodos <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.New%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Edit%2A>, es conveniente utilizar una función auxiliar para encapsular el código que muestra el formulario. El código siguiente muestra una implementación de esta función auxiliar.  
+ Dado que se llama al formulario para la edición desde los métodos <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.New%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Edit%2A>, es conveniente utilizar una función del asistente para encapsular el código que muestra el formulario. El código siguiente muestra una implementación de esta función del asistente.  
   
 ```vb  
 Private Function EditSqlConnection(ByVal parentWindow As IWin32Window) As Boolean  
@@ -142,7 +139,7 @@ private bool EditSqlConnection(IWin32Window parentWindow)
  }  
 ```  
   
- En el método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Edit%2A>, solo tiene que mostrar el formulario para editar. El código siguiente muestra una implementación del método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Edit%2A> que utiliza una función auxiliar para encapsular el código del formulario.  
+ En el método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Edit%2A>, solo tiene que mostrar el formulario para editar. El código siguiente muestra una implementación del método <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Edit%2A> que utiliza una función del asistente para encapsular el código del formulario.  
   
 ```vb  
 Public Function Edit(ByVal parentWindow As System.Windows.Forms.IWin32Window, ByVal connections As Microsoft.SqlServer.Dts.Runtime.Connections, ByVal connectionUIArg As Microsoft.SqlServer.Dts.Runtime.Design.ConnectionManagerUIArgs) As Boolean Implements Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Edit  
@@ -191,7 +188,7 @@ public void Initialize(ConnectionManager connectionManager, IServiceProvider ser
 ```  
   
 ### <a name="setting-properties-on-the-user-interface-form"></a>Establecer las propiedades en el formulario de la interfaz de usuario  
- Finalmente, la clase de formulario necesita una función auxiliar que rellena los controles del formulario cuando se carga por primera vez con los valores existentes o predeterminados de las propiedades del administrador de conexiones. La clase de formulario también necesita una función similar que establece los valores de las propiedades en los valores escritos por el usuario cuando el usuario hace clic en Aceptar y cierra el formulario.  
+ Finalmente, la clase de formulario necesita una función del asistente que rellena los controles del formulario cuando se carga por primera vez con los valores existentes o predeterminados de las propiedades del administrador de conexiones. La clase de formulario también necesita una función similar que establece los valores de las propiedades en los valores escritos por el usuario cuando el usuario hace clic en Aceptar y cierra el formulario.  
   
 ```vb  
 Private Const CONNECTIONNAME_BASE As String = "SqlConnectionManager"  
@@ -289,7 +286,7 @@ private void ConfigureControlsFromConnectionManager()
  }  
 ```  
   
-![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services  **<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services** <br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Vea también  
  [Crear un administrador de conexiones personalizado](creating-a-custom-connection-manager.md)   

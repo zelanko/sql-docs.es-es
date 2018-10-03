@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ColumnID Element (EventColumn)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ColumnID element
 ms.assetid: c4f4fbad-9d70-4de2-8cf7-caee80a4a1e4
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 82cc6d67aa0c1533b9779b93468fdf8845272cde
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4eeb9954f3318a9286865454b6eb61a15f4d4236
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245605"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216395"
 ---
 # <a name="columnid-element-eventcolumn-assl"></a>Elemento ColumnID (EventColumn) (ASSL)
   Contiene el identificador (ID) de la columna de información que va a capturar para un evento como parte de un [seguimiento](../objects/trace-element-assl.md) elemento.  
@@ -44,7 +41,7 @@ ms.locfileid: "37245605"
 </EventColumn>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -59,7 +56,7 @@ ms.locfileid: "37245605"
 |Elemento primario|[EventColumn](../data-type/eventcolumn-data-type-assl.md)|  
 |Elementos secundarios|Ninguno.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento que se corresponde con el elemento primario de `ColumnID` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.TraceColumn>.  
   
 ## <a name="see-also"></a>Vea también  

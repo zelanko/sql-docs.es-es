@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.timeintelligence.selecttimehierarchy.f1
 ms.assetid: 19c231bb-9a17-4369-ba14-79309603c727
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1a0d6af0d7f643ae312015479a31cae4b04f1d34
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8eb592c5921f2edc57fa1f77af4aea7e3793d896
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198225"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224237"
 ---
 # <a name="define-scope-of-calculations-business-intelligence-wizard"></a>Definir el ámbito de cálculo (Asistente de Business Intelligence)
   Utilice la página **Definir el ámbito de cálculo** para asociar los nuevos cálculos de tiempo a medidas individuales.  

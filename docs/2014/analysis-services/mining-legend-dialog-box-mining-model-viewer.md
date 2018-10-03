@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.nodelegend.f1
 helpviewer_keywords:
 - Mining Legend dialog box
 ms.assetid: 9040e213-a6fd-420e-be3e-37cc3a17c111
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 10a2fd0221f238d8b022482a7a0c3fe2b214c771
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5366db29a8e3fbfc286684b372c9f71d0cf6a7ff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306615"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218725"
 ---
 # <a name="mining-legend-dialog-box-mining-model-viewer"></a>Cuadro de diálogo Leyenda de minería de datos (Visor de modelos de minería de datos)
   Utilice el cuadro de diálogo **Leyenda de minería de datos** para obtener información más detallada sobre el nodo o elemento seleccionado en un visor de modelos de minería de datos.  

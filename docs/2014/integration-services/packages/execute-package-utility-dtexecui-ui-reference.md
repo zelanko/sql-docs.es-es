@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtexecui.general.f1
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 215634d6a42c25870c4cac476905f19386df69ff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45fe288818c6234b61226311226cdbc6a471146b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256851"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217435"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Referencia de la interfaz de usuario de la Utilidad de ejecución de paquetes (DtExecUI)
   Use la **Utilidad de ejecución de paquetes** para ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La utilidad ejecuta los paquetes almacenados en una de estas tres ubicaciones: la base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos. Esta interfaz de usuario, que se puede abrir desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o escribiendo `dtexecui` en un símbolo del sistema, es una alternativa a ejecutar paquetes mediante el uso de la **DTExec** herramienta de línea de comandos.  
@@ -311,7 +308,7 @@ ms.locfileid: "37256851"
  **Ruta de acceso de la propiedad**  
  Escriba la ruta de acceso de la propiedad. En la sintaxis de la ruta se usa una barra diagonal inversa (\\) para indicar que el elemento siguiente es un contenedor, un punto (.) para indicar que el elemento siguiente es una propiedad y corchetes para indicar que es un miembro de una colección. Es posible identificar al miembro por su índice o nombre. Por ejemplo, la ruta de acceso de la propiedad de una variable de un paquete es \Package.Variables[MyVariable].Value.  
   
- **Value**  
+ **Valor**  
  Escriba el valor de la propiedad.  
   
  **Quitar**  

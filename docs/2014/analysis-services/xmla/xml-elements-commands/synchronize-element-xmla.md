@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Synchronize Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Synchronize command
 ms.assetid: 9401323c-feff-409a-a9da-94aee47e0563
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f88b07721d391c1f834ed93d21039753728081d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 13bdb64dbc3ba0b034af3a54ae10a50c403555a7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187102"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225825"
 ---
 # <a name="synchronize-element-xmla"></a>Elemento Synchronize (XMLA)
   Sincroniza un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de datos con otra base de datos existente.  
@@ -51,7 +48,7 @@ ms.locfileid: "37187102"
 </Command>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -66,7 +63,7 @@ ms.locfileid: "37187102"
 |Elementos primarios|[Command](../xml-elements-properties/command-element-xmla.md)|  
 |Elementos secundarios|[ApplyCompression](../xml-elements-properties/applycompression-element-xmla.md), [ubicaciones](../xml-elements-properties/locations-element-xmla.md), [origen](../xml-elements-properties/source-element-synchronize-xmla.md), [SynchronizeSecurity](../xml-elements-properties/security-element-xmla.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El comando `Synchronize` sincroniza la base de datos de destino con una instancia de origen y con la base de datos especificadas en el elemento `Source`. Opcionalmente, el comando `Synchronize` sincroniza particiones remotas definidas en la base de datos de origen.  
   
  Dependiendo del modo de almacenamiento utilizado por los objetos guardados en el archivo de copia de seguridad, el comando `Synchronize` sincroniza la información tal y como se indica en la tabla siguiente.  

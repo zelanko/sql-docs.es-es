@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reserved keywords
 ms.assetid: 4f23f7e4-7b4d-4e19-86c9-7527bb8b107d
-caps.latest.revision: 11
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5969fdcd95f0168dad587552bc114f874a3feeef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb9f8956108b07fdc6561c5ef8582e7510240434
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282581"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226998"
 ---
 # <a name="remove-colon-following-reserved-keyword"></a>Quitar los dos puntos que siguen a las palabras claves reservadas
   El Asesor de actualizaciones detectó un script que contiene dos puntos (:) después de una palabra clave reservada. En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta sintaxis no se tenía en cuenta y las instrucciones se ejecutaban correctamente. Ahora, esta sintaxis hace que la instrucción no se pueda ejecutar si el modo de compatibilidad de la base de datos está establecido en 100 o más.  

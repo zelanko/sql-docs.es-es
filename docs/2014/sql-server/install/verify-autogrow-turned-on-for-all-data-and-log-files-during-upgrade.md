@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - log files [SQL Server], size
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - tempdb [SQL Server], size
 - autogrow [SQL Server]
 ms.assetid: a5860904-e2be-4224-8a51-df18a10d3fb9
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 33c94b0ac9145e5d36a9c744a3531155ae64b152
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f4d247156e4e37786e5822ed0ce3397c1cad7e64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181472"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220505"
 ---
 # <a name="verify-autogrow-is-turned-on-for-all-data-and-log-files-during-the-upgrade-process"></a>Comprobar que autogrow está activo para todos los datos y archivos de registro durante el proceso de actualización
   El Asesor de actualizaciones detectó archivos de datos o de registro no configurados para crecimiento automático. Características nuevas y mejoradas requieren espacio en disco adicional para bases de datos de usuario y la **tempdb** base de datos del sistema. Para asegurarse de que los recursos pueden aceptar los aumentos de tamaño durante la actualización y las operaciones de producción posteriores, se recomienda habilitar el crecimiento automático en ON para todos los archivos de registro y datos de usuario y la **tempdb** antes de actualizar los archivos de datos y de registro.  

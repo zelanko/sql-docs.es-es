@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - statements [ODBC]
 ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5eab640fd0f3a60e3edc1b8708f7c1bb20b25dba
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 195b38804045c26053771d263d650cfaa2efecde
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409044"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227015"
 ---
 # <a name="use-a-statement-odbc"></a>Usar una instrucción (ODBC)
     
@@ -38,11 +35,11 @@ ms.locfileid: "37409044"
   
 5.  Ejecute directamente una instrucción utilizando SQLExecDirect.  
   
-     \- O bien  
+     \- o -  
   
      Si se ha preparado la instrucción, ejecútela varias veces utilizando [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400).  
   
-     \- O bien  
+     \- o -  
   
      Llame a una función de catálogo, que devuelve los resultados.  
   
@@ -50,11 +47,11 @@ ms.locfileid: "37409044"
   
      Capture una fila cada vez del conjunto de resultados de una instrucción.  
   
-     \- O bien  
+     \- o -  
   
      Capture varias filas cada vez del conjunto de resultados mediante un cursor de bloque.  
   
-     \- O bien  
+     \- o -  
   
      Llame a [SQLRowCount](../../native-client-odbc-api/sqlrowcount.md) para determinar el número de filas afectado por una instrucción INSERT, UPDATE o DELETE.  
   

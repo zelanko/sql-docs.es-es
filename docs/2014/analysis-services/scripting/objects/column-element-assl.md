@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Column Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Column element
 ms.assetid: 10dc6d5e-c690-4415-adbb-eaeebaa29cb4
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 474e094335c22ca1a715b48715e968c7dd13f515
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 314e5077f4212e2095d822e0e00d5028ca127a1b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312435"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218785"
 ---
 # <a name="column-element-assl"></a>Column, elemento (ASSL)
   Describe una columna en la colección de columnas asociada al elemento principal.  
@@ -52,7 +49,7 @@ ms.locfileid: "37312435"
 </Columns>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  

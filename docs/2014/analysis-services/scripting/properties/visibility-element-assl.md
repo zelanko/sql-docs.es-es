@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Visibility Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Visibility element
 ms.assetid: 59372ebf-af52-4d60-bf9b-bb1644ae9865
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9e4580071cefc21035ba36c645019b4c768e4a1f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e0ec079bcdfefb84f5d7b9e1ea24b5c16b001f16
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185202"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216635"
 ---
 # <a name="visibility-element-assl"></a>Elemento Visibility (ASSL)
   Define la visibilidad de un [anotación](../objects/annotation-element-assl.md) elemento.  
@@ -46,7 +43,7 @@ ms.locfileid: "37185202"
 </Annotation>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37185202"
 |Elemento primario|[Anotación](../objects/annotation-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
 |Valor|Descripción|  

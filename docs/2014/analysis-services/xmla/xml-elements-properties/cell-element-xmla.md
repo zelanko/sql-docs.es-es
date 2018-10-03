@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Cell Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Cell element
 ms.assetid: 88daba54-89e9-423f-8d12-8de80cf52d6b
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 18110400e76f10e9e8ac90fc2793a7a90f25d4de
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ec8b6eee3e3eefe1c86bf92d45bfac6032905f8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241236"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219415"
 ---
 # <a name="cell-element-xmla"></a>Elemento Cell (XMLA)
   Contiene información sobre una celda que va a actualizar un comando [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md) .  
@@ -50,7 +47,7 @@ ms.locfileid: "37241236"
 </UpdateCells>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -71,7 +68,7 @@ ms.locfileid: "37241236"
 |---------------|-----------------|  
 |CellOrdinal|Requiere `Long` atributo. Contiene la posición ordinal basada en cero de la celda que se va a actualizar.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para más información sobre la actualización de celdas, vea [Actualizar celdas &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md).  
   
 ## <a name="see-also"></a>Vea también  

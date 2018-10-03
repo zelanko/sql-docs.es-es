@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, peer-to-peer replication
 - peer-to-peer transactional replication, conflict detection
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 750781b73012b6815a3ad9c432ef83d1b02a7b11
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ba4adf36783aece0f222917a429628432bcda427
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37318135"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229615"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>Detección de conflictos en la replicación punto a punto
   La replicación transaccional punto a punto permite insertar, actualizar o eliminar datos en cualquier nodo de una topología y propagar los cambios de los datos a los demás nodos. Dado que se pueden cambiar los datos de cualquier nodo, podrían producirse conflictos entre los datos modificados en los distintos nodos. Si una fila se modifica en más de un nodo, puede producirse un conflicto o incluso la pérdida de una actualización cuando la fila se propaga a otros nodos.  

@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - images [Reporting Services], rendering
 - device information settings [Reporting Services], IMAGE rendering
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
-caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 17c7a8f084db4c252da7f235762a60078ef39214
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6737a32eb7597f8115a7ee6797bcf1aedbd006b8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315475"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220785"
 ---
 # <a name="image-device-information-settings"></a>Configuración de la información del dispositivo de imagen
   En la tabla siguiente se muestra la configuración de la información de los dispositivos para la representación en formato IMAGE.  
   
-|Configuración|Valor|  
+|Parámetro|Valor|  
 |-------------|-----------|  
 |**Columnas**|Número de columnas que se van a establecer para el informe. Este valor invalida la configuración original del informe.|  
 |**ColumnSpacing**|Espacio entre las columnas que se va a establecer para el informe. Este valor invalida la configuración original del informe.|  

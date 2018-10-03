@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - output neurons [Analysis Services]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - mining model content, neural network models
 - neural network model [Analysis Services]
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d90c182f664a6b89232a74da8d9ca5294dea465e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d5b823481d47f6e986815673aa3ab65d44f07c9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280461"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218705"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de red neuronal (Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de red neuronal de Microsoft. Para obtener una explicación de cómo interpretar las estadísticas y la estructura compartidas por todos los tipos de modelos, así como las definiciones generales de términos relacionados con el contenido del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -192,7 +189,7 @@ ms.locfileid: "37280461"
  MSOLAP_NODE_SHORT_CAPTION  
  En los modelos de red neuronal, siempre está en blanco.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El propósito de entrenar un modelo de red neuronal es determinar los pesos que están asociados a cada transición de una entrada a un punto medio y de un punto medio a un extremo. Por consiguiente, el nivel de entrada del modelo existe principalmente para almacenar los valores reales que se usaron para generarlo. El nivel oculto almacena los pesos que se calcularon y proporciona punteros a los atributos de entrada. El nivel de salida almacena los valores de predicción y también proporciona punteros a los puntos medios en el nivel oculto.  
   
 ##  <a name="bkmk_NodeIDs"></a> Usar nombres de nodo e identificadores  

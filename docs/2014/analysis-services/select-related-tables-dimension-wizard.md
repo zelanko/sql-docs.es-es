@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.selectrelatedtables.f1
 ms.assetid: 82dbd97a-582c-4f60-8d44-fc52dba7b276
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: be23882667a61d0bb93ab208e844fcd4fb072fda
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 836e2fd015cf723bc970cb2ae18705928704b261
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324935"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213065"
 ---
 # <a name="select-related-tables-dimension-wizard"></a>Seleccionar tablas relacionadas (Asistente para dimensiones)
   Use la página **Seleccionar tablas relacionadas** para incluir en la dimensión las tablas relacionadas (tablas con las que están relacionadas las tablas de dimensiones principales en la vista del origen de datos).  

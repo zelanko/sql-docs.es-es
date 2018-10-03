@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 11/29/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-caps.latest.revision: 115
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04edfd00a4f298e944837153e5e71f3c832a17f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 38b30537da238905fdc4ae1394dfceb6d9606f89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303446"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229975"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
   El `sqlcmd` utilidad le permite introducir [!INCLUDE[tsql](../includes/tsql-md.md)] instrucciones, procedimientos del sistema y archivos de script en el símbolo del sistema, en **Editor de consultas** en modo SQLCMD, en un archivo de script de Windows o en un paso de trabajo del sistema operativo (Cmd.exe) de un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Trabajo del agente. Esta utilidad usa ODBC para ejecutar lotes de [!INCLUDE[tsql](../includes/tsql-md.md)].  
@@ -402,7 +399,7 @@ ms.locfileid: "37303446"
  **-?**  
  Muestra el resumen de la sintaxis de las opciones de `sqlcmd`.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Las opciones no tienen que utilizarse forzosamente en el orden mostrado en la sección de sintaxis.  
   
  Cuando se devuelven varios resultados, `sqlcmd` imprime una línea en blanco entre cada conjunto de resultados de un lote. Además, el "\<x > filas afectadas" no aparece el mensaje cuando no se aplica a la instrucción ejecutada.  
@@ -431,7 +428,7 @@ ms.locfileid: "37303446"
   
 ## <a name="sqlcmd-scripting-variables"></a>Variables de scripting sqlcmd  
   
-|Variable|Modificador relacionado|L/E|Valor predeterminado|  
+|Variable|Modificador relacionado|L/E|Default|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER|-U|R|""|  
 |SQLCMDPASSWORD|-P|--|""|  

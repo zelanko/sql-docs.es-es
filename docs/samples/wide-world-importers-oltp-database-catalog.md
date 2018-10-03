@@ -6,18 +6,16 @@ ms.technology: samples
 ms.custom: ''
 ms.date: 04/04/2018
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35228d6773e576b2d8b062c94aa8797d07f00809
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ed73e9e97c34ad1bd1d3aa4e0d37a351cbac0703
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38000667"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798049"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catálogo de base de datos de WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -177,7 +175,7 @@ Estos son los procedimientos utilizados por una aplicación cliente, como un fro
 |SearchForStockItemsByTags|Busca elementos cotizaciones por etiquetas.|
 |SearchForSuppliers|Busca proveedores por nombre o parte del nombre (el nombre de la empresa o el nombre de persona).|
 
-### <a name="integration-schema"></a>Esquema de la integración
+### <a name="integration-schema"></a>Esquema de integración
 
 Los procedimientos almacenados en este esquema se utilizan el proceso ETL. Obtienen los datos necesarios de varias tablas para el período de tiempo requerido por la [paquete ETL](wide-world-importers-perform-etl.md).
 
@@ -196,7 +194,7 @@ Simula una carga de trabajo que inserta las compras y ventas. El procedimiento a
 
 ### <a name="application-schema"></a>Esquema de la aplicación
 
-Estos procedimientos se usan para configurar el ejemplo. Se utilizan para aplicar las características de enterprise edition a la versión de standard edition de la muestra y también para agregar la auditoría y la indización de texto completo.
+Estos procedimientos se utilizan para configurar la muestra. Se utilizan para aplicar las características de enterprise edition a la versión de standard edition de la muestra y también para agregar la auditoría y la indización de texto completo.
 
 |Procedimiento|Finalidad|
 |-----------------------------|---------------------|
@@ -215,9 +213,9 @@ Estos procedimientos se usan para configurar el ejemplo. Se utilizan para aplica
 
 ### <a name="sequences-schema"></a>Esquema de secuencias
 
-Procedimientos para configurar las secuencias en la base de datos.
+Procedimientos para configurar las secuencias de la base de datos.
 
 |Procedimiento|Finalidad|
 |-----------------------------|---------------------|
 |ReseedAllSequences|Llama al procedimiento ReseedSequenceBeyondTableValue para todas las secuencias.|
-|ReseedSequenceBeyondTableValue|Se utiliza para volver a colocar el siguiente valor de secuencia por encima del valor en cualquier tabla que usa la misma secuencia. (Por ejemplo, un DBCC CHECKIDENT para equivalente de columnas de identidad para las secuencias, pero en potencialmente varias tablas).|
+|ReseedSequenceBeyondTableValue|Se utiliza para cambiar la posición del siguiente valor de secuencia más allá del valor de cualquier tabla que utiliza la misma secuencia. (Por ejemplo, un DBCC CHECKIDENT para equivalente de columnas de identidad para las secuencias, pero en potencialmente varias tablas).|

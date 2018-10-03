@@ -1,26 +1,24 @@
 ---
-title: SQLFreeConnect (controlador ODBC de Visual FoxPro) | Documentos de Microsoft
+title: SQLFreeConnect (controlador ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLFreeConnect function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 5ecfbbed-43f6-4875-a6a7-732f36431e91
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff2359c52b2ba879e5c10a1a85231883366a4c81
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8f20f8acb407d9dcba266d932891ca7025465c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771623"
 ---
 # <a name="sqlfreeconnect-visual-foxpro-odbc-driver"></a>SQLFreeConnect (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
@@ -28,7 +26,7 @@ ms.lasthandoff: 05/03/2018
   
  Soporte técnico: completo  
   
- Conformidad de la API de ODBC: Nivel de núcleo  
+ Conformidad de la API de ODBC: Nivel básico  
   
  Libera un identificador de conexión y libera toda la memoria asignada para el identificador.  
   

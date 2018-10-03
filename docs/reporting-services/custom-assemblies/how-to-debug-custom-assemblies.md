@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: custom-assemblies
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - custom assemblies [Reporting Services], debugging
 - debugging custom assemblies [Reporting Services]
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec398599747218d8764bc21ba977dbed2ecf72b8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: bca33bafe131254991133a9fb48fd4d808594c50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275670"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803623"
 ---
 # <a name="how-to-debug-custom-assemblies"></a>Cómo depurar ensamblados personalizados
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona varias herramientas de depuración que pueden ayudar a analizar el código de ensamblado personalizado y a detectar errores en él. La mejor herramienta para utilizar dependerá de lo que intente llevar a cabo. En este ejemplo se usa [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  

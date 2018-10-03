@@ -1,32 +1,29 @@
 ---
-title: 'Insertar: comando SQL | Documentos de Microsoft'
+title: 'Insertar: comando SQL | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - INSERT [ODBC]
 ms.assetid: 9b648198-349f-46f6-b869-13d129945971
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 881ee4d74eab6b1e26b1f3ec243a39c08125ea00
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa2211ddef09e127b66430968792007d29dd5eb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900697"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840103"
 ---
 # <a name="insert---sql-command"></a>Insertar: comando SQL
 Anexa un registro al final de una tabla que contiene los valores del campo especificado.  
   
- El controlador ODBC de Visual FoxPro admite la sintaxis del lenguaje Visual FoxPro nativo para este comando. Para obtener información específica del controlador, vea la sección Comentarios.  
+ El controlador ODBC de Visual FoxPro admite la sintaxis del lenguaje Visual FoxPro nativa para este comando. Para obtener información específica del controlador, vea la sección Comentarios.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,13 +39,13 @@ INSERT INTO dbf_name [(fname1 [, fname2, ...])]
   
  Si la tabla que especifique no está abierta, se abrirá exclusivamente en una nueva área de trabajo y el nuevo registro se anexa a la tabla. La nueva área de trabajo no está seleccionado; el área de trabajo actual permanece seleccionado.  
   
- Si la tabla que se especifica está abierta, INSERT anexa el nuevo registro a la tabla. Si la tabla está abierta en un área de trabajo distinta a la actual del área de trabajo, no hay seleccionado después de que se anexa el registro; el área de trabajo actual permanece seleccionado.  
+ Si la tabla que se especifique está abierta, INSERT anexa el nuevo registro a la tabla. Si la tabla está abierta en un área de trabajo distintos de área de trabajo actual, no está seleccionada una vez que se anexa el registro; el área de trabajo actual permanece seleccionado.  
   
  [( *fname1*[, *fname2*[,...]])]  
- Especifica el nuevo registro de los nombres de los campos en que se insertan los valores.  
+ Especifica en el nuevo registro de los nombres de los campos en que se insertan los valores.  
   
  VALORES ( *eExpression1*[, *eExpression2*[,...]])  
- Especifica los valores de campo que se insertan en el nuevo registro. Si omite los nombres de campo, debe especificar los valores de campo en el orden definido por la estructura de tabla.  
+ Especifica los valores de campo que se inserta en el nuevo registro. Si omite los nombres de campo, debe especificar los valores de campo en el orden definido por la estructura de tabla.  
   
 ## <a name="remarks"></a>Comentarios  
  El nuevo registro contiene los datos que aparecen en la cláusula VALUES.  

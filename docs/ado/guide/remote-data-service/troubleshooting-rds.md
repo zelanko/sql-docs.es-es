@@ -1,37 +1,34 @@
 ---
-title: Solución de problemas de RDS | Documentos de Microsoft
+title: Solución de problemas de RDS | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting RDS [ADO]
 ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 188e1194a3c2f95bf8c97ad608e80a9cebb4a419
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ff122b0a7cf888ec93350da86bf0bc610e47270a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274684"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787820"
 ---
 # <a name="troubleshooting-rds"></a>Solución de problemas de RDS
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar a [servicio de datos de WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Consulte esta sección para conocer soluciones a errores específicos o problemas con RDS. Esta sección contiene los temas siguientes.  
+ Consulte esta sección para ver soluciones a errores específicos o problemas con RDS. Esta sección contiene los temas siguientes.  
   
 -   [Configuración de RDS en Windows 2000](../../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)  
   
--   ["Error de servidor de Internet: acceso denegado"](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
+-   ["Error en servidor Internet: acceso denegado"](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
   
 -   [RDS devuelve el error "Stream Not Read" (Objeto Stream no leído)](../../../ado/guide/remote-data-service/rds-returns-stream-not-read-error.md)  
   

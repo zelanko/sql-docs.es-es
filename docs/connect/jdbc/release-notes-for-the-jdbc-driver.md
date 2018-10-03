@@ -1,25 +1,22 @@
 ---
-title: Notas de la versión para el controlador JDBC
+title: Notas de la versión para el controlador JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-caps.latest.revision: 206
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 10f14eedb1a74f74cb1ee055a247a96671224ce0
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 344a2aabb3601761d250d18725d11ebc4585fa3a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662467"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737263"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Notas de la versión para el controlador JDBC
 
@@ -90,7 +87,7 @@ Microsoft JDBC Driver 6.4 para SQL Server es totalmente compatible con las espec
 
 Compatibilidad con Java Development Kit (JDK) versión 9.0, además de con JDK 8.0 y 7.0.
 
-### <a name="jdbc-43-compliance"></a>Cumplimiento
+### <a name="jdbc-43-compliance"></a>Cumplimiento de JDBC 4.3
 
 Compatibilidad con la especificación Java Database Connectivity API 4.3, además de con 4.1 y 4.2. Los métodos de API de JDBC 4.3 se agregarán pero aún no implementados. Para detalles, vea [JDBC 4.3 Compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md) (Cumplimiento de JDBC 4.3 para el controlador JDBC).
 
@@ -104,9 +101,9 @@ Propiedad de conexión "fipsProvider" se quita de la lista de propiedades de con
 
 ### <a name="added-connection-properties-for-specifying-custom-trustmanager"></a>Propiedades de conexión se ha agregado para la especificación de TrustManager personalizado
 
-- El controlador ahora admite la especificación de TrustManager personalizado con las propiedades de conexión "trustManagerClass" y Esto permite la especificación dinámica de un conjunto de certificados que son de confianza en cada conexión sin modificar la configuración global para el entorno de JVM.
+Controlador ahora admite la especificación de TrustManager personalizado con propiedades de conexión de "propiedades de conexión" y "trustManagerClass" se ha agregado. Esto permite la especificación dinámica de un conjunto de certificados que son de confianza en cada conexión sin modificar la configuración global para el entorno de JVM.
 
-### <a name="added-support-for-datetimesmalldatetime-in-table-valued-parameters-tvp"></a>- Se ha agregado compatibilidad con tipos de datos DATETIME y SMALLDATETIME al utilizar parámetros con valores de tabla (TVP).
+### <a name="added-support-for-datetimesmalldatetime-in-table-valued-parameters-tvp"></a>Se agregó compatibilidad para datetime/smallDatetime en parámetros de valores de tabla (TVP)
 
 El controlador ahora es compatible con los tipos de datos DATETIME y SMALLDATETIME al usar parámetros con valores de tabla (TVP).
 
@@ -114,15 +111,16 @@ El controlador ahora es compatible con los tipos de datos DATETIME y SMALLDATETI
 
 El controlador JDBC ahora admite los tipos de datos sql_variant para su uso con SQL Server. Sql_variant también es compatible con características como parámetros con valores de tabla (TVP) y BulkCopy con siguientes limitaciones:
 
-1. Para los valores de fecha: al usar TVP para rellenar una tabla que contiene los valores de datetime/smalldatetime/date almacenados en la columna sql_variant, llamar a métodos getDateTime()/getSmallDateTime()/getDate() en resultset no funciona y se produce la excepción siguiente:  `java java.lang.String cannot be cast to java.sql.Timestamp` Solución alternativa: use los métodos "getString()" o "getObject()" en su lugar.
+1. Para los valores de fecha: al usar TVP para rellenar una tabla que contiene los valores de datetime/smalldatetime/date almacenados en la columna sql_variant, llamar a métodos getDateTime()/getSmallDateTime()/getDate() en resultset no funciona y se produce la excepción siguiente: `java java.lang.String cannot be cast to java.sql.Timestamp`
+    Solución alternativa: use los métodos "getString()" o "getObject()" en su lugar.
 
 2. Uso de TVP con sql_variant para valores null
 
 Si usa TVP para rellenar una tabla y enviar el valor NULL al tipo de columna sql_variant, encontrará una excepción como Insertar valor NULL con tipo de columna sql_variant en TVP no se admite actualmente.
 
-### <a name="implemented-prepared-statement-metadata-caching"></a>Almacenamiento en caché de metadatos de instrucción preparado para el controlador JDBC
+### <a name="implemented-prepared-statement-metadata-caching"></a>Implementa la instrucción preparada almacenamiento en caché de metadatos
 
-Ha implementado el controlador JDBC de caché de metadatos de instrucción preparado para mejorar el rendimiento. - El controlador ahora es compatible con almacenamiento en caché de los metadatos de la instrucción preparada en el controlador con las propiedades de conexión "disableStatementPooling" y Esta característica está deshabilitada de forma predeterminada. Puede obtener más información [aquí](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)
+Ha implementado el controlador JDBC de caché de metadatos de instrucción preparado para mejorar el rendimiento. Controlador ahora admite el almacenamiento en caché los metadatos de instrucción preparado en el controlador de propiedades de conexión "disableStatementPooling" y "valor de statementPoolingCacheSize". Esta característica está deshabilitada de forma predeterminada. Puede obtener más información [aquí](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)
 
 ### <a name="added-support-for-aad-integrated-authentication-on-linuxmac"></a>Se ha agregado compatibilidad para la autenticación integrada de AAD en Linux o Mac
 
@@ -151,7 +149,7 @@ Conectar sus aplicaciones de Linux a Azure SQL Database mediante autenticación 
 
 Ahora se puede usar el controlador JDBC en JVM que se ejecutan en modo de cumplimiento de FIPS 140 para satisfacer el cumplimiento de normas y estándares federales.
 
-### <a name="kerberos-authentication-improvements"></a>Autenticación Kerberos
+### <a name="kerberos-authentication-improvements"></a>Mejoras de autenticación de Kerberos
 
 El controlador JDBC ahora es compatible con:
 
@@ -159,7 +157,7 @@ El controlador JDBC ahora es compatible con:
 - Autenticación entre dominios Kerberos mediante la autenticación integrada de Kerberos sin tener que establecer explícitamente el SPN del servidor. El controlador ahora calcula automáticamente el dominio KERBEROS incluso cuando no ha facilitado.
 - Delegación restringida de Kerberos mediante la aceptación de suplantar las credenciales de usuario como un objeto de credenciales de GSS a través del origen de datos. Esta credencial suplantada, a continuación, se usa para establecer una conexión de Kerberos.
 
-### <a name="added-timeouts"></a>Tiempo agregado
+### <a name="added-timeouts"></a>Se ha agregado los tiempos de espera
 
 El controlador JDBC ahora admite los siguientes tiempos de espera configurables que se pueden cambiar según las necesidades de su aplicación:
 
@@ -195,15 +193,15 @@ Ahora se admite la recuperación de metadatos de parámetros con instrucciones p
 
 ### <a name="azure-active-directory-aad"></a>Azure Active Directory (AAD)
 
-Nueva característica: Azure Active Directory (AAD). La autenticación de AAD es un mecanismo que permite conectar con Azure SQL Database v12 mediante identidades en AAD. Use la autenticación de AAD para administrar identidades de usuarios de base de datos de forma centralizada y como alternativa a la autenticación de SQL Server. El controlador JDBC 6.0 permite especificar las credenciales de AAD en la cadena de conexión de JDBC para conectarse a Azure SQL DB. Para obtener información detallada, consulte la propiedad de autenticación en el [estableciendo las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md) página.
+Autenticación de AAD es un mecanismo de conexión a Azure SQL Database v12 mediante identidades en AAD. Use la autenticación de AAD para administrar identidades de usuarios de base de datos de forma centralizada y como alternativa a la autenticación de SQL Server. El controlador JDBC 6.0 permite especificar las credenciales de AAD en la cadena de conexión de JDBC para conectarse a Azure SQL DB. Para obtener información detallada, consulte la propiedad de autenticación en el [estableciendo las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md) página.
 
 ### <a name="table-valued-parameters"></a>Parámetros con valores de tabla
 
-Los parámetros con valores de tabla proporcionan una manera sencilla de serializar varias filas de datos de una aplicación cliente en SQL Server sin necesidad de ir y volver repetidas veces ni de ninguna lógica especial de servidor para procesar los datos. Puede usar parámetros con valores de tabla para encapsular filas de datos en una aplicación cliente y enviar los datos al servidor en un único comando con parámetros. Las filas de datos entrantes se almacenan en una variable de tabla puede operar utilizando Transact-SQL. Vea [Usar parámetros con valores de tabla](../../connect/jdbc/using-table-valued-parameters.md)
+Los parámetros con valores de tabla proporcionan una manera sencilla de serializar varias filas de datos de una aplicación cliente en SQL Server sin necesidad de ir y volver repetidas veces ni de ninguna lógica especial de servidor para procesar los datos. Puede usar parámetros con valores de tabla para encapsular filas de datos en una aplicación cliente y enviar los datos al servidor en un único comando con parámetros. Las filas de datos entrantes se almacenan en una variable de tabla puede operar utilizando Transact-SQL. Para obtener más información, consulte [Using Table-Valued parámetros](../../connect/jdbc/using-table-valued-parameters.md).
 
 ### <a name="alwayson-availability-groups-ag"></a>Grupos de disponibilidad (AG) AlwaysOn
 
-Mejora: grupos de disponibilidad Always On (AG). El controlador ahora admite conexiones transparentes a grupos de disponibilidad El controlador detecta rápidamente la topología Always On actual de la infraestructura de servidor y conecta con el servidor activo actual de forma transparente.
+El controlador ahora admite conexiones transparentes a grupos de disponibilidad AlwaysOn. El controlador detecta rápidamente la topología Always On actual de la infraestructura de servidor y conecta con el servidor activo actual de forma transparente.
 
 ## <a name="updates-in-microsoft-jdbc-driver-42-for-sql-server-and-later"></a>Actualizaciones de Microsoft JDBC Driver 4.2 para SQL Server y versiones posteriores
 
@@ -230,7 +228,7 @@ Se usa la característica de copia masiva para copiar rápidamente grandes canti
 
 ### <a name="xa-transaction-rollback-option"></a>Opción de reversión de transacción de XA
 
-Se han agregado nuevas opciones de tiempo de espera para la reversión automática existente de transacciones no preparadas. [Descripción de las transacciones XA](../../connect/jdbc/understanding-xa-transactions.md)
+Se han agregado nuevas opciones de tiempo de espera para la reversión automática existente de transacciones no preparadas. Para obtener más información, consulte [descripción de las transacciones XA](../../connect/jdbc/understanding-xa-transactions.md).
 
 ### <a name="new-kerberos-principal-connection-property"></a>Nueva propiedad de conexión de entidad de seguridad de Kerberos
 

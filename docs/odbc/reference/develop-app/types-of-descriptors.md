@@ -1,56 +1,53 @@
 ---
-title: Tipos de descriptores de | Documentos de Microsoft
+title: Tipos de descriptores de | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], types
 ms.assetid: ec20e446-e540-41ad-8559-d9c0a5b8358f
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8834d05eda6393b00f528cb0c662f88e44d4c8a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a042229e3149f97b72b6e86b485771966eb80c30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914910"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797293"
 ---
 # <a name="types-of-descriptors"></a>Tipos de descriptores de
-Un descriptor de se utiliza para describir uno de los siguientes:  
+Un descriptor se utiliza para describir uno de los siguientes:  
   
--   Un conjunto de cero o más parámetros. Un descriptor de parámetro se puede utilizar para describir:  
+-   Un conjunto de cero o más parámetros. Un descriptor de parámetro se puede usar para describir:  
   
-    -   El *búfer de parámetros de la aplicación,* que contiene cualquier los argumentos dinámicos de entrada como conjunto por la aplicación o los argumentos de salida dinámica después de la ejecución de un **llamar** instrucción de SQL.  
+    -   El *búfer de parámetro de la aplicación,* que contiene cualquier los argumentos dinámicos de entrada como conjunto por la aplicación o los argumentos dinámicos de salida tras la ejecución de un **llamar** instrucción SQL.  
   
-    -   El *búfer de parámetros de implementación*. Para argumentos de entrada dinámicos, contiene los mismos argumentos que el búfer de parámetro de la aplicación después de la aplicación puede especificar cualquier conversión de datos. Para los argumentos de salida dinámicos, esto contiene los argumentos devueltos, antes de cualquier conversión de datos que puede especificar la aplicación.  
+    -   El *búfer de parámetro de implementación*. Para los argumentos de entrada dinámicos, contiene los mismos argumentos que el búfer de parámetro de la aplicación después de la aplicación puede especificar cualquier conversión de datos. Para los argumentos de salida dinámicas, esto contiene los argumentos devueltos, antes de cualquier conversión de datos que puede especificar la aplicación.  
   
-     Para argumentos de entrada dinámicos, la aplicación debe funcionar en un descriptor de parámetro de la aplicación antes de ejecutar cualquier instrucción SQL que contiene marcadores de parámetros dinámicos. Para los argumentos dinámicos de entrada y salidos, la aplicación puede especificar tipos de datos diferentes de los del descriptor de parámetro de implementación para lograr la conversión de datos.  
+     Para los argumentos de entrada dinámicos, la aplicación debe funcionar en un descriptor de parámetro de la aplicación antes de ejecutar cualquier instrucción SQL que contiene marcadores de parámetros dinámicos. Para los argumentos de entrada y salidos dinámicos, la aplicación puede especificar distintos tipos de datos de los que en el descriptor de parámetro de implementación para lograr una conversión de datos.  
   
--   Una sola fila de la base de datos. Un descriptor de fila puede utilizarse para describir:  
+-   Una sola fila de la base de datos. Un descriptor de fila se puede usar para describir:  
   
-    -   El *búfer de filas de implementación,* que contiene la fila de la base de datos. (Estos búferes conceptualmente contienen datos tal y como se escriben en o leen desde la base de datos. Sin embargo, no se especifica el formato almacenado de la base de datos. Una base de datos podría realizar una conversión adicional de los datos de su formulario en el búfer de implementación.)  
+    -   El *búferes de fila de implementación,* que contiene la fila de la base de datos. (Estos búferes conceptualmente contienen datos como se escriben en o leen desde la base de datos. Sin embargo, no se especificó el formulario almacenado de la base de datos. Una base de datos podría realizar una conversión adicional en los datos de su formulario en el búfer de la implementación.)  
   
-    -   El *búfer de filas de aplicación,* que contiene la fila de datos tal como se presenta a la aplicación, después de cualquier conversión de datos que puede especificar la aplicación.  
+    -   El *búfer de filas de la aplicación,* que contiene la fila de datos, tal como se presenta a la aplicación, siga cualquier conversión de datos que puede especificar la aplicación.  
   
-     La aplicación trabaja en el descriptor de fila de la aplicación en cualquier caso donde los datos de columna de la base de datos deben aparecer en las variables de aplicación. Para lograr una conversión de datos de columna de datos, la aplicación puede especificar distintos tipos de datos de los en el descriptor de fila de implementación.  
+     La aplicación funciona en el descriptor de fila de la aplicación en cualquier caso donde los datos de columna de la base de datos deben aparecer en las variables de aplicación. Para lograr la conversión de datos de la columna de datos, la aplicación puede especificar distintos tipos de datos de los que en el descriptor de fila de implementación.  
   
- Los tipos de descriptor se resumen en la tabla siguiente.  
+ En la tabla siguiente se resumen los tipos de descriptor.  
   
 |Tipo de búfer|Filas|Parámetros dinámicos|  
 |-----------------|----------|------------------------|  
-|**Búfer de aplicación**|Descriptor de fila de la aplicación (descartar)|Descriptor de parámetro de aplicación (APD)|  
-|**Búfer de implementación**|Descriptor de fila de implementación (IRD)|Descriptor de parámetro de implementación (IPD)|  
+|**Búfer de aplicación**|descriptor de fila de la aplicación (descartar)|descriptor de parámetro de aplicación (APD)|  
+|**Búfer de implementación**|descriptor de fila de implementación (IRD)|descriptor de parámetro de implementación (IPD)|  
   
- Para el parámetro o los búferes de fila, si la aplicación especifica distintos tipos de datos en los registros correspondientes de los descriptores de implementación y aplicación, el controlador realiza la conversión de datos cuando utiliza los descriptores. Por ejemplo, pueden convertir valores numéricos y de fecha y hora en formato de cadena de caracteres. (Para las conversiones válidas, vea [tipos de datos de apéndice D:](../../../odbc/reference/appendixes/appendix-d-data-types.md).)  
+ Para el parámetro o los búferes de fila, si la aplicación especifica los diferentes tipos de datos en los registros correspondientes de los descriptores de implementación y aplicación, el controlador realiza la conversión de datos cuando se usan los descriptores. Por ejemplo, que puede convertir los valores numéricos y de fecha y hora en formato de cadena de caracteres. (Para conversiones válidas, vea [apéndice D: tipos de datos](../../../odbc/reference/appendixes/appendix-d-data-types.md).)  
   
- Un descriptor de puede realizar distintas funciones. Instrucciones diferentes pueden compartir cualquier descriptor de la aplicación se asigna explícitamente. Un descriptor de fila en una sola instrucción puede actuar como un descriptor de parámetro en otra instrucción.  
+ Un descriptor de puede realizar distintos roles. Instrucciones diferentes pueden compartir cualquier descriptor que la aplicación se asigna explícitamente. Un descriptor de filas en una sola instrucción puede actuar como un descriptor de parámetro en otra instrucción.  
   
- Siempre se sabe si un descriptor determinado es un descriptor de la aplicación o un descriptor de implementación, incluso si el descriptor aún no se ha usado en una operación de base de datos. Para los descriptores de la implementación se asigna implícitamente, la implementación registra la fila predefinida en relación con el identificador de instrucción. Cualquier descriptor que asigna la aplicación mediante una llamada a **SQLAllocHandle** es un descriptor de la aplicación.
+ Siempre se sabe si un descriptor especificado es un descriptor de aplicación o de implementación, incluso si aún no se ha usado el descriptor de una operación de base de datos. Para los descriptores de la implementación se asigna implícitamente, la implementación registra la fila predefinida en relación con el identificador de instrucción. Cualquier descriptor que asigna la aplicación mediante una llamada a **SQLAllocHandle** es un descriptor de aplicación.

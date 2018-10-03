@@ -1,13 +1,11 @@
 ---
-title: Literales numéricos | Documentos de Microsoft
+title: Literales numéricos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], numeric data types
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: 9dc23656-61e1-4b62-a07f-64ab716e45d2
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4538a959703941243241d4512a40752865901d1b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b2effb3900e4277d82edee70439628c8adc837d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906450"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715723"
 ---
 # <a name="numeric-literals"></a>Literales numéricos
-Literales numéricos se utilizan cuando se almacenan valores de datos numéricos en cadenas de caracteres. Para la conversión de datos numéricos de SQL en una cadena SQL_C_CHAR o de conversión de datos numéricos de C en una cadena SQL_CHAR o SQL_VARCHAR, sintaxis de literal numérico se usan para especificar lo que se almacena en el destino. Para la conversión de un valor numérico almacenado como una cadena SQL_C_CHAR a datos numéricos de SQL o numérico almacenado como una cadena SQL_CHAR a datos numéricos de C, esta sintaxis se utiliza para validar el contenido almacenado en el origen.  
+Literales numéricos se utilizan cuando se almacenan los valores de datos numéricos en cadenas de caracteres. Para convertir datos numéricos de SQL en una cadena SQL_C_CHAR o conversión de datos numéricos de C en una cadena SQL_CHAR o SQL_VARCHAR, sintaxis de literales numéricos se utilizan para especificar lo que se almacena en el destino. Para la conversión de un valor numérico almacenado como una cadena SQL_C_CHAR a datos numéricos de SQL o numérico almacenada como una cadena SQL_CHAR a datos numéricos de C, esta sintaxis se utiliza para validar lo que se almacena en el origen.  
   
- Literales numéricos deben seguir la sintaxis definida en la sección [sintaxis de los literales numéricos](../../../odbc/reference/appendixes/numeric-literal-syntax.md) en Apéndice C: SQL gramática.  
+ Literales numéricos deben cumplir la sintaxis definida en la sección [sintaxis de literales numéricos](../../../odbc/reference/appendixes/numeric-literal-syntax.md) en Apéndice C: SQL gramática.  
   
  Esta sección contiene los temas siguientes.  
   

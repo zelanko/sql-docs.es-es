@@ -4,28 +4,22 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Setting project options,configuration options
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
-caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2b8376664eda029cc581861010233f819019d471
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 56e7a30725a4fcad36ffa2df869ecc559056a29e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982877"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819233"
 ---
-# <a name="setting-project-options-mysqltosql"></a>Establecer las opciones de proyecto (MySQLToSQL)
+# <a name="setting-project-options-mysqltosql"></a>Configuración de opciones de proyecto (MySQLToSQL)
 Para cada proyecto SSMA, puede establecer las opciones de nivel de proyecto. Estas opciones especifican cómo se convierten los objetos, cómo migrar los datos y cómo se asignan los tipos de datos de origen a tipos de datos de destino.  Antes de convertir objetos de SQL Server o SQL Azure o migrar datos a SQL Server o SQL Azure, compruebe que las opciones de configuración son adecuadas para el proyecto.  
   
 SSMA le permite configurar las opciones predeterminadas para todos los proyectos. Estas opciones se aplican a cualquier nuevo proyecto que cree. A continuación, puede personalizar las opciones para cada proyecto.  
@@ -69,7 +63,7 @@ Para obtener más información sobre la configuración y cómo se aplica la conf
   
 -   [Configuración del proyecto &#40;Azure SQL DB&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
   
-## <a name="setting-project-options"></a>Establecer las opciones de proyecto  
+## <a name="setting-project-options"></a>Configuración de opciones de proyecto  
 En SSMA, puede configurar la configuración predeterminada para todos los proyectos. Estos valores se guardan en el archivo de configuración de SSMA y se aplican a cualquier nuevo proyecto que cree.  
   
 **Para especificar las opciones de proyecto predeterminadas**  

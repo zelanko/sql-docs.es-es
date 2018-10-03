@@ -1,30 +1,26 @@
 ---
-title: Búsqueda de texto completo y funciones de búsqueda semántica (Transact-SQL) | Documentos de Microsoft
+title: Búsqueda de texto completo y funciones de búsqueda semántica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - semantic search [SQL Server], system functions
 ms.assetid: a61a3694-7604-4583-962e-fc30f771c6fa
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 04356970f56a3a2e5ee8f2a824b722801fe7262a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5f2a6364d002200cea1c04b35216dcec6dc0743d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226287"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780993"
 ---
 # <a name="full-text-search-and-semantic-search-functions-transact-sql"></a>Funciones de búsqueda de texto completo y de búsqueda semántica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +32,7 @@ ms.locfileid: "33226287"
  Devuelve una tabla con cero, una o más filas para las columnas que contienen coincidencias exactas o aproximadas (menos precisas) de palabras o frases únicas, palabras próximas a otra dada (dentro de una distancia determinada) o coincidencias ponderadas.  
   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)  
- Devuelve una tabla de cero, uno o más filas para las columnas que contienen valores que coinciden con el significado y no solo literalmente, del texto especificado *freetext_string*.  
+ Devuelve una tabla de cero, uno o más filas para las columnas que contienen valores que coinciden con el significado y no solo literalmente, del texto especificado *cadena_freetext*.  
   
 ## <a name="semantic-search-functions"></a>Funciones de búsqueda semántica  
  [semantickeyphrasetable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md)  

@@ -1,32 +1,29 @@
 ---
-title: Métodos SQLServerPreparedStatement | Documentos de Microsoft
+title: Métodos SQLServerPreparedStatement | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f0e1be74-b7a3-4b81-8835-0a8bc3aaa3f5
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6378d95515fd390d203e1b79cfca1452b6ef46dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c25747c5f38b92cb9f262ea6bda95d8a5b047522
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845720"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810783"
 ---
 # <a name="sqlserverpreparedstatement-methods"></a>Métodos SQLServerPreparedStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Para obtener información acerca de los miembros de SQLServerPreparedStatement, vea [miembros de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md).  
+  Para obtener información sobre los miembros de SQLServerPreparedStatement, vea [miembros de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [Clase SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

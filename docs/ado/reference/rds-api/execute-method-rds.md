@@ -6,23 +6,20 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9da5eafd3533e4384a5c7e40e6e81691ede173e9
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 6ab8b6d5576b36329d89b29b4f6f5d59bcbdc4a0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40394099"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822613"
 ---
 # <a name="execute-method-rds"></a>Execute (método) (RDS)
 Ejecuta la solicitud y crea un conjunto de registros ADO para su uso en ADO 2.5 y versiones posteriores.  
@@ -81,7 +78,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *pInformation*  
  Un puntero al error de la información devuelta por la ejecución. Si es NULL, no se devuelve ninguna información de error.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El *HandlerString* parámetro puede ser null. ¿Qué ocurre en este caso depende de cómo se configura el servidor RDS. Una cadena de controlador de "MSDFMAP.handler" indica que se debe usar el controlador de Microsoft proporcionada (Msdfmap.dll). Una cadena de controlador de "MASDFMAP.handler,sample.ini" indica que se debe usar el controlador Msdfmap.dll y que se debe pasar el argumento "sample.ini" al controlador. MSDFMAP.dll interpretará el argumento como una dirección que desea utilizar el sample.ini para comprobar las cadenas de conexión y consulta.  
   
 ## <a name="applies-to"></a>Se aplica a  

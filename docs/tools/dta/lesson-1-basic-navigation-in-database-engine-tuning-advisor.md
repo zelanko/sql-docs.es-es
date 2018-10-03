@@ -4,27 +4,21 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], tutorials
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7387db4f53c2872aa7d8f0592cb43efe4e35116
-ms.sourcegitcommit: 95093f8b4f3d02f8d55d415f03a241102a641cb3
+ms.openlocfilehash: 8ce412af15a39d00b488a5646f83c5c8e2a08bef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39654270"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804343"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Lección 1: Navegación básica en el Asistente para la optimización de motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +42,7 @@ Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaura
 ## <a name="launch-database-tuning-advisor"></a>Inicio del Asistente para la optimización de motor de base de datos 
 Para empezar, abra la interfaz gráfica de usuario (GUI) del Asistente para la optimización de motor de base de datos (DTA). La primera vez que se usa, un miembro del rol fijo de servidor **sysadmin** debe iniciar el Asistente para la optimización de motor de base de datos para inicializar la aplicación. Tras la inicialización, los miembros del rol fijo de base de datos **db_owner** pueden usar el asistente para optimizar bases de datos de su propiedad. Para obtener más información sobre cómo inicializar el Asistente para la optimización de motor de base de datos, consulte [Iniciar y usar el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-1. Inicie SQL Server Management Studio (SSMS). En el menú **Inicio** , seleccione **Todos los programas**, **y, a continuación, haga clic en** SQL Server Management Studio. 
+1. Inicie SQL Server Management Studio (SSMS). En el Windows **menú Inicio**, apunte a **todos los programas** y busque **SQL Server Management Studio**. 
 2. Una vez abierto SSMS, seleccione el **herramientas** menú y seleccione **Database Tuning Advisor**. 
 
   ![iniciar DTA desde SSMS](media/dta-tutorials/launch-dta.png)
@@ -71,11 +65,11 @@ Cuando se abre por primera vez, aparecen dos paneles principales en la GUI del A
 > [!NOTE]  
 > El Asistente para la optimización de motor de base de datos admite archivos XML como entrada cuando se importa un script de [!INCLUDE[tsql](../../includes/tsql-md.md)] desde el Editor de consultas de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Para obtener más información, consulte la sección sobre cómo iniciar el Asistente para la optimización de motor de base de datos desde el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en [Iniciar y usar el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-## <a name="configure-tool-options-and-layout"></a>Establecer las opciones de herramienta y el diseño 
+## <a name="configure-tool-options-and-layout"></a>Configure las opciones de herramienta y diseño 
 
 1.  En el menú **Herramientas** , haga clic en **Opciones**.  
 
-   ![Set Options](media/dta-tutorials/dta-settings.png) 
+   ![Opciones de DTA](media/dta-tutorials/dta-settings.png) 
   
 2.  En el cuadro de diálogo **Opciones** , observe las opciones siguientes:  
   

@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_fts_index_keywords (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_fts_index_keywords (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_fts_index_keywords
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], viewing keywords
 - troubleshooting [SQL Server], full-text search
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fffcfdc4a7db8fafbe58b0abd914ce611edf3732
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 86a4aa126ef72425aa2e3c284a3762517d31222d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464351"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790033"
 ---
 # <a name="sysdmftsindexkeywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +36,7 @@ ms.locfileid: "34464351"
  **Sys.dm_fts_index_keywords** es una función de administración dinámica.  
   
 > [!NOTE]  
->  Para ver información de índice de texto completo de nivel inferior, use la [sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md) función de administración dinámica en el nivel de documento.  
+>  Para ver información de índice de texto completo de nivel inferior, use el [sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md) función de administración dinámica en el nivel de documento.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,17 +47,17 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 ## <a name="arguments"></a>Argumentos  
  db_id('*database_name*')  
- Una llamada a la [DB_ID ()](../../t-sql/functions/db-id-transact-sql.md) (función). Esta función acepta un nombre de base de datos y devuelve el identificador de la base de datos, que **sys.dm_fts_index_keywords** se utiliza para buscar la base de datos especificada. Si el parámetro *database_name* se omite, se devuelve el identificador de base de datos actual.  
+ Una llamada a la [DB_ID ()](../../t-sql/functions/db-id-transact-sql.md) función. Esta función acepta un nombre de base de datos y devuelve el identificador de la base de datos, que **sys.dm_fts_index_keywords** se utiliza para buscar la base de datos especificado. Si el parámetro *database_name* se omite, se devuelve el identificador de base de datos actual.  
   
  object_id ('*table_name*')  
- Una llamada a la [object_id ()](../../t-sql/functions/object-id-transact-sql.md) (función). Esta función acepta un nombre de tabla y devuelve el identificador de la tabla que contiene el índice de texto completo que se va a inspeccionar.  
+ Una llamada a la [object_id ()](../../t-sql/functions/object-id-transact-sql.md) función. Esta función acepta un nombre de tabla y devuelve el identificador de la tabla que contiene el índice de texto completo que se va a inspeccionar.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**keyword**|**nvarchar(4000)**|La representación hexadecimal de la palabra clave que se almacenan en el índice de texto completo.<br /><br /> Nota: OxFF representa el carácter especial que indica el final de un archivo o conjunto de datos.|  
-|**display_term**|**nvarchar(4000)**|Formato legible de la palabra clave. Este formato se deriva del formato hexadecimal.<br /><br /> Nota: La **display_term** valor para OxFF es "Final de archivo".|  
+|**keyword**|**nvarchar(4000)**|La representación hexadecimal de la palabra clave que se almacenan en el índice de texto completo.<br /><br /> Nota: OxFF representa el carácter especial que indica el final de un archivo o un conjunto de datos.|  
+|**display_term**|**nvarchar(4000)**|Formato legible de la palabra clave. Este formato se deriva del formato hexadecimal.<br /><br /> Nota: El **display_term** valor para OxFF es "END OF FILE".|  
 |**column_id**|**int**|Identificador de la columna en que la palabra clave actual forma parte del índice de texto completo.|  
 |**document_count**|**int**|Número de documentos o filas que contienen el término actual.|  
   
@@ -78,9 +75,9 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
     -   Normalmente, es probable que sea adecuado declarar las palabras clave comunes como palabras irrelevantes.  
   
 > [!NOTE]  
->  El **document_count** devuelto por **sys.dm_fts_index_keywords** puede ser menos preciso para un documento específico que el recuento devuelto por **sys.dm_fts_index_keywords_by_document** o un **CONTAINS** consulta. Se calcula que esta posible imprecisión es inferior a un uno por ciento. Esta imprecisión puede ocurrir porque un **document_id** se contarán dos veces cuando continúa a través de más de una fila en el fragmento de índice, o cuando aparece más de una vez en la misma fila. Para obtener un recuento más preciso para un documento específico, use **sys.dm_fts_index_keywords_by_document** o un **CONTAINS** consulta.  
+>  El **document_count** devuelto por **sys.dm_fts_index_keywords** puede ser menos preciso para un documento específico que el recuento devuelto por **sys.dm_fts_index_keywords_by_document** o un **CONTAINS** consulta. Se calcula que esta posible imprecisión es inferior a un uno por ciento. Esta imprecisión puede ocurrir porque un **document_id** puede que se cuenten dos veces cuando continúa a través de más de una fila en el fragmento de índice, o cuando aparece más de una vez en la misma fila. Para obtener un recuento más preciso para un documento específico, use **sys.dm_fts_index_keywords_by_document** o un **CONTAINS** consulta.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  

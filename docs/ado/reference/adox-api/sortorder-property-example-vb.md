@@ -1,32 +1,29 @@
 ---
-title: Ejemplo de propiedad SortOrder (VB) | Documentos de Microsoft
+title: Ejemplo de propiedad SortOrder (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - SortOrder property [ADOX]
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22dc816e9f4343d2873f169837d028babbfa111c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a324c96fcfb4f1e23157bf7a80506cdee209548a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286870"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770933"
 ---
 # <a name="sortorder-property-example-vb"></a>Ejemplo de propiedad SortOrder (VB)
-Este ejemplo se muestra la [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) propiedad de un [columna](../../../ado/reference/adox-api/column-object-adox.md) que se ha anexado a la [columnas](../../../ado/reference/adox-api/columns-collection-adox.md) colección de un [índice](../../../ado/reference/adox-api/index-object-adox.md). El código anexa un índice ascendente a la columna Country de la **empleados** , a continuación, la tabla muestra los registros. A continuación, el código anexa un índice descendente a la columna Country de la **empleados** de tabla y muestra los registros de nuevo. Se muestra la diferencia entre los índices ascendentes y descendentes.  
+Este ejemplo se muestra el [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) propiedad de un [columna](../../../ado/reference/adox-api/column-object-adox.md) que se ha anexado a la [columnas](../../../ado/reference/adox-api/columns-collection-adox.md) colección de un [índice](../../../ado/reference/adox-api/index-object-adox.md). El código anexa un índice ascendente a la columna de país en el **empleados** , a continuación, la tabla muestra los registros. A continuación, el código anexa un índice descendente en la columna de país en el **empleados** de tabla y muestra los registros de nuevo. Se muestra la diferencia entre ascendente y descendente de los índices.  
   
 ```  
 ' BeginSortOrderVB  

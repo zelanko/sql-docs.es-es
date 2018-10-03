@@ -1,14 +1,11 @@
 ---
-title: sysmail_sentitems (Transact-SQL) | Documentos de Microsoft
+title: sysmail_sentitems (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_sentitems_TSQL
@@ -18,25 +15,24 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_sentitems database mail view
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de4547bec20880375fc29fc746588983b2ec9d2e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 57fee409bbaa286f052c2fa11e15a956fcd7d540
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222086"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699233"
 ---
 # <a name="sysmailsentitems-transact-sql"></a>sysmail_sentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene una fila por cada mensaje enviado por el Correo electrónico de base de datos. Use **sysmail_sentitems** cuando desea ver qué mensajes se han enviado correctamente.  
   
- Para ver todos los mensajes procesados por el correo electrónico de base de datos, utilice [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). Para ver sólo los mensajes con el estado de error, utilice [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Para ver sólo los elementos sin enviar o reintento de mensajes, utilice [sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Para ver los datos adjuntos de correo electrónico, use [sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md).  
+ Para ver todos los mensajes procesados por el correo electrónico de base de datos, use [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). Para ver solo los mensajes con el estado de error, use [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Para ver solo unsent o reintento de mensajes, utilice [sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Para ver los datos adjuntos de correo electrónico, use [sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md).  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Identificador del elemento de correo en la cola de correo electrónico.|  
 |**profile_id**|**int**|Identificador del perfil utilizado para enviar el mensaje.|  
@@ -48,7 +44,7 @@ ms.locfileid: "33222086"
 |**body_format**|**varchar (20)**|El formato del cuerpo del mensaje. Los valores posibles son **texto** y **HTML**.|  
 |**Importancia**|**varchar(6)**|El **importancia** parámetro del mensaje.|  
 |**Sensibilidad**|**varchar (12)**|El **sensibilidad** parámetro del mensaje.|  
-|**file_attachments**|**ntext**|Una lista delimitada por punto y coma de nombres de archivo adjuntadas al mensaje de correo electrónico.|  
+|**file_attachments**|**ntext**|Una lista delimitada por punto y coma de nombres de archivo adjuntado al mensaje de correo electrónico.|  
 |**attachment_encoding**|**varchar (20)**|Tipo de datos adjuntos.|  
 |**Consulta**|**ntext**|Consulta ejecutada por el programa de correo.|  
 |**execute_query_database**|**sysname**|Contexto de base de datos en el cual el programa de correo ejecutó la consulta.|  
@@ -69,7 +65,7 @@ ms.locfileid: "33222086"
 ## <a name="remarks"></a>Comentarios  
  Al solucionar problemas del Correo electrónico de base de datos, puede que esta vista le ayude a identificar la naturaleza del problema, pues en ella se muestran los atributos de los mensajes enviados correctamente. El Correo electrónico de base de datos marca los mensajes como enviados cuando se envían correctamente a un servidor de correo SMTP. Normalmente, los mensajes de correo electrónico se reciben en pocos minutos, pero puede que se retrasen a causa de problemas con el servidor SMTP. El Correo electrónico de base de datos marca los mensajes como enviados cuando los acepta el servidor de correo SMTP. Los mensajes de correo electrónico con errores en el servidor de correo SMTP, como una dirección de correo electrónico de destinatario no válida, no se devuelven al Correo electrónico de base de datos. Estos mensajes se registran como enviados aunque no se hayan entregado. Este tipo de error se debe solucionar en el servidor SMTP. Asimismo, puede que el servidor de correo SMTP envíe a la dirección de respuesta de una cuenta del Correo electrónico de base de datos una notificación en la que se indica que no se puede entregar el mensaje.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Concede a **sysadmin** rol fijo de servidor y **databasemailuserrole** rol de base de datos. Cuando se ejecuta un miembro de la **sysadmin** rol fijo de servidor, esta vista muestra todos los mensajes enviados. Los demás usuarios verán únicamente los mensajes que ellos han enviado.  
   
 ## <a name="see-also"></a>Vea también  

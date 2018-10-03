@@ -1,13 +1,11 @@
 ---
-title: El proveedor OLE DB para la publicación en Internet | Documentos de Microsoft
+title: El proveedor OLE DB para la publicación en Internet | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB provider for Internet publishing [ADO]
@@ -16,25 +14,24 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - providers [ADO], OLE DB provider for Internet publishing
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee7efbcd02903e8bba38ecfa177ed7e095e0f5e9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f70970ec872d3c921fa10e3eacb1c54d7c4de2d4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273034"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632213"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>El proveedor OLE DB para la publicación en Internet
-La propiedad ADO [registro](../../../ado/reference/ado-api/record-object-ado.md) y [flujo](../../../ado/reference/ado-api/stream-object-ado.md) objetos pueden utilizarse con el proveedor Microsoft OLE DB para publicación en Internet (Internet Publishing Provider) para tener acceso y manipular los recursos, como archivos o carpetas Web proporcionados por Microsoft FrontPage. Con ADO, puede especificar el origen de un **registro**, **flujo**, o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sea una dirección URL. Puede, a continuación, cargar, descargar, mover, copiar y eliminar recursos o manipular directamente las propiedades del recurso.  
+ADO [registro](../../../ado/reference/ado-api/record-object-ado.md) y [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objetos pueden utilizarse con el proveedor Microsoft OLE DB para la publicación en Internet (Internet Publishing Provider) para obtener acceso y manipular los recursos, como archivos o carpetas de Web proporcionados por Microsoft FrontPage. Con ADO, puede especificar el origen de un **registro**, **Stream**, o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sea una dirección URL. Puede, a continuación, cargar, descargar, mover, copiar y eliminar recursos o manipular directamente las propiedades de recursos.  
   
- Por ejemplo código que usa **registros** y **secuencias** con el proveedor de publicación en Internet, consulte el [escenario de Internet Publishing](../../../ado/guide/data/internet-publishing-scenario.md).  
+ Por ejemplo de código que usa **registros** y **secuencias** con el proveedor de publicación en Internet, consulte el [escenario de publicación en Internet](../../../ado/guide/data/internet-publishing-scenario.md).  
   
- El proveedor de publicación en Internet se instala con Microsoft Windows 2000. Las versiones anteriores de Internet Publishing Provider también están disponibles con Microsoft Office 2000 y Microsoft Internet Explorer 5.0.  
+ El proveedor de publicación en Internet se instala con Microsoft Windows 2000. Las versiones anteriores del proveedor de publicación en Internet también están disponibles con Microsoft Office 2000 y Microsoft Internet Explorer 5.0.  
   
- Hay tres maneras de conectar ADO con el proveedor de publicación de Internet:  
+ Hay tres maneras de conectar ADO con el proveedor de publicación en Internet:  
   
 -   Especifique "URL =" en la cadena de conexión. Por ejemplo:  
   
@@ -56,6 +53,6 @@ La propiedad ADO [registro](../../../ado/reference/ado-api/record-object-ado.md)
     ```  
   
 > [!NOTE]
->  Si se especifica explícitamente Msdaipp.dso como valor del proveedor, ya sea con la *proveedor* palabra clave de cadena de conexión o la **proveedor** propiedad, no se puede utilizar "URL =" en la cadena de conexión. Si lo hace, se producirá un error. En su lugar, simplemente especifique la dirección URL como se muestra anteriormente.  
+>  Si se especifica explícitamente Msdaipp.dso como valor del proveedor, ya sea con la *proveedor* palabra clave de cadena de conexión o la **proveedor** propiedad, no se puede usar "URL =" en la cadena de conexión. Si lo hace, se producirá un error. En su lugar, simplemente especifique la dirección URL como se mostró anteriormente.  
   
- Para obtener información más específica acerca del proveedor de publicación en Internet, consulte [proveedor Microsoft OLE DB para Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md), o la documentación del proveedor proporcionada con la aplicación de origen con el que el proveedor OLE DB para Publicación en Internet se instaló: Windows 2000, Office 2000 o Internet Explorer 5.0.
+ Para obtener información más específica acerca del proveedor de publicación en Internet, consulte [proveedor Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md), o la documentación del proveedor proporcionada con la aplicación de origen con la que el proveedor OLE DB para Se instaló Internet Publishing: Windows 2000, Office 2000 o Internet Explorer 5.0.

@@ -1,18 +1,13 @@
 ---
-title: sysdatatypemappings (Transact-SQL) | Documentos de Microsoft
+title: sysdatatypemappings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sysdatatypemappings
 - sysdatatypemappings_TSQL
@@ -21,23 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - sysdatatypemappings view
 ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a447bf38ce77889b2dc6e0e0888b7f4cccb93c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2af4bba93611f2a67fb66f8a9a47a11d9b279d7e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012942"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641765"
 ---
 # <a name="sysdatatypemappings-transact-sql"></a>sysdatatypemappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  El **sysdatatypemappings** vista se usa para mostrar la asignación entre tipos de datos de SQL Server y tipos de datos de un sistema de administración de base de datos (DBMS) de ajeno a SQL Server. Esta vista se almacena en la **msdb** base de datos.  
+  El **sysdatatypemappings** vista se utiliza para mostrar la asignación entre tipos de datos de SQL Server y los tipos de datos de un sistema de administración de base de datos (DBMS) de que no son de SQL Server. Esta vista se almacena en el **msdb** base de datos.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**mapping_id**|**int**|Id. de la asignación del tipo de datos.|  
 |**source_dbms**|**sysname**|Indica el nombre del sistema DBMS desde el que se asignan los tipos de datos, que puede ser uno de los valores siguientes:<br /><br /> **MSSQLSERVER** = el origen es una base de datos de SQL Server.<br /><br /> **ORACLE** = el origen es una base de datos de Oracle.|  
@@ -51,7 +45,7 @@ ms.locfileid: "33012942"
 |**source_scale_max**|**int**|La escala máxima del tipo de datos en el DBMS de origen, en la que un valor NULL indica que no se utiliza una escala.|  
 |**source_nullable**|**bit**|Indica si el tipo de datos de destino admite valores NULL.|  
 |**source_createparams**|**int**|Exclusivamente para uso interno.|  
-|**destination_dbms**|**sysname**|Indica el nombre del sistema DBMS de destino y puede ser uno de los siguientes valores:<br /><br /> **MSSQLSERVER** = el destino es una base de datos de SQL Server.<br /><br /> **ORACLE** = el destino es una base de datos de Oracle.<br /><br /> **DB2** = el destino es una base de datos de IBM DB2.<br /><br /> **SYBASE** = el destino es una base de datos de Sybase.|  
+|**destination_dbms**|**sysname**|Indica el nombre del sistema DBMS de destino y puede ser uno de los siguientes valores:<br /><br /> **MSSQLSERVER** = el destino es una base de datos de SQL Server.<br /><br /> **ORACLE** = el destino es una base de datos de Oracle.<br /><br /> **DB2** = el destino es una base de datos IBM DB2.<br /><br /> **SYBASE** = el destino es una base de datos de Sybase.|  
 |**destination_version**|**sysname**|Versión de producto del sistema DBMS de destino.|  
 |**destination_type**|**sysname**|Tipo de datos del sistema DBMS de destino.|  
 |**destination_length**|**bigint**|Longitud del tipo de datos del sistema DBMS de destino.|  
@@ -64,7 +58,7 @@ ms.locfileid: "33012942"
   
 ## <a name="see-also"></a>Vea también  
  [Replicación de bases de datos heterogéneas](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helpdatatypemap &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)  
   

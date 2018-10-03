@@ -1,13 +1,11 @@
 ---
-title: Entradas del registro para los orígenes de datos | Documentos de Microsoft
+title: Entradas del registro de orígenes de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subkeys [ODBC]
@@ -16,21 +14,21 @@ helpviewer_keywords:
 - data sources [ODBC], configuring
 - registry entries for data sources [ODBC]
 ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d052b4d64e858837a51a907fc77548bac231c35d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d5f5f865c0b50ea75548bb3a409caef8acf64b51
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692923"
 ---
 # <a name="registry-entries-for-data-sources"></a>Entradas del registro para los orígenes de datos
 > [!NOTE]  
->  A partir de Windows XP y Windows Server 2003, ODBC se incluye en el sistema operativo de Windows. Solo explícitamente debe instalar ODBC en versiones anteriores de Windows.  
+>  Desde Windows XP y Windows Server 2003, ODBC se incluye en el sistema operativo Windows. ODBC explícitamente sólo debe instalar en versiones anteriores de Windows.  
   
- El instalador DLL mantiene información en el registro de cada origen de datos. En Microsoft Windows NT o Windows 2000 y Microsoft Windows 95 o Windows 98, esta información se almacena en las subclaves bajo una de las dos claves del registro siguientes:  
+ El archivo DLL de instalador mantiene información en el registro de cada origen de datos. En Microsoft Windows NT o Windows 2000 y Microsoft Windows 95/98, esta información se almacena en las subclaves de una de las dos claves del registro siguientes:  
   
  HKEY_LOCAL_MACHINE  
   
@@ -48,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
  ODBC.ini  
   
- Clave que se usa depende de si el origen de datos es un *origen de datos del sistema,* que está disponible para todos los usuarios, o un *origen de datos de usuario,* que solo está disponible para el usuario actual. Orígenes de datos del sistema se almacenan en el árbol HKEY_LOCAL_MACHINE y orígenes de datos de usuario se almacenan en el árbol HKEY_CURRENT_USER. En todos los demás aspectos, los orígenes de datos del sistema y los orígenes de datos de usuario son idénticos.  
+ Clave que se usa depende de si el origen de datos es un *origen de datos del sistema,* que está disponible para todos los usuarios, o un *origen de datos de usuario,* que solo está disponible para el usuario actual. Orígenes de datos del sistema se almacenan en el árbol HKEY_LOCAL_MACHINE y orígenes de datos de usuario se almacenan en el árbol de HKEY_CURRENT_USER. En todos los demás aspectos, los orígenes de datos del sistema y los orígenes de datos de usuario son idénticos.  
   
  Esta sección contiene los temas siguientes.  
   

@@ -1,39 +1,36 @@
 ---
-title: Anticipación de errores | Documentos de Microsoft
+title: Anticipación de errores | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - anticipating errors [ADO]
 - errors [ADO], preventing
 - preventing errors [ADO]
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7b171309accefd6586c90389574ae702632b8fae
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 91741ef8d6b0f7f984958837df3234b0bbc1e009
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271504"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727343"
 ---
 # <a name="anticipating-errors"></a>Anticipación de errores
-Prevención de errores es al menos tan importante como el control de errores. En esta última sección contiene una breve lista de medidas de que la aplicación puede llevar a cabo para realizar menos probables que se producen errores.  
+Prevención de errores es al menos tan importante como control de errores. Esta última sección contiene una breve lista de medidas de que la aplicación puede aprovechar para ayudar a tomar menos probables que se producen errores.  
   
- Compruebe el estado de los objetos comprobando el valor la **estado** propiedad antes de intentar realizar una operación con esos objetos. Por ejemplo, si la aplicación utiliza global **conexión**, compruebe su **estado** propiedad para ver si ya está abierto antes de llamar a la **abrir** método.  
+ Comprobar el estado de objetos, compruebe el valor el **estado** propiedad antes de intentar realizar una operación con esos objetos. Por ejemplo, si la aplicación utiliza un global **conexión**, compruebe su **estado** propiedad para ver si ya está abierta antes de llamar a la **abrir** método.  
   
--   Cualquier programa que acepta datos de un usuario debe incluir código para comprobar que los datos antes de enviarlo al almacén de datos. No se puede confiar en el almacén de datos, el proveedor, ADO o incluso el lenguaje de programación para avisarle de problemas. Debe comprobar cada bytes especificados por los usuarios, asegurándose de que los datos son del tipo correcto para su campo y que los campos obligatorios no están vacíos.  
+-   Cualquier programa que acepta datos de un usuario debe incluir código para validar que los datos antes de enviarlo al almacén de datos. No puede confiar en el almacén de datos, el proveedor, ADO o incluso su lenguaje de programación para avisarle de problemas. Debe comprobar cada byte especificado por los usuarios, lo que garantiza que los datos son del tipo correcto para su campo y que los campos obligatorios no están vacíos.  
   
- Compruebe los datos antes de intentar escribir datos en el almacén de datos. La manera más fácil de hacerlo es controlar la **WillMove** eventos o la **WillUpdateRecordset** eventos. Para obtener una explicación más completa de control de eventos de ADO, vea [controlar eventos de ADO](../../../ado/guide/data/handling-ado-events.md).  
+ Compruebe los datos antes de intentar escribir datos en el almacén de datos. La manera más fácil de hacerlo es controlar el **WillMove** eventos o la **WillUpdateRecordset** eventos. Para obtener una explicación más completa de control de eventos de ADO, vea [controlar eventos de ADO](../../../ado/guide/data/handling-ado-events.md).  
   
- Asegúrese de que **Recordset** objetos no son más allá de los límites de la **Recordset** antes de intentar mover el puntero del registro. Si intenta **MoveNext** cuando **EOF** es True o **MovePrev** cuando **BOF** es True, se producirá un error. Si lleva a cabo cualquiera de los **mover** métodos cuando ambos **EOF** y **BOF** son True, se generará un error.  
+ Asegúrese de que **Recordset** objetos no son más allá de los límites de la **Recordset** antes de intentar mover el puntero de registro. Si intenta **MoveNext** cuando **EOF** es True o **MovePrev** cuando **BOF** es True, se producirá un error. Si realiza cualquiera de los **mover** métodos cuando ambos **EOF** y **BOF** son True, se generará un error.  
   
- También se producirán errores si intenta realizar operaciones como **Seek** y **buscar** en vacío **conjunto de registros**.
+ También se producirán errores si intenta realizar operaciones como **Seek** y **buscar** en un valor vacío **Recordset**.

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 05/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - database_scoped_configurations
@@ -22,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e127f8935b10003a1ecfbd70d7237c5911d7f34f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 350f3af1bfd6e2765f74d074727577541378d2e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43107246"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733843"
 ---
 # <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +43,7 @@ ms.locfileid: "43107246"
 ##  <a name="Permissions"></a> Permissions  
  Debe pertenecer al rol **public** .  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Cuando se devuelve NULL como el valor de **value_for_secondary**, esto significa que se establece la base de datos secundaria a principal.  
  
  Las opciones de configuración con ámbito de base de datos se transfieren con la base de datos. Esto significa que cuando se restaura o adjunta una base de datos, se conservan las opciones de configuración existentes.

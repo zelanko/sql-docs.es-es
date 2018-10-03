@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_mirroring_endpoints_TSQL
@@ -26,12 +23,12 @@ ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b4a39c79c5abf457a3140f731f56c7190aba86a
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c4a791f5d47382e78ce9bbfe34d939cffc273515
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43021205"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734603"
 ---
 # <a name="sysdatabasemirroringendpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +50,7 @@ ms.locfileid: "43021205"
 |**encryption_algorithm**|**tinyint**|Algoritmo de cifrado, uno de los siguientes:<br /><br /> **0** : NONE<br /><br /> **1** – RC4<br /><br /> **2** : AES<br /><br /> **3** : NONE, RC4<br /><br /> **4** : NINGUNO, AES<br /><br /> **5** : RC4, AES<br /><br /> **6** : AES, RC4<br /><br /> **7** : NONE, RC4, AES<br /><br /> **8** : NINGUNO, AES, RC4|  
 |**encryption_algorithm_desc**|**nvarchar(60)**|Descripción del algoritmo de cifrado, uno de los siguientes:<br /><br /> Ninguno<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]  
 >  El algoritmo RC4 se admite únicamente por razones de compatibilidad con versiones anteriores. El material nuevo solo se puede cifrar con RC4 o RC4_128 cuando la base de datos tenga el nivel de compatibilidad 90 o 100. (No se recomienda). Use un algoritmo más reciente como uno de los algoritmos AES en su lugar. En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores, el material cifrado con RC4 o RC4_128 se puede descifrar en cualquier nivel de compatibilidad.  

@@ -1,41 +1,35 @@
 ---
-title: Ver informes de casos de prueba (SybaseToSQL) | Documentos de Microsoft
+title: Visualización de informes de casos de prueba (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Tester Component,Test Case Reports
 ms.assetid: cb75d281-43ef-4f4a-b754-2c4ee3b62ae7
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: eae96cbd4a222441f98be2aaf9718b3b6438e3b5
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 840f73d0732d0789d378c6f1bceb100c58e01bb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779641"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624473"
 ---
-# <a name="viewing-test-case-reports-sybasetosql"></a>Ver informes de casos de prueba (SybaseToSQL)
-El informe de casos de prueba muestra los resultados de pruebas de comprobación y la información de prueba general. En caso de error de prueba, también se muestra información sobre los datos que no coincidan en objetos comprobados.  
+# <a name="viewing-test-case-reports-sybasetosql"></a>Visualización de informes de casos de prueba (SybaseToSQL)
+El informe de casos de prueba muestra los resultados de la prueba comprobación y la información de prueba general. En caso de error de prueba, también se muestra información acerca de los datos que no coincidentes en objetos comprobados.  
   
 ## <a name="report-structure"></a>Estructura de informe  
 La parte superior del informe muestra estas estadísticas:  
   
 -   El número total de objetos probados y el número de objetos para el que la prueba fue correcta.  
   
--   El número total de tablas comprobadas y claves externas y el número de tablas y claves externas coincidentes correctamente.  
+-   El número total de tablas comprobadas y claves externas y el número de tablas y claves externas coinciden correctamente.  
   
--   La hora de inicio, hora de finalización del caso de prueba y el tiempo total empleado para la ejecución.  
+-   La hora de inicio, hora de finalización del caso de prueba y el tiempo total necesario para la ejecución.  
   
 El resto del informe muestra información en cuatro categorías:  
   
@@ -43,15 +37,15 @@ El resto del informe muestra información en cuatro categorías:
 Muestra los errores producidos en el **requisitos previos** paso. Normalmente, se omite.  
   
 **Inicialización**  
-Muestra el estado de ejecución como **correcto** o **error**.  
+Muestra el estado de ejecución como **éxito** o **error**.  
   
-**Resultado de prueba de objetos**  
-Una comparación de los resultados (éxito o error) y las diferencias que SSMA evaluador detectó en caso de error.  
+**Resultado de los objetos de la prueba**  
+Comparación de los resultados (éxito o error) y las diferencias de SSMA evaluador detectado en caso de error.  
   
 **Finalización**  
-Muestra el estado de ejecución como **correcto** o **error**.  
+Muestra el estado de ejecución como **éxito** o **error**.  
   
 ## <a name="see-also"></a>Vea también  
 [Ejecutar casos de prueba &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[Pruebas de objetos de base de datos migran &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Pruebas con objetos de base de datos migrados &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_plan_guide_from_handle_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_plan_guide_from_handle
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78d466a6860eb145c409f32735c812f17a051e44
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 29e5bd9f5dc682862d636b49d77e6b338fe937b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032975"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734074"
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +55,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
   
  Si se especifica NULL o no se especifica un desplazamiento de instrucción, se crea una guía de plan para cada instrucción del lote utilizando el plan de consulta para el identificador de plan especificado. Las guías de plan resultantes son equivalentes a las guías de plan que utilizan la sugerencia de consulta USE PLAN para forzar el uso de un plan concreto.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  No se puede crear una guía de plan para todos los tipos de instrucción. Si no puede crearse una guía de plan para una instrucción del lote, el procedimiento almacenado omite la instrucción y continúa en la instrucción siguiente del lote. Si una instrucción aparece varias veces en el mismo lote, se habilita el plan para la última aparición y se deshabilitan los planes anteriores para la instrucción. Si no se puede utilizar ninguna instrucción del lote en una guía de plan, se producirá el error 10532 y la instrucción producirá un error. Se recomienda obtener siempre el identificador de plan a partir de la vista de administración dinámica sys.dm_exec_query_stats para evitar en lo posible la aparición de este error.  
   
 > [!IMPORTANT]  

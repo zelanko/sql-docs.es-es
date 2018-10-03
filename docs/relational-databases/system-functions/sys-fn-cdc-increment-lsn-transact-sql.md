@@ -1,17 +1,12 @@
 ---
-title: Sys.fn_cdc_increment_lsn (Transact-SQL) | Documentos de Microsoft
+title: Sys.fn_cdc_increment_lsn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - fn_cdc_increment_lsn_TSQL
 - sys.fn_cdc_increment_lsn_TSQL
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - fn_cdc_increment_lsn
 - sys.fn_cdc_increment_lsn
 ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
-caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9202afab2c6b0fca9c230a60b1448a3069232d58
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 84f343ebda18e65217b18446707373a743b6a9d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234367"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648933"
 ---
 # <a name="sysfncdcincrementlsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +54,7 @@ sys.fn_cdc_increment_lsn ( lsn_value )
   
  Para consultar sistemáticamente un flujo de datos de cambio durante un periodo de tiempo, puede repetir periódicamente la llamada de función de la consulta, especificando cada vez un nuevo intervalo de la consulta para limitar los cambios devueltos en la misma. Para ayudar a asegurarse de que no se pierden datos, el límite superior de la consulta anterior se utiliza a menudo para generar el límite inferior de la consulta subsiguiente. Dado que el intervalo de la consulta es cerrado, el nuevo límite inferior debe ser mayor que el límite superior anterior, pero lo suficientemente pequeño para asegurarse de que ningún cambio contiene valores LSN comprendidos entre este valor y el límite superior anterior. La función sys.fn_cdc_increment_lsn se utiliza para obtener este valor.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol de base de datos public.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -1,29 +1,26 @@
 ---
-title: Solución de problemas (OracleToSQL) | Documentos de Microsoft
+title: Solución de problemas (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1dfd6ebb-9fcc-4588-8052-7b8219602132
-caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5c42002b789eb9572ddcd5a653af16798d6d2297
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 3b52dd2347e4c7b22e273abde4d6687a520d5b19
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778011"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47635973"
 ---
 # <a name="troubleshooting-oracletosql"></a>Solución de problemas (OracleToSQL)
-No es raro en mitad de problemas de migración ejecutando los comandos o scripts de la consola.  
+No es raro experimenta midway de problemas de migración ejecutando los comandos o scripts de la consola.  
   
-Los errores pueden corregir pueden estar relacionado con:  
+Los errores se pueden corregir pueden estar relacionados con:  
   
 1.  Función  
   
@@ -37,5 +34,5 @@ Los errores pueden corregir pueden estar relacionado con:
   
 6.  Cambiar la configuración del proyecto  
   
-Los problemas pueden solucionarse mediante la interfaz de usuario SSMA abriendo el archivo de proyecto se creó mediante la consola.  
+Los problemas pueden solucionarse mediante la interfaz de usuario SSMA abriendo el archivo de proyecto creado mediante la consola.  
   

@@ -1,14 +1,11 @@
 ---
-title: Sys.registered_search_property_lists (Transact-SQL) | Documentos de Microsoft
+title: Sys.registered_search_property_lists (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - registered_search_property_lists_TSQL
@@ -22,23 +19,22 @@ helpviewer_keywords:
 - sys.registered_search_property_lists catalog view
 - search property lists [SQL Server], viewing
 ms.assetid: 630d4caa-9bea-4cd3-a5b1-01098b0855fc
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0e404aa67e5e0cc386ab06db4d93cd1d988d86c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 36761417e5be68ef9da7c28464562ada75af088d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178741"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617793"
 ---
 # <a name="sysregisteredsearchpropertylists-transact-sql"></a>sys.registered_search_property_lists (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene una fila para cada lista de propiedades de búsqueda de la base de datos actual.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**property_list_id**|**int**|Identificador de la lista de propiedades.|  
 |**Nombre**|**sysname**|Nombre de la lista de propiedades.|  
@@ -49,7 +45,7 @@ ms.locfileid: "33178741"
 ## <a name="remarks"></a>Comentarios  
  Para obtener más información, vea [Buscar propiedades de documento con listas de propiedades de búsqueda](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  La visibilidad de los metadatos en las listas de propiedades se limita a aquellas de las que se es propietario o en las que se tenga concedido algún permiso REFERENCE.  
   
 > [!NOTE]  

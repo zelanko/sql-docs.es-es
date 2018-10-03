@@ -1,13 +1,11 @@
 ---
-title: Campo (ADO para la sintaxis Visual C++) | Documentos de Microsoft
+title: Campo (ADO para la sintaxis de Visual C++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -15,16 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - Field collection [ADO], ADO for Visual C++ syntax
 ms.assetid: 04631b08-3937-440b-ac09-cd166f239908
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a399906669780409e18ec9b1e8d136b493397da5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e65d9922a040fa1a24442c98e9d16b57d29188db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278434"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674153"
 ---
 # <a name="field-ado-for-visual-c-syntax"></a>Campo (ADO para la sintaxis Visual C++)
 ## <a name="methods"></a>Métodos  

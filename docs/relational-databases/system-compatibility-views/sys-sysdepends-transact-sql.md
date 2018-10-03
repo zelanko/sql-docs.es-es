@@ -1,14 +1,11 @@
 ---
-title: Sys.sysdepends (Transact-SQL) | Documentos de Microsoft
+title: Sys.sysdepends (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sysdepends_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sysdepends system table
 - sys.sysdepends compatibility view
 ms.assetid: f9c182cb-386f-4e72-859f-9f1115b389f9
-caps.latest.revision: 43
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ebb8ed03d27f0be353dfc6652ab16da02edb9dc3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7bfcf815ce77bb21583b5ac3664ecec6da9c28ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220406"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741713"
 ---
 # <a name="syssysdepends-transact-sql"></a>sys.sysdepends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +36,11 @@ ms.locfileid: "33220406"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Id. de objeto.|  
 |**depid**|**int**|Id. del objeto dependiente.|  
-|**number**|**smallint**|Número de procedimiento.|  
+|**Número**|**smallint**|Número de procedimiento.|  
 |**depnumber**|**smallint**|Número del procedimiento dependiente.|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**deptype**|**tinyint**|Identifica el tipo de objeto dependiente:<br /><br /> 0 = Objeto o columna (solo referencias no enlazadas a esquemas)<br /><br /> 0 = Objeto o columna (referencias enlazadas a esquemas)|  

@@ -1,13 +1,11 @@
 ---
-title: Propiedad del servidor (RDS) | Documentos de Microsoft
+title: Propiedad del servidor (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,29 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - Server property [RDS]
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: efe8323ac57dda7d1405777e3be0dc997f955556
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: add581048739a6ba12dc046d2f9362816b661687
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288464"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680629"
 ---
 # <a name="server-property-rds"></a>Propiedad del servidor (RDS)
 Indica el protocolo de nombre y la comunicación de Internet Information Services (IIS).  
   
- Puede establecer la **Server** propiedad en tiempo de diseño en las etiquetas de objeto de la[RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) de objeto o en tiempo de ejecución en código de scripting.  
+ Puede establecer el **Server** propiedad en tiempo de diseño en las etiquetas de objeto de la[RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) de objeto o en tiempo de ejecución de código de secuencias de comandos.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar a [servicio de datos de WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxis  
  **HTTP**  
   
- Sintaxis en tiempo de diseño  
+ Sintaxis de tiempo de diseño  
   
 ```  
   
@@ -60,7 +57,7 @@ awebsrvr:port
   
  **HTTPS**  
   
- Sintaxis en tiempo de diseño  
+ Sintaxis de tiempo de diseño  
   
 ```  
   
@@ -76,7 +73,7 @@ DataControl.Server="https://awebsrvr:port"
   
  **DCOM**  
   
- Sintaxis en tiempo de diseño  
+ Sintaxis de tiempo de diseño  
   
 ```  
   
@@ -95,7 +92,7 @@ DataControl.Server="computername"
   
  **En curso**  
   
- Sintaxis en tiempo de diseño  
+ Sintaxis de tiempo de diseño  
   
 ```  
   
@@ -111,17 +108,17 @@ DataControl.Server=""
 ```  
   
 ## <a name="parameters"></a>Parámetros  
- *awebsrvr*o *NombreDeEquipo*  
- A **cadena** valor que contiene un Internet o la ruta de acceso de intranet o el nombre del equipo, si el servidor está en un equipo remoto; o bien, una cadena vacía si el servidor está en el equipo local.  
+ *awebsrvr*o *computername*  
+ Un **cadena** valor que contiene una Internet o la ruta de acceso de intranet o el nombre del equipo, si el servidor está en un equipo remoto; o bien, una cadena vacía si el servidor está en el equipo local.  
   
  *port*  
- Opcional. Un puerto que se utiliza para conectarse a un servidor que ejecuta IIS. El número de puerto se establece en Internet Explorer (en el **vista** menú, haga clic en **opciones**y, a continuación, seleccione la **conexión** ficha) o en IIS.  
+ Opcional. Un puerto que se usa para conectarse a un servidor que ejecuta IIS. El número de puerto se establece en el Explorador de Internet (en el **vista** menú, haga clic en **opciones**y, a continuación, seleccione el **conexión** pestaña) o en IIS.  
   
  *DataControl*  
  Una variable de objeto que representa un **RDS. DataControl** objeto.  
   
-## <a name="remarks"></a>Notas  
- El servidor es la ubicación donde el **RDS. DataControl** se procesa la solicitud (es decir, una consulta o actualización). De forma predeterminada, todas las solicitudes se procesan por el [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto, [MSDFMAP. Controlador](../../../ado/guide/remote-data-service/datafactory-customization.md) componente, y [MSDFMAP. INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) archivo en el servidor especificado. Recuerde que al cambiar de servidores para reconciliar la configuración de los antiguos y nuevos **MSDFMAP. INI** archivos. Las incompatibilidades pueden hacer solicitudes que se realizan correctamente en un servidor genere un error en otro. Si se establece la propiedad del servidor en la cadena vacía "", estos objetos se usará en el equipo local.  
+## <a name="remarks"></a>Comentarios  
+ El servidor es la ubicación donde el **RDS. DataControl** se procesa la solicitud (es decir, una consulta o actualización). De forma predeterminada, todas las solicitudes se procesan mediante el [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto, [MSDFMAP. Controlador](../../../ado/guide/remote-data-service/datafactory-customization.md) componente, y [MSDFMAP. INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) archivo en el servidor especificado. Recuerde que al cambiar de servidores para reconciliar la configuración de los antiguos y nuevos **MSDFMAP. INI** archivos. Las incompatibilidades pueden hacer solicitudes que se realice correctamente en un servidor a un error en otro. Si se establece la propiedad del servidor en la cadena vacía "", estos objetos se usará en el equipo local.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

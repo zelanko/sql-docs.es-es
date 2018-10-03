@@ -1,13 +1,11 @@
 ---
-title: Objeto de miembro (ADO MD) | Documentos de Microsoft
+title: Objeto de miembro (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,30 +13,29 @@ f1_keywords:
 helpviewer_keywords:
 - Member object [ADO MD], members
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee79dc5a17ebbce35a8543a0ed2351ca65f03374
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4b1f11919ab6dcc89da188601867f8a49a1aa48f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284044"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633553"
 ---
 # <a name="member-object-ado-md"></a>Objeto de miembro (ADO MD)
-Representa a un miembro de un nivel en un cubo, los elementos secundarios de un miembro de un nivel o un miembro de una posición a lo largo de un eje de un conjunto de celdas.  
+Representa a un miembro de un nivel en un cubo, los elementos secundarios de un miembro de un nivel o miembro de una posición a lo largo de un eje de un conjunto de celdas.  
   
-## <a name="remarks"></a>Notas  
- Las propiedades de un **miembro** varían según el contexto en el que se usa. A **miembro** de un [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md) en un [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) tiene un [elementos secundarios](../../../ado/reference/ado-md-api/children-property-ado-md.md) propiedad que devuelve el **miembros** en el siguiente nivel inferior de la jerarquía actual **miembro**. Para una **miembro** de un [posición](../../../ado/reference/ado-md-api/position-object-ado-md.md), **elementos secundarios** colección siempre está vacía. Además, el [tipo](../../../ado/reference/ado-md-api/type-property-ado-md.md) propiedad se aplica únicamente a **miembros** de un **nivel**.  
+## <a name="remarks"></a>Comentarios  
+ Las propiedades de un **miembro** varían según el contexto en el que se utiliza. Un **miembro** de un [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md) en un [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) tiene un [hijos](../../../ado/reference/ado-md-api/children-property-ado-md.md) propiedad que devuelve el **miembros** en el siguiente nivel inferior de la jerarquía desde actual **miembro**. Para un **miembro** de un [posición](../../../ado/reference/ado-md-api/position-object-ado-md.md), el **hijos** colección siempre está vacía. Además, el [tipo](../../../ado/reference/ado-md-api/type-property-ado-md.md) propiedad solo se aplica a **miembros** de un **nivel**.  
   
- A **miembro** de **posición** tiene dos propiedades que son útiles cuando se muestra la [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) y [ ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md). Se producirá un error si se tiene acceso a estas propiedades en un **miembro** de un **nivel**.  
+ Un **miembro** de **posición** tiene dos propiedades que son útiles al mostrar la [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) y [ ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md). Se producirá un error si se tiene acceso a estas propiedades en un **miembro** de un **nivel**.  
   
- Con las colecciones y las propiedades de un **miembro** objeto de un **nivel**, puede hacer lo siguiente:  
+ Con las colecciones y propiedades de un **miembro** objeto de un **nivel**, puede hacer lo siguiente:  
   
--   Identificar la **miembro** con el [nombre](../../../ado/reference/ado-md-api/name-property-ado-md.md) y [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) propiedades.  
+-   Identificar el **miembro** con el [nombre](../../../ado/reference/ado-md-api/name-property-ado-md.md) y [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) propiedades.  
   
--   Devolver una cadena para utilizarla al mostrar el **miembro** con el [título](../../../ado/reference/ado-md-api/caption-property-ado-md.md) propiedad.  
+-   Devolver una cadena que se usará al mostrar la **miembro** con el [título](../../../ado/reference/ado-md-api/caption-property-ado-md.md) propiedad.  
   
 -   Devolver una cadena que describe una medida o fórmula **miembro** con el [descripción](../../../ado/reference/ado-md-api/description-property-ado-md.md) propiedad.  
   
@@ -46,38 +43,38 @@ Representa a un miembro de un nivel en un cubo, los elementos secundarios de un 
   
 -   Obtener información sobre la **nivel** de la **miembro** con el [LevelDepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md) y [LevelName](../../../ado/reference/ado-md-api/levelname-property-ado-md.md) propiedades.  
   
--   Obtener relacionados **miembros** en un [jerarquía](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) con el [primario](../../../ado/reference/ado-md-api/parent-property-ado-md.md) y [elementos secundarios](../../../ado/reference/ado-md-api/children-property-ado-md.md) propiedades.  
+-   Obtener relacionados **miembros** en un [jerarquía](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) con el [primario](../../../ado/reference/ado-md-api/parent-property-ado-md.md) y [hijos](../../../ado/reference/ado-md-api/children-property-ado-md.md) propiedades.  
   
--   Contar los miembros secundarios de un **miembro** con el [ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md) propiedad.  
+-   Recuento de los elementos secundarios de un **miembro** con el [ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md) propiedad.  
   
--   Use la propiedad ADO estándar [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección para obtener información adicional sobre la **nivel** objeto.  
+-   Usar el estándar de ADO [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección para obtener información adicional sobre el **nivel** objeto.  
   
- Con las colecciones y las propiedades de un **miembro** de un **posición** a lo largo de un [eje](../../../ado/reference/ado-md-api/axis-object-ado-md.md), puede hacer lo siguiente:  
+ Con las colecciones y propiedades de un **miembro** de un **posición** a lo largo de un [eje](../../../ado/reference/ado-md-api/axis-object-ado-md.md), puede hacer lo siguiente:  
   
--   Identificar la **miembro** con el [nombre](../../../ado/reference/ado-md-api/name-property-ado-md.md) y [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) propiedades.  
+-   Identificar el **miembro** con el [nombre](../../../ado/reference/ado-md-api/name-property-ado-md.md) y [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) propiedades.  
   
--   Devolver una cadena para utilizarla al mostrar el **miembro** con el [título](../../../ado/reference/ado-md-api/caption-property-ado-md.md) propiedad.  
+-   Devolver una cadena que se usará al mostrar la **miembro** con el [título](../../../ado/reference/ado-md-api/caption-property-ado-md.md) propiedad.  
   
 -   Devolver una cadena que describe una medida o fórmula **miembro** con el [descripción](../../../ado/reference/ado-md-api/description-property-ado-md.md) propiedad.  
   
 -   Obtener información sobre la **nivel** de la **miembro** con el [LevelDepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md) y [LevelName](../../../ado/reference/ado-md-api/levelname-property-ado-md.md) propiedades.  
   
--   Contar los miembros secundarios de un **miembro** con el [ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md) propiedad.  
+-   Recuento de los elementos secundarios de un **miembro** con el [ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md) propiedad.  
   
--   Use la [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) propiedad para determinar si hay al menos un elemento secundario en el **eje** inmediatamente después de este procedimiento **miembro**.  
+-   Use la [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) propiedad para determinar si hay al menos un elemento secundario en el **eje** inmediatamente después de este **miembro**.  
   
--   Use la [ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md) propiedad para determinar si el elemento primario de este **miembro** es el mismo que el elemento primario de la antecede **miembro**.  
+-   Use la [ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md) propiedad para determinar si el elemento primario de este **miembro** es el mismo que el elemento primario de la inmediatamente anterior **miembro**.  
   
--   Use la propiedad ADO estándar [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección para obtener información adicional sobre la **nivel** objeto.  
+-   Usar el estándar de ADO [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección para obtener información adicional sobre el **nivel** objeto.  
   
- El **propiedades** colección contiene propiedades proporcionadas por el proveedor. En la tabla siguiente se enumera propiedades que estén disponibles. La lista de propiedades reales puede variar en función de la implementación del proveedor. Consulte la documentación del proveedor para obtener una lista completa de propiedades disponibles.  
+ El **propiedades** colección contiene las propiedades proporcionadas por el proveedor. En la tabla siguiente se enumera las propiedades que podrían estar disponibles. La lista de propiedades reales puede variar en función de la implementación del proveedor. Consulte la documentación del proveedor para obtener una lista completa de las propiedades disponibles.  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
 |CatalogName|El nombre del catálogo al que pertenece este cubo.|  
 |ChildrenCardinality|Número de elementos secundarios que tiene este miembro.|  
 |CubeName|Nombre del cubo.|  
-|Descripción|Una descripción significativa del miembro.|  
+|Descripción|Descripción del miembro.|  
 |DimensionUniqueName|El nombre no ambiguo de la [dimensión](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
 |HierarchyUniqueName|El nombre no ambiguo de la jerarquía.|  
 |LevelNumber|La distancia entre el nivel y la raíz de la jerarquía.|  
@@ -87,10 +84,10 @@ Representa a un miembro de un nivel en un cubo, los elementos secundarios de un 
 |MemberName|Nombre del miembro.|  
 |MemberOrdinal|El número ordinal del miembro.|  
 |MemberType|Tipo del miembro.|  
-|MemberUniqueName|Nombre inequívoco del miembro.|  
-|ParentCount|El recuento del número de primarios que tiene este miembro.|  
+|MemberUniqueName|Nombre del miembro ambiguo.|  
+|ParentCount|El recuento del número de elementos primarios que tiene este miembro.|  
 |ParentLevel|El número de nivel de elemento primario del miembro.|  
-|ParentUniqueName|Nombre inequívoco del elemento primario del miembro.|  
+|ParentUniqueName|Nombre del elemento primario del miembro ambiguo.|  
 |SchemaName|El nombre del esquema al que pertenece este cubo.|  
   
  Esta sección contiene el siguiente tema.  

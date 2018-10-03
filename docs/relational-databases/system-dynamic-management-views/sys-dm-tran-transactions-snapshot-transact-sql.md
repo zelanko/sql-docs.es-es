@@ -5,9 +5,7 @@ ms.date: 03/30/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_tran_transactions_snapshot
@@ -19,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_transactions_snapshot dynamic management view
 ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67db9cf44dab0316ccdc303177139c941833f177
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d24ed8e2fdcf3a9475f999bf127eae3e8553dc86
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059008"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704333"
 ---
 # <a name="sysdmtrantransactionssnapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,7 +79,7 @@ dm_tran_transactions_snapshot
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Cuando se inicia una transacción de instantáneas, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] registra todas las transacciones activas en ese momento determinado. **Sys.dm_tran_transactions_snapshot** proporciona esta información de todas las transacciones de instantáneas actualmente activas.  
   
  Cada transacción se identifica mediante un número de secuencia que se asigna cuando se inicia la transacción. Las transacciones empiezan en el momento en que se ejecuta una instrucción BEGIN TRANSACTION o BEGIN WORK. No obstante, [!INCLUDE[ssDE](../../includes/ssde-md.md)] asigna el número de secuencia de la transacción con la ejecución de la primera instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] que tiene acceso a datos después de la instrucción BEGIN TRANSACTION o BEGIN WORK. Los números de secuencia de la transacción se incrementan de uno en uno.  

@@ -1,13 +1,11 @@
 ---
-title: Ejes (colección) (ADO MD) | Documentos de Microsoft
+title: Los ejes de colección (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,25 +14,24 @@ f1_keywords:
 helpviewer_keywords:
 - Axes collection [ADO MD]
 ms.assetid: 072fb21a-ec0f-4b02-9022-1cef3ad4bfff
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb59a31000f2ea393ceceaea28262a9935bc5c6d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: bb700997165ceeb6d300f6332c9e758706c0fbc1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283314"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630914"
 ---
 # <a name="axes-collection-ado-md"></a>Colección Axes (ADO MD)
 Contiene el [eje](../../../ado/reference/ado-md-api/axis-object-ado-md.md) objetos que definen un conjunto de celdas.  
   
-## <a name="remarks"></a>Notas  
- A [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto contiene un **ejes** colección. Una vez el **Cellset** está abierto, esta colección contendrá al menos una **eje**. Consulte la [eje](../../../ado/reference/ado-md-api/axis-object-ado-md.md) objeto para obtener una explicación más detallada de cómo usar **eje** objetos.  
+## <a name="remarks"></a>Comentarios  
+ Un [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto contiene un **ejes** colección. Una vez el **Cellset** está abierto, esta colección contendrá al menos una **eje**. Consulte la [eje](../../../ado/reference/ado-md-api/axis-object-ado-md.md) objeto para obtener una explicación más detallada de cómo usar **eje** objetos.  
   
 > [!NOTE]
->  El eje del filtro de un **Cellset** no se encuentra en la **ejes** colección. Consulte la [PivotView](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) propiedad para obtener más información.  
+>  El eje del filtro de un **Cellset** no está contenida en el **ejes** colección. Consulte la [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) propiedad para obtener más información.  
   
  **Ejes** es una colección de ADO estándar. Con las propiedades y métodos de una colección, puede hacer lo siguiente:  
   

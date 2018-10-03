@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - aggregate functions [CLR integration]
@@ -19,18 +17,17 @@ helpviewer_keywords:
 - user-defined functions [CLR integration]
 - UDTs [CLR integration], user-defined aggregates
 ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
-caps.latest.revision: 56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dd8835f9468179f412c1d0857426c93fa5663495
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 1defa76a4fb59812165929f91e14bb5fe7d9026d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356197"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646213"
 ---
-# <a name="clr-user-defined-aggregates---requirements"></a>Agregados definidos por el usuario CLR: requisitos
+# <a name="clr-user-defined-aggregates---requirements"></a>Agregados definidos por el usuario de CLR: requisitos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Un tipo de un ensamblado CLR (Common Language Runtime) puede registrarse como una función de agregado definida por el usuario, siempre y cuando implemente el contrato de agregación necesario. Este contrato consta de los **SqlUserDefinedAggregate** métodos del contrato de atributo y la agregación. El contrato de agregación incluye el mecanismo para guardar el estado intermedio de la agregación y el mecanismo para acumular nuevos valores, que consta de cuatro métodos: **Init**, **Accumulate**,  **Combinar**, y **finalizar**. Cuando cumpla estos requisitos, podrá aprovechar al máximo de los agregados definidos por el usuario [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En las siguientes secciones de este tema se proporcionan detalles adicionales sobre la forma de crear y trabajar con agregados definidos por el usuario. Para obtener un ejemplo, vea [las funciones de agregado Invoking CLR User-Defined](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md).  
   
@@ -43,7 +40,7 @@ ms.locfileid: "37356197"
 |Método|Sintaxis|Descripción|  
 |------------|------------|-----------------|  
 |**Init**|`public void Init();`|El procesador de consultas usa este método para inicializar el cálculo de la agregación. Este método se invoca una vez para cada grupo que el procesador de consultas agrega. El procesador de consultas puede optar por reutilizar la misma instancia de la clase de agregado para calcular los agregados de varios grupos. El **Init** método debe realizar cualquier limpieza según sea necesario por los usos anteriores de esta instancia y habilitarla para volver a iniciar un nuevo cálculo de agregados.|  
-|**Acumular**|`public void Accumulate ( input-type value[, input-type value, ...]);`|Uno o varios parámetros que representan los parámetros de la función. *INPUT_TYPE* debe ser administrado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos equivalente nativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificado por el tipo de datos *input_sqltype* en el **CREATE AGGREGATE** instrucción. Para obtener más información, consulte [asignación de datos de parámetros CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).<br /><br /> En el caso de los tipos definidos por el usuario (UDT), el tipo de entrada es igual al tipo UDT. El procesador de consultas usa este método para acumular los valores de agregado. Debe invocarse una vez para cada valor en el grupo que se agrega. El procesador de consultas siempre llama a esto sólo después de llamar a la **Init** método en la instancia determinada de la clase de agregado. La implementación de este método debe actualizar el estado de la instancia para reflejar la acumulación del valor de argumento que se pasa.|  
+|**acumular**|`public void Accumulate ( input-type value[, input-type value, ...]);`|Uno o varios parámetros que representan los parámetros de la función. *INPUT_TYPE* debe ser administrado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos equivalente nativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificado por el tipo de datos *input_sqltype* en el **CREATE AGGREGATE** instrucción. Para obtener más información, consulte [asignación de datos de parámetros CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).<br /><br /> En el caso de los tipos definidos por el usuario (UDT), el tipo de entrada es igual al tipo UDT. El procesador de consultas usa este método para acumular los valores de agregado. Debe invocarse una vez para cada valor en el grupo que se agrega. El procesador de consultas siempre llama a esto sólo después de llamar a la **Init** método en la instancia determinada de la clase de agregado. La implementación de este método debe actualizar el estado de la instancia para reflejar la acumulación del valor de argumento que se pasa.|  
 |**Mezcla**|`public void Merge( udagg_class value);`|Este método puede usarse para combinar otra instancia de esta clase de agregado con la instancia actual. El procesador de consultas usa este método para combinar varios cálculos parciales de una agregación.|  
 |**Finalizar**|`public return_type Terminate();`|Este método completa el cálculo de agregado y devuelve el resultado de la agregación. El *return_type* debe ser administrado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos que es el equivalente administrado de *return_sqltype* especificado en el **CREATE AGGREGATE** instrucción. El *return_type* también puede ser un tipo definido por el usuario.|  
   

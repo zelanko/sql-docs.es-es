@@ -1,31 +1,28 @@
 ---
-title: Especificar propiedades de conexión | Documentos de Microsoft
+title: Especificar propiedades de conexión | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection properties [ADO]
 - connections [ADO]
 ms.assetid: 49456201-b085-4851-9686-e814136b07be
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c198eb4c8118328d68b40deed4ab0e57ff561f9c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 885d201736adb3cd16efbea4f3907cd0aa324128
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272666"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622763"
 ---
 # <a name="specifying-connection-properties"></a>Especificar propiedades de conexión
-Puede proporcionar toda la información especificada por un [cadena de conexión](../../../ado/guide/data/creating-a-connection-string.md) estableciendo las propiedades de la **conexión** objeto antes de abrir la conexión. Por ejemplo, podría conseguir el mismo efecto como la cadena de conexión se describe en [crear una cadena de conexión](../../../ado/guide/data/creating-a-connection-string.md) utilizando el código siguiente.  
+Puede proporcionar toda la información especificada por un [cadena de conexión](../../../ado/guide/data/creating-a-connection-string.md) estableciendo las propiedades de la **conexión** objeto antes de abrir la conexión. Por ejemplo, podría lograr el mismo efecto como se describe la cadena de conexión en [creación de una cadena de conexión](../../../ado/guide/data/creating-a-connection-string.md) con el código siguiente.  
   
 ```  
 With objConn  
@@ -40,4 +37,4 @@ End With
  DefaultDatabase se establece solo después de abrir la conexión.  
   
 > [!NOTE]
->  En ADO no deben usar una contraseña que contenga el punto y coma (";") a menos que la contraseña se encierra entre comillas simples.
+>  En ADO no debe usar una contraseña que contenga el punto y coma (";") a menos que la contraseña se encierra entre comillas simples.

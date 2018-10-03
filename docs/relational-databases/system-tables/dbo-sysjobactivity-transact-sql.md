@@ -1,14 +1,11 @@
 ---
-title: dbo.sysjobactivity (Transact-SQL) | Documentos de Microsoft
+title: dbo.sysjobactivity (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysjobactivity_TSQL
@@ -20,26 +17,25 @@ dev_langs:
 helpviewer_keywords:
 - sysjobactivity system table
 ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1d9e79856ac767d231993165b0c6d565d791464
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 77b434a20f408aa79e8d75b03ea9bce0a9f2e6b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258477"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690773"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Registra la actividad y el estado de los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actual.  Esta tabla se almacena en la **msdb** base de datos.
+  Registra la actividad y el estado de los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actual.  Esta tabla se almacena en el **msdb** base de datos.
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|Identificador de la sesión almacenada en el **syssessions** tabla el **msdb** base de datos.|  
-|**job_id**|**uniqueidentifier**|Id. del trabajo.|  
+|**session_id**|**int**|Identificador de la sesión almacenada en el **syssessions** de tabla en la **msdb** base de datos.|  
+|**job_id**|**uniqueidentifier**|Identificador del trabajo.|  
 |**run_requested_date**|**datetime**|Fecha y hora en que se solicitó la ejecución del trabajo.|  
 |**run_requested_source**|**sysname(nvarchar(128))**|Solicitante de la ejecución del trabajo.<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
 |**queued_date**|**datetime**|Fecha y hora en que el trabajo se puso en cola. Si el trabajo se ejecuta directamente, esta columna es NULL.|  
@@ -47,7 +43,7 @@ ms.locfileid: "33258477"
 |**last_executed_step_id**|**int**|Id. del último paso de trabajo que se ejecutó.|  
 |**last_executed_step_**<br /><br /> **date**|**datetime**|Fecha y hora en que empezó a ejecutarse el último paso de trabajo.|  
 |**stop_execution_date**|**datetime**|Fecha y hora de finalización de la ejecución del trabajo.|  
-|**job_history_id**|**int**|Usado para identificar una fila en la **sysjobhistory** tabla.|  
+|**job_history_id**|**int**|Utilizado para identificar una fila en la **sysjobhistory** tabla.|  
 |**next_scheduled_run_date**|**datetime**|Siguiente fecha y hora en que se ha programado la ejecución del trabajo.|  
 
 ## <a name="example"></a>Ejemplo

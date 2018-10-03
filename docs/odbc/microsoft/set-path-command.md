@@ -1,29 +1,27 @@
 ---
-title: Comando de ruta de acceso SET | Documentos de Microsoft
+title: Comando de ruta de acceso SET | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SET PATH command [ODBC]
 ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 058f9f36aa3e762b27e2548fb1a1ddd4767399e8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f3d810e66249779b2d3706e92ea39f89a0f87cff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727553"
 ---
-# <a name="set-path-command"></a>Comando de ruta de acceso set.
-Especifica una ruta de acceso para las búsquedas de archivos. Para obtener información específica del controlador, vea la sección Comentarios.  
+# <a name="set-path-command"></a>Comando de ruta de acceso set
+Especifica una ruta de acceso para búsquedas de archivos. Para obtener información específica del controlador, vea la sección Comentarios.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -33,27 +31,27 @@ SET PATH TO [Path]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- A [ *ruta de acceso*]  
- Especifica los directorios que desee buscar de Visual FoxPro. Use comas o punto y coma para separar los directorios.  
+ A [ *ruta*]  
+ Especifica los directorios de Visual FoxPro a buscar. Use comas o punto y coma para separar los directorios.  
   
 ## <a name="remarks"></a>Comentarios  
- Establecer ruta de acceso permite especificar las rutas de acceso de búsqueda para otros programas de Visual FoxPro que pueden llamar a procedimientos almacenados. Establecer ruta de acceso no cambiará la ruta de acceso del origen de datos que ha especificado para la conexión.  
+ Establecer ruta de acceso le permite especificar las rutas de búsqueda para otros programas de Visual FoxPro que se pueden llamar dentro de procedimientos almacenados. Establecer ruta de acceso no cambiará la ruta de acceso del origen de datos que ha especificado para la conexión.  
   
- Emitir establecer ruta de acceso a sin *ruta de acceso* para restaurar la ruta de acceso a la carpeta o el directorio predeterminado.  
+ Emitir establecer ruta de acceso a sin *ruta* para restaurar la ruta de acceso al directorio predeterminado o la carpeta.  
   
 ## <a name="driver-remarks"></a>Comentarios del controlador  
- Si emite SET PATH en un procedimiento almacenado, se omitirán mediante los comandos y las funciones siguientes:  
+ Si emite establecer ruta de acceso en un procedimiento almacenado, se omitirán mediante los comandos y las funciones siguientes:  
   
--   Las funciones de catálogo como [SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md) y [SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) omitirá la nueva ruta de acceso y continuar hacer referencia a la ruta de acceso especificada por el origen de datos en [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md) o [ SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md).  
+-   Funciones de catálogo como [SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md) y [SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) omitirá la nueva ruta de acceso y continuar hacer referencia a la ruta de acceso especificada por el origen de datos en [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md) o [ SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md).  
   
--   Comandos como SELECT, INSERT, UPDATE, DELETE y CREATE TABLE omitirá la nueva ruta de acceso y continuar hacer referencia a la ruta de acceso especificada por el origen de datos en **SQLPrepare** o **SQLExecDirect**.  
+-   Omitirá la nueva ruta de acceso y continuar hacer referencia a la ruta de acceso especificada por el origen de datos en comandos como SELECT, INSERT, UPDATE, DELETE y CREATE TABLE **SQLPrepare** o **SQLExecDirect**.  
   
- Si debe emitir establecer ruta de acceso en un procedimiento almacenado y posteriormente no establece la ruta de acceso a su estado original, otra conexión con la base de datos utilizará la nueva ruta de acceso (porque no tiene un ámbito establecer ruta de acceso a las sesiones de datos).  
+ Si emitir establecer ruta de acceso en un procedimiento almacenado y posteriormente no establece la ruta de acceso a su estado original, las otras conexiones con la base de datos usará la nueva ruta de acceso (ya que establece la ruta de acceso no está dirigida a las sesiones de datos).  
   
  Si desea crear, seleccionar o actualizar las tablas en un directorio distinto del especificado por el origen de datos, especifique la ruta de acceso completa del archivo con el comando.  
   
 ## <a name="see-also"></a>Vea también  
- [Cuadro de diálogo de configuración de Visual FoxPro ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)   
+ [Cuadro de diálogo de instalación de Visual FoxPro ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)   
  [SQLColumns (controlador ODBC de Visual FoxPro)](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)   
  [SQLDriverConnect (controlador ODBC de Visual FoxPro)](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)   
  [SQLTables (controlador ODBC de Visual FoxPro)](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)

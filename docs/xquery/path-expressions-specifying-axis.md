@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -25,18 +20,17 @@ helpviewer_keywords:
 - descendant-or-self axis
 - parent axis
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
-caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2acb1aa6b9eddd2cf30f97da0d594db56b94e456
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a868f83740be2d1cd175bd68464e70f389b1e606
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38046883"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827793"
 ---
-# <a name="path-expressions---specifying-axis"></a>Expresiones de ruta de acceso: especificación de eje
+# <a name="path-expressions---specifying-axis"></a>Expresiones de ruta de acceso: Especificación de ejes
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Un paso de eje de una expresión de ruta de acceso incluye los siguientes componentes:  
@@ -56,7 +50,7 @@ ms.locfileid: "38046883"
 |**elemento secundario**|Devuelve elementos secundarios del nodo de contexto.|  
 |**descendiente**|Devuelve todos los descendientes del nodo de contexto.|  
 |**parent**|Devuelve el elemento primario del nodo de contexto.|  
-|**atributo**|Devuelve atributos del nodo de contexto.|  
+|**Atributo**|Devuelve atributos del nodo de contexto.|  
 |**Self**|Devuelve el propio nodo de contexto.|  
 |**descendant-or-self**|Devuelve el nodo de contexto y todos los descendientes del mismo.|  
   

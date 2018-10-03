@@ -4,21 +4,19 @@ ms.custom: ''
 ms.date: 07/18/2017
 ms.prod: sql
 ms.reviewer: douglasl
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d9c5adb1-3209-4186-bc10-8e41a26f5e57
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b6c98c7c9640f0ea0079b1d58c34ac6a7b5dcdd2
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 29585d72b733c85ebbe15382c5a102dcbb50504b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085219"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706503"
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>Optimización del procesamiento de OLTP en memoria JSON
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,8 +44,7 @@ CREATE TABLE xtp.Product(
 Las características disponibles en SQL Server y Azure SQL Database permiten integrar completamente la funcionalidad JSON con las tecnologías existentes de OLTP en memoria. Por ejemplo, puede realizar las siguientes tareas:
  - [Valide la estructura de los documentos JSON](#validate) almacenados en tablas optimizadas para memoria mediante las restricciones CHECK compiladas de forma nativa.
  - [Exponga y tipe fuertemente los valores](#computedcol) almacenados en documentos JSON mediante el uso de columnas calculadas.
- - 
-            [Indexe los valores](#index) de los documentos JSON con índices optimizados para memoria.
+ - [Indexe los valores](#index) de los documentos JSON con índices optimizados para memoria.
  - [Compile de forma nativa las consultas SQL](#compile) que usan valores de documentos JSON o que dan formato a los resultados como texto JSON.
 
 ## <a name="validate"></a> Validación de columnas JSON

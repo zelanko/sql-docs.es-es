@@ -1,27 +1,25 @@
 ---
-title: SQLSetConnectOption (controlador de acceso) | Documentos de Microsoft
+title: SQLSetConnectOption (controlador de Access) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Access driver [ODBC], SQLSetConnectOption
 - SQLSetConnectOption function [ODBC], Access Driver
 ms.assetid: 58399bc4-d0b1-4eaa-a474-c92b2d5855ea
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 952bfe683dabbcedeb771c0e7f1787f7a0e6f7bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 18950d49afdab8517b95c59df8841c33b5d3d086
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706883"
 ---
 # <a name="sqlsetconnectoption-access-driver"></a>SQLSetConnectOption (controlador de Access)
 > [!NOTE]  
@@ -29,8 +27,8 @@ ms.lasthandoff: 05/03/2018
   
 |fOption|Comentario|  
 |-------------|-------------|  
-|SQL_ACCESS_MODE|El fOption SQL_ACCESS_MODE puede establecerse en SQL_MODE_READ_ONLY o SQL_MODE_READ_WRITE. Sin embargo, el controlador no evita que las actualizaciones si SQL_ACCESS_MODE se establece en SQL_MODE_READ_ONLY.|  
-|SQL_AUTOCOMMIT|Cuando se utiliza el controlador de Microsoft Access, la opción SQL_AUTOCOMMIT puede establecerse en SQL_AUTOCOMMIT_OFF o SQL_AUTOCOMMIT_OFF, porque el controlador de Microsoft Access admite transacciones [1].|  
+|SQL_ACCESS_MODE|Puede establecerse la fOption SQL_ACCESS_MODE SQL_MODE_READ_ONLY o SQL_MODE_READ_WRITE. Sin embargo, el controlador no impide que las actualizaciones si SQL_ACCESS_MODE está establecido en SQL_MODE_READ_ONLY.|  
+|SQL_AUTOCOMMIT|Cuando se usa el controlador de Microsoft Access, la opción SQL_AUTOCOMMIT puede establecerse en SQL_AUTOCOMMIT_OFF o SQL_AUTOCOMMIT_OFF, porque el controlador de Microsoft Access admite transacciones [1].|  
 |SQL_CURRENT_QUALIFIER|Compatible.|  
 |SQL_LOGIN_TIMEOUT|No compatible.|  
 |SQL_OPT_TRACE|Compatible.|  
@@ -41,4 +39,4 @@ ms.lasthandoff: 05/03/2018
 |SQL_TRANSLATION_OPTION|No compatible.|  
 |SQL_TXN_ISOLATION|SQL_TXN_ISOLATION siempre es SQL_TXN_READ_COMMITTED.|  
   
- [1] no se admiten las transacciones atómicas por el controlador de Microsoft Access. Al confirmar una transacción con el controlador de Microsoft Access, existe un retraso finito entre el momento en que se confirma la transacción y el tiempo que los valores se escriben en el disco. Este retraso se determina mediante un retraso inherente en el motor de Microsoft Jet. El tiempo de espera de página no será menor que un valor mínimo, incluso si se establece la opción de PageTimeout por debajo del valor. Como resultado, no hay ninguna garantía de que confirma los datos es estable, ya que se pueden realizar cambios durante el tiempo.
+ [1] no se admiten transacciones atómicas por el controlador de Microsoft Access. Al confirmar una transacción con el controlador de Microsoft Access, existe un retraso finito entre el momento en que se confirma la transacción y la hora en que los valores se escriben en el disco. Este retraso viene determinada por un retraso inherente en el motor de Microsoft Jet. El tiempo de espera de la página no será menor que un valor mínimo, incluso si se establece la opción PageTimeout por debajo de ese valor. Como resultado, no hay ninguna garantía de que se confirma los datos es estable, ya que se pueden realizar cambios durante el retraso.

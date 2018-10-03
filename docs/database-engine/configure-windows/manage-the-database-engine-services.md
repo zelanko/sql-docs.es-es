@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, accessing
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - administering SQL Server, services
 - SQL Server services
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
-caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 37dd984acf7af31ba65772d038c30ac84dfed47c
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 1e00098ec51f33dd89429d0c2af949391c707826
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40412779"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756973"
 ---
 # <a name="manage-the-database-engine-services"></a>Administrar el servicio del motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,15 +59,11 @@ ms.locfileid: "40412779"
   
 |||  
 |-|-|  
-|[Requisitos de seguridad para administrar servicios](../../database-engine/configure-windows/security-requirements-for-managing-services.md)|
-  [Evitar el inicio automático de una instancia de SQL Server &amp;#40;Administrador de configuración de SQL Server&amp;#41;](../../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)|  
-|[Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)|
-  [Cambiar la cuenta de inicio del servicio para SQL Server &amp;#40;Administrador de configuración de SQL Server&amp;#41;](../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md)|  
-|[Ejecutar SQL Server con o sin red](../../database-engine/configure-windows/run-sql-server-with-or-without-a-network.md)|
-  [Configurar opciones de inicio del servidor &amp;#40;Administrador de configuración de SQL Server&amp;#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)|  
+|[Requisitos de seguridad para administrar servicios](../../database-engine/configure-windows/security-requirements-for-managing-services.md)|[Evitar el inicio automático de una instancia de SQL Server &amp;amp;#40;Administrador de configuración de SQL Server&amp;amp;#41;](../../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)|  
+|[Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)|[Cambiar la cuenta de inicio del servicio para SQL Server &amp;amp;#40;Administrador de configuración de SQL Server&amp;amp;#41;](../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md)|  
+|[Ejecutar SQL Server con o sin red](../../database-engine/configure-windows/run-sql-server-with-or-without-a-network.md)|[Configurar opciones de inicio del servidor &amp;amp;#40;Administrador de configuración de SQL Server&amp;amp;#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)|  
 |[Servicio SQL Server Browser &#40;motor de base de datos y SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)|[Cambiar la contraseña de las cuentas que usa SQL Server &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/scm-services-change-the-password-of-the-accounts-used.md)|  
-|
-  [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md)|[Configurar registros de errores de SQL Server](../../database-engine/configure-windows/scm-services-configure-sql-server-error-logs.md)|  
+|[Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md)|[Configurar registros de errores de SQL Server](../../database-engine/configure-windows/scm-services-configure-sql-server-error-logs.md)|  
 |[Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|[Cambiar el modo de autenticación del servidor](../../database-engine/configure-windows/change-server-authentication-mode.md)|  
 |[Iniciar SQL Server en modo de usuario único](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)|[servicio del objeto de escritura de SQL](../../database-engine/configure-windows/sql-writer-service.md)|  
 |[Iniciar SQL Server con la configuración mínima](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)|[Difundir un mensaje de cierre del sistema &#40;símbolo del sistema&#41;](../../database-engine/configure-windows/broadcast-a-shutdown-message-command-prompt.md)|  

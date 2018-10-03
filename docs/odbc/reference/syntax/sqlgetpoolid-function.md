@@ -1,31 +1,28 @@
 ---
-title: Función SQLGetPoolID | Documentos de Microsoft
+title: Función SQLGetPoolID | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetPoolID function [ODBC]
 ms.assetid: 95a8666a-ad68-4d89-bf65-f2cc797f8820
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09e2b9b8176c333b893c5cf7ce9157516b2b368d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 39b3d3d1ecdc21acee8b238f56cede0a59146bd2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917450"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740063"
 ---
-# <a name="sqlgetpoolid-function"></a>SQLGetPoolID (función)
+# <a name="sqlgetpoolid-function"></a>Función SQLGetPoolID
 **Conformidad**  
- Versión introdujo: ODBC 3,81 normativas: ODBC  
+ Versión introdujo: ODBC 3,81 normativo: ODBC  
   
  **Resumen**  
  **SQLGetPoolID** recupera el identificador de grupo.  
@@ -43,7 +40,7 @@ SQLRETURN  SQLGetPoolID (
  [Entrada] Identificador del token que contiene toda la información de conexión.  
   
  *pPoolID*  
- [Salida] El identificador del grupo, que se usa para identificar un conjunto de conexiones que se pueden usar indistintamente (posiblemente, lo que requiere un reinicio adicional).  
+ [Salida] El identificador de grupo, que se usa para identificar un conjunto de conexiones que se pueden usar indistintamente (que posiblemente necesite un reinicio adicional).  
   
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
@@ -52,15 +49,15 @@ SQLRETURN  SQLGetPoolID (
  Cuando **SQLGetPoolID** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, el Administrador de controladores se usará un **HandleType** de SQL_HANDLE_DBC_INFO_TOKEN y un **controlar** de *hDbcInfoToken*.  
   
 ## <a name="remarks"></a>Comentarios  
- **SQLGetPoolID** se utiliza para obtener el identificador del grupo dado un conjunto de información de conexión (de **SQLSetConnectAttrForDbcInfo**, **SQLSetDriverConnectInfo**, y  **SQLSetConnectInfo**). Este grupo de identificador se usa para identificar un conjunto de conexiones que se pueden usar indistintamente (posiblemente, lo que requiere un reinicio adicional). El identificador del grupo se utilizará para identificar el grupo de conexiones para el grupo de conexiones.  
+ **SQLGetPoolID** se utiliza para obtener el identificador del grupo dado un conjunto de información de conexión (desde **SQLSetConnectAttrForDbcInfo**, **SQLSetDriverConnectInfo**, y  **SQLSetConnectInfo**). Este identificador se usa para identificar un conjunto de conexiones que se pueden usar indistintamente de grupo (que posiblemente necesite un reinicio adicional). El identificador del grupo se usará para identificar el grupo de conexiones para el grupo de conexiones.  
   
  Cada vez que un controlador devuelve SQL_ERROR o SQL_INVALID_HANDLE, el Administrador de controladores devuelve el error a la aplicación (en [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) o [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
   
- Cada vez que un controlador devuelve SQL_SUCCESS_WITH_INFO, el Administrador de controladores obtendrá la información de diagnóstico de *hDbcInfoToken*y devuelve SQL_SUCCESS_WITH_INFO para la aplicación en [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)y [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Cada vez que un controlador devuelve SQL_SUCCESS_WITH_INFO, el Administrador de controladores obtendrá la información de diagnóstico de *hDbcInfoToken*y devuelvan SQL_SUCCESS_WITH_INFO a la aplicación en [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)y [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
  Las aplicaciones no deben llamar directamente a esta función. Un controlador ODBC que admite la agrupación de conexiones dependientes del controlador debe implementar esta función.  
   
- Incluir sqlspi.h para el desarrollo del controlador ODBC.  
+ Incluir sqlspi.h para el desarrollo de controladores ODBC.  
   
 ## <a name="see-also"></a>Vea también  
  [Desarrollar un controlador ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   

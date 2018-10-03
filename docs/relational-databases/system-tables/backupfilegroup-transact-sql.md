@@ -1,14 +1,11 @@
 ---
-title: backupfilegroup (Transact-SQL) | Documentos de Microsoft
+title: backupfilegroup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - backupfilegroup_TSQL
@@ -19,26 +16,25 @@ helpviewer_keywords:
 - filegroups [SQL Server], backupfilegroup system table
 - backupfilegroup system table
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
-caps.latest.revision: 53
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 040e55c50c91ed40b7e43bfc71d8ea5fbca0273c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b1d7cc485899a7f8173552788471ef6ec45ce49c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259235"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832983"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una fila por cada grupo de archivos de una base de datos en el momento de crear la copia de seguridad. **backupfilegroup** se almacena en la **msdb** base de datos.  
+  Contiene una fila por cada grupo de archivos de una base de datos en el momento de crear la copia de seguridad. **backupfilegroup** se almacena en el **msdb** base de datos.  
   
 > [!NOTE]  
 >  El **backupfilegroup** tabla muestra la configuración del grupo de archivos de la base de datos, no del conjunto de copia de seguridad. Para identificar si un archivo se incluye en el conjunto de copia de seguridad, use la **is_present** columna de la [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) tabla.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|Conjunto de copia de seguridad que contiene este grupo de archivos.|  
 |**Nombre**|**sysname**|Nombre del grupo de archivos.|  
@@ -55,9 +51,9 @@ ms.locfileid: "33259235"
 > [!IMPORTANT]  
 >  El mismo nombre de grupo de archivos puede aparecer en diferentes bases de datos; no obstante, cada grupo de archivos tiene su propio GUID. Por lo tanto, **(backup_set_id, filegroup_guid)** es una clave única que identifica un grupo de archivos en **backupfilegroup**.  
   
- RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY rellena las columnas de la **backupmediaset** tabla con los valores apropiados del encabezado del conjunto de medios.  
+ RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY llena las columnas de la **backupmediaset** tabla con los valores apropiados del encabezado del conjunto de medios.  
   
- Para reducir el número de filas en esta tabla y en otras tablas de historial y de copia de seguridad, ejecute el [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) procedimiento almacenado.  
+ Para reducir el número de filas en esta tabla y de otras tablas de copia de seguridad y el historial, ejecute el [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) procedimiento almacenado.  
   
 ## <a name="see-also"></a>Vea también  
  [Copia de seguridad y restaurar tablas &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   

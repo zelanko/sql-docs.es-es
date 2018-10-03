@@ -1,13 +1,11 @@
 ---
-title: Propiedad de origen de datos (ADO) | Documentos de Microsoft
+title: Propiedad de origen de datos (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,26 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - DataSource property [ADO]
 ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fa4df4252d9970d4ec8ec36500dc5782466c675
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ad42ea14e58e28bf5eee0e5aac66c5a8fc309f2f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277474"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801283"
 ---
 # <a name="datasource-property-ado"></a>Propiedad de origen de datos (ADO)
-Indica un objeto que contiene datos que se va a representar como un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
+Indica un objeto que contiene los datos que se puede representar como un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
   
-## <a name="remarks"></a>Notas  
- Esta propiedad se utiliza para crear controles enlazados a datos con el entorno de datos. El entorno de datos mantiene colecciones de datos (orígenes de datos) que contiene objetos con nombre (miembros de datos) que se representarán como un **Recordset** objeto *.*  
+## <a name="remarks"></a>Comentarios  
+ Esta propiedad se utiliza para crear controles enlazados a datos con el entorno de datos. El entorno de datos mantiene las colecciones de datos (orígenes de datos) que contiene objetos con nombre (miembros de datos) que se representará como un **Recordset** objeto *.*  
   
  El [DataMember](../../../ado/reference/ado-api/datamember-property.md) y **DataSource** propiedades deben utilizarse conjuntamente.  
   
- El objeto al que hace referencia debe implementar la **IDataSource** de interfaz y debe contener un **IRowset** interfaz.  
+ El objeto al que hace referencia debe implementar la **IDataSource** interfaz y debe contener un **IRowset** interfaz.  
   
 ## <a name="usage"></a>Uso  
   

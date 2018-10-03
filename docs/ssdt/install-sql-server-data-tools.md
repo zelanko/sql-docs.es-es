@@ -6,22 +6,19 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.package.stub
 ms.assetid: 6f8616cb-9119-42c3-a9b1-936e088763e7
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2df3214ce5ae02e4feb076f77e66b153c4d2abdb
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 3a847748b0f0025402da1feb794f5c441ea2a3f5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088027"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773573"
 ---
 # <a name="install-sql-server-data-tools"></a>Instalar SQL Server Data Tools
 En este tema se describe cómo instalar SQL Server Data Tools. Hay actualizaciones de SQL Server Data Tools disponibles en la página de descarga de SQL Server Data Tools ([Install Latest SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)) (Instalar la versión más reciente de SQL Server Data Tools).  

@@ -1,13 +1,11 @@
 ---
-title: Funciones ODBC y el controlador ODBC de Visual FoxPro | Documentos de Microsoft
+title: Funciones ODBC y el controlador ODBC de Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC level 2 API functions [ODBC]
@@ -20,27 +18,26 @@ helpviewer_keywords:
 - level 2 API functions [ODBC]
 - ODBC core level API functions [ODBC]
 ms.assetid: 512f9cee-ffad-439b-b612-b49c34c32658
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bdbd0f2c54fb84f21d0a2448dcab07f22a47ae32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9b83edd4ce5bfafcd8413683abad50918cc47d3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905080"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782683"
 ---
 # <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>Funciones ODBC y el controlador ODBC de Visual FoxPro
 Los temas de esta sección proporcionan un breve resumen de funciones de la API de ODBC y los detalles específicos Visual FoxPro.  
   
 > [!NOTE]  
->  Para obtener información general acerca de las funciones ODBC, consulte [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md) en "Guía del programador de ODBC".  
+>  Para obtener información general acerca de las funciones ODBC, consulte [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md) en la "Guía del programador de ODBC".  
   
  Las funciones de API de ODBC se han dividido en tres categorías principales: funciones de la API de nivel de núcleo, funciones de API de nivel 1 y funciones de la API de nivel 2.  
   
 > [!NOTE]  
->  Algunas de las funciones comportan de manera diferente dependiendo de si el origen de datos se ha definido como una conexión a un directorio de [libre tablas](../../odbc/microsoft/visual-foxpro-terminology.md) (archivos .dbf) o a un Visual FoxPro [base de datos](../../odbc/microsoft/visual-foxpro-terminology.md) (archivo .dbc). Ciertas operaciones se admiten solo para las conexiones de base de datos.  
+>  Algunas de las funciones comportan de manera diferente dependiendo de si el origen de datos está definido como una conexión a un directorio de [libre tablas](../../odbc/microsoft/visual-foxpro-terminology.md) (archivos) o a un Visual FoxPro [base de datos](../../odbc/microsoft/visual-foxpro-terminology.md) (archivo .dbc). Ciertas operaciones solo son compatibles con las conexiones de base de datos.  
   
 ## <a name="core-level-api-support"></a>Compatibilidad de API de nivel de núcleo  
  Las funciones de API de nivel de núcleo de ODBC se muestran en la tabla siguiente. Todas estas funciones son compatibles con el controlador ODBC de Visual FoxPro.  
@@ -74,7 +71,7 @@ Los temas de esta sección proporcionan un breve resumen de funciones de la API 
 |[SQLGetStmtOption](../../odbc/microsoft/sqlgetstmtoption-visual-foxpro-odbc-driver.md)|[SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)|  
   
 ## <a name="level-2-api-support"></a>Compatibilidad con la API de nivel 2  
- Las siguientes funciones de API de ODBC nivel 2 se admiten total o parcialmente:  
+ Las siguientes funciones de API de ODBC nivel 2 se admiten por completo o parcialmente:  
   
 -   [SQLDataSources](../../odbc/microsoft/sqldatasources-visual-foxpro-odbc-driver.md)  
   

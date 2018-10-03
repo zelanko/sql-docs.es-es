@@ -1,36 +1,33 @@
 ---
-title: El controlador ODBC para Oracle niveles | Documentos de Microsoft
+title: Controlador ODBC para Oracle niveles | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], conformance levels
 - conformance levels [ODBC], ODBC driver for Oracle
 ms.assetid: 2ad2ef7a-a86f-4a77-b12c-bbd5a3499dac
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9dfef3e28c1f3deb323701b8ca086e44e34637a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bc9b570621fc083232f75a96751dfa0f0e4b4a30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900450"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696263"
 ---
 # <a name="odbc-driver-for-oracle-conformance-levels"></a>Controlador ODBC para Oracle niveles
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, utilice el controlador ODBC proporcionado por Oracle.  
+>  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, use el controlador ODBC proporcionado por Oracle.  
   
- ODBC define dos tipos de estándares de cumplimiento para controladores: la conformidad de API estándar y la conformidad de gramática SQL estándar. Conformidad de API hace referencia a las funciones que admite un controlador. Conformidad de SQL hace referencia a la gramática SQL que admite el controlador. Cada ajuste estándar está formada por niveles.  
+ ODBC define dos tipos de estándares de cumplimiento para los controladores: la conformidad de API estándar y la conformidad de la gramática SQL estándar. Conformidad con la API hace referencia a las funciones que admite un controlador. Conformidad de SQL hace referencia a la gramática de SQL que admite el controlador. Cada estándar de conformidad se compone de los niveles.  
   
- Esta sección proporciona información de conformidad acerca del controlador ODBC para Oracle.  
+ En esta sección se proporciona información de conformidad sobre el controlador ODBC para Oracle.  
   
  Esta sección contiene los temas siguientes.  
   

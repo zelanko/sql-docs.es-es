@@ -1,35 +1,32 @@
 ---
-title: Ejemplo (VBScript) de la propiedad Connect | Documentos de Microsoft
+title: Ejemplo (VBScript) de la propiedad de conexión | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Connect property [ADO], VBScript example
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55f60063261a600d57667cc94f6c514eb52af6b6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c1d76ff4205e84033542b28938509b4267988163
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287404"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730753"
 ---
-# <a name="connect-property-example-vbscript"></a>Ejemplo (VBScript) de la propiedad Connect
+# <a name="connect-property-example-vbscript"></a>Ejemplo de la propiedad Connect (VBScript)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar a [servicio de datos de WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Este código muestra cómo establecer el [conectar](../../../ado/reference/rds-api/connect-property-rds.md) propiedad en tiempo de diseño:  
+ Este código muestra cómo establecer el [Connect](../../../ado/reference/rds-api/connect-property-rds.md) propiedad en tiempo de diseño:  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="ADC1">  
@@ -41,9 +38,9 @@ ms.locfileid: "35287404"
 </OBJECT>  
 ```  
   
- En el ejemplo siguiente se muestra cómo establecer el **conectar** propiedad en tiempo de ejecución en código VBScript.  
+ El ejemplo siguiente muestra cómo establecer el **Connect** propiedad en tiempo de ejecución en código VBScript.  
   
- Para probar este ejemplo, corte y pegue el código entre la \<cuerpo > y \</cuerpo > etiquetas en una HTML normal de documento y asígnele el nombre **ConnectVBS.asp**. Secuencia de comandos ASP identificará el servidor.  
+ Para probar este ejemplo, cortar y pegar el código entre la \<cuerpo > y \</cuerpo > etiquetas en una HTML normal de documentos y asígnele el nombre **ConnectVBS.asp**. Secuencia de comandos ASP identificará el servidor.  
   
 ```  
 <!-- BeginConnectVBS -->  

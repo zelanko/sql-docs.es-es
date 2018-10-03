@@ -1,27 +1,24 @@
 ---
-title: Método put_OLEDBCommand | Documentos de Microsoft
+title: put_oledbcommand (método) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - put_OLEDBCommand method [ADO]
 ms.assetid: ca6a5804-bf5c-4afc-99db-22904bc0b33d
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5de6710cc300312478d5f734334a1c29faf44920
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3dc19da014bc0909e44180ff4176adf1902694b0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280854"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828749"
 ---
 # <a name="putoledbcommand-method"></a>put_OLEDBCommand (método)
 Este método no realiza ninguna operación y siempre devuelve S_OK.  

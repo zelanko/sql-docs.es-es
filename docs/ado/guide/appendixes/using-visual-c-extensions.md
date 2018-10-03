@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Visual C++ [ADO], using VC++ extensions
 - ADO, Visual C++
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 805abefbd6f934781b86060e98c73ab6ee8fd3c0
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 20b39cc744b65bb3d386f54680f641757f8d7484
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982807"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824033"
 ---
 # <a name="visual-c-extensions"></a>Extensiones de Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>La interfaz IADORecordBinding
@@ -119,7 +116,7 @@ Update(CADORecordBinding *binding)
 |*Clase*|Clase en que se definen las entradas de enlace y las variables de C o C++.|
 |*Ordinal*|Número ordinal, a partir de 1, de la **Recordset** campo correspondiente a la variable de C o C++.|
 |*Tipo de datos*|Tipo de datos de ADO equivalente de la variable de C o C++ (vea [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) para obtener una lista de tipos de datos válidos). El valor de la **Recordset** campo se convertirá en este tipo de datos si es necesario.|
-|*Búfer*|Nombre de la variable de C o C++ donde el **Recordset** se almacenará el campo.|
+|*búfer*|Nombre de la variable de C o C++ donde el **Recordset** se almacenará el campo.|
 |*Tamaño*|Tamaño máximo en bytes de *búfer*. Si *búfer* contendrá una cadena de longitud variable, deje espacio para un cero de terminación.|
 |*Estado*|Nombre de una variable que indicará si el contenido de *búfer* son válidos y si la conversión del campo para *DataType* fue correcta.<br /><br /> Los dos valores más importantes de esta variable son **adFldOK**, lo que significa que la conversión fue correcta; y **adFldNull**, lo que significa que el valor del campo sería una variante de tipo VT_NULL y no solamente vacío.<br /><br /> Los valores posibles de *estado* aparecen en la tabla siguiente, "Valores de Status".|
 |*Modificar*|Marca booleana; Si es TRUE, indica a ADO tiene permitido actualizar correspondiente **Recordset** campo con el valor contenido en *búfer*.<br /><br /> Establezca el valor booleano *modificar* parámetro en TRUE para permitir que ADO actualizar el campo enlazado y FALSE si desea examinar el campo, pero no cambiarla.|

@@ -1,40 +1,37 @@
 ---
-title: Actualizar y almacenar datos | Documentos de Microsoft
+title: Actualizar y almacenar datos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - updating data [ADO]
 - data updates [ADO]
 - ADO, updating data
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2c4d7fd046631814e263c8bd6a413fb9ef2f00c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d53891b4e82b3ae391d095e8cbca2189fb201d29
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273164"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758833"
 ---
 # <a name="updating-and-persisting-data"></a>Actualizar y conservar datos
-Los capítulos anteriores han explicado cómo utilizar ADO para obtener datos de un origen de datos, cómo desplazarse por los datos e incluso cómo editar los datos. Por supuesto, si el objetivo de la aplicación es permitir a los usuarios realizar cambios en los datos, debe entender cómo guardar los cambios. O bien puede conservar la **conjunto de registros** cambia a un archivo mediante la **guardar** método, también puede enviar los cambios de vuelta al origen de datos de almacenamiento con el **actualización** o  **UpdateBatch** métodos.  
+En los capítulos anteriores se han explicado cómo utilizar ADO para obtener datos de un origen de datos, cómo moverse por los datos e incluso cómo editar los datos. Por supuesto, si el objetivo de la aplicación es permitir a los usuarios realizar cambios en los datos, deberá comprender cómo guardar los cambios. O bien puede conservar la **Recordset** cambia a un archivo mediante el **guardar** método, o bien puede enviar los cambios de vuelta al origen de datos para almacenamiento mediante el **actualización** o  **UpdateBatch** métodos.  
   
- En los capítulos anteriores, se ha cambiado los datos en varias filas de la **conjunto de registros**. ADO admite dos nociones básicas relacionadas con la adición, eliminación y modificación de filas de datos.  
+ En los capítulos anteriores, ha cambiado los datos en varias filas de la **Recordset**. ADO admite dos nociones básicas relacionadas con la adición, eliminación y modificación de filas de datos.  
   
- La primera noción es que no se realizan inmediatamente los cambios en el **Recordset**; en su lugar, se realizan una interno *búfer de copia*. Si decide que no desea que los cambios, se descartan las modificaciones en el búfer de copia. Si decide conservar los cambios, se aplican los cambios en el búfer de copia para la **conjunto de registros**.  
+ El primer concepto es que no se realizan inmediatamente los cambios en el **Recordset**; en su lugar, se realizan en una instancia interna *búfer de copia*. Si decide que no desea que los cambios, se descartan las modificaciones en el búfer de copia. Si decide conservar los cambios, los cambios en el búfer de copia se aplican a la **Recordset**.  
   
- La segunda noción es que los cambios o bien se propagan al origen de datos en cuanto se declara el trabajo en una fila completa (es decir, *inmediata* modo), o todos los cambios en un conjunto de filas se recopilan hasta que se declara el trabajo para el conjunto completo (es decir, *lote* modo). El **LockType** propiedad determina cuándo se realizan los cambios al origen de datos subyacente. **adLockOptimistic** o **adLockPessimistic** especifican el modo inmediato, mientras que **adLockBatchOptimistic** especifica el modo por lotes. El **CursorLocation** propiedad puede afectar a la que **LockType** opciones están disponibles. Por ejemplo, el **adLockPessimistic** configuración no se admite si el **CursorLocation** propiedad está establecida en **adUseClient**.  
+ El segundo concepto es que ya se propagan los cambios al origen de datos tan pronto como se declara el trabajo en una fila completa (es decir, *inmediata* modo), o se recopilan todos los cambios en un conjunto de filas hasta que declara el trabajo para el conjunto completa (es decir, *batch* modo). El **LockType** propiedad determina cuándo se realizaron los cambios al origen de datos subyacente. **adLockOptimistic** o **adLockPessimistic** especifica el modo inmediato, mientras que **adLockBatchOptimistic** especifica el modo por lotes. El **CursorLocation** propiedad puede afectar a la que **LockType** opciones están disponibles. Por ejemplo, el **adLockPessimistic** configuración no se admite si el **CursorLocation** propiedad está establecida en **adUseClient**.  
   
- En el modo inmediato, cada invocación de la **actualización** método propaga los cambios al origen de datos. En modo por lotes, cada invocación de **actualización** o movimiento de la posición actual de fila guarda los cambios en el búfer de copia, pero sólo el **UpdateBatch** método propaga los cambios al origen de datos.  
+ En el modo inmediato, cada invocación de la **actualización** método propaga los cambios al origen de datos. En modo por lotes, cada invocación de **actualización** o movimiento de la posición de fila actual guarda los cambios en el búfer de copia, pero sólo el **UpdateBatch** método propaga los cambios al origen de datos.  
   
  Esta sección contiene los temas siguientes.  
   

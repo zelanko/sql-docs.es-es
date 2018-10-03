@@ -1,14 +1,11 @@
 ---
-title: Crear procedimientos almacenados extendidos | Documentos de Microsoft
+title: Crear procedimientos almacenados extendidos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - warnings [SQL Server]
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], creating
 - messages [SQL Server], extended stored procedures
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
-caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21d29aa0ceb7ba16216db3f52e18379f55b775dd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ec645ca897bb3760cb5ac866fbc28de5e2f6fcab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32936600"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711813"
 ---
 # <a name="creating-extended-stored-procedures"></a>Crear procedimientos almacenados extendidos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +45,7 @@ ms.locfileid: "32936600"
   
  Estos archivos son necesarios para crear un archivo DLL de procedimientos almacenados extendidos.  
   
-|Archivo|Description|  
+|Archivo|Descripción|  
 |----------|-----------------|  
 |Srv.h|Archivo de encabezado de la API Procedimiento almacenado extendido|  
 |Opends60.lib|Biblioteca de importación de Opends60.dll|  
@@ -68,16 +64,16 @@ __declspec(dllexport) ULONG __GetXpVersion()
 > [!NOTE]  
 >  __declspec(dllexport) es una extensión de compilador específica de Microsoft. Si el compilador no admite esta directiva, debe exportar esta función en el archivo DEF, bajo la sección EXPORTS.  
   
- Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inicia con el seguimiento de la marca - T260 o si un usuario con privilegios de administrador del sistema ejecuta DBCC TRACEON (260) y el almacenado extendido DLL de procedimiento no admite __GetXpVersion (), un mensaje de advertencia (Error 8131: el procedimiento almacenado extendido DLL '%', no exporta \__GetXpVersion().) se imprime en el registro de errores. (Tenga en cuenta que \__GetXpVersion() comienza con dos caracteres de subrayado.)  
+ Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inicia con el seguimiento de la marca - T260 o si un usuario con privilegios de administrador del sistema ejecuta DBCC TRACEON (260) y almacena extendido DLL de procedimiento no admite __GetXpVersion (), un mensaje de advertencia (Error 8131: el procedimiento almacenado extendido Archivo DLL '%', no exporta \__GetXpVersion().) se imprime en el registro de errores. (Tenga en cuenta que \__GetXpVersion() comienza con dos caracteres de subrayado.)  
   
- Si el archivo DLL de procedimientos almacenados extendidos exporta __GetXpVersion() pero la versión devuelta por la función es menor que la que requiere el servidor, en el registro de errores se imprime un mensaje de advertencia que indica la versión devuelta por la función y la versión esperada por el servidor. Si recibe este mensaje, se devuelve un valor incorrecto de \__GetXpVersion() o se está compilando con una versión anterior de srv.h.  
+ Si el archivo DLL de procedimientos almacenados extendidos exporta __GetXpVersion() pero la versión devuelta por la función es menor que la que requiere el servidor, en el registro de errores se imprime un mensaje de advertencia que indica la versión devuelta por la función y la versión esperada por el servidor. Si recibe este mensaje, se devuelve un valor incorrecto de \__GetXpVersion(), o bien se compila con una versión anterior de srv.h.  
   
 > [!NOTE]  
 >  No debe llamarse a SetErrorMode, una función Win32 de [!INCLUDE[msCoName](../../includes/msconame-md.md)], en procedimientos almacenados extendidos.  
   
  Se recomienda que un procedimiento almacenado extendido de ejecución prolongada llame periódicamente a srv_got_attention para que el procedimiento pueda finalizarse si se elimina la conexión o se anula el lote.  
   
- Para depurar un archivo DLL de procedimientos almacenados extendidos, cópielo en el directorio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn. Para especificar el archivo ejecutable para la sesión de depuración, escriba la ruta de acceso y el nombre de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivo ejecutable (por ejemplo, C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\Binn\Sqlservr.exe). Para obtener información sobre los argumentos de sqlservr, vea [sqlservr (aplicación)](../../tools/sqlservr-application.md).  
+ Para depurar un archivo DLL de procedimientos almacenados extendidos, cópielo en el directorio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn. Para especificar el archivo ejecutable para la sesión de depuración, escriba la ruta de acceso y el nombre de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivo ejecutable (por ejemplo, C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\Binn\Sqlservr.exe). Para obtener información acerca de los argumentos de sqlservr, vea [sqlservr (aplicación)](../../tools/sqlservr-application.md).  
   
 ## <a name="see-also"></a>Vea también  
  [srv_got_attention &#40;API procedimiento almacenado extendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)  

@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bedb049d518775144b53da2ead7fc1eee5392669
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 0d8fdee121bbeea704d53068b6829548ffe7b07b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087867"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800743"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referencia de errores y mensajes de Integration Services
   En las tablas siguientes se muestra una lista de los errores [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] predefinidos, advertencias y mensajes informativos, en orden numérico ascendente dentro de cada categoría, junto con sus códigos numéricos y nombres simbólicos. Cada uno de estos errores se define como un campo en la clase <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> en el espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -166,7 +163,7 @@ ms.locfileid: "39087867"
 |0xC0014028|-1073659864|DTS_E_CANTFINDCERTBYHASH|No se encuentra el certificado especificado mediante hash en el almacén "MY" (error: %1). Esto sucede en CPackage:: LoadUserCertificateByHash.|  
 |0xC0014029|-1073659863|DTS_E_INVALIDCERTHASHFORMAT|El valor hash no es una matriz de bytes unidimensional (error: %1). Esto sucede en CPackage:: LoadUserCertificateByHash.|  
 |0xC001402A|-1073659862|DTS_E_CANTACCESSARRAYDATA|No se puede tener acceso a los datos de la matriz (error: %1). Este error puede producirse dondequiera que se llame a GetDataFromSafeArray.|  
-|0xC001402B|-1073659861|DTS_E_CREATEMANAGEDHELPERFAILED|No se pudo crear el objeto de ayudante administrado por SSIS. Error: 0x%1!8.8X! "%2". Esto sucede si hay un error en CoCreateInstance CLSID_DTSManagedHelper.|  
+|0xC001402B|-1073659861|DTS_E_CREATEMANAGEDHELPERFAILED|No se pudo crear el objeto de asistente administrado por SSIS. Error: 0x%1!8.8X! "%2". Esto sucede si hay un error en CoCreateInstance CLSID_DTSManagedHelper.|  
 |0xC001402C|-1073659860|DTS_E_OLEDBTRANSACTIONENLIST|El objeto de tiempo de ejecución de SSIS no pudo dar de alta la conexión OLE DB en una transacción distribuida. Error: 0x%1!8.8X! "%2".|  
 |0xC001402D|-1073659859|DTS_E_SIGNPACKAGEFAILED|Error de firma del paquete: 0x%1!8.8X! "%2". Esto sucede si hay un error en el método ManagedHelper.SignDocument. |  
 |0xC001402E|-1073659858|DTS_E_CHECKENVELOPEFAILED|Error al comprobar la envolvente de la firma XML en el paquete. Error: 0x%1!8.8X! "%2". Esto sucede en CPackage::LoadFromXML.|  

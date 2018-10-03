@@ -1,13 +1,11 @@
 ---
-title: Índices (colección) (ADOX) | Documentos de Microsoft
+title: Los índices de colección (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,30 +14,29 @@ f1_keywords:
 helpviewer_keywords:
 - Indexes collection [ADOX]
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7bddbeacadb3bac0b2f408502e6aacb30184dfe
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e1ef6a456a6a1903364c996e87c54cebee1fedb2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286084"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756663"
 ---
 # <a name="indexes-collection-adox"></a>Colección de índices (ADOX)
 Todos los contiene [índice](../../../ado/reference/adox-api/index-object-adox.md) objetos de una tabla.  
   
-## <a name="remarks"></a>Notas  
- El [anexado](../../../ado/reference/adox-api/append-method-adox-indexes.md) método para un **índices** colección es única para ADOX. Puede hacer lo siguiente:  
+## <a name="remarks"></a>Comentarios  
+ El [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) método para un **índices** colección es único para ADOX. Puede hacer lo siguiente:  
   
--   Agregar un nuevo índice a la colección con el **anexado** método.  
+-   Agregar un nuevo índice a la colección con el **Append** método.  
   
- Las propiedades y los métodos restantes son estándar para colecciones de ADO. Puede hacer lo siguiente:  
+ Las propiedades y métodos restantes son estándar para colecciones de ADO. Puede hacer lo siguiente:  
   
 -   Obtener acceso a un índice de la colección con el [elemento](../../../ado/reference/ado-api/item-property-ado.md) propiedad.  
   
--   Devolver el número de índices incluido en la colección con el [recuento](../../../ado/reference/ado-api/count-property-ado.md) propiedad.  
+-   Devuelve el número de índices incluidos en la colección con el [recuento](../../../ado/reference/ado-api/count-property-ado.md) propiedad.  
   
 -   Quitar un índice de la colección con el [eliminar](../../../ado/reference/adox-api/delete-method-adox-collections.md) método.  
   
@@ -50,5 +47,5 @@ Todos los contiene [índice](../../../ado/reference/adox-api/index-object-adox.m
 -   [Eventos, métodos y propiedades de la colección de índices](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Índices de ejemplo de método Append (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
+ [Los índices de ejemplo de método Append (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Objeto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

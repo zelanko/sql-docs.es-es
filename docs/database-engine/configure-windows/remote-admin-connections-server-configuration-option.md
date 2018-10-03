@@ -5,9 +5,7 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - administrator connections [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - remote admin connections option
 - dedicated administrator connections [SQL Server]
 ms.assetid: bf32b60a-7a48-401f-b6be-b5e2e46c413f
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5a2f4381d0a72c582a4a8c592328539b92afbf27
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa577f1d2e995e870ab1ec3fabcd64266427dc7c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32865000"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788165"
 ---
 # <a name="remote-admin-connections-server-configuration-option"></a>remote admin connections (opción de configuración del servidor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +33,7 @@ ms.locfileid: "32865000"
   
  En la siguiente tabla se muestran los posibles valores para la opción remote admin connections.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |0|Indica que solo se permiten conexiones locales mediante la DAC.|  
 |1|Indica que la DAC permite las conexiones remotas.|  

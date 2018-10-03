@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataSource Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DataSource element
 ms.assetid: 113fba1c-2679-4d06-9339-90a4a76f9b31
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ddee14c487f9e28d3bbeb83c419bcda548d5a7c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6ada7b618fea98e2fbf1e29d8a73480e3ffb2052
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37281931"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139669"
 ---
 # <a name="datasource-element-assl"></a>Elemento DataSource (ASSL)
   Define un origen de datos en un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [base de datos](database-element-assl.md) elemento.  
@@ -48,7 +45,7 @@ ms.locfileid: "37281931"
 </DataSources>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -63,7 +60,7 @@ ms.locfileid: "37281931"
 |Elementos primarios|[Orígenes de datos](../collections/datasources-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.DataSource>.  
   
 ## <a name="see-also"></a>Vea también  

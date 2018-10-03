@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - content type [data mining]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - discrete values
 - discretized
 ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d9466397115e3562deebb91b5b3e7506bae09c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 050a7e4b7b89eb52d9fcb8f9d7a6b8a911eaa825
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170302"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134625"
 ---
 # <a name="choosing-data-for-data-mining"></a>Elegir datos para minería de datos
   Cuando comienza la minería de datos, podría preguntar "¿cuántos datos necesito?" o "¿hay algún requisito especial que debo conocer al limpiar o dar formato a mis datos?".  

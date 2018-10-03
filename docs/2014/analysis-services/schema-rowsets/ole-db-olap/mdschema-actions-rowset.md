@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MDSCHEMA_ACTIONS
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - MDSCHEMA_ACTIONS rowset
 ms.assetid: f73081f8-ac51-4286-b46e-2b34e792c3e0
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c7382056922a52e734df61015df85930682d0db0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 317ddc9a284df779a44866c0c037310b29f76d02
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319375"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140735"
 ---
 # <a name="mdschemaactions-rowset"></a>Conjunto de filas MDSCHEMA_ACTIONS
   Describe las acciones que pueden estar disponibles para la aplicación cliente.  
@@ -61,11 +58,11 @@ ms.locfileid: "37319375"
 |-----------------|--------------------|-----------------------|  
 |`CATALOG_NAME`|`DBTYPE_WSTR`|Opcional|  
 |`SCHEMA_NAME`|`DBTYPE_WSTR`|Opcional|  
-|`CUBE_NAME`|`DBTYPE_WSTR`|Obligatorio|  
+|`CUBE_NAME`|`DBTYPE_WSTR`|obligatorio|  
 |`ACTION_NAME`|`DBTYPE_WSTR`|Opcional|  
 |`ACTION_TYPE`|`DBTYPE_I4`|Opcional|  
-|`COORDINATE`|`DBTYPE_WSTR`|Obligatorio|  
-|`COORDINATE_TYPE`|`DBTYPE_I4`|Obligatorio|  
+|`COORDINATE`|`DBTYPE_WSTR`|obligatorio|  
+|`COORDINATE_TYPE`|`DBTYPE_I4`|obligatorio|  
 |`INVOCATION`|`DBTYPE_I4`|(Opcional) La columna de restricción `INVOCATION` tiene como valor predeterminado el valor de `MDACTION_INVOCATION_INTERACTIVE`. Para recuperar todas las acciones, utilice el valor `MDACTION_INVOCATION_ALL` en la columna de restricción `INVOCATION`.|  
 |`CUBE_SOURCE`|`DBTYPE_UI2`|(Opcional) Mapa de bits con uno de los siguientes valores válidos:<br /><br /> -1 CUBO<br />-DIMENSIÓN DE 2<br /><br /> La restricción predeterminada es un valor de 1.|  
   
@@ -74,7 +71,7 @@ ms.locfileid: "37319375"
   
  Las aplicaciones cliente pueden definir más de una `ACTION_TYPE` utilizando el operador OR.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  En la siguiente tabla se recogen las combinaciones válidas de `COORDINATE` y `COORDINATE_TYPE`.  
   
 |Tipo de objeto COORDINATE|COORDINATE_TYPE|  

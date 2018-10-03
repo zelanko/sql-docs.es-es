@@ -1,12 +1,10 @@
 ---
-title: Modificaciones registradas frente a. No registradas modificaciones | Microsoft Docs
+title: Modificaciones registradas frente a No registradas modificaciones | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - text columns [ODBC]
@@ -21,18 +19,17 @@ helpviewer_keywords:
 - ODBC data types, text columns
 - image columns [ODBC]
 ms.assetid: 20aa5b27-4a2c-46e7-8356-beb0eebf4b7e
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 34064aaa2e96a7d610f8709c1f5750bddd62b766
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c722d5360ad01e7e95508c2219ceb674de381286
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420306"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143915"
 ---
-# <a name="logged-vs-unlogged-modifications"></a>Modificaciones registradas frente a. Modificaciones no registradas
+# <a name="logged-vs-unlogged-modifications"></a>Modificaciones registradas frente a modificaciones no registradas
   Una aplicación puede solicitar que el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client no registro **texto**, **ntext**, y **imagen** modificaciones. Sin embargo, se debe tener cautela con esta opción. Debe usarse solo en aquellas situaciones donde la **texto**, **ntext**, o **imagen** datos no son fundamentales y propietarios de los datos están dispuestos a compensar la capacidad para recuperar datos un mayor rendimiento.  
   
  El registro de **texto**, **ntext**, y **imagen** modificaciones se controla mediante una llamada a [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) con el  *Atributo* parámetro establecido en SQL_SOPT_SS_ TEXTPTR_LOGGING y *ValuePtr* establecido en SQL_TL_ON o SQL_TL_OFF.  

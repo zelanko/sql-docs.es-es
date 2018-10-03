@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Column element
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bfd0483abe0b5c5134f34361040cb46e033e6214
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f22dcfcd6fe1cbd37a9383f429f9005b0590c446
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175011"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135367"
 ---
 # <a name="column-element-for-index-dta"></a>Column (DTA, elemento de Index)
   Establece las columnas de una configuración especificada por el usuario en las que se va a crear el índice.  
@@ -47,7 +44,7 @@ ms.locfileid: "37175011"
 |`Type`|Opcional. Especifica el tipo de columna de índice. Utilice un tipo de datos **string** para especificar este atributo mediante uno de los siguientes valores permitidos:<br /><br /> `KeyColumn`:<br />                  Especifica que una clave de índice hace referencia a la columna. Utilice la siguiente sintaxis para establecer este atributo:<br />`<Column Type="KeyColumn">`<br />Para obtener más información sobre las columnas de claves, vea [Índices agrupados y no agrupados descritos](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md).<br /><br /> `IncludedColumn`: Especifica que la columna es una columna incluida (en lugar de una columna de clave). Utilice la siguiente sintaxis para establecer este atributo:<br />`<Column Type="IncludedColumn">`<br />Para obtener más información sobre las columnas incluidas, vea [Crear índices con columnas incluidas](../../relational-databases/indexes/create-indexes-with-included-columns.md).|  
 |`SortOrder`|Opcional. Especifica el orden de la columna. Utilice un tipo de datos **string** para especificar un orden **"Ascending"** (ascendente) o **"Descending"** (descendente), como se muestra a continuación:<br /><br /> `<Column SortOrder="Ascending">`|  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  

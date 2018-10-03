@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - HoldoutMaxCases element
 ms.assetid: 58d94d10-e11e-4368-b3b8-dff23e1947cd
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6eb53625e7f1fd7f595871bf505481cad4145866
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aaf0629b51abf7e8dc4fe6efa5ac6b18a2f166b8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314745"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136815"
 ---
 # <a name="holdoutmaxcases-element"></a>Elemento HoldoutMaxCases
   Especifica el número máximo de casos del origen de datos que se usará para la partición de exclusión que contiene el conjunto de pruebas de un [MiningStructure](../objects/miningstructure-element-assl.md) elemento. Los escenarios restantes en el conjunto de datos se usan para aprendizaje. Un valor 0 indica que no hay ningún límite con respecto al número de casos que se pueden considerar como el conjunto de pruebas.  
@@ -42,7 +39,7 @@ ms.locfileid: "37314745"
 </MiningStructure>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -57,7 +54,7 @@ ms.locfileid: "37314745"
 |Elemento primario|[MiningStructure](../objects/miningstructure-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si especifica los valores de `HoldoutMaxPercent` y `HoldoutMaxCases`, el algoritmo limita el conjunto de pruebas al menor de los dos valores.  
   
  Si `HoldoutMaxCases` está establecido en el valor predeterminado de 0 y no se ha establecido un valor para `HoldoutMaxPercent`, el algoritmo utiliza el conjunto de datos completo para aprendizaje.  

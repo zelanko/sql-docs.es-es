@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IRowsetChange interface
@@ -29,16 +27,15 @@ helpviewer_keywords:
 - XML [SQL Server], SQL Server Native Client
 - COLUMNS rowset
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
-caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1f58b1d71724d36d70bb95a6084a6f4a4fc6f3ef
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 9540e28716ef81717782e05aa98f173b3e47733f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392598"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138095"
 ---
 # <a name="using-xml-data-types"></a>Usar tipos de datos XML
   En [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], se ha introducido un tipo de datos **xml** que permite almacenar fragmentos y documentos XML en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El tipo de datos **xml** es un tipo de datos integrado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y es de algún modo similar a otros tipos integrados, como **int** y **varchar**. Al igual que ocurre con otros tipos integrados, el tipo de datos **xml** puede usarse como un tipo de columna al crear una tabla, como un tipo de variable, un tipo de parámetro, un tipo de valor devuelto por una función o en funciones CAST y CONVERT.  

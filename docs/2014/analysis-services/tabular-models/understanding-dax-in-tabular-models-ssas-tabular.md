@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1c4047c082a890e0ddd2871bbd35d7dbd21d363d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7ecc95a89d3db446122d1da4e9701d1555028fe5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291441"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136025"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>Descripción de DAX en modelos tabulares (SSAS tabular)
   Expresiones de análisis de datos (DAX) es el lenguaje de fórmulas empleado para crear cálculos personalizados en [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para libros de Microsoft Excel y proyectos de modelos tabulares de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Las fórmulas DAX incluyen funciones, operadores y valores para realizar cálculos avanzados sobre datos de tablas y columnas.  

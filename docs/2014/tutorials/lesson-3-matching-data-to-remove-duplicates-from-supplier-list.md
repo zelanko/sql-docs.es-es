@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 059170b6-d62e-4b28-9451-99a0cc7e1f5f
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f244dc7d62f19967aae7ee3bc32a634008fcc94e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c5074a670fa1ab1c6a837f06b5cd27b21707400
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265797"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139602"
 ---
 # <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>Lección 3: buscar datos coincidentes para quitar duplicados de lista de proveedores
   Para preparar la base de conocimiento que se va a usar para realizar la actividad de coincidencia, hay que crear una directiva de coincidencia en la base de conocimiento. Solo puede haber una directiva de coincidencia en una base de conocimiento. Una directiva de coincidencia se compone de una o más reglas de coincidencia. Una regla identifica los dominios implicados en el proceso de coincidencia y especifica el peso que tiene cada valor de dominio sobre en el criterio de coincidencia. En la regla se debe especificar si los valores de dominio deben ser una coincidencia exacta o pueden ser similares, y hasta qué punto. También se especifica si una coincidencia de dominio es un requisito previo para el proceso de coincidencia. Puede probar cada regla por separado y probar toda la directiva con datos de ejemplo. El proceso de pruebas muestra los registros cuyas puntuaciones de coincidencia son mayores que el **puntuación de registro mínima** umbral especificado en la configuración de DQS en un clúster (grupo). Puede seguir modificando las reglas de la directiva hasta que esté satisfecho con los resultados.  

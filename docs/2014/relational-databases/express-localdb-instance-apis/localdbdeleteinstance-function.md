@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - LocalDBDeleteInstance
@@ -17,16 +15,15 @@ api_location:
 topic_type:
 - apiref
 ms.assetid: 37cb2a7e-672a-4223-b6f3-a94d7b8d58cd
-caps.latest.revision: 18
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a3daa2c8b2d6d5ff3bb7af25283b13fc7a38a694
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 537a85f4e67994333fc89ba8d0fcb8b8d5ab2ffa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37318405"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141005"
 ---
 # <a name="localdbdeleteinstance-function"></a>Función LocalDBDeleteInstance
   Quita la instancia de SQL Server Express LocalDB especificada.  
@@ -95,7 +92,7 @@ HRESULT LocalDBDeleteInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  Error inesperado. Vea el registro de eventos para obtener detalles.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para obtener un ejemplo de código que utilice LocalDB API, vea [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Vea también  

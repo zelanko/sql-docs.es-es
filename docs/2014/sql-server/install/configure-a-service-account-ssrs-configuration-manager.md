@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Web service, accounts
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Report Server Windows service, accounts
 - Web service [Reporting Services], report server
 ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a8f16a73e32557345086a3363e619e56891f1c65
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ffc525e4d9ab516481eadf4cc303a704ce56da6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234495"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136385"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>Configurar una cuenta de servicio (Administrador de configuración de SSRS)
   En una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], el servicio web del servidor de informes, el Administrador de informes y la aplicación de procesamiento en segundo plano se ejecutan dentro de un único servicio. La cuenta en la que el servicio se ejecuta se define durante la instalación, al especificar la cuenta en la página Identidad de servicio, pero puede utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si desea usar una cuenta diferente o actualizar la contraseña.  

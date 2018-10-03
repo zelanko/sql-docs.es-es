@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.policy.description.f1
 - sql12.swb.dmf.condition.description.f1
 ms.assetid: 2ef0a556-9566-4af8-849e-ab038b9279cc
-caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c0e967c778d8038f60dc85f4082b069f427316f5
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 78903e24e18295e833a8f601291dba4ff6d0a0d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818861"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143305"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-description-page"></a>Cuadro de diálogo Crear nueva condición o Abrir condición, página Descripción
   Utilice este cuadro de diálogo para agregar una descripción a una condición de la administración basada en directivas.  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ea556bf0bf0f7b1df112443cb7620fa0cb2350ae
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3dfd0d92f5dcf82cbfdd5786fed26e3b41048f8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393061"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136487"
 ---
 # <a name="altering-memory-optimized-tables"></a>Modificar tablas con optimización para memoria
   No se admite la realización de operaciones ALTER en las tablas optimizadas para memoria. Esto incluye operaciones tales como cambiar el bucket_count, agregar o quitar un índice y agregar o quitar una columna. En este tema se proporcionan instrucciones sobre cómo actualizar las tablas optimizadas para memoria.  

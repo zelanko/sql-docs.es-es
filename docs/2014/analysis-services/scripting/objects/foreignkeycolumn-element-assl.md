@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ForeignKeyColumn Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ForeignKeyColumn element
 ms.assetid: 6c00dcc6-8d5b-4293-8b72-c7a22e298c8d
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 824589905f1acf1834e971b8a049005ef1465c26
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f4688ac6efd03e10b5950abcbcc0da99a1cbc5b6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207885"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149795"
 ---
 # <a name="foreignkeycolumn-element-assl"></a>Elemento ForeignKeyColumn (ASSL)
   Identifica la unión a una tabla primaria para un origen de datos relacional.  
@@ -44,7 +41,7 @@ ms.locfileid: "37207885"
 </ForeignKeyColumns>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -59,7 +56,7 @@ ms.locfileid: "37207885"
 |Elementos primarios|[ForeignKeyColumns](../collections/columns-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para obtener más información sobre la `DataItem` tipo, incluida una tabla de objetos de Analysis Services Scripting Language (ASSL) y las propiedades de la `DataItem` , vea [tipo de datos DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
  El elemento que se corresponde con el elemento primario de la colección `ForeignKeyColumns` en el modelo de objetos Objetos de administración de análisis (AMO) es <xref:Microsoft.AnalysisServices.TableMiningStructureColumn>.  

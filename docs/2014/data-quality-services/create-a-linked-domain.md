@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f29f193daee1d3c2124e288d4c52356df7300a6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7213b82f77bf283cf3debf268ed089058b05c7e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259191"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140135"
 ---
 # <a name="create-a-linked-domain"></a>Crear dominio vinculado
   En este tema se describe cómo crear un dominio vinculado en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Los dominios vinculados se crean a partir de otros dominios previamente existentes, y heredan todos los valores, reglas y propiedades de los dominios a los que están vinculados, con la excepción del nombre y la descripción. Es posible administrar un conjunto de dominios vinculados como si fuera un único dominio. Al vincular un dominio al otro, se crea un dominio que hereda su contenido de otro dominio.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Binding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Binding data type
 ms.assetid: 0a777219-b885-4961-ac66-b76faeb520db
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a34209ea08d1cdfd0100bd5e2402edc0f592f066
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2e46d48f94035a59c54a3e9bb9c8ccb087226660
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169546"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135905"
 ---
 # <a name="binding-data-type-assl"></a>Tipo de datos Binding (ASSL)
   Define un tipo de datos primitivo abstracto que representa una relación de dependencia entre dos objetos en los que los datos o metadatos de uno de los objetos dependen de los datos o metadatos de un objeto enlazado.  
@@ -57,7 +54,7 @@ ms.locfileid: "37169546"
 |Elementos secundarios|None|  
 |Elementos derivados|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.Binding>.  
   
  Para obtener más información sobre el enlace de datos, vea [orígenes de datos y enlaces &#40;Multidimensional de SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  

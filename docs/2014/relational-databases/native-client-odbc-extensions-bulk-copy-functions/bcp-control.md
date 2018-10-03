@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_control
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_control function
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
-caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46e834874b35e81791f027b380ab2f905bc8fbde
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 1e20a7ebdffc8972a1c3d1449fd65d2560a1d71b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426424"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145245"
 ---
 # <a name="bcpcontrol"></a>bcp_control
   Cambia la configuración predeterminada de varios parámetros de control para una copia masiva entre un archivo y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -66,7 +63,7 @@ iValue
   
  También se producirá un error de secuencia si se llama a `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)FALSE)` después de llamar a `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)TRUE)` y bcp_writefmt.  
   
- Para obtener más información, consulte [detección de metadatos](../native-client/features/metadata-discovery.md).  
+ Para obtener más información, vea [Detección de metadatos](../native-client/features/metadata-discovery.md).  
   
  BCPFILECP  
  *iValue* contiene el número de la página de códigos del archivo de datos. Puede especificar el número de la página de códigos, como 1252 o 850, o uno de estos valores:  
@@ -140,7 +137,7 @@ iValue
 ## <a name="returns"></a>Devuelve  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Esta función establece varios parámetros de control para operaciones de copia masiva, incluido el número de errores permitidos antes de cancelar una copia masiva, los números de la primera y la última fila que van a copiarse de un archivo de datos y el tamaño del lote.  
   
  Esta función también se utiliza para especificar la instrucción SELECT cuando la copia masiva del conjunto de resultados de una instrucción SELECT no se realiza desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Establecer *eOption* en BCPHINTS y establezca *iValue* para tener un puntero a una cadena SQLTCHAR que contiene la instrucción SELECT.  

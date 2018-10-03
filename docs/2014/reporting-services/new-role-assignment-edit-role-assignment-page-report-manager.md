@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3319ced0-4b86-42af-b18d-da41a625113c
-caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0d1635c6b9c801b5a2ad9a2eff107c3bf35cf23a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e9b964ba4be7587836da9e8852261a43f1e8f43c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179652"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181795"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Nueva asignación de roles y Editar asignación de roles (páginas del Administrador de informes)
   Utilice la página Nueva Asignación de roles o Editar asignación de roles para conceder permisos a operaciones y elementos del servidor de informes. Cada usuario que requiere acceso a un servidor de informes debe poseer una asignación de roles que define el nivel de acceso. Puede crear las asignaciones de roles en el nodo raíz o en un determinado informe, modelo, carpeta, recurso u origen de datos compartido. La seguridad de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se establece a través de asignaciones de roles que se aplican a elementos. Una asignación de roles asocia grupos o usuarios a una definición de roles; cada definición de roles identifica las tareas que los grupos o usuarios pueden realizar respecto a un elemento específico.  

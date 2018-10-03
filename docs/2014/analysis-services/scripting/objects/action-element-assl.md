@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Action Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Action element
 ms.assetid: aaee06a2-91c6-4007-b787-79cb08d63c77
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfc51d797852e80cf7bf501cf3f1d93f2f52c9d9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48a07020a2c4b8bb2fbc79c5c3d67697a30760d7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196015"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166445"
 ---
 # <a name="action-element-assl"></a>Elemento Action (ASSL)
   Contiene información sobre una acción disponible en un [cubo](cube-element-assl.md) elemento o un [perspectiva](perspective-element-assl.md) elemento.  
@@ -48,7 +45,7 @@ ms.locfileid: "37196015"
 </Actions>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -67,7 +64,7 @@ ms.locfileid: "37196015"
 |Elementos primarios|[Acciones](../collections/actions-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>Vea también  

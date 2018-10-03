@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [full-text search], about full-text queries
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - full-text queries [SQL Server]
 - queries [full-text search], functions
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
-caps.latest.revision: 79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78351b4f710d84d6d8cb7f29d1de89d05ee763b8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2e8c8867b932d291415f584f93a09478bbd05725
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229015"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152725"
 ---
 # <a name="query-with-full-text-search"></a>Consultar con búsqueda de texto completo
   Para definir búsquedas de texto completo, las consultas de texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizan los predicados (CONTAINS y FREETEXT) y las funciones (CONTAINSTABLE y FREETEXTTABLE) de texto completo. Estas funciones y predicados admiten la sintaxis [!INCLUDE[tsql](../../includes/tsql-md.md)] enriquecida, que es compatible con diversos formatos de términos de consulta. Para escribir consultas de texto completo, es necesario saber cuándo y cómo deben usarse estos predicados y funciones.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8038c9cbbce2eeb68b6e23b91fba1d7b0a2e708e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c091c115f9e03fbc0f1243e1c2fcf3a075f3586f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151806"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099945"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Implementación escalada horizontalmente (servidor de informes en modo nativo)
   Use la **implementación escalada** página [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager para ver el estado de inicialización para una implementación escalada o para unir un servidor de informes a una implementación escalada. *Implementación escalada* se refiere a dos o más instancias de un servidor de informes que comparten una sola base de datos de servidor de informes.  
@@ -67,7 +64,7 @@ ms.locfileid: "37151806"
   
      En un servidor de informes que ya forme parte de una implementación escalada, puede utilizar esta página para agregar o quitar nodos.  
   
- **Inicializar**  
+ **inicializar**  
  Haga clic en **Inicializar** para agregar un servidor de informes a la implementación escalada. Este paso permite configurar un servidor de informes para usar una clave simétrica en una base de datos de servidor de informes compartida. Utilice la opción **Inicializar** para agregar una instancia del servidor de informes a una implementación de ampliación horizontal.  
   
  Una instancia del servidor de informes está disponible solo si se ha configurado previamente una conexión con la base de datos compartida del servidor de informes. Además, debe realizar la inicialización desde un servidor de informes ya inicializado para utilizar la base de datos del servidor de informes.  

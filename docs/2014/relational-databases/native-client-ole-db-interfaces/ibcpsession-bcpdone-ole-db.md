@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IBCPSession::BCPDone (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPDone method
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50f7fe4d747692ff11ffa130bf48b88d3252c994
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ecbf8d8b11e0804c3621163d38e243bd78259e43
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420714"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137585"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
   Confirma las filas restantes que van a enviarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -36,8 +33,8 @@ ms.locfileid: "37420714"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Notas  
- Ninguna otra operación que se puede llamar en el [IBCPSession](ibcpsession-ole-db.md) interfaz después de llamar a la **BCPDone** método. La única posibilidad es llamar a la [ibcpsession:: BCPInit](ibcpsession-bcpinit-ole-db.md) método para iniciar una nueva operación de copia masiva. Esto es similar a llamar a la [IRowsetFastLoad:: Commit](irowsetfastload-commit-ole-db.md) método.  
+## <a name="remarks"></a>Comentarios  
+ No se puede llamar a ninguna otra operación en la interfaz [IBCPSession](ibcpsession-ole-db.md) después de llamar al método **BCPDone**. La única posibilidad es llamar al método [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) para iniciar una nueva operación de copia masiva. Esto es similar a llamar al método [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md).  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  S_OK  
@@ -65,7 +62,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  Podría utilizar BCP para volver a agregar estos datos a la tabla con el comando siguiente:  
   
- **bcp master.. fltest en este archivo - n -T -S** *server*  
+ **bcp master..fltest in outfile.dat -n -T -S** *server*  
   
  Tendrá que especificar sqlncli11.lib al compilar este ejemplo.  
   

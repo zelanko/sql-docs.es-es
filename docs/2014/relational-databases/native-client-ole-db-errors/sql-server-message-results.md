@@ -1,28 +1,25 @@
 ---
-title: Resultados de los mensajes SQL Server | Microsoft Docs
+title: Resultados de los mensajes SQL Server | Documentos de Microsoft
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, errors
 - errors [OLE DB], SQL Server message results
 - OLE DB error handling, SQL Server message results
 ms.assetid: 6663c6f9-def1-4d9e-845b-2085e5efc401
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f5db120da45f57debacd2717983fe4ea4118cabe
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ff604f4c5d66a5742868e25ba05ca6b4528ddb1a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431844"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145465"
 ---
 # <a name="sql-server-message-results"></a>Resultados de los mensajes de SQL Server
   La siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] no generan instrucciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de filas de proveedor OLE DB de Native Client o un recuento de filas afectadas al ejecutarse:  

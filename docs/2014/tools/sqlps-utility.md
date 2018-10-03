@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sqlps utility
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1082bd587d9c3455733d611a676d901b62741859
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6228b3c146c91fa2990caf8f33b218dfbaf9c3f6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161606"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122555"
 ---
 # <a name="sqlps-utility"></a>sqlps, utilidad
   La utilidad `sqlps` inicia una sesión de Windows PowerShell 2.0 con el proveedor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell y los cmdlets cargados y registrados. Puede escribir scripts o comandos de PowerShell que usen los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell para trabajar con instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y sus objetos.  
@@ -78,7 +75,7 @@ ms.locfileid: "37161606"
  [ **-?** | **-Help** ]  
  Muestra el resumen de la sintaxis de las opciones de la utilidad `sqlps`.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El `sqlps` utilidad inicia el entorno de PowerShell (PowerShell.exe) y carga el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] módulo de PowerShell. El módulo, también denominado `sqlps`, carga y registra estos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] complementos de PowerShell:  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  

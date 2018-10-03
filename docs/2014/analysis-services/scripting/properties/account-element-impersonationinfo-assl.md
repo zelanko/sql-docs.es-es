@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Account Element (ImpersonationInfo)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Account element
 ms.assetid: aa3a1281-e42a-4926-875b-e6b81f4599c3
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4382d0e252fe7c44e7de12832e5a8a8c599e6515
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f454e39a7c4ec4911f38ff070f94fcbe50a34c74
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237535"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190375"
 ---
 # <a name="account-element-impersonationinfo-assl"></a>Elemento Account (ImpersonationInfo) (ASSL)
   Contiene el nombre de la cuenta de usuario para el [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) tipo de datos.  
@@ -44,7 +41,7 @@ ms.locfileid: "37237535"
 </Action>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -59,7 +56,7 @@ ms.locfileid: "37237535"
 |Elementos primarios|[ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor de la `Account` elemento, así como el valor de la [contraseña](password-element-assl.md) elemento, se usa para la suplantación si el valor de la [ImpersonationMode](impersonationmode-element-assl.md) para cualquier elemento derivado de la `ImpersonationInfo` tipo de datos está establecido en *ImpersonateAccount*.  
   
 ## <a name="see-also"></a>Vea también  

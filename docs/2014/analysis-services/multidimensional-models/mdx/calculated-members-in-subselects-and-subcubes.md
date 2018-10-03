@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5681806fd4b7530f3d83d54b21aafb3eeb07b09
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b729fb46b83617f0bcc9b0fc7ea7c93583513da6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323195"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188385"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Miembros calculados en subselecciones y subcubos
   En las versiones anteriores, no se admitían miembros calculados en subselecciones ni subcubos. Sin embargo, a partir de SQL Server 2008 se permiten y habilitan por una propiedad de conexión. Además, se ha introducido un nuevo comportamiento de los miembros calculados en subselecciones y subcubos en SQL Server 2008 R2.  
@@ -122,7 +119,7 @@ Where [Measures].[Reseller Sales Amount]
   
  En los resultados anteriores, los valores agregados para [All Geographies], [United States], [Oregon] y [Washington] proceden de agregar los descendientes de &[Portland]&[OR] y &[Spokane]&[WA]. Nada procede del miembro calculado.  
   
-### <a name="remarks"></a>Notas  
+### <a name="remarks"></a>Comentarios  
  Solo se permiten miembros calculados globales o de sesión en las expresiones de subselección o subcubo. Si existen miembros calculados de consulta en la expresión MDX, se producirá un error cuando se evalúe la expresión de subselección o subcubo.  
   
 ## <a name="see-also"></a>Vea también  

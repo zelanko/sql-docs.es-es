@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8993c4033112dd81be611bc3e2d36bfb1f30243
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f9acdc193b608d42b21c69c380fb21db23ec3b89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304695"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187485"
 ---
 # <a name="powerpivot-usage-data-collection"></a>Recopilación de datos de uso de PowerPivot
   La recopilación de datos de uso es una característica propia de SharePoint para las granjas. PowerPivot para SharePoint usa y extiende este sistema para proporcionar informes en el panel de administración de PowerPivot que muestran cómo se usan los datos y servicios PowerPivot. Según cómo haya instalado SharePoint, la recopilación de datos de uso podría estar desactivada para la granja. El administrador de una granja debe habilitar el registro de uso para crear los datos de uso que aparecen en el Panel de administración de PowerPivot. Para obtener más información sobre cómo habilitar y configurar la recopilación de datos de uso para PowerPivot vea eventos [configurar la recolección de datos de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
@@ -43,7 +40,7 @@ ms.locfileid: "37304695"
   
  **Nota** : compruebe que la recopilación de datos de uso esté habilitada. Para ello, vaya a **Supervisión** en Administración central de SharePoint. Para obtener más información, consulte [configurar la recolección de datos de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
- ![Componentes y procesos de recopilación de datos de uso. ] (../media/gmni-usagedata.gif "Componentes y procesos de recopilación de datos de uso.")  
+ ![Componentes y procesos de recopilación de datos de uso. ](../media/gmni-usagedata.gif "Componentes y procesos de recopilación de datos de uso.")  
   
 |Fase|Descripción|  
 |-----------|-----------------|  

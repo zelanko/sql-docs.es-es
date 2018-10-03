@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ad7d9de63907fb8156631880bb1af8a336412fd0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d2e97c16773cd83d208faf711e7c0bebe8282a3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290891"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107925"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>Cargar datos (complemento MDS para Excel)
   En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], debe cargar datos desde el repositorio MDS en una hoja de cálculo de Excel activa para poder trabajar con él. Cuando termine de trabajar con los datos, publíquelos en el repositorio MDS para que otros usuarios puedan compartirlos.  

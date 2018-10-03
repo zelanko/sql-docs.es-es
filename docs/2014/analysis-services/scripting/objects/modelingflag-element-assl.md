@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ModelingFlag Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ModelingFlag element
 ms.assetid: c9af1b9a-506f-4cc1-acd7-e57698cb672c
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 611a93a27e5f668c9b367eb35d5df9eb454743b8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8137da94a03e560fbed2c263e8e0a10b187fa569
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275441"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118135"
 ---
 # <a name="modelingflag-element-assl"></a>Elemento ModelingFlag (ASSL)
   Contiene una marca de modelado para una columna de una estructura de minería de datos o un modelo de minería.  
@@ -44,7 +41,7 @@ ms.locfileid: "37275441"
 </ModelingFlags>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -59,7 +56,7 @@ ms.locfileid: "37275441"
 |Elementos primarios|[ModelingFlags](../collections/modelingflags-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Un elemento estrechamente relacionado del modelo de objetos Objetos de administración de análisis (AMO) es <xref:Microsoft.AnalysisServices.MiningModelingFlags>.  
   
 ## <a name="see-also"></a>Vea también  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - File Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - File element
 ms.assetid: 3dfd0e9b-746b-4ce5-8a95-610d2e573739
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b75a261f4a86d5a227e1018ad96a40d91db7b6c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5ae3390405bc7a722934f3b3fb3652825b2ea03
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319225"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125455"
 ---
 # <a name="file-element-xmla"></a>Elemento File (XMLA)
   Identifica un archivo que va a usar el elemento primario [copia de seguridad](../xml-elements-commands/backup-element-xmla.md) o [restaurar](../xml-elements-commands/restore-element-xmla.md) comando, o por el elemento primario [ubicación](location-element-xmla.md) elemento.  
@@ -48,7 +45,7 @@ ms.locfileid: "37319225"
 </Backup>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -63,7 +60,7 @@ ms.locfileid: "37319225"
 |Elementos primarios|[Copia de seguridad](../xml-elements-commands/backup-element-xmla.md), [ubicación](location-element-xmla.md), [restaurar](../xml-elements-commands/restore-element-xmla.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento `File` contiene un nombre de archivo UNC y el elemento primario determina el uso del elemento `File`.  
   
  Para los comandos `Backup`, el elemento `File` determina el nombre del archivo de copia de seguridad creado por el comando `Backup`. Si no se especifica una ruta de acceso como parte del nombre de archivo, la ruta de acceso especificada en el `BackupDir` propiedad de configuración para la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] se utiliza. Si el archivo especificado ya existe, se produce un error a menos que el elemento `AllowOverwrite` del comando `Backup` primario esté establecido en `True`.  

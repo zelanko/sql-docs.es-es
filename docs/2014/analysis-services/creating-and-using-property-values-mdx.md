@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - property values [MDX]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - MDX [Analysis Services], property values
 - Multidimensional Expressions [Analysis Services], property values
 ms.assetid: 0cafb269-03c8-4183-b6e9-220f071e4ef2
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b615fcec15421e46157c3d1c4485ca2668b52e8f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 73215fc788e558e8bbbc006eb45f43b2514d21aa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286467"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196005"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>Crear y usar los valores de propiedad (MDX)
   Las expresiones multidimensionales (MDX) admiten propiedades intrínsecas y definidas por el usuario para dimensiones, niveles, miembros y celdas. Las propiedades intrínsecas se utilizan para proporcionar nombres únicos, títulos e incluso formatos y tamaños de fuente para celdas individuales. Por otro lado, las propiedades definidas por el usuario pueden utilizarse para proporcionar casi cualquier tipo de atributo adicional para los miembros.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapparallelproperties.labels.f1
 - "10519"
 ms.assetid: 4560a7e4-e19b-4a6e-8ef4-e963497e01ae
-caps.latest.revision: 6
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 107da5c6037988987beed9794ee1ef172ed17e4c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ba603b2b05108f6b7cd0b4cb7b6a4d65904af678
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258124"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097295"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>Cuadro de diálogo Propiedades de paralelo de mapa, Etiquetas
   Use la **MapParallel propiedades** cuadro de diálogo para cambiar las opciones de etiqueta de la cuadrícula horizontal en la ventanilla del mapa. Un paralelo representa el valor siguiente en función del sistema de coordenadas especificado para la ventanilla:  
@@ -40,7 +37,7 @@ ms.locfileid: "37258124"
  **Mostrar etiquetas**  
  Seleccione esta opción para mostrar etiquetas para los paralelos.  
   
- **Selección de ubicación**  
+ **selección de ubicación**  
  Seleccione una ubicación para mostrar las etiquetas en relación con la parte superior, central e inferior de la ventanilla. La posición predeterminada es **Cerca**.  
   
 -   **Cerca** Muestra las etiquetas en la parte superior.  

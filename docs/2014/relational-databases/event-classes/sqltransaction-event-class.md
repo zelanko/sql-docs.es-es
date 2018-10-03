@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLTransaction event class
 ms.assetid: 4e175aa3-4f3d-4b23-a423-4a7a1bd4e84e
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f817e1893c3a3d0621560bd41a2cd473c6c2a4d8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 17dcca9345ce273e53b58d7dc8237a448f2c957e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238855"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098975"
 ---
 # <a name="sqltransaction-event-class"></a>SQLTransaction, clase de eventos
   Utilice la clase de eventos SQLTransaction para supervisar el inicio y el final de las transacciones, especialmente al probar aplicaciones, desencadenadores o procedimientos almacenados.  

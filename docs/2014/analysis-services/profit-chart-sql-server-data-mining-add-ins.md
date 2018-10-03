@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - accuracy chart
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - mining models, charting
 - mining models, testing
 ms.assetid: 5c902543-4da9-4db3-99d5-4ce04c43d7ef
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1639ed1ad54d8eabc861a8ec9023638ad4289d63
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 618388325ecc552bf38f20603ff9d3c4c432bd1d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297365"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191245"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>Gráfico de beneficios (Complementos de minería de datos de SQL Server)
   ![Botón gráfico de beneficios en la cinta de opciones minería de datos](media/dmc-profitchart.gif "botón gráfico de beneficios en la cinta de opciones minería de datos")  

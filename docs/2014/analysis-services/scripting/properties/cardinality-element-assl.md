@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Cardinality Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Cardinality element
 ms.assetid: 60ac8a26-7c8b-4011-9b9b-a29863779428
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7446923efc15a2fe05f3e8bf8c86a2e9f429a2c1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c75017321a0f00a3e88a74d12336768f1bfc78b3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325085"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197845"
 ---
 # <a name="cardinality-element-assl"></a>Elemento Cardinality (ASSL)
   Indica la cardinalidad de la relación descrita por un [AttributeRelationship](../objects/attributerelationship-element-assl.md) o [RegularMeasureGroupDimension](../data-type/dimension-data-type-assl.md).  
@@ -44,7 +41,7 @@ ms.locfileid: "37325085"
 </AttributeRelationship>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -59,7 +56,7 @@ ms.locfileid: "37325085"
 |Elemento primario|[AttributeRelationship](../objects/attributerelationship-element-assl.md), [RegularMeasureGroupDimension](../data-type/dimension-data-type-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
 |Valor|Descripción|  

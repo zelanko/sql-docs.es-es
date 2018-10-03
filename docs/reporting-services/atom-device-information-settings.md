@@ -4,17 +4,16 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: fe4a56a4-5552-423c-85c1-895e2e212fee
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6eca493656f8254f9306c77efe73e8d7526f57ac
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 34ffe695a79ed0f7c7f71d82238c945723218373
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276050"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629786"
 ---
 # <a name="atom-device-information-settings"></a>Configuración de la información del dispositivo ATOM
   La configuración de información de dispositivo para la extensión de representación Atom admite el envío de un nombre de una fuente Atom y la codificación de caracteres que se usará.  

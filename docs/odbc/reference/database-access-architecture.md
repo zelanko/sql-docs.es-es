@@ -1,13 +1,11 @@
 ---
-title: Arquitectura de acceso a la base de datos | Documentos de Microsoft
+title: Arquitectura de acceso a la base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], database access
@@ -16,18 +14,18 @@ helpviewer_keywords:
 - database access [ODBC]
 - standardizing database access [ODBC]
 ms.assetid: 3811599f-48cb-4205-9fe5-5ab4b240047d
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 69217d94191a51c6b413699337278480a4d4f6a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42fc1d3880e01c435e7991fb5781d0f815a83db5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612294"
 ---
-# <a name="database-access-architecture"></a>Arquitectura de acceso de la base de datos
-Una de las preguntas en el desarrollo de ODBC era qué parte de la arquitectura de acceso de la base de datos para normalizar. La instrucción SQL que se describe en la sección anterior de interfaces de programación: SQL, SQL incrustadas módulos y CLI: son solo una parte de esta arquitectura. De hecho, ya que ODBC se pensada principalmente para conectarse a aplicaciones basadas en PC minicomputadoras y gran sistema DBMS, también había una serie de componentes de red, algunos de los cuales pueden estar normalizado.  
+# <a name="database-access-architecture"></a>Arquitectura de acceso a base de datos
+Una de las preguntas en el desarrollo de ODBC era qué parte de la arquitectura de acceso de base de datos a estandarizar. La instrucción SQL que se describe en la sección anterior de las interfaces de programación, embedded SQL, SQL módulos y CLI: son solo una parte de esta arquitectura. De hecho, dado que ODBC se diseñó principalmente para conectarse a aplicaciones basadas en equipo personal minicomputadoras y mainframe DBMS, también había una serie de componentes de red, algunas de las cuales podrían estar estandarizado.  
   
  Esta sección contiene los temas siguientes.  
   

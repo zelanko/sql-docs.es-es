@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: eb4fc34f5f3d86900111301c133e7339b4684e0a
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: bc968281f9aec0cc86f7b5f8f92fb035d9854af9
+ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348344"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47443149"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurar las cuentas de servicio (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "43348344"
 ## <a name="logon-account-recommendations"></a>Recomendaciones de la cuenta de inicio de sesión  
  En un clúster de conmutación por error, todas las instancias de Analysis Services deben configurarse para utilizar una cuenta de usuario con dominio de Windows. Asigne la misma cuenta a todas las instancias. Para obtener más detalles, consulte [Cómo agrupar en clúster Analysis Services](http://msdn.microsoft.com/library/dn736073.aspx) .  
   
- Las instancias independientes deben usar la cuenta virtual predeterminada, **NT Service\MSSQLServerOLAPService** para la instancia predeterminada, o **NT Service\MSOLAP$ *** nombre de instancia* para una instancia con nombre. Esta recomendación se aplica a las instancias de Analysis Services en todos los modos de servidor, suponiendo que se dispone de un sistema operativo Windows Server 2008 R2 o posterior, y SQL Server 2012 o posterior para Analysis Services.  
+ Las instancias independientes deben usar la cuenta virtual predeterminada: **NT Service\MSSQLServerOLAPService** para la instancia predeterminada o **NT Service\MSOLAP$**_nombre-de-la-instancia_ para una instancia con nombre. Esta recomendación se aplica a las instancias de Analysis Services en todos los modos de servidor, suponiendo que se dispone de un sistema operativo Windows Server 2008 R2 o posterior, y SQL Server 2012 o posterior para Analysis Services.  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Otorgar permisos a Analysis Services  
  En esta sección se describen los permisos que Analysis Services requiere para las operaciones internas y locales, como iniciar el archivo ejecutable, leer el archivo de configuración y cargar bases de datos desde el directorio de datos. Si, en su lugar, busca orientación sobre cómo establecer permisos de acceso a datos externos e interoperabilidad con otros servicios y aplicaciones, consulte [Otorgar permisos adicionales para operaciones específicas del servidor](#bkmk_tasks) (más adelante en este tema).  

@@ -5,21 +5,18 @@ ms.date: 03/14/2018
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-caps.latest.revision: 100
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 68caa38874e4afb83f8babf5bc56737a6c8f4cc1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7dafd722700fa0fe7f1d165d3120a6f35765f9bc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38051943"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627023"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -171,8 +168,7 @@ SQL Server 2014 Standard incluye los cambios siguientes:
 4.  Ejecute el script de migración.  
   
 #### <a name="informational-message-file-access-denied-incorrectly-reported-as-an-error-in-the-sql-server-2014-error-log"></a>El mensaje informativo “acceso a archivo denegado” se notifica incorrectamente como un error en el registro de errores de SQL Server 2014  
-
-            **Problema** : al reiniciar un servidor que tiene bases de datos que contienen tablas optimizadas para memoria, puede ver el siguiente tipo de mensajes de error en el registro de errores de SQL Server 2014:  
+**Problema** : al reiniciar un servidor que tiene bases de datos que contienen tablas optimizadas para memoria, puede ver el siguiente tipo de mensajes de error en el registro de errores de SQL Server 2014:  
   
 ```  
 [ERROR]Unable to delete file C:\Program Files\Microsoft SQL   
@@ -184,23 +180,19 @@ Este mensaje es solo informativo y no se requiere ninguna acción por parte del 
 **Solución alternativa** : ninguna. Este mensaje es meramente informativo.  
   
 #### <a name="missing-index-details-incorrectly-report-included-columns-for-memory-optimized-table"></a>Los detalles de índices que faltan indican incorrectamente columnas incluidas para la tabla optimizada para memoria  
-
-            **Problema** : si SQL Server 2014 detecta que falta un índice para una consulta en una tabla optimizada para memoria, notificará un índice ausente en SHOWPLAN_XML, así como en las DMV de índices que faltan, como sys.dm_db_missing_index_details. En algunos casos, los detalles de los índices que faltan contendrán columnas incluidas. Como todas las columnas se incluyen implícitamente con todos los índices de las tablas optimizadas para memoria, no se permite especificar explícitamente columnas incluidas con índices optimizados para memoria.  
+**Problema** : si SQL Server 2014 detecta que falta un índice para una consulta en una tabla optimizada para memoria, notificará un índice ausente en SHOWPLAN_XML, así como en las DMV de índices que faltan, como sys.dm_db_missing_index_details. En algunos casos, los detalles de los índices que faltan contendrán columnas incluidas. Como todas las columnas se incluyen implícitamente con todos los índices de las tablas optimizadas para memoria, no se permite especificar explícitamente columnas incluidas con índices optimizados para memoria.  
   
-
-            **Solución alternativa** : no especifique la cláusula INCLUDE con índices en tablas optimizadas para memoria.  
+**Solución alternativa** : no especifique la cláusula INCLUDE con índices en tablas optimizadas para memoria.  
   
 #### <a name="missing-index-details-omit-missing-indexes-when-a-hash-index-exists-but-is-not-suitable-for-the-query"></a>Los detalles de índices que faltan omiten índices que faltan si un índice hash existe pero no es adecuado para la consulta  
-
-            **Problema** : si tiene un índice HASH en columnas de una tabla optimizada para memoria a la que se hace referencia en una consulta, pero el índice no se puede usar para la consulta, SQL Server 2014 no notificará siempre un índice que falta en SHOWPLAN_XML y en la DMV sys.dm_db_missing_index_details.  
+**Problema** : si tiene un índice HASH en columnas de una tabla optimizada para memoria a la que se hace referencia en una consulta, pero el índice no se puede usar para la consulta, SQL Server 2014 no notificará siempre un índice que falta en SHOWPLAN_XML y en la DMV sys.dm_db_missing_index_details.  
   
 En concreto, si una consulta contiene predicados de igualdad que implican un subconjunto de las columnas de clave de índice o si contiene predicados de desigualdad que implican las columnas de clave de índice, el índice HASH no se puede usar tal cual y se necesitaría otro índice para ejecutar la consulta de forma eficaz.  
   
 **Solución alternativa** : en caso de que esté usando índices hash, inspeccione las consultas y los planes de consulta para determinar si las consultas pueden beneficiarse de operaciones Index Seek en un subconjunto de la clave de índice, o de operaciones Index Seek en predicados de desigualdad. Si necesita buscar en un subconjunto de la clave de índice, use un índice NO CLÚSTER, o use un índice HASH solamente en las columnas en las que necesita buscar. Si necesita buscar en un predicado de desigualdad, use un índice NO CLÚSTER en lugar de HASH.  
   
 #### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-readcommittedsnapshot-is-set-to-on"></a>Error al usar una tabla optimizada para memoria y una variable de tabla optimizada para memoria en la misma consulta, si la opción de base de datos READ_COMMITTED_SNAPSHOT está establecida en ON  
-
-            **Problema** : si la opción de base de datos READ_COMMITTED_SNAPSHOT está establecida en ON, y tiene acceso a una tabla optimizada para memoria y a una variable de tabla optimizada para memoria en la misma instrucción fuera del contexto de una transacción de usuario, puede aparecer este mensaje de error:  
+**Problema** : si la opción de base de datos READ_COMMITTED_SNAPSHOT está establecida en ON, y tiene acceso a una tabla optimizada para memoria y a una variable de tabla optimizada para memoria en la misma instrucción fuera del contexto de una transacción de usuario, puede aparecer este mensaje de error:  
   
 ```  
 Msg 41359  

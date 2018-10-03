@@ -1,34 +1,31 @@
 ---
-title: Proveedor de persistencia de Microsoft OLE DB (proveedor de servicios de ADO) | Documentos de Microsoft
+title: Proveedor de persistencia OLE DB de Microsoft (proveedor de servicios de ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], OLE DB persistence provider
 - persistence provider [ADO]
 - OLE DB persistence provider [ADO]
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37144f19abfb60d13a24818d8b47a3531affcc08
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3b7ffeec1ca14aa57876ea14cbfdb536d9207c1f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270394"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630783"
 ---
-# <a name="microsoft-ole-db-persistence-provider-overview"></a>Información general sobre el proveedor de persistencia de Microsoft OLE DB
-El proveedor de persistencia de Microsoft OLE DB permite guardar un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto en un archivo y posteriormente restaurar que **Recordset** objeto desde el archivo. Información de esquema, datos y se conservan los cambios pendientes.
+# <a name="microsoft-ole-db-persistence-provider-overview"></a>Introducción al proveedor de persistencia OLE DB de Microsoft
+El proveedor de persistencia de Microsoft OLE DB permite guardar un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) de objetos en un archivo y restaurar más adelante que **Recordset** objeto desde el archivo. Información de esquema, datos y se conservan los cambios pendientes.
 
- Puede guardar la **Recordset** en el formato propietario Advanced Data Table grama (ADTG) o en el formato de lenguaje de marcado Extensible (XML) abierto.
+ Puede guardar el **Recordset** en el formato Advanced Data Table Gram (ADTG) propietario o el formato abierto de Extensible Markup Language (XML).
 
 ## <a name="provider-keyword"></a>Palabra clave del proveedor
  Para invocar este proveedor, especifique la siguiente palabra clave y valor en la cadena de conexión.
@@ -38,21 +35,21 @@ El proveedor de persistencia de Microsoft OLE DB permite guardar un [Recordset](
 ```
 
 ## <a name="errors"></a>Errores
- Los errores siguientes emitidos por este proveedor se pueden detectar en la aplicación.
+ En la aplicación se pueden detectar los errores siguientes emitidos por este proveedor.
 
 |Constante|Descripción|
 |--------------|-----------------|
 |E_BADSTREAM|El archivo abierto no tiene un formato válido (es decir, el formato no es ADTG o XML).|
-|E_CANTPERSISTROWSET|El **Recordset** objeto guardado tiene características que impiden que se va a almacenar.|
+|E_CANTPERSISTROWSET|El **Recordset** objeto guardado tiene características que le impiden que se almacena.|
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Comentarios
  El proveedor de persistencia de Microsoft OLE DB no expone ninguna propiedad dinámica.
 
- Actualmente, sólo parametrizar jerárquica **Recordset** no se pueden guardar los objetos.
+ Actualmente, solo parámetros jerárquicos **Recordset** objetos no se puede guardar.
 
- Para obtener más información acerca del almacenamiento persistente **Recordset** los objetos, vea [persistencia de conjunto de registros](../../../ado/guide/data/more-about-recordset-persistence.md).
+ Para obtener más información acerca del almacenamiento persistente **Recordset** objetos, vea [persistencia de conjunto de registros](../../../ado/guide/data/more-about-recordset-persistence.md).
 
- Cuando se utiliza una secuencia para abrir un **conjunto de registros,** no debería haber ningún parámetro especificada distinto el *origen* parámetro de la **abrir** método.
+ Cuando se utiliza una secuencia para abrir un **Recordset,** no debería haber ningún parámetro especificado no sea el *origen* parámetro de la **abrir** método.
 
 ## <a name="see-also"></a>Vea también
-[Proveedor de persistencia de Microsoft OLE DB (proveedor de servicios ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
+[Proveedor de persistencia OLE DB de Microsoft (proveedor de servicios de ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)

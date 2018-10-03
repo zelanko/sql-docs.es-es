@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.deletelanguagefirm.f1
 ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e018bf778a877ed62612e631951ca92258aaec0e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f3238267021c0fd4054fb9757ea8d00cae6114dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275571"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218947"
 ---
 # <a name="translations-in-multidimensional-models"></a>Traducciones en modelos multidimensionales
   Compatibilidad multilingüe en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se logra mediante el uso de traducciones. Una traducción contiene un identificador de idioma y enlaces para las propiedades de los objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se pueden presentar en varios idiomas. Por ejemplo, puede definir una traducción para una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que presente el título y la descripción de la base de datos en un idioma concreto. Para obtener más información acerca de las traducciones, vea [traducciones de cubos](../multidimensional-models-olap-logical-cube-objects/cube-translations.md).  

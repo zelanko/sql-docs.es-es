@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 581510c786e31ab83399bb1ca0d21dd8391ff547
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5dc70e7c8dba2668ee2ef8bf73dbe7dfb9f26175
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154986"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149865"
 ---
 # <a name="clr-transactions-sample"></a>Ejemplo de transacciones de CLR
   En este ejemplo, se muestra el control de transacciones con las API administradas que se encuentran en el espacio de nombres `System.Transactions` . En especial, se usa la clase `System.Transactions.TransactionScope` para establecer un límite de transacciones con el fin de asegurar que las cifras del inventario no están ajustadas a menos que haya inventario suficiente para cubrir la solicitud y, si lo hay, que la transferencia del inventario de una ubicación a otra se produce de forma indivisible. El registro automático de una transacción distribuida se demuestra registrando los cambios en el inventario en una base de datos de auditoría que está almacenada en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] independiente.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.neuralnet.f1
 ms.assetid: 18d87e7b-a821-40ea-9bd8-c6fecf189a1c
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7cb93ac76fb6213817dcef3530387772e099e0e9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 014dfb18c0ca2b54486e5bf61420aec903b4a258
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297415"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169715"
 ---
 # <a name="neural-network-mining-model-viewer"></a>Red neuronal (Visor de modelos de minería de datos)
   Utilice el **Visor de redes neuronales** para explorar modelos de minería de datos basados en el algoritmo de red neuronal de [!INCLUDE[msCoName](../includes/msconame-md.md)] o en el algoritmo de regresión logística de [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
@@ -44,7 +41,7 @@ ms.locfileid: "37297415"
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**Atributo**|Elija un atributo de entrada en la lista. Si deja la selección de forma predeterminada,  **\<todas >**, el gráfico muestra una lista de entrada todos los atributos, clasificados por su impacto en el atributo de predicción.|  
-|**Value**|Elija un valor para el atributo de entrada.|  
+|**Valor**|Elija un valor para el atributo de entrada.|  
   
  **Salida**  
  Utilice estos controles para elegir un atributo y valor de predicción para analizar y comparar en el gráfico de barras. Si no cambia las selecciones, el gráfico de barras compara los dos estados del resultado superiores.  
@@ -61,7 +58,7 @@ ms.locfileid: "37297415"
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**Atributo**|Muestra el nombre del atributo de entrada seleccionado en **Atributo**.|  
-|**Value**|Muestra el valor del atributo de entrada seleccionado.|  
+|**Valor**|Muestra el valor del atributo de entrada seleccionado.|  
 |**Favorece \<valor 1 >**|Muestra una barra que indica en qué medida esta combinación de atributo-valor afecta al resultado del destino elegido en **Valor 1**.|  
 |**Favorece \<valor 2 >**|Muestra una barra que indica en qué medida esta combinación de atributo-valor afecta al resultado del destino elegido en **Valor 2**.|  
   

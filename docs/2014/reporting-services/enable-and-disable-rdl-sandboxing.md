@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 519d65684224496608ce8ffbaf8130b3f7884967
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f3acf241fbc5737daff76c408159b17b27affe9e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311355"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220665"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Habilitar y deshabilitar el espacio seguro para RDL
   La característica de espacio aislado del lenguaje RDL (Report Definition Language) permite detectar y restringir el uso de tipos específicos de uso de recursos por parte de inquilinos individuales en un entorno donde varios inquilinos usan una única granja web de servidores de informes. Un ejemplo de esto es un escenario de servicios de hospedaje en el que podría mantener una única granja web de servidores de informes que utilicen varios inquilinos, y quizás compañías diferentes. Como administrador del servidor de informes, puede habilitar esta característica para alcanzar los siguientes objetivos:  
@@ -63,7 +60,7 @@ ms.locfileid: "37311355"
 ## <a name="configuration-settings"></a>Parámetros de configuración  
  La siguiente tabla proporciona información acerca de los parámetros de configuración. Los parámetros se presentan en el orden en que aparecen en el archivo de configuración.  
   
-|Configuración|Descripción|  
+|Parámetro|Descripción|  
 |-------------|-----------------|  
 |**MaxExpressionLength**|Número máximo de caracteres permitido en expresiones RDL.<br /><br /> Valor predeterminado: 1000|  
 |**MaxResourceSize**|Número máximo de KB permitido para un recurso externo.<br /><br /> Valor predeterminado: 100|  
@@ -73,7 +70,7 @@ ms.locfileid: "37311355"
 |**Allow**|Tipo o conjunto de tipos que se permitirán en las expresiones RDL.|  
 |**Espacio de nombres**|Atributo de **Allow** que es el espacio de nombres que contiene uno o varios tipos que se aplican a Value. Esta propiedad no distingue entre mayúsculas y minúsculas.|  
 |`AllowNew`|Atributo booleano de **Allow** que controla si se permite que las nuevas instancias del tipo se creen en expresiones RDL o en un elemento **\<Class>** de RDL.<br /><br /> Nota: Cuando `RDLSandboxing` está habilitada, no se pueden crear nuevas matrices en expresiones RDL, independientemente de la configuración `AllowNew`.|  
-|**Value**|Valor de **Allow** que es el nombre del tipo que se permitirá en las expresiones RDL. El valor **\*** indica que se permiten todos los tipos del espacio de nombres. Esta propiedad no distingue entre mayúsculas y minúsculas.|  
+|**Valor**|Valor de **Allow** que es el nombre del tipo que se permitirá en las expresiones RDL. El valor **\*** indica que se permiten todos los tipos del espacio de nombres. Esta propiedad no distingue entre mayúsculas y minúsculas.|  
 |**Miembros**|Para la lista de tipos que se incluyen en el elemento **\<Types>**, la lista de nombres de miembro que no se permiten en las expresiones RDL.|  
 |**Denegar**|Nombre de un miembro que no se permite en expresiones RDL. Esta propiedad no distingue entre mayúsculas y minúsculas.<br /><br /> Nota: Cuando se especifica **Deny** para un miembro, no se permite ningún miembro con este nombre para todos los tipos.|  
   

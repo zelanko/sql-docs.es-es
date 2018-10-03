@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Error Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Error element
 ms.assetid: add670cb-cab2-42be-91a3-d0c385f29d16
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 55b63c016f9f2c61cc83563e697a49a0c4970cae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5b9b961a0d8d5a33cb0869b72e0250dee5456ca7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273741"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210155"
 ---
 # <a name="error-element-xmla"></a>Elemento Error (XMLA)
   Contiene información sobre un error devuelto por una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -63,7 +60,7 @@ ms.locfileid: "37273741"
 </Cell>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -94,7 +91,7 @@ ms.locfileid: "37273741"
 |Source|Opcional `String` atributo (solo cuando `Message` es el elemento primario.) Contiene el nombre del componente que generó el error.|  
 |HelpFile|Opcional `String` atributo (solo cuando `Message` es el elemento primario.) Contiene la ruta de acceso o dirección URL del archivo de Ayuda o tema que describe el error.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Vea también  
  [Elemento Warning &#40;XMLA&#41;](warning-element-xmla.md)   

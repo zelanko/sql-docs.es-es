@@ -1,28 +1,25 @@
 ---
-title: Administrar Service Broker | Microsoft Docs
+title: Administrar Service Broker | Documentos de Microsoft
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Service Broker [SMO]
 ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5aac2ad5d164757a330bb5a5784bb6c99fb48fb1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bbd837c0dc28e1c083a14c21614d174580eb7b0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210865"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219925"
 ---
 # <a name="managing-service-broker"></a>Administrar Service Broker
   En SMO, los objetos [!INCLUDE[ssSB](../../../includes/sssb-md.md)] se encuntran en el espacio de nombres `Microsoft.SqlServer.Management.Smo.Broker`, que requiere una referencia a Microsoft.SqlServer.Smo.dll. También se requiere una referencia a Microsoft.SqlServer.ServiceBrokerEnum.dll para admitir la información de clase.  

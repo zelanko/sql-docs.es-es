@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3dc80b0e2412712b5bd70e036d42ad41fbb43a04
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 050f82b51537cc7d375ddd04a86e67b8e48a9f06
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083557"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192175"
 ---
 # <a name="integration-services-ssis-expressions"></a>Expresiones de Integration Services (SSIS)
   Una expresión es una combinación de símbolos: identificadores, literales, funciones y operadores, que produce un solo valor de datos. Las expresiones simples pueden ser una sola constante, variable o función. Es más frecuente que las expresiones sean complejas, con varios operadores y funciones, y que hagan referencia a varias columnas y variables. En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], se pueden usar expresiones para definir condiciones para las instrucciones CASE, crear y actualizar valores de las columnas de datos, asignar valores a variables, actualizar o llenar propiedades en tiempo de ejecución, definir restricciones en las restricciones de precedencia y proporcionar las expresiones que utiliza el contenedor de bucles For.  
@@ -47,9 +44,9 @@ ms.locfileid: "39083557"
   
 -   Las variables utilizan una expresión para establecer su valor. Por ejemplo, GETDATE() establece el valor de la variable en la fecha actual.  
   
--   Las restricciones de precedencia pueden usar expresiones para especificar las condiciones que determinan si se ejecuta la tarea o el contenedor restringido de un paquete. Las expresiones usadas en una restricción de precedencia deben evaluarse como `true` o `false`. Por ejemplo, la expresión \@un > \@B compara dos variables definidas por el usuario para determinar si se ejecuta la tarea restringida.  
+-   Las restricciones de precedencia pueden usar expresiones para especificar las condiciones que determinan si se ejecuta la tarea o el contenedor restringido de un paquete. Las expresiones usadas en una restricción de precedencia deben evaluarse como `true` o `false`. Por ejemplo, la expresión \@A > \@B compara dos variables definidas por el usuario para determinar si se ejecuta la tarea restringida.  
   
--   El contenedor de bucles For puede usar expresiones para generar las instrucciones de inicialización, evaluación e incremento utilizadas por la estructura de bucle. Por ejemplo, la expresión \@contador = 1 inicializa el contador de bucle.  
+-   El contenedor de bucles For puede usar expresiones para generar las instrucciones de inicialización, evaluación e incremento utilizadas por la estructura de bucle. Por ejemplo, la expresión \@Counter = 1 inicializa el contador de bucles.  
   
  Las expresiones también se pueden utilizar para actualizar los valores de las propiedades de paquetes, contenedores de los bucles For y ForEach, tareas, administradores de conexión de paquetes y proyectos, proveedores de registro y enumeradores ForEach. Por ejemplo, con una expresión de propiedad se puede asignar la cadena "Localhost.AdventureWorks" a la propiedad ConnectionName de la tarea Ejecutar SQL. Para obtener más información, vea [Usar expresiones de propiedad en paquetes](use-property-expressions-in-packages.md).  
   
@@ -59,7 +56,7 @@ ms.locfileid: "39083557"
 ## <a name="expression-builder"></a>Generador de expresiones  
  El Generador de expresiones es una herramienta gráfica para generar expresiones. Está disponible en los cuadros de diálogo **Editor de transformación División condicional**y **Editor de transformación Columna derivada** , y en el cuadro de diálogo **Generador de expresiones** es una herramienta gráfica para generar expresiones.  
   
- El generador de expresiones proporciona carpetas que contienen elementos específicos del paquete y carpetas que contienen las funciones, conversiones de tipo y operadores que proporciona el lenguaje de expresiones. Los elementos específicos del paquete incluyen variables del sistema y variables definidas por el usuario. En los cuadros de diálogo **Editor de transformación División condicional** y **Editor de transformación Columna derivada** , también puede ver columnas de datos. Para crear expresiones para las transformaciones, puede arrastrar elementos de las carpetas a la columna **Condición** o **Expresión** , o bien puede escribir la expresión directamente en la columna. El generador de expresiones agrega automáticamente los elementos de sintaxis necesarios, como el \@ prefijo en los nombres de variable.  
+ El generador de expresiones proporciona carpetas que contienen elementos específicos del paquete y carpetas que contienen las funciones, conversiones de tipo y operadores que proporciona el lenguaje de expresiones. Los elementos específicos del paquete incluyen variables del sistema y variables definidas por el usuario. En los cuadros de diálogo **Editor de transformación División condicional** y **Editor de transformación Columna derivada** , también puede ver columnas de datos. Para crear expresiones para las transformaciones, puede arrastrar elementos de las carpetas a la columna **Condición** o **Expresión** , o bien puede escribir la expresión directamente en la columna. El generador de expresiones agrega automáticamente los elementos de sintaxis necesarios, como el prefijo \@ de los nombres de variables.  
   
 > [!NOTE]  
 >  Los nombres están definidos por el usuario y las variables del sistema distinguen mayúsculas y minúsculas.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - COM-based resolvers [SQL Server replication]
 - custom resolvers [SQL Server replication]
 ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9809787b2a674b176bd7ef21a1091aecdd106d6d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8519b2e1a54854fc90ffbcf9253a9f4007538cea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271171"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217585"
 ---
 # <a name="com-based-custom-resolvers"></a>COM-Based Custom Resolvers
   Los solucionadores personalizados proporcionan más flexibilidad que el mecanismo de resolución predeterminado y pueden implementar la lógica de negocios que necesitan las aplicaciones que utilizan los datos replicados. Un solucionador personalizado para COM es una biblioteca de vínculos dinámicos (DLL) que implementa la interfaz COM **ICustomResolver** , sus métodos y propiedades, y otras interfaces de soporte y definiciones de tipos especialmente diseñadas para la resolución de conflictos.  

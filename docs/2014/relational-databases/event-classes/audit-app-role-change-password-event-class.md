@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit App Role Change Password event class
 ms.assetid: 28a76c12-e997-48bb-bb0e-9624237a188e
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2646de3b006d75af543a204d1627d760e95fb913
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3b53586ad213542db7b355167b3a4b7fb36f7bf7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37281851"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213715"
 ---
 # <a name="audit-app-role-change-password-event-class"></a>Audit App Role Change Password, clase de eventos
   La clase de eventos **Audit App Role Change Password** se produce cuando se cambia la contraseña de un rol de aplicación.  

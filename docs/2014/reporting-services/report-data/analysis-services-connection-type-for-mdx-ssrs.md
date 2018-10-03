@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e3e40443fc2691c33a1d40603b932a4ac031d0a1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2854a9742a7d864a73624a4676b6c0778ee182a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246315"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222745"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Tipo de conexión de Analysis Services para MDX (SSRS)
   Para incluir en el informe datos de un cubo de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , debe tener un conjunto de datos basado en un origen de datos de informe de tipo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Este tipo de origen de datos integrado está basado en la extensión de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Puede recuperar metadatos sobre dimensiones, jerarquías, niveles, indicadores clave de rendimiento (KPI), medidas y atributos desde un cubo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para usarlos como datos de informe.  

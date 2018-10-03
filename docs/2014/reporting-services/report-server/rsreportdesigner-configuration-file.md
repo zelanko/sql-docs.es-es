@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
 - RSReportDesigner configuration file
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
-caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9a19c05387c61e96573ec9525d8e0cab2eb7c8ec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ad5a5660e642c13a604b9fdb1a7e5aac516686ed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255557"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211713"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>archivo de configuración RSReportDesigner
   En el archivo RSReportDesigner.config se almacenan las configuraciones de las extensiones de representación y procesamiento de datos disponibles para el Diseñador de informes. Información de la extensión de procesamiento de datos se almacena en el `Data` elemento. La información de la extensión de representación se almacena en el elemento `Render`. El elemento `Designer` enumera los generadores de consultas que se utilizan en el Diseñador de informes.  
@@ -58,11 +55,11 @@ ms.locfileid: "37255557"
   
 ## <a name="configuration-settings"></a>Parámetros de configuración  
   
-|Configuración|Descripción|  
+|Parámetro|Descripción|  
 |-------------|-----------------|  
 |`SecureConnectionLevel`|Especifica el grado de seguridad de la conexión al servicio web. El intervalo de valores válidos es de 0 a 3, donde 0 es el menos seguro. Para más información, consulte [Using Secure Web Service Methods](../report-server-web-service/net-framework/using-secure-web-service-methods.md).|  
 |`InstanceName`|Identificador del servidor de vista previa. No modifique este valor.|  
-|`SessionCookies`|Especifica si el servidor de informes utiliza cookies del explorador para mantener información de la sesión. Los valores válidos incluyen `true` y `false`. El valor predeterminado es `true`. Si este valor se establece en false, los datos de la sesión se almacenan en la base de datos **reportservertempdb** .|  
+|`SessionCookies`|Especifica si el servidor de informes utiliza cookies del explorador para mantener información de la sesión. Los valores válidos incluyen `true` y `false`. De manera predeterminada, es `true`. Si este valor se establece en false, los datos de la sesión se almacenan en la base de datos **reportservertempdb** .|  
 |`SessionTimeoutMinutes`|Especifica el período durante el cual una cookie de sesión es válida. El valor predeterminado es 3 minutos.|  
 |`PolicyLevel`|Especifica el archivo de configuración de la directiva de seguridad. El valor válido es Rspreviewpolicy.config. Para obtener más información, vea [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md).|  
 |`CacheDataForPreview`|Cuando se establece en `True`, el Diseñador de informes almacena los datos en un archivo de caché en el equipo local. Los valores válidos son `True` (valor predeterminado) y `False`. Para más información, consulte [Previewing Reports](../reports/previewing-reports.md).|  

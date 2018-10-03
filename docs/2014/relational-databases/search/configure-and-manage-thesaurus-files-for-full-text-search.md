@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
-caps.latest.revision: 82
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 19ca1d323f2b0e53e458aa808f791936b823eef7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a6d6197cb525ba4ad395da590ea113bdd0a1f0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164266"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220345"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurar y administrar archivos de sinónimos para búsquedas de texto completo
   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultas de texto completo pueden buscar sinónimos de los términos especificados por el usuario mediante el uso de un diccionario de sinónimos. Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *sinónimos* define un conjunto de sinónimos para un idioma específico. Los administradores del sistema pueden definir dos formatos de sinónimos: conjuntos de expansión y conjuntos de reemplazo. Al desarrollar un diccionario de sinónimos personalizado para los datos de texto completo, puede ampliar de forma eficaz el ámbito de las consultas de texto completo en esos datos. Coincidencia de diccionario de sinónimos tiene lugar para todas [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) y [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) consultas y para cualquier [CONTAINS](/sql/t-sql/queries/contains-transact-sql) y [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) consultas que Especifique la cláusula FORMSOF THESAURUS.  

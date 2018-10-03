@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Filter Element (Binding)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Filter element
 ms.assetid: 3d4cd169-2903-4266-8541-540ece424b7b
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ca1fe43bfe98061065cda1da5b1ff64772a4751d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0fe300ea7c88924fd463968cae680ded50ebb610
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291311"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209955"
 ---
 # <a name="filter-element-binding-assl"></a>Elemento Filter (Binding) (ASSL)
   Contiene una expresión MDX (Expresiones multidimensionales) que filtra el contenido del elemento primario.  
@@ -46,7 +43,7 @@ ms.locfileid: "37291311"
 </CubeDimensionBinding>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37291311"
 |Elementos primarios|[CubeDimensionBinding](../data-type/binding-data-type-assl.md), [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para obtener más información sobre la `Binding` tipo, incluidas las tablas de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos de Scripting Language (ASSL) de la `Binding` tipo y la jerarquía de herencia de `Binding` tipos, vea [tipo de datos de enlace &#40;ASSL &#41;](../data-type/binding-data-type-assl.md).  
   
  Para obtener información general de los enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;Multidimensional de SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  

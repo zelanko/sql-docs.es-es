@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -32,16 +30,15 @@ helpviewer_keywords:
 - UDTs [CLR integration], registering
 - ADD FILE clause
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
-caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1307f5b351ab77e9fb61160f4a0ad73a5eb06eb6
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 158f71abbe82a3b15b497ea8cbd6e74aec2ed6ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351537"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216195"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Registrar tipos definidos por el usuario en SQL Server
   Para poder usar un tipo definido por el usuario (UDT) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe registrarlo. El registro de un UDT implica el registro del ensamblado y la creación del tipo en la base de datos en la que desea usarlo. El ámbito de los UDT es una sola base de datos, por lo que no pueden usarse en varias bases de datos a menos que se registren un ensamblado y UDT idénticos en cada base de datos. Una vez que haya registrado el ensamblado UDT y que haya creado el tipo, podrá usar el UDT en [!INCLUDE[tsql](../../includes/tsql-md.md)] y en el código del cliente. Para obtener más información, vea [Tipos definidos por el usuario de CLR](clr-user-defined-types.md).  
@@ -180,7 +177,7 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  **file_id**  
  Número que identifica cada objeto, con el primer objeto asociado a un determinado **assembly_id** que se le asigna el valor de 1. Si hay varios objetos asociados con el mismo **assembly_id**, a continuación, cada **file_id** valor se incrementa en 1.  
   
- **contenido**  
+ **Contenido**  
  Representación hexadecimal del ensamblado o archivo.  
   
  Puede usar la función CAST o CONVERT para convertir el contenido de la **contenido** columna en texto legible. La consulta siguiente convierte el contenido del archivo Point.cs en texto legible, utilizando el nombre de la cláusula WHERE para restringir el conjunto de resultados a una única fila.  

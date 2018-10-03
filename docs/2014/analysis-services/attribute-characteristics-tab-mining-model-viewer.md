@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.naivebayse.characteristics.f1
 ms.assetid: f0c3350d-84c0-4ab8-9fb8-1527c2647299
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc627e45bdf57b956dd55795b48dde642eed4bf7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 724ac86a4566bac4647e8e7358608c0f5e4ccd85
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234265"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195615"
 ---
 # <a name="attribute-characteristics-tab-mining-model-viewer"></a>Pestaña Características del atributo (Visor de modelos de minería de datos)
   Utilice el panel **Características del atributo** para explorar las relaciones entre los resultados y los atributos de entrada en un modelo Bayes Naïve. Puede elegir el valor del atributo de destino y, a continuación, ver una lista de los atributos de entrada que tienen el efecto más fuerte sobre los resultados.  
@@ -41,7 +38,7 @@ ms.locfileid: "37234265"
  **Atributo**  
  Elija el atributo de predicción que desee analizar.  
   
- **Value**  
+ **Valor**  
  Elija un estado para el atributo de predicción establecido en **Atributo**. Dado que los modelos Bayes Naïve no admiten variables continuas, todos los atributos de destino tienen resultados discretos o de datos discretos. El atributo Missing siempre se agrega automáticamente a la lista.  
   
  **Las características de \<estado de predicción >**  

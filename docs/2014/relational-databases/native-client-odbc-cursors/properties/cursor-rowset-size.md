@@ -1,28 +1,25 @@
 ---
-title: Tamaño del conjunto de filas del cursor | Microsoft Docs
+title: Tamaño del conjunto de filas del cursor | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], rowset size
 - ODBC cursors, rowset size
 - rowsets [ODBC]
 ms.assetid: 2febe2ae-fdc1-490e-a79f-c516bc8e7c3f
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c683ec4cf8b7fd430e9bddd0d126cc132880975f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: bff145e7e3c6e429ca0877c81c5188b02e428809
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412309"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143045"
 ---
 # <a name="cursor-rowset-size"></a>Tamaño del conjunto de filas del cursor
   Los cursores ODBC no están limitados a capturar una fila cada vez. Pueden recuperar varias filas en cada llamada a **SQLFetch** o [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md). Cuando se trabaja con una base de datos cliente/servidor, como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de Microsoft, resulta más eficaz capturar varias filas a la vez. El número de filas devueltas en una operación de captura se denomina el tamaño del conjunto de filas y se especifica mediante el SQL_ATTR_ROW_ARRAY_SIZE de [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md).  

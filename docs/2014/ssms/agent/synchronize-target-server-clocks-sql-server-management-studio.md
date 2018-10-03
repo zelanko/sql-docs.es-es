@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, target servers
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - synchronization [SQL Server], target server clocks
 - target servers [SQL Server], clock synchronization
 ms.assetid: 4fb80502-d271-4d06-bcbc-bfbbceb5f2a2
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 35b86d27387aae047eddaef4cdae46efe4116c66
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 6fc706c6313258844dd015421e69828f996c0f1c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810191"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210725"
 ---
 # <a name="synchronize-target-server-clocks-sql-server-management-studio"></a>Sincronizar los relojes de los servidores de destino (SQL Server Management Studio)
   En este tema se describe cómo sincronizar los relojes de los servidores de destino en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] con el reloj del servidor maestro mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La sincronización de los relojes del sistema admite la programación de trabajos.  

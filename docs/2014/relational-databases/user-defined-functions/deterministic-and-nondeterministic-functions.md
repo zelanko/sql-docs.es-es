@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - built-in functions [SQL Server]
@@ -18,12 +16,12 @@ ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f7b60f44d1ee8cf4224fd4b4bd24a0cba5862e4c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5463ac19caf9a82e48dd59c4ba05873587b74324
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423510"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214715"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Funciones deterministas y no deterministas
   Las funciones deterministas devuelven siempre el mismo resultado cada vez que se invocan con un conjunto específico de valores de entrada y cuando el estado de la base de datos es el mismo. Las funciones no deterministas pueden devolver resultados diferentes cada vez que se llaman con un conjunto específico de valores de entrada aunque el estado de la base de datos a la que tienen acceso permanezca sin cambios. Por ejemplo, la función AVG siempre devuelve el mismo resultado dadas las condiciones indicadas anteriormente pero la función GETDATE, que devuelve el valor datetime actual, siempre devuelve un resultado diferente.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Template
 ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: adc7d7a6700373227d5508cbd77e4101a0051ba9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eaee265571f647c4908a42634a45fc91b355d7bf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268991"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209285"
 ---
 # <a name="qntemplate-event-class"></a>QN:Template (clase de eventos)
   El evento QN:Template ofrece información acerca del uso interno de plantillas de consulta. Las plantillas de consulta son el mecanismo que utiliza el [!INCLUDE[ssDE](../../includes/ssde-md.md)] para compartir las definiciones de una consulta para su notificación. Estas plantillas se crean junto con tablas de parámetros. [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea un evento de este tipo cuando se crea, utiliza o destruye una plantilla de consulta.  

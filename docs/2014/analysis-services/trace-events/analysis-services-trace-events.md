@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
 - event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4c4631e20227cb1d3aeba34337d7b36c8a84c62
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f9d20abf0f811b06ec380b1d4ba984c2f6d7eb87
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163447"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153495"
 ---
 # <a name="analysis-services-trace-events"></a>Eventos de seguimiento de Analysis Services
   Puede seguir la actividad de una instancia de Microsoft SQL Server Analysis Services (SSAS) capturando y analizando los eventos de seguimiento generados por la instancia.  Los eventos de seguimiento están agrupados para que pueda encontrar más fácilmente aquellos que estén relacionados.  Cada uno de los eventos de seguimiento contiene un conjunto de datos sobre el evento; no todos los datos están relacionados con todos los eventos.  

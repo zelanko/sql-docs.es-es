@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b923b9b27fd7b67d61b25956f3d44102f1a5f79
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ef3beb381aa9cb5f6638920826d92bf01624e96
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158026"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144195"
 ---
 # <a name="full-text-search"></a>Búsqueda de texto completo
   La búsqueda de texto completo en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] permite a los usuarios y aplicaciones ejecutar consultas de texto completo en datos basados en caracteres en las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para que las consultas de texto completo se puedan ejecutar en una tabla determinada, el administrador de bases de datos debe crear un índice de texto completo en la tabla. El índice de texto completo incluye una o varias columnas de caracteres en la tabla. Estas columnas pueden tener cualquiera de los siguientes tipos de datos: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, o `varbinary(max)` y FILESTREAM. Cada índice de texto completo indiza una o varias columnas de la tabla base y cada columna puede usar un idioma concreto.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f9160b48-3beb-439c-9694-f084e1afa625
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 61592c58fd629ef705e044a13c7a2bd90cca8ae2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bdc6b3aa34ae3d2a75e78fe70862d3186c959f82
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244095"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223315"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>Examinar un modelo Bayes naive
   Al abrir un modelo de Naïve Bayes con **examinar**, el modelo se muestra en un visor interactivo con cuatro paneles diferentes. El visor se usa para explorar las correlaciones y obtener información sobre el modelo y los datos subyacentes.  

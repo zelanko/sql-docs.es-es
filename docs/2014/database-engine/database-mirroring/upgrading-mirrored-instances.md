@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server, rolling upgrade of mirrored databases
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
-caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ba14393c7b8281ae5a9e3a141e7a3e9bd28d0399
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a0ac6ea9d3437e22a1493c9888ccb75e7996f1c5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300825"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219865"
 ---
-# <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Minimizar el tiempo de inactividad para las bases de datos reflejadas al actualizar instancias de servidor
+# <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Minimizar el tiempo de inactividad de las bases de datos reflejadas al actualizar instancias de servidor
   Al actualizar instancias de servidor [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede reducir el tiempo de inactividad de cada base de datos reflejada a solo una sola conmutación por error manual realizando una actualización secuencial, conocido como un *actualización gradual*. Una actualización gradual es un proceso de varias etapas que, en su forma más simple, implica la actualización de la instancia de servidor que está actuando actualmente como servidor reflejado en una sesión de creación de reflejo, la conmutación por error manual de la base de datos reflejada, la actualización del servidor principal anterior y la reanudación de la creación de reflejo. En la práctica, el proceso exacto dependerá del modo de funcionamiento y del número y diseño de la sesión de creación de reflejo que se ejecute en las instancias de servidor que va a actualizar.  
   
 > [!NOTE]  

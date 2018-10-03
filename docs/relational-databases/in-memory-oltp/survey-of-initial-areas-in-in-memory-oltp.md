@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 09/05/2017"
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fed5bcf08a4be00896e3d59b79494fcaffca5c63
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 581da1ec4f3b42a9b71f4f8fedc5a22100d6ff2f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43111730"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596133"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Encuesta de áreas iniciales de OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -365,22 +361,18 @@ Las siguientes subsecciones describen brevemente cómo funcionan las caracterís
 ### <a name="how-memory-optimized-tables-perform-faster"></a>¿Cómo funcionan las tablas optimizadas para memoria más rápido?  
   
   
-
-            **Doble naturaleza:** Una tabla optimizada para memoria tiene una doble naturaleza: una representación en memoria activa y la otra en el disco duro. Cada transacción se confirma con ambas representaciones de la tabla. Las transacciones funcionan en la representación memoria activa mucho más rápida. Las tablas con optimización para memoria se benefician de la mayor velocidad de la memoria activa en comparación con el disco. Además, la mayor agilidad de la memoria activa hace práctica una estructura de tabla más avanzada que se optimiza para velocidad. La estructura avanzada tampoco tiene páginas, por lo que evita la sobrecarga y la contención de bloqueos temporales y bloqueos por subproceso.  
+**Doble naturaleza:** Una tabla optimizada para memoria tiene una doble naturaleza: una representación en memoria activa y la otra en el disco duro. Cada transacción se confirma con ambas representaciones de la tabla. Las transacciones funcionan en la representación memoria activa mucho más rápida. Las tablas con optimización para memoria se benefician de la mayor velocidad de la memoria activa en comparación con el disco. Además, la mayor agilidad de la memoria activa hace práctica una estructura de tabla más avanzada que se optimiza para velocidad. La estructura avanzada tampoco tiene páginas, por lo que evita la sobrecarga y la contención de bloqueos temporales y bloqueos por subproceso.  
   
   
-
-            **No hay bloqueos:** La tabla optimizada para memoria se basa en un enfoque *optimista* de los objetivos de la competencia de integridad de datos frente a la simultaneidad y el alto rendimiento. Durante la transacción, la tabla no coloca bloqueos en ninguna versión de las filas de datos actualizadas. Esto puede reducir considerablemente la contención en algunos sistemas de gran volumen.  
+**No hay bloqueos:** La tabla optimizada para memoria se basa en un enfoque *optimista* de los objetivos de la competencia de integridad de datos frente a la simultaneidad y el alto rendimiento. Durante la transacción, la tabla no coloca bloqueos en ninguna versión de las filas de datos actualizadas. Esto puede reducir considerablemente la contención en algunos sistemas de gran volumen.  
   
   
-
-            **Versiones de fila:** En lugar de bloqueos, la tabla optimizada para memoria agrega una nueva versión de una fila actualizada en la propia tabla, no en tempdb. La fila original se mantiene hasta que se confirma la transacción. Durante la transacción, otros procesos pueden leer la versión original de la fila.  
+**Versiones de fila:** En lugar de bloqueos, la tabla optimizada para memoria agrega una nueva versión de una fila actualizada en la propia tabla, no en tempdb. La fila original se mantiene hasta que se confirma la transacción. Durante la transacción, otros procesos pueden leer la versión original de la fila.  
   
 - Cuando se crean varias versiones de una fila para una tabla basada en disco, las versiones de fila se almacenan temporalmente en tempdb.  
   
   
-
-            **Menos tareas de registro:** Las versiones anterior y posterior de las filas actualizadas se mantienen en la tabla optimizada para memoria. El par de filas proporciona gran parte de la información que tradicionalmente se escribe en el archivo de registro. Esto permite al sistema escribir menos información y con menos frecuencia en el registro. Aún así, la integridad transaccional está garantizada.  
+**Menos tareas de registro:** Las versiones anterior y posterior de las filas actualizadas se mantienen en la tabla optimizada para memoria. El par de filas proporciona gran parte de la información que tradicionalmente se escribe en el archivo de registro. Esto permite al sistema escribir menos información y con menos frecuencia en el registro. Aún así, la integridad transaccional está garantizada.  
   
   
 <a name="how-do-native-procs-perform-faster-35x"></a>  
@@ -406,8 +398,7 @@ En el resto de esta sección se enumeran algunas de las consideraciones principa
 ### <a name="trade-offs-of-memory-optimized-tables"></a>Ventajas e inconvenientes de las tablas optimizadas para memoria  
   
   
-
-            **Calcular la memoria:** Debe calcular la cantidad de memoria activa que consumirá la tabla optimizada para memoria. El equipo debe tener la capacidad de memoria suficiente para hospedar una tabla optimizada para memoria. Para obtener detalles, vea:  
+**Calcular la memoria:** Debe calcular la cantidad de memoria activa que consumirá la tabla optimizada para memoria. El equipo debe tener la capacidad de memoria suficiente para hospedar una tabla optimizada para memoria. Para obtener detalles, vea:  
   
 - [Supervisar y solucionar problemas de uso de memoria](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)  
 - [Estimar los requisitos de memoria para las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  

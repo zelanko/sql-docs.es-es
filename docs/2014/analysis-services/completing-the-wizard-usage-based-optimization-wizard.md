@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.finish.f1
 ms.assetid: 7393f846-7195-4cd3-95cd-83d102841e2e
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45f284fd0c7d6aecbe3a07bb4694164192ff8289
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 02628703bebc6b797e3eeada2ea7bb6e467236c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187632"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051105"
 ---
 # <a name="completing-the-wizard-usage-based-optimization-wizard"></a>Finalización del asistente (Asistente para optimización basada en el uso)
   Use la página **Finalización del asistente** para guardar el diseño de agregaciones y asignarlo a las particiones seleccionadas. Opcionalmente, también puede procesar las particiones seleccionadas cuando el Asistente para optimización basada en el uso termine de diseñar y guardar las agregaciones.  

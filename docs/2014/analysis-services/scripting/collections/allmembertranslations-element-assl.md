@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AllMemberTranslations Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AllMemberTranslations element
 ms.assetid: 982ee2bf-c88d-4da5-a679-7a6b08a48a0d
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 977168f25f81c1755b6c25e442bae4b7e6e3bfa7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0fbb23d215ee8808bae2ad5255447b6384fa7a96
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171546"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075275"
 ---
 # <a name="allmembertranslations-element-assl"></a>Elemento AllMemberTranslations (ASSL)
   Contiene la colección de [traducción](../objects/translation-element-assl.md) elementos para el título del miembro All de un [jerarquía](../objects/hierarchy-element-assl.md) elemento.  
@@ -49,7 +46,7 @@ ms.locfileid: "37171546"
 </Hierarchy>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -64,7 +61,7 @@ ms.locfileid: "37171546"
 |Elemento primario|[Hierarchy](../objects/hierarchy-element-assl.md)|  
 |Elementos secundarios|[AllMemberTranslation](../objects/allmembertranslation-element-assl.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento correspondiente al elemento primario de `AllMemberTranslations` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Hierarchy>.  
   
 ## <a name="see-also"></a>Vea también  

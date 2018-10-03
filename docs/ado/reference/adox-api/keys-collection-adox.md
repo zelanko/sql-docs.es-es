@@ -1,13 +1,11 @@
 ---
-title: Claves de colección (ADOX) | Documentos de Microsoft
+title: Claves de colección (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,30 +14,29 @@ f1_keywords:
 helpviewer_keywords:
 - Keys collection [ADOX]
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 613c1579c2aacd99ff1f7dabf92d11bd6585c9eb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ee70ddd7b3aa7fc1455eeefbf7913a24f73d0f03
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286564"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715353"
 ---
 # <a name="keys-collection-adox"></a>Colección de claves (ADOX)
 Todos los contiene [clave](../../../ado/reference/adox-api/key-object-adox.md) objetos de un [tabla](../../../ado/reference/adox-api/table-object-adox.md).  
   
-## <a name="remarks"></a>Notas  
- El [anexado](../../../ado/reference/adox-api/append-method-adox-keys.md) método para un [colección Keys](../../../ado/reference/adox-api/keys-collection-adox.md) es único para ADOX. Puede hacer lo siguiente:  
+## <a name="remarks"></a>Comentarios  
+ El [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) método para un [colección Keys](../../../ado/reference/adox-api/keys-collection-adox.md) es único para ADOX. Puede hacer lo siguiente:  
   
--   Agregue una nueva clave a la colección con el [anexado](../../../ado/reference/adox-api/append-method-adox-keys.md) método.  
+-   Agregue una nueva clave a la colección con el [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) método.  
   
- Las propiedades y los métodos restantes son estándar para colecciones de ADO. Puede hacer lo siguiente:  
+ Las propiedades y métodos restantes son estándar para colecciones de ADO. Puede hacer lo siguiente:  
   
 -   Acceso a una clave de la colección con el [elemento](../../../ado/reference/ado-api/item-property-ado.md) propiedad.  
   
--   Devolver el número de claves incluidas en la colección con el [recuento](../../../ado/reference/ado-api/count-property-ado.md) propiedad.  
+-   Devuelve el número de claves incluidas en la colección con el [recuento](../../../ado/reference/ado-api/count-property-ado.md) propiedad.  
   
 -   Quitar una clave de la colección con el [eliminar](../../../ado/reference/adox-api/delete-method-adox-collections.md) método.  
   
@@ -50,6 +47,6 @@ Todos los contiene [clave](../../../ado/reference/adox-api/key-object-adox.md) o
 -   [Eventos, métodos y propiedades de la colección de índices](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Anexar de teclas de método, tipo de clave, RelatedColumn, RelatedTable y ejemplo de las propiedades UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Propiedades de la colección de claves, métodos y eventos](../../../ado/reference/adox-api/keys-collection-properties-methods-and-events.md)   
+ [Append de claves, método, tipo de clave, RelatedColumn, RelatedTable y UpdateRule propiedades (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Los eventos, métodos y propiedades de la colección de claves](../../../ado/reference/adox-api/keys-collection-properties-methods-and-events.md)   
  [Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

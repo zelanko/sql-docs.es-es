@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - + (add)
 - add operator (+)
 - adding expressions
 ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2b7b971521991be68d69efd2519b423958ef4fbf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 68222335dadbbccabd0bf53282fe9df4c7e6045c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248865"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080105"
 ---
 # <a name="-add-ssis"></a>+ (Sumar) (SSIS)
   Suma dos expresiones numéricas.  
@@ -43,7 +40,7 @@ numeric_expression1 + numeric_expression2
 ## <a name="result-types"></a>Tipos de resultado  
  Determinados por los tipos de datos de los dos argumentos. Para más información, consulte [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si alguno de los operandos es NULL, el resultado será NULL.  
   
 ## <a name="expression-examples"></a>Ejemplos de expresiones  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - restores [AMO]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - traces [AMO]
 - backups [AMO]
 ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6ff888c133491bfca9569daf08dc76e54e14d6d1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 52148a4fb28988160858b7a74a7094797c1f0b34
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180882"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069815"
 ---
 # <a name="amo-other-classes-and-methods"></a>Otras clases y métodos de AMO
   Esta sección contiene clases comunes que no son específicas de OLAP o de minería de datos, y que son útiles cuando se administran los objetos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Estas clases incluyen características como procedimientos almacenados, seguimientos, excepciones y copias de seguridad y restauración.  

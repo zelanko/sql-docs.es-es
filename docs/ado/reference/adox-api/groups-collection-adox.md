@@ -1,13 +1,11 @@
 ---
-title: Grupos de colección (ADOX) | Documentos de Microsoft
+title: Grupos de colección (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,39 +15,38 @@ f1_keywords:
 helpviewer_keywords:
 - Groups collection [ADOX]
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 253cf76adf8f32734b4bd878cb2f623e79489ccb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e6b8aea077af67c882830220da9ce24b802e25e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285974"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801435"
 ---
 # <a name="groups-collection-adox"></a>Colección de grupos (ADOX)
-Todos los contiene almacenados [grupo](../../../ado/reference/adox-api/group-object-adox.md) objetos de un catálogo o un usuario.  
+Todos los contiene almacenan [grupo](../../../ado/reference/adox-api/group-object-adox.md) objetos de un catálogo o el usuario.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **grupos** colección de un [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) todas las cuentas de grupo del catálogo representa. El **grupos** colección para un [usuario](../../../ado/reference/adox-api/user-object-adox.md) representa sólo el grupo al que pertenece el usuario.  
   
- El [anexado](../../../ado/reference/adox-api/append-method-adox-groups.md) método para un **grupos** colección es única para ADOX. Puede hacer lo siguiente:  
+ El [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) método para un **grupos** colección es único para ADOX. Puede hacer lo siguiente:  
   
--   Agregar un nuevo grupo de seguridad a la colección con el **anexado** método.  
+-   Agregar un nuevo grupo de seguridad a la colección con el **Append** método.  
   
- Las propiedades y los métodos restantes son estándar para colecciones de ADO. Puede hacer lo siguiente:  
+ Las propiedades y métodos restantes son estándar para colecciones de ADO. Puede hacer lo siguiente:  
   
--   Acceder a un grupo de la colección con el [elemento](../../../ado/reference/ado-api/item-property-ado.md) propiedad.  
+-   Obtener acceso a un grupo de la colección con el [elemento](../../../ado/reference/ado-api/item-property-ado.md) propiedad.  
   
--   Devolver el número de grupos incluidos en la colección con el [recuento](../../../ado/reference/ado-api/count-property-ado.md) propiedad.  
+-   Devuelve el número de grupos incluidos en la colección con el [recuento](../../../ado/reference/ado-api/count-property-ado.md) propiedad.  
   
 -   Quitar un grupo de la colección con el [eliminar](../../../ado/reference/adox-api/delete-method-adox-collections.md) método.  
   
 -   Actualizar los objetos de la colección para reflejar el esquema de base de datos actual con el [actualizar](../../../ado/reference/ado-api/refresh-method-ado.md) método.  
   
 > [!NOTE]
->  Antes de anexar una **grupo** el objeto a la **grupos** colección de un **usuario** objeto, un **grupo** objeto con el mismo [ Nombre](../../../ado/reference/adox-api/name-property-adox.md) tal y como lo que se debe anexar ya debe existir en el **grupos** colección de la **catálogo**.  
+>  Antes de anexar una **grupo** de objeto para el **grupos** colección de un **usuario** objeto, un **grupo** objeto con el mismo [ Nombre](../../../ado/reference/adox-api/name-property-adox.md) ya debe existir en lo que se debe anexar el **grupos** colección de la **catálogo**.  
   
  Esta sección contiene el siguiente tema.  
   

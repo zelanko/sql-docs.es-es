@@ -1,13 +1,11 @@
 ---
-title: Ejemplo DateCreated y DateModified propiedades (VC ++) | Documentos de Microsoft
+title: Ejemplo DateCreated y DateModified propiedades (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - DateCreated property [ADOX], VC++ example
 - DateModified property [ADOX], VC++ example
 ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7919bd3e51ad685416ff35d99cb961988334dd15
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b95a22661ef66b80b9b0007aee6087e1bb49a1b0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285614"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801093"
 ---
-# <a name="datecreated-and-datemodified-properties-example-vc"></a>Ejemplo DateCreated y DateModified propiedades (VC ++)
-Este ejemplo se muestra la [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) y [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) propiedades mediante la adición de un nuevo [columna](../../../ado/reference/adox-api/column-object-adox.md) en una existente [tabla](../../../ado/reference/adox-api/table-object-adox.md) y crear un nuevo **tabla**. El procedimiento DateOutput es necesario para poder ejecutar este ejemplo.  
+# <a name="datecreated-and-datemodified-properties-example-vc"></a>Ejemplo de propiedades DateCreated y DateModified (VC++)
+Este ejemplo se muestra el [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) y [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) propiedades mediante la adición de un nuevo [columna](../../../ado/reference/adox-api/column-object-adox.md) a una existente [tabla](../../../ado/reference/adox-api/table-object-adox.md) y crear un nuevo **tabla**. El procedimiento DateOutput es necesario para ejecutar este ejemplo.  
   
 ```  
 // BeginDateCreatedCpp.cpp  

@@ -1,56 +1,53 @@
 ---
-title: Ejemplo (VC ++) de modelo de eventos de ADO | Documentos de Microsoft
+title: Ejemplo (VC ++) del modelo de eventos de ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++ code examples [ADO], event model
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20df675bbbee8b513f7e1008da0cb4772255701c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3e9f40c4a5810ab712c4b6f67737fd308594de97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275474"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614453"
 ---
 # <a name="ado-events-model-example-vc"></a>Ejemplo de modelo de eventos de ADO (VC ++)
-La sección de Visual C++ de [creación de instancias de eventos de ADO según el lenguaje](../../../ado/guide/data/ado-event-instantiation-by-language.md) ofrece una descripción general de cómo crear una instancia del modelo de eventos de ADO. Éste es un ejemplo concreto de una instancia del modelo de eventos dentro del entorno creado por el **#import** directiva.  
+La sección de Visual C++ de [creación de instancias de eventos de ADO por lenguaje](../../../ado/guide/data/ado-event-instantiation-by-language.md) ofrece una descripción general de cómo crear una instancia del modelo de eventos de ADO. El siguiente es un ejemplo específico de instancias del modelo de eventos dentro del entorno creado por el **#import** directiva.  
   
  La descripción general utiliza **adoint.h** como referencia para las firmas de método. Sin embargo, algunos detalles de la descripción general cambian ligeramente debido al uso del **#import** directiva:  
   
--   El **#import** directiva resuelve **typedef**del, tipos de datos de firma de método y los modificadores en sus formas fundamentales.  
+-   El **#import** resuelve la directiva **typedef**del, tipos de datos de firma de método y los modificadores en sus formas fundamentales.  
   
--   Los métodos virtuales puros que se deben sobrescribir van precedidos por "**raw_**".  
+-   Los métodos virtuales puros que se deben sobrescribir están precedidos por "**raw_**".  
   
- Parte del código simplemente refleja el estilo de codificación.  
+ Parte del código refleja simplemente estilo de codificación.  
   
--   El puntero a **IUnknown** utilizado por el **Advise** método se obtiene explícitamente con una llamada a **QueryInterface**.  
+-   El puntero a **IUnknown** utilizado por el **Advise** método se obtiene de forma explícita con una llamada a **QueryInterface**.  
   
 -   No es necesario codificar explícitamente un destructor en las definiciones de clase.  
   
--   Puede codificar implementaciones más robustas de QueryInterface, AddRef y Release.  
+-   Desea codificar implementaciones más robustas de QueryInterface, AddRef y Release.  
   
--   El **__uuidof ()** directiva se usa ampliamente para obtener identificadores de interfaz.  
+-   El **__uuidof ()** directiva se usa ampliamente para obtener los identificadores de interfaz.  
   
- Por último, el ejemplo contiene código de trabajo.  
+ Por último, el ejemplo contiene algún código de trabajo.  
   
 -   En el ejemplo se escribe como una aplicación de consola.  
   
 -   Debe insertar su propio código bajo el comentario "`// Do some work`".  
   
--   Todos los eventos controladores predeterminado para no hacer nada y cancelar posteriores notificaciones. Debe insertar el código adecuado para su aplicación y permitir notificaciones si es necesario.  
+-   Todos los eventos controladores predeterminada para no hacer nada y cancelar posteriores notificaciones. Debe insertar el código apropiado para su aplicación y permitir notificaciones si es necesario.  
   
 ```  
 // ADO_Events_Model_Example.cpp  

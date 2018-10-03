@@ -4,7 +4,6 @@ ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, backward compatibility
@@ -14,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9bd38164b3c1702f92534dc678cb8156eb6adf00
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 3d5e213506cfbf94191a5f055b9cd21cc851c0b2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269375"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707803"
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Compatibilidad con versiones anteriores de Reporting Services
 Obtenga información sobre los cambios de comportamiento de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Incluye características que ya no están disponibles o cuya eliminación está prevista para una versión posterior.

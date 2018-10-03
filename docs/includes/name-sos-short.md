@@ -1,1 +1,1 @@
-<Token>SQL Operations Studio (versión preliminar)</Token>
+Studio datos de Azure

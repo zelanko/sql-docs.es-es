@@ -1,32 +1,29 @@
 ---
-title: Llamar a un procedimiento almacenado como un método en un objeto de conexión | Documentos de Microsoft
+title: Llamar a un procedimiento almacenado como un método en un objeto de conexión | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - calling stored procedures [ADO]
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2445ce0a213f4e36ec775cf804ee69b43c2f9dc8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3202b607f3971dd1fcad2c3ae5e0ed83a667e923
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270404"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758823"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Llamar a un procedimiento almacenado como un método en un objeto de conexión
-Puede llamar a un procedimiento almacenado como si fuera un método nativo al abrir asociado **conexión** objeto. Esto es similar a llamar a un comando con nombre en el **conexión** objeto.  
+Puede llamar a un procedimiento almacenado como si fuese un método nativo en la apertura asociado **conexión** objeto. Esto es similar a llamar a un comando con nombre en el **conexión** objeto.  
   
  El siguiente ejemplo de código de Visual Basic llama a un procedimiento almacenado en la base de datos de ejemplo Northwind, denominado CustOrdersOrders, que se vuelven a enumerar aquí para su comodidad.  
   
@@ -38,7 +35,7 @@ WHERE CustomerID = @CustomerID
 ORDER BY OrderID  
 ```  
   
- En el ejemplo de código siguiente se muestra cómo llamar a un procedimiento almacenado como si fuera un método nativo en un formato de archivo asociado **conexión** objeto.  
+ En el ejemplo de código siguiente se muestra cómo llamar a un procedimiento almacenado como si fuese un método nativo en una página abierta asociado **conexión** objeto.  
   
 ```  
 Const DS = "MySQLServer"  

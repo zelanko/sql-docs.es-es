@@ -1,17 +1,12 @@
 ---
-title: Sys.fn_cdc_get_min_lsn (Transact-SQL) | Documentos de Microsoft
+title: Sys.fn_cdc_get_min_lsn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_cdc_get_min_lsn
 - fn_cdc_get_min_lsn
@@ -23,21 +18,20 @@ helpviewer_keywords:
 - fn_cdc_get_min_lsn
 - sys.fn_cdc_get_min_lsn
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
-caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4c4c6a9bf83e83628891104f0c95a6baefa08234
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7f1be9ff365412444f87ef0abcc3795301d98cf7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230446"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825242"
 ---
 # <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve el valor de la columna start_lsn para la instancia de captura especificada desde la [cdc.change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) tabla del sistema. Este valor representa el extremo inferior del intervalo de validez para la instancia de captura.  
+  Devuelve el valor de la columna start_lsn para la instancia de captura especificada desde el [cdc.change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) tabla del sistema. Este valor representa el extremo inferior del intervalo de validez para la instancia de captura.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +54,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
   
  Esta función se utiliza normalmente para identificar el extremo inferior de la escala de tiempo de captura de los datos del cambio asociada con una instancia de captura. También puede utilizar esta función para validar que los extremos de un intervalo de consultas se encuentran dentro de la escala de tiempo de la instancia de captura antes de solicitar los datos del cambio. Es importante realizar tales comprobaciones porque el extremo inferior de una instancia de captura cambia cuando el proceso de limpieza se realiza en las tablas de cambio. Si el tiempo transcurrido entre las solicitudes para los datos del cambio es significativo, incluso un extremo inferior que está establecido en el extremo alto de la solicitud de datos del cambio anterior podría quedar fuera de la escala de tiempo actual.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol fijo de servidor sysadmin o al rol fijo de base de datos db_owner. Para el resto de usuarios, requiere el permiso SELECT en todas las columnas capturadas en la tabla de origen y, si se ha definido un rol de acceso para la instancia de captura, la pertenencia a ese rol de base de datos.  
   
 ## <a name="examples"></a>Ejemplos  

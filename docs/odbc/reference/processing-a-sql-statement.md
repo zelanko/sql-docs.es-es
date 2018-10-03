@@ -1,13 +1,11 @@
 ---
-title: Procesar una instrucción SQL | Documentos de Microsoft
+title: Procesar una instrucción SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sending SQL statements to DBMS [ODBC]
@@ -17,32 +15,31 @@ helpviewer_keywords:
 - SQL statements [ODBC]
 - ODBC [ODBC], SQL
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7068b61081a368382b109af99f60bf6bf254e800
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: edf912bf3b8073a05dd900cd00511715020ee0c2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916540"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808993"
 ---
 # <a name="processing-a-sql-statement"></a>Procesar una instrucción SQL
-Antes de hablar sobre las técnicas para usar SQL mediante programación, es necesario describir cómo se procesa una instrucción SQL. Los pasos implicados son comunes a todas las técnicas de tres, aunque cada una de ellas las realiza en momentos diferentes. En la siguiente ilustración muestra los pasos implicados en el procesamiento de una instrucción SQL, que se describen en el resto de esta sección.  
+Antes de explicar las técnicas de uso de SQL mediante programación, es necesario describir cómo se procesa una instrucción SQL. Los pasos implicados son comunes a todas las tres técnicas, aunque cada una de ellas realiza en momentos diferentes. La siguiente ilustración muestra los pasos implicados en el procesamiento de una instrucción SQL, que se describen en el resto de esta sección.  
   
  ![Pasos para procesar una instrucción SQL](../../odbc/reference/media/pr01.gif "pr01")  
   
- Para procesar una instrucción SQL, un DBMS realiza los cinco pasos siguientes:  
+ Para procesar una instrucción SQL, un DBMS lleva a cabo los cinco pasos siguientes:  
   
-1.  En primer lugar, el DBMS analiza la instrucción SQL. Divide la instrucción palabras individuales, denominadas tokens, se asegura de que la instrucción tiene un verbo válido y cláusulas válidas y así sucesivamente. En este paso, se pueden detectar errores de ortografía y errores de sintaxis.  
+1.  En primer lugar, el DBMS analiza la instrucción SQL. La instrucción desglosa en palabras individuales, denominadas tokens, asegura que la instrucción tiene un verbo válido y cláusulas válidas y así sucesivamente. En este paso, se pueden detectar errores de ortografía y errores de sintaxis.  
   
 2.  El DBMS valida la instrucción. Comprueba la instrucción en el catálogo del sistema. ¿Todas las tablas con nombre en la instrucción existen en la base de datos? ¿Existen todas las columnas y los nombres de columna no son ambiguos? ¿El usuario tiene los privilegios necesarios para ejecutar la instrucción? En este paso, se pueden detectar algunos errores semánticos.  
   
-3.  El DBMS genera un plan de acceso de la instrucción. El plan de acceso es una representación binaria de los pasos necesarios para llevar a cabo la instrucción; es el equivalente DBMS de código ejecutable.  
+3.  El DBMS genera un plan de acceso para la instrucción. El plan de acceso es una representación binaria de los pasos necesarios para llevar a cabo la instrucción; es el equivalente DBMS de código ejecutable.  
   
-4.  El DBMS optimiza el plan de acceso. Explora varias maneras para llevar a cabo el plan de acceso. ¿Un índice se puede usar para acelerar una búsqueda? ¿Debe DBMS aplicar una condición de búsqueda a la tabla A y, a continuación, vuelva a unirlo a tabla B, o debe comenzar con la combinación y usar después la condición de búsqueda? ¿Puede utilizar la búsqueda secuencial a través de una tabla evitarse o reducirse a un subconjunto de la tabla? Después de analizar las alternativas, el DBMS elige una de ellas.  
+4.  El DBMS optimiza el plan de acceso. Explora varias maneras de llevar a cabo el plan de acceso. ¿Puede utilizarse un índice para acelerar una búsqueda? ¿Debe DBMS primero se aplican a la tabla A una condición de búsqueda y, después, conéctela a la tabla B, o debe comenzar con la combinación y usar después la condición de búsqueda? ¿Una búsqueda secuencial a través de una tabla se puede evitar o reducir a un subconjunto de la tabla? Después de explorar las alternativas, el DBMS elige uno de ellos.  
   
 5.  El DBMS ejecuta la instrucción mediante la ejecución del plan de acceso.  
   
- Varían en la cantidad de acceso de la base de datos que necesitan y la cantidad de tiempo que tardan en los pasos utilizados para procesar una instrucción SQL. El análisis de una instrucción SQL no requiere acceso a la base de datos y se puede realizar muy rápidamente. La optimización, por otro lado, es una CPU de muchos procesar y requiere acceso para el catálogo del sistema. Para una consulta compleja, varias tablas, el optimizador puede explorar miles de distintas formas de llevar a cabo la misma consulta. Sin embargo, el costo de ejecutar la consulta de forma ineficaz suele ser tan alto que el tiempo empleado en la optimización se recupere el más de velocidad de ejecución de consulta. Esto es incluso más importante si el mismo plan de acceso optimizado puede utilizarse una y otra vez para realizar consultas repetitivas.
+ En la cantidad de acceso de la base de datos que necesitan y la cantidad de tiempo que se tardan varían en los pasos utilizados para procesar una instrucción SQL. Analizar una instrucción SQL no requiere acceso a la base de datos y puede hacerse muy rápidamente. La optimización, por otro lado, es una muy intensivo de CPU procesar y requiere acceso al catálogo del sistema. Para una consulta compleja, varias tablas, el optimizador puede explorar miles de distintas formas de llevar a cabo la misma consulta. Sin embargo, el costo de ejecutar la consulta de forma ineficaz suele ser tan alto que más de se ha recuperado el tiempo empleado en la optimización de velocidad de ejecución de consulta. Esto es incluso más importante si el mismo plan de acceso optimizado puede utilizarse una y otra vez para realizar consultas repetitivas.

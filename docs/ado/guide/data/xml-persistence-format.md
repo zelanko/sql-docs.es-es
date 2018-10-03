@@ -1,34 +1,31 @@
 ---
-title: Formato de persistencia XML | Documentos de Microsoft
+title: Formato de persistencia XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XML persistence [ADO], persistence format
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd0085f4fb632d4e5be4c4e64e1934b154108488
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7e70b7ab799ee0c1704c2fcd492edb434eb7c536
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273304"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842173"
 ---
 # <a name="xml-persistence-format"></a>Formato de persistencia de XML
-ADO utiliza la codificación UTF-8 para la secuencia XML que se conserva.  
+ADO utiliza la codificación UTF-8 para la secuencia XML que almacena.  
   
- El formato XML de ADO se divide en dos secciones, una sección de esquema seguida de la sección de datos. El siguiente es un archivo XML de ejemplo para la tabla Shippers de la base de datos Northwind. Distintas partes del código XML se analizan el ejemplo siguiente.  
+ El formato XML de ADO se divide en dos secciones, una sección de esquema seguida de la sección de datos. El siguiente es un archivo XML de ejemplo para la tabla Shippers de la base de datos Northwind. Se tratan distintas partes del código XML del ejemplo siguiente.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"   
@@ -68,11 +65,11 @@ xmlns:z="#RowsetSchema">
 </xml>  
 ```  
   
- El esquema muestra las declaraciones de espacios de nombres, la sección de esquema y la sección de datos. La sección de esquema contiene definiciones para fila, ShipperID, CompanyName y Phone.  
+ El esquema muestra las declaraciones de espacios de nombres, la sección de esquema y la sección de datos. La sección de esquema contiene definiciones de fila, ShipperID, CompanyName y teléfono.  
   
- Definiciones de esquema se ajustan a la [especificación de datos XML de W3C](http://www.w3.org/TR/1998/NOTE-XML-data/) y se pueden validar totalmente (aunque la validación no se producirá en Internet Explorer 5). XML-Data es actualmente el formato de esquemas admitidas solo para la persistencia de conjunto de registros.  
+ Definiciones de esquema se ajustan a la [especificación W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/) y se pueden validar totalmente (aunque no se producirá la validación en Internet Explorer 5). Datos XML está actualmente en el formato de esquema admitidas solo para la persistencia de conjunto de registros.  
   
- La sección de datos tiene tres filas que contienen información acerca de expedidores. Para un conjunto de filas vacío, la sección de datos puede estar vacía, pero la \<rs: data > etiquetas deben estar presentes. Sin datos, podría escribir la etiqueta de forma abreviada como simplemente \<rs: data / >. Cualquier etiqueta el prefijo "rs" indica que se encuentra en el espacio de nombres definido por urn: schemas-microsoft-Rowset.  
+ La sección de datos tiene tres filas que contienen información acerca de distribuidores. Para un conjunto de filas vacío, la sección de datos puede estar vacía, pero la \<rs: data > etiquetas deben estar presentes. Sin datos, podría escribir la etiqueta de forma abreviada como simplemente \<rs: data / >. Cualquier etiqueta el prefijo "rs" indica que está en el espacio de nombres definido por el urn: schemas-microsoft-Rowset.  
   
 ## <a name="see-also"></a>Vea también  
  [Almacenar registros en formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

@@ -1,42 +1,39 @@
 ---
-title: Sintaxis de los literales numéricos | Documentos de Microsoft
+title: Sintaxis de literales numéricos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC literals [ODBC], numeric
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95fd850239c0ad3894105c94e3f8ff05459394ff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 18b1c144e84bf0be5aaeb68b66660f7bc7865ade
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907270"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601543"
 ---
 # <a name="numeric-literal-syntax"></a>Sintaxis de los literales numéricos
-La siguiente sintaxis se utiliza para literales numéricos en ODBC:  
+Literales numéricos en ODBC, se usa la sintaxis siguiente:  
   
  *literal numérico* :: = *literal numérico firmado &#124; literal numérico sin signo*  
   
- *literal numérico firmado* :: = [*inicio de sesión*] *literal numérico sin signo*  
+ *literal numérico firmado* :: = [*sesión*] *literal numérico sin signo*  
   
- *literal numérico sin signo* :: = *literal numérico exacto &#124; literales numéricos aproximados*  
+ *literal numérico sin signo* :: = *literal numérico exacto &#124; literal numérico aproximado*  
   
- *literal numérico exacto* :: = *entero sin signo* [*período*[*entero sin signo*]]  *&#124;período de entero sin signo*  
+ *literal numérico exacto* :: = *entero sin signo* [*período*[*entero sin signo*]]  *&#124;período entero sin signo*  
   
- *inicio de sesión* :: = *signos &#124; signo menos*  
+ *inicio de sesión* :: = *signo &#124; signo menos*  
   
  *literal numérico aproximado* :: = *exponente mantisa E*  
   
@@ -44,14 +41,14 @@ La siguiente sintaxis se utiliza para literales numéricos en ODBC:
   
  *exponente* :: = *entero firmado*  
   
- *entero firmado* :: = [*inicio de sesión*] *entero sin signo*  
+ *entero firmado* :: = [*sesión*] *entero sin signo*  
   
- *entero sin signo* :: = *dígitos...*  
+ *entero unsigned* :: = *dígitos...*  
   
  *signo* :: = *+*  
   
- *signo menos* :: = -  
+ *signo* :: = -  
   
- *dígitos* :: = 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
+ *dígito* :: = 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
   
- *período de* :: =.
+ *período* :: =.

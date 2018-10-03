@@ -1,26 +1,24 @@
 ---
-title: SQLGetInfo (controlador ODBC de Visual FoxPro) | Documentos de Microsoft
+title: SQLGetInfo (controlador ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetInfo function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b05ab71a12059535986cbd452e993e01178342fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 015ea45d1383e6813973aeb1e4c86451a506a2aa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855423"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
@@ -28,9 +26,9 @@ ms.lasthandoff: 05/03/2018
   
  Soporte técnico: completo  
   
- Ajuste de la API de ODBC: Nivel 1  
+ Conformidad de ODBC API: Nivel 1  
   
- Devuelve información general sobre el controlador ODBC de Visual FoxPro y el origen de datos asociado con un identificador de conexión, *hdbc*. La lista siguiente muestra el valor devuelto por el controlador ODBC de Visual FoxPro para cada *fInfoType* argumento y comentarios acerca de los valores devueltos.  
+ Devuelve la información general sobre el controlador ODBC de Visual FoxPro y el origen de datos asociado con un identificador de conexión, *hdbc*. En la lista siguiente se muestra el valor devuelto por el controlador ODBC de Visual FoxPro para cada *fInfoType* argumento y comentarios acerca de los valores devueltos.  
   
  Para obtener más información, consulte [SQLGetInfo](../../odbc/reference/syntax/sqlgetinfo-function.md) en el *referencia del programador de ODBC*.  
   
@@ -53,7 +51,7 @@ ms.lasthandoff: 05/03/2018
   
  SQL_CONCAT_NULL_BEHAVIOR devuelve SQL_CB_NULL.  
   
- SQL_CONVERT_BIGINT devuelve 0. No es compatible con el controlador ODBC de Visual FoxPro *BigInt*.  
+ SQL_CONVERT_BIGINT devuelve 0. No se admite el controlador ODBC de Visual FoxPro *BigInt*.  
   
  SQL_CONVERT_BINARY devuelve 0.  
   
@@ -104,13 +102,13 @@ ms.lasthandoff: 05/03/2018
   
  Devuelve SQL_DATA_SOURCE_READ_ONLY ' n '.  
   
- SQL_DATABASE_NAME devuelve una ruta de acceso UNC completa a la base de datos actual, si el origen de datos es un [base de datos](../../odbc/microsoft/visual-foxpro-terminology.md). Si el origen de datos se conecta a un directorio de [tablas](../../odbc/microsoft/visual-foxpro-terminology.md), la función devuelve la ruta de acceso al directorio.  
+ SQL_DATABASE_NAME devuelve una ruta de acceso UNC completa a la base de datos actual si el origen de datos es un [base de datos](../../odbc/microsoft/visual-foxpro-terminology.md). Si el origen de datos se conecta a un directorio de [tablas](../../odbc/microsoft/visual-foxpro-terminology.md), la función devuelve la ruta de acceso al directorio.  
   
  SQL_DBMS_NAME devuelve "Visual FoxPro".  
   
  SQL_DBMS_VER devuelve "03.00.0000".  
   
- SQL_DEFAULT_TXN_ISOLATION devuelve SQL_TXN_READ_COMMITTED. Las lecturas no son posibles, pero son posibles fantasmas y lecturas no repetibles.  
+ SQL_DEFAULT_TXN_ISOLATION devuelve SQL_TXN_READ_COMMITTED. Lecturas no actualizadas no son posibles, pero es posible lecturas no repetibles y fantasma.  
   
  SQL_DRIVER_HDBC se implementa mediante el Administrador de controladores.  
   
@@ -161,7 +159,7 @@ ms.lasthandoff: 05/03/2018
   
  SQL_GROUP_BY devuelve SQL_GB_NO_RELATION.  
   
-## <a name="i-j"></a>-J  
+## <a name="i-j"></a>I Y J  
  SQL_IDENTIFIER_CASE devuelve SQL_IC_MIXED.  
   
  Devuelve SQL_IDENTIFIER_QUOTE_CHAR '.  
@@ -197,9 +195,9 @@ ms.lasthandoff: 05/03/2018
   
  SQL_MAX_OWNER_NAME_LEN devuelve 0.  
   
- SQL_MAX_PROCEDURE_NAME_LEN devuelve 0. El controlador ODBC de Visual FoxPro no permitir el acceso directo a los procedimientos almacenados de Visual FoxPro.  
+ SQL_MAX_PROCEDURE_NAME_LEN devuelve 0. El controlador ODBC de Visual FoxPro no permite el acceso directo a los procedimientos almacenados de Visual FoxPro.  
   
- SQL_MAX_QUALIFIER_NAME_LEN devuelve la longitud de ruta de acceso máxima del sistema operativo.  
+ SQL_MAX_QUALIFIER_NAME_LEN devuelve la longitud máxima del sistema operativo.  
   
  SQL_MAX_ROW_SIZE devuelve 254 ^ 2.  
   
@@ -285,9 +283,9 @@ ms.lasthandoff: 05/03/2018
   
  Devuelve SQL_OUTER_JOINS "N".  
   
- SQL_OWNER_TERM devuelve "". El controlador ODBC de Visual FoxPro no admite los propietarios de sus objetos.  
+ SQL_OWNER_TERM devuelve "". El controlador ODBC de Visual FoxPro no es compatible con los propietarios para sus objetos.  
   
- SQL_OWNER_USAGE devuelve 0. El controlador ODBC de Visual FoxPro no admite los propietarios de sus objetos.  
+ SQL_OWNER_USAGE devuelve 0. El controlador ODBC de Visual FoxPro no es compatible con los propietarios para sus objetos.  
   
 ## <a name="p"></a>P  
  SQL_POS_OPERATIONS devuelve SQL_POS_POSITION.  
@@ -303,14 +301,14 @@ ms.lasthandoff: 05/03/2018
   
  Devuelve SQL_QUALIFIER_NAME_SEPARATOR '!' o '\\'. Es el separador entre la base de datos y la tabla '!' para orígenes de datos conectados a [bases de datos](../../odbc/microsoft/visual-foxpro-terminology.md), y '\\' para orígenes de datos que son directorios de [libre tablas](../../odbc/microsoft/visual-foxpro-terminology.md).  
   
- SQL_QUALIFIER_TERM devuelve "database" o "directory". El calificador es "database" de orígenes de datos está conectado a [bases de datos](../../odbc/microsoft/visual-foxpro-terminology.md)y "directorio" para los orígenes de datos que son directorios de [libre tablas](../../odbc/microsoft/visual-foxpro-terminology.md).  
+ SQL_QUALIFIER_TERM devuelve "database" o "directory". El calificador es "database" para orígenes de datos conectados a [bases de datos](../../odbc/microsoft/visual-foxpro-terminology.md)y "directorio" para orígenes de datos que son directorios de [libre tablas](../../odbc/microsoft/visual-foxpro-terminology.md).  
   
  SQL_QUALIFIER_USAGE no admite SQL_QU_PRIVILEGE_DEFINITION; Devuelve SQL_QU_DML_STATEMENT o SQL_QU_TABLE_DEFINITION.  
   
  SQL_QUOTED_IDENTIFIER_CASE devuelve SQL_IC_MIXED.  
   
-## <a name="r"></a>L  
- Devuelve SQL_ROW_UPDATES "N". El controlador ODBC de Visual FoxPro es compatible con los cursores estáticos solo y hacia delante.  
+## <a name="r"></a>R  
+ Devuelve SQL_ROW_UPDATES "N". El controlador ODBC de Visual FoxPro admite cursores de solo avance y estáticos.  
   
 ## <a name="s"></a>S  
  SQL_SCROLL_CONCURRENCY devuelve SQL_SCCO_READ_ONLY.  
@@ -325,7 +323,7 @@ ms.lasthandoff: 05/03/2018
   
  SQL_STATIC_SENSITIVITY devuelve 0. El controlador ODBC de Visual FoxPro no admite actualizaciones posicionales.  
   
- SQL_STRING_FUNCTIONS no admite SQL_FN_STR_INSERT, SQL_FN_STR_LOCATE, SQL_FN_STR_LOCATE_2 o SQL_FN_STR_SOUNDEX.  
+ No admite SQL_STRING_FUNCTIONS SQL_FN_STR_INSERT, SQL_FN_STR_LOCATE, SQL_FN_STR_LOCATE_2 o SQL_FN_STR_SOUNDEX.  
   
  Devuelve:  
   
@@ -420,7 +418,7 @@ ms.lasthandoff: 05/03/2018
   
 -   SQL_FN_TSI_YEAR  
   
- SQL_TIMEDATE_FUNCTIONS no admite SQL_FN_TD_QUARTER, SQL_FN_TD_TIMESTAMPADD, SQL_FN_TD_DAYOFYEAR o SQL_FN_TD_WEEK.  
+ No admite SQL_TIMEDATE_FUNCTIONS SQL_FN_TD_QUARTER, SQL_FN_TD_TIMESTAMPADD, SQL_FN_TD_DAYOFYEAR o SQL_FN_TD_WEEK.  
   
  Devuelve:  
   
@@ -457,4 +455,4 @@ ms.lasthandoff: 05/03/2018
 ## <a name="u-z"></a>U-Z  
  SQL_UNION devuelve SQL_U_UNION o SQL_U_UNION_ALL.  
   
- SQL_USER_NAME devuelve \<en blanco >.
+ Devuelve SQL_USER_NAME \<en blanco >.

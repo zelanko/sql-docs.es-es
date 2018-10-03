@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MiningModelID Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MiningModelID element
 ms.assetid: fada8720-1590-44be-bafc-0ab3612b00e5
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f5cc241819884cd8307c03d39d2d4daa575454f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 43cfcff8b238b2502ede1c89038d88be013f639e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267281"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067455"
 ---
 # <a name="miningmodelid-element-assl"></a>Elemento MiningModelID (ASSL)
   Asocia un modelo de minería a una dimensión de la minería de datos.  
@@ -46,7 +43,7 @@ ms.locfileid: "37267281"
 </Dimension>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37267281"
 |Elemento primario|[Dimension](../objects/dimension-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento que se corresponde con el elemento primario de `MiningModelID` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Vea también  

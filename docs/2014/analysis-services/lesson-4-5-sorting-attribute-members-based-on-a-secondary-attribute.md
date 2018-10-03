@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6245cc93f107ff437e3c17e6cc5e789dd5994698
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f199238c09be6409f9d8fe9266acd547738a0076
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299295"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049745"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>Ordenar los miembros de atributo en función de un atributo secundario
   En la lección 3, aprendió a ordenar los miembros de atributo en función de su nombre o valor de clave. También aprendió a utilizar una clave de miembro compuesta que afectaba a todos los miembros de atributo y al criterio de ordenación. Para obtener más información, consulte [Modificar la dimensión Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). Sin embargo, si ni el nombre ni la clave del atributo ofrecen el orden que desea, puede usar un atributo secundario para conseguir el criterio de ordenación deseado. Definir una relación entre los atributos, puede usar el segundo atributo para ordenar los miembros del primer atributo.  

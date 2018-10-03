@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - formats [Analysis Services], string values
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - FORMATTED_VALUE property
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 198fadc6d3f2e1599c98ba5146e830fef5b8be17
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f8226f0d065620db27ca1046500c89360613d9eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293595"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052275"
 ---
 # <a name="formatstring-contents-mdx"></a>FORMAT_STRING, contenido (MDX)
   El `FORMAT_STRING` formatos de la propiedad de celda el `VALUE` propiedad de celda, crea el valor para el `FORMATTED_VALUE` propiedad de celda. El `FORMAT_STRING` propiedad de celda controla los valores sin procesar numéricos y de cadena, aplicando una expresión de formato con respecto al valor para devolver un valor con formato para el `FORMATTED_VALUE` propiedad de celda. En las siguientes tablas se detallan la sintaxis y los caracteres de formato utilizados para controlar los valores numéricos y de cadena.  

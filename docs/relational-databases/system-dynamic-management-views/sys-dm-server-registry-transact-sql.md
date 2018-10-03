@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_server_registry (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_server_registry (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_server_registry_TSQL
@@ -18,31 +16,30 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_registry dynamic management view
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4207ee898acec0d0f5f2f00594835ffcef40e9d1
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: e4e0b1069977c14216952e537d4bd12b28190529
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467262"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788623"
 ---
 # <a name="sysdmserverregistry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve instalación de configuración y información que se almacena en el Registro de Windows para la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Devuelve una fila por cada clave del Registro. Use esta vista de administración dinámica para devolver información como los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibles en el equipo host o los valores de configuración de red para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |registry_key|**nvarchar(256)**|Nombre de clave del Registro. Acepta valores NULL.|  
-|value_name|**nvarchar(256)**|Nombre del valor de clave. Este es el elemento que se muestra en el **nombre** columna del Editor del registro. Acepta valores NULL.|  
-|value_data|**sql_variant**|Valor de los datos de la clave. Este es el valor que se muestra en el **datos** columna del Editor del registro para una entrada determinada. Acepta valores NULL.|  
+|value_name|**nvarchar(256)**|Nombre del valor de clave. Este es el elemento que se muestra en el **nombre** del Editor del registro de la columna. Acepta valores NULL.|  
+|value_data|**sql_variant**|Valor de los datos de la clave. Este es el valor se muestra en el **datos** columna del Editor del registro para una entrada determinada. Acepta valores NULL.|  
   
 ## <a name="security"></a>Seguridad  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
 ## <a name="examples"></a>Ejemplos  

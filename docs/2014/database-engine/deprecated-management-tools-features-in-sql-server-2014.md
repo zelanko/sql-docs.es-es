@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a08d1354-cc91-4ab7-a73f-3ad815af3d5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0dc75044e2375bb21c0a2741f1efa499fafd7e68
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8f8de4a3ce8ac36de33d96b71170cb64eb4dd5da
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203875"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083875"
 ---
 # <a name="deprecated-management-tools-features-in-sql-server-2014"></a>Características desusadas de las herramientas de administración de SQL Server 2014
   En este tema se describen las características desusadas de las herramientas de administración que siguen estando disponibles en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Está previsto quitar estas características en una futura versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  

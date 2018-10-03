@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.general.f1
 ms.assetid: 858a0263-2f04-4692-b8bf-63e93c998ead
-caps.latest.revision: 29
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a6e8e45ea1ba74aeef1f063ad03154a9574bc9e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 955dcff3399f6936fb5b1f8042dae4658a55a11f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269811"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048975"
 ---
 # <a name="query-options-execution-general-page"></a>Ejecución de Opciones de consulta (página General)
   Utilice esta página para especificar las opciones de ejecución de consultas de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para tener acceso a este cuadro de diálogo, haga clic con el botón derecho en el cuerpo de una ventana del Editor de consultas y haga clic en **Opciones de consulta**.  
@@ -39,7 +36,7 @@ ms.locfileid: "37269811"
  **Separador de lotes**  
  Escriba la palabra que utilice para separar instrucciones Transact-SQL en lotes. El separador predeterminado es GO.  
   
- **De forma predeterminada, abrir nuevas consultas en modo SQLCMD**  
+ **De manera predeterminada, abrir nuevas consultas en modo SQLCMD**  
  Active esta casilla para abrir nuevas consultas en modo SQLCMD. Esta casilla solo se muestra cuando el cuadro de diálogo se abre desde el menú **Herramientas** .  
   
  Cuando seleccione esta opción, tenga en cuenta las siguientes limitaciones:  
@@ -50,7 +47,7 @@ ms.locfileid: "37269811"
   
 -   Dado que el Editor de consultas no puede responder a comandos del sistema operativo, debe tener cuidado de no ejecutar instrucciones interactivas.  
   
- **Restablecer valores predeterminados**  
+ **Valores predeterminados**  
  Restablece todos los valores de esta página a los valores predeterminados originales.  
   
   

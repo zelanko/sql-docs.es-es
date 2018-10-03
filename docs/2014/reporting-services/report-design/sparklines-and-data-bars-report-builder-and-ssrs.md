@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.sparklines.f1
 - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: beeecbb80ff375bdb13f2a91bff84dbb34a9a4f5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 29af878e4e0173b6c926ae2bbbb29fe39ee2ca55
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181646"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074815"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Minigráficos y barras de datos (Generador de informes y SSRS)
   Los minigráficos y las barras de datos son gráficos simples y pequeños que contienen mucha información en poco espacio, a menudo conjuntamente con texto. Los minigráficos y las barras de datos se utilizan a menudo en las tablas y matrices. Su importancia radica en que permiten ver muchos datos juntos y compararlos rápidamente uno encima de otro, en lugar de verlos de forma individual. Facilitan la visualización de los valores atípicos, las filas que no se muestran como las demás. Aunque son pequeños, cada minigráfico suele representar varios puntos de datos, con frecuencia, a lo largo del tiempo. Las barras de datos representan varios puntos de datos, pero normalmente solo muestran uno. Cada minigráfico suele presentar una única serie. No puede agregar un minigráfico a un grupo de detalles en una tabla. Dado que los minigráficos presentan los datos agregados, deben estar en una celda que esté asociada a un grupo. Los minigráficos y las barras de datos tienen los mismos elementos de gráfico básicos de las categorías, series y valores, pero carecen de leyendas, líneas de eje, etiquetas o marcas de graduación.  

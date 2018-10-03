@@ -1,13 +1,11 @@
 ---
-title: Cursores de bloque, los cursores desplazables y compatibilidad con versiones anteriores | Documentos de Microsoft
+title: Cursores de bloque, cursores desplazables y compatibilidad con versiones anteriores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
@@ -16,23 +14,22 @@ helpviewer_keywords:
 - backward compatibility [ODBC], cursors
 - block cursors [ODBC]
 ms.assetid: d9d271f6-d2d9-49b9-a365-4909ca06caae
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a0bfa6c25afdd8e79a19051bcec997a0ecfe8bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d3896473a1fa08f769f13d94bd1d81f373cf67c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913640"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854514"
 ---
-# <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>Cursores de bloque y los cursores desplazables, compatibilidad con versiones anteriores
-La existencia de ambos **SQLFetchScroll** y **SQLExtendedFetch** representa el primer clear divide en ODBC entre la aplicación de interfaz de programación (API), que es el conjunto de funciones de la las llamadas de la aplicación y la interfaz de proveedor de servicio (SPI), que es el conjunto de funciones el controlador implementa. Esta división es necesaria para que ODBC 3. *x*, que usa **SQLFetchScroll**, bealigned con los estándares y también ser compatibles con ODBC 2. *x*, que usa **SQLExtendedFetch**.  
+# <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>Cursores de bloque, cursores desplazables y compatibilidad con versiones anteriores
+La existencia de ambas **SQLFetchScroll** y **SQLExtendedFetch** representa divide entre la aplicación de interfaz de programación (API), que es el conjunto de funciones ODBC sin cifrar primero el las llamadas de aplicación y la interfaz de proveedor de servicio (SPI), que es el conjunto de funciones implementa el controlador. Esta división es necesaria para que ODBC 3. *x*, que usa **SQLFetchScroll**, bealigned con los estándares y también sea compatible con ODBC 2. *x*, que usa **SQLExtendedFetch**.  
   
- ODBC 3 *.x* API, que es el conjunto de funciones de la aplicación llama, incluye **SQLFetchScroll** y relacionados con los atributos de instrucción. ODBC 3 *.x* SPI, que es el conjunto de funciones implementa el controlador, incluye **SQLFetchScroll**, **SQLExtendedFetch**y relacionados con los atributos de instrucción. Dado que ODBC no exige formalmente esta división entre la API y el SPI, es posible que ODBC 3 *.x* las aplicaciones llamen a **SQLExtendedFetch** y relacionados con los atributos de instrucción. Sin embargo, no hay ninguna razón para ODBC 3 *.x* aplicación para hacer esto. Para obtener más información acerca de las API y el SPI, vea la introducción a [arquitectura ODBC](../../../odbc/reference/odbc-architecture.md).  
+ El 3 de ODBC *.x* API, que es el conjunto de funciones de la aplicación llama, incluye **SQLFetchScroll** y relacionados con los atributos de instrucción. El 3 de ODBC *.x* SPI, que es el conjunto de funciones implementa el controlador, incluye **SQLFetchScroll**, **SQLExtendedFetch**y relacionados con los atributos de instrucción. Dado que ODBC no aplica esta diferencia entre la API y el SPI formalmente, es posible que ODBC 3 *.x* las aplicaciones llamen a **SQLExtendedFetch** y relacionados con los atributos de instrucción. Sin embargo, no hay ninguna razón para ODBC 3 *.x* aplicación para hacer esto. Para obtener más información acerca de las API y SPI, vea la introducción a [arquitectura ODBC](../../../odbc/reference/odbc-architecture.md).  
   
- Para obtener información sobre qué funciones y la declaración de atributos de una aplicación ODBC 3. *x* aplicación debe utilizar con los cursores desplazables y el bloque, vea [cursores de bloque y los cursores desplazables, compatibilidad con versiones anteriores de las aplicaciones ODBC 3.x](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md).  
+ Para obtener información sobre qué funciones y la instrucción de atributos de una aplicación ODBC 3. *x* aplicación debe usar con los cursores desplazables y de bloque, vea [cursores de bloque, cursores desplazables y compatibilidad con versiones anteriores de las aplicaciones ODBC 3.x](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md).  
   
  Esta sección contiene los temas siguientes.  
   

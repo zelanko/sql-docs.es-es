@@ -1,28 +1,25 @@
 ---
-title: Asignar identificadores y conectarse a SQL Server (ODBC) | Microsoft Docs
+title: Asignar identificadores y conectarse a SQL Server (ODBC) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - handles [ODBC]
 - handles [ODBC], connection
 - handles [ODBC], about handles
 ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ccb7b63b1098e9e6d5dba6ee0a299d2d30ce6f09
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e7983b5ef294fadbad7fe5fdbfafc1170f1ac485
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407566"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083205"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Asignar identificadores y conectarse a SQL Server (ODBC)
     
@@ -57,7 +54,7 @@ ms.locfileid: "37407566"
   
      Si la cadena de conexión no se ha completado, `SQLDriverConnect` puede solicitar la información necesaria. Esto se controla mediante el valor especificado para el *DriverCompletion* parámetro.  
   
-     \- O bien  
+     \- o -  
   
      Llame a [SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md) varias veces en un modo iterativo para generar la cadena de conexión y conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

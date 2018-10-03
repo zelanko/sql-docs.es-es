@@ -4,31 +4,26 @@ ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
-caps.latest.revision: 24
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b089af44863033eba2c4e0c83b862ebaa918b715
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 0fcb098d96e8e62bd99f6c9560df1d23d5266ca2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332236"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680733"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Un grupo de recursos de servidor representa un subconjunto de recursos físicos que se pueden regular. De forma predeterminada, las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] están enlazadas a los recursos del grupo de recursos de servidor predeterminado y los consumen. Para proteger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de manera que una o más tablas optimizadas para memoria no consuman sus recursos, y evitar que otros usuarios consuman memoria que las tablas optimizadas para memoria necesitan, debe crear un grupo de recursos de servidor diferente para administrar el consumo de memoria para la base de datos con tablas optimizadas para memoria.  
   
- Una base de datos solo se puede enlazar a un grupo de recursos de servidor. Sin embargo, puede enlazar varias bases de datos al mismo grupo. 
-            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite enlazar una base de datos sin tablas optimizadas para memoria a un grupo de recursos de servidor, pero ello no tiene ningún efecto. Puede enlazar una base de datos a un grupo de recursos de servidor con nombre si en el futuro desea crear tablas optimizadas para memoria en la base de datos.  
+ Una base de datos solo se puede enlazar a un grupo de recursos de servidor. Sin embargo, puede enlazar varias bases de datos al mismo grupo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite enlazar una base de datos sin tablas optimizadas para memoria a un grupo de recursos de servidor, pero ello no tiene ningún efecto. Puede enlazar una base de datos a un grupo de recursos de servidor con nombre si en el futuro desea crear tablas optimizadas para memoria en la base de datos.  
   
  Para poder enlazar una base de datos a un grupo de recursos de servidor, tanto la base de datos como el grupo de recursos de servidor deben existir. El enlace surte efecto la próxima vez que la base de datos pase a estar en línea. Consulte [Database States](../../relational-databases/databases/database-states.md) para obtener más información.  
   
@@ -54,8 +49,7 @@ ms.locfileid: "34332236"
   
 -   [Cambiar MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT en un grupo existente](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)  
   
--   
-            [Porcentaje de memoria disponible para tablas e índices optimizados para memoria](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)  
+-   [Porcentaje de memoria disponible para tablas e índices optimizados para memoria](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)  
   
 ##  <a name="bkmk_CreatePool"></a> Crear la base de datos y el grupo de recursos de servidor  
  Puede crear la base de datos y el grupo de recursos de servidor en cualquier orden. Lo que importa es que ambos existan antes de enlazar la base de datos al grupo de recursos de servidor.  
@@ -169,9 +163,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE
 GO  
 ```  
   
-##  
-            <a name="bkmk_PercentAvailable">
-            </a> Porcentaje de memoria disponible para tablas e índices optimizados para memoria  
+##  <a name="bkmk_PercentAvailable"></a> Porcentaje de memoria disponible para tablas e índices optimizados para memoria  
  Si asigna una base de datos con tablas optimizadas para memoria y una carga de trabajo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al mismo grupo de recursos de servidor, el regulador de recursos establece un umbral interno para uso de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] de modo que los usuarios del grupo no experimenten conflictos al usar el grupo. En general, el umbral para el uso de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] es aproximadamente el 80 % del valor del grupo. En la tabla siguiente se muestran los umbrales reales para diversos tamaños de memoria.  
   
  Al crear un grupo de recursos de servidor dedicado para la base de datos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , debe evaluar cuánta memoria física necesita para las tablas en memoria después de tener en cuenta las versiones de filas y el aumento de datos. Una vez que calcula la memoria necesaria, puede crear un grupo de recursos de servidor con un porcentaje de memoria de destino de confirmación para la instancia de SQL como se refleja en la columna “committed_target_kb” en la DMV `sys.dm_os_sys_info` (vea [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)). Por ejemplo, puede crear un grupo de recursos de servidor P1 con el 40 % de la memoria total disponible para la instancia. Fuera de este 40 %, el motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] obtiene un porcentaje inferior para almacenar los datos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  Esto se hace para asegurarse de que [!INCLUDE[hek_2](../../includes/hek-2-md.md)] no usa toda la memoria de este grupo.  Este valor del porcentaje menor depende de la memoria confirmada de destino. En la siguiente tabla se describe la memoria disponible para la base de datos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] en un grupo de recursos de servidor (designado o predeterminado) antes de que se genere un error de OOM.  

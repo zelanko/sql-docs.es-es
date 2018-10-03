@@ -1,13 +1,11 @@
 ---
-title: Name (propiedad) (ADO MD) | Documentos de Microsoft
+title: Nombre (propiedad, ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -22,16 +20,15 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADO MD]
 ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 07a54616c2dd16a3a1c7582cbfe36c31ca0bef09
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5c6c9ba7f2981fd4162f93f37e6ad0eb2cbae882
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284724"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756773"
 ---
 # <a name="name-property-ado-md"></a>Name (propiedad, ADO MD)
 Indica el nombre de un objeto.  
@@ -39,8 +36,8 @@ Indica el nombre de un objeto.
 ## <a name="return-values"></a>Valores devueltos  
  Devuelve un **cadena** y es de solo lectura.  
   
-## <a name="remarks"></a>Notas  
- Puede recuperar el **nombre** propiedad de un objeto mediante una referencia ordinal, después del cual puede hacer referencia al objeto directamente por su nombre. Por ejemplo, si `cdf.CubeDefs(0).Name` da como resultado "Equipo Video Store", puede hacer referencia a este [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) como `cdf.CubeDefs("Bobs Video Store")`.  
+## <a name="remarks"></a>Comentarios  
+ Puede recuperar el **nombre** propiedad de un objeto mediante un ordinal, tras el cual se puede hacer referencia al objeto directamente por su nombre. Por ejemplo, si `cdf.CubeDefs(0).Name` da como resultado "Bobs vídeo Store", se puede hacer referencia a este [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) como `cdf.CubeDefs("Bobs Video Store")`.  
   
 ## <a name="applies-to"></a>Se aplica a  
   
@@ -53,5 +50,5 @@ Indica el nombre de un objeto.
 ## <a name="see-also"></a>Vea también  
  [Ejemplo de catálogo (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Propiedad Caption (ADO MD)](../../../ado/reference/ado-md-api/caption-property-ado-md.md)   
- [Description (propiedad) (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)   
+ [Descripción (propiedad, ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)   
  [UniqueName (propiedad, ADO MD)](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)

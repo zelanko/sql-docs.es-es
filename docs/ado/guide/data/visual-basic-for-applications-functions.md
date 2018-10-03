@@ -1,13 +1,11 @@
 ---
-title: Visual Basic para las funciones de aplicaciones | Documentos de Microsoft
+title: Visual Basic para las funciones de aplicaciones | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,25 +13,24 @@ helpviewer_keywords:
 - Visual Basic for applications functions [ADO]
 - data shaping [ADO], Visual Basic for Applications functions
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2849bd9164ca145b38aa05aa0357cbc42f2719f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 15ac62cd4c379d51bc537f0cdf83942bc334fdbb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273234"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611603"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic para las funciones de aplicaciones
-El siguiente ejemplo de Visual Basic para las funciones de las aplicaciones pueden utilizarse en forma de expresiones de cálculo de datos:  
+El siguiente ejemplo de Visual Basic para las funciones de aplicaciones puede usarse en forma de expresiones de cálculo de datos:  
   
 |||||||  
 |-|-|-|-|-|-|  
 |Abs|Asc|Atn|CBool|CByte|CCur|  
-|CDate|CDbl|Chr|ChrB|ChrW|Chr$|  
-|ChrB$|CInt|CLng|Cos|CSng|CStr|  
+|CDate|CDbl|Chr|CarB|ChrW|Chr$|  
+|CarB$|CInt|CLng|Cos|CSng|CStr|  
 |Cvar|CVDate|CVErr|date|Date$|DateAdd|  
 |DateDiff|DatePart|DateSerial|DateValue|Day|DDB|  
 |Error|Error$|Exp|Fix|Formato|Format$|  

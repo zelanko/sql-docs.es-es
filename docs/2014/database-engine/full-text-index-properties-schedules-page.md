@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.schedule.f1
 ms.assetid: a828e284-097e-4854-8c49-931934eb73bf
-caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 83eeb3ca9ea1f2e22f3d2dadf8089b8ba510c951
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 067c77839a852965c7684359acf50fb328d21a6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306235"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059825"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>Propiedades del índice de texto completo (página Programaciones)
   Utilice esta página con el fin de ver y crear calendarios para ejecutar un trabajo del Agente SQL Server que inicia un rellenado incremental de actualizaciones en la tabla base del índice de texto completo. Si la tabla base o vista no contiene una columna de la `timestamp` tipo de datos, se realiza un rellenado completo.  

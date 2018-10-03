@@ -1,13 +1,11 @@
 ---
-title: Ejemplo GetObjectOwner y SetObjectOwner métodos (VB) | Documentos de Microsoft
+title: GetObjectOwner y SetObjectOwner (VB) de los métodos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - SetObjectOwner method [ADOX], Visual Basic example
 - GetObjectOwner method [ADOX], Visual Basic example
 ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9599d5b1130b5e19a3c42614ae49df3183918e2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f2442124889e6217edc730d4cd47b2c98fa1d2d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285954"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828223"
 ---
-# <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>Ejemplo GetObjectOwner y SetObjectOwner métodos (VB)
-Este ejemplo se muestra la [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) y [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) métodos. Este código supone la existencia del grupo Contabilidad (vea el [grupos y usuarios anexar, ejemplo de métodos de ChangePassword (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md) para ver cómo se agrega este grupo al sistema). El propietario de la tabla de categorías se establece en administración de cuentas.  
+# <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>Ejemplo de métodos GetObjectOwner y SetObjectOwner (VB)
+Este ejemplo se muestra el [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) y [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) métodos. Este código supone la existencia del grupo Contabilidad (vea el [grupos y usuarios Append y ChangePassword métodos ejemplo (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md) para ver cómo agregar este grupo en el sistema). El propietario de la tabla de categorías se establece en cuentas.  
   
 ```  
 ' BeginOwnersVB  

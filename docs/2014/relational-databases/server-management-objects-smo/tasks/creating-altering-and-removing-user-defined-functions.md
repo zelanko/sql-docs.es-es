@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - user-defined functions [SMO]
 ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0960e46b83b191745169fde64f68f30fa2fc5c64
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ced5a796739ea508440fea9ddbb645443fdda786
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246275"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054505"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>Crear, modificar y eliminar las funciones definidas por el usuario
   El <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> objeto proporciona la funcionalidad que permite a los usuarios administrar mediante programación las funciones definidas por el usuario en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Las funciones definidas por el usuario admiten los parámetros de entrada y salida y también admiten las referencias directas a las columnas de la tabla.  
@@ -42,7 +39,7 @@ ms.locfileid: "37246275"
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBUserDefFuncs1](SMO How to#SMO_VBUserDefFuncs1)]  -->  
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-c"></a>Crear una función escalar definida por el usuario en Visual C#  
- Este ejemplo de código muestra cómo crear y quitar una función escalar definida por el usuario que tiene una entrada <xref:System.DateTime> parámetro de objeto y un entero de devuelven el tipo en [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]. La función definida por el usuario se crea en el [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de datos. En el ejemplo se crea la función definida por el usuario. `ISOweek`. Esta función toma un argumento de fecha para calcular el número de semana ISO. Para que esta función realice los cálculos correctamente, la opción `DATEFIRST` de base de datos debe establecerse en `1` antes de que se llame a la función.  
+ Este ejemplo de código muestra cómo crear y quitar una función escalar definida por el usuario que tiene una entrada <xref:System.DateTime> parámetro de objeto y un entero de devuelven el tipo en [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]. La función definida por el usuario se crea en el [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de datos. En el ejemplo se crea la función definida por el usuario. `ISOweek`  Esta función toma un argumento de fecha para calcular el número de semana ISO. Para que esta función realice los cálculos correctamente, la opción `DATEFIRST` de base de datos debe establecerse en `1` antes de que se llame a la función.  
   
 ```  
 {  
@@ -78,7 +75,7 @@ ms.locfileid: "37246275"
 ```  
   
 ## <a name="creating-a-scalar-user-defined-function-in-powershell"></a>Crear una función escalar definida por el usuario en PowerShell  
- Este ejemplo de código muestra cómo crear y quitar una función escalar definida por el usuario que tiene una entrada <xref:System.DateTime> parámetro de objeto y un entero de devuelven el tipo en [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]. La función definida por el usuario se crea en el [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de datos. En el ejemplo se crea la función definida por el usuario. `ISOweek`. Esta función toma un argumento de fecha para calcular el número de semana ISO. Para que esta función realice los cálculos correctamente, la opción `DATEFIRST` de base de datos debe establecerse en `1` antes de que se llame a la función.  
+ Este ejemplo de código muestra cómo crear y quitar una función escalar definida por el usuario que tiene una entrada <xref:System.DateTime> parámetro de objeto y un entero de devuelven el tipo en [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]. La función definida por el usuario se crea en el [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de datos. En el ejemplo se crea la función definida por el usuario. `ISOweek`  Esta función toma un argumento de fecha para calcular el número de semana ISO. Para que esta función realice los cálculos correctamente, la opción `DATEFIRST` de base de datos debe establecerse en `1` antes de que se llame a la función.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

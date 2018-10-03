@@ -1,31 +1,28 @@
 ---
-title: Asignación de SQLFreeStmt | Documentos de Microsoft
+title: Asignación de SQLFreeStmt | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLFreeStmt function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLFreeStmt
 ms.assetid: 267d95f2-4f0c-47ab-9411-5afe105215a2
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb7ad5a362b7b193f1e6e6f8fae7cfb493131cc5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1872806265470327f3e7bff468be2ba6d9011421
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906400"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792773"
 ---
 # <a name="sqlfreestmt-mapping"></a>Asignación de SQLFreeStmt
-Cuando una aplicación llama **SQLFreeStmt** con una *opción* argumento de SQL_DROP a través de una aplicación ODBC 3 *.x* controlador, la llamada a  
+Cuando una aplicación llama **SQLFreeStmt** con un *opción* argumento de SQL_DROP a través de una aplicación ODBC 3 *.x* controlador, la llamada a  
   
 ```  
 SQLFreeStmt(hstmt, SQL_DROP)   
@@ -37,4 +34,4 @@ SQLFreeStmt(hstmt, SQL_DROP)
 SQLFreeHandle(SQL_HANDLE_STMT,Handle)  
 ```  
   
- con el *controlar* establecido en el valor de *hstmt*.
+ con el *controlar* argumento establecido en el valor de *hstmt*.

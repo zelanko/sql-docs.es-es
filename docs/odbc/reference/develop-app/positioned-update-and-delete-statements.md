@@ -1,13 +1,11 @@
 ---
-title: Coloca las instrucciones Update y Delete | Documentos de Microsoft
+title: Coloca las instrucciones Update y Delete | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - positioned deletes [ODBC]
@@ -15,44 +13,44 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d1f01ea9009e516d3962c1fbb175dff4f90f5d10
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3cf60ccc0e220850f7a83ed2c25db3795c1e7796
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777747"
 ---
 # <a name="positioned-update-and-delete-statements"></a>Actualización posicionada y las instrucciones Delete
-Las aplicaciones pueden actualizar o eliminar la fila actual de un conjunto de resultados con una actualización por posición o la instrucción delete. Coloca update y delete instrucciones son compatibles con algunos orígenes de datos, pero no todas ellas. Para determinar si un origen de datos admite coloca instrucciones update y delete, llama a una aplicación **SQLGetInfo** con el SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ ATTRIBUTES1 o SQL_STATIC_CURSOR_ATTRIBUTES1 *tipo de información* (según el tipo del cursor). Tenga en cuenta que la biblioteca de cursores ODBC simula coloca instrucciones update y delete.  
+Las aplicaciones pueden actualizar o eliminar la fila actual de un conjunto de resultados con una actualización por posición o la instrucción delete. Posicionadas update y delete se admiten las instrucciones por algunos orígenes de datos, pero no todos ellos. Para determinar si un origen de datos admite coloca instrucciones update y delete, una aplicación llama a **SQLGetInfo** con el SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ ATTRIBUTES1 o SQL_STATIC_CURSOR_ATTRIBUTES1 *InfoType* (según el tipo del cursor). Tenga en cuenta que la biblioteca de cursores ODBC simula coloca instrucciones update y delete.  
   
- Para utilizar una actualización por posición o la instrucción delete, la aplicación debe crear un conjunto de resultados con un **seleccione para actualizar** instrucción. La sintaxis de esta instrucción es:  
+ Para usar una actualización por posición o la instrucción delete, la aplicación debe crear un conjunto de resultados con un **seleccione para actualizar** instrucción. La sintaxis de esta instrucción es:  
   
- **Seleccione** [**todos los** &#124; **DISTINCT**] *lista de selección*  
+ **Seleccione** [**todas** &#124; **DISTINCT**] *lista de selección*  
   
- **DE** *lista de referencias de tabla*  
+ **DESDE** *lista de referencias de tabla*  
   
  [**Donde** *condición de búsqueda*]  
   
- **PARA la actualización de** [*nombre de la columna* [**,** *nombre de la columna*]...]  
+ **PARA la actualización de** [*nombre-columna* [**,** *nombre de columna*]...]  
   
- La aplicación, a continuación, coloca el cursor en la fila para actualizarse o eliminarse. Puede hacerlo mediante una llamada a **SQLFetchScroll** para recuperar un conjunto de filas que contiene la fila necesaria y llamar a **SQLSetPos** para colocar el cursor de conjunto de filas en esa fila. A continuación, la aplicación ejecuta la instrucción de eliminación o actualización posicionada en una instrucción diferente que la instrucción que se va a utilizar el conjunto de resultados. Es la sintaxis de estas instrucciones:  
+ La aplicación, a continuación, coloca el cursor en la fila se deben actualizar o eliminar. Puede hacerlo mediante una llamada a **SQLFetchScroll** para recuperar un conjunto de filas que contiene las filas requerida y una llamada a **SQLSetPos** para colocar el cursor de conjunto de filas en esa fila. A continuación, la aplicación ejecuta la actualización por posición o la instrucción delete en una instrucción que la instrucción que se está usa el conjunto de resultados diferente. Es la sintaxis de estas instrucciones:  
   
- **ACTUALIZACIÓN** *nombre de la tabla*  
+ **ACTUALIZACIÓN** *nombre de tabla*  
   
- **ESTABLECER** *identificador de la columna* **=** {*expresión* &#124; **NULL**}  
+ **ESTABLECER** *identificador de columna* **=** {*expresión* &#124; **NULL**}  
   
- [**,** *identificador de la columna* **=** {*expresión* &#124; **NULL**}]...  
+ [**,** *identificador de columna* **=** {*expresión* &#124; **NULL**}]...  
   
- **WHERE CURRENT OF** *nombre del cursor*  
+ **WHERE CURRENT OF** *nombre de cursor*  
   
- **DELETE FROM** *nombre de la tabla* **WHERE CURRENT OF** *nombre del cursor*  
+ **DELETE FROM** *nombre-tabla* **WHERE CURRENT OF** *nombre de cursor*  
   
- Tenga en cuenta que estas instrucciones requieren un nombre de cursor. La aplicación puede especificar un nombre de cursor con **SQLSetCursorName** antes de ejecutar la instrucción que crea el resultado de establece o puede dejar que el origen de datos automáticamente, generar un nombre de cursor cuando se crea el cursor. En el último caso, la aplicación recupera este nombre de cursor para su uso en instrucciones de eliminación y actualización posicionada mediante una llamada a **SQLGetCursorName**.  
+ Tenga en cuenta que estas instrucciones requieren un nombre de cursor. La aplicación puede especificar un nombre de cursor con **SQLSetCursorName** antes de ejecutar la instrucción que crea el resultado de establece o puede dejar que el origen de datos automáticamente, generar un nombre de cursor cuando se crea el cursor. En el último caso, la aplicación recupera este nombre de cursor para su uso en instrucciones posicionada update y delete mediante una llamada a **SQLGetCursorName**.  
   
- Por ejemplo, el código siguiente permite a un usuario a desplazarse por la tabla Customers y eliminar los registros de clientes o actualizar las direcciones y números de teléfono. Llama **SQLSetCursorName** para especificar un nombre de cursor antes de que se crea el conjunto de resultados de clientes y utiliza tres identificadores de instrucciones: *hstmtCust* para el conjunto de resultados, *hstmtUpdate* en una instrucción de actualización por posición, y *hstmtDelete* para una posición la instrucción delete. Aunque el código podría enlazar variables independientes para los parámetros de la instrucción de actualización posicionada, actualiza los búferes de conjunto de filas y enlaza los elementos de estos búferes. Esto evita que los búferes de conjunto de filas sincronizados con los datos actualizados.  
+ Por ejemplo, el código siguiente permite a los usuarios desplazarse por la tabla Customers y eliminar registros de cliente o actualizar sus direcciones y números de teléfono. Llama a **SQLSetCursorName** para especificar un nombre de cursor antes de que crea el conjunto de resultados de los clientes y utiliza tres identificadores de instrucciones: *hstmtCust* para el conjunto de resultados, *hstmtUpdate* para una instrucción de actualización posicionada y *hstmtDelete* para una posición la instrucción delete. Aunque el código podría enlazar variables independientes para los parámetros de la instrucción de actualización posicionada, actualiza los búferes del conjunto de filas y enlaza los elementos de estos búferes. Esto evita que los búferes de conjunto de filas sincronizados con los datos actualizados.  
   
 ```  
 #define POSITIONED_UPDATE 100  

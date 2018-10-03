@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQMSupportEnabled property
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - LinkInsideInstanceEnabled property
 - UseCachedPageAllocators property
 ms.assetid: a34d046a-6562-4d98-b827-37cebc6d77b4
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ae26995283bcfa50a33f78ab55536f8aac75453
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9cb99dd05157680f586c0f6f3f9a4397bc2d0bbd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188962"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051235"
 ---
 # <a name="feature-properties"></a>Propiedades de características
   Las propiedades de características corresponden a las características del producto, la mayor parte de ellas avanzadas, incluidas las propiedades que controlan los vínculos entre las instancias de servidor.  
@@ -39,7 +36,7 @@ ms.locfileid: "37188962"
   
 ## <a name="properties"></a>Propiedades  
   
-|Property|Valor predeterminado|Descripción|  
+|Property|Default|Descripción|  
 |--------------|-------------|-----------------|  
 |`ManagedCodeEnabled`|1|Una propiedad booleana que indica si los procedimientos de almacenamiento CLR están habilitados.|  
 |`LinkInsideInstanceEnabled`|1|Una propiedad booleana que indica si se puede crear un objeto vinculado dentro de la misma instancia del servidor.|  

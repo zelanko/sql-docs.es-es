@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AggregationAttribute Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AggregationAttribute data type
 ms.assetid: 636827c7-938d-4b7d-9827-46da3bc60d9a
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 71da4468ab4edece07744ae73a13243eefd1dfed
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 05b0f2f1bc4ed517c289cb4e68810265118d9ea7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243425"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078675"
 ---
 # <a name="aggregationattribute-data-type-assl"></a>Tipo de datos AggregationAttribute (ASSL)
   Define un tipo de datos primitivo que representa la asociación entre un [agregación](../objects/aggregation-element-assl.md) elemento y un atributo.  
@@ -60,7 +57,7 @@ ms.locfileid: "37243425"
 |Elementos secundarios|[AttributeID](../properties/id-element-assl.md), [anotaciones](../collections/annotations-element-assl.md)|  
 |Elementos derivados|[Atributo](../objects/attribute-element-assl.md) ([atributos](../collections/attributes-element-assl.md) colección de [AggregationDimension](dimension-data-type-assl.md))|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  La clase correspondiente en el modelo de objetos Objetos de administración de análisis (AMO) es <xref:Microsoft.AnalysisServices.AggregationAttribute>.  
   
 ## <a name="see-also"></a>Vea también  

@@ -1,13 +1,11 @@
 ---
-title: Asignar los tipos de información de Cursor Attributes1 | Documentos de Microsoft
+title: Asignación de los tipos de información de Cursor Attributes1 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], mapping cursor attributes1 information types
@@ -16,23 +14,23 @@ helpviewer_keywords:
 - backward compatibility [ODBC], mapping cursor attributes1 information types
 - upgrading applications [ODBC], mapping cursor attributes1 information types
 ms.assetid: 9f112449-ca86-45ac-a865-e6174d67f91b
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec986c2feea1b5c2ef64de87d64944ce0d184898
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9e9549c442e301f3a6ed8d3da9c73d52177adf01
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821334"
 ---
 # <a name="mapping-the-cursor-attributes1-information-types"></a>Asignar los tipos de información de Cursor Attributes1
-Cuando un ODBC 3. *x* aplicación llama **SQLGetInfo** en una API ODBC 2 *.x* controlador con el tipo de información SQL_XXXX_CURSOR_ATTRIBUTES1 (dinámico, solo avance, keyset-controlador de, o los cursores estáticos), la configuración de los bits devueltos por el Administrador de controladores depende de qué la API ODBC 2. *x* controlador devuelve el 2 de ODBC correspondiente. *x* tipos de información. Los bits se establecen como se muestra en la tabla siguiente.  
+Cuando un ODBC 3. *x* aplicación llama a **SQLGetInfo** en un 2 de ODBC *.x* controlador con el tipo de información SQL_XXXX_CURSOR_ATTRIBUTES1 (para dinámico, solo avance, de los cursores, o cursores estáticos), la configuración de los bits devueltos por el Administrador de controladores depende de qué el 2 de ODBC. *x* controlador devuelve el 2 de ODBC correspondiente. *x* tipos de información. Los bits se establecen como se muestra en la tabla siguiente.  
   
-|Valor del bit en<br /><br /> SQL_XXXX_CURSOR_ATTRIBUTES1|Tipo de cursor|ODBC 2. *x* información<br /><br /> Tipo|  
+|Bit en<br /><br /> SQL_XXXX_CURSOR_ATTRIBUTES1|Tipo de cursor|ODBC 2. *x* información<br /><br /> Tipo|  
 |-----------------------------------------------|-----------------|-------------------------------------|  
-|SQL_CA1_NEXT|Todos|SQL_FETCH_DIRECTION|  
-|SQL_CA1_ABSOLUTE SQL_CA1_RELATIVE SQL_CA1_BOOKMARK|Dinámicos, cursores-controlados, estático|SQL_FETCH_DIRECTION|  
-|SQL_CA1_LOCK_NO_CHANGE SQL_CA1_LOCK_UNLOCK SQL_CA1_LOCK_EXCLUSIVE|Dinámicos, cursores-controlados, estático|SQL_LOCK_TYPES|  
-|SQL_CA1_POSITIONED_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_SELECT_FOR_UPDATE|Todos|SQL_POSITIONED_STATEMENTS|  
-|SQL_CA1_POS_POSITION SQL_CA1_POS_DELETE SQL_CA1_POS_REFRESH SQL_CA1_POS_BULK_ADD|Dinámicos, cursores-controlados, estático|SQL_POS_OPERATIONS|
+|SQL_CA1_NEXT|All|SQL_FETCH_DIRECTION|  
+|SQL_CA1_ABSOLUTE SQL_CA1_RELATIVE SQL_CA1_BOOKMARK|Dinámico, de los cursores, estático|SQL_FETCH_DIRECTION|  
+|SQL_CA1_LOCK_NO_CHANGE SQL_CA1_LOCK_UNLOCK SQL_CA1_LOCK_EXCLUSIVE|Dinámico, de los cursores, estático|SQL_LOCK_TYPES|  
+|SQL_CA1_POSITIONED_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_SELECT_FOR_UPDATE|All|SQL_POSITIONED_STATEMENTS|  
+|SQL_CA1_POS_POSITION SQL_CA1_POS_DELETE SQL_CA1_POS_REFRESH SQL_CA1_POS_BULK_ADD|Dinámico, de los cursores, estático|SQL_POS_OPERATIONS|

@@ -1,13 +1,11 @@
 ---
-title: Ejemplo de propiedades de RecordCount (VC ++) y filtro | Documentos de Microsoft
+title: Ejemplo Filter y RecordCount propiedades (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - RecordCount property [ADO], VC++ example
 - Filter property [ADO], VC++ example
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72b9edbc322403e49a4938bf541220bde43ce4b9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3aef01723a9682907ac20be42d04bb02773557e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278624"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772833"
 ---
-# <a name="filter-and-recordcount-properties-example-vc"></a>Filtro y ejemplo de las propiedades RecordCount (VC ++)
-Este ejemplo se utiliza la [filtro](../../../ado/reference/ado-api/filter-property.md) propiedad para abrir una nueva [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) en función de una condición especificada aplicada a un archivo **conjunto de registros**. Usa el [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) propiedad para mostrar el número de registros en los dos **conjuntos de registros**. La función FilterField es necesaria ejecutar este procedimiento.  
+# <a name="filter-and-recordcount-properties-example-vc"></a>Ejemplo Filter y RecordCount propiedades (VC ++)
+Este ejemplo se usa el [filtro](../../../ado/reference/ado-api/filter-property.md) propiedad para abrir una nueva [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) según una condición especificada se aplica a una existente **Recordset**. Usa el [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) propiedad para mostrar el número de registros en los dos **conjuntos de registros**. La función FilterField es necesaria ejecutar este procedimiento.  
   
 ## <a name="example"></a>Ejemplo  
   

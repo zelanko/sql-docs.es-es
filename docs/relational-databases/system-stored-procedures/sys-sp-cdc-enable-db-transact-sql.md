@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cdc_enable_db_TSQL
@@ -25,12 +22,12 @@ ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0f8c68e5366d8cd55475621ff4985c48a47ed4ae
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 26fdd13e19e2542f5020467323d9e640a4b563b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43030289"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827523"
 ---
 # <a name="sysspcdcenabledb-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +52,7 @@ sys.sp_cdc_enable_db
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Captura de datos modificados no se puede habilitar en [las bases de datos del sistema](../../relational-databases/databases/system-databases.md) o bases de datos de distribución.  
   
  sys.sp_cdc_enable_db crea los objetos de captura de datos modificados con un ámbito aplicable a toda la base de datos, incluidas las tablas de metadatos y los desencadenadores DDL. También crea el esquema cdc y el usuario de base de datos cdc y establece la columna is_cdc_enabled de la entrada de la base de datos en el [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) en 1 la vista de catálogo.  

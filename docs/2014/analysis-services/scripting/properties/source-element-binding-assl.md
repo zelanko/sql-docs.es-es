@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Source Element (Binding)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Source element
 ms.assetid: 1032558c-7546-4ca7-888d-8139df23cb62
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 54257415a19530a82b27e759dea03a4e41dcb0cd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2600803402d87e880ad479be660de98ff5d32f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257247"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061335"
 ---
 # <a name="source-element-binding-assl"></a>Elemento Source (Binding) (ASSL)
   Identifica el origen de datos al que está enlazado el elemento primario.  
@@ -46,7 +43,7 @@ ms.locfileid: "37257247"
 </Cube>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -78,7 +75,7 @@ ms.locfileid: "37257247"
 |Elementos primarios|[AggregationInstance](../objects/aggregationinstance-element-assl.md), [AggregationInstanceMeasure](../data-type/aggregationinstancemeasure-data-type-assl.md), [cubo](../objects/cube-element-assl.md), [DataItem](../data-type/dataitem-data-type-assl.md), [dimensión](../objects/dimension-element-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [MeasureGroup](../objects/group-element-assl.md), [MeasureGroupDimension](../data-type/dimension-data-type-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [partición ](../objects/partition-element-assl.md), [ProactiveCaching](../objects/proactivecaching-element-assl.md).|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  En el elemento `Source`, los tipos de datos `Binding` derivados permitidos en el elemento `DataItem` dependen del elemento primario del elemento `DataItem`.  
   
 |Elemento primario DataItem|Tipos de datos admitidos|  

@@ -1,13 +1,11 @@
 ---
-title: ActiveConnection (propiedad, ADO MD) | Documentos de Microsoft
+title: ActiveConnection (propiedad, ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,44 +15,43 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADO MD]
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c030a9c1106338975a799a6057bd3eb876b5aa72
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9a9ece5a7774ca2b718af90fe041c070fcc99bdb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283204"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789384"
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection (propiedad, ADO MD)
-Indica a qué ADO [conexión](../../../ado/reference/ado-api/connection-object-ado.md) el conjunto de celdas actual de un objeto o catálogo al que pertenece actualmente.  
+Indica a qué ADO [conexión](../../../ado/reference/ado-api/connection-object-ado.md) el conjunto de celdas de objeto o el catálogo al que pertenece actualmente.  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un **Variant** que contiene una cadena que define una conexión o **conexión** objeto. El valor predeterminado está vacío.  
   
-## <a name="remarks"></a>Notas  
- Puede establecer esta propiedad en un ADO válido **conexión** objeto o en una cadena de conexión válida. Cuando esta propiedad se establece en una cadena de conexión, el proveedor crea un nuevo **conexión** objeto mediante esta definición y abre la conexión.  
+## <a name="remarks"></a>Comentarios  
+ Puede establecer esta propiedad para un ADO válido **conexión** objeto o en una cadena de conexión válida. Cuando esta propiedad se establece en una cadena de conexión, el proveedor crea un nuevo **conexión** utilizando esta definición de objeto y se abre la conexión.  
   
  Si usas el *ActiveConnection* argumento de la [abrir](../../../ado/reference/ado-md-api/open-method-ado-md.md) método para abrir un [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto, el **ActiveConnection** propiedad heredar el valor del argumento.  
   
- Establecer el **ActiveConnection** propiedad de un [catálogo](../../../ado/reference/ado-md-api/catalog-object-ado-md.md) el objeto a **nada** libera los datos asociados, incluidos los datos en el [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) colección y los relacionados con [dimensión](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [jerarquía](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md), y [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objetos. Cerrar un **conexión** objeto que se usó para abrir un **catálogo** tiene el mismo efecto que establecer la **ActiveConnection** propiedad **nada**.  
+ Establecer el **ActiveConnection** propiedad de un [catálogo](../../../ado/reference/ado-md-api/catalog-object-ado-md.md) objeto **nada** libera los datos asociados, incluidos los datos en el [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) colección y los relacionados con [dimensión](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [jerarquía](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md), y [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objetos. Cerrar un **conexión** objeto que se usó para abrir un **catálogo** tiene el mismo efecto que establecer el **ActiveConnection** propiedad **nada**.  
   
  Cambiar la base de datos predeterminada de la conexión al que hace referencia el **ActiveConnection** propiedad de un **catálogo** objeto invalida el contenido de la **catálogo**.  
   
- Se producirá un error si intenta cambiar el **ActiveConnection** propiedad abierto **Cellset** objeto.  
+ Se producirá un error si intenta cambiar el **ActiveConnection** propiedad para que uno abierto **Cellset** objeto.  
   
 > [!NOTE]
->  En Visual Basic, recuerde que debe usar el **establecer** palabra clave al establecer el **ActiveConnection** propiedad a una **conexión** objeto. Si se omite la **establecer** palabra clave, en realidad estará estableciendo la **ActiveConnection** propiedad igual a la **conexión** propiedad predeterminada del objeto,  **ConnectionString**. El código funcionará; Sin embargo, se creará una conexión adicional al origen de datos, lo que puede tener implicaciones de rendimiento negativo.  
+>  En Visual Basic, recuerde que debe usar el **establecer** palabra clave al establecer el **ActiveConnection** propiedad a un **conexión** objeto. Si se omite el **establecer** palabra clave, en realidad se estableciendo el **ActiveConnection** propiedad igual a la **conexión** propiedad predeterminada del objeto,  **ConnectionString**. El código funcionará; Sin embargo, se creará una conexión adicional al origen de datos, lo que podría tener implicaciones de rendimiento negativo.  
   
- Cuando se utiliza el proveedor de datos MSOLAP, establezca el origen de datos en una cadena de conexión a un nombre de servidor y el catálogo inicial para el nombre de un catálogo de desde el origen de datos. Para conectarse a un archivo de cubo que esté desconectado de un servidor, establezca la ubicación en la ruta de acceso completa a la. Archivos CUB. En cualquier caso, establezca el proveedor en el nombre del proveedor. Por ejemplo, la cadena siguiente usa el proveedor MSOLAP para conectarse a un catálogo denominado almacén de vídeo del equipo en un servidor denominado **Servername**:  
+ Cuando se usa el proveedor de datos MSOLAP, establezca el origen de datos en una cadena de conexión a un nombre de servidor y el catálogo inicial en el nombre de un catálogo desde el origen de datos. Para conectarse a un archivo de cubo que se desconecta un servidor, establezca la ubicación en la ruta de acceso completa a la. Archivos CUB. En cualquier caso, establezca el proveedor en el nombre del proveedor. Por ejemplo, la siguiente cadena usa el proveedor MSOLAP para conectarse a un catálogo denominado Bobs Video Store en un servidor denominado **Servername**:  
   
 ```  
 "Data Source=Servername;Initial Catalog=Bobs Video Store;Provider=msolap"  
 ```  
   
- La siguiente cadena se conecta a un archivo de cubo local en la ubicación C:\MSDASDK\samples\oledb\olap\data\bobsvid.cub:  
+ La cadena siguiente se conecta a un archivo de cubo local en la ubicación C:\MSDASDK\samples\oledb\olap\data\bobsvid.cub:  
   
 ```  
 "Location=C:\MSDASDK\samples\oledb\olap\data\bobsvid.cub;Provider=msolap"  

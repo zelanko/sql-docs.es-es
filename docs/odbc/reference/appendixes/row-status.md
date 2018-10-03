@@ -1,13 +1,11 @@
 ---
-title: Estado de fila | Documentos de Microsoft
+title: Estado de fila | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], cache
@@ -15,24 +13,23 @@ helpviewer_keywords:
 - row status [ODBC]
 - cache [ODBC]
 ms.assetid: 0f0b1fb6-f697-4ced-811c-2908e210bc71
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba4f36ad63ee5e7d9fada29d444e8cc36eca1bcf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ce45314cef92404fe14a43e033c14d6a272e1bf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906310"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765793"
 ---
 # <a name="row-status"></a>Estado de fila
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad del controlador cursor.  
+>  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad de cursor del controlador.  
   
- La biblioteca de cursores, crea un búfer en la memoria caché para que el estado de fila. La biblioteca de cursores recupera valores de la matriz de Estados de fila (especificado con el atributo de instrucción SQL_ATTR_ROW_STATUS_PTR) de este búfer. Para cada fila, la biblioteca de cursores establece este búfer en:  
+ La biblioteca de cursores, crea un búfer en la memoria caché para el estado de fila. La biblioteca de cursores recupera los valores de la matriz de Estados de fila (especificado con el atributo de instrucción SQL_ATTR_ROW_STATUS_PTR) de este búfer. Para cada fila, la biblioteca de cursores establece en este búfer:  
   
--   SQL_ROW_DELETED cuando ejecuta una posición delete, instrucción en la fila.  
+-   SQL_ROW_DELETED cuando se ejecuta en una posición elimine la instrucción en la fila.  
   
 -   SQL_ROW_ERROR cuando encuentra un error al recuperar la fila del origen de datos con **SQLFetch**.  
   

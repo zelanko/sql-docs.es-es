@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysdac_instances_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - dbo.sysdac_instances
 - sysdac_instances
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 813a786f68fe02431073033172d37ffe2c682ee0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d6cb75ec737a8342f284179b37bbcd09d1eec335
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031343"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654157"
 ---
 # <a name="data-tier-application-views---dbosysdacinstances"></a>Vistas de aplicación de capa de datos - dbo.sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +38,14 @@ ms.locfileid: "38031343"
 |instance_id|**uniqueidentifier**|Identificador de la instancia de DAC.|  
 |nombre_instancia|**sysname**|Nombre de la instancia de DAC especificada cuando se implementó la DAC.|  
 |type_name|**sysname**|Nombre de la DAC especificada cuando se creó el paquete DAC.|  
-|type_version|**nvarchar (64)**|Versión de la DAC especificada cuando se creó el paquete DAC.|  
+|type_version|**Nvarchar (64)**|Versión de la DAC especificada cuando se creó el paquete DAC.|  
 |description|**nvarchar(4000)**|Descripción de la DAC escrita cuando se creó el paquete DAC.|  
 |type_stream|**varbinary(max)**|Flujo de bits que contiene una representación codificada de los objetos lógicos, como tablas y vistas, que contiene la DAC.|  
 |date_created|**datetime**|Fecha y hora en que se creó la instancia de DAC.|  
 |created_by|**sysname**|Inicio de sesión que creó la instancia DAC.|  
 |database_name|**sysname**|Nombre de la base de datos creada para la instancia de DAC.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Una DAC incluye un tipo de DAC, que es una definición de los objetos de capa de datos lógicos utilizados por una aplicación, como las tablas y las vistas. Un paquete DAC es un archivo que se utiliza para implementar una DAC. El paquete DAC contiene una representación de todos los objetos lógicos contenidos en el tipo de DAC. El paquete DAC se puede utilizar para implementar una o más copias, o instancias, de la DAC en una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Cada instancia de DAC implementada a partir del mismo paquete DAC comparte el mismo tipo, pero tiene asignado un identificador y un nombre de instancia únicos.  
   
 ## <a name="permissions"></a>Permisos  

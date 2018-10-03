@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sys.dm_db_log_info
@@ -18,17 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_log_info dynamic management view
 ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
-caps.latest.revision: 4
 author: savjani
 ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdc006140f2aa8a3f509e28f682c7af2c29dec70
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f93bf921236676b40a9d6917af38ca3ca88ff5f7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073868"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644113"
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -64,7 +61,7 @@ sys.dm_db_log_info ( database_id )
 |vlf_first_lsn|**nvarchar(48)** |[Registro (LSN) del número de secuencia](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) de la primera entrada del registro en el [archivo de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 |vlf_create_lsn|**nvarchar(48)** |[Registro (LSN) del número de secuencia](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) del registro de registro que creó el [archivo de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Comentarios
 El `sys.dm_db_log_info` función de administración dinámica reemplaza el `DBCC LOGINFO` instrucción.    
  
 ## <a name="permissions"></a>Permisos  

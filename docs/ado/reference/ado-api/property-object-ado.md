@@ -1,13 +1,11 @@
 ---
-title: Objeto Property (ADO) | Documentos de Microsoft
+title: Objeto Property (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,26 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - Property object [ADO]
 ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4256e213e6ce9d6c96b55bda013fbf79f1a49cda
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5abbc13ac3ba9690f341e365ee14b0b72fcc6ca8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280764"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695653"
 ---
 # <a name="property-object-ado"></a>Objeto Property (ADO)
-Representa una característica dinámica de un objeto ADO definido por el proveedor.  
+Representa una característica dinámica de un objeto ADO que está definida por el proveedor.  
   
-## <a name="remarks"></a>Notas  
- Objetos ADO tienen dos tipos de propiedades: integradas y dinámicas.  
+## <a name="remarks"></a>Comentarios  
+ Los objetos ADO tienen dos tipos de propiedades: integradas y dinámicas.  
   
  Las propiedades integradas son aquellas propiedades implementadas en ADO y disponibles inmediatamente para cualquier objeto nuevo, utilizando el `MyObject.Property` sintaxis. No aparecen como **propiedad** objetos en un objeto [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección, por lo que aunque se pueden cambiar sus valores, no se puede modificar sus características.  
   
- Propiedades dinámicas se definen mediante el proveedor de datos subyacente y aparecen en la **propiedades** colección para el objeto ADO apropiado. Por ejemplo, una propiedad específica del proveedor puede indicar si una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto admite transacciones o actualizaciones. Estas propiedades adicionales aparecerán como **propiedad** objetos que **Recordset** del objeto **propiedades** colección. Pueden hacer referencia a las propiedades dinámicas sólo a través de la colección, usando la `MyObject.Properties(0)` o `MyObject.Properties("Name")` sintaxis.  
+ Propiedades dinámicas se definen mediante el proveedor de datos subyacente y aparecen en la **propiedades** colección para el objeto ADO apropiado. Por ejemplo, una propiedad específica del proveedor puede indicar si un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto admite transacciones o actualizaciones. Estas propiedades adicionales aparecerán como **propiedad** objetos en el que **Recordset** del objeto **propiedades** colección. Propiedades dinámicas se pueden hacer referencia únicamente a través de la colección, utilizando el `MyObject.Properties(0)` o `MyObject.Properties("Name")` sintaxis.  
   
  No se puede eliminar cualquier tipo de propiedad.  
   
@@ -53,7 +50,7 @@ Representa una característica dinámica de un objeto ADO definido por el provee
 -   [Objeto de propiedades, métodos y eventos](../../../ado/reference/ado-api/property-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Objeto de comando (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
  [Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

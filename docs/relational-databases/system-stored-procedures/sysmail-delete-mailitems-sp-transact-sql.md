@@ -1,14 +1,11 @@
 ---
-title: sysmail_delete_mailitems_sp (Transact-SQL) | Documentos de Microsoft
+title: sysmail_delete_mailitems_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_mailitems_sp_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_mailitems_sp
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca730dc633f8aad10aa79fd34bb7e94870a48076
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4c1e161a678b6834123aabf1eb5126445927a7fe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260268"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650789"
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,12 +51,12 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Comentarios  
- Mensajes de correo electrónico de base de datos y sus datos adjuntos se almacenan en la **msdb** base de datos. Los mensajes se deben eliminar periódicamente para evitar **msdb** crezca más grandes de lo esperado y para cumplir con el programa de retención de documento de las organizaciones. Use la **sysmail_delete_mailitems_sp** procedimiento almacenado para eliminar permanentemente los mensajes de correo electrónico de las tablas del correo electrónico de base de datos. Un argumento opcional permite eliminar solo los mensajes de correo electrónico antiguos indicando la fecha y la hora. Se eliminarán los mensajes de correo electrónico anteriores al valor de ese argumento. Otro argumento opcional permite eliminar solo los correos electrónicos de un tipo determinado, especificado como el **sent_status** argumento. Debe proporcionar un argumento para **@sent_before** o **@sent_status**. Para eliminar todos los mensajes, utilice  **@sent_before = getdate()**.  
+ Mensajes de correo electrónico de base de datos y sus datos adjuntos se almacenan en el **msdb** base de datos. Los mensajes se deben eliminar periódicamente para evitar **msdb** crezca mayor de lo esperado y para cumplir con el programa de retención de documentos de las organizaciones. Use la **sysmail_delete_mailitems_sp** procedimiento almacenado para eliminar permanentemente los mensajes de correo electrónico de las tablas del correo electrónico de base de datos. Un argumento opcional permite eliminar solo los mensajes de correo electrónico antiguos indicando la fecha y la hora. Se eliminarán los mensajes de correo electrónico anteriores al valor de ese argumento. Otro argumento opcional permite eliminar solo los correos electrónicos de un tipo determinado, especificado como el **sent_status** argumento. Debe proporcionar un argumento para **@sent_before** o **@sent_status**. Para eliminar todos los mensajes, utilice  **@sent_before = getdate()**.  
   
- Si se eliminan mensajes de correo electrónico, se eliminarán también los archivos adjuntos relacionados con los mismos. Al eliminar correo electrónico no elimina las entradas correspondientes en **sysmail_event_log**. Use [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) para eliminar elementos del registro.  
+ Si se eliminan mensajes de correo electrónico, se eliminarán también los archivos adjuntos relacionados con los mismos. Eliminación de correo electrónico no elimina las entradas correspondientes en **sysmail_event_log**. Use [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) para eliminar elementos del registro.  
   
-## <a name="permissions"></a>Permissions  
- De forma predeterminada, este procedimiento almacenado se concede la ejecución a los miembros desactivar la **sysadmin** rol fijo de servidor y **DatabaseMailUserRole**. Los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento para eliminar los correos electrónicos enviados por todos los usuarios. Los miembros de **DatabaseMailUserRole** solo se pueden eliminar los correos electrónicos enviados por dicho usuario.  
+## <a name="permissions"></a>Permisos  
+ De forma predeterminada, este procedimiento almacenado se concede para la ejecución a los miembros de desactivar el **sysadmin** rol fijo de servidor y **DatabaseMailUserRole**. Los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento para eliminar los correos electrónicos enviados por todos los usuarios. Los miembros de **DatabaseMailUserRole** solo se puede eliminar los correos electrónicos enviados por ese usuario.  
   
 ## <a name="examples"></a>Ejemplos  
   

@@ -1,29 +1,26 @@
 ---
-title: Propiedades de objetos, métodos y eventos de catálogo | Documentos de Microsoft
+title: Catálogo de eventos, métodos y propiedades del objeto | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Catalog object [ADOX], members
 ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 920393e27746d3d2c46406056a5969f84cf77faa
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 02f018052567a82a87d4a541c23ae1ee5ed9e1b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285414"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630793"
 ---
-# <a name="catalog-object-properties-methods-and-events"></a>Propiedades del objeto de catálogo, métodos y eventos
+# <a name="catalog-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Catalog
 ## <a name="propertiescollections"></a>Propiedades y colecciones  
  [Propiedad ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)  
   
@@ -38,7 +35,7 @@ ms.locfileid: "35285414"
  [Colección de vistas](../../../ado/reference/adox-api/views-collection-adox.md)  
   
 ## <a name="methods"></a>Métodos  
- [Create (método)](../../../ado/reference/adox-api/create-method-adox.md)  
+ [Crear método](../../../ado/reference/adox-api/create-method-adox.md)  
   
  [GetObjectOwner (método)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)  
   

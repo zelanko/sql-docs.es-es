@@ -1,29 +1,26 @@
 ---
-title: Ejemplo de Visual Basic de forma de datos | Documentos de Microsoft
+title: Ejemplo de Visual Basic de forma de datos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Visual Basic example of data shaping[ADO], about data shaping
 ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e6f7fd8431a189a031b44206b13c711ea74e7b7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 772fb84482346402133874ff5e177f4d3c8b30c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273354"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645643"
 ---
 # <a name="visual-basic-example-of-data-shaping"></a>Ejemplo de Visual Basic de forma de datos
 ```  
@@ -96,14 +93,14 @@ End Function
   
 #### <a name="try-it"></a>¡Pruébelo!  
   
-1.  Crear un proyecto de aplicación EXE estándar de Visual Basic  
+1.  Cree un proyecto de aplicación EXE estándar de Visual Basic  
   
 2.  Seleccione **componentes** desde el **proyecto** menú en Visual Studio  
   
-3.  Seleccione "Microsoft jerárquica FlexGrid Control 6.0 (OLEDB)" en la **componentes** ventana emergente y, a continuación, haga clic en **guardar**.  
+3.  Seleccione "Microsoft jerárquica FlexGrid Control 6.0 (OLEDB)" en el **componentes** ventana emergente y, a continuación, haga clic en **guardar**.  
   
-4.  Haga doble clic en el FlexGrid Control desde el panel de cuadro de herramientas en el área de trabajo de Visual Basic. Cambie el nombre de esta instancia a MSHFLEXGRID.  
+4.  Haga doble clic en el FlexGrid Control desde el panel cuadro de herramientas del área de trabajo de Visual Basic. Cambie el nombre de esta instancia a MSHFLEXGRID.  
   
-5.  Copie el código anterior y péguelo en el **código** página para reemplazar todo el código existente.  
+5.  Copie el código anterior y péguelo en el **código** página para reemplazar cualquier código existente.  
   
 6.  Seleccione **iniciar** desde el **ejecutar** menú para ejecutar la aplicación.

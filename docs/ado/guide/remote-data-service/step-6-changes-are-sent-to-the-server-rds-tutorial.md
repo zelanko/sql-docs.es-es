@@ -1,33 +1,30 @@
 ---
-title: 'Paso 6: Los cambios se envían al servidor (Tutorial de RDS) | Documentos de Microsoft'
+title: 'Paso 6: Los cambios se envían al servidor (Tutorial de RDS) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], changes sent to server
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd14dcfa918afc5bc252822ceacccfe10ddd7302
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2d79fb88ba9371d1767561c7190818c135fd0a03
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274734"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680273"
 ---
-# <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Paso 6: Los cambios se envían al servidor (Tutorial de RDS)
-Si el **Recordset** se edita el objeto, cualquier cambio (es decir, las filas que se agregan, cambian o eliminan) puede enviarse al servidor.  
+# <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Paso 6: los cambios se envían al servidor (Tutorial de RDS)
+Si el **Recordset** se edita el objeto, los cambios (es decir, las filas que se agregan, cambian o eliminan) pueden enviarse al servidor.  
   
 > [!NOTE]
->  El comportamiento predeterminado de RDS se puede invocar implícitamente con objetos ADO y el proveedor de servicios remotos de Microsoft OLE DB. Las consultas pueden devolver **Recordset**s y editado **Recordset**s puede actualizar el origen de datos. Este tutorial no utiliza RDS con objetos ADO, pero se trata cómo aparecería si lo hiciera:  
+>  El comportamiento predeterminado de RDS se puede invocar implícitamente con objetos ADO y el proveedor de servicios remotos de Microsoft OLE DB. Las consultas pueden devolver **Recordset**s y editado **Recordset**s puede actualizar el origen de datos. En este tutorial no utiliza RDS con objetos ADO, pero se trata de cómo sería si lo hiciera:  
   
 ```  
 Dim rs as New ADODB.Recordset  
@@ -38,7 +35,7 @@ rs.   ' The equivalent of
 ...  
 ```  
   
- **Parte A** suponga para este caso que sólo ha utilizado el [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) y que un **Recordset** objeto está asociado con el **RDS. DataControl**. El [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) método actualiza el origen de datos con los cambios realizados en el **Recordset** objeto si el [Server](../../../ado/reference/rds-api/server-property-rds.md) y [conectar](../../../ado/reference/rds-api/connect-property-rds.md) todavía se establecen propiedades.  
+ **Parte A** suponga para este caso de que solo haya usado el [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) y que un **Recordset** objeto está ahora asociado el **RDS. DataControl**. El [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) método actualiza el origen de datos con los cambios realizados en el **Recordset** objeto si el [Server](../../../ado/reference/rds-api/server-property-rds.md) y [Connect](../../../ado/reference/rds-api/connect-property-rds.md) todavía se establecen las propiedades.  
   
 ```  
 Sub RDSTutorial6A()  
@@ -56,7 +53,7 @@ DC.
 ...  
 ```  
   
- **La parte B** o bien, puede actualizar el servidor con el [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto Database, especificando una conexión y un **Recordset** objeto.  
+ **La parte B** como alternativa, podría actualizar el servidor con el [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto, especificando una conexión y un **Recordset** objeto.  
   
 ```  
 Sub RDSTutorial6B()  
@@ -76,9 +73,9 @@ End Sub
  **Éste es el final del tutorial.**  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar a [servicio de datos de WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="see-also"></a>Vea también  
- [Proveedor de servicios remotos de Microsoft OLE DB (proveedor de servicios ADO)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
- [Tutorial RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
+ [Proveedor de servicios remotos de Microsoft OLE DB (proveedor de servicios de ADO)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
+ [Tutorial de RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Tutorial de RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

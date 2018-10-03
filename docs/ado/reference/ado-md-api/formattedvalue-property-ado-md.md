@@ -1,13 +1,11 @@
 ---
-title: FormattedValue (propiedad, ADO MD) | Documentos de Microsoft
+title: FormattedValue (propiedad, ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,25 +14,24 @@ f1_keywords:
 helpviewer_keywords:
 - FormattedValue property [ADO MD]
 ms.assetid: 5c06451e-06ec-4da6-9a87-2d043469248a
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63f198df0787f408eaf5a8eead8d8e7dc6344140
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 49c5772404e212629a97c89bf23475ab893bd069
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283954"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616623"
 ---
 # <a name="formattedvalue-property-ado-md"></a>FormattedValue (propiedad, ADO MD)
-Indica la presentación con formato de un [celda](../../../ado/reference/ado-md-api/cell-object-ado-md.md) valor.  
+Indica la visualización con formato de un [celda](../../../ado/reference/ado-md-api/cell-object-ado-md.md) valor.  
   
 ## <a name="return-values"></a>Valores devueltos  
  Devuelve un **cadena** y es de solo lectura.  
   
-## <a name="remarks"></a>Notas  
- Use la **FormattedValue** propiedad que se va a obtener el valor con formato de presentación de la [valor](../../../ado/reference/ado-md-api/value-property-ado-md.md) propiedad de un [celda](../../../ado/reference/ado-md-api/cell-object-ado-md.md) objeto. Por ejemplo, si el valor de una celda era 1056,87 y este valor representaba una cantidad en dólares, **FormattedValue** será 1.056,87 $.  
+## <a name="remarks"></a>Comentarios  
+ Use la **FormattedValue** propiedad que se va a obtener el valor de visualización con formato de la [valor](../../../ado/reference/ado-md-api/value-property-ado-md.md) propiedad de un [celda](../../../ado/reference/ado-md-api/cell-object-ado-md.md) objeto. Por ejemplo, si el valor de una celda era 1056,87 y este valor representa un importe en dólares, **FormattedValue** será 1.056,87 $.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto Cell (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  

@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_db_uncontained_entities (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_db_uncontained_entities (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_uncontained_entities
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_uncontained_entities dynamic management view
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18f89d3a275a36d32d72524a1c2e650a9e2dc663
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 40235280563039493bdd174de1c314809a424336
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463901"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694093"
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +35,10 @@ ms.locfileid: "34463901"
   
 ||||  
 |-|-|-|  
-|**Nombre de columna**|**Tipo**|**Description**|  
+|**Nombre de columna**|**Tipo**|**Descripción**|  
 |*class*|**int**|1 = Objeto o columna (incluye módulos, XP, vistas, sinónimos y tablas).<br /><br /> 4 = entidad de seguridad de base de datos<br /><br /> 5 = Ensamblado<br /><br /> 6 = Tipo<br /><br /> 7 = Índice (índice de texto completo)<br /><br /> 12 = desencadenador DDL de base de datos<br /><br /> 19 = Ruta<br /><br /> 30 = Especificación de auditoría|  
 |*class_desc*|**nvarchar(120)**|Descripción de la clase de la entidad. Una de las siguientes acciones para que coincida con la clase:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
-|*major_id*|**int**|Identificador de la entidad.<br /><br /> Si *clase* = 1, entonces object_id<br /><br /> Si *clase* = 4, entonces sys.database_principals.principal_id.<br /><br /> Si *clase* = 5, entonces sys.assemblies.assembly_id.<br /><br /> Si *clase* = 6, entonces sys.types.user_type_id.<br /><br /> Si *clase* = 7, entonces sys.indexes.index_id.<br /><br /> Si *clase* = 12, entonces sys.triggers.object_id.<br /><br /> Si *clase* = 19, entonces sys.routes.route_id.<br /><br /> Si *clase* = 30, entonces sys. database_audit_specifications.databse_specification_id.|  
+|*major_id*|**int**|Identificador de la entidad.<br /><br /> Si *clase* = 1, entonces object_id<br /><br /> Si *clase* = 4, a continuación, sys.database_principals.principal_id.<br /><br /> Si *clase* = 5, entonces sys.assemblies.assembly_id.<br /><br /> Si *clase* = 6, entonces sys.types.user_type_id.<br /><br /> Si *clase* = 7, entonces sys.indexes.index_id.<br /><br /> Si *clase* = 12, entonces sys.triggers.object_id.<br /><br /> Si *clase* = 19, entonces sys.routes.route_id.<br /><br /> Si *clase* = 30, entonces sys. database_audit_specifications.databse_specification_id.|  
 |*statement_line_number*|**int**|Si la clase es un módulo, devuelve el número de línea en el que se encuentra el uso del objeto no contenido.  De lo contrario, el valor es NULL.|  
 |*statement_ offset_begin*|**int**|Si la clase es un módulo, indica en bytes, comenzando por 0, la posición inicial donde comienza el uso del objeto no contenido. De lo contrario el valor devuelto es NULL.|  
 |*statement_ offset_end*|**int**|Si la clase es un módulo, indica en bytes, comenzando por 0, la posición final del uso del objeto no contenido. El valor -1 indica el final del módulo. De lo contrario el valor devuelto es NULL.|  
@@ -68,8 +65,8 @@ ms.locfileid: "34463901"
   
 ## <a name="security"></a>Seguridad  
   
-### <a name="permissions"></a>Permissions  
- Sys.dm_db_uncontained_entities sólo devuelve objetos para los que el usuario tiene algún tipo de permiso. Para evaluar exhaustivamente la contención de la base de datos de esta función debe usarse por un usuario con muchos privilegios, como un miembro de la **sysadmin** rol fijo de servidor o el **db_owner** rol.  
+### <a name="permissions"></a>Permisos  
+ Sys.dm_db_uncontained_entities solo devuelve objetos para el que el usuario tiene algún tipo de permiso. Para evaluar exhaustivamente la contención de la base de datos se debe usar esta función por un usuario con privilegios elevados, como un miembro de la **sysadmin** rol fijo de servidor o el **db_owner** rol.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea un procedimiento denominado P1 y, a continuación, se consulta `sys.dm_db_uncontained_entities`. La consulta notifica que P1 usa **sys.endpoints** , que está fuera de la base de datos.  

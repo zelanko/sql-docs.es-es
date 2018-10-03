@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_monitor_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_monitor
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f7e84891d55949751645e3b3d35d8b13fc3a742
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 5312413386dae9915b9ac6649b4210541d45b1db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43024060"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644433"
 ---
 # <a name="spmonitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +60,7 @@ sp_monitor
 |**total_errors**|Número de errores que ha encontrado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al leer y escribir.|  
 |**Conexiones**|Número de inicios de sesión o intentos de inicio de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  A través de una serie de funciones, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza el seguimiento del trabajo que ha realizado. Ejecutar **sp_monitor** muestra los valores devueltos por estas funciones y muestra cuánto han cambiado desde la última vez que se ejecutó el procedimiento.  
   
  Para cada columna, la estadística se imprime en el formulario *número*(*número*)-*número*% o *número*(*número*). La primera *número* hace referencia al número de segundos (para **cpu_busy**, **io_busy**, y **inactivo**) o el número total (para los demás variables) puesto que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reinició. El *número* entre paréntesis hace referencia al número de segundos o al número total desde la última vez **sp_monitor** se ejecutó. El porcentaje es el porcentaje de tiempo transcurrido desde **sp_monitor** ejecutó por última vez. Por ejemplo, si el informe muestra **cpu_busy** como 4250 (215)-68%, la CPU ha estado ocupada 4250 segundos desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inició por última vez hacia arriba, 215 segundos desde **sp_monitor** era última ejecución y un 68 por ciento de la total de tiempo transcurrido desde **sp_monitor** ejecutó por última vez.  

@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_cryptographic_provider_sessions (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_cryptographic_provider_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_cryptographic_provider_sessions
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cryptographic_provider_sessions dynamic management function
 ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 739c1fe64814ab53bfcf166cacac2d21655df8d1
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 9257b158546ee9a64f38e5143cf6030c4dc3060c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463671"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686832"
 ---
 # <a name="sysdmcryptographicprovidersessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,15 +48,15 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|Número de identificación del proveedor de servicios criptográficos.|  
 |**session_handle**|**varbytes(8)**|Controlador de la sesión criptográfico.|  
-|**Identidad**|**nvarchar(128)**|Identidad utilizada para autenticar con el proveedor criptográfico.|  
-|**spid**|**Corto**|Id. de la sesión SPID de la conexión. Para más información, vea [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md).|  
+|**identidad**|**nvarchar(128)**|Identidad utilizada para autenticar con el proveedor criptográfico.|  
+|**spid**|**short**|Id. de la sesión SPID de la conexión. Para más información, vea [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md).|  
   
 ## <a name="remarks"></a>Comentarios  
- El **sys.dm_cryptographic_provider_sessions** vista está visible para el público de la conexión actual. Para ver todas las conexiones criptográficas, debe tener la **CONTROL** permiso de servidor.  
+ El **sys.dm_cryptographic_provider_sessions** vista está visible para el público para la conexión actual. Para ver todas las conexiones criptográficas, debe tener la **CONTROL** permiso de servidor.  
   
 ## <a name="see-also"></a>Vea también  
  [Vistas de catálogo de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

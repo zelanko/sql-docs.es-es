@@ -1,13 +1,11 @@
 ---
-title: FilterGroupEnum | Documentos de Microsoft
+title: FilterGroupEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - FilterGroupEnum enumeration [ADO]
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd0af463cf9ebc5bad28665cad32fc49fce5fb5b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7c200e1ed569db288d92a6322cba2adc5c00f7c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278654"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649823"
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
-Especifica el grupo de registros que se deben filtrar en un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Especifica el grupo de registros que deben filtrarse desde un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 |Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
@@ -35,9 +32,9 @@ Especifica el grupo de registros que se deben filtrar en un [conjunto de registr
 |**adFilterConflictingRecords**|5|Filtros para ver los registros que no se pudo la última actualización por lotes.|  
 |**adFilterFetchedRecords**|3|Filtros para ver los registros en la memoria caché actual, es decir, los resultados de la última llamada para recuperar registros de la base de datos.|  
 |**adFilterNone**|0|Quita el filtro actual y restaura todos los registros para su visualización.|  
-|**adFilterPendingRecords**|1|Filtros para ver solo los registros que han cambiado pero no se han enviado todavía al servidor. Se aplica solo a modo de actualización por lotes.|  
+|**adFilterPendingRecords**|1|Los filtros para ver solo los registros que han cambiado pero que no se han enviado al servidor. Solo es aplicable a modo de actualización por lotes.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
+## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
  Paquete: **com.ms.wfc.data**  
   
 |Constante|  

@@ -1,30 +1,27 @@
 ---
-title: Microsoft Open Database Connectivity (ODBC) | Documentos de Microsoft
+title: Microsoft Open Database Connectivity (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4272d84c6a6ad786d5e2b77423ce3d5868428c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 326d0872d554e4074b004f59c4a1d5b700dc4531
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899830"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616194"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft Open Database Connectivity (ODBC)
-La interfaz de Microsoft Open Database Connectivity (ODBC) es una interfaz de lenguaje de programación de C que hace posible que las aplicaciones tener acceso a datos desde una variedad de sistemas de administración de bases de datos (DBMS). ODBC es una interfaz de bajo nivel y de alto rendimiento que está diseñada específicamente para almacenes de datos relacionales.  
+La interfaz de Microsoft Open Database Connectivity (ODBC) es una interfaz de lenguaje de programación de C que hace que las aplicaciones pueden tener acceso a datos desde una variedad de sistemas de administración de bases de datos (DBMS). ODBC es una interfaz de bajo nivel y de alto rendimiento que está diseñada específicamente para almacenes de datos relacionales.  
   
- La interfaz ODBC permite obtener una interoperabilidad máxima, una aplicación puede tener acceso a datos en diversos DBMS a través de una única interfaz. Además, dicha aplicación será independiente de los DBMS desde el que tiene acceso a datos. Los usuarios de la aplicación pueden agregar componentes de software denominados controladores, que la interfaz entre una aplicación y un DBMS específico.  
+ La interfaz ODBC permite obtener la máxima interoperatividad, una aplicación puede tener acceso a datos en diversos DBMS a través de una única interfaz. Además, esa aplicación será independiente de cualquier instancia de DBMS desde el que tiene acceso a datos. Los usuarios de la aplicación pueden agregar componentes de software denominados controladores de interfaz entre una aplicación y un DBMS específico.  
   
 ## <a name="documentation"></a>Documentación  
  [Referencia del programador de ODBC](../odbc/reference/odbc-programmer-s-reference.md)  
@@ -33,15 +30,15 @@ La interfaz de Microsoft Open Database Connectivity (ODBC) es una interfaz de le
   
  [Administrador de orígenes de datos ODBC](../odbc/admin/odbc-data-source-administrator.md)  
   
- El Administrador de orígenes de datos de ODBC de Microsoft administra los orígenes de datos y controladores de base de datos.  
+ El Administrador de orígenes de datos de ODBC de Microsoft administra los orígenes de datos y los controladores de base de datos.  
   
  [Controladores ODBC proporcionados por Microsoft](../odbc/microsoft/microsoft-supplied-odbc-drivers.md)  
   
- Documentación para los controladores de escritorio de la base de datos ODBC, el controlador ODBC para Oracle y el controlador ODBC FoxPro® Visual.  
+ Documentación para los controladores de escritorio de la base de datos ODBC, el controlador ODBC para Oracle y el controlador ODBC de Visual FoxPro®.  
   
  [Prueba de ODBC](../odbc/odbc-test.md)  
   
- Microsoft ha probado ODBC es una aplicación habilitada para ODBC que puede utilizar para probar controladores ODBC.  
+ Prueba de ODBC de Microsoft es una aplicación habilitada para ODBC que puede usar para probar los controladores ODBC.  
   
  [Glosario de ODBC](../odbc/odbc-glossary.md)  
   

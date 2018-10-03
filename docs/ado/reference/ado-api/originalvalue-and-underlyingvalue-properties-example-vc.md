@@ -1,13 +1,11 @@
 ---
-title: Ejemplo de propiedades de UnderlyingValue (VC ++) y OriginalValue | Documentos de Microsoft
+title: Ejemplo OriginalValue y UnderlyingValue propiedades (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - UnderlyingValue property [ADO], VC++ example
 - OriginalValue property [ADO]
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8fa7e2dbf687c9d07bad1e9052b7fd2eeede1e4f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e6b2f13f84f8776756253592f9b293a2a3764da9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280074"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623733"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Ejemplo OriginalValue y UnderlyingValue propiedades (VC ++)
-Este ejemplo se muestra la [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) y [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) propiedades al mostrar un mensaje si los datos subyacentes de un registro han cambiado durante una [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) actualización por lotes.  
+Este ejemplo se muestra el [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) y [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) propiedades al mostrar un mensaje si los datos subyacentes de un registro ha cambiado durante una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) actualización por lotes.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -198,28 +195,28 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Ha cambiado los datos.**  
-**Id. de título: PS1372**  
+ **¡Ha cambiado los datos!**  
+**Id. del título: PS1372**  
 **Valor actual: self_help**   
 **Valor original: psicología**   
 **Valor subyacente: sociología**   
-**Ha cambiado los datos.**  
-**Id. de título: PS2091**  
+**¡Ha cambiado los datos!**  
+**Id. del título: PS2091**  
 **Valor actual: self_help**   
 **Valor original: psicología**   
 **Valor subyacente: sociología**   
-**Ha cambiado los datos.**  
-**Id. de título: PS2106**  
+**¡Ha cambiado los datos!**  
+**Id. del título: PS2106**  
 **Valor actual: self_help**   
 **Valor original: psicología**   
 **Valor subyacente: sociología**   
-**Ha cambiado los datos.**  
-**Id. de título: PS3333**  
+**¡Ha cambiado los datos!**  
+**Id. del título: PS3333**  
 **Valor actual: self_help**   
 **Valor original: psicología**   
 **Valor subyacente: sociología**   
-**Ha cambiado los datos.**  
-**Id. de título: PS7777**  
+**¡Ha cambiado los datos!**  
+**Id. del título: PS7777**  
 **Valor actual: self_help**   
 **Valor original: psicología**   
 **Valor subyacente: sociología**    

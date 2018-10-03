@@ -1,34 +1,31 @@
 ---
-title: Consulta de método (RDS) | Documentos de Microsoft
+title: (RDS) del método de consulta | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Query method [ADO]
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 682743135ddb0a7eddff18e0c659f0a7a7b9931f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 59dff6a0af01fe55b6b542cfe494cd93ad73b943
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288367"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616876"
 ---
 # <a name="query-method-rds"></a>Método Query (RDS)
-Utiliza una cadena de consulta SQL válida para devolver un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Usa una cadena de consulta SQL válida para devolver un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar a [servicio de datos de WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,17 +38,17 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *Conjunto de registros*  
  Una variable de objeto que representa un **Recordset** objeto.  
   
- *Factory*  
+ *Data Factory*  
  Una variable de objeto que representa un [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto.  
   
  *Conexión*  
- A **cadena** valor que contiene la información de conexión de servidor. Esto es similar a la [conectar](../../../ado/reference/rds-api/connect-property-rds.md) propiedad.  
+ Un **cadena** valor que contiene la información de conexión de servidor. Esto es similar a la [Connect](../../../ado/reference/rds-api/connect-property-rds.md) propiedad.  
   
  *Consulta*  
- A **cadena** que contiene la consulta SQL.  
+ Un **cadena** que contiene la consulta SQL.  
   
-## <a name="remarks"></a>Notas  
- La consulta debe usar el dialecto SQL del servidor de base de datos. Un estado de resultados se devuelve si se produce un error con la consulta que se ejecutó. El **consulta** método lleva a cabo no comprueba la sintaxis en el **consulta** cadena.  
+## <a name="remarks"></a>Comentarios  
+ La consulta debe usar el dialecto SQL del servidor de base de datos. Se devuelve un estado de resultado si se produce un error con la consulta que se ha ejecutado. El **consulta** método lleva a cabo no comprueba la sintaxis en el **consulta** cadena.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  

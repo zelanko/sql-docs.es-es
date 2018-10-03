@@ -1,13 +1,11 @@
 ---
-title: Función SQLColAttributes | Documentos de Microsoft
+title: Función SQLColAttributes | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLColAttributes
@@ -19,27 +17,27 @@ f1_keywords:
 helpviewer_keywords:
 - SQLColAttributes function [ODBC]
 ms.assetid: 3ece37af-db56-47fc-bc9d-6a7d0d8a00ec
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72070fa971e19d999918c2622be6ddaf8c4a8079
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff7d1349666d236e640d8de3524a7d069662ec86
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729173"
 ---
-# <a name="sqlcolattributes-function"></a>SQLColAttributes (función)
+# <a name="sqlcolattributes-function"></a>Función SQLColAttributes
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: en desuso  
+ Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: desusado  
   
  **Resumen**  
- En ODBC 3. *x*, la función de ODBC 2.0 **SQLColAttributes** se ha reemplazado por **SQLColAttribute**. Para obtener más información, consulte [función SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md).  
+ En ODBC 3. *x*, la función ODBC 2.0 **SQLColAttributes** ha sido reemplazado por **SQLColAttribute**. Para obtener más información, consulte [función SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md).  
   
 > [!NOTE]  
->  Para obtener más información acerca de qué el Administrador de controladores asigna esta función cuando una API ODBC 2. *x* aplicación está trabajando con una aplicación ODBC 3. *x* controladores, consulte [asignación de funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) en Apéndice G: controlador directrices para la compatibilidad con versiones anteriores.  
+>  Para obtener más información sobre lo que el Administrador de controladores asigna esta función cuando un ODBC 2. *x* aplicación funciona con una aplicación ODBC 3. *x* controladores, consulte [asignación de funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) en Apéndice G: directrices de controlador para la compatibilidad con versiones anteriores.  
   
- Vea [información ODBC de 64 bits](../../../odbc/reference/odbc-64-bit-information.md), si la aplicación se ejecutará en un sistema operativo de 64 bits.  
+ Consulte [información ODBC 64-Bit](../../../odbc/reference/odbc-64-bit-information.md), si la aplicación se ejecutará en un sistema operativo de 64 bits.  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

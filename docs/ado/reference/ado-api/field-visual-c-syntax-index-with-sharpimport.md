@@ -1,13 +1,11 @@
 ---
-title: 'Field (Visual índice de sintaxis de C++ con #import) | Documentos de Microsoft'
+title: 'Campo (Visual C++ índice de sintaxis con #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -15,18 +13,17 @@ dev_langs:
 helpviewer_keywords:
 - 'Field collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: 90cb636a-9416-48a4-b4eb-bb11bbd40950
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e02856f3621c6502d9408b258319d87ea34a616
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a2f442f665f6292c529b4d2360494869d9a0b2c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278565"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705593"
 ---
-# <a name="field-visual-c-syntax-index-with-import"></a>Field (Visual índice de sintaxis de C++ con #import)
+# <a name="field-visual-c-syntax-index-with-import"></a>Campo (Visual C++ índice de sintaxis con #import)
 ## <a name="methods"></a>Métodos  
   
 ```  

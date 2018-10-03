@@ -1,37 +1,35 @@
 ---
-title: El enlace | Documentos de Microsoft
+title: El enlace de | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - column-wise binding [ODBC]
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 77b82a8ab37f4da51801f860638b5c03e6c499aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f5a8237e32479bed033b8b9a8003726556a3b25
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618983"
 ---
 # <a name="column-wise-binding"></a>El enlace
-Cuando se usa el enlace, una aplicación enlaza las tres, matrices de uno o dos o en algunos casos para cada columna para la que se devolverán datos. La primera matriz que contiene los valores de datos y la segunda matriz contiene búferes de longitud/indicador. Indicadores y los valores de longitud pueden almacenarse en búferes independientes al establecer los campos de descriptor SQL_DESC_INDICATOR_PTR y SQL_DESC_OCTET_LENGTH_PTR en valores diferentes; Si es así, se enlaza una tercera matriz. Cada matriz contiene tantos elementos como filas en el conjunto de filas.  
+Cuando se usa el enlace, una aplicación enlaza las matrices de tres, uno o dos o en algunos casos para cada columna para el que se va a devolver datos. La primera matriz contiene los valores de datos, y la segunda matriz contiene los búferes de longitud/indicador. Valores de longitud y los indicadores pueden almacenarse en búferes independientes estableciendo los campos de descriptor SQL_DESC_INDICATOR_PTR y SQL_DESC_OCTET_LENGTH_PTR en valores diferentes; Si esto sucede, se enlaza una tercera matriz. Cada matriz contiene tantos elementos como filas en el conjunto de filas.  
   
- La aplicación declara que está usando el enlace con el atributo de instrucción SQL_ATTR_ROW_BIND_TYPE, que determina el tipo de enlace para los búferes de conjunto de filas en lugar de parámetro establece los búferes. El controlador devuelve los datos para cada fila de los elementos sucesivos de cada matriz. La ilustración siguiente muestra cómo funciona el enlace.  
+ La aplicación declara que está usando el enlace con el atributo de instrucción SQL_ATTR_ROW_BIND_TYPE, que determina el tipo de enlace para los búferes de conjunto de filas en lugar del parámetro de conjunto de búferes. El controlador devuelve los datos para cada fila en los elementos sucesivos de cada matriz. La siguiente ilustración muestra cómo el enlace funciona.  
   
  ![Columna&#45;enlace conveniente de tres columnas](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
   
- Por ejemplo, el código siguiente enlaza a matrices de 10 elementos a las columnas OrderID y vendedor, estado:  
+ Por ejemplo, el código siguiente enlaza a matrices de 10 elementos a las columnas OrderID, vendedor y el estado:  
   
 ```  
 #define ROW_ARRAY_SIZE 10  

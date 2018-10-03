@@ -1,13 +1,11 @@
 ---
-title: Ejemplo de propiedades de marcador (VB), EOF y BOF | Documentos de Microsoft
+title: BOF, EOF y Bookmark propiedades ejemplo (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Bookmark property [ADO], Visual Basic example
 - EOF property [ADO], Visual Basic example
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 439bba8dd4eae06a388060c905cbff45539f8b69
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ef1ab4199de6b0249173f13c607e6cb1816ccbc5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276004"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698223"
 ---
-# <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF, EOF y ejemplo de propiedades de marcador (VB)
-Este ejemplo se utiliza la [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) y [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propiedades para mostrar un mensaje si un usuario intenta moverse más allá del primer o último registro de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Usa el [marcador](../../../ado/reference/ado-api/bookmark-property-ado.md) propiedad para permitir que el usuario marca un registro en un **Recordset** y volver a él más adelante.  
+# <a name="bof-eof-and-bookmark-properties-example-vb"></a>Ejemplo de las propiedades BOF, EOF y Bookmark (VB)
+Este ejemplo se usa el [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) y [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propiedades para mostrar un mensaje si un usuario intenta pasar el primer o último registro de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa el [marcador](../../../ado/reference/ado-api/bookmark-property-ado.md) propiedad para permitir que el usuario marca un registro en un **Recordset** y volver a él más adelante.  
   
 ```  
 'BeginBOFVB  
@@ -133,7 +130,7 @@ End Sub
 'EndBOFVB  
 ```  
   
- Este ejemplo se utiliza la **marcador** y [filtro](../../../ado/reference/ado-api/filter-property.md) propiedades para crear una vista limitada de la **conjunto de registros**. Solo los registros al que hace referencia la matriz de marcadores son accesibles.  
+ Este ejemplo se usa el **marcador** y [filtro](../../../ado/reference/ado-api/filter-property.md) propiedades para crear una vista limitada de la **Recordset**. Solo los registros que se hace referencia a la matriz de los marcadores son accesibles.  
   
 ```  
 Attribute VB_Name = "BOF"  

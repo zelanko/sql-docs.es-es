@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_delete_collection_set se (Transact-SQL) | Documentos de Microsoft
+title: sp_syscollector_delete_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_collection_set_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_delete_collecton_set
 ms.assetid: 29c63a74-4db4-4068-bd57-9fb519b0c598
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09bab6af1ad8e1116d3215ecf202055301efbe8c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1636a081aee571297aa4c9e3cbe09cd30c8feca5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252740"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651833"
 ---
 # <a name="spsyscollectordeletecollectionset-transact-sql"></a>sp_syscollector_delete_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,11 +58,11 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
   
  No se pueden eliminar los conjuntos de recopilación definidos por el sistema.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol fijo de base de datos dc_admin (con permiso EXECUTE) para ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se elimina una colección definida por el usuario establezca especificando el *collection_set_id*.  
+ En el ejemplo siguiente se elimina un conjunto especificando de recopilación definido por el usuario la *collection_set_id*.  
   
 ```  
 USE msdb;  

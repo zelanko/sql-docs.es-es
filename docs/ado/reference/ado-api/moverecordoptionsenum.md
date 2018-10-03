@@ -1,13 +1,11 @@
 ---
-title: MoveRecordOptionsEnum | Documentos de Microsoft
+title: MoveRecordOptionsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,29 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - MoveRecordOptionsEnum enumeration [ADO]
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3bb86ce988a47db06c59e7b70609ba021bd524d7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: eb86b01a42a097210801fd3654ff2af80df24e39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279434"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701594"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 Especifica el comportamiento de la [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) método.  
   
 |Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
-|**adMoveUnspecified**|-1|Predeterminado: Realiza la operación mover predeterminada: la operación se produce un error si el archivo de destino o el directorio ya existe y la operación actualiza los vínculos de hipertexto.|  
+|**adMoveUnspecified**|-1|Predeterminado: Realiza la operación de movimiento predeterminado: la operación se produce un error si el archivo de destino o directorio ya existe, y la operación actualiza los vínculos de hipertexto.|  
 |**adMoveOverWrite**|1|Sobrescribe el archivo de destino o el directorio, incluso si ya existe.|  
-|**adMoveDontUpdateLinks**|2|Modifica el comportamiento predeterminado de **MoveRecord** método por no actualizar los vínculos de hipertexto del origen de **registro**. El comportamiento predeterminado depende de las capacidades del proveedor. La operación mover actualiza vínculos si el proveedor es compatible con. Si el proveedor no puede reparar vínculos, o si no se especifica este valor, a continuación, el movimiento se realiza correctamente incluso cuando vínculos no se ha corregido.|  
-|**adMoveAllowEmulation**|4|Solicitudes que el proveedor intenta simular el movimiento (mediante la descarga y carga, las operaciones de eliminación). Si el intento de mover el **registro** produce un error porque la dirección URL de destino está en un servidor diferente o atendida por un proveedor diferente a la de origen, esto puede provocar una mayor latencia o pérdida de datos debido a las capacidades de un proveedor distinto cuando mover recursos entre proveedores.|  
+|**adMoveDontUpdateLinks**|2|Modifica el comportamiento predeterminado de **MoveRecord** método si no actualiza los vínculos de hipertexto del origen de **registro**. El comportamiento predeterminado depende de las capacidades del proveedor. Mover la operación actualiza los vínculos si es compatible con el proveedor. Si el proveedor no puede reparar los vínculos, o si no se especifica este valor, el cambio tiene éxito incluso cuando vínculos no se han corregido.|  
+|**adMoveAllowEmulation**|4|Solicitudes que el proveedor intenta simular el movimiento (mediante operaciones de eliminación, carga y descarga). Si el intento de mover el **registro** produce un error porque la dirección URL de destino está en un servidor diferente o atendida por un proveedor diferente de origen, esto provocaría un mayor latencia o pérdida de datos debido a las capacidades del proveedor diferente cuando mover recursos entre los proveedores.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
- Estas constantes no tienen equivalentes ADO/WFC.  
+## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
+ Estas constantes no tienen equivalentes de ADO y WFC.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Método MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)

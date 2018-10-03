@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_update_collection_set se (Transact-SQL) | Documentos de Microsoft
+title: sp_syscollector_update_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_set_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_update_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62867f22c044a42c40499e0a1143557621931db8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f9e7ba855bde4caa04efea0411857705eb4bf976
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261431"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702744"
 ---
 # <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,9 +73,9 @@ sp_syscollector_update_collection_set
   
  0 - Modo de almacenamiento en caché. La recopilación y la carga de datos están en programaciones independientes. Especifique el modo de almacenamiento en caché para la recopilación continua.  
   
- 1 - Modo sin almacenamiento en caché. Carga y recopilación de datos está en la misma programación. Establezca el modo sin almacenamiento en caché para la recopilación ad hoc o la recopilación de instantáneas.  
+ 1 - Modo sin almacenamiento en caché. Recopilación de datos y la carga se encuentra en la misma programación. Establezca el modo sin almacenamiento en caché para la recopilación ad hoc o la recopilación de instantáneas.  
   
- Si cambia de modo sin almacenamiento en caché en modo de almacenamiento en caché (0), debe especificar también *valor schedule_uid* o *schedule_name*.  
+ Al cambiar del modo sin almacenamiento en caché al modo en caché (0), debe especificar también *valor schedule_uid* o *schedule_name*.  
   
  [  **@days_until_expiration=** ] *days_until_expiration*  
  Es el número de días que los datos recopilados se guardan en el almacén de administración de datos. *days_until_expiration* es **smallint**. *days_until_expiration* debe ser 0 o un entero positivo.  
@@ -88,22 +84,22 @@ sp_syscollector_update_collection_set
  Es el identificador único para una cuenta proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *proxy_id* es **int**.  
   
  [  **@proxy_name =** ] '*proxy_name*'  
- Es el nombre del proxy. *proxy_name* es **sysname** y acepta valores NULL.  
+ Es el nombre del proxy. *proxy_name* es **sysname** y admite valores NULL.  
   
  [ **@schedule_uid** =] '*valor schedule_uid*'  
  Es el GUID que apunta a una programación. *valor schedule_uid* es **uniqueidentifier**.  
   
- Para obtener *valor schedule_uid*, consulte la tabla del sistema sysschedules.  
+ Para obtener *valor schedule_uid*, consulta la tabla del sistema sysschedules.  
   
  Cuando *collection_mode* se establece en 0, *valor schedule_uid* o *schedule_name* debe especificarse. Cuando *collection_mode* está establecido en 1, *valor schedule_uid* o *schedule_name* se omite si se especifica.  
   
  [  **@schedule_name =** ] '*schedule_name*'  
- Es el nombre de la programación. *schedule_name* es **sysname** y acepta valores NULL. Si se especifica, *valor schedule_uid* debe ser NULL. Para obtener *schedule_name*, consulte la tabla del sistema sysschedules.  
+ Es el nombre de la programación. *schedule_name* es **sysname** y admite valores NULL. Si se especifica, *valor schedule_uid* debe ser NULL. Para obtener *schedule_name*, consulta la tabla del sistema sysschedules.  
   
  [  **@logging_level =** ] *logging_level*  
  Es el nivel de registro. *LOGGING_LEVEL* es **smallint** con uno de los siguientes valores:  
   
- 0 - información de ejecución de registro y [!INCLUDE[ssIS](../../includes/ssis-md.md)] eventos que realizan el seguimiento:  
+ 0 - información del registro de ejecución y [!INCLUDE[ssIS](../../includes/ssis-md.md)] eventos que realizan el seguimiento:  
   
 -   Iniciar/detener los conjuntos de recopilaciones  
   
@@ -134,9 +130,9 @@ sp_syscollector_update_collection_set
   
  Cualquier *collection_set_id* o *nombre* debe tener un valor, no puede ser NULL. Para obtener estos valores, consulte la vista del sistema syscollector_collection_sets.  
   
- Si está ejecutando el conjunto de recopilación, solo se puede actualizar *valor schedule_uid* y *descripción*. Para detener el conjunto de recopilación, use [sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md).  
+ Si el conjunto de recopilación se está ejecutando, solo se puede actualizar *valor schedule_uid* y *descripción*. Para detener el conjunto de recopilación, use [sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia a un rol fijo de base de datos dc_admin o dc_operator (con permiso EXECUTE) para ejecutar este procedimiento. Aunque dc_operator puede ejecutar este procedimiento almacenado, las propiedades que pueden cambiar los miembros de este rol son limitadas. Las propiedades siguientes solo puede cambiarlas dc_admin:  
   
 -   @new_name  

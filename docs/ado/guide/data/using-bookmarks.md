@@ -1,35 +1,32 @@
 ---
-title: Utilizar marcadores | Documentos de Microsoft
+title: Uso de marcadores | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bookmarks [ADO]
 - Recordset object [ADO]
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 643d07d49e2e2ec0e31f9a677796f309fedd0d1d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a083f9d411474769335fdfae32bd59dfe455a9f8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273224"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47660643"
 ---
 # <a name="using-bookmarks"></a>Utilizar marcadores
-A menudo resulta útil volver directamente a un registro específico después de haberse movido por el **Recordset** sin tener que desplazarse a través de cada registro y comparar valores. Por ejemplo, si se intenta buscar un registro mediante el **buscar** método, pero la búsqueda no devuelve ningún registro, se colocan automáticamente en cualquier extremo de la **conjunto de registros**. Si el proveedor es compatible con ellos, se pueden utilizar marcadores para marcar su lugar antes de usar el **buscar** método para que pueda volver a su ubicación. Un marcador es un **Variant** escriba el valor que identifica de forma única un registro en un **Recordset** objeto.  
+A menudo resulta útil volver directamente a un registro específico después de haberse movido por el **Recordset** sin tener que desplazarse por todos los registros y comparar valores. Por ejemplo, si se intenta buscar un registro mediante el **buscar** método, pero la búsqueda no devuelve ningún registro, se colocan automáticamente en los extremos de la **Recordset**. Si el proveedor es compatible con ellos, pueden utilizar marcadores para marcar la ubicación antes de usar el **buscar** método para que pueda volver a su ubicación. Un marcador es un **Variant** escriba el valor que identifica un registro en un **Recordset** objeto.  
   
- También puede utilizar una matriz variant de marcadores con el **filtro de conjunto de registros** método para filtrar según un conjunto de registros seleccionados. Para obtener más información acerca de esta técnica, vea Filtrar los resultados en el tema [trabajar con conjuntos de registros](../../../ado/guide/data/working-with-recordsets.md), más adelante en esta sección.  
+ También puede usar una matriz variant de marcadores con el **filtro de conjunto de registros** método para filtrar según un conjunto de registros seleccionados. Para obtener más información sobre esta técnica, vea Filtrar los resultados en el tema [trabajar con conjuntos de registros](../../../ado/guide/data/working-with-recordsets.md), más adelante en esta sección.  
   
- Puede usar el **marcador** propiedad para obtener un marcador para un registro, o establecer el registro actual un **Recordset** objeto en el registro identificado por un marcador válido. El siguiente código utiliza el **marcador** propiedad para establecer un marcador y, a continuación, volver al registro del marcador después de moverse a otro registro. Para determinar si su **Recordset** admite marcadores, use el **admite** método.  
+ Puede usar el **marcador** propiedad para obtener un marcador para un registro, o establecer el registro actual un **Recordset** objeto en el registro identificado por un marcador válido. El siguiente código utiliza el **marcador** propiedad para establecer un marcador y, a continuación, volver al registro del marcador después de moverse a otros registros. Para determinar si su **Recordset** admite marcadores, use el **admite** método.  
   
 ```  
 'BeginBookmarkEg  
@@ -52,4 +49,4 @@ End If
   
  El [admite](../../../ado/reference/ado-api/supports-method.md) método se trata con más detalle más adelante.  
   
- Excepto en el caso de clonado **conjuntos de registros**, los marcadores son únicos para la **Recordset** en que se crearon, incluso si se utiliza el mismo comando. Esto significa que no se puede utilizar un **marcador** obtenido de una **Recordset** para mover con el mismo registro en un segundo **Recordset** abierto con el mismo comando.
+ Excepto en el caso de clonado **conjuntos de registros**, los marcadores son únicos para el **Recordset** en que fueron creadas, incluso si se utiliza el mismo comando. Esto significa que no se puede usar un **marcador** obtenida uno **Recordset** para mover en el mismo registro en un segundo **Recordset** abierto con el mismo comando.

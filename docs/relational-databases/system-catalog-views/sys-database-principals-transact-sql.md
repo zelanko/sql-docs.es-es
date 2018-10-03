@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 10/27/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - database_principals
@@ -24,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 411d5af51163124448823c2fda553a5b294c4368
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 512994ada852ea7807cc14ecd5b25d9acff56ffc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43066975"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643163"
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +51,7 @@ ms.locfileid: "43066975"
 |**default_language_lcid**|**int**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LCID predeterminado para esta entidad de seguridad.|  
 |**allow_encrypted_value_modifications**|**bit**|**Se aplica a**: de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Suprime las comprobaciones de metadatos criptográficos en el servidor en operaciones de copia masiva. Esto permite al usuario a la copia masiva de datos cifrado con Always Encrypted, entre las tablas o bases de datos, sin descifrar los datos. El valor predeterminado es OFF. |      
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El *PasswordLastSetTime* propiedades están disponibles en todas las configuraciones admitidas de SQL Server, pero las demás propiedades solo están disponibles cuando se ejecuta SQL Server en Windows Server 2003 o posterior y tanto CHECK_POLICY como CHECK_ EXPIRACIÓN están habilitados. Consulte [directiva de contraseñas](../../relational-databases/security/password-policy.md) para obtener más información.  
   
 ## <a name="permissions"></a>Permisos  

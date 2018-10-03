@@ -1,29 +1,26 @@
 ---
-title: Propiedades del objeto de columna, métodos y eventos | Documentos de Microsoft
+title: Los eventos, métodos y propiedades del objeto de columna | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Column object [ADOX], members
 ms.assetid: f87d46fb-4b33-42b5-8a54-6d2c4577c69a
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5f7b0bac59cb82e61dc65a96d142a32865e0a33
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6afaf936cdd604f72b36c53abe0bc0f9c209ed3b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285364"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625274"
 ---
-# <a name="column-object-properties-methods-and-events"></a>Eventos, métodos y propiedades del objeto de columna
+# <a name="column-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Column
 ## <a name="propertiescollections"></a>Propiedades y colecciones  
  [Propiedad Attributes](../../../ado/reference/adox-api/attributes-property-adox.md)  
   
@@ -33,7 +30,7 @@ ms.locfileid: "35285364"
   
  [Propiedad NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)  
   
- [Propiedad ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)  
+ [Ejemplo de propiedad ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)  
   
  [Propiedad Precision](../../../ado/reference/adox-api/precision-property-adox.md)  
   

@@ -1,14 +1,11 @@
 ---
-title: dbo.sysjobhistory (Transact-SQL) | Documentos de Microsoft
+title: dbo.sysjobhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysjobhistory_TSQL
@@ -20,27 +17,26 @@ dev_langs:
 helpviewer_keywords:
 - sysjobhistory system table
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ab9fbfb6a574f8f6c91ee15789c67cac204d5f3
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 1797fb6183863bb0249bd0cda6024d0e95914e82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34334276"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658813"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene información acerca de la ejecución de los trabajos programados por el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta tabla se almacena en la **msdb** base de datos.  
+  Contiene información acerca de la ejecución de los trabajos programados por el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta tabla se almacena en el **msdb** base de datos.  
   
-> **Nota:** datos se actualizan únicamente cuando haya finalizado el paso de trabajo.  
+> **Nota:** datos se actualizan solo una vez se complete el paso de trabajo.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**valor de instance_id**|**int**|Identificador único de la fila.|  
+|**instance_id**|**int**|Identificador único de la fila.|  
 |**job_id**|**uniqueidentifier**|Id. del trabajo.|  
 |**step_id**|**int**|Id. del paso en el trabajo.|  
 |**Step_name**|**sysname**|Nombre del paso.|  
@@ -58,7 +54,7 @@ ms.locfileid: "34334276"
 |**servidor**|**sysname**|Nombre del servidor en el que se ejecutó el trabajo.|  
   
   ## <a name="example"></a>Ejemplo
- El siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta convertirá la **tiempo de ejecución** y **run_duration** columnas en un formato descriptivo más.  Ejecute el script en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+ La siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta convertirá la **tiempo de ejecución** y **run_duration** columnas en un formato descriptivo más.  Ejecute el script en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
  
  ```sql
  SET NOCOUNT ON;

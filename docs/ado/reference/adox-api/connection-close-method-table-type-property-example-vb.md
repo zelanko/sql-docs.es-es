@@ -1,13 +1,11 @@
 ---
-title: Conexión Close (método), ejemplo de propiedad de tipo de tabla (VB) | Documentos de Microsoft
+title: Conexión de Close (método), ejemplo de propiedad de tipo de tabla (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Close method [ADOX], Visual Basic example
 - Type property [ADOX], Visual Basic example
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13ff79486ee041981a95eda537317d5406364429
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8648a1702dfb54f8272adfb84f2ee0e916ed3dbd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285334"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749353"
 ---
-# <a name="connection-close-method-table-type-property-example-vb"></a>Método de cierre de conexión, ejemplo de propiedad de tipo de tabla (VB)
-Establecer el [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) propiedad **nada** debería cerrar la conexión con el catálogo. Colecciones asociadas estará vacías. Los objetos que se crearon a partir de objetos de esquema en el catálogo se quedarán huérfanos. Las propiedades en los objetos que se han almacenado en caché estarán disponibles, pero se producirá un error en un intento de leer propiedades que requiere una llamada al proveedor.  
+# <a name="connection-close-method-table-type-property-example-vb"></a>Ejemplo de propiedad Type de tabla, método connection close (VB)
+Establecer el [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) propiedad **nada** debería cerrar la conexión con el catálogo. Recopilaciones asociadas estará vacías. Los objetos que se crearon a partir de los objetos de esquema en el catálogo se quedarán huérfanos. Las propiedades en los objetos que ya se ha almacenado en caché aún estará disponibles, pero se producirá un error en un intento de leer las propiedades que requiere una llamada al proveedor.  
   
 ```  
 ' BeginCloseConnectionVB  
@@ -70,7 +67,7 @@ End Sub
 ' EndCloseConnectionVB  
 ```  
   
- Cerrar un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto que se usó para abrir el catálogo debe tener el mismo efecto que establecer la **ActiveConnection** propiedad **nada**.  
+ Cerrar un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto que se usó para abrir el catálogo debe tener el mismo efecto que establecer el **ActiveConnection** propiedad **nada**.  
   
 ```  
 Attribute VB_Name = "Connection"  
@@ -81,6 +78,6 @@ Attribute VB_Name = "Connection"
  [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Colección de columnas (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Objeto de tabla (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
+ [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
  [Colección de tablas (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Type (propiedad, tabla, ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

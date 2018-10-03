@@ -1,13 +1,11 @@
 ---
-title: Ejemplo de propiedades de modo (VC ++) y IsolationLevel | Documentos de Microsoft
+title: Ejemplo IsolationLevel y Mode propiedades (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Mode property [ADO], VC++ example
 - IsolationLevel property [ADO], VC++ example
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8da159d640ea08adf64c89f195ac0c5603fc3e5e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 928be152faec37ed1f954561a7f14f176c92cfbc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279181"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688563"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>Ejemplo IsolationLevel y Mode propiedades (VC ++)
-Este ejemplo se utiliza la [modo](../../../ado/reference/ado-api/mode-property-ado.md) propiedad para abrir una conexión exclusiva y el [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) propiedad para abrir una transacción que se lleva a cabo de forma aislada de otras transacciones.  
+Este ejemplo se usa el [modo](../../../ado/reference/ado-api/mode-property-ado.md) propiedad para abrir una conexión exclusiva y el [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) propiedad para abrir una transacción que se lleva a cabo de forma aislada de otras transacciones.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -228,24 +225,24 @@ void PrintComError(_com_error &e) {
 ```  
   
  **Modo de conexión es exclusivo**  
-**Transacción de aislamiento**  
-**Guía del ocupado ejecutivo de base de datos - business**  
-**Cocina con equipos: encubierta balances - business**  
-**Puede luchar contra el esfuerzo de equipo. -business**  
-**Hablemos recta de equipos - business**  
+**La transacción está aislado**  
+**Guía de base de datos del ocupado ejecutivo - empresarial**  
+**Cocinar con equipos: encubierta balances - empresarial**  
+**¡Para combatir el estrés del equipo! -empresarial**  
+**Recta hablar sobre equipos - empresarial**  
 **Trata de Silicon Valley gastronomía - mod_cook**  
 **El microondas Gourmet - mod_cook**  
-**La psicología de cocina equipo - no se ha decidido**  
-**Pero, ¿es fácil de usar? -popular_comp**  
+**La psicología del equipo cocinar - no se ha decidido**  
+**¿Pero es fácil de usar? -popular_comp**  
 **Secretos de Silicon Valley - popular_comp**  
 **Etiqueta de NET - popular_comp**  
-**Phobic de equipo y los individuos de no Phobic: Variaciones de comportamiento - self_help**  
+**Que no disfrutan de equipo y las personas que no disfrutan que no son: Variaciones de comportamiento - self_help**  
 **¿Es ira el enemigo? -self_help**  
-**Vida sin riesgo - self_help**  
-**Prolongado privación de datos: Cuatro casos prácticos - self_help**  
-**Seguridad emoción: Un nuevo algoritmo - self_help**  
-**Cebollas, Leeks y ajo: cocina secretos del Mediterráneo - trad_cook**  
-**Cincuenta años en Buckingham Palacio cocinas - trad_cook**  
+**Vida sin temor - self_help**  
+**Privación de datos largos: Cuatro casos prácticos - self_help**  
+**Seguridad emocional: Un nuevo algoritmo - self_help**  
+**Las cebollas, los puerros y ajo: cocinar los secretos de los mares Mediterráneo - trad_cook**  
+**Años cincuenta en Buckingham Palacio cocinas - trad_cook**  
 **¿Identidad (phishing), cualquier persona? -trad_cook**   
 ## <a name="see-also"></a>Vea también  
  [Propiedad IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)   

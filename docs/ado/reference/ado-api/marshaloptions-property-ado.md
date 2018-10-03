@@ -1,13 +1,11 @@
 ---
-title: La propiedad MarshalOptions (ADO) | Documentos de Microsoft
+title: La propiedad MarshalOptions (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,28 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - MarshalOptions property [ADO]
 ms.assetid: 390c8abf-133e-40da-8b99-8f748a983e4f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b81646d7d4339f06e5682c1886651cf69ea0dc4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 35646314a5c52e86284326ee91776b5afe2a0d17
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279344"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625083"
 ---
 # <a name="marshaloptions-property-ado"></a>Propiedad MarshalOptions (ADO)
-Indica que los registros de la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) deben calcularse de nuevo hacia el servidor.  
+Indica qué registros de la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) van a calcularse las referencias al servidor.  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un [MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md) valor. El valor predeterminado es **adMarshalAll**.  
   
-## <a name="remarks"></a>Notas  
- Cuando se usa un cliente [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), los registros que se han modificado en el cliente se reescriben en el nivel intermedio o un servidor Web mediante una técnica denominada ordenamiento, el proceso de empaquetado y envío de método de interfaz parámetros en los límites del proceso o subproceso. Establecer el **MarshalOptions** propiedad puede mejorar el rendimiento cuando se calculan las referencias de los datos remotos modificados para la actualización en el nivel intermedio o un servidor Web.  
+## <a name="remarks"></a>Comentarios  
+ Cuando se usa un cliente [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), los registros que se han modificado en el cliente se reescriben en el nivel intermedio o un servidor Web a través de una técnica denominada cálculo de referencias, el proceso de empaquetado y envío de método de interfaz parámetros a través de límites de proceso o subproceso. Establecer el **MarshalOptions** propiedad puede mejorar el rendimiento cuando se calculan las referencias de datos remotos modificados para la actualización en el nivel intermedio o un servidor Web.  
   
 > [!NOTE]
->  **Uso de servicios de datos remoto** esta propiedad sólo se utiliza en un lado del cliente **conjunto de registros**.  
+>  **Uso del servicio de datos remoto** esta propiedad se usa solo en un cliente **Recordset**.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

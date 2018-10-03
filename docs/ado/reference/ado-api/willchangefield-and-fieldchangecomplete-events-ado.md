@@ -1,13 +1,11 @@
 ---
-title: Eventos WillChangeField y FieldChangeComplete (ADO) | Documentos de Microsoft
+title: Eventos WillChangeField y FieldChangeComplete (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,19 +17,18 @@ helpviewer_keywords:
 - WillChangeField event [ADO]
 - fieldchangecomplete event [ADO]
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 108aea1a4f8106c3a84b411591d4866235726efc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f046a3a33e05228ab5e49116bc46eb9451f43129
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282859"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673663"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>Eventos WillChangeField y FieldChangeComplete (ADO)
-El **WillChangeField** evento se le llama antes de que una operación pendiente cambie el valor de uno o varios [campo](../../../ado/reference/ado-api/field-object.md) objetos en el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). El **FieldChangeComplete** eventos se llama después del valor de uno o varios **campo** objetos ha cambiado.  
+El **WillChangeField** se llama al evento antes de que una operación pendiente cambie el valor de uno o varios [campo](../../../ado/reference/ado-api/field-object.md) objetos en el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). El **FieldChangeComplete** se llama al evento posterior al valor de uno o varios **campo** objetos ha cambiado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,13 +40,13 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>Parámetros  
  *cFields*  
- A **largo** que indica el número de **campo** objetos de *campos*.  
+ Un **largo** que indica el número de **campo** objetos *campos*.  
   
  *Fields*  
  Para **WillChangeField**, *campos* parámetro es una matriz de **variantes** que contiene **campo** objetos con los valores originales. Para **FieldChangeComplete**, *campos* parámetro es una matriz de **variantes** que contiene **campo** objetos con los valores cambiados .  
   
  *pError*  
- Un [Error](../../../ado/reference/ado-api/error-object.md) objeto. Describe el error que se ha producido si el valor de *adStatus* es **adStatusErrorsOccurred**; en caso contrario, no se establece.  
+ Un [Error](../../../ado/reference/ado-api/error-object.md) objeto. Describe el error producido si el valor de *adStatus* es **adStatusErrorsOccurred**; en caso contrario, no se establece.  
   
  *adStatus*  
  Un [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) valor de estado.  
@@ -58,15 +55,15 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
   
  Cuando **FieldChangeComplete** es llama, este parámetro se establece en **adStatusOK** si la operación que provocó el evento se realizó correctamente, o para **adStatusErrorsOccurred** si Error en la operación.  
   
- Antes de **WillChangeField** devuelve resultados, establezca este parámetro en **adStatusCancel** para solicitar la cancelación de la operación pendiente.  
+ Antes de **WillChangeField** devuelve, establezca este parámetro en **adStatusCancel** para solicitar la cancelación de la operación pendiente.  
   
- Antes de **FieldChangeComplete** devuelve resultados, establezca este parámetro en **adStatusUnwantedEvent** para impedir notificaciones posteriores.  
+ Antes de **FieldChangeComplete** devuelve, establezca este parámetro en **adStatusUnwantedEvent** para evitar notificaciones posteriores.  
   
  *pRecordset*  
- A **Recordset** objeto. El **conjunto de registros** para la que se produjo este evento.  
+ Un **Recordset** objeto. El **Recordset** para que se produjo este evento.  
   
-## <a name="remarks"></a>Notas  
- A **WillChangeField** o **FieldChangeComplete** evento puede ocurrir cuando se establece la [valor](../../../ado/reference/ado-api/value-property-ado.md) propiedad y llamar a la [actualización](../../../ado/reference/ado-api/update-method.md) (método) con parámetros de matriz de campo y valor.  
+## <a name="remarks"></a>Comentarios  
+ Un **WillChangeField** o **FieldChangeComplete** evento puede producirse cuando se establece la [valor](../../../ado/reference/ado-api/value-property-ado.md) propiedad y una llamada a la [actualización](../../../ado/reference/ado-api/update-method.md) (método) con los parámetros de matriz de campo y el valor.  
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplo de modelo de eventos de ADO (VC ++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   

@@ -1,12 +1,10 @@
 ---
-title: Regulador de recursos relacionados con vistas de administración dinámica (Transact-SQL) | Documentos de Microsoft
+title: El regulador de recursos relacionados con las vistas de administración dinámica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Resource Governor, dynamic management views
 - dynamic management views [SQL Server], Resource Governor
 ms.assetid: fae5d600-586d-45fa-9d6d-03224cc13304
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e127d44d48579229ef0e62f3a3133ea13bdd535
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 113113680001bcecce73ea62b0afa7ab7bbd801b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463631"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705643"
 ---
 # <a name="resource-governor-related-dynamic-management-views-transact-sql"></a>Vistas de administración dinámica relacionadas con el regulador de recursos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -1,13 +1,11 @@
 ---
-title: EventReasonEnum | Documentos de Microsoft
+title: EventReasonEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,39 +13,38 @@ f1_keywords:
 helpviewer_keywords:
 - EventReasonEnum enumeration [ADO]
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b173fb6838b082b0600714f3756858dcc1615ba2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 743e36e379760cb2c148c5484bb7b49b08d1d27e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278444"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644649"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
-Especifica la razón por la que se produjo un evento que se produzca.  
+Especifica el motivo por el que se produjo un evento que se produzca.  
   
 |Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adRsnAddNew**|1|Una operación de agrega un nuevo registro.|  
-|**adRsnClose**|9|Una operación cerró el **conjunto de registros**.|  
-|**adRsnDelete**|2|Una operación eliminó un registro.|  
+|**adRsnClose**|9|Una operación cerró el **Recordset**.|  
+|**adRsnDelete**|2|Una operación de elimina un registro.|  
 |**adRsnFirstChange**|11|Una operación realiza el primer cambio en un registro.|  
-|**adRsnMove**|10|Una operación de mover el puntero del registro en el **conjunto de registros**.|  
-|**adRsnMoveFirst**|12|Una operación movió el puntero de registro al primer registro en el **conjunto de registros**.|  
-|**adRsnMoveLast**|15|Una operación movió el puntero de registro al último registro en el **conjunto de registros**.|  
-|**adRsnMoveNext**|13|Una operación de mover el puntero del registro en el registro siguiente en el **conjunto de registros**.|  
-|**adRsnMovePrevious**|14|Una operación movió el puntero de registro al registro anterior en el **conjunto de registros**.|  
-|**adRsnRequery**|7|Una operación volvió a consultar el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).|  
+|**adRsnMove**|10|Una operación de mover el puntero de registro dentro de la **Recordset**.|  
+|**adRsnMoveFirst**|12|Una operación de mover el puntero de registro en el primer registro de la **Recordset**.|  
+|**adRsnMoveLast**|15|Una operación de mover el puntero de registro al último registro en el **Recordset**.|  
+|**adRsnMoveNext**|13|Una operación de mover el puntero de registro al registro siguiente en el **Recordset**.|  
+|**adRsnMovePrevious**|14|Una operación de mover el puntero de registro al registro anterior en el **Recordset**.|  
+|**adRsnRequery**|7|Una operación vuelve a consultar el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).|  
 |**adRsnResynch**|8|Una operación de volver a sincronizar la **Recordset** con la base de datos.|  
-|**adRsnUndoAddNew**|5|Una operación revocó la adición de un nuevo registro.|  
-|**adRsnUndoDelete**|6|Una operación deshacer la eliminación de un registro.|  
-|**adRsnUndoUpdate**|4|Una operación revocó la actualización de un registro.|  
-|**adRsnUpdate**|3|Una operación actualizó un registro existente.|  
+|**adRsnUndoAddNew**|5|Una operación de revertir la adición de un nuevo registro.|  
+|**adRsnUndoDelete**|6|La eliminación de un registro puede revertir una operación.|  
+|**adRsnUndoUpdate**|4|Una operación de revertir la actualización de un registro.|  
+|**adRsnUpdate**|3|Una operación actualiza un registro existente.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
+## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
  Paquete: **com.ms.wfc.data**  
   
 |Constante|  

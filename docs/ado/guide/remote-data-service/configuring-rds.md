@@ -1,33 +1,30 @@
 ---
-title: Configurar RDS | Documentos de Microsoft
+title: Configuración de RDS | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS configuration [ADO]
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7275d87bc314223231392bd67f9752e29a4c41be
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 547588d79d52f81d6f12c8b733829f7e38a6da70
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273792"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630683"
 ---
 # <a name="configuring-rds"></a>Configuración de RDS
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar a [servicio de datos de WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Para implementar RDS eficientemente, asegúrese de que está familiarizado con las diversas configuraciones disponibles para usted. Esta sección incluye información importante sobre seguridad y escalabilidad en la implementación de RDS. Vea los temas siguientes para obtener información acerca de cómo configurar los equipos para utilizar RDS.  
+ Para implementar RDS eficientemente, asegúrese de que estar familiarizado con las distintas configuraciones disponibles para usted. Esta sección incluye información importante sobre seguridad y escalabilidad en la implementación de RDS. Vea los temas siguientes para obtener información acerca de cómo configurar los equipos para utilizar RDS.  
   
 -   [Concesión de privilegios de invitado a un equipo del servidor web](../../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)  
   

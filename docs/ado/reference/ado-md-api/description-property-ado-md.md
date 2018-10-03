@@ -1,13 +1,11 @@
 ---
-title: Description (propiedad) (ADO MD) | Documentos de Microsoft
+title: Descripción (propiedad, ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -20,16 +18,15 @@ f1_keywords:
 helpviewer_keywords:
 - Description property [ADO MD]
 ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b073b4719de6554159947502a525d242f37e6707
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 643bcfef67b1f3c5434d7beaac46da2d46bbdd14
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284074"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655552"
 ---
 # <a name="description-property-ado-md"></a>Description (propiedad) (ADO MD)
 Devuelve un texto de explicación del objeto actual.  
@@ -37,7 +34,7 @@ Devuelve un texto de explicación del objeto actual.
 ## <a name="return-values"></a>Valores devueltos  
  Devuelve un **cadena** y es de solo lectura.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objetos, **descripción** se aplica únicamente a medida y fórmulas. **Descripción** devuelve una cadena vacía ("") para todos los demás tipos de miembros. Para obtener más información sobre los distintos tipos de miembros, vea el [tipo](../../../ado/reference/ado-md-api/type-property-ado-md.md) propiedad.  
   
  Esta propiedad solo se admite en **miembro** objetos que pertenecen a un [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md) objeto. Se produce un error cuando se hace referencia a esta propiedad desde **miembro** objetos que pertenecen a un [posición](../../../ado/reference/ado-md-api/position-object-ado-md.md) objeto.  

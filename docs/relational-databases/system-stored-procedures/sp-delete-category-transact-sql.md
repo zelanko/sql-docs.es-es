@@ -1,14 +1,11 @@
 ---
-title: sp_delete_category (Transact-SQL) | Documentos de Microsoft
+title: sp_delete_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_category_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_category
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb4cdd9f5e3104ac2673bce0f60a6653defde5ca
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 28a1b42780b57fb5807e0ff8f900bfe7b1fc7559
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249202"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670463"
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +44,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
  [  **@class =**] **'***clase***'**  
  La clase de la categoría. *clase* es **varchar (8)**, no tiene ningún valor predeterminado y debe tener uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**TRABAJO**|Elimina una categoría de trabajo.|  
 |**ALERTA**|Elimina una categoría de alerta.|  
@@ -68,7 +64,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
   
  Si se elimina una categoría, se establecerán nuevas clasificaciones de trabajos, alertas u operadores de esa categoría en función de la categoría predeterminada para la clase.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  

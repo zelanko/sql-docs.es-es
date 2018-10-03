@@ -1,13 +1,11 @@
 ---
-title: Colección CubeDefs (ADO MD) | Documentos de Microsoft
+title: Colección CubeDefs (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,21 +14,20 @@ f1_keywords:
 helpviewer_keywords:
 - CubeDefs collection [ADO MD]
 ms.assetid: c79a5e36-71fd-44c4-948d-d6a7a89bb3b5
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 652d4c9f73c19a839609899a98e7c418b1501232
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ab6e6e79f155ec5c88a093c5b379b7132dbbb5a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283624"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47660613"
 ---
 # <a name="cubedefs-collection-ado-md"></a>Colección CubeDefs (ADO MD)
 Contiene el [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) objetos que representan un cubo de un catálogo multidimensional.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  **CubeDefs** es una colección de ADO estándar. Con las propiedades y métodos de una colección, puede hacer lo siguiente:  
   
 -   Obtener el número de objetos de la colección con el [recuento](../../../ado/reference/ado-api/count-property-ado.md) propiedad.  

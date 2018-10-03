@@ -1,13 +1,11 @@
 ---
-title: Dimensión (objeto) (ADO MD) | Documentos de Microsoft
+title: Dimensión (objeto) (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,40 +13,39 @@ f1_keywords:
 helpviewer_keywords:
 - Dimension object [ADO MD]
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 10378c62ec05008529e1d271208f3e5657d6a140
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 332701caacd2eb4a813e8ec09ff66aa4dc4bf828
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283914"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639573"
 ---
 # <a name="dimension-object-ado-md"></a>Objeto de dimensión (ADO MD)
 Representa una de las dimensiones de un cubo multidimensional, que contiene una o más jerarquías de miembros.  
   
-## <a name="remarks"></a>Notas  
- Con las colecciones y las propiedades de un **dimensión** objeto, puede hacer lo siguiente:  
+## <a name="remarks"></a>Comentarios  
+ Con las colecciones y propiedades de un **dimensión** objeto, puede hacer lo siguiente:  
   
--   Identificar la **dimensión** con el [nombre](../../../ado/reference/ado-md-api/name-property-ado-md.md) y [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) propiedades.  
+-   Identificar el **dimensión** con el [nombre](../../../ado/reference/ado-md-api/name-property-ado-md.md) y [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) propiedades.  
   
--   Devolver una cadena que describe la **dimensión** con el [descripción](../../../ado/reference/ado-md-api/description-property-ado-md.md) propiedad.  
+-   Devolver una cadena que describe el **dimensión** con el [descripción](../../../ado/reference/ado-md-api/description-property-ado-md.md) propiedad.  
   
--   Devolver el [jerarquía](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) objetos que componen la **dimensión** con el [jerarquías](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md) colección.  
+-   Devolver el [jerarquía](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) objetos que componen el **dimensión** con el [jerarquías](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md) colección.  
   
--   Use la propiedad ADO estándar [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección para obtener información adicional sobre la **dimensión** objeto.  
+-   Usar el estándar de ADO [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección para obtener información adicional sobre el **dimensión** objeto.  
   
- El **propiedades** colección contiene propiedades proporcionadas por el proveedor. En la tabla siguiente se enumera propiedades que estén disponibles. La lista de propiedades reales puede variar en función de la implementación del proveedor. Consulte la documentación del proveedor para obtener una lista completa de propiedades disponibles.  
+ El **propiedades** colección contiene las propiedades proporcionadas por el proveedor. En la tabla siguiente se enumera las propiedades que podrían estar disponibles. La lista de propiedades reales puede variar en función de la implementación del proveedor. Consulte la documentación del proveedor para obtener una lista completa de las propiedades disponibles.  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
 |CatalogName|El nombre del catálogo al que pertenece este cubo.|  
 |CubeName|Nombre del cubo.|  
-|Valor de DefaultHierarchy|El nombre único de la jerarquía predeterminada.|  
-|Descripción|Una descripción significativa del cubo.|  
-|DimensionCaption|Etiqueta o título asociado a la dimensión.|  
+|DefaultHierarchy|El nombre único de la jerarquía predeterminada.|  
+|Descripción|Descripción del cubo.|  
+|DimensionCaption|Etiqueta o título asociado con la dimensión.|  
 |DimensionCardinality|El número de miembros de la dimensión.|  
 |DimensionGUID|El GUID de la dimensión.|  
 |DimensionName|Nombre de la dimensión.|  

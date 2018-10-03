@@ -1,13 +1,11 @@
 ---
-title: Colocar objeto (ADO MD) | Documentos de Microsoft
+title: Posición de objeto (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,22 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - Position object [ADO MD]
 ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 844997df808dbb1c61939164d72a9b2c601a9823
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e4118adb0b6d23a57926f5ca8c4c933dd3ef3b78
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284574"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673573"
 ---
 # <a name="position-object-ado-md"></a>Objeto Position (ADO MD)
-Representa un conjunto de uno o varios miembros de distintas dimensiones que define un punto a lo largo de un eje.  
+Representa un conjunto de uno o varios miembros de distintas dimensiones que define un punto de un eje.  
   
-## <a name="remarks"></a>Notas  
- Con las propiedades y colecciones de una **posición** objeto puede hacer lo siguiente:  
+## <a name="remarks"></a>Comentarios  
+ Con las propiedades y colecciones de una **posición** objeto, puede hacer lo siguiente:  
   
 -   Use la **Ordinal** propiedad para devolver la posición ordinal de la **posición** a lo largo de la [eje](../../../ado/reference/ado-md-api/axis-object-ado-md.md).  
   

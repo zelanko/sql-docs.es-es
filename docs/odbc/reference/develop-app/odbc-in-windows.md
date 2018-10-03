@@ -1,28 +1,25 @@
 ---
-title: ODBC en Windows | Documentos de Microsoft
+title: ODBC en Windows | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 98e61767-12ed-4aec-816e-639bd9c27b31
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f83b8a2926b0dbd9030ced4faf5dc1f076a68ac9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e789a4bccbc1aade9536cd91b331f3cabdd85a6c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911280"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642553"
 ---
 # <a name="odbc-in-windows"></a>ODBC en Windows
-Los elementos siguientes se aplican solo a ODBC que se ejecutan en sistemas operativos Microsoft® Windows NT o Windows 2000 y Microsoft Windows® 95 ó 98.  
+Los elementos siguientes se aplican solo a ODBC que se ejecutan en sistemas operativos Microsoft® Windows NT o Windows 2000 y Microsoft Windows® 95/98.  
   
  Esta sección contiene los temas siguientes.  
   
@@ -30,6 +27,6 @@ Los elementos siguientes se aplican solo a ODBC que se ejecutan en sistemas oper
   
 -   [Archivos de encabezado](../../../odbc/reference/develop-app/header-files.md)  
   
--   [CString (objetos) pasar a las funciones ODBC](../../../odbc/reference/develop-app/cstring-class.md)  
+-   [Pasar objetos de CString a funciones ODBC](../../../odbc/reference/develop-app/cstring-class.md)  
   
 -   [Crear y terminar subprocesos](../../../odbc/reference/develop-app/creating-and-terminating-threads.md)

@@ -1,32 +1,30 @@
 ---
-title: C a ejemplos de conversión de datos SQL | Documentos de Microsoft
+title: C a ejemplos de conversión de datos SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - converting data from c to SQL types [ODBC], examples
 - data conversions from C to SQL types [ODBC], examples
 ms.assetid: 9f390afc-d8b8-4286-b559-98b3b8781f3d
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fcba6d92970d0e0b5490f4c24506fe8bb2951217
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 40cd9973bfdce68b1ccbe63edd8c875519dbd22b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620193"
 ---
-# <a name="c-to-sql-data-conversion-examples"></a>C a ejemplos de conversión de datos SQL
+# <a name="c-to-sql-data-conversion-examples"></a>Ejemplos de conversión de datos de C en SQL
 Los ejemplos siguientes muestran cómo el controlador convierte los datos de C a datos de SQL:  
   
-|Identificador de tipo de C|Valor de datos de C|Tipo SQL<br /><br /> identificador|Columna<br /><br /> length|SQL data<br /><br /> value|SQLSTATE|  
+|Identificador de tipo de C|Valor de datos de C|Tipo SQL<br /><br /> identificador|columna<br /><br /> length|SQL data<br /><br /> value|SQLSTATE|  
 |-----------------------|------------------|-----------------------------|-----------------------|------------------------|--------------|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|6|abcdef|n/d|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|5|abcde|22001|  
@@ -43,10 +41,10 @@ Los ejemplos siguientes muestran cómo el controlador convierte los datos de C a
 |SQL_C_TYPE_TIMESTAMP|1992,12,31, 23,45,55, 120000000 [d]|SQL_CHAR|21|1992-12-31 23:45:55.1|22001|  
 |SQL_C_TYPE_TIMESTAMP|1992,12,31, 23,45,55, 120000000 [d]|SQL_CHAR|18|----|22003|  
   
- [a] "\0" representa un byte de finalización en null. El byte de terminación null sólo es necesario si la longitud de los datos es SQL_NTS.  
+ [a] "\0" representa un byte de una terminación null. El byte de una terminación null solo es necesario si la longitud de los datos es SQL_NTS.  
   
- [b] en además bytes para números, un byte es necesario para un inicio de sesión y otro byte es necesario para el separador decimal.  
+ [b] en además a bytes para números, un byte es necesario para un inicio de sesión y otro byte es necesaria para el separador decimal.  
   
  [c], los números de esta lista son los números almacenados en los campos de la estructura SQL_DATE_STRUCT.  
   
- [d], los números de esta lista son los números almacenados en los campos de la estructura SQL_TIMESTAMP_STRUCT.
+ [d] los números de esta lista son los números almacenados en los campos de la estructura SQL_TIMESTAMP_STRUCT.

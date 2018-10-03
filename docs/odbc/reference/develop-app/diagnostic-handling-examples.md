@@ -1,31 +1,29 @@
 ---
-title: Diagnóstico de ejemplos de control | Documentos de Microsoft
+title: Ejemplos de control de diagnóstico | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], examples
 - error messages [ODBC], diagnostic messages
 - diagnostic messages [ODBC]
 ms.assetid: 57f88c22-e7fa-4270-a0bf-443a2684cf6e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 85fb2641d4dc93ab5fe6a751a8fae7c8ece2200c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8da271ace5dd8a55e6d5c444de7cff334ed60b6e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648819"
 ---
 # <a name="diagnostic-handling-examples"></a>Ejemplos de control de diagnóstico
-Los ejemplos siguientes muestran cómo los distintos componentes en una conexión ODBC pueden generar mensajes de diagnóstico y cómo los distintos controladores podrían devolver diagnóstico a la aplicación con **SQLGetDiagRec**.  
+Los ejemplos siguientes muestran cómo los distintos componentes en una conexión ODBC pueden generar mensajes de diagnóstico y cómo los distintos controladores podrían devolver diagnósticos a la aplicación con **SQLGetDiagRec**.  
   
 -   [Ejemplo de diagnóstico de controlador basados en archivos](../../../odbc/reference/develop-app/file-based-driver-diagnostic-example.md)  
   

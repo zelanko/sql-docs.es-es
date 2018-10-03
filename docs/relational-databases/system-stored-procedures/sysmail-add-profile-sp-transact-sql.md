@@ -1,14 +1,11 @@
 ---
-title: sysmail_add_profile_sp (Transact-SQL) | Documentos de Microsoft
+title: sysmail_add_profile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_profile_sp_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_profile_sp
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16091d14ba4971ae8e07633dd111dd5f5a2facde
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0e62a0452a5e7e31591d368cbbcb2050272df5da
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260228"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734733"
 ---
 # <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +43,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
   
 ## <a name="arguments"></a>Argumentos  
  [ **@profile_name** =] **'***profile_name***'**  
- Nombre del nuevo perfil. *profile_name* es **sysname**, no tiene ningún valor predeterminado.  
+ Nombre del nuevo perfil. *nombre_perfil* es **sysname**, no tiene ningún valor predeterminado.  
   
  [ **@description** =] **'***descripción***'**  
  Descripción opcional del nuevo perfil. *descripción* es **nvarchar (256)**, no tiene ningún valor predeterminado.  
@@ -61,14 +57,14 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ## <a name="remarks"></a>Comentarios  
  Un perfil de Correo electrónico de base de datos contiene cualquier número de cuentas de Correo electrónico de base de datos. Los procedimientos almacenados de Correo electrónico de base de datos pueden hacer referencia a un perfil por el nombre o por el Id. del perfil generado por este procedimiento. Para obtener más información acerca de cómo agregar una cuenta a un perfil, vea [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md).  
   
- El nombre del perfil y la descripción se pueden cambiar con el procedimiento almacenado **sysmail_update_profile_sp**, mientras que el identificador de perfil permanece constante durante la vida del perfil.  
+ El nombre del perfil y la descripción se pueden cambiar con el procedimiento almacenado **sysmail_update_profile_sp**, mientras que el identificador del perfil permanece constante durante la vida del perfil.  
   
  El nombre del perfil debe ser único para el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] de Microsoft o el procedimiento almacenado devuelve un error.  
   
- El procedimiento almacenado **sysmail_add_profile_sp** está en el **msdb** la base de datos y es propiedad de la **dbo** esquema. El procedimiento se debe ejecutar con un nombre de tres partes si la base de datos actual no es **msdb**.  
+ El procedimiento almacenado **sysmail_add_profile_sp** está en el **msdb** de base de datos y que pertenece el **dbo** esquema. El procedimiento debe ejecutarse con un nombre de tres partes si la base de datos actual no es **msdb**.  
   
-## <a name="permissions"></a>Permissions  
- Permisos de ejecución para este procedimiento de forma predeterminada a los miembros de la **sysadmin** rol fijo de servidor.  
+## <a name="permissions"></a>Permisos  
+ Permisos de ejecución de este procedimiento de forma predeterminada a los miembros de la **sysadmin** rol fijo de servidor.  
   
 ## <a name="examples"></a>Ejemplos  
  **A. Crear un nuevo perfil**  
@@ -81,7 +77,7 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
        @description = 'Profile used for administrative mail.' ;  
 ```  
   
- **B. Crear un nuevo perfil y guardar el Id. del perfil en una variable**  
+ **B. Crear un nuevo perfil y guardar el Id. de perfil en una variable**  
   
  En el ejemplo siguiente se crea un nuevo perfil de Correo electrónico de base de datos denominado `AdventureWorks Administrator`. En el ejemplo se almacena el Id. del perfil en la variable `@profileId` y se devuelve un conjunto de resultados que contiene el Id. del nuevo perfil.  
   

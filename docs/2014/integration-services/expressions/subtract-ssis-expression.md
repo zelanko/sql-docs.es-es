@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - '- (subtract)'
 - subtract operator (-)
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cbceb06967d0bbfb305bd46673c8bbbcb9e1bfcf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 82d268ed8f61085a2a829821ee3d68931f31e680
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324625"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161835"
 ---
 # <a name="--subtract-ssis-expression"></a>- (Restar) (expresión de SSIS)
   Resta la segunda expresión numérica de la primera.  
@@ -42,10 +39,10 @@ numeric_expression1 – numeric_expression2
 ## <a name="result-types"></a>Tipos de resultado  
  Dependen de los tipos de datos de los dos argumentos. Para más información, consulte [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Incluya la expresión unaria menos entre paréntesis para asegurarse de que se evalúa en el orden correcto.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si alguno de los operandos es NULL, el resultado será NULL.  
   
 ## <a name="expression-examples"></a>Ejemplos de expresiones  

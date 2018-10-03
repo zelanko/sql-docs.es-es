@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [Integration Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Integration Services, backward compatibility
 - backward compatibility [Integration Services]
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
-caps.latest.revision: 81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cc9a286ce00e5c84082a6ff0d1ac792e73fa7c59
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 146d197345851ccf854b478b3ebc220aa6854a5d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209265"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074185"
 ---
 # <a name="integration-services-backward-compatibility"></a>Compatibilidad con versiones anteriores de Integration Services
   En esta sección se describe los cambios entre las versiones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Incluye características que ya no están disponibles o cuya eliminación está prevista para una versión posterior. También describe los cambios en el producto que afectan o cambian el comportamiento de una aplicación existente que incluye la funcionalidad de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

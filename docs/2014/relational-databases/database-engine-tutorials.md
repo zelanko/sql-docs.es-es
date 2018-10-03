@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
-caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6ab4e0486cfcac8eaf4d5ed9d4a0456d4bb6d9dd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c68b00c636d338fdcf507d300c4f6f272da58004
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290901"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069915"
 ---
 # <a name="database-engine-tutorials"></a>Tutoriales del motor de base de datos
   Esta sección contiene los tutoriales de [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
@@ -51,7 +48,7 @@ ms.locfileid: "37290901"
  [Tutorial: evaluar los procedimientos recomendados usando administración basada en directivas](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  En este tutorial se enseña a crear directivas que se pueden usar para analizar instancias del [!INCLUDE[ssDE](../includes/ssde-md.md)] y ver si hay problemas conocidos.  
   
- [Tutorial: copias de seguridad y restauración de SQL Server en el servicio de almacenamiento Blob de Windows Azure](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md) (Copias de seguridad y restauración de SQL Server en el servicio Microsoft Azure Blob Storage)  
+ [Tutorial: copias de seguridad y restauración de SQL Server en el servicio de almacenamiento Blob de Windows Azure](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
  Este tutorial ilustra el modo de hacer una copia de seguridad y una restauración de SQL Server para el servicio Azure Blob Storage.  
   
  [Tutorial: Archivos de datos de SQL Server en el servicio Azure Storage](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 456922a60eb0d5544c2cdb7992979fea59c3da66
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: f990d8fef80320a887c0d333619aae2f1d895aa4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394334"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050046"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Instrucciones para los niveles de aislamiento de transacciones con tablas con optimización para memoria
   En muchos casos, debe especificar el nivel de aislamiento de transacción. El aislamiento de transacción para las tablas optimizadas para memoria difiere de las tablas basadas en disco.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ReportParameter Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ReportParameter element
 ms.assetid: 653a5c64-f1af-4796-bb7b-b44a40e52901
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e1ceef5a3794aaaaec6ac24d9aca6e66384267ce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fdc677b6aabd9d07275b977dd3d3af3145ea00a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197831"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093465"
 ---
 # <a name="reportparameter-element-assl"></a>Elemento ReportParameter (ASSL)
   Contiene el nombre y valor de un parámetro que se pasa a un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] informes en tiempo de ejecución.  
@@ -47,7 +44,7 @@ ms.locfileid: "37197831"
 </ReportParameters>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -62,7 +59,7 @@ ms.locfileid: "37197831"
 |Elementos primarios|[ReportParameters](../collections/reportparameters-element-assl.md)|  
 |Elementos secundarios|[Name](../properties/name-element-assl.md), [Value](../properties/value-element-assl.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento `Value` debe contener una expresión MDX (Expresiones multidimensionales).  
   
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.ReportParameter>.  

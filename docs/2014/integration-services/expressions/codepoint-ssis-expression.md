@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - CODEPOINT function
 - leftmost character of expression
 ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e531f3cca54af2bd224d1822776ddb8cb466d44
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5cdd95f9df8aba20b389ab92da48a884629ab82
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332325"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122645"
 ---
 # <a name="codepoint-ssis-expression"></a>CODEPOINT (expresión de SSIS)
   Devuelve el punto de código Unicode del primer carácter de la izquierda de una expresión de caracteres.  
@@ -41,7 +38,7 @@ CODEPOINT(character_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_UI2  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  *character_expression* necesita tener el tipo de datos DT_WSTR.  
   
  CODEPOINT devuelve un resultado NULL si *character_expression* es NULL o una cadena vacía.  

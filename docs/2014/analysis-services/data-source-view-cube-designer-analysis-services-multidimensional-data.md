@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.datasourcepane.f1
 ms.assetid: 1e39c910-5c10-4624-be27-ca02a461b46b
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0025792747cf0cea5fffd7b0a1a35c5efc7ea759
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fd3d21c2371878c44accc4d7e9f501f47ce64646
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185312"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057045"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Vista del origen de datos (pestaña Estructura de cubo, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Utilice el panel **Vista del origen de datos** para ver tablas y columnas de la vista del origen de datos asociada al cubo seleccionado. Este panel se utiliza para crear grupos de medida y medidas arrastrando columnas desde el panel **Vista del origen de datos** hasta el panel **Medidas** .  

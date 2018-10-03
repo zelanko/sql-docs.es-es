@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
 - getting started
 ms.assetid: 6d9d1481-18e4-4108-9efa-68152b0940c9
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dde976376aa356a0b349e769821b0137eb0be29c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: da1d5ceae73ae17f9e3689a13c21619dac5fbc93
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312345"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049075"
 ---
 # <a name="table-analysis-tools-for-excel"></a>Herramientas de análisis de tabla para Excel
   Las herramientas de minería de datos en el **analizar** barra de herramientas son la manera más fácil empezar a trabajar con minería de datos. Cada una de estas herramientas analiza automáticamente la distribución y el tipo de los datos, y establece los parámetros para asegurarse de que los resultados son válidos. No tiene que seleccionar un algoritmo ni configurar parámetros complejos.  

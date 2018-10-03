@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de58b31abed2a082964d70ca4036e204767d1f43
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3ecdc453b6498463e431cbad555af738fde2da1d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319275"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052362"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>LANGUAGE y FORMAT_STRING en FORMATED_VALUE
   La propiedad FORMATTED_VALUE se basa en las interacciones de las propiedades VALUE, LANGUAGE y FORMAT_STRING de la celda. En este tema se explica cómo interactúan estas propiedades para generar la propiedad FORMATTED_VALUE.  
@@ -82,7 +79,7 @@ ms.locfileid: "37319275"
   
 |Miembro|FORMATTED_VALUE|Explicación|  
 |------------|----------------------|-----------------|  
-|Un|$5,040.00|FORMAT_STRING se establece en `Currency` y LANGUAGE es `1033`al heredar el valor de la configuración regional del sistema.|  
+|A|$5,040.00|FORMAT_STRING se establece en `Currency` y LANGUAGE es `1033`al heredar el valor de la configuración regional del sistema.|  
 |B|€5.040,00|FORMAT_STRING se establece en `Currency` (al heredar de A) y LANGUAGE se establece explícitamente en `1034` (España); por tanto, se usa el signo de euro, además de un separador decimal y un separador de miles diferentes.|  
 |C|$5.040,00|FORMAT_STRING se establece en `$#,##0.00` e invalida a Currency (heredado de A) y LANGUAGE se establece explícitamente en `1034` (España). Dado que la propiedad FORMAT_STRING establece de forma explícita el símbolo de moneda en $, FORMATTED_VALUE se presenta con el signo $. Sin embargo, dado que `.` (punto) y `,` (coma) son respectivamente los marcadores de posición del separador decimal y el separador de miles, la especificación del lenguaje tiene efecto a la hora de generar una salida adaptada para el separador decimal y el separador de miles.|  
 |D|5.04E+03|FORMAT_STRING se establece en `Scientific` y LANGUAGE en `1033`, al heredar el valor de la configuración regional del sistema; por tanto, `.` (punto) será el separador decimal.|  
@@ -132,7 +129,7 @@ ms.locfileid: "37319275"
   
 |Miembro|FORMATTED_VALUE|Explicación|  
 |------------|----------------------|-----------------|  
-|Un|3/12/1959 6:30:00 AM|FORMAT_STRING se establece implícitamente en `General Date` a través de la expresión CDate() y LANGUAGE es `1033` (inglés), al heredar el valor de la configuración regional del sistema.|  
+|A|3/12/1959 6:30:00 AM|FORMAT_STRING se establece implícitamente en `General Date` a través de la expresión CDate() y LANGUAGE es `1033` (inglés), al heredar el valor de la configuración regional del sistema.|  
 |B|Thursday, March 12, 1959|FORMAT_STRING se establece explícitamente en `Long Date` y LANGUAGE es `1033` (inglés) al heredar el valor de la configuración regional del sistema.|  
 |C|12/03/1959 6:30:00|FORMAT_STRING se establece explícitamente en `General Date` y LANGUAGE en `1034` (español).<br /><br /> Observe que el mes y el día cambian de lugar con respecto al estilo de formato de EE.UU.|  
 |D|jueves, 12 de marzo de 1959|FORMAT_STRING se establece explícitamente en `Long Date` y LANGUAGE en `1034` (español).<br /><br /> Observe que el mes y el día de la semana se expresan alfabéticamente en español.|  

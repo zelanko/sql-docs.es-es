@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1f0a1d46-6d6d-4f67-b51e-06dbbbffacf9
-caps.latest.revision: 20
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18fc88beee15b995c3f705e9b6582d695d94d703
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5b1b996e2135953e862b27d992d22c6a7666904c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286501"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137135"
 ---
 # <a name="lesson-4-update-the-report-definition-programmatically"></a>Lección 4: Actualizar la definición del informe mediante programación
   Ahora que se ha cargado la definición del informe desde el servidor de informes y que el campo del informe le proporciona una referencia a la definición del informe, necesita actualizarla. En este ejemplo, actualizará la propiedad `Description` para el informe.  

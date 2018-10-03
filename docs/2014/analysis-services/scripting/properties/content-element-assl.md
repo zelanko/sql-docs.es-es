@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Content Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Content element
 ms.assetid: 221addef-2f88-49c5-b8f5-9eee330497a9
-caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bd9e3c237d8009ac153e8c69033ce9cce958aba3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b27152b0c181061e25727270fd89bd423728a5a2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267481"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097865"
 ---
 # <a name="content-element-assl"></a>Elemento Content (ASSL)
   Describe el contenido de la columna en la [MiningStructure](../objects/miningstructure-element-assl.md) elemento.  
@@ -46,7 +43,7 @@ ms.locfileid: "37267481"
 </ScalarMiningStructureColumn>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37267481"
 |Elemento primario|[ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Esta enumeración describe el tipo de contenido representado por una columna de estructura de minería de datos y se puede extender según sea necesario minando los proveedores del algoritmo. Para obtener más información sobre los tipos de contenido, vea [Tipos de contenido &#40;minería de datos&#41;](../../data-mining/content-types-data-mining.md).  
   
  Todos los proveedores de algoritmo de minería de datos admiten normalmente los valores enumerados en la tabla siguiente.  
@@ -69,7 +66,7 @@ ms.locfileid: "37267481"
 |Valor|Descripción|  
 |-----------|-----------------|  
 |*Discretos*|La columna contiene valores discretos.|  
-|*Continua*|Los valores para la columna definen un conjunto continuo de datos numéricos.|  
+|*continua*|Los valores para la columna definen un conjunto continuo de datos numéricos.|  
 |*Datos discretos*|Los valores de la columna representan grupos (o depósitos) de valores que se derivan de una columna continua.|  
 |*Ordenada*|Los valores de la columna definen un conjunto ordenado.|  
 |*Cíclica*|Los valores de la columna definen un conjunto ordenado cíclico.|  

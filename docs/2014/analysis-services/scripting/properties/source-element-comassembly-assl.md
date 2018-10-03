@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Source Element (ComAssembly)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Source element
 ms.assetid: 5c9209e8-ace6-4688-a64d-4987a7648ab9
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 81076927595714ae4e0c98847d99f2d246660cf9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b7c6259d5bec6c2c1e371df5d9412ccdbc5489a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152976"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106515"
 ---
 # <a name="source-element-comassembly-assl"></a>Elemento Source (ComAssembly) (ASSL)
   Contiene el nombre de archivo o identificador de programación (ProgID) para un componente del Modelo de objetos componentes (COM).  
@@ -46,7 +43,7 @@ ms.locfileid: "37152976"
 </ComAssembly>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37152976"
 |Elemento primario|[ComAssembly](../data-type/assembly-data-type-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento que se corresponde con el elemento primario de `Source` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ComAssembly>.  
   
 ## <a name="see-also"></a>Vea también  

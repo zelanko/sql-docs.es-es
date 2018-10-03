@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexes creation, columnstore
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - columnstore index, described
 - xVelocity, columnstore indexes
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
-caps.latest.revision: 50
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8dd4fdcc7031f56850cded09b098356d2fbad195
-ms.sourcegitcommit: 4a9c89d72d91158832e89d96eb88cda616d36452
+ms.openlocfilehash: 58bf23c84914d7df4b9f2637cc7682de2021bf08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42802535"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109813"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
   El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *índice columnstore en memoria* almacena y administra datos mediante el uso de almacenamiento de datos basado en columnas y el procesamiento de consultas basado en columnas. Los índices de almacén de columnas funcionan correctamente para las cargas de trabajo de almacenamiento de datos que ejecutan principalmente cargas masivas y consultas de solo lectura. Use el índice de almacén de columnas para aumentar **hasta en diez veces el rendimiento de las consultas** en relación con el almacenamiento tradicional orientado a filas, y hasta **en siete veces la compresión de datos** en relación con el tamaño de los datos sin comprimir.  

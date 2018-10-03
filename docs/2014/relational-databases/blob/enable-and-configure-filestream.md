@@ -5,8 +5,6 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.technology: filestream
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], enabling
@@ -14,12 +12,12 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 463df899682bc2466c53e0069200e7a9aa32fa89
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8980d8957a711913b938018097bdcdc174456703
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413154"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132195"
 ---
 # <a name="enable-and-configure-filestream"></a>Habilitar y configurar FILESTREAM
   Para empezar a utilizar FILESTREAM, debe habilitarlo en la instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. En este tema se describe cómo habilitar FILESTREAM con el Administrador de configuración de SQL Server.  
@@ -83,7 +81,7 @@ ms.locfileid: "37413154"
   
 ||||||  
 |-|-|-|-|-|  
-|Nivel RAID|Rendimiento de escritura|Rendimiento de lectura|Tolerancia a errores|Notas|  
+|Nivel RAID|Rendimiento de escritura|Rendimiento de lectura|Tolerancia a errores|Comentarios|  
 |RAID 5|Normal|Normal|Excelente|El rendimiento es mejor que en el caso de un disco o JBOD y menor que RAID 0 o RAID 5 con creación de bandas.|  
 |RAID 0|Excelente|Excelente|None||  
 |RAID 5 con creación de bandas|Excelente|Excelente|Excelente|Opción más cara.|  

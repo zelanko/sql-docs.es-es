@@ -1,12 +1,10 @@
 ---
-title: Crear un conjunto de filas con IOpenRowset | Microsoft Docs
+title: Crear un conjunto de filas con IOpenRowset | Documentos de Microsoft
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IOpenRowset interface
@@ -14,29 +12,28 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, rowsets
 - OLE DB rowsets, creating
 ms.assetid: e8bc3de7-4b97-4de9-8df8-e11947d24045
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30ba5a4d1cbe326be567a3be18cd7a76371f7e49
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4aa7b91b10c2ce266ad648bce0ba1c19946098c8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417944"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100013"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>Crear un conjunto de filas con IOpenRowset
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite el **IOpenRowset:: OpenRowset** método con las siguientes restricciones:  
   
--   Una tabla base o vista debe especificarse en una base de datos (DBID) Id. de estructura que el *pTableID* parámetro señala.  
+-   Debe especificarse una tabla base o una vista en una estructura de identificador de base de datos (DBID) a la que apunte el parámetro *pTableID*.  
   
--   El DBID *eKind* miembro debe indicar DBKIND_NAME.  
+-   El miembro *eKind* de DBID debe indicar DBKIND_NAME.  
   
--   El DBID *uName* miembro debe especificar el nombre de una tabla base existente o una vista como una cadena de caracteres Unicode.  
+-   El miembro *uName* de DBID debe especificar el nombre de una tabla base existente o una vista como una cadena de caracteres Unicode.  
   
--   El *pIndexID* parámetro de **OpenRowset** debe ser NULL.  
+-   El parámetro *pIndexID* de **OpenRowset** debe ser NULL.  
   
- El conjunto de resultados de **IOpenRowset:: OpenRowset** contiene un único conjunto de filas. Se admiten conjuntos de resultados que contienen un único conjunto de filas por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursores. La compatibilidad de cursor permite que el programador utilice mecanismos de simultaneidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ El conjunto de resultados de **IOpenRowset::OpenRowset** contiene un único conjunto de filas. Los conjuntos de resultados que contienen un único conjunto de filas pueden admitirse mediante cursores de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La compatibilidad de cursor permite que el programador utilice mecanismos de simultaneidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
  [Conjuntos de filas](rowsets.md)  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - NamingTemplate Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - NamingTemplate element
 ms.assetid: d68d765c-f012-40c1-acd4-32741ee2eadf
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8ba346be8664cf26992143c15789684c503fdf2a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b1a167ffc7418d69b28e8436bb67238acc3284b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300845"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106315"
 ---
 # <a name="namingtemplate-element-assl"></a>Elemento NamingTemplate (ASSL)
   Define cómo se denominan los niveles en una jerarquía de elementos primarios y secundarios construida a partir del [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) elemento primario.  
@@ -46,7 +43,7 @@ ms.locfileid: "37300845"
 </DimensionAttribute>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37300845"
 |Elemento primario|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor de la `NamingTemplate` elemento es utilizado únicamente por los atributos primarios (en otras palabras, el valor de la [uso](usage-element-dimensionattribute-assl.md) elemento de la `DimensionAttribute` elemento primario se establece en *primario*).  
   
  Cuando un atributo primario se utiliza para construir una jerarquía, las relaciones primario-secundario determinan los niveles de la jerarquía entre los miembros que se encuentran el atributo primario. Por consiguiente, a diferencia de otras dimensiones, los nombres de los niveles no se pueden deducir de los nombres de atributo utilizados para la jerarquía.  

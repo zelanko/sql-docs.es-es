@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, executables
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 - Snapshot Agent, parameter reference
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
-caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 699fc162d167bf22695d6eb1d7e5b1ede5704d12
-ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
+ms.openlocfilehash: e6b6fe366014bdffce0eeef77c7e2e79872f22e5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44311695"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087165"
 ---
 # <a name="replication-snapshot-agent"></a>Agente de instantáneas de replicación
   El Agente de instantáneas de replicación es un archivo ejecutable que prepara archivos de instantáneas que contienen el esquema y los datos de las tablas y objetos de base de datos publicados, almacena los archivos en la carpeta de instantáneas y registra los trabajos de sincronización en la base de datos de distribución.  
@@ -197,12 +194,12 @@ ms.locfileid: "44311695"
 |**2**|Se imprimen todos los mensajes de error y mensajes del informe de progreso, la información útil para depurar.|  
 
  **-PrefetchTables** [ **0**| **1**]  
- Parámetro opcional que especifica si se realiza la captura previa y almacenar en caché los objetos de tabla.  El comportamiento predeterminado es que se precarga determinadas propiedades de tabla mediante el componente SMO basado en un cálculo interno.  Este parámetro puede ser útil en escenarios donde SMO captura previa operación tarda mucho ya para ejecutar. Si no se usa este parámetro, esta decisión se realiza en tiempo de ejecución según el porcentaje de las tablas que se agregan como artículos a la publicación.  
+ Parámetro opcional que especifica si se va a realizar una captura previa de los objetos de la tabla y se almacenarán en caché.  El comportamiento predeterminado es la captura previa de determinadas propiedades de tabla mediante el componente SMO basado en un cálculo interno.  Este parámetro puede ser útil en escenarios en los que la operación de la captura previa de SMO tarda bastante más tiempo en ejecutarse. Si no se utiliza este parámetro, esta decisión se toma en tiempo de ejecución en función del porcentaje de tablas que se agregan como artículos a la publicación.  
   
 |Valor OutputVerboseLevel|Descripción|  
 |------------------------------|-----------------|  
-|**0**|Llame al método de captura previa del componente SMO está deshabilitada.|  
-|**1**|Agente de instantáneas llamará al método de captura previa para almacenar en caché algunas propiedades de tabla mediante SMO|  
+|**0**|La llamada al método de captura previa del componente SMO está deshabilitada.|  
+|**1**|El Agente de instantáneas llamará al método de captura previa para almacenar en caché algunas propiedades de tabla mediante SMO.|  
   
  **-PacketSize** *packet_size*  
  Es el tamaño del paquete (en bytes) que usa el Agente de instantáneas al conectar a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El valor predeterminado es 8192 bytes.  
@@ -252,7 +249,7 @@ ms.locfileid: "44311695"
  \- **UsePerArticleContentsView** *vistaDeContenidoDeUsoPorArtículo*  
  Este parámetro ha quedado desusado y solamente se admite por compatibilidad con versiones anteriores.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
   
 > [!IMPORTANT]  
 >  Si ha instalado el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para que se ejecute en una cuenta de sistema local en lugar de hacerlo en una cuenta de usuario de dominio (el valor predeterminado), el servicio solamente puede tener acceso al equipo local. Si el Agente de instantáneas que se ejecuta en el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se configura para usar el modo de autenticación de Windows cuando inicia sesión en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el Agente de instantáneas devuelve un error. La configuración predeterminada es la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  

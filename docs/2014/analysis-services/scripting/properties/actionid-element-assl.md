@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ActionID Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ActionID element
 ms.assetid: 2c9c66b2-a7ea-4874-a0ed-020ce3feab20
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7405b3b6dd7f673b199509388d43164f47dd90eb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ebbb9a3d62501703b00ec07095f58a51434f84b0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304555"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104835"
 ---
 # <a name="actionid-element-assl"></a>Elemento ActionID (ASSL)
   Contiene el nombre de un [acción](../objects/action-element-assl.md) elemento definido en un [cubo](../objects/cube-element-assl.md) elemento que está disponible en un [perspectiva](../objects/perspective-element-assl.md) elemento como un [PerspectiveAction](../data-type/action-data-type-assl.md) elemento.  
@@ -44,7 +41,7 @@ ms.locfileid: "37304555"
 </PerspectiveAction>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -59,7 +56,7 @@ ms.locfileid: "37304555"
 |Elementos primarios|[PerspectiveAction](../data-type/action-data-type-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento que se corresponde con el elemento primario de `ActionID` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.PerspectiveAction>.  
   
 ## <a name="see-also"></a>Vea también  

@@ -1,12 +1,10 @@
 ---
-title: Desconexión de un origen de datos | Microsoft Docs
+title: Desconexión de un origen de datos | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC data sources, connections
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - ODBC functions
 - SQL Server Native Client ODBC driver, connections
 ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 611a9052f9a974608226757d26420948c7bbe420
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 43ccc784d0d8759c559e705cbbb65861040f6e8a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409695"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144735"
 ---
 # <a name="disconnecting-from-a-data-source"></a>Desconectarse de un origen de datos
   Cuando una aplicación ha terminado de utilizar un origen de datos, llama a **SQLDisconnect**. **SQLDisconnect** libera las instrucciones que se asignan en la conexión y desconecta el controlador del origen de datos. Después de desconectarse, puede llamar la aplicación [SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md) para liberar el identificador de conexión. Antes de salir, una aplicación llama también **SQLFreeHandle** para liberar el identificador de entorno.  

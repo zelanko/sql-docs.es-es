@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - distinct-values function
 - fn:distinct-values function
 ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
-caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 67534172dc879b7865af535e8a85f4a69d8dfc68
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 480183fb649589869645b3ffc98279b8c9722c8f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040513"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618033"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>Funciones usadas en secuencias: distinct-values
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +40,7 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
  *$arg*  
  Secuencia de valores atómicos.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Todos los tipos de valores atomizados que se pasan a **distinct-values()** deben ser subtipos del mismo tipo base. Tipos base aceptados son los tipos que admiten la **eq** operación. Entre estos tipos se incluyen los tres tipos base numéricos integrados, los tipos base de fecha y hora, xs:string, xs:boolean y xdt:untypedAtomic. Los valores de tipo xdt:untypedAtomic se convierten en xs:string. Si hay un mezcla de estos tipos, o si se pasan otros valores de otros tipos, se produce un error estático.  
   
  El resultado de **distinct-values()** recibe el tipo base de los tipos pasados, como xs: String en el caso de xdt: untypedAtomic, con la cardinalidad original. Si la entrada está estáticamente vacía, se considera implícitamente vacía y se produce un error estático.  

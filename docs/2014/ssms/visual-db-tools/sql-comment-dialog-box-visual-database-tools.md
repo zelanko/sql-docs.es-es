@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.sqlcomment
 ms.assetid: a384b583-cec5-4f86-8353-954c989dd94d
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ffdc18bb13a45ea9c3914c8c29962a8c6d0f3f28
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 2b52303d039cff4a5fbb79defebdf2c42e6f2716
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43819931"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086435"
 ---
 # <a name="sql-comment-dialog-box-visual-database-tools"></a>Comentario de SQL (cuadro de diálogo, Visual Database Tools)
   Este cuadro de diálogo proporciona un área modificable en la que se puede escribir una descripción detallada de la consulta. Para obtener acceso a este cuadro de diálogo, abra la consulta o la vista en el Diseñador de consultas y vistas y, en la ventana **Propiedades** , seleccione **Comentario SQL**y haga clic en los puntos suspensivos (**...**) que aparecen a la derecha del campo de propiedad.  

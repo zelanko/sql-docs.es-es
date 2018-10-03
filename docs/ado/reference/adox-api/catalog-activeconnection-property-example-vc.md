@@ -1,32 +1,29 @@
 ---
-title: Ejemplo de la propiedad ActiveConnection (VC ++) de catálogo | Documentos de Microsoft
+title: Ejemplo de propiedad ActiveConnection (VC ++) de catálogo | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ActiveConnection property [ADOX], VC++ example
 ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c501e7dd74c204c9f126c7dbc8abbb31d71637b7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 30f7f4f4165b608070fafa5464e64c9c238651c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285374"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696794"
 ---
-# <a name="catalog-activeconnection-property-example-vc"></a>Ejemplo de la propiedad ActiveConnection de catálogo (VC ++)
-Establecer el [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) propiedad a una conexión abierta válida, "abre" el catálogo. Desde un catálogo abierto, puede tener acceso a los objetos de esquema dentro de dicho catálogo.  
+# <a name="catalog-activeconnection-property-example-vc"></a>Ejemplo de propiedad ActiveConnection de catálogo (VC++)
+Establecer el [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) propiedad en una conexión válida, abra "abre" el catálogo. Desde un catálogo abierto, puede tener acceso a los objetos de esquema dentro de dicho catálogo.  
   
 ```  
 // CatalogActiveConnectionCpp.cpp  

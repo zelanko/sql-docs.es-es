@@ -1,2 +1,2 @@
-**ESTE TEMA SE APLICA A:** ![sí](media/yes.png)SQL Server (a partir de 2014 SP2)![sí](media/yes.png)Base de datos SQL de Azure![no](media/no.png)Almacenamiento de datos SQL de Azure ![no](media/no.png)Almacenamiento de datos paralelos 
+**Se aplica a:** ![Sí](media/yes.png)(a partir de 2014 SP2) de SQL Server ![Sí](media/yes.png)Azure SQL Database ![ningún](media/no.png)Azure SQL Data Warehouse ![ningún](media/no.png) Almacenamiento de datos paralelos 
 

@@ -1,13 +1,11 @@
 ---
-title: Sobrecargas eléctricas y en Propiedades de separador de línea de ejemplo del método SkipLine (VB) | Documentos de Microsoft
+title: EOS y LineSeparator propiedades y ejemplo del método SkipLine (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Skipline method [ADO], Visual Basic example
 - EOS property [ADO], Visual Basic example
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60a68227156d7138f6dbaacd3670fbd142543a9a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 19bc563e6080d1eba9768e95db5315d1d808a9b8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278044"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603193"
 ---
-# <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>Sobrecargas eléctricas y en Propiedades de separador de línea de ejemplo del método SkipLine (VB)
-Este ejemplo muestra cómo manipular una línea de secuencias de texto a la vez. El efecto de cambiar el separador de línea desde el valor predeterminado de carro o salto de línea (**adCRLF**) a simplemente avance de línea (**adLF**) o un retorno de carro (**adCR**) se muestra.  
+# <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS y LineSeparator propiedades y ejemplo del método SkipLine (VB)
+En este ejemplo se muestra cómo manipular una línea de secuencias de texto a la vez. El efecto de cambiar el separador de línea desde el valor predeterminado de carro o salto de línea (**adCRLF**) a simplemente avance de línea (**adLF**) o un retorno de carro (**adCR**) se muestra.  
   
 ```  
 'BeginSkipLineVB  
@@ -117,6 +114,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Propiedad sobrecargas eléctricas](../../../ado/reference/ado-api/eos-property.md)   
- [Separador de línea (propiedad, ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)   
+ [Propiedad EOS](../../../ado/reference/ado-api/eos-property.md)   
+ [LineSeparator (propiedad, ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)   
  [Método SkipLine](../../../ado/reference/ado-api/skipline-method.md)

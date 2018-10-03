@@ -1,14 +1,11 @@
 ---
-title: sp_update_operator (Transact-SQL) | Documentos de Microsoft
+title: sp_update_operator (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_operator_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_operator
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f0cdd4e69655ac469e875b37f3e299b89b1be2f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ac1fb436ded0d829d9b6a9c8fe4e642f8de8cb16
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261111"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690323"
 ---
 # <a name="spupdateoperator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +61,7 @@ sp_update_operator
  Nuevo nombre del operador. El nombre debe ser único. *new_name* es **sysname**, su valor predeterminado es null.  
   
  [ @enabled=] *habilitado*  
- Un número que indica el estado actual del operador (**1** si está habilitado, **0** si no). *habilitado* es **tinyint**, su valor predeterminado es null. Si no está habilitado, un operador no recibirá notificaciones de alertas.  
+ Un número que indica el estado actual del operador (**1** si está habilitado, **0** si no es así). *habilitado* es **tinyint**, su valor predeterminado es null. Si no está habilitado, un operador no recibirá notificaciones de alertas.  
   
  [ @email_address=] '*email_address*'  
  La dirección de correo electrónico del operador. Esta cadena se pasa directamente al sistema de correo electrónico. *Email_Address* es **nvarchar (100)**, su valor predeterminado es null.  
@@ -92,9 +88,9 @@ sp_update_operator
  Especifica la hora a partir de la cual no puede enviarse una notificación por buscapersonas los domingos al operador especificado. *sunday_pager_end_time*es **int**, su valor predeterminado es null y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
   
  [ @pager_days=] *pager_days*  
- Especifica los días en que el operador está disponible para recibir mensajes por buscapersonas (de acuerdo con las horas inicial y final especificadas). *pager_days*es **tinyint**, su valor predeterminado es null y debe estar comprendido entre **0** a través de **127**. *pager_days* se calcula sumando los valores individuales de los días necesarios. Por ejemplo, del lunes al viernes es **2**+**4**+**8**+**16** + **32** = **64**.  
+ Especifica los días en que el operador está disponible para recibir mensajes por buscapersonas (de acuerdo con las horas inicial y final especificadas). *pager_days*es **tinyint**, su valor predeterminado es null, y debe ser un valor de **0** a través de **127**. *pager_days* se calcula sumando los valores individuales de los días necesarios. Por ejemplo, del lunes al viernes es **2**+**4**+**8**+**16** + **32** = **64**.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Lunes|  
@@ -116,7 +112,7 @@ sp_update_operator
 ## <a name="remarks"></a>Comentarios  
  sp_update_operator se debe ejecutar desde la base de datos msdb.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Permisos para ejecutar este procedimiento de forma predeterminada a los miembros del rol fijo de servidor sysadmin.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -1,29 +1,26 @@
 ---
-title: Propiedades del objeto de conexión, métodos y eventos | Documentos de Microsoft
+title: Los eventos, métodos y propiedades del objeto de conexión | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Connection object [ADO], members
 ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a414ffc7fea1a269024a56dedd7221c2f5c5fda1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6c94b6c03cebb720fae7a64fe8c06ccea96e710f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276954"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744033"
 ---
-# <a name="connection-object-properties-methods-and-events"></a>Eventos, métodos y propiedades del objeto de conexión
+# <a name="connection-object-properties-methods-and-events"></a>Los eventos, métodos y propiedades del objeto de conexión
 ## <a name="propertiescollections"></a>Propiedades y colecciones  
  [Propiedad Attributes](../../../ado/reference/ado-api/attributes-property-ado.md)  
   
@@ -45,11 +42,11 @@ ms.locfileid: "35276954"
   
  [Colección de propiedades](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [Propiedad del proveedor](../../../ado/reference/ado-api/provider-property-ado.md)  
+ [Propiedad de proveedor](../../../ado/reference/ado-api/provider-property-ado.md)  
   
- [State (propiedad)](../../../ado/reference/ado-api/state-property-ado.md)  
+ [Propiedad State](../../../ado/reference/ado-api/state-property-ado.md)  
   
- [Propiedad Version](../../../ado/reference/ado-api/version-property-ado.md)  
+ [Propiedad de versión](../../../ado/reference/ado-api/version-property-ado.md)  
   
 ## <a name="methods"></a>Métodos  
  [BeginTrans, CommitTrans y RollbackTrans métodos](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)  
@@ -65,9 +62,9 @@ ms.locfileid: "35276954"
  [Método OpenSchema](../../../ado/reference/ado-api/openschema-method.md)  
   
 ## <a name="events"></a>Eventos  
- [Eventos BeginTransComplete, CommitTransComplete y RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
+ [BeginTransComplete, CommitTransComplete y RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
   
- [ConnectComplete y eventos de desconexión](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
+ [Eventos ConnectComplete y Disconnect](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
   
  [Evento ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)  
   

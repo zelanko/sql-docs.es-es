@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Session Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Session element
 ms.assetid: 884ed090-968e-41d3-97e5-6d12787467da
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 74ce499ba167c7c0d439fba4e4099638f4e98db6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2f18754a2ef7d44a2a85bb9da78378bc631ecd0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310375"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080395"
 ---
 # <a name="session-element-xmla"></a>Elemento Session (XMLA)
   Utiliza el encabezado SOAP en un mensaje de solicitud SOAP para identificar una sesión explícita existente en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -57,7 +54,7 @@ ms.locfileid: "37310375"
 </soap:Envelope>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -78,7 +75,7 @@ ms.locfileid: "37310375"
 |---------------|-----------------|  
 |SessionId|Atributo `String` requerido que identifica la sesión que se va a utilizar. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] utiliza un identificador único global (GUID) para identificar una sesión.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento de encabezado `Session` identifica una sesión existente explícitamente iniciada en la instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. El elemento `Session` forma parte del encabezado SOAP en los siguientes tipos de mensajes:  
   
 -   Una respuesta SOAP que contiene un [BeginSession](session-element-xmla.md) elemento de encabezado SOAP.  

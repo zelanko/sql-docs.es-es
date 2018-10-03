@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - xs:date
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - storage format
 - DateTime
 ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
-caps.latest.revision: 10
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1acc25889e693a69e55adc4f5da5ece616bc41a2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2de2791ff4dcb52c50a57dbc91322756c10a7c13
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222525"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110675"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>Cambios en el formato de almacenamiento de los tipos xs:dateTime, xs:date y xs:time
   La regla XMLDATETIME identifica si las bases de datos contienen datos XML con tipo que dejarán de ser válidos después de la actualización a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

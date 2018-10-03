@@ -1,33 +1,30 @@
 ---
-title: Ejecutar procedimientos almacenados (OLE DB) | Microsoft Docs
+title: Ejecutar procedimientos almacenados (OLE DB) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - stored procedures [OLE DB], executing
 - OLE DB, stored procedures
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d1b2470c5d75a6a161459c615a093e0cfd83fc9
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 0102fa66e65fa11f47eec9f49cd1fa90fb11f877
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425055"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110885"
 ---
 # <a name="running-stored-procedures-ole-db"></a>Ejecutar procedimientos almacenados (OLE DB)
-  Al ejecutar las instrucciones, llamar a un procedimiento almacenado en el origen de datos (en lugar de ejecutar o preparar directamente una instrucción en la aplicación cliente) puede proporcionar:  
+  Cuando se ejecutan instrucciones, llamar a un procedimiento almacenado en el origen de datos (en lugar de ejecutar o preparar directamente una instrucción en la aplicación cliente) puede proporcionar lo siguiente:  
   
--   Un mayor rendimiento.  
+-   Mayor rendimiento.  
   
 -   Sobrecarga de red reducida.  
   
@@ -35,7 +32,7 @@ ms.locfileid: "37425055"
   
 -   Mayor exactitud  
   
--   Funcionalidad agregada.  
+-   Función agregada.  
   
  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client es compatible con tres de los mecanismos que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizan procedimientos almacenados para devolver datos:  
   

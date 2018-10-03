@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ba88d7a078889de09af4bd33e484ae69519721c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5980f2f1213b0f74422cdac773e4dfa9c806fd5e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246203"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056445"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Gráficos de columnas (Generador de informes y SSRS)
   Un gráfico de columnas muestra una serie como un conjunto de barras verticales agrupadas por categorías. Los gráficos de columnas resultan de gran utilidad para mostrar los cambios que se producen en los datos a lo largo del tiempo o para ilustrar comparaciones entre elementos. El gráfico de columnas sencillo está estrechamente relacionado con el gráfico de barras, que muestra las series como conjuntos de barras horizontales, y con el gráfico de intervalos de columnas, que muestra las series como conjuntos de barras verticales con puntos iniciales y finales que varían. Para obtener más información, consulte [gráficos de barras &#40;generador de informes y SSRS&#41; ](charts-report-builder-and-ssrs.md) y [rangos &#40;generador de informes y SSRS&#41;](range-charts-report-builder-and-ssrs.md).  
@@ -39,9 +36,9 @@ ms.locfileid: "37246203"
   
 -   **Cilindro 3D**: Gráfico de columnas cuyas barras tienen forma de cilindro en un gráfico 3D.  
   
--   `Histogram`. Gráfico de columnas que se calcula para que las barras se organicen en una distribución normal.  
+-   `Histogram`  Gráfico de columnas que se calcula para que las barras se organicen en una distribución normal.  
   
--   `Pareto`. Gráfico de columnas cuyas barras se organizan de mayor a menor.  
+-   `Pareto`  Gráfico de columnas cuyas barras se organizan de mayor a menor.  
   
 ## <a name="data-considerations-for-a-column-chart"></a>Consideraciones sobre los datos para un gráfico de columnas  
   

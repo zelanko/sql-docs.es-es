@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CurrentStorageMode Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CurrentStorageMode element
 ms.assetid: 050c21e4-368b-4ff0-b0c5-349f93fe9747
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0b26d26138e7752b6b41f147f0cc1fd1051e5afc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d930292898f55736daea9e00893cd6e5f000a34
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233826"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058775"
 ---
 # <a name="currentstoragemode-element-assl"></a>Elemento CurrentStorageMode (ASSL)
   Determina el modo de almacenamiento actual para el elemento primario.  
@@ -44,7 +41,7 @@ ms.locfileid: "37233826"
 </Dimension>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -59,7 +56,7 @@ ms.locfileid: "37233826"
 |Elemento primario|[Dimensión](../objects/dimension-element-assl.md), [partición](../objects/partition-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento `CurrentStorageMode` indica el modo de almacenamiento actualmente en uso para los propósitos de almacenamiento en caché automático y se aplica a todos los atributos del elemento principal.  
   
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  

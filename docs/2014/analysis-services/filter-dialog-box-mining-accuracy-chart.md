@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 71e884a9-7ec4-4459-a4c4-87f6c796d478
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04630120106816c4018af0fc23cfdf30f26b15cf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 87d3273367196d2c0c60780a3f1fa125c0b3bf8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272611"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060181"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>Cuadro de diálogo Filtrar (gráfico de precisión de minería de datos)
   El cuadro de diálogo **Filtrar** ayuda a generar las condiciones que se pueden aplicar a un conjunto de datos. El conjunto de datos puede ser un conjunto de datos externo que se use para las pruebas o los datos del caso que se usen para entrenar un modelo de minería de datos. Este cuadro de diálogo ayuda a generar criterios que se pueden guardar como parte de criterios de filtro más complejos en los cuadros de diálogo **Filtro de conjunto de datos** o **Filtro del modelo** .  
@@ -47,7 +44,7 @@ ms.locfileid: "37272611"
 |**Y/O**|Haga clic en esta opción para especificar si se aplica el operador Y o el operador O a la condición en esta línea. Estos valores solo están disponibles después de haber seleccionado una columna en la lista **Columna de la estructura de minería de datos** .|  
 |**Columna de estructura de minería de datos**|Haga clic en esta opción para seleccionar una columna de la lista de columnas de la tabla que seleccionó en el origen de datos, en el cuadro de diálogo **Filtro de conjunto de datos** .|  
 |**Operador**|Seleccione un operador de la lista. Los operadores que están disponibles dependen del tipo de datos de la columna.<br /><br /> Si la columna contiene valores discretos, solo están disponibles los operadores siguientes:<br /><br /> = (equal to), <> (not equal to), IS NOT NULL, IS NULL.<br /><br /> Si la columna contiene valores continuos, también se admiten los operadores correspondientes a operaciones de tipo mayor que y menor que.|  
-|**Value**|Escriba un valor que utilizar como condición.|  
+|**Valor**|Escriba un valor que utilizar como condición.|  
   
 ## <a name="see-also"></a>Vea también  
  [Pruebas y validación tareas y procedimientos &#40;minería de datos&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   

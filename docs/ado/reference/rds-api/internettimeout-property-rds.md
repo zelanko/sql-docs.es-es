@@ -1,42 +1,39 @@
 ---
-title: Propiedad InternetTimeout (RDS) | Documentos de Microsoft
+title: La propiedad InternetTimeout (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - InternetTimeout property [ADO]
 ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a95ec64f7ed35ab3701fd0ad286829d9f87bec44
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7ccb9aa7fe10fd9024e283a6134c581ea98c70c1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288278"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828293"
 ---
 # <a name="internettimeout-property-rds"></a>Propiedad InternetTimeout (RDS)
-Indica el número de milisegundos que transcurrirán antes agota el tiempo de espera de una solicitud.  
+Indica el número de milisegundos que transcurrirán antes de que una solicitud agota el tiempo.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar a [servicio de datos de WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- Establece o devuelve un **largo** agota el tiempo de espera de valor que representa el número de milisegundos que transcurren antes una solicitud.  
+ Establece o devuelve un **largo** valor que representa el número de milisegundos antes de la solicitud agota el tiempo.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Esta propiedad solo se aplica a las solicitudes enviadas con los protocolos HTTP o HTTPS.  
   
- Las solicitudes en un entorno de tres niveles pueden tardar varios minutos en ejecutarse. Utilice esta propiedad para especificar un tiempo adicional para las solicitudes de ejecución prolongada.  
+ Las solicitudes en un entorno de tres niveles pueden tardar varios minutos en ejecutarse. Use esta propiedad para especificar un tiempo adicional para solicitudes de ejecución prolongada.  
   
 ## <a name="applies-to"></a>Se aplica a  
   

@@ -1,37 +1,34 @@
 ---
-title: Preparar y ejecutar comandos | Documentos de Microsoft
+title: Preparar y ejecutar comandos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], preparing and executing commands
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92b63916bd6dfdc8d61fa2c8b3a9bbfba9f3224a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5f3de2bb729e2096e1b30aab12c402803036914b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272244"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760303"
 ---
 # <a name="preparing-and-executing-commands"></a>Preparar y ejecutar comandos
-Comandos son instrucciones emitidas a un proveedor para realizar algunas operaciones en el origen de datos subyacente. Una instrucción SQL, por ejemplo, es un comando para el proveedor de datos de SQL de Microsoft. En ADO, los comandos se suelen representar por **comando** objetos, aunque también se pueden emitir comandos simples a través de **conexión** o **Recordset** objetos.  
+Los comandos son instrucciones emitidas a un proveedor para realizar algunas operaciones en el origen de datos subyacente. Una instrucción SQL, por ejemplo, es un comando para el proveedor de datos SQL de Microsoft. En ADO, los comandos se suelen representar por **comando** objetos, aunque también se pueden emitir comandos sencillos a través de **conexión** o **Recordset** objetos.  
   
- Puede usar el **comando** objeto para solicitar cualquier tipo compatible de operación del proveedor, suponiendo que el proveedor pueda interpretar correctamente la cadena de comandos. Es una operación común para los proveedores de datos consultar una base de datos y devolver registros en un **Recordset** objeto, lo que puede considerarse como un contenedor para almacenar el resultado y una herramienta para ver el resultado. Como ocurre con muchos objetos ADO, algunos **comando** colecciones de objetos, métodos o propiedades podrían generar errores al hacer referencia a, dependiendo de la funcionalidad del proveedor.  
+ Puede usar el **comando** objeto para solicitar cualquier tipo compatible de operación del proveedor, suponiendo que el proveedor pueda interpretar correctamente la cadena de comandos. Es una operación común para los proveedores de datos consultar una base de datos y devolver los registros en un **Recordset** objeto que puede considerarse como un contenedor para almacenar el resultado y una herramienta para ver el resultado. Al igual que con muchos objetos ADO, algunos **comando** colecciones de objetos, métodos o propiedades podrían generar errores cuando se hace referencia a, dependiendo de la funcionalidad del proveedor.  
   
- Además de usar **comando** objetos, puede utilizar el **Execute** método en el **conexión** objeto o la **abiertos** método en el  **Conjunto de registros** objeto para emitir un comando y que se ejecute. Sin embargo, debe usar un **comando** objeto si necesita volver a usar un comando en el código, o si necesita pasar información detallada de parámetros con el comando. Estos escenarios se tratan con más detalle más adelante en esta sección.  
+ Además de usar **comando** objetos, puede utilizar el **Execute** método en el **conexión** objeto o la **abierto** método en el  **Conjunto de registros** objeto para emitir un comando y que se ejecute. Sin embargo, debe usar un **comando** objeto si tiene que volver a usar un comando en el código, o si necesita pasar información detallada de los parámetros con el comando. Estos escenarios se tratan con más detalle más adelante en esta sección.  
   
 > [!NOTE]
->  Ciertos **comando**s puede devolver un conjunto de resultados como una secuencia binaria o como una sola **registro** en lugar de como un **Recordset**, si esto es compatible con el proveedor. Además, algunos **comando**s no están diseñados para devolver ningún resultado establecido en absoluto (por ejemplo, una consulta Update de SQL). En esta sección se tratará el escenario más típico, sin embargo: ejecutar **comando**s que devuelven los resultados como un **Recordset** objeto. Para obtener más información sobre cómo devolver resultados en **registro**s o **flujo**s, consulte [registros y secuencias](../../../ado/guide/data/records-and-streams.md).  
+>  Ciertos **comando**s puede devolver un conjunto de resultados como una secuencia binaria o como una sola **registro** en lugar de como un **Recordset**, si esto es compatible con el proveedor. Además, algunos **comando**s no están pensadas para que se devuelve ningún resultado que se establece en absoluto (por ejemplo, una consulta Update de SQL). Esta sección explica el escenario más típico, sin embargo: ejecutar **comando**que devuelven resultados como un **Recordset** objeto. Para obtener más información sobre cómo devolver los resultados en **registro**s o **Stream**s, consulte [registros y secuencias](../../../ado/guide/data/records-and-streams.md).  
   
  Esta sección contiene los temas siguientes.  
   

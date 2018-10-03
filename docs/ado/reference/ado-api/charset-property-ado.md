@@ -1,13 +1,11 @@
 ---
-title: Propiedad de conjunto de caracteres (ADO) | Documentos de Microsoft
+title: Juego de caracteres (propiedad, ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,29 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - Charset property [ADO]
 ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9de51b96b78a7eccac34805ccc511754db3e393b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 20fff124f33bfeccaec665c74687753e2c0af20b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276304"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752343"
 ---
 # <a name="charset-property-ado"></a>Propiedad de conjunto de caracteres (ADO)
-Indica el juego de caracteres al que el contenido de un texto [flujo](../../../ado/reference/ado-api/stream-object-ado.md) deben traducir para el almacenamiento en el búfer interno de la **flujo** objeto.  
+Indica el juego de caracteres al que el contenido de un texto [Stream](../../../ado/reference/ado-api/stream-object-ado.md) debe convertirse para el almacenamiento en búfer interno de la **Stream** objeto.  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- Establece o devuelve un **cadena** establece el valor que especifica el carácter en el que el contenido de la **flujo** se va a traducir. El valor predeterminado es **Unicode**. Los valores permitidos son cadenas típicas que se pasan a través de la interfaz como nombres de conjunto de caracteres de Internet (por ejemplo, "iso-8859-1", "Windows-1252" y así sucesivamente). Para obtener una lista de los nombres de conjunto de caracteres que se conocen por un sistema, vea las subclaves de HKEY_CLASSES_ROOT\MIME\Database\Charset en el registro de Windows.  
+ Establece o devuelve un **cadena** establece el valor que especifica el carácter en la que el contenido de la **Stream** se va a traducir. El valor predeterminado es **Unicode**. Los valores permitidos son cadenas típicas pasadas a través de la interfaz como nombres de conjunto de caracteres de Internet (por ejemplo, "iso-8859-1", "Windows-1252" etc.). Para obtener una lista de los nombres de conjunto de caracteres que se conocen por un sistema, vea las subclaves de HKEY_CLASSES_ROOT\MIME\Database\Charset en el registro de Windows.  
   
-## <a name="remarks"></a>Notas  
- En el texto **flujo** de objetos, datos de texto se almacenan en el juego de caracteres especificado por el **Charset** propiedad. El valor predeterminado es Unicode. El **Charset** propiedad se utiliza para convertir datos en el **flujo** o próximos fuera de la **flujo**. Por ejemplo, si la **flujo** contiene datos ISO-8859-1 y que los datos se copian en una cadena BSTR, el **flujo** objeto convertirá los datos a Unicode. Lo contrario también es cierto.  
+## <a name="remarks"></a>Comentarios  
+ En el texto **Stream** de objetos, datos de texto se almacenan en el juego de caracteres especificado por el **Charset** propiedad. El valor predeterminado es Unicode. El **Charset** propiedad se utiliza para convertir datos en el **Stream** o estará disponible fuera de la **Stream**. Por ejemplo, si la **Stream** contiene datos de ISO-8859-1 y que los datos se copian en una cadena BSTR, el **Stream** objeto convertirá los datos a Unicode. Lo contrario también es cierto.  
   
- Un circuito abierto **flujo**, actual [posición](../../../ado/reference/ado-api/position-property-ado.md) debe estar al principio de la **flujo** (0) para poder establecer **Charset**.  
+ Para que uno abierto **Stream**, actual [posición](../../../ado/reference/ado-api/position-property-ado.md) debe estar al principio de la **Stream** (0) para poder establecer **Charset**.  
   
- **Juego de caracteres** sólo se utiliza con texto **flujo** objetos ([tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) es **adTypeText**). Esta propiedad se omite si **tipo** es **adTypeBinary**.  
+ **Juego de caracteres** solo se usa con texto **Stream** objetos ([tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) es **adTypeText**). Esta propiedad se omite si **tipo** es **adTypeBinary**.  
   
  Para obtener un ejemplo de código, vea [paso 4: rellenar el cuadro de texto detalles](../../../ado/guide/data/step-4-populate-the-details-text-box.md).  
   

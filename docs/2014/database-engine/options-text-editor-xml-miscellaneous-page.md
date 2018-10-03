@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Miscellaneous
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
-caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: aa8fa16d849c7d0bac76953b0d3da8787eb78b58
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2a87635bedba24e440dd2d6c5b7a2c48c7408a9d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259161"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126675"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Opciones (Editor de texto - XML - Página Varios)
   El cuadro de diálogo **Opciones** permite modificar las opciones de finalización automática y esquema del Editor XML. Estas opciones se encuentran disponibles cuando, en el menú **Herramientas** , se hace clic en **Opciones**, se expande la carpeta **Editor de texto** , se hace clic en **XML** y después se selecciona **Varios** .  

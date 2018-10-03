@@ -1,48 +1,45 @@
 ---
-title: Enlazar parámetros por nombre (parámetros con nombre) | Documentos de Microsoft
+title: Enlazar parámetros por nombre (parámetros con nombre) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - named parameters [ODBC]
 - binding parameters by name [ODBC]
 ms.assetid: e2c3da5a-6c10-4dd5-acf9-e951eea71a6b
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41e5c18119e8ec3482e6cddbdaee26bf10d6b1d0
-ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
+ms.openlocfilehash: 68dfb8976312016ee7f2e42fc4fcdecb93fd28cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35619522"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848903"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>Enlazar parámetros por nombre (parámetros con nombre)
-Ciertos DBMS permiten que una aplicación especificar los parámetros a un procedimiento almacenado por su nombre en lugar de por posición en la llamada a procedimiento. Estos parámetros se denominan *parámetros con nombre*. ODBC admite el uso de parámetros con nombre. En ODBC, los parámetros con nombre solo se usan en llamadas a procedimientos almacenados y no se puede usar en otras instrucciones SQL.  
+Algunos de los DBMS permiten que una aplicación especificar los parámetros a un procedimiento almacenado por su nombre en lugar de por posición en la llamada a procedimiento. Estos parámetros se denominan *parámetros con nombre*. ODBC admite el uso de parámetros con nombre. En ODBC, los parámetros con nombre solo se usan en llamadas a procedimientos almacenados y no se puede usar en otras instrucciones SQL.  
   
- El controlador comprueba el valor del campo SQL_DESC_UNNAMED de la IPD para determinar si denominado se usan parámetros. Si no se establece SQL_DESC_UNNAMED en SQL_UNNAMED, el controlador utiliza el nombre del campo SQL_DESC_NAME de la IPD para identificar el parámetro. Para enlazar el parámetro, una aplicación puede llamar a **SQLBindParameter** para especificar la información de parámetros y, a continuación, puede llamar a **SQLSetDescField** para establecer el campo SQL_DESC_NAME de la IPD. Cuando se utilizan parámetros con nombre, el orden del parámetro en la llamada a procedimiento no es importante y se omite el número de registro del parámetro.  
+ El controlador comprueba el valor del campo SQL_DESC_UNNAMED de la IPD para determinar si la llamada se usan parámetros. Si no se establece SQL_DESC_UNNAMED a SQL_UNNAMED, el controlador utiliza el nombre del campo SQL_DESC_NAME de la IPD para identificar el parámetro. Para enlazar el parámetro, una aplicación puede llamar a **SQLBindParameter** para especificar la información de parámetros y, a continuación, puede llamar a **SQLSetDescField** para establecer el campo SQL_DESC_NAME de la IPD. Cuando se utilizan parámetros con nombre, el orden del parámetro en la llamada a procedimiento no es importante y se omite el número de registro del parámetro.  
   
- La diferencia entre los parámetros sin nombre y parámetros con nombre está en la relación entre el número de registro del descriptor y el número de parámetro en el procedimiento. Cuando se utilizan parámetros sin nombre, el primer marcador de parámetro está relacionado con el primer registro en el descriptor de parámetro, que a su vez está relacionado con el primer parámetro (en orden de creación) en la llamada a procedimiento. Cuando se utilizan parámetros con nombre, el primer marcador de parámetro todavía está relacionado con el primer registro del descriptor de parámetro, pero la relación entre el número de registro del descriptor y el número de parámetro en el procedimiento ya no existe. Parámetros con nombre no utilizan la asignación del número de registros de descriptor para la posición de parámetro de procedimiento; en su lugar, el nombre de registro del descriptor se asigna al nombre del parámetro de procedimiento.  
+ Es la diferencia entre los parámetros sin nombre y parámetros con nombre en la relación entre el número de registro del descriptor y el número de parámetro en el procedimiento. Cuando se utilizan parámetros sin nombre, el primer marcador de parámetro está relacionado con el primer registro en el descriptor de parámetro, que a su vez está relacionado con el primer parámetro (en orden de creación) de la llamada a procedimiento. Cuando se utilizan parámetros con nombre, el primer marcador de parámetro todavía está relacionado con el primer registro del descriptor de parámetro, pero ya no existe la relación entre el número de registro del descriptor y el número de parámetro en el procedimiento. Parámetros con nombre no utilizan la asignación del número de registros de descriptor para la posición del parámetro de procedimiento; en su lugar, el nombre de registro del descriptor se asigna al nombre del parámetro de procedimiento.  
   
 > [!NOTE]  
->  Si está habilitado el rellenado automático de la IPD, el controlador llenará el descriptor de forma que el orden de los registros de descriptor coincidirá con el orden de los parámetros en la definición del procedimiento, incluso si se utilizan parámetros con nombre.  
+>  Si está habilitado el rellenado automático de la IPD, el controlador rellenará el descriptor de modo que el orden de los registros de descriptor coincidirá con el orden de los parámetros en la definición del procedimiento, incluso si se utilizan parámetros con nombre.  
   
- Si se utiliza un parámetro con nombre, todos los parámetros deben ser parámetros con nombre. Si cualquier parámetro no es un parámetro con nombre, a continuación, ninguna de la entidad de certificación de parámetros se parámetros con nombre. Si hubiera una combinación de parámetros con nombre y parámetros sin nombre, el comportamiento sería dependiente del controlador.  
+ Si se utiliza un parámetro con nombre, todos los parámetros deben ser parámetros con nombre. Si cualquier parámetro no es un parámetro con nombre, a continuación, ninguno de la parámetros ca se parámetros con nombre. Si hubiera una combinación de parámetros con nombre y parámetros sin nombre, el comportamiento sería dependiente del controlador.  
   
- Como ejemplo de parámetros con nombre, suponga que un procedimiento almacenado se ha definido como se indica a continuación de SQL Server:  
+ Un ejemplo de parámetros con nombre, supongamos que un servidor de SQL Server se ha definido el procedimiento almacenado como sigue:  
   
 ```  
 CREATE PROCEDURE test @title_id int = 1, @quote char(30) AS <blah>  
 ```  
   
- En este procedimiento, el primer parámetro, @title_id, tiene un valor predeterminado de 1. Una aplicación puede utilizar el siguiente código para invocar este procedimiento de forma que especifica solo un parámetro dinámico. Este parámetro es un parámetro con nombre con el nombre "\@oferta".  
+ En este procedimiento, el primer parámetro, @title_id, tiene un valor predeterminado de 1. Una aplicación puede utilizar el siguiente código para invocar este procedimiento, que especifica solo un parámetro dinámico. Este parámetro es un parámetro con nombre con el nombre "\@oferta".  
   
 ```  
 // Prepare the procedure invocation statement.  

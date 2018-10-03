@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MeasureGroupDimensionBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MeasureGroupDimensionBinding data type
 ms.assetid: 770e5ef8-aea1-4c9e-8e0a-2cbac43f2383
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01390833046c8a1f8b684035a6ab3ae0b1f16e62
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 203bf4bc93e01cc819be9938b2fa9ea1e1982bf7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165216"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090245"
 ---
 # <a name="measuregroupdimensionbinding-data-type-assl"></a>Tipo de datos MeasureGroupDimensionBinding (ASSL)
   Define un tipo de datos derivado que representa un enlace entre una dimensión y un grupo de medida.  
@@ -49,7 +46,7 @@ ms.locfileid: "37165216"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipos de datos base|[Enlace](binding-data-type-assl.md)|  
+|Tipos de datos base|[enlace](binding-data-type-assl.md)|  
 |Tipos de datos derivados|None|  
   
 ## <a name="data-type-relationships"></a>Relaciones entre tipos de datos  
@@ -60,7 +57,7 @@ ms.locfileid: "37165216"
 |Elementos secundarios|[Elemento CubeDimensionID](../properties/id-element-assl.md)|  
 |Elementos derivados|Consulte [enlace](binding-data-type-assl.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para obtener más información sobre la `Binding` tipo, incluidas las tablas de objetos de Analysis Services Scripting Language (ASSL) de la `Binding` tipo y la jerarquía de herencia de `Binding` tipos, vea [tipo de enlace de datos &#40;ASSL&#41;](binding-data-type-assl.md).  
   
  Para obtener información general de los enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;Multidimensional de SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  

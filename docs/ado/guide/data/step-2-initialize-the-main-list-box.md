@@ -1,28 +1,25 @@
 ---
-title: 'Paso 2: Inicializar el cuadro de lista principal | Documentos de Microsoft'
+title: 'Paso 2: Inicializar el cuadro de lista principal | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0be38956ee55ba42c02cfe8002ef1b3937aff665
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 41c340d2d84e80100788ae2d797a37fd048e4264
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272854"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735527"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>Paso 2: Inicializar el cuadro de lista principal
-Para declarar objetos globales Record y conjunto de registros, inserte el código siguiente en el (General) (declaraciones) para el Form1:  
+Para declarar objetos globales de registro y el conjunto de registros, inserte el código siguiente en el (General) (declaraciones) para el Form1:  
   
 ```  
 Option Explicit  
@@ -30,10 +27,10 @@ Dim grec As Record
 Dim grs As Recordset  
 ```  
   
- Este código declara referencias de objetos globales para los objetos de registro y conjunto de registros que se usará más adelante en este escenario.  
+ Este código declara referencias de objetos globales para los objetos de registro y el conjunto de registros que se usará más adelante en este escenario.  
   
 ## <a name="to-connect-to-a-url-and-populate-lstmain"></a>Para conectarse a una dirección URL y llenar lstMain  
- Inserte el código siguiente en el controlador de eventos de carga del formulario para el Form1:  
+ Inserte el código siguiente en el controlador de eventos Form Load para Form1:  
   
 ```  
 Private Sub Form_Load()  
@@ -49,9 +46,9 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- Este código crea instancias de los objetos globales Record y Recordset. El objeto de registro, `grec`, se abre con una dirección URL especificada como el objeto ActiveConnection. Si no existe la dirección URL, se abre; Si aún no existe, se crea. Tenga en cuenta que debe reemplazar "http://servername/foldername/" con una dirección URL válida de su entorno.  
+ Este código crea instancias de los objetos globales de registro y el conjunto de registros. El objeto de registro, `grec`, se abre con una dirección URL especificada como ActiveConnection. Si no existe la dirección URL, se abre; Si no existe, se crea. Tenga en cuenta que debe reemplazar "http://servername/foldername/" con una dirección URL válida de su entorno.  
   
- El objeto de conjunto de registros, `grs`, se abre sobre los elementos secundarios del registro, `grec`. A continuación, `lstMain` se rellena con los nombres de los recursos publicados en la dirección URL.  
+ El objeto Recordset, `grs`, se abre en los elementos secundarios del registro, `grec`. A continuación, `lstMain` se rellena con los nombres de los recursos publicados en la dirección URL.  
   
 ## <a name="see-also"></a>Vea también  
  [Escenario de publicación en Internet](../../../ado/guide/data/internet-publishing-scenario.md)   

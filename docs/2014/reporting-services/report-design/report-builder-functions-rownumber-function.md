@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bb6025b8cf196d45fe0a6c9ac5cf0c19aa54013e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: abf8cdd0eb4ffceb21061ea0101a42e4b84f3773
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276281"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105715"
 ---
 # <a name="rownumber-function-report-builder-and-ssrs"></a>Función RowNumber (Generador de informes y SSRS)
   Devuelve un recuento actualizado del número de filas para el ámbito especificado.  
@@ -38,7 +35,7 @@ RowNumber(scope)
  *ámbito*  
  (`String`) El nombre de un conjunto de datos, región de datos, o grupo o null (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), que especifica el contexto en el que se va a evaluar el número de filas. `Nothing` Especifica el contexto más externo, normalmente el conjunto de datos de informe.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  `RowNumber` Devuelve el valor actual del recuento de filas dentro del ámbito especificado, al igual que [RunningValue](report-builder-functions-runningvalue-function.md) devuelve el valor actual de una función de agregado. Cuando especifique un ámbito, especifique cuándo se deberá restablecer el recuento de filas en 1.  
   
  *scope* no puede ser una expresión. *scope* debe ser un ámbito contenedor. Entre los ámbitos más habituales, desde el contenedor más externo al más interno, se encuentran los conjuntos de datos de informe, las regiones de datos, los grupos de filas o los grupos de columnas.  

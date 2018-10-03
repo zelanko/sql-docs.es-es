@@ -1,12 +1,10 @@
 ---
-title: Traducción automática de datos de caracteres | Microsoft Docs
+title: Traducción automática de datos de caracteres | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - result sets [ODBC], autotranslating character data
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - ODBC data types, autotranslating character data
 ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7921d0bc0c41fc5053ceb0fbcd95e56dc4b4fd5a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: bc96c78af702a2239b517b4fbde78f6926b8490a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410004"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076705"
 ---
 # <a name="autotranslation-of-character-data"></a>Traducción automática de datos de caracteres
   Datos de caracteres, como ANSI de caracteres variables declaradas con SQL_C_CHAR o los datos almacenados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando el **char**, **varchar**, o **texto** tipos de datos, puede representan sólo un número limitado de caracteres. Los datos de caracteres almacenados que usan un byte por carácter solamente pueden representar 256 caracteres. Los valores almacenados en variables SQL_C_CHAR se interpretan utilizando la página de códigos ANSI (ACP) del equipo cliente. Los valores almacenados mediante **char**, **varchar**, o **texto** tipos de datos en el servidor se evalúan mediante la ACP del servidor.  

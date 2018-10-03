@@ -1,38 +1,36 @@
 ---
-title: Al recuperar los resultados (avanzados) | Documentos de Microsoft
+title: Al recuperar los resultados (avanzados) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - offsets [ODBC]
 - result sets [ODBC], about result sets
 - bind offsets [ODBC]
 ms.assetid: bc00c379-71a7-407a-975c-898243f39bb6
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9d3b5bb68849991e0fe7c2af3b538140008a85e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5199fb82cbc6b2a9da644554db12dc525cc0be40
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47693533"
 ---
 # <a name="retrieving-results-advanced"></a>Al recuperar los resultados (avanzados)
-Una aplicación puede especificar que se ha agregado un desplazamiento a direcciones de búfer de datos y la longitud/indicador correspondiente enlazados búfer direcciones cuando **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, o **SQLSetPos** se llama. Los resultados de estas adiciones determinarán las direcciones usadas en estas operaciones.  
+Una aplicación puede especificar que se agrega un desplazamiento que va a enlazar las direcciones de búfer de datos y el indicador de longitud correspondiente direcciones de búfer cuando **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, o **SQLSetPos** se llama. Los resultados de estas adiciones determinarán las direcciones usadas en estas operaciones.  
   
- Desplazamientos de enlace permiten que una aplicación cambiar los enlaces sin llamar a **SQLBindCol** para las columnas enlazadas previamente. Una llamada a **SQLBindCol** volver a enlazar los datos cambia la dirección del búfer y el puntero de longitud/indicador. Volver a enlazar con un desplazamiento, por otro lado, simplemente agrega un desplazamiento a la dirección de búfer de datos enlazados existente y la dirección del búfer de longitud/indicador. Cuando se utilizan los desplazamientos, los enlaces son "plantilla" de cómo se distribuyen los búferes de la aplicación y la aplicación puede mover esta "plantilla" a diferentes áreas de memoria cambiando el desplazamiento. Un desplazamiento nuevo puede especificarse en cualquier momento y siempre se agrega a los valores enlazados originalmente.  
+ Desplazamientos de enlace permite que una aplicación cambiar los enlaces sin llamar a **SQLBindCol** las columnas enlazadas anteriormente. Una llamada a **SQLBindCol** para volver a enlazar datos cambia la dirección del búfer y el puntero de longitud/indicador. Volver a enlazar con un desplazamiento, por otro lado, simplemente agrega un desplazamiento a la dirección de búfer de datos enlazados existente y la dirección del búfer de longitud/indicador. Cuando se utilizan los desplazamientos, los enlaces son una "plantilla" de la disposición de los búferes de la aplicación y la aplicación puede mover esta "plantilla" a diferentes áreas de memoria cambiando el desplazamiento. Un nuevo desplazamiento puede especificarse en cualquier momento y siempre se agrega a los valores enlazados originalmente.  
   
- Para especificar un desplazamiento de enlace, la aplicación establece el atributo de instrucción de SQL_ATTR_ROW_BIND_OFFSET_PTR a la dirección de un búfer SQLINTEGER. Antes de que la aplicación llama a una función que utiliza los enlaces, como **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, o **SQLSetPos**, que coloca un desplazamiento en bytes de este búfer, como la dirección del búfer de datos ni la dirección de búfer de longitud/indicador es 0, y siempre que la columna dependiente está en el conjunto de resultados. La suma de la dirección y el desplazamiento debe ser una dirección válida. (Esto significa que uno o ambos el desplazamiento y la dirección a la que se agrega el desplazamiento pueden ser válidos, como la suma es una dirección válida.) El atributo de instrucción de SQL_ATTR_ROW_BIND_OFFSET_PTR es un puntero para que el valor de desplazamiento se pueda aplicar a más de un conjunto de enlace de datos, que se puede cambiar si cambia un valor de desplazamiento. Una aplicación debe asegurarse de que el puntero es válido hasta que se cierra el cursor.  
+ Para especificar un desplazamiento de enlace, la aplicación establece el atributo de instrucción SQL_ATTR_ROW_BIND_OFFSET_PTR a la dirección de un búfer SQLINTEGER. Antes de la aplicación llama a una función que usa los enlaces, como **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, o **SQLSetPos**, coloca un desplazamiento en bytes de este búfer, siempre y cuando la dirección del búfer de datos ni la dirección del búfer de longitud/indicador es 0, y siempre y cuando la columna dependiente está en el conjunto de resultados. La suma de la dirección y el desplazamiento debe ser una dirección válida. (Esto significa que uno o ambos el desplazamiento y la dirección a la que se agrega el desplazamiento pueden ser válidos, siempre y cuando su suma es una dirección válida.) El atributo de instrucción SQL_ATTR_ROW_BIND_OFFSET_PTR es un puntero para que el valor de desplazamiento se puede aplicar a más de un conjunto de enlace de datos, que se puede cambiar si cambia un valor de desplazamiento. Una aplicación debe asegurarse de que el puntero es válido hasta que se cierra el cursor.  
   
 > [!NOTE]  
->  Desplazamientos de enlace no son compatibles con ODBC 2. *x* controladores.  
+>  No se admiten los desplazamientos de enlace por ODBC 2. *x* controladores.  
   
  Esta sección contiene los temas siguientes.  
   

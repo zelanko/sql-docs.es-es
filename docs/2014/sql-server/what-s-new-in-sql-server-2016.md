@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - database-engine
@@ -12,7 +11,6 @@ ms.technology:
 - master-data-services
 - replication
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - new features [SQL Server]
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - sql server 2014 sp1
 - sql server 2014 sp2
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
-caps.latest.revision: 70
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 5845455529c1b7d2cec25e7407ac8425a0a0e4a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b4323b2099836d1c381babbf60c376adb178ef7f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150156"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117965"
 ---
 # <a name="what39s-new-in-sql-server-2014"></a>¿Qué&#39;s de SQL Server 2014
   En este tema se resume detallados vínculos a las nuevas características de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] y resume los paquetes de servicios para [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  

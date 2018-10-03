@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ISSCommandWithParameters::SetParameterProperties (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - SetParameterProperties method
 ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dafc28244a94a3738b91c454f75bc8bb26d0b391
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 778021ce007f0c1eac68197e0c07e2cb7b0bb001
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416974"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096986"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
   Establece las propiedades de los parámetros por cada parámetro por ordinal o establece las propiedades masivas de los parámetro especificando una matriz de estructuras SSPARAMPROPS.  
@@ -40,7 +37,7 @@ SSPARAMPROPS rgParamProperties[]);
   
 ## <a name="arguments"></a>Argumentos  
  *cParams*[in]  
- El número de estructuras SSPARAMPROPS en la *rgParamProperties* matriz. Si este número es cero, `ISSCommandWithParameters::SetParameterProperties` eliminará todas las propiedades que es posible que se han especificado para los parámetros del comando.  
+ El número de estructuras SSPARAMPROPS en la matriz *rgParamProperties*. Si este número es cero, `ISSCommandWithParameters::SetParameterProperties` eliminará todas las propiedades que es posible que se han especificado para los parámetros del comando.  
   
  *rgParamProperties*[in]  
  Una matriz de estructuras SSPARAMPROPS que se van a establecer.  
@@ -48,7 +45,7 @@ SSPARAMPROPS rgParamProperties[]);
 ## <a name="return-code-values"></a>Valores de código de retorno  
  El `ISSCommandWithParameters::SetParameterProperties` método devuelve los mismos códigos de error que el núcleo de OLE DB **ICommandProperties:: SetProperties** método.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Establecer propiedades de parámetro con este método se permite en una por cada parámetro por ordinal o con una sola `ISSCommandWithParameters::SetParameterProperties` llamar una vez que se ha generado SSPARAMPROPS desde la matriz de propiedades.  
   
  El **SetParameterInfo** método debe llamarse antes de llamar a la `ISSCommandWithParameters::SetParameterProperties` método. La llamada a `SetParameterProperties(0, NULL)` borra todas las propiedades de parámetro especificadas, en tanto que la llamada a `SetParameterInfo(0,NULL,NULL)` borra toda la información de parámetros, incluidas las propiedades que puedan estar asociadas a un parámetro.  
@@ -73,12 +70,12 @@ SSPARAMPROPS rgParamProperties[]);
   
  `};`  
   
- Mejoras en el motor de base de datos a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] permitir isscommandwithparameters:: SetParameterProperties obtener descripciones más precisas de los resultados esperados. Estos resultados más precisos pueden diferir de los valores devueltos por isscommandwithparameters:: SetParameterProperties en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [detección de metadatos](../native-client/features/metadata-discovery.md).  
+ Mejoras en el motor de base de datos a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] permitir isscommandwithparameters:: SetParameterProperties obtener descripciones más precisas de los resultados esperados. Estos resultados más precisos pueden diferir de los valores devueltos por isscommandwithparameters:: SetParameterProperties en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Detección de metadatos](../native-client/features/metadata-discovery.md).  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
 |*iOrdinal*|El ordinal del parámetro que se ha pasado.|  
-|*cPropertySets*|El número de estructuras DBPROPSET en *rgPropertySets*.|  
+|*cPropertySets*|El número de estructuras DBPROPSET de *rgPropertySets*.|  
 |*rgPropertySets*|Un puntero a la memoria que devuelve una matriz de estructuras DBPROPSET.|  
   
 ## <a name="see-also"></a>Vea también  

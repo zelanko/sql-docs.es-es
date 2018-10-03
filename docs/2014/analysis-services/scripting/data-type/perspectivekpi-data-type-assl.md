@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - PerspectiveKpi Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - PerspectiveKpi data type
 ms.assetid: e8d19ec8-70d3-4947-904a-fb81fcac9afd
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ca2bc8d765e7ffe5a0111a22d8b2e5977a17f010
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 72917af7fc4bf24ab9b1e76e70fe6339638336e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215925"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076235"
 ---
 # <a name="perspectivekpi-data-type-assl"></a>Tipo de datos PerspectiveKpi (ASSL)
   Define un tipo de datos primitivo que representa información sobre un indicador clave de rendimiento (KPI) en un [perspectiva](../objects/perspective-element-assl.md) elemento.  
@@ -60,7 +57,7 @@ ms.locfileid: "37215925"
 |Elementos secundarios|[Las anotaciones](../collections/annotations-element-assl.md), [KpiID](../properties/id-element-assl.md)|  
 |Elementos derivados|[KPI](../objects/kpi-element-assl.md) ([KPI](../collections/kpis-element-assl.md) colección de [perspectiva](../objects/perspective-element-assl.md))|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.PerspectiveKpi>.  
   
 ## <a name="see-also"></a>Vea también  

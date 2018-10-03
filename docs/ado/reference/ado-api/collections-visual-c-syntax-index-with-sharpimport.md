@@ -1,13 +1,11 @@
 ---
-title: 'Colecciones (índice Visual C++ sintaxis con #import) | Documentos de Microsoft'
+title: 'Colecciones (Visual C++ índice de sintaxis con #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -18,21 +16,20 @@ helpviewer_keywords:
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3378f8e44d8d667933fe41a7164ba4c56acc20ce
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1fa18eeacad58195c42d03b12f03332c332b0a35
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276534"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662663"
 ---
-# <a name="collections-visual-c-syntax-index-with-import"></a>Colecciones (índice Visual C++ sintaxis con #import)
+# <a name="collections-visual-c-syntax-index-with-import"></a>Colecciones (Visual C++ índice de sintaxis con #import)
 Resulta útil saber que las colecciones heredan ciertos métodos y propiedades comunes.  
   
- Todas las colecciones heredan la **recuento** propiedad y **actualizar** método y todas las colecciones de agregan el **elemento** propiedad. El **errores** colección agrega la **desactive** método. El **parámetros** colección hereda el **anexar** y **eliminar** métodos, mientras el **campos** colección agrega el **Anexado**, **eliminar**, y **actualización** métodos.  
+ Todas las colecciones heredan la **recuento** propiedad y **actualizar** agregan método y todas las colecciones de la **elemento** propiedad. El **errores** agrega la colección el **clara** método. El **parámetros** hereda de la colección el **Append** y **eliminar** métodos, mientras que el **campos** colección agrega el **Append**, **eliminar**, y **actualización** métodos.  
   
 ## <a name="properties-collection"></a>Colección de propiedades  
   
@@ -102,6 +99,6 @@ PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem
   
 ## <a name="see-also"></a>Vea también  
  [Colección de errores (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Fields (colección) (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Colección de campos (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Colección de parámetros (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

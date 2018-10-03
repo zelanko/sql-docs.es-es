@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fb22cffa-ac99-4d34-ac4a-9c93068e33e8
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2e2a9fa7f42e547940e1b4576f63cc3067e01da0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 109c4eb07dd34aa5ef3e41d794edfc39ffffcac8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310835"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119875"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>Crear predicciones de serie temporal (Tutorial intermedio de minería de datos)
   En las tareas anteriores de esta lección, creó un modelo de serie temporal y exploró los resultados. De forma predeterminada, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] siempre crea un conjunto de cinco (5) predicciones para un modelo de serie temporal y muestra los valores de predicción como parte del gráfico de pronóstico. Sin embargo, también puede crear predicciones personalizadas si crea consultas de predicción de las extensiones de minería de datos (DMX).  

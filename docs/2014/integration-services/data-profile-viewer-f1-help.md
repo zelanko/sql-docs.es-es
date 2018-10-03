@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dataprofileviewer.f1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], viewer
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
-caps.latest.revision: 17
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 27869a87ed10056517806bd872ef1e48d572690b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b91e91d726123a057ba6aa8850633d4d3656354
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302395"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065145"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Visor de perfiles de datos (Ayuda F1)
   Utilice el Visor de perfil de datos para ver la salida de la Tarea de generación de perfiles de datos.  
@@ -126,7 +123,7 @@ ms.locfileid: "37302395"
  Muestra el número de filas de la tabla o vista.  
   
 #### <a name="detailed-value-distribution-pane"></a>Panel Distribución de valores detallado  
- **Value**  
+ **Valor**  
  Muestra los distintos valores que se encuentran en la columna de perfiles.  
   
  **Count**  

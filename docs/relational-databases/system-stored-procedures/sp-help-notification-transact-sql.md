@@ -1,14 +1,11 @@
 ---
-title: sp_help_notification (Transact-SQL) | Documentos de Microsoft
+title: sp_help_notification (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_notification
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6499d3830859063af74417c84c7fe9e1855b3313
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3ccc926844f6d3c054a69cb51f3156dc8e186a98
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261051"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833583"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,24 +46,24 @@ sp_help_notification
   
 ## <a name="arguments"></a>Argumentos  
  [  **@object_type =**] **'***object_type***'**  
- Tipo de información que se va a devolver. *object_type*es **char (9)**, no tiene ningún valor predeterminado. *object_type* puede ser ALERTS, que presenta las alertas asignadas al nombre del operador especificado *,* u OPERATORS, que presenta los operadores responsables del nombre de alerta especificado *.*  
+ Tipo de información que se va a devolver. *object_type*es **char (9)**, no tiene ningún valor predeterminado. *object_type* puede ser ALERTS, que enumera las alertas asignadas al nombre del operador especificado *,* u OPERATORS, que se enumeran los operadores responsables del nombre de alerta especificado *.*  
   
  [  **@name =**] **'***nombre***'**  
- Un nombre de operador (si *object_type* es OPERATORS) o un nombre de la alerta (si *object_type* es ALERTS). *nombre* es **sysname**, no tiene ningún valor predeterminado.  
+ Un nombre de operador (si *object_type* es OPERATORS) o un nombre de alerta (si *object_type* es ALERTS). *nombre* es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@enum_type =**] **'***enum_type***'**  
  El *object_type*información que se devuelve. *enum_type* es ACTUAL en la mayoría de los casos. *enum_type*es **char (10)**, no tiene ningún valor predeterminado y puede ser uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|ACTUAL|Muestra sólo el *tipos de objetos* asociada *nombre*.|  
+|ACTUAL|Muestra sólo el *tipos de objetos* asociado *nombre*.|  
 |ALL|Enumera todos los*tipos de objetos* incluidos aquellos que no están asociados con *nombre*.|  
 |TARGET|Muestra sólo el *tipos de objetos* coincidencia proporcionado *target_name*, independientemente de la asociación con*nombre*.|  
   
  [  **@notification_method =**] *notification_method*  
  Valor numérico que determina las columnas del método de notificación que se van a devolver. *notification_method* es **tinyint**, y puede tener uno de los siguientes valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Correo electrónico: devuelve solamente el **use_email** columna.|  
 |**2**|Buscapersonas: devuelve solamente el **use_pager** columna.|  
@@ -75,15 +71,15 @@ sp_help_notification
 |**7**|Todas: devuelve todas las columnas.|  
   
  [  **@target_name =**] **'***target_name***'**  
- Para buscar un nombre de la alerta (si *object_type* es ALERTS) o un nombre de operador que se busca (si *object_type* es OPERATORS). *target_name* solo es necesario si *enum_type* es el destino. *target_name* es **sysname**, su valor predeterminado es null.  
+ Para buscar un nombre de alerta (si *object_type* es ALERTS) o un nombre de operador para buscar (si *object_type* es OPERATORS). *target_name* solo es necesario si *enum_type* es el destino. *target_name* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-valves"></a>Código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Si *object_type* es **alertas**, el conjunto de resultados enumera todas las alertas de un operador determinado.  
+ Si *object_type* es **alertas**, el conjunto de resultados muestra todas las alertas para un operador determinado.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|Número de identificador de la alerta.|  
 |**alert_name**|**sysname**|Nombre de la alerta.|  
@@ -92,11 +88,11 @@ sp_help_notification
 |**use_netsend**|**int**|Se utiliza un mensaje de red para notificar al operador:<br /><br /> **1** = Sí<br /><br /> **0** = No|  
 |**has_email**|**int**|Número de notificaciones por correo electrónico enviadas para esta alerta.|  
 |**has_pager**|**int**|Número de notificaciones por buscapersonas enviadas para esta alerta.|  
-|**has_netsend**|**int**|Número de **mediante net send** notificaciones enviadas para esta alerta.|  
+|**has_netsend**|**int**|Número de **net send** notificaciones enviadas para esta alerta.|  
   
  Si **object_type** es **operadores**, el conjunto de resultados presenta todos los operadores de una alerta dada.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|Número de identificación del operador.|  
 |**operator_name**|**sysname**|Nombre del operador.|  
@@ -110,7 +106,7 @@ sp_help_notification
 ## <a name="remarks"></a>Comentarios  
  Este procedimiento almacenado se debe ejecutar desde la **msdb** base de datos.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para ejecutar este procedimiento almacenado, un usuario debe ser miembro del rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  

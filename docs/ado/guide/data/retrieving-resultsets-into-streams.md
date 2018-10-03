@@ -1,37 +1,34 @@
 ---
-title: Recuperar conjuntos de resultados en secuencias | Documentos de Microsoft
+title: Recuperar conjuntos de resultados en secuencias | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - streams [ADO], retrieving query results
 - query results into stream [ADO]
 - retrieving results into stream [ADO]
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eff683085882bd56b60ed7eee2a14cd2efbc8b86
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 45ba231b1523a74ac8b2c09f55e19c3dc287ef20
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272554"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734963"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Recuperar conjuntos de resultados en secuencias
-En lugar de recibir los resultados en tradicional **Recordset** objeto ADO en su lugar, puede recuperar los resultados de la consulta en una secuencia. La propiedad ADO **flujo** objeto (u otros objetos que admiten el COM **IStream** interfaz, como ASP **solicitar** y **respuesta** objetos ) puede usarse para contener estos resultados. Un uso de esta característica es para recuperar los resultados en formato XML. Con SQL Server, por ejemplo, los resultados XML pueden devolverse de varias maneras, por ejemplo, mediante la cláusula FOR XML con una consulta SELECT de SQL o utilizando una consulta XPath.  
+En lugar de recibir los resultados en el tradicional **Recordset** objeto ADO en su lugar, puede recuperar los resultados de la consulta en una secuencia. ADO **Stream** objeto (u otros objetos que admiten el COM **IStream** interfaz, por ejemplo, el ASP **solicitar** y **respuesta** objetos ) se puede usar para contener estos resultados. Un uso de esta característica es para recuperar los resultados en formato XML. Con SQL Server, por ejemplo, los resultados XML pueden devolverse de varias formas, por ejemplo, mediante la cláusula FOR XML con una consulta SELECT de SQL o mediante una consulta XPath.  
   
- Para recibir los resultados de la consulta en formato de flujo en lugar de en un **Recordset**, debe especificar el **adExecuteStream** constante de **ExecuteOptionEnum** como un parámetro de la **Execute** método de un **comando** objeto. Si su proveedor admite esta característica, se devuelven los resultados en una secuencia en la ejecución. Podría ser necesaria para especificar otras propiedades específicas del proveedor antes de que se ejecuta el código. Por ejemplo, con el proveedor Microsoft OLE DB para SQL Server, propiedades como **flujo de salida** en el **propiedades** colección de la **comando** objeto debe ser especificado. Para obtener más información acerca de propiedades dinámicas específicas de SQL Server relacionado con esta característica, vea Propiedades de XML-Related en los libros en pantalla de SQL Server.  
+ Para recibir los resultados de la consulta en formato de secuencia en lugar de en un **Recordset**, debe especificar el **adExecuteStream** constante desde **ExecuteOptionEnum** como un parámetro de la **Execute** método de un **comando** objeto. Si su proveedor admite esta característica, se devolverá los resultados en una secuencia en la ejecución. Podría ser necesario para especificar propiedades específicas del proveedor adicionales antes de que se ejecuta el código. Por ejemplo, con el proveedor Microsoft OLE DB para SQL Server, propiedades, como **salida Stream** en el **propiedades** colección de la **comando** objeto debe ser especificado. Para obtener más información acerca de propiedades dinámicas específicas de SQL Server relacionado con esta característica, vea las propiedades de XML-Related en los libros en pantalla de SQL Server.  
   
-## <a name="for-xml-query-example"></a>Por ejemplo, consulta XML  
- En el siguiente ejemplo se escribe en VBScript en la base de datos de Northwind:  
+## <a name="for-xml-query-example"></a>Por ejemplo de consulta XML  
+ En el siguiente ejemplo está escrito en VBScript a la base de datos Northwind:  
   
 ```  
 <!-- BeginRecordAndStreamVBS -->  
@@ -146,21 +143,21 @@ En lugar de recibir los resultados en tradicional **Recordset** objeto ADO en su
   
  La cláusula FOR XML indica a SQL Server para devolver los datos en forma de un documento XML.  
   
-### <a name="for-xml-syntax"></a>Para consultar la sintaxis XML  
+### <a name="for-xml-syntax"></a>Para conocer la sintaxis XML  
   
 ```  
 FOR XML [RAW|AUTO|EXPLICIT]  
 ```  
   
- PARA XML sin formato genera los elementos de fila genérico que tienen valores de columna como atributos. FOR XML AUTO usa la heurística para generar un árbol jerárquico con los nombres de los elementos en función de los nombres de tabla. FOR XML EXPLICIT genera una tabla universal con relaciones que se describen con detalle mediante metadatos.  
+ PARA XML sin formato genera los elementos de fila genérico que tienen valores de columna como atributos. FOR XML AUTO utiliza la heurística para generar un árbol jerárquico con nombres de elementos en función de los nombres de tabla. FOR XML EXPLICIT genera una tabla universal con relaciones que se describen con detalle mediante metadatos.  
   
- Un instrucción SQL SELECT FOR XML de ejemplo siguiente:  
+ Un instrucción SQL SELECT FOR XML de ejemplo:  
   
 ```  
 SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO  
 ```  
   
- El comando puede especificarse en una cadena, como se muestra anteriormente, se asignaron a **CommandText**, o en forma de una consulta de plantilla XML asignada a **CommandStream**. Para obtener más información acerca de las consultas de plantilla XML, vea [secuencias de comandos](../../../ado/guide/data/command-streams.md) en ADO o secuencias de uso para la entrada de comando en los libros en pantalla de SQL Server.  
+ El comando se puede especificar en una cadena, como se mostró anteriormente, asignado a **CommandText**, o en forma de una consulta de la plantilla XML asignada a **CommandStream**. Para obtener más información acerca de las consultas de plantilla XML, vea [secuencias de comandos](../../../ado/guide/data/command-streams.md) en ADO o mediante secuencias de entrada de comando en los libros en pantalla de SQL Server.  
   
  Como una consulta de la plantilla XML, la consulta FOR XML aparece como sigue:  
   
@@ -168,13 +165,13 @@ SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO
 <sql:query> SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO </sql:query>  
 ```  
   
- Este ejemplo especifica el ASP **respuesta** de objeto para el **flujo de salida** propiedad:  
+ Este ejemplo especifica el ASP **respuesta** de objeto para el **salida Stream** propiedad:  
   
 ```  
 adoCmd.Properties("Output Stream") = Response  
 ```  
   
- A continuación, especifique **adExecuteStream** parámetro de **Execute**. Este ejemplo ajusta la secuencia en etiquetas XML para crear una isla de datos XML:  
+ A continuación, especifique **adExecuteStream** parámetro de **Execute**. Este ejemplo ajusta la secuencia de etiquetas XML para crear una isla de datos XML:  
   
 ```  
 Response.write "<XML ID=MyDataIsle>"  
@@ -182,5 +179,5 @@ adoCmd.Execute , , adExecuteStream
 Response.write "</XML>"  
 ```  
   
-### <a name="remarks"></a>Notas  
- En este momento, se han transmitido por secuencias XML en el explorador del cliente y está listo para mostrarse. Esto se realiza mediante VBScript del lado cliente para enlazar el documento XML a una instancia de DOM y crear bucles en cada nodo secundario para generar una lista de productos en HTML.
+### <a name="remarks"></a>Comentarios  
+ En este momento, XML ha sido transmitido al explorador del cliente y está listo para ser mostrado. Esto se realiza mediante VBScript del lado cliente para enlazar el documento XML a una instancia de DOM y crear bucles en cada nodo secundario para crear una lista de productos en HTML.

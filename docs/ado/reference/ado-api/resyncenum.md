@@ -1,13 +1,11 @@
 ---
-title: ResyncEnum | Documentos de Microsoft
+title: ResyncEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,26 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - ResyncEnum enumeration [ADO]
 ms.assetid: d3df2c90-e570-4c40-a79a-25b3448a009c
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b974d00ecb1fb4d0d9d7e431f28df16f945d778
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: aaf396e8969d490933e26652e18c0c070e030785
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281364"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632553"
 ---
 # <a name="resyncenum"></a>ResyncEnum
-Especifica si se sobrescriben los valores subyacentes por una llamada a [Resync](../../../ado/reference/ado-api/resync-method.md).  
+Especifica si se sobrescriben los valores subyacentes mediante una llamada a [Resync](../../../ado/reference/ado-api/resync-method.md).  
   
 |Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
-|**adResyncAllValues**|2|Predeterminado: Sobrescribe los datos y se cancelan las actualizaciones pendientes.|  
+|**adResyncAllValues**|2|Predeterminado: Sobrescribe los datos y las actualizaciones pendientes se cancelan.|  
 |**adResyncUnderlyingValues**|1|No sobrescribir los datos y no se cancelan las actualizaciones pendientes.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
+## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
  Paquete: **com.ms.wfc.data**  
   
 |Constante|  

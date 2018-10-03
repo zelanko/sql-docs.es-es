@@ -1,41 +1,38 @@
 ---
-title: Habilitación de Visual Studio Analyzer | Documentos de Microsoft
+title: Habilitación de Visual Studio Analyzer | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio Analyzer [ODBC], enabling
 ms.assetid: 423950e9-a5c0-4da9-b9b2-49c38b3bb0b8
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: db5e7540f76384ec38a290a00b9a3c51db9a9a84
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a640d2432e6a079174644646fed5106fbc040c2b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909930"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633643"
 ---
 # <a name="enabling-visual-studio-analyzer"></a>Habilitación de Visual Studio Analyzer
 > [!IMPORTANT]  
->  Se quitó la compatibilidad con Visual Studio Analyzer a partir de Windows 8 (Visual Studio Analyzer sólo se incluyó en versiones anteriores de Visual Studio.). Para una solución de problemas de mecanismo de forma alternativa, utilizar el seguimiento de BID.  
+>  Compatibilidad con Visual Studio Analyzer se quitó a partir de Windows 8 (Visual Studio Analyzer sólo se incluyó en versiones anteriores de Visual Studio.). Para conocer una alternativa mecanismo de solución de problemas, use el seguimiento BID.  
   
- Microsoft Visual Studio Analyzer es una herramienta de análisis de la aplicación diseñada para proporcionar una visión general de rendimiento de la aplicación a través de todas las capas y sistemas. Se centra en la interacción entre los componentes. Visual Studio Analyzer puede iniciar y detener desde la ficha de seguimiento del Administrador de ODBC.  
+ Microsoft Visual Studio Analyzer es una herramienta de análisis de aplicaciones diseñada para proporcionar una visión de alto nivel rendimiento de una aplicación a través de todas las capas y los sistemas. Se centra en la interacción entre componentes. Visual Studio Analyzer puede iniciar y detener de la pestaña de seguimiento del Administrador de ODBC.  
   
- Para ver cualquiera de los eventos que genera ODBC, siga estos pasos:  
+ Para verlos eventos que genera ODBC, siga estos pasos:  
   
-1.  Acceso el Administrador de orígenes de datos ODBC.  
+1.  Acceso de administrador de orígenes de datos ODBC.  
   
 2.  Haga clic en el **seguimiento** ficha.  
   
-3.  Haga clic en **iniciar el seguimiento del analizador de Visual Studio**.  
+3.  Haga clic en **iniciar el seguimiento de Visual Studio Analyzer**.  
   
 4.  Haga clic en **Aceptar**.  
   

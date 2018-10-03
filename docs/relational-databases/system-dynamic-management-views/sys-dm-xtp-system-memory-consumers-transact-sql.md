@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xtp_system_memory_consumers
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_system_memory_consumers dynamic management view
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3363fa2208f735c38ebd696b782fced80e5c49ce
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8341ac09af815f2e96eadd1616fd02cc75810644
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015195"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815053"
 ---
 # <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +43,7 @@ select * from sys.dm_xtp_system_memory_consumers
 |memory_consumer_id|**bigint**|Identificador interno del consumidor de memoria.|  
 |memory_consumer_type|**int**|Un entero que representa el tipo de consumidor de memoria con uno de los siguientes valores:<br /><br /> 0: no se debe mostrar. Agrega el uso de memoria de dos o varios consumidores.<br /><br /> 1: lista de direcciones: Realiza un seguimiento de consumo de memoria para una lista de direcciones del sistema.<br /><br /> 2 - VARHEAP: Realiza un seguimiento de consumo de memoria para un montón de longitud variable.<br /><br /> 4 - bloque paginado de E/S de: realiza un seguimiento del consumo de memoria para un grupo de páginas del sistema utilizado para operaciones de E/S.|  
 |memory_consumer_type_desc|**nvarchar(16)**|Descripción del tipo de consumidor de memoria:<br /><br /> 0: no se debe mostrar.<br /><br /> 1: LOOKASIDE<br /><br /> 2: VARHEAP<br /><br /> 4: PGPOOL|  
-|memory_consumer_desc|**nvarchar (64)**|Descripción de la instancia del consumidor de memoria:<br /><br /> VARHEAP: <br />Montón del sistema. Uso general. Actualmente solo se usa para asignar elementos de trabajo de la recolección de elementos no utilizados.<br />-O bien-<br />Montón de lista de direcciones. Lo usan las listas de direcciones cuando el número de elementos contenidos en la lista alcanza un extremo predeterminado (normalmente alrededor de 5.000 elementos).<br /><br /> PGPOOL: Para el sistema de E/S hay grupos son tres bloque paginado de 4K de sistema de diferentes tamaños, grupo de páginas del sistema de 64K y bloque paginado de 256K del sistema.|  
+|memory_consumer_desc|**Nvarchar (64)**|Descripción de la instancia del consumidor de memoria:<br /><br /> VARHEAP: <br />Montón del sistema. Uso general. Actualmente solo se usa para asignar elementos de trabajo de la recolección de elementos no utilizados.<br />-O bien-<br />Montón de lista de direcciones. Lo usan las listas de direcciones cuando el número de elementos contenidos en la lista alcanza un extremo predeterminado (normalmente alrededor de 5.000 elementos).<br /><br /> PGPOOL: Para el sistema de E/S hay grupos son tres bloque paginado de 4K de sistema de diferentes tamaños, grupo de páginas del sistema de 64K y bloque paginado de 256K del sistema.|  
 |lookaside_id|**bigint**|El identificador del proveedor de memoria de direcciones local del subproceso.|  
 |pagepool_id|**bigint**|El identificador del subproceso local, proveedor de memoria del grupo de páginas.|  
 |allocated_bytes|**bigint**|Número de bytes reservados para el consumidor.|  

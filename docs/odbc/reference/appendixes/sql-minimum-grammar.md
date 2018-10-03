@@ -1,56 +1,54 @@
 ---
-title: La gramática mínima de SQL | Documentos de Microsoft
+title: Gramática mínima de SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a3e31f53abf8d8788f719adc9e00e180ca7aa96f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818909"
 ---
 # <a name="sql-minimum-grammar"></a>Gramática mínima de SQL
-Esta sección describe la sintaxis SQL mínima que debe ser compatible con un controlador ODBC. La sintaxis descrita en esta sección es un subconjunto de la sintaxis de nivel de entrada de SQL-92.  
+Esta sección describe la sintaxis SQL mínima que debe admitir un controlador ODBC. La sintaxis descrita en esta sección es un subconjunto de la sintaxis de nivel de entrada de SQL-92.  
   
- Una aplicación puede usar cualquiera de la sintaxis de esta sección y estar seguro de que cualquier controlador compatible con ODBC admite esta sintaxis. Para determinar si se admiten las características adicionales de SQL-92 no estén en esta sección, la aplicación debe llamar a **SQLGetInfo** con el tipo de información de SQL_SQL_CONFORMANCE. Incluso si el controlador no se ajusta a cualquier nivel de conformidad de SQL-92, una aplicación todavía puede utilizar la sintaxis descrita en esta sección. Si un controlador es compatible con un nivel de SQL-92, por otro lado, admite toda la sintaxis incluida en ese nivel. Esto incluye la sintaxis de esta sección porque la gramática mínima que se describe aquí es un subconjunto puro del nivel más bajo de conformidad de SQL-92. Una vez que la aplicación sepa el nivel de SQL-92 admitido, puede determinar si una característica de nivel superior se admite (si existe) mediante una llamada a **SQLGetInfo** con el tipo de información individual correspondiente a esa característica.  
+ Una aplicación puede usar cualquiera de la sintaxis de esta sección y estar seguro de que los controladores compatibles con ODBC admitirá esa sintaxis. Para determinar si se admiten las características adicionales de SQL-92 no en esta sección, la aplicación debe llamar a **SQLGetInfo** con el tipo de información SQL_SQL_CONFORMANCE. Incluso si el controlador no se ajusta a cualquier nivel de conformidad con SQL-92, una aplicación todavía puede usar la sintaxis descrita en esta sección. Si un controlador es compatible con un nivel de SQL-92, por otro lado, admite toda la sintaxis incluida en ese nivel. Esto incluye la sintaxis de esta sección porque la gramática mínima que se describe aquí es un subconjunto puro del nivel más bajo de conformidad de SQL-92. Una vez que la aplicación sepa el nivel de SQL-92 admitido, puede determinar si una característica de nivel superior se admite (si existe) mediante una llamada a **SQLGetInfo** con el tipo de información individual correspondiente a esa característica.  
   
- Controladores que solo funcionan con orígenes de datos de solo lectura podrían no admitir las partes de la gramática que se incluyen en esta sección que tratan con datos que cambian. Una aplicación puede determinar si un origen de datos es de solo lectura mediante una llamada a **SQLGetInfo** con el tipo de información de SQL_DATA_SOURCE_READ_ONLY.  
+ Los controladores que solo funcionan con orígenes de datos de solo lectura podrían no admitir aquellas partes de la gramática que se incluyen en esta sección que tratan con datos que cambian. Una aplicación puede determinar si un origen de datos es de solo lectura mediante una llamada a **SQLGetInfo** con el tipo de información SQL_DATA_SOURCE_READ_ONLY.  
   
 ## <a name="statement"></a>.  
  *instrucción CREATE table* :: =  
   
  CREATE TABLE *nombre de la tabla de base*  
   
- (*identificador de la columna de tipo de datos* [*, tipo de datos del identificador de la columna*]...)  
+ (*identificador de la columna de tipo de datos* [*, identificador de la columna de tipo de datos*]...)  
   
 > [!IMPORTANT]  
->  Como un *tipo de datos* en un *instrucción create table*, las aplicaciones deben utilizar un tipo de datos de la columna TYPE_NAME del conjunto de resultados devuelto por **SQLGetTypeInfo**.  
+>  Como un *tipo de datos* en un *instrucción create table*, las aplicaciones deben usar un tipo de datos de la columna TYPE_NAME del conjunto de resultados devuelto por **SQLGetTypeInfo**.  
   
  *busca en la instrucción de eliminación* :: =  
   
- DELETE FROM *nombre de la tabla* [donde *condición de búsqueda*]  
+ DELETE FROM *nombre-tabla* [donde *condición de búsqueda*]  
   
- *instrucción de tabla DROP* :: =  
+ *instrucción de tabla de DROP* :: =  
   
  DROP TABLE *nombre de la tabla de base*  
   
- *instrucción INSERT* :: =  
+ *instrucción de inserción* :: =  
   
- INSERT INTO *nombre de la tabla* [( *identificador de la columna* [, *identificador de la columna*]...)]      VALORES (*valor de inserción*[, *valor de inserción*]...)  
+ INSERT INTO *nombre-tabla* [( *identificador de columna* [, *identificador de columna*]...)]      VALORES (*Insertar valor*[, *Insertar valor*]...)  
   
  *instrucción SELECT* :: =  
   
@@ -66,21 +64,21 @@ Esta sección describe la sintaxis SQL mínima que debe ser compatible con un co
   
  &#124;*busca en la instrucción de eliminación*  
   
- &#124;*declaración de tabla de destino*  
+ &#124;*instrucción drop-table*  
   
- &#124;*instrucción insert*  
+ &#124;*instrucción de inserción*  
   
  &#124;*instrucción select*  
   
- &#124;*búsquedas en la instrucción update*  
+ &#124;*buscará en la instrucción update*  
   
  *búsquedas en la instrucción Update*  
   
- ACTUALIZACIÓN *nombre de la tabla*  
+ ACTUALIZACIÓN *nombre de tabla*  
   
- ESTABLECER *identificador de la columna* = {*expresión* &#124; NULL}  
+ ESTABLECER *identificador de columna* = {*expresión* &#124; NULL}  
   
- [, *identificador de la columna* = {*expresión* &#124; NULL}]...  
+ [, *identificador de columna* = {*expresión* &#124; NULL}]...  
   
  [Donde *condición de búsqueda*]  
   

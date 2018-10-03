@@ -1,31 +1,28 @@
 ---
-title: Función SQLSetConnectInfo | Documentos de Microsoft
+title: Función SQLSetConnectInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetConnectInfo function [ODBC]
 ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3418d3993ef59722554956204ff48539d6ee3809
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1014e545e237c80f71660a1e6bd24dce56ca78b1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917750"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650473"
 ---
-# <a name="sqlsetconnectinfo-function"></a>SQLSetConnectInfo (función)
+# <a name="sqlsetconnectinfo-function"></a>Función SQLSetConnectInfo
 **Conformidad**  
- Versión introdujo: ODBC 3,81 normativas: ODBC  
+ Versión introdujo: ODBC 3,81 normativo: ODBC  
   
  **Resumen**  
  **SQLSetConnectInfo** se usa para establecer el origen de datos, el Id. de usuario y la contraseña en el símbolo (token) de información de conexión para una aplicación [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) llamar.  
@@ -48,7 +45,7 @@ SQLRETURN  SQLSetConnectInfo(
  [Entrada] Identificador del token.  
   
  *ServerName*  
- [Entrada] Nombre de origen de datos. Los datos podrían ser ubicados en el mismo equipo que el programa o en otro equipo en algún punto de una red. Para obtener información acerca de cómo una aplicación elige un origen de datos, vea [elegir un origen de datos o el controlador](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md).  
+ [Entrada] Nombre del origen de datos. Los datos es posible que se encuentra en el mismo equipo que el programa, o en otro equipo en alguna parte de una red. Para obtener información acerca de cómo una aplicación elige un origen de datos, vea [elegir un origen de datos o controlador](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md).  
   
  *NameLength1*  
  [Entrada] Longitud de **ServerName* en caracteres.  
@@ -57,10 +54,10 @@ SQLRETURN  SQLSetConnectInfo(
  [Entrada] Identificador de usuario.  
   
  *NameLength2*  
- [Entrada] Longitud de **nombre de usuario* en caracteres.  
+ [Entrada] Longitud de **UserName* en caracteres.  
   
  *Autenticación*  
- [Entrada] Cadena de autenticación (normalmente la contraseña).  
+ [Entrada] Cadena de autenticación (normalmente, la contraseña).  
   
  *NameLength3*  
  [Entrada] Longitud de **autenticación* en caracteres.  
@@ -74,11 +71,11 @@ SQLRETURN  SQLSetConnectInfo(
 ## <a name="remarks"></a>Comentarios  
  Cada vez que un controlador devuelve SQL_ERROR o SQL_INVALID_HANDLE, el Administrador de controladores devuelve el error a la aplicación (en [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) o [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
   
- Cada vez que un controlador devuelve SQL_SUCCESS_WITH_INFO, el Administrador de controladores obtendrá la información de diagnóstico de *hDbcInfoToken*y devuelve SQL_SUCCESS_WITH_INFO para la aplicación en [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)y [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Cada vez que un controlador devuelve SQL_SUCCESS_WITH_INFO, el Administrador de controladores obtendrá la información de diagnóstico de *hDbcInfoToken*y devuelvan SQL_SUCCESS_WITH_INFO a la aplicación en [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)y [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
  Las aplicaciones no deben llamar directamente a esta función. Un controlador ODBC que admite la agrupación de conexiones dependientes del controlador debe implementar esta función.  
   
- Incluir sqlspi.h para el desarrollo del controlador ODBC.  
+ Incluir sqlspi.h para el desarrollo de controladores ODBC.  
   
 ## <a name="see-also"></a>Vea también  
  [Desarrollar un controlador ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   

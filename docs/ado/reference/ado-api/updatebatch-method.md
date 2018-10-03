@@ -1,13 +1,11 @@
 ---
-title: Método UpdateBatch | Documentos de Microsoft
+title: Método UpdateBatch | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - UpdateBatch method [ADO]
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c7b25df0679596485586393993ba718f08542bf
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e39b7094b4b4543b60431f847ed792f18ace31f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282814"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683623"
 ---
 # <a name="updatebatch-method"></a>Método UpdateBatch
 Escribe todas las actualizaciones por lotes pendientes en el disco.  
@@ -42,23 +39,23 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
  Opcional. Un [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valor que indica cuántos registros la **UpdateBatch** afectará a método.  
   
  *PreserveStatus*  
- Opcional. A **booleano** valor que especifica si se permite o no los cambios realizados localmente, tal y como indica la [estado](../../../ado/reference/ado-api/status-property-ado-recordset.md) propiedad, se debería confirmar. Si este valor se establece en **True**, **estado** no cambie la propiedad de cada registro una vez completada la actualización.  
+ Opcional. Un **booleano** valor que especifica si los cambios locales, tal y como indica la [estado](../../../ado/reference/ado-api/status-property-ado-recordset.md) propiedad, se deben confirmar. Si este valor se establece en **True**, **estado** propiedad de cada registro permanece sin cambios una vez completada la actualización.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Use la **UpdateBatch** método cuando se modifica un **Recordset** objeto en modo de actualización por lotes para transmitir todos los cambios realizados en un **Recordset** objeto a la base de datos subyacente.  
   
- Si el **Recordset** objeto admite la actualización por lotes, puede almacenar en caché cualquier cambio múltiple en uno o más registros localmente hasta que llame a la **UpdateBatch** método. Si está modificando el registro actual o agregando un nuevo registro cuando se llama a la **UpdateBatch** método, ADO llamará automáticamente el [actualización](../../../ado/reference/ado-api/update-method.md) método para guardar los cambios pendientes en el registro actual antes de transmitir los cambios por lotes al proveedor. Debe usar la actualización por lotes con un conjunto de claves o un cursor estático solo.  
+ Si el **Recordset** objeto admite la actualización por lotes, puede almacenar en caché los cambios de varios a uno o más registros localmente hasta que llame a la **UpdateBatch** método. Si está modificando el registro actual o agregando un nuevo registro al llamar a la **UpdateBatch** método, ADO llamará automáticamente a la [actualización](../../../ado/reference/ado-api/update-method.md) método para guardar los cambios pendientes en el registro actual antes de transmitir los cambios por lotes al proveedor. Debe usar la actualización por lotes con un conjunto de claves o un cursor estático solo.  
   
 > [!NOTE]
->  Especificar **adAffectGroup** que el valor para este parámetro, se producirá un error cuando no hay ningún registro visible actual **Recordset** (por ejemplo, un filtro para el que no hay registros que coincidan con).  
+>  Especificar **adAffectGroup** como el valor para este parámetro producirá un error cuando no hay ningún registro visible actual **Recordset** (por ejemplo, un filtro que coincide con ningún registro).  
   
- Si falla el intento de transmitir los cambios de algunos o todos los registros debido a un conflicto con los datos subyacentes (por ejemplo, otro usuario ya ha eliminado un registro), el proveedor devuelve advertencias a la [errores](../../../ado/reference/ado-api/errors-collection-ado.md) colección y un se produce el error en tiempo de ejecución. Use la [filtro](../../../ado/reference/ado-api/filter-property.md) propiedad (**adFilterAffectedRecords**) y la [estado](../../../ado/reference/ado-api/status-property-ado-recordset.md) propiedad para localizar los registros con conflictos.  
+ Si falla el intento de transmitir los cambios de algunos o todos los registros debido a un conflicto con los datos subyacentes (por ejemplo, otro usuario ya se ha eliminado un registro), el proveedor devuelve advertencias a la [errores](../../../ado/reference/ado-api/errors-collection-ado.md) colección y una se produce el error de tiempo de ejecución. Use la [filtro](../../../ado/reference/ado-api/filter-property.md) propiedad (**adFilterAffectedRecords**) y el [estado](../../../ado/reference/ado-api/status-property-ado-recordset.md) propiedad para localizar los registros con conflictos.  
   
- Para cancelar todas las pendientes las actualizaciones por lotes, utilice la [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) método.  
+ Para cancelar todas las pendientes las actualizaciones por lotes, utilice el [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) método.  
   
- Si el [tabla única](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) y [Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) se establecen las propiedades dinámicas y el **Recordset** es el resultado de ejecutar una operación JOIN en varias tablas, el ejecución de la **UpdateBatch** método va seguido de forma implícita la [Resync](../../../ado/reference/ado-api/resync-method.md) método, según la configuración de la [Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) propiedad.  
+ Si el [Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) y [Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) se establecen las propiedades dinámicas y el **Recordset** es el resultado de ejecutar una operación JOIN en varias tablas, el ejecución de la **UpdateBatch** método va seguido de forma implícita el [Resync](../../../ado/reference/ado-api/resync-method.md) método, según la configuración de la [Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) propiedad.  
   
- El orden en el que se realizan las actualizaciones individuales de un lote en el origen de datos no es necesariamente el mismo que el orden en el que se realizaron en el equipo local **conjunto de registros**. Orden de actualización depende del proveedor. Tenerlo en cuenta al codificar las actualizaciones que se relacionan entre sí, como las restricciones de clave externa en una inserción o actualización.  
+ El orden en que se realizan las actualizaciones individuales de un lote en el origen de datos no es necesariamente el mismo que el orden en el que se realizaron en el equipo local **Recordset**. Orden de actualización depende del proveedor. Tenga esto en cuenta al programar las actualizaciones que están relacionadas entre sí, como las restricciones de clave externa en una inserción o actualización.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

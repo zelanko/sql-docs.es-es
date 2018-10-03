@@ -1,13 +1,11 @@
 ---
-title: Ejemplo de propiedades de marcador (VC ++), EOF y BOF | Documentos de Microsoft
+title: BOF, EOF y Bookmark ejemplo de propiedades (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,21 +14,20 @@ helpviewer_keywords:
 - EOF property [ADO], VC++ example
 - BOF property [ADO], VC++ example
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a09c56981f6884f03551d10d78a51ad8ea3d140
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2e2b76cc255748f52feb2235296cc57070f8a9a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276084"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659533"
 ---
-# <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF, EOF y ejemplo de propiedades de marcador (VC ++)
-La primera función en este ejemplo se utiliza la [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) y [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propiedades para mostrar un mensaje si un usuario intenta moverse más allá del primer o último registro de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Usa el [marcador](../../../ado/reference/ado-api/bookmark-property-ado.md) propiedad para permitir que el usuario marca un registro en un **Recordset** y volver a él más adelante.  
+# <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF, EOF y Bookmark ejemplo de propiedades (VC ++)
+La primera función en este ejemplo utiliza la [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) y [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propiedades para mostrar un mensaje si un usuario intenta pasar el primer o último registro de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa el [marcador](../../../ado/reference/ado-api/bookmark-property-ado.md) propiedad para permitir que el usuario marca un registro en un **Recordset** y volver a él más adelante.  
   
- La segunda función utiliza la propiedad Bookmark para colocar el **marcador** de cualquier otro registro de un **Recordset** en una matriz y, a continuación, el conjunto de registros utilizando la matriz de filtros.  
+ La segunda función usa la propiedad Bookmark para colocar el **marcador** de todos los registros desde un **Recordset** en una matriz y, a continuación, el conjunto de registros utilizando la matriz de filtros.  
   
 ## <a name="example"></a>Ejemplo  
   

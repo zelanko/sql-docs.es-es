@@ -1,34 +1,31 @@
 ---
-title: Método ConvertToString (RDS) | Documentos de Microsoft
+title: Método ConvertToString (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - ConvertToString method [ADO]
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 495ff412b2865cfbda4576f3b4631b850e2d37e3
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 091ecc7284fb02a8da1bc79e755c6704015736db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287584"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780283"
 ---
 # <a name="converttostring-method-rds"></a>Método ConvertToString (RDS)
 Convierte un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) en una cadena MIME que representa los datos del conjunto de registros.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar a [servicio de datos de WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,21 +35,21 @@ DataFactory.ConvertToString(Recordset)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Factory*  
+ *Data Factory*  
  Una variable de objeto que representa un [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto.  
   
  *Conjunto de registros*  
  Una variable de objeto que representa un **Recordset** objeto.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Con archivos .asp, utilice **ConvertToString** para incrustar el **Recordset** en una página HTML generada en el servidor para su transmisión a un equipo cliente.  
   
  **ConvertToString** carga por primera vez el **Recordset** en el servicio de cursores de las tablas y, a continuación, genera una secuencia en formato MIME.  
   
- En el cliente, servicio de datos remoto puede convertir la cadena MIME en totalmente funcional **conjunto de registros**. Funciona bien cuando se manipulan menos de 400 filas de datos con no más de ancho de 1024 bytes por fila. No debe usar para transmitir datos BLOB y grandes conjuntos de resultados a través de HTTP. No hay compresión de la conexión se realiza en la cadena, muy grandes conjuntos de datos tardará bastante tiempo al transporte a través de HTTP cuando se compara con el formato de tablagrama optimizada definido e implementado por el servicio de datos remotos como su formato de protocolo de transporte nativo.  
+ En el cliente, el servicio de datos remoto puede convertir la cadena MIME en funcione completamente **Recordset**. Funciona bien para administrar menos de 400 filas de datos con no más de ancho de 1024 bytes por fila. No debe usarlo para transmitir datos BLOB y grandes conjuntos de resultados a través de HTTP. Compresión de la conexión no se realiza en la cadena, muy grandes conjuntos de datos tardará bastante tiempo al transporte a través de HTTP en comparación con el formato optimizado para la conexión tablegram definidas e implementadas por el servicio de datos remotos como su formato de protocolo de transporte nativo.  
   
 > [!NOTE]
->  Si está utilizando páginas Active Server para incrustar la cadena MIME resultante en una página HTML de cliente, tenga en cuenta que las versiones anteriores a la versión 2.0 de VBScript limitan el tamaño de la cadena a 32K. Si se supera este límite, se devuelve un error. Mantenga el ámbito de la consulta relativamente pequeño cuando se usa la incrustación MIME a través de los archivos .asp. Para solucionar este problema, descargue la última versión de VBScript desde el sitio Web de Microsoft Windows Script Technologies.  
+>  Si usa páginas Active Server para insertar la cadena MIME resultante en una página HTML del cliente, tenga en cuenta que las versiones anteriores a la versión 2.0 de VBScript limitan el tamaño a 32 KB. Si se supera este límite, se devuelve un error. Mantenga el ámbito de la consulta relativamente pequeña cuando se usa la incrustación MIME a través de los archivos .asp. Para solucionar este problema, descargue la última versión de VBScript desde el sitio Web de Microsoft Windows Script Technologies.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  

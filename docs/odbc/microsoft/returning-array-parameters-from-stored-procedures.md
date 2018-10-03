@@ -1,33 +1,31 @@
 ---
-title: Devolver los parámetros de matriz de los procedimientos almacenados | Documentos de Microsoft
+title: Devolver los parámetros de matriz de los procedimientos almacenados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], stored procedures
 ms.assetid: 2018069b-da5d-4cee-a971-991897d4f7b5
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6f67a9044dcd95b2b652c310e066843b7aa5d1ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a154a8739438b76f12e311d0dec0e9d98d886457
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837033"
 ---
 # <a name="returning-array-parameters-from-stored-procedures"></a>Devolver los parámetros de matriz de los procedimientos almacenados
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, utilice el controlador ODBC proporcionado por Oracle.  
+>  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, use el controlador ODBC proporcionado por Oracle.  
   
- En Oracle 7.3, no hay ninguna manera de tener acceso a un tipo de registro de PL/SQL excepto desde un programa de PL/SQL. Si un procedimiento empaquetada o función tiene un argumento formal definido como un tipo de registro de PL/SQL, no es posible enlazar ese argumento formal como un parámetro. Utilice el tipo de tabla de PL/SQL en el controlador ODBC de Microsoft para Oracle para invocar procedimientos que contiene las secuencias de escape correcta de los parámetros de matriz.  
+ En Oracle 7.3, no hay ninguna manera de obtener acceso a un tipo de registro de PL/SQL, excepto de un programa de PL/SQL. Si un procedimiento empaquetada o una función tiene un argumento formal que se define como un tipo de registro de PL/SQL, no es posible enlazar ese argumento formal como un parámetro. Utilice el tipo de tabla de PL/SQL en el controlador ODBC de Microsoft para Oracle para invocar los parámetros de matriz de los procedimientos que contiene las secuencias de escape correctos.  
   
  Para invocar el procedimiento, use la sintaxis siguiente:  
   
@@ -38,11 +36,11 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 > [!NOTE]  
->  El \<max registros solicitadas > parámetro debe ser mayor o igual que el número de filas existentes en el conjunto de resultados. En caso contrario, Oracle devuelve un error que se pasa al usuario por el controlador.  
+>  El \<solicitadas por los registros max > parámetro debe ser mayor o igual que el número de filas existentes en el conjunto de resultados. En caso contrario, Oracle devuelve un error que se pasa al usuario por el controlador.  
 >   
 >  Registros de PL/SQL no se puede usar como parámetros de matriz. Cada parámetro de matriz puede representar solo una columna de una tabla de base de datos.  
   
- En el ejemplo siguiente se define un paquete que contiene dos procedimientos que devuelven conjuntos de resultados diferente y, a continuación, ofrece dos formas de devolver conjuntos de resultados del paquete.  
+ El ejemplo siguiente define un paquete que contiene dos procedimientos que devuelven distintos conjuntos de resultados y, a continuación, proporciona dos maneras de devolver conjuntos de resultados del paquete.  
   
 ## <a name="package-definition"></a>Definición de paquete:  
   
@@ -122,7 +120,7 @@ END SimplePackage;
     {call SimplePackage.Proc1( {resultset 3, o_id},  {resultset 3, ao_course}, {resultset 3, ao_dept} ) }  
     ```  
   
-     Esto devuelve tres conjuntos de resultados, uno para cada columna.  
+     Esto devuelve tres conjuntos de resultados, una para cada columna.  
   
 #### <a name="to-invoke-procedure-proc2"></a>Para invocar el procedimiento PROC2  
   
@@ -138,7 +136,7 @@ END SimplePackage;
     {call SimplePackage.Proc2( 5 , {resultset 5, ao_Arg2}, {resultset 5, ao_Arg3} ) }  
     ```  
   
- Asegúrese de que las aplicaciones capturar todos los conjuntos de resultados utilizando la [SQLMoreResults](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) API. Para obtener más información, consulte el *referencia del programador de ODBC*.  
+ Asegúrese de que las aplicaciones obtener todos los conjuntos de resultados utilizando la [SQLMoreResults](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) API. Para obtener más información, consulte el *referencia del programador de ODBC*.  
   
 > [!NOTE]  
->  En el controlador ODBC para Oracle versión 2.0, se pueden usar funciones de Oracle que devuelven matrices de PL/SQL para devolver conjuntos de resultados.
+>  En el controlador ODBC para Oracle versión 2.0, las funciones de Oracle que devuelven matrices de PL/SQL no se puede usar para devolver conjuntos de resultados.

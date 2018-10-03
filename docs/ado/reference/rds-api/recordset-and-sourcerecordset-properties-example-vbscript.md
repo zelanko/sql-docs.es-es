@@ -1,13 +1,11 @@
 ---
-title: Ejemplo de propiedades de SourceRecordset (VBScript) y el conjunto de registros | Documentos de Microsoft
+title: Ejemplo de propiedades de SourceRecordset (VBScript) y conjunto de registros | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,24 +13,23 @@ helpviewer_keywords:
 - Source property [ADO], VBScript example
 - Recordset property [ADO], VBScript example
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2cce066348b8bf711993f4296fcc38fec285e91a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 325b6f9a6adb53752b8f0229a0333934f179042a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288504"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737293"
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Ejemplo de propiedades de SourceRecordset (VBScript) y el conjunto de registros
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar a [servicio de datos de WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- En el ejemplo siguiente se muestra cómo establecer los parámetros necesarios de la [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto de negocio predeterminado en tiempo de ejecución.  
+ El ejemplo siguiente muestra cómo establecer los parámetros necesarios de la [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto de negocios de forma predeterminada en tiempo de ejecución.  
   
- Para probar este ejemplo, corte y pegue este código entre las \<cuerpo > y \</cuerpo > etiquetas en una HTML normal de documento y asígnele el nombre **RecordsetVBS.asp**. Secuencia de comandos ASP identificará el servidor.  
+ Para probar este ejemplo, corte y pegue este código entre la \<cuerpo > y \</cuerpo > etiquetas en una HTML normal de documentos y asígnele el nombre **RecordsetVBS.asp**. Secuencia de comandos ASP identificará el servidor.  
   
 ```  
 <!-- BeginRecordSetVBS -->  

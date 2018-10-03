@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - sum function [XQuery]
 - fn:sum function
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 071394e1c2889c94c65a8e42179fd1bdbf5cf383
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 802c870f2ea22d24d8dfa80144a44f8805a14c96
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38022633"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619963"
 ---
 # <a name="aggregate-functions---sum"></a>Funciones de agregado: sum
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +40,7 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  *$arg*  
  Secuencia de valores atómicos cuya suma se va a calcular.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Todos los tipos de valores atomizados que se pasan a **sum()** deben ser subtipos del mismo tipo base. Los tipos base aceptados son los tres tipos numéricos base integrados o xdt:untypedAtomic. Los valores del tipo xdt:untypedAtomic se convierten a xs:double. Si es una combinación de estos tipos, o si se pasan otros valores de otros tipos, se produce un error estático.  
   
  El resultado de **sum()** recibe el tipo base de los tipos pasados, como xs: double en el caso de xdt: untypedAtomic, incluso si la entrada, opcionalmente, es una secuencia vacía. Si se trata de una entrada vacía estática, el resultado es 0 con el tipo estático y dinámico xs:integer.  

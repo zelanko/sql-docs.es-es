@@ -1,33 +1,30 @@
 ---
-title: SQLGetTypeInfo (controlador de Paradox) | Documentos de Microsoft
+title: SQLGetTypeInfo (controlador de Paradox) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetTypeInfo function [ODBC], Paradox Driver
 - Paradox driver [ODBC], SQLGetTypeInfo
 ms.assetid: e65063c7-ba9e-4cf0-ac13-4bb5bd2937db
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 300bc6086246abe0e6faff7801d12b4536520520
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 20b5776b5b0e1490ef31ff07d1876afef326db9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32901410"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711493"
 ---
 # <a name="sqlgettypeinfo-paradox-driver"></a>SQLGetTypeInfo (controlador de Paradox)
 > [!NOTE]  
->  En este tema se proporciona información específica del controlador Paradox. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  En este tema se proporciona información específica del controlador de Paradox. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Devuelve el nombre del tipo (TYPE_NAME) en la tabla generada por **SQLGetTypeInfo** será el nombre más utilizado por el origen de datos.  
   
- SQL_ALL_EXCEPT_LIKE se devolverán en la columna de búsqueda para el Byte, contador, Double, tipos de datos único, larga y corta. (La capacidad LIKE se puede lograr mediante la conversión del valor en un carácter utilizando las funciones de conversión canónica de ODBC y, a continuación, realizar la comparación.)
+ SQL_ALL_EXCEPT_LIKE se devolverá en la columna de búsqueda para el Byte, contador, Double, tipos de datos único, larga y corta. (La capacidad similar puede lograrse mediante la conversión del valor en un carácter mediante las funciones de conversión canónica de ODBC a continuación, realiza la comparación.)

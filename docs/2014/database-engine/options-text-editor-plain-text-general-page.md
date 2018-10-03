@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.General
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
-caps.latest.revision: 22
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b66c8286d3ae062307175e689f222f33ea3be6a0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fa8ab18d7ca4e44d3b30129c7353c24660cd0b3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150996"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090951"
 ---
-# <a name="options-text-editor---plain-text---general-page"></a>Opciones (página General del Editor de texto: texto sin formato:)
+# <a name="options-text-editor---plain-text---general-page"></a>Options (Editor de texto - Texto sin formato - Página General)
   Utilice este cuadro de diálogo para cambiar el comportamiento de edición general del Editor de texto que se usa para editar un documento que no esté asociado a ningún lenguaje de desarrollo específico. Para mostrar estas opciones de configuración, haga clic en **Opciones** en el menú **Herramientas** , expanda el **Editor de texto**, expanda **Texto simple** y, a continuación, haga clic en **General**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Establecer opciones en varias ubicaciones  

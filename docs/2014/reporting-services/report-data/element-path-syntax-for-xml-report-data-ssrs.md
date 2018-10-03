@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ElementPath syntax
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bcb0036fbf6d0c3f5af18d044d389bc8673cd5ce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e43bf28f3908c50bb22fb1d426c84c943321c376
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238509"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058895"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintaxis de ruta de acceso de elemento para datos de informe XML (SSRS)
   En el Diseñador de informes, se define una ruta de acceso de elemento que distingue mayúsculas de minúsculas para especificar los datos que se van a utilizar en un informe desde un origen de datos XML. Una ruta de acceso de elemento indica cómo se deben recorrer los nodos jerárquicos XML y sus atributos en el origen de datos XML. Para utilizar la ruta de acceso de elemento predeterminada, mantenga vacía la consulta del conjunto de datos o el elemento XML `ElementPath` del elemento XML `Query`. Cuando se recuperan datos del origen de datos XML, los nodos de elemento que tienen valores de texto y atributos de nodo de elemento se convierten en columnas en el conjunto de resultados. Los valores de los nodos y atributos pasan a ser datos de fila al ejecutar la consulta. Las columnas aparecen como la colección de campos del conjunto de datos en el panel Datos de informe. En este tema se describe la sintaxis de la ruta de acceso de elemento.  
@@ -70,7 +67,7 @@ XMLLocalName :: =
     Identifier in the XML tag.   
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  En la tabla siguiente se resumen los términos de ruta de acceso de elemento. Los ejemplos de la tabla hacen referencia al documento XML de ejemplo Customers.xml, que se incluye en la sección Ejemplos de este tema.  
   
 > [!NOTE]  
@@ -85,7 +82,7 @@ XMLLocalName :: =
 |`FieldList`|Define el conjunto de elementos y atributos que se van a utilizar para recuperar datos.<br /><br /> Si no se especifica, se usan como campos todos los atributos y subelementos. Si se especifica la lista de campos vacíos (**{}**), no se usará ningún campo de este nodo.<br /><br /> Un `FieldList` no puede contener tanto un `Value` y un `Element` o `ElementNode`.|  
 |`Field`|Especifica los datos que se recuperan como campo de conjunto de datos.|  
 |`Attribute`|Un par de nombre y valor dentro de la `ElementNode`. Por ejemplo, en el nodo de elemento \<Customer ID = "1" >, `ID` es un atributo y `@ID(Integer)` devuelve "1" como un tipo entero en el campo de datos correspondiente `ID`.|  
-|`Value`|El valor del elemento. `Value` solo se puede usar en el último `ElementNode` de la ruta de acceso del elemento. Por ejemplo, porque \<devolver > es un nodo hoja, si se incluye al final de una ruta de acceso de elemento, el valor de `Return {@}` es `Chair`.|  
+|`Value`|Valor del elemento. `Value` solo se puede usar en el último `ElementNode` de la ruta de acceso del elemento. Por ejemplo, porque \<devolver > es un nodo hoja, si se incluye al final de una ruta de acceso de elemento, el valor de `Return {@}` es `Chair`.|  
 |`Element`|Valor del subelemento con nombre. Por ejemplo, Customers {}/Customer {}/LastName recupera valores únicamente para el elemento LastName.|  
 |`Type`|Tipo de datos opcional que se usa para el campo creado a partir de este elemento.|  
 |`NamespacePrefix`|`NamespacePrefix` se define en el elemento XML Query. Si no existe ningún elemento de consulta XML, espacios de nombres en el XML `ElementPath` se omiten. Si hay un elemento XML Query, el elemento XML `ElementPath` tiene un atributo `IgnoreNamespaces` opcional. Si IgnoreNamespaces es `true`, espacios de nombres en el XML `ElementPath` y se pasan por alto el documento XML. Para más información, vea [Sintaxis de consulta XML para los datos de informe XML &#40;SSRS&#41;](report-data-ssrs.md).|  

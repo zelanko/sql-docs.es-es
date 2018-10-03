@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 95a2dfb8ef3ac1420f243355f732daa246d81d0a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a0c4a4a8f66f00e8446c189bddfe31ed626d0170
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198545"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118215"
 ---
 # <a name="previous-function-report-builder-and-ssrs"></a>Función Previous (Generador de informes y SSRS)
   Devuelve el valor o el valor agregado especificado para la instancia anterior de un elemento dentro del ámbito especificado.  
@@ -44,7 +41,7 @@ Previous(expression, scope)
 ## <a name="return-type"></a>Tipo devuelto  
  Devuelve un `Variant` o `Binary`.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  La función `Previous` devuelve el valor anterior para la expresión evaluada en el ámbito especificado después de aplicar todos los filtros y la configuración de ordenación.  
   
  Si *expresión* no contiene un agregado, la `Previous` función valores predeterminados para el ámbito actual del elemento de informe.  

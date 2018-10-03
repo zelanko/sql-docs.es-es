@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.grid.f1
 ms.assetid: 764bf435-3aab-4c62-b4e0-64fe020a5a95
-caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ba8b1d1fb182ca0f16fe157630253b74b9580eb2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a0351173100703b8b78f7b4b019fcd2c63688918
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312295"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088095"
 ---
 # <a name="query-options-results-grid-page"></a>Resultados de Opciones de consulta (página Cuadrícula)
   Utilice esta página para especificar las opciones de visualización de un conjunto de resultados de consulta en formato de cuadrícula.  
   
 ## <a name="options"></a>Opciones  
- **Incluir la consulta del conjunto de resultados**  
+ **Incluir la consulta en el conjunto de resultados**  
  Devuelve el texto de la consulta como parte del conjunto de resultados.  
   
  **Incluir encabezados de columna al copiar o guardar los resultados**  
@@ -36,13 +33,13 @@ ms.locfileid: "37312295"
  **Descartar resultados tras la ejecución**  
  Si descarta los resultados de la consulta después de que la pantalla los reciba, liberará memoria.  
   
- **Mostrar resultados en una pestaña independiente**  
+ **Mostrar resultados en otra pestaña**  
  Muestra el conjunto de resultados en una nueva ventana de documento, en lugar de mostrarlos en la parte inferior de la ventana del documento de consulta.  
   
- **Cambie a la pestaña de resultados tras ejecutar la consulta**  
+ **Cambiar a la pestaña de resultados tras ejecutar la consulta**  
  Establece el foco de la pantalla automáticamente en el conjunto de resultados.  
   
- **Número máximo de caracteres recuperado**  
+ **Número máximo de caracteres recuperados**  
  **Datos no XML**:  
   
  Especifique un número entre 1 y 65535 para definir el número máximo de caracteres que aparecerán en cada celda.  
@@ -54,7 +51,7 @@ ms.locfileid: "37312295"
   
  Seleccione **1 MB**, **2 MB**o **5 MB**. Seleccione **Ilimitados** para recuperar todos los caracteres.  
   
- **Restablecer valores predeterminados**  
+ **Valores predeterminados**  
  Restablece todos los valores de esta página a los valores predeterminados originales.  
   
   

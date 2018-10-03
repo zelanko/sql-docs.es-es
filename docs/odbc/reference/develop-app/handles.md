@@ -1,13 +1,11 @@
 ---
-title: Controla | Documentos de Microsoft
+title: Controla | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - handles [ODBC]
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - driver manager [ODBC], handles
 - handles [ODBC], about handles
 ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 830c4b653af74097c59c9aff9e073267792a84b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a205a23c4c7e7e45269fd00fc0923d4168ec7091
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912900"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47841193"
 ---
 # <a name="handles"></a>Asas
-Los identificadores son valores opacos y de 32 bits que identifican un elemento determinado; en ODBC, este elemento puede ser un entorno, la conexión, la instrucción o el descriptor. Cuando la aplicación llama **SQLAllocHandle**, el Administrador de controladores o controlador crea un nuevo elemento del tipo especificado y devuelve su identificador de la aplicación. La aplicación más tarde, usa el identificador para identificar dicho elemento al llamar a funciones ODBC. El Administrador de controladores y el controlador utilizan el identificador para buscar información sobre el elemento.  
+Los identificadores son opacos, 32 bits de los valores que identifican un elemento determinado; en ODBC, este elemento puede ser un entorno, conexión, instrucción o descriptor. Cuando la aplicación llama **SQLAllocHandle**, el Administrador de controladores o el controlador crea un nuevo elemento del tipo especificado y devuelve su identificador de la aplicación. La aplicación más adelante, usa el identificador para identificar dicho elemento al llamar a funciones ODBC. El Administrador de controladores y el controlador utilizan el identificador para buscar información sobre el elemento.  
   
- Por ejemplo, el código siguiente utiliza dos identificadores de instrucciones (*hstmtOrder* y *hstmtLine*) para identificar las instrucciones en el que se va a crear conjuntos de resultados de ventas pedidos y ventas de pedido de números de línea. Más adelante se utiliza estos identificadores para identificar qué resultado se establece para capturar los datos de.  
+ Por ejemplo, el código siguiente utiliza dos identificadores de instrucciones (*hstmtOrder* y *hstmtLine*) para identificar las instrucciones en el que se va a crear conjuntos de resultados de ventas pedidos y ventas números de línea de pedido. Más adelante se usa estos identificadores para identificar qué conjunto de resultados para obtener los datos.  
   
 ```  
 SQLHSTMT      hstmtOrder, hstmtLine; // Statement handles.  
@@ -75,15 +72,15 @@ while ((rc = SQLFetch(hstmtOrder)) != SQL_NO_DATA) {
 SQLCloseCursor(hstmtOrder);  
 ```  
   
- Los identificadores son significativos únicamente para el componente ODBC que se usaron para crearlas; es decir, solo el Administrador de controladores puede interpretar los identificadores del Administrador de controladores y solo un controlador puede interpretar sus propios identificadores.  
+ Los identificadores son significativos sólo para el componente ODBC que los creó; es decir, solo el Administrador de controladores puede interpretar los identificadores del Administrador de controladores y solo un controlador puede interpretar sus propios controladores.  
   
- Por ejemplo, suponga que el controlador en el ejemplo anterior asigna una estructura para almacenar información sobre una instrucción y devuelve el puntero a esta estructura como el identificador de instrucción. Cuando la aplicación llama **SQLPrepare**, pasa una instrucción SQL y el identificador de la instrucción que se utiliza para números de línea de pedido de ventas. El controlador envía la instrucción SQL al origen de datos, que lo prepara y devuelve un identificador de plan de acceso. El controlador utiliza el identificador para buscar la estructura en la que se va a almacenar este identificador.  
+ Por ejemplo, suponga que el controlador en el ejemplo anterior asigna una estructura para almacenar información sobre una instrucción y devuelve el puntero a esta estructura como el identificador de instrucción. Cuando la aplicación llama **SQLPrepare**, pasa una instrucción SQL y el identificador de la instrucción que usa números de línea de pedido de ventas. El controlador envía la instrucción SQL al origen de datos, que prepara y devuelve un identificador de plan de acceso. El controlador utiliza el identificador para buscar la estructura en el que se almacena este identificador.  
   
- Posteriormente, cuando la aplicación llama a **SQLExecute** para generar el conjunto de resultados de números de línea para un determinado pedido de venta, pasa el mismo identificador. El controlador utiliza el identificador para recuperar el identificador del plan de acceso de la estructura. El identificador envía al origen de datos para indicar el plan que desee ejecutar.  
+ Posteriormente, cuando la aplicación llama a **SQLExecute** para generar el conjunto de resultados de números de línea para un determinado pedido de venta, pasa el mismo identificador. El controlador usa el identificador para recuperar el identificador del plan de acceso de la estructura. Envía el identificador para el origen de datos para indicarle que pretende ejecutar.  
   
- ODBC tiene dos niveles de identificadores: identificadores de administrador de controladores e identificadores de controlador. La aplicación utiliza identificadores de administrador de controladores al llamar a funciones ODBC porque llama a estas funciones en el Administrador de controladores. El Administrador de controladores usa este identificador para buscar el identificador de controlador correspondiente y usa el identificador de controlador cuando se llama a la función en el controlador. Para obtener un ejemplo de cómo se usan los controladores y los identificadores del Administrador de controladores, consulte [rol del Administrador de controladores en el proceso de conexión](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).  
+ ODBC tiene dos niveles de identificadores: los identificadores de administrador de controladores e identificadores de controlador. La aplicación utiliza identificadores de administrador de controladores al llamar a funciones ODBC porque llama a esas funciones en el Administrador de controladores. El Administrador de controladores utiliza este identificador para buscar el identificador de controlador correspondiente y el identificador del controlador al llamar a la función en el controlador. Para obtener un ejemplo de cómo se usan los controladores y los identificadores del Administrador de controladores, consulte [rol del Administrador de controladores en el proceso de conexión](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).  
   
- Que hay dos niveles de identificadores es un artefacto de la arquitectura ODBC; en la mayoría de los casos, no es relevante para la aplicación o el controlador. Aunque por lo general, no hay ninguna razón para hacerlo, es posible que la aplicación para determinar los identificadores de controlador mediante una llamada a **SQLGetInfo**.  
+ Que hay dos niveles de controladores es un artefacto de la arquitectura ODBC; en la mayoría de los casos, no es relevante para la aplicación o el controlador. Aunque normalmente no hay ninguna razón para hacerlo, es posible que la aplicación para determinar los identificadores de controlador mediante una llamada a **SQLGetInfo**.  
   
  Esta sección contiene los temas siguientes.  
   

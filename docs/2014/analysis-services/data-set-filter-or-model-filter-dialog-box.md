@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 34cb8f45c8380cffdfd58c99078f05fd5c8bd2e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f88a82a1d59e9d41f9816b8fbc4e335ab2ad8c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187322"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119305"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>Cuadro de diálogo Filtro de conjunto de datos o Filtro de modelo
   Este cuadro de diálogo le ayuda a generar los filtros que puede aplicar a un conjunto de datos.  El conjunto de datos puede ser un conjunto de datos externo que se use para las pruebas, o los datos del caso para un modelo de minería. El nombre del cuadro de diálogo cambia en función de si el filtro está destinado a un conjunto de datos externo o a un modelo de minería.  
@@ -46,7 +43,7 @@ ms.locfileid: "37187322"
 |**Y/O**|Elija un operador para unir varias condiciones.|  
 |**Columna de estructura de minería de datos**|Haga clic para seleccionar un origen de datos y, a continuación, haga clic en las líneas sucesivas en la cuadrícula para agregar las columnas del origen de datos.<br /><br /> La primera línea de la cuadrícula especifica la vista del origen de datos. Después de seleccionar una vista del origen de datos, **Columna de la estructura de minería de datos** muestra un icono de tabla y el campo **Valor** muestra la combinación de todos los criterios que ha definido para este origen de datos.<br /><br /> Después de haber seleccionado un origen de datos, el cuadro **Columna de la estructura de minería de datos** proporciona una lista desplegable de columnas individuales del origen de datos.|  
 |**Operador**|Seleccione un operador de la lista.|  
-|**Value**|Para las tablas, el campo **Valor** muestra la combinación de todos los filtros que se aplican al origen de datos. También puede hacer clic en el botón de generación **(…)** a la derecha del cuadro de texto para abrir el cuadro de diálogo **Filtro** y generar una condición.|  
+|**Valor**|Para las tablas, el campo **Valor** muestra la combinación de todos los filtros que se aplican al origen de datos. También puede hacer clic en el botón de generación **(…)** a la derecha del cuadro de texto para abrir el cuadro de diálogo **Filtro** y generar una condición.|  
   
  **Expresión**  
  Muestra el conjunto de criterios que generó con la cuadrícula.  

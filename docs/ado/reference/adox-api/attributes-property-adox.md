@@ -1,13 +1,11 @@
 ---
-title: Attributes (propiedad) (ADOX) | Documentos de Microsoft
+title: Atributos (propiedad, ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,22 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - Attributes property [ADOX]
 ms.assetid: e3abb359-79a3-4c22-b3a8-2900817e0d23
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cff8bb0f88581fae43ceb3d8af9ef57eb3a1e479
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ecced3970d5f0bebff4ad0b7a6ae6f7798cdc3e8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285184"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759273"
 ---
-# <a name="attributes-property-adox"></a>Atributos (propiedad, ADOX)
+# <a name="attributes-property-adox"></a>Attributes (propiedad, ADOX)
 Describe las características de la columna.  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- Establece o devuelve un **largo** valor. El valor especifica las características de la tabla representada por la [columna](../../../ado/reference/adox-api/column-object-adox.md) objeto. El valor puede ser una combinación de [ColumnAttributesEnum](../../../ado/reference/adox-api/columnattributesenum.md) constantes. El valor predeterminado es cero (**0**), que no es ni **adColFixed** ni **adColNullable**.  
+ Establece o devuelve un **largo** valor. El valor especifica las características de la tabla que está representado por la [columna](../../../ado/reference/adox-api/column-object-adox.md) objeto. El valor puede ser una combinación de [ColumnAttributesEnum](../../../ado/reference/adox-api/columnattributesenum.md) constantes. El valor predeterminado es cero (**0**), que no es ni **adColFixed** ni **adColNullable**.  
   
 ## <a name="applies-to"></a>Se aplica a  
   

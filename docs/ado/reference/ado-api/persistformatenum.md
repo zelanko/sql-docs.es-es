@@ -1,13 +1,11 @@
 ---
-title: Más | Documentos de Microsoft
+title: Más | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,28 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - PersistFormatEnum enumeration [ADO]
 ms.assetid: ebe1a2ab-e9f1-43a2-8f94-b190c9613d70
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9aa6ce5a4341c85f7763d407b0d39599b24d9441
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 851106109d195ae6f5d6f66d3944e486d58504c1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280614"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753643"
 ---
-# <a name="persistformatenum"></a>Más
-Especifica el formato en el que se va a guardar una [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
+# <a name="persistformatenum"></a>PersistFormatEnum
+Especifica el formato en el que se va a guardar un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 |Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
-|**adPersistADTG**|0|Indica el formato de Microsoft Advanced Data TableGram (ADTG).|  
-|**adPersistADO**|1|Indica que se utilizará el formato de lenguaje de marcado Extensible (XML) de ADO. Este valor es el mismo que adPersistXML y es incluye por compatibilidad con versiones anteriores.|  
+|**adPersistADTG**|0|Indica el formato Advanced Data TableGram (ADTG) de Microsoft.|  
+|**adPersistADO**|1|Indica que se usará el formato de lenguaje de marcado Extensible (XML) de ADO. Este valor es el mismo que adPersistXML y es incluye por compatibilidad con versiones anteriores.|  
 |**adPersistXML**|1|Indica el formato de lenguaje de marcado Extensible (XML).|  
-|**adPersistProviderSpecific**|2|Indica que el proveedor guardará el **Recordset** mediante su propio formato.|  
+|**adPersistProviderSpecific**|2|Indica que el proveedor se conservará el **Recordset** mediante su propio formato.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
+## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
  Paquete: **com.ms.wfc.data**  
   
 |Constante|  

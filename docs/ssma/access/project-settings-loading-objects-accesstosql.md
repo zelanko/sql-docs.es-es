@@ -1,83 +1,77 @@
 ---
-title: Configuración (cargar objetos) del proyecto (AccessToSQL) | Documentos de Microsoft
+title: (Carga de objetos) de configuración del proyecto (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: dc0517af077d0dcb6d7914eb7decffdc0ee7a198
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 90a47a7586d0f3c6b5bd0fee28ed01f3b292a92e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774131"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803633"
 ---
-# <a name="project-settings-loading-objects-accesstosql"></a>Configuración (cargar objetos) del proyecto (AccessToSQL)
-La configuración del proyecto cargar objetos permite configurar cómo se sincronizan los objetos de base de datos de Access con objetos de base de datos de SQL Server.  
+# <a name="project-settings-loading-objects-accesstosql"></a>(Carga de objetos) de configuración del proyecto (AccessToSQL)
+La configuración del proyecto al cargar objetos permite configurar cómo obtener acceso a objetos de base de datos se sincronizan con objetos de base de datos de SQL Server.  
   
-Las acciones predeterminadas de especifican la configuración predeterminada para actualizar los objetos de la base de datos de Access y para sincronizar objetos con la base de datos de SQL Server. Para obtener más información, consulte [actualizar desde la base de datos &#40;AccessToSQL&#41;](../../ssma/access/refresh-from-database-accesstosql.md)  
+Las acciones predeterminadas de especifican la configuración predeterminada para actualizar objetos de la base de datos de Access y sincronización de objetos con la base de datos de SQL Server. Para obtener más información, consulte [actualizar desde la base de datos &#40;AccessToSQL&#41;](../../ssma/access/refresh-from-database-accesstosql.md)  
   
-Puede tener acceso a dos páginas diferentes de sincronización que contengan los mismos valores:  
+Puede tener acceso a dos páginas diferentes de sincronización que contienen los mismos valores:  
   
--   Para especificar la configuración para todos los proyectos futuros de SSMA, en la **herramientas** menú, haga clic en **DefaultProject configuración**y, a continuación, haga clic en **cargar objetos** en la parte inferior del panel izquierdo.  
+-   Para especificar la configuración para todos los proyectos SSMA futuros, en el **herramientas** menú, haga clic en **DefaultProject configuración**y, a continuación, haga clic en **cargar objetos** en la parte inferior del panel izquierdo.  
   
--   Para especificar la configuración para el proyecto actual, en la **herramientas** menú, haga clic en **configuración del proyecto**y, a continuación, haga clic en **cargar objetos** en la parte inferior del panel izquierdo.  
+-   Para especificar la configuración para el proyecto actual, en el **herramientas** menú, haga clic en **configuración del proyecto**y, a continuación, haga clic en **cargar objetos** en la parte inferior del panel izquierdo.  
   
 ## <a name="options"></a>Opciones  
   
 ##### <a name="misc"></a>Varios  
   
 ##### <a name="attempts"></a>Intentos  
-Proporciona la información sobre el número de pases objetos llevar a cabo para cargar en SQL Server. Cargar objetos en SQL Server se suele realizar en varias fases. Objetos que no se pudo cargar en el primer paso, como las claves externas, pueden cargar correctamente en el siguiente paso.  
+Proporciona la información sobre el número de pasadas de objetos seguir para cargar en SQL Server. Cargando objetos en SQL Server se suele realizar en varias fases. Objetos que no se pueden cargar en la primera pasada, como las claves externas, es posible que cargarán correctamente en el siguiente paso.  
   
 De forma predeterminada el valor es 2.  
   
-## <a name="synchronization-for-sql-server"></a>Sincronización para SQL Server  
+## <a name="synchronization-for-sql-server"></a>Sincronización de SQL Server  
   
-##### <a name="default-action-on-local-and-remote-object-change"></a>Acción predeterminada de cambio de objeto Local y remota  
+##### <a name="default-action-on-local-and-remote-object-change"></a>Acción predeterminada en el cambio de objeto Local y remota  
 Especifica la configuración predeterminada en el cuadro de diálogo de sincronización cuando la definición del objeto cambia de SSMA y en el servidor de base de datos.  
   
 -   Si selecciona **actualizar desde la base de datos**, SSMA cargará las definiciones de base de datos en los metadatos cuando se cumple la condición.  
   
--   Si selecciona **escribir en la base de datos**, SSMA actualizará los objetos de la base de datos según el contenido de los metadatos SSMA cuando se cumpla la condición.  
+-   Si selecciona **escribir en la base de datos**, SSMA actualizará los objetos de la base de datos según el contenido de los metadatos SSMA cuando se cumple la condición.  
   
--   Si selecciona **omitir**, SSMA no llevará a cabo las acciones de actualización.  
+-   Si selecciona **Skip**, SSMA no realizará ninguna acción de actualización.  
   
-##### <a name="default-action-on-local-object-change"></a>Acción predeterminada de cambio de objeto local  
-Especifica la configuración predeterminada en el cuadro de diálogo de sincronización cuando el objeto cambia de SSMA.  
+##### <a name="default-action-on-local-object-change"></a>Acción predeterminada en el cambio de objeto local  
+Especifica la configuración predeterminada en el cuadro de diálogo de sincronización cuando cambia el objeto en SSMA.  
   
 -   Si selecciona **actualizar desde la base de datos**, SSMA cargará las definiciones de base de datos en los metadatos cuando se cumple la condición.  
   
 -   Si selecciona **escribir en la base de datos**, SSMA actualizará el objeto en la base de datos según el contenido de los metadatos SSMA cuando se cumple la condición.  
   
--   Si selecciona **omitir**, SSMA no llevará a cabo las acciones de actualización.  
+-   Si selecciona **Skip**, SSMA no realizará ninguna acción de actualización.  
   
-##### <a name="default-action-on-remote-object-change"></a>Acción predeterminada de cambio de objeto remoto  
+##### <a name="default-action-on-remote-object-change"></a>Acción predeterminada en el cambio de objeto remoto  
 Especifica la configuración predeterminada en el cuadro de diálogo de sincronización cuando cambian los objetos en el servidor de base de datos.  
   
 -   Si selecciona **actualizar desde la base de datos**, SSMA cargará las definiciones de base de datos en los metadatos cuando se cumple la condición.  
   
 -   Si selecciona **escribir en la base de datos**, SSMA actualizará el objeto en la base de datos según el contenido de los metadatos SSMA cuando se cumple la condición.  
   
--   Si selecciona **omitir**, SSMA no llevará a cabo las acciones de actualización.  
+-   Si selecciona **Skip**, SSMA no realizará ninguna acción de actualización.  
   
-##### <a name="default-action-when-local-object-metadata-is-missing"></a>Acción de predeterminada una vez que faltan metadatos del objeto local  
-Especifica la configuración predeterminada en el cuadro de diálogo sincronización una vez que faltan los metadatos locales.  
+##### <a name="default-action-when-local-object-metadata-is-missing"></a>Acción predeterminada cuando los metadatos del objeto local están que faltan  
+Especifica la configuración predeterminada en el cuadro de diálogo de sincronización cuando faltan los metadatos locales.  
   
 -   Si selecciona **actualizar desde la base de datos**, SSMA selecciona la actualización de la opción de base de datos cuando se cumple la condición.  
   
--   Si selecciona **escribir en la base de datos**, SSMA eliminará el objeto de la base de datos cuando se cumpla la condición.  
+-   Si selecciona **escribir en la base de datos**, SSMA eliminará el objeto de la base de datos cuando se cumple la condición.  
   
--   Si selecciona **omitir**, SSMA no llevará a cabo las acciones de actualización.  
+-   Si selecciona **Skip**, SSMA no realizará ninguna acción de actualización.  
   

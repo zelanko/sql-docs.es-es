@@ -1,13 +1,11 @@
 ---
-title: Admite comandos SET (controlador ODBC de Visual FoxPro) | Documentos de Microsoft
+title: Admite el conjunto de comandos (controlador ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - set commands [ODBC]
@@ -18,33 +16,32 @@ helpviewer_keywords:
 - Visual FoxPro commands and functions
 - FoxPro ODBC driver [ODBC], SET commands
 ms.assetid: 43a821fb-97fd-4316-aafe-4ef2de783188
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7f8f52a579d0dacf6a7a9727e821dedb6567103
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9832d2a3772d63c1b0641f6ca08205e25a9867c3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907130"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798003"
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>CONJUNTO admitido de comandos (controlador ODBC de Visual FoxPro)
-La aplicación puede enviar el siguiente Visual FoxPro **establecer** comandos a un origen de datos:  
+La aplicación puede enviar el siguiente de Visual FoxPro **establecer** comandos a un origen de datos:  
   
  [CONJUNTO ANSI](../../odbc/microsoft/set-ansi-command.md)  
   
- [BLOCKSIZE DE CONJUNTO](../../odbc/microsoft/set-blocksize-command.md)  
+ [BLOCKSIZE SET](../../odbc/microsoft/set-blocksize-command.md)  
   
- [CONJUNTO COLLATE](../../odbc/microsoft/set-collate-command.md)  
+ [CONJUNTO DE INTERCALACIONES](../../odbc/microsoft/set-collate-command.md)  
   
- [CONJUNTO ELIMINADO](../../odbc/microsoft/set-deleted-command.md)  
+ [ELIMINA EL CONJUNTO](../../odbc/microsoft/set-deleted-command.md)  
   
- [CONJUNTO EXACTO](../../odbc/microsoft/set-exact-command.md)  
+ [ESTABLECER EXACTA](../../odbc/microsoft/set-exact-command.md)  
   
  [CONJUNTO EXCLUSIVO](../../odbc/microsoft/set-exclusive-command.md)  
   
- [ESTABLECER COMO NULL](../../odbc/microsoft/set-null-command.md)  
+ [ESTABLECER EN NULL](../../odbc/microsoft/set-null-command.md)  
   
  [RUTA DE ACCESO DEL CONJUNTO](../../odbc/microsoft/set-path-command.md)  
   

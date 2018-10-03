@@ -1,14 +1,11 @@
 ---
-title: Sys.sysservers (Transact-SQL) | Documentos de Microsoft
+title: Sys.sysservers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sysservers
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sysservers system table
 - sys.sysservers compatibility view
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
-caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a052eecd27de7767f721bc71a070eb00dad99220
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ede7e1a97ca121073760eaa0c5dcd309b5e3e412
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232833"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608081"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +36,7 @@ ms.locfileid: "33232833"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**srvid**|**smallint**|Id. (solo para uso local) del servidor remoto.|  
 |**srvstatus**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -69,8 +65,8 @@ ms.locfileid: "33232833"
 |**collationcompatible**|**bit**|1 =  **sp_serveroption@collation compatible** establecido en **true** o **en**.<br /><br /> 0 =  **sp_serveroption@collation compatible** establecido en **false** o **desactivar**.|  
 |**Sistema**|**bit**|1 = **sp_serveroption@system** establecido en **true** o **en**.<br /><br /> 0 = **sp_serveroption@system** establecido en **false** o **desactivar**.|  
 |**UseRemoteCollation**|**bit**|1 =  **sp_serveroption@remote intercalación** establecido en **true** o **en**.<br /><br /> 0 =  **sp_serveroption@remote intercalación** establecido en **false** o **desactivar**.|  
-|**lazyschemavalidation**|**bit**|1 =  **sp_serveroption@lazy la validación del esquema** establecido en **true** o **en**.<br /><br /> 0 =  **sp_serveroption@lazy la validación del esquema** establecido en **false** o **desactivar**.|  
-|**Intercalación**|**sysname**|Intercalación del servidor según lo establecido por  **sp_serveroption@collation nombre**.|  
+|**lazyschemavalidation**|**bit**|1 =  **sp_serveroption@lazy validación del esquema** establecido en **true** o **en**.<br /><br /> 0 =  **sp_serveroption@lazy validación del esquema** establecido en **false** o **desactivar**.|  
+|**intercalación**|**sysname**|Intercalación del servidor según lo establecido por  **sp_serveroption@collation nombre**.|  
 |**nonsqlsub**|bit|0 = el servidor es una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 1 = el servidor no es una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
 ## <a name="see-also"></a>Vea también  

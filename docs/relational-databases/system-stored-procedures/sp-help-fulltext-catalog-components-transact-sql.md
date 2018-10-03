@@ -1,14 +1,11 @@
 ---
-title: sp_help_fulltext_catalog_components (Transact-SQL) | Documentos de Microsoft
+title: sp_help_fulltext_catalog_components (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_catalog_components_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalog_components
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b0fcb1d151d9e201998eb4ee2725239fc239e33
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 54c22d025ae809d035fe75a0b8fe89160bdfb84f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242111"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720373"
 ---
 # <a name="sphelpfulltextcatalogcomponents-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,18 +44,18 @@ sp_help_fulltext_catalog_components
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**nombre del catálogo de texto completo**|**int**|Nombre del catálogo de texto completo.|  
 |**Id. de catálogo de texto completo**|**sysname**|Id. del catálogo de texto completo.|  
-|**componentType**|**sysname**|Tipo de componente. Uno de los siguientes:<br /><br /> Filtro<br /><br /> Controlador de protocolo<br /><br /> Separador de palabras|  
-|**componentname**|**sysname**|Nombre del componente.|  
+|**componentType**|**sysname**|Tipo de componente. Uno de los siguientes:<br /><br /> Filter<br /><br /> Controlador de protocolo<br /><br /> Separador de palabras|  
+|**nombre de componente**|**sysname**|Nombre del componente.|  
 |**CLSID**|**uniqueidentifier**|Identificador de clase del componente.|  
-|**FullPath**|**nvarchar(256)**|Ruta de acceso a la ubicación del componente.<br /><br /> NULL = el llamador no es miembro del **serveradmin** rol fijo de servidor.|  
+|**FullPath**|**nvarchar(256)**|Ruta de acceso a la ubicación del componente.<br /><br /> NULL = el llamador no es un miembro de **serveradmin** rol fijo de servidor.|  
 |**version**|**nvarchar(30)**|Versión del componente.|  
-|**fabricante**|**sysname**|Nombre del fabricante del componente.|  
+|**Fabricante**|**sysname**|Nombre del fabricante del componente.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="see-also"></a>Vea también  

@@ -4,10 +4,7 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - SOAP [Reporting Services], secure connections
 - Web service [Reporting Services], SOAP
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 87329299-c2ea-4517-9148-d855726768a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 229e7f83c028631d15ab98d7e6b8753f57dd3ca8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 4f5b9e7f53b13c32557aec92907767600707141c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264727"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734113"
 ---
 # <a name="using-secure-web-service-methods"></a>Usar métodos de servicio web seguros
   Ciertos métodos de servicio web del servidor de informes pueden requerir una conexión segura al invocarlos. La opción **SecureConnectionLevel** determina los métodos que requieren una conexión segura en el archivo RSReportServer.config. El valor de esta opción es un número entero comprendido entre 0 y superior. Estos valores se describen en la siguiente tabla.  

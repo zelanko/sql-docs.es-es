@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 08/09/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6d21866f3f7004dff1ea86ca4f608580a79ab754
-ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
+ms.openlocfilehash: 119574498dec87bc38ab1b0904c53b7f62716427
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47049365"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47665576"
 ---
 # <a name="configure-a-sql-server-always-on-availability-group-on-docker-containers-in-kubernetes-with-azure-kubernetes-service-aks"></a>Configurar un grupo de disponibilidad SQL Server Always On en contenedores de Docker en Kubernetes con Azure Kubernetes Service (AKS)
 

@@ -1,13 +1,11 @@
 ---
-title: 'Apéndice A: proveedores | Documentos de Microsoft'
+title: 'Apéndice A: proveedores | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data providers [ADO]
@@ -16,65 +14,64 @@ helpviewer_keywords:
 - service providers [ADO]
 - service components [ADO]
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7cd4f36537158452eee32a92bd5544acc0956a91
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5110c06913325421aeeaa2d31295d7e2bc6bf59c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271284"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645603"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Apéndice A: datos y proveedores de servicios
-En esta sección habla sobre tres tipos de proveedores: proveedores de datos, los proveedores de servicios y componentes de servicio. Los proveedores se dividen en dos categorías: aquellos que proporcionan datos y aquellos que proporcionan servicios. A *proveedor de datos* tiene sus propios datos y expone en formato tabular en su aplicación. A *proveedor de servicios* encapsula un servicio al producir y consumir datos, aumentan las características de las aplicaciones ADO. Un proveedor de servicios también se puede definir más como una *componente del servicio*, que debe funcionar conjuntamente con otros componentes o proveedores de servicios.
+Esta sección tratan tres tipos de proveedores: proveedores de datos, los proveedores de servicios y componentes del servicio. Los proveedores se dividen en dos categorías: aquellos que proporcionan datos y aquellos que proporcionan servicios. Un *proveedor de datos* posee sus propios datos y los expone en formato tabular en la aplicación. Un *proveedor de servicios* encapsula un servicio al producir y consumir datos, aumentan las características de las aplicaciones ADO. Un proveedor de servicios también se puede definir aún más como un *componente del servicio*, que debe trabajar junto con otros proveedores de servicios o componentes.
 
 ## <a name="data-providers"></a>Proveedores de datos
- ADO es eficaz y flexible porque puede conectarse a cualquiera de varios proveedores de datos y seguir exponiendo el mismo modelo de programación, sin tener en cuenta las características específicas de un proveedor determinado.
+ ADO es eficaz y flexible ya que puede conectarse a cualquiera de varios proveedores de datos y exponer sigue el modelo de programación mismo, independientemente de las características específicas de un proveedor determinado.
 
- Sin embargo, dado que cada proveedor de datos es único, cómo interactúa la aplicación con ADO variará ligeramente por el proveedor de datos. Las diferencias suelen clasificarse en tres categorías:
+ Sin embargo, dado que cada proveedor de datos es único, cómo interactúa la aplicación con ADO variará ligeramente por el proveedor de datos. Normalmente, las diferencias se dividen en tres categorías:
 
 -   Parámetros de conexión en el [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propiedad.
 
--   [Comando](../../../ado/reference/ado-api/command-object-ado.md) uso del objeto.
+-   [Comando](../../../ado/reference/ado-api/command-object-ado.md) uso de objetos.
 
 -   Específico del proveedor [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) comportamiento.
 
- Como se indica a continuación se muestran los detalles de cada uno de los proveedores de datos disponibles actualmente en Microsoft.
+ Como se indica a continuación se muestran los detalles de cada uno de los proveedores de datos están disponibles en Microsoft.
 
 |Área|Tema|
 |----------|-----------|
 |Bases de datos ODBC|[Proveedor Microsoft OLE DB para ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)|
 |Servicios de Index Server de Microsoft|[Proveedor Microsoft OLE DB para servicios de Index Server de Microsoft](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)|
 |Servicio de Active Directory|[Proveedor Microsoft OLE DB para el servicio de Microsoft Active Directory](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
-|Bases de datos de Microsoft Jet|[Proveedor OLE DB para Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
+|Bases de datos Microsoft Jet|[Proveedor OLE DB para Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
 |Microsoft SQL Server|[Proveedor Microsoft OLE DB para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
 |bases de datos Oracle|[Proveedor Microsoft OLE DB para Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
 |Publicación en Internet|[Proveedor Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|
 |Orígenes de datos simples|[Proveedor sencillo de OLE DB de Microsoft](../../../ado/guide/appendixes/microsoft-ole-db-simple-provider.md)|
 
 ## <a name="provider-specific-dynamic-properties"></a>Propiedades dinámicas específicas del proveedor
- El [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colecciones de la [conexión](../../../ado/reference/ado-api/connection-object-ado.md), [comando](../../../ado/reference/ado-api/command-object-ado.md), y [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objetos incluyen propiedades dinámicas específicas para el proveedor. Estas propiedades proporcionan información sobre la funcionalidad específica para el proveedor más allá de las propiedades integradas que ADO admite.
+ El [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colecciones de la [conexión](../../../ado/reference/ado-api/connection-object-ado.md), [comando](../../../ado/reference/ado-api/command-object-ado.md), y [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objetos incluyen propiedades dinámicas específicas de la proveedor. Estas propiedades proporcionan información sobre la funcionalidad específica para el proveedor más allá de las propiedades integradas que es compatible con ADO.
 
- Después de establecer la conexión y crear estos objetos, use la [actualizar](../../../ado/reference/ado-api/refresh-method-ado.md) método en el **propiedades** colección del objeto para obtener las propiedades específicas del proveedor. Consulte la documentación del proveedor y el [Guía del programador de OLE DB](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) para obtener información detallada acerca de estas propiedades dinámicas.
+ Después de establecer la conexión y crear estos objetos, utilice el [actualizar](../../../ado/reference/ado-api/refresh-method-ado.md) método en el **propiedades** colección del objeto para obtener las propiedades específicas del proveedor. Consulte la documentación del proveedor y el [Guía del programador de OLE DB](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) para obtener información detallada acerca de estas propiedades dinámicas.
 
 ## <a name="service-providers"></a>Proveedores de servicios
- Para usar un proveedor de servicios, debe proporcionar una palabra clave. También debe ser consciente de las propiedades dinámicas específicas del proveedor asociadas con cada proveedor de servicios. Se muestran detalles específicos del proveedor para cada proveedor de servicio que está actualmente disponible de Microsoft:
+ Para usar un proveedor de servicios, debe proporcionar una palabra clave. También debe tener en cuenta las propiedades dinámicas específicas del proveedor asociadas con cada proveedor de servicios. Se muestran detalles específicos del proveedor para cada proveedor de servicios que esté disponible de Microsoft:
 
 -   [Datos de Microsoft para dar forma al servicio para información general acerca OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)
 
--   [Proveedor de persistencia de Microsoft OLE DB](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
+-   [Proveedor de persistencia OLE DB de Microsoft](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
 
 -   [Proveedor de servicios remotos de OLE DB de Microsoft](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)
 
 ## <a name="service-components"></a>Componentes del servicio
- El [servicio de cursores para OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) componente del servicio complementa las funciones de compatibilidad de cursor de proveedores de datos. También requiere una palabra clave y tiene propiedades dinámicas.
+ El [servicio de cursores para OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) componente del servicio complementa las funciones de compatibilidad de cursor de proveedores de datos. También requiere una palabra clave y tiene las propiedades dinámicas.
 
- Para obtener más información acerca de los proveedores OLE DB, vea [Microsoft OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx).
+ Para obtener más información acerca de los proveedores OLE DB, consulte [Microsoft OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx).
 
 ## <a name="provider-commands"></a>Comandos de proveedor
- Para cada proveedor enumerado aquí, si las aplicaciones permiten a los usuarios especificar instrucciones SQL como comandos de proveedor, siempre debe validar la entrada del usuario y estar alerta ante ataques de piratas informáticos posibles mediante instrucciones SQL potencialmente peligrosas, como `DROP TABLE t1`, como parte de la entrada del usuario.
+ Para cada proveedor enumerado aquí, si las aplicaciones permiten a los usuarios escribir instrucciones SQL como comandos de proveedor, siempre debe validar la entrada del usuario y estar alerta ante los ataques de piratas informáticos posible mediante instrucciones SQL potencialmente peligrosas, como `DROP TABLE t1`, como parte de la entrada del usuario.
 
 ## <a name="see-also"></a>Vea también
- [Comando (objeto) (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [proveedor Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) [proveedor Microsoft OLE DB para el servicio de Microsoft Active Directory ](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) [Proveedor Microsoft OLE DB para servicios de Index Server de Microsoft](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) [proveedor Microsoft OLE DB para ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [proveedor Microsoft OLE DB para Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) [Proveedor Microsoft OLE DB para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) [proveedor Microsoft OLE DB para Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [colección Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [ Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [método Refresh (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)
+ [Comando (ADO) del objeto](../../../ado/reference/ado-api/command-object-ado.md) [el objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [proveedor Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) [proveedor Microsoft OLE DB para el servicio de Microsoft Active Directory ](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) [Proveedor Microsoft OLE DB para servicios de Index Server de Microsoft](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) [proveedor Microsoft OLE DB para ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [proveedor Microsoft OLE DB para Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) [Proveedor Microsoft OLE DB para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) [proveedor Microsoft OLE DB para Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [ Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [método Refresh (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)

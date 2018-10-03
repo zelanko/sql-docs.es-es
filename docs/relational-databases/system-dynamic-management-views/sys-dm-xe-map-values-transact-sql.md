@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_xe_map_values (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_xe_map_values (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_xe_map_values
@@ -19,30 +17,29 @@ helpviewer_keywords:
 - sys.dm_xe_map_values dynamic management view
 - xe
 ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8c76c06d3ce9afba4560f2948c1776c801e00c73
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: e0adf93355baebd7be881d46c62f649c61245af4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466091"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680343"
 ---
 # <a name="sysdmxemapvalues-transact-sql"></a>sys.dm_xe_map_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una asignación de claves numéricas internas en texto legible.  
  
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(60)**|El nombre de la asignación. nombre es único en el sistema local. No admite valores NULL.|  
+|NAME|**nvarchar(60)**|El nombre de la asignación. nombre es único en el sistema local. No admite valores NULL.|  
 |object_package_guid|**uniqueidentifier**|GUID del paquete que contiene la asignación. No admite valores NULL.|  
 |map_key|**int**|El valor de clave interno. No admite valores NULL.|  
 |map_value|**nvarchar(2048)**|Descripción del valor de clave. No admite valores NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
 ### <a name="relationship-cardinalities"></a>Cardinalidades de relación  

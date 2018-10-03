@@ -3,19 +3,18 @@ title: Sintaxis de reserva de direcciones URL (Administrador de configuración d
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2aba888fd9dee3c96cf87310e1987edd851884c5
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 585a2a14d94382a6b4f7923e8563ddd4d8cae570
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270447"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724703"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Sintaxis de reserva de direcciones URL (Administrador de configuración de SSRS)
   En este tema se describen los componentes de las cadenas de direcciones URL para el servicio web del servidor de informes y el Administrador de informes. La cadena de las direcciones URL que se almacena internamente tiene una estructura diferente de una dirección URL que se escribe en la barra de direcciones de una ventana del explorador. La cadena de reserva de direcciones URL aparece en la ventana Resultados de la herramienta Configuración de Reporting Services al configurar una dirección URL y en el archivo RSReportServer.config. Saber cómo se define la cadena de dirección URL puede ser útil al solucionar problemas de la reserva de direcciones URL o al consultar HTTP.SYS para ver las reservas de direcciones URL internas que se definen en el servidor.  

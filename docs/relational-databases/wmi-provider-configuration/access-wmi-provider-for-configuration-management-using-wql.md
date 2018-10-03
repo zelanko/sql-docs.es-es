@@ -1,14 +1,11 @@
 ---
-title: Obtener acceso a proveedor WMI de administración de configuración mediante WQL | Documentos de Microsoft
+title: Obtener acceso el proveedor WMI para la administración de configuración mediante WQL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - query language [WMI]
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - WQL [WMI]
 - WMI Provider for Configuration Management, WQL
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
-caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cece73ebb5402fe2f725fedbcdf7cdc833d08265
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e05bbb4a9d41f88c4c2981aff9a3565bbc14bb92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33013182"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692833"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>Obtener acceso al proveedor WMI para la administración de configuración mediante WQL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +37,7 @@ ms.locfileid: "33013182"
   
 3.  En el primer campo de texto, escriba el espacio de nombres del proveedor WMI de Administración de equipos: raíz\Microsoft\SqlServer\ComputerManagement11. Haga clic en **Conectar**.  
   
-4.  Haga clic en **consulta**. Escriba una consulta que devuelva los servicios actuales que se ejecutan en el equipo local: **seleccione \* de SqlService.** Haga clic en **Aplicar**.  
+4.  Haga clic en **consulta**. Escriba una consulta que devuelve los servicios actuales que se ejecutan en el equipo local: **seleccione \* de SqlService.** Haga clic en **Aplicar**.  
   
 5.  Refinar la consulta agregando **donde ServiceName = "MSSQLSERVER"**.  
   

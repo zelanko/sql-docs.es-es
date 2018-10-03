@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_xe_file_target_read_file_TSQL
@@ -22,17 +19,16 @@ helpviewer_keywords:
 - fn_xe_file_target_read_file function
 - sys.fn_xe_file_target_read_file function
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
-caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29a0eda47d510292d657bfdb7912a9fe8940b023
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: b28967d1000a8e307c99d05ea840dd62ced09fb8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099623"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47635733"
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -83,7 +79,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |timestamp_utc|**datetime2**|**Se aplica a**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />La fecha y hora (zona horaria UTC) del evento. No admite valores NULL.|  
 
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Leer resultados de gran tamaño se establece mediante la ejecución de **sys.fn_xe_file_target_read_file** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] puede producir un error. Use la **resultados a archivo** modo (**Ctrl + Mayús + F**) para exportar grandes conjuntos de resultados a un archivo y leer el archivo con otra herramienta en su lugar.  
   
 ## <a name="permissions"></a>Permisos  

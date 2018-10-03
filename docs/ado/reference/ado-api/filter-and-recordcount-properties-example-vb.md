@@ -1,13 +1,11 @@
 ---
-title: Filtro y ejemplo de las propiedades RecordCount (VB) | Documentos de Microsoft
+title: Ejemplo Filter y RecordCount propiedades (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - RecordCount property [ADO], Visual Basic example
 - Filter property [ADO], Visual Basic example
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d467ae897108f248991bc8eb8ac21461c22065c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9038609907c7649755a46002927ccafb71090754
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278684"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675423"
 ---
-# <a name="filter-and-recordcount-properties-example-vb"></a>Filtro y ejemplo de las propiedades RecordCount (VB)
-En este ejemplo abierto un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) en la tabla de publicadores en el ***Pubs*** base de datos. A continuación, utiliza el [filtro](../../../ado/reference/ado-api/filter-property.md) propiedad para limitar el número de registros visibles a aquellos editores en un determinado país o región. El **RecordCount** propiedad se utiliza para mostrar la diferencia entre los conjuntos de registros filtrados y sin filtrar.  
+# <a name="filter-and-recordcount-properties-example-vb"></a>Ejemplo de las propiedades Filter y RecordCount (VB)
+En este ejemplo abierto un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) en la tabla de publicadores en el ***Pubs*** base de datos. A continuación, usa el [filtro](../../../ado/reference/ado-api/filter-property.md) propiedad para limitar el número de registros visibles a esos publicadores en un determinado país o región. El **RecordCount** propiedad se utiliza para mostrar la diferencia entre los conjuntos de registros filtrados y sin filtrar.  
   
 ```  
 'BeginFilterVB  
@@ -112,7 +109,7 @@ End Sub
 ```  
   
 > [!NOTE]
->  Cuando se conocen los datos que desea seleccionar, es normalmente más eficaz para abrir un **Recordset** con una instrucción SQL. Este ejemplo muestra cómo puede crear una sola **Recordset** y obtener registros de un país determinado.  
+>  Cuando sepa los datos que desea seleccionar, es normalmente más eficaz para abrir un **Recordset** con una instrucción SQL. En este ejemplo se muestra cómo puede crear simplemente una **Recordset** y obtener registros de un país determinado.  
   
 ```  
 Attribute VB_Name = "Filter"  

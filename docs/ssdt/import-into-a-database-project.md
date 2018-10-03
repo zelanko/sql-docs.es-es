@@ -6,24 +6,21 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLPROJECTIMPORTSNAPSHOTSUMMARYDIALOG.DIALOG
 - SQL.DATA.TOOLS.SQLPROJECTIMPORTDATABASESUMMARYDIALOG.DIALOG
 - SQL.DATA.TOOLS.IMPORTSCRIPTWIZARD.SUMMARY
 ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af8ee2d569c44d19e518c1dafacddb958c66cc88
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 414b8b130ff3e16bf3be092569ce05730d5ea204
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087747"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716053"
 ---
 # <a name="import-into-a-database-project"></a>Importar en un proyecto de base de datos
 Puede usar Importar para rellenar un proyecto con nuevos objetos a partir de una base de datos activa o un .dacpac, o para actualizar los objetos existentes en el proyecto con una nueva definición a partir de un script. Hay algunas diferencias de comportamiento que hay que destacar entre estas tres rutas, que se describen a continuación.  

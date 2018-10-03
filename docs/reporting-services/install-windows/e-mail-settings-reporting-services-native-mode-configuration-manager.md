@@ -3,7 +3,6 @@ title: 'Configuración de correo electrónico: modo nativo de Reporting Services
 ms.date: 06/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.emailsettings.F1
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d89166ee73dcc1b01d35ca8475a5487d60eb0e81
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ccbf7b6e51cd3d58c309dd98ba0041049b76e760
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268177"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725083"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>Configuración de correo electrónico: Modo nativo de Reporting Services (Administrador de configuración)
 Reporting Services incluye una extensión de entrega por correo electrónico para distribuir informes por correo electrónico. Según cómo defina la suscripción del correo electrónico, una entrega podría estar compuesta de una notificación, un vínculo, datos adjuntos o un informe incrustado. La extensión de entrega por correo electrónico funciona con la tecnología de servidor de correo existente. El servidor de correo debe ser un servidor SMTP o un reenviador. El servidor de informes se conecta a un servidor SMTP a través de bibliotecas de Collaboration Data Objects (CDO), cdosys.dll, que el sistema operativo proporciona.

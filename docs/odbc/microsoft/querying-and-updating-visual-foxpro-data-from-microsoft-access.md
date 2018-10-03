@@ -1,13 +1,11 @@
 ---
-title: Consultar y actualizar datos de Visual FoxPro desde Microsoft Access | Documentos de Microsoft
+title: Consultar y actualizar datos de Visual FoxPro desde Microsoft Access | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - querying Visual FoxPro data [ODBC]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Visual FoxPro data [ODBC], querying and updating
 - updating Visual FoxPro data [ODBC]
 ms.assetid: 2d314e78-9edf-44b2-bd8b-96784236bcbe
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6704fb70b7c8764e0299c7334aa384410c45a0a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1097e03c414d919a606ffd21ae50ffddf51173b7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904070"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732953"
 ---
 # <a name="querying-and-updating-visual-foxpro-data-from-microsoft-access"></a>Consultar y actualizar datos de Visual FoxPro desde Microsoft Access
 Puede consultar y actualizar los datos almacenados en una base de datos de Visual FoxPro desde una base de datos de Microsoft Access mediante la opción de tabla de vínculos.  
@@ -35,16 +32,16 @@ Puede consultar y actualizar los datos almacenados en una base de datos de Visua
   
 1.  Abra una base de datos de Microsoft Access.  
   
-2.  En la ficha tablas, haga clic en nuevo.  
+2.  En la pestaña de tablas, haga clic en nuevo.  
   
 3.  En el cuadro de diálogo nueva tabla, seleccione la tabla de vínculos y haga clic en Aceptar.  
   
-4.  En el cuadro de diálogo de vínculo, seleccione la base de datos de ODBC en la lista Tipo de archivo.  
+4.  En el cuadro de diálogo de vínculo, seleccione la base de datos ODBC en la lista Tipo de archivo.  
   
-5.  En el cuadro de diálogo orígenes de datos de SQL, seleccione el origen de datos que se conecta a los datos de Visual FoxPro que desea consultar y haga clic en Aceptar.  
+5.  En el cuadro de diálogo orígenes de datos SQL, seleccione el origen de datos que se conecta a los datos de Visual FoxPro que desea consultar y haga clic en Aceptar.  
   
-6.  En el cuadro de diálogo Vincular tablas, seleccione las tablas que desea consultar y actualizar y haga clic en Aceptar. Las tablas de Visual FoxPro vinculadas se muestran en la ficha de tablas de la base de datos de Microsoft Access.  
+6.  En el cuadro de diálogo Vincular tablas, seleccione las tablas que desea consultar y actualizar y haga clic en Aceptar. Las tablas vinculadas de Visual FoxPro se muestran en la pestaña de tablas de la base de datos de Microsoft Access.  
   
- Ahora puede utilizar Microsoft Access para consultar y actualizar los datos de las tablas vinculadas de Visual FoxPro. Cambios realizados en los datos vinculados se envían en el origen de datos de Visual FoxPro.  
+ Ahora puede usar Microsoft Access para consultar y actualizar datos en las tablas vinculadas de Visual FoxPro. Cambios en los datos vinculados se envían en el origen de datos de Visual FoxPro.  
   
- Si no desea cambios realice en Microsoft Access afecta a los datos en el origen de datos de Visual FoxPro, consulte [importar Visual FoxPro datos en Microsoft Access](../../odbc/microsoft/importing-visual-foxpro-data-into-microsoft-access.md).
+ Si no desea que los cambios que realice en Microsoft Access afecta a los datos en el origen de datos de Visual FoxPro, consulte [importación de Visual FoxPro datos en Microsoft Access](../../odbc/microsoft/importing-visual-foxpro-data-into-microsoft-access.md).

@@ -1,12 +1,10 @@
 ---
-title: ¿O relacionados con vistas de administración dinámica y funciones (Transact-SQL) | Documentos de Microsoft
+title: Puedo O relacionados con las vistas de administración dinámica y funciones (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - dynamic management views [SQL Server]
 - dynamic management objects [SQL Server], I/O
 ms.assetid: f876d32b-c07f-4ccc-a691-5e580bc50c40
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e10d5135a033cc2bfa6a8e8c8655af849612227a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 21bc3a8b2bca02300e88486afe674909cba7b678
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463181"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670423"
 ---
-# <a name="i-o-related-dynamic-management-views-and-functions-transact-sql"></a>¿O relacionados con vistas de administración dinámica y funciones (Transact-SQL)
+# <a name="i-o-related-dynamic-management-views-and-functions-transact-sql"></a>Puedo O relacionados con las vistas de administración dinámica y funciones (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Esta sección contiene los siguientes objetos de administración dinámica.  

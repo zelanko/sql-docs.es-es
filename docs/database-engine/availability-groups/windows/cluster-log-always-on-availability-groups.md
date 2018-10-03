@@ -4,21 +4,18 @@ ms.custom: ag-guide
 ms.date: 06/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
-caps.latest.revision: 7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6e2cc0bda94d980535c014c1f52cf83f9ee80910
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b81e501c153bb0789a1cf1cefd0c148dc9d96f9e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32860220"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731563"
 ---
 # <a name="clusterlog-always-on-availability-groups"></a>CLUSTER.LOG (Grupos de disponibilidad Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +33,7 @@ ms.locfileid: "32860220"
  Los siguientes comandos de PowerShell generan los registros de clúster desde todos los nodos del clúster de los últimos 15 minutos y los colocan en el directorio actual. Ejecute los comandos en una ventana de PowerShell con privilegios de administración.  
   
 ```powershell  
-Import-Modeul FailoverClusters   
+Import-Module FailoverClusters   
 Get-ClusterLog –TimeSpan 15 –Destination .  
 ```  
   

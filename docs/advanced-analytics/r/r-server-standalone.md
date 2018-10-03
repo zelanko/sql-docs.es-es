@@ -3,17 +3,17 @@ title: Instalación Standalone R Server o Machine Learning Server en SQL Server 
 description: Introducción de introducción a R Server independiente y Machine Learning Server en el programa de instalación de SQL Server
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/27/2018
+ms.date: 10/01/2018
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a5be61888c34ef4931c65475921225198bef0091
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: a821706126519e5d48026eae834e320f706d2e4a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240033"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176435"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (independiente) y Machine Learning Server (independiente) en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ SQL Server proporciona compatibilidad con la instalación de un R Server indepen
 En SQL Server 2016, esta característica se denomina **R Server (independiente)** y es solo para R. En SQL Server 2017, se llama a **Machine Learning Server (independiente)** e incluye R y Python.  
 
 > [!Note]
-> Tal como se instala con el programa de instalación de SQL Server, un servidor independiente es funcionalmente equivalente a las versiones sin marca de SQL de [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), que admiten los mismos escenarios de usuario, incluida la ejecución remota puesta en marcha y los servicios web y la colección completa de funciones de RevoScaleR y revoscalepy.
+> Tal como se instala con el programa de instalación de SQL Server, un servidor independiente es funcionalmente equivalente a las versiones sin marca de SQL de [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), que admiten los mismos escenarios de usuario, incluida la ejecución remota puesta en marcha y los servicios web y el conjunto completo de bibliotecas de R y Python.
 
 ## <a name="components"></a>Components
 

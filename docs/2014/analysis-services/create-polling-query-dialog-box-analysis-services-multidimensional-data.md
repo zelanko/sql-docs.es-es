@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createpollingquerydialog.f1
 ms.assetid: 0f2902b5-796a-4eb0-be03-01514dc01b9a
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f1c7ca8d5c2594668283887c23f7d976a1fc3359
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b58e73b7757e8288ff90f462be1868cb60e3af5b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236235"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181473"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Crear consulta de sondeo (Analysis Services - Datos multidimensionales)
   Utilice el cuadro de diálogo **Crear consulta de sondeo** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear una consulta de sondeo en la pestaña **Notificaciones** del cuadro de diálogo **Opciones de almacenamiento** . Una consulta de sondeo es, por lo general, una consulta singleton que devuelve un valor que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] puede utilizar para determinar si los cambios se realizaron en una tabla o en otro objeto relacional. Para mostrar el cuadro de diálogo **Crear consulta de sondeo**, haga clic en el botón de puntos suspensivos (**…**) que se encuentra en la columna **Consulta de sondeo** de la cuadrícula correspondiente a la opción **Sondeo programado**, en la pestaña **Notificaciones** del cuadro de diálogo **Opciones de almacenamiento**. Para más información sobre la pestaña **Notificaciones** del cuadro de diálogo **Opciones de almacenamiento**, vea [Notificaciones &#40;cuadro de diálogo Opciones de almacenamiento&#41; &#40;Analysis Services - Datos multidimensionales&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  

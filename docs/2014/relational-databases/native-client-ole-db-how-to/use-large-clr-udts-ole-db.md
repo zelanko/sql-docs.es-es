@@ -1,24 +1,21 @@
 ---
-title: Usar UDT CLR grandes (OLE DB) | Microsoft Docs
+title: Usar UDT CLR grandes (OLE DB) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dde2fede6e6772836fc1a20c679b06cfca3bd436
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 9ee8e8eeb7552d9a4c875a64be85b9b7734b1dc2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407434"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207745"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Usar UDT de CLR de gran tamaño (OLE DB)
   En este ejemplo se muestra cómo capturar filas con tipos definidos por el usuario grandes de un conjunto de resultados. Para obtener más información, consulte [Large CLR User-Defined tipos &#40;OLE DB&#41;](../native-client/ole-db/large-clr-user-defined-types-ole-db.md). En este ejemplo se utiliza [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o posterior.  
@@ -30,7 +27,7 @@ ms.locfileid: "37407434"
   
  Ejecute la segunda lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para agregar el ensamblado a la base de datos maestra.  
   
- Compile con ole32.lib oleaut32.lib y ejecute la tercera lista de código (C++). Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\\name", donde nombre es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
+ Compile con ole32.lib oleaut32.lib y ejecute la tercera lista de código (C++). Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\nombre", donde "nombre" es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
   
  Ejecute la cuarta lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para eliminar el ensamblado en la base de datos maestra.  
   

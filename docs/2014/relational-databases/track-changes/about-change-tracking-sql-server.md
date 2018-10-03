@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data changes [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - change tracking [SQL Server]
 - data [SQL Server], changing
 ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
-caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8953f24d60b3007ab2fee218507cdd77c69561ed
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 23abfb7b5de5f319a15d8d255705929cc4d7293d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276151"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220295"
 ---
 # <a name="about-change-tracking-sql-server"></a>Acerca del seguimiento de cambios (SQL Server)
   El seguimiento de cambios es una solución ligera que proporciona un mecanismo de seguimiento de cambios eficaz para las aplicaciones. Normalmente, para permitir que las aplicaciones consulten los cambios de los datos en una base de datos y tener acceso a la información relacionada con los mismos, los programadores de aplicaciones tenían que implementar mecanismos personalizados de seguimiento de cambios. Crear estos mecanismos normalmente implica mucho trabajo y, frecuentemente, conlleva el uso de una combinación de desencadenadores, `timestamp` columnas, tablas nuevas para almacenar información de seguimiento y procesos de limpieza personalizados.  

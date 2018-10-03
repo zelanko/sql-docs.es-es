@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - EnumString Data Type
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - EnumString data type
 ms.assetid: 9214195e-4539-419b-95ec-b7aa75e033ab
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ea4f9057c05d7be5a5f8d8591d27460540a377fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb075a8c659fe264dbed7dd68654d1fb84fdf7a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224035"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210250"
 ---
 # <a name="enumstring-data-type-xmla"></a>Tipo de datos EnumString (XMLA)
   Define un tipo de datos derivado que representa un conjunto de constantes con nombre para un enumerador determinado.  
@@ -59,7 +56,7 @@ ms.locfileid: "37224035"
 |Elementos secundarios|None|  
 |Elementos derivados|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  XML for Analysis (XMLA) utiliza enumeraciones para limitar los valores de cadena a un conjunto de valores que se pueden comprobar. `EnumString` utiliza el tipo de datos XML estándar `string`. Los valores concretos para cada una de las constantes con nombre se especifican con la definición del enumerador. Los enumeradores se definen agregándolos a la [DISCOVER_ENUMERATORS](../../schema-rowsets/xml/discover-enumerators-rowset.md) de filas de esquema y se pueden recuperar mediante el uso de la [Discover](../xml-elements-methods-discover.md) tipo de solicitud de método con el DISCOVER_ENUMERATORS.  
   
  En la tabla siguiente describe los enumeradores admitidos por una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

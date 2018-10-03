@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionsourcedialog.f1
 ms.assetid: c414dabe-9bad-49b7-9a3c-dfca87fef92b
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 43e370a9926e342f105b68bfceba943ad4298244
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f88f307f9cbace833a83603e0f24382b7e82e62f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214187"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203185"
 ---
 # <a name="partition-source-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Origen de la partición (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Origen de la partición** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para especificar el origen de los datos de la tabla de hechos para una partición. Para mostrar el cuadro de diálogo **Origen de la partición** :  

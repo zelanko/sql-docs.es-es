@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - StorageEngineUsed Element
@@ -17,16 +15,15 @@ api_location:
 topic_type:
 - apiref
 ms.assetid: 98895c10-f3c2-4d8a-be94-6128c828561d
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c6c8f7cdca7fb8134a27c8d1319385861294893a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2d90cf84fec5d2a8dedc889cae096a5b414a1eb1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203966"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197885"
 ---
 # <a name="storageengineused-element-xmla"></a>Elemento StorageEngineUsed (XMLA)
   Contiene un valor de solo lectura que describe el tipo de base de datos actual.  
@@ -67,7 +64,7 @@ ms.locfileid: "37203966"
 </Databases>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -82,7 +79,7 @@ ms.locfileid: "37203966"
 |Elementos primarios|[database](../objects/database-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
 |Valor|Descripción|  

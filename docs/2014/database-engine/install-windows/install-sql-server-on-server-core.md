@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b4ca2154a7574ba787fe59737c6165c41bc1d6d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5235f19b1d85282d7c66ffa64f4dcdc1a43a0fc1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193885"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225895"
 ---
 # <a name="install-sql-server-2014-on-server-core"></a>Instalar SQL Server 2014 en Server Core
   Puede instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una instalación Server Core de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 o de [!INCLUDE[win8srv](../../includes/win8srv-md.md)]. En este tema se proporcionan detalles específicos de la instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en Server Core.  

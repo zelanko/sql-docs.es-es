@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Update Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Update command [XMLA]
 ms.assetid: 324dcc16-865d-4d0a-b393-2b06c18ac807
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 75dda4a163ce6551246e11aa9eba6b57fcd9fb25
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b9663fa3d44b91f53ac20a5a1b1dba117f7a2574
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283963"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200135"
 ---
 # <a name="update-element-xmla"></a>Elemento Update (XMLA)
   Actualiza miembros de atributo de una dimensión.  
@@ -51,7 +48,7 @@ ms.locfileid: "37283963"
 </Command>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -66,7 +63,7 @@ ms.locfileid: "37283963"
 |Elementos primarios|[Command](../xml-elements-properties/command-element-xmla.md)|  
 |Elementos secundarios|[Atributos](../xml-elements-properties/attributes-element-xmla.md), [MoveWithDescendants](../xml-elements-properties/movewithdescendants-element-xmla.md), [objeto](../xml-elements-properties/object-element-dimension-xmla.md), [donde](../xml-elements-properties/where-element-xmla.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El comando `Update` mueve los miembros de atributo dentro de una dimensión habilitada para escritura.  
   
  Para obtener más información acerca de cómo actualizar miembros, vea [Insertar, actualizar y quitar miembros &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  

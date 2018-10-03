@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - xsd:redefine element
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b4db58d74b640d6b75eca3239ebca2e0fa0f4d1
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: dfed461589882e91f4fa4ec2394bc858def67d96
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889751"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182275"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>Elemento &lt;xsd:redefine&gt;
   El elemento **redefine** de W3C XSD proporciona compatibilidad con la nueva definición de componentes de esquema. Sin embargo, la compatibilidad con esta directiva se puede afectar al rendimiento y también requiere que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] volver a validar todas las instancias de la `xml` tipo de datos asociado con el esquema redefinido. Por consiguiente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite este elemento. El servidor rechaza los esquemas XML que incluyen el elemento **\<xsd:redefine>**.  

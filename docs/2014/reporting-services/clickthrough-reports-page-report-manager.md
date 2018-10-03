@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.drilthroughreports.f1
 ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
-caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 20c212e7829a04e1c6261a8818cebf7534d2529a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: df688c3948c30bae3feef03fefbc1171e5c98491
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244355"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220743"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Página (Administrador de informes) Informes click-through
   Un informe click-through muestra una tabla de datos relacionados cuando se hace clic en los datos interactivos incluidos en el informe. El servidor de informes genera estos informes basándose en la información incluida en el modelo usado para crear el informe. Si no desea usar los informes click-through que el servidor de informes genera, puede crear informes personalizados que publica en un servidor de informes y asigna a los puntos de datos interactivos definidos en el modelo. Los informes personalizados se deben crear en el Generador de informes desde el mismo modelo y, a continuación, se deben publicar en el servidor de informes. Para asignar informes personalizados a los elementos del modelo, use la página Informes click-through en el Administrador de informes.  

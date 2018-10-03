@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLSetDescField function
 ms.assetid: de4bed15-15be-4825-994c-1046255e725a
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5810760fc0cbc8aba9a1ea743f1dab33df501964
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 64eb7b3dc6f058d5f061f4c015105ba4fc44f183
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414314"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206765"
 ---
 # <a name="sqlsetdescfield"></a>SQLSetDescField
   SQLSetDescField puede utilizarse para establecer los campos de descriptor de parámetros con valores de tabla y las columnas de parámetros con valores de tabla. Para obtener información acerca de los campos disponibles, consulte [campos de Descriptor de parámetro con valores de tabla](../native-client-odbc-table-valued-parameters/table-valued-parameter-descriptor-fields.md) y [campos de Descriptor para las columnas constituyentes de parámetros con valores de tabla](../native-client-odbc-table-valued-parameters/descriptor-fields-for-table-valued-parameter-constituent-columns.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Las columnas de parámetro con valores de tabla únicamente están disponibles cuando el campo de encabezado del descriptor SQL_SOPT_SS_PARAM_FOCUS está establecido en el ordinal de un registro con SQL_DESC_TYPE establecido en SQL_SS_TABLE. Para obtener más información acerca de SQL_SOPT_SS_PARAM_FOCUS, vea [SQLSetStmtAttr](sqlsetstmtattr.md).  
   
  Si se realiza un intento para establecer SQL_SOPT_SS_PARAM_FOCUS en el ordinal de un parámetro que no es un parámetro con valores de tabla, SQLSetStmtAttr devuelve SQL_ERROR y se crea un registro de diagnóstico con SQLSTATE = HY024 y el mensaje "valor de atributo no válido". SQL_SOPT_SS_PARAM_FOCUS no cambia cuando se devuelve SQL_ERROR.  

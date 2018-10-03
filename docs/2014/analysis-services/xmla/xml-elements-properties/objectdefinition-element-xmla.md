@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ObjectDefinition Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - ObjectDefinition element
 ms.assetid: 1911868c-a018-4308-8cf9-972a57f610a1
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3c4fe23e2f77dd28823094cf6a77067d9365e6ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc2b42ca96ef57bc46e5c04a5bc1f7528493aa83
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190795"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214145"
 ---
 # <a name="objectdefinition-element-xmla"></a>Elemento ObjectDefinition (XMLA)
   Contiene uno o más elementos de Analysis Services Scripting Language (ASSL), utilizados para crear o modificar objetos en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -50,7 +47,7 @@ ms.locfileid: "37190795"
 </Create>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -65,7 +62,7 @@ ms.locfileid: "37190795"
 |Elementos primarios|[ALTER](../xml-elements-commands/alter-element-xmla.md), [crear](../xml-elements-commands/create-element-xmla.md)|  
 |Elementos secundarios|Elementos ASSL obligatorios. Uno o más elementos ASSL, usados para definir los objetos [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para obtener más información acerca de ASSL, vea [propiedades &#40;XMLA&#41;](xml-elements-properties.md).|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo se crea una base de datos vacía denominada `Test Database` en una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], panes
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - displaying View Designer panes
 - displaying Query Designer panes
 ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36fa7ef7bbc75c916f72d71894ad4f0bc2efefb0
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: aedc73a4cb3ffa14e5f701dee54788783690bb59
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820931"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198102"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Mostrar en pantalla los paneles del Diseñador de consultas y vistas (Visual Database Tools)
   El Diseñador de consultas y vistas se compone de cuatro paneles diferentes: el panel Diagrama, el panel Criterios, el panel SQL y el panel Resultados. Por lo general, cuando se abre una vista o se crea una nueva consulta, se abren todas las ventanas, pero si es necesario abrir alguna de estas ventanas, podrá hacerlo siempre y cuando el Diseñador de consultas y vistas esté abierto.  

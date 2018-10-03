@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
-caps.latest.revision: 6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5ad01757b050d6beb491e1f0b2878ab124f5d8e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 961f5793732dcfabd19b07f0a22b467591a980c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247032"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203245"
 ---
 # <a name="install-sql-server-powershell"></a>Instalar SQL Server PowerShell
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación se detendrá si detecta que ha seleccionado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] características que incluyen componentes de PowerShell, pero Windows PowerShell 2.0 no está instalado. Debe instalar PowerShell utilizando Windows Management Framework y, a continuación, volver a ejecutar el programa de instalación.  

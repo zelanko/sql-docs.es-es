@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - developer's guide [SQL Server replication]
 - programming [SQL Server replication]
 - replication [SQL Server], development
 ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8726fd8595c769513fa56203f33fd2a3ee58b0e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ce2054924f26ab5b8d94814c3ad716b00f425064
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320277"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212525"
 ---
 # <a name="developer39s-guide-replication"></a>Desarrollador&#39;guía (replicación)
   La capacidad de configurar, mantener y supervisar mediante programación una topología de replicación permite simplificar las tareas de replicación repetidas y mejorar la experiencia del usuario en las aplicaciones basadas en la replicación. Al programar la replicación, se puede proporcionar a los usuarios finales funcionalidades de replicación personalizadas sin que sea necesario conocer los procedimientos almacenados de replicación o las aplicaciones ejecutables del agente de replicación, ni tener que usar la interfaz de usuario de replicación que implementa [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  

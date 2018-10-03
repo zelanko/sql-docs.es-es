@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 76f3369760bd03019221d296d958f2a74191aac2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ebe649261a1f97093f40ad2aa3f20f96306fd1b6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241785"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219125"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>Establecer el nivel de compatibilidad de una base de datos multidimensional (Analysis Services)
   En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], la propiedad de nivel de compatibilidad de la base de datos determina el nivel funcional de una base de datos. Los niveles de compatibilidad son únicos de cada tipo de modelo. Por ejemplo, un nivel de compatibilidad de `1100` tiene un significado diferente dependiendo de si la base de datos es multidimensional o tabular.  
@@ -35,7 +32,7 @@ ms.locfileid: "37241785"
   
  En el caso de una base de datos multidimensional, los valores válidos para la propiedad `CompatibilityLevel` incluyen los siguientes:  
   
-|Configuración|Descripción|  
+|Parámetro|Descripción|  
 |-------------|-----------------|  
 |`1050`|Este valor no es visible en el script ni en las herramientas pero corresponde a las bases de datos creadas en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Cualquier base de datos que no tenga establecido explícitamente `CompatibilityLevel` se ejecuta de forma implícita en el nivel `1050`.|  
 |`1100`|Es el valor predeterminado para las nuevas bases de datos creadas en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. También puede especificarla si para las bases de datos creadas en versiones anteriores de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se permite el uso de características que solo se admiten en este nivel de compatibilidad (a saber, mayor almacenamiento de cadenas para atributos de dimensión o medidas de recuento distintivas que contienen datos de cadena).<br /><br /> Las bases de datos que tienen un `CompatibilityLevel` establecido en `1100` obtienen una propiedad adicional, `StringStoresCompatibilityLevel`, que le permite elegir el almacenamiento de cadenas alternativo para particiones y dimensiones.|  

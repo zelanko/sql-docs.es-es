@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 24ba466d-a7d3-49e7-9111-b348399c9e58
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76e76290206dd1618b37865f95ca17709faf2a6c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8900b595bcb90eb7ca0712d2b6e7e3010c4a7b24
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220545"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180915"
 ---
 # <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>Tarea 9: agregar la transformación Unión de todo para combinar los registros correctos y corregidos
   En esta tarea, agregará la transformación Unión de todo al flujo de datos. La transformación Unión de todo combina varias entradas en una salida. En su escenario, combina los registros Correctos y Corregidos en un flujo.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - version control services [SQL Server], file history
 - historical information [SQL Server], files
 ms.assetid: 9d80d4ea-a0f6-4a79-885d-79143ca09c00
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac14534a577f8e43aa87342593d655c6ca469651
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 1060520a9c1fc6b5db20d1cca5e8c2d19cbd429a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807311"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184795"
 ---
 # <a name="view-file-history"></a>Ver el historial de un archivo
   Puede usar el **historial** comando para ver un historial de versiones para los archivos controlados por código fuente. Este historial incluye la fecha y la hora en que el archivo se agregó al control de código fuente o se protegió en él.  

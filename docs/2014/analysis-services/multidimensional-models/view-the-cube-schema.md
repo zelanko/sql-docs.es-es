@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6b5b78b9bd82f9dcade48d653bf5bc2bdb3d6456
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 93898e6ed8dc26e3b06fd6a583bfa4084dd4c5f2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235755"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197615"
 ---
 # <a name="view-the-cube-schema"></a>Ver el esquema del cubo
   El panel **Vista del origen de datos** de la pestaña **Estructura de cubo** del **Diseñador de cubos** muestra el esquema del cubo. El esquema es el conjunto de tablas de las que se derivan las medidas y las dimensiones de un cubo. Cada esquema de cubo se compone de una o varias tablas de hechos y una o varias tablas de dimensiones en las que se basan las medidas y las dimensiones del cubo.  

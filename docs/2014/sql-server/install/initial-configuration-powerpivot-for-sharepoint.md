@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8fb91e2ed29300f3d85b9376b725c95694c2da1d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e236f2ccd1478fc98d712e89b1d6d0a781a8ac2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172236"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211355"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Configuración inicial (PowerPivot para SharePoint)
   Siga los pasos de este tema para configurar una instalación inicial de PowerPivot para SharePoint. La manera más fácil de configurar una instalación inicial es utilizar la herramienta de configuración de PowerPivot. Automatiza todos los pasos de configuración que se describen a continuación.  
@@ -281,7 +278,7 @@ ms.locfileid: "37172236"
  La Galería de PowerPivot es una biblioteca de opciones de vista previa y de presentación para ver los libros PowerPivot de un sitio de SharePoint. Se recomienda usar la Galería de PowerPivot para publicar y ver libros PowerPivot, por sus capacidades de vista previa. Además, si también implementa Reporting Services en el mismo servidor de SharePoint, un Galería de PowerPivot simplifica el uso de la creación de informes. Puede iniciar el Generador de informes desde la Galería de PowerPivot para crear un informe nuevo a partir de un libro PowerPivot publicado. Para obtener más información sobre la creación y uso de la biblioteca, consulte [crear y personalizar la Galería de PowerPivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md) y [usar la Galería de PowerPivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md).  
   
 ### <a name="create-additional-trusted-sites-in-excel-services"></a>Crear sitios de confianza adicionales en Excel Services  
- Puede agregar sitios de confianza en Excel Services para cambiar los permisos y la configuración de los sitios que proporcionan libros de Excel y datos PowerPivot. Para obtener más información, consulte [Create a trusted location for PowerPivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+ Puede agregar sitios de confianza en Excel Services para cambiar los permisos y la configuración de los sitios que proporcionan libros de Excel y datos PowerPivot. Para obtener más información, consulte [crear una ubicación de confianza para sitios PowerPivot en Administración Central](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ### <a name="tune-configuration-settings"></a>Ajustar las opciones de configuración  
  Una aplicación de servicio PowerPivot se crea con propiedades y valores predeterminados. Las opciones de configuración de cada una de las aplicaciones de servicio se pueden modificar para cambiar la metodología mediante la que se asignan las solicitudes, establecer los tiempos de espera de servidor, cambiar los umbrales de los eventos de informe de respuesta de consulta, o especificar cuánto tiempo se conservan los datos de uso. Para obtener más información sobre la configuración en Administración Central o sobre cómo usar las características de PowerPivot en aplicaciones Web de SharePoint, vea [configuración en Administración Central y administración de servidores PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  

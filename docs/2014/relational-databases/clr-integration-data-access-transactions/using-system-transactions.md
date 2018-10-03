@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Dispose method
 - System.Transactions namespace
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
-caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cf0f57f84e4b1838b9fd2da9838891640782266b
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e39106ea1c4077d1aee90cedc17c5af07503a136
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350067"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198345"
 ---
 # <a name="using-systemtransactions"></a>Utilizar System.Transactions
   El espacio de nombres `System.Transactions` proporciona un nuevo marco de transacciones totalmente integrado con ADO.NET y la característica de integración con Common Language Runtime (CLR) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La clase `System.Transactions.TransactionScope` crea un bloque de código transaccional dando de alta implícitamente las conexiones en una transacción distribuida. Se debe llamar al método `Complete` al final del bloque de código marcado por `TransactionScope`. Se llama al método `Dispose` cuando la ejecución de programas deja un bloque de código, lo que hace que se interrumpa la transacción si no se llama al método `Complete`. Si se ha producido una excepción que hace que el código deje el ámbito, se considera que la transacción se ha interrumpido.  

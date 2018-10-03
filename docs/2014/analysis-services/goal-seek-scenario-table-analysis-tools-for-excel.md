@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
 - scenario analysis
 - goal seek scenario
 ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f17c85c7296daaead3b24b4d4002ad9c1be7221
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3e3b99c917b6f272f4af325a35712f059313742c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187302"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172565"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>Buscar objetivo (escenario de Herramientas de análisis de tabla para Excel)
   ![Botón de búsqueda de objetivo en herramientas de análisis de tabla](media/tat-goalseek.gif "botón Buscar objetivo en herramientas de análisis de tabla")  

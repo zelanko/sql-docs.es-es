@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5ad8b31c-43b0-4481-a31b-090cbed4a438
-caps.latest.revision: 16
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2963895811f8567f5142ed9b49137123390ec8d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 17d53c7a49afc61d3e43606ac3f805a5b21e6bd5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149436"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208155"
 ---
 # <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Lección 3: Cargar una definición de informe desde el servidor de informes
   Una vez que haya creado el proyecto y generado las clases con el esquema RDL, estará listo para cargar una definición de informe desde el servidor de informes.  

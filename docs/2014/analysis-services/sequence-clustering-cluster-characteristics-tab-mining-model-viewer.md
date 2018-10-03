@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.characteristics.f1
 ms.assetid: 3a9e8a0c-7d03-47cc-8625-e68d73a8c947
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4272975a16da0cf0d9db534df34d00e329dc5430
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2119013c1c735c9b35a3790fedbf1ac114e9964a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153186"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196865"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>Pestaña Características de la agrupación en clústeres de secuencia (Visor de modelos de minería de datos)
   La pestaña **Características del clúster** en el **Visor de agrupación en clústeres de secuencia de Microsoft** proporciona una lista detallada de las características que definen un clúster de secuencia. Esas características pueden incluir pares de atributo-valor simples, así como transiciones entre los estados.  

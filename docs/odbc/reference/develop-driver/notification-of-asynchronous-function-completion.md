@@ -1,43 +1,40 @@
 ---
-title: Notificación de finalización de la función asincrónica | Documentos de Microsoft
+title: Notificación de finalización de la función asincrónica | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 336565da-4203-4745-bce2-4f011c08e357
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b86f906385341b5b67a51cc60ef702f61dff13ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba670583dbc81789726392a6d9f54d1dd78c3ba2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915850"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812553"
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>Notificación de finalización asincrónica (función)
-En el SDK de Windows 8, ODBC agrega un mecanismo para notificar a las aplicaciones cuando se completa una operación asincrónica, lo que nos referiremos a como "notificación de finalización". (Consulte [ejecución asincrónica (método de notificación)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) para obtener más información.) En este tema se trata algunos de los problemas para los desarrolladores de controladores.  
+En el SDK de Windows 8, ODBC agrega un mecanismo para notificar a las aplicaciones cuando se completa una operación asincrónica, lo que nos referiremos como "notificación de finalización". (Consulte [ejecución asincrónica (método de notificación)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) para obtener más información.) Este tema describen algunos de los problemas para los desarrolladores de controladores.  
   
-## <a name="the-interface-between-the-driver-manager-and-driver"></a>La interfaz entre el controlador y el Administrador de controladores  
- Internamente, el Administrador de controladores proporciona una función de devolución de llamada [SQLAsyncNotificationCallback función](../../../odbc/reference/develop-driver/sqlasyncnotificationcallback-function.md). **SQLAsyncNotificationCallback** sólo puede ser llamado por el controlador: una aplicación no puede llamar directamente a él. El controlador llama **SQLAsyncNotificationCallback** siempre nuevos datos recibieron del servidor después de la última SQL_STILL_EXECUTING devolver.  
+## <a name="the-interface-between-the-driver-manager-and-driver"></a>La interfaz entre el Administrador de controladores y el controlador  
+ Internamente, el Administrador de controladores proporciona una función de devolución de llamada [SQLAsyncNotificationCallback (función)](../../../odbc/reference/develop-driver/sqlasyncnotificationcallback-function.md). **SQLAsyncNotificationCallback** solo se puede llamar mediante el controlador de una aplicación no puede llamar directamente. El controlador llama a **SQLAsyncNotificationCallback** cada vez que se reciben nuevos datos desde el servidor después de la última SQL_STILL_EXECUTING devolver.  
   
- El Administrador de controladores proporciona un mecanismo de devolución de llamada para que un controlador puede notificar el Administrador de controladores cuando se ha realizado algún progreso en la ejecución de una operación asincrónica después de que la función correspondiente devuelva SQL_STILL_EXECUTING  
+ El Administrador de controladores proporciona un mecanismo de devolución de llamada para que un controlador puede notificar el Administrador de controladores cuando se ha realizado algún progreso en la ejecución de una operación asincrónica después de la función correspondiente devuelve SQL_STILL_EXECUTING  
   
- El Administrador de controladores se establece el atributo SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK en un identificador de conexión de controlador con un puntero de función no es NULL, que es de tipo SQL_ASYNC_NOTIFICATION_CALLBACK, para que funcione en modo de notificación para el controlador cualquier asincrónica operaciones con ese identificador. De igual forma, el Administrador de controladores establece el atributo SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK en un identificador de instrucción de controlador con un puntero de función no es NULL, que también es de tipo SQL_ASYNC_NOTIFICATION_CALLBACK, para que funcione en modo de notificación para el controlador todas las operaciones asincrónicas en ese identificador.  
+ El Administrador de controladores se establece el atributo SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK en un identificador de conexión de controlador con un puntero de función que no es NULL, que es de tipo SQL_ASYNC_NOTIFICATION_CALLBACK, para que funcione en modo de notificación para el controlador cualquier asincrónica operaciones en ese controlador. De forma similar, el Administrador de controladores establece el atributo SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK en un identificador de instrucción del controlador con un puntero de función que no es NULL, que también es de tipo SQL_ASYNC_NOTIFICATION_CALLBACK, para que funcione en modo de notificación para el controlador las operaciones asincrónicas en ese identificador.  
   
- Si se realiza una operación asincrónica en un identificador de controlador, las funciones de controlador asincrónico deberían funcionar en un estilo de no bloqueo. Si la operación no se puede completar inmediatamente, la función de controlador debe devolver SQL_STILL_EXECUTING. Este requisito es true para los modos de sondeo y notificación.  
+ Si se realiza una operación asincrónica en un identificador de controlador, las funciones de controlador asincrónico deberían funcionar en un estilo que no sean de bloqueo. Si la operación no se puede completar inmediatamente, la función de controlador debe devolver SQL_STILL_EXECUTING. Este requisito es cierto para los modos de sondeo y notificación.  
   
- Si un controlador está en modo asincrónico de notificación, el controlador debe llamar a la función de devolución de llamada de notificación, cuya dirección es el valor para el atributo SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK o SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK, una vez después de devolver SQL_STILL_EXECUTING. En otras palabras, un SQL_STILL_EXECUTING devolver deben estar emparejadas con una invocación de la función de devolución de llamada de notificación. El controlador debe usar el valor actual del atributo de identificador SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT o SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT como el valor para el parámetro de función de respuesta de llamada *pContext*.  
+ Si un controlador está en modo asincrónico de notificación, el controlador debe llamar a la función de devolución de llamada de notificación, cuya dirección es el valor del atributo SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK o SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK, una vez después de devolver SQL_STILL_EXECUTING. En otras palabras, SQL_STILL_EXECUTING devolver uno debe estar emparejado con una invocación de la función de devolución de llamada de notificación. El controlador debe usar el valor actual del atributo de identificador SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT o SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT como valor para el parámetro de función de devolución de llamada *pContext*.  
   
- El controlador no debe devolver llamada en el subproceso que llama a la función de controlador; No hay ninguna razón para notificar el progreso antes de que la función devuelve. El controlador debe utilizar su propio subproceso de devolución de llamada. El Administrador de controladores no usará el subproceso de devolución de llamada del controlador para ejecutar lógica de procesamientos exhaustivos.  
+ El controlador debe no volver a llamar en el subproceso que llama a la función de controlador; No hay ninguna razón para notificar el progreso antes de que vuelva la función. El controlador debe usar su propio subproceso de devolución de llamada. El Administrador de controladores no usará el subproceso de devolución de llamada del controlador para ejecutar lógica de procesamientos exhaustivos.  
   
- El Administrador de controladores llamará a la función original de nuevo después de que el controlador llama de nuevo. El Administrador de controladores puede utilizar un subproceso que no es un subproceso de aplicación ni un subproceso de controlador. Si el controlador utiliza cierta información asociada al subproceso (por ejemplo, identificador de seguridad token o usuario), el controlador debe guardar la información necesaria en la llamada asincrónica inicial y usar el valor guardado antes de la operación completa asincrónica completa. Por lo general, sólo **SQLDriverConnect**, **SQLConnect**, o **SQLBrowseConnect** necesite utilizar ese tipo de información.  
+ El Administrador de controladores llamará a la función original de nuevo después de que el controlador llama de nuevo. El Administrador de controladores puede utilizar un subproceso que no es un subproceso de aplicación ni un subproceso del controlador. Si el controlador usa cierta información asociada al subproceso (por ejemplo, identificador de seguridad token o usuario), el controlador debe guardar la información necesaria en la llamada asincrónica inicial y usar el valor guardado antes de la operación completa asincrónica se completa. Por lo general, sólo **SQLDriverConnect**, **SQLConnect**, o **SQLBrowseConnect** debe usar ese tipo de información.  
   
 ## <a name="see-also"></a>Vea también  
  [Desarrollar un controlador ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - content types [data mining]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - EQUAL_AREAS method
 - coding [Data Mining]
 ms.assetid: 02c0df7b-6ca5-4bd0-ba97-a5826c9da120
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 29ef2a25704911e1feb31f20a048952d45966925
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f7cf775406905a920861236dafa8d740c9074101
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206255"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187057"
 ---
 # <a name="discretization-methods-data-mining"></a>Métodos de discretización (minería de datos)
   Algunos de los algoritmos que se utilizan para crear modelos de minería de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] requieren tipos de contenido específicos para poder funcionar correctamente. Por ejemplo, el algoritmo Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] no puede utilizar columnas continuas como entrada ni predecir valores continuos. Además, algunas columnas pueden contener tal cantidad de valores que el algoritmo no puede identificar con facilidad patrones de interés en los datos para crear un modelo a partir de los mismos.  
@@ -52,7 +49,7 @@ ms.locfileid: "37206255"
 |`CLUSTERS`|El algoritmo divide los datos en grupos mediante el muestreo de los datos de entrenamiento, inicializa en un número de puntos aleatorios y, a continuación, ejecuta varias iteraciones del algoritmo de clústeres de Microsoft utilizando el método de agrupación en clústeres EM (Expectation Maximization). El método `CLUSTERS` resulta útil porque funciona en cualquier curva de distribución. Sin embargo, requiere más tiempo de procesamiento que otros métodos de discretización.<br /><br /> Este método solo puede utilizarse con columnas numéricas.|  
 |`EQUAL_AREAS`|El algoritmo divide los datos en grupos que contienen el mismo número de valores. Este método es la mejor opción para las curvas de distribución normales, pero no se obtendrán resultados óptimos si la distribución incluye grandes cantidades de valores en un grupo pequeño de los datos continuos. Por ejemplo, si la mitad de los productos tiene un costo de 0, la mitad de los datos se encontrarán bajo un solo punto de la curva. En esta distribución, este método divide los datos en un intento de establecer una discretización igual en varias áreas. Esto produce una representación inexacta de los datos.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
   
 -   Puede usar el `EQUAL_AREAS` método para discretizar cadenas.  
   

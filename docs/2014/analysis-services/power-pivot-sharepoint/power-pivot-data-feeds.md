@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XML data sources [Analysis Services with SharePoint]
 - data feeds [Analysis Services with SharePoint]
 - Atom data feeds
 ms.assetid: 6b1337c5-50a0-4fc2-b079-377dc241d2cc
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6187d8959a79fef77daa33c509b1f0770bd99f51
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f7a3d1c457d44edac0fbc4c09060eb6c33a0353f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165490"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131155"
 ---
 # <a name="powerpivot-data-feeds"></a>Fuentes de distribución de datos de PowerPivot
   Una fuente de distribución de datos proporciona una flujo de datos a petición de un origen de datos con conexión a una aplicación cliente. En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede usar las fuentes de datos para agregar datos desde un servicio Web preparados para Atom o una aplicación a un origen de datos de PowerPivot en un libro de Excel.  

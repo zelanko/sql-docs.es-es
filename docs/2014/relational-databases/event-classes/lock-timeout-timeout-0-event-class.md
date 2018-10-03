@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Timeout event class
 ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
-caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6713a2a55ae3326ffccef661093f97aa33a6d3a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a65f4256abebd2b5ab9fb80e4f2ca91c1056c079
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286221"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191085"
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Clase de eventos Lock:Timeout (timeout &gt; 0)
   La clase de eventos **Lock:Timeout (timeout > 0)** indica que una solicitud de bloqueo de un recurso, como una página, ha agotado el tiempo de espera debido a que existía otra transacción que mantenía un bloqueo de cierre en el recurso necesario. Esta clase de evento se comporta del mismo modo que la clase de evento **Lock:Timeout** , excepto que no incluye ningún evento cuando el valor del tiempo de espera es 0.  

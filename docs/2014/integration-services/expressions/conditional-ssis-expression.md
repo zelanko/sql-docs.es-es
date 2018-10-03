@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 36514b86afc211f9ef699300c93e1652749b5b1b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4d1713e75acf4ad8e76cfdf309ede46523690b4b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265001"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197265"
 ---
 # <a name="--conditional-ssis-expression"></a>? : (Condicional) (expresión de SSIS)
   Devuelve una de dos expresiones en función del resultado de la evaluación de una expresión booleana. Si la evaluación de la expresión booleana devuelve TRUE, se evalúa la primera expresión y el resultado es el resultado de la expresión. Si devuelve FALSE, se evalúa la segunda expresión y el resultado es el resultado de la expresión.  
@@ -48,7 +45,7 @@ boolean_expression?expression1:expression2
 ## <a name="result-types"></a>Tipos de resultado  
  Tipo de datos de *expression1* o *expression2*.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si el valor *boolean_expression* se evalúa como NULL, el resultado de la expresión es NULL. Si una expresión seleccionada, *expression1* o *expression2* , es NULL, el resultado es NULL. Si la expresión seleccionada no es NULL, pero la expresión no seleccionada es NULL, el resultado será el valor de la expresión seleccionada.  
   
  Si *expression1* y *expression2* tienen el mismo tipo de datos, el resultado será ese tipo de datos. Además, las reglas siguientes se aplican a los tipos de resultado:  

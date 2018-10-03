@@ -1,13 +1,11 @@
 ---
-title: DataSpace y el ejemplo del método CreateObject (VBScript) | Documentos de Microsoft
+title: DataSpace y el ejemplo del método CreateObject (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,22 +13,21 @@ helpviewer_keywords:
 - DataSpace object [RDS], VBScript example
 - CreateObject method [ADO], VBScript example
 ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9fd9d098362f45d4ff2d0e7a3bc24d67130a0be9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 196641267bfedaff0de657d842b75a38c7cac75a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287644"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753363"
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>DataSpace y el ejemplo del método CreateObject (VBScript)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar a [servicio de datos de WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- En el ejemplo siguiente se muestra cómo utilizar el [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) método de la [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) con el objeto de negocios de forma predeterminada, [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md). Para probar este ejemplo, corte y pegue este código entre las \<cuerpo > y \</cuerpo > etiquetas en una HTML normal de documento y asígnele el nombre **DataSpaceVBS.asp**. Secuencia de comandos ASP identificará el servidor.  
+ El ejemplo siguiente muestra cómo usar el [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) método de la [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) con el objeto de negocios de forma predeterminada, [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md). Para probar este ejemplo, corte y pegue este código entre la \<cuerpo > y \</cuerpo > etiquetas en una HTML normal de documentos y asígnele el nombre **DataSpaceVBS.asp**. Secuencia de comandos ASP identificará el servidor.  
   
 ```  
 <!-- BeginDataSpaceVBS -->  
@@ -134,12 +131,12 @@ The <i>Query</i> Method of the RDSServer.DataFactory is used to bring back a Rec
 <!-- EndDataSpaceVBS -->  
 ```  
   
- En el ejemplo siguiente se muestra cómo utilizar el **CreateObject** método para crear una instancia de un objeto comercial personalizado, VbBusObj.VbBusObjCls. También utiliza las páginas Active Server scripting para identificar el nombre del servidor Web.  
+ El ejemplo siguiente muestra cómo usar el **CreateObject** método para crear una instancia de un objeto comercial personalizado, VbBusObj.VbBusObjCls. También usa las páginas Active Server scripting para identificar el nombre del servidor Web.  
   
- Para ver el ejemplo completo, abra el selector de aplicaciones de ejemplo. En el **nivel de cliente** columna, seleccione **VBScript en Internet Explorer**. En el **nivel intermedio** columna, seleccione **Custom Visual Basic Business Object**.  
+ Para ver el ejemplo completo, abra el selector de aplicaciones de ejemplo. En el **capa de cliente** columna, seleccione **VBScript en Internet Explorer**. En el **nivel intermedio** columna, seleccione **Custom Visual Basic Business Object**.  
   
 > [!NOTE]
->  Si se conecta a un proveedor de origen de datos que admita la autenticación de Windows, debe especificar **Trusted_Connection = yes** o **Integrated Security = SSPI** en lugar de Id. de usuario y contraseña información de la cadena de conexión.  
+>  Si se conecta a un proveedor de origen de datos que admite la autenticación de Windows, debe especificar **Trusted_Connection = yes** o **Integrated Security = SSPI** en lugar de Id. de usuario y contraseña información de la cadena de conexión.  
   
 ```  
 Sub Window_OnLoad()  
@@ -151,7 +148,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [CreateObject (método) (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
+ [Método CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
  [Objeto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)
 
 

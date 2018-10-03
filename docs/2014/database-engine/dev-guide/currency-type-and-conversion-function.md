@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f4c3aae27950cdaa6ff2244abdc2de501c0b1f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 12e5afd378f09a0fa7d624c6842e907211bc4212
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332485"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194735"
 ---
 # <a name="currency-type-and-conversion-function"></a>Tipo moneda y función de conversión
   En este ejemplo se define un tipo de datos Currency definido por el usuario usando C#. Este tipo de datos definido por el usuario encapsula una cantidad y una referencia cultural que ayudan a determinar la forma correcta de representar la cantidad como valor de moneda en dicha referencia cultural. En este ejemplo se proporciona también una función de conversión de monedas que devuelve una instancia del tipo de datos Currency definido por el usuario. Si la base de datos AdventureWorks tiene una tasa de cambio de dólares estadounidenses (USD) con respecto a la moneda asociada con la referencia cultural específica, la función de conversión devuelve un tipo de datos Currency definido por el usuario con la tasa de cambio y la referencia cultural que coincide con la solicitada. En caso contrario, el tipo de datos Currency definido por el usuario se devuelve con la cantidad original, que debe estar en USD, con la referencia cultural `en-us`. En el ejemplo se muestra también cómo eliminar del Registro y registrar métodos y ensamblados de Common Language Runtime (CLR) usando Transact-SQL.  

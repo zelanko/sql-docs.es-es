@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - EstimatedRows Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - EstimatedRows element
 ms.assetid: 08a66481-6479-4a93-aa7e-15e8b1f854f2
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e35ff79a747ad2106ac976ae2a4bdfeb408f6359
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 56743b2ba416abf876c30cbc517c1837be1e0b19
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213875"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054564"
 ---
 # <a name="estimatedrows-element-assl"></a>Elemento EstimatedRows (ASSL)
   Contiene el número estimado de filas representadas por el elemento primario.  
@@ -46,7 +43,7 @@ ms.locfileid: "37213875"
 </AggregationDimension>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37213875"
 |Elementos primarios|[AggregationDesign](../objects/aggregationdesign-element-assl.md), [cubo](../objects/cube-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [MeasureGroupBinding](../data-type/binding-data-type-assl.md), [partición](../objects/partition-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los elementos que corresponden a los elementos primarios de `EstimatedRows` en el modelo de objetos de Objetos de administración de análisis (AMO) son <xref:Microsoft.AnalysisServices.AggregationDesign>, <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.MeasureGroup>, <xref:Microsoft.AnalysisServices.MeasureGroupBinding> y <xref:Microsoft.AnalysisServices.Partition>.  
   
 ## <a name="see-also"></a>Vea también  

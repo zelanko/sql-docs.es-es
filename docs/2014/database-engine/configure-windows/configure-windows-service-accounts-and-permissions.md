@@ -4,13 +4,9 @@ ms.custom: ''
 ms.date: 11/21/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 helpviewer_keywords:
 - startup service states [SQL Server]
 - Setup [SQL Server], user accounts
@@ -52,16 +48,15 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-caps.latest.revision: 182
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd8ff6568129137f4e2167e514732a3b9af7ea8d
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: bd420632e4cac09a6549f504d4037582c766d5b1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40394504"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110745"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurar los permisos y las cuentas de servicio de Windows
   Cada servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] representa a un proceso o conjunto de procesos para administrar la autenticación de las operaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con Windows. En este tema se describe la configuración predeterminada de los servicios en esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], así como las opciones de configuración de los servicios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se pueden establecer durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y después.  
@@ -79,8 +74,7 @@ ms.locfileid: "40394504"
   
     -   [Nuevos tipos de cuenta disponibles con Windows 7 y Windows Server 2008 R2](#New_Accounts)  
   
-    -   
-  [Inicio automático](#Auto_Start)  
+    -   [Inicio automático](#Auto_Start)  
   
     -   [Configuración de servicios durante la instalación desatendida](#Configure_services)  
   
@@ -168,11 +162,9 @@ ms.locfileid: "40394504"
   
 -   [Cuentas de servicio predeterminadas](#Default_Accts)  
   
--   
-  [Inicio automático](#Auto_Start)  
+-   [Inicio automático](#Auto_Start)  
   
--   
-  [Configurar el tipo de inicio del servicio](#Configure_services)  
+-   [Configurar el tipo de inicio del servicio](#Configure_services)  
   
 -   [Puerto de firewall](#Firewall)  
   
@@ -257,9 +249,7 @@ ms.locfileid: "40394504"
   
  **Nota de seguridad:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] Use una [MSA](#MSA) o los servicios del Agente [virtual account](#VA_Desc) cuando sea posible. Cuando no se puedan usar MSA ni cuentas virtuales, emplee una cuenta de usuario específica con privilegios bajos o la cuenta de dominio en lugar de una cuenta compartida para los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Utilice cuentas independientes para los diferentes servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No otorgue permisos adicionales a la cuenta de servicio ni a los grupos de servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los permisos se concederán a través de la pertenencia a un grupo o se concederán directamente a un SID por servicio, siempre que se admita su uso.  
   
-###  
-  <a name="Auto_Start">
-  </a> Inicio automático  
+###  <a name="Auto_Start"></a> Inicio automático  
  Además de las cuentas de usuario, cada servicio tiene tres posibles estados de inicio que los usuarios pueden controlar:  
   
 -   **Deshabilitado** El servicio se ha instalado, pero no se ejecuta actualmente.  

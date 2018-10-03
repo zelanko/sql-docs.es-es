@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 865a135e144dd93a60a8f74da6559637b2c566d8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb78a5a7179caf7a42173c2fd752708c0434d2b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154246"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186455"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Revertir los separadores de palabras usados por las búsquedas a la versión anterior
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala y habilita una versión de los separadores de palabras y lematizadores para todos los idiomas admitidos por búsqueda de texto completo, a excepción del coreano. En este tema se describe cómo pasar de esta versión de estos componentes a la versión previa o viceversa.  
   
  En este tema no se explican los siguientes idiomas:  
   
--   **Inglés**. Para revertir o restaurar los componentes en inglés, vea [Change the Word Breaker Used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+-   **Inglés**. Para revertir o restaurar los componentes en inglés, vea [Cambiar el separador de palabras usado para el inglés de Estados Unidos y el del Reino Unido](change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 -   **Danés, polaco y turco**. Se han reemplazado los separadores de palabras de terceros para danés, polaco y turco que se incluían en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con componentes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -380,7 +377,7 @@ ms.locfileid: "37154246"
 |Nombre de archivo actual|MsWb70804.dll|  
   
 ## <a name="see-also"></a>Vea también  
- [Change the Word Breaker Used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+ [Cambiar el separador de palabras usado para el inglés de Estados Unidos y el del Reino Unido](change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [Cambios de comportamiento en la búsqueda de texto completo](../../database-engine/behavior-changes-to-full-text-search.md)  
   
   

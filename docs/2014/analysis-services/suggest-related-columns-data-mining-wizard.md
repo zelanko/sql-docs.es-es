@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.suggestrelatedcolumns.f1
 ms.assetid: 02bac877-2376-48ff-a585-5b197263c85e
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6007ce4d2eef03ad4a1f416c8c8409d13e4a544b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aef22dfdc18304591b8d556fd323ba6b851778eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226435"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196895"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>Sugerir columnas relacionadas (Asistente para minería de datos)
   Utilice la página **Sugerir columnas relacionadas** para ver las recomendaciones de la característica **Sugerir** que ha seleccionado en la página anterior del asistente. Las columnas de entrada serán seleccionadas previamente en función de su asociación con la columna **Predicción** que ha seleccionado. Si acepta los cambios en este cuadro de diálogo, los cambios se reflejarán en la página **Especificar los datos de entrenamiento** .  

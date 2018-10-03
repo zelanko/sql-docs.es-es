@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.addremoveobjects.f1
 helpviewer_keywords:
 - Add/Remove Tables dialog box
 ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 702d07b93463671335b67f9672f5fff8dcb28c9a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f903e6c783f71add561cafb1e1d5087b85c8d314
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235675"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200425"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Agregar o quitar tablas (Analysis Services - datos multidimensionales)
   Use el cuadro de diálogo **Agregar o quitar tablas** de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para agregar o quitar tablas de un origen de datos a, o de, una vista del origen de datos. Para mostrar el cuadro de diálogo **Agregar o quitar tablas**:  

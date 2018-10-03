@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MiningStructurePermission Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MiningStructurePermission element
 ms.assetid: 4ba2bfd2-9003-4eed-8049-a74d452894ea
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f3789cd5b5b72048b9c9163c11bebf4fe5a77d5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 89521b4201e3956ab6d44d95d7234321a0948f56
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295495"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197625"
 ---
 # <a name="miningstructurepermission-element-assl"></a>Elemento MiningStructurePermissions (ASSL)
   Define los permisos que los miembros de un [rol](role-element-assl.md) tiene elemento individual [MiningStructure](miningstructure-element-assl.md) elemento.  
@@ -48,7 +45,7 @@ ms.locfileid: "37295495"
 </MiningStructurePermissions>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -63,7 +60,7 @@ ms.locfileid: "37295495"
 |Elementos primarios|[MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.MiningStructurePermission>.  
   
  En [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], el permiso `AllowDrillthrough` se ha extendido para aplicarse a una estructura de minería de datos. Al asignar este permiso a un rol, cualquier usuario que es miembro de ese rol puede consultar directamente la estructura de minería de datos utilizando la sintaxis siguiente:  

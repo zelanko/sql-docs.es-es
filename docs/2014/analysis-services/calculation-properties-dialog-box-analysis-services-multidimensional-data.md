@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.calculationpropertiesdialog.f1
 helpviewer_keywords:
 - Calculation Properties dialog box
 ms.assetid: eb5e1179-b0e6-4ec8-bf4c-d67a1e329117
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f715b54f45c3bf8c676dd8f6c10c25d9d92d00e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8c3f6654480635966c2e77beb73ad6adc24add6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222285"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209641"
 ---
 # <a name="calculation-properties-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Propiedades de cálculo (Analysis Services - Datos multidimensionales)
   Utilice el cuadro de diálogo **Propiedades de cálculo** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para ver o modificar las propiedades de las carpetas para mostrar y los grupos de medida asociados de los cálculos definidos en la pestaña **Cálculos** del Diseñador de cubos para el cubo seleccionado. Para abrir el cuadro de diálogo **Propiedades de cálculo** , haga clic en **Propiedades de cálculo** en el panel **Barra de herramientas** de la pestaña **Cálculos** del Diseñador de cubos.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 512c6888-60f1-46e4-9639-bc448395b8d7
-caps.latest.revision: 45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db935cec3d17815d0884b1f596e870f6d09d5086
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 790809a04e4a322901a5f7398a02226cf984e2a0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222615"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206975"
 ---
 # <a name="adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>Agregar modelos nuevos a la estructura de correo de destino (tutorial básico de minería de datos)
   En esta tarea, definirá dos modelos adicionales mediante el uso de la **modelos de minería de datos** ficha del Diseñador de minería de datos. Para crear los modelos, se usarán el algoritmo Bayes naive y el algoritmo de clústeres de Microsoft. Estos dos algoritmos se han seleccionado debido a su capacidad de predecir un valor discreto (por ejemplo, la compra de una bicicleta). Para obtener más información acerca de estos algoritmos, vea [Microsoft Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md) y [algoritmo Bayes Naive de Microsoft](../../2014/analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)  

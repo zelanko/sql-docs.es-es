@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.conndatasource.f1
 ms.assetid: 1e2b17e9-092b-4af1-8a58-c52b8fe10ff1
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8e77906d12c334f9e10ac6a2c26b9c90a2efc8c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 764884f73cb554794edfb998f2c8d7b8f8d7d1fe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293544"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206505"
 ---
 # <a name="connect-to-a-data-source-ssas"></a>Conectarse a un origen de datos (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite crear una nueva conexión con un origen de datos con diversidad de orígenes de datos, como bases de datos relacionales, fuentes de distribución de datos y archivos. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  

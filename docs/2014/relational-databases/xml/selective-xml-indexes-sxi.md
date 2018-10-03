@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2975d6783088285cb0f741f293666866e6249ce0
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 758eadb1d5b3724bd829c556ca93ce8ae4a3bfa0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889547"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206245"
 ---
 # <a name="selective-xml-indexes-sxi"></a>Índices XML selectivos (SXI)
   Los índices XML selectivos son otro tipo de índice XML disponible además de los índices XML normales. Los objetivos de la característica de índice XML selectivo son los siguientes:  

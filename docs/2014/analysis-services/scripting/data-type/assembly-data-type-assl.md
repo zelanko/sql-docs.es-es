@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Assembly Data Type
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Assembly data type
 ms.assetid: 0a381322-9509-4579-a754-c6cdd0a70cc9
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 40cafd0d8ef11feaebce5161e97ef3717a9fb943
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb02963baa8a7fca296abe89801d89c1f7ea19fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233835"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209654"
 ---
 # <a name="assembly-data-type-assl"></a>Tipo de datos Assembly (ASSL)
   Define un tipo de datos primitivo abstracto que representa un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ensamblado o una biblioteca de vínculos dinámicos COM (DLL) asociada con un [Server](../objects/server-element-assl.md) o [base de datos](../objects/database-element-assl.md) elemento.  
@@ -66,7 +63,7 @@ ms.locfileid: "37233835"
 |Elementos secundarios|[Las anotaciones](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [descripción](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [ImpersonationInfo](../properties/impersonationinfo-element-assl.md), [ LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [nombre](../properties/name-element-assl.md)|  
 |Elementos derivados|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El tipo de datos `Assembly` actúa como el tipo de datos base para el elemento `ComAssembly`, que representa las bibliotecas COM asociadas a la instancia o base de datos y el elemento `ClrAssembly`, que representa los ensamblados [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] asociados a la instancia o base de datos. Para obtener más información acerca de los ensamblados, vea [administración de los ensamblados de modelos multidimensionales](../../multidimensional-models/multidimensional-model-assemblies-management.md).  
   
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.Assembly>.  

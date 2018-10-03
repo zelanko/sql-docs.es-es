@@ -1,12 +1,10 @@
 ---
-title: 'Capturar datos BLOB mediante IRow:: Open e ISequentialStream | Microsoft Docs'
+title: Capturar datos BLOB mediante IRow::Open e ISequentialStream | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - fetching BLOB data
@@ -14,21 +12,20 @@ helpviewer_keywords:
 - ISequentialStream interface
 - BLOBs, fetching
 ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7604022093a63dd536648fd43a3370ac21c05fcb
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c67e606b0f74d3886f0b5890d5061406d0d7f3fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418594"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211365"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Capturar datos BLOB mediante IRow::Open e ISequentialStream
-  **IRow:: Open** es compatible con el único tipo DBGUID_STREAM y DBGUID_NULL de objetos que se va a abrirse.  
+  **IRow::Open** solo permite la apertura de objetos de tipo DBGUID_STREAM y DBGUID_NULL.  
   
- La función siguiente utiliza **IRow:: Open** y **ISequentialStream** para capturar datos grandes.  
+ La función siguiente usa **IRow::Open** e **ISequentialStream** para capturar datos grandes.  
   
 ```  
 void InitializeAndExecuteCommand()  
@@ -79,7 +76,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
- Datos de gran tamaño se pueden enlazar o recuperar mediante el uso de la **ISequentialStream** interfaz. En el caso de las columnas enlazadas, la marca de estado indica si los datos se truncan mediante el establecimiento de DBSTATUS_S_TRUNCATED.  
+ Los datos grandes se pueden enlazar o recuperar mediante la interfaz **ISequentialStream**. En el caso de las columnas enlazadas, la marca de estado indica si los datos se truncan mediante el establecimiento de DBSTATUS_S_TRUNCATED.  
   
 ## <a name="see-also"></a>Vea también  
  [Capturar datos BLOB mediante IRow](../../database-engine/dev-guide/fetching-blob-data-using-irow.md)  

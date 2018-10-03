@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, backward compatibility
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], backward compatibility
 - compatibility [SQL Server replication]
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
-caps.latest.revision: 52
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa422646c6d5badb04e05aa11f073263819b3485
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 60cf56b2d230435c42f1ef1402d55938e89af2b5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186162"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206625"
 ---
 # <a name="replication-backward-compatibility"></a>Compatibilidad con versiones anteriores de replicación
   Los temas de la sección de compatibilidad con versiones anteriores describen cambios de comportamiento entre versiones de la replicación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Es importante entender la compatibilidad con versiones anteriores si realiza una actualización o si tiene más de una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una topología de replicación.  

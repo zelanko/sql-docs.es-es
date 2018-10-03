@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rsconfigtool.reportmanagervirtualdirectory.f1
 ms.assetid: 45768952-23a6-45a5-b541-e7bf192b4a78
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 363978d6b8f86610a5fb64c65cb6a53ca6d059ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f5e472f0cb8cb1a2fc8ed9d85b73622617a3a70a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220715"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210525"
 ---
 # <a name="report-manager-url-ssrs-native-mode"></a>Dirección URL del Administrador de informes (Modo nativo de SSRS)
   Utilice la página Dirección URL del Administrador de informes para configurar o modificar la dirección URL que se usa para el acceso al Administrador de informes. De forma predeterminada, la dirección URL del Administrador de informes hereda el prefijo, la dirección IP y el puerto de la dirección URL de servicio web del servidor de informes. Esto se debe a que el Administrador de informes proporciona acceso front-end a un servicio web que se ejecuta dentro del mismo servicio del servidor de informes. Si está aislando las aplicaciones de servicio y usa el Administrador de informes para tener acceso a un servicio web del servidor de informes en un equipo diferente, debe modificar el archivo RSReportServer.config para que dirija al Administrador de informes a una instancia diferente. Para obtener más información acerca de cómo configurar una conexión de administrador de informes a un servidor de informes remoto, consulte [Reporting Services Configuration Manager &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  

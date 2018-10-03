@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 96d0a98911daa37461db6700f868b167e0a4fe08
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ba180417eb3a426d24ffa6ee8dc985c89fb8e0a5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221805"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205901"
 ---
 # <a name="the-oracle-cdc-databases"></a>Las bases de datos CDC de Oracle
   Una instancia CDC de Oracle está asociada a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el mismo nombre en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino. Esta base de datos se denomina la base de datos CDC de Oracle (o la base de datos CDC).  
@@ -111,7 +108,7 @@ ms.locfileid: "37221805"
   
  En la tabla siguiente se describen las opciones disponibles.  
   
-|Nombre|Valor predeterminado|Min|Max|Estático|Descripción|  
+|Nombre|Default|Min|Max|Estático|Descripción|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |seguimiento|False|-|-|False|Valores disponibles:<br /><br /> **True**<br /><br /> **False**<br /><br /> **on**<br /><br /> **off**|  
 |cdc_update_state_interval|10|1|120|False|Tamaño (en kilobytes) de los fragmentos de memoria asignados para una transacción (una transacción puede asignar más de un fragmento). Vea la columna memory_limit en la tabla [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) .|  

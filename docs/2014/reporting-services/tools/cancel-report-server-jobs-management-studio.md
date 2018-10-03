@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.cancelreportserverjobs.f1
 ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9995d9df8ee2a4a11dc43a36e1853bbf60667c54
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b2745d6eacbbf17e65ba8d17b4293b98f942d850
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248045"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206655"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>Cancelar trabajos del servidor de informes (Management Studio)
   Use el cuadro de diálogo **Cancelar trabajos del Servidor de informes** para ver o cancelar los informes en curso. Este cuadro de diálogo muestra todos los trabajos que se están ejecutando actualmente en el servidor de informes. Aunque no puede pausar o reiniciar trabajos que se están procesando actualmente, puede cancelar todos los trabajos o los trabajos individuales si están tardando demasiado tiempo en completarse.  

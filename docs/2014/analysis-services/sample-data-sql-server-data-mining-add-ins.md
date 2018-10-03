@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, validating
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - partitioning data [data mining]
 - mining models, testing
 ms.assetid: 35907ae6-887f-4cb3-a750-cff3d7683d90
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5984bbbaa3dc2bb55ce8f20a59dd5132de0ca72a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 72579d679b0ced1fd3c260098bc68237f2980a3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178972"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209895"
 ---
 # <a name="sample-data-sql-server-data-mining-add-ins"></a>Datos de muestra (Complementos de minería de datos de SQL Server)
   ![Asistente para datos de partición en la cinta de opciones minería de datos](media/dmc-partition.gif "Asistente para crear particiones de datos en la cinta de opciones minería de datos")  

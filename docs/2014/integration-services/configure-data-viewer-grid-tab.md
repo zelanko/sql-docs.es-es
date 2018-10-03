@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredataviewer.grid.f1
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: ec4261d1-2799-4af8-9706-06b8c62d2fdf
-caps.latest.revision: 21
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9eaab37c5f23becd7cf16a2c0997855270011ce1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 850b24bf5b6be3fcac43549cd9f85f71a685f733
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285581"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207965"
 ---
 # <a name="configure-data-viewer-grid-tab"></a>Configurar visor de datos (pestaña Cuadrícula)
   Utilice la pestaña **Cuadrícula** del cuadro de diálogo **Configurar visor de datos** para especificar las columnas que desea mostrar. Un gráfico de cuadrícula muestra registros de datos como filas de una cuadrícula. El gráfico solo refleja el contenido de un búfer.  

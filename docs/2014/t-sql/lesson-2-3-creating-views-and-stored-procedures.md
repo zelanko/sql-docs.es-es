@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - creating views and stored procedures
@@ -14,12 +12,12 @@ ms.assetid: 53a0426d-07d8-4b7c-aa21-22632753bad8
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ee4ba8c35accc6a7d81732ee3d9f9fe5ad1cd01c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 20f16e9deeb9e07d2c63090c92100871331e0443
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43025734"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206495"
 ---
 # <a name="creating-views-and-stored-procedures"></a>Crear vistas y procedimientos almacenados
   Ahora que Mary puede tener acceso a la base de datos **TestData** , puede que desee crear algunos objetos de base de datos, como una vista o un procedimiento almacenado y concederle a Mary acceso a los mismos. Una vista es una instrucción SELECT almacenada y un procedimiento almacenado es una o varias instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] que se ejecutan como un lote.  

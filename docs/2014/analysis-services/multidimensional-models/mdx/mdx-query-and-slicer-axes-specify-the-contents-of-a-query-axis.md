@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cellsets [MDX]
 - query axis [MDX]
 ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 74b091d87c78f27cc6141f076dd4eab4924f0e89
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2f3e44d2891d9080b361d07d0bdcacfd0ad2ec39
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267621"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209775"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>Especificar el contenido de un eje de consulta (MDX)
   Los ejes de consulta especifican los límites de un conjunto de celdas devuelto por una instrucción SELECT de Expresiones multidimensionales (MDX). Al especificar los límites de un conjunto de celdas puede restringir los datos devueltos que son visibles para el cliente.  

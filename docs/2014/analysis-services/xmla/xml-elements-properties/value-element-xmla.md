@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Value Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Value element
 ms.assetid: f87ca7f8-d9fe-4730-a706-5d50fcfe21df
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8defb7fe2115bd1ea9ccb7b3f23b0717db8b9aef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 054da002271711d4b86a08e694b18e01e796b3ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263257"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205724"
 ---
 # <a name="value-element-xmla"></a>Elemento Value (XMLA)
   Contiene el valor deseado de un [atributo](attribute-element-xmla.md) elemento va a agregar mediante una [insertar](../xml-elements-commands/insert-element-xmla.md) comando, o un [celda](cell-element-xmla.md) elemento actualizará un [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md)comando.  
@@ -48,7 +45,7 @@ ms.locfileid: "37263257"
 </Attribute>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -63,7 +60,7 @@ ms.locfileid: "37263257"
 |Elementos primarios|[Atributo](attribute-element-xmla.md), [celda](cell-element-xmla.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para los elementos `Attribute`, el elemento `Value` contiene el valor deseado que el miembro debería contener una vez confirmado el comando `Insert`. Para obtener más información acerca de cómo insertar los miembros, vea [Insertar, actualizar y quitar miembros &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
   
  Para los elementos `Cell`, el elemento `Value` contiene el valor deseado que la celda debería contener una vez confirmado el comando `UpdateCells`. El valor real almacenado en la tabla de reescritura para esa celda es la diferencia entre el valor original de la celda y el valor deseado de la misma.  

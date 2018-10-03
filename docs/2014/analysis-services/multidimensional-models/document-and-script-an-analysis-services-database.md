@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XML for Analysis, scripts
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - databases [Analysis Services], documenting
 - databases [Analysis Services], scripts
 ms.assetid: 125044e2-8d36-4733-8743-8bb68ff9aa4e
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d46180c78befec8a55f03d2064aaa6b94e2ba6a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 427b5278f743570162899c3e876a5e0505feb3ca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165498"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124655"
 ---
 # <a name="document-and-script-an-analysis-services-database"></a>Documentar y crear scripts en una base de datos de Analysis Services
   Después de implementar una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para producir los metadatos de la base de datos o de un objeto contenido en la base de datos, como un script de XML for Analysis (XMLA). Puede producir este script en una nueva ventana del **Editor de consultas XMLA** , en un archivo o en el Portapapeles. Para obtener más información acerca de XMLA, vea [Analysis Services Scripting Language &#40;ASSL&#41; referencia](../scripting/analysis-services-scripting-language-assl-for-xmla.md).  

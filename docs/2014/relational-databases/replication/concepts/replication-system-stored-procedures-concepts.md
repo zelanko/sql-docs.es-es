@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - system stored procedures [SQL Server replication]
 - replication [SQL Server], how-to topics
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2fd79f87d69ea11e255bb6009f6a5d2365cab296
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 58ea6e365d16e4487a1f24700a7731ed96e04914
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292275"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147495"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
   En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el acceso mediante programación a toda la funcionalidad configurable por el usuario en una topología de replicación se proporciona mediante procedimientos almacenados del sistema. Aunque los procedimientos almacenados se pueden ejecutar individualmente utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o el programa de línea de comandos sqlcmd, puede ser beneficioso escribir archivos de script de [!INCLUDE[tsql](../../../includes/tsql-md.md)] que se pueden ejecutar para realizar una secuencia lógica de tareas de replicación.  
@@ -53,7 +50,7 @@ ms.locfileid: "37292275"
   
 -   Use las características de generación de script que se proporcionan en los asistentes de replicación o  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Para más información, consulte [Scripting Replication](../scripting-replication.md).  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  Para más información, consulte [Scripting Replication](../scripting-replication.md).  
   
 -   Utilice Replication Management Objects (RMO) para generar mediante programación el script y crear un objeto RMO.  
   

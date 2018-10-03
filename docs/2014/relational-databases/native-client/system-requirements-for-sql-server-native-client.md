@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - system requirements [SQL Server Native Client]
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - SQL Server Native Client, system requirements
 - SQLNCLI, system requirements
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
-caps.latest.revision: 60
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cbabe38f62a9bd581bd9e41ab508336332bc3983
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: bba3322fdd55116cb872a8653a515ac449f5a112
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417954"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48151002"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Requisitos del sistema para SQL Server Native Client
   Para utilizar las características de acceso a datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como MARS, debe tener instalado el software siguiente:  
@@ -69,7 +66,7 @@ ms.locfileid: "37417954"
   
 |Tipo de datos|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC y<br /><br /> aplicaciones OLE DB de SQL Server Native Client con DataTypeCompatibility=80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|UDT de CLR (\<= 8 Kb)|udt|Udt|Varbinary|  
+|CLR UDT (\<= 8Kb)|udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|imagen|  
 |ntext|varchar|varchar|Texto|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  

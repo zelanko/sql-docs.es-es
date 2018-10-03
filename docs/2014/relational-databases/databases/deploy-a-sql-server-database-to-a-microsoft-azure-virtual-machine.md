@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploymentwizard.deploymentsettings.f1
@@ -42,16 +40,15 @@ helpviewer_keywords:
 - Deploy a SQL Server database to Azure
 - Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc5399a395a53f2e37103b5516b0e707eb8c0335
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c17e29b5a41930f954e5cad6b67fccbaa1cc086d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158516"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207535"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Implementar una base de datos de SQL Server en una máquina virtual de Microsoft Azure
   Use la **implementar una base de datos de SQL Server en una máquina virtual de Windows Azure** Asistente para implementar una base de datos de una instancia de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una máquina Virtual de Azure de Windows (VM). El asistente emplea una operación de copia de seguridad completa de la base de datos, por lo que siempre copia todo el esquema de la base de datos y los datos de una base de datos de usuario de SQL Server. El asistente también realiza toda la configuración de Azure VM, por lo que no se requiere ninguna configuración previa de la VM.  

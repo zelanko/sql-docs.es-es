@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.design.f1
 ms.assetid: 17f24c8d-43cd-4f4d-83b3-a41ee8fbe8e8
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8ea979da7db4f0288a01a7bfe9655d1fb34518d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28774dc49ba3052ee01d197570f3de87f7363cf2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316035"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189774"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>Diseño (panel de la vista Predicción de modelo de minería de datos)
   El panel **Diseño** contiene el Generador de consultas de predicción, que puede utilizar para generar predicciones de minería de datos. Puede diseñar consultas de predicción que usen tablas de datos de entrada de una vista del origen de datos para generar predicciones masivas o puede crear consultas de predicción singleton que permiten proporcionar valores individuales.  
@@ -75,7 +72,7 @@ ms.locfileid: "37316035"
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**Columna del modelo de minería de datos**|Muestra las columnas del modelo de minería de datos contenidas en el modelo de minería de datos seleccionado en la tabla **Modelo de minería de datos** .|  
-|**Value**|Seleccione un valor de la lista que contiene cada estado posible de la columna del modelo de minería de datos que se ha seleccionado.<br /><br /> Si la columna es una columna de tabla anidada, haga clic en la celda de valor para abrir el cuadro de diálogo **Entrada de tabla anidada** .|  
+|**Valor**|Seleccione un valor de la lista que contiene cada estado posible de la columna del modelo de minería de datos que se ha seleccionado.<br /><br /> Si la columna es una columna de tabla anidada, haga clic en la celda de valor para abrir el cuadro de diálogo **Entrada de tabla anidada** .|  
   
  **Source**  
  Seleccione el origen que contiene el campo que utilizará para la columna. Puede usar el modelo de minería de datos seleccionado en la tabla **Modelo de minería de datos** , la tabla o las tablas seleccionadas en la tabla **Seleccionar tabla(s) de entrada** , una función de predicción o una expresión personalizada.  

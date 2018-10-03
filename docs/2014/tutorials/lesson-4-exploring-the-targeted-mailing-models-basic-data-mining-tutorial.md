@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1e00c5b9-a9f8-4503-99ee-377c9cc02d7f
-caps.latest.revision: 51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1afd478583520bddb2f0990b282e3f96c851feb1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 820a65ce9d45a72fe6a7629aebb7bb10374dbfae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269841"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147324"
 ---
 # <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>Lección 4: Explorar los modelos de correo directo (tutorial básico de minería de datos)
   Una vez procesados los modelos del proyecto, puede explorarlos para buscar tendencias interesantes. Puesto que los patrones pueden ser complejos y difíciles simplemente examinando números, Minería de datos de SQL Server proporciona algunas herramientas visuales que le ayudan a investigar los datos y entender las reglas y relaciones que los algoritmos han detectado en los datos. También puede utilizar diversas pruebas de precisión para validar el conjunto de datos o detectar qué modelo funciona mejor antes de implementarlo.  

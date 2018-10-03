@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backing up filegroups [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - filegroups [SQL Server], backing up
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
-caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f453d2f34713a4a00b1a5d99870f3597ac32262e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: daf6011e57279d9142fe5ff0828872d80c197954
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332655"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105575"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Realizar copias de seguridad de archivos y grupos de archivos (SQL Server)
   En este tema se describe cómo realizar copias de seguridad de archivos y grupos de archivos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell. Cuando el tamaño y los requisitos de rendimiento de la base de datos hagan que no sea práctico realizar una copia de seguridad completa de la base de datos, puede crear una copia de seguridad de archivo en su lugar. Una *copia de seguridad de archivos* contiene todos los datos de uno o varios archivos (o grupos de archivos). Para obtener más información sobre las copias de seguridad de archivos, vea [Copias de seguridad de archivos completas &#40;SQL Server&#41;](full-file-backups-sql-server.md) y [Copias de seguridad diferenciales &#40;SQL Server&#41;](differential-backups-sql-server.md).  

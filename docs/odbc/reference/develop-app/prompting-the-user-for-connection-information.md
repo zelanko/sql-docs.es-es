@@ -1,13 +1,11 @@
 ---
-title: Preguntar al usuario información de conexión | Documentos de Microsoft
+title: Preguntar al usuario información de conexión | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connecting to data source [ODBC], SqlConnect
@@ -20,35 +18,35 @@ helpviewer_keywords:
 - prompting user for connection information [ODBC]
 - SQLDriverConnect function [ODBC], prompting user for connection information
 ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 305d8bf4c3e18fdb610c6b67b7c678c43e83c6f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 58df84bf96306a2cfbc0567a3d5f6cb13514a06e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805573"
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Preguntar al usuario información de conexión
-Si la aplicación utiliza **SQLConnect** y debe pedir al usuario ninguna información de conexión, como un nombre de usuario y una contraseña, debe hacerlo propio. Mientras que esto permite que la aplicación controlar su "apariencia y funcionamiento", se puede forzar a la aplicación para que contenga código específico del controlador. Esto se produce cuando la aplicación debe solicitar al usuario información de conexión específicos del controlador. Esto presenta una situación posible para las aplicaciones genéricas, que están diseñados para trabajar con todos los controladores, incluidos los controladores que no existen cuando se escribe la aplicación.  
+Si la aplicación usa **SQLConnect** y debe pedir al usuario información de conexión, por ejemplo, un nombre de usuario y una contraseña, debe hacerlo propio. Aunque esto permite que la aplicación controlar su "aspecto", es posible que obligue a la aplicación para que contenga código específico del controlador. Esto se produce cuando la aplicación debe solicitar al usuario información de conexión específicos del controlador. Esto presenta una situación imposible para las aplicaciones genéricas, que están diseñados para funcionar con todos los controladores, incluidos los controladores que no existen cuando se escribe la aplicación.  
   
- **SQLDriverConnect** puede pedir al usuario información de conexión. Por ejemplo, el programa personalizado que se ha mencionado anteriormente podría pasar la cadena de conexión siguiente a **SQLDriverConnect**:  
+ **SQLDriverConnect** puede pedir al usuario información de conexión. Por ejemplo, el programa personalizado que se ha mencionado anteriormente podría pasar la cadena de conexión siguientes para **SQLDriverConnect**:  
   
 ```  
 DSN=XYZ Corp;  
 ```  
   
- El controlador, a continuación, podría mostrar un cuadro de diálogo que solicita el Id. de usuario y contraseñas, similares a la siguiente ilustración.  
+ El controlador, a continuación, puede aparecer un cuadro de diálogo que solicita el Id. de usuario y contraseñas, similares a la siguiente ilustración.  
   
- ![Cuadro de diálogo que pide Id. de usuario y contraseñas](../../../odbc/reference/develop-app/media/pr18.gif "pr18")  
+ ![Cuadro de diálogo que solicita los identificadores de usuario y contraseñas](../../../odbc/reference/develop-app/media/pr18.gif "pr18")  
   
- Que el controlador puede solicitar información de conexión es especialmente útil para aplicaciones verticales y no genéricos. Estas aplicaciones no deben contener información específica del controlador, y tener el indicador de controlador de la información que necesita mantiene esa información fuera de la aplicación. Esto se muestra con los dos ejemplos anteriores. Cuando la aplicación pasa sólo el nombre del origen de datos para el controlador, la aplicación no contenía ninguna información específica del controlador y, por tanto, no estuviera asociada a un controlador específico. Cuando la aplicación pasa una cadena de conexión completa para el controlador, se ha asociado al controlador que podría interpretar esa cadena.  
+ Que el controlador puede solicitar información de conexión es especialmente útil para aplicaciones genéricas y verticales. Estas aplicaciones no deben contener información específica del controlador, y tener el símbolo del sistema de controlador para la información que necesita mantiene esa información fuera de la aplicación. Esto se muestra mediante los dos ejemplos anteriores. Cuando la aplicación pasa sólo el nombre del origen de datos para el controlador, la aplicación no contiene ninguna información específica del controlador y no por lo tanto, se ha asociado a un controlador determinado. Cuando la aplicación pasa una cadena de conexión completa para el controlador, que se ha vinculado al controlador que se podría interpretar esa cadena.  
   
- Una aplicación genérica podría tardar un paso más y ni siquiera especificar un origen de datos. Cuando **SQLDriverConnect** recibe una cadena de conexión vacía, el Administrador de controladores muestra el cuadro de diálogo siguiente.  
+ Una aplicación genérica podría realizar un paso más y ni siquiera especificar un origen de datos. Cuando **SQLDriverConnect** recibe una cadena de conexión vacía, el Administrador de controladores se muestra el cuadro de diálogo siguiente.  
   
- ![Cuadro de diálogo Selección de origen de datos](../../../odbc/reference/develop-app/media/ch06a.gif "CH06A")  
+ ![Seleccione origen de datos de cuadro de diálogo](../../../odbc/reference/develop-app/media/ch06a.gif "CH06A")  
   
- Cuando el usuario selecciona un origen de datos, el Administrador de controladores construye una cadena de conexión especifica ese origen de datos y lo pasa al controlador. El controlador, a continuación, puede solicitar al usuario información adicional que necesita.  
+ Después de que el usuario selecciona un origen de datos, el Administrador de controladores construye una cadena de conexión especifica ese origen de datos y lo pasa al controlador. El controlador, a continuación, puede pedir al usuario para cualquier información adicional que necesita.  
   
- Las condiciones en las que el controlador solicita al usuario se controlan mediante la *DriverCompletion* marca; hay opciones para siempre le preguntará, símbolo del sistema si es necesario o nunca símbolo del sistema. Para obtener una descripción completa de esta marca, consulte la [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) descripción de la función.
+ Las condiciones en las que el controlador solicita al usuario se controlan mediante el *DriverCompletion* marca; hay opciones para Preguntar siempre, símbolo del sistema si es necesario o nunca solicitar. Para obtener una descripción completa de esta marca, vea el [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) descripción de la función.

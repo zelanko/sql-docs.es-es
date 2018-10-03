@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 099d9f8ccb24e2675f61c89f277d82984901cd4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b2d11854134eb7b83182b35b113b591687f2775
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168156"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095116"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>Usar referencias a las colecciones DataSources y DataSets (Generador de informes y SSRS)
   La colección `DataSources` representa todos los orígenes de datos usados en un informe. De forma similar, la `DataSets` colección representa todos los conjuntos de datos para todos los orígenes de datos en un informe. Use el panel **Datos de informe** para obtener acceso a una vista jerárquica en la que aparezcan los conjuntos de datos de informe organizados debajo del origen de datos al que hacen referencia. Si incluye referencias a estas colecciones, no verá los valores cuando obtenga acceso a una vista previa del informe. Estas colecciones solo están disponibles una vez publicado el informe en un servidor de informes.  
@@ -32,7 +29,7 @@ ms.locfileid: "37168156"
   
 |**Variable**|`Type`|**Descripción**|  
 |------------------|--------------|---------------------|  
-|`DataSourceReference`|`String`|Ruta de acceso completa de la definición de origen de datos en el servidor de informes. Por ejemplo, puede incluir una lista de todos los orígenes de datos que usó un informe como parte de un historial de informes. En el ejemplo siguiente se muestra la ruta de acceso completa del origen de datos denominado AdventureWorks2012:<br /><br /> `/DataSources/AdventureWorks2012`.|  
+|`DataSourceReference`|`String`|Ruta de acceso completa de la definición de origen de datos en el servidor de informes. Por ejemplo, puede incluir una lista de todos los orígenes de datos que usó un informe como parte de un historial de informes. En el ejemplo siguiente se muestra la ruta de acceso completa del origen de datos denominado AdventureWorks2012:<br /><br /> `/DataSources/AdventureWorks2012` |  
 |`Type`|`String`|Tipo de proveedor de datos para el origen de datos. Por ejemplo, `SQL`.|  
   
 ## <a name="datasets"></a>DataSets  

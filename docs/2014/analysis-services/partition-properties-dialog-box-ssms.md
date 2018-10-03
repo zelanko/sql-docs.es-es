@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionpropertiesdialog.f1
 ms.assetid: dfb5b7a0-7543-4e5e-8a30-4b734606e157
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 30192ebd1ac739612e36f6895e22e455419a7449
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d70903f580d55d674b099312c04a24632ac1d701
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241675"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113205"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>Propiedades de la partición (cuadro de diálogo, SSMS)
   Use el cuadro de diálogo **Propiedades de la partición** de SQL Server Management Studio para definir las propiedades de una partición para un cubo de una base de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

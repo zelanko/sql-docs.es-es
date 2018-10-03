@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6260e911-ea8b-4c69-a39d-d1bccd565a32
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cf5fc254aff0398b40605fdc6c568d9dc01b3a60
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 00f4c86dd09dd9b88959415459151d4cef518d57
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216275"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099535"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Tarea 3: crear y ejecutar un proyecto de calidad de datos para buscar coincidencias
   En esta tarea, creará un proyecto de calidad de datos para la actividad de búsqueda de coincidencias y ejecutará el proceso de coincidencia en los datos limpios de proveedores para quitar duplicados en los datos.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS containers
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - control flow [Integration Services], containers
 - SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06ba65f48edc9434eb1cec485e0f219958e52a1e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 520f237c4f73708841a6e1f46c1bd14d49c84fa4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283631"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200815"
 ---
 # <a name="integration-services-containers"></a>Contenedores de Integration Services
   Los contenedores son objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que proporcionan estructura a los paquetes y servicios a las tareas. Permiten repetir flujos de control en paquetes y agrupan tareas y contenedores en unidades de trabajo significativas. Los contenedores pueden incluir otros contenedores, además de tareas.  
@@ -65,7 +62,7 @@ ms.locfileid: "37283631"
 |`ForcedExecutionValueType`|Tipo de datos de `ForcedExecutionValue`. El valor predeterminado de esta propiedad es `Int32`.|  
 |`ForceExecutionResult`|Valor que especifica el resultado forzado de la ejecución del paquete o contenedor. Los valores son `None`, `Success`, `Failure`, y `Completion`. El valor predeterminado para esta propiedad es `None`.<br /><br /> Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>.|  
 |`ForceExecutionValue`|Valor booleano que especifica si se debería forzar a que el valor de ejecución opcional del contenedor contenga un valor concreto. El valor predeterminado de esta propiedad es `False`.<br /><br /> Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>.|  
-|`ID`|GUID del contenedor, que se asigna cuando se crea el paquete. Esta propiedad es de solo lectura.<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>.|  
+|`ID`|GUID del contenedor, que se asigna cuando se crea el paquete. Esta propiedad es de solo lectura.<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A> |  
 |`IsolationLevel`|Nivel de aislamiento de la transacción del contenedor. Los valores son `Unspecified`, `Chaos`, `ReadUncommitted`, `ReadCommitted`, `RepeatableRead`, `Serializable` y `Snapshot`. El valor predeterminado de esta propiedad es `Serializable`. Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
 |`LocaleID`|Una configuración regional de Microsoft Win32. El valor predeterminado de esta propiedad es la configuración regional del sistema operativo del equipo local.<br /><br /> Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>.|  
 |`LoggingMode`|Valor que especifica el comportamiento de registro del contenedor. Los valores son `Disabled`, `Enabled`, y `UseParentSetting`. El valor predeterminado de esta propiedad es `UseParentSetting`. Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  

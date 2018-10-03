@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - flexible failover policy
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f3b48cf86ed58813c8bcaccea0506e55feb7927a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2114b180a1ecabf3f792437a113b9f4bedef8a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238195"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218225"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Directiva de conmutación por error para instancias de clústeres de conmutación por error
   En una instancia de clúster de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , solo puede haber un nodo propietario del grupo de recursos de clúster de conmutación por error de Windows Server (WSFC) en cada momento. Las solicitudes del cliente se sirven a través de este nodo de la FCI. En caso de que se produzca un error o un reinicio incorrecto, la propiedad del grupo se traslada a otro nodo de WSFC de la FCI. Este proceso se denomina conmutación por error. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aumenta la confiabilidad de la detección de errores y proporciona una directiva de conmutación por error flexible.  

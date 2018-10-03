@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.hierarchieslevelspane.f1
 ms.assetid: c37db6c1-b5a5-44e1-ae6d-a96fb9769e68
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0bb71e3340fad2c94f844265b313cf8e533f4db5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 819d073ba286f0674dc3470a7e8d9d6469318b7f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234315"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133995"
 ---
 # <a name="hierarchies-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Jerarquías (pestaña Estructura de dimensión, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Use el panel **Jerarquías** para administrar las jerarquías y los niveles de la dimensión seleccionada actualmente. Para más información, vea [Crear jerarquías definidas por el usuario](multidimensional-models/user-defined-hierarchies-create.md).  

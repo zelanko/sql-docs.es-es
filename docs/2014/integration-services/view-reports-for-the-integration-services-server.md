@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dd81edf9-58a9-425a-91ac-2873606e820a
-caps.latest.revision: 8
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f379b41d4620197db75ffdd29b80295ee5dc67d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e9ccae1f9ff9d2ab69408e36d8c8ef1cc071eaf9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190565"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077227"
 ---
 # <a name="view-reports-for-the-integration-services-server"></a>Ver informes del servidor de Integration Services
   En la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], existen informes estándares en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para ayudarle a supervisar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proyectos que se han implementado en el [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server.  Para más información sobre los informes, vea [Informes para el servidor de Integration Services](../../2014/integration-services/reports-for-the-integration-services-server.md).  

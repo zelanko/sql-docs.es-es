@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.celldata.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - cells [Analysis Services]
 - custom cell data access [Analysis Services]
 ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4932341742a0760b1bfb1ccab502cbf960aa01d9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c45471990d3eac42c8805fc9c6ba820a9762627
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317115"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105175"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Otorgar acceso personalizado a los datos de las celdas (Analysis Services)
   La seguridad de celdas se usa para permitir o denegar el acceso para medir los datos de un cubo. En la siguiente ilustración presentamos una combinación de medidas permitidas y denegadas en una tabla dinámica, cuando se está conectado como usuario con un rol que solamente permite el acceso a ciertas medidas. En este ejemplo, **Importe de venta del distribuidor** y **Coste total del producto del distribuidor** son las únicas medidas disponibles mediante este rol. El resto de medidas se deniegan de forma implícita (los pasos que se siguen para obtener este resultado se describen a continuación, en la sección siguiente: Permitir el acceso a medidas específicas).  

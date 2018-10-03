@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 416df50128170da643f3a6c3e4fabf8cfe9d3b42
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: cc47b7a8ba7090064983063ab579bd8ac8a1ccbb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085057"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142095"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Preparar los datos de uso de PowerShell (tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -265,9 +265,9 @@ Al descargar los archivos del repositorio de GitHub, obtendrá lo siguiente:
 
 Los datos son una muestra representativa del conjunto de datos de taxis de Nueva York, que contiene los registros de más de 173 millones de carreras individuales en 2013, incluidas las tarifas y las propinas pagadas por cada carrera. Para que sea más fácil trabajar con los datos, el equipo de ciencia de datos de Microsoft redujo el tamaño del muestreo para obtener solo un 1 % de los datos.  Estos datos se han compartido en un contenedor de almacenamiento de blobs público en Azure, en formato .CSV. Los datos de origen están un archivo sin comprimir, justo debajo de 350 MB.
 
-+ Conjunto de datos público: [Ciudad de Nueva York y limusinas Comisión] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ Conjunto de datos público: [taxis de Nueva York y limusinas Comisión](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
-+ [Creación de modelos de aprendizaje automático de Azure en el conjunto de datos de taxis de Nueva York] (https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
++ [Creación de modelos de aprendizaje automático de Azure en el conjunto de datos de taxis de Nueva York](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/).
 
 ### <a name="powershell-and-r-script-files"></a>Archivos de script de PowerShell y R
 

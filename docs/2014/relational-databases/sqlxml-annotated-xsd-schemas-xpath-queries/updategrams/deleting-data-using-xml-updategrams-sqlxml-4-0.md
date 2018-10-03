@@ -1,14 +1,12 @@
 ---
-title: Eliminar datos con diagramas de actualización XML (SQLXML 4.0) | Microsoft Docs
+title: Eliminar datos con diagramas de actualización XML (SQLXML 4.0) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - <after> block
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - mapping-schema attribute
 - record deletions [SQLXML]
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f61b29a0516cab83b14d2162d7dd71b1ac5b8926
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d16d27583854988a6e937c0859239875e15616f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321825"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220305"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>Eliminar datos con diagramas de actualización XML (SQLXML 4.0)
   Un diagrama de actualización indica una operación de eliminación cuando una instancia de registro aparece en el  **\<antes >** bloque sin ningún registro correspondiente en el  **\<después >** bloque. En este caso, el diagrama de actualización elimina el registro en el  **\<antes >** bloque desde la base de datos.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - FontName Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - FontName element
 ms.assetid: 5560a852-9745-4abb-93d8-9cebe8a9897c
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d1b179415e7b64c4d64090df6168fcc492ab1c30
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2f3894711625d1ea121e7744a0d58ed46ac6cafa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289531"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090545"
 ---
 # <a name="fontname-element-assl"></a>Elemento FontName (ASSL)
   Describe las características de presentación relacionadas con la fuente de la [CalculationProperty](../objects/calculationproperty-element-assl.md) o [medida](../objects/measure-element-assl.md) elemento primario.  
@@ -46,7 +43,7 @@ ms.locfileid: "37289531"
 </CalculationProperty>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37289531"
 |Elementos primarios|[CalculationProperty](../objects/calculationproperty-element-assl.md), [medida](../objects/measure-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El `FontName` propiedad contiene una expresión MDX (expresiones multidimensionales) y se aplica a `CalculationProperty` los elementos que tienen un [CalculationType](calculationtype-element-assl.md) de *miembro* o *celdas* .  
   
  Los elementos que corresponden a los elementos primarios de `FontName` en el modelo de objetos de Analysis Management Objects (AMO) son <xref:Microsoft.AnalysisServices.CalculationProperty> y <xref:Microsoft.AnalysisServices.Measure>.  

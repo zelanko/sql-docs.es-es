@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
-caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2772db639b664724ee6d594d061f6c9ccdc847cf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c69e1d2021e4c92dc87bd866ec851d0a3349fe1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262011"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139465"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>Nueva programación: Editar página de programación (Administrador de informes)
   Utilice la página Nueva programación/Editar programación para crear una programación para un informe. Las programaciones se usan con las suscripciones para actualizar los informes almacenados en caché y para crear instantáneas como elementos independientes o en un historial de informes.  

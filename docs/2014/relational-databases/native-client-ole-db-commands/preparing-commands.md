@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, commands
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - commands [OLE DB]
 - command preparation [SQL Server Native Client]
 ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 231c749ec41e571de17e18405e805210e6dc4b0b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 9dada733f7729d534b66777f747560cd45530727
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428644"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186435"
 ---
 # <a name="preparing-commands"></a>Preparar comandos
   El proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client admite la preparación de comandos para la ejecución múltiple y optimizada de un único comando; sin embargo, la preparación de comandos genera una sobrecarga, y no es necesario que un consumidor prepare un comando para ejecutarlo más de una vez. En general, un comando debería prepararse si va a ejecutarse más de tres veces.  
@@ -42,13 +39,13 @@ ms.locfileid: "37428644"
   
  La propiedad de inicialización SSPROP_INIT_USEPROCFORPREP específica del proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client controla la creación del procedimiento almacenado temporal. Si el valor de la propiedad es SSPROPVAL_USEPROCFORPREP_ON o SSPROPVAL_USEPROCFORPREP_ON_DROP, el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client intenta crear un procedimiento almacenado cuando se prepara un comando. La creación del procedimiento almacenado se realiza correctamente si el usuario de la aplicación tiene suficientes permisos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Los consumidores que se desconectan con poca frecuencia, la creación de procedimientos almacenados temporales puede requerir recursos significativos de **tempdb**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos del sistema en el que se crean objetos temporales. Si el valor de SSPROP_INIT_USEPROCFORPREP es SSPROPVAL_USEPROCFORPREP_ ON, los procedimientos almacenados temporales creados por el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client solamente se quitan cuando la sesión que creó el comando pierde su conexión con la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si esa conexión es la conexión predeterminada creada durante la inicialización del origen de datos, el procedimiento almacenado temporal solamente se quita cuando se cancela la inicialización del origen de datos.  
+ En el caso de los consumidores que se desconectan con poca frecuencia, la creación de procedimientos almacenados temporales puede requerir recursos significativos de **tempdb**, la base de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que se crean los objetos temporales. Si el valor de SSPROP_INIT_USEPROCFORPREP es SSPROPVAL_USEPROCFORPREP_ ON, los procedimientos almacenados temporales creados por el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client solamente se quitan cuando la sesión que creó el comando pierde su conexión con la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si esa conexión es la conexión predeterminada creada durante la inicialización del origen de datos, el procedimiento almacenado temporal solamente se quita cuando se cancela la inicialización del origen de datos.  
   
  Si el valor de SSPROP_INIT_USEPROCFORPREP es SSPROPVAL_USEPROCFORPREP_ON_DROP, los procedimientos almacenados temporales del proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client se quitan cuando ocurre una de estas cosas:  
   
--   El consumidor usa **ICommandText:: SetCommandText** para indicar un nuevo comando.  
+-   El consumidor usa **ICommandText::SetCommandText** para indicar un nuevo comando.  
   
--   El consumidor usa **ICommandPrepare:: Unprepare** para indicar que ya no requiere el texto del comando.  
+-   El consumidor usa **ICommandPrepare::Unprepare** para indicar que ya no requiere el texto del comando.  
   
 -   El consumidor libera todas las referencias al objeto de comando utilizando el procedimiento almacenado temporal.  
   

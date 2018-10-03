@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 474308339c112899787a4b6344bbe53622f4fff7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e3eff042078ad7dde6352c3826103bc680da432
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230105"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068946"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>Actualización de datos programada y orígenes de datos no compatibles con la Autenticación de Windows (PowerPivot para SharePoint)
   En este tema se describe un flujo de trabajo de nuevos datos de programación de PowerPivot para SharePoint que pueden usar orígenes de datos que **NO** admiten la autenticación de Windows. Por ejemplo, orígenes de datos Oracle o IBM DB2. Las ilustraciones y los pasos de este tema hacen referencia a orígenes de datos Oracle, pero se aplica el mismo flujo de trabajo a otros orígenes de datos.  

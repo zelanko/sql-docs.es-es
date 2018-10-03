@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services, SSIS Designer
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SSIS Designer, about SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bfb0e983759304191c9c66b2d2679bccb1b76695
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 18f8ee2b794488a098e68ff54803b624c8fa4455
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151106"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144725"
 ---
 # <a name="ssis-designer"></a>Diseñador SSIS
   [!INCLUDE[ssIS](../includes/ssis-md.md)] es una herramienta gráfica que se puede usar para crear y mantener paquetes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssIS](../includes/ssis-md.md)] está disponible en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] como parte de un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
-caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 747121123f3a654ccd475913ffe8b4a8c7e79be0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 24e303409568f028ff57cf189cad4f1022111e82
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290311"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202735"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>Página de propiedades generales, conjuntos de datos compartidos (Administrador de informes)
   Utilice la página Conjunto de datos compartido para ver y administrar las propiedades de un elemento de conjunto de datos compartido.  

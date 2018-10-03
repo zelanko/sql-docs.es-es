@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.spatialindexes
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 207a5df2cc4641819eb2b06ddb0fe1aec6d4d984
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 3ef93973a6be743a6c79b2ba46c2f05d2af6bae5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815631"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113365"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Cuadro de diálogo Índices espaciales (Visual Database Tools)
   Use el cuadro de diálogo **Índices espaciales** para crear índices para las columnas del tipo de datos **geometry** o **geography** (*columnas espaciales*) que no pueden indizarse mediante el cuadro de diálogo **Índice y claves** . Cada columna espacial puede tener más de un índice espacial, pero se deben crear de uno en uno.  

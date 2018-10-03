@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.sorting.f1
@@ -19,16 +17,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.general.f1
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4ba8d34b6f56bec66ce2fc1a8f0d4024e4a45493
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b38aaceb3f40051138e124286e51922f3e8f218a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256354"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182195"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtrar, agrupar y ordenar datos (Generador de informes y SSRS)
   En un informe, las expresiones sirven para ayudar a controlar, organizar y ordenar los datos de informe. De forma predeterminada, cuando se crean conjuntos de datos y se diseñan informes, las propiedades de los elementos de informe están se establecen de forma automática en las expresiones basadas en los campos de conjunto de datos, los parámetros y otros elementos que aparecen en el panel Datos de informe. Puede agregar también un botón de ordenación interactivo a una tabla o a una celda de la matriz para permitir a los usuarios cambiar el criterio de ordenación de las filas para los grupos o las filas dentro de los grupos.  

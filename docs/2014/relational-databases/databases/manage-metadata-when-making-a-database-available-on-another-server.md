@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cross-database queries [SQL Server]
@@ -34,16 +32,15 @@ helpviewer_keywords:
 - credentials [SQL Server], metadata
 - copying databases
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-caps.latest.revision: 82
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cbea790b9376f254be6c1de3179cc1057d5f8b7c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 15b32fd7e81c098c26571254f9017152135406e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207215"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198505"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia de servidor (SQL Server)
   Este tema es pertinente en las siguientes situaciones:  
@@ -226,7 +223,7 @@ ms.locfileid: "37207215"
   
      Para crear o ejecutar trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , primero debe agregar en la instancia de servidor de destino cualquier inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que el trabajo requiera. Para obtener más información, vea [Configurar un usuario para crear y administrar trabajos del Agente SQL Server](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cuenta de inicio del servicio del Agente  
+-   Cuenta de inicio del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
      La cuenta de inicio del servicio define la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus permisos de red. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta como una cuenta de usuario especificada. El contexto del servicio del Agente afecta a la configuración del trabajo y a su entorno de ejecución. La cuenta debe tener acceso a los recursos (como por ejemplo, los recursos compartidos de red) que requiere el trabajo. Para obtener información sobre cómo seleccionar y modificar la cuenta de inicio del servicio, vea [Seleccionar una cuenta para el servicio del Agente SQL Server](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md).  
   
@@ -345,7 +342,7 @@ ms.locfileid: "37207215"
  [&#91;Principio&#93;](#information_entities_and_objects)  
   
 ##  <a name="startup_procedures"></a> Startup Procedures  
- Un procedimiento de inicio es un procedimiento almacenado que se marca para su ejecución automática y se ejecuta cada vez que se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si la base de datos depende de algún procedimiento de inicio, se deben definir en la instancia de servidor de destino y configurarse para su ejecución automática durante el inicio.  
+ Un procedimiento de inicio es un procedimiento almacenado que se marca para su ejecución automática y se ejecuta cada vez que se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la base de datos depende de algún procedimiento de inicio, se deben definir en la instancia de servidor de destino y configurarse para su ejecución automática durante el inicio.  
   
  [&#91;Principio&#93;](#information_entities_and_objects)  
   

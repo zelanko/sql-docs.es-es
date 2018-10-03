@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bulk exporting [SQL Server], format files
 - bulk importing [SQL Server], format files
 - format files [SQL Server]
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e4097436b9e921b3bd0228fe98b399fdf1eade4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: be5092eef0cab7d4f9681df91c933c94291dc4bc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292735"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093775"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>Archivos de formato para importar o exportar datos (SQL Server)
   Al importar masivamente datos en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o exportar masivamente datos de una tabla, puede usar un *archivo de formato* para almacenar toda la información de formato necesaria para exportar o importar datos masivamente. Esto incluye la información de formato para cada campo de un archivo de datos relativo a la tabla.  

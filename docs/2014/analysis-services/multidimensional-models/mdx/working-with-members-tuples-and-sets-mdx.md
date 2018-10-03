@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], tuples
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - tuples
 - set functions [MDX]
 ms.assetid: b6ec2439-caef-46d3-9fd7-5f4526cee334
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fbd4fa53eb870bc8422dcb80fe019083e773e638
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 570d812400a35a45d59f97901b9be698abc21863
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153266"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154095"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>Trabajar con miembros, tuplas y conjuntos (MDX)
   MDX proporciona varias funciones que devuelven uno o más miembros, tuplas o conjuntos; o que actúan sobre un miembro, tupla o conjunto.  

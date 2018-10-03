@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 10/07/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, security
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Merge Agent, security
 - replication [SQL Server], agents and profiles
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
-caps.latest.revision: 70
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c093e7605e4adb86b3b1f42e12f90db83b962aa0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b17b7cccec50c9dc8d1eccc5cb6e1caacee47e2a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204995"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135674"
 ---
 # <a name="replication-agent-security-model"></a>Modelo de seguridad del Agente de replicación
   El modelo de seguridad del agente de replicación permite un control concreto sobre las cuentas con las que los agentes de replicación se ejecutan y realizan conexiones: se puede especificar una cuenta diferente para cada agente. Para obtener más información sobre cómo especificar cuentas, vea [Administrar inicios de sesión y contraseñas en la replicación](manage-logins-and-passwords-in-replication.md).  
@@ -81,9 +78,9 @@ ms.locfileid: "37204995"
 |Agente de distribución para suscripciones de inserción en suscriptores que no sean de SQL Server|**\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<suscriptor>-\<entero>**|  
 |Agente de lectura de cola|**[\<distribuidor>].\<entero>**|  
   
- <sup>1</sup> para suscripciones de inserción a publicaciones de Oracle, es el nombre del trabajo ** \<Publisher >-\<Publisher**> en lugar de ** \<Publisher >-\< Basededatosdepublicación >**.  
+ <sup>1</sup> para suscripciones de inserción a publicaciones de Oracle, es el nombre del trabajo  **\<Publisher >-\<Publisher**> en lugar de  **\<Publisher >-\< Basededatosdepublicación >**.  
   
- <sup>2</sup> para suscripciones de extracción a publicaciones de Oracle, es el nombre del trabajo ** \<Publisher >-\<Basededatosdedistribución**> en lugar de ** \<Publisher >-\< Basededatosdepublicación >**.  
+ <sup>2</sup> para suscripciones de extracción a publicaciones de Oracle, es el nombre del trabajo  **\<Publisher >-\<Basededatosdedistribución**> en lugar de  **\<Publisher >-\< Basededatosdepublicación >**.  
   
  Al configurar la replicación se especifican las cuentas en las que se ejecutarán los agentes. No obstante, todos los pasos del trabajo se ejecutan en el contexto de seguridad de un *proxy*, por lo que la replicación lleva a cabo internamente las siguientes asignaciones para las cuentas de agente que especifique:  
   

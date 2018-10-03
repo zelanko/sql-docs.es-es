@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - inserted tables
@@ -20,12 +18,12 @@ ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f5a195b0cd15716b87f050db5dd835c602303a2f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: bc9bb9b663841641c88d61ffce0073de658b334d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427644"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220951"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Usar las tablas insertadas y eliminadas
   En las instrucciones de desencadenadores DML se usan dos tablas especiales: la tabla inserted y la tabla deleted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea y administra automáticamente ambas tablas. Puede utilizar estas tablas temporales residentes en memoria para probar los efectos de determinadas modificaciones de datos y para establecer condiciones para las acciones de los desencadenadores DML. No puede modificar directamente los datos de estas tablas ni realizar en ellas operaciones de lenguaje de definición de datos (DDL), como CREATE INDEX.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfiledest.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - writing raw data
 - Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8898d3932b809596bbbc0aa415c34bfdb4200c72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 515f6ffe76b451b621ceded394a22483ce59b2cf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239285"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188095"
 ---
 # <a name="raw-file-destination"></a>destino de archivo sin formato
   El destino de archivo sin formato escribe datos sin procesar en un archivo. Como el formato de los datos es el nativo del destino, no es necesario traducir los datos y prácticamente no es necesario analizar el archivo. Esto significa que el destino de archivo sin formato puede escribir datos más rápidamente que otros destinos, como el destino de archivo plano o los destinos de OLE DB.  

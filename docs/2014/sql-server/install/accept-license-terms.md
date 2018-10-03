@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - license terms
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Registration Information page [SQL Server Installation Wizard]
 - SQL Server Installation Wizard, Registration Information page
 ms.assetid: 08dd739d-5817-4418-bcff-74ab7f8bbd33
-caps.latest.revision: 38
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b060499f9b3a008e0106455afde5f1a7691d90f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 631ae416116832c725de8335780db87c03811320
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260101"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141567"
 ---
 # <a name="accept-license-terms"></a>Aceptar los términos de licencia
   Use la **Aceptar los términos de licencia** página de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para aceptar los términos de licencia para esta versión del Asistente para la instalación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

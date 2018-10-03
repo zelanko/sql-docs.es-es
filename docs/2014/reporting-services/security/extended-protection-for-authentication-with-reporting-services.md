@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e1de2e37101fe69c1593169d68f314e23e6b9775
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2a857d433a39958c6018ef8026de2ca3e1efba1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288771"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168265"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protección ampliada para la autenticación con Reporting Services
   En versiones recientes del sistema operativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, la protección ampliada es un conjunto de mejoras. La protección ampliada mejora cómo protegen las aplicaciones las credenciales y la autenticación. La propia característica no proporciona directamente protección contra ataques específicos como el reenvío de credenciales, pero proporciona una infraestructura para aplicaciones como [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para aplicar la protección ampliada para la autenticación.  
@@ -114,7 +111,7 @@ ms.locfileid: "37288771"
 ###  <a name="ConfigurationSettings"></a> Configuración de la protección ampliada de los servicios de informes  
  En la tabla siguiente proporciona información sobre las opciones de configuración que aparecen en la `rsreportserver.config` para la protección extendida.  
   
-|Configuración|Descripción|  
+|Parámetro|Descripción|  
 |-------------|-----------------|  
 |`RSWindowsExtendedProtectionLevel`|Especifica el grado de aplicación de la protección ampliada. Los valores válidos son `Off`, `Allow`, y `Require`.<br /><br /> El valor predeterminado es `Off`.<br /><br /> El valor `Off` especifica que no existe comprobación de enlace de canal ni de enlace de servicio.<br /><br /> El valor `Allow` admite la protección ampliada pero no la necesita. El valor Allow especifica:<br /><br /> La protección ampliada se aplicará en las aplicaciones cliente que se ejecuten en sistemas operativos que la admitan. La forma de aplicar la protección la determina la opción `RsWindowsExtendedProtectionScenario`.<br /><br /> Se permitirá la autenticación en aplicaciones que se ejecuten en sistemas operativos que no sean compatibles con la protección ampliada.<br /><br /> El valor `Require` especifica:<br /><br /> La protección ampliada se aplicará en las aplicaciones cliente que se ejecuten en sistemas operativos que la admitan.<br /><br /> **No** se permitirá la autenticación en aplicaciones que se ejecuten en sistemas operativos que no sean compatibles con la protección ampliada.|  
 |`RsWindowsExtendedProtectionScenario`|Especifica las formas de la protección ampliada que se validan: enlace de canal, enlace de servicio o ambos. Los valores válidos son `Any`, `Proxy`, y `Direct`.<br /><br /> El valor predeterminado es `Proxy`.<br /><br /> El valor `Any` especifica:<br /><br /> -No se necesitan la autenticación de Windows NTLM, Kerberos ni Negotiate, ni ningún enlace de canal.<br /><br /> -Se aplica el enlace de servicio.<br /><br /> El valor `Proxy` especifica:<br /><br /> -Si está presente, la autenticación de Windows NTLM, Kerberos y Negotiate cuando está presente un token de enlace de canal.<br /><br /> -Se aplica el enlace de servicio.<br /><br /> El valor `Direct` especifica:<br /><br /> -La autenticación de Windows NTLM, Kerberos y Negotiate cuando están presentes un CBT y una conexión SSL al servicio actual, y el CBT para que la conexión SSL coincida con el CBT del token de NTLM, Kerberos o Negotiate.<br /><br /> -No se aplica el enlace de servicio.<br /><br /> <br /><br /> Nota: Este valor se omite si `RsWindowsExtendedProtectionLevel` está establecido en `OFF`.|  

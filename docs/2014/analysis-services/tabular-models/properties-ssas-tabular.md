@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a59d3448-8619-4044-923b-8effba926dfa
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a35d8e93874e05a81c8ba479c309a6dc97735672
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c1d712f1b5445ce1293f63f66256d106e2291d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297185"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116025"
 ---
 # <a name="properties-ssas-tabular"></a>Propiedades (SSAS tabular)
   Los proyectos de modelos tabulares de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] tienen varias propiedades que definen el comportamiento del proyecto, el modelo, los informes y la implementación. Los valores de las propiedades se almacenan en formato XML en el archivo Model.bim; sin embargo, todas las propiedades descritas en esta sección se pueden configurar en las ventanas **Propiedades** de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  

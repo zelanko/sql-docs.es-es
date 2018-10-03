@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC, functions
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - ODBC, SQL Server-specific behaviors
 - functions [ODBC]
 ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
-caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d5d4850fd9a3bb51cf306bea6e960ed6bc4d9bc8
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5892aa294983a453c018afc5511cee0f88eff0a0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430464"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133422"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
   En esta sección se documentan las funciones ODBC que exhiben comportamientos concretos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se utilizan con el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. No todas las funciones ODBC se documentan aquí. Los temas individuales solamente discuten cuestiones específicas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para una función ODBC. No son una referencia completa de las funciones ODBC.  

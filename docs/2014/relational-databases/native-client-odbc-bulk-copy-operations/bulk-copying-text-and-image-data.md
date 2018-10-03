@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [ODBC], text data
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], image data
 - ODBC, bulk copy operations
 ms.assetid: 87155bfa-3a73-4158-9d4d-cb7435dac201
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae3a9685acc5746bab3d4605fe674dd4133ae2af
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c468ec3cf52526192893458055cde857aeaa864d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412982"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103835"
 ---
 # <a name="bulk-copying-text-and-image-data"></a>Copia masiva de datos de texto e imagen
   Grandes **texto**, **ntext**, y **imagen** los valores son masiva copiado mediante el [bcp_moretext](../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) función. El código [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) para el **texto**, **ntext**, o **imagen** columna con un *pData* puntero establecido en NULL indicando que le proporcionará los datos **bcp_moretext**. Es importante especificar la longitud exacta de los datos proporcionados para cada **texto**, **ntext**, o **imagen** columna en cada fila de la copia masiva. Si la longitud de los datos de una columna es diferente de la longitud de la columna especificada en [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md), utilice [bcp_collen](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) para establecer la longitud en el valor apropiado. Un [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) envía todos los que no sean de**texto**, no-**ntext**y no-**imagen** datos; a continuación, llame a **bcp_moretext** para enviar el **texto**, **ntext**, o **imagen** datos en unidades independientes. Funciones de copia masiva determinan que se han enviado todos los datos para el actual **texto**, **ntext**, o **imagen** columna cuando la suma de las longitudes de datos se envía a través de **bcp_moretext** es igual a la longitud especificada en la versión más reciente **bcp_collen** o **bcp_bind**.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataSourcePermissions Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - DataSourcePermissions element
 ms.assetid: 6e1cfbec-65b9-4942-a628-f7f7c891e35f
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 42f330e28ac9a8bd349660550cee84df075121f5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 18cecfd7cb246e37694a55893762a5675988d983
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321185"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188738"
 ---
 # <a name="datasourcepermissions-element-assl"></a>Elemento DataSourcePermissions (ASSL)
   Contiene la colección de [DataSourcePermission](../objects/datasourcepermission-element-assl.md) elementos asociados con un [DataSource](../data-type/datasource-data-type-assl.md) tipo de datos.  
@@ -46,7 +43,7 @@ ms.locfileid: "37321185"
 </DataSource>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37321185"
 |Elementos primarios|[Origen de datos](../data-type/datasource-data-type-assl.md)|  
 |Elementos secundarios|[Elemento DataSourcePermission](../objects/datasourcepermission-element-assl.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Vea también  
  [Tipo de datos Permission &#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   

@@ -1,12 +1,10 @@
 ---
-title: Procedimientos | Microsoft Docs
+title: Procedimientos | Documentos de Microsoft
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - stored procedures [ODBC]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - statements [ODBC], stored procedures
 - ODBC applications, stored procedures
 ms.assetid: c64d5f3a-376b-48ef-84f3-b6148ac8600a
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0dc145646ea93081301b20f8e04fb5840bed78a8
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8f429edc79227c815142dd0800363fcde8f20c6f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417274"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158966"
 ---
 # <a name="procedures"></a>Procedimientos
   Un procedimiento almacenado es un objeto ejecutable precompilado que contiene una o más instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Los procedimientos almacenados pueden tener parámetros de entrada y salida, y también puede generar un código de retorno de tipo entero. Una aplicación puede enumerar los procedimientos almacenados disponibles mediante funciones de catálogo.  

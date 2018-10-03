@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - process data option [Analysis Services]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - process clear structure option [Analysis Services]
 - process default option [Analysis Services]
 ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9bb9ae4163f139af76b1e746267a9d60c70d026f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b832da95e823966af1c8d259087721119eed85e0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220345"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049505"
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Opciones y valores de procesamiento (Analysis Services)
   Cuando procesa objetos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede seleccionar una opción de procesamiento para controlar el tipo de procesamiento que se produce para cada objeto. Los tipos de procesamiento difieren entre objetos y por los cambios producidos en el objeto debido a su último procesamiento. Si habilita [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para seleccionar automáticamente un método de procesamiento, el programa utilizará el método que devuelve el objeto a un estado totalmente procesado en el menor tiempo posible.  

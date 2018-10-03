@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e78882c9-b14e-4044-848e-ea7fddd3b75d
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2071ae26b20ee39b47115e4ada1695878631fc84
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0a83a2e7722fab119df3a0918ea0ecbe7c24131
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316955"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134567"
 ---
 # <a name="relationships-element-assl"></a>Elemento Relationships (ASSL)
   Contiene la colección de relaciones de la dimensión asociada.  
@@ -38,7 +35,7 @@ ms.locfileid: "37316955"
 </CubeDimension>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -53,7 +50,7 @@ ms.locfileid: "37316955"
 |Elementos primarios|[CubeDimension](../data-type/dimension-data-type-assl.md), [dimensión](../objects/dimension-element-assl.md), [PerspectiveDimension](../data-type/perspectivedimension-data-type-assl.md), [RegularMeasureGroupDimension](../data-type/measuregroupdimension-data-type-assl.md)|  
 |Elementos secundarios|[Relación](../data-type/relationship-data-type-assl.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los elementos correspondientes en el modelo de objetos de Analysis Management Objects (AMO) son <xref:Microsoft.AnalysisServices.RelationshipCollection>.  
   
 ## <a name="see-also"></a>Vea también  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createprocessingquerydialog.f1
 ms.assetid: c133d624-f35e-486e-be9f-ceafd906f168
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0744aae90a9d3995d5803bca2ccdff31012b5eeb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b162480fef7894a04d2488058a1e21b5bc40b602
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244105"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077745"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Crear consulta de procesamiento (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Crear consulta de procesamiento** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear una consulta de procesamiento en la pestaña **Notificaciones** del cuadro de diálogo **Opciones de almacenamiento** . Una consulta de procesamiento es aquella que devuelve un conjunto de filas que contiene los cambios realizados en una tabla asociada a un objeto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] desde la última vez que se sondeó la tabla, con el fin de actualizar incrementalmente la caché OLAP multidimensional (MOLAP) del objeto. Analysis Services utiliza otra consulta, denominada consulta de sondeo, para sondear una tabla asociada a un objeto y determinar si ésta ha cambiado. Las consultas de procesamiento no son necesarias para actualizar completamente la caché MOLAP del objeto.  

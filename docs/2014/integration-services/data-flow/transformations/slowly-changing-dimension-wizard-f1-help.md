@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Slowly Changing Dimension Wizard
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e6c05f7bbdfa47ab1d7e60fee879a90754a19a39
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1bf6cb9b62db574ebd5546c2c29823428addf53f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158796"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065308"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>Asistente para dimensiones variables (Ayuda F1)
   Utilice el **Asistente para dimensiones variables** para configurar la carga de datos en diferentes tipos de dimensiones de variación lenta. En esta sección se ofrece la Ayuda F1 de las páginas del **Asistente para dimensiones variables**. En la tabla siguiente se describen los temas de esta sección.  

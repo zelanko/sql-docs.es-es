@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - catalog views [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 666b6487673c5a64ccdf955a4344e61717d9038b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b85c611b01727c21059d43d04cb65134c7f2fc1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239495"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190185"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Supervisar grupos de disponibilidad (Transact-SQL)
   Para supervisar réplicas y grupos de disponibilidad y las bases de datos asociado utilizando [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] proporciona un conjunto de vistas de administración dinámica y de catálogo y propiedades del servidor. Mediante instrucciones SELECT de [!INCLUDE[tsql](../../../includes/tsql-md.md)] , puede utilizar las vistas para supervisar los grupos de disponibilidad y sus réplicas y bases de datos. La información devuelta para un grupo de disponibilidad determinado depende de si está conectado a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica principal o una réplica secundaria.  

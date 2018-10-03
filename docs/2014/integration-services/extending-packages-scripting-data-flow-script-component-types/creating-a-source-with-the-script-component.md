@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - output columns [Integration Services]
 - sources [Integration Services], components
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
-caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c837c1cefbc05118bc3880122438e0be9f7b0cbb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ce31c50c613809ba865e4ec28b5712cd8b67ac88
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150846"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197295"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Crear un origen con el componente de script
   Los componentes de origen del flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se usan para cargar datos de un origen de datos y pasarlos a transformaciones y destinos de nivel inferior. Normalmente la conexión al origen de datos se realiza a través de un administrador de conexiones existente.  

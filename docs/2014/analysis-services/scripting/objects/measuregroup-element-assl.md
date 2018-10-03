@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MeasureGroup Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MeasureGroup element
 ms.assetid: 7aa099db-5dc7-4cac-b437-f73fc0921b24
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ee73b594fde5e3a9e915615d1a343296ce846d52
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84186a736f7d3e17587a3a5457b1c7850c02f12b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163376"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089715"
 ---
 # <a name="measuregroup-element-assl"></a>Elemento MeasureGroup (ASSL)
   Define un conjunto de medidas en el mismo nivel de granularidad.  
@@ -76,7 +73,7 @@ ms.locfileid: "37163376"
 </MeasureGroups>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -102,7 +99,7 @@ ms.locfileid: "37163376"
 |[CubeBinding](../data-type/cubebinding-data-type-out-of-line-assl.md)|None|  
 |[Perspectiva](perspective-element-assl.md)|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Todas las medidas de un grupo de medidas se deben originar en una tabla única. Un grupo de medidas puede definir enlaces predeterminados que se pueden invalidar para cada partición.  
   
  El elemento `MeasureGroup` define los detalles comunes para medir grupos en cubos normales y cubos virtuales. Los subtipos independientes definen los detalles concretos de cada tipo.  

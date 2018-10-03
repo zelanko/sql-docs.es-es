@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - compliance [XML for Analysis]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - XMLA, compliance
 - extending XML for Analysis
 ms.assetid: d987d320-5581-4454-ad45-68e3a22175b6
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cc7a8da77b72f25a68764636fbe15bc2d9e4ae04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ced7dc5977955b8eca5f3843d6ddbf5fa007325
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267091"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090665"
 ---
 # <a name="xml-for-analysis-compliance-xmla"></a>Compatibilidad con XML for Analysis (XMLA)
   La especificación XML for Analysis 1.1 describe un estándar abierto que admite el acceso a datos a orígenes de datos que residen en World Wide Web. Este tema describe el nivel de compatibilidad con la especificación XML for Analysis 1.1 que sea compatible con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

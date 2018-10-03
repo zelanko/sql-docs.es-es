@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - URL configuration [Reporting Services]
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fc1acb83b6147d7767c87a04515239a0672e0e5f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b5aa69c9274ec529b87b2550454f2ce7df1d8e78
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160096"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204745"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>Direcciones URL en archivos de configuración (Administrador de configuración de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] almacena la configuración de las aplicaciones en un archivo RSReportServer.config. Dentro de este archivo, hay valores de configuración tanto de direcciones URL como de reservas de direcciones URL. Estos valores de configuración tienen propósitos muy diferentes y reglas de modificación. Si está acostumbrado a modificar los archivos de configuración para mejorar una implementación, este tema puede ayudarle a entender cómo se utiliza cada valor de las direcciones URL.  
@@ -57,7 +54,7 @@ ms.locfileid: "37160096"
   
  En la tabla siguiente se proporciona un resumen de todas las direcciones URL que se pueden especificar en un archivo de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-|Configuración|Uso|Descripción|  
+|Parámetro|Uso|Descripción|  
 |-------------|-----------|-----------------|  
 |`ReportServerUrl`|Opcional. Este elemento no está incluido en el archivo RSReportServer.config a menos que lo agregue usted. Establezca este elemento solo si está configurando uno de los escenarios siguientes:<br /><br /> El Administrador de informes proporciona acceso web front-end a un servicio web del servidor de informes que se ejecuta en un equipo diferente o en una instancia diferente en el mismo equipo.<br /><br /> Tiene varias direcciones URL para un servidor de informes y desea que el Administrador de informes utilice una en concreto.<br /><br /> Tiene una dirección URL concreta del servidor de informes que desea que se use en todas las conexiones del Administrador de informes.<br /><br /> Por ejemplo, podría habilitar el acceso al Administrador de informes para todos los equipos de la red, y seguir requiriendo que el Administrador de informes se conecte al servidor de informes a través de una conexión local. En este caso, podría configurar `ReportServerUrl` a "http://localhost/reportserver".<br /><br /> <br /><br /> Para obtener instrucciones sobre cómo implementar estos escenarios, consulte [configurar el Administrador de informes &#40;modo nativo&#41; ](../report-server/configure-web-portal.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.|Este valor especifica una dirección URL para el servicio web del servidor de informes. La aplicación Administrador de informes lee este valor en el inicio. Si se establece este valor, el Administrador de informes se conectará al servidor de informes que se especifique en la dirección URL.<br /><br /> De forma predeterminada, el Administrador de informes proporciona acceso web front-end a un servicio web del servidor de informes que se ejecute dentro de la misma instancia del servidor de informes que él. Sin embargo, si desea utilizar el Administrador de informes con un servicio web del servidor de informes que forme parte de otra instancia o se ejecute en una instancia en un equipo diferente, puede establecer esta dirección URL para indicarle que se conecte al servicio web del servidor de informes externo.<br /><br /> Si un certificado de capa de Sockets seguros (SSL) está instalado en el servidor de informes a la que se conecta, la `ReportServerUrl` valor debe ser el nombre del servidor que está registrado para ese certificado. Si se produce un error similar a "Se ha terminado la conexión: no se puede establecer una relación de confianza para el canal seguro SSL/TLS", establezca `ReportServerUrl` en el nombre de dominio completo del servidor para el que se ha emitido el certificado SSL. Por ejemplo, si el certificado está registrado en **https://adventure-works.com.onlinesales**, la dirección URL del servidor de informes sería **https://adventure-works.com.onlinesales/reportserver**.|  
 |`ReportServerExternalUrl`|Opcional. Este elemento no está incluido en el archivo RSReportServer.config a menos que lo agregue usted.<br /><br /> Establezca este elemento solo si está utilizando los elementos web de SharePoint 2.0 y desea que los usuarios puedan recuperar un informe y abrirlo en otra ventana del explorador.<br /><br /> Agregue <`ReportServerExternalUrl`> debajo del elemento <`ReportServerUrl`> y, a continuación, establézcalo en un nombre del servidor de informes completo que se resuelva como una instancia del servidor de informes cuando se obtenga acceso al mismo en una ventana del explorador independiente. No elimine <`ReportServerUrl`>.<br /><br /> El siguiente ejemplo ilustra la sintaxis:<br /><br /> `<ReportServerExternalUrl>http://myserver/reportserver</ReportServerExternalUrl>`|Los elementos web de SharePoint 2.0 utilizan este valor.<br /><br /> En versiones anteriores, se recomendaba que estableciera este valor para implementar el Generador de informes en un servidor de informes expuesto a Internet. Este escenario de implementación no se ha probado. Si antes utilizaba este valor para que se admitiera el acceso a través de Internet al Generador de informes, debe considerar la posibilidad de utilizar una estrategia alternativa.|  

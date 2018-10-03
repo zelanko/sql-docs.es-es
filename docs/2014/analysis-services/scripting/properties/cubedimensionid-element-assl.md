@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CubeDimensionID Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CubeDimensionID element
 ms.assetid: d1341fb2-9afe-40f1-a704-ce548bce48fc
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: addd969b2fe6c1014a825ba3f8413258b472b13d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e50506439d5820bee62015805a19323a20134e55
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196065"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076275"
 ---
 # <a name="cubedimensionid-element-assl"></a>Elemento CubeDimensionID (ASSL)
   Identifica el [CubeDimension](../data-type/dimension-data-type-assl.md) asociado con el elemento primario del elemento.  
@@ -46,7 +43,7 @@ ms.locfileid: "37196065"
 </AggregationDesignDimension>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37196065"
 |Elementos primarios|[AggregationDesignDimension](../data-type/aggregationdesigndimension-data-type-assl.md), [AggregationDimension](../data-type/aggregationdimension-data-type-assl.md), [AggregationInstanceCubeDimension](../data-type/aggregationinstancecubedimension-data-type-assl.md), [CubeAttributeBinding](../data-type/binding-data-type-assl.md), [ CubeDimensionBinding](../data-type/dimensionbinding-data-type-assl.md), [CubeDimensionPermission](../data-type/permission-data-type-assl.md), [MeasureGroupDimension](../data-type/measuregroupdimension-data-type-assl.md), [MeasureGroupDimensionBinding](../data-type/measuregroupdimensionbinding-data-type-assl.md), [ PerspectiveDimension](../data-type/perspectivedimension-data-type-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los elementos que corresponden a los elementos primarios de `CubeDimensionID` en el modelo de objetos de Objetos de administración de análisis (AMO) son <xref:Microsoft.AnalysisServices.AggregationDesignDimension>, <xref:Microsoft.AnalysisServices.AggregationDimension>, <xref:Microsoft.AnalysisServices.CubeAttributeBinding>, <xref:Microsoft.AnalysisServices.CubeDimensionBinding>, <xref:Microsoft.AnalysisServices.CubeDimensionPermission>, <xref:Microsoft.AnalysisServices.MeasureGroupDimension>, <xref:Microsoft.AnalysisServices.MeasureGroupDimensionBinding> y<xref:Microsoft.AnalysisServices.PerspectiveDimension>.  
   
 ## <a name="see-also"></a>Vea también  

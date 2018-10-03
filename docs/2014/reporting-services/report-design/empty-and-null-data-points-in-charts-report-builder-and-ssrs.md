@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: faddd29d-4cc1-4c2c-8e29-d3d9918fe22a
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ce41539fc2dfadf7e2499a0828ad44752948666e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6f6611271a6f8bc637e1fa0032d868a1347b5ef5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157736"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082085"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>Puntos de datos vacíos y nulos en los gráficos (Generador de informes y SSRS)
   Si decide mostrar los campos con valores vacíos o nulos en su gráfico, el gráfico podría no tener el aspecto esperado. Los gráficos procesan los valores vacíos de forma distinta según el tipo de gráfico especificado:  

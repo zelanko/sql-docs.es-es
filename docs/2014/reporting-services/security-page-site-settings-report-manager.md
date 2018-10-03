@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: acc9a905-90f8-4544-aec6-b2ab3a1b0015
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a613f3d2cadae9913f14759ca3c59252d62cd14f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6a64dd80608d7b1d60718e5753d77fb37687234a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294105"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183115"
 ---
 # <a name="security-page-site-settings-report-manager"></a>Página de seguridad (Configuración del sitio. Administrador de informes)
   Use la página Seguridad para ver las asignaciones de roles del sistema que controlan el acceso al sitio del servidor de informes. Las asignaciones de roles del sistema existen fuera del ámbito del espacio de nombres o la jerarquía de carpetas del servidor de informes. Son globales y no pueden variar para elementos específicos. Las operaciones que se admiten a través de las asignaciones de roles del sistema incluyen la creación y el uso de las programaciones compartidas, el uso del Generador de informes y el establecimiento de valores predeterminados para algunas características del servidor.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eac372e9-d2a1-48a8-bbe5-09d101df16ea
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5fdd495e3110deb2cc8c9fc7b8a4848f0252f206
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d19f339b8cb8955ab33f73ea164f8bbfb2e7fce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247995"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205182"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>Página de almacenamiento en caché, conjuntos de datos compartidos (Administrador de informes)
   Use la página Propiedades de almacenamiento en caché para establecer las opciones de memoria caché de un conjunto de datos compartido.  

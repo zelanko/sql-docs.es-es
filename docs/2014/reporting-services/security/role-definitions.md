@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - security [Reporting Services], role definitions
 - role-based security [Reporting Services], role definitions
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 03d3bc951a76b6ff3fdf088999777d80f699f690
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 18b5d73d3ec4a6bc77a249d66af9b6d22c4e6be1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282671"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107105"
 ---
 # <a name="role-definitions"></a>Definiciones de roles
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], una *definición de**rol* es una colección con nombre de tareas que definen las operaciones disponibles en un servidor de informes. Las definiciones de roles proporcionan las reglas que el servidor de informes utiliza para aplicar la seguridad. Cuando un usuario intenta realizar una tarea, como publicar un informe, el servidor de informes comprueba la asignación de roles de dicho usuario para determinar si la tarea está incluida en su definición de roles. Si la tarea está incluida en la definición de roles, se envía la solicitud.  

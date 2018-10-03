@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 11/23/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Transparent Data Encryption, about
 - encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
-caps.latest.revision: 70
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 25893299dfc708e952cbc2cb4673e34e5612cf23
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 03971bcd487016fbc1fadc07203ebe2ab73555d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236605"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163175"
 ---
 # <a name="transparent-data-encryption-tde"></a>Cifrado de datos transparente (TDE)
   El*Cifrado de datos transparente* (TDE) cifra los archivos de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] , conocido como el cifrado de datos en reposo. Puede tomar varias precauciones para proteger la base de datos, como diseñar un sistema seguro, cifrar los datos confidenciales e instalar un firewall alrededor de los servidores de bases de datos. Sin embargo, si se diera el caso de un robo de medios físicos (como unidades de disco o cintas de copia de seguridad), un usuario malintencionado solo tendría que restaurar o adjuntar la base de datos y examinar los datos. Una solución consiste en cifrar los datos confidenciales en la base de datos y usar un certificado para proteger las claves que se utilizan para cifrarlos. Esto evita que utilice los datos cualquiera que carezca de las claves, pero este tipo de protección debe planearse de antemano.  

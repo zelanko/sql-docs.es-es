@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 57fab70f-4a72-4413-a0ad-d0525caca3f7
-caps.latest.revision: 17
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2cf3003b45c30fe785d8e0f2e5cc2562cc35726
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3430994f0c5cb2b4c09c47a4a8bebaa7da3eba3f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206245"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163375"
 ---
 # <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>Lección 5: Publicar la definición de informe en el servidor de informes
   El último paso de la actualización de la definición de informe es su publicación en el servidor de informes.  

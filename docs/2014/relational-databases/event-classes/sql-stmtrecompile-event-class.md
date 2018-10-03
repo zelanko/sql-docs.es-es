@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQL:StmtRecompile event class
 ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24630824594621499fcc1c3fc70fca74ed5562e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 288e086f164199ae372ccca2ffb482855bb3c2d0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292815"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211895"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile, clase de eventos
   La clase de eventos SQL:StmtRecompile indica recopilaciones de nivel de instrucción producidas por lotes de todos los tipos: procedimientos almacenados, desencadenadores, lotes ad hoc y consultas. Las consultas pueden enviarse mediante sp_executesql, SQL dinámico, métodos Prepare, métodos Execute u otras interfaces similares. Debería usarse la clase de eventos SQL:StmtRecompile en lugar de la clase de eventos SP:Recompile.  

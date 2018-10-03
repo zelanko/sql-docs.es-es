@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionGeneral
 ms.assetid: 3f8d59bc-3f97-4e5d-8b86-5ac670d20780
-caps.latest.revision: 33
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2c08ee6ab08fe90ffc075ef3f1ee0fe638d1da4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 947412d7a4d0fe27af7975919bddb3107007e801
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167156"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152995"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>Opciones (consulta ejecución SQL Server página General)
   Utilice esta página para especificar las opciones de ejecución de las consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Los cambios que se realicen en estas opciones solo se aplicarán a las nuevas consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para cambiar las opciones de una consulta actual, haga clic en **Opciones de consulta** en el menú **Consulta** o, en una ventana Consulta de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], haga clic con el botón derecho y seleccione **Opciones de consulta**.  
@@ -39,7 +36,7 @@ ms.locfileid: "37167156"
  **Separador de lotes**  
  Escriba la palabra que utilice para separar instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] en lotes. El separador predeterminado es GO.  
   
- **De forma predeterminada, abrir nuevas consultas en modo SQLCMD**  
+ **De manera predeterminada, abrir nuevas consultas en modo SQLCMD**  
  Active esta casilla para abrir nuevas consultas en modo SQLCMD. Para obtener más información sobre el modo SQLCMD, consulte [Modificar scripts SQLCMD con el Editor de consultas](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md).  
   
  Cuando seleccione esta opción, tenga en cuenta las siguientes limitaciones:  
@@ -50,7 +47,7 @@ ms.locfileid: "37167156"
   
 -   Dado que el Editor de consultas no puede responder a comandos del sistema operativo, debe tener cuidado de no ejecutar instrucciones interactivas.  
   
- **Restablecer valores predeterminados**  
+ **Valores predeterminados**  
  Haga clic en esta opción para restablecer todos los valores de esta página a los valores predeterminados originales.  
   
 ## <a name="see-also"></a>Vea también  

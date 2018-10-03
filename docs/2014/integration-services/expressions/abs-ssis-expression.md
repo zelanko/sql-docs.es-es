@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ABS function
 - absolute positive value
 ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a13bb07db4dd258c63eb28b01219309c70224fa6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 845f467ec50b01f2405a593ab40ee94c02a178c8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184712"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118015"
 ---
 # <a name="abs-ssis-expression"></a>ABS (expresión de SSIS)
   Devuelve el valor absoluto (positivo) de una expresión numérica.  
@@ -41,7 +38,7 @@ ABS(numeric_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  El tipo de datos de la expresión numérica pasada a la función.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  ABS devuelve un resultado NULL si el valor del argumento es NULL.  
   
 ## <a name="expression-examples"></a>Ejemplos de expresiones  

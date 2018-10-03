@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], about FILESTREAM
 ms.assetid: 641a10a1-ae52-4d26-8f1c-a032a4aeff02
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 82bf651e6242be7e1835caac7fd7d3419b51cf31
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 190a6ce588ed40ab7cc9181476ca3730eeef34b5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187702"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112975"
 ---
 # <a name="database-engine-configuration---filestream"></a>Configuración del motor de base de datos - Secuencia de archivo
   Utilice esta página para habilitar FILESTREAM para esta instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. FILESTREAM integra el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] con una de archivos NTFS del sistema almacenando `varbinary(max)` datos de objeto binario grande (BLOB) como archivos en el sistema de archivos. [!INCLUDE[tsql](../../includes/tsql-md.md)] pueden insertar, actualizar, consultar, buscar y realizar copias de seguridad de los datos FILESTREAM. Las interfaces del sistema de archivos de Win32 proporcionan el acceso de la transmisión por secuencias a los datos.  

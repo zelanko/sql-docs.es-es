@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
-caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ada1553d9b170267e5f8521a89afd1cb9577792f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ea891738a0a22353e67ff72b87d642bd04749270
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193605"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093905"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>Modificar una consulta de origen OData en tiempo de ejecución
   Puede modificar la consulta de origen OData en tiempo de ejecución si agrega una expresión a la propiedad **[OData Source].[Query]** de la tarea Flujo de datos.  

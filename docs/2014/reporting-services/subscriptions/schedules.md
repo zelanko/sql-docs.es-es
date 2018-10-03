@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - schedules [Reporting Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], scheduling
 - automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5b673c1dfe86caab3feeeae6bdbdfda853bd2a5f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 405bb71bc5ceaee65afa70d055c88a75a2326ca9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278421"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107475"
 ---
 # <a name="schedules"></a>Programaciones
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Proporciona programaciones compartidas y programaciones específicas del informe para ayudarle a controlar el procesamiento y distribución de informes. La diferencia entre los dos tipos de programaciones radica en cómo se definen, almacenan y administran. La construcción interna de los dos tipos de programación es la misma. Todas las programaciones especifican un tipo de periodicidad: mensual, semanal o diaria. Dentro del tipo de periodicidad, se deben establecer los intervalos y el período para la frecuencia con que se debe producir un evento. El tipo de patrón de periodicidad y cómo se especifican los patrones es el mismo si crea una programación compartida o una programación específica del informe.  

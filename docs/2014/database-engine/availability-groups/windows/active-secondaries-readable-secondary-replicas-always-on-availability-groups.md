@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection access to availability replicas
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-caps.latest.revision: 75
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7c483e09f0136ec85ef9a5355a31b0fab733d1af
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b35f34499100e8331f968d6f9297280451885290
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176552"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169615"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)
   Las funcionalidades secundarias activas de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluyen compatibilidad con el acceso de solo lectura a una o varias réplicas secundarias (*réplicas secundarias legibles*). Una réplica secundaria legible permite el acceso de solo lectura a todas las bases de datos secundarias. Sin embargo, las bases de datos secundarias legibles no se establecen como de solo lectura. Son dinámicas. Una base de datos secundaria dada cambia a medida que se aplican los cambios en la base de datos principal correspondiente. En lo que respecta a las réplicas secundarias típicas, los datos, lo cual incluye las tablas con optimización para memoria durables, las bases de datos secundarias están en tiempo prácticamente real. Además, los índices de texto completo se sincronizan con las bases de datos secundarias. En muchas circunstancias, la latencia de datos entre una base de datos principal y la base de datos secundaria correspondiente suele ser de solo unos pocos segundos.  
@@ -124,9 +121,7 @@ ms.locfileid: "37176552"
   
  Esto significa que hay latencia, normalmente solo se trata de unos segundos, entre las réplicas principales y secundarias. No obstante, en casos excepcionales, por ejemplo, si los problemas de red reducen el rendimiento, la latencia puede ser importante. La latencia aumenta cuando se producen cuellos de botella de E/S y cuando se suspende el movimiento de los datos. Para supervisar el movimiento de datos suspendido, puede usar el [panel AlwaysOn](use-the-always-on-dashboard-sql-server-management-studio.md) o la vista de administración dinámica [sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) .  
   
-####  
-            <a name="bkmk_LatencyWithInMemOLTP">
-            </a> Latencia de datos en bases de datos con tablas optimizadas para memoria  
+####  <a name="bkmk_LatencyWithInMemOLTP"></a> Latencia de datos en bases de datos con tablas optimizadas para memoria  
  Al tener acceso a tablas optimizadas para memoria en una réplica secundaria de una carga de trabajo de lectura, se usa una *marca de tiempo de seguridad* para devolver filas de las transacciones que se han confirmado antes de la *marca de tiempo de seguridad*. La marca de tiempo de seguridad es la sugerencia de marca de tiempo más antigua que el subproceso de recolección de elementos no utilizados usa para recopilar las filas no utilizadas de la réplica principal. Esta marca de tiempo se actualiza cuando el número de transacciones DML de las tablas optimizadas para memoria supera un umbral interno desde la última actualización. Siempre que la marca de tiempo de transacción más antigua se actualiza en la réplica principal, la siguiente transacción DML de una tabla optimizada para memoria durable envía esta marca de tiempo a la réplica secundaria como parte de una entrada de registro especial. El subproceso REDO de la réplica secundaria actualiza la marca de tiempo de seguridad como parte del procesamiento de esta entrada de registro.  
   
 #### <a name="the-impact-of-safe-timestamp-on-latency"></a>El impacto de la marca de tiempo de seguridad sobre la latencia  
@@ -208,9 +203,7 @@ GO
   
 -   El sufijo _readonly_database_statistic está reservado para las estadísticas que genera [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Este sufijo no se puede usar al crear estadísticas en una base de datos principal. Para obtener más información, vea [Statistics](../../../relational-databases/statistics/statistics.md).  
   
-##  
-            <a name="bkmk_AccessInMemTables">
-            </a> Obtener acceso a tablas optimizadas para memoria en una réplica secundaria  
+##  <a name="bkmk_AccessInMemTables"></a> Obtener acceso a tablas optimizadas para memoria en una réplica secundaria  
  Los niveles de aislamiento de la carga de trabajo de lectura en la réplica secundaria son únicamente aquellos que se permiten en la réplica principal. En la réplica secundaria no se realizan asignaciones de niveles de aislamiento. De esta forma se garantiza que cualquier carga de trabajo de informes que se puede ejecutar en una réplica principal podrá ejecutarse en una réplica secundaria sin necesidad de realizar cambios. Esto facilita la migración de una carga de trabajo de informes desde la réplica primaria a una secundaria o viceversa cuando la réplica secundaria no está disponible.  
   
  Las siguientes consultas no se ejecutan correctamente en la réplica secundaria de forma similar a como ocurre en la réplica principal.  

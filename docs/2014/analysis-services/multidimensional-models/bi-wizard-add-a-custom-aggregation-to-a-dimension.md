@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], Business Intelligence enhancements
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - unary operators
 - custom aggregations [Analysis Services]
 ms.assetid: 3199a6c2-a06d-47b9-bd1c-604dbb085318
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8567e17759af61b151a3fc27c05df0ed1df49b63
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 15c37f8fa070c3faf3d8fe5bc86213e90519cf54
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243955"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167385"
 ---
 # <a name="add-a-custom-aggregation-to-a-dimension"></a>Agregar una agregación personalizada a una dimensión
   Agregue una mejora de agregación personalizada a un cubo o dimensión para reemplazar las agregaciones predeterminadas asociadas a un miembro de dimensión con un operador unario diferente. Esta mejora especifica una columna de operador unario en la tabla de dimensión que define el resumen de los miembros de una jerarquía de elementos primarios y secundarios. El operador unario actúa sobre el atributo primario en una jerarquía de elementos primarios y secundarios.  

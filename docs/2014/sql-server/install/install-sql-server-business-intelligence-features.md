@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
-caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7399bc0f51917069191a503228a822e2c5142f8b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3fec33fe160d5ee901eefda541133e6c7b9610b0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196805"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116965"
 ---
 # <a name="install-sql-server-2014-bi-features"></a>Instalar las características de SQL Server 2014 BI
   Las características de SQL Server que forman parte de la plataforma Microsoft Business Intelligence incluyen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y varias aplicaciones cliente que se usan para crear datos analíticos o para trabajar con ellos. En esta sección de la documentación del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se explica cómo instalar estas características.  
@@ -29,7 +26,7 @@ ms.locfileid: "37196805"
  Si ya está familiarizado con los pasos de instalación para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o PowerPivot para SharePoint, puede ir directamente a las listas de comprobación para obtener información sobre cómo habilitar escenarios concretos. Para obtener más información, consulte [listas de comprobación para instalar las características de BI con SharePoint](checklists-for-installing-bi-features-with-sharepoint.md).  
   
 ## <a name="contents"></a>Contenido  
- Esta sección:  
+ En esta sección:  
   
 |Vínculo|Tarea|  
 |----------|----------|  

@@ -1,14 +1,11 @@
 ---
-title: sp_trace_generateevent (Transact-SQL) | Documentos de Microsoft
+title: sp_trace_generateevent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_generateevent_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_generateevent
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 398fb058ae7be57cf0c26b26e77d6e82aafd0df3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cce91def9566105550788a8a46ea6c2b6bb959aa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260661"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826553"
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +46,7 @@ sp_trace_generateevent [ @eventid = ] event_id
   
 ## <a name="arguments"></a>Argumentos  
  [  **@eventid=**] *event_id*  
- Es el Id. del evento que se debe activar. *event_id* es **int**, no tiene ningún valor predeterminado. El identificador debe ser uno de los números de evento del 82 al 91, que representan los eventos definidos por el usuario como conjunto con [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+ Es el Id. del evento que se debe activar. *event_id* es **int**, no tiene ningún valor predeterminado. El identificador debe ser uno de los números de evento del 82 al 91, que representan los eventos definidos por el usuario como se establece mediante [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
  [ **@userinfo**=] **'***user_info***'**  
  Es la cadena opcional definida por el usuario que identifica la causa del evento. *user_info* es **nvarchar (128)**, su valor predeterminado es null.  
@@ -61,7 +57,7 @@ sp_trace_generateevent [ @eventid = ] event_id
 ## <a name="return-code-values"></a>Valores de código de retorno  
  En la tabla siguiente se describen los valores del código que los usuarios pueden obtener después de completar el procedimiento almacenado.  
   
-|Código de retorno|Description|  
+|Código de retorno|Descripción|  
 |-----------------|-----------------|  
 |**0**|Ningún error.|  
 |**1**|Error desconocido.|  
@@ -71,11 +67,11 @@ sp_trace_generateevent [ @eventid = ] event_id
 ## <a name="remarks"></a>Comentarios  
  **sp_trace_generateevent** realiza muchas de las acciones ejecutadas previamente por el **xp_trace_\***  procedimientos almacenados extendidos. Use **sp_trace_generateevent** en lugar de **xp_trace_generate_event**.  
   
- Solo los números de Id. de eventos definidos por el usuario pueden utilizarse con **sp_trace_generateevent**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generará un error si se utilizan otros números de Id. de eventos.  
+ Solo los números de Id. de eventos definido por el usuario pueden utilizarse con **sp_trace_generateevent**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generará un error si se utilizan otros números de Id. de eventos.  
   
- Parámetros de seguimiento de SQL todos los procedimientos almacenados (**sp_trace_xx**) deben escribirse. Si no se llama a estos parámetros con los tipos de datos de parámetros de entrada correctos, según se especifica en la descripción del argumento, el procedimiento almacenado devolverá un error.  
+ Los parámetros de seguimiento de SQL de todos los procedimientos almacenados (**sp_trace_xx**) deben escribirse. Si no se llama a estos parámetros con los tipos de datos de parámetros de entrada correctos, según se especifica en la descripción del argumento, el procedimiento almacenado devolverá un error.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  El usuario debe tener permiso ALTER TRACE.  
   
 ## <a name="examples"></a>Ejemplos  

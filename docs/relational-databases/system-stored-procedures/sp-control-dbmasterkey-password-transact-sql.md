@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 02/25/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_control_dbmasterkey_password
@@ -21,12 +18,12 @@ ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6a468fc35805dc51bd76a51021fab82f66c8fc25
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: af6e23ba3cce2ef4dfaa6901f51a9d6c0b034e60
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43037538"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659913"
 ---
 # <a name="spcontroldbmasterkeypassword-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +53,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  @action= N'drop'  
  Especifica que se quitará del almacén de credenciales una credencial para la base de datos especificada. El valor pasado a @action es **nvarchar**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesita la clave maestra de una base de datos para cifrar o descifrar una clave, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intentará descifrar la clave maestra de la base de datos con la clave maestra de servicio de la instancia. Si el descifrado produce errores, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] buscará en el almacén de credenciales las credenciales de clave maestra con el mismo GUID de familia que la base de datos para la que se necesita la clave maestra. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intentará después descifrar la clave maestra de la base de datos con cada credencial coincidente hasta que el descifrado se realice correctamente o no queden más credenciales.  
   
 > [!CAUTION]  

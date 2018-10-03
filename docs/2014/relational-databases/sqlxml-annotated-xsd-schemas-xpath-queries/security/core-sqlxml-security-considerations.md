@@ -1,28 +1,25 @@
 ---
-title: Principales consideraciones de seguridad SQLXML | Microsoft Docs
+title: Principales consideraciones de seguridad SQLXML | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - security [SQLXML], about security
 ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 972ece66513dcc8784ed40e9757ec6114684f10e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8212f3983bd671ee0efe9fbe389aab8c10ca63b7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255967"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096435"
 ---
 # <a name="core-sqlxml-security-considerations"></a>Consideraciones básicas de seguridad de SQLXML
   A continuación se indican instrucciones de seguridad para utilizar SQLXML en el acceso a datos.  
@@ -43,7 +40,7 @@ ms.locfileid: "37255967"
   
 -   SQLXML puede realizar cambios de formato en los datos proporcionados basándose en las diferencias entre los modelos de datos XML y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Por ejemplo, el formato para especificar una hora es distinto. SQLXML intentará resolver estas diferencias. Como resultado, es posible que se pierdan algunos datos de precisión.  
   
--   SQLXML no establece ningún límite en la cantidad de tiempo que tarda en procesar los datos. Procesamiento continuará hasta que se produce un error o se ha completado el procesamiento.  
+-   SQLXML no establece ningún límite en la cantidad de tiempo que tarda en procesar los datos. El procesamiento continuará hasta que se produce un error o procesamiento se ha completado.  
   
 -   SQLXML no escribe en el sistema de archivos. Si los usuarios desean guardar los datos que recuperan de la base de datos, deben hacerlo en el código.  
   

@@ -1,39 +1,33 @@
 ---
-title: Función Contains (XQuery) | Documentos de Microsoft
+title: Función Contains (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - contains function (XQuery)
 - fn:contains function
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
-caps.latest.revision: 42
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fceddcf918a99667e8c92fadc7aeddca59bb21a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 595d5fb7d98d85120fca3b96eedc5a83694dc1a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076913"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753924"
 ---
-# <a name="functions-on-string-values---contains"></a>Las funciones en valores de cadena: contiene
+# <a name="functions-on-string-values---contains"></a>Funciones usadas en valores de cadena: contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve un valor de tipo xs: Boolean que indica si el valor de *$arg1* contiene un valor de cadena especificado por *$arg2*.  
+  Devuelve un valor de tipo xs: Boolean indicando si el valor de *$arg1* contiene un valor de cadena especificado por *$arg2*.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -56,15 +50,15 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
   
  La función contains() usa la intercalación de punto de código Unicode predeterminada de XQuery para la comparación de cadenas.  
   
- El valor de subcadena especificado para *$arg2* debe ser menor o igual que 4000 caracteres. Si el valor especificado es superior a 4000 caracteres, se produce una condición de error dinámico y la función contains() devuelve una secuencia vacía en lugar de un valor booleano de **True** o **False**. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no genera errores dinámicos en expresiones XQuery.  
+ El valor de subcadena especificado para *$arg2* debe ser menor o igual que 4000 caracteres. Si el valor especificado es mayor que 4000 caracteres, se produce una condición de error dinámica y la función contains() devuelve una secuencia vacía en lugar de un valor booleano de **True** o **False**. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no genera errores dinámicos en expresiones XQuery.  
   
- Para obtener las comparaciones entre mayúsculas y minúsculas, el [mayúsculas](../xquery/functions-on-string-values-upper-case.md) o se pueden usar funciones de minúsculas.  
+ Para obtener las comparaciones entre mayúsculas y minúsculas, el [mayúsculas](../xquery/functions-on-string-values-upper-case.md) o se pueden usar funciones en minúsculas.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres adicionales (pares suplentes)  
- El comportamiento de pares suplentes en las funciones XQuery depende del nivel de compatibilidad de la base de datos y, en algunos casos, del URI del espacio de nombres predeterminado de las funciones. Para obtener más información, vea la sección "XQuery funciones son los caracteres suplentes" en el tema [cambios recientes en las características del motor de base de datos en SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Consulte también [nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) y [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ El comportamiento de pares suplentes en las funciones XQuery depende del nivel de compatibilidad de la base de datos y, en algunos casos, del URI del espacio de nombres predeterminado de las funciones. Para obtener más información, vea la sección "XQuery funciones detectan los caracteres suplentes" en el tema [cambios recientes en las características del motor de base de datos en SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Consulte también [nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) y [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Ejemplos  
- Este tema proporciona ejemplos de XQuery con instancias XML almacenadas en varias columnas de tipo xml en la base de datos de AdventureWorks.  
+ Este tema proporciona ejemplos de XQuery con instancias XML almacenadas en varias columnas de tipo xml en la base de datos AdventureWorks.  
   
 ### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>A. Utilizar la función contains() de XQuery para buscar una cadena de caracteres específica  
  La consulta siguiente busca los productos que contengan la palabra Aerodynamic en las descripciones resumidas. La consulta devuelve el Id. de producto (ProductID) y el elemento <`Summary`> de esos productos.  

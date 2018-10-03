@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a2c2b8b8-6b13-45ca-ab3b-1582447b6807
-caps.latest.revision: 29
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff0efdd840ee2f4efb0da802da64494640911b80
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: be009e76b1de70b405cf8b4e3faff2c1461f6dcd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275631"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102515"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>Lección 2: agregar una referencia web
   Se llama detección de servicios web al proceso por el que un cliente busca un servicio web y obtiene la descripción del servicio. El proceso de detección de servicios web en [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] conlleva la interrogación de un sitio web de acuerdo con un algoritmo predeterminado. El objetivo del proceso es encontrar la descripción del servicio, que es un documento XML que utiliza el Lenguaje de descripción de servicios web (WSDL).  
@@ -38,7 +35,7 @@ ms.locfileid: "37275631"
   
 4.  En el **URL** cuadro de la **Agregar referencia Web** cuadro de diálogo, escriba la dirección URL para obtener la descripción del servicio Web del servidor de informes, como http://localhost/reportserver/reportservice2010.asmx. A continuación, haga clic en el **vaya** botón para recuperar información sobre el servicio Web.  
   
-     \- O bien  
+     \- o -  
   
      Si el servicio Web del servidor de informes existe en el equipo local, haga clic en el **servicios Web en el equipo local** vínculo en el panel explorador. A continuación, haga clic en el vínculo del servicio web ReportService2010 de la lista proporcionada.  
   

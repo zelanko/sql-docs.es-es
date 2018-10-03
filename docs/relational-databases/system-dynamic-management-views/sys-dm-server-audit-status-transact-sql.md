@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_server_audit_status (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_server_audit_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_server_audit_status_TSQL
@@ -18,34 +16,33 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_audit_status dynamic management view
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4797a4e81a0fabd169111e979d661d17517ce3f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 3f2be7711a7e495608d2a35d42e617663e11bc3c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467472"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712515"
 ---
 # <a name="sysdmserverauditstatus-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila para cada auditoría de servidor que indica el estado actual de la misma. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|Identificador de la auditoría. Se asigna a la **audit_id** campo el **sys.audits** vista de catálogo.|  
 |**Nombre**|**sysname**|Nombre de la auditoría. Igual que el **nombre** campo el **sys.server_audits** vista de catálogo.|  
-|**status**|**smallint**|Estado numérico de la auditoría de servidor:<br /><br /> 0 = no iniciado<br /><br /> 1 =<br />        Iniciado<br /><br /> 2 =<br />      Error en tiempo de ejecución<br /><br /> 3 = destino crear error<br /><br /> 4 = cerrando|  
+|**status**|**smallint**|Estado numérico de la auditoría de servidor:<br /><br /> 0 = no iniciado<br /><br /> 1 =<br />        Iniciado<br /><br /> 2 =<br />      Error en tiempo de ejecución<br /><br /> 3 = target crear por error<br /><br /> 4 = apagar|  
 |**status_desc**|**nvarchar(256)**|Cadena que muestra el estado de la auditoría de servidor:<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Marca de tiempo en UTC del último cambio de estado de la auditoría.|  
-|**event_session_address**|**varbinary (8)**|Dirección de la sesión de Extended Events asociada a la auditoría. Relacionadas con la **sys.db_xe_sessions.address** vista de catálogo.|  
+|**event_session_address**|**varbinary (8)**|Dirección de la sesión de Extended Events asociada a la auditoría. Relacionados con la **sys.db_xe_sessions.address** vista de catálogo.|  
 |**audit_file_path**|**nvarchar(256)**|Ruta de acceso completa y nombre de archivo del destino de archivo de auditoría que se está usando actualmente. Solo se rellena para la auditoría de archivos.|  
 |**audit_file_size**|**bigint**|Tamaño aproximado del archivo de auditoría, en bytes. Solo se rellena para la auditoría de archivos.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Las entidades de seguridad deben tener **VIEW SERVER STATE** y **seleccione** permisos.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

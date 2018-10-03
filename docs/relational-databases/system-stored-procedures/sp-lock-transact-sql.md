@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_lock_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_lock
 ms.assetid: 9eaa0ec2-2ad9-457c-ae48-8da92a03dcb0
-caps.latest.revision: 56
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 200c53117808f746eaa9b8dd4addb8ffe44624e7
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 10625f8de854eac99c53c3ce4276e4b571bf397c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43037086"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804133"
 ---
 # <a name="splock-transact-sql"></a>sp_lock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +67,7 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
 |**Modo**|**nvarchar (8)**|El modo de bloqueo solicitado. Puede ser:<br /><br /> NULL = No se concede acceso al recurso. Sirve como marcador de posición.<br /><br /> Sch-S = Estabilidad del esquema. Garantiza que un elemento de un esquema, como una tabla o un índice, no se quite mientras una sesión mantenga un bloqueo de estabilidad del esquema sobre él.<br /><br /> Sch-M = Modificación del esquema. Debe mantenerlo cualquier sesión que desee cambiar el esquema del recurso especificado. Garantiza que ninguna otra sesión se refiera al objeto indicado.<br /><br /> S = Compartido. La sesión que lo mantiene recibe acceso compartido al recurso.<br /><br /> U = Actualizar. Indica que se ha obtenido un bloqueo de actualización sobre recursos que finalmente se pueden actualizar. Se utiliza para evitar una forma común de interbloqueo que tiene lugar cuando varias sesiones bloquean recursos para una posible actualización más adelante.<br /><br /> X = Exclusivo. La sesión que lo mantiene recibe acceso exclusivo al recurso.<br /><br /> IS = Intención compartida. Indica la intención de establecer bloqueos S en algún recurso subordinado de la jerarquía de bloqueos.<br /><br /> IU = Actualizar intención. Indica la intención de establecer bloqueos U en algún recurso subordinado de la jerarquía de bloqueos.<br /><br /> IX = intención exclusiva. Indica la intención de colocar bloqueos X en algunos recursos subordinados en la jerarquía de bloqueos.<br /><br /> SIU = Actualizar intención compartida. Indica el acceso compartido a un recurso con la intención de obtener bloqueos de actualización sobre recursos subordinados en la jerarquía de bloqueos.<br /><br /> SIX = Intención compartida exclusiva. Indica acceso compartido a un recurso con la intención de obtener bloqueos exclusivos sobre recursos subordinados de la jerarquía de bloqueos.<br /><br /> UIX = Actualizar intención exclusiva. Indica un bloqueo de actualización en un recurso con la intención de adquirir bloqueos exclusivos sobre recursos subordinados en la jerarquía de bloqueos.<br /><br /> BU = Actualización masiva. Utilizado en las operaciones masivas.<br /><br /> RangeS_S = Intervalo de claves compartido y bloqueo de recurso compartido. Indica recorrido de intervalo serializable.<br /><br /> RangeS_U = Intervalo de claves compartido y bloqueo de recurso de actualización. Indica recorrido de actualización serializable.<br /><br /> RangeI_N = Insertar intervalo de claves y bloqueo de recurso Null. Se utiliza para probar los intervalos antes de insertar una clave nueva en un índice.<br /><br /> RangeI_S = Bloqueo de conversión de intervalo de claves. Creado por una superposición de bloqueos RangeI_N y S.<br /><br /> RangeI_U = Bloqueo de conversión de intervalo de claves creado por una superposición de bloqueos RangeI_N y U.<br /><br /> RangeI_X = Bloqueo de conversión de intervalo de claves creado por una superposición de bloqueos RangeI_N y X.<br /><br /> RangeX_S = Bloqueo de conversión de rango de claves creado por una superposición de bloqueos RangeI_N y RangeS_S bloqueos.<br /><br /> RangeX_U = Bloqueo de conversión de intervalo de claves creado por una superposición de bloqueos RangeI_N y RangeS_U.<br /><br /> RangeX_X = Intervalo de claves exclusivo y bloqueo de recurso exclusivo. Es un bloqueo de conversión que se utiliza cuando se actualiza una clave de un intervalo.|  
 |**Estado**|**nvarchar (5)**|Estado de solicitud de bloqueo:<br /><br /> CNVRT: el bloqueo se está convirtiendo desde otro modo, pero la conversión es bloqueada por otro proceso que mantiene un bloqueo con un modo en conflicto.<br /><br /> GRANT: se ha obtenido el bloqueo.<br /><br /> WAIT: el bloqueo es bloqueado por otro proceso que mantiene un bloqueo con un modo en conflicto.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los usuarios pueden controlar el bloqueo de las operaciones de lectura:  
   
 -   Si utilizan SET TRANSACTION ISOLATION LEVEL para especificar el nivel de bloqueo de una sesión. Para la sintaxis y las restricciones, vea [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  

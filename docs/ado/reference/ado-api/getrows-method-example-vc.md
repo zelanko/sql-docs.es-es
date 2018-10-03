@@ -1,32 +1,29 @@
 ---
-title: Ejemplo del método GetRows (VC ++) | Documentos de Microsoft
+title: Ejemplo del método GetRows (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Getrows method [ADO], VC++ example
 ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3f4af181439ea74b0f55f49e97f19e955eec517
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 254cb5e6ca4572b0a38ea5f5b6beaab1a78162d0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278874"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695159"
 ---
 # <a name="getrows-method-example-vc"></a>Ejemplo del método GetRows (VC ++)
-Este ejemplo se utiliza la [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) método para recuperar un número especificado de filas de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) y rellenar una matriz con los datos resultantes. El **GetRows** método devolverá menor que el número deseado de filas en dos casos: cualquier if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) se ha alcanzado, o si **GetRows** intentó recuperar un registro que era eliminada por otro usuario. La función devuelve **False** sólo si se produce el segundo caso. La función GetRowsOK es necesaria ejecutar este procedimiento.  
+Este ejemplo se usa el [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) método para recuperar un número especificado de filas de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) y rellenar una matriz con los datos resultantes. El **GetRows** método devolverá menor que el número deseado de filas en dos casos: cualquier if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) alcanzado, o si **GetRows** intentó recuperar un registro que estaba otro usuario eliminado. La función devuelve **False** únicamente si se produce el segundo caso. La función GetRowsOK es necesaria ejecutar este procedimiento.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -249,5 +246,5 @@ Pedro Afonso, 12/24/1990
   
 ## <a name="see-also"></a>Vea también  
  [BOF, EOF (propiedades) (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [Método GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
+ [Ejemplo del método GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

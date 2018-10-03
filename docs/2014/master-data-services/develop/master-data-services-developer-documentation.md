@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d16e4e431a7df73cd775b635ad6ebd8efb1e1e75
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 1bf998c44b554647097e84b77079b3e5eb8ebdd7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349507"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062445"
 ---
 # <a name="developer39s-guide-master-data-services"></a>Desarrollador&#39;guía (Master Data Services)
   Obtenga información sobre cómo escribir código para personalizar la manera en que usted y sus usuarios interactúan con [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Aprenda a:  

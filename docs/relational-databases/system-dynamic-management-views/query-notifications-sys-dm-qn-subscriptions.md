@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_qn_subscriptions (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_qn_subscriptions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_qn_subscriptions
@@ -18,23 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3f6886a16b8b1d87c2864ed93fd8be764700dc5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 2cbfdd765681f99e50b38efcdb5c7c61c8cbd08b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465271"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834713"
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>Consultar las notificaciones - sys.dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve información acerca de las suscripciones de notificaciones de consultas activas en el servidor. Puede usar esta vista para comprobar si hay suscripciones activas en el servidor o en una base de datos especificada, o para comprobar una entidad de seguridad de servidor especificada.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Id. de una suscripción.|  
 |**database_id**|**int**|Id. de la base de datos en la que se ha ejecutado la notificación. Esta base de datos almacena información relacionada con esta suscripción.|  
@@ -46,7 +43,7 @@ ms.locfileid: "34465271"
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|A|Activado|Tipo|  
+|De|En|Activado|Tipo|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|Varios a uno|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|Varios a uno|  
@@ -59,7 +56,7 @@ ms.locfileid: "34465271"
 |código|Estado secundario|Información|  
 |----------|------------------|----------|  
 |65798|La suscripción se desencadenó porque los datos cambiaron|La suscripción se activó al realizar la inserción|  
-|65799|La suscripción se desencadenó porque los datos cambiaron|Delete|  
+|65799|La suscripción se desencadenó porque los datos cambiaron|DELETE|  
 |65800|La suscripción se desencadenó porque los datos cambiaron|Update|  
 |65801|La suscripción se desencadenó porque los datos cambiaron|Mezcla|  
 |65802|La suscripción se desencadenó porque los datos cambiaron|Truncar tabla|  
@@ -94,7 +91,7 @@ ms.locfileid: "34465271"
 |199168|La suscripción está activa|Modo de información indefinido|  
 |199424|La suscripción se inicializó pero no aún no está activa|Modo de información indefinido|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW SERVER STATE en el servidor.  
   
 > [!NOTE]  

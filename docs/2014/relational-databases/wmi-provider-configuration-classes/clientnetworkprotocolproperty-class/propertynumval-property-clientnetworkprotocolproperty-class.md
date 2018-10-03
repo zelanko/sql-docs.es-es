@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - PropertyNumVal Property (ClientNetworkProtocolProperty Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - PropertyNumVal property
 ms.assetid: 12b02d97-702b-434f-baf6-e49a6b2cd4de
-caps.latest.revision: 28
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d43ef33a5ab4a1d516910edf62fd44017b4eee19
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9f6bcd05a57029bd6555f095d696a212baf42250
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309355"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066365"
 ---
 # <a name="propertynumval-property-clientnetworkprotocolproperty-class"></a>Propiedad PropertyNumVal (clase ClientNetworkProtocolProperty)
   Obtiene el valor numérico de la propiedad actual a la que hace referencia el valor de la [propiedad PropertyIdx (clase ClientNetworkProtocolProperty)](clientnetworkprotocolproperty-class.md) .  
@@ -48,5 +45,5 @@ object
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor u`int32` que especifica el valor numérico de la propiedad actual.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
   

@@ -1,14 +1,11 @@
 ---
-title: sp_dbmmonitoraddmonitoring (Transact-SQL) | Documentos de Microsoft
+title: sp_dbmmonitoraddmonitoring (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitoraddmonitoring
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - sp_dbmmonitoraddmonitoring
 ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef20d563325a2aebf5490c7b4a389042fa61a559
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5a4850b86366a74b0b65b6acddd334960ec12096
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237418"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615563"
 ---
 # <a name="spdbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +42,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
   
 ## <a name="arguments"></a>Argumentos  
  *update_period*  
- Especifica el intervalo entre actualizaciones, en minutos. Este valor puede estar entre 1 y 120 minutos. El valor predeterminado es 1 minuto.  
+ Especifica el intervalo entre actualizaciones, en minutos. Este valor puede ser de 1 a 120 minutos. El valor predeterminado es 1 minuto.  
   
 > [!NOTE]  
 >  Si se establece un período de actualización demasiado corto, podría aumentar el tiempo de respuesta para los clientes.  
@@ -60,12 +56,12 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 ## <a name="remarks"></a>Comentarios  
  Este procedimiento requiere que se permita la ejecución del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la instancia del servidor y, para que se ejecute el trabajo del monitor de creación de reflejos de la base de datos, el Agente debe estar ejecutándose.  
   
- Si la creación de reflejo de base de datos se inicia desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], **sp_dbmmonitoraddmonitoring** procedimiento se ejecuta automáticamente. Si inicia la creación de reflejos manualmente mediante instrucciones ALTER DATABASE, para supervisar la base de datos reflejada en la instancia del servidor, debe ejecutar **sp_dbmmonitoraddmonitoring** manualmente.  
+ Si la creación de reflejo de base de datos se inicia desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], **sp_dbmmonitoraddmonitoring** procedimiento se ejecuta automáticamente. Si inicia la creación de reflejo manualmente mediante las instrucciones ALTER DATABASE, para supervisar la base de datos reflejada en la instancia del servidor, debe ejecutar **sp_dbmmonitoraddmonitoring** manualmente.  
   
 > [!NOTE]  
->  Si ejecuta **sp_dbmmonitoraddmonitoring** antes de configurar la creación de reflejo de base de datos, el trabajo de supervisión se ejecutará, pero no se actualizará la tabla de estado en la base de datos se almacena el historial del monitor de creación de reflejo.  
+>  Si ejecuta **sp_dbmmonitoraddmonitoring** antes de configurar la creación de reflejo de base de datos, el trabajo de supervisión se ejecutará, pero no se actualizará la tabla de estado en la base de datos que se almacena el historial del monitor de creación de reflejo.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  

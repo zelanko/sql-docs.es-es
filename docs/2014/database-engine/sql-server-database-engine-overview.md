@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server]
 - SQL Server Database Engine
 ms.assetid: 65e2f424-1386-45a6-8912-bd053f434073
-caps.latest.revision: 44
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 72b82411378ab2d47b9a9d94c0aad0fe0b8e3f72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e4bd5e87f611d88c0ad2c6ce3e3e95aeb2f0fffa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190815"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056495"
 ---
 # <a name="sql-server-database-engine"></a>Motor de base de datos de SQL Server
   [!INCLUDE[ssDE](../includes/ssde-md.md)] es el servicio principal para almacenar, procesar y proteger los datos. El [!INCLUDE[ssDE](../includes/ssde-md.md)] proporciona acceso controlado y procesamiento de transacciones rápido para cumplir con los requisitos de las aplicaciones consumidoras de datos más exigentes de su empresa.  

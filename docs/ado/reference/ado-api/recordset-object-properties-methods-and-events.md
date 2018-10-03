@@ -1,29 +1,26 @@
 ---
-title: Propiedades del objeto de conjunto de registros, métodos y eventos | Documentos de Microsoft
+title: Los eventos, métodos y propiedades del objeto de conjunto de registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO], members
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d00e286b1386d51e0bc854d48a14bc2f64555eb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 038797e8376b8bff6b0e521ef8b2753d41706fd8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281184"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691323"
 ---
-# <a name="recordset-object-properties-methods-and-events"></a>Eventos, métodos y propiedades del objeto de conjunto de registros
+# <a name="recordset-object-properties-methods-and-events"></a>Los eventos, métodos y propiedades del objeto de conjunto de registros
 ## <a name="propertiescollections"></a>Propiedades y colecciones  
  [Propiedad AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)  
   
@@ -73,7 +70,7 @@ ms.locfileid: "35281184"
   
  [Propiedad Source (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)  
   
- [State (propiedad)](../../../ado/reference/ado-api/state-property-ado.md)  
+ [Propiedad State](../../../ado/reference/ado-api/state-property-ado.md)  
   
  [Propiedad Status (conjunto de registros ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)  
   
@@ -102,7 +99,7 @@ ms.locfileid: "35281184"
   
  [GetString (método)](../../../ado/reference/ado-api/getstring-method-ado.md)  
   
- [Move (método)](../../../ado/reference/ado-api/move-method-ado.md)  
+ [Método Move](../../../ado/reference/ado-api/move-method-ado.md)  
   
  [MoveFirst, MoveLast, MoveNext y MovePrevious métodos](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)  
   

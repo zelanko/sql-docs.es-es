@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_maintenance_plan_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_maintenance_plan
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8c144581e7d1ed73da251d13419d5ec04a7fd687
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 665d4de0f1ee61942e4f1af431889672bcc313bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979057"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757423"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +61,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |**plan_id**|**uniqueidentifier**|Id. del plan de mantenimiento.|  
 |**plan_name**|**sysname**|Nombre del plan de mantenimiento.|  
 |**date_created**|**datetime**|Fecha de creación del plan de mantenimiento.|  
-|**propietario**|**sysname**|Propietario del plan de mantenimiento.|  
+|**Propietario**|**sysname**|Propietario del plan de mantenimiento.|  
 |**max_history_rows**|**int**|Número máximo de filas asignadas para registrar el historial del plan de mantenimiento de la tabla del sistema.|  
 |**remote_history_server**|**int**|El nombre del servidor remoto en el que se puede escribir el informe de historial.|  
 |**max_remote_history_rows**|**int**|Número máximo de filas asignadas en la tabla del sistema en un servidor remoto en el que se puede escribir el informe del historial.|  
@@ -86,7 +82,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |-----------------|-----------------|  
 |**job_id**|Identificador de todos los trabajos asociados con el plan de mantenimiento. *job_id* es **uniqueidentifier**.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  **sp_help_maintenance_plan** está en el **msdb** base de datos.  
   
 ## <a name="permissions"></a>Permisos  

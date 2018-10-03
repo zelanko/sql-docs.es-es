@@ -1,30 +1,27 @@
 ---
-title: Programador de ADO&#39;guía | Documentos de Microsoft
+title: Programador de ADO&#39;guía | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programmer's guide
 ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 744e81b9da4e44b604350e13da7ab10cb9e825b1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3e78700456c26fda0a71da9219fc5d244abeec8c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271030"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761203"
 ---
 # <a name="ado-programmer39s-guide-for-using-ado-objects"></a>Programador de ADO&#39;s guía para el uso de objetos ADO
-Esta documentación proporciona información general sobre cómo usar objetos de ADO para trabajar con datos procedentes de varios orígenes de datos. En primer lugar, la introducción resume las nuevas características y los requisitos para instalar, usar y redistribuir el componente de ADO. Las secciones siguientes describen el uso de los distintos tipos de objetos de ADO. Por último, los apéndices tratan diversos datos suministrados por Microsoft y proveedores de servicios, los mensajes de error y sugerencias sobre cómo usar ADO en varios lenguajes de programación, además de ejemplos y obtener un glosario.
+Esta documentación proporciona información general sobre cómo usar los objetos ADO para trabajar con datos de varios orígenes de datos. En primer lugar, la introducción resume las nuevas características y los requisitos para instalar, usar y redistribuir el componente de ADO. Las secciones siguientes describen el uso de los distintos tipos de objetos ADO. Por último, los apéndices tratan diversos datos proporcionados por Microsoft y proveedores de servicios, los mensajes de error y sugerencias sobre cómo usar ADO en varios lenguajes de programación, además de ejemplos y un glosario.
 
  Esta sección contiene los temas siguientes.
 

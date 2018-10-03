@@ -1,14 +1,11 @@
 ---
-title: sp_certify_removable (Transact-SQL) | Documentos de Microsoft
+title: sp_certify_removable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_certify_removable_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_certify_removable
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba9ff14bc26b18eaf80dff000f141502a01fcc7b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1d2586f1ad5f7be9b5916caea7699ca9c90f22db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238735"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691413"
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +62,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   Marca los grupos de archivos de datos como de solo lectura para que los archivos puedan copiarse en medios de solo lectura.  
   
- El administrador del sistema debe ser el propietario de la base de datos y de todos sus objetos. El administrador del sistema es un usuario conocido que existe en todos los servidores que ejecutan [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se puede esperar que exista cuando la base de datos se distribuya y se instale.  
+ El administrador del sistema debe ser el propietario de la base de datos y de todos sus objetos. El administrador del sistema es un usuario conocido que existe en todos los servidores que ejecutan [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y puede esperarse que exista cuando la base de datos se distribuye y se instala más adelante.  
   
  Si ejecuta **sp_certify_removable** sin el **automática** valor y devuelve información acerca de cualquiera de las condiciones siguientes:  
   
@@ -80,13 +76,13 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  Estas condiciones pueden corregirse de la forma siguiente:  
   
--   Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herramientas, procedimientos y vuelva a ejecutar **sp_certify_removable** nuevo.  
+-   Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herramientas y procedimientos y, luego, ejecute **sp_certify_removable** nuevo.  
   
--   Sólo tiene que ejecutar **sp_certify_removable** con el **automática** valor.  
+-   Simplemente ejecute **sp_certify_removable** con el **automática** valor.  
   
  Tenga presente que este procedimiento almacenado solo comprueba los usuarios y sus permisos. Puede agregar grupos a la base de datos y conceder permisos a esos grupos. Para obtener más información, vea [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Ejecutar permisos están restringidos a los miembros de la **sysadmin** rol fijo de servidor.  
   
 ## <a name="examples"></a>Ejemplos  

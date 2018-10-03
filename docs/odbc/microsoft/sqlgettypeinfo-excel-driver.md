@@ -1,27 +1,25 @@
 ---
-title: SQLGetTypeInfo (controlador de Excel) | Documentos de Microsoft
+title: SQLGetTypeInfo (controlador de Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetTypeInfo function [ODBC], Excel Driver
 - Excel driver [ODBC], SQLGetTypeInfo
 ms.assetid: 708845be-e6a1-4677-8113-c52819a43fa4
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc8117eecd0ae67c01705de3c9ee992535aef4fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac7fe52ffdbb090e0b63a972e77c1a7f7a756446
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788243"
 ---
 # <a name="sqlgettypeinfo-excel-driver"></a>SQLGetTypeInfo (controlador de Excel)
 > [!NOTE]  
@@ -29,6 +27,6 @@ ms.lasthandoff: 05/03/2018
   
  Devuelve el nombre del tipo (TYPE_NAME) en la tabla generada por **SQLGetTypeInfo** será el nombre más utilizado por el origen de datos.  
   
- SQL_ALL_EXCEPT_LIKE se devolverán en la columna de búsqueda para el Byte, contador, Double, tipos de datos único, larga y corta. (La capacidad de LIKE se consigue convertir el valor a un carácter mediante las funciones de conversión canónica de ODBC, a continuación, realizar la comparación.)  
+ SQL_ALL_EXCEPT_LIKE se devolverá en la columna de búsqueda para el Byte, contador, Double, tipos de datos único, larga y corta. (La capacidad similar puede lograrse mediante la conversión del valor en un carácter mediante las funciones de conversión canónica de ODBC, a continuación, realizar la comparación).  
   
- Cuando se utiliza el controlador de Microsoft Excel, los nombres de tipo ODBC se devuelven en la columna TYPE_NAME devuelto por **SQLGetTypeInfo**.
+ Cuando se usa el controlador de Microsoft Excel, los nombres de tipo ODBC se devuelven en la columna TYPE_NAME devuelto por **SQLGetTypeInfo**.

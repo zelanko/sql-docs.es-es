@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_stored_procedures_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_stored_procedures
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 001a3476555b82c5262af4ff59cd70f5b88a0c5e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 8a195a39d30becaef2404a4ae50953a4ffb12159
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43024671"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636903"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +83,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**COMENTARIOS**|**varchar(254)**|Descripción del procedimiento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor para esta columna.|  
 |**PROCEDURE_TYPE**|**smallint**|Tipo de procedimiento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre devuelve 2.0. Este valor puede ser uno de los siguientes:<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para obtener la máxima interoperatividad, el cliente de la puerta de enlace solo debe dar por supuesta la coincidencia de patrón estándar de SQL (los caracteres de comodín % y _).  
   
  La información de permisos acerca del acceso de ejecución del usuario actual para un procedimiento almacenado específico no se comprueba necesariamente, por lo tanto, el acceso no está garantizado. Observe que solo se utilizan los nombres en tres partes. Esto significa que solo se devolverán los procedimientos almacenados locales, y no los remotos (que precisan nombres de cuatro partes), cuando se ejecuten en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el atributo de servidor ACCESSIBLE_SPROC es Y en el conjunto de resultados **sp_server_info**, se devuelven solo los procedimientos almacenados que pueden ser ejecutados por el usuario actual.  

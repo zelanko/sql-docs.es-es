@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: fd3b765bff38ea006a1dd1a60fe861373715ee80
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bbc1b3eaabe4760cd8f0778f1c2e2659e4c6db74
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309425"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095715"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planear un informe de mapa (Generador de informes y SSRS)
   Los buenos informes presentan información que motiva acciones o conocimientos. Para presentar datos analíticos como totales de ventas o datos demográficos en un contexto geográfico, puede agregar un mapa al informe. Un mapa puede contener varias capas, y en cada una se muestran elementos de mapa definidos por un tipo concreto de datos espaciales: puntos que representan ubicaciones, líneas que representan rutas o polígonos que representan áreas. Puede asociar los datos analíticos a elementos de mapa en cada capa.  

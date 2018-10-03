@@ -1,30 +1,27 @@
 ---
-title: Controlar transacciones (ADO) | Documentos de Microsoft
+title: Control de transacciones (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ADO]
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b036998fba22c19e47e9e5ced581aabeec9b07b8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8059df4275a336d084144a73910cdef99abf9467
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270984"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603626"
 ---
 # <a name="controlling-transactions-ado"></a>Control de transacciones (ADO)
-ADO admite el procesamiento de transacciones en una conexión con la Ayuda de la **BeginTrans**, **CommitTrans**, y **RollbackTrans** métodos en un  **Conexión** objeto. La idea general de la implementación del procesamiento de transacciones en ADO se ilustra en el siguiente fragmento de código sencillo.  
+ADO admite procesamiento de transacciones en una conexión con la Ayuda de la **BeginTrans**, **CommitTrans**, y **RollbackTrans** métodos en un  **Conexión** objeto. La idea general de la implementación de procesamiento de transacciones en ADO se ilustra en el siguiente fragmento de código simple.  
   
 ```  
 Const DS = "MySqlServer"  
@@ -81,6 +78,6 @@ oRs.Close
 oConn.Close  
 ```  
   
- Aquí se utiliza el procesamiento de transacciones para asegurarse de que los dos registros se actualizan como una unidad de operación y que los nombres de dos productos son intercambian o no cambian en absoluto.  
+ Aquí se usa el procesamiento de transacciones para garantizar que los dos registros se actualizan como una unidad de operación y que los nombres de dos productos son intercambian o no cambian en absoluto.  
   
- Para explicaciones detalladas de procesamiento de transacciones, vea [actualizar y conservar datos](../../../ado/guide/data/updating-and-persisting-data.md).
+ Para ver explicaciones detalladas de procesamiento de transacciones [actualizar y conservar datos](../../../ado/guide/data/updating-and-persisting-data.md).

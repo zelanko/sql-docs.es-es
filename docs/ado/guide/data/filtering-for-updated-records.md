@@ -1,33 +1,30 @@
 ---
-title: Filtrado para actualiza registros | Documentos de Microsoft
+title: Filtrado para actualiza registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filtering for updated records [ADO]
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 529845297ff3c4264cc152c652b31c0bd12f5441
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 74ea4a208cad079933b27a7305a5ce0462e08515
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270884"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639203"
 ---
 # <a name="filtering-for-updated-records"></a>Filtrar registros actualizados
-Antes de llamar a UpdateBatch, puede usar la propiedad de filtro de conjunto de registros para ver solo aquellos registros que se han cambiado desde que se abrió el conjunto de registros o la última llamada a UpdateBatch. Para ello, establezca Filter en adFilterPendingRecords para determinar cuántos registros se actualizarán, como se muestra en el ejemplo de código en la sección siguiente.  
+Antes de llamar a UpdateBatch, puede usar la propiedad de filtro de conjunto de registros para ver solo aquellos registros que han cambiado desde que se abrió el conjunto de registros o la última llamada al método UpdateBatch. Para ello, establezca Filter en adFilterPendingRecords para determinar cuántos registros se actualizarán, como se muestra en el ejemplo de código en la sección siguiente.  
   
-## <a name="remarks"></a>Notas  
- En este ejemplo se amplía el ejemplo de UpdateBatch anterior filtrar el conjunto de registros antes de llamar a la UpdateBatch, que muestra al usuario que los registros cambiará y permitir que ella cancelar la actualización (mediante el método CancelBatch).  
+## <a name="remarks"></a>Comentarios  
+ Este ejemplo amplía el ejemplo UpdateBatch anterior filtrando el conjunto de registros justo antes de llamar el UpdateBatch, que muestra al usuario qué registros cambiará y lo que permite a cancelar la actualización (mediante el método CancelBatch).  
   
 ```  
 'BeginFilterPend  

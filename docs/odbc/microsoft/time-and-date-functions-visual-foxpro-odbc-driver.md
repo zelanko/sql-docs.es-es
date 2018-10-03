@@ -1,13 +1,11 @@
 ---
-title: Hora y funciones de fecha (el controlador ODBC de Visual FoxPro) | Documentos de Microsoft
+title: Hora y funciones de fecha (controlador ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC date functions [ODBC]
@@ -17,18 +15,18 @@ helpviewer_keywords:
 - ODBC time and date functions [ODBC]
 - date functions [ODBC]
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f795e12cb2a88bfa1b7e17371745a841a3e6f854
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7752c1c1d5184ddb1beea26d7c35e29ea5769796
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644333"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Hora y funciones de fecha (el controlador ODBC de Visual FoxPro)
-En la tabla siguiente se enumera funciones de fecha y hora ODBC compatibles con el controlador ODBC de Visual FoxPro; Cuando la gramática de Visual FoxPro para la misma función difiere de la sintaxis ODBC, se muestra el equivalente de Visual FoxPro.  
+La tabla siguiente muestran funciones de fecha y hora ODBC compatibles con el controlador ODBC de Visual FoxPro; Cuando la gramática de Visual FoxPro para la misma función difiere de la sintaxis ODBC, se muestra el equivalente de Visual FoxPro.  
   
 |Gramática ODBC|Gramática Visual FoxPro|  
 |------------------|---------------------------|  
@@ -53,24 +51,24 @@ En la tabla siguiente se enumera funciones de fecha y hora ODBC compatibles con 
   
  TIMESTAMPADD *(intervalo, integer_exp, timestamp_exp)*  
   
- TIMESTAMPDIFF de ODBC *(intervalo, timestamp_exp1, timestamp_exp2)*  
+ TIMESTAMPDIFF no *(intervalo, timestamp_exp1, timestamp_exp2)*  
   
-## <a name="odbc-escape-sequences"></a>Secuencias de Escape ODBC  
- El controlador también admite la secuencia de escape ODBC para los datos de fecha y hora. La sintaxis de la cláusula de escape es como sigue:  
+## <a name="odbc-escape-sequences"></a>Secuencias de escape ODBC  
+ El controlador admite también la secuencia de escape ODBC para los datos de fecha y hora. La sintaxis de la cláusula de escape es como sigue:  
   
 ```  
 --(*vendor(Microsoft),product(ODBC) d 'value' *)—  
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)—  
 ```  
   
- En esta sintaxis, **d.** indica que *valor* es una fecha en el *aaaa-mm-dd* formato y **ts** indica que *valor*  es una marca de tiempo en el *aaaa-mm-dd hh*[.*f...*] formato. La sintaxis abreviada para datos de fecha y la marca de tiempo es como sigue:  
+ En esta sintaxis, **d.** indica que *valor* es una fecha en la *aaaa-mm-dd* formato y **ts** indica que *valor*  es una marca de tiempo en el *aaaa-mm-dd hh: mm:*[.*f...*] formato. La sintaxis abreviada para datos de fecha y la marca de tiempo es como sigue:  
   
 ```  
 {d 'value'}  
 {ts 'value'}  
 ```  
   
- Por ejemplo, cada una de las siguientes instrucciones actualiza la tabla ALLTYPES utilizando la sintaxis abreviada de fecha y hora en un comando SQL UPDATE compatible:  
+ Por ejemplo, cada una de las siguientes instrucciones actualiza la tabla ALLTYPES utilizando la sintaxis abreviada de fecha y hora en un comando SQL UPDATE admitido:  
   
 ```  
 UPDATE alltypes  
@@ -83,4 +81,4 @@ UPDATE alltypes
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener más información acerca de las secuencias de escape, vea [secuencias de Escape de ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) en el *referencia del programador de ODBC*.
+ Para obtener más información acerca de las secuencias de escape, consulte [secuencias de Escape de ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) en el *referencia del programador de ODBC*.

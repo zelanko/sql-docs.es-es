@@ -1,13 +1,11 @@
 ---
-title: Aceptar parámetros de cadena de funciones | Documentos de Microsoft
+title: Aceptar parámetros de cadena de funciones | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - desktop database drivers [ODBC], string parameters
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - functions [ODBC], string parameters
 - string parameters [ODBC]
 ms.assetid: 869b8421-f71e-4dfd-adce-691bd3012b16
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72de38da0faf39a35e84855c74185a8d04eaf7c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61bb013885238492d9c7324658ede198c489361d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900460"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818743"
 ---
 # <a name="functions-accepting-string-parameters"></a>Aceptar parámetros de cadena de funciones
-Todas las funciones que toman parámetros de cadena se convertirán a Unicode. (Se exportará la forma "W" de la función.) Recuento de bytes se convierte al recuento de caracteres para las API de ODBC es aplicable. Esto se aplica a las funciones siguientes:  
+Todas las funciones que toman parámetros de cadena se convierten a Unicode. (Se exportará la forma "W" de la función.) Recuento de bytes se convierte al recuento de caracteres para las API de ODBC aplicable. Esto se aplica a las funciones siguientes:  
   
 -   **SQLConnect**  
   

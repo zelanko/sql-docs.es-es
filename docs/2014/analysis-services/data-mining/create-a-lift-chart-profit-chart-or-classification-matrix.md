@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services], mining structures
 ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3dda0b4a75cf8abc6a6454aded4c342e38f7fabc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 67399a724001cbd1f04a24f0558f2618aafd155a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198525"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069435"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Crear un gráfico de mejora respecto al modelo predictivo, un gráfico de beneficios o una matriz de clasificación
   Puede crear un gráfico de precisión para un modelo de minería de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] siguiendo cinco pasos básicos:  

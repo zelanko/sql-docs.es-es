@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, properties
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0619ba605e154bab645041602b95436560fa8769
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 12e500402c68da2e38fd88c5d061644a7f51fd58
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279551"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104855"
 ---
 # <a name="set-package-properties"></a>Establecer las propiedades de paquetes
   Cuando se crea un paquete en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mediante la interfaz gráfica proporcionada por [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , se configuran las propiedades del objeto de paquete en la ventana Propiedades.  
@@ -143,7 +140,7 @@ ms.locfileid: "37279551"
   
 |Property|Descripción|  
 |--------------|-----------------|  
-|`IsolationLevel`|Nivel de aislamiento de la transacción del paquete.  El valor predeterminado de esta propiedad es `Serializable`. Los valores válidos son <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot`.<br /><br /> El sistema aplica la propiedad `IsolationLevel` a las transacciones de paquete solamente cuando el valor de la propiedad `TransactionOption` se establece en `Required`.<br /><br /> El valor de la `IsolationLevel` por un contenedor secundario se solicitó una propiedad se omite cuando se cumplen las condiciones siguientes:<br /><br /> El valor de la propiedad `TransactionOption` del contenedor secundario es `Supported`.<br />El contenedor secundario combina la transacción de un contenedor primario.<br /><br /> El valor de la propiedad `IsolationLevel` solicitado por el contenedor se respeta solamente cuando el contenedor inicia una nueva transacción. Un contenedor inicia una nueva transacción cuando se cumplen las condiciones siguientes:<br /><br /> El valor del contenedor `TransactionOption` propiedad es `Required`.<br />El contenedor primario aún no ha iniciado una transacción.<br /><br /> <br /><br /> Nota: El `Snapshot` valor de la `IsolationLevel` propiedad no es compatible con las transacciones de paquete. Por lo tanto, no puede usar el `IsolationLevel` propiedad para establecer el nivel de aislamiento de transacciones de paquete para `Shapshot`. En su lugar, use una consulta SQL para establecer las transacciones de paquete en `Snapshot`. Para obtener más información, vea [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).<br /><br /> Para obtener más información sobre la propiedad `IsolationLevel`, vea <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
+|`IsolationLevel`|Nivel de aislamiento de la transacción del paquete.  El valor predeterminado de esta propiedad es `Serializable`. Los valores válidos son <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot` <br /><br /> El sistema aplica la propiedad `IsolationLevel` a las transacciones de paquete solamente cuando el valor de la propiedad `TransactionOption` se establece en `Required`.<br /><br /> El valor de la `IsolationLevel` por un contenedor secundario se solicitó una propiedad se omite cuando se cumplen las condiciones siguientes:<br /><br /> El valor de la propiedad `TransactionOption` del contenedor secundario es `Supported`.<br />El contenedor secundario combina la transacción de un contenedor primario.<br /><br /> El valor de la propiedad `IsolationLevel` solicitado por el contenedor se respeta solamente cuando el contenedor inicia una nueva transacción. Un contenedor inicia una nueva transacción cuando se cumplen las condiciones siguientes:<br /><br /> El valor del contenedor `TransactionOption` propiedad es `Required`.<br />El contenedor primario aún no ha iniciado una transacción.<br /><br /> <br /><br /> Nota: El `Snapshot` valor de la `IsolationLevel` propiedad no es compatible con las transacciones de paquete. Por lo tanto, no puede usar el `IsolationLevel` propiedad para establecer el nivel de aislamiento de transacciones de paquete para `Shapshot`. En su lugar, use una consulta SQL para establecer las transacciones de paquete en `Snapshot`. Para obtener más información, vea [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).<br /><br /> Para obtener más información sobre la propiedad `IsolationLevel`, vea <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
 |`TransactionOption`|Participación transaccional del paquete. Los valores son `NotSupported`, `Supported`, `Required`. El valor predeterminado de esta propiedad es `Supported`. Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
   
 ###  <a name="Version"></a> Versión  

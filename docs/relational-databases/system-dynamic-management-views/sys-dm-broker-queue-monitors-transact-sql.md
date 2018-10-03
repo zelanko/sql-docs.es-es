@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_broker_queue_monitors (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_broker_queue_monitors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_broker_queue_monitors
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_queue_monitors dynamic management view
 ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1cef9da48e964164ca13b80de6f69c00d889bd08
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: fed9d261f692e9c9e1eee4f7078ca69e8c74594e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468351"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779863"
 ---
 # <a name="sysdmbrokerqueuemonitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,16 +32,16 @@ ms.locfileid: "34468351"
   Devuelve una fila por cada monitor de cola en la instancia. Un monitor de cola administra la activación de una cola.  
   
 
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|Identificador del objeto de la base de datos que contiene la cola que supervisa el monitor. ACEPTA VALORES NULL.|  
-|**queue_id**|**int**|Identificador del objeto de la cola que supervisa el monitor. ACEPTA VALORES NULL.|  
-|**state**|**nvarchar(32)**|Estado del monitor. ACEPTA VALORES NULL. Es uno de los siguientes:<br /><br /> **INACTIVO**<br /><br /> **UNA NOTIFICACIÓN**<br /><br /> **RECEIVES_OCCURRING**|  
-|**last_empty_rowset_time**|**datetime**|Última vez que una instrucción RECEIVE de la cola devolvió un resultado vacío. ACEPTA VALORES NULL.|  
-|**last_activated_time**|**datetime**|Última vez que este monitor de cola activó un procedimiento almacenado. ACEPTA VALORES NULL.|  
-|**tasks_waiting**|**int**|Número de sesiones que esperan actualmente en una instrucción RECEIVE de esta cola. ACEPTA VALORES NULL.<br /><br /> Nota: Este número incluye las sesiones que ejecutan una instrucción receive, independientemente de si el monitor de cola inicia la sesión. Es así si usa WAITFOR junto con RECEIVE. Básicamente, estas tareas esperan que lleguen mensajes a la cola.|  
+|**database_id**|**int**|Identificador del objeto de la base de datos que contiene la cola que supervisa el monitor. QUE ACEPTA VALORES NULL.|  
+|**queue_id**|**int**|Identificador del objeto de la cola que supervisa el monitor. QUE ACEPTA VALORES NULL.|  
+|**state**|**nvarchar(32)**|Estado del monitor. QUE ACEPTA VALORES NULL. Es uno de los siguientes:<br /><br /> **INACTIVO**<br /><br /> **UNA NOTIFICACIÓN**<br /><br /> **RECEIVES_OCCURRING**|  
+|**last_empty_rowset_time**|**datetime**|Última vez que una instrucción RECEIVE de la cola devolvió un resultado vacío. QUE ACEPTA VALORES NULL.|  
+|**last_activated_time**|**datetime**|Última vez que este monitor de cola activó un procedimiento almacenado. QUE ACEPTA VALORES NULL.|  
+|**tasks_waiting**|**int**|Número de sesiones que esperan actualmente en una instrucción RECEIVE de esta cola. QUE ACEPTA VALORES NULL.<br /><br /> Nota: Este número incluye las sesiones que ejecutan una instrucción receive, independientemente de si el monitor de cola inicia la sesión. Es así si usa WAITFOR junto con RECEIVE. Básicamente, estas tareas esperan que lleguen mensajes a la cola.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -80,7 +77,7 @@ INNER JOIN sys.databases t5 ON ( t5.database_id = DB_ID() );
   
 ## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Service Broker relacionadas con vistas de administración dinámica & #40; Transact-SQL & #41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Vistas de administración dinámica relacionadas con Service Broker &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

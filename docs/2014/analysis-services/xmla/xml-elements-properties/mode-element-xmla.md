@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Mode Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Mode element
 ms.assetid: 43a54181-6494-48c3-b14b-376d8939fa9f
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c90d67995e6775c035265db57c2b55380ad0fe76
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e768d9ef176a05d4fe7622a520c9ac98f1d71d81
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267651"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072415"
 ---
 # <a name="mode-element-xmla"></a>Elemento Mode (XMLA)
   Identifica el modo que va a usar el elemento primario [bloqueo](../xml-elements-commands/lock-element-xmla.md) elemento cuando se crea un bloqueo en un objeto especificado.  
@@ -48,7 +45,7 @@ ms.locfileid: "37267651"
 </Lock>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -63,7 +60,7 @@ ms.locfileid: "37267651"
 |Elementos primarios|[Bloqueo](../xml-elements-commands/lock-element-xmla.md), [desbloquear](../xml-elements-commands/unlock-element-xmla.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento primario `Lock` usa el elemento `Mode` para determinar el tipo de bloqueo que ha de crear para un objeto. El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
 |Valor|Descripción|  

@@ -1,13 +1,11 @@
 ---
-title: Ejemplo ExecuteOptions y FetchOptions propiedades (VBScript) | Documentos de Microsoft
+title: Ejemplo ExecuteOptions y FetchOptions propiedades (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,22 +13,21 @@ helpviewer_keywords:
 - FetchOptions property [ADO], VBScript example
 - ExecuteOptions property [ADO]
 ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14defde3a35bcccd35c741f7f9b681e9197a8a23
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3cc7b120f41613a5797105695c415eea85d08fdd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288224"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695213"
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>Ejemplo ExecuteOptions y FetchOptions propiedades (VBScript)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar a [servicio de datos de WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- El código siguiente muestra cómo establecer el [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) y [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) propiedades en tiempo de diseño. Si se deja sin establecer, **ExecuteOptions** tiene como valor predeterminado **adcExecSync**. Este valor indica que, cuando el **RDS. Actualizar** se llama al método, se ejecutará en el subproceso que realiza la llamada actual, es decir, de forma sincrónica. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **ExecuteOptionsDesignVBS.asp**.  
+ El código siguiente muestra cómo establecer el [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) y [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) propiedades en tiempo de diseño. Si se deja sin establecer, **ExecuteOptions** el valor predeterminado es **adcExecSync**. Este valor indica que, cuando el **RDS. Actualizar** se llama al método, se ejecutará en el subproceso que realiza la llamada actual, es decir, de forma sincrónica. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **ExecuteOptionsDesignVBS.asp**.  
   
 ```  
 <!-- BeginExecuteOptionsDesignVBS -->  
@@ -98,7 +95,7 @@ body {
 <!-- EndExecuteOptionsDesignVBS -->  
 ```  
   
- En el ejemplo siguiente se muestra cómo establecer el **ExecuteOptions** y **FetchOptions** propiedades en tiempo de ejecución en código VBScript. Consulte la [actualizar](../../../ado/reference/rds-api/refresh-method-rds.md) método para obtener un ejemplo de estas propiedades. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **ExecuteOptionsRuntimeVBS.asp**.  
+ El ejemplo siguiente muestra cómo establecer el **ExecuteOptions** y **FetchOptions** propiedades en tiempo de ejecución en código VBScript. Consulte la [actualizar](../../../ado/reference/rds-api/refresh-method-rds.md) método para obtener un ejemplo de estas propiedades. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **ExecuteOptionsRuntimeVBS.asp**.  
   
 ```  
 <!-- BeginExecuteOptionsRuntimeVBS -->  

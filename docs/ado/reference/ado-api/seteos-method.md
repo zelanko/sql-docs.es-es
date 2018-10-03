@@ -1,13 +1,11 @@
 ---
-title: Método SetEOS | Documentos de Microsoft
+title: SetEOS (método) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - SetEOS method [ADO]
 ms.assetid: 707c18ca-6a56-4970-bbd6-ae1fb86a0b8a
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8821b58e5e111ad879c34f0d3d8177404945a72f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e0db8c7972d6b647cdd021d43dbb3cdee1ba0452
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281614"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678533"
 ---
 # <a name="seteos-method"></a>SetEOS (método)
 Establece la posición que es el final de la secuencia.  
@@ -37,13 +34,13 @@ Establece la posición que es el final de la secuencia.
 Stream.SetEOS  
 ```  
   
-## <a name="remarks"></a>Notas  
- **SetEOS** actualiza el valor de la [sobrecargas eléctricas](../../../ado/reference/ado-api/eos-property.md) propiedad realizando actual [posición](../../../ado/reference/ado-api/position-property-ado.md) el final de la secuencia. Se truncan los bytes o caracteres que siguen a la posición actual.  
+## <a name="remarks"></a>Comentarios  
+ **SetEOS** actualiza el valor de la [EOS](../../../ado/reference/ado-api/eos-property.md) propiedad realizando actual [posición](../../../ado/reference/ado-api/position-property-ado.md) al final de la secuencia. Se truncan los bytes o caracteres que siguen a la posición actual.  
   
- Dado que [escribir](../../../ado/reference/ado-api/write-method.md), [WriteText](../../../ado/reference/ado-api/writetext-method.md), y [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) no se truncan los valores adicionales existente **flujo** objetos, se pueden truncar estos bytes o caracteres estableciendo la nueva posición final de secuencia con **SetEOS**.  
+ Dado que [escribir](../../../ado/reference/ado-api/write-method.md), [WriteText](../../../ado/reference/ado-api/writetext-method.md), y [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) no se truncan los valores adicionales existente **Stream** objetos, se pueden truncar estos bytes o caracteres estableciendo la nueva posición final de secuencia con **SetEOS**.  
   
 > [!CAUTION]
->  Si establece **sobrecargas eléctricas** a una posición anterior al final real de la secuencia, se perderán todos los datos después de la nueva **sobrecargas eléctricas** posición.  
+>  Si establece **EOS** a una posición antes del final de la secuencia real, perderá todos los datos después de la nueva **EOS** posición.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

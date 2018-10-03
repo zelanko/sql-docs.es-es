@@ -1,30 +1,28 @@
 ---
-title: Secuencia de Escape de combinación externa | Documentos de Microsoft
+title: Secuencia de Escape de combinación externa | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - outer join escape sequence [ODBC]
 - escape sequences [ODBC], outer join
 - ODBC escape sequences [ODBC], outer join
 ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af6a98b3e1a7848fa242dfceb890c472e1d16f74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba08d33efca6fa90531f89bd57a307f42f343ebd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817694"
 ---
-# <a name="outer-join-escape-sequence"></a>Secuencia de Escape de combinación externa
+# <a name="outer-join-escape-sequence"></a>Secuencia de escape de combinación externa
 ODBC utiliza secuencias de escape para las combinaciones externas. La sintaxis de esta secuencia de escape es como sigue:  
   
 ```  
@@ -32,15 +30,15 @@ ODBC utiliza secuencias de escape para las combinaciones externas. La sintaxis d
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- En la notación de BNF, la sintaxis es la siguiente:  
+ En la notación de BNF, la sintaxis es como sigue:  
   
- *ODBC outer-join-escape* :: =  
+ *Outer-join-escape ODBC* :: =  
   
- *Iniciador de esc de ODBC* oj *combinación externa terminador de esc de ODBC*  
+ *Iniciador de esc de ODBC* jugo *combinación externa ODBC terminador esc*  
   
- *combinación externa* :: = *nombre de la tabla* [*nombre de correlación*] {izquierda &#124; derecha &#124; completo}  
+ *combinación externa* :: = *nombre-tabla* [*nombre de correlación*] {izquierda &#124; derecha &#124; completa}  
   
- COMBINACIÓN externa {*nombre de la tabla* [*nombre de correlación*] &#124; *combinación externa*} ON  
+ COMBINACIÓN externa {*nombre-tabla* [*nombre de correlación*] &#124; *combinación externa*} ON  
   
  *búsqueda:*  
   
@@ -52,4 +50,4 @@ ODBC utiliza secuencias de escape para las combinaciones externas. La sintaxis d
   
  *Terminador de esc de ODBC* :: =}  
   
- Para determinar qué partes de esta instrucción son compatibles, llama a una aplicación **SQLGetInfo** con el tipo de información de SQL_OJ_CAPABILITIES. Para las combinaciones externas, *condición de búsqueda* debe contener la condición de combinación entre especificado *nombres de tabla*.
+ Para determinar qué partes de esta instrucción son compatibles, una aplicación llama a **SQLGetInfo** con el tipo de información SQL_OJ_CAPABILITIES. Para las combinaciones externas, *condición de búsqueda* debe contener la condición de combinación entre especificado *nombres de tabla*.

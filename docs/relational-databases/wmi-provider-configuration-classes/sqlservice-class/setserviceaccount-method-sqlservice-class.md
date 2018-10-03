@@ -1,15 +1,12 @@
 ---
-title: Método SetServiceAccount (clase SqlService) | Documentos de Microsoft
+title: Método SetServiceAccount (clase SqlService) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SetServiceAccount Method (SqlService Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetServiceAccount method
 ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
-caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f44268f2c9d94a6336b516f1c259c1791767f3b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27985e94766a76efa755d05e81bce3ccb59ed6c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010562"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664339"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>Método SetServiceAccount (clase SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +38,7 @@ object.SetServiceAccount(ServiceStartName , ServiceStartPassword)
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto de la [clase SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) que representa el servicio.  
   
 #### <a name="parameters"></a>Parámetros  
@@ -51,9 +47,9 @@ object.SetServiceAccount(ServiceStartName , ServiceStartPassword)
   
 -   Si la cuenta pertenece al dominio integrado, puede especificarse \NombreUsuario.  
   
--   Si se especifica NULL, el servicio se registrará como el **LocalSystem** cuenta.  
+-   Si se especifica NULL, el servicio de haber iniciado sesión como el **LocalSystem** cuenta.  
   
- Para el kernel o los controladores de nivel de sistema, *StartName* contiene el nombre del objeto controlador, \FileSystem\Rdr o \Driver\Xns, que el sistema de E/S que se utiliza para cargar el controlador de dispositivo. Además, si se especifica NULL, el controlador se ejecutará con un nombre de objeto predeterminado creado por el sistema de E/S basado en el nombre del servicio. Ejemplo: DWDOM\Admin.  
+ Para los controladores de kernel o nivel de sistema, *StartName* contiene el nombre de objeto de controlador, \FileSystem\Rdr o \Driver\Xns, que usa el sistema de E/S para cargar el controlador de dispositivo. Además, si se especifica NULL, el controlador se ejecutará con un nombre de objeto predeterminado creado por el sistema de E/S basado en el nombre del servicio. Ejemplo: DWDOM\Admin.  
   
  *ServiceStartPassword*  
  Un valor de cadena que especifica la contraseña para el nombre de cuenta en el *StartName* parámetro. Especifique NULL si no va a cambiar la contraseña. Especifique una cadena vacía si el servicio no tiene contraseña.  

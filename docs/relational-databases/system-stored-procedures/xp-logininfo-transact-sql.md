@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_logininfo_TSQL
@@ -21,12 +18,12 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c10a914bc69b60b1cfd6cd3e88cae97a73f9aa0e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c9ed0ee742d1562d8b573b71e5d62b7d10bc7d02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43033531"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843833"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +67,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |**nombre de inicio de sesión asignado**|**sysname**|Cuentas de usuario que tienen privilegio de usuario, **asigna el nombre de inicio de sesión** muestra el nombre de inicio de sesión asignado que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta usar al iniciar sesión con esta cuenta mediante el uso de las reglas de asociación con el nombre de dominio agregado antes.|  
 |**ruta de acceso de permiso**|**sysname**|Pertenencia al grupo que permite que la cuenta tenga acceso.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si *account_name* se especifica, **xp_logininfo** notifica el nivel de privilegios más alto del grupo o usuario de Windows especificado. Si un usuario de Windows tiene acceso como administrador del sistema y como usuario del dominio, se le notificará como administrador del sistema. Si el usuario es miembro de varios grupos de Windows del mismo nivel de privilegio, solo se le notificará en el grupo al que se concediera primero acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Si *account_name* es un usuario de Windows o grupo que no está asociado con válido un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión, se devuelve un conjunto de resultados vacío. Si *account_name* no se puede identificar como un usuario válido de Windows o un grupo, se devuelve un mensaje de error.  

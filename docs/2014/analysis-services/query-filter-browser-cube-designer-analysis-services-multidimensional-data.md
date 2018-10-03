@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.filterpane.f1
 ms.assetid: f5cf0bb1-3afb-4856-a2ef-614deb4e7e49
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 85570891b1af0b102067f9153fe17e7a7b5b21a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1964b6562c34411201ce141c97c9df42103482ad
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250977"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074905"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Consulta y filtro (pestaña Explorador del Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Este área de la pestaña **Explorador** en el Diseñador de cubos contiene un área de consulta y de filtro para ayudar a elegir datos del cubo y utilizarlos en procesos de examen o en consultas. Puede agregar todos los objetos de cubo que desee y luego ver los resultados en el área de datos, o exportar los resultados en un informe utilizando Analizar en Excel para visualizar cómo verían los datos los usuarios finales.  
@@ -43,7 +40,7 @@ ms.locfileid: "37250977"
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**Igual a**|Los resultados están restringidos al conjunto definido en **Expresión de filtro**.|  
+|**igual**|Los resultados están restringidos al conjunto definido en **Expresión de filtro**.|  
 |**No igual**|Los resultados están restringidos a los miembros excluidos por el conjunto definido en **Expresión de filtro**.|  
 |**Entrada**|Los resultados están restringidos al conjunto con nombre seleccionado en **Expresión de filtro**.|  
 |**No en**|Los resultados están restringidos a los miembros excluidos por el conjunto con nombre seleccionado en **Expresión de filtro**.|  

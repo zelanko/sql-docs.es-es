@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.datasourcepane.f1
 ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aa82d94a6e034c514b173e623f8c6d0ab9932880
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 989b84d027db5dc1f5956aab6e2e4fec84ae6461
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246165"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112225"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Vista del origen de datos (pestaña Estructura de dimensión, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Use el panel **Vista del origen de datos** para ver las tablas y columnas desde la vista del origen de datos asociada a la dimensión seleccionada. Este panel se utiliza para crear atributos, propiedades de miembros, jerarquías y niveles al arrastrar las columnas del panel **Vista del origen de datos** al panel **Atributos** o **Jerarquías y niveles** .  

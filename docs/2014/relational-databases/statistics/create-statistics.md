@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.statistics.propertis.f1
@@ -20,12 +18,12 @@ ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d2798479058b3fd12cc34ddedd9352027b6c1821
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 50600dcb20df520dc462ed64fcd11333a53d3a66
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408404"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066845"
 ---
 # <a name="create-statistics"></a>Crear estadísticas
   Puede crear estadísticas de optimización de consultas en una o más columnas de una tabla o vista indizada en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para la mayoría de las consultas, el optimizador de consultas ya genera las estadísticas necesarias para un plan de consulta de alta calidad; en algunos casos, para obtener los mejores resultados es necesario crear estadísticas adicionales.  

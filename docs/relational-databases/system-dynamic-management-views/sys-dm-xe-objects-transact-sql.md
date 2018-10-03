@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_xe_objects (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_xe_objects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xe_objects
@@ -19,23 +17,22 @@ helpviewer_keywords:
 - sys.dm_xe_objects dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b34ce63f29a798db910115fae7db2e0c732dafdc
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: df8b9dae2c8c427444da4a9e19a1754f792dcef4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467211"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601373"
 ---
 # <a name="sysdmxeobjects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila por cada objeto expuesto por un paquete de eventos. Los objetos pueden ser alguno de los siguientes:  
   
--   Eventos. Los eventos indican los puntos de interés en una ruta de ejecución. Todos los eventos contienen información sobre un punto de interés.  
+-   eventos. Los eventos indican los puntos de interés en una ruta de ejecución. Todos los eventos contienen información sobre un punto de interés.  
   
 -   Acciones. Las acciones se ejecutan sincrónicamente cuando se activan los eventos. Una acción puede anexar información del tiempo de ejecución a un evento.  
   
@@ -45,19 +42,19 @@ ms.locfileid: "34467211"
   
 -   Tipos. Los tipos encapsulan la longitud y las características de la colección byte, necesaria para interpretar los datos.  
 
- |Nombre de columna|Tipo de datos|Description|  
+ |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(60)**|Nombre del objeto. nombre es único dentro de un paquete para un tipo de objeto específico. No admite valores NULL.|  
+|NAME|**nvarchar(60)**|Nombre del objeto. nombre es único dentro de un paquete para un tipo de objeto específico. No admite valores NULL.|  
 |object_type|**nvarchar(60)**|Tipo del objeto. object_type es uno de los siguientes:<br /><br /> event<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> Tipo<br /><br /> No admite valores NULL.|  
 |package_guid|**uniqueidentifier**|GUID del paquete que expone esta acción. Hay una relación de varios a uno con sys.dm_xe_packages.package_id. No admite valores NULL.|  
-|description|**nvarchar(256)**|Una descripción de la acción. descripción se establece por el autor del paquete. No admite valores NULL.|  
+|description|**nvarchar(256)**|Descripción de la acción. el autor del paquete establece la descripción. No admite valores NULL.|  
 |capabilities|**int**|Mapa de bits que describe las capacidades del objeto. Acepta valores NULL.|  
 |capabilities_desc|**nvarchar(256)**|Enumera todas las capacidades del objeto. Acepta valores NULL.<br /><br /> **Capacidades que se aplican a todos los tipos de objeto**<br /><br /> —<br />                                **Privada**. El único objeto disponible para uso interno, y al que no se puede acceder mediante la DLL CREATE/ALTER EVENT SESSION. Los destinos y los eventos de auditoría pertenecen a esta categoría, así como un pequeño número de objetos usados internamente.<br /><br /> ===============<br /><br /> **Capacidades de eventos**<br /><br /> —<br />                                **No_block**. El evento está en una ruta de acceso de código crítica que se no puede bloquear por ningún motivo. Los eventos con esta capacidad no se pueden agregar a ninguna sesión de evento que especifique NO_EVENT_LOSS.<br /><br /> ===============<br /><br /> **Capacidades que se aplican a todos los tipos de objeto**<br /><br /> —<br />                                **Process_whole_buffers**. El destino consume búferes de eventos a la vez, en lugar de evento por evento.<br /><br /> —<br />                        **Singleton**. Solamente puede haber una instancia del destino en un proceso. Aunque varias sesiones de eventos pueden hacer referencia al mismo destino singleton, en realidad solo hay una instancia, y esa instancia verá cada evento distinto una sola vez. Esto es importante si se agrega el destino a varias sesiones que recopilan el mismo evento.<br /><br /> —<br />                                **Synchronous**. El destino se ejecuta en el subproceso que produce el evento, antes de que se devuelva el control a la línea de código de llamada.|  
 |type_name|**nvarchar(60)**|Nombre de los objetos pred_source y pred_compare. Acepta valores NULL.|  
 |type_package_guid|**uniqueidentifier**|GUID del paquete que expone el tipo en el que este objeto funciona. Acepta valores NULL.|  
 |type_size|**int**|Tamaño del tipo de datos, en bytes. Solo es válido para los tipos de objetos válidos. Acepta valores NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
 ### <a name="relationship-cardinalities"></a>Cardinalidades de relación  

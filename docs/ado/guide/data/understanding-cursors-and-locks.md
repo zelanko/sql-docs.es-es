@@ -1,33 +1,30 @@
 ---
-title: Cursores y bloqueos | Documentos de Microsoft
+title: Cursores y bloqueos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - locks [ADO]
 - cursors [ADO]
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bdbbaa5d57bdaa1bf3d9d784f3bb378a833db9cc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a5c5a0d7d51acfd2ecf6d0ffda945a6223c7e04f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273044"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696964"
 ---
 # <a name="understanding-cursors-and-locks"></a>Descripción de los cursores y bloqueos
-Es importante comprender cómo funcionan los cursores para que pueda seleccionar el tipo de cursor mejor y más eficaz para los requisitos de acceso a datos de una aplicación. Una configuración de cursor menos óptimo puede realizar operaciones de acceso a datos sean extremadamente lentas.  
+Es importante comprender cómo funcionan los cursores para que pueda seleccionar el tipo de cursor mejor y más eficaz para los requisitos de acceso a datos de la aplicación. Una configuración menos óptima de cursor puede hacer que las operaciones de acceso a datos sean extremadamente lentas.  
   
- Muchas de las capacidades de la propiedad ADO **Recordset** objeto vienen determinados por el tipo y la ubicación del cursor, así como el tipo de bloqueo.  
+ Muchas de las funcionalidades de ADO **Recordset** objeto están determinados por el tipo y la ubicación del cursor, así como el tipo de bloqueo.  
   
  Esta sección contiene los temas siguientes.  
   

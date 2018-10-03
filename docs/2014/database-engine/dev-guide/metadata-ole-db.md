@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [OLE DB]
 - OLE DB, metadata
 ms.assetid: 605e3be5-aeea-4573-9847-b866ed3c8bff
-caps.latest.revision: 14
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 47d727e52109aa19f9ebf21b2b93d82b91fce4a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f41bffff76ec2fb18341f1ff083c4f2f748847c6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263331"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059725"
 ---
 # <a name="metadata-ole-db"></a>Metadatos (OLE DB)
   En esta sección se describen los metadatos de los parámetros, los metadatos de las columnas del conjunto de resultados y los metadatos del conjunto de filas de esquema.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MembersWithDataCaption Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MembersWithDataCaption element
 ms.assetid: a5d59efd-5d67-485b-a360-67d54a1fe394
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bd8884d67717267e44751841203ce2f73d07ecfb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 847a355f2517a5a630096e2617a27bdae396e565
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202305"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103905"
 ---
 # <a name="memberswithdatacaption-element-assl"></a>Elemento MembersWithDataCaption (ASSL)
   Proporciona una cadena de plantilla utilizada para crear títulos para los miembros de datos generados por el sistema.  
@@ -46,7 +43,7 @@ ms.locfileid: "37202305"
 </AttributeTranslation>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37202305"
 |Elementos primarios|[AttributeTranslation](../data-type/translation-data-type-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor de la `MembersWithDataCaption` elemento es utilizado únicamente por los atributos primarios (en otras palabras, el valor de la [uso](usage-element-dimensionattribute-assl.md) elemento de la `DimensionAttribute` elemento primario se establece en *primario*) para determinar el título de los miembros de datos del atributo primario. Para obtener más información sobre los miembros de datos, vea [Atributos en las jerarquías de elementos primarios y secundarios](../../multidimensional-models/parent-child-dimension-attributes.md).  
   
  Los elementos que corresponden a los elementos primarios de `MembersWithDataCaption` en el modelo de objetos de Analysis Management Objects (AMO) son <xref:Microsoft.AnalysisServices.AttributeTranslation> y <xref:Microsoft.AnalysisServices.DimensionAttribute>.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Caption Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Caption element
 ms.assetid: ed2be851-0ddc-4fa5-8aee-b2acb2e6d25e
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 283e7f84373d5f36431ba1b706b4d27e23cb876f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 93efaaecdf5b8a7f17ab404df9629fd4bb253e54
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167706"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083485"
 ---
 # <a name="caption-element-assl"></a>Elemento Caption (ASSL)
   Contiene el título del elemento primario asociado.  
@@ -46,7 +43,7 @@ ms.locfileid: "37167706"
 </Action>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37167706"
 |Elemento primario|[Acción](../objects/action-element-assl.md), [traducción](../objects/translation-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los elementos que corresponden a los elementos primarios de `Caption` en el modelo de objetos de Analysis Management Objects (AMO) son <xref:Microsoft.AnalysisServices.Action> y <xref:Microsoft.AnalysisServices.Translation>.  
   
 ## <a name="see-also"></a>Vea también  

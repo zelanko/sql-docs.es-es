@@ -1,28 +1,25 @@
 ---
-title: Gramática formal forma | Documentos de Microsoft
+title: Gramática formal de forma | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO], shape grammar
 - data shaping [ADO], shape grammar
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9bb375b0b580bec75b1994a549a1a5815f4e34ec
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3b26eaeb804f8d92a7122814641cadf5889b77b8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270374"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789273"
 ---
 # <a name="formal-shape-grammar"></a>Gramática formal de forma
 Se trata de la gramática formal para crear cualquier comando shape:  
@@ -31,45 +28,45 @@ Se trata de la gramática formal para crear cualquier comando shape:
   
 -   Términos opcionales están delimitados por corchetes ("[]").  
   
--   Alternativas se indican mediante una barra vertical ("&#124;").  
+-   Alternativas se indican mediante una barra diagonal ("&#124;").  
   
--   Las alternativas extensibles se indican mediante un botón de puntos suspensivos ("...").  
+-   Repetición alternativas se indican mediante un botón de puntos suspensivos ("...").  
   
 -   *Alfa* indica una cadena de letras en orden alfabético.  
   
--   *Dígitos* indica una cadena de números.  
+-   *Dígito* indica una cadena de números.  
   
--   *Dígito de Unicode* indica una cadena de dígitos de unicode.  
+-   *Unicode-dígitos* indica una cadena de dígitos unicode.  
   
  Todos los demás términos son literales.  
   
 |Término|Definición|  
 |----------|----------------|  
-|\<comando Shape >|FORMA [\<tabla exp > [[AS] \<alias >]] [\<forma Acción >]|  
-|\<exp de tabla >|{\<texto de comando de proveedor >}&#124;<br /><br /> (\<comando shape >)&#124;<br /><br /> TABLA \<quoted-name >&#124;<br /><br /> \<QUOTED-name >|  
-|\<acción de forma >|ANEXAR \<lista de campos de un alias >&#124;<br /><br /> PROCESO \<lista de campos de un alias > [BY \<lista de campos >]|  
-|\<lista de campos de un alias >|\<campo de un alias > [, \<campos con alias... >]|  
-|\<campo de un alias >|\<campo exp > [[AS] \<alias >]|  
-|\<campo exp >|(\<relación exp >)&#124;<br /><br /> \<exp calcula >&#124;<br /><br /> \<exp agregado >&#124;<br /><br /> \<nueva exp >|  
+|\<comando de Shape >|FORMA [\<tabla exp > [[AS] \<alias >]] [\<forma Acción >]|  
+|\<exp de tabla >|{\<texto de comando de proveedor >}&#124;<br /><br /> (\<forma comando >)&#124;<br /><br /> TABLA \<quoted-name >&#124;<br /><br /> \<QUOTED-name >|  
+|\<forma Acción >|ANEXAR \<lista de campos de un alias >&#124;<br /><br /> PROCESO \<lista de campos de un alias > [BY \<lista de campos >]|  
+|\<lista de campos de un alias >|\<un alias de campo > [, \<un alias de campo... >]|  
+|\<un alias de campo >|\<campo: exp > [[AS] \<alias >]|  
+|\<campo: exp >|(\<relación exp >)&#124;<br /><br /> \<exp calculado >&#124;<br /><br /> \<agregado exp >&#124;<br /><br /> \<nueva exp >|  
 |<relation_exp>|\<tabla exp > [[AS] \<alias >]<br /><br /> RELACIONAR \<relación-cond-list >|  
 |\<relación-cond-list >|\<relación cond > [, \<relación cond >...]|  
-|\<relación cond >|\<nombre del campo > TO \<ref secundarios >|  
-|\<ref secundarios >|\<nombre de campo >&#124;<br /><br /> PARÁMETRO \<ref de param >|  
-|\<ref de param >|\<número >|  
-|\<lista de campos >|\<nombre del campo > [, \<nombre de campo >]|  
-|\<exp agregado >|SUM (\<nombre de campo completo >)&#124;<br /><br /> AVG (\<nombre de campo completo >)&#124;<br /><br /> MIN (\<nombre de campo completo >)&#124;<br /><br /> MAX (\<nombre de campo completo >)&#124;<br /><br /> RECUENTO (\<calificado-alias > &#124; \<nombre calificado >)&#124;<br /><br /> STDEV (\<nombre de campo completo >)&#124;<br /><br /> CUALQUIER (\<nombre de campo completo >)|  
-|\<exp calcula >|CALC (\<expresión >)|  
-|\<nombre de campo completo >|\<alias>.[\<alias>...]\<field-name>|  
+|\<relación cond >|\<nombre de campo > TO \<secundarios ref >|  
+|\<secundario-ref >|\<nombre de campo >&#124;<br /><br /> PARÁMETRO \<-ref param >|  
+|\<-ref param >|\<número >|  
+|\<lista de campos >|\<nombre de campo > [, \<nombre de campo >]|  
+|\<agregado exp >|SUM (\<nombre de campo completo >)&#124;<br /><br /> AVG (\<nombre de campo completo >)&#124;<br /><br /> MIN (\<nombre de campo completo >)&#124;<br /><br /> MAX (\<nombre de campo completo >)&#124;<br /><br /> RECUENTO (\<calificado-alias > &#124; \<calificado-name >)&#124;<br /><br /> STDEV (\<nombre de campo completo >)&#124;<br /><br /> CUALQUIER (\<nombre de campo completo >)|  
+|\<exp calculado >|CALC (\<expresión >)|  
+|\<nombre del campo calificado >|\<alias>.[\<alias>...]\<field-name>|  
 |\<alias >|\<QUOTED-name >|  
 |\<nombre de campo >|\<QUOTED-name > [[AS] \<alias >]|  
-|\<QUOTED-name >|"\<cadena >"&#124;<br /><br /> '\<cadena >'&#124;<br /><br /> [\<cadena >]&#124;<br /><br /> \<Nombre >|  
-|\<nombre calificado >|alias [.alias...]|  
+|\<QUOTED-name >|"\<string >"&#124;<br /><br /> '\<cadena >'&#124;<br /><br /> [\<cadena >]&#124;<br /><br /> \<Nombre >|  
+|\<nombre completo de >|alias [.alias...]|  
 |\<Nombre >|alfa [alpha &#124; dígitos &#124; _ &#124; # &#124; : &#124; ...]|  
 |\<número >|dígito [dígitos...]|  
-|\<nueva exp >|NUEVA \<tipo de campo > [(\<número > [, \<número >])]|  
+|\<nueva exp >|NUEVO \<tipo de campo > [(\<número > [, \<número >])]|  
 |\<tipo de campo >|Un tipo de datos OLE DB o ADO.|  
-|\<cadena >|carácter Unicode [unicode-char...]|  
-|\<expresión >|Un Visual Basic para expresiones de las aplicaciones cuyos operandos son otras columnas no calculadas de la misma fila.|  
+|\<cadena >|-char Unicode [-char unicode...]|  
+|\<expresión >|Un objeto Visual expresión Basic para aplicaciones cuyos operandos son otras columnas no calculadas en la misma fila.|  
   
 ## <a name="see-also"></a>Vea también  
  [Acceso a las filas en un conjunto de registros jerárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

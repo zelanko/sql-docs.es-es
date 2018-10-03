@@ -5,11 +5,7 @@ ms.date: 03/04/2017
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.component: system-catalog-views
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bandwidth_usage
@@ -26,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1accec58750bfd4a3806308252113a6c2aecc2ac
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 5f671e8450255e9c03005c71d6f887c63559d3a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43031118"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603853"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -56,7 +52,7 @@ ms.locfileid: "43031118"
 ## <a name="permissions"></a>Permisos  
  Esta vista solo está disponible en el **maestro** base de datos para el inicio de sesión de entidad de seguridad de nivel de servidor.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
   
 ### <a name="external-and-internal-classes"></a>Clases externas e internas  
  Para cada base de datos utilizada en un momento dado, el **sys.bandwidth_usage** vista devuelve las filas que muestran la clase y la dirección de uso de ancho de banda. En el ejemplo siguiente se muestran los datos que se pueden exponer para una base de datos determinada. En este ejemplo, el tiempo son las 17:00 2012-04-21: 00, que se produce durante el período de tiempo máximo. El nombre de base de datos es Db1. En este ejemplo, **sys.bandwidth_usage** ha devuelto una fila para las cuatro combinaciones de direcciones de entrada y salida y clases externas e internas, como sigue:  

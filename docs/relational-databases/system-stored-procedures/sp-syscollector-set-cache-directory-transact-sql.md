@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_set_cache_directory (Transact-SQL) | Documentos de Microsoft
+title: sp_syscollector_set_cache_directory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_set_cache_directory_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_cache_directory stored procedure
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2fec21ffdac0ee58f6927935942fedadda563f0f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 825291445c0d31df8230793c3a5d6a1b7f272082
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260891"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726773"
 ---
 # <a name="spsyscollectorsetcachedirectory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,11 +52,11 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
   
  El directorio especificado no tiene que existir en el momento en que se ejecute sp_syscollector_set_cache_directory; sin embargo, los datos no pueden almacenarse en memoria caché y cargarse correctamente hasta que se cree el directorio. Recomendamos crear el directorio antes de ejecutar este procedimiento almacenado.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol fijo de base de datos dc_admin (con permiso EXECUTE) para ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se deshabilita el recopilador de datos, Establece el directorio de caché para el recopilador de datos en `D:\tempdata`y, a continuación, habilita el recopilador de datos.  
+ El ejemplo siguiente se deshabilita el recopilador de datos, Establece el directorio de caché para el recopilador de datos `D:\tempdata`y, a continuación, habilita el recopilador de datos.  
   
 ```sql  
 USE msdb;  

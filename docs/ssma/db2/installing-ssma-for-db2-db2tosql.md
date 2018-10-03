@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 79fbe8ea-471b-407a-be2a-4100d9b57c61
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a54f274bb6823044bb0f82169e05fdc157c245d1
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 88a1d6554f8a8975918a59a4ab3ec9d728a8d201
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40392373"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847453"
 ---
 # <a name="installing-ssma-for-db2-db2tosql"></a>Instalación de SSMA para DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para DB2 consta de una aplicación cliente que utilice para realizar una migración desde DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Azure SQL DB. También contiene un paquete de extensión que admite la migración de datos y el uso de funciones del sistema DB2 en las bases de datos migrados.  

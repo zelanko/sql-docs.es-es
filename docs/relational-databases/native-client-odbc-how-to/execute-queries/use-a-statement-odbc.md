@@ -5,24 +5,21 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - statements [ODBC]
 ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aae9e2e8d3d0a81445805bbe74afb752d466d57e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: afcacd5a19920a396141284103db93e60a4f0646
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43060318"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47829570"
 ---
 # <a name="use-a-statement-odbc"></a>Usar una instrucción (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,11 +40,11 @@ ms.locfileid: "43060318"
   
 5.  Ejecute directamente una instrucción utilizando SQLExecDirect.  
   
-     \- O bien  
+     \- o -  
   
      Si se ha preparado la instrucción, ejecútela varias veces utilizando [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400).  
   
-     \- O bien  
+     \- o -  
   
      Llame a una función de catálogo, que devuelve los resultados.  
   
@@ -55,11 +52,11 @@ ms.locfileid: "43060318"
   
      Capture una fila cada vez del conjunto de resultados de una instrucción.  
   
-     \- O bien  
+     \- o -  
   
      Capture varias filas cada vez del conjunto de resultados mediante un cursor de bloque.  
   
-     \- O bien  
+     \- o -  
   
      Llame a [SQLRowCount](../../../relational-databases/native-client-odbc-api/sqlrowcount.md) para determinar el número de filas afectado por una instrucción INSERT, UPDATE o DELETE.  
   

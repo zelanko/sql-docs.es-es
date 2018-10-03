@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DDL triggers, implementing
@@ -14,12 +12,12 @@ ms.assetid: f44e5340-1d18-40e9-828e-0ffcca091ae3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 38e7127323d76c42eaf7920ae359bca062e199a4
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8f62e0fe8bc1e0f2ed7fbb4cd48c6725cfb098d9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426824"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086535"
 ---
 # <a name="implement-ddl-triggers"></a>Implementar desencadenadores DDL
   En este tema se ofrece información acerca de la creación y modificación de desencadenadores DDL, así como para su deshabilitación o eliminación.  

@@ -1,14 +1,11 @@
 ---
-title: sysmail_delete_profileaccount_sp (Transact-SQL) | Documentos de Microsoft
+title: sysmail_delete_profileaccount_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_profileaccount_sp
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_profileaccount_sp
 ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
-caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f90e939bf47154850c2183261af4cb541b19538d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: de13b3b3ff39ac9aacdbcd7beb996a353593f609
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260178"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677163"
 ---
 # <a name="sysmaildeleteprofileaccountsp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +42,16 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
   
 ## <a name="arguments"></a>Argumentos  
  [ **@profile_id** =] *profile_id*  
- El identificador del perfil que se va a eliminar. *profile_id* es **int**, su valor predeterminado es null. Ya sea la *profile_id* o *profile_name* se puede especificar.  
+ El identificador del perfil que se va a eliminar. *profile_id* es **int**, su valor predeterminado es null. Ya sea el *profile_id* o *profile_name* se puede especificar.  
   
  [ **@profile_name** =] **'***profile_name***'**  
- Nombre del perfil que se va a eliminar. *profile_name* es **sysname**, su valor predeterminado es null. Ya sea la *profile_id* o *profile_name* se puede especificar.  
+ Nombre del perfil que se va a eliminar. *nombre_perfil* es **sysname**, su valor predeterminado es null. Ya sea el *profile_id* o *profile_name* se puede especificar.  
   
  [ **@account_id** =] *account_id*  
- Identificador de la cuenta que se va a eliminar. *account_id* es **int**, su valor predeterminado es null. Ya sea la *account_id* o *account_name* se puede especificar.  
+ Identificador de la cuenta que se va a eliminar. *account_id* es **int**, su valor predeterminado es null. Ya sea el *account_id* o *account_name* se puede especificar.  
   
  [ **@account_name** =] **'***account_name***'**  
- Nombre de la cuenta que se va a eliminar. *account_name* es **sysname**, su valor predeterminado es null. Ya sea la *account_id* o *account_name* se puede especificar.  
+ Nombre de la cuenta que se va a eliminar. *account_name* es **sysname**, su valor predeterminado es null. Ya sea el *account_id* o *account_name* se puede especificar.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -70,10 +66,10 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
   
  Cuando se especifica un perfil pero no se especifica ninguna cuenta, este procedimiento almacenado quita todas las cuentas del perfil especificado. Por ejemplo, si va a cambiar los servidores SMTP que utiliza un perfil, puede ser conveniente quitar todas las cuentas del perfil y agregar después cuentas nuevas según sea necesario.  
   
- El procedimiento almacenado **sysmail_delete_profileaccount_sp** está en el **msdb** la base de datos y es propiedad de la **dbo** esquema. El procedimiento se debe ejecutar con un nombre de tres partes si la base de datos actual no es **msdb**.  
+ El procedimiento almacenado **sysmail_delete_profileaccount_sp** está en el **msdb** de base de datos y que pertenece el **dbo** esquema. El procedimiento debe ejecutarse con un nombre de tres partes si la base de datos actual no es **msdb**.  
   
-## <a name="permissions"></a>Permissions  
- Permisos de ejecución para este procedimiento de forma predeterminada a los miembros de la **sysadmin** rol fijo de servidor.  
+## <a name="permissions"></a>Permisos  
+ Permisos de ejecución de este procedimiento de forma predeterminada a los miembros de la **sysadmin** rol fijo de servidor.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente muestra cómo se quita la cuenta `Audit Account` del perfil `AdventureWorks Administrator`.  

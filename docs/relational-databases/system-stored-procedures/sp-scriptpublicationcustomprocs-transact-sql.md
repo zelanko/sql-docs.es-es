@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_scriptpublicationcustomprocs
 - sp_scriptpublicationcustomprocs_TSQL
 helpviewer_keywords:
 - sp_scriptpublicationcustomprocs
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 15c841becf856af68e37273349cdb7b3fe578fdf
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 3c6a24a03e1ac8b4fff3fe4af878f051cf2e35a5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026864"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815461"
 ---
 # <a name="spscriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +48,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Devuelve un conjunto de resultados que consta de una sola **nvarchar (4000)** columna. El conjunto de resultados forma toda la instrucción CREATE PROCEDURE que se necesita para crear el procedimiento almacenado personalizado.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los artículos sin la opción de esquema de procedimiento personalizado de generación automática (0x2) no se benefician de la creación de script de los procedimientos personalizados.  
   
  Los procedimientos siguientes se utilizan por **sp_scriptpublicationcustomprocs** para crear procedimientos en el suscriptor y no se debe ejecutar directamente:  

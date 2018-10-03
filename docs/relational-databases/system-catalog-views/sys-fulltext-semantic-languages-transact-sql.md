@@ -1,14 +1,11 @@
 ---
-title: Sys.fulltext_semantic_languages (Transact-SQL) | Documentos de Microsoft
+title: Sys.fulltext_semantic_languages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fulltext_semantic_languages
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.fulltext_semantic_languages catalog view
 ms.assetid: b42a85e6-1db9-4a22-8a70-014574c95198
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c112a48acfa87adcdee439cea320c44a604bfe2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fb609936d7f86728fca53021f96afcbaed412c2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179131"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604216"
 ---
 # <a name="sysfulltextsemanticlanguages-transact-sql"></a>sys.fulltext_semantic_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +36,9 @@ ms.locfileid: "33179131"
     
 ||||  
 |-|-|-|  
-|**Nombre de columna**|**Tipo**|**Description**|  
-|lcid|int|Identificador de configuración regional (LCID) de Microsoft Windows para el idioma.|  
-|name|sysname|Es el valor del alias en [sys.syslanguages &#40;Transact-SQL&#41; ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corresponde al valor de **lcid**, o la representación de cadena del LCID numérico.|  
+|**Nombre de columna**|**Tipo**|**Descripción**|  
+|lcid|INT|Identificador de configuración regional (LCID) de Microsoft Windows para el idioma.|  
+|NAME|sysname|Es el valor del alias en [sys.syslanguages &#40;Transact-SQL&#41; ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corresponde al valor de **lcid**, o la representación de cadena del LCID numérico.|  
   
 ## <a name="general-remarks"></a>Notas generales  
  Para obtener más información, vea [Instalar y configurar la búsqueda semántica](../../relational-databases/search/install-and-configure-semantic-search.md).  
@@ -52,11 +48,11 @@ ms.locfileid: "33179131"
   
 ## <a name="security"></a>Seguridad  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Permisos  
  La visibilidad de los metadatos en las vistas de catálogo se limita a los elementos protegibles y que son propiedad de un usuario o sobre los que el usuario tiene algún permiso.  
   
 ## <a name="examples"></a>Ejemplos  
- El siguiente ejemplo se muestra cómo consultar **sys.fulltext_semantic_languages** para obtener información acerca de todos los modelos de idioma registrados para la indización semántica en la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ El ejemplo siguiente se muestra cómo realizar consultas **sys.fulltext_semantic_languages** para obtener información acerca de todos los modelos de lenguaje registrados para la indización semántica en la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 SELECT * FROM sys.fulltext_semantic_languages;  

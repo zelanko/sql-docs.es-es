@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLSetConnectAttr function
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
-caps.latest.revision: 105
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 963104ee755daba6514403ddd7f5dca76507cf5a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f95a4d3cc6903121c3c46d926e9d66b2d81f866a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432534"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070595"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
   El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pasa por alto la configuración de SQL_ATTR_CONNECTION_TIMEOUT.  
@@ -100,7 +97,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, …) // restores to pre-connect attr
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
 ```  
   
- El valor predeterminado es `ReadWrite`. Para obtener más información acerca de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatibilidad del cliente nativo para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] AG, consulte [SQL Server Native cliente admite para alta disponibilidad y recuperación ante desastres](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ De manera predeterminada, es `ReadWrite`. Para obtener más información acerca de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatibilidad del cliente nativo para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] AG, consulte [SQL Server Native cliente admite para alta disponibilidad y recuperación ante desastres](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 ## <a name="sqlcoptssattachdbfilename"></a>SQL_COPT_SS_ATTACHDBFILENAME  
  SQL_COPT_SS_ATTACHDBFILENAME especifica el nombre del archivo principal de una base de datos adjuntable. Esta base de datos se adjunta y se convierte en la base de datos predeterminada para la conexión. Para usar SQL_COPT_SS_ATTACHDBFILENAME debe especificar el nombre de la base de datos como el valor del atributo de conexión SQL_ATTR_CURRENT_CATALOG, o en la base de datos = el parámetro de un [SQLDriverConnect](sqldriverconnect.md). Si la base de datos se ha adjuntado previamente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no volverá a adjuntarla.  
@@ -170,7 +167,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
  Después de realizar la conexión, la aplicación puede consultar este atributo mediante [SQLGetConnectAttr](sqlgetconnectattr.md) para determinar la identidad del asociado de conmutación por error. Si el servidor principal no tiene ningún asociado de conmutación por error, esta propiedad devolverá una cadena vacía. Esto permite que una aplicación inteligente almacene en memoria caché el servidor de copia de seguridad determinado más recientemente, pero dichas aplicaciones deben tener en cuenta que la información solo se actualiza cuando la conexión se establece por primera vez (o se restablece, si está agrupada) y puede quedar desfasada para conexiones a largo plazo.  
   
- Para obtener más información, consulte [Using Database Mirroring](../native-client/features/using-database-mirroring.md).  
+ Para obtener más información, vea [Usar la creación de reflejo de la base de datos](../native-client/features/using-database-mirroring.md).  
   
 ## <a name="sqlcoptssintegratedsecurity"></a>SQL_COPT_SS_INTEGRATED_SECURITY  
  SQL_COPT_SS_INTEGRATED_SECURITY fuerza el uso de la autenticación de Windows para la validación de acceso en el inicio sesión del servidor. Cuando se usa la autenticación de Windows, el controlador omite los valores de identificador y la contraseña de usuario proporcionados como parte de **SQLConnect**, [SQLDriverConnect](sqldriverconnect.md), o [SQLBrowseConnect](sqlbrowseconnect.md)de procesamiento.  

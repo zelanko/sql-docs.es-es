@@ -6,9 +6,7 @@ ms.date: 07/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_tuning_recommendations
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - database tuning recommendations feature [SQL Server], sys.dm_db_tuning_recommendations dynamic management view
 - sys.dm_db_tuning_recommendations dynamic management view
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
-caps.latest.revision: 37
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3fee5cae4701b9c7acf43604e73f65af54657aa6
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 0faae3cec2d71c28056a384b196a9b46929d5d6e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43069676"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792113"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>Sys.DM\_db\_optimización\_recomendaciones (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -61,7 +58,7 @@ ms.locfileid: "43069676"
 | **puntuación** | **int** | Calcula el impacto o valor de esta recomendación en el valor de 0 a 100 escala (cuanto mayor sea la mejor) |
 | **Detalles** | **nvarchar(max)** | Documento JSON que contiene información más detallada acerca de la recomendación. Están disponibles los campos siguientes:<br /><br />`planForceDetails`<br />-    `queryId` -consulta\_Id. de la consulta devuelta.<br />-    `regressedPlanId` -plan_id del plan con regresión.<br />-   `regressedPlanExecutionCount` -El número de ejecuciones de la consulta con un plan con regresión antes de la regresión se detecta.<br />-    `regressedPlanAbortedCount` -El número de errores detectados durante la ejecución del plan con regresión.<br />-    `regressedPlanCpuTimeAverage` -Promedio de tiempo de CPU utilizado por la consulta con regresión antes de que se detecta la regresión.<br />-    `regressedPlanCpuTimeStddev` : Se ha detectado desviación estándar de tiempo de CPU utilizado por las consultas con regresión antes de la regresión.<br />-    `recommendedPlanId` -plan_id del plan que se debería forzar.<br />-   `recommendedPlanExecutionCount`-El número de ejecuciones de la consulta con el plan que se debería forzar antes de que se detecta la regresión.<br />-    `recommendedPlanAbortedCount` -El número de errores detectados durante la ejecución del plan que se debería forzar.<br />-    `recommendedPlanCpuTimeAverage` -Promedio de tiempo de CPU consumido por la consulta ejecutada con el plan que se debería forzar (calculado antes de que se detecta la regresión).<br />-    `recommendedPlanCpuTimeStddev` Se ha detectado la desviación estándar de tiempo de CPU utilizado por las consultas con regresión antes de la regresión.<br /><br />`implementationDetails`<br />-  `method` -El método que se debe usar para corregir la regresión. Valor siempre es `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)] secuencia de comandos que se debe ejecutar para forzar el plan recomendado. |
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Información devuelta por `sys.dm_db_tuning_recommendations` se actualiza cuando el motor de base de datos identifica posibles regresión del rendimiento de consulta y no se conserva. Las recomendaciones se mantienen hasta que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reinicia. Los administradores de base de datos deben realizar periódicamente copias de seguridad de la recomendación de optimización si desean conservarla después de reciclar el servidor. 
 
  `currentValue` campo en el `state` columna puede tener los siguientes valores:

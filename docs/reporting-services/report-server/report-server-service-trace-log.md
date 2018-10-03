@@ -4,7 +4,6 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], trace
@@ -14,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 29efe95c5c8712b7c4423e3412252a8d66485936
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 79d3ad6cf88bc4581ddea74e145d21c88c57114b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277132"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833273"
 ---
 # <a name="report-server-service-trace-log"></a>Registro de seguimiento del servicio del servidor de informes
   Los registros de seguimiento del servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] son un archivo de texto ASCII que contiene información detallada de las operaciones del servicio del servidor de informes.  La información de los archivos incluye las operaciones realizadas por el servicio web del servidor de informes, el portal web y el procesamiento en segundo plano. El archivo de registro de seguimiento incluye información redundante que contienen otros archivos de registro, así como información adicional que no está disponible en ningún otro archivo. La información del registro de seguimiento resulta útil si se está depurando una aplicación que incluye un servidor de informes o se investiga un problema específico que se ha incluido en el registro de eventos o de ejecución. Por ejemplo, cuando existen problemas con las suscripciones.  

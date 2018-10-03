@@ -4,19 +4,18 @@ ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], embedded
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 81c037101caec5bd9d1087ee4910bb5bedb47f0c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7e50917bd524e8ce8c68bc904e100b673419d684
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43282117"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843943"
 ---
 # <a name="configure-data-source-properties-for-a-paginated-report"></a>Configuración de propiedades de origen de datos para un informe paginado
   Al ejecutar un informe paginado, el servidor de informes recupera la información de las propiedades para determinar la manera de conectarse a un origen de datos. El tipo de origen de datos, la cadena de conexión y la información de credenciales se especifican en las páginas de propiedades Origen de datos del informe publicado. Puede establecer las propiedades para variar la información de conexión a un origen de datos de los valores originales que se especificaron cuando se creó el informe.  

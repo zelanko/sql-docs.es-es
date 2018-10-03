@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.target.status.f1
 ms.assetid: 010a4cab-d878-4889-8ac8-7d91db6345d6
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b484676ba874c44d79ea9a3bc90b85e71e5db21a
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: d74ed50a5ded73dfa990efcfcce55418f64eee58
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813111"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112705"
 ---
 # <a name="target-servers-target-server-status-tab"></a>Servidores de destino (pestaña Estado de servidor de destino)
   Utilice esta página para ver el estado de los servidores de destino de este servidor principal.  

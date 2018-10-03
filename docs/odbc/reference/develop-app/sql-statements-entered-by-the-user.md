@@ -1,32 +1,29 @@
 ---
-title: Instrucciones SQL especificados por el usuario | Documentos de Microsoft
+title: Las instrucciones SQL escrita por el usuario | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - user-entered SQL statements [ODBC]
 - SQL statements [ODBC], constructing
 - SQL statements [ODBC], entered by user
 ms.assetid: 109af162-93ba-425a-8fe5-49c7dc7cc784
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1be7159d7f56226c94b6cbfa335883b73df15de1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 28256433802d686f4362b2b733fc2d2b13e65302
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911400"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612623"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>Instrucciones SQL escritas por el usuario
-Las aplicaciones que realizan análisis ad hoc suelen permiten al usuario escribir instrucciones SQL directamente. Por ejemplo:  
+Las aplicaciones que realizan análisis ad hoc también suele permiten al usuario que escriba las instrucciones SQL directamente. Por ejemplo:  
   
 ```  
 SQLCHAR *     Statement, SqlState[6], Msg[SQL_MAX_MESSAGE_LENGTH];  
@@ -52,4 +49,4 @@ if ((rc1 == SQL_ERROR) || rc1 == SQL_SUCCESS_WITH_INFO) {
 }  
 ```  
   
- Este enfoque simplifica el código de aplicación; la aplicación se basa en el usuario para generar la instrucción SQL y en el origen de datos para comprobar la validez de la instrucción. Dado que es difícil de escribir una interfaz gráfica de usuario que expone adecuadamente las complejidades de SQL, simplemente pidiendo al usuario que escriba el texto de la instrucción SQL puede ser una alternativa preferible. Sin embargo, esto requiere que el usuario saber no solo SQL, sino también el esquema del origen de datos que se está consultando. Algunas aplicaciones proporcionan una interfaz gráfica de usuario mediante el cual el usuario puede crear una instrucción básica de SQL y también proporcionan una interfaz de texto con el que el usuario puede modificar.
+ Este enfoque simplifica la programación de aplicaciones; la aplicación se basa en el usuario para generar la instrucción SQL y en el origen de datos para comprobar la validez de la instrucción. Dado que es difícil de escribir una interfaz gráfica de usuario que expone adecuadamente los pormenores de SQL, basta con que pide al usuario que escriba el texto de la instrucción SQL puede ser una alternativa preferible. Sin embargo, esto requiere que el usuario saber no solo SQL, sino también el esquema del origen de datos que se está consultando. Algunas aplicaciones proporcionan una interfaz gráfica de usuario mediante el cual el usuario puede crear una instrucción SQL básica y también proporcionan una interfaz de texto con el que el usuario puede modificar.

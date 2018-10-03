@@ -1,52 +1,49 @@
 ---
-title: Sección de datos | Documentos de Microsoft
+title: Sección de datos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data section [ADO]
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1b861ce91ec8b7007e168cbdb7d0dae3f0ce48e9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8f95e963264b122440c85334cb69b622c6aa122a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270104"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714124"
 ---
 # <a name="data-section"></a>Sección de datos
-La sección de datos define los datos del conjunto de filas junto con los pendientes las actualizaciones, inserciones o eliminaciones. La sección de datos puede contener cero o más filas. Solo puede contener datos de un conjunto de filas donde la fila se define el esquema. Además, como se indicó antes, se pueden omitir columnas sin ningún dato. Si se utiliza un atributo o un subelemento en la sección de datos y esa construcción no se ha definido en la sección de esquema, se omite en modo silencioso.  
+La sección de datos define los datos del conjunto de filas junto con el pendiente actualizaciones, inserciones o eliminaciones. La sección de datos puede contener cero o más filas. Solo puede contener datos de un conjunto de filas donde la fila se define el esquema. Además, como se indicó antes, se pueden omitir columnas sin datos. Si se utiliza un atributo o un subelemento en la sección de datos y esa construcción no se ha definido en la sección de esquema, se omite en modo silencioso.  
   
 ## <a name="string"></a>String  
- Los caracteres XML reservados en datos de texto se deben reemplazar por entidades de caracteres apropiado. Por ejemplo, en el nombre de la compañía "Artículos de Juan", una comilla simple debe sustituirse por una entidad. La fila real podría parecerse a lo siguiente:  
+ Los caracteres XML reservados en datos de texto deben reemplazarse por las entidades de caracteres apropiado. Por ejemplo, en el nombre de la empresa "De Joe garaje", una comilla simple debe sustituirse por una entidad. La fila real sería similar al siguiente:  
   
 ```  
 <z:row CompanyName="Joe's Garage"/>  
 ```  
   
- Los caracteres siguientes están reservados en XML y se deben reemplazar por entidades de carácter: {', "&,\<, >}.  
+ Los caracteres siguientes están reservados en XML y debe reemplazarse por las entidades de caracteres: {"," &,\<, >}.  
   
 ## <a name="binary"></a>Binario  
- Datos binarios son tienen codificada bin.hex (es decir, un byte se asigna a dos caracteres, un carácter por cada medio byte).  
+ Datos binarios están bin.hex codificado (es decir, un byte se asigna a dos caracteres, un carácter por nibble).  
   
 ## <a name="datetime"></a>DateTime  
- Tipos de datos de datos XML no admite directamente el formato VT_DATE variant. El formato correcto para las fechas con componente de fecha y de hora es aaaa-mm-ddThh.  
+ El formato VT_DATE variant no es directamente compatible con tipos de datos XML. El formato correcto para las fechas con el componente de fecha y de hora es aaaa-mm-ddThh.  
   
- Para obtener más información acerca de los formatos de fecha especificados mediante XML, consulte el [especificación de datos XML de W3C](https://go.microsoft.com/fwlink/?LinkId=5692).  
+ Para obtener más información acerca de los formatos de fecha especificados mediante XML, vea el [especificación W3C XML-Data](https://go.microsoft.com/fwlink/?LinkId=5692).  
   
  Cuando la especificación de datos XML define dos tipos de datos equivalentes (por ejemplo, i4 == int), ADO se escribe el nombre descriptivo pero lee ambos.  
   
 ## <a name="managing-pending-changes"></a>Administrar cambios pendientes  
- Se puede abrir un conjunto de registros de inmediato o en modo de actualización por lotes. Cuando se abren en modo de actualización por lotes con cursores de cliente, todos los cambios realizados en el conjunto de registros están en un estado pendiente hasta que se llama al método UpdateBatch. Los cambios pendientes también se conservan cuando se guarda el conjunto de registros. En XML, se representan mediante el uso de los elementos de "actualización" definidos en urn: schemas-microsoft-Rowset. Además, si se puede actualizar un conjunto de filas, la propiedad actualizable debe establecerse en true en la definición de la fila. Por ejemplo, para definir que la tabla Shippers contiene cambios pendientes, la definición de la fila podría parecerse apariencia siguiente.  
+ Se puede abrir un conjunto de registros de inmediato o modo de actualización por lotes. Cuando se abren en modo de actualización por lotes con cursores de cliente, todos los cambios realizados en el conjunto de registros están en un estado pendiente hasta que se llama al método UpdateBatch. Los cambios pendientes también se conservan cuando se guarda el conjunto de registros. En XML, se representan mediante el uso de los elementos de "actualización" definidos en urn: schemas-microsoft-Rowset. Además, si se puede actualizar un conjunto de filas, la propiedad actualizable debe establecerse en true en la definición de la fila. Por ejemplo, para definir que la tabla de distribuidores contiene cambios pendientes, la definición de fila podría parecerse Buscar siguiente.  
   
 ```  
 <s:ElementType name="row" content="eltOnly" updatable="true">  
@@ -57,9 +54,9 @@ La sección de datos define los datos del conjunto de filas junto con los pendie
 </s:ElementType>  
 ```  
   
- Esto indica al proveedor de persistencia que muestre datos para que ADO puede construir un objeto de conjunto de registros actualizable.  
+ Esto indica al proveedor de persistencia para los datos de superficie para que ADO puede construir un objeto de conjunto de registros actualizable.  
   
- Los datos de ejemplo siguiente muestran el aspecto de las inserciones, cambios y eliminaciones en el archivo persistente.  
+ Los datos de ejemplo siguiente muestran cómo buscar las inserciones, cambios y eliminaciones en el archivo almacenado.  
   
 ```  
 <rs:data>  
@@ -86,7 +83,7 @@ La sección de datos define los datos del conjunto de filas junto con los pendie
 </rs:data>  
 ```  
   
- Una actualización siempre contiene los datos de fila originales todo seguidos por los datos de la fila modificada. La fila modificada puede contener todas las columnas o solo las columnas que han cambiado realmente. En el ejemplo anterior, no se cambia la fila 2 de remitente, y solo la columna Phone ha cambiado el valor de 3 de remitente y, por tanto, es la única columna incluida en la fila modificada. Las filas insertadas para los transportistas 12, 13 y 14 son por lotes etiqueta rs: insert en una sola juntos. Tenga en cuenta que las filas eliminadas pueden también realizarse por lotes juntos, aunque esto no se muestra en el ejemplo anterior.  
+ Una actualización siempre contiene los datos de fila originales todo seguidos por los datos de la fila modificada. La fila modificada puede contener todas las columnas o solo aquellas columnas que han cambiado realmente. En el ejemplo anterior, no se cambia la fila 2 de remitente, y solo la columna Phone ha cambiado los valores para el remitente 3 y, por tanto, es la única columna que se incluyen en la fila modificada. Las filas insertadas para los transportistas 12, 13 y 14 son por lotes juntos en una sola rs: Insertar etiqueta. Tenga en cuenta que las filas eliminadas pueden también se pueden agrupar, aunque esto no se muestra en el ejemplo anterior.  
   
 ## <a name="see-also"></a>Vea también  
  [Almacenar registros en formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

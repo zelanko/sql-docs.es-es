@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.GENERAL
 helpviewer_keywords:
 - projects [Analysis Services], properties
 ms.assetid: d9786c66-7d8c-48e3-950d-3f25044b4ce2
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d75eff8c794c18a296a9d26850af87618af028a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e786f699209c384f9baecbbe23a24e2ed5e3611
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167726"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118305"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Configurar las propiedades de un proyecto de Analysis Services (SSDT)
   En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se define con ciertas propiedades predeterminadas que afectan a la generación e implementación del proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -41,7 +38,7 @@ ms.locfileid: "37167726"
 |Build / Remove Passwords|True|Especifica si las contraseñas conocidas se eliminarán de las cadenas de conexión que se escriban en el directorio de salida durante el proceso de generación. Las contraseñas se eliminan para aumentar la seguridad. Si se eliminan las contraseñas, deberán proporcionarse cuando se procese el proyecto implementado para que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tenga acceso al origen de datos.|  
 |Debugging / Start Object|\<Objeto activo >|Determina el objeto que se iniciará al iniciar la depuración.|  
 |Deployment / Deployment Mode|Implementar solo cambios|De manera predeterminada, solo se implementan los cambios de los objetos del proyecto (siempre que no se hayan hecho otros cambios en los objetos directamente fuera del proyecto). También puede optar por implementar todos los objetos del proyecto durante cada implementación. Para que el rendimiento sea mejor, use Implementar solo cambios.|  
-|Deployment / Processing Option|Valor predeterminado|De manera predeterminada, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] determinará el tipo de procesamiento necesario cuando se implementen los cambios de los objetos. Eso se suele traducir en el tiempo de implementación más breve. Sin embargo, también puede elegir un procesamiento completo o ningún procesamiento durante cada implementación.|  
+|Deployment / Processing Option|Default|De manera predeterminada, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] determinará el tipo de procesamiento necesario cuando se implementen los cambios de los objetos. Eso se suele traducir en el tiempo de implementación más breve. Sin embargo, también puede elegir un procesamiento completo o ningún procesamiento durante cada implementación.|  
 |Deployment / Transactional Deployment|False|De manera predeterminada, la implementación de los objetos modificados o de todos los objetos no es transaccional con el procesamiento de los objetos implementados. La implementación puede ser correcta y persistir aunque se produzca un error de procesamiento. Puede cambiar este valor predeterminado para incluir la implementación y el procesamiento en una sola transacción.|  
 |Implementación / Servidor de destino|localhost|De manera predeterminada, los objetos de base de datos del proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se implementarán en la instancia predeterminada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] del equipo local en el que se está usando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Puede cambiar este valor predeterminado para especificar una instancia con nombre del equipo local o cualquier instancia de un equipo remoto en que tenga permiso para crear objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |Deployment / Database|\<nombre del proyecto >|De manera predeterminada, el nombre de la base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la que se crearán las instancias de los objetos del proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tras la implementación es el nombre del proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cuando se definió. Puede cambiar esta propiedad para cambiar el nombre de la base de datos en la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] especificada por la propiedad Server.|  

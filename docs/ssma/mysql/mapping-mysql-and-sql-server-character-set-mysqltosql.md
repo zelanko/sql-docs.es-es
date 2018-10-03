@@ -1,39 +1,33 @@
 ---
-title: Asignación de caracteres de SQL Server y MySQL establece (MySQLToSQL) | Documentos de Microsoft
+title: Asignación de caracteres de SQL Server y MySQL (MySQLToSQL) de conjunto | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 94764ed6777b4310ebc38bbf8375089a0ac00c92
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: cebdf2ed28287a59ec9d4f0daaa1d0c200f8fe20
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776421"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789033"
 ---
-# <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Asignación de caracteres de SQL Server y MySQL establece (MySQLToSQL)
-Juego de caracteres (juego de caracteres) se puede especificar para tipos de datos de caracteres, expresiones y literales de MySQL.  
+# <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Asignación de juegos de caracteres de MySQL y de SQL Server (MySQLToSQL)
+Juego de caracteres (juego de caracteres) puede especificarse para los tipos de datos de caracteres, expresiones y literales de MySQL.  
   
-## <a name="charset-mapping"></a>Asignación de conjunto de caracteres  
-Asignación de conjunto de caracteres se define para cada conjunto de caracteres de MySQL y se usa durante la conversión de tipo de datos de caracteres. Especifica cómo convertir a tipos de datos de cadena de caracteres de un juego de caracteres determinado:  
+## <a name="charset-mapping"></a>Asignación del juego de caracteres  
+Asignación del juego de caracteres se define para cada juego de caracteres de MySQL y se usa durante la conversión de tipo de datos de caracteres. Especifica cómo convertir a tipos de datos de cadena de caracteres de un juego de caracteres determinado:  
   
--   En tipos de caracteres de SQL Server nacionales (NCHAR/NVARCHAR), o  
+-   A tipos de caracteres nacionales SQL Server (NCHAR o NVARCHAR), o  
   
--   Para los tipos de caracteres de SQL Server normales (CHAR/VARCHAR)  
+-   Para tipos de caracteres de SQL Server normales (CHAR o VARCHAR)  
   
-1.  **nacional** son tipos de datos de caracteres de base de datos de destino:  
+1.  **National** son tipos de datos de caracteres de base de datos de destino:  
   
     1.  **nchar**  
   
@@ -45,91 +39,91 @@ Asignación de conjunto de caracteres se define para cada conjunto de caracteres
   
     2.  **varchar**  
   
-3.  Asignación de tipos solo permite la asignación a **national** tipos de datos de caracteres. Cuando los tipo de datos de MySQL caracteres se convierten según la asignación de tipos, se aplica la asignación de conjunto de caracteres.  
+3.  Asignación de tipos solo permite la asignación a **nacional** tipos de datos de caracteres. Después de convertir el tipo de datos de caracteres de MySQL según la asignación de tipos, se aplica la asignación del juego de caracteres.  
   
 > [!NOTE]  
-> Asignación de conjunto de caracteres puede definirse en cada nivel de nodo del explorador de objetos de metadatos y representan todos los juegos de caracteres leídos de MySQL.  
+> Asignación del juego de caracteres puede definirse en cada nivel de nodo del explorador de objetos de metadatos y representan todos los juegos de caracteres que leer de MySQL.  
   
-## <a name="charset-mapping-on-different-node-levels"></a>Asignación de conjunto de caracteres en el nivel de nodo diferentes  
-Asignación de conjunto de caracteres varía en los niveles de otro nodo, a saber:  
+## <a name="charset-mapping-on-different-node-levels"></a>Asignación de juego de caracteres en los niveles de nodos diferente  
+Asignación del juego de caracteres varía en los niveles de otro nodo, a saber:  
   
 1.  En el nivel de nodo de metadatos de raíz  
   
 2.  En la base de datos, categoría y nivel de nodos de objeto  
   
 > [!NOTE]  
-> La pestaña seleccionada para editar la asignación de conjunto de caracteres, contiene tres botones, independientemente de la asignación en el nivel de nodo diferentes.  
+> La pestaña seleccionada para editar la asignación del juego de caracteres, contiene tres botones, con independencia de la asignación en los niveles de nodo diferente.  
 >   
 > Estas sobrecargas son:  
 >   
-> 1.  **Se aplican:** aplica los cambios realizados por el usuario, se habilita solamente cuando Editar asignación de juego de caracteres y aún no ha guardado.  
-> 2.  **Cancelar:** cancela los cambios realizados por el usuario. El botón obtiene habilitado cuando la asignación de conjunto de caracteres es editar pero no se guardan.  
-> 3.  **Restablecer valores predeterminados:** restablece todas las asignaciones de valores predeterminados.  
+> 1.  **Se aplican:** aplica los cambios realizados por el usuario, se habilita solo cuando charset asignación editado y todavía no se han guardado.  
+> 2.  **Cancelar:** cancela los cambios realizados por el usuario. El botón se habilita cuando la asignación del juego de caracteres se modifica, pero no guardado.  
+> 3.  **Restablecer valores predeterminados:** restablece todas las asignaciones a los valores predeterminados.  
   
-1.  **Nivel de nodo de metadatos de raíz:** cuadrícula de asignación de conjunto de caracteres contiene cuadrícula de juego de caracteres con una columna independiente para cada conjunto de caracteres. Las columnas de la cuadrícula son:  
+1.  **Nivel de nodo de metadatos de raíz en:** Charset cuadrícula de asignación contiene la cuadrícula de juego de caracteres con una columna independiente para cada juego de caracteres. Las columnas de la cuadrícula son:  
   
-    1.  La primera columna de la cuadrícula denominada **nombre del juego de caracteres** contiene el nombre del juego de caracteres.  
+    1.  La primera columna de la cuadrícula denominada **nombre Charset** contiene el nombre del juego de caracteres.  
   
-    2.  La segunda se denomina **descripción de juego de caracteres** contiene la descripción de juego de caracteres.  
+    2.  La otra denominada **Charset descripción** contiene la descripción de juego de caracteres.  
   
-    3.  La tercera columna titulada **tipo de juego de caracteres de destino** contiene la configuración de asignación de conjunto de caracteres determinado. Los valores de esta columna son:  
+    3.  La tercera columna, titulada, **tipo de juego de caracteres de destino** contiene la configuración de asignación de conjunto de caracteres determinado. Los valores para esta columna son:  
   
         -   CHAR/VARCHAR  
   
         -   NCHAR/NVARCHAR  
   
     > [!IMPORTANT]  
-    > Los valores predeterminados para una codificación de caracteres determinada tienen el prefijo '(predeterminado)' después de CHAR/VARCHAR o NCHAR o NVARCHAR.  
+    > Los valores predeterminados para un juego de caracteres determinado tienen el prefijo "(default)" después de CHAR/VARCHAR o NCHAR/NVARCHAR.  
   
-    La asignación de conjunto de caracteres entre la base de datos MySQL y la base de datos de destino en el nivel de nodo de metadatos de raíz se indica a continuación:  
+    La asignación del juego de caracteres entre la base de datos de destino en el nivel de nodo de metadatos de raíz y de base de datos MySQL se indica a continuación:  
   
     ||||  
     |-|-|-|  
-    |**Nombre del juego de caracteres**|**Descripción de juego de caracteres**|**Tipo de conjunto de caracteres de destino (valor predeterminado)**|  
+    |**Nombre del juego de caracteres**|**Descripción de juego de caracteres**|**Tipo de juego de caracteres de destino (valor predeterminado)**|  
     |Big5|Chino tradicional Big5|NCHAR/NVARCHAR (valor predeterminado)|  
-    |dec8|Europeo occidental de diciembre|CHAR/VARCHAR (valor predeterminado)|  
-    |CP850|Europeo occidental DOS|CHAR/VARCHAR (valor predeterminado)|  
-    |hp8|Europeo occidental de HP|CHAR/VARCHAR (valor predeterminado)|  
-    |koi8r|KOI8-R Relcom ruso|CHAR/VARCHAR (valor predeterminado)|  
-    |Latín 1|CP1252 oeste europeo|CHAR/VARCHAR (valor predeterminado)|  
-    |Latin2|ISO 8859-2 Centroeuropeo|CHAR/VARCHAR (valor predeterminado)|  
-    |swe7|7 bits sueco|CHAR/VARCHAR (valor predeterminado)|  
-    |ASCII|US ASCII|CHAR/VARCHAR (valor predeterminado)|  
+    |dec8|Europeo occidental Dic|CHAR o VARCHAR (valor predeterminado)|  
+    |CP850|Europeo occidental de denegación de servicio|CHAR o VARCHAR (valor predeterminado)|  
+    |hp8|Europeo occidental de HP|CHAR o VARCHAR (valor predeterminado)|  
+    |koi8r|KOI8-R Relcom ruso|CHAR o VARCHAR (valor predeterminado)|  
+    |Latín 1|Europeo occidental de CP1252|CHAR o VARCHAR (valor predeterminado)|  
+    |Latin2|ISO 8859-2 Centroeuropeo|CHAR o VARCHAR (valor predeterminado)|  
+    |swe7|Sueco de 7 bits.|CHAR o VARCHAR (valor predeterminado)|  
+    |ASCII|ASCII DE EE. UU.|CHAR o VARCHAR (valor predeterminado)|  
     |ujis|EUC-JP japonés|NCHAR/NVARCHAR (valor predeterminado)|  
     |SJIS|Japonés Shift-JIS|NCHAR/NVARCHAR (valor predeterminado)|  
-    |Hebreo|ISO 8859-8 Hebreo|CHAR/VARCHAR (valor predeterminado)|  
-    |tis620|TIS620 tailandés|CHAR/VARCHAR (valor predeterminado)|  
+    |Hebreo|ISO 8859-8 Hebreo|CHAR o VARCHAR (valor predeterminado)|  
+    |tis620|TIS620 tailandés|CHAR o VARCHAR (valor predeterminado)|  
     |eucKR|Coreano EUC-KR|NCHAR/NVARCHAR (valor predeterminado)|  
-    |koi8u|Ucraniano KOI8-U|CHAR/VARCHAR (valor predeterminado)|  
+    |koi8u|Ukrainian KOI8-U|CHAR o VARCHAR (valor predeterminado)|  
     |gb2312|GB2312 Chino simplificado|NCHAR/NVARCHAR (valor predeterminado)|  
-    |Griego|ISO 8859-7 Griego|CHAR/VARCHAR (valor predeterminado)|  
-    |CP 1250|Centroeuropeo de Windows|CHAR/VARCHAR (valor predeterminado)|  
+    |Griego|ISO 8859-7 Griego|CHAR o VARCHAR (valor predeterminado)|  
+    |CP 1250|Centroeuropeo de Windows|CHAR o VARCHAR (valor predeterminado)|  
     |GBK|GBK chino simplificado|NCHAR/NVARCHAR (valor predeterminado)|  
-    |Latin5|ISO 8859-9 Turco|CHAR/VARCHAR (valor predeterminado)|  
-    |armscii8|Armenio ARMSCII-8|CHAR/VARCHAR (valor predeterminado)|  
+    |Latin5|ISO 8859-9 Turco|CHAR o VARCHAR (valor predeterminado)|  
+    |armscii8|Armenio ARMSCII-8|CHAR o VARCHAR (valor predeterminado)|  
     |UTF8|Unicode UTF-8|NCHAR/NVARCHAR (valor predeterminado)|  
     |ucs2|Unicode UCS-2|NCHAR/NVARCHAR (valor predeterminado)|  
-    |cp866|Ruso DOS|CHAR/VARCHAR (valor predeterminado)|  
-    |keybcs2|DOS Kamenicky checo-eslovaco|CHAR/VARCHAR (valor predeterminado)|  
-    |macce|Mac Centroeuropeo|CHAR/VARCHAR (valor predeterminado)|  
-    |MacRoman|Europeo occidental de Mac|CHAR/VARCHAR (valor predeterminado)|  
-    |cp852|Centro de DOS Europea|CHAR/VARCHAR (valor predeterminado)|  
-    |Latin7|ISO 8859-13 Báltico|CHAR/VARCHAR (valor predeterminado)|  
-    |CP 1251|Windows cirílico|CHAR/VARCHAR (valor predeterminado)|  
-    |CP 1256|Árabe de Windows|CHAR/VARCHAR (valor predeterminado)|  
-    |CP 1257|Windows Báltico|CHAR/VARCHAR (valor predeterminado)|  
-    |binary|Juego de caracteres binarios pseudo|CHAR/VARCHAR (valor predeterminado)|  
-    |geostd8|Georgiano GEOSTD8|CHAR/VARCHAR (valor predeterminado)|  
+    |cp866|Ruso de denegación de servicio|CHAR o VARCHAR (valor predeterminado)|  
+    |keybcs2|Denegación de servicio Kamenicky checo-eslovaco|CHAR o VARCHAR (valor predeterminado)|  
+    |macce|Centroeuropeo Mac|CHAR o VARCHAR (valor predeterminado)|  
+    |MacRoman|Europeo occidental de Mac|CHAR o VARCHAR (valor predeterminado)|  
+    |cp852|Denegación de servicio Central europea|CHAR o VARCHAR (valor predeterminado)|  
+    |Latin7|ISO 8859-13 Báltico|CHAR o VARCHAR (valor predeterminado)|  
+    |CP 1251|Windows cirílico|CHAR o VARCHAR (valor predeterminado)|  
+    |CP 1256|Árabe de Windows|CHAR o VARCHAR (valor predeterminado)|  
+    |CP 1257|Windows Báltico|CHAR o VARCHAR (valor predeterminado)|  
+    |binary|Juego de caracteres binarios pseudo|CHAR o VARCHAR (valor predeterminado)|  
+    |geostd8|Georgiano GEOSTD8|CHAR o VARCHAR (valor predeterminado)|  
     |cp932|SJIS en japonés de Windows|NCHAR/NVARCHAR (valor predeterminado)|  
-    |eucjpms|UJIS para japonés de Windows|NCHAR/NVARCHAR (valor predeterminado)|  
+    |eucjpms|UJIS en japonés de Windows|NCHAR/NVARCHAR (valor predeterminado)|  
   
-2.  **En la base de datos, categoría o niveles de nodos de objeto:** en el nivel de base de datos, categoría o nodos de objeto, cuadrícula de asignación de conjunto de caracteres contiene las mismas filas y en el nivel de nodo de metadatos de raíz, especialmente.:  
+2.  **En la base de datos, categoría o los niveles de nodos de objeto:** en el nivel de base de datos, categoría o nodos de objeto, cuadrícula de asignación del juego de caracteres contiene las mismas filas que del nivel raíz del nodo de metadatos, viz.:  
   
-    1.  La primera columna de la cuadrícula titulada **nombre de conjunto de caracteres** contiene el nombre del juego de caracteres.  
+    1.  La primera columna de la cuadrícula titulada **nombre del conjunto de caracteres** contiene el nombre del juego de caracteres.  
   
-    2.  La segunda columna titulada **caracteres establecer descripción** contiene la descripción de juego de caracteres.  
+    2.  La segunda columna, titulada, **carácter establecer descripción** contiene la descripción de juego de caracteres.  
   
-    3.  La única diferencia es que los valores de la tercera columna de la cuadrícula. La tercera columna titulada **tipo de datos de destino** contiene la configuración de asignación de conjunto de caracteres determinado. Los valores de la columna son:  
+    3.  La única diferencia es que los valores de la tercera columna de la cuadrícula. La tercera columna, titulada, **tipo de datos de destino** contiene la configuración de asignación de conjunto de caracteres determinado. Los valores de la columna son:  
   
         -   Heredado (CHAR/VARCHAR o NCHAR o NVARCHAR)  
   
@@ -138,6 +132,6 @@ Asignación de conjunto de caracteres varía en los niveles de otro nodo, a sabe
         -   NCHAR/NVARCHAR  
   
 > [!IMPORTANT]  
-> -   En la asignación de conjunto de caracteres entre la base de datos MySQL y base de datos de destino en la base de datos, categoría y niveles de nodos de objeto, los valores predeterminados de una codificación de caracteres determinada en cada nivel que no sea raíz para la columna **tipo de datos de destino** debe ser 'heredado'.  
-> -   En la cuadrícula, el valor **Inherited** se utiliza como sufijo con cualquiera '(CHAR/VARCHAR)' o '(NCHAR/NVARCHAR)' dependiendo de qué valor se heredó de primario por este conjunto de caracteres determinado.  
+> -   En la asignación del juego de caracteres entre la base de datos MySQL y base de datos de destino en la base de datos, categoría y los niveles de nodos de objeto, los valores predeterminados de un juego de caracteres determinada en cada nivel que no sea la raíz de la columna **tipo de datos de destino** debe ser ' Heredado '.  
+> -   En la cuadrícula, el valor **Inherited** tiene el sufijo cualquiera '(CHAR/VARCHAR)' o '(NCHAR/NVARCHAR)' dependiendo de qué valor se hereda de primario por este juego de caracteres determinado.  
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a9f2efa4761248c94a6db7a2747184808ffce3d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8d334a319807692f099056f0f350c395ecbeeb2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299365"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120115"
 ---
 # <a name="index-element-dta"></a>Index, elemento (DTA)
   Contiene información acerca de un índice de una configuración especificada por el usuario que se desea crear o quitar.  
@@ -57,7 +54,7 @@ ms.locfileid: "37299365"
 |`ANSI_WARNINGS`|`boolean`|Opcional. Especifica el comportamiento estándar de ISO para diversas condiciones de error. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar activado. Por ejemplo, la sintaxis siguiente activa este atributo:<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql).|  
 |`NUMERIC_ROUNDABORT`|`boolean`|Opcional. Especifica el nivel de informes de error generados cuando el redondeo en una expresión produce pérdida de precisión. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar desactivado.<br /><br /> La sintaxis siguiente activa este atributo:<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql).|  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -69,8 +66,8 @@ ms.locfileid: "37299365"
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Crear elemento &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` Elemento. Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.|  
-|**Elementos secundarios**|[Nombre de elemento para el índice &#40;DTA&#41;](name-element-for-index-dta.md)<br /><br /> [Elemento de la columna de índice &#40;DTA&#41;](column-element-for-index-dta.md)<br /><br /> `PartitionScheme` Elemento. Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> `PartitionColumn` Elemento. Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> [Grupo de archivos de elemento de Index &#40;DTA&#41;](filegroup-element-for-index-dta.md)<br /><br /> `NumberOfReferences` Elemento. Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> `PercentUsage` Elemento. Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.|  
+|**Elemento primario**|[Crear elemento &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` elemento. Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.|  
+|**Elementos secundarios**|[Nombre de elemento para el índice &#40;DTA&#41;](name-element-for-index-dta.md)<br /><br /> [Elemento de la columna de índice &#40;DTA&#41;](column-element-for-index-dta.md)<br /><br /> `PartitionScheme` elemento. Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> `PartitionColumn` elemento. Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> [Grupo de archivos de elemento de Index &#40;DTA&#41;](filegroup-element-for-index-dta.md)<br /><br /> `NumberOfReferences` elemento. Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.<br /><br /> `PercentUsage` elemento. Para obtener más información, vea el esquema XML del Asistente para la optimización de motor de base de datos.|  
   
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de uso de este elemento, vea [Ejemplo de archivo de entrada XML con configuración especificada por el usuario &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  

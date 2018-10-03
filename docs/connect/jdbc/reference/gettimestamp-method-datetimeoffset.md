@@ -1,29 +1,27 @@
 ---
-title: Método getTimestamp (DateTimeOffset) | Documentos de Microsoft
+title: Método getTimestamp (DateTimeOffset) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e51dffdb-438b-4e74-a042-c064ae473f4d
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 552ffd5241bf42c11491ef4b520fcb79845f3248
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 972a21c8f7bc38ccd1d8e004db4ec72b525d57e4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47814283"
 ---
 # <a name="gettimestamp-method-datetimeoffset"></a>Método getTimestamp (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Devuelve el punto en el tiempo representado por este **DateTimeOffset** objeto como un java.sql.Timestamp.  
+  Devuelve el punto de tiempo representado por este **DateTimeOffset** objeto como un java.sql.Timestamp.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,7 +33,7 @@ public java.sql.Timestamp getTimestamp()
 ## <a name="return-value"></a>Valor devuelto  
  Un valor de tipo java.sql.Timestamp.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)   
  [Miembros DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   

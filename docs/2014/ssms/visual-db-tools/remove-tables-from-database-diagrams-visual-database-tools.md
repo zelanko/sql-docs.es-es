@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting tables
 - removing tables
 - dropping tables
 ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 69ed664373ace78201f6ca9a122e528915a2890e
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 549c23271b8c969dc0e62d3bb73b973bbd85819c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807281"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108179"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>Quitar tablas de diagramas de base de datos (Visual Database Tools)
   Puede quitar una tabla del diagrama de base de datos. Cuando se quita una tabla, no se modifica la base de datos. La tabla y sus relaciones con otras tablas continúan existiendo en la base de datos.  

@@ -1,13 +1,11 @@
 ---
-title: Guardar y abrir un ejemplo de los métodos (VC ++) | Documentos de Microsoft
+title: Guardar y abrir un ejemplo de los métodos (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - Save method [ADO], VC++ example
 - Open method [ADO]
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 870ae7f5776b601b312d799b643c09bd589dc26b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6eaa73453339fd1e62bcd2e3039374a9ca7974b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281334"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735993"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Guardar y abrir un ejemplo de los métodos (VC ++)
-Estos tres ejemplos se muestra cómo el [guardar](../../../ado/reference/ado-api/save-method.md) y **abiertos** métodos se pueden usar conjuntamente.  
+Estos tres ejemplos se muestra cómo el [guardar](../../../ado/reference/ado-api/save-method.md) y **abierto** métodos pueden usarse conjuntamente.  
   
- Supongamos que va en un viaje de negocios y debe realizar a lo largo de una tabla de una base de datos. Antes de ir, tener acceso a los datos como un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) y guárdelo en un formato transportable. Cuando llega a su destino, tener acceso a la **Recordset** como un valor local desconectado **conjunto de registros**. Realizar cambios en el **Recordset**, a continuación, guárdelo. Por último, al volver a casa, conectarse de nuevo a la base de datos y actualizar con los cambios realizados en la carretera.  
+ Supongamos que se va de un viaje de negocios y desea tomar a lo largo de una tabla de una base de datos. Antes de ir, tener acceso a los datos como un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) y guárdelo en un formato transportable. Cuando llegue a su destino, tener acceso a la **Recordset** como un valor local desconectado **Recordset**. Realizar cambios en el **Recordset**, a continuación, guárdelo. Por último, al volver a casa, volver a conectar con la base de datos y actualizarla con los cambios realizados en la carretera.  
   
 ```  
 // BeginSaveCpp.cpp  
@@ -265,6 +262,6 @@ bool FileExists() {
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Open (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Método Open (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Save (método)](../../../ado/reference/ado-api/save-method.md)

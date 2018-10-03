@@ -1,37 +1,35 @@
 ---
-title: SQLGetInfo (controlador de Paradox) | Documentos de Microsoft
+title: SQLGetInfo (controlador de Paradox) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Paradox driver [ODBC], SQLGetInfo
 - SQLGetInfo function [ODBC], Paradox Driver
 ms.assetid: 43aab762-68f4-4128-b8f5-8878ea5f1258
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8ebf4cd02266fc5cc467a4d998eb4516bee782c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a1e8025af41a876926273c3134deebf46766fb9c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752895"
 ---
 # <a name="sqlgetinfo-paradox-driver"></a>SQLGetInfo (controlador de Paradox)
 > [!NOTE]  
->  En este tema se proporciona información específica del controlador Paradox. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  En este tema se proporciona información específica del controlador de Paradox. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** es compatible con el tipo de información de SQL_FILE_USAGE. El valor devuelto es un entero de 16 bits con signo que indica cómo el controlador trata directamente los archivos en un origen de datos:  
+ **SQLGetInfo** es compatible con el tipo de información SQL_FILE_USAGE. El valor devuelto es un entero de 16 bits que indica el modo en que el controlador trata directamente los archivos en un origen de datos:  
   
 -   SQL_FILE_NOT_SUPPORTED: El controlador no es un controlador de nivel único.  
   
--   SQL_FILE_TABLE: Un controlador de nivel único trata los archivos en un origen de datos como tablas.  
+-   SQL_FILE_TABLE: Un controlador de nivel único trata los archivos de origen de datos como tablas.  
   
 -   SQL_FILE_QUALIFIER: Un controlador de nivel único trata los archivos en un origen de datos como un calificador.  
   

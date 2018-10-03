@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.confusionmatrix.f1
 ms.assetid: 85d5a047-d656-41e0-8a31-400271c2a620
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 58df3c6d14edb8bfddbd53db0c110475d2a983bd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1879e9ec4f2a6decf4168e7c49a5e81d3a043d29
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251517"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154715"
 ---
 # <a name="classification-matrix-tab-mining-accuracy-chart-view"></a>Pestaña Matriz de clasificación (vista Gráfico de precisión de minería de datos)
   La pestaña **Matriz de clasificación** muestra una matriz de clasificación para cada modelo seleccionado en la cuadrícula de modelos de la pestaña **Asignación de columnas** . La matriz de clasificación solo está disponible si la columna de predicción que está seleccionada en la pestaña **Asignación de columnas** no es continua. Para obtener una descripción más detallada de la pestaña **Matriz de clasificación** , vea [Testing and Validation &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md).  

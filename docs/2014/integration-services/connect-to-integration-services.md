@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2effee7d-16bc-46e1-913c-28470faea345
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fbcd3eb0e9d189fb88f66889bf2019e0621be843
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5959d49f6bc9c2ac140da6b16e7926cfa94634e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176482"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155925"
 ---
 # <a name="connect-to-integration-services"></a>Conectarse a Integration Services
   Antes de conectar con el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , el administrador debe concederle acceso al servicio. Para más información, consulte [Grant Permissions to Integration Services Service](../../2014/integration-services/grant-permissions-to-integration-services-service.md).  

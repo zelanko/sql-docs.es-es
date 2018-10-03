@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
-caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b7374cd96dac868ae6d3361ee34e18693c340cff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fdffbcc946af91efd61a5e63da7f79087d3053f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254327"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159805"
 ---
 # <a name="sql-server-managed--backup-to-windows-azure"></a>Copia de seguridad administrada de SQL Server en Windows Azure
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] administra y automatiza las copias de seguridad de SQL Server en el servicio de almacenamiento Blob de Windows Azure. La estrategia de copia de seguridad que usa [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] se basa en el período de retención y en la carga de trabajo de transacciones en la base de datos. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] admite la restauración a un momento dado para el período de retención especificado.   

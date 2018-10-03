@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Distribution Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Distribution element
 ms.assetid: a1309b90-8ad8-431b-a918-67f0cdd4fd20
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ea3422fead59b45957ebdb15735736fba89ddff2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f71addc3c9c793a19e88e52bb0b82519b5f33f1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163546"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166455"
 ---
 # <a name="distribution-element-assl"></a>Elemento Distribution (ASSL)
   Contiene un valor específico del proveedor que describe cómo los valores escalares se distribuyen dentro de una columna de un [MiningStructure](../objects/miningstructure-element-assl.md) elemento.  
@@ -46,7 +43,7 @@ ms.locfileid: "37163546"
 </ScalarMiningStructureColumn>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37163546"
 |Elementos primarios|[ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los valores disponibles para el `Distribution` elemento, como *Normal* o *uniforme,* son específicas de cada proveedor de algoritmos de minería de datos. Para obtener más información sobre los valores válidos de `Distribution`, vea la documentación del proveedor de algoritmos de minería de datos.  
   
  El elemento correspondiente al elemento primario de `Distribution` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  

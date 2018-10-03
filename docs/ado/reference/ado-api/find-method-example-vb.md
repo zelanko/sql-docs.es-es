@@ -1,32 +1,29 @@
 ---
-title: Buscar el ejemplo del método (VB) | Documentos de Microsoft
+title: Ejemplo del método (VB) Find | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Find method [ADO], Visual Basic example
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f4b1bea33cc861f1746fdc2af3fe58e0df77773
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e7e2d3c0c306cf9004f42b7d58beb160e8180516
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278784"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615623"
 ---
-# <a name="find-method-example-vb"></a>Ejemplo (VB) del método Find
-Este ejemplo se utiliza la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) del objeto [buscar](../../../ado/reference/ado-api/find-method-ado.md) método para localizar y contar el número de títulos de empresa en el ***Pubs*** base de datos. En el ejemplo se da por supuesto que el proveedor subyacente no admite una funcionalidad similar.  
+# <a name="find-method-example-vb"></a>Ejemplo del método Find (VB)
+Este ejemplo se usa el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) del objeto [buscar](../../../ado/reference/ado-api/find-method-ado.md) método para localizar y contar el número de títulos de empresa en el ***Pubs*** base de datos. El ejemplo se supone que el proveedor subyacente no admite una funcionalidad similar.  
   
 ```  
 'BeginFindVB  
@@ -104,5 +101,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Find (método) (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
+ [Buscar (método) (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -1,13 +1,11 @@
 ---
-title: Versiones admitidas de FoxPro | Documentos de Microsoft
+title: Las versiones compatibles de FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], supported versions
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], supported versions
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: 203fdabe-9b5c-4840-824c-792b508262c2
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fad5e57b2b56bf43aa418693e04c0c8d32fde4a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e6ae3aa39d21ea59b169ffd1ed7a5d9f4cb056fe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905480"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651953"
 ---
 # <a name="supported-versions-of-foxpro"></a>Versiones compatibles de FoxPro
 Puede usar el controlador ODBC de Microsoft® Visual FoxPro® para acceder a los datos almacenados en tablas de FoxPro. Se admiten las siguientes versiones de datos de FoxPro:  
@@ -36,9 +33,9 @@ Puede usar el controlador ODBC de Microsoft® Visual FoxPro® para acceder a los
   
 -   2.6  
   
--   Visual FoxPro (todas las versiones)  
+-   (Todas las versiones) de Visual FoxPro  
   
- Cuando tiene acceso a los datos almacenados en Visual FoxPro, puede elegir conectarse a un [base de datos](../../odbc/microsoft/visual-foxpro-terminology.md) que contiene cero o más [tablas](../../odbc/microsoft/visual-foxpro-terminology.md) o a un directorio de [libre tablas](../../odbc/microsoft/visual-foxpro-terminology.md).  
+ Cuando tenga acceso a datos almacenados en Visual FoxPro, puede elegir para conectarse a un [base de datos](../../odbc/microsoft/visual-foxpro-terminology.md) que contiene cero o más [tablas](../../odbc/microsoft/visual-foxpro-terminology.md) o a un directorio de [libre tablas](../../odbc/microsoft/visual-foxpro-terminology.md).  
   
  Para obtener más información acerca de cómo conectarse a un origen de datos, vea [agregar un origen de datos de Visual FoxPro](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md).  
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - server management [SQL Server], connections
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - ports [SQL Server]
 - dedicated administrator connections [SQL Server]
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
-caps.latest.revision: 62
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c30258edc86afd1a4844580553ce6d059edcb279
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e379e8ebfded2175fe3c0c787c156bd131ef3e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209825"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147565"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Conexión de diagnóstico para administradores de bases de datos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una conexión de diagnóstico especial para los administradores cuando no son posibles las conexiones estándar con el servidor. La conexión de diagnóstico permite a un administrador tener acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar consultas de diagnóstico y solucionar problemas, incluso cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no responde a las solicitudes de conexión estándar.  
@@ -89,7 +86,7 @@ ms.locfileid: "37209825"
     -   Si no hay ninguna tarea en sys.dm_os_tasks asociada a esta sesión, pero la sesión permanece en sys.dm_exec_sessions tras ejecutar el comando KILL, significa que no tiene ningún trabajo disponible. Seleccione una de las tareas que se están ejecutando (una tarea que aparece en la vista sys.dm_os_tasks con `sessions_id <> NULL`), y elimine la sesión que tiene asociada para liberar el trabajo. Tenga en cuenta que es posible que no sea suficiente eliminar una sola sesión: posiblemente tendrá que eliminar varias.  
   
 ## <a name="dac-port"></a>Puerto de la DAC  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha la DAC en el puerto TCP 1434 si está disponible o en un puerto asignado dinámicamente en el inicio de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . El registro de errores contiene el número de puerto en el que escucha la DAC. De forma predeterminada, la escucha de la DAC solo acepta la conexión en el puerto local. Para ver un ejemplo de código en el que se activan conexiones de administración remota, vea [remote admin connections (opción de configuración del servidor)](remote-admin-connections-server-configuration-option.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha la DAC en el puerto TCP 1434 si está disponible o en un puerto asignado dinámicamente en el inicio de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. El registro de errores contiene el número de puerto en el que escucha la DAC. De forma predeterminada, la escucha de la DAC solo acepta la conexión en el puerto local. Para ver un ejemplo de código en el que se activan conexiones de administración remota, vea [remote admin connections (opción de configuración del servidor)](remote-admin-connections-server-configuration-option.md).  
   
  Una vez configurada la conexión de administración remota, la escucha de la DAC se habilita sin necesidad de reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se puede conectar un cliente a la DAC de forma remota. Puede habilitar la escucha de la DAC para que acepte las conexiones remotamente incluso si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no responde conectándose primero a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la DAC de forma local y, a continuación, ejecutando el procedimiento almacenado sp_configure para aceptar la conexión desde conexiones remotas.  
   

@@ -1,28 +1,25 @@
 ---
-title: SQLRowCount | Microsoft Docs
+title: SQLRowCount | Documentos de Microsoft
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLRowCount function
 ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b1fc405b091f29c4d2660fc554fbbad47a7fdec
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 9858619250b5f71e973e4af8eb92868f094e2193
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431864"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165035"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
   Cuando las matrices de valores de parámetro se enlazan para la ejecución de la instrucción, `SQLRowCount` devuelve SQL_ERROR si cualquier fila de valores de parámetro genera una condición de error en la ejecución de la instrucción. Ningún valor se devuelve a través del argumento *RowCountPtr* de la función.  

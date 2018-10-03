@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.Tabs
 dev_langs:
 - TSQL
 ms.assetid: a4499784-67f7-46ef-9f7c-2d0fdd117a52
-caps.latest.revision: 10
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9c97c95ec2dff4d96f37eb274ee6ec98af117f89
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7dd6e11704497bd37fa4eb78948376587ece1119
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152646"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157475"
 ---
 # <a name="options-text-editor---transact-sql---tabs-page"></a>Opciones (Editor de texto-de Transact SQL: página de pestañas)
   Utilice este cuadro de diálogo para cambiar el comportamiento de tabulación del Editor de consultas de [!INCLUDE[ssDE](../includes/ssde-md.md)] , que se utiliza para programar scripts de [!INCLUDE[tsql](../includes/tsql-md.md)] . Para mostrar estas opciones de configuración, haga clic en **Opciones** en el menú **Herramientas** , expanda la carpeta **Transact-SQL** , expanda la subcarpeta **SQL** y, a continuación, haga clic en **Tabulaciones**.  

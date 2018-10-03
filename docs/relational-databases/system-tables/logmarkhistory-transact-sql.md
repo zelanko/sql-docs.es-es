@@ -1,14 +1,11 @@
 ---
-title: logmarkhistory (Transact-SQL) | Documentos de Microsoft
+title: logmarkhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - logmarkhistory
@@ -18,24 +15,23 @@ dev_langs:
 helpviewer_keywords:
 - logmarkhistory system table
 ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c3498368a2c38f5e1c64d38c26920a7a9a9b5e1f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 515f9de1c1b3856758b9e0cd2892e059667cfbb7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258325"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47647533"
 ---
 # <a name="logmarkhistory-transact-sql"></a>logmarkhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una fila por cada transacción marcada que se ha confirmado. Esta tabla se almacena en la **msdb** base de datos.  
+  Contiene una fila por cada transacción marcada que se ha confirmado. Esta tabla se almacena en el **msdb** base de datos.  
   
 
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Base de datos local donde tiene lugar la transacción marcada.|  
 |**nombre_de_marca**|**nvarchar(128)**|Nombre proporcionado por el usuario para la transacción marcada.|  

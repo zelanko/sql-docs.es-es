@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - default affinity mask option
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - SMP
 - DPC
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
-caps.latest.revision: 52
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 41fad115e39068b60f9d1a08b4fcf08b2c3d392a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5bd866520fbace51ee9ef06a547bb528f46b9435
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271971"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156145"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>affinity mask (opción de configuración del servidor)
     
@@ -129,7 +126,7 @@ GO
  La afinidad dinámica está estrictamente restringida por las licencias de CPU. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no permite la configuración de las opciones de máscara de afinidad que infrinjan las directivas de las licencias.  
   
 ### <a name="startup"></a>Inicio  
- Si una máscara de afinidad especificada infringe las directivas de las licencias durante el inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o al adjuntar la base de datos, el nivel del motor completará el proceso de inicio o la operación para adjuntar o restaurar la base de datos; después, volverá a establecer en cero el valor de ejecución de sp_configure para la opción affinity mask y enviará un mensaje de error al registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Si una máscara de afinidad especificada infringe las directivas de las licencias durante el inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o al adjuntar la base de datos, el nivel del motor completará el proceso de inicio o la operación para adjuntar o restaurar la base de datos; después, volverá a establecer en cero el valor de ejecución de sp_configure para la opción affinity mask y enviará un mensaje de error al registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="reconfigure"></a>Reconfigurar  
  Si una máscara de afinidad determinada infringe las directivas de las licencias en la ejecución del comando RECONFIGURE de [!INCLUDE[tsql](../../includes/tsql-md.md)] , se envía un mensaje de error a la sesión de cliente y al registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solicitando que el administrador de la base de datos vuelva a configurar la máscara de afinidad. En este caso no se acepta ningún comando RECONFIGURE WITH OVERRIDE.  

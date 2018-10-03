@@ -1,13 +1,11 @@
 ---
-title: Objeto Axis (ADO MD) | Documentos de Microsoft
+title: Objeto Axis (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,32 +13,31 @@ f1_keywords:
 helpviewer_keywords:
 - Axis object [ADO MD]
 ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 66dfcb418d7a440b260956d411ae87b9601d4274
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: cccbbd4d87c930ac38aadd1ec9f58dab26bcce1a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283374"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701691"
 ---
 # <a name="axis-object-ado-md"></a>Objeto Axis (ADO MD)
-Representa una posición o eje del filtro de un conjunto de celdas que contiene a los miembros seleccionados de una o más dimensiones.  
+Representa una posición o el eje del filtro de un conjunto de celdas que contiene a los miembros seleccionados de uno o más dimensiones.  
   
-## <a name="remarks"></a>Notas  
- Un **eje** objeto puede estar contenido en una [ejes](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) colección, o devolviendo el [PivotView](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) propiedad de un [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
+## <a name="remarks"></a>Comentarios  
+ Un **eje** objeto puede contener un [ejes](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) colección, o devuelto por la [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) propiedad de un [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
   
- Con las colecciones y las propiedades de un **eje** objeto, puede hacer lo siguiente:  
+ Con las colecciones y propiedades de un **eje** objeto, puede hacer lo siguiente:  
   
--   Identificar la **eje** con el [nombre](../../../ado/reference/ado-md-api/name-property-ado-md.md) propiedad.  
+-   Identificar el **eje** con el [nombre](../../../ado/reference/ado-md-api/name-property-ado-md.md) propiedad.  
   
--   Recorrer en iteración cada posición a lo largo de un **eje** mediante la [posiciones](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) colección.  
+-   Recorrer en iteración cada posición a lo largo de un **eje** utilizando el [posiciones](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) colección.  
   
 -   Obtener el número de dimensiones en el **eje** con el [DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) propiedad.  
   
--   Obtener atributos específicos del proveedor de la **eje** con ADO estándar [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección.  
+-   Obtener atributos específicos del proveedor de la **eje** con el estándar de ADO [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección.  
   
  Esta sección contiene el siguiente tema.  
   

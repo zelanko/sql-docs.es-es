@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 api_name:
 - DatabaseLogonAccount
@@ -18,16 +16,15 @@ topic_type:
 helpviewer_keywords:
 - DatabaseLogonAccount property
 ms.assetid: 55f2863f-1ac1-4519-b512-e7f11c0ea5ea
-caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6b94a45ed2c528972fffb79d2f8f51ad9bcba56d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6f66f21b5c866688bd5c348f26788f4a869aca88
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185770"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48151955"
 ---
 # <a name="databaselogonaccount-property-wmi-msreportserverconfigurationsetting"></a>Propiedad DatabaseLogonAccount (WMI MSReportServer_ConfigurationSetting)
   Especifica la cuenta de inicio de sesión que el servidor de informes utiliza al conectarse a la base de datos del servidor de informes. Solo lectura.  
@@ -48,7 +45,7 @@ public string DatabaseLogonAccount;
 ## <a name="example-code"></a>Código de ejemplo  
  [Clase MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los valores válidos para esta propiedad variarán dependiendo del valor de la [DatabaseLogonType](configurationsetting-property-databaselogontype.md) propiedad.  
   
  Esta propiedad se omite si el [DatabaseLogonType](configurationsetting-property-databaselogontype.md) propiedad está establecida en `2 (Service)`.  

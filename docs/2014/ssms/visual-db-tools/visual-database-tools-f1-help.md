@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Database Tools [SQL Server], help
 ms.assetid: 79d15b47-6759-4f48-b9ac-2c86a3cd9980
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0b673678337681a1ef5e2f727f684ae7eb7915e
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: ba6a28be518596a06fbeff3d81a4a965049d91df
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43806911"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152555"
 ---
 # <a name="visual-database-tools-f1-help"></a>Ayuda de F1 de Visual Database Tools
   En estos temas se tratan los comandos y las opciones de los cuadros de diálogo y las ventanas de propiedades de los elementos de Visual Database Tools, como la ventana Propiedades de la tabla y la pestaña Propiedades de columna.  

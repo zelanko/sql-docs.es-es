@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Source Element (Measure)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Source element
 ms.assetid: 9bae7ba4-3065-4623-b3e0-d54cebea7503
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d4e374490fdfe04e5da39a0f4e9424b2cb1ccde
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 933851f354f14e325608c954ce77ba5f3d034a10
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323215"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117331"
 ---
 # <a name="source-element-measure-assl"></a>Elemento Source (Measure) (ASSL)
   Contiene los detalles de la fuente que contiene el valor de la [medida](../objects/measure-element-assl.md) elemento.  
@@ -46,7 +43,7 @@ ms.locfileid: "37323215"
 </Measure>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37323215"
 |Elemento primario|[Medida](../objects/measure-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El `Source` de la `DataItem`, que actúa como el `Source` de la `Measure`, a su vez puede ser de tipo [RowBinding](../data-type/binding-data-type-assl.md), [ColumnBinding](../data-type/columnbinding-data-type-assl.md), [MeasureBinding ](../data-type/measurebinding-data-type-assl.md), o [CubeDimensionBinding](../data-type/dimensionbinding-data-type-assl.md).  
   
  Para obtener más información sobre la `DataItem` tipo, incluida una tabla de objetos ASSL y propiedades de la `DataItem` , vea [tipo de datos DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Name Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Name element
 ms.assetid: cc1a93df-0b1b-4c38-9183-4f11c26fea6a
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 088dd6aa9ce8d9ecae3e3a8f293f64b3ddc93c70
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 422bd152e82a471ce0f130a26aaa12a56026419a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194235"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127905"
 ---
 # <a name="name-element-xmla"></a>Elemento Name (XMLA)
   Contiene el nombre de un miembro de atributo para el elemento primario [atributo](attribute-element-xmla.md) o [traducción](translation-element-xmla.md) elemento.  
@@ -48,7 +45,7 @@ ms.locfileid: "37194235"
 </Attribute>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -56,7 +53,7 @@ ms.locfileid: "37194235"
 |Valor predeterminado|None|  
 |Antecesor o elemento primario:|Cardinalidad|  
 |[Atributo](attribute-element-xmla.md)|1-1: Elemento necesario que se produce una vez y solo una vez.|  
-|[Traducción](translation-element-xmla.md)|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
+|[traducción](translation-element-xmla.md)|0-1: Elemento opcional que puede aparecer una y solo una vez.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
@@ -65,7 +62,7 @@ ms.locfileid: "37194235"
 |Elementos primarios|[Atributo](attribute-element-xmla.md), [traducción](translation-element-xmla.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para los elementos `Attribute`, el elemento `Name` contiene el nombre del miembro de atributo que se va a insertar o actualiza durante el comando `Insert` o el comando `Update`, respectivamente.  
   
  Para los elementos `Translation`, el elemento `Name` contiene el título del miembro de atributo, en el idioma especificado por el elemento `Language` del objeto `Translation` primario. Si el elemento `Name` no se especifica o contiene una cadena vacía, se utiliza el valor del elemento `Name` del elemento `Attribute` que contiene el elemento `Translation`.  

@@ -1,14 +1,11 @@
 ---
-title: sp_addmessage (Transact-SQL) | Documentos de Microsoft
+title: sp_addmessage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addmessage
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_addmessage
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 964f0909c136eddc86571ce776b559083c8ce3e1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0a8b3f01c833e725fc807de11c15e39142509626
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239185"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668333"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Almacena un nuevo mensaje de error definido por el usuario en una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Los mensajes almacenados mediante el uso de **sp_addmessage** puede verse mediante la **sys.messages** vista de catálogo.  
+  Almacena un nuevo mensaje de error definido por el usuario en una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Los mensajes almacenados mediante **sp_addmessage** puede verse mediante la **sys.messages** vista de catálogo.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,25 +44,25 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
 ## <a name="arguments"></a>Argumentos  
  [  **@msgnum*** =** ] *msg_id*  
- Es el identificador del mensaje de error. *msg_id* es **int** con un valor predeterminado es NULL. *msg_id* de error definidos por el usuario mensajes pueden ser un entero entre 50.001 y 2.147.483.647. La combinación de *msg_id* y *lenguaje* debe ser única; se devuelve un error si el identificador ya existe para el idioma especificado.  
+ Es el identificador del mensaje de error. *msg_id* es **int** con el valor predeterminado es NULL. *msg_id* de error definido por el usuario, los mensajes pueden ser un entero entre 50.001 y 2.147.483.647. La combinación de *msg_id* y *lenguaje* debe ser única; se devuelve un error si ya existe el identificador para el idioma especificado.  
   
  [  **@severity =** ]*gravedad*  
- Es el nivel de gravedad del error. *gravedad* es **smallint** con un valor predeterminado es NULL. Los niveles válidos son de 1 a 25. Para obtener más información sobre los niveles de gravedad, vea [Niveles de gravedad de error del motor de base de datos](../../relational-databases/errors-events/database-engine-error-severities.md).  
+ Es el nivel de gravedad del error. *gravedad* es **smallint** con el valor predeterminado es NULL. Los niveles válidos son de 1 a 25. Para obtener más información sobre los niveles de gravedad, vea [Niveles de gravedad de error del motor de base de datos](../../relational-databases/errors-events/database-engine-error-severities.md).  
   
  [  **@msgtext =** ] **'***msg***'**  
- Es el texto del mensaje de error. *msg* es **nvarchar (255)** con un valor predeterminado es NULL.  
+ Es el texto del mensaje de error. *msg* es **nvarchar (255)** con el valor predeterminado es NULL.  
   
  [  **@lang =** ] **'***lenguaje***'**  
- Es el idioma de este mensaje. *idioma* es **sysname** con un valor predeterminado es NULL. Dado que se pueden instalar varios idiomas en el mismo servidor, *lenguaje* especifica el idioma en que está escrito cada mensaje. Cuando *lenguaje* es se omite, el idioma es el idioma predeterminado para la sesión.  
+ Es el idioma de este mensaje. *lenguaje* es **sysname** con el valor predeterminado es NULL. Dado que se pueden instalar varios idiomas en el mismo servidor, *lenguaje* especifica el idioma en que está escrito cada mensaje. Cuando *lenguaje* es el idioma se omite, es el idioma predeterminado para la sesión.  
   
  [  **@with_log =** ] { **'** TRUE **'** | **'FALSE'** }  
- Especifica si el mensaje debe escribirse en el registro de aplicación Windows cuando se produzca. **@with_log** es **varchar (5)** con un valor predeterminado es FALSE. Si es TRUE, el error siempre se escribe en el registro de aplicación Windows. Si es FALSE, el error no siempre se escribe en el registro de aplicación Windows, pero se puede escribir, dependiendo de cómo se haya producido el error. Solo los miembros de la **sysadmin** rol de servidor puede usar esta opción.  
+ Especifica si el mensaje debe escribirse en el registro de aplicación Windows cuando se produzca. **@with_log** es **varchar (5)** con el valor predeterminado es FALSE. Si es TRUE, el error siempre se escribe en el registro de aplicación Windows. Si es FALSE, el error no siempre se escribe en el registro de aplicación Windows, pero se puede escribir, dependiendo de cómo se haya producido el error. Solo los miembros de la **sysadmin** rol de servidor puede usar esta opción.  
   
 > [!NOTE]  
 >  Si se escribe un mensaje en el registro de aplicación Windows, también se escribe en el archivo de registro de errores del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  [ **@replace** *=* ] **'***reemplazar***'**  
- Si se especifica como la cadena *reemplazar*, mensajes de error existentes se sobrescriben con el nuevo nivel de gravedad y el texto del mensaje. *Reemplace* es **varchar(7)** con un valor predeterminado es NULL. Esta opción debe especificarse si *msg_id* ya existe. Si se sustituye un mensaje en inglés de EE.UU., Se reemplaza el mensaje en inglés, el nivel de gravedad para todos los mensajes en los demás idiomas que tienen el mismo *msg_id*.  
+ Si se especifica como la cadena *reemplazar*, un mensaje de error existente se sobrescribe con el nuevo nivel de texto y la gravedad del mensaje. *Reemplace* es **varchar(7)** con el valor predeterminado es NULL. Esta opción debe especificarse si *msg_id* ya existe. Si se sustituye un mensaje en inglés de EE.UU., Se reemplaza el mensaje en inglés, el nivel de gravedad para todos los mensajes en todos los otros lenguajes que tienen el mismo *msg_id*.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -85,13 +81,13 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
  Debido a las diferencias sintácticas que existen entre los idiomas, puede que los números de los parámetros del mensaje traducido no aparezcan en la misma secuencia que en el mensaje original.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
 Debe pertenecer a la **sysadmin** o **serveradmin** roles fijos de servidor.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-defining-a-custom-message"></a>A. Definir un mensaje personalizado  
- En el ejemplo siguiente se agrega un mensaje personalizado para **sys.messages**.  
+ En el ejemplo siguiente se agrega un mensaje personalizado a **sys.messages**.  
   
 ```  
 USE master;  

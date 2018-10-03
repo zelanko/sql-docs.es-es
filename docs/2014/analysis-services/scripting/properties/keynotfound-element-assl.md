@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - KeyNotFound Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - KeyNotFound element
 ms.assetid: 2a93bbfa-2409-4e94-8b68-926532895a4c
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 58228d8f4029fecf22062a3e3c5c0c9adf3eafe1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7e8a2233797d3d9ddeecc91d5c2b5f096866d624
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37281811"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156605"
 ---
 # <a name="keynotfound-element-assl"></a>Elemento KeyNotFound (ASSL)
   Especifica cómo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] responde cuando encuentra un error de integridad referencial.  
@@ -46,7 +43,7 @@ ms.locfileid: "37281811"
 </ErrorConfiguration>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37281811"
 |Elemento primario|[ErrorConfiguration](../objects/errorconfiguration-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los errores de integridad referencial tienen lugar cuando un valor de clave externa en una tabla dependiente no tiene una entrada correspondiente en la tabla primaria. Este error se produce cuando [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] procesa una dimensión en la que la tabla de hechos hace referencia a un valor de clave externa que no existe en la tabla de dimensiones para esa dimensión, o cuando [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] procesa una partición cuando la tabla principal de dimensiones para una dimensión que está incluida en la partición hace referencia a un valor de clave que no existe en otra tabla de dimensiones asociada. (En cuanto a las dimensiones con jerarquías de elementos primarios y secundarios y atributos primarios, esto también puede ocurrir cuando la tabla principal de dimensiones que está incluida en la partición hace referencia a un valor de clave que no existe en la misma tabla de dimensiones asociada.)  
   
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  

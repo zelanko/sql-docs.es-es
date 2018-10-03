@@ -1,14 +1,11 @@
 ---
-title: Core.sp_purge_data (Transact-SQL) | Documentos de Microsoft
+title: Core.sp_purge_data (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_purge_data_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - core.sp_purge_data stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 002ba9d499039651eecdd2d05c92cda63c9dab62
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cbcd8616fc743ee749b3adb9b30f343939fa7f3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239265"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819243"
 ---
 # <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +53,7 @@ core.sp_purge_data
  [@instance_name =] '*instance_name*'  
  Nombre de la instancia del conjunto de recopilación. *instance_name* es **sysname**, su valor predeterminado es null.  
   
- *instance_name* debe ser el nombre de instancia completo, que consta del nombre del equipo y el nombre de instancia en el formulario *computername*\\*nombreDeInstancia*. Cuando es NULL, se utiliza la instancia predeterminada en el servidor local.  
+ *instance_name* debe ser el nombre de instancia completo, que está formado por el nombre del equipo y el nombre de instancia en el formulario *computername*\\*nombreDeInstancia*. Cuando es NULL, se utiliza la instancia predeterminada en el servidor local.  
   
  [@collection_set_uid =] '*collection_set_uid*'  
  GUID del conjunto de recopilación. *collection_set_uid* es **uniqueidentifier**, su valor predeterminado es null. Cuando es NULL, se quitan las filas certificadas de todos los conjuntos de recopilación. Para obtener este valor, consulte la vista de catálogo syscollector_collection_sets.  
@@ -71,11 +67,11 @@ core.sp_purge_data
 ## <a name="remarks"></a>Comentarios  
  Este procedimiento selecciona las filas de la vista core.snapshots que pueden quitarse de acuerdo con el período de retención. Todas las filas que se pueden quitar se eliminan de la tabla core.snapshots_internal. La eliminación de las filas precedentes desencadenará una acción de eliminación en cascada en todas las tablas del almacén de administración de datos. Esto se consigue al usar la cláusula ON DELETE CASCADE, que se define para todas las tablas que contienen datos recopilados.  
   
- Cada instantánea y sus datos asociados se eliminan dentro de una transacción explícita y, a continuación, se confirma la operación. Por lo tanto, si la operación de purga se detuvo manualmente, o el valor especificado para @duration se supera, solo los datos no confirmados permanecen. Estos datos se pueden quitar la próxima vez que se ejecute el trabajo.  
+ Cada instantánea y sus datos asociados se eliminan dentro de una transacción explícita y, a continuación, se confirma la operación. Por lo tanto, si se detiene manualmente la operación de purga, o el valor especificado para @duration se supera, solo los datos sin confirmar permanecen. Estos datos se pueden quitar la próxima vez que se ejecute el trabajo.  
   
  El procedimiento se debe ejecutar en el contexto de la base de datos de almacén de administración de datos.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer a la **mdw_admin** (con permiso EXECUTE) rol fijo de base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -90,7 +86,7 @@ GO
 ```  
   
 ### <a name="b-specifying-retention-and-duration-values"></a>B. Especificación de valores de retención y duración  
- En el ejemplo siguiente se quitan los datos del almacén de administración de datos anteriores a 7 días. Además, el @duration se especifica el parámetro para que se ejecutará la operación no supere los 5 minutos.  
+ En el ejemplo siguiente se quitan los datos del almacén de administración de datos anteriores a 7 días. Además, el @duration se especifica el parámetro para que ejecute la operación no supere los 5 minutos.  
   
 ```  
 USE <management_data_warehouse>;  
@@ -99,7 +95,7 @@ GO
 ```  
   
 ### <a name="c-specifying-an-instance-name-and-collection-set"></a>C. Especificación de un nombre de instancia y un conjunto de recopilación  
- En el ejemplo siguiente se quitan los datos del almacén de administración de datos que contiene un conjunto de recopilación determinado en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada. Dado que @retention_days no se especifica, el valor de la columna valid_through de la vista core.snapshots se usa para determinar las filas del conjunto de recopilación que pueden quitarse.  
+ En el ejemplo siguiente se quitan los datos del almacén de administración de datos que contiene un conjunto de recopilación determinado en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada. Dado que @retention_days no se especifica, se usa el valor de la columna valid_through de la vista core.snapshots para determinar las filas del conjunto de recopilación que pueden quitarse.  
   
 ```  
 USE <management_data_warehouse>;  

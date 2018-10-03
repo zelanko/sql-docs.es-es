@@ -1,38 +1,35 @@
 ---
-title: Ejemplo (VBScript) del método Delete | Documentos de Microsoft
+title: Ejemplo (VBScript) del método Delete | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Delete method [ADO], VBScript example
 ms.assetid: 78935d6d-1c1a-4306-a83a-1763210c69f9
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 148baaf84c8025d23b78f01bd098fb4a37634257
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2e9c059a003d263a61f1e224e0187fc6e5a80b9f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277594"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787463"
 ---
-# <a name="delete-method-example-vbscript"></a>Eliminar el ejemplo del método (VBScript)
-Este ejemplo se utiliza la [eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md) método para quitar un registro especificado de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
+# <a name="delete-method-example-vbscript"></a>Ejemplo del método Delete (VBScript)
+Este ejemplo se usa el [eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md) método para quitar un registro especificado de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- Utilice el siguiente ejemplo en una página Active Server (ASP). Para ver este ejemplo totalmente funcional, debe tener los datos de origen de AdvWorks.mdb (que se instala con el SDK) que se encuentra en C:\Program Files\Microsoft plataforma SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb o edite la ruta de acceso en el código de ejemplo para reflejar la ubicación real de este archivo. Se trata de un archivo de base de datos de Microsoft Access.  
+ Utilice el siguiente ejemplo en una página Active Server (ASP). Para ver este ejemplo totalmente funcional, debe tener los datos de origen AdvWorks.mdb (instalado con el SDK) ubicado en C:\Program Files\Microsoft plataforma SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb o editar la ruta de acceso del código de ejemplo para reflejar la ubicación real de este archivo. Se trata de un archivo de base de datos de Microsoft Access.  
   
- Usar **buscar** para localizar el archivo Adovbs.inc y colocarlo en el directorio que se va a utilizar. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **DeleteVBS.asp**. Puede ver el resultado en cualquier explorador de cliente.  
+ Usar **buscar** para localizar el archivo Adovbs.inc y colocarlo en el directorio que se va a usar. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **DeleteVBS.asp**. Puede ver el resultado en cualquier explorador cliente.  
   
- Para practicar con el ejemplo, pruebe a usar la [AddNew](../../../ado/reference/ado-api/addnew-method-example-vbscript.md) ejemplo primero para agregar algunos registros. A continuación, puede intentar eliminarlos. Ver el resultado en cualquier explorador de cliente.  
+ Para ejecutar el ejemplo, pruebe a usar el [AddNew](../../../ado/reference/ado-api/addnew-method-example-vbscript.md) ejemplo primero para agregar algunos registros. A continuación, puede intentar eliminarlos. Ver el resultado en cualquier explorador cliente.  
   
 ```  
 <!-- BeginDeleteVBS -->  
@@ -174,5 +171,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Delete (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+ [Eliminar método (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

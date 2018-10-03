@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT FOR XML mode
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2c9326045b48385d592c17d1b275a9e671187965
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: ffc0ca60beabfb8cc535026ec4b6004103051d06
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888411"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162605"
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>Ejemplo: Construir elementos del mismo nivel con el modo EXPLICIT
   Suponga que desea crear XML para obtener información sobre pedidos. Observe que los elementos <`SalesPerson`> y <`OrderDetail`> son del mismo nivel. Cada pedido tiene un elemento <`OrderHeader`>, un elemento <`SalesPerson`> y uno o más elementos <`OrderDetail`>.  

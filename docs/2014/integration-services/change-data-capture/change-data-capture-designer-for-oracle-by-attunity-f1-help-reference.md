@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - f1Help
 ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6132dc4ab91d370888b8628ff69969e92e83ab06
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 57bc85e4afa17a6b26068d89e88485a2d8706210
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246925"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164815"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Diseñador de captura de datos modificados para Oracle de Attunity (Referencia de la Ayuda de F1)
   El Diseñador de captura de datos modificados para Oracle de Attunity se emplea para crear y administrar la instancia CDC de Oracle. En los temas de esta sección se explica cómo realizar las tareas disponibles en la Consola del diseñador CDC.  

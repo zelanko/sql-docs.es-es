@@ -1,50 +1,47 @@
 ---
-title: Propiedades de ADO MD | Documentos de Microsoft
+title: Propiedades de ADO MD | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD, properties
 - properties [ADO MD]
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 40916a54d3279b2a4afaee83fe56b4ef9c4d4199
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d37b1a07566943038bd73b0d79eb2dcd4655fda6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283354"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696934"
 ---
 # <a name="ado-md-properties"></a>Propiedades de ADO MD
 |||  
 |-|-|  
-|[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|Indica a qué ADO **conexión** el conjunto de celdas actual de un objeto o catálogo al que pertenece actualmente.|  
-|[Título](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Indica el título de texto que se va a usar al mostrar una **nivel** o **miembro** objeto.|  
-|[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|Indica el número de miembros para los que el actual **miembro** objeto es el elemento primario en una jerarquía.|  
-|[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|Devuelve una colección de **miembros** para que el actual **miembro** es el elemento primario en la jerarquía.|  
-|[Recuento](../../../ado/reference/ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
-|[Profundidad](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|Indica el número de niveles entre el **nivel** y la raíz del nivel jerárquico.|  
+|[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|Indica a qué ADO **conexión** el conjunto de celdas de objeto o el catálogo al que pertenece actualmente.|  
+|[Título](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Indica el título de texto que se usará al mostrar un **nivel** o **miembro** objeto.|  
+|[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|Indica el número de miembros para el que el actual **miembro** objeto es el elemento primario en una jerarquía.|  
+|[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|Devuelve una colección de **miembros** para que el actual **miembro** es la entidad primaria en la jerarquía.|  
+|[recuento](../../../ado/reference/ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
+|[Profundidad](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|Indica el número de niveles entre el **nivel** y la raíz del nivel de jerarquía.|  
 |[Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Devuelve un texto de explicación del objeto actual.|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|Indica el número de dimensiones en un eje.|  
 |[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)|Indica si hay elementos secundarios inmediatamente después del miembro en el eje.|  
-|[PivotView](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)|Indica información de filtro para el objeto cellset actual.|  
+|[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)|Indica que la información de filtro para el objeto cellset actual.|  
 |[Elemento](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)|Recupera una celda de un conjunto de celdas utilizando sus coordenadas.|  
 |[Elemento](../../../ado/reference/ado-api/item-property-ado.md)|Devuelve a un miembro específico de una colección por nombre o número ordinal.|  
-|[FormattedValue](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)|Indica la presentación con formato de un valor de celda.|  
+|[FormattedValue](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)|Indica la visualización con formato de un valor de celda.|  
 |[LevelDepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)|Indica el número de niveles entre la raíz de la jerarquía y un miembro.|  
 |[LevelName](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)|Indica el nombre del nivel de miembro.|  
 |[Nombre](../../../ado/reference/ado-md-api/name-property-ado-md.md)|Indica el nombre de un objeto.|  
-|[Ordinal (celda)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)|Identifica de forma única una celda por su posición dentro de un conjunto de celdas.|  
-|[Ordinal (posición)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)|Identifica de forma única una posición a lo largo de un eje.|  
+|[Ordinal (celda)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)|Identifica una celda por su posición dentro de un conjunto de celdas.|  
+|[Ordinal (posición)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)|Identifica una posición a lo largo de un eje.|  
 |[Parent](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|Indica al miembro que es el elemento primario del miembro actual en una jerarquía.|  
 |[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)|Indica si el elemento primario de este miembro de posición es el mismo que el elemento primario del miembro inmediatamente anterior.|  
 |[Source](../../../ado/reference/ado-md-api/source-property-ado-md.md)|Indica el origen de datos en el conjunto de celdas.|  
@@ -54,10 +51,10 @@ ms.locfileid: "35283354"
 |[Value](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Indica el valor de la celda actual.|  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de la API de ADO MD](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
+ [Referencia de API de ADO MD](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [Ejemplos de código ADO MD](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [Colecciones de ADO MD](../../../ado/reference/ado-md-api/ado-md-collections.md)   
  [Constantes enumeradas de ADO MD](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
  [Métodos de ADO MD](../../../ado/reference/ado-md-api/ado-md-methods.md)   
- [Modelo de objetos de ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
+ [Modelo de objetos ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [Objetos de ADO MD](../../../ado/reference/ado-md-api/ado-md-objects.md)

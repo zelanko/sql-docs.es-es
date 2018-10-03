@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spl.searchpropertylisteditor.f1
 ms.assetid: 0f3ced6e-0dfd-49fc-b175-82378c3d668e
-caps.latest.revision: 26
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 3f55070e129328e8b876a97382bfca4462a4cf70
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231535"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148945"
 ---
 # <a name="search-property-list-editor"></a>Editor de lista de propiedades de búsqueda
   Use este cuadro de diálogo para agregar o eliminar propiedades de búsqueda en una lista de propiedades de búsqueda.  
@@ -46,7 +43,7 @@ ms.locfileid: "37231535"
  **Descripción de la propiedad**  
  Si lo desea, especifique una descripción de la propiedad. Se trata de una cadena de hasta 512 caracteres. Por ejemplo, una descripción podría contener información sobre el conjunto de propiedades o sobre una propiedad que no sea evidente a partir de su nombre.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para agregar una propiedad de búsqueda a una lista de propiedades de búsqueda, debe especificar el identificador único global (GUID) del conjunto de propiedades al que pertenezca la propiedad y el identificador entero de propiedad. Una combinación dada de estos debe ser única en una lista de propiedades de búsqueda determinada. Si intenta agregar una combinación existente, se produce un error en la operación y se emite un error. Es decir, puede configurar solo un nombre para una propiedad dada.  
   
  La descripción de la propiedad es opcional.  

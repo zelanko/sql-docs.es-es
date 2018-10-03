@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1c220dcc-4014-4bfd-b997-6685902e6f67
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9a01117eb34df4cf47a55e65ef9af9045b87ace4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a677729f5c0f7a5ee1b6d10bbb3491937255b555
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308935"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48151285"
 ---
 # <a name="checklists-for-installing-bi-features-with-sharepoint"></a>Listas de comprobación para instalar características de BI con SharePoint
   En esta sección se proporcionan las listas de comprobación para instalar las características BI de SQL Server en combinaciones diferentes o en topologías de escalamiento horizontal. Si ya sabe cómo ejecutar un programa de instalación para instalar una característica BI, una lista de comprobación es el paso siguiente para saber el orden de instalación recomendado y si se requieren cambios de configuración adicionales que habiliten los escenarios de integración de características.  

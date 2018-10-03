@@ -1,47 +1,44 @@
 ---
-title: Configurar RDS en Windows 2000 | Documentos de Microsoft
+title: Configuración de RDS en Windows 2000 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS configuration [ADO], Windows 2000
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 774309f4b120f3c475645574429d1b08af627f8b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5fcff12760076a47e31fc6b140e0f3cdb7fc590e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273774"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657753"
 ---
-# <a name="configuring-rds-on-windows-2000"></a>Configurar RDS en Windows 2000
-Si tiene dificultades para conseguir que RDS funcione correctamente después de actualizar a Windows 2000, siga estos pasos para solucionar el problema:  
+# <a name="configuring-rds-on-windows-2000"></a>Configuración de RDS en Windows 2000
+Si experimenta dificultades para conseguir que RDS funcione correctamente después de actualizar a Windows 2000, siga estos pasos para solucionar el problema:  
   
-1.  Asegúrese de que el servicio de publicación World Wide Web se ejecuta primero, vaya a http:// servidor mediante el Explorador de Internet. Si no se puede acceder al servidor de Web de esta manera, abra un símbolo del sistema y escriba el comando siguiente, "NET iniciar W3SVC".  
+1.  Asegúrese de que se ejecuta primero el servicio de publicación World Wide Web, vaya a http:// server mediante el uso de Internet Explorer. Si no puede acceder el servidor Web de esta manera, abra un símbolo del sistema y escriba el comando siguiente, "NET iniciar W3SVC".  
   
-2.  En el menú Inicio, seleccione Ejecutar. Escriba msdfmap.ini y, a continuación, haga clic en Aceptar para abrir el archivo msdfmap.ini en el Bloc de notas. Compruebe la sección [CONNECT DEFAULT] y, si el parámetro de acceso se establece en NOACCESS, cámbielo a READONLY.  
+2.  En el menú Inicio, seleccione Ejecutar. Escriba msdfmap.ini y, a continuación, haga clic en Aceptar para abrir el archivo msdfmap.ini en el Bloc de notas. Consulte la sección [DEFAULT conectarse] y, si el parámetro de acceso se establece en NOACCESS, cámbielo a READONLY.  
   
-3.  Mediante la utilidad RegEdit, navegue hasta el registro hasta "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DataFactory\HandlerInfo" y asegúrese de que **HandlerRequired** se establece en 0 y **controlador predeterminado** es "" (cadena nula).  
+3.  Mediante la utilidad RegEdit, vaya a "Registro hasta HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DataFactory\HandlerInfo" y asegúrese de que **HandlerRequired** se establece en 0 y **DefaultHandler** es "" (cadena nula).  
   
-     **Tenga en cuenta** si realiza cambios en esta sección del registro, debe detener y reiniciar el servicio de publicación World Wide Web escribiendo los comandos siguientes en un símbolo del sistema: "NET STOP W3SVC" y "NET iniciar W3SVC".  
+     **Tenga en cuenta** si realiza cambios en esta sección del registro, debe detener y reiniciar el servicio de publicación World Wide Web escribiendo los siguientes comandos en un símbolo del sistema: "NET detener W3SVC" y "NET iniciar W3SVC".  
   
-4.  Con la utilidad RegEdit, navegue en el registro para "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch" y compruebe que existe una clave denominada **RDSServer.Datafactory**. De lo contrario, créelo.  
+4.  Con la utilidad RegEdit, navegue en el registro a "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch" y compruebe que existe una clave denominada **RDSServer.Datafactory**. Si no es así, crearla.  
   
-5.  Con el Administrador de servicios de Internet, localice el sitio Web predeterminado y ver las propiedades de la raíz virtual MSADC. Inspeccione el directorio seguridad o la dirección IP y las restricciones de nombre de dominio. Si se activa el "acceso denegado", a continuación, seleccione "Concedido".  
+5.  Con el Administrador de servicios de Internet, busque el sitio Web predeterminado y ver las propiedades de la raíz virtual MSADC. Inspeccione el directorio seguridad o la dirección IP y las restricciones de nombre de dominio. Si se activa el "acceso denegado", a continuación, seleccione "Granted".  
   
- No olvide reiniciar el servidor si los cambios no aparezcan solucionar el problema en un primer momento.  
+ Asegúrese de reiniciar el servidor si los cambios no aparezcan solucionar el problema en primer lugar.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar a [servicio de datos de WCF](http://go.microsoft.com/fwlink/?LinkId=199565). Componentes de servidor RDS a partir de Windows 8 y Windows Server 2012, ya no están incluidos en el sistema operativo Windows. Migrar las aplicaciones que utilizan RDS a [servicio de datos de WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565). Componentes de servidor RDS a partir de Windows 8 y Windows Server 2012, ya no se incluyen en el sistema operativo de Windows. Migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="see-also"></a>Vea también  
  [Aspectos básicos de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Attributes Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Attributes element
 ms.assetid: c0393de8-44e8-46de-af78-1fd66c218521
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f064935032298e037938734fa5d3d1ac9fcbae84
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7d2d5b29116a2ad248540f51ed84d677048352c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161086"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140415"
 ---
 # <a name="attributes-element-xmla"></a>Elemento Attributes (XMLA)
   Contiene una colección de elementos [Attribute](attribute-element-xmla.md) utilizada por los comandos primarios [Insert](../xml-elements-commands/insert-element-xmla.md) o [Update](../xml-elements-commands/update-element-xmla.md) , o por el elemento primario [Where](where-element-xmla.md) .  
@@ -50,7 +47,7 @@ ms.locfileid: "37161086"
 </Insert>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -65,7 +62,7 @@ ms.locfileid: "37161086"
 |Elementos primarios|[Insert](../xml-elements-commands/insert-element-xmla.md), [Update](../xml-elements-commands/update-element-xmla.md), [Where](where-element-xmla.md)|  
 |Elementos secundarios|[Atributo](attribute-element-xmla.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;XMLA&#41;](xml-elements-properties.md)  

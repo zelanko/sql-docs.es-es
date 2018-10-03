@@ -1,79 +1,76 @@
 ---
-title: Conectar con Oracle (OracleToSQL) | Documentos de Microsoft
+title: Conectarse a Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 3d002682b0671bedbe15a3c790429b9a80452a35
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 3e2e84fd2117afe15075084741e65989a30960cb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777001"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674183"
 ---
-# <a name="connect-to-oracle-oracletosql"></a>Conectar con Oracle (OracleToSQL)
+# <a name="connect-to-oracle-oracletosql"></a>Conectarse a Oracle (OracleToSQL)
 Use la **conectar con Oracle** cuadro de diálogo para conectarse a la base de datos de Oracle que se va a migrar.  
   
-Para tener acceso a este cuadro de diálogo, en la **archivo** menú, seleccione **conectar con Oracle**. Si se ha conectado anteriormente, el comando es **volver a conectar con Oracle**.  
+Para obtener acceso a este cuadro de diálogo, en el **archivo** menú, seleccione **conectar con Oracle**. Si se ha conectado anteriormente, el comando es **volver a conectar con Oracle**.  
   
 ## <a name="options"></a>Opciones  
 **Proveedor**  
-Seleccione el proveedor de acceso de datos para la conexión a la base de datos de Oracle. Proveedores disponibles están en el proveedor de cliente de Oracle y el proveedor OLE DB. El valor predeterminado es el proveedor de cliente de Oracle.  
+Seleccione el proveedor de acceso a datos para la conexión a la base de datos de Oracle. Los proveedores disponibles son el proveedor de cliente de Oracle y el proveedor OLE DB. El valor predeterminado es el proveedor de cliente de Oracle.  
   
 **Modo**  
 Seleccione modo estándar, TNSNAME o cadena de conexión.  
   
--   En modo estándar, escriba o seleccione valores para el proveedor, nombre del servidor, puerto del servidor, el SID de Oracle, nombre de usuario y la contraseña.  
+-   En el modo estándar, escriba o seleccione valores para el proveedor, nombre del servidor, puerto del servidor, el SID de Oracle, nombre de usuario y contraseña.  
   
 -   En el modo TNSNAME, escriba el identificador de conexión (alias TNS) de la base de datos de Oracle, el nombre de usuario y la contraseña.  
   
--   En el modo de cadena de conexión, proporcionar una cadena de conexión.  
+-   En el modo de cadena de conexión, proporcione una cadena de conexión.  
   
     > [!IMPORTANT]  
-    > No se recomienda que use el modo de cadena de conexión porque el texto puede incluir las contraseñas, y se envía como texto sin cifrar.  
+    > No se recomienda que use el modo de cadena de conexión porque el texto puede incluir las contraseñas, y se envía como texto no cifrado.  
   
 El valor predeterminado es el modo estándar.  
   
 **Nombre del servidor**  
-Escriba el nombre del servidor de Oracle. El nombre del servidor predeterminado es el mismo que el nombre del equipo. Se trata de una opción de modo estándar.  
+Escriba el nombre del servidor de Oracle. El nombre del servidor predeterminado es el mismo que el nombre del equipo. Esta es una opción de modo estándar.  
   
 **Puerto del servidor**  
-Si está utilizando un número de puerto distinto 1521 (valor predeterminado) para las conexiones con Oracle, escriba el número de puerto. Se trata de una opción de modo estándar.  
+Si usa un número de puerto distinto 1521 (valor predeterminado) para las conexiones de Oracle, especifique el número de puerto. Esta es una opción de modo estándar.  
   
 **Identificador de conexión**  
-Escriba el Oracle conectarse identificador. Éste es el alias de la base de datos tal como se define en el archivo tnsnames.ora local.  
+Escriba el oráculo de identificador de conexión. Éste es el alias de la base de datos tal como se define en el archivo tnsnames.ora local.  
   
-Se trata de una opción de modo TNSNAME.  
+Esta es una opción de modo TNSNAME.  
   
 **SID de Oracle**  
-Escriba al SID de la base de datos. El SID es un identificador que distingue la base de datos de Oracle en un equipo. El valor predeterminado de SID para una base de datos es los ocho primeros caracteres del nombre de base de datos.  
+Escriba al SID de la base de datos. El SID es un identificador que distingue de la base de datos de Oracle en un equipo. El valor predeterminado de SID para una base de datos es que los ocho primeros caracteres del nombre de base de datos.  
   
-Se trata de una opción de modo estándar.  
+Esta es una opción de modo estándar.  
   
 **Nombre de usuario.**  
-Escriba el nombre de usuario que va a usar SSMA para conectarse a la base de datos de Oracle.  
+Escriba el nombre de usuario que va a usar para conectarse a la base de datos de Oracle SSMA.  
   
 **Contraseña**  
 Escriba la contraseña del nombre de usuario.  
   
 **Cadena de conexión**  
 > [!IMPORTANT]  
-> No se recomienda que use el modo de cadena de conexión porque el texto puede incluir las contraseñas, y se envía como texto sin cifrar.  
+> No se recomienda que use el modo de cadena de conexión porque el texto puede incluir las contraseñas, y se envía como texto no cifrado.  
   
-Si utiliza el modo de cadena de conexión, escriba la cadena de conexión completa para la conexión a Oracle.  
+Si usa el modo de cadena de conexión, escriba la cadena de conexión completa para la conexión a Oracle.  
   
-Las cadenas de conexión se componen de pares de nombre y valor de parámetro.  
+Las cadenas de conexión constan de pares de nombre y valor de parámetro.  
   
--   Para información de la cadena de conexión de OLE DB, vea [proveedor Microsoft OLE DB para Oracle](http://go.microsoft.com/fwlink/?LinkId=85640) artículo en MSDN Library.  
+-   Para información de la cadena de conexión de OLE DB, consulte [proveedor Microsoft OLE DB para Oracle](http://go.microsoft.com/fwlink/?LinkId=85640) artículo en MSDN Library.  
   
-SSMA para cadenas de conexión, siempre que incluya el parámetro de proveedor. Además, asegúrese de incluir el parámetro de puerto al conectarse a Oracle.  
+SSMA cadenas de conexión, siempre que incluya el parámetro de proveedor. Además, asegúrese de incluir el parámetro de puerto al conectarse a Oracle.  
   

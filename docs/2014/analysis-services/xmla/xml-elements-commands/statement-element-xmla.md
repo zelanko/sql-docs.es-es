@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Statement Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Statement command
 ms.assetid: bfedc03c-d476-4d55-b5fd-36169f01351a
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 72a2b52b8a95233dfa0f889603d74548fb031305
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 96b37de3307a044b046c67bb4ab6fe341ad5e480
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300815"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056465"
 ---
 # <a name="statement-element-xmla"></a>Elemento Statement (XMLA)
   Contiene una consulta o instrucción se envíe mediante la `Execute` método a una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -46,7 +43,7 @@ ms.locfileid: "37300815"
 </Command>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37300815"
 |Elementos primarios|[Command](../xml-elements-properties/command-element-xmla.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El comando `Statement` ejecuta una consulta o instrucción en la instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] admite los lenguajes siguientes:  
   
 -   Expresiones multidimensionales (MDX)  

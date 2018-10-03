@@ -1,14 +1,11 @@
 ---
-title: sp_help_downloadlist (Transact-SQL) | Documentos de Microsoft
+title: sp_help_downloadlist (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_downloadlist_TSQL
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_downloadlist
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e48423bc91413518abe3002a3c3d8da2cef330c2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: caaeb391fabb112ed2a530148baf61e829e6b80a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260338"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857103"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enumera todas las filas de la **sysdownloadlist** tabla del sistema para el trabajo especificado o todas las filas si no se especifica ningún trabajo.  
+  Enumera todas las filas de la **sysdownloadlist** tabla del sistema para el trabajo especificado o todas las filas si se especifica ningún trabajo.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,14 +54,14 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  Nombre del trabajo. *job_name* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
->  Cualquier *job_id* o *job_name* debe especificarse, pero no pueden especificarse ambos.  
+>  Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
   
  [  **@operation=** ] **'***operación***'**  
- Operación válida del trabajo especificado. *operación* es **varchar(64)**, su valor predeterminado es null y puede tener uno de estos valores.  
+ Operación válida del trabajo especificado. *operación* es **varchar(64)**, su valor predeterminado es null, y puede tener uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|**DAR DE BAJA**|Operación del servidor que solicita al servidor de destino para dar de baja del servidor maestro **SQLServerAgent** servicio.|  
+|**DAR DE BAJA**|Operación del servidor que solicita el servidor de destino para dar de baja del servidor maestro **SQLServerAgent** service.|  
 |**DELETE**|Operación de trabajo que quita un trabajo completo.|  
 |**INSERT**|Operación de trabajo que inserta un trabajo completo o actualiza un trabajo existente. Esta operación incluye todos los pasos y programaciones del trabajo, si corresponde.|  
 |**VOLVER A DAR DE ALTA**|Operación del servidor que hace que el servidor de destino vuelva a enviar la información de alta, incluidos el intervalo de sondeo y la zona horaria del dominio multiservidor. El servidor de destino también vuelve a descargar el **MSXOperator** detalles.|  
@@ -73,19 +69,19 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**INICIO**|Operación de trabajo que solicita el inicio de la ejecución del trabajo.|  
 |**DETENER**|Operación de trabajo que solicita la detención de la ejecución del trabajo.|  
 |**HORA DE SINCRONIZACIÓN**|Operación de servidor que hace que el servidor de destino sincronice su reloj del sistema con el dominio multiservidor. Como ésta es una operación muy costosa, ejecútela de forma limitada, con poca frecuencia.|  
-|**UPDATE**|Operación de trabajo que actualiza solo el **sysjobs** información para un trabajo, no los pasos de trabajo o las programaciones. Se llama automáticamente a **sp_update_job**.|  
+|**UPDATE**|Operación de trabajo que sólo actualiza la **sysjobs** información para un trabajo, no los pasos de trabajo o programaciones. Se llama automáticamente **sp_update_job**.|  
   
  [  **@object_type=** ] **'***object_type***'**  
- Tipo de objeto del trabajo especificado. *object_type* es **varchar(64)**, su valor predeterminado es null. *object_type* puede ser JOB o SERVER. Para obtener más información acerca de cómo válido *object_type*valores, consulte [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
+ Tipo de objeto del trabajo especificado. *object_type* es **varchar(64)**, su valor predeterminado es null. *object_type* puede ser JOB o SERVER. Para obtener más información sobre válido *object_type*valores, vea [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
  [  **@object_name=** ] **'***object_name***'**  
- Nombre del objeto. *object_name* es **sysname**, su valor predeterminado es null. Si *object_type* es JOB, *object_name*es el nombre del trabajo. Si *object_type*es servidor, *object_name*es el nombre del servidor.  
+ Nombre del objeto. *object_name* es **sysname**, su valor predeterminado es null. Si *object_type* es trabajo, *object_name*es el nombre del trabajo. Si *object_type*es servidor, *object_name*es el nombre del servidor.  
   
  [  **@target_server=** ] **'***target_server***'**  
  El nombre del servidor de destino. *target_server* es **nvarchar (128)**, su valor predeterminado es null.  
   
  [  **@has_error=** ] *has_error*  
- Indica si el trabajo tiene que reconocer errores. *has_error* es **tinyint**, su valor predeterminado es null, lo que indica que no se debe reconocer ningún error. **1** indica que se deben reconocer todos los errores.  
+ Indica si el trabajo tiene que reconocer errores. *has_error* es **tinyint**, su valor predeterminado es null, lo que indica que no se deben reconocer errores. **1** indica que se deben reconocer todos los errores.  
   
  [  **@status=** ] *estado*  
  Estado del trabajo. *estado* es **tinyint**, su valor predeterminado es null.  
@@ -98,20 +94,20 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**valor de instance_id**|**int**|Número de identificación entero único de la instrucción.|  
-|**source_server**|**nvarchar(30)**|Nombre de equipo del servidor del que proviene la instrucción. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7.0, esto siempre es el nombre del equipo del servidor principal (MSX).|  
+|**instance_id**|**int**|Número de identificación entero único de la instrucción.|  
+|**source_server**|**nvarchar(30)**|Nombre de equipo del servidor del que proviene la instrucción. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7.0, esto siempre es el nombre del equipo del servidor maestro (MSX).|  
 |**operation_code**|**nvarchar(4000)**|Código de operación de la instrucción.|  
 |**object_name**|**sysname**|Objeto afectado por la instrucción.|  
-|**object_id**|**uniqueidentifier**|Número de identificación del objeto afectado por la instrucción (**job_id** para un objeto de trabajo, o 0 x 00 para un objeto de servidor) o un valor de datos específico de la **operation_code**.|  
+|**object_id**|**uniqueidentifier**|Número de identificación del objeto afectado por la instrucción (**job_id** para un objeto de trabajo, o 0 x 00 para un objeto de servidor) o un valor de datos específico para el **operation_code**.|  
 |**target_server**|**nvarchar(30)**|Servidor de destino que va a descargar esta instrucción.|  
-|**error_message**|**nvarchar(1024)**|Mensaje de error (si existe) del servidor de destino si se encontró algún problema al procesar la instrucción.<br /><br /> Nota: Cualquier mensaje de error bloquea todas las posteriores descargas del servidor de destino.|  
+|**error_message**|**nvarchar(1024)**|Mensaje de error (si existe) del servidor de destino si se encontró algún problema al procesar la instrucción.<br /><br /> Nota: Los bloques de mensajes de error todas las posteriores descargas por el servidor de destino.|  
 |**date_posted**|**datetime**|Fecha en que la instrucción se envió a la tabla.|  
 |**date_downloaded**|**datetime**|Fecha en que el servidor de destino descargó la instrucción.|  
 |**status**|**tinyint**|Estado del trabajo:<br /><br /> **0** = no se ha descargado<br /><br /> **1** = descargado correctamente.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Los permisos de ejecución para este procedimiento corresponden de forma predeterminada a los miembros del rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  

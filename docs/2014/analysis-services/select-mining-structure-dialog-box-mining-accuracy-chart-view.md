@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.selectminingstructure.f1
 helpviewer_keywords:
 - Select Mining Structure dialog box
 ms.assetid: ce5af79f-a1f8-47f3-acb9-769022285a69
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 293f73cfad52e21ec3ec85f1f6e214bb7c090073
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 067f76f0f48c11b3946476e6386788dd7b812760
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275201"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159005"
 ---
 # <a name="select-mining-structure-dialog-box-mining-accuracy-chart-view"></a>Seleccionar estructura de minería de datos (cuadro de diálogo de la vista Gráfico de precisión de minería de datos)
   Utilice el cuadro de diálogo **Seleccionar estructura de minería de datos** para seleccionar una estructura de minería de datos que contenga los modelos de minería de datos cuya precisión desee comparar o probar.  

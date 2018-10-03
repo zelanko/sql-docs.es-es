@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 72d19e915fc937eb18ca1713e190d077f2e92d5d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 516353788009feae4ac643182cac644b65e422f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286721"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156045"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lección 1: Crear una base de datos de suscriptor de ejemplo
   Antes de que pueda definir una suscripción controlada por datos, debe disponer de un origen de datos que proporcione datos de suscripción. En este paso, creará una pequeña base de datos para almacenar los datos de suscripción utilizados en este tutorial. Más adelante, cuando la suscripción se haya procesado, el servidor de informes recupera estos datos y los utiliza para personalizar los resultados del informe, las opciones de entrega y el formato de presentación del informe.  

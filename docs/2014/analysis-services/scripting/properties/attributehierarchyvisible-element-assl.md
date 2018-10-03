@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AttributeHierarchyVisible Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AttributeHierarchyVisible element
 ms.assetid: a3289a9a-dbd6-43e8-a7ca-ee8a1da92a32
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb0f2e335a9c8aeb9cdca6e0c95003942800dad9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ac33cb91014a32f3795b10ef822ab6c85528ac0b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185142"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099275"
 ---
 # <a name="attributehierarchyvisible-element-assl"></a>Elemento AttributeHierarchyVisible (ASSL)
   Determina si la jerarquía de atributos es visible para las aplicaciones cliente.  
@@ -46,7 +43,7 @@ ms.locfileid: "37185142"
 </DimensionAttribute>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37185142"
 |Elemento primario|[CubeAttribute](../data-type/cubeattribute-data-type-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [PerspectiveAttribute](../data-type/perspectiveattribute-data-type-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento `AttributeHierarchyVisible` determina si la jerarquía de atributos asociada al atributo está visible para las aplicaciones cliente. Aunque este elemento esté establecido en `False`, se puede usar la jerarquía de atributos para crear jerarquías de atributos definidas por el usuario y se puede hacer referencia a ella en instrucciones MDX (Expresiones multidimensionales).  
   
  Los elementos que corresponden a los elementos primarios de `AttributeHierarchyVisible` en el modelo de objetos de Objetos de administración de análisis (AMO) son <xref:Microsoft.AnalysisServices.CubeAttribute>, <xref:Microsoft.AnalysisServices.DimensionAttribute> y <xref:Microsoft.AnalysisServices.PerspectiveAttribute>.  

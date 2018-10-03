@@ -1,33 +1,31 @@
 ---
-title: Función SQLSetDriverConnectInfo | Documentos de Microsoft
+title: Función SQLSetDriverConnectInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetDriverConnectInfo function [ODBC]
 ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63dee07cc01051f42fa6552a38d99dd7678f7ab8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5b886bdf5ce769201addacfdfe9e2f22c6e8a15d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706013"
 ---
-# <a name="sqlsetdriverconnectinfo-function"></a>SQLSetDriverConnectInfo (función)
+# <a name="sqlsetdriverconnectinfo-function"></a>Función SQLSetDriverConnectInfo
 **Conformidad**  
- Versión introdujo: ODBC 3,81 normativas: ODBC  
+ Versión introdujo: ODBC 3,81 normativo: ODBC  
   
  **Resumen**  
- **SQLSetDriverConnectInfo** se usa para establecer la cadena de conexión en el símbolo (token) de información de conexión para una aplicación **SQLDriverConnect** llamar.  
+ **SQLSetDriverConnectInfo** se usa para establecer la cadena de conexión en el token de la información de conexión para una aplicación **SQLDriverConnect** llamar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,7 +44,7 @@ SQLRETURN SQLSetDriverConnectInfo(
  [Entrada] Una cadena de conexión completa (vea la sintaxis de "Comentarios" en [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)), una cadena de conexión parcial o una cadena vacía.  
   
  *StringLength1*  
- [Entrada] Longitud de **InConnectionString*, en caracteres, si la cadena es Unicode o bytes si cadena es ANSI o DBCS.  
+ [Entrada] Longitud de **InConnectionString*, en caracteres, si la cadena es Unicode o bytes si es de cadena ANSI o DBCS.  
   
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
@@ -57,11 +55,11 @@ SQLRETURN SQLSetDriverConnectInfo(
 ## <a name="remarks"></a>Comentarios  
  Cada vez que un controlador devuelve SQL_ERROR o SQL_INVALID_HANDLE, el Administrador de controladores devuelve el error a la aplicación (en [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) o [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
   
- Cada vez que un controlador devuelve SQL_SUCCESS_WITH_INFO, el Administrador de controladores obtendrá la información de diagnóstico de *hDbcInfoToken*y devuelve SQL_SUCCESS_WITH_INFO para la aplicación en [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)y [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Cada vez que un controlador devuelve SQL_SUCCESS_WITH_INFO, el Administrador de controladores obtendrá la información de diagnóstico de *hDbcInfoToken*y devuelvan SQL_SUCCESS_WITH_INFO a la aplicación en [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)y [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
  Las aplicaciones no deben llamar directamente a esta función. Un controlador ODBC que admite la agrupación de conexiones dependientes del controlador debe implementar esta función.  
   
- Incluir sqlspi.h para el desarrollo del controlador ODBC.  
+ Incluir sqlspi.h para el desarrollo de controladores ODBC.  
   
 ## <a name="see-also"></a>Vea también  
  [Desarrollar un controlador ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   

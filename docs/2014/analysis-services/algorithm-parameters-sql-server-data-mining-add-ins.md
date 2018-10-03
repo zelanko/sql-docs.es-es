@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_STATES
@@ -47,16 +45,15 @@ helpviewer_keywords:
 - CLUSTER_COUNT
 - COMPLEXITY_PENALTY
 ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a7f640f259375c48584ee33b72e63b082de0a3e2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92ff53ae795fa4d0565ca9b1537a7d12bc8f0b5b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267681"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147615"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>Parámetros de algoritmo (Complementos de minería de datos de SQL Server)
   Cuando se realiza la minería de datos con las Herramientas de análisis de tabla para Excel, no es necesario configurar el algoritmo de minería de datos ni ningún parámetro; cada herramienta analiza los datos y selecciona automáticamente los parámetros óptimos. Sin embargo, si desea modificar el modelo o crear un modelo de minería de datos desde cero, el Cliente de minería de datos para Excel dispone de varias opciones para la personalización.  
@@ -109,7 +106,7 @@ ms.locfileid: "37267681"
 |MINIMUM_SUPPORT|Algoritmo de serie temporal de Microsoft|Especifica el número mínimo de segmentos de tiempo necesarios para generar una división en cada árbol de serie temporal.<br /><br /> El valor predeterminado es 10.|  
 |MISSING_VALUE_SUBSTITUTION|Algoritmo de serie temporal de Microsoft|Especifica el método usado para rellenar los espacios en los datos históricos. De forma predeterminada, no se admiten los espacios o bordes irregulares en los datos. Los métodos siguientes se pueden utilizar para rellenar espacios o bordes irregulares: usar el valor anterior, usar el valor promedio o usar una constante numérica concreta.|  
 |MODELLING_CARDINALITY|Algoritmo de clústeres de Microsoft|Especifica el número de modelos de ejemplo que se generan durante el proceso de agrupación en clústeres.<br /><br /> El valor predeterminado es 10.|  
-|PERIODICITY_HINT|Algoritmo de serie temporal de Microsoft|Proporciona una sugerencia al algoritmo en cuanto a la periodicidad de los datos. Por ejemplo, si las ventas varían por año y la unidad de medida en la serie son los meses, la periodicidad es 12. Este parámetro toma el formato de {n [, n]}, donde n es un número positivo. La n entre corchetes [] es opcional y puede repetirse con la frecuencia que sea necesaria.<br /><br /> El valor predeterminado es {1}.|  
+|PERIODICITY_HINT|Algoritmo de serie temporal de Microsoft|Proporciona una sugerencia al algoritmo en cuanto a la periodicidad de los datos. Por ejemplo, si las ventas varían por año y la unidad de medida en la serie son los meses, la periodicidad es 12. Este parámetro toma el formato de {n [, n]}, donde n es un número positivo. La n entre corchetes [] es opcional y puede repetirse con la frecuencia que sea necesaria.<br /><br /> De manera predeterminada, es {1}.|  
 |PREDICTION_SMOOTHING|Algoritmo de serie temporal de Microsoft|Controla la mezcla de algoritmos de serie temporal ARTXP y ARIMA. El valor especificado sólo es válido cuando el parámetro FORECAST_METHOD está establecido en MIXED. Los valores deben estar entre 0 y 1. Si el valor es 0, el modelo sólo usa ARTXP. Si el valor es 1, el modelo sólo usa ARIMA. Un valor más cercano a 0 concede más importancia a ARTXP. Un valor más cercano a 1 concede más importancia a ARIMA.|  
 |SAMPLE_SIZE|Algoritmo de clústeres de Microsoft|Especifica el número de casos que usa el algoritmo en cada paso si el parámetro CLUSTERING_METHOD está establecido en uno de los métodos de agrupación en clústeres escalables. Si establece el parámetro SAMPLE_SIZE en 0, todo el conjunto de datos se agrupará en un único paso. Esto puede causar problemas de memoria y de rendimiento.<br /><br /> El valor predeterminado es 50000.|  
 |SAMPLE_SIZE|Algoritmo de regresión logística de Microsoft<br /><br /> Microsoft Neural Network Algorithm|Especifica el número de casos que se van a usar para realizar el entrenamiento del modelo. El proveedor de algoritmos usa el valor menor entre este número o el porcentaje del total de los casos que no están incluidos en el porcentaje de datos de exclusión según se especifica en el parámetro HOLDOUT_PERCENTAGE.<br /><br /> En otras palabras, si HOLDOUT_PERCENTAGE está establecido en 30, el algoritmo usará el valor de este parámetro o un valor que sea igual al 70 por ciento del número total de casos, el que sea menor.<br /><br /> El valor predeterminado es 10000.|  

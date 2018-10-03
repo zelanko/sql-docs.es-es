@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.datasourcebrowse.f1
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Browse Data Source View dialog box
 ms.assetid: 16f077bd-9366-4964-8778-92ea0eddb8bb
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70b89ee36a2a613398cf092cf9e9b25f70386330
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 14fcc55e8e50892ce2aa54326f9f82a195aa66e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206305"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163625"
 ---
 # <a name="browse-data-source-view-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Examinar vista del origen de datos (Analysis Services - Datos multidimensionales)
   En el cuadro de diálogo para examinar la vista del origen de datos se muestra un diagrama de gráficos simple de la vista del origen de datos seleccionada. Además, el nombre de la vista del origen de datos aparece como título del cuadro de diálogo.  

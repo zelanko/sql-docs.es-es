@@ -4,8 +4,6 @@ ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.technology: release-landing
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: 'index-page '
 f1_keywords:
 - sql12.portal.f1
@@ -21,20 +19,20 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2504ca0853d11d496e88b963a4421885b83631b0
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.openlocfilehash: 31232de01fcd2e1f4c9d6ce67d446c737990d105
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39310202"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161765"
 ---
-# Libros en pantalla de SQL Server 2014
+# <a name="books-online-for-sql-server-2014"></a>Libros en pantalla de SQL Server 2014
   Bienvenido a [!INCLUDE[msCoName](../includes/msconame-md.md)]® libros en pantalla para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Libros en pantalla contiene descripciones de tareas y documentación de referencia que se describe cómo realizar el trabajo de inteligencia empresarial y administración de datos mediante el uso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Pruébelo:**  
  ![Azure Virtual Machine pequeña](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) ¿Tiene una cuenta de Azure?  A continuación, vaya **[aquí](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** en marcha una máquina Virtual con SQL Server 2014 Service Pack 1 (SP1) ya instalado. Para obtener más información sobre SQL Server 2014 (SP1), consulte [información de versión de SQL Server 2014 Service Pack 1 ](https://support.microsoft.com/en-us/kb/3058865). 
   
-## Tecnologías de SQL Server  
+## <a name="sql-server-technologies"></a>Tecnologías de SQL Server  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] incluye varias tecnologías de administración y análisis de datos. Haga clic en los vínculos de la tabla siguiente para buscar la característica, la tarea, y la documentación de referencia para cada tecnología.  
   
 |||  
@@ -47,7 +45,7 @@ ms.locfileid: "39310202"
 |![Icono de replicación](media/replication.gif "icono de replicación")|[Replicación](../relational-databases/replication/sql-server-replication.md)<br /><br /> La replicación es un conjunto de tecnologías destinadas a la copia y distribución de datos y objetos de base de datos de una base de datos a otra, para luego sincronizar ambas bases de datos con el fin de mantener su coherencia. La replicación permite distribuir datos a diferentes ubicaciones y a usuarios remotos o móviles mediante redes de área local y de área extensa, conexiones de acceso telefónico, conexiones inalámbricas e Internet.|  
 |![Icono de Reporting Services](media/reportingservices.gif "icono de Reporting Services")|[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> Reporting Services ofrece funcionalidad empresarial de informes habilitados para web con el fin de poder crear informes que extraigan contenido a partir de diversos orígenes de datos, publicar informes con distintos formatos y administrar la seguridad y las suscripciones de forma centralizada.|  
   
-## Información sobre SQL Server en Internet  
+## <a name="sql-server-information-on-the-web"></a>Información sobre SQL Server en Internet  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] publica información adicional sobre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en varios sitios web.  
   
  **Sitios Web de SQL Server**  
@@ -64,7 +62,7 @@ ms.locfileid: "39310202"
   
 -   [Centro para desarrolladores de XML](http://go.microsoft.com/fwlink/?LinkId=42458)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Ayuda del Administrador de configuración de SQL Server](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   

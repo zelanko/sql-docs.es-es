@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], tutorials
 - data mining [Analysis Services], tutorials
 - tutorials [Data Mining]
 ms.assetid: 6602edb6-d160-43fb-83c8-9df5dddfeb9c
-caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5711bc105432b0d23f5fd2fd2b429449c2549258
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db5b4fcded48a711fc1c8e8c8ffdebdd36562282
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314975"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150305"
 ---
 # <a name="basic-data-mining-tutorial"></a>Tutorial básico de minería de datos
   Bienvenido a la [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial de minería de datos básicos. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Proporciona un entorno integrado para crear modelos de minería de datos y realizar predicciones. En este tutorial, completará un escenario de una campaña de envío de correo directo en el que se utiliza aprendizaje automático para analizar y predecir el comportamiento de compra de los clientes. En el tutorial se muestra cómo utilizar tres de los algoritmos más importantes de minería de datos: agrupación en clústeres, árboles de decisión y Bayes Naive. También obtendrá información sobre cómo analizar los hallazgos con los visores de modelos de minería de datos y crear predicciones y gráficos de precisión con las herramientas de minería de datos que se incluyen en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La compañía ficticia, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], se utiliza en todos los ejemplos.  

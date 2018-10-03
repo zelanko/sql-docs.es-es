@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AggregationDesignAttribute Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AggregationDesignAttribute data type
 ms.assetid: 03d29d76-e4bd-4035-92cc-35149d83fbf9
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d723011d0342923e4020ab8655f45abb9a764396
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c20be714c6a302f7ba913cacc67b86f70c5379f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188922"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163311"
 ---
 # <a name="aggregationdesignattribute-data-type-assl"></a>Tipo de datos AggregationDesignAttribute (ASSL)
   Define un tipo de datos primitivo que representa la asociación entre un atributo y un [AggregationDesignDimension](dimension-data-type-assl.md) elemento.  
@@ -60,7 +57,7 @@ ms.locfileid: "37188922"
 |Elementos secundarios|[AttributeID](../properties/id-element-assl.md), [EstimatedCount](../properties/estimatedcount-element-assl.md)|  
 |Elementos derivados|[Atributo](../objects/attribute-element-assl.md) ([atributos](../collections/attributes-element-assl.md) colección de [AggregationDesignDimension](dimension-data-type-assl.md))|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.AggregationDesignAttribute>.  
   
 ## <a name="see-also"></a>Vea también  

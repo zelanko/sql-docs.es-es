@@ -1,32 +1,29 @@
 ---
-title: Referencia de interfaz (SPI) del proveedor de servicio ODBC | Documentos de Microsoft
+title: Referencia de interfaz (SPI) del proveedor de servicio ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cdeffb4a-f344-4abe-97f3-be2ede1c8e59
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c909e38e1aa4ee78412c7025cb6ed53254e98d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e3d83f0aa27641c9dde164f51319a0e78d456ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916380"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848723"
 ---
-# <a name="odbc-service-provider-interface-spi-reference"></a>Referencia de interfaz (SPI) del proveedor de servicio ODBC
+# <a name="odbc-service-provider-interface-spi-reference"></a>Referencia de la interfaz del proveedor de servicios (SPI) de ODBC
 Tradicionalmente, ODBC define una interfaz de programación de aplicaciones (API). Las funciones de la API pueden llamarse mediante aplicaciones y se deben implementar en el Administrador de controladores y el controlador.  
   
- Con la adición de la característica de agrupación de conexiones dependientes del controlador, ODBC presenta la interfaz de proveedor de servicio (SPI). Las funciones en el SPI se utilizan para la comunicación entre el Administrador de controladores y el controlador. Funciones SPI se implementan con el controlador; el Administrador de controladores no exponen funciones SPI para las aplicaciones. Las aplicaciones no deben llamar directamente a estas funciones.  
+ Con la adición de la característica de agrupación de conexiones dependientes del controlador, ODBC presenta la interfaz de proveedor de servicios (SPI). Las funciones en el SPI se usan para la comunicación entre el Administrador de controladores y el controlador. Funciones SPI se implementan mediante el controlador; el Administrador de controladores no exponen funciones SPI para las aplicaciones. Las aplicaciones no deben llamar directamente a estas funciones.  
   
- Incluir sqlspi.h para el desarrollo del controlador ODBC.  
+ Incluir sqlspi.h para el desarrollo de controladores ODBC.  
   
  Esta sección contiene los temas siguientes  
   

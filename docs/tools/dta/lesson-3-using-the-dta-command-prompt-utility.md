@@ -1,30 +1,24 @@
 ---
-title: 'Lección 3: Usar la utilidad del símbolo del sistema dta'
+title: 'Lección 3: Usar la utilidad del símbolo del sistema dta | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6fa260e1a20f13736b9df767508e4cf8a1b94de5
-ms.sourcegitcommit: 95093f8b4f3d02f8d55d415f03a241102a641cb3
+ms.openlocfilehash: 4580df95cb5450836bcb2cc171c491724cf71c38
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39654240"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642414"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Lección 3: Usar la utilidad del símbolo del sistema dta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +36,7 @@ Esta lección no cubre el uso de la funcionalidad de entrada XML del Asistente p
   
 Esta tarea le guía por los pasos necesarios para iniciar la utilidad **dta** , ver su Ayuda y usarla para optimizar una carga de trabajo desde el símbolo del sistema. Se usará la carga de trabajo (MyScript.sql) que ha creado para la práctica sobre la interfaz gráfica de usuario (GUI) del Asistente para la optimización de motor de base de datos: [Optimizar una carga de trabajo](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload).  
   
-Este tutorial necesita la base de datos de ejemplo AdventureWorks. Por motivos de seguridad, las bases de datos de ejemplo no se instalan de manera predeterminada. Para instalarlas, consulte [Instalar ejemplos de SQL Server y bases de datos de ejemplo](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).  
+El tutorial utiliza la base de datos de ejemplo AdventureWorks2017. Por motivos de seguridad, las bases de datos de ejemplo no se instalan de manera predeterminada. Para instalarlas, consulte [Instalar ejemplos de SQL Server y bases de datos de ejemplo](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).  
   
 Las tareas siguientes le guían por los pasos necesarios para abrir un símbolo del sistema, iniciar la utilidad **dta** , ver la Ayuda de la sintaxis y optimizar una carga de trabajo sencilla (MyScript.sql) que ha creado en [Optimizar una carga de trabajo](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
 
@@ -59,7 +53,7 @@ Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaura
   >[!NOTE]
   > Este tutorial está pensado para un usuario familiarizado con el uso de SQL Server Management Studio y las tareas de administración de base de datos básica. 
 
-## <a name="access-dta-command-prompt-utility-help-menu"></a>Lección 3: Usar la utilidad del símbolo del sistema dta
+## <a name="access-dta-command-prompt-utility-help-menu"></a>Menú Ayuda de la utilidad de símbolo del sistema DTA de acceso
   
   
 1.  En el menú **Inicio** , seleccione **Todos los programas**, **Accesorios**y, después, haga clic en **Símbolo del sistema**.  
@@ -74,7 +68,7 @@ Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaura
 
   ![Uso de la ayuda con la utilidad de cmd DTA](media/dta-tutorials/dta-cmd-help.png)
 
-## <a name="tune-simple-workload-using-the-dta-command-prompt-utility"></a>Optimizar una carga de trabajo sencilla mediante la utilidad del símbolo del sistema dta  
+## <a name="tune-simple-workload-using-the-dta-command-prompt-utility"></a>Optimizar la carga de trabajo sencilla mediante la utilidad de símbolo del sistema DTA  
 
 
   

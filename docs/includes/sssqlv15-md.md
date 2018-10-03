@@ -1,1 +1,1 @@
-SQL Server vNext
+Vista previa de SQL Server 2019

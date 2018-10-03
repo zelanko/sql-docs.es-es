@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures, creating
 ms.assetid: 042270a3-6ec7-4b52-b2ba-2adb6c4740d5
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8fb21806baca20f1705f08065f0ec8e0b7a92fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bad97bf517bee9f8c2545d5a48acc02830dc5f58
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255237"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134105"
 ---
 # <a name="advanced-modeling-data-mining-add-ins-for-excel"></a>Modelado avanzado (Complementos de minería de datos para Excel)
   Puede usar el **avanzadas** opciones para crear modelos y estructuras de minería de datos personalizadas con parámetros diferentes de las creadas por los asistentes de modelado de datos. Los dos asistentes descritos en esta sección le ayudan a crear una estructura de minería de datos completamente nueva y un nuevo modelo de minería de datos para aplicarlos a una estructura de minería de datos existente.  

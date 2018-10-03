@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sample applications [SMO]
 - SMO [SQL Server], samples
 - SQL Server Management Objects, samples
 ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
-caps.latest.revision: 41
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c516bfd0f4086f9ec91974205e546e686612d2f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90dc94e906ff9b8e99e14bef4b6b0bd158d38f37
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215015"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136995"
 ---
 # <a name="link-to-programming-samples"></a>Vínculo a ejemplos de programación
   En la tabla siguiente se muestra una lista de ejemplos de programación de objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO) que están disponibles en el directorio [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO. Estos ejemplos están disponibles tanto en [!INCLUDE[csprcs](../../includes/csprcs-md.md)] y [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . NET.  

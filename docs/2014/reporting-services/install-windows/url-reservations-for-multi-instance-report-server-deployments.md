@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 126a885988deee0ac05126282f4db233f7a756ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c1b5dbe65105de7d5f775c6d98ba17b2d646d87
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307355"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138767"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments--ssrs-configuration-manager"></a>Reservas de direcciones URL para implementaciones del servidor de informes de varias instancias (Administrador de configuración de SSRS)
   Si instala varias instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el mismo equipo, debe tener en cuenta cómo va a definir las reservas de direcciones URL para cada instancia. En cada instancia, el servicio web del servidor de informes y el Administrador de informes deben tener al menos una reserva de direcciones URL cada uno. El conjunto completo de reservas debe ser único en HTTP.SYS.  

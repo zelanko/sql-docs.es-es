@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
-caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7ba4bd70c21072d77f4972870fbbee7e27b18b18
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cee911569d1b90751e6c553b365a08bbaa3108eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218935"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138275"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Conjuntos de datos incrustados y compartidos de informe (Generador de informes y SSRS)
   Un conjunto de datos especifica los datos que desea usar de una conexión de datos. Un conjunto de datos se basa en una conexión de datos guardada en el informe como un origen del datos incrustado o una referencia a un origen de datos compartido en un servidor de informes. El conjunto de datos incluye una consulta que especifica un conjunto de campos. Al arrastrar estos campos hacia la superficie de diseño, se crean expresiones que se evalúan como los datos reales cuando se ejecuta el informe.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_moretext
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_moretext function
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
-caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30ddae53cc452796de0617bb5718d04156dcda41
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 83142e83ba04328ddf025e0a2f16ff18ad947075
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430184"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137505"
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
   Envía parte de un valor de tipo de datos largo, de longitud variable a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -61,7 +58,7 @@ pData
 ## <a name="returns"></a>Devuelve  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Esta función puede utilizarse junto con [bcp_bind](bcp-bind.md) y [bcp_sendrow](bcp-sendrow.md) long, copiar los valores de datos de longitud variable a SQL Server en un número de fragmentos más pequeños. **bcp_moretext** puede utilizarse con columnas que tienen los siguientes tipos de datos de SQL Server: `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, tipo definido por el usuario (UDT) y XML. **bcp_moretext** admite conversiones de datos, los datos proporcionados deben coincidir con el tipo de datos de la columna de destino.  
   
  Si **bcp_bind** se denomina con un nonNULL *pData* parámetro para los tipos de datos que son compatibles con **bcp_moretext**, `bcp_sendrow` envía el valor de datos completa, sin tener en cuenta de longitud. Si es, sin embargo, **bcp_bind** tiene un valor nulo *pData* parámetro para los tipos de datos admitidos, **bcp_moretext** puede utilizarse para copiar los datos inmediatamente después de una devolución correcta de `bcp_sendrow` que indica que se han procesado las columnas enlazadas con datos presentes.  

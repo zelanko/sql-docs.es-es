@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
-caps.latest.revision: 27
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3d2fb6cea9a1c2073a921503c0c4e1b88e5a8d25
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6f65ecd222adfbadab453084d2b5a0dfbfa171ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392181"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136145"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Supervisar y solucionar problemas de uso de memoria
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] consume memoria en patrones distintos que las tablas basadas en disco. Puede supervisar la cantidad de memoria asignada y usada por las tablas e índices optimizados para memoria en la base de datos mediante las DMV o los contadores de rendimiento suministrados para la memoria y el subsistema de recolección de elementos no utilizados.  Esto le ofrece visibilidad en los niveles de sistema y de base de datos, y permite evitar problemas debidos al agotamiento de la memoria.  
@@ -27,8 +24,7 @@ ms.locfileid: "40392181"
   
 ## <a name="sections-in-this-topic"></a>Secciones de este tema  
   
--   
-            [Crear una base de datos de ejemplo con tablas optimizadas para memoria](monitor-and-troubleshoot-memory-usage.md#bkmk_CreateDB)  
+-   [Crear una base de datos de ejemplo con tablas optimizadas para memoria](monitor-and-troubleshoot-memory-usage.md#bkmk_CreateDB)  
   
 -   [Supervisar el uso de la memoria](monitor-and-troubleshoot-memory-usage.md#bkmk_Monitoring)  
   
@@ -36,8 +32,7 @@ ms.locfileid: "40392181"
   
     -   [Usar DMVs](monitor-and-troubleshoot-memory-usage.md#bkmk_UsingDMVs)  
   
--   
-            [Administrar la memoria utilizada por los objetos optimizados para memoria](monitor-and-troubleshoot-memory-usage.md#bkmk_MemOptObjects)  
+-   [Administrar la memoria utilizada por los objetos optimizados para memoria](monitor-and-troubleshoot-memory-usage.md#bkmk_MemOptObjects)  
   
 -   [Solucionar problemas de memoria](monitor-and-troubleshoot-memory-usage.md#bkmk_Troubleshooting)  
   
@@ -275,9 +270,7 @@ MEMORYCLERK_XTP      Default    64             0
   
  Para obtener más información, vea [sys.dm_os_memory_clerks (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql).  
   
-##  
-            <a name="bkmk_MemOptObjects">
-            </a> Administrar la memoria utilizada por los objetos optimizados para memoria  
+##  <a name="bkmk_MemOptObjects"></a> Administrar la memoria utilizada por los objetos optimizados para memoria  
  Puede controlar la memoria total que han usado las tablas optimizadas para memoria enlazándola a un grupo de recursos con nombre como se describe en el tema [Enlazar una base de datos con tablas optimizadas para memoria a un grupo de recursos de servidor](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md).  
   
 ##  <a name="bkmk_Troubleshooting"></a> Solucionar problemas de memoria  

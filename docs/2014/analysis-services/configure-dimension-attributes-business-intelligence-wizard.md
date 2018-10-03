@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.acctintelligence.selectattributes.f1
 ms.assetid: 3d046e63-bcb1-4ab1-9c37-652463fa68c3
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae547b6182cdef585668c6888957ea89ef0db519
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6992d667383539092f13602c277eec4ee2f7c7f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299325"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133695"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>Configurar los atributos de dimensión (Asistente de Business Intelligence)
   Use la página **Configurar los atributos de dimensión** para asignar atributos de dimensión a los tipos de atributo que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa para identificar atributos para dimensiones de cuentas.  
@@ -36,7 +33,7 @@ ms.locfileid: "37299325"
  **Atributos de dimensión**  
  Muestra los tipos de atributo válidos que se pueden asignar a los atributos de dimensión existentes en la dimensión.  
   
- **Incluir**  
+ **incluir**  
  Active una casilla para incluir el tipo de atributo correspondiente en la dimensión.  
   
  **Tipo de atributo**  

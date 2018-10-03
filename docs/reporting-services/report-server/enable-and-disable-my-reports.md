@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - deactivated My Reports folder
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 999af84b4ad09d0c3bbf6f7dedc76fa182390e07
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8d294c717f0d30b612a68dcc3bce3053ac55d1d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279537"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824643"
 ---
 # <a name="enable-and-disable-my-reports"></a>Habilitar y deshabilitar Mis informes
   La característica Mis informes asigna espacio de almacenamiento personal en la base de datos del servidor de informes para que los usuarios puedan guardar sus propios informes en una carpeta privada. Los administradores de servidores de informes pueden habilitar o deshabilitar esta característica o cambiar su funcionamiento modificando la configuración de seguridad que controla las acciones que los usuarios llevan a cabo en esta área de trabajo.  

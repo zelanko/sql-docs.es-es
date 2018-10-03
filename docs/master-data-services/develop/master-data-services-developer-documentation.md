@@ -4,25 +4,19 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: develop
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 30eec29a14454c2e95f2fd21a08d87ac9dce1782
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ddb2ae5f0298a2f7d182bb5e1ef7057827617fe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32893049"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812243"
 ---
 # <a name="master-data-services-developer-documentation"></a>Guía del desarrollador (Master Data Services)
 
@@ -58,7 +52,7 @@ ms.locfileid: "32893049"
 ## <a name="web-server-namespaces"></a>Espacios de nombres de servidor web  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] instala un conjunto de ensamblados en el equipo del servidor web. Estos ensamblados contienen espacios de nombres que se pueden usar en escenarios avanzados donde se personaliza el comportamiento del equipo del servidor web. Estos espacios de nombres se describen en la siguiente tabla.  
   
-|Espacio de nombres|Description|  
+|Espacio de nombres|Descripción|  
 |---------------|-----------------|  
 |<xref:Microsoft.MasterDataServices.Deployment>|Contiene clases que se pueden utilizar para crear un paquete de implementación de un modelo e implementar un paquete en una base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].|  
 |<xref:Microsoft.MasterDataServices.Services>|Contiene una clase que recibe y procesa las operaciones del servicio web realizadas en el equipo del servidor web con la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  

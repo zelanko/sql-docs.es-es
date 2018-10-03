@@ -4,10 +4,7 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: custom-report-items
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - extending Reporting Services
 - Reporting Services, extending
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: af0969efd616771bb2b421c10c00e10735a90419
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 099161025c567b79fb92b80103b85c6d5ad574a1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268072"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659043"
 ---
 # <a name="custom-report-items"></a>Elementos de informe personalizados
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona un abundante conjunto de herramientas para crear y publicar informes de empresa, administrar la seguridad y las suscripciones, y extender la funcionalidad de informes a través de una completa API. Los informes se definen utilizando un lenguaje basado en XML denominado lenguaje RDL (Report Definition Language). RDL proporciona un conjunto de instrucciones que describen el diseño, la información de las consultas y los tipos de elementos de un informe. Se puede extender RDL escribiendo un elemento de informe personalizado. El elemento de informe personalizado consta de un componente de tiempo de ejecución, que se denomina procesador de informes en tiempo de ejecución, y un componente de tiempo de diseño, que permite al elemento de informe personalizado estar disponible en el Diseñador de informes.  

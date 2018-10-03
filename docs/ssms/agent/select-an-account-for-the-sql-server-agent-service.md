@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 05/04/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
@@ -22,17 +19,16 @@ helpviewer_keywords:
 - Windows domain accounts [SQL Server]
 - security [SQL Server], SQL Server Agent
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b7861ad08e01ba29dcc0219942e510f514bb93e9
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 11a12193f0e5628d04cd79037bee7ad770e7ef81
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42776658"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689363"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Seleccionar una cuenta para el servicio Agente SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -117,11 +113,9 @@ Para resolver este problema, reinicie el equipo donde se ejecuta [!INCLUDE[ssNoV
 Para resolver este problema, reinicie el equipo donde se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y, a continuación, reinicie los servicios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Solo es necesario hacerlo una vez.  
   
 ## <a name="common-tasks"></a>Tareas comunes  
-
-  **Para especificar la cuenta de inicio del servicio del Agente SQL Server**  
+**Para especificar la cuenta de inicio del servicio del Agente SQL Server**  
   
--   
-  [Establecer la cuenta de inicio de servicio para el Agente SQL Server &amp;#40;Administración de configuración de SQL Server&amp;#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
+-   [Establecer la cuenta de inicio de servicio para el Agente SQL Server &amp;amp;#40;Administración de configuración de SQL Server&amp;amp;#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
   
 **Para especificar el perfil de correo del Agente SQL Server**  
   

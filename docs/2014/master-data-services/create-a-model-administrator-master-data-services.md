@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], creating
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
-caps.latest.revision: 4
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 400be71a74676d0d95ddcd56d1927aed3e7711f8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4032a624d49cbf7c70d710b6b4df7373353f1d2a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37195025"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099165"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Crear un administrador de modelo (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree un administrador de modelo cuando desee que un grupo o usuario tenga **actualización** permiso para todos los objetos de uno o varios modelos.  
@@ -58,7 +55,7 @@ ms.locfileid: "37195025"
   
 10. Haga clic en **Guardar**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  No asigne ningún otro permiso para los objetos de modelo o los miembros de la jerarquía. Si lo hace, el usuario ya no es un administrador y no se puede ver el modelo en cualquier área funcional distinta **Explorer**.  
   
  Hay una excepción: si el usuario tiene **actualización** permiso asignado a una jerarquía **raíz** en el **miembros de la jerarquía** ficha, el usuario se sigue considerando un modelo Administrador.  

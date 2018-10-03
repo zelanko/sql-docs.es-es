@@ -1,13 +1,11 @@
 ---
-title: Utilice el controlador ODBC de FoxPro VFP con la aplicación de Visual Basic | Documentos de Microsoft
+title: Utilice el controlador ODBC de VFP FoxPro con la aplicación de Visual Basic | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], visual basic applications
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], visual basic applications
 - Visual FoxPro data [ODBC], visual basic applications
 ms.assetid: 5223ca23-5df6-4ebc-aa3b-70682ff27a8c
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 96107d42ae4923cd1b9f7ad1c16bd492d0203c99
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4b77fdee70ff73772710c9758eeb2bf2594f365d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907610"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697886"
 ---
-# <a name="using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application"></a>Utiliza el controlador ODBC de FoxPro VFP con la aplicación de Visual Basic
-Aplicación de su Microsoft® Visual Basic® puede comunicarse con los datos de Visual FoxPro mediante la creación de un control de datos que se conecta a un origen de datos de Visual FoxPro.  
+# <a name="using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application"></a>Utiliza el controlador ODBC de Visual FoxPro con la aplicación de Visual Basic
+Aplicación de Microsoft® Visual Basic® puede comunicarse con los datos de Visual FoxPro mediante la creación de un control de datos que se conecta a un origen de datos de Visual FoxPro.  
   
-#### <a name="to-connect-to-visual-foxpro-data-using-the-data-control-in-visual-basic"></a>Para conectarse a datos de Visual FoxPro mediante el Control de datos en Visual Basic  
+#### <a name="to-connect-to-visual-foxpro-data-using-the-data-control-in-visual-basic"></a>Para conectarse a datos de Visual FoxPro con el Control de datos en Visual Basic  
   
-1.  Crear un origen de datos denominado "test" que se conecta a la base de datos de ejemplo de TasTrade incluido en Visual FoxPro. La instalación predeterminada de Visual FoxPro coloca la base de datos de ejemplo de TasTrade en la ubicación:  
+1.  Crear un origen de datos denominado "test" que se conecta a la base de datos de ejemplo TasTrade incluido en Visual FoxPro. La instalación de Visual FoxPro predeterminada coloca la base de datos de ejemplo TasTrade en la ubicación:  
   
     ```  
     c:\vfp\samples\mainsamp\data\tastrade.dbc  
@@ -51,22 +48,22 @@ Aplicación de su Microsoft® Visual Basic® puede comunicarse con los datos de 
     2 - Snapshot  
     ```  
   
-5.  Cambie la propiedad de origen de registros a la siguiente:  
+5.  Cambie la propiedad de origen de registros a lo siguiente:  
   
     ```  
     customer  
     ```  
   
-6.  Cambie la propiedad de origen de datos para el cuadro de texto para el nombre predeterminado para el control de datos a lo siguiente:  
+6.  Cambie la propiedad de origen de datos para el cuadro de texto en el nombre predeterminado para el control de datos a la siguiente:  
   
     ```  
     data1  
     ```  
   
-7.  Cambiar propiedades de DataField del cuadro de texto a lo siguiente:  
+7.  Cambie la propiedad DataField del cuadro de texto a lo siguiente:  
   
     ```  
     customer_id  
     ```  
   
-8.  Ejecute el formulario y use el control de datos que se omiten a través de los campos de Id. de cliente de la base de datos de ejemplo TasTrade de Visual FoxPro.
+8.  Ejecutar el formulario y usar el control de datos que se omiten a través de los campos de Id. de cliente de la base de datos de ejemplo TasTrade de Visual FoxPro.

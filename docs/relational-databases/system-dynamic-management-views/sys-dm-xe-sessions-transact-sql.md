@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_xe_sessions (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_xe_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xe_sessions_TSQL
@@ -19,28 +17,27 @@ helpviewer_keywords:
 - sys.dm_xe_sessions dynamic management view
 - extended events [SQL Server], views
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e4e4e6655aeffd54d06cc1cf23aa60208076d18
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 78a083b519c7d29d9e2421f7f8a91ee540ace271
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468011"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47814424"
 ---
 # <a name="sysdmxesessions-transact-sql"></a>sys.dm_xe_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve información sobre una sesión de Extended Events activa. Esta sesión es una colección de eventos, acciones y destinos.  
     
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |address|**varbinary (8)**|La dirección de memoria de la sesión. dirección es única en todo el sistema local. No admite valores NULL.|  
-|name|**nvarchar(256)**|El nombre de la sesión. nombre es único en el sistema local. No admite valores NULL.|  
+|NAME|**nvarchar(256)**|El nombre de la sesión. nombre es único en el sistema local. No admite valores NULL.|  
 |pending_buffers|**int**|Número de búferes llenos pendientes de procesamiento. No admite valores NULL.|  
-|total_regular_buffers|**int**|Número total de búferes normales que están asociados a la sesión. No admite valores NULL.<br /><br /> Nota: Se utilizan búferes normales mayoría de los casos. Estos búferes son de tamaño suficiente para contener muchos eventos. Normalmente habrá tres búferes o más por cada sesión. El servidor determina automáticamente el número de búferes normales, según las particiones de memoria que se establecen a través de la opción MEMORY_PARTITION_MODE. El tamaño de los búferes normales es igual al valor de la opción MAX_MEMORY (que es de 4 MB de forma predeterminado) dividido por el número de búferes. Para obtener más información sobre la MEMORY_PARTITION_MODE y las opciones de MAX_MEMORY, vea [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
+|total_regular_buffers|**int**|Número total de búferes normales que están asociados a la sesión. No admite valores NULL.<br /><br /> Nota: Se utilizan búferes normales la mayoría del tiempo. Estos búferes son de tamaño suficiente para contener muchos eventos. Normalmente habrá tres búferes o más por cada sesión. El servidor determina automáticamente el número de búferes normales, según las particiones de memoria que se establecen a través de la opción MEMORY_PARTITION_MODE. El tamaño de los búferes normales es igual al valor de la opción MAX_MEMORY (que es de 4 MB de forma predeterminado) dividido por el número de búferes. Para obtener más información acerca la MEMORY_PARTITION_MODE y MAX_MEMORY opciones, consulte [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
 |regular_buffer_size|**bigint**|Tamaño en bytes del búfer de salida normal. No admite valores NULL.|  
 |total_large_buffers|**int**|Número total de búferes grandes. No admite valores NULL.<br /><br /> Nota: Los búferes grandes se usan cuando un evento es mayor que un búfer normal. Con este fin se reservan explícitamente. Los búferes grandes se asignan cuando se inicia la sesión del evento y su tamaño se determina según la opción MAX_EVENT_SIZE. Para obtener más información acerca de la opción MAX_EVENT_SIZE, vea [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
 |large_buffer_size|**bigint**|Tamaño en bytes del búfer grande. No admite valores NULL.|  
@@ -50,12 +47,12 @@ ms.locfileid: "34468011"
 |flags|**int**|Mapa de bits que indica las marcas establecidas en la sesión. No admite valores NULL.|  
 |flag_desc|**nvarchar(256)**|Descripción de las marcas activadas en la sesión.  No admite valores NULL. flag_desc puede ser cualquier combinación de las siguientes acciones:<br /><br /> Vaciar búferes al cerrar<br /><br /> Distribuidor dedicado<br /><br /> Permitir eventos recursivos|  
 |dropped_event_count|**int**|Número de eventos eliminados cuando los búferes estaban llenos. Este valor es **0** si la directiva sobre búferes es "Quitar búfer lleno" o "No quitar eventos". No admite valores NULL.|  
-|dropped_buffer_count|**int**|Número de búferes que se quitaron cuando los búferes estaban llenos. Este valor es **0** si la directiva sobre búferes se establece en "Quitar evento" o "No quitar eventos". No admite valores NULL.|  
+|dropped_buffer_count|**int**|Número de búferes que se quitaron cuando los búferes estaban llenos. Este valor es **0** si la directiva de búfer se establece en "Quitar evento" o "No quitar eventos". No admite valores NULL.|  
 |blocked_event_fire_time|**int**|El periodo de tiempo que la activación de eventos permaneció bloqueada mientras los búferes estaban llenos. Este valor es **0** si la directiva sobre búferes es "Quitar búfer lleno" o "Quitar evento". No admite valores NULL.|  
 |create_time|**datetime**|Hora en que se creó la sesión. No admite valores NULL.|  
 |largest_event_dropped_size|**int**|El tamaño del evento más grande de los que no cupieron en el búfer de la sesión. No admite valores NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
 ## <a name="change-history"></a>Historial de cambios  

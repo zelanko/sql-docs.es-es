@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Discover Method
@@ -25,16 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - Discover method
 ms.assetid: 0eb52d88-c081-416e-a229-610e4373b0b3
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cec0774478c0eb34e9094bd9b6b1663e55339c1a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 91ea30a495eb76c22075007f48e3ae721504ef49
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196025"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116325"
 ---
 # <a name="discover-method-xmla"></a>Método Discover (XMLA)
   Recupera información, como la lista de bases de datos disponibles o datos sobre un objeto específico, desde una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Los datos recuperados con el método `Discover` dependen de los valores de los parámetros que se le pasan.  
@@ -54,7 +51,7 @@ ms.locfileid: "37196025"
 </Discover>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -69,7 +66,7 @@ ms.locfileid: "37196025"
 |Elemento primario|None|  
 |Elementos secundarios|[Propiedades](xml-elements-properties/properties-element-xmla.md), [RequestType](xml-elements-properties/type-element-xmla.md), [restricciones](xml-elements-properties/restrictions-element-xmla.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El método `Discover` solicita los metadatos sobre las instancias y objetos [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Los metadatos se devuelven utilizando XMLA [conjunto de filas](xml-data-types/rowset-data-type-xmla.md) tipo de datos.  
   
 ## <a name="example"></a>Ejemplo  

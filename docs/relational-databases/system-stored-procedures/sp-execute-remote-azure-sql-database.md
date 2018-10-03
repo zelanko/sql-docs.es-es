@@ -5,11 +5,7 @@ ms.date: 02/01/2017
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.component: system-stored-procedures
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sp_execute_remote
@@ -18,17 +14,16 @@ helpviewer_keywords:
 - remote execution
 - queries, remote execution
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 319eee940c5f5d90d6cfe9442c66f506670c26a0
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c61098eabfe58cb1e791dd379cafb5f91d50f247
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082577"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837093"
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -80,7 +75,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso `ALTER ANY EXTERNAL DATA SOURCE`.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  `sp_execute_remote` los parámetros deben especificarse en el orden específico, como se describe en la sección de sintaxis anterior. Si los parámetros se escriben desordenados, se producirá un mensaje de error.  
   
  `sp_execute_remote` tiene el mismo comportamiento que [EXECUTE &#40;Transact-SQL&#41; ](../../t-sql/language-elements/execute-transact-sql.md) con respecto a los lotes y el ámbito de nombres. La instrucción Transact-SQL o el lote en el sp_execute_remote  *\@stmt* parámetro no se compila hasta que se ejecuta la instrucción sp_execute_remote.  

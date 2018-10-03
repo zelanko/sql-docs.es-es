@@ -1,42 +1,39 @@
 ---
-title: Agregar registros mediante AddNew | Documentos de Microsoft
+title: Agregar registros mediante AddNew | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - AddNew method [ADO]
 - ADO, adding data
 - editing data [ADO], AddNew method
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36827d102d7e6ef0850c557eb6555135343fbec0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 68b1a34a5d23d9aab32b6216eda3b3ef8f977e79
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270094"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819533"
 ---
 # <a name="adding-records-using-addnew-method"></a>Agregar registros mediante AddNew (método)
-Ésta es la sintaxis básica de la **AddNew** método:
+Se trata de la sintaxis básica de la **AddNew** método:
 
  *conjunto de registros*. AddNew *FieldList*, *valores*
 
- El *FieldList* y *valores* argumentos son opcionales. *FieldList* es un nombre único o una matriz de nombres o posiciones ordinales de los campos en el nuevo registro.
+ El *FieldList* y *valores* argumentos son opcionales. *FieldList* es un nombre único o una matriz de nombres o las posiciones ordinales de los campos en el nuevo registro.
 
- El *valores* argumento es un valor único o una matriz de valores de los campos en el nuevo registro.
+ El *valores* argumento es un valor único o una matriz de valores para los campos en el nuevo registro.
 
- Normalmente, cuando vaya a agregar un registro único, llamará a la **AddNew** método sin ningún argumento. En concreto, llamará **AddNew**; establezca la **valor** de cada campo en el nuevo registro; y, a continuación, llame a **actualización** o **UpdateBatch**, o ambos. Puede asegurarse de que su **Recordset** admite la adición de nuevos registros mediante el uso de la **admite** propiedad con el **adAddNew** constante enumerada.
+ Normalmente, cuando se desea agregar un registro único, llamará el **AddNew** método sin ningún argumento. En concreto, llamará **AddNew**; establezca la **valor** de cada campo en el nuevo registro; y, a continuación, llame a **actualización** o **UpdateBatch**, o ambos. Puede asegurarse de que su **Recordset** admite la adición de nuevos registros mediante el uso de la **admite** propiedad con el **adAddNew** constante enumerada.
 
- El código siguiente utiliza esta técnica para agregar un nuevo transportista al ejemplo **conjunto de registros**. SQL Server suministra el valor del campo ShipperID automáticamente. Por lo tanto, el código no intenta proporcionar un valor de campo para los nuevos registros.
+ El código siguiente utiliza esta técnica para agregar un remitente nuevo al ejemplo **Recordset**. SQL Server suministra el valor del campo ShipperID automáticamente. Por lo tanto, el código no intenta proporcionar un valor de campo para los nuevos registros.
 
 ```
 'BeginAddNew1.1
@@ -51,5 +48,5 @@ End If
 'EndAddNew1.1
 ```
 
-## <a name="remarks"></a>Notas
- Dado que este código utiliza un desconectada **conjunto de registros** con un cursor de cliente en modo por lotes, debe volver a conectar el **Recordset** al origen de datos con un nuevo **conexión** objeto para poder invocar la **UpdateBatch** método para registrar los cambios en la base de datos. Esto se hace fácilmente mediante la nueva función **GetNewConnection**.
+## <a name="remarks"></a>Comentarios
+ Dado que este código usa un desconectado **Recordset** con un cursor de cliente en modo por lotes, debe volver a conectar el **Recordset** al origen de datos con un nuevo **conexión** objeto para poder invocar la **UpdateBatch** método para registrar los cambios en la base de datos. Esto se realiza fácilmente mediante el uso de la nueva función **GetNewConnection**.

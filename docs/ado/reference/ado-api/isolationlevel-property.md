@@ -1,13 +1,11 @@
 ---
-title: Propiedad IsolationLevel | Documentos de Microsoft
+title: Propiedad IsolationLevel | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,30 +13,29 @@ f1_keywords:
 helpviewer_keywords:
 - IsolationLevel property
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e6de8da487352fe0a26d3524317ced061370771
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c2557c5859f10c7651cfc97fc3c849c00c26e985
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279214"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47786843"
 ---
 # <a name="isolationlevel-property"></a>Propiedad IsolationLevel
-Indica el nivel de aislamiento para una [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto.  
+Indica el nivel de aislamiento para un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto.  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un [IsolationLevelEnum](../../../ado/reference/ado-api/isolationlevelenum.md) valor. El valor predeterminado es **adXactReadCommitted**.  
   
-## <a name="remarks"></a>Notas  
- Use la **IsolationLevel** propiedad para establecer el aislamiento de nivel de un **conexión** objeto. El valor no surtirá efecto hasta la próxima vez que se llama a la [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) método. Si el nivel de aislamiento solicitado no está disponible, el proveedor puede devolver el siguiente nivel superior de aislamiento sin actualizar la **IsolationLevel** propiedad.  
+## <a name="remarks"></a>Comentarios  
+ Use la **IsolationLevel** para establecer el nivel de aislamiento de la propiedad de un **conexión** objeto. La configuración no surte efecto hasta la próxima vez que se llama a la [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) método. Si el nivel de aislamiento solicitado no está disponible, el proveedor puede devolver el siguiente nivel superior de aislamiento sin actualizar el **IsolationLevel** propiedad.  
   
  El **IsolationLevel** propiedad es de lectura/escritura.  
   
 > [!NOTE]
->  **Uso de servicios de datos remoto** cuando se utiliza en un lado del cliente **conexión** objeto, el **IsolationLevel** propiedad se puede establecer solo en **adXactUnspecified**. Dado que los usuarios están trabajando con desconectada **Recordset** objetos en una caché de cliente, puede haber problemas de multiusuario. Por ejemplo, cuando dos usuarios distintos intentan actualizar el mismo registro, servicio de datos remoto simplemente permite al usuario que actualice primero el registro "win". La segunda solicitud del usuario actualización se producirá un error.  
+>  **Uso del servicio de datos remoto** cuando se usa en un cliente **conexión** objeto, el **IsolationLevel** propiedad se puede establecer solo en **adXactUnspecified**. Dado que los usuarios están trabajando sin conexión **Recordset** objetos en una memoria caché del lado cliente, puede haber problemas de multiusuario. Por ejemplo, cuando dos usuarios distintos intentan actualizar el mismo registro, servicio de datos remotos simplemente permite al usuario que actualice primero el registro "win". Solicitud de actualización del segundo usuario producirá un error.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  

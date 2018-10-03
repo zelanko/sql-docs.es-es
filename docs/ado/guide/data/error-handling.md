@@ -6,42 +6,39 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reporting errors [ADO]
 - errors [ADO]
 - ADO, error handling
 ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: db8900b50f4aa73fe674a6829c384a8956c93619
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5d8f96b28a15258df4b7d093ce14f227f28ad9b0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270504"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633523"
 ---
 # <a name="error-handling"></a>Tratamiento de errores
-ADO utiliza varios métodos diferentes para notificar a una aplicación de errores que se producen. Esta sección describen los tipos de errores que pueden producirse cuando se utiliza ADO y cómo se notifica a la aplicación. Se termina con unas sugerencias sobre cómo controlar los errores.  
+ADO utiliza varios métodos diferentes para notificar a una aplicación de errores que se producen. Esta sección describen los tipos de errores que pueden producirse cuando se utiliza ADO y cómo se notifica a la aplicación. Concluye con sugerencias sobre cómo controlar esos errores.  
   
-## <a name="how-does-ado-report-errors"></a>¿Cómo ADO notifica los errores?  
+## <a name="how-does-ado-report-errors"></a>¿Cómo ADO notifica errores?  
  ADO notifica los errores de varias maneras:  
   
--   Los errores de ADO generan un error en tiempo de ejecución. Controlar un error de ADO de la misma manera que lo haría con cualquier otro error de tiempo de ejecución, como el uso de un **On Error** instrucción en Visual Basic.  
+-   Errores de ADO generan un error de tiempo de ejecución. Controlar un error de ADO en la misma manera que lo haría con cualquier otro error de tiempo de ejecución, como el uso de un **On Error** instrucción en Visual Basic.  
   
--   El programa puede recibir errores de OLE DB. ¡Error de OLE DB genera un error de tiempo de ejecución también.  
+-   El programa puede recibir errores de OLE DB. Error de OLE DB, genera un error de tiempo de ejecución también.  
   
--   Si el error es específico de su proveedor de datos, uno o varios **Error** objetos se colocan en la **errores** colección de la **conexión** objeto que se usó para acceder a los datos almacenar cuando se produjo el error.  
+-   Si el error es específico para su proveedor de datos, uno o varios **Error** objetos se colocan en el **errores** colección de la **conexión** objeto que se usó para acceder a los datos almacén cuando se produjo el error.  
   
--   Si el proceso que desencadenó un evento también produce un error, información de error se coloca en un **Error** del objeto y se pasa como parámetro al evento. Vea [controlar eventos de ADO](../../../ado/guide/data/handling-ado-events.md) para obtener más información acerca de los eventos.  
+-   Si el proceso que desencadenó un evento también generó un error, información de error se coloca en un **Error** de objetos y se pasa como parámetro al evento. Consulte [controlar eventos de ADO](../../../ado/guide/data/handling-ado-events.md) para obtener más información acerca de los eventos.  
   
--   Problemas que se producen al procesar por lotes las actualizaciones u otras operaciones masivas que implican un **Recordset** puede indicarse mediante la **estado** propiedad de la **conjunto de registros**. Por ejemplo, pueden especificar por infracciones de restricción de esquema o permisos insuficientes **RecordStatusEnum** valores.  
+-   Problemas que se producen al procesar por lotes las actualizaciones u otras operaciones masivas que implican un **Recordset** pueden ir indicados por el **estado** propiedad de la **Recordset**. Por ejemplo, pueden especificar por infracciones de restricción de esquema o no tiene permisos suficientes **RecordStatusEnum** valores.  
   
--   Problemas que se producen implicando a un determinado **campo** en el registro actual también se indican mediante el **estado** propiedad de cada **campo** en la **campos**  colección de la **registro** o **conjunto de registros**. Por ejemplo, se pueden especificar las actualizaciones que no se pudieron completar o tipos de datos incompatibles por **FieldStatusEnum** valores.  
+-   Problemas que se producen que implican un determinado **campo** en el registro actual también se indican mediante el **estado** propiedad de cada uno **campo** en el **campos**  colección de la **registro** o **Recordset**. Por ejemplo, se pueden especificar los tipos de datos incompatibles o las actualizaciones que no se podrían completar por **FieldStatusEnum** valores.  
   
  Esta sección contiene los temas siguientes.  
   

@@ -1,13 +1,11 @@
 ---
-title: Asignación de funciones en desuso. | Documentos de Microsoft
+title: Asignación de funciones en desuso | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], about mapping deprecated functions
@@ -17,23 +15,22 @@ helpviewer_keywords:
 - functions [ODBC], mapping deprecated functions
 - mapping deprecated functions [ODBC]
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b61a53eed35919f3ecd0422b376e029ee7ab232
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b59d2604dd9d4b7c3166027c1917dea096b331d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914110"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818377"
 ---
-# <a name="mapping-deprecated-functions"></a>Asignación de funciones en desuso.
-Esta sección describen las funciones en desuso cómo se asignan por ODBC 3 *.x* el Administrador de controladores para garantizar la compatibilidad con versiones anteriores de ODBC 3 *.x* controladores que se usan con ODBC 2. *x* aplicaciones. El Administrador de controladores se realiza esta asignación independientemente de la versión de la aplicación. Dado que cada una de la 2 de ODBC. *x* funciones en la lista siguiente se asigna a la correspondiente ODBC 3 *.x* funcionar cuando se llama en una aplicación ODBC 3 *.x* controlador ODBC 3 *.x*controlador no tiene que implementar la API ODBC 2. *x* funciones.  
+# <a name="mapping-deprecated-functions"></a>Asignación de funciones en desuso
+Esta sección describen las funciones en desuso de cómo se asignan por el ODBC 3 *.x* Administrador de controladores para garantizar la compatibilidad con versiones anteriores de ODBC 3 *.x* controladores que se usan con ODBC 2. *x* aplicaciones. El Administrador de controladores se realiza esta asignación independientemente de la versión de la aplicación. Dado que cada uno de ODBC 2. *x* funciones en la lista siguiente se asigna a la correspondiente ODBC 3 *.x* funcionar cuando se llama en una aplicación ODBC 3 *.x* controlador, el 3 de ODBC *.x*controlador no tiene que implementar el 2 de ODBC. *x* funciones.  
   
- La asignación en la lista se desencadena cuando el controlador es una aplicación ODBC 3 *.x* controlador y el controlador no admite la función que se va a asignar.  
+ La asignación en la lista se desencadena cuando el controlador es una aplicación ODBC 3 *.x* controlador y el controlador no admite la función que se está asignando.  
   
- En la tabla siguiente se incluyen las funciones de todos los duplicados que se introdujeron en ODBC 3 *.x*.  
+ En la tabla siguiente se enumera todos los duplicados funcionalidad que se introdujo en ODBC 3 *.x*.  
   
 |ODBC 2. *x* (función)|ODBC 3 *.x* (función)|  
 |-------------------------|-------------------------|  
@@ -45,7 +42,7 @@ Esta sección describen las funciones en desuso cómo se asignan por ODBC 3 *.x*
 |**SQLError**|**SQLGetDiagRec**|  
 |**SQLFreeConnect**|**SQLFreeHandle**|  
 |**SQLFreeEnv**|**SQLFreeHandle**|  
-|**SQLFreeStmt** con una *opción* de SQL_DROP|**SQLFreeHandle**|  
+|**SQLFreeStmt** con un *opción* de SQL_DROP|**SQLFreeHandle**|  
 |**SQLGetConnectOption**|**SQLGetConnectAttr**|  
 |**SQLGetStmtOption**|**SQLGetStmtAttr**|  
 |**SQLParamOptions**|**SQLSetStmtAttr**|  
@@ -55,7 +52,7 @@ Esta sección describen las funciones en desuso cómo se asignan por ODBC 3 *.x*
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1], aunque esta función no existía en ODBC 2 *.x*, se encuentra en los estándares Open Group e ISO.  
+ [1], aunque esta función no existía en ODBC 2 *.x*, se encuentra en los estándares de Open Group e ISO.  
   
  [2] se trata de una función ODBC 1.0.  
   

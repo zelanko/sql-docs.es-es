@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
-caps.latest.revision: 14
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 6b37c8749ee82894ee7c28acf6b0fa94bf4ee58f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 77a3e61d36ce9661a9b01095c868c7d54de81f0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330985"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130565"
 ---
 # <a name="setup-role"></a>Rol de instalación
   Utilice esta página para especificar si utilizar la página Selección de características para seleccionar características individuales o para instalar utilizando un rol de instalación.  
@@ -30,7 +27,7 @@ ms.locfileid: "37330985"
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instalación de características**  
  Elija esta opción para seleccionar características individuales y componentes compartidos. Entre las características de instancia se incluyen Servicios de Motor de base de datos, Analysis Services (modo nativo) y Reporting Services.  
   
- **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Modelo de objetos de informe utilizado por las extensiones de representación.**  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerPivot para SharePoint**  
  Elija esta opción para instalar los componentes de servidor de Analysis Services en una granja de SharePoint 2010. Esta opción implementa el servicio de Sistema de PowerPivot y el servidor de Analysis Services en una granja de servidores, lo que habilita el procesamiento de datos y consultas a gran escala para los libros de Excel publicados que contienen datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] incrustados.  
   
  De manera opcional, puede agregar una instancia de motor de base de datos relacional a la instalación en caso que sea necesario hospedar bases de datos en una granja de servidores SharePoint. Si la granja de servidores ya está configurada, puede omitir esta opción.  

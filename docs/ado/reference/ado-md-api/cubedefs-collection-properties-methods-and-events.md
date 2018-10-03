@@ -1,36 +1,33 @@
 ---
-title: Propiedades de la colección CubeDefs, métodos y eventos | Documentos de Microsoft
+title: Los eventos, métodos y propiedades de la colección CubeDefs | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - CubeDefs collection [ADO MD], members
 ms.assetid: bf2d1108-ba3c-4830-9c49-78e833ff37b1
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4af0560f8c8d6640981f31e9901a04f17176b4b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 083e637deed6e314efbc787023355148b3f12d33
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283574"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730603"
 ---
 # <a name="cubedefs-collection-properties-methods-and-events"></a>Eventos, métodos y propiedades de la colección CubeDefs
 ## <a name="properties"></a>Propiedades  
- [Propiedad Count](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Propiedad de recuento](../../../ado/reference/ado-api/count-property-ado.md)  
   
- [Item (propiedad)](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Propiedad de elemento](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>Métodos  
- [Actualizar (método)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Método Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Eventos  
  Ninguno.  

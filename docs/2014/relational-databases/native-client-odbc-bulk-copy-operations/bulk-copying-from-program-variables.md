@@ -1,12 +1,10 @@
 ---
-title: Copia masiva desde Variables de programa | Microsoft Docs
+title: Copia masiva desde Variables de programa | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [ODBC], program variables
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - program variables [ODBC]
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d2e24f18efd321f5f56211be4dd0230be7cc39e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 55b1df99038e95f1e3a9a1c609caf1fe8ce982e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426754"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080605"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Copia masiva de variables de programa
   Es posible realizar la copia masiva directamente desde variables de programa. Después de asignar variables para almacenar los datos de una fila y llamar a [bcp_init](../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) para iniciar la copia masiva, llame a [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) para cada columna especificar la ubicación y el formato de la variable de programa que va a asociar con la columna. Cada variable de relleno con datos, a continuación, llame a [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) para enviar una fila de datos al servidor. Repita el proceso de rellenar las variables y llamar a **bcp_sendrow** hasta que todas las filas se enviaron al servidor, a continuación, llame a [bcp_done](../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) para especificar que la operación se ha completado.  
@@ -41,11 +38,11 @@ ms.locfileid: "37426754"
   
  **bcp_bind** admite tres métodos para tratar con datos de longitud variable:  
   
--   Use *cbData* con solo una variable de datos. Coloque la longitud de los datos de *cbData*. Cada vez que la longitud de los datos de forma masiva copia los cambios, llame a [bcp_collen](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)restablecer *cbData*. Si se está usando uno de los otros dos métodos, especifique SQL_VARLEN_DATA para *cbData*. Si todos los valores de datos que se proporcionan para una columna son NULL, especifique SQL_NULL_DATA para *cbData*.  
+-   Uso *cbData* con sólo una variable de datos. Colocar la longitud de los datos de *cbData*. Cada vez que la longitud de los datos de forma masiva copia los cambios, llame a [bcp_collen](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)restablecer *cbData*. Si se está usando uno de los otros dos métodos, especifique SQL_VARLEN_DATA para *cbData*. Si todos los valores de datos que se proporcionan para una columna son NULL, especifique SQL_NULL_DATA para *cbData*.  
   
--   Usar variables de indicador. A medida que cada nuevo valor de datos se pase a la variable de datos, almacene la longitud del valor en la variable de indicador. Si se está usando uno de los otros dos métodos, especifique 0 para *cbIndicator*.  
+-   Usar variables de indicador. A medida que cada nuevo valor de datos se pase a la variable de datos, almacene la longitud del valor en la variable de indicador. Si se utiliza uno de los otros dos métodos, especifique 0 para *cbIndicator*.  
   
--   Usar punteros de terminador. Carga el **bcp_bind *** pTerm* parámetro con la dirección del patrón de bits que finaliza los datos. Si se está usando uno de los otros dos métodos, especifique NULL para *pTerm*.  
+-   Usar punteros de terminador. Carga el **bcp_bind *** pTerm* parámetro con la dirección del patrón de bits que finaliza los datos. Si se utiliza uno de los otros dos métodos, especifique NULL para la *pTerm*.  
   
  Tres de estos métodos pueden usarse en el mismo **bcp_bind** llamar, en cuyo caso se usa la especificación que da como resultado la menor cantidad de datos que se va a copiar.  
   
@@ -53,7 +50,7 @@ ms.locfileid: "37426754"
   
  Las funciones de copia masiva no admiten todos los tipos de datos C de ODBC. Por ejemplo, las funciones de copia masiva no admiten la estructura SQL_C_TYPE_TIMESTAMP de ODBC, así que use [SQLBindCol](../native-client-odbc-api/sqlbindcol.md) o [SQLGetData](../native-client-odbc-api/sqlgetdata.md) para convertir datos SQL_TYPE_TIMESTAMP de ODBC a una variable SQL_C_CHAR. Si después usa **bcp_bind** con un *tipo* parámetro igual a sqlcharacter para enlazar la variable a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** conversión las funciones de copia masiva de columna, el cláusula de escape de marca de tiempo en la variable de caracteres al formato de fecha y hora adecuado.  
   
- En la tabla siguiente se enumera los tipos de datos recomendado para usar en la asignación de un tipo de datos SQL de ODBC a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.  
+ La siguiente tabla enumera los tipos de datos recomendados para utilizar en la asignación de un tipo de datos de SQL ODBC a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el tipo de datos.  
   
 |Tipo de datos SQL de ODBC|Tipo de datos C de ODBC|bcp_bind *tipo* parámetro|Tipo de datos de SQL Server|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
@@ -77,7 +74,7 @@ ms.locfileid: "37426754"
 |SQL_FLOAT|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_DOUBLE|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_BINARY|SQL_C_BINARY|SQLBINARY|**binario**<br /><br /> **timestamp**|  
-|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **variable binaria**|  
+|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **binary varying**|  
 |SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**imagen**|  
 |SQL_TYPE_DATE|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_TYPE_TIME|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  

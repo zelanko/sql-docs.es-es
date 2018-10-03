@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - EndSession Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - EndSession element
 ms.assetid: e64f1da4-5c83-40a2-b15e-837f5451bafa
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 32c76318f05dbb628dd23de825203429ee0a22f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 806b1dea9aeb9a4598b9516f8e7a953962307e65
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148126"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096905"
 ---
 # <a name="endsession-element-xmla"></a>Elemento EndSession (XMLA)
   Utiliza el encabezado SOAP en un mensaje de solicitud SOAP para terminar una sesión existente en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -57,7 +54,7 @@ ms.locfileid: "37148126"
 </soap:Envelope>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -78,7 +75,7 @@ ms.locfileid: "37148126"
 |---------------|-----------------|  
 |SessionId|Atributo `String` requerido que identifica la sesión que se va a terminar. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] utiliza un identificador único global (GUID) para identificar una sesión.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento de encabezado `EndSession` forma parte de una solicitud SOAP enviada a una sesión existente y explícitamente iniciada en una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Si se envía el elemento de encabezado `EndSession`, pero contiene un identificador de la sesión que ya no es válido, se devuelve un error de SOAP que indica que no se puede encontrar la sesión.  
   
 ## <a name="see-also"></a>Vea también  

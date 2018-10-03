@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - LastDataUpdate Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - LastDataUpdate element
 ms.assetid: 66e43b17-844f-4ec2-bd1d-35608e7b6524
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 63c596e522b3429209626d1c033b982b750d38e8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ad5b16a02a8f88699d0a92011955797eb1897aa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185162"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055825"
 ---
 # <a name="lastdataupdate-element-xmla"></a>Elemento LastDataUpdate (XMLA)
   Contiene la fecha y hora en que se actualizaron por última vez los datos del cubo representados por el elemento primario [Cube](cube-element-olapinfo-xmla.md) .  
@@ -48,7 +45,7 @@ ms.locfileid: "37185162"
 </Cube>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -63,7 +60,7 @@ ms.locfileid: "37185162"
 |Elementos primarios|[Cubo](cube-element-olapinfo-xmla.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;XMLA&#41;](xml-elements-properties.md)  

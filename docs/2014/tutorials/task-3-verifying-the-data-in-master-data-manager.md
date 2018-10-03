@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d88953d2-2258-40ac-b3bf-2ef502f9b5fd
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82a96594b7ef6aa498dd0d4cac7f9f1f50a8e270
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 09dfc672e446e1265ee29625a8bf3a2d1e16f77f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289811"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108855"
 ---
 # <a name="task-3-verifying-the-data-in-master-data-manager"></a>Tarea 3: comprobar los datos en Master Data Manager
   En esta tarea, comprobará que se ha creado la entidad **Proveedor** en **MDS** mediante la **aplicación web Master Data Manager**.  

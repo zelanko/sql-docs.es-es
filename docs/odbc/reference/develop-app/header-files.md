@@ -1,37 +1,35 @@
 ---
-title: Archivos de encabezado | Documentos de Microsoft
+title: Archivos de encabezado | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - header files [ODBC]
 ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62d31cdda9e97ba72374c60c551f37ecfeccd71c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e6d0806a7c3eabd1c6f4cd1836308eba99a6d5a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656743"
 ---
 # <a name="header-files"></a>Archivos de encabezado
-El archivo de encabezado Sql.h contiene prototipos para las funciones y características en el nivel de conformidad de interfaz de ODBC básica. El archivo de encabezado Sqlext.h contiene prototipos para las funciones y características en el nivel 1 y niveles de compatibilidad de API de nivel 2. El archivo de encabezado Sqltypes.h contiene las definiciones de tipo e indicadores para los tipos de datos SQL.  
+El archivo de encabezado Sql.h contiene prototipos para las funciones y características en el nivel de conformidad de interfaz de ODBC Core. El archivo de encabezado Sqlext.h contiene prototipos para las funciones y características en el nivel 1 y niveles de compatibilidad de API de nivel 2. El archivo de encabezado Sqltypes.h contiene las definiciones de tipo e indicadores para los tipos de datos SQL.  
   
- Los archivos de encabezado contienen un **#define**, ODBCVER, que puede establecer una aplicación o un controlador de compilación para las diferentes versiones de ODBC.  
+ Los archivos de encabezado que contienen un **#define**, ODBCVER, que puede establecer una aplicación o un controlador para compilarse para diferentes versiones de ODBC.  
   
- Para alinear con el ISO CLI y la CLI de grupo abierto, los archivos de encabezado contienen alias para los tipos de información que se utilizan en las llamadas a **SQLGetInfo**. En la tabla siguiente, la columna "Nombre ODBC" indica el nombre ODBC para el tipo de información en [referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md). La columna "Alias en el archivo de encabezado" indica el nombre que se utiliza en ISO CLI y la CLI de grupo abierto. El valor numérico real de estos nombres de manifiesto es el mismo en ODBC y la CLI estándares. Estos alias permiten que una aplicación compatible con los estándares o el controlador para compilar con ODBC 3 *.x* archivos de encabezado.  
+ Para alinearse con la CLI de ISO y abra CLI de grupo, los archivos de encabezado contienen un alias para los tipos de información que se usa en llamadas a **SQLGetInfo**. En la tabla siguiente, la columna "Nombre de ODBC" indica el nombre ODBC para el tipo de información en [referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md). La columna "Alias en el archivo de encabezado" indica el nombre que se usa en la CLI de ISO y la CLI de grupo abierto. El valor numérico real de estos nombres de manifiesto es el mismo en ODBC y la CLI estándar. Estos alias habilitar una aplicación compatible con los estándares o un controlador para compilar con ODBC 3 *.x* archivos de encabezado.  
   
- Estos alias incluyen expansiones de abreviaturas de los nombres de ODBC para que los nombres sean más comprensibles. "Máximo" se expande hasta "Máximo", "Longitud" a "Longitud", "MULT" a "Varios", "DO" a "OUTER_JOIN" y "TXN" a "Transacción".  
+ Estos alias incluyen las expansiones de abreviaturas en los nombres de ODBC para que los nombres sean más comprensibles. "MAX" se expande a "Máximo", "Largo" a "LENGTH", "MULT" a "Varios", "DO" a "OUTER_JOIN" y "Transacción" a "Transacción".  
   
-|Nombre ODBC|Alias en el archivo de encabezado|  
+|Nombre de ODBC|Alias en el archivo de encabezado|  
 |---------------|--------------------------|  
 |SQL_MAX_CATALOG_NAME_LEN|SQL_MAXIMUM_CATALOG_NAME_LENGTH|  
 |SQL_MAX_COLUMN_NAME_LEN|SQL_MAXIMUM_COLUMN_NAME_LENGTH|  

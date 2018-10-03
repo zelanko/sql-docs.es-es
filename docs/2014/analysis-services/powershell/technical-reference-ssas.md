@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, technical reference
 - multidimensional data [Analysis Services], technical reference
 - technical reference [Analysis Services - multidimensional data]
 ms.assetid: 1226c5a4-fd88-469c-81fe-3f664ab66e5e
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 169e6559b8f1f9e38633a02574f767450bf8afc7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a3e4c462edc9043ecc95e4dbb0773ec42961028
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183382"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070135"
 ---
 # <a name="technical-reference-ssas"></a>Referencia técnica (SSAS)
   Buscar las herramientas, los idiomas y la documentación de referencia de PowerShell para el uso o la administración de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

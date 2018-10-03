@@ -1,13 +1,11 @@
 ---
-title: MoveFirst, MoveLast, MoveNext y MovePrevious métodos (RDS) | Documentos de Microsoft
+title: MoveFirst, MoveLast, MoveNext y MovePrevious métodos (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - MoveFirst method [RDS]
 - MoveNext method [RDS]
 ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7b57fef531fd66e9e649cba77b88d666281b273f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: fb4a73b30f12fa1f598c262737bd34b25143e69a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288324"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722893"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst, MoveLast, MoveNext y MovePrevious métodos (RDS)
-Se mueve a la primera, última, siguiente o anterior registro en un determinado [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
+Se mueve a la primera, última, siguiente o anterior de registro en un determinado [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar a [servicio de datos de WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,14 +41,14 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  *DataControl*  
  Una variable de objeto que representa un [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto.  
   
-## <a name="remarks"></a>Notas  
- Puede usar el **mover** métodos con el **RDS. DataControl** objeto para navegar por los registros de datos en los controles enlazados a datos en una página Web. Por ejemplo, supongamos que muestra un **Recordset** en una cuadrícula enlazando a un **RDS. DataControl** objeto. A continuación, podrá incluir los botones primero, último, siguiente y anterior que los usuarios pueden hacer clic para moverse a la primera, última, siguiente o del registro anterior en la muestra **conjunto de registros**. Para ello, al llamar a la **MoveFirst**, **MoveLast**, **MoveNext**, y **MovePrevious** métodos de la **RDS. DataControl** objeto en los procedimientos onClick de los botones primero, último, siguiente y anterior, respectivamente. El [ejemplo de libreta de direcciones](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md) muestra cómo hacerlo.  
+## <a name="remarks"></a>Comentarios  
+ Puede usar el **mover** métodos con el **RDS. DataControl** objeto para navegar por los registros de datos en los controles enlazados a datos en una página Web. Por ejemplo, supongamos que muestra un **Recordset** en una cuadrícula mediante el enlace a un **RDS. DataControl** objeto. A continuación, puede incluir botones primero, último, siguiente y anterior que los usuarios pueden hacer clic para mover a la primera, última, siguiente o registro anterior muestran **Recordset**. Para ello, una llamada a la **MoveFirst**, **MoveLast**, **MoveNext**, y **MovePrevious** métodos de la **RDS. DataControl** objeto en los procedimientos onClick para los botones de la primera, última, siguiente y anterior, respectivamente. El [ejemplo Libreta de direcciones](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md) muestra cómo hacerlo.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Move (método) (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
+ [Método Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [MoveFirst, MoveLast, MoveNext y MovePrevious métodos (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [Método MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
 

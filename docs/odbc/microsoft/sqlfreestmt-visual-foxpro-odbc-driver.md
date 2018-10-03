@@ -1,27 +1,24 @@
 ---
-title: SQLFreeStmt (controlador ODBC de Visual FoxPro) | Documentos de Microsoft
+title: SQLFreeStmt (controlador ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLFreeStmt function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: a5320226-a6fc-4999-9b3b-2fdee6bdf7eb
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aed6072341a18eefab3eaa729fb7babcb3a904bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4e4f189c2e8911194a56b13c5d1ba612bc5cee80
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32901560"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609603"
 ---
 # <a name="sqlfreestmt-visual-foxpro-odbc-driver"></a>SQLFreeStmt (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
@@ -29,8 +26,8 @@ ms.locfileid: "32901560"
   
  Soporte técnico: completo  
   
- Conformidad de la API de ODBC: Nivel de núcleo  
+ Conformidad de la API de ODBC: Nivel básico  
   
- Detiene el procesamiento asociado con un valor concreto *hstmt*, cierra los cursores abiertos asociados con la *hstmt*, se descartan los resultados pendientes y, opcionalmente, libera todos los recursos asociados con la instrucción identificador.  
+ Detiene el procesamiento asociado con un valor concreto *hstmt*, cierra cualquier cursor abierto asociado a la *hstmt*, descarta los resultados pendientes y, opcionalmente, libera todos los recursos asociados con la instrucción identificador.  
   
  Para obtener más información, consulte [SQLFreeStmt](../../odbc/reference/syntax/sqlfreestmt-function.md) en el *referencia del programador de ODBC*.

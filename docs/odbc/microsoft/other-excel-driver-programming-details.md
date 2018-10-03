@@ -1,33 +1,30 @@
 ---
-title: Otros detalles de programación del controlador de Excel | Documentos de Microsoft
+title: Otros detalles de programación de controlador de Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], Excel driver
 - desktop database drivers [ODBC], Excel driver
 - ODBC desktop database drivers [ODBC], Excel driver
 ms.assetid: 92453ef5-86d6-4d13-bdd6-a4f5cf9c453f
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6871b83a19037529b2b9179ca9aefc65944ba553
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15710b867c5d766787480b1830de3257f54da6be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903010"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847113"
 ---
 # <a name="other-excel-driver-programming-details"></a>Otros detalles de programación del controlador de Excel
 > [!NOTE]  
->  Esta sección proporciona información de Excel específicos del controlador sobre las funciones ODBC y otros detalles de programación. Para obtener información general acerca de una función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Esta sección proporciona información de Excel específicos del controlador acerca de las funciones ODBC y otros detalles de programación. Para obtener información general acerca de una función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Esta sección contiene los temas siguientes.  
   

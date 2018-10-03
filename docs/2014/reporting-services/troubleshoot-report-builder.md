@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
-caps.latest.revision: 7
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff8bc634306d783e943388d19f149e735d15383f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e7ddb7f9ffd0aa44db250df00df78b9f20d307e8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255507"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082291"
 ---
 # <a name="troubleshoot-report-builder"></a>Solucionar problemas del Generador de informes
   El Generador de informes es una herramienta de creación de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que le permite generar informes desde muchos tipos diferentes de orígenes de datos y publicarlos en un servidor de informes o en un sitio de SharePoint. Los informes que cree pueden verse en el generador de informes en un explorador Web, o como parte de un [!INCLUDE[msCoName](../includes/msconame-md.md)] aplicación de Windows o el sitio de SharePoint.  

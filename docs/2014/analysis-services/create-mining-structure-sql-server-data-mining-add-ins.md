@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures, creating
 ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2244f9c73d48946628c063d22a1f0645182a73ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 166689f175485af66ca140f82fa968512baf8519
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244055"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086345"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>Crear estructura de minería de datos (Complementos de minería de datos de SQL Server)
   ![Botón de crear estructura de minería de datos, cinta de opciones minería de datos](media/dmc-createstruct.gif "botón Crear estructura de minería de datos, cinta de opciones minería de datos")  
@@ -98,7 +95,7 @@ ms.locfileid: "37244055"
   
 |Valores|Descripción|  
 |------------|-----------------|  
-|**Incluir**|Especifica que la columna contiene datos quede pueden usarse para análisis o para predicción.|  
+|**incluir**|Especifica que la columna contiene datos quede pueden usarse para análisis o para predicción.|  
 |**Key**|Especifica que la columna contiene un identificador de transacción, un identificador de serie u otra clave necesaria para el procesamiento.<br /><br /> Todos los algoritmos requieren una columna de clave. No obstante, algunos algoritmos admiten una sola clave, mientras que otros admiten varias.<br /><br /> Si la columna contiene una clave pero no es necesaria para el procesamiento, seleccione **no utilizan**.|  
 |**Clave temporal**|Especifica que la columna contiene una fecha u otro valor numérico que puede usarse para identificar de forma única los elementos de una serie temporal.|  
 |**No Use**|Especifica que la columna debe omitirse. No se procesarán los datos de la columna.|  

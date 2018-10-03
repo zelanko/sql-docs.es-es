@@ -1,18 +1,13 @@
 ---
-title: Error de control (XQuery) | Documentos de Microsoft
+title: Control de errores (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -21,16 +16,15 @@ helpviewer_keywords:
 - XQuery, error handling
 - dynamic errors [XQuery]
 ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c7277c122c76ef2aa9ff6c82b4693faed6b409ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 444fa51144535475f67cc0d073b63cb1b8354531
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076952"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687293"
 ---
 # <a name="error-handling-xquery"></a>Control de errores (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +47,7 @@ ms.locfileid: "33076952"
  A menudo, en una situación en la que el error dinámico se produciría dentro de un predicado, no emitir el error es no cambiar la semántica, porque () se asigna a False. Sin embargo, en algunos casos, devolver () en lugar de un error dinámico puede dar lugar a resultados inesperados. Los ejemplos siguientes lo muestran.  
   
 ### <a name="example-using-the-avg-function-with-a-string"></a>Ejemplo: utilizar la función avg() con una cadena  
- En el ejemplo siguiente, la [función avg](../xquery/aggregate-functions-avg.md) se llama para calcular la media de los tres valores. Uno de estos valores es una cadena. Puesto que la instancia XML en este caso no tiene tipo, todos los datos que contiene son de tipo atómico sin tipo. El **avg()** función convierte estos valores para **xs: Double** antes de calcular la Media. Sin embargo, el valor, `"Hello"`, no se puede convertir a **xs: Double** y crea un error dinámico. En este caso, en lugar de devolver un error dinámico, la conversión de `"Hello"` a **xs: Double** hace que una secuencia vacía. El **avg()** función omite este valor, calcula el promedio de los otros dos valores y devuelve 150.  
+ En el ejemplo siguiente, la [función avg](../xquery/aggregate-functions-avg.md) se llama para calcular el promedio de los tres valores. Uno de estos valores es una cadena. Puesto que la instancia XML en este caso no tiene tipo, todos los datos que contiene son de tipo atómico sin tipo. El **avg()** función convierte estos valores a **xs: Double** antes de calcular el promedio. Sin embargo, el valor, `"Hello"`, no se puede convertir a **xs: Double** y crea un error dinámico. En este caso, en lugar de devolver un error dinámico, la conversión de `"Hello"` a **xs: Double** hace que una secuencia vacía. El **avg()** función omite este valor, calcula el promedio de los otros dos valores y devuelve 150.  
   
 ```  
 DECLARE @x xml  
@@ -66,7 +60,7 @@ SELECT @x.query('avg(//*)')
 ```  
   
 ### <a name="example-using-the-not-function"></a>Ejemplo: utilizar la función not  
- Cuando se usa el [no funcionen](../xquery/functions-on-boolean-values-not-function.md) en un predicado, por ejemplo, `/SomeNode[not(Expression)]`, y la expresión provoca un error dinámico, se devolverá una secuencia vacía en lugar de un error. Aplicar **not()** a la secuencia vacía, devuelve True, en lugar de un error.  
+ Cuando se usa el [no funcionen](../xquery/functions-on-boolean-values-not-function.md) en un predicado, por ejemplo, `/SomeNode[not(Expression)]`, y la expresión produce un error dinámico, se devolverá una secuencia vacía en lugar de un error. Aplicar **not()** a la secuencia vacía, devuelve True, en lugar de un error.  
   
 ### <a name="example-casting-a-string"></a>Ejemplo: convertir una cadena  
  En el ejemplo siguiente, la cadena literal "NaN" se convierte a xs:string, y después a xs:double. El resultado es un conjunto de filas vacío. Aunque la cadena "NaN" no se puede convertir correctamente a xs:double, esto no se puede determinar hasta el tiempo de ejecución, porque la cadena se convierte primero a xs:string.  

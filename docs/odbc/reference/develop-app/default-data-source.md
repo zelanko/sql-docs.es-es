@@ -1,13 +1,11 @@
 ---
-title: Valor predeterminado de origen de datos | Documentos de Microsoft
+title: Valor predeterminado el origen de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
@@ -21,22 +19,21 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: dd473cc6-f051-4aa0-ab14-3dd1b37fe99e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b756f9b553c622028266d1fc591596bf58ddf45
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 909f9b3e7c8087add8eb66ca2f5c15253026304c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908140"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619573"
 ---
 # <a name="default-data-source"></a>Origen de datos predeterminado
-El controlador puede seleccionar un origen de datos, denominado el origen de datos de forma predeterminada, en ciertos casos donde la aplicación no especifica explícitamente uno:  
+El controlador puede seleccionar un origen de datos, denominado el origen de datos de forma predeterminada, en algunos casos donde la aplicación no especifica explícitamente uno:  
   
--   En una llamada a **SQLConnect** donde el *ServerName* argumento es una cadena de longitud cero, un puntero null o DEFAULT.  
+-   En una llamada a **SQLConnect** donde el *ServerName* argumento es una cadena de longitud cero, un puntero nulo o predeterminado.  
   
--   En una llamada a **SQLDriverConnect** donde *InConnectionString* cualquiera especifica **DSN**= valor predeterminado o se especifica con el **DSN** palabra clave un origen de datos que no se encuentra en la información del sistema.  
+-   En una llamada a **SQLDriverConnect** donde *InConnectionString* cualquiera especifica **DSN**= DEFAULT o se especifica con el **DSN** palabra clave un origen de datos que no se encuentra en la información del sistema.  
   
- Es definido por el controlador cómo se especifica el origen de datos predeterminado. Esto puede implicar una acción administrativa y puede depender del usuario.
+ Es definido por el controlador de cómo se especifica el origen de datos de forma predeterminada. Esto puede implicar una acción administrativa y es posible que dependen del usuario.

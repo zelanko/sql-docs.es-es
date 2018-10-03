@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursorexecute
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_execute
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47c6f3a1c0356f00843ba086d1d7994071c24ba6
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: fcc62c09d42adb10f8984a8f48d8b70e2f5c78de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43029876"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854043"
 ---
 # <a name="spcursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +85,7 @@ sp_cursorexecute prepared_handle, cursor
 |-1|Número de filas desconocido.|  
 |-n|Un rellenado asincrónico está en vigor.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>Parámetros ccopt y scrollopt  
  *scrollopt* y *ccopt* son útiles cuando se reemplazan los planes almacenados en caché para la caché del servidor, lo que significa que se debe volver a compilar el identificador preparado que identifica la instrucción. El *scrollopt* y *ccopt* los valores de parámetro deben coincidir con los valores enviados en la solicitud original a sp_cursorprepare.  

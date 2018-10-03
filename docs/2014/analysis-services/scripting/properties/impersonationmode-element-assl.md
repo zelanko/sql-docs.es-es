@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ImpersonationMode Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ImpersonateMode element
 ms.assetid: 160fdcb2-ac9f-4c5a-a0eb-a5f7669166b9
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dad131322f27cee48fa2fe1dd1ed593477afbe42
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 87a68d6ef1035d7caf1d787d9ab44578d17c5489
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216235"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105155"
 ---
 # <a name="impersonationmode-element-assl"></a>Elemento ImpersonationMode (ASSL)
   Contiene un valor que indica el método de suplantación para los elementos que se derivan de la [ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md) tipo de datos.  
@@ -46,7 +43,7 @@ ms.locfileid: "37216235"
 </ImpersonationInfo>...  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37216235"
 |Elemento primario|[ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
 |Valor|Descripción|  

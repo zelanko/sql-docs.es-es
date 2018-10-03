@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3e3ef600-9331-453b-80ad-b2d18e6082be
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d20ba1d0ce155e22f6bd927dfde64aaccc633a4d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 97a5343d312031ac3cb6b848c3e0125b619f2c3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164726"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082735"
 ---
 # <a name="move-ssis-toolbox-items"></a>Mover elementos del cuadro de herramientas de SSIS
   El nuevo cuadro de herramientas de SSIS incluye nuevas categorías y la capacidad de organizar los elementos de acuerdo con sus preferencias. Una ventana de información en la parte inferior del cuadro de herramientas proporciona una descripción de un elemento del cuadro de herramientas seleccionado y un vínculo a un tema de los Libros en pantalla.  

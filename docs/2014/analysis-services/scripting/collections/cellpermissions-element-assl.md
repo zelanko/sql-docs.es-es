@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CellPermissions Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CellPermissions element
 ms.assetid: 4a604f2f-f4c3-42bd-a42b-951263942cc6
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dafcaf786d58fd8c1441c0f1df50aa5a7d47be31
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f1a700960586c9cb6e26475ffb0b6b9a52f9939b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176462"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133595"
 ---
 # <a name="cellpermissions-element-assl"></a>Elemento CellPermissions (ASSL)
   Contiene la colección de permisos para las celdas en el asociado [cubo](../objects/cube-element-assl.md) elemento.  
@@ -48,7 +45,7 @@ ms.locfileid: "37176462"
 </CubePermission>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -63,7 +60,7 @@ ms.locfileid: "37176462"
 |Elementos primarios|[Elemento CubePermission](../objects/cubepermission-element-assl.md)|  
 |Elementos secundarios|[CellPermission](../objects/cellpermission-element-assl.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  La colección puede contener hasta un `CellPermission` cada valor permitido del objeto la [acceso](../properties/access-element-assl.md) elemento.  
   
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.CellPermissionCollection>.  

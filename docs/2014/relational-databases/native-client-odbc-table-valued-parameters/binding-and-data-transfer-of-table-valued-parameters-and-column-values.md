@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), binding and data transfer
 ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e16e44a7e695754742f58729600c42d0a5e5b84
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4ff7549e5a892f6048d6f737382f489dd0bf2ab2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430134"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131625"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Enlace y transferencia de datos de valores de columnas y parámetros con valores de tabla
   Los parámetros con valores de tabla, al igual que otros parámetros, deben enlazarse antes de pasarse al servidor. La aplicación enlaza los parámetros con valores de tabla del mismo modo enlaza otros parámetros: con SQLBindParameter o llamadas equivalentes a SQLSetDescField o SQLSetDescRec. El tipo de datos del servidor para un parámetro con valores de tabla es SQL_SS_TABLE. El tipo de C puede especificarse como SQL_C_DEFAULT o SQL_C_BINARY.  
@@ -88,7 +85,7 @@ ms.locfileid: "37430134"
   
 5.  Cuando se han enviado todas las filas, llama a SQLPutData para el parámetro con valores de tabla con un *Str_Len_or_Ind* valor de 0, a continuación, continúa en el paso 3a anterior.  
   
-6.  Llama a SQLParamData de nuevo. Si hay algún parámetro de datos en ejecución entre las columnas de parámetro con valores de tabla, estas se identifica mediante el valor *ValuePtrPtr* devuelto por SQLParamData. Cuando estén disponibles todos los valores de columna, SQLParamData devolverá de nuevo el *ParameterValuePtr* valor para el parámetro con valores de tabla y la aplicación comienza de nuevo.  
+6.  Llama a SQLParamData de nuevo. Si hay parámetros entre las columnas del parámetro con valores de tabla de datos en ejecución, éstas se identificarán mediante el valor *ValuePtrPtr* devuelto por SQLParamData. Cuando están disponibles todos los valores de columna, SQLParamData devolverá nuevamente el *ParameterValuePtr* valor para el parámetro con valores de tabla y la aplicación comienza de nuevo.  
   
 ## <a name="see-also"></a>Vea también  
  [Parámetros con valores de tabla &#40;ODBC&#41;](table-valued-parameters-odbc.md)  

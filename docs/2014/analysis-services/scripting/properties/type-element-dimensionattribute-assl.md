@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Type Element (DimensionAttribute)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Type element
 ms.assetid: 64fce1f5-39b7-4d0a-ae60-21203a03bd0d
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 99b84675dbc0b13d7d73823126e7bc11fb75ad05
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b162bceeb6ffd6f6a2f719d86f27cef07c27103
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293475"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123265"
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Elemento Type (DimensionAttribute) (ASSL)
   Contiene el tipo del atributo.  
@@ -46,7 +43,7 @@ ms.locfileid: "37293475"
 </DimensionAttribute>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37293475"
 |Elemento primario|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
 |Valor|Descripción|  
@@ -199,7 +196,7 @@ ms.locfileid: "37293475"
 |*MonthOfQuarter*|El atributo representa el ordinal del mes de un trimestre.|  
 |*MonthOfTrimester*|El atributo representa el ordinal del mes de un cuatrimestre.|  
 |*MonthOfYear*|El atributo representa el ordinal del mes de un año.|  
-|*Meses*|El atributo representa los meses.|  
+|*meses*|El atributo representa los meses.|  
 |*OrganizationalUnit*|El atributo representa una unidad organizativa.|  
 |*OrgTitle*|El atributo representa un título organizativo.|  
 |*PercentOwnership*|El atributo representa un porcentaje de propiedad.|  
@@ -295,7 +292,7 @@ ms.locfileid: "37293475"
 |*WeekOfQuarter*|El atributo representa el ordinal de la semana de un trimestre.|  
 |*WeekOfTrimester*|El atributo representa el ordinal de la semana de un cuatrimestre.|  
 |*WeekOfYear*|El atributo representa el ordinal de la semana de un año.|  
-|*Semanas*|El atributo representa las semanas.|  
+|*semanas*|El atributo representa las semanas.|  
 |*Años*|El atributo representa los años.|  
   
  La enumeración que corresponde a los valores permitidos para `Type` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.AttributeType>.  

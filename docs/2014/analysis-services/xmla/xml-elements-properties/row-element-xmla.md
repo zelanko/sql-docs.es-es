@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - row Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - row element
 ms.assetid: 4d9977a0-c396-44c7-9fd4-97f4c3d643aa
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 17bc202bb7e1d2c0701b478409b02f4bbb160958
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45bda6938dd98dae305c7143af39fd7d4bfd4142
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223995"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096885"
 ---
 # <a name="row-element-xmla"></a>Elemento row (XMLA)
   Contiene una sola fila de datos para un [raíz](root-element-xmla.md) elemento que contiene datos tabulares devueltos por una [Discover](../xml-elements-methods-discover.md) o [Execute](../xml-elements-methods-execute.md) llamada al método.  
@@ -48,7 +45,7 @@ ms.locfileid: "37223995"
 </root>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -63,7 +60,7 @@ ms.locfileid: "37223995"
 |Elementos primarios|[raíz](root-element-xmla.md) (mediante el [conjunto de filas](../xml-data-types/rowset-data-type-xmla.md) tipo de datos)|  
 |Elementos secundarios|Uno o más elementos de columna.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Cada fila devuelta por un elemento `root` que contiene datos tabulares tiene un elemento `row` correspondiente. Cada columna del elemento `root` está representada por un elemento XML diferente. El valor de la columna del elemento `row` es el dato que contiene el elemento XML y el nombre de la columna corresponde al nombre del elemento XML.  
   
  Hay dos maneras de expresar un valor nulo para una columna dentro de una fila:  

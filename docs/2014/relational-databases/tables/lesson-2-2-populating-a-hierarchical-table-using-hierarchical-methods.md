@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - HierarchyID
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86aebcd1b6545782fed51991e3fe25e645c2e6c9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c0c77323f6ae37e3543cf070817a9fee05943f3f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321895"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058055"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>Rellenar una tabla jerárquica usando métodos jerárquicos
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] tiene 8 empleados que trabajan en el departamento de marketing. La jerarquía de empleados ofrece el siguiente aspecto:  

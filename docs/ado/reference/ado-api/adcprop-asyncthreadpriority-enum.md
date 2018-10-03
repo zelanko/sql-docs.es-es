@@ -1,13 +1,11 @@
 ---
-title: ADCPROP_ASYNCTHREADPRIORITY_ENUM | Documentos de Microsoft
+title: ADCPROP_ASYNCTHREADPRIORITY_ENUM | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,31 +13,30 @@ f1_keywords:
 helpviewer_keywords:
 - ADCPROP_ASYNCTHREADPRIORITY_ENUM [ADO]
 ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7857e3b176191ba5b9c98a40c7f02abe666edec8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c0b9d4e0e6f844ef2dda18e95aadfcf3b910995d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275234"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824653"
 ---
 # <a name="adcpropasyncthreadpriorityenum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
-Para un RDS [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) de objetos, especifica la prioridad de ejecución del subproceso asincrónico que recupera los datos.  
+Para una RDS [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) de objetos, especifica la prioridad de ejecución del subproceso asincrónica que recupera los datos.  
   
- Utilice estas constantes con la **Recordset** "**prioridad de subproceso en segundo plano**" propiedad dinámica, que se hace referencia en el índice de la propiedad dinámica de base de datos de ADO para OLE y se documentan en el [ Servicio de cursores de Microsoft para OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) documentación.  
+ Utilice estas constantes con la **Recordset** "**prioridad de subproceso en segundo plano**" propiedad dinámica que se hace referencia en el índice de propiedades dinámicas de ADO y se documentan en el [ Servicio de cursores de Microsoft para OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) documentación.  
   
 |Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
-|**adPriorityAboveNormal**|4|Establece la prioridad entre más altos y más normal.|  
-|**adPriorityBelowNormal**|2|Establece la prioridad entre normal y más baja.|  
+|**adPriorityAboveNormal**|4|Establece la prioridad entre normal y máxima.|  
+|**adPriorityBelowNormal**|2|Establece la prioridad entre más baja y normal.|  
 |**adPriorityHighest**|5|Establece la prioridad en el nivel más alto posible.|  
 |**AdPriorityLowest**|1|Establece la prioridad en el nivel más bajo posible.|  
 |**adPriorityNormal**|3|Establece la prioridad normal.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
+## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
  Paquete: **com.ms.wfc.data**  
   
 |Constante|  

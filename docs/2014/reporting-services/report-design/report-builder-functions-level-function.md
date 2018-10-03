@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 027ccec12f08efddc9b48c56ad7ed2f22ec5b15b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ae9006603a9c76e9e7cbd308275c4f8a8c7594b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155756"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109521"
 ---
 # <a name="level-function-report-builder-and-ssrs"></a>Función Level (Generador de informes y SSRS)
   Devuelve el nivel actual de profundidad de una jerarquía recursiva.  
@@ -41,7 +38,7 @@ Level(scope)
 ## <a name="return-type"></a>Tipo devuelto  
  Devuelve un `Integer`. Si *ámbito* especifica un conjunto de datos o región de datos, o una agrupación no recursiva (es decir, una agrupación que no `Parent` elemento), `Level` devuelve 0. Si se omite el parámetro *scope* , devuelve el nivel del ámbito actual.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor que devuelve la función `Level` se basa en cero; es decir, el primer nivel de una jerarquía es 0.  
   
  La función `Level` puede utilizarse para aplicar sangría en una jerarquía recursiva, como puede ser una lista de empleados.  

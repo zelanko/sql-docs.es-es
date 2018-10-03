@@ -1,14 +1,12 @@
 ---
-title: Control de los problemas de simultaneidad de base de datos en los diagramas de actualización (SQLXML 4.0) | Microsoft Docs
+title: Control de problemas de simultaneidad de la base de datos en actualización (SQLXML 4.0) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - <before> block
@@ -21,26 +19,25 @@ helpviewer_keywords:
 - concurrency [SQLXML]
 - intermediate concurrency protection [SQLXML]
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8dabeb92af34525e247f5144a4c131c6185b0b6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d92e86b5e548d5a828a9d20c00c69dd600f1c632
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234915"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127505"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Controlar problemas de simultaneidad de base de datos en diagramas de actualización (SQLXML 4.0)
-  Al igual que otros mecanismos de actualización de base de datos, los diagramas de actualización deben lidiar con actualizaciones simultáneas de datos en un entorno multiusuario. Los diagramas de actualización usan el control de simultaneidad optimista, que usa la comparación de datos de campos de selección como instantáneas para asegurarse de que otra aplicación de usuario no haya modificado los datos que van a actualizarse desde que se leyeron de la base de datos. Los diagramas de actualización incluyen estos valores de las instantáneas en el  **\<antes >** bloque de los diagramas de actualización. Antes de actualizar la base de datos, el diagrama de actualización comprueba los valores que se especifican en el  **\<antes >** bloque con los valores actuales de la base de datos para asegurarse de que la actualización es válida.  
+  Al igual que otros mecanismos de actualización de base de datos, los diagramas de actualización deben lidiar con actualizaciones simultáneas de datos en un entorno multiusuario. Los diagramas de actualización usan el control de simultaneidad optimista, que usa la comparación de datos de campos de selección como instantáneas para asegurarse de que otra aplicación de usuario no haya modificado los datos que van a actualizarse desde que se leyeron de la base de datos. Actualización incluye estos valores de instantánea en el  **\<antes >** bloque de la actualización. Antes de actualizar la base de datos, updategram comprueba los valores que se especifican en el  **\<antes >** bloque contra los valores actualmente en la base de datos para asegurarse de que la actualización es válida.  
   
  El control de simultaneidad optimista ofrece tres niveles de protección en un diagrama de actualización: bajo (ninguno), intermedio y alto. Puede decidir qué nivel de protección necesita especificando el diagrama de actualización en consecuencia.  
   
 ## <a name="lowest-level-of-protection"></a>Nivel de protección más bajo  
- Este nivel es en realidad una actualización “ciega”, donde la actualización se procesa sin hacer referencia a otras actualizaciones que se hayan realizado desde que la base de datos se leyó por última vez. En tal caso, especifique las columnas de clave principal en el  **\<antes >** bloqueen a fin de identificar el registro y especificar la información actualizada en el  **\<después >** bloque.  
+ Este nivel es en realidad una actualización “ciega”, donde la actualización se procesa sin hacer referencia a otras actualizaciones que se hayan realizado desde que la base de datos se leyó por última vez. En tal caso, se especifican las columnas de clave principales en la  **\<antes >** bloquear para identificar el registro y especificar la información actualizada de la  **\<después de >** bloque.  
   
- Por ejemplo, el nuevo número de teléfono del contacto en el diagrama de actualización siguiente es correcto, independientemente de cuál fuera el número de teléfono anterior. Observe cómo el  **\<antes >** bloque especifica solo la columna de clave principal (ContactID).  
+ Por ejemplo, el nuevo número de teléfono del contacto en el diagrama de actualización siguiente es correcto, independientemente de cuál fuera el número de teléfono anterior. Observe cómo el  **\<antes >** bloque especifica sólo la columna de clave principal (ID de contacto).  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -58,9 +55,9 @@ ms.locfileid: "37234915"
 ## <a name="intermediate-level-of-protection"></a>Nivel de protección intermedio  
  En este nivel de protección, el diagrama de actualización compara los valores actuales de los datos que se están actualizando con los valores de las columnas de la base de datos para asegurarse de que ninguna otra transacción los haya modificado desde que la transacción del usuario leyó el registro.  
   
- Puede obtener este nivel de protección mediante la especificación de las columnas de clave principales y las columnas que va a actualizar en el  **\<antes >** bloque.  
+ Puede obtener este nivel de protección mediante la especificación de las columnas de clave principales y las columnas que se están actualizando en el  **\<antes >** bloque.  
   
- Por ejemplo, este diagrama de actualización cambia el valor de la columna Phone de la tabla Person.Contact para el contacto cuyo ContactID es igual a 1. El  **\<antes >** bloque especifica la **teléfono** atributo para asegurarse de que este valor de atributo coincide con el valor de la columna correspondiente en la base de datos antes de aplicar el valor actualizado .  
+ Por ejemplo, este diagrama de actualización cambia el valor de la columna Phone de la tabla Person.Contact para el contacto cuyo ContactID es igual a 1. La  **\<antes >** bloque especifica la **teléfono** atributo para garantizar que este valor de atributo coincide con el valor de la columna correspondiente en la base de datos antes de aplicar el valor actualizado .  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -80,11 +77,11 @@ ms.locfileid: "37234915"
   
  Existen dos formas de obtener este nivel de protección alto en las actualizaciones simultáneas:  
   
--   Especificar columnas adicionales en la tabla en la  **\<antes >** bloque.  
+-   Especificar columnas adicionales en la tabla de la  **\<antes >** bloque.  
   
-     Si especifica columnas adicionales en el  **\<antes >** bloque, el diagrama de actualización compara los valores que se especifican para estas columnas con los valores que estaban en la base de datos antes de aplicar la actualización. Si alguna de las columnas del registro ha cambiado desde que la transacción leyó el registro, el diagrama de actualización no realizará la actualización.  
+     Si especifica columnas adicionales en el  **\<antes >** bloque de updategram compara los valores que se especifican para estas columnas con los valores que se encontraban en la base de datos antes de aplicar la actualización. Si alguna de las columnas del registro ha cambiado desde que la transacción leyó el registro, el diagrama de actualización no realizará la actualización.  
   
-     Por ejemplo, el siguiente diagrama de actualización actualiza el nombre del turno, pero especifica columnas adicionales (StartTime, EndTime) en el  **\<antes >** bloque, con lo que se solicita un mayor nivel de protección frente a simultáneos actualizaciones.  
+     Por ejemplo, el siguiente updategram actualiza el nombre de la tecla MAYÚS, pero especifica columnas adicionales (StartTime, EndTime) en el  **\<antes >** bloque, para indicar un mayor nivel de protección contra concurrentes actualizaciones.  
   
     ```  
     <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -102,9 +99,9 @@ ms.locfileid: "37234915"
     </ROOT>  
     ```  
   
-     Este ejemplo especifica el nivel de protección más alto especificando todos los valores de columna para el registro en el  **\<antes >** bloque.  
+     Este ejemplo especifica el máximo nivel de protección mediante la especificación de todos los valores de columna para el registro en el  **\<antes >** bloque.  
   
--   Especifica la columna de marca de tiempo (si está disponible) en el  **\<antes >** bloque.  
+-   Especifique la columna de marca de tiempo (si está disponible) en el  **\<antes >** bloque.  
   
      En lugar de especificar todas las columnas del registro en el `<before`> bloque, sólo puede especificar la columna de marca de tiempo (si la tabla tiene uno), junto con las columnas de clave principal en el  **\<antes >** bloque. La base de datos actualizará la columna de marca de tiempo a un valor único tras cada actualización del registro. En este caso, el diagrama de actualización compara el valor de la marca de tiempo con el valor correspondiente de la base de datos. El valor de marca de tiempo almacenado en la base de datos es un valor binario. Por lo tanto, la columna de marca de tiempo debe especificarse en el esquema como `dt:type="bin.hex"`, `dt:type="bin.base64"` o `sql:datatype="timestamp"`. (Puede especificar el `xml` tipo de datos o el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de datos.)  
   

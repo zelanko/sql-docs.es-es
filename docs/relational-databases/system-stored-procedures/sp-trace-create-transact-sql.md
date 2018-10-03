@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_create_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_create
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
-caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06588729794b9a5b62b82e0576f955536687f57e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9d4ee1eb7770f9d2c9fe3ab8ed58f59c7d05302a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38056083"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833721"
 ---
 # <a name="sptracecreate-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +108,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |14|Hora de detención no válida. Se devuelve cuando ya se ha alcanzado la hora de detención especificada.|  
 |15|Parámetros no válidos. Se devuelve cuando el usuario ha proporcionado parámetros no compatibles.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  **sp_trace_create** es un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el procedimiento almacenado que realiza muchas de las acciones ejecutadas previamente por **xp_trace_\***  disponibles en versiones anteriores de SQL Server de procedimientos almacenados extendidos. Use **sp_trace_create** en lugar de:  
   
 -   **xp_trace_addnewqueue**  

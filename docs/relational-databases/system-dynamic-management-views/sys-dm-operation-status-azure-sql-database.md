@@ -5,10 +5,7 @@ ms.date: 06/05/2017
 ms.prod: ''
 ms.prod_service: sql-database, sql-data-warehouse
 ms.reviewer: ''
-ms.service: sql-database
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_operation_status_TSQL
@@ -21,17 +18,16 @@ helpviewer_keywords:
 - dm_operation_status dynamic management view
 - sys.dm_operation_status dynamic management view
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 6d1df62f4ac877ed82ba1d7b555f8fd9ef759362
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 335888ba664751bb20348472736ad697b8fe2b6d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979457"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633483"
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -59,7 +55,7 @@ ms.locfileid: "37979457"
 ## <a name="permissions"></a>Permisos  
  Esta vista solo está disponible en el **maestro** base de datos para el inicio de sesión de entidad de seguridad de nivel de servidor.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para usar esta vista, debe estar conectado a la **maestro** base de datos. Use la `sys.dm_operation_status` ver en el **maestro** base de datos de la [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server un seguimiento del estado de las operaciones siguientes realizadas en un [!INCLUDE[ssSDS](../../includes/sssds-md.md)]:  
   
 -   Crear base de datos  

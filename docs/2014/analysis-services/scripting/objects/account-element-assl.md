@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Account Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Account element
 ms.assetid: 0bb7d06c-0158-4ab2-b2b1-cb50ba24f7c0
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d763b75cfb357554948565a59f5348d7fd3b725a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 262ba3be01879770a734ab7334782e26aa04b364
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321177"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109055"
 ---
 # <a name="account-element-assl"></a>Elemento Account (ASSL)
   Contiene información detallada sobre un tipo de cuenta dentro de un [base de datos](database-element-assl.md) elemento.  
@@ -49,7 +46,7 @@ ms.locfileid: "37321177"
 </Accounts>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -64,7 +61,7 @@ ms.locfileid: "37321177"
 |Elementos primarios|[Cuentas](../collections/accounts-element-assl.md)|  
 |Elementos secundarios|[AccountType](../properties/accounttype-element-assl.md), [AggregationFunction](../properties/aggregationfunction-element-assl.md), [alias](../collections/aliases-element-assl.md), [anotaciones](../collections/annotations-element-assl.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Las dimensiones, cuyo [tipo](../properties/type-element-dimension-assl.md) elemento está establecido en *cuentas,* puede tener un atributo que especifica el tipo de cuenta, como Income, Expense, etc., representado por miembros de la dimensión. El tipo de cuenta, a continuación, se usa por [medida](measure-element-assl.md) elementos, cuyo [AggregationFunction](../properties/aggregatefunction-element-assl.md) elemento está establecido en *ByAccount*, para determinar la función de agregación que se utiliza al Agregar a los miembros de esa dimensión. El elemento `Account` representa un tipo de cuenta único y la función de agregado que tales medidas deben utilizar.  
   
  Un tipo de cuenta debe aparecer si la función de agregado es diferente del valor predeterminado utilizado por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] para cada tipo de cuenta.  

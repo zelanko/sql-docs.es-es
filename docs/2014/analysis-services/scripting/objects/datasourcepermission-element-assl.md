@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataSourcePermission Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - DataSourcePermission element
 ms.assetid: 6dc6fb13-034e-479a-902e-27f3fb78c33f
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d88f18a752e96e5081462056d831bc968dc605df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d4130cd2a0eb83b32c8bcdf703d10ca6305af619
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241365"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087625"
 ---
 # <a name="datasourcepermission-element-assl"></a>Elemento DataSourcePermission (ASSL)
   Define los permisos predeterminados en un [DataSource](../data-type/datasource-data-type-assl.md) tipo de datos para un determinado [rol](role-element-assl.md) elemento.  
@@ -44,7 +41,7 @@ ms.locfileid: "37241365"
 </DataSourcePermissions>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -59,7 +56,7 @@ ms.locfileid: "37241365"
 |Elementos primarios|[DataSourcePermissions](../collections/datasourcepermissions-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los objetos `DataSourcePermission` solo pueden existir para los roles que pertenecen a la base de datos y solo puede existir un objeto `DataSourcePermission` para cualquier rol.  
   
 ## <a name="see-also"></a>Vea también  

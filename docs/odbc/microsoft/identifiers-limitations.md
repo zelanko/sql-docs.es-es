@@ -1,30 +1,27 @@
 ---
-title: Limitaciones de identificadores | Documentos de Microsoft
+title: Limitaciones de identificadores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: b3466382-71cb-4f82-8318-092a8fcef3df
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 087d7ba056a5da10ae8d191592f06c312583b62b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c781113124d456e1ba866546d6ada7a17371d71f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900270"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667393"
 ---
 # <a name="identifiers-limitations"></a>Limitaciones de identificadores
-Si un identificador contiene un espacio o un símbolo especial, el identificador debe incluirse entre comillas atrás. Un nombre válido es una cadena de no más de 64 caracteres, de los cuales el primer carácter no debe ser un espacio. ¿Los nombres válidos no pueden contener caracteres de control ni los siguientes caracteres especiales: ' &#124; # *? [ ] . ! $ .  
+Si un identificador contiene un espacio o un símbolo especial, debe incluirse el identificador de espera entre las comillas. Un nombre válido es una cadena de no más de 64 caracteres, de los cuales el primer carácter no debe ser un espacio. ¿Los nombres válidos no pueden incluir caracteres de control o los caracteres especiales siguientes: ' &#124; # *? [ ] . ! $ .  
   
- No utilice palabras reservadas que se enumeran en la gramática SQL en el apéndice C de la *referencia del programador de ODBC* (o la forma abreviada de estas palabras reservadas) como identificadores (es decir, tabla o columna de nombres), a menos que rodean la palabra en la parte posterior comillas (').
+ No utilice palabras reservadas que se enumeran en la gramática de SQL en el apéndice C de la *referencia del programador de ODBC* (o la forma abreviada de estas palabras reservadas) como identificadores (es decir, tabla o columna de nombres), a menos que rodean la palabra de retroceso comillas (').

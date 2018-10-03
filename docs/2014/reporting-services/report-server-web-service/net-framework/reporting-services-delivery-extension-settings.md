@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XML Web service [Reporting Services], delivery extension settings
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - mail [Reporting Services]
 - Web service [Reporting Services], delivery extension settings
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
-caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8004d3a0342098004286d27e4fe23d4333acb717
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ce835764cc8964fdd5b6dfb5a6cb19a383ea79b0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272651"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088865"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Configuración de la extensión de entrega de Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] contiene una extensión de entrega por correo electrónico y una extensión de entrega a recursos compartidos de archivos. La entrega por correo electrónico proporciona una manera de enviar un informe a usuarios individuales o grupos a través del correo electrónico. La entrega a recursos compartidos de archivos permite enviar los informes representados automáticamente a un recurso compartido de la red. Puede utilizar cualquiera de las dos extensiones de entrega admitidas con las suscripciones estándar o las suscripciones controladas por datos. La configuración de entrega específica del tipo de extensión de entrega se pasa siempre que se llama a los métodos <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>,<xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>,<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A> y <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A>. Para recuperar mediante programación una lista de configuración de entrega, utilice el método <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A>.  
@@ -43,7 +40,7 @@ ms.locfileid: "37272651"
 ## <a name="e-mail-delivery-settings"></a>Configuración de entrega por correo electrónico  
  En la tabla siguiente se enumeran las opciones de configuración de la entrega por correo electrónico para las suscripciones que utilizan el correo electrónico del servidor de informes.  
   
-|Configuración|Valor|  
+|Parámetro|Valor|  
 |-------------|-----------|  
 |**TO**|Dirección de correo electrónico que aparece en la línea `To` del mensaje. Varias direcciones de correo electrónico se separan mediante puntos y coma. Requerido.|  
 |**CC**|Dirección de correo electrónico que aparece en la línea `Cc` del mensaje. Varias direcciones de correo electrónico se separan mediante puntos y coma. Opcional.|  
@@ -59,7 +56,7 @@ ms.locfileid: "37272651"
 ## <a name="file-share-delivery-settings"></a>Configuración de la entrega a recursos compartidos de archivos  
  En la tabla siguiente se enumeran las opciones de configuración de la entrega a recursos compartidos de archivos para las suscripciones.  
   
-|Configuración|Valor|  
+|Parámetro|Valor|  
 |-------------|-----------|  
 |**FILENAME**|Nombre del archivo que se va a guardar en disco.|  
 |**FILEEXTN**|Indica si incluir una extensión de archivo para el informe representado. El valor es `true` o `false`.|  

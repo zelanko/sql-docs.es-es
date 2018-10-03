@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ProactiveCachingQueryBinding Data Type
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ProactiveCachingQueryBinding data type
 ms.assetid: c1b06e50-9e68-40db-bdab-fc2cb3a8ff64
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c93fc223e66910dde5e532ecf20e89497227f6d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d7b9c4aea38bb66277467275d2cf89a04cc3144a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263501"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087635"
 ---
 # <a name="proactivecachingquerybinding-data-type-assl"></a>Tipo de datos ProactiveCachingQueryBinding (ASSL)
   Define un tipo de datos derivado que representa información para el [ProactiveCaching](../objects/proactivecaching-element-assl.md) elemento sobre los cambios de origen de datos en las tablas y vistas, identificados a través de la ejecución de las consultas especificadas que requieren volver a generar la memoria caché.  
@@ -59,7 +56,7 @@ ms.locfileid: "37263501"
 |Elementos secundarios|[QueryNotification](../objects/querynotification-element-assl.md), [RefreshInterval](../properties/refreshinterval-element-assl.md)|  
 |Elementos derivados|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para obtener más información sobre la `ProactiveCachingBinding` tipo, incluida una tabla de la jerarquía de herencia de `ProactiveCachingBinding` tipos, vea [tipo de datos ProactiveCachingBinding &#40;ASSL&#41;](binding-data-type-assl.md).  
   
  Para obtener más información sobre la `Binding` tipo, incluidas las tablas de objetos de Analysis Services Scripting Language (ASSL) de la `Binding` tipo y la jerarquía de herencia de `Binding` tipos, vea [tipo de enlace de datos &#40;ASSL &#41;](binding-data-type-assl.md).  

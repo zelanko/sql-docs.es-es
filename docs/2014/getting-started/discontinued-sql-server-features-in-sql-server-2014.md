@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
-caps.latest.revision: 28
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99223e87f7d4488783ad76b355f38249d51a82af
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e0aec881fd3257a42151338953015a0d88b56ea8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322755"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063845"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Características de SQL Server no disponibles en SQL Server 2014
   En este tema se describen las características que ya no están disponibles tras actualizar a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -29,8 +26,8 @@ ms.locfileid: "37322755"
   
 ## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>Características no incluidas en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
-### <a name="discontinued-active-directory-helper-service"></a>Servicio auxiliar de Active Directory no incluido  
- El Servicio auxiliar de Active Directory los componentes relacionados se han quitado. En la siguiente tabla se muestran los componentes asociados que se quitan como resultado:  
+### <a name="discontinued-active-directory-helper-service"></a>Servicio del asistente de Active Directory no incluido  
+ El Servicio del asistente de Active Directory los componentes relacionados se han quitado. En la siguiente tabla se muestran los componentes asociados que se quitan como resultado:  
   
 |Categoría|Característica no incluida|Sustituta|  
 |--------------|--------------------------|-----------------|  

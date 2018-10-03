@@ -1,13 +1,11 @@
 ---
-title: Conservar los datos | Documentos de Microsoft
+title: Almacenamiento de datos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - persisting data [ADO]
@@ -15,29 +13,28 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 438a09dd8f835653f9b2c76d73b7ce7f4583c1a5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c8fc264df4708b5d6c58c8a87861597d299cdca2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272204"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722993"
 ---
 # <a name="persisting-data"></a>Conservar los datos
-Equipos portátiles (por ejemplo, con equipos portátiles) ha generado la necesidad de aplicaciones que se ejecutan en un estado conectado y desconectado. ADO ha agregado compatibilidad para esta funcionalidad ofreciendo al programador la capacidad de guardar un cursor de cliente **Recordset** en el disco y cargarlo de nuevo más tarde.  
+Equipos portátiles (por ejemplo, con equipos portátiles) ha generado la necesidad de las aplicaciones que se pueden ejecutar en un estado conectado y desconectado. ADO ha agregado compatibilidad para esto proporcionando al programador la capacidad de guardar un cursor de cliente **Recordset** en el disco y vuelva a cargar más adelante.  
   
- Hay varios escenarios en los que podría utilizar este tipo de característica, incluidos los siguientes:  
+ Hay varios escenarios en los que podría usar este tipo de característica, incluidos los siguientes:  
   
--   **Viaje:** al llevar a cabo la aplicación en la carretera, es fundamental para proporcionar la capacidad de realizar cambios y agregar nuevos registros que pueden, a continuación, se vuelve a conectar a la base de datos más adelante y se confirman.  
+-   **Viaje:** al tomar la aplicación en la carretera, es fundamental para proporcionar la capacidad de realizar cambios y agregar nuevos registros que, a continuación, se vuelve a conectar a la base de datos más adelante y confirmados.  
   
--   **Actualizan con poca frecuencia de búsquedas:** a menudo en una aplicación, se usan tablas como búsquedas, por ejemplo, tablas de impuestos de estado. Se actualizan con poca frecuencia y son de solo lectura. En lugar de volver a leer estos datos desde el servidor cada vez que se inicia la aplicación, simplemente la aplicación puede cargar los datos de persistente localmente **conjunto de registros**.  
+-   **Actualizan con poca frecuencia de búsquedas:** a menudo en una aplicación, se usan tablas como búsquedas, por ejemplo, tablas de impuestos de estado. Se actualizan con poca frecuencia y son de solo lectura. En lugar de volver a leer estos datos desde el servidor cada vez que se inicia la aplicación, simplemente la aplicación puede cargar los datos desde persistente localmente **Recordset**.  
   
- En ADO, para guardar y cargar **conjuntos de registros**, use la **Recordset.Save** y **Recordset.Open(,,,adCmdFile)** métodos en la propiedad ADO **Recordset**objeto.  
+ En ADO, para guardar y cargar **conjuntos de registros**, utilice el **Recordset.Save** y **Recordset.Open(,,,adCmdFile)** métodos en ADO **Recordset**objeto.  
   
- Puede usar el **guardar de conjunto de registros** método para conservar su ADO **Recordset** a un archivo en un disco. (También puede guardar un **Recordset** a ADO **flujo** objeto. **Transmitir** objetos se describen más adelante en la guía.) Posteriormente, puede utilizar el **abiertos** método para volver a abrir la **Recordset** cuando esté listo para usarlo. De forma predeterminada, ADO guarda el **Recordset** en el formato propietario Advanced Data TableGram (ADTG) de Microsoft. Este formato binario se especifica mediante la **adPersistADTG más** valor. Como alternativa, puede elegir guardar la **Recordset** fuera como XML en lugar de utilizar **adPersistXML**. Para obtener más información acerca de cómo guardar conjuntos de registros como XML, vea [almacenar registros en formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md).  
+ Puede usar el **Guardar conjunto de registros** método para conservar su ADO **Recordset** a un archivo en un disco. (También puede guardar un **Recordset** a ADO **Stream** objeto. **Stream** objetos se describen más adelante en la guía.) Más adelante, puede utilizar el **abierto** método para volver a abrir el **Recordset** cuando esté listo para usarlo. De forma predeterminada, ADO guarda el **Recordset** en el formato registrado de Microsoft Advanced Data TableGram (ADTG). Este formato binario se especifica mediante el **adPersistADTG más** valor. Como alternativa, puede elegir guardar su **Recordset** fuera como XML en lugar de utilizar **adPersistXML**. Para obtener más información acerca de cómo guardar los conjuntos de registros como XML, vea [almacenar registros en formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md).  
   
  La sintaxis de la **guardar** método es como sigue:  
   
@@ -49,25 +46,25 @@ Destination, PersistFormat
   
 ```  
   
- La primera vez que guarde el **Recordset**, es opcional especificar *destino*. Si se omite *destino*, se creará un nuevo archivo con el nombre establecido en el valor de la [origen](../../../ado/reference/ado-api/source-property-ado-recordset.md) propiedad de la **conjunto de registros**.  
+ La primera vez que guarde el **Recordset**, es opcional especificar *destino*. Si se omite *destino*, se creará un nuevo archivo con un nombre establecido en el valor de la [origen](../../../ado/reference/ado-api/source-property-ado-recordset.md) propiedad de la **Recordset**.  
   
- Omitir *destino* cuando vuelve a llamar a **guardar** después de que se producirá un error en tiempo de ejecución o la primera operación de guardar. Si se llama posteriormente **guardar** con un nuevo *destino*, **Recordset** se guarda en el nuevo destino. Sin embargo, el nuevo destino y el destino original ambas estarán abiertos.  
+ Omitir *destino* cuando se llama posteriormente **guardar** después de que se producirá un error en tiempo de ejecución o la primera operación de guardar. Si se llama posteriormente **guardar** con un nuevo *destino*, **Recordset** se guarda en el nuevo destino. Sin embargo, el nuevo destino y el destino original ambos será abiertos.  
   
- **Guardar** no cierra la **Recordset** o *destino*, por lo que puede seguir trabajando con el **Recordset** y guarde los cambios más recientes. *Destino* permanece abierta hasta que la **Recordset** está cerrada, durante el cual pueden leer pero no escribir en otras aplicaciones *destino*.  
+ **Guardar** no cierra la **Recordset** o *destino*, por lo que puede seguir trabajando con el **Recordset** y guarde los cambios más recientes. *Destino* permanece abierta hasta que el **Recordset** está cerrada, durante el cual pueden leer pero no escribir en otras aplicaciones *destino*.  
   
- Por motivos de seguridad, el **guardar** método permite sólo el uso de la configuración de seguridad baja y personalizada de una secuencia de comandos ejecutada por Microsoft Internet Explorer.  
+ Por motivos de seguridad, el **guardar** método permite solo el uso de la configuración de seguridad baja y personalizada de un script ejecutado por Microsoft Internet Explorer.  
   
- Si el **guardar** método se llama durante una asincrónica **Recordset** capturar, ejecutar o actualizar la operación está en curso, **guardar** espera hasta que la operación asincrónica completar.  
+ Si el **guardar** se llama al método asincrónico mientras se **Recordset** capturar, ejecutar o actualizar la operación está en curso, **guardar** espera hasta que la operación asincrónica completar.  
   
- Los registros se guardan comenzando por la primera fila de la **conjunto de registros**. Cuando el **guardar** método termina, la posición actual de la fila se mueve a la primera fila de la **conjunto de registros**.  
+ Se guardan los registros a partir de la primera fila de la **Recordset**. Cuando el **guardar** método finaliza, la posición actual de la fila se mueve a la primera fila de la **Recordset**.  
   
- Para obtener los mejores resultados, establezca la [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propiedad **adUseClient** con **guardar**. Si el proveedor no admite todas las funciones necesarias para guardar **Recordset** objetos, el servicio de Cursor proporcionará esa funcionalidad.  
+ Para obtener mejores resultados, establezca el [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propiedad **adUseClient** con **guardar**. Si el proveedor no admite todas las funciones necesarias para guardar **Recordset** objetos, el servicio de cursores proporcionará esa funcionalidad.  
   
- Cuando un **Recordset** se mantiene con el **CursorLocation** propiedad establecida en **adUseServer**, la capacidad de actualización para el **Recordset**está limitado. Normalmente, solo las actualizaciones de tabla única, inserciones y eliminaciones se permiten (depende de la funcionalidad de proveedor). El [Resync](../../../ado/reference/ado-api/resync-method.md) método también está disponible en esta configuración.  
+ Cuando un **Recordset** se mantiene con la **CursorLocation** propiedad establecida en **adUseServer**, la capacidad de actualización para el **Recordset**está limitado. Normalmente, solo las actualizaciones de tabla única, las inserciones y eliminaciones se permiten (según la funcionalidad de proveedor). El [Resync](../../../ado/reference/ado-api/resync-method.md) método también está disponible en esta configuración.  
   
- Dado que la *destino* parámetro puede aceptar cualquier objeto que admita OLE DB **IStream** interfaz, puede guardar un **conjunto de registros** directamente a la ASP  **Respuesta** objeto.  
+ Dado que el *destino* parámetro puede aceptar cualquier objeto que es compatible con OLE DB **IStream** interfaz, puede guardar un **Recordset** directamente a ASP  **Respuesta** objeto.  
   
- En el ejemplo siguiente, la **guardar** y **abiertos** métodos se usan para conservar un **Recordset** y abrirlo posteriormente:  
+ En el ejemplo siguiente, la **guardar** y **abierto** métodos se usan para conservar un **Recordset** y abrirlo posteriormente:  
   
 ```  
 'BeginPersist  
@@ -116,7 +113,7 @@ Destination, PersistFormat
 'EndPersist  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Esta sección contiene los temas siguientes.  
   
 -   [Más información acerca de la persistencia de conjunto de registros](../../../ado/guide/data/more-about-recordset-persistence.md)  

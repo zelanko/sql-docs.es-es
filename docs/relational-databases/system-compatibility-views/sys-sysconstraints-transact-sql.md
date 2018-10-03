@@ -1,14 +1,11 @@
 ---
-title: Sys.sysconstraints (Transact-SQL) | Documentos de Microsoft
+title: Sys.sysconstraints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysconstraints
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sys.sysconstraints compatibility view
 - sysconstraints system table
 ms.assetid: f2b2e2ad-ba24-48a1-913c-8ee4e0895dc4
-caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1f8c58f368afc0ae5a0e0f79f0bdc3717e20e025
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fce3ca4a2055d7f4eb10cfdcac7f09c7fd004282
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220616"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806883"
 ---
 # <a name="syssysconstraints-transact-sql"></a>sys.sysconstraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +36,14 @@ ms.locfileid: "33220616"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**constid**|**int**|Número de restricción.|  
 |**id**|**int**|Id. de la tabla que posee la restricción.|  
 |**colid**|**smallint**|Id. de la columna en la que se define la restricción.<br /><br /> 0 = Restricción de tabla|  
 |**spare1**|**tinyint**|Reservado|  
 |**status**|**int**|Pseudomáscara de bits que indica el estado. Entre los valores posibles figuran los siguientes:<br /><br /> 1 = Restricción PRIMARY KEY<br /><br /> 2 = Restricción UNIQUE KEY<br /><br /> 3 = Restricción FOREIGN KEY<br /><br /> 4 = Restricción CHECK<br /><br /> 5 = Restricción DEFAULT<br /><br /> 16 = Restricción de nivel de columna<br /><br /> 32 = Restricción de nivel de tabla|  
-|**acciones**|**int**|Reservado|  
+|**Acciones**|**int**|Reservado|  
 |**Error**|**int**|Reservado|  
   
 ## <a name="see-also"></a>Vea también  

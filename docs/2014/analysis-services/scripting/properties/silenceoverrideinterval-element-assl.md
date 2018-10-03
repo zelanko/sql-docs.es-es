@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SilenceOverrideInterval Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - SilenceOverrideInterval element
 ms.assetid: 0dcd2db4-9bc0-4460-b1dd-def0b38c4617
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ba345f4d7ebe21af3c2ff79739f3badf89da03d4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5b52e5a7caa3f6bd72d4bf598392a03cf744cbd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192495"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120419"
 ---
 # <a name="silenceoverrideinterval-element-assl"></a>Elemento SilenceOverrideInterval (ASSL)
   Define la cantidad de tiempo que deberá transcurrir tras recibir la notificación inicial y antes de que se inicie incondicionalmente la creación de imágenes OLAP multidimensionales (MOLAP).  
@@ -46,7 +43,7 @@ ms.locfileid: "37192495"
 </ProactiveCaching>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37192495"
 |Elemento primario|[ProactiveCaching](../objects/proactivecaching-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor de `SilenceOverrideInterval` invalida el valor de `SilenceInterval` si una notificación se recibe durante el período de silencio.  
   
  El elemento que se corresponde con el elemento primario de `SilenceOverrideInterval` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ProactiveCaching>.  

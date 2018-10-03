@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftstoplistproperties.general.f1
 - sql12.swb.fulltextsearch.ftstoplistproperties.schedule.f1
 ms.assetid: 2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f
-caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 3802396c3b2ff6d64aa439af07e7dba2f9b30c60
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4cfdd308ab7488633721ddaac55d3d926a276b0d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241295"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072525"
 ---
 # <a name="full-text-stoplist-properties"></a>Propiedades de lista de palabras irrelevantes de texto completo
   Use este cuadro de diálogo para agregar o eliminar palabras irrelevantes individuales, eliminar todas las palabras irrelevantes para un idioma concreto o borrar la lista de palabras irrelevantes actual. Una palabra irrelevante es una palabra de uso frecuente que se incluye en una lista de palabras irrelevantes. Las palabras irrelevantes de una lista de palabras irrelevantes se omiten en la indización de texto completo para las tablas que usan dicha lista. Para obtener más información, vea [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../relational-databases/search/full-text-search.md).  
@@ -46,7 +43,7 @@ ms.locfileid: "37241295"
  **Borrar lista de palabras irrelevantes**  
  Borra la lista de palabras irrelevantes eliminando todas las palabras irrelevantes para todos los idiomas.  
   
- **Palabra irrelevante**  
+ **palabra irrelevante**  
  Si seleccionó **Agregar palabra irrelevante** o **Eliminar palabra irrelevante**, escriba la palabra irrelevante en el campo **Palabra irrelevante** . Una nueva palabra irrelevante debe ser única; es decir, no debe estar todavía en esta lista de palabras irrelevantes para el idioma que seleccione.  
   
  **Idioma de texto completo**  

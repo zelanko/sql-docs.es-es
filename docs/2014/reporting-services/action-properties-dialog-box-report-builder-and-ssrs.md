@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shared.action.f1
@@ -33,16 +31,15 @@ f1_keywords:
 - "10244"
 - sql12.rtp.rptdesigner.seriesproperties.action.f1
 ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
-caps.latest.revision: 13
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e245d03b32dc48a96b0f1d967cc7c83b684654ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3ee4a1e9c6430cedb3d8bf34b2978e29c860685d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323765"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093635"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Cuadro de diálogo Propiedades de acción (Generador de informes y SSRS)
   El cuadro de diálogo **Acción** se puede usar para habilitar las opciones de hipervínculo para los elementos de gráfico, medidor y mapa que admitan vínculos. Defina una acción para que un usuario pueda hacer clic en el informe y vincularse a una dirección URL, a un informe diferente en el mismo servidor de informes o a un sitio de SharePoint integrado con un servidor de informes, o a una ubicación diferente del mismo informe.  
@@ -84,7 +81,7 @@ ms.locfileid: "37323765"
  **Nombre**  
  Escriba el nombre de un parámetro definido en el informe detallado.  
   
- **Value**  
+ **Valor**  
  Escriba o seleccione el valor que debe pasarse al parámetro especificado para el informe detallado. Haga clic en el botón **Expresión** (*fx*) para editar la expresión.  
   
  **Omitir**  

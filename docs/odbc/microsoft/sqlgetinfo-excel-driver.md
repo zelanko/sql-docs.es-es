@@ -1,38 +1,35 @@
 ---
-title: SQLGetInfo (controlador de Excel) | Documentos de Microsoft
+title: SQLGetInfo (controlador de Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Excel driver [ODBC], SQLGetInfo
 - SQLGetInfo function [ODBC], Excel Driver
 ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14f6ade916baecc37e80e7a5eeea458ad89d0a20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee95aa0b47e18ac1409858da03d5972baa7ec951
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904180"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802363"
 ---
 # <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo (controlador de Excel)
 > [!NOTE]  
 >  En este tema se proporciona información específica del controlador de Excel. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** es compatible con el tipo de información de SQL_FILE_USAGE. El valor devuelto es un entero de 16 bits con signo que indica cómo el controlador trata directamente los archivos en un origen de datos:  
+ **SQLGetInfo** es compatible con el tipo de información SQL_FILE_USAGE. El valor devuelto es un entero de 16 bits que indica el modo en que el controlador trata directamente los archivos en un origen de datos:  
   
 -   SQL_FILE_NOT_SUPPORTED: El controlador no es un controlador de nivel único.  
   
--   SQL_FILE_TABLE: Un controlador de nivel único trata los archivos en un origen de datos como tablas.  
+-   SQL_FILE_TABLE: Un controlador de nivel único trata los archivos de origen de datos como tablas.  
   
 -   SQL_FILE_QUALIFIER: Un controlador de nivel único trata los archivos en un origen de datos como un calificador.  
   
@@ -48,7 +45,7 @@ ms.locfileid: "32904180"
 ||97/2000|08.00.0000|  
   
 ## <a name="sqlfileusage"></a>SQL_FILE_USAGE  
- SQL_FILE_TABLE (Excel 3.0 o 4.0)  
+ SQL_FILE_TABLE (Excel 3.0 y 4.0)  
   
  SQL_FILE_CATALOG (Excel 5.0/7.0)  
   
@@ -68,12 +65,12 @@ ms.locfileid: "32904180"
  31 (5.0/7.0/97 Excel)  
   
 ## <a name="sqlcatalognameseparator"></a>SQL_CATALOG_NAME_SEPARATOR  
- "\\" (Excel 3.0 o 4.0)  
+ "\\" (Excel 3.0 y 4.0)  
   
  "." (Excel 5.0/7.0/97)  
   
 ## <a name="sqlcatalogterm"></a>SQL_CATALOG_TERM  
- "Directory" (Excel 3.0 o 4.0)  
+ "Directory" (Excel 3.0 y 4.0)  
   
  "Libro" (5.0/7.0/97 Excel)  
   

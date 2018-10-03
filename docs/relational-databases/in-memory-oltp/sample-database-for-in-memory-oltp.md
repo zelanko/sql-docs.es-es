@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 12/16/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 714152c79f88179d877ef7a4264757bd819a3487
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d042e4df43bc7914349d52c7a8a9a129641a4d89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43094806"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632263"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Base de datos de ejemplo para OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -96,7 +92,7 @@ ms.locfileid: "43094806"
   
  Se emplean dos nuevos procedimientos almacenados, Sales.usp_InsertSalesOrder_inmem y Sales.usp_UpdateSalesOrderShipInfo_inmem, para insertar pedidos de venta y actualizar la información de envío de un pedido de venta determinado.  
   
- El nuevo esquema 'Demo' contiene tablas y procedimientos almacenados auxiliares para ejecutar una carga de trabajo de demostración.  
+ El nuevo esquema 'Demo' contiene tablas del asistente y procedimientos almacenados para ejecutar una carga de trabajo de demostración.  
   
  En concreto, el ejemplo de OLTP en memoria agrega los siguientes objetos a AdventureWorks:  
   
@@ -146,13 +142,11 @@ ms.locfileid: "43094806"
   
 -   Las*restricciones DEFAULT* se admiten en las tablas optimizadas para memoria y la mayoría de las restricciones DEFAULT se migran tal cual. Sin embargo, la tabla original Sales.SalesOrderHeader contiene dos restricciones DEFAULT que recuperan la fecha actual, para las columnas OrderDate y ModifiedDate. En una carga de trabajo de procesamiento de pedidos de alto rendimiento con mucha simultaneidad, cualquier recurso global puede convertirse en un punto de contención. La hora del sistema es un recurso global y hemos observado que puede convertirse en un cuello de botella cuando se ejecuta una carga de trabajo de OLTP en memoria que inserta pedidos de venta, especialmente si es necesario recuperar la hora del sistema para varias columnas en el encabezado del pedido de venta, así como los detalles del pedido de venta. Para resolver el problema en este ejemplo se recupera la hora del sistema solo una vez para cada pedido de venta que se inserta, y se usa ese valores para las columnas datetime de SalesOrderHeader_inmem y SalesOrderDetail_inmem, en el procedimiento almacenado Sales.usp_InsertSalesOrder_inmem.  
   
--   *UDT de alias:* la tabla original usa dos tipos de datos definidos por el usuario (UDT) de alias, dbo.OrderNumber y dbo.AccountNumber, para las columnas PurchaseOrderNumber y AccountNumber, respectivamente. 
-            [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] no admite UDT de alias para las tablas optimizadas para memoria, por lo que las tablas nuevas usan los tipos de datos del sistema nvarchar(25) y nvarchar(15), respectivamente.  
+-   *UDT de alias:* la tabla original usa dos tipos de datos definidos por el usuario (UDT) de alias, dbo.OrderNumber y dbo.AccountNumber, para las columnas PurchaseOrderNumber y AccountNumber, respectivamente. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] no admite UDT de alias para las tablas optimizadas para memoria, por lo que las tablas nuevas usan los tipos de datos del sistema nvarchar(25) y nvarchar(15), respectivamente.  
   
 -   *Columnas que aceptan valores NULL en claves de índice:* en la tabla original, la columna SalesPersonID acepta valores NULL, mientras que en las tablas nuevas esa columna no acepta valores NULL y tiene una restricción DEFAULT con el valor (-1). Esto se debe a que los índices de las tablas optimizadas para memoria no pueden tener columnas que aceptan valores NULL en la clave de índice; -1 es un suplente para NULL en este caso.  
   
--   
-            *Columnas calculadas:* se omiten las columnas calculadas SalesOrderNumber y TotalDue, ya que [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] no admite columnas calculadas en tablas optimizadas para memoria. La nueva vista Sales.vSalesOrderHeader_extended_inmem refleja las columnas SalesOrderNumber y TotalDue. Por tanto, puede usar esta vista si se necesitan estas columnas.  
+-   *Columnas calculadas:* se omiten las columnas calculadas SalesOrderNumber y TotalDue, ya que [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] no admite columnas calculadas en tablas optimizadas para memoria. La nueva vista Sales.vSalesOrderHeader_extended_inmem refleja las columnas SalesOrderNumber y TotalDue. Por tanto, puede usar esta vista si se necesitan estas columnas.  
 
     - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se admiten columnas calculadas en tablas e índices optimizados para memoria.
@@ -166,8 +160,7 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se a
   
 -   *Restricciones DEFAULT:* igual que en SalesOrderHeader, la restricción DEFAULT que requiere la fecha y la hora del sistema no se migra; en su lugar, el procedimiento almacenado que inserta pedidos de venta se encarga de insertar la fecha y la hora actuales del sistema en la primera inserción.  
   
--   
-            *Columnas calculadas:* la columna calculada LineTotal no se ha migrado, ya que [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]no admite columnas calculadas en las tablas optimizadas para memoria. Para obtener acceso a esta columna, use la vista Sales.vSalesOrderDetail_extended_inmem.  
+-   *Columnas calculadas:* la columna calculada LineTotal no se ha migrado, ya que [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]no admite columnas calculadas en las tablas optimizadas para memoria. Para obtener acceso a esta columna, use la vista Sales.vSalesOrderDetail_extended_inmem.  
   
 -   *Rowguid:* la columna rowguid se omite. Para obtener detalles, vea la descripción de la tabla SalesOrderHeader.  
   
@@ -310,7 +303,7 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, se a
   
     -   Este procedimiento usa las tablas dbo.DomainIntegrity, dbo.ReferentialIntegrity y dbo.UniqueIntegrity para las reglas de integridad que es necesario comprobar; el ejemplo rellena estas tablas según las restricciones CHECK, UNIQUE y de clave externa existentes en las tablas originales de la base de datos AdventureWorks.  
   
-    -   Usa los procedimientos auxiliares dbo.usp_GenerateCKCheck, dbo.usp_GenerateFKCheck y dbo.GenerateUQCheck para generar el código T-SQL necesario para realizar las comprobaciones de integridad.  
+    -   Usa los procedimientos del asistente dbo.usp_GenerateCKCheck, dbo.usp_GenerateFKCheck y dbo.GenerateUQCheck para generar el código T-SQL necesario para realizar las comprobaciones de integridad.  
   
 ##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Medidas de rendimiento con la carga de trabajo de demostración  
  Ostress es una herramienta de línea de comandos desarrollada por el equipo de soporte técnico de Microsoft CSS SQL Server. Esta herramienta se puede usar para ejecutar consultas o ejecutar procedimientos almacenados en paralelo. Puede configurar el número de subprocesos para ejecutar una instrucción T-SQL proporcionada en paralelo y puede especificar cuántas veces se debe ejecutar la instrucción en este subproceso; ostress recorrerá los subprocesos y ejecutará la instrucción en todos ellos en paralelo. Una vez que concluya la ejecución en todos los subprocesos, ostress notificará el tiempo empleado en finalizar la ejecución en todos los subprocesos.  

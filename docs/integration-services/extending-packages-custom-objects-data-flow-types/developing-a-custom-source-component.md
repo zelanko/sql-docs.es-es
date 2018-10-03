@@ -5,12 +5,8 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,16 +19,15 @@ helpviewer_keywords:
 - custom sources [Integration Services]
 - source components [Integration Services]
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
-caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8987a0554736dcbe8b917b3ad9bef64bd6dee84c
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 79e015043fe256037e808d68a4188e1091780797
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329579"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629193"
 ---
 # <a name="developing-a-custom-source-component"></a>Desarrollar un componente de origen personalizado
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite que los desarrolladores escriban componentes de origen que se puedan conectar a los orígenes de datos personalizados y proporcionar datos de estos orígenes a otros componentes en una tarea de flujo de datos. La capacidad para crear orígenes personalizados es importante cuando es necesario conectar a orígenes de datos a los que no se puede tener acceso utilizando uno de los orígenes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] existentes.  
@@ -184,9 +179,9 @@ End Sub
 |DT_STR|Mayor que 0 y menor que 8000.|0|0|Distinto de 0 y una página de códigos válida.|  
 |DT_WSTR|Mayor que 0 y menor que 4.000.|0|0|0|  
   
- Puesto que las restricciones en las propiedades de tipo de datos se basan en el tipo de datos de la columna de salida, debe elegir el tipo de datos de [!INCLUDE[ssIS](../../includes/ssis-md.md)] correcto al trabajar con tipos administrados. La clase base proporciona tres métodos de aplicación auxiliar, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> y <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>, para ayudar a los programadores de componentes administrados a seleccionar un tipo de datos de [!INCLUDE[ssIS](../../includes/ssis-md.md)] dado un tipo administrado. Estos métodos convierten los tipos de datos administrados en tipos de datos de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y viceversa.  
+ Puesto que las restricciones en las propiedades de tipo de datos se basan en el tipo de datos de la columna de salida, debe elegir el tipo de datos de [!INCLUDE[ssIS](../../includes/ssis-md.md)] correcto al trabajar con tipos administrados. La clase base proporciona tres métodos del asistente, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> y <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>, para ayudar a los programadores de componentes administrados a seleccionar un tipo de datos de [!INCLUDE[ssIS](../../includes/ssis-md.md)] dado un tipo administrado. Estos métodos convierten los tipos de datos administrados en tipos de datos de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y viceversa.  
   
- En el ejemplo de código siguiente se muestra cómo se rellena la colección de columnas de salida de un componente en función del esquema de una tabla. Los métodos de aplicación auxiliar de la clase base se utilizan para establecer el tipo de datos de la columna; las propiedades dependientes se establecen en función del tipo de datos.  
+ En el ejemplo de código siguiente se muestra cómo se rellena la colección de columnas de salida de un componente en función del esquema de una tabla. Los métodos del asistente de la clase base se utilizan para establecer el tipo de datos de la columna; las propiedades dependientes se establecen en función del tipo de datos.  
   
 ```csharp  
 SqlCommand sqlCommand;  

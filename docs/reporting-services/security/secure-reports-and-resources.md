@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], reports
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5320c2a40106c8bbdaa2417fc2a74f19e2c76d6a
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: dfd46944ef5f54d76f8c426b12656e7652e231f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266337"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620136"
 ---
 # <a name="secure-reports-and-resources"></a>Proteger informes y recursos
   Puede establecer la seguridad para informes y recursos individuales a fin de controlar el grado de acceso de los usuarios a estos elementos. De manera predeterminada, solo los usuarios que pertenezcan al grupo integrado **Administradores** pueden ejecutar informes, ver recursos, modificar propiedades y eliminar elementos. Para los demás usuarios se deben crear asignaciones de roles que concedan acceso a un informe o recurso.  

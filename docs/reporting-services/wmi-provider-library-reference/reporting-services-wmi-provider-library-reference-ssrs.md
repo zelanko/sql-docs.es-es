@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - Reporting Services WMI Provider Library
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 17ba711d-7eff-4423-9168-63dc425a3428
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad028730c329857cc7072e6bda11966edfa9ba97
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 46a8a773f246e1297d11fd04d08fbebbe3e1df01
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272725"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640863"
 ---
 # <a name="reporting-services-wmi-provider-library-reference-ssrs"></a>Referencia de la biblioteca de proveedores WMI de Reporting Services (SSRS)
   El proveedor de Instrumental de administración de Windows (WMI) [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite operaciones de WMI que le permiten escribir scripts y código para modificar la configuración del servidor de informes y del Administrador de informes.  

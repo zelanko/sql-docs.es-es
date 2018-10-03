@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a2cd2386-2df8-4b69-ab81-9ad1a31f6d27
-caps.latest.revision: 15
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a56a29edc9b30577dca3db245d3ace5e4c7814d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 09d5ad740cb692549d56b9226bc3c7ad5bb234a4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169796"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175785"
 ---
 # <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>Lección 6: Ejecutar la aplicación del esquema RDL (VB-C#)
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ofrece dos métodos para generar y ejecutar una aplicación de consola desde el entorno de desarrollo integrado (IDE):  

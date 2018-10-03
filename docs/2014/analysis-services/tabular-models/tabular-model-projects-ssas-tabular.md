@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 15358811-22a6-43b1-b1a7-9c974e8367b9
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 167e31084d90120a51bd740176b0497b0104b4fc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 47cd197168b275762b5fa2faa4790a567171022f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156766"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168145"
 ---
 # <a name="tabular-model-projects-ssas-tabular"></a>Proyectos de modelos tabulares (SSAS tabular)
   Para crear un modelo tabular, primero debe crear un proyecto de modelos tabulares en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]proporciona tres nuevas plantillas de proyectos de Business Intelligence para crear proyectos de modelos tabulares. Cada plantilla de proyectos proporciona un marco en el que se puede empezar a crear el modelo. En los temas de esta sección se describe cómo crear un proyecto de modelos tabulares mediante plantillas de proyectos.  

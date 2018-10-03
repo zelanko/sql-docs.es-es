@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.partitionproperties.proactivecaching.f1
 ms.assetid: ecba72a3-703f-4ede-9d85-9a3318a749e5
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: af6d5134b697b2554170695d2e87824d961f090b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 67ebcc8bcf5c3219d259e4b29eb5c2c737c11df1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237655"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118795"
 ---
 # <a name="proactive-caching-partition-properties-dialog-box-ssms"></a>Almacenamiento en caché automático (cuadro de diálogo Propiedades de la partición, SSMS)
   Utilice la página **Almacenamiento en caché automático** del cuadro de diálogo **Propiedades de la partición** de SQL Server Management Studio para definir las propiedades de almacenamiento y de almacenamiento en caché automático de una partición en un grupo de medida para un cubo de una base de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -33,7 +30,7 @@ ms.locfileid: "37237655"
  **Configuración estándar**  
  Establezca uno de los parámetros de configuración predefinidos que se indican en la tabla siguiente.  
   
-|Configuración|Descripción|  
+|Parámetro|Descripción|  
 |-------------|-----------------|  
 |**ROLAP en tiempo real**|Seleccione esta opción para utilizar los siguientes parámetros de configuración de almacenamiento y almacenamiento en caché automático:<br /><br /> Modo de almacenamiento ROLAP.<br /><br /> Habilitar el almacenamiento en caché automático.<br /><br /> Quitar la caché no actualizada, con un período de latencia de 0 segundos.<br /><br /> Colocar el objeto en línea de forma inmediata.|  
 |**HOLAP en tiempo real**|Seleccione esta opción para utilizar los siguientes parámetros de configuración de almacenamiento y almacenamiento en caché automático:<br /><br /> Modo de almacenamiento HOLAP.<br /><br /> Habilitar el almacenamiento en caché automático.<br /><br /> Quitar la caché no actualizada, con un período de latencia de 0 segundos.<br /><br /> Actualizar la caché cuando los datos sufren cambios, con un intervalo de latencia de 0 segundos y sin reemplazo de intervalo de latencia.<br /><br /> Colocar el objeto en línea de forma inmediata.|  

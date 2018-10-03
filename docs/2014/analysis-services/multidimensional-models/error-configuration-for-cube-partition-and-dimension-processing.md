@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.cubeproperties.errorconfiguration.f1
 - sql12.asvs.sqlserverstudio.dimensionproperties.errorconfiguration.f1
 - sql12.asvs.sqlserverstudio.partitionproperties.errorconfiguration.f1
 ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3edb4e923424def48ff3cacdd9eb8967f8cb6579
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ec0d1acbe1714159d6777f6cb91056e4e14b356
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275921"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175375"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing-ssas---multidimensional"></a>Configuración de errores para el procesamiento de cubos, particiones y dimensiones (SSAS - multidimensional)
   Las propiedades de configuración de errores de objetos de cubo, partición o dimensión determinan cómo responde el servidor cuando se producen errores de integridad de datos durante el procesamiento. Claves duplicadas, claves que faltan y valores NULL en una columna de clave suelen desencadenar esos errores, y mientras el registro que produce el error no se agregue a la base de datos, puede establecer las propiedades que determinan qué ocurre después. De forma predeterminada, el procesamiento se detiene. Sin embargo, durante el desarrollo de un cubo, puede ser conveniente que el procesamiento continúe cuando se produzcan errores para que pueda probar los comportamientos del cubo con datos importados, aunque sean incompletos.  
@@ -85,7 +82,7 @@ ms.locfileid: "37275921"
   
  **Respuesta del servidor a errores concretos**  
   
-|Property|Valor predeterminado|Otros valores|  
+|Property|Default|Otros valores|  
 |--------------|-------------|------------------|  
 |`CalculationError`<br /><br /> Se produce al inicializar la configuración de errores.|`IgnoreError` no registra ni cuenta el error; el procesamiento continúa siempre y cuando el recuento de errores está debajo del límite máximo.|`ReportAndContinue` registra y cuenta el error.<br /><br /> `ReportAndStop` informa del error y detiene el procesamiento inmediatamente, sin tener en cuenta el límite de errores.|  
 |`KeyNotFound`<br /><br /> Se produce cuando una clave externa de una tabla de hechos no tiene una clave principal coincidente en una tabla de dimensiones relacionada (por ejemplo, una tabla de hechos Ventas tiene un registro con un identificador de producto que no existe en la tabla de dimensión Producto). Este error puede producirse durante el procesamiento de particiones o durante el procesamiento de dimensiones de copo de nieve.|`ReportAndContinue` registra y cuenta el error.|`ReportAndStop` informa del error y detiene el procesamiento inmediatamente, sin tener en cuenta el límite de errores.<br /><br /> `IgnoreError` no registra ni cuenta el error; el procesamiento continúa siempre y cuando el recuento de errores está debajo del límite máximo. Los registros que desencadenan este error se convierten al miembro desconocido de forma predeterminada, pero puede cambiar la propiedad `KeyErrorAction` para que se descarten en su lugar.|  

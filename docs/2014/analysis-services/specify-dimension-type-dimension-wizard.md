@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.bidimensionproperties.f1
 ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bdbc0375dd2f6c77d81ab4028bb5118de93a021f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 166fae1cb6fb76587b6741b6f47449d2600bf8e8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185323"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155866"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>Especificar tipo de dimensión (Asistente para dimensiones)
   Use la página **Especificar tipo de dimensión** para definir el tipo de dimensión y agregar a la dimensión tipos de atributo especiales asociados con el tipo de dimensión seleccionado.  
@@ -56,7 +53,7 @@ ms.locfileid: "37185323"
 > [!NOTE]  
 >  Las opciones de esta sección están disponibles solo si el **Tipo de dimensión** seleccionado tiene tipos de atributo especiales asociados. No todas las dimensiones tienen tipos de atributo especiales asociados.  
   
- **Incluir**  
+ **incluir**  
  Seleccione esta opción para incluir el tipo de atributo en la dimensión.  
   
  **Tipo de atributo**  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5e027605-1086-4941-bb01-f315df8f829b
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b56558bf2e7d49f336d756699f8b5dc59f2ac58
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c3b42834bc12048680c97465810832f5431441d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222305"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168192"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>Configurar la actualización de datos dedicada o el proceso de una sola consulta (PowerPivot para SharePoint)
   En el modo integrado de SharePoint, se puede configurar una instancia del servidor de Analysis Services para admitir un tipo específico de solicitud de procesamiento, como la actualización de datos o el procesamiento de una sola consulta. De forma predeterminada, ambos tipos de solicitudes de carga están habilitados. Puede desactivar cualquiera de los tipos para crear un motor de consulta dedicado o un servidor de actualización de datos.  
@@ -63,7 +60,7 @@ ms.locfileid: "37222305"
   
  Puede aumentar el número de trabajos de actualización de datos que se pueden ejecutar al mismo tiempo si el sistema tiene la capacidad de admitir carga adicional.  
   
-|Configuración|Valores válidos|Descripción|  
+|Parámetro|Valores válidos|Descripción|  
 |-------------|------------------|-----------------|  
 |Valor predeterminado|Se calcula en función de la RAM.|El valor predeterminado se basa en la cantidad de memoria disponible dividida entre 4 gigabytes. Una fórmula calcula el valor predeterminado para que la configuración se pueda ajustar en función de las capacidades del sistema.<br /><br /> Nota: El divisor de 4 gigabytes se seleccionó según el uso de memoria RAM para un muestreo grande de orígenes de datos PowerPivot reales. No se basa en la arquitectura física o lógica de PowerPivot.|  
 |Valor máximo|Se calcula en función del número de CPU.|El número máximo de trabajos simultáneos que puede especificar se basa en el número de procesadores del equipo. Por ejemplo, en un equipo de cuatro núcleos y cuatros sockets, el número máximo de trabajos que puede ejecutar de forma simultánea es 16.|  

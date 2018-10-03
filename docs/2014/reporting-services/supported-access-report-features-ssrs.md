@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], Access reports
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - importing reports
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
-caps.latest.revision: 43
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b2beb25cee62fda3e3f71290d0f91a0a8954feed
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d3c218b5e72e231179443c146a6ea3c23747d4e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268481"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180615"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Compatibilidad con características de informes de Access (SSRS)
   Cuando se importa un informe al Diseñador de informes, el proceso de importación convierte el informe de [!INCLUDE[msCoName](../includes/msconame-md.md)] Access en un archivo RDL (Report Definition Language) de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite varias características de Access; no obstante, debido a las diferencias entre Access y [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], algunos elementos deben modificarse ligeramente para que sean admitidos. En este tema, se describe cómo se convierten las características de informes de Access a RDL.  

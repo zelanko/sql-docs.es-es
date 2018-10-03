@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AxesInfo Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - AxesInfo element
 ms.assetid: 15cfa67d-5acd-4737-8a81-2df34b334d3f
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93ad2eb9d35384831cb952d140be267e75a7647d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7bde7feb88ad570665200c1c3357bbba4127a963
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178412"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178495"
 ---
 # <a name="axesinfo-element-xmla"></a>Elemento AxesInfo (XMLA)
   Contiene una colección de [AxisInfo](axisinfo-element-xmla.md) elementos que representan los metadatos de eje contenidos por el elemento primario [OlapInfo](olapinfo-element-xmla.md) elemento.  
@@ -50,7 +47,7 @@ ms.locfileid: "37178412"
 </OlapInfo>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -65,7 +62,7 @@ ms.locfileid: "37178412"
 |Elementos primarios|[OlapInfo](olapinfo-element-xmla.md)|  
 |Elementos secundarios|[AxisInfo](axisinfo-element-xmla.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento `AxesInfo` contiene un elemento `AxisInfo` para cada eje dentro del conjunto de datos multidimensionales devuelto por un elemento `root` que utiliza el tipo de datos `MDDataSet`.  
   
 ## <a name="see-also"></a>Vea también  

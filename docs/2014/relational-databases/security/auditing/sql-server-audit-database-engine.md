@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - audit
@@ -17,12 +15,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8debb182069b7294f1fb8027c072a3fb720b62c8
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 36aeb6f1b8b2b90dce737e3e815b3385429e84f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43022073"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175355"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (motor de base de datos)
   La*auditoría* de una instancia de [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] o de una base de datos individual implica el seguimiento y registro de los eventos que se producen en [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. La auditoría de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite crear auditorías de servidor, que pueden contener especificaciones de auditoría de servidor para los eventos de servidor, y especificaciones de auditoría de base de datos para los eventos de base de datos. Los eventos auditados se pueden escribir en los registros de eventos o en los archivos de auditoría.  
@@ -104,7 +102,7 @@ ms.locfileid: "43022073"
   
 4.  Lea los eventos de auditoría mediante el **Visor de eventos**de Windows, el **Visor del archivo de registros**o la función fn_get_audit_file.  
   
- Para obtener más información, consulte [Create a Server Audit and Server Audit Specification](create-a-server-audit-and-server-audit-specification.md) y [Create a Server Audit and Database Audit Specification](create-a-server-audit-and-database-audit-specification.md).  
+ Para obtener más información, consulte [Crear una auditoría de servidor y una especificación de auditoría de servidor](create-a-server-audit-and-server-audit-specification.md) y [Crear una especificación de auditoría de servidor y de auditoría de base de datos](create-a-server-audit-and-database-audit-specification.md).  
   
 ## <a name="considerations"></a>Consideraciones  
  Si se produce un error al comenzar la auditoría, el servidor no se iniciará. En este caso, se podrá iniciar el servidor usando la opción **–f** en la línea de comandos.  

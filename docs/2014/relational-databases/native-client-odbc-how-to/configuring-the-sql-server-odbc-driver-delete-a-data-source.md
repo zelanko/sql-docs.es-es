@@ -1,26 +1,23 @@
 ---
-title: Eliminar un origen de datos (ODBC) | Microsoft Docs
+title: Eliminar un origen de datos (ODBC) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data sources [ODBC]
 ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e870254043d9cc85d99203d76513816f67267560
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ff882caf0ce5d9ef7d2e9f059daed89ed4b50d82
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415194"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144095"
 ---
 # <a name="delete-a-data-source-odbc"></a>Eliminar un origen de datos (ODBC)
   Puede eliminar un origen de datos con el Administrador de ODBC, mediante programación (utilizando [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)), o mediante la eliminación de un archivo (si se trata de un nombre de origen de datos de archivo).  

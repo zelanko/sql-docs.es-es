@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AggregationFunction Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AggregationFunction element
 ms.assetid: 40cfc7f9-1089-45f9-be90-a29770ed9682
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90908001138f59d4270811376ac44025148889cf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 453d51d678a8e721eaa7fa280e23248c66019b5b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308445"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153215"
 ---
 # <a name="aggregationfunction-element-assl"></a>Elemento AggregationFunction (ASSL)
   Contiene la función de agregación que se usará para el tipo de cuenta.  
@@ -46,7 +43,7 @@ ms.locfileid: "37308445"
 </Account>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -58,16 +55,16 @@ ms.locfileid: "37308445"
   
 |Relación|Elemento|  
 |------------------|-------------|  
-|Elementos primarios|[Cuenta](../objects/account-element-assl.md)|  
+|Elementos primarios|[cuenta](../objects/account-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor de este elemento se limita a una de las cadenas siguientes:  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |*Sum*|La medida se agrega utilizando la función `Sum`.|  
-|*Recuento*|La medida se agrega utilizando la función `Count`.|  
+|*recuento*|La medida se agrega utilizando la función `Count`.|  
 |*Min*|La medida se agrega utilizando la función `Min`.|  
 |*Max*|La medida se agrega utilizando la función `Max`.|  
 |*DistinctCount*|La medida se agrega utilizando la función `DistinctCount`.|  

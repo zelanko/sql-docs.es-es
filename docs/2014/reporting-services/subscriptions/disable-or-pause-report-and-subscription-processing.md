@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - pausing schedules
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - roles [Reporting Services], modifying
 - shared schedules [Reporting Services], pausing
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
-caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2ece2c0fe9ae32652e92a5f8d20b628d924b369a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c15666aecbbdde8ca95eaf684bf9909454d3d42
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261971"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129316"
 ---
 # <a name="pause-report-and-subscription-processing"></a>Pausar el procesamiento de informes y suscripciones
   No es posible pausar un informe o una suscripción directamente. No obstante, se puede interrumpir su procesamiento antes del inicio del proceso o cuando se realiza una conexión al origen de datos. También es posible impedir el procesamiento de un informe o una suscripción haciendo que los usuarios no puedan obtener acceso a los mismos.  

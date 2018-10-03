@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - user instances
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d87a85927751b12e3f86d5ce2bc908da9d063b21
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 676bc7adc3debb0beaee10d09d6fbe8018d42c2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243255"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158955"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` es un modo de ejecución de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] destinado a los desarrolladores de programa. `LocalDB` instalación copia un conjunto mínimo de archivos necesarios para iniciar el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Una vez `LocalDB` está instalado, los desarrolladores inician una conexión mediante el uso de una cadena de conexión especial. Cuando se conecta el necesario [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] infraestructura es automáticamente crea e inicia, permitiendo que la aplicación usar la base de datos sin tareas de configuración compleja ni tardar mucho tiempo. Las herramientas de desarrollo pueden proporcionar a los desarrolladores de software un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que les permite escribir y probar el código de [!INCLUDE[tsql](../../includes/tsql-md.md)] sin tener que administrar una instancia de servidor completa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Una instancia de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] `LocalDB` se administra mediante el `SqlLocalDB.exe` utilidad. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB` debe usarse en lugar de la [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] característica de instancia de usuario que está en desuso.  
@@ -58,7 +55,7 @@ ms.locfileid: "37243255"
   
 -   Las instancias automáticas de `LocalDB` son públicos. Se crean y se administran automáticamente para el usuario y se pueden utilizar en cualquier aplicación. Una instancia automática de `LocalDB` en cada versión de `LocalDB` instalado en el equipo del usuario. Las instancias automáticas de `LocalDB` proporcionar una administración agilizada de la instancia. No hay ninguna necesidad de crear la instancia; solo funciona. Esto permite la instalación y migración fáciles de las aplicaciones en un equipo diferente. Si el equipo de destino tiene la versión especificada de `LocalDB` instalada, la instancia automática de `LocalDB` para esa versión está disponible en el equipo de destino. Las instancias automáticas de `LocalDB` cuentan con un patrón especial para el nombre de instancia que pertenece a un espacio de nombres reservado. Esto evita conflictos de nombres con las instancias con nombre de `LocalDB`. El nombre de la instancia automática es **MSSQLLocalDB**.  
   
--   Instancias con nombre de `LocalDB` son privados. Son propiedad de una sola aplicación que es la responsable de la creación y administración de la instancia. Las instancias con nombre proporcionan el aislamiento de otras instancias y pueden mejorar el rendimiento reduciendo la contención de recursos con otros usuarios de bases de datos. Las instancias con nombre deben ser creadas explícitamente por el usuario a través de la `LocalDB` API de administración o implícitamente a través del archivo app.config de archivos para una aplicación administrada (aunque la aplicación administrada también puede usar la API, si lo desea). Cada instancia con nombre de `LocalDB` tiene asociado un `LocalDB` versión que señala al conjunto respectivo de `LocalDB` archivos binarios. El nombre de instancia de un `LocalDB` es `sysname` datos escriba y puede tener hasta 128 caracteres. (Esta característica es diferente para las instancias con nombre normales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en que los nombres están limitados a nombres de NetBIOS normales de 16 caracteres ASCII). Esto significa que todos los archivos base de datos utilizados por un `LocalDB` instancia debe ser accesible mediante la cuenta de Windows del usuario propietario, sin considerar la pertenencia al grupo Administradores local.  Una instancia con nombre que utiliza un nombre de instancia automática se convierte en una instancia automática.  
+-   Instancias con nombre de `LocalDB` son privados. Son propiedad de una sola aplicación que es la responsable de la creación y administración de la instancia. Las instancias con nombre proporcionan el aislamiento de otras instancias y pueden mejorar el rendimiento reduciendo la contención de recursos con otros usuarios de bases de datos. Las instancias con nombre deben ser creadas explícitamente por el usuario a través de la `LocalDB` API de administración o implícitamente a través del archivo app.config de archivos para una aplicación administrada (aunque la aplicación administrada también puede usar la API, si lo desea). Cada instancia con nombre de `LocalDB` tiene asociado un `LocalDB` versión que señala al conjunto respectivo de `LocalDB` archivos binarios. El nombre de instancia de un `LocalDB` es `sysname` datos escriba y puede tener hasta 128 caracteres. (Esta característica es diferente para las instancias con nombre normales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en que los nombres están limitados a nombres de NetBIOS normales de 16 caracteres ASCII). El nombre de una instancia de `LocalDB` puede contener cualquier carácter Unicode que sean válidos en un nombre de archivo.  Una instancia con nombre que utiliza un nombre de instancia automática se convierte en una instancia automática.  
   
  Usuarios diferentes de un equipo pueden tener instancias con el mismo nombre. Cada instancia es un proceso diferente que se ejecuta como un usuario diferente.  
   

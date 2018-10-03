@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.translations.translationpane.tranlationdetails.f1
 ms.assetid: 0aa61df3-f2b0-4703-a63b-124da672dcc3
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f4051de358b2567d6473a016e7f965d15b1dd215
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cbeaebfc7eab6041bb547f18dacfc01aef3d5117
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306335"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179025"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Detalles de la traducción (pestaña Traducciones, Diseñador de dimensiones) (Analysis Services – Datos multidimensionales)
   Use el panel de **Detalles de la traducción** de la pestaña **Traducciones** del Diseñador de dimensiones para definir y administrar traducciones para la dimensión seleccionada actualmente.  
@@ -56,12 +53,12 @@ ms.locfileid: "37306335"
   
 -   Nivel  
   
-     `Caption` propiedad  
+     `Caption` Propiedad  
   
  **\<Lenguaje >**  
  Escriba o seleccione el valor de la propiedad del objeto de la dimensión en el idioma seleccionado. Si hace clic en el botón de puntos suspensivos (**…**), se abrirán otros cuadros de diálogo, según la propiedad que edite:  
   
--   `NamingTemplate` propiedad  
+-   `NamingTemplate` Propiedad  
   
      Muestra el [Cuadro de diálogo Plantilla de asignación de nombres de nivel &#40;Analysis Services - Datos multidimensionales&#41;](level-naming-template-dialog-box-analysis-services-multidimensional-data.md).  
   

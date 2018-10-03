@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b213cb58-2c40-4c89-b08b-d3c36a4afad3
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 209ba28d519eaaaf59b681f872766b7fa9dd983f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ff8c21dd55154d28096fdd98e680bd404be4e38
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218705"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171605"
 ---
 # <a name="lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial"></a>Lección 6: Crear y trabajar con predicciones (Tutorial básico de minería de datos)
   Ha entrenado, probado y explorado los modelos de minería de datos que creó. Ahora ya puede usar los modelos para identificar a las personas que es más probable que respondan a la nueva campaña de envío de correo directo.  

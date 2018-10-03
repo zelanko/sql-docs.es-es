@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10131"
 - sql12.rtp.rptdesigner.placeholderproperties.general.f1
 ms.assetid: 7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8
-caps.latest.revision: 11
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03c093382d1027c984e3ee1c953bd803dcbdbe25
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bceb733247e806f9e03803797c831561662229d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309735"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171165"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>Cuadro de diálogo Propiedades del marcador de posición, General (Generador de informes y SSRS)
   Use el cuadro de diálogo **Propiedades del marcador de posición** para cambiar el valor, la información sobre herramientas y las opciones de marcado de un marcador de posición en un cuadro de texto.  
@@ -31,7 +28,7 @@ ms.locfileid: "37309735"
  **Etiqueta**  
  Escriba una etiqueta para el marcador de posición. La etiqueta solo se muestra en la superficie de diseño.  
   
- **Value**  
+ **Valor**  
  Escriba el valor del cuadro de texto. Debe ser una expresión de campo, otra expresión o una etiqueta. Haga clic en el botón **Expresión** (*fx*) para editar la expresión.  
   
  **Información sobre herramientas**  

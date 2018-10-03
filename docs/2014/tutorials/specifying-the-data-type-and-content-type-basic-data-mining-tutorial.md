@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 72484d27-3ef1-4f16-813c-2f43231fc2da
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 578d47783f22e857bb2fb84949e9d22dd6ad0e85
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b97cec782c7f95de42ee64d7db0ce56ffa916c3e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37174961"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176617"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>Especificar el tipo de datos y el tipo de contenido (Tutorial básico de minería de datos)
   Ahora que ha seleccionado qué columnas utilizar para generar la estructura y entrenar los modelos, realice los cambios necesarios en los datos predeterminados y tipos de contenido que establece el asistente.  
@@ -36,11 +33,11 @@ ms.locfileid: "37174961"
     |------------|------------------|---------------|  
     |**Línea de dirección 1**|**Discretos**|**Texto**|  
     |**Línea 2 de dirección**|**Discretos**|**Texto**|  
-    |**Edad**|**Continua**|**Long**|  
+    |**Edad**|**continua**|**Long**|  
     |**Bike Buyer**|**Discretos**|**Long**|  
     |**Commute Distance**|**Discretos**|**Texto**|  
     |**CustomerKey**|**Key**|**Long**|  
-    |**DateLastPurchase**|**Continua**|**Date**|  
+    |**DateLastPurchase**|**continua**|**Date**|  
     |**Email Address**|**Discretos**|**Texto**|  
     |**English Education**|**Discretos**|**Texto**|  
     |**English Occupation**|**Discretos**|**Texto**|  
@@ -54,7 +51,7 @@ ms.locfileid: "37174961"
     |**Number Children At Home**|**Discretos**|**Long**|  
     |**Region**|**Discretos**|**Texto**|  
     |**Total Children**|**Discretos**|**Long**|  
-    |**Yearly Income**|**Continua**|**Doble**|  
+    |**Yearly Income**|**continua**|**Doble**|  
   
 3.  Haga clic en **Siguiente**.  
   

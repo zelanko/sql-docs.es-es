@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [SQL Server], queries
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Results pane
 - clearing query results
 ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29683280c60090a29d50c0cc94f0514dc31a4d23
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 424d923593de62afc96988730e88bf052504f210
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43819971"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177245"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Borrar los resultados de una consulta (Visual Database Tools)
   Después de ejecutar una consulta en el **Diseñador de consultas y vistas**, puede borrar el panel Resultados. Este procedimiento se aplica a las consultas creadas mediante las opciones **Abrir vista** o **Abrir tabla** del Explorador de objetos. En[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], después de ejecutar una consulta en el Editor de consultas, el panel Resultados no se puede borrar excepto si se cierra la ventana Editor de consultas o se ejecuta otra consulta.  

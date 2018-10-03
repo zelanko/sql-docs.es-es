@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined error messages [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - errors [SQL Server], severity
 - TRY...CATCH [SQL Server]
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d517512ebe1c61a63247b6ae37e815e0440677c3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ec0157d30495166aba0a001997d843dafb5ba916
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414414"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180155"
 ---
 # <a name="database-engine-error-severities"></a>Niveles de gravedad de error del motor de base de datos
   Cuando el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]muestra un error, la gravedad del error indica el tipo de problema detectado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

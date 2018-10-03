@@ -1,13 +1,11 @@
 ---
-title: Matriz de compatibilidad | Documentos de Microsoft
+title: Matriz de compatibilidad | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
@@ -18,39 +16,38 @@ helpviewer_keywords:
 - application upgrades [ODBC], compatibility matrix
 - upgrading applications [ODBC], compatibility matrix
 ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09f09d5a8b6e15c677969b2b865e3908200108e4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2a8c46bbcfea4c94d3dc5b4cd0f5783858f3f0fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912440"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715623"
 ---
 # <a name="compatibility-matrix"></a>Matriz de compatibilidad
-En la tabla siguiente se describe la compatibilidad de los tipos de aplicaciones y controladores definidos previamente en esta sección.  
+En la tabla siguiente describe la compatibilidad de los tipos de aplicaciones y controladores definidos anteriormente en esta sección.  
   
-|Tipo de aplicación<br /><br /> y la versión|ODBC de 32 bits<br /><br /> 2.*x* controlador|ODBC 3. *x*<br /><br /> controlador|Controlador de ODBC 3.8|Controlador ISO y abra compatible con grupo|  
+|Tipo de aplicación<br /><br /> y la versión|ODBC de 32 bits<br /><br /> 2.*x* controlador|ODBC 3. *x*<br /><br /> controlador|Controlador de ODBC 3.8|Controlador de ISO y abierto compatible con grupo|  
 |--------------------------------------|-----------------------------------|---------------------------|---------------------|-----------------------------------------|  
 |aplicación de 16 bits, cualquier versión|Compatible|Compatible|Compatible|Compatible|  
-|2 puro. *x* aplicación|Compatible|Compatible|Compatible|No compatible [3]|  
-|2 puro. *x* vuelve a compilar la aplicación|Compatible|Compatible con [1]|Compatible con [1]|No compatible [3]|  
-|2 puro. *x* aplicación Unicode|Compatible|Compatible con [1]|Compatible con [1]|No Compatible [3]|  
-|Aplicación pura Open Group y compatible con ISO|No es compatible|Compatible con [2]|Compatible con [2]|Compatible con [2]|  
-|Aplicación 3.0 puro|No es compatible|Compatible|Compatible|No compatible [4]|  
-|Aplicación de 3,5 puro|No es compatible|Compatible|Compatible|No compatible [4]|  
-|Aplicación pura 3.8 (o superior)|No compatible [5]|No compatible [5]|Compatible|No compatible [4]|  
-|Aplicación reemplazado|Compatible|Compatible|Compatible|No compatible [3]|  
+|2 puro. *x* aplicación|Compatible|Compatible|Compatible|No compatible con [3]|  
+|2 puro. *x* vuelve a compilar la aplicación|Compatible|Compatible [1]|Compatible [1]|No compatible con [3]|  
+|2 puro. *x* aplicación Unicode|Compatible|Compatible [1]|Compatible [1]|No compatible con [3]|  
+|Aplicación pura Open Group y compatible con ISO|No es compatible|Compatible [2]|Compatible [2]|Compatible [2]|  
+|Aplicación 3.0 puro|No es compatible|Compatible|Compatible|No compatible con [4]|  
+|Aplicaciones de 3,5 puro|No es compatible|Compatible|Compatible|No compatible con [4]|  
+|Aplicación pura de 3,8 (o posterior)|No compatible con [5]|No compatible con [5]|Compatible|No compatible con [4]|  
+|Aplicación reemplazado|Compatible|Compatible|Compatible|No compatible con [3]|  
   
- [1] en la aplicación debe volver a compilar mediante los encabezados ODBC 3.5 (o superiores) con la opción de UNICODE (si es una aplicación Unicode) y debe ODBCVER 0x0250.  
+ [1] en la aplicación debe volver a compilar mediante los encabezados de ODBC 3.5 (o superiores) con la opción de UNICODE (si se trata de una aplicación de Unicode) y debe establecerse ODBCVER 0x0250.  
   
- [2] debe compilar con encabezados ODBC 3.5 (o superiores) y vincular con el Administrador de controladores ODBC en la aplicación. También se debe establecer la marca de encabezado ODBC_STD.  
+ [2] en la aplicación debe compilar con encabezados de ODBC 3.5 (o superiores) y vincular con el Administrador de controladores ODBC. También se debe establecer la marca de encabezado ODBC_STD.  
   
- [3] esta configuración potencialmente puede no funcionan porque no hay características en ODBC 2. *x* que no están en los estándares, como marcadores.  
+ [3] esta configuración potencialmente puede no funcionar porque hay funciones de ODBC 2. *x* que no están en los estándares, como marcadores.  
   
- [4] esta configuración potencialmente puede no funcionan porque no hay características en ODBC 3 *.x* que no están en los estándares, como marcadores.  
+ [4] esta configuración puede producir errores trabajar porque hay características en ODBC 3 *.x* que no están en los estándares, como marcadores.  
   
  [5] esta configuración puede producir errores porque no hay características de ODBC 3.8 que no están en los controladores ODBC de 2.x o 3.x, como específicos del controlador [tipos de datos C en ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   
@@ -59,7 +56,7 @@ En la tabla siguiente se describe la compatibilidad de los tipos de aplicaciones
   
 -   Asignar un identificador de entorno.  
   
--   Establezca el atributo de entorno SQL_ATTR_ODBC_VERSION a SQL_OV_ODBC3_80. Si el Administrador de controladores devuelve SQL_ERROR, el Administrador de controladores es anterior a 3.8. Restablecer SQL_ATTR_ODBC_VERSION SQL_OV_ODBC3 o SQL_OV_ODBC2, según corresponda, para que se corresponda con el Administrador de controladores.  
+-   Establezca el atributo de entorno de SQL_ATTR_ODBC_VERSION a SQL_OV_ODBC3_80. Si el Administrador de controladores devuelve SQL_ERROR, el Administrador de controladores es anterior a 3.8. Restablecer SQL_ATTR_ODBC_VERSION SQL_OV_ODBC3 o SQL_OV_ODBC2, según corresponda, para que correspondan al administrador de controladores.  
   
 -   Asignar un identificador de conexión.  
   
@@ -67,10 +64,10 @@ En la tabla siguiente se describe la compatibilidad de los tipos de aplicaciones
   
 -   Llame a SQLGetInfo para SQL_DRIVER_ODBC_VER determinar la versión del controlador. Si el controlador es un controlador de ODBC 3.8, puede usar los tipos de C específicos del controlador. En caso contrario, no utilice tipos de datos C específicos del controlador.  
   
- Tenga en cuenta que una aplicación de 3.x ODBC ha vuelto a compilar puede utilizar las características de ODBC 3.8 distintos de los tipos de C específicos del controlador sin especificar SQL_OV_ODBC3_80 para SQL_ATTR_ODBC_VERSION. Esto es similar a una aplicación de ODBC 2.x ha vuelto a compilar con características ODBC 3.x.  
+ Tenga en cuenta que puede usar una aplicación de 3.x ODBC ha vuelto a compilar las funciones de ODBC 3.8 distinto de los tipos de C específicos del controlador sin especificar SQL_OV_ODBC3_80 para SQL_ATTR_ODBC_VERSION. Esto es similar a una aplicación de ODBC 2.x ha vuelto a compilar mediante las características ODBC 3.x.  
   
 ## <a name="using-sqlcancelhandle-in-an-application-compatible-with-all-driver-managers"></a>Uso de SQLCancelHandle en una aplicación Compatible con todos los administradores de controlador  
- Dado que [SQLCancelHandle función](../../../odbc/reference/syntax/sqlcancelhandle-function.md) no se admite en administradores de controladores que se hayan publicado antes de Windows 7, no se puede cargar una aplicación en versiones anteriores de Windows si llama a **SQLCancelHandle** directamente. Para trabajar con todas las versiones de administradores de controladores y usar **SQLCancelHandle** en nuevas versiones de Windows, una aplicación debe llamar a **SQLCancelHandle** indirectamente mediante el uso de **LoadLibrary** y **GetProcAddress.**  
+ Dado que [función SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) no se admite en administradores de controlador que se publicaron antes de Windows 7, no se puede cargar una aplicación en versiones anteriores de Windows si llama a **SQLCancelHandle** directamente. Para trabajar con todas las versiones de los administradores de controlador y usar **SQLCancelHandle** en nuevas versiones de Windows, debe llamar una aplicación **SQLCancelHandle** indirectamente mediante el uso de **LoadLibrary** y **GetProcAddress.**  
   
 ## <a name="see-also"></a>Vea también  
  [Novedades de ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

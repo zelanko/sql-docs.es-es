@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_latch_stats_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_latch_stats dynamic management view
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 03e3a5a0497a1d2da15124287d557f6e27bc3e7e
-ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
+ms.openlocfilehash: 1fe8a78047be763aecb898a48a882b8f08d3bfb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44375688"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734036"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ ms.locfileid: "44375688"
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  sys.dm_os_latch_stats se puede utilizar para identificar el origen de la contención del bloqueo temporal examinando los tiempos y números de esperas relativos en las diferentes clases de bloqueos temporales. En algunas situaciones, se puede resolver o reducir la contención de bloqueos temporales. No obstante, puede haber situaciones que requerirán ponerse en contacto con los servicios de soporte al cliente de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
  Puede restablecer el contenido de sys.dm_os_latch_stats utilizando `DBCC SQLPERF` de la forma siguiente:  

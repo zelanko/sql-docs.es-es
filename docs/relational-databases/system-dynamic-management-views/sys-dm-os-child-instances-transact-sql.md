@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_child_instances
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - sys.dm_os_child_instances dynamic management view
 - monitoring server health
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 66f4d8c770cc10c2ba47769576d8f9625edac0cf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 71fc55f996a58fc8ed353405fa9e5fdc9ad845f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38056173"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751093"
 ---
 # <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +56,7 @@ ms.locfileid: "38056173"
 ## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para obtener más información acerca de la vista de administración dinámica, consulte [funciones y vistas de administración dinámica &#40;Transact-SQL&#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
   
 ## <a name="see-also"></a>Vea también  

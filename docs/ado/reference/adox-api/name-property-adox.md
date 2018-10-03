@@ -1,13 +1,11 @@
 ---
-title: Name (propiedad) (ADOX) | Documentos de Microsoft
+title: Nombre (propiedad, ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -41,16 +39,15 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADOX]
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9bb6d6e570de4595e2c6b3130432b8829da137b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f078f8664ce0386bba6069d771ba880b1c02e026
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286610"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737193"
 ---
 # <a name="name-property-adox"></a>Name (propiedad, ADOX)
 Indica el nombre del objeto.  
@@ -58,8 +55,8 @@ Indica el nombre del objeto.
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un **cadena** valor.  
   
-## <a name="remarks"></a>Notas  
- Nombres no tienen que ser únicos dentro de una colección.  
+## <a name="remarks"></a>Comentarios  
+ Nombres no tienen que ser único dentro de una colección.  
   
  El **nombre** propiedad es de lectura/escritura en [columna](../../../ado/reference/adox-api/column-object-adox.md), [grupo](../../../ado/reference/adox-api/group-object-adox.md), [clave](../../../ado/reference/adox-api/key-object-adox.md), [índice](../../../ado/reference/adox-api/index-object-adox.md), [ Tabla](../../../ado/reference/adox-api/table-object-adox.md), y [usuario](../../../ado/reference/adox-api/user-object-adox.md) objetos. El **nombre** propiedad es de solo lectura en [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md), [procedimiento](../../../ado/reference/adox-api/procedure-object-adox.md), y [vista](../../../ado/reference/adox-api/view-object-adox.md) objetos.  
   
@@ -77,6 +74,6 @@ Indica el nombre del objeto.
 |[Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[Objeto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|[Objeto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
 ## <a name="see-also"></a>Vea también  
- [Las tablas y columnas anexar métodos, ejemplo de la propiedad de nombre (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Anexar de teclas de método, tipo de clave, RelatedColumn, RelatedTable y ejemplo de las propiedades UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Ejemplo de la propiedad de nombre (VB), métodos Append columnas y tablas](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Append de claves, método, tipo de clave, RelatedColumn, RelatedTable y UpdateRule propiedades (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Ejemplo de propiedad ParentCatalog (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)

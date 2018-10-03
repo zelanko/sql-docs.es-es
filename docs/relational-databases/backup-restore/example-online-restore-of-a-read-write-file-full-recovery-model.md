@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full recovery model [SQL Server], RESTORE example
 - online restores [SQL Server], full recovery model
 - restore sequences [SQL Server], online
 ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
-caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 731c3e98bb6bc906c165bc4b7c3d97c85b919cd0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e0c90a6360a1d20cf785aecb85c3b45f673b41d3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32919070"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757963"
 ---
 # <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>Ejemplo: Restauración en línea de un archivo de lectura/escritura (modelo de recuperación completa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

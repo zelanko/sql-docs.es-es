@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,21 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - SchemaEnum enumeration [ADO]
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e28e750ad7a3521150dabdbf6b2771f3372bb0b3
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 4dd7edb2f5969f7ec8ded931c5e562c0c1992768
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984327"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749233"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Especifica el tipo de esquema **Recordset** que la [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) recupera del método.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Información adicional acerca de la función y las columnas se devuelve para cada constante ADO puede encontrarse en los temas de [Apéndice B: Schema Rowsets](http://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) de referencia de la base de datos del programador de OLE. El nombre de cada tema aparece entre paréntesis en la sección de descripción de la tabla siguiente.  
   
  Información adicional acerca de la función y las columnas se devuelve para cada constante ADO MD se puede encontrar en los temas de [OLE DB para los objetos OLAP y conjuntos de filas de esquema](http://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) en OLE DB para la documentación de procesamiento analítico en línea (OLAP). El nombre de cada tema aparece entre paréntesis en la columna de descripción de la tabla siguiente.  

@@ -1,34 +1,31 @@
 ---
-title: Ejemplo del método CompareBookmarks (VB) | Documentos de Microsoft
+title: Ejemplo del método CompareBookmarks (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - CompareBookmarks method [ADO], Visual Basic example
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff4e2c8c1e66ac7240e188e06ede5bb1295814de
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 99aadf2d532c6e42b2638aab34d19289617e7d38
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276964"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705183"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>Ejemplo del método CompareBookmarks (VB)
-Este ejemplo se muestra la [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) método. El valor relativo de los marcadores rara vez es necesario a menos que un marcador determinado es de algún modo especial.  
+Este ejemplo se muestra el [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) método. El valor relativo de los marcadores rara vez es necesario a menos que un marcador concreto es de algún modo especial.  
   
- Designe una fila aleatoria de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) deriva la ***autores*** tabla como destino de una búsqueda. A continuación, muestre la posición de cada fila en relación con ese destino.  
+ Designe una fila aleatoria de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) deriva el ***autores*** tabla como destino de una búsqueda. A continuación, muestra la posición de cada fila con respecto a los que tienen como destino.  
   
 ```  
 'BeginCompareBookmarksVB  

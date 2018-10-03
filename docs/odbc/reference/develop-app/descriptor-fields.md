@@ -1,34 +1,31 @@
 ---
-title: Campos de descriptor | Documentos de Microsoft
+title: Los campos de descriptor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], fields
 - header fields [ODBC]
 - record fields [ODBC]
 ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cddf01c0ef40b582410773ba109c2d1c23ee1e7a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b512ff83d0002ef4a7c79b48cd8829fc2dbb9ba3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912580"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696584"
 ---
 # <a name="descriptor-fields"></a>Campos de descriptor
-Los descriptores de contienen *encabezado* y *registro* campos que describen completamente columnas o parámetros.  
+Los descriptores de contienen *encabezado* y *registro* campos que se describen por completo las columnas o parámetros.  
   
- Un descriptor de contiene una única copia de los siguientes campos de encabezado. Cambiar un campo de cabecera afecta a todas las columnas o parámetros.  
+ Un descriptor contiene una única copia de los siguientes campos de encabezado. Cambiar un campo de encabezado afecta a todas las columnas o parámetros.  
   
 |||  
 |-|-|  
@@ -58,7 +55,7 @@ Los descriptores de contienen *encabezado* y *registro* campos que describen com
 |SQL_DESC_LITERAL_PREFIX|SQL_DESC_UNSIGNED|  
 |SQL_DESC_LITERAL_SUFFIX|SQL_DESC_UPDATABLE|  
   
- Muchos de los atributos de instrucción se corresponden con el campo de encabezado de un descriptor. Establecer estos atributos a través de una llamada a **SQLSetStmtAttr** y establecer el campo de encabezado de descriptor correspondiente mediante una llamada a **SQLSetDescField** tienen el mismo efecto. Lo mismo puede decirse de **SQLGetStmtAttr** y **SQLGetDescField**, lo cual recuperan la misma información. Al llamar a las funciones de instrucción en lugar de las funciones de descriptor tiene la ventaja de que no tiene un identificador de descriptor va a recuperar.  
+ Muchos de los atributos de instrucción se corresponden con el campo de encabezado de un descriptor. Establecer estos atributos a través de una llamada a **SQLSetStmtAttr** y establecer el campo de encabezado de descriptor correspondiente mediante una llamada a **SQLSetDescField** tienen el mismo efecto. Lo mismo puede decirse de **SQLGetStmtAttr** y **SQLGetDescField**, que recuperan la misma información. Llamar a las funciones de la instrucción en lugar de las funciones de descriptor tiene la ventaja de que no tiene un identificador de descriptor va a recuperar.  
   
  Los siguientes campos de encabezado pueden establecerse mediante el establecimiento de atributos de instrucción:  
   

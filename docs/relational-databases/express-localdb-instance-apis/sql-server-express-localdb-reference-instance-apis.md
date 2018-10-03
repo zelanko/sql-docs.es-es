@@ -1,27 +1,24 @@
 ---
-title: Referencia de la API de instancia de SQL Server Express LocalDB | Documentos de Microsoft
+title: Referencia de API de instancia de SQL Server Express LocalDB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
-caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 980b4c3de096cb9eaed8243a57c0f32a579206b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d79a4aa606d7e970ddbb9bbe0bb7a36a2948dc57
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701913"
 ---
-# <a name="sql-server-express-localdb-reference---instance-apis"></a>Referencia de LocalDB - API de instancia de SQL Server Express
+# <a name="sql-server-express-localdb-reference---instance-apis"></a>Referencia de SQL Server Express LocalDB: API de instancia
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En el mundo tradicional de SQL Server basado en servicios, las instancias de SQL Server individuales que están instaladas en un equipo único se encuentran físicamente separadas; es decir, cada instancia debe instalarse y quitarse de forma individual, tener un conjunto independiente de archivos binarios y ejecutarse en un proceso individual del servicio. El nombre de la instancia de SQL Server se utiliza para especificar a qué instancia de SQL Server se desea conectar el usuario.  
   
@@ -29,7 +26,7 @@ ms.lasthandoff: 05/03/2018
   
  Las instancias de LocalDB son siempre propiedad de un solo usuario y se hacen visibles y accesibles únicamente desde el contexto de este usuario, salvo que se haya habilitado el uso compartido de la instancia.  
   
- Aunque técnicamente las instancias de LocalDB no son las mismas que las instancias tradicionales de SQL Server, el uso al que están dirigidas es similar. Estos se denominan *instancias* para resaltar esta similitud y para que resulten más intuitivas para los usuarios de SQL Server.  
+ Aunque técnicamente las instancias de LocalDB no son las mismas que las instancias tradicionales de SQL Server, el uso al que están dirigidas es similar. Se denominan *instancias* para resaltar esta similitud y para que resulten más intuitivas para los usuarios de SQL Server.  
   
  LocalDB admite dos tipos de instancias: instancias automáticas (AI) e instancias con nombre (NI). El identificador para una instancia de LocalDB es el nombre de instancia.  
   
@@ -67,16 +64,16 @@ ms.lasthandoff: 05/03/2018
  Cada instancia con nombre tiene una versión de LocalDB asociada; es decir, señala a un conjunto de archivos binarios de LocalDB determinado. La versión de la instancia con nombre se establece durante el proceso de creación de la instancia.  
   
 ### <a name="named-instance-naming-rules"></a>Normas de nomenclatura para instancias con nombre  
- Puede tener un nombre de instancia de LocalDB hasta un total de 128 caracteres (el límite impuesto por la **sysname** tipo de datos). Se trata de una importante diferencia si se compara con los nombres tradicionales de instancia de SQL Server, las cuales están limitadas a los nombres de NetBIOS de 16 caracteres ASCII. Esta diferencia existe porque LocalDB trata a las bases de datos como archivos y, por tanto, se utiliza una semántica basada en archivos, de forma que resulta más intuitivo para los usuarios, que dispondrán de más libertad a la hora de elegir nombres de instancia.  
+ Puede tener un nombre de instancia de LocalDB hasta un total de 128 caracteres (el límite impuesto por el **sysname** tipo de datos). Se trata de una importante diferencia si se compara con los nombres tradicionales de instancia de SQL Server, las cuales están limitadas a los nombres de NetBIOS de 16 caracteres ASCII. Esta diferencia existe porque LocalDB trata a las bases de datos como archivos y, por tanto, se utiliza una semántica basada en archivos, de forma que resulta más intuitivo para los usuarios, que dispondrán de más libertad a la hora de elegir nombres de instancia.  
   
- Los nombres de instancia de LocalDB pueden contener cualquier tipo de caracteres Unicode que sean válidos en el componente de nombre de archivo. Caracteres no válidos en un componente de nombre de archivo, generalmente, incluyen los siguientes caracteres: caracteres ASCII/Unicode 31 a 1, así como comillas ("), menor que (\<), mayor que (>), barra vertical (|), retroceso (\b), tabulación (\t), dos puntos (:), asterisco (*) signo de interrogación (?), barra diagonal inversa (\\) y la barra diagonal (/). Tenga en cuenta que el carácter NULL (\0) está permitido porque se utiliza para la terminación de cadenas; se ignorará todo aquello que esté tras el carácter NULL.  
+ Los nombres de instancia de LocalDB pueden contener cualquier tipo de caracteres Unicode que sean válidos en el componente de nombre de archivo. Caracteres no válidos en un componente de nombre de archivo, generalmente, incluyen los siguientes caracteres: caracteres ASCII/Unicode 1 31 a través, así como comillas dobles ("), menor que (\<), mayor que (>), barra vertical (|), retroceso (\b), tabulación (\t), dos puntos (:), asterisco (*) signo de interrogación (?), barra diagonal inversa (\\) y la barra diagonal (/). Tenga en cuenta que el carácter NULL (\0) está permitido porque se utiliza para la terminación de cadenas; se ignorará todo aquello que esté tras el carácter NULL.  
   
 > [!NOTE]  
 >  La lista de caracteres no válidos puede depender del sistema operativo y podría cambiar en versiones futuras.  
   
  Los espacios en blanco iniciales y finales en los nombres de instancia se omiten y se recortarán.  
   
- Para evitar conflictos de nomenclatura, denominadas LocalDB instancias no pueden tener un nombre que sigue el patrón de nomenclatura para instancias automáticas, tal y como se describió anteriormente en "Reglas de nomenclatura de instancia automática". Un intento de crear una instancia con nombre con un nombre que sigue el patrón de nomenclatura de instancia automática de forma eficaz, crea una instancia predeterminada.  
+ Para evitar conflictos de nomenclatura, denominados LocalDB instancias no pueden tener un nombre que sigue el patrón de nomenclatura para instancias automáticas, como se describió anteriormente en "Reglas de nomenclatura de instancia automática". Un intento de crear una instancia con nombre con un nombre que sigue el patrón de nomenclatura de la instancia automática de forma eficaz, crea una instancia predeterminada.  
   
 ## <a name="sql-server-express-localdb-reference-topics"></a>Temas de referencia de SQL Server Express LocalDB  
  [Información de encabezado y versión de SQL Server Express LocalDB](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

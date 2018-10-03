@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_filestream_file_io_requests (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_filestream_file_io_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_filestream_file_io_requests
@@ -18,23 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_requests catalog view
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b754b3e0c2e732f7d043564013ac0e8cde3d8cd
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: e5c89e1d4ee1ec4b3590f6b9e0a738561cd61e1c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464881"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740935"
 ---
 # <a name="sysdmfilestreamfileiorequests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Muestra una lista de solicitudes de E/S que el propietario del espacio de nombres (NSO) está procesando en el momento dado.  
   
-|Columna|Tipo|Description|  
+|columna|Tipo|Descripción|  
 |------------|----------|-----------------|  
 |**request_context_address**|**varbinary (8)**|Muestra la dirección interna del bloque de memoria del NSO que contiene la solicitud de E/S desde el controlador. No admite valores NULL.|  
 |**current_spid**|**smallint**|Muestra el identificador de proceso del sistema (SPID) para la conexión de SQL Server actual. No admite valores NULL.|  
@@ -43,12 +40,12 @@ ms.locfileid: "34464881"
 |**request_id**|**int**|Muestra el identificador de solicitud único asignado por el controlador a esta solicitud. No admite valores NULL.|  
 |**irp_id**|**int**|Muestra el identificador de IRP único. Esto es útil para identificar todas las solicitudes de E/S relacionadas con el IRP determinado. No admite valores NULL.|  
 |**handle_id**|**int**|Indica el id. del identificador del espacio de nombres. Se trata del identificador específico del NSO y es único en una instancia. No admite valores NULL.|  
-|**client_thread_id**|**varbinary (8)**|Muestra el identificador de subproceso de la aplicación cliente que origina la solicitud.<br /><br /> **\*\* Advertencia \* \***  esto solo es significativa si se ejecuta la aplicación de cliente en el mismo equipo que SQL Server. Cuando se ejecuta la aplicación cliente de forma remota, el **client_thread_id** muestra el identificador de subproceso de algún proceso del sistema que funciona en nombre del cliente remoto.<br /><br /> Acepta valores NULL.|  
+|**client_thread_id**|**varbinary (8)**|Muestra el identificador de subproceso de la aplicación cliente que origina la solicitud.<br /><br /> **\*\* Advertencia \* \***  esto solo es significativa si la aplicación cliente se está ejecutando en el mismo equipo que SQL Server. Cuando se ejecuta la aplicación de cliente de forma remota, el **client_thread_id** muestra el identificador de subproceso de algún proceso del sistema que funciona en nombre del cliente remoto.<br /><br /> Acepta valores NULL.|  
 |**client_process_id**|**varbinary (8)**|Muestra el identificador de proceso de la aplicación cliente si esta se ejecuta en la misma máquina que SQL Server. Para un cliente remoto, muestra el identificador de proceso del sistema que funciona en nombre de la aplicación cliente. Acepta valores NULL.|  
 |**handle_context_address**|**varbinary (8)**|Muestra la dirección de la estructura de NSO interna asociada con el identificador del cliente. Acepta valores NULL.|  
-|**filestream_transaction_id**|**varbinary(128)**|Muestra el identificador de la transacción asociada con el identificador determinado y todas las solicitudes asociadas con este identificador. Es el valor devuelto por la **get_filestream_transaction_context** (función). Acepta valores NULL.|  
+|**filestream_transaction_id**|**varbinary(128)**|Muestra el identificador de la transacción asociada con el identificador determinado y todas las solicitudes asociadas con este identificador. Es el valor devuelto por la **get_filestream_transaction_context** función. Acepta valores NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
 ## <a name="see-also"></a>Vea también  

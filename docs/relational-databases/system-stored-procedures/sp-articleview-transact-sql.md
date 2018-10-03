@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_articleview
 - sp_articleview_TSQL
@@ -22,12 +17,12 @@ ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d16749d8ee75a177597a288454a3f0a806fa71da
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 369c7218e5d4d2c18d14d07b97d336cbe31ed4b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43037184"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727943"
 ---
 # <a name="sparticleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +96,7 @@ sp_articleview [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  **sp_articleview** crea la vista que define el artículo publicado e inserta el Id. de esta vista en el **sync_objid** columna de la [sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) tabla e inserta el texto de la cláusula de restricción en la **filter_clause** columna. Si se replican todas las columnas y no hay ningún **filter_clause**, el **sync_objid** en el [sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) tabla está establecida en el identificador de la tabla base y el uso de **sp_articleview** no es necesario.  
   
  Para publicar una tabla filtrada verticalmente (es decir, para filtrar columnas) ejecuta por primera vez **sp_addarticle** no *sync_object* parámetro, ejecute [sp_articlecolumn &#40;&#41; ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) una vez para cada columna replicar (definiendo el filtro vertical) y, a continuación, ejecute **sp_articleview** para crear la vista que define el artículo publicado.  

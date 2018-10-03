@@ -1,14 +1,11 @@
 ---
-title: FileTableRootPath (Transact-SQL) | Documentos de Microsoft
+title: FileTableRootPath (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FileTableRootPath_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - FileTableRootPath function
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 637653dc75154f00c14cb248703aec3645f313bb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c74a17d9a3781948727f0eb28f4729967728e033
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230515"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732933"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,19 +44,19 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
  *@option*  
  Expresión entera que define cómo se debe dar formato al componente de servidor de la ruta de acceso. *@option* Puede tener uno de los siguientes valores:  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|**0**|Devuelve el nombre del servidor convertido a formato NetBIOS, por ejemplo:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Es el valor predeterminado.|  
+|**0**|Devuelve el nombre del servidor convertido a formato NetBIOS, por ejemplo:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Este es el valor predeterminado.|  
 |**1**|Devuelve el nombre del servidor sin la conversión, por ejemplo:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
 |**2**|Devuelve la ruta de acceso al servidor completa, por ejemplo:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
 ## <a name="return-type"></a>Tipo devuelto  
  **nvarchar(4000)**  
   
- Cuando la base de datos pertenece a un grupo de disponibilidad AlwaysOn, la **FileTableRootPath** función devuelve el nombre de red virtual (VNN) en lugar del nombre de equipo.  
+ Cuando la base de datos pertenece a un grupo de disponibilidad Always On, el **FileTableRootPath** función devuelve el nombre de red virtual (VNN) en lugar del nombre de equipo.  
   
 ## <a name="general-remarks"></a>Notas generales  
- El **FileTableRootPath** función devuelve NULL cuando se cumple alguna de las condiciones siguientes:  
+ El **FileTableRootPath** función devuelve NULL cuando se cumple una de las condiciones siguientes:  
   
 -   El valor de *FileTable_name* no es válido.  
   
@@ -71,7 +67,7 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
  Para más información, consulte [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
 ## <a name="best-practices"></a>Procedimientos recomendados  
- Para mantener independientes del equipo y de la base de datos actuales el código y las aplicaciones, evite escribir código basado en rutas de acceso absolutas de archivos. En su lugar, obtenga la ruta de acceso completa de un archivo en tiempo de ejecución mediante el uso de la **FileTableRootPath** y **GetFileNamespacePath** funciona conjuntamente, tal como se muestra en el ejemplo siguiente. De forma predeterminada, la función **GetFileNamespacePath** devuelve la ruta de acceso relativa del archivo en la ruta de acceso raíz de la base de datos.  
+ Para mantener independientes del equipo y de la base de datos actuales el código y las aplicaciones, evite escribir código basado en rutas de acceso absolutas de archivos. En su lugar, obtenga la ruta de acceso completa para un archivo en tiempo de ejecución mediante la **FileTableRootPath** y **GetFileNamespacePath** funciones entre sí, tal como se muestra en el ejemplo siguiente. De forma predeterminada, la función **GetFileNamespacePath** devuelve la ruta de acceso relativa del archivo en la ruta de acceso raíz de la base de datos.  
   
 ```sql  
 USE MyDocumentDatabase;  
@@ -87,15 +83,15 @@ WHERE Name = N’document.docx’;
   
 ## <a name="security"></a>Seguridad  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Permisos  
  El **FileTableRootPath** función requiere:  
   
 -   Permiso SELECT en el objeto FileTable para obtener la ruta de acceso raíz de un objeto FileTable específico.  
   
--   **db_datareader** o permiso superior para obtener la ruta de acceso raíz de la base de datos actual.  
+-   **db_datareader** o permiso superior para obtener la ruta de acceso raíz para la base de datos actual.  
   
 ## <a name="examples"></a>Ejemplos  
- Los ejemplos siguientes muestran cómo llamar a la **FileTableRootPath** (función).  
+ Los ejemplos siguientes muestran cómo llamar a la **FileTableRootPath** función.  
   
 ```  
 USE MyDocumentDatabase;  

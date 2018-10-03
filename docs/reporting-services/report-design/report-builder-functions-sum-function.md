@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 70d62d684b94585e601006eb24e25bc876c91049
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: d0ccf19cdc5445ccb6e51dad07040a73c38c7ab0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270143"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753823"
 ---
 # <a name="report-builder-functions---sum-function"></a>Funciones del Generador de informes: función Sum
   Devuelve la suma de todos los valores numéricos no NULL especificados por la expresión, que se evalúa en el contexto del ámbito especificado.  

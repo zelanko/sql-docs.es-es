@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 61c4d6ff-6435-456a-9cbd-5113d2113e8a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c025ddda050d6238d615c96b74ce49349d345d52
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: c68e3551e5519f2a2e00e20f071bfcdb74d6062b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269801"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772683"
 ---
 # <a name="report-builder-functions---max-function"></a>Funciones del Generador de informes: función Max
   Devuelve el valor máximo de todos los valores numéricos no NULL especificados por la expresión, en el contexto del ámbito especificado.  

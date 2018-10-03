@@ -1,15 +1,12 @@
 ---
-title: Método SetStrValue (clase SqlServiceAdvancedProperty) | Documentos de Microsoft
+title: Método SetStrValue (clase SqlServiceAdvancedProperty) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SetStrValue Method (SqlServiceAdvancedProperty Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetStrValue method
 ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
-caps.latest.revision: 35
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 061d8b7e3220c2547422f24e173c8156bb19e76e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d77a40a4ebde6c034b2f9b5ff596a1819ccccfbb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010772"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747783"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>Método SetStrValue (clase SqlServiceAdvancedProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +38,14 @@ object.SetStrValue(StrValue)
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto de la [clase SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) que representa una propiedad avanzada.  
   
 #### <a name="parameters"></a>Parámetros  
   
-|Parámetro|Description|  
+|Parámetro|Descripción|  
 |---------------|-----------------|  
-|*StrValue*|Valor de cadena que especifica el valor de la propiedad avanzada.|  
+|*strValue*|Valor de cadena que especifica el valor de la propiedad avanzada.|  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor unit 32 que es igual a 0 si se modificó el servicio correctamente, igual a 1 si no se admite la solicitud e igual a cualquier otro número para indicar que hubo un error.  

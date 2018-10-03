@@ -1,33 +1,30 @@
 ---
-title: El servicio de cursores de Microsoft para OLE DB | Documentos de Microsoft
+title: El servicio de cursores de Microsoft para OLE DB | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cursor service for ole db [ADO]
 - cursors [ADO], cursor service for OLE DB
 ms.assetid: 1ac3bd9b-2d45-4cc8-88ec-bd8a218cfb49
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: acb0604f051aa532e0f1d0081972a49d037d3181
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e85d6f482b9d206b2ec705a8d890a4e34e5f2252
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272924"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747333"
 ---
 # <a name="the-microsoft-cursor-service-for-ole-db"></a>El servicio de cursores de Microsoft para OLE DB
-Cuando se selecciona un cursor de cliente, o establecer la **CursorLocation** propiedad **adUseClient**, que se está invocando el servicio de cursores de Microsoft para OLE DB. También puede ver referencias a "Client Cursor Engine", que es básicamente lo mismo en el contexto de ADO. Este servicio complementa las funciones de compatibilidad de cursor de proveedores de datos. Como resultado, pueden percibir una funcionalidad relativamente uniforme en todos los proveedores de datos.  
+Cuando se selecciona un cursor de cliente, o establecer el **CursorLocation** propiedad **adUseClient**, está invocando el servicio de cursores de Microsoft para OLE DB. También podría ver referencias a "Client Cursor Engine", que es básicamente lo mismo en el contexto de ADO. Este servicio complementa las funciones de compatibilidad de cursor de proveedores de datos. Como resultado, puede percibir una funcionalidad relativamente uniforme en todos los proveedores de datos.  
   
- El servicio de cursores para OLE DB hace que las propiedades dinámicas estén disponibles y mejora el comportamiento de ciertos métodos. Por ejemplo, el **optimizar** propiedad dinámica permite la creación de índices temporales para facilitar determinadas operaciones, como el **buscar** método.  
+ El servicio de cursores para OLE DB hace que las propiedades dinámicas que estén disponibles y mejora el comportamiento de ciertos métodos. Por ejemplo, el **optimizar** propiedad dinámica permite la creación de índices temporales para facilitar determinadas operaciones, como el **buscar** método.  
   
  El servicio de cursores habilita la compatibilidad con actualización por lotes en todos los casos. También simula más compatible con tipos de cursor, como los cursores dinámicos, cuando un proveedor de datos solo puede proporcionar cursores menos eficaces, como los cursores estáticos.  
   

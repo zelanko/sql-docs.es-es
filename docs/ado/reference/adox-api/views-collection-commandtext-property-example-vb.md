@@ -1,13 +1,11 @@
 ---
-title: Vistas de colección, ejemplo de la propiedad CommandText (VB) | Documentos de Microsoft
+title: Ejemplo de propiedad CommandText (VB) de la colección de vistas | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - CommandText property [ADOX]
 - Views collection [ADOX], Visual Basic example
 ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7785eb796690dc0f22dc2a41f714c3b6bb3843dd
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 13dc0a46daa2636dc56cf84f91ad8d014c4a3bdb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287284"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731333"
 ---
-# <a name="views-collection-commandtext-property-example-vb"></a>Colección de vistas, ejemplo de la propiedad CommandText (VB)
-El código siguiente muestra cómo utilizar el [comando](../../../ado/reference/adox-api/command-property-adox.md) propiedad que se va a actualizar el texto de una vista.  
+# <a name="views-collection-commandtext-property-example-vb"></a>Ejemplo de propiedad CommandText, colección de vistas (VB)
+El código siguiente muestra cómo usar el [comando](../../../ado/reference/adox-api/command-property-adox.md) propiedad para actualizar el texto de una vista.  
   
 ```  
 ' BeginViewsCollectionVB  
@@ -84,5 +81,5 @@ End Sub
  [ActiveConnection (propiedad, ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Comando (propiedad, ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [Objeto de vista (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
+ [Objeto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
  [Colección de vistas (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

@@ -1,31 +1,28 @@
 ---
-title: SQLSetEnvAttr y la biblioteca de cursores | Documentos de Microsoft
+title: SQLSetEnvAttr y la biblioteca de cursores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetEnvAttr function [ODBC], Cursor Library
 ms.assetid: 59cc8eae-09ae-4796-869a-c5806488ae83
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11e0e7d0925b6e5e72965e93cf48f7eae7793df1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 74e57f98b7d5e3e1508a960b342521ea5d315a3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908280"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47693493"
 ---
 # <a name="sqlsetenvattr-and-the-cursor-library"></a>SQLSetEnvAttr y la biblioteca de cursores
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad del controlador cursor.  
+>  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad de cursor del controlador.  
   
  Este tema describe el uso de la **SQLSetEnvAttr** función con la biblioteca de cursores. Para obtener información general sobre **SQLSetEnvAttr**, consulte [función SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md).  
   

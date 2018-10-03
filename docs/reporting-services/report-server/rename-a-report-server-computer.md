@@ -4,19 +4,18 @@ ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - renaming report servers
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bfa856c392dd133ff94c4079faceea95f5c422b0
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7acbbbd6ef840ae088f57fe42afe6b66329f1c90
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270607"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47763343"
 ---
 # <a name="rename-a-report-server-computer"></a>Cambiar el nombre de un equipo que ejecuta un servidor de informes
   Al cambiar el nombre de un equipo, también se cambia el nombre correspondiente del servidor web y de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (si está en el mismo equipo). En algunos casos, puede que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no esté accesible después de un cambio en el nombre de equipo. Siga los pasos que aparecen en este tema para volver a configurar un servidor de informes después de haber cambiado el nombre de un equipo.  

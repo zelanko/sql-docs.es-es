@@ -4,24 +4,18 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: aec09593-17d9-4ec2-ac56-3cd8851406fd
-caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6e676ff9adb8d098cf795d7599788bcfa3d0f515
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: b3cebc9bb82778390716212fd3b5ae1bf800d3d3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393907"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744813"
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>Eliminación de componentes de SSMA para Sybase (SybaseToSQL)
 Cuando haya terminado de migrar bases de datos de Sybase Adaptive Server Enterprise (ASE) a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es posible que desee desinstalar componentes de SSMA. Puede desinstalar los componentes de cliente en cualquier momento, pero no debe desinstalar el paquete de extensiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a menos que esté seguro de que las bases de datos migradas ya no usar funciones en el **ssma_syb** esquema de la **sysdb** base de datos.  

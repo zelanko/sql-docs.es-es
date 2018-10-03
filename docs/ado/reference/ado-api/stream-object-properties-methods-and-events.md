@@ -1,35 +1,32 @@
 ---
-title: Propiedades de objetos, métodos y eventos de secuencia | Documentos de Microsoft
+title: Stream eventos, métodos y propiedades del objeto | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Stream object [ADO], members
 ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 309dc7655ed7d586deace8869b2ebc245312ec6b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7f775bf1d77ed23e153610f7b6d6cbf5c17ce544
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282722"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697211"
 ---
-# <a name="stream-object-properties-methods-and-events"></a>Eventos, métodos y propiedades del objeto de secuencia
+# <a name="stream-object-properties-methods-and-events"></a>Los eventos, métodos y propiedades del objeto Stream
 ## <a name="properties"></a>Propiedades  
- [Propiedad CharSet](../../../ado/reference/ado-api/charset-property-ado.md)  
+ [Propiedad del juego de caracteres](../../../ado/reference/ado-api/charset-property-ado.md)  
   
  [Propiedad EOS](../../../ado/reference/ado-api/eos-property.md)  
   
- [Propiedad de separador de línea](../../../ado/reference/ado-api/lineseparator-property-ado.md)  
+ [Propiedad LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)  
   
  [Propiedad Mode](../../../ado/reference/ado-api/mode-property-ado.md)  
   
@@ -37,7 +34,7 @@ ms.locfileid: "35282722"
   
  [Propiedad Size (Stream de ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)  
   
- [State (propiedad)](../../../ado/reference/ado-api/state-property-ado.md)  
+ [Propiedad State](../../../ado/reference/ado-api/state-property-ado.md)  
   
  [Propiedad Type (objeto Stream de ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)  
   

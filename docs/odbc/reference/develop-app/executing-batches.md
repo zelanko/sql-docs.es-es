@@ -1,33 +1,30 @@
 ---
-title: Ejecución de lotes | Documentos de Microsoft
+title: Ejecución de lotes | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - batches [ODBC], executing
 - SQL statements [ODBC], batches
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22c034d4be28ca8c3212fad4ee1493cb0a22d915
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46b224e8167587c4e4860f171b132d23539143e8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909900"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695041"
 ---
 # <a name="executing-batches"></a>Ejecución de lotes
-Antes de que una aplicación ejecuta un lote de instrucciones, debe comprobar primero si son compatibles. Para ello, la aplicación llama **SQLGetInfo** con las opciones de SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS y SQL_PARAM_ARRAY_SELECTS. La primera opción devuelve si generación de recuento de filas y el resultado de conjunto: generar instrucciones son compatibles con lotes explícitos y procedimientos, mientras las dos últimas opciones devuelven información acerca de la disponibilidad de recuentos de filas y el resultado se establece en parámetros ejecución.  
+Antes de que una aplicación ejecuta un lote de instrucciones, en primer lugar debe comprobar si son compatibles. Para ello, la aplicación llama a **SQLGetInfo** con las opciones SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS y SQL_PARAM_ARRAY_SELECTS. La primera opción devuelve si generación recuento de filas y resultado de la generación de conjunto de instrucciones son compatibles con lotes explícitos y procedimientos, mientras que las dos últimas opciones devuelven información acerca de la disponibilidad de los recuentos de filas y el resultado se establece en parámetros ejecución.  
   
- Lotes de instrucciones se ejecutan a través de **SQLExecute** o **SQLExecDirect**. Por ejemplo, la siguiente llamada ejecuta un lote de instrucciones para abrir un nuevo pedido de venta explícito.  
+ Lotes de instrucciones se ejecutan a través de **SQLExecute** o **SQLExecDirect**. Por ejemplo, la llamada siguiente ejecuta un lote de instrucciones para abrir un nuevo pedido de ventas explícito.  
   
 ```  
 SQLCHAR *BatchStmt =  
@@ -41,9 +38,9 @@ SQLCHAR *BatchStmt =
 SQLExecDirect(hstmt, BatchStmt, SQL_NTS);  
 ```  
   
- Cuando un lote de la generación de resultados se ejecutan las instrucciones, devuelve uno o más recuentos de filas o conjuntos de resultados. Para obtener información sobre cómo recuperar estas, consulte [varios resultados](../../../odbc/reference/develop-app/multiple-results.md).  
+ Cuando un lote de generan instrucciones se ejecuta, devuelve uno o más recuentos de filas o conjuntos de resultados. Para obtener información acerca de cómo recuperar estas, consulte [varios resultados](../../../odbc/reference/develop-app/multiple-results.md).  
   
- Si un lote de instrucciones incluye marcadores de parámetros, estos se numeran de forma ascendente, orden de los parámetros tal como están en cualquier otra instrucción. Por ejemplo, el siguiente lote de instrucciones tiene parámetros que se numeran del 1 al 21; los de la primera **insertar** instrucción están numeradas 1 a 5 y aquellos en los últimos **insertar** instrucción están numeradas 18 al 21.  
+ Si un lote de instrucciones incluye marcadores de parámetros, estos se numeran en sentido ascendente de parámetro estén en cualquier otra instrucción. Por ejemplo, el siguiente lote de instrucciones tiene parámetros que se numeran del 1 al 21; los de la primera **insertar** instrucción están numerados 1 a 5 y aquellos en los últimos **insertar** instrucción están numerados 18 al 21.  
   
 ```  
 INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  

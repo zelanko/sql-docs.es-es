@@ -1,30 +1,27 @@
 ---
-title: Parámetros del objeto Command | Documentos de Microsoft
+title: Parámetros del objeto Command | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], parameters
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87854c3e048fc7fc5730ad8c1c475a32554fbab5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f4fb4128333f1fdc5865186a202188fc64b6109f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270524"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701743"
 ---
 # <a name="command-object-parameters"></a>Parámetros del objeto Command
-El tema anterior descrito [crear y ejecutar un comando Simple](../../../ado/guide/data/creating-and-executing-a-simple-command.md). Un uso más interesante para el [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto se muestra en el ejemplo siguiente, en el que ya se incluyó el comando SQL. Esta modificación permite volver a usar el comando, pasando un valor diferente para el parámetro cada vez. Dado que la [propiedad preparado](../../../ado/reference/ado-api/prepared-property-ado.md) propiedad en el **comando** objeto se establece en **true**, ADO requerirá que el proveedor compilar el comando especificado en [ CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) antes de ejecutar por primera vez. También se conservan el comando compilado en la memoria. Esto ralentiza la ejecución del comando ligeramente la primera vez que se ejecute debido a la sobrecarga necesaria para preparar la base de datos pero da como resultado una mejora del rendimiento cada vez que se llamó el comando a partir de ahí. Por lo tanto, se deben preparar comandos solo si se van a utilizar más de una vez.  
+El tema anterior descrito [crear y ejecutar un comando Simple](../../../ado/guide/data/creating-and-executing-a-simple-command.md). Un uso más interesante para el [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto se muestra en el ejemplo siguiente, en el que se incluyó el comando SQL. Esta modificación permite volver a usar el comando, pasando un valor diferente para el parámetro cada vez. Dado que el [propiedad preparado](../../../ado/reference/ado-api/prepared-property-ado.md) propiedad en el **comando** objeto se establece en **true**, ADO requerirá el proveedor compilar el comando especificado en [ CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) antes de ejecutarlo por primera vez. También conservará el comando compilado en memoria. Esto ralentiza la ejecución del comando ligeramente la primera vez que se ejecuta debido a la sobrecarga necesaria para preparar, pero los resultados en una mejora del rendimiento cada vez que se llamó el comando a partir de entonces. Por lo tanto, deben estar preparados comandos solo si se van a utilizar más de una vez.  
   
 ```  
 'BeginManualParamCmd  
@@ -122,4 +119,4 @@ End Function
 'EndNewConnection  
 ```  
   
- No todos los proveedores admiten comandos preparados. Si el proveedor no admite la preparación de comandos, podría devolver un error en cuanto esta propiedad se establece en **True**. Si no se devuelve un error, omite la solicitud para preparar el comando y establece la **Prepared** propiedad **false**.
+ No todos los proveedores admiten comandos preparados. Si el proveedor no admite la preparación de comandos, podría devolver un error tan pronto como se establece esta propiedad en **True**. Si no se devuelve un error, omite la solicitud para preparar el comando y establece la **Prepared** propiedad **false**.

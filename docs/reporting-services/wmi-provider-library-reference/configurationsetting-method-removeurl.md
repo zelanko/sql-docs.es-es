@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - RemoveURL method
 ms.assetid: 3d98bd97-e152-48ce-ab1c-bd2c4f8b7fe9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 415b3ecf57bf6fba36ffd10bcb6db2deebebf6f6
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ce67865100e9540a191019e9f3d1f9914817e45e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43282346"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761329"
 ---
 # <a name="configurationsetting-method---removeurl"></a>Método ConfigurationSetting - RemoveURL
   Quita una dirección URL reservada para el servidor de informes. Si es necesario quitar varias direcciones URL, esta operación debe realizarse una a una llamando a esta API.  

@@ -1,18 +1,13 @@
 ---
-title: syssubscriptions (vista del sistema) (Transact-SQL) | Documentos de Microsoft
+title: syssubscriptions (vista del sistema) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - syssubscriptions_TSQL
 - syssubscriptions
@@ -21,29 +16,28 @@ dev_langs:
 helpviewer_keywords:
 - syssubscriptions view
 ms.assetid: c9613858-9512-43a9-aa53-7ee8064f064c
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 58792451ce8183265f2885b43b22dfba926f9a42
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a9646993a789924488f0b31cfae6cff838691f38
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33008865"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705532"
 ---
 # <a name="syssubscriptions-system-view-transact-sql"></a>syssubscriptions (vista del sistema de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  El **syssubscriptions** vista presenta información de suscripción. Esta vista se almacena en la base de datos de distribución.  
+  El **syssubscriptions** vista expone información de suscripción. Esta vista se almacena en la base de datos de distribución.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|Id. único de un artículo suscrito.|  
 |**srvid**|**smallint**|Id. de servidor del suscriptor.|  
 |**dest_db**|**sysname**|El nombre de la base de datos de suscripción.|  
 |**status**|**tinyint**|El estado de la suscripción:<br /><br /> **0** = inactivo.<br /><br /> **1** = suscrito.<br /><br /> **2** = activo.|  
-|**sync_type**|**tinyint**|El tipo de sincronización inicial:<br /><br /> **1** = automático.<br /><br /> **2** = none.|  
+|**sync_type**|**tinyint**|El tipo de sincronización inicial:<br /><br /> **1** = automatic.<br /><br /> **2** = none.|  
 |**login_name**|**sysname**|El nombre de inicio de sesión utilizado al conectarse al publicador para agregar la suscripción.|  
 |**subscription_type**|**int**|El tipo de suscripción:<br /><br /> **0** = inserción: el agente de distribución se ejecuta en el distribuidor.<br /><br /> **1** = extracción: el agente de distribución se ejecuta en el suscriptor.|  
 |**distribution_jobid**|**binary (16)**|Identifica el trabajo del Agente de distribución utilizado para sincronizar la suscripción.|  
@@ -55,7 +49,7 @@ ms.locfileid: "33008865"
 |**SRVNAME**|**sysname**|Nombre del suscriptor.|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [syssubscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-tables/syssubscriptions-transact-sql.md)  
   

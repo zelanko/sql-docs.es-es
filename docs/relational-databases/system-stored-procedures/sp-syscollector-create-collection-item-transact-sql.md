@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_create_collection_item (Transact-SQL) | Documentos de Microsoft
+title: sp_syscollector_create_collection_item (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collection_item
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_create_collection_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 818294f3fdeebc19a26a8689403205f57d9c8e03
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1e155fb51bd5f78a3c4a639e9233746131ddf6f5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261690"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719823"
 ---
 # <a name="spsyscollectorcreatecollectionitem-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +51,7 @@ sp_syscollector_create_collection_item
  Es el identificador único local del conjunto de recopilaciones. *collection_set_id* es **int**.  
   
  [ @collector_type_uid =] '*collector_type_uid*'  
- Es el GUID que identifica el tipo de recopilador que se utilizará para este elemento *collector_type_uid* es **uniqueidentifier** sin valor predeterminado... Para obtener una lista de los tipos de recopilador, consulte la vista del sistema syscollector_collector_types.  
+ Es el GUID que identifica el tipo de recopilador que se utilizará para este elemento *collector_type_uid* es **uniqueidentifier** con ningún valor predeterminado... Para obtener una lista de los tipos de recopilador, consulte la vista del sistema syscollector_collector_types.  
   
  [ @name =] '*nombre*'  
  Es el nombre del elemento de colección. *nombre* es **sysname** y no puede ser una cadena vacía o NULL.  
@@ -68,7 +64,7 @@ sp_syscollector_create_collection_item
  Si el conjunto de recopilación se establece en modo sin almacenamiento en caché, se omite la frecuencia porque este modo hace que la recopilación de datos y la carga se produzcan con la programación especificada para el conjunto de recopilación. Para ver el modo de recopilación del conjunto de recopilación, consulte el [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) vista del sistema.  
   
  [ @parameters =] '*parámetros*'  
- Parámetros de entrada del tipo de recopilador. *parámetros de* es **xml** con un valor predeterminado es NULL. El *parámetros* esquema debe coincidir con el esquema de parámetros del tipo de recopilador.  
+ Parámetros de entrada del tipo de recopilador. *parámetros* es **xml** con el valor predeterminado es NULL. El *parámetros* esquema debe coincidir con el esquema de parámetros del tipo de recopilador.  
   
  [ @collection_item_id =] *collection_item_id*  
  Es el identifer único que identifica el elemento del conjunto de recopilación. *collection_item_id* es **int** y tiene OUTPUT.  
@@ -81,7 +77,7 @@ sp_syscollector_create_collection_item
   
  El conjunto de recopilación al que se agrega el elemento de recopilación debe detenerse antes de crear dicho elemento. Los elementos de recopilación no se pueden agregar a los conjuntos de recopilación del sistema.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol fijo de base de datos dc_admin (con permiso EXECUTE) para ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  

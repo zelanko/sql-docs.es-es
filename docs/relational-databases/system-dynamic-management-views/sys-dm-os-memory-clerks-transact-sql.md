@@ -5,9 +5,7 @@ ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_memory_clerks
@@ -19,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_clerks dynamic management view
 ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
-caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9de4fc757abbd5c9a01ff4b16b3e7507e8ccebe0
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2b308f17a7b5555f77f36174c7d11dd9979cf4ad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43081535"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725903"
 ---
 # <a name="sysdmosmemoryclerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +60,7 @@ ms.locfileid: "43081535"
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El administrador de memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consta de una jerarquía de tres capas. En la parte inferior de la jerarquía están los nodos de memoria. El nivel intermedio incluye los distribuidores de memoria, los almacenamientos en caché de la memoria y los bloques de memoria. La capa superior incluye los objetos de memoria. Normalmente, estos objetos se utilizan para asignar memoria en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Los nodos de memoria proporcionan la interfaz y la implementación de los asignadores de nivel inferior. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], solo los distribuidores de memoria tienen acceso a nodos de memoria. Los distribuidores de memoria tienen acceso a interfaces de nodos de memoria para asignar memoria. Los nodos de memoria también realizan el seguimiento de la memoria asignada utilizando el distribuidor para diagnósticos. Cada componente que asigna una cantidad de memoria importante debe crear su propio distribuidor de memoria y asignar toda su memoria utilizando las interfaces del distribuidor. Con frecuencia, los componentes crean sus distribuidores correspondientes cuando se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

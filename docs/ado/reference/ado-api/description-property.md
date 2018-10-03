@@ -1,13 +1,11 @@
 ---
-title: Description (propiedad) | Documentos de Microsoft
+title: Propiedad Descripción | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,27 +15,26 @@ f1_keywords:
 helpviewer_keywords:
 - Description property
 ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2aaa6bb9f548c4b5719e597d7e20f341b029d0ca
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b9a97e1e63e3896cd451c68d6198baa991945e7a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277664"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704535"
 ---
 # <a name="description-property"></a>Description (propiedad)
-Describe una [Error](../../../ado/reference/ado-api/error-object.md) objeto.  
+Describe un [Error](../../../ado/reference/ado-api/error-object.md) objeto.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve un **cadena** valor que contiene una descripción del error.  
   
-## <a name="remarks"></a>Notas  
- Use la **descripción** propiedad para obtener una breve descripción del error. Mostrar esta propiedad para alertar al usuario a un error que no puede o no desea controlar. La cadena procederá de ADO o un proveedor.  
+## <a name="remarks"></a>Comentarios  
+ Use la **descripción** propiedad para obtener una descripción breve del error. Mostrar esta propiedad para avisar al usuario a un error que no puede o no desea controlar. La cadena procederá de ADO o un proveedor.  
   
- Los proveedores son responsables de pasar el texto del error específico a ADO. ADO agrega un [Error](../../../ado/reference/ado-api/error-object.md) el objeto a la **errores** colección para cada proveedor de error o advertencia que recibe. Enumerar la **errores** colección para realizar el seguimiento de los errores que se pasa al proveedor.  
+ Los proveedores son responsables de pasar el texto de error específico a ADO. ADO agrega un [Error](../../../ado/reference/ado-api/error-object.md) de objeto para el **errores** colección para cada proveedor de error o advertencia que recibe. Enumerar el **errores** colección para realizar un seguimiento de los errores que el proveedor pasa.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de error](../../../ado/reference/ado-api/error-object.md)  

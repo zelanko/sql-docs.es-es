@@ -1,14 +1,11 @@
 ---
-title: Clase ServerNetworkProtocol | Documentos de Microsoft
+title: Clase ServerNetworkProtocol | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ServerNetworkProtocol Class
@@ -18,16 +15,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - ServerNetworkProtocol class
 ms.assetid: 0f9f7f7d-f8ab-426e-a85d-4eda3a241eb5
-caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 214c92d243c349b20e04d509157a3d5ea8a7b2fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8fa000cade153b2bd44048f0387ee1f2561e1d0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33008993"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47774733"
 ---
 # <a name="servernetworkprotocol-class"></a>Clase ServerNetworkProtocol
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,6 +38,6 @@ ms.locfileid: "33008993"
 -   Habilitar y deshabilitar el protocolo de red del servidor.  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurar protocolos de red de servidor y las bibliotecas de red](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

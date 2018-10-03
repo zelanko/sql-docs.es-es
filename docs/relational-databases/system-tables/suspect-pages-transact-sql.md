@@ -1,14 +1,11 @@
 ---
-title: suspect_pages (Transact-SQL) | Documentos de Microsoft
+title: suspect_pages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - suspect_page_table
@@ -19,25 +16,24 @@ helpviewer_keywords:
 - suspect_pages system table
 - suspect pages [SQL Server]
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1aa5d789fbac65efadbc5a50ecf35e744dfa7233
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 112e45b056de0f1915a4ef5419e0e916f1f8d5a6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261387"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772623"
 ---
 # <a name="suspectpages-transact-sql"></a>suspect_pages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una fila por cada página que causó un error 823 secundario o un error 824. Se hace una lista de páginas en esta tabla porque se sospecha que estén dañadas, pero es posible que, en realidad, sean correctas. Cuando se repara una página sospechosa, su estado se actualiza en la **event_type** columna.  
+  Contiene una fila por cada página que se produjo un error 823 secundario o un error 824. Se hace una lista de páginas en esta tabla porque se sospecha que estén dañadas, pero es posible que, en realidad, sean correctas. Cuando se repara una página sospechosa, su estado se actualiza en el **event_type** columna.  
   
- La tabla siguiente, que tiene un límite de 1.000 filas, se almacena en la **msdb** base de datos.  
+ La tabla siguiente, que tiene un límite de 1.000 filas, se almacena en el **msdb** base de datos.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Id. de la base de datos a la que se aplica esta página.|  
 |**file_id**|**int**|Id. del archivo en la base de datos.|  
@@ -46,13 +42,13 @@ ms.locfileid: "33261387"
 |**error_count**|**int**|Número de veces que ha ocurrido el error.|  
 |**last_update_date**|**datetime**|Marca de fecha y hora de la última actualización.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Cualquier persona con acceso a **msdb** puede leer los datos de la tabla **suspect_pages** . Cualquier persona con el permiso UPDATE en la tabla suspect_pages puede actualizar sus registros. Los miembros del rol fijo de base de datos **db_owner** de **msdb** o el rol fijo de servidor **sysadmin** pueden insertar, actualizar y eliminar registros.  
   
 ## <a name="see-also"></a>Vea también  
  [Restaurar páginas &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
- [Clase de eventos de página de datos sospechosa de base de datos](../../relational-databases/event-classes/database-suspect-data-page-event-class.md)   
- [Tablas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)   
+ [Clase de eventos de página de datos sospechosos de base de datos](../../relational-databases/event-classes/database-suspect-data-page-event-class.md)   
+ [Las tablas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)   
  [Administrar la tabla suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   
   

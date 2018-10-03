@@ -1,14 +1,11 @@
 ---
-title: Sys.xml_schema_component_placements (Transact-SQL) | Documentos de Microsoft
+title: Sys.xml_schema_component_placements (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.xml_schema_component_placements
@@ -20,23 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_component_placements catalog view
 ms.assetid: 2d3c8828-e4b3-423d-bf11-990464c1341b
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f45959897408779385e598353fb900b0403af80b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 78403dd04dc4fb1e531032c9f80639134f58b6ef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221166"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818283"
 ---
 # <a name="sysxmlschemacomponentplacements-transact-sql"></a>sys.xml_schema_component_placements (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila por ubicación de componentes del esquema XML.  
    
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**xml_component_id**|**int**|Id. del componente del esquema XML propietario de esta ubicación.|  
 |**placement_id**|**int**|Id. de la ubicación. Es exclusiva en el propietario del componente del esquema XML.|  
@@ -46,11 +42,11 @@ ms.locfileid: "33221166"
 |**max_occurrences**|**int**|Número máximo de casos de componentes ubicados.|  
 |**default_value**|**nvarchar (4000)**|Valor predeterminado si se proporciona uno. Si no se ofrece otro valor predeterminado, es NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Esquemas XML &#40;sistema de tipo XML&#41; vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
+ [Los esquemas XML &#40;sistema de tipo XML&#41; vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

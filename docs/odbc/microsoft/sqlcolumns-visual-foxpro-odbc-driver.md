@@ -1,27 +1,24 @@
 ---
-title: SQLColumns (controlador ODBC de Visual FoxPro) | Documentos de Microsoft
+title: SQLColumns (controlador ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLColumns function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: b588a875-0153-43a0-9b76-f89e728cfa65
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b79c42945994bfecd6c21e9dd9aaf6ce6dbefcf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9895875caf7e05080dc46bea43a02b0e6cc6b57c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32902210"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729953"
 ---
 # <a name="sqlcolumns-visual-foxpro-odbc-driver"></a>SQLColumns (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
@@ -29,8 +26,8 @@ ms.locfileid: "32902210"
   
  Soporte técnico: completo  
   
- Ajuste de la API de ODBC: Nivel 1  
+ Conformidad de ODBC API: Nivel 1  
   
- Para una tabla, se crea un conjunto de resultados que es la lista de columnas para la tabla o tablas especificadas.  
+ Para una tabla, se crea un conjunto de resultados es la lista de columnas para la tabla o tablas especificadas.  
   
  Para obtener más información, consulte [SQLColumns](../../odbc/reference/syntax/sqlcolumns-function.md) en el *referencia del programador de ODBC*.

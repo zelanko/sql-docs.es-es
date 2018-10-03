@@ -1,28 +1,25 @@
 ---
-title: Ejemplo de conjunto de registros para examinar los datos | Documentos de Microsoft
+title: Conjunto de registros de ejemplo para examinar los datos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - record location [ADO]
 - current record [ADO]
 ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a6bb3eb784c3979dd136f237c5d153547d30027
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: bfae67a14fb312f1b396cfc60f69e8cbe8babdf7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272494"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811443"
 ---
 # <a name="sample-recordset-for-examining-data"></a>Conjunto de registros de ejemplo para examinar datos
 En primer lugar, echemos un vistazo a la **Recordset** objeto devuelto al utilizar la siguiente consulta SQL, que se ejecuta en los datos de ejemplo Northwind base en Microsoft SQL Server.  
@@ -33,11 +30,11 @@ FROM Products
 WHERE CategoryID = 7    
 ```  
   
- El resultante **Recordset** objeto contiene todos lo genera la base de datos se muestra en la tabla siguiente.  
+ El resultante **Recordset** objeto contiene todas la genera en la base de datos que se muestra en la tabla siguiente.  
   
 |ProductID|ProductName|UnitPrice|  
 |---------------|-----------------|---------------|  
-|7|Peras secas orgánicas de tío Bob|30.0000|  
+|7|Peras secos orgánicos de Bob tío|30.0000|  
 |14|Tofu|23.2500|  
 |28|Rssle chucrut|45.6000|  
 |51|Manzanas secas Manjimup|53.0000|  

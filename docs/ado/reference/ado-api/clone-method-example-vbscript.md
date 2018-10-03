@@ -1,36 +1,33 @@
 ---
-title: Ejemplo (VBScript) del método Clone | Documentos de Microsoft
+title: Ejemplo (VBScript) del método Clone | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Clone method [ADO], VBScript example
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83bc13a4f86c888a819b2c7dc39ea971f4ffcda7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b259eaf019bc3ac173bfd1a4c282b517b41b1394
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276394"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783673"
 ---
 # <a name="clone-method-example-vbscript"></a>Ejemplo del método Clone (VBScript)
-Este ejemplo se utiliza la [clon](../../../ado/reference/ado-api/clone-method-ado.md) método para crear copias de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) y, a continuación, permite al usuario sitúe el puntero registro de cada copia de forma independiente.  
+Este ejemplo se usa el [clon](../../../ado/reference/ado-api/clone-method-ado.md) método para crear copias de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) y permite al usuario, a continuación, colocar el puntero de registro de cada copia de forma independiente.  
   
- Utilice el siguiente ejemplo en una página Active Server (ASP). Este ejemplo se utiliza la **Northwind** base de datos que se distribuye con Microsoft Access. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como CloneVBS.asp. Puede ver el resultado en cualquier explorador de cliente.  
+ Utilice el siguiente ejemplo en una página Active Server (ASP). Este ejemplo se usa el **Northwind** base de datos que se distribuye con Microsoft Access. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como CloneVBS.asp. Puede ver el resultado en cualquier explorador cliente.  
   
- Para practicar con el ejemplo, cambie la línea `RsCustomerList.Source = "Customers"` a `RsCustomerList.Source = "Products"` para contar una tabla más grande.  
+ Para ejecutar el ejemplo, cambie la línea `RsCustomerList.Source = "Customers"` a `RsCustomerList.Source = "Products"` para contar una tabla más grande.  
   
 ```  
 <!-- BeginCloneVBS -->  

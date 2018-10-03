@@ -1,13 +1,11 @@
 ---
-title: Abrir y cerrar el ejemplo de los métodos (VC ++) | Documentos de Microsoft
+title: Ejemplo de métodos (VC ++) Open y Close | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Close method [ADO], VC++ example
 - Open method [ADO], VC++ example
 ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d001611dc57ea90fe19fa83e794b4d9791a0399
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7c63eb8c02b80927e38cbbe7f32fcee493b66a7a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279924"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714503"
 ---
-# <a name="open-and-close-methods-example-vc"></a>Ejemplo de los métodos de apertura y cierre (VC ++)
-Este ejemplo se utiliza la **abiertos** y [cerrar](../../../ado/reference/ado-api/close-method-ado.md) métodos tanto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) y [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objetos que se han abierto.  
+# <a name="open-and-close-methods-example-vc"></a>Ejemplo de los métodos Open y Close (VC ++)
+Este ejemplo se usa el **abierto** y [cerrar](../../../ado/reference/ado-api/close-method-ado.md) métodos tanto en [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) y [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objetos que se han abierto.  
   
 ```  
 // Open_Close_Methods.cpp  
@@ -212,6 +209,6 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>Vea también  
  [Close (método) (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
  [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Open (método) (conexión de ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Método Open (conexión de ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [Método Open (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.administration.activitymonitoring.f1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - monitoring activity
 - activity monitoring
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a7458eb1aa76eebeb987ef49f7079634b26e577
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3e8ba4bae008eb5328d28bd4e48ac383a570b330
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267671"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072755"
 ---
 # <a name="monitor-dqs-activities"></a>Supervisar las actividades de DQS
   En este tema se describe cómo supervisar de forma centralizada las actividades siguientes en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): detección de conocimiento, administración de dominios, directiva de coincidencia, limpieza de datos, coincidencia de datos y limpieza SSIS.  
@@ -54,7 +51,7 @@ ms.locfileid: "37267671"
   
     |Información|Descripción|  
     |-----------------|-----------------|  
-    |**ID**|Valor entero. Número de actividad único generado por el sistema para la supervisión de la actividad.|  
+    |**ID**|Valor de entero. Número de actividad único generado por el sistema para la supervisión de la actividad.|  
     |**Nombre**|El nombre de la base de conocimiento o del proyecto de calidad de datos que se utiliza para esta actividad.|  
     |**Está activo**|Indica si la actividad está activa o no. Puede tener los valores siguientes:<br /><br /> **Activa**: la actividad se está ejecutando actualmente.<br /><br /> **Finalizada**: la actividad ha finalizado.<br /><br /> **Terminada**: la actividad la ha dado por terminada el administrador de DQS mediante la pantalla de supervisión de actividades o la ha cancelado el usuario mientras se ejecutaba en el área de características correspondiente en [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|  
     |**Tipo**|Indica el tipo de actividad. Se supervisan los tipos de actividades siguientes: **Administración del conocimiento**, **Proyecto DQ**y **Limpieza SSIS**.|  

@@ -1,14 +1,11 @@
 ---
-title: sp_update_category (Transact-SQL) | Documentos de Microsoft
+title: sp_update_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_category
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_category
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f07e44e12193e506146e299bd57f84b02c802856
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 22cb6ac1283c0ad8e7b423d73f6ec768c90af11c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255751"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670523"
 ---
 # <a name="spupdatecategory-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,14 +46,14 @@ sp_update_category
  [  **@class =**] **'***clase***'**  
  Clase de la categoría que se va a actualizar. *clase*es **varchar (8)**, no tiene ningún valor predeterminado y puede ser uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**ALERTA**|Actualiza una categoría de alerta.|  
 |**TRABAJO**|Actualiza una categoría de trabajo.|  
 |**OPERADOR**|Actualiza una categoría de operador.|  
   
- [  **@name =**] **'***Nombre_antiguo***'**  
- Nombre actual de la categoría. *Nombre_antiguo*es **sysname**, no tiene ningún valor predeterminado.  
+ [  **@name =**] **'***old_name***'**  
+ Nombre actual de la categoría. *old_name*es **sysname**, no tiene ningún valor predeterminado.  
   
  [  **@new_name =**] **'***new_name***'**  
  El nuevo nombre de la categoría. *new_name*es **sysname**, no tiene ningún valor predeterminado.  
@@ -68,8 +64,8 @@ sp_update_category
 ## <a name="remarks"></a>Comentarios  
  **sp_update_category** se debe ejecutar desde la **msdb** base de datos.  
   
-## <a name="permissions"></a>Permissions  
- Para ejecutar este procedimiento almacenado, deben concederse a los usuarios la **sysadmin** rol fijo de servidor.  
+## <a name="permissions"></a>Permisos  
+ Para ejecutar este procedimiento almacenado, los usuarios debe concederse el **sysadmin** rol fijo de servidor.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se cambia el nombre de una categoría de trabajo de `AdminJobs` a `Administrative Jobs`.  

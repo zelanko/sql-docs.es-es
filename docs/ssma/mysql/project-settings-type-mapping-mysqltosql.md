@@ -1,41 +1,35 @@
 ---
-title: (Asignación de tipos) de la configuración del proyecto (MySQLToSQL) | Documentos de Microsoft
+title: Configuración del proyecto (asignación de tipo) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
-caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9bf1d1c219b8673345d5f2074fe8885b5c58223f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: e0a11a0b49589c3763b5af67623c9e819038c217
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776783"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713253"
 ---
-# <a name="project-settings-type-mapping-mysqltosql"></a>(Asignación de tipos) de la configuración del proyecto (MySQLToSQL)
-La configuración del proyecto de asignación de tipo permite definir asignaciones de tipos de valor predeterminado para el proyecto SSMA.  
+# <a name="project-settings-type-mapping-mysqltosql"></a>Configuración del proyecto (asignación de tipo) (MySQLToSQL)
+La configuración del proyecto de asignación de tipos le permite establecer asignaciones de tipos predeterminadas para el proyecto SSMA.  
 
-Asignación de tipos está disponible en los cuadros de diálogo de configuración del proyecto y la configuración predeterminada del proyecto:  
+Asignación de tipos está disponible en los cuadros de diálogo Configuración del proyecto y la configuración predeterminada del proyecto:  
   
--   Utilice el cuadro de diálogo de configuración del proyecto para establecer las opciones de configuración para el proyecto actual. Para obtener acceso a la configuración de la asignación de tipo, en el menú Herramientas, seleccione la configuración del proyecto y, a continuación, haga clic en asignación de tipos en el panel izquierdo.  
+-   Utilice el cuadro de diálogo de configuración del proyecto para establecer las opciones de configuración para el proyecto actual. Para obtener acceso a la configuración de asignación de tipo, en el menú Herramientas, seleccione la configuración del proyecto y, a continuación, haga clic en asignación de tipos en el panel izquierdo.  
   
--   Utilice el cuadro de diálogo de configuración de proyecto predeterminada para establecer las opciones de configuración para todos los proyectos. Para tener acceso a la asignación de tipo configuración, en el menú Herramientas, seleccione la configuración predeterminada del proyecto, tipo de proyecto de migración select para la que se requiere para ver / cambiar de configuración **versión de destino de migración** lista desplegable y, a continuación, haga clic en asignación de tipos en el panel izquierdo.  
+-   Utilice el cuadro de diálogo Configuración de proyecto predeterminada para establecer las opciones de configuración para todos los proyectos. Para tener acceso a la asignación de tipo configuración, en el menú Herramientas, seleccione la configuración predeterminada del proyecto, tipo de proyecto de migración select para los que es necesaria para ver o cambiar de configuración **versión de destino de migración** lista desplegable y, a continuación, haga clic en el tipo Asignación en el panel izquierdo.  
   
 ## <a name="options"></a>Opciones  
   
 ##### <a name="source-type"></a>Tipo de origen  
-Es el tipo de datos de MySQL, que debe asignarse al tipo de datos de la base de datos de destino.  
+Es el tipo de datos MySQL, que debe asignarse al tipo de datos de la base de datos de destino.  
   
 ##### <a name="target-type"></a>Tipo de destino  
 Escriba los datos de la base de datos de destino para el tipo de datos de MySQL especificado.  
@@ -53,7 +47,7 @@ Haga clic para quitar la asignación de tipos de datos seleccionados de la lista
 Haga clic para restablecer la lista de asignación de tipo para los valores predeterminados SSMA.  
   
 ## <a name="type-mappings"></a>Asignaciones de tipos  
-La tabla siguiente muestran las asignaciones predeterminadas entre tipos de datos de origen y de destino  
+La siguiente tabla muestra las asignaciones predeterminadas entre tipos de datos de origen y destino  
   
 |||  
 |-|-|  
@@ -61,7 +55,7 @@ La tabla siguiente muestran las asignaciones predeterminadas entre tipos de dato
 |BIGINT|BIGINT|  
 |bigint [*.. 255]|BIGINT|  
 |binary|binario [1]|  
-|binario [de 0.. 1]|binario [1]|  
+|archivo binario [de 0.. 1]|binario [1]|  
 |binario [2..255]|binario [*]|  
 |bit|binario [1]|  
 |bits [0..8]|binario [1]|  
@@ -71,7 +65,7 @@ La tabla siguiente muestran las asignaciones predeterminadas entre tipos de dato
 |bits [41..48]|binario [6]|  
 |bits [49..56]|binario [7]|  
 |bits [57..64]|binario [8]|  
-|bits [9..16]|binarios [2]|  
+|bits [9..16]|binario [2]|  
 |blob|varbinary(max)|  
 |BLOB [de 0.. 1]|varbinary [1]|  
 |blob[2..8000]|varbinary [*]|  
@@ -79,13 +73,13 @@ La tabla siguiente muestran las asignaciones predeterminadas entre tipos de dato
 |bool|bit|  
 |boolean|bit|  
 |char|nchar [1]|  
-|Char (bytes)|binario [1]|  
-|bytes de carácter [de 0.. 1]|binario [1]|  
+|bytes de char|binario [1]|  
+|bytes del carácter [de 0.. 1]|binario [1]|  
 |bytes de Char [2..255]|binario [*]|  
 |char [de 0.. 1]|nchar [1]|  
 |Char [2..255]|nchar [*]|  
 |character|nchar [1]|  
-|carácter variable [de 0.. 1]|nvarchar [1]|  
+|caracteres distintos de [0.. 1]|nvarchar [1]|  
 |carácter variable [2..255]|NVARCHAR|  
 |carácter [de 0.. 1]|nchar [1]|  
 |caracteres [2..255]|nchar [*]|  
@@ -93,18 +87,18 @@ La tabla siguiente muestran las asignaciones predeterminadas entre tipos de dato
 |DATETIME|datetime2 [0]|  
 |dec|Decimal|  
 |DEC [*.. 65]|decimal[*][0]|  
-|DEC [*.. 65][\*.. 30]|decimal [*] [\*]|  
+|DEC [*.. 65] [\*... 30]|decimal [*] [\*]|  
 |Decimal|Decimal|  
 |decimal [*.. 65]|decimal[*][0]|  
-|decimal [*.. 65][\*.. 30]|decimal [*] [\*]|  
+|decimal [*.. 65] [\*... 30]|decimal [*] [\*]|  
 |double|float [53]|  
-|precisión doble|float [53]|  
-|precisión doble [*.. 255][\*.. 30]|numérico [*] [\*]|  
-|Double [*.. 255][\*.. 30]|numérico [*] [\*]|  
-|fijo|NUMERIC|  
-|fija [*.. 65][\*.. 30]|numérico [*] [\*]|  
+|doble precisión|float [53]|  
+|doble precisión [*.. 255] [\*... 30]|numérico [*] [\*]|  
+|Double [*.. 255] [\*... 30]|numérico [*] [\*]|  
+|se ha corregido|NUMERIC|  
+|se ha corregido [*.. 65] [\*... 30]|numérico [*] [\*]|  
 |FLOAT|float [24]|  
-|float [*.. 255][\*.. 30]|numérico [*] [\*]|  
+|float [*.. 255] [\*... 30]|numérico [*] [\*]|  
 |float [*.. 53]|float [53]|  
 |INT|INT|  
 |int [*.. 255]|INT|  
@@ -116,20 +110,20 @@ La tabla siguiente muestran las asignaciones predeterminadas entre tipos de dato
 |mediumint|INT|  
 |mediumint [*.. 255]|INT|  
 |mediumtext|nvarchar(max)|  
-|Car.|nchar [1]|  
-|char nacional [de 0.. 1]|nchar [1]|  
-|National char [2..255]|nchar [*]|  
-|caracteres no nacionales|nchar [1]|  
+|carácter nacional|nchar [1]|  
+|carácter nacional [de 0.. 1]|nchar [1]|  
+|carácter nacional [2..255]|nchar [*]|  
+|carácter nacional|nchar [1]|  
 |national character varying de|nvarchar [1]|  
-|caracteres no nacionales distintos [de 0.. 1]|nvarchar [1]|  
-|caracteres no nacionales variable [2..4000]|nvarchar [*]|  
+|carácter nacional distintos [de 0.. 1]|nvarchar [1]|  
+|carácter nacional varying [2..4000]|nvarchar [*]|  
 |national character varying de [4001.. *]|nvarchar(max)|  
-|caracteres no nacionales [de 0.. 1]|nchar [1]|  
-|caracteres no nacionales [2..255]|nchar [*]|  
+|carácter nacional [de 0.. 1]|nchar [1]|  
+|carácter nacional [2..255]|nchar [*]|  
 |varchar nacional|nvarchar [1]|  
 |varchar nacional [de 0.. 1]|nvarchar [1]|  
-|varchar nacional [2..4000]|nvarchar [*]|  
-|varchar nacional [4001.. *]|nvarchar(max)|  
+|National varchar [2..4000]|nvarchar [*]|  
+|National varchar [4001.. *]|nvarchar(max)|  
 |NCHAR|nchar [1]|  
 |nchar varchar|nvarchar [1]|  
 |nchar varchar [de 0.. 1]|nvarchar [1]|  
@@ -139,14 +133,14 @@ La tabla siguiente muestran las asignaciones predeterminadas entre tipos de dato
 |nchar [2..255]|nchar [*]|  
 |NUMERIC|NUMERIC|  
 |numérico [*.. 65]|numérico [*] [0]|  
-|numérico [*.. 65][\*.. 30]|numérico [*] [\*]|  
+|numérico [*.. 65] [\*... 30]|numérico [*] [\*]|  
 |NVARCHAR|nvarchar [1]|  
 |nvarchar [de 0.. 1]|nvarchar [1]|  
 |nvarchar [2..4000]|nvarchar [*]|  
 |nvarchar [4001.. *]|nvarchar(max)|  
 |REAL|float [53]|  
-|real [*.. 255][\*.. 30]|numérico [*] [\*]|  
-|Serie|BIGINT|  
+|real [*.. 255] [\*... 30]|numérico [*] [\*]|  
+|serie|BIGINT|  
 |SMALLINT|SMALLINT|  
 |smallint [*.. 255]|SMALLINT|  
 |texto|nvarchar(max)|  
@@ -160,21 +154,21 @@ La tabla siguiente muestran las asignaciones predeterminadas entre tipos de dato
 |tinyint [*.. 255]|SMALLINT|  
 |tinytext|nvarchar [255]|  
 |bigint sin signo|BIGINT|  
-|sin signo bigint [*.. 255]|BIGINT|  
+|bigint sin signo [*.. 255]|BIGINT|  
 |dec sin signo|Decimal|  
 |dec sin signo [*.. 65]|decimal[*][0]|  
-|dec sin signo [*.. 65][\*.. 30]|decimal [*] [\*]|  
+|dec sin signo [*.. 65] [\*... 30]|decimal [*] [\*]|  
 |decimal sin signo|Decimal|  
 |decimal sin signo [*.. 65]|decimal[*][0]|  
-|decimal sin signo [*.. 65][\*.. 30]|decimal [*] [\*]|  
+|decimal sin signo [*.. 65] [\*... 30]|decimal [*] [\*]|  
 |doble sin signo|float [53]|  
 |sin signo de precisión doble|float [53]|  
-|sin signo de doble precisión [*.. 255][\*.. 30]|numérico [*] [\*]|  
-|sin signo double [*.. 255][\*.. 30]|numérico [*] [\*]|  
-|sin signo fijo|NUMERIC|  
-|sin signo fijo [*.. 65][\*.. 30]|numérico [*] [\*]|  
+|sin signo de precisión doble [*.. 255] [\*... 30]|numérico [*] [\*]|  
+|unsigned double [*.. 255] [\*... 30]|numérico [*] [\*]|  
+|unsigned fijo|NUMERIC|  
+|unsigned fijo [*.. 65] [\*... 30]|numérico [*] [\*]|  
 |float sin signo|float [24]|  
-|float sin signo [*.. 255][\*.. 30]|numérico [*] [\*]|  
+|float sin signo [*.. 255] [\*... 30]|numérico [*] [\*]|  
 |float sin signo [*.. 53]|float [53]|  
 |unsigned int|BIGINT|  
 |int sin signo [*.. 255]|BIGINT|  
@@ -184,9 +178,9 @@ La tabla siguiente muestran las asignaciones predeterminadas entre tipos de dato
 |mediumint sin signo [*.. 255]|INT|  
 |numérico sin signo|NUMERIC|  
 |numérico sin signo [*.. 65]|numérico [*] [0]|  
-|numérico sin signo [*.. 65][\*.. 30]|numérico [*] [\*]|  
+|numérico sin signo [*.. 65] [\*... 30]|numérico [*] [\*]|  
 |real sin signo|float [53]|  
-|sin signo real [*.. 255[[\*.. 30]|numérico [*] [\*]|  
+|unsigned real [*.. 255 [[\*... 30]|numérico [*] [\*]|  
 |smallint sin signo|INT|  
 |smallint sin signo [*.. 255]|INT|  
 |tinyint sin signo|TINYINT|  

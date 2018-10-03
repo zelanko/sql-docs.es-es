@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_spaceused_TSQL
@@ -18,17 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_spaceused
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-caps.latest.revision: 62
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6dc2878c9a913b5bb95ef32c9f00a6e7b1e94520
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 036dd5fd4898f7b7abc55eba4971ce599b746423
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43089388"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608814"
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -172,7 +168,7 @@ Si *objname* es se omite, el valor de oneresultset es 1, y *include_total_xtp_st
 |**xtp_used**|**varchar(18)**|Tamaño total de archivos de punto de comprobación con Estados UNDER CONSTRUCTION, ACTIVE y MERGE TARGET, en KB. Este es el espacio en disco usado activamente para los datos en tablas optimizadas para memoria. Devuelve NULL si la base de datos no tiene un grupo de archivos memory_optimized_data con al menos un contenedor. *Esta columna solo está incluido si @include_total_xtp_storage= 1*.| 
 |**xtp_pending_truncation**|**varchar(18)**|Tamaño total de archivos de punto de control con estado WAITING_FOR_LOG_TRUNCATION, en KB. Este es el espacio en disco usado para los archivos de punto de control que están en espera de limpieza, una vez que se produce el truncamiento del registro. Devuelve NULL si la base de datos no tiene un grupo de archivos memory_optimized_data con al menos un contenedor. Esta columna solo está incluido si `@include_total_xtp_storage=1`.|
 
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  **database_size** sea siempre mayor que la suma de **reservada** + **espacio sin asignar** porque incluye el tamaño de los archivos de registro, pero **reservado**y **unallocated_space** considere solo las páginas de datos.  
   
  Las páginas que usan los índices XML e índices de texto completo se incluyen en **index_size** para ambos conjuntos de resultados. Cuando *objname* se especifica, también se cuentan las páginas de los índices XML e índices de texto completo para el objeto en el total **reservada** y **index_size** resultados.  

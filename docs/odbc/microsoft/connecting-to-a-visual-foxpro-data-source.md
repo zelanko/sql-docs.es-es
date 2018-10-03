@@ -1,28 +1,25 @@
 ---
-title: Conectarse a un origen de datos de Visual FoxPro | Documentos de Microsoft
+title: Conectarse a un origen de datos de Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connecting to data source [ODBC], Visual FoxPro
 - Visual FoxPro data source [ODBC], connecting
 ms.assetid: dfd404aa-c455-41b5-b69d-b6739575033c
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86640885d2771a4d5c1b984e323e96a61f9d86a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eacb57e4db5d312d04fdcd1e3b06b446f62635cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32898110"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817851"
 ---
 # <a name="connecting-to-a-visual-foxpro-data-source"></a>Conectarse a un origen de datos de Visual FoxPro
 Puede conectarse a un origen de datos de Visual FoxPro mediante la aplicación de Microsoft Office o con la API de SQL.  

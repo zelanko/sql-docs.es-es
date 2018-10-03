@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_db_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_db
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
-caps.latest.revision: 69
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c275128a8e3c2bbce6165486e256fc5b34d402d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 87093ee870549307e9395c013b2f8727f047ae4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037203"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811293"
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +65,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **sp_attach_db** sólo se debe ejecutar el procedimiento almacenado en bases de datos que se hayan separado previamente del servidor de base de datos mediante el uso de explícita **sp_detach_db** operación o en bases de datos copiadas. Si tiene que especificar más de 16 archivos, utilice CREATE DATABASE *database_name* FOR ATTACH o CREATE DATABASE *database_name* FOR_ATTACH_REBUILD_LOG. Para obtener más información, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
  Se da por supuesto que cualquier archivo que no se especifique se encuentra en su última ubicación conocida. Para utilizar un archivo que se encuentra en una ubicación diferente, debe especificar la nueva ubicación.  

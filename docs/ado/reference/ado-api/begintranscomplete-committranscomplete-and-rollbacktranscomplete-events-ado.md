@@ -1,13 +1,11 @@
 ---
-title: Eventos de BeginTrans, CommitTrans y RollbackTrans (ADO) | Documentos de Microsoft
+title: Eventos de BeginTrans, CommitTrans y RollbackTrans (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -22,21 +20,20 @@ helpviewer_keywords:
 - RollbackTransComplete event [ADO]
 - BeginTransComplete event [ADO]
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c440f6bd1a978a820797414ff81e6b9b15da467
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: afd8b9d4a45bdc98388f1133b3478a1cfbe51e4c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276064"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773453"
 ---
-# <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>Eventos BeginTransComplete, CommitTransComplete y RollbackTransComplete eventos (ADO)
-Estos eventos se les llama después de la operación asociada en el [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto termina de ejecutarse.  
+# <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete, CommitTransComplete y RollbackTransComplete eventos (ADO)
+Estos eventos se llamará después de la operación asociada en el [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto termina de ejecutarse.  
   
--   **Eventos BeginTransComplete** se llama después de la [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) operación.  
+-   **BeginTransComplete** se llama después de la [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) operación.  
   
 -   **CommitTransComplete** se llama después de la [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) operación.  
   
@@ -53,23 +50,23 @@ RollbackTransComplete pError, adStatus, pConnection
   
 #### <a name="parameters"></a>Parámetros  
  *TransactionLevel*  
- A **largo** valor que contiene el nuevo nivel de transacción de la **BeginTrans** que produjo este evento.  
+ Un **largo** valor que contiene el nuevo nivel de transacción de la **BeginTrans** que provocó este evento.  
   
  *pError*  
- Un [Error](../../../ado/reference/ado-api/error-object.md) objeto. Describe el error que se ha producido si el valor de EventStatusEnum es **adStatusErrorsOccurred**; en caso contrario, no se establece.  
+ Un [Error](../../../ado/reference/ado-api/error-object.md) objeto. Describe el error producido si el valor de EventStatusEnum es **adStatusErrorsOccurred**; en caso contrario, no se establece.  
   
  *adStatus*  
- Un [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) valor de estado. Cuando se llama a cualquiera de estos eventos, este parámetro se establece en **adStatusOK** si la operación que provocó el evento se realizó correctamente, o para **adStatusErrorsOccurred** si la operación produce un error.  
+ Un [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) valor de estado. Cuando se llama a cualquiera de estos eventos, este parámetro se establece en **adStatusOK** si la operación que provocó el evento se realizó correctamente, o para **adStatusErrorsOccurred** si la operación produjo un error.  
   
- Estos eventos pueden impedir notificaciones posteriores si se establece este parámetro **adStatusUnwantedEvent** antes de que el evento vuelva.  
+ Estos eventos pueden impedir notificaciones posteriores al establecer este parámetro en **adStatusUnwantedEvent** antes de que el evento.  
   
  *pConnection*  
  El **conexión** el objeto para el que se produjo este evento.  
   
-## <a name="remarks"></a>Notas  
- En Visual C++, varios **conexiones** pueden compartir el mismo método de control de eventos. El método usa el valor devuelto **conexión** para determinar qué objeto causó el evento.  
+## <a name="remarks"></a>Comentarios  
+ En Visual C++, varios **conexiones** pueden compartir el mismo método de control de eventos. El método usa el valor devuelto **conexión** objeto para determinar el objeto que provocó el evento.  
   
- Si el [atributos](../../../ado/reference/ado-api/attributes-property-ado.md) propiedad está establecida en **adXactCommitRetaining** o **adXactAbortRetaining**, inicia una nueva transacción después de confirmar o revertir una transacción. Use la **BeginTransComplete** evento para pasar por alto todas, pero el primer evento de inicio de la transacción.  
+ Si el [atributos](../../../ado/reference/ado-api/attributes-property-ado.md) propiedad está establecida en **adXactCommitRetaining** o **adXactAbortRetaining**, se inicia una nueva transacción después de confirmar o revertir una transacción. Use la **BeginTransComplete** evento para omitir todo excepto el primer evento de inicio de transacción.  
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplo de modelo de eventos de ADO (VC ++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   

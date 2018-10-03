@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_repl_articles (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_repl_articles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_repl_articles_TSQL
@@ -18,23 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_articles dynamic management function
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12a9e842c8ff0ebbf74e9d1126de52224980b473
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 48112a8cf804b329b16aadc04992ac04b852ba07
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467991"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791081"
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve información acerca de los objetos de base de datos publicados como artículos en la tecnología de replicación.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**artcache_db_address**|**varbinary (8)**|Dirección de memoria de la estructura de la base de datos en caché de la base de datos de publicaciones.|  
 |**artcache_table_address**|**varbinary (8)**|Dirección de memoria de la estructura de la tabla en caché de un artículo de la tabla publicada.|  
@@ -44,8 +41,8 @@ ms.locfileid: "34467991"
 |**artfilter**|**bigint**|Id. del procedimiento almacenado usado para filtrar horizontalmente el artículo.|  
 |**artobjid**|**bigint**|Id. del objeto publicado.|  
 |**artpubid**|**bigint**|Id. de la publicación a la que pertenece el artículo.|  
-|**artstatus**|**tinyint**|Máscara de bits del estado y las opciones del artículo, que puede ser un resultado OR bit a bit lógico de uno o varios de estos valores:<br /><br /> **1** = artículo está activo.<br /><br /> **8** = incluir el nombre de columna en las instrucciones INSERT.<br /><br /> **16** = utilizar instrucciones parametrizadas.<br /><br /> **24** = ambos incluyen el nombre de columna en las instrucciones INSERT y utilizar instrucciones con parámetros.<br /><br /> Por ejemplo, un artículo activo que utilice instrucciones con parámetros tendrá un valor de 17 en esta columna. Un valor de 0 significa que el artículo no está activo y no tiene otras propiedades definidas.|  
-|**arttype**|**tinyint**|Tipo de artículo.<br /><br /> **1** = artículo basado en registro.<br /><br /> **3** = artículo basado en registro con filtro manual.<br /><br /> **5** = artículo basado en registro con vista manual.<br /><br /> **7** = artículo basado en registro con filtro manual y vista manual.<br /><br /> **8** = ejecución de procedimiento almacenado.<br /><br /> **24** = ejecución del procedimiento almacenado serializable.<br /><br /> **32** = procedimiento almacenado (solo esquema).<br /><br /> **64** = vista (solo esquema).<br /><br /> **128** = función (solo esquema).|  
+|**artstatus**|**tinyint**|Máscara de bits del estado y las opciones del artículo, que puede ser un resultado OR bit a bit lógico de uno o varios de estos valores:<br /><br /> **1** = artículo está activo.<br /><br /> **8** = incluir el nombre de columna en las instrucciones INSERT.<br /><br /> **16** = usar instrucciones con parámetros.<br /><br /> **24** = ambos incluyen el nombre de columna en las instrucciones INSERT y utilizar instrucciones con parámetros.<br /><br /> Por ejemplo, un artículo activo que utilice instrucciones con parámetros tendrá un valor de 17 en esta columna. Un valor de 0 significa que el artículo no está activo y no tiene otras propiedades definidas.|  
+|**arttype**|**tinyint**|Tipo de artículo.<br /><br /> **1** = artículo basado en registro.<br /><br /> **3** = artículo basado en registro con filtro manual.<br /><br /> **5** = artículo basado en registro con vista manual.<br /><br /> **7** = artículo basado en registro con filtro manual y vista manual.<br /><br /> **8** = ejecución de procedimiento almacenado.<br /><br /> **24** = la ejecución del procedimiento almacenado serializable.<br /><br /> **32** = procedimiento almacenado (solo esquema).<br /><br /> **64** = vista (solo esquema).<br /><br /> **128** = function (solo esquema).|  
 |**wszArtdesttable**|**nvarchar(514)**|Nombre del objeto publicado en el destino.|  
 |**wszArtdesttableowner**|**nvarchar(514)**|Propietario del objeto publicado en el destino.|  
 |**wszArtinscmd**|**nvarchar(510)**|Comando o procedimiento almacenado usado para inserciones.|  
@@ -57,7 +54,7 @@ ms.locfileid: "34467991"
 |**wszArtpartialupdcmd**|**nvarchar(510)**|Comando o procedimiento almacenado usado para actualizaciones parciales.|  
 |**cmdTypePartialUpd**|**int**|Sintaxis de la llamada para el procedimiento almacenado para actualizaciones parciales. Puede ser uno de estos valores.<br /><br /> **2** = SQL|  
 |**numcol**|**int**|Número de columnas en la partición para un artículo filtrado verticalmente.|  
-|**artcmdtype**|**tinyint**|Tipo de comando que se está replicando actualmente. Puede ser uno de los siguientes valores.<br /><br /> **1** = INSERCIÓN<br /><br /> **2** = ELIMINAR<br /><br /> **3** = ACTUALIZAR<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = ninguno<br /><br /> **6** = exclusivamente para uso interno<br /><br /> **7** = exclusivamente para uso interno<br /><br /> **8** = UPDATE parcial|  
+|**artcmdtype**|**tinyint**|Tipo de comando que se está replicando actualmente. Puede ser uno de los siguientes valores.<br /><br /> **1** = INSERCIÓN<br /><br /> **2** = DELETE<br /><br /> **3** = ACTUALIZAR<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = ninguno<br /><br /> **6** = solo para uso interno<br /><br /> **7** = solo para uso interno<br /><br /> **8** = UPDATE parcial|  
 |**artgeninscmd**|**nvarchar(510)**|Plantilla del comando INSERT basada en las columnas incluidas en el artículo.|  
 |**artgendelcmd**|**nvarchar(510)**|Plantilla del comando DELETE, que puede incluir la clave principal o las columnas incluidas en el artículo, dependiendo de la sintaxis de llamada usada.|  
 |**artgenupdcmd**|**nvarchar(510)**|Plantilla del comando UPDATE, que puede incluir la clave principal, las columnas actualizadas o una lista completa de columnas, dependiendo de la sintaxis de llamada usada.|  
@@ -67,10 +64,10 @@ ms.locfileid: "34467991"
 |**artgendel2cmd**|**nvarchar(510)**|Plantilla del comando DELETE usada al reconciliar un artículo durante el procesamiento simultáneo de instantáneas.|  
 |**fInReconcile**|**tinyint**|Indica si un artículo se ha reconciliado durante el procesamiento simultáneo de instantáneas.|  
 |**fPubAllowUpdate**|**tinyint**|Indica si la publicación admite suscripciones de actualización.|  
-|**intPublicationOptions**|**bigint**|Mapa de bits que especifica las opciones de publicación adicionales, donde los valores de la opción bit a bit son:<br /><br /> **0 x 1** : habilitado para replicación punto a punto.<br /><br /> **0 x 2** -publicar solo cambios locales.<br /><br /> **0 x 4** : habilitado para no son suscriptores de SQL Server.|  
+|**intPublicationOptions**|**bigint**|Mapa de bits que especifica las opciones de publicación adicionales, donde los valores de la opción bit a bit son:<br /><br /> **0 x 1** : habilitado para replicación punto a punto.<br /><br /> **0 x 2** -publicar solo cambios locales.<br /><br /> **0 x 4** : habilitado para que no son suscriptores de SQL Server.|  
   
-## <a name="permissions"></a>Permissions  
- Requiere el permiso VIEW DATABASE STATE en la base de datos de publicación para llamar a **dm_repl_articles**.  
+## <a name="permissions"></a>Permisos  
+ Requiere el permiso VIEW DATABASE STATE en la base de datos de publicaciones para llamar a **dm_repl_articles**.  
   
 ## <a name="remarks"></a>Comentarios  
  La instancia solo se devuelve para objetos de la base de datos replicada que está cargada actualmente en la caché del artículo de replicación.  

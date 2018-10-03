@@ -1,38 +1,35 @@
 ---
-title: Controladores de Unicode | Documentos de Microsoft
+title: Controladores de Unicode | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [ODBC], drivers
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
 ms.assetid: 3b4742d5-74fb-4aff-aa21-d83a0064d73d
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 310ae2855099544181cfeec75352bfa0742f397e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2e555ff4a3b33c4c827371dc1ad63546736d7189
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914890"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745863"
 ---
 # <a name="unicode-drivers"></a>Controladores de Unicode
-Si un controlador debe ser un controlador de Unicode o ANSI depende por completo la naturaleza del origen de datos. Si el origen de datos es compatible con datos Unicode, el controlador debe ser un controlador de Unicode. Si el origen de datos solo admite datos ANSI, el controlador debe permanecer un controlador de ANSI.  
+Si un controlador debe ser un controlador de Unicode o ANSI depende completamente de la naturaleza del origen de datos. Si el origen de datos es compatible con datos Unicode, el controlador debe ser un controlador de Unicode. Si el origen de datos solo admite datos ANSI, el controlador debe permanecer un controlador de ANSI.  
   
- Debe exportar un controlador de Unicode **SQLConnectW** se reconozca como un controlador de Unicode mediante el Administrador de controladores.  
+ Debe exportar un controlador de Unicode **SQLConnectW** sea reconocida como un controlador de Unicode, el Administrador de controladores.  
   
- Un controlador de Unicode debe aceptar las funciones Unicode (con un sufijo de *W*) y almacenar los datos Unicode. También puede aceptar las funciones de ANSI, pero no es necesario. (El Administrador de controladores no supera una llamada de función ANSI con el *A* sufijo para el controlador, pero se convierte a un ANSI función llamada sin el sufijo y, a continuación, pasa al controlador.)  
+ Un controlador de Unicode debe aceptar las funciones Unicode (con un sufijo de *W*) y almacenar los datos Unicode. También puede aceptar las funciones de ANSI, pero no es necesario. (El Administrador de controladores no pasa una llamada de función ANSI con el *A* sufijo para el controlador, pero convierte a ANSI función llamada sin el sufijo y pasa entonces al controlador.)  
   
- Un controlador de Unicode debe ser capaz de devolver conjuntos de resultados en Unicode o ANSI, función de enlace de la aplicación. Si una aplicación enlaza a SQL_C_CHAR, el controlador de Unicode debe convertir los datos SQL_WCHAR a SQL_CHAR. El Administrador de controladores asignará SQL_C_WCHAR a SQL_C_CHAR para controladores de ANSI pero no hace ninguna asignación para controladores de Unicode.  
+ Un controlador de Unicode debe ser capaz de devolver conjuntos de resultados en Unicode o ANSI, en función de enlace de la aplicación. Si una aplicación se enlaza a SQL_C_CHAR, el controlador de Unicode debe convertir los datos SQL_WCHAR en SQL_CHAR. El Administrador de controladores SQL_C_WCHAR se asignará a SQL_C_CHAR para controladores de ANSI, pero no realiza ninguna asignación para los controladores de Unicode.  
   
 > [!NOTE]  
->  Al determinar el tipo de controlador, el Administrador de controladores llamará **SQLSetConnectAttr** y establezca el atributo SQL_ATTR_ANSI_APP en tiempo de conexión. Si la aplicación utiliza las API de ANSI, SQL_ATTR_ANSI_APP se establecerá en SQL_AA_TRUE y, si utiliza Unicode, se establecerá en un valor de SQL_AA_FALSE. Este atributo se utiliza para que el controlador puede mostrar un comportamiento diferente en función del tipo de aplicación. El atributo no se puede establecer directamente por la aplicación y no es compatible con **SQLGetConnectAttr**. Si un controlador presenta el mismo comportamiento para las aplicaciones ANSI y Unicode, debe devolver SQL_ERROR para este atributo. Si el controlador devuelve SQL_SUCCESS, el Administrador de controladores separará conexiones ANSI y Unicode cuando se utiliza la agrupación de conexiones.
+>  Al determinar el tipo de controlador, el Administrador de controladores llamará **SQLSetConnectAttr** y establecer el atributo SQL_ATTR_ANSI_APP en tiempo de conexión. Si la aplicación usa las API de ANSI, SQL_ATTR_ANSI_APP se establecerá en SQL_AA_TRUE y, si utiliza Unicode, se establecerá en un valor de SQL_AA_FALSE. Este atributo se utiliza para que el controlador puede presentar un comportamiento diferente según el tipo de aplicación. El atributo no se puede establecer directamente por la aplicación y no es compatible con **SQLGetConnectAttr**. Si un controlador muestra el mismo comportamiento para las aplicaciones ANSI y Unicode, debe devolver SQL_ERROR para este atributo. Si el controlador devuelve SQL_SUCCESS, el Administrador de controladores separa las conexiones de ANSI y Unicode cuando se usa la agrupación de conexiones.

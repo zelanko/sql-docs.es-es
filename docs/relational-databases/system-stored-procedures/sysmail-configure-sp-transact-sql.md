@@ -1,14 +1,11 @@
 ---
-title: sysmail_configure_sp (Transact-SQL) | Documentos de Microsoft
+title: sysmail_configure_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_configure_sp_TSQL
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_configure_sp
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0121f82f7ec06dabb3958e5f8407daa5979e89e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5e44edb404d21e3be482bf83cf6db37a522cfa36
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259545"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47594834"
 ---
 # <a name="sysmailconfiguresp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Cambia los valores de configuración de Correo electrónico de base de datos. Los valores de configuración especificados con **sysmail_configure_sp** se aplican a toda la matriz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia.  
+  Cambia los valores de configuración de Correo electrónico de base de datos. Los valores de configuración especificados con **sysmail_configure_sp** se aplican a toda la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -66,19 +62,19 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
   
 ||||  
 |-|-|-|  
-|Nombre del parámetro|Description|Valor predeterminado|  
+|Nombre del parámetro|Descripción|Valor predeterminado|  
 |*AccountRetryAttempts*|Número de veces que el proceso de correo electrónico externo intenta enviar el mensaje de correo electrónico con cada cuenta del perfil especificado.|**1**|  
 |*AccountRetryDelay*|Cantidad de tiempo en segundos que el proceso de correo electrónico externo espera entre cada intento de envío de un mensaje.|**5000**|  
 |*DatabaseMailExeMinimumLifeTime*|Cantidad de tiempo mínima en segundos que el proceso de correo electrónico externo permanece activo. Si el Correo electrónico de base de datos está enviando muchos mensajes, aumente este valor para mantener activo el Correo electrónico de base de datos y evitar una sobrecarga de inicios y detenciones frecuentes.|**600**|  
 |*DefaultAttachmentEncoding*|Codificación predeterminada para los datos adjuntos de correo electrónico.|MIME|  
 |*MaxFileSize*|Tamaño máximo de los datos adjuntos en bytes.|**1000000**|  
 |*ProhibitedExtensions*|Lista de extensiones separadas por comas que no se puede enviar como datos adjuntos en un mensaje de correo electrónico.|**exe, dll, vbs, js**|  
-|*LoggingLevel*|Sirve para especificar qué mensajes se deben registrar en el registro de Correo electrónico de base de datos. Uno de los siguientes valores numéricos:<br /><br /> 1 - Éste es el modo normal. Solo registra los errores.<br /><br /> 2 - Éste es el modo extendido. Registra errores, advertencias y mensajes informativos.<br /><br /> 3 - Éste es el modo detallado. Registra errores, advertencias, mensajes informativos, mensajes de acciones correctas y otros mensajes internos. Utilice este modo para solucionar problemas.|**2**|  
+|*LoggingLevel*|Sirve para especificar qué mensajes se deben registrar en el registro de Correo electrónico de base de datos. Uno de los valores numéricos siguientes:<br /><br /> 1 - Éste es el modo normal. Solo registra los errores.<br /><br /> 2 - Éste es el modo extendido. Registra errores, advertencias y mensajes informativos.<br /><br /> 3 - Éste es el modo detallado. Registra errores, advertencias, mensajes informativos, mensajes de acciones correctas y otros mensajes internos. Utilice este modo para solucionar problemas.|**2**|  
   
- El procedimiento almacenado **sysmail_configure_sp** está en el **msdb** la base de datos y es propiedad de la **dbo** esquema. El procedimiento se debe ejecutar con un nombre de tres partes si la base de datos actual no es **msdb**.  
+ El procedimiento almacenado **sysmail_configure_sp** está en el **msdb** de base de datos y que pertenece el **dbo** esquema. El procedimiento debe ejecutarse con un nombre de tres partes si la base de datos actual no es **msdb**.  
   
-## <a name="permissions"></a>Permissions  
- Permisos de ejecución para este procedimiento de forma predeterminada a los miembros de la **sysadmin** rol fijo de servidor.  
+## <a name="permissions"></a>Permisos  
+ Permisos de ejecución de este procedimiento de forma predeterminada a los miembros de la **sysadmin** rol fijo de servidor.  
   
 ## <a name="examples"></a>Ejemplos  
  **A. Configurar el correo electrónico de base de datos para reintentar con cada cuenta 10 veces**  

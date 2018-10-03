@@ -1,32 +1,29 @@
 ---
-title: Ejemplo del método OpenSchema (VB) | Documentos de Microsoft
+title: Ejemplo del método OpenSchema (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - OpenSchema method [ADO], Visual Basic example
 ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2ebcb40cc91f93c7810223304e0dde2ed45a21a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b8889cf8cf24ddc9befd356af98d8c982eb562ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279954"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778993"
 ---
 # <a name="openschema-method-example-vb"></a>Ejemplo del método OpenSchema (VB)
-Este ejemplo se utiliza la [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) método para mostrar el nombre y tipo de cada tabla de la ***Pubs*** base de datos.  
+Este ejemplo se usa el [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) método para mostrar el nombre y tipo de cada tabla de la ***Pubs*** base de datos.  
   
 ```  
 'BeginOpenSchemaVB  
@@ -82,7 +79,7 @@ End Sub
 'EndOpenSchemaVB  
 ```  
   
- Este ejemplo especifica una restricción de consulta TABLE_TYPE en el **OpenSchema** método ***criterios*** argumento. Como resultado, solo la información de esquema para las vistas especificado en el ***Pubs*** base de datos se devuelven. En el ejemplo se muestra a continuación, los nombres y los tipos de cada tabla (s).  
+ Este ejemplo especifica una restricción de consulta TABLE_TYPE en el **OpenSchema** método ***criterios*** argumento. Como resultado, solo información de las vistas de esquema especificado en el ***Pubs*** base de datos se devuelven. El ejemplo muestra a continuación, el nombre y el tipo de cada tabla (s).  
   
 ```  
 Attribute VB_Name = "OpenSchema"  

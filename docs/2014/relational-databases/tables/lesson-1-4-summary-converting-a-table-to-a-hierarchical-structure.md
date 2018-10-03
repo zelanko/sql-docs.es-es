@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: d57a1876-3fb3-4d82-8b5c-510b6e0d8a11
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a81fe13f39d2c586338cfe33452a552aa1c7e12
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cc38ad1ed2ab29660ea7caade8a56c7fec042540
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270411"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057075"
 ---
 # <a name="summary-converting-a-table-to-a-hierarchical-structure"></a>Resumen: Conversión de una tabla en una estructura jerárquica
   El tipo de datos `hierarchyid` puede almacenar una relación jerárquica en un formato simple y compacto. Los índices apropiados pueden devolver eficazmente los datos por el nivel de la jerarquía, por subárboles de la jerarquía, o por búsquedas singleton tradicionales.  

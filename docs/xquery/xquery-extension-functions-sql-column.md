@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - sql:column function
 - sql:column() function
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
-caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 19a427f43667718225120cdd72a571eba66cd041
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 75980cf457d1422bba783c02f9978bdd9263f220
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981947"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627713"
 ---
-# <a name="xquery-extension-functions---sqlcolumn"></a>Funciones de XQuery extensión: SQL:Column()
+# <a name="xquery-extension-functions---sqlcolumn"></a>Funciones de extensión de XQuery: sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Como se describe en el tema [enlazar datos relacionales dentro de XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), puede usar el **SQL:Column()** funcionan cuando se utiliza [métodos del tipo de datos XML](../t-sql/xml/xml-data-type-methods.md) para exponer un valor relacional dentro de XQuery.  
@@ -46,7 +40,7 @@ ms.locfileid: "37981947"
 sql:column("columnName")  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Tenga en cuenta que hacen referencia a una columna especificada en el **SQL:Column()** función dentro de una expresión XQuery hace referencia a una columna de la fila que se está procesando.  
   
  En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], solo puede hacer referencia a un **xml** instrucción insert de la instancia en el contexto de la expresión de origen de un XML-DML; de lo contrario, no puede hacer referencia a las columnas de tipo **xml** o CLR tipo definido por el usuario.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VisualStudio.SourceControl.GetVersionDialog
 helpviewer_keywords:
 - Get dialog box
 ms.assetid: 048564d3-6c58-405b-8b57-b690fbfdbe9e
-caps.latest.revision: 16
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c61a83ed2352067a3d1ae3a23b22bf11be3d3546
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 051e3b93761511db07a2f381be5c94ea3247e76a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810381"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048795"
 ---
 # <a name="get-dialog-box-source-control"></a>Cuadro de diálogo Obtener (Control de código fuente)
   Recupera una copia de solo lectura del elemento seleccionado de la base de datos de control de código fuente a la carpeta de trabajo, o bien a otra carpeta que especifique.  

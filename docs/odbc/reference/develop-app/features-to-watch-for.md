@@ -1,32 +1,29 @@
 ---
-title: Características para vigilar | Documentos de Microsoft
+title: Características para vigilar | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], writing interoperable applications
 ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 704fc0c45706e80408218d185146a438099da829
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe5bce7a8a13c7296ce08f84ea4b0c60c2eb5261
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911370"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770623"
 ---
 # <a name="features-to-watch-for"></a>Características para vigilar
-Esta sección describe una serie de características que los desarrolladores de aplicaciones a menudo dan por sentado. De hecho, estas características varían ampliamente en soporte técnico y el modo de compatibilidad entre DBMS; errores al código para ellos es podría causar problemas en aplicaciones interoperables.  
+En esta sección se describe una serie de características que los desarrolladores de aplicaciones a menudo dan por sentado. De hecho, estas características varían considerablemente en soporte técnico y el modo de compatibilidad entre DBMS; es probable que causa problemas en aplicaciones interoperables error al código para ellos.  
   
- En esta sección no muestra todas las características que los desarrolladores de aplicaciones deben tener en cuenta. Para obtener esa información, consulte el [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md), y [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) función descripciones, [Apéndice C: SQL gramática](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)y las secciones de este manual que explican cada característica.  
+ Esta sección no muestran todas las características que los desarrolladores de aplicaciones deben tener en cuenta. Para obtener esa información, consulte el [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md), y [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) función descripciones, [Apéndice C: SQL gramática](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)y las secciones de este manual que tratan sobre cada característica.  
   
  Esta sección contiene los temas siguientes.  
   

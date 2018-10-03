@@ -1,13 +1,11 @@
 ---
-title: Ejemplo del método CreateRecordset (RDS) | Documentos de Microsoft
+title: Ejemplo del método CreateRecordset (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,22 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - CreateRecordset method [RDS]
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61f918c7a7530ae504825182a1d6a1c4ced1d84c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 791586badfeff0c1bde35b5cdf25ba750f79fe80
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287624"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779033"
 ---
 # <a name="createrecordset-method-rds"></a>Ejemplo del método CreateRecordset (RDS)
-Crea vacío, desconecta [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Crea una vacía, desconectado [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar a [servicio de datos de WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,7 +45,7 @@ object.CreateRecordset(ColumnInfos)
  Una variable de objeto que representa un [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto.  
   
  *ColumnsInfos*  
- A **Variant** matriz de atributos que define cada columna en el **Recordset** creado. Cada definición de columna contiene una matriz de cuatro atributos necesarios y un atributo opcional.  
+ Un **Variant** matriz de atributos que define cada columna en el **Recordset** creado. Cada definición de columna contiene una matriz de cuatro atributos necesarios y un atributo opcional.  
   
 |Attribute|Descripción|  
 |---------------|-----------------|  
@@ -56,24 +53,24 @@ object.CreateRecordset(ColumnInfos)
 |Tipo|Entero del tipo de datos.|  
 |Tamaño|Entero del ancho en caracteres, independientemente del tipo de datos.|  
 |Nulabilidad|Valor booleano.|  
-|Scale (opcional)|Este atributo opcional define la escala para los campos numéricos. Si no se especifica este valor, se truncará a una escala de tres valores numéricos. No se ve afectada la precisión, pero el número de dígitos después del separador decimal se truncará a tres.|  
+|Escala (opcional)|Este atributo opcional define la escala para los campos numéricos. Si no se especifica este valor, se truncará a una escala de tres valores numéricos. No se ve afectada la precisión, pero el número de dígitos después del separador decimal se truncará a tres.|  
   
- El conjunto de matrices de columnas, a continuación, se agrupa en una matriz, que define la **conjunto de registros**.  
+ El conjunto de matrices de columnas, a continuación, se agrupa en una matriz, que define el **Recordset**.  
   
-## <a name="remarks"></a>Notas  
- El objeto empresarial de servidor puede rellenar resultante **Recordset** con datos de un proveedor de datos no OLE DB, como un sistema operativo archivos cotizaciones que lo contiene.  
+## <a name="remarks"></a>Comentarios  
+ Puede rellenar el objeto de negocios de servidor resultante **Recordset** con datos de un proveedor de datos que no sean OLE DB, como un sistema operativo archivo contenedor de cotizaciones.  
   
- La siguiente tabla se recogen los [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valores admitidos por el **CreateRecordset** método. El número que aparece es el número de referencia que se utiliza para definir campos.  
+ La siguiente tabla se enumeran los [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valores admitidos por el **CreateRecordset** método. El número que aparece es el número de referencia utilizado para definir los campos.  
   
- Cada uno de los tipos de datos es de longitud fija o longitud variable. Tipos de longitud fija deben definirse con un tamaño de – 1, porque el tamaño es predeterminado y sigue siendo necesaria una definición de tamaño. Tipos de datos de longitud variable permiten un tamaño entre 1 y 32767.  
+ Cada uno de los tipos de datos es de longitud fija o longitud variable. Tipos de longitud fija deben definirse con un tamaño de -1, porque el tamaño es el predeterminado y sigue siendo necesaria una definición de tamaño. Tipos de datos de longitud variable permiten un tamaño de entre 1 y 32767.  
   
- En algunos de los tipos de datos de la variable, se puede convertir el tipo para el tipo indicado en la columna de sustitución. No verá las sustituciones hasta después de la **Recordset** se crea y se rellena. A continuación, puede comprobar el tipo de datos real, si es necesario.  
+ Algunos de los tipos de datos de la variable, se puede convertir el tipo para el tipo indicado en la columna de sustitución. No verá las sustituciones hasta después de la **Recordset** está creado y rellenado. A continuación, puede comprobar el tipo de datos real, si es necesario.  
   
 |Longitud|Constante|Number|Substitution|  
 |------------|--------------|------------|------------------|  
 |Fixed|**adTinyInt**|16||  
 |Fixed|**adSmallInt**|2||  
-|Fixed|**Tipos**|3||  
+|Fixed|**son también tipos**|3||  
 |Fixed|**adBigInt**|20||  
 |Fixed|**adUnsignedTinyInt**|17||  
 |Fixed|**adUnsignedSmallInt**|18||  

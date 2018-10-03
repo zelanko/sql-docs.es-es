@@ -1,50 +1,44 @@
 ---
-title: Configuración (GUI) (SybaseToSQL) del proyecto | Documentos de Microsoft
+title: Configuración (GUI) (SybaseToSQL) del proyecto | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: cbd6ddc9-8abd-4fa9-bffd-631e54894ce8
-caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 295ed3cc30cce20ed04427ca7149c7f4e1374f8a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 34fe42a645965f141a7250ea5f272cfdbabc6bac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779101"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598775"
 ---
 # <a name="project-settings-gui-sybasetosql"></a>Configuración del proyecto (GUI) (SybaseToSQL)
-La configuración del proyecto de interfaz gráfica de usuario le permite configurar la aparecen de los datos en el **datos** ficha y si se debe mostrar el informe de evaluación después de la conversión o no.  
+La configuración del proyecto de interfaz gráfica de usuario le permite configurar cómo aparecen los datos en el **datos** pestaña y si se debe mostrar el informe de evaluación después de la conversión o no.  
   
-El panel de la interfaz gráfica de usuario está disponible en la **configuración del proyecto** y **configuración de proyecto predeterminada** cuadros de diálogo.  
+El panel de la interfaz gráfica de usuario está disponible en el **configuración del proyecto** y **configuración de proyecto predeterminada** cuadros de diálogo.  
   
--   Use la **configuración del proyecto** cuadro de diálogo para establecer opciones de interfaz de usuario para el proyecto actual. Para acceder a la configuración de la interfaz gráfica de usuario, en la **herramientas** menú, seleccione **configuración del proyecto**y, a continuación, haga clic en **GUI** en la parte inferior del panel izquierdo.  
+-   Use la **configuración del proyecto** cuadro de diálogo para establecer opciones de interfaz de usuario para el proyecto actual. Para obtener acceso a la configuración de la interfaz gráfica de usuario, en el **herramientas** menú, seleccione **configuración del proyecto**y, a continuación, haga clic en **GUI** en la parte inferior del panel izquierdo.  
   
--   Use la **configuración de proyecto predeterminada** cuadro de diálogo para establecer opciones de interfaz de usuario para todos los proyectos. Para acceder a la configuración de la interfaz gráfica de usuario, en la **herramientas** menú, seleccione **la configuración predeterminada del proyecto**, seleccione el tipo de proyecto de migración para el que se requiere para puede ver o cambiar de configuración **versión de destino de migración** de lista desplegable y, a continuación, haga clic en **GUI** en la parte inferior del panel izquierdo.  
+-   Use la **configuración de proyecto predeterminada** cuadro de diálogo para establecer opciones de interfaz de usuario para todos los proyectos. Para obtener acceso a la configuración de la interfaz gráfica de usuario, en el **herramientas** menú, seleccione **la configuración predeterminada del proyecto**, seleccione el tipo de proyecto de migración para los que es necesaria para ver o cambiar de configuración **migración Versión de destino** lista desplegable y, a continuación, haga clic en **GUI** en la parte inferior del panel izquierdo.  
   
 ## <a name="options"></a>Opciones  
-**Número máximo de filas de origen**  
-Configura el número de filas de datos que se muestran en la **datos** pestaña de la tabla de origen seleccionado.  
+**Número máximo de fila de origen**  
+Configura el número de filas de datos que se muestran en el **datos** pestaña de la tabla de origen seleccionado.  
   
-**Predeterminado**: 100  
+**Default**: 100  
   
-**Número máximo de filas de destino**  
-Configura el número de filas de datos que se muestran en la **datos** pestaña de la tabla de destino seleccionados.  
+**Número máximo de fila de destino**  
+Configura el número de filas de datos que se muestran en el **datos** pestaña de la tabla de destino seleccionado.  
   
-**Predeterminado**: 100  
+**Default**: 100  
   
 **Mostrar el informe después de la conversión**  
-Para mostrar un informe después de convertir esquemas, seleccione True. El informe de conversión resultante contiene la misma información de diseño y que el informe de evaluación.  
+Para mostrar un informe después de convertir los esquemas, seleccione True. El informe de conversión resultante contiene el mismo diseño y la información que el informe de evaluación.  
   
-**Predeterminado**: False  
+**Default**: False  
   

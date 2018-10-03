@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CrossProduct Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - CrossProduct element
 ms.assetid: a9a1584e-d2dd-45db-a918-d694c20d8189
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a0d76cc463d39a3b33de41f1c342f5d9f8f800bb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0612d741cc6aa04d2564f7100179d3d1881b9e5b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278254"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055226"
 ---
 # <a name="crossproduct-element-xmla"></a>Elemento CrossProduct (XMLA)
   Contiene un producto cruzado entre los conjuntos ordenados de miembros de cada jerarquía para un [eje](axis-element-xmla.md) elemento que usa el [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) tipo de datos devuelto por la [Execute](../xml-elements-methods-execute.md) método.  
@@ -50,7 +47,7 @@ ms.locfileid: "37278254"
 </Axis>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -71,7 +68,7 @@ ms.locfileid: "37278254"
 |---------------|-----------------|  
 |Tamaño|Requiere `Integer` atributo. Indica el número de tuplas contenido en el producto cruzado representado por el elemento `CrossProduct`.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Cuando una aplicación cliente establece el `AxisFormat` propiedad *ClusterFormat*, los miembros en cada eje se dividen en clústeres en el que cada clúster representa un producto cruzado entre los conjuntos ordenados de miembros de cada jerarquía. Un elemento `CrossProduct` representa cada clúster. Cada elemento `CrossProduct` contiene un elemento `Members` para cada jerarquía del eje. Un elemento `CrossProduct` puede contener los miembros de una sola jerarquía.  
   
 ## <a name="example"></a>Ejemplo  

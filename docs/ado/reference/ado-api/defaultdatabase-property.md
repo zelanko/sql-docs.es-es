@@ -1,13 +1,11 @@
 ---
-title: Propiedad DefaultDatabase | Documentos de Microsoft
+title: Propiedad DefaultDatabase | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - DefaultDatabase property
 ms.assetid: 41e8a8dd-e69c-4a09-8736-93502e01961c
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b7fc72d99273428a1ab4a11f12a021079d8faac
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2cd93826e03f7767455ec4b656ed14d1c35c21d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277464"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757454"
 ---
 # <a name="defaultdatabase-property"></a>Propiedad DefaultDatabase
 Indica la base de datos predeterminada para un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto.  
@@ -32,15 +29,15 @@ Indica la base de datos predeterminada para un [conexión](../../../ado/referenc
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un **cadena** valor que se evalúa como el nombre de una base de datos disponible desde el proveedor.  
   
-## <a name="remarks"></a>Notas  
- Use la **DefaultDatabase** propiedad para establecer o devolver el nombre de la base de datos predeterminada en un determinado **conexión** objeto.  
+## <a name="remarks"></a>Comentarios  
+ Use la **DefaultDatabase** propiedad para establecer o devolver el nombre de la base de datos de forma predeterminada en un determinado **conexión** objeto.  
   
- Si hay una base de datos de forma predeterminada, las cadenas de SQL pueden usar una sintaxis incompleta para tener acceso a objetos en esa base de datos. Para obtener acceso a objetos en una base de datos distinto del especificado en el **DefaultDatabase** propiedad, debe calificar nombres de objeto con el nombre de la base de datos deseada. Tras establecer la conexión, el proveedor escribirá información de base de datos predeterminada para el **DefaultDatabase** propiedad. Algunos proveedores permiten sólo una base de datos por conexión, en cuyo caso no se puede cambiar la **DefaultDatabase** propiedad.  
+ Si hay una base de datos de forma predeterminada, las cadenas de SQL pueden usar una sintaxis incompleta para tener acceso a los objetos de esa base de datos. Para obtener acceso a objetos en una base de datos distinto del especificado en el **DefaultDatabase** propiedad, debe calificar los nombres de objeto con el nombre de la base de datos deseada. Tras la conexión, el proveedor escribirá la información de base de datos predeterminada para el **DefaultDatabase** propiedad. Algunos proveedores permiten sólo una base de datos por conexión, en cuyo caso no se puede cambiar el **DefaultDatabase** propiedad.  
   
  Algunos orígenes de datos y los proveedores pueden no admitir esta característica y pueden devolver un error o una cadena vacía.  
   
 > [!NOTE]
->  **Uso de servicios de datos remoto** esta propiedad no está disponible en un cliente **conexión** objeto.  
+>  **Uso del servicio de datos remoto** esta propiedad no está disponible en un cliente **conexión** objeto.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  

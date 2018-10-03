@@ -1,33 +1,30 @@
 ---
-title: Pasar parámetros a un comando con nombre | Documentos de Microsoft
+title: Pasar parámetros a un comando con nombre | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO], passing parameters to a named command
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51243e0b57bf9cfe4619368e1abf49c048a19fd7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0f7db54ca3cd3b7574896bac11bce87446b6d4b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272364"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773393"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Pasar parámetros a un comando con nombre
-Tal y como se pasa el resultado del comando como un *out* variable del comando con nombre, parámetros para un comando con parámetros puede sido pasado como *en* variables para el comando con nombre.  
+Al igual que el resultado del comando se pasa como un *out* variable del comando con nombre, parámetros sido para un comando con parámetros puede pasado como *en* variables para el comando con nombre.  
   
- El siguiente código en el ejemplo se intenta recuperar todos los pedidos realizados por el cliente cuyo **CustomerID** es "ALKFI" de la base de datos Northwind. El valor de **CustomerID** se proporciona en el momento cuando se llama el comando indicado.  
+ El siguiente código en el ejemplo se intenta recuperar todos los pedidos realizados por el cliente cuya **CustomerID** es "ALKFI" de la base de datos Northwind. El valor de **CustomerID** se proporciona en el momento cuando se llama el comando con nombre.  
   
 ```  
 Const DS = "MySqlServer"  
@@ -94,7 +91,7 @@ objConn.GetOrdersOf 12345, objRs
 objConn.GetOrdersOf "12345", objRs  
 ```  
   
- : es válido, pero dará un resultado vacío porque no existe ningún registro de este tipo en la base de datos.  
+ : es válido, pero dará como resultado un conjunto porque ningún registro de este tipo existe en la base de datos de resultados vacío.  
   
 ## <a name="see-also"></a>Vea también  
  [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

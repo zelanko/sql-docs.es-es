@@ -1,73 +1,67 @@
 ---
-title: Generación de informes (DB2ToSQL) | Documentos de Microsoft
+title: Generación de informes (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4c4a567293e2bd18dd37e83cef1cfbc8d9c4b982
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: bbcd28bde611ece919c9a4f2ab0c65a4d646cd7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775011"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47594023"
 ---
 # <a name="generating-reports-db2tosql"></a>Generación de informes (DB2ToSQL)
-Se generan los informes de ciertas actividades que se realizan mediante comandos en la consola SSMA al nivel de árbol de objetos.  
+Se generan los informes de ciertas actividades realizadas mediante comandos en la consola de SSMA en nivel de árbol de objetos.  
   
-Utilice el procedimiento siguiente para generar informes:  
+Use el procedimiento siguiente para generar informes:  
   
-1.  Especifique el **escritura-resumen-informe de** parámetro. El informe al respecto se almacena como el nombre de archivo (si se especifica) o en la carpeta especifique. El nombre de archivo es definido por el sistema como se mencionó en la tabla siguiente where, **&lt;n&gt;** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
+1.  Especifique el **escritura-resumen-informe de** parámetro. El informe relacionado se almacena como el nombre de archivo (si se especifica) o en la carpeta que especifique. El nombre de archivo es definido por el sistema como se mencionó en la tabla siguiente where, **&lt;n&gt;** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
   
-    Los comandos de à respecto de los informes son:  
+    Los comandos de vis-con respecto de los informes son:  
   
     ||||  
     |-|-|-|  
-    |**SL. No.**|**Command**|**Título del informe**|  
+    |**SL. No.**|**Command**|**Título de informe**|  
     |1|informe de evaluación generar|AssessmentReport&lt;n&gt;. XML|  
     |2|convertir esquema|SchemaConversionReport&lt;n&gt;. XML|  
     |3|migrar datos|DataMigrationReport&lt;n&gt;. XML|  
-    |4|instrucción de sql Convert|ConvertSQLReport&lt;n&gt;. XML|  
-    |5|destino sincronizar|TargetSynchronizationReport&lt;n&gt;. XML|  
+    |4|instrucción CONVERT-sql|ConvertSQLReport&lt;n&gt;. XML|  
+    |5|sincronizar de destino|TargetSynchronizationReport&lt;n&gt;. XML|  
     |6|actualización de base de datos|SourceDBRefreshReport&lt;n&gt;. XML|  
   
     > [!IMPORTANT]  
-    > Un informe de salida es distinto de los informes de evaluación. El primero es un informe sobre el rendimiento de un comando ejecutado al, el segundo es un informe XML para su uso mediante programación.  
+    > Un informe de salida es distinto de informe de evaluación. El primero es un informe sobre el rendimiento de un comando ejecutado al, el segundo es un informe XML para su consumo mediante programación.  
   
-    Para las opciones de comando para los informes de salida (de Sl. No. 2 a 4 anteriores), consulte el [ejecutando la consola SSMA &#40;DB2ToSQL&#41; ](../../ssma/db2/executing-the-ssma-console-db2tosql.md) sección.  
+    Para las opciones de comando para los informes de salida (de Sl. No. 2 a 4 anteriores), consulte el [ejecutando la consola de SSMA &#40;DB2ToSQL&#41; ](../../ssma/db2/executing-the-ssma-console-db2tosql.md) sección.  
   
-2.  Indica el grado de detalle que desee en el informe de salida con la configuración de nivel de detalle del informe:  
+2.  Indicar el grado de detalle que desee en el informe de salida con la configuración de nivel de detalle del informe:  
   
     ||||  
     |-|-|-|  
     |**SL. No.**|**Parámetros y comandos**|**Descripción de salida**|  
     |1|detallado = "false"|Genera un informe resumido de la actividad.|  
-    |2|detallado = "true"|Genera un informe de estado resumida y detallada para cada actividad.|  
+    |2|detallado = "true"|Genera un informe de estado resumido y detallado para cada actividad.|  
   
     > [!NOTE]  
-    > La configuración de nivel de detalle del informe especificada anteriormente son aplicable para informe de evaluación generar, convert-schema, migrar datos, comandos de la instrucción de sql de convert.  
+    > La configuración de nivel de detalle del informe especificada anteriormente son aplicable para el informe de evaluación generar, esquema de convert, migrar datos, los comandos de la instrucción convert-sql.  
   
-3.  Indica el grado de detalle que desee en los informes de errores mediante la configuración de informe de errores:  
+3.  Indicar el grado de detalle que desea para los informes de errores mediante la configuración de informes de errores:  
   
     ||||  
     |-|-|-|  
     |**SL. No.**|**Parámetros y comandos**|**Descripción de salida**|  
-    |1|informe de errores = "false"|No hay detalles de error / advertencia / mensajes de información.|  
+    |1|informe de errores = "false"|No hay detalles de un error / advertencia / mensajes de información.|  
     |2|informe de errores = "true"|Error detallado / advertencia / mensajes de información.|  
   
     > [!NOTE]  
-    > La configuración de informe de errores especificados anteriormente son aplicable para informe de evaluación generar, convert-schema, migrar datos, comandos de la instrucción de sql de convert.  
+    > La configuración de informe de errores especificados anteriormente son aplicable para el informe de evaluación generar, esquema de convert, migrar datos, los comandos de la instrucción convert-sql.  
   
 **Ejemplo:**  
   
@@ -89,10 +83,10 @@ Utilice el procedimiento siguiente para generar informes:
    assessment-report-overwrite="<true/false>"/>  
 ```  
   
-### <a name="synchronize-target"></a>destino sincronizar:  
-El comando **destino sincronizar** tiene **informe de errores a** parámetro, que especifica la ubicación del informe de error para la operación de sincronización. A continuación, un archivo con nombre **TargetSynchronizationReport&lt;n&gt;. XML** se crea en la ubicación especificada, donde **&lt;n&gt;** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
+### <a name="synchronize-target"></a>sincronizar-target:  
+El comando **destino sincronizar** tiene **informe de errores a** parámetro, que especifica la ubicación del informe de errores para la operación de sincronización. A continuación, un archivo con nombre **TargetSynchronizationReport&lt;n&gt;. XML** se crea en la ubicación especificada, donde **&lt;n&gt;** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
   
-**Nota:** si se proporciona la ruta de acceso de carpeta, el parámetro 'informe-errores-to' se convierte en un atributo opcional para el comando 'sincronizar el destino'.  
+**Nota:** si se proporciona la ruta de acceso de carpeta y, después, parámetro 'informe de errores-a' se convierte en un atributo opcional para el comando 'sincronizar-target'.  
   
 ```  
 <!-- Example: Synchronize target entire Database with all attributes-->  
@@ -105,20 +99,20 @@ El comando **destino sincronizar** tiene **informe de errores a** parámetro, qu
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**nombre de objeto:** especifica los objetos que se consideran para la sincronización (también puede tener nombres de objeto de indivdual o un nombre de objeto de grupo).  
+**nombre de objeto:** especifica los objetos que se consideran para la sincronización (también puede tener nombres de objeto de la emisora o un nombre de objeto de grupo).  
   
-**error:** especifica si se debe especificar los errores de sincronización como advertencias o errores. Opciones disponibles en el error:  
+**en caso de error:** especifica si se debe especificar los errores de sincronización como advertencias o errores. Opciones disponibles para en caso de error:  
   
 -   total de informes como advertencia  
   
--   informes-each-como-advertencia  
+-   informes-each-como-warning  
   
--   Error-script  
+-   Error de script  
   
-### <a name="refresh-from-database"></a>actualización-de-base de datos:  
-El comando **actualización de base de datos** tiene **informe de errores a** parámetro, que especifica la ubicación del informe de error para la operación de actualización. A continuación, un archivo con nombre **SourceDBRefreshReport&lt;n&gt;. XML** se crea en la ubicación especificada, donde **&lt;n&gt;** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
+### <a name="refresh-from-database"></a>actualización-de-database:  
+El comando **actualización de base de datos** tiene **informe de errores a** parámetro, que especifica la ubicación del informe de errores para la operación de actualización. A continuación, un archivo con nombre **SourceDBRefreshReport&lt;n&gt;. XML** se crea en la ubicación especificada, donde **&lt;n&gt;** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
   
-**Nota:** si se proporciona la ruta de acceso de carpeta, el parámetro 'informe-errores-to' se convierte en un atributo opcional para el comando 'sincronizar el destino'.  
+**Nota:** si se proporciona la ruta de acceso de carpeta y, después, parámetro 'informe de errores-a' se convierte en un atributo opcional para el comando 'sincronizar-target'.  
   
 ```  
 <!-- Example: Refresh entire Schema (with all attributes)-->  
@@ -133,15 +127,15 @@ El comando **actualización de base de datos** tiene **informe de errores a** pa
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**nombre de objeto:** especifica los objetos que se consideran para la actualización (también puede tener nombres de objeto de indivdual o un nombre de objeto de grupo).  
+**nombre de objeto:** especifica los objetos que se consideran para la actualización (también puede tener nombres de objeto de la emisora o un nombre de objeto de grupo).  
   
-**error:** especifica si se debe especificar la actualización de errores como advertencias o errores. Opciones disponibles en el error:  
+**en caso de error:** especifica si se debe especificar la actualización de errores como advertencias o errores. Opciones disponibles para en caso de error:  
   
 -   total de informes como advertencia  
   
--   informes-each-como-advertencia  
+-   informes-each-como-warning  
   
--   Error-script  
+-   Error de script  
   
 ## <a name="see-also"></a>Vea también  
 [Ejecución de la consola de SSMA](http://msdn.microsoft.com/en-us/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  

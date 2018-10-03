@@ -1,31 +1,28 @@
 ---
-title: SQL a los ejemplos de conversión de datos de C | Documentos de Microsoft
+title: SQL a ejemplos de conversión de datos de C | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data conversions from SQL to C types [ODBC], examples
 - converting data from SQL to C types [ODBC], examples
 ms.assetid: 0190c76c-7f9b-42f4-be9d-cef7284840fd
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c23e98067cafefbf44c39633aa8c11effa6594f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c528a4a7bf60aae399924d651443e574ba9ae4fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911790"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778733"
 ---
 # <a name="sql-to-c-data-conversion-examples"></a>SQL a los ejemplos de conversión de datos de C
-Los ejemplos que se muestra en la tabla siguiente muestra cómo el controlador convierte los datos de SQL a los datos de C:  
+Los ejemplos que se muestra en la tabla siguiente muestran cómo el controlador convierte datos de SQL a C datos:  
   
 |Tipo SQL<br /><br /> identificador|SQL data<br /><br /> value|Tipo de C<br /><br /> identificador|Búfer<br /><br /> length|**TargetValuePtr*|SQLSTATE|  
 |-----------------------------|------------------------|---------------------------|-----------------------|------------------------|--------------|  
@@ -47,6 +44,6 @@ SQL_DOUBLE|1.2345678|SQL_C_DOUBLE|no se tiene en cuenta|1.2345678|n/d|
 SQL_TYPE_TIMESTAMP|1992-12-31 23:45:55.12|SQL_C_CHAR|22|1992-12-31 23:45:55.1\0 [a]|01004|  
 |SQL_TYPE_TIMESTAMP|1992-12-31 23:45:55.12|SQL_C_CHAR|18|----|22003|  
   
- [a] "\0" representa un byte de finalización en null. El controlador siempre termina en null datos SQL_C_CHAR.  
+ [a] "\0" representa un byte de una terminación null. El controlador siempre termina en null los datos SQL_C_CHAR.  
   
  [b] los números de esta lista son los números almacenados en los campos de la estructura TIMESTAMP_STRUCT.

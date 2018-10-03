@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - technical reference [SQL Server Database Engine]
 - Database Engine [SQL Server], getting assistance
 ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
-caps.latest.revision: 31
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: c79c55c9eab4c165f2fd49e57c622a802c549375
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 882764275d2455f63cadaa4f72dbfd33b85fb833
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298935"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052515"
 ---
 # <a name="technical-reference-database-engine"></a>Referencia técnica (motor de base de datos)
   Encontrará la documentación de referencia de programación de herramientas, lenguajes y administración de [!INCLUDE[ssDE](../includes/ssde-md.md)] en Microsoft [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  

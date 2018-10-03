@@ -1,27 +1,24 @@
 ---
-title: Cómo funcionan los procedimientos almacenados extendidos | Documentos de Microsoft
+title: Cómo funcionan los procedimientos almacenados extendidos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - extended stored procedures [SQL Server], about extended stored procedures
 ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
-caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bd0996750aff15fc94a17b669092552a021bf34b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 118603088f1cad1ee612f7e4035dc69ba66bc860
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838323"
 ---
 # <a name="how-extended-stored-procedures-work"></a>Cómo funcionan los procedimientos almacenados extendidos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
  El procedimiento almacenado extendido funciona del siguiente modo:  
   
-1.  Cuando un cliente ejecuta un procedimiento almacenado extendido, la solicitud se transmite en formato de Protocolo Simple de acceso a objetos (SOAP) de la aplicación cliente o el flujo de datos tabulares (TDS) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Cuando un cliente ejecuta un procedimiento almacenado extendido, la solicitud se transmite en flujo de datos tabulares (TDS) o formato de Protocolo Simple de acceso a objetos (SOAP) de la aplicación cliente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] busca la DLL asociada al procedimiento almacenado extendido y la carga si no lo está ya.  
   

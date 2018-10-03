@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dropremotelogin
@@ -20,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 89633f39028047e4caf4bb2dd8db0f4ce022c96c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: a834dbb26bfc8c712531084e528f82bba50cd05e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026502"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800703"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +56,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si solo *remoteserver* se especifica, se quitan todos los inicios de sesión remotos para ese servidor remoto desde el servidor local. Si *inicio de sesión* también está especificados, remotos todos los inicios de sesión de *remoteserver* inicio de sesión local asignado a específico que se quitan del servidor local. Si *remote_name* también se especifica, solo el inicio de sesión remoto de ese usuario remoto desde *remoteserver* se quita del servidor local.  
   
  Para agregar usuarios al servidor local, use **sp_addlogin**. Para quitar usuarios del servidor local, use **sp_droplogin**.  

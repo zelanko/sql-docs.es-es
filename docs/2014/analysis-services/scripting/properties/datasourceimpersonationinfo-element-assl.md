@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataSourceImpersonationInfo Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - DataSourceImpersonationInfo element
 ms.assetid: a153044b-2d6c-406b-aeb3-15bf096931f4
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: da8889abe558a33b18e20ca8ee81855656f149f0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ed6feef09732e92b018cf73103ea2334888d86c3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187082"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055165"
 ---
 # <a name="datasourceimpersonationinfo-element-assl"></a>Elemento DataSourceImpersonationInfo (ASSL)
   Contiene la información utilizada para determinar el comportamiento de suplantación al conectarse al origen de datos para un [base de datos](../objects/database-element-assl.md) elemento.  
@@ -44,7 +41,7 @@ ms.locfileid: "37187082"
 </Database>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -59,7 +56,7 @@ ms.locfileid: "37187082"
 |Elementos primarios|[Base de datos](../objects/database-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades &#40;ASSL&#41;](properties-assl.md)  

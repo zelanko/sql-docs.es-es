@@ -1,13 +1,11 @@
 ---
-title: Eventos WillMove y MoveComplete (ADO) | Documentos de Microsoft
+title: Eventos WillMove y MoveComplete (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,19 +17,18 @@ helpviewer_keywords:
 - MoveComplete event [ADO]
 - WillMove event [ADO]
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30394da01328ad1f533834081cd33f6620c54dd4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 47040adf2ce7be17d0540755f7fa972d7a76266f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282895"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772567"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>Eventos WillMove y MoveComplete (ADO)
-El **WillMove** evento se le llama antes de que una operación pendiente cambie la posición actual en el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). El **MoveComplete** eventos se llama después de la posición actual en el **Recordset** cambios.  
+El **WillMove** se llama al evento antes de que una operación pendiente cambia la posición actual en el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). El **MoveComplete** se llama al evento después de la posición actual en el **Recordset** cambios.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,7 +43,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
  Un [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) valor que especifica el motivo de este evento. Su valor puede ser **adRsnMoveFirst**, **adRsnMoveLast**, **adRsnMoveNext**, **adRsnMovePrevious**, **adRsnMove** , o **adRsnRequery**.  
   
  *pError*  
- Un [Error](../../../ado/reference/ado-api/error-object.md) objeto. Describe el error que se ha producido si el valor de *adStatus* es **adStatusErrorsOccurred**; en caso contrario, el parámetro no se establece.  
+ Un [Error](../../../ado/reference/ado-api/error-object.md) objeto. Describe el error producido si el valor de *adStatus* es **adStatusErrorsOccurred**; en caso contrario, no se establece el parámetro.  
   
  *adStatus*  
  Un [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) valor de estado.  
@@ -55,15 +52,15 @@ MoveComplete adReason, pError, adStatus, pRecordset
   
  Cuando **MoveComplete** es llama, este parámetro se establece en **adStatusOK** si la operación que provocó el evento se realizó correctamente, o para **adStatusErrorsOccurred** si el Error en la operación.  
   
- Antes de **WillMove** devuelve resultados, establezca este parámetro en **adStatusCancel** para solicitar la cancelación de la operación pendiente, o establecer este parámetro **adStatusUnwantedEvent** Para evitar notificaciones posteriores.  
+ Antes de **WillMove** devuelve, establezca este parámetro en **adStatusCancel** para solicitar la cancelación de la operación pendiente, o establezca este parámetro en **adStatusUnwantedEvent** Para evitar notificaciones posteriores.  
   
- Antes de **MoveComplete** devuelve resultados, establezca este parámetro en **adStatusUnwantedEvent** para impedir notificaciones posteriores.  
+ Antes de **MoveComplete** devuelve, establezca este parámetro en **adStatusUnwantedEvent** para evitar notificaciones posteriores.  
   
  *pRecordset*  
- A [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto. El **conjunto de registros** para la que se produjo este evento.  
+ Un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto. El **Recordset** para que se produjo este evento.  
   
-## <a name="remarks"></a>Notas  
- A **WillMove** o **MoveComplete** evento puede ocurrir debido a los siguientes **Recordset** operations: [abiertos](../../../ado/reference/ado-api/open-method-ado-recordset.md), [mover](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), y [Requery](../../../ado/reference/ado-api/requery-method.md). Estos eventos pueden producirse debido a las siguientes propiedades: [filtro](../../../ado/reference/ado-api/filter-property.md), [índice](../../../ado/reference/ado-api/index-property.md), [marcador](../../../ado/reference/ado-api/bookmark-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)y [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md). Estos eventos también se producen si un elemento secundario **Recordset** tiene **Recordset** eventos conectados y el elemento primario **Recordset** se mueve.  
+## <a name="remarks"></a>Comentarios  
+ Un **WillMove** o **MoveComplete** evento puede producirse debido a lo siguiente **Recordset** operations: [abierto](../../../ado/reference/ado-api/open-method-ado-recordset.md), [mover](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), y [Requery](../../../ado/reference/ado-api/requery-method.md). Estos eventos pueden producirse debido a las siguientes propiedades: [filtro](../../../ado/reference/ado-api/filter-property.md), [índice](../../../ado/reference/ado-api/index-property.md), [marcador](../../../ado/reference/ado-api/bookmark-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)y [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md). Estos eventos también se producen si un niño **Recordset** tiene **Recordset** eventos conectados y el elemento primario **Recordset** se mueve.  
   
  Debe establecer el *adStatus* parámetro **adStatusUnwantedEvent** para cada posible *adReason* valor con el fin de detener completamente la notificación de eventos para cualquier evento que incluye un *adReason* parámetro.  
   

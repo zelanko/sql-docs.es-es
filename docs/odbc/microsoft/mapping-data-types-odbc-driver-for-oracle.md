@@ -1,36 +1,34 @@
 ---
-title: Asignar tipos de datos (controlador ODBC para Oracle) | Documentos de Microsoft
+title: Asignar tipos de datos (controlador ODBC para Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mapping data types [ODBC]
 - data types [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], data types
 ms.assetid: a5d9ce12-19da-4943-8493-e3d56fa08348
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92e8df65faf6be2cbe7d63d00e922ac1c4ed3af2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ecdd7d7d4b597c4cae218e18b40b0f78e27a6bd5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775813"
 ---
 # <a name="mapping-data-types-odbc-driver-for-oracle"></a>Asignar tipos de datos (controlador ODBC para Oracle)
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, utilice el controlador ODBC proporcionado por Oracle.  
+>  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, use el controlador ODBC proporcionado por Oracle.  
   
- El servidor de Oracle admite un conjunto de tipos de datos. El controlador ODBC para Oracle asigna estos tipos de datos a sus tipos de datos SQL de ODBC adecuados. En la tabla siguiente se enumera los tipos de datos de Oracle 7.3 Server y sus tipos de datos de ODBC SQL correspondientes.  
+ El servidor de Oracle admite un conjunto de tipos de datos. El controlador ODBC para Oracle asigna estos tipos de datos a sus tipos de datos SQL de ODBC adecuados. En la tabla siguiente se enumera los tipos de datos de Oracle 7.3 Server y sus correspondientes tipos de datos SQL de ODBC.  
   
- El controlador ODBC para Oracle admite Oracle 7.3 y algunos tipos de datos de Oracle8. Para obtener más información acerca de los tipos de datos de Oracle8 compatibles, consulte [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md).  
+ El controlador ODBC para Oracle admite Oracle 7.3 y algunos tipos de datos de Oracle8. Para obtener más información acerca de los tipos de datos de Oracle8 admitidos, consulte [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md).  
   
 |Tipo de datos del servidor de Oracle|Tipo de datos SQL de ODBC|  
 |-----------------------------|------------------------|  

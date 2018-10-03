@@ -1,31 +1,28 @@
 ---
-title: Índices de dBASE | Documentos de Microsoft
+title: Índices de dBASE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DBase indexes [ODBC]
 - DBase driver [ODBC], indexes
 ms.assetid: fdfa56f5-e324-4ec2-9267-fdf95ab99373
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe8787e299d57fcac9d437be6d71023268e6c7d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66dab60f4a9a180d2a8b74ce4d0c8f4d7bf8d242
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900110"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682843"
 ---
 # <a name="dbase-indexes"></a>Índices de dBASE
-El controlador ODBC dBASE automáticamente abre y actualiza los archivos de índice de dBASE IV. Debe utilizar el **Seleccionar índices** cuadro de diálogo mediante el Administrador de orígenes de datos de ODBC para asociar archivos dBASE III .ndx con archivos dBASE.  
+El controlador ODBC dBASE automáticamente abre y actualiza los archivos de índice de dBASE IV. Debe usar el **Seleccionar índices** cuadro de diálogo muestra mediante el Administrador de origen de datos de ODBC para asociar los archivos de dBASE III ndx archivos dBASE.  
   
  Las siguientes limitaciones se aplican a la creación de índices de dBASE:  
   
@@ -39,8 +36,8 @@ El controlador ODBC dBASE automáticamente abre y actualiza los archivos de índ
   
 -   No se puede indizar los campos de memorando.  
   
--   No se debe especificar un índice para el conjunto actual de campos (es decir, no se permiten índices duplicados).  
+-   No se debe especificar un índice para el conjunto de campos actual (es decir, no se permiten índices duplicados).  
   
--   El nombre del índice debe coincidir con la convención de nomenclatura de índice de dBASE. dBASE III requiere que cada índice esté en un archivo independiente, cada uno con una extensión .ndx. En dBASE IV, los índices se crean como nombres de etiqueta que se almacenan en un archivo único .mdx. El archivo .mdx tiene el mismo nombre base que el archivo de base de datos (por ejemplo, Emp.mdx es el archivo de índice para la base de datos de Emp.dbf).  
+-   El nombre del índice debe coincidir con la convención de nomenclatura del índice de dBASE. dBASE III requiere que cada índice esté en un archivo independiente, cada uno con una extensión ndx. En dBASE IV, los índices se crean como nombres de etiqueta que se almacenan en un archivo .mdx único. El archivo .mdx tiene el mismo nombre base que el archivo de base de datos (por ejemplo, Emp.mdx es el archivo de índice para la base de datos Emp.dbf).  
   
--   dBASE define un índice único como uno donde se agrega un solo registro de un conjunto de valores clave idénticos al índice.
+-   dBASE define un índice único como uno donde sólo un registro de un conjunto con idénticos valores de clave se agrega al índice.

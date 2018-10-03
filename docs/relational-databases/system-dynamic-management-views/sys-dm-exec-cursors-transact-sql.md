@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_exec_cursors (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_exec_cursors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_cursors_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6af56d14dda67948a46e87cd71f0ff3eafcad65c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 24648d8c52134e572dce82cf37cb59717f139eb1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468491"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607323"
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,15 +46,15 @@ dm_exec_cursors (session_id | 0 )
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|Id. de la sesión que alberga este cursor.|  
 |**cursor_id**|**int**|Id. del objeto de cursor.|  
 |**Nombre**|**nvarchar(256)**|Nombre del cursor tal como lo ha definido el usuario.|  
 |**Propiedades**|**nvarchar(256)**|Especifica las propiedades del cursor. Los valores de las propiedades siguientes se concatenan para formar el valor de esta columna:<br />Interfaz de declaración<br />Tipo de cursor <br />Simultaneidad de cursor<br />Alcance del cursor<br />Nivel de anidamiento de cursor<br /><br /> Por ejemplo, el valor devuelto de esta columna podría ser "TSQL &#124; dinámica &#124; Optimistic &#124; Global (0)".|  
-|**sql_handle**|**varbinary(64)**|Identificador del texto del lote que declaró el cursor.|  
-|**statement_start_offset**|**int**|Número de caracteres en el lote que se está ejecutando actualmente o procedimiento almacenado en el que se inicia la instrucción que se está ejecutando actualmente. Puede utilizarse junto con la **sql_handle**, **statement_end_offset**y el [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) función de administración dinámica para recuperar el actualmente ejecutar la instrucción para la solicitud.|  
-|**statement_end_offset**|**int**|Número de caracteres en el lote que se está ejecutando actualmente o procedimiento almacenado en el que finaliza la instrucción que se está ejecutando actualmente. Puede utilizarse junto con la **sql_handle**, **statement_start_offset**y el **sys.dm_exec_sql_text** función de administración dinámica para recuperar el actualmente ejecutar la instrucción para la solicitud.|  
+|**sql_handle**|**varbinary (64)**|Identificador del texto del lote que declaró el cursor.|  
+|**statement_start_offset**|**int**|Número de caracteres en el lote que se está ejecutando actualmente o procedimiento almacenado en el que se inicia la instrucción que se está ejecutando actualmente. Puede utilizarse junto con el **sql_handle**, **statement_end_offset**y el [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) función de administración dinámica para recuperar el actualmente ejecutar la instrucción para la solicitud.|  
+|**statement_end_offset**|**int**|Número de caracteres en el lote que se está ejecutando actualmente o procedimiento almacenado en el que finaliza la instrucción que se está ejecutando actualmente. Puede utilizarse junto con el **sql_handle**, **statement_start_offset**y el **sys.dm_exec_sql_text** función de administración dinámica para recuperar el actualmente ejecutar la instrucción para la solicitud.|  
 |**plan_generation_num**|**bigint**|Número de secuencia que se puede usar para distinguir entre instancias de los planes después de una nueva compilación.|  
 |**creation_time**|**datetime**|Marca de tiempo a la que se creó este cursor.|  
 |**is_open**|**bit**|Especifica si el cursor está abierto.|  
@@ -69,23 +66,23 @@ dm_exec_cursors (session_id | 0 )
 |**ansi_position**|**int**|Posición del cursor en el búfer de lectura.|  
 |**worker_time**|**bigint**|Tiempo empleado, en microsegundos, por los trabajadores que ejecutan este cursor.|  
 |**Lecturas**|**bigint**|Número de lecturas realizadas por el cursor.|  
-|**Escribe**|**bigint**|Número de escrituras realizadas por el cursor.|  
+|**operaciones de escritura**|**bigint**|Número de escrituras realizadas por el cursor.|  
 |**dormant_duration**|**bigint**|Milisegundos desde que se inició la última consulta (abierta o capturada) en este cursor.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
 ## <a name="remarks"></a>Comentarios  
  En la tabla siguiente se proporciona información acerca de la interfaz de la declaración del cursor y se incluyen los valores posibles para la columna de propiedades.  
   
-|Propiedad|Description|  
+|Property|Descripción|  
 |--------------|-----------------|  
 |API|El cursor se declaró mediante una de las API de acceso a datos (ODBC, OLEDB).|  
 |TSQL|El cursor se declaró mediante la sintaxis Transact-SQL DECLARE CURSOR.|  
   
  En la tabla siguiente se proporciona información acerca del tipo de cursor y se incluyen los valores posibles para la columna de propiedades.  
   
-|Tipo|Description|  
+|Tipo|Descripción|  
 |----------|-----------------|  
 |Keyset|El cursor se ha declarado como de conjunto de claves.|  
 |Dinámica|El cursor se ha declarado como dinámico.|  
@@ -94,7 +91,7 @@ dm_exec_cursors (session_id | 0 )
   
  En la tabla siguiente se proporciona información acerca de la simultaneidad de cursor y se incluyen los valores posibles para la columna de propiedades.  
   
-|Simultaneidad|Description|  
+|Simultaneidad|Descripción|  
 |-----------------|-----------------|  
 |Solo lectura|El cursor se ha declarado como de solo lectura.|  
 |Scroll Locks|El cursor utiliza bloqueos de desplazamiento.|  
@@ -102,7 +99,7 @@ dm_exec_cursors (session_id | 0 )
   
  En la tabla siguiente se proporciona información acerca del alcance del cursor y se incluyen los valores posibles para la columna de propiedades.  
   
-|Ámbito|Description|  
+|Ámbito|Descripción|  
 |-----------|-----------------|  
 |Local|Especifica que el alcance del cursor es local para el proceso por lotes, procedimiento almacenado o desencadenador en que se creó el cursor.|  
 |Global|Especifica que el alcance del cursor es global para la conexión.|  

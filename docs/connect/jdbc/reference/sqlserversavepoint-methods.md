@@ -1,29 +1,26 @@
 ---
-title: Métodos SQLServerSavepoint | Documentos de Microsoft
+title: Métodos SQLServerSavepoint | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a245c0c3-d4a2-4fc6-8adc-0c91091716eb
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 400970c6502156fd775969abc14d5ad9ef9e35d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 43caaf04cd8d23c073d06e2931d8637dcb11440a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845750"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764803"
 ---
 # <a name="sqlserversavepoint-methods"></a>Métodos SQLServerSavepoint
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Para obtener información acerca de los miembros de [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md), consulte [miembros de SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-members.md).  
+  Para obtener información sobre los miembros de [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md), consulte [miembros SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-members.md).  
   
   

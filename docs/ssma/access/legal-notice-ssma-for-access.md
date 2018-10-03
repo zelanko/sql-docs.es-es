@@ -1,55 +1,49 @@
 ---
-title: Legal Notice (SSMA for Access) | Microsoft Docs
+title: Aviso legal (SSMA para Access) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - copyright
 - disclaimer
 - legal notice
 ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
-caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3cc5fce6ed718365b2887ec284d4bbd57b6db9bd
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 71f9bdfc859a2da095f90f784dfd300e896af945
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774151"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782113"
 ---
-# <a name="legal-notice-ssma-for-access"></a>Legal Notice (SSMA for Access)
-This documentation, including sample applications herein, is provided for information purposes only, and this documentation is provided without any warranties, either express or implied. Information in this documentation, including URL and other Internet Web site references, is subject to change without notice. The entire risk of the use or the results of the use of this documentation remains with the user.  
+# <a name="legal-notice-ssma-for-access"></a>Aviso legal (SSMA para Access)
+Tanto esta documentación como las aplicaciones de ejemplo que contiene, se proporcionan únicamente con fines informativos y sin ninguna garantía, ya sea expresa o implícita. La información que se proporciona en esta documentación, incluidas las direcciones URL y otras referencias a sitios web de Internet, está sujeta a modificaciones sin previo aviso. El usuario asume todos los riesgos derivados del uso de esta documentación.  
   
-The primary purpose of a sample contained within this documentation is to illustrate a concept, or a reasonable use of a particular statement or clause. Most samples do not include all of the code that may normally be found in a full production system, as some of the usual data validation and error handling is removed to focus the sample on a particular concept or statement. Technical support is not available for these samples or for any included source code.  
+El objetivo principal de las muestras que se incluyen en esta documentación es ilustrar un concepto o un uso razonable de una instrucción o cláusula determinada. La mayoría de las muestras no incluyen todo el código que debería tener un sistema totalmente en producción, puesto que se ha eliminado parte de la validación de datos comunes y el control de errores para resaltar en la muestra un determinado concepto o instrucción. No hay soporte técnico disponible para estas muestras ni para el código fuente incluido.  
   
-Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, person, place, or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this documentation may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.  
+A menos que se indique lo contrario, los nombres de ejemplos de compañías, organizaciones, productos, nombres de dominio, direcciones de correo electrónico, personas, lugares y acontecimientos aquí mencionados son ficticios, y no deben asociarse en modo alguno ni es intencional ni debe ser inferido o relacionado con ninguna compañía, organización, producto, nombre de dominio, dirección de correo electrónico, persona, lugar o acontecimiento real. Es responsabilidad del usuario el cumplimiento de todas las leyes de derechos de autor aplicables. Sin que se limiten los derechos de autor, ninguna parte de esta documentación puede ser reproducida, almacenada o introducida en un sistema de recuperación, o transmitida de forma alguna, ni por ningún medio (ya sea electrónico, mecánico, por fotocopia, grabación o de otra manera) con ningún propósito, sin la autorización expresa y por escrito de Microsoft Corporation.  
   
-Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this documentation. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this documentation does not give you any license to these patents, trademarks, copyrights, or other intellectual property.  
+Microsoft puede tener patentes, solicitudes de patentes, marcas, derechos de autor y otros derechos de propiedad intelectual sobre la materia objeto de esta documentación. La entrega de esta documentación no le otorga ninguna licencia sobre dichas patentes, marcas, derechos de autor u otros derechos de propiedad intelectual, a menos que así se prevea en un contrato por escrito de licencia de Microsoft a usted.  
   
-© 2016 Microsoft Corporation. All rights reserved.  
+© 2016 Microsoft Corporation. Todos los derechos reservados.  
   
-Microsoft, Windows, Windows NT, Windows Server, Active Directory, ActiveX, BackOffice, bCentral, BizTalk, DirectX, Excel, Hotmail, IntelliSense, J/Direct, Jscript, Microsoft Press, MSDN, MS-DOS, Outlook, PivotChart, PivotTable, PowerPoint, SharePoint, SQL Server, Visual Basic, Visual C#, Visual C++, Visual FoxPro, Visual InterDev, Visual J#, Visual J++, Visual SourceSafe, Visual Studio, Win32, Win32s, Windows Mobile, Windows Server System, and WinFX are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries/regions.  
+Microsoft, Windows, Windows NT, Windows Server, Active Directory, ActiveX, BackOffice, bCentral, BizTalk, DirectX, Excel, Hotmail, IntelliSense, J/Direct, Jscript, Microsoft Press, MSDN, MS-DOS, Outlook, PivotChart, PivotTable, PowerPoint, SharePoint, SQL Server, Visual Basic, Visual C#, Visual C++, Visual FoxPro, Visual InterDev, Visual J#, Visual J++, Visual SourceSafe, Visual Studio, Win32, Win32s, Windows Mobile, Windows Server System y WinFX son marcas registradas o marcas comerciales de Microsoft Corporation en los Estados Unidos y/o en otros países o regiones.  
   
-SAP NetWeaver is the registered trademark of SAP AG in Germany and in several other countries/regions.  
+SAP NetWeaver es una marca registrada de SAP AG en Alemania y en otros países o regiones.  
   
-All other trademarks are property of their respective owners.  
+Las demás marcas comerciales pertenecen a sus respectivos propietarios.  
   
-## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Documentation Policy for SQL Server Support and Upgrade  
-Content that appears in SQL Server documentation is published only after it has been tested sufficiently. Product documentation – SQL Server Books Online, readme files, known issues documents, and Knowledge Base articles – contains content regarding SQL Server features and functionality that is robust enough to be safe for general use by all customers. This policy applies to all SQL Server documentation, including readme files for releases and services packs; a readme file is considered an extension of Books Online.  
+## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Directiva de documentación para soporte y actualización de SQL Server  
+El contenido que aparece en la documentación de SQL Server solo se publica una vez se probó lo suficiente. Documentación del producto: libros en pantalla de SQL Server, archivos Léame, documentos de problemas conocidos y artículos de Knowledge Base. El contenido de esta documentación referente a las características de SQL Server y a su funcionalidad, es lo suficientemente fiable como para que lo usen todos los clientes. Esta directiva se aplica tanto a la documentación de SQL Server como a los archivos Léame de las versiones y los Service Pack; un archivo Léame se considera una extensión de los Libros en pantalla.  
   
-In some cases, a particular feature is not something that customers should use directly and, therefore, it is not documented. Unless a feature is also discussed in SQL Server documentation published by Microsoft, content from third-party books or Web sites is not supported by Microsoft customer support, and should not be used in production databases or applications.  
+En varios casos, es posible que una determinada característica no esté documentada ya que no es algo que los clientes deban usar directamente. A menos que una característica se plasme en la documentación de SQL Server publicada por Microsoft, los contenidos de los libros o sitios web de terceros no serán compatibles con el servicio de asistencia al cliente de Microsoft y no se deberán usar para crear bases de datos o aplicaciones.  
   
-Customers must not use undocumented APIs, including but not limited to: stored procedures, extended stored procedures, functions, views, tables, columns, properties, or metadata. Microsoft customer support will not support databases or applications that leverage or use undocumented entry points.  
+Asimismo, los clientes no deberán usar las siguientes API sin documentar, entre otras: procedimientos almacenados, procedimientos almacenados extendidos, funciones, vistas, tablas, columnas, propiedades o metadatos. El servicio de soporte técnico de Microsoft no admitirá bases de datos ni aplicaciones que se aprovechen de o usen puntos de entrada no documentados.  
   
-Server and database upgrades to future versions of SQL Server are not guaranteed for applications and databases that leverage and use undocumented entry points. Use of SQL Server features and functionality must be limited to those that are included in Microsoft SQL Server documentation. If a feature is not documented in Microsoft SQL Server documentation, it is not a supported part of SQL Server.  
+Es posible que las actualizaciones de servidor y de base de datos a versiones futuras de SQL Server no funcionen como es debido en aplicaciones y bases de datos que se aprovechan de o usan puntos de entrada no documentados. Debe limitar el uso de las características y funcionalidades de SQL Server a aquellas que se incluyen en la documentación de Microsoft SQL Server. Si una característica no está documentada en la documentación de Microsoft SQL Server, no será un elemento compatible de SQL Server.  
   

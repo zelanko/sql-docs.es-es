@@ -1,13 +1,11 @@
 ---
-title: SeekEnum | Documentos de Microsoft
+title: SeekEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,30 +13,29 @@ f1_keywords:
 helpviewer_keywords:
 - SeekEnum enumeration [ADO]
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f61e71b03a05a8e13c1b069e4880f362ff0985a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a6e044c4a2cda01fcc9cbba2667beaae75a12caf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281594"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772733"
 ---
 # <a name="seekenum"></a>SeekEnum
 Especifica el tipo de [Seek](../../../ado/reference/ado-api/seek-method.md) para ejecutar.  
   
 |Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
-|**adSeekFirstEQ**|1|Busca la primera clave igual a *KeyValue*.|  
-|**adSeekLastEQ**|2|Busca la última clave igual a *KeyValue*.|  
-|**adSeekAfterEQ**|4|Busca una clave igual a *KeyValue* o justo después de donde se habría producido esa coincidencia.|  
-|**adSeekAfter**|8|Busca una clave justo después de where una coincidencia con *KeyValue* hubiera tenido lugar.|  
-|**adSeekBeforeEQ**|16|Busca una clave igual a *KeyValue*o justo antes de donde se habría producido esa coincidencia.|  
-|**adSeekBefore**|32|Busca una clave justo antes de que una coincidencia con *KeyValue* hubiera tenido lugar.|  
+|**adSeekFirstEQ**|1|Busca la primera clave igual a *KeyValues*.|  
+|**adSeekLastEQ**|2|Busca la última clave igual a *KeyValues*.|  
+|**adSeekAfterEQ**|4|Busca una clave igual a *KeyValues* o justo después de donde se habría producido esa coincidencia.|  
+|**adSeekAfter**|8|Busca una clave justo después de donde una coincidencia con *KeyValues* habría producido.|  
+|**adSeekBeforeEQ**|16|Busca una clave igual a *KeyValues*o justo antes de donde se habría producido esa coincidencia.|  
+|**adSeekBefore**|32|Busca una clave justo antes de que una coincidencia con *KeyValues* habría producido.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
+## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
  Paquete: **com.ms.wfc.data**  
   
 |Constante|  

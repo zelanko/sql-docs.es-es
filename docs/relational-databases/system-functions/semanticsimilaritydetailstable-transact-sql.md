@@ -1,14 +1,11 @@
 ---
-title: semanticsimilaritydetailstable (Transact-SQL) | Documentos de Microsoft
+title: semanticsimilaritydetailstable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritydetailstable
@@ -18,23 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - semanticsimilaritydetailstable function
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 31e23931b0b4b22df06cde0981209c28aecef373
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c7b6bdccdb0c9d84b7ad814c0342a6fe267522d0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236637"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718063"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una tabla de cero, una o más filas de frases clave comunes en dos documentos (un documento de origen y un documento coincidente) cuyo contenido sea similar semánticamente.  
   
- Puede hacer referencia a esta función de conjunto de filas en la cláusula FROM de una instrucción SELECT 
+ Se puede hacer referencia a esta función de conjunto de filas en la cláusula FROM de una instrucción SELECT 
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -76,10 +72,10 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="table-returned"></a>Tabla devuelta  
  En la tabla siguiente se describe la información sobre las frases clave que devuelve esta función de conjunto de filas.  
   
-|Column_name|Tipo|Description|  
+|Column_name|Tipo|Descripción|  
 |------------------|----------|-----------------|  
 |**frases clave**|**NVARCHAR**|Frase clave que contribuye a la similitud entre el documento de origen y el documento coincidente.|  
-|**Puntuación**|**REAL**|Valor relativo de esta frase clave en su relación con todas las demás frases clave que son similares entre los dos documentos.<br /><br /> El valor es un valor fraccionario decimal en el intervalo de [0.0, 1.0] donde una puntuación superior representa una ponderación mayor y 1.0 es la puntuación perfecta.|  
+|**puntuación**|**REAL**|Valor relativo de esta frase clave en su relación con todas las demás frases clave que son similares entre los dos documentos.<br /><br /> El valor es un valor fraccionario decimal en el intervalo de [0.0, 1.0] donde una puntuación superior representa una ponderación mayor y 1.0 es la puntuación perfecta.|  
   
 ## <a name="general-remarks"></a>Notas generales  
  Para obtener más información, consulte [buscar documentos similares y relacionados con la búsqueda semántica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
@@ -93,11 +89,11 @@ SEMANTICSIMILARITYDETAILSTABLE
   
 ## <a name="security"></a>Seguridad  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Permisos  
  Necesita permisos SELECT en la tabla base en la que se crearon los índices semánticos y de texto completo.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se recuperan las 5 frases clave que tenían la máxima puntuación de similitud entre los candidatos especificados en **HumanResources.JobCandidate** tabla de la base de datos de ejemplo AdventureWorks2012. El @CandidateId y @MatchedID las variables representan valores de la columna de clave del índice de texto completo.  
+ En el ejemplo siguiente se recuperan las 5 frases clave que tenían la máxima puntuación de similitud entre los candidatos especificados en **HumanResources.JobCandidate** tabla de la base de datos de ejemplo AdventureWorks2012. El @CandidateId y @MatchedID variables representan valores de la columna de clave del índice de texto completo.  
   
 ```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  

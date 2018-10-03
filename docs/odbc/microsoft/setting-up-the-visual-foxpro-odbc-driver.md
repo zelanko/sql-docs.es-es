@@ -1,33 +1,31 @@
 ---
-title: Configurar el controlador ODBC de Visual FoxPro | Documentos de Microsoft
+title: Configurar el controlador ODBC de Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Visual FoxPro ODBC driver [ODBC]
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: d0aedaa1-ed24-4aa6-92c8-83b0fa8c86fb
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9897ae65c2520d9000dbff2dd287c424b671ed75
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f358d1944de362dc65aba8c470bbb7911ce2103
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818393"
 ---
 # <a name="setting-up-the-visual-foxpro-odbc-driver"></a>Cómo configurar el controlador ODBC de Visual FoxPro
-Para obtener información sobre cómo descargar e instalar el controlador ODBC de Visual FoxPro, consulte [controlador ODBC de Visual FoxPro](http://go.microsoft.com/fwlink/?LinkId=121318) en descargas de MSDN.  
+Para obtener información sobre cómo descargar e instalar el controlador ODBC de Visual FoxPro, consulte [Visual FoxPro ODBC Driver](http://go.microsoft.com/fwlink/?LinkId=121318) descargas de MSDN.  
   
- Utilice el programa de instalación de Microsoft Visual FoxPro ODBC Driver para hacer lo siguiente:  
+ Use el programa de instalación de Microsoft Visual FoxPro ODBC Driver para hacer lo siguiente:  
   
 -   Agregar nuevos componentes.  
   

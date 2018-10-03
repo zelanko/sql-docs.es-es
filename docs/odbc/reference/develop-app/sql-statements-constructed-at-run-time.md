@@ -1,32 +1,29 @@
 ---
-title: Instrucciones SQL creadas en tiempo de ejecución | Documentos de Microsoft
+title: Instrucciones SQL creadas en tiempo de ejecución | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - run time constructed SQL statements [ODBC]
 - SQL statements [ODBC], constructing
 - SQL statements [ODBC], building at run time
 ms.assetid: f6554486-d49c-436a-82e3-4c158d26acd8
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 18f5a02bdcec575ac1362d3f656480eb0ab9b4a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0573851ee93bda4aa33e8645148cf2ee66200bee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914300"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848103"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>Instrucciones SQL creadas en tiempo de ejecución
-Las aplicaciones que realizan análisis ad hoc suele generación instrucciones SQL en tiempo de ejecución. Por ejemplo, una hoja de cálculo puede permitir al usuario seleccionar columnas de la que se va a recuperar los datos:  
+Las aplicaciones que realizan análisis ad hoc suele generación instrucciones SQL en tiempo de ejecución. Por ejemplo, una hoja de cálculo podría permitir al usuario seleccionar las columnas de la que se va a recuperar los datos:  
   
 ```  
 // SQL_Statements_Constructed_at_Run_Time.cpp  
@@ -72,8 +69,8 @@ int main() {
 }  
 ```  
   
- Otra clase de aplicaciones que normalmente se construye instrucciones SQL en tiempo de ejecución son entornos de desarrollo de aplicaciones. Sin embargo, las instrucciones que construyen están codificados en la aplicación que están creando, donde se pueden normalmente optimizados y probados.  
+ Otra clase de aplicaciones que normalmente se genera instrucciones SQL en tiempo de ejecución son entornos de desarrollo de aplicaciones. Sin embargo, las instrucciones que construyen están codificados en la aplicación que están creando, donde se pueden normalmente optimizados y probados.  
   
- Las aplicaciones que construcción instrucciones SQL en tiempo de ejecución pueden proporcionar una gran flexibilidad al usuario. Tal y como se puede ver en el ejemplo anterior, que no admitía incluso operaciones comunes como **donde** cláusulas, **ORDER BY** cláusulas o combinaciones, crear instrucciones SQL en tiempo de ejecución es considerablemente más complejo que las instrucciones de codificar de forma rígida. Además, la prueba estas aplicaciones es problemática, ya puede construir un número arbitrario de instrucciones SQL.  
+ Las aplicaciones que construcción instrucciones SQL en tiempo de ejecución pueden proporcionar una gran flexibilidad al usuario. Como puede observarse en el ejemplo anterior, que no admitía incluso operaciones comunes como **donde** cláusulas, **ORDER BY** cláusulas de igualdad, o combinaciones, crear instrucciones SQL en tiempo de ejecución es considerablemente más compleja que las instrucciones de forma rígida. Además, las pruebas de estas aplicaciones es problemática porque puede construir un número arbitrario de instrucciones SQL.  
   
- Una posible desventaja de crear instrucciones SQL en tiempo de ejecución es que se tarda mucho más tiempo para construir una instrucción que usa una instrucción codificado de forma rígida. Afortunadamente, rara vez es una preocupación. Estas aplicaciones tienden a ser de uso intensivo de la interfaz de usuario y el tiempo que la aplicación invierte crear instrucciones SQL es normalmente pequeño en comparación con el tiempo que el usuario invierte criterios de entrada.
+ Una posible desventaja de crear instrucciones SQL en tiempo de ejecución es que se tarda mucho más tiempo para construir una instrucción que utilice una instrucción codificado de forma rígida. Afortunadamente, esto rara vez es una preocupación. Estas aplicaciones tienden a ser de uso intensivo de la interfaz de usuario y el tiempo que invierte la aplicación crear instrucciones SQL es generalmente pequeña en comparación con el tiempo que el usuario invierte escribiendo criterios.

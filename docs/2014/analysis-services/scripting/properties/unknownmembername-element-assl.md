@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - UnknownMemberName Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - UnknownMemberName element
 ms.assetid: 54271336-ea9b-4270-ac3a-9658a5cff77b
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2c788574586a20ef44f0206d07bb21389cfd0308
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b49ed9cb27a482993cabdf78df53e90f55a749ab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306495"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048735"
 ---
 # <a name="unknownmembername-element-assl"></a>Elemento UnknownMemberName (ASSL)
   Contiene el título, en el idioma predeterminado de la dimensión, del miembro desconocido de la dimensión.  
@@ -46,7 +43,7 @@ ms.locfileid: "37306495"
 </Dimension>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37306495"
 |Elemento primario|[Dimension](../objects/dimension-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor del elemento `UnknownMemberName` proporciona el título que se utiliza para el miembro desconocido. El identificador de miembro del miembro desconocido es *Dimension*.UnknownMember, donde *Dimension* es el nombre único de la dimensión, y no se puede cambiar.  
   
  El elemento que se corresponde con el elemento primario de `UnknownMemberName` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.Dimension>.  

@@ -1,14 +1,11 @@
 ---
-title: log_shipping_secondary (Transact-SQL) | Documentos de Microsoft
+title: log_shipping_secondary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - log_shipping_secondary
@@ -18,23 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_secondary system table
 ms.assetid: 69723419-4544-49c6-a517-adb30ffa5741
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a78bb71037e6e7f8eb9579e4275c433733ed0111
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c65e57f65311a01a337594b702cc4dc19d35f321
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261411"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815179"
 ---
 # <a name="logshippingsecondary-transact-sql"></a>log_shipping_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Almacena un registro por cada identificador secundario. Esta tabla se almacena en la **msdb** base de datos.  
+  Almacena un registro por cada identificador secundario. Esta tabla se almacena en el **msdb** base de datos.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**secondary_id**|**uniqueidentifier**|Id. del servidor secundario en la configuración del trasvase de registros.|  
 |**primary_server**|**sysname**|Nombre de la instancia principal del motor de base de datos de SQL Server en la configuración del trasvase de registros.|  
@@ -44,16 +40,16 @@ ms.locfileid: "33261411"
 |**file_retention_period**|**int**|Tiempo, en minutos, durante el que un archivo de copia de seguridad se retiene en el servidor secundario antes de eliminarse.|  
 |**copy_job_id**|**uniqueidentifier**|Id. asociado al trabajo de copia en el servidor secundario.|  
 |**restore_job_id**|**uniqueidentifier**|Id. asociado al trabajo de restauración en el servidor secundario.|  
-|**monitor_server**|**sysname**|El nombre de la instancia de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] está en uso como un servidor de supervisión en la configuración de trasvase de registros.|  
+|**monitor_server**|**sysname**|El nombre de la instancia de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que se va a usar como un servidor de supervisión en la configuración de trasvase de registros.|  
 |**monitor_server_security_mode**|**bit**|Modo de seguridad utilizado para conectarse al servidor de supervisión.<br /><br /> 1 = Autenticación de Windows.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.|  
 |**last_copied_file**|**nvarchar(500)**|Nombre del último archivo de copia de seguridad copiado en el servidor secundario.|  
 |**last_copied_date**|**datetime**|Fecha y hora de la última operación de copia en el servidor secundario.|  
   
 ## <a name="remarks"></a>Comentarios  
- Varias bases de datos secundarias en el mismo servidor secundario para una base de datos principal comparten algunos valores de la **log_shipping_secondary** tabla. Si se modifica un valor compartido en alguna de ellas, este valor se modifica para todas.  
+ Varias bases de datos secundaria en el mismo servidor secundario para una base de datos principal comparten algunos valores en el **log_shipping_secondary** tabla. Si se modifica un valor compartido en alguna de ellas, este valor se modifica para todas.  
   
 ## <a name="see-also"></a>Vea también  
- [Acerca del trasvase de registros & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [sp_add_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)   
  [sp_change_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-log-shipping-secondary-database-transact-sql.md)   
  [sp_delete_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   

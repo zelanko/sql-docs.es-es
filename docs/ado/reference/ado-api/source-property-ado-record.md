@@ -1,13 +1,11 @@
 ---
-title: Source (propiedad) (registro de ADO) | Documentos de Microsoft
+title: Source (Record ADO) de la propiedad | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -20,36 +18,35 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO Record]
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d7ac5eb7a467109af4b1a8d3665436159f3f609
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4b053fdeae5016d7a1b489133b3a26067da7eab2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281984"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803053"
 ---
 # <a name="source-property-ado-record"></a>Propiedad Source (Record ADO)
 Indica el origen de datos o el objeto representado por la [registro](../../../ado/reference/ado-api/record-object-ado.md).  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- Establece o devuelve un **Variant** valor que indica la entidad representada por la **registro**.  
+ Establece o devuelve un **Variant** valor que indica la entidad representada por el **registro**.  
   
-## <a name="remarks"></a>Notas  
- El **origen** propiedad devuelve el *origen* argumento de la **registro** objeto [abiertos](../../../ado/reference/ado-api/open-method-ado-record.md) método. Puede contener una cadena de dirección URL absoluta o relativa. Se puede utilizar una dirección URL absoluta sin configuración de la [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propiedad que se va a abrir directamente el **registro** objeto. Un modo implícito **conexión** objeto se crea en este caso.  
+## <a name="remarks"></a>Comentarios  
+ El **origen** propiedad devuelve el *origen* argumento de la **registro** objeto [abierto](../../../ado/reference/ado-api/open-method-ado-record.md) método. Puede contener una cadena de dirección URL absoluta o relativa. Se puede usar una dirección URL absoluta sin establecer el [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propiedad pueden abrir directamente el **registro** objeto. Implicit **conexión** objeto se crea en este caso.  
   
- El **origen** propiedad también puede contener una referencia a una ya está abierto **Recordset**, que abre un **registro** objeto que representa la fila actual en el  **Conjunto de registros**.  
+ El **origen** propiedad también puede contener una referencia a una ya está abierta **Recordset**, que abre un **registro** objeto que representa la fila actual en el  **Conjunto de registros**.  
   
- El **origen** propiedad también podría incluir una referencia a un [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto que devuelve una sola fila de datos desde el proveedor.  
+ El **origen** propiedad también podría incluir una referencia a un [comando](../../../ado/reference/ado-api/command-object-ado.md) object que devuelve una sola fila de datos del proveedor.  
   
- Si el **ActiveConnection** también se establece la propiedad, el **origen** propiedad debe apuntar a un objeto que existe dentro del ámbito de esa conexión. Por ejemplo, en los espacios de nombres con estructura de árbol, si la **origen** propiedad contiene una dirección URL absoluta, debe apuntar a un nodo que exista en el ámbito del nodo identificado por la dirección URL en la cadena de conexión. Si el **origen** propiedad contiene una dirección URL relativa, a continuación, se valida en el contexto establecido la **ActiveConnection** propiedad.  
+ Si el **ActiveConnection** también se establece la propiedad, el **origen** propiedad debe señalar a un objeto que existe dentro del ámbito de esa conexión. Por ejemplo, en la estructura de árbol de espacios de nombres, si el **origen** propiedad contiene una dirección URL absoluta, debe señalar a un nodo que exista en el ámbito del nodo identificado por la dirección URL en la cadena de conexión. Si el **origen** propiedad contiene una dirección URL relativa, a continuación, se valida en el contexto establecido por la **ActiveConnection** propiedad.  
   
- El **origen** propiedad es de lectura/escritura a la **registro** objeto está cerrado y es de sólo lectura mientras el **registro** objeto está abierto.  
+ El **origen** propiedad es de lectura/escritura, mientras el **registro** objeto está cerrado y es de solo lectura mientras la **registro** objeto está abierto.  
   
 > [!NOTE]
->  Direcciones URL que utilizan el esquema http, se invocarán automáticamente el [proveedor Microsoft OLE DB para Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obtener más información, consulte [absoluto y direcciones URL relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Las direcciones URL con el esquema http, se invocarán automáticamente el [proveedor Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obtener más información, consulte [absoluto y las direcciones URL relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  

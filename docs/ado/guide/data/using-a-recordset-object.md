@@ -1,30 +1,27 @@
 ---
-title: Mediante un objeto de conjunto de registros | Documentos de Microsoft
+title: Uso de un objeto Recordset | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [ADO]
 ms.assetid: 01c630d8-eb35-4bd0-a99f-7c0f85316cc1
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 05a2c989d1f14849ef39b4ec93f4677ebc52510e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 985cb58b860c594e8cfc3e405934fafd9cfb245a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273184"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789453"
 ---
 # <a name="using-a-recordset-object"></a>Mediante un objeto de conjunto de registros
-Como alternativa, puede usar **Recordset.Open** para establecer una conexión de forma implícita y emitir un comando a través de esa conexión en una sola operación. Por ejemplo, en Visual Basic:  
+Como alternativa, puede usar **Recordset.Open** para establecer una conexión y emitir un comando a través de esa conexión en una sola operación de forma implícita. Por ejemplo, en Visual Basic:  
   
 ```  
 Dim oRs As ADODB.Recordset  
@@ -51,4 +48,4 @@ oRs.Close
 Set oRs = Nothing  
 ```  
   
- Tenga en cuenta que **oRs.Open** toma una cadena de conexión (*sConn*), en lugar de un **conexión** objeto (*oConn*), como el valor de su  **ActiveConnection** parámetro. También se aplica el tipo de cursor de cliente estableciendo el **CursorLocation** propiedad en el **Recordset** objeto. De nuevo, Compare esto con el **HelloData** ejemplo.
+ Tenga en cuenta que **oRs.Open** toma una cadena de conexión (*sConn*), en lugar de un **conexión** objeto (*oConn*), como el valor de su  **ActiveConnection** parámetro. También se aplica el tipo de cursor del lado cliente estableciendo el **CursorLocation** propiedad en el **Recordset** objeto. De nuevo, Compare esto con el **HelloData** ejemplo.

@@ -1,35 +1,32 @@
 ---
-title: Las transformaciones XSLT | Documentos de Microsoft
+title: Transformaciones XSLT | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XSLT transformations in ADO
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
-caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 835362b473c16d71cbdd6c46d6e068a17d7d051d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 59b00a521624759af8f73a94f75c4a74101b1937
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273474"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839683"
 ---
 # <a name="xslt-transformations"></a>Transformaciones XSLT
-XSLT se puede aplicar al XML generado para transformarlo en otro formato. Conocer el formato XML en ADO ayuda a crear plantillas XSLT que pueden transformarlo en un formulario más fácil de usar.  
+XSLT se puede aplicar al XML generado para transformarlos en otro formato. Conocer el formato XML en ADO ayuda a desarrollar plantillas XSLT que se pueden transformar en un formato más fácil de usar.  
   
- Por ejemplo, se sabe que cada fila del conjunto de registros se guarda como el elemento z: row dentro del elemento rs: data. De igual forma, cada campo del conjunto de registros se guarda como un par de atributo y valor para este elemento.  
+ Por ejemplo, sabrá que cada fila del conjunto de registros se guarda como el elemento z: row dentro del elemento de datos: rs. De forma similar, cada campo del conjunto de registros se guarda como un par de atributo-valor para este elemento.  
   
-## <a name="remarks"></a>Notas  
- La siguiente secuencia de comandos XSLT se puede aplicar en el XML mostrado en la sección anterior para transformar en una tabla HTML que se mostrará en el explorador:  
+## <a name="remarks"></a>Comentarios  
+ El siguiente script XSLT se puede aplicar al XML que se muestra en la sección anterior, transformarlo en una tabla HTML que se mostrará en el explorador:  
   
 ```  
 <?xml version="1.0" encoding="ISO-8859-1"?>  
@@ -54,7 +51,7 @@ XSLT se puede aplicar al XML generado para transformarlo en otro formato. Conoce
 </html>  
 ```  
   
- El XSLT convierte la secuencia XML generada por el método Save de ADO en una tabla HTML que muestra cada campo del conjunto de registros junto con un encabezado de tabla. Filas y encabezados de tabla también se asignan colores y fuentes diferentes.  
+ El XSLT convierte la secuencia XML generada por el método Save de ADO en una tabla HTML que muestra cada campo del conjunto de registros junto con un encabezado de tabla. Las filas y encabezados de tabla también se asignan colores y fuentes diferentes.  
   
 ## <a name="see-also"></a>Vea también  
  [Almacenar registros en formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

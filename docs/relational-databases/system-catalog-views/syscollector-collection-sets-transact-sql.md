@@ -1,14 +1,11 @@
 ---
-title: syscollector_collection_sets (Transact-SQL) | Documentos de Microsoft
+title: syscollector_collection_sets (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_collection_sets_TSQL
@@ -19,27 +16,26 @@ helpviewer_keywords:
 - data collector view
 - syscollector_collection_sets view
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7407828836e4831e313e982111df7f61bd110e8e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dcc027ad80d4bbe1142a9e17add52f8a42d7d404
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221146"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842513"
 ---
 # <a name="syscollectorcollectionsets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Proporciona información sobre un conjunto de recopilación, incluida la programación, el modo de recopilación y su estado.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |collection_set_id|**int**|Identificador local del conjunto de recopilación. No admite valores NULL.|  
 |collection_set_uid|**uniqueidentifier**|Identificador único global del conjunto de recopilación. No admite valores NULL.|  
-|name|**nvarchar(4000)**|Nombre del conjunto de recopilación. Acepta valores NULL.|  
+|NAME|**nvarchar(4000)**|Nombre del conjunto de recopilación. Acepta valores NULL.|  
 |target|**nvarchar(max)**|Identifica el destino del conjunto de recopilación. Acepta valores NULL.|  
 |is_system|**bit**|Se activa (1) o desactiva (0) para indicar si el conjunto de recopilación se incluyó con el recopilador de datos o si se agregó más tarde por medio de dc_admin. Este podría ser un conjunto de recopilación desarrollado internamente o por terceros. No admite valores NULL.|  
 |is_running|**bit**|Indica si el conjunto de recopilación se está ejecutando o no. No admite valores NULL.|  
@@ -54,7 +50,7 @@ ms.locfileid: "33221146"
 |dump_on_any_error|**bit**|Activado (1) u off (0) para indicar si se debe crear un [!INCLUDE[ssIS](../../includes/ssis-md.md)] archivo de volcado en cualquier error. No admite valores NULL.|  
 |dump_on_codes|**nvarchar(max)**|Contiene la lista de [!INCLUDE[ssIS](../../includes/ssis-md.md)] códigos de error que se utilizan para activar el archivo de volcado. Acepta valores NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere SELECT para dc_operator, dc_proxy.  
   
 ## <a name="remarks"></a>Comentarios  

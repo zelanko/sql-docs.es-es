@@ -1,13 +1,11 @@
 ---
-title: Objeto Parameter | Documentos de Microsoft
+title: Objeto Parameter | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,26 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - Parameter object [ADO]
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb2eda53603a06ed73dce0962bea4ca18035714f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e4a39f93e6b98595270e46d5a6f9b54b35098cb1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280714"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751803"
 ---
 # <a name="parameter-object"></a>Objeto Parameter
-Representa un parámetro o un argumento asociado con un [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto basado en una consulta con parámetros o un procedimiento almacenado.  
+Representa un parámetro o un argumento asociado a un [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto basado en un procedimiento almacenado o una consulta parametrizada.  
   
-## <a name="remarks"></a>Notas  
- Muchos proveedores admiten comandos parametrizados. Estos son los comandos en el que la acción deseada se define una vez, pero se utilizan variables (o parámetros) para modificar algunos detalles del comando. Por ejemplo, una instrucción SELECT de SQL podría usar un parámetro para definir los criterios de coincidencia de una cláusula WHERE y otro para definir el nombre de una cláusula Ordenar por columna.  
+## <a name="remarks"></a>Comentarios  
+ Muchos proveedores admiten comandos parametrizados. Estos son los comandos en el que la acción deseada se define una vez, pero se utilizan variables (o parámetros) para modificar algunos detalles del comando. Por ejemplo, una instrucción SELECT de SQL podría usar un parámetro para definir los criterios de coincidencia de una cláusula WHERE y otro para definir el nombre de una cláusula de ordenación por columna.  
   
- **Parámetro** objetos representan parámetros asociados a consultas parametrizadas, o los argumentos de entrada/salida y los valores devueltos de los procedimientos almacenan. Dependiendo de la funcionalidad del proveedor, algunas colecciones, métodos o propiedades de un **parámetro** objeto no estén disponible.  
+ **Parámetro** objetos representan parámetros asociados a las consultas con parámetros o los argumentos de entrada/salida y los valores devueltos de procedimientos almacenan. Dependiendo de la funcionalidad del proveedor, algunas colecciones, métodos o propiedades de un **parámetro** objeto no esté disponible.  
   
- Con las colecciones, métodos y propiedades de un **parámetro** de objeto, puede hacer lo siguiente:  
+ Con las colecciones, métodos y propiedades de un **parámetro** objeto, puede hacer lo siguiente:  
   
 -   Establecer o devolver el nombre de un parámetro con el [nombre](../../../ado/reference/ado-api/name-property-ado.md) propiedad.  
   
@@ -46,16 +43,16 @@ Representa un parámetro o un argumento asociado con un [comando](../../../ado/r
   
 -   Obtener acceso a atributos específicos del proveedor mediante el [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección.  
   
- Si se conocen los nombres y propiedades de los parámetros asocian con el procedimiento almacenado o la consulta parametrizada que desea llamar, puede usar el [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) método para crear **parámetro** objetos con los valores de propiedad adecuados y utilice el [anexado](../../../ado/reference/ado-api/append-method-ado.md) método para agregarlos a la [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) colección. Esto le permite establecer y devolver valores de parámetro sin tener que llamar a la [actualizar](../../../ado/reference/ado-api/refresh-method-ado.md) método en el **parámetros** colección para recuperar la información de parámetros del proveedor, un potencialmente operación que consume muchos recursos.  
+ Si conoce los nombres y propiedades de los parámetros asocian con el procedimiento almacenado o una consulta con parámetros que desea llamar, puede usar el [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) método para crear **parámetro** objetos con la configuración de la propiedad adecuada y el uso del [Append](../../../ado/reference/ado-api/append-method-ado.md) método para agregarlos a la [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) colección. Esto le permite establecer y devolver valores de parámetro sin tener que llamar el [actualizar](../../../ado/reference/ado-api/refresh-method-ado.md) método en el **parámetros** colección para recuperar la información de parámetros del proveedor, un potencialmente operación que consume muchos recursos.  
   
  El **parámetro** objeto no es seguro para scripting.  
   
  Esta sección contiene el siguiente tema.  
   
--   [Eventos, métodos y propiedades del objeto de parámetro](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
+-   [Los eventos, métodos y propiedades del objeto parameter](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Objeto de comando (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Método CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Colección de parámetros (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

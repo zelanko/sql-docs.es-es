@@ -1,13 +1,11 @@
 ---
-title: Create (método) (ADOX) | Documentos de Microsoft
+title: Crear (método, ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,18 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - Create method [ADOX]
 ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9ea6f1f4f333b7929758f829585deb1752f7be50
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5ca88f95882da8e900e7695f81570b46977db9c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285434"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789663"
 ---
-# <a name="create-method-adox"></a>Create (método) (ADOX)
+# <a name="create-method-adox"></a>Create (método, ADOX)
 Crea un nuevo catálogo.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,10 +36,10 @@ Catalog.Create ConnectString
   
 #### <a name="parameters"></a>Parámetros  
  *ConnectString*  
- A **cadena** valor utilizado para conectarse al origen de datos.  
+ Un **cadena** valor usado para conectarse al origen de datos.  
   
-## <a name="remarks"></a>Notas  
- El **crear** método crea y abre un nuevo ADO [conexión](../../../ado/reference/ado-api/connection-object-ado.md) al origen de datos especificado en *ConnectString*. Si se realiza correctamente, el nuevo **conexión** objeto está asignado a la [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) propiedad.  
+## <a name="remarks"></a>Comentarios  
+ El **crear** método crea y abre un nuevo ADO [conexión](../../../ado/reference/ado-api/connection-object-ado.md) al origen de datos especificado en *ConnectString*. Si se realiza correctamente, el nuevo **conexión** se asigna a la [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) propiedad.  
   
  Se producirá un error si el proveedor no admite la creación de nuevos catálogos.  
   

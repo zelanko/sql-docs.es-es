@@ -1,13 +1,11 @@
 ---
-title: Ejecutar el Analizador SQL Server | Documentos de Microsoft
+title: Ejecute SQL Server Profiler | Microsoft Docs
 ms.custom: ''
 ms.date: 7/7/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], starting
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SQL Server Profiler, running
 - running SQL Server Profiler
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 250ea8227a4bd045883322ba2fec3e923336a5e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bcfe2b2f594eebef121ec56d43ca6eac4cdcb293
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076832"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824133"
 ---
 # <a name="run-sql-server-profiler"></a>Ejecutar SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +31,13 @@ ms.locfileid: "33076832"
   
 Al iniciar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] por primera vez y seleccionar **Nuevo seguimiento** en el menú **Archivo**, la aplicación muestra un cuadro de diálogo **Conectar al servidor** en el que se puede especificar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectarse a ella.  
 ## <a name="to-start-sql-server-profiler-from-the-windows-10-start-menu"></a>Para iniciar SQL Server Profiler desde el menú Inicio de Windows 10  
--  Haga clic en las ventanas de **iniciar** icono o presione teclas de Windows y empiece a escribir "SQL Server Profiler 17". Cuando el **SQL Server Profiler 17** aparece el icono, haga clic en él.   
+-  Haga clic en el Windows **iniciar** icono o presione el Windows clave y empiece a escribir "SQL Server Profiler 17". Cuando el **SQL Server Profiler 17** aparece el icono, haga clic en él.   
 
 ## <a name="to-start-sql-server-profiler-in-database-engine-tuning-advisor"></a>Para iniciar SQL Server Profiler en el Asistente para la optimización de motor de base de datos  
 -  En el menú [!INCLUDE[ssDE](../../includes/ssde-md.md)] Herramientas **del Asistente para la optimización de** , haga clic en **SQL Server Profiler**.  
 
 ## <a name="to-start-sql-server-profiler-in-sql-server-management-studio"></a>Para iniciar a SQL Server Profiler en SQL Server Management Studio  
- Puede iniciar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] desde varias ubicaciones en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cuando se inicia [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], este carga el contexto de conexión, la plantilla de seguimiento y el contexto del filtro de su punto de inicio. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] inicia cada sesión de SQL Server Profiler en su propia instancia y el generador de perfiles continuará ejecutándose si apaga [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Puede iniciar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] desde varias ubicaciones en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cuando se inicia [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], este carga el contexto de conexión, la plantilla de seguimiento y el contexto del filtro de su punto de inicio. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] inicia cada sesión de SQL Server Profiler en su propia instancia y continúa ejecutándose si apaga Profiler [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 ### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>Para iniciar SQL Server Profiler desde el menú Herramientas  
 -  En el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Herramientas** , haga clic en **SQL Server Profiler**.  
 

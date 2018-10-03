@@ -1,14 +1,11 @@
 ---
-title: sysmail_allitems (Transact-SQL) | Documentos de Microsoft
+title: sysmail_allitems (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_allitems_TSQL
@@ -18,25 +15,24 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_allitems database mail view
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5884cc5731c7b4e88ec9d2332a4fbf500fc7fc6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 65c96ade0964146e1d8ff9cfa52f99938d290712
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221966"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824853"
 ---
 # <a name="sysmailallitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene una fila por cada mensaje procesado por el Correo electrónico de base de datos. Utilice esta vista cuando desee ver el estado de todos los mensajes.  
   
- Para ver sólo los mensajes con el estado de error, utilice [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Para ver sólo los mensajes no enviados, utilice [sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Para ver sólo los mensajes que se enviaron, use [sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
+ Para ver solo los mensajes con el estado de error, use [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Para ver solo los mensajes no enviados, utilice [sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Para ver solo los mensajes enviados, utilice [sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Identificador del elemento de correo en la cola de correo electrónico.|  
 |**profile_id**|**int**|Identificador del perfil utilizado para enviar el mensaje.|  
@@ -48,7 +44,7 @@ ms.locfileid: "33221966"
 |**body_format**|**varchar (20)**|El formato del cuerpo del mensaje. Los valores posibles son TEXT y HTML.|  
 |**Importancia**|**varchar(6)**|El **importancia** parámetro del mensaje.|  
 |**Sensibilidad**|**varchar (12)**|El **sensibilidad** parámetro del mensaje.|  
-|**file_attachments**|**ntext**|Una lista delimitada por punto y coma de nombres de archivo adjuntadas al mensaje de correo electrónico.|  
+|**file_attachments**|**ntext**|Una lista delimitada por punto y coma de nombres de archivo adjuntado al mensaje de correo electrónico.|  
 |**attachment_encoding**|**varchar (20)**|Tipo de datos adjuntos.|  
 |**Consulta**|**ntext**|Consulta ejecutada por el programa de correo.|  
 |**execute_query_database**|**sysname**|Contexto de base de datos en el cual el programa de correo ejecutó la consulta.|  
@@ -61,7 +57,7 @@ ms.locfileid: "33221966"
 |**send_request_date**|**datetime**|Fecha y hora en que se colocó el mensaje en la cola de correo electrónico.|  
 |**send_request_user**|**sysname**|Usuario que envió el mensaje. Se trata del contexto de usuario del procedimiento del Correo electrónico de base de datos, no del campo De: del mensaje.|  
 |**sent_account_id**|**int**|Identificador de la cuenta del Correo electrónico de base de datos utilizada para enviar el mensaje.|  
-|**sent_status**|**varchar (8)**|Estado del mensaje. Los valores posibles son:<br /><br /> **enviar** -se envió el correo electrónico.<br /><br /> **sin enviar** -correo electrónico de base de datos todavía está intentando enviar el mensaje.<br /><br /> **volver a intentar** -no se pudo enviar el mensaje de correo electrónico de base de datos pero está intentando enviarlo de nuevo.<br /><br /> **no se pudo** -correo electrónico de base de datos no pudo enviar el mensaje.|  
+|**sent_status**|**varchar (8)**|Estado del mensaje. Los valores posibles son:<br /><br /> **envía** -se envió el correo electrónico.<br /><br /> **no enviado** -correo electrónico de base de datos todavía está intentando enviar el mensaje.<br /><br /> **Reintentando** -no se pudo enviar el mensaje de correo electrónico de base de datos pero está intentando enviarlo de nuevo.<br /><br /> **no se pudo** -no pudo enviar el mensaje de correo electrónico de base de datos.|  
 |**sent_date**|**datetime**|Fecha y hora en que se envió el mensaje.|  
 |**last_mod_date**|**datetime**|Fecha y hora de la modificación más reciente de la fila.|  
 |**last_mod_user**|**sysname**|Usuario que realizó la modificación más reciente de la fila.|  
@@ -71,7 +67,7 @@ ms.locfileid: "33221966"
   
  Las tablas del sistema expuestas por esta vista contiene todos los mensajes y puede provocar la **msdb** base de datos crezca. Elimine periódicamente los mensajes antiguos de la vista para reducir el tamaño de las tablas. Para obtener más información, consulte [crear un trabajo del Agente SQL Server para archivar mensajes de correo electrónico de base de datos y registros de eventos](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Concede a **sysadmin** rol fijo de servidor y **DatabaseMailUserRole** rol de base de datos. Cuando se ejecuta un miembro de la **sysadmin** rol fijo de servidor, esta vista muestra todos los mensajes. Todos los demás usuarios verán únicamente los mensajes que envíen ellos mismos.  
   
   

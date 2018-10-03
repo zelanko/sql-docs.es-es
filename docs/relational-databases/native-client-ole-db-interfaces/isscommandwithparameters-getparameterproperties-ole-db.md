@@ -5,9 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ISSCommandWithParameters::GetParameterProperties (OLE DB)
@@ -15,17 +13,16 @@ apitype: COM
 helpviewer_keywords:
 - GetParameterProperties method
 ms.assetid: 7f4cc5ea-d028-4fe5-9192-bd153ab3c26c
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a6c79ebc4f2d14755130c3e31fb9409cd529fa17
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f8e13ede890599c7424c2bb181a966608b09b0b5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43062268"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686653"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +49,7 @@ HRESULT GetParameterProperties(
 ## <a name="return-code-values"></a>Valores de código de retorno  
  El **GetParameterProperties** método devuelve los mismos códigos de error que el núcleo de OLE DB **ICommandProperties:: GetProperties** no puede ser el método, excepto que DB_S_ERRORSOCCURRED y DB_E_ERRORSOCCURED se genera.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  **Isscommandwithparameters:: Getparameterproperties** se comporta de forma coherente con respecto a **GetParameterInfo**. Si [isscommandwithparameters:: SetParameterProperties](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) o **SetParameterInfo** no se ha llamado a o que se ha llamado con cParams igual a cero, **GetParameterInfo**deriva la información de parámetro y lo devuelve. Si **isscommandwithparameters:: SetParameterProperties** o **SetParameterInfo** ha llamado para al menos un parámetro **isscommandwithparameters:: Getparameterproperties**  devuelve las propiedades solo para esos parámetros para el que **isscommandwithparameters:: SetParameterProperties** se ha llamado. Si **isscommandwithparameters:: SetParameterProperties** se llama después de **isscommandwithparameters:: Getparameterproperties** o **GetParameterInfo**, las llamadas subsiguientes a **isscommandwithparameters:: Getparameterproperties** devuelven los valores invalidados para esos parámetros para el que **isscommandwithparameters:: SetParameterProperties** se ha llamado.  
   
  La estructura SSPARAMPROPS se define del siguiente modo:  

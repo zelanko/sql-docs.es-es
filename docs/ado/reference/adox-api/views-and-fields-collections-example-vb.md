@@ -1,13 +1,11 @@
 ---
-title: Vistas y campos de ejemplo de colecciones (VB) | Documentos de Microsoft
+title: Las vistas y los campos de ejemplo de colecciones (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Views collection [ADOX], Visual Basic example
 - Fields collection [ADOX]
 ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c7f9e8223c51cbd1a15e1e2e1dd2070a316c879b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d221287fc0a945b0325ef9bbb92c89888e130c7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287326"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836193"
 ---
-# <a name="views-and-fields-collections-example-vb"></a>Vistas y ejemplo de colecciones de campos (VB)
-El código siguiente muestra cómo utilizar el [comando](../../../ado/reference/adox-api/command-property-adox.md) propiedad y el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto que se va a recuperar la información de campo de la vista.  
+# <a name="views-and-fields-collections-example-vb"></a>Ejemplo de colecciones de vistas y campos (VB)
+El código siguiente muestra cómo usar el [comando](../../../ado/reference/adox-api/command-property-adox.md) propiedad y el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto que se va a recuperar la información de campo de la vista.  
   
 ```  
 ' BeginViewFieldsVB  
@@ -85,5 +82,5 @@ End Sub
  [ActiveConnection (propiedad, ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Comando (propiedad, ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [Objeto de vista (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
+ [Objeto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
  [Colección de vistas (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

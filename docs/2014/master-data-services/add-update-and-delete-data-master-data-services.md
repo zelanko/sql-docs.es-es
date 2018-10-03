@@ -4,24 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 ms.assetid: b6295ead-bd2f-49dd-8756-35c6afb59648
-caps.latest.revision: 6
 author: leolimsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd14b50e3b883a92aa611b13553a6ecc5647f32c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6751dcfca820fcd7bdcdf73ff6979e572c7159fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311995"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066595"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>Agregar, actualizar y eliminar datos (Master Data Services)
   Puede agregar datos y realizar cambios en los datos en un modelo de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], de forma masiva.  

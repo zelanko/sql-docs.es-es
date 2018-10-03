@@ -1,29 +1,26 @@
 ---
-title: Campo de propiedades de objetos, métodos y eventos | Documentos de Microsoft
+title: Los eventos, métodos y propiedades del objeto de campo | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Field object [ADO], members
 ms.assetid: 1e0fc395-14f3-499a-9309-701e9905729f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1fe0bef5b38cf9fdb384cc19605206e9479f4170
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 50344cc7152e1d91208e6bc2aa9f92d6d8895568
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278404"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822103"
 ---
-# <a name="field-object-properties-methods-and-events"></a>Eventos, métodos y propiedades del objeto de campo
+# <a name="field-object-properties-methods-and-events"></a>Los eventos, métodos y propiedades del objeto de campo
 ## <a name="propertiescollections"></a>Propiedades y colecciones  
  [Propiedad ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)  
   
@@ -47,7 +44,7 @@ ms.locfileid: "35278404"
   
  [Propiedad UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)  
   
- [Value (propiedad)](../../../ado/reference/ado-api/value-property-ado.md)  
+ [Propiedad Value](../../../ado/reference/ado-api/value-property-ado.md)  
   
 ## <a name="methods"></a>Métodos  
  [Método AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)  

@@ -1,31 +1,27 @@
 ---
-title: Índice de elemento (DTA) | Documentos de Microsoft
+title: Índice de elemento (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5bb4901d63454c3c7eb6af4ad06c9f626ada5524
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fdbe54ce16b8ee0ed441bfcf7098d28004d482d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074072"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620253"
 ---
 # <a name="index-element-dta"></a>Index, elemento (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +41,7 @@ ms.locfileid: "33074072"
   
 ## <a name="element-attributes"></a>Atributos del elemento  
   
-|Atributo Index|Tipo de datos|Description|  
+|Atributo Index|Tipo de datos|Descripción|  
 |---------------------|---------------|-----------------|  
 |**Clúster**|**boolean**|Opcional. Especifica un índice clúster. Se establece en "true" o "false", por ejemplo:<br /><br /> `<Index Clustered="true">`<br /><br /> De forma predeterminada, este atributo está establecido en "false".|  
 |**Único**|**boolean**|Opcional. Especifica un índice único. Se establece en "true" o "false", por ejemplo:<br /><br /> `<Index Unique="true">`<br /><br /> De forma predeterminada, este atributo está establecido en "false".|  
@@ -60,9 +56,9 @@ ms.locfileid: "33074072"
 |**ANSI_WARNINGS**|**boolean**|Opcional. Especifica el comportamiento estándar de ISO para diversas condiciones de error. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar activado. Por ejemplo, la sintaxis siguiente activa este atributo:<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md).|  
 |**NUMERIC_ROUNDABORT**|**boolean**|Opcional. Especifica el nivel de informes de error generados cuando el redondeo en una expresión produce pérdida de precisión. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar desactivado.<br /><br /> La sintaxis siguiente activa este atributo:<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md).|  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
-|Característica|Description|  
+|Característica|Descripción|  
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|Ninguno.|  
 |**Valor predeterminado**|Ninguno.|  

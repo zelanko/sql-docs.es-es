@@ -1,50 +1,47 @@
 ---
-title: Actualizar las filas del conjunto de filas con SQLSetPos | Documentos de Microsoft
+title: Actualizar las filas del conjunto de filas con SQLSetPos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - updating data [ODBC], SQLSetPos
 - data updates [ODBC], SQLSetPos
 - SQLSetPos function [ODBC], updating rows
 ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5e971d597178501ecc7107da4bbaeb6158f0c99
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dfb57a6512245c9adb36a511ce48721dd901995c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916340"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715423"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>Actualizar las filas del conjunto de filas con SQLSetPos
-La operación de actualización de **SQLSetPos** hace que el origen de datos actualizar uno o más filas seleccionadas de una tabla, utilizando los datos en los búferes de la aplicación para cada columna enlazada (a menos que el valor en el búfer de longitud/indicador es SQL_COLUMN_IGNORE). Las columnas que no están enlazadas no se actualizará.  
+La operación de actualización de **SQLSetPos** hace que el origen de datos a actualizar una o varias filas seleccionadas de una tabla, utilizando los datos en los búferes de la aplicación para cada columna enlazada (a menos que el valor en el búfer de longitud/indicador SQL_COLUMN_IGNORE). No se actualizará las columnas que no están enlazadas.  
   
- Para actualizar filas con **SQLSetPos**, la aplicación hace lo siguiente:  
+ Para actualizar las filas con **SQLSetPos**, la aplicación hace lo siguiente:  
   
 1.  Coloca los nuevos valores de datos en los búferes de conjunto de filas. Para obtener información sobre cómo enviar datos largos con **SQLSetPos**, consulte [datos de tipo Long y SQLSetPos y SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
   
-2.  Establece el valor en el búfer de longitud/indicador de cada columna según sea necesario. Se trata de la longitud de bytes de los datos o SQL_NTS de las columnas enlazadas a los búferes de cadena, la longitud de bytes de los datos de las columnas enlazadas a búferes binarios y SQL_NULL_DATA de las columnas que se establece en NULL.  
+2.  Establece el valor en el búfer de longitud/indicador de cada columna según sea necesario. Se trata de la longitud de bytes de los datos o SQL_NTS para las columnas enlazadas a los búferes de cadena, la longitud de bytes de los datos para las columnas enlazadas a los búferes de binarios y SQL_NULL_DATA para las columnas debe establecerse en NULL.  
   
-3.  Establece el valor en el búfer de longitud/indicador de esas columnas que no se puede actualizar a SQL_COLUMN_IGNORE. Aunque la aplicación puede omitir este paso y enviar los datos existentes, esto es ineficiente y corre el riesgo de enviar valores al origen de datos que se han truncado durante su lectura.  
+3.  Establece el valor en el búfer de longitud/indicador de esas columnas que no se puede actualizar a SQL_COLUMN_IGNORE. Aunque la aplicación puede omitir este paso y reenviar los datos existentes, esto resulta ineficaz y corre el riesgo de enviar los valores al origen de datos que se han truncado durante su lectura.  
   
-4.  Llamadas **SQLSetPos** con *operación* establecido en SQL_UPDATE y *RowNumber* se establece en el número de la fila para actualizar. Si *RowNumber* es 0, se actualizan todas las filas del conjunto de filas.  
+4.  Las llamadas **SQLSetPos** con *operación* establecido en SQL_UPDATE y *RowNumber* establecido en el número de la fila para actualizar. Si *RowNumber* es 0, se actualizan todas las filas del conjunto de filas.  
   
- Después de **SQLSetPos** devuelve, la fila actual se establece en la fila actualizada.  
+ Después de **SQLSetPos** que devuelve la fila actual se establece en la fila actualizada.  
   
- Al actualizar todas las filas del conjunto de filas (*RowNumber* es igual a 0), una aplicación puede deshabilitar la actualización de algunas filas estableciendo los elementos correspondientes de la matriz de operación de fila (indicado por el SQL_ATTR_ROW_OPERATION_PTR atributo de instrucción) a SQL_ROW_IGNORE. La matriz de operación de la fila correspondiente en el tamaño y el número de elementos en la matriz de estado de fila (indicado por el atributo de instrucción SQL_ATTR_ROW_STATUS_PTR). Para actualizar solo las filas del conjunto de resultados que se ha obtenido correctamente y no se han eliminado del conjunto de filas, la aplicación utiliza la matriz de Estados de fila de la función que capturar el conjunto de filas como matriz de operación de la fila que **SQLSetPos**.  
+ Al actualizar todas las filas del conjunto de filas (*RowNumber* es igual a 0), una aplicación puede deshabilitar la actualización de algunas filas estableciendo los elementos correspondientes de la matriz de operación de fila (indicado por el SQL_ATTR_ROW_OPERATION_PTR atributo de instrucción) a SQL_ROW_IGNORE. La matriz de operación de la fila se corresponde con el tamaño y número de elementos en la matriz de estado de fila (indicado por el atributo de instrucción SQL_ATTR_ROW_STATUS_PTR). Para actualizar solo las filas del conjunto de resultados que se ha obtenido correctamente y no se han eliminado del conjunto de filas, la aplicación utiliza la matriz de Estados de fila de la función que capturar el conjunto de filas que la matriz de operación de la fila a **SQLSetPos**.  
   
- Para cada fila que se envía al origen de datos como una actualización, los búferes de la aplicación deben tener datos de fila válidas. Si se rellenaron los búferes de la aplicación y se ha mantenido una matriz de Estados de fila, sus valores en cada una de estas posiciones de fila no deben ser SQL_ROW_DELETED, SQL_ROW_ERROR ni SQL_ROW_NOROW.  
+ Para cada fila que se envía al origen de datos como una actualización, los búferes de la aplicación deben tener datos de fila válida. Si se han rellenado los búferes de la aplicación mediante la captura y se ha mantenido una matriz de Estados de fila, sus valores en cada una de estas posiciones de fila no deben ser SQL_ROW_DELETED, SQL_ROW_ERROR ni SQL_ROW_NOROW.  
   
- Por ejemplo, el código siguiente permite a un usuario a desplazarse por la tabla Customers y actualizar, eliminar o agregar nuevas filas. Coloca los nuevos datos en los búferes de conjunto de filas antes de llamar a **SQLSetPos** para actualizar o agregar nuevas filas. Se asigna una fila adicional al final de los búferes de conjunto de filas para contener nuevas filas; Esto evita que los datos existentes se sobrescriban datos para una nueva fila se coloca en los búferes.  
+ Por ejemplo, el código siguiente permite a un usuario a desplazarse por la tabla de clientes y actualizar, eliminar o agregar nuevas filas. Coloca los nuevos datos en los búferes de conjunto de filas antes de llamar a **SQLSetPos** para actualizar o agregar nuevas filas. Se asigna una fila adicional al final de los búferes del conjunto de filas para contener las nuevas filas; Esto impide que se sobrescriba cuando los datos para una nueva fila se colocan en los búferes de datos existentes.  
   
 ```  
 #define UPDATE_ROW   100  

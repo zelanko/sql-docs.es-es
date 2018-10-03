@@ -1,13 +1,11 @@
 ---
-title: Cómo funcionan conjuntamente los controladores de eventos | Documentos de Microsoft
+title: Cómo funcionan conjuntamente los controladores de eventos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - events [ADO], about event handlers
@@ -17,48 +15,47 @@ helpviewer_keywords:
 - event handlers [ADO]
 - multiple object event handlers [ADO]
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a50612e9bd16eafc2afb74c39ba2e5de7285e5a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a575e4df609430d5dc71517032f4c3da739bba24
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271974"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613313"
 ---
 # <a name="how-event-handlers-work-together"></a>Cómo funcionan conjuntamente los controladores de eventos
-A menos que está programando en Visual Basic, todos los controladores de eventos para **conexión** y **Recordset** eventos deben estar implementados, independientemente de que procesen realmente todos los eventos. La cantidad de trabajo de implementación que tiene que hacer depende de su lenguaje de programación. Para obtener más información, consulte [creación de instancias de eventos de ADO según el lenguaje](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
+A menos que se está programando en Visual Basic, todos los controladores de eventos para **conexión** y **Recordset** deben implementarse los eventos, independientemente de procese realmente todos los eventos. La cantidad de trabajo de implementación que debe hacer depende del lenguaje de programación. Para obtener más información, consulte [creación de instancias de eventos de ADO por lenguaje](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
   
 ## <a name="paired-event-handlers"></a>Controladores de eventos emparejados  
- Cada controlador de eventos Will tiene asociado un **completar** controlador de eventos. Por ejemplo, cuando la aplicación cambia el valor de un campo, el **WillChangeField** se llama al controlador de eventos. Si el cambio es aceptable, la aplicación deja la **adStatus** parámetro sin modificar y se realiza la operación. Cuando se complete la operación, un **FieldChangeComplete** evento notifica a la aplicación que haya finalizado la operación. Si se ha completado correctamente, **adStatus** contiene **adStatusOK**; en caso contrario, **adStatus** contiene **adStatusErrorsOccurred** y debe comprobar la **Error** para determinar la causa del error.  
+ Cada controlador de eventos Will tiene asociado un **completar** controlador de eventos. Por ejemplo, cuando la aplicación cambia el valor de un campo, el **WillChangeField** se llama al controlador de eventos. Si el cambio es aceptable, la aplicación deja el **adStatus** parámetro sin modificar y se realiza la operación. Cuando se complete la operación, un **FieldChangeComplete** evento notifica a la aplicación que ha finalizado la operación. Si se ha completado correctamente, **adStatus** contiene **adStatusOK**; en caso contrario, **adStatus** contiene **adStatusErrorsOccurred** y debe comprobar la **Error** para determinar la causa del error.  
   
- Cuando **WillChangeField** es llama, podría determinar que no se debe realizar el cambio. En ese caso, establezca **adStatus** a **adStatusCancel.** Se cancela la operación y el **FieldChangeComplete** evento recibe un **adStatus** valo **adStatusErrorsOccurred**. El **Error** objeto contiene **adErrOperationCancelled** para que su **FieldChangeComplete** controlador sepa que se canceló la operación. Sin embargo, debe comprobar el valor de la **adStatus** parámetro antes de cambiarlo, dado que al establecer **adStatus** a **adStatusCancel** no tiene ningún efecto si se ha establecido el parámetro para **adStatusCantDeny** en la entrada al procedimiento.  
+ Cuando **WillChangeField** es llamado, puede determinar que no se debe realizar el cambio. En ese caso, establezca **adStatus** a **adStatusCancel.** Se cancela la operación y el **FieldChangeComplete** evento recibe un **adStatus** valor **adStatusErrorsOccurred**. El **Error** contiene el objeto **adErrOperationCancelled** para que su **FieldChangeComplete** controlador sabe que se ha cancelado la operación. Sin embargo, deberá comprobar el valor de la **adStatus** parámetro antes de cambiarlo, porque si se establece **adStatus** a **adStatusCancel** no tiene ningún efecto si se ha establecido el parámetro para **adStatusCantDeny** en la entrada al procedimiento.  
   
- A veces, una operación puede generar más de un evento. Por ejemplo, el **Recordset** objeto tiene eventos para emparejados **campo** cambios y **registro** cambios. Cuando la aplicación cambia el valor de un **campo**, **WillChangeField** se llama al controlador de eventos. Si se determina que la operación puede continuar, la **WillChangeRecord** también se genera el controlador de eventos. Si este controlador permite asimismo que continúe el evento, se realiza el cambio y la **FieldChangeComplete** y **RecordChangeComplete** se denominan controladores de eventos. No se define el orden en el que se llama a los controladores de eventos Will para una operación determinada, por lo que debe evitar escribir código que depende de una llamada a los controladores en un orden determinado.  
+ A veces, una operación puede generar más de un evento. Por ejemplo, el **Recordset** objeto tiene eventos para emparejados **campo** cambios y **registro** cambios. Cuando la aplicación cambia el valor de un **campo**, **WillChangeField** se llama al controlador de eventos. Si determina que la operación pueda continuar, el **WillChangeRecord** también se genera el controlador de eventos. Si este controlador también permite que continúe el evento, se realiza el cambio y la **FieldChangeComplete** y **RecordChangeComplete** se denominan controladores de eventos. No se define el orden en el que se llama a los controladores de eventos Will para una operación determinada, por lo que debe evitar escribir código que depende de una llamada a los controladores en una secuencia determinada.  
   
- En instancias cuando se producen varios eventos Will, uno de los eventos puede cancelar la operación pendiente. Por ejemplo, cuando la aplicación cambia el valor de un **campo**, ambos **WillChangeField** y **WillChangeRecord** normalmente se llamaría controladores de eventos. Sin embargo, si se cancela la operación en el primer controlador de eventos, sus asociado **completar** controlador se llama inmediatamente con **adStatusOperationCancelled**. Nunca se llama al controlador de segundo. Si, sin embargo, el primer controlador de eventos permite que continúe el evento, se llamará al otro controlador de eventos. Si, a continuación, cancela la operación, ambos **completar** eventos se les llama como en los ejemplos anteriores.  
+ En las instancias cuando se producen varios eventos Will, uno de los eventos puede cancelar la operación pendiente. Por ejemplo, cuando la aplicación cambia el valor de un **campo**, ambos **WillChangeField** y **WillChangeRecord** controladores de eventos normalmente se llama. Sin embargo, si se cancela la operación en el primer controlador de eventos, su asociado **completar** controlador se llama inmediatamente con **adStatusOperationCancelled**. Nunca se llama al controlador de segundo. Si, sin embargo, el primer controlador de eventos permite que continúe el evento, se llamará el otro controlador de eventos. Si cancela la operación, ambos **completar** se llamará a eventos como en los ejemplos anteriores.  
   
 ## <a name="unpaired-event-handlers"></a>Controladores de eventos no emparejados  
- Siempre y cuando el estado pasado para el evento no es **adStatusCantDeny**, puede desactivar las notificaciones de eventos para cualquier evento devolviendo **adStatusUnwantedEvent** en el *estado*parámetro. Por ejemplo, cuando la **completar** controlador de eventos se llama por primera vez, puede devolver **adStatusUnwantedEvent**. Posteriormente, recibirá sólo **le** eventos. Sin embargo, algunos eventos pueden activarse por más de un motivo. En ese caso, el evento tendrá un *motivo* parámetro. Cuando vuelva **adStatusUnwantedEvent**, dejará de recibir notificaciones de ese evento sólo cuando se producen por ese motivo concreto. En otras palabras, potencialmente recibirá notificación para todas las posibles razones que podría activarse el evento.  
+ Siempre y cuando el estado correcto para el evento no es **adStatusCantDeny**, puede desactivar las notificaciones de eventos para cualquier evento devolviendo **adStatusUnwantedEvent** en el *estado*parámetro. Por ejemplo, cuando su **completar** controlador de eventos se llama a la primera vez, puede devolver **adStatusUnwantedEvent**. Posteriormente, recibirá solo **le** eventos. Sin embargo, algunos eventos pueden desencadenarse por más de un motivo. En ese caso, el evento tendrá un *motivo* parámetro. Cuando vuelva **adStatusUnwantedEvent**, dejará de recibir notificaciones de ese evento sólo cuando se producen por ese motivo concreto. En otras palabras, potencialmente recibirá notificación para todas las posibles razones que podría activarse el evento.  
   
- Solo **le** controladores de eventos pueden ser útiles cuando desea examinar los parámetros que se utilizarán en una operación. Puede modificar esos parámetros de operación o cancelar la operación.  
+ Solo **le** controladores de eventos pueden ser útiles cuando desea examinar los parámetros que se usará en una operación. Puede modificar los parámetros de operación o cancelar la operación.  
   
- O bien, deje **completar** habilitada la notificación de eventos. Cuando se llame al primer controlador de eventos Will, devuelva **adStatusUnwantedEvent**. Posteriormente, recibirá sólo **completar** eventos.  
+ Como alternativa, dejar **completar** habilitada la notificación de eventos. Cuando se llama al primer controlador de eventos Will, devolver **adStatusUnwantedEvent**. Posteriormente, recibirá solo **completar** eventos.  
   
- Solo **completar** controladores de eventos pueden ser útiles para administrar las operaciones asincrónicas. Cada operación asincrónica tiene una adecuada **completar** eventos.  
+ Solo **completar** controladores de eventos pueden ser útiles para administrar las operaciones asincrónicas. Cada operación asincrónica tiene un adecuado **completar** eventos.  
   
- Por ejemplo, puede tardar mucho tiempo para rellenar una gran [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto. Si la aplicación está escrita correctamente, puede iniciar un `Recordset.Open(...,adAsyncExecute)` operación y continuar con otros procesos. Finalmente estará le avisa cuando el **Recordset** se rellena con un **ExecuteComplete** eventos.  
+ Por ejemplo, puede tardar mucho tiempo en rellenar un gran [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto. Si la aplicación está escrita correctamente, puede iniciar un `Recordset.Open(...,adAsyncExecute)` operación y continuar con otros procesamientos. Finalmente estará le avisa cuando el **Recordset** se rellena con un **ExecuteComplete** eventos.  
   
 ## <a name="single-event-handlers-and-multiple-objects"></a>Controladores de eventos único y varios objetos  
- La flexibilidad de un lenguaje de programación como Microsoft Visual C++® le permite tener una eventos del proceso de controlador de eventos de varios objetos. Por ejemplo, podría tener una **desconexión** eventos del proceso de controlador de eventos desde varios **conexión** objetos. Si una de las conexiones finaliza, el **desconexión** se llamará al controlador de eventos. Puede indicar a qué conexión provocó el evento porque el parámetro de objeto de controlador de eventos se establecería en correspondiente **conexión** objeto.  
+ La flexibilidad de un lenguaje de programación como Microsoft Visual C++® permite que un evento controlador procesar los eventos de varios objetos. Por ejemplo, podría tener **desconexión** procesar eventos de controlador de eventos desde varios **conexión** objetos. Si una de las conexiones ha finalizado, el **desconexión** se llamará al controlador de eventos. Puede indicar a qué conexión provocó el evento porque el parámetro de objeto de controlador de eventos se establecería en el correspondiente **conexión** objeto.  
   
 > [!NOTE]
->  Esta técnica no se puede usar en Visual Basic porque ese idioma puede poner en correlación sólo un objeto a un controlador de eventos.  
+>  Esta técnica no se puede usar en Visual Basic porque ese idioma puede poner en correlación un solo objeto a un controlador de eventos.  
   
 ## <a name="see-also"></a>Vea también  
  [Resumen del controlador de eventos de ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [Creación de instancias de eventos de ADO según el lenguaje](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
- [Parámetros de eventos](../../../ado/guide/data/event-parameters.md)   
+ [Creación de instancias de eventos de ADO por idioma](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
+ [Parámetros de evento](../../../ado/guide/data/event-parameters.md)   
  [Tipos de eventos](../../../ado/guide/data/types-of-events.md)

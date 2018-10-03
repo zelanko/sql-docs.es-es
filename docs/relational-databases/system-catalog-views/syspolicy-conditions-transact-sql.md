@@ -1,14 +1,11 @@
 ---
-title: syspolicy_conditions (Transact-SQL) | Documentos de Microsoft
+title: syspolicy_conditions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syspolicy_conditions
@@ -18,26 +15,25 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_conditions view
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09d52d9a4c4d5005a51057a40c29524301d3fdd4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c0f9efbedc1f380bca66c198accae17b70cb4da2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220806"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47823113"
 ---
 # <a name="syspolicyconditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Muestra una fila para cada condición de administración basada en directivas en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. syspolicy_conditions que pertenece al esquema dbo en la base de datos msdb. En la tabla siguiente se describen las columnas de la vista de syspolicy_conditions.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |condition_id|**int**|Identificador de esta condición. Cada condición representa una recopilación de una o varias expresiones de condición.|  
-|name|**sysname**|Nombre de la condición.|  
+|NAME|**sysname**|Nombre de la condición.|  
 |date_created|**datetime**|Fecha y hora en que se creó la condición.|  
 |description|**nvarchar(max)**|Descripción de la condición. La columna de descripción es opcional y puede ser NULL.|  
 |created_by|**sysname**|Inicio de sesión que creó la condición.|  
@@ -51,7 +47,7 @@ ms.locfileid: "33220806"
 ## <a name="remarks"></a>Comentarios  
  Cuando esté solucionando problemas de la administración basada en directivas, consulte la vista de syspolicy_conditions para determinar quién creó o cambió por última vez la condición.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol PolicyAdministratorRole en la base de datos msdb.  
   
 ## <a name="see-also"></a>Vea también  

@@ -1,32 +1,29 @@
 ---
-title: Valor de ejemplo de la propiedad (VB) | Documentos de Microsoft
+title: Valor de ejemplo de la propiedad (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Value property [ADO], Visual Basic example
 ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 008ac421a9b99f6d0365f84556609ba52b37f0fb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 00f27eafae8dc375d3c4122c093c1f61abe39391
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282734"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758763"
 ---
 # <a name="value-property-example-vb"></a>Ejemplo de la propiedad de valor (VB)
-Este ejemplo se muestra la [valor](../../../ado/reference/ado-api/value-property-ado.md) propiedad con [campo](../../../ado/reference/ado-api/field-object.md) y [propiedad](../../../ado/reference/ado-api/property-object-ado.md) objetos y mostrar valores de campo y propiedad para el ***empleados*** tabla.  
+Este ejemplo se muestra el [valor](../../../ado/reference/ado-api/value-property-ado.md) propiedad con [campo](../../../ado/reference/ado-api/field-object.md) y [propiedad](../../../ado/reference/ado-api/property-object-ado.md) objetos al mostrar los valores de propiedad y campo para el ***empleados*** tabla.  
   
 ```  
 'BeginValueVB  

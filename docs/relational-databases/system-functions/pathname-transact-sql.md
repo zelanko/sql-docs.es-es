@@ -1,14 +1,11 @@
 ---
-title: Ruta de acceso (Transact-SQL) | Documentos de Microsoft
+title: Ruta de acceso (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PathName_TSQL
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - PathName FILESTREAM [SQL Server]
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
-caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 80fc13baa2d538e054ed88607cd4b45c6477cb6e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fe641df85802baab70efa514179f5abbeaea8951
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233616"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852023"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve la ruta de acceso de un objeto binario grande (BLOB) FILESTREAM. La API de OpenSqlFilestream utiliza esta ruta de acceso para devolver un identificador que una aplicación puede usar para trabajar con los datos de BLOB mediante las API de Win32. PathName es de solo lectura.  
+  Devuelve la ruta de acceso de un objeto binario grande (BLOB) FILESTREAM. La API OpenSqlFilestream usa esta ruta de acceso para devolver un identificador que una aplicación puede usar para trabajar con los datos BLOB mediante las API de Win32. PathName es de solo lectura.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,25 +43,25 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *column_name*  
  Es el nombre de columna de un **varbinary (max)** columna FILESTREAM. *column_name* debe ser un nombre de columna. No puede ser una expresión ni el resultado de una instrucción CAST o CONVERT.  
   
- Solicitar la ruta de acceso para una columna de cualquier otro tipo de datos o para un **varbinary (max)** columnthat no tengan el FILESTREAM almacenamiento atributo producen un error de tiempo de compilación de la consulta.  
+ Solicitar el valor de PathName para una columna de cualquier otro tipo de datos o para un **varbinary (max)** columnthat no tiene el atributo de almacenamiento FILESTREAM se producirá un error de tiempo de compilación de consulta.  
   
  *@option*  
  Un entero [expresión](../../t-sql/language-elements/expressions-transact-sql.md) que define cómo se debe dar formato el componente de servidor de la ruta de acceso. *@option* puede ser uno de los siguientes valores. El valor predeterminado es 0.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |0|Devuelve el nombre del servidor convertido al formato BIOS, por ejemplo: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|Devuelve el nombre del servidor sin la conversión, por ejemplo: `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
 |2|Devuelve la ruta de acceso al servidor completa, por ejemplo: `\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
   
  *use_replica_computer_name*  
- Un valor de bit que define cómo se debe devolver el nombre del servidor en un grupo de disponibilidad AlwaysOn.  
+ Un valor de bit que define cómo se debe devolver el nombre del servidor en un grupo de disponibilidad Always On.  
   
- Cuando la base de datos no pertenece a un grupo de disponibilidad AlwaysOn, se omite el valor de este argumento. El nombre del equipo siempre se usa en la ruta.  
+ Cuando la base de datos no pertenece a un grupo de disponibilidad Always On, se omite el valor de este argumento. El nombre del equipo siempre se usa en la ruta.  
   
- Cuando la base de datos pertenece a una disponibilidad permanente en grupo, a continuación, el valor de *use_replica_computer_name* tiene el siguiente efecto en la salida de la **PathName** función:  
+ Cuando la base de datos pertenece a una disponibilidad Always On de grupo, a continuación, el valor de *use_replica_computer_name* tiene el siguiente efecto en la salida de la **PathName** función:  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |No especificada.|La función devuelve el nombre de red virtual (VNN) en la ruta de acceso.|  
 |0|La función devuelve el nombre de red virtual (VNN) en la ruta de acceso.|  
@@ -153,7 +149,7 @@ DROP DATABASE PathNameDB;
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Datos de objeto binario grande &#40;Blob&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
+ [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [Obtener acceso a los datos FILESTREAM con OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   

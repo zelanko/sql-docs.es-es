@@ -5,22 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 381d7b5d80281832081a7a08defbd0b3cb76dda5
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 115a6ebf263555e98a321cbe582a663d4fcf7019
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408867"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843123"
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Lección 4: Agregar redirección de flujo de errores con SSIS
 Para administrar los errores que puedan aparecer en el proceso de transformación, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ofrece la posibilidad de decidir para cada componente y cada columna cómo administrar los datos que no pueden transformarse. Puede optar por omitir un error en determinadas columnas, redireccionar toda la fila que ha generado el error o simplemente rechazar el componente debido a un error. De forma predeterminada, todos los componentes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] están configurados para ser rechazados si se produce un error. Rechazar el componente debido a un error, causa, a su vez, que el paquete también genere un error y que todos los procesos subsiguientes se detengan.  
@@ -50,7 +46,7 @@ Esta lección contiene las siguientes tareas:
 -   [Paso 5: Probar el paquete del tutorial de la lección 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar la lección  
-[Paso 1: copiar el paquete de la lección 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
+[Paso 1: Copiar el paquete de la lección 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
   
   
   

@@ -4,17 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ebaf0ab56245e66fb58e6e84532fa52f04bb2deb
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 9653a40f5f7789e693041533e2706ee56bf8799a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279196"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856386"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Ordenación interactiva, mapas de documento y vínculos (Generador de informes y SSRS)
   En entornos basados en web, puede agregar varias características que permitan a los usuarios interactuar con los informes. Los usuarios pueden cambiar el criterio de ordenación de los valores del informe, mostrar u ocultar elementos del informe o hacer clic en vínculos que llevan a otros informes con páginas web. También puede agregar una tabla de contenido o mapa de documento. Los usuarios de los informes pueden hacer clic en los elementos de la tabla de contenido o el mapa de documento para desplazarse a las distintas áreas de un informe.  

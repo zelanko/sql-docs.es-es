@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 70188f727390809dc5ffb7739f9c8a50eab91387
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a7ab54f0f2cf6d1ee4a8358df9062e125a9b496a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205015"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048905"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>Agregar un filtro a un conjunto de datos (Generador de informes y SSRS)
   Agregue un filtro a un conjunto de datos para limitar los datos en un informe una vez recuperados de un origen de datos externo. Al agregar un filtro a un conjunto de datos, todos los elementos de informe o regiones de datos usan solo los datos que cumplen las condiciones del filtro.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [Analysis Services]
 - Analysis Services, tutorials
 ms.assetid: db55e226-601a-4026-8651-573195555a59
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 206105b0dda4da406abf46f70f27b511dee99e0d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ebbb4e6510f8896b9c931d6a582eaf6b3e2b0c24
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220355"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049426"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>Creación de modelos multidimensionales (tutorial de Adventure Works)
   Este es el Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . En este tutorial se describe cómo usar [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para desarrollar e implementar un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , usando la empresa ficticia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] para todos los ejemplos.  

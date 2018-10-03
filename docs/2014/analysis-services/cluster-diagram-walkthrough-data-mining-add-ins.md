@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visio shapes, cluster
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - shapes, cluster
 - data mining layout toolbar
 ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 808accf81389f97d2dff9383fe4c3fbe9d86068d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b617305a8766ff94a699a054ac394be406dc7873
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177262"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057095"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>Tutorial del diagrama del clúster (Complementos de minería de datos)
   Después de haber creado un modelo de agrupación en clústeres, puede importarlo en Visio con el **clúster** dar forma y, a continuación, seguir personalizando y mejorando el diseño. El **formas de minería de datos para Visio** incluyen los siguientes controles personalizados para trabajar con diagramas de minería de datos:  

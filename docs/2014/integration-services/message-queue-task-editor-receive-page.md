@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.msgqueuetask.receive.f1
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
-caps.latest.revision: 29
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 384d15668d835db7d75f9e612595d00d83f41da4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0226a655ff1adc7269e0ee66996e7680f659826e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256831"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060857"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>Editor de la tarea Cola de mensajes (página Recibir)
   Use la página **Recibir** del cuadro de diálogo **Editor de la tarea Cola de mensajes** para configurar una tarea de la cola de mensajes para recibir mensajes de [!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ).  
@@ -35,7 +32,7 @@ ms.locfileid: "37256831"
  Indique si desea eliminar el mensaje de la cola una vez recibido. De forma predeterminada, este valor se establece en `False`.  
   
  **ErrorIfMessageTimeOut**  
- Indique si desea mostrar un mensaje de error si se produce un error en la tarea al exceder el tiempo de espera. El valor predeterminado es `False`.  
+ Indique si desea mostrar un mensaje de error si se produce un error en la tarea al exceder el tiempo de espera. De manera predeterminada, es `False`.  
   
  **TimeoutAfter**  
  Si elige mostrar un mensaje de error al producirse errores en la tarea, indique el número de segundos que deben transcurrir antes de mostrar el mensaje de tiempo de espera.  
@@ -57,7 +54,7 @@ ms.locfileid: "37256831"
  Escriba la ruta del archivo que quiere usar o haga clic en el botón de puntos suspensivos **(…)** para buscar el archivo.  
   
  **Sobrescribir**  
- Indique si desea sobrescribir los datos de un archivo existente al guardar el contenido del mensaje de archivo de datos. El valor predeterminado es `False`.  
+ Indique si desea sobrescribir los datos de un archivo existente al guardar el contenido del mensaje de archivo de datos. De manera predeterminada, es `False`.  
   
  **Filter**  
  Indique si desea aplicar un filtro al mensaje. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  

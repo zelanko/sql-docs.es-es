@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
-caps.latest.revision: 21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 04a293e7377a92e36b96678859a132869b04fb4f
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3471abb7a551de576dfdf01de2a5fcf980b60527
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396171"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061275"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar los requisitos de memoria para las tablas con optimización para memoria
   Si va a crear una nueva tabla optimizada para memoria de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] o va a migrar una tabla basada en disco existente a una tabla optimizada para memoria, es importante contar con una estimación razonable de la memoria que necesita cada tabla, para poder aprovisionar el servidor con suficiente memoria. En esta sección se describe cómo calcular la cantidad de memoria necesaria para almacenar los datos de una tabla optimizada para memoria.  
@@ -27,8 +24,7 @@ ms.locfileid: "40396171"
   
 ## <a name="sections-in-this-topic"></a>Secciones de este tema  
   
--   
-            [tabla optimizada para memoria de ejemplo](#bkmk_ExampleTable)  
+-   [tabla optimizada para memoria de ejemplo](#bkmk_ExampleTable)  
   
 -   [Memoria para la tabla](#bkmk_MemoryForTable)  
   

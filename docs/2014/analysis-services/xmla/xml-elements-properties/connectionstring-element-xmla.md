@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ConnectionString Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectionString element
 ms.assetid: 3b0575aa-79ed-4f14-ae7e-dd587af4cdb1
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e7345d2a35d80a2ce4d72875c4afb082b57ec1a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6b4f186e7beebedd11a9100d1091fc38acaa9dc0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293215"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061495"
 ---
 # <a name="connectionstring-element-xmla"></a>Elemento ConnectionString (XMLA)
   Contiene una cadena de conexión utilizada por el elemento primario [ubicación](location-element-xmla.md) o [origen](source-element-xmla.md) elemento.  
@@ -48,7 +45,7 @@ ms.locfileid: "37293215"
 </Location>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -65,7 +62,7 @@ ms.locfileid: "37293215"
 |Elementos primarios|[Ubicación](location-element-xmla.md), [origen](source-element-xmla.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para los elementos `Location`, el elemento `ConnectionString` contiene la cadena de conexión que utiliza el comando `Restore` o `Synchronize` para actualizar un origen de datos local o conectarse a una instancia remota.  
   
  Para los elementos `Source`, el elemento `ConnectionString` contiene la cadena de conexión utilizada por el comando `Synchronize` para conectarse a la instancia de origen.  

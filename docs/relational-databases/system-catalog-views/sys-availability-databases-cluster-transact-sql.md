@@ -1,14 +1,11 @@
 ---
-title: Sys.availability_databases_cluster (Transact-SQL) | Documentos de Microsoft
+title: Sys.availability_databases_cluster (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.availability_databases_cluster_TSQL
@@ -23,21 +20,20 @@ helpviewer_keywords:
 - sys.availability_databases_cluster catalog view
 - Availability Groups [SQL Server], databases
 ms.assetid: 8d9c57e5-7f39-4315-b466-92748231140a
-caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b0c0cd91b58c4e59cba2440d8f02cd01a93c870
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 7d312a5ecb60e1ab046b0108e01ef1834adaa900
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33179191"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842313"
 ---
 # <a name="sysavailabilitydatabasescluster-transact-sql"></a>sys.availability_databases_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una fila por cada base de datos de disponibilidad en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda una réplica de disponibilidad para cualquier grupo de disponibilidad AlwaysOn del clúster de clústeres de conmutación por error de servidor de Windows (WSFC), independientemente de si la variable local copiar base de datos se ha unido todavía al grupo de disponibilidad.  
+  Contiene una fila por cada base de datos de disponibilidad en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda una réplica de disponibilidad para cualquier grupo de disponibilidad Always On en el clúster de clústeres de conmutación por error de servidor de Windows (WSFC), independientemente de si el equipo local copiar base de datos ya se ha unido al grupo de disponibilidad.  
   
 > [!NOTE]  
 >  Cuando una base de datos se agrega a un grupo de disponibilidad, la base de datos principal se une automáticamente al grupo. Las bases de datos secundarias se deben preparar en cada réplica secundaria para poder unirse al grupo de disponibilidad.   
@@ -49,7 +45,7 @@ ms.locfileid: "33179191"
 |**database_name**|**sysname**|Nombre de la base de datos que se agregó al grupo de disponibilidad.|  
   
 ## <a name="permissions"></a>Permisos  
- Si el autor de llamada de **sys.availability_databases_cluster** no es el propietario de la base de datos, los permisos mínimos necesarios para ver la fila correspondiente son ALTER ANY DATABASE o permiso de nivel de servidor VIEW ANY DATABASE o CREATE Permiso de base de datos en el **maestro** base de datos.  
+ Si el llamador de **sys.availability_databases_cluster** no es el propietario de la base de datos, los permisos mínimos necesarios para ver la fila correspondiente son ALTER ANY DATABASE o permiso de nivel de servidor VIEW ANY DATABASE o CREATE Permiso de base de datos en el **maestro** base de datos.  
   
 ## <a name="see-also"></a>Vea también  
  [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   

@@ -5,22 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e15337b25cfa8b03a5283d95c974f6d5bc0100b1
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f42cdf02129bcd10b373f28e8a35544d3b9906a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406257"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855833"
 ---
 # <a name="lesson-1-4---adding-a-data-flow-task-to-the-package"></a>Lección 1-4: Agregar una tarea Flujo de datos al paquete
 Una vez que ha creado los administradores de conexión para los datos de origen y de destino, la siguiente tarea consiste en agregar una tarea de flujo de datos al paquete. La tarea de flujo de datos encapsula el motor de flujo de datos que mueve datos entre orígenes y destinos, y proporciona la funcionalidad para transformar, limpiar y modificar los datos a medida que se mueven. En la tarea de flujo de datos se lleva a cabo la mayor parte del proceso de extracción, transformación y carga (ETL).  

@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 2b056119-439f-494f-83cf-ee0c05dc6487
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eb8d9c7b946847406a7ad09aa0fd56501fec119e
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 4a856111edb1f536054c499ba355884db8c5bb90
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279772"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853479"
 ---
 # <a name="add-empty-points-to-a-chart-report-builder-and-ssrs"></a>Agregar puntos vacíos a un gráfico (Generador de informes y SSRS)
 Los valores NULL se muestran en el gráfico como espacios vacíos o como intervalos entre los puntos de datos de una serie. En los informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , los puntos vacíos son los puntos de datos que se pueden insertar en el espacio vacío que crean los valores NULL.  

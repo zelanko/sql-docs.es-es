@@ -4,17 +4,16 @@ ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c5626f940d091766f38d3e61faf79b2414e638a5
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 9d68f689ebcf937acae4b1bf5579eb282c8e1932
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271300"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847513"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solucionar problemas de los informes: informes de mapa (Generador de informes y SSRS)
   Podrían producirse problemas con los mapas de un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] al agregar un mapa o una capa de mapa a un informe, personalizar un mapa o una capa de mapa existentes en un informe, obtener una vista previa de un mapa en un informe o publicar un informe con un mapa. Utilice este tema como ayuda para solucionar estos problemas.  

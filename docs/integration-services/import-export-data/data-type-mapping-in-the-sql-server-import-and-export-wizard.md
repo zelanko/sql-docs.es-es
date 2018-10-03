@@ -5,21 +5,18 @@ ms.date: 01/11/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
-caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 68ab4ad08dcc8bf368263c74663006c207272c86
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 826e7ca671272f859cd0d5da7059b34cf4cfedba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402817"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847273"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Asignación de tipos de datos en el Asistente para importación y exportación de SQL Server
  En el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede establecer el nombre, el tipo de datos y las propiedades de tipo de datos de las columnas de las tablas y archivos de destino nuevos, pero no puede especificar conversiones personalizadas para los valores de columna. Como resultado, la asignación integrada de tipos de datos del origen al destino es muy importante.  

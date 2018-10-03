@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 29f94bd307f0e863e6ff8e54b7b0ec54281f20b2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 27e3a36850dcf0d314398e994485d5e7410f9a8a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293541"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051400"
 ---
 # <a name="discovercsdlmetadata-rowset"></a>DISCOVER_CSDL_METADATA, conjunto de filas
   Devuelve información sobre un modelo de datos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] (ya sea tabular o multidimensional), proporcionando la definición del modelo en el formato CSDLBI (lenguaje de definición de esquemas conceptuales con anotaciones BI). CSDLBI está basado en CSDL, un esquema XML utilizado por Entity Data Framework para la comunicación entre un servidor de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] y el cliente de [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] . Las anotaciones Business Intelligence (BI) proporcionan metadatos adicionales sobre los modelos tabulares y los objetos incluidos en ellos. Para más información sobre los modelos de datos tabulares, vea [Anotaciones de CSDL para Business Intelligence &#40;CSDLBI&#41;](../../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
@@ -40,7 +37,7 @@ ms.locfileid: "37293541"
 |`METADATA`|`DBTYPE_WSTR`|no|Cadena que contiene la definición XML de un origen de datos y sus propiedades, de acuerdo con el esquema CSDLBI.|  
 |`CUBE_ID`|`DBTYPE_WSTR`|Sí|Identificador de cadena.<br /><br /> Esta restricción es opcional para las bases de datos multidimensionales. Si hay varios cubos disponibles y se omite la restricción, se devuelve el cubo predeterminado.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  DISCOVER_CSDL_METADATA tiene los requisitos siguientes:  
   
 -   La solicitud DISCOVER producirá un error si no se especifica una base de datos mediante la restricción CATALOG_NAME.  

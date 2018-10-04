@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - TrendGraphic Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - TrendGraphic element
 ms.assetid: 7448fd80-3072-4d85-b3a0-6606d1d20885
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c42a75f2dcb09b88008ea2776d215153ec7c557b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d9766ee265450b31c7bbb062c9f632a2fb0be032
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228165"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102505"
 ---
 # <a name="trendgraphic-element-assl"></a>Elemento TrendGraphic (ASSL)
   Contiene la representación gráfica recomendada de la tendencia de la [Kpi](../objects/kpi-element-assl.md) elemento.  
@@ -46,7 +43,7 @@ ms.locfileid: "37228165"
 </Kpi>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37228165"
 |Elemento primario|[KPI](../objects/kpi-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
 |Valor|Descripción|  

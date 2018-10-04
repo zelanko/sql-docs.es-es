@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Usage Element (MiningModelColumn)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Usage element
 ms.assetid: 435a857e-37a9-434e-9de1-354f1ff2993f
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a6767c4c5ac535ac603cc6182cbe645088c8ac05
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 220f59e5e342f61f30d0f94bc9f9728982105986
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265308"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090311"
 ---
 # <a name="usage-element-miningmodelcolumn-assl"></a>Elemento Usage (MiningModelColumn) (ASSL)
   Describe cómo la columna asociada en el elemento primario [MiningStructure](../objects/miningstructure-element-assl.md) se utiliza.  
@@ -46,7 +43,7 @@ ms.locfileid: "37265308"
 </MiningModelColumn>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,13 +58,13 @@ ms.locfileid: "37265308"
 |Elemento primario|[MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |*Key*|La columna es una columna de clave.|  
-|*Entrada*|La columna es una columna de entrada.|  
+|*entrada*|La columna es una columna de entrada.|  
 |*Predict*|La columna es una columna de predicción.|  
 |*PredictOnly*|La columna es solo una columna de predicción.|  
 |*Ninguno*|El modelo no utiliza la columna. **Advertencia:** cuando el valor de Usage es "None", Analysis Services no envía ningún valor para el servidor de forma predeterminada; por lo tanto, el atributo de uso no está incluido en la solicitud/respuesta.|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MDSCHEMA_PROPERTIES
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - MDSCHEMA_PROPERTIES rowset
 ms.assetid: 95c480f7-c525-44ba-a59b-cd36f5855a4f
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f62a6e4f77053c1aec69fc2e16b8049193249466
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 17395bb081006e46b052bdaf8da2166b0366d686
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189222"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100135"
 ---
 # <a name="mdschemaproperties-rowset"></a>Conjunto de filas MDSCHEMA_PROPERTIES
   Describe las propiedades de los miembros de una base de datos.  
@@ -68,7 +65,7 @@ ms.locfileid: "37189222"
   
 |Nombre de columna|Indicador de tipo|Estado de restricción|  
 |-----------------|--------------------|-----------------------|  
-|`CATALOG_NAME`|`DBTYPE_WSTR`|Obligatorio|  
+|`CATALOG_NAME`|`DBTYPE_WSTR`|obligatorio|  
 |`SCHEMA_NAME`|`DBTYPE_WSTR`|Opcional|  
 |`CUBE_NAME`|`DBTYPE_WSTR`|Opcional|  
 |`DIMENSION_UNIQUE_NAME`|`DBTYPE_WSTR`|Opcional|  

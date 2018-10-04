@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5ea0a37304bbde2ac84e5092e67744226a03b0db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ac741a4f3c5ea5b4aecbe7943a55ec1f6bef145f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239405"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110565"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Trabajar con el servicio CDC de Oracle
   En esta sección se describen algunos conceptos importantes del servicio CDC de Oracle. Los conceptos incluidos en esta sección son:  
@@ -190,7 +187,7 @@ ms.locfileid: "37239405"
 ### <a name="service-program-commands"></a>Comandos del programa de servicio  
  En esta sección se describen los siguientes comandos que se usan para configurar el servicio CDC.  
   
--   [Configuración](#BKMK_config)  
+-   [configuración](#BKMK_config)  
   
 -   [Crear](#BKMK_create)  
   

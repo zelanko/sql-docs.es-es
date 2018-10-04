@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.databasesetup.F1
 ms.assetid: 8c9bb3b3-ea77-4a5b-ba35-7451ed11083d
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7bce0a9aa3adcddb7363224138a7ec3f51a47622
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d79b50e70f3eae3d9183ae220002136b39717e46
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183942"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102496"
 ---
 # <a name="database-ssrs-native-mode"></a>Base de datos (Modo nativo de SSRS)
   Utilice la página Base de datos para crear y configurar las bases de datos del servidor de informes que permiten el almacenamiento interno de una o varias instancias del servidor de informes. Si está configurando un servidor de informes para utilizar una base de datos del servidor de informes remoto, debe usar el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager para crear la base de datos.  

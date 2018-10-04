@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - TargetType Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - TargetType element
 ms.assetid: 2c69ea6e-2af7-435b-9841-86117d5554a7
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0b21033bb9a7e20923adccfa135475cf93dafb7c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ed0ca768f075b7cd4249c9d8b021e2ec10d54c46
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237565"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099565"
 ---
 # <a name="targettype-element-assl"></a>Elemento TargetType (ASSL)
   Identifica el tipo de elemento del elemento identificado en el [destino](target-element-assl.md) elemento.  
@@ -46,7 +43,7 @@ ms.locfileid: "37237565"
 </Action>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37237565"
 |Elemento primario|[Acción](../objects/action-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
 |Valor|Descripción|  

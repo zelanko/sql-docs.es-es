@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - CHECK constraints, modifying
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - constraints [SQL Server], check
 - constraints [SQL Server], modifying
 ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4669aff39622e7d05da2c127207dc0fc481fa1a6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa91f2910fabac44c4c434f70ae3d8bb0ae78c8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157976"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114045"
 ---
 # <a name="modify-check-constraints"></a>Modificar restricciones CHECK
   Puede modificar una restricción CHECK en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] si desea cambiar la expresión de la restricción o las opciones que habilitan o deshabilitan la restricción para condiciones específicas.  
@@ -60,7 +57,7 @@ ms.locfileid: "37157976"
   
 4.  Complete una de las acciones descritas en la tabla siguiente:  
   
-    |A|Siga estos pasos|  
+    |En|Siga estos pasos|  
     |--------|------------------------|  
     |Modificar la expresión de restricción|Escriba la nueva expresión en el campo **Expresión** .|  
     |Cambiar el nombre de la restricción|Escriba un nuevo nombre en el campo **Nombre** .|  

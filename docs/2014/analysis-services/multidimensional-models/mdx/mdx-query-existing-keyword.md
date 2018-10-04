@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - EXISTING
 helpviewer_keywords:
 - Existing keyword
 ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a781fb58f45c478b6a3611132a210b14012ffb72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8431c4b29f20b3c87e3b944736612d009426900a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228395"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106555"
 ---
 # <a name="existing-keyword-mdx"></a>EXISTING (Palabra clave, MDX)
   Exige que un conjunto especificado se evalúe en el contexto actual.  
@@ -39,7 +36,7 @@ Existing Set_Expression
  *Set_Expression*  
  Una expresión de conjunto de MDX (Expresiones multidimensionales) válida.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  De forma predeterminada, los conjuntos se evalúan en el contexto del cubo que contiene los miembros del conjunto. El `Existing` palabra clave fuerza a un conjunto especificado a evaluarse en el contexto actual en su lugar.  
   
 ## <a name="example"></a>Ejemplo  

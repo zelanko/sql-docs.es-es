@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DatabasePermission Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DatabasePermission element
 ms.assetid: 6dcb9136-a40d-42e3-ad3b-b8ce8c7ca78c
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0fbfd9544e5305169e0d25b1b0157197d39cc002
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a904f12b86d6449c11f354a790503dc1bd93ffbe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259531"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106665"
 ---
 # <a name="databasepermission-element-assl"></a>Elemento DatabasePermission (ASSL)
   Define los permisos predeterminados en un [base de datos](database-element-assl.md) (elemento) para un determinado [rol](role-element-assl.md) elemento.  
@@ -47,7 +44,7 @@ ms.locfileid: "37259531"
 </DatabasePermissions>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -62,7 +59,7 @@ ms.locfileid: "37259531"
 |Elementos primarios|[DatabasePermissions](../collections/databasepermissions-element-assl.md)|  
 |Elementos secundarios|[Administrar](../properties/administer-element-assl.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los objetos `DatabasePermission` solo pueden existir para los roles que pertenecen a la base de datos y solo puede existir un objeto `DatabasePermission` para cualquier rol.  
   
  Este elemento tiene las validaciones siguientes en el valor 2 (modelos tabulares) de DeploymentMode.  

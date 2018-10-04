@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ParentObject Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - ParentObject element
 ms.assetid: f821f8f1-554a-4f16-bf09-262a9448e304
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c9795913ee483aa3b89b8f9fac88ec9515acf834
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 04feffe81c9f42344748713161a81310ddf65e11
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259171"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089125"
 ---
 # <a name="parentobject-element-xmla"></a>Elemento ParentObject (XMLA)
   Contiene el identificador del objeto primario bajo el que se va a crear los objetos definidos por el elemento primario [crear](../xml-elements-commands/create-element-xmla.md) elemento.  
@@ -50,7 +47,7 @@ ms.locfileid: "37259171"
 </Create>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -65,7 +62,7 @@ ms.locfileid: "37259171"
 |Elementos primarios|[Crear](../xml-elements-commands/create-element-xmla.md)|  
 |Elementos secundarios|Elementos requeridos de Analysis Services Scripting Language (ASSL). Se especifican haciendo una lista de los elementos Id. del objeto y de sus antecesores (excepto del objeto `Server`.) Por ejemplo, el elemento `ParentObject` siguiente identifica una partición:<br /><br /> `<ParentObject>`<br /><br /> `<DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>`<br /><br /> `<CubeID>Adventure Works</CubeID>`<br /><br /> `<MeasureGroupID>Internet Sales</MeasureGroupID>`<br /><br /> `<PartitionID>Inernet_Sales_2001</PartitionID>`<br /><br /> `</ParentObject>`|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El orden en el que los identificadores aparecen no es importante.  
   
 ## <a name="example"></a>Ejemplo  

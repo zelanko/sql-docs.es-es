@@ -1,30 +1,27 @@
 ---
-title: Conjunto de filas LINKEDSERVERS (OLE DB) | Microsoft Docs
+title: Conjunto de filas LINKEDSERVERS (OLE DB) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - LINKEDSERVERS rowset
 - enumerating data sources [OLE DB]
 ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60930ce7a43066c9041dfdaa92e0c4be254d78ae
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: a136e3b2064e42e6bae7cfb39f059dbaa41a8410
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422404"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159095"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>Conjunto de filas LINKEDSERVERS (OLE DB)
-  El **LINKEDSERVERS** conjunto de filas enumera los orígenes de datos de organización que pueden participar en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consultas distribuidas.  
+  El conjunto de filas **LINKEDSERVERS** enumera los orígenes de datos de la organización que pueden participar en consultas distribuidas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  El conjunto de filas **LINKEDSERVERS** contiene las siguientes columnas.  
   
@@ -40,6 +37,6 @@ ms.locfileid: "37422404"
  El conjunto de filas está ordenado en SRV_NAME y se admite una restricción única en SRV_NAME.  
   
 ## <a name="see-also"></a>Vea también  
- [Compatibilidad con el conjunto de filas de esquema &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
+ [Compatibilidad con conjuntos de filas de esquema &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
   
   

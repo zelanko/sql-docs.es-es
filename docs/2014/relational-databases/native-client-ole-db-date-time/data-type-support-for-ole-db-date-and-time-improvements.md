@@ -1,29 +1,26 @@
 ---
-title: Compatibilidad con tipos de datos para OLE DB mejoras de fecha y hora | Microsoft Docs
+title: Compatibilidad con tipos de datos para mejoras de fecha y hora de OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], data type support
 - OLE DB, date/time improvements
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 915a86b1170809bf1508f0214060fea9e0cf8a79
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2ff3ef6c9fd7347585b4e7df026fdc95bafdd069
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427057"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157925"
 ---
-# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Compatibilidad con tipos de datos para OLE DB mejoras de fecha y hora
+# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Compatibilidad con tipos de datos para mejoras de fecha y hora de OLE DB
   En este tema se proporciona información sobre los tipos OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) que admiten tipos de datos de fecha y hora [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Asignar tipos de datos en conjuntos de filas y parámetros  
@@ -171,14 +168,14 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Asignar tipo de datos en ITableDefinition::CreateTable  
- La siguiente asignación de tipo se utiliza con estructuras DBCOLUMNDESC utilizadas por ITableDefinition:: CreateTable:  
+ Se utiliza la siguiente asignación de tipo con estructuras DBCOLUMNDESC utilizadas por ITableDefinition::CreateTable:  
   
 |Tipo de datos OLE DB (*wType*)|Tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Notas|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|Date||  
-|DBTYPE_DBTIMESTAMP|`datetime2`(p)|El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client inspecciona los miembros *bScale* miembro para determinar la precisión de fracciones de segundo.|  
-|DBTYPE_DBTIME2|`time`(p)|El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client inspecciona los miembros *bScale* miembro para determinar la precisión de fracciones de segundo.|  
-|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`(p)|El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client inspecciona los miembros *bScale* miembro para determinar la precisión de fracciones de segundo.|  
+|DBTYPE_DBTIMESTAMP|`datetime2`(p)|La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB proveedor inspecciona la DBCOLUMDESC *bScale* miembro para determinar la precisión de fracciones de segundo.|  
+|DBTYPE_DBTIME2|`time`(p)|La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB proveedor inspecciona la DBCOLUMDESC *bScale* miembro para determinar la precisión de fracciones de segundo.|  
+|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`(p)|La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB proveedor inspecciona la DBCOLUMDESC *bScale* miembro para determinar la precisión de fracciones de segundo.|  
   
  Cuando una aplicación especifica DBTYPE_DBTIMESTAMP en *wType*, puede invalidar la asignación a `datetime2` proporcionando un nombre de tipo *pwszTypeName*. Si `datetime` se especifica, *bScale* debe ser 3. Si `smalldatetime` se especifica, *bScale* debe ser 0. Si *bScale* no es coherente con *wType* y *pwszTypeName*, se devuelve DB_E_BADSCALE.  
   

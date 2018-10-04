@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying data types
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-caps.latest.revision: 97
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a9c9cb0f668f6484a35be458654bdae26869a2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7046891c252bba57ff91c43ce9d3d3cf0b69f07e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265353"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129465"
 ---
 # <a name="integration-services-data-types"></a>Tipos de datos de Integration Services
   Cuando los datos entran en un flujo de datos en un paquete, el origen que extrae los datos convierte los datos en un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . A los datos numéricos se les asigna un tipo de dato numérico, a los datos de cadena se les asigna un tipo de datos de caracteres y se asignan fechas a un tipo de datos de fecha. A otros datos, tales como GUID y bloques de objetos binarios grandes (BLOB), también se les asignan los tipos de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] correspondientes. Si los datos son de un tipo que no se puede convertir en un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se produce un error.  
@@ -38,7 +35,7 @@ ms.locfileid: "37265353"
   
 |Tipo de datos|Descripción|  
 |---------------|-----------------|  
-|DT_BOOL|Valor booleano.|  
+|DT_BOOL|Valor Boolean.|  
 |DT_BYTES|Valor de datos binarios. La longitud es variable y la longitud máxima es de 8000 bytes.|  
 |DT_CY|Un valor de moneda. Este tipo de datos es un entero con signo de 8 bytes con una escala de 4 y una precisión máxima de 19 dígitos.|  
 |DT_DATE|Una estructura de fecha formada por año, mes, día, hora, minuto, segundo y fracciones de segundo.  Las fracciones de segundo tienen una escala fija de 7 dígitos.<br /><br /> El tipo de datos DT_DATE se implementa utilizando un número de punto flotante de 8 bytes. Los días se representan mediante incrementos de números enteros, comenzando por el 30 de diciembre de 1899 y la medianoche como hora cero. Los valores de hora se expresan como el valor absoluto de la parte fraccionaria del número. Sin embargo, un valor de punto flotante no puede representar todos los valores reales; por lo tanto, existen límites en el intervalo de fechas que se puede presentar en DT_DATE.<br /><br /> Por otra parte, DT_DBTIMESTAMP se representa mediante una estructura que posee internamente campos individuales para año, mes, día, horas, minutos, segundos y milisegundos. Este tipo de datos tiene límites más amplios que los intervalos de fechas que puede presentar.|  

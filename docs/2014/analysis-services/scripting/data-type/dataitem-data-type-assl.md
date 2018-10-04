@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataItem Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DataItem data type
 ms.assetid: f4f5155f-9c3d-49a1-a390-a9c734fafbce
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b2646dcce64672d98d33ecff3575016269379325
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9f16c23941fc1048429ced974b88bba378bc72c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300895"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153485"
 ---
 # <a name="dataitem-data-type-assl"></a>Tipo de datos DataItem (ASSL)
   Define un tipo de datos primitivo que representa las características relacionadas con datos de un elemento de datos, como una columna o un atributo.  
@@ -68,7 +65,7 @@ ms.locfileid: "37300895"
 |Elementos secundarios|[Las anotaciones](../collections/annotations-element-assl.md), [intercalación](../properties/collation-element-assl.md), [DataSize](../properties/datasize-element-assl.md), [DataType](../properties/datatype-element-assl.md), [formato](../properties/format-element-assl.md), [InvalidXmlCharacters ](../properties/invalidxmlcharacters-element-assl.md), [MimeType](../properties/mimetype-element-assl.md), [NullProcessing](../properties/nullprocessing-element-assl.md), [origen](../properties/source-element-binding-assl.md), [recorte](../properties/trimming-element-assl.md)|  
 |Elementos derivados|Vea la tabla de Notas.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El tipo de datos `DataItem` se utiliza para cualquier elemento de datos que se puede enlazar; por ejemplo, una medida, una clave de atributo y un nombre de atributo. Los detalles que son pertinentes y los valores predeterminados que se aplican dependen del uso; por ejemplo, los nombres de atributo deben ser las cadenas.  
   
  Una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] acepta solo un determinado conjunto de tipos de datos. El uso de otros tipos de datos genera un error, en lugar de una conversión implícita a uno de los tipos válidos.  

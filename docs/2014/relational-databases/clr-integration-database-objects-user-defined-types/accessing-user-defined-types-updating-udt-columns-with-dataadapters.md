@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - user-defined types [CLR integration], ADO.NET
 - data adapters [CLR integration]
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
-caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7a69065a293d5ffedba91308c9b4ac7c6d02b7c7
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 82ac3490f80cf8683a6aebcea75004503a4d5ad4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354877"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157345"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>Actualizar columnas de UDT con DataAdapters
   Los tipos definidos por el usuario (UDT) se admiten utilizando `System.Data.DataSet` y `System.Data.SqlClient.SqlDataAdapter` para recuperar y modificar los datos.  

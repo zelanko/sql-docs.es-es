@@ -1,14 +1,12 @@
 ---
-title: Convenciones de sintaxis de SMO | Microsoft Docs
+title: Convenciones de sintaxis de SMO | Documentos de Microsoft
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conventions [SMO]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - syntax [SMO]
 - SQL Server Management Objects, syntax conventions
 ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 404a8d0311a449b09b3ddf85ad0b2780ed06d383
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 55054e9b70c549c0bb68342ce58ed57c1099ebbc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272751"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143093"
 ---
 # <a name="smo-syntax-conventions"></a>Convenciones de sintaxis de SMO
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Convenciones tipográficas de Management Objects (SMO) se basan en los que se usan en [!INCLUDE[msCoName](../../includes/msconame-md.md)] materiales de referencia de Visual Studio. NET.  

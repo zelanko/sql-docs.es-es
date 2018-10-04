@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], trace
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - system information [Reporting Services]
 - versions [Reporting Services]
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d0fd7269ca32442cc53ad86d124db2eb8c1ff5d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2621f9a8e69cc27d5012e0c6a6f90946bec07dc5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270281"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161935"
 ---
 # <a name="report-server-service-trace-log"></a>Registro de seguimiento del servicio del servidor de informes
   El [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] el registro de seguimiento de servidor de informes es un archivo de texto ASCII que contiene información detallada para las operaciones de servicio del servidor de informes, incluidas las operaciones realizadas por la Web del servidor de informes de servicio, el Administrador de informes y procesamiento en segundo plano. El archivo de registro de seguimiento incluye información redundante que contienen otros archivos de registro, así como información adicional que no está disponible en ningún otro archivo. La información del registro de seguimiento resulta útil si se está depurando una aplicación que incluye un servidor de informes o se investiga un problema específico que se incluyó en el registro de eventos o de ejecución.  
@@ -56,7 +53,7 @@ ms.locfileid: "37270281"
 ##  <a name="bkmk_trace_configuration_settings"></a> Configuración de seguimiento  
  El comportamiento del registro de seguimiento se administra en el archivo de configuración **ReportingServicesrService.exe.config**. El archivo de configuración se encuentra en la ruta de la carpeta siguiente:  
   
- `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin`.  
+ `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin`   
   
  El ejemplo siguiente muestra la estructura XML de la configuración de `RStrace`. El valor de `DefaultTraceSwitch` determina el tipo de información que se agrega en el registro. Excepto para el `Components` atributo, los valores de `RStrace` son los mismos en todos los archivos de configuración.  
   
@@ -79,7 +76,7 @@ ms.locfileid: "37270281"
   
  En la tabla siguiente se proporciona información acerca de cada parámetro.  
   
-|Configuración|Descripción|  
+|Parámetro|Descripción|  
 |-------------|-----------------|  
 |`RStrace`|Especifica espacios de nombres utilizados para errores y traza.|  
 |`DefaultTraceSwitch`|Especifica el nivel de información que se incluye en el registro de seguimiento de ReportServerService. Cada nivel incluye la información proporcionada para todos los niveles inferiores. No se recomienda deshabilitar la traza. Los valores válidos son:<br /><br /> 0= Deshabilita el seguimiento. El archivo de registro ReportServerService está habilitado de forma predeterminada. Para desactivarlo, establezca el nivel de seguimiento en 0.<br /><br /> 1= Excepciones y reinicios<br /><br /> 2= Excepciones, reinicios y advertencias<br /><br /> 3= Excepciones, reinicios, advertencias y mensajes de estado (predeterminado)<br /><br /> 4= Modo detallado|  

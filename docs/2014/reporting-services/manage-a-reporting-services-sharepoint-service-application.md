@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6539627f9b1fc5fc41b9cc535efd5cb4c5949ecc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b11c64fe270eeff5fad8631d8d75dfd3bd9c60b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153876"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135160"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Administrar una aplicación de servicio de SharePoint para Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Las aplicaciones de servicio se administran desde Administración Central de SharePoint. Las páginas Administración y Propiedades permiten actualizar la configuración de la aplicación de servicio así como las tareas de administración comunes.  
@@ -73,7 +70,7 @@ ms.locfileid: "37153876"
   
 ###  <a name="bkmk_report_settings_section"></a> Configuración del informe  
   
-|Configuración|Comentarios|  
+|Parámetro|Comentarios|  
 |-------------|--------------|  
 |Tiempo de espera de imágenes externas|El valor predeterminado es 600 segundos.|  
 |Compresión de instantáneas|El valor predeterminado es SQL.|  
@@ -84,7 +81,7 @@ ms.locfileid: "37153876"
   
 ###  <a name="bkmk_session_settings_section"></a> Configuración de la sesión  
   
-|Configuración|Comentarios|  
+|Parámetro|Comentarios|  
 |-------------|--------------|  
 |Tiempo de espera de sesión|El valor predeterminado es 600 segundos.|  
 |Usar cookies de sesión|El valor predeterminado es TRUE.|  
@@ -92,7 +89,7 @@ ms.locfileid: "37153876"
   
 ###  <a name="bkmk_logging_settings_section"></a> Configuración del sistema para registro  
   
-|Configuración|Comentarios|  
+|Parámetro|Comentarios|  
 |-------------|--------------|  
 |Habilitar el registro de la ejecución|El valor predeterminado es TRUE.<br /><br /> Especifique si el servidor de informes genera registros de seguimiento y el número de días que debe guardarse el registro. . Los registros se almacenan en el equipo del servidor de informes, en la carpeta \Microsoft SQL Server\MSSQL.n\ReportServer\Log. Se inicia un nuevo archivo de registro cada vez que se reinicia el servicio. Para obtener más información acerca de los archivos de registro, consulte [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)|  
 |Días de almacenamiento del registro de ejecución|El valor predeterminado es 60 días.|  
@@ -101,7 +98,7 @@ ms.locfileid: "37153876"
   
 ###  <a name="bkmk_security_settings_section"></a> Configuración de seguridad  
   
-|Configuración|Comentarios|  
+|Parámetro|Comentarios|  
 |-------------|--------------|  
 |Habilitar la seguridad integrada|El valor predeterminado es TRUE.<br /><br /> Especifica si puede realizarse una conexión a un origen de datos de informe con el token de seguridad de Windows del usuario que solicitó el informe.|  
 |Habilitar la definición de informe de carga|El valor predeterminado es TRUE.|  
@@ -110,7 +107,7 @@ ms.locfileid: "37153876"
   
 ###  <a name="bkmk_client_settings_section"></a> Configuración de cliente  
   
-|Configuración|Comentarios|  
+|Parámetro|Comentarios|  
 |-------------|--------------|  
 |Habilitar la descarga del Generador de informes|El valor predeterminado es TRUE.<br /><br /> Especifica si los clientes pueden ver el botón para descargar la aplicación del Generador de informes.|  
 |URL de inicio del Generador de informes|Especifique una dirección URL personalizada si el servidor de informes no utiliza la dirección URL predeterminada del Generador de informes. Este valor es opcional. Si no especifica un valor, se usará la dirección URL predeterminada, que inicia el Generador de informes. Para iniciar el Generador de informes 3.0 como aplicación ClickOnce, especifique el valor siguiente: http://\<nombreDeEquipo>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  

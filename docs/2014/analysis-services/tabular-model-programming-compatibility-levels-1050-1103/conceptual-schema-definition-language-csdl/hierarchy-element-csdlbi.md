@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9debb638-1b28-401b-9499-8f63943863e9
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: be67c3059f09beefae68d0264fd0316579344d64
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 34ef944610a9e3b52fec600b3da5e1f9b06790bf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250795"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129255"
 ---
 # <a name="hierarchy-element-csdlbi"></a>Hierarchy, elemento (CSDLBI)
   El elemento Hierarchy es un contenedor lógico para los campos de una tabla que se pueden vincular entre sí para formar una jerarquía. Este elemento se deriva del elemento Member de CSDL y se ha extendido para admitir las jerarquías creadas en los modelos de datos de Business Intelligence.  
@@ -33,7 +30,7 @@ ms.locfileid: "37250795"
 |Documentación|no|Descripción de la jerarquía.|  
 |Nivel|Sí|Uno o más elementos Level que definen las columnas utilizadas en la jerarquía.<br /><br /> Vea [Level, elemento &#40;CSDLBI&#41;](level-element-csdlbi.md).|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  En los modelos tabulares, las jerarquías se crean especificando relaciones de elementos primarios y secundarios entre las columnas de la misma tabla. Para más información, vea [Jerarquías &#40;SSAS tabular&#41;](../../tabular-models/hierarchies-ssas-tabular.md).  
   
 ## <a name="example"></a>Ejemplo  

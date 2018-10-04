@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - TabularBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - TabularBinding data type
 ms.assetid: 24587e34-20be-4693-81d8-038a6fc4e8ee
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c5771c76262719264ad2f0a869c92c5d3ce011ff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e1c0f3b5c78a507c815c08781a09bdd9b7f7c8f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285971"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139945"
 ---
 # <a name="tabularbinding-data-type-assl"></a>Tipo de datos TabularBinding (ASSL)
   Define un tipo de datos derivado abstracto que representa un enlace con un elemento tabular, como una tabla o una dimensión de cubo.  
@@ -48,7 +45,7 @@ ms.locfileid: "37285971"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipos de datos base|[Enlace](binding-data-type-assl.md)|  
+|Tipos de datos base|[enlace](binding-data-type-assl.md)|  
 |Tipos de datos derivados|[DSVTableBinding](tablebinding-data-type-assl.md), [QueryBinding](querybinding-data-type-assl.md), [TableBinding](tablebinding-data-type-assl.md)|  
   
 ## <a name="data-type-relationships"></a>Relaciones entre tipos de datos  
@@ -59,7 +56,7 @@ ms.locfileid: "37285971"
 |Elementos secundarios|None|  
 |Elementos derivados|Consulte [enlace](binding-data-type-assl.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para obtener más información sobre la `Binding` tipo, incluidas las tablas de objetos de Analysis Services Scripting Language (ASSL) de la `Binding` tipo y la jerarquía de herencia de `Binding` tipos, vea [tipo de enlace de datos &#40;ASSL&#41;](binding-data-type-assl.md).  
   
  Para obtener información general de los enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;Multidimensional de SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  

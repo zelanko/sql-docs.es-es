@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.schedule.f1
 ms.assetid: 8681506b-5dc6-4165-beb6-1e76ca470425
-caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 55ec07c88ab453b0757206d05d4219fad2290ef8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213745"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131875"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>Propiedades del catálogo de texto completo (página Programación de llenado)
   Utilice este cuadro de diálogo para agregar o modificar programaciones que determinan cuándo se llena o se vuelve a llenar el catálogo de texto completo.  

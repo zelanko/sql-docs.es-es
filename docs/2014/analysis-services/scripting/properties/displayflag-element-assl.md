@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DisplayFlag Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DisplayFlag element
 ms.assetid: a6750477-0763-46da-9add-1f4448146a6b
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1e36ef82a62c91575312fa4c2ead23538983402
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2cd3c42721c2b70be044039e19001cd8ce7fb21b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261461"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149265"
 ---
 # <a name="displayflag-element-assl"></a>Elemento DisplayFlag (ASSL)
   Contiene una sugerencia de solo lectura que indica si los componentes de la interfaz de usuario deben mostrar asociado [ServerProperty](../objects/serverproperty-element-assl.md) elemento.  
@@ -46,7 +43,7 @@ ms.locfileid: "37261461"
 </ServerProperty>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37261461"
 |Elementos primarios|[ServerProperty](../objects/serverproperty-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento correspondiente al elemento primario de `DisplayFlag` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.ServerProperty>.  
   
 ## <a name="see-also"></a>Vea también  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Attributes Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Attributes element
 ms.assetid: d6b545e6-1521-496f-a731-f2c2c44118e4
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6bf52ecd3bce593e130b4a8cbd912fa08a4c1c20
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d726fe60be6aa2e79e8f1032f4f49606472baf3f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180782"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131215"
 ---
 # <a name="attributes-element-assl"></a>Elemento Attributes (ASSL)
   Contiene la colección de atributos de la dimensión asociada.  
@@ -48,7 +45,7 @@ ms.locfileid: "37180782"
 </AggregationDesignDimension>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -63,7 +60,7 @@ ms.locfileid: "37180782"
 |Elementos primarios|[AggregationDesignDimension](../data-type/dimension-data-type-assl.md), [AggregationDimension](../data-type/aggregationdimension-data-type-assl.md), [AggregationInstanceCubeDimension](../data-type/cubedimension-data-type-assl.md), [CubeDimension](../data-type/cubedimension-data-type-assl.md), [dimensión ](../objects/dimension-element-assl.md), [PerspectiveDimension](../data-type/perspectivedimension-data-type-assl.md), [RegularMeasureGroupDimension](../data-type/measuregroupdimension-data-type-assl.md), [RelationshipEnd](../data-type/relationshipend-data-type-assl.md)|  
 |Elementos secundarios|[Atributo](../objects/attribute-element-assl.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los elementos correspondientes en el modelo de objetos Objetos de administración de análisis (AMO) son <xref:Microsoft.AnalysisServices.AggregationAttributeCollection>, <xref:Microsoft.AnalysisServices.AggregationDesignAttributeCollection>, <xref:Microsoft.AnalysisServices.AggregationInstanceAttributeCollection>, <xref:Microsoft.AnalysisServices.CubeAttributeCollection>, <xref:Microsoft.AnalysisServices.DimensionAttributeCollection>, <xref:Microsoft.AnalysisServices.MeasureGroupAttributeCollection> y <xref:Microsoft.AnalysisServices.PerspectiveAttributeCollection>.  
   
 ## <a name="see-also"></a>Vea también  

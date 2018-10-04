@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3cf73cb88d2d7e88836e41e5b1a8c3a80368e8a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1938012555328b389c2b1b3e6c10fc20514496db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234755"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166105"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>Tipo de conexión de PowerPivot (SSRS)
   Puede utilizar la extensión de procesamiento de datos de SQL Server Analysis Services para recuperar datos de un libro PowerPivot publicado en una galería de PowerPivot de SharePoint.  
@@ -51,7 +48,7 @@ ms.locfileid: "37234755"
 ## <a name="parameters"></a>Parámetros  
  En el panel Filtros, seleccione la opción **Parámetros** para que un filtro cree automáticamente un parámetro de informe con valores disponibles que correspondan a las selecciones de filtro.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si abre el Generador de informes desde el libro PowerPivot en una Galería de PowerPivot, las tablas dinámicas, gráficos dinámicos, segmentaciones de datos, y otras características analíticas y de diseño del libro PowerPivot no se vuelven a crear en el informe. En lugar de ello, el informe en blanco contiene un origen de datos preconfigurado que selecciona los datos del libro PowerPivot. El diseño de informes basados en un libro PowerPivot puede ser laborioso y lento, dependiendo del número de segmentaciones de datos, filtros y tablas o gráficos que desee crear en el informe. Resulta más práctico imaginar la presentación de los datos deseados en un informe independientemente de diseño existente en PowerPivot.  
   
  Los datos de un libro PowerPivot están muy comprimidos. Los datos recuperados del libro PowerPivot para crear un informe no están comprimidos. Use el diseñador de consultas para especificar filtros y parámetros con el fin de limitar los datos a los estrictamente necesarios en el informe.  

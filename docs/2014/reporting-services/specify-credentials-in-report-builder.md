@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
-caps.latest.revision: 7
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2bfa96110c521386cf6e7697f6f395f845ae6a83
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c4a6c4af1938057652aa21ce8feef8671b2535f6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280331"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154105"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Especificar credenciales en el Generador de informes
   Las credenciales autentican al usuario que intenta recuperar datos de un origen de datos. El propietario del origen de datos determina el tipo de credenciales que se deben utilizar. Por ejemplo, un administrador de bases de datos podría especificar que el usuario debe proporcionar un nombre de usuario y una contraseña de Windows.  

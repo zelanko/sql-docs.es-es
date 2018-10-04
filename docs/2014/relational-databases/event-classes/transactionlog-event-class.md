@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - TransactionLog event class
 ms.assetid: bbcf09c6-3128-4775-b3de-e986a70411e0
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d894a3df24db130f041223168e5e12b040ebb0fd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a901c1eadcd52bd69c2f9efee6c2aed542900c0e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236885"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140985"
 ---
 # <a name="transactionlog-event-class"></a>TransactionLog [clase de eventos]
   Use la clase de eventos TransactionLog para supervisar la actividad de los registros de transacciones en una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  

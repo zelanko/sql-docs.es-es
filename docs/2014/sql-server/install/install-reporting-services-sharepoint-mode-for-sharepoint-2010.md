@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47efa72e-1735-4387-8485-f8994fb08c8c
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 624f7347d4fdcbdf617e314ba398455b3f4b8126
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fc61d95716eabf90f22e76fa43dc1ea7f93a0c81
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313175"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159455"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>Instalar el modo de SharePoint de Reporting Services para SharePoint 2010
   Los procedimientos de este tema le guían en la instalación de un único servidor del servidor de informes de Reporting Services en modo de SharePoint. Los pasos incluyen la ejecución del Asistente de instalación de SQL Server así como tareas de configuración adicionales que usan Administración central de SharePoint 2010. El tema también se puede usar para procedimientos individuales para una instalación existente, como crear una nueva aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obtener información sobre cómo agregar adicionales [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servidores a una granja existente, consulte [agregar un servidor de informes adicional a una granja &#40;escalada SSRS&#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) y [agregar una Web adicional de Reporting Services Front-end para una granja de servidores](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md).  
@@ -249,7 +246,7 @@ ms.locfileid: "37313175"
 
   
 ### <a name="activate-the-file-sync-feature"></a>Activar la característica de sincronización de archivos  
- Si los usuarios cargan directamente y con frecuencia los elementos de informe publicados en las bibliotecas de documentos de SharePoint, la característica de sincronización de archivos del servidor de informes será beneficiosa. La característica de sincronización de archivos sincronizará el catálogo del servidor de informes con los elementos de las bibliotecas de documentos con más frecuencia. Para obtener más información, consulte [activar la característica de sincronización de archivos de servidor de informes en Administración Central de SharePoint](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
+ Si los usuarios cargan directamente y con frecuencia los elementos de informe publicados en las bibliotecas de documentos de SharePoint, la característica de sincronización de archivos del servidor de informes será beneficiosa. La característica de sincronización de archivos sincronizará el catálogo del servidor de informes con los elementos de las bibliotecas de documentos con más frecuencia. Para más información, consulte [Activar la característica de sincronización de archivos del servidor de informes en Administración central de SharePoint](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Cmdlets de PowerShell para el modo de SharePoint de Reporting Services](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   

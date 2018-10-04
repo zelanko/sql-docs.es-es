@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Translations Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Translations element
 ms.assetid: 86fd2119-9bea-4306-829e-cc439da05566
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 64dcf6e45cd70270ca0a5160b777044082c1c27d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f216a564f715efbbaa2af2f094d1e4181f8bdbe9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205655"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126755"
 ---
 # <a name="translations-element-xmla"></a>Elemento Translations (XMLA)
   Contiene una colección de los elementos [Translation](translation-element-xmla.md) que se utilizan para identificar las claves de miembro del miembro de atributo representado por el elemento primario [Attribute](attribute-element-xmla.md) .  
@@ -50,7 +47,7 @@ ms.locfileid: "37205655"
 </Attribute>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -63,9 +60,9 @@ ms.locfileid: "37205655"
 |Relación|Elemento|  
 |------------------|-------------|  
 |Elementos primarios|[Atributo](attribute-element-xmla.md)|  
-|Elementos secundarios|[Traducción](translation-element-xmla.md)|  
+|Elementos secundarios|[traducción](translation-element-xmla.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Vea también  
  [Insertar elemento &#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   

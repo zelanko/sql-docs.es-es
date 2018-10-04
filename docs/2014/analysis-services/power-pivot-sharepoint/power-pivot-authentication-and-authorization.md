@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cea8b8e9d6f883d6933ed72591da20de73d55326
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc2118315b40ab89d19d562b364a0a0250f7f3c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210225"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165755"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>Autenticación y autorización de PowerPivot
   Una implementación de PowerPivot para SharePoint que se ejecuta dentro de una granja de servidores de SharePoint 2010 usa el subsistema de autenticación y el modelo de autorización que proporcionan los servidores de SharePoint. La infraestructura de seguridad de SharePoint se extiende al contenido y a las operaciones de PowerPivot porque todo el contenido relacionado con PowerPivot está almacenado en bases de datos de contenido de SharePoint, y todas las operaciones relacionadas con PowerPivot las realizan los servicios compartidos de PowerPivot en la granja. Los usuarios que solicitan un libro que contiene los datos PowerPivot se autentican usando una identidad de usuario de SharePoint que se basa en su identidad de usuario de Windows. Los permisos para ver el libro determinan si la solicitud se concede o se deniega.  
@@ -104,7 +101,7 @@ ms.locfileid: "37210225"
 > [!NOTE]  
 >  La mayoría de la configuración relacionada con la seguridad se aplica a las ubicaciones confiables. Si desea conservar los valores predeterminados o usar valores diferentes para sitios distintos, puede crear una ubicación confiable adicional para sitios que contienen datos PowerPivot y, a continuación, configurar los siguientes valores solo para ese sitio. Para obtener más información, consulte [crear una ubicación de confianza para sitios PowerPivot en Administración Central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
-|Área|Configuración|Descripción|  
+|Área|Parámetro|Descripción|  
 |----------|-------------|-----------------|  
 |Aplicación web|Proveedor de autenticación de Windows|PowerPivot convierte un token de notificación que obtiene de Excel Services en una identidad de usuario de Windows. Cualquier aplicación web que use Excel Services como un recurso se debe configurar para usar el proveedor de autenticación de Windows.|  
 |Ubicación confiable|Tipo de ubicación|Este valor debe estar establecido en **Microsoft SharePoint Foundation**. Los servidores de PowerPivot recuperan una copia del archivo .xlsx y la cargan en un servidor de Analysis Services en la granja. El servidor solo puede recuperar archivos .xlsx de una biblioteca de contenidos.|  

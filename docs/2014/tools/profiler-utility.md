@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], profiler90 utility
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Profiler, starting
 - starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
-caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0580ed282771deab06c6d3e2d5b7c52999562d17
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ec9ce68b6c1838507cbb139130a4bcf7bf986ba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268091"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128305"
 ---
 # <a name="profiler-utility"></a>Analizador (utilidad)
   La utilidad **profiler** inicia la herramienta [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] . Los argumentos opcionales que se enumeran más adelante en este tema permiten controlar cómo se inicia la aplicación.  
@@ -64,7 +61,7 @@ ms.locfileid: "37268091"
  Es el Id. de inicio de sesión para la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Los Id. de inicio de sesión distinguen entre mayúsculas y minúsculas.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].  
+>  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]   
   
  **/P** *password*  
  Especifica una contraseña especificada por el usuario para la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -121,7 +118,7 @@ ms.locfileid: "37268091"
  **/Z**  *file_size*  
  Especifica el tamaño del archivo de seguimiento en megabytes (MB). El tamaño predeterminado es 5 MB. Si está habilitada la sustitución incremental de archivos, todos los archivos de sustitución incremental estarán limitados al valor especificado en el argumento.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para iniciar un seguimiento con una plantilla específica, use las opciones **/S** y **/T** juntas. Por ejemplo, para iniciar un seguimiento mediante la plantilla Standard en MyServer\MyInstance, escriba lo siguiente en el símbolo del sistema:  
   
 ```  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d5eafcfacf8aa39cd100ed767232becd474bacd0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 561a62b81e36ea5de39eda52a2ea70e04ea5a50c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210255"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162945"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>PowerPivot for SharePoint 2013 Installation
   Los procedimientos descritos en este tema le guiarán a través de la instalación de un único servidor de un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] servidor en modo de implementación de SharePoint. Los pasos incluyen la ejecución del Asistente para la instalación de SQL Server, así como tareas de configuración que usan Administración central de SharePoint 2013.  
@@ -193,7 +190,7 @@ ms.locfileid: "37210255"
   
 6.  Haga clic en **Aceptar**.  
   
-7.  Los cambios surtirán efecto en unos minutos; o bien, puede **Detener** e **Iniciar** el servicio **Excel Calculation Services**. A  
+7.  Los cambios surtirán efecto en unos minutos; o bien, puede **Detener** e **Iniciar** el servicio **Excel Calculation Services**. En  
   
      Otra opción es abrir un símbolo del sistema con privilegios de administrador y escribir `iisreset /noforce`.  
   

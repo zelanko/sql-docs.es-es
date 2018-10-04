@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DBCC commands [SQL Server]
 ms.assetid: affb6da7-c9ba-401c-ab7f-0d2f4ab93e2d
-caps.latest.revision: 16
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f2e6261b70d7ff56b25983cd882a3fcf206b2191
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 27bbba3900203c2b812c30eb25b7476301875671
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210645"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147745"
 ---
 # <a name="deprecated-dbcc-commands-have-now-been-removed"></a>Se han quitado los comandos DBCC desusados
   La tabla siguiente enumera los comandos DBCC de los que se anunció su eliminación en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Estos comandos se quitaron de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y de las versiones posteriores. Debería actualizar las aplicaciones y los scripts para quitar todas las referencias a estos comandos desusados.  

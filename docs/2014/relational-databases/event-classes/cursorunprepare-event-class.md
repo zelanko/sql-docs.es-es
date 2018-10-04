@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - CursorUnprepare event class
 ms.assetid: 34055a2f-7d0f-4e13-a62e-7ee5b6c23b86
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 76053b90146f623dfd94bee12ef93afbac5008e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6ee328fa48a7119a0728588b8165be32bf1db2c3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283511"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174765"
 ---
 # <a name="cursorunprepare-event-class"></a>CursorUnprepare, clase de eventos
   La clase de eventos **CursorUnprepare** proporciona información sobre los eventos de cancelación de preparación de cursor que tienen lugar en los cursores de la interfaz de programación de aplicaciones (API). Los eventos de cancelación de preparación de cursor se producen cuando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] descarta un plan de ejecución.  

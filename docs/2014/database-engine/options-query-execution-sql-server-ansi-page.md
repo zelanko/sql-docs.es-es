@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAnsi
 ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
-caps.latest.revision: 24
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: f8c5e7e322358a12db2bfa8aebb0983951053502
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a3d8f15f159ea41590c67677c2d020f0a5dbc79a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173366"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149165"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>Opciones (página de servidor ANSI SQL de ejecución de consulta)
   Conjuntamente, estas opciones SET del estándar ANSI (ISO) definen el entorno de procesamiento de consultas durante la consulta del usuario, la ejecución de un desencadenador o un procedimiento almacenado. Sin embargo, estas opciones SET no son todas las necesarias para ajustarse al estándar ISO. Utilice esta página para especificar que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ejecutará las consultas utilizando todos o parte de los valores de configuración especificados en el estándar ISO. Los cambios que se realicen en estas opciones solo se aplicarán a las nuevas consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para cambiar las opciones de las consultas actuales, haga clic en **Opciones de consulta** en el menú **Consulta** o haga clic con el botón derecho en la ventana Consulta de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y seleccione **Opciones de consulta**. En el cuadro de diálogo **Opciones de consulta** , en **Ejecución**, haga clic en **ANSI**.  
@@ -57,7 +54,7 @@ ms.locfileid: "37173366"
  **SET ANSI_NULLS**  
  -   Especifica el comportamiento conforme a ISO de los operadores de comparación Es igual a (=) y No es igual a (<>) cuando se utilizan con valores NULL. Cuando la opción SET ANSI_NULLS está seleccionada, todas las comparaciones con un valor NULL se evalúan como UNKNOWN, el comportamiento conforme a ISO. Cuando la opción SET ANSI_NULLS no está seleccionada, la comparación de cualquier dato con un valor NULL se evalúa como TRUE. Esta casilla está activada de forma predeterminada.  
   
- **Restablecer valores predeterminados**  
+ **Valores predeterminados**  
  Restablece todos los valores de esta página a los valores predeterminados originales.  
   
   

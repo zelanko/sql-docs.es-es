@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5e973ec6a3c50c43f6ee6bdee4ecfd70f2e2c9b2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6ecb5d4b5216139c7d762b03fd5a8a8fbc6a1b5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177622"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165965"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>Mis suscripciones (página del Administrador de informes)
   Use la página Mis suscripciones para ver todas sus suscripciones en un solo lugar. Desde esta página, puede obtener acceso a cualquier suscripción de su propiedad, modificarla o eliminarla. Es propietario solamente de las suscripciones que ha creado. No puede obtener acceso a las suscripciones de otros usuarios, ni siquiera aunque las utilice (por ejemplo, si se ha agregado su nombre a una suscripción existente definida por otro usuario). Desde esta página no se pueden crear suscripciones. Para obtener más información sobre cómo crear suscripciones, vea el [página nueva suscripción o Editar suscripción &#40;el Administrador de informes&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - logins [SQL Server], database mirroring
 ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ba315e277513bb0f488982dcfb84bded5cc48a73
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5fd397349bc3fa3ed7f69e9e1293415ea96fc75d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245265"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178335"
 ---
 # <a name="set-up-login-accounts-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>Configurar cuentas de inicio de sesión para la creación de reflejo de la base de datos o grupos de disponibilidad de AlwaysOn (SQL Server)
   Para que dos instancias del servidor se conecten a [extremos de creación de reflejo de la base de datos](the-database-mirroring-endpoint-sql-server.md) entre sí, la cuenta de inicio de sesión de cada instancia debe tener acceso a la otra instancia. Además, cada cuenta de inicio de sesión requiere permiso de conexión al extremo de creación de reflejo de la base de datos de la otra instancia.  

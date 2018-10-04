@@ -4,32 +4,29 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - SSVARIANT
 helpviewer_keywords:
 - SSVARIANT struct
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52ea23ff970d094330aaf046f9ebdd843c8b4956
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 0af799acbf0c498797564f2c057532a4964db0ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37429044"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101325"
 ---
 # <a name="ssvariant-structure"></a>Estructura SSVARIANT
   La estructura `SSVARIANT`, que se define en sqlncli.h, corresponde a un valor DBTYPE_SQLVARIANT en el proveedor OLEDB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- `SSVARIANT` es una unión de discriminación. Según el valor del miembro vt, el consumidor puede determinar qué miembro para leer. los valores de VT se corresponden con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos. Por lo tanto, la estructura `SSVARIANT` puede contener cualquier tipo de SQL Server. Para obtener más información sobre la estructura de datos para los tipos OLE DB estándar, consulte [indicadores de tipo](http://go.microsoft.com/fwlink/?LinkId=122171).  
+ `SSVARIANT` es una unión de discriminación. Según el valor del miembro vt, el consumidor puede determinar qué miembro tiene que leerse. Los valores de vt se corresponden con tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por lo tanto, la estructura `SSVARIANT` puede contener cualquier tipo de SQL Server. Para obtener más información sobre la estructura de datos para los tipos OLE DB estándar, consulte [indicadores de tipo](http://go.microsoft.com/fwlink/?LinkId=122171).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Cuando DataTypeCompat==80, varios subtipos `SSVARIANT` se convierten en cadenas. Por ejemplo, los siguientes valores de vt se mostrarán en `SSVARIANT` como VT_SS_WVARSTRING:  
   
 -   VT_SS_DATETIMEOFFSET  
@@ -76,7 +73,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |NCharVal|No hay indicador de tipo OLE DB correspondiente.|`struct _NCharVal`|`VT_SS_WVARSTRING,`<br /><br /> `VT_SS_WSTRING`|Admite la `nchar` y **nvarchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos.<br /><br /> Incluye los miembros siguientes:<br /><br /> *sActualLength* (`SHORT`) especifica la longitud real de la cadena a la que *pwchNCharVal* puntos. No incluye cero de terminación.<br /><br /> *sMaxLength* (`SHORT`) especifica la longitud máxima de la cadena que *pwchNCharVal* puntos.<br /><br /> *pwchNCharVal* (`WCHAR` \*) puntero a la cadena.<br /><br /> Miembros no usados: *rgbReserved*, *dwReservado*, y *pwchReserved*.|  
 |CharVal|No hay indicador de tipo OLE DB correspondiente.|`struct _CharVal`|`VT_SS_STRING,`<br /><br /> `VT_SS_VARSTRING`|Admite la `char` y **varchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos.<br /><br /> Incluye los miembros siguientes:<br /><br /> *sActualLength* (`SHORT`) especifica la longitud real de la cadena a la que *pchCharVal* puntos. No incluye cero de terminación.<br /><br /> *sMaxLength* (`SHORT`) especifica la longitud máxima de la cadena a la que *pchCharVal* puntos.<br /><br /> *pchCharVal* (`CHAR` \*) puntero a la cadena.<br /><br /> Miembros no usados:<br /><br /> *rgbReserved*, *dwReservado*, y *pwchReserved*.|  
 |BinaryVal|No hay indicador de tipo OLE DB correspondiente.|`struct _BinaryVal`|`VT_SS_VARBINARY,`<br /><br /> `VT_SS_BINARY`|Admite la `binary` y **varbinary** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos.<br /><br /> Incluye los miembros siguientes:<br /><br /> *sActualLength* (`SHORT`) especifica la longitud real de los datos a la que *prgbBinaryVal* puntos.<br /><br /> *sMaxLength* (`SHORT`) especifica la longitud máxima de los datos a la que *prgbBinaryVal* puntos.<br /><br /> *prgbBinaryVal* (`BYTE` \*) puntero a los datos binarios.<br /><br /> Miembro no usado: *dwReservado*.|  
-|UnknownType|No se usa|No se usa|No se usa|No se usa|  
+|TipoDesconocido|No se usa|No se usa|No se usa|No se usa|  
 |BLOBType|No se usa|No se usa|No se usa|No se usa|  
   
 ## <a name="see-also"></a>Vea también  

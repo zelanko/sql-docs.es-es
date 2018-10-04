@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AlgorithmParameter Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AlgorithmParameter element
 ms.assetid: 73211495-065c-43c6-a486-be6044617263
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fd5ee9ceb1c8d2455d7e9c087e12e2f59625b5ab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d8eb25678d58f676ee10ef488b376c8331c59e15
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178862"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109967"
 ---
 # <a name="algorithmparameter-element-assl"></a>Elemento AlgorithmParameter (ASSL)
   Define un parámetro para el algoritmo utilizado por un [MiningModel](miningmodel-element-assl.md) elemento.  
@@ -47,7 +44,7 @@ ms.locfileid: "37178862"
 </AlgorithmParameters>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -62,7 +59,7 @@ ms.locfileid: "37178862"
 |Elementos primarios|[AlgorithmParameters](../collections/algorithmparameters-element-assl.md)|  
 |Elementos secundarios|[Name](../properties/name-element-assl.md), [Value](../properties/value-element-assl.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  `AlgorithmParameter` es un parámetro para un algoritmo del modelo de minería de datos. `AlgorithmParameter` representa este parámetro como un par de nombre/valor. El conjunto de parámetros aplicables que `AlgorithmParameter` puede representar es depende del algoritmo. Para obtener más información acerca de los parámetros de algoritmo para un algoritmo dado, vea la documentación adecuada para ese algoritmo.  
   
  Parámetros de algoritmos disponibles, incluida la información de validación y presentación, se pueden recuperar desde el [DMSCHEMA_MINING_SERVICE_PARAMETERS](../../schema-rowsets/data-mining/dmschema-mining-service-parameters-rowset.md) de filas de esquema.  

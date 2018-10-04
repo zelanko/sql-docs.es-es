@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - row level security described
@@ -18,12 +16,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 344497fea67a2bfdadf66095056ac9e909d945a2
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: e051e692361ab70d68103186dd24df8b5f7a6082
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43017488"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188555"
 ---
 # <a name="row-level-security"></a>Seguridad de nivel de fila
   La seguridad de nivel de fila permite a los clientes controlar el acceso a las filas de una tabla de base de datos según las características del usuario que ejecuta una consulta (por ejemplo, pertenencia a grupos o contexto de ejecución). Seguridad de nivel de fila ahora está disponible en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. Consulte [Seguridad de nivel de fila](https://msdn.microsoft.com/library/dn765131.aspx) en la documentación actual para obtener la descripción actual de esta característica.  

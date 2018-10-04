@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - FiscalFirstDayOfMonth Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - FiscalFirstDayOfMonth element
 ms.assetid: f793e93f-62de-4c3b-90b0-a46bd3cadae5
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d183e519ddd3a103cd8e9cf90105b9c8848acb55
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 36b4f74d4ab1c0cbd6d1bb9690099daae9bed22f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235545"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180085"
 ---
 # <a name="fiscalfirstdayofmonth-element-assl"></a>Elemento FiscalFirstDayOfMonth (ASSL)
   Define el primer día del mes fiscal para un [TimeBinding](../data-type/binding-data-type-assl.md) elemento.  
@@ -46,7 +43,7 @@ ms.locfileid: "37235545"
 </TimeBinding>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37235545"
 |Elemento primario|[TimeBinding](../data-type/binding-data-type-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento que se corresponde con el elemento primario de `FiscalFirstDayOfMonth` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.TimeBinding>.  
   
 ## <a name="see-also"></a>Vea también  

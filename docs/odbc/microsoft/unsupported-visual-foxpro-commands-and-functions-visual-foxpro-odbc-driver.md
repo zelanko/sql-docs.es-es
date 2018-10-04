@@ -1,13 +1,11 @@
 ---
-title: No admite funciones y comandos de Visual FoxPro | Documentos de Microsoft
+title: Comandos de Visual FoxPro y funciones no admitidas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], commands and functions
@@ -16,32 +14,31 @@ helpviewer_keywords:
 - Visual FoxPro commands and functions
 - FoxPro ODBC driver
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfef52f471f9b87e7f6560b76e191aca1ba26172
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6b69c8bf15b4d56872c4030725638e4b61571e6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913860"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802703"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>No compatible de Visual FoxPro comandos y funciones (controlador ODBC de Visual FoxPro)
-En la tabla siguiente se enumera los comandos de FoxPro y funciones que no son compatibles con el controlador ODBC de Visual FoxPro pero son compatibles con Microsoft® Visual FoxPro.  
+En la tabla siguiente se enumera FoxPro comandos y funciones que no son compatibles con el controlador ODBC de Visual FoxPro, pero son compatibles con Microsoft® Visual FoxPro.  
   
  Si su aplicación interactúa con los datos cuyas reglas, desencadenadores, valores predeterminados, o llamar a procedimientos almacenados de estos comandos de Visual FoxPro o funciones, el controlador puede generar un error.  
   
-## <a name="unsupported-visual-foxpro-commands-and-functions"></a>Funciones y comandos de no compatible de Visual FoxPro  
+## <a name="unsupported-visual-foxpro-commands-and-functions"></a>Las funciones y comandos no compatible de Visual FoxPro  
   
 ||||  
 |-|-|-|  
-|#... DEFINEN #UNDEF|#IF... #ENDIF directiva de preprocesador|#IFDEF &AMP;#124; #IFNDEF|  
+|#DEFINEN... #UNDEF|#IF... #ENDIF directiva de preprocesador|#IFDEF &AMP;#124; #IFNDEF|  
 |#INCLUDE preprocesador (directiva)|:: Operador de resolución de ámbito|! Comando (vea ejecutar &#124; ! Comando)|  
 |? &#124; ?? Comando|??? Comando|\ &#124; \\\ Comando|  
-|@ ... CUADRO comando|@ ... Comando de clase|@ ... Borrar, comando|  
+|@ ... Comando del cuadro|@ ... Comando de la clase|@ ... Comando CLEAR|  
 |@ ... Editar - Editar comando cuadros|@ ... RELLENAR, comando|@ ... GET|  
-|@ ... Comando de menú|@ ... Símbolo|@ ... EJEMPLO de comando|  
+|@ ... Comando de menú|@ ... Comando de símbolo del sistema|@ ... Comando de ejemplo|  
 |@ ... Comando de desplazamiento|@ ... AL comando||  
   
 ## <a name="a"></a>A  
@@ -49,75 +46,75 @@ En la tabla siguiente se enumera los comandos de FoxPro y funciones que no son c
 ||||  
 |-|-|-|  
 |Acepte el comando|Función ACLASS)|ACTIVAR el comando de menú|  
-|ACTIVAR el comando de menú emergente|Activar comandos de pantalla|ACTIVAR la ventana de comando|  
-|ActivateCell (método)|Agregar clase (comando)|Función ADIR)|  
+|ACTIVAR la barra de comandos|Activar comandos de la pantalla|ACTIVAR la ventana de comando|  
+|Método ActivateCell|Agregar clase (comando)|ADIR (función))|  
 |Función AFONT)|Función AINSTANCE)|Variable de memoria del sistema _ALIGNMENT|  
 |Función AMEMBERS)|Función ANSITOOEM)|Función APRINTERS)|  
-|Función ASELOBJ)|Ayudar a comandos||  
+|Función ASELOBJ)|Comando de ayuda||  
   
 ## <a name="b"></a>B  
   
 ||||  
 |-|-|-|  
-|BARRA () (función)|Función BARCOUNT)|Función BARPROMPT)|  
-|Variable de memoria del sistema _BEAUTIFY|Variable de memoria del sistema _BOX|Busque el comando|  
-|Variable de memoria del sistema _BROWSER|COMPILAR aplicaciones (comando)|COMPILAR archivo EXE (comando)|  
-|COMPILAR el proyecto (comando)|Variable de memoria del sistema _BUILDER||  
+|BARRA de función)|Función BARCOUNT)|Función BARPROMPT)|  
+|Variable de memoria del sistema _BEAUTIFY|Variable de memoria del sistema _BOX|Buscar comando|  
+|Variable de memoria del sistema _BROWSER|Comando de la aplicación de compilación|GENERAR el comando EXE|  
+|Comando de proyecto de compilación|Variable de memoria del sistema _BUILDER||  
   
 ## <a name="c"></a>C  
   
 ||||  
 |-|-|-|  
 |Variable de memoria del sistema _CALCVALUE|Variable de memoria del sistema _CLIPTEXT|Variable de memoria del sistema _CONVERTER|  
-|Variable de memoria del sistema _CUROBJ|LLAMADAS (comando)|CANCEL, comando|  
-|CAPSLOCK (función))|Comando CD|Comando de cambio|  
-|Comando CHDIR|Función CHRSAW)|Comando de cierre de memorando|  
+|Variable de memoria del sistema _CUROBJ|LLAMADAS (comando)|CANCELAR comandos|  
+|CAPSLOCK (función))|Comando de CD|Comando de cambio|  
+|Comando CHDIR|Función CHRSAW)|Comando de cierre memorando|  
 |Función CNTBAR)|Función CNTPAD)|Función de COL)|  
-|COMPILE el comando|COMPILA el comando de base de datos|COMPILE los comandos de formulario|  
+|Comando de compilación|COMPILE el comando de base de datos|COMPILAR el formulario de comando|  
 |Función COMPOBJ)|Objeto de contenedor|Objeto de control|  
-|Copie el archivo (comando)|Copie el comando de memorando|CREAR un comando (clase)|  
-|CREAR un comando CLASSLIB|Crear conjunto de COLOR, comando|CREATE, comando|  
-|CREAR el comando de conexión|CREAR comandos de base de datos|CREAR comandos de formulario|  
-|CREAR a partir de comando|CREAR comandos de etiqueta|CREAR el comando de menú|  
-|Crear proyecto (comando)|CREAR el comando de consulta|CREAR informes, comando|  
-|CREAR comandos de pantalla|CREAR comandos de vista SQL|CREAR comandos de DESENCADENADOR|  
-|CREAR comandos de vista|CREATEOBJECT (función))|DIRACT (función))|  
+|Copie el archivo (comando)|Copie el comando de RECORDATORIO|Crear comando de clase|  
+|Crear comando CLASSLIB|Crear comando de conjunto de colores|CREAR un comando|  
+|Crear comando de conexión|Crear comando de base de datos|CREAR comandos de formulario|  
+|CREAR a partir de comando|Crear etiqueta, comando|Crear comando de menú|  
+|CREAR el proyecto (comando)|Crear comando de consulta|CREAR informes, comando|  
+|CREAR comandos de la pantalla|Crear comando de la vista SQL|CREAR DESENCADENADOR comando|  
+|Crear comando de la vista|CREATEOBJECT (función))|DIRACT (función))|  
   
 ## <a name="d"></a>D  
   
 ||||  
 |-|-|-|  
 |Variable de memoria del sistema _DBLCLICK|Variable de memoria del sistema _DIARYDATE|Función DBSETPROP)|  
-|Funciones DDE|DESACTIVAR el comando de menú|DESACTIVAR el comando de menú emergente|  
-|DESACTIVAR la ventana de comando|DECLARAR - DLL comando|DECLARE el comando|  
-|DEFINIR la barra de comandos|Defina el cuadro comando|DEFINIR el comando de clase|  
-|DEFINIR el comando de menú|DEFINIR el comando del panel|DEFINIR el comando de menú emergente|  
-|Definir ventana (comando)|ELIMINAR el comando de conexión|Eliminar base de datos, comando|  
-|Eliminar archivo (comando)|Comando de DESENCADENADOR DELETE|Eliminar vista, comando|  
-|Comando DIR|Comando de directorio|Mostrar comando|  
-|Comandos de conexiones de presentación|Comando de base de datos de pantalla|Mostrar archivos DLL comando|  
+|Funciones DDE|DESACTIVAR el comando de menú|DESACTIVAR la barra de comandos|  
+|DESACTIVAR la ventana de comando|DECLARAR - comando DLL|DECLARAR el comando|  
+|DEFINIR la barra de comandos|DEFINIR el cuadro comando|DEFINIR el comando de clase|  
+|DEFINIR el comando de menú|DEFINIR el comando del panel|DEFINIR la barra de comandos|  
+|DEFINIR la ventana de comando|ELIMINAR la conexión, comando|Eliminar base de datos, comando|  
+|Eliminar archivo (comando)|Comando de DESENCADENADOR DELETE|ELIMINAR el comando de la vista|  
+|Comando DIR|Comando de directorio|Comando Mostrar|  
+|Comando de conexiones de presentación|Comando de base de datos de presentación|Comando de mostrar los archivos DLL|  
 |Mostrar archivos (comando)|Mostrar memoria (comando)|Comando de objetos de visualización|  
-|Comando de procedimientos de visualización|Comando de estado de visualización|Comando de la estructura de presentación|  
-|Comando de tablas de presentación|Comando de vistas de presentación|Comandos de formulario|  
+|Comando de procedimientos de presentación|Mostrar STATUS (comando)|Comando de la estructura de presentación|  
+|Comando de tablas para mostrar|Comando de vistas de presentación|FORMULARIO de comando|  
   
 ## <a name="e"></a>E  
   
 ||||  
 |-|-|-|  
 |Editar comandos|Comando ERROR||  
-|ERASE, comando|Comando externo|Exportar (comando)|  
-|Comando EXPULSAR|EXPULSAR el comando de página||  
+|Comando de borrado|Comando externo|Comando de exportación|  
+|Comando de expulsión|EXPULSAR el comando de página||  
   
 ## <a name="f"></a>F  
   
 ||||  
 |-|-|-|  
-|Variable de memoria del sistema _FOXDOC|Variable de memoria del sistema _FOXGRAPH|FEOF () (función)|  
-|FCLOSE () (función)|Función FCREATE)|FGETS () (función)|  
-|FERROR () (función)|FFLUSH (función))|Función FKLABEL)|  
-|Comando de filtro|Buscar (comando)|FOPEN () (función)|  
-|Función FKMAX)|Función FONTMETRIC)|FSEEK () (función)|  
-|FPUTS (función))|FREAD () (función)||  
+|Variable de memoria del sistema _FOXDOC|Variable de memoria del sistema _FOXGRAPH|FEOF (función))|  
+|FCLOSE (función))|Función FCREATE)|FGETS (función))|  
+|FERROR (función))|FFLUSH (función))|Función FKLABEL)|  
+|Comando de filtro|Buscar (comando)|FOPEN (función))|  
+|Función FKMAX)|Función FONTMETRIC)|FSEEK (función))|  
+|FPUTS (función))|FREAD (función))||  
 |FWRITE (función))|Función FCHSIZE)||  
   
 ## <a name="g"></a>G  
@@ -134,23 +131,23 @@ En la tabla siguiente se enumera los comandos de FoxPro y funciones que no son c
   
 ||||  
 |-|-|-|  
-|Comandos de la Ayuda|OCULTAR el comando de menú|OCULTAR el comando de menú emergente|  
-|OCULTAR la ventana de comando|Función principal)||  
+|Comando de ayuda|OCULTAR el comando de menú|Ocultar barra de comandos|  
+|OCULTAR la ventana de comando|Función principal (de)||  
   
 ## <a name="i"></a>I  
   
 ||||  
 |-|-|-|  
-|IMESTATUS (función))|Comando de importación|Comandos de entrada|  
-|ÍNDICE de comandos|Función INKEY)|Función ISCOLOR)|  
-|INSERT, comando|Función INSMODE)||  
+|Función IMESTATUS)|Comando de importación|Comandos de entrada|  
+|ÍNDICE en el comando|Función INKEY (de)|Función ISCOLOR)|  
+|Insertar un comando|Función INSMODE)||  
 |Función ISMOUSE)|Variable de memoria del sistema _INDENT||  
   
 ## <a name="j"></a>J  
   
 ||||  
 |-|-|-|  
-|UNIR, comando|||  
+|Comando de combinación|||  
   
 ## <a name="k"></a>K  
   
@@ -163,7 +160,7 @@ En la tabla siguiente se enumera los comandos de FoxPro y funciones que no son c
 ||||  
 |-|-|-|  
 |Variable de memoria del sistema _LMARGIN|Comando de etiqueta|Función LASTKEY)|  
-|Función LINENO)|LISTA de comandos|MOSTRAR las conexiones (comando)|  
+|Función LINENO)|LISTA de comandos|Mostrar conexiones (comando)|  
 |Comando de carga|Función de archivo LOCFILE)||  
   
 ## <a name="m"></a>M  
@@ -172,14 +169,14 @@ En la tabla siguiente se enumera los comandos de FoxPro y funciones que no son c
 |-|-|-|  
 |Función MCOL)|Comando MD|MENÚ de comandos|  
 |Función de memoria)|Comando de menú|Comando MKDIR|  
-|Función de menú)|Función de cuadro de mensajes)|MODIFICAR el comando de conexión|  
-|MODIFICAR el comando de clase|MODIFICAR comandos (comando)|MODIFICAR los comandos de formulario|  
-|MODIFICAR el comando de base de datos|MODIFICAR el archivo (comando)|MODIFICAR memorando comando|  
-|MODIFICAR comando GENERAL|MODIFICAR el comando de etiqueta|MODIFICAR el proyecto (comando)|  
-|MODIFICAR el comando de menú|MODIFICAR PROCEDURE (comando)|MODIFICAR los comandos de pantalla|  
-|MODIFICAR el comando de consulta|MODIFICAR los comandos de informe|MODIFICAR la ventana (comando)|  
-|MODIFICAR el comando de estructura|MODIFICAR el comando de vista|MOVER la ventana de comando|  
-|Comando de mouse (ratón)|MOVER el comando de menú emergente|Función MROW)|  
+|Función de menú)|Cuadro de mensajes (función))|Modifique el comando de conexión|  
+|Modifique el comando de clase|MODIFICAR comandos (comando)|MODIFICAR comandos de formulario|  
+|Modifique el comando de base de datos|MODIFICAR el archivo (comando)|Modifique el comando de RECORDATORIO|  
+|Modifique el comando de GENERAL|Modifique el comando de etiqueta|MODIFICAR el proyecto (comando)|  
+|MODIFICAR comandos de menú|MODIFICAR comandos de procedimiento|MODIFICAR comandos de la pantalla|  
+|Modifique el comando de consulta|MODIFICAR comandos de informe|VENTANA comandos de modificación|  
+|Modifique el comando de estructura|Modifique el comando de la vista|MOVER la ventana de comando|  
+|Comando de MOUSE|MOVER la barra de comandos|Función MROW)|  
 |Función MRKBAR)|Función MRKPAD)||  
 |Función MWINDOW)|Función MDOWN)||  
   
@@ -194,13 +191,13 @@ En la tabla siguiente se enumera los comandos de FoxPro y funciones que no son c
 ||||  
 |-|-|-|  
 |Función OBJNUM)|Función OBJTOCLIENT)|ON barra de comandos|  
-|Función OEMTOANSI)|EN el comando APLABOUT|ON EXIT, comando de menú|  
-|EN el comando ESCAPE|EN la barra de EXIT, comando|CLAVE = comando|  
-|Comando del panel de salida ON|ON EXIT, comando de menú emergente|Comando del panel ON|  
-|EN el comando de etiqueta de la clave|EN el comando MACHELP|EN selección de barra de comandos|  
-|EN la página, comando|EN el comando READERROR|EN el comando de menú emergente de selección|  
+|Función OEMTOANSI)|EN el comando APLABOUT|Comando de menú EXIT ON|  
+|EN el comando de ESCAPE|EN la barra de comandos de salida|CLAVE = comando|  
+|Comando del panel ON EXIT|Comando de menú emergente ON EXIT|Comando del panel ON|  
+|EN el comando de la etiqueta de tecla|EN el comando MACHELP|EN la selección de la barra de comandos|  
+|EN la página de comando|EN el comando READERROR|EN la barra de comandos de selección|  
 |EN el comando de menú de selección|EN el comando del panel de selección||  
-|EN el comando SHUTDOWN|Función OBJVAR)||  
+|EN el comando de apagado|Función OBJVAR)||  
   
 ## <a name="p"></a>P  
   
@@ -212,13 +209,13 @@ En la tabla siguiente se enumera los comandos de FoxPro y funciones que no son c
 |Variable de memoria del sistema _PEPAGE|Variable de memoria del sistema _PLENGTH|Variable de memoria del sistema _PLINENO|  
 |Variable de memoria del sistema _PLOFFSET|Variable de memoria del sistema _PPITCH|Variable de memoria del sistema _PQUALITY|  
 |Variable de memoria del sistema _PRETEXT|Variable de memoria del sistema _PSCODE|Variable de memoria del sistema _PSPACING|  
-|Variable de memoria del sistema _PWAIT|Comando de base de datos de paquete|Función de controlador)|  
-|Función PCOL)|Función PEMSTATUS)|Comando MACRO de reproducir|  
-|Comando de teclas ventana emergente|Comando de menú emergente|Comando de menú emergente de confirmación|  
+|Variable de memoria del sistema _PWAIT|Comando de base de datos del paquete|Función de panel)|  
+|Función PCOL)|Función PEMSTATUS)|Comando de reproducción (macro)|  
+|Comando ventana emergente de clave|Comando de menú emergente|Comando de menú emergente de confirmación|  
 |Función de ventana emergente)|PRINTJOB... Comando ENDPRINTJOB|Función PRINTSTATUS)|  
-|Función PRMBAR)|Función PRMPAD)|Función de símbolo del sistema)|  
-|Función PROW)|Función PRTINFO)|Comando de teclas de INSERCIÓN|  
-|Comando de menú de INSERCIÓN|Comando de menú emergente de INSERCIÓN|Función PUTFILE)|  
+|Función PRMBAR)|Función PRMPAD)|Función de símbolo del sistema (de)|  
+|Función PROW)|Función PRTINFO)|TECLAS de comando de INSERCIÓN|  
+|Comando de menú de INSERCIÓN|BARRA de comandos de INSERCIÓN|Función PUTFILE)|  
   
 ## <a name="q"></a>Q  
   
@@ -226,21 +223,21 @@ En la tabla siguiente se enumera los comandos de FoxPro y funciones que no son c
 |-|-|-|  
 |Salga de comando|||  
   
-## <a name="r"></a>L  
+## <a name="r"></a>R  
   
 ||||  
 |-|-|-|  
 |Variable de memoria del sistema _RMARGIN|Comando de escritorio remoto|Función READKEY)|  
-|LEER el comando|LEER el comando de menú|Comando de barra de versión|  
-|Función Actualizar()|REINDIZACIÓN de comando|Comando de la biblioteca de versión|  
-|VERSIÓN CLASSLIB comando|Comando de versión|Comando del panel de versión|  
-|Comandos de menús de versión|Comandos del módulo de versión|Comandos de WINDOWS de versión|  
-|Comando de elementos emergentes de versión|VERSIÓN PROCEDURE (comando)|Cambiar el nombre de comando|  
-|QUITAR el comando de clase|Cambiar el nombre de comando de clase|Cambiar el nombre de comando de vista|  
+|LEER el comando|LEER el comando de menú|VERSIÓN de la barra de comandos|  
+|Función Actualizar()|Volver a INDIZAR comando|Comando de la biblioteca de versión|  
+|VERSIÓN CLASSLIB comando|Comando de versión|Comando del panel versión|  
+|Comando de menús de la versión|Comando del módulo de versión|Comando de WINDOWS versión|  
+|Comando de elementos emergentes de versión|Comando del procedimiento de versión|Cambiar el nombre de comando|  
+|QUITAR el comando de la clase|Cambiar el nombre de comando de la clase|Cambiar el nombre de comando de la vista|  
 |Cambiar el nombre de comando de conexión|Cambiar el nombre de comando de tabla|RESTAURAR a partir de comando|  
-|Comando de informe|REQUERY () (función)|RESTAURAR la ventana de comando|  
-|RESTAURAR comandos de MACROS|RESTAURAR comandos de pantalla|Función RGBSCHEME)|  
-|Comando RESUME|RGB (función))|EJECUTAR &AMP;#124; ! Comando|  
+|Comando de informe|REQUERY () (función)|RESTAURAR ventana (comando)|  
+|RESTAURAR comandos de MACROS|RESTAURAR comandos de la pantalla|Función RGBSCHEME)|  
+|Comando RESUME|Función RGB)|EJECUTE &AMP;#124; ! Comando|  
 |Comando RMDIR|Función de fila)||  
 |Comando RUNSCRIPT|Función RDLEVEL)||  
   
@@ -248,41 +245,41 @@ En la tabla siguiente se enumera los comandos de FoxPro y funciones que no son c
   
 ||||  
 |-|-|-|  
-|Guardar MACROS, comando|Guardar comandos de pantalla|Guardar en el comando|  
+|Guarde las MACROS de comandos|Guardar comandos de la pantalla|Guardar en el comando|  
 |Guardar comandos de WINDOWS|Función de esquema)|Función SCOLS)|  
 |Comando de desplazamiento|Variable de memoria del sistema _SCREEN|Comando Set.|  
-|CONJUNTO de comandos alternativo|Comando de ANSI SET.|Comando APLABOUT|  
-|Comando de AUTOGUARDADO Set.|Comando de CAMPANA Set.|Comando de INTERMITENCIA Set.|  
-|Comando de borde de Set.|Comando BRSTATUS Set.|Comando CLASSLIB|  
-|Comando Borrar conjunto|Comando de RELOJ de Set.|ESTABLECER el COLOR de comando|  
-|ESTABLECER el COLOR del comando de combinación|Comando de conjunto de COLOR de Set.|ESTABLECER el COLOR a controlar|  
-|Comando COMPATIBLE|Comando de confirmar Set.|CONJUNTO de comandos de consola|  
-|CONJUNTO CPCOMPILE|CONJUNTO CPDIALOG|Comando de moneda Set.|  
-|CURSOR de conjunto (comando)|Comando DATASESSION|CONJUNTO de comandos de depuración|  
-|Comando de decimales Set.|Comando de conjunto de DELIMITADORES|CONJUNTO de comandos de desarrollo|  
-|Comando de dispositivo de Set.|Mostrar comando|Comando DOHISTORY|  
-|Comando de eco de Set.|Comando ESCAPE de Set.|Comandos de formato de conjunto|  
-|Comando de función de conjunto|Comando de conjunto de ENCABEZADOS|Comando de Ayuda de SET|  
-|Comando HELPFILTER|Comando de intensidad de Set.|Comando de teclas de conjunto|  
-|Comando KEYCOMP|Comando LOGERRORS|Comando MACDESKTOP|  
-|Comando MACHELP|Comando MACKEY|Comando de margen de Set.|  
-|MARCAR el conjunto de comandos|ESTABLECER la marca de comando|Comando del ancho del campo Memo Set.|  
-|CONJUNTO de comandos de mensaje|Comando del MOUSE|Comando de ODÓMETRO Set.|  
-|Comando OLEOBJECT Set.|Comando de la PALETA de Set.|Comando PDSETUP|  
-|PUNTO de conjunto de comandos|CONJUNTO de comandos de impresora|Comando READBORDER|  
-|CONJUNTO de comandos de actualización|CONJUNTO de comandos de recursos|CONJUNTO de comandos de seguridad|  
-|Comando del panel de resultados|Comando de segundos de Set.|Comando de separador de Set.|  
-|Comando de SOMBRAS Set.|OMITIR del conjunto de comandos|Comando de espacio de Set.|  
-|Comando de estado del conjunto|ESTABLECE el comando de barra de estado|Comando del paso de conjunto|  
-|Comando rápidas de Set.|Comando SYSFORMATS|Comando SYSMENU|  
-|CHARLA de comando|CONJUNTO de comandos de la combinación de texto|Comando de DELIMITADORES de la combinación de texto de Set.|  
-|CONJUNTO de comandos de tema|Comando de Id. de conjunto de tema|Comando TRBETWEEN|  
-|Comando de escritura anticipada Set.|Comando de la vista de conjunto|ESTABLECER la ventana de comandos de memorando|  
-|Comando XCMDFILE|Variable de memoria del sistema _SHELL|Mostrar GET (comando)|  
-|Mostrar OBTIENE (comando)|Mostrar comando de menú|Mostrar objeto (comando)|  
-|Mostrar menú emergente (comando)|Mostrar ventana (comando)|Comando de menú emergente de tamaño|  
-|VENTANA de tamaño (comando)|Función SKPBAR)|Función SKPPAD)|  
-|Función SOUNDEX)|Variable de memoria del sistema _SPELLCHK|Funciones SQL|  
+|CONJUNTO de comandos alternativo|Comando de ANSI SET|Comando APLABOUT Set.|  
+|Comando de AUTOGUARDADO Set.|Comando de la CAMPANA de SET|CONJUNTO de comandos de INTERMITENCIA|  
+|CONJUNTO de comandos de borde|Comando BRSTATUS Set.|Comando CLASSLIB Set.|  
+|Comando CLEAR conjunto|CONJUNTO de comandos de RELOJ|ESTABLECER el COLOR del comando|  
+|ESTABLECER el COLOR del comando de esquema|Comando de conjunto de conjunto de COLOR|ESTABLECER el COLOR al comando|  
+|Comando de conjunto COMPATIBLE|Comando de confirmación de SET|CONJUNTO de comandos de consola|  
+|CONJUNTO CPCOMPILE|CONJUNTO CPDIALOG|CONJUNTO de comandos de moneda|  
+|SET CURSOR (comando)|Comando DATASESSION Set.|CONJUNTO de comandos de depuración|  
+|CONJUNTO de comandos de decimales|Comando de conjunto de DELIMITADORES|CONJUNTO de comandos de desarrollo|  
+|CONJUNTO de comandos de dispositivo|CONJUNTO de comandos de visualización|Comando DOHISTORY Set.|  
+|Comando de eco Set.|Comando ESCAPE de SET|Comando de formato de conjunto|  
+|Comando de la función de conjunto|Comando de conjunto de ENCABEZADOS|Comando de Ayuda de SET|  
+|Comando HELPFILTER Set.|Comando de intensidad de SET|Comando de conjunto de claves|  
+|Comando KEYCOMP Set.|Comando LOGERRORS Set.|Comando MACDESKTOP Set.|  
+|Comando MACHELP Set.|Comando MACKEY Set.|CONJUNTO de comandos de margen|  
+|MARQUE el conjunto de comandos|ESTABLECER la marca de comando|Comando del ancho del campo Memo Set.|  
+|CONJUNTO de comandos de mensaje|CONJUNTO de comandos de MOUSE|Comando del CUENTAKILÓMETROS Set.|  
+|CONJUNTO de clases OLEOBJECT comando|CONJUNTO de comandos de PALETA|Comando PDSETUP Set.|  
+|Comando de punto fijo|CONJUNTO de comandos de impresora|Comando READBORDER Set.|  
+|Comando de actualización de SET|Comando de conjunto de recursos|CONJUNTO de comandos de seguridad|  
+|Comando del panel de resultados de conjunto|CONJUNTO de comandos de segundos|CONJUNTO de comandos de separador|  
+|CONJUNTO de comandos de SOMBRAS|OMITIR del conjunto de comandos|CONJUNTO de comandos de espacio|  
+|CONJUNTO STATUS (comando)|ESTABLECE el comando de barra de estado|CONJUNTO de comandos de paso|  
+|Comando rápidas de SET|Comando SYSFORMATS Set.|Comando SYSMENU Set.|  
+|CONJUNTO de comandos de charla|CONJUNTO de comandos de la combinación de texto|Comando de DELIMITADORES de la combinación de texto de SET|  
+|CONJUNTO de comandos de tema|Comando de Id. de conjunto de tema|Comando TRBETWEEN Set.|  
+|CONJUNTO de comandos de escritura anticipada|Comando de la vista de conjunto|VENTANA de conjunto de comandos de RECORDATORIO|  
+|Comando XCMDFILE Set.|Variable de memoria del sistema _SHELL|Mostrar el comando GET|  
+|Mostrar comando OBTIENE|Comando de menú Ver|Mostrar objeto (comando)|  
+|Mostrar barra de comandos|Mostrar la ventana de comando|Comando de menú emergente de tamaño|  
+|Comando de la ventana de tamaño|Función SKPBAR)|Función SKPPAD)|  
+|Función SOUNDEX)|Variable de memoria del sistema _SPELLCHK|Funciones de SQL|  
 |Función SROWS)|Variable de memoria del sistema _STARTUP|Comando de suspensión|  
 |Funciones sys() excepto SYS(2011)|Función SYSMETRIC)||  
   
@@ -291,14 +288,14 @@ En la tabla siguiente se enumera los comandos de FoxPro y funciones que no son c
 ||||  
 |-|-|-|  
 |Variable de memoria del sistema _TABS|TEXTO... Comando ENDTEXT|Función TXTWIDTH)|  
-|TRANSFORM () (función)|Variable de memoria del sistema _TRANSPORT||  
+|TRANSFORMACIÓN de función)|Variable de memoria del sistema _TRANSPORT||  
 |Comando de tipo|Variable de memoria del sistema _THROTTLE||  
   
 ## <a name="u"></a>U  
   
 ||||  
 |-|-|-|  
-|Función actualizada)|USE el comando||  
+|Función actualizada (de)|USE el comando||  
   
 ## <a name="v"></a>V  
   
@@ -323,4 +320,4 @@ En la tabla siguiente se enumera los comandos de FoxPro y funciones que no son c
   
 ||||  
 |-|-|-|  
-|VENTANA de ZOOM (comando)|||
+|Comando de la ventana de ZOOM|||

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ServerProperties Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ServerProperties element
 ms.assetid: 8ccbef3f-1388-4fa3-b0a4-c89b89f09056
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 495577822a86549841bcae022164d5669c1e5b22
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 95e921a9bc531b66b38423df74f33e2bb53d8078
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323095"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157485"
 ---
 # <a name="serverproperties-element-assl"></a>Elemento ServerProperties (ASSL)
   Contiene la colección de [ServerProperty](../objects/serverproperty-element-assl.md) elementos asociados con un [Server](../objects/server-element-assl.md) elemento.  
@@ -48,7 +45,7 @@ ms.locfileid: "37323095"
 </Server>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -63,7 +60,7 @@ ms.locfileid: "37323095"
 |Elementos primarios|[Server](../objects/server-element-assl.md)|  
 |Elementos secundarios|[ServerProperty](../objects/serverproperty-element-assl.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.ServerPropertyCollection>.  
   
 ## <a name="see-also"></a>Vea también  

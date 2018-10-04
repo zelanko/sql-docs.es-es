@@ -1,25 +1,22 @@
 ---
-title: Clase SQLServerResultSetMetaData | Documentos de Microsoft
+title: Clase SQLServerResultSetMetaData | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9a36885f-83f3-44af-85f0-2b849dfd20d4
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9012b1c6a38bd7ab2a9778c39b85f2cd8f5246c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e3fed9b33aa1261bbc68befdbac8b8d962e1787c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846270"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612014"
 ---
 # <a name="sqlserverresultsetmetadata-class"></a>Clase SQLServerResultSetMetaData
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,8 +36,8 @@ ms.locfileid: "32846270"
 public final class SQLServerResultSetMetaData  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Miembros de SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
+## <a name="see-also"></a>Ver también  
+ [Miembros SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [Referencia de API del controlador JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

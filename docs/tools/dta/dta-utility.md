@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], command prompt
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
-caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8196476349cbe6f2e376a4ac651fb6b1eeb65b34
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ad46261f10c154c86cd020afdc2c0ca33be7434
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075552"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644364"
 ---
 # <a name="dta-utility"></a>dta, utilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -172,7 +168,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  Especifica los tipos de estructuras de diseño físico que **dta** debe incluir en la recomendación. En la tabla siguiente se muestran y describen los valores que se pueden especificar para este argumento. Cuando no se especifica ningún valor, **dta** usa el parámetro **-fa****IDX**predeterminado.  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |IDX_IV|Índices y vistas indizadas.|  
 |IDX|Solo índices.|  
@@ -183,7 +179,7 @@ dta -d AdventureWorks2012 ...
  Especifica que los índices filtrados se consideren para las nuevas recomendaciones. Para obtener más información, consulte [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
 **-fc**  
- Especifica que se deben tener en cuenta los índices de almacén de columnas para nuevas recomendaciones. DTA tendrá en cuenta los índices no clúster y el almacén de columnas. Para obtener más información, vea    
+ Especifica que se deben tener en cuenta los índices de almacén de columnas para nuevas recomendaciones. DTA tendrá en cuenta los índices de almacén de columnas en clúster y no clúster. Para obtener más información, vea    
 [Recomendaciones de índice de almacén de columnas en el Asistente para la optimización de motor de base de datos (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
@@ -193,7 +189,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  Especifica las estructuras de diseño físico existentes que **dta** debe conservar cuando genere su recomendación. En la tabla siguiente se muestran y describen los valores que se pueden especificar para este argumento:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |Ninguno|Ninguna estructura existente|  
 |ALL|Todas las estructuras existentes|  
@@ -204,7 +200,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  Especifica si se deben crear particiones de las nuevas estructuras de diseño físico (índices y vistas indexadas) que **dta** propone y cómo se deben crear esas particiones. En la tabla siguiente se muestran y describen los valores que se pueden especificar para este argumento:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |Ninguno|No crear particiones|  
 |FULL|Particiones completas (para mejorar el rendimiento)|  
@@ -222,7 +218,7 @@ dta -d AdventureWorks2012 ...
  Especifica que la memoria caché del plan se usará como carga de trabajo. Se analizan los primeros 1.000 eventos de la memoria caché del plan para las bases de datos seleccionadas explícitamente. Este valor se puede cambiar mediante la opción **- n** .  
  
 **-iq**  
- Especifica que el almacén de consultas se usará como la carga de trabajo. Se analizan los primeros 1.000 eventos del almacén de consultas para bases de datos seleccionadas explícitamente. Este valor se puede cambiar mediante la opción **- n** .  Para obtener más información, vea [Almacén de consultas](../../relational-databases/performance/how-query-store-collects-data.md) y [Optimización de la base de datos mediante carga de trabajo del Almacén de consultas](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
+ Especifica que el Store de la consulta se utiliza como la carga de trabajo. Se analizan los primeros 1.000 eventos desde el Store de consultas para bases de datos seleccionadas explícitamente. Este valor se puede cambiar mediante la opción **- n** .  Para obtener más información, vea [Almacén de consultas](../../relational-databases/performance/how-query-store-collects-data.md) y [Optimización de la base de datos mediante carga de trabajo del Almacén de consultas](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
  ||  
 |-|  
 |**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
@@ -254,7 +250,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  Especifica si las estructuras de diseño físico se crean en línea. En la tabla siguiente se muestran y describen los valores que pueden especificarse para este argumento:  
   
-|Valor|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |OFF|No se pueden crear en línea las estructuras recomendadas de diseño físico.|  
 |ON|Se pueden crear en línea todas las estructuras recomendadas de diseño físico.|  
@@ -272,11 +268,11 @@ dta -n number_of_events -A 0
  En este caso es importante especificar un tiempo de optimización ilimitado (`-A 0`). De lo contrario, el Asistente para la optimización de motor de base de datos supone que el tiempo de optimización es de 8 horas de forma predeterminada.
  
  **-I** *time_window_in_hours*   
-   Especifica el período de tiempo (en horas) cuando se debe ejecutar una consulta para que se considere a DTA para la optimización cuando se usa **-iq** opción (carga de trabajo de almacén de consultas). 
+   Especifica el período de tiempo (en horas) al necesario que se ejecute una consulta para que se considere DTA para la optimización cuando se usa **-iq** opción (carga de trabajo de consulta Store). 
 ```  
 dta -iq -I 48  
 ```  
-En este caso, DTA se usar almacén de consultas como el origen de carga de trabajo y solo tenga en cuenta las consultas que se han ejecutado con las últimas 48 horas.  
+En este caso, DTA se utilice la consulta Store como origen de carga de trabajo y solo tenga en cuenta las consultas que se han ejecutado con las últimas 48 horas.  
   ||  
 |-|  
 |**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a0590ba6-3856-4731-bb29-87b0a1c1b795
-caps.latest.revision: 10
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb38a6a9dfb411152ba17fdcf29e5a096a1c7ec2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1feeffea47ae383168f06edc357c7dbe69aaefe4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159036"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212395"
 ---
 # <a name="result-set-sample"></a>Ejemplo de conjunto de resultados
   A veces resulta útil poder ejecutar comandos mientras se leen resultados de una consulta sin abrir una nueva conexión y sin leer todos los resultados en la memoria. La característica MARS (Multiple Active Result Set) en ADO.NET 2.0 es una tecnología que puede ayudar a conseguirlo. Actualmente, MARS no está implementado para el proveedor en proceso que se utiliza para la programación del servidor. Para subsanar esta limitación, se pueden usar cursores del servidor. En este ejemplo se muestra cómo usar cursores del servidor para resolver la falta de compatibilidad con MARS de la programación del servidor.  

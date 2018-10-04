@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, tools
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-caps.latest.revision: 73
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2942373c9732ea1233788ef23061c42433d2baa7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 859959ec966c9a3c3141f3fb962668e141d14175
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212585"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200551"
 ---
 # <a name="reporting-services-tools"></a>Herramientas de Reporting Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contiene un conjunto de herramientas gráficas y de scripting que admiten el desarrollo y la utilización de informes completos en un entorno administrado. El conjunto de herramientas incluye herramientas de desarrollo, herramientas de configuración y administración, y herramientas de visualización de informes. Este tema proporciona una breve información general de cada herramienta de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y cómo se puede obtener acceso a ella.  
@@ -56,7 +53,7 @@ ms.locfileid: "37212585"
 |----------|-----------------|-------------------|  
 |Administrador de configuración de Reporting Services|Use esta herramienta para configurar una instalación de Reporting Services. Tenga en cuenta que el Administrador de configuración de Reporting Services no ayudarle a administrar el contenido del servidor de informes, habilitar características adicionales ni conceder acceso al servidor. Entre las tareas disponibles se incluyen:<br /><br /> Configuración de las instancias local y remota del servidor de informes<br /><br /> Configurar la cuenta de servicio del servidor de informes.<br /><br /> Crear y configurar una o más direcciones URL de servicios web.<br /><br /> Configurar la dirección URL del Administrador de informes<br /><br /> Crear y configurar la base de datos del servidor de informes.<br /><br /> Configurar una implementación escalada.<br /><br /> Realizar copias de seguridad, restaurar o reemplazar la clave simétrica que se usa para cifrar las cadenas de conexión almacenadas y las credenciales.<br /><br /> Configurar la cuenta de ejecución desatendida.<br /><br /> Configurar un servidor SMTP para la entrega por correo electrónico.<br /><br /> <br /><br /> Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).|Menú Inicio|  
 |SQL Server Management Studio|Use esta herramienta para administrar una o varias instancias del servidor de informes en un entorno único, lo que incluye:<br /><br /> Administrar las instancias local y remota del servidor de informes<br /><br /> Establecer las propiedades del servidor de informes<br /><br /> Modificar las definiciones de roles<br /><br /> Desactivar las características del servidor de informes que no se están usando<br /><br /> Administrar trabajos<br /><br /> Administrar las programaciones compartidas|Menú Inicio|  
-|Administrador de configuración de SQL Server|Use esta herramienta para lo siguiente:<br /><br /> Iniciar y detener los servicios de Reporting Services de Windows<br /><br /> Configurar los informes de comentarios de clientes, el directorio de volcado y los informes de errores<br /><br /> <br /><br /> **\*\* Advertencia \* \* ** no use esta herramienta para configurar la cuenta de servicio. En lugar de ello, use la herramienta Configuración de Reporting Services.<br /><br /> Para obtener más información, vea [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).|Menú Inicio|  
+|Administrador de configuración de SQL Server|Use esta herramienta para lo siguiente:<br /><br /> Iniciar y detener los servicios de Reporting Services de Windows<br /><br /> Configurar los informes de comentarios de clientes, el directorio de volcado y los informes de errores<br /><br /> <br /><br /> **\*\* Advertencia \* \***  no use esta herramienta para configurar la cuenta de servicio. En lugar de ello, use la herramienta Configuración de Reporting Services.<br /><br /> Para obtener más información, vea [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).|Menú Inicio|  
 |Utilidad rsconfig|Use esta herramienta para configurar y administrar una conexión del servidor de informes a la base de datos del servidor de informes. También puede utilizarla para especificar la cuenta de usuario que se va a utilizar para el procesamiento de informes desatendidos.<br /><br /> Para más información, vea [Utilidades del símbolo del sistema del servidor de informes &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md).|Símbolo del sistema|  
 |Utilidad Rskeymgmt|Use esta herramienta para lo siguiente:<br /><br /> Extraer, restaurar, crear y eliminar la clave simétrica usada para cifrar datos del servidor de informes<br /><br /> Combinar instancias del servidor de informes en una implementación escalada<br /><br /> <br /><br /> Para más información, vea [Utilidades del símbolo del sistema del servidor de informes &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md).|Símbolo del sistema|  
 |Clases de Instrumental de administración de Windows (WMI)|Use estas clases para automatizar las tareas de configuración en el administrador de configuración de Reporting Services sin necesidad de usar la interfaz gráfica de usuario.<br /><br /> Para obtener más información, consulte [acceso a the WMI Provider Programmatically](../accessing-the-wmi-provider-programmatically.md).|Script de Visual Basic|  

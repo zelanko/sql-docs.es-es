@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ENVIRONMENT.KEYBOARD.GENERAL
 - VS.ToolsOptionsPages.Environment.SQLEnvironmentKeyboard
 ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ac6ad68038ad8a95cd79abe5fa73031f64b5d61d
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: d8569a2b229e4fa23f99f47fe0694291bfa5d70b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43806931"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194905"
 ---
 # <a name="options-environment-keyboard-page"></a>Options (Environment-Keyboard Page)
   El cuadro de diálogo **Opciones** le permite personalizar el esquema de teclado para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Utilice esta opción para elegir un esquema de teclado. Para obtener acceso a esta página, haga clic en **Opciones** en el menú **Herramientas** , seleccione la carpeta **Entorno** y, a continuación, haga clic en **Teclado**.  

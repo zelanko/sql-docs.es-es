@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - objects [Analysis Management Objects]
 - classes [AMO]
 ms.assetid: d3c066bc-f812-4d53-9e96-9e306f2fc580
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eb4e3761642f8b03e5853ae99e00cc4bc2f4a46f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ead51a0fadc54f0b68c550bda2a775a64a79b11a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328535"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218735"
 ---
 # <a name="introducing-amo-classes"></a>Introducción a las clases AMO
   Objetos de administración de análisis (AMO) es una biblioteca de clases diseñada para administrar una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] desde una aplicación cliente. Las clases AMO son las clases que se utilizan para administrar los objetos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] como bases de datos, dimensiones, cubos, estructuras y modelos de minería de datos, roles y permisos, excepciones, etc.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - fetching rows
@@ -16,26 +14,25 @@ helpviewer_keywords:
 - rowsets [OLE DB], fetching
 - SQL Server Native Client OLE DB provider, fetching
 ms.assetid: 07c803ca-299a-42c5-ba02-360b9631d15f
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 243d57b5e42e2c4ecebec6ce1e05d3061baa0a2c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: faf887ab5e03d2d0ca8702dc9bd35d0ba094ece4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412404"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205145"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>Capturar una única fila con IRow
-  El **IRow** implementación en la interfaz del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB se ha simplificado para aumentar el rendimiento. **IRow** permite el acceso directo a las columnas de un objeto de fila único. Si sabe de antemano que el resultado de una ejecución de comandos generará exactamente una fila, **IRow** recuperará las columnas de esa fila. Si el conjunto de resultados incluye varias filas, **IRow** va a exponer solo la primera fila.  
+  El **IRow** implementación en la interfaz del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB se ha simplificado para aumentar el rendimiento. **IRow** permite un acceso directo a las columnas de un único objeto de fila. Si sabe de antemano que el resultado de una ejecución de comandos generará exactamente una fila, **IRow** recuperará las columnas de esa fila. Si el conjunto de resultados incluye varias filas, **IRow** solo expondrá la primera.  
   
- El **IRow** implementación no se permite cualquier navegación de la fila. Solo se obtiene acceso una vez a cada columna de la fila, con una excepción: se puede obtener acceso a una columna una primera vez para buscar el tamaño de la columna y una segunda vez para capturar los datos.  
+ La implementación de **IRow** no permite cualquier navegación de la fila. Solo se obtiene acceso una vez a cada columna de la fila, con una excepción: se puede obtener acceso a una columna una primera vez para buscar el tamaño de la columna y una segunda vez para capturar los datos.  
   
 > [!NOTE]  
->  **IRow:: Open** es compatible con el único tipo DBGUID_STREAM y DBGUID_NULL de objetos que se va a abrirse.  
+>  **IRow::Open** solo permite la apertura de objetos de tipo DBGUID_STREAM y DBGUID_NULL.  
   
- Para obtener un objeto de fila mediante **ICommand:: Execute** método, debe pasarse iid_irow. El **IMultipleResults** interfaz debe usarse para controlar varios conjuntos de resultados. **IMultipleResults** admite **IRow** y **IRowset**. **IRowset** se utiliza para operaciones masivas.  
+ Para obtener un objeto de fila mediante el método **ICommand::Execute**, tiene que pasarse IID_IRow. La interfaz **IMultipleResults** tiene que usarse para controlar varios conjuntos de resultados. **IMultipleResults** admite **IRow** e **IRowset**. **IRowset** se usa para las operaciones masivas.  
   
 ## <a name="in-this-section"></a>En esta sección  
   

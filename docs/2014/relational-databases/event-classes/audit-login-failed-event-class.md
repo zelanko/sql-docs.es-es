@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Login Failed event class
 ms.assetid: 6b83963b-b685-429d-92ba-5173f6f0000d
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5660d11f62ab27303504cc628b1daa66082d007f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6676438c37af6d00bd73cc1c26c1c27444d7c036
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262941"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228435"
 ---
 # <a name="audit-login-failed-event-class"></a>Audit Login Failed, clase de eventos
   La clase de eventos **Audit Login Failed** indica que un usuario ha intentado conectarse a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se ha producido un error. Los eventos de esta clase se activan mediante nuevas conexiones o mediante conexiones reutilizadas de un grupo de conexiones.  

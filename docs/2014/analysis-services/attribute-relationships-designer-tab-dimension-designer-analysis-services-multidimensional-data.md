@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.attributerelationships.f1
 ms.assetid: abc8af00-5389-456d-b0f1-ec3e7403d4f9
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b362285a6ac8cee1551ad9c4bed36e6d9b5e5d0f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 289ffeeb6158da7b2dce6d5be1ac0aa88ac029e1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253217"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220636"
 ---
 # <a name="attribute-relationships-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Relación de los atributos (pestaña Diseñador de Relación de los atributos, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Use la lista **Relación de los atributos** para buscar una relación de atributo concreta en el diagrama de relación de atributo y para administrar dicha relación. Este panel aparece inmediatamente debajo del panel que contiene el diagrama de la relación de los atributos.  

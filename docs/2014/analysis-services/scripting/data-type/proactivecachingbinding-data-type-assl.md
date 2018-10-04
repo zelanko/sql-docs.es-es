@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ProactiveCachingBinding Data Type
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ProactiveCachingBinding data type
 ms.assetid: 02e6ff2f-2f18-4607-9198-bb46f113f9ac
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1d440911eefa33981ef435240c4e440378da34a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a8d34019463453b52df520d1c0153420903a0f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189102"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209765"
 ---
 # <a name="proactivecachingbinding-data-type-assl"></a>Tipo de datos ProactiveCachingBinding (ASSL)
   Define un tipo de datos derivado abstracto que representa información para el [ProactiveCaching](../objects/proactivecaching-element-assl.md) elemento acerca de los cambios del origen de datos que requieren volver a generar la memoria caché o sobre el estado del proceso de regeneración.  
@@ -46,7 +43,7 @@ ms.locfileid: "37189102"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Tipos de datos base|[Enlace](binding-data-type-assl.md)|  
+|Tipos de datos base|[enlace](binding-data-type-assl.md)|  
 |Tipos de datos derivados|[ProactiveCachingIncrementalProcessingBinding](proactivecachingincrementalprocessingbinding-data-type-assl.md), [ProactiveCachingObjectNotificationBinding](proactivecachingobjectnotificationbinding-data-type-assl.md), [ProactiveCachingQueryBinding](querybinding-data-type-assl.md)|  
   
 ## <a name="data-type-relationships"></a>Relaciones entre tipos de datos  
@@ -57,7 +54,7 @@ ms.locfileid: "37189102"
 |Elementos secundarios|None|  
 |Elementos derivados|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para obtener más información sobre la `Binding` tipo, incluidas las tablas de objetos de Analysis Services Scripting Language (ASSL) de la `Binding` tipo y la jerarquía de herencia de `Binding` tipos, vea [tipo de enlace de datos &#40;ASSL &#41;](binding-data-type-assl.md).  
   
  Para obtener información general de los enlaces de datos en ASSL, vea [orígenes de datos y enlaces &#40;Multidimensional de SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Type Element (Binding)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Type element
 ms.assetid: b5f5c485-dc83-4d66-a8d2-e96e96d068f9
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4bcf3e96c38dd4c2941d2d6256a62559ab3491eb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 407c8e53a842baca13671256a8125b696d7f1e91
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148176"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225231"
 ---
 # <a name="type-element-binding-assl"></a>Elemento Type (Binding) (ASSL)
   Contiene el tipo del enlace de atributo.  
@@ -46,7 +43,7 @@ ms.locfileid: "37148176"
 </AttributeBinding>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37148176"
 |Elementos primarios|[AttributeBinding](../data-type/binding-data-type-assl.md), [CubeAttributeBinding](../data-type/cubeattributebinding-data-type-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
 |Valor|Descripción|  
@@ -70,7 +67,7 @@ ms.locfileid: "37148176"
 |*Key*|Claves de miembro|  
 |*Nombre*|Nombre del miembro|  
 |*Value*|Valor de miembro|  
-|*Traducción*|Traducciones de miembro|  
+|*traducción*|Traducciones de miembro|  
 |*UnaryOperator*|Operadores unarios|  
 |*SkippedLevels*|Niveles omitidos|  
 |*CustomRollup*|Fórmulas de resumen personalizado|  

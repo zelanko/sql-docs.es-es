@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 436b4c3d-3f2f-464a-be7e-5c051d9ffb8f
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c7c7270a3c4ef11f12894c97b51bb6cd09389fea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6bf76bca14e7ae1dbf96cfd9c0123bad42e31a94
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297545"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220525"
 ---
 # <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>Lista de comprobación de la implementación: instalar Reporting Services en una granja de servidores de SharePoint existente
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Servidores de informes de SharePoint pueden instalarse en una nueva granja de SharePoint o en una granja de SharePoint existente. En este tema se describe los posibles escenarios y procedimientos recomendados para la instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la granja de servidores de SharePoint existente.  

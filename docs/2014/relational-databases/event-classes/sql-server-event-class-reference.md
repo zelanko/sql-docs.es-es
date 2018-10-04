@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - SQL Server event classes, listed
 - SQL Server event classes
 ms.assetid: 0f0fe567-e115-4ace-b63c-73dc3428c0f6
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aea5b9aaed8d44162fb9f63474751de47a81e2bf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2abfb72f64dd21fc1eea7463c7ae94349a3f4ccb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154596"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215075"
 ---
 # <a name="sql-server-event-class-reference"></a>Referencia de las clase de eventos de SQL Server
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite registrar eventos a medida que ocurren en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Los eventos registrados son instancias de las clases de evento de una definición de seguimiento. En el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], las clases de eventos y sus categorías están disponibles en la pestaña **Selección de eventos** del cuadro de diálogo **Propiedades del archivo de seguimiento** .  

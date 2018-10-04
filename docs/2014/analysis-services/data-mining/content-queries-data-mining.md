@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 441ad05289df13e34954553db27810406341d77d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc6f7db4783f1fc828c183c76563a6fed42ab2ee
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222605"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209815"
 ---
 # <a name="content-queries-data-mining"></a>Consultas de contenido (minería de datos)
   Una consulta de contenido es una manera de extraer información sobre las estadísticas internas y la estructura del modelo de minería de datos. A veces, una consulta de contenido puede proporcionar detalles que no están disponibles con facilidad en el visor. También puede usar los resultados de una consulta de contenido para extraer información mediante programación para otros usos.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DiscretizationMethod Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DiscretizationMethod element
 ms.assetid: 4cfe015f-ad6c-47e1-8aff-c9c7677867b1
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6347db0e5d964b10112516b4c607a5185f247b65
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 75308b5270eb762236be22fc0838a480474898dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253007"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200484"
 ---
 # <a name="discretizationmethod-element-assl"></a>Elemento DiscretizationMethod (ASSL)
   Define el método que se va a utilizar para la discretización.  
@@ -46,7 +43,7 @@ ms.locfileid: "37253007"
 </DimensionAttribute>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37253007"
 |Elementos primarios|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor de la `DiscretizationMethod` elemento determina cómo los valores de la `DimensionAttribute` o `ScalarMiningStructureColumn` son datos discretos u organizados en un conjunto específico de grupos. Para obtener más información acerca de los métodos de discretización, vea [métodos de discretización &#40;minería de datos&#41;](../../data-mining/discretization-methods-data-mining.md).  
   
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  

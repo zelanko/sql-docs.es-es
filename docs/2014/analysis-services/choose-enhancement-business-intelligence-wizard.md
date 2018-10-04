@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.bienhancement.f1
 ms.assetid: 39e2f36c-2c02-4a71-af8f-5dbd373190dc
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 35634d3094647cd7698ec1961b94cb2b6b5744e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8834e8412cedbd2d97f9b5717f2e7979999a0a06
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243985"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196205"
 ---
 # <a name="choose-enhancement-business-intelligence-wizard"></a>Elegir mejora (Asistente de Business Intelligence)
   Use la página **Elegir mejora** para elegir la mejora de Business Intelligence que se agregará al cubo o a la dimensión.  

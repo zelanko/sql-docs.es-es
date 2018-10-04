@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - TableID Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - TableID element
 ms.assetid: 45fe7e23-b274-4bc2-be63-1a5bb6680f51
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3010d64a5898b16322afca819f54cbcc32f0b867
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7fd2304c4f442102ff8d654bec3be19e34bdd944
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190865"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201585"
 ---
 # <a name="tableid-element-assl"></a>Elemento TableID (ASSL)
   Contiene el identificador (ID) de la tabla (desde la [DataSourceView](../objects/datasourceview-element-assl.md) elemento) asociado con el elemento primario.  
@@ -46,7 +43,7 @@ ms.locfileid: "37190865"
 </ColumnBinding>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37190865"
 |Elementos primarios|[ColumnBinding](../data-type/binding-data-type-assl.md), [DSVTableBinding](../data-type/tablebinding-data-type-assl.md), [IncrementalProcessingNotification](../objects/incrementalprocessingnotification-element-assl.md), [RowBinding](../data-type/rowbinding-data-type-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  La tabla identificada por `TableID` debe estar dentro del origen de datos con el que está relacionado el objeto propietario (dimensión o cubo).  
   
  Los elementos que corresponden a los elementos primarios de `TableID` en el modelo de objetos de Objetos de administración de análisis (AMO) son <xref:Microsoft.AnalysisServices.ColumnBinding>, <xref:Microsoft.AnalysisServices.DSVTableBinding>, <xref:Microsoft.AnalysisServices.IncrementalProcessingNotification> y <xref:Microsoft.AnalysisServices.RowBinding>.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 41a75e8559738294986bc5fb203b1b0469305f57
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 066982863d07cd125b5904e4c7467ffe9da5b107
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222915"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217505"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Función Lookup (Generador de informes y SSRS)
   Devuelve el primer valor coincidente para el nombre especificado de un conjunto de datos que contiene pares nombre/valor.  
@@ -50,10 +47,10 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>Devolución  
  Devuelve un `Variant`, o `Nothing` si no hay ninguna coincidencia.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Use `Lookup` para recuperar el valor del conjunto de datos especificado para un par nombre/valor donde hay una relación de 1 a 1. Por ejemplo, para un campo de identificador, puede usar `Lookup` para recuperar el campo Name correspondiente de un conjunto de datos que no está enlazado a la región de datos.  
   
- `Lookup` ocurre lo siguiente:  
+ `Lookup` hace lo siguiente:  
   
 -   Evalúa la expresión de origen en el ámbito actual.  
   

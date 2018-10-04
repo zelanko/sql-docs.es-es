@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - lock manager properties [Analysis Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - DefaultLockTimeoutMS property
 - DeadlockDetectionGranularityMS property
 ms.assetid: 15fe9ead-825b-4ac3-9191-7a07caa2861b
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dd6e8627f6c7b7a5f9eed01fc9b8d0a6f4e9cad5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f773eb7fb512b9b1ae14b14a13717ecc8f42599f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209935"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198765"
 ---
 # <a name="lock-manager-properties"></a>Propiedades del administrador de bloqueos
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor del administrador de bloqueos que aparecen en la siguiente tabla. Para obtener más información sobre las propiedades de servidor adicionales y cómo establecerlas, vea [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  

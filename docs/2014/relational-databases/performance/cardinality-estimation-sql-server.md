@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 11/24/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cardinality estimator
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 81f9d8c849622a622631bc8153dc7d4cffc7d258
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 393c4f88f9ab60f3a25ddaab5bb091fb298e1e02
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251887"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200615"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimación de cardinalidad (SQL Server)
   La lógica de estimación de cardinalidad, denominada Estimador de cardinalidad, se ha rediseñado en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] para mejorar la calidad de los planes de consulta y por lo tanto, para mejorar el rendimiento de las consultas. El nuevo estimador de cardinalidad incorpora suposiciones y algoritmos que funcionan bien en las cargas de trabajo OLTP y de almacenamiento de datos modernas. Se basa en un profundo estudio sobre la estimación de cardinalidad en las cargas de trabajo modernas y en lo que hemos aprendido durante los últimos 15 años para mejorar el estimador de cardinalidad de SQL Server. Los comentarios de los clientes indican que si bien la mayoría de las consultas se beneficiarán del cambio o no cambiarán, un número reducido puede mostrar regresiones en comparación con el estimador de cardinalidad anterior.  

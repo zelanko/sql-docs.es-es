@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b6019413-aebd-4ff7-831a-644572ad88b1
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f1f0fe6899be3f9828a8ba9d91f2c9abf7ba48b6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9c99945ad1e1d8c5027f7dfc63dcb725b0f0dac7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246125"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204385"
 ---
 # <a name="modifying-and-processing-the-market-basket-model-intermediate-data-mining-tutorial"></a>Modificar y procesar el modelo de cesta de la compra (Tutorial intermedio de minería de datos)
   Antes de procesar el modelo de minería de datos de asociación que creó, debe cambiar los valores predeterminados de dos de los parámetros: *soporte* y *probabilidad*.  

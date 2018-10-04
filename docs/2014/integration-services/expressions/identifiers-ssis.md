@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - regular identifiers [Integration Services]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - expressions [Integration Services], identifiers
 - qualified identifiers [Integration Services]
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 322a91c77eaac5433cada0cfef056e1688020dc6
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: bfcd429eeb6979fea8ba889212b5e56a7afee887
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084007"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154835"
 ---
 # <a name="identifiers-ssis"></a>Identificadores (SSIS)
   En las expresiones, los identificadores son columnas y variables que están disponibles para la operación. Puede utilizar en las expresiones identificadores regulares y calificados.  
@@ -41,7 +38,7 @@ ms.locfileid: "39084007"
   
 -   El primer carácter del nombre tiene que ser una letra (según se define en Unicode Standard 2.0) o un carácter de subrayado (_).  
   
--   Los caracteres subsiguientes pueden ser letras o números, tal como se define en el estándar Unicode 2.0, el carácter de subrayado (_), \@, $ y # caracteres.  
+-   Los caracteres siguientes pueden ser letras o números, tal como se define en el Estándar Unicode 2.0, el carácter de subrayado (_), o los caracteres \@, $ y #.  
   
 > [!IMPORTANT]  
 >  Los espacios incrustados y los caracteres especiales distintos de los especificados no son válidos en los identificadores regulares. Para poder usar espacios y caracteres especiales, debe utilizar un identificador calificado en lugar de un identificador regular.  
@@ -89,15 +86,15 @@ ms.locfileid: "39084007"
 >  Si se escriben ambos elementos con notación de puntos entre corchetes, el evaluador de expresiones interpretará el par como un identificador individual, no como una combinación de columnas de origen.  
   
 ## <a name="variables-in-expressions"></a>Variables en expresiones  
- Variables, cuando se hace referencia en las expresiones, deben incluir el \@ prefijo. Por ejemplo, el **contador** variable se hace referencia mediante el uso de \@contador. El \@ carácter no es parte del nombre de la variable; solo identifica la variable al evaluador. Si compila expresiones por las que el cuadro de diálogo cuadros [!INCLUDE[ssIS](../../includes/ssis-md.md)] proporciona el diseñador, el \@ carácter se agrega automáticamente al nombre de variable. No es válido para incluir espacios entre el \@ caracteres y el nombre de variable.  
+ Para hacer referencia a estas variables en expresiones, debe incluirse el prefijo \@. Por ejemplo, para hacer referencia a la variable **Counter**, debe utilizar \@Counter. El carácter \@ no forma parte del nombre de la variable; solo identifica la variable al evaluador de expresiones. Si genera expresiones a través de los cuadros de diálogo proporcionados por el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)], se agrega automáticamente el carácter \@ al nombre de la variable. No se permite incluir espacios entre el carácter \@ y el nombre de la variable.  
   
  Los nombres de las variables siguen las mismas reglas que los otros identificadores regulares:  
   
 -   El primer carácter del nombre tiene que ser una letra (según se define en Unicode Standard 2.0) o un carácter de subrayado (_).  
   
--   Los caracteres subsiguientes pueden ser letras o números, tal como se define en el estándar Unicode 2.0, el carácter de subrayado (_), \@, $ y # caracteres.  
+-   Los caracteres siguientes pueden ser letras o números, tal como se define en el Estándar Unicode 2.0, el carácter de subrayado (_), o los caracteres \@, $ y #.  
   
- Si un nombre de variable contiene caracteres distintos de los especificados, debe escribir la variable entre corchetes. Por ejemplo, los nombres de variables con espacios deben escribirse entre corchetes. El corchete de apertura sigue el \@ caracteres. Por ejemplo, el **mi nombre** variable se hace referencia como \@[My Name]. No se permite incluir espacios entre el nombre de la variable y los corchetes.  
+ Si un nombre de variable contiene caracteres distintos de los especificados, debe escribir la variable entre corchetes. Por ejemplo, los nombres de variables con espacios deben escribirse entre corchetes. El corchete de apertura sigue al carácter \@. Por ejemplo, para hacer referencia a la variable **Mi nombre** se usa \@[Mi nombre]. No se permite incluir espacios entre el nombre de la variable y los corchetes.  
   
 > [!NOTE]  
 >  Los nombres están definidos por el usuario y las variables del sistema distinguen mayúsculas y minúsculas.  

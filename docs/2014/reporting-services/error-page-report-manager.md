@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8311ed32-00f3-451d-8279-946429f5fee1
-caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b133cd5882ea3dfa2d44a9fa4984091bf1fbab10
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28366043f6681ab01cd3d1912d5180ae06914ae8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276111"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157655"
 ---
 # <a name="error-page-report-manager"></a>Página Error (Administrador de informes)
   Use la página Error para ver detalles acerca de una condición de error. Los errores del servidor o de la sesión aparecen en esta página. Los errores de validación relacionados con controles específicos de la página se muestran insertados junto al control que corresponda.  

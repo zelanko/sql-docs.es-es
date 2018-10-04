@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26454c7ed2c1daa5d4ce512066f0a0fcf0ec7479
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e0865d7a7fa43db751646d6f9debd19463a7ba23
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259391"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153469"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Atributos CSDLBI para el diseño de informes
   En esta sección se describen los atributos de las extensiones de CSDL para la creación de modelos tabulares que afectan al diseño de consultas de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
@@ -41,7 +38,7 @@ ms.locfileid: "37259391"
 |`ReferenceName`|Texto|El identificador usado para hacer referencia a esta entidad en una consulta de DAX. Si se omite, se usa el nombre.|  
 |`Caption`|Texto|El nombre para mostrar de la entidad.|  
 |`Documentation`|Texto|Texto descriptivo que se usa para ayudar a los usuarios empresariales a entender el significado de los datos.|  
-|`Hidden`|Boolean|Indica si se debe mostrar la entidad. El valor predeterminado es `false`.|  
+|`Hidden`|Boolean|Indica si se debe mostrar la entidad. De manera predeterminada, es `false`.|  
 |`CollectionCaption`|Texto|Nombre plural para hacer referencia a un conjunto de instancias de la entidad. Si se omite, se usa el atributo Caption.|  
 |`DisplayKey`|MemberRef[]|Lista ordenada de campos que se usa para identificar una instancia de la entidad para un usuario empresarial. Las referencias pueden incluir propiedades de instancia y de navegación. Cuando se hace referencia a una propiedad de navegación, se muestra el atributo `DisplayKey` de la entidad de destino. Si se omite el valor del atributo `DisplayKey`, se usa el campo Key.|  
 |`DefaultImage`|MemberRef|Referencia al campo que contiene una imagen usada para identificar visualmente una instancia de la entidad a un usuario empresarial. Si se omite, se usa el primer campo de imagen en la entidad, si existe alguno.|  

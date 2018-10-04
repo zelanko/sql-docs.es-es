@@ -1,13 +1,11 @@
 ---
-title: Evento WillExecute (ADO) | Documentos de Microsoft
+title: Evento WillExecute (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - WillExecute event [ADO]
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d0fd9c97018c5c15710067298a88b4996c5a699f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ec725dfdcfb7ad0b37c6fc1d3cbff0c56b315a46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282884"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623493"
 ---
 # <a name="willexecute-event-ado"></a>Evento WillExecute (ADO)
 El **WillExecute** eventos se llama justo antes de que se ejecuta un comando pendiente en una conexión.  
@@ -39,16 +36,16 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
   
 #### <a name="parameters"></a>Parámetros  
  *Source*  
- A **cadena** que contiene un comando SQL o un nombre de procedimiento almacenado.  
+ Un **cadena** que contiene un comando SQL o un nombre de procedimiento almacenado.  
   
  *CursorType*  
- A [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) que contiene el tipo de cursor para la **Recordset** que se abrirá. Con este parámetro, puede cambiar el cursor a cualquier tipo durante una **Recordset**[Open (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) operación. *CursorType* se omitirá para cualquier otra operación.  
+ Un [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) que contiene el tipo de cursor para el **Recordset** que se va a abrir. Con este parámetro, puede cambiar el cursor a cualquier tipo durante un **Recordset**[método Open (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) operación. *CursorType* se omitirá para cualquier otra operación.  
   
  *LockType*  
- A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) que contiene el tipo de bloqueo para el **Recordset** que se abrirá. Con este parámetro, puede cambiar el bloqueo a cualquier tipo durante una **RecordsetOpen** operación. *LockType* se omitirá para cualquier otra operación.  
+ Un [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) que contiene el tipo de bloqueo para el **Recordset** que se va a abrir. Con este parámetro, puede cambiar el bloqueo a cualquier tipo durante un **RecordsetOpen** operación. *LockType* se omitirá para cualquier otra operación.  
   
  *Opciones*  
- A **largo** valor que indica las opciones que pueden usarse para ejecutar el comando o abrir el **conjunto de registros**.  
+ Un **largo** valor que indica las opciones que pueden usarse para ejecutar el comando o abrir el **Recordset**.  
   
  *adStatus*  
  Un [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) valor de estado que puede ser **adStatusCantDeny** o **adStatusOK** cuando se llama a este evento. Si es **adStatusCantDeny**, este evento no puede solicitar la cancelación de la operación pendiente.  
@@ -62,15 +59,15 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *pConnection*  
  El [conexión ADO (objetos)](../../../ado/reference/ado-api/connection-object-ado.md) el objeto para el que se aplica esta notificación de eventos.  
   
-## <a name="remarks"></a>Notas  
- A **WillExecute** evento puede producirse debido a una conexión.  [Execute (método) (conexión de ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md), [método Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md), o [Open (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) método la *pConnection* parámetro debe siempre contienen una referencia válida a un **conexión** objeto. Si el evento es debido a **Connection.Execute**, *Connection* y *pCommand* parámetros están establecidos en **nada**. Si el evento es debido a **Recordset.Open**, *Connection* parámetro hará referencia el **Recordset** objeto y el *pCommand* parámetro se establece en **nada**. Si el evento es debido a **Command.Execute**, *pCommand* parámetro hará referencia el **comando** objeto y el *Connection* parámetro se establece en **nada**.  
+## <a name="remarks"></a>Comentarios  
+ Un **WillExecute** evento puede producirse debido a una conexión.  [Ejecutar el método (conexión de ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md), [método Execute (Command ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md), o [método Open (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) método la *pConnection* parámetro debería siempre contienen una referencia válida a un **conexión** objeto. Si el evento es debido a **Connection.Execute**, *Connection* y *pCommand* parámetros están establecidos en **nada**. Si el evento es debido a **Recordset.Open**, el *Connection* parámetro hará referencia el **Recordset** objeto y el *pCommand* parámetro se establece en **nada**. Si el evento es debido a **Command.Execute**, el *pCommand* parámetro hará referencia el **comando** objeto y el *Connection* parámetro se establece en **nada**.  
   
  **WillExecute** le permite examinar y modificar los parámetros de ejecución pendiente. Este evento puede devolver una solicitud de cancelación del comando pendiente.  
   
 > [!NOTE]
->  Si la versión original de origen para un **comando** es una secuencia especificada por el [propiedad CommandStream (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) propiedad, asignando una cadena nueva a la **WillExecute *** origen* parámetro cambia el origen de la **comando**. El **CommandStream** propiedad se borrará y [propiedad CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) propiedad se actualizará con el nuevo origen. La secuencia original especificada por **CommandStream** se publican y no son accesibles.  
+>  Si la versión original de origen para un **comando** es una secuencia especificada por el [propiedad CommandStream (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) propiedad, asignando una cadena nueva a la **WillExecute *** origen* parámetro cambia el origen de la **comando**. El **CommandStream** propiedad se borrará y [propiedad CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) propiedad se actualizará con el nuevo origen. La secuencia original especificada por **CommandStream** se publicará y no es accesible.  
   
- Si el dialecto de la nueva cadena de origen difiere de la configuración original de la [propiedad Dialect](../../../ado/reference/ado-api/dialect-property.md) propiedad (que correspondía a la **CommandStream**), debe especificar el dialecto correcto estableciendo el **dialecto** propiedad del objeto de comando al que hace referencia *pCommand*.  
+ Si el dialecto de la nueva cadena de origen difiere de la configuración original de la [propiedad Dialect](../../../ado/reference/ado-api/dialect-property.md) propiedad (que correspondía a la **CommandStream**), se debe especificar el dialecto correcto estableciendo el **dialecto** propiedad del objeto de comando al que hace referencia *pCommand*.  
   
 ## <a name="see-also"></a>Vea también  
  [Ejemplo de modelo de eventos de ADO (VC ++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   

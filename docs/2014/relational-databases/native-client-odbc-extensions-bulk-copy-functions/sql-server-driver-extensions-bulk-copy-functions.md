@@ -1,12 +1,10 @@
 ---
-title: Funciones de copia masiva | Microsoft Docs
+title: Las funciones de copia de forma masiva | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, bulk copy
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - functions [ODBC]
 ms.assetid: 6526b892-1d58-4f55-8335-f09887f6ea02
-caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bab3c80749bc7fedb721e7f0a8d776c98a3f312d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2888f34c1e4c4103845d07e569a0dbabeb2e4caa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425894"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133985"
 ---
 # <a name="bulk-copy-functions"></a>Bulk Copy Functions
   La extensión de la API de copia masiva específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client permite que las aplicaciones cliente agreguen filas de datos a una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rápidamente o las extraigan de ella.  
@@ -71,7 +68,7 @@ ms.locfileid: "37425894"
 -   [bcp_writefmt](bcp-writefmt.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones del controlador SQL Server](../../database-engine/dev-guide/sql-server-driver-extensions.md)   
+ [Extensiones de controlador de SQL Server](../../database-engine/dev-guide/sql-server-driver-extensions.md)   
  [Realizar operaciones de copia masiva &#40;ODBC&#41;](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

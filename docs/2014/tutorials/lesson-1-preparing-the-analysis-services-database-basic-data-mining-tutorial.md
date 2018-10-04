@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2a796977-6568-4705-9d27-86a9b36658c2
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fb226ca3445559047172aa8a8167876e1824b7d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f7e417f786da7344ad43ebaab826a8d0e28f8e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328956"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173437"
 ---
 # <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>Lección 1: Preparar la base de datos de Analysis Services (tutorial básico de minería de datos)
   Son un nuevo empleado de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] que se ha asignado la tarea con el diseño de una aplicación de business intelligence en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] espera aprovechar su [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] experiencia en minería de datos para detectar información interesante y procesable sobre las personas que han comprado bicicletas. Quieren que prevea qué clientes tienen más probabilidad de comprar una bicicleta en el futuro.  

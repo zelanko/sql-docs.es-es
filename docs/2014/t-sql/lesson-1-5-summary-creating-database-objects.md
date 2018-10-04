@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - creating database objects
@@ -14,12 +12,12 @@ ms.assetid: 5db8aebc-cc54-48d1-8cba-b2e2d21fa333
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1bf43461900067c83218dc07b2175ac42c8e3a8c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 11cd1134a770d62afeb50dd5da53c375b482b723
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43017890"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138155"
 ---
 # <a name="summary-creating-database-objects"></a>Resumen: Crear objetos de base de datos
   En este tutorial ha creado una base de datos y una tabla en la base de datos, ha insertado datos en la tabla, ha cambiado los datos y, a continuación, ha leído los datos de la tabla. La sintaxis de las instrucciones usadas solo es la sintaxis básica y en este tutorial no se tratan  muchas de las opciones de sintaxis. Para obtener más información acerca de estas instrucciones, lea la sintaxis completa de las instrucciones en los Libros en pantalla de SQL Server y revise los diversos ejemplos que se proporcionan en los temas.  

@@ -1,42 +1,39 @@
 ---
-title: Crear y ejecutar un comando Simple | Documentos de Microsoft
+title: Crear y ejecutar un comando Simple | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], creating and executing
 - commands [ADO], creating and executing
 ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ea6ec81992ba286d589f83bcd1c23f751249f89
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 644ee0c1ca4baee72a5fd33aeb16843dc7c59795
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270914"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811353"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>Crear y ejecutar un comando Simple
 Un comando simple es uno que no tiene parámetros y no requiere ninguna persistencia. Hay tres maneras de crear y ejecutar un comando simple.  
   
--   Con un **comando** objeto  
+-   Mediante un **comando** objeto  
   
--   Con un **conexión** objeto  
+-   Mediante un **conexión** objeto  
   
--   Con un **Recordset** objeto  
+-   Mediante un **Recordset** objeto  
   
 ## <a name="using-a-command-object"></a>Uso de un objeto de comando  
- Para crear un comando simple mediante una **comando** objeto, debe asignar la instrucción en el **CommandText** propiedad de un **comando** de objeto y establecer el valor adecuado para el **CommandType** propiedad. Ejecutar el comando requiere que se asigna una conexión abierta a la **ActiveConnection** propiedad de la **comando** objeto, seguida de una llamada a la **Execute** (método) en el **comando** objeto.  
+ Para crear un comando simple mediante una **comando** objeto, debe asignar las instrucciones para la **CommandText** propiedad de un **comando** de objeto y establecer el valor adecuado para el **CommandType** propiedad. Ejecutando el comando requiere que se asigna una conexión abierta a la **ActiveConnection** propiedad de la **comando** objeto seguida de una llamada a la **Execute** (método) en el **comando** objeto.  
   
- El fragmento de código siguiente muestra el método básico del uso de la **comando** objeto que se va a ejecutar un comando en un origen de datos. Este ejemplo utiliza un comando que devuelve filas y devuelve los resultados de la ejecución del comando como un **Recordset** objeto.  
+ El fragmento de código siguiente muestra el método básico de uso de la **comando** objeto que se va a ejecutar un comando en un origen de datos. Este ejemplo utiliza un comando que devuelve filas y devuelve los resultados de la ejecución del comando como un **Recordset** objeto.  
   
 ```  
     'BeginBasicCmd  
@@ -111,8 +108,8 @@ End Function
 'EndNewConnection  
 ```  
   
-## <a name="using-a-recordset-object"></a>Mediante un objeto de conjunto de registros  
- También puede crear un comando como una cadena de texto y PA a la **abiertos** método en un **Recordset** objeto, junto con el tipo de comando (adCmdText), para la ejecución. Esto se muestra en el siguiente fragmento de código.  
+## <a name="using-a-recordset-object"></a>Uso de un objeto de conjunto de registros  
+ También puede crear un comando como una cadena de texto y PA para el **abierto** método en un **Recordset** objeto, junto con el tipo de comando (adCmdText), para su ejecución. Esto se muestra en el siguiente fragmento de código.  
   
 ```  
   
@@ -151,7 +148,7 @@ Set objRs = Nothing
 ```  
   
 ## <a name="using-a-connection-object"></a>Uso de un objeto de conexión  
- También puede ejecutar un comando en un objeto de conexión abierto. El ejemplo de código anterior se convertirá en esto:  
+ También puede ejecutar un comando en un objeto de conexión abierto. El ejemplo de código anterior se convierte en esto:  
   
 ```  
 Const DS = "MySqlServer"  

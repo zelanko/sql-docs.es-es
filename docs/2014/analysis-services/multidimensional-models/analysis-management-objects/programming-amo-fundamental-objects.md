@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - server objects [AMO]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - database objects [AMO]
 - Analysis Management Objects, database objects
 ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d85bbc23bd016f2e1dd1d4842a5bd66645035ec2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cc100d99d3e125c22c04aac8cf092646f2b0cfa1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321305"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168995"
 ---
 # <a name="programming-amo-fundamental-objects"></a>Programar objetos fundamentales de AMO
   Los objetos fundamentales son generalmente objetos simples y sencillos. Estos objetos se crean normalmente con instancias y después, cuando ya no se necesitan, el usuario se desconecta de ellos. Las clases fundamentales incluyen los objetos siguientes: <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource>y <xref:Microsoft.AnalysisServices.DataSourceView>. El único objeto complejo en los objetos fundamentales de AMO es <xref:Microsoft.AnalysisServices.DataSourceView>, que requiere detalles para generar el modelo abstracto que representa la vista del origen de datos.  

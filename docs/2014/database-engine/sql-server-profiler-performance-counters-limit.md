@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.performancecounterlimit.f1
 helpviewer_keywords:
 - Performance Counters List dialog box
 ms.assetid: d10140ef-36c4-449c-b365-1cff1b2524e4
-caps.latest.revision: 19
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d2265147cf660430e1995030354013a518e76a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 74ac3839567366c429c64e0139f8e86793aa942a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237225"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165225"
 ---
 # <a name="sql-server-profiler---performance-counters-limit"></a>Límite de contadores de rendimiento (SQL Server Profiler)
   Utilice el cuadro de diálogo Límite de contadores de rendimiento para limitar la información de un archivo de registro de rendimiento del Monitor de sistema cuando lo correlacione con un seguimiento del [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] . Puede utilizar este cuadro de diálogo para seleccionar los contadores que deben mostrarse y utilizarse para la correlación.  

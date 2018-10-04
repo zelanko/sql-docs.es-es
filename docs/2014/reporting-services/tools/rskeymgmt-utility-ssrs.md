@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e39e1bd9772ea1e05e4e2c0dbb951cba721caaa1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28ce36cbd728787e69fcf00963aa024896d60750
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214835"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116901"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt (utilidad) (SSRS)
   Extrae, restaura, crea y elimina la clave simétrica usada para proteger contra el acceso no autorizado los datos importantes del servidor de informes. Esta utilidad también se usa para unir instancias del servidor de informes en una implementación de ampliación horizontal. Una *implementación escalada del servidor de informes* se refiere a varias instancias del servidor de informes que comparten una sola base de datos de servidor de informes.  
@@ -82,7 +79,7 @@ ms.locfileid: "37214835"
  **-r**  *installationID*  
  Quita la información de clave simétrica de una instancia de servidor de informes concreta y, por lo tanto, quita el servidor de informes de una implementación escalada. *installationID* es un valor de GUID que se puede encontrar en el archivo RSReportserver.config.  
   
- `-f`  *archivo*  
+ `-f`  *Archivo*  
  Especifica una ruta válida al archivo que almacena una copia de seguridad de las claves simétricas.  
   
  Para **rskeymgmt -e**, la clave simétrica se escribe en el archivo especificado.  
@@ -171,7 +168,7 @@ rskeymgmt -r <installationID>
 ## <a name="file-location"></a>Ubicación del archivo  
  Rskeymgmt.exe se encuentra en **\<*unidad*>:\Archivos de programa\Microsoft SQL Server\110\Tools\Binn** o en **\<*unidad*>:\Archivos de programa (x86)\Microsoft SQL Server\110\Tools\Binn**. Puede ejecutar la utilidad desde cualquier carpeta del sistema de archivos.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El servidor de informes cifra las credenciales almacenadas y la información de la conexión. Para cifrar los datos, se utiliza una clave pública y una clave simétrica. Para que el servidor de informes funcione, la base de datos debe tener claves válidas. Puede usar **rskeymgmt** para realizar una copia de seguridad de las claves, eliminarlas o restaurarlas. Si las claves no se pueden restaurar, esta herramienta proporciona un método para eliminar el contenido cifrado que ya no se pueda usar.  
   
  La utilidad **rskeymgmt** se usa para administrar el conjunto de claves que se define durante la instalación o durante la inicialización. Conecta con el servicio Servidor de informes de Windows local mediante un punto final de llamada a procedimiento remoto (RPC). El servicio Servidor de informes de Windows debe estar en ejecución para que esta utilidad funcione.  

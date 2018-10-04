@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a8204e68-c476-4fe0-8bfc-e6dd5c0da4cf
-caps.latest.revision: 5
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 5991bbfb135ccd0ab65f342bf59648e4c82de36e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b3268898498ff33273eba4aca0c67315001bce6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268101"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161455"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>Acerca de los términos de licencia de SQL Server (SSCM)
   El [!INCLUDE[msCoName](../../includes/msconame-md.md)]términos de licencia del Software se copian en el equipo local cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado. En el caso de que se instalen en el mismo equipo varias instancias de la misma edición e idioma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se aplicará una única copia de los términos de licencia a todas las instancias de esa edición e idioma. Los archivos se escriben en: %ProgramFiles%\Microsoft SQL Server\110\License Terms\ o en % ProgramFiles (x86) %\Microsoft SQL Server\110\License términos\\.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Sources Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Sources element
 ms.assetid: fefe8f01-4c62-4b70-9bf6-f11d2f01623a
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1aae2aca405aaabce130400d4d5896a6ae823851
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1e03eb7156b05236d302c8e1bff54932a357cf2f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304175"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109765"
 ---
 # <a name="sources-element-xmla"></a>Elemento Sources (XMLA)
   Contiene una colección de [origen](source-element-xmla.md) para los elementos primarios [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md) elemento.  
@@ -50,7 +47,7 @@ ms.locfileid: "37304175"
 </MergePartitions>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -65,7 +62,7 @@ ms.locfileid: "37304175"
 |Elementos primarios|[MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)|  
 |Elementos secundarios|[Source](source-element-xmla.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se combinan las cuatro particiones del grupo de medida `Internet Sales` en la partición de destino `Internet_Sales_2004` . El ejemplo usa el cubo Adventure Works DW de la base de datos de ejemplo [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 02bcccd0-99e1-4a08-9401-f1f1147d184b
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 40ccb15e1e6fb3b38983b496ebccef1ffe153119
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e009c9e498c28ee0b7f0efbd4571d9e50cb061a2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189502"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172841"
 ---
 # <a name="analysis-services-features-and-tasks"></a>Características y tareas de Analysis Services
   La documentación básica de Analysis Services está organizada por modelado y modo de servidor para que pueda centrarse únicamente en las herramientas, tareas y características disponibles en el modo que tiene instalado. Las tareas de administración de servidores que abarcan varios modos se encuentran en instancias de servidor.  

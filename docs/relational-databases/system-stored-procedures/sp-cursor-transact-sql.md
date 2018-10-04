@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f4aa2ae97b594372e92283520a9346d1524b88a
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c2dae72cf4246b2d78b246e52ca96d5f52f7183a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032205"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725273"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +99,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="return-code-values"></a>Valores de código de retorno  
  Cuando se usa una RPC, una operación DELETE o UPDATE posicionada con un número de búfer 0 devolverá un mensaje DONE con un *rowcount* de 0 (error) o 1 (correcto) para cada fila del búfer de captura.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="optype-parameter"></a>Parámetro optype  
  A excepción de las combinaciones de SETPOSITION con UPDATE, DELETE, REFRESH o bloqueo; ABSOLUTA con UPDATE o DELETE, o la *optype* valores son mutuamente excluyentes.  

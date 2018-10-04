@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - snippets [Transact-SQL], surround with
 - IntelliSense [SQL Server], surround with snippets
 - Transact-SQL snippets, surround with
 ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4512a24385a4a24ef2b4bc9834e7a78e80ca89b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 80018ea80f80f7c17412572005b8e8fb43004285
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264391"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170225"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>Insertar fragmentos de código de Transact-SQL para rodear
   Un fragmento de código rodea con es una plantilla que puede utilizar como punto inicial al agregar un conjunto de instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] en un bloque BEGIN, IF o WHILE.  

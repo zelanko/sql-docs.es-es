@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
-caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f4760d57cec11c6955e1ad87d4278d6c22a55ee7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b3789cee741cbcf53ba0db5d04af5cc203bea8a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255807"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167975"
 ---
 # <a name="exporting-reports-report-builder-and-ssrs"></a>Exportar informes (Generador de informes y SSRS)
   Después de ejecutar un informe, puede exportarlo a otro formato, como Excel o PDF, o exportarlo generando un documento de servicio de Atom, enumerando las fuentes de distribución de datos que cumplen con Atom y están disponibles en informe.  

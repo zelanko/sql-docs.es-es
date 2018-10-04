@@ -1,38 +1,35 @@
 ---
-title: SQLGetInfo (controlador de acceso) | Documentos de Microsoft
+title: SQLGetInfo (controlador de Access) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetInfo function [ODBC], Access Driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a761fe38b7d162d7e43ae2f9148626dadff57e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e559bcf9f66980c6c4ecd7a753e49e21819da54d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904858"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696283"
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (controlador de Access)
 > [!NOTE]  
 >  En este tema se proporciona información específica del controlador de acceso. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** es compatible con el tipo de información de SQL_FILE_USAGE. El valor devuelto es un entero de 16 bits con signo que indica cómo el controlador trata directamente los archivos en un origen de datos:  
+ **SQLGetInfo** es compatible con el tipo de información SQL_FILE_USAGE. El valor devuelto es un entero de 16 bits que indica el modo en que el controlador trata directamente los archivos en un origen de datos:  
   
 -   SQL_FILE_NOT_SUPPORTED: El controlador no es un controlador de nivel único.  
   
--   SQL_FILE_TABLE: Un controlador de nivel único trata los archivos en un origen de datos como tablas.  
+-   SQL_FILE_TABLE: Un controlador de nivel único trata los archivos de origen de datos como tablas.  
   
 -   SQL_FILE_QUALIFIER: Un controlador de nivel único trata los archivos en un origen de datos como un calificador.  
   
@@ -41,7 +38,7 @@ ms.locfileid: "32904858"
 ## <a name="sqlbookmarkpersistence"></a>SQL_BOOKMARK_PERSISTENCE  
  SQL_BP_SCROLL &AMP;#124; SQL_BP_UPDATE [1]  
   
- [1] marcadores se conservan después de una instrucción commit pero no se conservan después de una operación de deshacer.  
+ [1] marcadores se conservan después de una confirmación, pero no se conservan después de una operación de reversión.  
   
 ## <a name="sqlconvertbinary"></a>SQL_CONVERT_BINARY  
  SQL_CVT_DOUBLE &AMP;#124; SQL_CVT_FLOAT &AMP;#124; SQL_CVT_INTEGER &AMP;#124; SQL_CVT_NUMERIC &AMP;#124; SQL_CVT_REAL &AMP;#124; SQL_CVT_SMALLINT &AMP;#124; SQL_CVT_VARCHAR &AMP;#124; SQL_CVT_WVARCHAR  
@@ -104,7 +101,7 @@ ms.locfileid: "32904858"
 ||4.0|04.00.0000|  
   
 > [!NOTE]  
->  No se admiten las versiones 1.0 y 1.1. Además, no hay ninguna diferencia en el formato de datos en las versiones de Microsoft Access 3.0, 7.0 y 97.  
+>  No se admiten las versiones 1.0 y 1.1. Además, no hay ninguna diferencia en el formato de datos en las versiones de Microsoft Access 97, 7.0 y 3.0.  
   
 ## <a name="sqlddlindex"></a>SQL_DDL_INDEX  
  SQL_DL_CREATE_INDEX  
@@ -181,7 +178,7 @@ ms.locfileid: "32904858"
   
  NUMBER  
   
- OLEOBJECT  
+ CLASES OLEOBJECT  
   
  OWNERACCESS  
   
@@ -209,7 +206,7 @@ ms.locfileid: "32904858"
   
  ARRIBA  
   
- TRANSFORMAR  
+ TRANSFORMACIÓN  
   
  UNSIGNEDBYTE  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ReferenceMeasureGroupDimension Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ReferenceMeasureGroupDimension data type
 ms.assetid: 81f7b83e-71a3-4eab-b291-0500d05903dc
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8e2134f14ad34f14cbf1b7f6a2858fe14485bbe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 29a3a0a6e396fc3c8d1ff2e94c9f8f0c070e7f36
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159316"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118055"
 ---
 # <a name="referencemeasuregroupdimension-data-type-assl"></a>Tipo de datos ReferenceMeasureGroupDimension (ASSL)
   Define un tipo de datos derivado que representa una dimensión indirectamente relacionada con la tabla de hechos a través de una dimensión intermedia. (Por ejemplo, un grupo de medidas Sales puede hacer referencia a una dimensión Geography, que se relaciona a través de la dimensión Customer).  
@@ -62,7 +59,7 @@ ms.locfileid: "37159316"
 |Elementos secundarios|[IntermediateCubeDimensionID](../properties/id-element-assl.md), [IntermediateGranularityAttributeID](../properties/attributeid-element-assl.md), [materialización](../properties/materialization-element-assl.md)|  
 |Elementos derivados|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>.  
   
 ## <a name="see-also"></a>Vea también  

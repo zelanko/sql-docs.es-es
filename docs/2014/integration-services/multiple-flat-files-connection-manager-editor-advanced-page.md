@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multifile.advanced.f1
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
-caps.latest.revision: 36
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cc475677c9e122776deb58d749f0630b1bf57294
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dda5cb294536354ed4bcc5003983d36f61167007
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246745"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143335"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>Editor del administrador de conexiones de varios archivos planos (página Avanzadas)
   Use la página **Avanzadas** del cuadro de diálogo **Editor del Administrador de conexiones de varios archivos planos** para establecer propiedades como el tipo de datos y los delimitadores de cada columna en los archivos de texto a los que se conecta el administrador de conexiones de archivos planos.  

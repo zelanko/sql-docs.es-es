@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], running
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - UpgradeAdvisorWizardCmd utility
 - XML formats [Upgrade Advisor]
 ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
-caps.latest.revision: 25
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f30f9169e352b7ac7b889d0ca066eadf6c1778db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ee501c8e576363fd4a4bc15883ca322490d60908
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330955"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150775"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Ejecutar el Asesor de actualizaciones (símbolo del sistema)
   Use la **UpgradeAdvisorWizardCmd** utilidad para ejecutar el Asesor de actualizaciones desde el símbolo del sistema. Puede elegir recibir los resultados en formato XML o en un archivo con valores separados por comas.  
@@ -60,10 +57,10 @@ where <server_info> is any combination of the following:
  **-Instancia** *instance_name*  
  Especifica el nombre de la instancia que se va a analizar. No existe ningún valor predeterminado. Si no especifica este parámetro, [!INCLUDE[ssDE](../../includes/ssde-md.md)] no se examina. El valor para una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es MSSQLSERVER. Para una instancia con nombre, utilice el nombre de la instancia.  
   
- **-ASInstance***nombredeinstanciaas  *  
+ **-ASInstance***nombredeinstanciaas*   
  Especifica el nombre de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se va a analizar. No existe ningún valor predeterminado. Si no especifica este valor, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no se examina. El valor para la instancia predeterminada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es MSSQLServerOLAPService. Para una instancia con nombre, utilice el nombre de la instancia.  
   
- **-RSInstance***nombredeinstanciars  *  
+ **-RSInstance***nombredeinstanciars*   
  Especifica el nombre de la instancia de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se va a analizar. No existe ningún valor predeterminado. Si no especifica este valor, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no se examina. El valor para una instancia predeterminada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es ReportServer. Para una instancia con nombre, utilice el nombre de la instancia.  
   
  **-SqlUser** *login_id*  
@@ -84,7 +81,7 @@ where <server_info> is any combination of the following:
 |entero positivo|El análisis se llevó a cabo correctamente pero se encontraron problemas de actualización.|  
 |entero negativo|Error en el análisis.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Es posible proporcionar toda la información que se requiere para ejecutar el análisis, excepto los nombres de usuarios y contraseñas para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en un archivo de configuración XML. Este archivo de configuración XML se documenta en la plantilla. Si no utiliza un archivo de configuración, puede analizar todos los componentes instalados en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la configuración predeterminada especificando nombres de equipos y nombres de instancias. Vea la tabla "Descripción de los elementos" más adelante en este tema para obtener una descripción de la configuración del archivo de configuración predeterminada.  
   
 ## <a name="configuration-file-template"></a>Plantilla del archivo de configuración  

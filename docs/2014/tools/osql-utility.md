@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], osql
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
-caps.latest.revision: 48
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd66af98effae023f2a1436b6eb88e76c78a2e44
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bbf8009d078058e825360190b268c3cbb124bcdf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240005"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123711"
 ---
 # <a name="osql-utility"></a>osql (utilidad)
   La utilidad **osql** permite especificar archivos de script, procedimientos del sistema e instrucciones de [!INCLUDE[tsql](../includes/tsql-md.md)] . Esta herramienta utiliza ODBC para comunicarse con el servidor.  
@@ -195,7 +192,7 @@ osql -E -q "select name, object_id from %table%"
 > [!NOTE]  
 >  Las opciones **-n**, **-O** y **-D** han dejado de admitirse en **osql**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  La utilidad **osql** se inicia directamente desde el sistema operativo con las opciones en mayúsculas o en minúsculas, tal como se muestran aquí. Después de iniciar **osql**acepta instrucciones SQL y las envía a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de forma interactiva. Se da formato a los resultados y se muestran en la pantalla (**stdout**). Utilice QUIT o EXIT para salir de **osql**.  
   
  Si no especifica un nombre de usuario al iniciar **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] comprueba las variables de entorno y las utiliza, por ejemplo, **osqluser = (*`user`*)** o **osqlserver = (*`server`*)**. Si no se establecen variables de entorno, se utilizará el nombre de usuario de la estación de trabajo. Si no especifica un servidor, se utilizará el nombre de la estación de trabajo.  

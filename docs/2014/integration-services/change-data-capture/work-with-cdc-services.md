@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - cdcServ
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
-caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2b37eb9e852dd7b9559ed4cb15e85e7613114ac3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c500fc1313fb4f5d6cbf6cd6f8c19a8662069e0e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188812"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105425"
 ---
 # <a name="work-with-cdc-services"></a>Trabajar con servicios CDC
   Puede usar la Consola de configuración del servicio CDC para crear un nuevo servicio CDC y para preparar una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para CDC.  

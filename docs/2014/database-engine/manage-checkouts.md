@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], checkouts
 - checkouts [SQL Server Management Studio]
 - checking out files
 ms.assetid: ddd4adba-d432-4005-9cb2-bb9ee3163d8e
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f2f1d25a1344f395779d084c659fc7a4579f098c
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 9de9a1f8ceca0fbb05ab2b6680c5fcc34c951109
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813051"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183791"
 ---
 # <a name="manage-checkouts"></a>Administrar desprotecciones
   Una vez que un archivo se ha agregado al control de código fuente, es necesario desprotegerlo antes de poder modificarlo. Cuando se desprotege un archivo del control de código fuente, el proveedor de control de código fuente crea una copia de la última versión en el disco local y quita el atributo de solo lectura del archivo. En algunas circunstancias, quizás sea necesario modificar un archivo sin desprotegerlo. Para obtener más información acerca de cómo editar un archivo sin desprotegerlo, vea [editar archivos protegidos](../../2014/database-engine/edit-checked-in-files.md).  

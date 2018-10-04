@@ -4,27 +4,21 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - connecting to SQL Server 2008, SQL Server permission
 - connecting to SQL Server 2008, synchronization
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
-caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 08744f04acbc5ad066be78b90f8880459ce74629
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 2827824224488cbaad99df0784159a5231a7eade
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40394518"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773943"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>Conexión a SQL Server (MySQLToSQL)
 Para migrar bases de datos MySQL a SQL Server, debe conectarse a la instancia de destino de SQL Server. Cuando se conecta, SSMA obtiene metadatos acerca de todas las bases de datos en la instancia de SQL Server y muestra los metadatos de la base de datos en el Explorador de metadatos de SQL Server. SSMA almacena la información de la instancia de SQL Server están conectados a, pero no almacena las contraseñas.  

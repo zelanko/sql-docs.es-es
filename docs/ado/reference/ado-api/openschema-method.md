@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - OpenSchema method [ADO]
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eec10015d25cb1840dfd7aa88a07ed3219fd4436
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3481d9b7c186f3492e403b6881f4ffafbe90912b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982737"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787291"
 ---
 # <a name="openschema-method"></a>Método OpenSchema
 Obtiene información de esquema de base de datos del proveedor.  
@@ -50,7 +47,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  *SchemaID*  
  El GUID para una consulta de esquema del proveedor no definido por la especificación de OLE DB. Este parámetro es obligatorio si *QueryType* está establecido en **adSchemaProviderSpecific**; en caso contrario, no se utiliza.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **OpenSchema** método devuelve información autodescriptiva sobre el origen de datos, por ejemplo, ¿cuáles son las tablas del origen de datos, las columnas en las tablas, y admiten los tipos de datos.  
   
  El *QueryType* argumento es un GUID que indica las columnas devueltas (esquemas). La especificación OLE DB tiene una lista completa de los esquemas.  

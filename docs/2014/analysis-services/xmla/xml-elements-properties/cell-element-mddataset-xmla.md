@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Cell Element (MDDataSet)
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Cell element
 ms.assetid: c4ea08a4-f653-4ade-be07-b91eb5b1ef32
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f07798a28c59597575de08bf5d0f3ea1d7087c8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c422fdd13c03a2ab3c5a9cd58ce4cca1d22c5d6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269511"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091675"
 ---
 # <a name="cell-element-mddataset-xmla"></a>Elemento Cell (MDDataSet) (XMLA)
   Contiene información acerca de una sola celda que contiene un elemento primario [CellData](celldata-element-xmla.md) elemento.  
@@ -50,7 +47,7 @@ ms.locfileid: "37269511"
 </CellData>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -71,7 +68,7 @@ ms.locfileid: "37269511"
 |---------------|-----------------|  
 |CellOrdinal|Requiere `unsignedInt` atributo. Posición ordinal de la celda dentro del conjunto de datos multidimensional.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  En el elemento `root` primario, el elemento `Axes` va seguido del elemento `CellData`, una colección de elementos `Cell` que contienen los valores de propiedad para cada celda devuelta en un conjunto de datos multidimensional. El elemento `Cell` contiene el atributo `CellOrdinal`, que indica la posición ordinal basada en cero de la celda dentro del conjunto de datos multidimensional, y un elemento para cada valor de propiedad de la celda asociado a la celda. Un elemento XML independiente define cada valor de propiedad de la celda en el elemento `Cell`. El valor de la propiedad de la celda es los datos que se encuentran en el elemento XML; el nombre de la propiedad de la celda, definido en el elemento `CellInfo` del elemento raíz primario, corresponde al nombre del elemento XML.  
   
  La sintaxis siguiente describe un valor de propiedad de la celda:  

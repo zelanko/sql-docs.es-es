@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 85832491b5129111b44daa724475749086588bfa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 30068c028b497b00408ca87cf1e796df8ba34926
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294065"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081716"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Gráficos de formas (Generador de informes y SSRS)
   Los gráficos de formas muestran los datos de valores como porcentajes de un total. Los gráficos de formas se usan normalmente para mostrar comparaciones proporcionales entre distintos valores de un conjunto. Las categorías se representan mediante segmentos individuales de la forma. El tamaño del segmento lo determina el valor. Los gráficos de formas son similares en cuanto a uso a los gráficos circulares, excepto en que los primeros ordenan las categorías de mayor a menor.  

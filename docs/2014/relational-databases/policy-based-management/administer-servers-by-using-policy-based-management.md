@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - facet See facets
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - facets [Policy-Based Management], about facets
 - PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
-caps.latest.revision: 75
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 39fdef1daedc2a41fda8e40793ad1ef647f0c8a2
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 91483db92422a4510a6cefd2eca7d7f1f6f3f1e5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808341"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067630"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrar servidores mediante administración basada en directivas
   La administración basada en directivas es un sistema para administrar una o varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando los administradores de directivas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizan la administración basada en directivas, utilizan [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para crear directivas que permitan administrar las entidades en el servidor, como la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], las bases de datos u otros objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

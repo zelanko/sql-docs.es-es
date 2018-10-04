@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ValueColumn Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ValueColumn element
 ms.assetid: 6c2d6822-8ecc-46df-9fa9-bb92ac716c36
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d7279cb1f8f9bc5a7dc8c9e564081a227edc32f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 876d5efb4d4b84e8f42cfd3c360258c8cb67d865
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231905"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048146"
 ---
 # <a name="valuecolumn-element-assl"></a>Elemento ValueColumn (ASSL)
   Identifica la columna que proporciona el valor del elemento primario.  
@@ -44,7 +41,7 @@ ms.locfileid: "37231905"
 </DimensionAttribute>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -59,7 +56,7 @@ ms.locfileid: "37231905"
 |Elementos primarios|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si el [NameColumn](namecolumn-element-assl.md) elemento de `DimensionAttribute` se especifica, el mismo `DataItem` valores se utilizan como valores predeterminados para el `ValueColumn` elemento. Si el `NameColumn` elemento de `DimensionAttribute` no se especifica y el [KeyColumns](../collections/keycolumns-element-assl.md) colección de `DimensionAttribute` contiene un único [KeyColumn](keycolumn-element-assl.md) elemento representa una columna de clave con una cadena tipo de datos, los mismos `DataItem` valores se utilizan como valores predeterminados para el `ValueColumn` elemento.  
   
  Para obtener más información sobre la `DataItem` tipo, incluida una tabla de objetos de Analysis Services Scripting Language (ASSL) y las propiedades de la `DataItem` , vea [tipo de datos DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  

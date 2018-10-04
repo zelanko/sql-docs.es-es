@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1a6c138e-643b-4ae6-ad08-93631f149c20
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5e2605e5ab2c36c282adec778f6f20ebb2e37f1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 559f6aa6b31b8998703a93e84dc100ce375cbda8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189422"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139535"
 ---
 # <a name="modifying-the-forecasting-structure-intermediate-data-mining-tutorial"></a>Modificar la estructura de previsión (tutorial intermedio de minería de datos)
   La estructura de minería de datos que creó en la tarea anterior contiene un modelo de previsión (Forecasting) individual. Antes de procesar y explorar el modelo, debe cambiar su estructura ligeramente y modificar una de sus propiedades.  

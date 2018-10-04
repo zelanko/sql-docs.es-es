@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataType Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DataType element
 ms.assetid: efe6f717-8288-4ca2-85ed-9b63d27c02d8
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 16bc234f74aa8d6eb80607c7d03d63da8130e8ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92c3981344d0425c46ef283fa8792de942d6193b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231875"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191045"
 ---
 # <a name="datatype-element-assl"></a>Elemento DataType (ASSL)
   Define el tipo de datos del elemento asociado.  
@@ -46,7 +43,7 @@ ms.locfileid: "37231875"
 </DataItem>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,13 +58,13 @@ ms.locfileid: "37231875"
 |Elemento primario|[DataItem](../data-type/dataitem-data-type-assl.md), [medida](../objects/measure-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los valores de `DataType` se definen en la enumeración `System.Data.OleDb.OleDbType`. Sin embargo, solo los valores de enumeración de la tabla siguiente son válidos en el elemento `DataType`.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |*BigInt*|Entero de 64 bits con signo. Este tipo de datos se asigna a la `Int64` tipo de datos en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] tipo de .NET Framework y los datos DBTYPE_I8 en OLE DB.|  
-|*BOOL*|Valor booleano. Este tipo de datos se asigna al tipo de datos `Boolean` en .NET Framework y al tipo de datos DBTYPE_BOOL en OLE DB.|  
+|*BOOL*|Valor Boolean. Este tipo de datos se asigna al tipo de datos `Boolean` en .NET Framework y al tipo de datos DBTYPE_BOOL en OLE DB.|  
 |*Moneda*|Un valor de moneda comprendido entre -2<sup>63</sup> (o -922.337.203.685.477,5808) a 2<sup>63</sup>-1 (o + 922.337.203.685.477,5807) con una precisión de una diezmilésima de unidad de moneda. Este tipo de datos se asigna al tipo de datos `Decimal` en .NET Framework y al tipo de datos DBTYPE_CY en OLE DB.|  
 |*Date*|Fecha de los datos, almacenada como un número de punto flotante de precisión doble. La parte entera es el número de días transcurridos desde el 30 de diciembre de 1899 y la parte decimal es una fracción del día. Este tipo de datos se asigna al tipo de datos `DateTime` en .NET Framework y al tipo de datos DBTYPE_DATE en OLE DB.|  
 |*Doble*|Número de punto flotante de precisión doble en el intervalo de -1,79E +308 a 1,79E +308. Este tipo de datos se asigna al tipo de datos `Double` en .NET Framework y al tipo de datos DBTYPE_R8 en OLE DB.|  

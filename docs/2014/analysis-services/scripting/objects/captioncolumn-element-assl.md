@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CaptionColumn Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CaptionColumn element
 ms.assetid: bdb1b9b8-b5d5-4d91-81c7-8de8635bbb83
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6c60ac92841ce35e7b4c00c80da4be4eeed6bd96
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc8f782456b47f03ca8a7eab1bf9407020fda3f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273351"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108995"
 ---
 # <a name="captioncolumn-element-assl"></a>Elemento CaptionColumn (ASSL)
   Define la columna que proporciona el título para el atributo.  
@@ -46,7 +43,7 @@ ms.locfileid: "37273351"
 </AttributeTranslation>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37273351"
 |Elementos primarios|[AttributeTranslation](../data-type/translation-data-type-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para obtener más información sobre la `DataItem` tipo, incluida una tabla de objetos de Analysis Services Scripting Language (ASSL) y las propiedades de la `DataItem` , vea [tipo de datos DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  
   
  El elemento que se corresponde con el elemento primario de `CaptionColumn` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.AttributeTranslation>.  

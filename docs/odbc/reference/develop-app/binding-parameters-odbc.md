@@ -1,48 +1,45 @@
 ---
-title: Enlazar parámetros ODBC | Documentos de Microsoft
+title: Enlazar parámetros ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - binding parameters [ODBC]
 ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc39c8183c996dd4d011d9bcdaba6dfe1f94cc05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0cdbb90bfbca6994a875a0653ee9d34c8e8ffb9e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909309"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775773"
 ---
 # <a name="binding-parameters-odbc"></a>Enlazar parámetros ODBC
-Cada parámetro en una instrucción SQL debe estar asociado, o *enlazado,* a una variable en la aplicación antes de que se ejecuta la instrucción. Cuando la aplicación enlaza una variable a un parámetro, se describe esa variable: dirección, tipo de datos de C y así sucesivamente, para el controlador. También se describe el propio parámetro: datos de SQL tipo, precisión y así sucesivamente. El controlador almacena esta información en la estructura se mantiene para esa instrucción y usa la información para recuperar el valor de la variable cuando se ejecuta la instrucción.  
+Cada parámetro en una instrucción SQL debe estar asociado, o *enlazado,* a una variable en la aplicación antes de que se ejecuta la instrucción. Cuando la aplicación enlaza una variable a un parámetro, describe esa variable, dirección, tipo de datos de C y así sucesivamente, al controlador. También se describe el propio parámetro: datos de SQL tipo, precisión y así sucesivamente. El controlador almacena esta información en la estructura se mantiene para esa instrucción y usa la información para recuperar el valor de la variable cuando se ejecuta la instrucción.  
   
- Parámetros se pueden enlazar o Reenlazar en cualquier momento antes de que se ejecuta una instrucción. Si se vuelve a enlazar un parámetro después de ejecutar una instrucción, el enlace no se aplica hasta que la instrucción se ejecuta de nuevo. Para enlazar un parámetro a una variable distinta, una aplicación simplemente vuelve a enlazar el parámetro con la nueva variable; el enlace anterior se libera automáticamente.  
+ Parámetros se pueden enlazar o Reenlazar en cualquier momento antes de que se ejecuta una instrucción. Si después de ejecutar una instrucción, se vuelve a enlazar un parámetro, el enlace no se aplica hasta que se vuelve a ejecutar la instrucción. Para enlazar un parámetro a otra variable, una aplicación simplemente vuelve a enlazar el parámetro con la nueva variable; el enlace anterior se libera automáticamente.  
   
- Una variable estando enlazada a un parámetro hasta que se enlaza una variable diferente para el parámetro, hasta que todos los parámetros que no están enlazados mediante una llamada a **SQLFreeStmt** con la opción SQL_RESET_PARAMS o hasta que se libere la instrucción. Por este motivo, la aplicación debe asegurarse de que las variables no se liberarán hasta que cuando se encuentran sin enlazar. Para obtener más información, consulte [asignar y liberar búferes](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md).  
+ Una variable estando enlazada a un parámetro hasta que se enlaza una variable diferente para el parámetro, hasta que todos los parámetros se han desenlazado mediante una llamada a **SQLFreeStmt** con la opción SQL_RESET_PARAMS, o hasta que se libere la instrucción. Por este motivo, la aplicación debe asegurarse de que las variables no se liberan hasta que una vez que se independiente. Para obtener más información, consulte [asignar y liberar búferes](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md).  
   
- Dado que los enlaces de parámetro son solo información almacenada en la estructura mantenida por el controlador de la instrucción, se pueden establecer en cualquier orden. También son independientes de la instrucción SQL que se ejecuta. Por ejemplo, suponga que una aplicación enlaza los tres parámetros y, a continuación, ejecuta la siguiente instrucción SQL:  
+ Dado que los enlaces de parámetro son solo información almacenada en la estructura mantenida por el controlador para la instrucción, se puede establecer en cualquier orden. También son independientes de la instrucción SQL que se ejecuta. Por ejemplo, imagine una aplicación enlaza tres parámetros y, a continuación, ejecuta la siguiente instrucción SQL:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)  
 ```  
   
- Si la aplicación, a continuación, ejecuta de forma inmediata la instrucción SQL  
+ Si la aplicación, a continuación, ejecuta la instrucción SQL de forma inmediata  
   
 ```  
 SELECT * FROM Orders WHERE OrderID = ?, OpenDate = ?, Status = ?  
 ```  
   
- en el mismo identificador de instrucción, los enlaces de parámetro para la **insertar** instrucción se utilizan porque éstos son los enlaces que se almacenan en la estructura de la instrucción. En la mayoría de los casos, esto es una práctica de programación deficiente y debe evitarse. En su lugar, la aplicación debe llamar a **SQLFreeStmt** con la opción SQL_RESET_PARAMS para desenlazar todos los parámetros anteriores y, a continuación, enlazar otros nuevos.  
+ en el mismo identificador de instrucción, los enlaces de parámetro para el **insertar** se utilizan la instrucción porque éstos son los enlaces que se almacenan en la estructura de la instrucción. En la mayoría de los casos, esto es una mala práctica de programación y debe evitarse. En su lugar, la aplicación debe llamar a **SQLFreeStmt** con la opción SQL_RESET_PARAMS desenlazar todos los parámetros de la antiguos y, a continuación, enlazar otros nuevos.  
   
  Esta sección contiene los temas siguientes.  
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 35ddaed3e6735e11fe3fd0e3f39435516e8bb851
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7d3a6843ea643ac447e42a1d78f5f2e7b3bc09da
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177288"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194125"
 ---
 # <a name="aggregate-functions-reference-report-builder-and-ssrs"></a>Referencia a las funciones de agregado (Generador de informes y SSRS)
   Para incluir valores de agregado en un informe, puede utilizar las funciones de agregado integradas en las expresiones. La función de agregado predeterminada para los campos numéricos es SUM. Puede modificar la expresión y utilizar una función de agregado integrada diferente o especificar un ámbito diferente. El ámbito identifica qué conjunto de datos utilizar para el cálculo.  
@@ -59,7 +56,7 @@ ms.locfileid: "37177288"
 |**Función**|**Descripción**|  
 |------------------|---------------------|  
 |[Avg](report-builder-functions-avg-function.md)|Devuelve el promedio de todos los valores numéricos no NULL especificados por la expresión, que se evalúa en el contexto del ámbito especificado.|  
-|[Recuento](report-builder-functions-count-function.md)|Devuelve un recuento de los valores no NULL especificados por la expresión, que se evalúa en el contexto del ámbito indicado.|  
+|[recuento](report-builder-functions-count-function.md)|Devuelve un recuento de los valores no NULL especificados por la expresión, que se evalúa en el contexto del ámbito indicado.|  
 |[CountDistinct](report-builder-functions-countdistinct-function.md)|Devuelve un recuento de todos los valores no NULL distintos especificados por la expresión, que se evalúa en el contexto del ámbito especificado.|  
 |[Max](report-builder-functions-max-function.md)|Devuelve el valor máximo de todos los valores numéricos no NULL especificados por la expresión, en el contexto del ámbito especificado. Puede usarla para especificar un valor máximo para el eje del gráfico para controlar la escala.|  
 |[Min](report-builder-functions-min-function.md)|Devuelve el valor mínimo de todos los valores numéricos no NULL especificados por la expresión, en el contexto del ámbito especificado. Puede usarla para especificar un valor mínimo para el eje del gráfico para controlar la escala.|  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.output.f1
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 73c83969-7b0e-479d-a436-0a46b2068d01
-caps.latest.revision: 26
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 00d7676916ac06cb82f384202cd2c6f024ffdb65
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2e2a0c1639352b8c5aaad9be4bd6740eceacb6cf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37281551"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132015"
 ---
 # <a name="web-service-task-editor-output-page"></a>Editor de la tarea Servicio web (página Salida)
   Use la página **Salida** del cuadro de diálogo **Editor de la tarea Servicio web** para indicar dónde desea almacenar el resultado devuelto por el método web.  

@@ -1,43 +1,40 @@
 ---
-title: Colecciones de ADO | Documentos de Microsoft
+title: Colecciones de ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO collections [ADO]
 - collections [ADO]
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6eb94c92f9516333c6681691d470f626c10cb4b8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b50f5245ed476fd09acd2556b4f7f5e2186fce10
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275434"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756823"
 ---
 # <a name="ado-collections"></a>Colecciones de ADO
 Las relaciones entre estas colecciones y los objetos ADO se representan en el [modelo de objetos ADO](../../../ado/reference/ado-api/ado-object-model.md).  
   
- Cada colección puede contener su objeto correspondiente. Por ejemplo, un [Error](../../../ado/reference/ado-api/error-object.md) objeto puede estar contenido en una [errores](../../../ado/reference/ado-api/errors-collection-ado.md) colección. Para obtener más información acerca de los objetos, consulte [objetos ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) o el tema de un objeto específico.  
+ Cada colección puede contener su objeto correspondiente. Por ejemplo, un [Error](../../../ado/reference/ado-api/error-object.md) objeto puede incluirse en un [errores](../../../ado/reference/ado-api/errors-collection-ado.md) colección. Para obtener más información acerca de los objetos, consulte [objetos ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) o un tema de objeto específico.  
   
 |||  
 |-|-|  
 |[Errores](../../../ado/reference/ado-api/errors-collection-ado.md)|Contiene todos los **Error** objetos creados en respuesta a un error relacionado con el proveedor.|  
 |[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|Contiene todos los **campo** objetos de un **Recordset** objeto.|  
 |[Parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md)|Contiene todos los **parámetro** objetos de un **comando** objeto.|  
-|[Propiedades](../../../ado/reference/ado-api/properties-collection-ado.md)|Contiene todos los **propiedad** objetos de una instancia concreta de un objeto.|  
+|[Propiedades](../../../ado/reference/ado-api/properties-collection-ado.md)|Contiene todos los **propiedad** objetos para una instancia específica de un objeto.|  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de la API de ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
+ [Referencia de API de ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Propiedades dinámicas de ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [Constantes enumeradas de ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
  [Apéndice B: errores de ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   

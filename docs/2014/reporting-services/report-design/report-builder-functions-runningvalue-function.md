@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: be8b75318aec2bd921a7d995f63e722f38881426
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fce2675b361b3b6d4d8ffc46afdabb0b6d128cc7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319865"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180865"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>Función RunningValue (Generador de informes y SSRS)
   Devuelve un agregado actualizado de todos los valores numéricos no NULL especificados por la expresión, que se evalúa en el contexto del ámbito especificado.  
@@ -47,7 +44,7 @@ RunningValue(expression, function, scope)
 ## <a name="return-type"></a>Tipo devuelto  
  Viene determinado por la función de agregado especificada en el parámetro *function* .  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor de `RunningValue` restablece en 0 para cada nueva instancia del ámbito. Si se especifica un grupo, el valor actual se restablece cuando cambia la expresión de grupo. Si se especifica una región de datos, el valor actual se restablece en cada instancia nueva de la región de datos. Si se especifica un conjunto de datos, el valor actual no se restablece en todo el conjunto de datos.  
   
  `RunningValue` no se puede utilizar en un filtro o expresión de ordenación.  

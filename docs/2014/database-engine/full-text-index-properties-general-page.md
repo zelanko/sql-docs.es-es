@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.general.f1
 ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
-caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 825b7e357d5904108b9dd4cbdec9533e89313c83
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a240ed4e3788d65ab795d8680dc93f253cfde059
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149936"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072465"
 ---
 # <a name="full-text-index-properties-general-page"></a>Propiedades del índice de texto completo (página General)
   **Para ver o cambiar las propiedades modificables de un índice de texto completo**  

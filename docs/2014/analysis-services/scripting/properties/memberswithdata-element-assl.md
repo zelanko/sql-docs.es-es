@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MembersWithData Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MembersWithData element
 ms.assetid: 845087a2-b12d-4344-a8be-85ca61155296
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a0c2e35549f4db2de489916ad1760954d4f6dfd5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 17a3fced7327c1fb2211b1c80f774ae859757952
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218235"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089659"
 ---
 # <a name="memberswithdata-element-assl"></a>Elemento MembersWithData (ASSL)
   Determina si se van a mostrar los miembros de datos para los miembros no hoja del atributo primario.  
@@ -46,7 +43,7 @@ ms.locfileid: "37218235"
 </DimensionAttribute>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37218235"
 |Elemento primario|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor de la `MembersWithData` elemento es utilizado únicamente por los atributos primarios (en otras palabras, el valor de la [uso](usage-element-dimensionattribute-assl.md) elemento de la `DimensionAttribute` elemento primario se establece en *primario*) para determinar si para mostrar a los miembros de datos para los miembros no hoja del atributo primario. Para obtener más información sobre los miembros de datos, vea [Atributos en las jerarquías de elementos primarios y secundarios](../../multidimensional-models/parent-child-dimension-attributes.md).  
   
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  

@@ -1,31 +1,29 @@
 ---
-title: Interoperabilidad de instrucciones SQL | Documentos de Microsoft
+title: Interoperabilidad de instrucciones SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC]
 - interoperability of SQL statements [ODBC], about interoperability
 ms.assetid: 3b24c499-829c-4e65-90cf-a3a0f6d0a186
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 205fd667e8891ba0bab0283c1d112af9d608423b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c4ead7cf96ada6d6055bc676ecf4610f2cf4c8f1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622483"
 ---
 # <a name="interoperability-of-sql-statements"></a>Interoperabilidad de instrucciones SQL
-Al igual que el resto de una aplicación, las instrucciones SQL pueden ser interoperable o específicos del DBMS. Y como el resto de la aplicación, tiene la opción de forma interoperables instrucciones SQL que depende del tipo de aplicación. Las aplicaciones personalizadas están menos probables que utiliza instrucciones SQL que interoperable porque normalmente están diseñadas para aprovechar las capacidades del DBMS de uno o dos posiblemente. Aplicaciones genéricas usar instrucciones SQL interoperables porque están diseñados para trabajar con una variedad de DBMS. Y las aplicaciones verticales suelen clasificarse en algún lugar entre, exigir un cierto nivel de funcionalidad, pero en caso contrario, use interoperables instrucciones SQL.  
+Igual que el resto de una aplicación, pueden ser instrucciones SQL interoperable o específicos para DBMS. Y como el resto de la aplicación, la elección de instrucciones SQL interoperables cómo deben ser depende del tipo de aplicación. Están menos probable que use instrucciones SQL interoperables porque normalmente están diseñadas para aprovechar las capacidades del DBMS de uno o dos, posiblemente, las aplicaciones personalizadas. Aplicaciones genéricas usar instrucciones SQL interoperables porque están diseñadas para funcionar con una variedad de DBMS. Y aplicaciones verticales suelen clasificarse en algún lugar entre ambos, exigir un cierto nivel de funcionalidad, pero en caso contrario, usar instrucciones SQL interoperables.  
   
  Esta sección contiene los temas siguientes.  
   

@@ -1,14 +1,11 @@
 ---
-title: sp_dbmmonitorresults (Transact-SQL) | Documentos de Microsoft
+title: sp_dbmmonitorresults (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorresults
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_dbmmonitorresults
 - database mirroring [SQL Server], monitoring
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16061dc41994cd032a9e6124d38abf3acb2e6be5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 54cf9a13396674c2ac9dd43845c94d7ac657f008
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256678"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702753"
 ---
 # <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +74,7 @@ sp_dbmmonitorresults database_name
   
  0 = No actualiza el estado de la base de datos. Los resultados se calculan utilizando únicamente las dos últimas filas, cuya antigüedad depende de cuándo se actualizó la tabla de estado.  
   
- 1 = actualiza el estado de la base de datos mediante una llamada **sp_dbmmonitorupdate** antes de calcular los resultados. Sin embargo, si se ha actualizado la tabla de estado dentro de los 15 segundos anteriores, o el usuario no es un miembro de la **sysadmin** rol fijo de servidor **sp_dbmmonitorresults** se ejecuta sin actualizar el estado.  
+ 1 = actualiza el estado de la base de datos mediante una llamada a **sp_dbmmonitorupdate** antes de calcular los resultados. Sin embargo, si se ha actualizado la tabla de estado dentro de los 15 segundos anteriores, o el usuario no es un miembro de la **sysadmin** rol fijo de servidor **sp_dbmmonitorresults** se ejecuta sin actualizar el estado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
@@ -86,7 +82,7 @@ sp_dbmmonitorresults database_name
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Devuelve el número solicitado de filas de estado del historial para la base de datos especificada. Cada fila contiene la siguiente información:  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nombre de una base de datos reflejada.|  
 |**Rol**|**int**|Rol de creación de reflejos actual de la instancia del servidor:<br /><br /> 1 = Entidad de seguridad<br /><br /> 2 = Reflejo|  
@@ -107,11 +103,11 @@ sp_dbmmonitorresults database_name
 ## <a name="remarks"></a>Comentarios  
  **sp_dbmmonitorresults** se puede ejecutar solo en el contexto de la **msdb** base de datos.  
   
-## <a name="permissions"></a>Permissions  
- Debe pertenecer a la **sysadmin** rol fijo de servidor o en la **dbm_monitor** rol fijo de base de datos en el **msdb** base de datos. El **dbm_monitor** rol permite a sus miembros ver el estado de creación de reflejo de la base de datos pero no actualizarla, pero no ver o configurar eventos de creación de reflejo de la base de datos.  
+## <a name="permissions"></a>Permisos  
+ Debe pertenecer a la **sysadmin** rol fijo de servidor o en el **dbm_monitor** rol fijo de base de datos en el **msdb** base de datos. El **dbm_monitor** rol permite a sus miembros ver el estado, la creación de reflejo de la base de datos, pero no actualizarlo, pero no ver o configurar los eventos de creación de reflejo de la base de datos.  
   
 > [!NOTE]  
->  La primera vez que **sp_dbmmonitorupdate** se ejecuta, crea la **dbm_monitor** rol fijo de base de datos en el **msdb** base de datos. Los miembros de la **sysadmin** rol fijo de servidor puede agregar a cualquier usuario la **dbm_monitor** rol fijo de base de datos.  
+>  La primera vez que **sp_dbmmonitorupdate** se ejecuta, crea el **dbm_monitor** rol fijo de base de datos en el **msdb** base de datos. Los miembros de la **sysadmin** rol fijo de servidor puede agregar a cualquier usuario la **dbm_monitor** rol fijo de base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
  El siguiente ejemplo devuelve las filas registradas durante las dos horas anteriores sin actualizar el estado de la base de datos.  

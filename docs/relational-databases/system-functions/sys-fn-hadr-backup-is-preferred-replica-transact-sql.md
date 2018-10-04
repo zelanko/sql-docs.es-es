@@ -1,14 +1,11 @@
 ---
-title: Sys.fn_hadr_backup_is_preferred_replica (Transact-SQL) | Documentos de Microsoft
+title: Sys.fn_hadr_backup_is_preferred_replica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_hadr_backup_is_preferred_replica_TSQL
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - active secondary replicas [SQL Server], backup on secondary replicas
 - sys.fn_hadr_backup_is_preferred_replica function
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d89528595dc2cec10bd86f9605b8ef55331c8ab5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a6bba59d680a9f7ba1595808eed27762670aab97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232481"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597670"
 ---
 # <a name="sysfnhadrbackupispreferredreplica--transact-sql"></a>Sys.fn_hadr_backup_is_preferred_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -78,13 +74,13 @@ GO
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   
--   [Configurar copia de seguridad en réplicas de disponibilidad & #40; SQL Server & #41;](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
+-   [Configurar la copia de seguridad en réplicas de disponibilidad &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Funciones de grupos de disponibilidad AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Crear grupo de disponibilidad & #40; Transact-SQL & #41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [Secundarias activas: Copia de seguridad en réplicas secundarias &#40;grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)[vistas de catálogo de grupos de disponibilidad AlwaysOn &#40;Transact-SQL    &#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)  
+ [Secundarias activas: Copia de seguridad en réplicas secundarias &#40;grupos de disponibilidad Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)[vistas de catálogo de grupos de disponibilidad AlwaysOn &#40;Transact-SQL    &#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)  
   
   

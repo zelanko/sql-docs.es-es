@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - measure groups [Analysis Services]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - aggregations [Analysis Services], measures
 - fact tables [Analysis Services]
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
-caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ba5a5c5b9ebf6bf7dcbf3b5340db941c7f662cf7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 68df3c4b4fa64b6c2fd07e9ed79e96115a2f7293
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255637"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092635"
 ---
 # <a name="measures-and-measure-groups"></a>Medidas y grupos de medida
   Un cubo incluye *medidas* en *grupos de medida*, lógica de negocios y una colección de dimensiones que proporcionan contexto para evaluar los datos numéricos que proporciona una medida. Las medidas y los grupos de medida son componentes esenciales de un cubo. Un cubo no puede existir sin, al menos, uno de cada uno de estos componentes.  

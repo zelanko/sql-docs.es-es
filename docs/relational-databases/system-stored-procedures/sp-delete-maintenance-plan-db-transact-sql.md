@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_maintenance_plan_db_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - removing maintenance plan
 - disassociating maintenance plan
 ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f21146a8fa893a40f3c613fce4105a19fc13dd6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a8fb8d48b03d49f63775a165217d60f8df2e9279
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049553"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47786983"
 ---
 # <a name="spdeletemaintenanceplandb-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +58,7 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  **sp_delete_maintenance_plan_db** se debe ejecutar desde la **msdb** base de datos.  
   
  El **sp_delete_maintenance_plan_db** procedimiento almacenado quita la asociación entre el plan de mantenimiento y la base de datos especificado; no quita ni destruye la base de datos.  

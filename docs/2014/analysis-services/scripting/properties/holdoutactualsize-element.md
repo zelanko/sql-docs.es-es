@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - HoldoutActualSize element
 ms.assetid: 606a6674-cedb-4cee-82d0-26589f084dd9
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4f74b11b9032285bf45bc8b7705953adf6d58f04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8610024c3eb0b3460883fc5eeddb80f057aff86b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297285"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096415"
 ---
 # <a name="holdoutactualsize-element"></a>Elemento HoldoutActualSize
   Indica el tamaño real, después del procesamiento de la partición de exclusión que contiene el conjunto de pruebas de un [MiningStructure](../objects/miningstructure-element-assl.md) elemento. Los escenarios restantes en el conjunto de datos se usan para aprendizaje. Esta propiedad es de solo lectura.  
@@ -42,7 +39,7 @@ ms.locfileid: "37297285"
 </MiningStructure  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -57,7 +54,7 @@ ms.locfileid: "37297285"
 |Elemento primario|[MiningStructure](../objects/miningstructure-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor de `HoldoutActualSize` depende de los datos de origen y de los valores de [HoldoutMaxCases](holdoutmaxcases-element.md), [HoldoutMaxPercent](holdoutmaxpercent-element.md), y [HoldoutSeed](holdoutseed-element.md). Por consiguiente, el valor para `HoldoutActualSize` no estará disponible hasta que [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] procese la estructura de minería de datos.  
   
  El elemento que se corresponde con el elemento primario de `HoldoutActualSize` en el objeto de Analysis Management Objects (AMO) es el modelo <xref:Microsoft.AnalysisServices.MiningStructure>.  

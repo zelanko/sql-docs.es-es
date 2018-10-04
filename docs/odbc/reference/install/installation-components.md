@@ -1,38 +1,36 @@
 ---
-title: Componentes de instalación | Documentos de Microsoft
+title: Componentes de instalación | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installing ODBC components [ODBC], setup program
 - ODBC [ODBC], component installation
 ms.assetid: 9de15ca0-fe6a-4634-8709-a928d3c9cc73
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c5fe2538d1567630121f05a4798583099de7200
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 961ff9fe552fa30eaad4667fdd1911a44f3a35f1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793043"
 ---
 # <a name="installation-components"></a>Componentes de instalación
 > [!NOTE]  
->  A partir de Windows XP y Windows Server 2003, ODBC se incluye en el sistema operativo de Windows. Solo explícitamente debe instalar ODBC en versiones anteriores de Windows.  
+>  Desde Windows XP y Windows Server 2003, ODBC se incluye en el sistema operativo Windows. ODBC explícitamente sólo debe instalar en versiones anteriores de Windows.  
   
- El proceso de instalación se inicia cuando el usuario ejecuta el programa de instalación. El programa de instalación funciona junto con el *installer DLL* y un *DLL de instalación de controlador* para cada controlador. El programa de instalación y el archivo DLL del programa de instalación utilizan los argumentos en la **SQLInstallDriverEx** y **SQLInstallTranslatorEx** funciones para determinar qué archivos desea copiar o eliminar para cada componente. En la siguiente ilustración muestra la relación entre estos componentes de instalación.  
+ El proceso de instalación se inicia cuando el usuario ejecuta el programa de instalación. Funciona junto con el programa de instalación la *DLL instalador* y un *DLL de instalación de controlador* para cada controlador. El programa de instalación y el archivo DLL de instalador usan los argumentos de la **SQLInstallDriverEx** y **SQLInstallTranslatorEx** funciones para determinar qué archivos desea copiar o eliminar para cada componente. La siguiente ilustración muestra la relación entre estos componentes de instalación.  
   
  ![Relación entre componentes de instalación](../../../odbc/reference/install/media/pr29.gif "pr29")  
   
 > [!IMPORTANT]  
->  El archivo de ODBC que se utilizó en ODBC 2. *x* para describir los archivos requeridos por cada ODBC componente no se usa en ODBC 3 *.x*. Controladores que se incluyen ODBC 3 *.x* componentes no es necesario crear un archivo de ODBC. La eliminación de **SQLInstallDriver** y **SQLInstallODBC**y el desuso de **SQLInstallTranslator**, represente ODBC innecesarios. La información del controlador que solía haber en las secciones de la palabra clave Driver de ODBC ahora se proporciona en el *lpszDriver* argumento en **SQLInstallDriverEx**. La información de traductor que solía haber en el [traductor ODBC] y secciones de la especificación de traductor de ODBC ahora se proporciona en el *lpszTranslator* argumento de **SQLInstallTranslatorEx**. Estos cambios permiten que el programa de instalación de ODBC sea más portátil entre plataformas.  
+>  El archivo de ODBC se usó en ODBC 2. *x* para describir los archivos requeridos por cada ODBC el componente no se usa en ODBC 3 *.x*. Los controladores que se incluyen ODBC 3 *.x* no es necesario crear un archivo de ODBC los componentes. La eliminación de **SQLInstallDriver** y **SQLInstallODBC**y el desuso de **SQLInstallTranslator**, impiden que ODBC innecesarios. La información del controlador que solía haber en las secciones de la palabra clave Driver de ODBC ahora se proporciona en el *lpszDriver* argumento en **SQLInstallDriverEx**. La información de traductor que solía haber en el [ODBC traductor] y secciones de la especificación del traductor de ODBC ahora se proporciona en el *lpszTranslator* argumento de **SQLInstallTranslatorEx**. Estos cambios permiten que el instalador de ODBC para que sea más portátil entre plataformas.  
   
  Para obtener más información acerca de estos componentes, vea los temas siguientes al final de esta sección.  
   

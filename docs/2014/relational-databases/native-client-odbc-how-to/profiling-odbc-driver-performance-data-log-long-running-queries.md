@@ -1,26 +1,23 @@
 ---
-title: Registrar consultas de larga ejecución (ODBC) | Microsoft Docs
+title: Registrar consultas de larga ejecución (ODBC) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - queries [ODBC]
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 89e4e854233e0d5b34ea1e4547ae4ade24394619
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 81b10966cd87a57de50e89f5a8327b2e19424ba0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431144"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095435"
 ---
 # <a name="log-long-running-queries-odbc"></a>Registrar consultas de ejecución prolongada (ODBC)
   En este ejemplo se muestran las opciones específicas del controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para registrar consultas de larga duración. Cuando se ejecuta, este ejemplo crea Odbcqry.log, que contiene una lista de las consultas cuya ejecución supera un intervalo establecido por la aplicación. Este ejemplo no es compatible con IA64. Este ejemplo se desarrolló para la versión 3.0 o posterior de ODBC.  

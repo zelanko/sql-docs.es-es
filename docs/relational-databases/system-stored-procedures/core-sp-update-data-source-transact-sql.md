@@ -1,14 +1,11 @@
 ---
-title: Core.sp_update_data_source (Transact-SQL) | Documentos de Microsoft
+title: Core.sp_update_data_source (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_data_source
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - core.sp_update_data_source stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3156ef5a6d4d1af2298222b660e6483eb109cddd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8bdbab374f7f6fa182ea344f442b23e2dec2a15b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237963"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47766474"
 ---
 # <a name="corespupdatedatasource-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +51,13 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
  GUID del conjunto de recopilación. *collection_set_uid* es **uniqueidentifier**, sin valor predeterminado. Para obtener el GUID, consulte la vista dbo.syscollector_collection_sets en la base de datos msdb.  
   
  [ @machine_name =] '*nombre_equipo*'  
- Nombre del servidor en el que reside el conjunto de recopilación. *NombreDeEquipo* es **sysname** con ningún valor predeterminado.  
+ Nombre del servidor en el que reside el conjunto de recopilación. *nombre_equipo* es **sysname** con ningún valor predeterminado.  
   
  [ @named_instance =] '*instanciaconnombre*'  
  Nombre de la instancia del conjunto de recopilación. *instanciaconnombre* es **sysname**, sin valor predeterminado.  
   
 > [!NOTE]  
->  *instanciaconnombre* debe ser el nombre de instancia completo, que consta del nombre del equipo y el nombre de instancia en el formulario *computername*\\*nombreDeInstancia*.  
+>  *instanciaconnombre* debe ser el nombre de instancia completo, que está formado por el nombre del equipo y el nombre de instancia en el formulario *computername*\\*nombreDeInstancia*.  
   
  [ @days_until_expiration =] *days_until_expiration*  
  Número de días restantes en el período de retención de datos de la instantánea. *days_until_expiration* es **smallint**.  
@@ -79,7 +75,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
   
 -   El valor de days_until_expiration ha cambiado.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer a la **mdw_writer** (con permiso EXECUTE) rol fijo de base de datos.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -1,14 +1,11 @@
 ---
-title: GetPathLocator (Transact-SQL) | Documentos de Microsoft
+title: GetPathLocator (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GetPathLocator
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - GetPathLocator function
 ms.assetid: 78b7e220-445b-4fdf-811b-7253f4f2b058
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0b7714606336e46d25459d972b0bd0f4f319a529
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7770ced88953fd64d9ce48b624416b9a7e787f7e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225425"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699133"
 ---
 # <a name="getpathlocator-transact-sql"></a>GetPathLocator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +41,7 @@ GetPathLocator(filenamespace_path)
  *filenamespace_path*  
  Ruta de acceso del espacio de nombres en el objeto FileTable. La ruta de acceso del espacio de nombres es de tipo **nvarchar (max)**.  
   
- Cuando la base de datos pertenece a un grupo de disponibilidad AlwaysOn, la **GetPathLocator** función acepta el nombre de red virtual (VNN) o el nombre del equipo.  
+ Cuando la base de datos pertenece a un grupo de disponibilidad Always On, el **GetPathLocator** función acepta el nombre de red virtual (VNN) o el nombre del equipo.  
   
 ## <a name="return-type"></a>Tipo devuelto  
  **hierarchyid**  
@@ -54,7 +50,7 @@ GetPathLocator(filenamespace_path)
  Para más información, consulte [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
 ## <a name="examples"></a>Ejemplos  
- Puede usar el **GetPathLocator** funciona cuando hay migrar archivos desde un servidor de archivos a una FileTable. En este escenario, puede mover los archivos al objeto FileTable y reemplazar después la ruta de acceso UNC original para cada archivo por la ruta de acceso UNC del objeto FileTable. Para obtener un ejemplo completo, vea [para cargar archivos en FileTables](../../relational-databases/blob/load-files-into-filetables.md).  
+ Puede usar el **GetPathLocator** funcionar cuando se migran archivos de un servidor de archivos a una tabla FileTable. En este escenario, puede mover los archivos al objeto FileTable y reemplazar después la ruta de acceso UNC original para cada archivo por la ruta de acceso UNC del objeto FileTable. Para obtener un ejemplo completo, vea [cargar archivos en FileTables](../../relational-databases/blob/load-files-into-filetables.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Trabajar con directorios y rutas de acceso de FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  

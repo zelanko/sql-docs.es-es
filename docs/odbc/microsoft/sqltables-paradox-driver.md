@@ -1,32 +1,29 @@
 ---
-title: SQLTables (controlador de Paradox) | Documentos de Microsoft
+title: SQLTables (controlador de Paradox) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Paradox driver [ODBC], SQLTables
 - SQLTables function [ODBC], Paradox Driver
 ms.assetid: d68adad6-97bd-4b47-bcf9-0102aafb00d4
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1108b06702a4753f0f99f6e67418fe8f54dc7de8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c845bd2e5e3ec5e52cfd6d1c0891f8825af1e148
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904090"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819943"
 ---
 # <a name="sqltables-paradox-driver"></a>SQLTables (controlador de Paradox)
 > [!NOTE]  
->  En este tema se proporciona información específica del controlador Paradox. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  En este tema se proporciona información específica del controlador de Paradox. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
 |Argumento|Comentarios|  
 |--------------|--------------|  

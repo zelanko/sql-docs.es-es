@@ -1,14 +1,11 @@
 ---
-title: sysmail_help_status_sp (Transact-SQL) | Documentos de Microsoft
+title: sysmail_help_status_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_status_sp
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_status_sp
 ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8205d9350dba7a2cec7079a0197420e920eaa612
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c08985b4fe50a657c08de40f112776cf064b2846
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251772"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614271"
 ---
 # <a name="sysmailhelpstatussp-transact-sql"></a>sysmail_help_status_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +44,11 @@ sysmail_help_status_sp
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Estado**|**nvarchar(7)**|Estado del Correo electrónico de base de datos. Los valores posibles son **iniciado** y **detenido**.|  
+|**Estado**|**nvarchar (7)**|Estado del Correo electrónico de base de datos. Los valores posibles son **iniciado** y **detenido**.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  De forma predeterminada, solo los miembros de la **sysadmin** rol fijo de servidor puede tener acceso a este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  

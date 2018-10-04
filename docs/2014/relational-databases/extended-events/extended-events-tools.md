@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], using
 - extended events [SQL Server], options for using
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32d275fd784bac6d5c5ebefe36c640afe6e94726
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c1e462ad252406c6841bdd4fefa66aa3ff4bb249
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203315"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108745"
 ---
 # <a name="extended-events-tools"></a>Herramientas de eventos extendidos
   Puede utilizar las siguientes herramientas para crear y administrar sesiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events:  
@@ -35,7 +32,7 @@ ms.locfileid: "37203315"
   
 -   El proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Es una herramienta eficaz que puede usar para crear, modificar y administrar sesiones de eventos extendidos. Para obtener más información, vea [Usar el proveedor de PowerShell para eventos extendidos](use-the-powershell-provider-for-extended-events.md).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Le permite crear y ejecutar los ejemplos de código que se proporcionan en los temas de eventos extendidos. Para obtener más información, vea [Explorador de objetos](../../ssms/object/object-explorer.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  Le permite crear y ejecutar los ejemplos de código que se proporcionan en los temas de eventos extendidos. Para obtener más información, vea [Explorador de objetos](../../ssms/object/object-explorer.md).  
   
  Además de las sesiones que cree, existe una sesión de estado del sistema predeterminada en el servidor. La sesión recopila datos del sistema que se pueden utilizar para ayudar a solucionar problemas de rendimiento. Para obtener más información, vea [Usar la sesión system_health](use-the-ssms-xe-profiler.md).  
   

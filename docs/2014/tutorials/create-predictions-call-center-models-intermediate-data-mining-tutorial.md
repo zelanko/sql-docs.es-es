@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5be0cec7-f639-4eeb-835e-e3204ae619e9
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 86ac24e1c67d062a0b9d0c2b9d2963bd9b8a479d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ebaafa4b25c4bd4847af24a36462e15d04d7774a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321505"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148005"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>Crear predicciones para los modelos de centro de llamadas (Tutorial intermedio de minería de datos)
   Ahora que ha aprendido algo acerca de las interacciones entre los turnos, el número de operadores, las llamadas y el grado de servicio, está en disposición de crear algunas consultas de predicción que se puedan usar en el análisis y el planeamiento empresarial. Primero, creará algunas predicciones en el modelo de exploración para probar varias suposiciones. A continuación, creará predicciones masivas usando el modelo de regresión logística.  
@@ -184,7 +181,7 @@ ms.locfileid: "37321505"
   
  Hay varias consultas de predicción diferentes que puede crear en este modelo. Por ejemplo, podría predecir cuántos operadores son necesarios para cumplir un cierto nivel de servicio o para responder a un determinado número de llamadas entrantes. Dado que puede incluir varias salidas en un modelo de regresión logística, es fácil experimentar con variables independientes y resultados diferentes sin tener que crear varios modelos distintos.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los complementos de minería de datos para Excel 2007 ofrecen asistentes de regresión logística que facilitan el poder responder a cuestiones complejas, como cuántos operadores de nivel dos se necesitarían para mejorar el grado de servicio a un nivel determinado para un turno concreto. Los complementos de minería de datos se pueden descargar de forma gratuita e incluyen asistentes que se basan en los algoritmos de red neuronal o de regresión logística. Para obtener más información, vea los siguientes vínculos:  
   
 -   [SQL Server 2005 Data minería complementos para Office 2007](http://www.microsoft.com/sql/technologies/dm/addins.mspx): Buscar objetivo y ¿qué ocurre si el análisis de escenario  

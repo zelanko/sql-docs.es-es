@@ -1,32 +1,26 @@
 ---
-title: Solución de problemas (DB2ToSQL) | Documentos de Microsoft
+title: Solución de problemas (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: e88038c6-fd35-479c-a76f-aabd42d2efef
-caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e7e905e94be98c1a6f3dc6069170c5d51cab01f6
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ff0ef803274b23a54e3964ae2822dc351a3ce784
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775521"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700253"
 ---
 # <a name="troubleshooting-db2tosql"></a>Solución de problemas (DB2ToSQL)
-No es raro en mitad de problemas de migración ejecutando los comandos o scripts de la consola.  
+No es raro experimenta midway de problemas de migración ejecutando los comandos o scripts de la consola.  
   
-Los errores pueden corregir pueden estar relacionado con:  
+Los errores se pueden corregir pueden estar relacionados con:  
   
 1.  Función  
   
@@ -40,5 +34,5 @@ Los errores pueden corregir pueden estar relacionado con:
   
 6.  Cambiar la configuración del proyecto  
   
-Los problemas pueden solucionarse mediante la interfaz de usuario SSMA abriendo el archivo de proyecto se creó mediante la consola.  
+Los problemas pueden solucionarse mediante la interfaz de usuario SSMA abriendo el archivo de proyecto creado mediante la consola.  
   

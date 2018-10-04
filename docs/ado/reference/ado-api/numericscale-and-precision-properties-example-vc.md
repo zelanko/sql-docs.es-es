@@ -1,13 +1,11 @@
 ---
-title: Ejemplo de las propiedades Precision (VC ++) y NumericScale | Documentos de Microsoft
+title: NumericScale y Precision propiedades (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - NumericScale property [ADO], VC++ example
 - Precision property [ADO], VC++ example
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9b8c8eaf6af8d2882542975c0d7732a82efeb032
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1ac5911b551cfaae5151c17a2699f0833fec001e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279904"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798843"
 ---
-# <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale y ejemplo de las propiedades Precision (VC ++)
-Este ejemplo se utiliza la [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) y [precisión](../../../ado/reference/ado-api/precision-property-ado.md) propiedades para mostrar la escala numérica y la precisión de los campos de la ***descuentos*** tabla de la  ***Pubs*** base de datos.  
+# <a name="numericscale-and-precision-properties-example-vc"></a>Ejemplo de las propiedades NumericScale y Precision (VC ++)
+Este ejemplo se usa el [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) y [precisión](../../../ado/reference/ado-api/precision-property-ado.md) propiedades para mostrar la escala numérica y la precisión de los campos de la ***descuentos*** tabla de la  ***Pubs*** base de datos.  
   
 ```  
 // BeginNumericScaleCpp.cpp  

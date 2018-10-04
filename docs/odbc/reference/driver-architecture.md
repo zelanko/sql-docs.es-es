@@ -1,38 +1,36 @@
 ---
-title: Arquitectura del controlador | Documentos de Microsoft
+title: Arquitectura de controladores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC architecture [ODBC], drivers
 - drivers [ODBC], architecture
 ms.assetid: c5003413-0cc1-4f41-b877-a64e2f5ab118
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d1fee82278af1597eefaf0e17ea3b9aa0dfce8e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a8e49b89d233880652f4b19879ff8e658bc4abe1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628403"
 ---
 # <a name="driver-architecture"></a>Arquitectura de controladores
-Arquitectura de controladores se divide en dos categorías, dependiendo de los procesos de software instrucciones SQL:  
+Arquitectura de controladores se divide en dos categorías, dependiendo de qué instrucciones SQL de procesos de software:  
   
--   **Controladores basados en archivos** el controlador tiene acceso directo a los datos físicos. En este caso, el controlador actúa como controlador y el origen de datos; es decir, procesa las llamadas ODBC e instrucciones SQL. Por ejemplo, controladores de dBASE son controladores basados en archivos porque dBASE no proporciona que un motor de base de datos independiente del controlador puede usar. Es importante tener en cuenta que los desarrolladores de controladores basados en archivos deben escribir sus propios motores de base de datos.  
+-   **Controladores basados en archivos** el controlador tiene acceso directo a los datos físicos. En este caso, el controlador actúa como controlador y el origen de datos; es decir, lo procesa las llamadas ODBC e instrucciones SQL. Por ejemplo, dBASE controladores son basados en archivos porque dBASE no proporciona que un motor de base de datos independiente del controlador se puede usar. Es importante tener en cuenta que los desarrolladores de controladores basados en archivo deben escribir sus propios motores de base de datos.  
   
--   **Controladores basados en DBMS** el controlador tiene acceso a los datos físicos a través de un motor de base de datos independiente. En este caso, el controlador procesa solo las llamadas ODBC; pasa instrucciones SQL al motor de base de datos para su procesamiento. Por ejemplo, controladores de Oracle son controladores basados en DBMS porque Oracle tiene un motor de base de datos independiente que usa el controlador. En el que reside el motor de base de datos es irrelevante. Puede residir en el mismo equipo que el controlador o un equipo diferente de la red; incluso puede obtenerse a través de una puerta de enlace.  
+-   **Controladores basados en DBMS** el controlador tiene acceso a los datos físicos a través de un motor de base de datos independiente. En este caso, el controlador procesa solo las llamadas ODBC; instrucciones SQL pasa al motor de base de datos para procesar. Por ejemplo, los controladores de Oracle son controladores basados en DBMS porque Oracle tiene un motor de base de datos independiente que utiliza el controlador. En el que reside el motor de base de datos es irrelevante. Puede residir en el mismo equipo que el controlador o un equipo diferente en la red. incluso puede obtenerse a través de una puerta de enlace.  
   
- Arquitectura del controlador es interesante generalmente solo para los escritores de controladores; es decir, arquitectura de controlador generalmente produce ninguna diferencia a la aplicación. Sin embargo, la arquitectura puede afectar a si una aplicación puede utilizar SQL específicos de DBMS. Por ejemplo, Microsoft Access proporciona un motor de base de datos independiente. Si un controlador de Microsoft Access se basa en el DBMS: tener acceso a los datos a través de este motor, la aplicación puede pasar las instrucciones SQL de Microsoft Access para el motor para su procesamiento.  
+ Arquitectura de controladores es interesante por lo general solo a los escritores de controladores; es decir, arquitectura de controladores por lo general no hay ninguna diferencia a la aplicación. Sin embargo, la arquitectura puede determinar si una aplicación puede usar SQL específicos para DBMS. Por ejemplo, Microsoft Access proporciona un motor de base de datos independiente. Si un controlador de Microsoft Access basados en DBMS, tiene acceso a los datos a través de este motor, la aplicación puede pasar las instrucciones SQL de Microsoft Access para el motor de procesamiento.  
   
- Sin embargo, si el controlador se basa en el archivo, es decir, contiene un motor propietario que accede directamente el archivo .mdb de Microsoft® Access, cualquier intento de pasar instrucciones SQL específicas de Microsoft Access al motor suelen dar lugar a errores de sintaxis. La razón es que el motor de propiedad es probable que implementar solo ODBC SQL.  
+ Sin embargo, si el controlador está basado en archivos, es decir, contiene un motor de propiedad que tiene acceso el archivo .mdb de Microsoft® Access directamente, cualquier intento de pasar las instrucciones SQL específicas de Microsoft Access para el motor de suelen dar lugar a errores de sintaxis. El motivo es que el motor de propietario es probable que implementar sólo ODBC SQL.  
   
  Esta sección contiene los temas siguientes.  
   

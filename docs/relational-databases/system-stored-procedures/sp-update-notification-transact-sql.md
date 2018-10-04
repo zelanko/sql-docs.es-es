@@ -1,14 +1,11 @@
 ---
-title: sp_update_notification (Transact-SQL) | Documentos de Microsoft
+title: sp_update_notification (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_notification_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatenotification
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc08790ad08ce6bb4e94e61a8c3bdfc58615edf9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6a612506b4efa34e9f47511789d792e3116f8b91
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260208"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817555"
 ---
 # <a name="spupdatenotification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +53,7 @@ sp_update_notification
  [  **@notification_method =**] *notificación*  
  Método que se utilizará para notificar al operador. *notificación*es **tinyint**, no tiene ningún valor predeterminado y puede tener uno o varios de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Correo electrónico|  
 |**2**|Buscapersonas|  
@@ -72,11 +68,11 @@ sp_update_notification
   
  Puede actualizar una notificación para un operador que no tiene la información de dirección necesaria mediante especificado *notification_method*. Si se produce algún error al enviar un mensaje de correo electrónico o una notificación por buscapersonas, el error se refleja en el registro de errores del Agente SQL Server.  
   
-## <a name="permissions"></a>Permissions  
- Para ejecutar este procedimiento almacenado, deben concederse a los usuarios la **sysadmin** rol fijo de servidor.  
+## <a name="permissions"></a>Permisos  
+ Para ejecutar este procedimiento almacenado, los usuarios debe concederse el **sysadmin** rol fijo de servidor.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se modifica el método de notificación para las notificaciones enviadas a `François Ajenstat`de la alerta `Test Alert`.  
+ En el ejemplo siguiente se modifica el método de notificación para las notificaciones enviadas a `François Ajenstat`para la alerta `Test Alert`.  
   
 ```  
 USE msdb ;  

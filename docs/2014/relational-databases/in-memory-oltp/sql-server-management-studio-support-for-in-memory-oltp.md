@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
-caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4bb02e083cc056bd4e732b6c432c5d182bf5032a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393524"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050127"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Compatibilidad de SQL Server Management Studio con OLTP en memoria
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es un entorno integrado para administrar la infraestructura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona herramientas para configurar, supervisar y administrar instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md).  
@@ -88,8 +85,7 @@ ms.locfileid: "40393524"
     -   En el **Explorador de objetos**, haga clic con el botón derecho en la base de datos, haga clic en **Propiedades**y, después, haga clic en la página **General** . El valor de la propiedad **Memoria asignada a los objetos optimizados para memoria** indica la memoria asignada a los objetos optimizados para memoria en la base de datos. El valor de la propiedad **Memoria usada por los objetos optimizados para memoria** indica la memoria usada por los objetos optimizados para memoria en la base de datos.  
   
 ## <a name="supported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Características admitidas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
- 
-            [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] admite las características y las operaciones compatibles con el motor de base de datos en las bases de datos con un grupo de archivos de datos optimizados para memoria, tablas optimizadas para memoria, índices y procedimientos compilados de forma nativa.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] admite las características y las operaciones compatibles con el motor de base de datos en las bases de datos con un grupo de archivos de datos optimizados para memoria, tablas optimizadas para memoria, índices y procedimientos compilados de forma nativa.  
   
  En los objetos de base de datos, procedimiento almacenado, tipo de tabla definido por el usuario o índice se han actualizado o ampliado las siguientes características de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para que sean compatibles con OLTP en memoria.  
   

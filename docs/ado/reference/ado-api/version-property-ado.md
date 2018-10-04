@@ -1,13 +1,11 @@
 ---
-title: Propiedad Version (ADO) | Documentos de Microsoft
+title: Propiedad Version (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - Version property [ADO]
 ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f67d4737bdf7e7eee528f190855047aea06a18a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0adda8889f963ee1aaf2701abbbcc38b40ba50c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282697"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632303"
 ---
 # <a name="version-property-ado"></a>Propiedad Version (ADO)
 Indica el número de versión de ADO.  
@@ -34,14 +31,14 @@ Indica el número de versión de ADO.
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve un **cadena** valor que indica la versión.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Use la **versión** propiedad para devolver el número de versión de la implementación de ADO.  
   
- La versión del proveedor estará disponible como una propiedad dinámica en la [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección.  
+ La versión del proveedor estará disponible como una propiedad dinámica en el [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Ejemplo de la propiedad de versión (VB)](../../../ado/reference/ado-api/version-property-example-vb.md)   
+ [Ejemplo de la propiedad Version (VB)](../../../ado/reference/ado-api/version-property-example-vb.md)   
  [Ejemplo de la propiedad de versión (VC ++)](../../../ado/reference/ado-api/version-property-example-vc.md)   

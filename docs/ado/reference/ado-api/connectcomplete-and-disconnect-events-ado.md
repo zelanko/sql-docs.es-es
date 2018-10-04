@@ -1,13 +1,11 @@
 ---
-title: ConnectComplete y desconectar eventos (ADO) | Documentos de Microsoft
+title: Eventos ConnectComplete y Disconnect (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,19 +17,18 @@ helpviewer_keywords:
 - Disconnect event [ADO]
 - ConnectComplete event [ADO]
 ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ac6301a8ed8ab0c84f26225e20c2bfd971ff761
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d1466b8f718318d8224ec2c7dcf3e873139fffed
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276844"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752773"
 ---
-# <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete y eventos (ADO) de desconexión
-El **ConnectComplete** eventos se llama después de iniciarse una conexión. El **desconexión** eventos se llama después de que finalice una conexión.  
+# <a name="connectcomplete-and-disconnect-events-ado"></a>Eventos ConnectComplete y Disconnect (ADO)
+El **ConnectComplete** se llama al evento después de inicia una conexión. El **desconexión** se llama al evento después de que finalice una conexión.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,14 +40,14 @@ Disconnect adStatus, pConnection
   
 #### <a name="parameters"></a>Parámetros  
  *pError*  
- Un [Error](../../../ado/reference/ado-api/error-object.md) objeto. Describe el error que se ha producido si el valor de *adStatus* es **adStatusErrorsOccurred**; en caso contrario, no se establece.  
+ Un [Error](../../../ado/reference/ado-api/error-object.md) objeto. Describe el error producido si el valor de *adStatus* es **adStatusErrorsOccurred**; en caso contrario, no se establece.  
   
  *adStatus*  
  Un [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) valor que siempre devuelve **adStatusOK**.  
   
  Cuando **ConnectComplete** es llama, este parámetro se establece en **adStatusCancel** si un **WillConnect** evento ha solicitado la cancelación de la conexión pendiente.  
   
- Antes de que cualquiera evento vuelva, establezca este parámetro en **adStatusUnwantedEvent** para impedir notificaciones posteriores. Sin embargo, cerrar y volver a la [conexión](../../../ado/reference/ado-api/connection-object-ado.md) hace que estos eventos se vuelve a producir.  
+ Antes de que se devuelva cualquier evento, establezca este parámetro en **adStatusUnwantedEvent** para evitar notificaciones posteriores. Sin embargo, cerrar y volver a abrir el [conexión](../../../ado/reference/ado-api/connection-object-ado.md) hace que estos eventos se vuelve a producir.  
   
  *pConnection*  
  El **conexión** el objeto para el que se aplica este evento.  

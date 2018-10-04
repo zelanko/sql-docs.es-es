@@ -1,13 +1,11 @@
 ---
-title: Las cadenas de conexión | Documentos de Microsoft
+title: Las cadenas de conexión | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
@@ -20,21 +18,21 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: 724c7b86-300a-4fa9-ad96-4afa0fdcb3e9
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5b88b1056d8b645614a7f17fd6edf81eb804f16
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7e52ec70e53608f1af48b4abcd2dd1edb4fc454
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754623"
 ---
 # <a name="connection-strings"></a>Cadenas de conexión
-Una cadena de conexión contiene información utilizada para establecer una conexión. Una cadena de conexión completa contiene toda la información necesaria para establecer una conexión. La cadena de conexión es una serie de pares de palabra clave/valor separados por punto y coma. (Para obtener la sintaxis completa de una cadena de conexión, consulte el [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) descripción de la función.) La cadena de conexión es utilizada por:  
+Una cadena de conexión contiene información utilizada para establecer una conexión. Una cadena de conexión completa contiene toda la información necesaria para establecer una conexión. La cadena de conexión es una serie de pares palabra clave-valor separados por punto y coma. (Para ver la sintaxis completa de una cadena de conexión, consulte el [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) descripción de la función.) Usa la cadena de conexión:  
   
--   **SQLDriverConnect**, que completa la cadena de conexión a la interacción con el usuario.  
+-   **SQLDriverConnect**, lo que finaliza la cadena de conexión mediante la interacción con el usuario.  
   
--   **SQLBrowseConnect**, que completa la cadena de conexión de forma iterativa con el origen de datos.  
+-   **SQLBrowseConnect**, lo que finaliza la cadena de conexión de forma iterativa con el origen de datos.  
   
- **SQLConnect** no usa una cadena de conexión; mediante **SQLConnect** es análogo a conectarse con una cadena de conexión con exactamente tres pares de palabra clave/valor (para el nombre del origen de datos y, opcionalmente, el usuario ID y la contraseña) .
+ **SQLConnect** no utiliza una cadena de conexión; el uso de **SQLConnect** es análoga a la conexión con una cadena de conexión exactamente tres pares palabra clave-valor (para el nombre del origen de datos y, opcionalmente, el usuario ID y contraseña) .

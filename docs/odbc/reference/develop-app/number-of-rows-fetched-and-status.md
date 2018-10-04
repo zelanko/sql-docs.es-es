@@ -1,31 +1,28 @@
 ---
-title: Número de filas recuperadas y estado | Documentos de Microsoft
+title: Número de filas recuperadas y estado | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - row status array [ODBC]
 - number of rows fetched [ODBC]
 - result sets [ODBC], row status array
 ms.assetid: a069b979-5108-4905-932f-8ae8e7905ff2
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16bc3a279e2d4565529dd175c16bce01f9431403
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab4830ddd56335959dd7049a1dabdcc3a0354213
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914010"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808773"
 ---
 # <a name="number-of-rows-fetched-and-status"></a>Número de filas recuperadas y estado
-Si se ha establecido el atributo de instrucción SQL_ATTR_ROWS_FETCHED_PTR, especifica un búfer que devuelve el número de filas recuperadas por la llamada a **SQLFetch** o **SQLFetchScroll**y las filas de error. (Este número es un recuento de todas las filas que no tienen el estado SQL_ROW_NO_ROWS). Después de llamar a **SQLBulkOperations** o **SQLSetPos**, el búfer contiene el número de filas afectadas por una operación masiva realizada por la función. Si se ha establecido el atributo de instrucción de SQL_ATTR_ROW_STATUS_PTR, **SQLFetch** o **SQLFetchScroll** devuelve el *matriz de Estados de fila,* que proporciona el estado de cada uno fila devuelta. Ambos de los búferes señalados por estos campos asignados por la aplicación y rellena el controlador. Una aplicación debe asegurarse de que estos punteros sigan siendo válidos hasta que se cierra el cursor.  
+Si se ha establecido el atributo SQL_ATTR_ROWS_FETCHED_PTR la instrucción, especifica un búfer que devuelve el número de filas recuperadas por la llamada a **SQLFetch** o **SQLFetchScroll**y las filas de error. (Este número es un recuento de todas las filas que no tienen el estado SQL_ROW_NO_ROWS). Después de llamar a **SQLBulkOperations** o **SQLSetPos**, el búfer contiene el número de filas afectadas por una operación masiva realizada por la función. Si se ha establecido el atributo de instrucción SQL_ATTR_ROW_STATUS_PTR, **SQLFetch** o **SQLFetchScroll** devuelve el *matriz de Estados de fila,* que proporciona el estado de cada fila devuelta. Ambos de los búferes apuntados a estos campos asignados por la aplicación y rellenados por el controlador. Una aplicación debe asegurarse de que estos punteros siguen siendo válidos hasta que se cierra el cursor.  
   
- Las entradas en el estado de matriz de estado de la fila si cada fila se capturó correctamente, si se ha actualizado, agregan o eliminan desde que se capturó en último lugar, y si se produjo un error al capturar la fila. Si **SQLFetch** o **SQLFetchScroll** encuentra un error al recuperar una fila de un conjunto de filas de varias filas, o si **SQLBulkOperations** con un *operación*  argumento de SQL_FETCH_BY_BOOKMARK encuentra un error al realizar una captura de forma masiva, Establece el valor correspondiente en la matriz de Estados de fila para SQL_ROW_ERROR, continúa capturar las filas y devuelve SQL_SUCCESS_WITH_INFO. Para obtener más información acerca de control de errores y la matriz de Estados de fila, vea el [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md) y [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md) función descripciones.
+ Las entradas en el estado de matriz de estado de fila si cada fila se capturó correctamente, si se actualizó, agregan o eliminan desde que se capturó por última vez, y si se ha producido un error al capturar la fila. Si **SQLFetch** o **SQLFetchScroll** encuentra un error al recuperar una fila de un conjunto de filas de varias filas, o si **SQLBulkOperations** con un *operación*  argumento de SQL_FETCH_BY_BOOKMARK encuentra un error al realizar una captura de forma masiva, Establece el valor correspondiente de la matriz de estado de la fila que SQL_ROW_ERROR, continúa la captura de filas y devuelve SQL_SUCCESS_WITH_INFO. Para obtener más información acerca de la matriz de Estados de fila y de control de errores, vea el [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md) y [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md) función descripciones.

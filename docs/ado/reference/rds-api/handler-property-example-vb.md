@@ -1,37 +1,34 @@
 ---
-title: Ejemplo de la propiedad de controlador (VB) | Documentos de Microsoft
+title: Ejemplo de la propiedad de controlador (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Handler property [ADO], Visual Basic example
 ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b03652c4105c62235af9a34bdae17148b4dd575
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d719050da7878f8f5421e632943868fe4b1f75ea
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288247"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615844"
 ---
 # <a name="handler-property-example-vb"></a>Ejemplo de la propiedad de controlador (VB)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar a [servicio de datos de WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Este ejemplo se muestra la [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto [controlador](../../../ado/reference/rds-api/handler-property-rds.md) propiedad. (Consulte [Personalización DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md) para obtener más información.)  
+ Este ejemplo se muestra el [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto [controlador](../../../ado/reference/rds-api/handler-property-rds.md) propiedad. (Consulte [personalización de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md) para obtener más detalles.)  
   
- Se supone que las siguientes secciones en el archivo de parámetros, Msdfmap.ini, se encuentran en el servidor:  
+ Supongamos que las siguientes secciones del archivo de parámetros, Msdfmap.ini, se encuentran en el servidor:  
   
 ```  
 [connect AuthorDataBase]  
@@ -41,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- El código es similar a la siguiente. El comando asignado a la [SQL](../../../ado/reference/rds-api/sql-property.md) propiedad coincidirá la ***AuthorById*** identificador y recuperará una fila correspondiente al autor Michael O'Leary. El **DataControl** objeto **Recordset** propiedad se asigna a un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto únicamente como una comodidad de codificación.  
+ El código tiene el siguiente aspecto. El comando asignado a la [SQL](../../../ado/reference/rds-api/sql-property.md) coincidirá con la propiedad la ***AuthorById*** identificador y recuperará una fila por Michael O'Leary autor. El **DataControl** objeto **Recordset** propiedad se asigna a un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto únicamente como una comodidad de codificación.  
   
 ```  
 'BeginHandlerVB  

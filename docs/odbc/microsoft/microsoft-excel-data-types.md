@@ -1,13 +1,11 @@
 ---
-title: Tipos de datos de Microsoft Excel | Documentos de Microsoft
+title: Tipos de datos de Microsoft Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], Excel driver
@@ -17,19 +15,18 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Excel driver
 - Excel driver [ODBC], data types
 ms.assetid: 7b44c8e5-0bc3-4912-8a5d-56f4d5562fe6
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c1a2c6159f8d0d112e2cae5e1de687f8af3cf2e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10695dd9bf044e270bb1ce1d26de78e53a1dd85a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32901470"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656763"
 ---
 # <a name="microsoft-excel-data-types"></a>Tipos de datos de Microsoft Excel
-En la tabla siguiente se muestra cómo se asignan los tipos de datos del controlador de Microsoft Excel a los tipos de datos SQL de ODBC. El controlador de Microsoft Excel asigna a estos tipos de datos a columnas de tablas de Microsoft Excel basadas en los datos de la columna.  
+En la tabla siguiente se muestra cómo se asignan los tipos de datos del controlador de Microsoft Excel para los tipos de datos SQL de ODBC. El controlador de Microsoft Excel asigna a estos tipos de datos a columnas de tablas de Microsoft Excel basadas en los datos en la columna.  
   
 |Tipo de datos de Microsoft Excel|Tipo de datos de ODBC|  
 |-------------------------------|--------------------|  
@@ -44,12 +41,12 @@ En la tabla siguiente se muestra cómo se asignan los tipos de datos del control
   
  La siguiente tabla muestra las limitaciones en los tipos de datos de Microsoft Excel.  
   
-|Tipo de datos|Description|  
+|Tipo de datos|Descripción|  
 |---------------|-----------------|  
 |Datos cifrados|El controlador de Microsoft Excel no puede leer los datos cifrados.|  
-|Cadenas de error|El controlador de Microsoft Excel no puede devolver una cadena de caracteres para los valores de error de Microsoft Excel (# n /!, #VALUE!, #REF!, #DIV/0!, #NUM!, #NAME? y #NULL!), pero devuelve un valor NULL en su lugar.|  
-|LÓGICO|El valor de una columna lógica se devuelve en un búfer SQL_C_CHAR como 0 o 1.|  
-|NUMBER|Si se crea una columna de enteros, se pueden introducir números que son demasiado grandes para el tipo de datos entero y los datos que contienen valores no enteros se pueden insertar, con lo que se puede convertir la columna en SQL_DOUBLE.|  
-|TEXT|Cuando las filas de una columna contienen más de un tipo de datos de Microsoft Excel, el controlador ODBC de Microsoft Excel asigna al tipo de datos SQL_VARCHAR a la columna. Hay una excepción a esto: si la columna contiene solo dos o tres de los tipos de datos de fecha y hora (fecha, hora y fecha y hora), el controlador ODBC de Microsoft Excel asigna el tipo de datos SQL_TIMESTAMP a la columna.<br /><br /> Creación de una columna de texto de cero o sin especificar longitud realmente devuelve una columna de 255 bytes.<br /><br /> Un literal de cadena de caracteres puede contener cualquier carácter ANSI (1-255 decimal). Utilice dos consecutivos comillas (") para representar una comilla simple (').<br /><br /> Insertar un valor NULL en una columna con un tipo de datos distinto SQL_VARCHAR hará que el tipo de datos de la columna que se va a cambiar a SQL_VARCHAR.|  
+|Cadenas de error|El controlador de Microsoft Excel no puede devolver una cadena de caracteres para los valores de error de Microsoft Excel (#N/A!, #VALUE!, #REF!, #DIV/0!, #NUM!, #NAME? y #NULL!), pero devuelve un valor NULL en su lugar.|  
+|LÓGICO|Se devuelve el valor de una columna lógico en un búfer SQL_C_CHAR como 0 o 1.|  
+|NUMBER|Si se crea una columna de enteros, se pueden escribir los números que son demasiado grandes para el tipo de datos entero, y se pueden insertar datos que contienen valores no enteros, con lo que se puede convertir la columna en SQL_DOUBLE.|  
+|TEXT|Cuando las filas de una columna contienen más de un tipo de datos de Microsoft Excel, el controlador ODBC de Microsoft Excel asigna al tipo de datos SQL_VARCHAR a la columna. Hay una excepción a esto: si la columna contiene sólo dos o tres de los tipos de datos datetime (fecha, hora y fecha y hora), el controlador ODBC de Microsoft Excel asigna el tipo de datos SQL_TIMESTAMP a la columna.<br /><br /> Creación de una columna de texto de cero o sin especificar longitud devuelve realmente una columna de 255 bytes.<br /><br /> Un literal de cadena de caracteres puede contener cualquier carácter ANSI (de 1 a 255 decimal). Usar dos consecutivos comillas (") para representar una comilla simple (').<br /><br /> Insertar un valor NULL en una columna con un tipo de datos distinto SQL_VARCHAR hará que el tipo de datos de la columna para cambiar a SQL_VARCHAR.|  
   
  Para conocer más limitaciones en los tipos de datos pueden encontrarse en [limitaciones del tipo de datos](../../odbc/microsoft/data-type-limitations.md).

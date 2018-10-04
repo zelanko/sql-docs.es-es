@@ -1,13 +1,11 @@
 ---
-title: Método CompareBookmarks (ADO) | Documentos de Microsoft
+title: Método CompareBookmarks (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - CompareBookmarks method [ADO]
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 592a1e06580aca5990bf5ec6b7d28a6a1ecc5abc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 85ca76678c0d3e75a106164626c4e3c3a81bd7e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276804"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649753"
 ---
 # <a name="comparebookmarks-method-ado"></a>Método CompareBookmarks (ADO)
 Compara dos marcadores y devuelve una indicación de sus valores relativos.  
@@ -48,16 +45,16 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  *Bookmark2*  
  El marcador de la segunda fila.  
   
-## <a name="remarks"></a>Notas  
- Los marcadores deben aplicarse al mismo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, o un **Recordset** objeto y su [clon](../../../ado/reference/ado-api/clone-method-ado.md). No se puede comparar de manera confiable marcadores de diferentes **Recordset** objetos, incluso si se crearon a partir del mismo origen o comando. Tampoco se pueden comparar los marcadores para un **Recordset** objeto cuyo proveedor subyacente no admite comparaciones.  
+## <a name="remarks"></a>Comentarios  
+ Los marcadores que deben aplicarse al mismo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, o un **Recordset** objeto y su [clon](../../../ado/reference/ado-api/clone-method-ado.md). No se puede comparar de manera confiable los marcadores de diferentes **Recordset** objetos, incluso si se crearon desde el mismo origen o el comando. Tampoco se pueden comparar los marcadores para un **Recordset** cuyo proveedor subyacente no admite comparaciones de objeto.  
   
- Un marcador identifica de forma única una fila en un **Recordset** objeto. Use la [marcador](../../../ado/reference/ado-api/bookmark-property-ado.md) propiedad de la fila actual para obtener su marcador.  
+ Un marcador que identifica una fila en un **Recordset** objeto. Use la [marcador](../../../ado/reference/ado-api/bookmark-property-ado.md) propiedad de la fila actual para obtener su marcador.  
   
  Dado que el tipo de datos de un marcador es específico para cada proveedor, ADO lo expone como un **Variant**. Por ejemplo, los marcadores de SQL Server son de tipo DBTYPE_R8 (**doble**). ADO expondrá este tipo como un **Variant** con un subtipo de **doble**.  
   
- Cuando se comparan marcadores, ADO no realiza ningún tipo de conversión. Los valores se pasan simplemente al proveedor que se produzca la comparación. Si los marcadores que se pasan a la **CompareBookmarks** método se almacenan en variables de diferentes tipos, puede generar el siguiente error de coincidencia de tipo: "argumentos son del tipo incorrecto, están fuera del intervalo aceptable o están en conflicto entre sí."  
+ Cuando se comparan marcadores, ADO no realiza ningún tipo de conversión. Los valores se pasan simplemente al proveedor que se produce la comparación. Si los marcadores que se pasan a la **CompareBookmarks** método se almacenan en variables de diferentes tipos, puede generar el siguiente error de coincidencia de tipo: "argumentos son del tipo incorrecto, están fuera del intervalo aceptable o están en conflicto entre ellos."  
   
- Un marcador que no es válido o está incorrectamente formada producirá un error.  
+ Marcador que no es válido o con formato incorrecto producirá un error.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

@@ -1,13 +1,11 @@
 ---
-title: Función SQLTransact | Documentos de Microsoft
+title: Función SQLTransact | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLTransact
@@ -19,25 +17,25 @@ f1_keywords:
 helpviewer_keywords:
 - SQLTransact function [ODBC]
 ms.assetid: 496249e0-8eff-4c60-8358-5543bc3ead9c
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92b03edb547cfee48a9968d58ed5f63a05d96cc7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b76b7a550211522c2b2100776b88f311abb2b932
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646863"
 ---
-# <a name="sqltransact-function"></a>SQLTransact (función)
+# <a name="sqltransact-function"></a>Función SQLTransact
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: en desuso  
+ Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: desusado  
   
  **Resumen**  
- En ODBC 3. *x*, la API ODBC 2 *.x* función **SQLTransact** se ha reemplazado por **SQLEndTran**. Para obtener más información, consulte [SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).  
+ En ODBC 3. *x*, el 2 de ODBC *.x* función **SQLTransact** ha sido reemplazado por **SQLEndTran**. Para obtener más información, consulte [SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).  
   
 > [!NOTE]  
->  El atributo SQL_ASYNC_DBC_FUNCTION_ENABLE, que se introdujo en ODBC 3.8, no es compatible con **SQLTransact**. Las aplicaciones que usan una operación asincrónica en un identificador de conexión deben utilizar **SQLEndTran**.  
+>  El atributo SQL_ASYNC_DBC_FUNCTION_ENABLE, que se introdujo en ODBC 3.8, no es compatible con **SQLTransact**. Mediante una operación asincrónica en un identificador de conexión de las aplicaciones deben usar **SQLEndTran**.  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

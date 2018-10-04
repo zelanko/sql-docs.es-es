@@ -1,13 +1,11 @@
 ---
-title: Examinar los datos | Documentos de Microsoft
+title: Examinar los datos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - retrieving data [ADO]
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - data retrieval [ADO]
 - ADO, examining data
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14753bac9e8004c77984b00ff490047c62e2c489
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9382835ffc0a92ee572df07aee8cabb8fa762182
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270954"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645493"
 ---
 # <a name="examining-data"></a>Examinar los datos
-El [obtener datos](../../../ado/guide/data/getting-data.md) sección explica cómo recuperar datos de un origen de datos como uno o más **Recordset** objetos. En esta sección se tratará **Recordset** con más detalle, incluido cómo navegar por la **Recordset** y ver sus datos.  
+El [obtención de datos](../../../ado/guide/data/getting-data.md) sección explica cómo recuperar datos de un origen de datos como uno o más **Recordset** objetos. En esta sección se tratará **Recordset** con más detalle, incluido cómo navegar por la **Recordset** y ver sus datos.  
   
- **Conjunto de registros** admite varios [propiedades y métodos](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md) para que pueda navegar y examinar los datos que contiene. Estas características dependen del proveedor. Algunos proveedores podrían no admitir algunas propiedades o métodos.  
+ **Conjunto de registros** admite varios [propiedades y métodos](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md) para navegar y examinar los datos contenidos en. Estas características dependen del proveedor. Algunos proveedores podrían no admitir algunas propiedades o métodos.  
   
  Esta sección contiene los temas siguientes.  
   

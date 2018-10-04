@@ -1,13 +1,11 @@
 ---
-title: Control de errores en Visual C++ | Documentos de Microsoft
+title: Control de errores en Visual C++ | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,20 +13,19 @@ helpviewer_keywords:
 - errors [ADO], Visual C++
 - Visual C++ error handling [ADO]
 ms.assetid: b7576f07-020a-45f7-9e79-b5756f33f7ab
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 68ce5fb8cc94b130de5171a45b65743e86eec3da
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e33d28201e1a2e4f7df8ac330ac89b3f00194b14
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271694"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630673"
 ---
 # <a name="handling-errors-in-visual-c"></a>Control de errores en Visual C++
-En COM, la mayoría de las operaciones devuelve un código de retorno HRESULT que indica si una función se ha completado correctamente. La directiva #import genera código que envuelve cada método "sin formato" o una propiedad y comprueba el HRESULT devuelto. Si el valor HRESULT indica error, el código de contenedor produce un error de COM llamada _com_issue_errorex () con el código de retorno HRESULT como argumento. Objetos de error COM se pueden capturar en una **try-catch** bloque. (Para una mayor eficacia, detecte una referencia a un objeto _com_error).  
+En COM, la mayoría de las operaciones devuelve un código de retorno HRESULT que indica si una función se completó correctamente. La directiva #import genera código de contenedor en torno a cada método de "raw" o una propiedad y comprueba el HRESULT devuelto. Si el valor HRESULT indica un error, el código de contenedor genera un error de COM que realiza la llamada _com_issue_errorex () con el código de retorno HRESULT como argumento. Objetos de error COM se pueden capturar en un **try-catch** bloque. (Para una mayor eficacia, detecte una referencia a un objeto _com_error).  
   
- Recuerde que éstos son los errores de ADO: son el resultado de la operación de ADO. Los errores devueltos por el proveedor subyacente aparecen como **Error** objetos en el **conexión** del objeto **errores** colección.  
+ Recuerde, éstas son errores de ADO: son el resultado de la operación de ADO. Los errores devueltos por el proveedor subyacente aparecen como **Error** objetos en el **conexión** del objeto **errores** colección.  
   
- La directiva #import sólo crea rutinas de control de errores para los métodos y propiedades declarados en la DLL de ADO. Sin embargo, puede sacar partido de este mismo mecanismo de control de errores escribiendo su propia comprobación de errores de macro o una función insertada. Vea el tema de las extensiones de Visual C++® para obtener ejemplos.
+ La directiva #import sólo crea rutinas de control de errores para los métodos y propiedades declaradas en la DLL de ADO. Sin embargo, se puede aprovechar este mismo mecanismo de control de errores al escribir su propia función alineado o macro comprobación de errores. Vea el tema de las extensiones de Visual C++® para ver ejemplos.

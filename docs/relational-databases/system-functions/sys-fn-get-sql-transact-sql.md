@@ -1,14 +1,11 @@
 ---
-title: Sys.fn_get_sql (Transact-SQL) | Documentos de Microsoft
+title: Sys.fn_get_sql (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_get_sql
@@ -24,16 +21,15 @@ helpviewer_keywords:
 - valid SQL handles [SQL Server]
 - SQL handles
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
-caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5051b76490bc27a5e16aedf16be2bdff2dab8c95
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: db1c1d36bb3cb831a2f744a77529939894fff27a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236167"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842063"
 ---
 # <a name="sysfngetsql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,11 +52,11 @@ sys.fn_get_sql ( SqlHandle )
   
 ## <a name="arguments"></a>Argumentos  
  *SqlHandle*  
- Es el valor del identificador. *SqlHandle* es **varbinary(64)** no tiene ningún valor predeterminado.  
+ Es el valor del identificador. *SqlHandle* es **varbinary (64)** no tiene ningún valor predeterminado.  
   
 ## <a name="tables-returned"></a>Tablas devueltas  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |dbid|**smallint**|Id. de la base de datos. En el caso de instrucciones SQL ad hoc y preparadas, identificador de la base de datos en que se compilaron las instrucciones.|  
 |objectid|**int**|Identificador del objeto de base de datos. Este valor es NULL para las instrucciones SQL ad hoc.|  
@@ -69,13 +65,13 @@ sys.fn_get_sql ( SqlHandle )
 |texto|**texto**|Texto de la instrucción SQL. Este valor es NULL para objetos cifrados.|  
   
 ## <a name="remarks"></a>Comentarios  
- Puede obtener un identificador SQL válido de la columna sql_handle de la [sys.dm_exec_requests &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) vista de administración dinámica.  
+ Puede obtener un identificador SQL válido de la columna sql_handle en la [sys.dm_exec_requests &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) vista de administración dinámica.  
   
- Si se pasa un identificador que ya no existe en la memoria caché, fn_get_sq**l** devuelve un conjunto de resultados vacío. Si pasa un identificador no válido, el archivo por lotes se detiene y aparece un mensaje de error.  
+ Si pasa un identificador que ya no existe en la memoria caché, fn_get_sq**l** devuelve un conjunto de resultados vacío. Si pasa un identificador no válido, el archivo por lotes se detiene y aparece un mensaje de error.  
   
- El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] no se puede almacenar en caché algunas [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones, como instrucciones de copia masiva e instrucciones con literales de cadena mayores de 8 KB. No se pueden recuperar identificadores de esas instrucciones utilizando la función fn_get_sql.  
+ El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] no se puede almacenar en caché algunos [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones, como instrucciones de copia masiva e instrucciones con literales de cadena mayores de 8 KB. No se pueden recuperar identificadores de esas instrucciones utilizando la función fn_get_sql.  
   
- El **texto** columna del conjunto de resultados se filtra con texto que puede contener contraseñas. Para más información acerca de la seguridad relacionados con los procedimientos almacenados que no se supervisan, vea [filtrar un seguimiento](../../relational-databases/sql-trace/filter-a-trace.md).  
+ El **texto** se filtra la columna del conjunto de resultados para el texto que puede contener contraseñas. Para obtener más información acerca de la seguridad relacionados con los procedimientos almacenados que no se supervisan, vea [filtrar un seguimiento](../../relational-databases/sql-trace/filter-a-trace.md).  
   
  La función fn_get_sql devuelve información similar a la [DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md) comando. Los siguientes son ejemplos de situaciones en las que se puede utilizar la función fn_get_sql cuando no se puede utilizar DBCC INPUTBUFFER:   
   
@@ -83,7 +79,7 @@ sys.fn_get_sql ( SqlHandle )
   
 -   Cuando tenga que devolver el nivel más alto de anidamiento de un procedimiento almacenado. Por ejemplo, hay dos procedimientos almacenados denominados sp_1 y sp_2. Si sp_1 llama a sp_2 y el identificador se obtiene de la vista de administración dinámica sys.dm_exec_requests mientras se ejecuta sp_2, la función fn_get_sql devuelve información sobre sp_2. Además, la función fn_get_sql devuelve el texto completo del procedimiento almacenado en el nivel más alto de anidamiento.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  El usuario necesita tener el permiso VIEW SERVER STATE en el servidor.  
   
 ## <a name="examples"></a>Ejemplos  

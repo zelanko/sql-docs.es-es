@@ -1,26 +1,24 @@
 ---
-title: SQLExecute (controlador ODBC de Visual FoxPro) | Documentos de Microsoft
+title: SQLExecute (controlador ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLExecute function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: cce0c25f-fa85-4cf5-bfee-4b7a9401f585
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3d45067b77c26e275cb8a983c8295ca3b9800b0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94211a63c65c2b796714da5c79e78da3944b1e47
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758853"
 ---
 # <a name="sqlexecute-visual-foxpro-odbc-driver"></a>SQLExecute (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
@@ -28,7 +26,7 @@ ms.lasthandoff: 05/03/2018
   
  Soporte técnico: completo  
   
- Conformidad de la API de ODBC: Nivel de núcleo  
+ Conformidad de la API de ODBC: Nivel básico  
   
  Ejecuta una instrucción SQL preparada (una instrucción ya preparada por [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)). El controlador utiliza los valores actuales de las variables de marcador de parámetro, si existe algún parámetro en la instrucción.  
   

@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_os_cluster_nodes (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_os_cluster_nodes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_cluster_nodes_TSQL
@@ -18,38 +16,37 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_cluster_nodes dynamic management view
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6fb5b957cfdaa340ec90a9bb30a5e9db6a54ca31
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 97aa72e4b4012878125ec6635cc181d0f012ecb1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465211"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847523"
 ---
 # <a name="sysdmosclusternodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila por cada nodo en la configuración de la instancia en clúster de conmutación por error. Si la instancia actual es una instancia en clúster de conmutación por error, devuelve una lista de nodos en los que se ha definido esta instancia en clúster de conmutación por error (antes "servidor virtual"). Si la instancia del servidor actual no es una instancia en clúster de conmutación por error, devuelve un conjunto de filas vacío.  
   
-> **Nota:** para llamar a esta desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_os_cluster_nodes**.  
+> **Nota:** para llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_os_cluster_nodes**.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**nodeName**|**sysname**|Nombre de un nodo en la configuración de la instancia en clúster de conmutación por error (servidor virtual) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|status|**int**|Estado del nodo en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia de clúster de conmutación por error: 0, 1, 2, 3, -1. Para obtener más información, consulte [GetClusterNodeState Function](http://go.microsoft.com/fwlink/?LinkId=204794).|  
+|**NodeName**|**sysname**|Nombre de un nodo en la configuración de la instancia en clúster de conmutación por error (servidor virtual) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|status|**int**|Estado del nodo en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia en clúster de conmutación por error: 0, 1, 2, 3, -1. Para obtener más información, consulte [GetClusterNodeState Function](http://go.microsoft.com/fwlink/?LinkId=204794).|  
 |status_description|**nvarchar (20)**|Descripción del estado del nodo de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 0: activo<br /><br /> 1: inactivo<br /><br /> 2: en pausa<br /><br /> 3: uniéndose<br /><br /> -1 = desconocido|  
 |is_current_owner|bit|1 significa que este nodo es el propietario actual del recurso de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo que se encuentra en esta distribución.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo en esta distribución.|  
   
 ## <a name="remarks"></a>Comentarios  
  Si se habilita la agrupación en clústeres de conmutación por error, la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se puede ejecutar en cualquiera de los nodos del clúster de conmutación por error designados como parte de la configuración de la instancia en clúster de conmutación por error (servidor virtual) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > **Nota:** esta vista reemplaza la función fn_virtualservernodes, que dejará de utilizarse en una versión futura.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Necesita el permiso VIEW SERVER STATE en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="examples"></a>Ejemplos  

@@ -1,35 +1,32 @@
 ---
-title: Seleccionar y configurar afectados objetos (OracleToSQL) | Documentos de Microsoft
+title: Seleccionar y configurar objetos afectados (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Columns Comparison Settings
 - Selection of Affected Objects
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
-caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 0db1a6e426c7ca889b9805850ec81f5de120b0a5
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 4034beae4e022379de1cb9cac83f982f512bdc7a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777991"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688303"
 ---
-# <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Seleccionar y configurar afectados objetos (OracleToSQL)
-En esta página puede seleccionar tablas y claves externas, cambios en el que se deben comparar SSMA comprueba los resultados de ejecución para los objetos que haya elegido en el paso anterior. Además, puede personalizar los parámetros de comprobación.  
+# <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Selección y configuración de objetos afectados (OracleToSQL)
+En esta página puede seleccionar tablas y claves externas, los cambios en el que se deben comparar cuando SSMA comprueba los resultados de ejecución para los objetos que haya elegido en el paso anterior. Además, puede personalizar los parámetros de comprobación.  
   
 ## <a name="selection-of-affected-objects"></a>Selección de objetos afectados  
-En el árbol de objetos de Oracle situado en el lado izquierdo de la ventana, compruebe las tablas y las claves externas, cambios en el que se deben comparar para ser idénticos.  
+En el árbol de objetos de Oracle se encuentran en el lado izquierdo de la ventana, compruebe las tablas y claves externas, los cambios en el que se deben comparar por ser idénticos.  
   
-Si no se puede comprobar el evaluador de SSMA cualquiera de estos objetos, verá el vínculo con la etiqueta **algunos objetos seleccionados contienen errores** bajo el árbol de objetos. Haga clic en este vínculo para ver los motivos por qué no se pueden comparar estos objetos y anule la selección de objetos incorrectos.  
+Si no se puede comprobar el evaluador de SSMA cualquiera de estos objetos, verá el vínculo con la etiqueta **algunos objetos seleccionados contienen errores** bajo el árbol de objetos. Haga clic en este vínculo para ver los motivos por qué no se puede comparar estos objetos y anule la selección de objetos incorrectos.  
   
 ## <a name="table"></a>Table  
 La pestaña de la tabla contiene la vista de cuadrícula de la tabla seleccionada. La cuadrícula contiene la siguiente información acerca de la tabla seleccionada:  
@@ -44,22 +41,22 @@ La pestaña de la tabla contiene la vista de cuadrícula de la tabla seleccionad
   
 -   Regla  
   
--   Valor predeterminado  
+-   Default  
   
 -   Identidad  
   
 -   Admisión de valores NULL  
   
 ## <a name="sql"></a>SQL  
-Pestaña SQL contiene la "crear una tabla" SQL de la tabla seleccionada.  
+Pestaña SQL contiene la tabla"crear" SQL de la tabla seleccionada.  
   
 ## <a name="data"></a>data  
-Ficha de datos muestra los datos presentes en la tabla seleccionada.  
+Pestaña de datos muestra los datos presentes en la tabla seleccionada.  
   
 ## <a name="properties"></a>Propiedades  
-Ficha de propiedades muestra las propiedades de la tabla seleccionada. Los campos siguientes están presentes en la ficha Propiedades:  
+Ficha de propiedades muestra las propiedades de la tabla seleccionada. Los campos siguientes están presentes en la pestaña Propiedades:  
   
--   Creó o modificó por última vez  
+-   Creación o última modificación  
   
 -   Nombre de objeto  
   
@@ -67,11 +64,11 @@ Ficha de propiedades muestra las propiedades de la tabla seleccionada. Los campo
 Establecer las reglas de comparación para las columnas de tabla en **comparación de las columnas** página. Puede realizar las siguientes opciones.  
   
 ### <a name="use-during-test-comparisons"></a>Uso durante las comparaciones de pruebas  
-Determine si esta columna participará en la comprobación de resultados de la prueba.  
+Determinar si esta columna participará en la comprobación de los resultados de pruebas.  
   
--   Si elige **True**, SSMA comparará el contenido de esta columna después de ejecutar la prueba en Oracle con el contenido de la columna en SQL Server. 
+-   Si elige **True**, SSMA comparará el contenido de esta columna después de ejecutar la prueba en Oracle con el contenido de la columna de SQL Server. 
   
--   Si elige**False**, la columna se excluirá de la comprobación de resultados.  
+-   Si elige**False**, la columna se excluirán de la comprobación de los resultados.  
   
 ### <a name="use-custom-scale"></a>Usar escala personalizada  
 Para las columnas de tipo de datos numérico, puede establecer una escala personalizada para la comparación.  
@@ -82,38 +79,38 @@ Para las columnas de tipo de datos numérico, puede establecer una escala person
   
 ### <a name="comparing-scale"></a>Comparación de escala  
   
--   Sólo está disponible si la **Use Custom Scale** opción está establecida en **True**. Se trata de la precisión de comparación numérica.  
+-   Sólo está disponible si el **Use Custom Scale** opción está establecida en **True**. Se trata de la precisión de comparación numérica.  
   
 ### <a name="date-time-comparing"></a>Comparación de fecha hora  
-Define la fecha y hora se comparan valores.  
+Define cómo de fecha y hora se comparan los valores.  
   
--   Si selecciona **comparar todo fecha**, se realizará la comparación completa de los valores de ambas plataformas.  
+-   Si selecciona **comparar todo fecha**, se realizará una comparación completa de los valores de ambas plataformas.  
   
--   Si selecciona **comparar solo fecha**, la hora parte se pasará por alto.  
+-   Si selecciona **comparar solo fecha**, la hora se omitirá parte.  
   
--   Si selecciona **comparar solo hora**, la fecha en la parte se pasará por alto.  
+-   Si selecciona **comparar tiempo solo**, la fecha se omitirá parte.  
   
--   Si selecciona **milisegundos omitir**, los resultados se compararán hasta segundos.  
+-   Si selecciona **omitir milisegundos**, los resultados se compararán hasta segundos.  
   
--   Si selecciona **Omitir fecha y milisegundos**, el resultado será comparados sólo por parte de hora y omitir partes fraccionarias de segundo.  
+-   Si selecciona **Omitir fecha y milisegundos**, el resultado será comparadas sólo por parte de hora y omitir partes fraccionarias de segundo.  
   
-### <a name="ignore-strings-case"></a>Omitir mayúsculas y minúsculas cadenas  
-Controla la distinción entre mayúsculas y de la comparación.  
+### <a name="ignore-strings-case"></a>Omitir mayúsculas y minúsculas de cadenas  
+Controla las mayúsculas y minúsculas de la comparación.  
   
 -   Si elige **True**, la comparación será entre mayúsculas y minúsculas.  
   
--   Si elige **False**, la comparación tendrá en cuenta mayúsculas y minúsculas.  
+-   Si elige **False**, la comparación se encargará de mayúsculas y minúsculas.  
   
 ## <a name="comparing-sql"></a>Comparación de SQL  
-Puede ver las instrucciones SELECT generadas por el evaluador de SSMA en el **comparar SQL** página. El evaluador comparará los conjuntos de resultados de estas instrucciones en la fila por fila. Cada fila siguiente de un conjunto de resultados de Oracle debe ser igual a la siguiente fila del conjunto de resultados generado en SQL Server.
+Puede ver las instrucciones SELECT generadas por el evaluador de SSMA en el **comparar SQL** página. La herramienta de comprobación comparará los conjuntos de resultados de estas instrucciones según una fila por fila. Cada fila siguiente de un conjunto de resultados de Oracle debe ser igual a la siguiente fila del conjunto de resultados generado en SQL Server.
   
-Puede editar las instrucciones SELECT para proporcionar comprobación personalizada. Para guardar los cambios en Oracle y en las instrucciones de SQL Server, use la **aplicar** botones en el origen y destino SQL, según corresponda.  
+Puede editar las instrucciones SELECT para proporcionar verificación personalizados. Para guardar los cambios en Oracle y en las instrucciones de SQL Server, use el **aplicar** botones en el origen y destino SQL, según corresponda.  
   
 ## <a name="next-step"></a>Paso siguiente  
-[Personalizar el orden de las llamadas &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
+[Personalización del orden de las llamadas &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Finalizar la preparación del caso de prueba &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[Finalización de la preparación del caso de prueba &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
 [Ejecutar casos de prueba &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[Pruebas de objetos de base de datos migran &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[Pruebas con objetos de base de datos migrados &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

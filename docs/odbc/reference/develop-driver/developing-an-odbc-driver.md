@@ -1,28 +1,25 @@
 ---
-title: Desarrollar un controlador ODBC | Documentos de Microsoft
+title: Desarrollar un controlador ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3225a011-5605-46ba-bb74-1ca6106a5271
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c49f7f4e7ddd5051a6ccdeb090c577b9f31b31ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c4affd835931c00fd5f8ad2514070527ce1b80f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915880"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661683"
 ---
 # <a name="developing-an-odbc-driver"></a>Desarrollar un controlador ODBC
-Esta sección contiene temas que explican cómo desarrollar un controlador ODBC.  
+Esta sección contiene temas que tratan sobre cómo desarrollar un controlador ODBC.  
   
  Esta sección contiene los temas siguientes  
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Backup/Restore event class
 ms.assetid: 08b0b5fe-298a-483f-b50a-73919a2513ce
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1ac7826b6061cba68a3f2445f8d6e236d7a7069
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc3722060c17c64e61fc440b5b7525f29d00990d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256474"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057675"
 ---
 # <a name="audit-backup-and-restore-event-class"></a>Clase de evento de auditoría de restauración y copia de seguridad
   La clase de eventos **Audit Backup/Restore** se produce cuando se emite un comando BACKUP o RESTORE.  

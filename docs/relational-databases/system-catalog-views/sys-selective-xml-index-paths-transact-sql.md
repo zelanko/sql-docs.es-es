@@ -1,14 +1,11 @@
 ---
-title: Sys.selective_xml_index_paths (Transact-SQL) | Documentos de Microsoft
+title: Sys.selective_xml_index_paths (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xml_schema_attributes_TSQL
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_attributes catalog view
 ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0078ffca12182f0478f67b05d03dd14eb64b3ef8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 123258c5eceebe14a8b920b7917941cd83dc7b42
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221416"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675353"
 ---
 # <a name="sysselectivexmlindexpaths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +44,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
  Habrá dos filas nuevas en sys.selective_xml_index_paths correspondientes al índice sxi1.  
 
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Identificador de la tabla con la columna XML.|  
 |**index_id**|**int**|Identificador único del índice xml selectivo.|  
@@ -66,16 +62,16 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**system_type_id**|**tinyint**|Id. del tipo de sistema de la columna.|  
 |**user_type_id**|**tinyint**|Identificador del tipo de usuario de la columna.|  
 |**max_length**|**smallint**|Max Length (en bytes) del tipo.<br /><br /> -1 = El tipo de datos de las columnas es varchar(max), nvarchar(max), varbinary(max) o xml.|  
-|**precisión**|**tinyint**|Precisión máxima del tipo si está basado en numerales. En caso contrario es 0.|  
-|**escala**|**tinyint**|Escala máxima del tipo si está basado en numerales. En caso contrario, es 0.|  
+|**Precisión**|**tinyint**|Precisión máxima del tipo si está basado en numerales. En caso contrario, es 0.|  
+|**Escala**|**tinyint**|Escala máxima del tipo si está basado en numerales. En caso contrario, es 0.|  
 |**collation_name**|**sysname**|Nombre de la intercalación del tipo si está basado en caracteres. En caso contrario, NULL.|  
 |**is_singleton**|**bit**|0 = la sugerencia SINGLETON no está presente.<br /><br /> 1 = Se aplica la sugerencia de optimización SINGLETON.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Esquemas XML &#40;sistema de tipo XML&#41; vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
+ [Los esquemas XML &#40;sistema de tipo XML&#41; vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

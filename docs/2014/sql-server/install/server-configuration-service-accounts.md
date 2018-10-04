@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - service account configuration, SQL Server
 ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
-caps.latest.revision: 37
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2debf9c1754b81741e25f535b1cf05dce2ce2233
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9f642458f8d30fab0d20eeaad427831c5dece964
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212375"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066885"
 ---
 # <a name="server-configuration---service-accounts"></a>Configuración del servidor - Cuentas de servicio
   Use la página Configuración del servidor del Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el fin de asignar cuentas de inicio de sesión a los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los servicios reales configurados en esta página dependen de las características que haya seleccionado para instalarse.  
@@ -50,7 +47,7 @@ ms.locfileid: "37212375"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|La cuenta de servicio que se usa para el servicio Distributed Replay Client.<br /><br /> Proporcione una cuenta en la que se ejecutará el servicio Distributed Replay Client. Esta cuenta debe ser diferente de la cuenta que usó para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.<br /><br /> El tipo de inicio predeterminado es Manual.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|La cuenta de servicio que se usa para el servicio Distributed Replay Controller.<br /><br /> Proporcione una cuenta en la que se ejecutará el servicio Distributed Replay Controller. Esta cuenta debe ser diferente de la cuenta que usó para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.<br /><br /> El tipo de inicio predeterminado es Manual.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Full-text Filter Daemon Launcher|El servicio que crea los procesos fdhost.exe. Este servicio es necesario para hospedar los separadores de palabras y los filtros que procesan datos de texto en la indización de texto completo.<br /><br /> Si proporciona una cuenta de dominio en la que se va a ejecutar el servicio FDHOST Launcher, es muy recomendable que utilice una cuenta con pocos privilegios. Esta cuenta debe ser diferente de la cuenta que usó para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser es el servicio de resolución de nombres que proporciona [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] información de conexión a los equipos cliente. Este servicio se comparte entre varias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instancias. La cuenta de inicio de sesión predeterminada es servicio NT Authority\Local y no puede cambiarse durante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el programa de instalación. Puede cambiar la cuenta una vez completado el proceso de instalación. Si no se especifica el tipo de inicio durante el proceso de instalación, se determina de la siguiente forma:<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser se establece en Automatic y se ejecuta en los escenarios de instalación que se describe a continuación:<br />-<br />                            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia de clúster de conmutación por error<br />-<br />                            Instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde está habilitado TCP o NP<br />-<br />                            Instancia con nombre de Analysis Server que no está en clúster<br /><br /> Si se aplica ninguno de los escenarios anteriores, y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ya está instalado el explorador, el estado actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se mantendrá el explorador.<br /><br /> El tipo de inicio se establece en Disabled y se detiene si no existe ninguna instancia de una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a la instalación.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser es el servicio de resolución de nombres que proporciona [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] información de conexión a los equipos cliente. Este servicio se comparte entre varias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instancias. La cuenta de inicio de sesión predeterminada es servicio NT Authority\Local y no puede cambiarse durante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el programa de instalación. Puede cambiar la cuenta una vez completado el proceso de instalación. Si no se especifica el tipo de inicio durante el proceso de instalación, se determina de la siguiente forma:<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser se establece en Automatic y se ejecuta en los escenarios de instalación que se describe a continuación:<br />-<br />                            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instancia de clúster de conmutación por error<br />-<br />                            Instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde está habilitado TCP o NP<br />-<br />                            Instancia con nombre de Analysis Server que no está en clúster<br /><br /> Si se aplica ninguno de los escenarios anteriores, y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ya está instalado el explorador, el estado actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se mantendrá el explorador.<br /><br /> El tipo de inicio se establece en Disabled y se detiene si no existe ninguna instancia de una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a la instalación.|  
   
 ## <a name="see-also"></a>Vea también  
  [Consideraciones de seguridad para una instalación de SQL Server](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  

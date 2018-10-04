@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/26/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_hadr_database_states_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_database_replica_states dynamic management view
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-caps.latest.revision: 84
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5542402e7f81ff86812a152d9bf538265ba77a5c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 534134ddd778c500622af210301826c83863480f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38000847"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637780"
 ---
 # <a name="sysdmhadrdatabasereplicastates-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +69,7 @@ ms.locfileid: "38000847"
 |**redo_rate**|**bigint**|Promedio de velocidad a la que se rehacen las entradas del registro en una base de datos secundaria, en kilobytes (KB) / seg.|  
 |**filestream_send_rate**|**bigint**|Velocidad a la que los archivos FILESTREAM se envían a la réplica secundaria, en kilobytes (KB)/segundo.|  
 |**end_of_log_lsn**|**numeric(25,0)**|Fin local del LSN de registro. LSN actual correspondiente a la última entrada de registro en la memoria caché del registro en las bases de datos principal y secundaria. En la réplica principal, las filas secundarias reflejan el final del LSN de registro de los mensajes de progreso más recientes que las réplicas secundarias han enviado a la principal.<br /><br /> **end_of_log_lsn** refleja un identificador de bloque de registro rellenado con ceros. No es un número de secuencia de registro real. Para obtener más información, consulte [descripción de los valores de columna LSN](#LSNcolumns), más adelante en este tema.|  
-|**last_commit_lsn**|**Numeric(25,0)**|Número de secuencia de registro real correspondiente al último registro de confirmación del registro de transacciones.<br /><br /> En la base de datos principal, corresponde al último registro de confirmación procesado. Las filas para las bases de datos secundarias muestran el número de secuencia de registro que la réplica secundaria ha enviado a la principal.<br /><br /> En la réplica secundaria, es el último registro de confirmación que se rehízo.|  
+|**last_commit_lsn**|**numeric(25,0)**|Número de secuencia de registro real correspondiente al último registro de confirmación del registro de transacciones.<br /><br /> En la base de datos principal, corresponde al último registro de confirmación procesado. Las filas para las bases de datos secundarias muestran el número de secuencia de registro que la réplica secundaria ha enviado a la principal.<br /><br /> En la réplica secundaria, es el último registro de confirmación que se rehízo.|  
 |**last_commit_time**|**datetime**|Hora correspondiente al último registro de confirmación.<br /><br /> En la base de datos secundaria, esta hora es igual la misma que para la base de datos principal.<br /><br /> En la réplica principal, cada fila de la base de datos secundaria muestra la hora que la réplica secundaria que hospeda dicha base de datos secundaria ha notificado a la réplica principal. La diferencia de tiempo entre las filas de la base de datos principal y una fila determinada de la base de datos secundaria representa aproximadamente el punto objetivo recuperación (RPO), suponiendo que el proceso de rehacer está puesto al día y que el progreso ha notificado a la réplica principal la réplica secundaria.|  
 |**low_water_mark_for_ghosts**|**bigint**|Un número que aumenta regularmente para la base de datos que indica una marca de límite inferior utilizada por la limpieza de registros fantasma en la base de datos principal. Si este número no aumenta con el tiempo, implica que no puede producirse la limpieza de registros fantasma. Para decidir qué filas fantasma se han de limpiar, la réplica principal utiliza el valor mínimo de esta columna para esta base de datos en todas las réplicas de disponibilidad (incluida la réplica principal).|  
 |**secondary_lag_seconds**|**bigint**|El número de segundos que la réplica secundaria está detrás de la réplica principal durante la sincronización.<br /><br />**Se aplica a**: de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  

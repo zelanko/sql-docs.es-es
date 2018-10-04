@@ -1,40 +1,37 @@
 ---
-title: Secuencias de comandos | Documentos de Microsoft
+title: Secuencias de comandos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - command streams [ADO]
 - streams [ADO], command
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3f37202ccd4586d3a485f18d070c0af0434a303
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e6a5e9581a2a236eab869e74825ee97e7e289d44
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35269974"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798586"
 ---
 # <a name="command-streams"></a>Secuencias de comandos
-ADO siempre ha sido compatible proporcionados por el comando en formato de cadena especificado por el **CommandText** propiedad. Como alternativa, con ADO 2.7 o posterior, también puede utilizar una secuencia de información para la entrada de comando mediante la asignación de la secuencia a la **CommandStream** propiedad. Puede asignar un ADO **flujo** objeto o cualquier objeto que admita el modelo COM **IStream** interfaz.  
+ADO siempre ha admitido la entrada del comando en el formato de cadena especificado por el **CommandText** propiedad. Como alternativa, con ADO 2.7 o posterior, también puede usar una secuencia de información para la entrada de comando mediante la asignación de la secuencia de la **CommandStream** propiedad. Puede asignar un ADO **Stream** objeto, o cualquier objeto que admite el COM **IStream** interfaz.  
   
- El contenido de la secuencia de comandos se pasa simplemente desde ADO al proveedor, por lo que el proveedor debe admitir la entrada de comando de flujo para que funcione esta característica. Por ejemplo, SQL Server admite las consultas en forma de plantillas XML o extensiones de OpenXML a Transact-SQL.  
+ El contenido de la secuencia de comandos se pasa simplemente de ADO a su proveedor, por lo que el proveedor debe admitir la entrada de comando de secuencia para esta característica funcione. Por ejemplo, SQL Server admite las consultas en forma de plantillas XML o OpenXML extensiones a Transact-SQL.  
   
- Dado que los detalles de la secuencia deben interpretarse por el proveedor, debe especificar el lenguaje de comandos estableciendo el **dialecto** propiedad. El valor de **dialecto** es una cadena que contiene un GUID, que es definido por el proveedor. Para obtener información acerca de los valores válidos para **dialecto** compatible con el proveedor, consulte la documentación del proveedor.  
+ Dado que los detalles de la secuencia deben interpretarse el proveedor, debe especificar el dialecto del comando estableciendo el **dialecto** propiedad. El valor de **dialecto** es una cadena que contiene un GUID, que se define por el proveedor. Para obtener información acerca de los valores válidos para **dialecto** admitida por el proveedor, consulte la documentación del proveedor.  
   
 ## <a name="xml-template-query-example"></a>Ejemplo de consulta de plantilla XML  
- En el siguiente ejemplo se escribe en VBScript en la base de datos Northwind.  
+ En el ejemplo siguiente se escribe en VBScript en la base de datos Northwind.  
   
- En primer lugar, inicializar y abrir el **flujo** objeto que se usará para contener la secuencia de consulta:  
+ En primer lugar, inicializar y abrir el **Stream** objeto que se usará para contener la secuencia de la consulta:  
   
 ```  
 Dim adoStreamQuery  
@@ -44,7 +41,7 @@ adoStreamQuery.Open
   
  El contenido de la secuencia de la consulta será una consulta de la plantilla XML.  
   
- La consulta de plantilla requiere una referencia al espacio de nombres XML identificado por la instrucción sql: prefijo de la \<SQL: > etiqueta. Una instrucción SELECT de SQL se incluye como el contenido de la plantilla XML y se asigna a una variable de cadena, como se indica a continuación:  
+ La consulta de la plantilla requiere una referencia al espacio de nombres XML identificado por la instrucción sql: prefijo de la \<SQL: > etiqueta. Una instrucción SELECT de SQL se incluye como el contenido de la plantilla XML y asigna a una variable de cadena del siguiente modo:  
   
 ```  
 sQuery = "<ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  
@@ -52,7 +49,7 @@ sQuery = "<ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>
 </ROOT>"  
 ```  
   
- A continuación, escribir la cadena en la secuencia:  
+ A continuación, escriba la cadena en la secuencia:  
   
 ```  
 adoStreamQuery.WriteText sQuery, adWriteChar  
@@ -73,7 +70,7 @@ adoCmd.CommandStream = adoStreamQuery
 adoCmd.Dialect = "{5D531CB2-E6Ed-11D2-B252-00C04F681B71}"  
 ```  
   
- Por último, ejecutar la consulta y devolver los resultados a un **Recordset** objeto:  
+ Por último, ejecute la consulta y devolver los resultados a un **Recordset** objeto:  
   
 ```  
 Set objRS = adoCmd.Execute  

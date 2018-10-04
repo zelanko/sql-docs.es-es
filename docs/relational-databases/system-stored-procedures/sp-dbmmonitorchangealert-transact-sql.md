@@ -1,14 +1,11 @@
 ---
-title: sp_dbmmonitorchangealert (Transact-SQL) | Documentos de Microsoft
+title: sp_dbmmonitorchangealert (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorchangealert_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_dbmmonitorchangealert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
-caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8eb29c4aba54f2db1421fcc4de83322c2f37c3d6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 34fa889c59a6413e5c72138abaa4089186befa46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240335"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852113"
 ---
 # <a name="spdbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +52,7 @@ sp_dbmmonitorchangealert database_name
  *alert_id*  
  Valor entero que identifica la advertencia que se va a agregar o modificar. Especifique uno de los valores siguientes:  
   
-|Value|Métrica de rendimiento|Umbral de advertencia|  
+|Valor|Métrica de rendimiento|Umbral de advertencia|  
 |-----------|------------------------|-----------------------|  
 |1|Transacción no enviada más antigua|Especifica el número de minutos de transacciones que se pueden acumular en la cola de envío antes de que se genere una advertencia en la instancia del servidor principal. Esta advertencia ayuda a medir el potencial de pérdida de datos en términos de tiempo y es especialmente relevante para el modo de alto rendimiento. No obstante, la advertencia también es relevante para el modo de alta seguridad cuando la creación de reflejo se detiene o suspende debido a que los asociados se han desconectado.|  
 |2|Registro sin enviar|Especifica cuántos kilobytes (KB) de registro sin enviar generan una advertencia en la instancia del servidor principal. Esta advertencia ayuda a medir el potencial de pérdida de datos en términos de KB y es especialmente relevante para el modo de alto rendimiento. No obstante, la advertencia también es relevante para el modo de alta seguridad cuando la creación de reflejo se detiene o suspende debido a que los asociados se han desconectado.|  
@@ -64,7 +60,7 @@ sp_dbmmonitorchangealert database_name
 |4|Sobrecarga de confirmación del servidor reflejado|Especifica el número de milisegundos de retardo medio por transacción que se tolera antes de que se genere una advertencia en el servidor principal. Este retardo es la cantidad de sobrecarga en la que se incurre mientras la instancia del servidor principal espera a la instancia del servidor reflejado para escribir la entrada de registro de la transacción en la cola de puesta al día. Este valor solo es relevante en el modo de alta seguridad.|  
 |5|Período de retención|Metadatos que controlan cómo se conservan las filas largas en la tabla de estado de la creación de reflejo de la base de datos.|  
   
- Para obtener información acerca de los identificadores de evento correspondientes a las advertencias, consulte [alertas y umbrales de advertencia de uso de las métricas de rendimiento de creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
+ Para obtener información acerca de los identificadores de evento correspondientes a las advertencias, vea [los umbrales de advertencia de uso y las alertas en métricas de rendimiento de la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
  *alert_threshold*  
  Valor de umbral de la advertencia. Si se devuelve un valor superior a este umbral cuando se actualiza el estado de la creación de reflejos, se escribe una entrada en el registro de eventos de Windows. Este valor representa el número de KB, minutos o milisegundos, en función de la métrica de rendimiento.  
@@ -88,7 +84,7 @@ sp_dbmmonitorchangealert database_name
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
@@ -97,8 +93,8 @@ sp_dbmmonitorchangealert database_name
 |*alert_id*|Métrica de rendimiento|Umbral de advertencia|¿Está habilitada la advertencia?|  
 |-----------------|------------------------|-----------------------|-----------------------------|  
 |1|Transacción no enviada más antigua|30 minutos|Sí|  
-|2|Registro sin enviar|10.000 KB|Sí|  
-|3|Registro sin restaurar|10.000 KB|Sí|  
+|2|Registro sin enviar|10 000 KB|Sí|  
+|3|Registro sin restaurar|10 000 KB|Sí|  
 |4|Sobrecarga de confirmación del servidor reflejado|1.000 milisegundos|no|  
 |5|Período de retención|8 horas|Sí|  
   

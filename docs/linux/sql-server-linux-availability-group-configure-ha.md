@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 801009112dffaa83bd1c938194a27934e4bbbdaa
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 56a61a4bc319c06becc104db0bd846871a533d1e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082717"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621083"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurar SQL Server grupo de disponibilidad AlwaysOn para alta disponibilidad en Linux
 
@@ -68,6 +66,8 @@ Los pasos para crear un grupo de disponibilidad en los servidores de Linux para 
 [!INCLUDE [Create Prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
 ## <a name="create-the-ag"></a>Crear el grupo de disponibilidad
+
+Los ejemplos en esta sección explican cómo crear el grupo de disponibilidad mediante Transact-SQL. También puede usar al Asistente para grupo de disponibilidad de Management Studio de SQL Server. Cuando se crea un grupo de disponibilidad con el asistente, devolverá un error al unir las réplicas para el grupo de disponibilidad. Para solucionar este problema, conceda `ALTER`, `CONTROL`, y `VIEW DEFINITIONS` a la pacemaker en el grupo de disponibilidad en todas las réplicas. Una vez que se conceden permisos en la réplica principal, únase a los nodos al grupo de disponibilidad a través del asistente, pero para alta disponibilidad funcionar correctamente, conceder permisos en todas las réplicas.
 
 Para una configuración de alta disponibilidad que garantiza la conmutación automática por error, el grupo de disponibilidad requiere al menos tres réplicas. Cualquiera de las siguientes configuraciones pueda admitir alta disponibilidad:
 
@@ -192,6 +192,13 @@ También puede configurar un grupo de disponibilidad con `CLUSTER_TYPE=EXTERNAL`
 
 ### <a name="join-secondary-replicas-to-the-ag"></a>Une las réplicas secundarias al grupo de disponibilidad
 
+El usuario de pacemaker requiere `ALTER`, `CONTROL`, y `VIEW DEFINITION` permisos en el grupo de disponibilidad en todas las réplicas. Para conceder permisos, ejecute el siguiente script de Transact-SQL una vez creado el grupo de disponibilidad en la réplica principal y en cada réplica secundaria inmediatamente después de agregarlos al grupo de disponibilidad. Antes de ejecutar el script, reemplace `<pacemakerLogin>` con el nombre de la cuenta de usuario de pacemaker.
+
+```Transact-SQL
+GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO <pacemakerLogin>
+GRANT VIEW SERVER STATE TO <pacemakerLogin>
+```
+
 El siguiente script de Transact-SQL une a una instancia de SQL Server a un grupo de disponibilidad denominado `ag1`. Actualice el script para su entorno. En cada instancia de SQL Server que hospeda una réplica secundaria, ejecute el siguiente Transact-SQL para unir el grupo de disponibilidad.
 
 ```Transact-SQL
@@ -213,7 +220,7 @@ Si ha seguido los pasos descritos en este documento, tiene un grupo de disponibi
 >Después de configurar el clúster y agregar el grupo de disponibilidad como un recurso de clúster, no puede utilizar Transact-SQL para conmutar los recursos del grupo de disponibilidad. Recursos de clúster de SQL Server en Linux no se acoplan estrechamente como con el sistema operativo tal como están en un clúster de conmutación por error de Windows Server (WSFC). Servicio de SQL Server no es consciente de la presencia del clúster. Todas las orquestaciones se realiza a través de las herramientas de administración de clúster. En RHEL o Ubuntu usar `pcs`. En SLES usar `crm`. 
 
 >[!IMPORTANT]
->Si el grupo de disponibilidad es un recurso de clúster, hay un problema conocido en la versión actual, donde la conmutación por error forzada con pérdida de datos a una réplica asincrónica no funciona. Esto se corregirá en la próxima versión. Se realiza correctamente la conmutación por error de manual o automática a una réplica sincrónica. 
+>Si el grupo de disponibilidad es un recurso de clúster, hay un problema conocido en la versión actual, donde la conmutación por error forzada con pérdida de datos a una réplica asincrónica no funciona. Esto se corregirá en la próxima versión. Se realiza correctamente la conmutación por error de manual o automática a una réplica sincrónica.
 
 
 ## <a name="next-steps"></a>Pasos siguientes

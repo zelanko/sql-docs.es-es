@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_changeobjectowner_TSQL
@@ -21,12 +18,12 @@ ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e3150cce9a4ddb4fce2dd1e7bfc6196858f63ec6
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 30ae865060ff3d667de8f18c6d73f4b7087f0780
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032428"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707703"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +55,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  **sp_changeobjectowner** quita todos los permisos existentes del objeto. Tendrá que volver a aplicar los permisos que desea mantener después de ejecutar **sp_changeobjectowner**. Por lo tanto, se recomienda crear un script para los permisos existentes antes de ejecutar **sp_changeobjectowner**. Una vez modificado el propietario del objeto, se puede utilizar el script para volver a aplicar los permisos. Deberá modificar el propietario del objeto en el script de permisos antes de la ejecución.  
   
  Para cambiar el propietario de un elemento protegible, utilice ALTER AUTHORIZATION. Para cambiar un esquema, utilice ALTER SCHEMA.  

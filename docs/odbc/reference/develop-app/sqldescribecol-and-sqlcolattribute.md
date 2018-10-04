@@ -1,13 +1,11 @@
 ---
-title: SQLDescribeCol y SQLColAttribute | Documentos de Microsoft
+title: SQLDescribeCol y SQLColAttribute | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLColAttribute function [ODBC], and SQLDescribeCol
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - retrieving result set meta data [ODBC]
 - metadata [ODBC], result set
 ms.assetid: c2ca442c-03a8-4e0f-9e67-b300bb15962f
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a99551fd76b68af9d48b5d97f8ef696259c8661e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e569e51540cbaa5612b158abdacac5faae77f940
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914020"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722633"
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol y SQLColAttribute
-**SQLDescribeCol** y **SQLColAttribute** se usan para recuperar metadatos del conjunto de resultados. La diferencia entre estas dos funciones es que **SQLDescribeCol** siempre devuelve los mismos cinco fragmentos de información (una columna nombre, tipo de datos, precisión, escala y aceptación de valores NULL), mientras **SQLColAttribute** devuelve un único fragmento de información solicitada por la aplicación. Sin embargo, **SQLColAttribute** puede devolver una selección mucho más completa de metadatos, que incluye esta característica de una columna, Mostrar tamaño, actualización y funciones de búsqueda.  
+**SQLDescribeCol** y **SQLColAttribute** se usan para recuperar metadatos del conjunto de resultados. Es la diferencia entre estas dos funciones que **SQLDescribeCol** siempre devuelve el mismas cinco piezas de información (una columna nombre, tipo de datos, precisión, escala y la nulabilidad), mientras **SQLColAttribute** devuelve un solo dato solicitado por la aplicación. Sin embargo, **SQLColAttribute** puede devolver una selección mucho más completa de metadatos, incluidos la diferenciación de una columna, mostrar el tamaño, la posibilidad de actualización y funciones de búsqueda.  
   
- Muchas aplicaciones, especialmente aquellas que sólo muestre los datos, requieren que solo los metadatos devueltos por **SQLDescribeCol**. Para estas aplicaciones, es más rápido utilizar **SQLDescribeCol** de **SQLColAttribute** porque la información se devuelve en una sola llamada. Otras aplicaciones, especialmente los que actualizan los datos, necesitan los metadatos adicionales devueltos por **SQLColAttribute** y, por tanto, use las dos funciones. Además, **SQLColAttribute** admite metadatos específicos del controlador; para obtener más información, vea [tipos de datos específicos del controlador, Descriptor de tipos, información de tipos, tipos de diagnóstico y atributos](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
+ Muchas aplicaciones, especialmente aquellas que solo muestran datos, requieren solo los metadatos devueltos por **SQLDescribeCol**. Para estas aplicaciones, es más rápido utilizar **SQLDescribeCol** que **SQLColAttribute** porque la información se devuelve en una sola llamada. Otras aplicaciones, especialmente aquellas que actualizan datos, requieren los metadatos adicionales devueltos por **SQLColAttribute** y, por tanto, usar ambas funciones. Además, **SQLColAttribute** es compatible con los metadatos específicos del controlador; para obtener más información, consulte [los tipos de datos específicos del controlador, Descriptor tipos, tipos de información, tipos de diagnóstico y atributos](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
- Una aplicación puede recuperar metadatos del conjunto de resultados en cualquier momento después de que se ha preparado o ejecuta una instrucción y antes del cursor sobre el resultado del conjunto se cierra. Muy pocas aplicaciones requieren metadatos del conjunto de resultados después de prepara la instrucción y antes de que se ejecute. Si es posible, las aplicaciones deben esperar a recuperar los metadatos hasta después de que se ejecuta la instrucción, porque algunos orígenes de datos no pueden devolver metadatos para instrucciones preparadas y emular esta capacidad en el controlador a menudo es un proceso lento. Por ejemplo, el controlador podría generar un conjunto mediante la sustitución de resultados de fila cero la **donde** cláusula de una **seleccione** instrucción con la cláusula **WHERE 1 = 2** y ejecutar el instrucción resultante.  
+ Una aplicación puede recuperar metadatos del conjunto de resultados en cualquier momento después de preparación o ejecución de una instrucción y antes del cursor sobre el resultado del conjunto se cierra. Muy pocas aplicaciones exigen que los metadatos del conjunto de resultados después de prepara la instrucción y antes de ejecutarlo. Si es posible, las aplicaciones deben esperar para recuperar metadatos hasta después de ejecutar la instrucción, ya que algunos orígenes de datos no pueden devolver metadatos para instrucciones preparadas y emular esta capacidad en el controlador a menudo es un proceso lento. Por ejemplo, el controlador podría generar un conjunto mediante la sustitución de resultados de fila cero la **donde** cláusula de una **seleccione** instrucción con la cláusula **WHERE 1 = 2** y ejecutar el instrucción resultante.  
   
- Los metadatos a menudo son costosos de recuperar del origen de datos. Por este motivo, los controladores deben almacenar en caché los metadatos que recuperan del servidor y contener para siempre y cuando el cursor sobre el resultado del conjunto está abierto. Además, las aplicaciones deben solicitar solo los metadatos que sea absolutamente necesitan.
+ A menudo son costoso recuperar del origen de datos de metadatos. Por este motivo, los controladores deben almacenar en caché los metadatos que recuperar del servidor y contener para siempre y cuando el cursor sobre el resultado establecido es abierto. Además, las aplicaciones deben solicitar solo los metadatos que necesitan realmente.

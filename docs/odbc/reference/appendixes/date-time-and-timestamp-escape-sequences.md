@@ -1,13 +1,11 @@
 ---
-title: Secuencias de Escape de fecha, hora y marca de tiempo | Documentos de Microsoft
+title: Secuencias de Escape de fecha, hora y marca de tiempo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC]
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - ODBC escape sequences [ODBC], about escape sequences
 - ODBC escape sequences [ODBC]
 ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b3e5edf5d233b4a6767eff6590fd2cea9923e640
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9131e5fa8f16a137461bde5ecea3fd793b2cf9be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792713"
 ---
-# <a name="date-time-and-timestamp-escape-sequences"></a>Fecha, hora y las secuencias de Escape de marca de tiempo
-ODBC define secuencias de escape para literales de marca de tiempo, hora y fecha. La sintaxis de estas secuencias de escape es como sigue:  
+# <a name="date-time-and-timestamp-escape-sequences"></a>Secuencias de escape de fecha, hora y marca de tiempo
+ODBC define secuencias de escape para fecha, hora y marca de tiempo literales. La sintaxis de estas secuencias de escape es como sigue:  
   
 ```  
   
@@ -35,7 +33,7 @@ ODBC define secuencias de escape para literales de marca de tiempo, hora y fecha
 {ts 'value'}  
 ```  
   
- En la notación de BNF, la sintaxis es la siguiente:  
+ En la notación de BNF, la sintaxis es como sigue:  
   
 ```  
   
@@ -56,4 +54,4 @@ timestamp-separator ::=
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Si los tipos de datos de fecha, hora y marca de tiempo son compatibles con el origen de datos, se admiten las secuencias de escape de literales de fecha, hora y marca de tiempo. Una aplicación debe llamar a **SQLGetTypeInfo** para determinar si se admiten estos tipos de datos.
+ Si los tipos de datos de fecha, hora y marca de tiempo son compatibles con el origen de datos, se admiten las secuencias de escape literal de fecha, hora y marca de tiempo. Una aplicación debe llamar a **SQLGetTypeInfo** para determinar si se admiten estos tipos de datos.

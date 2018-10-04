@@ -1,14 +1,11 @@
 ---
-title: Sys.fn_translate_permissions (Transact-SQL) | Documentos de Microsoft
+title: Sys.fn_translate_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_translate_permissions
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - sys.fn_translate_permissions function
 - fn_translate_permissions function
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
-caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 56fe5c1054bdf41af5708981e6377ae7175e4210
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b098dafc5764db96bdf3dc9e604f3e69a687ab94
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233073"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700503"
 ---
 # <a name="sysfntranslatepermissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,22 +45,22 @@ sys.fn_translate_permissions ( level , perms )
   
 ## <a name="arguments"></a>Argumentos  
  *Nivel*  
- El tipo de elemento protegible al que se aplica el permiso. *nivel de* es **nvarchar (60)**.  
+ El tipo de elemento protegible al que se aplica el permiso. *nivel* es **nvarchar (60)**.  
   
- *en permisos*  
+ *Perms*  
  Es una máscara de bits que se devuelve en la columna de permisos. *Perms* es **varbinary (16)**.  
   
 ## <a name="returns"></a>Devuelve  
  **table**  
   
 ## <a name="remarks"></a>Comentarios  
- El valor devuelto en el **permisos** columna de seguimiento de SQL es una representación de entero de una máscara de bits utilizada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para calcular los permisos efectivos. Cada una de las 25 clases de elementos protegibles tiene su propio conjunto de permisos con sus valores numéricos correspondientes. **Sys.fn_translate_permissions** traduce esta máscara de bits en una tabla de nombres de permisos.  
+ El valor devuelto en el **permisos** columna de un seguimiento de SQL es una representación de entero de una máscara de bits utilizada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para calcular los permisos efectivos. Cada una de las 25 clases de elementos protegibles tiene su propio conjunto de permisos con sus valores numéricos correspondientes. **Sys.fn_translate_permissions** traduce esta máscara de bits en una tabla de nombres de permisos.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="example"></a>Ejemplo  
- La consulta siguiente utiliza `sys.fn_builtin_permissions` para mostrar los permisos que se aplican a certificados y, a continuación, utiliza `sys.fn_translate_permissions` para devolver los resultados de la máscara de bits de permisos.  
+ La consulta siguiente utiliza `sys.fn_builtin_permissions` para mostrar los permisos que se aplican a los certificados y, a continuación, usa `sys.fn_translate_permissions` para devolver los resultados de la máscara de bits de permisos.  
   
 ```  
 SELECT * FROM sys.fn_builtin_permissions('CERTIFICATE');  

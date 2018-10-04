@@ -1,27 +1,24 @@
 ---
-title: SQLSetScrollOptions (controlador ODBC de Visual FoxPro) | Documentos de Microsoft
+title: SQLSetScrollOptions (controlador ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 693e6e28-a845-41b1-9622-5058b0d87229
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81542e2e2187872725bd4db5f5922dbbefb2f944
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c2d78e26309d5ea7dc5e6eed5a04e84a1651b33
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32901880"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622636"
 ---
 # <a name="sqlsetscrolloptions-visual-foxpro-odbc-driver"></a>SQLSetScrollOptions (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
@@ -33,6 +30,6 @@ ms.locfileid: "32901880"
   
  Establece las opciones que controlan el comportamiento de los cursores asociado con un identificador de instrucción, *hstmt*.  
   
- El controlador ODBC de Visual FoxPro admite solo SQL_CONCUR_READ_ONLY; no admite la *fConcurrency* SQL_CONCUR_ROWVER de valor. El controlador convierte SQL_KEYSET_SIZE, SQL_CURSOR_DYNAMIC y SQL_CURSOR_KEYSET_DRIVEN a SQL_SCROLL_STATIC advertencia ODBC_01S02.  
+ El controlador ODBC de Visual FoxPro admite solo SQL_CONCUR_READ_ONLY; no se admite la *fConcurrency* SQL_CONCUR_ROWVER de valor. El controlador convierte SQL_KEYSET_SIZE SQL_CURSOR_DYNAMIC y SQL_CURSOR_KEYSET_DRIVEN a SQL_SCROLL_STATIC con advertencia ODBC_01S02.  
   
  Para obtener más información, consulte [SQLSetScrollOptions](../../odbc/reference/syntax/sqlsetscrolloptions-function.md) en el *referencia del programador de ODBC*.

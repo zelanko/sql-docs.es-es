@@ -1,14 +1,11 @@
 ---
-title: dbo.sysproxysubsystem (Transact-SQL) | Documentos de Microsoft
+title: dbo.sysproxysubsystem (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysproxysubsystem_TSQL
@@ -20,23 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - sysproxysubsystem system table
 ms.assetid: 6d7713f5-1253-4a19-b1fb-635c377c95c1
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d1b9a2dc37075ca09d31aaa3faf46149f17fe93
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e6fa0ff8c90f4532d87191f827e0815de8636033
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254740"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781623"
 ---
 # <a name="dbosysproxysubsystem-transact-sql"></a>dbo.sysproxysubsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Registra qué subsistema del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se utiliza en cada cuenta de proxy. Esta tabla se almacena en la **msdb** base de datos.  
+  Registra qué subsistema del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se utiliza en cada cuenta de proxy. Esta tabla se almacena en el **msdb** base de datos.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|Id. del subsistema. Este valor corresponde a la **subsystem_id** columna en el **syssubsystems** tabla.|  
 |**proxy_id**|**int**|Id. de la cuenta de proxy. Este valor corresponde a la **proxy_id** columna en el **sysproxies** tabla.|  

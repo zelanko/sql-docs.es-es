@@ -1,14 +1,11 @@
 ---
-title: sp_cycle_errorlog (Transact-SQL) | Documentos de Microsoft
+title: sp_cycle_errorlog (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cycle_errorlog_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cycle_errorlog
 ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 42484c0855123181611bf4881c057dec05b8d1e5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 565cc98059c056dbb4fc73f3e0734229754aad93
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236933"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704463"
 ---
 # <a name="spcycleerrorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +46,10 @@ sp_cycle_errorlog
  None  
   
 ## <a name="remarks"></a>Comentarios  
- Cada vez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está iniciado, el registro de errores actual cambia a **errorlog.1**; **errorlog.1** se convierte en **errorlog.2**, **errorlog.2** se convierte en **errorlog.3**, y así sucesivamente. **sp_cycle_errorlog** permite ciclo los archivos de registro de errores sin tener que detener e iniciar el servidor.  
+ Cada vez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está iniciado, el registro de errores actual cambia a **errorlog.1**; **errorlog.1** se convierte en **errorlog.2**, **errorlog.2** se convierte en **errorlog.3**, y así sucesivamente. **sp_cycle_errorlog** permite ciclo de archivos de registro de errores sin tener que detener e iniciar el servidor.  
   
-## <a name="permissions"></a>Permissions  
- Permisos de ejecución para **sp_cycle_errorlog** están restringidos a los miembros de la **sysadmin** rol fijo de servidor.  
+## <a name="permissions"></a>Permisos  
+ Permisos de ejecución de **sp_cycle_errorlog** están restringidos a los miembros de la **sysadmin** rol fijo de servidor.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se recorre el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

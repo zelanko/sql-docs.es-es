@@ -1,13 +1,11 @@
 ---
-title: Funciones numéricas (controlador ODBC de Visual FoxPro) | Documentos de Microsoft
+title: Funciones numéricas (controlador ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC numeric functions [ODBC]
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - numeric functions [ODBC]
 - FoxPro ODBC driver [ODBC], numeric functions
 ms.assetid: 7caab48e-cbb5-4bbc-a09b-5cf902e5bc45
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f577938577be95c7e2c506dbb542a2224f5929e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73379b769da61fe14ba18815446337d0172c2805
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654419"
 ---
 # <a name="numeric-functions-visual-foxpro-odbc-driver"></a>Funciones numéricas (controlador ODBC de Visual FoxPro)
 La tabla siguiente describen las funciones numéricas de ODBC compatibles con el controlador ODBC de Visual FoxPro; Cuando la gramática de Visual FoxPro para la misma función difiere de la sintaxis ODBC, se muestra el equivalente de Visual FoxPro.  
@@ -45,15 +43,15 @@ La tabla siguiente describen las funciones numéricas de ODBC compatibles con el
 |LOG10 *(float_exp)*||  
 |MOD *(integer_exp1, integer_exp2)*||  
 |PI *)*||  
-|RADIANES *(numeric_exp)*|Destructor *(numeric_exp)*|  
+|RADIANES *(numeric_exp)*|DTOR *(numeric_exp)*|  
 |RAND *([integer_exp])*||  
 |REDONDEAR *(numeric_exp, integer_exp)*||  
 |Inicio de sesión *(numeric_exp)*||  
-|SEN *(float_exp)*||  
+|SENO *(float_exp)*||  
 |SQRT *(float_exp)*||  
 |TAN *(float_exp)*||  
   
- No se admiten las funciones numéricas siguientes:  
+ No se admiten las siguientes funciones numéricas:  
   
  POWER *(numeric_exp, integer_exp)*  
   

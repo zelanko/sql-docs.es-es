@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 07/22/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_filestream_force_garbage_collection
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5cd74006b394f7412f7ec2d3c6bfacb36f701cf1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 350c007c8a0153f2dfd0f84d596110b3dea29500
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063753"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733423"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +70,7 @@ sp_filestream_force_garbage_collection
 |*num_unprocessed_items*|Indica el número de elementos de FILESTREAM (archivos o directorios) que se podían haber eliminado y no se procesaron para la recolección de elementos no utilizados en este contenedor de FILESTREAM. Los elementos pueden no haberse procesado por diversas razones, por ejemplo:<br /><br /> Archivos que se tienen que anclar porque no se ha tomado la copia de seguridad de registros o CHECKPOINT.<br /><br /> Archivos del modelo de recuperación FULL o BULK_LOGGED.<br /><br /> Hay una transacción activa de ejecución prolongada.<br /><br /> No se ha ejecutado el trabajo del lector de registro de replicación. Vea las notas [almacenamiento de FILESTREAM en SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=209156) para obtener más información.|  
 |*last_collected_xact_seqno*|Devuelve el último número de secuencia de registro (LSN) correspondiente hasta el que el recolector de elementos no utilizados ha recolectado archivos del contenedor de FILESTREAM especificado.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Ejecuta explícitamente la tarea del recolector de elementos no utilizados de FILESTREAM hasta su finalización en la base de datos solicitada (y el contenedor de FILESTREAM). El proceso de recolección de elementos no utilizados quita los archivos que ya no se necesitan. El tiempo necesario para completar esta operación depende del tamaño de los datos de FILESTREAM en la base de datos o el contenedor, así como de la cantidad de actividad DML que se ha producido recientemente en los datos de FILESTREAM. Si bien esta operación se puede ejecutar mientras la base de datos está en línea, el rendimiento de la base de datos puede verse afectado durante la ejecución como consecuencia de diversas actividades de I/O que el proceso de recolección de elementos no utilizados lleva a cabo.  
   
 > [!NOTE]  

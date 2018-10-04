@@ -1,30 +1,28 @@
 ---
-title: Tipos de datos de ODBC | Documentos de Microsoft
+title: Tipos de datos de ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC]
 - data types [ODBC], about data types
 ms.assetid: 7332d93e-44db-4132-9c10-988dbc13369e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 573fe1c883e535b996c2cee05714d6df6793c575
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96e9b93ef3ef52feeab61c9f7a62ce757f682634
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675333"
 ---
 # <a name="data-types-in-odbc"></a>Tipos de datos de ODBC
-ODBC utiliza dos conjuntos de tipos de datos: SQL tipos de datos de C y tipos de datos. Tipos de datos SQL se utilizan en el origen de datos y se utilizan tipos de datos C en el código de C en la aplicación.  
+ODBC utiliza dos conjuntos de tipos de datos: SQL tipos de datos de C y los tipos de datos. Se utilizan tipos de datos SQL en el origen de datos y tipos de datos C se usan en el código de C en la aplicación.  
   
  Esta sección contiene el siguiente tema.  
   

@@ -1,28 +1,25 @@
 ---
-title: Campo (ADO - sintaxis WFC) | Documentos de Microsoft
+title: Campo (ADO - sintaxis WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Field collection [ADO], ADO/WFC syntax
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 327bedf139a68496e4d779dc76fd5273b0fdb99d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 709629c6ef42b8ffeb65959ab9491bbe3c178ab3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278184"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613843"
 ---
 # <a name="field-ado---wfc-syntax"></a>Campo (ADO - sintaxis WFC)
 ## <a name="package-commswfcdata"></a>paquete com.ms.wfc.data  
@@ -48,7 +45,7 @@ public com.ms.com.IUnknown getDataFormat()
 public void setDataFormat(com.ms.com.IUnknown format)  
 ```  
   
- (Para obtener más información, consulte la documentación para la interfaz com.ms.wfc.data.IDataFormat.)  
+ (Para obtener más información, consulte la documentación de la interfaz com.ms.wfc.data.IDataFormat).  
   
 ```  
 public int getDefinedSize()  
@@ -70,9 +67,9 @@ public AdoProperties getProperties()
 ### <a name="field-accessor-methods"></a>Métodos de descriptor de acceso de campo  
  El [valor](../../../ado/reference/ado-api/value-property-ado.md) propiedad de un [campo](../../../ado/reference/ado-api/field-object.md) objeto Obtiene o establece el contenido de ese objeto. El contenido se representa como una variante, un tipo de objeto que se puede asignar un valor y cualquiera de varios tipos de datos.  
   
- ADO/WFC implementa la **valor** propiedad con el **getValue** método, que devuelve un objeto VARIANT; y la **setValue** método, que toma una variante como argumento. Los tipos Variant son muy eficaces en algunos lenguajes, como Microsoft Visual Basic.  
+ ADO y WFC implementa el **valor** propiedad con el **getValue** método, que devuelve un objeto VARIANT; y la **setValue** método, que toma un tipo VARIANT como argumento. Tipos Variant son muy eficaces en algunos lenguajes, como Microsoft Visual Basic.  
   
- Además el **valor** propiedad ADO/WFC proporciona *descriptor de acceso* métodos que usan tipos de datos de Java para obtener y establecer el contenido de **campo** objetos. La mayoría de estos métodos tiene nombres de la forma **obtener *** DataType* o **establecer *** DataType*.  
+ Además el **valor** propiedad, ADO y WFC proporciona *descriptor de acceso* métodos que usan tipos de datos de Java para obtener y establecer el contenido de **campo** objetos. La mayoría de estos métodos tiene nombres de la forma **obtener *** DataType* o **establecer *** DataType*.  
   
  Existen dos excepciones notables: uno de los **getObject** métodos devuelve un objeto convertido en una clase especificada. No hay ningún **getNull** propiedad; en su lugar, hay una **isNull** propiedad que devuelve un valor booleano que indica si el campo es null.  
   

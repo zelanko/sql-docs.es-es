@@ -1,10 +1,8 @@
 ---
-title: Introducción de ADO | Documentos de Microsoft
+title: Introducción de ADO | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,21 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programming
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b2b3e0a8f9249abd76ccaf69bdd9f2311bcff2e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4c56a328d7b3495b57d34f127a2d12947f0ecfd0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271414"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723843"
 ---
 # <a name="ado-overview-and-benefits"></a>Información general de ADO y ventajas
-ActiveX Data Objects (ADO) es una interfaz de alto nivel, fácil de usar para OLE DB. OLE DB es una interfaz de bajo nivel y de alto rendimiento a una variedad de almacenes de datos. ADO y OLE DB pueden trabajar con relacional (tabular) y no relacionales (jerárquicos o flujo) datos.
+ActiveX Data Objects (ADO) es una interfaz de alto nivel, fácil de usar para OLE DB. OLE DB es una interfaz de bajo nivel y de alto rendimiento para una variedad de almacenes de datos. ADO y OLE DB pueden trabajar con relacional (tabular) y no relacionales (jerárquicos o flujo) datos.
 
- ADO proporciona una capa de abstracción entre la aplicación cliente o de nivel intermedio y las interfaces de OLE DB de bajo nivel. ADO utiliza un pequeño conjunto de objetos de automatización para proporcionar una interfaz sencilla y eficaz a OLE DB. Esta interfaz hace de ADO una buena elección para los desarrolladores en lenguajes de nivel superior, como Visual Basic y VBScript, que desean tener acceso a datos sin tener que aprender las complejidades de COM y OLE DB.
+ ADO proporciona una capa de abstracción entre la aplicación cliente o nivel intermedio y las interfaces de OLE DB de bajo nivel. ADO utiliza un pequeño conjunto de objetos de automatización para proporcionar una interfaz sencilla y eficaz a OLE DB. Esta interfaz permite ADO una buena elección para los desarrolladores en lenguajes de nivel superior, como Visual Basic y VBScript, que desean tener acceso a datos sin tener que aprender las complejidades de COM y OLE DB.
 
  Esta sección contiene los temas siguientes.
 

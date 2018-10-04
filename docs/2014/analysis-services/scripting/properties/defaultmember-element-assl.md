@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DefaultMember Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DefaultMember element
 ms.assetid: db4eea9f-f7cf-40de-abd0-b62014e7ec2d
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fd074ab38264bf45ad70a96c37a22bc3c3185d4a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c90abe48fc1d3bfa099e39234d22df822a03782
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229685"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055305"
 ---
 # <a name="defaultmember-element-assl"></a>Elemento DefaultMember (ASSL)
   Contiene una expresión MDX (Expresiones multidimensionales) que identifica el miembro predeterminado del elemento primario.  
@@ -46,7 +43,7 @@ ms.locfileid: "37229685"
 </AttributePermission>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37229685"
 |Elemento primario|[AttributePermission](../objects/attributepermission-element-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [ManyToManyMeasureGroupDimension](../data-type/dimension-data-type-assl.md), [PerspectiveAttribute](../data-type/perspectiveattribute-data-type-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento `DefaultMember` define el miembro predeterminado del elemento primario. Si `DefaultMember` no se especifica o se establece en una cadena vacía, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] elige un miembro que se usará como el miembro predeterminado.  
   
  Para los elementos `ManyToManyMeasureGroupDimension`, el elemento `DefaultMember` contiene una expresión MDX que especifica un miembro en la dimensión identificada en el elemento `CubeDimensionID` de `ManyToManyMeasureGroupDimension`. La expresión MDX es similar a la [StrToMember](/sql/mdx/strtomember-mdx) función MDX con la palabra clave CONSTRAINED, en eso no se puede incluir MDX o funciones definidas por el usuario.  

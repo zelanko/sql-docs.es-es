@@ -1,13 +1,11 @@
 ---
-title: Función SQLAllocConnect | Documentos de Microsoft
+title: Función SQLAllocConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLAllocConnect
@@ -19,26 +17,25 @@ f1_keywords:
 helpviewer_keywords:
 - SQLAllocConnect function [ODBC]
 ms.assetid: ca119958-ff72-42d4-b0ac-b1ca3212c705
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b47e7aa1050d7d7b0f245ec6ef0bcfaed0aeccf5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71ee58c89ba29e61e1a5e0db595f7b791a21fd46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916320"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776283"
 ---
-# <a name="sqlallocconnect-function"></a>SQLAllocConnect (función)
+# <a name="sqlallocconnect-function"></a>Función SQLAllocConnect
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: en desuso  
+ Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: desusado  
   
  **Resumen**  
- En ODBC 3. *x*, ODBC 2. *x* función **SQLAllocConnect** se ha reemplazado por **SQLAllocHandle**. Para obtener más información, consulte [SQLAllocHandle, función](../../../odbc/reference/syntax/sqlallochandle-function.md).  
+ En ODBC 3. *x*, ODBC 2. *x* función **SQLAllocConnect** ha sido reemplazado por **SQLAllocHandle**. Para obtener más información, consulte [función SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md).  
   
 > [!NOTE]  
->  Para obtener más información acerca de qué el Administrador de controladores asigna esta función cuando una API ODBC 2. *x* aplicación está trabajando con una aplicación ODBC 3. *x* controladores, consulte [asignación de funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) en Apéndice G: controlador directrices para la compatibilidad con versiones anteriores.  
+>  Para obtener más información sobre lo que el Administrador de controladores asigna esta función cuando un ODBC 2. *x* aplicación funciona con una aplicación ODBC 3. *x* controladores, consulte [asignación de funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) en Apéndice G: directrices de controlador para la compatibilidad con versiones anteriores.  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

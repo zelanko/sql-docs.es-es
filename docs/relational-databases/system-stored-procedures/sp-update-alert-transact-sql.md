@@ -1,14 +1,11 @@
 ---
-title: sp_update_alert (Transact-SQL) | Documentos de Microsoft
+title: sp_update_alert (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_alert_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a7715e354208953dc62e4a161a44f195babf92f3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 24cd1864fc31524dcd661cd9eb108d8cb4fa1b77
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262888"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846733"
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,39 +73,39 @@ sp_update_alert
  Especifica si la alerta está habilitada (**1**) o no habilitada (**0**). *habilitado* es **tinyint**, su valor predeterminado es null. Para poder activar una alerta, ésta debe estar habilitada.  
   
  [ **@message_id =**] *message_id*  
- Nuevo mensaje o número de error para la definición de la alerta. Por lo general, *message_id* corresponde a un número de error en la **sysmessages** tabla. *message_id* es **int**, su valor predeterminado es null. Un mensaje de identificador puede usarse únicamente si la configuración del nivel de gravedad de la alerta es **0**.  
+ Nuevo mensaje o número de error para la definición de la alerta. Por lo general, *message_id* corresponde a un número de error en la **sysmessages** tabla. *message_id* es **int**, su valor predeterminado es null. Un mensaje de identificador se puede usar sólo si la configuración del nivel de gravedad de la alerta es **0**.  
   
  [  **@severity =**] *gravedad*  
- Un nuevo nivel de gravedad (de **1** a través de **25**) para la definición de alerta. Cualquier [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensaje enviado en el registro de aplicación de Windows con la gravedad especificada activará la alerta. *gravedad* es **int**, su valor predeterminado es null. Un nivel de gravedad se puede utilizar únicamente si el valor de Id. de mensaje de la alerta es **0**.  
+ Un nuevo nivel de gravedad (de **1** a través de **25**) para la definición de alerta. Cualquier [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensaje enviado en el registro de aplicación de Windows con la gravedad especificada activará la alerta. *gravedad* es **int**, su valor predeterminado es null. Un nivel de gravedad se puede usar sólo si la configuración de Id. de mensaje para la alerta es **0**.  
   
  [  **@delay_between_responses =**] *delay_between_responses*  
  El nuevo intervalo de espera, en segundos, entre respuestas a la alerta. *delay_between_responses* es **int**, su valor predeterminado es null.  
   
  [ **@notification_message =**] **'***notification_message***'**  
- Texto revisado de un mensaje adicional que se envía al operador como parte del correo electrónico, **mediante net send**, o una notificación por buscapersonas. *notification_message* es **nvarchar (512)**, su valor predeterminado es null.  
+ Texto revisado de un mensaje adicional que se envía al operador como parte del correo electrónico, **net send**, o una notificación por buscapersonas. *notification_message* es **nvarchar (512)**, su valor predeterminado es null.  
   
  [ **@include_event_description_in =**] *include_event_description_in*  
- Especifica si la descripción del error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del registro de aplicación Windows se tiene que incluir en el mensaje de notificación. *include_event_description_in* es **tinyint**, su valor predeterminado es null y puede tener uno o varios de estos valores.  
+ Especifica si la descripción del error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del registro de aplicación Windows se tiene que incluir en el mensaje de notificación. *include_event_description_in* es **tinyint**, su valor predeterminado es null, y puede tener uno o varios de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|None|  
 |**1**|Correo electrónico|  
 |**2**|Buscapersonas|  
 |**4**|**net send**|  
-|**7**|Todos|  
+|**7**|All|  
   
  [ **@database_name =**] **'***database***'**  
  Nombre de la base de datos en la que debe ocurrir el error para que se active la alerta. *base de datos* es **sysname.** No se permiten nombres incluidos entre corchetes ([ ]). El valor predeterminado es NULL.  
   
  [ **@event_description_keyword =**] **'***event_description_keyword***'**  
- Secuencia de caracteres que debe encontrarse en la descripción del error en el registro de mensajes de error. Se pueden usar caracteres de coincidencia de patrón de la expresión LIKE de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *event_description_keyword* es **nvarchar (100)**, su valor predeterminado es null. Este parámetro resulta útil para filtrar nombres de objeto (por ejemplo, **% customer_table %**).  
+ Secuencia de caracteres que debe encontrarse en la descripción del error en el registro de mensajes de error. Se pueden usar caracteres de coincidencia de patrón de la expresión LIKE de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *event_description_keyword* es **nvarchar (100)**, su valor predeterminado es null. Este parámetro resulta útil para filtrar los nombres de objeto (por ejemplo, **% customer_table %**).  
   
  [ **@job_id =**] *job_id*  
- El número de identificación del trabajo. *job_id* es **uniqueidentifier**, su valor predeterminado es null. Si *job_id* se especifica, *job_name* se debe omitir.  
+ El número de identificación del trabajo. *job_id* es **uniqueidentifier**, su valor predeterminado es null. Si *job_id* se especifica, *job_name* debe omitirse.  
   
  [  **@job_name =**] **'***job_name***'**  
- Nombre del trabajo que se ejecuta como respuesta a esta alerta. *job_name* es **sysname**, su valor predeterminado es null. Si *job_name* se especifica, *job_id* se debe omitir.  
+ Nombre del trabajo que se ejecuta como respuesta a esta alerta. *job_name* es **sysname**, su valor predeterminado es null. Si *job_name* se especifica, *job_id* debe omitirse.  
   
  [ **@occurrence_count =** ] *occurrence_count*  
  Restablece el número de veces que se ha producido la alerta. *occurrence_count* es **int**, su valor predeterminado es null y se puede establecer solo en **0**.  
@@ -138,14 +134,14 @@ sp_update_alert
  [ **@performance_condition =**] **'***performance_condition***'**  
  Un valor expresado en formato **'***itemcomparatorvalue***'**. *performance_condition* es **nvarchar (512)**, su valor predeterminado es null y consta de estos elementos.  
   
-|Elemento de formato|Description|  
+|Elemento de formato|Descripción|  
 |--------------------|-----------------|  
 |*Elemento*|Objeto de rendimiento, contador de rendimiento o instancia con nombre del contador|  
 |*Comparador*|Uno de estos operadores: **>**, **<**, **=**|  
-|*Valor*|Valor numérico del contador|  
+|*Value*|Valor numérico del contador|  
   
  [ **@category_name =**] **'***category***'**  
- El nombre de la categoría de alerta. *categoría* es **sysname** con un valor predeterminado es NULL.  
+ El nombre de la categoría de alerta. *categoría* es **sysname** con el valor predeterminado es NULL.  
   
  [ **@wmi_namespace**=] **'***wmi_namespace***'**  
  Es el espacio de nombres WMI para consultar eventos. *wmi_namespace* es **sysname**, su valor predeterminado es null.  
@@ -157,11 +153,11 @@ sp_update_alert
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Comentarios  
- Solo **sysmessages** escribe en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] el registro de aplicación de Windows puede desencadenar una alerta.  
+ Solo **sysmessages** escribe en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro de aplicación de Windows puede desencadenar una alerta.  
   
- **sp_update_alert** cambia solo los valores de alerta para el parámetro que se proporcionan los valores. Si se omite un parámetro, se conserva la configuración actual.  
+ **sp_update_alert** cambia sólo los valores de alerta para el parámetro que se proporcionan los valores. Si se omite un parámetro, se conserva la configuración actual.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Para ejecutar este procedimiento almacenado, los usuarios deben ser un miembro de la **sysadmin** rol fijo de servidor.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -1,32 +1,29 @@
 ---
-title: Ejemplo de propiedad DefinedSize (VC ++) | Documentos de Microsoft
+title: Ejemplo de propiedad DefinedSize (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - DefinedSize property [ADOX], VC++ example
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2492568dc6e9e62dc3db2ffb914495015e714880
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5c16f76e086dfc78ffed967ef33300a09630a798
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285584"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616603"
 ---
-# <a name="definedsize-property-example-vc"></a>Ejemplo de propiedad DefinedSize (VC ++)
-Este ejemplo se muestra la [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) propiedad de un [columna](../../../ado/reference/adox-api/column-object-adox.md). El código se vuelven a definir el tamaño de la columna FirstName de la **empleados** tabla de la *Northwind* base de datos. A continuación, el cambio en los valores de la FirstName [campo](../../../ado/reference/ado-api/field-object.md) de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) tomando como base la **empleados** se muestra la tabla. Tenga en cuenta que de forma predeterminada, el campo FirstName deja de estar rellena con espacios cuando haya redefinido la **DefinedSize** propiedad.  
+# <a name="definedsize-property-example-vc"></a>Ejemplo de propiedad DefinedSize (VC++)
+Este ejemplo se muestra el [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) propiedad de un [columna](../../../ado/reference/adox-api/column-object-adox.md). El código vuelva a definir el tamaño de la columna Name de la **empleados** tabla de la *Northwind* base de datos. A continuación, el cambio en los valores de la FirstName [campo](../../../ado/reference/ado-api/field-object.md) de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) según la **empleados** se muestra la tabla. Tenga en cuenta que, de forma predeterminada, los campos FirstName se rellenan con espacios cuando haya redefinido la **DefinedSize** propiedad.  
   
 ```  
 // BeginDefinedSizeCpp.cpp  

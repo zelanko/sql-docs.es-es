@@ -1,30 +1,28 @@
 ---
-title: Seguimiento | Documentos de Microsoft
+title: Seguimiento | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tracing options [ODBC], about tracing
 - driver manager [ODBC], tracing
 ms.assetid: 77ed4c6c-d976-4eb2-8526-a12697b0ef83
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8ff139b0074a22adc14903174ec031cd4176dca6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b96d86952b2d8be152aefad584e85104accb7cee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715413"
 ---
 # <a name="tracing"></a>Seguimiento
-El Administrador de controladores ODBC tiene una utilidad de seguimiento que permite a la secuencia de llamadas a funciones realizadas por una aplicación ODBC se registran y transcripción en un archivo de registro. El seguimiento se realiza mediante una DLL de seguimiento que captura llamadas realizadas entre la aplicación y el Administrador de controladores y entre el Administrador de controladores y el controlador. Este método de creación de trazas sustituye el seguimiento realizado por la API ODBC 2 *.x* Administrador de controladores y el seguimiento se realizan en ODBC 2 *.x* por ODBC Spy.  
+El Administrador de controladores ODBC tiene una utilidad de seguimiento que permite la secuencia de llamadas de función realizadas por una aplicación ODBC se graben y transcripción en un archivo de registro. Realizar el seguimiento de un archivo DLL que captura las llamadas entre la aplicación y el Administrador de controladores y entre el Administrador de controladores y el controlador de seguimiento. Este método de seguimiento reemplaza el seguimiento realizado por el 2 de ODBC *.x* realizan el Administrador de controladores y el seguimiento de ODBC 2 *.x* por ODBC Spy.  
   
  Esta sección contiene los temas siguientes.  
   

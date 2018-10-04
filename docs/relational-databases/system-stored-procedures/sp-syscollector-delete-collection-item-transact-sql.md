@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_delete_collection_item (Transact-SQL) | Documentos de Microsoft
+title: sp_syscollector_delete_collection_item (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_collection_item
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_delete_collecton_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 9c2b0990-1d3d-4a59-94a0-3cca6fef4681
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 331a5201e4a179427cbe1ec558ff49958eb818aa
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9bb3db70db6d888858ec413de852acccf73b96e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258537"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703273"
 ---
 # <a name="spsyscollectordeletecollectionitem-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +43,10 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
   
 ## <a name="arguments"></a>Argumentos  
  [ @collection_item_id =] *collection_item_id*  
- Es el identificador único del elemento de recopilación. *collection_item_id* es **int** con un valor predeterminado es NULL. *collection_item_id* debe tener un valor si *nombre* es NULL.  
+ Es el identificador único del elemento de recopilación. *collection_item_id* es **int** con el valor predeterminado es NULL. *collection_item_id* debe tener un valor si *nombre* es NULL.  
   
  [ @name =] '*nombre*'  
- Es el nombre del elemento de colección. *nombre* es **sysname** con un valor predeterminado es NULL. *nombre* debe tener un valor si *collection_item_id* es NULL.  
+ Es el nombre del elemento de colección. *nombre* es **sysname** con un valor predeterminado es null. *nombre* debe tener un valor si *collection_item_id* es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -60,7 +56,7 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
   
  El conjunto de recopilación que contiene el elemento de recopilación se detiene y reinicia durante esta operación.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol fijo de base de datos dc_admin (con permiso EXECUTE) para ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  

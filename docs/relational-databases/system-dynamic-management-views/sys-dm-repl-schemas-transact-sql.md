@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_repl_schemas (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_repl_schemas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_repl_schemas_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_schemas dynamic management function
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9dfbe8ca8cf3261e898731967aeec34e81c010c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 2aa0b4e885d586e64c6c613e07d2969d77885715
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467651"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47763387"
 ---
 # <a name="sysdmreplschemas-transact-sql"></a>sys.dm_repl_schemas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +32,10 @@ ms.locfileid: "34467651"
   Devuelve información acerca de columnas de tablas publicadas por la replicación.  
   
  
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**artcache_schema_address**|**varbinary (8)**|Dirección de memoria de la estructura del esquema en caché de la tabla de artículos publicada.|  
-|**desencadenadores de actualización inmediata**|**bigint**|Id. de la tabla replicada.|  
+|**tabid**|**bigint**|Id. de la tabla replicada.|  
 |**IndexId**|**smallint**|Id. de un índice clúster en la tabla publicada.|  
 |**idSch**|**bigint**|Id. del esquema de tabla.|  
 |**tabschema**|**nvarchar(510)**|Nombre del esquema de tabla.|  
@@ -85,8 +82,8 @@ ms.locfileid: "34467651"
 |**se_computed**|**smallint**|Especifica si la columna es una columna calculada.|  
 |**se_nullBitInLeafRows**|**int**|Especifica si el valor de la columna es NULL.|  
   
-## <a name="permissions"></a>Permissions  
- Requiere el permiso VIEW DATABASE STATE en la base de datos de publicación para llamar a **dm_repl_schemas**.  
+## <a name="permissions"></a>Permisos  
+ Requiere el permiso VIEW DATABASE STATE en la base de datos de publicaciones para llamar a **dm_repl_schemas**.  
   
 ## <a name="remarks"></a>Comentarios  
  La instancia solo se devuelve para objetos de la base de datos replicada que está cargada actualmente en la caché del artículo de replicación.  

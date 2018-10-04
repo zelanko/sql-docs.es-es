@@ -1,13 +1,11 @@
 ---
-title: Método CreateParameter (ADO) | Documentos de Microsoft
+title: Método CreateParameter (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - CreateParameter method [RDS]
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 865b2b0b8009b03e33e24f72ab4f336910a17ace
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b150fe1c0c7260960140558eeff74b54c0798d80
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277254"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631353"
 ---
 # <a name="createparameter-method-ado"></a>Método CreateParameter (ADO)
 Crea un nuevo [parámetro](../../../ado/reference/ado-api/parameter-object.md) objeto con las propiedades especificadas.  
@@ -42,28 +39,28 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
   
 #### <a name="parameters"></a>Parámetros  
  *Nombre*  
- Opcional. A **cadena** valor que contiene el nombre de la **parámetro** objeto.  
+ Opcional. Un **cadena** valor que contiene el nombre de la **parámetro** objeto.  
   
  *Tipo*  
- Opcional. A [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valor que especifica el tipo de datos de la **parámetro** objeto.  
+ Opcional. Un [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valor que especifica el tipo de datos de la **parámetro** objeto.  
   
  *Dirección*  
- Opcional. A [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) valor que especifica el tipo de **parámetro** objeto.  
+ Opcional. Un [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) valor que especifica el tipo de **parámetro** objeto.  
   
  *Tamaño*  
- Opcional. A **largo** valor que especifica la longitud máxima para el valor del parámetro en caracteres o bytes.  
+ Opcional. Un **largo** valor que especifica la longitud máxima para el valor del parámetro en caracteres o bytes.  
   
  *Value*  
- Opcional. A **Variant** que especifica el valor de la **parámetro** objeto.  
+ Opcional. Un **Variant** que especifica el valor para el **parámetro** objeto.  
   
-## <a name="remarks"></a>Notas  
- Use la **CreateParameter** método para crear un nuevo **parámetro** objeto con un nombre especificado, el tipo, la dirección, el tamaño y el valor. Cualquier valor que pase los argumentos de entrada se escribe en la correspondiente **parámetro** propiedades.  
+## <a name="remarks"></a>Comentarios  
+ Use la **CreateParameter** método para crear un nuevo **parámetro** objeto con un nombre especificado, el tipo, la dirección, el tamaño y el valor. Cualquier valor que pase los argumentos se escribe en la correspondiente **parámetro** propiedades.  
   
- Este método no anexa automáticamente el **parámetro** el objeto a la **parámetros** colección de un [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto. Esto le permite establecer propiedades adicionales cuyos valores ADO validará cuando anexe el **parámetro** objeto a la colección.  
+ Este método no anexa automáticamente el **parámetro** de objeto para el **parámetros** colección de un [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto. Esto le permite establecer propiedades adicionales cuyos valores ADO validará al anexar el **parámetro** objeto a la colección.  
   
- Si se especifica un tipo de datos de longitud variable en el *tipo* argumento, debe pasar un *tamaño* argumento o un conjunto el [tamaño](../../../ado/reference/ado-api/size-property-ado-parameter.md) propiedad de la **parámetro**  objeto antes de anexarlo a la **parámetros** colección; en caso contrario, se produce un error.  
+ Si se especifica un tipo de datos de longitud variable en el *tipo* argumento, se debe pasar un *tamaño* argumento o un conjunto el [tamaño](../../../ado/reference/ado-api/size-property-ado-parameter.md) propiedad de la **parámetro**  objeto antes de agregarlo a la **parámetros** colección; en caso contrario, se produce un error.  
   
- Si especifica un tipo de datos numéricos (**adNumeric** o **adDecimal**) en el *tipo* argumento; a continuación, debe establecer también la [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) y [Precisión](../../../ado/reference/ado-api/precision-property-ado.md) propiedades.  
+ Si especifica un tipo de datos numéricos (**adNumeric** o **adDecimal**) en el *tipo* argumento, a continuación, se debe establecer también la [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) y [Precisión](../../../ado/reference/ado-api/precision-property-ado.md) propiedades.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  

@@ -1,13 +1,11 @@
 ---
-title: Identificadores y descriptores de tipo de datos | Documentos de Microsoft
+title: Identificadores y descriptores de tipo de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], identifiers
@@ -17,25 +15,24 @@ helpviewer_keywords:
 - data types [ODBC], descriptors
 - concise data types [ODBC]
 ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 690df82a803df4bb4b987026753c448f90734600
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6594c2b47ed5f57f6814ac704b9d36073e0a8304
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908400"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793003"
 ---
-# <a name="data-type-identifiers-and-descriptors"></a>Identificadores de tipo de datos y los descriptores de
-Los tipos de datos enumeran en el [tipos de datos SQL](../../../odbc/reference/appendixes/sql-data-types.md) y [tipos de datos C](../../../odbc/reference/appendixes/c-data-types.md) secciones anteriormente en este apéndice son tipos de datos "concisa": cada identificador hace referencia a un tipo de datos único. Hay una correspondencia uno a uno entre el identificador y el tipo de datos. Descriptores, sin embargo, hacer no en todos los casos utilice un valor único para identificar los tipos de datos. En algunos casos, usan un tipo de datos "detallados" y un subcódigo de tipo. Para todos los tipos de datos excepto los tipos de datos datetime e interval, el identificador de tipo detallado es el mismo que el identificador de tipo concisa y el valor de SQL_DESC_DATETIME_INTERVAL_CODE es igual a 0. Para los tipos de datos datetime e interval, sin embargo, un tipo detallado (SQL_DATETIME o SQL_INTERVAL) se almacena en SQL_DESC_TYPE, un tipo conciso se almacena en SQL_DESC_CONCISE_TYPE y un subcódigo para cada tipo concisa se almacena en SQL_DESC_DATETIME_INTERVAL_CODE. Configuración de uno de estos campos afecta a los demás. Para obtener más información acerca de estos campos, vea el [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) descripción de la función.  
+# <a name="data-type-identifiers-and-descriptors"></a>Identificadores y descriptores de tipo de datos
+Los tipos de datos enumeran en el [tipos de datos SQL](../../../odbc/reference/appendixes/sql-data-types.md) y [tipos de datos C](../../../odbc/reference/appendixes/c-data-types.md) secciones anteriormente en este apéndice son tipos de datos "concisa": cada identificador hace referencia a un tipo de datos único. Hay una correspondencia uno a uno entre el identificador y el tipo de datos. Los descriptores, sin embargo, hacer no en todos los casos utilizan un valor único para identificar los tipos de datos. En algunos casos, que usan un tipo de datos "detallado" y un subcódigo de tipo. Para todos los tipos de datos, excepto los tipos de datos datetime e interval, el identificador de tipo detallado es el mismo que el identificador de tipo concisas y el valor en SQL_DESC_DATETIME_INTERVAL_CODE es igual a 0. Para los tipos de datos datetime e interval, sin embargo, un tipo detallado (SQL_DATETIME o SQL_INTERVAL) se almacena en SQL_DESC_TYPE, un tipo conciso se almacena en SQL_DESC_CONCISE_TYPE y un subcódigo para cada tipo conciso se almacena en SQL_DESC_DATETIME_INTERVAL_CODE. Configuración de uno de estos campos afecta a los demás. Para obtener más información acerca de estos campos, vea el [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) descripción de la función.  
   
- Cuando se establece el campo SQL_DESC_TYPE o SQL_DESC_CONCISE_TYPE para algunos tipos de datos, los campos SQL_DESC_DATETIME_INTERVAL_PRECISION, SQL_DESC_LENGTH, SQL_DESC_PRECISION y SQL_DESC_SCALE se establecen automáticamente en valores predeterminados, según sea pertinente para los datos tipo. Para obtener más información, vea la descripción del campo SQL_DESC_TYPE en [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Si cualquiera de los valores predeterminados establecidos no es adecuado, la aplicación debe establecer explícitamente el campo descriptor a través de una llamada a **SQLSetDescField**.  
+ Cuando se establece el campo SQL_DESC_TYPE o SQL_DESC_CONCISE_TYPE para algunos tipos de datos, los campos SQL_DESC_DATETIME_INTERVAL_PRECISION, SQL_DESC_LENGTH, SQL_DESC_PRECISION y SQL_DESC_SCALE se establecen automáticamente los valores predeterminados, según corresponda para los datos tipo. Para obtener más información, vea la descripción del campo SQL_DESC_TYPE en [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Si cualquiera de los valores predeterminados establecidos no es adecuado, la aplicación debe establecer explícitamente el campo descriptor mediante una llamada a **SQLSetDescField**.  
   
- En la tabla siguiente se muestra el identificador de tipo concisa, el identificador de tipo detallado y el subcódigo de tipo para cada fecha y hora y el intervalo de SQL y el identificador de tipo de C. Tal y como se indica en esta tabla, para los tipos de datos datetime e interval, los campos SQL_DESC_TYPE y SQL_DESC_DATETIME_INTERVAL_CODE tienen el mismo constantes de manifiesto para tipos de datos SQL (en los descriptores de implementación) y para los tipos de datos de C (en la aplicación descriptores).  
+ En la tabla siguiente se muestra el identificador de tipo concisas, identificador de tipo detallado y subcódigo de tipo para cada fecha y hora y el intervalo de SQL y el identificador de tipo C. Tal y como se indica en esta tabla, para los tipos de datos datetime e interval, los campos SQL_DESC_TYPE y SQL_DESC_DATETIME_INTERVAL_CODE tienen el mismas constantes de manifiesto para los tipos de datos SQL (en los descriptores de implementación) y para los tipos de datos de C (en la aplicación descriptores).  
   
-|Tipo SQL concisa|Tipo de C concisa|Tipo detallado|DATETIME_INTERVAL_CODE|  
+|Tipo conciso de SQL|Tipo conciso de C|Tipo detallado|DATETIME_INTERVAL_CODE|  
 |----------------------|--------------------|------------------|------------------------------|  
 |SQL_TYPE_DATE|SQL_C_TYPE_DATE|SQL_DATETIME|SQL_CODE_DATE|  
 |SQL_TYPE_TIME|SQL_C_TYPE_TIME|SQL_DATETIME|SQL_CODE_TIME|  

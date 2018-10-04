@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_repl_traninfo (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_repl_traninfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_repl_traninfo
@@ -18,34 +16,33 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_traninfo dynamic management view
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20a15bd329da102b45b3f611a9cbe86651ba2b3d
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: c67f85b2a98b950b9614bfeb712c4d47d03d943b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467931"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795033"
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve información acerca de cada transacción de la captura de datos modificados o replicada.  
 
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**fp2p_pub_exists**|**tinyint**|Si la transacción está en una base de datos publicada mediante la replicación transaccional del mismo nivel. Si es true, el valor es 1; en caso contrario, es 0.|  
 |**db_ver**|**int**|Versión de la base de datos.|  
 |**comp_range_address**|**varbinary (8)**|Define un intervalo de reversiones parciales que deben omitirse.|  
 |**textinfo_address**|**varbinary (8)**|Dirección de memoria de la estructura de información de texto en caché.|  
 |**fsinfo_address**|**varbinary (8)**|Dirección de memoria de la estructura de información de la secuencia de archivo en caché.|  
-|**begin_lsn**|**nvarchar(64)**|Número de flujo de registro (LSN) de la entrada de registro de inicio para la transacción.|  
-|**commit_lsn**|**nvarchar(64)**|LSN de la entrada de registro de confirmación para la transacción.|  
+|**begin_lsn**|**Nvarchar (64)**|Número de flujo de registro (LSN) de la entrada de registro de inicio para la transacción.|  
+|**commit_lsn**|**Nvarchar (64)**|LSN de la entrada de registro de confirmación para la transacción.|  
 |**dbid**|**smallint**|Id. de la base de datos.|  
-|**Filas**|**int**|Id. del comando replicado en la transacción.|  
-|**xdesid**|**nvarchar(64)**|Id. de la transacción.|  
+|**filas**|**int**|Id. del comando replicado en la transacción.|  
+|**elemento xdesid**|**Nvarchar (64)**|Id. de la transacción.|  
 |**artcache_table_address**|**varbinary (8)**|Dirección de memoria de la última estructura de la tabla de artículos en caché utilizada para esta transacción.|  
 |**servidor**|**nvarchar(514)**|Nombre de servidor.|  
 |**server_len_in_bytes**|**smallint**|Longitud de caracteres, en bytes, del nombre del servidor.|  
@@ -57,21 +54,21 @@ ms.locfileid: "34467931"
 |**orig_db_len_in_bytes**|**smallint**|Longitud de caracteres, en bytes, de la base de datos donde se originó la transacción.|  
 |**cmds_in_tran**|**int**|Número de comandos replicados en la transacción actual, que se utiliza para determinar cuándo debe confirmarse una transacción lógica.|  
 |**is_boundedupdate_singleton**|**tinyint**|Especifica si una actualización de columna única solo afecta a una sola fila.|  
-|**begin_update_lsn**|**nvarchar(64)**|LSN usado en una actualización de columna única.|  
-|**delete_lsn**|**nvarchar(64)**|LSN que se va a eliminar como parte de una actualización.|  
-|**last_end_lsn**|**nvarchar(64)**|Último LSN en una transacción lógica.|  
+|**begin_update_lsn**|**Nvarchar (64)**|LSN usado en una actualización de columna única.|  
+|**delete_lsn**|**Nvarchar (64)**|LSN que se va a eliminar como parte de una actualización.|  
+|**last_end_lsn**|**Nvarchar (64)**|Último LSN en una transacción lógica.|  
 |**fcomplete**|**tinyint**|Especifica si el comando es una actualización parcial.|  
 |**fcompensated**|**tinyint**|Especifica si la transacción está implicada en una reversión parcial.|  
 |**fprocessingtext**|**tinyint**|Especifica si la transacción incluye una columna de tipo de datos binarios grandes.|  
 |**max_cmds_in_tran**|**int**|Número máximo de comandos en una transacción lógica, como lo especifica el Agente de registro del LOG.|  
 |**begin_time**|**datetime**|Hora de inicio de la transacción.|  
 |**commit_time**|**datetime**|Hora de confirmación de la transacción.|  
-|**session_id**|**int**|Id. de la sesión de examen del registro de captura de datos modificados. Esta columna se asigna a la **session_id** columna en [sys.dm_cdc_logscan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md).|  
-|**session_phase**|**int**|Número que indica la fase en la que se encontraba la sesión en el momento de producirse el error. Esta columna se asigna a la **phase_number** columna en [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).|  
+|**session_id**|**int**|Id. de la sesión de examen del registro de captura de datos modificados. Esta columna se asigna a la **session_id** columna [sys.dm_cdc_logscan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md).|  
+|**session_phase**|**int**|Número que indica la fase en la que se encontraba la sesión en el momento de producirse el error. Esta columna se asigna a la **phase_number** columna [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).|  
 |**is_known_cdc_tran**|**bit**|Indica que se realiza el seguimiento de la transacción mediante la captura de datos modificados.<br /><br /> 0 = Transacción replicada.<br /><br /> 1 = Transacción de la captura de datos modificados|  
 |**error_count**|**int**|Número máximo de errores detectados|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW DATABASE STATE en la base de datos de publicación o en la base de datos habilitada para la captura de datos modificados.  
   
 ## <a name="remarks"></a>Comentarios  

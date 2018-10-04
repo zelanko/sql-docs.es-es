@@ -1,13 +1,11 @@
 ---
-title: RecordStatusEnum | Documentos de Microsoft
+title: RecordStatusEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,31 +13,30 @@ f1_keywords:
 helpviewer_keywords:
 - RecordStatusEnum enumeration [ADO]
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f61d0d948730cfb39cd2c0429eb53dcab311fe5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e91f82595c8e4f6fe07969960959a12464bf53a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281234"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708759"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
-Especifica la [estado](../../../ado/reference/ado-api/status-property-ado-recordset.md) de un registro con respecto a las actualizaciones por lotes y otras operaciones masivas.  
+Especifica el [estado](../../../ado/reference/ado-api/status-property-ado-recordset.md) de un registro con respecto a las actualizaciones por lotes y otras operaciones masivas.  
   
 |Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|Indica que no se guardó el registro porque se canceló la operación.|  
 |**adRecCantRelease**|0x400|Indica que no se guardó el nuevo registro porque se ha bloqueado el registro existente.|  
-|**adRecConcurrencyViolation**|0x800|Indica que no se guardó el registro porque se estaba utilizando simultaneidad optimista.|  
+|**adRecConcurrencyViolation**|0x800|Indica que no se guardó el registro porque la simultaneidad optimista estaba en uso.|  
 |**adRecDBDeleted**|0x40000|Indica que el registro se ha eliminado del origen de datos.|  
 |**adRecDeleted**|0x4|Indica que el registro se ha eliminado.|  
 |**adRecIntegrityViolation**|0x1000|Indica que no se guardó el registro porque el usuario infringió las restricciones de integridad.|  
 |**adRecInvalid**|0x10|Indica que no se guardó el registro porque su marcador no es válido.|  
 |**adRecMaxChangesExceeded**|0x2000|Indica que no se guardó el registro porque había demasiados cambios pendientes.|  
-|**adRecModified**|0x2|Indica que se ha modificado el registro.|  
+|**adRecModified**|0x2|Indica que se modificó el registro.|  
 |**adRecMultipleChanges**|0x40|Indica que no se guardó el registro porque habría afectado a varios registros.|  
 |**adRecNew**|0x1|Indica que el registro es nuevo.|  
 |**adRecObjectOpen**|0x4000|Indica que no se guardó el registro debido a un conflicto con un objeto de almacenamiento abierto.|  
@@ -48,9 +45,9 @@ Especifica la [estado](../../../ado/reference/ado-api/status-property-ado-record
 |**adRecPendingChanges**|0x80|Indica que no se guardó el registro porque hace referencia a una inserción pendiente.|  
 |**adRecPermissionDenied**|0x10000|Indica que no se guardó el registro porque el usuario no tiene permisos suficientes.|  
 |**adRecSchemaViolation**|0x20000|Indica que no se guardó el registro porque infringe la estructura de la base de datos subyacente.|  
-|**adRecUnmodified**|0x8|Indica que no se ha modificado el registro.|  
+|**adRecUnmodified**|0x8|Indica que no se modificó el registro.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
+## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
  AdoEnums.RecordStatus.  
   
  Paquete: **com.ms.wfc.data**  

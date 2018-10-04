@@ -1,13 +1,11 @@
 ---
-title: Atributo conformidad | Documentos de Microsoft
+title: Conformidad de atributo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], conformance levels
@@ -15,31 +13,31 @@ helpviewer_keywords:
 - conformance levels [ODBC], attribute
 - attribute conformance levels [ODBC]
 ms.assetid: 34fea100-10f9-46d5-bc50-3aa867b70f24
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c765982a35fd41fc36fdc82ddbd3434b2d90c07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 44f1311d98f37412454ad2352366492a8d5a1768
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818846"
 ---
 # <a name="attribute-conformance"></a>Conformidad de atributo
-En la tabla siguiente indica el nivel de conformidad de cada atributo de entorno de ODBC, donde esto está bien definido.  
+En la tabla siguiente indica el nivel de cumplimiento de cada atributo de entorno ODBC, donde esto está bien definido.  
   
-|Función|Nivel de conformidad|  
+|Función|nivel de cumplimiento|  
 |--------------|-----------------------|  
 |SQL_ATTR_CONNECTION_POOLING|--[1]|  
 |SQL_ATTR_CP_MATCH|--[1]|  
 |SQL_ATTR_ODBC_VER|Core|  
 |SQL_ATTR_OUTPUT_NTS|--[1]|  
   
- [1] ésta es una característica opcional y por lo tanto no forma parte de los niveles de cumplimiento.  
+ [1] Esta es una característica opcional y por lo tanto no forma parte de los niveles de compatibilidad.  
   
- En la tabla siguiente indica el nivel de conformidad de cada atributo de conexión ODBC, donde esto está bien definido.  
+ En la tabla siguiente indica el nivel de cumplimiento de cada atributo de conexión ODBC, donde esto está bien definido.  
   
-|Función|Nivel de conformidad|  
+|Función|nivel de cumplimiento|  
 |--------------|-----------------------|  
 |SQL_ATTR_ACCESS_MODE|Core|  
 |SQL_ATTR_ASYNC_ENABLE|Nivel 1 o nivel 2 [1]|  
@@ -58,13 +56,13 @@ En la tabla siguiente indica el nivel de conformidad de cada atributo de entorno
 |SQL_ATTR_TRANSLATE_OPTION|Core|  
 |SQL_ATTR_TXN_ISOLATION|Nivel 1 o nivel 2 [2]|  
   
- [1] las aplicaciones que admiten la asincronía de nivel de conexión (necesaria para el nivel 1) deben admitir establecer este atributo en SQL_TRUE mediante una llamada a **SQLSetConnectAttr**; el atributo no tienen que ser puede establecer en un valor distinto del predeterminado valor a través de **SQLSetStmtAttr**. Las aplicaciones que admiten la asincronía de nivel de instrucción (requerida para el nivel 2) deben admitir establecer este atributo en SQL_TRUE con cualquier función.  
+ [1] aplicaciones que admiten la asincronía de nivel de conexión (necesaria para el nivel 1) deben admitir al establecer este atributo en SQL_TRUE mediante una llamada a **SQLSetConnectAttr**; el atributo no tiene que ser configurable en un valor distinto del predeterminado valor a través de **SQLSetStmtAttr**. Las aplicaciones que admiten la asincronía de nivel de instrucción (necesaria para el nivel 2) deben admitir al establecer este atributo en SQL_TRUE con cualquier función.  
   
- [2] para el acuerdo de la interfaz de nivel 1, el controlador debe admitir un valor además del valor predeterminado definido por el controlador (disponible mediante una llamada a **SQLGetInfo** con la opción SQL_DEFAULT_TXN_ISOLATION). Para el cumplimiento de la interfaz de nivel 2, el controlador también debe admitir SQL_TXN_SERIALIZABLE.  
+ [2] para el cumplimiento de la interfaz de nivel 1, el controlador debe admitir un valor además del valor predeterminado definido por el controlador (disponible mediante una llamada a **SQLGetInfo** con la opción SQL_DEFAULT_TXN_ISOLATION). Para el cumplimiento de la interfaz de nivel 2, el controlador también debe admitir SQL_TXN_SERIALIZABLE.  
   
- En la tabla siguiente indica el nivel de conformidad de cada atributo de instrucción ODBC, donde esto está bien definido.  
+ En la tabla siguiente indica el nivel de cumplimiento de cada atributo de instrucción ODBC, donde esto está bien definido.  
   
-|Función|Nivel de conformidad|  
+|Función|nivel de cumplimiento|  
 |--------------|-----------------------|  
 |SQL_ATTR_APP_PARAM_DESC|Core|  
 |SQL_ATTR_APP_ROW_DESC|Core|  
@@ -72,7 +70,7 @@ En la tabla siguiente indica el nivel de conformidad de cada atributo de entorno
 |SQL_ATTR_CONCURRENCY|Nivel 1 o nivel 2 [2]|  
 |SQL_ATTR_CURSOR_SCROLLABLE|Nivel 1|  
 |SQL_ATTR_CURSOR_SENSITIVITY|Nivel 2|  
-|SQL_ATTR_CURSOR_TYPE|Nivel de núcleo/2 [3]|  
+|SQL_ATTR_CURSOR_TYPE|Core/nivel 2 [3]|  
 |SQL_ATTR_ENABLE_AUTO_IPD|Nivel 2|  
 |SQL_ATTR_FETCH_BOOKMARK_PTR|Nivel 2|  
 |SQL_ATTR_IMP_PARAM_DESC|Core|  
@@ -100,8 +98,8 @@ En la tabla siguiente indica el nivel de conformidad de cada atributo de entorno
 |SQL_ATTR_SIMULATE_CURSOR|Nivel 2|  
 |SQL_ATTR_USE_BOOKMARKS|Nivel 2|  
   
- [1] las aplicaciones que admiten la asincronía de nivel de conexión (necesaria para el nivel 1) deben admitir establecer este atributo en SQL_TRUE mediante una llamada a **SQLSetConnectAttr**; el atributo no tienen que ser puede establecer en un valor distinto del predeterminado valor a través de **SQLSetStmtAttr**. Las aplicaciones que admiten la asincronía de nivel de instrucción (requerida para el nivel 2) deben admitir establecer este atributo en SQL_TRUE con cualquier función.  
+ [1] aplicaciones que admiten la asincronía de nivel de conexión (necesaria para el nivel 1) deben admitir al establecer este atributo en SQL_TRUE mediante una llamada a **SQLSetConnectAttr**; el atributo no tiene que ser configurable en un valor distinto del predeterminado valor a través de **SQLSetStmtAttr**. Las aplicaciones que admiten la asincronía de nivel de instrucción (necesaria para el nivel 2) deben admitir al establecer este atributo en SQL_TRUE con cualquier función.  
   
- [2] para el acuerdo de la interfaz de nivel 2, el controlador debe admitir SQL_CONCUR_READ_ONLY y al menos otro valor.  
+ [2] para el cumplimiento de la interfaz de nivel 2, el controlador debe admitir SQL_CONCUR_READ_ONLY y al menos otro valor.  
   
- [3] para la conformidad de la interfaz de nivel 1, el controlador debe admitir SQL_CURSOR_FORWARD_ONLY y al menos otro valor. Para el cumplimiento de la interfaz de nivel 2, el controlador debe admitir todos los valores definidos en este documento.
+ [3] para el cumplimiento de la interfaz de nivel 1, el controlador debe admitir SQL_CURSOR_FORWARD_ONLY y al menos otro valor. Para el cumplimiento de la interfaz de nivel 2, el controlador debe admitir todos los valores definidos en este documento.

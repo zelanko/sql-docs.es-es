@@ -1,13 +1,11 @@
 ---
-title: PropertyAttributesEnum | Documentos de Microsoft
+title: PropertyAttributesEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - PropertyAttributesEnum enumeration [ADO]
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31260a4336954a2efa0cf001d244b7ad7ff7d6a0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0bb38a73008d86144751ee324eb442bf711d65a5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280804"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47835973"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 Especifica los atributos de un [propiedad](../../../ado/reference/ado-api/property-object-ado.md) objeto.  
@@ -32,12 +29,12 @@ Especifica los atributos de un [propiedad](../../../ado/reference/ado-api/proper
 |Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|Indica que la propiedad no es compatible con el proveedor.|  
-|**adPropRequired**|1|Indica que el usuario debe especificar un valor para esta propiedad antes de que se inicialice el origen de datos.|  
-|**adPropOptional**|2|Indica que el usuario no necesita especificar un valor para esta propiedad antes de que se inicialice el origen de datos.|  
+|**adPropRequired**|1|Indica que el usuario debe especificar un valor para esta propiedad antes de inicializarse el origen de datos.|  
+|**adPropOptional**|2|Indica que el usuario no necesita especificar un valor para esta propiedad antes de inicializarse el origen de datos.|  
 |**adPropRead**|512|Indica que el usuario puede leer la propiedad.|  
 |**adPropWrite**|1024|Indica que el usuario puede establecer la propiedad.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
+## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
  Paquete: **com.ms.wfc.data**  
   
 |Constante|  

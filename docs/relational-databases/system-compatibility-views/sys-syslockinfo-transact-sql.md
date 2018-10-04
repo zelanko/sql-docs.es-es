@@ -1,14 +1,11 @@
 ---
-title: Sys.syslockinfo (Transact-SQL) | Documentos de Microsoft
+title: Sys.syslockinfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syslockinfo_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - syslockinfo system table
 - sys.syslockinfo compatibility view
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e47eefe7a096664068d0762f43478881b532f815
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 29446f34777682ff98ef6ec7c438c72db58e7167
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222058"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780883"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +39,10 @@ ms.locfileid: "33222058"
 > [!IMPORTANT]  
 >  Esta característica ha cambiado con respecto a las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [cambios recientes en las características del motor de base de datos en SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**rsc_text**|**nchar(32)**|Texto descriptivo de un recurso de bloqueo. Contiene una parte del nombre del recurso.|  
-|**rsc_bin**|**binary (16)**|Recurso de bloqueo binario. Contiene el recurso de bloqueo efectivo contenido en el administrador de bloqueos. Esta columna se incluye para herramientas que saber acerca del formato de recurso de bloqueo para generar su propio formato recurso de bloqueo, y para realizar autocombinaciones en **syslockinfo**.|  
+|**rsc_bin**|**binary (16)**|Recurso de bloqueo binario. Contiene el recurso de bloqueo efectivo contenido en el administrador de bloqueos. Esta columna se incluye para las herramientas que conoce el formato del recurso de bloqueo para generar su propio formato recurso de bloqueo, y para realizar autocombinaciones en **syslockinfo**.|  
 |**rsc_valblk**|**binary (16)**|Bloque de valor de bloqueo. Algunos tipos de recursos pueden incluir datos adicionales en el recurso de bloqueo no distribuido por el administrador de bloqueos para determinar a quién pertenece el recurso. Por ejemplo, los bloqueos de página no son propiedad de un identificador de objeto determinado. Para la extensión de bloqueo y otros fines. Sin embargo, se puede colocar el Id. de objeto de un bloqueo de página en el bloque de valor de bloqueo.|  
 |**rsc_dbid**|**smallint**|Id. de la base de datos asociada al recurso.|  
 |**rsc_indid**|**smallint**|Id. del índice asociado al recurso, si es el caso.|  
@@ -61,10 +57,10 @@ ms.locfileid: "33222058"
 |**req_spid**|**int**|Interno [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Id. de la sesión que solicita el bloqueo del proceso.|  
 |**req_ecid**|**int**|Id. del contexto de ejecución (ECID). Se utiliza para indicar qué subproceso de una operación en paralelo es el propietario de un bloqueo determinado.|  
 |**req_ownertype**|**smallint**|Tipo del objeto asociado al bloqueo:<br /><br /> 1 = Transacción<br /><br /> 2 = Cursor<br /><br /> 3 = Sesión<br /><br /> 4 = ExSession<br /><br /> Observe que el 3 y el 4 representan una versión especial de bloqueos de sesión, que realizan un seguimiento de los bloqueos de bases de datos y de grupos de archivos respectivamente.|  
-|**req_transactionID**|**bigint**|Transacción único identificador usa en **syslockinfo** y, en caso de generador de perfiles|  
+|**req_transactionID**|**bigint**|Transacción único identificador utilizado en **syslockinfo** y en eventos del generador de perfiles|  
 |**req_transactionUOW**|**uniqueidentifier**|Identifica el Id. de unidad de trabajo (UOW) de la transacción DTC. En las transacciones que no son MS DTC, UOW se establece en 0.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
 ## <a name="see-also"></a>Vea también  

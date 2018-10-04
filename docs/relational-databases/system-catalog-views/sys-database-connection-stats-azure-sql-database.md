@@ -5,11 +5,7 @@ ms.date: 03/25/2016
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.component: system-catalog-views
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_connection_stats
@@ -22,17 +18,16 @@ helpviewer_keywords:
 - sys.database_connection_stats
 - database_connection_stats
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0bd0c0bba93fbc01120705cccb07ff9b2dd146df
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: ff011bc3ab4b3b8cc49fc9199f4ca2359deeb021
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43028915"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47663103"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -50,7 +45,7 @@ ms.locfileid: "43028915"
 |**terminated_connection_count**|**int**|***Solo es aplicable para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Número de conexiones terminadas.|  
 |**throttled_connection_count**|**int**|***Solo es aplicable para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Número máximo de conexiones aceleradas.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
   
 ### <a name="event-aggregation"></a>Agregación de eventos  
  La información de eventos de esta vista se recopila y se agrega a intervalos de 5 minutos. Las columnas de recuento representan el número de veces que se produjo un evento de conectividad determinado para una base de datos específica en un intervalo de tiempo dado.  

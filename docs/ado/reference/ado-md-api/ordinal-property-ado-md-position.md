@@ -1,13 +1,11 @@
 ---
-title: Propiedad ordinal (posición de ADO MD) | Documentos de Microsoft
+title: Propiedad ordinal (posición de ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Ordinal property [ADO MD]
 ms.assetid: 6efe8b5d-a2d5-43a9-a5ea-f9244f8d4ec9
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b800c41c5d3dfb306b503d013c042477778929f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 319d63b5faead9a01588ef50482e20f5fb179ca4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284674"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695193"
 ---
 # <a name="ordinal-property-ado-md-position"></a>Propiedad ordinal (posición de ADO MD)
 Identifica de forma única un [posición](../../../ado/reference/ado-md-api/position-object-ado-md.md) a lo largo de un eje.  
@@ -33,7 +30,7 @@ Identifica de forma única un [posición](../../../ado/reference/ado-md-api/posi
 ## <a name="return-values"></a>Valores devueltos  
  Devuelve un **largo** entero y es de solo lectura.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **Ordinal** propiedad de un [posición](../../../ado/reference/ado-md-api/position-object-ado-md.md) objeto corresponde al índice de la **posición** dentro de la [posiciones](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) colección.  
   
  Una celda se puede recuperar rápidamente mediante el **Ordinal** de la **posición** a lo largo de cada eje con la [elemento](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) propiedad de la [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto .  
@@ -43,5 +40,5 @@ Identifica de forma única un [posición](../../../ado/reference/ado-md-api/posi
   
 ## <a name="see-also"></a>Vea también  
  [Objeto de conjunto de celdas (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
- [Propiedad Item (conjunto de celdas de ADO MD)](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)   
+ [Propiedad Item (ADO MD Cellset)](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)   
  [Propiedad ordinal (celda de ADO MD)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)

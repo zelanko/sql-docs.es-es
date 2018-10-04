@@ -1,13 +1,11 @@
 ---
-title: Función conformidad | Documentos de Microsoft
+title: Función conformidad | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - conformance levels [ODBC], function
@@ -15,20 +13,20 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 182b53071f5d7d4c3486a84f789954e12772e0bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b6cb2f56113487922866573caf3b5f8b67fff7c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740083"
 ---
 # <a name="function-conformance"></a>Conformidad de función
-En la tabla siguiente indica el nivel de conformidad de cada función ODBC, donde esto está bien definido.  
+En la tabla siguiente indica el nivel de cumplimiento de cada función ODBC, donde esto está bien definido.  
   
-|Función|Nivel de conformidad|  
+|Función|nivel de cumplimiento|  
 |--------------|-----------------------|  
 |**SQLAllocHandle**|Core|  
 |**SQLBindCol**|Core|  
@@ -93,4 +91,4 @@ En la tabla siguiente indica el nivel de conformidad de cada función ODBC, dond
   
  [1] importantes características de esta función solo están disponibles en niveles más altos de conformidad.  
   
- [2] establecer ciertos atributos en valores no predeterminados depende del nivel de conformidad. Para obtener más información, vea la sección siguiente, [conformidad de atributo](../../../odbc/reference/develop-app/attribute-conformance.md).
+ [2] establecer determinados atributos en valores no predeterminados depende del nivel de cumplimiento. Para obtener más información, consulte la sección siguiente, [conformidad de atributo](../../../odbc/reference/develop-app/attribute-conformance.md).

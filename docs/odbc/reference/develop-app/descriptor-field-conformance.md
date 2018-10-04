@@ -1,13 +1,11 @@
 ---
-title: Conformidad de campo descriptor | Documentos de Microsoft
+title: Conformidad de campo descriptor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - descriptor field conformance levels [ODBC]
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b01b9da55da1fd3decb46e69dc073781427ccfab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 193bdadaf36e975b1f79327bfef161daaaed427b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911850"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642313"
 ---
 # <a name="descriptor-field-conformance"></a>Conformidad de campo de descriptor
-En la tabla siguiente indica el nivel de conformidad de cada campo de encabezado de descriptor ODBC, donde esto está bien definido.  
+En la tabla siguiente indica el nivel de cumplimiento de cada campo de encabezado de descriptor ODBC, donde esto está bien definido.  
   
-|Función|Nivel de conformidad|  
+|Función|nivel de cumplimiento|  
 |--------------|-----------------------|  
 |SQL_DESC_ALLOC_TYPE|Core|  
 |SQL_DESC_ARRAY_SIZE|Core|  
@@ -39,9 +36,9 @@ En la tabla siguiente indica el nivel de conformidad de cada campo de encabezado
 |SQL_DESC_COUNT|Core|  
 |SQL_DESC_ROWS_PROCESSED_PTR|Core|  
   
- En la tabla siguiente indica el nivel de conformidad de cada campo de registro del descriptor ODBC, donde esto está bien definido.  
+ En la tabla siguiente indica el nivel de cumplimiento de cada campo de registro del descriptor ODBC, donde esto está bien definido.  
   
-|Función|Nivel de conformidad|  
+|Función|nivel de cumplimiento|  
 |--------------|-----------------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|Nivel 2|  
 |SQL_DESC_BASE_COLUMN_NAME|Core|  
@@ -50,8 +47,8 @@ En la tabla siguiente indica el nivel de conformidad de cada campo de encabezado
 |SQL_DESC_CATALOG_NAME|Nivel 2|  
 |SQL_DESC_CONCISE_TYPE|Core|  
 |SQL_DESC_DATA_PTR|Core|  
-|CÓDIGO DE SQL_DESC_DATETIME_INTERVAL_|Core [1]|  
-|PRECISIÓN DE SQL_DESC_DATETIME_INTERVAL_|Core [1]|  
+|CÓDIGO SQL_DESC_DATETIME_INTERVAL_|Core [1]|  
+|PRECISIÓN SQL_DESC_DATETIME_INTERVAL_|Core [1]|  
 |SQL_DESC_DISPLAY_SIZE|Core|  
 |SQL_DESC_FIXED_PREC_SCALE|Core|  
 |SQL_DESC_INDICATOR_PTR|Core|  
@@ -64,7 +61,7 @@ En la tabla siguiente indica el nivel de conformidad de cada campo de encabezado
 |SQL_DESC_NULLABLE|Core|  
 |SQL_DESC_OCTET_LENGTH|Core|  
 |SQL_DESC_OCTET_LENGTH_PTR|Core|  
-|SQL_DESC_PARAMETER_TYPE|Nivel de núcleo/2 [2]|  
+|SQL_DESC_PARAMETER_TYPE|Core/nivel 2 [2]|  
 |SQL_DESC_PRECISION|Core|  
 |SQL_DESC_ROWVER|Nivel 1|  
 |SQL_DESC_SCALE|Core|  
@@ -77,6 +74,6 @@ En la tabla siguiente indica el nivel de conformidad de cada campo de encabezado
 |SQL_DESC_UNSIGNED|Core|  
 |SQL_DESC_UPDATABLE|Core|  
   
- [1] soporte técnico para estos campos de registro sólo es necesario si el controlador es compatible con los tipos de datos es aplicable.  
+ [1] compatibilidad para estos campos de registro solo es necesario si el controlador admite los tipos de datos aplicable.  
   
- [2] para el acuerdo de nivel de núcleo, el controlador debe admitir SQL_PARAM_INPUT. Para el cumplimiento de la interfaz de nivel 2, el controlador también debe admitir SQL_PARAM_INPUT_OUTPUT y SQL_PARAM_OUTPUT.
+ [2] para el acuerdo de nivel básico, el controlador debe admitir SQL_PARAM_INPUT. Para el cumplimiento de la interfaz de nivel 2, también debe admitir el controlador SQL_PARAM_INPUT_OUTPUT y SQL_PARAM_OUTPUT.

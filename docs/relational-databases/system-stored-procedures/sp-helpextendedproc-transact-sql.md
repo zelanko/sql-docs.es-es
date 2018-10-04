@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpextendedproc
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpextendedproc
 ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: efc909fc4877d744cd99a5286426670aeffdefdf
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 43d9180ace10e61bbb9a9e65f48e718b8b426ea8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43033862"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47763883"
 ---
 # <a name="sphelpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +56,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 |**Nombre**|**sysname**|Nombre del procedimiento almacenado extendido.|  
 |**archivo DLL**|**nvarchar(255)**|Nombre de la DLL.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Cuando *procedimiento* se especifica, **sp_helpextendedproc** informes en el procedimiento almacenado extendido. Si no se proporciona este parámetro, **sp_helpextendedproc** pertenece devuelve todos los extendidos nombres de procedimientos almacenados y los nombres de archivo DLL para que cada procedimiento almacenado extendido.  
   
 ## <a name="permissions"></a>Permisos  

@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - last function [XQuery]
 - fn:last function
 ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
-caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33b7afe5bdef612fe48938d8118c17d5d6e7a512
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ab1240fd87ef49901ea17cad14523be8d86a45b8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038443"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804613"
 ---
 # <a name="context-functions---last-xquery"></a>Funciones de contexto: last (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +36,7 @@ ms.locfileid: "38038443"
 fn:last() as xs:integer  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  En SQL Server, **fn:Last()** sólo puede utilizarse en el contexto de un predicado dependiente del contexto. En concreto, solo se puede utilizar entre corchetes (`[ ]`).  
   
 ## <a name="examples"></a>Ejemplos  

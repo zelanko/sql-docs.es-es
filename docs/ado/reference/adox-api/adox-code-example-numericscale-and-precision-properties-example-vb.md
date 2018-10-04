@@ -1,13 +1,11 @@
 ---
-title: NumericScale y ejemplo de las propiedades Precision (VB) | Documentos de Microsoft
+title: NumericScale y Precision propiedades (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Precision property [ADOX], Visual Basic example
 - NumericScale property [ADOX], Visual Basic example
 ms.assetid: ea2ec614-34c8-41b7-8ebd-063798bd56b4
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0776d768a8cbfa8d1ac252cdc90a07bc9fae8f07
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8d4fece6307ff005031e7ab770b14bd5fbca541d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284894"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828499"
 ---
-# <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>Ejemplo de código ADOX: NumericScale y ejemplo de las propiedades Precision (VB)
-Este ejemplo se muestra la [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) y [precisión](../../../ado/reference/adox-api/precision-property-adox.md) propiedades de la [columna](../../../ado/reference/adox-api/column-object-adox.md) objeto. Este código muestra su valor para el **Order Details** tabla de la *Northwind* base de datos.  
+# <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>Ejemplo de código ADOX: ejemplo de propiedades NumericScale y Precision (VB)
+Este ejemplo se muestra el [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) y [precisión](../../../ado/reference/adox-api/precision-property-adox.md) propiedades de la [columna](../../../ado/reference/adox-api/column-object-adox.md) objeto. Este código muestra su valor para el **Order Details** tabla de la *Northwind* base de datos.  
   
 ```  
 ' BeginNumericScalePrecVB  

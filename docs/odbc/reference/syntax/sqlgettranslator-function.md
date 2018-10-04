@@ -1,13 +1,11 @@
 ---
-title: Función SQLGetTranslator | Documentos de Microsoft
+title: Función SQLGetTranslator | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLGetTranslator
@@ -19,18 +17,17 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetTranslator function [ODBC]
 ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 803e823de76deba750dc188c2f01e69b0a2f84db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6aabd945e25211f969ceac17c4d56baff98edd1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918870"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692843"
 ---
-# <a name="sqlgettranslator-function"></a>SQLGetTranslator (función)
+# <a name="sqlgettranslator-function"></a>Función SQLGetTranslator
 **Conformidad**  
  Versión introdujo: ODBC 2.0  
   
@@ -63,7 +60,7 @@ BOOL SQLGetTranslator(
  [Entrada] Longitud máxima de la *lpszName* búfer.  
   
  *pcbNameOut*  
- [Entrada/salida] Número total de bytes (excepto el byte de terminación null) se pasa o se devuelve en *lpszName*. Si el número de bytes disponible para devolver es mayor o igual que *cbNameMax*, el nombre del traductor en *lpszName* se trunca a *cbNameMax* menos el carácter de terminación NULL. El *pcbNameOut* argumento puede ser un puntero nulo.  
+ [Entrada/salida] Número total de bytes (sin incluir los bytes de terminación null) pasa o se devuelve en *lpszName*. Si el número de bytes disponible para devolver es mayor o igual a *cbNameMax*, el nombre del traductor en *lpszName* se trunca a *cbNameMax* menos el carácter de terminación NULL. El *pcbNameOut* argumento puede ser un puntero nulo.  
   
  *lpszPath*  
  [Salida] Ruta de acceso completa de la DLL de traducción.  
@@ -72,7 +69,7 @@ BOOL SQLGetTranslator(
  [Entrada] Longitud máxima de la *lpszPath* búfer.  
   
  *pcbPathOut*  
- [Salida] Número total de bytes (excepto el byte de finalización en null) devuelven en *lpszPath*. Si el número de bytes disponible para devolver es mayor o igual que *cbPathMax*, la ruta de acceso del archivo DLL de traducción en *lpszPath* se trunca a *cbPathMax* menos el carácter de terminación NULL. El *pcbPathOut* argumento puede ser un puntero nulo.  
+ [Salida] Número total de bytes (sin incluir los bytes de terminación null) devuelven en *lpszPath*. Si el número de bytes disponible para devolver es mayor o igual a *cbPathMax*, la ruta de acceso del archivo DLL de traducción en *lpszPath* se trunca a *cbPathMax* menos el carácter de terminación NULL. El *pcbPathOut* argumento puede ser un puntero nulo.  
   
  *pvOption*  
  Opción de traducción de 32 bits de [salida].  
@@ -81,33 +78,33 @@ BOOL SQLGetTranslator(
  La función devuelve TRUE si es correcta y FALSE si se produce un error o si el usuario cancela el cuadro de diálogo.  
   
 ## <a name="diagnostics"></a>Diagnósticos  
- Cuando **SQLGetTranslator** devuelve FALSE, un asociado  *\*pfErrorCode* valor puede obtenerse mediante una llamada a **SQLInstallerError**. La siguiente tabla se recogen los  *\*pfErrorCode* valores que pueden ser devueltos por **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLGetTranslator** devuelve FALSE, un asociado  *\*pfErrorCode* valor puede obtenerse mediante una llamada a **SQLInstallerError**. La siguiente tabla se enumeran los  *\*pfErrorCode* valores que pueden devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Error del instalador general|Se produjo un error para que no se produjo ningún error de instalación concreto.|  
+|ODBC_ERROR_GENERAL_ERR|Error del instalador general|Se produjo un error para que se ha producido ningún error de instalación concreto.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|Longitud de búfer no válido|El *cbNameMax* o *cbPathMax* argumento era menor o igual que 0.|  
-|ODBC_ERROR_INVALID_HWND|Identificador de ventana no válido|El *hwndParent* argumento era nulo o no válido.|  
-|ODBC_ERROR_INVALID_NAME|Nombre de traductor o controlador no válido|El *lpszName* argumento no era válido. No se encontró en el registro.|  
-|ODBC_ERROR_LOAD_LIBRARY_FAILED|No se pudo cargar la biblioteca de instalación de controlador o traductor|No se pudo cargar la biblioteca de traductor.|  
+|ODBC_ERROR_INVALID_HWND|Identificador de ventana no válida|El *hwndParent* argumento era NULL o no válido.|  
+|ODBC_ERROR_INVALID_NAME|Nombre de controlador o traductor no válido|El *lpszName* argumento no era válido. No se encontró en el registro.|  
+|ODBC_ERROR_LOAD_LIBRARY_FAILED|No se pudo cargar la biblioteca de instalación de traductor o controlador|No se pudo cargar la biblioteca de traductor.|  
 |ODBC_ERROR_INVALID_OPTION|Opción de transacción no válido|El *pvOption* argumento contiene un valor no válido.|  
 |ODBC_ERROR_OUT_OF_MEM|No hay memoria suficiente|El programa de instalación no pudo realizar la función debido a la falta de memoria.|  
   
 ## <a name="comments"></a>Comentarios  
- Si *hwndParent* es null o si *lpszName*, *lpszPath*, o *pvOption* es un puntero nulo, **SQLGetTranslator** devuelve FALSE. En caso contrario, muestra la lista de traductores instalados en el siguiente cuadro de diálogo.  
+ Si *hwndParent* es null o si *lpszName*, *lpszPath*, o *pvOption* es un puntero nulo, **SQLGetTranslator** devuelve FALSE. En caso contrario, muestra la lista de traductores instalados en el cuadro de diálogo siguiente.  
   
  ![Cuadro de diálogo Seleccionar traductor](../../../odbc/reference/syntax/media/ch23j.gif "CH23J")  
   
- Si *lpszName* contiene un nombre válido de traductor, está seleccionada. En caso contrario, \<traductor n > está seleccionada.  
+ Si *lpszName* contiene un nombre válido de traductor, está seleccionada. En caso contrario, \<ningún convertidor > está seleccionado.  
   
- Si el usuario elige \<traductor n >, el contenido de *lpszName*, *lpszPath*, y *pvOption* no son modificadas. **SQLGetTranslator** establece *pcbNameOut* y *pcbPathOut* a 0 y devuelve TRUE.  
+ Si el usuario elige \<ningún convertidor >, el contenido de *lpszName*, *lpszPath*, y *pvOption* no se han tocado. **SQLGetTranslator** establece *pcbNameOut* y *pcbPathOut* a 0 y devuelve TRUE.  
   
- Si el usuario elige un traductor, **SQLGetTranslator** llamadas **ConfigTranslator** en el programa de instalación del traductor DLL. Si **ConfigTranslator** devuelve un valor falso, **SQLGetTranslator** vuelve a su cuadro de diálogo. Si **ConfigTranslator** devuelve TRUE, **SQLGetTranslator** devuelve TRUE, junto con la opción de nombre, la ruta de acceso y la traducción de traductor seleccionado.  
+ Si el usuario elige un traductor, **SQLGetTranslator** llamadas **ConfigTranslator** en el archivo DLL de configuración del traductor. Si **ConfigTranslator** devuelve FALSE, **SQLGetTranslator** vuelve a su cuadro de diálogo. Si **ConfigTranslator** devuelve TRUE, **SQLGetTranslator** devuelve TRUE, junto con la opción de nombre, la ruta de acceso y la traducción de traductor seleccionado.  
   
 ## <a name="related-functions"></a>Funciones relacionadas  
   
 |Para obtener información acerca de|Vea|  
 |---------------------------|---------|  
-|Configurar un traductor|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|  
-|Obtener un atributo de traducción|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
+|Configuración de un traductor|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|  
+|Obtención de un atributo de traducción|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |Establecer un atributo de traducción|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|

@@ -1,13 +1,11 @@
 ---
-title: Ejemplo de propiedades de DefinedSize (VC ++) y ActualSize | Documentos de Microsoft
+title: Ejemplo ActualSize y DefinedSize propiedades (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - ActualSize property [ADO], VC++ example
 - DefinedSize property [ADO], VC++ example
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54bb6f590da02e26adb3b617de49c5f4a1de5a82
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b85ba458b96a8c5b48a2f40f1bf777374775c3b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275064"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789283"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>Ejemplo ActualSize y DefinedSize propiedades (VC ++)
-Este ejemplo se utiliza la [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) y [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) propiedades para mostrar el tamaño definido y el tamaño real de un campo.  
+Este ejemplo se usa el [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) y [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) propiedades para mostrar el tamaño definido y el tamaño real de un campo.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -132,22 +129,22 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
- **Nombre del almacén: Eric los libros de lectura**  
+ **Nombre Store: Eric los libros de lectura**  
 **Define el tamaño: 40**  
 **Tamaño real: 19**  
-**Nombre del almacén: Barnum**  
+**Nombre Store: De Barnum**  
 **Define el tamaño: 40**  
 **Tamaño real: 8**  
-**Nombre del almacén: Noticias & Brews**  
+**Nombre Store: Noticias y pimientos**  
 **Define el tamaño: 40**  
 **Tamaño real: 12**  
-**Nombre del almacén: Doc-U-Esterilla: ropa de calidad y libros**  
+**Nombre de Store: Doc-U-Mat: ropa de calidad y los libros en pantalla**  
 **Define el tamaño: 40**  
 **Tamaño real: 36**  
-**Nombre del almacén: Faríngea Bookshop**  
+**Nombre de Store: Faríngea Bookshop**  
 **Define el tamaño: 40**  
 **Tamaño real: 18**  
-**Nombre del almacén: Bookbeat**  
+**Store nombre: Bookbeat**  
 **Define el tamaño: 40**  
 **Tamaño real: 8**   
 ## <a name="see-also"></a>Vea también  

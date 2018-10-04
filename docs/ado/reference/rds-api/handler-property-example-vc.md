@@ -1,37 +1,34 @@
 ---
-title: Ejemplo de la propiedad de controlador (VC ++) | Documentos de Microsoft
+title: Ejemplo de la propiedad de controlador (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Handler property [ADO], VC++ example
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75d23be448bc8e56e701756f159dba34382784b7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e9c944535ead264b8ab65b59aa969d0fddf29f10
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288379"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696534"
 ---
 # <a name="handler-property-example-vc"></a>Ejemplo de la propiedad de controlador (VC ++)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar a [servicio de datos de WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Este ejemplo se muestra la [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto [controlador](../../../ado/reference/rds-api/handler-property-rds.md) propiedad. (Consulte [Personalización DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md) para obtener más información.)  
+ Este ejemplo se muestra el [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto [controlador](../../../ado/reference/rds-api/handler-property-rds.md) propiedad. (Consulte [personalización de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md) para obtener más detalles.)  
   
- Supongamos que las siguientes secciones en el archivo de parámetros, Msdfmap.ini, ubicado en el servidor:  
+ Supongamos que las siguientes secciones del archivo de parámetros, Msdfmap.ini, ubicado en el servidor:  
   
 ```  
 [connect AuthorDataBase]  
@@ -41,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- El código es similar a la siguiente. El comando asignado a la [SQL](../../../ado/reference/rds-api/sql-property.md) propiedad coincidirá la ***AuthorById*** identificador y recuperará una fila correspondiente al autor Michael O'Leary. Aunque la [conectar](../../../ado/reference/rds-api/connect-property-rds.md) propiedad en el código especifica el origen de datos Northwind, ese origen de datos sobrescribirá el Msdfmap.ini *conectar* sección. El **DataControl** objeto [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) propiedad se asigna a un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto únicamente como una comodidad de codificación.  
+ El código tiene el siguiente aspecto. El comando asignado a la [SQL](../../../ado/reference/rds-api/sql-property.md) coincidirá con la propiedad la ***AuthorById*** identificador y recuperará una fila por Michael O'Leary autor. Aunque el [Connect](../../../ado/reference/rds-api/connect-property-rds.md) propiedad en el código especifica el origen de datos Northwind, ese origen de datos sobrescribirá el Msdfmap.ini *conectar* sección. El **DataControl** objeto [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) propiedad se asigna a un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto únicamente como una comodidad de codificación.  
   
 ```  
 // BeginHandlerCpp.cpp  

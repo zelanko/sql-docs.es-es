@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_update_collection_item (Transact-SQL) | Documentos de Microsoft
+title: sp_syscollector_update_collection_item (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_item
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_update_collection_item
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d94ce7762facb878e0e6d8deb60647ee2d05482e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e1eb288a7bb99f5f24f05e4369836d21031f7e68
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260598"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717123"
 ---
 # <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +48,10 @@ sp_syscollector_update_collection_item
   
 ## <a name="arguments"></a>Argumentos  
  [ @collection_item_id =] *collection_item_id*  
- Es el identifer único que identifica el elemento de recopilación. *collection_item_id* es **int** con un valor predeterminado es NULL. *collection_item_id* debe tener un valor si *nombre* es NULL.  
+ Es el identifer único que identifica el elemento de recopilación. *collection_item_id* es **int** con un valor predeterminado es null. *collection_item_id* debe tener un valor si *nombre* es NULL.  
   
  [ @name =] '*nombre*'  
- Es el nombre del elemento de colección. *nombre* es **sysname** con un valor predeterminado es NULL. *nombre* debe tener un valor si *collection_item_id* es NULL.  
+ Es el nombre del elemento de colección. *nombre* es **sysname** con un valor predeterminado es null. *nombre* debe tener un valor si *collection_item_id* es NULL.  
   
  [ @new_name =] '*new_name*'  
  Es el nuevo nombre del elemento de recopilación. *new_name* es **sysname**, y si se utiliza, no puede ser una cadena vacía.  
@@ -66,7 +62,7 @@ sp_syscollector_update_collection_item
  Es la frecuencia (en segundos) con que este elemento de recopilación recopila los datos. *frecuencia* es **int**, su valor predeterminado es 5, el valor mínimo que se pueden especificar.  
   
  [ @parameters =] '*parámetros*'  
- Parámetros de entrada para el elemento de recopilación. *parámetros de* es **xml** con un valor predeterminado es NULL. El *parámetros* esquema debe coincidir con el esquema de parámetros del tipo de recopilador.  
+ Parámetros de entrada para el elemento de recopilación. *parámetros* es **xml** con el valor predeterminado es NULL. El *parámetros* esquema debe coincidir con el esquema de parámetros del tipo de recopilador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o 1 (error)  
@@ -86,7 +82,7 @@ ON ci.collection_set_id = cs.collection_set_id
 WHERE collection_item_id = <collection_item_id>;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere la pertenencia a un rol fijo de base de datos dc_admin o dc_operator (con permiso EXECUTE) para ejecutar este procedimiento. Aunque dc_operator puede ejecutar este procedimiento almacenado, las propiedades que pueden cambiar los miembros de este rol son limitadas. Las propiedades siguientes solo puede cambiarlas dc_admin:  
   
 -   @new_name  

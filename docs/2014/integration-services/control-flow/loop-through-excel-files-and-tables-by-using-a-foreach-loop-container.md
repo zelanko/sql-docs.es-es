@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], Excel
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: df6de3a81b8ebd1f9ca23ffa1b004c4180c26e81
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 98cdf4263025f202279e4496b67f23eb0780b633
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158996"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048355"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach
   Los procedimientos de este tema explican cómo crear bucles entre libros de Excel en una carpeta o entre tablas en un libro de Excel, mediante el contenedor de bucles Foreach con el enumerador correspondiente.  
@@ -73,7 +70,7 @@ ms.locfileid: "37158996"
   
 ### <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Para crear un bucle entre tablas de Excel con el enumerador de conjunto de filas del esquema para Foreach de ADO.NET  
   
-1.  Cree un administrador de conexiones de ADO.NET que utilice el proveedor OLE DB para Microsoft Jet para conectarse al libro de Excel. En la página Todas del cuadro de diálogo **Administrador de conexiones** , asegúrese de especificar Excel 8.0 como valor para la propiedad Propiedades extendidas. Para más información, consulte [Add, Delete, or Share a Connection Manager in a Package](../add-delete-or-share-a-connection-manager-in-a-package.md).  
+1.  Cree un administrador de conexiones de ADO.NET que utilice el proveedor OLE DB para Microsoft Jet para conectarse al libro de Excel. En la página Todas del cuadro de diálogo **Administrador de conexiones** , asegúrese de especificar Excel 8.0 como valor para la propiedad Propiedades extendidas. Para obtener más información, consulte [agregar, eliminar o compartir un administrador de conexiones en un paquete](../add-delete-or-share-a-connection-manager-in-a-package.md).  
   
 2.  Cree una variable de cadena que recibirá el nombre de la tabla actual en cada iteración del bucle.  
   
@@ -86,7 +83,7 @@ ms.locfileid: "37158996"
 6.  Como valor de **Esquema**, seleccione Tablas.  
   
     > [!NOTE]  
-    >  La lista de tablas de un libro de Excel incluye tanto hojas (que tienen el sufijo $) como rangos con nombre. Si tiene que filtrar la lista para obtener solo las hojas o solo los rangos con nombre, escriba código personalizado en una tarea Script para este fin. Para más información, consulte [Working with Excel Files with the Script Task](script-task.md).  
+    >  La lista de tablas de un libro de Excel incluye tanto hojas (que tienen el sufijo $) como rangos con nombre. Si tiene que filtrar la lista para obtener solo las hojas o solo los rangos con nombre, escriba código personalizado en una tarea Script para este fin. Para obtener más información, consulte [trabajar con archivos de Excel con la tarea de secuencia de comandos](script-task.md).  
   
 7.  En la página **Asignaciones de variables** , asigne Índice 2 a la variable de cadena que creó antes para albergar el nombre de la tabla actual.  
   

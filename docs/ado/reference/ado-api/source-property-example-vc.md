@@ -1,32 +1,29 @@
 ---
-title: Ejemplo de la propiedad (VC ++) de origen | Documentos de Microsoft
+title: Ejemplo de la propiedad (VC ++) de origen | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Source property [ADO], VC++ example
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43b601c336ba8b8fdc6c581bfb00bfb80f84f025
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1ecc2960e583b46b44839259bc9b84d3d941a553
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281964"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47786613"
 ---
-# <a name="source-property-example-vc"></a>Ejemplo de la propiedad de origen (VC ++)
-Este ejemplo se muestra la [origen](../../../ado/reference/ado-api/source-property-ado-recordset.md) propiedad abriendo tres [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objetos basados en orígenes de datos diferentes.  
+# <a name="source-property-example-vc"></a>Ejemplo de la propiedad Source (VC ++)
+Este ejemplo se muestra el [origen](../../../ado/reference/ado-api/source-property-ado-recordset.md) propiedad abriendo tres [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objetos basados en orígenes de datos diferentes.  
   
 ```  
 // Source_Property_Sample.cpp  

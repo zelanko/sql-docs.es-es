@@ -1,34 +1,31 @@
 ---
-title: Ejemplo de código de biblioteca de cursor | Documentos de Microsoft
+title: Ejemplo de código de biblioteca de cursores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], examples
 - cursor library [ODBC], examples
 ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 054cd6d20ff72e69e01defbba3834602fdf2bf47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d5dd87cbf93ff2acd7c2c3753e85b1d6f7d110cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907050"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691706"
 ---
-# <a name="cursor-library-code-example"></a>Ejemplo de código de biblioteca de cursor
+# <a name="cursor-library-code-example"></a>Ejemplo de código de la biblioteca de cursores
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad del controlador cursor.  
+>  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad de cursor del controlador.  
   
- En el ejemplo siguiente se utiliza la biblioteca de cursores para recuperar el Id., fecha de apertura y estado de cada pedido de la tabla ORDERS. A continuación, muestra 20 filas de datos. Si el usuario actualiza estos datos, el código actualiza los búferes de conjunto de filas y ejecuta una instrucción de actualización por posición. Por último, pide al usuario la dirección para desplazarse y repite el proceso.  
+ El ejemplo siguiente usa la biblioteca de cursores para recuperar el Id., fecha de apertura y estado de cada pedido de la tabla ORDERS. A continuación, muestra 20 filas de datos. Si el usuario actualiza estos datos, el código actualiza los búferes del conjunto de filas y ejecuta una instrucción de actualización posicionada. Por último, pide al usuario para la dirección para desplazarse y repite el proceso.  
   
 ```  
 #define ROWS 20  

@@ -1,14 +1,11 @@
 ---
-title: dbo.syssubsystems (Transact-SQL) | Documentos de Microsoft
+title: dbo.syssubsystems (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.syssubsystems
@@ -20,27 +17,26 @@ dev_langs:
 helpviewer_keywords:
 - syssubsystems system table
 ms.assetid: 114b3d55-1ad6-4777-b868-8ef0c86ba596
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: abe7c8fa687a5868bae73b9590ea39a30fc90ee2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d685f5e8837feebffeeeade95697f4f3bfea4c81
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254835"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717183"
 ---
 # <a name="dbosyssubsystems-transact-sql"></a>dbo.syssubsystems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene información sobre todos los subsistemas proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibles. El **syssubsystems** tabla se almacena en la **msdb** base de datos.  
+  Contiene información sobre todos los subsistemas proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibles. El **syssubsystems** tabla se almacena en el **msdb** base de datos.  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|Id. del subsistema.|  
 |**subsystem**|**nvarchar(40)**|Nombre del subsistema.|  
-|**description_id**|**int**|Mensaje de la fila en la **sys.messages** vista de catálogo que contiene la descripción del subsistema.|  
+|**description_id**|**int**|Id. de la fila de mensaje la **sys.messages** vista de catálogo que contiene la descripción del subsistema.|  
 |**subsystem_dll**|**nvarchar(255)**|Ubicación de la DLL del subsistema.|  
 |**agent_exe**|**nvarchar(255)**|Ruta de acceso completa al archivo ejecutable que utiliza el subsistema.|  
 |**start_entry_point**|**nvarchar(30)**|Función a la que se llama cuando el subsistema se inicializa.|  

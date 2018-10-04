@@ -1,13 +1,11 @@
 ---
-title: Propiedad NativeError (ADO) | Documentos de Microsoft
+title: Propiedad NativeError (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - NativeError property [ADO]
 ms.assetid: b9b47e57-18a4-4186-aef5-5bd18d7b1d74
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 74fb46aca8127901ffea10be1e5a587324ea5d53
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2f6ee8724454a8871f6642f5d812584ccffd9385
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279594"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735053"
 ---
 # <a name="nativeerror-property-ado"></a>Propiedad NativeError (ADO)
 Indica el código de error específico del proveedor para un determinado [Error](../../../ado/reference/ado-api/error-object.md) objeto.  
@@ -34,8 +31,8 @@ Indica el código de error específico del proveedor para un determinado [Error]
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve un **largo** valor que indica el código de error.  
   
-## <a name="remarks"></a>Notas  
- Use la **NativeError** propiedad que se va a recuperar la información de error específico de la base de datos para un determinado **Error** objeto. Por ejemplo, al usar el proveedor ODBC de Microsoft para OLE DB con una base de datos de Microsoft SQL Server, códigos de error nativos que se originan en SQL Server pasan a través de ODBC y el proveedor ODBC a ADO **NativeError** propiedad.  
+## <a name="remarks"></a>Comentarios  
+ Use la **NativeError** propiedad para recuperar la información de error específico de la base de datos para un determinado **Error** objeto. Por ejemplo, al usar el proveedor ODBC de Microsoft para OLE DB con una base de datos de Microsoft SQL Server, los códigos de error nativo que se originan en SQL Server pasan a través de ODBC y el proveedor ODBC a ADO **NativeError** propiedad.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de error](../../../ado/reference/ado-api/error-object.md)  

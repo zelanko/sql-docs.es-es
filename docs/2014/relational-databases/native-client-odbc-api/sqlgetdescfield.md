@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLGetDescField function
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
-caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0527b8260f954764ed894b1b5db60278ff483d31
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8f3c06bbb9a8390b6ec41aa3e2233feeb10b8ce5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427534"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187765"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client expone los campos descriptores específicos del controlador para la fila descriptor de implementación (IRD) solo. En IRD, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] campos de descriptor que se hace referencia a través de los atributos de columna específicos del controlador. Para obtener información sobre una lista completa de campos de descriptor específicos del controlador disponibles, vea [SQLColAttribute](sqlcolattribute.md).  

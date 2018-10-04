@@ -1,14 +1,12 @@
 ---
-title: Utilizar consultas XPath en SQLXML 4.0 | Microsoft Docs
+title: Utilizar consultas XPath en SQLXML 4.0 | Documentos de Microsoft
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - queries [SQLXML], XPath
 - XML views [SQLXML]
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 50586aca145c18a29cb260c71de578a060f08f36
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c3f09dc7aca21e3ca56d86e340f083ea7b26251
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217035"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158305"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>Utilizar consultas XPath en SQLXML 4.0
   La compatibilidad de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con los esquemas XSD anotados le permite crear vistas XML de los datos relacionales almacenadas en la base de datos. Puede utilizar un subconjunto del lenguaje XPath para consultar las vistas XML creadas por un esquema XSD anotado.  

@@ -1,13 +1,11 @@
 ---
-title: Método Seek y ejemplo de la propiedad de índice (VC ++) | Documentos de Microsoft
+title: Método Seek y ejemplo de la propiedad Index (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Seek method [ADO], VC++ example
 - index property [ADO]
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95bb888ad6bc57ec6fb29e94237953d86f6b0582
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0c8bfe0781af1bf3ca5dcd4ae642ffb49ef81817
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281584"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723003"
 ---
-# <a name="seek-method-and-index-property-example-vc"></a>Método Seek y ejemplo de la propiedad de índice (VC ++)
-Este ejemplo se utiliza la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) del objeto [Seek](../../../ado/reference/ado-api/seek-method.md) método y [índice](../../../ado/reference/ado-api/index-property.md) propiedad junto con un determinado ***Id. de empleado***, para buscar el nombre del empleado en el ***empleados*** tabla de la base de datos Neptuno.  
+# <a name="seek-method-and-index-property-example-vc"></a>Ejemplo del método Seek y de la propiedad Index (VC ++)
+Este ejemplo se usa el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) del objeto [Seek](../../../ado/reference/ado-api/seek-method.md) método y [índice](../../../ado/reference/ado-api/index-property.md) propiedad junto con un determinado ***Id. de empleado***, para buscar el nombre del empleado en el ***empleados*** tabla de la base de datos Neptuno.  
   
 ```  
 // BeginSeekCpp.cpp  

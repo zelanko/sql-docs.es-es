@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - optimizing tables
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0146a68973f7a80c6166e1dd91a0a4852d40f35c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a031466e35fef90104ab81fec17010725f8f5c0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236565"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146985"
 ---
 # <a name="optimizing-the-neworg-table"></a>Optimizar la tabla NewOrg
   El **NewOrd** tabla que creó en el [rellenar una tabla con datos jerárquicos existentes](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) tarea contiene toda la información de empleado y representa la estructura jerárquica mediante un `hierarchyid`tipo de datos. Esta tarea agrega los nuevos índices que admiten las búsquedas en la columna `hierarchyid`.  

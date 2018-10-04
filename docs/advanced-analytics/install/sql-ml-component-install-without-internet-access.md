@@ -3,17 +3,17 @@ title: Instalar los componentes de R y Python sin acceso a internet de aprendiza
 description: Sin conexión o desconectada R de Machine Learning y Python el programa de instalación en la instancia de SQL Server aislado.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/02/2018
+ms.date: 10/01/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 94aa87c0ecad8be94498bf5571e6e4b7ed7e1af9
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 24369c69df30e2723ce0c2098f2050ed0e5d7b20
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40437655"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150555"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Instalar SQL Server de aprendizaje automático R y Python en equipos sin acceso a internet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -97,6 +97,34 @@ Al ejecutar el programa de instalación de SQL Server en un equipo conectado a i
 
 5. Continuar siguientes las indicaciones en pantalla para completar la instalación.
 
+<a name="apply-cu"></a>
+
+## <a name="apply-cumulative-updates"></a>Aplicar actualizaciones acumulativas
+
+Se recomienda que aplique la actualización acumulativa más reciente para el motor de base de datos y los componentes de aprendizaje automático. Las actualizaciones acumulativas se instalan a través del programa de instalación. 
+
+1. Comience con una instancia de la línea base. Solo se pueden aplicar las actualizaciones acumulativas para las instalaciones existentes de SQL Server:
+
+  + Versión inicial de SQL Server 2017
+  + Versión inicial de SQL Server 2016, SQL Server 2016 Service Pack 1 o SQL Server 2016 Service Pack 2
+
+2. En un dispositivo conectado a internet, vaya a la lista de actualizaciones acumulativas para su versión de SQL Server:
+
+  + [Actualizaciones de SQL Server 2017](https://sqlserverupdates.com/sql-server-2017-updates/)
+  + [Actualizaciones de SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
+
+3. Seleccione la actualización acumulativa más reciente para descargar el archivo ejecutable.
+
+4. Obtener archivos CAB correspondientes para R y Python. Para obtener vínculos de descarga, vea [CAB descargas para las actualizaciones acumulativas en el análisis en bases de datos de SQL Server en instancias](sql-ml-cab-downloads.md).
+
+5. Transferir todos los archivos, archivos ejecutables y CAB, en la misma carpeta en el equipo sin conexión.
+
+6. Ejecute el programa de instalación. Acepte los términos de licencia y, en la página de selección de características, revise las características para el que se aplican las actualizaciones acumulativas. Debería ver todas las características instaladas para la instancia actual, incluidas características de aprendizaje automático.
+
+  ![](media/cumulative-update-feature-selection.png)
+
+5. Continúe con el asistente, acepte los términos de licencia para las distribuciones de R y Python. Durante la instalación, deberá elegir la ubicación de la carpeta que contiene los archivos CAB actualizados.
+
 ## <a name="post-install-configuration"></a>Configuración posterior a la instalación
 
 Una vez finalizada la instalación, reinicie el servicio y, a continuación, configure el servidor para habilitar la ejecución del script:
@@ -108,30 +136,6 @@ Una instalación sin conexión inicial de SQL Server 2017 Machine Learning Servi
 
 + [Comprobar la instalación](sql-machine-learning-services-windows-install.md#verify-installation) (para SQL Server 2016, haga clic en [aquí](sql-r-services-windows-install.md#verify-installation)).
 + [Configuración adicional según sea necesario](sql-machine-learning-services-windows-install.md#additional-configuration) (para SQL Server 2016, haga clic en [aquí](sql-r-services-windows-install.md#bkmk_FollowUp)).
-
-<a name="slipstream-upgrades"></a>
-
-## <a name="slipstream-upgrades"></a>Actualizaciones de instalación integrada
-
-Por instalación integrada se entiende la capacidad de aplicar una revisión o actualización a una instalación de instancia con errores con el propósito de reparar problemas existentes. La ventaja de este método es que el servidor SQL Server se actualiza al mismo tiempo que se realiza la instalación, lo que evita un reinicio independiente más adelante.
-
-Cuando un servidor no tiene acceso a Internet, se aplican las actualizaciones del servicio mediante la descarga de un servidor SQL Server actualizado instalador y las versiones correspondientes de los archivos CAB específicos del idioma. 
-
-1. Comience con una instancia de la línea base. Acerca de estas versiones de SQL Server, se admiten actualizaciones de instalación integrada:
-
-  + Versión inicial de SQL Server 2017
-  + Versión inicial de SQL Server 2016
-  + Service Pack 1 de SQL Server 2016
-  + SQL Server 2016 Service Pack 2
-
-2. Obtenga una versión actualizada del instalador de SQL Server para una determinada actualización acumulativa. Es cualquier actualización de las características de machine learning (R y Python) junto con una actualización acumulativa de la instancia del motor de base de datos subyacente.
-
-  + [Actualizaciones de SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
-  + [Actualizaciones de SQL Server 2017](https://sqlserverupdates.com/sql-server-2017-updates/)
-
-3. Obtener archivos CAB correspondientes para R y Python. Para obtener vínculos de descarga, vea [CAB descargas para las actualizaciones acumulativas en el análisis en bases de datos de SQL Server en instancias](sql-ml-cab-downloads.md).
-
-4. Coloque todos los archivos en la misma carpeta, ejecute el programa de instalación. Durante la instalación, deberá elegir la ubicación de carpeta para los archivos CAB actualizados.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

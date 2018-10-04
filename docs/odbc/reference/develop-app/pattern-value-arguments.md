@@ -1,32 +1,29 @@
 ---
-title: Los argumentos de valor de patrón | Documentos de Microsoft
+title: Argumentos de valor de patrón | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - catalog functions [ODBC], arguments
 - arguments in catalog functions [ODBC], pattern value
 - pattern value arguments [ODBC]
 ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5befe078127bb526f4fe9a103ec823f2142039f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b9e99ab1646d5a3aff79bad0af7e0b9ab418668e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912990"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792403"
 ---
 # <a name="pattern-value-arguments"></a>Argumentos de valor de patrón
-Algunos argumentos en el catálogo de funciones, como la *TableName* argumento en **SQLTables**, acepta patrones de búsqueda. Estos argumentos aceptan patrones de búsqueda si se establece el atributo de instrucción de SQL_ATTR_METADATA_ID en SQL_FALSE; son los argumentos de identificador que no aceptan un patrón de búsqueda si este atributo está establecido en SQL_TRUE.  
+Funciones de algunos argumentos en el catálogo, como el *TableName* argumento en **SQLTables**, acepte los patrones de búsqueda. Estos argumentos aceptan modelos de búsqueda si se establece el atributo de instrucción SQL_ATTR_METADATA_ID en SQL_FALSE; son los argumentos de identificador que no aceptan un patrón de búsqueda si este atributo está establecido en SQL_TRUE.  
   
  Los caracteres del patrón de búsqueda son:  
   
@@ -34,20 +31,20 @@ Algunos argumentos en el catálogo de funciones, como la *TableName* argumento e
   
 -   Un signo de porcentaje (%), que representa cualquier secuencia de cero o más caracteres.  
   
--   Un carácter de escape, que es específico del controlador y se usa para incluir caracteres de subrayado, inicia sesión por ciento, y el carácter de escape como literales. Si el carácter de escape precede a un carácter no especial, el carácter de escape no tiene ningún significado especial. Si el carácter de escape precede a un carácter especial, convierte el carácter especial. Por ejemplo, "\a" se trataría como dos caracteres "\\" y "a", pero "\\%" se tratará como no especial único carácter "%".  
+-   Un carácter de escape, que es específico del controlador y se usa para incluir caracteres de subrayado, signos de porcentaje, y el carácter de escape como literales. Si el carácter de escape precede a un carácter que no es especial, el carácter de escape tiene ningún significado especial. Si el carácter de escape precede a un carácter especial, convierte el carácter especial. Por ejemplo, "\a" se trataría como dos caracteres "\\" y "a", pero "\\%" se tratará como el único carácter especial que no es "%".  
   
- El carácter de escape se recupera con la opción SQL_SEARCH_PATTERN_ESCAPE en **SQLGetInfo**. Debe preceder a cualquier carácter de subrayado, el signo de porcentaje o el carácter de escape dentro de un argumento que acepta patrones de búsqueda para que incluya ese carácter como un literal. En la tabla siguiente se muestran ejemplos.  
+ El carácter de escape se recupera con la opción SQL_SEARCH_PATTERN_ESCAPE en **SQLGetInfo**. Debe preceder a cualquier carácter de subrayado, el signo de porcentaje o el carácter de escape en un argumento que acepta patrones de búsqueda para que incluya ese carácter como un literal. En la tabla siguiente se muestran ejemplos.  
   
-|Patrón de búsqueda|Description|  
+|Patrón de búsqueda|Descripción|  
 |--------------------|-----------------|  
-|% DE %A|Todos los identificadores que contiene la letra A|  
-|ABC_|Todos los identificadores de cuatro caracteres a partir de ABC|  
+|%A %|Todos los identificadores que contiene la letra A|  
+|ABC_|Todos los identificadores de cuatro caracteres, empezando por ABC|  
 |ABC\\_|El identificador ABC_, suponiendo que el carácter de escape es una barra diagonal inversa (\\)|  
 |\\\\%|Todos los identificadores a partir de una barra diagonal inversa (\\), suponiendo que el carácter de escape es una barra diagonal inversa|  
   
- Debe tener un cuidado especial para anteponer caracteres de patrón de búsqueda en los argumentos que aceptan los patrones de búsqueda. Esto es especialmente cierto para el carácter de subrayado, que se utiliza habitualmente en los identificadores. Es un error común en las aplicaciones recuperar un valor de una función de catálogo y pasar ese valor a un argumento de patrón de búsqueda en otra función de catálogo. Por ejemplo, suponga que una aplicación recupera el nombre de tabla MY_TABLE del resultado establecido para **SQLTables** y pasa esta opción para **SQLColumns** para recuperar una lista de columnas de MY_TABLE. En lugar de ver las columnas para MY_TABLE, la aplicación obtendrá las columnas para todas las tablas que coinciden con el patrón de búsqueda MY_TABLE, por ejemplo, MY_TABLE, MY1TABLE, MY2TABLE y así sucesivamente.  
+ Debe tener especial cuidado para escapar caracteres del patrón de búsqueda en los argumentos que aceptan los patrones de búsqueda. Esto es especialmente cierto para el carácter de subrayado, que se utiliza habitualmente en los identificadores. Es un error común en las aplicaciones recuperar un valor de una función de catálogo y pasar ese valor a un argumento de patrón de búsqueda en otra función de catálogo. Por ejemplo, suponga que una aplicación recupera el nombre de tabla MY_TABLE desde el resultado establecido para **SQLTables** y la pasa a **SQLColumns** para recuperar una lista de columnas de MY_TABLE. En lugar de obtener las columnas para MY_TABLE, la aplicación obtendrá las columnas para todas las tablas que coinciden con el patrón de búsqueda MY_TABLE como MY_TABLE, MY1TABLE, MY2TABLE y así sucesivamente.  
   
 > [!NOTE]  
->  ODBC 2. *x* controladores no son compatibles con los patrones de búsqueda en el *CatalogName* argumento en **SQLTables**. ODBC 3 *.x* controladores aceptan patrones de búsqueda en este argumento si el atributo de entorno SQL_ATTR_ ODBC_VERSION está establecido en SQL_OV_ODBC3; no acepta patrones de búsqueda en este argumento si se establece en SQL_OV_ODBC2.  
+>  ODBC 2. *x* controladores no admiten patrones de búsqueda en el *CatalogName* argumento en **SQLTables**. ODBC 3 *.x* los controladores aceptan modelos de búsqueda en este argumento si el atributo de entorno SQL_ATTR_ ODBC_VERSION está establecido en SQL_OV_ODBC3; no acepta patrones de búsqueda en este argumento si se establece en SQL_OV_ODBC2.  
   
- Se pasa un puntero null a un argumento de patrón de búsqueda no limite la búsqueda para dicho argumento; es decir, un puntero nulo y el porcentaje de patrón de búsqueda (en caracteres) son equivalentes. Sin embargo, una longitud de cero Buscar patrón, es decir, un puntero válido a una cadena de longitud cero, coincide con la cadena vacía ("").
+ Pasar un puntero nulo a un argumento de patrón de búsqueda no restringe la búsqueda para ese argumento; es decir, un puntero nulo y el % de patrón de búsqueda (caracteres) son equivalentes. Sin embargo, patrón de búsqueda de una longitud cero, es decir, un puntero válido a una cadena de longitud cero, coincide con la cadena vacía ("").

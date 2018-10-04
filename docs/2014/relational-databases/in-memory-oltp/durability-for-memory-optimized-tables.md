@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
-caps.latest.revision: 23
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 118493cdd526a8c62add06ca78c803ebac6540c1
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 981b0b57debf6e1916adb65620feca7025bd3803
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393929"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063495"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidad de las tablas con optimización para memoria
-  
-            [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] proporciona durabilidad total para las tablas optimizadas para memoria. Cuando una transacción que ha cambiado una tabla optimizada para memoria se confirma, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (como hace para las tablas basadas en disco) garantiza que los cambios son permanentes (sobrevivirán a un reinicio de la base de datos), siempre y cuando el almacenamiento subyacente esté disponible. Hay dos componentes clave de durabilidad: registro de transacciones y conservación de los cambios de los datos en el almacenamiento en disco.  
+  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] proporciona durabilidad total para las tablas optimizadas para memoria. Cuando una transacción que ha cambiado una tabla optimizada para memoria se confirma, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (como hace para las tablas basadas en disco) garantiza que los cambios son permanentes (sobrevivirán a un reinicio de la base de datos), siempre y cuando el almacenamiento subyacente esté disponible. Hay dos componentes clave de durabilidad: registro de transacciones y conservación de los cambios de los datos en el almacenamiento en disco.  
   
 ## <a name="transaction-log"></a>Registro de transacciones  
  Todos los cambios realizados en tablas basadas en disco o en tablas optimizadas para memoria se capturan en una o más entradas del registro de transacciones. Cuando se confirma una transacción, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] escribe en el disco las entradas de registro asociadas a la transacción antes de comunicar a la aplicación o a la sesión de usuario que la transacción se ha confirmado. Esto garantiza que los cambios realizados por la transacción sean durables. El registro de transacciones para las tablas optimizadas para memoria está totalmente integrado con el mismo flujo de registro que emplean las tablas basadas en disco. Esta integración permite que las operaciones de copia de seguridad, recuperación y restauración de registros de transacciones existentes sigan funcionando sin necesidad de realizar ningún paso adicional. Sin embargo, puesto que [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] puede mejorar considerablemente el rendimiento de transacciones de la carga de trabajo, debe asegurarse de que el almacenamiento del registro de transacciones está configurado correctamente para controlar los requisitos crecientes de E/S.  
@@ -47,8 +43,7 @@ ms.locfileid: "40393929"
 ## <a name="populating-data-and-delta-files"></a>Rellenar los archivos delta y de datos  
  Los archivos delta y de datos son rellenados por un subproceso en segundo plano denominado punto de comprobación sin conexión. Este subproceso lee las entradas del registro de transacciones generadas por las transacciones confirmadas en las tablas optimizadas para memoria y anexa información sobre las filas insertadas y eliminadas en los archivos de datos y delta correspondientes. A diferencia de las tablas basadas en disco donde las páginas de índice o datos se vacían con E/S aleatoria cuando se realiza el punto de comprobación, la persistencia de la tabla optimizada para memoria es una operación en segundo plano continua. Se obtiene acceso a varios archivos delta porque una transacción puede eliminar o actualizar cualquier fila que fuera insertada por alguna transacción anterior. La información de eliminación siempre se anexa al final del archivo delta. Por ejemplo, una transacción con una marca de tiempo de confirmación de 600 inserta una nueva fila y elimina las filas insertadas por las transacciones con una marca de tiempo de confirmación de 150, 250 y 450, como se muestra en la imagen siguiente. Las cuatro operaciones de E/S de archivo (tres para las filas eliminadas y 1 para las filas recién insertadas) son operaciones de solo anexar para los archivos de datos y delta correspondientes.  
   
- 
-            ![Lectura de registros de tablas optimizadas para memoria.](../../database-engine/media/read-logs-hekaton.gif "Lectura de registros de tablas optimizadas para memoria.")  
+ ![Lectura de registros de tablas optimizadas para memoria.](../../database-engine/media/read-logs-hekaton.gif "Lectura de registros de tablas optimizadas para memoria.")  
   
 ## <a name="accessing-data-and-delta-files"></a>Acceso a los archivos delta y de datos  
  Se tiene acceso a los pares de archivos delta y de datos cuando ocurre lo siguiente.  

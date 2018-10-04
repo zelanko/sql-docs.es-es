@@ -1,28 +1,25 @@
 ---
-title: SQLSetConnectOption (controlador de archivo de texto) | Documentos de Microsoft
+title: SQLSetConnectOption (controlador de archivo de texto) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetConnectOption function [ODBC], Text File Driver
 - text file driver [ODBC], SQLSetConnectOption
 ms.assetid: b631a20c-2f60-4102-a61d-93b8780a4620
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d34dc364c339d147b73bdce5258bdaaa62d41e16
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ed5c3230a12e79c79624d69b4714a828a865f1dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903080"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645913"
 ---
 # <a name="sqlsetconnectoption-text-file-driver"></a>SQLSetConnectOption (controlador de archivo de texto)
 > [!NOTE]  
@@ -30,8 +27,8 @@ ms.locfileid: "32903080"
   
 |fOption|Comentario|  
 |-------------|-------------|  
-|SQL_ACCESS_MODE|El fOption SQL_ACCESS_MODE puede establecerse en SQL_MODE_READ_ONLY o SQL_MODE_READ_WRITE. Sin embargo, el controlador no evita que las actualizaciones si SQL_ACCESS_MODE se establece en SQL_MODE_READ_ONLY.|  
-|SQL_AUTOCOMMIT|El controlador de texto sólo admite SQL_AUTOCOMMIT está activada (el estado predeterminado), ya que no admiten transacciones.|  
+|SQL_ACCESS_MODE|Puede establecerse la fOption SQL_ACCESS_MODE SQL_MODE_READ_ONLY o SQL_MODE_READ_WRITE. Sin embargo, el controlador no impide que las actualizaciones si SQL_ACCESS_MODE está establecido en SQL_MODE_READ_ONLY.|  
+|SQL_AUTOCOMMIT|El controlador de texto sólo admite SQL_AUTOCOMMIT está activado (el estado predeterminado), porque no admiten transacciones.|  
 |SQL_CURRENT_QUALIFIER|Compatible.|  
 |SQL_LOGIN_TIMEOUT|No compatible.|  
 |SQL_OPT_TRACE|Compatible.|  

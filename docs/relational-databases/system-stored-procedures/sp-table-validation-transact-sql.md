@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_table_validation_TSQL
@@ -17,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: adec12d90732b37a6613d31b819fa6e907649948
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 4f19ad878499d9739745f29aa8c2f749fe2b3132
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038157"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843383"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +91,7 @@ sp_table_validation [ @table = ] 'table'
   
  Si realiza una validación de recuento de filas y el número de filas esperado es igual al número de la tabla, **sp_table_validation** devuelve un mensaje que la tabla ha pasado la validación del recuento de filas. De lo contrario, devuelve un mensaje que indica que la tabla puede no estar sincronizada e informa de la diferencia entre el número de filas real y el esperado.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  **sp_table_validation** se utiliza en todos los tipos de replicación. **sp_table_validation** no se admite para publicadores de Oracle.  
   
  La suma de comprobación calcula una prueba de redundancia cíclica (CRC, Cyclic Redundancy Check) de 32 bits sobre la imagen completa de la fila en la página. No comprueba las columnas de forma selectiva y no puede operar sobre vistas ni particiones verticales de la tabla. Además, la suma de comprobación omite el contenido de **texto** y **imagen** columnas (por diseño).  

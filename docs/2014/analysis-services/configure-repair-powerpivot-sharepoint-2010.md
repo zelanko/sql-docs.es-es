@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6cf032b8f36d9329cd3e5ae480ea5d667da2d36f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f59c5a1e4666c2cd1d0603298af62d75c43398f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284271"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112905"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>Configurar o reparar PowerPivot para SharePoint 2010 (Herramienta de configuración de PowerPivot)
   Para configurar o reparar una instalación de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot para SharePoint 2010, use la Herramienta de configuración de PowerPivot. La herramienta de configuración comienza examinando el sistema y devuelve una lista de las acciones necesarias para completar o reparar una instalación. El [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Asistente para instalación instala la herramienta de configuración de PowerPivot para SharePoint 2010, así como una herramienta de configuración de PowerPivot para SharePoint 2013. En este tema se describe la herramienta de configuración de PowerPivot para SharePoint 2010. Para obtener más información sobre SharePoint 2010, consulte [configurar o reparar PowerPivot para SharePoint 2013 &#40;herramienta de configuración de PowerPivot&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md).  
@@ -100,9 +97,9 @@ ms.locfileid: "37284271"
 ||Puerto de Administración central de SharePoint|Valor predeterminado, si es necesario|Si la granja no está configurada, la herramienta proporcionará opciones para crearla, incluido un extremo HTTP en Administración central. Usa de forma predeterminada un número de puerto generado aleatoriamente que no esté en uso.|  
 |**Configurar una nueva granja**|Servidor de bases de datos<br /><br /> Cuenta de granja<br /><br /> Frase de contraseña<br /><br /> Puerto de Administración central de SharePoint|Valor predeterminado, si es necesario|Las configuraciones usan como valor predeterminado lo que especificó en la página principal.|  
 |**Configurar la instancia de servicio Local**|Contraseña de la cuenta de servicio de Analysis Services.|Datos proporcionados por el usuario|Debe escribir la contraseña de la cuenta de servicio de Analysis Services en el **registrar SQL Server Analysis Services (PowerPivot) en el servidor Local** página.<br /><br /> La cuenta de servicio se especificó durante la instalación. Ahora debe escribir la contraseña como entrada para registrar la instancia del servicio local con SharePoint.|  
-|**Crear aplicación de servicio PowerPivot**|Nombre de aplicación de servicio PowerPivot|Valor predeterminado|El nombre predeterminado es Aplicación de servicio PowerPivot predeterminada. Podrá sustituirlo por otro valor de la herramienta.|  
-||Servidor de la base de datos de aplicación de servicio PowerPivot|Valor predeterminado|El servidor de bases de datos que va a hospedar la base de datos de aplicación de servicio PowerPivot. El nombre del servidor predeterminado es el mismo servidor de bases de datos usado para la granja. Podrá sustituirlo por otro valor de la herramienta.|  
-||Nombre de la base de datos de la aplicación de servicio PowerPivot|Valor predeterminado|El nombre predeterminado de la base de datos se basa en el nombre de aplicación de servicio, seguido de un GUID para garantizar un nombre único. Podrá sustituirlo por otro valor de la herramienta.|  
+|**Crear aplicación de servicio PowerPivot**|Nombre de aplicación de servicio PowerPivot|Default|El nombre predeterminado es Aplicación de servicio PowerPivot predeterminada. Podrá sustituirlo por otro valor de la herramienta.|  
+||Servidor de la base de datos de aplicación de servicio PowerPivot|Default|El servidor de bases de datos que va a hospedar la base de datos de aplicación de servicio PowerPivot. El nombre del servidor predeterminado es el mismo servidor de bases de datos usado para la granja. Podrá sustituirlo por otro valor de la herramienta.|  
+||Nombre de la base de datos de la aplicación de servicio PowerPivot|Default|El nombre predeterminado de la base de datos se basa en el nombre de aplicación de servicio, seguido de un GUID para garantizar un nombre único. Podrá sustituirlo por otro valor de la herramienta.|  
 ||Actualizar libros antes de habilitar la actualización de datos|Datos proporcionados por el usuario|La actualización de datos genera un error y no se admite para los libros de SQL Server 2008 R2 PowerPivot. La opción **actualizar libros antes de habilitar datos de actualización** actualiza los libros a la versión de SQL Server 2012 PowerPivot.|  
 |**Crear aplicación web predeterminada**|Nombre de aplicación web|Valor predeterminado, si es necesario|Si no existe ninguna aplicación web, la herramienta creará una. La aplicación web se configurará para la autenticación de modo clásico y para que escuche en **el puerto 80**. El tamaño máximo de carga de archivos se establece en 2047 MB, el máximo permitido por SharePoint. Se usa el tamaño máximo de carga de archivos para permitir archivos grandes de PowerPivot.|  
 ||Dirección URL|Valor predeterminado, si es necesario|La herramienta crea una dirección URL basada en el nombre del servidor, con las mismas convenciones de nomenclatura de archivos que SharePoint.|  
@@ -179,7 +176,7 @@ ms.locfileid: "37284271"
  La herramienta de configuración de PowerPivot aprovisiona características de granja, aplicaciones y servicios para que se ejecuten bajo una cuenta única. Así se simplifica la instalación, pero la implementación resultante no cumple los requisitos de seguridad de una granja de SharePoint. Para crear una implementación más sólida, cambie los grupos de aplicaciones y las identidades de servicio de forma que se ejecuten bajo cuentas diferentes cuando la instalación se haya completado. Para obtener más información, consulte [configurar cuentas de servicio PowerPivot](power-pivot-sharepoint/configure-power-pivot-service-accounts.md).  
   
 ### <a name="create-additional-trusted-sites-in-excel-services"></a>Crear sitios de confianza adicionales en Excel Services  
- Puede agregar sitios de confianza en Excel Services para cambiar los permisos y la configuración de los sitios que proporcionan libros de Excel y datos PowerPivot. Para obtener más información, consulte [Create a trusted location for PowerPivot sites in Central Administration](power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+ Puede agregar sitios de confianza en Excel Services para cambiar los permisos y la configuración de los sitios que proporcionan libros de Excel y datos PowerPivot. Para obtener más información, consulte [crear una ubicación de confianza para sitios PowerPivot en Administración Central](power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ### <a name="add-servers-or-applications"></a>Agregar servidores o aplicaciones  
  Con el tiempo, si decide que se necesitan mayores capacidades de almacenamiento y procesamiento de datos, puede agregar una segunda instancia de PowerPivot para SharePoint a la granja. Para obtener instrucciones, consulte [lista de comprobación de implementación: escalabilidad horizontal mediante la adición de servidores de PowerPivot a una granja de SharePoint 2010](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  

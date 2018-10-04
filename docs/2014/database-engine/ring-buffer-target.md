@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - targets [SQL Server extended events], ring buffer target
 - ring buffer target [SQL Server extended events]
 ms.assetid: 54494e11-b56b-43b7-aa5e-c8724e56b251
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b60f4e3c5ca8d207d3eac23047c8cdefc99d9f66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d52dc4ba85ec3b65ddf3e1c703befd0ee32d78a0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273081"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182546"
 ---
 # <a name="ring-buffer-target"></a>Destino de búfer de anillo
   El destino de búfer de anillo guarda datos de eventos en la memoria durante un corto espacio de tiempo. Este destino puede administrar los eventos de uno de los dos modos siguientes.  

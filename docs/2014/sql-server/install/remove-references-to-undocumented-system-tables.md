@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - undocumented system tables [SQL Server]
 - system tables [SQL Server]
 ms.assetid: 010b1236-2219-4bf4-a6db-e3fc3abfa37a
-caps.latest.revision: 28
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d4f0c1789e4f352fe18fd50b6de739b82328a777
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c656f11c212b703f6a9a71a1392b5d0685b4c179
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226575"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158285"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>Quitar referencias a tablas del sistema no documentadas
   Muchas tablas del sistema que no estaban documentadas en las versiones anteriores han cambiado o ya no existen; por consiguiente, si se utilizan dichas tablas, se pueden producir errores tras la actualización. Dado que el Asesor de actualizaciones busca referencias a nombres de tablas del sistema, le informará sobre aquellas referencias a tablas del usuario que tengan el mismo nombre que una tabla del sistema.  
@@ -84,7 +81,7 @@ ms.locfileid: "37226575"
 ## <a name="corrective-action"></a>Acción correctora  
  Modifique las aplicaciones según la tabla siguiente.  
   
-|En lugar de|Utilice|  
+|En lugar de|Usar|  
 |----------------|---------|  
 |**sysfulltextnotify**|La propiedad**TableFulltextPendingChanges** de la función OBJECTPROPERTYEX.|  
 |**syslocks**|La vista de administración dinámica**sys.dm_tran_locks** , sp_lock o la vista de compatibilidad **sys.syslockinfo** .|  

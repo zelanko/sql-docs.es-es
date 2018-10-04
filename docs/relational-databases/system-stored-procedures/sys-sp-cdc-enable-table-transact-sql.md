@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_cdc_enable_table_TSQL
@@ -25,12 +22,12 @@ ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 309c72bea23d32f50070e140f641030703ee42b1
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: e8dafc5dce762810b2348d41e84fd71fcdb2e436
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032895"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832533"
 ---
 # <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +115,7 @@ sys.sp_cdc_enable_table
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para poder habilitar una tabla para la captura de datos modificados, la base de datos debe estar habilitada. Para determinar si la base de datos está habilitada para la captura de datos modificados, consulte el **is_cdc_enabled** columna en el [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) vista de catálogo. Para habilitar la base de datos, use el [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) procedimiento almacenado.  
   
  Cuando la captura de datos modificados está habilitada para una tabla, se generan una tabla de cambios y una o dos funciones de consulta. La tabla de cambios actúa de repositorio para los cambios de la tabla de origen extraídos del registro de transacciones por el proceso de captura. Las funciones de consulta se utilizan para extraer los datos de la tabla de cambios. Los nombres de estas funciones se derivan los *capture_instance* parámetro de las maneras siguientes:  

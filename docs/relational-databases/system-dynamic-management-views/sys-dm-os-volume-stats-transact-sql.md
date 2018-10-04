@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_os_volume_stats (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_os_volume_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_volume_stats_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_volume_stats dynamic management function
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5fcc94554408ed68988ddbdf34422078ca31dd4
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 0f599084d70903ae3d74c04795ddb60d473b6002
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468311"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670493"
 ---
 # <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +50,7 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ||||  
 |-|-|-|  
-|**Columna**|**Tipo de datos**|**Description**|  
+|**Columna**|**Data type**|**Descripción**|  
 |**database_id**|**int**|Identificador de la base de datos. No puede ser null.|  
 |**file_id**|**int**|Id. del archivo. No puede ser null.|  
 |**volume_mount_point**|**nvarchar(512)**|Punto de montaje en el que el volumen tiene su raíz. Puede devolver una cadena vacía.|  
@@ -70,7 +67,7 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ## <a name="security"></a>Seguridad  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW SERVER STATE.  
   
 ## <a name="examples"></a>Ejemplos  

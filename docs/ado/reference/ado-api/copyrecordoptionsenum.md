@@ -1,13 +1,11 @@
 ---
-title: CopyRecordOptionsEnum | Documentos de Microsoft
+title: CopyRecordOptionsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,29 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - CopyRecordOptionsEnum enumeration [ADO]
 ms.assetid: 2fa4eec5-d50b-4fd3-8ae7-40af441ba12b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6314f9ab11e0704075b6a6cf8d0f9e529a3c0b69
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: fe0b12053b9ac7203253e81fa3300d2e4109a129
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277164"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681572"
 ---
 # <a name="copyrecordoptionsenum"></a>CopyRecordOptionsEnum
 Especifica el comportamiento de la [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md) método.  
   
 |Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
-|**adCopyAllowEmulation**|4|Indica que la *origen* proveedor intenta simular la copia mediante la descarga y operaciones de carga si se produce un error en este método debido a *destino*está en un servidor diferente o es atendido por otro proveedor que *origen*. Tenga en cuenta que las capacidades del proveedor que no son iguales pueden obstaculizar el rendimiento o perder datos.|  
+|**adCopyAllowEmulation**|4|Indica que el *origen* proveedor intenta simular la copia mediante la descarga y cargar operaciones si este método produce un error debido a *destino*está en un servidor diferente o es atendido por otro proveedor que *origen*. Tenga en cuenta que diferentes capacidades de proveedor pueden afectar al rendimiento o pérdida de datos.|  
 |**adCopyNonRecursive**|2|Copia el directorio actual, pero ninguno de sus subdirectorios, en el destino. La operación de copia no es recursiva.|  
-|**adCopyOverWrite**|1|Sobrescribe el archivo o directorio si el *destino* apunta a un archivo o directorio existente.|  
-|**adCopyUnspecified**|-1|Predeterminado: Realiza la operación de copia de forma predeterminada: la operación produce un error si el archivo de destino o el directorio ya existe y la operación copia de forma recursiva.|  
+|**adCopyOverWrite**|1|Si se sobrescribe el archivo o directorio el *destino* apunta a un archivo o directorio existente.|  
+|**adCopyUnspecified**|-1|Predeterminado: Realiza la operación de copia de forma predeterminada: la operación produce un error si el archivo de destino o directorio ya existe y la copia de operación de forma recursiva.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente ADO/WFC  
- Estas constantes no tienen equivalentes ADO/WFC.  
+## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
+ Estas constantes no tienen equivalentes de ADO y WFC.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Método CopyRecord (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Groups Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Groups element
 ms.assetid: 62196435-83a8-4a0a-8be1-7dfc986dc6c5
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c79062d6ef250c6c5d90d5a4ed147a309556d03a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3abad99209bff641ccd1bbd3b52c29f70eab82b0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167546"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090845"
 ---
 # <a name="groups-element-assl"></a>Elemento Groups (ASSL)
   Contiene la colección de grupos de miembros enlazados a un atributo.  
@@ -48,7 +45,7 @@ ms.locfileid: "37167546"
 </Binding>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -63,7 +60,7 @@ ms.locfileid: "37167546"
 |Elementos primarios|[Enlace](../data-type/binding-data-type-assl.md) typu [UserDefinedGroupBinding](../data-type/userdefinedgroupbinding-data-type-assl.md)|  
 |Elementos secundarios|[Grupo](../objects/group-element-assl.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.GroupCollection>.  
   
 ## <a name="see-also"></a>Vea también  

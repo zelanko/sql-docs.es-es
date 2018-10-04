@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - programming [ADOMD.NET]
 - ADOMD.NET, programming
 ms.assetid: 55156115-ecd1-4ed9-876e-23406af9bbf9
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dd4884abb345f1254c3987acb06e83ced7bcf392
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7e514ff56aa305a6ddae9e5a88bc85c253649d0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332755"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154075"
 ---
 # <a name="adomdnet-client-programming"></a>Programación del cliente ADOMD.NET
   Los componentes del cliente de ADOMD.NET residen dentro del espacio de nombres `Microsoft.AnalysisServices.AdomdClient` (en microsoft.analysisservices.adomdclient.dll). Estos componentes cliente proporcionan funcionalidad para el cliente y aplicaciones de nivel intermedio para consultar fácilmente los datos y metadatos de un almacén de datos analíticos, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -41,7 +38,7 @@ ms.locfileid: "37332755"
   
  La interacción con la jerarquía de objetos ADOMD.NET suele comenzar con uno o más de los objetos del nivel superior, como se describe en la tabla siguiente.  
   
-|A|Utilice este objeto|  
+|En|Utilice este objeto|  
 |--------|---------------------|  
 |Conectar al origen de datos analíticos|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> El objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> representa una conexión a un origen de datos y los metadatos del origen de datos. Por ejemplo, puede conectarse a un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cubo (.cub) de archivo y, a continuación, examine el <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Cubes%2A> propiedad para obtener metadatos sobre los cubos presentes en el origen de datos analíticos. Este objeto también representa la implementación de la interfaz `IDbConnection`, una interfaz que requieren todos los proveedores de datos de .NET Framework.|  
 |Detectar las capacidades de la minería de datos del origen de datos|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> El objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> expone varias colecciones de minería de datos:<br /><br /> -El <xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection> contiene una lista de cada modelo de minería de datos del origen de datos.<br />-El <xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection> proporciona información acerca de los algoritmos de minería de datos disponibles.<br />-El <xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection> expone información sobre las estructuras de minería de datos en el servidor.|  

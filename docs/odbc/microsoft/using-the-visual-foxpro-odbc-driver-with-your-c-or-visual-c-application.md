@@ -1,13 +1,11 @@
 ---
-title: Utilice el controlador ODBC de Visual FoxPro con C o Visual C++ aplicación | Documentos de Microsoft
+title: Utilice el controlador ODBC de Visual FoxPro con C o C++ aplicación | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], C or C++ applications
@@ -16,37 +14,36 @@ helpviewer_keywords:
 - Visual FoxPro data [ODBC], C or C++ applications
 - C applications [ODBC]
 ms.assetid: beb11a68-849e-4fe0-b217-d3722b1b1389
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8823264d66a632a6d1252c1c484e3ccc37d44de3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 751e70345876967a534df0fb234ee8511cc09fe1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905250"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612273"
 ---
-# <a name="use-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application"></a>Utilice el controlador ODBC de Visual FoxPro con su C o Visual C++ aplicación
+# <a name="use-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application"></a>Utilice el controlador ODBC de Visual FoxPro con el C o C++ aplicación
 La aplicación de C o C++ se comunica con los datos de Visual FoxPro enviando un [SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md) o [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) instrucción a Visual FoxPro. Esta instrucción puede contener lo siguiente:  
   
--   Instrucciones de SQL nativas para el lenguaje Visual FoxPro, como el [DROP TABLE](../../odbc/microsoft/drop-table-command.md) comando.  
+-   Las instrucciones SQL nativas para el lenguaje de Visual FoxPro, como el [DROP TABLE](../../odbc/microsoft/drop-table-command.md) comando.  
   
 -   [Admite la gramática SQL de ODBC](../../odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md).  
   
--   Lenguaje de Visual FoxPro no son de SQL como [admite comandos SET](../../odbc/microsoft/supported-set-commands-visual-foxpro-odbc-driver.md).  
+-   Idioma de Visual FoxPro Non-SQL como [admite comandos SET](../../odbc/microsoft/supported-set-commands-visual-foxpro-odbc-driver.md).  
   
  Para obtener más información acerca de SQL nativo de Visual FoxPro, consulte la documentación de Visual FoxPro.  
   
-## <a name="example-using-the-visual-foxpro-odbc-driver-with-your-c-or-c-application"></a>Ejemplo: Usar el controlador ODBC de Visual FoxPro con la C o la aplicación de C++  
- En el ejemplo siguiente se utiliza la API de C de ODBC para recuperar los datos almacenados en el campo Apellido de la tabla employee en la base de datos de ejemplo de Microsoft® Visual FoxPro denominado TasTrade. Esta base de datos se proporciona con Visual FoxPro y se instala de forma predeterminada en la siguiente ubicación:  
+## <a name="example-using-the-visual-foxpro-odbc-driver-with-your-c-or-c-application"></a>Ejemplo: Utilizar el controlador ODBC de Visual FoxPro con su aplicación de C++ o C  
+ El ejemplo siguiente utiliza la API de C de ODBC para recuperar los datos almacenados en el campo Apellido en la tabla employee en la base de datos de ejemplo de Microsoft® Visual FoxPro denominado TasTrade. Esta base de datos se proporciona con Visual FoxPro y se instala de forma predeterminada en la siguiente ubicación:  
   
  `c:\vfp\samples\mainsamp\data\tastrade.dbc`  
   
- En el ejemplo se muestra un apellido a la vez, que permite hacer clic en Aceptar en el cuadro de mensaje para ver el último nombre siguiente. Se supone que se ha establecido un origen de datos denominado Tastrade para usar la base de datos de Tastrade.dbc.  
+ El ejemplo muestra un apellido en un momento, lo que le permite hacer clic en Aceptar en el cuadro de mensaje para ver el siguiente nombre de la última. Se supone que un origen de datos denominado Tastrade se configuró para usar la base de datos Tastrade.dbc.  
   
 > [!NOTE]  
->  Debería realizar la comprobación de errores en todas las llamadas de API de ODBC; Este ejemplo excluyen por brevedad de comprobación de errores.  
+>  Se debe realizar la comprobación de errores en todas las llamadas de API de ODBC; en este ejemplo excluye la comprobación de errores por brevedad.  
   
 ```  
 // FoxPro_ODBC_Driver_with_C.cpp  

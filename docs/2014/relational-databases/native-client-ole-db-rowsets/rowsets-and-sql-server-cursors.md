@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB rowsets, cursors
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - properties [OLE DB]
 - cursors [OLE DB]
 ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d7c1768beb903e214260c2b6a37486bfc2583c0c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 9c1682525f57c2a251cda46202f06737b87d030b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416365"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147265"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Conjuntos de filas y cursores de servidor de SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve conjuntos de resultados a los consumidores mediante dos métodos:  
@@ -70,13 +67,13 @@ ms.locfileid: "37416365"
 |DBPROP_BOOKMARKS o DBPROP_LITERALBOOKMARKS|VARIANT_TRUE|No puede actualizar los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través del conjunto de filas. El conjunto de filas es secuencial y solamente admite desplazamiento y captura hacia delante. Se admite la posición de fila relativa. El texto de comando puede incluir una cláusula ORDER BY.|  
 |DBPROP_OWNUPDATEDELETE o DBPROP_OWNINSERT o DBPROP_OTHERUPDATEDELETE|VARIANT_TRUE|No puede actualizar los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través del conjunto de filas. El conjunto de filas admite desplazamiento y captura en cualquier dirección. Se admite la posición de fila relativa. El texto de comando puede incluir una cláusula ORDER BY.|  
 |DBPROP_OTHERINSERT|VARIANT_TRUE|No puede actualizar los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través del conjunto de filas. El conjunto de filas admite desplazamiento y captura en cualquier dirección. Se admite la posición de fila relativa. El texto de comando puede incluir una cláusula ORDER BY si existe un índice en las columnas a las que se hace referencia.<br /><br /> DBPROP_OTHERINSERT no puede ser VARIANT_TRUE si el conjunto de filas contiene marcadores. Si se intenta crear un conjunto de filas con esta propiedad de visibilidad y marcadores, se genera un error.|  
-|DBPROP_IRowsetLocate o DBPROP_IRowsetScroll|VARIANT_TRUE|No puede actualizar los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través del conjunto de filas. El conjunto de filas admite desplazamiento y captura en cualquier dirección. Marcadores y posiciones absolutas a través de la **IRowsetLocate** interfaz son compatibles con el conjunto de filas. El texto de comando puede incluir una cláusula ORDER BY.<br /><br /> DBPROP_IRowsetLocate y DBPROP_IRowsetScroll requieren marcadores en el conjunto de filas. Si se intenta crear un conjunto de filas con marcadores y DBPROP_OTHERINSERT se establece en VARIANT_TRUE, se genera un error.|  
+|DBPROP_IRowsetLocate o DBPROP_IRowsetScroll|VARIANT_TRUE|No puede actualizar los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través del conjunto de filas. El conjunto de filas admite desplazamiento y captura en cualquier dirección. Se admiten marcadores y posicionamiento absoluto mediante de la interfaz **IRowsetLocate** en el conjunto de filas. El texto de comando puede incluir una cláusula ORDER BY.<br /><br /> DBPROP_IRowsetLocate y DBPROP_IRowsetScroll requieren marcadores en el conjunto de filas. Si se intenta crear un conjunto de filas con marcadores y DBPROP_OTHERINSERT se establece en VARIANT_TRUE, se genera un error.|  
 |DBPROP_IRowsetChange o DBPROP_IRowsetUpdate|VARIANT_TRUE|Puede actualizar los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través del conjunto de filas. El conjunto de filas es secuencial y solamente admite desplazamiento y captura hacia delante. Se admite la posición de fila relativa. Todos los comandos que admiten cursores actualizables pueden admitir estas interfaces.|  
-|DBPROP_IRowsetLocate o DBPROP_IRowsetScroll y DBPROP_IRowsetChange o DBPROP_IRowsetUpdate|VARIANT_TRUE|Puede actualizar los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través del conjunto de filas. El conjunto de filas admite desplazamiento y captura en cualquier dirección. Los marcadores y posiciones absolutas a través **IRowsetLocate** se admiten en el conjunto de filas. El texto de comando puede incluir una cláusula ORDER BY.|  
+|DBPROP_IRowsetLocate o DBPROP_IRowsetScroll y DBPROP_IRowsetChange o DBPROP_IRowsetUpdate|VARIANT_TRUE|Puede actualizar los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través del conjunto de filas. El conjunto de filas admite desplazamiento y captura en cualquier dirección. Se admiten marcadores y posicionamiento absoluto mediante la interfaz **IRowsetLocate** en el conjunto de filas. El texto de comando puede incluir una cláusula ORDER BY.|  
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|No puede actualizar los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través del conjunto de filas. El conjunto de filas solamente admite desplazamiento hacia delante. Se admite la posición de fila relativa. El texto de comando puede incluir una cláusula ORDER BY si existe un índice en las columnas a las que se hace referencia.<br /><br /> DBPROP_IMMOBILEROWS solo está disponible en conjuntos de filas que pueden mostrar las filas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] insertadas mediante comandos en otras sesiones o por parte de otros usuarios. Si se intenta abrir un conjunto de filas con la propiedad establecida en VARIANT_FALSE en cualquier conjunto de filas para el que DBPROP_OTHERINSERT no puede ser VARIANT_TRUE, se produce un error.|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|No puede actualizar los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través del conjunto de filas. El conjunto de filas solamente admite desplazamiento hacia delante. Se admite la posición de fila relativa. El texto de comando puede incluir una cláusula ORDER BY a menos que esté restringido por otra propiedad.|  
   
- Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] filas del proveedor OLE DB de Native Client admitidos un cursor de servidor pueden crearse fácilmente en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla base o vista utilizando la **IOpenRowset:: OpenRowset** método. Especifique la tabla o vista por su nombre, pasando el conjunto de filas requiere conjuntos de propiedades en el *rgPropertySets* parámetro.  
+ Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] filas del proveedor OLE DB de Native Client admitidos un cursor de servidor pueden crearse fácilmente en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla base o vista utilizando la **IOpenRowset:: OpenRowset** método. Especifique la tabla o vista con su nombre, pasando los conjuntos de propiedades de conjunto de filas correspondientes en el parámetro *rgPropertySets*.  
   
  El texto de comando que crea un conjunto de filas se restringe cuando el consumidor requiere que un cursor de servidor admita el conjunto de filas. Concretamente, el texto de comando se restringe a una única instrucción SELECT que devuelve un único resultado de conjunto de filas, o bien, a un procedimiento almacenado que implementa una única instrucción SELECT que devuelve un único resultado de conjunto de filas.  
   
@@ -92,7 +89,7 @@ ms.locfileid: "37416365"
   
  Para usar un tipo de modelo de cursor determinado, busque la columna correspondiente al modelo de cursor y busque todas las propiedades de conjunto de filas que tengan el valor 'T' en la columna. Establezca estas propiedades de conjunto de filas en VARIANT_TRUE para usar ese modelo de cursor específico. Las propiedades del conjunto de filas que contienen '-' como valor pueden establecerse en VARIANT_TRUE o VARIANT_FALSE.  
   
-|Modelos de cursor o propiedades de conjunto de filas|Valor predeterminado<br /><br /> result<br /><br /> conjunto<br /><br /> (SL)|Rápido<br /><br /> solo <br /><br /> avance<br /><br /> (SL)|Estático<br /><br /> (SL)|Keyset<br /><br /> conjuntos de claves<br /><br /> (SL)|  
+|Propiedades de conjunto de filas o modelos de cursores|Default<br /><br /> result<br /><br /> conjunto<br /><br /> (SL)|Rápido<br /><br /> solo <br /><br /> avance<br /><br /> (SL)|Estático<br /><br /> (SL)|Keyset<br /><br /> conjuntos de claves<br /><br /> (SL)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  
@@ -149,7 +146,7 @@ ms.locfileid: "37416365"
 ## <a name="sql-server-cursor-block-size"></a>Tamaño del bloque de cursor de SQL Server  
  Cuando un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursor admite un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] filas del proveedor OLE DB de Native Client, el número de elementos de la fila controlar el parámetro de matriz de la **IRowset:: GetNextRows** o **IRowsetLocate:: GetRowsAt**  métodos define el tamaño de bloque de cursor. Las filas indicadas por los identificadores de la matriz son los miembros del bloque de cursor.  
   
- Los conjuntos de filas que admiten marcadores, los identificadores de fila recuperan mediante el uso de la **IRowsetLocate:: Getrowsbybookmark** método definen los miembros del bloque de cursor.  
+ En el caso de los conjuntos de filas que admiten marcadores, los identificadores de fila recuperados mediante el método **IRowsetLocate::GetRowsByBookmark** definen los miembros del bloque de cursor.  
   
  Independientemente del método usado para rellenar el conjunto de filas y formar el bloque de cursor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el bloque de cursor estará activo hasta que se ejecute el siguiente método de captura de filas en el conjunto de filas.  
   

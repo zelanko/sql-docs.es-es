@@ -1,29 +1,27 @@
 ---
-title: Elección de un nivel de interoperabilidad | Documentos de Microsoft
+title: Elegir un nivel de interoperabilidad | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], levels
 ms.assetid: 1f915832-a7c1-41cd-8c4f-bf6d976951b0
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 686687e4cd10559e4cd57d131a77f81b065d318f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11145ad7c63ff36686b70a6a4b30b4d9084d7be8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710643"
 ---
 # <a name="choosing-a-level-of-interoperability"></a>Elección de un nivel de interoperabilidad
-Suponiendo que la aplicación va a utilizar ODBC, el siguiente paso es determinar qué nivel de interoperabilidad es necesario. El nivel básico de interoperabilidad normalmente es una función del tipo de aplicación: aplicaciones personalizadas no suelen ser interoperables, las aplicaciones verticales suelen ser interoperables entre un número limitado de DBMS y aplicaciones genéricas tienden a ser interoperable entre todos los DBMS.  
+Suponiendo que la aplicación utilizará ODBC, el siguiente paso es determinar qué nivel de interoperabilidad es necesario. El nivel básico de interoperabilidad suele ser una función del tipo de aplicación: las aplicaciones personalizadas no suelen ser interoperable, aplicaciones verticales suelen ser interoperable entre un número limitado de DBMS y aplicaciones genéricas tienden a ser interoperable entre todos los DBMS.  
   
  Esta sección contiene los temas siguientes.  
   

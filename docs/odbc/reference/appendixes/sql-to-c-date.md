@@ -1,31 +1,29 @@
 ---
-title: 'SQL hasta la fecha C: | Documentos de Microsoft'
+title: 'SQL a C: fecha | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - converting data from SQL to C types [ODBC], date
 - date data type [ODBC]
 - data conversions from SQL to C types [ODBC], date
 ms.assetid: 703c7960-9cf4-4d7a-9920-53b29c184f97
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d99ebd45ffa463ccfd66bd751dd7415b35a8f5d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe0c30f0f0fbf0ea695d79387fdec3694a54ebca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777483"
 ---
-# <a name="sql-to-c-date"></a>SQL hasta la fecha C:
-El identificador para el tipo de datos SQL de ODBC date es:  
+# <a name="sql-to-c-date"></a>SQL a C: fecha
+El identificador de tipo de datos SQL de ODBC date es:  
   
  SQL_TYPE_DATE  
   
@@ -33,16 +31,16 @@ El identificador para el tipo de datos SQL de ODBC date es:
   
 |Identificador de tipo de C|Prueba|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > longitud de bytes de caracteres<br /><br /> 11 < = *BufferLength* < = longitud de bytes de caracteres<br /><br /> *BufferLength* < 11|data<br /><br /> Datos truncados<br /><br /> No definido|10<br /><br /> Longitud de los datos en bytes<br /><br /> No definido|n/d<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_CHAR|*BufferLength* > longitud de bytes de caracteres<br /><br /> 11 < = *BufferLength* < = longitud de bytes de caracteres<br /><br /> *BufferLength* < 11|data<br /><br /> Datos truncados<br /><br /> No definido|10<br /><br /> Longitud de datos en bytes<br /><br /> No definido|n/d<br /><br /> 01004<br /><br /> 22003|  
 |SQL_C_WCHAR|*BufferLength* > longitud de caracteres<br /><br /> 11 < = *BufferLength* < = longitud de caracteres<br /><br /> *BufferLength* < 11|data<br /><br /> Datos truncados<br /><br /> No definido|10<br /><br /> Longitud de datos de caracteres<br /><br /> No definido|n/d<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|Longitud de bytes de datos < = *BufferLength*<br /><br /> Longitud de bytes de datos > *BufferLength*|data<br /><br /> No definido|Longitud de los datos en bytes<br /><br /> No definido|n/d<br /><br /> 22003|  
-|SQL_C_TYPE_DATE|Ninguno [a]|data|6 [c]|n/d|  
-|SQL_C_TYPE_TIMESTAMP|Ninguno [a]|Datos [b]|16 [c]|n/d|  
+|SQL_C_BINARY|Longitud de bytes de datos < = *BufferLength*<br /><br /> Longitud de bytes de datos > *BufferLength*|data<br /><br /> No definido|Longitud de datos en bytes<br /><br /> No definido|n/d<br /><br /> 22003|  
+|SQL_C_TYPE_DATE|[A] ninguno|data|6 [c]|n/d|  
+|SQL_C_TYPE_TIMESTAMP|[A] ninguno|Datos [b]|16 [c]|n/d|  
   
- [a] el valor de *BufferLength* se pasa por alto para esta conversión. El controlador se da por supuesto que el tamaño de **TargetValuePtr* es el tamaño del tipo de datos C.  
+ [a] el valor de *BufferLength* se omite para esta conversión. El controlador se da por supuesto que el tamaño de **TargetValuePtr* es el tamaño del tipo de datos C.  
   
- [b], los campos de hora de la estructura de marca de tiempo se establecen en cero.  
+ [b] los campos de tiempo de la estructura de marca de tiempo se establecen en cero.  
   
- [c] es el tamaño del tipo de datos C correspondiente.  
+ [c] trata del tamaño del tipo de datos C correspondiente.  
   
- Cuando la fecha de datos de SQL se convierte en datos de caracteres C, la cadena resultante es en el "*aaaa*-*mm*-*dd*" formato. Este formato no se ve afectado por el valor de país Windows®.
+ Cuando la fecha de datos de SQL se convierte en datos de caracteres de C, la cadena resultante tiene el "*aaaa*-*mm*-*dd*" formato. Este formato no se ve afectado por la configuración de país Windows®.

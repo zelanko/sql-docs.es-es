@@ -1,52 +1,50 @@
 ---
-title: 'Diagnóstico de Descriptor de acceso, información, de tipos específicos del controlador: datos, | Documentos de Microsoft'
+title: 'Diagnóstico de Descriptor de acceso, información, tipos específicos del controlador: Data, | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - driver-specific diagnostic values [ODBC]
 - diagnostic information [ODBC], driver-specific values
 - ODBC drivers [ODBC], driver-specific diagnostic values
 ms.assetid: ad4c76d3-5191-4262-b47c-5dd1d19d1154
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7dbc0ca0584d5dd9c7e8dbfc1cfa5d23831d764
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 30c310e6c6b2833da6e1d9167faee2e979bb4616
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855323"
 ---
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>Tipos de datos específicos del controlador, Descriptor tipos, tipos de información, tipos de diagnóstico y atributos
-Controladores pueden asignar valores específicos del controlador para lo siguiente:  
+Los controladores pueden asignar valores específicos del controlador para lo siguiente:  
   
--   **Indicadores de tipo de datos de SQL** se utilizan en *ParameterType* en **SQLBindParameter** y en *DataType* en **SQLGetTypeInfo** y devolviendo **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**,  **SQLDescribeParam**, **SQLProcedureColumns**, y **SQLSpecialColumns**.  
+-   **Indicadores de tipo de datos de SQL** se usan en *ParameterType* en **SQLBindParameter** y en *DataType* en **SQLGetTypeInfo** y devuelto por **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**,  **SQLDescribeParam**, **SQLProcedureColumns**, y **SQLSpecialColumns**.  
   
--   **Campos de descriptor** se utilizan en *FieldIdentifier* en **SQLColAttribute**, **SQLGetDescField**, y **SQLSetDescField**.  
+-   **Los campos de descriptor** se usan en *FieldIdentifier* en **SQLColAttribute**, **SQLGetDescField**, y **SQLSetDescField**.  
   
--   **Campos de diagnóstico** se utilizan en *DiagIdentifier* en **SQLGetDiagField** y **SQLGetDiagRec**.  
+-   **Los campos de diagnóstico** se usan en *DiagIdentifier* en **SQLGetDiagField** y **SQLGetDiagRec**.  
   
--   **Tipos de información** se utilizan en *tipo de información* en **SQLGetInfo**.  
+-   **Tipos de información** se usan en *InfoType* en **SQLGetInfo**.  
   
--   **Conexión y los atributos de instrucción** se utilizan en *atributo* en **SQLGetConnectAttr**, **SQLGetStmtAttr**,  **SQLSetConnectAttr**, y **SQLSetStmtAttr**.  
+-   **Conexión y los atributos de instrucción** se usan en *atributo* en **SQLGetConnectAttr**, **SQLGetStmtAttr**,  **SQLSetConnectAttr**, y **SQLSetStmtAttr**.  
   
- Para cada uno de estos elementos, hay dos conjuntos de valores: valores reservados para su uso por ODBC y los valores reservados para su uso por los controladores. Antes de implementar los valores específicos del controlador, un escritor de controlador debe solicitar un valor para cada tipo específico del controlador, campo o atributo de Open Group. Para nuevas implementaciones de controlador, utilice el intervalo que se describe en la tabla siguiente. El Administrador de ODBC 3.8 controladores no generará un error si se utiliza un valor desconocido que no está en el intervalo que se describe a continuación. Sin embargo, las versiones posteriores del Administrador de controladores podrían generarse un error si no se reciben que no están en el intervalo de valores desconocidos.  
+ Para cada uno de estos elementos, hay dos conjuntos de valores: valores reservados para su uso en ODBC y valores de reservado para uso de controladores. Antes de implementar los valores específicos del controlador, un escritor de controlador debe solicitar un valor para cada tipo específico del controlador, campo o atributo de Open Group. Para el desarrollo de controlador nuevo, use el intervalo que se describe en la tabla siguiente. El Administrador de ODBC 3.8 controladores no generará un error si se usa un valor desconocido que no está en el intervalo que se describe a continuación. Sin embargo, las versiones posteriores del Administrador de controladores podrían generarse un error si no se reciben que no están en el intervalo de valores desconocidos.  
   
- Cuando ninguno de estos valores se pasan a una función ODBC, el controlador debe comprobar si el valor es válido. Controladores devuelven SQLSTATE HYC00 (característica opcional no implementada) para los valores específicos del controlador que se aplican a otros controladores.  
+ Cuando cualquiera de estos valores se pasan a una función ODBC, el controlador debe comprobar si el valor es válido. Controladores devuelven SQLSTATE HYC00 (característica opcional no implementada) para valores específicos del controlador que se aplican a otros controladores.  
   
  A partir de ODBC 3.8, escritores de controlador pueden asignar atributos específicos del controlador dentro de un intervalo reservado.  
   
 > [!NOTE]  
 >  El Administrador de ODBC 3.8 controladores no valida ni aplica estos intervalos para la compatibilidad con versiones anteriores. Una versión futura del Administrador de controladores puede aplicarlas, sin embargo.  
   
-|Tipo de atributo|Tipo de datos de ODBC|Intervalo específicos del controlador base|Límite de intervalo específicos del controlador|Constante ODBC para el intervalo de valores específicos del controlador de base|  
+|Tipo de atributo|Tipo de datos de ODBC|Rango específicos del controlador base|Límite de rango específicos del controlador|Constante ODBC para el intervalo de valor específico del controlador base|  
 |--------------------|--------------------|---------------------------------|----------------------------------|---------------------------------------------------------|  
 |Indicadores de tipo de datos SQL|SQLSMALLINT|0x4000|0x7FFF|SQL_DRIVER_SQL_TYPE_BASE|  
 |Campos de descriptor|SQLSMALLINT|0x4000|0x7FFF|SQL_DRIVER_DESCRIPTOR_BASE|  
@@ -56,9 +54,9 @@ Controladores pueden asignar valores específicos del controlador para lo siguie
 |Atributos de instrucción|SQLINTEGER|0x00004000|0x00007FFF|SQL_DRIVER_STATEMENT_ATTR_BASE|  
   
 > [!NOTE]  
->  Tipos de datos específicos del controlador, campos de descriptor, campos de diagnóstico, tipos de información, los atributos de instrucción y atributos de conexión deben describir en la documentación del controlador. Cuando ninguno de estos valores se pasan a una función ODBC, el controlador debe comprobar si el valor es válido. Controladores devuelven SQLSTATE HYC00 (característica opcional no implementada) para los valores específicos del controlador que se aplican a otros controladores.  
+>  Tipos de datos específicos del controlador, los campos de descriptor, los campos de diagnóstico, tipos de información, los atributos de instrucción y los atributos de conexión se deben describir en la documentación del controlador. Cuando cualquiera de estos valores se pasan a una función ODBC, el controlador debe comprobar si el valor es válido. Controladores devuelven SQLSTATE HYC00 (característica opcional no implementada) para valores específicos del controlador que se aplican a otros controladores.  
   
- Los valores base se definen para facilitar el desarrollo del controlador. Por ejemplo, se pueden definir atributos de diagnóstico específicos del controlador en el formato siguiente:  
+ Los valores bases se definen para facilitar el desarrollo de controladores. Por ejemplo, se pueden definir los atributos de diagnóstico específica de controladores en el formato siguiente:  
   
 ```  
 SQL_DRIVER_DIAGNOSTIC_BASE+0, SQL_DRIVER_DIAGNOSTIC_BASE +1  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server]
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - file importing [SQL Server]
 - column exporting [SQL Server]
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
-caps.latest.revision: 198
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 478537d3e4f74a83593147a7e790ab2d5806ba34
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.openlocfilehash: 9921e018b81d22097161d2ea93226e47b7880073
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39310302"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205865"
 ---
 # <a name="bcp-utility"></a>bcp (utilidad)
   El **bcp** copia de forma masiva datos entre una instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y un archivo de datos en un formato especificado por el usuario. La utilidad **bcp** se puede usar para importar un número elevado de filas nuevas en tablas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o para exportar datos de tablas a archivos de datos. Excepto cuando se usa con la opción **queryout** , la utilidad no requiere ningún conocimiento de [!INCLUDE[tsql](../includes/tsql-md.md)]. Para importar datos en una tabla, debe usar un archivo de formato creado para esa tabla o comprender la estructura de la tabla y los tipos de datos que son válidos para sus columnas.  
@@ -147,7 +144,7 @@ ms.locfileid: "39310302"
 |RAW|No se realiza ninguna conversión entre páginas de códigos. Se trata de la opción más rápida porque no se producen conversiones.|  
 |*code_page*|Número específico de una página de códigos, por ejemplo, 850.<br /><br /> **\*\* Importante \* \***  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no es compatible con la página de códigos 65001 (codificación UTF-8).|  
   
- `-d` *Database_name*  
+ `-d` *database_name*  
  Especifica la base de datos a la que conectarse. De forma predeterminada, bcp.exe se conecta a la base de datos predeterminada del usuario. Si `-d` *database_name* y un nombre de tres partes (*database_name.schema.table*, pasado como primer parámetro a bcp.exe) se especifica, se producirá un error porque no se puede especificar el nombre de base de datos dos veces. Si *database_name* comienza con un guión (-) o una barra diagonal (/), no agregue un espacio entre `-d` y el nombre de la base de datos.  
   
  **-e** *err_file*  
@@ -330,7 +327,7 @@ ms.locfileid: "39310302"
  **-x**  
  Puede usar con el **formato** y **-f *** format_file* opciones, genera un archivo de formato basado en XML en lugar del archivo de formato no XML predeterminado. **-x** no funciona cuando se importan o exportan datos. Genera un error si se usa sin **formato** y **-f *** format_file*.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **bcp** cliente 12.0 se instala al instalar [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] herramientas. Si se instalan herramientas para [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] y para una versión anterior de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], según el valor de la variable de entorno PATH, es posible usar el cliente **bcp** anterior en lugar del cliente **bcp** 12.0. Esta variable de entorno define el conjunto de directorios que Windows usa para buscar archivos ejecutables. Para saber qué versión está usando, ejecute el comando **bcp /v** en el símbolo del sistema de Windows. Para obtener información acerca del establecimiento de la ruta de comandos en la variable de entorno PATH, vea la Ayuda de Windows.  
   
  Los archivos con formato XML solamente se admiten cuando se instalan herramientas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client.  

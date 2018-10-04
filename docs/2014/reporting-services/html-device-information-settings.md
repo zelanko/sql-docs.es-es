@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HTML [Reporting Services], rendering
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
-caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bb0063ac9887d12b8ebeaf329c044f4974e49607
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a415a5f735e731efe3f3ae8b282f8ce2a1ad2eba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177230"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155856"
 ---
 # <a name="html-device-information-settings"></a>Configuración de la información del dispositivo HTML
   En la tabla siguiente se muestra la configuración de la información de los dispositivos para la representación en formato HTML.  
@@ -30,7 +27,7 @@ ms.locfileid: "37177230"
 > [!IMPORTANT]  
 >  La configuración de información de dispositivo que aparece en la siguiente tabla con **(\*)** está en desuso y no se debe usar en nuevas aplicaciones. Para obtener más información, consulte [características desusadas de SQL Server Reporting Services en SQL Server 2014](deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
-|Configuración|Valor|  
+|Parámetro|Valor|  
 |-------------|-----------|  
 |`AccessibleTablix`|Indica si se representa con metadatos de accesibilidad adicional para los usuarios con lectores verdes. Este parámetro solo se aplica a los informes que contengan una tabla sencilla o estructuras de matrices con agrupación sencilla. El valor predeterminado es `false`. Los metadatos de accesibilidad adicional provocan que el informe representado sea compatible con los siguientes estándares técnicos de la sección sobre información y aplicaciones de Internet y de la intranet basada en web (1194.22) del documento sobre estándares de accesibilidad de la tecnología de la información y la electrónica (sección 508):<br /><br /> (g) Los encabezados de fila y de columna se identificarán para las tablas de datos.<br /><br /> (h) Se usará marcado para asociar las celdas de datos y sus encabezados de las tablas que tengan dos o más niveles lógicos de encabezados de fila o columna.<br /><br /> (i) Los marcos tendrán un título de texto que facilite la identificación y la navegación por los mismos.<br /><br /> Este parámetro se admite en [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[SPS2010](../includes/sps2010-md.md)], pero no en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2007](../includes/sps2007-md.md)].|  
 |**ActionScript(\*)**|Especifica el nombre de la función JavaScript que se usará cuando se produzca un evento de acción, como una obtención de detalles o un clic en un marcador. Si se especifica este parámetro, un evento de acción desencadenará la función JavaScript la con nombre en lugar de una devolución al servidor.|  

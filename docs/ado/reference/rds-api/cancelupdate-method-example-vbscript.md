@@ -1,35 +1,32 @@
 ---
-title: Ejemplo del método CancelUpdate (VBScript) | Documentos de Microsoft
+title: Ejemplo del método CancelUpdate (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - CancelUpdate method [ADO], VBScript example
 ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 000a63882a7f4ec64e0fa0c9cb4e6d88d3264df1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f20c372fbd98f0b14660e8c419e382a8a5c26c46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287354"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803013"
 ---
 # <a name="cancelupdate-method-example-vbscript"></a>Ejemplo del método CancelUpdate (VBScript)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar a [servicio de datos de WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Para probar este ejemplo, corte y pegue este código entre las \<cuerpo > y \</cuerpo > etiquetas en una HTML normal de documento y asígnele el nombre **CancelUpdateVBS.asp**. Secuencia de comandos ASP identificará el servidor de internet. Debe modificar el nombre del servidor para reflejar su propia configuración. Simplemente cambie el valor en la cadena de conexión de MiServidor al nombre de la instalación de SQL Server.  
+ Para probar este ejemplo, corte y pegue este código entre la \<cuerpo > y \</cuerpo > etiquetas en una HTML normal de documentos y asígnele el nombre **CancelUpdateVBS.asp**. Secuencia de comandos ASP identificará el servidor de internet. Deberá modificar el nombre del servidor para reflejar su propia configuración. Simplemente cambie el valor en la cadena de conexión de MyServer al nombre de la instalación de SQL Server.  
   
 ```  
 <!-- BeginCancelUpdateVBS -->  

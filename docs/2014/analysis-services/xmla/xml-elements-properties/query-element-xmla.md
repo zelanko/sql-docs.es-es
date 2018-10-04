@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Query Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Query element
 ms.assetid: 5a4544e4-012f-4a47-942c-23596400ea16
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02feb5cb14e6b6acdc6100070495d0c84b89e483
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 68da02ef99a5668c7ee0a3a57a06aca90ae68a25
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293255"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224405"
 ---
 # <a name="query-element-xmla"></a>Elemento Query (XMLA)
   Contiene una consulta dentro de la [consultas](queries-element-xmla.md) colección usada por el [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) comando durante la optimización basada en uso.  
@@ -48,7 +45,7 @@ ms.locfileid: "37293255"
 </Queries>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -63,7 +60,7 @@ ms.locfileid: "37293255"
 |Elementos primarios|[Consultas](queries-element-xmla.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El comando `DesignAggregations` admite la optimización basada en el uso incluyendo uno o más elementos `Query` en la colección `Queries` del comando. Cada `Query` elemento representa una consulta de objetivo que utiliza el proceso de diseño para definir agregaciones dirigidas a las consultas utilizadas con frecuencia. Puede especificar sus propias consultas de objetivo, o puede usar la información almacenada por una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en el registro de consultas para recuperar información sobre con más frecuencia utiliza las consultas.  
   
  Si está diseñando agregaciones de forma iterativa, solo tiene que pasar las consultas de objetivo en la primera `DesignAggregations` comando porque el [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia almacena estas consultas de objetivo y las usa durante la subsiguiente `DesignAggregations` comandos. Después de incluir las consultas del objetivo en el primer comando `DesignAggregations` de un proceso iterativo, cualquier comando `DesignAggregations` posterior que contenga las consultas de objetivo en la propiedad `Queries` generará un error.  

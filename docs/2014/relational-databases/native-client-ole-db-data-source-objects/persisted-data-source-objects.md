@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB data source objects [SQL Server Native Client]
@@ -14,24 +12,23 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, persisted data source objects
 - persisted data source objects
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a44176c06f105fd4a560718ee5b757f5c71ff1cf
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7a5d50163f439ec3fabd219761f0749c88745c58
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423554"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180965"
 ---
 # <a name="persisted-data-source-objects"></a>Objetos de origen de datos persistentes
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite objetos de origen de datos persistente con el **IPersistFile** interfaz.  
   
 ## <a name="examples"></a>Ejemplos  
- **A. Conservar la inicialización del origen de datos:**  
+ **A. Guardar la inicialización del origen de datos:**  
   
- En este ejemplo se muestra una función que guarda propiedades de inicialización de origen de datos que definen un servidor, una base de datos y el uso del Modo de autenticación de Windows para la conexión. El nombre del servidor y el nombre de la base de datos se reciben en el *Pdatasource* y *Plocation* parámetros de la función.  
+ En este ejemplo se muestra una función que guarda propiedades de inicialización de origen de datos que definen un servidor, una base de datos y el uso del Modo de autenticación de Windows para la conexión. El nombre del servidor y el nombre de la base de datos se reciben en los parámetros *pLocation* y *pDatasource* de la función.  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -140,7 +137,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. Use la inicialización del origen de datos persistentes:**  
+ **B. Usar la inicialización de origen de datos guardada:**  
   
  En este ejemplo se utiliza un objeto de origen de datos guardado con propiedades de inicialización adicionales que proporcionan un inicio de sesión y una contraseña de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -228,7 +225,7 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- El **IPersistFile:: Save** antes o después de llamar al método que se puede llamar **IDBInitialize:: Initialize**. Una llamada al método después de una devolución correcta de **IDBInitialize:: Initialize** garantiza que se conserva una especificación de origen de datos válido.  
+ Se puede llamar al método **IPersistFile::Save** antes o después de llamar a **IDBInitialize::Initialize**. Si se llama al método después de un retorno correcto de **IDBInitialize::Initialize**, se asegura de que se guarde una especificación de origen de datos válida.  
   
 ## <a name="see-also"></a>Vea también  
  [Objetos de origen de datos &#40;OLE DB&#41;](data-source-objects-ole-db.md)  

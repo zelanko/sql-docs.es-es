@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f0d74f8c-600d-4df5-a742-695e6947a071
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 87af6785855f81abcffe57e3672e59fcf00b5e2b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e1264808911226150bc908e356e1b08ab90e72fc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319735"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055005"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>Probar un modelo filtrado (Tutorial básico de minería de datos)
   Ahora que ha determinado que el `TM_Decision_Tree` modelo es el más preciso, lo personalizará el modelo para satisfacer mejor las necesidades de la [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] campaña de distribución de correo directo. Concretamente, el departamento de marketing desea saber si hay alguna diferencia entre los clientes masculinos y femeninos. Esta información puede ayudarles a decidir qué revistas utilizar para los anuncios y qué productos ofrecer en sus campañas.  

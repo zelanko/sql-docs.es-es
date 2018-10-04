@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_cryptographic_provider_keys (Transact-SQL) | Documentos de Microsoft
+title: Sys.dm_cryptographic_provider_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_cryptographic_provider_keys_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cryptographic_provider_keys dynamic management function
 ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26d789882ec717a2d69796a90284c22a3ad2aa44
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: d83a1a60162ba0124b8ff379f241b6bd64e89675
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464161"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627423"
 ---
 # <a name="sysdmcryptographicproviderkeys-transact-sql"></a>sys.dm_cryptographic_provider_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +46,7 @@ dm_cryptographic_provider_keys ( provider_id )
   
 ## <a name="tables-returned"></a>Tablas devueltas  
   
-|Nombre de columna|Tipo de datos|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**key_id**|**int**|Número de identificación de la clave del proveedor.|  
 |**key_name**|**nvarchar(512)**|Nombre de la clave del proveedor.|  
@@ -59,7 +56,7 @@ dm_cryptographic_provider_keys ( provider_id )
 |**key_type**|**nchar(256)**|Tipo de clave del proveedor.|  
 |**longitudDeClave**|**int**|Longitud de la clave del proveedor.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Cuando se consulte esta vista, ésta autenticará el contexto de usuario con el proveedor y enumerará todas las claves visibles al usuario.  
   
  Si el usuario no puede autenticar con el proveedor de EKM, no se devolverá ninguna información acerca de la clave.  

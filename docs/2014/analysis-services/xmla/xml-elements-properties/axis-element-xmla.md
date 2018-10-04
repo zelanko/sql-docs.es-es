@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Axis Element
@@ -22,16 +20,15 @@ f1_keywords:
 helpviewer_keywords:
 - Axis element
 ms.assetid: 336895e1-4a57-4b43-9a53-e31569866e6c
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e3e68903dc828f4b14ac60892d1b6fc2baed2f30
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8587e1cdb0105d72d2bc0219c8d038ca0bd03ca4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263231"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153475"
 ---
 # <a name="axis-element-xmla"></a>Elemento Axis (XMLA)
   Contiene un conjunto de tuplas utilizado para representar un eje único en un conjunto de datos multidimensional que contiene un [ejes](axes-element-xmla.md) elemento que usa el [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) tipo de datos devuelto por la [Execute](../xml-elements-methods-execute.md) método.  
@@ -52,7 +49,7 @@ ms.locfileid: "37263231"
 </Axes>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -67,7 +64,7 @@ ms.locfileid: "37263231"
 |Elementos primarios|[Ejes](axes-element-xmla.md)|  
 |Elementos secundarios|[CrossProduct](crossproduct-element-xmla.md) o [tuplas](tuples-element-xmla.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El contenido del elemento `Axis` varía, dependiendo del valor de la propiedad XMLA `AxisFormat` usada por el método `Execute`.  
   
 ## <a name="tupleformat"></a>TupleFormat  

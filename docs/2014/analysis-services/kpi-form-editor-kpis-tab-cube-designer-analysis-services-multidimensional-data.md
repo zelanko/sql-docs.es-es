@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpidefinitionpane.f1
 ms.assetid: 45c6453a-bbe2-4ca5-836e-c7ef11cfcb65
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 284ccc63f98624e1a64b114d31b69215d8e6b1be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 49df3dcaf89d98d42da0a89ea7de0b8114093913
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224845"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166385"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulario de KPI (pestaña KPI, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Editor de Formulario de KPI** de la pestaña **KPI** del Diseñador de cubos para crear o modificar el indicador clave de rendimiento (KPI) seleccionado.  

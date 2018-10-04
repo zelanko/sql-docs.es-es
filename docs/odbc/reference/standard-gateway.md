@@ -1,13 +1,11 @@
 ---
-title: Puerta de enlace estándar | Documentos de Microsoft
+title: Puerta de enlace estándar | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], database access
@@ -17,17 +15,17 @@ helpviewer_keywords:
 - standard gateways [ODBC]
 - gateways [ODBC]
 ms.assetid: b8341492-2141-4bab-80bd-f2752223079e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6bcff520d89d9f188292f8d30632a9e05e358efa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c70a558b065765dd9f8c0895345959e8aa22ebfe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854032"
 ---
 # <a name="standard-gateway"></a>Puerta de enlace estándar
-A *puerta de enlace* es un fragmento de software que hace que un DBMS que se parezca a otro. Es decir, la puerta de enlace acepta la interfaz de programación, la gramática SQL y protocolo de un DBMS único de flujo de datos y lo convierte a la interfaz de programación, gramática SQL, y protocolo del DBMS oculto de flujo de datos. Por ejemplo, las aplicaciones escritas para usar Microsoft® SQL Server™ pueden también tener acceso a datos de DB2 a través de la puerta de enlace de Micro Decisionware DB2; Este producto hace DB2 que se parezca a SQL Server. Si se usan las puertas de enlace, se debe escribir una puerta de enlace diferente para cada base de datos de destino.  
+Un *puerta de enlace* es un componente de software que hace que un sistema DBMS sea similar a otro. Es decir, la puerta de enlace acepta la interfaz de programación, la gramática de SQL y un DBMS único protocolo de flujo de datos y lo traduce a la interfaz de programación, gramática de SQL, y protocolo del DBMS ocultado la secuencia de datos. Por ejemplo, las aplicaciones escritas para usar Microsoft® SQL Server™ también pueden acceder a datos de DB2 a través de la puerta de enlace de Micro Decisionware DB2; Este producto hace que DB2 sea similar a SQL Server. Cuando se usan las puertas de enlace, otra puerta de enlace debe estar escrita para cada base de datos de destino.  
   
- Aunque las puertas de enlace están limitados por las diferencias arquitectónicas entre DBMS, son un buen candidato para la estandarización. ¿Sin embargo, si todos los DBMS son estandarizar en la interfaz de programación, gramática de SQL y datos de protocolo de flujo de un sola DBMS, cuyo DBMS es elegirse como el estándar? Por supuesto, ningún proveedor DBMS comercial es probable que acepta estandarizar los productos de la competencia. Y si se ha desarrollado una interfaz de programación estándar, la gramática de SQL y el protocolo de flujo de datos, no es necesaria ninguna puerta de enlace.
+ Aunque las puertas de enlace están limitados por las diferencias arquitectónicas entre DBMS, son un buen candidato para la estandarización. ¿Sin embargo, si todos los DBMS son estandarizar en la interfaz de programación, gramática de SQL y datos de protocolo de secuencia de un DBMS único, cuyo DBMS es elegirse como el estándar? Ciertamente ningún proveedor DBMS comercial es probable que acepta estandarizar en productos de la competencia. Y si se ha desarrollado una interfaz de programación estándar, la gramática SQL y protocolo de transmisión de datos, no es necesaria ninguna puerta de enlace.

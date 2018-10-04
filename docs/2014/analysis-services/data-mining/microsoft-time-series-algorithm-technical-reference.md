@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 78a54bc173a3d3b780e57752d86aebc33249066a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 13bbcae47cddd6b44b863b75884cd919003dfe80
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323625"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089145"
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft Time Series Algorithm Technical Reference
   El algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] incluye dos algoritmos independientes para analizar series de tiempo:  
@@ -145,7 +142,7 @@ ms.locfileid: "37323625"
 |*MINIMUM_SERIES_VALUE*|Especifica el valor mínimo que se puede predecir. Este parámetro se usa, junto con *MAXIMUM_SERIES_VALUE*, para restringir las predicciones a un intervalo esperado. Por ejemplo, puede especificar que la cantidad de ventas previstas nunca debe ser un número negativo.<br /><br /> Nota: Este parámetro solo está disponible en algunas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*MINIMUM_SUPPORT*|Especifica el número mínimo de segmentos de tiempo necesarios para generar una división en cada árbol de serie temporal. El valor predeterminado es 10.|  
 |*MISSING_VALUE_SUBSTITUTION*|Especifica cómo se llenan los espacios en los datos históricos. De forma predeterminada, no se permiten espacios en los datos. Si los datos contienen varias series, las series tampoco pueden tener bordes irregulares. Es decir, todas las series deben tener los mismos puntos inicial y final. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] también utiliza el valor de este parámetro para rellenar los espacios en los datos nuevos cuando se realiza una operación `PREDICTION JOIN` en el modelo de serie temporal. En la siguiente tabla se muestran los posibles valores para este parámetro.<br /><br /> Ninguno: predeterminado. Reemplaza los valores que faltan por los valores trazados a lo largo de la curva del modelo entrenado.<br /><br /> Anterior: Repite el valor de intervalo de tiempo anterior.<br /><br /> Media: Utiliza un promedio móvil de intervalos de tiempo que se usan para el entrenamiento.<br /><br /> Numeric constant: utiliza el número especificado para reemplazar todos los valores que faltan.|  
-|*PERIODICITY_HINT*|Proporciona una sugerencia al algoritmo en cuanto a la periodicidad de los datos. Por ejemplo, si las ventas varían por año y la unidad de medida en la serie son los meses, la periodicidad es 12. Este parámetro toma el formato de {n [, n]}, donde n es un número positivo.<br /><br /> La n de los corchetes [] es opcional y puede repetirse con la frecuencia que sea necesaria. Por ejemplo, para proporcionar varias sugerencias de periodicidad para los datos suministrados mensualmente, se puede escribir {12, 3, 1} para detectar patrones durante un año, trimestre o mes. Sin embargo, la periodicidad influye significativamente en la calidad del modelo. Si la sugerencia que se proporciona difiere de la periodicidad real, los resultados pueden verse afectados negativamente.<br /><br /> El valor predeterminado es {1}.<br /><br /> Nota: Las llaves son obligatorias. Además, este parámetro tiene un tipo de datos de cadena. Por consiguiente, si se escribe este parámetro como parte de una instrucción de Extensiones de minería de datos (DMX), el número y las llaves se deben poner entre comillas.|  
+|*PERIODICITY_HINT*|Proporciona una sugerencia al algoritmo en cuanto a la periodicidad de los datos. Por ejemplo, si las ventas varían por año y la unidad de medida en la serie son los meses, la periodicidad es 12. Este parámetro toma el formato de {n [, n]}, donde n es un número positivo.<br /><br /> La n de los corchetes [] es opcional y puede repetirse con la frecuencia que sea necesaria. Por ejemplo, para proporcionar varias sugerencias de periodicidad para los datos suministrados mensualmente, se puede escribir {12, 3, 1} para detectar patrones durante un año, trimestre o mes. Sin embargo, la periodicidad influye significativamente en la calidad del modelo. Si la sugerencia que se proporciona difiere de la periodicidad real, los resultados pueden verse afectados negativamente.<br /><br /> De manera predeterminada, es {1}.<br /><br /> Nota: Las llaves son obligatorias. Además, este parámetro tiene un tipo de datos de cadena. Por consiguiente, si se escribe este parámetro como parte de una instrucción de Extensiones de minería de datos (DMX), el número y las llaves se deben poner entre comillas.|  
 |*PREDICTION_SMOOTHING*|Especifica cómo se debe combinar el modelo para optimizar el pronóstico. Este parámetro solo está disponible en algunas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se puede escribir cualquier valor entre [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] y 1, o utilizar uno de los valores siguientes:<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]: Especifica que predicción solo utiliza ARTXP. El pronóstico se optimiza para un menor número de predicciones.<br /><br /> 0.5: (valor predeterminado) especifica que para la predicción se deben utilizar ambos algoritmos y combinados los resultados.<br /><br /> 1: especifica que la predicción solo utiliza ARIMA. El pronóstico se optimiza para un gran número de predicciones.<br /><br /> <br /><br /> Nota: Use el *FORECAST_METHOD* parámetro para controlar el entrenamiento.|  
   
 ### <a name="modeling-flags"></a>Marcas de modelado  

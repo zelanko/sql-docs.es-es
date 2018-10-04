@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 642d9a0f80f0efb0bc9d26b9a08ab7a6dbd521e1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a599a1ad2b4a2da7b3078b42b87f859b0f6bdfd4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208195"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110435"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Definir y examinar perspectivas
   Una perspectiva puede simplificar la vista de un cubo para fines específicos. De manera predeterminada, los usuarios pueden ver todos los elementos de un cubo para los que tengan permisos. Lo que observan los usuarios cuando ven un cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] entero es la perspectiva predeterminada del cubo. Una vista de todo el cubo puede resultar muy compleja para que los usuarios naveguen por ella, en especial aquellos usuarios que solo necesitan interactuar con una pequeña parte del cubo a fin de satisfacer sus requisitos de informes e inteligencia empresarial.  
@@ -56,7 +53,7 @@ ms.locfileid: "37208195"
   
 5.  Desactive la casilla de los siguientes objetos:  
   
-    -   `Reseller Sales` grupo de medida  
+    -   `Reseller Sales` Grupo de medida  
   
     -   Grupo de medida**Sales Quotas**   
   
@@ -105,7 +102,7 @@ ms.locfileid: "37208195"
   
 4.  Desactive la casilla de los siguientes objetos:  
   
-    -   `Internet Sales` grupo de medida  
+    -   `Internet Sales` Grupo de medida  
   
     -   Grupo de medida**Internet Sales Reason**   
   
@@ -142,9 +139,9 @@ ms.locfileid: "37208195"
   
 3.  Desactive la casilla de los siguientes objetos:  
   
-    -   `Internet Sales` grupo de medida  
+    -   `Internet Sales` Grupo de medida  
   
-    -   `Reseller Sales` grupo de medida  
+    -   `Reseller Sales` Grupo de medida  
   
     -   Grupo de medida**Internet Sales Reason**   
   

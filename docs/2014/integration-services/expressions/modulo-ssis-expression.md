@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - '% (modulo operator)'
 - remainder of division operation
 - modulo operator (%)
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c3a6261b63b77410cef156b3e968b7af8e6f35c4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d7f2b131e53b72156e1b0c929bceb379d12fa070
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310095"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123615"
 ---
 # <a name="modulo-ssis-expression"></a>(Módulo) (expresión de SSIS)
   Proporciona el resto entero después de dividir la primera expresión numérica por la segunda.  
@@ -46,7 +43,7 @@ dividend % divisor
 ## <a name="result-types"></a>Tipos de resultado  
  Determinados por los tipos de datos de los dos argumentos. Para más información, consulte [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  La evaluación de ambas expresiones debe devolver tipos de datos enteros, con o sin signo.  
   
  Si alguno de los operandos es NULL, el resultado será NULL.  

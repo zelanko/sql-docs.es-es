@@ -1,53 +1,47 @@
 ---
-title: Comandos de menú y otras teclas de método abreviado (DB2ToSQL) | Documentos de Microsoft
+title: Comandos de menú y otras teclas de método abreviado (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
-caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: cd4dbdbdacfed33fd56cfacf6dfefb7748887124
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 9879a065db11bb8e8b8ddff9c57376faf36fe151
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775181"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614519"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>Comandos de menú y otras teclas de método abreviado (DB2ToSQL)
-En las siguientes secciones se describen los métodos abreviados de teclado para tener acceso a comandos de menú y otras teclas de método abreviado que se utiliza en varios cuadros de diálogo de SSMA para la aplicación de DB2.  
+Las secciones siguientes describen los métodos abreviados de teclado para tener acceso a comandos de menú y otras teclas de método abreviado que se usa en varios cuadros de diálogo de SSMA para DB2 aplicación.  
   
 ## <a name="file-menu-commands"></a>Comandos del menú archivo  
-Para obtener acceso a los menús archivo, usa el método abreviado de teclado es ALT + f el. En la tabla siguiente describe el teclado métodos abreviados que se usan para tener acceso a elementos de menú en el menú archivo.  
+Para obtener acceso a los menús archivo, usa el método abreviado de teclado es ALT + f el. En la tabla siguiente se describe el teclado métodos abreviados se usan para tener acceso a los elementos de menú en el menú archivo.  
   
 |PARA ELLO|PRESIONE|  
 |--------------|---------|  
 |Mostrar el cuadro de diálogo nuevo proyecto.|ALT + F + N|  
-|Mostrar el cuadro de diálogo Abrir proyecto.|ALT + F + N|  
+|Mostrar el cuadro de diálogo Abrir proyecto.|ALT + F + O|  
 |Cierre el proyecto actual.|ALT + F + C|  
-|Mostrar la operación de guardar cuadro de diálogo de proyecto.|ALT + F, S|  
-|Mostrar el conectar o volver a conectar al cuadro de diálogo de DB2.|ALT + F + T|  
-|Mostrar el conectar o volver a conectar al cuadro de diálogo de SQL Server o SQL Azure.|ALT + F + Q|  
+|Mostrar la operación de guardar cuadro de diálogo de proyecto.|ALT + F + S|  
+|Mostrar el conectar o volver a conectar con el cuadro de diálogo de DB2.|ALT + F, T|  
+|Mostrar el conectar o volver a conectar con el cuadro de diálogo de SQL Server o SQL Azure.|ALT + F + Q|  
 |Proyectos recientes de acceso.|ALT + F + P|  
-|Salir de aplicación de SSMA.|ALT + F + X|  
+|Salga de la aplicación de SSMA.|ALT + F + X|  
   
 ## <a name="edit-menu-commands"></a>Comandos del menú Edición  
-Para tener acceso a menú Edición, es utilizar el método abreviado de teclado ALT + E. La tabla siguiente describen métodos abreviados de teclado permiten tener acceso a elementos de menú en el menú Edición.  
+Para obtener acceso a menú Edición, usa el método abreviado de teclado es ALT + E. En la tabla siguiente se describe los métodos abreviados del teclado para tener acceso a los elementos de menú en el menú Edición.  
   
 |PARA ELLO|PRESIONE|  
 |--------------|---------|  
 |Cortar el texto seleccionado en el Portapapeles.|ALT + E + T o CTRL + X|  
-|Copiar el texto seleccionado en el Portapapeles.|ALT + E + C o CTRL + C|  
-|Pegue el texto agregado más recientemente desde el Portapapeles.|ALT + E + P o CTRL + v.|  
+|Copie el texto seleccionado en el Portapapeles.|ALT + E + C o CTRL + C|  
+|Pegue el texto agregado más recientemente desde el Portapapeles.|ALT + E + P o CTRL + V|  
 |Deshace la última acción.|ALT + E + U o CTRL + Z|  
 |Rehacer o repetir una acción.|ALT + E + R o CTRL + Y|  
 |Mostrar el cuadro de diálogo Administrar marcadores.|ALT + E + B o CTRL + X|  
@@ -57,54 +51,54 @@ Para tener acceso a menú Edición, es utilizar el método abreviado de teclado 
 |Buscar o búsqueda rápida.|ALT + E + F + F o CTRL + F|  
 |Mostrar el cuadro de diálogo de búsqueda avanzada.|ALT + E + F + A o ALT + F12|  
 |Inicie la información rápida.|ALT + E + F + I o CTRL + MAYÚS + espacio|  
-|Ir a declaración.|ALT + E + F + G o F12|  
+|Ir a declaración.|ALT + E + F y G o F12|  
 |Buscar anterior.|ALT + E + F + P o CTRL + MAYÚS + F3|  
 |Buscar siguiente|ALT + E + F + N o CTRL + F3|  
   
 ## <a name="view-menu-commands"></a>Comandos del menú Ver  
-Para acceder a menú de vista, el método abreviado de teclado utilizado es ALT + V. En la tabla siguiente describe el teclado métodos abreviados que se usan para tener acceso a elementos de menú en el menú Ver.  
+Para obtener acceso a menú Ver, usa el método abreviado de teclado es ALT + V. La tabla siguiente describe lo métodos abreviados se usan para tener acceso a los elementos de menú en el menú Ver de teclado.  
   
 |PARA ELLO|PRESIONE|  
 |--------------|---------|  
-|Sincronizar los exploradores de metadatos.|ALT + V + Z|  
-|Mostrar el árbol.|ALT + V + H o CTRL + T|  
-|Mostrar la parte del origen.|ALT + V + S|  
+|Sincronizar metadatos exploradores.|ALT + V + Z|  
+|Mostrar árbol.|ALT + V + H o CTRL + T|  
+|Mostrar parte de origen.|ALT + V + S|  
 |Mostrar el elemento de destino.|ALT + V + T|  
 |Mostrar panel de lista de errores.|ALT + V + E o CTRL + E|  
-|Mostrar panel de resultados.|ALT + V + O o CTRL + N|  
+|Mostrar panel de salida.|ALT + V + O o CTRL + O|  
 |Submenú de diseños de acceso.|ALT + V + L|  
 |Agregar diseño actual.|ALT + V + L + A|  
 |Seleccione el diseño predeterminado.|ALT + V + L + d. o CTRL + ALT + 1|  
-|Seleccione sin el diseño de los exploradores.|ALT + V + L + W o CTRL + ALT + 2|  
+|Seleccione sin diseño de los exploradores.|ALT + V + L + W o CTRL + ALT + 2|  
 |Mostrar el cuadro de diálogo Administrar diseños.|ALT + V + L + M|  
   
 ## <a name="tools-menu-commands"></a>Comandos del menú Herramientas  
-Para tener acceso a menú Herramientas, es utilizar el método abreviado de teclado ALT + T. En la tabla siguiente describe el teclado métodos abreviados que se usan para tener acceso a elementos de menú en el menú Herramientas.  
+Para obtener acceso a menú Herramientas, usa el método abreviado de teclado es ALT + T. La tabla siguiente describe lo métodos abreviados se usan para tener acceso a los elementos de menú en el menú Herramientas de teclado.  
   
 |PARA ELLO|PRESIONE|  
 |--------------|---------|  
-|Crear informes.|ALT + T + C|  
+|Creación de informes.|ALT + T + C|  
 |Convertir el esquema.|ALT + T + N o CTRL + R|  
 |Actualizar desde la base de datos DB2.|ALT+T+R|  
-|Sincronizar con la base de datos de SQL Server o SQL Azure.|ALT + T + S|  
+|Sincronizar con base de datos de SQL Server o SQL Azure.|ALT + T + S|  
 |Guardar como secuencia de comandos.|ALT + T + A|  
-|Migrar los datos.|ALT+T+M|  
+|Migre los datos.|ALT+T+M|  
 |Detener la operación actual.|ALT + T + O|  
 |Mostrar el cuadro de diálogo de configuración global.|ALT + T + G|  
 |Mostrar el cuadro de diálogo de configuración de proyecto.|ALT + T + P|  
-|Mostrar el cuadro de diálogo de configuración de proyecto predeterminado.|ALT + T + J|  
+|Mostrar el cuadro de diálogo de configuración de proyecto predeterminada.|ALT + T + J|  
   
 ## <a name="help-menu-commands"></a>Comandos del menú Ayuda  
-Para acceder a menú de ayuda, es utilizar el método abreviado de teclado ALT + H. La tabla siguiente describen métodos abreviados de teclado permiten tener acceso a elementos de menú en el menú Ayuda.  
+Para obtener acceso a menú Ayuda, usa el método abreviado de teclado es ALT+h. En la tabla siguiente se describe los métodos abreviados del teclado para tener acceso a los elementos de menú en el menú Ayuda.  
   
 |PARA ELLO|PRESIONE|  
 |--------------|---------|  
-|Mostrar acerca de SSMA para el cuadro de diálogo de DB2.|ALT + H + A|  
-|Mostrar el cuadro de diálogo de opciones de comentarios del cliente.|ALT + H + C|  
-|Ventana de Ayuda de presentación.|ALT + H + H o F1|  
+|Mostrar acerca de SSMA para DB2 cuadro de diálogo.|ALT + H + A|  
+|Mostrar el cuadro de diálogo de opciones de comentarios de clientes.|ALT + H + C|  
+|Ventana de ayuda para mostrar.|ALT + H + H o F1|  
   
-## <a name="context-menu-commands"></a>Comandos del menú contextual  
-Para tener acceso a menú contextual para el objeto seleccionado en el Explorador de objetos, utiliza el método abreviado de teclado es la tecla MAYÚS + F10 o aplicaciones.  
+## <a name="context-menu-commands"></a>Comandos de menú contextual  
+Para obtener acceso a menú contextual para el objeto seleccionado en el Explorador de objetos, usa el método abreviado de teclado es clave MAYÚS + F10 o aplicaciones.  
   
 ## <a name="global-settings-dialog-box"></a>Cuadro de diálogo de configuración global  
   
@@ -117,7 +111,7 @@ Para tener acceso a menú contextual para el objeto seleccionado en el Explorado
   
 |PARA ELLO|PRESIONE|  
 |--------------|---------|  
-|Ficha de información del proyecto de Access.|ALT + P|  
+|Pestaña de información del proyecto de acceso.|ALT + P|  
 |Ficha general de acceso.|ALT + G|  
 |Pestaña de sincronización de acceso.|ALT + S|  
 |Pestaña de GUI de acceso.|ALT + U|  
@@ -136,16 +130,16 @@ Para tener acceso a menú contextual para el objeto seleccionado en el Explorado
   
 |PARA ELLO|PRESIONE|  
 |--------------|---------|  
-|Seleccione todo el texto de términos de licencia.|CTRL + A|  
-|Copiar todo el texto de términos de licencia en el Portapapeles.|CTRL + C|  
+|Seleccione todo el texto del CLUF.|CTRL + A|  
+|Copiar todo el texto del CLUF en el Portapapeles.|CTRL + C|  
 |Imprimir el CLUF.|ALT + P|  
   
 ## <a name="advanced-search-dialog-box"></a>Cuadro de diálogo de búsqueda avanzada  
   
 |PARA ELLO|PRESIONE|  
 |--------------|---------|  
-|Mover un resultado de búsqueda para una copia de seguridad o hacia abajo.|Flechas arriba y abajo|  
-|Vaya a comenzar o final de la búsqueda visible da lugar a la cuadrícula.|RE PÁG o AV PÁG|  
+|Mover un resultado de búsqueda para arriba o hacia abajo.|Flechas arriba y abajo|  
+|Move para iniciar o al final de la búsqueda visible da como resultado de la cuadrícula.|RE PÁG o AV PÁG claves|  
 |Ver el resultado de búsqueda seleccionada.|Escriba la clave|  
   
 ## <a name="quick-info-dialog-box"></a>Cuadro de diálogo de información rápida  
@@ -153,7 +147,7 @@ Para tener acceso a menú contextual para el objeto seleccionado en el Explorado
 |PARA ELLO|PRESIONE|  
 |--------------|---------|  
 |Mover un elemento hacia arriba o abajo.|Flechas arriba y abajo|  
-|Vaya a comenzar o al final de la ventana de información rápida.|RE PÁG o AV PÁG|  
+|Mover a comenzar o final de la ventana de información rápida.|RE PÁG o AV PÁG claves|  
 |Cierre el cuadro de diálogo.|Tecla ESC|  
   
 ## <a name="output-pane"></a>Panel de resultados  
@@ -162,8 +156,8 @@ Para tener acceso a menú contextual para el objeto seleccionado en el Explorado
 |--------------|---------|  
 |Abra el menú emergente.|MAYÚS + F10|  
 |Cortar el texto seleccionado en el Portapapeles.|CTRL + X|  
-|Copiar el texto seleccionado en el Portapapeles.|CTRL + C|  
-|Pegue el texto agregado más recientemente desde el Portapapeles.|CTRL + V.|  
+|Copie el texto seleccionado en el Portapapeles.|CTRL + C|  
+|Pegue el texto agregado más recientemente desde el Portapapeles.|CTRL + V|  
 |Seleccione todo el texto.|CTRL + A|  
   
 ## <a name="error-list-pane"></a>Panel de lista de errores  
@@ -174,16 +168,16 @@ Para tener acceso a menú contextual para el objeto seleccionado en el Explorado
 |Seleccione todos los elementos.|CTRL + A|  
 |Mover un elemento hacia arriba o abajo.|Flechas arriba y abajo|  
   
-## <a name="sql-tab-page"></a>Página de fichas SQL  
+## <a name="sql-tab-page"></a>Página de ficha SQL  
   
 |PARA ELLO|PRESIONE|  
 |--------------|---------|  
 |Convertir el esquema.|CTRL + R|  
 |Cortar el texto seleccionado en el Portapapeles.|CTRL + X|  
-|Copiar el texto seleccionado en el Portapapeles.|CTRL + C|  
-|Pegue el texto agregado más recientemente desde el Portapapeles.|CTRL + V.|  
+|Copie el texto seleccionado en el Portapapeles.|CTRL + C|  
+|Pegue el texto agregado más recientemente desde el Portapapeles.|CTRL + V|  
 |Iniciar la búsqueda rápida|CTRL + F|  
-|Inicie la información rápida.|CTRL + MAYÚS + BARRA ESPACIADORA|  
+|Inicie la información rápida.|CTRL + MAYÚS + ESPACIO|  
 |Ir a declaración.|F12|  
   
 ## <a name="see-also"></a>Vea también  

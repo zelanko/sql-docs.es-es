@@ -1,39 +1,37 @@
 ---
-title: Secuencia de Escape de llamada de procedimiento | Documentos de Microsoft
+title: Secuencia de Escape de llamada de procedimiento | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], procedure call
 - procedure call escape sequence [ODBC]
 - ODBC escape sequences [ODBC], procedure call
 ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5279794a7f18df2ce2d56210e3ab1373af5cde7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 914bd4759552680a57c345dc3a7c3bc1bcc103a6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806564"
 ---
 # <a name="procedure-call-escape-sequence"></a>Secuencia de Escape de llamada de procedimiento
-ODBC utiliza secuencias de escape para las llamadas de procedimiento. La sintaxis de esta secuencia de escape es como sigue:  
+ODBC utiliza secuencias de escape para las llamadas a procedimiento. La sintaxis de esta secuencia de escape es como sigue:  
   
- **{**[? =]**llamar a** *nombre del procedimiento*[**(**[*parámetro*] [, [*parámetro*]]... **)**]**}**  
+ **{**[? =]**llamar** *nombre del procedimiento*[**(**[*parámetro*] [, [*parámetro*]]... **)**]**}**  
   
- En la notación de BNF, la sintaxis es la siguiente:  
+ En la notación de BNF, la sintaxis es como sigue:  
   
- *Escape de procedimiento de ODBC* :: =  
+ *Escape de ODBC procedimiento* :: =  
   
- &#124;*Iniciador de esc de ODBC* [? =] llamar *procedimiento terminador de esc de ODBC*  
+ &#124;*Esc-ODBC-iniciador* [? =] llamar *procedimiento terminador de esc de ODBC*  
   
  *procedimiento* :: = *nombre del procedimiento* &#124; *nombre del procedimiento* (*lista de parámetros de procedimiento*)  
   
@@ -43,9 +41,9 @@ ODBC utiliza secuencias de escape para las llamadas de procedimiento. La sintaxi
   
  &#124;*nombre del propietario*. *identificador de procedimiento*  
   
- &#124;*separador del catálogo de nombre del catálogo* *identificador de procedimiento*  
+ &#124;*separador del catálogo: catalog-name* *identificador de procedimiento*  
   
- &#124;*separador del catálogo de nombre del catálogo* [*nombre del propietario*]. *identificador de procedimiento*  
+ &#124;*separador del catálogo: catalog-name* [*nombre del propietario*]. *identificador de procedimiento*  
   
  (La sintaxis de la tercera es válida únicamente si el origen de datos no es compatible con los propietarios).  
   
@@ -55,13 +53,13 @@ ODBC utiliza secuencias de escape para las llamadas de procedimiento. La sintaxi
   
  *separador de catálogo* :: = {*definido por la implementación*}  
   
- (El separador del catálogo se devuelve a través de **SQLGetInfo** con la opción de información de SQL_CATALOG_NAME_SEPARATOR.)  
+ (Se devuelve el separador del catálogo a través de **SQLGetInfo** con la opción de información SQL_CATALOG_NAME_SEPARATOR.)  
   
  *lista de parámetros de procedimiento* :: = *parámetro de procedimiento*  
   
  &#124;*parámetro de procedimiento*, *lista de parámetros de procedimiento*  
   
- *parámetro de procedimiento* :: = *parámetro dinámico* &#124; *literal* &#124; *cadena vacía*  
+ *parámetro de procedimiento* :: = *parámetros dinámicos* &#124; *literal* &#124; *cadena vacía*  
   
  *cadena vacía* :: =  
   
@@ -71,4 +69,4 @@ ODBC utiliza secuencias de escape para las llamadas de procedimiento. La sintaxi
   
  (Si un parámetro de procedimiento es una cadena vacía, el procedimiento utiliza el valor predeterminado para ese parámetro).  
   
- Para determinar si el origen de datos es compatible con los procedimientos y el controlador es compatible con la sintaxis de invocación de procedimiento ODBC, una aplicación puede llamar a **SQLGetInfo** con el tipo de información de SQL_PROCEDURES.
+ Para determinar si el origen de datos es compatible con los procedimientos y el controlador admite la sintaxis de invocación del procedimiento ODBC, una aplicación puede llamar a **SQLGetInfo** con el tipo de información SQL_PROCEDURES.

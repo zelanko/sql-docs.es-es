@@ -1,14 +1,11 @@
 ---
-title: Sys.fn_my_permissions (Transact-SQL) | Documentos de Microsoft
+title: Sys.fn_my_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_my_permissions_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - fn_my_permissions function
 - sys.fn_my_permissions function
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
-caps.latest.revision: 21
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b837943f16a7c8882b4e35aef3f769a3d731cd38
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 244e8935a580a8febc483673d6d747b6cc4b7b1c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239815"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659253"
 ---
 # <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,12 +47,12 @@ fn_my_permissions ( securable , 'securable_class' )
  Es el nombre del elemento protegible. Si el elemento protegible es el servidor o una base de datos, este valor debe establecerse en NULL. *securable* es una expresión escalar de tipo **sysname**. *elemento protegible* puede ser un nombre de varias partes.  
   
  '*securable_class*'  
- Es el nombre de la clase de protegible cuyos permisos se muestran. *securable_class* es un **sysname**. *securable_class* debe ser uno de los siguientes: rol de aplicación, ENSAMBLADO, clave ASIMÉTRICA, certificado, contrato, base de datos, punto de conexión, FULLTEXT CATALOG, LOGIN, tipo de mensaje, objeto, REMOTE SERVICE BINDING, rol, ruta, esquema, servidor, servicio , CLAVE SIMÉTRICA, TIPO, USUARIO, COLECCIÓN DE ESQUEMAS XML.  
+ Es el nombre de la clase de protegible cuyos permisos se muestran. *securable_class* es un **sysname**. *securable_class* debe ser uno de los siguientes: rol de aplicación, ENSAMBLADO, clave ASIMÉTRICA, certificado, contrato, base de datos, ENDPOINT, FULLTEXT CATALOG, inicio de sesión, tipo de mensaje, objeto, REMOTE SERVICE BINDING, rol, ruta, esquema, servidor, servicio , CLAVE SIMÉTRICA, TIPO, USUARIO, COLECCIÓN DE ESQUEMAS XML.  
   
 ## <a name="columns-returned"></a>Columnas devueltas  
- En la tabla siguiente se muestra las columnas que **fn_my_permissions** devuelve. En cada fila devuelta se describe un permiso correspondiente al contexto de seguridad actual del elemento protegible. Devuelve NULL si la consulta da error.  
+ La tabla siguiente enumeran las columnas que **fn_my_permissions** devuelve. En cada fila devuelta se describe un permiso correspondiente al contexto de seguridad actual del elemento protegible. Devuelve NULL si la consulta da error.  
   
-|Nombre de columna|Tipo|Description|  
+|Nombre de columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|Nombre del elemento protegible en el que se conceden los permisos indicados.|  
 |subentity_name|**sysname**|Nombre de columna si el elemento protegible tiene columnas; de lo contrario, es NULL.|  
@@ -136,7 +132,7 @@ GO
 ```  
   
 ### <a name="f-listing-effective-permissions-on-an-xml-schema-collection"></a>F. Enumerar los permisos efectivos de una colección de esquemas XML  
- En el ejemplo siguiente se devuelve una lista de los permisos efectivos del autor de la llamada en una colección de esquemas XML denominada `ProductDescriptionSchemaCollection` en el [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de datos.  
+ El ejemplo siguiente devuelve una lista de los permisos efectivos del autor de llamada en una colección de esquemas XML denominada `ProductDescriptionSchemaCollection` en el [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de datos.  
   
 ```  
 USE AdventureWorks2012;  

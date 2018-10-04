@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], viewing traces
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], troubleshooting
 - traces [SQL Server], events
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f6d3051af96c963c65496f1e10dabd8ae035d0a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e6739f427642151bec0fd193c26d40a16af51e94
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286455"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213435"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>Ver y analizar seguimientos con SQL Server Profiler
   Utilice [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para ver los datos de eventos capturados en un seguimiento. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra datos basados en propiedades de seguimiento definidas. Una manera de analizar datos del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste en copiarlos a otro programa, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el Asistente para la optimización del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)] El Asistente para la optimización puede usar un archivo de seguimiento que contenga lotes SQL y eventos RPC (llamada a procedimiento remoto) si el seguimiento incluye la columna de datos **Text** . Para asegurarse de que se capturan las columnas y los eventos correctos para su utilización con el Asistente para la optimización del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , utilice la plantilla predefinida Tuning que se proporciona con el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

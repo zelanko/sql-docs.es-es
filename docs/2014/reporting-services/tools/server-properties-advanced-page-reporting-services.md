@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 2016-10-18
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8b8459ccb49c2e8d2d681cada3646d7d9aa447b5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0af66da35bdc42bf78601e3040d91095646a9b75
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258131"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183364"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propiedades del servidor (página de opciones avanzadas) - Reporting Services
   Use esta página para establecer las propiedades del sistema en el servidor de informes. Hay varias maneras de establecer las propiedades del sistema. Esta herramienta proporciona una interfaz de usuario gráfica para que pueda establecer propiedades sin tener que escribir código.  
@@ -81,7 +78,7 @@ ms.locfileid: "37258131"
  Número máximo de instantáneas almacenadas para un informe. Los valores válidos son `-1` a través de `2`,`147`,`483`,`647`. Si el valor es `-1`, no hay ningún límite de instantáneas.  
   
  **EnableIntegratedSecurity**  
- Determina si se admite la seguridad integrada de Windows para las conexiones de origen de datos del informe. El valor predeterminado es `True`. Los valores válidos son los siguientes:  
+ Determina si se admite la seguridad integrada de Windows para las conexiones de origen de datos del informe. De manera predeterminada, es `True`. Los valores válidos son los siguientes:  
   
  `True` = la seguridad integrada de Windows está habilitada.  
   

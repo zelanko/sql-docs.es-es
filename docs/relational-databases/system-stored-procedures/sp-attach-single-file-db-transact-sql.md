@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_single_file_db
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_single_file_db
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
-caps.latest.revision: 68
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae97ca9a273b7467bd5ec6e35f68602ec1c7c101
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 37171709c977e55197ac2b7075442b9bf8323cbb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981877"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47647433"
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +64,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Use **sp_attach_single_file_db** sólo en bases de datos que se hayan separado previamente del servidor mediante el uso de explícita **sp_detach_db** operación o en bases de datos copiadas.  
   
  **sp_attach_single_file_db** solo funciona en las bases de datos que tienen un único archivo de registro. Cuando **sp_attach_single_file_db** adjunta la base de datos al servidor, crea un nuevo archivo de registro. Si la base de datos es de solo lectura, el archivo de registro se crea en su ubicación anterior.  

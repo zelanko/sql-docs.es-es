@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_gettypename
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 489980d88e5f49d2c350fa3a3784d3603deab5e0
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411734"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086815"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
   Devuelve el nombre del tipo SQL para un token del tipo BCP especificado.  
@@ -55,7 +52,7 @@ fIsMaxType
 ## <a name="returns"></a>Devuelve  
  Una cadena que contiene el nombre del tipo SQL que corresponde al tipo BCP. Si se especifica un tipo BCP no válido, se devuelve una cadena vacía.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los tokens de tipo BCP se definen en el archivo de encabezado sqlncli.h y en la biblioteca sqlncli11.lib.  
   
  La tabla siguiente especifica los posibles tipos BCP, tanto si son o no tipos max, y la salida esperada.  
@@ -79,8 +76,8 @@ fIsMaxType
 |`SQLTEXT`|Antes o después|**texto**|  
 |`SQLBIGBINARY`|no|**binario**|  
 |`SQLBINARY`|no|**Binario**|  
-|`SQLBIGVARBINARY`|no|**Varbinary**|  
-|`SQLVARBINARY`|no|**Varbinary**|  
+|`SQLBIGVARBINARY`|no|**varbinary**|  
+|`SQLVARBINARY`|no|**varbinary**|  
 |`SQLIMAGE`|Antes o después|**Imagen**|  
 |`SQLINTN`|Antes o después|**int null**|  
 |`SQLDATETIMN`|Antes o después|**datetime-null**|  
@@ -92,12 +89,12 @@ fIsMaxType
 |`SQLAOPMIN`|Antes o después|**Min**|  
 |`SQLAOPMAX`|Antes o después|**Max**|  
 |`SQLDATETIM4`|Antes o después|**smalldatetime**|  
-|`SQLMONEY4`|Antes o después|**Smallmoney**|  
-|`SQLFLT4`|Antes o después|**Real**|  
+|`SQLMONEY4`|Antes o después|**smallmoney**|  
+|`SQLFLT4`|Antes o después|**real**|  
 |`SQLUNIQUEID`|Antes o después|**uniqueidentifier**|  
-|`SQLNCHAR`|no|**Nchar**|  
+|`SQLNCHAR`|no|**nchar**|  
 |`SQLNVARCHAR`|no|**Nvarchar**|  
-|`SQLNTEXT`|Antes o después|**Ntext**|  
+|`SQLNTEXT`|Antes o después|**ntext**|  
 |`SQLVARIANT`|Antes o después|**sql_variant**|  
 |`SQLINT8`|Antes o después|**Bigint**|  
 |`SQLCHARACTER`|Sí|**ntext**|  

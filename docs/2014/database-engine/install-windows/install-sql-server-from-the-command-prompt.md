@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, command prompt
@@ -84,16 +82,15 @@ helpviewer_keywords:
 - nodes [Faillover Clustering], command prompt
 - INSTALLSQLSHAREDDIR parameter
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
-caps.latest.revision: 223
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f2128b603957f3f0ecbf661bae194dff3bb0ac2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 842f8f467c3227818b61abb9a03611f497effd3f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159416"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072785"
 ---
 # <a name="install-sql-server-2014-from-the-command-prompt"></a>Instalar SQL Server 2014 desde el símbolo del sistema
   Antes de ejecutar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el programa de instalación, revise [planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
@@ -253,7 +250,7 @@ ms.locfileid: "37159416"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuración de red|/TCPENABLED<br /><br /> **Opcional**|Especifica el estado del protocolo TCP para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service. Valores admitidos:<br /><br /> 0=Deshabilitar el protocolo TCP<br /><br /> 1= Habilitar el protocolo TCP|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **Opcional**|Especifica el modo de instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Valores admitidos:<br /><br /> SharePointFilesOnlyMode<br /><br /> DefaultNativeMode<br /><br /> FilesOnlyMode<br /><br /> Nota: Si la instalación incluye el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], el valor predeterminado de RSINSTALLMODE es DefaultNativeMode.<br /><br /> Si la instalación no incluye el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], el valor predeterminado de RSINSTALLMODE es FilesOnlyMode.<br /><br /> Si elige DefaultNativeMode pero la instalación no incluye el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], la instalación cambiará automáticamente RSINSTALLMODE a FilesOnlyMode.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **Obligatorio**|Especifica la cuenta de inicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña de la cuenta de inicio del servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña de la cuenta de inicio del servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Opcional**|Especifica el modo de [inicio](#Accounts) de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
 ###### <a name="sample-syntax"></a>Sintaxis de ejemplo:  
@@ -343,7 +340,7 @@ Setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuración de red|/TCPENABLED<br /><br /> **Opcional**|Especifica el estado del protocolo TCP para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service. Valores admitidos:<br /><br /> 0=Deshabilitar el protocolo TCP<br /><br /> 1= Habilitar el protocolo TCP|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **Opcional**|Especifica el modo de instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **Obligatorio**|Especifica la cuenta de inicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña de la cuenta de inicio del servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña de la cuenta de inicio del servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Opcional**|Especifica el modo de [inicio](#Accounts) de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
 ###### <a name="sample-syntax"></a>Sintaxis de ejemplo:  
@@ -529,7 +526,7 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **Opcional**|Especifica el modo de [inicio](#Accounts) del servicio de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **Opcional**|Especifica el modo de instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **Obligatorio**|Especifica la cuenta de inicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña para la cuenta de inicio del servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña para la cuenta de inicio del servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Opcional**|Especifica el modo de [inicio](#Accounts) de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
  <sup>1</sup> recomendamos utilizar SID de servicio en lugar de grupos de dominio.  
@@ -584,7 +581,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **Opcional**|Especifica el modo de [inicio](#Accounts) del servicio de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **Disponible únicamente en modo de solo archivos.**|Especifica el modo de instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **Obligatorio**|Especifica la cuenta de inicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña para la cuenta de inicio del servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña para la cuenta de inicio del servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Opcional**|Especifica el modo de [inicio](#Accounts) de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
  <sup>1</sup> recomendamos utilizar SID de servicio en lugar de grupos de dominio.  
@@ -720,7 +717,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña de SQLSVCACCOUNT.|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **Disponible en modo de solo archivos**|Especifica el modo de instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña de cuenta de inicio para el servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña de cuenta de inicio para el servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
 ##### <a name="additional-notes"></a>Notas adicionales:  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] son los únicos componentes que son conscientes del clúster. Otras características no son conscientes del clúster y no tienen una alta disponibilidad mediante la conmutación por error.  
@@ -762,7 +759,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
  Para obtener más información sobre la configuración de la cuenta de servicio, vea [Configurar los permisos y las cuentas de servicio de Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-|Componente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parámetro de cuenta|Parámetro de contraseña|Tipo de inicio|  
+|Componente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Parámetro de cuenta|Parámetro de contraseña|cuadro de tipo de inicio,|  
 |-----------------------------------------|-----------------------|------------------------|------------------|  
 |e[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |/AGTSVCACCOUNT|/AGTSVCPASSWORD|/AGTSVCSTARTUPTYPE|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCACCOUNT|/ASSVCPASSWORD|/ASSVCSTARTUPTYPE|  

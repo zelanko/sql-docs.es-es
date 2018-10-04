@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Subscribe Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Subscribe command
 ms.assetid: aad50dd7-44d4-4d83-a973-187f9aed35ec
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 97b473820ee809f5a606e8bb9f30be6e315a2801
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cf88b3e4e2fd990ad786b8e505c908f96f53ce6e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247265"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079345"
 ---
 # <a name="subscribe-element-xmla"></a>Elemento Subscribe (XMLA)
   Se suscribe a un seguimiento y devuelve un conjunto de filas que contiene los eventos de seguimiento desde un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia.  
@@ -48,7 +45,7 @@ ms.locfileid: "37247265"
 </Command>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -63,7 +60,7 @@ ms.locfileid: "37247265"
 |Elementos primarios|[Command](../xml-elements-properties/command-element-xmla.md)|  
 |Elementos secundarios|[Objeto](../xml-elements-properties/object-element-xmla.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El `Subscribe` comando se suscribe a y secuencias devuelve un conjunto de filas de un seguimiento especificado en un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia. Si se especifica un objeto que no sea un seguimiento en el `Object` elemento, que se produce un error.  
   
  Si no se especifica el elemento `Object`, se define un seguimiento de la sesión, a la que se suscribe, en la instancia [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. El seguimiento de la sesión devuelve un conjunto fijo de eventos de seguimiento desde la sesión actual.  

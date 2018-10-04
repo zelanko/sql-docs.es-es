@@ -1,34 +1,31 @@
 ---
-title: Modo de lote | Documentos de Microsoft
+title: Modo por lotes | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data updates [ADO], batch mode
 - batch mode [ADO]
 - updating data [ADO], batch mode
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78fd9c4c7a27bad0daddb02f3275ecebfc171cbd
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c25cd688b5d74e4514e1af645f7917059ce4d445
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270584"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602403"
 ---
 # <a name="batch-mode"></a>Modo por lotes
-Modo por lotes está en vigor cuando el **LockType** propiedad está establecida en **adLockBatchOptimistic** y actualización por lotes es compatible con el proveedor. Determinadas opciones de tipo de bloqueo no están disponibles según la ubicación del cursor. Por ejemplo, un tipo de bloqueo pesimista no está disponible cuando la **CursorLocation** está establecido en **adUseClient**. Por el contrario, un proveedor no admite un bloqueo optimista por lotes cuando la ubicación del cursor está en el servidor. Debe usar la actualización por lotes con un conjunto de claves o un cursor estático solo.  
+Modo por lotes está en vigor cuando el **LockType** propiedad está establecida en **adLockBatchOptimistic** y actualización por lotes es compatible con el proveedor. Determinadas opciones de tipo de bloqueo no están disponibles dependiendo de la ubicación del cursor. Por ejemplo, un tipo de bloqueo pesimista no está disponible cuando el **CursorLocation** está establecido en **adUseClient**. Por el contrario, un proveedor no admite un bloqueo optimista por lotes cuando la ubicación del cursor está en el servidor. Debe usar la actualización por lotes con un conjunto de claves o un cursor estático solo.  
   
- El **UpdateBatch** método se usa para enviar **Recordset** cambios se conservan en el búfer de copia en el servidor para actualizar el origen de datos. En la sección siguiente, se abrirá una **Recordset** en modo por lotes, realizar cambios en el búfer de copia y, a continuación, enviar los cambios al origen de datos mediante una llamada a **UpdateBatch**.  
+ El **UpdateBatch** método se usa para enviar **Recordset** cambios guardados en el búfer de copia en el servidor para actualizar el origen de datos. En la sección siguiente, se abrirá un **Recordset** en modo por lotes, realizar cambios en el búfer de copia y, a continuación, enviar los cambios al origen de datos mediante una llamada a **UpdateBatch**.  
   
  Esta sección contiene los siguientes temas:  
   

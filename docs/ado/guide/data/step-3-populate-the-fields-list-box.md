@@ -1,25 +1,22 @@
 ---
-title: 'Paso 3: Rellenar el cuadro de lista de campos | Documentos de Microsoft'
+title: 'Paso 3: Rellenar el cuadro de lista de campos | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e88957f03b821ee350a575080bd4f0fd40ce466b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9bf639f5b624c222ca115b443ec327b45b836b82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272714"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784013"
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>Paso 3: Rellenar el cuadro de lista de campos
 Para rellenar el cuadro de lista de campos, inserte el código siguiente en el controlador de eventos Click de `lstMain`:  
@@ -50,11 +47,11 @@ Private Sub lstMain_Click()
 End Sub  
 ```  
   
- Este código declara y crea instancias de objetos de registro y conjunto de registros locales, `rec` y `rs`, respectivamente.  
+ Este código declara y crea instancias de objetos de conjunto de registros y de registro locales, `rec` y `rs`, respectivamente.  
   
- La fila correspondiente a los recursos seleccionados en `lstMain` se convierte en la fila actual de `grs`. A continuación, se borra el cuadro de lista de detalles y `rec` se abre con la fila actual de `grs` como el origen.  
+ La fila correspondiente al recurso seleccionado en `lstMain` se realiza la fila actual de `grs`. A continuación, se borra el cuadro de lista de detalles y `rec` se abre con la fila actual de `grs` como el origen.  
   
- Si el recurso es un registro de colección, tal y como especifica [Tiporegistro](../../../ado/reference/ado-api/recordtype-property-ado.md), el conjunto de registros local `rs` se abre sobre los elementos secundarios de rec. A continuación, `lstDetails` se rellena con los valores de las filas de `rs`.  
+ Si el recurso es un registro de la colección, según lo especificado por [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md), el conjunto de registros local `rs` se abre en los elementos secundarios de rec. A continuación, `lstDetails` se rellena con los valores de las filas de `rs`.  
   
  Si el recurso es un registro simple, `recFields` se llama. Para obtener más información sobre `recFields`, vea el paso siguiente.  
   

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], session timeout
 - session timeout [SQL Server]
 ms.assetid: e23c6e06-1cd1-4d4a-9bc2-e3e06ab2933d
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 56ecfa1e977f4d788a60fc687c2cb5ca5fd894c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ecb5aca2a8e9c4e41eeb78b5558bef5d3d9a4ff0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224055"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224145"
 ---
 # <a name="change-the-session-timeout-period-for-an-availability-replica-sql-server"></a>Cambiar el tiempo de espera de la sesión en una réplica de disponibilidad (SQL Server)
   En este tema se describe cómo configurar el período de tiempo de espera de sesión de una réplica de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. El período de tiempo de espera de la sesión es una propiedad de réplica que controla el número de segundos (en segundos) que una réplica de disponibilidad espera una respuesta de ping de una réplica conectada antes de determinar que la conexión ha sufrido un error. De forma predeterminada, una réplica espera 10 segundos la respuesta de un ping. Esta propiedad de réplica solamente se aplica a la conexión entre una réplica secundaria dada y la réplica principal del grupo de disponibilidad. Para obtener más información sobre el período de tiempo de espera de sesión, vea [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  

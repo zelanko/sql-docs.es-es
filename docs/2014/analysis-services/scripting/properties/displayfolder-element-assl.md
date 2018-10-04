@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DisplayFolder Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DisplayFolder element
 ms.assetid: 55184c02-03e7-4d6c-b87a-d4d34bc11d0e
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 646a98170e24c36841ab445bf87897a0b4e9686f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 73de197b50ebd3636cb97e6a011fee1e8c3a71af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293205"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220105"
 ---
 # <a name="displayfolder-element-assl"></a>Elemento DisplayFolder (ASSL)
   Especifica la carpeta en la que se enumerará el elemento primario. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las aplicaciones para desarrolladores y administradores pueden admitir el uso de carpetas para mostrar a fin de categorizar visualmente múltiples elementos.  
@@ -46,7 +43,7 @@ ms.locfileid: "37293205"
 </CalculationProperty>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37293205"
 |Elementos primarios|[CalculationProperty](../objects/calculationproperty-element-assl.md), [jerarquía](../objects/hierarchy-element-assl.md), [Kpi](../objects/kpi-element-assl.md), [medida](../objects/measure-element-assl.md), [traducción](../objects/translation-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  En los cubos más grandes, puede haber cientos de medidas y jerarquías. La propiedad `DisplayFolder` define la apariencia del usuario en el cliente. El valor de la propiedad `DisplayFolder` puede contener cualquiera de las opciones siguientes:  
   
 -   Puede estar vacío, lo que indica que la medida no pertenece a una carpeta.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.copymaptransformation.f1
 helpviewer_keywords:
 - Copy Column Transformation Editor
 ms.assetid: d8e70541-d563-4ce4-bf66-bc888a0d3026
-caps.latest.revision: 25
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd2e21da9766248e2004e2101b4422f8a1942cbc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 62f2811fb25311ab6aab23d4af66b59befb6611b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250475"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227767"
 ---
 # <a name="copy-column-transformation-editor"></a>Copiar columna, editor de transformación
   Utilice el cuadro de diálogo **Editor de copia de transformación de columna** para seleccionar las columnas que desee copiar y para asignar nombres a las nuevas columnas de resultados.  

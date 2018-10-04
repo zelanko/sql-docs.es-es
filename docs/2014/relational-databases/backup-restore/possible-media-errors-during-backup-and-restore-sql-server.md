@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - media errors [SQL Server]
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - NO_CHECKSUM option
 - checksums [SQL Server]
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
-caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9887d5f158e39ddae24bda31db0fbb76cb5e3482
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298525"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228065"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Errores posibles de medios durante copia de seguridad y restauración (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ofrece la opción de recuperación de una base de datos a pesar de los errores detectados. Un importante mecanismo de detección de errores nuevo es la creación opcional de una suma de comprobación de copia de seguridad que se puede crear mediante una operación de copia de seguridad y validar mediante una operación de restauración. Puede controlar si una operación comprueba si hay errores y si la operación se detiene o continúa al encontrar un error. Si una copia de seguridad contiene una suma de comprobación de copia de seguridad, las instrucciones RESTORE y RESTORE VERIFYONLY pueden comprobar si hay errores.  

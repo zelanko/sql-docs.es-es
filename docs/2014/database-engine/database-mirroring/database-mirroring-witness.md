@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - witness [SQL Server], about witness
 - witness [SQL Server]
 - database mirroring [SQL Server], witness
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
-caps.latest.revision: 71
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e8d91cd6ff4cd5b96ec95218686101e4427e75c0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 682a3692414f89beb0c5e0f0204bc1a69b532e64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218125"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183835"
 ---
 # <a name="database-mirroring-witness"></a>Database Mirroring Witness
   Para admitir la conmutación automática por error, una sesión de creación de reflejo de la base de datos debe configurarse en modo de alta seguridad y tener una tercera instancia del servidor, denominada *testigo*. El testigo es una instancia opcional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que habilita al servidor reflejado en una sesión en modo de alta seguridad para que reconozca si se debe iniciar una conmutación automática por error. A diferencia de los dos asociados, el testigo no sirve a la base de datos. El único rol del testigo es hacer posible la conmutación automática por error.  

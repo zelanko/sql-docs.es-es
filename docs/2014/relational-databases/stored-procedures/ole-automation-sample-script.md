@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: stored-procedures
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE Automation [SQL Server], examples
@@ -14,12 +12,12 @@ ms.assetid: e59f75a9-ed41-4f12-888e-ffc57f9b3882
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 66cdc46e024655dbb7c4409368fbb91763f5f945
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: d4cfe904cc6a808efc6c8a7208b3825117b2909d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413794"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194075"
 ---
 # <a name="ole-automation-sample-script"></a>Ejemplo de script de automatización OLE
   Este tema contiene un ejemplo de un lote de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] en el que se emplean los procedimientos almacenados de automatización OLE para crear y usar un objeto SQLServer de SQL-DMO en la instancia local de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Algunas partes de este código se utilizan como ejemplos en los temas de referencia de los procedimientos almacenados de sistema de automatización OLE.  

@@ -5,7 +5,6 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deletedacwizard.introduction.f1
@@ -21,12 +20,12 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d31a8856f4fcefffb0fca4989789643d714d251
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: f92e05d76fc3d3c585667045261649f91ce303d9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808381"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183705"
 ---
 # <a name="delete-a-data-tier-application"></a>Eliminar una aplicación de capa de datos
   Puede eliminar una aplicación de capa de datos mediante el Asistente para eliminar aplicación de capa de datos o un script de Windows PowerShell. Puede especificar si la base de datos asociada se conserva, se separa o se quita.  

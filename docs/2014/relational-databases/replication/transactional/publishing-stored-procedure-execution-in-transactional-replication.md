@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing [SQL Server replication], stored procedure execution
 - articles [SQL Server replication], stored procedures and
 - transactional replication, publishing stored procedure execution
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c0217a945e7197f44869c74b381eb61c75d6bf9a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8dcdd88d8ce974acda7363ba0a7b2199ca2dd2b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212725"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195661"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Publicar la ejecución de procedimientos almacenados en la replicación transaccional
   Si tiene uno o más procedimientos almacenados que se ejecutan en el publicador y afectan a las tablas publicadas, considere la posibilidad de incluir esos procedimientos en la publicación como artículos de ejecución de procedimientos almacenados. La definición del procedimiento (la instrucción CREATE PROCEDURE) se replica en el suscriptor cuando se inicializa la suscripción; cuando el procedimiento se ejecuta en el publicador, la replicación ejecuta el procedimiento correspondiente en el suscriptor. Esto puede proporcionar un rendimiento significativamente mejor en los casos en los que se llevan a cabo grandes operaciones por lotes, debido a que únicamente se replica la ejecución del procedimiento, evitando la necesidad de replicar los cambios individuales de cada fila. Por ejemplo, supongamos que crea el siguiente procedimiento almacenado en la base de datos de publicaciones:  

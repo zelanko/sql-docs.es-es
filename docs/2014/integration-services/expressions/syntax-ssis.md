@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], syntax
 - syntax [Integration Services]
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2fc62fbd298f5559dff9dc5d944bd668a17a79bd
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 4c1b1be45aff03e3e4e0c0358c3b3eb9903e718d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082977"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189305"
 ---
 # <a name="syntax-ssis"></a>Sintaxis (SSIS)
   La sintaxis de expresiones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] es similar a la sintaxis de los lenguajes C y C#. Las expresiones incluyen elementos como identificadores (columnas y variables), literales, operadores y funciones. En este tema se resumen los requisitos únicos de la sintaxis del evaluador de expresiones cuando se aplican a distintos elementos de una expresión.  
@@ -39,7 +36,7 @@ ms.locfileid: "39082977"
 ## <a name="identifiers"></a>Identificadores  
  Las expresiones pueden incluir identificadores de columnas y variables. Las columnas pueden originarse en el origen de datos o crearse mediante transformaciones del flujo de datos. Las expresiones pueden usar identificadores de linaje para hacer referencia a columnas. Los identificadores de linaje son números que identifican de forma única los elementos de un paquete. Para hacer referencia a estos indicadores en una expresión, debe incluirse el prefijo #. Por ejemplo, para hacer referencia al identificador de linaje 138, debe utilizarse #138.  
   
- Las expresiones pueden incluir las variables del sistema proporcionadas por [!INCLUDE[ssIS](../../includes/ssis-md.md)] y variables personalizadas. Variables, cuando se hace referencia en una expresión, deben incluir el \@ prefijo. Por ejemplo, el `Counter` variable hace referencia mediante \@contador. El \@ carácter no es parte del nombre de la variable; solo indica que el evaluador de expresiones que el identificador es una variable. Para más información, vea [Identificadores &#40;SSIS&#41;](identifiers-ssis.md).  
+ Las expresiones pueden incluir las variables del sistema proporcionadas por [!INCLUDE[ssIS](../../includes/ssis-md.md)] y variables personalizadas. Para hacer referencia a estas variables en una expresión, debe incluirse el prefijo \@. Por ejemplo, para hacer referencia a la variable `Counter`, debe utilizar \@Counter. El carácter \@ no forma parte del nombre de la variable; solamente indica al evaluador de expresiones que el identificador es una variable. Para más información, vea [Identificadores &#40;SSIS&#41;](identifiers-ssis.md).  
   
 ## <a name="literals"></a>Literales  
  Las expresiones pueden incluir literales numéricos, de cadena y booleanos. Los literales de cadena usados en expresiones deben escribirse entre comillas. Los literales numéricos y booleanos no utilizan comillas. El lenguaje de expresiones incluye secuencias de escape para los caracteres que se suelen marcar con caracteres de escape. Para obtener más información, vea [Literales &#40;SSIS&#41;](numeric-string-and-boolean-literals.md).  

@@ -4,32 +4,29 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, configuring
 - Integration Services service, properties
 ms.assetid: 3a8ad546-0f58-4b31-ab56-58d6313b1098
-caps.latest.revision: 30
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97c935d3182b4c9bec8733a747e4f6167b7eab21
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 04568c9e0a22f0f7e6335f96908d62582f0a4d62
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233415"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228655"
 ---
 # <a name="set-the-properties-of-the-integration-services-service"></a>Establecer las propiedades del servicio Integration Services
     
 > [!IMPORTANT]  
 >  En este tema se describe el servicio de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servicio Windows para administrar paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] admite el servicio para mantener la compatibilidad con versiones anteriores de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], puede administrar objetos como paquetes en el servidor de Integration Services.  
   
- El servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] administra y supervisa los paquetes de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Al instalar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]por primera vez, se inicia el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y el tipo de inicio del servicio se establece como automático.  
+ El servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] administra y supervisa los paquetes de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Al instalar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]por primera vez, se inicia el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y el tipo de inicio del servicio se establece como automático.  
   
  Una vez instalado el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , puede establecer sus propiedades mediante el Administrador de configuración de SQL Server o el complemento Servicios de componentes de MMC.  
   

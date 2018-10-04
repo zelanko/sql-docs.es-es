@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytransformation.miningmodel.f1
 helpviewer_keywords:
 - Data Mining Query Transformation Editor
 ms.assetid: 432bba6f-b218-403e-b92c-59ef9f39e4d5
-caps.latest.revision: 23
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d47d8d95c08c2e625183832eec18a569b4171de0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9c8ad2853a33ca804ebe414bf2e7a6ff837f4d2b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304095"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195345"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>Editor de transformación Consulta de minería de datos (pestaña Modelo de minería de datos)
   Use la pestaña **Modelo de minería de datos** del cuadro de diálogo **Editor de transformación Consulta de minería de datos** para seleccionar la estructura y los modelos de minería de datos.  

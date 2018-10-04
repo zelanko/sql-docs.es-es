@@ -1,12 +1,10 @@
 ---
-title: Actualizar datos en cursores de SQL Server | Microsoft Docs
+title: Actualizar datos en cursores de SQL Server | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - updating data [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - cursors [OLE DB]
 - data updates [SQL Server], OLE DB
 ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: caa3f5d35d51a90809175da88c9732fd883d291d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: b5c0b188d8fd45c1177cab77501bdf80fc550987
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428334"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204145"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>Actualizar datos en cursores de SQL Server
   Al capturar y actualizar datos a través de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursores, un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicación de consumidor de proveedor OLE DB de Native Client está limitado por las mismas consideraciones y restricciones que se aplican a cualquier otra aplicación de cliente.  
@@ -35,9 +32,9 @@ ms.locfileid: "37428334"
  Los niveles de aislamiento de las transacciones pueden producir diferencias significativas en la posición de las filas si el diseño de la aplicación cliente permite que las transacciones permanezcan abiertas durante largos períodos de tiempo. De forma predeterminada, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client utiliza el nivel de aislamiento de lectura confirmada especificado por DBPROPVAL_TI_READCOMMITTED. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite el aislamiento de lectura de datos sucio cuando la simultaneidad del conjunto de filas es de solo lectura. Por consiguiente, el consumidor puede solicitar un nivel superior de aislamiento en un conjunto de filas modificable pero no puede solicitar con éxito un nivel inferior.  
   
 ## <a name="immediate-and-delayed-update-modes"></a>Modos de actualización inmediata y retrasada  
- En el modo de actualización inmediata, cada llamada a **IRowsetChange:: SetData** provoca un viaje de ida a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el consumidor realiza varios cambios en una sola fila, es más eficaz enviar todos los cambios con una sola **SetData** llamar.  
+ En el modo de actualización inmediata, cada llamada a **IRowsetChange::SetData** produce un recorrido de ida y vuelta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el consumidor realiza varios cambios en una única fila, resulta más eficaz enviar todos los cambios con una única llamada a **SetData**.  
   
- En el modo de actualización retrasada, se realiza un ida y vuelta a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para cada fila indicada en el *cRows* y *rghRows* parámetros de **IRowsetUpdate:: Update**.  
+ En el modo de actualización retrasada, se realiza un recorrido de ida y vuelta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para cada fila indicada en los parámetros *cRows* y *rghRows* de **IRowsetUpdate::Update**.  
   
  En ambos modos, un viaje de ida y vuelta representa una transacción distinta cuando no queda abierto ningún objeto de transacción para el conjunto de filas.  
   

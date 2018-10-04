@@ -1,14 +1,12 @@
 ---
-title: Introducción a los esquemas XSD anotados (SQLXML 4.0) | Microsoft Docs
+title: Introducción a los esquemas XSD anotados (SQLXML 4.0) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - namespaces [SQLXML], annotated XSD schemas
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - annotated XSD schemas, examples
 - XML views [SQLXML]
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 257b27033dfce5f9011da2786fdc7482a046b4d2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d988713949f29671294f3897f62d2e0a2fb8677
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216895"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189525"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>Introducción a los esquemas XSD anotados (SQLXML 4.0)
   Puede crear vistas XML de datos relacionales utilizando el lenguaje de definición de esquemas XML (XSD). Estas vistas pueden consultarse después utilizando consultas XPath (Lenguaje de rutas XML). Es parecido a crear vistas utilizando instrucciones CREATE VIEW y, a continuación, especificar consultas SQL en la vista.  
@@ -123,18 +120,18 @@ ms.locfileid: "37216895"
 ## <a name="other-resources"></a>Otros recursos  
  Puede buscar más información sobre el lenguaje de definición de esquemas XML (XSD), el lenguaje de rutas XML (XPath) y el lenguaje de transformación basado en hojas de estilo (XSLT) en los siguientes sitios web:  
   
--   XML Schema Part 0: Manual, el W3C recomendación ()http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Primer, W3C recomendación ()http://www.w3.org/TR/xmlschema-0/)  
   
 -   XML Schema Part 1: Estructuras, el W3C recomendación ()http://www.w3.org/TR/xmlschema-1/)  
   
--   Esquema XML parte 2: Datatypes, W3C recomendación ()http://www.w3.org/TR/xmlschema-2/)  
+-   Esquema XML parte 2:Datatypes, W3C recomendación ()http://www.w3.org/TR/xmlschema-2/)  
   
 -   XML Path Language (XPath) ()http://www.w3.org/TR/xpath)  
   
--   () XSL Transformations (XSLT)http://www.w3.org/TR/xslt)  
+-   (XSL Transformations (XSLT)http://www.w3.org/TR/xslt)  
   
 ## <a name="see-also"></a>Vea también  
  [Anotar las consideraciones de seguridad de esquema &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [Esquemas XDR anotados &#40;desusado en SQLXML 4.0&#41;](annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
+ [Esquemas XDR anotados &#40;en desuso en SQLXML 4.0&#41;](annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
   
   

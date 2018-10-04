@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ServerProperty Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ServerProperty element
 ms.assetid: f152a1b5-0972-40d8-907f-f131c2a108bb
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9c6af3d46fac2b6ed02ff4cd261a8f5361d466ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d84d9fc4bb78969265399d2a67207ea15e753f39
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300935"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185775"
 ---
 # <a name="serverproperty-element-assl"></a>Elemento ServerProperty (ASSL)
   Define una propiedad del servidor asociada con un [Server](server-element-assl.md) elemento.  
@@ -51,7 +48,7 @@ ms.locfileid: "37300935"
 </ServerProperties>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -66,7 +63,7 @@ ms.locfileid: "37300935"
 |Elementos primarios|[ServerProperties](../collections/serverproperties-element-assl.md)|  
 |Elementos secundarios|[DefaultValue](../properties/value-element-assl.md), [DisplayFlag](../properties/displayflag-element-assl.md), [nombre](../properties/name-element-assl.md), [PendingValue](../properties/pendingvalue-element-assl.md), [RequiresRestart](../properties/requiresrestart-element-assl.md), [valor](../properties/value-element-assl.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El `ServerProperty` elemento describe los datos y metadatos para una propiedad del servidor asociado a una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. A diferencia de los elementos contenidos por otras colecciones en Analysis Services Scripting Language (ASSL), el elemento `ServerProperty` utiliza pares de nombre/valor en lugar de elementos nombrados de manera explícita para describir las propiedades del servidor. Los pares de nombre/valor proporcionan flexibilidad y extensibilidad.  
   
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.ServerProperty>.  

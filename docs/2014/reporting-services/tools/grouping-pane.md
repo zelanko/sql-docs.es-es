@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10033"
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Grouping Pane dialog box
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
-caps.latest.revision: 21
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 9a6895b0b0654f5309aaec9debb88b26c7a9a15a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70301dae9505cce59e924cd37149e32314f6868d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189822"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204675"
 ---
 # <a name="grouping-pane"></a>Panel de agrupación
   El panel Agrupación muestra los grupos de filas y de columnas para la región de datos Tablix seleccionada actualmente. El panel de agrupación no está disponible para las regiones de datos Gráfico o Medidor. El panel Agrupación consta de los paneles Grupos de filas y Grupos de columnas. El panel en cuestión tiene dos modos: predeterminado y avanzado. El modo predeterminado muestra una vista jerárquica de los miembros dinámicos para los grupos de filas y de columnas. El modo avanzado muestra los miembros dinámicos y estáticos para los grupos de filas y de columnas. Un grupo es un conjunto de datos con nombre de un conjunto de datos de informe que se muestra en una región de datos. Los grupos se organizan en jerarquías que incluyen miembros estáticos y dinámicos. Para más información, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md).  
@@ -67,11 +64,11 @@ ms.locfileid: "37189822"
   
 -   **KeepTogether**:  
   
--   `KeepWithGroup`. booleano. Solo para miembros de fila estáticos. Siempre que sea posible, mantenga esta fila con el siguiente miembro dinámico relacionado anterior o posterior, si no está oculto.  
+-   `KeepWithGroup`  booleano. Solo para miembros de fila estáticos. Siempre que sea posible, mantenga esta fila con el siguiente miembro dinámico relacionado anterior o posterior, si no está oculto.  
   
 -   **RepeatOnNewPage**: booleano. Solo para miembros de fila estáticos y siempre que KeepWithGroup no sea None. Siempre que sea posible, repita esta fila estática en todas las páginas que tengan al menos una instancia del miembro dinámico especificado por KeepWithGroup.  
   
--   `Hidden`. booleano. Indica si la fila o la columna debe estar oculta inicialmente.  
+-   `Hidden`  booleano. Indica si la fila o la columna debe estar oculta inicialmente.  
   
 -   **ToggleItem** : cadena. Nombre del cuadro de texto al que se va a agregar la imagen de alternancia. El cuadro de texto debe estar en el mismo ámbito de grupo o en un ámbito contenedor.  
   

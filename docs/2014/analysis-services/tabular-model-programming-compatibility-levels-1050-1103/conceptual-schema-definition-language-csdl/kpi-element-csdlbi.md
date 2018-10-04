@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 203ee6e8-eef2-4476-b09f-bd95e492ddaa
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0a649ffffe6f2d9f5902ede9e6d7a6126fd09e25
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 09f42856788dffa45a03690c87e2383849c5f813
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155086"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189825"
 ---
 # <a name="kpi-element-csdlbi"></a>KPI, elemento (CSDLBI)
   El elemento Kpi define un cálculo que se puede utilizar como un indicador clave de rendimiento (KPI). En un modelo de datos de Business Intelligence, los KPI están basados en medidas y, como tales, la definición del KPI contiene todos los metadatos asociados con dichas medidas, así como la información necesaria para la presentación de los valores del KPI, incluyendo un gráfico predeterminado.  
@@ -37,7 +34,7 @@ ms.locfileid: "37155086"
 |KpiStatus|Sí|Referencia a una columna que contiene valores que representan el estado actual del KPI.|  
 |StatusGraphic|Sí|Referencia a una imagen que indica un progreso negativo, neutro o positivo con relación a los objetivos definidos en el KPI.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para crear un KPI al diseñar un modelo, cree una medida y defina su uso como KPI. A continuación, agregue la información específica de los KPI, como el gráfico que se va a utilizar para mostrar las tendencias.  
   
 ## <a name="example"></a>Ejemplo  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY parameter
 - SCORE_METHOD parameter
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3a73db73c49f50c49fdfd36d754f8d70ce651547
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 74dd3b1548eae75da210259d81c711348da713f2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183412"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190585"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Referencia técnica del algoritmo de árboles de decisión de Microsoft
   El algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo híbrido que incorpora distintos métodos para crear un árbol, y admite varias tareas de análisis, incluyendo la regresión, la clasificación y la asociación. El algoritmo de árboles de decisión de Microsoft admite el modelado de los atributos discretos y continuos.  

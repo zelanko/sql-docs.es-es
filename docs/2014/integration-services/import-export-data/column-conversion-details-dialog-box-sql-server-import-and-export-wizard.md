@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.issuedetails.f1
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 821136c482351f97d74282410450f1ffe6798777
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ccdf69264de1531c1296763eb95e2e0369ce034b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254617"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215755"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Cuadro de diálogo Detalles de conversión de columna (Asistente para importación y exportación de SQL Server)
   Use la **detalles de conversión de columna** cuadro de diálogo para revisar la información de conversión detallada sobre una columna individual. Esta información de conversión contiene el tipo de datos de la columna en el origen y el destino, y la conversión que el asistente realizará. En esta página también se enumeran los archivos de asignación de tipos de datos que el asistente utiliza para determinar las conversiones de tipos de datos que se requieren. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala estos archivos de asignación de tipos de datos durante la instalación.  

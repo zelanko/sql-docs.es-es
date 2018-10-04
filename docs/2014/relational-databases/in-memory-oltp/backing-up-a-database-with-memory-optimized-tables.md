@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9e375eb0d2f46e336740e64ecf28f40a927800c2
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 4b791f83342d02fb003a14f48861ae992ddc37df
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393315"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190295"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Hacer copia de seguridad de una base de datos con tablas con optimización para memoria
   La copia de seguridad de las tablas con optimización para memoria se realiza como parte de las copias de seguridad periódicas de las bases de datos. En cuanto a las tablas basadas en disco, la función CHECKSUM de los pares de archivos de datos y delta se valida como parte de la copia de seguridad de la base de datos para detectar si hay daños en el almacenamiento.  

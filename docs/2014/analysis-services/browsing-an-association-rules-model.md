@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - mining models, viewing
 - association [data mining]
 ms.assetid: faffe208-7a64-4ec6-825f-ecbaa79caff7
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a108693491fba5c706f48a2eaf12b57ee0f3f69
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f5c441081c5e185494c693c44b5f7665529c9b90
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246156"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210445"
 ---
 # <a name="browsing-an-association-rules-model"></a>Examinar un modelo de reglas de asociación
   Al abrir un modelo de asociación utilizando **examinar**, el modelo se muestra en un visor interactivo, similar al Visor de reglas de asociación de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  El visor le permite comprobar de un vistazo qué elementos estaban en correlación entre sí y muestra las reglas que puede utilizar para la predicción o para realizar recomendaciones.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MiningStructurePermissions Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MiningStructurePermissions element
 ms.assetid: 4db9a9b2-8525-441f-a202-fd253282f540
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 91beb4cef1679150255283621403b53abeadfa7e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 191ece4bee99fe3a05ad2452ee58635c69a737b6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324865"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196095"
 ---
 # <a name="miningstructurepermissions-element-assl"></a>Elemento MiningStructurePermissions (ASSL)
   Contiene la colección de permisos en un [MiningStructure](../objects/miningstructure-element-assl.md) elemento.  
@@ -48,7 +45,7 @@ ms.locfileid: "37324865"
 </MiningStructure>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -63,7 +60,7 @@ ms.locfileid: "37324865"
 |Elemento primario|[MiningStructure](../objects/miningstructure-element-assl.md)|  
 |Elementos secundarios|[MiningStructurePermission](../objects/miningstructurepermission-element-assl.md) typu [permiso](../data-type/permission-data-type-assl.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El elemento correspondiente en el modelo de objetos de Analysis Management Objects (AMO) es <xref:Microsoft.AnalysisServices.MiningStructurePermissionCollection>.  
   
 ## <a name="see-also"></a>Vea también  

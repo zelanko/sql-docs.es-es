@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ScriptCacheProcessingMode Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ScriptCacheProcessingMode element
 ms.assetid: 95c0723c-69a4-43e7-b743-f712180a7681
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de4bac4bfbfa0ab7a6471f107c594194023292a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7d74499d0678f920fe9f09b9cdc2d8626045a380
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253077"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221345"
 ---
 # <a name="scriptcacheprocessingmode-element-assl"></a>Elemento ScriptCacheProcessingMode (ASSL)
   Indica el servidor debería generar la caché de script durante o después del procesamiento.  
@@ -46,7 +43,7 @@ ms.locfileid: "37253077"
 </Cube>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -61,7 +58,7 @@ ms.locfileid: "37253077"
 |Elemento primario|[Cubo](../objects/cube-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor de este elemento se limita a una de las cadenas enumeradas en la tabla siguiente.  
   
 |Valor|Descripción|  

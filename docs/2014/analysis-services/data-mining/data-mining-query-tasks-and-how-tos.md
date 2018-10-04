@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], how-to topics
 ms.assetid: 1bc2a775-6e62-4c66-a53c-201f2ea66295
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e79d4ee05472de8be071cd47c1868d649f7e247b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cfa2d33d949aad49701e5294329349dc231965db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257461"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189645"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Tareas y procedimientos de Consulta de minería de datos
   La capacidad de crear consultas es esencial para usar los modelos de minería de datos. En esta sección se proporcionan enlaces a ejemplos de cómo crear consultas sobre un modelo de minería de datos usando las herramientas proporcionadas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Si necesita más información sobre qué es una consulta de minería de datos o los tipos diferentes de consultas que puede crear, vea [Consultas de minería de datos](data-mining-queries.md).  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.namingconventions.f1
 ms.assetid: 02d830ea-5b1f-4485-9f94-d64b8bea592b
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a984b84c485c24302288eb16747cb3a964794156
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a0cbf9d1e9a26c6a9c64cf93974ae9198a13cbf6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151536"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226255"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>Especificar convenciones de nomenclatura (Asistente para generar esquemas) (Analysis Services - Datos multidimensionales)
   Utilice la página **Especificar convenciones de nomenclatura** para definir las convenciones de nomenclatura que el Asistente para generar esquemas utiliza al crear objetos de esquemas.  
@@ -40,7 +37,7 @@ ms.locfileid: "37151536"
 |**Sufijo de propiedades de resúmenes personalizados**|Especifica la cadena que se debe anexar al nombre de cada columna de propiedades del resumen. El valor predeterminado es **CustomRollupProperties**.|  
 |**Sufijo del operador unario**|Especifica la cadena que se debe anexar al nombre de cada columna de operador unario. El valor predeterminado es **UnaryOperator**.|  
   
- **Value**  
+ **Valor**  
  Especifica un valor para la opción especificada en **Opción** que quiera usar cuando se genera el esquema.  
   
 ## <a name="see-also"></a>Vea también  

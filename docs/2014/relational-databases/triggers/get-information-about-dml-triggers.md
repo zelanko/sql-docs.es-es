@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - metadata [SQL Server], triggers
@@ -19,12 +17,12 @@ ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 71307a1504016fdfaaae5b0d04bf62d509a60439
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 780616b452865324c3a34abcaa6dd5935123151f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418924"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203015"
 ---
 # <a name="get-information-about-dml-triggers"></a>Obtener información acerca de los desencadenadores DML
   En este tema se describe cómo obtener información acerca de los desencadenadores DML en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Esta información puede incluir los tipos de desencadenadores de una tabla, el nombre de un desencadenador, su propietario y la fecha en que se creó o modificó. Si el desencadenador no se cifró cuando se creó, se obtiene la definición del desencadenador. Puede usar la definición para entender cómo un desencadenador afecta a la tabla en la que se define. También puede averiguar los objetos que usa un desencadenador específico. Con esta información, puede identificar los objetos que afectan al desencadenador, en el caso de que se modifiquen o se eliminen de la base de datos.  

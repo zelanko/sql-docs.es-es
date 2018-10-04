@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [Analysis Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - sequence [Analysis Services]
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
-caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: be5171c376b9f454e0474400e8bab2c55692f3bb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc90c76792ae6eaaa21ba3e32bea66e4942c354f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306585"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190785"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Algoritmo de clústeres de secuencia de Microsoft
   El [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de clústeres de secuencia es un algoritmo de clústeres de secuencia proporcionado por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Puede utilizar este algoritmo para explorar los datos que contiene los eventos que se pueden vincular siguiendo rutas o *secuencias*. El algoritmo encuentra las secuencias más comunes mediante la agrupación, o agrupación en clústeres, de las secuencias que son idénticas. A continuación se incluyen algunos ejemplos de datos que contienen secuencias que se podrían utilizar para la minería de datos, para ofrecer una visión general de problemas comunes o escenarios empresariales:  
@@ -72,7 +69,7 @@ ms.locfileid: "37306585"
   
  Para obtener información sobre cómo crear consultas en un modelo de minería de datos, vea [Consultas de minería de datos](data-mining-queries.md). Para consultar ejemplos de cómo usar las consultas con un modelo de agrupación en clústeres, vea [Ejemplos de consultas de modelos de clústeres de secuencia](clustering-model-query-examples.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
   
 -   No se admite el uso del Lenguaje de marcado de modelos de predicción (PMML) para crear modelos de minería de datos.  
   

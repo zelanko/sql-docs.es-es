@@ -1,32 +1,29 @@
 ---
-title: Compatibilidad con el tipo parámetros con valores de tabla OLE DB (propiedades) | Microsoft Docs
+title: Compatibilidad con tipos de parámetros con valores de tabla de OLE DB (propiedades) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8bc75c4ebdbbbe4d38f18692ae8c9588957e32e3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 024e6fb62da2038c19faad0919413e9f2c52fe0f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408424"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189105"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Compatibilidad con tipos de parámetros con valores de tabla de OLE DB (propiedades)
   En este tema se proporciona información sobre las propiedades de OLE DB y los conjuntos de propiedades asociados a los objetos de conjunto de filas de parámetro con valores de tabla.  
   
 ## <a name="properties"></a>Propiedades  
- La siguiente es la lista de propiedades expuestas a través del método IRowsetInfo::GetPropeties en los objetos de conjunto de filas de parámetro con valores de tabla. Observe que todas las propiedades de conjunto de filas de parámetro con valores de tabla son de solo lectura. Por lo tanto, intenta establecer cualquiera de las propiedades mediante IOpenRowset:: OpenRowset o ITableDefinitionWithConstraints::CreateTableWithConstraints métodos en sus valores no predeterminados se producirá un error y no se creará ningún objeto.  
+ A continuación, se muestra la lista de propiedades expuestas mediante el método IRowsetInfo::GetPropeties en los objetos de conjunto de filas de parámetro con valores de tabla. Observe que todas las propiedades de conjunto de filas de parámetro con valores de tabla son de solo lectura. Por lo tanto, intenta establecer cualquiera de las propiedades mediante IOpenRowset:: OpenRowset o ITableDefinitionWithConstraints::CreateTableWithConstraints métodos en sus valores no predeterminados se producirá un error y no se creará ningún objeto.  
   
  No se enumeran aquí las propiedades no implementadas en el objeto de conjunto de filas de parámetro con valores. Para obtener una lista completa de las propiedades, vea la documentación de OLE DB en Data Access Components para Windows.  
   
@@ -35,7 +32,7 @@ ms.locfileid: "37408424"
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|VARIANT_TRUE|  
-|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|R/W: de solo lectura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: no se permiten marcadores en los objetos de conjunto de filas de parámetro con valores de tabla.|  
+|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|L/E: solo lectura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: no se permiten marcadores en los objetos de conjunto de filas de parámetro con valores de tabla.|  
 |DBPROP_BOOKMARKSKIPPED|VARIANT_FALSE|  
 |DBPROP_BOOKMARKTYPE|DBPROPVAL_BMK_NUMERIC|  
 |DBPROP_CANHOLDROWS|VARIANT_FALSE|  
@@ -47,7 +44,7 @@ ms.locfileid: "37408424"
 |DBPROP_DELAYSTORAGEOBJECTS|VARIANT_FALSE|  
 |DBPROP_IAccessor<br /><br /> DBPROP_IColumnsInfo<br /><br /> DBPROP_IConvertType<br /><br /> DBPROP_IRowset<br /><br /> DBPROP_IRowsetInfo<br /><br /> DBPROP_IColumnsRowset|VARIANT_TRUE|  
 |DBPROP_IConnectionPointContainer<br /><br /> DBPROP_IMultipleResults<br /><br /> DBPROP_IRowsetUpdate<br /><br /> DBPROP_IRowsetIdentity<br /><br /> DBPROP_IRowsetLocate<br /><br /> DBPROP_IRowsetScroll<br /><br /> DBPROP_IRowsetResynch|VARIANT_FALSE|  
-|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> Nota: El objeto de conjunto de filas de parámetro con valores de tabla admite las interfaces de IRowsetChange.<br /><br /> Los conjuntos de filas creados utilizando DBPROP_IRowsetChange igual a VARIANT_TRUE exhiben los comportamientos de modo de actualización inmediatos.<br /><br /> Sin embargo, si las columnas BLOB se enlazan como objetos ISequentialStream, se espera que el consumidor para mantenerlos durante la vigencia del objeto de conjunto de filas de parámetro con valores de tabla.|  
+|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> Nota: El objeto de conjunto de filas de parámetro con valores de tabla admite las interfaces IRowsetChange.<br /><br /> Los conjuntos de filas creados utilizando DBPROP_IRowsetChange igual a VARIANT_TRUE exhiben los comportamientos de modo de actualización inmediatos.<br /><br /> Pero, si las columnas BLOB se enlazan como objetos ISequentialStream, se espera que el consumidor las mantenga mientras exista el objeto de conjunto de filas de parámetro con valores de tabla.|  
 |DBPROP_ISupportErrorInfo|VARIANT_TRUE|  
 |DBPROP_ISequentialStream|VARIANT_TRUE|  
 |DBPROP_IMMOBILEROWS|VARIANT_TRUE|  
@@ -97,7 +94,7 @@ ms.locfileid: "37408424"
 |SSPROP_PARAM_TABLE_COLUMN_ORDER|L/E: de lectura/escritura<br /><br /> Valor predeterminado: VT_EMPTY<br /><br /> Tipo: VT_UI2 &#124; VT_ARRAY<br /><br /> Descripción: el consumidor utiliza esta propiedad para proporcionar una sugerencia al servidor que indica el orden de clasificación de los datos de columna. El proveedor no realiza ninguna validación y asume que el consumidor se ajusta a la especificación que se proporcionó. El servidor usa esta propiedad para realizar las optimizaciones.<br /><br /> La información de orden de las columnas para cada columna se representa mediante un par de elementos de la matriz. El primer elemento del par es el número de la columna. El segundo elemento del par será 1 para el orden ascendente o 2 para el orden descendente.|  
   
 ## <a name="see-also"></a>Vea también  
- [Compatibilidad con tipos de parámetro con valores de tabla OLE DB](ole-db-table-valued-parameter-type-support.md)   
+ [Compatibilidad con tipos de parámetros con valores de tabla de OLE DB](ole-db-table-valued-parameter-type-support.md)   
  [Usar parámetros con valores de tabla &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)  
   
   

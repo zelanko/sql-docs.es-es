@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: aebaa04b6bdf4657f081b6a99b6cb158c144c8d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6bc556d6da6461fbd159cd09102d5b9c82bc2dc7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194865"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210260"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Ordenación interactiva, mapas de documento y vínculos (Generador de informes y SSRS)
   En entornos basados en web, puede agregar varias características que permitan a los usuarios interactuar con los informes. Los usuarios pueden cambiar el criterio de ordenación de los valores del informe, mostrar u ocultar elementos del informe o hacer clic en vínculos que llevan a otros informes con páginas web. También puede agregar una tabla de contenido o mapa de documento. Los usuarios de los informes pueden hacer clic en los elementos de la tabla de contenido o el mapa de documento para desplazarse a las distintas áreas de un informe.  

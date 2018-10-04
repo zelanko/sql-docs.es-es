@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MoveWithDescendants Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - MoveWithDescendants element
 ms.assetid: d02285b6-1801-4da9-8e2b-9ab008e25558
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b75fffd4d923b7593f403ae2268b980a5ab6de6f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45a2ac346dc5709c44a76dab1ce0470eb1cbea36
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332575"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190465"
 ---
 # <a name="movewithdescendants-element-xmla"></a>Elemento MoveWithDescendants (XMLA)
   Indica si el elemento primario actualiza también los descendientes de miembros del atributo [actualización](../xml-elements-commands/update-element-xmla.md) comando.  
@@ -48,7 +45,7 @@ ms.locfileid: "37332575"
 </Update>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -63,7 +60,7 @@ ms.locfileid: "37332575"
 |Elementos primarios|[Update](../xml-elements-commands/update-element-xmla.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El `MoveWithDescendants` elemento determina si el `Update` comando no debe actualizar solo los miembros de atributo identificados por el [atributos](attributes-element-xmla.md) elemento, sino también que los descendientes de dichos miembros de atributo que se van a ser También se actualiza.  
   
 > [!NOTE]  

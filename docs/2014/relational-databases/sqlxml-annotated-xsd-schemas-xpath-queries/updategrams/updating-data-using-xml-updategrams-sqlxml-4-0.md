@@ -1,14 +1,12 @@
 ---
-title: Actualizar datos con diagramas de actualización XML (SQLXML 4.0) | Microsoft Docs
+title: Actualizar datos con diagramas de actualización XML (SQLXML 4.0) | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDREF type attribute [SQLXML]
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - updg:before attribute
 - record updates [SQLXML]
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a8ab9c6c57f2cb9aecfdbe15b2ea2e6cbeb9887
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7611e0c52f4b7e2efab23d55fdacd07e565113d4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251747"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222847"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Actualizar datos con diagramas de actualización XML (SQLXML 4.0)
   Al actualizar los datos existentes, debe especificar tanto el  **\<antes >** y  **\<después >** bloques. Los elementos especificados en el  **\<antes >** y  **\<después >** bloques describen el cambio deseado. El diagrama de actualización utiliza los elementos que se especifican en el  **\<antes >** bloque para identificar los registros existentes en la base de datos. Los elementos correspondientes en el  **\<después >** bloque indicar cómo deberían quedar los registros después de ejecutar la operación de actualización. De esta información, el diagrama de actualización crea una instrucción SQL que coincida con el  **\<después >** bloque. A continuación, el diagrama de actualización utiliza esta instrucción para actualizar la base de datos.  

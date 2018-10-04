@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.nomappingfile.f1
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 503e0067ebe0f6e90860a4797a0c916538cd04af
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 27630261887a7effd89f83c9d70cfe3169d10924
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280471"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193345"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>Convertir tipos sin comprobar conversión (Asistente para importación y exportación de SQL Server)
   Use la **convertir tipos sin comprobar conversión** página para revisar las asignaciones que el asistente realiza cuando el asistente no encuentra uno o varios de los [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archivos de asignación y conversión de tipo de datos. Esta página incluye información que le ayuda a identificar el archivo o archivos que no se encuentran.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Hierarchy Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Hierarchy element
 ms.assetid: ac54d74a-5e6c-4c24-83bf-766440478f6c
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 059536a84ff5eb888b6851f39ab7f418d9edbef3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e64d63e6dbb297571eb10f5e198a627a9828764e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250905"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200635"
 ---
 # <a name="hierarchy-element-assl"></a>Elemento Hierarchy (ASSL)
   Define una jerarquía en una dimensión  
@@ -50,7 +47,7 @@ ms.locfileid: "37250905"
 </Hierarchies>  
 ```  
   
-## <a name="element-characteristics"></a>Características del elemento  
+## <a name="element-characteristics"></a>Características de los elementos  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
@@ -74,7 +71,7 @@ ms.locfileid: "37250905"
 |Elementos primarios|[Jerarquías](../collections/hierarchies-element-assl.md)|  
 |Elementos secundarios|None|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los elementos correspondientes en el modelo de objetos Objetos de administración de análisis (AMO) son <xref:Microsoft.AnalysisServices.Hierarchy>, <xref:Microsoft.AnalysisServices.CubeHierarchy> y <xref:Microsoft.AnalysisServices.PerspectiveHierarchy>.  
   
 ## <a name="see-also"></a>Vea también  

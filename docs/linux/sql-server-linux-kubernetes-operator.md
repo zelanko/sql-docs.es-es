@@ -10,16 +10,16 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f8667c74843ab26b251c5a23a1e93f7f26e72fef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 187517c79f14ddcbf08ffa644e65558fa0a85b38
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759363"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252003"
 ---
 # <a name="sql-server-always-on-availability-group-kubernetes-operator-parameters"></a>SQL Server Always On grupo Kubernetes operador los parámetros de disponibilidad
 
-Un grupo de disponibilidad Always On en Kubernetes requiere un operador. Se describe el operador en un archivo .yaml.  Ver un ejemplo de la especificación en [este tutorial](tutorial-sql-server-ag-kubernetes.md).
+Un grupo de disponibilidad Always On en Kubernetes requiere un operador. Un manifiesto describe el operador. El manifiesto es un `.yaml` archivo. Ver un ejemplo de la especificación en [grupos de disponibilidad de Always On para los contenedores de SQL Server](sql-server-ag-kubernetes.md).
 
 En este artículo se explica las variables de entorno globales de operador.
 
@@ -31,15 +31,15 @@ En el ejemplo siguiente se describe una implementación para el `mssql-operator`
 
 * `MSSQL_K8S_POD_NAMESPACE` 
   * Obligatorio
-  * **Descripción**: el espacio de nombres de Kubernetes del operador.
+  * **Descripción**: Kubernetes el espacio de nombres del operador.
 
 * `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`
   * Opcional
-  * **Descripción**: la duración de sql server externa escribir concesión para mantener el servidor sql server puede escribir y evitar escenarios de cerebro divididos. Las réplicas secundarias se esperan a que esta expiración después de elegir a un líder nuevo.
+  * **Descripción**: la duración de la concesión de escritura de sql server. Se usa para mantener el servidor sql server puede escribir y evitar escenarios de cerebro divididos. Las réplicas secundarias se espere a que este número de segundos después de seleccionar un nuevo líder.
 
 * `MSSQL_K8S_MONITOR_PERIOD_SECONDS`
   * Opcional
-  * **Descripción**: el período para supervisar si el estado del grupo de disponibilidad. Determina la rapidez con las réplicas se agregan y eliminan. Debe ser menor que `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`.
+  * **Descripción**: el período para supervisar el estado del grupo de disponibilidad. Determina la rapidez con las réplicas se agregan y eliminan. Debe ser menor que `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`.
   * **Default**: 1
 
 * `MSSQL_K8S_LEASE_DURATION_SECONDS`

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: ccf4b3bab89c29fde1ff592a166baa3747afa890
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 1f5c3cc4756c305ba82af4c110488722ec24a9af
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843230"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48251992"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>Alta disponibilidad para los contenedores de SQL Server
 
@@ -27,7 +27,7 @@ Implementar SQL Server para contenedores de docker administrados por [Kubernetes
 
 SQL Server 2017 proporciona una imagen de Docker que puede implementar en Kubernetes. Puede configurar la imagen con una notificación de volumen persistente (PVC) de Kubernetes. Kubernetes supervisa el proceso de SQL Server en el contenedor. Si se producirá un error en el proceso, pod, contenedor o nodo, Kubernetes arranca otra instancia automáticamente y se vuelve a conectar al almacenamiento.
 
-SQL Server 2019 presenta un archicture más sólida con Kubernetes StatefulSet. Esto permite que Kubernetes organizar las instancias de SQL Server como imágenes de contenedor que pueden participar en un SQL Server grupo de disponibilidad AlwaysOn. Esto puede proporcionar estado mejorado supervisión, una recuperación más rápida, la descarga de copia de seguridad y escalado de lectura.  
+SQL Server 2019 (versión preliminar) presenta una arquitectura más sólida con Kubernetes StatefulSet. Kubernetes orquesta las instancias de SQL Server como imágenes de contenedor que participan en un SQL Server grupo de disponibilidad AlwaysOn. Este patrón proporciona supervisión de estado mejorada, una recuperación más rápida, descarga de copia de seguridad y escalado horizontal de lectura.  
 
 ## <a name="container-with-sql-server-instance-on-kubernetes"></a>Contenedor con la instancia de SQL Server en Kubernetes
 
@@ -39,7 +39,7 @@ En esta configuración, Kubernetes desempeña la función de orquestador del con
 
 En el diagrama anterior, `mssql-server` es una instancia de SQL Server (contenedor) en un [ *pod*](http://kubernetes.io/docs/concepts/workloads/pods/pod/). Un [conjunto de réplicas](http://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) garantiza que el pod se recupera automáticamente después de un error de nodo. Las aplicaciones se conectan al servicio. En este caso, el servicio representa un equilibrador de carga que hospeda una dirección IP que permanece igual después de un error de la `mssql-server`.
 
-Kubernetes orquesta los recursos del clúster. Cuando se produce un error en un pod o el nodo que hospeda una instancia de SQL Server en un contenedor, el orquestador arranca un contenedor en un pod idéntico con una instancia de SQL Server y lo asocia al mismo almacenamiento persistente.
+Kubernetes orquesta los recursos del clúster. Cuando se produce un error en un nodo de hospedaje de un contenedor de la instancia de SQL Server, se arranca un nuevo contenedor con una instancia de SQL Server y lo asocia al mismo almacenamiento persistente.
 
 SQL Server 2017 y versiones posteriores admite contenedores en Kubernetes.
 
@@ -53,7 +53,7 @@ SQL Server 2019 admite grupos de disponibilidad en los contenedores de un Kubern
 
 En la imagen anterior, un clúster de cuatro nodos kubernetes aloja un grupo de disponibilidad con tres réplicas. La solución incluye los siguientes componentes:
 
-* Un Kubernetes [ *implementación*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/). La implementación incluye el operador y un mapa de la configuración. Proporcionan la imagen de contenedor, software y las instrucciones necesarias para implementar instancias de SQL Server para el grupo de disponibilidad.
+* Un Kubernetes [ *implementación*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/). La implementación incluye el operador y un mapa de la configuración. La implementación describe la imagen de contenedor, software y las instrucciones necesarias para implementar instancias de SQL Server para el grupo de disponibilidad.
 
 * Tres nodos, cada hospeda un [ *StatefulSet*](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/). El StatefulSet contiene un pod. Cada pod contiene:
   * Un contenedor de SQL Server ejecuta una instancia de SQL Server.
@@ -67,9 +67,9 @@ En la imagen anterior, un clúster de cuatro nodos kubernetes aloja un grupo de 
 
 Además, el clúster almacena [ *secretos* ](http://kubernetes.io/docs/concepts/configuration/secret/) para las contraseñas, certificados, claves y otra información confidencial.
 
-## <a name="compare-sql-server-high-availabiltiy-on-containers-with-and-without-the-availability-group"></a>Comparar la alta disponibilidad de SQL Server en contenedores con y sin el grupo de disponibilidad
+## <a name="compare-sql-server-high-availability-on-containers-with-and-without-the-availability-group"></a>Comparar la alta disponibilidad de SQL Server en contenedores con y sin el grupo de disponibilidad
 
-La siguiente tabla compairs la funcionalidad de alta disponibilidad de SQL Server en contenedores en Kubernetes con y sin un grupo de disponibilidad:
+En la tabla siguiente compara la funcionalidad de alta disponibilidad de SQL Server en contenedores en Kubernetes con y sin un grupo de disponibilidad:
 
 | |Con un grupo de disponibilidad | Instancia independiente del contenedor<br/> No hay ningún grupo de disponibilidad
 |:------|:------|:------
@@ -82,7 +82,7 @@ La siguiente tabla compairs la funcionalidad de alta disponibilidad de SQL Serve
 |Copia de seguridad de réplica secundaria | Sí | 
 |Se ejecuta como un StatefulSet | Sí | 
 
-Una diferencia clave es que el tiempo de recuperación (o conmutación por error) es más rápido con un grupo de disponibilidad que con una sola instancia de SQL Server en un contenedor. Esto es porque el grupo de disponibilidad de SQL Server mantiene réplicas secundarias de las bases de datos del grupo de disponibilidad en otros nodos del clúster. En la conmutación por error, una réplica secundaria está seleccionada y promueve a principal. Las aplicaciones conectadas para el servicio se le redirigirá a la nueva réplica principal. 
+Una diferencia clave es que el tiempo de recuperación (o conmutación por error) es más rápido con un grupo de disponibilidad que con una sola instancia de SQL Server en un contenedor. Esta mejora es porque el grupo de disponibilidad de SQL Server mantiene réplicas secundarias en otros nodos del clúster. En la conmutación por error, una réplica secundaria está seleccionada y promueve a principal. Las aplicaciones conectadas para el servicio se le redirigirá a la nueva réplica principal.
 
 Sin el grupo de disponibilidad cuando Kubernetes detecta una conmutación por error, debe crear el contenedor, conéctelo al almacenamiento y, a continuación, se vuelven a conectar las aplicaciones conectadas al servicio. El tiempo de conmutación por error exacto depende de que era la conmutación por error, y cómo se detectó. 
 
@@ -90,9 +90,9 @@ Por lo general, el tiempo de conmutación por error para un grupo de disponibili
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para implementar contenedores de SQL Server en Azure Kubernetes Service (AKS), siga uno de estos tutoriales:
+Para implementar contenedores en Azure Kubernetes Service (AKS) de SQL Server, vea estos ejemplos:
 
 * [Implementar SQL Server en el contenedor de Docker](sql-server-linux-configure-docker.md)
 * [Implementar un contenedor de SQL Server en Kubernetes](tutorial-sql-server-containers-kubernetes.md)
-* [Implementar un grupo de disponibilidad SQL Server Always On Kubernetes](tutorial-sql-server-ag-kubernetes.md)
+* [Grupos de disponibilidad de Always On para los contenedores de SQL Server](sql-server-ag-kubernetes.md)
 

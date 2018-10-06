@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 814e94b955776f1a9c6c0648b0d47b53fa9cabf3
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 3fcf73193c44b72c46adb3300085650b20495a9d
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724349"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798593"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Lección 3: Explorar y visualizar los datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -92,7 +92,7 @@ Para crear el trazado, use [rxHistogram](https://docs.microsoft.com/machine-lear
     GO
     ```
 
-El procedimiento almacenado **PlotHistogram2** es idéntico a un procedimiento almacenado preexistente **PlotHistogram** creado por el `RunSQL_SQL_Walkthrough.ps1` secuencia de comandos. 
+El procedimiento almacenado **PlotHistogram2** es idéntico a un procedimiento almacenado preexistente **PlotHistogram** se encuentra en la base de datos NYCTaxi_sample. 
   
 + La variable `@query` define el texto de consulta (`'SELECT tipped FROM nyctaxi_sample'`), que se pasa al script de R como argumento para la variable de entrada de script `@input_data_1`.
   
@@ -164,7 +164,7 @@ El procedimiento almacenado devuelve la imagen como una secuencia de datos varbi
 
 Normalmente, los científicos de datos generan varias visualizaciones de datos para obtener información sobre los datos desde distintas perspectivas. En este ejemplo, el procedimiento almacenado usa la función Hist para crear el histograma, exportar los datos binarios a formatos populares como. JPG. PDF, y. PNG. 
 
-1. Use el procedimiento almacenado existente, **PlotInOutputFiles**, escribir histogramas, gráficos de dispersión y otros gráficos de R a. JPG y. Formato PDF. El `RunSQL_SQL_Walkthrough.ps1` crea **PlotInOutputFiles** y se agrega la base de datos. Utilice el botón secundario **modificar** para ver el código fuente.
+1. Use el procedimiento almacenado existente, **PlotInOutputFiles**, escribir histogramas, gráficos de dispersión y otros gráficos de R a. JPG y. Formato PDF. Utilice el botón secundario **modificar** para ver el código fuente.
 
 2. Opcionalmente, como un ejercicio de aprendizaje, cree su propia copia del procedimiento como **PlotInOutputFiles2**, con un nombre único para evitar un conflicto de nomenclatura.
 

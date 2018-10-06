@@ -1,8 +1,8 @@
 ---
-title: Migrar en SQL Server local a Azure SQL Database mediante Data Migration Assistant | Microsoft Docs
+title: Migrar un entorno local SQL Server o SQL Server en máquinas virtuales de Azure a Azure SQL Database mediante Data Migration Assistant | Microsoft Docs
 description: Aprenda a usar Data Migration Assistant para migrar un servidor de SQL en el entorno local a Azure SQL Database
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/05/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,14 +15,14 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: e8359fa14e474cceaa7316a67831ff8bf2351992
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd2fbf4340978424816ba3b4577e7559d80ea68c
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688033"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782394"
 ---
-# <a name="migrate-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Migración local de SQL Server a SQL Server o SQL Server en máquinas virtuales de Azure mediante Data Migration Assistant
+# <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Migrar un entorno local SQL Server o SQL Server en máquinas virtuales de Azure a Azure SQL Database mediante Data Migration Assistant
 
 Data Migration Assistant proporciona evaluaciones sin problemas de SQL Server local y las actualizaciones a las versiones posteriores de SQL Server o migraciones de SQL Server en máquinas virtuales de Azure o Azure SQL Database.
 

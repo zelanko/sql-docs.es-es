@@ -5,23 +5,20 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - constants
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
-caps.latest.revision: 72
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57c52b218406b658ef3f467ee122d51ed32158ad
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 28e5394d824a5999aec90cffb21e07e72dea1691
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978698"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605513"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Constantes (controladores de Microsoft para PHP para SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,7 +53,7 @@ Los valores disponibles para transmitir a PDO::SQLSRV_ATTR_ENCODING son los sigu
 |Constante del controlador PDO_SQLSRV|Descripción|  
 |-------------------------------|---------------|  
 |PDO::SQLSRV_ENCODING_BINARY|Los datos son una secuencia de bytes sin procesar procedentes del servidor, sin que se realicen procesos de codificación o traducción.<br /><br />No válida para PDO::setAttribute.|  
-|PDO::SQLSRV_ENCODING_SYSTEM|Los datos son caracteres de 8 bits tal y como se especifica en la página de códigos de la configuración regional de Windows establecida en el sistema. Los caracteres multibyte, o aquellos que no tengan una correspondencia con esta página de códigos, se sustituirán por un carácter de signo de interrogación de cierre (?) de un solo byte.|  
+|PDO::SQLSRV_ENCODING_SYSTEM|Los datos son caracteres de 8 bits tal y como se especifica en la página de códigos de la configuración regional de Windows establecida en el sistema. Los caracteres multibyte, o aquellos que no tengan una correspondencia con esta página de códigos, se sustituyen por un carácter de signo de interrogación de cierre (?) de un solo byte.|  
 |PDO::SQLSRV_ENCODING_UTF8|Los datos presentan la codificación UTF-8. Esta es la codificación predeterminada.|  
 |PDO::SQLSRV_ENCODING_DEFAULT|Utiliza PDO::SQLSRV_ENCODING_SYSTEM si se especifica durante la conexión.<br /><br />Utiliza la codificación de la conexión si se especifica en una instrucción prepare.|  
   
@@ -150,7 +147,7 @@ En la siguiente tabla se muestran las constantes que se utilizan para describir 
 |Constante de SQLSRV|Descripción|  
 |-------------------|---------------|  
 |SQLSRV_ENC_BINARY|Los datos se devuelven del servidor como una secuencia de bytes sin procesar, sin que se realicen procesos de codificación o traducción.|  
-|SQLSRV_ENC_CHAR|Los datos se devuelven en caracteres de 8 bits tal y como se especifica en la página de códigos de la configuración regional de Windows establecida en el sistema. Los caracteres multibyte, o aquellos que no tengan una correspondencia con esta página de códigos, se sustituirán por un carácter de signo de interrogación de cierre (?) de un solo byte.<br /><br />Esta es la codificación predeterminada.|  
+|SQLSRV_ENC_CHAR|Los datos se devuelven en caracteres de 8 bits tal y como se especifica en la página de códigos de la configuración regional de Windows establecida en el sistema. Los caracteres multibyte, o aquellos que no tengan una correspondencia con esta página de códigos, se sustituyen por un carácter de signo de interrogación de cierre (?) de un solo byte.<br /><br />Esta es la codificación predeterminada.|  
 |"UTF-8"|Los datos se devuelven con la codificación UTF-8. Esta constante se agregó en la versión 1.1 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Para obtener más información sobre la compatibilidad con UTF-8, vea [Cómo enviar y recuperar datos UTF-8 gracias a la compatibilidad integrada con UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|  
   
 > [!NOTE]  

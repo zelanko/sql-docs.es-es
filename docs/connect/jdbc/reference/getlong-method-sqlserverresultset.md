@@ -1,13 +1,11 @@
 ---
-title: getLong (método) (SQLServerResultSet) | Documentos de Microsoft
+title: Método getLong (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getLong
@@ -15,30 +13,29 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 86745aeb-ea0d-42d1-b7d2-141b7b067af9
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c434db2aff69e9f5b0cfe2ea045f6a6a4ea57be9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 992353272a58bf1803c554a4680a758bd43cf7e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835510"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630983"
 ---
-# <a name="getlong-method-sqlserverresultset"></a>getLong (método) (SQLServerResultSet)
+# <a name="getlong-method-sqlserverresultset"></a>Método getLong (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera el valor de la columna designada en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un **largo** en el lenguaje de programación Java.  
+  Recupera el valor de la columna designada en la fila actual de este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como un valor de tipo **long** en el lenguaje de programación Java.  
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nombre|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[getLong (int)](../../../connect/jdbc/reference/getlong-method-int-sqlserverresultset.md)|Recupera el valor del índice de columna designado en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un **largo** en el lenguaje de programación Java.|  
-|[getLong (java.lang.String)](../../../connect/jdbc/reference/getlong-method-java-lang-string-sqlserverresultset.md)|Recupera el valor del nombre de columna designado en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como un **largo** en el lenguaje de programación Java.|  
+|[getLong (int)](../../../connect/jdbc/reference/getlong-method-int-sqlserverresultset.md)|Recupera el valor del índice de columna designado en la fila actual de este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como un valor **long** en el lenguaje de programación Java.|  
+|[getLong (java.lang.String)](../../../connect/jdbc/reference/getlong-method-java-lang-string-sqlserverresultset.md)|Recupera el nombre de la columna designada en la fila actual de este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como un valor **long** en el lenguaje de programación Java.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

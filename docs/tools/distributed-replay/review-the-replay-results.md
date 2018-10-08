@@ -1,27 +1,23 @@
 ---
-title: Revise los resultados de la reproducción | Documentos de Microsoft
+title: Revise los resultados de la reproducción | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bf4c08dee623e659e04e3be97f8e015daa57aa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c0f1eaad7a68501abac2d6b8a890b8b56b1f2dcb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33073962"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822213"
 ---
 # <a name="review-the-replay-results"></a>Revisar los resultados de la reproducción
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +59,7 @@ ms.locfileid: "33073962"
 ## <a name="column-descriptions-for-result-trace"></a>Descripciones de columna para el seguimiento de resultados  
  En la tabla siguiente se describen las columnas de los datos de seguimiento de resultados.  
   
-|Nombre de columna de datos|Tipo de datos|Description|Identificador de columna|  
+|Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|**nvarchar**|Nombre de la clase de eventos.|1|  
 |EventSequence|**bigint**|Para los errores de proveedor y los errores internos y advertencias, este es el flujo de eventos de captura que corresponde al error o advertencia.<br /><br /> Para todas las demás clase de eventos, esta es la secuencia del evento en los datos de seguimiento originales.|2|  

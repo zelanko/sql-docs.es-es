@@ -1,13 +1,11 @@
 ---
-title: Método supportsDataManipulationTransactionsOnly | Documentos de Microsoft
+title: Método supportsDataManipulationTransactionsOnly | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.supportsDataManipulationTransactionsOnly
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: bdc182db-4518-4bf2-b63a-05f58fdb4eb8
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d1cc0a5bed63343c556eefc301d151e3c6c8c37c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: afb5c598a00fe4aa3fb6405dfe7b7edd67f79f29
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847020"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654743"
 ---
 # <a name="supportsdatamanipulationtransactionsonly-method-sqlserverdatabasemetadata"></a>Método supportsDataManipulationTransactionsOnly (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,12 +41,12 @@ public boolean supportsDataManipulationTransactionsOnly()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método supportsDataManipulationTransactionsOnly especificado por el método supportsDataManipulationTransactionsOnly en la interfaz java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
- [Miembros de SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
+ [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   

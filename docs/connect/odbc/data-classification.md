@@ -5,23 +5,20 @@ ms.date: 07/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - driver
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
-caps.latest.revision: 1
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: 6447924bd13a6865b85ac62c85b17f255bbf4eaf
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 79d07c06354a5c36c153f82b9f9f012b466bbd2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39713284"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706123"
 ---
 # <a name="data-classification"></a>Clasificación de datos
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -34,7 +31,7 @@ Para obtener más información sobre cómo asignar la clasificación a las colum
 Microsoft ODBC Driver 17.2 permite la recuperación de metadatos a través de SQLGetDescField utilizando el identificador de campo SQL_CA_SS_DATA_CLASSIFICATION.
 
 ## <a name="format"></a>Formato
-La palabra clave  tiene la siguiente sintaxis:
+SQLGetDescField tiene la siguiente sintaxis:
 
 ```  
 SQLRETURN SQLGetDescField(  
@@ -46,7 +43,7 @@ SQLRETURN SQLGetDescField(
      SQLINTEGER *    StringLengthPtr);  
 ```
 *DescriptorHandle*  
- No se puede modificar un descriptor de fila de implementación Se puede recuperar mediante una llamada a SQLGetStmtAttr con el atributo de instrucción SQL_ATTR_IMP_ROW_DESC
+ [Entrada] Identificador IRD (Descriptor de fila de implementación). Se puede recuperar mediante una llamada a SQLGetStmtAttr con el atributo de instrucción SQL_ATTR_IMP_ROW_DESC
   
  *RecNumber*  
  [Input] 0
@@ -55,7 +52,7 @@ SQLRETURN SQLGetDescField(
  [Entrada] SQL_CA_SS_DATA_CLASSIFICATION
   
  *ValuePtr*  
- búfer de salida actual
+ [Salida] Búfer de salida
   
  *BufferLength*  
  [Entrada] Longitud del búfer de salida en bytes

@@ -44,7 +44,7 @@ ms.locfileid: "47844654"
   
 -   [Procedimiento: ver los intentos de reparación de página automática](#ViewAPRattempts)  
   
-##  <a name="ErrorTypes"></a> Error Types That Cause an Automatic Page-Repair Attempt  
+##  <a name="ErrorTypes"></a> Tipos de errores que provocan un intento de reparación de página automática  
  La reparación de página automática de la creación de reflejo de la base de datos intenta reparar únicamente aquellas páginas de un archivo de datos en las que una operación no se ha realizado correctamente debido a uno de los errores que se muestran en la siguiente tabla.  
   
 |Número de error|Descripción|Instancias que provocan el intento de una reparación de página automática|  
@@ -56,7 +56,7 @@ ms.locfileid: "47844654"
  Para ver los errores más recientes 823 y 824 de CRC, vea la tabla [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) en la base de datos [msdb](../../relational-databases/databases/msdb-database.md) .  
 
   
-##  <a name="UnrepairablePageTypes"></a> Page Types That Cannot Be Automatically Repaired  
+##  <a name="UnrepairablePageTypes"></a> Tipos de páginas que no se pueden reparar automáticamente  
  La reparación de página automática no puede reparar los siguientes tipos de páginas de control:  
   
 -   Página de cabecera del archivo (Id. 0 de página).  
@@ -80,7 +80,7 @@ ms.locfileid: "47844654"
 5.  Si el error de E/S de la página ha producido [transacciones diferidas](../../relational-databases/backup-restore/deferred-transactions-sql-server.md), después de reparar la página, el servidor principal intentará resolver esas transacciones.  
   
  
-##  <a name="SecondaryIOErrors"></a> Handling I/O Errors on the Mirror/Secondary Database  
+##  <a name="SecondaryIOErrors"></a> Control de los errores de E/S en la base de datos reflejada o secundaria  
  La creación de reflejo de la base de datos y [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]administran normalmente de la misma forma los errores de E/S en las páginas de datos que se producen en la base de datos reflejada o secundaria.  
   
 1.  Con la creación de reflejo de la base de datos, si el servidor reflejado encuentra uno o más errores de E/S de página cuando vuelve a generar una entrada del registro, la sesión de creación de reflejo establece el estado SUSPENDED. Con [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], si una réplica secundaria encuentra uno o varios errores de E/S de página cuando rehace una entrada de registro, la base de datos secundaria entra en el estado SUSPENDED. En ese momento, el servidor reflejado o secundario inserta una fila en la tabla **suspect_pages** con el estado de error adecuado. A continuación, el servidor reflejado o secundario solicita una copia de la página al servidor principal.  
@@ -96,7 +96,7 @@ ms.locfileid: "47844654"
  La reparación de página automática es un proceso asincrónico que se ejecuta en segundo plano. Por consiguiente, una operación de base de datos que solicite una página ilegible producirá errores y devolverá el código de error acerca de las condiciones que han provocado el error. Al desarrollar una aplicación para una base de datos reflejada o una base de datos de disponibilidad, debería interceptar las excepciones relativas a las operaciones con errores. Si el código de error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es 823, 824 u 829, debería volver a intentar dicha operación más adelante.  
   
 
-##  <a name="ViewAPRattempts"></a> How To: View Automatic Page-Repair Attempts  
+##  <a name="ViewAPRattempts"></a> Procedimiento: ver los intentos de reparación de página automática  
  Las siguientes vistas de administración dinámica devuelven filas para los últimos intentos de reparación de página automática en una base de datos de disponibilidad o base de datos reflejada determinada, con un máximo de 100 filas por base de datos.  
   
 -   **Grupos de disponibilidad AlwaysOn:**  

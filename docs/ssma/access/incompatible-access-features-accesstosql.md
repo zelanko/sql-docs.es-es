@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Access databases
 - Access databases, features incompatible with SQL Azure
@@ -30,16 +25,15 @@ helpviewer_keywords:
 - unique indexes
 - validation rules
 ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
-caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2c5819ffe66cfb6d80e19973cc9b3f2cba0251df
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: eb36afbcfe8d406708719fb7062510fd9f828a5b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392644"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608363"
 ---
 # <a name="incompatible-access-features-accesstosql"></a>Características de Access incompatibles (AccessToSQL)
 No todas las características de base de datos de Access son compatibles con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por ejemplo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y acceso tiene diferentes conjuntos de palabras clave reservadas. Problemas como éstos pueden provocar que una migración correcta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use la tabla siguiente para obtener información acerca de problemas de migración posibles y lo puede hacer con ellos.  

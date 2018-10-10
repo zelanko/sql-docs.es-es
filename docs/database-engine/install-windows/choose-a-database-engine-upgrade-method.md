@@ -22,7 +22,7 @@ ms.locfileid: "47713923"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
-  Existen varios métodos que se deben considerar a la hora de planear la actualización del [!INCLUDE[ssDE](../../includes/ssde-md.md)] de una versión previa de SQL Server si se pretende reducir al mínimo el tiempo de inactividad y los riesgos. Puede realizar una actualización local, migrar a una nueva instalación o efectuar una actualización gradual. El siguiente diagrama le ayudará a elegir uno de estos enfoques. Además, más adelante en este artículo se describen todos los enfoques presentes en el diagrama. Si quiere obtener ayuda para tomar las decisiones que se le presentan en el diagrama, consulte también [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+  Existen varios métodos que se deben considerar a la hora de planear la actualización del [!INCLUDE[ssDE](../../includes/ssde-md.md)] de una versión previa de SQL Server si se pretende reducir al mínimo el tiempo de inactividad y los riesgos. Puede realizar una actualización local, migrar a una nueva instalación o efectuar una actualización gradual. El siguiente diagrama le ayudará a elegir uno de estos enfoques. Además, más adelante en este artículo se describen todos los enfoques presentes en el diagrama. Si quiere obtener ayuda para tomar las decisiones que se le presentan en el diagrama, consulte también [Planear y probar el plan de actualización del Motor de base de datos](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  ![Árbol de decisión del método de actualización de motor de base de datos](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Árbol de decisión del método de actualización de motor de base de datos")  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47713923"
   
 -   Un entorno de desarrollo sin una configuración de alta disponibilidad.  
   
--   Un entorno de producción no esencial que pueda tolerar el tiempo de inactividad y que ejecute hardware y software recientes. La cantidad de tiempo de inactividad depende del tamaño de la base de datos y la velocidad de su subsistema de E/S. Se necesitará un poco más de tiempo a la hora de actualizar SQL Server 2014 cuando se estén usando tablas optimizadas para memoria. Para obtener más información, consulte [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+-   Un entorno de producción no esencial que pueda tolerar el tiempo de inactividad y que ejecute hardware y software recientes. La cantidad de tiempo de inactividad depende del tamaño de la base de datos y la velocidad de su subsistema de E/S. Se necesitará un poco más de tiempo a la hora de actualizar SQL Server 2014 cuando se estén usando tablas optimizadas para memoria. Para obtener más información, consulte [Planeación y prueba del plan de actualización del motor de base de datos](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
 > [!WARNING]  
 >  Cuando se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se detiene y reinicia como parte de la ejecución de las comprobaciones previas a la actualización.  
@@ -118,7 +118,7 @@ ms.locfileid: "47713923"
 -   Entorno de escalado horizontal de SQL Server Reporting Services: si quiere obtener instrucciones detalladas para realizar una actualización gradual en un entorno de este tipo, vea [Actualizar y migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
 ## <a name="next-steps"></a>Pasos siguientes
- [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
+ [Planeación y prueba del plan de actualización del motor de base de datos](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
  [Completar la actualización motor de base de datos](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
   
   

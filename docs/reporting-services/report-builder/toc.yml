@@ -24,10 +24,6 @@ items:
     href: finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md
   - name: Buscar y ver informes con un explorador
     href: finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md
-  - name: Buscar informes y otros elementos
-    href: searching-for-reports-and-other-items-report-builder-and-ssrs.md
-  - name: Usar Mis informes
-    href: using-my-reports-report-builder-and-ssrs.md
   - name: Cuadro de diálogo Convertir CRI
     href: convert-cri-dialog-box-report-builder.md
 - name: Ocultar un elemento (Generador de informes y SSRS)
@@ -35,7 +31,7 @@ items:
 - name: Export Reports
   href: export-reports-report-builder-and-ssrs.md
   items:
-  - name: Funcionalidad interactiva para diferentes extensiones de representación de informes
+  - name: Funcionalidad interactiva para extensiones de representación de informes
     href: interactive-functionality-different-report-rendering-extensions.md
   - name: Exportar a un archivo CSV
     href: exporting-to-a-csv-file-report-builder-and-ssrs.md
@@ -79,9 +75,9 @@ items:
   href: security-report-builder.md
 - name: Glosario (Generador de informes)
   href: glossary-report-builder.md
-ms.openlocfilehash: 0d2bd1b356f4f5dac7b4040658da5107d1b0b3f7
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: 529e9e93786f4e4df5f0ae62266c1405f6eabb56
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40427342"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085171"

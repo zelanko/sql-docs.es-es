@@ -29,17 +29,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9748fcba84e037a58007c4a50ce218291cb098d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 8252d8eca6a9196630bc224a39324989c4388a6a
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796633"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252122"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > Para SQL Server 2014 e inferior, consulte [utilidad sqlcmd](sqlcmd-utility.md).
+ > Para SQL Server 2014 e inferior, consulte [utilidad sqlcmd](https://docs.microsoft.com/en-us/sql/tools/sqlcmd-utility?view=sql-server-2014
+).
 
  > Para usar sqlcmd en Linux, consulte [instalar sqlcmd y bcp en Linux](../linux/sql-server-linux-setup-tools.md).
 
@@ -759,7 +760,7 @@ No. Sin embargo, se recomienda el uso de una contraseña segura.
 ### <a name="sqlcmd-file-names"></a>Nombres de archivo de sqlcmd  
  Los archivos de entrada de**sqlcmd** se pueden especificar con la opción **-i** o con el comando **:r** . Los archivos de salida se pueden especificar con la opción **-o** o con los comandos **:Error**, **:Out** y **:Perftrace** . A continuación se incluyen algunas directrices para trabajar con estos archivos:  
   
--   **:Error**, **:Out** y **:Perftrace** deben usar valores de **\<**_nombre_de_archivo_**>** independientes. Si se usa el mismo **\<**_nombre_de_archivo_**>**, es posible que las entradas de los comandos se entremezclen.  
+-   **:Error**, **:Out** y **:Perftrace** deben usar valores de **\<**_nombre_de_archivo_**>** independientes. Si se usa el mismo **\<**_nombre_de_archivo_**>** , es posible que las entradas de los comandos se entremezclen.  
   
 -   Si **sqlcmd** llama a un archivo de entrada ubicado en un servidor remoto desde un equipo local y el archivo contiene una ruta de acceso de archivo del tipo :Out c:\archivoDeSalida.txt. El archivo de salida se crea en el equipo local y no en el servidor remoto.  
   

@@ -5,21 +5,18 @@ ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 319ada38e07a30fa936608adce4e5c091ba098ec
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: e7459e99e64bddaa0e971666edb8bb9c7c67c009
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784804"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727493"
 ---
 # <a name="connection-options"></a>Opciones de conexión
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -67,7 +64,7 @@ En este tema se enumeran las opciones que se permiten en la matriz asociativa (a
 
 3. Si se habilita *Encryption* , puede afectar al rendimiento de algunas aplicaciones debido a la sobrecarga computacional que se precisa para cifrar los datos.  
 
-4. El nombre de la instancia de *UID* y *PWD* al realizar la conexión con la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+4. El nombre de la instancia de *UID* y *PWD* al realizar la conexión con la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 Muchas de las claves admitidas son atributos de cadena de conexión ODBC. Para obtener información sobre las cadenas de conexión ODBC, vea [Usar palabras clave de cadena de conexión con SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).
 

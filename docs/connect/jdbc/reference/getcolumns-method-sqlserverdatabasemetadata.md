@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getColumns
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
-caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d1a8d682e0bb099d082578b98e70dd6930033024
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 51d9188328c8053188a52f6d96ab900916c11b94
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785841"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733653"
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>Método getColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,7 +62,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método getColumns especificado por el método getColumns en la interfaz java.sql.DatabaseMetaData.  
+ El método getColumns especifica este método getColumns en la interfaz java.sql.DatabaseMetaData.  
   
  El conjunto de resultados devuelto por el método getColumns contendrá la siguiente información:  
   
@@ -82,7 +79,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |DECIMAL_DIGITS|**smallint**|Escala de la columna.|  
 |NUM_PREC_RADIX|**smallint**|Base de la columna.|  
 |NULLABLE|**smallint**|Indica si la columna admite valores NULL. Puede ser uno de los siguientes valores:<br /><br /> columnNoNulls (0)<br /><br /> columnNullable (1)|  
-|REMARKS|**String**|Comentarios asociados con la columna.<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] siempre devuelve null para esta columna.  |  
+|REMARKS|**String**|Comentarios asociados con la columna.<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] siempre devuelve null para esta columna.|  
 |COLUMN_DEF|**String**|Valor predeterminado de la columna.|  
 |SQL_DATA_TYPE|**smallint**|Valor del tipo de datos SQL tal como aparece en el campo TYPE del descriptor. Esta columna es igual que la columna DATA_TYPE, salvo por los tipos de datos datetime e interval de SQL-92. Esta columna siempre devuelve un valor.|  
 |SQL_DATETIME_SUB|**smallint**|Código de subtipo para los tipos de datos interval de SQL-92 y datetime. Para otros tipos de datos, esta columna devuelve NULL.|  

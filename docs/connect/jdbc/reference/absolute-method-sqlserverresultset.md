@@ -1,13 +1,11 @@
 ---
-title: Método Absolute (SQLServerResultSet) | Documentos de Microsoft
+title: Método Absolute (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.absolute
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 638e8148-8ca0-4e1f-9ec2-04a11bc9809b
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30dea8c838aaafbf651d90489e80ff8c1ac1ff5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 298e169fe2b67b16b55d607f504446c48893fc1b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829200"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616943"
 ---
-# <a name="absolute-method-sqlserverresultset"></a>Método Absolute (SQLServerResultSet)
+# <a name="absolute-method-sqlserverresultset"></a>Método absolute (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Mueve el cursor a la fila especificada en este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.  
+  Mueve el cursor a la fila especificada en este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,9 +36,9 @@ public boolean absolute(int row)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Fila*  
+ *row*  
   
- Un **int** que indica el número de fila para mover a. Puede ser positivo, negativo o 0.  
+ Un valor **int** que indica el número de fila al que se va a desplazar. Puede ser positivo, negativo o 0.  
   
 ## <a name="return-value"></a>Valor devuelto  
  **True** si el cursor se mueve a la posición especificada. **false** si es antes de la primera fila o después de la última fila.  
@@ -49,10 +46,10 @@ public boolean absolute(int row)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método absoluta se especifica mediante el método absoluto en la interfaz java.sql.ResultSet.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -1,36 +1,33 @@
 ---
-title: Controlador Node.js para SQL Server | Documentos de Microsoft
+title: Controlador de Node.js para SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01b314b307304ae4b1af272c91fd94d6e7a7090d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: 442e9693bcb06f6ea4fc94acbd3c020a598da504
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288824"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664663"
 ---
-# <a name="nodejs-driver-for-sql-server"></a>Controlador Node.js para SQL Server
+# <a name="nodejs-driver-for-sql-server"></a>Controlador Node.js de SQL Server
 
-![Descarga-CTRL+MAYÚS+TAB-dentro de un círculo](../../ssdt/media/download.png)[para descargar el controlador Node.js para SQL Server](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![En círculo la flecha abajo de descarga](../../ssdt/media/download.png)[para descargar el controlador de Node.js para SQL Server](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-El módulo tedioso es una implementación de javascript del protocolo TDS, que es compatible con todas las versiones actuales de SQL Server. El controlador es un proyecto de código abierto, disponible en Github.  
+El módulo tedioso es una implementación Java del protocolo TDS, que es compatible con todas las versiones actuales de SQL Server. El controlador es un proyecto de código abierto, disponible en Github.  
   
-Puede conectarse a una base de datos de SQL con Node.js en Windows, Linux o Mac.  
+Puede conectarse a una base de datos SQL mediante Node.js en Windows, Linux o Mac.  
   
 ## <a name="getting-started"></a>Introducción  
-* [Paso 1: Configurar el entorno de desarrollo para la implementación de Node.js](step-1-configure-development-environment-for-node-js-development.md)  
+* [Paso 1: configurar el entorno de desarrollo para el desarrollo de Node.js](step-1-configure-development-environment-for-node-js-development.md)  
 * [Paso 2: crear una instancia de SQL Database para el desarrollo de Node.js](step-2-create-a-sql-database-for-node-js-development.md)  
 * [Paso 3: prueba de concepto de la conexión a SQL mediante Node.js](step-3-proof-of-concept-connecting-to-sql-using-node-js.md)  
   
@@ -44,7 +41,7 @@ Puede conectarse a una base de datos de SQL con Node.js en Windows, Linux o Mac.
 
 ## <a name="code-examples"></a>Ejemplos de código
 * [Introducción a Node.js en Windows](https://www.microsoft.com/sql-server/developer-get-started/node/windows/)
-* [Introducción a Node.js de macOS](https://www.microsoft.com/sql-server/developer-get-started/node/mac/)
+* [Introducción a Node.js en macOS](https://www.microsoft.com/sql-server/developer-get-started/node/mac/)
 * [Introducción a Node.js en Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/node/ubuntu/)
 * [Introducción a Node.js en Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/node/rhel/)
 * [Introducción a Node.js en SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/node/sles/)

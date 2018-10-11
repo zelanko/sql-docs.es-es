@@ -1,13 +1,11 @@
 ---
-title: Método executeUpdate (java.lang.String, java.lang.String) | Documentos de Microsoft
+title: Método executeUpdate (java.lang.String, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.executeUpdate (java.lang.String[])
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2f44a689-65c8-4c94-9574-e9c08ea7918e
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81b6cefcc7749704c6bb015fa28a679bb1832e7d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 83e035d659fd7b6b59c7b8d8a0799415bef5c112
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832350"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611711"
 ---
 # <a name="executeupdate-method-javalangstring-javalangstring"></a>Método executeUpdate (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Se ejecuta la instrucción SQL especificada y señales [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] que las claves generadas automáticamente indican en la matriz determinada debe estar disponible para la recuperación.  
+  Ejecuta la instrucción SQL dada e indica al [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] que las claves que se han generado automáticamente y están presentes en la matriz especificada deben estar disponibles para su recuperación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,24 +39,24 @@ public final int executeUpdate(java.lang.String sql,
 #### <a name="parameters"></a>Parámetros  
  *sql*  
   
- A **cadena** que contiene una instrucción SQL.  
+ Un valor **String** que contiene una instrucción SQL.  
   
  *columnNames*  
   
- Una matriz de tipo **cadena** que indica que los nombres de columna de las claves generadas automáticamente deben estar disponibles.  
+ Una matriz de tipo **String** que indica que los nombres de columna de las claves generadas automáticamente deben estar disponibles.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un **int** que indica el número de filas afectadas, 0 si se utiliza una instrucción DDL.  
+ Un valor **int** que indica el número de filas afectadas; es 0 si se usa una instrucción DDL.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
- Este método executeUpdate es especificado por el método executeUpdate en la interfaz java.sql.Statement.  
+## <a name="remarks"></a>Notas  
+ Este método executeUpdate especificado por el método executeUpdate de la interfaz java.sql.Statement.  
   
  Si la ejecución de un procedimiento almacenado produce un recuento de actualización mayor que uno o que genera más de un conjunto de resultados, use el método [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) para ejecutar el procedimiento almacenado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Método executeUpdate &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)   
  [Miembros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Clase SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  

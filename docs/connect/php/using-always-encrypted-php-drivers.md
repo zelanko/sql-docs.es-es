@@ -3,19 +3,18 @@ title: Uso de Always Encrypted con los controladores PHP para SQL Server | Micro
 ms.date: 01/08/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 12f0427b4ff23452f244c830c9116913dfb03968
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 29adbfcbce3701a853f18f7f1b3079bc0bb6f8ae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174972"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695683"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Uso de Always Encrypted con los controladores PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "39174972"
 
 Este artículo proporciona información sobre cómo desarrollar aplicaciones de PHP con [Always Encrypted (motor de base de datos)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) y [PHP Driver for SQL Server](../../connect/php/Microsoft-php-driver-for-sql-server.md).
 
-Always Encrypted permite a las aplicaciones cliente cifrar la información confidencial y nunca revelar los datos ni las claves de cifrado en SQL Server o Azure SQL Database. Un Always Encrypted habilitado el controlador, como ODBC Driver for SQL Server, de forma transparente cifra y descifra los datos confidenciales en la aplicación cliente. El controlador determina automáticamente qué parámetros de consulta corresponden a columnas de bases de datos confidenciales (protegidas mediante Always Encrypted) y cifra los valores de esos parámetros antes de pasar los datos a SQL Server o Azure SQL Database. De forma similar, el controlador descifra de manera transparente los datos que se han recuperado de las columnas de bases de datos cifradas de los resultados de la consulta. Para obtener más información, vea [Always Encrypted (motor de base de datos)](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Los controladores de PHP para SQL Server usan el controlador ODBC para SQL Server cifrar datos confidenciales.
+Always Encrypted permite a las aplicaciones cliente cifrar la información confidencial y nunca revelar los datos ni las claves de cifrado en SQL Server o Azure SQL Database. Un controlador habilitado para Always Encrypted, como ODBC Driver for SQL Server, cifra y descifra de manera transparente la información confidencial en la aplicación cliente. El controlador determina automáticamente qué parámetros de consulta corresponden a columnas de bases de datos confidenciales (protegidas mediante Always Encrypted) y cifra los valores de esos parámetros antes de pasar los datos a SQL Server o Azure SQL Database. De forma similar, el controlador descifra de manera transparente los datos que se han recuperado de las columnas de bases de datos cifradas de los resultados de la consulta. Para obtener más información, vea [Always Encrypted (motor de base de datos)](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Los controladores de PHP para SQL Server usan el controlador ODBC para SQL Server cifrar datos confidenciales.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -154,7 +153,7 @@ $stmt->execute();
 ### <a name="plaintext-data-retrieval-example"></a>Ejemplo de recuperación de datos de texto simple
 
 Los ejemplos siguientes muestran datos filtrados según valores cifrados y la recuperación de datos de texto simple de las columnas cifradas con los controladores de SQLSRV y PDO_SQLSRV. Tenga en cuenta lo siguiente:
- -   El valor utilizado en la cláusula WHERE para filtrar según la columna SSN necesita pasarse mediante el parámetro de enlace, por lo que el controlador puede cifrarlo de manera transparente antes de enviarlo al servidor.
+ -   El valor que se ha usado en la cláusula WHERE para filtrar por la columna SSN necesita pasarse mediante el parámetro bind, de forma que el controlador pueda cifrarlo de manera transparente antes de enviarlo al servidor.
  -   Al ejecutar una consulta con parámetros enlazados, los controladores PHP determina automáticamente el tipo SQL para el usuario a menos que el usuario especifica explícitamente el tipo SQL al usar el controlador SQLSRV.
  -   Todos los valores impresos por el programa están en texto sin formato, ya que el controlador descifra de forma transparente los datos recuperados de las columnas SSN y BirthDate.
  
@@ -229,7 +228,7 @@ Always Encrypted admite algunas conversiones para los tipos de datos cifrados. V
  
 #### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>Errores debidos a pasar texto sin formato en lugar de valores cifrados
 
-Cualquier valor que tenga como destino una columna cifrada necesita cifrarse antes de enviarse al servidor. Un intento para insertar, modificar o filtrar por un valor de texto simple en el resultado de un error en una columna cifrada. Para evitar dichos errores, asegúrese de que:
+Cualquier valor que tenga como destino una columna cifrada necesita cifrarse antes de enviarse al servidor. Un intento para insertar, modificar o filtrar mediante un valor de texto sin formato en una columna cifrada produce un error. Para evitar dichos errores, asegúrese de que:
  -   Always Encrypted esté habilitado (en la cadena de conexión, establezca el `ColumnEncryption` palabra clave para `Enabled`).
  -   Usa un parámetro de enlace para enviar datos que tengan como destino las columnas cifradas. El ejemplo siguiente muestra una consulta que filtra de manera incorrecta mediante un literal o constante en una columna cifrada (SSN):
 ```
@@ -266,7 +265,7 @@ Para obtener el valor de texto simple de un ECEK, el controlador obtiene los met
 
 Microsoft Driver 5.3.0 para PHP para SQL Server, se admiten sólo Windows Certificate Store Provider y Azure Key Vault. Aún no se admite el otro proveedor de almacén de claves compatibles con el controlador ODBC (proveedor de almacén de claves personalizado).
 
-### <a name="using-the-windows-certificate-store-provider"></a>Mediante el proveedor de Windows Certificate Store
+### <a name="using-the-windows-certificate-store-provider"></a>Uso del proveedor para el Almacén de certificados de Windows
 
 El controlador ODBC para SQL Server en Windows incluye un proveedor de almacén de claves maestras de columna integrada para el Store de certificados de Windows denominado `MSSQL_CERTIFICATE_STORE`. (Este proveedor no está disponible en macOS o Linux). Con este proveedor, la CMK se almacena localmente en el equipo cliente y no es necesaria para usarlo con el controlador de ninguna configuración adicional por parte de la aplicación. Sin embargo, la aplicación debe tener acceso al certificado y su clave privada en el almacén. Para obtener más información, vea [Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
@@ -331,5 +330,5 @@ Los controladores PHP también heredan las limitaciones impuestas por el control
 ## <a name="see-also"></a>Ver también  
 [Guía de programación para el controlador SQL para PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Referencia de API del controlador PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  
+[Referencia de la API del controlador PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  
   

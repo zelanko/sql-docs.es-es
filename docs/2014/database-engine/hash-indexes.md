@@ -44,7 +44,7 @@ ms.locfileid: "48169475"
   
  La ilustración tiene tres cubos con filas. El segundo cubo de la parte superior contiene las tres filas rojas. El cuarto cubo contiene la única fila azul. El cubo inferior contiene las dos filas verdes. Estas podrían ser versiones diferentes de la misma fila.  
   
- Para obtener más información acerca de los índices para tablas optimizadas para memoria, vea [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md):  
+ Para obtener más información acerca de los índices para tablas optimizadas para memoria, vea [Directrices para usar índices en las tablas con optimización para memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Índices de las tablas con optimización para memoria](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  

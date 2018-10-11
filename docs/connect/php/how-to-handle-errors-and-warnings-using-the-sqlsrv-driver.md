@@ -1,38 +1,35 @@
 ---
-title: 'Cómo: controlar errores y advertencias con el controlador SQLSRV | Documentos de Microsoft'
+title: Control de errores y advertencias con el controlador SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - errors and warnings
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16791a307fe317aa9495c5b4173cb1ebbb23d719
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: cc7a80e7c63a92863abdbcbba0475fe74f05a3c5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307424"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799108"
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>Cómo controlar errores y advertencias con el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-De forma predeterminada, el controlador SQLSRV trata las advertencias como errores; una llamada a un **sqlsrv** devuelve la función que genera un error o una advertencia **false**. En este tema se muestra cómo desactivar este comportamiento predeterminado y cómo controlar las advertencias y los errores por separado.  
+De forma predeterminada, el controlador SQLSRV trata las advertencias como errores; una llamada a una función de **sqlsrv** que genera un error o una advertencia devuelve el valor **False**. En este tema se muestra cómo desactivar este comportamiento predeterminado y cómo controlar las advertencias y los errores por separado.  
   
 > [!NOTE]  
 > El comportamiento predeterminado de tratar las advertencias como errores cuenta con algunas excepciones. Sin embargo, las advertencias que corresponden a los valores 01000, 01001, 01003 y 01S02 de SQLSTATE nunca se tratan como errores.  
   
 ## <a name="example"></a>Ejemplo  
-En el ejemplo de código siguiente se usa dos funciones definidas por el usuario, **DisplayErrors** y **DisplayWarnings**, para controlar errores y advertencias. El ejemplo muestra cómo controlar errores y advertencias por separado por los siguientes medios:  
+En el siguiente ejemplo de código se utilizan dos funciones definidas por el usuario, **DisplayErrors** y **DisplayWarnings**, para controlar los errores y las advertencias. El ejemplo muestra cómo controlar errores y advertencias por separado por los siguientes medios:  
   
 1.  Desactiva el comportamiento predeterminado de tratar las advertencias como errores.  
   
@@ -42,11 +39,11 @@ En el ejemplo de código siguiente se usa dos funciones definidas por el usuario
   
 4.  Muestra las horas de vacaciones restantes de cada empleado.  
   
-En la primera llamada a un **sqlsrv** función ([sqlsrv_configure](../../connect/php/sqlsrv-configure.md)), las advertencias se tratan como errores. Como las advertencias se agregan a la colección de errores, no se requiere comprobar las advertencias y los errores por separado. No obstante, en las llamadas posteriores a las funciones de **sqlsrv** , las advertencias no se deben tratar como errores, por lo que debe comprobar explícitamente tanto las advertencias como los errores.  
+Tenga en cuenta que en la primera llamada a una función de **sqlsrv** ([sqlsrv_configure](../../connect/php/sqlsrv-configure.md)), las advertencias se tratan como errores. Como las advertencias se agregan a la colección de errores, no se requiere comprobar las advertencias y los errores por separado. No obstante, en las llamadas posteriores a las funciones de **sqlsrv** , las advertencias no se deben tratar como errores, por lo que debe comprobar explícitamente tanto las advertencias como los errores.  
   
 Observe también que en el código de ejemplo se comprueban los errores después de cada llamada a una función de **sqlsrv** . Este es el método recomendado.  
   
-En este ejemplo se da por supuesto que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos. Cuando se ejecuta el ejemplo en una nueva instalación de la base de datos de AdventureWorks, se generan 3 advertencias y 2 errores. Las dos primeras advertencias son advertencias estándar que se emiten cuando se conecta a una base de datos. La tercera se genera debido a que las horas de vacaciones disponibles de un empleado se actualizan a un valor menor que cero. Los errores se producen debido a que las horas de vacaciones disponibles de un empleado se actualizan a un valor menor que 40 horas, lo que constituye una infracción de una restricción de la tabla.  
+En este ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos. Cuando se ejecuta el ejemplo en una nueva instalación de la base de datos de AdventureWorks, se generan 3 advertencias y 2 errores. Las dos primeras advertencias son advertencias estándar que se emiten cuando se conecta a una base de datos. La tercera se genera debido a que las horas de vacaciones disponibles de un empleado se actualizan a un valor menor que cero. Los errores se producen debido a que las horas de vacaciones disponibles de un empleado se actualizan a un valor menor que 40 horas, lo que constituye una infracción de una restricción de la tabla.  
   
 ```  
 <?php  
@@ -203,7 +200,7 @@ function DisplayWarnings()
 ?>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Cómo configurar el control de errores y advertencias con el controlador SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
 
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  

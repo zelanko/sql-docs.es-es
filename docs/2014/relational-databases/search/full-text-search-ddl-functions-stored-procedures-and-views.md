@@ -22,7 +22,7 @@ ms.locfileid: "48226125"
   
  Esta lista no incluye objetos desusados.  
   
- Para obtener la lista de objetos de base de datos que admiten la búsqueda semántica, vea [Semantic Search DDL, Functions, Stored Procedures, and Views](../views/views.md).  
+ Para obtener la lista de objetos de base de datos que admiten la búsqueda semántica, vea [DDL de búsqueda semántica, funciones, procedimientos almacenados y vistas](../views/views.md).  
   
 ##  <a name="ddl"></a> Instrucciones del lenguaje de definición de datos (DDL) de Transact-SQL  
   

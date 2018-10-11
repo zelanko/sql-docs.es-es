@@ -1,13 +1,11 @@
 ---
-title: Método updateObject (java.lang.String, java.lang.Object, int) | Documentos de Microsoft
+title: Método updateObject (java.lang.String, java.lang.Object, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.updateObject (java.lang.String, java.lang.Object, int)
@@ -15,20 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 27283ce1-637e-4e2c-91ee-8ad379114ac5
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d728d6a52bb5083d3b0db236e6cd4f45efde2bf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 10959976eb6c3c9908d7f5953a8a2edb1c1328c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654921"
 ---
 # <a name="updateobject-method-javalangstring-javalangobject-int"></a>Método updateObject (java.lang.String, java.lang.Object, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Actualiza la columna designada con un **objeto** valor según el nombre de columna y la escala.  
+  Actualiza la columna designada con un valor **Object** según el nombre y la escala de columna.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,23 +40,23 @@ public void updateObject(java.lang.String columnName,
 #### <a name="parameters"></a>Parámetros  
  *columnName*  
   
- A **cadena** que contiene el nombre de columna.  
+ Valor **String** que contiene el nombre de columna.  
   
  *obj*  
   
- Un **objeto** valor.  
+ Valor **Object**.  
   
  *escala*  
   
- Para tipos java.sql.Types.NUMERIC o java.sql.Types.DECIMAL, este es el número de dígitos tras el separador decimal. Para todos los demás tipos se omite este valor.  
+ Para tipos java.sql.Types.NUMERIC o java.sql.Types.DECIMAL, este es el número de dígitos tras el separador decimal. Para el resto de tipos este valor se omite.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
- Este método updateObject es especificado por el método updateObject en la interfaz java.sql.ResultSet.  
+## <a name="remarks"></a>Notas  
+ Este método updateObject especificado por el método updateObject en la interfaz java.sql.ResultSet.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Método updateObject &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

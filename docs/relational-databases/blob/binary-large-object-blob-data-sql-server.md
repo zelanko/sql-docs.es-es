@@ -1,4 +1,4 @@
- ---
+---
 title: Datos de objeto binario grande (Blob) (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017

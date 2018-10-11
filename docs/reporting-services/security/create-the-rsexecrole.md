@@ -4,19 +4,18 @@ ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a91961482cf5020ca2085086004a9f71c2cb1369
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: d6f483fc1a8a21823f2d80c61be971dc04cf5412
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267047"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623869"
 ---
 # <a name="create-the-rsexecrole"></a>Crear el RSExecRole
 
@@ -226,6 +225,38 @@ ms.locfileid: "43267047"
 14. Haga clic en **Dirección URL del Administrador de informes**.  
   
 15. Haga clic en el vínculo para abrir el Administrador de informes. Debe ver los elementos del servidor de informes de la base de datos del servidor de informes.  
+
+## <a name="creating-the-rsexecrole-role-and-permissions-using-t-sql"></a>Creación del rol RSExecRole y permisos mediante Transact-SQL
+También se puede crear el rol, y los permisos concedidos aplicables, en las bases de datos del sistema mediante el siguiente script de Transact-SQL:
+```sql
+USE master;
+GO
+IF NOT EXISTS (SELECT 1 FROM sys.database_principals WHERE [type] = 'R' AND [name] = 'RSExecRole') BEGIN
+    CREATE ROLE [RSExecRole];
+END
+GRANT EXECUTE ON dbo.xp_sqlagent_enum_jobs TO [RSExecRole];
+GRANT EXECUTE ON dbo.xp_sqlagent_is_starting TO [RSExecRole];
+GRANT EXECUTE ON dbo.xp_sqlagent_notify TO [RSExecRole];
+GO
+USE msdb;
+GO
+IF NOT EXISTS (SELECT 1 FROM sys.database_principals WHERE [type] = 'R' AND [name] = 'RSExecRole') BEGIN
+    CREATE ROLE [RSExecRole];
+END
+GRANT EXECUTE ON dbo.sp_add_category TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_add_job TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_add_jobschedule TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_add_jobserver TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_add_jobstep TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_delete_job TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_help_category TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_help_job TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_help_jobschedule TO [RSExecRole];
+GRANT EXECUTE ON dbo.sp_verify_job_identifiers TO [RSExecRole];
+GRANT SELECT ON dbo.syscategories TO [RSExecRole];
+GRANT SELECT ON dbo.sysjobs TO [RSExecRole];
+GO
+```
 
 ## <a name="next-steps"></a>Pasos siguientes
 

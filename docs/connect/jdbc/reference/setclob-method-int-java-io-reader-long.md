@@ -1,30 +1,27 @@
 ---
-title: Método setClob (int, java.io.Reader, long) | Documentos de Microsoft
+title: Método setClob (int, java.io.Reader, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 157882dd-1a96-4501-a895-46e88a49266e
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a5d02a75ff0b80bc6d325a709722ea5b4b55ee3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c5a38ff98a8df384e16fabf93a4eae6afc57ddc8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842260"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818833"
 ---
 # <a name="setclob-method-int-javaioreader-long"></a>Método setClob (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Establece el parámetro designado para el objeto Reader especificado, que es el número de caracteres determinado.  
+  Establece el parámetro designado en el objeto Reader especificado, que es el número de caracteres determinado para la longitud.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,23 +35,23 @@ public final void setClob(int parameterIndex,
 #### <a name="parameters"></a>Parámetros  
  *parameterIndex*  
   
- Un **int** que indica el índice del parámetro.  
+ Un valor **int** que indica el índice del parámetro.  
   
- *lector*  
+ *reader*  
   
- Un objeto de lector.  
+ Un objeto lector.  
   
  *length*  
   
- A **largo** que indica el número de caracteres en el valor del parámetro.  
+ Un valor **long** que indica el número de caracteres en el valor del parámetro.  
   
-## <a name="remarks"></a>Comentarios  
- Este método setClob especificado por el método setClob en la interfaz java.sql.PreparedStatement.  
+## <a name="remarks"></a>Notas  
+ El método setClob especifica este método setClob en la interfaz java.sql.PreparedStatement.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Método setClob &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)   
  [Miembros SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   

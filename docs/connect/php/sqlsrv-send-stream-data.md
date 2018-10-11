@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_send_stream_data
@@ -17,21 +15,20 @@ helpviewer_keywords:
 - API Reference, sqlsrv_send_stream_data
 - streaming data
 ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99be2cc8d56cde6ce960b5fc8d6caa2fab156a74
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: c1ce0db099046fb243151a7977823ab0fcf458ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309494"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790613"
 ---
 # <a name="sqlsrvsendstreamdata"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Envía datos de secuencias de parámetros al servidor. Se envía hasta ocho kilobytes (8 KB) de datos con cada llamada a **sqlsrv_send_stream_data**.  
+Envía datos de secuencias de parámetros al servidor. Se envían hasta ocho kilobytes (8 kB) de datos con cada llamada a **sqlsrv_send_stream_data**.  
   
 > [!NOTE]  
 > De manera predeterminada, todos los datos de secuencia se envían al servidor cuando se ejecuta una consulta. Si no se cambia este comportamiento predeterminado, no resulta necesario usar **sqlsrv_send_stream_data** para enviar datos de secuencia al servidor. Para obtener información sobre cómo cambiar el comportamiento predeterminado, consulte la sección Parameters de [sqlsrv_query](../../connect/php/sqlsrv-query.md) o [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
@@ -50,7 +47,7 @@ sqlsrv_send_stream_data( resource $stmt)
 Se devuelve el valor booleano **True** si hay más datos que se van a enviar. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente, se abre una reseña del producto como una secuencia y se envía al servidor. El comportamiento predeterminado de enviar todos los datos de secuencia en el momento de la ejecución está deshabilitado. El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el ejemplo siguiente, se abre una reseña del producto como una secuencia y se envía al servidor. El comportamiento predeterminado de enviar todos los datos de secuencia en el momento de la ejecución está deshabilitado. En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -98,7 +95,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [Actualización de datos &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  

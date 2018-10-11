@@ -4,27 +4,21 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: 3317d4f8-ed9e-4f2e-b5f1-a6bf3a9d6c8d
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd54438fe22f7f74ef1e12855ffc0e5c0d25c4bb
-ms.sourcegitcommit: 95093f8b4f3d02f8d55d415f03a241102a641cb3
+ms.openlocfilehash: 9143f1d8ce6ff530ef30f7dbfcd1ca599572e5ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39654280"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47676563"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lección 2: Usar el Asistente para la optimización de motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +30,7 @@ Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, ac
 
 - Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Descargue las [bases de datos de ejemplo de AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017).
+- Descargue la [base de datos de ejemplo de AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017).
 
 
 Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaurar una base de datos](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017).
@@ -47,7 +41,7 @@ Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaura
 ## <a name="tuning-a-workload"></a>Optimizar una carga de trabajo
 El Asistente para la optimización de motor de base de datos puede utilizarse para determinar el mejor diseño físico de la base de datos para el rendimiento de las consultas en las bases de datos y las tablas que seleccione para optimizar.  
 
-1.  Copiar un ejemplo [seleccione](../../t-sql/queries/select-examples-transact-sql.md) instrucción y pegue la instrucción en el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Guarde el archivo como MyScript.sql **en un directorio donde pueda encontrarlo fácilmente. Se ha proporcionado un ejemplo que funciona con la base de datos AdventureWorks2017 a continuación.  
+1.  Copiar un ejemplo [seleccione](../../t-sql/queries/select-examples-transact-sql.md) instrucción y pegue la instrucción en el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Guarde el archivo como **MyScript.sql** en un directorio donde pueda encontrarlo fácilmente. Se ha proporcionado un ejemplo que funciona con la base de datos AdventureWorks2017 a continuación.  
 
  ```sql
  Use [Adventureworks2017]; -- may need to modify database name to match database
@@ -69,21 +63,21 @@ El Asistente para la optimización de motor de base de datos puede utilizarse pa
 
   ![Guardar consulta SQL](media/dta-tutorials/dta-save-query.png)
   
-2.  Inicie el Asistente para la optimización de motor de base de datos. Seleccione **Database Tuning Advisor** desde el **herramientas** menú en SQL Server Management Studio (SSMS).  Para obtener más información, vea [Database Engine Tuning Advisor](lesson-1-basic-navigation-in-database-engine-tuning-advisor.md#launch-database-tuning-advisor). Conectar a SQL Server en el **conectar al servidor** cuadro de diálogo.  
+2.  Inicie el Asistente para la optimización de motor de base de datos. Seleccione **Database Tuning Advisor** desde el **herramientas** menú en SQL Server Management Studio (SSMS).  Para más información, vea el [Asistente para la optimización de motor de base de datos](lesson-1-basic-navigation-in-database-engine-tuning-advisor.md#launch-database-tuning-advisor). Conectar a SQL Server en el **conectar al servidor** cuadro de diálogo.  
   
-3.  En el panel derecho de la GUI del Asistente para la optimización de motor de base de datos, escriba **MySession** en **Nombre de sesión**. 
+3.  En la pestaña **General** del panel derecho de la GUI del Asistente para la optimización de motor de base de datos, escriba **MySession** en **Nombre de sesión**. 
   
 4.  Seleccione **archivo** para su **carga de trabajo**y seleccione el icono de prismáticos para **buscar un archivo de carga de trabajo**. Busque el **MyScript.sql** archivo que guardó en el paso 1.  
 
    ![Buscar la secuencia de comandos que se guardó previamente](media/dta-tutorials/dta-script.png)
   
-5.  Seleccione AdventureWorks **en la lista Base de datos para análisis de carga de trabajo**, seleccione AdventureWorks **en la cuadrícula Seleccionar bases de datos y tablas para optimizar** y deje activada la opción Guardar registro de optimización **. **Base de datos para análisis de carga de trabajo** especifica la primera base de datos a la que se conecta el Asistente para la optimización de motor de base de datos al optimizar una carga de trabajo. Una vez iniciada la optimización, el Asistente para la optimización de motor de base de datos se conecta a las bases de datos especificadas en las instrucciones `USE DATABASE` que contiene la carga de trabajo.  
+5.  Seleccione AdventureWorks2017 en la lista **Base de datos para análisis de carga de trabajo**, seleccione AdventureWorks2017 en la cuadrícula **Seleccionar bases de datos y tablas para optimizar** y seleccione la opción **Guardar registro de optimización**. **Base de datos para análisis de carga de trabajo** especifica la primera base de datos a la que se conecta el Asistente para la optimización de motor de base de datos al optimizar una carga de trabajo. Una vez iniciada la optimización, el Asistente para la optimización de motor de base de datos se conecta a las bases de datos especificadas en las instrucciones `USE DATABASE` que contiene la carga de trabajo.  
 
   ![Opciones de DTA para la base de datos](media/dta-tutorials/dta-select-db.png)
   
 6.  Haga clic en la pestaña **Opciones de optimización** . En esta práctica, no configurará ninguna opción de optimización, pero tómese unos minutos para revisar las opciones predeterminadas. Presione F1 para ver la Ayuda para esta página con pestañas. Haga clic en **Opciones avanzadas** para ver opciones de optimización adicionales. Haga clic en **Ayuda** , en el cuadro de diálogo **Opciones avanzadas de optimización** , para obtener información sobre las opciones que aparecen. Haga clic en **Cancelar** para cerrar el cuadro de diálogo **Opciones avanzadas de optimización** , y deje seleccionadas las opciones predeterminadas.  
 
-  ![opciones de optimización](media/dta-tutorials/dta-tuning-options.png)
+  ![Opciones de optimización DTA](media/dta-tutorials/dta-tuning-options.png)
   
 7.  Haga clic en el botón **Iniciar análisis** de la barra de herramientas. Mientras el Asistente para la optimización de motor de base de datos analiza la carga de trabajo, puede supervisar el estado en la pestaña **Progreso** . Una vez se haya completado la optimización, aparecerá la pestaña **Recomendaciones**.  
   
@@ -126,13 +120,13 @@ Evaluar un subconjunto de recomendaciones de optimización puede ser necesario s
 La pestaña **Informes** , que se describe en la siguiente tarea de la lección, muestra más información sobre los resultados de optimización.  
 
 ## <a name="view-tuning-reports"></a>Ver informes de optimización
-Aunque es muy útil ver los scripts que pueden utilizarse para implementar los resultados de optimización, el Asistente para la optimización de motor de base de datos también ofrece varios informes muy útiles que podrá ver. Estos informes proporcionan información acerca de las estructuras de diseño físico existentes en la base de datos que está optimizando y acerca de las estructuras recomendadas. Los informes de optimización pueden verse haciendo clic en la pestaña **Informes** , tal y como se describe en la práctica siguiente.
+Aunque es útil ver los scripts que pueden utilizarse para implementar los resultados de optimización, el Asistente para la optimización de motor de base de datos también ofrece varios informes muy útiles que podrá ver. Estos informes proporcionan información acerca de las estructuras de diseño físico existentes en la base de datos que está optimizando y acerca de las estructuras recomendadas. Los informes de optimización pueden verse haciendo clic en la pestaña **Informes** , tal y como se describe en la práctica siguiente.
 
 
 1. Seleccione el **informes** ficha en el Asistente para la optimización de base de datos. 
 2. En el panel **Resumen de la optimización** , puede ver información acerca de esta sesión de optimización. Utilice la barra de desplazamiento para ver todo el contenido del panel. Observe las opciones **Porcentaje de mejora esperada** y **Espacio usado por la recomendación**. Es posible limitar el espacio utilizado por la recomendación al establecer las opciones de optimización. En la pestaña **Opciones de optimización** , seleccione **Opciones avanzadas**. Active **Definir espacio máximo para recomendaciones** y especifique el espacio máximo, en megabytes, que una configuración de recomendación puede usar. Use el botón **Atrás** del explorador de la Ayuda para volver a este tutorial. 
 
-    ![Resumen de la optimización](media/dta-tutorials/dta-tuning-summary.png)
+    ![Resumen de la optimización de DTA](media/dta-tutorials/dta-tuning-summary.png)
   
 3.  En el panel **Informes de optimización** , haga clic en **Informe de costo de instrucciones** en la lista **Seleccionar informe** . Si necesita más espacio para ver el informe, arrastre el borde del panel del **Monitor de sesión** hacia la izquierda. Cada instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecuta para una tabla en la base de datos tiene un costo de rendimiento asociado. Este costo de rendimiento puede reducirse creando índices efectivos en las columnas que se consultan frecuentemente en una tabla. Este informe muestra el porcentaje estimado de mejora entre el costo original que resulta de ejecutar una instrucción en la carga de trabajo y el costo que resultaría de implementar la recomendación de optimización. Observe que la cantidad de información que contiene el informe se basa en la longitud y complejidad de la carga de trabajo.  
 
@@ -149,7 +143,7 @@ Ha explorado la pestaña **Informes** de la GUI del Asistente para la optimizaci
 
 
  ## <a name="next-lesson"></a>Lección siguiente  
-[Lección 3: Usar la utilidad del símbolo del sistema dta](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
+[Lección 3: Usar la utilidad del símbolo del sistema DTA](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
    
   
   

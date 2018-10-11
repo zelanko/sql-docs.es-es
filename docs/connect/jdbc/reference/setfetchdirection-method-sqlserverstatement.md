@@ -1,13 +1,11 @@
 ---
-title: Método setFetchDirection (SQLServerStatement) | Documentos de Microsoft
+title: Método setFetchDirection (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.setFetchDirection
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 18176517-2fb3-4266-924d-0f01253083d2
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e52228afe441935952815a0070403ad9fe9be12f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f3c6e0080f4d94b0d792c1994695c590fd4fed66
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842850"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812343"
 ---
 # <a name="setfetchdirection-method-sqlserverstatement"></a>Método setFetchDirection (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Proporciona [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] una sugerencia sobre la dirección en qué resultado se deben procesar las filas del conjunto.  
+  Ofrece una sugerencia al [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sobre la dirección en la que se deben procesar las filas del conjunto de resultados.  
   
 > [!NOTE]  
 >  Actualmente, el controlador JDBC omite la sugerencia que proporcionada este método.  
@@ -44,7 +41,7 @@ public final void setFetchDirection(int nDir)
 #### <a name="parameters"></a>Parámetros  
  *nDir*  
   
- Un **int** que indica la dirección, que puede ser uno de los siguientes valores de procesamiento de fila:  
+ Un valor **int** que indica la dirección de procesamiento de las filas, que puede ser uno de los valores siguientes:  
   
  FETCH_FORWARD  
   
@@ -55,10 +52,10 @@ public final void setFetchDirection(int nDir)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método setFetchDirection especificado por el método setFetchDirection en la interfaz java.sql.Statement.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Clase SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

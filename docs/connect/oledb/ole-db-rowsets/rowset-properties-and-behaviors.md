@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rowsets [OLE DB], properties
@@ -19,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7c98299d1dc55a19d2199222ea3e639ae1e5d4bb
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 8c78c56d08535b5d9947b5bd215afaf2f8e23e44
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43037438"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754833"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Propiedades y comportamientos de conjuntos de filas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +36,7 @@ ms.locfileid: "43037438"
 |DBPROP_ACCESSORDER|L/E: lectura y escritura<br /><br /> Valor predeterminado: DBPROPVAL_AO_RANDOM<br /><br /> Descripción: orden de acceso; orden en que debe obtenerse acceso a las columnas en el conjunto de filas.<br /><br /> DBPROPVAL_AO_RANDOM: puede obtenerse acceso a las columnas en cualquier orden.<br /><br /> DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS: solamente puede obtenerse acceso a las columnas enlazadas como objetos de almacenamiento en el orden secuencial determinado por el ordinal de columna.<br /><br /> DBPROPVAL_AO_SEQUENTIAL: debe obtenerse acceso a todas las columnas en el orden secuencial determinado por el ordinal de columna.|  
 |DBPROP_APPENDONLY|Esta propiedad de conjunto de filas no está implementada por el controlador OLE DB para SQL Server. Al intentar leer o escribir el valor de propiedad, se genera un error.|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|L/E: solo lectura<br /><br /> Valor predeterminado: VARIANT_TRUE<br /><br /> Descripción: El controlador OLE DB para el bloque de objetos de almacenamiento de SQL Server mediante otros métodos de conjunto de filas.|  
-|DBPROP_BOOKMARKS DBPROP_LITERALBOOKMARKS|L/E: lectura y escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: el controlador OLE DB para SQL Server admite marcadores para la identificación de filas del conjunto de filas cuando DBPROP_BOOKMARKS o DBPROP_LITERALBOOKMARKS es VARIANT_TRUE.<br /><br /> Al establecer una de estas propiedades en VARIANT_TRUE no se habilita el posicionamiento por marcador del conjunto de filas. Establezca DBPROP_IRowsetLocate o DBPROP_IRowsetScroll en VARIANT_TRUE para crear un conjunto de filas que admita el posicionamiento por marcador del conjunto de filas.<br /><br /> El controlador OLE DB para SQL Server usa un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursor para admitir un conjunto de filas que contiene marcadores. Para obtener más información, vea [Conjuntos de filas y cursores de SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).<br /><br /> Si estas propiedades entran en conflicto con otras propiedades de definición de cursor del controlador OLE DB para SQL Server, se producirá un error. Por ejemplo, si DBPROP_BOOKMARKS se establece en VARIANT_TRUE cuando la propiedad DBPROP_OTHERINSERT también está establecida en VARIANT_TRUE, se genera un error cuando el consumidor intenta abrir un conjunto de filas.|  
+|DBPROP_BOOKMARKS DBPROP_LITERALBOOKMARKS|L/E: lectura y escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: el controlador OLE DB para SQL Server admite marcadores para la identificación de filas del conjunto de filas cuando DBPROP_BOOKMARKS o DBPROP_LITERALBOOKMARKS es VARIANT_TRUE.<br /><br /> Al establecer una de estas propiedades en VARIANT_TRUE no se habilita el posicionamiento por marcador del conjunto de filas. Establezca DBPROP_IRowsetLocate o DBPROP_IRowsetScroll en VARIANT_TRUE para crear un conjunto de filas que admita el posicionamiento por marcador del conjunto de filas.<br /><br /> El controlador OLE DB para SQL Server usa un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursor para admitir un conjunto de filas que contiene marcadores. Para obtener más información, vea [Conjuntos de filas y cursores de SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).<br /><br /> Nota: Si estas propiedades entran en conflicto con otras propiedades de definición de cursor del controlador OLE DB para SQL Server, se producirá un error. Por ejemplo, si DBPROP_BOOKMARKS se establece en VARIANT_TRUE cuando la propiedad DBPROP_OTHERINSERT también está establecida en VARIANT_TRUE, se genera un error cuando el consumidor intenta abrir un conjunto de filas.|  
 |DBPROP_BOOKMARKSKIPPED|L/E: solo lectura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: el controlador OLE DB para SQL Server devuelve DB_E_BADBOOKMARK si el consumidor indica un marcador no válido al colocar o buscar un conjunto de filas marcado.|  
 |DBPROP_BOOKMARKTYPE|L/E: solo lectura<br /><br /> Valor predeterminado: DBPROPVAL_BMK_NUMERIC<br /><br /> Descripción: El controlador OLE DB para SQL Server solamente implementa marcadores numéricos. Un controlador OLE DB para el marcador de SQL Server es el entero de 32 bits sin signo, tipo DBTYPE_UI4.|  
 |DBPROP_CACHEDEFERRED|Esta propiedad de conjunto de filas no está implementada por el controlador OLE DB para SQL Server. Al intentar leer o escribir el valor de propiedad, se genera un error.|  

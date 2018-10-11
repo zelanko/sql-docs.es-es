@@ -1,29 +1,26 @@
 ---
-title: Envío y recuperación de datos UTF-8 gracias a la compatibilidad integrada con UTF-8
+title: Envío y recuperación de datos UTF-8 gracias a la compatibilidad integrada con UTF-8 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - retrieving data, UTF-8 encoded data
 - converting data types
 - updating data
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfeb770ad5151216fecbf796851f7eb06da8545f
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: db9f2758c2df5585a4d9034df7b309ae4547e52c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786722"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633943"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>Cómo enviar y recuperar datos UTF-8 gracias a la compatibilidad integrada con UTF-8
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,10 +37,10 @@ Para enviar o recuperar datos codificados UTF-8 en el servidor, haga lo siguient
   
     Al especificar un juego de caracteres como parte de las opciones de conexión, el controlador da por hecho que las otras cadenas de conexión opción usan ese mismo juego de caracteres. También se da por hecho que las cadenas de nombre del servidor y consulta utilizan el mismo juego de caracteres.  
   
-Tenga en cuenta que puede transmitir UTF-8 o SQLSRV_ENC_CHAR a CharacterSet** (no se puede transmitir SQLSRV_ENC_BINARY). La codificación predeterminada es SQLSRV_ENC_CHAR.  
+Puede transmitir UTF-8 o SQLSRV_ENC_CHAR a **CharacterSet**,pero no se puede transmitir SQLSRV_ENC_BINARY. La codificación predeterminada es SQLSRV_ENC_CHAR.  
   
 ## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente se muestra cómo enviar y recuperar datos con codificación UTF-8 especificando el juego de caracteres UTF-8 al realizar la conexión. En el ejemplo se actualiza la columna Comentarios de la tabla Production.ProductReview para un id. de revisión especificado. En el ejemplo también se recuperan los datos actualizados recientemente y los muestra. Tenga en cuenta que la columna Comentarios es del tipo nvarcahr(3850).** Recuerde también que antes de enviar los datos al servidor se convierten a la codificación UTF-8 mediante la función PHP utf8_encode**. Esta operación se realiza únicamente con fines de demostración. En un escenario real de aplicaciones, comenzaría con UTF-8.  
+En el ejemplo siguiente se muestra cómo enviar y recuperar datos con codificación UTF-8 especificando el juego de caracteres UTF-8 al realizar la conexión. En el ejemplo se actualiza la columna Comentarios de la tabla Production.ProductReview para un id. de revisión especificado. En el ejemplo también se recuperan los datos actualizados recientemente y los muestra. Tenga en cuenta que la columna Comentarios es del tipo **nvarchar(3850).** Recuerde también que antes de enviar los datos al servidor se convierten a la codificación UTF-8 mediante la función PHP **utf8_encode**. Esta operación se realiza únicamente con fines de demostración. En un escenario real de aplicaciones, comenzaría con datos codificados en UTF-8.  
   
 En el ejemplo se da por hecho que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan al explorador cuando se ejecuta el ejemplo en el explorador.  
   

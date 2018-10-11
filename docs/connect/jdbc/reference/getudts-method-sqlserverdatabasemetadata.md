@@ -1,13 +1,11 @@
 ---
-title: Método getUDTs (SQLServerDatabaseMetaData) | Documentos de Microsoft
+title: Método getUDTs (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getUDTs
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c4396453-dcb0-4132-8325-06b3c7896b3b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f371dd21d1f64004d9e04c6e021ce6c67c269081
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f3cd97e796235e47ed1f3003ec5973fd6d6dda61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842000"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614920"
 ---
 # <a name="getudts-method-sqlserverdatabasemetadata"></a>Método getUDTs (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,32 +44,32 @@ public java.sql.ResultSet getUDTs(java.lang.String catalog,
 #### <a name="parameters"></a>Parámetros  
  *catalog*  
   
- A **cadena** que contiene el nombre del catálogo.  
+ Objeto **String** que contiene el nombre del catálogo.  
   
  *schemaPattern*  
   
- A **cadena** que contiene el patrón de nombre de esquema.  
+ Objeto **String** que contiene el modelo de nombre del esquema.  
   
  *typeNamePattern*  
   
- A **cadena** que contiene el patrón de nombre de tipo.  
+ Un objeto **String** que contiene el patrón de nombre de tabla.  
   
- *Tipos de*  
+ *types*  
   
  Una matriz de valores int que contiene los tipos de datos que se van a incluir. El valor NULL indica que todos los tipos deberían estar incluidos.  
   
 ## <a name="return-value"></a>Valor devuelto  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.  
+ Objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
- Este método getUDTs especificado por el método getUDTs en la interfaz java.sql.DatabaseMetaData.  
+## <a name="remarks"></a>Notas  
+ El método getUDTs especifica este método getUDTs en la interfaz java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
- [Miembros de SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
+ [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   

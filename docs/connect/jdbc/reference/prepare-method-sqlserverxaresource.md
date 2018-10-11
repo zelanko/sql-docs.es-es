@@ -1,13 +1,11 @@
 ---
-title: Método Prepare (SQLServerXAResource) | Documentos de Microsoft
+title: Método Prepare (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerXAResource.prepare
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: f800c966-3fae-41b3-963a-464988f80da3
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8ed9542ce0f81f477c5626b54ce79f846b5b74a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5a16d143266823b9455c306cefa37c9a7618524d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839520"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47743653"
 ---
 # <a name="prepare-method-sqlserverxaresource"></a>Método prepare (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Solicitudes que prepara el Administrador de recursos para una confirmación de transacción de la transacción especificada por el objeto Xid dado.  
+  Solicita que el administrador de recursos prepara para una confirmación de la transacción especificada por objeto Xid determinado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -49,12 +46,12 @@ public int prepare(javax.transaction.xa.Xid xid)
 ## <a name="exceptions"></a>Excepciones  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Comentarios  
- Este método preparación especificado por el método de preparación de la interfaz javax.transaction.xa.XAResource.  
+## <a name="remarks"></a>Notas  
+ El método prepare especifica este método prepare en la interfaz javax.transaction.xa.XAResource.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Métodos SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   
- [Miembros de SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
+ [Miembros SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
  [Clase SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  
   
   

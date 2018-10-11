@@ -1,35 +1,32 @@
 ---
-title: Miembros SQLServerClob | Documentos de Microsoft
+title: Miembros SQLServerClob | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: Assembly
 ms.assetid: 7db785ca-edd5-4833-8053-17fdbf87279a
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e81a9bb20fe94cdd1c51c6ed2fcaad3bf2704793
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b77219ffbd397b830e1706a84ce5b7ae00aaa6e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846800"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736723"
 ---
 # <a name="sqlserverclob-members"></a>Miembros SQLServerClob
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Las tablas siguientes enumeran los miembros expuestos por el [SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md) clase.  
+  En las siguientes tablas se enumeran los miembros que expone la clase [SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md).  
   
 ## <a name="constructors"></a>Constructores  
   
-|Nombre|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
 |[SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md)|Inicializa una nueva instancia de la clase SQLServerClob.|  
   
@@ -41,9 +38,9 @@ ms.locfileid: "32846800"
   
 ## <a name="methods"></a>Métodos  
   
-|Nombre|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[Libre](../../../connect/jdbc/reference/free-method-sqlserverclob.md)|Este método libera el objeto CLOB y los recursos que contiene.|  
+|[free](../../../connect/jdbc/reference/free-method-sqlserverclob.md)|Este método libera el objeto CLOB y los recursos que contiene.|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverclob.md)|Materializa el objeto Clob como un flujo ASCII.|  
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverclob.md)|Devuelve los datos de Clob como un objeto java.io.Reader o como un flujo de caracteres.|  
 |[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlserverclob.md)|Devuelve una copia de la subcadena especificada en el objeto Clob según la posición de inicio indicada y el número de caracteres que se van a copiar.|  
@@ -60,7 +57,7 @@ ms.locfileid: "32846800"
 |--------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Clase SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md)  
   
   

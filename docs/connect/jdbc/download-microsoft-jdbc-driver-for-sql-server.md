@@ -5,21 +5,18 @@ ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f354c557aaa44633f15640458138678ee18dfab
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 3b05ad276374427e13fcbca2cca2bd577d582451
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39459479"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710563"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Descarga de Microsoft JDBC Driver para SQL Server
 
@@ -43,6 +40,6 @@ El controlador JDBC puede agregarse a un proyecto de Maven, éste se agrega como
  * [Microsoft JDBC Driver 4.1 para SQL Server](http://go.microsoft.com/fwlink/?linkid=841533) 
   
 ## <a name="unsupported-drivers"></a>Controladores no compatibles  
-Las versiones de controladores no compatibles no están disponibles para descargarse aquí. Estamos trabajando continuamente para mejorar la compatibilidad con la conectividad de Java. Por lo tanto se recomienda encarecidamente trabajar con la versión más reciente del controlador JDBC de Microsoft.  
+Las versiones de controladores no compatibles no están disponibles para descargarse aquí. Estamos trabajando continuamente para mejorar la compatibilidad con la conectividad de Java. Por tanto, se recomienda encarecidamente trabajar con la versión más reciente de Microsoft JDBC Driver.  
   
   

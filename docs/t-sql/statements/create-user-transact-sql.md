@@ -5,9 +5,7 @@ ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WITHOUT_LOGIN_TSQL
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - users [SQL Server]
 ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
-caps.latest.revision: 111
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5e044f1555019aca5f50694f1367ee79b6237cc
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 533622016967deef4f1fbcb4ead0c17975910899
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43094859"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618093"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -165,7 +162,7 @@ CREATE USER user_name
  Especifica el nombre por el que se identifica al usuario en esta base de datos. *user_name* es **sysname**. Puede tener una longitud máxima de 128 caracteres. Cuando se crea un usuario basado en una entidad de seguridad de Windows, el nombre de esta entidad se convierte en el nombre de usuario a menos que se especifique otro nombre de usuario.  
   
  LOGIN *login_name*  
- Especifica el inicio de sesión para el que se crea el usuario de base de datos. *login_name* debe ser un inicio de sesión válido en el servidor. Puede ser un inicio de sesión basado en una entidad de seguridad de Windows (usuario o grupo) o un inicio de sesión con autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando este inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se introduce en la base de datos adquiere el nombre y el identificador del usuario de la base de datos que se está creando. Cuando cree un inicio de sesión asignado a una entidad de seguridad de Windows, use el formato **[***\<domainName>***\\***\<loginName>***]**. Para obtener ejemplos, vea [Resumen de la sintaxis](#SyntaxSummary).  
+ Especifica el inicio de sesión para el que se crea el usuario de base de datos. *login_name* debe ser un inicio de sesión válido en el servidor. Puede ser un inicio de sesión basado en una entidad de seguridad de Windows (usuario o grupo) o un inicio de sesión con autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando este inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se introduce en la base de datos adquiere el nombre y el identificador del usuario de la base de datos que se está creando. Cuando cree un inicio de sesión asignado a una entidad de seguridad de Windows, use el formato **[**_\<domainName\>_**\\**_\<loginName\>_**]**. Para obtener ejemplos, vea [Resumen de la sintaxis](#SyntaxSummary).  
   
  Si la instrucción CREATE USER es la única instrucción en un lote SQL, SQL Database de Microsoft Azure admite la cláusula WITH LOGIN. Si la instrucción CREATE USER no es la única instrucción en un lote SQL ni se ejecuta en SQL dinámico, la cláusula WITH LOGIN no se admite.  
   
@@ -173,7 +170,7 @@ CREATE USER user_name
  Especifica el primer esquema donde buscará el servidor cuando resuelva los nombres de objetos de este usuario de base de datos.  
   
  '*windows_principal*'  
- Especifica la entidad de seguridad de Windows para la que se crea el usuario de base de datos. *windows_principal* puede ser un usuario de Windows o un grupo de Windows. El usuario se creará aunque el parámetro *windows_principal* no disponga de inicio de sesión. Cuando se conecte a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el parámetro *windows_principal* no dispone de inicio de sesión, la entidad de seguridad de Windows se debe autenticar en [!INCLUDE[ssDE](../../includes/ssde-md.md)] mediante la pertenencia a un grupo de Windows que disponga de inicio de sesión o la cadena de conexión debe especificar la base de datos independiente como el catálogo inicial. Al crear un usuario desde una entidad de seguridad de Windows, use el formato **[***\<domainName>***\\***\<loginName>***]**. Para obtener ejemplos, vea [Resumen de la sintaxis](#SyntaxSummary). Los usuarios basados en usuarios de Active Directory se limitan a nombres de menos de 21 caracteres.    
+ Especifica la entidad de seguridad de Windows para la que se crea el usuario de base de datos. *windows_principal* puede ser un usuario de Windows o un grupo de Windows. El usuario se creará aunque el parámetro *windows_principal* no disponga de inicio de sesión. Cuando se conecte a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el parámetro *windows_principal* no dispone de inicio de sesión, la entidad de seguridad de Windows se debe autenticar en [!INCLUDE[ssDE](../../includes/ssde-md.md)] mediante la pertenencia a un grupo de Windows que disponga de inicio de sesión o la cadena de conexión debe especificar la base de datos independiente como el catálogo inicial. Al crear un usuario desde una entidad de seguridad de Windows, use el formato **[**_\<domainName\>_**\\**_\<loginName\>_**]**. Para obtener ejemplos, vea [Resumen de la sintaxis](#SyntaxSummary). Los usuarios basados en usuarios de Active Directory se limitan a nombres de menos de 21 caracteres.    
   
  '*Azure_Active_Directory_principal*'  
  **Se aplica a**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  

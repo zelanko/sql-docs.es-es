@@ -5,19 +5,17 @@ ms.date: 03/21/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: craigg
-ms.openlocfilehash: 8924fa356b10264bb3116bd1eb40e8fdc94d7334
-ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
+ms.openlocfilehash: 034efe241bb948c1e5739247e481a4057b0d7219
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020699"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838183"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Atributos y palabras clave de cadena de conexión y DSN
 
@@ -25,7 +23,7 @@ Esta página enumera las palabras clave para las cadenas de conexión y DSN y lo
 
 
 
-## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>Atributos y palabras clave de cadena de conexión de DSN
+## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>Palabras clave de cadena de conexión o DSN y los atributos de conexión admitidos
 
 En la tabla siguiente se enumera las palabras clave disponibles y los atributos para cada plataforma (L: Linux; M: Mac; W: Windows). Haga clic en la palabra clave o un atributo para obtener más detalles.
 
@@ -125,7 +123,7 @@ Estas son algunas palabras clave de cadena de conexión y los atributos de conex
 
 ### <a name="description"></a>Descripción
 
-Proporcione el texto usado para describir el origen de datos.
+Se utiliza para describir el origen de datos.
 
 ### <a name="sqlcoptssansioem"></a>SQL_COPT_SS_ANSI_OEM
 
@@ -133,12 +131,12 @@ Controles de ANSI para la conversión de datos de OEM.
 
 | Valor del atributo | Descripción |
 |-|-|
-| SQL_AO_OFF | Cuando es "no", no se realiza la traducción de caracteres. |
-| SQL_AO_ON | No se realiza ninguna animación |
+| SQL_AO_OFF | (Valor predeterminado) No se realiza la traducción. |
+| SQL_AO_ON | Se realiza la traducción. |
 
 ### <a name="sqlcoptssfallbackconnect"></a>SQL_COPT_SS_FALLBACK_CONNECT
 
-Controla el uso de conexiones de SQL Server reserva. DSO ya no es compatible.
+Controla el uso de conexiones de SQL Server reserva. Ésta ya no se admite.
 
 | Valor del atributo | Descripción |
 |-|-|
@@ -147,11 +145,11 @@ Controla el uso de conexiones de SQL Server reserva. DSO ya no es compatible.
 
 
 
-## <a name="new-connection-string-keywords-and-connection-attributes"></a>Atributos y palabras clave de cadena de conexión de DSN
+## <a name="new-connection-string-keywords-and-connection-attributes"></a>Nuevas palabras clave de cadena de conexión y los atributos de conexión
 
 ###  <a name="authentication---sqlcoptssauthentication"></a>Autenticación: SQL_COPT_SS_AUTHENTICATION
 
-Establece el modo de autenticación que se utilizará al conectarse a SQL Server. Para obtener más información, vea [Conexión a Base de datos SQL o a Almacenamiento de datos SQL mediante autenticación de Azure Active Directory](using-azure-active-directory.md).
+Establece el modo de autenticación que se utilizará al conectarse a SQL Server. Consulte [mediante Azure Active Directory](using-azure-active-directory.md) para obtener más información.
 
 | Valor de palabra clave | Valor del atributo | Descripción |
 |-|-|-|
@@ -164,11 +162,11 @@ Establece el modo de autenticación que se utilizará al conectarse a SQL Server
 
 ### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
 
-Controla el cifrado transparente de columna (Always Encrypted). Para obtener más información, vea [Uso de Always Encrypted con ODBC Driver](using-always-encrypted-with-the-odbc-driver.md).
+Controla el cifrado transparente de columna (Always Encrypted). Consulte [utilizando cifrado siempre (ODBC)](using-always-encrypted-with-the-odbc-driver.md) para obtener más información.
 
 | Valor de palabra clave | Valor del atributo | Descripción |
 |-|-|-|
-|Habilitado|SQL_CE_ENABLED|Always Encrypted|
+|Habilitado|SQL_CE_ENABLED|Habilita siempre cifrado.|
 |Deshabilitado|SQL_CE_DISABLED|(Valor predeterminado) Deshabilita siempre cifrado.|
 | |SQL_CE_RESULTSETONLY|Habilita el descifrado solo (los resultados y valores devueltos).|
 
@@ -178,7 +176,7 @@ Intentos de los controles de la característica de resolución de direcciones IP
 
 | Valor de palabra clave | Valor del atributo| Descripción |
 |-|-|-|
-|Sí|SQL_IS_ON|Uso de resolución de IP de red transparente|
+|Sí|SQL_IS_ON|(Predeterminado) Habilita la resolución de IP de red transparente.|
 |no|SQL_IS_OFF|Deshabilita la resolución de IP de red transparente.|
 
 ### <a name="usefmtonly"></a>UseFMTONLY
@@ -192,16 +190,16 @@ Controla el uso de SET FMTONLY para los metadatos cuando se conecta a SQL Server
 
 ### <a name="sqlcoptssaccesstoken"></a>SQL_COPT_SS_ACCESS_TOKEN
 
-Permite el uso de un token de acceso de Azure Active Directory para la autenticación. Para obtener más información, vea [Conexión a Base de datos SQL o a Almacenamiento de datos SQL mediante autenticación de Azure Active Directory](using-azure-active-directory.md).
+Permite el uso de un token de acceso de Azure Active Directory para la autenticación. Consulte [mediante Azure Active Directory](using-azure-active-directory.md) para obtener más información.
 
 | Valor del atributo | Descripción |
 |-|-|
 | NULL | (Valor predeterminado) No se proporciona ningún token de acceso. |
-| ACCESSTOKEN* | Obtener un token de acceso. |
+| ACCESSTOKEN* | Puntero a un token de acceso. |
 
 ### <a name="sqlcoptsscekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
 
-Se comunica con una biblioteca de proveedor de almacén de claves de carga. Vea controles del cifrado transparente de columna (Always Encrypted). provider_name no tiene valor predeterminado. Consulte [proveedores de almacén de claves personalizados](custom-keystore-providers.md) para obtener más información.
+Se comunica con una biblioteca de proveedor de almacén de claves de carga. Vea controles del cifrado transparente de columna (Always Encrypted). Este atributo tiene ningún valor predeterminado. Consulte [proveedores de almacén de claves personalizados](custom-keystore-providers.md) para obtener más información.
 
 | Valor del atributo | Descripción |
 |-|-|
@@ -209,7 +207,7 @@ Se comunica con una biblioteca de proveedor de almacén de claves de carga. Vea 
 
 ### <a name="sqlcoptsscekeystoreprovider"></a>SQL_COPT_SS_CEKEYSTOREPROVIDER
 
-Carga una biblioteca de proveedor de almacén de claves de Always Encrypted o recupera los nombres de bibliotecas de proveedor de almacén de claves de carga. Consulte [proveedores de almacén de claves personalizados](custom-keystore-providers.md) para obtener más información. provider_name no tiene valor predeterminado.
+Carga una biblioteca de proveedor de almacén de claves de Always Encrypted o recupera los nombres de bibliotecas de proveedor de almacén de claves de carga. Consulte [proveedores de almacén de claves personalizados](custom-keystore-providers.md) para obtener más información. Este atributo tiene ningún valor predeterminado.
 
 | Valor del atributo | Descripción |
 |-|-|

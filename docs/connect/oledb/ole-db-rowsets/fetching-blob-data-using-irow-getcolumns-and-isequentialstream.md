@@ -1,15 +1,12 @@
 ---
-title: 'Capturar datos BLOB mediante IRow:: GetColumns e ISequentialStream'
-description: 'Capturar datos BLOB mediante IRow:: GetColumns e ISequentialStream'
+title: Captura de datos BLOB mediante IRow::GetColumns e ISequentialStream | Microsoft Docs
+description: Capturar datos BLOB mediante IRow::GetColumns e ISequentialStream
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - fetching BLOB data
@@ -19,19 +16,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 33a2481801b3c5ce7aa731a66ae8cb311a1c93ec
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 381c7b9f657d89dee12f49aced3b0bf4857170e0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43025901"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770103"
 ---
 # <a name="fetching-blob-data-using-irowgetcolumns-and-isequentialstream"></a>Capturar datos BLOB mediante IRow::GetColumns e ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  La función siguiente utiliza IRow::GetColumns **e ISequentialStream** para capturar datos grandes:  
+  La función siguiente utiliza **IRow::GetColumns** e **ISequentialStream** para capturar datos grandes:  
   
 ```  
 void InitializeAndExecuteCommand()  

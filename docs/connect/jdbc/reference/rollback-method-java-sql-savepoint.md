@@ -1,13 +1,11 @@
 ---
-title: Método Rollback (java.sql.Savepoint) | Documentos de Microsoft
+title: Método Rollback (java.sql.Savepoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.rollback (java.sql.Savepoint)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: d5dbd9ef-194f-4130-bfcc-7901a4fa8ded
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94d600baca8089496b29fbc136f756cca878ab1e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 255f8ff45c4f904fc3fe0b0c864c188acd3adbf4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840716"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650053"
 ---
 # <a name="rollback-method-javasqlsavepoint"></a>Método rollback (java.sql.Savepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Deshace todos los cambios realizados después de la determinada [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) se estableció el objeto.  
+  Deshace todos los cambios realizados una vez se haya establecido el objeto [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,21 +36,21 @@ public void rollback(java.sql.Savepoint s)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *S*  
+ *s*  
   
  El objeto de punto de retorno a revertir.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
- Este método de reversión es especificado por el método rollBack en la interfaz java.sql.Connection.  
+## <a name="remarks"></a>Notas  
+ Este método rollBack es especificado por el método rollBack de la interfaz java.sql.Connection.  
   
  Este método se debería utilizar solamente cuando el modo de confirmación automática esté deshabilitado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Método Rollback &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)   
- [Miembros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
+ [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Clase SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   

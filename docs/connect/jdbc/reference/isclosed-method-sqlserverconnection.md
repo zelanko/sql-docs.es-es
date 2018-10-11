@@ -1,13 +1,11 @@
 ---
-title: isClosed (método) (SQLServerConnection) | Documentos de Microsoft
+title: Método isClosed (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.isClosed
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 3560ab18-4350-4d02-9716-439f0c2f7142
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94028c26ce5f2a7d43db72f9874e37dc68ec6877
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 508b3d1fe22ff58e91865204d6b74822ba6f5763
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839840"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47647635"
 ---
-# <a name="isclosed-method-sqlserverconnection"></a>isClosed (método) (SQLServerConnection)
+# <a name="isclosed-method-sqlserverconnection"></a>Método isClosed (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Indica si este [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) objeto se ha cerrado.  
+  Indica si se ha cerrado este objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,13 +41,13 @@ public boolean isClosed()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
- Este método isClosed es especificado por el método isClosed en la interfaz java.sql.Connection.  
+## <a name="remarks"></a>Notas  
+ Este método isClosed especificado por el método isClosed en la interfaz java.sql.Connection.  
   
- Comprueba el estado del objeto SQLServerConnection que se llama. Se cierra una conexión si la [cerrar](../../../connect/jdbc/reference/close-method-sqlserverconnection.md) método se ha llamado en ella, o si se han producido ciertos errores irrecuperables. Este método devolverá **true** sólo cuando se llama después de haber llamado al método close.  
+ Comprueba el estado del objeto SQLServerConnection llamado. Una conexión está cerrada si se ha llamado en ella al método [close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md) o si se han producido ciertos errores irrecuperables. Este método devolverá el valor **true** solo cuando se ha llamado tras llamar al método close.  
   
-## <a name="see-also"></a>Vea también  
- [Miembros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
+## <a name="see-also"></a>Ver también  
+ [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Clase SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   

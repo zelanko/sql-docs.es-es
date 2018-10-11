@@ -1,5 +1,7 @@
 items:
-- name: SQL Server Machine Learning
+- name: Documentación de las extensiones de aprendizaje automático y programación de SQL Server
+  href: index.md
+- name: Extensiones de aprendizaje automático (R, Python)
   items:
   - name: Machine Learning Services (R, Python)
     href: what-is-sql-server-machine-learning.md
@@ -9,8 +11,20 @@ items:
     href: r/r-server-standalone.md
   - name: What's New
     href: what-s-new-in-sql-server-machine-learning-services.md
+- name: Extensión de Java
+  items:
+  - name: Ejecución de código de Java en SQL
+    href: java/extension-java.md
+  - name: Cómo llamar a Java desde SQL
+    href: java/howto-call-java-from-sql.md
+  - name: Ejemplo de Java
+    href: java/java-first-sample.md
+  - name: Tipos de datos de SQL y Java
+    href: java/java-sql-datatypes.md
 - name: Install
   items:
+  - name: Diferencias en SQL Server de 2019
+    href: install/sql-machine-learning-services-ver15.md
   - name: Machine Learning Services (R, Python)
     href: install/sql-machine-learning-services-windows-install.md
   - name: R Services
@@ -24,7 +38,7 @@ items:
     items:
     - name: Descargas de CAB (programa de instalación sin conexión)
       href: install/sql-ml-cab-downloads.md
-  - name: Instalación del símbolo del sistema
+  - name: Configuración del símbolo del sistema
     href: install/sql-ml-component-commandline-install.md
   - name: Actualización R y Python
     href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
@@ -54,6 +68,8 @@ items:
   - name: R
     href: tutorials/sql-server-r-tutorials.md
     items:
+    - name: Creación de modelos basados en particiones
+      href: tutorials/r-tutorial-create-models-per-partition.md
     - name: Información sobre análisis en base de datos
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
@@ -156,35 +172,37 @@ items:
     href: concepts/extension-r.md
   - name: Extensión de Python
     href: concepts/extension-python.md
-- name: Procedimientos
+- name: Guías de procedimientos
   href: r/sql-server-machine-learning-tasks.md
   items:
   - name: Administración de paquetes
     items:
-    - name: Paquetes predeterminados
-      href: r/installing-and-managing-r-packages.md
-    - name: Obtención de información del paquete
-      href: r/determine-which-packages-are-installed-on-sql-server.md
-    - name: Instalación de paquetes de Python adicionales
-      href: python/install-additional-python-packages-on-sql-server.md
-    - name: Instalación de paquetes de R adicionales
-      href: r/install-additional-r-packages-on-sql-server.md
+    - name: Administración de paquetes
       items:
-      - name: Uso de administradores de paquetes de R
-        href: r/use-r-package-managers-on-sql-server.md
-      - name: Uso de T-SQL
-        href: r/install-r-packages-tsql.md
-      - name: Uso de RevoScaleR
-        href: r/use-revoscaler-to-manage-r-packages.md
+      - name: Paquetes predeterminados
+        href: r/installing-and-managing-r-packages.md
+      - name: Obtención de información del paquete
+        href: r/determine-which-packages-are-installed-on-sql-server.md
+      - name: Instalación de paquetes de Python adicionales
+        href: python/install-additional-python-packages-on-sql-server.md
+      - name: Instalación de paquetes de R adicionales
+        href: r/install-additional-r-packages-on-sql-server.md
         items:
-        - name: Habilitación de la administración de paquetes de R remota
-          href: r/r-package-how-to-enable-or-disable.md
-        - name: Sincronización de paquetes de R
-          href: r/package-install-uninstall-and-sync.md
-      - name: Creación de un repositorio de miniCRAN
-        href: r/create-a-local-package-repository-using-minicran.md
-      - name: Sugerencias para usar paquetes de R
-        href: r/packages-installed-in-user-libraries.md
+        - name: Uso de administradores de paquetes de R
+          href: r/use-r-package-managers-on-sql-server.md
+        - name: Uso de T-SQL
+          href: r/install-r-packages-tsql.md
+        - name: Uso de RevoScaleR
+          href: r/use-revoscaler-to-manage-r-packages.md
+          items:
+          - name: Habilitación de la administración de paquetes de R remota
+            href: r/r-package-how-to-enable-or-disable.md
+          - name: Sincronización de paquetes de R
+            href: r/package-install-uninstall-and-sync.md
+        - name: Creación de un repositorio de miniCRAN
+          href: r/create-a-local-package-repository-using-minicran.md
+        - name: Sugerencias para usar paquetes de R
+          href: r/packages-installed-in-user-libraries.md
   - name: Modelado y exploración de datos
     items:
     - name: Bibliotecas de R y tipos de datos
@@ -195,7 +213,7 @@ items:
       href: r/data-exploration-and-predictive-modeling-with-r.md
     - name: Cargar objetos de R mediante ODBC
       href: r/save-and-load-r-objects-from-sql-server-using-odbc.md
-    - name: Convertir el código de R para usarlo en Machine Learning Services
+    - name: Conversión del código de R para usarlo en Machine Learning Services
       href: r/converting-r-code-for-use-in-sql-server.md
     - name: Crear varios modelos mediante rxExecBy
       href: r/creating-multiple-models-using-rxexecby.md
@@ -213,25 +231,25 @@ items:
       href: sql-native-scoring.md
   - name: Rendimiento
     items:
-    - name: 'Optimización del rendimiento de R: Información general'
+    - name: Introducción a la optimización del rendimiento en R
       href: r/sql-server-r-services-performance-tuning.md
-    - name: 'Optimización del rendimiento de R: Configuración de SQL Server'
+    - name: Configuración del servidor de optimización del rendimiento
       href: r/sql-server-configuration-r-services.md
-    - name: 'Optimización del rendimiento de R: R y optimización de datos'
+    - name: 'Optimización del rendimiento: optimización de datos en R'
       href: r/r-and-data-optimization-r-services.md
-    - name: 'Optimización del rendimiento de R: Resultados'
+    - name: 'Optimización del rendimiento: resultados en R'
       href: r/performance-case-study-r-services.md
     - name: Usar las funciones de generación de perfiles de código de R
       href: r/using-r-code-profiling-functions.md
   - name: Seguridad
     items:
-    - name: Consideraciones de seguridad para el tiempo de ejecución de R en SQL Server
+    - name: Consideraciones relativas a la seguridad
       href: r/security-considerations-for-the-r-runtime-in-sql-server.md
     - name: Seguridad para R
       href: r/security-overview-sql-server-r.md
-    - name: Seguridad de Python
+    - name: Seguridad para Python
       href: python/security-overview-sql-server-python-services.md
-    - name: Cuenta de servicio de SQL Server Launchpad
+    - name: Cuenta de SQL Server Launchpad
       href: general/sql-server-launchpad-service-account.md
     - name: Modificar SQLRUserGroup
       href: r/modify-the-user-account-pool-for-sql-server-r-services.md
@@ -257,25 +275,32 @@ items:
       href: xe-event-predict-tsql.md
     - name: DMV de Machine Learning Services
       href: r/dmvs-for-sql-server-r-services.md
+    - name: DMV para Python
+      href: python/dmvs-for-python.md
     - name: Uso de funciones de generación de perfiles de código de R
       href: r/using-r-code-profiling-functions.md
     - name: Supervisar Machine Learning Services con informes personalizados en Management Studio
       href: r/monitor-r-services-using-custom-reports-in-management-studio.md
-- name: Referencia de paquete
+- name: Referencia
   href: r/machine-learning-services-r-reference.md
   items:
-  - name: MicrosoftML en SQL
-    href: using-the-microsoftml-package.md
-  - name: RevoScaleR en SQL
-    href: r/revoscaler-overview.md
-  - name: Lista de funciones de RevoScaleR para los datos de SQL Server
-    href: r/scaler-functions-for-working-with-sql-server-data.md
-  - name: sqlrutils en SQL
-    href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
-  - name: olapR en SQL
-    href: r/how-to-create-mdx-queries-using-olapr.md
-  - name: revoscalepy en SQL
-    href: python/what-is-revoscalepy.md
+  - name: Paquetes de R
+    href: r/machine-learning-services-r-reference.md
+    items:
+    - name: olapR en SQL
+      href: r/how-to-create-mdx-queries-using-olapr.md
+    - name: MicrosoftML en SQL
+      href: using-the-microsoftml-package.md
+    - name: RevoScaleR en SQL
+      href: r/revoscaler-overview.md
+    - name: Lista de funciones de RevoScaleR para los datos de SQL Server
+      href: r/scaler-functions-for-working-with-sql-server-data.md
+    - name: sqlrutils en SQL
+      href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
+  - name: Paquetes de Python
+    items:
+    - name: revoscalepy en SQL
+      href: python/what-is-revoscalepy.md
 - name: Recursos
   items:
   - name: Problemas conocidos
@@ -307,9 +332,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 586fef64334a24e58825de6f3dd9e3073541dd7c
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: a260cd92015fbbf8864f24ee1091fff86e892a00
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888871"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713707"

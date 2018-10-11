@@ -1,13 +1,11 @@
 ---
-title: Método getFailoverPartner (SQLServerDataSource) | Documentos de Microsoft
+title: Método getFailoverPartner (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDataSource.getFailoverPartner
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 885f927f-9c48-42e0-a7fb-fd936d2b8130
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7633fd2fe5137ee7c04bf10ebe0c40b367c35f64
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 39195742d8b6a2a03b0b2c835f47d0ba42735791
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833980"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730463"
 ---
 # <a name="getfailoverpartner-method-sqlserverdatasource"></a>Método getFailoverPartner (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Devuelve el nombre del servidor de conmutación por error que se utiliza en una configuración de creación de reflejo de la base de datos.  
+  Devuelve el nombre del servidor de conmutación por error que se usa en la configuración de la creación de reflejo de la base de datos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,12 +36,12 @@ public string getFailoverPartner()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- A **cadena** que contiene el nombre del asociado de conmutación por error, o null si no se establece ninguno.  
+ Un valor **String** que contiene el nombre del asociado de conmutación por error o el valor NULL si no se establece ninguno.  
   
-## <a name="remarks"></a>Comentarios  
- El valor devuelto por este método refleja utilizando del espacio de nombre de asociado de conmutación por error el [setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md) método.  
+## <a name="remarks"></a>Notas  
+ El valor que devuelve este método refleja el conjunto de nombres del asociado de conmutación por error mediante el método [setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Clase SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

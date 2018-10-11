@@ -4,21 +4,19 @@ ms.custom: ''
 ms.date: 10/30/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 79e09b64fc044aaa6da89f34a4fa81d892fc6c5f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 28dfb353d20f67d8adae6f38857b7ffb707ad107
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041013"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653461"
 ---
 # <a name="sql-server-2017-release-notes"></a>Notas de la versión de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -30,6 +28,9 @@ En este artículo se describen las limitaciones y los problemas de SQL Server 20
 **Probar SQL Server**
 - [![Descargar desde el Centro de evaluación](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Descargar SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Creación de una máquina virtual](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Poner en marcha una máquina virtual con SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+
+> [!NOTE]
+> Ahora está disponible la versión preliminar de SQL Server 2019. Para obtener más información, consulte [Novedades de SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15).
 
 ## <a name="sql-server-2017---general-availability-release-october-2017"></a>SQL Server de 2017: versión de disponibilidad general (octubre de 2017)
 ### <a name="database-engine"></a>Motor de base de datos
@@ -122,7 +123,7 @@ No hay notas de la versión de SQL Server en Windows relacionadas con esta versi
 - **Solución alternativa:** para solucionar este problema y corregir una aplicación que depende de la versión v13 de los ensamblados, siga estos pasos:
 
    1. Vaya a **Agregar o quitar programas**.
-   2. Busque *Servicio de lenguaje T-SQL de Microsoft SQL Server vNext CTP2.1*, haga clic en él con el botón derecho y seleccione **Desinstalar**.
+   2. Busque *Microsoft SQL Server 2019 T-SQL Language Service CTP2.1*, haga clic en él con el botón derecho y seleccione **Desinstalar**.
    3. Después de quitar el componente, repare la aplicación que se interrumpe o vuelva a instalar la versión adecuada de *TSqlLanguageService.MSI*.
 
    Esta solución quitará la versión v14 de esos ensamblados, por lo que dejarán de funcionar todas las aplicaciones que dependan de las versiones v14. Si se necesitan esos ensamblados, es necesario realizar una instalación independiente sin ninguna instalación en paralelo de 2016.

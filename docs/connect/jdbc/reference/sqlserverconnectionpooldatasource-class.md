@@ -1,25 +1,22 @@
 ---
-title: Clase SQLServerConnectionPoolDataSource | Documentos de Microsoft
+title: Clase SQLServerConnectionPoolDataSource | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b00e5a90-2af7-4d04-8ef8-256183777dcf
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fdbe0150749782416eda8d713224df097a68f43a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 416f9dd730bd1cc085f8a48d1b748584037d1b65
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845910"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692283"
 ---
 # <a name="sqlserverconnectionpooldatasource-class"></a>Clase SQLServerConnectionPoolDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,11 +36,11 @@ ms.locfileid: "32845910"
 public class SQLServerConnectionPoolDataSource  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- SQLServerConnectionPoolDataSource se utiliza normalmente en entornos de servidor de aplicaciones Java que admiten la agrupación de conexiones integradas y requieren un ConnectionPoolDataSource proporcionar conexiones físicas, como Java Platform, Enterprise Edition (Java Los servidores de aplicaciones EE) que proporcionan las API de JDBC 3.0 de especificaciones agrupación de conexiones.  
+## <a name="remarks"></a>Notas  
+ SQLServerConnectionPoolDataSource se utiliza normalmente en entornos de servidores de aplicación Java que admiten la agrupación de conexiones integradas y requieren ConnectionPoolDataSource para proporcionar conexiones físicas, como Java Platform, servidores de aplicación de Enterprise Edition (Java EE) que proporcionen agrupaciones de conexiones de las especificaciones de la API de JDBC 3.0.  
   
-## <a name="see-also"></a>Vea también  
- [Miembros de SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-members.md)   
+## <a name="see-also"></a>Ver también  
+ [Miembros SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-members.md)   
  [Referencia de API del controlador JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4938666c0a8a23aca2760b55d94bc3d7e03947f3
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6e3501dc7245d583c0fa30e6c50aabcdd9e2e5e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086287"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669883"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Tutorial: Ampliar la compilación del proyecto de base de datos para generar estadísticas de modelo
 Puede crear un colaborador de compilación para realizar acciones personalizadas al compilar un proyecto de base de datos. En este tutorial, se crea un colaborador de compilación llamado ModelStatistics que genera estadísticas del modelo de base de datos SQL al compilar un proyecto de base de datos. Dado que este colaborador de compilación acepta parámetros cuando se compila, son necesarios algunos pasos adicionales.  
@@ -59,12 +56,12 @@ A continuación se muestran algunos de los comandos usados por el colaborador de
   
 |**Clase**|**Método/propiedad**|**Descripción**|  
 |-------------|------------------------|-------------------|  
-|[TSqlModel](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Consulta el modelo de objetos y es el punto de entrada principal a la API modelo. Solo se pueden consultar los tipos de nivel superior como Tabla o Vista – tipos como Columna solo se pueden encontrar recorriendo el modelo. Si no se especifica ningún filtro ModelTypeClass, devolverá todos los tipos de nivel superior.|  
-|[TSqlObject](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Detecta relaciones con los elementos a los que hace referencia el TSqlObject actual. Por ejemplo, para una tabla devolverá objetos como columnas de la Tabla. En este caso, se puede utilizar un filtro ModelRelationshipClass para especificar relaciones exactas de la consulta (por ejemplo con el filtro “Table.Columns” se aseguraría de que solo devuelve columnas).<br /><br />Hay varios métodos similares, como GetReferencingRelationshipInstances, GetChildren y GetParent. Para obtener más información, vea la documentación de la API.|  
+|[TSqlModel](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|Consulta el modelo de objetos y es el punto de entrada principal a la API modelo. Solo se pueden consultar los tipos de nivel superior como Tabla o Vista – tipos como Columna solo se pueden encontrar recorriendo el modelo. Si no se especifica ningún filtro ModelTypeClass, devolverá todos los tipos de nivel superior.|  
+|[TSqlObject](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|Detecta relaciones con los elementos a los que hace referencia el TSqlObject actual. Por ejemplo, para una tabla devolverá objetos como columnas de la Tabla. En este caso, se puede utilizar un filtro ModelRelationshipClass para especificar relaciones exactas de la consulta (por ejemplo con el filtro “Table.Columns” se aseguraría de que solo devuelve columnas).<br /><br />Hay varios métodos similares, como GetReferencingRelationshipInstances, GetChildren y GetParent. Para obtener más información, vea la documentación de la API.|  
   
 **Identificar su colaborador de forma exclusiva**  
   
-Durante el proceso de compilación, los colaboradores personalizados se cargan desde un directorio de la extensión estándar. Los colaboradores de compilación se identifican con un atributo [ExportBuildContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) . Este atributo es necesario para poder detectar colaboradores. Este atributo deberá ser parecido al de la ilustración siguiente:  
+Durante el proceso de compilación, los colaboradores personalizados se cargan desde un directorio de la extensión estándar. Los colaboradores de compilación se identifican con un atributo [ExportBuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx). Este atributo es necesario para poder detectar colaboradores. Este atributo deberá ser parecido al de la ilustración siguiente:  
   
 ```  
 [ExportBuildContributor("ExampleContributors.ModelStatistics", "1.0.0.0")]  
@@ -78,11 +75,11 @@ Para crear un colaborador de compilación, debe realizar las siguientes tareas:
   
 -   Cree un proyecto de biblioteca de clases y agregue las referencias necesarias.  
   
--   Defina una clase llamada ModelStatistics que herede de [BuildContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx).  
+-   Defina una clase llamada ModelStatistics que herede de [BuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx).  
   
 -   Invalide el método OnExecute.  
   
--   Agregue varios métodos auxiliares privados.  
+-   Agregue varios métodos del asistente privados.  
   
 -   Compile el ensamblado resultante.  
   

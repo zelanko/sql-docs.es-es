@@ -1,30 +1,27 @@
 ---
-title: Referencia de API del controlador SQLSRV | Documentos de Microsoft
+title: Referencia de API del controlador SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
-caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6722c709e016ab0a78b682a022575bbee9b89018
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: b1b1b94952006e338b324e7ca1da1d3bcbf8c2a0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309004"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756593"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>Referencia de API del controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-El nombre de la API del controlador SQLSRV en los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] es **sqlsrv**. Todos los **sqlsrv** funciones empiezan con **sqlsrv_** y van seguidas por un verbo o un sustantivo. Las que van seguidas de un verbo realizan algún tipo de acción, mientras que las que van seguidas de un sustantivo devuelven algún tipo de metadatos.  
+El nombre de la API del controlador SQLSRV en los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] es **sqlsrv**. Todas las funciones de **sqlsrv** comienzan con **sqlsrv_** y van seguidas de un verbo o un sustantivo. Las que van seguidas de un verbo realizan algún tipo de acción, mientras que las que van seguidas de un sustantivo devuelven algún tipo de metadatos.  
   
 ## <a name="in-this-section"></a>En esta sección  
 El controlador SQLSRV contiene las siguientes funciones:  
@@ -61,8 +58,8 @@ El controlador SQLSRV contiene las siguientes funciones:
 ## <a name="reference"></a>Referencia  
 [Manual de PHP](http://php.net/manual)  
   
-## <a name="see-also"></a>Vea también  
-[Información general sobre controladores de Microsoft para PHP para SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
+## <a name="see-also"></a>Ver también  
+[Información general de los controladores de Microsoft para PHP para SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
 
 [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 

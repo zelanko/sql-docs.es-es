@@ -1,32 +1,29 @@
 ---
-title: 'Cómo: conectarse mediante la autenticación de Windows | Documentos de Microsoft'
+title: 'Cómo: conectar con la autenticación de Windows | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connecting to the server, Windows Authentication
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70c2c0f9316384d831af7d7ce317d16bdc3c41a6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: c78506897432cdbfa4f4dd926e3f6035fb1881f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307404"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759954"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>Cómo conectarse mediante la autenticación de Windows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-De forma predeterminada, los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] utilizan la autenticación de Windows para conectarse a SQL Server. Es importante tener en cuenta que en la mayoría de los casos, esto significa que identidad del proceso del servidor Web o la identidad del subproceso (si el servidor Web es usar la suplantación) se usa para conectarse al servidor, no con identidad del usuario final.  
+De forma predeterminada, los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] utilizan la autenticación de Windows para conectarse a SQL Server. Es importante tener en cuenta que, en la mayoría de los escenarios, esto significa que se utiliza la identidad del proceso o subproceso del servidor web (si este está usando el modo de suplantación) para conectarse al servidor, no la identidad de un usuario final.  
   
 Deben tener en cuenta los siguientes puntos al utilizar la autenticación de Windows para conectarse a SQL Server:  
   
@@ -48,7 +45,7 @@ Si no considera la autenticación de Windows una opción práctica, consulte [Ho
 ## <a name="example"></a>Ejemplo  
 Mediante el uso del controlador SQLSRV de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], en el ejemplo siguiente se utiliza la autenticación de Windows para conectarse a una instancia local de SQL Server. Cuando se establece la conexión, en el servidor se realiza una consulta del inicio de sesión del usuario que está accediendo a la base de datos.  
   
-El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan al explorador cuando se ejecuta el ejemplo en el explorador.  
+En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan al explorador cuando se ejecuta el ejemplo en el explorador.  
   
 ```  
 <?php  
@@ -108,20 +105,20 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ?>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Conexión mediante la autenticación de SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
 [Programación de guía para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[Cómo: crear un inicio de sesión SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
+[Cómo crear un inicio de sesión de SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[Cómo: crear un usuario de base de datos](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[Cómo crear un usuario de base de datos](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [Administrar usuarios, roles e inicios de sesión](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 
-[Separación usuario-esquema](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+[Separación de esquemas de usuario](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 
 [Permisos de objeto GRANT (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

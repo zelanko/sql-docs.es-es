@@ -1,13 +1,11 @@
 ---
-title: Método setReadOnly (SQLServerConnection) | Documentos de Microsoft
+title: Método setReadOnly (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.setReadOnly
@@ -15,24 +13,23 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: bd11fd50-f092-43a0-a6bc-c63e70cff8da
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b94f1b5555fd0bb90afaf492ab2ab61a643372bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7d90820c5fdcbc2376be732c409c265536ce2498
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844470"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785527"
 ---
 # <a name="setreadonly-method-sqlserverconnection"></a>Método setReadOnly (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Esto coloca [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) objeto en modo de solo lectura como una sugerencia para el controlador JDBC para habilitar las optimizaciones de la base de datos.  
+  Establece este objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) en modo de solo lectura como sugerencia para que el controlador JDBC pueda habilitar las optimizaciones de la base de datos.  
   
 > [!NOTE]  
->  Este método no es compatible con la [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)].  
+>  El [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] no admite este método.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,18 +39,18 @@ public void setReadOnly(boolean readOnly)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Solo lectura*  
+ *readOnly*  
   
- **True** si la conexión va a ser de solo lectura. De lo contrario, se devuelve el valor **False**.  
+ **True** si la conexión se va a solo lectura. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
- Este método setReadOnly es especificado por el método setReadOnly en la interfaz java.sql.Connection.  
+## <a name="remarks"></a>Notas  
+ Este método setReadOnly especificado por el método setReadOnly en la interfaz java.sql.Connection.  
   
-## <a name="see-also"></a>Vea también  
- [Miembros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
+## <a name="see-also"></a>Ver también  
+ [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Clase SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   

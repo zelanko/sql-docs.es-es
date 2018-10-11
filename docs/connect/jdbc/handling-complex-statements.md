@@ -1,40 +1,37 @@
 ---
-title: Controlar instrucciones complejas | Documentos de Microsoft
+title: Controlar instrucciones complejas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6b807a45-a8b5-4b1c-8b7b-d8175c710ce0
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28d97ab51a98204d76b8a4f765103f0b4b096894
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d44f2c229755c742d5481f3ca427f11fb5586c2c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828650"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623933"
 ---
 # <a name="handling-complex-statements"></a>Controlar instrucciones complejas
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Cuando se usa el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], puede que tenga que controlar instrucciones complejas, incluidas instrucciones generadas dinámicamente en tiempo de ejecución. Las instrucciones complejas suelen realizar tareas diversas como actualizaciones, inserciones y eliminaciones. Estos tipos de instrucciones pueden devolver varios conjuntos de resultados y parámetros de salida. En estos casos, el código Java que ejecuta las instrucciones puede no saber por anticipado los tipos y el número de objetos y datos devueltos.  
   
- Para procesar las instrucciones complejas del modo adecuado, el controlador JDBC proporciona una serie de métodos para consultar los objetos y datos devueltos para que la aplicación pueda procesarlos correctamente. La clave para procesar las instrucciones complejas es el [ejecutar](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) método de la [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) clase. Este método devuelve un **booleano** valor. Si el valor es true, el primer resultado devuelto de las instrucciones es un conjunto de resultados. Si el valor es false, el primer resultado devuelto es un recuento de actualizaciones.  
+ Para procesar las instrucciones complejas del modo adecuado, el controlador JDBC proporciona una serie de métodos para consultar los objetos y datos devueltos para que la aplicación pueda procesarlos correctamente. La clave para procesar las instrucciones complejas es el método [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) de la clase [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Este método devuelve un **booleano** valor. Si el valor es true, el primer resultado devuelto de las instrucciones es un conjunto de resultados. Si el valor es false, el primer resultado devuelto es un recuento de actualizaciones.  
   
- Si conoce el tipo de objeto o datos devueltos, puede usar el [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) o [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) método para procesar los datos. Para continuar con el siguiente objeto o datos que se devuelven desde la instrucción compleja, puede llamar a la [getMoreResults](../../connect/jdbc/reference/getmoreresults-method.md) método.  
+ Cuando sepa el tipo de objeto o datos devueltos, puede usar el método [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) o [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) para procesar los datos. Para continuar con el objeto o datos siguientes devueltos desde la instrucción compleja, puede llamar al método [getMoreResults](../../connect/jdbc/reference/getmoreresults-method.md).  
   
- En el ejemplo siguiente, una conexión abierta a la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] base de datos de ejemplo se pasa a la función, se genera una instrucción compleja que combina una llamada de procedimiento almacenado con una instrucción SQL, las instrucciones se ejecutan y, a continuación, un `do` bucle es se usa para procesar todos los conjuntos de lo resultados y recuentos se devuelven de actualizaciones.  
+ En el siguiente ejemplo, se pasa a la función una conexión abierta a la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)], se genera una instrucción compleja que combina una llamada al procedimiento almacenado con una instrucción SQL, se ejecutan las instrucciones y, a continuación, se usa un bucle `do` para procesar todos los conjuntos de resultados y recuentos de actualizaciones devueltos.  
   
  [!code[JDBC#HandlingComplexStatements1](../../connect/jdbc/codesnippet/Java/handling-complex-statements_1.java)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Usar instrucciones con el controlador JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   

@@ -1,13 +1,11 @@
 ---
-title: findColumn (método) (SQLServerResultSet) | Documentos de Microsoft
+title: Método findColumn (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.findColumn
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7c29994a-0b53-420b-8a9b-82a9eef08587
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 45462709c0a5201cbbf484dfe1caf8bd83394d83
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a5ff2173990dabafab5297dd195e617825768aef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829220"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837733"
 ---
-# <a name="findcolumn-method-sqlserverresultset"></a>findColumn (método) (SQLServerResultSet)
+# <a name="findcolumn-method-sqlserverresultset"></a>Método findColumn (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera el índice de la primera columna de búsqueda de coincidencias para el nombre de columna especificado en este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.  
+  Recupera el índice de la primera columna coincidente con el nombre de la columna especificado en este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,20 +38,20 @@ public int findColumn(java.lang.String columnName)
 #### <a name="parameters"></a>Parámetros  
  *columnName*  
   
- A **cadena** que contiene el nombre de la columna.  
+ Un objeto **String** que contiene el nombre del rol.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un **int** que indica el índice de columna.  
+ Valor **int** que indica el índice de la columna.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Este método findColumn especificado por el método findColumn en la interfaz java.sql.ResultSet.  
   
- Si hay varias columnas con el mismo nombre, el método findColumn devuelve a la primera coincidencia distingue mayúsculas de minúsculas. Si no hay coincidencias con distinción entre mayúsculas y minúsculas, este método devuelve la primera coincidencia con distinción entre mayúsculas y minúsculas.  
+ Si hay varias columnas con el mismo nombre, el método findColumn devuelve la primera coincidencia con distinción entre mayúsculas y minúsculas. Si no hay coincidencias con distinción entre mayúsculas y minúsculas, este método devuelve la primera coincidencia con distinción entre mayúsculas y minúsculas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

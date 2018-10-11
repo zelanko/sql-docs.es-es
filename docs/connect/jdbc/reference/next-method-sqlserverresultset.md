@@ -1,13 +1,11 @@
 ---
-title: Next (método) (SQLServerResultSet) | Documentos de Microsoft
+title: Método Next (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.next
@@ -15,18 +13,17 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 60248447-6908-4036-a779-a501453cd553
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa878b809af8dab927877f8af0db3d54a6a3eb30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c2b5611c9f925c95a49982f8f9c936a6d84952f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840830"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702849"
 ---
-# <a name="next-method-sqlserverresultset"></a>Next (método) (SQLServerResultSet)
+# <a name="next-method-sqlserverresultset"></a>Método next (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Mueve el cursor una fila hacia abajo desde su posición actual.  
@@ -39,19 +36,19 @@ public boolean next()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **True** si la nueva fila actual es válida. **false** si no hay más filas que procesar.  
+ **True** si la nueva fila actual es válida. **false** si no hay más filas para procesar.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
- Este método siguiente se especifica el método siguiente en la interfaz java.sql.ResultSet.  
+## <a name="remarks"></a>Notas  
+ El método next especifica este método next en la interfaz java.sql.ResultSet.  
   
- Un cursor del conjunto de resultados se coloca inicialmente antes de la primera fila. La primera llamada al método siguiente convierte la primera fila de la fila actual, la segunda llamada convierte a la segunda fila de la fila actual y así sucesivamente.  
+ Un cursor del conjunto de resultados se coloca inicialmente antes de la primera fila. La primera llamada al método next convierte a la primera fila en la fila actual, la segunda llamada convierte a la segunda fila en la fila actual y así sucesivamente.  
   
- Si un flujo de entrada está abierto para la fila actual, una llamada al método siguiente cerrará de forma implícita. Una cadena de advertencia para la [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto se borra cuando se lee una fila nueva.  
+ Si está abierto un flujo de entrada para la fila actual, al llamar al método next se cerrará implícitamente. Cuando se lee una fila nueva, se borra una cadena de la advertencia para el objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -1,34 +1,31 @@
 ---
-title: Tipo recuperar fecha y hora como cadenas con el controlador SQLSRV | Documentos de Microsoft
+title: Recuperación del tipo de fecha y hora como cadenas con el controlador SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - date and time types, retrieving as strings
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62ad28ed5316f0be403f63af2acd7e4090faa75a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 29e36f2246556da7a43c3b8335f7a4e3479ae63c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308354"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686993"
 ---
 # <a name="how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver"></a>Cómo recuperar el tipo de fecha y hora como cadenas con el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Esta característica se agregó en la versión 1.1 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] y solo es válida cuando se utiliza el controlador SQLSRV para dichos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. No se debe utilizar la opción de conexión ReturnDatesAsStrings con el controlador PDO_SQLSRV.  
   
-Puede recuperar tipos de fecha y hora (**datetime**, **fecha**, **tiempo**, **datetime2**, y **datetimeoffset**) como cadenas especificando una opción en la cadena de conexión.  
+Puede recuperar tipos de fecha y hora (**datetime**, **date**, **time**, **datetime2** y **datetimeoffset**) como cadenas especificando una opción en la cadena de conexión.  
   
 ### <a name="to-retrieve-date-and-time-types-as-strings"></a>Pasos para recuperar los tipos de fecha y hora como cadenas  
   
@@ -169,6 +166,6 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Recuperación de datos](../../connect/php/retrieving-data.md)  
   

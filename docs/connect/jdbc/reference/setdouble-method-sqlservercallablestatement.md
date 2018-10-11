@@ -1,13 +1,11 @@
 ---
-title: Método setDouble (SQLServerCallableStatement) | Documentos de Microsoft
+title: Método setDouble (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.setDouble
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c054bb84-1292-4b70-b574-2ae189cd4e68
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1445675e81ae6c86bb3e5d00166163a45e468293
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7ebb554c0fada590e22a151293738bd16b7447f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843440"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839173"
 ---
 # <a name="setdouble-method-sqlservercallablestatement"></a>Método setDouble (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Establece el parámetro designado el determinado **doble** valor.  
+  Establece el parámetro designado en el valor **double** indicado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,20 +39,20 @@ public void setDouble(java.lang.String sCol,
 #### <a name="parameters"></a>Parámetros  
  *sCol*  
   
- A **cadena** que contiene el nombre del parámetro.  
+ Objeto **String** que contiene el nombre del parámetro.  
   
- *D.*  
+ *d*  
   
- A **doble** valor.  
+ Un **doble** valor.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
- Este método setDouble es especificado por el método setDouble en la interfaz java.sql.CallableStatement.  
+## <a name="remarks"></a>Notas  
+ El método setDouble especifica este método setDouble en la interfaz java.sql.CallableStatement.  
   
-## <a name="see-also"></a>Vea también  
- [Miembros de SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+## <a name="see-also"></a>Ver también  
+ [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

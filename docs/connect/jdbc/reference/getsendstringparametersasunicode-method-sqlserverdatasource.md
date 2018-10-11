@@ -1,13 +1,11 @@
 ---
-title: Método getSendStringParametersAsUnicode (SQLServerDataSource) | Documentos de Microsoft
+title: Método getSendStringParametersAsUnicode (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDataSource.getSendStringParametersAsUnicode
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 3836d0ab-c3fb-41ff-bb89-10389594ae51
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 338343f56f765e33fe0a8d81e6284bc4e84cf564
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e3dedc988bd4ddf32046a9a29abe5b83b293bf04
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837280"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683143"
 ---
 # <a name="getsendstringparametersasunicode-method-sqlserverdatasource"></a>Método getSendStringParametersAsUnicode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Devuelve un **booleano** valor que indica si está habilitado el envío de parámetros de cadena al servidor en formato UNICODE.  
+  Devuelve un valor **boolean** que indica si está habilitado el envío de parámetros de cadena al servidor en formato UNICODE.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,14 +36,14 @@ public boolean getSendStringParametersAsUnicode()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **True** si se envían parámetros string al servidor en formato UNICODE. De lo contrario, se devuelve el valor **False**.  
+ Es **true** si se envían parámetros de cadena al servidor en formato UNICODE. De lo contrario, se devuelve el valor **False**.  
   
-## <a name="remarks"></a>Comentarios  
- Si se establece la propiedad sendStringParametersAsUnicode en **true**, que es el valor predeterminado, se envían parámetros string al servidor en formato UNICODE. Si sendStringParametersAsUnicode se establece en **false**, se envían parámetros string al servidor en formato ASCII/MBCS, pero no en UNICODE. Si no se establece sendStringParametersAsUnicode, getSendStringParametersAsUnicode devuelve el valor predeterminado de **true**.  
+## <a name="remarks"></a>Notas  
+ Si la propiedad sendStringParametersAsUnicode está configurada en **true**, que es el valor predeterminado, los parámetros de cadena se envían al servidor en formato UNICODE. Si la propiedad sendStringParametersAsUnicode está configurada en **false**, los parámetros de cadena se envían al servidor en formato ASCII/MBCS y no en UNICODE. Si no se establece sendStringParametersAsUnicode, getSendStringParametersAsUnicode devuelve el valor predeterminado **true**.  
   
  Para obtener más información acerca de la propiedad de conexión sendStringParametersAsUnicode, vea [estableciendo las propiedades de conexión](../../../connect/jdbc/setting-the-connection-properties.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Clase SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

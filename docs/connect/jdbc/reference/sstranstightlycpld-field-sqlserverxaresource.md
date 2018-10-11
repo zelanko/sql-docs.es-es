@@ -1,13 +1,11 @@
 ---
-title: Campo SSTRANSTIGHTLYCPLD (SQLServerXAResource) | Documentos de Microsoft
+title: Campo SSTRANSTIGHTLYCPLD (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SSTRANSTIGHTLYCPLD Field (SQLServerXAResource)
@@ -15,16 +13,15 @@ apilocation:
 - SSTRANSTIGHTLYCPLD Field (SQLServerXAResource)
 apitype: Assembly
 ms.assetid: 379857c3-9de1-4964-8782-32df317cbfbb
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8323c328938188b16d56f9dfa05c3dfd2be16c75
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8129cf30a7ba95c39281c9ff4bd2a5c0eac4183c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848050"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818423"
 ---
 # <a name="sstranstightlycpld-field-sqlserverxaresource"></a>Campo SSTRANSTIGHTLYCPLD (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,14 +36,14 @@ public static final int SSTRANSTIGHTLYCPLD
 ```  
   
 ## <a name="field-value"></a>Valor de campo  
- Un **int** valo 32768.  
+ Un **int** valor de 32768.  
   
-## <a name="remarks"></a>Comentarios  
- Cada transacción queda identificada por un identificador de rama de transacción XA (XID) y un identificador de transacción global (GTRID). Para permitir que las aplicaciones usen transacciones XA estrechamente acopladas con XID diferentes pero tener el mismo GTRID, debe establecer el [SSTRANSTIGHTLYCPLD](../../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) en el parámetro flags del método XAResource.start. Para obtener más información sobre cómo usar esta marca, consulte [descripción de las transacciones XA](../../../connect/jdbc/understanding-xa-transactions.md).  
+## <a name="remarks"></a>Notas  
+ Cada transacción queda identificada por un identificador de rama de transacción XA (XID) y un identificador de transacción global (GTRID). Para permitir que las aplicaciones utilicen transacciones XA estrechamente acopladas con XID diferentes pero con el mismo GTRID, debe establecer [SSTRANSTIGHTLYCPLD](../../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) en el parámetro flags del método XAResource.start. Para obtener más información sobre cómo usar esta marca, vea [descripción de las transacciones XA](../../../connect/jdbc/understanding-xa-transactions.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Campos SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-fields.md)   
- [Miembros de SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
+ [Miembros SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
  [Clase SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  
   
   

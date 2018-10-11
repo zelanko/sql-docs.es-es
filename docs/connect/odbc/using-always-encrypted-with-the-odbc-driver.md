@@ -1,25 +1,20 @@
 ---
 title: Uso de Always Encrypted con ODBC Driver for SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 10/01/2018
+ms.date: 09/01/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-caps.latest.revision: 3
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: b32be273b26a163263798c3b6a5312432cc54eb6
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: dfe1777044234ec43c13f738fa1b0de896f96616
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980687"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828273"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso de Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -53,7 +48,7 @@ Always Encrypted también estar habilitado en la configuración de DSN, utilizan
  SQLSetConnectAttr(hdbc, SQL_COPT_SS_COLUMN_ENCRYPTION, (SQLPOINTER)SQL_COLUMN_ENCRYPTION_ENABLE, 0);
 ```
 
-Una vez habilitada para la conexión, se puede ajustar el comportamiento de Always Encrypted para consultas individuales. Consulte [controlar el rendimiento de impacto de Always Encrypted](#controlling-the-performance-impact-of-always-encrypted) a continuación para obtener más información.
+Una vez habilitada para la conexión, se puede ajustar el comportamiento de Always Encrypted para consultas individuales. Para más información, consulte [Controlar el impacto en el rendimiento de Always Encrypted](#controlling-the-performance-impact-of-always-encrypted).
 
 Tenga en cuenta que habilitar Always Encrypted no es suficiente para el cifrado o descifrado se realice correctamente; También deberá asegurarse de que:
 
@@ -99,7 +94,7 @@ En este ejemplo se inserta una fila en la tabla Patients. Observe lo siguiente:
 
 - No existe nada específico al cifrado en el código de ejemplo. El controlador detecta automáticamente y cifra los valores de los parámetros de SSN y fecha, que se dirigen a columnas cifradas. Esto hace que el cifrado se realice de manera transparente en la aplicación.
 
-- Los valores insertados en las columnas de base de datos, incluidas las columnas cifradas, se pasan como parámetros enlazados (consulte [función SQLBindParameter](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)). Aunque el uso de parámetros es opcional al enviar valores a las columnas no cifradas (aunque es altamente recomendable porque ayuda a evitar la inyección de código SQL), es necesario para los valores que tienen como destino las columnas cifradas. Si los valores insertados en las columnas SSN o BirthDate se pasan como literales incrustados en la instrucción de consulta, la consulta produciría un error porque el controlador no intenta cifrar o procesar de otro modo, los literales en consultas. Como resultado, el servidor los rechazará considerándolos incompatibles con las columnas cifradas.
+- Los valores que se insertan en las columnas de bases de datos, incluidas las columnas cifradas, se pasan como parámetros enlazados (consulte [Función SQLBindParameter](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)). Aunque el uso de parámetros es opcional al enviar valores a las columnas no cifradas (aunque es altamente recomendable porque ayuda a evitar la inyección de código SQL), es necesario para los valores que tienen como destino las columnas cifradas. Si los valores insertados en las columnas SSN o BirthDate se pasan como literales incrustados en la instrucción de consulta, la consulta produciría un error porque el controlador no intenta cifrar o procesar de otro modo, los literales en consultas. Como resultado, el servidor los rechazará considerándolos incompatibles con las columnas cifradas.
 
 - El tipo SQL del parámetro insertado en la columna SSN se establece en SQL_CHAR, que se asigna a la **char** tipo de datos de SQL Server (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Si el tipo del parámetro se estableció en SQL_WCHAR, que se asigna a **nchar**, la consulta producirá, ya que Always Encrypted no admite conversiones de servidor de los valores cifrados de nchar a valores cifrados char. Consulte [referencia del programador de ODBC: Apéndice D: tipos de datos](https://msdn.microsoft.com/library/ms713607.aspx) para obtener información acerca de las asignaciones de tipos de datos.
 
@@ -144,9 +139,9 @@ En este ejemplo se inserta una fila en la tabla Patients. Observe lo siguiente:
 
 En el siguiente ejemplo se muestra el filtrado de datos basándose en valores cifrados, así como la recuperación de datos de texto sin formato de las columnas cifradas. Observe lo siguiente:
 
-- El valor utilizado en la cláusula WHERE para filtrar según la columna SSN necesita pasarse mediante SQLBindParameter, para que el controlador puede cifrarlo de manera transparente antes de enviarlo al servidor.
+- El valor que se ha usado en la cláusula WHERE para filtrar por la columna SSN necesita pasarse con SQLBindParameter, de forma que el controlador pueda cifrarlo de manera transparente antes de enviarlo al servidor.
 
-- Todos los valores impresos por el programa estarán en texto sin formato, ya que el controlador descifrar de forma transparente los datos recuperados de las columnas SSN y BirthDate.
+- Todos los valores impresos por el programa estarán en texto sin formato, ya que el controlador descifrará los datos que se han recuperado de las columnas SSN y BirthDate de manera transparente.
 
 > [!NOTE]
 > Las consultas pueden realizar comparaciones de igualdad en las columnas cifradas solo si el cifrado es determinista. Para obtener más información, vea la sección [Selección del cifrado determinista o aleatorio](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
@@ -253,7 +248,7 @@ Always Encrypted admite algunas conversiones para los tipos de datos cifrados. V
 
 - La precisión y la escala de los parámetros que tienen como destino columnas de los tipos de datos `decimal` y `numeric` de SQL Server debe ser la misma que la precisión y la escala configurada para la columna de destino.
 
-- La precisión de los parámetros que tienen como destino las columnas de tipos de datos `datetime2`, `datetimeoffset`o `time` de SQL Server no debe ser superior a la precisión de la columna de destino, en las consultas que modifiquen la columna de destino.  
+- La precisión de los parámetros que tienen como destino las columnas de tipos de datos `datetime2`, `datetimeoffset` o `time` de SQL Server no debe ser superior a la precisión de la columna de destino, en las consultas que modifiquen la columna de destino.  
 
 ##### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>Errores debidos a pasar texto sin formato en lugar de valores cifrados
 
@@ -399,7 +394,7 @@ DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 
 Ningún otro cambio de la aplicación ODBC deben usar Azure Key VAULT para el almacenamiento CMK.
 
-### <a name="using-the-windows-certificate-store-provider"></a>Mediante el proveedor de Windows Certificate Store
+### <a name="using-the-windows-certificate-store-provider"></a>Uso del proveedor para el Almacén de certificados de Windows
 
 El controlador ODBC para SQL Server en Windows incluye un proveedor de almacén de claves maestras de columna integrada para el Store de certificados de Windows denominado `MSSQL_CERTIFICATE_STORE`. (Este proveedor no está disponible en macOS o Linux). Con este proveedor, la CMK se almacena localmente en el equipo cliente y no es necesaria para usarlo con el controlador de ninguna configuración adicional por parte de la aplicación. Sin embargo, la aplicación debe tener acceso al certificado y su clave privada en el almacén. Vea [Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))](https://docs.microsoft.com/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted) para obtener más información.
 
@@ -574,7 +569,7 @@ Vea [Migración de datos confidenciales protegidos mediante Always Encrypted](..
 
 |Nombre|Descripción|  
 |----------|-----------------|  
-|`ColumnEncryption`|Valores aceptados son `Enabled` / `Disabled`.<br>`Enabled`: habilita o deshabilita la funcionalidad de Always Encrypted para la conexión.<br>`Disabled` --deshabilitar la funcionalidad de Always Encrypted para la conexión. <br><br>El valor predeterminado es `Disabled`.|  
+|`ColumnEncryption`|Valores aceptados son `Enabled` / `Disabled`.<br>`Enabled`: habilita o deshabilita la funcionalidad de Always Encrypted para la conexión.<br>`Disabled`: deshabilita la funcionalidad de Always Encrypted para la conexión. <br><br>El valor predeterminado es `Disabled`.|  
 |`KeyStoreAuthentication` | Valores válidos: `KeyVaultPassword`, `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | Cuando `KeyStoreAuthentication`  =  `KeyVaultPassword`, establezca este valor en un nombre válido de entidad de usuario de Active Directory de Azure. <br>Cuando `KeyStoreAuthetication`  =  `KeyVaultClientSecret` establezca este valor en un Azure Active Directory aplicación cliente identificador válido |
 |`KeyStoreSecret` | Cuando `KeyStoreAuthentication`  =  `KeyVaultPassword` establezca este valor en la contraseña para el nombre de usuario correspondiente. <br>Cuando `KeyStoreAuthentication`  =  `KeyVaultClientSecret` establezca este valor en el secreto de aplicación asociados con un Azure Active Directory aplicación cliente identificador válido|

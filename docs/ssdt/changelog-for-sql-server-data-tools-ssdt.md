@@ -1,33 +1,47 @@
 ---
 title: Registro de cambios para SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/27/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssdt
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssdt
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e0a3d3cdd9904634e415d025c0866bff8140431
-ms.sourcegitcommit: c929887686eabd6b754cf644a45656f0a0eb0445
+ms.openlocfilehash: 74948dbe6feb2ee4cea88c96cbfbb93bb9b94181
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743508"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615573"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Registro de cambios para SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Este registro de cambios hace referencia a [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Para ver entradas detalladas sobre las novedades y los cambios, consulte [el blog del equipo de SSDT](https://blogs.msdn.microsoft.com/ssdt/).
+
+
+## <a name="ssdt-for-visual-studio-2017-1581"></a>SSDT para Visual Studio 2017 (15.8.1)
+Número de compilación: 14.0.16179.0  
+Fecha de publicación: 27 de septiembre de 2018  
+
+### <a name="whats-new"></a>Novedades
+
+**SSIS:**
+
+1. Se ha agregado compatibilidad con [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)].
+2. Se ha eliminado compatibilidad con SQL Server 2012.
+
+### <a name="known-issues"></a>Problemas conocidos:
+
+- La tarea Ejecutar paquete de SSIS no admite la depuración cuando ExecuteOutofProcess está establecido en True. Este problema solo se aplica a la depuración. Las funciones de guardado, implementación y ejecución mediante DTExec.exe o el catálogo de SSIS no se verán afectadas.
+- SSDT 15.8.1 actualmente no es compatible con Windows 7 SP1, por lo que siga con la versión 15.8.0 si está usando Windows 7 SP1.
+
 
 ## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT para Visual Studio 2017 (15.8)
 Número de compilación: 14.0.16174.0  
@@ -487,7 +501,7 @@ Número de compilación: 14.0.61704.140
         - JSON 
         - Carpeta 
         - Base de datos de Access 
-        - Almacenamiento de blobs de Azure 
+        - Azure Blob Storage 
     - Interfaz de usuario de PowerQuery localizada
 - Ventana de herramientas del Editor DAX
     - Se ha mejorado la experiencia de edición de DAX para las expresiones de filas de detalles, columnas calculadas y medidas, disponibles en el menú Ver, Otras ventanas de SSDT.

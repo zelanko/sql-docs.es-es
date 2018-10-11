@@ -5,21 +5,18 @@ ms.date: 11/17/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d4d0071cbb32207d97d4df9c3bd4e69c91046691
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 07a0f669f9142f7b58d29089852d13f1cbd61a17
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175362"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614906"
 ---
 # <a name="sql-server-backup-to-url"></a>Copia de seguridad en URL de SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -62,6 +59,18 @@ ms.locfileid: "40175362"
   
  La creación de una cuenta de almacenamiento de Microsoft Azure en su suscripción de Azure es el primer paso de este proceso. Esta cuenta de almacenamiento es una cuenta administrativa que tiene permisos administrativos completos en todos los contenedores y objetos creados con la cuenta de almacenamiento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede usar el nombre de la cuenta de almacenamiento de Microsoft Azure y su valor de clave de acceso para autenticarse, escribir y leer los blobs en el servicio de almacenamiento de blobs de Microsoft Azure, o bien usar un token de firma de acceso compartido generado en determinados contenedores concediéndole derechos de escritura y lectura. Para obtener más información sobre cuentas de almacenamiento de Azure, vea [Acerca de las cuentas de almacenamiento de Azure](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/) ; para más información sobre las firmas de acceso compartido, vea [Firmas de acceso compartido, Parte 1: Descripción del modelo SAS](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). La credencial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacena esta información de autenticación y se emplea durante las operaciones de copia de seguridad o restauración.  
   
+###  <a name="blockbloborpageblob"></a> Copia de seguridad en blobs en bloques y blobs en páginas 
+ Se pueden almacenar dos tipos de blobs en el servicio de almacenamiento de blobs de Microsoft Azure: blobs en bloques y blobs en páginas. La copia de seguridad de SQL Server puede usar cualquier tipo de blob, dependiendo de la sintaxis de Transact-SQL utilizada: si la clave de almacenamiento se usa en las credenciales, se utilizará el blob en páginas; si se usa la firma de acceso compartido, se usará el blob en bloques.
+ 
+ La copia de seguridad en blobs en bloques solo está disponible en SQL Server 2016 o una versión posterior. Se recomienda realizar las copias de seguridad en los blobs en bloques en lugar de en los blobs en páginas si está ejecutando SQL Server 2016 o una versión posterior. Estos son los motivos:
+- La firma de acceso compartido es una manera más segura de autorizar el acceso al blob en comparación con la clave de almacenamiento.
+- Puede hacer copias de seguridad en varios blobs en bloques para obtener el mejor rendimiento de copia de seguridad y restauración, y admite la copia de seguridad de bases de datos más grandes.
+- La opción de [blob en bloques](https://azure.microsoft.com/pricing/details/storage/blobs/) es más económica que la de [blob en páginas](https://azure.microsoft.com/pricing/details/storage/page-blobs/). 
+
+Cuando hace una copia de seguridad en blob en bloques, el tamaño máximo de bloque que puede especificar es de 4 MB. El tamaño máximo de un archivo de blob en bloques único es de 4 MB * 50 000 = 195 GB. Si la base de datos es mayor que 195 GB, se recomienda lo siguiente:
+- Usar la compresión de copia de seguridad
+- Hacer una copia de seguridad en varios blobs en bloques
+
 ###  <a name="Blob"></a> Servicio de almacenamiento de blobs de Microsoft Azure  
  **Cuenta de almacenamiento** : la cuenta de almacenamiento es el punto de partida para todos los servicios de almacenamiento. Para obtener acceso al servicio de almacenamiento de blobs de Microsoft Azure, cree primero una cuenta de almacenamiento de Microsoft Azure. Para obtener más información, vea [Crear una cuenta de almacenamiento](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
   

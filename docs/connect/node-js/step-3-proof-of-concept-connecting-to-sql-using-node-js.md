@@ -1,37 +1,34 @@
 ---
-title: 'Paso 3: Prueba de concepto que se conecta a SQL con Node.js | Documentos de Microsoft'
+title: 'Paso 3: Prueba de concepto de la conexión a SQL con Node.js | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6d9e49b709396519a3eb08ce37fb802c66aa283
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: 4ffefc34eed32a27b29f40836762a16fd69cdd4d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288925"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834144"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Paso 3: Prueba de concepto que se conecta a SQL con Node.js
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Paso 3: prueba de concepto de la conexión a SQL mediante Node.js
 
-![Descarga-CTRL+MAYÚS+TAB-dentro de un círculo](../../ssdt/media/download.png)[para descargar el controlador Node.js para SQL Server](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![En círculo la flecha abajo de descarga](../../ssdt/media/download.png)[para descargar el controlador de Node.js para SQL Server](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-En este ejemplo debe considerarse una prueba de concepto solo.  El código de ejemplo se ha simplificado para mayor claridad y no representa necesariamente mejores prácticas recomendadas por Microsoft. Otros ejemplos que utilizan las mismas funciones fundamentales están disponibles en Github:
+En este ejemplo debe considerarse como una prueba de concepto solo.  El código de ejemplo se ha simplificado para mayor claridad y no representa necesariamente las mejores prácticas recomendadas por Microsoft. Otros ejemplos que usan las mismas funciones esenciales están disponibles en Github:
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
 ## <a name="step-1-connect"></a>Paso 1: conectar  
   
-El **nueva conexión** función se utiliza para conectarse a la base de datos SQL.  
+El **nueva conexión** función se utiliza para conectarse a SQL Database.  
   
 ```javascript  
     var Connection = require('tedious').Connection;  
@@ -52,7 +49,7 @@ El **nueva conexión** función se utiliza para conectarse a la base de datos SQ
 ## <a name="step-2--execute-a-query"></a>Paso 2: Ejecutar una consulta  
   
   
-Todas las instrucciones SQL se ejecutan utilizando el **solicitud() nueva** función. Si la instrucción devuelve filas, como una instrucción select, puede recuperarlos mediante el **request.on()** (función). Si no hay ninguna fila, la función request.on() devuelve listas vacías.  
+Todas las instrucciones SQL se ejecutan utilizando el **new Request()** función. Si la instrucción devuelve filas, como una instrucción select, puede recuperarlos mediante el **Request.on ()** función. Si no hay ninguna fila, la función Request.on () devuelve listas vacías.  
   
   
 ```javascript  
@@ -101,7 +98,7 @@ Todas las instrucciones SQL se ejecutan utilizando el **solicitud() nueva** func
   
 ## <a name="step-3-insert-a-row"></a>Paso 3: Insertar una fila  
   
-En este ejemplo se muestra cómo ejecutar un [insertar](../../t-sql/statements/insert-transact-sql.md) instrucción de forma segura, pasar parámetros que protección la aplicación de [inyección de código SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) valor.    
+En este ejemplo se muestra cómo ejecutar un [insertar](../../t-sql/statements/insert-transact-sql.md) instrucción de forma segura, pasar parámetros que protejan la aplicación de [inyección de código SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) valor.    
   
   
 ```javascript  

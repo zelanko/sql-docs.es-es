@@ -1,37 +1,34 @@
 ---
-title: 'Paso 3: Prueba de concepto que se conecta a SQL con ADO.NET | Documentos de Microsoft'
+title: 'Paso 3: Prueba de concepto de la conexión a SQL con ADO.NET | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6933fb1690b11d373974892672b43fe8df218860
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: 3f38de8f15e6e14d3822254812f98364104ea603
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288894"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603973"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Paso 3: Prueba de concepto que se conecta a SQL con ADO.NET
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Paso 3: Prueba de concepto de la conexión a SQL mediante ADO.NET
 
 - Artículo anterior:&nbsp;&nbsp;&nbsp;[paso 2: crear una base de datos SQL para el desarrollo de ADO.NET](step-2-create-a-sql-database-for-ado-net-development.md)  
-- A continuación del artículo:&nbsp;&nbsp;&nbsp;[paso 4: conectar de forma resistente a SQL con ADO.NET](step-4-connect-resiliently-to-sql-with-ado-net.md)  
+- Artículo siguiente &nbsp;&nbsp;&nbsp;[Paso 4: Conectar la resistencia a SQL con ADO.NET](step-4-connect-resiliently-to-sql-with-ado-net.md)  
 
   
-Este ejemplo de código de C# debe considerarse una prueba de concepto solo. El código de ejemplo se ha simplificado para mayor claridad y no representa necesariamente mejores prácticas recomendadas por Microsoft.  
+En este ejemplo de código de C# debe considerarse como una prueba de concepto solo. El código de ejemplo se ha simplificado para mayor claridad y no representa necesariamente las mejores prácticas recomendadas por Microsoft.  
   
 ## <a name="step-1-connect"></a>Paso 1: conectar
   
-El método **SqlConnection.Open** se utiliza para conectarse a la base de datos SQL.  
+El método **SqlConnection.Open** se usa para conectarse a la base de datos SQL.  
 
 
 ```CSharp  
@@ -159,8 +156,8 @@ El método SqlCommand.ExecuteReader:
   
 Este ejemplo se muestra cómo:  
   
-- Ejecutar una instrucción INSERT de SQL de forma segura al pasar parámetros.  
-  - Uso de parámetros protege frente a ataques de inyección de SQL.  
+- Ejecutar una instrucción SQL INSERT pasando los parámetros de forma segura.  
+  - Uso de parámetros protege contra ataques de inyección SQL.  
 - Recuperar el valor generado automáticamente.  
   
   

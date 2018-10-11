@@ -1,13 +1,11 @@
 ---
-title: Método updateObject (int, java.lang.Object) | Documentos de Microsoft
+title: Método updateObject (int, java.lang.Object) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.updateObject (int, java.lang.Object)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4993dfe1-2232-4b3c-b931-dfdb35dd225a
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6f3ea4ff50b440bca68c00845da49133855551be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e02962f257116a32cfb14112b2f51c5c643cd252
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850250"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784193"
 ---
 # <a name="updateobject-method-int-javalangobject"></a>Método updateObject (int, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Actualiza la columna designada con un **objeto** valor según el índice de columna.  
+  Actualiza la columna designada con un valor **Object** según el índice de la columna.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,19 +39,19 @@ public void updateObject(int index,
 #### <a name="parameters"></a>Parámetros  
  *index*  
   
- Un **int** que indica el índice de columna.  
+ Valor **int** que indica el índice de la columna.  
   
  *obj*  
   
- Un **objeto** valor.  
+ Valor **Object**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
- Este método updateObject es especificado por el método updateObject en la interfaz java.sql.ResultSet.  
+## <a name="remarks"></a>Notas  
+ Este método updateObject especificado por el método updateObject en la interfaz java.sql.ResultSet.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Método updateObject &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

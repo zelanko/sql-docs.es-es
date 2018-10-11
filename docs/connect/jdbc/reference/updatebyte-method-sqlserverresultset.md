@@ -1,13 +1,11 @@
 ---
-title: updateByte (método) (SQLServerResultSet) | Documentos de Microsoft
+title: Método updateByte (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.updateByte
@@ -15,30 +13,29 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 240983e8-bd59-4bb1-a37a-5ba71f85fb72
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2369f46be838999e5eb3b023d7120a27b08fe4c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 29f5c2b41598fa1afbce0fe41913837696ed4c31
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849920"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627883"
 ---
-# <a name="updatebyte-method-sqlserverresultset"></a>updateByte (método) (SQLServerResultSet)
+# <a name="updatebyte-method-sqlserverresultset"></a>Método updateByte (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Actualiza la columna designada con un **bytes** valor.  
+  Actualiza la columna designada con un valor **byte**.  
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nombre|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[updateByte (int, byte)](../../../connect/jdbc/reference/updatebyte-method-int-byte.md)|Actualiza la columna designada con un **bytes** valor según el índice de columna.|  
-|[updateByte (java.lang.String, byte)](../../../connect/jdbc/reference/updatebyte-method-java-lang-string-byte.md)|Actualiza la columna designada con un **bytes** valor según el nombre de columna.|  
+|[updateByte (int, byte)](../../../connect/jdbc/reference/updatebyte-method-int-byte.md)|Actualiza la columna designada con un valor **byte** según el índice de la columna.|  
+|[updateByte (java.lang.String, byte)](../../../connect/jdbc/reference/updatebyte-method-java-lang-string-byte.md)|Actualiza la columna designada con un valor **byte** según el nombre de la columna.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

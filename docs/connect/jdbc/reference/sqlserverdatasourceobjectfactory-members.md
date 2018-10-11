@@ -1,36 +1,33 @@
 ---
-title: Los miembros de SQLServerDataSourceObjectFactory | Documentos de Microsoft
+title: Los miembros de SQLServerDataSourceObjectFactory | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 52c6b133-f7ed-468d-8f34-bc2e4b81553e
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2e75b9b237288eb2b0f004b3716993bc86a467f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e850f15ab1e9e690c11c863e9719e1231c8f7201
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846790"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701993"
 ---
 # <a name="sqlserverdatasourceobjectfactory-members"></a>Miembros de SQLServerDataSourceObjectFactory
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Las tablas siguientes enumeran los miembros expuestos por el [SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md) clase.  
+  En las siguientes tablas se enumeran los miembros que expone la clase [SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md).  
   
 ## <a name="constructors"></a>Constructores  
   
-|Nombre|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|[(De SQLServerDataSourceObjectFactory)](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-constructor.md)|Inicializa una nueva instancia de la [SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md) clase.|  
+|[SQLServerDataSourceObjectFactory ()](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-constructor.md)|Inicializa una instancia nueva de la clase [SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md).|  
   
 ## <a name="fields"></a>Campos  
  Ninguno.  
@@ -40,7 +37,7 @@ ms.locfileid: "32846790"
   
 ## <a name="methods"></a>Métodos  
   
-|Nombre|Description|  
+|Nombre|Descripción|  
 |----------|-----------------|  
 |[getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md)|Recupera una instancia del objeto de origen de datos especificado.|  
   
@@ -50,7 +47,7 @@ ms.locfileid: "32846790"
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Clase SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)  
   
   

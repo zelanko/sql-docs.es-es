@@ -5,23 +5,20 @@ ms.date: 02/14/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Driver Manager, installing
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
-caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 517ebaea849cad131742211f68dc1ac9fe0f9731
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 78eaf77064fb96c024c548c320ca9feeec10ce02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786368"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597990"
 ---
 # <a name="installing-the-driver-manager"></a>Instalación del Administrador de controladores
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -49,7 +46,7 @@ Siga estos pasos para instalar el Administrador de controladores:
   
 2.  Vaya al directorio donde la descarga de [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC Driver ha colocado el archivo denominado `msodbcsql-11.0.2270.0.tar.gz`. Asegúrese de que dispone del archivo \*.tar.gz que coincida con la versión de Linux. Para extraer los archivos, ejecute el comando siguiente: **tar xvzf msodbcsql-11.0.2270.0.tar.gz**.  
 
-3.  Cambie al directorio `msodbcsql-11.0.2270.0`; allí verá un archivo llamado `build_dm.sh`install.sh. Puede ejecutar `build_dm.sh` para instalar el Administrador de controladores unixODBC.
+3.  Cambie al directorio `msodbcsql-11.0.2270.0`; allí verá un archivo llamado `build_dm.sh`. Puede ejecutar `build_dm.sh` para instalar el Administrador de controladores unixODBC.
 
 4.  Para ver una lista de las opciones disponibles, ejecute el siguiente comando: **./build_dm.sh --help**.  
   

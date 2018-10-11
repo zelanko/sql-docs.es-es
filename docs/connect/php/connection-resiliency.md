@@ -3,42 +3,41 @@ title: Resistencia de conexión inactiva
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 250e4e6334a31d760c8fcb3e1e571ec1a726d020
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 2e66db8c4f821d3401ab354f705cebb81c3b3b36
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307264"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666803"
 ---
 # <a name="idle-connection-resiliency"></a>Resistencia de conexión inactiva
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Resistencia de conexión](https://msdn.microsoft.com/library/dn632678.aspx) es el principio que puede puede restablecer una conexión inactiva interrumpida, dentro de determinadas restricciones. Si se produce un error en una conexión a Microsoft SQL Server, la resistencia de conexión permite al cliente intenta automáticamente restablecer la conexión. Resistencia de conexión es una propiedad del origen de datos; solo SQL Server 2014 y versiones posterior y base de datos de SQL Azure compatible con la resistencia de conexión.
+[Resistencia de conexión](https://msdn.microsoft.com/library/dn632678.aspx) es el principio que una conexión inactiva interrumpida hacerse, dentro de determinadas restricciones. Si se produce un error en una conexión a Microsoft SQL Server, la resistencia de conexión permite al cliente intentará automáticamente restablecer la conexión. Resistencia de conexión es una propiedad del origen de datos; solo SQL Server 2014 y versiones posterior y Azure SQL Database compatible con la resistencia de conexión.
 
-Resistencia de conexión se implementa con dos palabras clave de conexión que se pueden agregar a cadenas de conexión: **ConnectRetryCount** y **ConnectRetryInterval**.
+Resistencia de la conexión se implementa con dos palabras clave de conexión que se pueden agregar a cadenas de conexión: **ConnectRetryCount** y **ConnectRetryInterval**.
 
 |Palabra clave|Valores|Valor predeterminado|Descripción|
 |-|-|-|-|
-|**ConnectRetryCount**| Número entero comprendido entre 0 y 255 (ambos inclusive)|1|El número máximo de intentos para restablecer una conexión interrumpida antes de desistir. De forma predeterminada, se realiza un intento único para volver a establecer una conexión cuando se divide. Un valor de 0 significa que no se intentará ninguna reconexión.|
-|**ConnectRetryInterval**| Número entero comprendido entre 1 y 60 (inclusive)|1| El tiempo, en segundos, entre los intentos para restablecer una conexión. La aplicación intentará volver a conectarse inmediatamente cuando detecta una conexión interrumpida y, a continuación, esperará **ConnectRetryInterval** segundos antes de volver a intentarlo. Esta palabra clave se omite si **ConnectRetryCount** es igual a 0.
+|**ConnectRetryCount**| Número entero comprendido entre 0 y 255 (ambos inclusive)|1|El número máximo de intentos para restablecer una conexión interrumpida antes de desistir. De forma predeterminada, se realiza un intento único para restablecer una conexión cuando ha interrumpido. Un valor de 0 significa que no se intentará ninguna reconexión.|
+|**ConnectRetryInterval**| Número entero comprendido entre 1 y 60 (inclusive)|1| El tiempo, en segundos, entre los intentos para restablecer una conexión. La aplicación intentará volver a conectarse inmediatamente al detectar una conexión interrumpida y, a continuación, esperará **ConnectRetryInterval** segundos antes de intentarlo de nuevo. Esta palabra clave se omite si **ConnectRetryCount** es igual a 0.
 
-Si el producto de **ConnectRetryCount** multiplicado por **ConnectRetryInterval** es mayor que **LoginTimeout**, a continuación, el cliente dejará de intentar conectarse una vez  **LoginTimeout** se alcanza; en caso contrario, continuará intentar volver a conectarse hasta que **ConnectRetryCount** se alcanza.
+Si el producto de **ConnectRetryCount** multiplicado por **ConnectRetryInterval** es mayor que **LoginTimeout**, a continuación, el cliente dejará de intentar conectarse una vez  **LoginTimeout** se alcanza; en caso contrario, continuará volver a conectar hasta **ConnectRetryCount** se alcanza.
 
 #### <a name="remarks"></a>Notas
 
-Resistencia de conexión se aplica cuando la conexión está inactiva. Errores que se producen al ejecutar una transacción, por ejemplo, no se desencadenarán intentos de reconexión: se producirá un error tal y como se esperaría en caso contrario. Las situaciones siguientes, conocidas como estados de sesión no podrán recuperarse, no desencadenarán intentos de reconexión:
+Resistencia de la conexión se aplica cuando la conexión está inactiva. Que se produzcan durante la ejecución de una transacción, por ejemplo, no se activarán los intentos de reconexión: producirá un error como se esperaría en caso contrario. Las situaciones siguientes, que se conoce como estados de sesión no se puede recuperar, desencadenarán intentos de reconexión:
 
 * Tablas temporales
 * Cursores globales y locales
 * Bloqueos de transacciones de nivel de contexto de transacción y sesión
-* Bloqueos de aplicación
+* Bloqueos de aplicaciones
 * EXECUTE AS / REVERTIR el contexto de seguridad
 * Identificadores de automatización OLE
 * Identificadores XML preparados
@@ -46,9 +45,9 @@ Resistencia de conexión se aplica cuando la conexión está inactiva. Errores q
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente se conecta a una base de datos y ejecuta una consulta. La conexión se interrumpe por la terminación de la sesión y se intenta una consulta nueva usando la conexión rota. Este ejemplo se utiliza la [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx) base de datos de ejemplo.
+El siguiente código se conecta a una base de datos y ejecuta una consulta. Se interrumpe la conexión mediante la eliminación de la sesión y se intenta una nueva consulta mediante la conexión rota. En este ejemplo se utiliza la base de datos de ejemplo [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx).
 
-En este ejemplo, especificamos un cursor en búfer antes de interrumpir la conexión. Si no se especifica un cursor en búfer, ¿no puede restablecer la conexión ya que sería un cursor de servidor activo y, por tanto, la conexión no estaría inactiva cuando dañado. Sin embargo, en ese caso se puede llamar a sqlsrv_free_stmt() antes de interrumpir la conexión para que deje vacante el cursor y se puede restablecer correctamente la conexión.
+En este ejemplo, especificamos un cursor almacenado en búfer antes de interrumpir la conexión. Si no se especifica un cursor almacenado en búfer, ¿no se puede restablecer la conexión ya que sería un cursor de servidor activo y, por tanto, podría no estar inactiva la conexión cuando ha interrumpido. Sin embargo, en ese caso, podríamos llamar a sqlsrv_free_stmt() antes de interrumpir la conexión para que deje vacante el cursor y, ¿se puede restablecer correctamente la conexión.
 
 ```php
 <?php
@@ -131,5 +130,5 @@ Statement 2 successful.
 16 rows in result set.
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Ver también
 [Resistencia de conexión en el controlador Windows ODBC](https://docs.microsoft.com/en-us/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)

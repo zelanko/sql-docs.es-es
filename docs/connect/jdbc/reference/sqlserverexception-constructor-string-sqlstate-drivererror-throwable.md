@@ -1,30 +1,27 @@
 ---
-title: Constructor SQLServerException (java.lang.String, SQLState, DriverError, java.lang.Throwable) | Documentos de Microsoft
+title: Constructor SQLServerException (java.lang.String, SQLState, DriverError, java.lang.Throwable) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33f7b15a2f4dd8e83c7e703e96812f29691e6bd6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: dc7608582a5ed146b656d41714853ba4c3b21b00
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846200"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679983"
 ---
-# <a name="sqlserverexception-constructor-javalangstring-sqlstate-drivererror-javalangthrowable"></a>Constructor SQLServerException (java.lang.String, java.lang.Throwable SQLState, DriverError)
+# <a name="sqlserverexception-constructor-javalangstring-sqlstate-drivererror-javalangthrowable"></a>Constructor SQLServerException (java.lang.String, SQLState, DriverError, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Inicializa una nueva instancia de la [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) clase cuando se especifica un **cadena** objeto, un **sqlstate** objeto, un **drivererror** objeto y un **puede producir** objeto.
@@ -52,13 +49,13 @@ public SQLServerException(java.lang.String errText,
   
  Un objeto de enumeración que contiene el error del controlador.
  
- *Causa*  
+ *cause*  
   
  Un objeto puede producir que contiene la causa de la excepción.
   
-## <a name="see-also"></a>Vea también  
- [Constructores de SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   
- [Miembros de SQLServerException](../../../connect/jdbc/reference/sqlserverexception-members.md)   
+## <a name="see-also"></a>Ver también  
+ [Constructores SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   
+ [Miembros SQLServerException](../../../connect/jdbc/reference/sqlserverexception-members.md)   
  [Clase SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
   

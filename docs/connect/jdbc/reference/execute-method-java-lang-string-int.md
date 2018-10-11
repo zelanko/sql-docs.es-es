@@ -5,9 +5,7 @@ ms.date: 02/07/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.execute (javal.lang.String.int[])
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: dc73d1c3-e756-43af-b1fc-ac438cbd0965
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 84d3b4d916b91c95efaff5ad9e995e6bad40a9ad
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: bf42996fac6ac5f48a41311aa072866ebd79f8b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42787248"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667483"
 ---
 # <a name="execute-method-javalangstring-int"></a>Método execute (java.lang.String, int[])
 
@@ -41,7 +38,7 @@ public final boolean execute(
 #### <a name="parameters"></a>Parámetros
 *sql*
 
-Un **cadena** que contiene una instrucción SQL.
+Un objeto **String** que contiene la instrucción SQL.
 
 *columnIndexes*
 

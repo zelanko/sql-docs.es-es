@@ -4,6 +4,7 @@
 - [Instalación y actualización - Foro de MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
 - [SQL Server Data Tools - Foro de MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=ssdt&filter=alltypes&sort=lastpostdesc)
 - [Transact-SQL - Foro de MSDN](http://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)
+- [Seguridad de SQL Server: foro de MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)
 - [DBA Stack Exchange (etiqueta sql-server): formule preguntas sobre SQL Server](https://dba.stackexchange.com/questions/tagged/sql-server)
 - [stack Overflow (etiqueta sql-server) también cuenta con algunas respuestas sobre el desarrollo de SQL](http://stackoverflow.com/questions/tagged/sql-server) 
 - [Reddit: debate general sobre SQL Server](https://www.reddit.com/r/SQLServer/)

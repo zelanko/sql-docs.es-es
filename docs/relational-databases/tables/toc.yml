@@ -40,6 +40,17 @@ items:
   href: use-column-sets.md
 - name: Usar parámetros con valores de tabla (motor de base de datos)
   href: use-table-valued-parameters-database-engine.md
+- name: Restricciones perimetrales
+  href: graph-edge-constraints.md
+  items:
+  - name: Crear
+    href: create-edge-constraints.md
+  - name: DELETE
+    href: delete-edge-constraint.md
+  - name: Modificar
+    href: modify-edge-constraint.md
+  - name: Ver
+    href: view-edge-constraint-properties.md
 - name: Restricciones entre claves principales y claves externas
   href: primary-and-foreign-key-constraints.md
   items:
@@ -130,9 +141,9 @@ items:
     href: lesson-1-converting-a-table-to-a-hierarchical-structure.md
   - name: 'Lección 2: Crear y administrar los datos de una tabla jerárquica'
     href: lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
-ms.openlocfilehash: fd255928f82fec333250060f5f70639eeb19aa8e
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: 9d65ec6e5e5367da83a163d7ca8ee8e2040f6153
+ms.sourcegitcommit: 2420c57d2952add3697dbe0467ee1d755c5c2ee5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42782056"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47217510"

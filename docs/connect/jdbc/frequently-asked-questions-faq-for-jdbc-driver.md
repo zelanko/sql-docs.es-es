@@ -5,21 +5,18 @@ ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43fccc172756b8e7afdb4522c53693915be0f23c
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 2f0197ed97f8d03784cd89d2bede5a4e7744e80f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662337"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613423"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Preguntas más frecuentes (P+F) sobre el controlador JDBC
 
@@ -56,7 +53,7 @@ El admite Microsoft JDBC Driver 6.4 el JDBC 4.1, 4.2 y 4.3 (parcialmente) especi
 
 Microsoft JDBC Driver 6.2 admite las especificaciones de JDBC 4.0, 4.1 y 4.2 e incluye dos bibliotecas de clases JAR en el paquete de instalación como sigue:
 
-| JAR                       | Especificación de JDBC     | Versión de JDK |
+| JAR                       | Especificación de JDBC     | Versión JDK |
 | ------------------------- | ---------------------- | ----------- |
 | MSSQL-jdbc-6.2.2.jre8.jar | JDBC 4.0, 4.1 y 4.2 | JDK 8.0     |
 | MSSQL-jdbc-6.2.2.jre7.jar | JDBC 4.1 y 4.0       | JDK 7.0     |
@@ -70,7 +67,7 @@ Microsoft JDBC Drivers 6.0 y 4.2 para SQL Server es compatible con las especific
 
 Microsoft JDBC Driver 4.1 para SQL Server admite la especificación de JDBC 4.0 y se incluye una biblioteca de clases JAR en el paquete de instalación como sigue:
 
-| JAR           | Especificación de JDBC | Versión de JDK     |
+| JAR           | Especificación de JDBC | Versión JDK     |
 | ------------- | ------------------ | --------------- |
 | sqljdbc41.jar | JDBC 4.0           | JDK 7.0 y 6.0 |
 

@@ -1,35 +1,33 @@
 ---
-title: Bibliotecas de conexiones de bases de datos de SQL de Microsoft | Documentos de Microsoft
-description: Proporciona vínculos de descarga para los módulos que permiten la conexión a Microsoft SQL Server y base de datos de SQL Azure, desde una variedad de lenguajes de programación de cliente.
+title: Bibliotecas de conexiones de bases de datos de Microsoft SQL | Microsoft Docs
+description: Proporciona vínculos de descarga de módulos que permiten la conexión a Microsoft SQL Server y Azure SQL Database, desde una variedad de lenguajes de programación de cliente.
 author: MightyPen
-ms.suite: sql
 ms.prod: sql
-ms.prod_service: connectivity
-ms.technology: dbe-data-tier-apps
+ms.technology: ''
 ms.custom: ''
 ms.topic: article
 ms.date: 06/18/2018
 ms.author: genemi
-ms.openlocfilehash: b7d00ed25392e979cc0d5037bef6b7d8eccc66bf
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
-ms.translationtype: MT
+ms.openlocfilehash: fa070ecfed9d962dc2716e5b72eaf690eff0fe7f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36246847"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806098"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Módulos de conexión para bases de datos SQL de Microsoft
 
-Este artículo contiene vínculos de descarga a los módulos de conexión o *controladores* que los programas cliente pueden utilizar para interactuar con [Microsoft SQL Server](../relational-databases/database-features.md)y con su gemelas en la nube [Azure Base de datos SQL](http://docs.microsoft.com/azure/sql-database/). Controladores estén disponibles para una amplia variedad de lenguajes de programación, con los siguientes sistemas operativos:
+En este artículo proporciona vínculos de descarga de módulos de conexión o *controladores* que los programas cliente pueden usar para interactuar con [Microsoft SQL Server](../relational-databases/database-features.md)y con su gemelo en la nube [Azure Base de datos SQL](http://docs.microsoft.com/azure/sql-database/). Los controladores están disponibles para una variedad de lenguajes de programación, que se ejecutan en los sistemas operativos siguientes:
 
 - Linux (Ubuntu)
-- macOS
+- MacOS
 - Windows
 
-#### <a name="oop-to-relational-mismatch"></a>Error de coincidencia de programación orientada a objetos a relacional
+#### <a name="oop-to-relational-mismatch"></a>Error de coincidencia de OOP a relacional
 
-*Relacional*: los programas de cliente que se escriben en un lenguaje de (OOP) de programación orientada a objetos a menudo utilizan controladores para SQL Server que devuelven datos consultados en un formato que es más relacional que orientado a objetos. Uso de ADO.NET en C# es un ejemplo. La programación orientada a objetos relacionales discrepancia de formato a veces hace que el código de programación orientada a objetos sea más difícil de escribir y entender.
+*Relacional*: programas cliente que se escriben en un lenguaje de (OOP) de programación orientada a objetos suelen utilizan controladores SQL que devuelven datos consultados en un formato que sea más relacional que orientada a objetos. C# mediante ADO.NET es un ejemplo. La programación orientada a objetos relacionales incompatibilidad de formato a veces hace que el código de programación orientada a objetos es más difícil de escribir y comprender.
 
-*ORM*: otros controladores o marcos de devuelvan los datos consultados en el formato de la programación orientada a objetos, evitar la falta de coincidencia. Estos controladores de trabajo se espera que las clases se han definido para que coincida con las columnas de datos de tablas SQL. El controlador, a continuación, realiza la *asignación objeto-relacional* (ORM) para devolver los datos consultados como una instancia de una clase. Entity Framework (EF de Microsoft) en C# e hibernación para Java, son dos ejemplos.
+*ORM*: otros controladores o marcos de devuelven los datos consultados en el formato OOP, evitar la falta de coincidencia. Estos controladores funcionan por se espera que las clases se han definido para que coincida con las columnas de datos de tablas SQL. El controlador, a continuación, realiza el *asignación objeto-relacional* (ORM) para devolver los datos consultados como una instancia de una clase. Entity Framework (EF de Microsoft) para C# e hibernación para Java, son dos ejemplos.
 
 El presente artículo dedica secciones independientes para estos dos tipos de controladores de conexión.
 
@@ -51,55 +49,55 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 
 | Idioma | Descargue el controlador SQL |
 | :------- | :---------------------- |
-| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[Núcleo de. NET, para Ubuntu Linux](https://www.microsoft.com/net/core#Ubuntu)<br />[Núcleo de. NET, para MacOS](https://www.microsoft.com/net/core#macos)<br />[Núcleo de. NET, para Windows](https://www.microsoft.com/net/core) |
+| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET core, para Linux Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core, para MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core, para Windows](https://www.microsoft.com/net/core) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Controlador de Node.js, las instrucciones de instalación](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
 | PHP | [PHP](./php/download-drivers-php-sql-server.md) |
-| Python | [pyodbc, las instrucciones de instalación](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Descargar ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
-| Ruby | [Controlador Ruby, las instrucciones de instalación](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Página de descarga Ruby](https://rubyinstaller.org/downloads/) |
+| Python | [pyodbc, instrucciones de instalación](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Descargar ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
+| Ruby | [Controlador de Ruby, las instrucciones de instalación](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Página de descarga de Ruby](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |
 
 <a name="anchor-40-drivers-orm-access" />
 
-## <a name="drivers-for-orm-access"></a>Controladores para el acceso ORM
+## <a name="drivers-for-orm-access"></a>Controladores para el acceso a ORM
 
 
-En la tabla siguiente se muestra ejemplos de marcos de trabajo de asignación relacional de objetos (ORM) que las aplicaciones cliente utilizan para conectarse a bases de datos SQL de Microsoft.
+En la tabla siguiente se muestra ejemplos de marcos de asignación relacional de objetos (ORM) que las aplicaciones cliente utilizan para conectarse a bases de datos SQL de Microsoft.
 
 
 | Idioma | Descarga del controlador ORM |
 | :------- | :------------------ |
 | C# | [Entity Framework Core](http://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x o posterior)](http://docs.microsoft.com/ef/) |
-| Java | [Hibernación ORM](http://hibernate.org/orm)|
-| PHP | [ORM elocuente, que se incluye en la instalación de Laravel](http://laravel.com/docs/) |
+| Java | [Hibernar ORM](http://hibernate.org/orm)|
+| PHP | [Elocuente ORM, incluido en la instalación de Laravel](http://laravel.com/docs/) |
 | Node.js | [Sequelize ORM](http://docs.sequelizejs.com) |
 | Python | [Django](http://www.djangoproject.com/) |
-| Ruby | [Ruby sobre raíles](http://rubyonrails.org/) |
+| Ruby | [Ruby on Rails](http://rubyonrails.org/) |
 
 
 <a name="anchor-60-build-an-app-webpages" />
 
-## <a name="build-an-app-webpages"></a>Generar una aplicación las páginas Web
-[http://aka.ms/sqldev](http://aka.ms/sqldev) le lleva a un conjunto de *compilación una aplicación* las páginas Web. Las páginas Web proporcionan información acerca de diversas combinaciones de idioma, el sistema operativo y el controlador de conexión de SQL de la programación. Entre la información proporcionada por las páginas de generar una aplicación Web se encuentran los siguientes elementos:
+## <a name="build-an-app-webpages"></a>Páginas Web de una aplicación compilada
+[http://aka.ms/sqldev](http://aka.ms/sqldev) le lleva a un conjunto de *una aplicación compilada* las páginas Web. Las páginas Web proporcionan información sobre diversas combinaciones de lenguaje de programación, sistema operativo y el controlador de conexión de SQL. Entre la información proporcionada por las páginas Web de una aplicación compilada se encuentran los siguientes elementos:
 
-- Obtener más información acerca de cómo empezar a trabajar desde el principio, para cada combinación de idioma, sistema operativo + controlador.
+- Más información sobre cómo empezar a trabajar desde el principio, para cada combinación de idioma del sistema operativo + controlador.
     - Instrucciones para instalar a los controladores más recientes de conexión de SQL.
 - Ejemplos de código para cada uno de los siguientes elementos:
-    - Ejemplos de código objeto relacional.
+    - Ejemplos de código objeto-relacional.
     - Ejemplos de código ORM.
     - Demostraciones de índice de almacén de columnas para un rendimiento mucho más rápido.
 
-#### <a name="first-page-of-build-an-app-webpages"></a>Primera página, de las páginas de generar una aplicación Web
-![Generar una aplicación las páginas Web, primera captura de pantalla de página][image-ref-163-buildanapp-webpages-first-page]
+#### <a name="first-page-of-build-an-app-webpages"></a>Primera página, de las páginas Web de una aplicación compilada
+![Páginas Web de una aplicación compilada, primera captura de pantalla de página][image-ref-163-buildanapp-webpages-first-page]
 
-#### <a name="menu-for-java---ubuntu-of-build-an-app-webpages"></a>Menú de Java - Ubuntu, de las páginas de generar una aplicación Web
-![Generar una aplicación las páginas Web, menú Ubuntu de Java][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
+#### <a name="menu-for-java---ubuntu-of-build-an-app-webpages"></a>Menú para Java: Ubuntu, de las páginas Web de una aplicación compilada
+![Páginas Web de una aplicación compilada, menú Ubuntu de Java][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
 
 &nbsp;
 
 ## <a name="related-links"></a>Vínculos relacionados
-- [Ejemplos de código para conectarse a la base de datos de SQL de Azure en la nube, con Java y otros lenguajes](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
+- [Ejemplos de código para conectarse a Azure SQL Database en la nube, con Java y otros lenguajes](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
 
 <!-- Image references -->
 

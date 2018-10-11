@@ -1,13 +1,11 @@
 ---
-title: Método getDouble (java.lang.String) | Documentos de Microsoft
+title: Método getDouble (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getDouble (java.lang.String)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8eab6a8e-91f3-47b1-8707-5e57368ad0c6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 483a735699670160bee6faab3f762c4b3b052c30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 36575b1d5b8fb7696c151b7939f667f85500f45a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834220"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694761"
 ---
 # <a name="getdouble-method-javalangstring"></a>Método getDouble (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera el valor del parámetro designado como un **doble** en el lenguaje de según el nombre del parámetro de programación Java.  
+  Recupera el valor del parámetro designado como un objeto **double** en el lenguaje de programación Java según el nombre del parámetro.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,22 +38,22 @@ public double getDouble(java.lang.String sCol)
 #### <a name="parameters"></a>Parámetros  
  *sCol*  
   
- A **cadena** que contiene el nombre del parámetro.  
+ Objeto **String** que contiene el nombre del parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- A **doble** valor.  
+ Un **doble** valor.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Comentarios  
- Este método getDouble es especificado por el método getDouble en la interfaz java.sql.CallableStatement.  
+## <a name="remarks"></a>Notas  
+ El método getDouble especifica este método getDouble en la interfaz java.sql.CallableStatement.  
   
- Este método devuelve todos los tipos de datos basado en números con Java **doble** fidelidad.  
+ Este método devuelve todos los tipos de datos basados en número con fidelidad **double** de Java.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Método getDouble &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)   
- [Miembros de SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+ [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

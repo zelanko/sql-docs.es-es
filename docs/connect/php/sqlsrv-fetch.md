@@ -1,13 +1,11 @@
 ---
-title: sqlsrv_fetch | Documentos de Microsoft
+title: sqlsrv_fetch | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_fetch
@@ -17,21 +15,20 @@ helpviewer_keywords:
 - API Reference, sqlsrv_fetch
 - retrieving data, as a single field
 ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
-caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf3aeff30e84deed5f66eb65d778aa4c154eef98
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: b03669df3fdfadec0f06f5bd964a16827d1aff2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309034"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604237"
 ---
 # <a name="sqlsrvfetch"></a>sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Hace que la siguiente fila de un conjunto de resultados esté disponible para la lectura. Use [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) para leer campos de la fila.  
+Hace que la siguiente fila de un conjunto de resultados esté disponible para la lectura. Utilice [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) para leer campos de la fila.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,7 +43,7 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
 > [!NOTE]  
 > Se debe ejecutar una instrucción antes de poder recuperar resultados. Para obtener información sobre cómo ejecutar una instrucción, consulte [sqlsrv_query](../../connect/php/sqlsrv-query.md) y [sqlsrv_execute](../../connect/php/sqlsrv-execute.md).  
   
-*fila* [opcional]: uno de los siguientes valores, especificar la fila que se va a obtener acceso a un conjunto de resultados que utilice un cursor desplazable:  
+*row* (opcional): uno de los siguientes valores; sirve para especificar la fila a la que se accederá en un conjunto de resultados que use un cursor desplazable:  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -62,13 +59,13 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
   
 Para obtener más información sobre estos valores, vea [Especificación de un tipo de cursor y selección de filas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).  
   
-*desplazamiento* [opcional]: se utiliza con SQLSRV_SCROLL_ABSOLUTE y SQLSRV_SCROLL_RELATIVE para especificar la fila que se va a recuperar. El primer registro del conjunto de resultados es 0.  
+*offset* [OPCIONAL]: se usa con SQLSRV_SCROLL_ABSOLUTE y SQLSRV_SCROLL_RELATIVE para especificar la fila que se va a recuperar. El primer registro del conjunto de resultados es 0.  
   
 ## <a name="return-value"></a>Valor devuelto  
 Si se ha recuperado correctamente la siguiente fila del conjunto de resultados, se devuelve el valor **True** . Si no hay más resultados en el conjunto de resultados, se devuelve el valor **Null** . Si se produce un error, se devuelve el valor **False** .  
   
 ## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente se usa **sqlsrv_fetch** para recuperar una fila de datos que contiene una reseña del producto y el nombre del autor. Para recuperar datos del conjunto de resultados, [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) se utiliza. El ejemplo supone que SQL Server y el [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de datos se instalan en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el ejemplo siguiente se usa **sqlsrv_fetch** para recuperar una fila de datos que contiene una reseña del producto y el nombre del autor. Para recuperar datos del conjunto de resultados, se usa [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md). En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  
@@ -126,7 +123,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
 [Recuperación de datos](../../connect/php/retrieving-data.md)  
 
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  

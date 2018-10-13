@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 989ee419406d0f69cd7bda26485d3d44cbf56550
-ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
+ms.openlocfilehash: 137da00959f6f8d3498bb3d063ceb21337266aef
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48827336"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878018"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Uso de cuadernos en versión preliminar de SQL Server 2019
 
@@ -76,6 +76,9 @@ Cuando selecciona uno de estos kernels, instalaremos esa kernel en el entorno vi
 La selección para adjuntar proporciona el contexto para el Kernel adjuntar. Cuando se conectan para el punto de conexión del clúster de macrodatos de SQL Server, la selección predeterminada para adjuntar será ese punto de conexión del clúster.
 
 ![image7](media/notebooks-guidance/image7.png)
+
+> [!NOTE]
+> De forma predeterminada, se configura la aplicación Spark con el 1 controlador y 3 ejecutores que tardará aproximadamente 8,5 GB de memoria. La configuración recomendada para ejecutar varias sesiones de spark es para cada servidor en el clúster tenga al menos 32 GB de memoria (por ejemplo, en un entorno de AKS usar **Standard_D8_v3** tamaños de máquina virtual, que tienen 32 GB de memoria).
 
 ## <a name="hello-world-in-the-different-contexts"></a>Hola a todos en los contextos diferentes
 

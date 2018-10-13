@@ -15,12 +15,12 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 98a6efa4bcac46a50de84c70fcfb49a0e202c860
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee420b28442909af74a17a196ffac653b6089eb5
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128875"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072329"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Asistente para mapas y Asistente para capas de mapa (Generador de informes y SSRS)
   El Asistente para mapas y el Asistente para capas de mapa automatizan la tarea de creación de un mapa, incorporación de una capa a un mapa o modificación de las opciones de capas de mapa en una capa existente.  
@@ -30,7 +30,7 @@ ms.locfileid: "48128875"
   
  Antes de agregar un mapa a un informe o una capa de mapa a un mapa, debe disponer de la información siguiente:  
   
--   **Origen de datos espaciales.** La ubicación o conexión a un origen que proporcione los datos espaciales, por ejemplo, el nombre de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia y una base de datos que contenga datos espaciales o el nombre de un archivo de forma medioambientales Systems Research Institute, Inc. (ESRI).  
+-   **Origen de datos espaciales.** La ubicación o conexión a un origen que proporcione los datos espaciales, como el nombre de una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y una base de datos que contenga los datos espaciales, o bien el nombre de un archivo de forma de Environmental Systems Research Institute, Inc. (ESRI).  
   
 -   **.** Del origen de datos espaciales, un campo que contenga los conjuntos de coordenadas que especifican las ubicaciones.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48128875"
   
  Haga clic en el título de la página del asistente correspondiente al contenido de la Ayuda. Las páginas que se pueden ver cambian en función de las opciones de tipo de mapa, el origen de datos espaciales, y el origen de datos analíticos.  
   
-1.  [Elegir un origen de datos espaciales](#SpatialDataSource). Datos espaciales pueden proceder de la Galería de mapas, un archivo de forma medioambientales Systems Research Institute, Inc. (ESRI) o de los datos espaciales en un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de datos relacional.  
+1.  [Elegir un origen de datos espaciales](#SpatialDataSource). Los datos espaciales pueden proceder de la galería de mapas, de un archivo de forma de Environmental Systems Research Institute, Inc. o de los datos espaciales de una base de datos relacional de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
     -   [¿Qué son los datos espaciales?](#SpatialData)  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48128875"
   
  Después de agregar un mapa o una capa de mapa, y obtener una vista previa del informe, puede cambiar las opciones del mapa y de la capa de mapa que estableció en los asistentes. Para más información, vea [Personalizar los datos y la presentación de un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Para obtener más información acerca de las asignaciones, vea [asigna &#40;generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md). Para obtener instrucciones paso a paso para agregar un mapa a un informe, vea [Tutorial: Informe de mapa &#40;Generador de informes&#41;](../tutorial-map-report-report-builder.md).  
+ Para más información sobre los mapas, vea [Mapas &#40;Generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md). Para obtener instrucciones paso a paso para agregar un mapa a un informe, vea [Tutorial: Informe de mapa &#40;Generador de informes&#41;](../tutorial-map-report-report-builder.md).  
   
  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
@@ -125,9 +125,9 @@ ms.locfileid: "48128875"
  La galería de mapas contiene mapas de los informes que se encuentran en la carpeta de la galería de mapas del entorno de creación de informes. Los mapas de la galería permiten comenzar rápidamente a agregar un mapa a un informe. Un proveedor de mapas proporciona los mapas predefinidos de la galería.  
   
 > [!NOTE]  
->  Esta característica de mapas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa los datos de archivos de forma TIGER/Line que se proporcionan por cortesía de la Oficina del censo estadounidense ([http://www.census.gov/](http://www.census.gov/)). Los archivos de forma TIGER/Line son un extracto de información geográfica y cartográfica seleccionada de la base de datos MAF/TIGRE del Censo. Los archivos de forma TIGER/Line están disponibles sin cargo en la Oficina del censo estadounidense. Para obtener más información acerca de los archivos de forma TIGER/Line, visite [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). La información de fronteras de los archivos de forma TIGER/Line está destinada únicamente para la recopilación de datos estadísticos y tabulación; su representación y designación para fines estadísticos no constituye ninguna determinación de autoridad jurisdiccional ni derechos de propiedad ni de titularidad, y no son descripciones legales de territorios. Census TIGER and TIGER/Line son marcas registradas de la Oficina del censo estadounidense.  
+>  Esta característica de mapas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa los datos de archivos de forma de TIGER/Line que se proporcionan por cortesía de la Oficina del censo estadounidense ([http://www.census.gov/](http://www.census.gov/)). Los archivos de forma TIGER/Line son un extracto de información geográfica y cartográfica seleccionada de la base de datos MAF/TIGRE del Censo. Los archivos de forma TIGER/Line están disponibles sin cargo en la Oficina del censo estadounidense. Para obtener más información acerca de los archivos de forma TIGER/Line, visite [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). La información de fronteras de los archivos de forma TIGER/Line está destinada únicamente para la recopilación de datos estadísticos y tabulación; su representación y designación para fines estadísticos no constituye ninguna determinación de autoridad jurisdiccional ni derechos de propiedad ni de titularidad, y no son descripciones legales de territorios. Census TIGER and TIGER/Line son marcas registradas de la Oficina del censo estadounidense.  
   
- Para extender la galería de mapas, puede agregar o quitar informes del directorio de la galería de mapas, y agregar carpetas para organizar los mapas. Para obtener más información, vea [Mapas &#40;Generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md).  
+ Para extender la galería de mapas, puede agregar o quitar informes del directorio de la galería de mapas, y agregar carpetas para organizar los mapas. Para más información, vea [Mapas &#40;Generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md).  
   
 ###  <a name="Shapefile"></a> What is an ESRI shapefile?  
  Un archivo de forma ESRI es un conjunto de archivos con datos que cumplen el formato de datos espaciales de los archivos de forma del Environmental Systems Research Institute, Inc. (ESRI). El conjunto de archivos suele incluir el archivo *\<nombreDeArchivo>*.shp que contiene datos espaciales y un archivo auxiliar, *\<nombreDeArchivo>*.dbf.  
@@ -198,7 +198,7 @@ ms.locfileid: "48128875"
   
  Para obtener más información acerca de los mosaicos, vea [Sistema de mosaicos de Bing Maps](http://go.microsoft.com/fwlink/?LinkId=147315). Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](http://go.microsoft.com/fwlink/?LinkId=151371) y [Declaración de privacidad](http://go.microsoft.com/fwlink/?LinkId=151372).  
   
- Para ver un fondo de mosaico en la vista de diseño, debe tener acceso a Internet. Para ver el fondo de mosaico en una vista previa de un informe en un servidor de informes, el servidor de informes se debe configurar para ser compatible con los mosaicos de Bing Maps. Para obtener más información, consulte [solucionar problemas de informes: informes de mapa &#40;generador de informes y SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) y "Cómo preparar los mapas" en el [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) en libros en pantalla de SQL Server .  
+ Para ver un fondo de mosaico en la vista de diseño, debe tener acceso a Internet. Para ver el fondo de mosaico en una vista previa de un informe en un servidor de informes, el servidor de informes se debe configurar para ser compatible con los mosaicos de Bing Maps. Para obtener más información, consulte [solucionar problemas de informes: informes de mapa &#40;generador de informes y SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) y "Cómo preparar los mapas" en el [documentación de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) en libros en pantalla de SQL Server.  
   
  Para más información sobre otras formas de personalizar una capa de mosaico, vea [Agregar, cambiar o eliminar un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
@@ -249,7 +249,7 @@ ms.locfileid: "48128875"
 ###  <a name="Legends"></a> ¿Para qué son las leyendas y las escalas de Vista previa del mapa?  
  Las leyendas ayudan a los usuarios a interpretar los datos que se muestran en un mapa. Un mapa proporciona un intervalo de colores, una escala de distancia y una leyenda.  
   
--   **Rango de colores.** El rango de colores muestra una barra de color con una escala que proporciona una guía para los intervalos de datos que están determinados por el procesador de informes según las reglas que se especifican para la capa.  
+-   **Rango de colores.** El intervalo de colores muestra una barra de colores con una escala que proporciona una guía para los intervalos de datos que determina el procesador del informe según las reglas que se especifican para la capa.  
   
 -   **Escala de distancia.** La escala de distancia proporciona una guía para las unidades de distancia en el mapa. Las unidades de distancia se determinan automáticamente según la proyección del mapa y el nivel de zoom.  
   

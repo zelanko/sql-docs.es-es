@@ -12,12 +12,12 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d9f3033aefbb01787fe0001a860a870960d98f15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25559152ebb3b748cee44a3a04dec2c23b7432b8
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141576"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072039"
 ---
 # <a name="ddl-triggers"></a>Desencadenadores DDL
   Los desencadenadores DDL se inician en respuesta a una variedad de eventos de lenguaje de definición de datos (DDL). Estos eventos corresponden principalmente a las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que comienzan por las palabras clave CREATE, ALTER, DROP, GRANT, DENY, REVOKE o UPDATE STATISTICS. Algunos procedimientos almacenados del sistema que ejecutan operaciones de tipo DDL también pueden activar desencadenadores DDL.  
@@ -35,14 +35,14 @@ ms.locfileid: "48141576"
   
 ## <a name="types-of-ddl-triggers"></a>Tipos de desencadenadores DDL  
  Desencadenador DDL de Transact-SQL  
- Un tipo especial de procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)] que ejecuta una o más instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] como respuesta a un evento con ámbito de servidor o de base de datos. Por ejemplo, un desencadenador DDL se puede activar si se ejecuta una instrucción como ALTER SERVER CONFIGURATION o si se elimina una tabla mediante DROP TABLE.  
+ Un tipo especial de [!INCLUDE[tsql](../../includes/tsql-md.md)] el procedimiento almacenado que ejecuta una o más [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones en respuesta a un evento con ámbito de servidor o ámbito de base de datos. Por ejemplo, un desencadenador DDL se puede activar si se ejecuta una instrucción como ALTER SERVER CONFIGURATION o si se elimina una tabla mediante DROP TABLE.  
   
  Desencadenador DDL de CLR  
  En lugar de ejecutar un procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)] , un desencadenador CLR ejecuta uno o más métodos escritos en código administrado que son miembros de un ensamblado creado en .NET Framework y cargado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Los desencadenadores DDL solo se activan cuando se ejecutan las instrucciones DDL que los desencadenan. Los desencadenadores DDL no se pueden usar como desencadenadores INSTEAD OF. Los desencadenadores DDL no se activan como respuesta a eventos que afectan a procedimientos almacenados y tablas temporales, ya sean locales o globales.  
   
- Desencadenadores DDL no crean especial `inserted` y `deleted` tablas.  
+ Los desencadenadores DDL no crean las tablas `inserted` y `deleted` especiales.  
   
  La información acerca de un evento que activa un desencadenador DDL y las modificaciones posteriores provocadas por el mismo se capturan con la función EVENTDATA.  
   
@@ -108,7 +108,7 @@ GO
   
  Para obtener una lista de los grupos predefinidos de instrucciones DDL disponibles para los desencadenadores DDL, las instrucciones concretas que cubren los grupos de eventos y los ámbitos donde se pueden programar estos grupos de eventos, vea [DDL Event Groups](ddl-event-groups.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tareas relacionadas  
   
 |Tarea|Tema|  
 |----------|-----------|  

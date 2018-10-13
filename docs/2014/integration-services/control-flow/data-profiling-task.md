@@ -17,12 +17,12 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ccb9267242dbe3a44350efd1762c45bc6bbccbf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4119b2ef17bcb735669d25662972ae4c79bbae31
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140711"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906415"
 ---
 # <a name="data-profiling-task"></a>Tarea de generación de perfiles de datos
   La tarea de generación de perfiles de datos calcula diversos perfiles que le ayudan a familiarizarse con un origen de datos y a identificar en los datos problemas que deban corregirse.  
@@ -30,7 +30,7 @@ ms.locfileid: "48140711"
  Puede utilizar la tarea de generación de perfiles de datos dentro de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para generar perfiles de datos que están almacenados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e identificar posibles problemas de calidad de los datos.  
   
 > [!NOTE]  
->  En este tema únicamente se describen las características y requisitos de la tarea de generación de perfiles de datos. Para obtener un tutorial sobre cómo usar la tarea de generación de perfiles de datos, vea la sección [Visor y tarea de generación de perfiles de datos](data-profiling-task-and-viewer.md).  
+>  En este tema solo se describe las características y requisitos de la tarea de generación de perfiles de datos. Para obtener un tutorial sobre cómo usar la tarea de generación de perfiles de datos, vea la sección [Visor y tarea de generación de perfiles de datos](data-profiling-task-and-viewer.md).  
   
 ## <a name="requirements-and-limitations"></a>Requisitos y limitaciones  
  La tarea de generación de perfiles de datos solo funciona con datos que estén almacenados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta tarea no funciona con orígenes de datos de otros fabricantes o basados en archivos.  
@@ -55,7 +55,7 @@ ms.locfileid: "48140711"
 |Perfil de distribución de longitud de columnas|Notifica las diferentes longitudes de valores de cadena existentes en la columna seleccionada y el porcentaje de filas de la tabla que representa cada longitud.<br /><br /> Este perfil le ayuda a identificar problemas en los datos, como los valores no válidos. Por ejemplo, genera un perfil de una columna de códigos de estados de Estados Unidos que deberían ser de dos caracteres y detecta valores con más de dos caracteres.|  
 |Perfil de proporción de columnas nulas|Notifica el porcentaje de valores nulos en la columna seleccionada.<br /><br /> Este perfil permite identificar problemas con los datos, como una proporción inesperadamente alta de valores nulos en una columna. Por ejemplo, genera un perfil de una columna de códigos postales y detecta un porcentaje inaceptablemente alto de códigos que faltan.|  
 |Perfil de patrón de columnas|Notifica un conjunto de expresiones regulares que cubren el porcentaje de valores especificado en una columna de cadenas.<br /><br /> Este perfil le ayuda a identificar problemas con los datos, como las cadenas no válidas. Este perfil también puede sugerir expresiones regulares que se pueden usar en el futuro para validar los valores nuevos. Por ejemplo, un perfil del patrón de una columna de códigos postales de Estados Unidos podría generar las expresiones regulares: \d{5}-\d{4}, \d{5} y \d{9}. Si ve otras expresiones regulares, es posible que los datos contengan valores no válidos o tengan un formato incorrecto.|  
-|Perfil de estadísticas de columnas|Notifica estadísticas, como mínimo, máximo, promedio y desviación estándar para las columnas numéricas y los valores mínimo y máximo para `datetime` columnas.<br /><br /> Este perfil le ayuda a identificar problemas existentes en los datos, como las fechas no válidas. Por ejemplo, genera un perfil de una columna de fechas históricas y detecta una fecha máxima futura.|  
+|Perfil de estadísticas de columnas|Notifica estadísticas, como los valores mínimo, máximo, medio y la desviación estándar para las columnas numéricas, y los valores mínimo y máximo para las columnas `datetime`.<br /><br /> Este perfil le ayuda a identificar problemas existentes en los datos, como las fechas no válidas. Por ejemplo, genera un perfil de una columna de fechas históricas y detecta una fecha máxima futura.|  
 |Perfil de distribución de valores de columna|Notifica todos los valores distintos existentes en la columna seleccionada y el porcentaje de filas de la tabla que representa cada valor. También puede notificar los valores existentes en un número de filas de la tabla que supera cierto porcentaje.<br /><br /> Este perfil le ayuda a identificar problemas con los datos, como un número incorrecto de valores distintos en una columna. Por ejemplo, si al generar un perfil de una columna que se supone que contiene los estados de Estados Unidos detecta más de 50 valores distintos.|  
   
  Los tres perfiles siguientes analizan varias columnas o relaciones entre columnas y tablas.  
@@ -76,12 +76,12 @@ ms.locfileid: "48140711"
 |-------------|------------------------|  
 |ColumnStatisticsProfile|Columnas de tipo numérico o `datetime` (no se calcula `mean` ni `stddev` para columnas de tipo `datetime`)|  
 |ColumnNullRatioProfile|Todas las columnas**|  
-|ColumnValueDistributionProfile|Columnas de `integer` tipo, `char` tipo, y `datetime` tipo|  
-|ColumnLengthDistributionProfile|Columnas de `char` tipo|  
-|ColumnPatternProfile|Columnas de `char` tipo|  
-|CandidateKeyProfile|Columnas de `integer` tipo, `char` tipo, y `datetime` tipo|  
-|FunctionalDependencyProfile|Columnas de `integer` tipo, `char` tipo, y `datetime` tipo|  
-|InclusionProfile|Columnas de `integer` tipo, `char` tipo, y `datetime` tipo|  
+|ColumnValueDistributionProfile|Columnas de tipo `integer`, `char` y `datetime`|  
+|ColumnLengthDistributionProfile|Columnas de tipo `char`|  
+|ColumnPatternProfile|Columnas de tipo `char`|  
+|CandidateKeyProfile|Columnas de tipo `integer`, `char` y `datetime`|  
+|FunctionalDependencyProfile|Columnas de tipo `integer`, `char` y `datetime`|  
+|InclusionProfile|Columnas de tipo `integer`, `char` y `datetime`|  
   
  \* En la tabla anterior de tipos de datos válidos, el `integer`, `char`, `datetime`, y `numeric` incluyen los tipos de datos específicos siguientes:  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48140711"
   
  Los tipos de fecha y hora incluyen `datetime`, `smalldatetime` y `timestamp`.  
   
- Tipos numéricos incluyen `integer` tipos (excepto `bit`), `money`, `smallmoney`, `decimal`, `float`, `real`, y `numeric`.  
+ Los tipos numéricos incluyen los tipos `integer` (excepto `bit`), `money`, `smallmoney`, `decimal`, `float`, `real` y `numeric`.  
   
  \*\* `image`, `text`, `XML`, `udt`, y `variant` no se admiten los tipos de perfiles que no sea el perfil de proporción de columnas nulas.  
   
@@ -134,25 +134,25 @@ ms.locfileid: "48140711"
  La tarea de generación de perfiles de datos se configura mediante el **Editor de tareas de generación de perfiles de datos**. El editor tiene dos páginas:  
   
  [Página General](../general-page-of-integration-services-designers-options.md)  
- En la página **General** , se especifica el archivo o la variable de resultados. También es posible seleccionar **Perfil rápido** para configurar rápidamente la tarea con objeto de calcular los perfiles utilizando la configuración predeterminada. Para más información, vea [Single Table Quick Profile Form &#40;Data Profiling Task&#41;](data-profiling-task.md).  
+ En la página **General** , se especifica el archivo o la variable de resultados. También es posible seleccionar **Perfil rápido** para configurar rápidamente la tarea con objeto de calcular los perfiles utilizando la configuración predeterminada. Para más información, vea [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](data-profiling-task.md).  
   
- [Página solicitudes de perfil](data-profiling-task-editor-profile-requests-page.md)  
+ [Página Solicitudes de perfil](data-profiling-task-editor-profile-requests-page.md)  
  En la página **Solicitudes de perfil** , especifique el origen de datos y seleccione y configure los perfiles de los datos que quiere calcular. Para obtener más información sobre los diversos perfiles que puede configurar, vea los temas siguientes:  
   
--   [Opciones de solicitud de perfil de claves candidatas &#40;tarea de generación de perfiles de datos&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de claves candidatas &#40;tarea de generación de perfiles de datos&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de perfil de distribución de longitud de columna &#40;tarea de generación de perfiles de datos&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de distribución de longitud de columna &#40;tarea de generación de perfiles de datos&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de perfil de proporción de Null de columna &#40;tarea de generación de perfiles de datos&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de proporción de columnas nulas &#40;tarea de generación de perfiles de datos&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de perfil de patrón de columnas &#40;tarea de generación de perfiles de datos&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de patrón de columnas &#40;tarea de generación de perfiles de datos&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de perfil de estadísticas de columna &#40;tarea de generación de perfiles de datos&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de estadísticas de columnas &#40;tarea de generación de perfiles de datos&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de perfil de distribución de valores de columna &#40;tarea de generación de perfiles de datos&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de distribución de valores de columna &#40;tarea de generación de perfiles de datos&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de perfil de dependencia funcional &#40;tarea de generación de perfiles de datos&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de dependencia funcional &#40;tarea de generación de perfiles de datos&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Valor de opciones de solicitud de perfil de inclusión &#40;tarea de generación de perfiles de datos&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de inclusión de valores &#40;tarea de generación de perfiles de datos&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
   

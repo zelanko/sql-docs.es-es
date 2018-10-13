@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ce22aad16b8a789c1224adf3421e61ad113a0ccb
-ms.sourcegitcommit: a7edd16af7be25f627d16e5c8a6e8d6de7071a28
+ms.openlocfilehash: d59601d0706b65186ed5f260128c3c44a134d60e
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47178331"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906405"
 ---
 # <a name="dynamic-management-views-dmvs"></a>Vistas de administración dinámica (DMV) 
 
@@ -143,7 +143,7 @@ Conjuntos de filas de esquema se describen en los dos protocolos de SQL Server A
 |[DBSCHEMA_PROVIDER_TYPES](https://msdn.microsoft.com/library/ee301696)|Identifica los tipos de datos (base) admitidos por el servidor.|  
 |[DBSCHEMA_TABLES](https://msdn.microsoft.com/library/ee320843)|Devuelve las dimensiones, grupos de medida o expuestos como tablas de conjuntos de filas de esquema.|  
 |[DISCOVER_CALC_DEPENDENCY](https://msdn.microsoft.com/library/hh770226)| Devuelve información acerca de la dependencia de cálculo para un objeto que se especifica en una base de datos Tabular o en una consulta DAX que se ejecuta en una base de datos Tabular. |  
-|[DISCOVER_COMMAND_OBJECTS](https://msdn.microsoft.com/library/ee320662)|Proporciona información sobre el uso de los recursos y la actividad en los objetos que utiliza el comando al que se hace referencia.|  
+|[Conjunto de filas DISCOVER_COMMAND_OBJECTS](https://msdn.microsoft.com/library/ee320662)|Proporciona información sobre el uso de los recursos y la actividad en los objetos que utiliza el comando al que se hace referencia.|  
 |[DISCOVER_COMMANDS](https://msdn.microsoft.com/library/ee320715)|Proporciona información de la actividad y el uso de recursos sobre los comandos que se están ejecutando actualmente o los que se ejecutaron los últimos en las conexiones abiertas en el servidor.|  
 |[DISCOVER_CONNECTIONS](https://msdn.microsoft.com/library/ee301889)|Proporciona información sobre el uso de los recursos y la actividad en las conexiones abiertas actualmente en el servidor.|  
 |[DISCOVER_CSDL_METADATA](https://msdn.microsoft.com/library/gg587670)|Devuelve información acerca de los metadatos de la base de datos para bases de datos en memoria.|  
@@ -160,7 +160,7 @@ Conjuntos de filas de esquema se describen en los dos protocolos de SQL Server A
 |[DISCOVER_MASTER_KEY](https://msdn.microsoft.com/library/ee301825)|Devuelve la clave de cifrado maestra del servidor.|
 |[DISCOVER_MEMORYGRANT](https://msdn.microsoft.com/library/ee320945)|Devuelve una lista de concesiones de cuota de memoria interna utilizadas por los trabajos que se están ejecutando actualmente en el servidor.|  
 |[DISCOVER_MEMORYUSAGE](https://msdn.microsoft.com/library/ee320910)|Devuelve las estadísticas de DISCOVER_MEMORYUSAGE para diversos objetos asignados por el servidor.|  
-|[DISCOVER_OBJECT_ACTIVITY](https://msdn.microsoft.com/library/ee320661)|Proporciona el uso de recursos por objeto desde el inicio del servicio.|  
+|[Conjunto de filas DISCOVER_OBJECT_ACTIVITY](https://msdn.microsoft.com/library/ee320661)|Proporciona el uso de recursos por objeto desde el inicio del servicio.|  
 |[DISCOVER_OBJECT_MEMORY_USAGE](https://msdn.microsoft.com/library/ee320910)|Devuelve las estadísticas de DISCOVER_MEMORYUSAGE para diversos objetos asignados por el servidor.|  
 |[DISCOVER_PARTITION_DIMENSION_STAT](https://msdn.microsoft.com/library/ee320268)|Devuelve estadísticas sobre la dimensión que está asociada a una partición.|  
 |[DISCOVER_PARTITION_STAT](https://msdn.microsoft.com/library/ee320483)|Devuelve estadísticas sobre agregaciones de una partición determinada.|  

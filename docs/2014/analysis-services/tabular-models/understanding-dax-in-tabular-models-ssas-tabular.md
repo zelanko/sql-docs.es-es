@@ -11,12 +11,12 @@ ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7ecc95a89d3db446122d1da4e9701d1555028fe5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4bc835d09f02e170c3b5595495eb6554c1319df5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136025"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906385"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>Descripción de DAX en modelos tabulares (SSAS tabular)
   Expresiones de análisis de datos (DAX) es el lenguaje de fórmulas empleado para crear cálculos personalizados en [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para libros de Microsoft Excel y proyectos de modelos tabulares de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Las fórmulas DAX incluyen funciones, operadores y valores para realizar cálculos avanzados sobre datos de tablas y columnas.  
@@ -54,7 +54,7 @@ ms.locfileid: "48136025"
   
  En [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], las fórmulas de cálculo las crean normalmente el usuario de los libros para el análisis de Business Intelligence de autoservicio. Las columnas calculadas se crean para una tabla en la ventana de PowerPivot y las medidas se crean en tablas dinámicas o en el área de cálculo. A diferencia de los proyectos de modelos tabulares, los libros PowerPivot no proporcionan seguridad basada en roles, que pueden usar fórmulas DAX para proteger los datos.  
   
- En los proyectos de modelo tabular, las fórmulas de cálculo las crean los autores del modelo en el diseñador de modelos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Aunque los valores de las columnas calculadas mediante fórmulas DAX aparecen inmediatamente en la tabla en el diseñador de modelos (a excepción de la característica de vista previa de medidas de la cuadrícula de medidas), las medidas no se calculan hasta que el usuario especifica un filtro en un cliente de informes como [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] o en tablas dinámicas en Microsoft Excel.  
+ En los proyectos de modelo tabular, las fórmulas de cálculo las crean los autores del modelo en el diseñador de modelos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Aunque los valores de las columnas calculadas mediante fórmulas DAX aparecen inmediatamente en la tabla en el diseñador de modelos (a excepción de la característica de vista previa de medidas de la cuadrícula de medidas), las medidas no se calculan hasta que el usuario especifica un filtro en un cliente de informes como [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] o en tablas dinámicas en Microsoft Excel.  
   
  Si importa un libro PowerPivot en un nuevo proyecto de modelo tabular utilizando la función de importación de la plantilla de proyecto de PowerPivot, las fórmulas DAX para columnas calculadas se crearán automáticamente en el nuevo modelo tabular. Las fórmulas DAX para las medidas implícitas y explícitas en el libro se crearán automáticamente en el nuevo modelo tabular como medidas explícitas. Dado que la funcionalidad del rol y del filtro de filas seguras ya no existe en los libros PowerPivot, deberá crear al menos un rol en el nuevo modelo tabular para proporcionar a los miembros de roles acceso a los datos del modelo. Las fórmulas DAX en filtros de fila solo son necesarias si se desea proteger los datos de la tabla en el nivel de fila.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48136025"
   
  Para más información, vea [Calculated Columns &#40;SSAS Tabular&#41;](ssas-calculated-columns.md).  
   
-### <a name="measures"></a>medidas  
+### <a name="measures"></a>Medidas  
  Las medidas son fórmulas dinámicas donde los resultados cambian según el contexto. Las medidas se usan en formatos de informe que admiten la combinación y filtrado de datos del modelo mediante varios atributos, como un informe de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] , una tabla dinámica o un gráfico dinámico de Excel. En los proyectos de modelo tabular, las medidas las define el autor del modelo utilizando la cuadrícula de medida (y la barra de fórmulas) en el diseñador de modelos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  Una fórmula en una medida puede usar las funciones de agregación estándar creadas automáticamente mediante la característica de autosuma, como COUNT o SUM, o bien puede definir su propia fórmula mediante DAX. Al definir una fórmula para una medida en la barra de fórmulas, una característica de información sobre herramientas muestra una vista previa de cuáles serían los resultados para total en el contexto actual, pero de lo contrario no se generan los resultados inmediatamente en ninguna parte. Otros detalles de la medida también aparecen en el panel **Propiedades** .  
@@ -91,7 +91,7 @@ ms.locfileid: "48136025"
   
  Los filtros de fila se aplican a las filas especificadas y también a las filas relacionadas. Si una tabla tiene varias relaciones, los filtros aplican seguridad a la relación que está activa. Los filtros de fila se intersecarán con otros filtros de fila definidos para las tablas relacionadas.  
   
- Para obtener más información, vea [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md).  
+ Para obtener más información, vea [Roles &#40;SSAS tabular&#41;](roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_DAX_datatypes"></a> Tipos de datos de DAX  
  Puede importar datos en un modelo de varios orígenes de datos diferentes que podrían admitir tipos de datos diferentes. Al importar los datos en un modelo, se convierten a uno de los tipos de datos del modelo tabular. Cuando se usa el modelo de datos en un cálculo, los datos se convierten a un tipo de datos DAX para la duración y el resultado del cálculo. Cuando se crea una fórmula DAX, los términos usados en la fórmula determinarán automáticamente el tipo de datos de valor devuelto.  
@@ -104,7 +104,7 @@ ms.locfileid: "48136025"
 |Decimal Number|Número real de 64 bits (ocho bytes) <sup>1, 2</sup>|Los números reales son aquellos que pueden tener posiciones decimales. Abarcan un amplio intervalo de valores:<br /><br /> Valores negativos de -1,79E +308 a -2,23E -308<br /><br /> Cero<br /><br /> Valores positivos desde 2,23E -308 hasta 1,79E + 308<br /><br /> Sin embargo, el número de dígitos significativos se limita a 17 dígitos decimales.|  
 |Booleano|Boolean|Valor True o False.|  
 |Texto|String|Cadena de datos de carácter Unicode. Pueden ser cadenas, números o fechas representados en un formato de texto.|  
-|date|Fecha y hora|Fechas y horas en una representación de fecha y hora aceptada.<br /><br /> Las fechas válidas son todas las fechas posteriores al 1 de marzo de 1900.|  
+|Date|Fecha y hora|Fechas y horas en una representación de fecha y hora aceptada.<br /><br /> Las fechas válidas son todas las fechas posteriores al 1 de marzo de 1900.|  
 |Moneda|Moneda|El tipo de datos de moneda permite los valores comprendidos entre -922.337.203.685.477,5808 y 922.337.203.685.477,5807 con cuatro dígitos decimales de precisión fija.|  
 |N/D|En blanco|Un tipo en blanco es un tipo de datos de DAX que representa y reemplaza los valores NULL de SQL. Un valor en blanco se puede crear con la función BLANK y se puede comprobar si es tal con la función lógica ISBLANK.|  
   
@@ -219,7 +219,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 -   Las funciones DAX incluyen una serie de funciones de *inteligencia de tiempo* . Estas funciones le permiten definir o seleccionar rangos de fechas y realizar cálculos dinámicos basados en dichas fechas o rangos. Por ejemplo, puede comparar sumas en períodos paralelos.  
   
 ### <a name="date-and-time-functions"></a>Funciones de fecha y hora  
- Las funciones de fecha y hora en DAX son similares a las funciones de fecha y hora en Microsoft Excel. Sin embargo, las funciones de DAX se basan en el `datetime` tipos de datos utilizados por Microsoft SQL Server. Para obtener más información, consulte [funciones de fecha y hora &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx).  
+ Las funciones de fecha y hora en DAX son similares a las funciones de fecha y hora en Microsoft Excel. Sin embargo, las funciones de DAX se basan en los tipos de datos `datetime` usados por Microsoft SQL Server. Para obtener más información, consulte [funciones de fecha y hora &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx).  
   
 ### <a name="filter-functions"></a>Funciones de filtro  
  Las funciones de filtro de DAX devuelven tipos de datos específicos, valores de búsqueda en tablas relacionadas, además de la capacidad de filtrar por valores relacionados. Las funciones de búsqueda usan tablas y relaciones, como una base de datos. Las funciones de filtrado permiten manipular el contexto de los datos para crear cálculos dinámicos. Para obtener más información, consulte [las funciones de filtro &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634807(v=sql.120).aspx).  
@@ -332,7 +332,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 ##### <a name="examples-of-context-in-formulas"></a>Ejemplos de contexto en fórmulas  
   
-1.  El [función RELATED](https://msdn.microsoft.com/library/ee634202(v=sql.120).aspx) expande el contexto de la fila actual para incluir los valores en una columna relacionada. Esto le permite realizar búsquedas. El ejemplo de este tema muestra la interacción del filtrado con el contexto de la fila.  
+1.  La función [RELATED Function](https://msdn.microsoft.com/library/ee634202(v=sql.120).aspx) expande el contexto de la fila actual para incluir los valores en una columna relacionada. Esto le permite realizar búsquedas. El ejemplo de este tema muestra la interacción del filtrado con el contexto de la fila.  
   
 2.  El [función de filtro](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx) función le permite especificar las filas que se va a incluir en el contexto actual. Los ejemplos de este tema también muestran cómo incrustar los filtros dentro de otras funciones que realizan los agregados.  
   
@@ -417,16 +417,16 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ##  <a name="bkmk_addional_resources"></a> Recursos adicionales  
  [Creación de modelos tabulares &#40;tutorial de Adventure Works&#41;](../tabular-modeling-adventure-works-tutorial.md) proporciona instrucciones paso a paso sobre cómo crear un modelo tabular que incluya varios cálculos en columnas calculadas, medidas y filtros de fila. Para la mayoría de las fórmulas, se proporciona una descripción sobre el significado de la fórmula.  
   
- El [Blog del equipo de PowerPivot y Analysis Services](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) proporciona información, sugerencias, noticias y anuncios sobre [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] y PowerPivot.  
+ El [blog del equipo de Analysis Services y PowerPivot](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) proporciona información, sugerencias, noticias y avisos sobre [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] y PowerPivot.  
   
  El [Centro de recursos de DAX](http://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) proporciona información interna y externa sobre DAX, incluidas numerosas soluciones de DAX enviadas por destacados profesionales de Business Intelligence.  
   
 ## <a name="see-also"></a>Vea también  
  [Expresiones de análisis de datos &#40;DAX&#41; referencia](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)   
- [Las medidas &#40;Tabular de SSAS&#41;](measures-ssas-tabular.md)   
- [Columnas calculadas &#40;Tabular de SSAS&#41;](ssas-calculated-columns.md)   
- [Roles &#40;Tabular de SSAS&#41;](roles-ssas-tabular.md)   
- [KPI &#40;Tabular de SSAS&#41;](kpis-ssas-tabular.md)   
- [Orígenes de datos compatibles &#40;SSAS Tabular&#41;](data-sources-supported-ssas-tabular.md)  
+ [Medidas &#40;SSAS tabular&#41;](measures-ssas-tabular.md)   
+ [Columnas calculadas &#40;SSAS tabular&#41;](ssas-calculated-columns.md)   
+ [Roles &#40;SSAS tabular&#41;](roles-ssas-tabular.md)   
+ [KPI &#40;SSAS tabular&#41;](kpis-ssas-tabular.md)   
+ [Orígenes de datos compatibles &#40;SSAS tabular&#41;](data-sources-supported-ssas-tabular.md)  
   
   

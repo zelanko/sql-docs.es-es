@@ -16,17 +16,17 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dce3ca08855925e9ef4825cc9f5017b99722ed6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6abc8e9e025bc24b4f456b58e0e9625e66b4b71
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215555"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072029"
 ---
 # <a name="upgrade-integration-services"></a>Actualizar Integration Services
   Si [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] está instalado actualmente en el equipo, puede realizar la actualización a [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
- Al actualizar a [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] en un equipo que tenga instalada una de estas versiones anteriores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] se instala en paralelo con la versión anterior.  
+ Al actualizar a [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] en un equipo que tenga instalada una de estas versiones anteriores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] se instala en paralelo con la versión anterior.  
   
  Con esta instalación en paralelo se instalan varias versiones de la utilidad dtexec. Para asegurarse de que ejecuta la versión correcta de la utilidad, escriba la ruta de acceso completa en el símbolo del sistema (\<unidad>:\Archivos de programa\Microsoft SQL Server\\<versión\>\DTS\Binn) para ejecutar la utilidad. Para obtener más información acerca de dtexec, vea [dtexec Utility](../packages/dtexec-utility.md).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48215555"
  Recomendamos que ejecute el Asesor de actualizaciones antes de actualizar a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. El Asesor de actualizaciones notifica los problemas que podría encontrar si migra los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] existentes al nuevo formato de paquete que [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utiliza. Para obtener más información, vea [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
 > [!NOTE]  
->  La compatibilidad para migrar o ejecutar paquetes de Servicios de transformación de datos (DTS) ya no se incluye en la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La funcionalidad de DTS siguiente ya no se incluye.  
+>  Compatibilidad para migrar o ejecutar paquetes de servicios de transformación de datos (DTS) no se incluye en la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La funcionalidad de DTS siguiente ya no se incluye.  
 >   
 >  -   Tiempo de ejecución DTS  
 > -   DTS API  
@@ -117,7 +117,7 @@ ms.locfileid: "48215555"
 -   Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para administrar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] paquetes que están almacenados en una instancia de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Debe modificar el archivo de configuración del servicio para agregar la instancia de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a la lista de ubicaciones administradas por el servicio.  
   
     > [!NOTE]  
-    >  Las versiones anteriores de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] no se pueden conectar al servicio de [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] .  
+    >  Las versiones anteriores de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] no se pueden conectar al servicio de [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
 -   Identificar la versión de los paquetes en la tabla del sistema msdb.dbo.sysssispackages comprobando el valor en la columna packageformat. La tabla tiene una columna packageformat que identifica la versión de cada paquete. Un valor de 2 en la columna packageformat indica un paquete de [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]; un valor de 3, un paquete de [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]. Hasta que migre los paquetes al nuevo formato de paquete, el valor de la columna packageformat no cambia.  
   

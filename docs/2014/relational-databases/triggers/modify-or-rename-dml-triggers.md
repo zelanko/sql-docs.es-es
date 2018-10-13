@@ -14,12 +14,12 @@ ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: deda1f440b12fc46b4d3e3e9e6fe5731995273a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3eced987f2f19e5379ab14ebc88eca37b8e19d8a
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200885"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084974"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>Modificar o cambiar el nombre de desencadenadores DML
   En este tema se describe cómo modificar o cambiar el nombre de un desencadenador DML en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "48200885"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48200885"
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
--   Se recomienda no usar el procedimiento almacenado [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) para cambiar el nombre de un desencadenador. Al cambiar cualquier parte del nombre de un objeto se pueden interrumpir scripts y procedimientos almacenados. Al cambiar el nombre de un desencadenador no se cambia el nombre del objeto correspondiente en la columna de definición de la vista de catálogo [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) . En su lugar, se recomienda quitar y volver a crear el desencadenador.  
+-   Se recomienda no usar el procedimiento almacenado [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) para cambiar el nombre de un desencadenador. Al cambiar cualquier parte del nombre de un objeto se pueden interrumpir scripts y procedimientos almacenados. Al cambiar el nombre de un desencadenador no se cambia el nombre del objeto correspondiente en la columna de definición de la vista de catálogo [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) . Se recomienda que quite y vuelva a crear el desencadenador en su lugar.  
   
 -   Si cambia el nombre de un objeto al que hace referencia un desencadenador DML, deberá modificar este último para que el texto refleje el nuevo nombre. Por tanto, antes de cambiar el nombre de un objeto, vea primero las dependencias del mismo para determinar si algún desencadenador va a verse afectado por el cambio propuesto.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48200885"
   
 #### <a name="to-modify-a-trigger-using-alter-trigger"></a>Para modificar un desencadenador mediante ALTER TRIGGER  
   
-1.  Conéctese con el [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Conéctese al [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -123,7 +123,7 @@ GO
   
 #### <a name="to-rename-a-trigger-using-drop-trigger-and-alter-trigger"></a>Para cambiar el nombre de un desencadenador mediante DROP TRIGGER y ALTER TRIGGER  
   
-1.  Conéctese con el [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Conéctese al [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   

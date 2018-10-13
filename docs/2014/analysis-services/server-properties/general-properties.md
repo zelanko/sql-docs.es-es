@@ -39,12 +39,12 @@ ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dab367196f1d4d80f965a2ff400fd6193b6e3508
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ad086a7d6ee677fc54241f45d1dbe81e5c4c2d5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171185"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905765"
 ---
 # <a name="general-properties"></a>Propiedades generales
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor descritas en las siguientes tablas. En este tema se documentan las propiedades de servidor en el archivo msmdsrv.ini que no se incluyen de otro modo en una sección concreta, como Seguridad, Red o ThreadPool. Para obtener más información sobre las propiedades de servidor adicionales y cómo establecerlas, vea [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -61,7 +61,7 @@ ms.locfileid: "48171185"
  Propiedad de cadena que especifica en una lista delimitada las carpetas que se pueden examinar al guardar, abrir y buscar archivos en los cuadros de diálogo de Analysis Services. La cuenta de servicio de Analysis Services debe tener permisos de lectura y escritura en cualquiera de las carpetas que agregue a la lista.  
   
  `BackupDir`  
- Propiedad de cadena que identifica el nombre del directorio en el que se almacenan de manera predeterminada los archivos de copia de seguridad, en caso de que no se especifique ninguna ruta de acceso como parte del comando Backup.  
+ Una propiedad de cadena que identifica el nombre del directorio donde se almacenan los archivos de copia de seguridad de forma predeterminada, en caso de que no se especifica una ruta de acceso como parte del comando de copia de seguridad.  
   
  `CollationName`  
  Propiedad de cadena que identifica la intercalación del servidor. Para más información, vea [Idiomas e intercalaciones &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md).  
@@ -90,7 +90,7 @@ ms.locfileid: "48171185"
  Una propiedad de entero de 32 bits con signo que define el máximo de subprocesos por segmento de partición durante una resolución de consulta. Cuanto menor sea el número de usuarios simultáneos, mayor podrá ser este valor, a expensas de la memoria. Por el contrario, puede ser necesario disminuirlo si hay un gran número de usuarios simultáneos.  
   
  `CoordinatorShutdownMode`  
- Una propiedad booleana que define el modo de apagado del coordinador. Se trata de una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ Una propiedad booleana que define el modo de apagado del coordinador. Se trata de una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
  `DataDir`  
  Una propiedad de cadena que identifica el nombre del directorio en el que se almacenan los datos.  
@@ -102,14 +102,14 @@ ms.locfileid: "48171185"
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|0|Este es el valor predeterminado. Especifica el modo multidimensional, utilizado para dar servicio a las bases de datos multidimensionales que usan el almacenamiento MOLAP, HOLAP y ROLAP, así como a los modelos de minería de datos.|  
+|0|Es el valor predeterminado. Especifica el modo multidimensional, utilizado para dar servicio a las bases de datos multidimensionales que usan el almacenamiento MOLAP, HOLAP y ROLAP, así como a los modelos de minería de datos.|  
 |1|Especifica las instancias de Analysis Services que se instalaron como parte de una implementación de PowerPivot para SharePoint. No cambie la propiedad del modo de implementación de la instancia de Analysis Services que forma parte de una instalación de PowerPivot para SharePoint. Los datos PowerPivot dejarán de ejecutarse en el servidor si cambia el modo.|  
 |2|Especifica el modo tabular empleado para hospedar las bases de datos de modelos tabulares que utilizan el almacenamiento en memoria o el almacenamiento DirectQuery.|  
   
  Cada modo excluye a los demás. Un servidor configurado para el modo tabular no podrá ejecutar las bases de datos de Analysis Services que contengan cubos y dimensiones. Si el hardware del equipo subyacente puede admitirlo, puede instalar varias instancias de Analysis Services en el mismo equipo y configurar cada instancia para utilizar otro modo. Recuerde que Analysis Services es una aplicación que usa muchos recursos. La implementación de varias instancias en el mismo sistema solo se recomienda para los servidores de tecnología avanzada.  
   
  `EnableFast1033Locale`  
- Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
  `ExternalCommandTimeout`  
  Propiedad de entero que define el tiempo de espera, en segundos, para comandos emitidos a servidores externos, incluidos los orígenes de datos relacionales y los servidores de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] externos.  
@@ -132,7 +132,7 @@ ms.locfileid: "48171185"
  Para obtener más información acerca de esta propiedad, vea la [Guía de operaciones de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
 > [!IMPORTANT]  
->  `ForceCommitTimeout` se aplica a los comandos de procesamiento de cubos y las operaciones de reescritura.  
+>  `ForceCommitTimeout` se aplica a los comandos de procesamiento de cubos y a las operaciones de reescritura.  
   
  `IdleConnectionTimeout`  
  Propiedad de entero que especifica un tiempo de espera, en segundos, para las conexiones que están inactivas.  
@@ -172,10 +172,10 @@ ms.locfileid: "48171185"
   
 ## <a name="requestprioritization-category"></a>Categoría RequestPrioritization  
  `Enabled`  
- Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
  `StatisticsStoreSize`  
- Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
  [Configurar las propiedades del servidor en Analysis Services](server-properties-in-analysis-services.md)   

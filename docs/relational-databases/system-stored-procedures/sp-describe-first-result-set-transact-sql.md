@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4c538f7433034744e5a2799c38e6b5f5826ba48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 317defb8c3efd99274421f169424cc09ec4caf58
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705883"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072069"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -75,8 +75,8 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**system_type_id**|**int no NULL**|Contiene el system_type_id del tipo de datos de la columna tal como se especifica en sys.types. En el caso de los tipos de CLR, aunque la columna system_type_name devuelva NULL, esta columna devolverá el valor 240.|  
 |**system_type_name**|**nvarchar (256) NULL**|Contiene el nombre y los argumentos (como length, precision y scale) especificados para el tipo de datos de la columna. Si el tipo de datos es un tipo de alias definido por el usuario, el tipo de sistema subyacente se especifica aquí. Si es un tipo definido por el usuario de CLR, NULL se devuelve en esta columna.|  
 |**max_length**|**smallint no NULL**|Longitud máxima de la columna, en bytes.<br /><br /> -1 = la columna es de tipo de datos **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, o **xml**.<br /><br /> Para **texto** columnas, el **max_length** valor será 16 o el valor establecido por **sp_tableoption 'text in row'**.|  
-|**Precisión**|**tinyint no NULL**|Precisión de la columna, si está basada en números. De lo contrario, devuelve 0.|  
-|**Escala**|**tinyint no NULL**|La escala de la columna se basa en valores numéricos. De lo contrario, devuelve 0.|  
+|**precisión**|**tinyint no NULL**|Precisión de la columna, si está basada en números. De lo contrario, devuelve 0.|  
+|**escala**|**tinyint no NULL**|La escala de la columna se basa en valores numéricos. De lo contrario, devuelve 0.|  
 |**collation_name**|**sysname es NULL**|Nombre de la intercalación de la columna, si está basada en caracteres. En caso contrario, devuelve NULL.|  
 |**user_type_id**|**int NULL**|Para los tipos de alias y CLR, contiene el user_type_id del tipo de datos de la columna tal y como se especifica en sys.types. De lo contrario, es NULL.|  
 |**user_type_database**|**sysname es NULL**|Para los tipos de alias y CLR, contiene el nombre de la base de datos en la que se define el tipo. De lo contrario, es NULL.|  
@@ -113,7 +113,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  El nombre, la nulabilidad y el tipo de datos pueden diferir. Si **sp_describe_first_result_set** devuelve un conjunto de resultados vacío, la garantía es que la ejecución de lotes devolverá conjuntos de resultados de no.  
   
- Esta garantía presupone que no hay cambios de esquema importantes en el servidor. Cambios de esquema correspondiente en el servidor no incluyen la creación de tablas temporales o variables en el lote A entre el momento de la tabla que **sp_describe_first_result_set** se llama y el momento en que se devuelve el conjunto de resultados durante ejecución, incluidos los cambios de esquema realizados en el lote B.  
+ Esta garantía presupone que no hay ningún cambio de esquema correspondiente en el servidor. Cambios de esquema correspondiente en el servidor no incluyen la creación de tablas temporales o variables en el lote A entre el momento de la tabla que **sp_describe_first_result_set** se llama y el momento en que se devuelve el conjunto de resultados durante ejecución, incluidos los cambios de esquema realizados en el lote B.  
   
  **sp_describe_first_result_set** devuelve un error en cualquiera de los casos siguientes.  
   
@@ -194,7 +194,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|NULL|NULL|NULL|NULL|  
   
@@ -207,7 +207,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|dbo|t|B1|0|  
 |1|2|a|dbo|t|a|1|  
@@ -220,7 +220,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|B3|dbo|v|B2|0|  
 |1|2|ROWSTAT|NULL|NULL|NULL|0|  

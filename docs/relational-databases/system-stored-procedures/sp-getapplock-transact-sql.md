@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 147276d31ee08a0dc5908a49cd65925e62c3bae9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32303301fb01e381fee0e28cfedb2cd299658c88
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796213"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851890"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
  Es el propietario del bloqueo, que es el valor de *lock_owner* cuando se solicitó el bloqueo. *lock_owner* es **nvarchar(32)**. El valor puede ser **Transaction** (predeterminado) o **Session**. Cuando el *lock_owner* valor es **transacciones**, de manera predeterminada o especificándolo explícitamente, sp_getapplock debe ejecutarse desde dentro de una transacción.  
   
  [ @LockTimeout=] '*valor*'  
- Es un valor de tiempo de espera de los bloqueos, en milisegundos. El valor predeterminado es el mismo que el valor devuelto por@LOCK_TIMEOUT. Especifique 0 para indicar que las solicitudes de bloqueo que no pueden concederse inmediatamente deben devolver un error, en lugar de esperar el bloqueo.  
+ Es un valor de tiempo de espera de los bloqueos, en milisegundos. El valor predeterminado es el mismo que el valor devuelto por@LOCK_TIMEOUT. Para indicar que una solicitud de bloqueo debe devolver un código de retorno de -1 en lugar de esperar el bloqueo cuando la solicitud no pueden concederse inmediatamente, especifique 0.  
   
  [ @DbPrincipal=] '*database_principal*'  
  Es el usuario, el rol o el rol de aplicación que tiene permisos para un objeto de una base de datos. El llamador de la función debe ser un miembro de *database_principal*, dbo o db_owner fijo de base de datos para llamar correctamente a la función. El valor predeterminado es public.  

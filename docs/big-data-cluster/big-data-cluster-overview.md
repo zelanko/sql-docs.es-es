@@ -7,14 +7,14 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: overview
 ms.prod: sql
-ms.openlocfilehash: cf13ea198a5a40a5d67d41fea2f8f9b9b3b5434d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a18eeca5bd6af2fb0bb9562f126351ac4d3f1c9
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796816"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085061"
 ---
-# <a name="what-is-sql-server-2019-big-data-clusters"></a>¿Qué es SQL Server 2019 macrodatos clústeres?
+# <a name="what-are-sql-server-2019-big-data-clusters"></a>¿Qué son los clústeres de macrodatos de 2019 de SQL Server?
 
 A partir de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], clústeres de macrodatos de SQL Server le permiten implementar clústeres escalables de contenedores de Docker de HDFS, Spark y SQL Server que se ejecutan en Kubernetes. Estos componentes se ejecutan en paralelo para que pueda leer, escribir y procesar los datos grandes de Transact-SQL o Spark. Clústeres de macrodatos de SQL Server permiten combinar fácilmente y analizar los datos relacionales de gran valor con grandes volúmenes de datos grandes.
 

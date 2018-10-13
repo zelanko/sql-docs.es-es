@@ -17,12 +17,12 @@ ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 919e55df9dce3384b2a9eea6f5052ca25c094ac3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89e1ca46f323bb565eea9080a0118fb19b39af08
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758743"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072299"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**suscriptor**|Los registros de conflictos se almacenan en el suscriptor que causó el conflicto. No se admite para [!INCLUDE[ssEW](../../includes/ssew-md.md)] suscriptores *.*|  
 ||**ambos**|Los registros de conflictos se almacenan tanto en el publicador como en el suscriptor.|  
 |**conflict_retention**||Un **int** que especifica el período de retención en días, para el que se conservan los conflictos. Establecer *conflict_retention* a **0** significa que no es necesaria ninguna limpieza de conflictos.|  
-|**Descripción**||Descripción de la publicación.|  
+|**description**||Descripción de la publicación.|  
 |**dynamic_filters**|**true**|La publicación se filtra según una cláusula dinámica.|  
 ||**False**|La publicación no se filtra dinámicamente.|  
 |**enabled_for_internet**|**true**|La publicación para Internet está habilitada. El protocolo de transferencia de archivos (FTP) se puede utilizar para transferir los archivos de instantáneas a un suscriptor. Los archivos de sincronización para la publicación se colocan en el directorio C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp.|  

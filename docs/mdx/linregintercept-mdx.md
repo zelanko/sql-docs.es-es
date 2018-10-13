@@ -1,5 +1,5 @@
 ---
-title: LinRegIntercept (MDX) | Documentos de Microsoft
+title: LinRegIntercept (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 74fabfff0677643d29a270a35a1052f98bb1299b
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: a0c153182e1405ebedd26cc875c10068e280b654
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741364"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906245"
 ---
 # <a name="linregintercept-mdx"></a>LinRegIntercept (MDX)
 
@@ -38,17 +38,17 @@ LinRegIntercept(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  *Numeric_Expression_x*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número que representa los valores del eje X.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  La regresión lineal, que utiliza el método de mínimos cuadrados, calcula la ecuación de la recta de regresión (es decir, la de mejor ajuste para un conjunto de puntos). La recta de regresión tiene la siguiente ecuación, donde una es la pendiente y b es la intersección:  
   
  y = ax+b  
   
- El **LinRegIntercept** función evalúa el conjunto especificado con la primera expresión numérica para obtener los valores del eje y. A continuación, la función evalúa el conjunto especificado con la segunda expresión numérica, si se especifica, para obtener los valores del eje X. Si no se especifica la segunda expresión numérica, la función utiliza el contexto actual de las celdas del conjunto especificado como valores para el eje x. El no especificar el argumento del eje X es habitual con la dimensión Time.  
+ El **LinRegIntercept** función evalúa el conjunto especificado con la primera expresión numérica para obtener los valores del eje y. A continuación, la función evalúa el conjunto especificado con la segunda expresión numérica, si se especifica, para obtener los valores del eje X. Si no se especifica la segunda expresión numérica, la función utiliza el contexto actual de las celdas del conjunto especificado como valores para el eje x. No se especifica el argumento del eje x se suele usar con la dimensión de tiempo.  
   
  Después de obtener el conjunto de puntos, la **LinRegIntercept** función devuelve la intersección de la recta de regresión (b en la ecuación anterior).  
   
 > [!NOTE]  
->  El **LinRegIntercept** función omite las celdas vacías o celdas que contienen texto o valores lógicos. No obstante, la función incluye celdas con valor de cero.  
+>  El **LinRegIntercept** función la omite las celdas vacías o las celdas que contienen texto o valores lógicos. No obstante, la función incluye celdas con valor de cero.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente devuelve la intercepción de una recta de regresión para las medidas de ventas por unidad y ventas por tienda.  

@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ea1ab30f9b3b8ef77834a56b059b2a56de4467b5
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 6c245365c231264f1aa56e2f1fad8ac17446ec5b
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48796969"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48877938"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-ctp-20"></a>Configurar el servicio de Kubernetes de Azure para SQL Server de 2019 CTP 2.0
 
@@ -24,7 +24,10 @@ En este artículo se describe los pasos para implementar en Kubernetes en AKS me
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Para un entorno de AKS, el requisito mínimo de máquina virtual es al menos dos máquinas virtuales del agente (además de master) de un tamaño mínimo Standard_DS3_V2. Recursos mínimos requeridos por máquina virtual son 4 CPU y 14 GB de memoria.
+- Para un entorno de AKS, el requisito mínimo de máquina virtual es al menos dos máquinas virtuales del agente (además de a master) de un tamaño mínimo [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series). Recursos mínimos requeridos por máquina virtual son 4 CPU y 14 GB de memoria.
+  
+   > [!NOTE]
+   > Si tiene previsto ejecutar varias aplicaciones de Spark o trabajos de macrodatos, el tamaño mínimo es [Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup), y los recursos mínimos requeridos por máquina virtual son 8 CPU y 32 GB de memoria.
 
 - En esta sección tiene que estar ejecutando la CLI de Azure versión 2.0.4 o posterior. Si necesita instalarla o actualizarla, consulte [Install Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli). Ejecute `az --version` para buscar la versión si es necesario.
 
@@ -80,7 +83,7 @@ Un grupo de recursos de Azure es un grupo lógico de Azure que se implementan y 
     --kubernetes-version 1.10.7
     ```
 
-    Puede aumentar o disminuir el número de agentes predeterminado agregando `--node-count <n>` a la az aks crear comando donde `<n>` es el número de nodos de agente que desea tener.
+    Puede aumentar o disminuir el número de agentes predeterminado cambiando el `--node-count <n>` donde `<n>` es el número de nodos de agente que desea tener.
 
     Después de varios minutos, el comando se completa y devuelve información sobre el clúster en formato JSON.
 

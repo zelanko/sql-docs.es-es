@@ -13,12 +13,12 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 7e245b5b97a9a65182a68dcc78102eaa6f33fe66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe561dcba4a0cff5b58ef7810b27f30b1c95e228
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122385"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906305"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services en SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] es un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] entorno con mejoras específicas para soluciones de inteligencia empresarial. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] se incluye con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "48122385"
 ##  <a name="bkmk_ReportServerProjects"></a> Proyectos de servidor de informes  
  Cuando se instala [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], pasan a estar disponibles las siguientes plantillas de proyecto en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]:  
   
--   **Proyecto de servidor de informes.** Cuando se selecciona un proyecto de servidor de informes, se abre el Diseñador de informes. Un proyecto de servidor de informes es una plantilla de proyectos de Business Intelligence instalada por [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] que está disponible en el **nuevo proyecto** cuadro de diálogo. Para más información, vea [Agregar un informe nuevo o existente a un proyecto de informe &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md). Las propiedades de proyecto del servidor de informes se aplican a todos los informes y todos los orígenes de datos compartidos de un proyecto de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Estas propiedades incluyen la dirección URL del servidor de informes y los nombres de carpeta de los informes y orígenes de datos compartidos. Use el cuadro de diálogo **Páginas de propiedades del proyecto** para ver los valores de propiedad actuales. Para abrir este cuadro de diálogo, en el **proyecto** menú, haga clic en  *\<nombre del proyecto >* **propiedades**.  
+-   **Proyecto de servidor de informes.** Cuando se selecciona un proyecto de servidor de informes, se abre el Diseñador de informes. Un proyecto de servidor de informes es una plantilla de proyectos de Business Intelligence instalada por [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] que se encuentra disponible en el cuadro de diálogo **Nuevo proyecto** . Para más información, vea [Agregar un informe nuevo o existente a un proyecto de informe &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md). Las propiedades de proyecto del servidor de informes se aplican a todos los informes y todos los orígenes de datos compartidos de un proyecto de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Estas propiedades incluyen la dirección URL del servidor de informes y los nombres de carpeta de los informes y orígenes de datos compartidos. Use el cuadro de diálogo **Páginas de propiedades del proyecto** para ver los valores de propiedad actuales. Para abrir este cuadro de diálogo, en el **proyecto** menú, haga clic en  *\<nombre del proyecto >* **propiedades**.  
   
 -   **Asistente de proyectos de servidor de informes.** Cuando se selecciona un proyecto de asistente de proyectos de servidor de informes, se crea automáticamente un proyecto de servidor de informes y se abre el Asistente para informes. En el asistente, puede crear un informe siguiendo las instrucciones de cada página para crear una cadena de conexión a un origen de datos, establecer las credenciales del origen de datos, diseñar una consulta, agregar una región de datos de tabla o matriz, especificar datos y grupos de informe, elegir un estilo de fuente y color, publicar el informe en un servidor de informes y obtener una vista previa del informe localmente. Después de crear un informe con el asistente, puede modificar los datos del informe y el diseñador de informes mediante el Diseñador de informes en el proyecto de servidor de informes.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48122385"
  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#bkmk_Top)  
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Ventanas y paneles del Diseñador de informes  
- El Diseñador de informes admite dos vistas: **Diseño** para definir los datos del informe y el diseño del informe y **Vista previa** para mostrar una vista representada del informe. En cada vista, pueden mostrarse varias ventanas como ayuda para diseñar o ver un informe representado.  
+ El diseñador admite dos vistas de informe: **diseño** para definir los datos de informe y el diseño del informe y **Preview** para mostrar una vista representada del informe. En cada vista, pueden mostrarse varias ventanas como ayuda para diseñar o ver un informe representado.  
   
 ###  <a name="bkmk_ReportDataPane"></a> Panel Datos de informe  
  El panel Datos de informe muestra los campos integrados, orígenes de datos, conjuntos de datos, colecciones de campos, parámetros de informe e imágenes.  
@@ -107,7 +107,7 @@ ms.locfileid: "48122385"
   
 -   Establecer propiedades para el miembro del grupo seleccionado en el panel de agrupación. Las propiedades de miembro del grupo ayudan a controlar la forma en que las filas de encabezado y pie de grupo se repiten para cada grupo instancias. Para más información, vea [Mostrar encabezados y pies de página con un grupo &#40;Generador de informes y SSRS&#41;](../report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md).  
   
- Para mostrar el panel de propiedades, haga clic en **Ventana de propiedades** en el menú **Ver**. Puede desacoplar este panel y moverlo a otra área de la ventana de [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]o mostrarlo como una vista con pestañas en la superficie de diseño.  
+ Para mostrar el panel de propiedades, haga clic en **Ventana de propiedades** en el menú **Ver**. Puede desacoplar este panel y moverlo a otra área de la ventana de [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] o mostrarlo como una vista con pestañas en la superficie de diseño.  
   
  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#bkmk_Top)  
   
@@ -252,7 +252,7 @@ ms.locfileid: "48122385"
  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#bkmk_Top)  
   
 ##  <a name="bkmk_SourceControl"></a> Control de código fuente  
- [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] se puede integrar con los complementos de origen. Use las páginas Proyectos y Soluciones del cuadro de diálogo **Opciones** para especificar el complemento y configurar las propiedades.  
+ [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] se puede integrar con los complementos de origen. Use las páginas Proyectos y Soluciones del cuadro de diálogo Opciones** para especificar el complemento y configurar las propiedades.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Plantillas de informe personalizadas  
  Para usar informes personalizados como plantillas para los informes nuevos, basta con copiarlas en la carpeta ReportProject del equipo en el que [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] está instalado. De forma predeterminada, esta carpeta se encuentra en \<unidad >: \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject. Al agregar un elemento nuevo al proyecto de informe, el informe personalizado aparece en el panel de plantillas.  
@@ -268,7 +268,7 @@ ms.locfileid: "48122385"
   
 -   Al menos un conjunto de propiedades de configuración, por ejemplo, Debug o Release.  
   
- Para obtener más información, consulte [informes y orígenes de datos de publicación](../reports/publishing-data-sources-and-reports.md).  
+ Para obtener más información, vea [Publishing Data Sources and Reports](../reports/publishing-data-sources-and-reports.md).  
   
  En un proyecto de servidor de informes, puede especificar las opciones siguientes desde la línea de comandos:  
   
@@ -326,7 +326,7 @@ ms.locfileid: "48122385"
 ## <a name="see-also"></a>Vea también  
  [Explorador de soluciones](../../ssms/solution/solution-explorer.md)   
  [Informes de Reporting Services &#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)   
- [Lenguaje RDL (Report Definition Language) &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)   
+ [Report Definition Language &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)   
  [Implementación y compatibilidad de versiones en las herramientas de datos de SQL Server &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
   

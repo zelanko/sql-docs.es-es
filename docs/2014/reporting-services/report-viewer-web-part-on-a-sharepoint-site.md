@@ -16,17 +16,17 @@ ms.assetid: b6341a73-172f-4632-a9e9-cc79fed3f36b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 84afc267fe7b61ee850395750128a5cad15f716f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80baae6ca56757c8723934102341352f34cb0709
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063475"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905236"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>Elemento web Visor de informes en un sitio de SharePoint
-  El elemento web del Visor de informes es un elemento web personalizado que se instala mediante el complemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para productos de SharePoint. Puede usar el elemento web para ver, navegar, imprimir y exportar informes en un servidor de informes configurado para ejecutarse en el modo integrado de SharePoint. El elemento Web Visor de informes está asociado con los archivos de definición (.rdl) del informe que se procesan por un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de informes. No puede usarlo con otros documentos de informe creados en otros productos de software.  
+  El elemento web del Visor de informes es un elemento web personalizado que se instala mediante el complemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para productos de SharePoint. Puede usar el elemento web para ver, navegar, imprimir y exportar informes en un servidor de informes configurado para ejecutarse en el modo integrado de SharePoint. El elemento web Visor de informes está asociado a archivos de definición de informe (.rdl) que procesa el servidor de informes de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . No puede usarlo con otros documentos de informe creados en otros productos de software.  
   
- Para instalar el elemento web, debe ejecutar la instalación para el complemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. No debería instalar o desinstalar el elemento web independientemente. Forma parte del complemento y solamente se puede instalar mediante el paquete de instalación del complemento. El nombre de archivo del elemento web Visor de informes es ReportViewer.dwp. Se encuentra en la carpeta Archivos de programa\Archivos comunes\Microsoft Shared\web server extensions\12\template\features\reportserver y no se debería mover a otras carpetas.  
+ Para instalar el elemento web, debe ejecutar la instalación para el complemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . No debería instalar o desinstalar el elemento web independientemente. Forma parte del complemento y solamente se puede instalar mediante el paquete de instalación del complemento. El nombre de archivo del elemento web Visor de informes es ReportViewer.dwp. Se encuentra en la carpeta Archivos de programa\Archivos comunes\Microsoft Shared\web server extensions\12\template\features\reportserver y no se debería mover a otras carpetas.  
   
  Para usar el elemento web, debe tener instalado y configurado el complemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] y el servidor de informes debe estar configurado para la integración de SharePoint. También debe tener informes para mostrar en el visor. Solo se pueden abrir informes que estén en una biblioteca, una carpeta de la biblioteca, un historial de informes o un vínculo desde un elemento web Biblioteca a un elemento web Visor de informes. No puede abrir informes guardados como datos adjuntos a un elemento de una lista personalizada.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48063475"
  La opción**Exportar** del menú **Acciones** muestra los formatos de aplicación asociados a extensiones de representación implementadas en un servidor de informes. Para determinar la disponibilidad de un formato específico, puede agregar o quitar una extensión de representación en el servidor de informes o bien puede modificar la configuración para quitar un formato de exportación determinado de la lista. También puede especificar la configuración en el servidor de informes para controlar los formatos que están disponibles. Puede modificar el comportamiento predeterminado de un formato concreto; para ello, agregue y modifique la configuración de esa extensión de representación.  
   
 ### <a name="print-action-on-the-report-toolbar"></a>Acción de impresión en la barra de herramientas de informe  
- **Imprimir** en el **acciones** menú es la funcionalidad de impresión personalizada que se proporciona a través de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Al hacer clic en **Imprimir**, se descarga un control de impresión del lado cliente ActiveX en el equipo cliente. En la mayoría de los casos, el usuario que hace clic en **Imprimir** debe tener permisos de administrador en el equipo local. Una práctica habitual es restringir las descargas de controles ActiveX solo a los usuarios que tienen permisos de administrador. Puede utilizar Administración central de SharePoint para habilitar o deshabilitar la descarga del control de impresión del lado cliente.  
+ La opción**Imprimir** del menú **Acciones** es la funcionalidad de impresión personalizada que se proporciona mediante [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Al hacer clic en **Imprimir**, se descarga un control de impresión del lado cliente ActiveX en el equipo cliente. En la mayoría de los casos, el usuario que hace clic en **Imprimir** debe tener permisos de administrador en el equipo local. Una práctica habitual es restringir las descargas de controles ActiveX solo a los usuarios que tienen permisos de administrador. Puede utilizar Administración Central de SharePoint para habilitar o deshabilitar la descarga del control de impresión del lado cliente.  
   
 ### <a name="find-action-on-the-report-toolbar"></a>Acción de búsqueda en la barra de herramientas de informe  
  La opción**Buscar** del menú **Acciones** proporciona un método para desplazarse hasta una ubicación de destino del informe. Puede buscar contenido en un informe si escribe una palabra o frase que desee buscar. El valor máximo de un término de búsqueda es de 256 caracteres. Al encontrar un valor coincidente en el informe, el enfoque se desplaza a la parte del informe que contiene el valor.  
@@ -65,12 +65,12 @@ ms.locfileid: "48063475"
  Los paneles**Credenciales** y **Parámetros** aparecen al lado del área de visualización. **Credenciales** aparece cuando la conexión del origen de datos del informe está configurada para solicitar al usuario una cuenta y una contraseña con derechos de acceso al origen de datos. **Parámetros** aparece cuando el informe acepta la entrada del usuario para los parámetros definidos en el informe.  
   
 ### <a name="setting-properties-on-the-report-viewer-web-part"></a>Establecer propiedades en el elemento web Visor de informes  
- Las propiedades del elemento web son propiedades personalizadas específicas para el Visor de informes y propiedades generales que puede establecer para cualquier elemento web. Para obtener más información, consulte [personalizar el elemento Web Visor de informes](../../2014/reporting-services/customize-the-report-viewer-web-part.md).  
+ Las propiedades del elemento web son propiedades personalizadas específicas para el Visor de informes y propiedades generales que puede establecer para cualquier elemento web. Para obtener más información, vea [Personalizar el elemento web Visor de informes](../../2014/reporting-services/customize-the-report-viewer-web-part.md).  
   
  De manera predeterminada, los informes se abren en modo de página completa. En el modo de página completa se muestra la barra de herramientas que proporciona las funciones de navegación en páginas, búsqueda y otras. Puede personalizar el elemento web para cambiar la apariencia o el comportamiento predeterminado.  
   
 ## <a name="see-also"></a>Vea también  
  [Instalar o desinstalar el complemento Servicios de informes para SharePoint &#40;SharePoint 2010 y SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
- [Agregar el elemento Web Visor de informes a una página Web &#40;modo integrado de Reporting Services en SharePoint&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [Agregar el elemento web Visor de informes a una página web &#40;Reporting Services en el modo integrado de SharePoint&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

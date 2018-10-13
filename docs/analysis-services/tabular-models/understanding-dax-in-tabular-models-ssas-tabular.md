@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: af0bb90170445cbfb073adeb8bfc8f8e4e478efe
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 959189dbc1bae49c15fd23e49b5cdef98973a559
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984497"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906505"
 ---
 # <a name="dax-in-tabular-models"></a>DAX en los modelos tabulares 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -68,13 +68,13 @@ ms.locfileid: "38984497"
 |Decimal Number|Número real de 64 bits (ocho bytes) <sup>1, 2</sup>|Los números reales son aquellos que pueden tener posiciones decimales. Abarcan un amplio intervalo de valores:<br /><br /> Valores negativos de -1,79E +308 a -2,23E -308<br /><br /> Cero<br /><br /> Valores positivos desde 2,23E -308 hasta 1,79E + 308<br /><br /> Sin embargo, el número de dígitos significativos se limita a 17 dígitos decimales.|  
 |Booleano|Boolean|Valor True o False.|  
 |Texto|String|Cadena de datos de carácter Unicode. Pueden ser cadenas, números o fechas representados en un formato de texto.|  
-|date|Fecha y hora|Fechas y horas en una representación de fecha y hora aceptada.<br /><br /> Las fechas válidas son todas las fechas posteriores al 1 de marzo de 1900.|  
+|Date|Fecha y hora|Fechas y horas en una representación de fecha y hora aceptada.<br /><br /> Las fechas válidas son todas las fechas posteriores al 1 de marzo de 1900.|  
 |Moneda|Moneda|El tipo de datos de moneda permite los valores comprendidos entre -922.337.203.685.477,5808 y 922.337.203.685.477,5807 con cuatro dígitos decimales de precisión fija.|  
 |N/D|En blanco|Un tipo en blanco es un tipo de datos de DAX que representa y reemplaza los valores NULL de SQL. Un valor en blanco se puede crear con la función BLANK y se puede comprobar si es tal con la función lógica ISBLANK.|  
   
  Los modelos tabulares también incluyen el tipo de datos de tabla como entrada o salida para muchas funciones DAX. Por ejemplo, la función FILTER toma una tabla como entrada y genera otra tabla de salida que contiene solo las filas que cumplen las condiciones del filtro. Mediante la combinación de funciones de tabla con funciones de agregación, se pueden realizar cálculos complejos en conjuntos de datos definidos dinámicamente.  
   
- Como los tipos de datos suelen establecerse automáticamente, es importante entender los tipos de datos y cómo se aplican, en particular, a las fórmulas DAX. Los errores en fórmulas o los resultados inesperados, por ejemplo, suelen producirse cuando se usa un operador determinado que no se puede utilizar con un tipo de datos especificado en un argumento. por ejemplo, la fórmula `= 1 & 2`devuelve un resultado de cadena de 12. Sin embargo, la fórmula `= “1” + “2”`devuelve un resultado entero de 3.  
+ Como los tipos de datos suelen establecerse automáticamente, es importante entender los tipos de datos y cómo se aplican, en particular, a las fórmulas DAX. Los errores en fórmulas o los resultados inesperados, por ejemplo, suelen producirse cuando se usa un operador determinado que no se puede utilizar con un tipo de datos especificado en un argumento. por ejemplo, la fórmula `= 1 & 2`devuelve un resultado de cadena de 12. Sin embargo, la fórmula `= “1” + “2”` devuelve un resultado entero de 3.  
   
  Para obtener información detallada acerca de los tipos de datos en modelos tabulares y las conversiones explícitas e implícitas de tipos de datos en DAX, vea [tipos de datos compatibles](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
   
@@ -389,8 +389,8 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  El [Centro de recursos de DAX](http://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) proporciona información interna y externa sobre DAX, incluidas numerosas soluciones de DAX enviadas por destacados profesionales de Business Intelligence.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de expresiones (DAX) de análisis de datos](http://msdn.microsoft.com/70a82136-0926-4a91-bcb3-e18e82593b0d)   
- [Medidas](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [Referencia de expresiones de análisis de datos (DAX)](http://msdn.microsoft.com/70a82136-0926-4a91-bcb3-e18e82593b0d)   
+ [medidas](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Columnas calculadas](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
  [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [KPI](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   

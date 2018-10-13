@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 6725f986a66020d0560c4e3f17be5da12a2cd3f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0eb32296c0122709ff1dc6c83deda70d88293d38
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745753"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851850"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server en Linux preguntas más frecuentes (P+F)
 
@@ -103,7 +103,7 @@ Las secciones siguientes proporcionan preguntas y respuestas frecuentes para SQL
 
 1. **¿SQL Server en Linux admite varias instancias en el mismo host?**
 
-   Se recomienda ejecutar varios contenedores en un host para tener varias instancias distintas. Cada contenedor debe escuchar en un puerto diferente. Para obtener más información, consulte [ejecutar varios contenedores de SQL Server](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers).
+   Se recomienda ejecutar varios contenedores en un host para tener varias instancias distintas. Esto se consigue fácilmente con docker, pero cada contenedor debe escuchar en un puerto diferente. Para obtener más información, consulte [ejecutar varios contenedores de SQL Server](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers).
 
 1. **¿Se admite la autenticación de Active Directory en Linux?**
 

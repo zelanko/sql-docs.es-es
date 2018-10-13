@@ -22,12 +22,12 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 809b0229e1f5d37ed285b8c5783f8c73a4af6056
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2923591c64eceab59424ddaadaaa7f243f2f1575
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108585"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906445"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Habilitar compresión de una tabla o un índice
   En este tema se describe cómo habilitar la compresión en una tabla o un índice en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -46,7 +46,7 @@ ms.locfileid: "48108585"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -223,7 +223,7 @@ ms.locfileid: "48108585"
   
 2.  En la barra de Estándar, haga clic en **Nueva consulta**.  
   
-3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En el ejemplo primero se consulta la vista de catálogo `sys.indexes` para devolver el nombre y el `index_id` para cada índice en la tabla `Production.TransactionHistory` . Después, se ejecuta el procedimiento almacenado `sp_estimate_data_compression_savings` para devolver el tamaño estimado del identificador del índice especificado en caso de que se use el valor de compresión PAGE. Finalmente, en el ejemplo se vuelve a generar el identificador de índice 2 (`IX_TransactionHistory_ProductID`), especificando la compresión PAGE.  
+3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En el ejemplo primero se consulta la vista de catálogo `sys.indexes` para devolver el nombre y el `index_id` para cada índice en la tabla `Production.TransactionHistory`. A continuación, ejecuta el procedimiento almacenado `sp_estimate_data_compression_savings` para devolver el tamaño estimado del identificador del índice especificado, si se tratara de usar la configuración de compresión de página. Finalmente, en el ejemplo se vuelve a generar el identificador de índice 2 (`IX_TransactionHistory_ProductID`), especificando la compresión PAGE.  
   
     ```  
     USE AdventureWorks2012;   

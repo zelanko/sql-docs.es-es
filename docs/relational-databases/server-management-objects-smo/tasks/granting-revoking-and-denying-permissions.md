@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03157c206368bcb66afc7848dce74f9eb504e424
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4368a362b3644ea15313698ed54578ff7bb62da4
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648663"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48852020"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Conceder, revocar y denegar permisos
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "47648663"
  Los permisos de bases de datos y permisos de objetos de bases de datos pueden asignarse de igual forma utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> y el objeto <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet>.  
   
 ## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, consulte [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>Conceder permisos de servidor en Visual Basic  
  En este ejemplo de código se conceden los permisos Crear extremo y Modificar cualquier extremo al inicio de sesión especificado y, a continuación, se enumeran y se muestran los permisos. Se revoca uno de los permisos y se enumeran los permisos de nuevo a continuación. En este ejemplo se supone que el inicio de sesión especificado tiene los permisos especificados para comenzar.  
   
-```  
+```VBNET  
 ' compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 ' /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 Imports Microsoft.SqlServer.Management.Smo  
@@ -116,7 +116,7 @@ End Class
 ## <a name="granting-server-permissions-in-visual-c"></a>Conceder permisos de servidor en Visual C#  
  En este ejemplo de código se conceden los permisos Crear extremo y Modificar cualquier extremo al inicio de sesión especificado y, a continuación, se enumeran y se muestran los permisos. Se revoca uno de los permisos y se enumeran los permisos de nuevo a continuación. En este ejemplo se supone que el inicio de sesión especificado tiene los permisos especificados para comenzar.  
   
-```  
+```csharp  
 // compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 // /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 using System;  
@@ -196,7 +196,7 @@ public class A {
 ## <a name="granting-server-permissions-in-powershell"></a>Conceder permisos de servidor en PowerShell  
  En este ejemplo de código se conceden los permisos Crear extremo y Modificar cualquier extremo al inicio de sesión especificado y, a continuación, se enumeran y se muestran los permisos. Se revoca uno de los permisos y se enumeran los permisos de nuevo a continuación. En este ejemplo se supone que el inicio de sesión especificado tiene los permisos especificados para comenzar.  
   
-```  
+```powershell  
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\  
 $srv = get-item default  

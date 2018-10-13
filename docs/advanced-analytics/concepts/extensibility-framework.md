@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: fae8beb4f865c537f00fa8b58a01cafe09541d71
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 2a09f5ddfe39a122205f132b6901d8c8a99e5ad2
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892920"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878188"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Arquitectura de extensibilidad en SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,6 +47,8 @@ La arquitectura está diseñada para que ejecuten scripts externos en un proceso
   ![Arquitectura de componentes](../media/generic-architecture.png "arquitectura de componentes")
 
 Los componentes incluyen una **Launchpad** servicio que se usa para invocar el lenguaje (R o Python), de los iniciadores específicos del idioma y la lógica de específicas de la biblioteca para la carga de intérpretes y bibliotecas. El iniciador carga un tiempo de ejecución de lenguaje, además de los módulos propietarios. Por ejemplo, si su código incluye funciones de RevoScaleR, cargaría un intérprete de RevoScaleR. **BxlServer** y **SQL Satellite** administrar la transferencia de datos y la comunicación con SQL Server.
+
+<a name="launchpad"></a>
 
 ## <a name="launchpad"></a>Launchpad
 

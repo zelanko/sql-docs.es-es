@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
-ms.openlocfilehash: cd4f7b3f447d5a7d05ed08fa07ecf36a685a10ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: feae91ed25dafa499026b2cadf72a2eafa0c63ae
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786973"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906235"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Tutorial para conocer las características de seguridad de SQL Server en Linux
 
@@ -67,7 +67,7 @@ Ahora el inicio de sesión Larry puede crear más inicios de sesión y el usuari
 
 ## <a name="granting-access-with-least-privileges"></a>Concesión de acceso con privilegios mínimos
 
-Las primeras personas para conectarse a una base de datos de usuario será el administrador y cuentas de propietario de la base de datos. Sin embargo, estos usuarios tienen todos la los permisos disponibles en la base de datos. Se trata de más permisos que debe tener la mayoría de los usuarios. 
+Las primeras personas para conectarse a una base de datos de usuario será el administrador y cuentas de propietario de la base de datos. Sin embargo, estos usuarios tienen los permisos disponibles en la base de datos. Se trata de más permisos que debe tener la mayoría de los usuarios. 
 
 Cuando acaba de empezar, puede asignar algunas categorías generales de permisos mediante el uso de los integrados *funciones fijas de base de datos*. Por ejemplo, el `db_datareader` rol fijo de base de datos puede leer todas las tablas de la base de datos, pero no realiza ningún cambio. Conceder la pertenencia a un rol fijo de base de datos mediante el uso de la [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md) instrucción. El ejemplo siguiente se agrega el usuario `Jerry` a la `db_datareader` rol fijo de base de datos.   
    
@@ -250,7 +250,7 @@ Para quitar TDE, ejecute `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`
 Se programan las operaciones de cifrado y descifrado en subprocesos en segundo plano por SQL Server. Puede ver el estado de estas operaciones mediante las vistas de catálogo y las vistas de administración dinámica de la lista que se muestra más adelante en este tema.   
 
 >  [!WARNING]
->  Los archivos de copia de seguridad de las bases de datos que tienen habilitado TDE también se cifran mediante la clave de cifrado de la base de datos. Como consecuencia, al restaurar estas copias de seguridad debe estar disponible el certificado que protege la clave de cifrado de la base de datos. Esto significa que, además de hacer copias de seguridad de la base de datos, tiene que asegurarse de que mantiene copias de seguridad de los certificados del servidor para evitar la pérdida de datos. Si el certificado deja de estar disponible, perderá los datos. Para obtener más información, vea [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
+>  Los archivos de copia de seguridad de las bases de datos que tienen habilitado TDE también se cifran mediante la clave de cifrado de la base de datos. Como consecuencia, al restaurar estas copias de seguridad debe estar disponible el certificado que protege la clave de cifrado de la base de datos. Esto significa que, además de hacer copias de seguridad de la base de datos, tiene que asegurarse de que mantiene copias de seguridad de los certificados del servidor para evitar la pérdida de datos. Si el certificado deja de estar disponible, perderá los datos. Para obtener más información, consulte [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
 
 Para obtener más información acerca de TDE, vea [cifrado de datos transparente (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md).   
 
@@ -282,7 +282,7 @@ WITH
 GO  
 ```
 
-Para obtener más información, consulte [cifrado de copia de seguridad](../relational-databases/backup-restore/backup-encryption.md).
+Para obtener más información, vea [Cifrado de copia de seguridad](../relational-databases/backup-restore/backup-encryption.md).
 
 
 ## <a name="next-steps"></a>Pasos siguientes

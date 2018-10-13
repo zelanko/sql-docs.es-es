@@ -11,12 +11,12 @@ ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 596fc7d8ebdbdac3795920948b5082a0e066ba0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 142cdef210c541fb1394b84c8297823f36358ea0
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104625"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906065"
 ---
 # <a name="kpis-ssas-tabular"></a>KPI (SSAS tabular)
   Un *KPI* (indicador clave de rendimiento) de un modelo tabular se usa para medir el rendimiento de un valor, definido por una medida *base*, con respecto a un valor de *destino*, que también se define con una medida o un valor absoluto. Este tema proporciona a los creadores de modelos tabulares una descripción básica de los KPI en un modelo tabular.  
@@ -46,7 +46,7 @@ ms.locfileid: "48104625"
  Un umbral de estado se define mediante el intervalo entre un umbral inferior y uno superior o mediante un valor fijo. El umbral de estado muestra un gráfico que ayuda a los usuarios a determinar fácilmente el estado del valor base en comparación con el valor de destino.  
   
 ##  <a name="bkmk_example"></a> Ejemplo  
- La directora de ventas de Adventure Works desea crear una tabla dinámica que pueda usar para ver rápidamente si los empleados de ventas están cumpliendo o no sus cuotas de ventas durante un periodo determinado (un año). Para cada empleado de ventas, desea que la tabla dinámica muestre el importe de ventas real en dólares, la cuota de ventas en dólares y un gráfico sencillo que muestre el estado de si cada empleado está por debajo, en su cuota de ventas o por encima de ella. Desea poder segmentar los datos por año.  
+ La directora de ventas de Adventure Works desea crear una tabla dinámica que pueda usar para ver rápidamente si los empleados de ventas están cumpliendo o no sus cuotas de ventas durante un periodo determinado (un año). Para cada empleado de ventas, desea que la tabla dinámica para mostrar una presentación gráfica simple que muestra el estado de cada empleado de ventas es si o no a continuación, en o por encima de su cuota de ventas, el importe de cuota de ventas en dólares y el importe de ventas real en dólares. Desea poder segmentar los datos por año.  
   
  Para ello, la directora de ventas pide al desarrollador de soluciones de BI de la organización que agregue un KPI de ventas al modelo tabular AdventureWorks. La directora de ventas usará [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] para conectarse al modelo tabular de Adventure Works como origen de datos y crear una tabla dinámica con campos (medidas y KPI) y segmentaciones de datos para analizar si el personal de ventas cumple sus cuotas.  
   
@@ -84,10 +84,10 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Crear y administrar KPI &#40;Tabular de SSAS&#41;](kpis-ssas-tabular.md)|Describe cómo crear un KPI con una medida base, una medida de destino y umbrales de estado.|  
+|[Crear y administrar KPI &#40;SSAS tabular&#41;](kpis-ssas-tabular.md)|Describe cómo crear un KPI con una medida base, una medida de destino y umbrales de estado.|  
   
 ## <a name="see-also"></a>Vea también  
- [Las medidas &#40;Tabular de SSAS&#41;](measures-ssas-tabular.md)   
- [Las perspectivas &#40;Tabular de SSAS&#41;](perspectives-ssas-tabular.md)  
+ [Medidas &#40;SSAS tabular&#41;](measures-ssas-tabular.md)   
+ [Perspectivas &#40;SSAS tabular&#41;](perspectives-ssas-tabular.md)  
   
   

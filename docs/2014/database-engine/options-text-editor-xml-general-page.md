@@ -13,18 +13,18 @@ ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 37c85ef93f04dd16d8ea3e00fa9ec99f40d2e1cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 77d7d1616147a1461ac163a4a99e05c2b1c61e73
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157817"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48904922"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Options (Text Editor - XML - General Page)
   Utilice este cuadro de diálogo para cambiar el comportamiento de edición general del Editor XML, que se utiliza para modificar los documentos XML. Para mostrar esta configuración, haga clic en **Opciones** en el menú **Herramientas** , expanda la subcarpeta **XML** y luego haga clic en **General**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Establecer opciones en varias ubicaciones  
- Opciones del cuadro de diálogo **General de Todos los idiomas** . Si utiliza los cuadros de diálogos **Todos los idiomas** para establecer diferentes opciones para los demás editores de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , como los editores MDX o DMX, debe restablecer las opciones del Editor XML mediante este cuadro de diálogo.  
+ Las opciones del Editor XML también se pueden establecer en el cuadro de diálogo **Todos los idiomas** de la página General. Si utiliza los cuadros de diálogos **Todos los idiomas** para establecer diferentes opciones para los demás editores de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , como los editores MDX o DMX, debe restablecer las opciones del Editor XML mediante este cuadro de diálogo.  
   
 ## <a name="statement-completion"></a>Finalización de instrucciones  
  **Lista de miembros automática**  

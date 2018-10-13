@@ -14,49 +14,49 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a78f615493ad531b8607abb0764891ffcb2805f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28bbf84564060e2840e0f8c35c5e4679c085a29c
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194485"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906135"
 ---
-# <a name="polygon"></a>Polygon
+# <a name="polygon"></a>Polígono
   Un `Polygon` es una superficie bidimensional almacenada como una secuencia de puntos que definen un anillo delimitador exterior y cero o más anillos interiores.  
   
 ## <a name="polygon-instances"></a>Instancias de Polygon  
- Un `Polygon` instancia puede formarse a partir de un anillo que tenga al menos tres puntos distintos. Un `Polygon` instancia también puede estar vacía.  
+ Una instancia de `Polygon` se puede formar a partir de un anillo que tenga al menos tres puntos distintos. Una instancia de `Polygon` también puede estar vacía.  
   
- El anillo exterior junto con los anillos interiores de un `Polygon` definir su límite. El espacio encerrado dentro de los anillos define el interior de la instancia de `Polygon`.  
+ Los límites de una instancia de `Polygon` los define su anillo exterior junto con los anillos interiores que tenga. El espacio encerrado dentro de los anillos define el interior de la instancia de `Polygon`.  
   
- La ilustración siguiente muestra ejemplos de `Polygon` instancias.  
+ En la ilustración siguiente se muestran ejemplos de instancias de `Polygon`.  
   
  ![Ejemplos de instancias Polygon de geometry](../../database-engine/media/polygon.gif "Ejemplos de instancias Polygon de geometry")  
   
  Como se muestra en la ilustración:  
   
-1.  Figura 1 es un `Polygon` instancia cuyo límite está definido por un anillo exterior.  
+1.  La figura 1 es una instancia de `Polygon` cuyo límite está definido mediante un anillo exterior.  
   
 2.  La figura 2 es una instancia de `Polygon` cuyo límite está definido mediante un anillo exterior y dos anillos interiores. El área situada dentro de los anillos interiores forma parte del exterior de la instancia de `Polygon`.  
   
 3.  La figura 3 es una instancia de `Polygon` válida porque la intersección de sus anillos interiores se realiza en un solo punto tangente.  
   
 ### <a name="accepted-instances"></a>Instancias aceptadas  
- Las instancias aceptadas de `Polygon` son las instancias que pueden almacenarse en una variable de tipo `geometry` o `geography` sin generar una excepción. Se aceptan las siguientes `Polygon` instancias:  
+ Las instancias aceptadas de `Polygon` son las instancias que pueden almacenarse en una variable de tipo `geometry` o `geography` sin generar una excepción. Se aceptan las siguientes instancias de `Polygon`:  
   
--   Un valor vacío `Polygon` instancia  
+-   Una instancia vacía de `Polygon`.  
   
 -   Una instancia de `Polygon` que tiene un anillo exterior aceptable y cero o más anillos interiores aceptables.  
   
  Deben cumplirse necesariamente los criterios siguientes para que un anillo sea aceptable.  
   
--   El `LineString` instancia debe ser aceptada.  
+-   La instancia de `LineString` debe ser aceptada.  
   
 -   La instancia de `LineString` debe tener al menos cuatro puntos.  
   
 -   Los puntos inicial y final de la instancia de `LineString` deben ser el mismo.  
   
- El ejemplo siguiente se muestra aceptado `Polygon` instancias.  
+ El siguiente ejemplo muestra instancias aceptadas de `Polygon`.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON EMPTY';  
@@ -82,9 +82,9 @@ DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))'
 ```  
   
 ### <a name="valid-instances"></a>Instancias válidas  
- Los anillos interiores de un `Polygon` pueden tocarse a sí mismos y unos con otros en tangentes únicos puntos, pero si los anillos interiores de un `Polygon` cross, la instancia no es válida.  
+ Los anillos interiores de una instancia de `Polygon` pueden tocarse a sí mismos y unos con otros en puntos tangentes únicos, pero si dichos anillos se cruzan, la instancia de `Polygon` no es válida.  
   
- El ejemplo siguiente se muestra válido `Polygon` instancias.  
+ En el siguiente ejemplo se muestran instancias válidas de `Polygon`.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20))';  
@@ -105,7 +105,7 @@ DECLARE @g6 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.STIsValid(), @g6.STIsValid();  
 ```  
   
- `@g1` no es válido porque el anillo interior toca el anillo exterior en dos lugares. `@g2` no es válido porque el segundo anillo interior está dentro del interior del primer anillo interior. `@g3` no es válido porque el los dos anillos interiores se tocan en varios puntos consecutivos. `@g4` no es válido porque los interiores de los dos anillos interiores se superponen. `@g5` no es válido porque el anillo exterior no es el primer anillo. `@g6` no es válido porque el anillo no tiene al menos tres puntos distintos.  
+ `@g1` no es válido porque el anillo interior toca el anillo exterior en dos lugares. `@g2` no es válido porque el segundo anillo interior está dentro del interior del primer anillo interior. `@g3` no es válido porque los dos anillos interiores se tocan en varios puntos consecutivos. `@g4` no es válido porque los interiores de los dos anillos interiores se superponen. `@g5` no es válido porque el anillo exterior no es el primer anillo. `@g6` no es válido porque el anillo no tiene al menos tres puntos distintos.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente crea una instancia sencilla de `geometry``Polygon` con un hueco y un SRID de 10.  

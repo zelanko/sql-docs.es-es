@@ -14,15 +14,15 @@ ms.assetid: f9d406dd-a87c-4321-bf23-339d90654062
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: de2261820fd7e35c44c6d70562ca9751c370bc11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9331aede0a02f0f84bd2ae76998efeb8edc075b
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094695"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905075"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>Propiedades del informe (cuadro de diálogo), Configurar página
-  Seleccione **Configurar página** en el cuadro de diálogo **Propiedades del informe**para establecer las opciones de página para todo el informe.  
+  Seleccione **Configurar página** en el **propiedades del informe**, cuadro de diálogo para establecer las opciones de página para todo el informe.  
   
 ## <a name="options"></a>Opciones  
  **Pulgadas**  

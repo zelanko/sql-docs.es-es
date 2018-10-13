@@ -13,12 +13,12 @@ ms.assetid: 4f09d040-9ec8-4aaa-b684-f632d571f0a8
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97d47bda8f3ceb98449392cda22d2a8152e08b7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89062160d4836596dacaf9df88c0e87feb383129
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201305"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072169"
 ---
 # <a name="cdc-control-task-editor"></a>Editor de la tarea Control de CDC
   Use el cuadro de diálogo **Editor de la tarea Control CDC** para configurar la tarea Control CDC. La configuración de la tarea Control CDC incluye la definición de una conexión a la base de datos CDC, la operación de tarea CDC y la información sobre la administración de estados.  
@@ -46,7 +46,7 @@ ms.locfileid: "48201305"
   
      Si selecciona **Mark Initial Load End** (Marcar final de carga inicial) cuando trabaja en CDC de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] (es decir, no en Oracle), el usuario especificado en el administrador de conexiones debe ser  **db_owner** o **sysadmin**.  
   
--   **Marcar comienzo de CDC**: esta operación se utiliza cuando la carga inicial se realiza desde una base de datos de base de datos de instantánea o desde una base de datos de inactividad. Se invoca en cualquier punto del paquete de carga inicial. La operación acepta un parámetro que puede ser un LSN de instantánea, un nombre de una base de datos de instantánea (desde la que el LSN de instantánea se deriva automáticamente) o se puede dejar vacío, en cuyo caso el LSN de la base de datos actual se usa como el LSN de inicio para el paquete de procesamiento de cambios.  
+-   **Marcar comienzo de CDC**: esta operación se usa cuando se realiza la carga inicial desde una base de datos de instantánea o desde una base de datos de inactividad. Se invoca en cualquier punto del paquete de carga inicial. La operación acepta un parámetro que puede ser un LSN de instantánea, un nombre de una base de datos de instantánea (desde la que el LSN de instantánea se deriva automáticamente) o se puede dejar vacío, en cuyo caso el LSN de la base de datos actual se usa como el LSN de inicio para el paquete de procesamiento de cambios.  
   
      Esta operación se usa en lugar de las operaciones Marcar comienzo/final de carga inicial.  
   
@@ -91,6 +91,6 @@ ms.locfileid: "48201305"
  Escriba un nombre para asociar al estado CDC persistente. Los paquetes de carga completa y CDC que funcionan con el mismo contexto CDC especificarán un nombre común para el estado. Este nombre se usa para buscar la fila de estado en la tabla de estado.  
   
 ## <a name="see-also"></a>Vea también  
- [Propiedades personalizadas de la tarea Control CDC](control-flow/cdc-control-task-custom-properties.md)  
+ [Propiedades personalizadas de la tarea de control CDC](control-flow/cdc-control-task-custom-properties.md)  
   
   

@@ -4,15 +4,15 @@ description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 10/08/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 4db726ac3ceab7649b0a3c04b2c4647b83c7e660
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: 02a1aa7299173315e4f4d6a60eae5f166e8fcdfe
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48818073"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48877898"
 ---
 # <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>Cómo implementar el clúster de SQL Server Big Data en Kubernetes
 
@@ -24,11 +24,12 @@ Clúster de Macrodatos de SQL Server se puede implementar como contenedores de d
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="kubernetes-prerequisistes"></a>Kubernetes prerequisistes
+## <a id="prereqs"></a> Requisitos previos de clúster de Kubernetes
 
 Clúster de Macrodatos de SQL Server requiere una versión de v1.10 mínimo de Kubernetes, de servidor y cliente. Para instalar una versión específica en el cliente kubectl, consulte [instalar kubectl binario mediante curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl).  Las versiones más recientes de minikube y AKS son menos 1.10. Para AKS deberá usar `--kubernetes-version` parámetro para especificar una versión diferente de forma predeterminada.
 
-Además, tenga en cuenta que la versión de Kubernetes de cliente/servidor que es sesgar admite es +/-1 versión secundaria. La documentación de Kubernetes se afirma que "un cliente debe ser la sesgados no más de una versión secundaria del servidor maestro, pero puede provocar al maestro de hasta una versión secundaria. Por ejemplo, un patrón v1.3 debería funcionar con v1.1, v1.2 y v1.3 nodos y debe funcionar con v1.2, v1.3 y clientes v1.4." Para obtener más información, consulte [Kubernetes admite versiones y componente sesgo](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
+> [!NOTE]
+> Tenga en cuenta que las versiones de Kubernetes de cliente y servidor deben ser la versión secundaria + 1 o -1. Para obtener más información, consulte [Kubernetes admite versiones y componente sesgo](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
 
 ## <a id="kubernetes"></a> Instalación de clúster de Kubernetes
 
@@ -49,11 +50,11 @@ Para obtener instrucciones sobre cómo configurar una de estas opciones de clús
 
 ## <a id="deploy"></a> Implementación de clúster de SQL Server Big Data
 
-Después de haber configurado el clúster de Kubernetes, puede continuar con la implementación de clúster de Macrodatos de SQL Server. Para implementar un clúster Aris con todas las configuraciones predeterminadas para un entorno de desarrollo y pruebas, siga las instrucciones de este artículo:
+Después de haber configurado el clúster de Kubernetes, puede continuar con la implementación de clúster de Macrodatos de SQL Server. Para implementar un clúster de macrodatos con todas las configuraciones predeterminadas para un entorno de desarrollo y pruebas, siga las instrucciones de este artículo:
 
-[Inicio rápido: Implementación de SQL Server Aris en Kubernetes](quickstart-big-data-cluster-deploy.md)
+[Inicio rápido: Implementación de SQL Server datos de gran tamaño de clúster de Kubernetes](quickstart-big-data-cluster-deploy.md)
 
-Si desea personalizar la configuración Aris, según sus necesidades de carga de trabajo, siga el siguiente conjunto de instrucciones.
+Si desea personalizar la configuración de clúster de macrodatos, según sus necesidades de carga de trabajo, siga el siguiente conjunto de instrucciones.
 
 ## <a name="verify-kubernetes-configuration"></a>Comprobar la configuración de kubernetes
 
@@ -87,7 +88,7 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssql
 
 La configuración del clúster puede personalizarse mediante un conjunto de variables de entorno que se pasan a la `mssqlctl create cluster` comando. La mayoría de las variables de entorno es opcional con avalues predeterminado como se indica a continuación. Tenga en cuenta que hay variables de entorno como las credenciales que requieren intervención del usuario.
 
-| Variable de entorno | Obligatorio | Valor predeterminado | Descripción |
+| Variable de entorno | Necesario | Valor predeterminado | Descripción |
 |---|---|---|---|
 | **ACCEPT_EULA** | Sí | N/D | Acepte el contrato de licencia de SQL Server (por ejemplo, ' Y').  |
 | **NOMBREDECLÚSTER** | Sí | N/D | El nombre del espacio de nombres para implementar el clúster de Macrodatos de SQLServer en Kubernetes. |

@@ -12,12 +12,12 @@ ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ef0667c28d87deb6c714a91bbe3605792c51c1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 27ae90e05784c18d85f84daa9955818d3133ad07
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133155"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085271"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>Compatibilidad con tipos de parámetros con valores de tablas de OLE DB
   En este tema se describe la compatibilidad de tipos OLE DB para parámetros con valores de tabla.  
@@ -57,7 +57,7 @@ CoType RowsetTVP
  Para obtener información acerca de los métodos de OLE DB que admiten parámetros con valores de tabla, vea [OLE DB Table-Valued parámetro de tipo de compatibilidad con &#40;métodos&#41;](ole-db-table-valued-parameter-type-support-methods.md).  
   
 ## <a name="properties"></a>Propiedades  
- Para obtener información sobre las propiedades de OLE DB que admiten parámetros con valores de tabla, vea [OLE DB Table-Valued parámetro de tipo de compatibilidad con &#40;propiedades&#41;](ole-db-table-valued-parameter-type-support-properties.md).  
+ Para obtener información acerca de las propiedades de OLE DB que admiten parámetros con valores de tabla, vea [OLE DB Table-Valued parámetro de tipo de compatibilidad con &#40;propiedades&#41;](ole-db-table-valued-parameter-type-support-properties.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Parámetros con valores de tabla &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   

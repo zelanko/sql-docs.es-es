@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6b1328b1d0a0832e9d412d1fcd908f3cdb0d349
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94a271991314225a80850ee2156a37b6134e10a7
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48039035"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072309"
 ---
 # <a name="azure-data-studio-release-notes"></a>Notas de la versión de Data Studio Azure
 
@@ -49,7 +49,7 @@ Versión de disponibilidad general de Azure Data Studio (anteriormente SQL Opera
 
 - Corregir [emitir #2647](https://github.com/Microsoft/azuredatastudio/issues/143): los gráficos dio un gran paso hacia atrás.
 - Corregir [emitir 2648 #](https://github.com/Microsoft/azuredatastudio/issues/143): SELECT que devuelve toda la columna de los hipervínculos JSON.
-- …
+- ...
 
 Para obtener información detallada, consulte el [registro de cambios](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), y [versiones](https://github.com/Microsoft/azuredatastudio/releases).
 
@@ -61,7 +61,7 @@ versión: 0.32.8
 
 *0.32.8 contiene correcciones para un par regresiones se encuentra en 0.32.7 ([#1971](https://github.com/Microsoft/azuredatastudio/issues/1971), [2372 #](https://github.com/Microsoft/azuredatastudio/issues/2372)*)
 
-El *versión preliminar pública de agosto* se centra en correcciones de errores, estabilización del producto y rellenando los huecos en los escenarios existentes.  
+El *versión preliminar pública de agosto* se centra en correcciones de errores, la estabilización de producto y rellenando los huecos en los escenarios existentes.  
 
 - Anuncio de la extensión de importación SQL Server
 - Administración de sesiones de SQL Server Profiler

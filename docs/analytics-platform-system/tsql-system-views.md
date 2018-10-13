@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a34cf2aca18febea578da0dfd78b492f48842d29
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: bfd449a51948f3a5b88c28f5034550fe81a7f406
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394532"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906145"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>Vistas del sistema para el almacenamiento de datos paralelos de Analytics Platform System
 Vistas del sistema para analíticas Platform System (APS) Parallel Data Warehouse (PDW de SQL Server).
@@ -133,7 +133,7 @@ Las siguientes DMV son aplicables al almacenamiento de datos paralelos, pero se 
 ## <a name="sql-server-dmvs-available-in-parallel-data-warehouse"></a>SQL Server DMV disponibles en el almacenamiento de datos paralelos
 Almacenamiento de datos paralelos expone muchas de las vistas de administración dinámica (DMV) de SQL Server. Estas vistas, cuando se consultan en el almacenamiento de datos paralelos, están informando del estado de las bases de datos de SQL Server que se ejecutan en las distribuciones.
 
-Cada una de estas DMV tiene una columna específica denominada pdw_node_id. Se trata la el identificador del nodo de ejecución. 
+Cada una de estas DMV tiene una columna específica denominada pdw_node_id. Este es el identificador del nodo de ejecución. 
 
 > [!NOTE]
 > Para utilizar estas vistas, inserte "pdw_nodes_" en el nombre, como se muestra en la tabla siguiente.

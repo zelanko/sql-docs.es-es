@@ -13,15 +13,15 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 55c88228de170336fec7ecd24f5acb17851fdea1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e255d37a5f6fff65b223d889755bab4cf70d0687
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132946"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072279"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover una base de datos protegida por TDE a otra instancia de SQL Server
-  En este tema se describe cómo proteger una base de datos mediante el uso del cifrado de datos transparente (TDE) y, a continuación, mover la base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE realiza el cifrado y descifrado de E/S en tiempo real de los datos y los archivos de registro. El cifrado utiliza una clave de cifrado de la base de datos (DEK), que está almacenada en el registro de arranque de la base de datos para que esté disponible durante la recuperación. DEK es una clave simétrica protegida mediante un certificado almacenado en la base de datos maestra (`master`) del servidor o una clave asimétrica protegida por un módulo EKM.  
+  Este tema describe cómo proteger una base de datos mediante el uso de cifrado de datos transparente (TDE) y, a continuación, mueva la base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE realiza el cifrado y descifrado de E/S en tiempo real de los datos y los archivos de registro. El cifrado utiliza una clave de cifrado de la base de datos (DEK), que está almacenada en el registro de arranque de la base de datos para que esté disponible durante la recuperación. DEK es una clave simétrica protegida mediante un certificado almacenado en la base de datos maestra (`master`) del servidor o una clave asimétrica protegida por un módulo EKM.  
   
  **En este tema**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48132946"
   
      [Transact-SQL](#TsqlMove)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48132946"
   
 -   Requiere `CREATE CERTIFICATE` permiso en el `master` base de datos para crear el certificado que protege DEK.  
   
--   Requiere `CONTROL DATABASE` permiso en la base de datos cifrada y `VIEW DEFINITION` permiso en el certificado o clave asimétrica que se utiliza para cifrar la clave de cifrado de base de datos.  
+-   Requiere el permiso `CONTROL DATABASE` para la base de datos cifrada y el permiso `VIEW DEFINITION` para el certificado o la clave asimétrica usados para cifrar la clave de cifrado de la base de datos.  
   
 ##  <a name="SSMSProcedure"></a> Para crear una base de datos protegida por el cifrado de datos transparente  
   
@@ -238,7 +238,7 @@ ms.locfileid: "48132946"
     |----------|-----------------|-----------------|  
     |(Sin icono)|(Sin texto)|La operación de adjuntar no se ha iniciado o puede estar pendiente para este objeto. Es la opción predeterminada al abrir el diálogo.|  
     |Triángulo verde hacia la derecha|En curso|La operación de adjuntar se ha iniciado, pero no ha finalizado.|  
-    |Marca de verificación verde|Correcto|El objeto se ha adjuntado correctamente.|  
+    |Marca de verificación verde|Success|El objeto se ha adjuntado correctamente.|  
     |Círculo rojo con una cruz blanca|Error|La operación de adjuntar ha detectado un error y no ha finalizado correctamente.|  
     |Círculo con dos cuadrantes negros (a la izquierda y la derecha) y dos cuadrantes blancos (en la parte superior e inferior)|Detenido|La operación de adjuntar no ha finalizado correctamente porque el usuario la ha detenido.|  
     |Círculo con una flecha curvada que apunta hacia la izquierda|Revertido|La operación de adjuntar se ha ejecutado correctamente, pero se ha revertido debido a un error al adjuntar otro objeto.|  

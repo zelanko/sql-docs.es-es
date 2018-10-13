@@ -15,12 +15,12 @@ ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6ea98b28fc53f73635313663354df1b9ab43b9bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc7f87e7e648e81b4af7411a9f9474b6cc9818da
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115701"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905924"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurar Firewall de Windows para el acceso al motor de base de datos
   En este tema se describe cómo configurar un firewall de Windows para el acceso al motor de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante el Administrador de configuración de SQL Server. Los sistemas de firewall ayudan a evitar el acceso no autorizado a los recursos de los equipos. Para obtener acceso a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] a través de un firewall, debe configurar el firewall en el equipo en el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que permita el acceso.  
@@ -47,7 +47,7 @@ ms.locfileid: "48115701"
   
      [Seguridad](#Security)  
   
--   **Para configurar un firewall de Windows para el acceso al motor de base de datos, utilizando:**  
+-   **Para configurar un Firewall de Windows para el acceso al motor de base de datos, utilizando:**  
   
      [Administrador de configuración de SQL Server](#SSMSProcedure)  
   

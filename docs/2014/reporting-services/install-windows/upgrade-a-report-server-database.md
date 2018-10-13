@@ -15,19 +15,19 @@ ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 64e215061aea44becca793a38d69c6abf2f14d6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dde7b2d66e7b2aebb67de799facf9016f3cd48e9
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208704"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851829"
 ---
 # <a name="upgrade-a-report-server-database"></a>Actualizar una base de datos del servidor de informes
   La base de datos del servidor de informes proporciona almacenamiento para una o varias instancias del servidor de informes. Dado que el esquema de la base de datos del servidor de informes puede cambiar con cada versión nueva de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], es necesario que la versión de base de datos coincida con la versión de la instancia del servidor de informes que esté utilizando. En la mayoría de los casos, una base de datos del servidor de informes se puede actualizar automáticamente sin ninguna acción específica de su parte.  
   
  **Modo nativo:** en el modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , la base de datos del servidor de informes consta realmente de dos bases de datos que tienen los nombres predeterminados “ReportServer y ReportServerTempDB”.  
   
- **El modo de SharePoint:** en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] el modo de SharePoint sever el informe base de datos es realmente una colección de bases de datos que se crea para cada instancia de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aplicación de servicio.  
+ **El modo de SharePoint:** en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] la base de datos del servidor de informes de modo de SharePoint es realmente una colección de bases de datos que se crea para cada instancia de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aplicación de servicio.  
   
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>Formas de actualizar una base de datos del servidor de informes en modo nativo  
  En la lista siguiente se identifican las condiciones en las que se actualiza una base de datos del servidor de informes:  
@@ -49,7 +49,7 @@ ms.locfileid: "48208704"
   
 2.  Los descriptores de seguridad se actualizan la primera vez que se usa la base de datos del servidor de informes después de haber actualizado el esquema.  
   
-3.  Los informes publicados y las instantáneas de informes compilados se actualizan la primera vez que se utilizan. Para más información, consulte [Upgrade Reports](upgrade-reports.md).  
+3.  Los informes publicados y las instantáneas de informes compilados se actualizan la primera vez que se utilizan. Para obtener más información, vea [Upgrade Reports](upgrade-reports.md).  
   
  Además de la base de datos del servidor de informes, un servidor de informes utiliza también una base de datos temporal. La base de datos temporal se actualiza automáticamente al actualizar la base de datos del servidor de informes.  
   

@@ -18,15 +18,15 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 039961b8c2811d32fcf8544f395c527e7981abb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 117391f9cbefeb7ed7fbc76d2c1d93376e5a1fa6
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073015"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085341"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Configurar la copia de seguridad en réplicas de disponibilidad (SQL Server)
-  En este tema se describe cómo configurar la copia de seguridad en réplicas secundarias para un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+  En este tema se describe cómo configurar la copia de seguridad en réplicas secundarias para un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
 >  Para obtener una introducción a copia de seguridad en réplicas secundarias, consulte [ secundarias activas: copia de seguridad en réplicas secundarias (grupos de disponibilidad AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "48073015"
   
 
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Debe estar conectado a la instancia del servidor que hospeda la réplica principal.  
@@ -63,7 +63,7 @@ ms.locfileid: "48073015"
 5.  En el panel **¿Dónde se realizarán las copias de seguridad?** , seleccione la preferencia de la copia de seguridad automatizada del grupo de disponibilidad, una de las siguientes:  
   
      **Preferir secundaria**  
-     Especifica que las copias de seguridad se deben realizar en una réplica secundaria a menos que la réplica principal sea la única réplica en línea. En ese caso, la copia de seguridad se debe realizar en la réplica principal. Ésta es la opción predeterminada.  
+     Especifica que las copias de seguridad se deben realizar en una réplica secundaria a menos que la réplica principal sea la única réplica en línea. En ese caso, la copia de seguridad se debe realizar en la réplica principal. Esta es la opción predeterminada.  
   
      **Solo secundaria**  
      Especifica que las copias de seguridad no deben realizarse nunca en la réplica principal. Si la réplica principal es la única réplica en línea, no se debe realizar la copia de seguridad.  
@@ -111,13 +111,13 @@ ms.locfileid: "48073015"
 ##  <a name="PowerShellProcedure"></a> Usar PowerShell  
  **Para configurar la copia de seguridad en las réplicas secundarias**  
   
-1.  Establezca el valor predeterminado (`cd`) a la instancia de servidor que hospeda la réplica principal.  
+1.  Establezca el valor predeterminado (`cd`) en la instancia del servidor que hospeda la réplica de disponibilidad principal.  
   
 2.  Opcionalmente, configure la prioridad de copia de seguridad de cada réplica de disponibilidad que está agregando o modificando. La instancia del servidor que hospeda la réplica principal usa esta prioridad para decidir qué réplica debe atender una solicitud de copia de seguridad automatizada en una base de datos del grupo de disponibilidad (se elige la réplica con mayor prioridad). Esta prioridad puede ser cualquier número comprendido entre 0 y 100, ambos incluidos. Si la prioridad es 0, indica que la réplica no debe considerarse candidata para atender solicitudes de copia de seguridad.  El valor predeterminado es 50.  
   
      Para agregar una réplica de disponibilidad a un grupo de disponibilidad, use el cmdlet `New-SqlAvailabilityReplica`. Para modificar una réplica de disponibilidad existente, use el cmdlet `Set-SqlAvailabilityReplica`. En cualquier caso, especifique la `BackupPriority` *n* parámetro, donde *n* es un valor comprendido entre 0 y 100.  
   
-     Por ejemplo, el siguiente comando establece la prioridad de copia de seguridad de la réplica de disponibilidad `MyReplica` a `60`.  
+     Por ejemplo, el comando siguiente establece la prioridad de copia de seguridad de la réplica de disponibilidad `MyReplica` en `60`.  
   
     ```  
     Set-SqlAvailabilityReplica -BackupPriority 60 `  
@@ -126,7 +126,7 @@ ms.locfileid: "48073015"
   
 3.  Opcionalmente, configure la preferencia de la copia de seguridad automatizada del grupo de disponibilidad que está creando o modificando. Esta preferencia indica cómo un trabajo de copia de seguridad debe evaluar la réplica principal cuando elige dónde realizar las copias de seguridad. El valor predeterminado es preferir las réplicas secundarias.  
   
-     Al crear un grupo de disponibilidad, use el cmdlet `New-SqlAvailabilityGroup`. Modificar un grupo de disponibilidad, use el `Set-SqlAvailabilityGroup` cmdlet. En cualquier caso, especifique el `AutomatedBackupPreference` parámetro.  
+     Al crear un grupo de disponibilidad, use el cmdlet `New-SqlAvailabilityGroup`. Al modificar un grupo de disponibilidad existente, use el cmdlet `Set-SqlAvailabilityGroup`. En cualquier caso, especifique el parámetro `AutomatedBackupPreference`.  
   
      donde,  
   
@@ -157,7 +157,7 @@ ms.locfileid: "48073015"
     ```  
   
 > [!NOTE]  
->  Para ver la sintaxis de un cmdlet, use el `Get-Help` cmdlet en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entorno de PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+>  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   

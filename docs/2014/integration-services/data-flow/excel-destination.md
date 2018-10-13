@@ -16,12 +16,12 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd9ed39459d5302fa721c2e0eab176768bb66bc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43bd1337b811472cca53d4f89d51d668d3799a1a
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130685"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905249"
 ---
 # <a name="excel-destination"></a>Destino de Excel
   El destino de Excel carga datos en hojas de cálculo o rangos en libros de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -49,7 +49,7 @@ ms.locfileid: "48130685"
   
      Si desea información sobre cómo evitar incluir las comillas simples, consulte esta entrada de blog, [Se añade una comilla simple a todas las cadenas al transformar los datos a Excel cuando se utiliza el componente de flujo de datos de destino Excel en un paquete SSIS](http://go.microsoft.com/fwlink/?LinkId=400876), en msdn.com.  
   
--   **Guardar datos de memorando (ntext)**. Para poder guardar correctamente cadenas de más de 255 caracteres en una columna de Excel, el controlador debe reconocer el tipo de datos de la columna de destino como **memorando** y no como **cadena**. Si la tabla de destino ya contiene filas de datos, las primeras filas que pruebe el controlador deberán contener por lo menos una instancia de un valor de más de 255 caracteres en la columna de memorando. Si la tabla de destino se crea durante el diseño del paquete o en tiempo de ejecución, la instrucción CREATE TABLE deberá utilizar LONGTEXT (o uno de sus sinónimos) como el tipo de datos de la columna de memorando.  
+-   **Guardar datos de memorando (ntext)**. Para poder guardar correctamente cadenas de más de 255 caracteres en una columna de Excel, el controlador debe reconocer el tipo de datos de la columna de destino como **memorando** y no como **cadena**. Si la tabla de destino ya contiene filas de datos, las primeras filas que pruebe el controlador deberán contener por lo menos una instancia de un valor de más de 255 caracteres en la columna de memorando. Si la tabla de destino se crea durante el diseño del paquete o en tiempo de ejecución, a continuación, la instrucción CREATE TABLE debe usar LONGTEXT (o uno de sus sinónimos) como el tipo de datos de la columna de memorando.  
   
 -   **Tipos de datos**. El controlador de Excel reconoce solo un conjunto limitado de tipos de datos. Por ejemplo, todas las columnas numéricas se interpretan como dobles (DT_R8) y todas las columnas de cadena (a excepción de las columnas memorando) se interpretan como cadenas Unicode de 255 caracteres (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] asigna los tipos de datos de Excel de la siguiente manera:  
   
@@ -84,9 +84,9 @@ ms.locfileid: "48130685"
   
 -   [Editor de destino de Excel &#40;página Administrador de conexiones&#41;](../excel-destination-editor-connection-manager-page.md)  
   
--   [Editor de destino de Excel &#40;página asignaciones&#41;](../excel-destination-editor-mappings-page.md)  
+-   [Editor de destino de Excel &#40;página Asignaciones&#41;](../excel-destination-editor-mappings-page.md)  
   
--   [Editor de destino de Excel &#40;página de salida de Error&#41;](../excel-destination-editor-error-output-page.md)  
+-   [Editor de destino de Excel &#40;página Salida de error&#41;](../excel-destination-editor-error-output-page.md)  
   
  El cuadro de diálogo **Editor avanzado** indica todas las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
@@ -94,9 +94,9 @@ ms.locfileid: "48130685"
   
 -   [Propiedades personalizadas de Excel](excel-custom-properties.md)  
   
- Para obtener más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](set-the-properties-of-a-data-flow-component.md).  
+ Para más información sobre cómo establecer propiedades, vea [Establecer las propiedades de un componente de flujo de datos](set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tareas relacionadas  
   
 -   [Importación de datos desde Excel o exportación de datos a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48130685"
   
 ## <a name="see-also"></a>Vea también  
  [Origen de Excel](excel-source.md)   
- [Servicios de integración &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)   
+ [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
  [Flujo de datos](data-flow.md)   
  [Trabajar con archivos de Excel con la tarea Script](../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   

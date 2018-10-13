@@ -1,26 +1,31 @@
 ---
 title: Guía de inicio rápido para una ejecución de código de R básica de "Hello World" en Transact-SQL (SQL Server Machine Learning) | Microsoft Docs
-description: En este inicio rápido para script de R en SQL Server, conozca los aspectos básicos del procedimiento almacenado del sistema sp_execute_external_script con un ejercicio de hello world.
+description: Guía de inicio rápido para script de R en SQL Server. Obtenga información sobre los conceptos básicos de llamar al script de R mediante el procedimiento almacenado del sistema sp_execute_external_script en un ejercicio de hello world.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/15/2018
+ms.date: 10/08/2018
 ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e738289b39f6d390bc4d6196606d242fa4803865
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1a51fcb9e67bef48346ff74ebfb1e911a6ee3365
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086888"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878088"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>Inicio rápido: Script "Hola mundo" de R en SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server incluye compatibilidad de características de lenguaje R para realizar análisis en bases de datos en los datos de SQL Server residentes. Puede usar funciones de R de código abierto, paquetes de terceros y los paquetes integrados de Microsoft R para realizar análisis predictivos a escala.
+SQL Server incluye compatibilidad con el lenguaje R para el análisis de ciencia de datos de datos residentes de SQL Server. El script de R puede constar de funciones de R de código abierto, bibliotecas de R de terceros o las bibliotecas integradas de Microsoft R como [RevoScaleR](../r/revoscaler-overview.md) para realizar análisis predictivos a escala. 
 
-En este tutorial, obtendrá información sobre los conceptos clave mediante la ejecución de un "Hello World" R script SQL de inT, una introducción a la **sp_execute_external_script** procedimiento almacenado del sistema. Ejecución de scripts de R es a través de procedimientos almacenados. Puede usar el [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) procedimiento almacenado y pase R secuencia de comandos como parámetro de entrada como se muestra en este inicio rápido o ajustar el script de R en un [procedimientos almacenados personalizados](sqldev-in-database-r-for-sql-developers.md). 
+Ejecución del script es a través de procedimientos almacenados, mediante cualquiera de los métodos siguientes:
+
++ Integrada [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) procedimiento almacenado, pasando el script de R en como un parámetro de entrada.
++ Ajustar el script de R en un [procedimientos almacenados personalizados](sqldev-in-database-r-for-sql-developers.md) que cree.
+
+En este tutorial, obtendrá información sobre los conceptos clave mediante la ejecución de un "Hello World" R script SQL de inT, una introducción a la **sp_execute_external_script** procedimiento almacenado del sistema. 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -33,7 +38,7 @@ Este ejercicio requiere acceso a una instancia de SQL Server con uno de los sigu
 
 + Una herramienta para ejecutar consultas SQL. Puede usar cualquier aplicación que pueda conectarse a una base de datos de SQL Server y ejecutar código de T-SQL. Los profesionales de SQL pueden usar SQL Server Management Studio (SSMS) o Visual Studio.
 
-Para este tutorial, para mostrar lo fácil que es ejecutar R en SQL Server, que hemos usado el nuevo **extensión mssql para Visual Studio Code**. VS Code es un entorno de desarrollo gratuito que puede ejecutar en Windows, macOS o Linux. El **mssql** extensión es una ligera para ejecutar consultas Transact-SQL. Para obtener Visual Studio Code, vea [Download and install Visual Studio Code](https://code.visualstudio.com/Download) (Descargar e instalar Visual Studio Code). Para agregar la **mssql** extensión, consulte este artículo: [usar la extensión mssql para Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
+Esta guía de inicio rápido para mostrar lo fácil que es ejecutar R en SQL Server, que hemos usado el nuevo **extensión mssql para Visual Studio Code**. VS Code es un entorno de desarrollo gratuito que puede ejecutar en Windows, macOS o Linux. El **mssql** extensión es una ligera para ejecutar consultas Transact-SQL. Para obtener Visual Studio Code, vea [Download and install Visual Studio Code](https://code.visualstudio.com/Download) (Descargar e instalar Visual Studio Code). Para agregar la **mssql** extensión, consulte este artículo: [usar la extensión mssql para Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>Conectarse a una base de datos y ejecutar un script de prueba Hola a todos
 

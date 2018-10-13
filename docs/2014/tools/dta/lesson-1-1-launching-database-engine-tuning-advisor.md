@@ -14,12 +14,12 @@ ms.assetid: 4abc0e10-96fd-4e46-93d6-d7ee03eec844
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70f3a447b4398bbd1141a357ea878966d5a443ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad6b28f2e133abcc872186adc57fdd422687ddc5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130621"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906255"
 ---
 # <a name="launching-database-engine-tuning-advisor"></a>Iniciar el Asistente para la optimización de motor de base de datos
   Para empezar, abra la interfaz gráfica de usuario (GUI) del Asistente para la optimización de motor de base de datos. La primera vez que se usa, un miembro del rol fijo de servidor **sysadmin** debe iniciar el Asistente para la optimización de motor de base de datos para inicializar la aplicación. Tras la inicialización, los miembros del rol fijo de base de datos **db_owner** pueden usar el asistente para optimizar bases de datos de su propiedad. Para obtener más información sobre cómo inicializar el Asistente para la optimización de motor de base de datos, consulte [Iniciar y usar el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/database-engine-tuning-advisor.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "48130621"
  ![Ventana de predeterminada del Asistente para la optimización de motor de base de datos](media/defaultdtagui.gif "ventana predeterminada del Asistente para la optimización de motor de base de datos")  
   
 > [!NOTE]  
->  La pestaña y el cuadro **Nombre de sesión** muestran el nombre del equipo y la instancia a la que está conectado. La pestaña y el cuadro también muestran la fecha y la hora actuales.  
+>  La pestaña y **nombre de la sesión** cuadro muestra el nombre del equipo y la instancia que está conectado. La pestaña y el cuadro también muestran la fecha y la hora actuales.  
   
  Cuando se abre por primera vez, aparecen dos paneles principales en la GUI del Asistente para la optimización de motor de base de datos.  
   
@@ -47,6 +47,6 @@ ms.locfileid: "48130621"
 >  El Asistente para la optimización de motor de base de datos admite archivos XML como entrada cuando se importa un script de [!INCLUDE[tsql](../../includes/tsql-md.md)] desde el Editor de consultas de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Para obtener más información, consulte la sección sobre cómo iniciar el Asistente para la optimización de motor de base de datos desde el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en [Iniciar y usar el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Establecer las opciones de herramienta y el diseño](lesson-1-2-setting-tool-options-and-layout.md)  
+ [Configurar las opciones de herramienta y el diseño](lesson-1-2-setting-tool-options-and-layout.md)  
   
   

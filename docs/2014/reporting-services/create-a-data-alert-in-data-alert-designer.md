@@ -11,12 +11,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9edb241dab5b2a1aaeefb5c11c53726f1e46498d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02e1222b289d4cb081335a3575b0e1948fb37728
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144425"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071849"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Crear una alerta de datos en el Diseñador de alertas de datos
   Las definiciones de alertas de datos se crean en el Diseñador de alertas de datos. Una vez guardadas las definiciones de alertas, es posible volver a abrirlas, modificarlas y volver a guardarlas en el Diseñador de alertas de datos. Para más información sobre cómo editar definiciones de alertas, vea [Administrar mis alertas de datos en el Administrador de alertas de datos](manage-my-data-alerts-in-data-alert-manager.md) y [Editar una alerta de datos en el Diseñador de alertas](edit-a-data-alert-in-alert-designer.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "48144425"
   
      El nombre predeterminado de la definición de alerta es el nombre del informe. Los nombres de definición de alertas no tienen que ser únicos, lo que puede dificultar distinguirlos al ver la lista de alertas posteriormente en el Administrador de alertas de datos. Se recomienda que utilice nombres significativos y únicos para sus definiciones de alerta.  
   
-6.  Si lo desea, cambie la opción de datos predeterminada de **algún dato de la fuente de distribución de datos tiene** a **ningún dato de la fuente de distribución de datos tiene**.  
+6.  Si lo desea, cambie la opción de datos predeterminada de **cualquier dato en la fuente de datos tiene** a **ningún dato de la fuente de datos tiene**.  
   
 7.  Haga clic en **Agregar regla**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48144425"
      De forma predeterminada, un mensaje de alerta no tiene ninguna fecha de detención.  
   
     > [!NOTE]  
-    >  La detención de un mensaje de alerta no elimina la definición de alerta. Después de detener un mensaje de alerta, puede reiniciarlo actualizando las fechas de inicio y detención. Para obtener información acerca de cómo eliminar definiciones de alertas, consulte [administrar Mis alertas de datos en el Administrador de alertas de datos](manage-my-data-alerts-in-data-alert-manager.md).  
+    >  La detención de un mensaje de alerta no elimina la definición de alerta. Después de detener un mensaje de alerta, puede reiniciarlo actualizando las fechas de inicio y detención. Para más información sobre cómo eliminar definiciones de alertas, vea [Administrar mis alertas de datos en el Administrador de alertas de datos](manage-my-data-alerts-in-data-alert-manager.md).  
   
 18. Si lo desea, desactive la casilla **Enviar mensaje solo si cambian los resultados** .  
   
@@ -118,7 +118,7 @@ ms.locfileid: "48144425"
   
 ## <a name="see-also"></a>Vea también  
  [Diseñador de alertas de datos](../../2014/reporting-services/data-alert-designer.md)   
- [Administrador de alertas de datos para los administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [Administrador de alertas de datos para administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Alertas de datos de Reporting Services](../ssms/agent/alerts.md)  
   
   

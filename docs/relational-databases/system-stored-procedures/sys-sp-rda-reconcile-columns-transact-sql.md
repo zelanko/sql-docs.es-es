@@ -17,17 +17,17 @@ ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1d077da2847a430b2a225ea896b1eafd289218a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4d2a8377466876270bcedd07138cf9cf30ef211
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603963"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906325"
 ---
 # <a name="syssprdareconcilecolumns-transact-sql"></a>sys.sp_rda_reconcile_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Reconcilia las columnas de la tabla remota de Azure a las columnas de la en la tabla de SQL Server habilitada para Stretch.  
+  Reconcilia las columnas de la tabla remota de Azure a las columnas de la tabla de SQL Server habilitada para Stretch.  
     
   **sp_rda_reconcile_columns** agrega columnas a la tabla remota que hay en la tabla de SQL Server habilitada para Stretch, pero no en la tabla remota. Estas columnas pueden ser columnas que se ha eliminado accidentalmente de la tabla remota. Sin embargo, **sp_rda_reconcile_columns** no elimina las columnas de la tabla remota que hay en la tabla remota, pero no en la tabla de SQL Server.
   
@@ -58,7 +58,7 @@ sp_rda_reconcile_columns @objname = '@objname'
  Si hay columnas en la tabla remota de Azure que ya no existen en la tabla de SQL Server habilitada para Stretch, estas columnas adicionales no impiden que Stretch Database funcione con normalidad. También puede quitar estas columnas adicionales de forma manual.  
   
 ## <a name="example"></a>Ejemplo  
- Para conciliar los las columnas de la tabla de Azure remota, ejecute la siguiente instrucción.  
+ Para conciliar las columnas de la tabla de Azure remota, ejecute la siguiente instrucción.  
   
 ```sql  
 EXEC sp_rda_reconcile_columns @objname = N'StretchEnabledTableName';  

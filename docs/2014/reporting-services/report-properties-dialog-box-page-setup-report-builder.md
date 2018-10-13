@@ -13,15 +13,15 @@ ms.assetid: eb3b5d01-7b82-4808-a58b-9e096742f8c6
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4e7fa108ffbfc083b84460795e17515ae300302
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 496b94444e79666c0ce57904f5ef6d7da81ed26f
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207385"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905085"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>Propiedades del informe (cuadro de diálogo), Configurar página (Generador de informes)
-  Seleccione **Configurar página** en el cuadro de diálogo **Propiedades del informe**para establecer las opciones de página para todo el informe.  
+  Seleccione **Configurar página** en el **propiedades del informe**, cuadro de diálogo para establecer las opciones de página para todo el informe.  
   
 ## <a name="options"></a>Opciones  
  **Pulgadas**  

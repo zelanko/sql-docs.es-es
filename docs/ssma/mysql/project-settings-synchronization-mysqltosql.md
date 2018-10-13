@@ -10,12 +10,12 @@ ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 630700b4541bf804ca9dd5b1b6c6ca705412643c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e82fa9d02fdbfe876f4097c54c6877c3a3a81fee
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792563"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072089"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>Configuración del proyecto (sincronización) (MySQLToSQL)
 La sincronización **configuración del proyecto** le permiten configurar cómo se sincronizan los objetos de base de datos de MySQL con objetos de base de datos de SQL Server.  
@@ -63,7 +63,7 @@ Especifica la configuración predeterminada en el cuadro de diálogo de sincroni
 ##### <a name="action-when-local-object-metadata-is-missing"></a>Acción cuando faltan los metadatos del objeto local  
 Especifica la configuración predeterminada en el cuadro de diálogo de sincronización cuando faltan los metadatos locales.  
   
--   Si selecciona **actualizar desde la base de datos**, SSMA SSMA se cargarán las definiciones de base de datos en los metadatos cuando se cumple la condición.  
+-   Si selecciona **actualizar desde la base de datos**, SSMA cargará las definiciones de base de datos en los metadatos cuando se cumple la condición.  
   
 -   Si selecciona **Skip**, SSMA no realizará ninguna acción de actualización  
   

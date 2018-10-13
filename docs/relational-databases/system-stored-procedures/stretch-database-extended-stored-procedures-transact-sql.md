@@ -14,12 +14,12 @@ ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7f96a07b6106667a06c492a368799994849cae10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf276d4abc28edc6f6d8d99f351752fb0c71856b
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704813"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905748"
 ---
 # <a name="stretch-database-extended-stored-procedures-transact-sql"></a>Stretch Database (Transact-SQL) de procedimientos almacenados extendido
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47704813"
  [sys.sp_rda_reconcile_batch](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-batch-transact-sql.md)  
  Concilia el identificador de lote que se almacenan en la tabla de SQL Server Stretch habilitado para los datos migrados más recientemente con el identificador de lote que se almacenan en la tabla remota de Azure. 
  
-[Sys.sp_rda_reconcile_columns](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md) reconcilia las columnas de la tabla remota de Azure a las columnas de la en la tabla de SQL Server habilitada para Stretch.
+[Sys.sp_rda_reconcile_columns](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-columns-transact-sql.md) reconcilia las columnas de la tabla remota de Azure a las columnas de la tabla de SQL Server habilitada para Stretch.
  
  [Sys.sp_rda_reconcile_indexes](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-indexes-transact-sql.md) pone en cola una tarea de esquema para conciliar los índices de la tabla remota.
  

@@ -22,12 +22,12 @@ ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 556d6f5a7513f08867c73ba26369861d9e960688
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b797301b5b778bea34ad1552152e7e3e147dde37
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810313"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169175"
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,17 +47,17 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@source_schema=** ] **'***source_schema***'**  
+ [  **@source_schema=** ] **'**_origen\_esquema_**'**  
  Es el nombre del esquema en el que está incluido la tabla de origen. *source_schema* es **sysname**, no tiene ningún valor predeterminado, y no puede ser NULL.  
   
  *source_schema* debe existir en la base de datos actual.  
   
- [  **@source_name=** ] **'***source_name***'**  
+ [  **@source_name=** ] **'**_origen\_nombre_**'**  
  Es el nombre de la tabla de origen de la que se va a deshabilitar la captura de datos de cambio. *source_name* es **sysname**, no tiene ningún valor predeterminado, y no puede ser NULL.  
   
  *source_name* debe existir en la base de datos actual.  
   
- [  **@capture_instance=** ] **'***capture_instance***'** | **'** todas **'**  
+ [  **@capture_instance=** ] **'**_capturar\_instancia_**'** | **'** todas **'**  
  Es el nombre de la instancia de captura que se deshabilitará para la tabla de origen especificada. *capture_instance* es **sysname** y no puede ser NULL.  
   
  Cuando se especifica 'all', todas las instancias definidas para de captura *source_name* están deshabilitados.  
@@ -66,7 +66,7 @@ sys.sp_cdc_disable_table
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Ninguno  
   
 ## <a name="remarks"></a>Comentarios  
  **Sys.sp_cdc_disable_table** quita la captura de datos modificados cambiar funciones del sistema y de la tabla asociadas a la instancia de captura y la tabla de origen especificado. Elimina cualquier fila asociada a la instancia de captura especificada desde las tablas del sistema de captura de datos y establece el **is_tracked_by_cdc** columna para la entrada de tabla en la [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) vista de catálogo en 0.  

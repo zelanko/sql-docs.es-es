@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45fe288818c6234b61226311226cdbc6a471146b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8745874d47d173160848ea385d0479ccbbfb7173
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217435"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169348"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Referencia de la interfaz de usuario de la Utilidad de ejecución de paquetes (DtExecUI)
   Use la **Utilidad de ejecución de paquetes** para ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La utilidad ejecuta los paquetes almacenados en una de estas tres ubicaciones: la base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos. Esta interfaz de usuario, que se puede abrir desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o escribiendo `dtexecui` en un símbolo del sistema, es una alternativa a ejecutar paquetes mediante el uso de la **DTExec** herramienta de línea de comandos.  
@@ -52,7 +52,7 @@ ms.locfileid: "48217435"
   
 ### <a name="to-open-the-execute-package-utility-at-the-command-prompt"></a>Para abrir la Utilidad de ejecución de paquetes en el símbolo del sistema  
   
--   En una ventana de símbolo del sistema, ejecute `dtexecui`.  
+-   En una ventana del símbolo del sistema, ejecute `dtexecui`.  
   
  En las siguientes secciones se describen las páginas del cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
@@ -283,7 +283,7 @@ ms.locfileid: "48217435"
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="logging-page"></a>Página Registro  
- Use la página **Registro** del cuadro de diálogo **Utilidad de ejecución de paquetes** para que los proveedores de registro estén disponibles para el paquete en tiempo de ejecución. Seleccione el tipo de proveedor de registro del paquete y la cadena de conexión para la conexión al registro. Cada entrada de los proveedores de registro agrega una opción **/LOGGER***classid* al símbolo del sistema.  
+ Use la página **Registro** del cuadro de diálogo **Utilidad de ejecución de paquetes** para que los proveedores de registro estén disponibles para el paquete en tiempo de ejecución. Seleccione el tipo de proveedor de registro del paquete y la cadena de conexión para la conexión al registro. Cada entrada de los proveedores de registro agrega una opción **/LOGGER**_classid_ al símbolo del sistema.  
   
 ### <a name="options"></a>Opciones  
  **Proveedor de registro**  
@@ -302,7 +302,7 @@ ms.locfileid: "48217435"
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="set-values-page"></a>Página Valores establecidos  
- Use la página **Valores establecidos** del cuadro de diálogo **Utilidad de ejecución de paquetes** para establecer los valores de las propiedades de paquetes, ejecutables, conexiones, variables y proveedores de registro escribiendo las rutas de acceso de las propiedades y los valores de las propiedades. Cada entrada de ruta agrega una opción **/SET***propertypath;value* al símbolo del sistema.  
+ Use la página **Valores establecidos** del cuadro de diálogo **Utilidad de ejecución de paquetes** para establecer los valores de las propiedades de paquetes, ejecutables, conexiones, variables y proveedores de registro escribiendo las rutas de acceso de las propiedades y los valores de las propiedades. Cada entrada de ruta agrega una opción **/SET**_propertypath;value_ al símbolo del sistema.  
   
 ### <a name="options"></a>Opciones  
  **Ruta de acceso de la propiedad**  

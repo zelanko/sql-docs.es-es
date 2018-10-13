@@ -15,14 +15,14 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5fc2c924249518ecc40d363722ba6a6b1e882d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17062493d2c07e7dfbf1625aad584823953f043d
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051365"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120262"
 ---
-# <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
+# <a name="sql-server-extended-events-sessions"></a>Sesiones de SQL Server Extended Events
   Una sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Extended Events se crea en el proceso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda el motor de Extended Events. Los aspectos siguientes de una sesión de Extended Events proporcionan un contexto para entender la infraestructura de Extended Events y el procesamiento general que se produce:  
   
 -   Estados de sesión. Los distintos estados en que se encuentra una sesión de Extended Events cuando se ejecutan las instrucciones CREATE EVENT SESSION y ALTER EVENT SESSION.  
@@ -55,7 +55,7 @@ ms.locfileid: "48051365"
   
  En la ilustración anterior, observe que:  
   
--   La asignación entre los objetos de paquete y las sesiones es de varios a varios, lo que significa que un objeto puede aparecer en varias sesiones, y una sesión puede contener varios objetos.  
+-   La asignación entre los objetos de paquete y las sesiones es varios a varios, lo que significa que un objeto puede aparecer en varias sesiones, y una sesión puede contener varios objetos.  
   
 -   El mismo evento (Event1) o destino (Target1) puede estar habilitado en más de una sesión.  
   

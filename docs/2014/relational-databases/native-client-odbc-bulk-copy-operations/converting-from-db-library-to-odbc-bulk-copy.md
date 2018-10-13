@@ -16,12 +16,12 @@ ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80d0b21a54e8249007d961cd6eb26e4334fb361a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9694a5f54d740e298b9c6af4ab3169a3eb8ab14
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176625"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169391"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Convertir un programa de copia masiva de DB-Library a ODBC
   Convertir un programa de copia masiva de DB-Library a ODBC es fácil porque la mayor parte copiar las funciones admitidas por el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client son similares a las funciones de copia masiva de DB-Library, con las siguientes excepciones:  
@@ -37,7 +37,7 @@ ms.locfileid: "48176625"
   
 -   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client no admite controladores de mensajes y errores de DB-Library; debe llamar a **SQLGetDiagRec** obtener errores y mensajes generados por las funciones de copia masiva ODBC. Las versiones ODBC de las funciones de copia masiva devuelven los códigos de retorno de copia masiva estándar, es decir, SUCCEED o FAILED, no códigos de retorno de estilo ODBC, como SQL_SUCCESS o SQL_ERROR.  
   
--   Los valores especificados para DB-Library [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* parámetro se interpretan de forma diferente a ODBC **bcp_bind *** cbData* parámetro.  
+-   Los valores especificados para DB-Library [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* parámetro se interpretan de forma diferente a ODBC **bcp_bind**_cbData_parámetro.  
   
     |Condición indicada|DB-Library *varlen* valor|ODBC *cbData* valor|  
     |-------------------------|--------------------------------|-------------------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "48176625"
   
      En DB-Library, un *varlen* valor -1 indica que se han suministrado datos de longitud variable, lo que en ODBC *cbData* se interpreta que solo los valores NULL no se ha proporcionado. Cambie cualquier DB-Library *varlen* de -1 a SQL_VARLEN_DATA y todas las especificaciones de *varlen* especificaciones de 0 a SQL_NULL_DATA.  
   
--   DB-Library  **bcp_colfmt *** file_collen* y ODBC [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)* cbUserData * tienen el mismo problema que el **bcp_bind *** varlen*y *cbData* parámetros que se ha indicado anteriormente. Cambie cualquier DB-Library *file_collen* de -1 a SQL_VARLEN_DATA y todas las especificaciones de *file_collen* especificaciones de 0 a SQL_NULL_DATA.  
+-   DB-Library **bcp\_colfmt**_archivo\_collen_ y ODBC [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData* tiene el emitir el mismo como el **bcp_bind**_varlen_ y *cbData* parámetros que se ha indicado anteriormente. Cambie cualquier DB-Library *file_collen* de -1 a SQL_VARLEN_DATA y todas las especificaciones de *file_collen* especificaciones de 0 a SQL_NULL_DATA.  
   
 -   El *iValue* parámetro de ODBC [bcp_control](../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) función es un puntero void. En DB-Library, *iValue* era un entero. Convierta los valores para ODBC *iValue* a void *.  
   

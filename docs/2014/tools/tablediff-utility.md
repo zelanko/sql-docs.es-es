@@ -19,14 +19,14 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 32a750ead87e8d775388d93c2ddc84ed12f2ca98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 321bcbc0c07d4de2d5e9a7f930cb21c0995ce79b
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147940"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169405"
 ---
-# <a name="tablediff-utility"></a>tablediff, utilidad
+# <a name="tablediff-utility"></a>tablediff (utilidad)
   La utilidad **tablediff** se usa para comparar los datos de dos tablas para determinar la no convergencia y es especialmente útil para solucionar problemas de no convergencia en una topología de replicación. Esta utilidad se puede usar desde el símbolo del sistema o en un archivo por lotes para realizar las siguientes tareas:  
   
 -   Una comparación fila a fila entre una tabla de origen de una instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que actúa como publicador de replicación y la tabla de destino de una o más instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que actúan como suscriptores de replicación.  
@@ -77,8 +77,8 @@ ms.locfileid: "48147940"
  [ **-?** ]  
  Devuelve la lista de parámetros admitidos.  
   
- **-sourceserver** *source_server_name*[**\\***instance_name*]  
- Es el nombre del servidor de origen. Especifique *source_server_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especifique *source_server_name***\\***instance_name* para una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceserver** *source_server_name*[**\\**_instance_name_]  
+ Es el nombre del servidor de origen. Especificar _origen\_server\_nombre_ para la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especificar _origen\_server\_nombre_**\\**_instancia\_nombre_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *source_database*  
  Es el nombre de la base de datos de origen.  
@@ -101,8 +101,8 @@ ms.locfileid: "48147940"
  **-sourcelocked**  
  La tabla de origen se bloquea durante la comparación con las sugerencias de tabla TABLOCK y HOLDLOCK.  
   
- **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- Es el nombre del servidor de destino. Especifique *destination_server_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especifique *destination_server_name***\\***instance_name* para una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-destinationserver** *destination_server_name*[**\\**_instancia\_nombre_]  
+ Es el nombre del servidor de destino. Especifique *destination_server_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especificar _destino\_server\_nombre_**\\**_instancia\_nombre_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *subscription_database*  
  Es el nombre de la base de datos de destino.  
@@ -126,7 +126,7 @@ ms.locfileid: "48147940"
  La tabla de destino se bloquea durante la comparación con las sugerencias de tabla TABLOCK y HOLDLOCK.  
   
  **-b** *large_object_bytes*  
- Es el número de bytes que se compara para las columnas de tipo de datos de objetos grandes, que incluye: `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` y `varbinary(max)`. *large_object_bytes* toma como valor predeterminado el tamaño de la columna. Los datos que superen *large_object_bytes* no se compararán.  
+ Es el número de bytes que se deben comparar en las columnas cuyo tipo de datos es de objetos grandes, lo que incluye los tipos: `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` y `varbinary(max)`. *large_object_bytes* toma como valor predeterminado el tamaño de la columna. Los datos que superen *large_object_bytes* no se compararán.  
   
  **-bf**  *number_of_statements*  
  Es el número de instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] que se va a escribir en el archivo de script actual [!INCLUDE[tsql](../includes/tsql-md.md)] cuando se usa la opción **-f** . Cuando el número de instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] supera el valor de *number_of_statements*, se crea un nuevo archivo de script [!INCLUDE[tsql](../includes/tsql-md.md)] .  
@@ -165,14 +165,14 @@ ms.locfileid: "48147940"
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**0**|Correcto|  
+|**0**|Success|  
 |**1**|Error grave|  
 |**2**|Diferencias entre tablas|  
   
 ## <a name="remarks"></a>Comentarios  
  La utilidad **tablediff** no se puede usar con servidores que no son[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- Las tablas con `sql_variant` no se admiten columnas de tipo de datos.  
+ No se admiten tablas que contengan columnas con el tipo de datos `sql_variant`.  
   
  De forma predeterminada, la utilidad **tablediff** admite las siguientes asignaciones de tipos de datos entre las columnas de origen y de destino.  
   

@@ -10,24 +10,24 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ba04ced0358af468818bb755b1f3f2e9e14e0f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bea792099543df1cf33bf98b256f7dbc3f39c23c
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192195"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120392"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Extensiones de AdventureWorks para mostrar OLTP en memoria
     
 ## <a name="overview"></a>Información general  
- Este ejemplo muestra la nueva [!INCLUDE[hek_2](../includes/hek-2-md.md)] característica, que forma parte de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Muestra las nuevas tablas optimizadas para memoria y procedimientos almacenados compilados de forma nativa y puede usarse para mostrar las ventajas de rendimiento de [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
+ Este ejemplo muestra la nueva característica [!INCLUDE[hek_2](../includes/hek-2-md.md)], que forma parte de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Muestra las nuevas tablas optimizadas para memoria y los procedimientos almacenados compilados de forma nativa, y se puede usar para mostrar las ventajas de rendimiento de [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
   
 > [!NOTE]  
 >  Para ver este tema de SQL Server 2016, consulte [Extensiones de AdventureWorks para mostrar OLTP en memoria](https://msdn.microsoft.com/en-US/library/mt465764.aspx)  
   
  El ejemplo migra 5 tablas de la base de datos AdventureWorks a tablas optimizadas para memoria e incluye una carga de trabajo de demostración para el procesamiento de pedidos de venta. Puede usar esta carga de trabajo de demostración para ver la ventaja de rendimiento que supone emplear [!INCLUDE[hek_2](../includes/hek-2-md.md)] en el servidor.  
   
- En la descripción del ejemplo se explican los compromisos realizados al migrar las tablas a [!INCLUDE[hek_2](../includes/hek-2-md.md)] para compensar las características que no son admiten (todavía) para las tablas optimizadas para memoria en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+ En la descripción del ejemplo se explican los compromisos realizados al migrar las tablas a [!INCLUDE[hek_2](../includes/hek-2-md.md)] para compensar las características que no se admiten (todavía) en las tablas optimizadas para memoria en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
  La documentación de este ejemplo está estructurada de la manera siguiente:  
   
@@ -81,15 +81,15 @@ ms.locfileid: "48192195"
      GO  
     ```  
   
-4.  Ejecute el comando siguiente en la ventana de consulta de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para cambiar el propietario de la base de datos a un inicio de sesión del servidor:  
+4.  Ejecute el comando siguiente en la ventana de consulta de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]para cambiar el propietario de la base de datos a un inicio de sesión del servidor:  
   
     ```  
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  Descargue el script de ejemplo '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' desde [ejemplo de OLTP de SQL Server 2014 RTM en memoria](http://go.microsoft.com/fwlink/?LinkID=396372) en una carpeta local.  
+5.  Descargue el script de ejemplo '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' desde [Ejemplo de OLTP en memoria de SQL Server 2014 RTM](http://go.microsoft.com/fwlink/?LinkID=396372) a una carpeta local.  
   
-6.  Actualice el valor de la variable 'checkpoint_files_location' en el script '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' para que apunte a la ubicación de destino de los archivos de puntos de comprobación de [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Los archivos de punto de comprobación deben colocarse en una unidad que tenga un buen rendimiento de E/S secuencial.  
+6.  Actualice el valor de la variable 'checkpoint_files_location' en el script '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' para que apunte a la ubicación de destino de los archivos de puntos de comprobación de [!INCLUDE[hek_2](../includes/hek-2-md.md)] . Los archivos de punto de comprobación deben colocarse en una unidad que tenga un buen rendimiento de E/S secuencial.  
   
      Actualice el valor de la variable 'database_name' para que señale a la base de datos AdventureWorks2014.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "48192195"
   
 -   *Columnas calculadas:* se omiten las columnas calculadas SalesOrderNumber y TotalDue, ya que [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] no admite columnas calculadas en tablas optimizadas para memoria. La nueva vista Sales.vSalesOrderHeader_extended_inmem refleja las columnas SalesOrderNumber y TotalDue. Por tanto, puede usar esta vista si se necesitan estas columnas.  
   
--   *Restricciones Foreign key* no se admiten para las tablas optimizadas para memoria en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Además, SalesOrderHeader_inmem es una tabla sin interrupción en la carga de trabajo de ejemplo, y las restricciones de clave externa requieren un procesamiento adicional para todas las operaciones DML, ya que tienen que hacer búsquedas en todas las demás tablas a las que se hace referencia en estas restricciones. Por tanto, la suposición es que la aplicación garantiza la integridad referencial, y la integridad referencial no se valida cuando se insertan filas. La integridad referencial de los datos de esta tabla se puede comprobar con el procedimiento almacenado dbo.usp_ValidateIntegrity, mediante el script siguiente:  
+-   Las tablas optimizadas para memoria no admiten*restricciones de clave externa* en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Además, SalesOrderHeader_inmem es una tabla sin interrupción en la carga de trabajo de ejemplo, y las restricciones de clave externa requieren un procesamiento adicional para todas las operaciones DML, ya que tienen que hacer búsquedas en todas las demás tablas a las que se hace referencia en estas restricciones. Por tanto, la suposición es que la aplicación garantiza la integridad referencial, y la integridad referencial no se valida cuando se insertan filas. La integridad referencial de los datos de esta tabla se puede comprobar con el procedimiento almacenado dbo.usp_ValidateIntegrity, mediante el script siguiente:  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
@@ -223,7 +223,7 @@ ms.locfileid: "48192195"
   
 -   *UDT de alias:* en la tabla original se usa el tipo de datos definido por el usuario dbo.Flag, que equivale al tipo de datos del sistema bit. La tabla migrada usa el tipo de datos bit en su lugar.  
   
--   *Intercalación BIN2* : las columnas Name y ProductNumber se incluyen en las claves de índice y, por tanto, deben tener intercalaciones BIN2 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Aquí, la suposición es que la aplicación no emplea las características de intercalación, como no distinguir mayúsculas de minúsculas.  
+-   *Intercalación BIN2* : las columnas Name y ProductNumber se incluyen en las claves de índice, y por tanto deben tener intercalaciones BIN2 en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Aquí, la suposición es que la aplicación no emplea las características de intercalación, como no distinguir mayúsculas de minúsculas.  
   
 -   *Rowguid:* la columna rowguid se omite. Para obtener detalles, vea la descripción de la tabla SalesOrderHeader.  
   
@@ -386,7 +386,7 @@ ms.locfileid: "48192195"
     -   Usa los procedimientos del asistente dbo.usp_GenerateCKCheck, dbo.usp_GenerateFKCheck y dbo.GenerateUQCheck para generar el código T-SQL necesario para realizar las comprobaciones de integridad.  
   
 ##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Medidas de rendimiento con la carga de trabajo de demostración  
- Ostress es una herramienta de línea de comandos desarrollada por el equipo de soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)] CSS [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Esta herramienta se puede usar para ejecutar consultas o ejecutar procedimientos almacenados en paralelo. Puede configurar el número de subprocesos para ejecutar una instrucción T-SQL proporcionada en paralelo y puede especificar cuántas veces se debe ejecutar la instrucción en este subproceso; ostress recorrerá los subprocesos y ejecutará la instrucción en todos ellos en paralelo. Una vez que concluya la ejecución en todos los subprocesos, ostress notificará el tiempo empleado en finalizar la ejecución en todos los subprocesos.  
+ Ostress es una herramienta de línea de comandos desarrollada por el equipo de soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)] CSS [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Esta herramienta se puede usar para ejecutar consultas o ejecutar procedimientos almacenados en paralelo. Puede configurar el número de subprocesos para ejecutar una instrucción T-SQL proporcionada en paralelo y puede especificar cuántas veces se debe ejecutar la instrucción en este subproceso; ostress recorrerá los subprocesos y ejecutará la instrucción en todos ellos en paralelo. Una vez que concluya la ejecución en todos los subprocesos, ostress notificará el tiempo empleado en finalizar la ejecución en todos los subprocesos.  
   
 ### <a name="installing-ostress"></a>Instalar ostress  
  Ostress se instala como parte de las utilidades de RML; no hay ninguna instalación independiente para ostress.  
@@ -412,7 +412,7 @@ ms.locfileid: "48192195"
   
 -   -S nombre de la instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la que se va a conectar  
   
--   -E usar autenticación de Windows para conectarse (valor predeterminado); si usa la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , emplee las opciones –U y –P para especificar el nombre de usuario y la contraseña, respectivamente  
+-   -E usar autenticación de Windows para conectarse (valor predeterminado); si usa la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], emplee las opciones –U y –P para especificar el nombre de usuario y la contraseña, respectivamente  
   
 -   -d nombre de la base de datos; para este ejemplo, AdventureWorks2014  
   
@@ -647,7 +647,7 @@ WHERE t.type='U'
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
   
- Podemos ver un total de unos 6,5 GB de datos. Observe que el tamaño de los índices de la tabla SalesOrderHeader_inmem y SalesOrderDetail_inmem es el mismo que el tamaño de los índices antes de insertar los pedidos de venta. El tamaño del índice no cambió porque ambas tablas emplean índices hash y los índices hash son estáticos.  
+ Podemos ver un total de unos 6,5 GB de datos. Tenga en cuenta que el tamaño de los índices de la tabla SalesOrderHeader_inmem y SalesOrderDetail_inmem es el mismo que el tamaño de los índices antes de insertar los pedidos de ventas. El tamaño del índice no cambió porque ambas tablas emplean índices hash y los índices hash son estáticos.  
   
 #### <a name="after-demo-reset"></a>Después de restablecer la demostración  
  Se puede usar el procedimiento almacenado Demo.usp_DemoReset para restablecer la demostración. Elimina los datos de las tablas SalesOrderHeader_inmem y SalesOrderDetail_inmem, y reinicializa los datos de las tablas originales SalesOrderHeader y SalesOrderDetail.  

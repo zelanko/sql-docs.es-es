@@ -18,12 +18,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3b4bf77cc626f78014ab139d3e27377c8f139e0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da531e62f2067ff1ae217a313d1fdd0eb8ce24a7
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162245"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120122"
 ---
 # <a name="data-alert-designer"></a>Diseñador de alertas de datos
   Las definiciones de alertas de datos se crean y editan en el Diseñador de alertas de datos. Una definición de alerta es una colección de metadatos, que incluye los datos del informe de su interés, las reglas que deben satisfacer los datos del informe para que se creen instancias de alertas de datos y se envíen mensajes de alertas de datos, los destinatarios del mensaje de alerta, etc.  
@@ -71,7 +71,7 @@ ms.locfileid: "48162245"
 ### <a name="alert-name"></a>Nombre de la alerta  
  De forma predeterminada, la definición de la alerta tiene el mismo nombre que el informe. Puede cambiar el nombre de la alerta para que sea más significativo. Esto facilita la administración de las alertas, así como determinar las alertas que es preciso actualizar, eliminar, etcétera.  
   
- Puede crear varias alertas en un informe. Es posible tener varias definiciones de alertas con el mismo nombre, pero se recomienda que use nombres únicos para las alertas. Facilita la labor de distinguir y administrar las definiciones de alertas. Puede ver una lista de todas las alertas que ha creado en el Administrador de alertas de datos. Para obtener más información, consulte [Data Alert Manager para administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) y [administrar Mis alertas de datos en Data Alert Manager](manage-my-data-alerts-in-data-alert-manager.md).  
+ Puede crear varias alertas en un informe. Es posible tener varias definiciones de alertas con el mismo nombre, pero se recomienda que use nombres únicos para las alertas. Facilita la labor de distinguir y administrar las definiciones de alertas. Puede ver una lista de todas las alertas que ha creado en el Administrador de alertas de datos. Para obtener más información, vea [Administrador de alertas de datos para administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) y [Administrar mis alertas de datos en el Administrador de alertas de datos](manage-my-data-alerts-in-data-alert-manager.md).  
   
 ### <a name="rules-and-clauses"></a>Reglas y cláusulas  
  El ámbito de los cambios en los datos y las reglas de la alerta definen los cambios en los datos que desencadenan la alerta. El ámbito de los cambios en los datos es el siguiente:  
@@ -167,12 +167,12 @@ ms.locfileid: "48162245"
   
  El asunto predeterminado del mensaje de correo electrónico es **Alerta de datos para \<nombre de alerta>**. Puede cambiar el asunto de acuerdo con sus necesidades.  
   
- Puede proporcionar también una descripción para incluirla en el mensaje de alerta de datos en la opción **Descripción** . Incluir una descripción, especialmente si tiene alertas de datos similares, le ayudará a diferenciar rápidamente los mensajes de alertas. Además del mensaje de alerta que se envía cuando los datos del informe satisfacen las reglas especificadas, se envía un mensaje de alerta a todos los destinatarios cuando se produce un error. Para obtener más información, consulte [Data Alert Messages](../../2014/reporting-services/data-alert-messages.md).  
+ Puede proporcionar también una descripción para incluirla en el mensaje de alerta de datos en la opción **Descripción** . Incluir una descripción, especialmente si tiene alertas de datos similares, le ayudará a diferenciar rápidamente los mensajes de alertas. Además del mensaje de alerta que se envía cuando los datos del informe satisfacen las reglas especificadas, se envía un mensaje de alerta a todos los destinatarios cuando se produce un error. Para más información, consulte [Data Alert Messages](../../2014/reporting-services/data-alert-messages.md).  
   
  Para obtener más información sobre cómo se genera el correo electrónico, vea [Alertas de datos de Reporting Services](../ssms/agent/alerts.md).  
   
 ##  <a name="CreateAlert"></a> Crear una definición de alerta de datos  
- Si tiene los permisos Ver elemento y Crear alertas de SharePoint, puede crear una definición de alerta de datos para cualquier informe para el que tenga permiso de visualización, siempre y cuando el informe use credenciales almacenadas o no use credenciales. El informe se ejecuta desde una biblioteca de SharePoint. Los datos disponibles para su uso en el Diseñador de alertas de datos proceden del informe. Si el informe tiene parámetros, puede que tenga que ejecutarlo con diferentes valores de parámetros para asegurarse de que los datos que le interesan aparecen en el informe. Después de abrir el informe, puede hacer clic en la opción **Nueva alerta de datos** del menú **Acciones** de la barra de herramientas de informe para abrir el Diseñador de alertas de datos. En la imagen siguiente se muestra cómo se puede abrir el Diseñador de alertas de datos.  
+ Si tiene los permisos Ver elemento y Crear alertas de SharePoint, puede crear una definición de alerta de datos para cualquier informe para el que tenga permiso de visualización, siempre y cuando el informe use credenciales almacenadas o no use credenciales. El informe se ejecuta desde una biblioteca de SharePoint. Los datos disponibles para su uso en el Diseñador de alertas de datos proceden del informe. Si el informe tiene parámetros, deberá ejecutar el informe con distintos valores de parámetro para asegurarse de que los datos que está interesado en aparece en el informe. Después de abrir el informe, puede hacer clic en la opción **Nueva alerta de datos** del menú **Acciones** de la barra de herramientas de informe para abrir el Diseñador de alertas de datos. En la imagen siguiente se muestra cómo se puede abrir el Diseñador de alertas de datos.  
   
  ![Abrir el Diseñador de alertas desde la biblioteca de SharePoint](media/rs-openalertdesigneriw.gif "Abrir el Diseñador de alertas desde la biblioteca de SharePoint")  
   
@@ -201,7 +201,7 @@ ms.locfileid: "48162245"
 ##  <a name="HowTo"></a> Tareas relacionadas  
  En esta sección se enumeran los procedimientos que muestran cómo crear y modificar alertas.  
   
--   [Modificación de una alerta de datos en el Diseñador de alertas](edit-a-data-alert-in-alert-designer.md)  
+-   [Modificar una alerta de datos en el Diseñador de alertas](edit-a-data-alert-in-alert-designer.md)  
   
 -   [Creación de una alerta de datos en el Diseñador de alertas de datos](create-a-data-alert-in-data-alert-designer.md)  
   

@@ -17,12 +17,12 @@ ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b9a8ef18dca7bf61907219d4a09882c62deb2712
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a80c7f690a4b24ef82cb3da34dea50c98cf836f4
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833363"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119662"
 ---
 # <a name="aggregate-functions---avg"></a>Funciones de agregado: avg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## <a name="remarks"></a>Comentarios  
  Todos los tipos de valores atomizados que se pasan a **avg()** tiene que ser un subtipo de exactamente uno de los tres tipos numéricos base integrados o xdt: untypedAtomic. No se pueden mezclar. Los valores de tipo xdt:untypedAtomic se tratan como xs:double. El resultado de **avg()** recibe el tipo base de los tipos pasados, como xs: double en el caso de xdt: untypedAtomic.  
   
- Si se trata de una entrada vacía estática, se presupone que está vacía y se genera un error estático.  
+ Si la entrada está estáticamente vacía, se considera implícitamente vacía y se produce un error estático.  
   
  El **avg()** función devuelve el promedio de los números calculados. Por ejemplo:  
   

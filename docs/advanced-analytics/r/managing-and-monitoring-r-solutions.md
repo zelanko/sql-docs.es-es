@@ -1,58 +1,97 @@
 ---
-title: Administrar y supervisar las soluciones de aprendizaje de máquina en SQL Server | Documentos de Microsoft
+title: Administrar e integrar las cargas de trabajo de machine learning en SQL Server | Microsoft Docs
+description: Como un DBA de SQL Server, revise las tareas administrativas para la implementación de un subsistema de R y Python en una instancia del motor de base de datos de aprendizaje automático.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 10/10/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4806224a1606fff58f63f6083fa577aa4066c795
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c921b89dc3f6928ccbfc3f9fc727015dadc05b7b
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585707"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169085"
 ---
-# <a name="managing-and-monitoring-machine-learning-solutions"></a>Administración y supervisión de soluciones de aprendizaje de máquina
+# <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>Administrar e integrar las cargas de trabajo de machine learning en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artículo describen características de SQL Server Machine Learning Services que están relacionados con los administradores de base de datos que necesitan para empezar a trabajar con soluciones de R y Python.
+En este artículo es para los administradores de base de datos de SQL Server que son responsables de implementar una infraestructura de ciencia de datos eficiente en un recurso de servidor que admiten varias cargas de trabajo. Rodea el espacio del problema administrativo relevante para la administración de R y código de Python de ejecución en SQL Server. 
 
-**Se aplica a:** servicios de aprendizaje de automático de SQL Server 2016 R Services, SQL Server de 2017
+## <a name="what-is-feature-integration"></a>¿Qué es la integración de características
 
-## <a name="security"></a>Seguridad
+Aprendizaje automático R y Python proporcionado por [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) como una extensión a una instancia del motor de base de datos. La integración es principalmente a través de la capa de seguridad y el lenguaje de definición de datos, resumida del siguiente modo:
 
-Los administradores de base de datos deben proporcionar acceso a datos no solo a los científicos de datos, sino a una variedad de desarrolladores de informes, los analistas de negocios y consumidores de datos empresariales. La integración de R (y ahora Python) en SQL Server ofrece numerosas ventajas para los administradores de base de datos que respalden las iniciativas de ciencias de datos.
++ Los procedimientos almacenados están equipados con la capacidad para aceptar R y Python de código como parámetros de entrada. Los desarrolladores y científicos de datos pueden utilizar un [procedimiento almacenado del sistema](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql?view=sql-server-2017) o crear un procedimiento personalizado que contiene su código.
++ Funciones de Transact-SQL (es decir, [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)) que puede consumir un modelo de datos previamente entrenado. Esta funcionalidad está disponible a través de Transact-SQL. Por lo tanto, se puede llamar en un sistema concreto no tiene instaladas las extensiones de aprendizaje automático.
++ Inicios de sesión de base de datos existentes y los permisos basados en rol cubren las secuencias de comandos invocada por el usuario utilizando esos mismos datos. Como norma general, si los usuarios no pueden tener acceso a datos a través de una consulta, no puedan acceder a él a través de la secuencia de comandos o bien.
 
-+ La arquitectura de [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] protege las bases de datos y aísla la ejecución de las sesiones de R del funcionamiento de la instancia de la base de datos.
+## <a name="feature-availability"></a>Disponibilidad de características
 
-+ Puede especificar quién tiene permiso para ejecutar los scripts de R y garantizar que los datos utilizados en las tareas de dicho lenguaje de programación se administran con los mismos roles de seguridad que los definidos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Integración de R y Python esté disponible a través de una sucesión de pasos. El primero es el programa de instalación, cuando se [incluir o agregar el **Machine Learning Services** ](../install/sql-machine-learning-services-windows-install.md) característica a una instancia del motor de base de datos. Como un paso posterior, debe habilitar los scripts externos en la instancia del motor de base de datos (está desactivada de forma predeterminada).
 
-+ El Administrador de base de datos puede utilizar funciones para administrar la instalación de paquetes de R y la ejecución de scripts de R y Python.
+En este momento, solo los administradores de base de datos tendrán permisos completos para crear y ejecutar scripts externos, agregar o eliminar paquetes y creación procedimientos almacenados y otros objetos.
 
-Para obtener más información, vea estos recursos:
+Todos los demás usuarios deben tener el permiso EXECUTE ANY EXTERNAL SCRIPT. Adicionales [permisos de base de datos estándar](../security/user-permission.md) determinar si los usuarios pueden crear objetos, ejecutar secuencias de comandos, consumir modelos entrenados y serializados y así sucesivamente. 
 
-+ [Consideraciones de seguridad para el tiempo de ejecución de R en SQL Server](../../advanced-analytics/r/security-considerations-for-the-r-runtime-in-sql-server.md)
+## <a name="resource-allocation"></a>Asignación de recursos
 
-+ [Información general de seguridad de R](../r/security-overview-sql-server-r.md)
+Procedimientos almacenados y consultas de T-SQL que invocan el procesamiento externo utilizan los recursos disponibles para el grupo de recursos predeterminado. Como parte de la configuración predeterminada, los procesos externos, como las sesiones de R y Python se permiten hasta un 20% del total de memoria en el sistema host. 
 
-+ [Información general de seguridad de Python](../python/security-overview-sql-server-python-services.md)
+Si desea ajustar los recursos, puede modificar el grupo predeterminado, con un efecto correspondiente en cargas de trabajo de machine learning que se ejecutan en ese sistema.
 
-+ [Paquetes de R de manera predeterminada y Python en SQL Server](installing-and-managing-r-packages.md)
+Otra opción es crear un grupo de recursos externos personalizado para capturar las sesiones procedentes de programas específicos, hosts o actividades que se producen durante los intervalos de tiempo específico. Para obtener más información, consulte [regulación de recursos para modificar los niveles de recursos para la ejecución de R y Python](../administration/resource-governance.md) y [cómo crear un grupo de recursos](../administration/how-to-create-a-resource-pool.md) para obtener instrucciones paso a paso.
 
-## <a name="configuration-and-management"></a>Configuración y administración
+## <a name="isolation-and-containment"></a>Aislamiento y contención
 
-Los administradores de bases de datos deben integrar prioridades y proyectos opuestos en un único punto de contacto: el servidor de la base de datos. Deben admitir análisis al tiempo que mantiene el estado de los almacenes de datos informes y operativos. La integración de con SQL Server de aprendizaje automático proporciona muchas ventajas para los administradores de base de datos, que actúa un papel fundamental en la implementación de una infraestructura eficaz de ciencia de datos de cada vez más.
+La arquitectura de procesamiento está diseñada para aislar los scripts externos de procesamiento básico de motor. Scripts de R y Python que se ejecutan como procesos independientes, en cuentas de trabajo local. En el Administrador de tareas, puede supervisar los procesos de R y Python, que se ejecuta bajo una cuenta de usuario local con pocos privilegios, distinta de la cuenta de servicio de SQL Server. 
 
-+ Sesiones de R y Python se ejecutan en un proceso independiente para asegurarse de que el servidor sigue ejecutándose como de costumbre, incluso si el tiempo de ejecución de script externo tiene problemas.
+Ejecución de procesos de R y Python en las cuentas individuales con pocos privilegios tiene las siguientes ventajas:
 
-+ Las cuentas de usuario físico con pocos privilegios se utilizan para contener y aislar la actividad de script externo.
++ Aísla los procesos del motor principal de las sesiones de R y Python que puede finalizar un proceso de R o Python sin afectar las operaciones de base de datos principal. 
 
-+ El DBA puede utilizar herramientas de administración de recursos de SQL Server estándares para controlar la cantidad de recursos asignados al runtime de R, para evitar que unos cálculos masivos pongan en peligro el rendimiento general del servidor.
++ Reduce los privilegios de los procesos en tiempo de ejecución de script externo en el equipo host.
 
-Para obtener más información, vea estos recursos:
+Las cuentas con privilegios mínimos se creó durante la instalación y se colocan en un Windows *grupo de cuentas de usuario* llamado **SQLRUserGroup**. De forma predeterminada, este grupo tiene permiso para usar los archivos ejecutables, bibliotecas y los conjuntos de datos integrados en la carpeta de programas para R y Python en SQL Server. 
 
-+ [Regulador de recursos para R Services](../r/resource-governance-for-r-services.md)
+Como un DBA, puede usar seguridad de datos de SQL Server para especificar quién tiene permiso para ejecutar scripts y que los datos utilizados en los trabajos se administran en los mismos roles de seguridad que controlan el acceso a través de consultas de Transact-SQL. Como administrador del sistema, puede denegar explícitamente **SQLRUserGroup** acceso a datos confidenciales en el servidor local mediante la creación de ACL.
 
-+ [Configurar y administrar extensiones de análisis avanzado](../r/configure-and-manage-advanced-analytics-extensions.md)
+>[!NOTE]
+> De forma predeterminada, el **SQLRUserGroup** no tiene permisos o un inicio de sesión de SQL Server. Si las cuentas de trabajo requiere un inicio de sesión para el acceso a datos, debe crearla usted mismo. Es un escenario que requiere la creación de un inicio de sesión específicamente admitir las solicitudes de una secuencia de comandos en ejecución para las operaciones en la instancia del motor de base de datos, o datos cuando la identidad del usuario es un usuario de Windows y la cadena de conexión especifica un usuario de confianza. Para obtener más información, consulte [agregar SQLRUserGroup como un usuario de base de datos](../../advanced-analytics/security/add-sqlrusergroup-to-database.md).
+
+## <a name="disable-script-execution"></a>Deshabilitar la ejecución del script
+
+En el caso de secuencias de comandos descontroladas, puede deshabilitar toda la ejecución del script, invertir los pasos que se llevan a cabo anteriormente para habilitar la ejecución de scripts externos en primer lugar.
+
+1. En SQL Server Management Studio u otra herramienta de consulta, ejecute este comando para establecer `external scripts enabled` en 0 o FALSE.
+
+    ```sql
+    EXEC sp_configure  'external scripts enabled', 0
+    RECONFIGURE WITH OVERRIDE
+    ```
+2. Reinicie el servicio de motor de base de datos.
+
+Una vez que se resuelve el problema, recuerde volver a habilitar la ejecución del script en la instancia si desea reanudar R y compatible con scripting de Python en la instancia del motor de base de datos. Para obtener más información, consulte [habilitar la ejecución del script](../install/sql-machine-learning-services-windows-install.md#enable-script-execution)
+
+## <a name="extend-functionality"></a>Extender funcionalidad
+
+Ciencia de datos a menudo presenta nuevos requisitos para la implementación de paquetes y administración. Para un científico de datos, es una práctica común para aprovechar los paquetes de código abierto y de terceros en soluciones personalizadas. Algunos de esos paquetes tendrá dependencias de otros paquetes, en cuyo caso es posible que deba evaluar e instalar varios paquetes para alcanzar su objetivo.
+
+Como un DBA responsable de un recurso de servidor, la implementación de paquetes de R y Python arbitrarios en un servidor de producción representa un reto desconocido. Antes de agregar los paquetes, debe evaluar si la funcionalidad proporcionada por el paquete externo es realmente necesaria, con ningún equivalente integrado [lenguaje R](r-libraries-and-data-types.md) y [bibliotecas de Python](../python/python-libraries-and-data-types.md) instalado programa de instalación de SQL Server. 
+
+Como alternativa a la instalación del paquete de servidor, un científico de datos podría ser capaz de [compilar y ejecutar soluciones en una estación de trabajo externo](../r/set-up-a-data-science-client.md), recuperación de datos de SQL Server, pero con todos los análisis desde el sistema local en la estación de trabajo en lugar de en el mismo servidor. 
+
+Si posteriormente decide que las funciones de biblioteca externa son necesarias y no suponen un riesgo para las operaciones del servidor o los datos como un todo, puede elegir desde varias metodologías para agregar paquetes. En la mayoría de los casos, se necesitan derechos de administrador para agregar paquetes a SQL Server. Para obtener más información, consulte [paquetes de instalación de Python en SQL Server](../python/install-additional-python-packages-on-sql-server.md) y [instalar paquetes de R en SQL Server](install-additional-r-packages-on-sql-server.md).
+
+> [!NOTE]
+> Para paquetes de R, derechos de administrador del servidor no son necesarios específicamente para la instalación del paquete si usa los métodos alternativos. Consulte [instalar paquetes de R en SQL Server](install-additional-r-packages-on-sql-server.md) para obtener más información.
+
+## <a name="next-steps"></a>Pasos siguientes
+
++ Revise los conceptos y componentes de la [arquitectura de extensibilidad](../concepts/extensibility-framework.md) y [seguridad](../concepts/security.md) para obtener más información.
+
++ Como parte de la instalación de características, posiblemente ya esté familiarizado con los usuarios finales, control de acceso a datos, pero si no, consulte [conceder permisos de usuario para el aprendizaje automático de SQL Server](../security/user-permission.md) para obtener más información. 
+
++ Obtenga información sobre cómo ajustar los recursos del sistema para las cargas de trabajo de aprendizaje de automático de cálculo intensivo. Para obtener más información, consulte [cómo crear un grupo de recursos](../administration/how-to-create-a-resource-pool.md).

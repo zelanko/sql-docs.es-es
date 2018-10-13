@@ -20,12 +20,12 @@ ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 544f6d9f8610ff9845df4c417d880fd88c4c180c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 930ae56634ae6bee70ceca750522aa90a3ed159d
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812113"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168803"
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_type=** ] **'***job_type***'**  
+ [  **@job_type=** ] **'**_trabajo\_tipo_**'**  
  Tipo de trabajo que se agrega. *job_type* es **nvarchar (20)** y no puede ser NULL. Las entradas válidas son **'capture'** y **'cleanup'**.  
   
  [  **@start_job=** ] *start_job*  
@@ -60,12 +60,12 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *max_trans* solo es válida para los trabajos de captura.  
   
- [ **@maxscans** ] **= *** max_scans*  
+ [ **@maxscans** ] **=** _max\_examina_  
  Número máximo de ciclos de recorrido que se ejecutarán para extraer todas las filas del registro. *max_scans* es **int** con el valor predeterminado es 10.  
   
  *max_scan* solo es válida para los trabajos de captura.  
   
- [ **@continuous** ] **= *** continua*  
+ [ **@continuous** ] **=** _continua_  
  Indica si el trabajo de captura se ejecutará continuamente (1), o solo una vez (0). *continua* es **bit** con el valor predeterminado es 1.  
   
  Cuando *continua* = 1, el [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) examina el registro de trabajo y procesa hasta (*max_trans* \* *max_scans*) transacciones. A continuación, espera a que el número de segundos especificado en *polling_interval* antes de comenzar el recorrido del registro siguiente.  
@@ -74,31 +74,31 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *continua* solo es válida para los trabajos de captura.  
   
- [ **@pollinginterval** ] **= *** polling_interval*  
+ [ **@pollinginterval** ] **=** _sondeo\_intervalo_  
  Número de segundos entre los ciclos de recorrido del registro. *polling_interval* es **bigint** con el valor predeterminado es 5.  
   
  *polling_interval* es válido sólo para la captura de los trabajos cuando *continua* está establecido en 1. Si se especifica, el valor no puede ser negativo y no puede superar 24 horas. Si se especifica el valor 0, no hay ninguna espera entre los exámenes del registro.  
   
- [ **@retention** ] **= *** retención*  
+ [ **@retention** ] **=** _retención_  
  Número de minutos que las filas de datos de cambio se retendrán en tablas de cambio. *retención* es **bigint** con un valor predeterminado de 4320 (72 horas). El valor máximo es 52494800 (100 años). Si se especifica, el valor debe ser un entero positivo.  
   
  *retención* solo es válida para los trabajos de limpieza.  
   
- [  **@threshold =** ] **'***delete_threshold***'**  
+ [  **@threshold =** ] **'**_eliminar\_umbral_**'**  
  Número máximo de entradas correspondientes a operaciones de eliminación que se pueden eliminar mediante una única instrucción durante el proceso de limpieza. *delete_threshold* es **bigint** con el valor predeterminado es 5000.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Ninguno  
   
 ## <a name="remarks"></a>Comentarios  
  Un trabajo de limpieza se crea utilizando los valores predeterminados cuando la primera tabla de la base de datos se habilita para la captura de datos de cambio. Un trabajo de cambio se crea usando los valores predeterminados cuando la primera tabla de la base de datos se habilita para la captura de datos de cambio y no existe ninguna publicación transaccional para la base de datos. Si existe una publicación transaccional, se usará el lector del registro transaccional para controlar el mecanismo de captura, y no se permitirá ni se necesitará realizar otro trabajo de captura.  
   
  Dado que los trabajos de captura y limpieza se crean de forma predeterminada, este procedimiento almacenado solo es necesario cuando un trabajo se ha eliminado y se ha vuelto a crear explícitamente.  
   
- El nombre del trabajo es **cdc. ***< database_name >***_cleanup** o **cdc. ***< database_name >***_capture**, donde *< database_name >* es el nombre de la base de datos actual. Si ya existe un trabajo con el mismo nombre, se anexa el nombre con un punto (**.**) seguido por un identificador único, por ejemplo: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ El nombre del trabajo es **cdc.**  _\<base de datos\_nombre\>_**\_limpieza** o **cdc.**  _\<base de datos\_nombre\>_**\_capturar**, donde *< database_name >* es el nombre de la base de datos actual. Si ya existe un trabajo con el mismo nombre, se anexa el nombre con un punto (**.**) seguido por un identificador único, por ejemplo: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  Para ver la configuración actual de un trabajo de captura o limpieza, use [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Para cambiar la configuración de un trabajo, use [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   

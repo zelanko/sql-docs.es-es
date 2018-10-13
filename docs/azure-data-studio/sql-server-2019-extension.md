@@ -2,7 +2,7 @@
 title: Extensión de datos Studio SQL Server 2019 Azure (versión preliminar) | Microsoft Docs
 description: Extensión de la versión preliminar de SQL Server de 2019 para Azure Data Studio
 ms.custom: tools|sos
-ms.date: 09/24/2018
+ms.date: 10/11/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8f9d10fbdec028549f9b23b23506882d5c5afe5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d73f4a0d55cbe3fe3bacc0b2bb68f191046fe01b
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131235"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168808"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extensión de SQL Server 2019 (versión preliminar)
 
@@ -24,23 +24,31 @@ La extensión de SQL Server 2019 (versión preliminar) proporciona compatibilida
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>Instalar la extensión de SQL Server 2019 (versión preliminar)
 
-Descargue e instale la extensión de SQL Server 2019 (versión preliminar):
+Para instalar la extensión de SQL Server 2019 (versión preliminar), descargue e instale el archivo .vsix asociado.
 
-  |Plataforma|Descargar|Fecha de la versión|
-  |:---|:---|:---|
-  |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024911)|24 de septiembre de 2018|
-  |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024587)|24 de septiembre de 2018 |
-  |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024841)|24 de septiembre de 2018 |
+1. Descargue el archivo .vsix de extensión (versión preliminar) de SQL Server 2019 en un directorio local:
 
+   |Plataforma|Descargar|Fecha de la versión|
+   |:---|:---|:---|
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024911)|24 de septiembre de 2018|
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024587)|24 de septiembre de 2018 |
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024841)|24 de septiembre de 2018 |
 
-En Azure Data Studio elija **la extensión de instalación de paquete VSIX** desde el **archivo** menú y seleccione el archivo .vsix descargado. Elija **Sí** cuando le pida que confirme la instalación y espere a que la notificación de que la instalación se realizó correctamente.
+1. En Azure Data Studio elija **la extensión de instalación de paquete VSIX** desde el **archivo** menú y seleccione el archivo .vsix descargado.
 
-Seleccione **recarga** para habilitar la extensión (solo es necesario instalar una extensión por primera vez).
+1. Elija **Sí** cuando le pida que confirme la instalación y espere a que la notificación de que la instalación se realizó correctamente.
 
+1. Seleccione **recarga** para habilitar la extensión (solo es necesario instalar una extensión por primera vez).
+
+1. Después de volver a cargar, la extensión instalará las dependencias. Puede ver el progreso en la ventana de salida, y puede tardar varios minutos.
 
 ##  <a name="sql-server-2019-big-data-cluster-support"></a>Compatibilidad con clúster grande de datos de SQL Server de 2019
 
 * Haga clic en **Agregar conexión** en *Explorador de objetos* y elija **clúster de SQL Server macrodatos** como el tipo de conexión.
+
+   > [!TIP]
+   > Si no ve el **clúster de SQL Server macrodatos** tipo de conexión, reinicie Azure Studio datos.
+
 * Escriba el nombre de host o dirección IP del punto de conexión de clúster plus el nombre de usuario y contraseña usada para conectarse.
 * Opcionalmente, puede incluir un nombre para mostrar descriptivo en el **nombre** campo.
 * Haga clic en **Connect** y, a continuación, se pueden iniciar las tareas comunes en el panel, examinar **HDFS** en el Explorador de objetos y tareas de ejecución en el contexto a partir de ahí.

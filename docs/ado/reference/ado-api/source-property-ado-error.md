@@ -18,12 +18,12 @@ ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50294b936f211b3a841deb57e55b53f0994517a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63407f75c5bee03d24b5b3f69c2ef94cb38e177e
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611593"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168725"
 ---
 # <a name="source-property-ado-error"></a>Propiedad Source (Error de ADO)
 Indica el nombre del objeto o la aplicación que ha generado un error.  
@@ -32,7 +32,7 @@ Indica el nombre del objeto o la aplicación que ha generado un error.
  Devuelve un **cadena** valor que indica el nombre de un objeto o la aplicación.  
   
 ## <a name="remarks"></a>Comentarios  
- Use la **origen** propiedad en un [Error](../../../ado/reference/ado-api/error-object.md) objeto para determinar el nombre del objeto o la aplicación que ha generado un error. Esto podría ser el nombre de clase o el ID del objeto Para los errores de ADO, será el valor de propiedad **ADODB. *** ObjectName*, donde *ObjectName* es el nombre del objeto que desencadenó el error. En ADOX y ADO MD, el valor será **ADOX. *** ObjectName* y **ADOMD. *** ObjectName,* respectivamente.  
+ Use la **origen** propiedad en un [Error](../../../ado/reference/ado-api/error-object.md) objeto para determinar el nombre del objeto o la aplicación que ha generado un error. Esto podría ser el nombre de clase o el ID del objeto Para los errores de ADO, será el valor de propiedad **ADODB.** _ObjectName_, donde *ObjectName* es el nombre del objeto que desencadenó el error. En ADOX y ADO MD, el valor será **ADOX.** _ObjectName_ y **ADOMD.** _ObjectName_, respectivamente.  
   
  Basándose en la documentación de error desde el **origen**, [número](../../../ado/reference/ado-api/number-property-ado.md), y [descripción](../../../ado/reference/ado-api/description-property.md) propiedades de **Error** objetos, puede escribir código que va a controlar el error adecuadamente.  
   

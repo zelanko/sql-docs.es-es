@@ -18,12 +18,12 @@ ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 665d4de0f1ee61942e4f1af431889672bcc313bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9fac8fd56139b340df2a2c4cdcfc7376de02dcab
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757423"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168855"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +45,11 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@plan_id =**] **'***plan_id***'**  
+ [  **@plan_id =**] **'**_plan\_id_**'**  
  Especifica el identificador del plan del plan de mantenimiento. *plan_id* es **UNIQUEIDENTIFIER**. El valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- None  
+ Ninguno  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Si *plan_id* se especifica, **sp_help_maintenance_plan** devolverá tres tablas: Plan, base de datos y de trabajo.  

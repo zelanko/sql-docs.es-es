@@ -11,12 +11,12 @@ ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 67a6dbe4b9133f5ce31d12b1f361cea859026b53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bafb97065c86a4d227f79b62c3d388d45c1445f
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195925"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120389"
 ---
 # <a name="modify-the-trace-results-view"></a>Modificar la vista de resultados del seguimiento
   En este tema se describe cómo modificar la vista de resultados de seguimiento de una sesión de eventos extendidos en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] realizando las siguientes tareas.  
@@ -149,7 +149,7 @@ ms.locfileid: "48195925"
 ##  <a name="AggregateResults"></a> Agregar los resultados  
  Los eventos extendidos admiten cinco funciones de agregación:  
   
--   SUM  
+-   Sum  
   
 -   Min  
   
@@ -228,7 +228,7 @@ ms.locfileid: "48195925"
   
     -   **Columnas de la tabla**. Utilice esta opción para buscar en todas las columnas visibles en la ventana de seguimiento.  
   
-    -   **Detalles**. Utilice esta opción para buscar en todas las columnas (promocionadas y no promocionadas) en la ventana de seguimiento que seleccionó antes de abrir el cuadro de diálogo **Buscar en eventos extendidos** .  
+    -   **Detalles**. Utilice esta opción para buscar todas las columnas (promocionadas y no promocionadas) en la ventana de seguimiento que se seleccionaron antes de abrir el **buscar en eventos extendidos** cuadro de diálogo.  
   
     -   **\<Nombre de columna de evento >**. Utilice esta opción para buscar en una columna de evento concreta de la lista desplegable.  
   

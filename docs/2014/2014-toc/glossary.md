@@ -24,12 +24,12 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: e606d82d50d1293c9149476e9c976bfcea61201a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5338e17678f31a4bcdef1a6f7a73696f903bb76a
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085535"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120482"
 ---
 # <a name="glossary"></a>Glosario
   
@@ -193,7 +193,7 @@ ms.locfileid: "48085535"
 |suma de comprobación|Valor calculado que se usa para detectar en los datos la presencia de errores que se pueden producir cuando se transmiten o escriben los datos en el disco. La suma de comprobación se calcula para un fragmento determinado de datos mediante la combinación secuencial de todos los bytes de datos con una serie de operaciones lógicas o aritméticas. Una vez transmitidos o almacenan los datos, una nueva suma de comprobación se calcula de la misma manera mediante los datos almacenados o transmitidos (posiblemente defectuosos). Si las dos sumas de comprobación no coinciden, se ha producido un error y los datos se deben transmitir o almacenar de nuevo. Las sumas de comprobación no pueden detectar todos los errores y no se pueden usar para corregir datos erróneos.|  
 |child|En una estructura de árbol, la relación de un nodo con su predecesor inmediato.|  
 |crónica|Tabla que almacena la información sobre el estado de una sola aplicación. Un ejemplo es una crónica de eventos, que puede almacenar datos de eventos para su uso con suscripciones programadas.|  
-|fragmento|Una cantidad especificada de datos.|  
+|fragmento|Una cantidad especificada de datos.|  
 |Shell CIDER|Contenedor de interfaz de usuario con pestañas para hospedar el componente de TSQLEditor y la salida relacionada de la ejecución de consulta de TSQL.|  
 |identidad basada en notificaciones|Identificador único que representa a un usuario, una aplicación, un equipo u otra entidad específicos, permitiendo obtener acceso a varios recursos, como aplicaciones y recursos de red, sin especificar las credenciales varias veces. También permite que los recursos validen solicitudes de una entidad.|  
 |cierre correcto|Cierre del sistema que se produce sin errores.|  
@@ -263,7 +263,7 @@ ms.locfileid: "48085535"
 |intercalación de columna|Admitir varias intercalaciones en una sola instancia.|  
 |restricción de columna|Definición de una restricción que se especifica en una definición de columna cuando se crea o modifica una tabla.|  
 |cuadrícula Columnas|Estructura de cuadrícula modificable del Diseñador de tablas que muestra las columnas de una tabla e información adicional sobre cada columna.|  
-|columnstore index|Almacena cada columna en un conjunto independiente de páginas de disco en lugar de almacenar varias filas por página.|  
+|índice de almacén de columnas|Almacena cada columna en un conjunto independiente de páginas de disco en lugar de almacenar varias filas por página.|  
 |COM|Modelo de programación basado en objetos diseñado para fomentar la interoperabilidad del software; permite que dos o más aplicaciones o componentes cooperen fácilmente entre sí, aunque hayan sido escritos por distintos proveedores, en momentos diferentes y lenguajes de programación distintos, o aunque se ejecuten en equipos diferentes con sistemas operativos distintos.|  
 |búfer de comandos|Área de memoria en la que se conservan los comandos escritos por el usuario. Un búfer de comandos puede permitir al usuario repetir comandos sin reescribirlos completamente, modificar comandos pasados para cambiar algún argumento o corregir un error, deshacer comandos u obtener una lista de comandos pasados.|  
 |símbolo del sistema|Interfaz entre el sistema operativo y el usuario en la que el usuario escribe cadenas de texto de lenguaje de comandos que se pasan al intérprete de comandos para la ejecución.|  
@@ -832,9 +832,9 @@ ms.locfileid: "48085535"
 |tabla de unión|Tabla que establece una relación entre otras tablas.|  
 |gráfico Kagi|Gráfico, independiente del tiempo, que se usa para realizar el seguimiento de los movimientos de precios y para tomar decisiones sobre la compra de acciones.|  
 |clave|Cadena que identifica un objeto en la memoria caché. Esta cadena debe ser única dentro de una región. Los objetos se asocian con una clave cuando se agregan y, a continuación, se recuperan con la misma clave.|  
-|Key|En cifrado, autenticación y firmas digitales, valor que se usa en combinación con un algoritmo para cifrar o descifrar información.|  
-|Key|En una matriz, campo por el que se accede a los datos almacenados y éstos se organizan.|  
-|Key|Columna o grupo de columnas que identifica de forma única una fila (clave principal), define la relación entre dos tablas (clave externa) o se usa para generar un índice.|  
+|clave|En cifrado, autenticación y firmas digitales, valor que se usa en combinación con un algoritmo para cifrar o descifrar información.|  
+|clave|En una matriz, campo por el que se accede a los datos almacenados y éstos se organizan.|  
+|clave|Columna o grupo de columnas que identifica de forma única una fila (clave principal), define la relación entre dos tablas (clave externa) o se usa para generar un índice.|  
 |atributo clave|Atributo de una dimensión que vincula los atributos que no son clave en la dimensión con medidas relacionadas.|  
 |columna de clave|Columna cuyo contenido identifica de forma exclusiva cada fila en una tabla.|  
 |generador de claves|Componente de hardware o de software que se usa para generar material de clave de cifrado.|  
@@ -1112,7 +1112,7 @@ ms.locfileid: "48085535"
 |instrucción de paso a través|Instrucción SELECT que se pasa directamente a la base de datos de origen sin modificación ni retraso.|  
 |directiva de contraseñas|Colección de configuraciones de directivas que definen los requisitos de contraseña de un objeto de directiva de grupo (GPO).|  
 |proveedor de contraseñas|Generación de contraseña de un solo uso y componente de validación para la autenticación de usuario.|  
-|path|Elemento de flujo de datos que conecta la salida de un componente de flujo de datos con la entrada de otro componente de flujo de datos.|  
+|ruta de acceso|Elemento de flujo de datos que conecta la salida de un componente de flujo de datos con la entrada de otro componente de flujo de datos.|  
 |PBM|Conjunto de funciones integradas que devuelven información de estado de servidor sobre valores, objetos y configuraciones de SQL Server. La administración basada en directivas permite a un administrador de bases de datos declarar el estado deseado del sistema y comprueba si el sistema cumple con ese estado.|  
 |replicación punto a punto|Tipo de replicación transaccional. En contraposición a la replicación transaccional de solo lectura y la replicación transaccional con actualización de suscripciones, las relaciones entre nodos en una topología de replicación punto a punto son relaciones del mismo nivel en vez de jerárquicas, en las que cada nodo contiene esquemas y datos idénticos.|  
 |herramientas de rendimiento|Herramientas que se pueden usar para evaluar el rendimiento de una solución. Las herramientas de rendimiento pueden tener fines diferentes; algunas están diseñadas para evaluar el rendimiento de un extremo a otro mientras que otras se centran en evaluar el rendimiento de un aspecto determinado de una solución.|  
@@ -1377,7 +1377,7 @@ ms.locfileid: "48085535"
 |rsconfig, utilidad|Herramienta de administración de conexión de servidor.|  
 |rsconfig.exe|Herramienta de administración de conexión de servidor.|  
 |activación de regla|Proceso de ejecución de una de las reglas de aplicación (reglas de crónica de eventos, reglas de eventos de suscripción y reglas programadas de suscripción) definidas en el archivo de definición de aplicación.|  
-|consulta descontrolada|Consulta con un tiempo de ejecución excesivo, que puede dar lugar a un problema de bloqueo. Las consultas descontroladas no usan normalmente tiempo de espera de consulta o de bloqueo.|  
+|consulta descontrolada|Consulta con un tiempo de ejecución excesivo, que puede dar lugar a un problema de bloqueo. Normalmente, las consultas descontroladas no usan un tiempo de espera de consulta o de bloqueo.|  
 |error en tiempo de ejecución|Error de software que se produce durante la ejecución de un programa, detectado por un compilador u otro programa de supervisión.|  
 |código seguro|Código ejecutado por el entorno de Common Language Runtime en lugar de ejecutarlo directamente el sistema operativo. Las aplicaciones de código administrado obtienen servicios de Common Language Runtime, como la recopilación automática de elementos no utilizados, la comprobación del tipo de motor en tiempo de ejecución y la compatibilidad con la seguridad, entre otros. Estos servicios ayudan a proporcionar un comportamiento uniforme independiente de la plataforma y del lenguaje de las aplicaciones de código administrado.|  
 |muestreo|Proceso estadístico que produce algún conocimiento deductivo sobre una población o un conjunto de datos de interés en su totalidad mediante la observación o el análisis de una parte de la población o el conjunto de datos.|  
@@ -1472,7 +1472,7 @@ ms.locfileid: "48085535"
 |perfil de tarjeta inteligente|Perfil de Certificate Lifecycle Manager (CLM) que se crea cuando se realiza una solicitud mediante una plantilla de perfil que solo incluye plantillas de certificado basadas en tarjeta inteligente.|  
 |lector de tarjeta inteligente|Dispositivo que se instala en equipos para habilitar el uso de tarjetas inteligentes mejorando las características de seguridad.|  
 |Control de autoservicio para tarjetas inteligentes|Software instalado en un equipo cliente que permite a los usuarios finales y a los administradores administrar las tarjetas inteligentes proporcionando una conexión del equipo cliente con la tarjeta inteligente.|  
-|desbloqueo de la tarjeta inteligente|Acción de enlazar una tarjeta inteligente con credenciales administrativas para restablecer el contador de intentos del número de identificación personal (PIN).|  
+|desbloqueo de la tarjeta inteligente|Contador de intentos de acción de enlazar una tarjeta inteligente con credenciales administrativas para restablecer el número de identificación personal (PIN).|  
 |SMO|Interfaz de programación de aplicaciones que admite la incorporación de la administración de SQL Server en cualquier aplicación de automatización OLE o COM.|  
 |SMTP|Miembro del conjunto de protocolos TCP/IP que rige el intercambio de correo electrónico entre los agentes de transferencia de mensajes.|  
 |complemento|Tipo de herramienta que se puede agregar a una consola compatible con Microsoft Management Console (MMC). Un complemento independiente se puede agregar por sí mismo; un complemento de extensiones solo se puede agregar para extender la función de otro complemento.|  

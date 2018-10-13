@@ -18,12 +18,12 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 964c6dace976f54e053947c301b3093de5aa921f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e60abee965bd78dd25c5db053bfbb679b153e4d
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217955"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119331"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Límites de tamaño de informes e instantáneas
   Los responsables de administrar una implementación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pueden usar la información de este tema para conocer los límites de tamaño de los informes cuando se publican en un servidor de informes, cuando se representan en tiempo de ejecución y cuando se guardan en el sistema de archivos. En este tema también se incluyen directrices prácticas para medir el tamaño de una base de datos del servidor de informes y se describe cómo afecta el tamaño de las instantáneas al rendimiento del servidor.  
@@ -35,10 +35,10 @@ ms.locfileid: "48217955"
   
  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] impone un límite máximo en los archivos publicados para reducir la amenaza de ataques de denegación de servicio en el servidor. Al aumentar el valor del límite superior, se elimina parte de la protección que ofrece este límite. Aumente el valor solo si está seguro de que las ventajas de hacerlo compensan los riesgos de seguridad adicionales.  
   
- Tenga en cuenta que el valor establecido para el elemento `maxRequestLength` debe ser mayor que los límites de tamaño reales que desea aplicar. Tiene que usar un valor mayor para tener en cuenta el aumento inevitable del tamaño de la solicitud HTTP que se produce una vez encapsulados todos los parámetros en un sobre SOAP y aplicada la codificación Base64 a ciertos parámetros, como el parámetro Definition de los métodos <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> y <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>. La codificación Base64 aumenta el tamaño de los datos originales en un 33 % aproximadamente. Por tanto, el valor especifique para el `maxRequestLength` elemento debe ser aproximadamente un 33% mayor que el tamaño del elemento utilizable real. Por ejemplo, si especifica un valor de 64 MB para `maxRequestLength`, puede esperar de forma realista que el tamaño máximo de los archivos de informe que se envían al servidor de informes sea aproximadamente 48 MB.  
+ Tenga en cuenta que el valor establecido para el elemento `maxRequestLength` debe ser mayor que los límites de tamaño reales que desea aplicar. Tiene que usar un valor mayor para tener en cuenta el aumento inevitable del tamaño de la solicitud HTTP que se produce una vez encapsulados todos los parámetros en un sobre SOAP y aplicada la codificación Base64 a ciertos parámetros, como el parámetro Definition de los métodos <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> y <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>. La codificación Base64 aumenta el tamaño de los datos originales en un 33 % aproximadamente. Por tanto, el valor que especifique para el elemento `maxRequestLength` debe ser aproximadamente un 33 % mayor que el tamaño del elemento utilizable real. Por ejemplo, si especifica un valor de 64 MB para `maxRequestLength`, puede esperar de forma realista que el tamaño máximo de los archivos de informe que se envían al servidor de informes sea aproximadamente 48 MB.  
   
 ## <a name="report-size-in-memory"></a>Tamaño de informes en memoria  
- Cuando se ejecuta un informe, el tamaño del informe es igual a la cantidad de datos que se devuelven en el informe más el tamaño del flujo de salida. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no impone un límite máximo en cuanto al tamaño de un informe representado. La memoria del sistema determina el límite superior del tamaño (de forma predeterminada, un servidor de informes usa toda la memoria configurada disponible al representar un informe), pero puede especificar los ajustes de configuración para establecer umbrales de memoria y directivas de administración de memoria. Para obtener más información, vea [Configurar la memoria disponible para las aplicaciones del servidor de informes](../report-server/configure-available-memory-for-report-server-applications.md).  
+ Cuando se ejecuta un informe, el tamaño del informe es igual a la cantidad de datos que se devuelven en el informe más el tamaño del flujo de salida. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no impone un límite máximo en cuanto al tamaño de un informe representado. La memoria del sistema determina el límite superior del tamaño (de forma predeterminada, un servidor de informes usa toda la memoria configurada disponible al representar un informe), pero puede especificar los ajustes de configuración para establecer umbrales de memoria y directivas de administración de memoria. Para más información, vea [Configurar la memoria disponible para las aplicaciones del servidor de informes](../report-server/configure-available-memory-for-report-server-applications.md).  
   
  El tamaño de un informe puede variar considerablemente en función de la cantidad de datos devueltos y del formato de representación que se utilice para el informe. Un informe con parámetros puede ser mayor o menor en función de cómo afectan los valores de los parámetros a los resultados de la consulta. El formato de salida que se elija para el informe influye en su tamaño de la manera siguiente:  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48217955"
   
  De manera predeterminada, las bases de datos **reportserver** y **reportservertempdb** están configuradas para el crecimiento automático. Aunque el tamaño de la base de datos puede aumentar automáticamente, nunca se reduce de forma automática. Si la base de datos **reportserver** tiene capacidad de sobra debido a que se han eliminado instantáneas, ésta deberá reducirse manualmente para recuperar el espacio en el disco. De manera similar, si **reportservertempdb** ha crecido para admitir un volumen excepcionalmente alto de informes interactivos, la asignación de espacio de disco se mantendrá en ese valor hasta que se reduzca.  
   
- Para medir el tamaño de las bases de datos del servidor de informes, se pueden ejecutar los siguientes comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] . Si el tamaño total de una base de datos se calcula a intervalos regulares, esto puede ayudar a obtener una estimación razonable de cómo asignar el espacio para la base de datos del servidor de informes a lo largo del tiempo. Las instrucciones siguientes miden la cantidad de espacio que se utiliza actualmente (se asume que se utilizan los nombres de base de datos predeterminados):  
+ Para medir el tamaño de las bases de datos del servidor de informes, se pueden ejecutar los siguientes comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] . Si el tamaño total de una base de datos se calcula a intervalos regulares, esto puede ayudar a obtener una estimación razonable de cómo asignar el espacio para la base de datos del servidor de informes a lo largo del tiempo. Las instrucciones siguientes miden la cantidad de espacio que se usa actualmente (las instrucciones suponen que está usando nombres de base de datos de forma predeterminada):  
   
 ```  
 USE ReportServer  
@@ -81,8 +81,8 @@ EXEC sp_spaceused
  El número de instantáneas que se almacenan en una base de datos del servidor de informes no es de por sí un factor de rendimiento. Se pueden almacenar muchas instantáneas sin que el rendimiento del servidor se vea afectado. Las instantáneas se pueden conservar de manera indefinida. No obstante, debe tenerse en cuenta que el historial de informes es configurable. Si un administrador del servidor de informes reduce el límite del historial de informes, pueden perderse informes históricos que se pensaba conservar. Si se elimina el informe, se elimina también el historial.  
   
 ## <a name="see-also"></a>Vea también  
- [Establecer las propiedades de procesamiento de informes](set-report-processing-properties.md)   
- [Base de datos del servidor de informes &#40;modo nativo de SSRS&#41;](report-server-database-ssrs-native-mode.md)   
- [Procesamiento de informes grandes](process-large-reports.md)  
+ [Establecer las propiedades del procesamiento de informes](set-report-processing-properties.md)   
+ [Base de datos del servidor de informes &#40;Modo nativo de SSRS&#41;](report-server-database-ssrs-native-mode.md)   
+ [Procesar informes grandes](process-large-reports.md)  
   
   

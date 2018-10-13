@@ -10,12 +10,12 @@ ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 574188dc87c9d89e370cb0187c44d30cd5dc3158
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93698be4738ef2a28c79581d0957f695b036c911
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076815"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119174"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Configurar el almacenamiento para las tablas con optimización para memoria
   Debe configurar la capacidad de memoria y las operaciones de entrada/salida por segundo (IOPS).  
@@ -28,7 +28,7 @@ ms.locfileid: "48076815"
   
 -   Al migrar tablas basadas en disco a tablas optimizadas para memoria, asegúrese de que el registro de transacciones esté en un medio de almacenamiento que pueda admitir mayor actividad del registro de transacciones. Por ejemplo, si el medio de almacenamiento admite operaciones del registro de transacciones a 100 MB/s, y las tablas optimizadas para memoria producen un rendimiento cinco veces mayor, el medio de almacenamiento del registro de transacciones debe poder admitir una mejora del rendimiento cinco veces mayor para evitar que la actividad del registro de transacciones se convierta en un cuello de botella.  
   
--   Las tablas con optimización para memoria se conservan en archivos distribuidos en uno o varios contenedores. Cada contenedor se debe asignar normalmente a su propio eje, y se usa tanto para aumentar la capacidad de almacenamiento como para mejorar el rendimiento. Debe asegurarse que la IOPS secuencial del medio de almacenamiento puede admitir que se triplique el rendimiento del registro de transacciones.  
+-   Las tablas con optimización para memoria se conservan en archivos distribuidos en uno o varios contenedores. Cada contenedor se debe asignar normalmente a su propio eje, y se usa tanto para aumentar la capacidad de almacenamiento como para mejorar el rendimiento. Debe asegurarse de que la IOPS secuencial del medio de almacenamiento puede admitir un 3 veces aumentan el rendimiento del registro de transacciones.  
   
      Por ejemplo, si las tablas optimizadas para memoria generan 500MB/s de actividad en el registro de transacciones, el almacenamiento para tablas optimizadas para memoria debe admitir 1,5 GB/seg. La necesidad de admitir un 3 veces aumento de rendimiento registro de transacciones procede de la observación de que los pares de archivos delta y de datos se escriben primero con los datos iniciales y, a continuación, necesitan leer/volver a escribir como parte de una operación de combinación.  
   

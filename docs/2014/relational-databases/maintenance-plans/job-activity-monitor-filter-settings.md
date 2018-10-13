@@ -13,12 +13,12 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07a8a8f04257e68b5294bb7ee0b0757ffc048fbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 285d4863cfb3b3ccd812d7e0b4894d4446257562
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207570"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168826"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Monitor de actividad de trabajo (Configuración del filtro)
   Utilice esta página para reducir el número de filas visibles en el Monitor de actividad de trabajo. Inserte criterios en uno o varios de los cuadros disponibles, para mostrar solo las filas que coinciden con los valores especificados. Algunos cuadros, como **Estado** o **Tipo de bloqueo** ofrecen un número determinado de valores posibles, en una lista desplegable. Otros, como **Aplicación** , permiten indicar un número indeterminado de valores, como una lista separada por comas. Los iconos de barra de herramientas permiten ordenar los cuadros disponibles alfabéticamente o por categoría. Haga clic en los criterios para consultar una descripción breve.  
@@ -60,7 +60,7 @@ ms.locfileid: "48207570"
  Este cuadro sin nombre proporciona una descripción breve de los criterios a medida que se seleccionan.  
   
  **Aplicar filtro**  
- Para aplicar el filtro, haga clic en **Aplicar****filtro** y, después, en **Aceptar**. Para conservar los parámetros de filtro en el cuadro de diálogo **Configuración****del filtro** , pero no aplicarlos, desactive la casilla **Aplicar****filtro**y haga clic en **Aceptar**para mostrar todas las filas.  
+ Para aplicar el filtro, haga clic en **aplicar filtro** y, a continuación, haga clic en **Aceptar**. Para conservar la configuración de filtro en el **configuración del filtro** diálogo cuadro, pero no aplicarlos, desactive la opción **aplicar filtro**y, a continuación, haga clic en **Aceptar**, para mostrar todas las filas.  
   
  **Desactivar**  
  Recupera la configuración predeterminada del filtro.  

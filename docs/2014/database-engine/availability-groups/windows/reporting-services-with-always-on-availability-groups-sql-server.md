@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44138cf39e7ed07120b85da6dfd708dee3e90182
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 657f808d28c8b3a6a1c8964dccb5959a67c9cb47
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222595"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120222"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>Reporting Services con grupos de disponibilidad AlwaysOn (SQL Server)
   Este tema contiene información acerca de la configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para que funcione con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG) en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Los tres escenarios para usar [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] son las bases de datos para orígenes de datos de informes, las bases de datos del servidor de informes y el diseñador de informes. La funcionalidad admitida y la configuración requerida son diferentes para los tres escenarios.  
@@ -86,7 +86,7 @@ ms.locfileid: "48222595"
   
 -   Configuración del modo de disponibilidad para cada réplica. El modo de disponibilidad determina si la réplica principal espera la confirmación de transacciones en una base de datos hasta que una réplica secundaria haya escrito las entradas del registro de transacciones en el disco. Para más información, vea la sección “Modos de disponibilidad” de [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
- Cuando se usa una réplica secundaria de solo lectura como origen de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , es importante asegurarse de que la latencia de actualización de datos cumple las necesidades de los usuarios del informe.  
+ Cuando se usa una réplica secundaria de solo lectura como origen de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], es importante asegurarse de que la latencia de actualización de datos cumple las necesidades de los usuarios del informe.  
   
 ##  <a name="bkmk_reportdesign"></a> Diseñador de informes y grupos de disponibilidad  
  Al diseñar los informes en [!INCLUDE[ssRBDenali](../../../includes/ssrbdenali-md.md)] o un proyecto de informe en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], un usuario puede configurar una cadena de conexión del origen de datos de informe para que contenga las nuevas propiedades de conexión proporcionadas por [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. La compatibilidad con las nuevas propiedades de conexión depende de si un usuario obtiene la vista previa del informe.  
@@ -127,7 +127,7 @@ ms.locfileid: "48222595"
 > [!NOTE]  
 >  Los servidores de informes de modo de SharePoint usan un proceso de sincronización entre las bases de datos de aplicación de servicio [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y las bases de datos de contenido de SharePoint. Es importante mantener juntas las bases de datos del servidor de informes y las bases de datos de contenido. Debe considerar configurarlas en los mismos grupos de disponibilidad para que conmuten por error y se recuperen como un conjunto. Considere el caso siguiente:  
 >   
->  -   Restaura o conmuta por error a una copia de la base de datos de contenido que no ha recibido las mismas actualizaciones que la base de datos del servidor de informes.  
+>  -   Restaurar o conmutación por error a una copia de la base de datos de contenido que no ha recibido las mismas actualizaciones que ha recibido la base de datos del servidor de informes.  
 > -   El proceso de sincronización de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] detectará las diferencias entre la lista de elementos de la base de datos de contenido y las bases de datos del servidor de informes.  
 > -   El proceso de sincronización eliminará o actualizará los elementos de la base de datos de contenido.  
   

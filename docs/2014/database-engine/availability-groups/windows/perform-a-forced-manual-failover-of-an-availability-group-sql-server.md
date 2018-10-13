@@ -15,12 +15,12 @@ ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7ea5731811b1ac6c0e6dcde82fc80a7844cdab1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5afd389288de04ec77f3258706bf8fd31b228ec
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177799"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120342"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Realizar una conmutación por error manual forzada de un grupo de disponibilidad (SQL Server)
   En este tema se describe cómo realizar una conmutación por error forzada (con posible pérdida de datos) en un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Una conmutación por error forzada es una forma de conmutación por error manual pensada estrictamente para la recuperación ante desastres, cuando no es posible realizar una [conmutación por error manual planeada](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) . Si se fuerza la conmutación por error a una réplica secundaria no sincronizada, es posible que se pierdan datos. Por tanto, se recomienda encarecidamente que solo fuerce la conmutación por error si debe restaurar el servicio al grupo de disponibilidad inmediatamente y asume el riesgo de perder datos.  
@@ -48,7 +48,7 @@ ms.locfileid: "48177799"
 >  Para obtener más información sobre los requisitos previos y las recomendaciones para forzar la conmutación por error y consultar un escenario de ejemplo que usa una conmutación por error forzada para recuperarse de un error grave, vea [Caso de ejemplo: usar una conmutación por error forzada para recuperarse de un error catastrófico](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy)más adelante en este tema.  
   
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -132,7 +132,7 @@ ms.locfileid: "48177799"
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para forzar la conmutación por error (con posible pérdida de datos)**  
   
-1.  Conéctese a una instancia de servidor que hospede una réplica cuyo rol esté en el estado SECONDARY o RESOLVING en el grupo de disponibilidad que necesita ser objeto de conmutación por error.  
+1.  Conectarse a una instancia de servidor que hospeda una réplica cuyo rol esté en el estado SECONDARY o RESOLVING en el grupo de disponibilidad que necesita para la conmutación por error.  
   
 2.  Use la instrucción [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) del siguiente modo:  
   
@@ -151,13 +151,13 @@ ms.locfileid: "48177799"
 ##  <a name="PowerShellProcedure"></a> Usar PowerShell  
  **Para forzar la conmutación por error (con posible pérdida de datos)**  
   
-1.  Cambie el directorio (`cd`) a una instancia de servidor que hospede una réplica cuyo rol esté en el estado SECONDARY o RESOLVING en el grupo de disponibilidad que necesita ser objeto de conmutación por error.  
+1.  Cambie el directorio (`cd`) a una instancia del servidor que hospeda una réplica cuyo rol esté en el estado SECONDARY o RESOLVING en el grupo de disponibilidad que necesita para la conmutación por error.  
   
 2.  Use el cmdlet `Switch-SqlAvailabilityGroup` con el parámetro `AllowDataLoss` de una de las formas siguientes:  
   
     -   `-AllowDataLoss`  
   
-         De forma predeterminada, el parámetro `-AllowDataLoss` hace que `Switch-SqlAvailabilityGroup` le solicite recordar que forzar la conmutación por error podría provocar la pérdida de transacciones no confirmadas y solicitar confirmación. Para continuar, especifique `Y`; para cancelar la operación, escriba `N`.  
+         De forma predeterminada, el parámetro `-AllowDataLoss` hace que `Switch-SqlAvailabilityGroup` le solicite recordar que forzar la conmutación por error podría provocar la pérdida de transacciones no confirmadas y solicitar confirmación. Para continuar, especifique `Y`. Para cancelar la operación, especifique `N`.  
   
          En el ejemplo siguiente se realiza una conmutación por error forzada (con posible pérdida de datos) del grupo de disponibilidad `MyAg` a la réplica secundaria en la instancia del servidor denominada `SecondaryServer\InstanceName`. Se le pedirá que confirme esta operación.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "48177799"
   
     -   **-AllowDataLoss-Force**  
   
-         Para iniciar una conmutación por error forzada sin confirmación, especifique los parámetros `-AllowDataLoss` y `-Force`. Esto es útil si desea incluir el comando en un script y ejecutarlo sin la intervención del usuario.  Sin embargo, usar el `-Force` opción con precaución, ya que una conmutación por error forzada podría provocar la pérdida de datos de las bases de datos que participan en el grupo de disponibilidad.  
+         Para iniciar una conmutación por error forzada sin confirmación, especifique los parámetros `-AllowDataLoss` y `-Force`. Esto es útil si desea incluir el comando en un script y ejecutarlo sin la intervención del usuario.  Sin embargo, utilice la opción `-Force` con precaución, porque una conmutación por error forzada podría provocar la pérdida de datos de las bases de datos que participan en el grupo de disponibilidad.  
   
          En el ejemplo siguiente se realiza una conmutación por error forzada (con posible pérdida de datos) del grupo de disponibilidad `MyAg` a la instancia del servidor denominada `SecondaryServer\InstanceName`. La opción `-Force` suprime la confirmación de esta operación.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "48177799"
         ```  
   
     > [!NOTE]  
-    >  Para ver la sintaxis de un cmdlet, use el `Get-Help` cmdlet en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entorno de PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 3.  Después de forzar un grupo de disponibilidad a la conmutación por error, complete los pasos necesarios de seguimiento. Para obtener más información, vea [Seguimiento: tareas esenciales después de una conmutación por error forzada](#FollowUp), más adelante en este tema.  
   

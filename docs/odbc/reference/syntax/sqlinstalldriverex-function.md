@@ -20,12 +20,12 @@ ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6e034ff8b17852b40a604beb8ce1d38bdd1612b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b6bae692efdb1d89642eea52e499b0fb2800377
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802473"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169353"
 ---
 # <a name="sqlinstalldriverex-function"></a>Función SQLInstallDriverEx
 **Conformidad**  
@@ -100,9 +100,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>Comentarios  
  El *lpszDriver* argumento es una lista de atributos en forma de pares de palabra clave y valor. Cada par se termina con un byte nulo y se termina toda la lista con un byte nulo. (Es decir, dos bytes nulos marcan el final de la lista). El formato de esta lista es como sigue:  
   
- *controlador desc* **\\**0Driver**=***nombre del controlador de archivo DLL***\\**0 [programa de instalación **= ***nombre del programa de instalación de archivo DLL***\\**0]  
+ _controlador desc_ **\\**0Driver**=**_nombre del controlador de archivo DLL_ **\\**0 [programa de instalación**=**_nombre del programa de instalación de archivo DLL_<b>\\</b>0]  
   
- [*controlador-attr-palabraclave1***=*** value1 ***\\**0] [* controlador-attr-palabraclave2***=*** value2 ***\\**0]... **\\**0  
+ [_controlador-attr-palabraclave1_**=**_value1_<b>\\</b>0] [_controlador-attr-palabraclave2_  **=** _value2_<b>\\</b>0]... <b> \\ </b>0  
   
  donde \0 es un byte nulo y *controlador-attr-keywordn* es cualquier palabra clave de atributo de controlador. Las palabras clave deben aparecer en el orden especificado. Por ejemplo, suponga que un controlador de archivos de texto con formato tiene las DLL de instalación y de controlador independiente y puede utilizar archivos con las extensiones .txt y. csv. El *lpszDriver* argumento para este controlador puede ser como sigue:  
   

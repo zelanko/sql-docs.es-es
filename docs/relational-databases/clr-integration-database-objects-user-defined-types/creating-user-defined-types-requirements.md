@@ -20,12 +20,12 @@ ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6faf51099d0a5eced6543704d5f45b6fc922f522
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acb2fe2d6c6b439295c0a6f0b7a4e233c23cb337
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697124"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119753"
 ---
 # <a name="creating-user-defined-types---requirements"></a>Crear tipos definidos por el usuario: requisitos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "47697124"
   
  **BOOL**, **bytes**, **sbyte**, **corto**, **ushort**, **int**,  **uint**, **largo**, **ulong**, **float**, **doble**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**,  **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
- Tipos de valor que se compone de campos de los tipos anteriores son buenos candidatos para **nativo** dar formato, como **structs** en Visual C# (o **estructuras** tal como se conocen en Visual Basic). Por ejemplo, un UDT especificado con el **nativo** formato de serialización puede contener un campo de otro UDT también especificado con el **nativo** formato. Si la definición UDT es más compleja y contiene tipos de datos no están en la lista anterior, debe especificar el **UserDefined** en su lugar, el formato de serialización.  
+ Tipos de valor que se componen de campos de los tipos anteriores son buenos candidatos para **nativo** dar formato, como **structs** en Visual C# (o **estructuras** tal como se conocen en Visual Basic). Por ejemplo, un UDT especificado con el **nativo** formato de serialización puede contener un campo de otro UDT también especificado con el **nativo** formato. Si la definición UDT es más compleja y contiene tipos de datos no están en la lista anterior, debe especificar el **UserDefined** en su lugar, el formato de serialización.  
   
  El **nativo** formato tiene los siguientes requisitos:  
   

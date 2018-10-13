@@ -12,12 +12,12 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 55375101434b719cfd785a6ddab2b6ec3e779927
-ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.openlocfilehash: ddf8882cfe4c51194515b181fb6b9e6e80426710
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782374"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085291"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Inicio rápido: Imágenes de contenedor ejecución de SQL Server con Docker
 
@@ -41,7 +41,7 @@ En este tutorial, use Docker para extraer y ejecutar la imagen de contenedor de 
 
 Esta imagen se compone de SQL Server, que se ejecuta en un sistema Linux basado en Ubuntu 16.04. Se puede usar junto al motor de Docker 1.8 o versiones posteriores en Linux, o bien en Docker en Mac y Windows. Esta guía de inicio rápido se centra específicamente en el uso de SQL Server en **linux** imagen. No trataremos la imagen de Windows, pero puede obtener más información sobre esta en la [página mssql-server-windows-developer de Docker Hub](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
-## <a id="requirements"></a> Prerequisites
+## <a id="requirements"></a> Requisitos previos
 
 - Motor de Docker 1.8 o versiones posteriores en cualquier distribución de Linux admitida o Docker para Mac y Windows. Para obtener más información, consulte [Instalar Docker](https://docs.docker.com/engine/installation/).
 - Un mínimo de 2 GB de espacio en disco.
@@ -213,7 +213,7 @@ Establecer `-h` y `--name` en el mismo valor es una buena manera de identificar 
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
 
-## <a name="change-the-sa-password"></a>Cambiar la contraseña de SA
+## <a id="sapassword"></a> Cambiar la contraseña de SA
 
 [!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
 

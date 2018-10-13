@@ -18,12 +18,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3837e800bc1193a4f72b58bc0d78c0cb314e6076
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d4026596d06941286b137a60201ba0ee6489c34
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152045"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120212"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Crear servidores vinculados (motor de base de datos de SQL Server)
   En este tema se muestra cómo crear un servidor vinculado y tener acceso a los datos desde otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La creación de un servidor vinculado permite trabajar con datos de varios orígenes. El servidor vinculado no necesita ser otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sino que es un escenario común.  
@@ -82,7 +82,7 @@ ms.locfileid: "48152045"
     > [!NOTE]  
     >  Si la instancia de **SQL Server** es la instancia predeterminada, escriba el nombre del equipo que hospede la instancia de **SQL Server**. Si **SQL Server** es una instancia con nombre, escriba el nombre del equipo y el de la instancia, por ejemplo, **Accounting\SQLExpress**.  
   
-3.  En el área **Tipo de servidor** , seleccione **SQL Server** para indicar que el servidor vinculado es otra instancia de **SQL Server**.  
+3.  En el **tipo de servidor** área, seleccione **SQL Server** para indicar que el servidor vinculado es otra instancia de **SQL Server**.  
   
 4.  En la página **Seguridad** , especifique el contexto de seguridad que se usará cuando la versión original de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conecte con el servidor vinculado. En un entorno de dominio donde los usuarios se conectan mediante sus inicios de sesión, la selección de **Se establecerán usando el contexto de seguridad actual del inicio de sesión** suele ser la mejor opción. Cuando los usuarios se conecten a la versión original de **SQL Server** usando un inicio de sesión de **SQL Server** , la mejor opción suele ser seleccionar **Se establecerán usando este contexto de seguridad**y, a continuación, proporcionar las credenciales necesarias para la autenticación en el servidor vinculado.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "48152045"
      Solo se invocan interfaces OLE DB de nivel 0 en el proveedor.  
   
      **Permitir en proceso**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite crear una instancia del proveedor como un servidor en proceso. Si no se establece esta opción, el comportamiento predeterminado consiste en crear una instancia del proveedor fuera del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La creación de instancias del proveedor fuera del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] protege el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de posibles errores en el proveedor. Cuando se crea una instancia del proveedor fuera del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procesar actualizaciones ni inserciones que hacen referencia a columnas long (`text`, `ntext`, o `image`) no se permiten.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite crear una instancia del proveedor como un servidor en proceso. Si no se establece esta opción, el comportamiento predeterminado consiste en crear una instancia del proveedor fuera del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La creación de instancias del proveedor fuera del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] protege el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de posibles errores en el proveedor. Si se crea una instancia del proveedor fuera del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no se permitirán actualizaciones ni inserciones que hagan referencia a columnas long (`text`, `ntext` o `image`).  
   
      **Actualizaciones no realizadas**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite realizar actualizaciones, aunque **ITransactionLocal** no esté disponible. Si esta opción está habilitada, no podrá recuperar las actualizaciones en el proveedor, ya que éste no admite transacciones.  

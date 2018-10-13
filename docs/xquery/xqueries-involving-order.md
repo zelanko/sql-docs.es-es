@@ -18,12 +18,12 @@ ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 408c33be421c0dc6792ee5ad76f69e6aa2f05423
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df4b8f9b3c6c2a0a4e8aee3e6ff67998d3bef353
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642133"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120022"
 ---
 # <a name="xqueries-involving-order"></a>Consultas XQuery basadas en el orden
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47642133"
 ### <a name="a-retrieve-manufacturing-steps-at-the-second-work-center-location-for-a-product"></a>A. Recuperar los pasos de fabricación de un producto en el segundo centro de trabajo  
  En el caso de un modelo de producto específico, la consulta siguiente recupera los pasos de fabricación del segundo centro de trabajo de una serie de centros de trabajo del proceso de fabricación.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
     <ManuStep ProdModelID = "{sql:column("Production.ProductModel.ProductModelID")}"  
@@ -88,7 +88,7 @@ WHERE ProductModelID=7
 ### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. Encontrar todas las herramientas y todo el material utilizados en el segundo centro de trabajo en la fabricación de un producto  
  Para un modelo de producto específico, la consulta siguiente recupera las herramientas y el material utilizados en el segundo centro de trabajo de una serie de centros de trabajo del proceso de fabricación.  
   
-```  
+```sql
 SELECT Instructions.query('  
     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    <Location>  
@@ -123,7 +123,7 @@ where ProductModelID=7
   
  El resultado es el siguiente:  
   
-```  
+```xml
 <Location LocationID="10" SetupHours=".5"   
           MachineHours="3" LaborHours="2.5" LotSize="100">  
   <Tools>  
@@ -141,7 +141,7 @@ where ProductModelID=7
 ### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. Recuperar las dos primeras descripciones de las características de un producto del catálogo de productos  
  Para un modelo de producto específico, la consulta recupera las dos primeras descripciones de características del elemento <`Features`> del catálogo de modelos de productos.  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
      declare namespace p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      <ProductModel ProductModelID= "{ data( (/p1:ProductDescription/@ProductModelID)[1] ) }"  
@@ -165,7 +165,7 @@ where ProductModelID=19
   
  El resultado es el siguiente:  
   
-```  
+```xml
 <ProductModel ProductModelID="19" ProductModelName="Mountain 100">  
  <p1:Warranty   
   xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
@@ -185,7 +185,7 @@ where ProductModelID=19
 ### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>D. Encontrar las dos primeras herramientas utilizadas en el primer centro de trabajo en el proceso de fabricación de un producto  
  Para un modelo de producto, esta consulta recupera las dos primeras herramientas utilizadas en el primer centro de trabajo de una serie de centros de trabajo del proceso de fabricación. La consulta se especifica en las instrucciones de fabricación almacenadas en el **instrucciones** columna de la **Production.ProductModel** tabla.  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    for $Inst in (//AWMI:root/AWMI:Location)[1]  
@@ -208,7 +208,7 @@ where ProductModelID=7
   
  El resultado es el siguiente:  
   
-```  
+```xml
 <Location LocationID="10" SetupHours=".5"   
             MachineHours="3" LaborHours="2.5" LotSize="100">  
   <Tools>  
@@ -221,7 +221,7 @@ where ProductModelID=7
 ### <a name="e-find-the-last-two-manufacturing-steps-at-the-first-work-center-location-in-the-manufacturing-of-a-specific-product"></a>E. Encontrar los dos últimos pasos de fabricación del primer centro de trabajo de fabricación de un producto específico  
  La consulta utiliza la **last()** función para recuperar los dos últimos pasos de fabricación.  
   
-```  
+```sql
 SELECT Instructions.query('   
 declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   <LastTwoManuSteps>  
@@ -238,7 +238,7 @@ where ProductModelID=7
   
  El resultado es el siguiente:  
   
-```  
+```xml
 <LastTwoManuSteps>  
    <Last-1Step>When finished, inspect the forms for defects per   
                Inspection Specification .</Last-1Step>  

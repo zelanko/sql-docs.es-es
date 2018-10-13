@@ -13,12 +13,12 @@ ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0af66da35bdc42bf78601e3040d91095646a9b75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8756be81a5517602558ab974bb63310e19c32049
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183364"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119882"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propiedades del servidor (página de opciones avanzadas) - Reporting Services
   Use esta página para establecer las propiedades del sistema en el servidor de informes. Hay varias maneras de establecer las propiedades del sistema. Esta herramienta proporciona una interfaz de usuario gráfica para que pueda establecer propiedades sin tener que escribir código.  
@@ -27,7 +27,7 @@ ms.locfileid: "48183364"
   
 ## <a name="options"></a>Opciones  
  **EnableMyReports**  
- Indica si la característica Mis informes está habilitada. Un valor de `true` indica que la característica está habilitada.  
+ Indica si la característica Mis informes está habilitada. El valor `true` indica que la característica está habilitada.  
   
  **MyReportsRole**  
  El nombre del rol que se usa al crear directivas de seguridad en las carpetas Mis informes del usuario. El valor predeterminado es `My Reports Role`.  
@@ -39,7 +39,7 @@ ms.locfileid: "48183364"
  Indica si el registro de ejecución de informes está habilitado. El valor predeterminado es `true`. Para obtener más información sobre el registro de ejecución del servidor de informes, vea [registro de ejecución del servidor de informes y la vista ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
  **ExecutionLogDaysKept**  
- Número de días que mantener la información de ejecución de informes en el registro de ejecución. Los valores válidos para esta propiedad incluyen `-1` a través de `2`,`147`,`483`,`647`. Si el valor es `-1` no se eliminan las entradas de la tabla del registro de ejecución. El valor predeterminado es `60`.  
+ Número de días que mantener la información de ejecución de informes en el registro de ejecución. Los valores válidos de esta propiedad son de `-1` a `2`,`147`,`483`,`647`. Si el valor es `-1` no se eliminan las entradas de la tabla del registro de ejecución. El valor predeterminado es `60`.  
   
  **SessionTimeout**  
  El período, en segundos, que una sesión permanece activa. El valor predeterminado es `600`.  
@@ -51,10 +51,10 @@ ms.locfileid: "48183364"
  El nombre del sitio del servidor de informes mostrado en el título de la página de Administrador de informes. El valor predeterminado es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Esta propiedad puede ser una cadena vacía. La longitud máxima es de 8000 caracteres.  
   
  **StoredParametersLifetime**  
- Especifica el número máximo de días que un parámetro almacenado puede estar almacenado. Los valores válidos son `-1`, `+1` a través de `2,147,483,647`. El valor predeterminado es `180` días.  
+ Especifica el número máximo de días que un parámetro almacenado puede estar almacenado. Los valores válidos son de `-1`, `+1` a `2,147,483,647`. El valor predeterminado es `180` días.  
   
  **StoredParametersThreshold**  
- Especifica el número máximo de valores de parámetro que se pueden almacenar por el servidor de informes. Los valores válidos son `-1`, `+1` a través de `2,147,483,647`. El valor predeterminado es `1500`.  
+ Especifica el número máximo de valores de parámetro que se pueden almacenar por el servidor de informes. Los valores válidos son de `-1`, `+1` a `2,147,483,647`. El valor predeterminado es `1500`.  
   
  **UseSessionCookies**  
  Indica si el servidor de informes debería usar cookies de sesión al comunicarse con exploradores cliente. El valor predeterminado es `true`.  
@@ -72,10 +72,10 @@ ms.locfileid: "48183364"
  **All =** las instantáneas se comprimen para todas las opciones de almacenamiento, entre las que se incluyen la base de datos del servidor de informes o el sistema de archivos.  
   
  **SystemReportTimeout**  
- El valor de tiempo de espera de procesamiento de informes predeterminado, en segundos, para todos los informes administrados en el espacio de nombres del servidor de informes. Este valor se puede invalidar en el nivel de informe. Si se establece esta propiedad, el servidor de informes intenta detener el procesamiento de un informe cuando ha expirado el tiempo especificado. Los valores válidos son `-1` a través de `2`,`147`,`483`,`647`. Si el valor es `-1`, no se agota el tiempo de los informes del espacio de nombres durante el procesamiento. El valor predeterminado es `1800`.  
+ El valor de tiempo de espera de procesamiento de informes predeterminado, en segundos, para todos los informes administrados en el espacio de nombres del servidor de informes. Este valor se puede invalidar en el nivel de informe. Si se establece esta propiedad, el servidor de informes intenta detener el procesamiento de un informe cuando ha expirado el tiempo especificado. Los valores válidos son de `-1` a `2`,`147`,`483`,`647`. Si el valor es `-1`, no se agota el tiempo de los informes del espacio de nombres durante el procesamiento. El valor predeterminado es `1800`.  
   
  **SystemSnapshotLimit**  
- Número máximo de instantáneas almacenadas para un informe. Los valores válidos son `-1` a través de `2`,`147`,`483`,`647`. Si el valor es `-1`, no hay ningún límite de instantáneas.  
+ Número máximo de instantáneas almacenadas para un informe. Los valores válidos son de `-1` a `2`,`147`,`483`,`647`. Si el valor es `-1`, no hay ningún límite de instantáneas.  
   
  **EnableIntegratedSecurity**  
  Determina si se admite la seguridad integrada de Windows para las conexiones de origen de datos del informe. De manera predeterminada, es `True`. Los valores válidos son los siguientes:  
@@ -85,7 +85,7 @@ ms.locfileid: "48183364"
  `False` = la seguridad integrada de Windows no está habilitada. No se ejecutarán los orígenes de datos de informes que se configuran para usar la seguridad integrada de Windows.  
   
  `EnableLoadReportDefinition`  
- Seleccione esta opción para especificar si los usuarios pueden realizar la ejecución de notificaciones ad hoc desde un informe del Generador de informes. Al establecer esta opción determina el valor de la `EnableLoadReportDefinition` propiedad del servidor de informes.  
+ Seleccione esta opción para especificar si los usuarios pueden realizar la ejecución de notificaciones ad hoc desde un informe del Generador de informes. Al establecer esta opción, se determina el valor de la propiedad `EnableLoadReportDefinition` en el servidor de informes.  
   
  Si desactiva esta opción, la propiedad se establecerá en False y el servidor de informes no generará informes click-through para los informes que usan un modelo de informe como origen de datos. Se bloquearán las llamadas al método LoadReportDefinition.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "48183364"
  Especifica el número de segundos tras los cuales se agotará el tiempo de espera para una sesión de edición de informes. El valor predeterminado es de 7200 segundos (2 horas).  
   
  **EnableTestConnectionDetailedErrors**  
- Indica si se han enviado al equipo cliente los mensajes de error detallados cuando los usuarios prueban las conexiones a orígenes de datos mediante el servidor de informes. El valor predeterminado es `true`. Si la opción se establece en `false`, solo los mensajes de error genéricos se envían.  
+ Indica si se han enviado al equipo cliente los mensajes de error detallados cuando los usuarios prueban las conexiones a orígenes de datos mediante el servidor de informes. El valor predeterminado es `true`. Si la opción se establece en `false`, solo se enviarán mensajes de error genéricos.  
   
 ## <a name="see-also"></a>Vea también  
  [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   

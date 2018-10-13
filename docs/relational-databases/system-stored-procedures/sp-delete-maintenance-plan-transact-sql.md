@@ -18,12 +18,12 @@ ms.assetid: 6f36b63f-3d18-4d42-9469-2febb6926530
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a449429d653a4a238e22dee27371974384423cf9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7efdd66d1e9087e14faa33a6ca16ccde8a0a40ba
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804393"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168736"
 ---
 # <a name="spdeletemaintenanceplan-transact-sql"></a>sp_delete_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@plan_id =**] **'***plan_id***'**  
+ [  **@plan_id =**] **'**_plan\_id_**'**  
  Especifica el Id. del plan de mantenimiento que se va a eliminar. *plan_id* es **uniqueidentifier**, y debe ser un identificador válido.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

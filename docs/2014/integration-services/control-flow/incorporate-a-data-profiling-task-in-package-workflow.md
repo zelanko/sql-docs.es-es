@@ -13,12 +13,12 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ac9b22a6f7157123ab233a6c10f24846eaca8fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74e2ca64c47aaf1b0388fa0d58a3e76f2ec9d20e
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147575"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085521"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporar una tarea de generación de perfiles de datos en un flujo de trabajo de paquetes
   La generación de perfiles de datos y la limpieza no son aptos para la aplicación de un proceso automatizado en sus primeras etapas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], el resultado de la tarea de generación de perfiles de datos normalmente requiere un análisis visual y un criterio humano para determinar si las infracciones detectadas son significativas o excesivas. Incluso después de reconocer la existencia de problemas relacionados con la calidad de los datos, sigue siendo necesario disponer de un plan minuciosamente diseñado que indique el mejor método para la limpieza.  
@@ -265,13 +265,13 @@ ms.locfileid: "48147575"
 8.  Cierre el entorno de desarrollo de script y, a continuación, el Editor de la tarea Script.  
   
 #### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>Código alternativo: leer los resultados del perfil desde una variable  
- El procedimiento anterior muestra cómo se carga el resultado de la tarea de generación de perfiles de datos desde un archivo. Sin embargo, un método alternativo consistiría en cargar dicho resultado desde una variable de paquete. Para cargar el resultado desde una variable, debe realizar los cambios siguientes en el código de ejemplo:  
+ El procedimiento anterior muestra cómo cargar los resultados de la tarea de generación de perfiles de datos desde un archivo. Sin embargo, un método alternativo consistiría en cargar dicho resultado desde una variable de paquete. Para cargar el resultado desde una variable, debe realizar los cambios siguientes en el código de ejemplo:  
   
--   Llame a la `LoadXml` método de la `XmlDocument` clase en lugar de la `Load` método.  
+-   Llame al método `LoadXml` de la clase `XmlDocument` en lugar de llamar al método `Load`.  
   
--   En el Editor de la tarea Script, agregue el nombre de la variable de paquete que contiene los resultados del perfil para la tarea `ReadOnlyVariables` lista.  
+-   En el Editor de la tarea Script, agregue el nombre de la variable de paquete que contiene los resultados del perfil a la lista `ReadOnlyVariables` de la tarea.  
   
--   Pase el valor de cadena de la variable a la `LoadXML` método, como se muestra en el ejemplo de código siguiente. (en este ejemplo se usa "ProfileOutput" como nombre de la variable de paquete que contiene los resultados del perfil).  
+-   Pase el valor de cadena de la variable al método `LoadXML`, como se muestra en el siguiente código de ejemplo (en este ejemplo se usa "ProfileOutput" como nombre de la variable de paquete que contiene los resultados del perfil).  
   
     ```vb  
     Dim outputString As String  
@@ -329,7 +329,7 @@ ms.locfileid: "48147575"
 7.  En las restricciones de precedencia que conectan la tarea Script a las bifurcaciones de nivel inferior del flujo de trabajo, escriba expresiones que usen los valores de las variables para dirigir el flujo de trabajo.  
   
 ## <a name="see-also"></a>Vea también  
- [Configuración de la tarea de generación de perfiles de datos](data-profiling-task.md)   
+ [Configuración de la Tarea de generación de perfiles de datos](data-profiling-task.md)   
  [Visor de perfil de datos](data-profile-viewer.md)  
   
   

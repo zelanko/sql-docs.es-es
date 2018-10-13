@@ -21,12 +21,12 @@ ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8fb8d48b03d49f63775a165217d60f8df2e9279
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81631efabd541ace5dd7296b54d806ec3750d327
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786983"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169066"
 ---
 # <a name="spdeletemaintenanceplandb-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@plan_id =**] **'***plan_id***'**  
+ [  **@plan_id =**] **'**_plan\_id_**'**  
  Especifica el identificador del plan de mantenimiento. *plan_id* es **uniqueidentifier**.  
   
- [  **@db_name =**] **'***database_name***'**  
+ [  **@db_name =**] **'**_base de datos\_nombre_**'**  
  Especifica el nombre de la base de datos que se va a eliminar del plan de mantenimiento. *database_name* es **sysname**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

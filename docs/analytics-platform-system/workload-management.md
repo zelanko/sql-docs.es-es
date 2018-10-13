@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3e5ff998bc153921d9976e3996465c6cbd92f023
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: e602cacff0c8f92b2a7748f4113a5a2ec2f34947
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394362"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100386"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Administración de cargas de trabajo de Analytics Platform System
 
@@ -107,7 +107,7 @@ Para cada inicio de sesión, la configuración de la clase de recursos se aplica
   
 Antes de PDW de SQL Server se ejecuta una instrucción, intenta adquirir las ranuras de simultaneidad necesarias para la solicitud. Si no puede adquirir suficientes espacios de simultaneidad, PDW de SQL Server mueve la solicitud en un estado de espera de ejecutarse. Sistema de todos los recursos que ya se han asignado a la solicitud se devuelven al sistema.  
   
-La mayoría de las instrucciones SQL siempre son necesarias las asignaciones de recursos predeterminado y, por tanto, no se controla mediante las clases de recursos. Por ejemplo, CREATE LOGIN solo necesita una pequeña cantidad de recursos y se asigna a los recursos predeterminados incluso si el inicio de sesión llamar a CREATE LOGIN es un miembro de una clase de un recurso.  Por ejemplo, si Ana es un miembro de la clase de recurso largerc y envía una instrucción CREATE LOGIN, se ejecutará la instrucción CREATE LOGIN con el número predeterminado de los recursos.  
+La mayoría de las instrucciones SQL siempre son necesarias las asignaciones de recursos predeterminado y, por tanto, no se controla mediante las clases de recursos. Por ejemplo, CREATE LOGIN solo necesita una pequeña cantidad de recursos y se asigna a los recursos predeterminados incluso si el inicio de sesión llamar a CREATE LOGIN es miembro de una clase de recursos.  Por ejemplo, si Ana es un miembro de la clase de recurso largerc y envía una instrucción CREATE LOGIN, se ejecutará la instrucción CREATE LOGIN con el número predeterminado de los recursos.  
   
 Las instrucciones SQL y operaciones regidas por clases de recursos:  
   
@@ -131,7 +131,7 @@ Las instrucciones SQL y operaciones regidas por clases de recursos:
   
 -   UPDATE  
   
--   Delete  
+-   DELETE  
   
 -   Restaurar base de datos al restaurar en un dispositivo con más nodos de proceso.  
   

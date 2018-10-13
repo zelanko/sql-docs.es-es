@@ -14,12 +14,12 @@ ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d6a86d2d45cecc2dce3275e28ca0fb9e06e0cba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8afb8b22ae2c6563641491b3bfe4289aa86e73e2
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713213"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169225"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Archivo Schema.ini (controlador de archivo de texto)
 Cuando se usa el controlador de texto, el formato del archivo de texto se determina mediante el uso de un archivo de información de esquema. El archivo de información de esquema es siempre denominado Schema.ini y siempre se mantiene en el mismo directorio que el origen de datos de texto. El archivo de información de esquema proporciona la IISAM con información sobre el formato general del archivo, el nombre de columna y la información de tipo de datos y varias otras características de datos. Un archivo Schema.ini siempre es necesario para tener acceso a datos de longitud fija. Debe usar un archivo Schema.ini cuando la tabla de texto contiene la fecha y hora, moneda, o datos Decimal o siempre que desee más control sobre la administración de los datos en la tabla.  
@@ -80,14 +80,14 @@ ColNameHeader=True
 MaxScanRows=0  
 ```  
   
- La entrada siguiente designa los campos de una tabla utilizando el número de columna (**Col *** n*) opción, que es opcional para archivos delimitados por caracteres y es necesario para los archivos de longitud fija. El ejemplo muestra las entradas de Schema.ini para dos campos, un campo de texto CustomerNumber de 10 caracteres y un campo de texto de 30 caracteres CustomerName:  
+ La entrada siguiente designa los campos de una tabla utilizando el número de columna (**Col**_n_) opción, que es opcional para archivos delimitados por caracteres y es necesario para los archivos de longitud fija. El ejemplo muestra las entradas de Schema.ini para dos campos, un campo de texto CustomerNumber de 10 caracteres y un campo de texto de 30 caracteres CustomerName:  
   
 ```  
 Col1=CustomerNumber Text Width 10  
 Col2=CustomerName Text Width 30  
 ```  
   
- La sintaxis de **Col *** n* es:  
+ La sintaxis de **Col**_n_ es:  
   
 ```  
   
@@ -100,7 +100,7 @@ n=ColumnNametype [#]
 |Parámetro|Descripción|  
 |---------------|-----------------|  
 |*ColumnName*|El nombre de la columna de texto. Si el nombre de columna contiene espacios incrustados, debe encerrarlo entre comillas dobles.|  
-|*Tipo*|Tipos de datos son los siguientes:<br /><br /> **Tipos de datos Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Moneda<br /><br /> Único<br /><br /> Doble<br /><br /> DateTime<br /><br /> Texto<br /><br /> Memorándum<br /><br /> **Tipos de datos ODBC** Char (igual que el texto)<br /><br /> Float (igual que Double)<br /><br /> Entero (igual que Short)<br /><br /> LongChar (igual que Memo)<br /><br /> Fecha *formato de fecha*|  
+|*Tipo*|Tipos de datos son los siguientes:<br /><br /> **Tipos de datos Microsoft Jet**<br /><br /> Bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Moneda<br /><br /> Single<br /><br /> Doble<br /><br /> DateTime<br /><br /> Texto<br /><br /> Memorándum<br /><br /> **Tipos de datos ODBC** Char (igual que el texto)<br /><br /> Float (igual que Double)<br /><br /> Entero (igual que Short)<br /><br /> LongChar (igual que Memo)<br /><br /> Fecha *formato de fecha*|  
 |**Width**|El valor de cadena literal `Width`. Indica que el número siguiente designa el ancho de la columna (opcional para archivos delimitados por caracteres; necesario para los archivos de longitud fija).|  
 |*#*|El valor entero que designa el ancho de la columna (obligatorio si **ancho** se especifica).|  
   

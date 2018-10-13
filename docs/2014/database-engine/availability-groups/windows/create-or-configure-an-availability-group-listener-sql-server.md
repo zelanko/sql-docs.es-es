@@ -15,21 +15,21 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 265bf3544f427f2dc23a437bc864cbac6dc53f1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d2a18c1f9f425ec7531c46299a5cf4c78278437
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052375"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120412"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Crear o configurar un agente de escucha del grupo de disponibilidad (SQL Server)
   En este tema se describe cómo crear o configurar un único *agente de escucha del grupo de disponibilidad* para un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 > [!IMPORTANT]  
->  Para crear el primer agente de escucha del grupo de disponibilidad de un grupo de disponibilidad, se recomienda encarecidamente usar [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Evite crear un agente de escucha directamente en el clúster de WSFC salvo cuando sea necesario, por ejemplo para crear un agente de escucha adicional.  
+>  Para crear el primer agente de escucha del grupo de disponibilidad de un grupo de disponibilidad, se recomienda encarecidamente usar [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Evite crear un agente de escucha directamente en el clúster de WSFC salvo cuando sea necesario, por ejemplo para crear un agente de escucha adicional.  
   
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="DoesListenerExist"></a> ¿Existe ya un agente de escucha para este grupo de disponibilidad?  
  **Para determinar si ya existe un agente de escucha para el grupo de disponibilidad**  
@@ -160,7 +160,7 @@ ms.locfileid: "48052375"
      `New-SqlAvailabilityGroupListener`  
      Crea un nuevo agente de escucha del grupo de disponibilidad y lo adjunta a un grupo de disponibilidad existente.  
   
-     Por ejemplo, la siguiente `New-SqlAvailabilityGroupListener` comando crea un agente de escucha del grupo de disponibilidad denominado `MyListener` para el grupo de disponibilidad `MyAg`. Este agente de escucha usará la dirección IPv4 pasada a la `-StaticIp` parámetro como su dirección IP virtual.  
+     Por ejemplo, el comando `New-SqlAvailabilityGroupListener` siguiente crea un agente de escucha de grupo de disponibilidad denominado `MyListener` para el grupo de disponibilidad `MyAg`. Este agente de escucha usará la dirección IPv4 pasada al parámetro `-StaticIp` como su dirección IP virtual.  
   
     ```  
     New-SqlAvailabilityGroupListener -Name MyListener `   
@@ -196,7 +196,7 @@ ms.locfileid: "48052375"
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
--   [Proveedor de SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
+-   [Proveedor de PowerShell de SQL Server](../../../powershell/sql-server-powershell-provider.md)  
   
 ## <a name="troubleshooting"></a>Solucionar problemas  
   
@@ -210,7 +210,7 @@ ms.locfileid: "48052375"
 ##  <a name="FollowUp"></a> Seguimiento: después de crear un agente de escucha del grupo de disponibilidad  
   
 ###  <a name="MultiSubnetFailover"></a> Palabra clave MultiSubnetFailover y características asociadas  
- `MultiSubnetFailover` es una nueva palabra clave de la cadena de conexión que se usa para habilitar la conmutación por error más rápida con los grupos de disponibilidad AlwaysOn y las instancias de clúster de conmutación por error AlwaysOn en SQL Server 2012. Las tres subcaracterísticas siguientes se habilitan cuando se establece `MultiSubnetFailover=True` en la cadena de conexión:  
+ `MultiSubnetFailover` es una palabra clave nueva de la cadena de conexión que se usa para habilitar una conmutación por error más rápida con los grupos de disponibilidad AlwaysOn y las instancias de clúster de conmutación por error AlwaysOn en SQL Server 2012. Las tres características siguientes se habilitan cuando se establece `MultiSubnetFailover=True` en la cadena de conexión:  
   
 -   Conmutación por error de varias subredes más rápida a un agente de escucha de varias subredes para instancias del clúster de conmutación por error o un grupo de disponibilidad AlwaysOn.  
   
@@ -241,11 +241,11 @@ ms.locfileid: "48052375"
      **Inconvenientes:** si se produce una conmutación por entre subredes, el tiempo de recuperación del cliente podría ser de 15 minutos o más, según su `HostRecordTTL` configuración y la configuración de la programación de replicación DNS/AD entre sitios.  
   
 ###  <a name="RegisterAllProvidersIP"></a> Valor de RegisterAllProvidersIP  
- Cuando usa [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell para crear un agente de escucha del grupo de disponibilidad, el punto de acceso cliente se crea en WSFC con la propiedad `RegisterAllProvidersIP` configurada a 1 (true). El efecto de este valor de propiedad depende de la cadena de conexión de cliente, de la manera siguiente:  
+ Cuando se usa [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell para crear un agente de escucha del grupo de disponibilidad, el punto de acceso cliente se crea en WSFC con la propiedad `RegisterAllProvidersIP` establecida en 1 (true). El efecto de este valor de propiedad depende de la cadena de conexión de cliente, de la manera siguiente:  
   
 -   Cadenas de conexión que establecen `MultiSubnetFailover` en true  
   
-     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] establece el `RegisterAllProvidersIP` propiedad en 1 para reducir el tiempo de reconexión tras una conmutación por error para los clientes cuyas cadenas de conexión de cliente especifiquen `MultiSubnetFailover = True`, como se recomienda. Tenga en cuenta que para aprovechar la característica de múltiples subredes del agente de escucha, puede que los clientes necesiten un proveedor de datos que admita la palabra clave `MultiSubnetFailover`. Para más información sobre la compatibilidad del controlador con la conmutación por error de varias subredes, vea [Conectividad de cliente de AlwaysOn &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md).  
+     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] establece la propiedad `RegisterAllProvidersIP` en 1 para reducir el tiempo de reconexión después de una conmutación por error para los clientes cuyas cadenas de conexión de cliente especifican `MultiSubnetFailover = True`, tal como se recomienda. Tenga en cuenta que para aprovechar la característica de múltiples subredes del agente de escucha, puede que los clientes necesiten un proveedor de datos que admita la palabra clave `MultiSubnetFailover`. Para más información sobre la compatibilidad del controlador con la conmutación por error de varias subredes, vea [Conectividad de cliente de AlwaysOn &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md).  
   
      Para obtener información sobre la agrupación en clústeres de varias subredes, vea [Agrupación en clústeres de varias subredes de SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md).  
   
@@ -258,16 +258,16 @@ ms.locfileid: "48052375"
   
 -   Cadenas de conexión que no establecen `MultiSubnetFailover` en true  
   
-     Cuando `RegisterAllProvidersIP = 1`, los clientes cuyas cadenas de conexión no usan =MultiSubnetFailover = True `MultiSubnetFailover = True`, experimentarán conexiones con latencia elevada. Esto se debe a que estos clientes intentan conexiones a todas las direcciones IP de forma secuencial. En cambio, si `RegisterAllProvidersIP` se cambia a 0, la dirección IP activa se registra en el punto de acceso cliente del clúster de WSFC, lo que reduce la latencia de los clientes heredados. Por tanto, si tiene clientes heredados que necesitan conectarse a un agente de escucha del grupo de disponibilidad y no puede usar la propiedad `MultiSubnetFailover`, se recomienda cambiar `RegisterAllProvidersIP` a 0.  
+     Cuando `RegisterAllProvidersIP = 1`, los clientes cuyas cadenas de conexión no usan =MultiSubnetFailover = True`MultiSubnetFailover = True`, experimentarán conexiones con latencia elevada. Esto se debe a que estos clientes intentan conexiones a todas las direcciones IP de forma secuencial. En cambio, si `RegisterAllProvidersIP` se cambia a 0, la dirección IP activa se registra en el punto de acceso cliente del clúster de WSFC, lo que reduce la latencia de los clientes heredados. Por lo tanto, si tiene clientes heredados que necesitan para conectarse a un agente de escucha del grupo de disponibilidad y no se pueden usar el `MultiSubnetFailover` propiedad, se recomienda que cambie `RegisterAllProvidersIP` en 0.  
   
     > [!IMPORTANT]  
-    >  Cuando se crea un agente de escucha del grupo de disponibilidad a través del clúster WSFC (GUI del Administrador de clústeres de conmutación por error), `RegisterAllProvidersIP` será 0 (false) de forma predeterminada.  
+    >  Cuando se crea un agente de escucha del grupo de disponibilidad en el clúster de WSFC (GUI del Administrador de clústeres de conmutación por error), `RegisterAllProvidersIP` será 0 (false) de forma predeterminada.  
   
 ###  <a name="HostRecordTTL"></a> Configuración de HostRecordTTL  
- De forma predeterminada, los clientes almacenan en memoria caché los registros DNS de clúster durante 20 minutos.  Al reducir el valor de `HostRecordTTL`, el Período de vida (TTL), para el registro almacenado en memoria caché, los clientes heredados pueden reconectarse más rápidamente.  Sin embargo, la reducción del valor `HostRecordTTL` puede producir también mayor tráfico hacia los servidores DNS.  
+ De forma predeterminada, los clientes almacenan en memoria caché los registros DNS de clúster durante 20 minutos.  Al reducir `HostRecordTTL`, el periodo de vida (TTL) del registro almacenado en caché, los clientes heredados pueden volver a conectar con más agilidad.  Sin embargo, la reducir el valor de `HostRecordTTL` puede producir también un aumento de tráfico en los servidores de DN.  
   
 ###  <a name="SampleScript"></a> Script de PowerShell de ejemplo para deshabilitar RegisterAllProvidersIP y reducir TTL  
- En el ejemplo siguiente de PowerShell se muestra cómo configurar los parámetros de clúster `RegisterAllProvidersIP` y `HostRecordTTL` para el recurso de agente de escucha.  El registro DNS se almacenará en memoria caché durante 5 minutos en lugar del valor predeterminado de 20 minutos.  La modificación de ambos parámetros de clúster puede reducir el tiempo de conexión a la dirección IP correcta después de una conmutación por error en el caso de clientes heredados que no puedan usar el parámetro `MultiSubnetFailover`.  Reemplace `yourListenerName` por el nombre del agente de escucha que va a cambiar.  
+ En el ejemplo siguiente de PowerShell se muestra cómo configurar los parámetros de clúster `RegisterAllProvidersIP` y `HostRecordTTL` para el recurso de escucha.  El registro DNS se almacenará en memoria caché durante 5 minutos en lugar del valor predeterminado de 20 minutos.  La modificación de los dos parámetros de clúster puede reducir el tiempo necesario para conectarse a la dirección IP correcta después de una conmutación por error para los clientes heredados que no pueden utilizar el parámetro `MultiSubnetFailover`.  Reemplace `yourListenerName` por el nombre del agente de escucha que va a cambiar.  
   
 ```  
 Import-Module FailoverClusters  

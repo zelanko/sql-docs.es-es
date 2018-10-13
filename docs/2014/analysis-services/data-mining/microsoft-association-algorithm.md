@@ -31,12 +31,12 @@ ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 962060d5b057feddcc5b9366fdfdd7131ee9c67f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ce0fdddd09dd3145949d56727ae4c3e8b853602
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185035"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120032"
 ---
 # <a name="microsoft-association-algorithm"></a>Algoritmo de asociación de Microsoft
   Este algoritmo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo de asociación suministrado por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], útil para los motores de recomendación. Un motor de recomendación recomienda productos a los clientes basándose en los elementos que ya han adquirido o en los que tienen interés. El algoritmo de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] también resulta útil para el análisis de la cesta de compra. Para obtener un ejemplo de un análisis de cesta, consulte [lección 3: creación de un escenario de cesta &#40;Tutorial intermedio de minería de datos&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) en el Tutorial de minería de datos.  
@@ -79,7 +79,7 @@ ms.locfileid: "48185035"
  Para obtener información general sobre cómo crear una consulta en un modelo de minería de datos, vea [Consultas de minería de datos](data-mining-queries.md).  
   
 ## <a name="performance"></a>Rendimiento  
- El proceso de crear conjuntos de elementos y contar las correlaciones puede llevar mucho tiempo. Aunque el [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de reglas de asociación usa técnicas de optimización para ahorrar espacio y agilizar el procesamiento, es conveniente saber que pueden producirse problemas de rendimiento en determinadas circunstancias como lo siguiente:  
+ El proceso de crear conjuntos de elementos y contar las correlaciones puede llevar mucho tiempo. Aunque el [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de reglas de asociación usa técnicas de optimización para ahorrar espacio y agilizar el procesamiento, es conveniente saber que pueden producirse problemas de rendimiento en determinadas circunstancias como las siguientes:  
   
 -   El conjunto de datos es grande y tiene muchos elementos individuales.  
   
@@ -98,9 +98,9 @@ ms.locfileid: "48185035"
 -   Admite la creación de dimensiones de minería de datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Examinar un modelo usando el Visor de reglas de asociación de Microsoft](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Contenido para los modelos de asociación del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos para los modelos de asociación &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Referencia técnica del algoritmo de asociación de Microsoft](microsoft-association-algorithm-technical-reference.md)   
  [Ejemplos de consultas del modelo de asociación](association-model-query-examples.md)  
   

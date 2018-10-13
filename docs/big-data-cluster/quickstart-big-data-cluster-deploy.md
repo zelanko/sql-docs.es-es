@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: e44e6588cb58148c1474bc9e5ddda7527737ebba
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: 5781b3acfd2262b3a3be540abb331839dfcc56c6
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48817993"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120462"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Inicio rápido: Implementación de clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)
 
@@ -50,17 +50,12 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssql
 
 Establecer las variables de entorno necesarias para implementar el clúster de macrodatos ligeramente es diferente dependiendo de si se utiliza el cliente de Windows o Linux y macOS.  Elija los pasos siguientes, dependiendo del sistema operativo que esté utilizando.
 
-> [!IMPORTANT]
-> Asegúrese de que incluir las contraseñas en las comillas dobles si contiene algún carácter especial. Tenga en cuenta que los delimitadores de comillas dobles solo funcionan en los comandos de bash.
->
-> Puede establecer la contraseña de las variables de entorno que prefiera, pero asegúrese de que son lo suficientemente complejos y no utilizar la `!`, `&`, o `‘` caracteres.
+Antes de continuar, tenga en cuenta las siguientes directrices importantes:
 
-[!IMPORTANT]
-El **SA** cuenta es un administrador del sistema en la instancia maestra de SQL Server que se crea durante la instalación. Después de crear el contenedor de SQL Server, la variable de entorno MSSQL_SA_PASSWORD especificada es detectable mediante la ejecución de eco MSSQL_SA_PASSWORD $ en el contenedor. Por motivos de seguridad, cambiar la contraseña de SA según los procedimientos recomendados que se documentan [aquí](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
-
-
-> [!NOTE]
-> Para la versión de CTP 2.0 no cambie los puertos predeterminados.
+- Asegúrese de que incluir las contraseñas en las comillas dobles si contiene algún carácter especial. Tenga en cuenta que los delimitadores de comillas dobles solo funcionan en los comandos de bash.
+- Puede establecer la contraseña de las variables de entorno que prefiera, pero asegúrese de que son lo suficientemente complejos y no utilizar la `!`, `&`, o `‘` caracteres.
+- La versión de CTP 2.0, no cambie los puertos predeterminados.
+- El **SA** cuenta es un administrador del sistema en la instancia maestra de SQL Server que se crea durante la instalación. Después de crear el contenedor de SQL Server, la variable de entorno MSSQL_SA_PASSWORD especificada es detectable mediante la ejecución de eco MSSQL_SA_PASSWORD $ en el contenedor. Por motivos de seguridad, cambiar la contraseña de SA según los procedimientos recomendados que se documentan [aquí](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Inicialice las variables de entorno siguientes.  Son necesarios para implementar un clúster de macrodatos:
 
@@ -109,7 +104,7 @@ export DOCKER_PRIVATE_REGISTRY="1"
 > [!NOTE]
 > Durante la versión preliminar pública limitada, se proporcionan las credenciales de Docker para descargar las imágenes de clúster de SQL Server Big Data a cada cliente por Microsoft. Para solicitar acceso, registrar [aquí](https://aka.ms/eapsignup)y especifique su interés para probar los clústeres grandes de datos de SQL Server.
 
-## <a name="deploy-sql-server-big-data-cluster"></a>Implementar el clúster de Macrodatos SQL Server
+## <a name="deploy-a-big-data-cluster"></a>Implementar un clúster de macrodatos
 
 Para implementar un clúster de macrodatos de 2019 CTP 2.0 de SQL Server en el clúster de Kubernetes, ejecute el siguiente comando:
 
@@ -146,7 +141,7 @@ kubectl get svc service-proxy-lb -n <name of your cluster>
 > Verá una advertencia de seguridad al obtener acceso a la página web, puesto que estamos usando certificados SSL generados automáticamente. En futuras versiones, se proporcionará la capacidad para proporcionar sus propios certificados autofirmados.
  
 
-## <a name="connect-to-sql-server-master-instance-and-sql-server-big-data-cluster-hdfsspark-end-points"></a>Conectarse a la instancia principal de SQL Server y los puntos de conexión de Spark o HDFS de clúster de SQL Server datos de gran tamaño
+## <a name="connect-to-the-big-data-cluster"></a>Conéctese al clúster de macrodatos
 
 Después de que el script de implementación se ha completado correctamente, puede obtener la dirección IP de la instancia principal de SQL Server y los puntos de conexión de Spark o HDFS siguiendo los pasos descritos a continuación. Todos los puntos de conexión de clúster se muestran en la sección de puntos de conexión de servicio en el Portal de administración de clúster, así como para facilitar su consulta.
 
@@ -157,9 +152,9 @@ kubectl get svc service-master-pool-lb -n <name of your cluster>
 kubectl get svc service-security-lb -n <name of your cluster>
 ```
 
-Busque el **External-IP** valor que se asigna a los servicios. Conectarse a la instancia principal de SQL Server con la dirección IP para el `service-master-pool-lb` en el puerto 31433 (p. ej.:  **\<ip-address\>, 31433**) y para el punto del clúster de macrodatos de SQL Server con la IP externa para el `service-security-lb` servicio.   Que el punto final de clúster de macrodatos es donde los trabajos que puede interactuar con HDFS y envío de Spark a través de Knox.
+Busque el **External-IP** valor que se asigna a los servicios. Conectarse a la instancia principal de SQL Server con la dirección IP para el `service-master-pool-lb` en el puerto 31433 (p. ej.:  **\<ip-address\>, 31433**) y para el punto del clúster de macrodatos de SQL Server con la IP externa para el `service-security-lb` servicio.   Que el punto final de clúster de macrodatos es donde puede interactuar con HDFS y enviar trabajos de Spark a través de Knox.
 
-# <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Pasos siguientes
 
 Ahora que está implementado el clúster de macrodatos de SQL Server, pruebe algunas de las nuevas capacidades:
 

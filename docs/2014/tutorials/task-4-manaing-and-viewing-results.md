@@ -13,12 +13,12 @@ ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c298daa69c57c7771787c181cc0087927ff83f68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fb0cc2f091ce6365e91dd285e553498cc595c76e
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163505"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119881"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Tarea 4: administrar y ver los resultados
   En esta tarea, revisará los resultados de la limpieza asistida por PC y realizará la limpieza interactiva de los datos de proveedor. Consulte [fase de limpieza interactiva](http://msdn.microsoft.com/library/hh213061.aspx#Interactive) para obtener más detalles.  
@@ -55,7 +55,7 @@ ms.locfileid: "48163505"
   
     1.  Tenga en cuenta que **A. Datum Corp.** se ha corregido a **A. Datum Corporation** y **motivo** está establecido en **relación basada en términos. A. datum Corporation** es un valor de dominio conocido para DQS porque se detectó durante el proceso de detección de conocimiento. Por lo tanto, DQS es **100% seguro** sobre esta corrección.  
   
-    2.  Tenga en cuenta que **Lazy Country Storex** se ha corregido a **Lazy Country Store**, **un nivel de confianza** está establecido en **100%** y el  **Motivo** está establecido en **valor de dominio**. Durante el proceso de detección de conocimiento, establecer **Lazy Country Storex** como un error con **Lazy Country Store** como el **corrección**, por lo que DQS es **100% seguro** sobre esta corrección.  
+    2.  Tenga en cuenta que **Lazy Country Storex** se ha corregido a **Lazy Country Store**, **un nivel de confianza** está establecido en **100%** y el **Motivo** está establecido en **valor de dominio**. Durante el proceso de detección de conocimiento, establecer **Lazy Country Storex** como un error con **Lazy Country Store** como el **corrección**, por lo que DQS es **100% seguro** sobre esta corrección.  
   
     3.  DQS no está familiarizado con los otros valores en la lista, pero encontró correcciones para estos valores con el **corrector ortográfico** y propone las correcciones correspondientes. DQS es **no al 100%** inspira estas correcciones, pero el nivel de confianza es superior al 80%, que es el nivel de umbral para hacer correcciones, por lo que DQS propone las correcciones.  
   

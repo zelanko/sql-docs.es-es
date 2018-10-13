@@ -10,12 +10,12 @@ ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 00d66f99c09292046f2372621faf65e01757b80c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4feb316cf43524fa84734d85bf62631833e26d0
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121755"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120072"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Solucionar problemas de la Copia de seguridad administrada de SQL Server para Microsoft Azure
   En este tema se describen las tareas y las herramientas que puede usar para solucionar los errores que pueden producirse durante las operaciones de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
@@ -27,7 +27,7 @@ ms.locfileid: "48121755"
   
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] registra los eventos y los errores usando procedimientos almacenados del sistema, vistas del sistema y eventos extendidos. Las vistas del sistema y los procedimientos almacenados proporcionan información de configuración de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], el estado de las copias de seguridad programadas y también los errores capturados por Eventos extendidos. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] usa Eventos extendidos para capturar los errores que se usan para solucionar problemas. Además de registrar los eventos, las Directivas de administración inteligente de SQL Server proporcionan un estado de mantenimiento que un trabajo de notificación por correo electrónico usa para la notificación de errores y problemas. Para obtener más información, consulte [Monitor de SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
- [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] también usa el mismo registro que el utilizado para realizar la copia de seguridad del almacenamiento de Microsoft Azure (Copia de seguridad en URL de SQL Server). Para obtener más información sobre la copia de seguridad en URL relacionados con problemas, consulte la sección de solución de problemas en [copias de seguridad de SQL Server a la dirección URL de los procedimientos recomendados y solución de problemas](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] también usa el mismo registro que el utilizado para realizar la copia de seguridad del almacenamiento de Windows Azure (Copia de seguridad en URL de SQL Server). Para obtener más información sobre la copia de seguridad en URL relacionados con problemas, consulte la sección de solución de problemas en [copias de seguridad de SQL Server a la dirección URL de los procedimientos recomendados y solución de problemas](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
 ### <a name="general-troubleshooting-steps"></a>Pasos generales para solucionar problemas  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48121755"
   
 1.  **Errores al habilitar o configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:**  
   
-     Error: “No se pudo tener acceso a la dirección URL de almacenamiento…. Proporcione una credencial de SQL válido..." : Se puede ver este y otros errores similares a las credenciales de SQL.  En casos como este, revise el nombre de la credencial de SQL proporcionado, así como la información almacenada en la credencial de SQL (el nombre de cuenta de almacenamiento y la clave de acceso de almacenamiento) y asegúrese de que son actuales y válidos.  
+     Error: “No se pudo tener acceso a la dirección URL de almacenamiento…. Proporcione una credencial de SQL válido..." : Se puede ver este y otros errores similares a las credenciales de SQL.  En tales casos, revise el nombre de la credencial SQL proporcionada y también la información almacenada en la credencial SQL: el nombre de cuenta de almacenamiento y la clave de acceso de almacenamiento y asegúrese de que son actuales y válidos.  
   
      Error: "... no se puede configurar la base de datos porque es una base de datos del sistema": verá este error si intenta habilitar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para una base de datos del sistema.  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] no admite copias de seguridad de bases de datos del sistema.  Para configurar la copia de seguridad de una base de datos del sistema, utilice otras tecnologías de copia de seguridad de SQL Server como los planes de mantenimiento.  
   

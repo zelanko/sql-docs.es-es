@@ -15,12 +15,12 @@ ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6805a64e8f7fd27513d87bfdb87dec7087addfa7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7dada71a017f37969f94382e23cd07ad75dd356
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171995"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119792"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Conectarse a SQL Server cuando los administradores del sistema no tienen acceso
   En este tema se describe cómo puede recobrar el acceso a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] como administrador del sistema. Un administrador del sistema puede perder el acceso a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debido a una de las razones siguientes:  
@@ -62,11 +62,11 @@ ms.locfileid: "48171995"
 5.  En el **parámetros de inicio** ficha la **especificar un parámetro de inicio** , escriba `-m` y, a continuación, haga clic en `Add`. (Es un guion y a continuación una letra m minúscula).  
   
     > [!NOTE]  
-    >  En algunas versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no hay ninguna pestaña **Parámetros de inicio** . En ese caso, en la pestaña **Opciones avanzadas** , haga doble clic en **Parámetros de inicio**. Los parámetros se abrirán en una ventana muy pequeña. Tenga cuidado de no cambiar ninguno de los parámetros existentes. Al final, agregue un nuevo parámetro `;-m` y, a continuación, haga clic en `OK`. (Es un punto y coma, después un guion y a continuación una letra m minúscula).  
+    >  En algunas versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no hay ninguna pestaña **Parámetros de inicio** . En ese caso, en la pestaña Opciones avanzadas** , haga doble clic en **Parámetros de inicio**. Los parámetros se abrirán en una ventana muy pequeña. Tenga cuidado de no cambiar ninguno de los parámetros existentes. Al final, agregue un nuevo parámetro `;-m` y haga clic en `OK`. (Es un punto y coma, después un guion y a continuación una letra m minúscula).  
   
 6.  Haga clic en `OK`y después el mensaje para reiniciar, haga clic en el nombre del servidor y, a continuación, haga clic en **reiniciar**.  
   
-7.  Después de que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se haya reiniciado, el servidor se encontrará en modo de usuario único. Asegúrese de que el Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se esté ejecutando. Si está iniciado, usará su única conexión.  
+7.  Después de que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se haya reiniciado, el servidor se encontrará en modo de usuario único. Asegúrese de que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente no se está ejecutando. Si está iniciado, usará su única conexión.  
   
 8.  En la pantalla de inicio de Windows 8, haga clic con el botón secundario en el icono de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. En la parte inferior de la pantalla, seleccione **Ejecutar como administrador**. (Esto pasará sus credenciales de administrador a SSMS).  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48171995"
 11. En el **parámetros de inicio** ficha la **parámetros existentes** cuadro, seleccione `-m` y, a continuación, haga clic en `Remove`.  
   
     > [!NOTE]  
-    >  En algunas versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no hay ninguna pestaña **Parámetros de inicio** . En ese caso, en la pestaña **Opciones avanzadas** , haga doble clic en **Parámetros de inicio**. Los parámetros se abrirán en una ventana muy pequeña. Quitar el `;-m` que agregó anteriormente y, a continuación, haga clic en `OK`.  
+    >  En algunas versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no hay ninguna pestaña **Parámetros de inicio** . En ese caso, en la pestaña Opciones avanzadas** , haga doble clic en **Parámetros de inicio**. Los parámetros se abrirán en una ventana muy pequeña. Quitar el `;-m` que agregó anteriormente y, a continuación, haga clic en `OK`.  
   
 12. Haga clic con el botón derecho en el nombre del servidor y, después, haga clic en **Reiniciar**.  
   

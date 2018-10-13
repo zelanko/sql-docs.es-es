@@ -11,17 +11,17 @@ ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d25e4c745ba7cd5d937ed558283c21a49d6ec0a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: befef498ab4cda12ce38a34678b78a2b5dcd278c
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159495"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120302"
 ---
 # <a name="view-event-session-data"></a>Ver datos de sesiones de eventos
   En este tema describe cómo usar la interfaz de usuario de presentación para ver y analizar datos de eventos extendidos:  
   
--   View Target Data (Ver datos de destino)  
+-   Ver los datos de destino  
   
 -   Trabajar con datos  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48159495"
   
 -   Para un destino event_file, vea los datos del destino de archivo (archivo .XEL) mediante uno de los métodos siguientes:  
   
-    -   Usar el archivo -> Abrir en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+    -   Use Archivo -> Abrir en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
     -   Arrastre y coloque el archivo en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48159495"
  En el panel **Detalles** se muestran todas las columnas del evento seleccionado, incluidos los campos y las acciones. Puede agregar una columna a la tabla de datos de destino haciendo clic con el botón secundario en una fila en el panel **Detalles** y seleccionando **Mostrar columna en tabla**.  
   
 ### <a name="create-modify-or-delete-merged-columns"></a>Crear, modificar o eliminar columnas combinadas  
- Una columna combinada permite combinar un conjunto de campos para que se muestren en una sola columna. La columna combinada mostrará los datos del primer campo distinto de NULL según el orden en que se agregaron a la lista de campos. Esto es similar a lo que ve en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler, donde una columna específica puede mostrar datos diferentes dependiendo del evento (el ejemplo más común de esto es el campo TextData en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler). Para obtener un ejemplo, puede combinar los campos statement y batch_text de los eventos sql_statement_completed y sql_batch_completed, respectivamente, en un campo denominado myStatement. Cuando se muestre la columna myStatement en la tabla, esta mostrará los datos correspondientes al evento asociado.  
+ Una columna combinada permite combinar un conjunto de campos para que se muestren en una sola columna. La columna combinada mostrará los datos del primer campo distinto de NULL según el orden en que se agregaron a la lista de campos. Es similar a lo que se ve en el generador de perfiles de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], donde una columna específica puede mostrar datos diferentes en función del evento (el ejemplo más común es el campo TextData en el generador de perfiles de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]). Para obtener un ejemplo, puede combinar los campos statement y batch_text de los eventos sql_statement_completed y sql_batch_completed, respectivamente, en un campo denominado myStatement. Cuando se muestre la columna myStatement en la tabla, esta mostrará los datos correspondientes al evento asociado.  
   
  Puede crear, modificar o eliminar columnas combinadas:  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48159495"
  Si ha agrupado las columnas, al ordenar la columna, solo se ordenarán los datos que contiene el grupo.  
   
 ### <a name="group-results"></a>Agrupar los resultados  
- Agrupación de resultados es equivalente a la funcionalidad de la `GROUP BY` cláusula en [!INCLUDE[tsql](../includes/tsql-md.md)]. La tabla de datos de destino mostrará los datos agrupados, lo que permite expandir y contraer los datos.  
+ La agrupación de resultados es equivalente a la funcionalidad de la cláusula de `GROUP BY` en [!INCLUDE[tsql](../includes/tsql-md.md)]. La tabla de datos de destino mostrará los datos agrupados, lo que permite expandir y contraer los datos.  
   
  Debe agrupar los datos para poder agregarlos. Por ejemplo, puede agrupar según el valor de query_hash, ordenar de forma descendente por la duración, obtener la duración media de cada grupo y después ordenar de forma descendente de acuerdo con la agregación.  Esto creará una lista en la que se muestra la lista de instrucciones únicas desde la duración media mayor a la menor. Cuando expanda el grupo superior, verá las ejecuciones individuales de esa consulta específica ordenadas de mayor a menor.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "48159495"
   
     -   Columnas de la tabla Utilice esta opción para buscar en todas las columnas visibles en la ventana de seguimiento.  
   
-    -   Detalles Utilice esta opción para buscar en todas las columnas (promocionadas y no promocionadas) en la ventana de seguimiento que seleccionó antes de abrir el cuadro de diálogo **Buscar en eventos extendidos** .  
+    -   Detalles Utilice esta opción para buscar todas las columnas (promocionadas y no promocionadas) en la ventana de seguimiento que se seleccionaron antes de abrir el **buscar en eventos extendidos** cuadro de diálogo.  
   
     -   *Event_column_name*. Utilice esta opción para buscar en una columna de evento concreta de la lista desplegable.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "48159495"
   
  Para copiar los resultados de seguimiento, seleccione una celda, una fila o varias filas, haga clic con el botón secundario, seleccione **Copiar** y, a continuación, seleccione **Celda**, **Fila**o **Detalles**. Los eventos extendidos admiten la copia de un máximo de 1000 filas.  
   
- Puede exportar los resultados de seguimiento a una. XEL archivo, tabla, o. Archivo CSV seleccionando **exportar a** desde el **Extended Events** opción de menú en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+ Puede exportar los resultados de seguimiento en un archivo .XEL, una tabla o un archivo .CSV seleccionando **Exportar a** en la opción de menú **Eventos extendidos** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="view-a-deadlock-graph-and-query-plans"></a>Ver un evento Deadlock Graph y planes de consulta  
  Puede ver el gráfico de interbloqueo de **xml_deadlock_report** en el panel de detalles para ayudarle a solucionar los interbloqueos. También puede ver los gráficos de plan de consulta para los siguientes eventos:  

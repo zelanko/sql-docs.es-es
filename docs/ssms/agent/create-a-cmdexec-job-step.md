@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9b874ea411770b1f0a43d276550deef0729bc2d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 415ec242187a7b097e603c79a74d5eeb3d800dc6
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703136"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120272"
 ---
 # <a name="create-a-cmdexec-job-step"></a>Create a CmdExec Job Step
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ Para obtener información detallada, vea [Implement SQL Server Agent Security](.
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
     ```  
-    -- creates a job step that that uses CmdExec  
+    -- creates a job step that uses CmdExec  
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  

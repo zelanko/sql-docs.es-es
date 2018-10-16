@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
-ms.openlocfilehash: 842a7377bcd6bdcb649a78b2f31eb66de95bc5a3
-ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
+ms.openlocfilehash: 0e7d549c2f3b02349007815019cc47647f172f73
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854397"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072339"
 ---
 ## <a name="specifying-application-intent"></a>Especificar el intento de la aplicación
 
@@ -54,5 +54,5 @@ El enrutamiento de solo lectura es una característica que puede asegurar la dis
 
 Varias conexiones con el enrutamiento de solo lectura no todos se conecten a la misma réplica de solo lectura. Los cambios en la sincronización de la base de datos o los cambios en la configuración de enrutamiento del servidor pueden producir conexiones de cliente para réplicas de solo lectura diferentes. Puede asegurarse de que todas las solicitudes de solo lectura se conectan a la misma réplica de solo lectura. Garantizar esta similitud por *no* pasando un agente de escucha del grupo de disponibilidad para el **Server** palabra clave de cadena de conexión. En su lugar, especifique el nombre de la instancia de solo lectura.
 
-Enrutamiento de solo lectura puede tardar más que la conexión a la réplica principal. La espera más larga se debe a que el enrutamiento de solo lectura se conecta primero a la principal y, luego, busca la mejor instancia secundaria legible que esté disponible. Debido a estos staps varios, debe aumentar el tiempo de espera de inicio de sesión para al menos 30 segundos.
+Enrutamiento de solo lectura puede tardar más que la conexión a la réplica principal. La espera más larga se debe a que el enrutamiento de solo lectura se conecta primero a la principal y, luego, busca la mejor instancia secundaria legible que esté disponible. Debido a estos staps varios, debe aumentar el tiempo de espera de inicio de sesión en al menos 30 segundos.
 

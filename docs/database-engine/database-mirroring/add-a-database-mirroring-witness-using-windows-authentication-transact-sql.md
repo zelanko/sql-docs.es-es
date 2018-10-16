@@ -15,12 +15,12 @@ ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0569a8f94232ec31e96024e798da6027e0c695a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca1ecc06039f8bdfbf4516778a04f9c191544e45
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742323"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168909"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Agregar un testigo de creación de reflejo de la base de datos mediante la autenticación de Windows (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,17 +50,17 @@ ms.locfileid: "47742323"
   
      Si el asociado carece de un punto de conexión, vea [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
-2.  Si las instancias de asociados se ejecutan en cuentas de usuario de distintos dominios, cree un inicio de sesión para las diferentes cuentas de la base de datos maestra de cada instancia. Para obtener más información, vea [Permitir el acceso de red a un punto de conexión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
+2.  Si las instancias de asociados se ejecutan en cuentas de usuario de distintos dominios, cree un inicio de sesión para las diferentes cuentas de la base de datos maestra de cada instancia. Para obtener más información, vea [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
   
 3.  Conéctese al servidor principal y emita la siguiente instrucción:  
   
-     ALTER DATABASE *<nombre_de_base_de_datos>* SET WITNESS **=***<dirección_de_red_de_servidor>*  
+     ALTER DATABASE *<nombre_de_base_de_datos>* SET WITNESS **=**_<dirección_de_red_de_servidor>_  
   
      donde *<nombre_de_base_de_datos>* es el nombre de la base de datos de la que se va a crear el reflejo (este nombre es el mismo para ambos asociados) y *<dirección_de_red_de_servidor>* es la dirección de red de servidor de la instancia del servidor testigo.  
   
      La sintaxis para una dirección de red de servidor es la siguiente:  
   
-     TCP **://**\<*dirección-del-sistema>***:**\<* puerto>*  
+     TCP<b>://</b>_\<dirección del sistema>_<b>:</b>_\<puerto>_  
   
      donde \<*dirección del sistema>* es una cadena que identifica de forma inequívoca el sistema del equipo de destino y \<*puerto>*, el número de puerto que usa el punto de conexión de la creación de reflejo de la instancia de servidor asociado. Para obtener más información, vea [Especificar una dirección de red de servidor &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   

@@ -23,12 +23,12 @@ ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a61cfca736629d3f8ffb7b1240f85a0aa9edb45a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0227ad3719b7b3ca02fa8595ed8cccf6ff8705f6
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749502"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169215"
 ---
 # <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Expresión escalar opcional de tipo **sysname** que representa el nombre de la subentidad protegible en la que se va a probar el permiso. El valor predeterminado es NULL.  
   
 > [!NOTE]  
->  En las versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], las subentidades protegibles no pueden usar corchetes con el formato **'[***sub name***]'**. Es mejor usar **'***sub name***'**.  
+>  En las versiones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], las subentidades protegibles no pueden usar corchetes con el formato **'[**_sub name_**]'**. Es mejor usar **'**_sub name_**'**.  
   
  *sub-securable_class*  
  Expresión escalar opcional de tipo **nvarchar(60)** que representa la clase de subentidad protegible en la que se va a probar el permiso. El valor predeterminado es NULL.  

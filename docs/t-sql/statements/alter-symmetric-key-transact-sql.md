@@ -22,12 +22,12 @@ ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 54a0f54da0050828766749f7df09e7ffc7869640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15a45b7b7ebcc9e6c9e3110dc7c0fa3439a0af10
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800063"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169245"
 ---
 # <a name="alter-symmetric-key-transact-sql"></a>ALTER SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  CERTIFICATE *Certificate_name*  
  Especifica el certificado que se utiliza para cifrar la clave simétrica. El certificado debe existir en la base de datos.  
   
- PASSWORD **='***password***'**  
+ PASSWORD **='**_password_**'**  
  Especifica la contraseña que se usa para cifrar la clave simétrica. *password* debe cumplir los requisitos de la directiva de contraseñas de Windows del equipo que ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  SYMMETRIC KEY *Symmetric_Key_Name*  

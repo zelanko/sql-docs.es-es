@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 921322126bc11642bd2140784efb6ea4ae6a8550
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59d4ffbb3c2088ae4b517ab99e0b2705ffccd047
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703773"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085451"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Buscar, ver y administrar informes (Generador de informes y SSRS)
   En el Generador de informes, puede examinar las carpetas en un servidor de informes o un sitio de SharePoint para buscar informes, orígenes de datos compartidos, modelos y otros elementos de informe relacionados, y examinar su equipo para buscar informes locales. Para que buscar informes sea más fácil, el Generador de informes cuenta con una lista de servidores y sitios utilizados recientemente, y proporciona acceso directo a las carpetas Escritorio, Mis documentos y Mi PC del sistema de archivos del equipo.  
@@ -67,7 +67,7 @@ ms.locfileid: "47703773"
   
  El administrador del servidor de informes podría realizar algunas de estas tareas. Para más información sobre las tareas realizadas en un servidor de informes, vea [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
- Normalmente, el Administrador de informes contiene carpetas, informes, orígenes de datos y modelos de informe, además de la carpeta Mis informes. Mis informes es un área de trabajo personal que puede utilizar para trabajar con sus informes y almacenarlos. Otras carpetas del servidor de informes son públicas y suelen requerir que los usuarios dispongan de permisos avanzados para agregar o modificar su contenido. Puede crear carpetas dentro de MisiInformes para organizar mejor sus informes. Para más información, vea [Usar Mis informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md).  
+ Normalmente, el Administrador de informes contiene carpetas, informes, orígenes de datos y modelos de informe, además de la carpeta Mis informes. Mis informes es un área de trabajo personal que puede utilizar para trabajar con sus informes y almacenarlos. Otras carpetas del servidor de informes son públicas y suelen requerir que los usuarios dispongan de permisos avanzados para agregar o modificar su contenido. Puede crear carpetas dentro de MisiInformes para organizar mejor sus informes.  
   
  El Administrador de informes muestra los informes en el Visor HTML de Reporting Services. El Visor HTML proporciona un marco para ver los informes en HTML, e incluye una barra de herramientas de informe, una sección de parámetros, una sección de credenciales y un mapa del documento. La barra de herramientas de informe ofrece funciones de navegación por la página, zoom, actualización, búsqueda, exportación, impresión y fuente de distribución de datos. Esta barra de herramientas también aparece en las ventanas de explorador, en la parte superior del informe, cuando se obtiene acceso a los informes mediante una dirección URL. La funcionalidad de impresión es opcional y la debe activar el administrador. Si está disponible, en la barra de herramientas de informe se mostrará el icono de la impresora. Las ilustraciones siguientes muestran la barra de herramientas de informe en una ventana del Administrador de informes y las características de la barra de herramientas de informe en primer plano.  
   
@@ -142,18 +142,12 @@ Barra de herramientas de informe
  [Buscar y ver informes con un explorador &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
  Describe cómo utilizar una dirección URL para encontrar y ver un informe.  
   
- [Buscar informes y otros elementos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)  
- Describe cómo utilizar la funcionalidad de búsqueda del Administrador de informes para buscar elementos en el servidor de informes.  
-  
- [Usar Mis informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)  
- Describe cómo usar la carpeta Mis informes como área de trabajo personal para trabajar con sus informes y almacenarlos.  
-  
- [Mostrar la vista previa de informes en el Generador de informes](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)  
+ [Vista previa de informes en el Generador de informes](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)  
  Describe cómo obtener una vista previa de los informes mientras se crean o actualizan.  
   
 ## <a name="see-also"></a>Ver también  
  [Guardar informes &#40;Generador de informes&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [Generador de informes en SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Instalar y desinstalar el Generador de informes](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
+ [Instalar, desinstalar y asistencia del Generador de informes 3.0](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
   
   

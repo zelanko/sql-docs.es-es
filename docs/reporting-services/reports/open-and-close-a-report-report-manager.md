@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0640a41beedbd7752a7b12a356e0d12314493d58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30c20b9232725ec41d8d6438c82ce18820181fee
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711743"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085051"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Abrir y cerrar un informe (Administrador de informes)
   Puede usar el Administrador de informes para ver informes publicados en un servidor de informes. De forma predeterminada, todos los informes se abren en HTML. Después de abrirse un informe, puede exportarlo para verlo en otros formatos de aplicación. Si el informe contiene características interactivas o si es un informe del Generador de informes que contiene datos interactivos, puede hacer clic en los vínculos para ver datos o informes adicionales.  
@@ -39,7 +39,6 @@ ms.locfileid: "47711743"
      Aunque se cierre un informe, no se quita de la caché del explorador. Debe cerrar el explorador para desconectar el informe.  
   
 ## <a name="see-also"></a>Ver también  
- [Buscar informes y otros elementos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [Contenido &#40;página del Administrador de informes&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  

@@ -40,12 +40,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2cbe41975f57e0294d936e0b8554b5d936f1474b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0c960d3c0477420868e0d1cfaee50ee51252ef9
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840003"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906523"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT: Cláusula ORDER BY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -208,7 +208,7 @@ ORDER BY order_by_expression
 #### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>A. Especificar una sola columna definida en la lista de selección  
  En el siguiente ejemplo se ordena el conjunto de resultados por la columna numérica `ProductID`. Dado que no se especifica un criterio de ordenación concreto, se utiliza el valor predeterminado (orden ascendente).  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -219,7 +219,7 @@ ORDER BY ProductID;
 #### <a name="b-specifying-a-column-that-is-not-defined-in-the-select-list"></a>B. Especificar una columna que no está definida en la lista de selección  
  En el siguiente ejemplo se ordena el conjunto de resultados por una columna que no está incluida en la lista de selección, pero sí definida en la tabla especificada en la cláusula FROM.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name, Color  
@@ -231,7 +231,7 @@ ORDER BY ListPrice;
 #### <a name="c-specifying-an-alias-as-the-sort-column"></a>C. Especificar un alias como columna de ordenación  
  En el ejemplo siguiente se especifica el alias de columna `SchemaName` como columna de criterio de ordenación.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT name, SCHEMA_NAME(schema_id) AS SchemaName  
@@ -244,7 +244,7 @@ ORDER BY SchemaName;
 #### <a name="d-specifying-an-expression-as-the-sort-column"></a>D. Especificar una expresión como columna de ordenación  
  En el ejemplo siguiente se utiliza una expresión como columna de ordenación. La expresión se define mediante la función DATEPART para ordenar el conjunto de resultados según el año de contratación de los empleados.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, JobTitle, HireDate  
@@ -258,7 +258,7 @@ ORDER BY DATEPART(year, HireDate);
 #### <a name="a-specifying-a-descending-order"></a>A. Especificar un orden descendente  
  En el siguiente ejemplo se ordena el conjunto de resultados en sentido descendente según la columna numérica `ProductID`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -270,7 +270,7 @@ ORDER BY ProductID DESC;
 #### <a name="b-specifying-an-ascending-order"></a>B. Especificar un orden ascendente  
  En el siguiente ejemplo se ordena el conjunto de resultados en orden ascendente según la columna `Name`. Los caracteres están ordenados alfabéticamente, no numéricamente. Es decir, 10 se ordena antes que 2.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -282,7 +282,7 @@ ORDER BY Name ASC ;
 #### <a name="c-specifying-both-ascending-and-descending-order"></a>C. Especificar orden ascendente y también descendente  
  En el siguiente ejemplo se ordena el conjunto de resultados según dos columnas. El conjunto de resultados se ordena en primer lugar en sentido ascendente según la columna `FirstName` y, a continuación, en orden descendente según la columna `LastName`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT LastName, FirstName FROM Person.Person  
@@ -294,7 +294,7 @@ ORDER BY FirstName ASC, LastName DESC ;
 ###  <a name="Collation"></a> Especificar una intercalación  
  En el siguiente ejemplo se muestra cómo especificar una intercalación en la cláusula ORDER BY puede cambiar el orden en que se devuelven los resultados de la consulta. Se crea una tabla que contiene una columna definida mediante una intercalación que no distingue entre mayúsculas y minúsculas, ni las tildes. Los valores se insertan con diversas diferencias de uso de mayúsculas, minúsculas y tildes. Dado que no se especifica ninguna intercalación en la cláusula ORDER BY, la primera consulta utiliza la intercalación de la columna al ordenar los valores. En la segunda consulta, se especifica una intercalación que distingue entre mayúsculas y minúsculas y las tildes; en consecuencia, cambia el orden en el que se devuelven las filas.  
   
-```  
+```sql
 USE tempdb;  
 GO  
 CREATE TABLE #t1 (name nvarchar(15) COLLATE Latin1_General_CI_AI)  
@@ -315,7 +315,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
 ###  <a name="Case"></a> Especificar un orden condicional  
  En los ejemplos siguientes se usa la expresión CASE en una cláusula ORDER BY para determinar de manera condicional el criterio de ordenación de las filas según el valor de una columna dada. En el primer ejemplo se evalúe el valor de la columna `SalariedFlag` de la tabla `HumanResources.Employee`. Los empleados que tienen la columna `SalariedFlag` establecida en 1 se devuelven en orden descendente según el `BusinessEntityID`. Los empleados que tienen la columna `SalariedFlag` establecida en 0 se devuelven en orden ascendente según el `BusinessEntityID`. En el segundo ejemplo, el conjunto de resultados se ordena según la columna `TerritoryName` cuando la columna `CountryRegionName` es igual a 'United States' y según la columna `CountryRegionName` en las demás filas.  
   
-```  
+```sql
 SELECT BusinessEntityID, SalariedFlag  
 FROM HumanResources.Employee  
 ORDER BY CASE SalariedFlag WHEN 1 THEN BusinessEntityID END DESC  
@@ -324,7 +324,7 @@ GO
   
 ```  
   
-```  
+```sql
 SELECT BusinessEntityID, LastName, TerritoryName, CountryRegionName  
 FROM Sales.vSalesPerson  
 WHERE TerritoryName IS NOT NULL  
@@ -336,7 +336,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
 ###  <a name="Rank"></a> Usar ORDER BY en una función de categoría  
  En el siguiente ejemplo se utiliza la cláusula ORDER BY en las funciones de categoría ROW_NUMBER, RANK, DENSE_RANK y NTILE.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  
@@ -362,7 +362,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. Especificar constantes enteras para los valores de OFFSET y FETCH  
  En el siguiente ejemplo se especifica una constante entera como valor para las cláusulas OFFSET y FETCH. La primera consulta devuelve todas las filas ordenadas según la columna `DepartmentID`. Compare los resultados devueltos por esta consulta con los de las dos consultas siguientes. La consulta siguiente utiliza la cláusula `OFFSET 5 ROWS` para omitir las primeras 5 filas y devolver todas las restantes. La última consulta utiliza la cláusula `OFFSET 0 ROWS` para comenzar por la primera fila y, a continuación, utiliza `FETCH NEXT 10 ROWS ONLY` para limitar las filas devueltas a 10 filas del conjunto de resultados ordenado.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Return all rows sorted by the column DepartmentID.  
@@ -387,7 +387,7 @@ ORDER BY DepartmentID
 #### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>B. Especificar variables para los valores de OFFSET y FETCH  
  En el siguiente ejemplo se declaran las variables `@StartingRowNumber` y `@FetchRows`, y se especifican estas variables en las cláusulas OFFSET y FETCH.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Specifying variables for OFFSET and FETCH values    
@@ -404,7 +404,7 @@ ORDER BY DepartmentID ASC
 #### <a name="c-specifying-expressions-for-offset-and-fetch-values"></a>C. Especificar expresiones para los valores de OFFSET y FETCH  
  En el siguiente ejemplo se utiliza la expresión `@StartingRowNumber - 1` para especificar el valor de OFFSET y la expresión `@EndingRowNumber - @StartingRowNumber + 1` para especificar el valor de FETCH. Además, se especifica la sugerencia de consulta OPTIMIZE FOR. Esta sugerencia se puede usar para que se utilice un valor concreto para una variable local al compilar y optimizar la consulta. El valor se utiliza solo durante la optimización de la consulta y no durante la ejecución de la misma. Para obtener más información, vea [Sugerencias de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   
@@ -423,7 +423,7 @@ OPTION ( OPTIMIZE FOR (@StartingRowNumber = 1, @EndingRowNumber = 20) );
 #### <a name="d-specifying-a-constant-scalar-subquery-for-offset-and-fetch-values"></a>D. Especificar una subconsulta escalar constante para los valores de OFFSET y FETCH  
  En el siguiente ejemplo se utiliza una subconsulta escalar constante a fin de definir el valor para la cláusula FETCH. La subconsulta devuelve un valor único de la columna `PageSize` de la tabla `dbo.AppSettings`.  
   
-```  
+```sql
 -- Specifying a constant scalar subquery  
 USE AdventureWorks2012;  
 GO  
@@ -443,7 +443,7 @@ ORDER BY DepartmentID ASC
 #### <a name="e-running-multiple-queries-in-a-single-transaction"></a>E. Ejecutar varias consultas en una sola transacción  
  En el siguiente ejemplo se muestra un método de implementar una solución de paginación que permite asegurarse de la devolución de resultados estables en todas las solicitudes de la consulta. La consulta se ejecuta en una sola transacción utilizando el nivel de aislamiento de instantánea, mientras que la columna especificada en la cláusula ORDER BY asegura la singularidad de la columna.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   
@@ -487,7 +487,7 @@ GO
 ###  <a name="Union"></a> Usar ORDER BY con UNION, EXCEPT e INTERSECT  
  Cuando una consulta utiliza los operadores UNION, EXCEPT o INTERSECT, la cláusula ORDER BY se debe especificar al final de la instrucción y se ordenan los resultados de las consultas combinadas. En el siguiente ejemplo se devuelven todos los productos que son rojos o amarillos y la lista combinada se ordena según la columna `ListPrice`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT Name, Color, ListPrice  
@@ -505,7 +505,7 @@ ORDER BY ListPrice ASC;
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  En el ejemplo siguiente se muestra la ordenación de un conjunto de resultados en sentido ascendente según la columna numérica `EmployeeKey`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -515,7 +515,7 @@ ORDER BY EmployeeKey;
   
  En el ejemplo siguiente se ordena un conjunto de resultados en sentido descendente según la columna numérica `EmployeeKey`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -525,7 +525,7 @@ ORDER BY EmployeeKey DESC;
   
  En el ejemplo siguiente se ordena un conjunto de resultados según la columna `LastName`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -535,7 +535,7 @@ ORDER BY LastName;
   
  En el ejemplo siguiente se ordena según dos columnas. Esta consulta ordena primero en sentido ascendente según la columna `FirstName` y, después, ordena valores comunes `FirstName` en sentido descendente según la columna `LastName`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  

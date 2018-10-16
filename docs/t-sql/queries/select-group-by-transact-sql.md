@@ -5,9 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GROUP
@@ -35,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d96d23761ecaa1a31bdf9530b1d4277adc4182b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: cf4f93dfb52177e59e1a283b13236a6a029725c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43105916"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654205"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT: GROUP BY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -346,7 +344,7 @@ La cláusula GROUP BY admite todas las características GROUP BY incluidas en el
 |Característica|SQL Server Integration Services|Nivel de compatibilidad 100 o superior con SQL Server|SQL Server 2008 o posterior con el nivel de compatibilidad 90.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |Agregados DISTINCT|No se admite en WITH CUBE ni en WITH ROLLUP.|Se admite en WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE o ROLLUP.|Igual que el nivel de compatibilidad 100.|  
-|Función definida por el usuario con un nombre CUBE o ROLLUP en la cláusula GROUP BY|Se admite la función definida por el usuario **dbo.cube(***arg1***,***...argN***)** o **dbo.rollup(***arg1***,**...*argN***)** en la cláusula GROUP BY.<br /><br /> Por ejemplo, `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|No se admite la función definida por el usuario **dbo.cube (***arg1***,**...argN **)** o **dbo.rollup(** arg1 **,***...argN***)** en la cláusula GROUP BY.<br /><br /> Por ejemplo, `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Se devuelve el mensaje de error siguiente: "Incorrect syntax near the keyword 'cube'&#124;'rollup'." (Sintaxis incorrecta cerca de la palabra clave 'cube'&#124;'rollup'.).<br /><br /> Para evitar este problema, reemplace `dbo.cube` por `[dbo].[cube]` o `dbo.rollup` por `[dbo].[rollup]`.<br /><br /> Se admite el siguiente ejemplo: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`.|Se admite la función definida por el usuario **dbo.cube (***arg1***,***...argN*) o **dbo.rollup(***arg1***,***...argN***)** en la cláusula GROUP BY.<br /><br /> Por ejemplo, `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|Función definida por el usuario con un nombre CUBE o ROLLUP en la cláusula GROUP BY|Se admite la función definida por el usuario **dbo.cube(**_arg1_**,**_...argN_**)** o **dbo.rollup(**_arg1_**,**..._argN_**)** en la cláusula GROUP BY.<br /><br /> Por ejemplo, `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|No se admite la función definida por el usuario **dbo.cube (**_arg1_**,**...argN **)** o **dbo.rollup(** arg1 **,**_...argN_**)** en la cláusula GROUP BY.<br /><br /> Por ejemplo, `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Se devuelve el mensaje de error siguiente: "Incorrect syntax near the keyword 'cube'&#124;'rollup'." (Sintaxis incorrecta cerca de la palabra clave 'cube'&#124;'rollup'.).<br /><br /> Para evitar este problema, reemplace `dbo.cube` por `[dbo].[cube]` o `dbo.rollup` por `[dbo].[rollup]`.<br /><br /> Se admite el siguiente ejemplo: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`.|Se admite la función definida por el usuario **dbo.cube (**_arg1_**,**_...argN_) o **dbo.rollup(**_arg1_**,**_...argN_**)** en la cláusula GROUP BY.<br /><br /> Por ejemplo, `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|No compatible|Admitida|Admitida|  
 |CUBE|No compatible|Admitida|No compatible|  
 |ROLLUP|No compatible|Admitida|No compatible|  

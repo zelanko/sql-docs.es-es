@@ -227,7 +227,7 @@ Se admiten las siguientes instrucciones DML.
 ##  <a name="auditing"></a> Auditoría  
  Se admite la auditoría a nivel de procedimiento en los procedimientos almacenados compilados de forma nativa.  
 
- Para obtener más información sobre la auditoría, vea [Create a Server Audit and Database Audit Specification](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
+ Para obtener más información sobre la auditoría, vea [Crear una especificación de auditoría de servidor y de auditoría de base de datos](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
 
 ##  <a name="tqh"></a> Sugerencias de consulta y tabla  
  Se admite lo siguiente:  

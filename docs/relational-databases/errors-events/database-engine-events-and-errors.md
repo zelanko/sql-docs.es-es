@@ -1835,7 +1835,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   4013    |   16  |   no  |   La secuencia del protocolo de flujo TDS entrante es incorrecta. Falta el encabezado TDS de conjuntos de resultados activos múltiples (MARS).  |
 |   4014    |   20  |   no  |   Error irrecuperable al leer el flujo de entrada de la red. Se terminará la sesión (error de entrada: %d, error de salida: %d). |
 |   4015    |   16  |   no  |   El idioma solicitado en el inicio de sesión "%.*ls" no es un nombre válido de SQL Server. Se usará el predeterminado para todo el servidor (%.* ls).    |
-|   4016    |   16  |   no  |   El idioma solicitado en el inicio de sesión "%.*ls" no es un nombre válido de SQL Server. Se usará el predeterminado de usuario %.*.   |
+|   4016    |   16  |   no  |   El idioma solicitado en el inicio de sesión "%.*ls" no es un nombre válido de SQL Server. Se usará el predeterminado de usuario %*.   |
 |   4017    |   16  |   no  |   Ni el idioma solicitado en "inicio de sesión %.*ls" ni el predeterminado de usuario %.* ls, son nombres válidos de SQL Server. Se usará el predeterminado para todo el servidor (%.*ls).   |
 |   4018    |   16  |   no  |   El idioma predeterminado de usuario (%.*ls) no es un nombre válido de SQL Server. Se usará el predeterminado para todo el servidor (%.* ls).   |
 |   4019    |   16  |   no  |   El idioma solicitado en el inicio de sesión "%.*ls" no es un nombre de idioma válido de SQL Server. Error de inicio de sesión.   |

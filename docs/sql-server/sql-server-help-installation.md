@@ -5,23 +5,17 @@ ms.date: 12/15/2017
 ms.prod: sql
 ms.technology: ''
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
-- SQL Server 2016
-- SQL Server 2017
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e43296dc139f2e8b53454f088fc341ab40656f5f
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: b6b7287694779a3eaf120879120796c56b2dc413
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42776160"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699913"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Visor de Ayuda y ayuda sin conexión de SQL Server
 
@@ -177,7 +171,7 @@ La ayuda en línea siempre mostrará el contenido más actualizado.
 
 **Para ver ayuda en línea de SQL Server en SSMS 17.x**
 
-- Haga clic en **Ver ayuda** en el menú **Ayuda**. La documentación de SQL Server 2016 y 2017 más reciente de [https://docs.microsoft.com/sql/https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation) se muestra en un explorador. 
+- Haga clic en **Ver ayuda** en el menú **Ayuda**. La documentación de SQL Server 2016 y 2017 más reciente de [https://docs.microsoft.com/sql/ https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation) se muestra en un explorador. 
 
    ![Ver Ayuda](../sql-server/media/sql-server-help-installation/viewhelp.png)
 

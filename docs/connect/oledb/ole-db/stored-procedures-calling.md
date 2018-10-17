@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - calling stored procedures
@@ -22,12 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: df25145c876548139bd166d2aa3e767ddcb5b168
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 6959aec6b60713ed22e138c44139e0581f6e0ac2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032717"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740633"
 ---
 # <a name="stored-procedures---calling"></a>Procedimientos almacenados: llamada
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,13 +90,13 @@ ms.locfileid: "43032717"
 -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] Instrucción EXECUTE.   
   
 ### <a name="odbc-call-escape-sequence"></a>Secuencia de escape ODBC CALL  
- Si conoce la información de parámetros, llame al método **ICommandWithParameters::SetParameterInfo** para describir los parámetros al proveedor. De lo contrario, cuando se utiliza la sintaxis ODBC CALL para llamar a un procedimiento almacenado, el proveedor llama a una función auxiliar para buscar la información de parámetros del procedimiento almacenado.  
+ Si conoce la información de parámetros, llame al método **ICommandWithParameters::SetParameterInfo** para describir los parámetros al proveedor. De lo contrario, cuando se utiliza la sintaxis ODBC CALL para llamar a un procedimiento almacenado, el proveedor llama a una función del asistente para buscar la información de parámetros del procedimiento almacenado.  
   
  Si no está seguro de la información de parámetros (metadatos de parámetros), es preferible utilizar la sintaxis ODBC CALL.  
   
  La sintaxis general para llamar a un procedimiento utilizando la secuencia de escape ODBC CALL es la siguiente:  
   
- {[**? =**]**llamada ***nombre_procedimiento*[**(**[*parámetro*] [**,**[*parámetro*]]...** )**]}  
+ {[**? =**]**llamar**_procedimiento\_nombre_[**(**[*parámetro*] [**,** [_parámetro_]]... **)**]}  
   
  Por ejemplo:  
   
@@ -110,7 +107,7 @@ ms.locfileid: "43032717"
 ### <a name="rpc-escape-sequence"></a>Secuencia de escape RPC  
  La secuencia de escape RPC es similar a la sintaxis ODBC CALL para llamar a un procedimiento almacenado. Si va a llamar al procedimiento varias veces, la secuencia de escape RPC es la que proporciona el rendimiento óptimo de entre los tres métodos existentes para llamar a un procedimiento almacenado.  
   
- Cuando se utiliza la secuencia de escape RPC para ejecutar un procedimiento almacenado, el proveedor no llama a ninguna función auxiliar para determinar la información de parámetros (como hace en el caso de la sintaxis ODBC CALL). La sintaxis RPC es más sencilla que la sintaxis ODBC CALL, por lo que el comando se analiza con mayor rapidez y se mejora el rendimiento. En este caso, necesita proporcionar la información de parámetros mediante la ejecución de **ICommandWithParameters::SetParameterInfo**.  
+ Cuando se utiliza la secuencia de escape RPC para ejecutar un procedimiento almacenado, el proveedor no llama a ninguna función del asistente para determinar la información de parámetros (como hace en el caso de la sintaxis ODBC CALL). La sintaxis RPC es más sencilla que la sintaxis ODBC CALL, por lo que el comando se analiza con mayor rapidez y se mejora el rendimiento. En este caso, necesita proporcionar la información de parámetros mediante la ejecución de **ICommandWithParameters::SetParameterInfo**.  
   
  La secuencia de escape RPC exige que tenga un valor devuelto. Si el procedimiento almacenado no devuelve un valor, el servidor devuelve de forma predeterminada un 0. Además, no puede abrir un cursor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el procedimiento almacenado. El procedimiento almacenado se prepara de forma implícita y la llamada a **ICommandPrepare::Prepare** produce un error. Debido a la incapacidad para preparar una llamada RPC, no puede consultar los metadatos de columna; IColumnsInfo:: GetColumnInfo e IColumnsRowset:: GetColumnsRowset devolverán DB_E_NOTPREPARED.  
   

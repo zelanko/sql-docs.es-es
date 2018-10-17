@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f8108bc8c08100fa8a28ab8e23058f056bff3b27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6f418b5f9456b2863abba5d63c25dd224977dfb
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646193"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100546"
 ---
 # <a name="database-engine-errors"></a>Errores del motor de base de datos
 La tabla contiene los números de mensajes de error y la descripción, que es el texto del mensaje de error de la vista de catálogo sys.messages. 
@@ -846,7 +846,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   1732    |   16  |   no  |   No se puede crear el conjunto de columnas dispersas "%.*ls" en la tabla "%.* ls" porque una tabla no puede tener más de un conjunto de columnas dispersas. Modifique la instrucción para que solo se especifique una columna como COLUMN_SET FOR ALL_SPARSE_COLUMNS.   |
 |   1733    |   16  |   no  |   No se puede crear el conjunto de columnas dispersas "%.*ls" en la tabla "%.* ls" porque un conjunto de columnas dispersas debe ser una columna xml que acepte valores NULL. Modifique la definición de columna para permitir valores NULL.  |
 |   1734    |   16  |   no  |   No se puede crear el conjunto de columnas dispersas "%.*ls" en la tabla "%.* ls" porque la tabla contiene ya una o varias columnas dispersas. No se puede agregar un conjunto de columnas dispersas a una tabla si ésta contiene una columna dispersa.   |
-|   1736    |   16  |   no  |   No se puede hacer referencia a la columna "%.*ls" de la tabla "%.* ls" en una restricción CHECK o una definición de columna calculada porque la columna es un conjunto de columnas dispersas. En una restricción CHECK o una definición de columna calculada, no se puede hacer referencia a un conjunto de columnas dispersas. |
+|   1736    |   16  |   no  |   No se puede hacer referencia a la columna "%.*ls" de la tabla "%.* ls" en una restricción CHECK o una definición de columna calculada porque la columna es un conjunto de columnas dispersas. En una restricción CHECK o una definición de columna calculada, no se puede hacer referencia a un conjunto de columnas dispersas.   |
 |   1738    |   10  |   no  |   No se puede crear la tabla '%.*ls' con solo una columna de un conjunto de columnas y sin columnas no calculadas en la tabla.    |
 |   1750    |   10  |   no  |   No se pudo crear la restricción. Consulte los errores anteriores.   |
 |   1752    |   16  |   no  |   La columna "%.*ls" de la tabla "%.* ls" no es válida para crear una restricción predeterminada.   |
@@ -1835,7 +1835,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   4013    |   16  |   no  |   La secuencia del protocolo de flujo TDS entrante es incorrecta. Falta el encabezado TDS de conjuntos de resultados activos múltiples (MARS).  |
 |   4014    |   20  |   no  |   Error irrecuperable al leer el flujo de entrada de la red. Se terminará la sesión (error de entrada: %d, error de salida: %d). |
 |   4015    |   16  |   no  |   El idioma solicitado en el inicio de sesión "%.*ls" no es un nombre válido de SQL Server. Se usará el predeterminado para todo el servidor (%.* ls).    |
-|   4016    |   16  |   no  |   El idioma solicitado en el inicio de sesión "%.*ls" no es un nombre válido de SQL Server. Se usará el predeterminado de usuario %*.   |
+|   4016    |   16  |   no  |   El idioma solicitado en el inicio de sesión "%.*ls" no es un nombre válido de SQL Server. Se usará el predeterminado de usuario %.*.   |
 |   4017    |   16  |   no  |   Ni el idioma solicitado en "inicio de sesión %.*ls" ni el predeterminado de usuario %.* ls, son nombres válidos de SQL Server. Se usará el predeterminado para todo el servidor (%.*ls).   |
 |   4018    |   16  |   no  |   El idioma predeterminado de usuario (%.*ls) no es un nombre válido de SQL Server. Se usará el predeterminado para todo el servidor (%.* ls).   |
 |   4019    |   16  |   no  |   El idioma solicitado en el inicio de sesión "%.*ls" no es un nombre de idioma válido de SQL Server. Error de inicio de sesión.   |

@@ -1,13 +1,11 @@
 ---
 title: ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/28/2015
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER COLUMN ENCRYPTION
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - column encryption key, alter
 - ALTER COLUMN ENCRYPTION KEY statement
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: af850156a7600acde614849c897bbb69df0dfa1b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8f76bfc903eaf18978c2c77803cdd7054d384ace
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38016115"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839533"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -60,15 +57,21 @@ ALTER COLUMN ENCRYPTION KEY key_name
  Nombre del algoritmo de cifrado usado para cifrar el valor. El algoritmo para los proveedores del sistema debe ser **RSA_OAEP**. Este argumento no es válido cuando se elimina un valor de clave de cifrado de columna.  
   
  *varbinary_literal*  
- BLOB de la clave de cifrado de columna con la clave de cifrado maestra especificada. . Este argumento no es válido cuando se elimina un valor de clave de cifrado de columna.  
+ BLOB de la clave de cifrado de columna con la clave de cifrado maestra especificada. Este argumento no es válido cuando se elimina un valor de clave de cifrado de columna.  
   
 > [!WARNING]  
 >  En esta instrucción no se deben pasar nunca valores de clave de cifrado de columna con texto simple. Si lo hace, perderá las ventajas que ofrece esta característica.  
   
 ## <a name="remarks"></a>Notas  
- Normalmente, una clave de cifrado de columna se crea con un solo valor cifrado. Cuando es necesario rotar una clave maestra de columna (la clave maestra de columna actual debe reemplazarse con la nueva clave maestra de columna), puede agregar un nuevo valor de la clave de cifrado de columna, que se cifra con la nueva clave maestra de columna. De este modo, conseguirá que las aplicaciones cliente puedan acceder a los datos cifrados con la clave de cifrado de columna, mientras la nueva clave maestra de columna se pone a disposición de las aplicaciones cliente. Un controlador compatible con Always Encrypted en una aplicación cliente que no tenga acceso a la nueva clave maestra podrá usar el valor de clave de cifrado de columna que está cifrado con la clave maestra de columna para tener acceso a datos confidenciales. Los algoritmos de cifrado, compatibles con Always Encrypted, necesitan que el valor de texto simple tenga 256 bits. Un valor cifrado se debe generar usando un proveedor de almacén de claves que encapsule el almacén de claves que contiene la clave maestra de columna.  
-  
- Eche un vistazo a [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) y [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) para saber más sobre las claves de cifrado de columna.  
+ Normalmente, una clave de cifrado de columna se crea con un solo valor cifrado. Cuando es necesario rotar una clave maestra de columna (la clave maestra de columna actual debe reemplazarse con la nueva clave maestra de columna), puede agregar un nuevo valor de la clave de cifrado de columna, que se cifra con la nueva clave maestra de columna. Este flujo de trabajo le permite garantizar que las aplicaciones cliente pueden acceder a los datos cifrados con la clave de cifrado de columna, mientras la nueva clave maestra de columna se pone a disposición de las aplicaciones cliente. Un controlador compatible con Always Encrypted en una aplicación cliente que no tenga acceso a la nueva clave maestra podrá usar el valor de clave de cifrado de columna que está cifrado con la clave maestra de columna para tener acceso a datos confidenciales. Los algoritmos de cifrado, compatibles con Always Encrypted, necesitan que el valor de texto simple tenga 256 bits. Un valor cifrado se debe generar usando un proveedor de almacén de claves que encapsule el almacén de claves que contiene la clave maestra de columna.  
+
+ Las claves maestras de columna se rotan por las siguientes razones:
+- Puede que la normativa de cumplimiento exija que las claves se roten periódicamente.
+- Una clave maestra de columna está en riesgo y es necesario rotarla por motivos de seguridad.
+- Para habilitar o deshabilitar el uso compartido de claves de cifrado de columna con enclave seguro en el lado servidor. Por ejemplo, si la clave maestra de columna actual no admite cálculos de enclave (no se ha definido con la propiedad ENCLAVE_COMPUTATIONS) y quiere habilitar estos cálculos en columnas protegidas con una clave de cifrado de columna que se cifra con la clave maestra de columna, deberá reemplazar la clave maestra de columna por la nueva clave con la propiedad ENCLAVE_COMPUTATIONS. Para más información, consulte [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+
+
+Eche un vistazo a [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) y [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) para saber más sobre las claves de cifrado de columna.  
   
 ## <a name="permissions"></a>Permisos  
  Necesita el permiso **ALTER ANY COLUMN ENCRYPTION KEY** para la base de datos.  

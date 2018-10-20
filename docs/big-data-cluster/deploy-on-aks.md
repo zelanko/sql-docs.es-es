@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 6c245365c231264f1aa56e2f1fad8ac17446ec5b
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: ee1faae6d43cbf2cc6c8a23086600241ad15e061
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48877938"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460900"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-ctp-20"></a>Configurar el servicio de Kubernetes de Azure para SQL Server de 2019 CTP 2.0
 
@@ -22,6 +22,9 @@ Esto permite usar sus conocimientos o recurrir a un gran Corpus creciente de exp
 
 En este artículo se describe los pasos para implementar en Kubernetes en AKS mediante la CLI de Azure. Si no tiene una suscripción de Azure, cree una cuenta gratuita antes de comenzar.
 
+> [!TIP] 
+> Para un script de python de ejemplo que implementa el clúster de macrodatos AKS y SQL Server, vea [implementar un clúster de macrodatos en Azure Kubernetes Service (AKS) de SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
+
 ## <a name="prerequisites"></a>Requisitos previos
 
 - Para un entorno de AKS, el requisito mínimo de máquina virtual es al menos dos máquinas virtuales del agente (además de a master) de un tamaño mínimo [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series). Recursos mínimos requeridos por máquina virtual son 4 CPU y 14 GB de memoria.
@@ -29,7 +32,7 @@ En este artículo se describe los pasos para implementar en Kubernetes en AKS me
    > [!NOTE]
    > Si tiene previsto ejecutar varias aplicaciones de Spark o trabajos de macrodatos, el tamaño mínimo es [Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup), y los recursos mínimos requeridos por máquina virtual son 8 CPU y 32 GB de memoria.
 
-- En esta sección tiene que estar ejecutando la CLI de Azure versión 2.0.4 o posterior. Si necesita instalarla o actualizarla, consulte [Install Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli). Ejecute `az --version` para buscar la versión si es necesario.
+- En esta sección tiene que estar ejecutando la CLI de Azure versión 2.0.4 o posterior. Si necesita instalarla o actualizarla, consulte [Install Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli). Ejecute `az --version` para buscar la versión si es necesario.
 
 - Instalar [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Clúster de Macrodatos de SQL Server requiere cualquier versión secundaria dentro del intervalo de 1,10 versiones para Kubernetes, de servidor y cliente. Para instalar una versión específica en el cliente kubectl, consulte [instalar kubectl binario mediante curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). Para AKS deberá usar `--kubernetes-version` parámetro para especificar una versión diferente de forma predeterminada. Tenga en cuenta que en el período de versión CTP2.0, AKS solo admite las versiones 1.10.7 y 1.10.8. 
 
@@ -91,7 +94,7 @@ Un grupo de recursos de Azure es un grupo lógico de Azure que se implementan y 
 
 ## <a name="connect-to-the-cluster"></a>Conéctese al clúster
 
-1. Para configurar kubectl para conectarse al clúster de Kubernetes, ejecute el [az aks get-credentials](https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) comando. Este paso descarga las credenciales y configura la CLI para usarlos de kubectl.
+1. Para configurar kubectl para conectarse al clúster de Kubernetes, ejecute el [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) comando. Este paso descarga las credenciales y configura la CLI para usarlos de kubectl.
 
    ```bash
    az aks get-credentials --resource-group=sqlbigdatagroup --name kubcluster

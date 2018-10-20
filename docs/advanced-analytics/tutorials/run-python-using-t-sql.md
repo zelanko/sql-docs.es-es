@@ -1,46 +1,40 @@
 ---
-title: Ejecución de Python mediante T-SQL | Microsoft Docs
+title: Ejecución de Python mediante T-SQL en SQL Server | Microsoft Docs
+description: Obtenga información sobre los conceptos básicos para ejecutar código de Python mediante Transact-SQL y procedimientos almacenados en una instancia del motor de base de datos de SQL Server para el que se habilita la integración de Python.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 10/15/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7b4a6035996ce457cb2e58aef5d1c7498ad9f826
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: e22b280c4fea395f8c7cf7c4b559d5ff5a22d6c1
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878028"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461921"
 ---
 # <a name="run-python-using-t-sql"></a>Ejecutar Python mediante T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este tutorial explica cómo se puede ejecutar código de Python en SQL Server 2017. Se le guiará a través del proceso de mover datos entre SQL Server y Python y se explica cómo ajustar el código de Python correcto en un procedimiento almacenado [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) para compilar, entrenar y usar modelos de aprendizaje automático en SQL Servidor.
+En este artículo se explica cómo se puede ejecutar código de Python en SQL Server 2017. Le guiará a través de los conceptos básicos sobre cómo mover datos entre SQL Server y Python: requisitos, las estructuras de datos, las entradas y salidas. También se explica cómo ajustar el código de Python correcto en un procedimiento almacenado [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) para crear, entrenar y usar modelos de aprendizaje automático en SQL Server.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Para completar este tutorial, primero debe instalar SQL Server 2017 y habilitar los servicios Machine Learning en la instancia, como se describe en [instalar SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md). 
+Para ejecutar el código de ejemplo en estos ejercicios, primero debe instalar SQL Server 2017 y habilitar los servicios Machine Learning en la instancia, como se describe en [instalar SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md). 
 
 También debe instalar [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms). Como alternativa, puede usar otra base de datos herramienta de administración o una consulta, siempre se puede conectar a un servidor y base de datos y ejecutar una consulta de Transact-SQL o procedimiento almacenado.
 
-Una vez completado el programa de instalación, vuelva a este tutorial, para obtener información sobre cómo ejecutar código de Python en el contexto de un procedimiento almacenado. 
+Cuando el entorno esté listo, vuelva a esta página para obtener información sobre cómo ejecutar código de Python en el contexto de un procedimiento almacenado. 
 
-## <a name="overview"></a>Información general
+## <a name="verify-python-exists"></a>Compruebe que existe de Python
 
-Este tutorial incluye cuatro lecciones:
+Los pasos siguientes se confirmación que Python está habilitado y se está ejecutando el servicio Launchpad de SQL Server.
 
-+ Los conceptos básicos sobre cómo mover datos entre SQL Server y Python: Obtenga información sobre los requisitos básicos, las estructuras de datos, las entradas y salidas.
-+ Practicar el uso de procedimientos almacenados para tareas sencillas de Python, como cargar datos de ejemplo.
-+ Usar procedimientos almacenados para crear un modelo de aprendizaje automático de Python y generar puntuaciones a partir del modelo.
-+ Una lección opcional para los usuarios que se va a ejecutar Python desde un cliente remoto, utilizando SQL Server como el _contexto de proceso_. Incluye código para generar un modelo; Sin embargo, requiere que ya están un poco familiarizado con las herramientas de Python y entornos de Python.
+1. Compruebe si la integración de Python está instalada en la instancia del motor de base de datos. Debería encontrar **python.exe** en una carpeta denominada **PYTHON_SERVICES** en C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\. Este es el ejecutable de Python que usa SQL Server para ejecutar código Python.
 
-Aquí se ofrecen ejemplos de Python adicionales específicas de SQL Server 2017: [tutoriales de Python de SQL Server](../tutorials/sql-server-python-tutorials.md)
-
-## <a name="verify-that-python-is-enabled-and-the-launchpad-is-running"></a>Comprobar que Python está habilitado y el Launchpad se está ejecutando
-
-1. En Management Studio, ejecute esta instrucción para asegurarse de que se ha habilitado el servicio.
+2. Compruebe si está habilitado el scripting externo. En Management Studio, ejecute la siguiente instrucción:
 
     ```sql
     sp_configure 'external scripts enabled'
@@ -48,9 +42,9 @@ Aquí se ofrecen ejemplos de Python adicionales específicas de SQL Server 2017:
 
     Si **run_value** es 1, la característica de aprendizaje de la máquina está instalada y lista para usarse.
 
-    Una causa común de errores es que el Launchpad, que administra la comunicación entre SQL Server y Python, se ha detenido. Puede ver el estado de Launchpad mediante el uso de la Windows **servicios** panel o abrir el Administrador de configuración de SQL Server. Si el servicio se ha detenido, reinícielo.
+    Una causa común de errores es que la [servicio Launchpad de SQL Server](../concepts/extensibility-framework.md#launchpad), que administra la comunicación entre SQL Server y Python, se ha detenido. Puede ver el estado de Launchpad mediante el uso de la Windows **servicios** panel o abrir el Administrador de configuración de SQL Server. Si el servicio se ha detenido, reinícielo.
 
-2. A continuación, compruebe que el runtime de Python está trabajando y comunicarse con SQL Server. Para ello, abra una nueva **consulta** ventana en SQL Server Management Studio y conéctese a la instancia donde se ha instalado Python.
+3. Compruebe que el runtime de Python está trabajando y comunicarse con SQL Server. Para ello, abra una nueva **consulta** ventana en SQL Server Management Studio y conéctese a la instancia donde se ha instalado Python.
 
     ```sql
     EXEC sp_execute_external_script @language = N'Python', 
@@ -74,10 +68,11 @@ Aquí se ofrecen ejemplos de Python adicionales específicas de SQL Server 2017:
 
 Hay dos maneras de ejecutar código de Python en SQL Server:
 
-+ Agregar un script de Python como un argumento de procedimiento almacenado del sistema, **sp_execute_external_script**
-+ Desde un cliente remoto como Python, conectarse a SQL Server y ejecutar código con el servidor SQL Server como el contexto de cálculo. Esto requiere [revoscalepy](../python/what-is-revoscalepy.md).
++ Agregar un script de Python como un argumento de procedimiento almacenado del sistema, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-El objetivo principal de este tutorial es para asegurarse de que puede usar Python en un procedimiento almacenado.
++ Desde un [cliente Python remoto](../python/setup-python-client-tools-sql.md), conectarse a SQL Server y ejecutar código con el servidor SQL Server como contexto de proceso. Esto requiere [revoscalepy](../python/what-is-revoscalepy.md).
+
+El siguiente ejercicio se centra en el primer modelo de interacción: cómo pasar de código de Python a un procedimiento almacenado.
 
 1. Ejecutar cierto código simple para ver cómo se pasan los datos y hacia atrás entre SQL Server y Python.
 
@@ -108,40 +103,42 @@ Por ahora, recuerde estas reglas:
 
 + Todos los elementos de la `@script` el argumento debe ser código Python válido. 
 + El código debe seguir todas las reglas de Python con respecto a la sangría, los nombres de variable y así sucesivamente. Cuando se produce un error, compruebe el espacio en blanco y mayúsculas y minúsculas.
-+ Si usa las bibliotecas que no se cargan de forma predeterminada, debe usar una instrucción de importación al principio de la secuencia de comandos para cargarlas. 
-+ Si la biblioteca no está ya instalada, detener e instale el paquete de Python fuera de SQL Server, como se describe aquí: [instalar nuevos paquetes de Python en SQL Server](../python/install-additional-python-packages-on-sql-server.md)
++ Si usa las bibliotecas que no se cargan de forma predeterminada, debe usar una instrucción de importación al principio de la secuencia de comandos para cargarlas. SQL Server agrega varias bibliotecas específicas de cada producto. Para obtener más información, consulte [bibliotecas de Python](../python/python-libraries-and-data-types.md).
++ Si la biblioteca no está ya instalada, detenga e instale el paquete de Python fuera de SQL Server, como se describe aquí: [instalar nuevos paquetes de Python en SQL Server](../python/install-additional-python-packages-on-sql-server.md)
 
 ## <a name="inputs-and-outputs"></a>Entradas y salidas
 
-De forma predeterminada, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) acepta un único conjunto de entrada, que normalmente proporciona en forma de una consulta SQL válida. Otros tipos de entrada pueden pasarse como variables de SQL: por ejemplo, puede pasar un modelo entrenado como una variable, con una función de serialización como [pickle](https://docs.python.org/3.0/library/pickle.html) o [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) para escribir el modelo un formato binario.
+De forma predeterminada, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) acepta un único conjunto de entrada, que normalmente proporciona en forma de una consulta SQL válida. 
 
-El procedimiento almacenado devuelve un único Python [pandas](http://pandas.pydata.org/pandas-docs/stable/index.html) trama de datos como salida. Sin embargo puede generar modelos y valores escalares como variables. Por ejemplo, puede de salida de un modelo entrenado como una variable binaria y pasarlo a una instrucción INSERT de T-SQL para escribir ese modelo en una tabla. También puede generar trazados (en formato binario) o valores escalares (valores individuales, como la fecha y hora, transcurrido el tiempo para entrenar el modelo y así sucesivamente).
+Otros tipos de entrada pueden pasarse como variables de SQL: por ejemplo, puede pasar un modelo entrenado como una variable, con una función de serialización como [pickle](https://docs.python.org/3.0/library/pickle.html) o [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) para escribir el modelo un formato binario.
 
-Por ahora, echemos un vistazo a solo el valor predeterminado las variables de entrada y salidas, `InputDataSet` y `OutputDataSet`. 
+El procedimiento almacenado devuelve un único Python [pandas](http://pandas.pydata.org/pandas-docs/stable/index.html) una trama de datos como salida, pero también puede generar modelos como variables y valores escalares. Por ejemplo, puede de salida de un modelo entrenado como una variable binaria y pasarlo a una instrucción INSERT de T-SQL para escribir ese modelo en una tabla. También puede generar trazados (en formato binario) o valores escalares (valores individuales, como la fecha y hora, transcurrido el tiempo para entrenar el modelo y así sucesivamente).
+
+Por ahora, echemos un vistazo a solo el valor predeterminado las variables de entrada y salidas de sp_execute_external_script: `InputDataSet` y `OutputDataSet`. 
 
 1. Ejecute el siguiente código para realizar algunos cálculos matemáticos y los resultados.
 
-        ```sql
-        execute sp_execute_external_script 
-        @language = N'Python', 
-        @script = N'
-        a = 1
-        b = 2
-        c = a/b
-        print(c)
-        OutputDataSet = c
-        '
-        WITH RESULT SETS ((ResultValue float))
-        ```
+    ```sql
+    execute sp_execute_external_script 
+    @language = N'Python', 
+    @script = N'
+    a = 1
+    b = 2
+    c = a/b
+    print(c)
+    OutputDataSet = c
+    '
+    WITH RESULT SETS ((ResultValue float))
+    ```
 
 2. Debe obtener un error, ya que el código de Python genera un valor escalar, no una trama de datos.
 
-        **Results**
+    **Resultado**
 
-        ```text
-        line 43, in transform
-            raise TypeError('OutputDataSet should be of type pandas.DataFrame')
-        ```
+    ```text
+    line 43, in transform
+        raise TypeError('OutputDataSet should be of type pandas.DataFrame')
+    ```
 
 3. Ahora veamos qué sucede cuando se pasa un conjunto de datos tabular a Python, mediante la variable de entrada predeterminada `InputDataSet`. 
 
@@ -382,4 +379,4 @@ Este ejercicio se diseñó para darle una idea de cómo trabajar con estructuras
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Encapsule el código de Python en un procedimiento almacenado de SQL](wrap-python-in-tsql-stored-procedure.md)
+[Configurar el conjunto de datos de demostración de Iris](demo-data-iris-in-sql.md)

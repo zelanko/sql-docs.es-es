@@ -1,46 +1,46 @@
 ---
-title: Lección 4 características de datos cree mediante funciones de T-SQL (aprendizaje automático de SQL Server) | Documentos de Microsoft
-description: Tutorial que muestra cómo incrustar R en SQL Server los procedimientos almacenados y funciones de T-SQL
+title: Lección 2 características de datos cree mediante las funciones de Transact-SQL (SQL Server Machine Learning) | Microsoft Docs
+description: Tutorial que muestra cómo insertar código de R en SQL Server los procedimientos almacenados y funciones de Transact-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/07/2018
+ms.date: 10/19/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 98182e8e602b8bba8ca7d7fd58cf23f3fcaaa435
-ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
+ms.openlocfilehash: f5427772ea438a198b1236a865e8cdbdd0b09d70
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35249548"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462101"
 ---
-# <a name="lesson-4-create-data-features-using-r-and-t-sql"></a>Lección 4: Crear características de datos mediante R y T-SQL
+# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>Lección 2: Crear características de datos mediante R y T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artículo forma parte de un tutorial para desarrolladores de SQL sobre cómo usar R en SQL Server.
+En este artículo forma parte de un tutorial para desarrolladores de SQL sobre cómo usar R en SQL Server.
 
 En este paso, aprenderá a crear características desde datos sin procesar mediante una función de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Después, llamaremos a esa función desde un procedimiento almacenado para crear una tabla que contiene los valores de las características.
 
-## <a name="about-feature-engineering"></a>Acerca de ingeniería de característica
+## <a name="about-feature-engineering"></a>Acerca de ingeniería de características
 
-Después de varias series de exploración de datos, ha recopilado conocimientos de los datos y está listo para pasar a la *ingeniería de funciones*. Este proceso de creación de funciones significativas de los datos sin procesar es un paso crítico en la creación de modelos analíticos.
+Después de varias series de exploración de datos, ha recopilado conocimientos de los datos y está listo para pasar a la *ingeniería de funciones*. Este proceso de creación de características significativas de los datos sin procesar es un paso crítico en la creación de modelos analíticos.
 
-En este conjunto de datos, los valores de distancia se basan en la distancia de medidor notificados y no representan necesariamente la distancia geográfica o la distancia real recorrida. Por tanto, debe calcular la distancia directa entre los puntos de origen y destino, usando las coordenadas disponibles en el conjunto de datos de origen NYC Taxi. Puede hacerlo mediante la [fórmula Haversine](https://en.wikipedia.org/wiki/Haversine_formula) en un función personalizada de [!INCLUDE[tsql](../../includes/tsql-md.md)] .
+En este conjunto de datos, los valores de distancia se basan en la distancia notificada del taxímetro y no representan necesariamente la distancia geográfica o la distancia real recorrida. Por tanto, debe calcular la distancia directa entre los puntos de origen y destino, usando las coordenadas disponibles en el conjunto de datos de origen NYC Taxi. Puede hacerlo mediante la [fórmula Haversine](https://en.wikipedia.org/wiki/Haversine_formula) en un función personalizada de [!INCLUDE[tsql](../../includes/tsql-md.md)] .
 
 Usará una función personalizada de T-SQL, _fnCalculateDistance_, para calcular la distancia usando la fórmula Haversine, y una segunda función personalizada de T-SQL, _fnEngineerFeatures_, para crear una tabla que contiene todas las características.
 
 El proceso general es como sigue:
 
-- Crear la función de T-SQL que realiza los cálculos
+- Cree la función de T-SQL que realiza los cálculos
 
-- Llame a la función para generar los datos de característica
+- Llame a la función para generar los datos de características
 
-- Guardar los datos de la característica en una tabla
+- Guardar los datos de características a una tabla
 
-## <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calcular la distancia de viaje con fnCalculateDistance
+## <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calcular la distancia de viaje mediante fnCalculateDistance
 
-La función _fnCalculateDistance_ debe haberse descargado y registrado con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como parte de la preparación para este tutorial. Dedique un minuto a revisar el código.
+La función _fnCalculateDistance_ debe haberse descargado y registrado con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como parte de la preparación para este tutorial. Tómese un minuto para revisar el código.
   
 1. En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], expanda **Programación**, expanda **Funciones** y, después, **Funciones escalares**.   
 
@@ -74,9 +74,9 @@ La función _fnCalculateDistance_ debe haberse descargado y registrado con [!INC
   
     - Toma los valores de latitud y longitud como entradas, obtenidos de las ubicaciones de origen y destino de los viajes. La fórmula Haversine convierte ubicaciones en radianes y usa esos valores para calcular la distancia directa en millas entre las dos ubicaciones.
 
-## <a name="generate-the-features-using-fnengineerfeatures"></a>Generar las funciones mediante _fnEngineerFeatures_
+## <a name="generate-the-features-using-fnengineerfeatures"></a>Generar las características mediante _fnEngineerFeatures_
 
-Para agregar los valores calculados para una tabla que se puede usar para entrenar el modelo, deberá usar otra función _fnEngineerFeatures_. La nueva función llama a la función de T-SQL creada anteriormente, _fnCalculateDistance_para obtener la distancia directa entre las ubicaciones de recogida y entrega. 
+Para agregar los valores calculados en una tabla que se puede usar para entrenar el modelo, deberá usar otra función _fnEngineerFeatures_. La nueva función llama a la función de T-SQL creada anteriormente, _fnCalculateDistance_, para obtener la distancia directa entre las ubicaciones de origen y destino. 
 
 1. Tómese un minuto para revisar el código de la función personalizada de T-SQL, _fnEngineerFeatures_, que debe haberse creado como parte de la preparación para este tutorial.
   
@@ -104,11 +104,11 @@ Para agregar los valores calculados para una tabla que se puede usar para entren
     GO
     ```
 
-    + Esta función con valores de tabla que toma varias columnas como entradas y se genera una tabla con varias columnas de característica.
+    + Esta función con valores de tabla que toma varias columnas como entradas y genera una tabla con varias columnas de característica.
 
     + El propósito de esta función es crear nuevas características para su uso en la creación de un modelo.
 
-2.  Para comprobar que funciona esta función, utilice para calcular la distancia geográfica para los viajes y donde la distancia medida 0 pero las ubicaciones de recogida y entrega son diferentes.
+2.  Para comprobar que esta función funciona, usarla para calcular la distancia geográfica de los viajes donde la distancia medida era 0 pero las ubicaciones de origen y destino eran diferentes.
   
     ```SQL
         SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,
@@ -119,12 +119,12 @@ Para agregar los valores calculados para una tabla que se puede usar para entren
         ORDER BY trip_time_in_secs DESC
     ```
   
-    Como puede ver, la distancia notificada por el taxímetro no siempre se corresponde con la distancia geográfica. Por eso es tan importante la ingeniería de características. Puede usar estas características de datos mejoradas para entrenar un modelo de aprendizaje automático mediante R.
+    Como puede ver, la distancia notificada por el taxímetro no siempre se corresponde con la distancia geográfica. Por eso es tan importante la ingeniería de características. Puede usar estas características mejoradas de los datos para entrenar un modelo de aprendizaje automático con R.
 
 ## <a name="next-lesson"></a>Lección siguiente
 
-[Lección 5: Entrenar y guardar un modelo mediante T-SQL](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+[Lección 3: Entrenar y guardar un modelo con T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>Lección anterior
 
-[Lección 3: Explorar y visualizar los datos mediante R y los procedimientos almacenados](../tutorials/sqldev-explore-and-visualize-the-data.md)
+[Lección 1: Explorar y visualizar los datos mediante R y los procedimientos almacenados](sqldev-explore-and-visualize-the-data.md)

@@ -11,12 +11,12 @@ ms.assetid: d96a7a7d-35d7-4b34-abb5-f0822c256253
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 376f93db5b4dbac672846226229858c8ee84f19d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2265baf4c4a342692ae67afcbcc50a0bb0d0a283
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107485"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461981"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Lección 2: Agregar modelos de minería a la estructura de minería cesta de la compra
   En esta lección, agregará dos modelos de minería de datos a la estructura de minería de datos Market Basket que creó en [lección 1: creación de la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Estos modelos de minería de datos le permitirán crear predicciones.  
@@ -28,7 +28,7 @@ ms.locfileid: "48107485"
  Verá el efecto de cambiar la *MINIMUM_PROBABILTY* parámetro en una lección posterior.  
   
 ## <a name="alter-mining-structure-statement"></a>Instrucción ALTER MINING STRUCTURE  
- Para agregar un modelo de minería de datos que contiene una tabla anidada a una estructura de minería de datos, use el [ALTER MINING STRUCTURE &#40;DMX&#41;] (instrucción (~/dmx/alter-mining-structure-dmx.md). El código de la instrucción se puede dividir en las partes siguientes:  
+ Para agregar un modelo de minería de datos que contiene una tabla anidada a una estructura de minería de datos, use el [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) instrucción. El código de la instrucción se puede dividir en las partes siguientes:  
   
 -   Identificación de la estructura de minería de datos  
   

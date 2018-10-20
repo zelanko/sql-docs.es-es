@@ -15,12 +15,12 @@ ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa23f7b520fd224323122f7f3674bbafd25eb53c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f120b4c582be95662a889ab1ee003faae37cdafb
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069165"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460639"
 ---
 # <a name="convert-data-to-a-different-data-type-by-using-the-data-conversion-transformation"></a>Convertir datos en un tipo de datos diferente mediante la transformación Conversión de datos
   Para agregar y configurar una transformación Conversión de datos, el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen.  
@@ -48,17 +48,17 @@ ms.locfileid: "48069165"
   
 9. Opcionalmente, según el tipo de datos seleccionado, actualice los valores en las columnas **Longitud**, **Precisión**, **Escala**, y **Página de códigos** .  
   
-10. Para configurar la salida de error, haga clic en **Configurar la salida de errores**. Para más información, vea [Configurar una salida de error en un componente de flujo de datos](../../configure-an-error-output-in-a-data-flow-component.md).  
+10. Para configurar la salida de error, haga clic en **Configurar la salida de errores**. Para obtener más información, vea [Configurar una salida de error en un componente de flujo de datos](../../configure-an-error-output-in-a-data-flow-component.md).  
   
 11. Haga clic en **Aceptar**.  
   
 12. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
 ## <a name="see-also"></a>Vea también  
- [Transformación conversión de datos](data-conversion-transformation.md)   
+ [Data Conversion Transformation](data-conversion-transformation.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)   
  [Rutas de Integration Services](../integration-services-paths.md)   
  [Tipos de datos de Integration Services](../integration-services-data-types.md)   
- [Tarea de flujo de datos] ((.. /.. /Control-Flow/Data-Flow-Task.MD)  
+ [Tarea Flujo de datos](../../control-flow/data-flow-task.md)  
   
   

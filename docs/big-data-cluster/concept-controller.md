@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 6b3a8f01170fecf21fd85dbb2d85d228430fc100
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb6a999c1ca791eea683e71e37ac788b8018672e
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796792"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460610"
 ---
 # <a name="what-is-the-sql-server-big-data-clusters-controller"></a>¿Qué es el controlador de clústeres de macrodatos de SQL Server?
 
@@ -63,7 +63,7 @@ Autenticación en el punto de conexión de servicio de controlador se basa en el
 ```
 
 > [!NOTE]
-> You must provide a password that is in compliance with [SQL Server password complexity requirements](https://docs.microsoft.com/en-us/sql/relational-databases/security/password-policy?view=sql-server-2017).
+> You must provide a password that is in compliance with [SQL Server password complexity requirements](https://docs.microsoft.com/sql/relational-databases/security/password-policy?view=sql-server-2017).
 
 ## Next steps
 

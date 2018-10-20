@@ -19,12 +19,12 @@ ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc99cd89dc1eeced81d3b199c745df93544ec0a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c4c35b3cc6a1e7b925be09704fccd2d7ed5bc38
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210935"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461911"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Tutorial DMX de Market Basket
   En este tutorial aprenderá a crear, entrenar y explorar modelos de minería de datos utilizando el lenguaje de consulta Extensiones de minería de datos (DMX). A continuación, estos modelos de minería de datos se utilizarán para crear predicciones que describen los productos que tienden a adquirirse simultáneamente.  
@@ -76,7 +76,7 @@ ms.locfileid: "48210935"
   
  Hay varios motivos por los que puede desear agregar más de un modelo de minería de datos en una única estructura de minería de datos. Por ejemplo, podría crear varios modelos de minería de datos utilizando algoritmos distintos para ver cuál funciona mejor. O bien, podría crear varios modelos de minería de datos usando el mismo algoritmo, pero con un parámetro establecido de forma distinta para cada uno de ellos, con el fin de encontrar el mejor valor para el parámetro.  
   
- Para obtener más información, consulte [ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md).  
+ Para obtener más información, consulte [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016).  
   
  Puesto que creará una estructura de minería de datos que contiene varios modelos de minería de datos, utilizará el segundo método en este tutorial.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48210935"
  En esta lección aprenderá a usar la instrucción `ALTER` para agregar modelos de minería de datos a una estructura de minería de datos.  
   
  [Lección 3: Procesar la estructura de minería de Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
- En esta lección, obtendrá información sobre cómo usar el `INSERT INTO` instrucción para procesar estructuras de minería de datos y sus modelos de minería de datos asociados.  
+ En esta lección aprenderá a usar la instrucción `INSERT INTO` para procesar estructuras de minería de datos y sus modelos de minería de datos asociados.  
   
  [Lección 4: Ejecutar predicciones de Market Basket](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
  En esta lección aprenderá a usar la instrucción `PREDICTION JOIN` para crear predicciones basadas en modelos de minería de datos.  
@@ -106,7 +106,7 @@ ms.locfileid: "48210935"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   La base de datos [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]  
+-   La base de datos [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]   
   
  Con el fin de mejorar la seguridad, las bases de datos de ejemplo no se instalan de forma predeterminada. Para instalar las bases de datos de ejemplo oficiales para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vaya a [ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417) o en la página principal de Microsoft SQL Server Samples and Community Projects en la sección Microsoft SQL Server Product Samples. Haga clic en **Databases**y, a continuación en la pestaña **Releases** y seleccione las bases de datos que desee.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48210935"
   
 ## <a name="see-also"></a>Vea también  
  [Tutorial DMX de Bike Buyer](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
- [Tutorial de minería de datos básicos](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Lección 3: Generar un escenario de cesta &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Tutorial básico de minería de datos](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Lección 3: Generar un escenario de cesta de la compra &#40;Tutorial intermedio de minería de datos&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

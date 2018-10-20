@@ -11,12 +11,12 @@ ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 59a10da991e4a6e029d3a108a8bf7aaa744a4972
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8936d7c79538f4cb609f9208c6bd458369093076
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083885"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460930"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>Definir la granularidad de las dimensiones en un grupo de medida
   Los usuarios desearán dimensionar los datos de hechos con una granularidad o especificidad distinta para distintos objetivos. Por ejemplo, los datos de venta para las ventas de proveedor o ventas por Internet pueden registrarse cada día, mientras que es posible que la información sobre cuotas de venta solo exista en el nivel de mes o trimestre. En estos casos, los usuarios desearán una dimensión de tiempo con otra granularidad o un nivel de detalle distinto para cada una de las distintas tablas de hechos. Si bien puede definirse una nueva dimensión de base de datos como una dimensión de tiempo con esta granularidad diferente, hay una forma más fácil de hacerlo con [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -221,7 +221,7 @@ ms.locfileid: "48083885"
      ![Grupo de medida Sales quota con dimensiones correctas](../../2014/tutorials/media/l5-granularity-7.gif "grupo medida Sales Quota bien dimensionado")  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 6: definir cálculos] ((lección-6-definir-calculations.md)  
+ [Lección 6: Definir cálculos](lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Relaciones de dimensión](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

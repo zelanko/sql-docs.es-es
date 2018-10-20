@@ -11,15 +11,15 @@ ms.assetid: 682b8711-407a-48d1-9807-415d4c24dad6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 56e290ef8bf680f44ee11ec2e8d918b7b1d22c76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7e08f483f1f56dcab49391190fd1c6edc11f6db
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091405"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462061"
 ---
 # <a name="example-license-topologies-and-costs--for-sql-server-2014-self-service-business-intelligence"></a>Ejemplos de topologías y costos de licencias para Business Intelligence de autoservicio de SQL Server 2014
-  En este tema se muestra algunas consideraciones de alto nivel para elegir el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edición Business Intelligence o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition. El tema incluye varios ejemplos de topologías locales de Business Intelligence (BI) de autoservicio de Microsoft. Los ejemplos incluyen las ediciones y las licencias que puede utilizar para optimizar el equilibrio entre el costo y el rendimiento. Las topologías, el número de servidores y el costo de las licencias se ofrecen **solo a modo de ejemplo**. Con Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y Microsoft SharePoint 2013 se introdujeron varios cambios en la estructura de licencias que proporcionan más opciones para obtener licencias para servidores, usuarios y dispositivos. Las licencias de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admiten los mismos escenarios de Business Intelligence.  
+  En este tema se indican las consideraciones de alto nivel para seleccionar la edición Business Intelligence de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o la edición Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El tema incluye varios ejemplos de topologías locales de Business Intelligence (BI) de autoservicio de Microsoft. Los ejemplos incluyen las ediciones y las licencias que puede utilizar para optimizar el equilibrio entre el costo y el rendimiento. Las topologías, el número de servidores y el costo de las licencias se ofrecen **solo a modo de ejemplo**. Con Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y Microsoft SharePoint 2013 se introdujeron varios cambios en la estructura de licencias que proporcionan más opciones para obtener licencias para servidores, usuarios y dispositivos. Las licencias de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admiten los mismos escenarios de Business Intelligence.  
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] está disponible en la edición Business Intelligence y ofrece licencias por núcleo para algunas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48091405"
   
 -   Libros PowerPivot interactivos en el explorador.  
   
--   Interactivo [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] informes en SharePoint.  
+-   Informes de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] interactivos en SharePoint.  
   
 -   Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], Actualización de datos programada, Panel de administración.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48091405"
 |Business Intelligence|**(Sí)** $8592 + $199 por CAL|No aplicable|  
 |Estándar|**(Sí)**|**(Sí)**|  
   
- Para obtener más información acerca de ejemplo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los precios de licencias, consulte:  
+ Para obtener más información acerca de los precios de las licencias de ejemplo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea:  
   
 -   [Concesión de licencias para entornos virtuales](http://www.microsoft.com/licensing/about-licensing/virtualization.aspx) (http://www.microsoft.com/licensing/about-licensing/virtualization.aspx).  
   
@@ -124,9 +124,9 @@ ms.locfileid: "48091405"
   
  Las implementaciones de ejemplo son todas entornos de intranet, por lo que es necesaria la licencia CAL de SharePoint.  
   
--   [La lista completa de licencias de SharePoint](http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise) (http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise).  
+-   [La lista completa de licencias de SharePoint](http://technet.microsoft.com/library/jj819267.aspx#bkmk_FeaturesOnPremise) (http://technet.microsoft.com/library/jj819267.aspx#bkmk_FeaturesOnPremise).  
   
--   [Cómo comprar SharePoint](http://sharepoint.microsoft.com/en-in/Pages/buy.aspx) (http://sharepoint.microsoft.com/en-in/Pages/buy.aspx).  
+-   [Cómo comprar SharePoint](http://sharepoint.microsoft.com/Pages/buy.aspx) (http://sharepoint.microsoft.com/Pages/buy.aspx).  
   
 ##  <a name="bkmk_3tier_powerpivot"></a> Topología con independiente de 3 niveles [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] servidores  
  En este ejemplo se muestra que, con 800 usuarios o menos, resulta más económico usar la edición SQL Server BI para los servidores de aplicaciones de SharePoint y los servidores [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. Sin embargo, cuando hay 800 usuarios o más, SQL Server Enterprise Edition resulta más económico. Las licencias basadas en núcleo son independientes del número de usuarios, por lo que hay un punto de umbral de costo en el que se comparan los costos de licencias CAL y de núcleo, y el número de las de los usuarios aumenta. A partir del punto de umbral, la edición Enterprise es la solución más económica. Para determinar el umbral de costo, compare los costos basándose en el número de núcleos para los que necesita licencias con el número de licencias CAL de dispositivo final o de usuario que necesite.  
@@ -158,7 +158,7 @@ ms.locfileid: "48091405"
   
 -   Analysis Services en modo PowerPivot (2) se ejecuta fuera de la granja, pero PowerPivot se ejecuta **en los mismos servidores físicos** con el otro rol de aplicación.  
   
--   El rol de base de datos (3) utiliza SQL Server Enterprise para que el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está disponible la característica grupos de disponibilidad AlwaysOn.  
+-   El rol de base de datos (3) utiliza SQL Server Enterprise, por lo que la característica grupos de disponibilidad AlwaysOn de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está disponible.  
   
  ![bi_license_3tiers](../../../2014/sql-server/install/media/bi-license-3tiers.gif "bi_license_3tiers")  
   

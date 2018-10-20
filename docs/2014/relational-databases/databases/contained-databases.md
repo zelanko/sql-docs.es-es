@@ -16,12 +16,12 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dde4eb098dd034bf136c9885d3da37305068b016
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed3c5436a8c3a922ea1a118714c1b429dcc9f286
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129795"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461080"
 ---
 # <a name="contained-databases"></a>Bases de datos independientes
   Una*base de datos independiente* es una base de datos que está aislada de otras bases de datos y de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ayuda al usuario a aislar su base de datos de la instancia de 4 maneras.  
@@ -34,7 +34,7 @@ ms.locfileid: "48129795"
   
 -   El entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DMV, XEvents, etc.) informa y puede actuar en la información de contención.  
   
- Algunas características de las bases de datos parcialmente independientes, como el almacenamiento de la base de datos, se aplican a todas las bases de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Algunas ventajas de las bases de datos parcialmente independientes, como la autenticación en el nivel de base de datos y la intercalación de catálogo, se deben habilitar para que estén disponibles. Contención parcial se habilita mediante la `CREATE DATABASE` y `ALTER DATABASE` instrucciones o mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información acerca de cómo habilitar la contención parcial de bases de datos, vea [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md).  
+ Algunas características de las bases de datos parcialmente independientes, como el almacenamiento de la base de datos, se aplican a todas las bases de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Algunas ventajas de las bases de datos parcialmente independientes, como la autenticación en el nivel de base de datos y la intercalación de catálogo, se deben habilitar para que estén disponibles. La contención parcial se habilita utilizando las instrucciones `CREATE DATABASE` y de `ALTER DATABASE` o mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información acerca de cómo habilitar la contención parcial de bases de datos, vea [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md).  
   
  Este tema contiene las siguientes secciones.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48129795"
 ### <a name="benefit-of-contained-database-users-with-alwayson"></a>Ventajas de usuarios de bases de datos independientes con AlwaysOn  
  Mediante la reducción de los vínculos a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], las bases de datos parcialmente independientes pueden ser útiles durante la conmutación por error cuando se use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
- La creación de usuarios contenidos permite al usuario conectarse directamente a la base de datos independiente. Esta es una característica muy importante en escenarios de alta disponibilidad y recuperación ante desastres, como en una solución de AlwaysOn. Cuando los usuarios son usuarios contenidos, si que se produce una conmutación por error, podrán conectarse al servidor secundario sin crear inicios de sesión en la instancia que hospeda a este servidor. Esto proporciona una ventaja inmediata. Para obtener más información, consulte [información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) y [requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;] ((.. /.. / database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+ La creación de usuarios contenidos permite al usuario conectarse directamente a la base de datos independiente. Esta es una característica muy importante en escenarios de alta disponibilidad y recuperación ante desastres, como en una solución de AlwaysOn. Cuando los usuarios son usuarios contenidos, si que se produce una conmutación por error, podrán conectarse al servidor secundario sin crear inicios de sesión en la instancia que hospeda a este servidor. Esto proporciona una ventaja inmediata. Para obtener más información, vea [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) y [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### <a name="initial-database-development"></a>Desarrollo inicial de la base de datos  
  Dado que un desarrollador puede no saber dónde se implementará una nueva base de datos, la limitación de los impactos del entorno implementados en la base de datos disminuye el trabajo y la carga del desarrollador. En el modelo dependiente, el desarrollador debe tener en cuenta los posibles impactos del entorno en la nueva base de datos y programar en consecuencia. Sin embargo, las bases de datos parcialmente independientes permiten a los desarrolladores detectar los efectos de nivel de instancia en la base de datos y aspectos en el nivel de instancia que les preocupan.  

@@ -1,21 +1,21 @@
 ---
-title: Lección 6 resultados posibles de predicción mediante modelos de R (SQL Server Machine Learning) | Microsoft Docs
+title: Lección 4 resultados posibles de predicción mediante modelos de R (SQL Server Machine Learning) | Microsoft Docs
 description: Tutorial que muestra cómo insertar código de R en SQL Server los procedimientos almacenados y funciones de Transact-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/08/2018
+ms.date: 10/19/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 03118cec4ee068f5615af7d3319ca8f3172de0c1
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: 07c99279fdb511f1c6f59e15f83644a89642c176
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798575"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462131"
 ---
-# <a name="lesson-6-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>Lección 6: Predecir resultados posibles con un modelo de R en un procedimiento almacenado
+# <a name="lesson-4-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>Lección 4: Predecir resultados posibles con un modelo de R en un procedimiento almacenado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 En este artículo forma parte de un tutorial para desarrolladores de SQL sobre cómo usar R en SQL Server.
@@ -200,4 +200,4 @@ Esto concluye el tutorial. Ahora que ha aprendido a incrustar código R en proce
 
 ## <a name="previous-lesson"></a>Lección anterior
 
-[Lección 5: Entrenar y guardar un modelo de R mediante T-SQL](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+[Lección 3: Entrenar y guardar un modelo de R mediante T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)

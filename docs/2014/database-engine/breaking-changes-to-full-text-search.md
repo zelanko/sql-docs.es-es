@@ -15,12 +15,12 @@ ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 64c8fc3b51cbf6c96b25218a3ea53be4eac12f21
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122405"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460700"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>Cambios principales en la búsqueda de texto completo
   En este tema se describen los principales cambios producidos en la búsqueda de texto completo. Estos cambios pueden provocar errores en las aplicaciones, en los scripts o en las funcionalidades basados en versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Podría encontrar estos problemas al actualizar. Para obtener más información, vea [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "48122405"
 ## <a name="breaking-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>Cambios importantes en la búsqueda de texto completo de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="collation-changed-for-name-column-in-sysfulltextlanguages"></a>Intercalación modificada para la columna de nombre en sys.fulltext_languages  
- La intercalación del idioma **nombre** columna en la vista de catálogo [sys.fulltext_languages &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) ha cambiado de la intercalación fija de la base de datos de recursos para el intercalación seleccionada para la instancia de predeterminada [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Este cambio permite comparar los valores de la **nombre** columna cuando se une a la [sys.syslanguages &#40;Transact-SQL&#41; ](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) ver con **sys.fulltext_languages** . Por ejemplo, puede consultar para todas las bases de datos donde el idioma de texto completo predeterminado es distinto del idioma predeterminado de la base de datos.  
+ La intercalación de la columna de **nombre** de idioma en la vista de catálogo [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) se ha cambiado y ha pasado de la intercalación fija de la base de datos Resource a la intercalación predeterminada que se haya seleccionado para la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Este cambio permite comparar los valores en la columna **nombre** cuando se combina la vista de [sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) con **sys.fulltext_languages**. Por ejemplo, puede consultar para todas las bases de datos donde el idioma de texto completo predeterminado es distinto del idioma predeterminado de la base de datos.  
   
 ## <a name="breaking-changes-in-full-text-search-in-sql-server-2008"></a>Cambios recientes en la búsqueda de texto completo de SQL Server 2008  
  Se aplican los siguientes cambios principales a la búsqueda de texto completo entre [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] y [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] y versiones posteriores.  
@@ -59,6 +59,6 @@ ms.locfileid: "48122405"
   
 ## <a name="see-also"></a>Vea también  
  [Cambios de comportamiento de búsqueda de texto completo](../relational-databases/search/full-text-search.md)   
- [Búsqueda de texto completo] ((.. / relational-databases/search/full-text-search.md)  
+ [Búsqueda de texto completo](../relational-databases/search/full-text-search.md)  
   
   

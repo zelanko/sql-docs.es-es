@@ -16,12 +16,12 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 07ac40b76f19fd8da7fcb4de6425365fe471471d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1809f90f170c0305713d4d054a48bd4a8b0b7048
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054322"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460300"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>Derivar valores de columna mediante la transformación Columna derivada
   Para agregar y configurar una transformación Columna derivada, el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen.  
@@ -53,18 +53,18 @@ ms.locfileid: "48054322"
   
 9. Opcionalmente, modifique los valores de la columna **Nombre de columna derivada** .  
   
-10. Para configurar la salida de error, haga clic en **Configurar la salida de errores**. Para más información, vea [Configurar una salida de error en un componente de flujo de datos](../../configure-an-error-output-in-a-data-flow-component.md).  
+10. Para configurar la salida de error, haga clic en **Configurar la salida de errores**. Para obtener más información, vea [Configurar una salida de error en un componente de flujo de datos](../../configure-an-error-output-in-a-data-flow-component.md).  
   
 11. Haga clic en **Aceptar**.  
   
 12. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
 ## <a name="see-also"></a>Vea también  
- [Transformación columna derivada](derived-column-transformation.md)   
+ [Derived Column Transformation](derived-column-transformation.md)   
  [Tipos de datos de Integration Services](../integration-services-data-types.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)   
  [Rutas de Integration Services](../integration-services-paths.md)   
- [Tarea de flujo de datos] ((.. /.. /Control-Flow/Data-Flow-Task.MD)   
+ [Tarea Flujo de datos](../../control-flow/data-flow-task.md)   
  [Expresiones de Integration Services &#40;SSIS&#41;](../../expressions/integration-services-ssis-expressions.md)  
   
   

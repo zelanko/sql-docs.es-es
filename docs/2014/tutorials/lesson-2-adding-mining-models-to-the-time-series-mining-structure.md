@@ -11,18 +11,18 @@ ms.assetid: 75c2a74b-21ce-44fb-a26b-68be4c685c12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8efde3304c2aa0ff51936754e6cba255d3dce4de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b58723b20802619baf9489f6dd0c6302805301b
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158435"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461951"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de serie temporal
   En esta lección, agregará un nuevo modelo de minería de datos a la estructura de minería de datos que acaba de crear en [lección 1: creación de un modelo de minería de datos de serie temporal y la estructura de minería de datos](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
   
 ## <a name="alter-mining-structure-statement"></a>Instrucción ALTER MINING STRUCTURE  
- Para agregar un nuevo modelo de minería de datos a una estructura de minería de datos existente, se utiliza el [ALTER MINING STRUCTURE &#40;DMX&#41;] (instrucción (~/dmx/alter-mining-structure-dmx.md). El código de la instrucción se puede dividir en las partes siguientes:  
+ Para agregar un nuevo modelo de minería de datos a una estructura de minería de datos existente, se utiliza el [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) instrucción. El código de la instrucción se puede dividir en las partes siguientes:  
   
 -   Identificación de la estructura de minería de datos  
   

@@ -14,12 +14,12 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8ced7cfaef647fb8aaa93a477c69f1d690d0328
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9ed22ac35505515bfd1f4f1863bb55c59f70bef
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213455"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460600"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Ordenar datos para las transformaciones Mezclar y Combinación de mezcla
   En [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], las transformaciones Mezclar y Combinación de mezcla requieren datos ordenados en sus entradas. Los datos de entrada deben estar ordenados físicamente, y se deben establecer opciones de ordenación en las salidas y en las columnas de salida del origen o en la transformación de nivel superior. Si las opciones de ordenación indican que los datos están ordenados, pero en realidad no lo están, los resultados de la operación de mezcla o combinación de mezcla son impredecibles.  
@@ -49,14 +49,14 @@ ms.locfileid: "48213455"
 ## <a name="setting-sort-options-on-the-data"></a>Establecer opciones de ordenación en los datos  
  Hay dos propiedades de ordenación importantes que se deben establecer para el origen o la transformación de nivel superior que proporciona los datos a las transformaciones Mezclar y Combinación de mezcla:  
   
--   La propiedad `IsSorted` de la salida que indica si los datos se han ordenado. Esta propiedad debe establecerse en `True`.  
+-   La propiedad `IsSorted` de la salida que indica si los datos se han ordenado. Esta propiedad debe estar establecida en `True`.  
   
     > [!IMPORTANT]  
-    >  Establecer el valor de la `IsSorted` propiedad `True` no se ordenan los datos. Esta propiedad únicamente proporciona una sugerencia a los componentes de nivel inferior acerca de que los datos se han ordenado previamente.  
+    >  Aunque se establezca el valor de la propiedad `IsSorted` en `True`, los datos no se ordenan. Esta propiedad únicamente proporciona una sugerencia a los componentes de nivel inferior acerca de que los datos se han ordenado previamente.  
   
--   El `SortKeyPosition` propiedad de las columnas de salida que indica si una columna está ordenada, criterio de ordenación de la columna y la secuencia en la que se ordenan varias columnas. Esta propiedad se debe establecer para cada columna de datos ordenados.  
+-   La propiedad `SortKeyPosition` de las columnas de salida que indica si una columna está ordenada, el criterio de ordenación de ésta y la secuencia en la que se ordenan varias columnas. Esta propiedad se debe establecer para cada columna de datos ordenados.  
   
- Si usa una transformación Ordenar para ordenar los datos, esta transformación establece ambas propiedades como requeridas por la transformación Mezclar o Combinación de mezcla. Es decir, la transformación Ordenar establece la `IsSorted` propiedad de su salida en `True`y establece el `SortKeyPosition` propiedades de sus columnas de salida.  
+ Si usa una transformación Ordenar para ordenar los datos, esta transformación establece ambas propiedades como requeridas por la transformación Mezclar o Combinación de mezcla. Es decir, la transformación Ordenar establece la propiedad `IsSorted` de su salida en `True`, y establece las propiedades `SortKeyPosition` de sus columnas de resultados.  
   
  Sin embargo, si no usa una transformación Ordenar para ordenar los datos, debe establecer estas propiedades de ordenación manualmente en el origen o en la transformación de nivel superior. Para establecer manualmente las propiedades de ordenación en el origen o en la transformación de nivel superior, use el procedimiento siguiente.  
   
@@ -75,11 +75,11 @@ ms.locfileid: "48213455"
 6.  Haga clic en  **\<nombre de componente > salida**y establezca el `IsSorted` propiedad `True`.  
   
     > [!NOTE]  
-    >  Si establece manualmente la `IsSorted` propiedad de la salida en `True` y los datos no están ordenados, es posible que falten datos o comparaciones de datos incorrectos en la transformación de nivel inferior mezclar o combinación de mezcla al ejecutar el paquete.  
+    >  Si establece manualmente la propiedad `IsSorted` de la salida en `True` y los datos no están ordenados, es posible que falten datos o haya comparaciones de datos no válidas en la transformación de nivel inferior Mezclar o Combinación de mezcla al ejecutar el paquete.  
   
 7.  Expanda **Columnas de salida**.  
   
-8.  Haga clic en la columna que desea indicar esté ordenada y establezca su `SortKeyPosition` propiedad en un valor entero distinto de cero siguiendo estas instrucciones:  
+8.  Haga clic en la columna que desea indicar que esté ordenada y establezca su propiedad `SortKeyPosition` en un valor entero distinto de cero siguiendo estas instrucciones:  
   
     -   El valor entero debe representar una secuencia numérica, a partir de 1 y con incrementos de 1.  
   
@@ -93,13 +93,13 @@ ms.locfileid: "48213455"
   
      `SELECT * FROM MyTable ORDER BY ColumnA, ColumnB DESC, ColumnC`  
   
-     Para esta instrucción, se establecería el `SortKeyPosition` propiedad para cada columna como sigue:  
+     Para esta instrucción, se establecería la propiedad `SortKeyPosition` para cada columna de la manera siguiente:  
   
     -   Establezca la propiedad `SortKeyPosition` de ColumnA en 1. Esto indica que ColumnA es la primera columna que se va a ordenar y se hará en orden ascendente.  
   
     -   Establezca la propiedad `SortKeyPosition` de ColumnB en -2. Esto indica que ColumnB es la segunda columna que se va a ordenar y se hará en orden descendente.  
   
-    -   Establecer el `SortKeyPosition` propiedad de ColumnC en 3. Esto indica que ColumnC es la tercera columna que se va a ordenar y se hará en orden ascendente.  
+    -   Establezca la propiedad `SortKeyPosition` de ColumnC en 3. Esto indica que ColumnC es la tercera columna que se va a ordenar y se hará en orden ascendente.  
   
 9. Repita el paso 8 para cada columna ordenada.  
   
@@ -108,10 +108,10 @@ ms.locfileid: "48213455"
 11. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
 ## <a name="see-also"></a>Vea también  
- [Transformación mezclar](merge-transformation.md)   
- [Transformación combinación de mezcla](merge-join-transformation.md)   
+ [Transformación Mezclar](merge-transformation.md)   
+ [Transformación Combinación de mezcla](merge-join-transformation.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)   
  [Rutas de Integration Services](../integration-services-paths.md)   
- [Tarea de flujo de datos] ((.. /.. /Control-Flow/Data-Flow-Task.MD)  
+ [Tarea Flujo de datos](../../control-flow/data-flow-task.md)  
   
   

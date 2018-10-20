@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/08/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 02a1aa7299173315e4f4d6a60eae5f166e8fcdfe
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: f998c9f9df91f08d3a4e1877942b901ae5d96aeb
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48877898"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460660"
 ---
 # <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>Cómo implementar el clúster de SQL Server Big Data en Kubernetes
 
@@ -47,6 +47,9 @@ Para obtener instrucciones sobre cómo configurar una de estas opciones de clús
 
    - [Configurar Minikube](deploy-on-minikube.md)
    - [Configuración de Kubernetes en Azure Kubernetes Service](deploy-on-aks.md)
+   
+> [!TIP]
+> Para un script de python de ejemplo que implementa el clúster de macrodatos AKS y SQL Server, vea [implementar un clúster de macrodatos en Azure Kubernetes Service (AKS) de SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
 
 ## <a id="deploy"></a> Implementación de clúster de SQL Server Big Data
 
@@ -88,7 +91,7 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssql
 
 La configuración del clúster puede personalizarse mediante un conjunto de variables de entorno que se pasan a la `mssqlctl create cluster` comando. La mayoría de las variables de entorno es opcional con avalues predeterminado como se indica a continuación. Tenga en cuenta que hay variables de entorno como las credenciales que requieren intervención del usuario.
 
-| Variable de entorno | Necesario | Valor predeterminado | Descripción |
+| Variable de entorno | Obligatorio | Valor predeterminado | Descripción |
 |---|---|---|---|
 | **ACCEPT_EULA** | Sí | N/D | Acepte el contrato de licencia de SQL Server (por ejemplo, ' Y').  |
 | **NOMBREDECLÚSTER** | Sí | N/D | El nombre del espacio de nombres para implementar el clúster de Macrodatos de SQLServer en Kubernetes. |
@@ -108,8 +111,8 @@ La configuración del clúster puede personalizarse mediante un conjunto de vari
 | **CONTROLLER_PASSWORD** | Sí | N/D | La contraseña para el Administrador de clústeres. |
 | **KNOX_PASSWORD** | Sí | N/D | La contraseña de usuario de Knox. |
 | **MSSQL_SA_PASSWORD** | Sí | N/D | La contraseña del usuario SA para la instancia principal de SQL. |
-| **USE_PERSISTENT_VOLUME** | no | true | `true` Para usar notificaciones de volumen persistente de Kubernetes para el almacenamiento de pod.  `false` uso del almacenamiento efímero host para el almacenamiento de pod. Consulte la [persistencia de datos](concept-data-persistence.md) tema para obtener más detalles. |
-| **STORAGE_CLASS_NAME** | no | predeterminados | Si `USE_PERSISTENT_VOLUME` es `true` indica el nombre de la clase de almacenamiento de Kubernetes para usar. Consulte la [persistencia de datos](concept-data-persistence.md) tema para obtener más detalles. |
+| **USE_PERSISTENT_VOLUME** | no | true | `true` Para usar notificaciones de volumen persistente de Kubernetes para el almacenamiento de pod.  `false` uso del almacenamiento efímero host para el almacenamiento de pod. Consulte la [persistencia de datos](concept-data-persistence.md) tema para obtener más detalles. Si implementa SQL Server datos de gran tamaño de clúster de minikube y USE_PERSISTENT_VOLUME = true, debe establecer el valor de `STORAGE_CLASS_NAME=standard`. |
+| **STORAGE_CLASS_NAME** | no | predeterminados | Si `USE_PERSISTENT_VOLUME` es `true` indica el nombre de la clase de almacenamiento de Kubernetes para usar. Consulte la [persistencia de datos](concept-data-persistence.md) tema para obtener más detalles. Tenga en cuenta que si implementa un clúster de macrodatos en minikube de SQL Server, el nombre de clase de almacenamiento predeterminada es diferente y se debe invalidar estableciendo `STORAGE_CLASS_NAME=standard`. |
 | **MASTER_SQL_PORT** | no | 31433 | El puerto TCP/IP que escucha la instancia SQL maestra de la red pública. |
 | **KNOX_PORT** | no | 30443 | El puerto TCP/IP que Knox Apache escucha en la red pública. |
 | **GRAFANA_PORT** | no | 30888 | El puerto TCP/IP que escucha la aplicación de supervisión de Grafana de la red pública. |
@@ -122,7 +125,7 @@ La configuración del clúster puede personalizarse mediante un conjunto de vari
 >1. Para un clúster local con kubeadm, el valor de variable de entorno `CLUSTER_PLATFORM` es `kubernetes`. También, cuando USE_PERSISTENT_STORAGE = true, debe aprovisionar previamente una clase de almacenamiento de Kubernetes y pasarlo a través del uso de la STORAGE_CLASS_NAME.
 >1. Asegúrese de que incluir las contraseñas en las comillas dobles si contiene algún carácter especial. Puede establecer el MSSQL_SA_PASSWORD que prefiera, pero asegúrese de que son lo suficientemente complejos y no utilizar la `!`, `&` o `‘` caracteres. Tenga en cuenta que los delimitadores de comillas dobles solo funcionan en los comandos de bash.
 >1. El nombre del clúster debe ser solo alfanuméricos caracteres en minúsculas, sin espacios en blanco. Todos los artefactos de Kubernetes (contenedores, pods, conjuntos con estado, los servicios) para el clúster se creará en un espacio de nombres con el mismo nombre que el clúster de nombre especificado.
->1. El **SA** cuenta es un administrador del sistema en la instancia maestra de SQL Server que se crea durante la instalación. Después de crear el contenedor de SQL Server, la variable de entorno MSSQL_SA_PASSWORD especificada es detectable mediante la ejecución de eco MSSQL_SA_PASSWORD $ en el contenedor. Por motivos de seguridad, cambiar la contraseña de SA según los procedimientos recomendados que se documentan [aquí](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
+>1. El **SA** cuenta es un administrador del sistema en la instancia maestra de SQL Server que se crea durante la instalación. Después de crear el contenedor de SQL Server, la variable de entorno MSSQL_SA_PASSWORD especificada es detectable mediante la ejecución de eco MSSQL_SA_PASSWORD $ en el contenedor. Por motivos de seguridad, cambiar la contraseña de SA según los procedimientos recomendados que se documentan [aquí](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Establecer las variables de entorno necesarias para implementar Aris clúster es diferente dependiendo de si se utiliza el cliente de Windows o Linux.  Elija los pasos siguientes, dependiendo del sistema operativo que esté utilizando.
 
@@ -149,6 +152,15 @@ SET DOCKER_EMAIL=<your Docker email, use same as username provided>
 SET DOCKER_PRIVATE_REGISTRY="1"
 ```
 
+En minikube, si USE_PERSISTENT_VOLUME = true (valor predeterminado), también debe reemplazar el valor predeterminado de la variable de entorno STORAGE_CLASS_NAME:
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+Como alternativa, puede a suprimir con volúmenes persistentes en minikube:
+```
+SET USE_PERSISTENT_VOLUME=false
+```
 ### <a name="linux"></a>Linux
 
 Inicialice las variables de entorno siguientes:
@@ -170,6 +182,15 @@ export DOCKER_EMAIL=<your Docker email, use same as username provided>
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
+En minikube, si USE_PERSISTENT_VOLUME = true (valor predeterminado), también debe reemplazar el valor predeterminado de la variable de entorno STORAGE_CLASS_NAME:
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+Como alternativa, puede a suprimir con volúmenes persistentes en minikube:
+```
+SET USE_PERSISTENT_VOLUME=false
+```
 ## <a name="deploy-sql-server-big-data-cluster"></a>Implementación de clúster de SQL Server Big Data
 
 La API de creación de clústeres se utiliza para inicializar el espacio de nombres de Kubernetes e implementar todos los pods de aplicación en el espacio de nombres. Para implementar el clúster de SQL Server Big Data en el clúster de Kubernetes, ejecute el siguiente comando:

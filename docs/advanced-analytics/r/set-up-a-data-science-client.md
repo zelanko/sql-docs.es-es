@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 309a78a2195f55a3ec39604b0c2bd385bb06a271
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: a88269ff6b55aa473c48cfa0937e926770bbaff1
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724319"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462111"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Configurar un cliente de ciencia de datos para el desarrollo de R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -94,7 +94,7 @@ Si el código requiere que los paquetes que no se instalan de forma predetermina
 
 ## <a name="4---test-connections"></a>4 - probar conexiones
 
-SQL Server debe habilitarse para [conexiones remotas](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md) y debe tener permisos, incluido un inicio de sesión de usuario y para conectarse a una base de datos. Los siguientes pasos supone que la base de datos de demostración, [NYCTaxi_Sample](../tutorials/sqldev-download-the-sample-data.md) y la autenticación de Windows.
+SQL Server debe habilitarse para [conexiones remotas](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md) y debe tener permisos, incluido un inicio de sesión de usuario y para conectarse a una base de datos. Los siguientes pasos supone que la base de datos de demostración, [NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md) y la autenticación de Windows.
 
  Como paso de verificación, utilice una herramienta integrada y RevoScaleR para confirmar la conectividad al servidor remoto.
 

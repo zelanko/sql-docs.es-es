@@ -41,9 +41,9 @@ items:
   - name: Replicación en suscriptores de tablas con optimización para memoria
     href: replication-to-memory-optimized-table-subscribers.md
   - name: Replicación a SQL Database
-    href: https://docs.microsoft.com/en-us/azure/sql-database/replication-to-sql-database
+    href: https://docs.microsoft.com/azure/sql-database/replication-to-sql-database
   - name: Replicación con SQL Database
-    href: https://docs.microsoft.com/en-us/azure/sql-database/replication-with-sql-database-managed-instance.md
+    href: https://docs.microsoft.com/azure/sql-database/replication-with-sql-database-managed-instance.md
   - name: Volver a publicar datos
     href: republish-data.md
   - name: Replicación por Internet
@@ -619,9 +619,9 @@ items:
   items:
   - name: Encontrar errores con replicación transaccional
     href: troubleshoot-tran-repl-errors.md
-ms.openlocfilehash: 337f649be0c9fa4187bd9930d3237beb40355a13
-ms.sourcegitcommit: 35f34b5aedb97b14c448b8f68084ea70ddd532fe
+ms.openlocfilehash: e857dc57b68598d6adbc521f0b86e194e5278acb
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47234457"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461010"

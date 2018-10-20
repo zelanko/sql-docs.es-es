@@ -3,17 +3,17 @@ title: Arquitectura de extensibilidad en SQL Server Machine Learning Services | 
 description: Compatibilidad con código externo para el motor de base de datos de SQL Server, con la arquitectura de doble para ejecutar el script de R y Python en datos relacionales.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/05/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2a09f5ddfe39a122205f132b6901d8c8a99e5ad2
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: c2ada06ce41cd9a5faf3237ce2b9bac6fc40291d
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878188"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419223"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Arquitectura de extensibilidad en SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +52,7 @@ Los componentes incluyen una **Launchpad** servicio que se usa para invocar el l
 
 ## <a name="launchpad"></a>Launchpad
 
-Trusted Launchpad de SQL Server es un servicio que administra y ejecuta scripts externos, similares a la forma en que el servicio de indización y consulta de texto completo inicia un host independiente para el procesamiento de consultas de texto completo. El servicio Launchpad puede empezar a solo los selectores de confianza publicados por Microsoft o que se han certificado por Microsoft que cumplan los requisitos de rendimiento y administración de recursos.
+El [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] es un servicio que administra y ejecuta scripts externos, similares a la forma en que el servicio de indización y consulta de texto completo inicia un host independiente para el procesamiento de consultas de texto completo. El servicio Launchpad puede empezar a solo los selectores de confianza publicados por Microsoft o que se han certificado por Microsoft que cumplan los requisitos de rendimiento y administración de recursos.
 
 | Selectores de confianza | Extensión | Versiones de SQL Server |
 |-------------------|-----------|---------------------|
@@ -60,6 +60,8 @@ Trusted Launchpad de SQL Server es un servicio que administra y ejecuta scripts 
 | Pythonlauncher.dll para Python 3.5 | [Extensión de Python](extension-python.md) | SQL Server 2017 |
 
 El servicio [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] se ejecuta en su propia cuenta de usuario. Si cambia la cuenta que ejecuta Launchpad, asegúrese de hacerlo con el Administrador de configuración de SQL Server, para asegurarse de que los cambios se escriben en archivos relacionados.
+
+Otro [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] servicio se crea para cada instancia del motor de base de datos a la que ha agregado SQL Server Machine Learning Services. Hay un Launchpad servicio para cada instancia del motor de base de datos, por lo que si tiene varias instancias con compatibilidad con scripts externos, tendrá un servicio Launchpad para cada uno de ellos. Una instancia del motor de base de datos se enlaza al servicio Launchpad que se creó para él. Todas las invocaciones de script externo en un procedimiento almacenado o resultado de Transact-SQL en el servicio de SQL Server que llamar al servicio Launchpad creado para la misma instancia.
 
 Para ejecutar tareas en un lenguaje compatible específico, Launchpad Obtiene una cuenta de trabajo protegidos del grupo e inicia un proceso satélite para administrar el tiempo de ejecución externo. Cada proceso satélite herede de la cuenta de usuario de Launchpad y usa esa cuenta de trabajo para la duración de ejecución del script. Si la secuencia de comandos utiliza procesos en paralelo, se crean bajo la cuenta de trabajo de la misma, una sola.
 

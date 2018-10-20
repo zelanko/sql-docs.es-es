@@ -4,7 +4,7 @@ description: En este artículo se describe la replicación de SQL Server en Linu
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 03/20/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.technology: database-engine
 ms.assetid: ''
 ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6c4bad8947944d59208a0516e5950d36f64a84e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2bef97eb018e35179f0f9288f18bf170b04ae630
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734133"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390847"
 ---
 # <a name="sql-server-replication-on-linux"></a>Replicación de SQL Server en Linux
 
@@ -34,7 +34,7 @@ Una instancia de SQL Server puede participar en cualquier rol de replicación:
 * Distribuidor
 * Suscriptor
 
-Un esquema de replicación puede mezclar y combinar las plataformas de sistema operativo. Por ejemplo, un esquema de replicación puede utilizar instancias de SQL Server en Linux para el publicador y el distribuidor y los suscriptores pueden incluir instancias de SQL Server en Windows.
+Un esquema de replicación puede mezclar y combinar las plataformas de sistema operativo. Por ejemplo, un esquema de replicación puede incluir una instancia de SQL Server en Linux para el publicador y el distribuidor y los suscriptores son instancias de SQL Server en Windows como Linux.
 
 Instancias de SQL Server en Linux pueden participar en cualquier tipo de replicación.
 
@@ -62,6 +62,7 @@ Para [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] se admiten las sigu
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] no se admiten las siguientes características:
 
 * Suscriptores de actualización inmediata
+* Publicación de Oracle
 
 ## <a name="next-steps"></a>Pasos siguientes
 

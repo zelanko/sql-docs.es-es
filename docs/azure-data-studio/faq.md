@@ -4,18 +4,18 @@ description: Preguntas más frecuentes (P+F para Azure Data Studio).
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8e1178ba2b28ddf2e7db3fc381b15f01ecd428b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b34723e800d3dc21928dcdbb5dc9871ecbbcdb5f
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48039139"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356356"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] PREGUNTAS MÁS FRECUENTES
 
@@ -80,7 +80,7 @@ No. Se seguirán las inversiones en herramientas de Windows de estrella (SSMS, S
 
 ### <a name="shell-features"></a>Características de shell
 
-|Característica|Studio datos de Azure|SSMS|
+|Característica|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |El inicio de sesión Azure|Sí|Sí|
 |Panel|Sí| |
@@ -102,7 +102,7 @@ No. Se seguirán las inversiones en herramientas de Windows de estrella (SSMS, S
 
 ### <a name="query-editor"></a>Editor de consultas
 
-|Característica|Studio datos de Azure|SSMS|
+|Característica|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Visor de gráficos|Sí||
 |Resultados de la exportación a CSV, JSON, XLSX|Sí||
@@ -116,11 +116,11 @@ No. Se seguirán las inversiones en herramientas de Windows de estrella (SSMS, S
 |Resultados a texto||Sí|
 |Visor espacial||Sí|
 |SQLCMD||Sí|
-|Depurador de Transact-SQL||Sí|
+|Depurador de T-SQL||Sí|
 
 ### <a name="operating-system-support"></a>Sistemas operativos admitidos
 
-|Característica|Studio datos de Azure|SSMS|
+|Característica|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Windows|Sí|Sí|
 |macOS|Sí||
@@ -128,7 +128,7 @@ No. Se seguirán las inversiones en herramientas de Windows de estrella (SSMS, S
 
 ### <a name="data-engineering"></a>Ingeniería de datos
 
-|Característica|Studio datos de Azure|SSMS|
+|Característica|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Asistente para datos externos|Vista previa||
 |Integración de HDFS|Vista previa||
@@ -136,7 +136,7 @@ No. Se seguirán las inversiones en herramientas de Windows de estrella (SSMS, S
 
 ### <a name="database-administration"></a>Administración de bases de datos
 
-|Característica|Studio datos de Azure|SSMS|
+|Característica|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Copia de seguridad y restauración|Sí|Sí|
 |Importación de archivos planos|Vista previa|Sí|

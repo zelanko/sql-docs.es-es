@@ -5,17 +5,17 @@ ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
-ms.prod_service: sql-tools
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b458234f0a166f3dc820cbfa58269bb90d7c33b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d218f80067c3dd5a03ced864b815c68aa84a582e
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48039075"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460250"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>Introducción a [!INCLUDE[name-sos](../includes/name-sos-short.md)] extensibilidad
 
@@ -112,7 +112,7 @@ Para hacer referencia al contenedor registrado, especifique el identificador del
 
 `dashboard.insights`
 
-Puede registrar información mediante dashboard.insights. Esto es similar a [Tutorial: crear un widget de datos personalizados](https://docs.microsoft.com/en-us/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+Puede registrar información mediante dashboard.insights. Esto es similar a [Tutorial: crear un widget de datos personalizados](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
 
 ```json
 "dashboard.insights": {

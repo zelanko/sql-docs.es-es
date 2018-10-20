@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 541675c22ddbe347f67119d8cba82f75955382e6
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 5cafb253cea118148bd654ea770234843f742838
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48877989"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383340"
 ---
 # <a name="sql-server-python-tutorials"></a>Tutoriales de Python de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,29 +56,6 @@ Estos ejemplos y demostraciones proporcionadas por el equipo de desarrollo de SQ
 + [Realizar el cliente agrupación en clústeres con Python y SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
 
     Obtenga información sobre cómo usar el algoritmo de Kmeans para realizar una agrupación en clústeres no supervisado de los clientes.
-
-## <a name="bkmk_Prerequisites"></a>Requisitos previos
-
-Para utilizar estos tutoriales, debe tener SQL Server 2017, y debe instalar explícitamente y, a continuación, habilitar la característica, Machine Learning Services (In-Database). 
-
-SQL Server 2017 admite los lenguajes R y Python, pero no está instalado o habilitado de forma predeterminada. La ejecución de Python requiere que esté habilitado el marco de extensibilidad y seleccionar Python como el idioma que desea instalar. 
-
-### <a name="post-installation-configuration-tips"></a>Sugerencias de configuración posteriores a la instalación
-
-Después de ejecutar el programa de instalación de SQL Server, es posible que necesite realizar algunos pasos adicionales para asegurarse de que se están comunicando Python y SQL Server:
-
-+ Habilitar la característica de ejecución de scripts externos ejecutando `sp_configure 'external scripts enabled', 1`.
-+ Reinicie el servidor. 
-+ Abra el **servicios** panel para comprobar si ha iniciado el Launchpad. 
-+ Asegúrese de que el servicio que llama el tiempo de ejecución externo tiene los permisos necesarios. Para obtener más información, consulte [habilita la autenticación implícita](../security/add-sqlrusergroup-to-database.md).
-+ Abrir un puerto en el firewall para SQL Server y habilitar los protocolos de red necesarios.
-+ Asegúrese de que la cuenta de usuario de Windows o inicio de sesión SQL tiene los permisos necesarios para conectarse al servidor, para leer los datos y para crear los objetos de base de datos requeridos por el ejemplo.
-
-Consulte este artículo para algunos problemas comunes: [solución de problemas de servicios de Machine Learning](../machine-learning-troubleshooting-faq.md)
-
-### <a name="resource-management"></a>Administración de recursos
-
-Puede instalar R y Python en el mismo equipo, pero ambos se ejecutan puede requerir muchos recursos. Si se producen errores de "memoria insuficiente", o si la ejecución de trabajos de machine learning es el que uso del servidor previsto de la entidad de seguridad, puede reducir la cantidad de memoria asignada al motor de base de datos. Para obtener más información, consulte [administración y supervisión de Python en SQL Server](../python/managing-and-monitoring-python-solutions.md).
 
 ## <a name="see-also"></a>Vea también
 

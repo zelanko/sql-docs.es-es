@@ -16,12 +16,12 @@ ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cfe08cf1c21a4187008bb80a1f742ba35da7e9ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c9538a492ae6f2da0c4a5adeceb86bd7985d539
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131765"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460290"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>Identificar filas de datos similares mediante la transformación Agrupación aproximada
   Para agregar y configurar una transformación Agrupación aproximada, el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen.  
@@ -81,9 +81,9 @@ ms.locfileid: "48131765"
 20. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
 ## <a name="see-also"></a>Vea también  
- [Transformación Agrupación aproximada](fuzzy-grouping-transformation.md)   
+ [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)   
  [Rutas de Integration Services](../integration-services-paths.md)   
- [Tarea de flujo de datos] ((.. /.. /Control-Flow/Data-Flow-Task.MD)  
+ [Tarea Flujo de datos](../../control-flow/data-flow-task.md)  
   
   

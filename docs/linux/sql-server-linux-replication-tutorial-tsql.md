@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f3569b1026ab8eded80164610ab8581209de7e9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13359f151ef1453a7bc8b2020dc4cd8db9a13b80
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669313"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390837"
 ---
 # <a name="configure-replication-with-t-sql"></a>Configurar la replicación con Transact-SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)] 
 
-En este tutorial configurará la replicación de instantáneas de SQL Server en Linux con 2 instancias de SQL Server mediante Transact-SQL. El publicador y distribuidor será la misma instancia, y el suscriptor estará en una instancia independiente.
+En este tutorial configurará la replicación de instantáneas de SQL Server en Linux con dos instancias de SQL Server mediante Transact-SQL. El publicador y distribuidor será la misma instancia, y el suscriptor estará en una instancia independiente.
 
 > [!div class="checklist"]
 > * Habilitar a los agentes de replicación de SQL Server en Linux
@@ -38,7 +38,7 @@ Todas las configuraciones de replicación se pueden configurar con [procedimient
 ## <a name="prerequisites"></a>Requisitos previos  
 Para completar este tutorial, necesitará:
 
-- 2 instancias de SQL Server con la versión más reciente de SQL Server en Linux
+- Dos instancias de SQL Server con la versión más reciente de SQL Server en Linux
 - Una herramienta para las consultas de T-SQL de problema para configurar la replicación, como SQLCMD o SSMS
 
   Consulte [usar SSMS para administrar SQL Server en Linux](./sql-server-linux-manage-ssms.md).
@@ -50,15 +50,6 @@ Para completar este tutorial, necesitará:
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
   sudo systemctl restart mssql-server
-  ```
-
-1. Configure su instancia de SQL Server para la replicación ejecute el siguiente procedimiento almacenado en la base de datos msdb para cada instancia CTP1.5 participa en la replicación de SQL Server.
-
-  ```sql
-  USE msdb
-  GO
-  exec sys.sp_MSrepl_createdatatypemappings;
-  GO
   ```
 
 1. Crear base de datos de ejemplo y tabla en el publicador crea una base de datos de ejemplo y una tabla que actuará como los artículos para una publicación.
@@ -282,7 +273,7 @@ Para completar este tutorial, necesitará:
   SELECT * from [Sales].[dbo].[CUSTOMER]
   ```
 
-En este tutorial ha configurado la replicación de instantáneas de SQL Server en Linux con 2 instancias de SQL Server mediante Transact-SQL.
+En este tutorial, ha configurado la replicación de instantáneas de SQL Server en Linux con dos instancias de SQL Server mediante Transact-SQL.
 
 > [!div class="checklist"]
 > * Habilitar a los agentes de replicación de SQL Server en Linux

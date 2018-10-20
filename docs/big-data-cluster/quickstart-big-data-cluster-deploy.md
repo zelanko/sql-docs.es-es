@@ -7,16 +7,16 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: 5781b3acfd2262b3a3be540abb331839dfcc56c6
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 839823f9336a09b0790ee41b74793e548742c1d5
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120462"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384110"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Inicio rápido: Implementación de clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)
 
-En este tutorial, instalará clúster grande de datos de SQL Server en AKS en una configuración predeterminada adecuada para entornos de desarrollo y pruebas. Además de la instancia maestra de SQL, el clúster incluirá la instancia del grupo de un proceso, instancia del grupo de datos de uno y dos instancias del grupo de almacenamiento. Datos se conservarán con volúmenes persistentes de Kubernetes que se aprovisionan sobre clases de almacenamiento predeterminada AKS. En el [instrucciones de implementación](deployment-guidance.md) tema puede encontrar un conjunto de variables de entorno que puede usar para personalizar aún más la configuración.
+Instale el clúster de macrodatos de SQL Server en AKS en una configuración predeterminada adecuada para entornos de desarrollo y pruebas. Además de una instancia de SQL Master, el clúster incluye dos instancias del grupo de almacenamiento, una instancia del grupo de datos y proceso de una instancia del grupo. Datos se guardan con volúmenes persistentes de Kubernetes que usan clases de almacenamiento predeterminada AKS. Para personalizar aún más la configuración, consulte las variables de entorno en [instrucciones de implementación](deployment-guidance.md).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -24,11 +24,11 @@ En este tutorial, instalará clúster grande de datos de SQL Server en AKS en un
 
 Este inicio rápido requiere que ya ha configurado un clúster de AKS con una versión mínima de v1.10. Para obtener más información, consulte el [implementar en AKS](deploy-on-aks.md) guía.
 
-En el equipo que está usando para ejecutar los comandos para instalar el clúster de macrodatos de SQL Server, deberá instalar [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Clúster de macrodatos de SQL Server requiere una versión de 1,10 mínima de Kubernetes, de servidor y cliente (kubectl). Para instalar kubectl, consulte [instalar kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). 
+En el equipo que está usando para ejecutar los comandos para instalar el clúster de macrodatos de SQL Server, instale [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Clúster de macrodatos de SQL Server requiere una versión de 1,10 mínima de Kubernetes, de servidor y cliente (kubectl). Para instalar kubectl, consulte [instalar kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl). 
 
-Para instalar el `mssqlctl` herramienta CLI para administrar los datos grandes de SQL Server del clúster en el equipo cliente, primero debe instalar [Python](https://www.python.org/downloads/) v3.0 versión mínima y [pip3](https://pip.pypa.io/en/stable/installing/). Tenga en cuenta que ya está instalado pip si está utilizando una versión de Python de al menos 3.4 descargados de [python.org](https://www.python.org/).
+Para instalar el `mssqlctl` herramienta CLI para administrar los datos grandes de SQL Server del clúster en el equipo cliente, primero debe instalar [Python](https://www.python.org/downloads/) v3.0 versión mínima y [pip3](https://pip.pypa.io/en/stable/installing/). `pip` ya está instalada si está utilizando una versión de Python de al menos 3.4 descargados de [python.org](https://www.python.org/).
 
-Si la instalación de Python no se encuentra el `requests` paquete, debe instalar `requests` mediante `python -m pip install requests`. Si ya tiene un `requests` paquete lo actualice a la versión más reciente mediante `python -m pip install requests --upgrade`.
+Si la instalación de Python no se encuentra el `requests` paquete, debe instalar `requests` mediante `python -m pip install requests`. Si ya tiene un `requests` empaquetar, actualizarla a la versión más reciente mediante `python -m pip install requests --upgrade`.
 
 ## <a name="verify-aks-configuration"></a>Comprobar la configuración de AKS
 
@@ -40,7 +40,7 @@ kubectl config view
 
 ## <a name="install-mssqlctl-cli-management-tool"></a>Instalar la herramienta de administración de CLI mssqlctl
 
-Ejecute el siguiente comando para instalar `mssqlctl` herramienta en el equipo cliente. Mismo comando funciona desde un Windows y un cliente Linux, pero asegúrese de que se está ejecutando desde una ventana de cmd que se ejecuta con los privilegios administrativos en Windows o utilice como prefijo `sudo` en Linux:
+Ejecute el siguiente comando para instalar `mssqlctl` herramienta en el equipo cliente. El comando funciona desde un Windows y un cliente Linux, pero asegúrese de que se está ejecutando desde una ventana de cmd que se ejecuta con privilegios administrativos en Windows o un prefijo con `sudo` en Linux:
 
 ```
 pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl  
@@ -52,16 +52,17 @@ Establecer las variables de entorno necesarias para implementar el clúster de m
 
 Antes de continuar, tenga en cuenta las siguientes directrices importantes:
 
-- Asegúrese de que incluir las contraseñas en las comillas dobles si contiene algún carácter especial. Tenga en cuenta que los delimitadores de comillas dobles solo funcionan en los comandos de bash.
-- Puede establecer la contraseña de las variables de entorno que prefiera, pero asegúrese de que son lo suficientemente complejos y no utilizar la `!`, `&`, o `‘` caracteres.
+- En el [ventana de comandos](http://docs.microsoft.com/visualstudio/ide/reference/command-window), se incluyen entre comillas en las variables de entorno. Si utiliza comillas para encapsular una contraseña, se incluyen las comillas en la contraseña.
+- En bash, no se incluyen entre comillas en la variable. Nuestros ejemplos utilizan comillas dobles `"`.
+- Puede establecer la contraseña de las variables de entorno que prefiera, pero asegúrese de que son lo suficientemente complejos y no utilizar la `!`, `&`, o `'` caracteres.
 - La versión de CTP 2.0, no cambie los puertos predeterminados.
-- El **SA** cuenta es un administrador del sistema en la instancia maestra de SQL Server que se crea durante la instalación. Después de crear el contenedor de SQL Server, la variable de entorno MSSQL_SA_PASSWORD especificada es detectable mediante la ejecución de eco MSSQL_SA_PASSWORD $ en el contenedor. Por motivos de seguridad, cambiar la contraseña de SA según los procedimientos recomendados que se documentan [aquí](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
+- El `sa` cuenta es un administrador del sistema en la instancia maestra de SQL Server que se crea durante la instalación. Después de crear el contenedor de SQL Server, la variable de entorno `MSSQL_SA_PASSWORD` especificada se reconoce mediante la ejecución de `echo $MSSQL_SA_PASSWORD` en el contenedor. Por motivos de seguridad, cambiar su `sa` contraseña según los procedimientos recomendados que se documentan [aquí](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Inicialice las variables de entorno siguientes.  Son necesarios para implementar un clúster de macrodatos:
 
 ### <a name="windows"></a>Windows
 
-Mediante una ventana CMD (no PowerShell), configure las siguientes variables de entorno:
+Mediante una ventana de comandos (no PowerShell), configure las siguientes variables de entorno:
 
 ```cmd
 SET ACCEPT_EULA=Y
@@ -85,19 +86,19 @@ SET DOCKER_PRIVATE_REGISTRY="1"
 Inicialice las variables de entorno siguientes:
 
 ```bash
-export ACCEPT_EULA=Y
-export CLUSTER_PLATFORM=aks
+export ACCEPT_EULA="Y"
+export CLUSTER_PLATFORM="aks"
 
-export CONTROLLER_USERNAME=<controller_admin_name – can be anything>
-export CONTROLLER_PASSWORD=<controller_admin_password – can be anything, password complexity compliant>
-export KNOX_PASSWORD=<knox_password – can be anything, password complexity compliant>
-export MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
+export CONTROLLER_USERNAME="<controller_admin_name – can be anything>"
+export CONTROLLER_PASSWORD="<controller_admin_password – can be anything, password complexity compliant>"
+export KNOX_PASSWORD="<knox_password – can be anything, password complexity compliant>"
+export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
 
-export DOCKER_REGISTRY=private-repo.microsoft.com
-export DOCKER_REPOSITORY=mssql-private-preview
-export DOCKER_USERNAME=<your username, credentials provided by Microsoft>
-export DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-export DOCKER_EMAIL=<your Docker email, use the username provided by Microsoft>
+export DOCKER_REGISTRY="private-repo.microsoft.com"
+export DOCKER_REPOSITORY="mssql-private-preview"
+export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
+export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
+export DOCKER_EMAIL="<your Docker email, use the username provided by Microsoft>"
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
@@ -116,7 +117,7 @@ mssqlctl create cluster <name of your cluster>
 > El nombre del clúster debe ser solo alfanuméricos caracteres en minúsculas, sin espacios en blanco. Todos los artefactos de Kubernetes para el clúster de macrodatos se creará en un espacio de nombres con el mismo nombre que el clúster de nombre especificado.
 
 
-La ventana de comandos dará como resultado el estado de implementación. También puede comprobar el estado de implementación mediante la ejecución de estos comandos en una ventana cmd diferentes:
+La ventana de comandos o el shell devuelve el estado de implementación. También puede comprobar el estado de implementación mediante la ejecución de estos comandos en una ventana cmd diferentes:
 
 ```bash
 kubectl get all -n <name of your cluster>
@@ -153,6 +154,10 @@ kubectl get svc service-security-lb -n <name of your cluster>
 ```
 
 Busque el **External-IP** valor que se asigna a los servicios. Conectarse a la instancia principal de SQL Server con la dirección IP para el `service-master-pool-lb` en el puerto 31433 (p. ej.:  **\<ip-address\>, 31433**) y para el punto del clúster de macrodatos de SQL Server con la IP externa para el `service-security-lb` servicio.   Que el punto final de clúster de macrodatos es donde puede interactuar con HDFS y enviar trabajos de Spark a través de Knox.
+
+## <a name="sample-deployment-script"></a>Script de implementación de ejemplo
+
+Para un script de python de ejemplo que implementa el clúster de macrodatos AKS y SQL Server, vea [implementar un clúster de macrodatos en Azure Kubernetes Service (AKS) de SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

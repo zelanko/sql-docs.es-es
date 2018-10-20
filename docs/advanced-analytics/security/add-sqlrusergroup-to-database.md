@@ -1,35 +1,31 @@
 ---
 title: Agregar SQLRUserGroup como un usuario de base de datos (SQL Server Machine Learning) | Microsoft Docs
-description: Cómo agregar SQLRUserGroup como un usuario de base de datos de SQL Server Machine Learning Services.
+description: Para las conexiones de bucle invertido mediante autenticación implícita, agregar SQLRUserGroup como un usuario de base de datos para que una cuenta de trabajo puede iniciar sesión en el servidor para la conversión de identidad al usuario que realiza la llamada.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/10/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fc5294453def64d13cc43a74a8a5fb299c3e23e3
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 4685288eb383c486556efba1eb4861ca9d708c0f
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100326"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419090"
 ---
 # <a name="add-sqlrusergroup-as-a-database-user"></a>Agregar SQLRUserGroup como usuario de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Crear un inicio de sesión de base de datos para el [SQLRUserGroup](../concepts/security.md#sqlrusergroup) para permitir las conexiones de confianza que se originan desde scripts de R y Python, cuando el destino son los datos o las operaciones en la instancia de SQL Server. 
+Crear un inicio de sesión de base de datos para [SQLRUserGroup](../concepts/security.md#sqlrusergroup) cuando un [bucle de espera de conexión](../../advanced-analytics/concepts/security.md#implied-authentication) en el script especifica un *conexión de confianza*y la identidad utilizada para ejecutar un objeto contiene el código es una cuenta de usuario de Windows.
 
-Para los scripts que contienen cadenas de conexión con los inicios de sesión de SQL Server o un nombre de usuario completamente especificada y una contraseña, no es necesario crear un inicio de sesión.
+Las conexiones son aquellos que tengan de confianza `Trusted_Connection=True` en la cadena de conexión. Cuando SQL Server recibe una solicitud que especifica una conexión de confianza, comprueba si la identidad del usuario actual de Windows tiene un inicio de sesión. Para ejecutar como una cuenta de trabajo de procesos externos (como MSSQLSERVER01 desde **SQLRUserGroup**), se produce un error en la solicitud porque esas cuentas no tienen un inicio de sesión de forma predeterminada.
 
-## <a name="when-a-login-is-required"></a>Cuando se requiere un inicio de sesión
-
-Si el script de R o Python incluye una cadena de conexión especifica una conexión de confianza (por ejemplo, "Trusted_Connection = True"), una configuración adicional es necesaria para la presentación correcta de la identidad del usuario a SQL Server. Para los procesos externos que se ejecutan en un **SQLRUserGroup** cuenta de trabajo, como MSSQLSERVER01, el usuario de confianza se presenta como la identidad del trabajo. Dado que esta identidad no tiene derechos de inicio de sesión en SQL Server, de confianza se producirá un error en las conexiones a menos que agregue **SQLRUserGroup** como un usuario de base de datos. Para obtener más información, consulte [ *autenticación implícita*](../../advanced-analytics/concepts/security.md#implied-authentication).
-
-Recuerde que Launchpad mantiene una asignación del usuario original que invocó el script y la cuenta de trabajo que ejecuta el proceso. Cuando se complete correctamente la conexión de confianza para la cuenta de trabajo, la identidad del usuario que realiza la llamada original asume y se usa para recuperar los datos. No es necesario conceder permisos db_datareader para **SQLRUserGroup**.
+Puede solucionar el error de conexión proporcionando **SQLServerRUserGroup** un inicio de sesión de SQL Server. Para obtener más información acerca de las identidades y los procesos externos, consulte [información general de seguridad para el marco de extensibilidad](../concepts/security.md).
 
 > [!Note]
->  Asegúrese de que **SQLRUserGroup** tiene permisos "Permitir inicio de sesión localmente". De forma predeterminada, este permiso se concede a todos los nuevos usuarios locales, pero en algunas organizaciones podrían aplicarse directivas de grupo más estrictas.
+>  Asegúrese de que **SQLRUserGroup** tiene permisos "Permitir inicio de sesión localmente". De forma predeterminada, este permiso se concede a todos los nuevos usuarios locales, pero en algunas organizaciones más estrictas directivas de grupo pueden deshabilitar este derecho.
 
 ## <a name="create-a-login"></a>Crea un inicio de sesión
 
@@ -54,9 +50,9 @@ Recuerde que Launchpad mantiene una asignación del usuario original que invocó
 5. Desplácese por la lista de cuentas de grupo en el servidor hasta que encuentre una que empiece con `SQLRUserGroup`.
     
     + El nombre del grupo al que está asociado con el servicio Launchpad para la _instancia predeterminada_ siempre **SQLRUserGroup**, independientemente de si ha instalado R, Python o ambos. Seleccione esta cuenta solo la instancia predeterminada.
-    + Si usas un _instancia con nombre_, el nombre de instancia se anexa al nombre del nombre del grupo de trabajo de forma predeterminada, `SQLRUserGroup`. Por lo tanto, si la instancia se denomina "MLTEST", el nombre del grupo de usuario predeterminada para esta instancia sería **SQLRUserGroupMLTest**.
+    + Si usas un _instancia con nombre_, el nombre de instancia se anexa al nombre del nombre del grupo de trabajo de forma predeterminada, `SQLRUserGroup`. Por ejemplo, si la instancia se denomina "MLTEST", el nombre del grupo de usuario predeterminada para esta instancia sería **SQLRUserGroupMLTest**.
  
-     ![Ejemplo de grupos de servidor](media/implied-auth-login5.png "ejemplo de grupos de servidor")
+ ![Ejemplo de grupos de servidor](media/implied-auth-login5.png "ejemplo de grupos de servidor")
    
 5. Haga clic en **Aceptar** para cerrar el cuadro de diálogo de búsqueda avanzada.
 
@@ -66,3 +62,8 @@ Recuerde que Launchpad mantiene una asignación del usuario original que invocó
 6. Haga clic en **Aceptar** otra vez para cerrar el **Seleccionar usuario o grupo** cuadro de diálogo.
 
 7. En el **inicio de sesión - nuevo** cuadro de diálogo, haga clic en **Aceptar**. De forma predeterminada, el inicio de sesión se asigna al rol **público** y tiene permiso para conectarse al motor de base de datos.
+
+## <a name="next-steps"></a>Pasos siguientes
+
++ [Información general sobre seguridad](../concepts/security.md)
++ [Marco de extensibilidad](../concepts/extensibility-framework.md)

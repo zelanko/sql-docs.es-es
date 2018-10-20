@@ -4,22 +4,36 @@ description: Notas de la versión de Data Studio Azure
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94a271991314225a80850ee2156a37b6134e10a7
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: dfa3636ddba734d9c6ee6c9d9da4560a3cd61304
+ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072309"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411202"
 ---
 # <a name="azure-data-studio-release-notes"></a>Notas de la versión de Data Studio Azure
 
-**[Descargue el septiembre *Disponibilidad General* versión (GA).](download.md)**
+**[Descargue la versión de octubre.](download.md)**
+
+## <a name="october-2018-october-release"></a>Octubre de 2018 (versión de octubre)
+
+fecha de lanzamiento: 18 de octubre de 2018  
+versión: 1.1.3
+
+- Introducción a Azure Resource Explorer para examinar las bases de datos SQL de Azure
+- Mejorar la solidez de conectividad del explorador de objetos y el Editor de consultas
+- Mejoras de las extensiones de agente SQL
+- Actualizar a la [extensión de versión preliminar de SQL Server de 2019](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+
+### <a name="bug-fixes"></a>Correcciones de errores
+
+Para obtener información detallada, consulte el [registro de cambios](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), y [versiones](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="september-2018-september-ga-release"></a>(Versión de septiembre GA) de septiembre de 2018
 
@@ -49,7 +63,7 @@ Versión de disponibilidad general de Azure Data Studio (anteriormente SQL Opera
 
 - Corregir [emitir #2647](https://github.com/Microsoft/azuredatastudio/issues/143): los gráficos dio un gran paso hacia atrás.
 - Corregir [emitir 2648 #](https://github.com/Microsoft/azuredatastudio/issues/143): SELECT que devuelve toda la columna de los hipervínculos JSON.
-- ...
+- …
 
 Para obtener información detallada, consulte el [registro de cambios](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), y [versiones](https://github.com/Microsoft/azuredatastudio/releases).
 

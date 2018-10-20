@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3167bff4f976cbf23c955eea40f63c4a51bc1b76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d071a1d56808f7c634070e19707daf125d589396
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802599"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390867"
 ---
 # <a name="sql-samples"></a>Ejemplos de SQL
 
@@ -51,3 +51,13 @@ Las bases de datos de AdventureWorks están disponibles en el [ejemplos de SQL S
 - [Descargas de AdventureWorks para SQL Server 2014 y versiones posteriores](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Incluye los archivos .bak para las versiones 2012.
 - [Descargas de AdventureWorks para SQL Server 2012](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012).
 - [Descargas de AdventureWorks para SQL Server 2008 R2](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2).
+
+## <a name="azure-samples-and-templates"></a>Plantillas y ejemplos de Azure
+Hay una serie de ejemplos de código de Microsoft Azure y ejemplos disponibles en Github en. NET, Java, Python, Node.js, PHP y Ruby. Además, Azure Resource Manager permite aprovisionar las aplicaciones mediante una plantilla declarativa. En una única plantilla, puede implementar varios servicios junto con sus dependencias. Utilice la misma plantilla de forma repetida para implementar su aplicación en cada fase del ciclo de vida de aplicación.
+
+- [Ejemplos de Azure](https://github.com/Azure-Samples)
+- [Plantillas de inicio rápido de Azure](https://azure.microsoft.com/resources/templates/)
+
+
+
+

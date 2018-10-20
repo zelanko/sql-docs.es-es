@@ -18,12 +18,12 @@ ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b13f890063246c1557d11a504ccf229bb162057
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 346fea411891f04e4b4742ff50c2dd9cce6f1587
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621033"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336254"
 ---
 # <a name="cdcltcaptureinstancegtct-transact-sql"></a>CDC. &lt;capture_instance&gt;_CT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ La `__$command_id` columna era la columna se introdujo en una actualización acu
 3.  Altere la tabla de origen especificando el nuevo tipo de datos. El cambio del tipo de datos se propaga correctamente a la tabla de cambio.  
   
 ## <a name="data-manipulation-language-modifications"></a>Modificaciones del lenguaje de manipulación de datos  
- Cuando las operaciones de inserción, actualización y eliminación se realizan en una tabla de origen habilitada para la captura de datos modificados, un registro de esas operaciones DML aparece en el registro de transacciones de la base de datos. El proceso de captura de datos modificados recupera la información sobre esos cambios en el registro de transacciones, y agrega una o dos filas a la tabla de cambios para registrar el cambio. Las entradas se agregan a la tabla de cambios en el mismo orden en que se confirmaron en la tabla de origen, aunque la confirmación de las entradas de la tabla de cambios se debe realizar normalmente en un grupo de cambios en lugar de para una sola entrada.  
+ Cuando las operaciones de inserción, actualización y eliminación se realizan en una tabla de origen habilitada para la captura de datos modificados, un registro de esas operaciones DML aparece en el registro de transacciones de la base de datos. El proceso de captura de datos modificados recupera información sobre los cambios del registro de transacciones y agrega una o dos filas en la tabla de cambios para registrar el cambio. Las entradas se agregan a la tabla de cambios en el mismo orden en que se confirmaron en la tabla de origen, aunque la confirmación de las entradas de la tabla de cambios se debe realizar normalmente en un grupo de cambios en lugar de para una sola entrada.  
   
  Dentro de la entrada de tabla de cambio, el **__ $start_lsn** columna se usa para registrar el LSN de confirmación que está asociado con el cambio en la tabla de origen y el **columna de __ $seqval** se usa para ordenar el cambio dentro de su transacción. Juntas, estas columnas de metadatos se pueden utilizar para asegurarse de que el orden de confirmación de los cambios de origen se conserva. Dado que el proceso de captura obtiene la información de los cambios en el registro de transacciones, es importante tener en cuenta que las entradas de la tabla de cambios no aparecen sincrónicamente con los cambios correspondientes de la tabla de origen. Por el contrario, los cambios correspondientes aparecen de forma asincrónica, después de que el proceso de captura haya procesado las entradas de cambios pertinentes del registro de transacciones.  
   

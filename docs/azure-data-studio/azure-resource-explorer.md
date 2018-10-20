@@ -7,12 +7,13 @@ manager: craigg
 ms.date: 09/24/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: 11f693329a92187c09cf3d8e8f1b74e287435594
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.technology: azure-data-studio
+ms.openlocfilehash: 5b969ded699c11414c1822c0cb455ee84dfa212f
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "48038649"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356066"
 ---
 # <a name="explore-azure-sql-resources-with-azure-resource-explorer"></a>Explore los recursos de SQL Azure con Azure Resource Explorer
 

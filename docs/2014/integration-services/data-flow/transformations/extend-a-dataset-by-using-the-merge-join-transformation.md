@@ -16,12 +16,12 @@ ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b88d3ec75e73329f8de1e97f7b9936203e745946
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe0d9ebeea4693eeacebe9d0747bf71f26f85ad5
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062185"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460200"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>Ampliar un conjunto de datos con la transformación Combinación de mezcla
   Para agregar y configurar una transformación Combinación de mezcla, el paquete ya debe incluir por lo menos una tarea Flujo de datos y dos componentes de flujo de datos que proporcionen entradas a la transformación Combinación de mezcla.  
@@ -62,9 +62,9 @@ ms.locfileid: "48062185"
 11. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
 ## <a name="see-also"></a>Vea también  
- [Transformación combinación de mezcla](merge-join-transformation.md)   
+ [Merge Join Transformation](merge-join-transformation.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)   
  [Rutas de Integration Services](../integration-services-paths.md)   
- [Tarea de flujo de datos] ((.. /.. /Control-Flow/Data-Flow-Task.MD)  
+ [Tarea Flujo de datos](../../control-flow/data-flow-task.md)  
   
   

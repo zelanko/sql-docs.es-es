@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 629d7fd887e96013b17a5686ce82eb966044f240
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 942442bca18e836c4f8711abc808a89649ff8593
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48796913"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460580"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistencia de datos con el clúster de macrodatos de SQL Server en Kubernetes
 
@@ -23,6 +23,7 @@ ms.locfileid: "48796913"
 El clúster de macrodatos de SQL Server consume estos volúmenes persistentes de forma es mediante [clases de almacenamiento](https://kubernetes.io/docs/concepts/storage/storage-classes/). Puede crear clases de almacenamiento diferentes para diferentes tipos de almacenamiento y especificarlos en el momento de implementación del clúster de macrodatos. Puede configurar qué clase de almacenamiento para usar con qué propósito (grupo). Crea el clúster de SQL Server macrodatos [notificaciones de volumen persistente](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) con el nombre de clase de almacenamiento especificada para cada pod que requiere volúmenes persistentes. A continuación, monte los volúmenes persistentes correspondientes en el pod.
 
 > [!NOTE]
+
 > Para CTP 2.0, solo `ReadWriteOnce` se admite el modo de acceso para todo el clúster.
 
 ## <a name="deployment-settings"></a>Configuración de implementación
@@ -36,11 +37,20 @@ Si establece la marca en true, también debe proporcionar **STORAGE_CLASS_NAME**
 
 ## <a name="aks-storage-classes"></a>Clases de almacenamiento AKS
 
-AKS viene con [dos clases de almacenamiento integradas](https://docs.microsoft.com/en-us/azure/aks/azure-disks-dynamic-pv) **predeterminada** y **premium-storage** junto con aprovisionador dinámica para ellos. Puede especificar cualquiera de ellos o crear su propia clase de almacenamiento para la implementación de clúster de macrodatos con habilitado el almacenamiento persistente.
+AKS viene con [dos clases de almacenamiento integradas](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **predeterminada** y **premium managed** junto con aprovisionador dinámica para ellos. Puede especificar cualquiera de ellos o crear su propia clase de almacenamiento para la implementación de clúster de macrodatos con habilitado el almacenamiento persistente.
 
 ## <a name="minikube-storage-class"></a>Clase de almacenamiento de Minikube
 
-Minikube viene con una clase de almacenamiento integrada llamada **estándar** junto con una dinámica aprovisionador para él.
+Minikube viene con una clase de almacenamiento integrada llamada **estándar** junto con una dinámica aprovisionador para él. Tenga en cuenta que en Minikube, si USE_PERSISTENT_VOLUME = true (valor predeterminado), también debe invalidar el valor predeterminado de la variable de entorno STORAGE_CLASS_NAME porque el valor predeterminado es diferente. Establezca el valor en `standard`: 
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+Como alternativa, puede suprimir con volúmenes persistentes en Minikube:
+```
+SET USE_PERSISTENT_VOLUME=false
+```
+
 
 ## <a name="kubeadm"></a>Kubeadm
 
@@ -61,7 +71,7 @@ También puede tener diferentes configuraciones para la configuración de almace
 
 ```bash
 export STORAGE_POOL_USE_PERSISTENT_VOLUME=true
-export STORAGE_POOL_STORAGE_CLASS_NAME=premium-storage
+export STORAGE_POOL_STORAGE_CLASS_NAME=managed-premium
 export STORAGE_POOL_STORAGE_SIZE=100Gi
 ```
 

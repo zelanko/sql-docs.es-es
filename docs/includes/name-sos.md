@@ -1,1 +1,1 @@
-Studio datos de Azure
+Azure Data Studio 

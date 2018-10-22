@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c71e8f433a49d4338025dcf4f3383ce94e4fe226
-ms.sourcegitcommit: 4b8dc15dc999935776020ba05325b57dcb3bf564
+ms.openlocfilehash: bc9b0e8b89fb7fd6e507e9e615190fef21a94466
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46289316"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461110"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Novedades de Analytics Platform System, un almacén de datos MPP de escalabilidad horizontal
 Vea cuáles son las novedades en las últimas actualizaciones de dispositivo para Microsoft® Analytics Platform System (APS). APS es una aplicación de escalabilidad horizontal en el entorno local que hospeda el almacenamiento de datos paralelos de MPP de SQL Server. 
@@ -25,7 +25,7 @@ Vea cuáles son las novedades en las últimas actualizaciones de dispositivo par
 Fecha de lanzamiento: julio de 2018
 
 ### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>Los comandos DBCC no consumen espacios de simultaneidad (cambio de comportamiento)
-APS admite un subconjunto de T-SQL [comandos DBCC](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) como [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). Anteriormente, estos comandos consumiría un [espacio de simultaneidad](https://docs.microsoft.com/en-us/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) reduciendo el número de cargas y consultas de usuario que se puede ejecutar. El `DBCC` comandos ahora se ejecutan en una cola local que no consumen una ranura de simultaneidad de usuario mejora el rendimiento general de la ejecución de consulta.
+APS admite un subconjunto de T-SQL [comandos DBCC](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) como [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). Anteriormente, estos comandos consumiría un [espacio de simultaneidad](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) reduciendo el número de cargas y consultas de usuario que se puede ejecutar. El `DBCC` comandos ahora se ejecutan en una cola local que no consumen una ranura de simultaneidad de usuario mejora el rendimiento general de la ejecución de consulta.
 
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>Reemplaza algunas llamadas de metadatos con los objetos de catálogo
 Uso de los objetos de catálogo para las llamadas de metadatos en lugar de usar SMO ha mostrado mejora del rendimiento en puntos de acceso. A partir de CU7.1, ahora algunas de estas llamadas metadatos utilizan los objetos de catálogo predeterminada. Este comportamiento puede desactivarse por [modificador de característica](appliance-feature-switch.md) si los clientes que usan las consultas de metadatos surgen algún problema.

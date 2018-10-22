@@ -1,7 +1,7 @@
 ---
 title: Novedades de SQL Server 2019 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/26/2018
+ms.date: 09/27/2018
 ms.prod: sql-server-2018
 ms.reviewer: ''
 ms.technology:
@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 68a872164528bec49b0342f603107fb86e31fe50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 015a6d65f1d225ab5a8752352d41fd2201f871b5
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678273"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461120"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Novedades de SQL Server 2019
 
@@ -233,7 +233,7 @@ Para obtener más información, consulte [Clasificación y detección de datos d
 La [auditoría](../relational-databases/security/auditing/sql-server-audit-database-engine.md) también se ha mejorado para incluir un nuevo campo en el registro de auditoría denominado `data_sensitivity_information`, que registra las clasificaciones de confidencialidad (etiquetas) de los datos reales que devuelve la consulta. Para obtener información detallada y ejemplos, vea [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../t-sql/statements/add-sensitivity-classification-transact-sql.md).
 
 >[!NOTE]
->No hay ningún cambio en cuanto a cómo se habilita la auditoría. Hay un nuevo campo en los registros de auditoría, `data_sensitivity_information`, que registra las clasificaciones de confidencialidad (etiquetas) de los datos reales que devuelve la consulta. Consulte [Auditoría del acceso a datos confidenciales](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3).
+>No hay ningún cambio en cuanto a cómo se habilita la auditoría. Hay un nuevo campo en los registros de auditoría, `data_sensitivity_information`, que registra las clasificaciones de confidencialidad (etiquetas) de los datos reales que devuelve la consulta. Consulte [Auditoría del acceso a datos confidenciales](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3).
 
 ### <a name="expanded-support-for-persistent-memory-devices"></a>Compatibilidad ampliada con los dispositivos de memoria persistente
 

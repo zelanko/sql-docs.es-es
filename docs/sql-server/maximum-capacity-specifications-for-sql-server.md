@@ -21,16 +21,15 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8823f7fd346fdadfecb67c8db217894415b4e0a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d189ed1e434380f409fdec0fee799801934019a
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764391"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383615"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificaciones de capacidad máxima para SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Especificaciones de capacidad máxima para SQL Server](maximum-capacity-specifications-for-sql-server.md).
 
   En las siguientes tablas se especifican el tamaño y el número máximo de diversos objetos definidos en los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para navegar hasta la tabla de una tecnología de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , haga clic en su vínculo:  
   

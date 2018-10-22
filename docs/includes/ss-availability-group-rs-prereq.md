@@ -106,4 +106,4 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [<service account or user>];
 
 El puerto TCP en el firewall debe estar abierto para el puerto de escucha.
 
-Para obtener más información, vea [El punto de conexión de creación de reflejo de la base de datos (SQL Server)](https://docs.microsoft.com/en-us/sql/database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server?view=sql-server-2017).
+Para obtener más información, vea [El punto de conexión de creación de reflejo de la base de datos (SQL Server)](https://docs.microsoft.com/sql/database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server?view=sql-server-2017).

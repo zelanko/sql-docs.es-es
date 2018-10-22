@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0dc1fdb499855be399f0d2dc77b44eae452615b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 803b1a72edb5a6c0a951eb9d199a4d7ff27526fe
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649387"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460950"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -144,8 +144,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE permite una o varias definiciones de columna. CREATE EXTERNAL TABLE y CREATE TABLE usan la misma sintaxis para definir una columna. La excepción es que no se puede usar DEFAULT CONSTRAINT en tablas externas. Para obtener los detalles completos sobre las definiciones de columna y sus tipos de datos, vea [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) y [CREATE TABLE en Azure SQL Database](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
   
- Las definiciones de columna, incluidos los tipos de datos y el número de columnas, deben coincidir con los datos de los archivos externos. Si hay alguna no coincidencia, se rechazan las filas de archivo al consultar los datos reales. Para obtener más información sobre cómo asignar tipos de datos para orígenes de datos externos diferentes, consulte [Type mapping with PolyBase](../../relational-databases/polybase/polybase-type-mapping.md) (Asignación de tipos con PolyBase).  
-  
+ Las definiciones de columna, incluidos los tipos de datos y el número de columnas, deben coincidir con los datos de los archivos externos. Si hay alguna no coincidencia, se rechazan las filas de archivo al consultar los datos reales.  
   
  LOCATION =  '*folder_or_filepath*'  
  Especifica la ruta de acceso y el nombre de la carpeta o el archivo de los datos reales en Hadoop o Azure Blob Storage. La ubicación se inicia desde la carpeta raíz; la carpeta raíz es la ubicación de datos especificada en el origen de datos externo.  

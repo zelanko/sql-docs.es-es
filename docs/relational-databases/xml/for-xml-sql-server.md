@@ -20,17 +20,16 @@ ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5dd4d957386cc352bf218e72204f91e937d9605d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1aa8edf745211beb04a52d3d7c3b7f8363d7988
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668693"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383540"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
- > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [FOR XML (SQL Server)](for-xml-sql-server.md).
-
+ 
   Una consulta SELECT devuelve los resultados como un conjunto de filas. Opcionalmente, se pueden recuperar resultados formales de una consulta SQL como XML especificando la cláusula FOR XML en la consulta. La cláusula FOR XML puede usarse en consultas de nivel superior y en subconsultas. La cláusula FOR XML de nivel superior solo puede usarse en la instrucción SELECT. En el caso de las subconsultas, FOR XML puede usarse en las instrucciones INSERT, UPDATE y DELETE. También puede usarse en instrucciones de asignación.  
   
  En una cláusula FOR XML se especifica uno de estos modos:  

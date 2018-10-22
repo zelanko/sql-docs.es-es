@@ -23,16 +23,15 @@ ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 60cdb2abfa9b02f4aa88ecf6f0a3b0cf97fb1d79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbe790a131fe48a4cdfd506aedcde49308ab67d0
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635773"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383410"
 ---
 # <a name="sql-server-configuration-manager"></a>Administrador de configuración de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Para el contenido relacionado con las versiones anteriores de SQL Server, vea [Administrador de configuración de SQL Server](sql-server-configuration-manager.md).
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es una herramienta para administrar los servicios asociados a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], para configurar los protocolos de red utilizados por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]y para administrar la configuración de conectividad de red de los equipos cliente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] El Administrador de configuración es un complemento de [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console que está disponible desde el menú Inicio o que se puede agregar a cualquier otra pantalla de [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console. [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (**mmc.exe**) usa el archivo **SQLServerManager\<versión>.msc** (como, por ejemplo, **SQLServerManager13.msc** para [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) para abrir el Administrador de configuración. Cuando instala Windows en la unidad C, estas son las rutas de acceso a las cuatro últimas versiones.  
   

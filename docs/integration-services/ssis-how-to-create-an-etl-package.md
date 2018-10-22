@@ -18,16 +18,14 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c1009081d8b5d4f6c9054149b73bfe8966602a51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc033012e2bf0799902e1bd5bcc1a5f31471c5c2
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681657"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383310"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>Tutorial de SSIS: Crear un paquete ETL sencillo
-
- > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Tutorial de SSIS: Crear un paquete ETL sencillo](ssis-how-to-create-an-etl-package.md).
 
 En este tutorial, aprenderá a usar el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] para crear un paquete de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sencillo. El paquete que cree toma los datos de un archivo plano, formatea de nuevo lo datos y luego inserta dichos datos en una tabla de hechos. En las lecciones siguientes, el paquete se expande para mostrar la creación de bucles, configuraciones de paquete, registro y flujo de errores.  
   

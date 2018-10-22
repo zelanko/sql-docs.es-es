@@ -8,16 +8,14 @@ ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dccb06e0de416af80cb485ce8a116835d0022e29
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 741621c22d8abcc9420b40afa07f4707bc1418ae
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628122"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383660"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lección 1: Crear un proyecto de servidor de informes (Reporting Services)
-
- > Para obtener contenido relacionado con versiones anteriores de SQL Server, vea [Lección 1: Crear un proyecto de servidor de informes (Reporting Services)](lesson-1-creating-a-report-server-project-reporting-services.md).
 
 En esta lección, creará un *proyecto de servidor de informes* y un archivo de *definición de informe (.rdl)* en [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] dentro de Visual Studio. 
 

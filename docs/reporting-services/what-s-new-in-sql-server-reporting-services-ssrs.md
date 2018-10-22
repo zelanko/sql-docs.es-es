@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59b0d8acbf6f0b99b3437dc866435595af00ab55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
+ms.lasthandoff: 10/16/2018
 ms.locfileid: "47639783"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novedades de SQL Server Reporting Services (SSRS)
@@ -87,7 +87,7 @@ Puede crear KPI directo en el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/
   
  ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
  
- Para obtener más información, vea [Uso de los KPI en Reporting Services](http://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)
+ Para más información, vea [Uso de los KPI en Reporting Services](http://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)
   
  
  ### <a name="mobile-reports"></a>Mobile Reports (Informes móviles)
@@ -95,7 +95,7 @@ Puede crear KPI directo en el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/
 Los informes móviles de Reporting Services son informes dedicados optimizados para una amplia variedad de factores de forma y para ofrecer una experiencia óptima para usuarios que accedan a informes en dispositivos móviles. Los informes móviles cuentan con una amplia variedad de visualizaciones, desde gráficos de tiempo, categoría y comparación, hasta gráficos de rectángulos y mapas personalizados. Puede conectar sus informes móviles a una gran variedad de orígenes de datos, como datos tabulares y multidimensionales de SQL Server Analysis Services local. Cree informes móviles en una superficie de diseño con cuadrícula ajustable de filas y columnas, y elementos flexibles de informes móviles que se escalan correctamente para cualquier tamaño de pantalla. Después, guarde estos informes móviles en un servidor de Reporting Services y visualice e interactúe con estos en un explorador o en la aplicación móvil de Power BI en dispositivos iPad, iPhone, Android y Windows 10.
   
 #### <a name="mobile-report-publisher"></a>Publicador de informes móviles  
- El [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] le permite crear y publicar informes móviles de SQL Server en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)].  
+ El [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]le permite crear y publicar informes móviles de SQL Server en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)].  
   
  ![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
   
@@ -177,7 +177,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 |Nuevo|Previous|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
-**Panel de parámetros personalizado:** ahora puede personalizar el panel de parámetros. Al usar la superficie de diseño en el Generador de informes, puede arrastrar un parámetro a una columna y una fila específica en el panel de parámetros. Puede agregar y quitar columnas para cambiar el diseño del panel.   Para más información, vea [Customize the Parameters Pane in a Report &#40;Report Builder&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md) (Personalizar el panel de parámetros en un informe [Generador de informes]).  
+**Panel de parámetros personalizado:** ahora puede personalizar el panel de parámetros. Al usar la superficie de diseño en el Generador de informes, puede arrastrar un parámetro a una columna y una fila específica en el panel de parámetros. Puede agregar y quitar columnas para cambiar el diseño del panel.   Para más información, vea [Customize the Parameters Pane in a Report &#40;Report Builder&#41; (Personalizar el panel de parámetros en un informe [Generador de informes])](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
   
  ![Lista de parámetros en el panel Datos de informe y en el panel Parámetros](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "Lista de parámetros en el panel Datos de informe y en el panel Parámetros")  
 

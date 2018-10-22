@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: d201fb9d134f4066e0504056c208d2c1c0507fa3
-ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.openlocfilehash: f677d955541d32614dcfc60cebb0be1d1c438571
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782294"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460990"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Notificaciones del servicio de token de Windows (C2WTS) y Reporting Services
 
@@ -29,9 +29,9 @@ C2WTS también es necesario con el modo de SharePoint de SQL Server Reporting Se
 
 El elemento web Visor de informes se puede usar para insertar informes de SQL Server Reporting Services (modo nativo) en el sitio de SharePoint. Este elemento web está disponible para SharePoint 2013 y SharePoint 2016. Tanto en SharePoint 2013 como en SharePoint 2016 se hace uso de la autenticación de notificaciones. Como resultado, C2WTS se debe configurar correctamente y Reporting Services debe estar configurado para la autenticación Kerberos para presentar correctamente los informes.
 
-1. Para configurar la instancia de Reporting Services (modo nativo) para la autenticación Kerberos, determine la cuenta de servicio SSRS, establezca un SPN y actualice el archivo rsreportserver.config para usar el tipo de autenticación RSWindowsNegotiate. [Registro de un nombre principal de servicio (SPN) para un servidor de informes](https://docs.microsoft.com/en-us/sql/reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server)
+1. Para configurar la instancia de Reporting Services (modo nativo) para la autenticación Kerberos, determine la cuenta de servicio SSRS, establezca un SPN y actualice el archivo rsreportserver.config para usar el tipo de autenticación RSWindowsNegotiate. [Registro de un nombre principal de servicio (SPN) para un servidor de informes](https://docs.microsoft.com/sql/reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server)
 
-2. Siga los pasos que aparecen en [Pasos necesarios para configurar c2WTS](https://docs.microsoft.com/en-us/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#steps-needed-to-configure-c2wts)
+2. Siga los pasos que aparecen en [Pasos necesarios para configurar c2WTS](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#steps-needed-to-configure-c2wts)
  
 
 ## <a name="sharepoint-mode-integration"></a>Integración del modo SharePoint
@@ -84,7 +84,7 @@ Si en su entorno se usa la delegación limitada de Kerberos, el servicio SharePo
     * Seleccione **Usuarios o equipos...&#42;** y escriba la cuenta que hospeda el servicio. Por ejemplo, si un servidor SQL Server se ejecuta en una cuenta denominada *sqlservice*, escriba `sqlservice`. 
       Para el **elemento web Visor de informes**, esta será la cuenta de servicio para la instancia de Reporting Services (modo nativo).
 
-    * Seleccione la lista de servicios. Esto mostrará los SPN disponibles en esa cuenta. Si el servicio no está indicado en la cuenta, es posible que falte o que esté en otra cuenta. Puede usar la utilidad SetSPN para ajustar los SPN. Para el **elemento web Visor de informes**, verá el SPN HTTP que se configuró en [Configuración del elemento web Visor de informes](https://docs.microsoft.com/en-us/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-web-part-configuration).
+    * Seleccione la lista de servicios. Esto mostrará los SPN disponibles en esa cuenta. Si el servicio no está indicado en la cuenta, es posible que falte o que esté en otra cuenta. Puede usar la utilidad SetSPN para ajustar los SPN. Para el **elemento web Visor de informes**, verá el SPN HTTP que se configuró en [Configuración del elemento web Visor de informes](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-web-part-configuration).
 
     * Seleccione Aceptar para salir de los cuadros de diálogo.
 

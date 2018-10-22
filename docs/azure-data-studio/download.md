@@ -34,7 +34,7 @@ Descargue e instale la versión más reciente, la *versión de septiembre GA*:
 
 Para obtener más información acerca de la versión más reciente, consulte el [notas de la versión](release-notes.md).
 
-## <a name="get-azure-data-studio-for-windows"></a>Obtener datos de Azure Studio para Windows
+## <a name="get-azure-data-studio-for-windows"></a>Obtener Azure Data Studio para Windows
 
 Esta versión de [!INCLUDE[name-sos](../includes/name-sos-short.md)] incluye una experiencia de instalador de Windows estándar y un archivo .zip: 
 
@@ -58,7 +58,7 @@ Esta versión de [!INCLUDE[name-sos](../includes/name-sos-short.md)] incluye una
 3. Para realizar [!INCLUDE[name-sos](../includes/name-sos-short.md)] disponibles en el *Launchpad*, arrastre *Studio.app de datos de Azure* a la *aplicaciones* carpeta.
 
 
-## <a name="get-azure-data-studio-for-linux"></a>Obtener datos de Azure Studio para Linux
+## <a name="get-azure-data-studio-for-linux"></a>Obtener Azure Data Studio para Linux
 
 1. Descargar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para Linux mediante uno de los instaladores o el archivo tar.gz:
     - [.DEB](https://go.microsoft.com/fwlink/?linkid=2024668)
@@ -116,7 +116,7 @@ Esta versión de [!INCLUDE[name-sos](../includes/name-sos-short.md)] incluye una
    ```
 
 
-## <a name="uninstall-azure-data-studio"></a>Desinstalar Studio datos de Azure
+## <a name="uninstall-azure-data-studio"></a>Desinstalar Azure Data Studio
 
 Si instaló [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] mediante el instalador de Windows, a continuación, desinstale la misma manera que quite cualquier aplicación de Windows.
 

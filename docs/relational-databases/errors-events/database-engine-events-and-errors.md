@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6f418b5f9456b2863abba5d63c25dd224977dfb
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: a6507c72a325871fa4ec2e075a00dc458ac64ba3
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100546"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384180"
 ---
 # <a name="database-engine-errors"></a>Errores del motor de base de datos
 La tabla contiene los números de mensajes de error y la descripción, que es el texto del mensaje de error de la vista de catálogo sys.messages. 
@@ -1290,6 +1290,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   2597    |   10  |   no  |   Se omitirá la marca de seguimiento %d. Se trata de una marca de seguimiento no válida o que solo se puede especificar durante el inicio del servidor.    |
 |   2599    |   16  |   no  |   No se puede cambiar al texto de fila de la tabla "%.*ls".  |
 |   2601    |   14  |   no  |   No se puede insertar una fila de clave duplicada en el objeto "%.*ls" con índice único "%.* ls".    |
+|   2628    |   16  |   no  |   Los datos de cadena o binarios se truncarían en la tabla %.*ls", columna "%.* ls". Valor truncado: "%.*ls".|
 |   2627    |   14  |   no  |   Infracción de la restricción "%.*ls". No se puede insertar una fila de clave duplicada en el objeto '%.* ls'. |
 |   2701    |   10  |   no  |   Se omitió el nombre de la base de datos '%.*ls'. Se hace referencia al objeto en tempdb.    |
 |   2702    |   16  |   no  |   La base de datos '%.*ls' no existe.    |
@@ -1835,7 +1836,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   4013    |   16  |   no  |   La secuencia del protocolo de flujo TDS entrante es incorrecta. Falta el encabezado TDS de conjuntos de resultados activos múltiples (MARS).  |
 |   4014    |   20  |   no  |   Error irrecuperable al leer el flujo de entrada de la red. Se terminará la sesión (error de entrada: %d, error de salida: %d). |
 |   4015    |   16  |   no  |   El idioma solicitado en el inicio de sesión "%.*ls" no es un nombre válido de SQL Server. Se usará el predeterminado para todo el servidor (%.* ls).    |
-|   4016    |   16  |   no  |   El idioma solicitado en el inicio de sesión "%.*ls" no es un nombre válido de SQL Server. Se usará el predeterminado de usuario %.*.   |
+|   4016    |   16  |   no  |   El idioma solicitado en el inicio de sesión "%.*ls" no es un nombre válido de SQL Server. Se usará el predeterminado de usuario %.*   |
 |   4017    |   16  |   no  |   Ni el idioma solicitado en "inicio de sesión %.*ls" ni el predeterminado de usuario %.* ls, son nombres válidos de SQL Server. Se usará el predeterminado para todo el servidor (%.*ls).   |
 |   4018    |   16  |   no  |   El idioma predeterminado de usuario (%.*ls) no es un nombre válido de SQL Server. Se usará el predeterminado para todo el servidor (%.* ls).   |
 |   4019    |   16  |   no  |   El idioma solicitado en el inicio de sesión "%.*ls" no es un nombre de idioma válido de SQL Server. Error de inicio de sesión.   |

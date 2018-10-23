@@ -58,7 +58,7 @@ ms.locfileid: "49384160"
     > [!NOTE]  
     >  Los valores predeterminados de las propiedades de la columna se agregan cuando crea una columna nueva, pero se pueden cambiar en la pestaña **Propiedades de columna** .  
   
-6.  Cuando haya terminado de agregar columnas, en el menú **Archivo** , elija **Guardar***nombre de la tabla*.  
+6.  Cuando haya terminado de agregar columnas, en el menú **Archivo**, elija **Guardar**  *nombre de la tabla*.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

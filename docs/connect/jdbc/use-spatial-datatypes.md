@@ -11,18 +11,18 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 726711458f62011fc7bcaef268887813c9c9c3d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a51d15875051fbe2a2a034526a95c16bed076db
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842013"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460550"
 ---
 # <a name="using-spatial-datatypes"></a>Utilizar tipos de datos espaciales
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Se admiten los tipos de datos espaciales (geometría y geografía) a partir de versión de vista previa del controlador JDBC 6.5.0. Los tipos de datos espaciales no se admiten con procedimientos almacenados, los parámetros con valores de tabla (TVP), BulkCopy y Always Encrypted. Esta página muestra que varios casos de uso de tipos de datos Geometry y Geography con el controlador JDBC. Para obtener información general sobre los tipos de datos espaciales, consulte [información general de los tipos de datos espaciales](https://docs.microsoft.com/en-us/sql/relational-databases/spatial/spatial-data-types-overview) página.
+Se admiten los tipos de datos espaciales (geometría y geografía) a partir de versión de vista previa del controlador JDBC 6.5.0. Los tipos de datos espaciales no se admiten con procedimientos almacenados, los parámetros con valores de tabla (TVP), BulkCopy y Always Encrypted. Esta página muestra que varios casos de uso de tipos de datos Geometry y Geography con el controlador JDBC. Para obtener información general sobre los tipos de datos espaciales, consulte [información general de los tipos de datos espaciales](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-data-types-overview) página.
 
 ## <a name="creating-a-geometry--geography-object"></a>Creación de un objeto Geometry / objeto de geografía
 

@@ -1,7 +1,7 @@
 ---
 title: 'Troubleshooter: Find errors with SQL Server transactional replication (Solucionador de problemas: buscar errores con la replicación transaccional de SQL Server) | Microsoft Docs'
 ms.custom: ''
-ms.date: 04/26/2018
+ms.date: 04/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 665ffbd6b0a36bc38a0e7f88b7fbff035a5f2b0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0507fd785dfe6eb61993c30c90b116db423548aa
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800983"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419460"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Solucionador de problemas: buscar errores con la replicación transaccional de SQL Server 
 La solución de problemas de errores de replicación puede resultar frustrante sin un conocimiento básico de cómo funciona la replicación transaccional. El primer paso para crear una publicación es hacer que el Agente de instantáneas cree la instantánea y la guarde en la carpeta de instantáneas. Después, el Agente de distribución aplica la instantánea al suscriptor. 

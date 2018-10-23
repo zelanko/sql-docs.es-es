@@ -68,7 +68,7 @@ ms.locfileid: "48223815"
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>Para agregar una acción de expandir y contraer a un elemento de informe  
   
-1.  En la vista de diseño del informe, haga clic con el botón derecho en el elemento de informe que quiera mostrar u ocultar y, después, haga clic en *Propiedades de \<elemento de informe>***Propiedades**. Se abrirá el cuadro de diálogo *Propiedades de \<elemento de informe>***Propiedades** del elemento de informe.  
+1.  En la vista de diseño del informe, haga clic con el botón derecho en el elemento de informe que quiera mostrar u ocultar y, después, haga clic en *Propiedades de \<elemento de informe>***Propiedades**. Se abrirá el cuadro de diálogo *Propiedades de \<elemento de informe>* **Propiedades** del elemento de informe.  
   
 2.  Haga clic en **Visibilidad**.  
   

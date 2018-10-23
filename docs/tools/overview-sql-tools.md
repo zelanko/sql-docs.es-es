@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1ff16d7a8b2253fc793db00cb46282539415ff86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 359144187de1b1a780ba3d866f4a4881c2444442
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767373"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643943"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>Herramientas SQL y utilidades para SQL Server, base de datos SQL Azure y Azure SQL Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,6 +72,7 @@ Los siguientes son las principales herramientas de línea de comandos:
 |:--|:--|
 | [Administrador de configuración](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Use el Administrador de configuración de SQL Server para configurar servicios de SQL Server y configurar la conectividad de red. Configuration Manager se ejecuta en Windows|
 | [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md) | Use Microsoft SQL Server Migration Assistant para automatizar la migración de bases de datos a SQL Server desde Microsoft Access, DB2, MySQL, Oracle y Sybase.|
+| [Asistente para experimentación con base de datos](../dea/database-experimentation-assistant-overview.md) | Use el Asistente de experimentación de base de datos para evaluar una versión de destino de SQL para una carga de trabajo. |
 | [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md) | Use la característica Distributed Replay para ayudarle a evaluar el impacto de las actualizaciones futuras de SQL Server. También puede usar Distributed Replay para ayudar a evaluar el impacto de hardware y actualizaciones del sistema operativo y la optimización de SQL Server. |
 | [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | La utilidad ssbdiagnose informa de problemas en las conversaciones de Service Broker o la configuración de servicios de Service Broker. |
 

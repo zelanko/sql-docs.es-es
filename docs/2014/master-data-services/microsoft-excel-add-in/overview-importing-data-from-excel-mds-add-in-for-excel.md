@@ -21,7 +21,7 @@ ms.locfileid: "48100795"
 # <a name="publishing-data-mds-add-in-for-excel"></a>Publicar datos (complemento MDS para Excel)
   En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede publicar los datos en el repositorio MDS si desea compartirlo con otros usuarios. En cuanto se publiquen los datos, estarán disponibles para otros usuarios del complemento para su descarga.  
   
- Al publicar datos, todos los que haya agregado o actualizado se publican en el repositorio MDS. Los datos que ha eliminado no se publican y se deben eliminar por separado. Para obtener más información, consulte [Delete a Row &#40;MDS Add-in for Excel&#41;](delete-a-row-mds-add-in-for-excel.md).  
+ Al publicar datos, todos los que haya agregado o actualizado se publican en el repositorio MDS. Los datos que ha eliminado no se publican y se deben eliminar por separado. Para obtener más información, consulte [Eliminar una fila &#40;complemento MDS para Excel&#41;](delete-a-row-mds-add-in-for-excel.md).  
   
 > [!NOTE]  
 >  La publicación no se puede usar para crear una entidad nueva. Para obtener más información sobre cómo crear entidades, consulte [Crear una entidad &#40;Complemento MDS para Excel&#41;](create-an-entity-mds-add-in-for-excel.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "48100795"
   
 -   Puede ver las transacciones realizadas por otros usuarios en un miembro. También puede ver todas las transacciones que ha realizado en un miembro, aunque ya no tenga permiso para los atributos concretos.  
   
- Puede ver todas las transacciones realizadas en un miembro. Para obtener más información, consulte [View All Annotations or Transactions for a Member &#40;MDS Add-in for Excel&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md).  
+ Puede ver todas las transacciones realizadas en un miembro. Para obtener más información, consulte [Ver todas las anotaciones o transacciones de un miembro &#40;complemento MDS para Excel&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md).  
   
 > [!IMPORTANT]  
 >  Si especifica una anotación de más de 500 caracteres, se trunca automáticamente.  

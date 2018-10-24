@@ -123,7 +123,7 @@ ms.locfileid: "48095715"
   
  Después de agregar un mapa con el Asistente para mapas, puede crear capas adicionales o cambiar las opciones de una capa utilizando el Asistente para capas. Para más información sobre los asistentes, vea [Asistente para mapas y Asistente para capas de mapa &#40;Generador de informes y SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
- Puede personalizar las opciones de datos o de presentación de cada capa de forma independiente. Para más información sobre cómo personalizar un mapa después de ejecutar un asistente, vea [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
+ Puede personalizar las opciones de datos o de presentación de cada capa de forma independiente. Para más información sobre cómo personalizar un mapa después de ejecutar un asistente, vea [Personalizar los datos y la presentación de un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
  
   

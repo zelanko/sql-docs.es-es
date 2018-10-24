@@ -31,12 +31,12 @@ ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fa181fba5468b88586a4d69f5a361a64112b2018
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9644b055e57c3a08c551c2eb0544ca77b083456
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833123"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169165"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag , utilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -297,7 +297,7 @@ SQLDIAG STOP /A Instance1
 >  Use **SQLDiag STOP** o **SQLDIAG STOP_ABORT** para detener el servicio **SQLdiag** . No use la consola Servicios de Windows para detener **SQLdiag** u otros servicios de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="automatically-starting-and-stopping-sqldiag"></a>Iniciar y detener automáticamente SQLdiag  
- Para iniciar y detener automáticamente la recopilación de datos de diagnóstico a una hora especificada, use los argumentos **/B***hora_inicio* y **/E***hora_finalización* con la notación de 24 horas. Por ejemplo, si está solucionando un problema que suele aparecer a las 02:00:00 aproximadamente, puede configurar **SQLdiag** para empezar a recopilar automáticamente datos de diagnóstico a la 01:00 y dejar de recopilarlos a las 03:00:00. Use los argumentos **/B** y **/E** para especificar la hora de inicio y detención. Utilice la notación de 24 horas para especificar una hora y una fecha de inicio y de finalización exactas con el formato AAAAMMDD_HH:MM:SS. Para especificar una hora de inicio o detención relativa, anteponga **+** a la hora de inicio o de detención y omita la parte de la fecha (AAAAMMDD_) como se muestra en el siguiente ejemplo, lo que hace que **SQLdiag** espere 1 hora antes de empezar a recopilar información; después recopila la información durante 3 horas hasta que se detiene y se cierra:  
+ Para iniciar y detener automáticamente la recopilación de datos de diagnóstico a una hora especificada, use los argumentos **/B**_start\_time_ y **/E**_stop\_time_ (con la notación de 24 horas). Por ejemplo, si está solucionando un problema que suele aparecer a las 02:00:00 aproximadamente, puede configurar **SQLdiag** para empezar a recopilar automáticamente datos de diagnóstico a la 01:00 y dejar de recopilarlos a las 03:00:00. Use los argumentos **/B** y **/E** para especificar la hora de inicio y detención. Utilice la notación de 24 horas para especificar una hora y una fecha de inicio y de finalización exactas con el formato AAAAMMDD_HH:MM:SS. Para especificar una hora de inicio o detención relativa, anteponga **+** a la hora de inicio o de detención y omita la parte de la fecha (AAAAMMDD_) como se muestra en el siguiente ejemplo, lo que hace que **SQLdiag** espere 1 hora antes de empezar a recopilar información; después recopila la información durante 3 horas hasta que se detiene y se cierra:  
   
 ```  
 sqldiag /B +01:00:00 /E +03:00:00  
@@ -358,7 +358,7 @@ SQLDIAG START /A Instance1
  No se permite pausar el servicio **SQLdiag** .  
   
 ## <a name="running-multiple-instances-of-sqldiag"></a>Ejecutar varias instancias de SQLdiag  
- Para ejecutar varias instancias de **SQLdiag** en el mismo equipo, especifique **/A***SQLdiag_nombre_aplicación* en la línea de comandos. Resulta útil para recopilar distintos conjuntos de diagnósticos de la misma instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de forma simultánea. Por ejemplo, puede configurar una instancia con nombre de **SQLdiag** para que ejecute una recopilación de datos ligera de forma constante. De este modo, si se produce un problema específico en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], puede ejecutar la instancia predeterminada de **SQLdiag** para recopilar los diagnósticos relativos a ese problema o para recopilar un conjunto de diagnósticos que los servicios de soporte al cliente de [!INCLUDE[msCoName](../includes/msconame-md.md)] le hayan solicitado para diagnosticar un problema.  
+ Para ejecutar varias instancias de **SQLdiag** en el mismo equipo, especifique **/A**_SQLdiag\_application\_name_ en la línea de comandos. Resulta útil para recopilar distintos conjuntos de diagnósticos de la misma instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de forma simultánea. Por ejemplo, puede configurar una instancia con nombre de **SQLdiag** para que ejecute una recopilación de datos ligera de forma constante. De este modo, si se produce un problema específico en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], puede ejecutar la instancia predeterminada de **SQLdiag** para recopilar los diagnósticos relativos a ese problema o para recopilar un conjunto de diagnósticos que los servicios de soporte al cliente de [!INCLUDE[msCoName](../includes/msconame-md.md)] le hayan solicitado para diagnosticar un problema.  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>Recopilar datos de diagnóstico de instancias de SQL Server en clúster  
  **SQLdiag** permite recopilar datos de diagnóstico de instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en clúster. Para recopilar diagnósticos de instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agrupadas, asegúrese de que se especifica **"."** para el atributo **name** del elemento **\<Machine>** en el archivo de configuración SQLDiag.Xml y no especifique el argumento **/G** en la línea de comandos. De forma predeterminada, se especifica **"."** para el atributo **name** del archivo de configuración y se desactiva el argumento **/G** . Normalmente, cuando se realiza la recopilación desde una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en clúster, no es necesario editar el archivo de configuración ni cambiar los argumentos de la línea de comandos.  
